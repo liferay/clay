@@ -12,18 +12,22 @@ section: Components
 		</blockquote>
 
 <div class="alert-notifications alert-notifications-fixed">
-	<div class="alert alert-dismissible alert-info alert-notification" role="alert">
+	<div class="alert alert-dismissible alert-info alert-notification" id="alertDismissible001" role="alert">
 		<span class="alert-indicator">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-				<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
-			</svg>
+			<span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
+				</svg>
+			</span>
 		</span>
 		<strong class="lead">Meeting Rescheduled:</strong>
 		<div>Please complete the attendance form to confirm your attendance: <a class="alert-link" href="#1">More Info</a>.</div>
-		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-			</svg>
+		<button aria-label="Dismiss this alert" class="close" data-dismiss="alert" type="button">
+			<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+				</svg>
+			</span>
 		</button>
 	</div>
 </div>
@@ -44,15 +48,19 @@ section: Components
 		<div class="alert-notifications alert-notifications-absolute">
 			<div class="alert alert-dismissible alert-danger" role="alert">
 				<span class="alert-indicator">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-						<use xlink:href="{{rootPath}}/images/icons/icons.svg#exclamation-full"></use>
-					</svg>
+					<span aria-label="icon-exclamation-full" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full" focusable="false">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#exclamation-full"></use>
+						</svg>
+					</span>
 				</span>
 				<strong class="lead">Danger:</strong> Something is not right.
-				<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-					</svg>
+				<button aria-label="Dismiss this alert" class="close" data-dismiss="alert" type="button">
+					<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</button>
 			</div>
 		</div>
@@ -74,67 +82,83 @@ section: Components
 
 <div class="alert alert-primary" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-			<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
-		</svg>
+		<span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Primary:</strong> This is a <a href="#1" class="alert-link">primary alert</a>. <button class="alert-link btn btn-unstyled">Button as link</button>.
 </div>
 <div class="alert alert-secondary" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-			<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
-		</svg>
+		<span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Secondary:</strong> This is a <a href="#1" class="alert-link">secondary alert</a>.
 </div>
 
 <div class="alert alert-success" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-			<use xlink:href="{{rootPath}}/images/icons/icons.svg#check-circle-full"></use>
-		</svg>
+		<span aria-label="icon-check-circle-full" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full" focusable="false">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#check-circle-full"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Success:</strong> You just read the <a href="#1" class="alert-link">alert message</a> successfully.
 </div>
 <div class="alert alert-info" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-			<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
-		</svg>
+		<span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Info:</strong> This <a href="#1" class="alert-link">alert</a> needs your attention.
 </div>
 <div class="alert alert-warning" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-			<use xlink:href="{{rootPath}}/images/icons/icons.svg#warning-full"></use>
-		</svg>
+		<span aria-label="icon-warning-full" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full" focusable="false">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#warning-full"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Warning:</strong> This alert is a <a href="#1" class="alert-link">warning message</a>.
 </div>
 <div class="alert alert-danger" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-			<use xlink:href="{{rootPath}}/images/icons/icons.svg#exclamation-full"></use>
-		</svg>
+		<span aria-label="icon-exclamation-full" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full" focusable="false">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#exclamation-full"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Danger:</strong> <a href="#1" class="alert-link">Something</a> is not right.
 </div>
 <div class="alert alert-light" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-			<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
-		</svg>
+		<span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Light:</strong> This is a <a href="#1" class="alert-link">light alert</a>.
 </div>
 
 <div class="alert alert-dark" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-			<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
-		</svg>
+		<span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Dark:</strong> This is a <a href="#1" class="alert-link">dark alert</a>.
 </div>
@@ -148,108 +172,140 @@ section: Components
 
 <div class="alert alert-dismissible alert-primary" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-			<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
-		</svg>
+		<span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Primary:</strong> This is a <a href="#1" class="alert-link">primary alert</a>.
-	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-		</svg>
+	<button aria-label="Dismiss this alert" class="close" data-dismiss="alert" type="button">
+		<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+			</svg>
+		</span>
 	</button>
 </div>
 <div class="alert alert-dismissible alert-secondary" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-			<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
-		</svg>
+		<span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Secondary:</strong> This is a <a href="#1" class="alert-link">secondary alert</a>.
-	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-		</svg>
+	<button aria-label="Dismiss this alert" class="close" data-dismiss="alert" type="button">
+		<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+			</svg>
+		</span>
 	</button>
 </div>
 
 <div class="alert alert-dismissible alert-success" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-			<use xlink:href="{{rootPath}}/images/icons/icons.svg#check-circle-full"></use>
-		</svg>
+		<span aria-label="icon-check-circle-full" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full" focusable="false">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#check-circle-full"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Success:</strong> You just read the alert message successfully.
-	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-		</svg>
+	<button aria-label="Dismiss this alert" class="close" data-dismiss="alert" type="button">
+		<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+			</svg>
+		</span>
 	</button>
 </div>
 <div class="alert alert-dismissible alert-info" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-			<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
-		</svg>
+		<span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Info:</strong> This alert needs your attention.
-	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-		</svg>
+	<button aria-label="Dismiss this alert" class="close" data-dismiss="alert" type="button">
+		<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+			</svg>
+		</span>
 	</button>
 </div>
 <div class="alert alert-dismissible alert-warning" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-			<use xlink:href="{{rootPath}}/images/icons/icons.svg#warning-full"></use>
-		</svg>
+		<span aria-label="icon-warning-full" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full" focusable="false">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#warning-full"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Warning:</strong> This alert is a warning message.
-	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-		</svg>
+	<button aria-label="Dismiss this alert" class="close" data-dismiss="alert" type="button">
+		<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+			</svg>
+		</span>
 	</button>
 </div>
 <div class="alert alert-dismissible alert-danger" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-			<use xlink:href="{{rootPath}}/images/icons/icons.svg#exclamation-full"></use>
-		</svg>
+		<span aria-label="icon-exclamation-full" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full" focusable="false">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#exclamation-full"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Danger:</strong> Something is not right.
-	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-		</svg>
+	<button aria-label="Dismiss this alert" class="close" data-dismiss="alert" type="button">
+		<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+			</svg>
+		</span>
 	</button>
 </div>
 
 <div class="alert alert-dismissible alert-light" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-			<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
-		</svg>
+		<span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Light:</strong> This is a <a href="#1" class="alert-link">light alert</a>.
-	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-		</svg>
+	<button aria-label="Dismiss this alert" class="close" data-dismiss="alert" type="button">
+		<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+			</svg>
+		</span>
 	</button>
 </div>
 <div class="alert alert-dismissible alert-dark" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-			<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
-		</svg>
+		<span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Dark:</strong> This is a <a href="#1" class="alert-link">dark alert</a>.
-	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-		</svg>
+	<button aria-label="Dismiss this alert" class="close" data-dismiss="alert" type="button">
+		<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+				<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+			</svg>
+		</span>
 	</button>
 </div>
 
@@ -267,9 +323,11 @@ section: Components
 <div class="alert alert-fluid alert-primary" role="alert">
 	<div class="container-fluid container-fluid-max-xl">
 		<span class="alert-indicator">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-				<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
-			</svg>
+			<span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
+				</svg>
+			</span>
 		</span>
 		<strong class="lead">Primary</strong> This is a <a href="#1" class="alert-link">primary alert</a>.
 	</div>
@@ -277,9 +335,11 @@ section: Components
 <div class="alert alert-fluid alert-secondary" role="alert">
 	<div class="container-fluid container-fluid-max-xl">
 		<span class="alert-indicator">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-				<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
-			</svg>
+			<span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
+				</svg>
+			</span>
 		</span>
 		<strong class="lead">Secondary</strong> This is a <a href="#1" class="alert-link">secondary alert</a>.
 	</div>
@@ -288,60 +348,76 @@ section: Components
 <div class="alert alert-dismissible alert-fluid alert-success" role="alert">
 	<div class="container-fluid container-fluid-max-xl">
 		<span class="alert-indicator">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-				<use xlink:href="{{rootPath}}/images/icons/icons.svg#check-circle-full"></use>
-			</svg>
+			<span aria-label="icon-check-circle-full" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full" focusable="false">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#check-circle-full"></use>
+				</svg>
+			</span>
 		</span>
 		<strong class="lead">Success</strong> You just read the <a href="#1" class="alert-link">alert message</a> successfully.
-		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-			</svg>
+		<button aria-label="Dismiss this alert" class="close" data-dismiss="alert" type="button">
+			<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+				</svg>
+			</span>
 		</button>
 	</div>
 </div>
 <div class="alert alert-dismissible alert-fluid alert-info" role="alert">
 	<div class="container-fluid container-fluid-max-xl">
 		<span class="alert-indicator">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-				<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
-			</svg>
+			<span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
+				</svg>
+			</span>
 		</span>
 		<strong class="lead">Info</strong> This <a href="#1" class="alert-link">alert</a> needs your attention.
-		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-			</svg>
+		<button aria-label="Dismiss this alert" class="close" data-dismiss="alert" type="button">
+			<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+				</svg>
+			</span>
 		</button>
 	</div>
 </div>
 <div class="alert alert-dismissible alert-fluid alert-warning" role="alert">
 	<div class="container-fluid container-fluid-max-xl">
 		<span class="alert-indicator">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-				<use xlink:href="{{rootPath}}/images/icons/icons.svg#warning-full"></use>
-			</svg>
+			<span aria-label="icon-warning-full" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full" focusable="false">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#warning-full"></use>
+				</svg>
+			</span>
 		</span>
 		<strong class="lead">Warning</strong> This alert is a <a href="#1" class="alert-link">warning message</a>.
-		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-			</svg>
+		<button aria-label="Dismiss this alert" class="close" data-dismiss="alert" type="button">
+			<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+				</svg>
+			</span>
 		</button>
 	</div>
 </div>
 <div class="alert alert-danger alert-dismissible alert-fluid" role="alert">
 	<div class="container-fluid container-fluid-max-xl">
 		<span class="alert-indicator">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-				<use xlink:href="{{rootPath}}/images/icons/icons.svg#exclamation-full"></use>
-			</svg>
+			<span aria-label="icon-exclamation-full" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full" focusable="false">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#exclamation-full"></use>
+				</svg>
+			</span>
 		</span>
 		<strong class="lead">Danger</strong> <a href="#1" class="alert-link">Something</a> is not right.
-		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-			</svg>
+		<button aria-label="Dismiss this alert" class="close" data-dismiss="alert" type="button">
+			<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+				</svg>
+			</span>
 		</button>
 	</div>
 </div>
@@ -349,9 +425,11 @@ section: Components
 <div class="alert alert-fluid alert-light" role="alert">
 	<div class="container-fluid container-fluid-max-xl">
 		<span class="alert-indicator">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-				<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
-			</svg>
+			<span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
+				</svg>
+			</span>
 		</span>
 		<strong class="lead">Light</strong> This is a <a href="#1" class="alert-link">light alert</a>.
 	</div>
@@ -359,9 +437,11 @@ section: Components
 <div class="alert alert-dark alert-fluid" role="alert">
 	<div class="container-fluid container-fluid-max-xl">
 		<span class="alert-indicator">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-				<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
-			</svg>
+			<span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle"></use>
+				</svg>
+			</span>
 		</span>
 		<strong class="lead">Dark</strong> This is a <a href="#1" class="alert-link">dark alert</a>.
 	</div>
@@ -385,26 +465,30 @@ section: Components
 						<div class="autofit-col">
 							<div class="autofit-section">
 								<span class="alert-indicator">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#exclamation-full" />
-									</svg>
+									<span aria-label="icon-exclamation-full" class="lexicon-icon-container" role="img">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full" focusable="false">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#exclamation-full" />
+										</svg>
+									</span>
 								</span><strong class="lead">1 Files</strong> couldn't upload.
 							</div>
 						</div>
 						<div class="autofit-col autofit-col-expand">
 							<div class="autofit-section">
 								<button class="btn btn-secondary btn-sm" type="button">
-									<span class="inline-item inline-item-before"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-reload">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#reload" />
-									</svg></span>Retry all
+									<span class="inline-item inline-item-before">
+										<span aria-label="icon-reload" class="lexicon-icon-container" role="img"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-reload" focusable="false"><use xlink:href="{{rootPath}}/images/icons/icons.svg#reload" /></svg></span>
+									</span>Retry all
 								</button>
 							</div>
 						</div>
 					</div>
-					<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-							<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-						</svg>
+					<button aria-label="Dismiss this alert" class="close" data-dismiss="alert" type="button">
+						<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+							</svg>
+						</span>
 					</button>
 				</div>
 			</li>
@@ -420,24 +504,33 @@ section: Components
 									file-upload.RTF
 								</h4>
 								<span class="alert-indicator">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#exclamation-full" />
-									</svg>
-								</span><strong class="lead">Error:</strong> couldn't upload.
+									<span aria-label="icon-exclamation-full" class="lexicon-icon-container" role="img">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full" focusable="false">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#exclamation-full" />
+										</svg>
+									</span>
+								</span>
+								<strong class="lead">Error:</strong> couldn't upload.
 							</div>
 						</div>
 						<div class="autofit-col">
 							<button class="btn btn-secondary btn-sm" type="button">
-								<span class="inline-item inline-item-before"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-reload">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#reload" />
-								</svg></span>Retry
+								<span class="inline-item inline-item-before">
+									<span aria-label="icon-reload" class="lexicon-icon-container" role="img">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-reload" focusable="false">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#reload" />
+										</svg>
+									</span>
+								</span>Retry
 							</button>
 						</div>
 					</div>
-					<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-							<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-						</svg>
+					<button aria-label="Dismiss this alert" class="close" data-dismiss="alert" type="button">
+						<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+							</svg>
+						</span>
 					</button>
 				</div>
 			</li>
@@ -454,10 +547,12 @@ section: Components
 							</div>
 						</div>
 					</div>
-					<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-							<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-						</svg>
+					<button aria-label="Dismiss this alert" class="close" data-dismiss="alert" type="button">
+						<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+							</svg>
+						</span>
 					</button>
 				</div>
 			</li>
@@ -486,10 +581,12 @@ section: Components
 							</div>
 						</div>
 					</div>
-					<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-							<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-						</svg>
+					<button aria-label="Dismiss this alert" class="close" data-dismiss="alert" type="button">
+						<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+							</svg>
+						</span>
 					</button>
 				</div>
 			</li>

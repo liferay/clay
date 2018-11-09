@@ -11,7 +11,7 @@ section: Components
 	<li class="nav-item"><a class="active nav-link" href="#1">Basic Information</a></li>
 	<li class="nav-item"><a class="nav-link" href="#1">Details</a></li>
 	<li class="nav-item"><a class="nav-link" href="#1">Categorization</a></li>
-	<li class="nav-item"><a class="disabled nav-link" href="#1">Documents and Media</a></li>
+	<li class="nav-item"><a aria-disabled="true" class="disabled nav-link" href="#1">Documents and Media</a></li>
 	<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
 </ul>
 
@@ -30,33 +30,39 @@ section: Components
 		<a aria-controls="navUnderlineSettings" class="nav-link" data-toggle="tab" href="#navUnderlineSettings" id="navUnderlineSettingsTab" role="tab">Settings</a>
 	</li>
 	<li class="nav-item">
-		<a aria-controls="navUnderlineDocuments" class="disabled nav-link" href="#navUnderlineDocuments" id="navUnderlineDocumentsTab" role="tab">Documents</a>
+		<a aria-controls="navUnderlineDocuments" aria-disabled="true" class="disabled nav-link" href="#navUnderlineDocuments" id="navUnderlineDocumentsTab" role="tab">Documents</a>
 	</li>
 	<li class="dropdown nav-item">
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
 			Configuration
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</a>
 		<ul class="dropdown-menu dropdown-menu-indicator-end">
 			<li>
 				<a aria-controls="navUnderlineSetup" class="dropdown-item" data-toggle="tab" href="#navUnderlineSetup" id="navUnderlineSetupTab" role="tab">
 					Setup
-					<span aria-hidden="true" class="dropdown-item-indicator-end">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-							<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
-						</svg>
+					<span class="dropdown-item-indicator-end">
+						<span aria-label="icon-check" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check" focusable="false">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+							</svg>
+						</span>
 					</span>
 				</a>
 			</li>
 			<li>
 				<a aria-controls="navUnderlineSupportedClients" class="dropdown-item" data-toggle="tab" href="#navUnderlineSupportedClients" id="navUnderlineSupportedClientsTab" role="tab">
 					Supported Clients
-					<span aria-hidden="true" class="dropdown-item-indicator-end">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-							<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
-						</svg>
+					<span class="dropdown-item-indicator-end">
+						<span aria-label="icon-check" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check" focusable="false">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+							</svg>
+						</span>
 					</span>
 				</a>
 			</li>
@@ -96,33 +102,39 @@ section: Components
 				<button aria-controls="buttonNavUnderlineSettings" class="btn btn-unstyled nav-link" data-target="#buttonNavUnderlineSettings" data-toggle="tab" id="buttonNavUnderlineSettingsTab" role="tab" type="button">Settings</button>
 			</li>
 			<li class="nav-item">
-				<button aria-controls="buttonNavUnderlineDocuments" class="btn btn-unstyled disabled nav-link" data-target="#buttonNavUnderlineDocuments" id="buttonNavUnderlineDocumentsTab" role="tab" type="button">Documents</button>
+				<button aria-controls="buttonNavUnderlineDocuments" class="btn btn-unstyled nav-link" data-target="#buttonNavUnderlineDocuments" disabled id="buttonNavUnderlineDocumentsTab" role="tab" type="button">Documents</button>
 			</li>
 			<li class="dropdown nav-item">
 				<button aria-expanded="false" aria-haspopup="true" class="btn btn-unstyled dropdown-toggle nav-link" data-toggle="dropdown" type="button">
 					Configuration
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
-					</svg>
+					<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom" focusable="false">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+						</svg>
+					</span>
 				</button>
 				<ul class="dropdown-menu dropdown-menu-indicator-end">
 					<li>
 						<button aria-controls="buttonNavUnderlineSetup" class="dropdown-item" data-target="#buttonNavUnderlineSetup" data-toggle="tab" id="buttonNavUnderlineSetupTab" role="tab" type="button">
 							Setup
-							<span aria-hidden="true" class="dropdown-item-indicator-end">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
-								</svg>
+							<span class="dropdown-item-indicator-end">
+								<span aria-label="icon-check" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check" focusable="false">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+									</svg>
+								</span>
 							</span>
 						</button>
 					</li>
 					<li>
 						<button aria-controls="buttonNavUnderlineSupportedClients" class="dropdown-item" data-target="#buttonNavUnderlineSupportedClients" data-toggle="tab" id="buttonNavUnderlineSupportedClientsTab" role="tab" type="button">
 							Supported Clients
-							<span aria-hidden="true" class="dropdown-item-indicator-end">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
-								</svg>
+							<span class="dropdown-item-indicator-end">
+								<span aria-label="icon-check" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check" focusable="false">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+									</svg>
+								</span>
 							</span>
 						</button>
 					</li>
