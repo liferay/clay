@@ -739,7 +739,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
   <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item active" href="#cards">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
             <title>cards2</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#cards2"></use>
@@ -748,7 +748,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
     </li>
     <li>
       <button class="btn dropdown-item btn-sm btn-link" aria-label="List" type="button">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
             <title>list</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#list"></use>
@@ -757,7 +757,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
     </li>
     <li>
       <button class="btn dropdown-item btn-sm btn-link" aria-label="Table" type="button">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
             <title>table</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
@@ -1839,7 +1839,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
   <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item" href="#cards">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
             <title>cards2</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#cards2"></use>
@@ -1848,7 +1848,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
     </li>
     <li>
       <button class="btn dropdown-item active btn-sm btn-link" aria-label="List" type="button">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
             <title>list</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#list"></use>
@@ -1857,7 +1857,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
     </li>
     <li>
       <button class="btn dropdown-item btn-sm btn-link" aria-label="Table" type="button">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
             <title>table</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
@@ -2785,7 +2785,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
   <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item" href="#cards">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
             <title>cards2</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#cards2"></use>
@@ -2794,7 +2794,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
     </li>
     <li>
       <button class="btn dropdown-item btn-sm btn-link" aria-label="List" type="button">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
             <title>list</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#list"></use>
@@ -2803,7 +2803,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
     </li>
     <li>
       <button class="btn dropdown-item active btn-sm btn-link" aria-label="Table" type="button">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
             <title>table</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
@@ -3198,7 +3198,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
   <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item active" href="#cards">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
             <title>cards2</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#cards2"></use>
@@ -3207,7 +3207,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
     </li>
     <li>
       <button class="btn dropdown-item btn-sm btn-link" aria-label="List" type="button">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
             <title>list</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#list"></use>
@@ -3216,7 +3216,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
     </li>
     <li>
       <button class="btn dropdown-item btn-sm btn-link" aria-label="Table" type="button">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
             <title>table</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
@@ -3806,7 +3806,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
   <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item active" href="#cards">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
             <title>cards2</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#cards2"></use>
@@ -3815,7 +3815,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
     </li>
     <li>
       <button class="btn dropdown-item btn-sm btn-link" aria-label="List" type="button">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
             <title>list</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#list"></use>
@@ -3824,7 +3824,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
     </li>
     <li>
       <button class="btn dropdown-item btn-sm btn-link" aria-label="Table" type="button">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
             <title>table</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
@@ -4614,7 +4614,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
   <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item active" href="#cards">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
             <title>cards2</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#cards2"></use>
@@ -4623,7 +4623,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
     </li>
     <li>
       <button class="btn dropdown-item btn-sm btn-link" aria-label="List" type="button">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
             <title>list</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#list"></use>
@@ -4632,7 +4632,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
     </li>
     <li>
       <button class="btn dropdown-item btn-sm btn-link" aria-label="Table" type="button">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
             <title>table</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
@@ -5714,7 +5714,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
   <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item active" href="#cards">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
             <title>cards2</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#cards2"></use>
@@ -5723,7 +5723,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
     </li>
     <li>
       <button class="btn dropdown-item btn-sm btn-link" aria-label="List" type="button">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
             <title>list</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#list"></use>
@@ -5732,7 +5732,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
     </li>
     <li>
       <button class="btn dropdown-item btn-sm btn-link" aria-label="Table" type="button">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
             <title>table</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
@@ -6660,7 +6660,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
   <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item active" href="#cards">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
             <title>cards2</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#cards2"></use>
@@ -6669,7 +6669,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
     </li>
     <li>
       <button class="btn dropdown-item btn-sm btn-link" aria-label="List" type="button">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
             <title>list</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#list"></use>
@@ -6678,7 +6678,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
     </li>
     <li>
       <button class="btn dropdown-item btn-sm btn-link" aria-label="Table" type="button">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
             <title>table</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
@@ -8697,7 +8697,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
   <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item active" href="#cards">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
             <title>cards2</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#cards2"></use>
@@ -8706,7 +8706,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
     </li>
     <li>
       <button class="btn dropdown-item btn-sm btn-link" aria-label="List" type="button">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
             <title>list</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#list"></use>
@@ -8715,7 +8715,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
     </li>
     <li>
       <button class="btn dropdown-item btn-sm btn-link" aria-label="Table" type="button">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
             <title>table</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
@@ -9591,7 +9591,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
   <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item" href="#cards">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
             <title>cards2</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#cards2"></use>
@@ -9600,7 +9600,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
     </li>
     <li>
       <button class="btn dropdown-item btn-sm btn-link" aria-label="List" type="button">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
             <title>list</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#list"></use>
@@ -9609,7 +9609,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
     </li>
     <li>
       <button class="btn dropdown-item active btn-sm btn-link" aria-label="Table" type="button">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
             <title>table</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
@@ -11302,7 +11302,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
   <ul class="list-unstyled">
     <li>
       <a class=" dropdown-item" href="#cards">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2" focusable="false">
             <title>cards2</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#cards2"></use>
@@ -11311,7 +11311,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
     </li>
     <li>
       <button class="btn dropdown-item btn-sm btn-link" aria-label="List" type="button">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-list" focusable="false">
             <title>list</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#list"></use>
@@ -11320,7 +11320,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
     </li>
     <li>
       <button class="btn dropdown-item active btn-sm btn-link" aria-label="Table" type="button">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
             <title>table</title>
             <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#table"></use>
