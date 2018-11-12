@@ -58,5 +58,8 @@
   "workspaces": {
     "packages":["packages/*"],
     "nohoist": ["**/clay-charts-shared"]
+  },
+  "resolutions": {
+    "js-beautify": "1.7.5"
   }
 }
