@@ -146,12 +146,10 @@ export class Geomap {
 		// Highlight the clicked province
 		this.mapLayer
 			.selectAll('path')
-			.style(
-				'fill',
-				d =>
-					this._selected && d === this._selected
-						? this._color.selected
-						: this._fillFn.bind(this)(d)
+			.style('fill', d =>
+				this._selected && d === this._selected
+					? this._color.selected
+					: this._fillFn.bind(this)(d)
 			);
 	}
 
