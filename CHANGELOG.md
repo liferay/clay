@@ -1,23 +1,98 @@
 # Change Log
 
-## [Unreleased](https://github.com/liferay/clay/tree/HEAD)
+## [v2.4.0](https://github.com/liferay/clay/tree/v2.4.0) (2018-11-13)
+[Full Changelog](https://github.com/liferay/clay/compare/v1.0.29...v2.4.0)
 
-[Full Changelog](https://github.com/liferay/clay/compare/v2.3.2...HEAD)
+**Implemented enhancements:**
+
+- Create loading-indicator component [\#1171](https://github.com/liferay/clay/issues/1171)
+- React implementation for clay-charts [\#1261](https://github.com/liferay/clay/pull/1261) ([bryceosterhaus](https://github.com/bryceosterhaus))
+
+**Fixed bugs:**
+
+- Build fails with Node \> 10.x [\#1301](https://github.com/liferay/clay/issues/1301)
+
+**Closed issues:**
+
+- ClayCSS: SVG Icons Add 9 New Icons for Document Types [\#1298](https://github.com/liferay/clay/issues/1298)
+- Installation issue with node v10.13.0 and npm v6.4.1 [\#1289](https://github.com/liferay/clay/issues/1289)
+- Create clay-charts for React [\#1280](https://github.com/liferay/clay/issues/1280)
+- Data attributes doesn't get updated in DOM after changing [\#1275](https://github.com/liferay/clay/issues/1275)
+- Duplicate resulting CSS [\#1274](https://github.com/liferay/clay/issues/1274)
+- Lexicon: Ascend and Descend buttons in Management Bar not visible on Mobile or minimized browsers [\#1252](https://github.com/liferay/clay/issues/1252)
+- Make ClayTable table tag classes configurable [\#1249](https://github.com/liferay/clay/issues/1249)
+
+**Merged pull requests:**
+
+- v2.4.0 CHANGELOG [\#1304](https://github.com/liferay/clay/pull/1304) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1289 - SF [\#1303](https://github.com/liferay/clay/pull/1303) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1298 \(ClayCSS\) Added new SVG Icons document-code, document-com… [\#1300](https://github.com/liferay/clay/pull/1300) ([pat270](https://github.com/pat270))
+- Fixes \#1274 - Duplicate CSS in Liferay DXP 7.1 [\#1297](https://github.com/liferay/clay/pull/1297) ([pat270](https://github.com/pat270))
+- Fixes \#1171 - Implementation of loading indicator [\#1286](https://github.com/liferay/clay/pull/1286) ([bryceosterhaus](https://github.com/bryceosterhaus))
+- Fixes \#1268 - Add capability to Interact with the pagination component [\#1284](https://github.com/liferay/clay/pull/1284) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1280 - react-clay-charts [\#1281](https://github.com/liferay/clay/pull/1281) ([bryceosterhaus](https://github.com/bryceosterhaus))
+- Fixes \#1260 - Mark should use `$mark-bg` and added option to configur… [\#1278](https://github.com/liferay/clay/pull/1278) ([pat270](https://github.com/pat270))
+- Fixes \#1249 - Add support for custom classes in ClayTable [\#1277](https://github.com/liferay/clay/pull/1277) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1275 - Sync data attributes in ClayComponent [\#1276](https://github.com/liferay/clay/pull/1276) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1266 - Force reflow sidenav to prevent issue in IE11 [\#1271](https://github.com/liferay/clay/pull/1271) ([pat270](https://github.com/pat270))
+- Fixes \#1238 - Fixes checkbox examples in indeterminate state [\#1258](https://github.com/liferay/clay/pull/1258) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Fixes \#1240 - Dropdown Menu added `.dropdown-item-indicator-start` and `.dropdown-item-indicator-end` for placing icons on either side of a dropdown-item and deprecated `.dropdown-item-indicator` [\#1245](https://github.com/liferay/clay/pull/1245) ([pat270](https://github.com/pat270))
+
+## [v1.0.29](https://github.com/liferay/clay/tree/v1.0.29) (2018-10-30)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.3.4...v1.0.29)
+
+**Fixed bugs:**
+
+- ClayCSS: Alert should use word-wrap: break-word [\#1223](https://github.com/liferay/clay/issues/1223)
+- Compile error with clay-css scss [\#1220](https://github.com/liferay/clay/issues/1220)
+
+**Closed issues:**
+
+- Add capability to Interact with the pagination component [\#1268](https://github.com/liferay/clay/issues/1268)
+- Clay: IE11 SideNav does not fully close [\#1266](https://github.com/liferay/clay/issues/1266)
+- ClayCSS: Mark element colors should be customizable through variables [\#1260](https://github.com/liferay/clay/issues/1260)
+- Management Tool Bar is not updated following Lexicon and Portal Migration. [\#1254](https://github.com/liferay/clay/issues/1254)
+- ClayCreationMenuDropdown should accept empty array or undefined primaryItems  [\#1250](https://github.com/liferay/clay/issues/1250)
+- Rename Layout section to Foundations [\#1247](https://github.com/liferay/clay/issues/1247)
+- ClayCSS: Add Table helper classes for styling first and last children [\#1241](https://github.com/liferay/clay/issues/1241)
+- ClayCSS: Allow icons to be placed on the left and right of a dropdown-menu [\#1240](https://github.com/liferay/clay/issues/1240)
+- Incorrect example of use for Indeterminate State for Checkbox [\#1238](https://github.com/liferay/clay/issues/1238)
+- ClayCSS: Add new icon Anonymize [\#1236](https://github.com/liferay/clay/issues/1236)
+- Labels padding to be fixed [\#1229](https://github.com/liferay/clay/issues/1229)
+- Add hover attributes to Vertical Navigation [\#1198](https://github.com/liferay/clay/issues/1198)
+- Nav-underline css class is painting incorrect color and height [\#1192](https://github.com/liferay/clay/issues/1192)
+- Please Stop “Fixing” Font Smoothing [\#1164](https://github.com/liferay/clay/issues/1164)
+
+**Merged pull requests:**
+
+- Fixes \#1252 - Management Bar added .management-bar-item-xs-inline-block [\#1273](https://github.com/liferay/clay/pull/1273) ([pat270](https://github.com/pat270))
+- Fixes \#1266 - \(1.x\) Force reflow sidenav to prevent issue in IE11 [\#1272](https://github.com/liferay/clay/pull/1272) ([pat270](https://github.com/pat270))
+- Fixes \#1250 - Check also if secondaryItems is empty in creationMenu [\#1259](https://github.com/liferay/clay/pull/1259) ([carloslancha](https://github.com/carloslancha))
+-  Fixes \#1254 - Adding example of the Management Toolbar with filter labels [\#1257](https://github.com/liferay/clay/pull/1257) ([matuzalemsteles](https://github.com/matuzalemsteles))
+-  Fixes \#1247 - Rename the Layout section for Foundations [\#1256](https://github.com/liferay/clay/pull/1256) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Fixes \#1250 - ClayCreationMenuDropdown should accept empty array or undefined primaryItems  [\#1251](https://github.com/liferay/clay/pull/1251) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1241 - Table List added `.table-row-start`, `.table-row-end`, `.table-cell-start`, `.table-cell-end` to style cells that are on the edges of the table [\#1243](https://github.com/liferay/clay/pull/1243) ([pat270](https://github.com/pat270))
+- Fixes \#1164 - Type added options to configure `$moz-osx-font-smoothin… [\#1239](https://github.com/liferay/clay/pull/1239) ([pat270](https://github.com/pat270))
+- Fixes \#1236 - Added icon Anonymize [\#1237](https://github.com/liferay/clay/pull/1237) ([pat270](https://github.com/pat270))
+- Fixes \#1192 - Nav Underline highlight color should be primary and hei… [\#1235](https://github.com/liferay/clay/pull/1235) ([pat270](https://github.com/pat270))
+- Fixes \#1220 - Use `$input-border-width` the same way Bootstrap uses it [\#1234](https://github.com/liferay/clay/pull/1234) ([pat270](https://github.com/pat270))
+- Fixes \#1198 - Mixin `clay-menubar-vertical-variant` added options to … [\#1233](https://github.com/liferay/clay/pull/1233) ([pat270](https://github.com/pat270))
+- Fixes \#1229 - Atlas Label and Label Lg make horizontal padding .25rem… [\#1232](https://github.com/liferay/clay/pull/1232) ([pat270](https://github.com/pat270))
+- Fixes \#1223 - Alert should use word-wrap: break-word [\#1231](https://github.com/liferay/clay/pull/1231) ([pat270](https://github.com/pat270))
+- Wordsmith ClayUI.com documentation [\#1230](https://github.com/liferay/clay/pull/1230) ([mwilliams2014](https://github.com/mwilliams2014))
+- \(clayui.com\) Adds a default value to redirect and layout if it is empty [\#1219](https://github.com/liferay/clay/pull/1219) ([matuzalemsteles](https://github.com/matuzalemsteles))
+
+## [v2.3.4](https://github.com/liferay/clay/tree/v2.3.4) (2018-10-03)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.3.3...v2.3.4)
 
 **Implemented enhancements:**
 
 - Migrate Gatsby version on clayui.com from 1.x to 2.x [\#1205](https://github.com/liferay/clay/issues/1205)
-- Styles and markup for results bar [\#1105](https://github.com/liferay/clay/issues/1105)
 
 **Fixed bugs:**
 
 - ManagementToolbar is emitting wrong event on filter label item close button click [\#1197](https://github.com/liferay/clay/issues/1197)
-- When you close the dropdown by the button it does not remove the added events when opening [\#1189](https://github.com/liferay/clay/issues/1189)
 - Link https://clayui.com/docs/components causes 404 [\#1180](https://github.com/liferay/clay/issues/1180)
-- ManagementToolbar ActionItems show if an empty array is passed [\#1178](https://github.com/liferay/clay/issues/1178)
-- Missing Icons in clayui.com [\#1177](https://github.com/liferay/clay/issues/1177)
-- ClayActionsDropdown, ClayCreationMenuDropdown and ClayDropdown do not keep the expanded updated with ClayDropdownBase [\#1172](https://github.com/liferay/clay/issues/1172)
-- Claycss.com charts errors [\#638](https://github.com/liferay/clay/issues/638)
 
 **Closed issues:**
 
@@ -28,14 +103,6 @@
 - Main file of Clay package doesn't exists [\#1201](https://github.com/liferay/clay/issues/1201)
 - clayui.com - Incorrect space in sidebar navigation [\#1199](https://github.com/liferay/clay/issues/1199)
 - Update to lerna@3.x.x [\#1193](https://github.com/liferay/clay/issues/1193)
-- Clay Modal does not render properly  [\#1183](https://github.com/liferay/clay/issues/1183)
-- Add Legend Data for Stacked Bar Chart. [\#1138](https://github.com/liferay/clay/issues/1138)
-- Clayui.com documentation, how enhance it? 🤔 [\#1111](https://github.com/liferay/clay/issues/1111)
-- ClayCSS: Update and add table utilities to allow for better sizing and alignment [\#1065](https://github.com/liferay/clay/issues/1065)
-- ManagementToolbar message should be `select-items` instead of `select-page` [\#1025](https://github.com/liferay/clay/issues/1025)
-- Icon Button needs to show a tooltip on hover [\#858](https://github.com/liferay/clay/issues/858)
-- Card stickers are not rounded [\#718](https://github.com/liferay/clay/issues/718)
-- Add favicon [\#520](https://github.com/liferay/clay/issues/520)
 
 **Merged pull requests:**
 
@@ -51,6 +118,35 @@
 - clayui.com: \(Fixes: \#1199\) Fix sidebar navigation margin [\#1200](https://github.com/liferay/clay/pull/1200) ([marcoscv-work](https://github.com/marcoscv-work))
 - Add examples [\#1196](https://github.com/liferay/clay/pull/1196) ([matuzalemsteles](https://github.com/matuzalemsteles))
 - Organize the Lexicon Core Components session according to the proposal in clayui.com | Fixes \#1111 [\#1195](https://github.com/liferay/clay/pull/1195) ([matuzalemsteles](https://github.com/matuzalemsteles))
+
+## [v2.3.3](https://github.com/liferay/clay/tree/v2.3.3) (2018-09-24)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.3.2...v2.3.3)
+
+**Implemented enhancements:**
+
+- Styles and markup for results bar [\#1105](https://github.com/liferay/clay/issues/1105)
+
+**Fixed bugs:**
+
+- When you close the dropdown by the button it does not remove the added events when opening [\#1189](https://github.com/liferay/clay/issues/1189)
+- ManagementToolbar ActionItems show if an empty array is passed [\#1178](https://github.com/liferay/clay/issues/1178)
+- Missing Icons in clayui.com [\#1177](https://github.com/liferay/clay/issues/1177)
+- ClayActionsDropdown, ClayCreationMenuDropdown and ClayDropdown do not keep the expanded updated with ClayDropdownBase [\#1172](https://github.com/liferay/clay/issues/1172)
+- Claycss.com charts errors [\#638](https://github.com/liferay/clay/issues/638)
+
+**Closed issues:**
+
+- Clay Modal does not render properly  [\#1183](https://github.com/liferay/clay/issues/1183)
+- Add Legend Data for Stacked Bar Chart. [\#1138](https://github.com/liferay/clay/issues/1138)
+- Clayui.com documentation, how enhance it? 🤔 [\#1111](https://github.com/liferay/clay/issues/1111)
+- ClayCSS: Update and add table utilities to allow for better sizing and alignment [\#1065](https://github.com/liferay/clay/issues/1065)
+- ManagementToolbar message should be `select-items` instead of `select-page` [\#1025](https://github.com/liferay/clay/issues/1025)
+- Icon Button needs to show a tooltip on hover [\#858](https://github.com/liferay/clay/issues/858)
+- Card stickers are not rounded [\#718](https://github.com/liferay/clay/issues/718)
+- Add favicon [\#520](https://github.com/liferay/clay/issues/520)
+
+**Merged pull requests:**
+
 - v2.3.3 CHANGELOG [\#1194](https://github.com/liferay/clay/pull/1194) ([carloslancha](https://github.com/carloslancha))
 - Fixes \#1172 - ClayActionsDropdown, ClayCreationMenuDropdown and ClayDropdown do not keep the expanded updated with ClayDropdownBase [\#1191](https://github.com/liferay/clay/pull/1191) ([carloslancha](https://github.com/carloslancha))
 - Fixes \#1105 - Update styles and markup for results bar [\#1188](https://github.com/liferay/clay/pull/1188) ([carloslancha](https://github.com/carloslancha))
