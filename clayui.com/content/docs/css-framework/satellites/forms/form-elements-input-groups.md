@@ -236,9 +236,11 @@ title: "Form Elements (Input Groups)"
 			<div class="input-group-item input-group-item-shrink">
 				<button aria-expanded="false" aria-haspopup="true" class="btn btn-monospaced btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 					<span class="inline-item">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
-							<use href="/images/icons/icons.svg#es-es"></use>
-						</svg>
+						<span aria-label="icon-es-es" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+								<use href="/images/icons/icons.svg#es-es"></use>
+							</svg>
+						</span>
 					</span>
 					<span class="btn-section">es-ES</span>
 				</button>
@@ -248,9 +250,11 @@ title: "Form Elements (Input Groups)"
 							<span class="autofit-col autofit-col-expand">
 								<span class="autofit-section">
 									<span class="inline-item inline-item-before">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
-											<use href="/images/icons/icons.svg#en-us"></use>
-										</svg>
+										<span aria-label="icon-en-us" class="lexicon-icon-container" role="img">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
+												<use href="/images/icons/icons.svg#en-us"></use>
+											</svg>
+										</span>
 									</span>
 									en-US
 								</span>
@@ -267,9 +271,11 @@ title: "Form Elements (Input Groups)"
 							<span class="autofit-col autofit-col-expand">
 								<span class="autofit-section">
 									<span class="inline-item inline-item-before">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
-											<use href="/images/icons/icons.svg#en-gb"></use>
-										</svg>
+										<span aria-label="icon-en-gb" class="lexicon-icon-container" role="img">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
+												<use href="/images/icons/icons.svg#en-gb"></use>
+											</svg>
+										</span>
 									</span>
 									en-GB
 								</span>
@@ -286,9 +292,11 @@ title: "Form Elements (Input Groups)"
 							<span class="autofit-col autofit-col-expand">
 								<span class="autofit-section">
 									<span class="inline-item inline-item-before">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
-											<use href="/images/icons/icons.svg#es-es"></use>
-										</svg>
+										<span aria-label="icon-es-es" class="lexicon-icon-container" role="img">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+												<use href="/images/icons/icons.svg#es-es"></use>
+											</svg>
+										</span>
 									</span>
 									es-ES
 								</span>
@@ -305,9 +313,11 @@ title: "Form Elements (Input Groups)"
 							<span class="autofit-col autofit-col-expand">
 								<span class="autofit-section">
 									<span class="inline-item inline-item-before">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
-											<use href="/images/icons/icons.svg#fr-fr"></use>
-										</svg>
+										<span aria-label="icon-fr-fr" class="lexicon-icon-container" role="img">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
+												<use href="/images/icons/icons.svg#fr-fr"></use>
+											</svg>
+										</span>
 									</span>
 									fr-FR
 								</span>
@@ -353,9 +363,11 @@ title: "Form Elements (Input Groups)"
 		<div class="input-group-item input-group-item-shrink">
 			<button aria-expanded="false" aria-haspopup="true" class="btn btn-monospaced btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
-						<use href="/images/icons/icons.svg#es-es"></use>
-					</svg>
+					<span aria-label="icon-es-es" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+							<use href="/images/icons/icons.svg#es-es"></use>
+						</svg>
+					</span>
 				</span>
 				<span class="btn-section">es-ES</span>
 			</button>
@@ -365,9 +377,11 @@ title: "Form Elements (Input Groups)"
 						<span class="autofit-col autofit-col-expand">
 							<span class="autofit-section">
 								<span class="inline-item inline-item-before">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
-										<use href="/images/icons/icons.svg#en-us"></use>
-									</svg>
+									<span aria-label="icon-en-us" class="lexicon-icon-container" role="img">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
+											<use href="/images/icons/icons.svg#en-us"></use>
+										</svg>
+									</span>
 								</span>
 								en-US
 							</span>
@@ -384,9 +398,11 @@ title: "Form Elements (Input Groups)"
 						<span class="autofit-col autofit-col-expand">
 							<span class="autofit-section">
 								<span class="inline-item inline-item-before">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
-										<use href="/images/icons/icons.svg#en-gb"></use>
-									</svg>
+									<span aria-label="icon-en-gb" class="lexicon-icon-container" role="img">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
+											<use href="/images/icons/icons.svg#en-gb"></use>
+										</svg>
+									</span>
 								</span>
 								en-GB
 							</span>
@@ -403,9 +419,11 @@ title: "Form Elements (Input Groups)"
 						<span class="autofit-col autofit-col-expand">
 							<span class="autofit-section">
 								<span class="inline-item inline-item-before">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
-										<use href="/images/icons/icons.svg#es-es"></use>
-									</svg>
+									<span aria-label="icon-es-es" class="lexicon-icon-container" role="img">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+											<use href="/images/icons/icons.svg#es-es"></use>
+										</svg>
+									</span>
 								</span>
 								es-ES
 							</span>
@@ -422,9 +440,11 @@ title: "Form Elements (Input Groups)"
 						<span class="autofit-col autofit-col-expand">
 							<span class="autofit-section">
 								<span class="inline-item inline-item-before">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
-										<use href="/images/icons/icons.svg#fr-fr"></use>
-									</svg>
+									<span aria-label="icon-fr-fr" class="lexicon-icon-container" role="img">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
+											<use href="/images/icons/icons.svg#fr-fr"></use>
+										</svg>
+									</span>
 								</span>
 								fr-FR
 							</span>
@@ -458,14 +478,18 @@ title: "Form Elements (Input Groups)"
 					<input aria-label="Search for" class="form-control input-group-inset input-group-inset-after" placeholder="Search..." type="text"/>
 					<div class="input-group-inset-item input-group-inset-item-after">
 						<button class="btn btn-unstyled d-md-none" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use href="/images/icons/icons.svg#times" />
-							</svg>
+							<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+									<use href="/images/icons/icons.svg#times" />
+								</svg>
+							</span>
 						</button>
 						<button class="btn btn-unstyled d-none d-md-inline-block" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-								<use href="/images/icons/icons.svg#search" />
-							</svg>
+							<span aria-label="icon-search" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use href="/images/icons/icons.svg#search" />
+								</svg>
+							</span>
 						</button>
 					</div>
 				</div>
@@ -477,14 +501,18 @@ title: "Form Elements (Input Groups)"
 					<input aria-label="Search for" class="form-control input-group-inset input-group-inset-after" placeholder="Search..." type="text"/>
 					<div class="input-group-inset-item input-group-inset-item-after">
 						<button class="btn btn-unstyled" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-								<use href="/images/icons/icons.svg#times-circle" />
-							</svg>
+							<span aria-label="icon-times-circle" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
+									<use href="/images/icons/icons.svg#times-circle" />
+								</svg>
+							</span>
 						</button>
 						<button class="btn btn-unstyled" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-								<use href="/images/icons/icons.svg#search" />
-							</svg>
+							<span aria-label="icon-search" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use href="/images/icons/icons.svg#search" />
+								</svg>
+							</span>
 						</button>
 					</div>
 				</div>
@@ -508,9 +536,11 @@ title: "Form Elements (Input Groups)"
 					<input aria-label="Search for" class="form-control input-group-inset input-group-inset-before" placeholder="Search..." type="text"/>
 					<div class="input-group-inset-item input-group-inset-item-before">
 						<button class="btn btn-unstyled" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-								<use href="/images/icons/icons.svg#search" />
-							</svg>
+							<span aria-label="icon-search" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use href="/images/icons/icons.svg#search" />
+								</svg>
+							</span>
 						</button>
 					</div>
 				</div>
@@ -535,14 +565,18 @@ title: "Form Elements (Input Groups)"
 		<input aria-label="Search for" class="form-control input-group-inset input-group-inset-after" placeholder="Search..." type="text"/>
 		<div class="input-group-inset-item input-group-inset-item-after">
 			<button class="btn btn-unstyled d-md-none" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-					<use href="/images/icons/icons.svg#times" />
-				</svg>
+				<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+						<use href="/images/icons/icons.svg#times" />
+					</svg>
+				</span>
 			</button>
 			<button class="btn btn-unstyled d-none d-md-inline-block" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-					<use href="/images/icons/icons.svg#search" />
-				</svg>
+				<span aria-label="icon-search" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+						<use href="/images/icons/icons.svg#search" />
+					</svg>
+				</span>
 			</button>
 		</div>
 	</div>
@@ -553,14 +587,18 @@ title: "Form Elements (Input Groups)"
 		<input aria-label="Search for" class="form-control input-group-inset input-group-inset-after" placeholder="Search..." type="text"/>
 		<div class="input-group-inset-item input-group-inset-item-after">
 			<button class="btn btn-unstyled" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-					<use href="/images/icons/icons.svg#times-circle" />
-				</svg>
+				<span aria-label="icon-times-circle" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
+						<use href="/images/icons/icons.svg#times-circle" />
+					</svg>
+				</span>
 			</button>
 			<button class="btn btn-unstyled" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-					<use href="/images/icons/icons.svg#search" />
-				</svg>
+				<span aria-label="icon-search" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+						<use href="/images/icons/icons.svg#search" />
+					</svg>
+				</span>
 			</button>
 		</div>
 	</div>
@@ -580,9 +618,11 @@ title: "Form Elements (Input Groups)"
 		<input aria-label="Search for" class="form-control input-group-inset input-group-inset-before" placeholder="Search..." type="text"/>
 		<div class="input-group-inset-item input-group-inset-item-before">
 			<button class="btn btn-unstyled" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-					<use href="/images/icons/icons.svg#search" />
-				</svg>
+				<span aria-label="icon-search" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+						<use href="/images/icons/icons.svg#search" />
+					</svg>
+				</span>
 			</button>
 		</div>
 	</div>
@@ -747,7 +787,7 @@ title: "Form Elements (Input Groups)"
 		<div class="input-group">
 			<div class="input-group-item input-group-item-shrink input-group-prepend">
 				<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
-					Action<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom"><use href="/images/icons/icons.svg#caret-bottom" /></svg></span>
+					Action<span class="inline-item inline-item-after"><span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom"><use href="/images/icons/icons.svg#caret-bottom" /></svg></span></span>
 				</button>
 				<ul class="dropdown-menu">
 					<li><a class="dropdown-item" href="#1">Action</a></li>
@@ -769,7 +809,7 @@ title: "Form Elements (Input Groups)"
 			</div>
 			<div class="input-group-append input-group-item input-group-item-shrink">
 				<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
-					Action<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom"><use href="/images/icons/icons.svg#caret-bottom" /></svg></span>
+					Action<span class="inline-item inline-item-after"><span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom"><use href="/images/icons/icons.svg#caret-bottom" /></svg></span></span>
 				</button>
 				<ul class="dropdown-menu dropdown-menu-right">
 					<li><a class="dropdown-item" href="#1">Action</a></li>
@@ -787,9 +827,11 @@ title: "Form Elements (Input Groups)"
 				<button class="btn btn-secondary" type="button">Action</button>
 				<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 					<span class="inline-item">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use href="/images/icons/icons.svg#caret-bottom" />
-						</svg>
+						<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<use href="/images/icons/icons.svg#caret-bottom" />
+							</svg>
+						</span>
 					</span>
 				</button>
 				<ul class="dropdown-menu">
@@ -816,9 +858,11 @@ title: "Form Elements (Input Groups)"
 			<div class="input-group-append input-group-item input-group-item-shrink">
 				<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 					<span class="inline-item">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use href="/images/icons/icons.svg#caret-bottom" />
-						</svg>
+						<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<use href="/images/icons/icons.svg#caret-bottom" />
+							</svg>
+						</span>
 					</span>
 				</button>
 				<ul class="dropdown-menu dropdown-menu-right">
@@ -860,7 +904,7 @@ title: "Form Elements (Input Groups)"
 	<div class="input-group">
 		<div class="input-group-item input-group-item-shrink input-group-prepend">
 			<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
-				Action<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom"><use href="/images/icons/icons.svg#caret-bottom" /></svg></span>
+				Action<span class="inline-item inline-item-after"><span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom"><use href="/images/icons/icons.svg#caret-bottom" /></svg></span></span>
 			</button>
 			<ul class="dropdown-menu">
 				<li><a class="dropdown-item" href="#1">Action</a></li>
@@ -883,7 +927,7 @@ title: "Form Elements (Input Groups)"
 		</div>
 		<div class="input-group-append input-group-item input-group-item-shrink">
 			<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
-				Action<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom"><use href="/images/icons/icons.svg#caret-bottom" /></svg></span>
+				Action<span class="inline-item inline-item-after"><span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom"><use href="/images/icons/icons.svg#caret-bottom" /></svg></span></span>
 			</button>
 			<ul class="dropdown-menu dropdown-menu-right">
 				<li><a class="dropdown-item" href="#1">Action</a></li>
@@ -902,9 +946,11 @@ title: "Form Elements (Input Groups)"
 			<button class="btn btn-secondary" type="button">Action</button>
 			<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use href="/images/icons/icons.svg#caret-bottom" />
-					</svg>
+					<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+							<use href="/images/icons/icons.svg#caret-bottom" />
+						</svg>
+					</span>
 				</span>
 			</button>
 			<ul class="dropdown-menu">
@@ -932,9 +978,11 @@ title: "Form Elements (Input Groups)"
 		<div class="input-group-append input-group-item input-group-item-shrink">
 			<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use href="/images/icons/icons.svg#caret-bottom" />
-					</svg>
+					<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+							<use href="/images/icons/icons.svg#caret-bottom" />
+						</svg>
+					</span>
 				</span>
 			</button>
 			<ul class="dropdown-menu dropdown-menu-right">
@@ -994,9 +1042,11 @@ title: "Form Elements (Input Groups)"
 	<div class="form-group">
 		<label for="inputGroupLgSeparated">
 			Label Input Group Lg
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-				<use href="/images/icons/icons.svg#asterisk" />
-			</svg>
+			<span aria-label="icon-asterisk" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+					<use href="/images/icons/icons.svg#asterisk" />
+				</svg>
+			</span>
 		</label>
 		<div class="input-group input-group-lg">
 			<div class="input-group-item input-group-item-shrink input-group-prepend">
@@ -1007,9 +1057,11 @@ title: "Form Elements (Input Groups)"
 			</div>
 			<div class="input-group-item input-group-item-shrink">
 				<button class="btn btn-monospaced btn-unstyled" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use href="/images/icons/icons.svg#trash" />
-					</svg>
+					<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+							<use href="/images/icons/icons.svg#trash" />
+						</svg>
+					</span>
 				</button>
 			</div>
 		</div>
@@ -1017,16 +1069,20 @@ title: "Form Elements (Input Groups)"
 	<div class="form-group">
 		<label for="inputGroupNormalSeparated">
 			Label
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-				<use href="/images/icons/icons.svg#asterisk" />
-			</svg>
+			<span aria-label="icon-asterisk" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+					<use href="/images/icons/icons.svg#asterisk" />
+				</svg>
+			</span>
 		</label>
 		<div class="input-group">
 			<div class="input-group-item input-group-item-shrink">
 				<button class="btn btn-monospaced btn-primary" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use href="/images/icons/icons.svg#trash" />
-					</svg>
+					<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+							<use href="/images/icons/icons.svg#trash" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="input-group-item">
@@ -1034,9 +1090,11 @@ title: "Form Elements (Input Groups)"
 			</div>
 			<div class="input-group-item input-group-item-shrink">
 				<button class="btn btn-monospaced btn-unstyled" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use href="/images/icons/icons.svg#trash" />
-					</svg>
+					<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+							<use href="/images/icons/icons.svg#trash" />
+						</svg>
+					</span>
 				</button>
 			</div>
 		</div>
@@ -1044,9 +1102,11 @@ title: "Form Elements (Input Groups)"
 	<div class="form-group">
 		<label for="inputGroupSmSeparated">
 			Label Input Group Sm
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-				<use href="/images/icons/icons.svg#asterisk" />
-			</svg>
+			<span aria-label="icon-asterisk" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+					<use href="/images/icons/icons.svg#asterisk" />
+				</svg>
+			</span>
 		</label>
 		<div class="input-group input-group-sm">
 			<div class="input-group-item input-group-item-shrink input-group-prepend">
@@ -1057,9 +1117,11 @@ title: "Form Elements (Input Groups)"
 			</div>
 			<div class="input-group-item input-group-item-shrink">
 				<button class="btn btn-monospaced btn-unstyled" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use href="/images/icons/icons.svg#trash" />
-					</svg>
+					<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+							<use href="/images/icons/icons.svg#trash" />
+						</svg>
+					</span>
 				</button>
 			</div>
 		</div>
@@ -1112,9 +1174,11 @@ title: "Form Elements (Input Groups)"
 <div class="form-group">
 	<label for="inputGroupLgSeparated">
 		Label Input Group Lg
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-			<use href="/images/icons/icons.svg#asterisk" />
-		</svg>
+		<span aria-label="icon-asterisk" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+				<use href="/images/icons/icons.svg#asterisk" />
+			</svg>
+		</span>
 	</label>
 	<div class="input-group input-group-lg">
 		<div class="input-group-item input-group-item-shrink input-group-prepend">
@@ -1125,9 +1189,11 @@ title: "Form Elements (Input Groups)"
 		</div>
 		<div class="input-group-item input-group-item-shrink">
 			<button class="btn btn-monospaced btn-unstyled" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-					<use href="/images/icons/icons.svg#trash" />
-				</svg>
+				<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use href="/images/icons/icons.svg#trash" />
+					</svg>
+				</span>
 			</button>
 		</div>
 	</div>
@@ -1136,16 +1202,20 @@ title: "Form Elements (Input Groups)"
 <div class="form-group">
 	<label for="inputGroupNormalSeparated">
 		Label
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-			<use href="/images/icons/icons.svg#asterisk" />
-		</svg>
+		<span aria-label="icon-asterisk" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+				<use href="/images/icons/icons.svg#asterisk" />
+			</svg>
+		</span>
 	</label>
 	<div class="input-group">
 		<div class="input-group-item input-group-item-shrink">
 			<button class="btn btn-monospaced btn-primary" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-					<use href="/images/icons/icons.svg#trash" />
-				</svg>
+				<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use href="/images/icons/icons.svg#trash" />
+					</svg>
+				</span>
 			</button>
 		</div>
 		<div class="input-group-item">
@@ -1153,9 +1223,11 @@ title: "Form Elements (Input Groups)"
 		</div>
 		<div class="input-group-item input-group-item-shrink">
 			<button class="btn btn-monospaced btn-unstyled" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-					<use href="/images/icons/icons.svg#trash" />
-				</svg>
+				<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use href="/images/icons/icons.svg#trash" />
+					</svg>
+				</span>
 			</button>
 		</div>
 	</div>
@@ -1164,9 +1236,11 @@ title: "Form Elements (Input Groups)"
 <div class="form-group">
 	<label for="inputGroupSmSeparated">
 		Label Input Group Sm
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
-			<use href="/images/icons/icons.svg#asterisk" />
-		</svg>
+		<span aria-label="icon-asterisk" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+				<use href="/images/icons/icons.svg#asterisk" />
+			</svg>
+		</span>
 	</label>
 	<div class="input-group input-group-sm">
 		<div class="input-group-item input-group-item-shrink input-group-prepend">
@@ -1177,9 +1251,11 @@ title: "Form Elements (Input Groups)"
 		</div>
 		<div class="input-group-item input-group-item-shrink">
 			<button class="btn btn-monospaced btn-unstyled" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-					<use href="/images/icons/icons.svg#trash" />
-				</svg>
+				<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use href="/images/icons/icons.svg#trash" />
+					</svg>
+				</span>
 			</button>
 		</div>
 	</div>

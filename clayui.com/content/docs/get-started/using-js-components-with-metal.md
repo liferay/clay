@@ -43,9 +43,11 @@ You can call Clay components in your SOY templates the same way you would call a
 
 <div class="alert alert-warning" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-			<use href="/images/icons/icons.svg#warning-full"></use>
-		</svg>
+		<span aria-label="icon-warning-full" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+				<use href="/images/icons/icons.svg#warning-full"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Warning:</strong> Make sure you import the Clay component where you want to use it.
 </div>

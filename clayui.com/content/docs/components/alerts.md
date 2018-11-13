@@ -19,15 +19,19 @@ Alerts are used to capture the attention of the user in an intrusive way. They c
 				<div class="alert-notifications alert-notifications-absolute">
 					<div class="alert alert-dismissible alert-danger" role="alert">
 						<span class="alert-indicator">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-								<use href="/images/icons/icons.svg#exclamation-full"></use>
-							</svg>
+							<span aria-label="icon-exclamation-full" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+									<use href="/images/icons/icons.svg#exclamation-full"></use>
+								</svg>
+							</span>
 						</span>
 						<strong class="lead">Error:</strong> This is an error message
 						<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use href="/images/icons/icons.svg#times" />
-							</svg>
+							<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+									<use href="/images/icons/icons.svg#times" />
+								</svg>
+							</span>
 						</button>
 					</div>
 				</div>
@@ -38,15 +42,19 @@ Alerts are used to capture the attention of the user in an intrusive way. They c
 				<div class="alert-notifications alert-notifications-absolute">
 					<div class="alert alert-dismissible alert-info" role="alert">
 						<span class="alert-indicator">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-								<use href="/images/icons/icons.svg#info-circle"></use>
-							</svg>
+							<span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+									<use href="/images/icons/icons.svg#info-circle"></use>
+								</svg>
+							</span>
 						</span>
 						<strong class="lead">Info:</strong> This is an info message.
 						<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use href="/images/icons/icons.svg#times" />
-							</svg>
+							<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+									<use href="/images/icons/icons.svg#times" />
+								</svg>
+							</span>
 						</button>
 					</div>
 				</div>
@@ -59,15 +67,19 @@ Alerts are used to capture the attention of the user in an intrusive way. They c
 				<div class="alert-notifications alert-notifications-absolute">
 					<div class="alert alert-dismissible alert-success" role="alert">
 						<span class="alert-indicator">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-								<use href="/images/icons/icons.svg#check-circle-full"></use>
-							</svg>
+							<span aria-label="icon-check-circle-full" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
+									<use href="/images/icons/icons.svg#check-circle-full"></use>
+								</svg>
+							</span>
 						</span>
 						<strong class="lead">Success:</strong> This is a success message
 						<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use href="/images/icons/icons.svg#times" />
-							</svg>
+							<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+									<use href="/images/icons/icons.svg#times" />
+								</svg>
+							</span>
 						</button>
 					</div>
 				</div>
@@ -78,15 +90,19 @@ Alerts are used to capture the attention of the user in an intrusive way. They c
 				<div class="alert-notifications alert-notifications-absolute">
 					<div class="alert alert-dismissible alert-warning" role="alert">
 						<span class="alert-indicator">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-								<use href="/images/icons/icons.svg#warning-full"></use>
-							</svg>
+							<span aria-label="icon-warning-full" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+									<use href="/images/icons/icons.svg#warning-full"></use>
+								</svg>
+							</span>
 						</span>
 						<strong class="lead">Warning:</strong> This is a warning message.
 						<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use href="/images/icons/icons.svg#times" />
-							</svg>
+							<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+									<use href="/images/icons/icons.svg#times" />
+								</svg>
+							</span>
 						</button>
 					</div>
 				</div>
@@ -111,36 +127,44 @@ Alerts are used to capture the attention of the user in an intrusive way. They c
 
 <div class="alert alert-danger" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-			<use href="/images/icons/icons.svg#exclamation-full"></use>
-		</svg>
+		<span aria-label="icon-exclamation-full" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+				<use href="/images/icons/icons.svg#exclamation-full"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Error:</strong> This is an error message
 </div>
 
 <div class="alert alert-success" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-			<use href="/images/icons/icons.svg#check-circle-full"></use>
-		</svg>
+		<span aria-label="icon-check-circle-full" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
+				<use href="/images/icons/icons.svg#check-circle-full"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Error:</strong> This is a success message
 </div>
 
 <div class="alert alert-info" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-			<use href="/images/icons/icons.svg#info-circle"></use>
-		</svg>
+		<span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+				<use href="/images/icons/icons.svg#info-circle"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Error:</strong> This is an info message
 </div>
 
 <div class="alert alert-warning" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-			<use href="/images/icons/icons.svg#warning-full"></use>
-		</svg>
+		<span aria-label="icon-warning-full" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+				<use href="/images/icons/icons.svg#warning-full"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Error:</strong> This is a warning message
 </div>
@@ -204,36 +228,44 @@ Alerts are used to capture the attention of the user in an intrusive way. They c
 ```html
 <div class="alert alert-danger" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-			<use href="/images/icons/icons.svg#exclamation-full"></use>
-		</svg>
+		<span aria-label="icon-exclamation-full" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+				<use href="/images/icons/icons.svg#exclamation-full"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Error:</strong>This is an error message
 </div>
 
 <div class="alert alert-success" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-			<use href="/images/icons/icons.svg#check-circle-full"></use>
-		</svg>
+		<span aria-label="icon-check-circle-full" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
+				<use href="/images/icons/icons.svg#check-circle-full"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Error:</strong>This is a success message
 </div>
 
 <div class="alert alert-info" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-			<use href="/images/icons/icons.svg#info-circle"></use>
-		</svg>
+		<span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+				<use href="/images/icons/icons.svg#info-circle"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Error:</strong>This is an info message
 </div>
 
 <div class="alert alert-warning" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-			<use href="/images/icons/icons.svg#warning-full"></use>
-		</svg>
+		<span aria-label="icon-warning-full" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+				<use href="/images/icons/icons.svg#warning-full"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Error:</strong>This is a warning message
 </div>
@@ -246,15 +278,19 @@ Alerts are used to capture the attention of the user in an intrusive way. They c
 <div class="alert alert-danger alert-dismissible alert-fluid" role="alert">
 	<div class="container">
 		<span class="alert-indicator">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-				<use href="/images/icons/icons.svg#exclamation-full"></use>
-			</svg>
+			<span aria-label="icon-exclamation-full" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+					<use href="/images/icons/icons.svg#exclamation-full"></use>
+				</svg>
+			</span>
 		</span>
 		<strong class="lead">Danger</strong> This is an error message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use href="/images/icons/icons.svg#times" />
-			</svg>
+			<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<use href="/images/icons/icons.svg#times" />
+				</svg>
+			</span>
 		</button>
 	</div>
 </div>
@@ -262,15 +298,19 @@ Alerts are used to capture the attention of the user in an intrusive way. They c
 <div class="alert alert-dismissible alert-fluid alert-success" role="alert">
 	<div class="container">
 		<span class="alert-indicator">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-				<use href="/images/icons/icons.svg#check-circle-full"></use>
-			</svg>
+			<span aria-label="icon-check-circle-full" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
+					<use href="/images/icons/icons.svg#check-circle-full"></use>
+				</svg>
+			</span>
 		</span>
 		<strong class="lead">Success</strong> This is a success message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use href="/images/icons/icons.svg#times" />
-			</svg>
+			<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<use href="/images/icons/icons.svg#times" />
+				</svg>
+			</span>
 		</button>
 	</div>
 </div>
@@ -278,15 +318,19 @@ Alerts are used to capture the attention of the user in an intrusive way. They c
 <div class="alert alert-dismissible alert-fluid alert-info" role="alert">
 	<div class="container">
 		<span class="alert-indicator">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-				<use href="/images/icons/icons.svg#info-circle"></use>
-			</svg>
+			<span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+					<use href="/images/icons/icons.svg#info-circle"></use>
+				</svg>
+			</span>
 		</span>
 		<strong class="lead">Info</strong> This is an info message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use href="/images/icons/icons.svg#times" />
-			</svg>
+			<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<use href="/images/icons/icons.svg#times" />
+				</svg>
+			</span>
 		</button>
 	</div>
 </div>
@@ -294,15 +338,19 @@ Alerts are used to capture the attention of the user in an intrusive way. They c
 <div class="alert alert-dismissible alert-fluid alert-warning" role="alert">
 	<div class="container">
 		<span class="alert-indicator">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-				<use href="/images/icons/icons.svg#warning-full"></use>
-			</svg>
+			<span aria-label="icon-warning-full" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+					<use href="/images/icons/icons.svg#warning-full"></use>
+				</svg>
+			</span>
 		</span>
 		<strong class="lead">Warning</strong> This is a warning message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use href="/images/icons/icons.svg#times" />
-			</svg>
+			<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<use href="/images/icons/icons.svg#times" />
+				</svg>
+			</span>
 		</button>
 	</div>
 </div>
@@ -367,15 +415,19 @@ Alerts are used to capture the attention of the user in an intrusive way. They c
 <div class="alert alert-danger alert-dismissible alert-fluid" role="alert">
 	<div class="container">
 		<span class="alert-indicator">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-				<use href="/images/icons/icons.svg#exclamation-full"></use>
-			</svg>
+			<span aria-label="icon-exclamation-full" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+					<use href="/images/icons/icons.svg#exclamation-full"></use>
+				</svg>
+			</span>
 		</span>
 		<strong class="lead">Danger</strong> This is an error message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use href="/images/icons/icons.svg#times" />
-			</svg>
+			<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<use href="/images/icons/icons.svg#times" />
+				</svg>
+			</span>
 		</button>
 	</div>
 </div>
@@ -383,15 +435,19 @@ Alerts are used to capture the attention of the user in an intrusive way. They c
 <div class="alert alert-dismissible alert-fluid alert-success" role="alert">
 	<div class="container">
 		<span class="alert-indicator">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-				<use href="/images/icons/icons.svg#check-circle-full"></use>
-			</svg>
+			<span aria-label="icon-check-circle-full" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
+					<use href="/images/icons/icons.svg#check-circle-full"></use>
+				</svg>
+			</span>
 		</span>
 		<strong class="lead">Success</strong> This is a success message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use href="/images/icons/icons.svg#times" />
-			</svg>
+			<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<use href="/images/icons/icons.svg#times" />
+				</svg>
+			</span>
 		</button>
 	</div>
 </div>
@@ -399,15 +455,19 @@ Alerts are used to capture the attention of the user in an intrusive way. They c
 <div class="alert alert-dismissible alert-fluid alert-info" role="alert">
 	<div class="container">
 		<span class="alert-indicator">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-				<use href="/images/icons/icons.svg#info-circle"></use>
-			</svg>
+			<span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+					<use href="/images/icons/icons.svg#info-circle"></use>
+				</svg>
+			</span>
 		</span>
 		<strong class="lead">Info</strong> This is an info message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use href="/images/icons/icons.svg#times" />
-			</svg>
+			<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<use href="/images/icons/icons.svg#times" />
+				</svg>
+			</span>
 		</button>
 	</div>
 </div>
@@ -415,15 +475,19 @@ Alerts are used to capture the attention of the user in an intrusive way. They c
 <div class="alert alert-dismissible alert-fluid alert-warning" role="alert">
 	<div class="container">
 		<span class="alert-indicator">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-				<use href="/images/icons/icons.svg#warning-full"></use>
-			</svg>
+			<span aria-label="icon-warning-full" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+					<use href="/images/icons/icons.svg#warning-full"></use>
+				</svg>
+			</span>
 		</span>
 		<strong class="lead">Warning</strong> This is a warning message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use href="/images/icons/icons.svg#times" />
-			</svg>
+			<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<use href="/images/icons/icons.svg#times" />
+				</svg>
+			</span>
 		</button>
 	</div>
 </div>
@@ -439,9 +503,11 @@ Alerts are used to capture the attention of the user in an intrusive way. They c
 
 <div class="alert alert-warning" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-			<use href="/images/icons/icons.svg#warning-full"></use>
-		</svg>
+		<span aria-label="icon-warning-full" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+				<use href="/images/icons/icons.svg#warning-full"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Warning:</strong> This alert is a <a href="#1" class="alert-link">warning message</a>.
 </div>
@@ -467,9 +533,11 @@ Alerts are used to capture the attention of the user in an intrusive way. They c
 ```html
 <div class="alert alert-warning" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-			<use href="/images/icons/icons.svg#warning-full"></use>
-		</svg>
+		<span aria-label="icon-warning-full" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+				<use href="/images/icons/icons.svg#warning-full"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Warning:</strong> This alert is a <a href="#1" class="alert-link">warning message</a>.
 </div>
@@ -479,15 +547,19 @@ Alerts are used to capture the attention of the user in an intrusive way. They c
 
 <div class="alert alert-dismissible alert-success" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-			<use href="/images/icons/icons.svg#check-circle-full"></use>
-		</svg>
+		<span aria-label="icon-check-circle-full" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
+				<use href="/images/icons/icons.svg#check-circle-full"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Success:</strong> This is a success closeable alert
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use href="/images/icons/icons.svg#times" />
-		</svg>
+		<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+				<use href="/images/icons/icons.svg#times" />
+			</svg>
+		</span>
 	</button>
 </div>
 
@@ -512,15 +584,19 @@ Alerts are used to capture the attention of the user in an intrusive way. They c
 ```html
 <div class="alert alert-dismissible alert-success" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-			<use href="/images/icons/icons.svg#check-circle-full"></use>
-		</svg>
+		<span aria-label="icon-check-circle-full" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
+				<use href="/images/icons/icons.svg#check-circle-full"></use>
+			</svg>
+		</span>
 	</span>
 	<strong class="lead">Success:</strong> This is a success closeable alert
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use href="/images/icons/icons.svg#times" />
-		</svg>
+		<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+				<use href="/images/icons/icons.svg#times" />
+			</svg>
+		</span>
 	</button>
 </div>
 ```

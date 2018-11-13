@@ -85,12 +85,16 @@ Breadcrumb is a secondary navigation pattern that identifies the page position i
 <ol class="breadcrumb">
 	<li class="breadcrumb-item dropdown">
 		<a aria-expanded="false" aria-haspopup="true" class="breadcrumb-link dropdown-toggle" data-toggle="dropdown" href="#1" id="breadcrumb2Dropdown1" role="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
-				<use href="/images/icons/icons.svg#ellipsis-h"></use>
-			</svg>
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom"></use>
-			</svg>
+			<span aria-label="icon-ellipsis-h" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
+					<use href="/images/icons/icons.svg#ellipsis-h"></use>
+				</svg>
+			</span>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom"></use>
+				</svg>
+			</span>
 		</a>
 		<div aria-labelledby="breadcrumb2Dropdown1" class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Home</a>
@@ -117,12 +121,16 @@ Breadcrumb is a secondary navigation pattern that identifies the page position i
 <ol class="breadcrumb">
 	<li class="breadcrumb-item dropdown">
 		<a aria-expanded="false" aria-haspopup="true" class="breadcrumb-link dropdown-toggle" data-toggle="dropdown" href="" id="breadcrumb2Dropdown1" role="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
-				<use href="/images/icons/icons.svg#ellipsis-h"></use>
-			</svg>
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom"></use>
-			</svg>
+			<span aria-label="icon-ellipsis-h" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
+					<use href="/images/icons/icons.svg#ellipsis-h"></use>
+				</svg>
+			</span>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom"></use>
+				</svg>
+			</span>
 		</a>
 		<div aria-labelledby="breadcrumb2Dropdown1" class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Home</a>

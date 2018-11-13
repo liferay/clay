@@ -9,9 +9,11 @@ title: "Form Elements"
 		<label for="basicInputTypeText">
 			Text
 			<span class="reference-mark">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-					<use href="/images/icons/icons.svg#asterisk" />
-				</svg>
+				<span aria-label="icon-asterisk" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
+						<use href="/images/icons/icons.svg#asterisk" />
+					</svg>
+				</span>
 			</span>
 		</label>
 		<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text"/>
@@ -55,9 +57,11 @@ title: "Form Elements"
 	<label for="basicInputTypeText">
 		Text
 		<span class="reference-mark">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-				<use href="/images/icons/icons.svg#asterisk" />
-			</svg>
+			<span aria-label="icon-asterisk" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
+					<use href="/images/icons/icons.svg#asterisk" />
+				</svg>
+			</span>
 		</span>
 	</label>
 	<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text"/>

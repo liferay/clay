@@ -16,16 +16,20 @@ Header is a toolbar that supports identification, navigation, and display action
 		<ul class="navbar-nav">
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
-						<use href="/images/icons/icons.svg#product-menu-closed" />
-					</svg>
+					<span aria-label="icon-product-menu-closed" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
+							<use href="/images/icons/icons.svg#product-menu-closed" />
+						</svg>
+					</span>
 				</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-						<use href="/images/icons/icons.svg#angle-left" />
-					</svg>
+					<span aria-label="icon-angle-left" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+							<use href="/images/icons/icons.svg#angle-left" />
+						</svg>
+					</span>
 				</a>
 			</li>
 		</ul>
@@ -33,30 +37,38 @@ Header is a toolbar that supports identification, navigation, and display action
 		<ul class="navbar-nav">
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cog">
-						<use href="/images/icons/icons.svg#cog" />
-					</svg>
+					<span aria-label="icon-cog" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cog">
+							<use href="/images/icons/icons.svg#cog" />
+						</svg>
+					</span>
 				</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
-						<use href="/images/icons/icons.svg#plus" />
-					</svg>
+					<span aria-label="icon-plus" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+							<use href="/images/icons/icons.svg#plus" />
+						</svg>
+					</span>
 				</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-simulation-menu-closed">
-						<use href="/images/icons/icons.svg#simulation-menu-closed" />
-					</svg>
+					<span aria-label="icon-simulation-menu-closed" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-simulation-menu-closed">
+							<use href="/images/icons/icons.svg#simulation-menu-closed" />
+						</svg>
+					</span>
 				</a>
 			</li>
 			<li class="dropdown nav-item">
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use href="/images/icons/icons.svg#ellipsis-v" />
-					</svg>
+					<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use href="/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</span>
 				</a>
 				<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
 					<a class="dropdown-item" href="#1">Action</a>
@@ -76,16 +88,20 @@ Header is a toolbar that supports identification, navigation, and display action
 		<ul class="navbar-nav">
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
-						<use href="/images/icons/icons.svg#product-menu-closed" />
-					</svg>
+					<span aria-label="icon-product-menu-closed" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
+							<use href="/images/icons/icons.svg#product-menu-closed" />
+						</svg>
+					</span>
 				</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-						<use href="/images/icons/icons.svg#angle-left" />
-					</svg>
+					<span aria-label="icon-angle-left" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+							<use href="/images/icons/icons.svg#angle-left" />
+						</svg>
+					</span>
 				</a>
 			</li>
 		</ul>
@@ -93,30 +109,38 @@ Header is a toolbar that supports identification, navigation, and display action
 		<ul class="navbar-nav">
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cog">
-						<use href="/images/icons/icons.svg#cog" />
-					</svg>
+					<span aria-label="icon-cog" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cog">
+							<use href="/images/icons/icons.svg#cog" />
+						</svg>
+					</span>
 				</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
-						<use href="/images/icons/icons.svg#plus" />
-					</svg>
+					<span aria-label="icon-plus" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+							<use href="/images/icons/icons.svg#plus" />
+						</svg>
+					</span>
 				</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-simulation-menu-closed">
-						<use href="/images/icons/icons.svg#simulation-menu-closed" />
-					</svg>
+					<span aria-label="icon-simulation-menu-closed" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-simulation-menu-closed">
+							<use href="/images/icons/icons.svg#simulation-menu-closed" />
+						</svg>
+					</span>
 				</a>
 			</li>
 			<li class="dropdown nav-item">
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use href="/images/icons/icons.svg#ellipsis-v" />
-					</svg>
+					<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use href="/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</span>
 				</a>
 				<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
 					<a class="dropdown-item" href="#1">Action</a>

@@ -17,10 +17,11 @@ Pagination provides horizontal navigation between chunks(pages) of a dataset.
 <ul class="pagination">
 	<li class="disabled page-item">
 		<a class="page-link" href="#1" role="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-				<use href="/images/icons/icons.svg#angle-left" />
-			</svg>
-			<span class="sr-only">Previous</span>
+			<span aria-label="icon-angle-left" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+					<use href="/images/icons/icons.svg#angle-left" />
+				</svg>
+			</span>
 		</a>
 	</li>
 	<li class="active page-item"><a class="page-link" href="#1">1</a></li>
@@ -48,10 +49,11 @@ Pagination provides horizontal navigation between chunks(pages) of a dataset.
 	<li class="page-item"><a class="page-link" href="#1">16</a></li>
 	<li class="page-item">
 		<a class="page-link" href="#1" role="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-				<use href="/images/icons/icons.svg#angle-right" />
-			</svg>
-			<span class="sr-only">Next</span>
+			<span aria-label="icon-angle-right" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+					<use href="/images/icons/icons.svg#angle-right" />
+				</svg>
+			</span>
 		</a>
 	</li>
 </ul>
@@ -60,10 +62,11 @@ Pagination provides horizontal navigation between chunks(pages) of a dataset.
 <ul class="pagination">
 	<li class="disabled page-item">
 		<a class="page-link" href="#1" role="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-				<use href="/images/icons/icons.svg#angle-left" />
-			</svg>
-			<span class="sr-only">Previous</span>
+			<span aria-label="icon-angle-left" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+					<use href="/images/icons/icons.svg#angle-left" />
+				</svg>
+			</span>
 		</a>
 	</li>
 	<li class="active page-item"><a class="page-link" href="#1">1</a></li>
@@ -91,10 +94,11 @@ Pagination provides horizontal navigation between chunks(pages) of a dataset.
 	<li class="page-item"><a class="page-link" href="#1">16</a></li>
 	<li class="page-item">
 		<a class="page-link" href="#1" role="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-				<use href="/images/icons/icons.svg#angle-right" />
-			</svg>
-			<span class="sr-only">Next</span>
+			<span aria-label="icon-angle-right" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+					<use href="/images/icons/icons.svg#angle-right" />
+				</svg>
+			</span>
 		</a>
 	</li>
 </ul>
@@ -108,9 +112,11 @@ Pagination provides horizontal navigation between chunks(pages) of a dataset.
 	<div class="dropdown pagination-items-per-page">
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 			10 entries
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
-				<use href="/images/icons/icons.svg#caret-double-l" />
-			</svg>
+			<span aria-label="icon-caret-double-l" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
+					<use href="/images/icons/icons.svg#caret-double-l" />
+				</svg>
+			</span>
 		</a>
 		<div class="dropdown-menu dropdown-menu-top">
 			<a class="dropdown-item" href="#1">5</a>
@@ -124,10 +130,11 @@ Pagination provides horizontal navigation between chunks(pages) of a dataset.
 	<ul class="pagination">
 		<li class="disabled page-item">
 			<a class="page-link" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-					<use href="/images/icons/icons.svg#angle-left" />
-				</svg>
-				<span class="sr-only">Previous</span>
+				<span aria-label="icon-angle-left" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+						<use href="/images/icons/icons.svg#angle-left" />
+					</svg>
+				</span>
 			</a>
 		</li>
 		<li class="active page-item"><a class="page-link" href="#1">1</a></li>
@@ -155,10 +162,11 @@ Pagination provides horizontal navigation between chunks(pages) of a dataset.
 		<li class="page-item"><a class="page-link" href="#1">16</a></li>
 		<li class="page-item">
 			<a class="page-link" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use href="/images/icons/icons.svg#angle-right" />
-				</svg>
-				<span class="sr-only">Next</span>
+				<span aria-label="icon-angle-right" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+						<use href="/images/icons/icons.svg#angle-right" />
+					</svg>
+				</span>
 			</a>
 		</li>
 	</ul>
@@ -169,9 +177,11 @@ Pagination provides horizontal navigation between chunks(pages) of a dataset.
 	<div class="dropdown pagination-items-per-page">
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 			10 entries
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
-				<use href="/images/icons/icons.svg#caret-double-l" />
-			</svg>
+			<span aria-label="icon-caret-double-l" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
+					<use href="/images/icons/icons.svg#caret-double-l" />
+				</svg>
+			</span>
 		</a>
 		<div class="dropdown-menu dropdown-menu-top">
 			<a class="dropdown-item" href="#1">5</a>
@@ -185,10 +195,11 @@ Pagination provides horizontal navigation between chunks(pages) of a dataset.
 	<ul class="pagination">
 		<li class="disabled page-item">
 			<a class="page-link" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-					<use href="/images/icons/icons.svg#angle-left" />
-				</svg>
-				<span class="sr-only">Previous</span>
+				<span aria-label="icon-angle-left" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+						<use href="/images/icons/icons.svg#angle-left" />
+					</svg>
+				</span>
 			</a>
 		</li>
 		<li class="active page-item"><a class="page-link" href="#1">1</a></li>
@@ -216,10 +227,11 @@ Pagination provides horizontal navigation between chunks(pages) of a dataset.
 		<li class="page-item"><a class="page-link" href="#1">16</a></li>
 		<li class="page-item">
 			<a class="page-link" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use href="/images/icons/icons.svg#angle-right" />
-				</svg>
-				<span class="sr-only">Next</span>
+				<span aria-label="icon-angle-right" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+						<use href="/images/icons/icons.svg#angle-right" />
+					</svg>
+				</span>
 			</a>
 		</li>
 	</ul>

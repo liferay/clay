@@ -22,14 +22,18 @@ Management toolbar is an extension of Toolbar. It is a combination of different 
 			<li class="dropdown nav-item">
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link navbar-breakpoint-down-d-none" data-toggle="dropdown" href="#1" role="button">
 					<span class="navbar-text-truncate">Filter and Order</span>
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use href="/images/icons/icons.svg#caret-bottom" />
-					</svg>
+					<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+							<use href="/images/icons/icons.svg#caret-bottom" />
+						</svg>
+					</span>
 				</a>
 				<a aria-expanded="false" aria-haspopup="true" class="nav-link nav-link-monospaced dropdown-toggle navbar-breakpoint-d-none" data-toggle="dropdown" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter">
-						<use href="/images/icons/icons.svg#filter" />
-					</svg>
+					<span aria-label="icon-filter" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter">
+							<use href="/images/icons/icons.svg#filter" />
+						</svg>
+					</span>
 				</a>
 				<div class="dropdown-menu" role="menu">
 					<ul class="list-unstyled">
@@ -41,9 +45,11 @@ Management toolbar is an extension of Toolbar. It is a combination of different 
 			</li>
 			<li class="nav-item">
 				<a class="btn nav-link nav-link-monospaced order-arrow-down-active btn-unstyled" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
-						<use href="/images/icons/icons.svg#order-arrow" />
-					</svg>
+					<span aria-label="icon-order-arrow" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
+							<use href="/images/icons/icons.svg#order-arrow" />
+						</svg>
+					</span>
 				</a>
 			</li>
 		</ul>
@@ -55,14 +61,18 @@ Management toolbar is an extension of Toolbar. It is a combination of different 
 							<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text"/>
 							<span class="input-group-inset-item input-group-inset-item-after">
 								<button class="btn btn-unstyled navbar-breakpoint-d-none" type="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-										<use href="/images/icons/icons.svg#times" />
-									</svg>
+									<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+											<use href="/images/icons/icons.svg#times" />
+										</svg>
+									</span>
 								</button>
 								<button class="btn btn-unstyled navbar-breakpoint-d-block" type="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-										<use href="/images/icons/icons.svg#search" />
-									</svg>
+									<span aria-label="icon-search" class="lexicon-icon-container" role="img">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+											<use href="/images/icons/icons.svg#search" />
+										</svg>
+									</span>
 								</button>
 							</span>
 						</div>
@@ -73,40 +83,50 @@ Management toolbar is an extension of Toolbar. It is a combination of different 
 		<ul class="navbar-nav">
 			<li class="nav-item navbar-breakpoint-d-none">
 				<a class="nav-link nav-link-monospaced" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-						<use href="/images/icons/icons.svg#search" />
-					</svg>
+					<span aria-label="icon-search" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+							<use href="/images/icons/icons.svg#search" />
+						</svg>
+					</span>
 				</a>
 			</li>
 			<li class="dropdown nav-item">
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
-						<use href="/images/icons/icons.svg#list" />
-					</svg>
+					<span aria-label="icon-list" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+							<use href="/images/icons/icons.svg#list" />
+						</svg>
+					</span>
 				</a>
 				<div class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start" role="menu">
 					<ul class="list-unstyled">
 						<li><a class="active dropdown-item" href="#1">
 							<span class="dropdown-item-indicator">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
-									<use href="/images/icons/icons.svg#list" />
-								</svg>
+								<span aria-label="icon-list" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+										<use href="/images/icons/icons.svg#list" />
+									</svg>
+								</span>
 							</span>
 							List View
 						</a></li>
 						<li><a class="dropdown-item" href="#1">
 							<span class="dropdown-item-indicator">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
-									<use href="/images/icons/icons.svg#table" />
-								</svg>
+								<span aria-label="icon-table" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
+										<use href="/images/icons/icons.svg#table" />
+									</svg>
+								</span>
 							</span>
 							Table View
 						</a></li>
 						<li><a class="dropdown-item" href="#1">
 							<span class="dropdown-item-indicator">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
-									<use href="/images/icons/icons.svg#cards2" />
-								</svg>
+								<span aria-label="icon-cards2" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
+										<use href="/images/icons/icons.svg#cards2" />
+									</svg>
+								</span>
 							</span>
 							Card View
 						</a></li>
@@ -115,9 +135,11 @@ Management toolbar is an extension of Toolbar. It is a combination of different 
 			</li>
 			<li class="nav-item">
 				<button class="btn btn-primary nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
-						<use href="/images/icons/icons.svg#plus" />
-					</svg>
+					<span aria-label="icon-plus" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+							<use href="/images/icons/icons.svg#plus" />
+						</svg>
+					</span>
 				</button>
 			</li>
 		</ul>
@@ -150,23 +172,29 @@ Management toolbar is an extension of Toolbar. It is a combination of different 
 		<ul class="navbar-nav">
 			<li class="nav-item navbar-breakpoint-down-d-none">
 				<a class="nav-link nav-link-monospaced" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use href="/images/icons/icons.svg#trash" />
-					</svg>
+					<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+							<use href="/images/icons/icons.svg#trash" />
+						</svg>
+					</span>
 				</a>
 			</li>
 			<li class="nav-item navbar-breakpoint-down-d-none">
 				<a class="nav-link nav-link-monospaced" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-paste">
-						<use href="/images/icons/icons.svg#paste" />
-					</svg>
+					<span aria-label="icon-paste" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-paste">
+							<use href="/images/icons/icons.svg#paste" />
+						</svg>
+					</span>
 				</a>
 			</li>
 			<li class="dropdown nav-item">
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use href="/images/icons/icons.svg#ellipsis-v" />
-					</svg>
+					<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use href="/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</span>
 				</a>
 				<div class="dropdown-menu dropdown-menu-right" role="menu">
 					<ul class="list-unstyled">
@@ -306,14 +334,18 @@ Management toolbar is an extension of Toolbar. It is a combination of different 
 			<li class="dropdown nav-item">
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link navbar-breakpoint-down-d-none" data-toggle="dropdown" href="#1" role="button">
 					<span class="navbar-text-truncate">Filter and Order</span>
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use href="/images/icons/icons.svg#caret-bottom" />
-					</svg>
+					<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+							<use href="/images/icons/icons.svg#caret-bottom" />
+						</svg>
+					</span>
 				</a>
 				<a aria-expanded="false" aria-haspopup="true" class="nav-link nav-link-monospaced dropdown-toggle navbar-breakpoint-d-none" data-toggle="dropdown" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter">
-						<use href="/images/icons/icons.svg#filter" />
-					</svg>
+					<span aria-label="icon-filter" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter">
+							<use href="/images/icons/icons.svg#filter" />
+						</svg>
+					</span>
 				</a>
 				<div class="dropdown-menu" role="menu">
 					<ul class="list-unstyled">
@@ -325,9 +357,11 @@ Management toolbar is an extension of Toolbar. It is a combination of different 
 			</li>
 			<li class="nav-item">
 				<a class="btn -link nav-link-monospaced order-arrow-down-active btn-unstyled" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
-						<use href="/images/icons/icons.svg#order-arrow" />
-					</svg>
+					<span aria-label="icon-order-arrow" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
+							<use href="/images/icons/icons.svg#order-arrow" />
+						</svg>
+					</span>
 				</a>
 			</li>
 		</ul>
@@ -339,14 +373,18 @@ Management toolbar is an extension of Toolbar. It is a combination of different 
 							<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text"/>
 							<span class="input-group-inset-item input-group-inset-item-after">
 								<button class="btn btn-unstyled navbar-breakpoint-d-none" type="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-										<use href="/images/icons/icons.svg#times" />
-									</svg>
+									<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+											<use href="/images/icons/icons.svg#times" />
+										</svg>
+									</span>
 								</button>
 								<button class="btn btn-unstyled navbar-breakpoint-d-block" type="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-										<use href="/images/icons/icons.svg#search" />
-									</svg>
+									<span aria-label="icon-search" class="lexicon-icon-container" role="img">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+											<use href="/images/icons/icons.svg#search" />
+										</svg>
+									</span>
 								</button>
 							</span>
 						</div>
@@ -357,40 +395,50 @@ Management toolbar is an extension of Toolbar. It is a combination of different 
 		<ul class="navbar-nav">
 			<li class="nav-item navbar-breakpoint-d-none">
 				<a class="nav-link nav-link-monospaced" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-						<use href="/images/icons/icons.svg#search" />
-					</svg>
+					<span aria-label="icon-search" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+							<use href="/images/icons/icons.svg#search" />
+						</svg>
+					</span>
 				</a>
 			</li>
 			<li class="dropdown nav-item">
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
-						<use href="/images/icons/icons.svg#list" />
-					</svg>
+					<span aria-label="icon-list" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+							<use href="/images/icons/icons.svg#list" />
+						</svg>
+					</span>
 				</a>
 				<div class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start" role="menu">
 					<ul class="list-unstyled">
 						<li><a class="active dropdown-item" href="#1">
 							<span class="dropdown-item-indicator">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
-									<use href="/images/icons/icons.svg#list" />
-								</svg>
+								<span aria-label="icon-list" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+										<use href="/images/icons/icons.svg#list" />
+									</svg>
+								</span>
 							</span>
 							List View
 						</a></li>
 						<li><a class="dropdown-item" href="#1">
 							<span class="dropdown-item-indicator">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
-									<use href="/images/icons/icons.svg#table" />
-								</svg>
+								<span aria-label="icon-table" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
+										<use href="/images/icons/icons.svg#table" />
+									</svg>
+								</span>
 							</span>
 							Table View
 						</a></li>
 						<li><a class="dropdown-item" href="#1">
 							<span class="dropdown-item-indicator">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
-									<use href="/images/icons/icons.svg#cards2" />
-								</svg>
+								<span aria-label="icon-cards2" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
+										<use href="/images/icons/icons.svg#cards2" />
+									</svg>
+								</span>
 							</span>
 							Card View
 						</a></li>
@@ -399,9 +447,11 @@ Management toolbar is an extension of Toolbar. It is a combination of different 
 			</li>
 			<li class="nav-item">
 				<button class="btn btn-primary nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
-						<use href="/images/icons/icons.svg#plus" />
-					</svg>
+					<span aria-label="icon-plus" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+							<use href="/images/icons/icons.svg#plus" />
+						</svg>
+					</span>
 				</button>
 			</li>
 		</ul>
@@ -434,23 +484,29 @@ Management toolbar is an extension of Toolbar. It is a combination of different 
 		<ul class="navbar-nav">
 			<li class="nav-item navbar-breakpoint-down-d-none">
 				<a class="nav-link nav-link-monospaced" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use href="/images/icons/icons.svg#trash" />
-					</svg>
+					<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+							<use href="/images/icons/icons.svg#trash" />
+						</svg>
+					</span>
 				</a>
 			</li>
 			<li class="nav-item navbar-breakpoint-down-d-none">
 				<a class="nav-link nav-link-monospaced" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-paste">
-						<use href="/images/icons/icons.svg#paste" />
-					</svg>
+					<span aria-label="icon-paste" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-paste">
+							<use href="/images/icons/icons.svg#paste" />
+						</svg>
+					</span>
 				</a>
 			</li>
 			<li class="dropdown nav-item">
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use href="/images/icons/icons.svg#ellipsis-v" />
-					</svg>
+					<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use href="/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</span>
 				</a>
 				<div class="dropdown-menu dropdown-menu-right" role="menu">
 					<ul class="list-unstyled">
@@ -478,14 +534,18 @@ Management toolbar is an extension of Toolbar. It is a combination of different 
 							<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text"/>
 							<span class="input-group-inset-item input-group-inset-item-after">
 								<button class="btn btn-unstyled" type="submit">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-										<use href="/images/icons/icons.svg#search" />
-									</svg>
+									<span aria-label="icon-search" class="lexicon-icon-container" role="img">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+											<use href="/images/icons/icons.svg#search" />
+										</svg>
+									</span>
 								</button>
 								<button class="btn btn-unstyled d-none" type="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-										<use href="/images/icons/icons.svg#times" />
-									</svg>
+									<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+											<use href="/images/icons/icons.svg#times" />
+										</svg>
+									</span>
 								</button>
 							</span>
 						</div>
@@ -506,14 +566,18 @@ Management toolbar is an extension of Toolbar. It is a combination of different 
 						<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text"/>
 						<span class="input-group-inset-item input-group-inset-item-after">
 							<button class="btn btn-unstyled" type="submit">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-									<use href="/images/icons/icons.svg#search" />
-								</svg>
+								<span aria-label="icon-search" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+										<use href="/images/icons/icons.svg#search" />
+									</svg>
+								</span>
 							</button>
 							<button class="btn btn-unstyled d-none" type="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-									<use href="/images/icons/icons.svg#times" />
-								</svg>
+								<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+										<use href="/images/icons/icons.svg#times" />
+									</svg>
+								</span>
 							</button>
 						</span>
 					</div>
@@ -627,10 +691,11 @@ Management toolbar is an extension of Toolbar. It is a combination of different 
 					</span>
 					<span class="label-item label-item-after">
 						<button class="btn close" aria-label="close" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-								<title>times</title>
-								<use href="/images/icons/icons.svg#times"></use>
-							</svg>
+							<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+									<use href="/images/icons/icons.svg#times"></use>
+								</svg>
+							</span>
 						</button>
 					</span>
 				</span>
@@ -644,10 +709,11 @@ Management toolbar is an extension of Toolbar. It is a combination of different 
 						</span>
 							<span class="label-item label-item-after">
 								<button class="btn close" aria-label="close" type="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-										<title>times</title>
-										<use href="/images/icons/icons.svg#times"></use>
-									</svg>
+									<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+											<use href="/images/icons/icons.svg#times"></use>
+										</svg>
+									</span>
 								</button>
 							</span>
 						</span>
@@ -690,10 +756,11 @@ Management toolbar is an extension of Toolbar. It is a combination of different 
 					</span>
 					<span class="label-item label-item-after">
 						<button class="btn close" aria-label="close" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-								<title>times</title>
-								<use href="/images/icons/icons.svg#times"></use>
-							</svg>
+							<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+									<use href="/images/icons/icons.svg#times"></use>
+								</svg>
+							</span>
 						</button>
 					</span>
 				</span>
@@ -707,10 +774,11 @@ Management toolbar is an extension of Toolbar. It is a combination of different 
 					</span>
 					<span class="label-item label-item-after">
 						<button class="btn close" aria-label="close" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-								<title>times</title>
-								<use href="/images/icons/icons.svg#times"></use>
-							</svg>
+							<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+									<use href="/images/icons/icons.svg#times"></use>
+								</svg>
+							</span>
 						</button>
 					</span>
 				</span>

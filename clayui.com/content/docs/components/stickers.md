@@ -140,9 +140,11 @@ Stickers are a visual way to quickly identify content in a different way than ba
 <span class="sticker sticker-primary">JPG</span>
 <span class="sticker sticker-primary">
 	<span class="inline-item">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-			<use href="/images/icons/icons.svg#picture" />
-		</svg>
+		<span aria-label="icon-picture" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+				<use href="/images/icons/icons.svg#picture" />
+			</svg>
+		</span>
 	</span>
 </span>
 
@@ -174,9 +176,11 @@ Stickers are a visual way to quickly identify content in a different way than ba
 <span class="sticker sticker-primary">JPG</span>
 <span class="sticker sticker-primary">
 	<span class="inline-item">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-			<use href="/images/icons/icons.svg#picture" />
-		</svg>
+		<span aria-label="icon-picture" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+				<use href="/images/icons/icons.svg#picture" />
+			</svg>
+		</span>
 	</span>
 </span>
 ```

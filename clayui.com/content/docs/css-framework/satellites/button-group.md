@@ -66,9 +66,11 @@ Button groups are used to switch between complementary views for example, but th
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-primary" type="button">Primary</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -79,9 +81,11 @@ Button groups are used to switch between complementary views for example, but th
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-secondary" type="button">Secondary</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -92,9 +96,11 @@ Button groups are used to switch between complementary views for example, but th
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-info" type="button">Info</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-info btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -105,9 +111,11 @@ Button groups are used to switch between complementary views for example, but th
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-success" type="button">Success</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-success btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -118,9 +126,11 @@ Button groups are used to switch between complementary views for example, but th
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-warning" type="button">Warning</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-warning btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -131,9 +141,11 @@ Button groups are used to switch between complementary views for example, but th
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-danger" type="button">Danger</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-danger btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -146,9 +158,11 @@ Button groups are used to switch between complementary views for example, but th
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-primary" type="button">Primary</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -159,9 +173,11 @@ Button groups are used to switch between complementary views for example, but th
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-secondary" type="button">Secondary</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -172,9 +188,11 @@ Button groups are used to switch between complementary views for example, but th
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-info" type="button">Info</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-info btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -185,9 +203,11 @@ Button groups are used to switch between complementary views for example, but th
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-success" type="button">Success</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-success btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -198,9 +218,11 @@ Button groups are used to switch between complementary views for example, but th
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-warning" type="button">Warning</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-warning btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -211,9 +233,11 @@ Button groups are used to switch between complementary views for example, but th
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-danger" type="button">Danger</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-danger btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -228,9 +252,11 @@ Button groups are used to switch between complementary views for example, but th
 <div class="btn-group dropup" role="group">
 	<button class="btn btn-primary" type="button">Right dropup</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-top">
-			<use href="/images/icons/icons.svg#caret-top" />
-		</svg>
+		<span aria-label="icon-caret-top" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-top">
+				<use href="/images/icons/icons.svg#caret-top" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -243,9 +269,11 @@ Button groups are used to switch between complementary views for example, but th
 <div class="btn-group dropup" role="group">
 	<button class="btn btn-secondary" type="button">Dropup</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-top">
-			<use href="/images/icons/icons.svg#caret-top" />
-		</svg>
+		<span aria-label="icon-caret-top" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-top">
+				<use href="/images/icons/icons.svg#caret-top" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -260,9 +288,11 @@ Button groups are used to switch between complementary views for example, but th
 <div class="btn-group dropup" role="group">
 	<button class="btn btn-primary" type="button">Right dropup</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-top">
-			<use href="/images/icons/icons.svg#caret-top" />
-		</svg>
+		<span aria-label="icon-caret-top" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-top">
+				<use href="/images/icons/icons.svg#caret-top" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -275,9 +305,11 @@ Button groups are used to switch between complementary views for example, but th
 <div class="btn-group dropup" role="group">
 	<button class="btn btn-secondary" type="button">Dropup</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-top">
-			<use href="/images/icons/icons.svg#caret-top" />
-		</svg>
+		<span aria-label="icon-caret-top" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-top">
+				<use href="/images/icons/icons.svg#caret-top" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -297,9 +329,11 @@ Button groups are used to switch between complementary views for example, but th
 	<div class="btn-group" role="group">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 			Dropdown
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Dropdown link</a>
@@ -309,9 +343,11 @@ Button groups are used to switch between complementary views for example, but th
 	<div class="btn-group" role="group">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 			Dropdown
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Dropdown link</a>
@@ -321,9 +357,11 @@ Button groups are used to switch between complementary views for example, but th
 	<div class="btn-group" role="group">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 			Dropdown
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Dropdown link</a>
@@ -339,9 +377,11 @@ Button groups are used to switch between complementary views for example, but th
 	<div class="btn-group" role="group">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 			Dropdown
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Dropdown link</a>
@@ -351,9 +391,11 @@ Button groups are used to switch between complementary views for example, but th
 	<div class="btn-group" role="group">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 			Dropdown
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Dropdown link</a>
@@ -363,9 +405,11 @@ Button groups are used to switch between complementary views for example, but th
 	<div class="btn-group" role="group">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 			Dropdown
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Dropdown link</a>
@@ -468,9 +512,11 @@ Button groups are used to switch between complementary views for example, but th
 <div class="btn-group btn-group-sm dropdown" role="group">
 	<button class="btn btn-primary" type="button">Primary</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -481,9 +527,11 @@ Button groups are used to switch between complementary views for example, but th
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-secondary" type="button">Secondary</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -494,9 +542,11 @@ Button groups are used to switch between complementary views for example, but th
 <div class="btn-group btn-group-lg dropdown" role="group">
 	<button class="btn btn-info" type="button">Info</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-info btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -509,9 +559,11 @@ Button groups are used to switch between complementary views for example, but th
 <div class="btn-group btn-group-sm dropdown" role="group">
 	<button class="btn btn-primary" type="button">Primary</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -522,9 +574,11 @@ Button groups are used to switch between complementary views for example, but th
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-secondary" type="button">Secondary</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -535,9 +589,11 @@ Button groups are used to switch between complementary views for example, but th
 <div class="btn-group btn-group-lg dropdown" role="group">
 	<button class="btn btn-info" type="button">Info</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-info btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -553,9 +609,11 @@ Button groups are used to switch between complementary views for example, but th
 	<div class="btn-group" role="group">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 			Dropdown
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Dropdown link</a>
@@ -565,9 +623,11 @@ Button groups are used to switch between complementary views for example, but th
 	<div class="btn-group" role="group">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 			Dropdown
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Dropdown link</a>
@@ -577,9 +637,11 @@ Button groups are used to switch between complementary views for example, but th
 	<div class="btn-group" role="group">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 			Dropdown
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Dropdown link</a>
@@ -593,9 +655,11 @@ Button groups are used to switch between complementary views for example, but th
 	<div class="btn-group" role="group">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 			Dropdown
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Dropdown link</a>
@@ -605,9 +669,11 @@ Button groups are used to switch between complementary views for example, but th
 	<div class="btn-group" role="group">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 			Dropdown
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Dropdown link</a>
@@ -617,9 +683,11 @@ Button groups are used to switch between complementary views for example, but th
 	<div class="btn-group" role="group">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 			Dropdown
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Dropdown link</a>
@@ -633,9 +701,11 @@ Button groups are used to switch between complementary views for example, but th
 	<div class="btn-group" role="group">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 			Dropdown
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Dropdown link</a>
@@ -645,9 +715,11 @@ Button groups are used to switch between complementary views for example, but th
 	<div class="btn-group" role="group">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 			Dropdown
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Dropdown link</a>
@@ -657,9 +729,11 @@ Button groups are used to switch between complementary views for example, but th
 	<div class="btn-group" role="group">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 			Dropdown
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Dropdown link</a>
@@ -675,9 +749,11 @@ Button groups are used to switch between complementary views for example, but th
 	<div class="btn-group" role="group">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 			Dropdown
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Dropdown link</a>
@@ -687,9 +763,11 @@ Button groups are used to switch between complementary views for example, but th
 	<div class="btn-group" role="group">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 			Dropdown
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Dropdown link</a>
@@ -699,9 +777,11 @@ Button groups are used to switch between complementary views for example, but th
 	<div class="btn-group" role="group">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 			Dropdown
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Dropdown link</a>
@@ -715,9 +795,11 @@ Button groups are used to switch between complementary views for example, but th
 	<div class="btn-group" role="group">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 			Dropdown
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Dropdown link</a>
@@ -727,9 +809,11 @@ Button groups are used to switch between complementary views for example, but th
 	<div class="btn-group" role="group">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 			Dropdown
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Dropdown link</a>
@@ -739,9 +823,11 @@ Button groups are used to switch between complementary views for example, but th
 	<div class="btn-group" role="group">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 			Dropdown
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Dropdown link</a>
@@ -755,9 +841,11 @@ Button groups are used to switch between complementary views for example, but th
 	<div class="btn-group" role="group">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 			Dropdown
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Dropdown link</a>
@@ -767,9 +855,11 @@ Button groups are used to switch between complementary views for example, but th
 	<div class="btn-group" role="group">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 			Dropdown
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Dropdown link</a>
@@ -779,9 +869,11 @@ Button groups are used to switch between complementary views for example, but th
 	<div class="btn-group" role="group">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 			Dropdown
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#1">Dropdown link</a>

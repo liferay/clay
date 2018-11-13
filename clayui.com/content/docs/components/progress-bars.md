@@ -35,9 +35,11 @@ Progress bar indicates the percentage completed of a task.
 		</div>
 		<div class="progress-group-addon">
 			<div class="progress-group-feedback">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
-					<use href="/images/icons/icons.svg#check-circle" />
-				</svg>
+				<span aria-label="icon-check-circle" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+						<use href="/images/icons/icons.svg#check-circle" />
+					</svg>
+				</span>
 			</div>
 		</div>
 	</div>
@@ -98,9 +100,11 @@ Progress bar indicates the percentage completed of a task.
 	</div>
 	<div class="progress-group-addon">
 		<div class="progress-group-feedback">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
-				<use href="/images/icons/icons.svg#check-circle" />
-			</svg>
+			<span aria-label="icon-check-circle" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+					<use href="/images/icons/icons.svg#check-circle" />
+				</svg>
+			</span>
 		</div>
 	</div>
 </div>

@@ -58,14 +58,18 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 			<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text" value="ele"/>
 			<span class="input-group-inset-item input-group-inset-item-after">
 				<button class="btn btn-unstyled" type="submit">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-						<use href="/images/icons/icons.svg#search" />
-					</svg>
+					<span aria-label="icon-search" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+							<use href="/images/icons/icons.svg#search" />
+						</svg>
+					</span>
 				</button>
 				<button class="btn btn-unstyled" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use href="/images/icons/icons.svg#times" />
-					</svg>
+					<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<use href="/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</button>
 			</span>
 			<ul class="dropdown-menu show">
@@ -92,14 +96,18 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 		<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text" value="ele"/>
 		<span class="input-group-inset-item input-group-inset-item-after">
 			<button class="btn btn-unstyled" type="submit">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-					<use href="/images/icons/icons.svg#search" />
-				</svg>
+				<span aria-label="icon-search" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+						<use href="/images/icons/icons.svg#search" />
+					</svg>
+				</span>
 			</button>
 			<button class="btn btn-unstyled" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-					<use href="/images/icons/icons.svg#times" />
-				</svg>
+				<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+						<use href="/images/icons/icons.svg#times" />
+					</svg>
+				</span>
 			</button>
 		</span>
 		<ul class="dropdown-menu show">
@@ -148,9 +156,11 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 						<span class="label-item label-item-expand">wall</span>
 						<span class="label-item label-item-after">
 							<button aria-label="Close" class="close" type="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-									<use href="/images/icons/icons.svg#times"></use>
-								</svg>
+								<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+										<use href="/images/icons/icons.svg#times"></use>
+									</svg>
+								</span>
 							</button>
 						</span>
 					</span>
@@ -158,9 +168,11 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 						<span class="label-item label-item-expand">wallpaper</span>
 						<span class="label-item label-item-after">
 							<button aria-label="Close" class="close" type="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-									<use href="/images/icons/icons.svg#times"></use>
-								</svg>
+								<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+										<use href="/images/icons/icons.svg#times"></use>
+									</svg>
+								</span>
 							</button>
 						</span>
 					</span>
@@ -168,9 +180,11 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 						<span class="label-item label-item-expand">wonderwall</span>
 						<span class="label-item label-item-after">
 							<button aria-label="Close" class="close" type="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-									<use href="/images/icons/icons.svg#times"></use>
-								</svg>
+								<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+										<use href="/images/icons/icons.svg#times"></use>
+									</svg>
+								</span>
 							</button>
 						</span>
 					</span>
@@ -178,9 +192,11 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 						<span class="label-item label-item-expand">winterfell</span>
 						<span class="label-item label-item-after">
 							<button aria-label="Close" class="close" type="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-									<use href="/images/icons/icons.svg#times"></use>
-								</svg>
+								<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+										<use href="/images/icons/icons.svg#times"></use>
+									</svg>
+								</span>
 							</button>
 						</span>
 					</span>
@@ -224,9 +240,11 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 					<span class="label-item label-item-expand">wall</span>
 					<span class="label-item label-item-after">
 						<button aria-label="Close" class="close" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use href="/images/icons/icons.svg#times"></use>
-							</svg>
+							<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+									<use href="/images/icons/icons.svg#times"></use>
+								</svg>
+							</span>
 						</button>
 					</span>
 				</span>
@@ -234,9 +252,11 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 					<span class="label-item label-item-expand">wallpaper</span>
 					<span class="label-item label-item-after">
 						<button aria-label="Close" class="close" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use href="/images/icons/icons.svg#times"></use>
-							</svg>
+							<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+									<use href="/images/icons/icons.svg#times"></use>
+								</svg>
+							</span>
 						</button>
 					</span>
 				</span>
@@ -244,9 +264,11 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 					<span class="label-item label-item-expand">wonderwall</span>
 					<span class="label-item label-item-after">
 						<button aria-label="Close" class="close" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use href="/images/icons/icons.svg#times"></use>
-							</svg>
+							<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+									<use href="/images/icons/icons.svg#times"></use>
+								</svg>
+							</span>
 						</button>
 					</span>
 				</span>
@@ -254,9 +276,11 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 					<span class="label-item label-item-expand">winterfell</span>
 					<span class="label-item label-item-after">
 						<button aria-label="Close" class="close" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use href="/images/icons/icons.svg#times"></use>
-							</svg>
+							<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+									<use href="/images/icons/icons.svg#times"></use>
+								</svg>
+							</span>
 						</button>
 					</span>
 				</span>
@@ -302,14 +326,18 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 				<div class="input-group-inset-item input-group-inset-item-after">
 					<button class="btn btn-unstyled" type="button">
 						<span class="input-text-label">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-hidden">
-								<use href="/images/icons/icons.svg#hidden" />
-							</svg>
+							<span aria-label="icon-hidden" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-hidden">
+									<use href="/images/icons/icons.svg#hidden" />
+								</svg>
+							</span>
 						</span>
 						<span class="input-password-label">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
-								<use href="/images/icons/icons.svg#view" />
-							</svg>
+							<span aria-label="icon-view" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
+									<use href="/images/icons/icons.svg#view" />
+								</svg>
+							</span>
 						</span>
 					</button>
 				</div>
@@ -324,14 +352,18 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 				<div class="input-group-inset-item input-group-inset-item-after">
 					<button class="btn btn-unstyled" type="button">
 						<span class="input-text-label">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-hidden">
-								<use href="/images/icons/icons.svg#hidden" />
-							</svg>
+							<span aria-label="icon-hidden" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-hidden">
+									<use href="/images/icons/icons.svg#hidden" />
+								</svg>
+							</span>
 						</span>
 						<span class="input-password-label">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
-								<use href="/images/icons/icons.svg#view" />
-							</svg>
+							<span aria-label="icon-view" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
+									<use href="/images/icons/icons.svg#view" />
+								</svg>
+							</span>
 						</span>
 					</button>
 				</div>
@@ -349,14 +381,18 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 			<div class="input-group-inset-item input-group-inset-item-after">
 				<button class="btn btn-unstyled" type="button">
 					<span class="input-text-label">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-hidden">
-							<use href="/images/icons/icons.svg#hidden" />
-						</svg>
+						<span aria-label="icon-hidden" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-hidden">
+								<use href="/images/icons/icons.svg#hidden" />
+							</svg>
+						</span>
 					</span>
 					<span class="input-password-label">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
-							<use href="/images/icons/icons.svg#view" />
-						</svg>
+						<span aria-label="icon-view" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
+								<use href="/images/icons/icons.svg#view" />
+							</svg>
+						</span>
 					</span>
 				</button>
 			</div>

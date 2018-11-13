@@ -17,9 +17,11 @@ title: "List Groups"
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-						<use href="/images/icons/icons.svg#folder" />
-					</svg>
+					<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+							<use href="/images/icons/icons.svg#folder" />
+						</svg>
+					</span>
 				</span>
 			</div>
 		</div>
@@ -34,26 +36,34 @@ title: "List Groups"
 		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use href="/images/icons/icons.svg#trash" />
-					</svg>
+					<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+							<use href="/images/icons/icons.svg#trash" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use href="/images/icons/icons.svg#download" />
-					</svg>
+					<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+							<use href="/images/icons/icons.svg#download" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-						<use href="/images/icons/icons.svg#expand" />
-					</svg>
+					<span aria-label="icon-expand" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
+							<use href="/images/icons/icons.svg#expand" />
+						</svg>
+					</span>
 				</a>
 			</div>
 			<div class="dropdown dropdown-action">
 				<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use href="/images/icons/icons.svg#ellipsis-v" />
-					</svg>
+					<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use href="/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</span>
 				</a>
 				<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 					<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
@@ -75,9 +85,11 @@ title: "List Groups"
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-						<use href="/images/icons/icons.svg#folder" />
-					</svg>
+					<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+							<use href="/images/icons/icons.svg#folder" />
+						</svg>
+					</span>
 				</span>
 			</div>
 		</div>
@@ -92,26 +104,34 @@ title: "List Groups"
 		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use href="/images/icons/icons.svg#trash" />
-					</svg>
+					<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+							<use href="/images/icons/icons.svg#trash" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use href="/images/icons/icons.svg#download" />
-					</svg>
+					<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+							<use href="/images/icons/icons.svg#download" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-						<use href="/images/icons/icons.svg#expand" />
-					</svg>
+					<span aria-label="icon-expand" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
+							<use href="/images/icons/icons.svg#expand" />
+						</svg>
+					</span>
 				</a>
 			</div>
 			<div class="dropdown dropdown-action">
 				<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use href="/images/icons/icons.svg#ellipsis-v" />
-					</svg>
+					<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use href="/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</span>
 				</a>
 				<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 					<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
@@ -137,9 +157,11 @@ title: "List Groups"
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-						<use href="/images/icons/icons.svg#folder" />
-					</svg>
+					<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+							<use href="/images/icons/icons.svg#folder" />
+						</svg>
+					</span>
 				</span>
 			</div>
 		</div>
@@ -154,26 +176,34 @@ title: "List Groups"
 		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use href="/images/icons/icons.svg#trash" />
-					</svg>
+					<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+							<use href="/images/icons/icons.svg#trash" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use href="/images/icons/icons.svg#download" />
-					</svg>
+					<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+							<use href="/images/icons/icons.svg#download" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-						<use href="/images/icons/icons.svg#expand" />
-					</svg>
+					<span aria-label="icon-expand" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
+							<use href="/images/icons/icons.svg#expand" />
+						</svg>
+					</span>
 				</a>
 			</div>
 			<div class="dropdown dropdown-action">
 				<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use href="/images/icons/icons.svg#ellipsis-v" />
-					</svg>
+					<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use href="/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</span>
 				</a>
 				<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 					<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
@@ -195,9 +225,11 @@ title: "List Groups"
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-						<use href="/images/icons/icons.svg#folder" />
-					</svg>
+					<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+							<use href="/images/icons/icons.svg#folder" />
+						</svg>
+					</span>
 				</span>
 			</div>
 		</div>
@@ -212,26 +244,34 @@ title: "List Groups"
 		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use href="/images/icons/icons.svg#trash" />
-					</svg>
+					<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+							<use href="/images/icons/icons.svg#trash" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use href="/images/icons/icons.svg#download" />
-					</svg>
+					<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+							<use href="/images/icons/icons.svg#download" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-						<use href="/images/icons/icons.svg#expand" />
-					</svg>
+					<span aria-label="icon-expand" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
+							<use href="/images/icons/icons.svg#expand" />
+						</svg>
+					</span>
 				</a>
 			</div>
 			<div class="dropdown dropdown-action">
 				<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use href="/images/icons/icons.svg#ellipsis-v" />
-					</svg>
+					<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use href="/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</span>
 				</a>
 				<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 					<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
@@ -261,9 +301,11 @@ title: "List Groups"
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-						<use href="/images/icons/icons.svg#folder" />
-					</svg>
+					<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+							<use href="/images/icons/icons.svg#folder" />
+						</svg>
+					</span>
 				</span>
 			</div>
 		</div>
@@ -304,26 +346,34 @@ title: "List Groups"
 		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use href="/images/icons/icons.svg#trash" />
-					</svg>
+					<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+							<use href="/images/icons/icons.svg#trash" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use href="/images/icons/icons.svg#download" />
-					</svg>
+					<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+							<use href="/images/icons/icons.svg#download" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-						<use href="/images/icons/icons.svg#expand" />
-					</svg>
+					<span aria-label="icon-expand" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
+							<use href="/images/icons/icons.svg#expand" />
+						</svg>
+					</span>
 				</a>
 			</div>
 			<div class="dropdown dropdown-action">
 				<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use href="/images/icons/icons.svg#ellipsis-v" />
-					</svg>
+					<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use href="/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</span>
 				</a>
 				<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 					<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
@@ -345,9 +395,11 @@ title: "List Groups"
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-						<use href="/images/icons/icons.svg#folder" />
-					</svg>
+					<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+							<use href="/images/icons/icons.svg#folder" />
+						</svg>
+					</span>
 				</span>
 			</div>
 		</div>
@@ -367,26 +419,34 @@ title: "List Groups"
 		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use href="/images/icons/icons.svg#trash" />
-					</svg>
+					<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+							<use href="/images/icons/icons.svg#trash" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use href="/images/icons/icons.svg#download" />
-					</svg>
+					<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+							<use href="/images/icons/icons.svg#download" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-						<use href="/images/icons/icons.svg#expand" />
-					</svg>
+					<span aria-label="icon-expand" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
+							<use href="/images/icons/icons.svg#expand" />
+						</svg>
+					</span>
 				</a>
 			</div>
 			<div class="dropdown dropdown-action">
 				<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use href="/images/icons/icons.svg#ellipsis-v" />
-					</svg>
+					<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use href="/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</span>
 				</a>
 				<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 					<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
@@ -412,9 +472,11 @@ title: "List Groups"
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-						<use href="/images/icons/icons.svg#folder" />
-					</svg>
+					<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+							<use href="/images/icons/icons.svg#folder" />
+						</svg>
+					</span>
 				</span>
 			</div>
 		</div>
@@ -455,26 +517,34 @@ title: "List Groups"
 		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use href="/images/icons/icons.svg#trash" />
-					</svg>
+					<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+							<use href="/images/icons/icons.svg#trash" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use href="/images/icons/icons.svg#download" />
-					</svg>
+					<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+							<use href="/images/icons/icons.svg#download" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-						<use href="/images/icons/icons.svg#expand" />
-					</svg>
+					<span aria-label="icon-expand" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
+							<use href="/images/icons/icons.svg#expand" />
+						</svg>
+					</span>
 				</a>
 			</div>
 			<div class="dropdown dropdown-action">
 				<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use href="/images/icons/icons.svg#ellipsis-v" />
-					</svg>
+					<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use href="/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</span>
 				</a>
 				<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 					<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
@@ -496,9 +566,11 @@ title: "List Groups"
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-						<use href="/images/icons/icons.svg#folder" />
-					</svg>
+					<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+							<use href="/images/icons/icons.svg#folder" />
+						</svg>
+					</span>
 				</span>
 			</div>
 		</div>
@@ -518,26 +590,34 @@ title: "List Groups"
 		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use href="/images/icons/icons.svg#trash" />
-					</svg>
+					<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+							<use href="/images/icons/icons.svg#trash" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use href="/images/icons/icons.svg#download" />
-					</svg>
+					<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+							<use href="/images/icons/icons.svg#download" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-						<use href="/images/icons/icons.svg#expand" />
-					</svg>
+					<span aria-label="icon-expand" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
+							<use href="/images/icons/icons.svg#expand" />
+						</svg>
+					</span>
 				</a>
 			</div>
 			<div class="dropdown dropdown-action">
 				<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use href="/images/icons/icons.svg#ellipsis-v" />
-					</svg>
+					<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use href="/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</span>
 				</a>
 				<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 					<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
@@ -565,9 +645,11 @@ title: "List Groups"
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-						<use href="/images/icons/icons.svg#folder" />
-					</svg>
+					<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+							<use href="/images/icons/icons.svg#folder" />
+						</svg>
+					</span>
 				</span>
 			</div>
 		</div>
@@ -588,26 +670,34 @@ title: "List Groups"
 		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<button class="component-action quick-action-item" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use href="/images/icons/icons.svg#trash" />
-					</svg>
+					<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+							<use href="/images/icons/icons.svg#trash" />
+						</svg>
+					</span>
 				</button>
 				<button class="component-action quick-action-item" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use href="/images/icons/icons.svg#download" />
-					</svg>
+					<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+							<use href="/images/icons/icons.svg#download" />
+						</svg>
+					</span>
 				</button>
 				<button class="component-action quick-action-item" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-						<use href="/images/icons/icons.svg#expand" />
-					</svg>
+					<span aria-label="icon-expand" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
+							<use href="/images/icons/icons.svg#expand" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="dropdown dropdown-action">
 				<button aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" id="dropdownAction1" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use href="/images/icons/icons.svg#ellipsis-v" />
-					</svg>
+					<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use href="/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</span>
 				</button>
 				<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 					<li><button class="dropdown-item" type="button">Remove</button></li>
@@ -629,9 +719,11 @@ title: "List Groups"
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-						<use href="/images/icons/icons.svg#folder" />
-					</svg>
+					<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+							<use href="/images/icons/icons.svg#folder" />
+						</svg>
+					</span>
 				</span>
 			</div>
 		</div>
@@ -647,26 +739,34 @@ title: "List Groups"
 		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<button class="component-action quick-action-item" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use href="/images/icons/icons.svg#trash" />
-					</svg>
+					<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+							<use href="/images/icons/icons.svg#trash" />
+						</svg>
+					</span>
 				</button>
 				<button class="component-action quick-action-item" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use href="/images/icons/icons.svg#download" />
-					</svg>
+					<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+							<use href="/images/icons/icons.svg#download" />
+						</svg>
+					</span>
 				</button>
 				<button class="component-action quick-action-item" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-						<use href="/images/icons/icons.svg#expand" />
-					</svg>
+					<span aria-label="icon-expand" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
+							<use href="/images/icons/icons.svg#expand" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="dropdown dropdown-action">
 				<button aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" id="dropdownAction1" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use href="/images/icons/icons.svg#ellipsis-v" />
-					</svg>
+					<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use href="/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</span>
 				</button>
 				<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 					<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
@@ -692,9 +792,11 @@ title: "List Groups"
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-						<use href="/images/icons/icons.svg#folder" />
-					</svg>
+					<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+							<use href="/images/icons/icons.svg#folder" />
+						</svg>
+					</span>
 				</span>
 			</div>
 		</div>
@@ -715,26 +817,34 @@ title: "List Groups"
 		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<button class="component-action quick-action-item" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use href="/images/icons/icons.svg#trash" />
-					</svg>
+					<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+							<use href="/images/icons/icons.svg#trash" />
+						</svg>
+					</span>
 				</button>
 				<button class="component-action quick-action-item" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use href="/images/icons/icons.svg#download" />
-					</svg>
+					<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+							<use href="/images/icons/icons.svg#download" />
+						</svg>
+					</span>
 				</button>
 				<button class="component-action quick-action-item" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-						<use href="/images/icons/icons.svg#expand" />
-					</svg>
+					<span aria-label="icon-expand" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
+							<use href="/images/icons/icons.svg#expand" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="dropdown dropdown-action">
 				<button aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" id="dropdownAction1" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use href="/images/icons/icons.svg#ellipsis-v" />
-					</svg>
+					<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use href="/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</span>
 				</button>
 				<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 					<li><button class="dropdown-item" type="button">Remove</button></li>
@@ -756,9 +866,11 @@ title: "List Groups"
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-						<use href="/images/icons/icons.svg#folder" />
-					</svg>
+					<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+							<use href="/images/icons/icons.svg#folder" />
+						</svg>
+					</span>
 				</span>
 			</div>
 		</div>
@@ -774,26 +886,34 @@ title: "List Groups"
 		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<button class="component-action quick-action-item" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use href="/images/icons/icons.svg#trash" />
-					</svg>
+					<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+							<use href="/images/icons/icons.svg#trash" />
+						</svg>
+					</span>
 				</button>
 				<button class="component-action quick-action-item" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use href="/images/icons/icons.svg#download" />
-					</svg>
+					<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+							<use href="/images/icons/icons.svg#download" />
+						</svg>
+					</span>
 				</button>
 				<button class="component-action quick-action-item" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-						<use href="/images/icons/icons.svg#expand" />
-					</svg>
+					<span aria-label="icon-expand" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
+							<use href="/images/icons/icons.svg#expand" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="dropdown dropdown-action">
 				<button aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" id="dropdownAction1" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use href="/images/icons/icons.svg#ellipsis-v" />
-					</svg>
+					<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use href="/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</span>
 				</button>
 				<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 					<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>

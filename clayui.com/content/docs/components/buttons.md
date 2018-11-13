@@ -69,15 +69,19 @@ Buttons communicate an action to happen on user interaction.
 
 <button class="btn btn-primary" type="button">Primary</button>
 <button class="btn btn-monospaced btn-primary" type="button">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use href="/images/icons/icons.svg#blogs"></use>
-	</svg>
+	<span aria-label="icon-blogs" class="lexicon-icon-container" role="img">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
+			<use href="/images/icons/icons.svg#blogs"></use>
+		</svg>
+	</span>
 </button>
 <button class="btn btn-secondary" type="button">Secondary</button>
 <button class="btn btn-monospaced btn-secondary" type="button">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use href="/images/icons/icons.svg#blogs"></use>
-	</svg>
+	<span aria-label="icon-blogs" class="lexicon-icon-container" role="img">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
+			<use href="/images/icons/icons.svg#blogs"></use>
+		</svg>
+	</span>
 </button>
 <button class="btn btn-link" type="button">Link</button>
 
@@ -126,15 +130,19 @@ Buttons communicate an action to happen on user interaction.
 ```html
 <button class="btn btn-primary" type="button">Primary</button>
 <button class="btn btn-monospaced btn-primary" type="button">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use href="/images/icons/icons.svg#blogs"></use>
-	</svg>
+	<span aria-label="icon-blogs" class="lexicon-icon-container" role="img">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
+			<use href="/images/icons/icons.svg#blogs"></use>
+		</svg>
+	</span>
 </button>
 <button class="btn btn-secondary" type="button">Secondary</button>
 <button class="btn btn-monospaced btn-secondary" type="button">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use href="/images/icons/icons.svg#blogs"></use>
-	</svg>
+	<span aria-label="icon-blogs" class="lexicon-icon-container" role="img">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
+			<use href="/images/icons/icons.svg#blogs"></use>
+		</svg>
+	</span>
 </button>
 <button class="btn btn-link" type="button">Link</button>
 ```
@@ -143,15 +151,19 @@ Buttons communicate an action to happen on user interaction.
 
 <button class="btn btn-primary" disabled type="button">Primary</button>
 <button class="btn btn-monospaced btn-primary" disabled type="button">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use href="/images/icons/icons.svg#blogs"></use>
-	</svg>
+	<span aria-label="icon-blogs" class="lexicon-icon-container" role="img">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
+			<use href="/images/icons/icons.svg#blogs"></use>
+		</svg>
+	</span>
 </button>
 <button class="btn btn-secondary" disabled type="button">Secondary</button>
 <button class="btn btn-monospaced btn-secondary" disabled type="button">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use href="/images/icons/icons.svg#blogs"></use>
-	</svg>
+	<span aria-label="icon-blogs" class="lexicon-icon-container" role="img">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
+			<use href="/images/icons/icons.svg#blogs"></use>
+		</svg>
+	</span>
 </button>
 <button class="btn btn-link" disabled type="button">Link</button>
 
@@ -205,15 +217,19 @@ Buttons communicate an action to happen on user interaction.
 ```html
 <button class="btn btn-primary"  disabledtype="button">Primary</button>
 <button class="btn btn-monospaced btn-primary" disabled type="button">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use href="/images/icons/icons.svg#blogs"></use>
-	</svg>
+	<span aria-label="icon-blogs" class="lexicon-icon-container" role="img">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
+			<use href="/images/icons/icons.svg#blogs"></use>
+		</svg>
+	</span>
 </button>
 <button class="btn btn-secondary" disabled type="button">Secondary</button>
 <button class="btn btn-monospaced btn-secondary" disabled type="button">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use href="/images/icons/icons.svg#blogs"></use>
-	</svg>
+	<span aria-label="icon-blogs" class="lexicon-icon-container" role="img">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
+			<use href="/images/icons/icons.svg#blogs"></use>
+		</svg>
+	</span>
 </button>
 <button class="btn btn-link" disabled type="button">Link</button>
 ```
@@ -262,14 +278,18 @@ Buttons communicate an action to happen on user interaction.
 > Buttons can display icons instead of text. The icons, however, must be monospaced inside the button. Lexicon doesn't use buttons with text and icons or text and loading indicators. Icon buttons are used primarily in management bars. This button variation can be primary, secondary, or borderless type.
 
 <button class="btn btn-monospaced btn-primary" type="button">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use href="/images/icons/icons.svg#blogs"></use>
-	</svg>
+	<span aria-label="icon-blogs" class="lexicon-icon-container" role="img">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
+			<use href="/images/icons/icons.svg#blogs"></use>
+		</svg>
+	</span>
 </button>
 <button class="btn btn-monospaced btn-secondary" type="button">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use href="/images/icons/icons.svg#blogs"></use>
-	</svg>
+	<span aria-label="icon-blogs" class="lexicon-icon-container" role="img">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
+			<use href="/images/icons/icons.svg#blogs"></use>
+		</svg>
+	</span>
 </button>
 
 ```soy
@@ -293,14 +313,18 @@ Buttons communicate an action to happen on user interaction.
 ```
 ```html
 <button class="btn btn-monospaced btn-primary" type="button">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use href="/images/icons/icons.svg#blogs"></use>
-	</svg>
+	<span aria-label="icon-blogs" class="lexicon-icon-container" role="img">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
+			<use href="/images/icons/icons.svg#blogs"></use>
+		</svg>
+	</span>
 </button>
 <button class="btn btn-monospaced btn-secondary" type="button">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use href="/images/icons/icons.svg#blogs"></use>
-	</svg>
+	<span aria-label="icon-blogs" class="lexicon-icon-container" role="img">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
+			<use href="/images/icons/icons.svg#blogs"></use>
+		</svg>
+	</span>
 </button>
 ```
 
@@ -310,9 +334,11 @@ Buttons communicate an action to happen on user interaction.
 
 <button class="btn btn-secondary" type="button">
 	<span class="inline-item inline-item-before">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-			<use href="/images/icons/icons.svg#share"></use>
-		</svg>
+		<span aria-label="icon-share" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
+				<use href="/images/icons/icons.svg#share"></use>
+			</svg>
+		</span>
 	</span>
 	Share
 </button>
@@ -336,9 +362,11 @@ Buttons communicate an action to happen on user interaction.
 ```html
 <button class="btn btn-secondary" type="button">
 	<span class="inline-item inline-item-before">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-			<use href="/images/icons/icons.svg#share"></use>
-		</svg>
+		<span aria-label="icon-share" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
+				<use href="/images/icons/icons.svg#share"></use>
+			</svg>
+		</span>
 	</span>
 	Share
 </button>
@@ -381,9 +409,11 @@ Buttons communicate an action to happen on user interaction.
 <div class="btn-group">
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
 		Primary
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -394,9 +424,11 @@ Buttons communicate an action to happen on user interaction.
 <div class="btn-group">
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 		Primary
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -438,9 +470,11 @@ Buttons communicate an action to happen on user interaction.
 <div class="btn-group">
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
 		Primary
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -451,9 +485,11 @@ Buttons communicate an action to happen on user interaction.
 <div class="btn-group">
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 		Primary
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -470,9 +506,11 @@ Buttons communicate an action to happen on user interaction.
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-primary" type="button">Primary</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -483,9 +521,11 @@ Buttons communicate an action to happen on user interaction.
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-secondary" type="button">Secondary</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -498,9 +538,11 @@ Buttons communicate an action to happen on user interaction.
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-primary" type="button">Primary</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -511,9 +553,11 @@ Buttons communicate an action to happen on user interaction.
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-secondary" type="button">Secondary</button>
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use href="/images/icons/icons.svg#caret-bottom" />
-		</svg>
+		<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
 	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<a class="dropdown-item" href="#1">Action</a>
@@ -548,9 +592,11 @@ Buttons communicate an action to happen on user interaction.
 > Plus buttons provide add actions for a dataset and are normally placed in toolbars. The add button lets you add entities, such as a blog post for a blog, a message board thread for a message board, or a folder. It can have one action or multiple. Visit Dropdown menu > Sorting actions to learn more.
 
 <button class="btn btn-monospaced btn-sm btn-primary" type="button">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-blogs">
-		<use href="/images/icons/icons.svg#plus"></use>
-	</svg>
+	<span aria-label="icon-plus" class="lexicon-icon-container" role="img">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+			<use href="/images/icons/icons.svg#plus"></use>
+		</svg>
+	</span>
 </button>
 
 ```soy
@@ -566,9 +612,11 @@ Buttons communicate an action to happen on user interaction.
 ```
 ```html
 <button class="btn btn-monospaced btn-sm btn-primary" type="button">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
-		<use href="/images/icons/icons.svg#plus"></use>
-	</svg>
+	<span aria-label="icon-plus" class="lexicon-icon-container" role="img">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+			<use href="/images/icons/icons.svg#plus"></use>
+		</svg>
+	</span>
 </button>
 ```
 
@@ -577,9 +625,11 @@ Buttons communicate an action to happen on user interaction.
 > Action buttons are used when a set of contextual actions are needed for an element or a dataset. This button displays a set of actions inside a dropdown menu. The actions must be sorted in a specific way. please visit Dropdown menu > Sorting actions to learn more.
 
 <button class="btn btn-monospaced btn-sm btn-unstyled" type="button">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-		<use href="/images/icons/icons.svg#ellipsis-v"></use>
-	</svg>
+	<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+			<use href="/images/icons/icons.svg#ellipsis-v"></use>
+		</svg>
+	</span>
 </button>
 
 ```soy
@@ -595,9 +645,11 @@ Buttons communicate an action to happen on user interaction.
 ```
 ```html
 <button class="btn btn-monospaced btn-sm btn-primary" type="button">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-		<use href="/images/icons/ellipsis-v.svg#plus"></use>
-	</svg>
+	<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+			<use href="/images/icons/ellipsis-v.svg#plus"></use>
+		</svg>
+	</span>
 </button>
 ```
 

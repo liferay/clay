@@ -12,9 +12,11 @@ title: "Paginations"
 	<div class="dropdown pagination-items-per-page">
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 			10 entries
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
-				<use href="/images/icons/icons.svg#caret-double-l" />
-			</svg>
+			<span aria-label="icon-caret-double-l" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
+					<use href="/images/icons/icons.svg#caret-double-l" />
+				</svg>
+			</span>
 		</a>
 		<ul class="dropdown-menu dropdown-menu-top">
 			<li><a class="dropdown-item" href="#1">5</a></li>
@@ -28,10 +30,11 @@ title: "Paginations"
 	<ul class="pagination">
 		<li class="disabled page-item">
 			<a class="page-link" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-					<use href="/images/icons/icons.svg#angle-left" />
-				</svg>
-				<span class="sr-only">Previous</span>
+				<span aria-label="icon-angle-left" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+						<use href="/images/icons/icons.svg#angle-left" />
+					</svg>
+				</span>
 			</a>
 		</li>
 		<li class="active page-item"><a class="page-link" href="#1">1</a></li>
@@ -61,10 +64,11 @@ title: "Paginations"
 		<li class="page-item"><a class="page-link" href="#1">16</a></li>
 		<li class="page-item">
 			<a class="page-link" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use href="/images/icons/icons.svg#angle-right" />
-				</svg>
-				<span class="sr-only">Next</span>
+				<span aria-label="icon-angle-right" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+						<use href="/images/icons/icons.svg#angle-right" />
+					</svg>
+				</span>
 			</a>
 		</li>
 	</ul>
@@ -75,9 +79,11 @@ title: "Paginations"
 	<div class="dropdown pagination-items-per-page">
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 			10 entries
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
-				<use href="/images/icons/icons.svg#caret-double-l" />
-			</svg>
+			<span aria-label="icon-caret-double-l" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
+					<use href="/images/icons/icons.svg#caret-double-l" />
+				</svg>
+			</span>
 		</a>
 		<ul class="dropdown-menu dropdown-menu-top">
 			<li><a class="dropdown-item" href="#1">5</a></li>
@@ -91,10 +97,11 @@ title: "Paginations"
 	<ul class="pagination">
 		<li class="disabled page-item">
 			<a class="page-link" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-					<use href="/images/icons/icons.svg#angle-left" />
-				</svg>
-				<span class="sr-only">Previous</span>
+				<span aria-label="icon-angle-left" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+						<use href="/images/icons/icons.svg#angle-left" />
+					</svg>
+				</span>
 			</a>
 		</li>
 		<li class="active page-item"><a class="page-link" href="#1">1</a></li>
@@ -124,10 +131,11 @@ title: "Paginations"
 		<li class="page-item"><a class="page-link" href="#1">16</a></li>
 		<li class="page-item">
 			<a class="page-link" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use href="/images/icons/icons.svg#angle-right" />
-				</svg>
-				<span class="sr-only">Next</span>
+				<span aria-label="icon-angle-right" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+						<use href="/images/icons/icons.svg#angle-right" />
+					</svg>
+				</span>
 			</a>
 		</li>
 	</ul>
@@ -140,9 +148,11 @@ title: "Paginations"
 	<div class="dropdown pagination-items-per-page">
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 			10 entries
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
-				<use href="/images/icons/icons.svg#caret-double-l" />
-			</svg>
+			<span aria-label="icon-caret-double-l" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
+					<use href="/images/icons/icons.svg#caret-double-l" />
+				</svg>
+			</span>
 		</a>
 		<ul class="dropdown-menu dropdown-menu-top">
 			<li><a class="dropdown-item" href="#1">5</a></li>
@@ -156,10 +166,11 @@ title: "Paginations"
 	<ul class="pagination">
 		<li class="disabled page-item">
 			<a class="page-link" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-					<use href="/images/icons/icons.svg#angle-left" />
-				</svg>
-				<span class="sr-only">Previous</span>
+				<span aria-label="icon-angle-left" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+						<use href="/images/icons/icons.svg#angle-left" />
+					</svg>
+				</span>
 			</a>
 		</li>
 		<li class="active page-item"><a class="page-link" href="#1">1</a></li>
@@ -189,10 +200,11 @@ title: "Paginations"
 		<li class="page-item"><a class="page-link" href="#1">16</a></li>
 		<li class="page-item">
 			<a class="page-link" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use href="/images/icons/icons.svg#angle-right" />
-				</svg>
-				<span class="sr-only">Next</span>
+				<span aria-label="icon-angle-right" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+						<use href="/images/icons/icons.svg#angle-right" />
+					</svg>
+				</span>
 			</a>
 		</li>
 	</ul>
@@ -203,9 +215,11 @@ title: "Paginations"
 	<div class="dropdown pagination-items-per-page">
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 			10 entries
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
-				<use href="/images/icons/icons.svg#caret-double-l" />
-			</svg>
+			<span aria-label="icon-caret-double-l" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
+					<use href="/images/icons/icons.svg#caret-double-l" />
+				</svg>
+			</span>
 		</a>
 		<ul class="dropdown-menu dropdown-menu-top">
 			<li><a class="dropdown-item" href="#1">5</a></li>
@@ -219,10 +233,11 @@ title: "Paginations"
 	<ul class="pagination">
 		<li class="disabled page-item">
 			<a class="page-link" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-					<use href="/images/icons/icons.svg#angle-left" />
-				</svg>
-				<span class="sr-only">Previous</span>
+				<span aria-label="icon-angle-left" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+						<use href="/images/icons/icons.svg#angle-left" />
+					</svg>
+				</span>
 			</a>
 		</li>
 		<li class="active page-item"><a class="page-link" href="#1">1</a></li>
@@ -252,10 +267,11 @@ title: "Paginations"
 		<li class="page-item"><a class="page-link" href="#1">16</a></li>
 		<li class="page-item">
 			<a class="page-link" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use href="/images/icons/icons.svg#angle-right" />
-				</svg>
-				<span class="sr-only">Next</span>
+				<span aria-label="icon-angle-right" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+						<use href="/images/icons/icons.svg#angle-right" />
+					</svg>
+				</span>
 			</a>
 		</li>
 	</ul>
@@ -268,9 +284,11 @@ title: "Paginations"
 	<div class="dropdown pagination-items-per-page">
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 			10 entries
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
-				<use href="/images/icons/icons.svg#caret-double-l" />
-			</svg>
+			<span aria-label="icon-caret-double-l" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
+					<use href="/images/icons/icons.svg#caret-double-l" />
+				</svg>
+			</span>
 		</a>
 		<ul class="dropdown-menu dropdown-menu-top">
 			<li><a class="dropdown-item" href="#1">5</a></li>
@@ -284,10 +302,11 @@ title: "Paginations"
 	<ul class="pagination">
 		<li class="disabled page-item">
 			<a class="page-link" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-					<use href="/images/icons/icons.svg#angle-left" />
-				</svg>
-				<span class="sr-only">Previous</span>
+				<span aria-label="icon-angle-left" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+						<use href="/images/icons/icons.svg#angle-left" />
+					</svg>
+				</span>
 			</a>
 		</li>
 		<li class="active page-item"><a class="page-link" href="#1">1</a></li>
@@ -317,10 +336,11 @@ title: "Paginations"
 		<li class="page-item"><a class="page-link" href="#1">16</a></li>
 		<li class="page-item">
 			<a class="page-link" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use href="/images/icons/icons.svg#angle-right" />
-				</svg>
-				<span class="sr-only">Next</span>
+				<span aria-label="icon-angle-right" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+						<use href="/images/icons/icons.svg#angle-right" />
+					</svg>
+				</span>
 			</a>
 		</li>
 	</ul>
@@ -331,9 +351,11 @@ title: "Paginations"
 	<div class="dropdown pagination-items-per-page">
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 			10 entries
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
-				<use href="/images/icons/icons.svg#caret-double-l" />
-			</svg>
+			<span aria-label="icon-caret-double-l" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
+					<use href="/images/icons/icons.svg#caret-double-l" />
+				</svg>
+			</span>
 		</a>
 		<ul class="dropdown-menu dropdown-menu-top">
 			<li><a class="dropdown-item" href="#1">5</a></li>
@@ -347,10 +369,11 @@ title: "Paginations"
 	<ul class="pagination">
 		<li class="disabled page-item">
 			<a class="page-link" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-					<use href="/images/icons/icons.svg#angle-left" />
-				</svg>
-				<span class="sr-only">Previous</span>
+				<span aria-label="icon-angle-left" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+						<use href="/images/icons/icons.svg#angle-left" />
+					</svg>
+				</span>
 			</a>
 		</li>
 		<li class="active page-item"><a class="page-link" href="#1">1</a></li>
@@ -380,10 +403,11 @@ title: "Paginations"
 		<li class="page-item"><a class="page-link" href="#1">16</a></li>
 		<li class="page-item">
 			<a class="page-link" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use href="/images/icons/icons.svg#angle-right" />
-				</svg>
-				<span class="sr-only">Next</span>
+				<span aria-label="icon-angle-right" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+						<use href="/images/icons/icons.svg#angle-right" />
+					</svg>
+				</span>
 			</a>
 		</li>
 	</ul>
@@ -396,9 +420,11 @@ title: "Paginations"
 	<div class="dropdown pagination-items-per-page">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-unstyled dropdown-toggle" data-toggle="dropdown" type="button">
 			10 entries
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
-				<use href="/images/icons/icons.svg#caret-double-l" />
-			</svg>
+			<span aria-label="icon-caret-double-l" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
+					<use href="/images/icons/icons.svg#caret-double-l" />
+				</svg>
+			</span>
 		</button>
 		<ul class="dropdown-menu dropdown-menu-top">
 			<li><a class="dropdown-item" href="#1">5</a></li>
@@ -412,10 +438,11 @@ title: "Paginations"
 	<ul class="pagination">
 		<li class="disabled page-item">
 			<button class="btn btn-unstyled page-link" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-					<use href="/images/icons/icons.svg#angle-left" />
-				</svg>
-				<span class="sr-only">Previous</span>
+				<span aria-label="icon-angle-left" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+						<use href="/images/icons/icons.svg#angle-left" />
+					</svg>
+				</span>
 			</button>
 		</li>
 		<li class="active page-item">
@@ -451,10 +478,11 @@ title: "Paginations"
 		</li>
 		<li class="page-item">
 			<button class="btn btn-unstyled page-link" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use href="/images/icons/icons.svg#angle-right" />
-				</svg>
-				<span class="sr-only">Next</span>
+				<span aria-label="icon-angle-right" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+						<use href="/images/icons/icons.svg#angle-right" />
+					</svg>
+				</span>
 			</button>
 		</li>
 	</ul>
@@ -465,9 +493,11 @@ title: "Paginations"
 	<div class="dropdown pagination-items-per-page">
 		<button aria-expanded="false" aria-haspopup="true" class="btn btn-unstyled dropdown-toggle" data-toggle="dropdown" type="button">
 			10 entries
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
-				<use href="/images/icons/icons.svg#caret-double-l" />
-			</svg>
+			<span aria-label="icon-caret-double-l" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
+					<use href="/images/icons/icons.svg#caret-double-l" />
+				</svg>
+			</span>
 		</button>
 		<ul class="dropdown-menu dropdown-menu-top">
 			<li><a class="dropdown-item" href="#1">5</a></li>
@@ -481,10 +511,11 @@ title: "Paginations"
 	<ul class="pagination">
 		<li class="disabled page-item">
 			<button class="btn btn-unstyled page-link" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-					<use href="/images/icons/icons.svg#angle-left" />
-				</svg>
-				<span class="sr-only">Previous</span>
+				<span aria-label="icon-angle-left" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+						<use href="/images/icons/icons.svg#angle-left" />
+					</svg>
+				</span>
 			</button>
 		</li>
 		<li class="active page-item">
@@ -520,10 +551,11 @@ title: "Paginations"
 		</li>
 		<li class="page-item">
 			<button class="btn btn-unstyled page-link" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use href="/images/icons/icons.svg#angle-right" />
-				</svg>
-				<span class="sr-only">Next</span>
+				<span aria-label="icon-angle-right" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+						<use href="/images/icons/icons.svg#angle-right" />
+					</svg>
+				</span>
 			</button>
 		</li>
 	</ul>

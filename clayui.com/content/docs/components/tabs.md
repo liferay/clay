@@ -20,25 +20,31 @@ Tabs organize similar content together into individual sections in the same page
 	<li class="dropdown nav-item">
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
 			Configuration
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</a>
 		<div class="dropdown-menu dropdown-menu-indicator-end">
 			<a aria-controls="setup" class="dropdown-item" data-toggle="tab" href="#setup" id="setupTab" role="tab">
 				Setup
 				<span aria-hidden="true" class="dropdown-item-indicator">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use href="/images/icons/icons.svg#check" />
-					</svg>
+					<span aria-label="icon-check" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<use href="/images/icons/icons.svg#check" />
+						</svg>
+					</span>
 				</span>
 			</a>
 			<a aria-controls="supportedClients" class="dropdown-item" data-toggle="tab" href="#supportedClients" id="supportedClientsTab" role="tab">
 				Supported Clients
 				<span aria-hidden="true" class="dropdown-item-indicator">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use href="/images/icons/icons.svg#check" />
-					</svg>
+					<span aria-label="icon-check" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<use href="/images/icons/icons.svg#check" />
+						</svg>
+					</span>
 				</span>
 			</a>
 		</div>
@@ -76,25 +82,31 @@ Tabs organize similar content together into individual sections in the same page
 	<li class="dropdown nav-item">
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
 			Configuration
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</a>
 		<div class="dropdown-menu dropdown-menu-indicator-end">
 			<a aria-controls="setup" class="dropdown-item" data-toggle="tab" href="#setup" id="setupTab" role="tab">
 				Setup
 				<span aria-hidden="true" class="dropdown-item-indicator">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use href="/images/icons/icons.svg#check" />
-					</svg>
+					<span aria-label="icon-check" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<use href="/images/icons/icons.svg#check" />
+						</svg>
+					</span>
 				</span>
 			</a>
 			<a aria-controls="supportedClients" class="dropdown-item" data-toggle="tab" href="#supportedClients" id="supportedClientsTab" role="tab">
 				Supported Clients
 				<span aria-hidden="true" class="dropdown-item-indicator">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use href="/images/icons/icons.svg#check" />
-					</svg>
+					<span aria-label="icon-check" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<use href="/images/icons/icons.svg#check" />
+						</svg>
+					</span>
 				</span>
 			</a>
 		</div>
@@ -134,25 +146,31 @@ Tabs organize similar content together into individual sections in the same page
 	<li class="dropdown nav-item">
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
 			Configuration
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</a>
 		<div class="dropdown-menu dropdown-menu-indicator-end">
 			<a aria-controls="navUnderlineSetup" class="dropdown-item" data-toggle="tab" href="#navUnderlineSetup" id="navUnderlineSetupTab" role="tab">
 				Setup
 				<span aria-hidden="true" class="dropdown-item-indicator">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use href="/images/icons/icons.svg#check" />
-					</svg>
+					<span aria-label="icon-check" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<use href="/images/icons/icons.svg#check" />
+						</svg>
+					</span>
 				</span>
 			</a>
 			<a aria-controls="navUnderlineSupportedClients" class="dropdown-item" data-toggle="tab" href="#navUnderlineSupportedClients" id="navUnderlineSupportedClientsTab" role="tab">
 				Supported Clients
 				<span aria-hidden="true" class="dropdown-item-indicator">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use href="/images/icons/icons.svg#check" />
-					</svg>
+					<span aria-label="icon-check" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<use href="/images/icons/icons.svg#check" />
+						</svg>
+					</span>
 				</span>
 			</a>
 		</div>
@@ -190,25 +208,31 @@ Tabs organize similar content together into individual sections in the same page
 	<li class="dropdown nav-item">
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
 			Configuration
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use href="/images/icons/icons.svg#caret-bottom" />
-			</svg>
+			<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<use href="/images/icons/icons.svg#caret-bottom" />
+				</svg>
+			</span>
 		</a>
 		<div class="dropdown-menu dropdown-menu-indicator-end">
 			<a aria-controls="navUnderlineSetup" class="dropdown-item" data-toggle="tab" href="#navUnderlineSetup" id="navUnderlineSetupTab" role="tab">
 				Setup
 				<span aria-hidden="true" class="dropdown-item-indicator">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use href="/images/icons/icons.svg#check" />
-					</svg>
+					<span aria-label="icon-check" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<use href="/images/icons/icons.svg#check" />
+						</svg>
+					</span>
 				</span>
 			</a>
 			<a aria-controls="navUnderlineSupportedClients" class="dropdown-item" data-toggle="tab" href="#navUnderlineSupportedClients" id="navUnderlineSupportedClientsTab" role="tab">
 				Supported Clients
 				<span aria-hidden="true" class="dropdown-item-indicator">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use href="/images/icons/icons.svg#check" />
-					</svg>
+					<span aria-label="icon-check" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<use href="/images/icons/icons.svg#check" />
+						</svg>
+					</span>
 				</span>
 			</a>
 		</div>

@@ -20,32 +20,40 @@ A table is a specific pattern for comparing datasets in a very direct and analyt
 				<th class="table-head-title">
 					<span class="inline-item inline-item-before">
 						<a href="#1">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
-								<use href="/images/icons/icons.svg#drag" />
-							</svg>
+							<span aria-label="icon-drag" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
+									<use href="/images/icons/icons.svg#drag" />
+								</svg>
+							</span>
 						</a>
 					</span>
 					<a class="inline-item text-truncate-inline" href="#1">
 						<span class="text-truncate" title="ID">ID</span><span class="inline-item inline-item-after">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
-								<use href="/images/icons/icons.svg#order-arrow-down" />
-							</svg>
+							<span aria-label="icon-order-arrow-down" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
+									<use href="/images/icons/icons.svg#order-arrow-down" />
+								</svg>
+							</span>
 						</span>
 					</a>
 				</th>
 				<th class="table-cell-expand table-head-title">
 					<span class="inline-item inline-item-before">
 						<a href="#1">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
-								<use href="/images/icons/icons.svg#drag" />
-							</svg>
+							<span aria-label="icon-drag" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
+									<use href="/images/icons/icons.svg#drag" />
+								</svg>
+							</span>
 						</a>
 					</span>
 					<a class="inline-item text-truncate-inline" href="#1">
 						<span class="text-truncate" title="Title">Title</span><span class="inline-item inline-item-after">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
-								<use href="/images/icons/icons.svg#order-arrow-down" />
-							</svg>
+							<span aria-label="icon-order-arrow-down" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
+									<use href="/images/icons/icons.svg#order-arrow-down" />
+								</svg>
+							</span>
 						</span>
 					</a>
 				</th>
@@ -53,9 +61,11 @@ A table is a specific pattern for comparing datasets in a very direct and analyt
 				<th class="table-head-title">
 					<span class="inline-item inline-item-before">
 						<a href="#1">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
-								<use href="/images/icons/icons.svg#drag" />
-							</svg>
+							<span aria-label="icon-drag" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
+									<use href="/images/icons/icons.svg#drag" />
+								</svg>
+							</span>
 						</a>
 					</span>
 					<a class="inline-item text-truncate-inline" href="#1">
@@ -66,9 +76,11 @@ A table is a specific pattern for comparing datasets in a very direct and analyt
 				<th class="table-head-title">
 					<a class="inline-item text-truncate-inline" href="#1">
 						<span class="text-truncate" title="Author">Author</span><span class="inline-item inline-item-after">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up">
-								<use href="/images/icons/icons.svg#order-arrow-up" />
-							</svg>
+							<span aria-label="icon-order-arrow-up" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up">
+									<use href="/images/icons/icons.svg#order-arrow-up" />
+								</svg>
+							</span>
 						</span>
 					</a>
 				</th>
@@ -105,26 +117,34 @@ A table is a specific pattern for comparing datasets in a very direct and analyt
 				<td>
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use href="/images/icons/icons.svg#trash" />
-							</svg>
+							<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use href="/images/icons/icons.svg#trash" />
+								</svg>
+							</span>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use href="/images/icons/icons.svg#download" />
-							</svg>
+							<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use href="/images/icons/icons.svg#download" />
+								</svg>
+							</span>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-								<use href="/images/icons/icons.svg#info-circle-open" />
-							</svg>
+							<span aria-label="icon-info-circle-open" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use href="/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</span>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use href="/images/icons/icons.svg#ellipsis-v" />
-							</svg>
+							<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use href="/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</span>
 						</a>
 						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" href="#1" role="button">Remove</a>
@@ -162,26 +182,34 @@ A table is a specific pattern for comparing datasets in a very direct and analyt
 				<td>
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use href="/images/icons/icons.svg#trash" />
-							</svg>
+							<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use href="/images/icons/icons.svg#trash" />
+								</svg>
+							</span>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use href="/images/icons/icons.svg#download" />
-							</svg>
+							<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use href="/images/icons/icons.svg#download" />
+								</svg>
+							</span>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-								<use href="/images/icons/icons.svg#info-circle-open" />
-							</svg>
+							<span aria-label="icon-info-circle-open" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use href="/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</span>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use href="/images/icons/icons.svg#ellipsis-v" />
-							</svg>
+							<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use href="/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</span>
 						</a>
 						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" href="#1" role="button">Remove</a>
@@ -217,26 +245,34 @@ A table is a specific pattern for comparing datasets in a very direct and analyt
 				<td>
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use href="/images/icons/icons.svg#trash" />
-							</svg>
+							<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use href="/images/icons/icons.svg#trash" />
+								</svg>
+							</span>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use href="/images/icons/icons.svg#download" />
-							</svg>
+							<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use href="/images/icons/icons.svg#download" />
+								</svg>
+							</span>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-								<use href="/images/icons/icons.svg#info-circle-open" />
-							</svg>
+							<span aria-label="icon-info-circle-open" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use href="/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</span>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use href="/images/icons/icons.svg#ellipsis-v" />
-							</svg>
+							<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use href="/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</span>
 						</a>
 						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" href="#1" role="button">Remove</a>
@@ -272,26 +308,34 @@ A table is a specific pattern for comparing datasets in a very direct and analyt
 				<td>
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use href="/images/icons/icons.svg#trash" />
-							</svg>
+							<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use href="/images/icons/icons.svg#trash" />
+								</svg>
+							</span>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use href="/images/icons/icons.svg#download" />
-							</svg>
+							<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use href="/images/icons/icons.svg#download" />
+								</svg>
+							</span>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-								<use href="/images/icons/icons.svg#info-circle-open" />
-							</svg>
+							<span aria-label="icon-info-circle-open" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use href="/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</span>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use href="/images/icons/icons.svg#ellipsis-v" />
-							</svg>
+							<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use href="/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</span>
 						</a>
 						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" href="#1" role="button">Remove</a>
@@ -315,32 +359,40 @@ A table is a specific pattern for comparing datasets in a very direct and analyt
 				<th class="table-head-title">
 					<span class="inline-item inline-item-before">
 						<a href="#1">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
-								<use href="/images/icons/icons.svg#drag" />
-							</svg>
+							<span aria-label="icon-drag" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
+									<use href="/images/icons/icons.svg#drag" />
+								</svg>
+							</span>
 						</a>
 					</span>
 					<a class="inline-item text-truncate-inline" href="#1">
 						<span class="text-truncate" title="ID">ID</span><span class="inline-item inline-item-after">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
-								<use href="/images/icons/icons.svg#order-arrow-down" />
-							</svg>
+							<span aria-label="icon-order-arrow-down" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
+									<use href="/images/icons/icons.svg#order-arrow-down" />
+								</svg>
+							</span>
 						</span>
 					</a>
 				</th>
 				<th class="table-cell-expand table-head-title">
 					<span class="inline-item inline-item-before">
 						<a href="#1">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
-								<use href="/images/icons/icons.svg#drag" />
-							</svg>
+							<span aria-label="icon-drag" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
+									<use href="/images/icons/icons.svg#drag" />
+								</svg>
+							</span>
 						</a>
 					</span>
 					<a class="inline-item text-truncate-inline" href="#1">
 						<span class="text-truncate" title="Title">Title</span><span class="inline-item inline-item-after">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
-								<use href="/images/icons/icons.svg#order-arrow-down" />
-							</svg>
+							<span aria-label="icon-order-arrow-down" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
+									<use href="/images/icons/icons.svg#order-arrow-down" />
+								</svg>
+							</span>
 						</span>
 					</a>
 				</th>
@@ -348,9 +400,11 @@ A table is a specific pattern for comparing datasets in a very direct and analyt
 				<th class="table-head-title">
 					<span class="inline-item inline-item-before">
 						<a href="#1">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
-								<use href="/images/icons/icons.svg#drag" />
-							</svg>
+							<span aria-label="icon-drag" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
+									<use href="/images/icons/icons.svg#drag" />
+								</svg>
+							</span>
 						</a>
 					</span>
 					<a class="inline-item text-truncate-inline" href="#1">
@@ -361,9 +415,11 @@ A table is a specific pattern for comparing datasets in a very direct and analyt
 				<th class="table-head-title">
 					<a class="inline-item text-truncate-inline" href="#1">
 						<span class="text-truncate" title="Author">Author</span><span class="inline-item inline-item-after">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up">
-								<use href="/images/icons/icons.svg#order-arrow-up" />
-							</svg>
+							<span aria-label="icon-order-arrow-up" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up">
+									<use href="/images/icons/icons.svg#order-arrow-up" />
+								</svg>
+							</span>
 						</span>
 					</a>
 				</th>
@@ -400,26 +456,34 @@ A table is a specific pattern for comparing datasets in a very direct and analyt
 				<td>
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use href="/images/icons/icons.svg#trash" />
-							</svg>
+							<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use href="/images/icons/icons.svg#trash" />
+								</svg>
+							</span>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use href="/images/icons/icons.svg#download" />
-							</svg>
+							<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use href="/images/icons/icons.svg#download" />
+								</svg>
+							</span>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-								<use href="/images/icons/icons.svg#info-circle-open" />
-							</svg>
+							<span aria-label="icon-info-circle-open" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use href="/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</span>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use href="/images/icons/icons.svg#ellipsis-v" />
-							</svg>
+							<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use href="/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</span>
 						</a>
 						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" href="#1" role="button">Remove</a>
@@ -457,26 +521,34 @@ A table is a specific pattern for comparing datasets in a very direct and analyt
 				<td>
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use href="/images/icons/icons.svg#trash" />
-							</svg>
+							<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use href="/images/icons/icons.svg#trash" />
+								</svg>
+							</span>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use href="/images/icons/icons.svg#download" />
-							</svg>
+							<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use href="/images/icons/icons.svg#download" />
+								</svg>
+							</span>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-								<use href="/images/icons/icons.svg#info-circle-open" />
-							</svg>
+							<span aria-label="icon-info-circle-open" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use href="/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</span>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use href="/images/icons/icons.svg#ellipsis-v" />
-							</svg>
+							<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use href="/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</span>
 						</a>
 						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" href="#1" role="button">Remove</a>
@@ -512,26 +584,34 @@ A table is a specific pattern for comparing datasets in a very direct and analyt
 				<td>
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use href="/images/icons/icons.svg#trash" />
-							</svg>
+							<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use href="/images/icons/icons.svg#trash" />
+								</svg>
+							</span>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use href="/images/icons/icons.svg#download" />
-							</svg>
+							<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use href="/images/icons/icons.svg#download" />
+								</svg>
+							</span>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-								<use href="/images/icons/icons.svg#info-circle-open" />
-							</svg>
+							<span aria-label="icon-info-circle-open" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use href="/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</span>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use href="/images/icons/icons.svg#ellipsis-v" />
-							</svg>
+							<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use href="/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</span>
 						</a>
 						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" href="#1" role="button">Remove</a>
@@ -567,26 +647,34 @@ A table is a specific pattern for comparing datasets in a very direct and analyt
 				<td>
 					<div class="quick-action-menu">
 						<a class="component-action quick-action-item" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-								<use href="/images/icons/icons.svg#trash" />
-							</svg>
+							<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use href="/images/icons/icons.svg#trash" />
+								</svg>
+							</span>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-								<use href="/images/icons/icons.svg#download" />
-							</svg>
+							<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use href="/images/icons/icons.svg#download" />
+								</svg>
+							</span>
 						</a>
 						<a class="component-action quick-action-item" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-								<use href="/images/icons/icons.svg#info-circle-open" />
-							</svg>
+							<span aria-label="icon-info-circle-open" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use href="/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</span>
 						</a>
 					</div>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use href="/images/icons/icons.svg#ellipsis-v" />
-							</svg>
+							<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use href="/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</span>
 						</a>
 						<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" href="#1" role="button">Remove</a>
@@ -633,17 +721,21 @@ A table is a specific pattern for comparing datasets in a very direct and analyt
 							<a class="table-link" href="#1">.table-link</a>,
 							<a href="#1">link</a>,
 							<a class="table-action-link" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
-									<use href="/images/icons/icons.svg#share" />
-								</svg>
+								<span aria-label="icon-share" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
+										<use href="/images/icons/icons.svg#share" />
+									</svg>
+								</span>
 							</a>(.table-action-link),
 							<span>and some regular text</span>
 						</td>
 						<td>
 							<button class="btn btn-unstyled table-action-link" type="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-									<use href="/images/icons/icons.svg#times-circle" />
-								</svg>
+								<span aria-label="icon-times-circle" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
+										<use href="/images/icons/icons.svg#times-circle" />
+									</svg>
+								</span>
 							</button>
 						</td>
 					</tr>
@@ -658,9 +750,11 @@ A table is a specific pattern for comparing datasets in a very direct and analyt
 						</td>
 						<td>
 							<a class="table-action-link" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-									<use href="/images/icons/icons.svg#times-circle" />
-								</svg>
+								<span aria-label="icon-times-circle" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
+										<use href="/images/icons/icons.svg#times-circle" />
+									</svg>
+								</span>
 							</a>
 						</td>
 					</tr>
@@ -675,9 +769,11 @@ A table is a specific pattern for comparing datasets in a very direct and analyt
 						</td>
 						<td>
 							<a class="table-action-link" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-									<use href="/images/icons/icons.svg#times-circle" />
-								</svg>
+								<span aria-label="icon-times-circle" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
+										<use href="/images/icons/icons.svg#times-circle" />
+									</svg>
+								</span>
 							</a>
 						</td>
 					</tr>
@@ -692,9 +788,11 @@ A table is a specific pattern for comparing datasets in a very direct and analyt
 						</td>
 						<td>
 							<a class="table-action-link" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-									<use href="/images/icons/icons.svg#times-circle" />
-								</svg>
+								<span aria-label="icon-times-circle" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
+										<use href="/images/icons/icons.svg#times-circle" />
+									</svg>
+								</span>
 							</a>
 						</td>
 					</tr>
@@ -744,17 +842,21 @@ A table is a specific pattern for comparing datasets in a very direct and analyt
 							<a class="table-link" href="#1">.table-link</a>,
 							<a href="#1">link</a>,
 							<a class="table-action-link" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
-									<use href="/images/icons/icons.svg#share" />
-								</svg>
+								<span aria-label="icon-share" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
+										<use href="/images/icons/icons.svg#share" />
+									</svg>
+								</span>
 							</a>(.table-action-link),
 							<span>and some regular text</span>
 						</td>
 						<td>
 							<button class="btn btn-unstyled table-action-link" type="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-									<use href="/images/icons/icons.svg#times-circle" />
-								</svg>
+								<span aria-label="icon-times-circle" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
+										<use href="/images/icons/icons.svg#times-circle" />
+									</svg>
+								</span>
 							</button>
 						</td>
 					</tr>
@@ -769,9 +871,11 @@ A table is a specific pattern for comparing datasets in a very direct and analyt
 						</td>
 						<td>
 							<a class="table-action-link" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-									<use href="/images/icons/icons.svg#times-circle" />
-								</svg>
+								<span aria-label="icon-time-circle" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
+										<use href="/images/icons/icons.svg#times-circle" />
+									</svg>
+								</span>
 							</a>
 						</td>
 					</tr>
@@ -786,9 +890,11 @@ A table is a specific pattern for comparing datasets in a very direct and analyt
 						</td>
 						<td>
 							<a class="table-action-link" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-									<use href="/images/icons/icons.svg#times-circle" />
-								</svg>
+								<span aria-label="icon-times-circle" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
+										<use href="/images/icons/icons.svg#times-circle" />
+									</svg>
+								</span>
 							</a>
 						</td>
 					</tr>
@@ -803,9 +909,11 @@ A table is a specific pattern for comparing datasets in a very direct and analyt
 						</td>
 						<td>
 							<a class="table-action-link" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
-									<use href="/images/icons/icons.svg#times-circle" />
-								</svg>
+								<span aria-label="icon-times-circle" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
+										<use href="/images/icons/icons.svg#times-circle" />
+									</svg>
+								</span>
 							</a>
 						</td>
 					</tr>

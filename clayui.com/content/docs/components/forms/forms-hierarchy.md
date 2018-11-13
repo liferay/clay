@@ -35,14 +35,18 @@ The definition of the content hierarchy inside a form structure and the componen
 			<a aria-controls="accordion03CollapseTwo" aria-expanded="true" class="collapse-icon sheet-subtitle" data-toggle="collapse" href="#accordion03CollapseTwo" id="accordion03HeadingTwo" role="tab">
 				<span>First Level Collapse 1</span>
 				<span class="collapse-icon-closed">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-						<use href="/images/icons/icons.svg#angle-right" />
-					</svg>
+					<span aria-label="icon-angle-right" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+							<use href="/images/icons/icons.svg#angle-right" />
+						</svg>
+					</span>
 				</span>
 				<span class="collapse-icon-open">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-						<use href="/images/icons/icons.svg#angle-down" />
-					</svg>
+					<span aria-label="icon-angle-down" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+							<use href="/images/icons/icons.svg#angle-down" />
+						</svg>
+					</span>
 				</span>
 			</a>
 			<div aria-labelledby="accordion03HeadingTwo" class="panel-collapse collapse show" id="accordion03CollapseTwo" role="tabpanel">
@@ -90,14 +94,18 @@ The definition of the content hierarchy inside a form structure and the componen
 			<a aria-controls="accordion03CollapseTwo" aria-expanded="true" class="collapse-icon sheet-subtitle" data-toggle="collapse" href="#accordion03CollapseTwo" id="accordion03HeadingTwo" role="tab">
 				<span>First Level Collapse 1</span>
 				<span class="collapse-icon-closed">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-						<use href="/images/icons/icons.svg#angle-right" />
-					</svg>
+					<span aria-label="icon-angle-right" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+							<use href="/images/icons/icons.svg#angle-right" />
+						</svg>
+					</span>
 				</span>
 				<span class="collapse-icon-open">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
-						<use href="/images/icons/icons.svg#angle-down" />
-					</svg>
+					<span aria-label="icon-angle-down" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+							<use href="/images/icons/icons.svg#angle-down" />
+						</svg>
+					</span>
 				</span>
 			</a>
 			<div aria-labelledby="accordion03HeadingTwo" class="panel-collapse collapse show" id="accordion03CollapseTwo" role="tabpanel">

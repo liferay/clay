@@ -42,9 +42,11 @@ Cards are a very specific visual representation of data.
 						<div class="autofit-col">
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use href="/images/icons/icons.svg#ellipsis-v" />
-									</svg>
+									<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+											<use href="/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</span>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
 									<a class="dropdown-item" href="#1">Download</a>
@@ -135,9 +137,11 @@ Cards are a very specific visual representation of data.
 				<div class="autofit-col">
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use href="/images/icons/icons.svg#ellipsis-v" />
-							</svg>
+							<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use href="/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</span>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" href="#1">Download</a>
@@ -185,9 +189,11 @@ Cards are a very specific visual representation of data.
 						<div class="autofit-col">
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use href="/images/icons/icons.svg#ellipsis-v" />
-									</svg>
+									<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+											<use href="/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</span>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
 									<a class="dropdown-item" href="#1">Download</a>
@@ -278,9 +284,11 @@ Cards are a very specific visual representation of data.
 				<div class="autofit-col">
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use href="/images/icons/icons.svg#ellipsis-v" />
-							</svg>
+							<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use href="/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</span>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" href="#1">Download</a>
@@ -320,9 +328,11 @@ Cards are a very specific visual representation of data.
 					<div class="autofit-col">
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-									<use href="/images/icons/icons.svg#ellipsis-v" />
-								</svg>
+								<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+										<use href="/images/icons/icons.svg#ellipsis-v" />
+									</svg>
+								</span>
 							</a>
 							<div class="dropdown-menu dropdown-menu-right">
 								<a class="dropdown-item" href="#1">Download</a>
@@ -398,9 +408,11 @@ Cards are a very specific visual representation of data.
 			<div class="autofit-col">
 				<div class="dropdown dropdown-action">
 					<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-							<use href="/images/icons/icons.svg#ellipsis-v" />
-						</svg>
+						<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+								<use href="/images/icons/icons.svg#ellipsis-v" />
+							</svg>
+						</span>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right">
 						<a class="dropdown-item" href="#1">Download</a>
@@ -431,9 +443,11 @@ Cards are a very specific visual representation of data.
 							<input class="custom-control-input" type="checkbox"/>
 							<span class="custom-control-label"></span>
 							<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
-									<use href="/images/icons/icons.svg#camera" />
-								</svg>
+								<span aria-label="icon-camera" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
+										<use href="/images/icons/icons.svg#camera" />
+									</svg>
+								</span>
 							</div>
 							<span class="sticker sticker-bottom-left sticker-warning">SVG</span>
 						</label>
@@ -453,9 +467,11 @@ Cards are a very specific visual representation of data.
 						<div class="autofit-col">
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use href="/images/icons/icons.svg#ellipsis-v" />
-									</svg>
+									<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+											<use href="/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</span>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
 									<a class="dropdown-item" href="#1">Download</a>
@@ -560,9 +576,11 @@ Cards are a very specific visual representation of data.
 					<input class="custom-control-input" type="checkbox"/>
 					<span class="custom-control-label"></span>
 					<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
-							<use href="/images/icons/icons.svg#camera" />
-						</svg>
+						<span aria-label="icon-camera" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
+								<use href="/images/icons/icons.svg#camera" />
+							</svg>
+						</span>
 					</div>
 					<span class="sticker sticker-bottom-left sticker-warning">SVG</span>
 				</label>
@@ -582,9 +600,11 @@ Cards are a very specific visual representation of data.
 				<div class="autofit-col">
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use href="/images/icons/icons.svg#ellipsis-v" />
-							</svg>
+							<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use href="/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</span>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" href="#1">Download</a>
@@ -672,9 +692,11 @@ Cards are a very specific visual representation of data.
 						<div class="autofit-col">
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use href="/images/icons/icons.svg#ellipsis-v" />
-									</svg>
+									<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+											<use href="/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</span>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
 									<a class="dropdown-item" href="#1">Download</a>
@@ -784,9 +806,11 @@ Cards are a very specific visual representation of data.
 				<div class="autofit-col">
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use href="/images/icons/icons.svg#ellipsis-v" />
-							</svg>
+							<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use href="/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</span>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" href="#1">Download</a>
@@ -820,9 +844,11 @@ Cards are a very specific visual representation of data.
 		<div class="card card-type-asset file-card">
 			<div class="aspect-ratio card-item-first">
 				<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
-						<use href="/images/icons/icons.svg#documents-and-media" />
-					</svg>
+					<span aria-label="icon-documents-and-media" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+							<use href="/images/icons/icons.svg#documents-and-media" />
+						</svg>
+					</span>
 				</div>
 				<span class="sticker sticker-bottom-left sticker-danger">DOC</span>
 			</div>
@@ -850,9 +876,11 @@ Cards are a very specific visual representation of data.
 							<input class="custom-control-input" type="checkbox"/>
 							<span class="custom-control-label"></span>
 							<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
-									<use href="/images/icons/icons.svg#documents-and-media" />
-								</svg>
+								<span aria-label="icon-documents-and-media" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+										<use href="/images/icons/icons.svg#documents-and-media" />
+									</svg>
+								</span>
 							</div>
 							<span class="sticker sticker-bottom-left sticker-danger">DOC</span>
 						</label>
@@ -872,9 +900,11 @@ Cards are a very specific visual representation of data.
 						<div class="autofit-col">
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use href="/images/icons/icons.svg#ellipsis-v" />
-									</svg>
+									<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+											<use href="/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</span>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
 									<a class="dropdown-item" href="#1">Download</a>
@@ -963,9 +993,11 @@ Cards are a very specific visual representation of data.
 <div class="card card-type-asset file-card">
 	<div class="aspect-ratio card-item-first">
 		<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
-				<use href="/images/icons/icons.svg#documents-and-media" />
-			</svg>
+			<span aria-label="icon-documents-and-media" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+					<use href="/images/icons/icons.svg#documents-and-media" />
+				</svg>
+			</span>
 		</div>
 		<span class="sticker sticker-bottom-left sticker-danger">DOC</span>
 	</div>
@@ -992,9 +1024,11 @@ Cards are a very specific visual representation of data.
 					<input class="custom-control-input" type="checkbox" />
 					<span class="custom-control-label"></span>
 					<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
-							<use href="/images/icons/icons.svg#documents-and-media" />
-						</svg>
+						<span aria-label="icon-documents-and-media" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-documents-and-media">
+								<use href="/images/icons/icons.svg#documents-and-media" />
+							</svg>
+						</span>
 					</div>
 					<span class="sticker sticker-bottom-left sticker-danger">DOC</span>
 				</label>
@@ -1014,9 +1048,11 @@ Cards are a very specific visual representation of data.
 				<div class="autofit-col">
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use href="/images/icons/icons.svg#ellipsis-v" />
-							</svg>
+							<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use href="/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</span>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" href="#1">Download</a>
@@ -1052,9 +1088,11 @@ Cards are a very specific visual representation of data.
 					<div class="autofit-col">
 						<span class="sticker">
 							<span class="inline-item">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-									<use href="/images/icons/icons.svg#folder" />
-								</svg>
+								<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+										<use href="/images/icons/icons.svg#folder" />
+									</svg>
+								</span>
 							</span>
 						</span>
 					</div>
@@ -1077,9 +1115,11 @@ Cards are a very specific visual representation of data.
 								<div class="autofit-col">
 									<span class="sticker">
 										<span class="inline-item">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-												<use href="/images/icons/icons.svg#folder" />
-											</svg>
+											<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+													<use href="/images/icons/icons.svg#folder" />
+												</svg>
+											</span>
 										</span>
 									</span>
 								</div>
@@ -1089,9 +1129,11 @@ Cards are a very specific visual representation of data.
 								<div class="autofit-col">
 									<div class="dropdown dropdown-action">
 										<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-												<use href="/images/icons/icons.svg#ellipsis-v" />
-											</svg>
+											<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+													<use href="/images/icons/icons.svg#ellipsis-v" />
+												</svg>
+											</span>
 										</a>
 										<div class="dropdown-menu dropdown-menu-right">
 											<a class="dropdown-item" href="#1">Download</a>
@@ -1155,9 +1197,11 @@ Cards are a very specific visual representation of data.
 			<div class="flex-col">
 				<span class="sticker">
 					<span class="inline-item">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-							<use href="/images/icons/icons.svg#folder" />
-						</svg>
+						<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+								<use href="/images/icons/icons.svg#folder" />
+							</svg>
+						</span>
 					</span>
 				</span>
 			</div>
@@ -1179,9 +1223,11 @@ Cards are a very specific visual representation of data.
 						<div class="autofit-col">
 							<span class="sticker">
 								<span class="inline-item">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-										<use href="/images/icons/icons.svg#folder" />
-									</svg>
+									<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+											<use href="/images/icons/icons.svg#folder" />
+										</svg>
+									</span>
 								</span>
 							</span>
 						</div>
@@ -1191,9 +1237,11 @@ Cards are a very specific visual representation of data.
 						<div class="autofit-col">
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use href="/images/icons/icons.svg#ellipsis-v" />
-									</svg>
+									<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+											<use href="/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</span>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
 									<a class="dropdown-item" href="#1">Download</a>

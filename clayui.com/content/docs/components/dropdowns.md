@@ -283,9 +283,11 @@ A dropdown is a list of options related to the element that triggers it.
 						<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text"/>
 						<span class="input-group-inset-item input-group-inset-item-after">
 							<button class="btn btn-unstyled" type="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-									<use href="/images/icons/icons.svg#search" />
-								</svg>
+								<span aria-label="icon-search" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+										<use href="/images/icons/icons.svg#search" />
+									</svg>
+								</span>
 							</button>
 						</span>
 					</div>
@@ -339,9 +341,11 @@ A dropdown is a list of options related to the element that triggers it.
 					<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text"/>
 					<span class="input-group-inset-item input-group-inset-item-after">
 						<button class="btn btn-unstyled" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-								<use href="/images/icons/icons.svg#search" />
-							</svg>
+							<span aria-label="icon-search" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use href="/images/icons/icons.svg#search" />
+								</svg>
+							</span>
 						</button>
 					</span>
 				</div>
@@ -366,9 +370,11 @@ A dropdown is a list of options related to the element that triggers it.
 			<li>
 				<a class="dropdown-item" href="#1">
 					<div class="dropdown-item-indicator">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-							<use href="/images/icons/icons.svg#check" />
-						</svg>
+						<span aria-label="icon-check" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<use href="/images/icons/icons.svg#check" />
+							</svg>
+						</span>
 					</div>
 					Normal Option
 				</a>
@@ -376,9 +382,11 @@ A dropdown is a list of options related to the element that triggers it.
 			<li>
 				<a class="dropdown-item" href="#1">
 					<div class="dropdown-item-indicator">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-							<use href="/images/icons/icons.svg#check" />
-						</svg>
+						<span aria-label="icon-check" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<use href="/images/icons/icons.svg#check" />
+							</svg>
+						</span>
 					</div>
 					Second Option
 				</a>
@@ -428,9 +436,11 @@ A dropdown is a list of options related to the element that triggers it.
 		<li>
 			<a class="dropdown-item" href="#1">
 				<div class="dropdown-item-indicator">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use href="/images/icons/icons.svg#check" />
-					</svg>
+					<span aria-label="icon-check" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<use href="/images/icons/icons.svg#check" />
+						</svg>
+					</span>
 				</div>
 				Normal Option
 			</a>
@@ -438,9 +448,11 @@ A dropdown is a list of options related to the element that triggers it.
 		<li>
 			<a class="dropdown-item" href="#1">
 				<div class="dropdown-item-indicator">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use href="/images/icons/icons.svg#check" />
-					</svg>
+					<span aria-label="icon-check" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<use href="/images/icons/icons.svg#check" />
+						</svg>
+					</span>
 				</div>
 				Second Option
 			</a>
@@ -463,9 +475,11 @@ A dropdown is a list of options related to the element that triggers it.
 				<a class="active dropdown-item" href="#1">
 					Selected Option
 					<div class="dropdown-item-indicator">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-							<use href="/images/icons/icons.svg#check" />
-						</svg>
+						<span aria-label="icon-check" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<use href="/images/icons/icons.svg#check" />
+							</svg>
+						</span>
 					</div>
 				</a>
 			</li>
@@ -473,9 +487,11 @@ A dropdown is a list of options related to the element that triggers it.
 				<a class="dropdown-item" href="#1">
 					Regular Option
 					<div class="dropdown-item-indicator">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-							<use href="/images/icons/icons.svg#check" />
-						</svg>
+						<span aria-label="icon-check" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<use href="/images/icons/icons.svg#check" />
+							</svg>
+						</span>
 					</div>
 				</a>
 			</li>
@@ -526,9 +542,11 @@ A dropdown is a list of options related to the element that triggers it.
 			<a class="active dropdown-item" href="#1">
 				Selected Option
 				<div class="dropdown-item-indicator">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use href="/images/icons/icons.svg#check" />
-					</svg>
+					<span aria-label="icon-check" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<use href="/images/icons/icons.svg#check" />
+						</svg>
+					</span>
 				</div>
 			</a>
 		</li>
@@ -536,9 +554,11 @@ A dropdown is a list of options related to the element that triggers it.
 			<a class="dropdown-item" href="#1">
 				Regular Option
 				<div class="dropdown-item-indicator">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use href="/images/icons/icons.svg#check" />
-					</svg>
+					<span aria-label="icon-check" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<use href="/images/icons/icons.svg#check" />
+						</svg>
+					</span>
 				</div>
 			</a>
 		</li>
@@ -557,45 +577,57 @@ A dropdown is a list of options related to the element that triggers it.
 			<li>
 				<a class="dropdown-item" href="#1">
 					<span class="dropdown-item-indicator-start">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-pencil">
-							<use xlink:href="/images/icons/icons.svg#pencil" />
-						</svg>
+						<span aria-label="icon-pencil" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-pencil">
+								<use xlink:href="/images/icons/icons.svg#pencil" />
+							</svg>
+						</span>
 					</span>
 					Normal Option
 					<span class="dropdown-item-indicator-end">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-							<use xlink:href="/images/icons/icons.svg#angle-right" />
-						</svg>
+						<span aria-label="icon-angle-right" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+								<use xlink:href="/images/icons/icons.svg#angle-right" />
+							</svg>
+						</span>
 					</span>
 				</a>
 			</li>
 			<li>
 				<a class="dropdown-item" href="#1">
 					<span class="dropdown-item-indicator-start">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
-							<use xlink:href="/images/icons/icons.svg#view" />
-						</svg>
+						<span aria-label="icon-view" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
+								<use xlink:href="/images/icons/icons.svg#view" />
+							</svg>
+						</span>
 					</span>
 					Second Option
 					<span class="dropdown-item-indicator-end">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-							<use xlink:href="/images/icons/icons.svg#angle-right" />
-						</svg>
+						<span aria-label="icon-angle-right" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+								<use xlink:href="/images/icons/icons.svg#angle-right" />
+							</svg>
+						</span>
 					</span>
 				</a>
 			</li>
 			<li>
 				<a class="dropdown-item" href="#1">
 					<span class="dropdown-item-indicator-start">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-							<use xlink:href="/images/icons/icons.svg#check" />
-						</svg>
+						<span aria-label="icon-check" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<use xlink:href="/images/icons/icons.svg#check" />
+							</svg>
+						</span>
 					</span>
 					Third Option
 					<span class="dropdown-item-indicator-end">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-							<use xlink:href="/images/icons/icons.svg#angle-right" />
-						</svg>
+						<span aria-label="icon-angle-right" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+								<use xlink:href="/images/icons/icons.svg#angle-right" />
+							</svg>
+						</span>
 					</span>
 				</a>
 			</li>
@@ -609,45 +641,57 @@ A dropdown is a list of options related to the element that triggers it.
 		<li>
 			<a class="dropdown-item" href="#1">
 				<span class="dropdown-item-indicator-start">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-pencil">
-						<use xlink:href="/images/icons/icons.svg#pencil" />
-					</svg>
+					<span aria-label="icon-pencil" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-pencil">
+							<use xlink:href="/images/icons/icons.svg#pencil" />
+						</svg>
+					</span>
 				</span>
 				Normal Option
 				<span class="dropdown-item-indicator-end">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-						<use xlink:href="/images/icons/icons.svg#angle-right" />
-					</svg>
+					<span aria-label="icon-angle-right" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+							<use xlink:href="/images/icons/icons.svg#angle-right" />
+						</svg>
+					</span>
 				</span>
 			</a>
 		</li>
 		<li>
 			<a class="dropdown-item" href="#1">
 				<span class="dropdown-item-indicator-start">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
-						<use xlink:href="/images/icons/icons.svg#view" />
-					</svg>
+					<span aria-label="icon-view" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
+							<use xlink:href="/images/icons/icons.svg#view" />
+						</svg>
+					</span>
 				</span>
 				Second Option
 				<span class="dropdown-item-indicator-end">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-						<use xlink:href="/images/icons/icons.svg#angle-right" />
-					</svg>
+					<span aria-label="icon-angle-right" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+							<use xlink:href="/images/icons/icons.svg#angle-right" />
+						</svg>
+					</span>
 				</span>
 			</a>
 		</li>
 		<li>
 			<a class="dropdown-item" href="#1">
 				<span class="dropdown-item-indicator-start">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="/images/icons/icons.svg#check" />
-					</svg>
+					<span aria-label="icon-check" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<use xlink:href="/images/icons/icons.svg#check" />
+						</svg>
+					</span>
 				</span>
 				Third Option
 				<span class="dropdown-item-indicator-end">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-						<use xlink:href="/images/icons/icons.svg#angle-right" />
-					</svg>
+					<span aria-label="icon-angle-right" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+							<use xlink:href="/images/icons/icons.svg#angle-right" />
+						</svg>
+					</span>
 				</span>
 			</a>
 		</li>
@@ -670,9 +714,11 @@ A dropdown is a list of options related to the element that triggers it.
 						<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text"/>
 						<span class="input-group-inset-item input-group-inset-item-after">
 							<button class="btn btn-unstyled" type="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-									<use href="/images/icons/icons.svg#search" />
-								</svg>
+								<span aria-label="icon-search" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+										<use href="/images/icons/icons.svg#search" />
+									</svg>
+								</span>
 							</button>
 						</span>
 					</div>
@@ -886,9 +932,11 @@ A dropdown is a list of options related to the element that triggers it.
 					<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text"/>
 					<span class="input-group-inset-item input-group-inset-item-after">
 						<button class="btn btn-unstyled" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-								<use href="/images/icons/icons.svg#search" />
-							</svg>
+							<span aria-label="icon-search" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use href="/images/icons/icons.svg#search" />
+								</svg>
+							</span>
 						</button>
 					</span>
 				</div>
@@ -977,9 +1025,11 @@ A dropdown is a list of options related to the element that triggers it.
 
 <div class="dropdown dropdown-action">
 	<button aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle btn btn-unstyled" data-toggle="dropdown" id="dropdownAction1" role="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-			<use href="/images/icons/icons.svg#ellipsis-v" />
-		</svg>
+		<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+				<use href="/images/icons/icons.svg#ellipsis-v" />
+			</svg>
+		</span>
 	</button>
 	<div aria-labelledby="dropdownAction1" class="dropdown-menu">
 		<ul class="list-unstyled">
@@ -1138,9 +1188,11 @@ A dropdown is a list of options related to the element that triggers it.
 ```html
 <div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
 	<button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" data-toggle="dropdown" id="dropdownAction1" role="button">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-			<use href="/images/icons/icons.svg#ellipsis-v" />
-		</svg>
+		<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+				<use href="/images/icons/icons.svg#ellipsis-v" />
+			</svg>
+		</span>
 	</button>
 	<div aria-labelledby="dropdownAction1" class="dropdown-menu">
 		<ul class="list-unstyled">

@@ -190,16 +190,20 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 			<ul class="navbar-nav">
 				<li class="nav-item">
 					<a class="nav-link nav-link-monospaced" href="#1">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
-							<use href="/images/icons/icons.svg#product-menu-closed" />
-						</svg>
+						<span aria-label="icon-product-menu-closed" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
+								<use href="/images/icons/icons.svg#product-menu-closed" />
+							</svg>
+						</span>
 					</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link nav-link-monospaced" href="#1">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-							<use href="/images/icons/icons.svg#angle-left" />
-						</svg>
+						<span aria-label="icon-angle-left" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+								<use href="/images/icons/icons.svg#angle-left" />
+							</svg>
+						</span>
 					</a>
 				</li>
 			</ul>
@@ -207,9 +211,11 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 			<ul class="navbar-nav">
 				<li class="dropdown nav-item">
 					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-							<use href="/images/icons/icons.svg#ellipsis-v" />
-						</svg>
+						<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+								<use href="/images/icons/icons.svg#ellipsis-v" />
+							</svg>
+						</span>
 					</a>
 					<ul aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
 						<li><a class="dropdown-item" href="#1">Action</a></li>
@@ -243,16 +249,20 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 			<ul class="navbar-nav">
 				<li class="nav-item">
 					<a class="nav-link nav-link-monospaced" href="#1">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
-							<use href="/images/icons/icons.svg#product-menu-closed" />
-						</svg>
+						<span aria-label="icon-product-menu-closed" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
+								<use href="/images/icons/icons.svg#product-menu-closed" />
+							</svg>
+						</span>
 					</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link nav-link-monospaced" href="#1">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-							<use href="/images/icons/icons.svg#angle-left" />
-						</svg>
+						<span aria-label="icon-angle-left" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+								<use href="/images/icons/icons.svg#angle-left" />
+							</svg>
+						</span>
 					</a>
 				</li>
 			</ul>
@@ -260,9 +270,11 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 			<ul class="navbar-nav">
 				<li class="dropdown nav-item">
 					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-							<use href="/images/icons/icons.svg#ellipsis-v" />
-						</svg>
+						<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+								<use href="/images/icons/icons.svg#ellipsis-v" />
+							</svg>
+						</span>
 					</a>
 					<ul aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
 						<li><a class="dropdown-item" href="#1">Action</a></li>
@@ -284,12 +296,16 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 							<th></th>
 							<th colspan="2">
 								Item Title
-								<svg aria-hidden="true" class="d-none lexicon-icon lexicon-icon-order-arrow-up">
-									<use href="/images/icons/icons.svg#order-arrow-up" />
-								</svg>
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
-									<use href="/images/icons/icons.svg#order-arrow-down" />
-								</svg>
+								<span aria-label="icon-order-arrow-up" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="d-none lexicon-icon lexicon-icon-order-arrow-up">
+										<use href="/images/icons/icons.svg#order-arrow-up" />
+									</svg>
+								</span>
+								<span aria-label="icon-order-arrow-down" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-down">
+										<use href="/images/icons/icons.svg#order-arrow-down" />
+									</svg>
+								</span>
 							</th>
 							<th>Size</th>
 							<th>Status</th>
@@ -325,26 +341,34 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 							<td>
 								<div class="quick-action-menu">
 									<a class="component-action quick-action-item" href="#1">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-											<use href="/images/icons/icons.svg#trash" />
-										</svg>
+										<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+												<use href="/images/icons/icons.svg#trash" />
+											</svg>
+										</span>
 									</a>
 									<a class="component-action quick-action-item" href="#1">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-											<use href="/images/icons/icons.svg#download" />
-										</svg>
+										<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+												<use href="/images/icons/icons.svg#download" />
+											</svg>
+										</span>
 									</a>
 									<a class="component-action quick-action-item" href="#1">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
-											<use href="/images/icons/icons.svg#expand" />
-										</svg>
+										<span aria-label="icon-expand" class="lexicon-icon-container" role="img">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
+												<use href="/images/icons/icons.svg#expand" />
+											</svg>
+										</span>
 									</a>
 								</div>
 								<div class="dropdown dropdown-action">
 									<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-											<use href="/images/icons/icons.svg#ellipsis-v" />
-										</svg>
+										<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+												<use href="/images/icons/icons.svg#ellipsis-v" />
+											</svg>
+										</span>
 									</a>
 									<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 										<li><a class="dropdown-item" href="#1">Remove</a></li>

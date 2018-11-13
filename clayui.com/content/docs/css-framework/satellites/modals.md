@@ -14,9 +14,11 @@ title: "Modals"
 			<div class="modal-header">
 				<div class="modal-title" id="claySmallModalInlineScrollerLabel">Modal Title</div>
 				<button aria-label="Close" class="close" data-dismiss="modal" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use href="/images/icons/icons.svg#times" />
-					</svg>
+					<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<use href="/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="modal-body inline-scroller">

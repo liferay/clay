@@ -42,9 +42,11 @@ weight: 2
 	<div class="autofit-col">
 		<div class="dropdown dropdown-action">
 			<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-					<use href="/images/icons/icons.svg#ellipsis-v" />
-				</svg>
+				<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+						<use href="/images/icons/icons.svg#ellipsis-v" />
+					</svg>
+				</span>
 			</a>
 			<ul class="dropdown-menu dropdown-menu-right">
 				<li class="dropdown-header">Dropdown Header</li>
@@ -136,9 +138,11 @@ weight: 2
 	<div class="autofit-col" style="background-color: aquamarine;">
 		<div class="dropdown dropdown-action">
 			<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-					<use href="/images/icons/icons.svg#ellipsis-v" />
-				</svg>
+				<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+						<use href="/images/icons/icons.svg#ellipsis-v" />
+					</svg>
+				</span>
 			</a>
 			<ul class="dropdown-menu dropdown-menu-right">
 				<li class="dropdown-header">Dropdown Header</li>
@@ -167,9 +171,11 @@ weight: 2
 			<div class="autofit-col">
 				<button class="btn btn-monospaced btn-outline-primary btn-outline-borderless btn-sm" type="button">
 					<span class="inline-item">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-pencil">
-							<use href="/images/icons/icons.svg#pencil" />
-						</svg>
+						<span aria-label="icon-pencil" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-pencil">
+								<use href="/images/icons/icons.svg#pencil" />
+							</svg>
+						</span>
 					</span>
 				</button>
 			</div>
@@ -216,9 +222,11 @@ weight: 2
 			<div class="autofit-col">
 				<button class="btn btn-outline-primary btn-outline-borderless btn-sm" type="button">
 					<span class="inline-item inline-item-before">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
-							<use href="/images/icons/icons.svg#check-circle" />
-						</svg>
+						<span aria-label="icon-check-circle" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+								<use href="/images/icons/icons.svg#check-circle" />
+							</svg>
+						</span>
 					</span>Subscribe
 				</button>
 			</div>
@@ -232,18 +240,22 @@ weight: 2
 			<div class="autofit-col">
 				<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 					<span class="inline-item inline-item-before">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-shortcut">
-							<use href="/images/icons/icons.svg#shortcut" />
-						</svg>
+						<span aria-label="icon-shortcut" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-shortcut">
+								<use href="/images/icons/icons.svg#shortcut" />
+							</svg>
+						</span>
 					</span>RSS
 				</button>
 			</div>
 			<div class="autofit-col">
 				<button class="btn btn-primary btn-sm" type="button">
 					<span class="inline-item inline-item-before">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
-							<use href="/images/icons/icons.svg#plus" />
-						</svg>
+						<span aria-label="icon-plus" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+								<use href="/images/icons/icons.svg#plus" />
+							</svg>
+						</span>
 					</span>Add Content
 				</button>
 			</div>
@@ -252,18 +264,22 @@ weight: 2
 			<div class="autofit-col">
 				<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 					<span class="inline-item inline-item-before">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-shortcut">
-							<use href="/images/icons/icons.svg#shortcut" />
-						</svg>
+						<span aria-label="icon-shortcut" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-shortcut">
+								<use href="/images/icons/icons.svg#shortcut" />
+							</svg>
+						</span>
 					</span>View in context
 				</button>
 			</div>
 			<div class="autofit-col">
 				<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 					<span class="inline-item inline-item-before">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-up">
-							<use href="/images/icons/icons.svg#thumbs-up" />
-						</svg>
+						<span aria-label="icon-thumbs-up" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-up">
+								<use href="/images/icons/icons.svg#thumbs-up" />
+							</svg>
+						</span>
 					</span>Like (25)
 				</button>
 			</div>
@@ -271,9 +287,11 @@ weight: 2
 				<div class="autofit-section">
 					<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 						<span class="inline-item inline-item-before">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-flag-empty">
-								<use href="/images/icons/icons.svg#flag-empty" />
-							</svg>
+							<span aria-label="icon-flag-empty" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-flag-empty">
+									<use href="/images/icons/icons.svg#flag-empty" />
+								</svg>
+							</span>
 						</span>Flag
 					</button>
 				</div>
@@ -281,9 +299,11 @@ weight: 2
 			<div class="autofit-col">
 				<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 					<span class="inline-item inline-item-before">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
-							<use href="/images/icons/icons.svg#share" />
-						</svg>
+						<span aria-label="icon-share" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
+								<use href="/images/icons/icons.svg#share" />
+							</svg>
+						</span>
 					</span>Share
 				</button>
 			</div>
@@ -314,9 +334,11 @@ weight: 2
 			<div class="autofit-col">
 				<button class="btn btn-outline-primary btn-outline-borderless btn-sm" type="button">
 					<span class="inline-item inline-item-before">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
-							<use href="/images/icons/icons.svg#check-circle" />
-						</svg>
+						<span aria-label="icon-check-circle" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+								<use href="/images/icons/icons.svg#check-circle" />
+							</svg>
+						</span>
 					</span>Subscribe
 				</button>
 			</div>
@@ -330,18 +352,22 @@ weight: 2
 			<div class="autofit-col">
 				<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 					<span class="inline-item inline-item-before">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-shortcut">
-							<use href="/images/icons/icons.svg#shortcut" />
-						</svg>
+						<span aria-label="icon-shortcut" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-shortcut">
+								<use href="/images/icons/icons.svg#shortcut" />
+							</svg>
+						</span>
 					</span>RSS
 				</button>
 			</div>
 			<div class="autofit-col">
 				<button class="btn btn-primary btn-sm" type="button">
 					<span class="inline-item inline-item-before">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
-							<use href="/images/icons/icons.svg#plus" />
-						</svg>
+						<span aria-label="icon-plus" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+								<use href="/images/icons/icons.svg#plus" />
+							</svg>
+						</span>
 					</span>Add Content
 				</button>
 			</div>
@@ -352,27 +378,33 @@ weight: 2
 					<div class="autofit-col">
 						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 							<span class="inline-item inline-item-before">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-shortcut">
-									<use href="/images/icons/icons.svg#shortcut" />
-								</svg>
+								<span aria-label="icon-shortcut" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-shortcut">
+										<use href="/images/icons/icons.svg#shortcut" />
+									</svg>
+								</span>
 							</span>View in context
 						</button>
 					</div>
 					<div class="autofit-col">
 						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 							<span class="inline-item inline-item-before">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-up">
-									<use href="/images/icons/icons.svg#thumbs-up" />
-								</svg>
+								<span aria-label="icon-thumbs-up" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-up">
+										<use href="/images/icons/icons.svg#thumbs-up" />
+									</svg>
+								</span>
 							</span>Like (25)
 						</button>
 					</div>
 					<div class="autofit-col">
 						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 							<span class="inline-item inline-item-before">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-flag-empty">
-									<use href="/images/icons/icons.svg#flag-empty" />
-								</svg>
+								<span aria-label="icon-flag-empty" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-flag-empty">
+										<use href="/images/icons/icons.svg#flag-empty" />
+									</svg>
+								</span>
 							</span>Flag
 						</button>
 					</div>
@@ -381,9 +413,11 @@ weight: 2
 			<div class="autofit-col">
 				<button class="btn btn-secondary" type="button">
 					<span class="inline-item inline-item-before">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
-							<use href="/images/icons/icons.svg#share" />
-						</svg>
+						<span aria-label="icon-share" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
+								<use href="/images/icons/icons.svg#share" />
+							</svg>
+						</span>
 					</span>Share
 				</button>
 			</div>
@@ -402,9 +436,11 @@ weight: 2
 			<div class="autofit-col autofit-col-end">
 				<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 					Order by: newest<span class="inline-item inline-item-after">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use href="/images/icons/icons.svg#caret-bottom" />
-						</svg>
+						<span aria-label="icon-caret-bottom" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<use href="/images/icons/icons.svg#caret-bottom" />
+							</svg>
+						</span>
 					</span>
 				</button>
 			</div>
@@ -435,9 +471,11 @@ weight: 2
 					<div class="autofit-col">
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-									<use href="/images/icons/icons.svg#ellipsis-v" />
-								</svg>
+								<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+										<use href="/images/icons/icons.svg#ellipsis-v" />
+									</svg>
+								</span>
 							</a>
 							<ul class="dropdown-menu dropdown-menu-right">
 								<li><a class="dropdown-item" href="#1" role="button">Download</a></li>
@@ -455,27 +493,33 @@ weight: 2
 					<div class="autofit-col">
 						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 							<span class="inline-item inline-item-before">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-redo">
-									<use href="/images/icons/icons.svg#redo" />
-								</svg>
+								<span aria-label="icon-redo" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-redo">
+										<use href="/images/icons/icons.svg#redo" />
+									</svg>
+								</span>
 							</span>Reply to Comment
 						</button>
 					</div>
 					<div class="autofit-col">
 						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 							<span class="inline-item inline-item-before">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-up">
-									<use href="/images/icons/icons.svg#thumbs-up" />
-								</svg>
+								<span aria-label="icon-thmubs-up" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-up">
+										<use href="/images/icons/icons.svg#thumbs-up" />
+									</svg>
+								</span>
 							</span>10
 						</button>
 					</div>
 					<div class="autofit-col">
 						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 							<span class="inline-item inline-item-before">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-down">
-									<use href="/images/icons/icons.svg#thumbs-down" />
-								</svg>
+								<span aria-label="icon-thumbs-down" class="lexicon-icon-container" role="img">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-down">
+										<use href="/images/icons/icons.svg#thumbs-down" />
+									</svg>
+								</span>
 							</span>03
 						</button>
 					</div>
@@ -493,9 +537,11 @@ weight: 2
 							<div class="autofit-col">
 								<div class="dropdown dropdown-action">
 									<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-											<use href="/images/icons/icons.svg#ellipsis-v" />
-										</svg>
+										<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+												<use href="/images/icons/icons.svg#ellipsis-v" />
+											</svg>
+										</span>
 									</a>
 									<ul class="dropdown-menu dropdown-menu-right">
 										<li><a class="dropdown-item" href="#1" role="button">Download</a></li>
@@ -513,27 +559,33 @@ weight: 2
 							<div class="autofit-col">
 								<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 									<span class="inline-item inline-item-before">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-redo">
-											<use href="/images/icons/icons.svg#redo" />
-										</svg>
+										<span aria-label="icon-redo" class="lexicon-icon-container" role="img">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-redo">
+												<use href="/images/icons/icons.svg#redo" />
+											</svg>
+										</span>
 									</span>Reply to Comment
 								</button>
 							</div>
 							<div class="autofit-col">
 								<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 									<span class="inline-item inline-item-before">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-up">
-											<use href="/images/icons/icons.svg#thumbs-up" />
-										</svg>
+										<span aria-label="icon-thumbs-up" class="lexicon-icon-container" role="img">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-up">
+												<use href="/images/icons/icons.svg#thumbs-up" />
+											</svg>
+										</span>
 									</span>10
 								</button>
 							</div>
 							<div class="autofit-col">
 								<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
 									<span class="inline-item inline-item-before">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-down">
-											<use href="/images/icons/icons.svg#thumbs-down" />
-										</svg>
+										<span aria-label="icon-thumbs-down" class="lexicon-icon-container" role="img">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-thumbs-down">
+												<use href="/images/icons/icons.svg#thumbs-down" />
+											</svg>
+										</span>
 									</span>03
 								</button>
 							</div>
@@ -556,37 +608,50 @@ weight: 2
 <div>
 	<h5>Link without Whitespace</h5>
 	<a href="#1">
-		<span class="inline-item inline-item-before"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-share"><use href="/images/icons/icons.svg#share" /></svg></span>link<span class="inline-item inline-item-middle"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle"><use href="/images/icons/icons.svg#question-circle" /></svg></span><span class="inline-item inline-item-middle"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle"><use href="/images/icons/icons.svg#question-circle" /></svg></span><span class="inline-item inline-item-middle"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle"><use href="/images/icons/icons.svg#question-circle" /></svg></span>why, but ok.<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell"><use href="/images/icons/icons.svg#add-cell" /></svg></span>
+		<span class="inline-item inline-item-before"><span aria-label="icon-share" class="lexicon-icon-container" role="img"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-share"><use href="/images/icons/icons.svg#share" /></svg></span></span>link<span class="inline-item inline-item-middle"><span aria-label="icon-question-circle" class="lexicon-icon-container" role="img"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle"><use href="/images/icons/icons.svg#question-circle" /></svg></span></span><span class="inline-item inline-item-middle"><span aria-label="icon-question-circle" class="lexicon-icon-container" role="img"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle"><use href="/images/icons/icons.svg#question-circle" /></svg></span></span><span class="inline-item inline-item-middle"><span aria-label="icon-question-circle" class="lexicon-icon-container" role="img"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle"><use href="/images/icons/icons.svg#question-circle" /></svg></span></span>why, but ok.<span class="inline-item inline-item-after"><span aria-label="icon-add-cell" class="lexicon-icon-container" role="img"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell"><use href="/images/icons/icons.svg#add-cell" /></svg></span></span>
 	</a>
 </div>
 <div>
 	<h5>Link with Whitespace</h5>
 	<a href="#1">
 		<span class="inline-item inline-item-before">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
-				<use href="/images/icons/icons.svg#share" /></svg>
+			<span aria-label="icon-share" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-share">
+					<use href="/images/icons/icons.svg#share" />
+				</svg>
+			</span>
 		</span>
 		link
 		<span class="inline-item inline-item-after">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell"><use href="/images/icons/icons.svg#add-cell" /></svg>
+			<span aria-label="icon-add-cell" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell">
+					<use href="/images/icons/icons.svg#add-cell" />
+				</svg>
+			</span>
 		</span>
 	</a>
 </div>
 <div>
 	<h5>Button without Whitespace</h5>
-	<button class="btn btn-secondary" type="button"><span class="inline-item inline-item-before"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus"><use href="/images/icons/icons.svg#plus" /></svg></span>Secondary<span class="inline-item inline-item-after"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera"><use href="/images/icons/icons.svg#camera" /></svg></span></button>
+	<button class="btn btn-secondary" type="button"><span class="inline-item inline-item-before"><span aria-label="icon-plus" class="lexicon-icon-container" role="img"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus"><use href="/images/icons/icons.svg#plus" /></svg></span></span>Secondary<span class="inline-item inline-item-after"><span aria-label="icon-camera" class="lexicon-icon-container" role="img"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera"><use href="/images/icons/icons.svg#camera" /></svg></span></span></button>
 </div>
 <div>
 	<h5>Button with Whitespace</h5>
 	<button class="btn btn-secondary" type="button">
 		<span class="inline-item inline-item-before">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
-				<use href="/images/icons/icons.svg#plus" /></svg>
+			<span aria-label="icon-plus" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+					<use href="/images/icons/icons.svg#plus" />
+				</svg>
+			</span>
 		</span>
 		Secondary
 		<span class="inline-item inline-item-after">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
-				<use href="/images/icons/icons.svg#camera" /></svg>
+			<span aria-label="icon-camera" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
+					<use href="/images/icons/icons.svg#camera" />
+				</svg>
+			</span>
 		</span>
 	</button>
 </div>
@@ -598,14 +663,18 @@ weight: 2
 #### Anchor
 
 <a aria-label="Close" class="close" href="#1" role="button">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-		<use href="/images/icons/icons.svg#times" />
-	</svg>
+	<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+			<use href="/images/icons/icons.svg#times" />
+		</svg>
+	</span>
 </a>
 <a aria-label="Close" class="close disabled" href="#1" role="button" tabindex="-1">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-		<use href="/images/icons/icons.svg#times" />
-	</svg>
+	<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+			<use href="/images/icons/icons.svg#times" />
+		</svg>
+	</span>
 </a>
 <a aria-label="Close" class="close" href="#1" role="button">
 	<span aria-hidden="true">×</span>
@@ -617,14 +686,18 @@ weight: 2
 #### Button
 
 <button aria-label="Close" class="close" type="button">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-		<use href="/images/icons/icons.svg#times" />
-	</svg>
+	<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+			<use href="/images/icons/icons.svg#times" />
+		</svg>
+	</span>
 </button>
 <button aria-label="Close" class="close" disabled type="button">
-	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-		<use href="/images/icons/icons.svg#times" />
-	</svg>
+	<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+			<use href="/images/icons/icons.svg#times" />
+		</svg>
+	</span>
 </button>
 <button aria-label="Close" class="close" type="button">
 	<span aria-hidden="true">×</span>

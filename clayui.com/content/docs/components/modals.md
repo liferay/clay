@@ -21,9 +21,11 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="claySmallModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use href="/images/icons/icons.svg#times" />
-					</svg>
+					<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<use href="/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="modal-body">
@@ -74,9 +76,11 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="claySmallModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use href="/images/icons/icons.svg#times" />
-					</svg>
+					<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<use href="/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="modal-body">
@@ -110,9 +114,11 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayDefaultModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use href="/images/icons/icons.svg#times" />
-					</svg>
+					<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<use href="/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="modal-body">
@@ -161,9 +167,11 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayDefaultModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use href="/images/icons/icons.svg#times" />
-					</svg>
+					<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<use href="/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="modal-body">
@@ -199,9 +207,11 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayLargeModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use href="/images/icons/icons.svg#times" />
-					</svg>
+					<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<use href="/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="modal-body">
@@ -252,9 +262,11 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayLargeModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use href="/images/icons/icons.svg#times" />
-					</svg>
+					<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<use href="/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="modal-body">
@@ -288,9 +300,11 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayLargeModalLabel">Add Picture to Documents and Media Library in Liferay Seven</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use href="/images/icons/icons.svg#times" />
-					</svg>
+					<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<use href="/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="modal-body">
@@ -501,9 +515,11 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayLargeModalLabel">Add Picture to Documents and Media Library in Liferay Seven</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use href="/images/icons/icons.svg#times" />
-					</svg>
+					<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<use href="/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="modal-body">
@@ -617,9 +633,11 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayModalFullScreenSmDownLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use href="/images/icons/icons.svg#times" />
-					</svg>
+					<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<use href="/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="modal-body">
@@ -659,9 +677,11 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayModalFullScreenSmDownLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use href="/images/icons/icons.svg#times" />
-					</svg>
+					<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<use href="/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="modal-body">
@@ -716,9 +736,11 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayDefaultModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use href="/images/icons/icons.svg#times" />
-					</svg>
+					<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<use href="/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="modal-body">
@@ -767,9 +789,11 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayDefaultModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use href="/images/icons/icons.svg#times" />
-					</svg>
+					<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<use href="/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="modal-body">
@@ -803,9 +827,11 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayHeaderBodyModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use href="/images/icons/icons.svg#times" />
-					</svg>
+					<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<use href="/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="modal-body">
@@ -840,9 +866,11 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayHeaderBodyModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use href="/images/icons/icons.svg#times" />
-					</svg>
+					<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<use href="/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="modal-body">
@@ -937,9 +965,11 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayFullScreenModalIframeLabel">Add Picture to Documents and Media Library in Liferay Seven</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use href="/images/icons/icons.svg#times" />
-					</svg>
+					<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<use href="/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="modal-body modal-body-iframe">
@@ -986,9 +1016,11 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayFullScreenModalIframeLabel">Add Picture to Documents and Media Library in Liferay Seven</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use href="/images/icons/icons.svg#times" />
-					</svg>
+					<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<use href="/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="modal-body modal-body-iframe">
@@ -1024,16 +1056,20 @@ Add one of the following helper classes to the `modal-dialog` element to style i
 			<div class="modal-header">
 				<div class="modal-title" id="clayModalDangerLabel">
 					<span class="modal-title-indicator">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-							<use href="/images/icons/icons.svg#exclamation-full" />
-						</svg>
+						<span aria-label="icon-exclamation-full" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+								<use href="/images/icons/icons.svg#exclamation-full" />
+							</svg>
+						</span>
 					</span>
 					Modal Title
 				</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use href="/images/icons/icons.svg#times" />
-					</svg>
+					<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<use href="/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="modal-body">
@@ -1058,16 +1094,20 @@ Add one of the following helper classes to the `modal-dialog` element to style i
 			<div class="modal-header">
 				<div class="modal-title" id="clayModalInfoLabel">
 					<span class="modal-title-indicator">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
-							<use href="/images/icons/icons.svg#info-circle" />
-						</svg>
+						<span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+								<use href="/images/icons/icons.svg#info-circle" />
+							</svg>
+						</span>
 					</span>
 					Modal Title
 				</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use href="/images/icons/icons.svg#times" />
-					</svg>
+					<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<use href="/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="modal-body">
@@ -1088,16 +1128,20 @@ Add one of the following helper classes to the `modal-dialog` element to style i
 			<div class="modal-header">
 				<div class="modal-title" id="clayModalSuccessLabel">
 					<span class="modal-title-indicator">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
-							<use href="/images/icons/icons.svg#check-circle-full" />
-						</svg>
+						<span aria-label="icon-check-circle-full" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
+								<use href="/images/icons/icons.svg#check-circle-full" />
+							</svg>
+						</span>
 					</span>
 					Modal Title
 				</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use href="/images/icons/icons.svg#times" />
-					</svg>
+					<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<use href="/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="modal-body">
@@ -1121,16 +1165,20 @@ Add one of the following helper classes to the `modal-dialog` element to style i
 			<div class="modal-header">
 				<div class="modal-title" id="clayModalWarningLabel">
 					<span class="modal-title-indicator">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
-							<use href="/images/icons/icons.svg#warning-full" />
-						</svg>
+						<span aria-label="icon-warning-full" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+								<use href="/images/icons/icons.svg#warning-full" />
+							</svg>
+						</span>
 					</span>
 					Modal Title
 				</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use href="/images/icons/icons.svg#times" />
-					</svg>
+					<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<use href="/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="modal-body">
@@ -1279,16 +1327,20 @@ Add one of the following helper classes to the `modal-dialog` element to style i
 			<div class="modal-header">
 				<div class="modal-title" id="clayModalDangerLabel">
 					<span class="modal-title-indicator">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-							<use href="/images/icons/icons.svg#exclamation-full" />
-						</svg>
+						<span aria-label="icon-exclamation-full" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+								<use href="/images/icons/icons.svg#exclamation-full" />
+							</svg>
+						</span>
 					</span>
 					Modal Title
 				</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use href="/images/icons/icons.svg#times" />
-					</svg>
+					<span aria-label="icon-times" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<use href="/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</button>
 			</div>
 			<div class="modal-body">

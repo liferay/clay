@@ -266,9 +266,11 @@ title: "Images (Aspect Ratios)"
 	<div class="col-4">
 		<div class="aspect-ratio aspect-ratio-16-to-9">
 			<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-					<use href="/images/icons/icons.svg#folder" />
-				</svg>
+				<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+						<use href="/images/icons/icons.svg#folder" />
+					</svg>
+				</span>
 			</div>
 		</div>
 	</div>
@@ -291,9 +293,11 @@ title: "Images (Aspect Ratios)"
 ```html
 <div class="aspect-ratio aspect-ratio-16-to-9">
 	<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-			<use href="/images/icons/icons.svg#folder" />
-		</svg>
+		<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+				<use href="/images/icons/icons.svg#folder" />
+			</svg>
+		</span>
 	</div>
 </div>
 

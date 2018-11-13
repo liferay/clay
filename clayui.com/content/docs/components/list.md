@@ -24,9 +24,11 @@ List is a visual representation of a dataset that provides more flexibility for 
 	<div class="autofit-col">
 		<div class="sticker sticker-secondary">
 			<span class="inline-item">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-					<use href="/images/icons/icons.svg#folder" />
-				</svg>
+				<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+						<use href="/images/icons/icons.svg#folder" />
+					</svg>
+				</span>
 			</span>
 		</div>
 	</div>
@@ -39,26 +41,34 @@ List is a visual representation of a dataset that provides more flexibility for 
 	<div class="autofit-col">
 		<div class="quick-action-menu">
 			<a class="component-action quick-action-item" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-					<use href="/images/icons/icons.svg#trash" />
-				</svg>
+				<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use href="/images/icons/icons.svg#trash" />
+					</svg>
+				</span>
 			</a>
 			<a class="component-action quick-action-item" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-					<use href="/images/icons/icons.svg#download" />
-				</svg>
+				<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+						<use href="/images/icons/icons.svg#download" />
+					</svg>
+				</span>
 			</a>
 			<a class="component-action quick-action-item" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-					<use href="/images/icons/icons.svg#info-circle-open" />
-				</svg>
+				<span aria-label="icon-info-circle-open" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+						<use href="/images/icons/icons.svg#info-circle-open" />
+					</svg>
+				</span>
 			</a>
 		</div>
 		<div class="dropdown dropdown-action">
 			<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-					<use href="/images/icons/icons.svg#ellipsis-v" />
-				</svg>
+				<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+						<use href="/images/icons/icons.svg#ellipsis-v" />
+					</svg>
+				</span>
 			</a>
 			<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 				<ul class="list-unstyled">
@@ -213,9 +223,11 @@ List is a visual representation of a dataset that provides more flexibility for 
 	<div class="autofit-col">
 		<div class="sticker sticker-secondary">
 			<span class="inline-item">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-					<use href="/images/icons/icons.svg#folder" />
-				</svg>
+				<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+						<use href="/images/icons/icons.svg#folder" />
+					</svg>
+				</span>
 			</span>
 		</div>
 	</div>
@@ -228,26 +240,34 @@ List is a visual representation of a dataset that provides more flexibility for 
 	<div class="autofit-col">
 		<div class="quick-action-menu">
 			<a class="component-action quick-action-item" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-					<use href="/images/icons/icons.svg#trash" />
-				</svg>
+				<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use href="/images/icons/icons.svg#trash" />
+					</svg>
+				</span>
 			</a>
 			<a class="component-action quick-action-item" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-					<use href="/images/icons/icons.svg#download" />
-				</svg>
+				<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+						<use href="/images/icons/icons.svg#download" />
+					</svg>
+				</span>
 			</a>
 			<a class="component-action quick-action-item" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-					<use href="/images/icons/icons.svg#info-circle-open" />
-				</svg>
+				<span aria-label="icon-info-circle-open" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+						<use href="/images/icons/icons.svg#info-circle-open" />
+					</svg>
+				</span>
 			</a>
 		</div>
 		<div class="dropdown dropdown-action">
 			<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-					<use href="/images/icons/icons.svg#ellipsis-v" />
-				</svg>
+				<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+						<use href="/images/icons/icons.svg#ellipsis-v" />
+					</svg>
+				</span>
 			</a>
 			<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 				<ul class="list-unstyled">
@@ -276,9 +296,11 @@ List is a visual representation of a dataset that provides more flexibility for 
 	<div class="autofit-col">
 		<div class="sticker sticker-secondary">
 			<span class="inline-item">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-					<use href="/images/icons/icons.svg#folder" />
-				</svg>
+				<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+						<use href="/images/icons/icons.svg#folder" />
+					</svg>
+				</span>
 			</span>
 		</div>
 	</div>
@@ -291,26 +313,34 @@ List is a visual representation of a dataset that provides more flexibility for 
 	<div class="autofit-col">
 		<div class="quick-action-menu">
 			<a class="component-action quick-action-item" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-					<use href="/images/icons/icons.svg#trash" />
-				</svg>
+				<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use href="/images/icons/icons.svg#trash" />
+					</svg>
+				</span>
 			</a>
 			<a class="component-action quick-action-item" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-					<use href="/images/icons/icons.svg#download" />
-				</svg>
+				<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+						<use href="/images/icons/icons.svg#download" />
+					</svg>
+				</span>
 			</a>
 			<a class="component-action quick-action-item" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-					<use href="/images/icons/icons.svg#info-circle-open" />
-				</svg>
+				<span aria-label="icon-info-circle-open" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+						<use href="/images/icons/icons.svg#info-circle-open" />
+					</svg>
+				</span>
 			</a>
 		</div>
 		<div class="dropdown dropdown-action">
 			<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-					<use href="/images/icons/icons.svg#ellipsis-v" />
-				</svg>
+				<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+						<use href="/images/icons/icons.svg#ellipsis-v" />
+					</svg>
+				</span>
 			</a>
 			<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 				<ul class="list-unstyled">
@@ -467,9 +497,11 @@ List is a visual representation of a dataset that provides more flexibility for 
 	<div class="autofit-col">
 		<div class="sticker sticker-secondary">
 			<span class="inline-item">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-					<use href="/images/icons/icons.svg#folder" />
-				</svg>
+				<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+						<use href="/images/icons/icons.svg#folder" />
+					</svg>
+				</span>
 			</span>
 		</div>
 	</div>
@@ -482,26 +514,34 @@ List is a visual representation of a dataset that provides more flexibility for 
 	<div class="autofit-col">
 		<div class="quick-action-menu">
 			<a class="component-action quick-action-item" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-					<use href="/images/icons/icons.svg#trash" />
-				</svg>
+				<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use href="/images/icons/icons.svg#trash" />
+					</svg>
+				</span>
 			</a>
 			<a class="component-action quick-action-item" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-					<use href="/images/icons/icons.svg#download" />
-				</svg>
+				<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+						<use href="/images/icons/icons.svg#download" />
+					</svg>
+				</span>
 			</a>
 			<a class="component-action quick-action-item" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-					<use href="/images/icons/icons.svg#info-circle-open" />
-				</svg>
+				<span aria-label="icon-info-circle-open" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+						<use href="/images/icons/icons.svg#info-circle-open" />
+					</svg>
+				</span>
 			</a>
 		</div>
 		<div class="dropdown dropdown-action">
 			<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-					<use href="/images/icons/icons.svg#ellipsis-v" />
-				</svg>
+				<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+						<use href="/images/icons/icons.svg#ellipsis-v" />
+					</svg>
+				</span>
 			</a>
 			<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 				<ul class="list-unstyled">
@@ -536,9 +576,11 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-						<use href="/images/icons/icons.svg#folder" />
-					</svg>
+					<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+							<use href="/images/icons/icons.svg#folder" />
+						</svg>
+					</span>
 				</span>
 			</div>
 		</div>
@@ -551,26 +593,34 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use href="/images/icons/icons.svg#trash" />
-					</svg>
+					<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+							<use href="/images/icons/icons.svg#trash" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use href="/images/icons/icons.svg#download" />
-					</svg>
+					<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+							<use href="/images/icons/icons.svg#download" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-						<use href="/images/icons/icons.svg#info-circle-open" />
-					</svg>
+					<span aria-label="icon-info-circle-open" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+							<use href="/images/icons/icons.svg#info-circle-open" />
+						</svg>
+					</span>
 				</a>
 			</div>
 			<div class="dropdown dropdown-action">
 				<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use href="/images/icons/icons.svg#ellipsis-v" />
-					</svg>
+					<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use href="/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</span>
 				</a>
 				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 					<ul class="list-unstyled">
@@ -741,9 +791,11 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-						<use href="/images/icons/icons.svg#folder" />
-					</svg>
+					<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+							<use href="/images/icons/icons.svg#folder" />
+						</svg>
+					</span>
 				</span>
 			</div>
 		</div>
@@ -756,26 +808,34 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use href="/images/icons/icons.svg#trash" />
-					</svg>
+					<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+							<use href="/images/icons/icons.svg#trash" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use href="/images/icons/icons.svg#download" />
-					</svg>
+					<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+							<use href="/images/icons/icons.svg#download" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-						<use href="/images/icons/icons.svg#info-circle-open" />
-					</svg>
+					<span aria-label="icon-info-circle-open" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+							<use href="/images/icons/icons.svg#info-circle-open" />
+						</svg>
+					</span>
 				</a>
 			</div>
 			<div class="dropdown dropdown-action">
 				<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use href="/images/icons/icons.svg#ellipsis-v" />
-					</svg>
+					<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use href="/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</span>
 				</a>
 				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 					<ul class="list-unstyled">
@@ -819,9 +879,11 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-						<use href="/images/icons/icons.svg#folder" />
-					</svg>
+					<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+							<use href="/images/icons/icons.svg#folder" />
+						</svg>
+					</span>
 				</span>
 			</div>
 		</div>
@@ -839,26 +901,34 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use href="/images/icons/icons.svg#trash" />
-					</svg>
+					<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+							<use href="/images/icons/icons.svg#trash" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use href="/images/icons/icons.svg#download" />
-					</svg>
+					<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+							<use href="/images/icons/icons.svg#download" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-						<use href="/images/icons/icons.svg#info-circle-open" />
-					</svg>
+					<span aria-label="icon-info-circle-open" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+							<use href="/images/icons/icons.svg#info-circle-open" />
+						</svg>
+					</span>
 				</a>
 			</div>
 			<div class="dropdown dropdown-action">
 				<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use href="/images/icons/icons.svg#ellipsis-v" />
-					</svg>
+					<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use href="/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</span>
 				</a>
 				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 					<ul class="list-unstyled">
@@ -883,9 +953,11 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-						<use href="/images/icons/icons.svg#folder" />
-					</svg>
+					<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+							<use href="/images/icons/icons.svg#folder" />
+						</svg>
+					</span>
 				</span>
 			</div>
 		</div>
@@ -903,26 +975,34 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use href="/images/icons/icons.svg#trash" />
-					</svg>
+					<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+							<use href="/images/icons/icons.svg#trash" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use href="/images/icons/icons.svg#download" />
-					</svg>
+					<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+							<use href="/images/icons/icons.svg#download" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-						<use href="/images/icons/icons.svg#info-circle-open" />
-					</svg>
+					<span aria-label="icon-info-circle-open" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+							<use href="/images/icons/icons.svg#info-circle-open" />
+						</svg>
+					</span>
 				</a>
 			</div>
 			<div class="dropdown dropdown-action">
 				<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use href="/images/icons/icons.svg#ellipsis-v" />
-					</svg>
+					<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use href="/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</span>
 				</a>
 				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 					<ul class="list-unstyled">
@@ -1151,9 +1231,11 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-						<use href="/images/icons/icons.svg#folder" />
-					</svg>
+					<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+							<use href="/images/icons/icons.svg#folder" />
+						</svg>
+					</span>
 				</span>
 			</div>
 		</div>
@@ -1171,26 +1253,34 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use href="/images/icons/icons.svg#trash" />
-					</svg>
+					<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+							<use href="/images/icons/icons.svg#trash" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use href="/images/icons/icons.svg#download" />
-					</svg>
+					<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+							<use href="/images/icons/icons.svg#download" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-						<use href="/images/icons/icons.svg#info-circle-open" />
-					</svg>
+					<span aria-label="icon-info-circle-open" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+							<use href="/images/icons/icons.svg#info-circle-open" />
+						</svg>
+					</span>
 				</a>
 			</div>
 			<div class="dropdown dropdown-action">
 				<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use href="/images/icons/icons.svg#ellipsis-v" />
-					</svg>
+					<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use href="/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</span>
 				</a>
 				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 					<ul class="list-unstyled">
@@ -1215,9 +1305,11 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
-						<use href="/images/icons/icons.svg#folder" />
-					</svg>
+					<span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+							<use href="/images/icons/icons.svg#folder" />
+						</svg>
+					</span>
 				</span>
 			</div>
 		</div>
@@ -1235,26 +1327,34 @@ List is a visual representation of a dataset that provides more flexibility for 
 		<div class="autofit-col">
 			<div class="quick-action-menu">
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
-						<use href="/images/icons/icons.svg#trash" />
-					</svg>
+					<span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+							<use href="/images/icons/icons.svg#trash" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
-						<use href="/images/icons/icons.svg#download" />
-					</svg>
+					<span aria-label="icon-download" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+							<use href="/images/icons/icons.svg#download" />
+						</svg>
+					</span>
 				</a>
 				<a class="component-action quick-action-item" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
-						<use href="/images/icons/icons.svg#info-circle-open" />
-					</svg>
+					<span aria-label="icon-info-circle-open" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+							<use href="/images/icons/icons.svg#info-circle-open" />
+						</svg>
+					</span>
 				</a>
 			</div>
 			<div class="dropdown dropdown-action">
 				<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-						<use href="/images/icons/icons.svg#ellipsis-v" />
-					</svg>
+					<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use href="/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</span>
 				</a>
 				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 					<ul class="list-unstyled">

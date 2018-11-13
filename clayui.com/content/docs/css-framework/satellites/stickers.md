@@ -122,15 +122,19 @@ Use the <code>sticker-outside</code> class along with sticker positions to posit
 	<div class="col-md-3 col-6">
 		<span class="sticker sticker-dark">
 			<span class="inline-item">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-					<use href="/images/icons/icons.svg#picture" />
-				</svg>
+				<span aria-label="icon-picture" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+						<use href="/images/icons/icons.svg#picture" />
+					</svg>
+				</span>
 			</span>
 			<span class="sticker sticker-circle sticker-info sticker-sm sticker-outside sticker-top-left">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-sun">
-						<use href="/images/icons/icons.svg#sun" />
-					</svg>
+					<span aria-label="icon-sun" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-sun">
+							<use href="/images/icons/icons.svg#sun" />
+						</svg>
+					</span>
 				</span>
 			</span>
 		</span>
@@ -138,15 +142,19 @@ Use the <code>sticker-outside</code> class along with sticker positions to posit
 	<div class="col-md-3 col-6">
 		<span class="sticker sticker-info">
 			<span class="inline-item">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-					<use href="/images/icons/icons.svg#picture" />
-				</svg>
+				<span aria-label="icon-picture" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+						<use href="/images/icons/icons.svg#picture" />
+					</svg>
+				</span>
 			</span>
 			<span class="sticker sticker-circle sticker-info sticker-sm sticker-outside sticker-bottom-left">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
-						<use href="/images/icons/icons.svg#magic" />
-					</svg>
+					<span aria-label="icon-magic" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
+							<use href="/images/icons/icons.svg#magic" />
+						</svg>
+					</span>
 				</span>
 			</span>
 		</span>
@@ -154,15 +162,19 @@ Use the <code>sticker-outside</code> class along with sticker positions to posit
 	<div class="col-md-3 col-6">
 		<span class="sticker sticker-danger">
 			<span class="inline-item">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-					<use href="/images/icons/icons.svg#picture" />
-				</svg>
+				<span aria-label="icon-picture" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+						<use href="/images/icons/icons.svg#picture" />
+					</svg>
+				</span>
 			</span>
 			<span class="sticker sticker-circle sticker-info sticker-sm sticker-outside sticker-top-right">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-transform">
-						<use href="/images/icons/icons.svg#transform" />
-					</svg>
+					<span aria-label="icon-transform" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-transform">
+							<use href="/images/icons/icons.svg#transform" />
+						</svg>
+					</span>
 				</span>
 			</span>
 		</span>
@@ -170,15 +182,19 @@ Use the <code>sticker-outside</code> class along with sticker positions to posit
 	<div class="col-md-3 col-6">
 		<span class="sticker sticker-success">
 			<span class="inline-item">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-					<use href="/images/icons/icons.svg#picture" />
-				</svg>
+				<span aria-label="icon-picture" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+						<use href="/images/icons/icons.svg#picture" />
+					</svg>
+				</span>
 			</span>
 			<span class="sticker sticker-circle sticker-info sticker-sm sticker-outside sticker-bottom-right">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-undo">
-						<use href="/images/icons/icons.svg#undo" />
-					</svg>
+					<span aria-label="icon-undo" class="lexicon-icon-container" role="img">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-undo">
+							<use href="/images/icons/icons.svg#undo" />
+						</svg>
+					</span>
 				</span>
 			</span>
 		</span>
@@ -189,15 +205,19 @@ Use the <code>sticker-outside</code> class along with sticker positions to posit
 <div class="col-md-3 col-6">
 	<span class="sticker sticker-dark">
 		<span class="inline-item">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-				<use href="/images/icons/icons.svg#picture" />
-			</svg>
+			<span aria-label="icon-picture" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+					<use href="/images/icons/icons.svg#picture" />
+				</svg>
+			</span>
 		</span>
 		<span class="sticker sticker-circle sticker-info sticker-sm sticker-outside sticker-top-left">
 			<span class="inline-item">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-sun">
-					<use href="/images/icons/icons.svg#sun" />
-				</svg>
+				<span aria-label="icon-sun" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-sun">
+						<use href="/images/icons/icons.svg#sun" />
+					</svg>
+				</span>
 			</span>
 		</span>
 	</span>
@@ -205,15 +225,19 @@ Use the <code>sticker-outside</code> class along with sticker positions to posit
 <div class="col-md-3 col-6">
 	<span class="sticker sticker-info">
 		<span class="inline-item">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-				<use href="/images/icons/icons.svg#picture" />
-			</svg>
+			<span aria-label="icon-picture" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+					<use href="/images/icons/icons.svg#picture" />
+				</svg>
+			</span>
 		</span>
 		<span class="sticker sticker-circle sticker-info sticker-sm sticker-outside sticker-bottom-left">
 			<span class="inline-item">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
-					<use href="/images/icons/icons.svg#magic" />
-				</svg>
+				<span aria-label="icon-magic" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
+						<use href="/images/icons/icons.svg#magic" />
+					</svg>
+				</span>
 			</span>
 		</span>
 	</span>
@@ -221,15 +245,19 @@ Use the <code>sticker-outside</code> class along with sticker positions to posit
 <div class="col-md-3 col-6">
 	<span class="sticker sticker-danger">
 		<span class="inline-item">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-				<use href="/images/icons/icons.svg#picture" />
-			</svg>
+			<span aria-label="icon-picture" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+					<use href="/images/icons/icons.svg#picture" />
+				</svg>
+			</span>
 		</span>
 		<span class="sticker sticker-circle sticker-info sticker-sm sticker-outside sticker-top-right">
 			<span class="inline-item">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-transform">
-					<use href="/images/icons/icons.svg#transform" />
-				</svg>
+				<span aria-label="icon-transform" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-transform">
+						<use href="/images/icons/icons.svg#transform" />
+					</svg>
+				</span>
 			</span>
 		</span>
 	</span>
@@ -237,15 +265,19 @@ Use the <code>sticker-outside</code> class along with sticker positions to posit
 <div class="col-md-3 col-6">
 	<span class="sticker sticker-success">
 		<span class="inline-item">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
-				<use href="/images/icons/icons.svg#picture" />
-			</svg>
+			<span aria-label="icon-picture" class="lexicon-icon-container" role="img">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+					<use href="/images/icons/icons.svg#picture" />
+				</svg>
+			</span>
 		</span>
 		<span class="sticker sticker-circle sticker-info sticker-sm sticker-outside sticker-bottom-right">
 			<span class="inline-item">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-undo">
-					<use href="/images/icons/icons.svg#undo" />
-				</svg>
+				<span aria-label="icon-undo" class="lexicon-icon-container" role="img">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-undo">
+						<use href="/images/icons/icons.svg#undo" />
+					</svg>
+				</span>
 			</span>
 		</span>
 	</span>

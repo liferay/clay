@@ -713,14 +713,18 @@ Checkboxes, radios, and toggles provide users with different selection and activ
 			<span aria-hidden="true" class="toggle-switch-bar">
 				<span class="toggle-switch-handle" data-label-off="" data-label-on="">
 					<span class="button-icon button-icon-on toggle-switch-icon">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-unlock" viewBox="0 0 512 512">
-							<path class="lexicon-icon-outline" d="M364.8,223.9H192v-96.1c0-84,128-84.7,128,0v31.5h32v-31.5c0-127.4-192-128.1-192,0v96.1h-19.2c-28.2,0-44.8,23-44.8,51.2v153.7c0,28.2,16.6,51.2,44.8,51.2h224c28.2,0,51.2-23,51.2-51.2V275.1C416,246.9,393,223.9,364.8,223.9z M288,416h-64v-96.1h64V416z"></path>
-						</svg>
+						<span aria-label="icon-unlock" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-unlock">
+								<use href="/images/icons/icons.svg#unlock"></use>
+							</svg>
+						</span>
 					</span>
 					<span class="button-icon button-icon-off toggle-switch-icon">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-lock" viewBox="0 0 512 512">
-							<path class="lexicon-icon-outline" d="M364.8,223.9H352v-96.1c0-127.4-192-128.1-192,0v96.1h-19.2c-28.2,0-44.8,23-44.8,51.2v153.7c0,28.2,16.6,51.2,44.8,51.2h224c28.2,0,51.2-23,51.2-51.2V275.1C416,246.9,393,223.9,364.8,223.9z M192,127.8c0-84,128-84.7,128,0v96.1H192V127.8z M288,416h-64v-96.1h64V416z"></path>
-						</svg>
+						<span aria-label="icon-" class="lexicon-icon-container" role="img">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-lock">
+								<use href="/images/icons/icons.svg#lock"></use>
+							</svg>
+						</span>
 					</span>
 				</span>
 			</span>
@@ -735,14 +739,18 @@ Checkboxes, radios, and toggles provide users with different selection and activ
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle" data-label-off="" data-label-on="">
                 <span class="button-icon button-icon-on toggle-switch-icon">
-                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-unlock" viewBox="0 0 512 512">
-                        <path class="lexicon-icon-outline" d="M364.8,223.9H192v-96.1c0-84,128-84.7,128,0v31.5h32v-31.5c0-127.4-192-128.1-192,0v96.1h-19.2c-28.2,0-44.8,23-44.8,51.2v153.7c0,28.2,16.6,51.2,44.8,51.2h224c28.2,0,51.2-23,51.2-51.2V275.1C416,246.9,393,223.9,364.8,223.9z M288,416h-64v-96.1h64V416z"></path>
-                    </svg>
+                    <span aria-label="icon-unlock" class="lexicon-icon-container" role="img">
+                        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-unlock">
+                            <use href="/images/icons/icons.svg#unlock"></use>
+                        </svg>
+                    </span>
                 </span>
                 <span class="button-icon button-icon-off toggle-switch-icon">
-                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-lock" viewBox="0 0 512 512">
-                        <path class="lexicon-icon-outline" d="M364.8,223.9H352v-96.1c0-127.4-192-128.1-192,0v96.1h-19.2c-28.2,0-44.8,23-44.8,51.2v153.7c0,28.2,16.6,51.2,44.8,51.2h224c28.2,0,51.2-23,51.2-51.2V275.1C416,246.9,393,223.9,364.8,223.9z M192,127.8c0-84,128-84.7,128,0v96.1H192V127.8z M288,416h-64v-96.1h64V416z"></path>
-                    </svg>
+                    <span aria-label="icon-lock" class="lexicon-icon-container" role="img">
+                        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-lock">
+                            <use href="/images/icons/icons.svg#lock"></use>
+                        </svg>
+                    </span>
                 </span>
             </span>
         </span>

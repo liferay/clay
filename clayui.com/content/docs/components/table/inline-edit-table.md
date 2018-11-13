@@ -71,9 +71,11 @@ A table variation that lets users modify certain values of the entry without goi
 				<td>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use href="/images/icons/icons.svg#ellipsis-v" />
-							</svg>
+							<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use href="/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</span>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 							<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
@@ -114,9 +116,11 @@ A table variation that lets users modify certain values of the entry without goi
 				<td>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use href="/images/icons/icons.svg#ellipsis-v" />
-							</svg>
+							<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use href="/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</span>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 							<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
@@ -182,9 +186,11 @@ A table variation that lets users modify certain values of the entry without goi
 				<td>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use href="/images/icons/icons.svg#ellipsis-v" />
-							</svg>
+							<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use href="/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</span>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 							<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
@@ -259,9 +265,11 @@ A table variation that lets users modify certain values of the entry without goi
 				<td>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use href="/images/icons/icons.svg#ellipsis-v" />
-							</svg>
+							<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use href="/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</span>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 							<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
@@ -302,9 +310,11 @@ A table variation that lets users modify certain values of the entry without goi
 				<td>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use href="/images/icons/icons.svg#ellipsis-v" />
-							</svg>
+							<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use href="/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</span>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 							<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
@@ -370,9 +380,11 @@ A table variation that lets users modify certain values of the entry without goi
 				<td>
 					<div class="dropdown dropdown-action">
 						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use href="/images/icons/icons.svg#ellipsis-v" />
-							</svg>
+							<span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use href="/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</span>
 						</a>
 						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
 							<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
