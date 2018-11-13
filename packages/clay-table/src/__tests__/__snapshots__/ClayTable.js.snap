@@ -365,10 +365,11 @@ exports[`ClayTable should render a ClayTable with a basic schema with sortable f
         <th class="table-cell-expand">
           <button class="btn btn-unstyled" type="button">Name
             <span class="inline-item inline-item-after">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up" focusable="false">
-                <title>order-arrow-up</title>
-                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow-up"></use>
-              </svg>
+              <span aria-label="icon-order-arrow-up" class="lexicon-icon-container" role="img">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up" focusable="false">
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow-up"></use>
+                </svg>
+              </span>
             </span>
           </button>
         </th>
@@ -966,10 +967,11 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
           <div class="quick-action-menu"></div>
           <div class="dropdown dropdown-action">
             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
-                <title>ellipsis-v</title>
-                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-              </svg>
+              <span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
+                </svg>
+              </span>
             </button>
           </div>
         </td>
@@ -986,10 +988,11 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
           <div class="quick-action-menu"></div>
           <div class="dropdown dropdown-action">
             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
-                <title>ellipsis-v</title>
-                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-              </svg>
+              <span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
+                </svg>
+              </span>
             </button>
           </div>
         </td>
@@ -1042,24 +1045,27 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
         <td>
           <div class="quick-action-menu">
             <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
-                <title>trash</title>
-                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
-              </svg>
+              <span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
+                </svg>
+              </span>
             </a>
             <a aria-label="Download" class=" component-action quick-action-item" href="#2">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
-                <title>download</title>
-                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
-              </svg>
+              <span aria-label="icon-download" class="lexicon-icon-container" role="img">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
+                </svg>
+              </span>
             </a>
           </div>
           <div class="dropdown dropdown-action">
             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
-                <title>ellipsis-v</title>
-                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-              </svg>
+              <span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
+                </svg>
+              </span>
             </button>
           </div>
         </td>
@@ -1075,24 +1081,27 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
         <td>
           <div class="quick-action-menu">
             <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
-                <title>trash</title>
-                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
-              </svg>
+              <span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
+                </svg>
+              </span>
             </a>
             <a aria-label="Download" class=" component-action quick-action-item" href="#2">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
-                <title>download</title>
-                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
-              </svg>
+              <span aria-label="icon-download" class="lexicon-icon-container" role="img">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
+                </svg>
+              </span>
             </a>
           </div>
           <div class="dropdown dropdown-action">
             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
-                <title>ellipsis-v</title>
-                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-              </svg>
+              <span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
+                </svg>
+              </span>
             </button>
           </div>
         </td>
@@ -1108,24 +1117,27 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
         <td>
           <div class="quick-action-menu">
             <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
-                <title>trash</title>
-                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
-              </svg>
+              <span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
+                </svg>
+              </span>
             </a>
             <a aria-label="Download" class=" component-action quick-action-item" href="#2">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
-                <title>download</title>
-                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
-              </svg>
+              <span aria-label="icon-download" class="lexicon-icon-container" role="img">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
+                </svg>
+              </span>
             </a>
           </div>
           <div class="dropdown dropdown-action">
             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
-                <title>ellipsis-v</title>
-                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-              </svg>
+              <span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
+                </svg>
+              </span>
             </button>
           </div>
         </td>
@@ -1141,24 +1153,27 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
         <td>
           <div class="quick-action-menu">
             <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
-                <title>trash</title>
-                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
-              </svg>
+              <span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
+                </svg>
+              </span>
             </a>
             <a aria-label="Download" class=" component-action quick-action-item" href="#2">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
-                <title>download</title>
-                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
-              </svg>
+              <span aria-label="icon-download" class="lexicon-icon-container" role="img">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
+                </svg>
+              </span>
             </a>
           </div>
           <div class="dropdown dropdown-action">
             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
-                <title>ellipsis-v</title>
-                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-              </svg>
+              <span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
+                </svg>
+              </span>
             </button>
           </div>
         </td>
@@ -1174,24 +1189,27 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
         <td>
           <div class="quick-action-menu">
             <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
-                <title>trash</title>
-                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
-              </svg>
+              <span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
+                </svg>
+              </span>
             </a>
             <a aria-label="Download" class=" component-action quick-action-item" href="#2">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
-                <title>download</title>
-                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
-              </svg>
+              <span aria-label="icon-download" class="lexicon-icon-container" role="img">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
+                </svg>
+              </span>
             </a>
           </div>
           <div class="dropdown dropdown-action">
             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
-                <title>ellipsis-v</title>
-                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-              </svg>
+              <span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
+                </svg>
+              </span>
             </button>
           </div>
         </td>
@@ -1207,24 +1225,27 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
         <td>
           <div class="quick-action-menu">
             <a aria-label="Remove" class=" component-action quick-action-item" href="#1">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
-                <title>trash</title>
-                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
-              </svg>
+              <span aria-label="icon-trash" class="lexicon-icon-container" role="img">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash" focusable="false">
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
+                </svg>
+              </span>
             </a>
             <a aria-label="Download" class=" component-action quick-action-item" href="#2">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
-                <title>download</title>
-                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
-              </svg>
+              <span aria-label="icon-download" class="lexicon-icon-container" role="img">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-download" focusable="false">
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
+                </svg>
+              </span>
             </a>
           </div>
           <div class="dropdown dropdown-action">
             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn component-action btn-unstyled" ref="triggerButton" title="actions" type="button">
-              <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
-                <title>ellipsis-v</title>
-                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-              </svg>
+              <span aria-label="icon-ellipsis-v" class="lexicon-icon-container" role="img">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false">
+                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
+                </svg>
+              </span>
             </button>
           </div>
         </td>

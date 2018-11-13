@@ -1,50 +1,83 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ClayIcon should render an icon with attribute aria-hidden="true" on the container when decorative is true 1`] = `
+<span aria-hidden="true" aria-label="icon-add-cell" class="lexicon-icon-container" role="img">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell" focusable="false">
+    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#add-cell"></use>
+  </svg>
+</span>
+`;
+
 exports[`ClayIcon should render an icon with classes 1`] = `
-<svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell my-custom-class" focusable="false">
-  <title>add-cell</title>
-  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#add-cell"></use>
-</svg>
+<span aria-label="icon-add-cell" class="lexicon-icon-container my-custom-class" role="img">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell" focusable="false">
+    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#add-cell"></use>
+  </svg>
+</span>
 `;
 
 exports[`ClayIcon should render an icon with focusable to false by default 1`] = `
-<svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell" focusable="false">
-  <title>add-cell</title>
-  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#add-cell"></use>
-</svg>
+<span aria-label="icon-add-cell" class="lexicon-icon-container" role="img">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell" focusable="false">
+    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#add-cell"></use>
+  </svg>
+</span>
 `;
 
 exports[`ClayIcon should render an icon with focusable to true 1`] = `
-<svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell" focusable="true">
-  <title>add-cell</title>
-  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#add-cell"></use>
-</svg>
+<span aria-label="icon-add-cell" class="lexicon-icon-container" role="img">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell" focusable="true">
+    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#add-cell"></use>
+  </svg>
+</span>
 `;
 
 exports[`ClayIcon should render an icon with id 1`] = `
-<svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell" focusable="false" id="myId">
-  <title>myId</title>
-  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#add-cell"></use>
-</svg>
+<span aria-label="icon-add-cell" class="lexicon-icon-container" role="img">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell" focusable="false" id="myId">
+    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#add-cell"></use>
+  </svg>
+</span>
+`;
+
+exports[`ClayIcon should render an icon with specified ariaLabel 1`] = `
+<span aria-label="my-custom-aria-label" class="lexicon-icon-container" role="img">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell" focusable="false">
+    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#add-cell"></use>
+  </svg>
+</span>
 `;
 
 exports[`ClayIcon should render an icon with specified title 1`] = `
-<svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell" focusable="false">
-  <title>myTitle</title>
-  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#add-cell"></use>
-</svg>
+<span aria-label="icon-add-cell" class="lexicon-icon-container" role="img">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell" focusable="false">
+    <title>myTitle</title>
+    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#add-cell"></use>
+  </svg>
+</span>
 `;
 
 exports[`ClayIcon should render an icon with specified title when id is passed too 1`] = `
-<svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell" focusable="false" id="myId">
-  <title>myTitle</title>
-  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#add-cell"></use>
-</svg>
+<span aria-label="icon-add-cell" class="lexicon-icon-container" role="img">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell" focusable="false" id="myId">
+    <title>myTitle</title>
+    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#add-cell"></use>
+  </svg>
+</span>
+`;
+
+exports[`ClayIcon should render an icon without aria-hidden="true" on the container by default 1`] = `
+<span aria-label="icon-add-cell" class="lexicon-icon-container" role="img">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell" focusable="false">
+    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#add-cell"></use>
+  </svg>
+</span>
 `;
 
 exports[`ClayIcon should render markup for icon \`add-cell\` 1`] = `
-<svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell" focusable="false">
-  <title>add-cell</title>
-  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#add-cell"></use>
-</svg>
+<span aria-label="icon-add-cell" class="lexicon-icon-container" role="img">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell" focusable="false">
+    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#add-cell"></use>
+  </svg>
+</span>
 `;

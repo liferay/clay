@@ -28,10 +28,11 @@ exports[`ClayResultsBar should render a results bar with filter labels 1`] = `
             </span>
             <span class="label-item label-item-after">
               <button class="btn close" aria-label="close" type="button">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-                  <title>times</title>
-                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                </svg>
+                <span aria-label="icon-times" class="lexicon-icon-container" role="img">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                  </svg>
+                </span>
               </button>
             </span>
           </span>
@@ -45,10 +46,11 @@ exports[`ClayResultsBar should render a results bar with filter labels 1`] = `
             </span>
             <span class="label-item label-item-after">
               <button class="btn close" aria-label="close" type="button">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-                  <title>times</title>
-                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                </svg>
+                <span aria-label="icon-times" class="lexicon-icon-container" role="img">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                  </svg>
+                </span>
               </button>
             </span>
           </span>
@@ -92,10 +94,11 @@ exports[`ClayResultsBar should render a results bar with filter labels and searc
             </span>
             <span class="label-item label-item-after">
               <button class="btn close" aria-label="close" type="button">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-                  <title>times</title>
-                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                </svg>
+                <span aria-label="icon-times" class="lexicon-icon-container" role="img">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                  </svg>
+                </span>
               </button>
             </span>
           </span>
@@ -109,10 +112,11 @@ exports[`ClayResultsBar should render a results bar with filter labels and searc
             </span>
             <span class="label-item label-item-after">
               <button class="btn close" aria-label="close" type="button">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-                  <title>times</title>
-                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                </svg>
+                <span aria-label="icon-times" class="lexicon-icon-container" role="img">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                  </svg>
+                </span>
               </button>
             </span>
           </span>

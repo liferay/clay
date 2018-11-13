@@ -3,10 +3,11 @@
 exports[`ClayAlert should render a "danger" style alert 1`] = `
 <div class="alert alert-danger fade show" role="alert">
   <span class="alert-indicator">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full" focusable="false">
-      <title>exclamation-full</title>
-      <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-full"></use>
-    </svg>
+    <span aria-label="icon-exclamation-full" class="lexicon-icon-container" role="img">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full" focusable="false">
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-full"></use>
+      </svg>
+    </span>
   </span>
   <strong class="lead">Danger!</strong>message</div>
 `;
@@ -14,10 +15,11 @@ exports[`ClayAlert should render a "danger" style alert 1`] = `
 exports[`ClayAlert should render a "success" style alert 1`] = `
 <div class="alert alert-success fade show" role="alert">
   <span class="alert-indicator">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full" focusable="false">
-      <title>check-circle-full</title>
-      <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#check-circle-full"></use>
-    </svg>
+    <span aria-label="icon-check-circle-full" class="lexicon-icon-container" role="img">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full" focusable="false">
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#check-circle-full"></use>
+      </svg>
+    </span>
   </span>
   <strong class="lead">Success!</strong>message</div>
 `;
@@ -25,10 +27,11 @@ exports[`ClayAlert should render a "success" style alert 1`] = `
 exports[`ClayAlert should render a "warning" style alert 1`] = `
 <div class="alert alert-warning fade show" role="alert">
   <span class="alert-indicator">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full" focusable="false">
-      <title>warning-full</title>
-      <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#warning-full"></use>
-    </svg>
+    <span aria-label="icon-warning-full" class="lexicon-icon-container" role="img">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full" focusable="false">
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#warning-full"></use>
+      </svg>
+    </span>
   </span>
   <strong class="lead">Warning!</strong>message</div>
 `;
@@ -36,16 +39,18 @@ exports[`ClayAlert should render a "warning" style alert 1`] = `
 exports[`ClayAlert should render a closeable alert 1`] = `
 <div class="alert alert-warning fade alert-dismissible show" role="alert">
   <button class="btn close btn-unstyled" aria-label="close" type="button">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-      <title>times</title>
-      <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-    </svg>
+    <span aria-label="icon-times" class="lexicon-icon-container" role="img">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+      </svg>
+    </span>
   </button>
   <span class="alert-indicator">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full" focusable="false">
-      <title>warning-full</title>
-      <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#warning-full"></use>
-    </svg>
+    <span aria-label="icon-warning-full" class="lexicon-icon-container" role="img">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full" focusable="false">
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#warning-full"></use>
+      </svg>
+    </span>
   </span>
   <strong class="lead">Warning!</strong>message</div>
 `;
@@ -53,10 +58,11 @@ exports[`ClayAlert should render a closeable alert 1`] = `
 exports[`ClayAlert should render an "info" style alert 1`] = `
 <div class="alert alert-info fade show" role="alert">
   <span class="alert-indicator">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
-      <title>info-circle</title>
-      <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle"></use>
-    </svg>
+    <span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle"></use>
+      </svg>
+    </span>
   </span>
   <strong class="lead">Info</strong>message</div>
 `;
@@ -64,10 +70,11 @@ exports[`ClayAlert should render an "info" style alert 1`] = `
 exports[`ClayAlert should render an alert with classes 1`] = `
 <div class="alert alert-info fade my-custom-class show" role="alert">
   <span class="alert-indicator">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
-      <title>info-circle</title>
-      <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle"></use>
-    </svg>
+    <span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle"></use>
+      </svg>
+    </span>
   </span>
   <strong class="lead">info</strong>message</div>
 `;
@@ -75,10 +82,11 @@ exports[`ClayAlert should render an alert with classes 1`] = `
 exports[`ClayAlert should render an alert with id 1`] = `
 <div class="alert alert-info fade show" id="myId" role="alert">
   <span class="alert-indicator">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
-      <title>info-circle</title>
-      <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle"></use>
-    </svg>
+    <span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle"></use>
+      </svg>
+    </span>
   </span>
   <strong class="lead">info</strong>message</div>
 `;
@@ -86,10 +94,11 @@ exports[`ClayAlert should render an alert with id 1`] = `
 exports[`ClayAlert should render default markup 1`] = `
 <div class="alert alert-info fade show" role="alert">
   <span class="alert-indicator">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
-      <title>info-circle</title>
-      <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle"></use>
-    </svg>
+    <span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
+        <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle"></use>
+      </svg>
+    </span>
   </span>
   <strong class="lead">info</strong>message</div>
 `;

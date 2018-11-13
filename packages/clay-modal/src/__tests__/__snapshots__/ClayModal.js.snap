@@ -7,10 +7,11 @@ exports[`ClayModal should render a modal opened 1`] = `
       <div class="modal-header">
         <div class="modal-title">My Title</div>
         <button class="btn close btn-unstyled" aria-label="close" type="button">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-            <title>times</title>
-            <use xlink:href="icons.svg#times"></use>
-          </svg>
+          <span aria-label="icon-times" class="lexicon-icon-container" role="img">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+              <use xlink:href="icons.svg#times"></use>
+            </svg>
+          </span>
         </button>
       </div>
       <div class="modal-body">
@@ -28,10 +29,11 @@ exports[`ClayModal should render a modal opened using the method show 1`] = `
       <div class="modal-header">
         <div class="modal-title">My Title</div>
         <button class="btn close btn-unstyled" aria-label="close" type="button">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-            <title>times</title>
-            <use xlink:href="icons.svg#times"></use>
-          </svg>
+          <span aria-label="icon-times" class="lexicon-icon-container" role="img">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+              <use xlink:href="icons.svg#times"></use>
+            </svg>
+          </span>
         </button>
       </div>
       <div class="modal-body">
@@ -49,10 +51,11 @@ exports[`ClayModal should render a modal opened using the method show 2`] = `
       <div class="modal-header">
         <div class="modal-title">My Title</div>
         <button class="btn close btn-unstyled" aria-label="close" type="button">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-            <title>times</title>
-            <use xlink:href="icons.svg#times"></use>
-          </svg>
+          <span aria-label="icon-times" class="lexicon-icon-container" role="img">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+              <use xlink:href="icons.svg#times"></use>
+            </svg>
+          </span>
         </button>
       </div>
       <div class="modal-body">
@@ -163,10 +166,11 @@ exports[`ClayModal should render a modal with size \`full-screen\` 1`] = `
       <div class="modal-header">
         <div class="modal-title">My Title</div>
         <button class="btn close btn-unstyled" aria-label="close" type="button">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-            <title>times</title>
-            <use xlink:href="icons.svg#times"></use>
-          </svg>
+          <span aria-label="icon-times" class="lexicon-icon-container" role="img">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+              <use xlink:href="icons.svg#times"></use>
+            </svg>
+          </span>
         </button>
       </div>
       <div class="modal-body">
@@ -184,10 +188,11 @@ exports[`ClayModal should render a modal with size \`large\` 1`] = `
       <div class="modal-header">
         <div class="modal-title">My Title</div>
         <button class="btn close btn-unstyled" aria-label="close" type="button">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-            <title>times</title>
-            <use xlink:href="icons.svg#times"></use>
-          </svg>
+          <span aria-label="icon-times" class="lexicon-icon-container" role="img">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+              <use xlink:href="icons.svg#times"></use>
+            </svg>
+          </span>
         </button>
       </div>
       <div class="modal-body">
@@ -205,10 +210,11 @@ exports[`ClayModal should render a modal with size \`small\` 1`] = `
       <div class="modal-header">
         <div class="modal-title">My Title</div>
         <button class="btn close btn-unstyled" aria-label="close" type="button">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-            <title>times</title>
-            <use xlink:href="icons.svg#times"></use>
-          </svg>
+          <span aria-label="icon-times" class="lexicon-icon-container" role="img">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+              <use xlink:href="icons.svg#times"></use>
+            </svg>
+          </span>
         </button>
       </div>
       <div class="modal-body">
@@ -225,17 +231,19 @@ exports[`ClayModal should render a modal with status \`danger\` and title 1`] = 
     <div class="modal-content">
       <div class="modal-header">
         <span class="modal-title-indicator">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full" focusable="false">
-            <title>exclamation-full</title>
-            <use xlink:href="icons.svg#exclamation-full"></use>
-          </svg>
+          <span aria-label="icon-exclamation-full" class="lexicon-icon-container" role="img">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full" focusable="false">
+              <use xlink:href="icons.svg#exclamation-full"></use>
+            </svg>
+          </span>
         </span>
         <div class="modal-title">My Title</div>
         <button class="btn close btn-unstyled" aria-label="close" type="button">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-            <title>times</title>
-            <use xlink:href="icons.svg#times"></use>
-          </svg>
+          <span aria-label="icon-times" class="lexicon-icon-container" role="img">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+              <use xlink:href="icons.svg#times"></use>
+            </svg>
+          </span>
         </button>
       </div>
     </div>
@@ -249,17 +257,19 @@ exports[`ClayModal should render a modal with status \`info\` and title 1`] = `
     <div class="modal-content">
       <div class="modal-header">
         <span class="modal-title-indicator">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
-            <title>info-circle</title>
-            <use xlink:href="icons.svg#info-circle"></use>
-          </svg>
+          <span aria-label="icon-info-circle" class="lexicon-icon-container" role="img">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle" focusable="false">
+              <use xlink:href="icons.svg#info-circle"></use>
+            </svg>
+          </span>
         </span>
         <div class="modal-title">My Title</div>
         <button class="btn close btn-unstyled" aria-label="close" type="button">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-            <title>times</title>
-            <use xlink:href="icons.svg#times"></use>
-          </svg>
+          <span aria-label="icon-times" class="lexicon-icon-container" role="img">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+              <use xlink:href="icons.svg#times"></use>
+            </svg>
+          </span>
         </button>
       </div>
     </div>
@@ -273,17 +283,19 @@ exports[`ClayModal should render a modal with status \`success\` and title 1`] =
     <div class="modal-content">
       <div class="modal-header">
         <span class="modal-title-indicator">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle" focusable="false">
-            <title>check-circle</title>
-            <use xlink:href="icons.svg#check-circle"></use>
-          </svg>
+          <span aria-label="icon-check-circle" class="lexicon-icon-container" role="img">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle" focusable="false">
+              <use xlink:href="icons.svg#check-circle"></use>
+            </svg>
+          </span>
         </span>
         <div class="modal-title">My Title</div>
         <button class="btn close btn-unstyled" aria-label="close" type="button">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-            <title>times</title>
-            <use xlink:href="icons.svg#times"></use>
-          </svg>
+          <span aria-label="icon-times" class="lexicon-icon-container" role="img">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+              <use xlink:href="icons.svg#times"></use>
+            </svg>
+          </span>
         </button>
       </div>
     </div>
@@ -297,17 +309,19 @@ exports[`ClayModal should render a modal with status \`warning\` and title 1`] =
     <div class="modal-content">
       <div class="modal-header">
         <span class="modal-title-indicator">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle-full" focusable="false">
-            <title>question-circle-full</title>
-            <use xlink:href="icons.svg#question-circle-full"></use>
-          </svg>
+          <span aria-label="icon-question-circle-full" class="lexicon-icon-container" role="img">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle-full" focusable="false">
+              <use xlink:href="icons.svg#question-circle-full"></use>
+            </svg>
+          </span>
         </span>
         <div class="modal-title">My Title</div>
         <button class="btn close btn-unstyled" aria-label="close" type="button">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-            <title>times</title>
-            <use xlink:href="icons.svg#times"></use>
-          </svg>
+          <span aria-label="icon-times" class="lexicon-icon-container" role="img">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+              <use xlink:href="icons.svg#times"></use>
+            </svg>
+          </span>
         </button>
       </div>
     </div>
@@ -334,10 +348,11 @@ exports[`ClayModal should render a modal with title and header closing button 1`
       <div class="modal-header">
         <div class="modal-title">My title</div>
         <button class="btn close btn-unstyled" aria-label="close" type="button">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
-            <title>times</title>
-            <use xlink:href="icons.svg#times"></use>
-          </svg>
+          <span aria-label="icon-times" class="lexicon-icon-container" role="img">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+              <use xlink:href="icons.svg#times"></use>
+            </svg>
+          </span>
         </button>
       </div>
     </div>

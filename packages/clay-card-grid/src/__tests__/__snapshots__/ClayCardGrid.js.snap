@@ -16,10 +16,11 @@ exports[`ClayCardGrid should render the default markup 1`] = `
           <div class="autofit-col">
             <span class="sticker sticker-rounded sticker-unstyled">
               <span class="inline-item">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
-                  <title>folder</title>
-                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#folder"></use>
-                </svg>
+                <span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
+                    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#folder"></use>
+                  </svg>
+                </span>
               </span>
             </span>
           </div>
@@ -37,10 +38,11 @@ exports[`ClayCardGrid should render the default markup 1`] = `
           <div class="autofit-col">
             <span class="sticker sticker-rounded sticker-unstyled">
               <span class="inline-item">
-                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
-                  <title>folder</title>
-                  <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#folder"></use>
-                </svg>
+                <span aria-label="icon-folder" class="lexicon-icon-container" role="img">
+                  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder" focusable="false">
+                    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#folder"></use>
+                  </svg>
+                </span>
               </span>
             </span>
           </div>
@@ -58,10 +60,11 @@ exports[`ClayCardGrid should render the default markup 1`] = `
     <div class="card-type-asset card image-card">
       <div class="aspect-ratio card-item-first">
         <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
-            <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
+          <span aria-label="icon-exclamation-circle" class="lexicon-icon-container" role="img">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
+            </svg>
+          </span>
         </div>
         <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
           <span class="sticker-overlay">PDF</span>
@@ -132,10 +135,11 @@ exports[`ClayCardGrid should render the default markup 1`] = `
     <div class="card-type-asset card image-card">
       <div class="aspect-ratio card-item-first">
         <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
-            <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
+          <span aria-label="icon-exclamation-circle" class="lexicon-icon-container" role="img">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
+            </svg>
+          </span>
         </div>
         <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
           <span class="sticker-overlay">PDF</span>
@@ -183,10 +187,11 @@ exports[`ClayCardGrid should render the default markup 1`] = `
     <div class="card-type-asset card image-card">
       <div class="aspect-ratio card-item-first">
         <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-          <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
-            <title>exclamation-circle</title>
-            <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
+          <span aria-label="icon-exclamation-circle" class="lexicon-icon-container" role="img">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false">
+              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
+            </svg>
+          </span>
         </div>
         <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
           <span class="sticker-overlay">PDF</span>
