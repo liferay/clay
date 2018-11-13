@@ -12,6 +12,9 @@ export default class Docs extends Component {
     componentDidMount() {
         this._codeTabs = new CodeTabs();
         this._codeClipboard = new CodeClipboard();
+
+        document.querySelectorAll('.clay-site-custom-checkbox-indeterminate')
+            .forEach(item => item.indeterminate = true);
     }
 
     componentWillUnmount() {
