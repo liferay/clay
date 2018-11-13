@@ -7,7 +7,7 @@ title: "Tables"
 </div>
 
 <div class="alert alert-warning">
-	<code>show-quick-actions-on-hover</code> will need Javascript to add class <code>table-focus</code> on the table row when an item inside is focused to make it keyboard accessible.
+	The <code>show-quick-actions-on-hover</code> class requires JavaScript to add the <code>table-focus</code> class to the table row when an item inside is focused. This makes it keyboard accessible.
 </div>
 
 ### Table List
@@ -1227,13 +1227,13 @@ title: "Tables"
 
 ### Table Helpers
 
-<p><code>table-autofit</code> constrains table columns to be only as wide as its content, but must be used with <code>table-cell-expand</code>. <code>table-cell-expand</code> will fill the remaining space.</p>
+<p>The <code>table-autofit</code> class constrains table columns to be the same width as its content, but it must be used with the <code>table-cell-expand</code> class. The <code>table-cell-expand</code> class fills the remaining space.</p>
 
-<p>Use <code>table-cell-expand-small</code>, <code>table-cell-expand-smaller</code>, <code>table-cell-expand-smallest</code> with <code>table-cell-expand</code> to size columns smaller relative to the widest column.</p>
+<p>Use the <code>table-cell-expand-small</code>, <code>table-cell-expand-smaller</code>, or <code>table-cell-expand-smallest</code> class with the <code>table-cell-expand</code> class to size columns smaller relative to the widest column.</p>
 
-<p>We have added <code>table-cell-minw-50</code>, <code>table-cell-minw-75</code>, <code>table-cell-minw-100</code>, <code>table-cell-minw-150</code>, <code>table-cell-minw-200</code>, <code>table-cell-minw-250</code>, <code>table-cell-minw-300</code>, <code>table-cell-minw-350</code>, <code>table-cell-minw-400</code> to set <code>min-width</code> 50px, 75px, 100px, 150px, 200px, 250px, 300px, 350px, 400px on a specific table column, respectively.</p>
+<p>Use the <code>table-cell-minw-50</code>, <code>table-cell-minw-75</code>, <code>table-cell-minw-100</code>, <code>table-cell-minw-150</code>, <code>table-cell-minw-200</code>, <code>table-cell-minw-250</code>, <code>table-cell-minw-300</code>, <code>table-cell-minw-350</code>, and <code>table-cell-minw-400</code> utility classes to set the table cell's <code>min-width</code> to 50px, 75px, 100px, 150px, 200px, 250px, 300px, 350px, and 400px on a specific table column, respectively.</p>
 
-<p>The helpers <code>table-cell-ws-normal</code> and <code>table-cell-ws-nowrap</code> sets <code>white-space</code> to normal or nowrap on a specific table column, respectively.</p>
+<p>The <code>table-cell-ws-normal</code> and <code>table-cell-ws-nowrap</code> helper classes set the <code>white-space</code> to normal or nowrap on a specific table column, respectively.</p>
 
 <div class="table-responsive">
 	<table class="table table-autofit">
@@ -1286,7 +1286,7 @@ title: "Tables"
 </div>
 ```
 
-<p><code>table-heading-nowrap</code> keeps headings on one line.</p>
+<p>The <code>table-heading-nowrap</code> class keeps headings on one line.</p>
 
 <div class="table-responsive">
 	<table class="table table-autofit table-heading-nowrap">
@@ -1341,7 +1341,7 @@ title: "Tables"
 </div>
 ```
 
-<p><code>table-nowrap</code> keeps everything on one line.</p>
+<p>The <code>table-nowrap</code> class keeps everything on one line.</p>
 
 <div class="table-responsive">
 	<table class="table table-autofit table-nowrap">
@@ -1398,15 +1398,339 @@ title: "Tables"
 
 ### Vertical Alignment
 
-<p>We have added some classes to help vertically align contents inside a table. The classes <code>table-valign-bottom</code>, <code>table-valign-middle</code>, and <code>table-valign-top</code> on <code>```<table>```</code> will vertically align table cell contents on the bottom, middle, and top, respectively.</p>
+<p>We have added some classes to help vertically align contents inside a table. Use the <code>table-valign-bottom</code>, <code>table-valign-middle</code>, and <code>table-valign-top</code> classes on <code>&lt;table&gt;</code> to vertically align table cell contents on the bottom, middle, and top, respectively.</p>
 
-<p>The classes <code>thead-valign-bottom</code>, <code>thead-valign-middle</code>, and <code>thead-valign-top</code> on <code>```<table>```</code> will vertically align the contents inside the table head.</p>
+<p>Use the <code>thead-valign-bottom</code>, <code>thead-valign-middle</code>, and <code>thead-valign-top</code> classes on <code>&lt;table&gt;</code> to vertically align the contents inside the table head.</p>
 
-<p>The classes <code>tbody-valign-bottom</code>, <code>tbody-valign-middle</code>, and <code>tbody-valign-top</code> on <code>```<table>```</code> will vertically align the contents inside the table body.</p>
+<p>Use the <code>tbody-valign-bottom</code>, <code>tbody-valign-middle</code>, and <code>tbody-valign-top</code> classes on <code>&lt;table&gt;</code> to vertically align the contents inside the table body.</p>
 
 ### Table Column Text-{start|center|end}
 
-<p>We have added some classes to help horizontally align contents inside a table column. The classes <code>table-column-text-start</code>, <code>table-column-text-center</code>, and <code>table-column-text-end</code> will align text left, center, and right respectively.</p>
+<p>We have added some classes to help horizontally align contents inside a table column. The <code>table-column-text-start</code>, <code>table-column-text-center</code>, and <code>table-column-text-end</code> classes align text left, center, and right, respectively.</p>
+
+### Table Cell-{start|end}
+
+<p>Sometimes we are unable to remove specific table columns from the DOM and need to hide it using CSS. The classes <code>table-cell-start</code> and <code>table-cell-end</code> can be added to the "new" first or last column to maintain table styles on the left and right side.</p>
+
+<div class="table-responsive">
+	<table class="show-quick-actions-on-hover table table-autofit table-nowrap table-list">
+		<thead>
+			<tr>
+				<th class="d-none"></th>
+				<th class="table-cell-expand table-cell-start table-head-title">
+					<span class="inline-item inline-item-before">
+						<a href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
+								<use xlink:href="/images/icons/icons.svg#drag" />
+							</svg>
+						</a>
+					</span><a class="inline-item text-truncate-inline" href="#1"><span class="text-truncate" title="Title">Title</span><span class="inline-item inline-item-after">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up">
+								<use xlink:href="/images/icons/icons.svg#order-arrow-up" />
+							</svg>
+						</span>
+					</a>
+				</th>
+				<th><span class="inline-item">Status</span></th>
+				<th><span class="inline-item">Items</span></th>
+				<th><span class="inline-item">Start Date</span></th>
+				<th><span class="inline-item">Duration</span></th>
+				<th class="table-cell-end"></th>
+				<th class="d-none"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="table-divider">
+				<td colspan="8">In Progress</td>
+			</tr>
+			<tr>
+				<td class="d-none">
+					<div class="custom-control custom-checkbox">
+						<label>
+							<input class="custom-control-input" type="checkbox">
+							<span class="custom-control-label"></span>
+						</label>
+					</div>
+				</td>
+				<td class="table-cell-expand table-cell-start">
+					<div class="autofit-row">
+						<div class="autofit-col">
+							<span class="sticker sticker-circle sticker-danger">MT</span>
+						</div>
+						<div class="autofit-col autofit-col-expand">
+							<div class="table-list-title">
+								<a class="text-truncate-inline" href="#1">
+									<span class="text-truncate" title="Publication Title">Publication Title</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="label label-warning">
+						<span class="label-item label-item-expand">In Progress</span>
+					</span>
+				</td>
+				<td>100,000</td>
+				<td>2017.11.24 - 17:15</td>
+				<td>4 minutes</td>
+				<td class="table-cell-end">
+					<div class="progress-group">
+						<div class="progress">
+							<div aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 30%;"></div>
+						</div>
+						<div class="progress-group-addon">30%</div>
+					</div>
+				</td>
+				<td class="d-none">
+					<div class="quick-action-menu">
+						<a class="component-action quick-action-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<use xlink:href="/images/icons/icons.svg#trash" />
+							</svg>
+						</a>
+						<a class="component-action quick-action-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+								<use xlink:href="/images/icons/icons.svg#download" />
+							</svg>
+						</a>
+						<a class="component-action quick-action-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
+								<use xlink:href="/images/icons/icons.svg#expand" />
+							</svg>
+						</a>
+					</div>
+					<div class="dropdown dropdown-action">
+						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+							</svg>
+						</a>
+						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+							<li><a class="dropdown-item" href="#1">Remove</a></li>
+							<li><a class="dropdown-item" href="#1">Download</a></li>
+							<li><a class="dropdown-item" href="#1">Checkout</a></li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+```html
+<div class="table-responsive">
+	<table class="show-quick-actions-on-hover table table-autofit table-nowrap table-list">
+		<thead>
+			<tr>
+				<th class="d-none"></th>
+				<th class="table-cell-start"></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th class="table-cell-end"></th>
+				<th class="d-none"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="table-divider"></tr>
+			<tr>
+				<td class="d-none"></td>
+				<td class="table-cell-start"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-cell-end"></td>
+				<td class="d-none"></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+```
+
+### Table Row-{start|end}
+
+<p>The same is true for table rows, the classes <code>table-row-start</code> and <code>table-row-end</code> can be added to the "new" first or last <code>&lt;tr&gt;</code> to maintain table styles on the top and bottom sides.</p>
+
+<div class="table-responsive">
+	<table class="show-quick-actions-on-hover table table-autofit table-nowrap table-list">
+		<thead>
+			<tr class="d-none">
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr class="table-row-start">
+				<th class="d-none"></th>
+				<th class="table-cell-expand table-cell-start table-head-title">
+					<span class="inline-item inline-item-before">
+						<a href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-drag">
+								<use xlink:href="/images/icons/icons.svg#drag" />
+							</svg>
+						</a>
+					</span><a class="inline-item text-truncate-inline" href="#1"><span class="text-truncate" title="Title">Title</span><span class="inline-item inline-item-after">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up">
+								<use xlink:href="/images/icons/icons.svg#order-arrow-up" />
+							</svg>
+						</span>
+					</a>
+				</th>
+				<th><span class="inline-item">Status</span></th>
+				<th><span class="inline-item">Items</span></th>
+				<th><span class="inline-item">Start Date</span></th>
+				<th><span class="inline-item">Duration</span></th>
+				<th class="table-cell-end"></th>
+				<th class="d-none"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="table-divider">
+				<td colspan="8">In Progress</td>
+			</tr>
+			<tr class="table-row-end">
+				<td class="d-none">
+					<div class="custom-control custom-checkbox">
+						<label>
+							<input class="custom-control-input" type="checkbox">
+							<span class="custom-control-label"></span>
+						</label>
+					</div>
+				</td>
+				<td class="table-cell-expand table-cell-start">
+					<div class="autofit-row">
+						<div class="autofit-col">
+							<span class="sticker sticker-circle sticker-danger">MT</span>
+						</div>
+						<div class="autofit-col autofit-col-expand">
+							<div class="table-list-title">
+								<a class="text-truncate-inline" href="#1">
+									<span class="text-truncate" title="Publication Title">Publication Title</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="label label-warning">
+						<span class="label-item label-item-expand">In Progress</span>
+					</span>
+				</td>
+				<td>100,000</td>
+				<td>2017.11.24 - 17:15</td>
+				<td>4 minutes</td>
+				<td class="table-cell-end">
+					<div class="progress-group">
+						<div class="progress">
+							<div aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 30%;"></div>
+						</div>
+						<div class="progress-group-addon">30%</div>
+					</div>
+				</td>
+				<td class="d-none">
+					<div class="quick-action-menu">
+						<a class="component-action quick-action-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<use xlink:href="/images/icons/icons.svg#trash" />
+							</svg>
+						</a>
+						<a class="component-action quick-action-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+								<use xlink:href="/images/icons/icons.svg#download" />
+							</svg>
+						</a>
+						<a class="component-action quick-action-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
+								<use xlink:href="/images/icons/icons.svg#expand" />
+							</svg>
+						</a>
+					</div>
+					<div class="dropdown dropdown-action">
+						<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+							</svg>
+						</a>
+						<ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+							<li><a class="dropdown-item" href="#1">Remove</a></li>
+							<li><a class="dropdown-item" href="#1">Download</a></li>
+							<li><a class="dropdown-item" href="#1">Checkout</a></li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+			<tr class="d-none">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+```html
+<div class="table-responsive">
+	<table class="show-quick-actions-on-hover table table-autofit table-nowrap table-list">
+		<thead>
+			<tr class="d-none">
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr class="table-row-start">
+				<th class="d-none"></th>
+				<th class="table-cell-start"></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th class="table-cell-end"></th>
+				<th class="d-none"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="table-divider"></tr>
+			<tr class="table-row-end">
+				<td class="d-none"></td>
+				<td class="table-cell-start"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table-cell-end"></td>
+				<td class="d-none"></td>
+			</tr>
+			<tr class="d-none">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+```
 
 ### Table
 

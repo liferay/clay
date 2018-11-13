@@ -184,6 +184,74 @@ describe('ClayTable', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a ClayTable with table classes', () => {
+		component = new ClayTable({
+			tableClasses: 'my-custom-table-class',
+			schema: {},
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
+	it('should render a ClayTable not using default classes', () => {
+		component = new ClayTable({
+			useDefaultClasses: false,
+			schema: {},
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
+	it('should render a ClayTable with classes not using default classes', () => {
+		component = new ClayTable({
+			elementClasses: 'my-custom-class',
+			useDefaultClasses: false,
+			schema: {},
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
+	it('should render a wrapped ClayTable', () => {
+		component = new ClayTable({
+			schema: {},
+			wrapTable: true,
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
+	it('should render a wrapped ClayTable with classes', () => {
+		component = new ClayTable({
+			elementClasses: 'my-custom-class',
+			schema: {},
+			wrapTable: true,
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
+	it('should render a wrapped ClayTable not using default classes', () => {
+		component = new ClayTable({
+			schema: {},
+			useDefaultClasses: false,
+			wrapTable: true,
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
+	it('should render a wrapped ClayTable with classes not using default classes', () => {
+		component = new ClayTable({
+			elementClasses: 'my-custom-class',
+			schema: {},
+			useDefaultClasses: false,
+			wrapTable: true,
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
 	it('should render a ClayTable with size `sm`', () => {
 		component = new ClayTable({
 			schema: {},

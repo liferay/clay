@@ -4,7 +4,6 @@
  * This renders an actions dropdown.
  */
 {template .render}
-	{@param primaryItems: list<?>}
 	{@param spritemap: string}
 	{@param? _handleButtonClick: any}
 	{@param? _handleItemClick: any}
@@ -18,6 +17,7 @@
 	{@param? maxSecondaryItems: int}
 	{@param? maxTotalItems: int}
 	{@param? preferredAlign: string}
+	{@param? primaryItems: list<?>}
 	{@param? secondaryItems: list<?>}
 	{@param? toggle: any}
 	{@param? triggerClasses: string}
@@ -44,7 +44,8 @@
 			null
 	/}
 
-	{let $totalPrimaryItems: length($primaryItems) /}
+	{let $totalPrimaryItems: $primaryItems ? length($primaryItems) : 0 /}
+
 	{let $totalSecondaryItemsFirstGroup:
 		isNonnull($secondaryItemsFirstGroup) and isNonnull($secondaryItemsFirstGroup.items) ?
 			length($secondaryItemsFirstGroup.items)
@@ -118,7 +119,7 @@
   {let $primaryDropdownItems: [
     'items': $primaryItems,
     'maxItems': $totalSecondaryItems > 0 ? $defaultMaxPrimaryItems : $defaultMaxTotalItems,
-    'separator': $totalSecondaryItems > 0,
+    'separator': $totalPrimaryItems > 0 and $totalSecondaryItems > 0,
     'type': 'group'
   ] /}
 

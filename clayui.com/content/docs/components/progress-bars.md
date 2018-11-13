@@ -4,13 +4,13 @@ title: "Progress Bars"
 
 ### Description
 
-Progress bar is a progress indicator used to show the completion percentage of a task.
+Progress bar indicates the percentage completed of a task.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/progress_bars.html">Progress Bars Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 ### States
 
-> Place an addon on either side of a progress component with `progress-group` and `progress-group-addon`.
+> Place an addon on either side of a progress component with the `progress-group` and `progress-group-addon` classes:
 
 <div class="clay-site-mb">
 	<div class="progress-group">

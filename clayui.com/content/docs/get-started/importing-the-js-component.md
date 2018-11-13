@@ -88,4 +88,4 @@ Once added to your page, the Clay components are accessible globally on the page
 
 ## Using Clay in soy and jsx
 
-See advanced guides for [more](/docs/get-started/using-js-components-with-metal.html).
+For more information see the [advanced guides](/docs/get-started/using-js-components-with-metal.html).

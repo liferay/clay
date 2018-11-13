@@ -4,7 +4,7 @@ title: "Text Input"
 
 ### Description
 
-A description of the different text input types, including usage and validation states.
+This section demonstrates the different text input types, including usage and validation states.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Forms/text_input.html">Text Input Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 

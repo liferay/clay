@@ -1,5 +1,6 @@
 ---
 title: "Typography"
+redirectFrom: "/docs/layout/typography.html"
 ---
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/designPrinciples/typography.html">Typography Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
@@ -72,7 +73,7 @@ title: "Typography"
 
 ### Reference Mark
 
-> Add a reference mark next to some text with <code>&lt;span class="reference-mark"&gt;&lt;/span&gt;</code>.
+> Use <code>&lt;span class="reference-mark"&gt;&lt;/span&gt;</code> to add a reference mark next to some text.
 
 <div class="sheet">
     <div>Reference Mark<span class="reference-mark" id="referenceMark1">[1]</span> with text.</div>
@@ -92,7 +93,7 @@ title: "Typography"
 
 ### Text Truncate
 
-> Shorten long lines of text with the class <code>text-truncate</code>. This uses <code>display: block;</code> and should be used to truncate text in block level elements.
+> Shorten long lines of text with the <code>text-truncate</code> class. This uses <code>display: block;</code> and should be used to truncate text in block level elements.
 
 <div class="sheet">
     <p class="text-truncate">Milk filter lungo as galão roast that crema blue mountain shop turkish. Milk filter lungo as galão roast that crema blue mountain shop turkish. Milk filter lungo as galão roast that crema blue mountain shop turkish.</p>
@@ -104,7 +105,7 @@ title: "Typography"
 
 ### Text Truncate Inline
 
-> Another way to shorten long lines of text.
+> You can also use the `text-truncate-inline` class to shorten long lines of text.
 
 <div class="card" style="max-width:300px;">
     <p class="card-body">

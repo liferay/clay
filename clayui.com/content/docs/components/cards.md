@@ -10,7 +10,7 @@ Cards are a very specific visual representation of data.
 
 ### Image card
 
-> Used in image/document galleries.
+> Image cards are used in image/document galleries.
 
 #### Default
 
@@ -419,7 +419,7 @@ Cards are a very specific visual representation of data.
 
 #### IMAGE WITH DIFFERENT RATIOS
 
-> It is important to highlight that images can have different sizes. To provide the end user with that relevant data about the image Lexicon incorporates cards that allow this feature.
+> It is important to highlight that images can have different sizes. To provide the end user with that relevant data about the image, Lexicon incorporates cards that allow this feature.
 
 <div class="row">
 	<div class="col-md-4">
@@ -625,7 +625,7 @@ Cards are a very specific visual representation of data.
 
 ### User card
 
-> User card is used to represent users. The user can be represented by its user image or up to two initials extracted from the uses name or name + surname.
+> User cards represent users. The user can be represented by their user image or up to two initials extracted from their user name or name + surname.
 
 <div class="row">
 	<div class="col-md-4">
@@ -813,7 +813,7 @@ Cards are a very specific visual representation of data.
 
 ### File card
 
-> File card is used to represent files different to images.
+> File cards represent files other than images.
 
 <div class="row">
 	<div class="col-md-4">
@@ -1042,7 +1042,7 @@ Cards are a very specific visual representation of data.
 
 ### Folder card
 
-> This card variation is meant to have horizontal representations of information. This card has the same amount of elements as the previous explained. The main purpose of this card is to represent folders, therefore we allow to remove the image in this card type. In this case, only the checkbox is used to select.
+> Folder cards display horizontal representations of information. They have the same amount of elements as the other cards previously explained on this page. The main purpose of this card is to represent folders, therefore the image is removed in this card type. In this case, only the checkbox is used to select.
 
 <div class="row">
 	<div class="col-md-4">
@@ -1219,4 +1219,4 @@ Cards are a very specific visual representation of data.
 	[APITable "clay-card/src/ClayHorizontalCard.js"]
 </div>
 
-More examples can be found in <a href="/docs/components/dataset-display.html">dataset template</a>.
+See <a href="/docs/components/dataset-display.html">dataset template</a> for more examples.

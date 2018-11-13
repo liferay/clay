@@ -42,7 +42,7 @@ title: "Panels"
 
 ### Panel States
 
-<p>Different colors for different states. Create your own variant using the <code>panel-variant($map)</code> mixin.</p>
+<p>Each state uses a different color. Use the <code>panel-variant($map)</code> mixin to create your own variant.</p>
 
 <div class="col-md-4">
 	<div class="panel">
@@ -82,13 +82,13 @@ title: "Panels"
 
 ### Accordions with Open and Close Icon
 
-<p>Add icons to the open and close states in an accordion. The class <code>collapse-icon-closed</code> displays the icon in the collapsed state. The class <code>collapse-icon-open</code> displays the icon in the open state.</p>
+<p>Add icons to the open and close states in an accordion. The <code>collapse-icon-closed</code> class displays the icon in the collapsed state. The <code>collapse-icon-open</code> class displays the icon in the open state.</p>
 
-<p>Add class <code>collapse-icon</code> to the [data-toggle="collapse"] element to create space for the icons and vertically center it with the class <code>collapse-icon-middle</code>.</p>
+<p>Add the <code>collapse-icon</code> class to the [data-toggle="collapse"] element to create space for the icons, and add the  <code>collapse-icon-middle</code> class to the [data-toggle="collapse"] element to vertically center the icons.</p>
 
 ### Panel Group Flush
 
-Use <code>.panel-group-flush</code> on <code>.panel-group</code> to make the content inside <code>.panel-group</code> sit flush to the left and right. The component <code>.panel-group-flush</code> should generally be used inside <code>.card</code>, <code>.sheet</code>, or a type of padded container.
+To align the content flush to the left and right side of the <code>.panel-group</code> element, add the <code>.panel-group-flush</code> class to it. The component <code>.panel-group-flush</code> should generally be used inside a <code>.card</code> or <code>.sheet</code> element, or a type of padded container.
 
 <div class="sheet">
 	<div aria-orientation="vertical" class="panel-group panel-group-flush" role="tablist">
@@ -326,7 +326,7 @@ Use <code>.panel-group-flush</code> on <code>.panel-group</code> to make the con
 
 ### Panel Group Helpers
 
-<p>Use <code>.panel-group-fluid</code>, <code>.panel-group-fluid-first</code>, or <code>.panel-group-fluid-last</code> on a panel-group to remove borders from the left and right side and rounded borders from first and last, first, or last panel. The classes generally should be used inside <code>card</code> or <code>sheet</code>.</p>
+<p>Add the <code>.panel-group-fluid</code>, <code>.panel-group-fluid-first</code>, or <code>.panel-group-fluid-last</code> classes to a panel-group to remove borders from the left and right side and rounded borders from first and last, first, or last panel. These classes should generally be used inside a <code>card</code> or <code>sheet</code> element.</p>
 
 ### With Buttons
 

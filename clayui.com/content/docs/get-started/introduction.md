@@ -35,7 +35,7 @@ new clay.ClayButton(
 
 ### Step 1: Set up webpack
 
-Let's use the [webpack](https://webpack.js.org/) to demonstrate how you will group our JavaScript and Sass. First create a folder with a name you want, and then create a package.json that looks like this:
+Let's use the [webpack](https://webpack.js.org/) to demonstrate how you will group our JavaScript and Sass. First, create a folder with a name you want. Then create a package.json that looks like this:
 
 ```json
 {
@@ -234,7 +234,7 @@ const clayBadge = new ClayBadge(
 
 If you look at the browser now, you can see our first Clay component rendered. Isn't it incredible !?
 
-This demo is available on github, feel free to tinker.
+This demo is available on github. Feel free to tinker.
 
 > [Getting started with Clay](https://github.com/liferay/clay/tree/master/examples/getting-started-clay)
 

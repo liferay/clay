@@ -4,7 +4,7 @@ title: "Dropdown Menu"
 
 ### Dropdown wide / full
 
-<p>Use <code>.dropdown-wide</code> with <code>.dropdown</code> to make the dropdown menu big. The default width is 500px. Use <code class="code">.dropdown-full</code> to create a dropdown menu as wide as its relative parent. See dropdown examples.</p>
+<p>Use the <code>.dropdown-wide</code> class with the <code>.dropdown</code> class to make a dropdown menu big. The default width is 500px. Use the <code class="code">.dropdown-full</code> class to create a dropdown menu as wide as its relative parent. See dropdown examples.</p>
 
 <div class="clay-site-dropdown-display">
 <div aria-labelledby="" class="dropdown-wide dropdown-wide-container">
@@ -180,7 +180,7 @@ title: "Dropdown Menu"
 
 ### Dropdown Alignment
 
-<p>Align a dropdown menu on the top or bottom side with classes <code class="code">dropdown-menu</code>, <code class="code">dropdown-menu-right</code>, <code class="code">dropdown-menu-top</code>, or <code class="code">dropdown-menu-top-right</code></p>
+<p>Add the <code class="code">dropdown-menu</code>, <code class="code">dropdown-menu-right</code>, <code class="code">dropdown-menu-top</code>, or <code class="code">dropdown-menu-top-right</code> class to a dropdown menu to align it with the bottom-left, bottom-right, top-left, or top-right side of the dropdown menu trigger, respectively:</p>
 
 <div class="dropdown" style="display: inline-block;">
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" id="dropdownAlignment1" type="button">
@@ -238,7 +238,7 @@ title: "Dropdown Menu"
 	</ul>
 </div>
 
-<p>Align a dropdown menu on the left or right side with classes <code class="code">dropdown-menu-right-side</code>, <code class="code">dropdown-menu-left-side</code>, <code class="code">dropdown-menu-right-side-bottom</code>, or <code class="code">dropdown-menu-left-side-bottom</code>.</p>
+<p>Add the <code class="code">dropdown-menu-right-side</code>, <code class="code">dropdown-menu-left-side</code>, <code class="code">dropdown-menu-right-side-bottom</code>, or <code class="code">dropdown-menu-left-side-bottom</code> class to a dropdown menu to align it with the right side, left side, bottom-right side, or bottom-left side of the dropdown menu trigger, respectively:</p>
 
 <div class="dropdown" style="display: inline-block;">
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" id="dropdownAlignment5" type="button">
@@ -321,9 +321,9 @@ title: "Dropdown Menu"
 	</ul>
 </div>
 
-<p>We've also added the option to center the dropdown to its trigger in the 4 different dropdown-menu positions with classes <code class="code">dropdown-menu-center</code>, <code class="code">dropdown-menu-top-center</code>, <code class="code">dropdown-menu-left-side-middle</code>, or <code class="code">dropdown-menu-right-side-middle</code>.</p>
+<p>You can also center the dropdown menu to its trigger with these four helper classes: <code class="code">dropdown-menu-center</code>, <code class="code">dropdown-menu-top-center</code>, <code class="code">dropdown-menu-left-side-middle</code>, or <code class="code">dropdown-menu-right-side-middle</code>.</p>
 
-<p>You can center the dropdown menu in browsers that don't support css transforms by setting a negative <code class="code">margin-left</code> equal to the width of the dropdown-menu divided by 2. For left-side and right-side dropdown-menus vertically align them by setting a negative <code class="code">margin-top</code> equal to the height of the dropdown-menu divided by 2.</p>
+<p>To center the dropdown menu in browsers that don't support CSS transforms, set a negative <code class="code">margin-left</code> equal to the width of the dropdown-menu divided by two. To vertically align left-side and right-side dropdown-menus, set a negative <code class="code">margin-top</code> equal to the height of the dropdown-menu divided by two.</p>
 
 <div class="dropdown" style="display: inline-block;">
 	<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" id="dropdownAlignment9" type="button">

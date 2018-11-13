@@ -4,7 +4,7 @@ title: "Pagination"
 
 ### Description
 
-Pagination allows horizontal navigation between chunks, also denominated pages, of a dataset.
+Pagination provides horizontal navigation between chunks(pages) of a dataset.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/pagination.html">Pagination Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
@@ -12,7 +12,7 @@ Pagination allows horizontal navigation between chunks, also denominated pages, 
 
 #### Pagination
 
-> Preset pagination styles helps divide up large blocks of content on your site or app.
+> Preset pagination styles help divide up large blocks of content on your site or app.
 
 <ul class="pagination">
 	<li class="disabled page-item">

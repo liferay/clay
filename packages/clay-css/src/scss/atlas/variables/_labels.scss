@@ -1,7 +1,7 @@
 $label-border-radius: 0.125rem !default; // 2px
 $label-font-size: 0.625rem !default; // 10px
 $label-font-weight: $font-weight-semi-bold !default;
-$label-padding-x: 0.5rem !default; // 8px
+$label-padding-x: 0.25rem !default; // 4px
 $label-padding-y: 0.125rem !default; // 2px
 $label-text-transform: uppercase !default;
 
@@ -25,7 +25,7 @@ $label-lg: () !default;
 $label-lg: map-merge((
 	font-size: 0.75rem, // 12px
 	height: 1.5rem, // 24px
-	padding-x: 0.625rem, // 10px
+	padding-x: 0.5rem, // 8px
 	padding-y: 0.3125rem // 5px
 ), $label-lg);
 

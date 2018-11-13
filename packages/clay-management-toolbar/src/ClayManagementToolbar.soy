@@ -346,8 +346,10 @@
 		viewMoreURL: string
 	]}
 
-	{if $creationMenu and $creationMenu.primaryItems and length($creationMenu.primaryItems) == 1 and not $creationMenu.secondaryItems}
-		{let $item: $creationMenu.primaryItems[0] /}
+	{if $creationMenu and (($creationMenu.primaryItems and length($creationMenu.primaryItems) == 1 and (not $creationMenu.secondaryItems or length($creationMenu.secondaryItems) == 0)) or ($creationMenu.secondaryItems and length($creationMenu.secondaryItems) == 1 and (not $creationMenu.primaryItems or length($creationMenu.primaryItems) == 0)))}
+		{let $item: $creationMenu.primaryItems and $creationMenu.primaryItems[0] ?
+			$creationMenu.primaryItems[0] :
+			$creationMenu.secondaryItems[0].items ? $creationMenu.secondaryItems[0].items[0] : $creationMenu.secondaryItems[0] /}
 
 		{if $item.href}
 			{call ClayLink.render}

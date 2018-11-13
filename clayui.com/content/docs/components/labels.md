@@ -4,7 +4,7 @@ title: "Labels"
 
 ### Description
 
-Labels are a mechanism to categorize information providing quick recognition.
+Labels categorize information, providing quick recognition.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/labels.html">Labels Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
@@ -76,7 +76,7 @@ Labels are a mechanism to categorize information providing quick recognition.
 
 ### Sizes
 
-> Use `label-lg` to make the label larger or use the mixin `label-size($sassMap)` to create a custom sized label.
+> Use `label-lg` to make the label larger, or use the mixin `label-size($sassMap)` to create a custom sized label:
 
 <span class="label label-secondary"><span class="label-item label-item-expand">Normal Label</span></span>
 <span class="label label-lg label-secondary"><span class="label-item label-item-expand">Large Label</span></span>
@@ -110,7 +110,7 @@ Labels are a mechanism to categorize information providing quick recognition.
 
 #### Label simple
 
-> Used to identify, tag content, show status, to filter content or even to provide navigation to elements of same identification. It can be used with status colors.
+> The simple label is used to identify, tag content, show a status, filter content, or even provide navigation to elements. It can be used with status colors.
 
 <span class="label label-secondary"><span class="label-item label-item-expand">Label Text</span></span>
 
@@ -130,7 +130,7 @@ Labels are a mechanism to categorize information providing quick recognition.
 
 #### Label removable
 
-> Used in filter bars, categories, etc. Always in default size and without status color. Use it only in default size.
+> Removable labels are used in filter bars, categories, etc. They are always displayed in the default size and without status color. Only use them in the default size.
 
 <span class="label label-dismissible label-secondary">
 	<span class="label-item label-item-expand">Label Text</span>
@@ -165,7 +165,7 @@ Labels are a mechanism to categorize information providing quick recognition.
 
 #### Label with link
 
-> Used in sites to link to related content.
+> Add a link to a label to link to related content in a site.
 
 <a class="label label-secondary" href="#1"><span class="label-item label-item-expand">Label Text</span></a>
 

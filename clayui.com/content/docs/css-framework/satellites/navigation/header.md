@@ -4,13 +4,13 @@ title: "Header"
 
 ### Description
 
-Header is toolbar that allows identification, navigation and display actions.
+Header is a toolbar that supports identification, navigation, and display actions.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/satellites/Navigation/header.html">Header Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 ### Header
 
-<div class="alert alert-warning">Bootstrap 4 doesn't support Dropdown Menu's with Popper.js positioning inside Navbars. They align them manually via CSS classes.</div>
+<div class="alert alert-warning">Bootstrap 4 doesn't support Dropdown Menus with Popper.js positioning inside Navbars. They align them manually via CSS classes.</div>
 <nav class="application-bar application-bar-dark navbar navbar-expand-md">
 	<div class="container">
 		<ul class="navbar-nav">

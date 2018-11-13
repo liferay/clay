@@ -29,7 +29,7 @@ These elements should be used to style links based on the global link, primary, 
 
 ### Single Link
 
-Use <code>.single-link</code> on an anchor to add a semi-bold style to the link and should be used for stand alone links defined by https://lexicondesign.io/docs/patterns/link.html.
+Add the <code>.single-link</code> class to an anchor to add a semi-bold style to the link. This should be used for stand alone links defined by https://lexicondesign.io/docs/patterns/link.html.
 
 <div><a class="link-primary single-link" href="#1">.link-primary.single-link</a></div>
 
@@ -51,10 +51,10 @@ Use <code>.single-link</code> on an anchor to add a semi-bold style to the link 
 
 ### Component Links
 
-Use these patterns for links, titles, subtitles in components.
+Use these patterns for links, titles, and subtitles in components.
 
 <div class="alert alert-warning">
-    The colors, sizing, and other CSS Properties can change for these items depending on the component you put them in (requires custom CSS).
+    Color, sizing, and other CSS Properties may differ for an item depending on the component you put them in (requires custom CSS).
 </div>
 <div class="">
     <div><a class="component-link" href="#1">.component-link</a></div>
@@ -74,7 +74,7 @@ Use these patterns for links, titles, subtitles in components.
 
 ### Component Action
 
-Use these patterns for actions in components.
+Use these patterns for actions in components:
 
 #### Anchor
 

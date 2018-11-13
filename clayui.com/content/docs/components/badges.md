@@ -4,7 +4,7 @@ title: "Badges"
 
 ### Description
 
-Badges help highlight important information such as notifications or new and unread messages. Badges have circular borders and are only used to specify a number.
+Badges help highlight important information, such as notifications or new and unread messages. Badges have circular borders and are only used to specify a number.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/badges.html">Badges Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
@@ -117,7 +117,7 @@ Badges help highlight important information such as notifications or new and unr
 
 ### Clay Badge Sizes
 
-<div class="alert alert-warning">Badge Sizes have been removed, use the <a href="https://github.com/liferay/clay/blob/master/packages/clay/src/scss/mixins/_badges.scss#L1">clay-badge-size($sassMap) mixin</a> to create custom badges sizes for your app.</div>
+<div class="alert alert-warning">Badge Sizes have been removed. Use the <a href="https://github.com/liferay/clay/blob/master/packages/clay/src/scss/mixins/_badges.scss#L1">clay-badge-size($sassMap) mixin</a> to create custom badge sizes for your app.</div>
 
 ### API
 

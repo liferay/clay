@@ -201,12 +201,16 @@
 }
 
 .dropdown-item[data-toggle="tab"] {
-	.dropdown-item-indicator {
+	.dropdown-item-indicator,
+	.dropdown-item-indicator-start,
+	.dropdown-item-indicator-end {
 		display: none;
 	}
 
 	&.active {
-		.dropdown-item-indicator {
+		.dropdown-item-indicator,
+		.dropdown-item-indicator-start,
+		.dropdown-item-indicator-end {
 			display: block;
 		}
 	}

@@ -4,7 +4,7 @@ title: "Text Input Localizable"
 
 ### Description
 
-A text input viaration used in those fields that can be translated into multiple languages.
+A text input variation used in fields that can be translated into multiple languages.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Forms/text_input_localizable.html">Text Input Localizable Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 

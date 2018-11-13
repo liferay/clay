@@ -2,7 +2,7 @@
 title: "Dataset Display"
 ---
 
-A dataset display is the combination of a <a href="/docs/components/toolbars/management-toolbar.html">management bar</a> with one or many data visualization types and a possible mechanism of pagination. The most common visualization types used are <a href="/docs/components/table/table.html">table</a>, <a href="/docs/components/list.html">list</a> and <a href="/docs/components/card.html">card</a>.
+A dataset display is the combination of a <a href="/docs/components/toolbars/management-toolbar.html">management bar</a> with one or multiple data visualization types and a possible mechanism of pagination. The most common visualization types used are <a href="/docs/components/table/table.html">table</a>, <a href="/docs/components/list.html">list</a>, and <a href="/docs/components/card.html">card</a>.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/components/dataset-display.html">Dataset Display Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
@@ -183,7 +183,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                             </td>
                             <td><span class="text-truncate">U.S.A</span></td>
                             <td class="text-right">10 min.</td>
-                            <td><span class="label label-success"><span class="label-item label-item-expand">No Spicy</span></span></td>
+                            <td><span class="label label-success"><span class="label-item label-item-expand">Not Spicy</span></span></td>
                             <td><button class="btn btn-sm btn-secondary" type="button">Download</button></td>
                             <td>
                                 <div class="progress-group progress-info">
@@ -223,7 +223,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                             </td>
                             <td><span class="text-truncate">Spain</span></td>
                             <td class="text-right">90 min.</td>
-                            <td><span class="label label-success"><span class="label-item label-item-expand">No Spicy</span></span></td>
+                            <td><span class="label label-success"><span class="label-item label-item-expand">Not Spicy</span></span></td>
                             <td><button class="btn btn-sm btn-secondary" type="button">Download</button></td>
                             <td>
                                 <div class="progress-group progress-info">
@@ -243,7 +243,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                             </td>
                             <td><span class="text-truncate">Italy</span></td>
                             <td class="text-right">30 min.</td>
-                            <td><span class="label label-success"><span class="label-item label-item-expand">No Spicy</span></span></td>
+                            <td><span class="label label-success"><span class="label-item label-item-expand">Not Spicy</span></span></td>
                             <td><button class="btn btn-sm btn-secondary" type="button">Download</button></td>
                             <td>
                                 <div class="progress-group progress-info">
@@ -572,7 +572,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                             </td>
                             <td><span class="text-truncate">U.S.A</span></td>
                             <td class="text-right">10 min.</td>
-                            <td><span class="label label-success"><span class="label-item label-item-expand">No Spicy</span></span></td>
+                            <td><span class="label label-success"><span class="label-item label-item-expand">Not Spicy</span></span></td>
                             <td><button class="btn btn-sm btn-secondary" type="button">Download</button></td>
                             <td>
                                 <div class="progress-group progress-info">

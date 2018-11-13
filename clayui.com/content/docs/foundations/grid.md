@@ -1,10 +1,11 @@
 ---
 title: "Grid"
+redirectFrom: "/docs/layout/grid.html"
 ---
 
 ### Description
 
-The aim of the Lexicon layout framework is to provide a common structural reference that contributes to streamlining the component construction and page composition processes as well as favoring visual consistency between the different elements of the interface.
+The aim of the Lexicon layout framework is to provide a common structural reference that contributes to streamlining the component construction and page composition processes, as well as favoring visual consistency between the different elements of the interface.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/designPrinciples/grid.html">Grid Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
@@ -86,7 +87,7 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 
 > <a href="https://getbootstrap.com/docs/4.0/layout/grid/">https://getbootstrap.com/docs/4.0/layout/grid/</a>
 
-> Use <code>.container-fluid</code> with <code>.container-fluid-max-{literal}{{/literal}sm|md|lg|xl{literal}}{/literal}</code> to create fluid containers that don't expand beyond a set width (e.g., For Atlas xl => 1248px).
+> Use the <code>.container-fluid</code> class with the <code>.container-fluid-max-{literal}{{/literal}sm|md|lg|xl{literal}}{/literal}</code> class to create fluid containers that don't expand beyond a set width (e.g., For Atlas xl => 1248px).
 
 <table>
 	<thead>
@@ -179,9 +180,9 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 
 ### Container Form Lg
 
-> Use <code>.container-form-lg</code> with <code>.container</code> or <code>.container-fluid</code> to properly space between application controls and the form. This class only modifies the <code>padding</code> on the container.
+> Use the <code>.container-form-lg</code> class with the <code>.container</code> class or <code>.container-fluid</code> class to properly space between application controls and the form. This class only modifies the <code>padding</code> on the container.
 
-<div class="alert alert-warning">If you need additional breakpoints such as <code>.container-form-sm|md|xl</code> you will need to define them yourself.</div>
+<div class="alert alert-warning">If you need additional breakpoints such as <code>.container-form-sm|md|xl</code>, you will need to define them yourself.</div>
 
 <div>
 	<nav class="application-bar application-bar-dark navbar navbar-expand-md">
@@ -234,7 +235,7 @@ The aim of the Lexicon layout framework is to provide a common structural refere
 
 ### Container View
 
-> Use <code>.container-view</code> with <code>.container</code> or <code>.container-fluid</code> to properly space between application controls and view pages (e.g., Card View, Table View, or List View). This class only modifies the <code>padding</code> on the container.
+> Use the <code>.container-view</code> class with the <code>.container</code> class or <code>.container-fluid</code> class to properly space between application controls and view pages (e.g., Card View, Table View, or List View). This class only modifies the <code>padding</code> on the container.
 
 <div>
 	<nav class="application-bar application-bar-dark navbar navbar-expand-md">

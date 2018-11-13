@@ -4,7 +4,7 @@ title: "Management Toolbar"
 
 ### Description
 
-Management toolbar is an extension of Toolbar. A combination of different components as filters, orders, search, visualization select and other actions, that allow to manage dataset.
+Management toolbar is an extension of Toolbar. It is a combination of different components as filters, orders, search, visualization select, and other actions that let users manage a dataset.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Toolbars/management_bar.html">Management Toolbar Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
@@ -558,7 +558,7 @@ Management toolbar is an extension of Toolbar. A combination of different compon
 </nav>
 ```
 
-### Management Toolbar Seach Results
+### Management Toolbar Search Results
 
 <div>
 	<nav class="tbar subnav-tbar subnav-tbar-primary">
@@ -593,6 +593,134 @@ Management toolbar is an extension of Toolbar. A combination of different compon
 			<li class="tbar-item">
 				<button class="btn btn-unstyled component-link tbar-link" type="button">Clear</button>
 			</li>
+		</ul>
+	</div>
+</nav>
+```
+
+### Management Toolbar search results with filter labels
+
+<nav class="tbar tbar-inline-md-down subnav-tbar subnav-tbar-primary">
+	<div class="container-fluid container-fluid-max-xl">
+		<ul class="tbar-nav tbar-nav-wrap">
+			<li class="tbar-item">
+				<div class="tbar-section">
+					<span class="component-text text-truncate-inline">
+						<span class="text-truncate">6 results for "<strong>red</strong>"</span>
+					</span>
+				</div>
+			</li>
+		<li class="tbar-item">
+			<div class="tbar-section">
+				<span class="label component-label tbar-label">
+					<span class="label-item label-item-expand">
+						<div class="label-section">Filter 1</div>
+					</span>
+				</span>
+			</div>
+		</li>
+		<li class="tbar-item">
+			<div class="tbar-section">
+				<span class="label label-dismissible component-label tbar-label">
+					<span class="label-item label-item-expand">
+						<div class="label-section">Filter 2</div>
+					</span>
+					<span class="label-item label-item-after">
+						<button class="btn close" aria-label="close" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+								<title>times</title>
+								<use href="/images/icons/icons.svg#times"></use>
+							</svg>
+						</button>
+					</span>
+				</span>
+			</div>
+		</li>
+		<li class="tbar-item tbar-item-expand">
+			<div class="tbar-section">
+				<span class="label label-dismissible component-label tbar-label">
+					<span class="label-item label-item-expand">
+						<div class="label-section">Category: <strong>Label 3</strong></div>
+						</span>
+							<span class="label-item label-item-after">
+								<button class="btn close" aria-label="close" type="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+										<title>times</title>
+										<use href="/images/icons/icons.svg#times"></use>
+									</svg>
+								</button>
+							</span>
+						</span>
+					</div>
+				</li>
+			<li class="tbar-item">
+				<div class="tbar-section">
+					<a class=" component-link tbar-link" href="#clear">clear</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+```html
+<nav class="tbar tbar-inline-md-down subnav-tbar subnav-tbar-primary">
+	<div class="container-fluid container-fluid-max-xl">
+		<ul class="tbar-nav tbar-nav-wrap">
+			<li class="tbar-item">
+				<div class="tbar-section">
+					<span class="component-text text-truncate-inline">
+						<span class="text-truncate">6 results for "<strong>red</strong>"</span>
+					</span>
+				</div>
+			</li>
+		<li class="tbar-item">
+			<div class="tbar-section">
+				<span class="label component-label tbar-label">
+					<span class="label-item label-item-expand">
+						<div class="label-section">Filter 1</div>
+					</span>
+				</span>
+			</div>
+		</li>
+		<li class="tbar-item">
+			<div class="tbar-section">
+				<span class="label label-dismissible component-label tbar-label">
+					<span class="label-item label-item-expand">
+						<div class="label-section">Filter 2</div>
+					</span>
+					<span class="label-item label-item-after">
+						<button class="btn close" aria-label="close" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+								<title>times</title>
+								<use href="/images/icons/icons.svg#times"></use>
+							</svg>
+						</button>
+					</span>
+				</span>
+			</div>
+		</li>
+		<li class="tbar-item tbar-item-expand">
+			<div class="tbar-section">
+				<span class="label label-dismissible component-label tbar-label">
+					<span class="label-item label-item-expand">
+						<div class="label-section">Category: <strong>Label 3</strong></div>
+					</span>
+					<span class="label-item label-item-after">
+						<button class="btn close" aria-label="close" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+								<title>times</title>
+								<use href="/images/icons/icons.svg#times"></use>
+							</svg>
+						</button>
+					</span>
+				</span>
+			</div>
+		</li>
+		<li class="tbar-item">
+			<div class="tbar-section">
+				<a class=" component-link tbar-link" href="#clear">clear</a>
+			</div>
+		</li>
 		</ul>
 	</div>
 </nav>

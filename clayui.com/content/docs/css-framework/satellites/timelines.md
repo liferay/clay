@@ -2,9 +2,9 @@
 title: Timelines
 ---
 
-> Place `timeline-increment` inside whatever element you want it to be aligned to. The element must be positioned relative. For the example below, we place it inside the `panel-heading` element. This vertically centers the icon and label relative to the panel-heading.
+> Add the `timeline-increment` class to the element you want the timeline to be aligned to. The element must be positioned relative. For the example below, we place it inside the `panel-heading` element. This vertically centers the icon and label relative to the panel-heading.
 
-> The icon can be any size as long as it is wrapped inside `timeline-increment`. For larger icons, the spacing between the content and increment (<a href="#timeline-spacing">Timeline Spacing</a>) must be adjusted to accomodate it.
+> The icon can be any size as long as it is wrapped with the `timeline-increment` class. For larger icons, the spacing between the content and increment (<a href="#timeline-spacing">Timeline Spacing</a>) must be adjusted to accommodate it.
 
 <ul class="timeline">
 	<li class="timeline-item">
@@ -122,7 +122,7 @@ title: Timelines
 
 ### Timeline Increment with Text
 
-> Place text inside `timeline-increment` by wrapping the text with `<span class="timeline-increment-text"></span>`
+> Place text inside a `timeline-increment` element by wrapping the text with `<span class="timeline-increment-text"></span>`
 
 <ul class="timeline">
 	<li class="timeline-item">
@@ -130,7 +130,7 @@ title: Timelines
 			<div class="timeline-increment">
 				<span class="timeline-increment-text">Jan 1</span>
 			</div>
-			<div class="panel-body">The icon can be any size as long as it is wrapped inside timeline-increment. For larger icons, the spacing between the content and label must be adjusted to accomodate it. The spacing can be adjusted by modifying the $timeline-spacing sass variable, or manually overriding in your css.</div>
+			<div class="panel-body">The icon can be any size as long as it is wrapped inside timeline-increment. For larger icons, the spacing between the content and label must be adjusted to accommodate it. The spacing can be adjusted by modifying the $timeline-spacing sass variable, or manually overriding it in your CSS.</div>
 		</div>
 	</li>
 	<li class="timeline-item">
@@ -138,7 +138,7 @@ title: Timelines
 			<div class="timeline-increment">
 				<span class="timeline-increment-text">Apr 22</span>
 			</div>
-			<div class="panel-body">The icon can be any size as long as it is wrapped inside timeline-increment. For larger icons, the spacing between the content and label must be adjusted to accomodate it. The spacing can be adjusted by modifying the $timeline-spacing sass variable, or manually overriding in your css.</div>
+			<div class="panel-body">The icon can be any size as long as it is wrapped inside timeline-increment. For larger icons, the spacing between the content and label must be adjusted to accommodate it. The spacing can be adjusted by modifying the $timeline-spacing sass variable, or manually overriding it in your CSS.</div>
 		</div>
 	</li>
 	<li class="timeline-item">
@@ -146,7 +146,7 @@ title: Timelines
 			<div class="timeline-increment">
 				<span class="timeline-increment-text">May 29</span>
 			</div>
-			<div class="panel-body">The icon can be any size as long as it is wrapped inside timeline-increment. For larger icons, the spacing between the content and label must be adjusted to accomodate it. The spacing can be adjusted by modifying the $timeline-spacing sass variable, or manually overriding in your css.</div>
+			<div class="panel-body">The icon can be any size as long as it is wrapped inside timeline-increment. For larger icons, the spacing between the content and label must be adjusted to accommodate it. The spacing can be adjusted by modifying the $timeline-spacing sass variable, or manually overriding it in your CSS.</div>
 		</div>
 	</li>
 	<li class="timeline-item">
@@ -154,7 +154,7 @@ title: Timelines
 			<div class="timeline-increment">
 				<span class="timeline-increment-text">Dec 12</span>
 			</div>
-			<div class="panel-body">The icon can be any size as long as it is wrapped inside timeline-increment. For larger icons, the spacing between the content and label must be adjusted to accomodate it. The spacing can be adjusted by modifying the $timeline-spacing sass variable, or manually overriding in your css.</div>
+			<div class="panel-body">The icon can be any size as long as it is wrapped inside timeline-increment. For larger icons, the spacing between the content and label must be adjusted to accommodate it. The spacing can be adjusted by modifying the $timeline-spacing sass variable, or manually overriding it in your CSS.</div>
 		</div>
 	</li>
 </ul>
@@ -166,7 +166,7 @@ title: Timelines
 			<div class="timeline-increment">
 				<span class="timeline-increment-text">Jan 1</span>
 			</div>
-			<div class="panel-body">The icon can be any size as long as it is wrapped inside timeline-increment. For larger icons, the spacing between the content and label must be adjusted to accomodate it. The spacing can be adjusted by modifying the $timeline-spacing sass variable, or manually overriding in your css.</div>
+			<div class="panel-body">The icon can be any size as long as it is wrapped inside timeline-increment. For larger icons, the spacing between the content and label must be adjusted to accommodate it. The spacing can be adjusted by modifying the $timeline-spacing sass variable, or manually overriding it in your CSS.</div>
 		</div>
 	</li>
 	<li class="timeline-item">
@@ -174,7 +174,7 @@ title: Timelines
 			<div class="timeline-increment">
 				<span class="timeline-increment-text">Apr 22</span>
 			</div>
-			<div class="panel-body">The icon can be any size as long as it is wrapped inside timeline-increment. For larger icons, the spacing between the content and label must be adjusted to accomodate it. The spacing can be adjusted by modifying the $timeline-spacing sass variable, or manually overriding in your css.</div>
+			<div class="panel-body">The icon can be any size as long as it is wrapped inside timeline-increment. For larger icons, the spacing between the content and label must be adjusted to accommodate it. The spacing can be adjusted by modifying the $timeline-spacing sass variable, or manually overriding it in your CSS.</div>
 		</div>
 	</li>
 	<li class="timeline-item">
@@ -182,7 +182,7 @@ title: Timelines
 			<div class="timeline-increment">
 				<span class="timeline-increment-text">May 29</span>
 			</div>
-			<div class="panel-body">The icon can be any size as long as it is wrapped inside timeline-increment. For larger icons, the spacing between the content and label must be adjusted to accomodate it. The spacing can be adjusted by modifying the $timeline-spacing sass variable, or manually overriding in your css.</div>
+			<div class="panel-body">The icon can be any size as long as it is wrapped inside timeline-increment. For larger icons, the spacing between the content and label must be adjusted to accommodate it. The spacing can be adjusted by modifying the $timeline-spacing sass variable, or manually overriding it in your CSS.</div>
 		</div>
 	</li>
 	<li class="timeline-item">
@@ -190,7 +190,7 @@ title: Timelines
 			<div class="timeline-increment">
 				<span class="timeline-increment-text">Dec 12</span>
 			</div>
-			<div class="panel-body">The icon can be any size as long as it is wrapped inside timeline-increment. For larger icons, the spacing between the content and label must be adjusted to accomodate it. The spacing can be adjusted by modifying the $timeline-spacing sass variable, or manually overriding in your css.</div>
+			<div class="panel-body">The icon can be any size as long as it is wrapped inside timeline-increment. For larger icons, the spacing between the content and label must be adjusted to accommodate it. The spacing can be adjusted by modifying the $timeline-spacing sass variable, or manually overriding it in your CSS.</div>
 		</div>
 	</li>
 </ul>
@@ -198,7 +198,7 @@ title: Timelines
 
 ### Timeline Right
 
-> Align increments to the right with `timeline-right`.
+> Align increments to the right with the `timeline-right` class.
 
 <ul class="timeline timeline-right">
 	<li class="timeline-item">
@@ -282,7 +282,7 @@ title: Timelines
 
 ### Timeline Center
 
-> Add class `timeline-center` to center your timeline, it displays items on the right by default. To display items on the left, add class `timeline-item-reverse` to a timeline item.
+> Add the `timeline-center` class to center your timeline. It displays items on the right by default. To display items on the left, add the `timeline-item-reverse` class to a timeline item.
 
 <ul class="timeline timeline-center">
 	<li class="timeline-item">
@@ -382,7 +382,7 @@ title: Timelines
 
 ### Timeline Even
 
-> Alternate every other timeline item on the left with class `timeline-even`.
+> Alternate every other timeline item on the left with the `timeline-even` class.
 
 <ul class="timeline timeline-center timeline-even">
 	<li class="timeline-item">
@@ -472,7 +472,7 @@ title: Timelines
 
 ### Timeline Odd
 
-> Alternate every other timeline item on the right with class `timeline-odd`.
+> Alternate every other timeline item on the right with the `timeline-odd` class.
 
 <ul class="timeline timeline-center timeline-odd">
 	<li class="timeline-item">
@@ -562,7 +562,7 @@ title: Timelines
 
 ### Timeline Right XS Only
 
-> Align timeline to the right at screen widths 767px and below with `timeline-right-xs-only`.
+> Align the timeline to the right at screen widths 767px and below with the `timeline-right-xs-only` class.
 
 <ul class="timeline timeline-center timeline-even timeline-right-xs-only">
 	<li class="timeline-item">
@@ -652,7 +652,7 @@ title: Timelines
 
 ### Timeline Spacing
 
-> Adjust the spacing around the timeline with `@include timeline-spacing($outer-spacing, $inner-spacing, $item-padding-y)`. The last argument is not required and has a default value of 10px.
+> Use `@include timeline-spacing($outer-spacing, $inner-spacing, $item-padding-y)` to adjust the spacing around the timeline. The `$item-padding-y` argument is not required. It defaults to 10px.
 
 > `$outer-spacing` sets `padding-left` on `.timeline` and `padding-right` on `.timeline-right`.
 

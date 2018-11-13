@@ -4,13 +4,13 @@ title: "Alerts"
 
 ### Description
 
-Alerts are used to capture the attention of the user in an intrusive way. Sometimes just to say that something went right, others to say that something needs to be reviewed.
+Alerts are used to capture the attention of the user in an intrusive way. They can be used just to say that something went right, or perhaps to say that something needs to be reviewed.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/alerts.html">Alerts Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 ### TOAST
 
-> This type of alert is specific for toast messages. This type of messages appear on the top right corner of the screen. The maximum width of a toast message is 360px and the height can vary depending on the number of rows. It always have a close action.
+> This type of alert is specific for toast messages. These type of messages appear on the top right corner of the screen. The maximum width of a toast message is 360px, and the height can vary depending on the number of rows. It always has a close action.
 
 <div id="claySiteAlertsNotificationsSpacer">
 	<div class="row">
@@ -107,7 +107,7 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 
 ### EMBEDDED
 
-> Embedded alerts are thought to be used inside context as forms. Usually you will only need to use the information one. Its width depends on the container with you use it, always respecting the container margins to the content. The close action is not of mandatory use.
+> Embedded alerts are meant for use in forms. Usually you will only need to use the information one. Its width depends on the width of the container it is placed in, always respecting the container margins to the content. The close action is not required for embedded alerts.
 
 <div class="alert alert-danger" role="alert">
 	<span class="alert-indicator">
@@ -241,7 +241,7 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 
 ### STRIPE
 
-> Stripe alerts are always placed below the last navigation element, either the header or the navigation bar. This alert appears usually on "Save" action communicating the status of the action once received from the server. The close action is mandatory in this alert type. Its width is always full container width and pushes all the content below it.
+> Stripe alerts are always placed below the last navigation element, either the header or the navigation bar. This alert usually appears on "Save" action, communicating the status of the action once received from the server. The close action is mandatory in this alert type. Its width is always full container width and pushes all the content below it.
 
 <div class="alert alert-danger alert-dismissible alert-fluid" role="alert">
 	<div class="container">
@@ -433,7 +433,7 @@ Alerts are used to capture the attention of the user in an intrusive way. Someti
 
 #### Mixed HTML Content
 
-> All alerts accept html as their content. You can use the following modifiers:
+> All alerts accept HTML as their content. You can use the following modifiers:
 > - `.lead` inside of an alert to make the beginning of your message stand out
 > - `.alert-link` to style a link inside your alert
 

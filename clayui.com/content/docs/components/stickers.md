@@ -10,7 +10,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 
 ### Sizes
 
-> Stickers come in 4 sizes sm, normal, lg, and xl . Create your own custom size with the `sticker-size` mixin.
+> Stickers come in four sizes: sm, normal, lg, and xl. Create your own custom size with the `sticker-size` mixin.
 
 <span class="sticker sticker-primary sticker-sm">133</span>
 <span class="sticker sticker-secondary">133</span>
@@ -135,7 +135,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 
 ### Square
 
-> Use it only with files and folders. You can place up to 3 characters inside it or an icon. Always capital letters.
+> Use square stickers to identify files and folders. You can place up to three characters or an icon inside a square sticker. Always capitalize the text in a square sticker.
 
 <span class="sticker sticker-primary">JPG</span>
 <span class="sticker sticker-primary">
@@ -183,7 +183,7 @@ Stickers are a visual way to quickly identify content in a different way than ba
 
 ### Round
 
-> Use it only with people. You can places up to 2 characters inside it or an image. Always capital letters.
+> Use a round sticker to identify people. You can place up to two characters or an image inside a round sticker. Always capitalize the text in a round sticker.
 
 <span class="sticker sticker-primary rounded-circle">JP</span>
 <span class="sticker sticker-primary rounded-circle">
@@ -229,9 +229,9 @@ Stickers are a visual way to quickly identify content in a different way than ba
 
 ### Position
 
-> A sticker can be placed in a Image Card. Its position is always bottom left as you can see in the following example.
+> You can add a sticker to an Image Card. By default, its position is bottom left.
 
-> Place them anywhere relative to your container using positional sticker classes `sticker-top-left`, `sticker-bottom-left`, `sticker-top-right`, and `sticker-bottom-right`.
+> Use the positional sticker classes to place them anywhere relative to your container: `sticker-top-left`, `sticker-bottom-left`, `sticker-top-right`, and `sticker-bottom-right`.
 
 <div class="row">
 	<div class="col-md-3 col-6">

@@ -3,14 +3,13 @@ title: "Button Group"
 ---
 
 ### Description
-
-Button groups are used to switch between complementary views for example, but they must never be used for complementary actions and Change and Cancel or Save and Cancel. In those cases the use of single buttons is the correct solution.
+Button groups are used to switch between complementary views for example, but they must never be used for complementary actions, "Change and Cancel" actions, or "Save and Cancel" actions. In those cases, single buttons are the correct solution.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/buttons.html">Button Group Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 ### Button Group Item
 
-> A component for spacing buttons without having to worry about white space added by browsers. This should be used for complementary actions.
+> A component for spacing buttons, without having to worry about white space added by browsers. This should be used for complementary actions.
 
 <div class="btn-group">
 	<div class="btn-group-item">

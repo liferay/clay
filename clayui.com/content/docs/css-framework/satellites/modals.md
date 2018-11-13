@@ -4,7 +4,7 @@ title: "Modals"
 
 ### Inline Scroller
 
-<p><code>inline-scroller</code> is a helper class that sizes modal-body to a fixed height and scrolls any overflowing content. Add it to modal-body when you want modal-body to be a fixed height. It defaults to height 125px.</p>
+<p><code>inline-scroller</code> is a helper class that sizes modal-body to a fixed height and makes any overflowing content scrollable. Add it to modal-body when you want modal-body to be a fixed height. The default height is 125px.</p>
 
 <button class="btn btn-info" data-target="#claySmallModalInlineScroller"  data-toggle="modal" type="button">Small Modal Inline Scroller</button>
 
@@ -59,4 +59,4 @@ title: "Modals"
 </div>
 
 ### Modal Helpers
-Use classes <code>modal-item-first</code>, <code>modal-item</code>, and <code>modal-item-last</code> inside <code>modal-footer</code> to align content left, middle, and right.
+Add the <code>modal-item-first</code>, <code>modal-item</code>, or <code>modal-item-last</code> class to a <code>modal-footer</code> to align content to the left, middle, or right.

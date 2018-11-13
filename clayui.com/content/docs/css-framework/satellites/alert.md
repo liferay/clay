@@ -4,7 +4,7 @@ title: "Alerts"
 
 ### Colors
 
-Alerts like to colors is available for you.
+Alerts are available in the standard colors shown below:
 
 <div class="row">
 	<div class="col-md-3">

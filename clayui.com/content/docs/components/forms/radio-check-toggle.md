@@ -1,12 +1,12 @@
 ---
-title: "Checkbox, Radio, Toggle"
+title: "Checkbox, Radio, and Toggle"
 ---
 
 ### Description
 
-Checkboxes, radios and toggles provide users with different selection and activation tools.
+Checkboxes, radios, and toggles provide users with different selection and activation tools.
 
-<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Forms/radio_check_toggle.html">Checkbox, Radio, Toggle Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Forms/radio_check_toggle.html">Checkbox, Radio, and Toggle Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 ### Checkbox
 
@@ -334,7 +334,7 @@ Checkboxes, radios and toggles provide users with different selection and activa
 </div>
 <div class="custom-control custom-checkbox custom-control-inline">
 	<label>
-		<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox"/>
+		<input class="custom-control-input" type="checkbox"/>
 		<span class="custom-control-label">
 			<span class="custom-control-label-text">Indeterminate</span>
 		</span>
@@ -749,4 +749,3 @@ Checkboxes, radios and toggles provide users with different selection and activa
     </label>
 </div>
 ```
-

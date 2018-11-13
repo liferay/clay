@@ -4,7 +4,7 @@ title: "Icons"
 
 ### Description
 
-Icon is a visual metaphor representing a concept that lies behind the idea and/or action.
+Icons are a visual representation of an idea and/or action.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/icons.html">Icons Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
@@ -14,7 +14,7 @@ Icon is a visual metaphor representing a concept that lies behind the idea and/o
 	Lexicon icons do not use the same format as Font Awesome or Bootstrap's Glyphicons.
 </div>
 
-> We use SVG elements that link to an SVG sprite, like so:
+> We use SVG elements that link to an SVG sprite. See the example below:
 
 ```soy
 {call ClayIcon.render}
@@ -38,7 +38,7 @@ Icon is a visual metaphor representing a concept that lies behind the idea and/o
 </svg>
 ```
 
-> Note that the ID after the # symbol is the ID of the icon to use, so if you wanted to use plus icon, you would do change the `href` to `path/to/icons.svg#plus`.
+> Note that the ID after the # symbol is the ID of the icon to use. For example, if you wanted to use the plus icon, you would specify the following path: `path/to/icons.svg#plus`. See the example below:
 
 <a href="#lexicon-icon-explanation">Why do we use SVG?</a>
 
@@ -48,13 +48,13 @@ Icon is a visual metaphor representing a concept that lies behind the idea and/o
 
 ### Language Flags
 
-> People tend to have pretty strong opinions on whether flags should be used as a visual cue for indicating a language, mainly because in many parts of the world, the flag may have cultural and geographic meanings that we might not be aware of, or the flag itself isn't fully accurate to the dialects spoken in that region.
+> People tend to have pretty strong opinions on whether flags should be used as a visual cue for indicating a language, mainly because in many parts of the world the flag may have cultural and geographic meanings that we might not be aware of, or the flag itself isn't fully accurate to the dialects spoken in that region.
 
-> While we understand that reasoning, we've found that the times they are actually needed (when a user is not familiar with the currently displayed language) somewhat eliminates using other mechanisms, such as the name of the language (since the current language could be in an entirely different character set). Given this, there is often at least some familiarity with the identity of a country that speaks a shared language.
+> While we understand this reasoning, we've found that when a user is not familiar with the currently displayed language, flags somewhat eliminate the use of other mechanisms, such as the name of the language (since the current language could be in an entirely different character set). Given this, there is often at least some familiarity with the identity of a country that speaks a shared language.
 
 > Or, to paraphrase Winston Churchill, "Using flags is the worst system for indicating language, except for all others". :)
 
-> To use the flags below, follow the same process as above, but the name of the icon is the locale and country code indicated in parenthesis (e.g. to use the Japanese icon, you would use `ja-jp`)
+> To use the flags below, follow the same process as you would for a standard icon, and use the locale and country code indicated in parenthesis for the icon's name (e.g. to use the Japanese icon, you would use `ja-jp`)
 
 <ul class="lexicon-icon-list list-unstyled">
 	[foreach Flags]
@@ -62,7 +62,7 @@ Icon is a visual metaphor representing a concept that lies behind the idea and/o
 
 ### SVG Icons as Background Images
 
-> We have created a Sass function to turn Lexicon SVG icon's into data uri schemes, which enables you to include them as a background-image on an HTML element. The Sass function `lx-icon(icon-name, color)` takes the name of a Lexicon SVG Icon and color takes a color. The Sass rule set `.site-add-cell {lb} background-image: lx-icon(add-cell, #5AF); background-size: contain; display: inline-block; height: 20px; width: 20px; {rb}` will place the SVG icon add-cell as a background-image on any element with class site-add-cell.
+> We have created a Sass function to turn Lexicon SVG icon's into data uri schemes, which enables you to use them as a background images on an HTML element. The Sass function `lx-icon(icon-name, color)` takes the name of a Lexicon SVG Icon and a color. For example, the Sass rule set `.site-add-cell {lb} background-image: lx-icon(add-cell, #5AF); background-size: contain; display: inline-block; height: 20px; width: 20px; {rb}` will place the SVG icon add-cell as a background-image on any element with class site-add-cell.
 
 <span class="clay-site-add-cell clay-site-svg-bg">add-cell</span>
 <span class="clay-site-add-column clay-site-svg-bg">add-column</span>
@@ -75,7 +75,7 @@ Icon is a visual metaphor representing a concept that lies behind the idea and/o
 
 ### Svg-url()
 
-> You can turn your custom SVG into a data uri using the Sass function `svg-url($svg)` where `$svg` is the code for your inline SVG. The function returns `url(your_svg_as_data_uri)`.
+> You can turn your custom SVG into a data uri using the Sass function `svg-url($svg)`, where `$svg` is the code for your inline SVG. The function returns `url(your_svg_as_data_uri)`.
 
 <div class="alert alert-info">
 	When using `svg-url()`, wrap your inline SVG code with single quotes if your SVG's attributes are delimited with double quotes.
@@ -86,9 +86,9 @@ Icon is a visual metaphor representing a concept that lies behind the idea and/o
 ### Why do we use SVG?
 
 <p id="lexicon-icon-explanation">
+  Font icons, while fairly simple, suffer drawbacks, such as sub-pixel aliasing. This results in a lower quality than we would like.
 	SVG gives us and you a greater amount of freedom in styling the icons, as well as a higher level of fidelity and clarity in the icons.
-	Font icons, while fairly simple, also suffer some drawbacks, mainly with sub-pixel aliasing that cause the quality to not be as high as we would like.
-	Also SVG allows for multi-color icons, for example:
+	Also, SVG supports multi-color icons, as shown below:
 </p>
 
 <div class="lexicon-icon-examples">

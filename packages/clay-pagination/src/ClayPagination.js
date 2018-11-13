@@ -1,8 +1,9 @@
+import 'clay-dropdown';
 import 'clay-link';
+import ClayComponent from 'clay-component';
 // eslint-disable-next-line
-import { ClayDropdownBase } from 'clay-dropdown';
+import { ClayDropdownBase, ClayDropdownItem } from 'clay-dropdown';
 import {Config} from 'metal-state';
-import Component from 'metal-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 
@@ -10,9 +11,25 @@ import templates from './ClayPagination.soy.js';
 
 /**
  * Metal ClayPagination component.
- * @extends Component
+ * @extends ClayComponent
  */
-class ClayPagination extends Component {}
+class ClayPagination extends ClayComponent {
+	/**
+	 * Continues the propagation of the page clicked event
+	 * @param {!Event} event
+	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handlePageClick(event) {
+		return !this.emit({
+			data: {
+				page: event.delegateTarget.getAttribute('data-page'),
+			},
+			name: 'pageClicked',
+			originalEvent: event,
+		});
+	}
+}
 
 /**
  * State definition.

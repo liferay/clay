@@ -31,9 +31,9 @@
 @import "components/_menubar";
 @import "components/_navbar";
 
-@import "components/_application-bar"; // Shound win over Navs and Navbar
-@import "components/_management-bar"; // Should win over Navs and Navbar
-@import "components/_navigation-bar"; // Shound win over Navs and Navbar
+@import "components/_application-bar";
+@import "components/_management-bar";
+@import "components/_navigation-bar";
 
 @import "components/_pagination";
 @import "components/_panels";

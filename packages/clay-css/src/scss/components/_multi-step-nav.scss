@@ -171,12 +171,18 @@
 	position: relative;
 	width: $multi-step-indicator-width;
 
-	.dropdown-item-indicator {
+	.dropdown-item-indicator,
+	.dropdown-item-indicator-start,
+	.dropdown-item-indicator-end {
 		display: none;
 	}
 
-	.complete .dropdown-item-indicator {
-		display: block;
+	.complete {
+		.dropdown-item-indicator,
+		.dropdown-item-indicator-start,
+		.dropdown-item-indicator-end {
+			display: block;
+		}
 	}
 
 	.multi-step-indicator-label {

@@ -12,7 +12,7 @@ A dropdown is a list of options related to the element that triggers it.
 
 #### Default
 
-> The default dropdown is just a panel not prepared for scrolling the content inside it. Use this type when the number of options you want to offer is short or the panel is big enough to contain all the elements you want to use.
+> The default dropdown is a panel that does not support scrolling of the content inside it. Use this type when the number of options you want to offer is short or the panel is big enough to contain all the elements you want to use.
 
 <div class="clay-site-dropdown-menu-container">
 	<div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
@@ -65,7 +65,7 @@ A dropdown is a list of options related to the element that triggers it.
 
 #### Dropdown with dividers
 
-> Dropdown menu with dividers are thought to be used in actions menus. Dividing the actions by context of use help users to find actions.
+> Dropdown menus with dividers are primarily for use in action menus. Dividing the actions by context of use makes the actions easier to find.
 
 <div class="clay-site-dropdown-menu-container">
 	<div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
@@ -158,7 +158,7 @@ A dropdown is a list of options related to the element that triggers it.
 
 #### Dropdown with Checkbox or Radio
 
-> Dropdowns can be configured to have checkboxes and/or radio groups. A checkbox configuration can be suitable to filter in or out dataset elements. While, a radio configuration can be suitable to establish the order criteria in a dataset.
+> Dropdowns can be configured to have checkboxes and/or radio groups. A checkbox configuration can be suitable to filter dataset elements. While, a radio configuration can be suitable to establish the order criteria in a dataset.
 
 <div class="clay-site-dropdown-menu-container">
 	<div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
@@ -272,7 +272,7 @@ A dropdown is a list of options related to the element that triggers it.
 
 #### Dropdown with search field
 
-> Sometimes action menus face problems with the number of elements they contain. This dropdown menu variation helps in those contexts where the set of options is large and a search mechanism helps to reduce the search time and task complexity.
+> Action menus can sometimes contain multiple elements, making it a little time consuming to scroll through the entire list of options. In these cases, you can add a search field to your dropdown menu so your users can quickly find the action and move on to their next task.
 
 <div class="clay-site-dropdown-menu-container">
 	<div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
@@ -358,7 +358,7 @@ A dropdown is a list of options related to the element that triggers it.
 
 #### Dropdown with left icons
 
-> Dropdown menus with left icons are suitable for process bars (wizards) where there is a need to display a dropdown menu when the number of steps do not fit the screen.
+> Dropdown menus with left icons are suitable for process bars (wizards), when the number of steps do not fit the screen. The dropdown menu with left icons can display the remaining steps.
 
 <div class="clay-site-dropdown-menu-container">
 	<div aria-labelledby="theDropdownToggleId" class="dropdown-menu dropdown-menu-indicator-start">
@@ -454,7 +454,7 @@ A dropdown is a list of options related to the element that triggers it.
 
 #### Dropdown with right icons
 
-> Dropdown menus with left icons are suitable for process bars (wizards) where there is a need to display a dropdown menu when the number of steps do not fit the screen. In this case, the step number has a high relevance, therefore the icon is placed on the right side.
+> Dropdown menus with right icons are suitable for process bars (wizards) when the number of steps do not fit the screen. It displays the remaining steps and emphasizes the step number by placing the icon on the right side.
 
 <div class="clay-site-dropdown-menu-container">
 	<div aria-labelledby="theDropdownToggleId" class="dropdown-menu dropdown-menu-indicator-end">
@@ -549,11 +549,117 @@ A dropdown is a list of options related to the element that triggers it.
 </div>
 ```
 
+#### Dropdown with Left and Right Icons
+
+<div class="clay-site-dropdown-menu-container">
+	<div aria-labelledby="theDropdownToggleId" class="dropdown-menu dropdown-menu-indicator-end dropdown-menu-indicator-start">
+		<ul class="list-unstyled">
+			<li>
+				<a class="dropdown-item" href="#1">
+					<span class="dropdown-item-indicator-start">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-pencil">
+							<use xlink:href="/images/icons/icons.svg#pencil" />
+						</svg>
+					</span>
+					Normal Option
+					<span class="dropdown-item-indicator-end">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+							<use xlink:href="/images/icons/icons.svg#angle-right" />
+						</svg>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a class="dropdown-item" href="#1">
+					<span class="dropdown-item-indicator-start">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
+							<use xlink:href="/images/icons/icons.svg#view" />
+						</svg>
+					</span>
+					Second Option
+					<span class="dropdown-item-indicator-end">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+							<use xlink:href="/images/icons/icons.svg#angle-right" />
+						</svg>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a class="dropdown-item" href="#1">
+					<span class="dropdown-item-indicator-start">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<use xlink:href="/images/icons/icons.svg#check" />
+						</svg>
+					</span>
+					Third Option
+					<span class="dropdown-item-indicator-end">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+							<use xlink:href="/images/icons/icons.svg#angle-right" />
+						</svg>
+					</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+```html
+<div aria-labelledby="theDropdownToggleId" class="dropdown-menu dropdown-menu-indicator-end dropdown-menu-indicator-start">
+	<ul class="list-unstyled">
+		<li>
+			<a class="dropdown-item" href="#1">
+				<span class="dropdown-item-indicator-start">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-pencil">
+						<use xlink:href="/images/icons/icons.svg#pencil" />
+					</svg>
+				</span>
+				Normal Option
+				<span class="dropdown-item-indicator-end">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+						<use xlink:href="/images/icons/icons.svg#angle-right" />
+					</svg>
+				</span>
+			</a>
+		</li>
+		<li>
+			<a class="dropdown-item" href="#1">
+				<span class="dropdown-item-indicator-start">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
+						<use xlink:href="/images/icons/icons.svg#view" />
+					</svg>
+				</span>
+				Second Option
+				<span class="dropdown-item-indicator-end">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+						<use xlink:href="/images/icons/icons.svg#angle-right" />
+					</svg>
+				</span>
+			</a>
+		</li>
+		<li>
+			<a class="dropdown-item" href="#1">
+				<span class="dropdown-item-indicator-start">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+						<use xlink:href="/images/icons/icons.svg#check" />
+					</svg>
+				</span>
+				Third Option
+				<span class="dropdown-item-indicator-end">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+						<use xlink:href="/images/icons/icons.svg#angle-right" />
+					</svg>
+				</span>
+			</a>
+		</li>
+	</ul>
+</div>
+```
+
 #### Dropdown with groups
 
-> This dropdown menu variation is created to be used with the management bar Filter and Order dropdown button. This configuration is thought to clean the management bar providing the user with more specific mechanisms to find data.
+> This dropdown menu variation is for use with the management bar Filter and Order dropdown button. This configuration is used to refine the management bar UI options, providing the user with more specific mechanisms to find data.
 
-> The button in a dropdown menu can be either primary or secondary depending on the application needs.
+> Buttons in dropdown groups can either be primary or secondary, depending on the application needs.
 
 <div class="clay-site-dropdown-menu-container">
 	<div aria-labelledby="theDropdownToggleId" class="dropdown-menu">
@@ -867,7 +973,7 @@ A dropdown is a list of options related to the element that triggers it.
 
 #### Dropdown menu from actions button
 
-> A monospaced `dropdown-toggle` for a dropdown containing several actions, add `dropdown-action` to `dropdown`.
+> A monospaced `dropdown-toggle` element for a dropdown menu containing several actions. To use this, add the `dropdown-action` class to the `dropdown` element.
 
 <div class="dropdown dropdown-action">
 	<button aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle btn btn-unstyled" data-toggle="dropdown" id="dropdownAction1" role="button">

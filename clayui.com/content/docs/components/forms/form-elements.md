@@ -4,7 +4,7 @@ title: "Forms"
 
 ### Description
 
-Forms obtain user data and transmits it to the system either to store, produce an action, or both.
+Forms obtain user data and transmit it to the system to either store the data, produce an action, or both.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Forms/forms.html">Forms Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 

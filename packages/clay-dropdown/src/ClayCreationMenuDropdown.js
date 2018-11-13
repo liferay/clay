@@ -184,7 +184,7 @@ ClayCreationMenuDropdown.STATE = {
 	 * @memberof ClayCreationMenuDropdown
 	 * @type {!Array}
 	 */
-	primaryItems: itemsValidator.required(),
+	primaryItems: itemsValidator,
 
 	/**
 	 * List of secondary menu items.

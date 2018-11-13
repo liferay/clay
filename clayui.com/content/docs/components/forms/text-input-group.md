@@ -4,7 +4,7 @@ title: "Text Input Group"
 
 ### Description
 
-A text field with added elements that configure a more complex input structure.
+A text field with added elements that provide a more complex input structure.
 
 <div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Forms/text_input_group.html">Text Input Group Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 

@@ -4,7 +4,7 @@ title: "Paginations"
 
 ### Pagination Sizes
 
-<p>Preset pagination styles helps divide up large blocks of content on your site or app.</p>
+<p>You can use the pagination style presets to help divide up large blocks of content on your site or app.</p>
 
 #### Small
 

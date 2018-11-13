@@ -5,14 +5,14 @@ weight: 2
 
 ### Autofit Row
 
-<p>Make content expand to fill remaining space or create equally spaced content with <code>.autofit-row</code>, <code>.autofit-col</code>, and <code>.autofit-col-expand</code>.</p>
+<p>Make content expand to fill remaining space or create equally spaced content with the <code>.autofit-row</code>, <code>.autofit-col</code>, and <code>.autofit-col-expand</code> classes.</p>
 
 <div class="alert alert-warning">
-	<code>.autofit-row</code>, <code>.autofit-col</code>, <code>.autofit-col-expand</code> shouldn't be used for laying out site pages, rather it's most useful for small chunks of content inside other components e.g. cards or list-groups.
+	<code>.autofit-row</code>, <code>.autofit-col</code>, <code>.autofit-col-expand</code> shouldn't be used for laying out site pages, rather it's most useful for small chunks of content inside other components (e.g. cards or list-groups).
 </div>
 
 <div class="alert alert-warning">
-	Direct descendants of <code>.autofit-col</code> are <code>flex-direction: column;</code> (IE 10-11 workaround because they don't respect min/max width or min/max height in flex items) become block level elements by default, see <a href="https://www.w3.org/TR/css-flexbox-1/#flex-items">https://www.w3.org/TR/css-flexbox-1/#flex-items</a>. If you want to display content inside <code>.autofit-col</code> using <code>floats</code>, <code>inline</code>, or <code>inline-block</code> wrap the content with <code>```<div class="autofit-section"></div>```</code>.
+	Direct descendants of <code>.autofit-col</code> are <code>flex-direction: column;</code> (IE 10-11 workaround because they don't respect min/max width or min/max height in flex items) become block level elements by default, see <a href="https://www.w3.org/TR/css-flexbox-1/#flex-items">https://www.w3.org/TR/css-flexbox-1/#flex-items</a>. If you want to display content inside <code>.autofit-col</code> using <code>floats</code>, <code>inline</code>, or <code>inline-block</code>, wrap the content with <code>```<div class="autofit-section"></div>```</code>.
 </div>
 
 <div class="autofit-row autofit-padded">
@@ -179,25 +179,25 @@ weight: 2
 
 ### Autofit Spacing
 
-<p>The class <code>autofit-padded</code> should be added to <code>autofit-row</code> to give padding to all <code>autofit-col</code> that are direct children of <code>autofit-row</code>.</p>
+<p>The <code>autofit-padded</code> class should be added to <code>autofit-row</code> to give padding to all <code>autofit-col</code>s that are direct children of <code>autofit-row</code>.</p>
 
-<p>The class <code>autofit-padded-no-gutters-x</code> gives padding to all <code>autofit-col</code> that are direct children of <code>autofit-row</code> and has negative margins on the left and right to offset the padding (similar to Bootstrap's <code>row</code> class).</p>
+<p>The <code>autofit-padded-no-gutters-x</code> class gives padding to all <code>autofit-col</code>s that are direct children of <code>autofit-row</code>. It has negative margins on the left and right to offset the padding (similar to Bootstrap's <code>row</code> class).</p>
 
-<p>The class <code>autofit-padded-no-gutters-y</code> gives padding to all <code>autofit-col</code> that are direct children of <code>autofit-row</code> and has negative margins on the top and bottom to offset the padding (Generally used if nesting <code>.autofit-row</code>).</p>
+<p>The <code>autofit-padded-no-gutters-y</code> class gives padding to all <code>autofit-col</code>s that are direct children of <code>autofit-row</code>. It has negative margins on the top and bottom to offset the padding (Generally used if nesting <code>.autofit-row</code>).</p>
 
-<p>The class <code>autofit-padded-no-gutters</code> gives padding to all <code>autofit-col</code> that are direct children of <code>autofit-row</code> and has negative margins on the top, right, bottom, and left to offset the padding (Generally used if nesting <code>.autofit-row</code>).</p>
+<p>The <code>autofit-padded-no-gutters</code> class gives padding to all <code>autofit-col</code>s that are direct children of <code>autofit-row</code>. It has negative margins on the top, right, bottom, and left to offset the padding (Generally used if nesting <code>.autofit-row</code>).</p>
 
 <h3>Autofit Row Vertical Alignment</h3>
 
 <p>Autofit Row vertically aligns to the top by default.</p>
 
-<p>The class <code>autofit-row-center</code> will vertically align items in <code>autofit-row</code> to the middle.</p>
+<p>The <code>autofit-row-center</code> class vertically aligns items in <code>autofit-row</code> to the middle.</p>
 
-<p>The class <code>autofit-row-end</code> will vertically align items in <code>autofit-row</code> to the bottom.</p>
+<p>The <code>autofit-row-end</code> class vertically aligns items in <code>autofit-row</code> to the bottom.</p>
 
 ### Autofit Float
 
-<p>The component <code>autofit-float</code> or <code>.autofit-float-{sm|md}-down</code> simulates the behavior of floated elements on <code>.autofit-row</code>. Items that break to a new line will be aligned to the left.</p>
+<p>The component <code>autofit-float</code> or <code>.autofit-float-{sm|md}-down</code> simulates the behavior of floated elements in <code>.autofit-row</code>. Items that break to a new line will be aligned to the left.</p>
 
 <p>This pattern provides the benefit of aligning content via flexbox without losing the behavior of floated elements at the expense of extra markup.</p>
 
@@ -295,7 +295,7 @@ weight: 2
 
 <p>Mimic "right floated" elements.</p>
 
-<p>The component <code>.autofit-float-end</code> or <code>.autofit-float-end-{sm|md}-down</code> simulates the behavior of "right floated" elements on <code>.autofit-row</code>. Items that break to a new line will be aligned right.</p>
+<p>The component <code>.autofit-float-end</code> or <code>.autofit-float-end-{sm|md}-down</code> simulates the behavior of "right floated" elements in <code>.autofit-row</code>. Items that break to a new line will be aligned right.</p>
 
 <p>Aligning items to the left will require nesting <code>autofit-float autofit-row</code> inside an <code>autofit-col autofit-col-expand</code> with the use of helper classes.</p>
 
@@ -547,10 +547,10 @@ weight: 2
 
 ### Inline Item
 
-<p>Use <code>inline-item inline-item-before</code>, <code>inline-item inline-item-middle</code>, and <code>inline-item inline-item-after</code> to provide consistent spacing between text and icons in elements such as links or buttons. This can also be used in other components that have inline content (e.g., <code>badge</code> and <code>label</code>).</p>
+<p>Use the <code>inline-item inline-item-before</code>, <code>inline-item inline-item-middle</code>, and <code>inline-item inline-item-after</code> classes to provide consistent spacing between text and icons in elements such as links or buttons. This can also be used in other components that have inline content (e.g., <code>badge</code> and <code>label</code>).</p>
 
 <div class="alert alert-warning">
-	For this component to function and space properly, white space between text and icons must be removed from the markup inside the component. It's generally easier to remove all white space inside the link, button, or component. In the examples below, whitespaces in button and link are slightly off and the link underline on hover is a bit wide.
+	For this component to function and space properly, the white space must be removed between text and icons from the markup inside the component. It's generally easier to remove all white space inside the link, button, or component. In the examples below, whitespaces in button and link are slightly off and the link underline on hover is a bit wide.
 </div>
 
 <div>
@@ -593,7 +593,7 @@ weight: 2
 
 ### Close
 
-<p>Button or Link for closing stuff.</p>
+<p>A Button or Link for closing stuff.</p>
 
 #### Anchor
 

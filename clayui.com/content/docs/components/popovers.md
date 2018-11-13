@@ -10,7 +10,7 @@ Popovers and Tooltips are patterns used to show helpful information in two diffe
 
 ### Popovers
 
-> Popovers and Tooltips are patterns to show help text in two different ways.
+> Popovers provide additional related information for content. Although similar to tooltips, popovers do not appear on hover state of an element, instead they usually appear on clicking an element. Also, the information in popovers doesn't need to be brief. Popovers remain when you mouse out of the target, letting you interact with other parts of the page, while still viewing its information.
 
 <div class="clay-site-popover-display">
 	<div class="popover clay-popover-top">
@@ -97,7 +97,7 @@ Popovers and Tooltips are patterns used to show helpful information in two diffe
 
 ### Tooltips
 
-> Tooltips are brief pieces of information that appear on hover state over an element to clarify the meaning or use of an interaction element for the user.
+> Tooltips are brief pieces of information that appear on hover state over an element to clarify its meaning or use for the user.
 
 <div class="clay-site-tooltip-display">
 	<div class="tooltip clay-tooltip-right" role="tooltip">
