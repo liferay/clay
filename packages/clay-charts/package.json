@@ -21,7 +21,7 @@
 		"prepublish": "npm run soy && npm run compile && npm run copyAssets",
 		"link": "npm link",
 		"soy": "metalsoy --soyDeps node_modules/metal*/src/**/*.soy node_modules/clay*/src/**/*.soy",
-		"copyAssets": "ncp src/svg lib/svg && ncp ./node_modules/clay-charts-shared/lib/css lib/css"
+		"copyAssets": "ncp ./node_modules/clay-charts-shared/lib/svg lib/svg && ncp ./node_modules/clay-charts-shared/lib/css lib/css"
 	},
 	"keywords": [
 		"metal"
