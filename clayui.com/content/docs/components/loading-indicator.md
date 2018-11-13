@@ -19,6 +19,17 @@ The loading indicator shows the user that	an external process, like a connection
 	</div>
 </div>
 
+```soy
+{call ClayLoadingIndicator.render}
+	{param small: true /}
+{/call}
+
+{call ClayLoadingIndicator.render /}
+```
+```html
+<clay-loading-indicator small="true"></clay-loading-indicator>
+<clay-loading-indicator></clay-loading-indicator>
+```
 ```html
 <span aria-hidden="true" class="loading-animation loading-animation-sm"></span>
 <span aria-hidden="true" class="loading-animation"></span>
@@ -30,6 +41,12 @@ The loading indicator shows the user that	an external process, like a connection
 
 <span aria-hidden="true" class="loading-animation"></span>
 
+```soy
+{call ClayLoadingIndicator.render /}
+```
+```html
+<clay-loading-indicator></clay-loading-indicator>
+```
 ```html
 <span aria-hidden="true" class="loading-animation"></span>
 ```
@@ -40,6 +57,14 @@ The loading indicator shows the user that	an external process, like a connection
 	<span aria-hidden="true" class="loading-animation loading-animation-light"></span>
 </span>
 
+```soy
+{call ClayLoadingIndicator.render}
+	{param light: true /}
+{/call}
+```
+```html
+<clay-loading-indicator light="true"></clay-loading-indicator>
+```
 ```html
 <span aria-hidden="true" class="loading-animation loading-animation-light"></span>
 ```
