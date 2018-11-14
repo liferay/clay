@@ -56,7 +56,7 @@
     ]
   },
   "workspaces": {
-    "packages":["packages/*"],
+    "packages": ["packages/*"],
     "nohoist": ["**/clay-charts-shared"]
   },
   "resolutions": {
