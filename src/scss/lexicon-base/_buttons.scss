@@ -142,10 +142,13 @@
 	}
 }
 
-.btn-action .lexicon-icon {
-	display: block;
-	height: 100%;
-	margin: auto;
+.btn-action {
+	.lexicon-icon-container,
+	.lexicon-icon {
+		display: block;
+		height: 100%;
+		margin: auto;
+	}
 }
 
 .btn-action-secondary {
