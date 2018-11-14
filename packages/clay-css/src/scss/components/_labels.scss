@@ -24,7 +24,7 @@
 	word-wrap: break-word;
 
 	a {
-		color: $label-color;
+		color: $label-link-color;
 		display: inline-block;
 		text-decoration: $label-link-text-decoration;
 
@@ -74,6 +74,17 @@
 			width: $label-lexicon-icon-width;
 		}
 	}
+
+	.sticker {
+		border-radius: $label-sticker-border-radius;
+		height: $label-sticker-size;
+		line-height: $label-sticker-size;
+		width: $label-sticker-size;
+	}
+
+	.sticker-overlay {
+		border-radius: $label-sticker-border-radius;
+	}
 }
 
 a.label {
@@ -94,6 +105,8 @@ a.label {
 	flex-direction: column;
 	flex-shrink: 0;
 	justify-content: center;
+	margin-bottom: $label-item-spacer-y;
+	margin-top: $label-item-spacer-y;
 	min-height: 0;
 	position: relative;
 
@@ -150,26 +163,6 @@ a.label {
 
 @each $color, $value in $label-palette {
 	.label-#{$color} {
-		background-color: map-get($value, bg);
-		border-color: map-get($value, border-color);
-		color: map-get($value, color);
-
-		&[href] {
-			&:hover,
-			&:focus {
-				background-color: map-get($value, hover-bg);
-				border-color: map-get($value, hover-border-color);
-				color: map-get($value, hover-color);
-			}
-		}
-
-		a {
-			color: map-get($value, link-color);
-
-			&:hover,
-			&:focus {
-				color: map-get($value, link-hover-color);
-			}
-		}
+		@include clay-label-variant(map-get($label-palette, $color));
 	}
 }
