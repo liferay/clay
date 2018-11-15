@@ -12,9 +12,14 @@ let itemShape = {
 	maxItems: Config.number(),
 	separator: Config.bool().value(false),
 	title: Config.string(),
-	type: Config.oneOf(['checkbox', 'group', 'item', 'radio', 'radiogroup', 'separator']).value(
-		'item'
-	),
+	type: Config.oneOf([
+		'checkbox',
+		'group',
+		'item',
+		'radio',
+		'radiogroup',
+		'separator',
+	]).value('item'),
 };
 
 const itemsValidator = Config.arrayOf(Config.shapeOf(itemShape));
