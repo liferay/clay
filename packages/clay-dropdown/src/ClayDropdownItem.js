@@ -3,7 +3,6 @@ import 'clay-checkbox';
 import 'clay-icon';
 import 'clay-link';
 import 'clay-radio';
-import './ClayDropdownBase';
 import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
