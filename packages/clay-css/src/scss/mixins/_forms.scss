@@ -1,0 +1,7 @@
+@mixin clay-form-control-focus() {
+	background-color: $input-focus-bg;
+	border-color: $input-focus-border-color;
+	box-shadow: $input-focus-box-shadow;
+	color: $input-focus-color;
+	outline: 0;
+}
