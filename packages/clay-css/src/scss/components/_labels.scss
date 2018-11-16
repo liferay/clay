@@ -87,13 +87,18 @@
 	}
 }
 
-a.label {
+a.label,
+button.label {
 	text-decoration: $label-anchor-text-decoration;
 
 	&:hover,
 	&:focus {
 		text-decoration: $label-anchor-hover-text-decoration;
 	}
+}
+
+button.label {
+	cursor: $btn-cursor;
 }
 
 .label-dismissible {

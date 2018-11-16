@@ -84,6 +84,7 @@ $label-primary-link-hover-color: $label-primary-hover-color !default;
 
 $label-primary-close: () !default;
 $label-primary-close: map-merge((
+	hover-color: $label-primary-hover-color,
 	focus-color: $label-primary-hover-color,
 ), $label-primary-close);
 
@@ -120,6 +121,7 @@ $label-secondary-link-hover-color: $label-secondary-hover-color !default;
 
 $label-secondary-close: () !default;
 $label-secondary-close: map-merge((
+	hover-color: $label-secondary-hover-color,
 	focus-color: $label-secondary-hover-color,
 ), $label-secondary-close);
 
@@ -156,6 +158,7 @@ $label-success-link-hover-color: $label-success-hover-color !default;
 
 $label-success-close: () !default;
 $label-success-close: map-merge((
+	hover-color: $label-success-hover-color,
 	focus-color: $label-success-hover-color,
 ), $label-success-close);
 
@@ -192,6 +195,7 @@ $label-info-link-hover-color: $label-info-hover-color !default;
 
 $label-info-close: () !default;
 $label-info-close: map-merge((
+	hover-color: $label-info-hover-color,
 	focus-color: $label-info-hover-color,
 ), $label-info-close);
 
@@ -228,6 +232,7 @@ $label-warning-link-hover-color: $label-warning-hover-color !default;
 
 $label-warning-close: () !default;
 $label-warning-close: map-merge((
+	hover-color: $label-warning-hover-color,
 	focus-color: $label-warning-hover-color,
 ), $label-warning-close);
 
@@ -264,6 +269,7 @@ $label-danger-link-hover-color: $label-danger-hover-color !default;
 
 $label-danger-close: () !default;
 $label-danger-close: map-merge((
+	hover-color: $label-danger-hover-color,
 	focus-color: $label-danger-hover-color,
 ), $label-danger-close);
 
@@ -300,6 +306,7 @@ $label-light-link-hover-color: $label-light-hover-color !default;
 
 $label-light-close: () !default;
 $label-light-close: map-merge((
+	hover-color: $label-light-hover-color,
 	focus-color: $label-light-hover-color,
 ), $label-light-close);
 
@@ -336,6 +343,7 @@ $label-dark-link-hover-color: $label-dark-hover-color !default;
 
 $label-dark-close: () !default;
 $label-dark-close: map-merge((
+	hover-color: $label-dark-hover-color,
 	focus-color: $label-dark-hover-color,
 ), $label-dark-close);
 
