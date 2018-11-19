@@ -9,7 +9,7 @@
 	$animation: setter(map-get($map, animation), 1.2s ease-out infinite);
 	$animation-name: required(
 		map-get($map, animation-name),
-		'The property `animation-name` in `#{$mixin-name}` is required! #{$map}'
+		'The property `animation-name` in `#{$mixin-name}` is required!'
 	);
 
 	$ball-0-scale: setter(map-get($map, ball-0-scale), 0em);

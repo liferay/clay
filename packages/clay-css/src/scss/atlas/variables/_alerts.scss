@@ -15,7 +15,7 @@ $alert-link-decoration: underline !default;
 $alert-link-hover-decoration: none !default;
 $alert-link-font-weight: $font-weight-semi-bold !default;
 
-$alert-indicator-font-size: !default;
+$alert-indicator-font-size: inherit !default;
 
 $alert-title: () !default;
 $alert-title: map-merge((

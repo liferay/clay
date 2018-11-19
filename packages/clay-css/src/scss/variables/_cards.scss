@@ -93,6 +93,7 @@ $user-card: map-merge((
 $card-page-item-asset: () !default;
 $card-page-item-asset: map-merge((
 	base: (
+		breakpoint: 0,
 		min-width: 200px,
 		padding-left: $grid-gutter-width / 2,
 		padding-right: $grid-gutter-width / 2

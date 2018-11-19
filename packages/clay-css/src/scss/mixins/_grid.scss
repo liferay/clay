@@ -46,10 +46,7 @@
 
 @mixin clay-custom-grid-columns($map) {
 	$custom-grid-props: map-merge((
-		enabled: $enable-grid-classes,
-		base: (
-			breakpoint: 0
-		)
+		enabled: $enable-grid-classes
 	), $map);
 
 	$enabled: map-get($custom-grid-props, enabled);

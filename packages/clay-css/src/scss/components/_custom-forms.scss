@@ -18,31 +18,31 @@
 
 	&:focus {
 		+ .btn-primary {
-			@extend .btn-primary.focus !optional;
+			@extend %btn-primary-focus !optional;
 		}
 
 		+ .btn-secondary {
-			@extend .btn-secondary.focus !optional;
+			@extend %btn-secondary-focus !optional;
 		}
 
 		+ .btn-success {
-			@extend .btn-success.focus !optional;
+			@extend %btn-success-focus !optional;
 		}
 
 		+ .btn-warning {
-			@extend .btn-warning.focus !optional;
+			@extend %btn-warning-focus !optional;
 		}
 
 		+ .btn-danger {
-			@extend .btn-danger.focus !optional;
+			@extend %btn-danger-focus !optional;
 		}
 
 		+ .btn-light {
-			@extend .btn-light.focus !optional;
+			@extend %btn-light-focus !optional;
 		}
 
 		+ .btn-dark {
-			@extend .btn-dark.focus !optional;
+			@extend %btn-dark-focus !optional;
 		}
 
 		+ .input-group {
