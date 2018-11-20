@@ -155,10 +155,10 @@ exports[`ClayList should render a selectable ClayList with action menu 1`] = `
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
@@ -166,10 +166,10 @@ exports[`ClayList should render a selectable ClayList with action menu 1`] = `
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
@@ -1172,10 +1172,10 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
@@ -1183,10 +1183,10 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
@@ -1194,10 +1194,10 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
@@ -1205,10 +1205,10 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
@@ -1216,10 +1216,10 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
@@ -1227,10 +1227,10 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Remove</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Download</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>

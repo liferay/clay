@@ -8,6 +8,7 @@
 	{@param spritemap: string}
 	{@param? _handleButtonClick: any}
 	{@param? _handleItemClick: any}
+	{@param? _handleItemSelected: any}
 	{@param? button: ?}
 	{@param? caption: string}
 	{@param? disabled: bool}
@@ -42,6 +43,7 @@
 		{param events: [
 			'buttonClicked': $_handleButtonClick,
 			'itemClicked': $_handleItemClick,
+			'itemSelected': $_handleItemSelected,
 			'toggle': $toggle
 		]/}
 		{param expanded: $expanded /}

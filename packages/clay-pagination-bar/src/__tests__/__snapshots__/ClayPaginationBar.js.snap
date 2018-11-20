@@ -38,16 +38,16 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with baseHref 1`] =
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#mySite?entries=5">5</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#mySite?entries=15">15</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#mySite?entries=20">20</a>
     </li>
   </ul>
@@ -92,16 +92,16 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with classes 1`] = 
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#mySite?entries=5">5</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#mySite?entries=15">15</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#mySite?entries=20">20</a>
     </li>
   </ul>
@@ -146,16 +146,16 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with id 1`] = `
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#mySite?entries=5">5</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#mySite?entries=15">15</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#mySite?entries=20">20</a>
     </li>
   </ul>
@@ -200,16 +200,16 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item less 
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#mySite?entries=5">5</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#mySite?entries=15">15</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#mySite?entries=20">20</a>
     </li>
   </ul>
@@ -257,16 +257,16 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item more 
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#mySite?entries=5">5</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#mySite?entries=15">15</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#mySite?entries=20">20</a>
     </li>
   </ul>
@@ -314,16 +314,16 @@ exports[`ClayPaginationBar should render a ClayPaginationBar with one item more 
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#mySite?entries=5">5</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#mySite?entries=15">15</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#mySite?entries=20">20</a>
     </li>
   </ul>
@@ -368,16 +368,16 @@ exports[`ClayPaginationBar should render the default markup 1`] = `
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#mySite?entries=5">5</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item active" href="#mySite?entries=10">10</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#mySite?entries=15">15</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#mySite?entries=20">20</a>
     </li>
   </ul>

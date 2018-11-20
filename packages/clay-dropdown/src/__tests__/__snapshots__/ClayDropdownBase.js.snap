@@ -6,7 +6,7 @@ exports[`ClayDropdownBase should close dropdown 1`] = `
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="item1url">Item 1</a>
     </li>
   </ul>
@@ -19,7 +19,7 @@ exports[`ClayDropdownBase should close dropdown on document click 1`] = `
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="item1url">Item 1</a>
     </li>
   </ul>
@@ -32,7 +32,7 @@ exports[`ClayDropdownBase should open dropdown 1`] = `
 </div>
 <div class="dropdown-menu show" ref="menu" style="top: 0px; left: 0px;">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="item1url">Item 1</a>
     </li>
   </ul>
@@ -45,10 +45,10 @@ exports[`ClayDropdownBase should render a disabled dropdown 1`] = `
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="item1url">Item 1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="item2url">Item 2</a>
     </li>
   </ul>
@@ -61,7 +61,7 @@ exports[`ClayDropdownBase should render a dropdown with caption 1`] = `
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="item1url">Item 1</a>
     </li>
   </ul>
@@ -75,10 +75,10 @@ exports[`ClayDropdownBase should render a dropdown with classes 1`] = `
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="item1url">Item 1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="item2url">Item 2</a>
     </li>
   </ul>
@@ -92,17 +92,17 @@ exports[`ClayDropdownBase should render a dropdown with groups 1`] = `
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
     <li class="dropdown-subheader" role="presentation">Group 1</li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item active" href="#1">Item 1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Item 2</a>
     </li>
     <li class="dropdown-subheader" role="presentation">Group 2</li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Item 3</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item disabled" href="javascript:;">Item 3</a>
     </li>
   </ul>
@@ -116,7 +116,7 @@ exports[`ClayDropdownBase should render a dropdown with help text 1`] = `
 <div class="dropdown-menu" ref="menu">
   <div class="alert alert-fluid alert-info" role="alert">Help!</div>
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="item1url">Item 1</a>
     </li>
   </ul>
@@ -129,7 +129,7 @@ exports[`ClayDropdownBase should render a dropdown with icons on the left 1`] = 
 </div>
 <div class="dropdown-menu dropdown-menu-indicator-start" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="item1url">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check" focusable="false">
@@ -138,7 +138,7 @@ exports[`ClayDropdownBase should render a dropdown with icons on the left 1`] = 
           </svg>
         </span>Item 1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="item2url">
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check" focusable="false">
@@ -157,7 +157,7 @@ exports[`ClayDropdownBase should render a dropdown with icons on the right 1`] =
 </div>
 <div class="dropdown-menu dropdown-menu-indicator-end" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="item1url">Item 1
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check" focusable="false">
@@ -167,7 +167,7 @@ exports[`ClayDropdownBase should render a dropdown with icons on the right 1`] =
         </span>
       </a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="item2url">Item 2
         <span class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check" focusable="false">
@@ -187,10 +187,10 @@ exports[`ClayDropdownBase should render a dropdown with id 1`] = `
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="item1url">Item 1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="item2url">Item 2</a>
     </li>
   </ul>
@@ -203,7 +203,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type checkbox 1
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li class="dropdown-item">
+    <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
         <label>
           <input class="custom-control-input" name="checkbox1name" value="checkbox1value" ref="input" type="checkbox">
@@ -213,7 +213,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type checkbox 1
         </label>
       </div>
     </li>
-    <li class="dropdown-item">
+    <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
         <label>
           <input class="custom-control-input" name="checkbox2name" value="checkbox2value" ref="input" type="checkbox">
@@ -234,7 +234,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type checkbox a
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li class="dropdown-item active">
+    <li class="dropdown-item active" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
         <label>
           <input checked="" class="custom-control-input" name="checkbox1name" value="checkbox1value" ref="input" type="checkbox">
@@ -254,7 +254,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type checkbox a
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li class="dropdown-item">
+    <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
         <label>
           <input disabled="disabled" class="custom-control-input" name="checkbox1name" value="checkbox1value" ref="input" type="checkbox">
@@ -274,10 +274,10 @@ exports[`ClayDropdownBase should render a dropdown with items of type item 1`] =
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="item1url">Item 1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="item2url">Item 2</a>
     </li>
   </ul>
@@ -290,7 +290,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type item and a
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item active" href="item1url">Item 1</a>
     </li>
   </ul>
@@ -303,7 +303,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type item and d
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item disabled" href="javascript:;">Item 1</a>
     </li>
   </ul>
@@ -316,10 +316,10 @@ exports[`ClayDropdownBase should render a dropdown with items of type item with 
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="item1url" title="title1">Item 1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="item2url" title="title2">Item 2</a>
     </li>
   </ul>
@@ -335,7 +335,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio 1`] 
     <li class="dropdown-subheader" role="presentation">Group 1</li>
     <li aria-label="Group 1" role="radiogroup">
       <ul class="list-unstyled">
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
@@ -345,7 +345,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio 1`] 
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input class="custom-control-input" value="2" ref="input" type="radio" role="radio">
@@ -361,7 +361,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio 1`] 
     <li class="dropdown-subheader" role="presentation">Group 2</li>
     <li aria-label="Group 2" role="radiogroup">
       <ul class="list-unstyled">
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input class="custom-control-input" value="4" ref="input" type="radio" role="radio">
@@ -371,7 +371,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio 1`] 
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input class="custom-control-input" value="5" ref="input" type="radio" role="radio">
@@ -396,7 +396,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio and 
     <li class="dropdown-subheader" role="presentation">Group 1</li>
     <li aria-label="Group 1" role="radiogroup">
       <ul class="list-unstyled">
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
@@ -406,7 +406,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio and 
             </label>
           </div>
         </li>
-        <li class="dropdown-item active">
+        <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" value="2" ref="input" type="radio" role="radio">
@@ -422,7 +422,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio and 
     <li class="dropdown-subheader" role="presentation">Group 2</li>
     <li aria-label="Group 2" role="radiogroup">
       <ul class="list-unstyled">
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input class="custom-control-input" value="4" ref="input" type="radio" role="radio">
@@ -432,7 +432,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio and 
             </label>
           </div>
         </li>
-        <li class="dropdown-item active">
+        <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input checked="" class="custom-control-input" value="5" ref="input" type="radio" role="radio">
@@ -457,7 +457,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio and 
     <li class="dropdown-subheader" role="presentation">Group 1</li>
     <li aria-label="Group 1" role="radiogroup">
       <ul class="list-unstyled">
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input class="custom-control-input" value="1" ref="input" type="radio" role="radio">
@@ -467,7 +467,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio and 
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" value="3" ref="input" type="radio" role="radio">
@@ -483,7 +483,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio and 
     <li class="dropdown-subheader" role="presentation">Group 2</li>
     <li aria-label="Group 2" role="radiogroup">
       <ul class="list-unstyled">
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input class="custom-control-input" value="4" ref="input" type="radio" role="radio">
@@ -493,7 +493,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio and 
             </label>
           </div>
         </li>
-        <li class="dropdown-item">
+        <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
             <label>
               <input disabled="disabled" class="custom-control-input" value="6" ref="input" type="radio" role="radio">
@@ -515,19 +515,19 @@ exports[`ClayDropdownBase should render a dropdown with items with separators 1`
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Element 1</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
     <li class="dropdown-subheader" role="presentation">Group 1</li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#2">Item 2</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#3">Item 3</a>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="#4">Element 4</a>
     </li>
   </ul>
@@ -542,7 +542,7 @@ exports[`ClayDropdownBase should render a dropdown with primary button 1`] = `
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="item1url">Item 1</a>
         </li>
       </ul>
@@ -562,7 +562,7 @@ exports[`ClayDropdownBase should render a dropdown with secondary button 1`] = `
   <form>
     <div class="inline-scroller">
       <ul class="list-unstyled">
-        <li>
+        <li tabindex="-1">
           <a class=" dropdown-item" href="item1url">Item 1</a>
         </li>
       </ul>
@@ -580,10 +580,10 @@ exports[`ClayDropdownBase should render a dropdown with trigger custom classes 1
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="item1url">Item 1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="item2url">Item 2</a>
     </li>
   </ul>
@@ -596,10 +596,10 @@ exports[`ClayDropdownBase should render a dropdown with trigger szie 1`] = `
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="item1url">Item 1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="item2url">Item 2</a>
     </li>
   </ul>
@@ -612,7 +612,7 @@ exports[`ClayDropdownBase should render a dropdown with type list with items of 
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li class="dropdown-item">
+    <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
         <label>
           <input class="custom-control-input" name="checkbox1name" value="checkbox1value" ref="input" type="checkbox">
@@ -623,7 +623,7 @@ exports[`ClayDropdownBase should render a dropdown with type list with items of 
       </div>
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
-    <li class="dropdown-item">
+    <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
         <label>
           <input class="custom-control-input" name="checkbox2name" value="checkbox2value" ref="input" type="checkbox">
@@ -661,10 +661,10 @@ exports[`ClayDropdownBase should render a searchable dropdown 1`] = `
     </div>
   </form>
   <ul class="list-unstyled">
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="item1url">Item 1</a>
     </li>
-    <li>
+    <li tabindex="-1">
       <a class=" dropdown-item" href="item2url">Item 2</a>
     </li>
   </ul>
