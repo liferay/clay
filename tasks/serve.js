@@ -5,6 +5,7 @@ module.exports = function(gulp) {
 		browserSync({
 			notify: true,
 			open: false,
+			port: 3001,
 			server: {
 				baseDir: 'build'
 			}

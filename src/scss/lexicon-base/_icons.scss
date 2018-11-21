@@ -1,8 +1,16 @@
+.lexicon-icon-container {
+	display: inline-block;
+	vertical-align: middle;
+
+	.lexicon-icon {
+		display: block;
+	}
+}
+
 .lexicon-icon {
 	display: inline-block;
 	fill: currentColor;
 	height: $lexicon-icon-size;
-	pointer-events: none;
 	transform: translateZ(0);
 	vertical-align: middle;
 	width: $lexicon-icon-size;
@@ -45,6 +53,7 @@ a.collapse-icon {
 .collapse-icon-open {
 	[class^="icon-"],
 	[class*=" icon-"],
+	.lexicon-icon-container,
 	.lexicon-icon {
 		display: block;
 	}
@@ -185,6 +194,10 @@ a .icon-monospaced,
 		@include monospace($icon-monospaced-size);
 
 		padding: $icon-monospaced-lexicon-icon-padding;
+	}
+
+	.lexicon-icon-container {
+		display: block;
 	}
 }
 
