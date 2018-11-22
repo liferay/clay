@@ -27,15 +27,6 @@ ClayIcon.STATE = {
 	elementClasses: Config.string(),
 
 	/**
-	 * Flag to indicate if the svg is focusable or not
-	 * @default false
-	 * @instance
-	 * @memberof ClayIcon
-	 * @type {?bool}
-	 */
-	focusable: Config.bool().value(false),
-
-	/**
 	 * Id to be applied to the element.
 	 * @default undefined
 	 * @instance
@@ -61,15 +52,6 @@ ClayIcon.STATE = {
 	 * @type {!string}
 	 */
 	symbol: Config.string().required(),
-
-	/**
-	 * The title of the Clay SVG Icon.
-	 * @default undefined
-	 * @instance
-	 * @memberof ClayIcon
-	 * @type {?(string|undefined)}
-	 */
-	title: Config.string(),
 };
 
 defineWebComponent('clay-icon', ClayIcon);
