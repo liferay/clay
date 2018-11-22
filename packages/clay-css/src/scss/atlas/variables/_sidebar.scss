@@ -44,12 +44,8 @@ $sidebar-light: map-merge((
 	),
 	dd: (
 		clay-link: (
-			color: $body-color,
-			hover-color: $clay-unset
+			color: $body-color
 		)
-	),
-	sidebar-list-group-title: (
-		font-size: $clay-unset
 	)
 ), $sidebar-light);
 
