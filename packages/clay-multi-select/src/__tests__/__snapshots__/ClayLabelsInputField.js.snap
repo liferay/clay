@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayLabelsInputField should render a ClayLabelsInputField with classes 1`] = `
+exports[`ClayMultiSelect should render a ClayMultiSelect with classes 1`] = `
 <div class="from-group my-custom-class">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
@@ -19,7 +19,7 @@ exports[`ClayLabelsInputField should render a ClayLabelsInputField with classes 
 </div>
 `;
 
-exports[`ClayLabelsInputField should render a ClayLabelsInputField with id 1`] = `
+exports[`ClayMultiSelect should render a ClayMultiSelect with id 1`] = `
 <div class="from-group" id="myId">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
@@ -38,7 +38,7 @@ exports[`ClayLabelsInputField should render a ClayLabelsInputField with id 1`] =
 </div>
 `;
 
-exports[`ClayLabelsInputField should render the default markup 1`] = `
+exports[`ClayMultiSelect should render the default markup 1`] = `
 <div class="from-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
