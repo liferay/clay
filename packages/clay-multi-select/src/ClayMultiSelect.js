@@ -7,13 +7,13 @@ import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 
-import templates from './ClayLabelsInputField.soy.js';
+import templates from './ClayMultiSelect.soy.js';
 
 /**
- * Metal ClayLabelsInputField component.
+ * Metal ClayMultiSelect component.
  * @extends ClayComponent
  */
-class ClayLabelsInputField extends ClayComponent {
+class ClayMultiSelect extends ClayComponent {
 	/**
 	 * Get the value typed in the input or through the filtered items.
 	 * @param {!Event} event
@@ -345,12 +345,12 @@ class ClayLabelsInputField extends ClayComponent {
  * @static
  * @type {!Object}
  */
-ClayLabelsInputField.STATE = {
+ClayMultiSelect.STATE = {
 	/**
 	 * Variation name to render different deltemplates.
 	 * @default undefined
 	 * @instance
-	 * @memberof ClayLabelsInputField
+	 * @memberof ClayMultiSelect
 	 * @type {?(string|undefined)}
 	 */
 	contentRenderer: Config.string(),
@@ -359,7 +359,7 @@ ClayLabelsInputField.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @default undefined
 	 * @instance
-	 * @memberof ClayLabelsInputField
+	 * @memberof ClayMultiSelect
 	 * @type {?(string|undefined)}
 	 */
 	elementClasses: Config.string(),
@@ -368,7 +368,7 @@ ClayLabelsInputField.STATE = {
 	 * List of filtered items for suggestion or autocomplete.
 	 * @default []
 	 * @instance
-	 * @memberof ClayLabelsInputField
+	 * @memberof ClayMultiSelect
 	 * @type {?Array}
 	 */
 	filteredItems: Config.array(Config.object()).value([]),
@@ -377,7 +377,7 @@ ClayLabelsInputField.STATE = {
 	 * Help text to guide the user in the interaction.
 	 * @default undefined
 	 * @instance
-	 * @memberof ClayLabelsInputField
+	 * @memberof ClayMultiSelect
 	 * @type {!string}
 	 */
 	helpText: Config.string().required(),
@@ -386,7 +386,7 @@ ClayLabelsInputField.STATE = {
 	 * Id to be applied to the element.
 	 * @default undefined
 	 * @instance
-	 * @memberof ClayLabelsInputField
+	 * @memberof ClayMultiSelect
 	 * @type {?(string|undefined)}
 	 */
 	id: Config.string(),
@@ -395,7 +395,7 @@ ClayLabelsInputField.STATE = {
 	 * Label of the input element.
 	 * @default undefined
 	 * @instance
-	 * @memberof ClayLabelsInputField
+	 * @memberof ClayMultiSelect
 	 * @type {?(string|undefined)}
 	 */
 	label: Config.string(),
@@ -404,7 +404,7 @@ ClayLabelsInputField.STATE = {
 	 * List of the selected Labels.
 	 * @default []
 	 * @instance
-	 * @memberof ClayLabelsInputField
+	 * @memberof ClayMultiSelect
 	 * @type {?Array<Object>}
 	 */
 	selectedLabels: Config.array(Config.object()).value([]),
@@ -413,15 +413,15 @@ ClayLabelsInputField.STATE = {
 	 * The path to the SVG spritemap file containing the icons.
 	 * @default undefined
 	 * @instance
-	 * @memberof ClayLabelsInputField
+	 * @memberof ClayMultiSelect
 	 * @type {!string}
 	 */
 	spritemap: Config.string().required(),
 };
 
-defineWebComponent('clay-labels-input-field', ClayLabelsInputField);
+defineWebComponent('clay-multi-select', ClayMultiSelect);
 
-Soy.register(ClayLabelsInputField, templates);
+Soy.register(ClayMultiSelect, templates);
 
-export {ClayLabelsInputField};
-export default ClayLabelsInputField;
+export {ClayMultiSelect};
+export default ClayMultiSelect;

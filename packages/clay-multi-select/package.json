@@ -1,16 +1,16 @@
 {
-  "name": "clay-labels-input-field",
+  "name": "clay-multi-select",
   "version": "2.3.4",
-  "description": "Metal ClayLabelsInputField component",
+  "description": "Metal ClayMultiSelect component",
   "license": "BSD",
-  "repository": "https://github.com/liferay/clay/tree/master/packages/clay-labels-input-field",
+  "repository": "https://github.com/liferay/clay/tree/master/packages/clay-multi-select",
   "engines": {
     "node": ">=0.12.0",
     "npm": ">=3.0.0"
   },
-  "main": "lib/ClayLabelsInputField.js",
-  "esnext:main": "src/ClayLabelsInputField.js",
-  "jsnext:main": "src/ClayLabelsInputField.js",
+  "main": "lib/ClayMultiSelect.js",
+  "esnext:main": "src/ClayMultiSelect.js",
+  "jsnext:main": "src/ClayMultiSelect.js",
   "files": [
     "lib",
     "src",

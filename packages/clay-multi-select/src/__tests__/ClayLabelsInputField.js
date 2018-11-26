@@ -1,10 +1,10 @@
-import ClayLabelsInputField from '../ClayLabelsInputField';
+import ClayMultiSelect from '../ClayMultiSelect';
 
 let component;
 let spritemap = 'icons.svg';
 let helpText = 'You can use a comma to enter tags';
 
-describe('ClayLabelsInputField', function() {
+describe('ClayMultiSelect', function() {
 	afterEach(() => {
 		if (component) {
 			component.dispose();
@@ -12,7 +12,7 @@ describe('ClayLabelsInputField', function() {
 	});
 
 	it('should render the default markup', () => {
-		component = new ClayLabelsInputField({
+		component = new ClayMultiSelect({
 			helpText,
 			spritemap,
 		});
@@ -20,8 +20,8 @@ describe('ClayLabelsInputField', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayLabelsInputField with classes', () => {
-		component = new ClayLabelsInputField({
+	it('should render a ClayMultiSelect with classes', () => {
+		component = new ClayMultiSelect({
 			elementClasses: 'my-custom-class',
 			helpText,
 			spritemap,
@@ -30,8 +30,8 @@ describe('ClayLabelsInputField', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayLabelsInputField with id', () => {
-		component = new ClayLabelsInputField({
+	it('should render a ClayMultiSelect with id', () => {
+		component = new ClayMultiSelect({
 			helpText,
 			id: 'myId',
 			spritemap,

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Demo: ClayLabelsInputField</title>
+	<title>Demo: ClayMultiSelect</title>
 
 	<link rel="stylesheet" href="../../../node_modules/clay-css/lib/css/atlas.css">
 
@@ -15,23 +15,13 @@
 		.row {
 			margin-bottom: 20px;
 		}
-
-		.label-focus {
-			background-color: #0B5FFF;
-			border-color: #0B5FFF;
-			color: #FFF;
-		}
-
-		.dropdown-full {
-			position: relative;
-		}
 	</style>
 
-	<script src="../build/globals/clay-labels-input-field.js"></script>
+	<script src="../build/globals/clay-multi-select.js"></script>
 </head>
 <body class="container" role="main">
 	<h1 class="page-title" id="pageTitle">
-		ClayLabelsInputField
+		ClayMultiSelect
 	</h1>
 
 	<div class="row row-spacing">
@@ -89,7 +79,7 @@
 		];
 
 		// Default State
-		new metal.ClayLabelsInputField({
+		new metal.ClayMultiSelect({
 			helpText: 'You can use a comma to enter tags',
 			label: 'Tags',
 			selectedLabels,
@@ -97,7 +87,7 @@
 		}, '#default-block');
 
 		// With autocomplete
-		new metal.ClayLabelsInputField({
+		new metal.ClayMultiSelect({
 			events: {
 				queryChange: (event) => {
 					const query = event.data.value;
@@ -117,7 +107,7 @@
 		}, '#autocomplete-block');
 
 		// With autocomplete and interaction
-		new metal.ClayLabelsInputField({
+		new metal.ClayMultiSelect({
 			label: 'Tags',
 			selectedLabels,
 			spritemap,
