@@ -16,6 +16,7 @@
 	{@param? elementClasses: string}
 	{@param? filteredItems: list<?>}
 	{@param? id: string}
+	{@param? inputName: string}
 	{@param? label: string}
 	{@param? selectedItems: list<?>}
 
@@ -33,7 +34,13 @@
 
 	<div {$attributes}>
 		{if $label}
-			<label>{$label}</label>
+			{let $labelAttributes kind="attributes"}
+				{if $inputName}
+					for="{$inputName}"
+				{/if}
+			{/let}
+
+			<label {$labelAttributes}>{$label}</label>
 		{/if}
 
 		{call .content}
@@ -46,6 +53,7 @@
 			{param contentRenderer: $contentRenderer /}
 			{param filteredItems: $filteredItems /}
 			{param helpText: $helpText /}
+			{param inputName: $inputId /}
 			{param selectedItems: $selectedItems /}
 			{param spritemap: $spritemap /}
 		{/call}
@@ -63,7 +71,23 @@
 	{@param? _removeFocusedItem: any}
 	{@param? contentRenderer: string}
 	{@param? filteredItems: list<?>}
+	{@param? inputName: string}
 	{@param? selectedItems: list<?>}
+
+	{let $inputAttributes kind="attributes"}
+		class="form-control-inset"
+		{if $inputName}
+			id="{$inputName}"
+			name="{$inputName}"
+		{/if}
+
+		onBlur="{$_removeFocusedItem}"
+		onFocus="{$_removeFocusedItem}"
+		onInput="{$_handleOnInput}"
+		onKeydown="{$_handleOnKeydown}"
+		ref="input"
+		type="text"
+	{/let}
 
 	<div class="input-group input-group-stacked-sm-down">
 		<div class="input-group-item">
@@ -77,15 +101,7 @@
 					{/call}
 				{/if}
 
-				<input
-					class="form-control-inset"
-					onBlur="{$_removeFocusedItem}"
-					onFocus="{$_removeFocusedItem}"
-					onInput="{$_handleOnInput}"
-					onKeydown="{$_handleOnKeydown}"
-					ref="input"
-					type="text"
-				/>
+				<input {$inputAttributes} />
 
 				{let $isVisible: $filteredItems and length($filteredItems) > 0 ? true : false /}
 

@@ -392,6 +392,15 @@ ClayMultiSelect.STATE = {
 	id: Config.string(),
 
 	/**
+	 * Name of the input.
+	 * @default undefind
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @type {?(string|undefined)}
+	 */
+	inputName: Config.string(),
+
+	/**
 	 * Label of the input element.
 	 * @default undefined
 	 * @instance
