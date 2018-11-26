@@ -27,6 +27,22 @@ ClayIcon.STATE = {
 	elementClasses: Config.string(),
 
 	/**
+	 * Flag to indicate if the svg is focusable or not
+	 * @default false
+	 * @deprecated since version 2.4.x
+	 * @instance
+	 * @memberof ClayIcon
+	 * @type {?bool}
+	 */
+	focusable: Config.validator(value => {
+		if (value) {
+			console.warn(
+				'🚨 The `focusable` API will be deprecated and removed in the next release. See more information https://goo.gl/EycJtK'
+			);
+		}
+	}),
+
+	/**
 	 * Id to be applied to the element.
 	 * @default undefined
 	 * @instance
@@ -52,6 +68,22 @@ ClayIcon.STATE = {
 	 * @type {!string}
 	 */
 	symbol: Config.string().required(),
+
+	/**
+	 * The title of the Clay SVG Icon.
+	 * @default undefined
+	 * @deprecated since version 2.4.x
+	 * @instance
+	 * @memberof ClayIcon
+	 * @type {?(string|undefined)}
+	 */
+	title: Config.validator(value => {
+		if (value) {
+			console.warn(
+				'🚨 The `title` API will be deprecated and removed in the next release. See more information https://goo.gl/EycJtK'
+			);
+		}
+	}),
 };
 
 defineWebComponent('clay-icon', ClayIcon);
