@@ -48,7 +48,7 @@
 	<script type="text/javascript">
 
 		const spritemap = '../../../node_modules/clay-css/lib/images/icons/icons.svg';
-		const selectedLabels = [
+		const selectedItems = [
 			{
 				label: 'bread'
 			},
@@ -109,18 +109,18 @@
 		// With autocomplete and interaction
 		new metal.ClayMultiSelect({
 			label: 'Tags',
-			selectedLabels,
+			selectedItems,
 			spritemap,
 			events: {
 				labelAdded: (event) => {
-					selectedLabels.push({label: event.data.value});
-					event.target.selectedLabels = selectedLabels;
+					selectedItems.push({label: event.data.value});
+					event.target.selectedItems = selectedItems;
 					event.target.clearInput();
 					event.target.filteredItems = [];
 				},
-				labelRemoved: (event) => {
-					selectedLabels.splice(Number(event.data.index), 1);
-					event.target.selectedLabels = selectedLabels;
+				itemRemoved: (event) => {
+					selectedItems.splice(Number(event.data.index), 1);
+					event.target.selectedItems = selectedItems;
 				},
 				queryChange: (event) => {
 					const query = event.data.value;

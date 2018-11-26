@@ -53,7 +53,7 @@ class ClayMultiSelect extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleCloseButtonClick(data) {
-		return this._handleLabelRemoved(data.target.element);
+		return this._handleItemRemoved(data.target.element);
 	}
 
 	/**
@@ -63,98 +63,98 @@ class ClayMultiSelect extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleDropdownItemClick(event) {
-		return this._handleLabelAdded(event);
+		return this._handleItemAdded(event);
 	}
 
 	/**
-	 * Continues the propagation of the labelAdded event.
+	 * Continues the propagation of the itemAdded event.
 	 * @param {!Event} event
 	 * @protected
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
-	_handleLabelAdded(event) {
-		const label = this._getLabelFromEvent(event);
+	_handleItemAdded(event) {
+		const item = this._getLabelFromEvent(event);
 
 		if (
-			label.trim() &&
-			!this.selectedLabels.find(
-				labelSelected => labelSelected.label === label
+			item.trim() &&
+			!this.selectedItems.find(
+				itemSelected => itemSelected.label === item
 			)
 		) {
 			return !this.emit({
 				data: {
-					value: label,
+					value: item,
 				},
-				name: 'labelAdded',
+				name: 'itemAdded',
 				originalEvent: event,
 			});
 		} else {
-			this.refs.input.value = label;
+			this.refs.input.value = item;
 		}
 	}
 
 	/**
-	 * Handle the focus on the selected labels and triggers the focused label event.
+	 * Handle the focus on the selected items and triggers the focused item event.
 	 * @param {!Event} event
 	 * @param {?Boolean} direction
 	 * @protected
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
-	_handleLabelFocus(event, direction) {
-		if (this.selectedLabels.length) {
+	_handleItemFocus(event, direction) {
+		if (this.selectedItems.length) {
 			const {formGroupInput} = this.refs;
 			const items = formGroupInput.querySelectorAll(
 				'span[id="item-tag"]'
 			);
 
-			if (this._labelFocused) {
-				const index = this._labelFocused.getAttribute('data-tag');
+			if (this._itemFocused) {
+				const index = this._itemFocused.getAttribute('data-tag');
 				const condition = direction
 					? Number(index) - 1
 					: Number(index) + 1;
 
 				if (condition > items.length - 1) {
 					this.refs.input.focus();
-					this._removeFocusedLabel();
+					this._removeFocusedItem();
 					return false;
 				} else if (condition >= 0) {
-					this._labelFocused.classList.remove('label-focus');
-					this._labelFocused = items[condition];
-					this._labelFocused.classList.add('label-focus');
+					this._itemFocused.classList.remove('label-focus');
+					this._itemFocused = items[condition];
+					this._itemFocused.classList.add('label-focus');
 				} else {
 					return false;
 				}
 			} else {
-				this._labelFocused = items[items.length - 1];
-				this._labelFocused.classList.toggle('label-focus');
+				this._itemFocused = items[items.length - 1];
+				this._itemFocused.classList.toggle('label-focus');
 			}
 
 			return !this.emit({
 				data: {
-					item: this._labelFocused,
+					item: this._itemFocused,
 				},
-				name: 'labelFocused',
+				name: 'itemFocused',
 				originalEvent: event,
 			});
 		}
 	}
 
 	/**
-	 * Handle the focused label removal and propagating the labelRemoved event.
+	 * Handle the focused item removal and propagating the itemRemoved event.
 	 * @param {!Event} event
 	 * @protected
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
-	_handleLabelRemoved(event) {
+	_handleItemRemoved(event) {
 		const index = event.getAttribute('data-tag');
 
-		this._removeFocusedLabel();
+		this._removeFocusedItem();
 
 		return !this.emit({
 			data: {
 				index,
 			},
-			name: 'labelRemoved',
+			name: 'itemRemoved',
 			originalEvent: event,
 		});
 	}
@@ -168,11 +168,11 @@ class ClayMultiSelect extends ClayComponent {
 	_handleOnInput(event) {
 		const value = event.target.value.toLowerCase();
 
-		this._removeFocusedLabel();
+		this._removeFocusedItem();
 
 		switch (event.data) {
 		case ',':
-			return this._handleLabelAdded(event);
+			return this._handleItemAdded(event);
 		default:
 			return !this.emit({
 				data: {
@@ -194,28 +194,28 @@ class ClayMultiSelect extends ClayComponent {
 		switch (event.key) {
 		case 'Enter':
 			event.preventDefault();
-			if (this._labelFocused) {
-				return this._handleLabelRemoved(this._labelFocused);
+			if (this._itemFocused) {
+				return this._handleItemRemoved(this._itemFocused);
 			} else {
-				return this._handleLabelAdded(event);
+				return this._handleItemAdded(event);
 			}
 		case 'Backspace':
 			if (!this.refs.input.value) {
-				if (!this._labelFocused) {
-					return this._handleLabelFocus(event);
+				if (!this._itemFocused) {
+					return this._handleItemFocus(event);
 				} else {
-					return this._handleLabelRemoved(this._labelFocused);
+					return this._handleItemRemoved(this._itemFocused);
 				}
 			}
 			break;
 		case 'ArrowLeft':
-			if (!this.refs.input.value && this._labelFocused) {
-				return this._handleLabelFocus(event, true);
+			if (!this.refs.input.value && this._itemFocused) {
+				return this._handleItemFocus(event, true);
 			}
 			break;
 		case 'ArrowRight':
-			if (!this.refs.input.value && this._labelFocused) {
-				return this._handleLabelFocus(event, false);
+			if (!this.refs.input.value && this._itemFocused) {
+				return this._handleItemFocus(event, false);
 			}
 			break;
 		case 'ArrowUp':
@@ -231,10 +231,10 @@ class ClayMultiSelect extends ClayComponent {
 	 * Removes the focus from the focused element.
 	 * @protected
 	 */
-	_removeFocusedLabel() {
-		if (this._labelFocused) {
-			this._labelFocused.classList.remove('label-focus');
-			this._labelFocused = null;
+	_removeFocusedItem() {
+		if (this._itemFocused) {
+			this._itemFocused.classList.remove('label-focus');
+			this._itemFocused = null;
 		}
 	}
 
@@ -270,7 +270,7 @@ class ClayMultiSelect extends ClayComponent {
 	 * @inheritDoc
 	 */
 	attached() {
-		this._labelFocused = null;
+		this._itemFocused = null;
 		this._dropdownItemFocused = null;
 	}
 
@@ -335,7 +335,7 @@ class ClayMultiSelect extends ClayComponent {
 	/**
 	 * @inheritDoc
 	 */
-	syncSelectedLabels() {
+	syncSelectedItems() {
 		this.refs.input.focus();
 	}
 }
@@ -401,13 +401,13 @@ ClayMultiSelect.STATE = {
 	label: Config.string(),
 
 	/**
-	 * List of the selected Labels.
+	 * List of the selected Items.
 	 * @default []
 	 * @instance
 	 * @memberof ClayMultiSelect
 	 * @type {?Array<Object>}
 	 */
-	selectedLabels: Config.array(Config.object()).value([]),
+	selectedItems: Config.array(Config.object()).value([]),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.

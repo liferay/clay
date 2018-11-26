@@ -11,13 +11,13 @@
 	{@param? _handleDropdownItemClick: any}
 	{@param? _handleOnInput: any}
 	{@param? _handleOnKeydown: any}
-	{@param? _removeFocusedLabel: any}
+	{@param? _removeFocusedItem: any}
 	{@param? contentRenderer: string}
 	{@param? elementClasses: string}
 	{@param? filteredItems: list<?>}
 	{@param? id: string}
 	{@param? label: string}
-	{@param? selectedLabels: list<?>}
+	{@param? selectedItems: list<?>}
 
 	{let $attributes kind="attributes"}
 		class="from-group
@@ -42,11 +42,11 @@
 			{param _handleDropdownItemClick: $_handleDropdownItemClick /}
 			{param _handleOnInput: $_handleOnInput /}
 			{param _handleOnKeydown: $_handleOnKeydown /}
-			{param _removeFocusedLabel: $_removeFocusedLabel /}
+			{param _removeFocusedItem: $_removeFocusedItem /}
 			{param contentRenderer: $contentRenderer /}
 			{param filteredItems: $filteredItems /}
 			{param helpText: $helpText /}
-			{param selectedLabels: $selectedLabels /}
+			{param selectedItems: $selectedItems /}
 			{param spritemap: $spritemap /}
 		{/call}
 	</div>
@@ -60,29 +60,27 @@
 	{@param? _handleDropdownItemClick: any}
 	{@param? _handleOnInput: any}
 	{@param? _handleOnKeydown: any}
-	{@param? _removeFocusedLabel: any}
+	{@param? _removeFocusedItem: any}
 	{@param? contentRenderer: string}
 	{@param? filteredItems: list<?>}
-	{@param? selectedLabels: list<?>}
+	{@param? selectedItems: list<?>}
 
 	<div class="input-group input-group-stacked-sm-down">
 		<div class="input-group-item">
 			<div data-keydown="{$_handleOnKeydown}" ref="formGroupInput" class="form-control dropdown-full form-control-tag-group">
-				{if $selectedLabels}
-					{foreach $item in $selectedLabels}
-						{delcall ClayInputField.Label variant="$contentRenderer" allowemptydefault="true"}
-							{param _handleCloseButtonClick: $_handleCloseButtonClick /}
-							{param data: $item /}
-							{param index: index($item) /}
-							{param spritemap: $spritemap /}
-						{/delcall}
-					{/foreach}
+				{if $selectedItems}
+					{call .items}
+						{param _handleCloseButtonClick: $_handleCloseButtonClick /}
+						{param contentRenderer: $contentRenderer /}
+						{param selectedItems: $selectedItems /}
+						{param spritemap: $spritemap /}
+					{/call}
 				{/if}
 
 				<input
 					class="form-control-inset"
-					onBlur="{$_removeFocusedLabel}"
-					onFocus="{$_removeFocusedLabel}"
+					onBlur="{$_removeFocusedItem}"
+					onFocus="{$_removeFocusedItem}"
 					onInput="{$_handleOnInput}"
 					onKeydown="{$_handleOnKeydown}"
 					ref="input"
@@ -101,7 +99,7 @@
 				<ul onkeydown="{$_handleOnKeydown}" class="{$classes}" ref="dropdown">
 					{if $filteredItems}
 						{foreach $item in $filteredItems}
-							{delcall ClayInputField.ItemDropdown variant="$contentRenderer" allowemptydefault="true"}
+							{delcall ClayMultiSelect.ItemDropdown variant="$contentRenderer" allowemptydefault="true"}
 								{param _handleDropdownItemClick: $_handleDropdownItemClick /}
 								{param data: $item /}
 								{param index: index($item) /}
@@ -134,7 +132,23 @@
 	</div>
 {/template}
 
-{deltemplate ClayMultiSelect.Label}
+{template .items}
+	{@param selectedItems: list<?>}
+	{@param spritemap: string}
+	{@param? _handleCloseButtonClick: any}
+	{@param? contentRenderer: string}
+
+	{foreach $item in $selectedItems}
+		{delcall ClayMultiSelect.Item variant="$contentRenderer" allowemptydefault="true"}
+			{param _handleCloseButtonClick: $_handleCloseButtonClick /}
+			{param data: $item /}
+			{param index: index($item) /}
+			{param spritemap: $spritemap /}
+		{/delcall}
+	{/foreach}
+{/template}
+
+{deltemplate ClayMultiSelect.Item}
 	{@param data: ?}
 	{@param index: int}
 	{@param spritemap: string}
