@@ -428,6 +428,15 @@ ClayMultiSelect.STATE = {
 	selectedItems: Config.array(Config.object()).value([]),
 
 	/**
+	 * Name of the selected items input.
+	 * @default undefind
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @type {?(string|undefined)}
+	 */
+	selectedItemsInputName: Config.string().value('selectedItems'),
+
+	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 * @default undefined
 	 * @instance

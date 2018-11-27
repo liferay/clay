@@ -19,6 +19,7 @@
 	{@param? inputName: string}
 	{@param? label: string}
 	{@param? selectedItems: list<?>}
+	{@param? selectedItemsInputName: string}
 
 	{let $attributes kind="attributes"}
 		class="from-group
@@ -53,8 +54,9 @@
 			{param contentRenderer: $contentRenderer /}
 			{param filteredItems: $filteredItems /}
 			{param helpText: $helpText /}
-			{param inputName: $inputId /}
+			{param inputName: $inputName /}
 			{param selectedItems: $selectedItems /}
+			{param selectedItemsInputName: $selectedItemsInputName /}
 			{param spritemap: $spritemap /}
 		{/call}
 	</div>
@@ -73,6 +75,7 @@
 	{@param? filteredItems: list<?>}
 	{@param? inputName: string}
 	{@param? selectedItems: list<?>}
+	{@param? selectedItemsInputName: string}
 
 	{let $inputAttributes kind="attributes"}
 		class="form-control-inset"
@@ -97,6 +100,7 @@
 						{param _handleCloseButtonClick: $_handleCloseButtonClick /}
 						{param contentRenderer: $contentRenderer /}
 						{param selectedItems: $selectedItems /}
+						{param selectedItemsInputName: $selectedItemsInputName /}
 						{param spritemap: $spritemap /}
 					{/call}
 				{/if}
@@ -153,8 +157,20 @@
 	{@param spritemap: string}
 	{@param? _handleCloseButtonClick: any}
 	{@param? contentRenderer: string}
+	{@param? selectedItemsInputName: string}
 
 	{foreach $item in $selectedItems}
+		{let $inputAttributes kind="attributes"}
+			{if $selectedItemsInputName}
+				name="{$selectedItemsInputName}"
+			{/if}
+
+			type="hidden"
+			value="{$item.value}"
+		{/let}
+
+		<input {$inputAttributes}>
+
 		{delcall ClayMultiSelect.Item variant="$contentRenderer" allowemptydefault="true"}
 			{param _handleCloseButtonClick: $_handleCloseButtonClick /}
 			{param data: $item /}
