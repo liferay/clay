@@ -15,22 +15,13 @@ import templates from './ClayMultiSelect.soy.js';
  */
 class ClayMultiSelect extends ClayComponent {
 	/**
-	 * Get the value typed in the input or through the filtered items.
+	 * Checks whether the event is from the filteredItems element
 	 * @param {!Event} event
 	 * @protected
-	 * @return {string}
+	 * @return {Boolean}
 	 */
-	_getLabelFromEvent(event) {
-		const {tagName} = event.target;
-
-		if (tagName === 'INPUT') {
-			return event.target.value.toLowerCase().replace(',', '');
-		} else if (tagName === 'A') {
-			const index = event.target.getAttribute('data-dropdown-item-index');
-			const element = this.filteredItems[Number(index)];
-
-			return element.originalString.toLowerCase();
-		}
+	_isDataFromFilteredItems(event) {
+		return !!event.target.getAttribute('data-dropdown-item-index');
 	}
 
 	/**
@@ -63,7 +54,7 @@ class ClayMultiSelect extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleDropdownItemClick(event) {
-		return this._handleItemAdded(event);
+		return this._handleItemSelected(event);
 	}
 
 	/**
@@ -73,23 +64,23 @@ class ClayMultiSelect extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleItemAdded(event) {
-		const item = this._getLabelFromEvent(event);
+		const label = event.target.value.toLowerCase().replace(',', '');
 
 		if (
-			item.trim() &&
+			label.trim() &&
 			!this.selectedItems.find(
-				itemSelected => itemSelected.label === item
+				itemSelected => itemSelected.label === label
 			)
 		) {
 			return !this.emit({
 				data: {
-					value: item,
+					label,
 				},
 				name: 'itemAdded',
 				originalEvent: event,
 			});
 		} else {
-			this.refs.input.value = item;
+			this.refs.input.value = label;
 		}
 	}
 
@@ -160,6 +151,22 @@ class ClayMultiSelect extends ClayComponent {
 	}
 
 	/**
+	 * Handle the selected item in the dropdown and trigger the itemSelected event.
+	 * @param {!Event} event
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleItemSelected(event) {
+		const index = event.target.getAttribute('data-dropdown-item-index');
+		const item = this.filteredItems[Number(index)];
+
+		return !this.emit({
+			data: item,
+			name: 'itemSelected',
+			originalEvent: event,
+		});
+	}
+
+	/**
 	 * Handles input changes and propagates the queryChange event.
 	 * @param {!Event} event
 	 * @protected
@@ -196,6 +203,8 @@ class ClayMultiSelect extends ClayComponent {
 			event.preventDefault();
 			if (this._itemFocused) {
 				return this._handleItemRemoved(this._itemFocused);
+			} else if (this._isDataFromFilteredItems(event)) {
+				return this._handleItemSelected(event);
 			} else {
 				return this._handleItemAdded(event);
 			}
