@@ -29,18 +29,11 @@ ClayIcon.STATE = {
 	/**
 	 * Flag to indicate if the svg is focusable or not
 	 * @default false
-	 * @deprecated since version 2.4.x
 	 * @instance
 	 * @memberof ClayIcon
 	 * @type {?bool}
 	 */
-	focusable: Config.validator(value => {
-		if (value) {
-			console.warn(
-				'🚨 The `focusable` API will be deprecated and removed in the next release. See more information https://goo.gl/EycJtK'
-			);
-		}
-	}),
+	focusable: Config.bool().value(false),
 
 	/**
 	 * Id to be applied to the element.
