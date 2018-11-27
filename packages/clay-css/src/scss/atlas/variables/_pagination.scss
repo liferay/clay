@@ -1,15 +1,15 @@
-$pagination-font-size: 0.875rem !default; // 14px
+$pagination-font-size: $font-size-base * 0.875 !default; // 14px
 
-$pagination-item-height: 2rem !default; // 32px
-$pagination-item-margin-x: 0.125rem !default;
+$pagination-item-height: $font-size-base * 2 !default; // 32px
+$pagination-item-margin-x: $font-size-base * 0.125 !default;
 
 $pagination-link-border-radius: 4px !default;
 
 $pagination-bg: transparent !default;
 $pagination-border-color: $pagination-bg !default;
-$pagination-border-width: 0.0625rem !default; // 1px
+$pagination-border-width: $font-size-base * 0.0625 !default; // 1px
 $pagination-color: $secondary !default;
-$pagination-padding-x: 0.625rem !default; // 10px
+$pagination-padding-x: $font-size-base * 0.625 !default; // 10px
 $pagination-padding-y: 0 !default;
 $pagination-line-height: $pagination-item-height - ($pagination-border-width * 2) !default;
 
@@ -26,21 +26,21 @@ $pagination-disabled-border-color: $pagination-disabled-bg !default;
 $pagination-disabled-color: $secondary !default;
 $pagination-disabled-opacity: 0.5 !default;
 
-$pagination-dropdown-menu-spacer-y: 0.625rem !default; // 10px
+$pagination-dropdown-menu-spacer-y: $font-size-base * 0.625 !default; // 10px
 
 $pagination-results-color: $pagination-color !default;
 
 // Sizes
 
-$pagination-link-border-radius-sm: 0.3125rem !default;
-$pagination-font-size-sm: 0.75rem !default; // 12px
-$pagination-item-height-sm: 1.5rem !default; // 24px
+$pagination-link-border-radius-sm: $font-size-base * 0.3125 !default;
+$pagination-font-size-sm: $font-size-base * 0.75 !default; // 12px
+$pagination-item-height-sm: $font-size-base * 1.5 !default; // 24px
 $pagination-line-height-sm: $pagination-item-height-sm - ($pagination-border-width * 2) !default;
 $pagination-padding-y-sm: 0 !default;
 
-$pagination-link-border-radius-lg: 0.3125rem !default; // 5px
-$pagination-font-size-lg: 1.125rem !default; // 18px
-$pagination-item-height-lg: 2.75rem !default; //44px
+$pagination-link-border-radius-lg: $font-size-base * 0.3125 !default; // 5px
+$pagination-font-size-lg: $font-size-base * 1.125 !default; // 18px
+$pagination-item-height-lg: $font-size-base * 2.75 !default; //44px
 $pagination-line-height-lg: $pagination-item-height-lg - ($pagination-border-width * 2) !default;
-$pagination-padding-x-lg: 1rem !default; // 16px
+$pagination-padding-x-lg: $font-size-base !default; // 16px
 $pagination-padding-y-lg: 0 !default;

@@ -1,16 +1,16 @@
 $navigation-bar-size: () !default;
 $navigation-bar-size: map-merge((
 	scaling-navbar: false,
-	border-bottom-width: 0.0625rem,
+	border-bottom-width: $font-size-base * 0.0625,
 	font-size: $navbar-font-size,
-	height: 3rem,
+	height: $font-size-base * 3,
 	padding-x: 0,
 	padding-y: 0,
-	link-padding-x: 1rem,
-	collapse-dropdown-item-padding-x-mobile: 1rem,
-	collapse-dropdown-item-padding-y-mobile: 0.71875rem,
+	link-padding-x: $font-size-base * 1,
+	collapse-dropdown-item-padding-x-mobile: $font-size-base * 1,
+	collapse-dropdown-item-padding-y-mobile: $font-size-base * 0.71875,
 	nav-item-dropdown-margin-top: 0,
-	active-border-bottom-width: 0.25rem
+	active-border-bottom-width: $font-size-base * 0.25
 ), $navigation-bar-size);
 
 $navigation-bar-light: () !default;

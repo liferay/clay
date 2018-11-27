@@ -5,10 +5,10 @@ $label-font-size: 75% !default;
 $label-font-weight: $font-weight-bold !default;
 $label-height: null !default;
 $label-line-height: 1 !default;
-$label-padding-x: 0.4375rem !default; // 7px
-$label-padding-y: 0.1875rem !default; // 3px
-$label-spacer-x: 0.25rem !default; // 4px
-$label-spacer-y: 0.125rem !default; // 2px
+$label-padding-x: $font-size-base * 0.4375 !default; // 7px
+$label-padding-y: $font-size-base * 0.1875 !default; // 3px
+$label-spacer-x: $font-size-base * 0.25 !default; // 4px
+$label-spacer-y: $font-size-base * 0.125 !default; // 2px
 $label-text-transform: null !default;
 
 $label-lexicon-icon-height: 0.875em !default;
@@ -28,7 +28,7 @@ $label-link-hover-text-decoration: none !default;
 $label-border-color: $body-color !default;
 $label-border-radius: $border-radius !default;
 $label-border-style: solid !default;
-$label-border-width: 0.0625rem !default;
+$label-border-width: $font-size-base * 0.0625 !default;
 
 // Label Close
 
@@ -51,9 +51,9 @@ $label-close: map-merge((
 
 $label-lg: () !default;
 $label-lg: map-merge((
-	font-size: 0.875rem, // 14px
-	padding-x: 1rem, // 16px
-	padding-y: 0.375rem, // 6px
+	font-size: $font-size-base * 0.875, // 14px
+	padding-x: $font-size-base * 1, // 16px
+	padding-y: $font-size-base * 0.375, // 6px
 	text-transform: none
 ), $label-lg);
 

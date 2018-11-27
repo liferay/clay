@@ -1,4 +1,4 @@
-$progress-min-width: 6.25rem !default; // 100px
+$progress-min-width: $font-size-base * 6.25 !default; // 100px
 
 $progress-bar-box-shadow: null !default;
 
@@ -14,10 +14,10 @@ $progress-group-subtitle: () !default;
 
 $progress-group-addon-font-size: null !default;
 $progress-group-addon-font-weight: null !default;
-$progress-group-addon-spacer-x: 1rem !default;
+$progress-group-addon-spacer-x: $font-size-base!default;
 
-$progress-group-stacked-progress-margin-bottom: 0.25rem !default; // 4px
-$progress-group-stacked-progress-margin-top: 0.25rem !default; // 4px
+$progress-group-stacked-progress-margin-bottom: $font-size-base * 0.25 !default; // 4px
+$progress-group-stacked-progress-margin-top: $font-size-base * 0.25 !default; // 4px
 
 // Progress Variants
 

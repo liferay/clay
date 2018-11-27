@@ -2,9 +2,9 @@ $nav-font-size: null !default;
 
 $nav-link-disabled-cursor: $disabled-cursor !default;
 
-$nav-item-monospaced-size: 2rem !default; // 32px
+$nav-item-monospaced-size: $font-size-base * 2 !default; // 32px
 
-$nav-btn-margin-x: 0.25rem !default; // 4px
+$nav-btn-margin-x: $font-size-base * 0.25 !default; // 4px
 $nav-btn-margin-y: (($line-height-base * $font-size-base) + ($nav-link-padding-y * 2) - $nav-item-monospaced-size) / 2 !default;
 $nav-btn-padding-x: $btn-padding-x-sm !default;
 $nav-btn-padding-y: 0 !default;
@@ -17,8 +17,8 @@ $nav-form-padding-top: 0 !default;
 // Nav Stacked
 
 $nav-stacked-nav-form-padding-bottom: $nav-link-padding-y !default;
-$nav-stacked-nav-form-padding-left: 0.5rem !default;
-$nav-stacked-nav-form-padding-right: 0.5rem !default;
+$nav-stacked-nav-form-padding-left: $font-size-base * 0.5 !default;
+$nav-stacked-nav-form-padding-right: $font-size-base * 0.5 !default;
 $nav-stacked-nav-form-padding-top: $nav-link-padding-y !default;
 
 // Nav Nested
@@ -64,4 +64,4 @@ $nav-underline-link-disabled-highlight: null !default;
 $nav-underline-link-active-color: null !default;
 $nav-underline-link-active-highlight: $component-active-bg !default;
 $nav-underline-link-active-content: '' !default;
-$nav-underline-link-active-highlight-height: 0.1875rem !default;
+$nav-underline-link-active-highlight-height: $font-size-base * 0.1875 !default;

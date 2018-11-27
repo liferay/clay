@@ -1,6 +1,6 @@
 $card-border-style: solid !default;
 $card-box-shadow: null !default;
-$card-margin-bottom: 1.25rem !default;
+$card-margin-bottom: $font-size-base * 1.25 !default;
 
 $card-body-padding-bottom: null !default;
 $card-body-padding-left: null !default;
@@ -8,10 +8,10 @@ $card-body-padding-right: null !default;
 $card-body-padding-top: null !default;
 
 $card-section-header-color: $secondary !default;
-$card-section-header-font-size: 0.75rem !default;
+$card-section-header-font-size: $font-size-base * 0.75 !default;
 $card-section-header-font-weight: $font-weight-semi-bold !default;
 $card-section-header-line-height: 2.5 !default;
-$card-section-header-margin-bottom: 1.5rem !default;
+$card-section-header-margin-bottom: $font-size-base * 1.5 !default;
 $card-section-header-padding: 0 ($grid-gutter-width / 2) !default;
 $card-section-header-text-transform: uppercase !default;
 
@@ -19,7 +19,7 @@ $card-section-header-text-transform: uppercase !default;
 
 $card-title: () !default;
 $card-title: map-merge((
-	font-size: 1rem,
+	font-size: $font-size-base * 1,
 	font-weight: $font-weight-semi-bold,
 	line-height: $line-height-base,
 	margin-bottom: 0
@@ -35,7 +35,7 @@ $card-title-link: map-merge((
 $card-subtitle: () !default;
 $card-subtitle: map-merge((
 	color: $secondary,
-	font-size: 0.875rem, // 14px
+	font-size: $font-size-base * 0.875, // 14px
 	font-weight: $font-weight-semi-bold,
 	margin-bottom: 0,
 	margin-top: 0
@@ -69,7 +69,7 @@ $card-rounded-circle-inner-border-radius: if($card-border-width > 0, calc(#{$rou
 $checkbox-left-card-padding: 40px !default;
 $checkbox-right-card-padding: $checkbox-left-card-padding !default;
 
-$checkbox-position: 1rem !default;
+$checkbox-position: $font-size-base!default;
 
 $form-check-card-checked-box-shadow: $input-btn-focus-box-shadow !default;
 
@@ -86,7 +86,7 @@ $file-card: map-merge((
 
 $user-card: () !default;
 $user-card: map-merge((
-	asset-icon-min-width: 2.5rem,
+	asset-icon-min-width: $font-size-base * 2.5,
 	asset-icon-width: 26%
 ), $user-card);
 
@@ -117,7 +117,7 @@ $card-page-item-asset: map-merge((
 
 $card-type-directory: () !default;
 $card-type-directory: map-merge((
-	sticker-font-size: 1.125rem // 18px
+	sticker-font-size: $font-size-base * 1.125 // 18px
 ), $card-type-directory);
 
 $card-page-item-directory: () !default;

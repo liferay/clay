@@ -18,10 +18,10 @@ $panel-header-border-bottom-width: 1px !default;
 $panel-header-offset-border-radius: if($panel-border-top-width > 0, calc(#{$panel-border-radius} - #{$panel-border-top-width}), $panel-border-radius) !default;
 $panel-header-font-size: $font-size-base !default;
 $panel-header-line-height: $headings-line-height !default;
-$panel-header-padding-x: 1.25rem !default;
-$panel-header-padding-y: 0.75rem !default;
+$panel-header-padding-x: $font-size-base * 1.25 !default;
+$panel-header-padding-y: $font-size-base * 0.75 !default;
 
-$panel-header-collapse-icon-font-size: 0.875rem !default; // 14px
+$panel-header-collapse-icon-font-size: $font-size-base * 0.875 !default; // 14px
 $panel-header-collapse-icon-bottom: null !default;
 $panel-header-collapse-icon-left: null !default;
 $panel-header-collapse-icon-right: null !default;
@@ -35,8 +35,8 @@ $panel-header-link-hover-text-decoration: null !default;
 
 // Panel Body
 
-$panel-body-padding-x: 1.25rem !default;
-$panel-body-padding-y: 0.75rem !default;
+$panel-body-padding-x: $font-size-base * 1.25 !default;
+$panel-body-padding-y: $font-size-base * 0.75 !default;
 
 // Panel Footer
 
@@ -57,13 +57,13 @@ $panel-group-panel-margin-bottom: -$panel-border-bottom-width !default;
 
 // Panel Group Flush
 
-$panel-group-flush-body-margin-bottom: 1.5rem !default;
+$panel-group-flush-body-margin-bottom: $font-size-base * 1.5 !default;
 $panel-group-flush-body-padding: 0 !default;
 
 $panel-group-flush-collapse-icon-left: null !default;
 $panel-group-flush-collapse-icon-right: 0 !default;
 $panel-group-flush-collapse-icon-padding-left: null !default;
-$panel-group-flush-collapse-icon-padding-right: 1.5rem !default;
+$panel-group-flush-collapse-icon-padding-right: $font-size-base * 1.5 !default;
 
 // Panel Variants
 

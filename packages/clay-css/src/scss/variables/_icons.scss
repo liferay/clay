@@ -1,16 +1,16 @@
 $collapse-icon-padding-left: null !default;
-$collapse-icon-padding-right: 2.28125rem !default; // 45px
+$collapse-icon-padding-right: $font-size-base * 2.28125 !default; // 45px
 
 $collapse-icon-position-bottom: null !default;
 $collapse-icon-position-left: null !default;
-$collapse-icon-position-right: 0.9375rem !default; // 15px
-$collapse-icon-position-top: clay-collapse-icon-align($nav-link-padding-y, 0.0625rem, $font-size-base) !default;
+$collapse-icon-position-right: $font-size-base * 0.9375 !default; // 15px
+$collapse-icon-position-top: clay-collapse-icon-align($nav-link-padding-y, $font-size-base * 0.0625, $font-size-base) !default;
 
 $lexicon-icon-size: 1em !default; // 16px
 
-$lexicon-icon-sm-font-size: 0.5rem !default; // 8px
-$lexicon-icon-lg-font-size: 2rem !default; // 32px
-$lexicon-icon-xl-font-size: 8rem !default; // 128px
+$lexicon-icon-sm-font-size: $font-size-base * 0.5 !default; // 8px
+$lexicon-icon-lg-font-size: $font-size-base * 2 !default; // 32px
+$lexicon-icon-xl-font-size: $font-size-base * 8 !default; // 128px
 
 $order-arrow-down-active-color: rgba($black, 0.9) !default;
 $order-arrow-up-active-color: $order-arrow-down-active-color !default;

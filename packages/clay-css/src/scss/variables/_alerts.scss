@@ -1,7 +1,7 @@
 $alert-border-style: solid !default;
 
-$alert-close-font-size: 0.875rem !default; // 14px
-$alert-close-height: 2rem !default; // 32px
+$alert-close-font-size: $font-size-base * 0.875 !default; // 14px
+$alert-close-height: $font-size-base * 2 !default; // 32px
 $alert-close-line-height: null !default;
 $alert-close-opacity: null !default;
 $alert-close-margin-left: null !default;
@@ -9,20 +9,20 @@ $alert-close-padding-bottom: 0 !default;
 $alert-close-padding-left: 0 !default;
 $alert-close-padding-right: 0 !default;
 $alert-close-padding-top: 0 !default;
-$alert-close-position-right: 0.5rem !default; // 8px
-$alert-close-position-top: 0.75rem !default; // 12px
+$alert-close-position-right: $font-size-base * 0.5 !default; // 8px
+$alert-close-position-top: $font-size-base * 0.75 !default; // 12px
 $alert-close-width: $alert-close-height !default;
 
 $alert-font-size: null !default;
 
 $alert-lead-font-size: null !default;
 $alert-lead-font-weight: null !default;
-$alert-lead-spacer-x: 0.3125rem !default; // 5px
+$alert-lead-spacer-x: $font-size-base * 0.3125 !default; // 5px
 
 $alert-link-decoration: null !default;
 $alert-link-hover-decoration: underline !default;
 
-$alert-indicator-font-size: 1.25rem !default;
+$alert-indicator-font-size: $font-size-base * 1.25 !default;
 
 $alert-title: () !default;
 
@@ -32,7 +32,7 @@ $alert-subtitle: () !default;
 
 $alert-dismissible-padding-bottom: null !default;
 $alert-dismissible-padding-left: null !default;
-$alert-dismissible-padding-right: 2.5rem !default; // 40px
+$alert-dismissible-padding-right: $font-size-base * 2.5 !default; // 40px
 $alert-dismissible-padding-top: null !default;
 
 // Alert Fluid
@@ -49,26 +49,26 @@ $alert-fluid-margin-bottom: 0 !default;
 
 $alert-notifications-absolute-bottom: null !default;
 $alert-notifications-absolute-left: null !default;
-$alert-notifications-absolute-right: 0.5rem !default; // 8px
-$alert-notifications-absolute-top: 4.75rem !default; // 76px
+$alert-notifications-absolute-right: $font-size-base * 0.5 !default; // 8px
+$alert-notifications-absolute-top: $font-size-base * 4.75 !default; // 76px
 
 $alert-notifications-absolute-bottom-mobile: null !default;
-$alert-notifications-absolute-left-mobile: 0.5rem !default; // 8px
-$alert-notifications-absolute-right-mobile: 0.5rem !default; // 8px
-$alert-notifications-absolute-top-mobile: 4.25rem!default; // 68px
+$alert-notifications-absolute-left-mobile: $font-size-base * 0.5 !default; // 8px
+$alert-notifications-absolute-right-mobile: $font-size-base * 0.5 !default; // 8px
+$alert-notifications-absolute-top-mobile: $font-size-base * 4.25!default; // 68px
 
-$alert-notifications-fixed-bottom: 1.25rem !default; // 20px
-$alert-notifications-fixed-left: 1.25rem !default; // 20px
+$alert-notifications-fixed-bottom: $font-size-base * 1.25 !default; // 20px
+$alert-notifications-fixed-left: $font-size-base * 1.25 !default; // 20px
 $alert-notifications-fixed-right: null !default;
 $alert-notifications-fixed-top: null !default;
 
-$alert-notifications-fixed-bottom-mobile: 1rem !default; // 16px
+$alert-notifications-fixed-bottom-mobile: $font-size-base!default; // 16px
 $alert-notifications-fixed-left-mobile: ($grid-gutter-width / 2) !default;
 $alert-notifications-fixed-right-mobile: ($grid-gutter-width / 2) !default;
 $alert-notifications-fixed-top-mobile: null !default; // 68px
 
 $alert-notifications-box-shadow: null !default;
-$alert-notifications-max-width: 22.5rem !default; // 360px
+$alert-notifications-max-width: $font-size-base * 22.5 !default; // 360px
 
 // Alert Variants
 

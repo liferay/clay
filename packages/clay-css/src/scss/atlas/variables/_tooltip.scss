@@ -1,9 +1,9 @@
 $tooltip-bg: $body-color !default;
 $tooltip-box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.4) !default;
-$tooltip-font-size: 0.875rem !default; // 14px
+$tooltip-font-size: $font-size-base * 0.875 !default; // 14px
 $tooltip-max-width: 230px !default;
 $tooltip-opacity: 1 !default;
-$tooltip-padding-x: 0.75rem !default; // 12px
-$tooltip-padding-y: 0.75rem !default; // 12px
+$tooltip-padding-x: $font-size-base * 0.75 !default; // 12px
+$tooltip-padding-y: $font-size-base * 0.75 !default; // 12px
 
-$tooltip-arrow-offset: 0.5rem !default; // 8px
+$tooltip-arrow-offset: $font-size-base * 0.5 !default; // 8px

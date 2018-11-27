@@ -3,10 +3,10 @@
 
 $enable-caret: false !default;
 
-$input-border-width: 0.0625rem !default; // 1px
-$input-height: 2.375rem !default; // 38px
-$input-height-lg: 3rem !default; // 48px
-$input-height-sm: 1.9375rem !default; // 31px
+$input-border-width: $font-size-base * 0.0625 !default; // 1px
+$input-height: $font-size-base * 2.375 !default; // 38px
+$input-height-lg: $font-size-base * 3 !default; // 48px
+$input-height-sm: $font-size-base * 1.9375 !default; // 31px
 
 $form-check-inline-input-margin-x: !default;
 

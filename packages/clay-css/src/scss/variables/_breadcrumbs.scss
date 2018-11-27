@@ -5,9 +5,9 @@ $breadcrumb-text-transform: null !default;
 
 $breadcrumb-active-font-weight: null !default;
 
-$breadcrumb-text-truncate-icon-spacer-x: 0.875rem !default; // 14px
-$breadcrumb-text-truncate-max-width: 18.75rem - $breadcrumb-text-truncate-icon-spacer-x !default; // 300px
-$breadcrumb-text-truncate-max-width-mobile: 9.375rem - $breadcrumb-text-truncate-icon-spacer-x !default; // 150px
+$breadcrumb-text-truncate-icon-spacer-x: $font-size-base * 0.875 !default; // 14px
+$breadcrumb-text-truncate-max-width: $font-size-base * 18.75 - $breadcrumb-text-truncate-icon-spacer-x !default; // 300px
+$breadcrumb-text-truncate-max-width-mobile: $font-size-base * 9.375 - $breadcrumb-text-truncate-icon-spacer-x !default; // 150px
 
 $breadcrumb-link-color: $link-color !default;
 $breadcrumb-link-text-decoration: $link-decoration !default;

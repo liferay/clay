@@ -2,13 +2,13 @@ $quick-action-font-size: null !default;
 $quick-action-padding-x: null !default;
 $quick-action-padding-y: null !default;
 
-$quick-action-item-margin-x: 0.5rem !default; // 8px
+$quick-action-item-margin-x: $font-size-base * 0.5 !default; // 8px
 $quick-action-item-margin-y: null !default;
 $quick-action-item-padding-x: null !default; // 8px
 $quick-action-item-padding-y: null !default; // 8px
 
-$quick-action-item-min-height: 2rem !default; // 32px
-$quick-action-item-min-width: 2rem !default; // 32px
+$quick-action-item-min-height: $font-size-base * 2 !default; // 32px
+$quick-action-item-min-width: $font-size-base * 2 !default; // 32px
 
 $quick-action-item-border-radius: $border-radius !default;
 

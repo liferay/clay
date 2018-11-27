@@ -2,10 +2,10 @@ $card-border-radius: $border-radius !default;
 $card-border-width: 0 !default;
 $card-box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.6) !default;
 
-$card-body-padding-bottom: 1rem !default;
-$card-body-padding-left: 1rem !default;
-$card-body-padding-right: 1rem !default;
-$card-body-padding-top: 1rem !default;
+$card-body-padding-bottom: $font-size-base !default;
+$card-body-padding-left: $font-size-base !default;
+$card-body-padding-right: $font-size-base !default;
+$card-body-padding-top: $font-size-base !default;
 
 $card-inner-border-radius: if($card-border-width > 0, calc(#{$card-border-radius} - #{$card-border-width}), $card-border-radius) !default;
 
@@ -14,7 +14,7 @@ $card-inner-border-radius: if($card-border-width > 0, calc(#{$card-border-radius
 $card-title: () !default;
 $card-title: map-merge((
 	color: $body-color,
-	font-size: 0.875rem // 14px
+	font-size: $font-size-base * 0.875 // 14px
 ), $card-title);
 
 $card-title-link: () !default;
@@ -39,7 +39,7 @@ $card-subtitle-link: map-merge((
 $card-link: () !default;
 $card-link: map-merge((
 	color: $secondary,
-	font-size: 0.875rem, // 14px
+	font-size: $font-size-base * 0.875, // 14px
 	hover-color: $secondary,
 	hover-text-decoration: underline
 ), $card-link);
@@ -53,7 +53,7 @@ $form-check-card-checked-box-shadow: 0 0 0 2px lighten($component-active-bg, 22.
 $card-type-asset: () !default;
 $card-type-asset: map-merge((
 	aspect-ratio-border-color: lighten(map-get($theme-colors, secondary), 46%),
-	card-body-padding-top: 0.75rem
+	card-body-padding-top: $font-size-base * 0.75
 ), $card-type-asset);
 
 $image-card: () !default;

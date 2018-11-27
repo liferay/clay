@@ -7,7 +7,7 @@ $link-secondary: map-merge((
 
 $component-title: () !default;
 $component-title: map-merge((
-	font-size: 1rem,
+	font-size: $font-size-base * 1,
 	line-height: 1.25,
 	margin-bottom: calc((#{$dropdown-action-toggle-size} - (1em * 1.25)) / 2),
 	margin-top: calc((#{$dropdown-action-toggle-size} - (1em * 1.25)) / 2)
@@ -30,7 +30,7 @@ $component-subtitle-link: map-merge((
 
 $component-action: () !default;
 $component-action: map-merge((
-	font-size: 1rem, // 16px
+	font-size: $font-size-base * 1, // 16px
 	hover-bg: rgba(#272833, 0.03),
 	hover-color: $body-color,
 	active-bg: rgba(#272833, 0.06),

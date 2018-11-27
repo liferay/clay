@@ -1,8 +1,8 @@
-$custom-control-indicator-size: 1.0625rem !default; // 17px
+$custom-control-indicator-size: $font-size-base * 1.0625 !default; // 17px
 $custom-control-indicator-bg: #FFF !default;
 $custom-control-indicator-border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06) !default;
 $custom-control-indicator-border-style: solid !default;
-$custom-control-indicator-border-width: 0.0625rem !default; // 1px
+$custom-control-indicator-border-width: $font-size-base * 0.0625 !default; // 1px
 $custom-control-indicator-box-shadow: none !default;
 
 $custom-control-indicator-focus-box-shadow: 0 0 0 1px $body-bg, 0 0 0 2px lighten($component-active-bg, 22.94) !default;
@@ -51,7 +51,7 @@ $custom-checkbox-indicator-icon-checked-bg-size: 60% !default;
 $custom-checkbox-indicator-icon-indeterminate-bg-size: 50% !default;
 
 $custom-checkbox-indicator-indeterminate-bg: $component-active-bg !default;
-$custom-checkbox-indicator-border-radius: 0.125rem !default; // 2px
+$custom-checkbox-indicator-border-radius: $font-size-base * 0.125 !default; // 2px
 
 // Custom Radio
 

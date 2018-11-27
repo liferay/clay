@@ -8,7 +8,7 @@ $btn-disabled-cursor: $disabled-cursor !default;
 
 $btn-inline-item-font-size: null !default;
 
-$btn-section-font-size: 0.6875rem !default; // 11px
+$btn-section-font-size: $font-size-base * 0.6875 !default; // 11px
 $btn-section-font-weight: $font-weight-normal !default;
 $btn-section-line-height: 1 !default;
 
@@ -19,28 +19,28 @@ $btn-font-size-lg-mobile: null !default;
 $btn-padding-x-lg-mobile: null !default;
 $btn-padding-y-lg-mobile: null !default;
 $btn-inline-item-font-size-lg: null !default;
-$btn-section-font-size-lg: 0.8125rem !default; // 13px
+$btn-section-font-size-lg: $font-size-base * 0.8125 !default; // 13px
 
 $btn-font-size-sm: $font-size-sm !default;
 $btn-font-size-sm-mobile: null !default;
 $btn-padding-x-sm-mobile: null !default;
 $btn-padding-y-sm-mobile: null !default;
 $btn-inline-item-font-size-sm: null !default;
-$btn-section-font-size-sm: 0.5625rem !default; // 9px
+$btn-section-font-size-sm: $font-size-base * 0.5625 !default; // 9px
 
 // Button Monospaced
 
 $btn-monospaced-padding-x: 0 !default;
-$btn-monospaced-padding-y: 0.1875rem !default; // 3px
-$btn-monospaced-size: 2.375rem !default; // 38px
+$btn-monospaced-padding-y: $font-size-base * 0.1875 !default; // 3px
+$btn-monospaced-size: $font-size-base * 2.375 !default; // 38px
 
 $btn-monospaced-padding-x-lg: 0 !default;
-$btn-monospaced-padding-y-lg: 0.3125rem !default; // 5px
-$btn-monospaced-size-lg: 3rem !default; // 48px
+$btn-monospaced-padding-y-lg: $font-size-base * 0.3125 !default; // 5px
+$btn-monospaced-size-lg: $font-size-base * 3 !default; // 48px
 
 $btn-monospaced-padding-x-sm: 0 !default;
-$btn-monospaced-padding-y-sm: 0.125rem !default; // 2px
-$btn-monospaced-size-sm: 1.9375rem !default; // 31px
+$btn-monospaced-padding-y-sm: $font-size-base * 0.125 !default; // 2px
+$btn-monospaced-size-sm: $font-size-base * 1.9375 !default; // 31px
 
 $btn-monospaced-size-mobile: null !default;
 $btn-monospaced-size-lg-mobile: null !default;
@@ -52,8 +52,8 @@ $btn-group-item-margin-right: map-get($spacers, 2) !default;
 
 // Button Toolbar
 
-$btn-toolbar-spacer-x: 0.5rem !default; // 8px
-$btn-toolbar-spacer-y: 0.125rem !default; // 2px
+$btn-toolbar-spacer-x: $font-size-base * 0.5 !default; // 8px
+$btn-toolbar-spacer-y: $font-size-base * 0.125 !default; // 2px
 
 // Button Variants
 

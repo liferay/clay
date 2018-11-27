@@ -3,9 +3,9 @@ $sticker-border-radius: $border-radius !default;
 $sticker-border-style: null !default;
 $sticker-border-width: null !default;
 $sticker-color: $label-color !default;
-$sticker-font-size: 0.875rem !default; // 14px
+$sticker-font-size: $font-size-base * 0.875 !default; // 14px
 $sticker-font-weight: $font-weight-semi-bold !default;
-$sticker-size: 2rem !default; // 32px
+$sticker-size: $font-size-base * 2 !default; // 32px
 
 $sticker-inline-item-font-size: null !default;
 
@@ -13,20 +13,20 @@ $sticker-inline-item-font-size: null !default;
 
 $sticker-sm: () !default;
 $sticker-sm: map-merge((
-	font-size: 0.75rem,
-	size: 1.5rem
+	font-size: $font-size-base * 0.75,
+	size: $font-size-base * 1.5
 ), $sticker-sm);
 
 $sticker-lg: () !default;
 $sticker-lg: map-merge((
-	font-size: 1.125rem,
-	size: 2.5rem
+	font-size: $font-size-base * 1.125,
+	size: $font-size-base * 2.5
 ), $sticker-lg);
 
 $sticker-xl: () !default;
 $sticker-xl: map-merge((
-	font-size: 1.25rem,
-	size: 3rem
+	font-size: $font-size-base * 1.25,
+	size: $font-size-base * 3
 ), $sticker-xl);
 
 // Sticker Positions

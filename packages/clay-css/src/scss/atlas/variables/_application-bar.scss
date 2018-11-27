@@ -1,6 +1,6 @@
 $application-bar-size: () !default;
 $application-bar-size: map-merge((
-	title-font-size: 1.125rem // 18px
+	title-font-size: $font-size-base * 1.125 // 18px
 ), $application-bar-size);
 
 $application-bar-dark: () !default;

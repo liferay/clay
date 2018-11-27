@@ -1,13 +1,13 @@
-$sidebar-padding-bottom: 1.5rem !default; // 24px
-$sidebar-padding-left: 1.5rem !default; // 24px
-$sidebar-padding-right: 1.5rem !default; // 24px
-$sidebar-padding-top: 1.5rem !default; // 24px
+$sidebar-padding-bottom: $font-size-base * 1.5 !default; // 24px
+$sidebar-padding-left: $font-size-base * 1.5 !default; // 24px
+$sidebar-padding-right: $font-size-base * 1.5 !default; // 24px
+$sidebar-padding-top: $font-size-base * 1.5 !default; // 24px
 
 // Sidebar Header Title
 
 $sidebar-header-component-title: () !default;
 $sidebar-header-component-title: map-merge((
-	font-size: 1.5rem, // 24px,
+	font-size: $font-size-base * 1.5, // 24px,
 	font-weight: $font-weight-semi-bold,
 	clay-link: (
 		color: $body-color
@@ -18,7 +18,7 @@ $sidebar-header-component-title: map-merge((
 
 $sidebar-header-component-subtitle: () !default;
 $sidebar-header-component-subtitle: map-merge((
-	font-size: 1.125rem, // 18px
+	font-size: $font-size-base * 1.125, // 18px
 	font-weight: $font-weight-semi-bold,
 	margin-bottom: 0
 ), $sidebar-header-component-subtitle);
@@ -27,9 +27,9 @@ $sidebar-header-component-subtitle: map-merge((
 
 $sidebar-dt: () !default;
 $sidebar-dt: map-merge((
-	font-size: 0.875rem, // 14px
+	font-size: $font-size-base * 0.875, // 14px
 	font-weight: $font-weight-semi-bold,
-	margin-bottom: 0.25rem, // 4px
+	margin-bottom: $font-size-base * 0.25, // 4px
 	text-transform: uppercase
 ), $sidebar-dt);
 
@@ -37,25 +37,25 @@ $sidebar-dt: map-merge((
 
 $sidebar-dd: () !default;
 $sidebar-dd: map-merge((
-	font-size: 0.875rem, // 14px
-	margin-bottom: 0.75rem // 12px
+	font-size: $font-size-base * 0.875, // 14px
+	margin-bottom: $font-size-base * 0.75 // 12px
 ), $sidebar-dd);
 
 // Sidebar Panel
 
-$sidebar-panel-margin-bottom: 1rem !default; // 16px
+$sidebar-panel-margin-bottom: $font-size-base!default; // 16px
 
 // Sidebar List Group
 
 $sidebar-list-group-bg: transparent !default;
 $sidebar-list-group-border-color: $gray-300 !default;
-$sidebar-list-group-font-size: 0.875rem !default; // 14px
+$sidebar-list-group-font-size: $font-size-base * 0.875 !default; // 14px
 $sidebar-list-group-type: list-group-flush !default;
 
 $sidebar-list-group-item-padding: 0 !default;
 
-$sidebar-list-group-autofit-col-padding-x: 0.5rem !default; // 8px
-$sidebar-list-group-autofit-col-padding-y: 1rem !default; // 16px
+$sidebar-list-group-autofit-col-padding-x: $font-size-base * 0.5 !default; // 8px
+$sidebar-list-group-autofit-col-padding-y: $font-size-base!default; // 16px
 
 $sidebar-list-group-sticker-size: () !default;
 $sidebar-list-group-sticker-size: map-merge($sticker-sm, $sidebar-list-group-sticker-size);
@@ -75,7 +75,7 @@ $sidebar-light: map-merge((
 	),
 	panel-bg: $gray-200,
 	sidebar-list-group-title: (
-		font-size: 1rem,
+		font-size: $font-size-base * 1,
 		clay-link: (
 			color: $body-color
 		)

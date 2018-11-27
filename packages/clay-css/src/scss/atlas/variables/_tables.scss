@@ -2,7 +2,7 @@ $table-bg: #FFF !default;
 $table-accent-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57) !default;
 $table-hover-bg: lighten($component-active-bg, 44.90) !default;
 $table-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
-$table-font-size: 0.875rem !default;
+$table-font-size: $font-size-base * 0.875 !default;
 
 $table-disabled-color: #D9D9DD !default;
 
@@ -19,9 +19,9 @@ $table-head-link: map-merge((
 
 $table-divider-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57) !default;
 $table-divider-color: $secondary !default;
-$table-divider-font-size: 0.75rem !default; // 12px
+$table-divider-font-size: $font-size-base * 0.75 !default; // 12px
 $table-divider-font-weight: $font-weight-semi-bold !default;
-$table-divider-padding: 0.4375rem 0.75rem !default;
+$table-divider-padding: $font-size-base * 0.4375 $font-size-base * 0.75 !default;
 $table-divider-text-transform: uppercase !default;
 
 $table-quick-action-menu-accent-bg: $table-accent-bg !default;
@@ -34,7 +34,7 @@ $table-quick-action-menu-hover-bg: $table-hover-bg !default;
 $table-title: () !default;
 $table-title: map-merge((
 	color: $body-color,
-	font-size: 0.875rem // 14px
+	font-size: $font-size-base * 0.875 // 14px
 ), $table-title);
 
 // Table Action Link
@@ -42,7 +42,7 @@ $table-title: map-merge((
 $table-action-link: () !default;
 $table-action-link: map-merge((
 	color: $secondary,
-	font-size: 1rem, // 16px
+	font-size: $font-size-base * 1, // 16px
 	hover-bg: rgba(0, 0, 0, 0.02),
 	hover-color: $body-color,
 	active-bg: rgba(0, 0, 0, 0.04)
@@ -70,15 +70,15 @@ $table-list-head-bg: #FFF !default;
 
 $table-list-link-color: $secondary !default;
 
-$table-list-divider-padding-x: 0.75rem !default; // 12px
-$table-list-divider-padding-y: 0.4375rem !default; // 7px
+$table-list-divider-padding-x: $font-size-base * 0.75 !default; // 12px
+$table-list-divider-padding-y: $font-size-base * 0.4375 !default; // 7px
 
 // Table List Title
 
 $table-list-title: () !default;
 $table-list-title: map-merge((
 	color: $body-color,
-	font-size: 0.875rem, // 14px
+	font-size: $font-size-base * 0.875, // 14px
 	line-height: 1.45
 ), $table-list-title);
 

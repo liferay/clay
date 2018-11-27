@@ -2,14 +2,14 @@
 
 $sidebar-header-component-title: () !default;
 $sidebar-header-component-title: map-merge((
-	font-size: 1.25rem // 20px,
+	font-size: $font-size-base * 1.25 // 20px,
 ), $sidebar-header-component-title);
 
 // Sidebar Header Subtitle
 
 $sidebar-header-component-subtitle: () !default;
 $sidebar-header-component-subtitle: map-merge((
-	font-size: 0.75rem, // 12px
+	font-size: $font-size-base * 0.75, // 12px
 	font-weight: $font-weight-normal
 ), $sidebar-header-component-subtitle);
 
@@ -17,14 +17,14 @@ $sidebar-header-component-subtitle: map-merge((
 
 $sidebar-dt: () !default;
 $sidebar-dt: map-merge((
-	font-size: 0.75rem // 12px
+	font-size: $font-size-base * 0.75 // 12px
 ), $sidebar-dt);
 
 // Sidebar DD
 
 $sidebar-dd: () !default;
 $sidebar-dd: map-merge((
-	font-size: 0.875rem // 14px
+	font-size: $font-size-base * 0.875 // 14px
 ), $sidebar-dd);
 
 // Sidebar List Group
@@ -37,7 +37,7 @@ $sidebar-light: () !default;
 $sidebar-light: map-merge((
 	bg: #FFF,
 	border-left-width: 0,
-	box-shadow: -0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
+	box-shadow: -$font-size-base * 0.25 0 $font-size-base * 0.5 -$font-size-base * 0.25 rgba(0, 0, 0, 0.1),
 	panel-bg: $light,
 	dt: (
 		color: $secondary

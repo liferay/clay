@@ -1,4 +1,4 @@
-$navbar-font-size: 0.875rem !default; // 14px
+$navbar-font-size: $font-size-base * 0.875 !default; // 14px
 
 $navbar-underline-active-bg: lighten($component-active-bg, 22.94) !default;
 

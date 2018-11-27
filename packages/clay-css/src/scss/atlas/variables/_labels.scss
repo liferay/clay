@@ -1,8 +1,8 @@
-$label-border-radius: 0.125rem !default; // 2px
-$label-font-size: 0.625rem !default; // 10px
+$label-border-radius: $font-size-base * 0.125 !default; // 2px
+$label-font-size: $font-size-base * 0.625 !default; // 10px
 $label-font-weight: $font-weight-semi-bold !default;
-$label-padding-x: 0.25rem !default; // 4px
-$label-padding-y: 0.125rem !default; // 2px
+$label-padding-x: $font-size-base * 0.25 !default; // 4px
+$label-padding-y: $font-size-base * 0.125 !default; // 2px
 $label-text-transform: uppercase !default;
 
 $label-item-spacer-x: 0.85714em !default;
@@ -23,10 +23,10 @@ $label-close: map-merge((
 
 $label-lg: () !default;
 $label-lg: map-merge((
-	font-size: 0.75rem, // 12px
-	height: 1.5rem, // 24px
-	padding-x: 0.5rem, // 8px
-	padding-y: 0.3125rem // 5px
+	font-size: $font-size-base * 0.75, // 12px
+	height: $font-size-base * 1.5, // 24px
+	padding-x: $font-size-base * 0.5, // 8px
+	padding-y: $font-size-base * 0.3125 // 5px
 ), $label-lg);
 
 // Label Variants

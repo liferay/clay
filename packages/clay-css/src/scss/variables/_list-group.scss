@@ -2,15 +2,15 @@ $list-group-box-shadow: null !default;
 $list-group-color: null !default;
 $list-group-font-size: null !default;
 
-$list-group-margin-bottom: 1.5rem !default;
+$list-group-margin-bottom: $font-size-base * 1.5 !default;
 $list-group-margin-top: null !default;
 
 // Use values flex-start, flex-end, or center
 $list-group-item-flex-align-items: flex-start !default;
 
-$list-group-item-flex-checkbox-offset-top: 0.1875rem !default; // 3px
-$list-group-item-flex-offset-top: 0.0625rem !default; // 1px
-$list-group-item-flex-list-group-title-offset-top: -0.25rem !default; // -4px
+$list-group-item-flex-checkbox-offset-top: $font-size-base * 0.1875 !default; // 3px
+$list-group-item-flex-offset-top: $font-size-base * 0.0625 !default; // 1px
+$list-group-item-flex-list-group-title-offset-top: -$font-size-base * 0.25 !default; // -4px
 
 // List Group Header
 
@@ -20,7 +20,7 @@ $list-group-header-padding-y: $list-group-item-padding-y !default;
 
 $list-group-header-title: () !default;
 $list-group-header-title: map-merge((
-	font-size: 1rem,
+	font-size: $font-size-base * 1,
 	font-weight: $font-weight-semi-bold,
 	line-height: $headings-line-height,
 	margin-bottom: 0
@@ -36,7 +36,7 @@ $list-group-title-link: map-merge((
 
 $list-group-title: () !default;
 $list-group-title: map-merge((
-	font-size: 1.125rem, // 18px
+	font-size: $font-size-base * 1.125, // 18px
 	font-weight: $font-weight-semi-bold,
 	margin-bottom: 0,
 	margin-top: $list-group-item-flex-list-group-title-offset-top,
@@ -115,17 +115,17 @@ $list-group-notification-item-active-border-left-color: $list-group-active-borde
 $list-group-notification-item-active-border-right-color: $list-group-active-border-color !default;
 $list-group-notification-item-active-border-top-color: $list-group-active-border-color !default;
 
-$list-group-notification-item-border-bottom-width: 0.0625rem !default;
-$list-group-notification-item-border-left-width: 0.0625rem !default;
-$list-group-notification-item-border-right-width: 0.0625rem !default;
-$list-group-notification-item-border-top-width: 0.0625rem !default;
+$list-group-notification-item-border-bottom-width: $font-size-base * 0.0625 !default;
+$list-group-notification-item-border-left-width: $font-size-base * 0.0625 !default;
+$list-group-notification-item-border-right-width: $font-size-base * 0.0625 !default;
+$list-group-notification-item-border-top-width: $font-size-base * 0.0625 !default;
 
 $list-group-notification-item: () !default;
 
 $list-group-notification-item-primary: () !default;
 $list-group-notification-item-primary: map-merge((
 	border-left-color: theme-color-level(primary, -9),
-	border-left-width: 0.5rem,
+	border-left-width: $font-size-base * 0.5,
 	border-bottom-left-radius: 0,
 	border-top-left-radius: 0,
 	active-border-left-color: theme-color-level(primary, -9)

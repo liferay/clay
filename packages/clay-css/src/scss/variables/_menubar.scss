@@ -2,7 +2,7 @@
 
 $menubar-vertical-expand-md: () !default;
 $menubar-vertical-expand-md: map-merge((
-	margin-bottom-mobile: 1.5rem,
+	margin-bottom-mobile: $font-size-base * 1.5,
 	margin-left-mobile: -($grid-gutter-width / 2),
 	margin-right-mobile: -($grid-gutter-width / 2),
 	collapse-z-index-mobile: $zindex-navbar-collapse-absolute - 1
@@ -18,7 +18,7 @@ $menubar-vertical-transparent-md: map-merge((
 $menubar-vertical-expand-lg: () !default;
 $menubar-vertical-expand-lg: map-merge((
 	breakpoint-up: lg,
-	margin-bottom-mobile: 1.5rem,
+	margin-bottom-mobile: $font-size-base * 1.5,
 	margin-left-mobile: -($grid-gutter-width / 2),
 	margin-right-mobile: -($grid-gutter-width / 2),
 	collapse-z-index-mobile: $zindex-navbar-collapse-absolute - 1

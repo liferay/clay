@@ -1,12 +1,12 @@
-$alert-padding-x: 1rem !default; // 16px
-$alert-padding-y: 1.09375rem !default; // 17.5px
+$alert-padding-x: $font-size-base !default; // 16px
+$alert-padding-y: $font-size-base * 1.09375 !default; // 17.5px
 
 // For top only border use: 2px 0 0 0
-$alert-border-width: 0.0625rem !default;
+$alert-border-width: $font-size-base * 0.0625 !default;
 
 $alert-close-opacity: 1 !default;
 
-$alert-font-size: 0.875rem !default; // 14px
+$alert-font-size: $font-size-base * 0.875 !default; // 14px
 
 $alert-lead-font-size: $alert-font-size !default;
 $alert-lead-font-weight: $font-weight-semi-bold !default;
@@ -19,20 +19,20 @@ $alert-indicator-font-size: !default;
 
 $alert-title: () !default;
 $alert-title: map-merge((
-	font-size: 0.875rem,
-	margin-bottom: 0.25rem,
+	font-size: $font-size-base * 0.875,
+	margin-bottom: $font-size-base * 0.25,
 	margin-top: 0
 ), $alert-title);
 
 $alert-subtitle: () !default;
 $alert-subtitle: map-merge((
-	font-size: 0.75rem,
+	font-size: $font-size-base * 0.75,
 	font-weight: $font-weight-normal
 ), $alert-subtitle);
 
 // Alert Notification
 
-$alert-notifications-box-shadow: 0 0.5rem 2rem -0.25rem rgba(0, 0, 0, 0.3) !default;
+$alert-notifications-box-shadow: 0 $font-size-base * 0.5 $font-size-base * 2 -$font-size-base * 0.25 rgba(0, 0, 0, 0.3) !default;
 
 // Alert Variants
 

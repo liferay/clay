@@ -1,6 +1,6 @@
 $navigation-bar-size: () !default;
 $navigation-bar-size: map-merge((
-	collapse-dropdown-item-padding-y-mobile: 0.8125rem
+	collapse-dropdown-item-padding-y-mobile: $font-size-base * 0.8125
 ), $navigation-bar-size);
 
 $navigation-bar-light: () !default;

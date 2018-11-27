@@ -5,19 +5,19 @@ $list-group-active-bg: $list-group-hover-bg !default;
 $list-group-active-border-color: $list-group-border-color !default;
 $list-group-active-color: !default;
 
-$list-group-font-size: 0.875rem !default; // 14px
-$list-group-item-padding-x: 1rem !default; // 16px
-$list-group-item-padding-y: 1rem !default; // 16px
+$list-group-font-size: $font-size-base * 0.875 !default; // 14px
+$list-group-item-padding-x: $font-size-base !default; // 16px
+$list-group-item-padding-y: $font-size-base !default; // 16px
 
 // List Group Header
 
 $list-group-header-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57) !default;
-$list-group-header-padding-y: 0.5rem !default; // 8px
+$list-group-header-padding-y: $font-size-base * 0.5 !default; // 8px
 
 $list-group-header-title: () !default;
 $list-group-header-title: map-merge((
 	color: $secondary,
-	font-size: 0.75rem, // 12px
+	font-size: $font-size-base * 0.75, // 12px
 	text-transform: uppercase
 ), $list-group-header-title);
 
@@ -31,7 +31,7 @@ $list-group-title-link: map-merge((
 $list-group-title: () !default;
 $list-group-title: map-merge((
 	color: $body-color,
-	font-size: 0.875rem, // 14px
+	font-size: $font-size-base * 0.875, // 14px
 	line-height: 1.45
 ), $list-group-title);
 

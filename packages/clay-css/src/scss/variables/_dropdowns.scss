@@ -16,7 +16,7 @@ $dropdown-header-padding-y: $dropdown-padding-y !default;
 $dropdown-header-text-transform: null !default;
 
 $dropdown-subheader-color: $dropdown-header-color !default;
-$dropdown-subheader-font-size: 0.75rem !default; // 12px
+$dropdown-subheader-font-size: $font-size-base * 0.75 !default; // 12px
 $dropdown-subheader-font-weight: $font-weight-semi-bold !default;
 $dropdown-subheader-margin-bottom: null !default;
 $dropdown-subheader-margin-top: null !default;
@@ -25,7 +25,7 @@ $dropdown-subheader-padding-y: $dropdown-header-padding-y !default;
 $dropdown-subheader-text-transform: uppercase !default;
 
 $dropdown-caption-color: $dropdown-header-color !default;
-$dropdown-caption-font-size: 0.875rem !default; // 14px
+$dropdown-caption-font-size: $font-size-base * 0.875 !default; // 14px
 $dropdown-caption-font-weight: null !default;
 
 $dropdown-link-font-weight: null !default;
@@ -42,8 +42,8 @@ $dropdown-inline-scroller-max-height: 200px !default;
 $dropdown-inline-scroller-max-height-mobile: none !default;
 
 $dropdown-item-disabled-cursor: $disabled-cursor !default;
-$dropdown-item-indicator-size: 1rem !default;
-$dropdown-item-indicator-spacer-x: 1rem !default;
+$dropdown-item-indicator-size: $font-size-base!default;
+$dropdown-item-indicator-spacer-x: $font-size-base!default;
 
 // Dropdown Action
 

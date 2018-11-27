@@ -6,7 +6,7 @@ $pagination-item-margin-y: null !default;
 $pagination-link-border-radius: null !default;
 $pagination-link-cursor: null !default;
 
-$pagination-margin-bottom: 0.5rem !default;
+$pagination-margin-bottom: $font-size-base * 0.5 !default;
 
 $pagination-disabled-cursor: $disabled-cursor !default;
 $pagination-disabled-opacity: null !default;

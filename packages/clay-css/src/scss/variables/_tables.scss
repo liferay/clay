@@ -1,4 +1,4 @@
-$table-responsive-margin-bottom: 1.5rem !default;
+$table-responsive-margin-bottom: $font-size-base * 1.5 !default;
 
 // Table
 
@@ -20,7 +20,7 @@ $table-head-height: 36px !default;
 
 $table-head-link: () !default;
 
-$table-head-title-inline-item-spacer-x: 0.25rem !default; // 4px
+$table-head-title-inline-item-spacer-x: $font-size-base * 0.25 !default; // 4px
 $table-head-title-text-truncate-max-width: calc(100% - 1em - #{$table-head-title-inline-item-spacer-x}) !default;
 
 $table-data-border-bottom-width: $table-border-width !default;
@@ -46,15 +46,15 @@ $table-quick-action-menu-accent-active-bg: $table-accent-bg !default;
 $table-quick-action-menu-active-bg: $table-active-bg !default;
 $table-quick-action-menu-hover-bg: $table-hover-bg !default;
 
-$table-cell-expand-min-width: 12.5rem !default; // 200px
+$table-cell-expand-min-width: $font-size-base * 12.5 !default; // 200px
 
-$table-cell-expand-small-max-width: 12.5rem !default; // 200px
+$table-cell-expand-small-max-width: $font-size-base * 12.5 !default; // 200px
 $table-cell-expand-small-width: 25% !default;
 
-$table-cell-expand-smaller-max-width: 12.5rem !default; // 200px
+$table-cell-expand-smaller-max-width: $font-size-base * 12.5 !default; // 200px
 $table-cell-expand-smaller-width: 15% !default;
 
-$table-cell-expand-smallest-max-width: 12.5rem !default; // 200px
+$table-cell-expand-smallest-max-width: $font-size-base * 12.5 !default; // 200px
 $table-cell-expand-smallest-width: 10% !default;
 
 // Table Bordered
@@ -92,10 +92,10 @@ $table-action-link: map-merge((
 	align-items: center,
 	border-radius: $btn-border-radius,
 	display: inline-flex,
-	height: 2rem,
+	height: $font-size-base * 2,
 	justify-content: center,
 	vertical-align: middle,
-	width: 2rem,
+	width: $font-size-base * 2,
 	hover-text-decoration: none,
 	lexicon-icon-margin-top: 0
 ), $table-action-link);
@@ -115,8 +115,8 @@ $table-list-disabled-pointer-events: none !default;
 
 $table-list-border-color: $table-border-color !default;
 
-$table-list-border-x-width: 0.0625rem !default; // 1px
-$table-list-border-y-width: 0.0625rem !default; // 1px
+$table-list-border-x-width: $font-size-base * 0.0625 !default; // 1px
+$table-list-border-y-width: $font-size-base * 0.0625 !default; // 1px
 
 $table-list-border-width: $table-list-border-y-width $table-list-border-x-width !default;
 
@@ -133,8 +133,8 @@ $table-list-head-vertical-alignment: null !default;
 
 $table-list-head-link: () !default;
 
-$table-list-divider-padding-x: 0.75rem !default; // 12px
-$table-list-divider-padding-y: 0.75rem !default; // 12px
+$table-list-divider-padding-x: $font-size-base * 0.75 !default; // 12px
+$table-list-divider-padding-y: $font-size-base * 0.75 !default; // 12px
 
 $table-list-quick-action-menu-align-items: center !default;
 $table-list-quick-action-menu-bg: $table-list-bg !default;
@@ -173,16 +173,16 @@ $table-list-action-link: () !default;
 $table-list-action-link: map-merge((
 	align-items: center,
 	display: inline-flex,
-	height: 2rem,
+	height: $font-size-base * 2,
 	justify-content: center,
 	vertical-align: middle,
-	width: 2rem,
+	width: $font-size-base * 2,
 	hover-text-decoration: none,
 	lexicon-icon-margin-top: 0
 ), $table-list-action-link);
 
 // Table Valign
 
-$table-valign-top-body-cell-padding-top: 1rem !default;
+$table-valign-top-body-cell-padding-top: $font-size-base!default;
 
-$table-valign-bottom-body-cell-padding-bottom: 1rem !default;
+$table-valign-bottom-body-cell-padding-bottom: $font-size-base!default;

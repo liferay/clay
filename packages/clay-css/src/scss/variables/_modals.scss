@@ -2,7 +2,7 @@ $modal-content-border-radius: $border-radius-lg !default;
 
 $modal-header-bg: null !default;
 $modal-header-color: null !default;
-$modal-header-height: 4rem !default; // 64px
+$modal-header-height: $font-size-base * 4 !default; // 64px
 $modal-header-height-mobile: null !default;
 
 $modal-body-bg: null !default;
@@ -13,23 +13,23 @@ $modal-footer-box-shadow: null !default;
 $modal-footer-color: null !default;
 $modal-footer-height: null !default;
 $modal-footer-padding-x: null !default;
-$modal-footer-padding-y: 0.75rem !default; // 12px
+$modal-footer-padding-y: $font-size-base * 0.75 !default; // 12px
 $modal-footer-height-mobile: null !default;
 
 $modal-item-padding-x: null !default;
-$modal-item-padding-y: 0.25rem !default; // 4px
+$modal-item-padding-y: $font-size-base * 0.25 !default; // 4px
 
-$modal-title-font-size: 1.25rem !default; // 20px
+$modal-title-font-size: $font-size-base * 1.25 !default; // 20px
 $modal-title-font-weight: $font-weight-semi-bold !default;
 $modal-title-text-align: null !default;
 $modal-title-font-size-mobile: null !default;
 
-$modal-title-indicator-font-size: 0.875rem !default; // 14px
-$modal-title-indicator-spacer-x: 0.5rem !default; // 8px
+$modal-title-indicator-font-size: $font-size-base * 0.875 !default; // 14px
+$modal-title-indicator-spacer-x: $font-size-base * 0.5 !default; // 8px
 
 // Modal Close
 
-$modal-close-spacer-x: 0.3125rem !default; // 5px
+$modal-close-spacer-x: $font-size-base * 0.3125 !default; // 5px
 
 // Modal Success
 

@@ -36,7 +36,7 @@ $custom-control-indicator-indeterminate-border-color: null !default;
 $custom-control-description-cursor: $form-check-label-cursor !default;
 $custom-control-description-font-size: null !default;
 $custom-control-description-line-height: $custom-control-indicator-size !default;
-$custom-control-description-padding-left: 0.5rem !default; // 8px
+$custom-control-description-padding-left: $font-size-base * 0.5 !default; // 8px
 $custom-control-description-disabled-cursor: $disabled-cursor !default;
 
 // Custom Checkbox

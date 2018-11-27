@@ -2,7 +2,7 @@ $b-font-weight: null !default;
 
 $strong-font-weight: null !default;
 
-$reference-mark-font-size: 0.75rem !default;
+$reference-mark-font-size: $font-size-base * 0.75 !default;
 $reference-mark-vertical-align: super !default;
 
 $mark-color: null !default;
