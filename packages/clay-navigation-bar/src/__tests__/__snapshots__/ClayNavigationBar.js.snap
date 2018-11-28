@@ -4,7 +4,7 @@ exports[`ClayNavigationBar should render a navigatiom bar with classes 1`] = `
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light my-custom-class">
   <div class="container-fluid container-fluid-max-xl">
     <a aria-expanded="false" aria-label="toggle-navigation" class=" navbar-toggler navbar-toggler-link collapsed" href="#">
-      <svg class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" role="presentation">
+      <svg class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false" role="presentation">
         <use xlink:href="icons.svg#caret-bottom"></use>
       </svg>
     </a>
@@ -27,7 +27,7 @@ exports[`ClayNavigationBar should render a navigatiom bar with id 1`] = `
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light" id="myId">
   <div class="container-fluid container-fluid-max-xl">
     <a aria-expanded="false" aria-label="toggle-navigation" class=" navbar-toggler navbar-toggler-link collapsed" href="#">
-      <svg class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" role="presentation">
+      <svg class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false" role="presentation">
         <use xlink:href="icons.svg#caret-bottom"></use>
       </svg>
     </a>
@@ -50,7 +50,7 @@ exports[`ClayNavigationBar should render a navigatiom bar with more than one ele
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light">
   <div class="container-fluid container-fluid-max-xl">
     <a aria-expanded="false" aria-label="toggle-navigation" class=" navbar-toggler navbar-toggler-link collapsed" href="#">
-      <svg class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" role="presentation">
+      <svg class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false" role="presentation">
         <use xlink:href="icons.svg#caret-bottom"></use>
       </svg>
     </a>
@@ -78,7 +78,7 @@ exports[`ClayNavigationBar should render a navigatiom bar with one active elemen
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light">
   <div class="container-fluid container-fluid-max-xl">
     <a aria-expanded="false" aria-label="toggle-navigation" class=" navbar-toggler navbar-toggler-link collapsed" href="#">Page 1
-      <svg class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" role="presentation">
+      <svg class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false" role="presentation">
         <use xlink:href="icons.svg#caret-bottom"></use>
       </svg>
     </a>
@@ -101,7 +101,7 @@ exports[`ClayNavigationBar should render a navigatiom bar with one element 1`] =
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light">
   <div class="container-fluid container-fluid-max-xl">
     <a aria-expanded="false" aria-label="toggle-navigation" class=" navbar-toggler navbar-toggler-link collapsed" href="#">
-      <svg class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" role="presentation">
+      <svg class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false" role="presentation">
         <use xlink:href="icons.svg#caret-bottom"></use>
       </svg>
     </a>
@@ -124,7 +124,7 @@ exports[`ClayNavigationBar should render an inverted colored navigatiom bar with
 <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary">
   <div class="container-fluid container-fluid-max-xl">
     <a aria-expanded="false" aria-label="toggle-navigation" class=" navbar-toggler navbar-toggler-link collapsed" href="#">
-      <svg class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" role="presentation">
+      <svg class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false" role="presentation">
         <use xlink:href="icons.svg#caret-bottom"></use>
       </svg>
     </a>

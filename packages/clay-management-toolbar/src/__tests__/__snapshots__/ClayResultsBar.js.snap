@@ -28,7 +28,7 @@ exports[`ClayResultsBar should render a results bar with filter labels 1`] = `
             </span>
             <span class="label-item label-item-after">
               <button class="btn close" aria-label="close" type="button">
-                <svg class="lexicon-icon lexicon-icon-times" role="presentation">
+                <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                   <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
                 </svg>
               </button>
@@ -44,7 +44,7 @@ exports[`ClayResultsBar should render a results bar with filter labels 1`] = `
             </span>
             <span class="label-item label-item-after">
               <button class="btn close" aria-label="close" type="button">
-                <svg class="lexicon-icon lexicon-icon-times" role="presentation">
+                <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                   <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
                 </svg>
               </button>
@@ -90,7 +90,7 @@ exports[`ClayResultsBar should render a results bar with filter labels and searc
             </span>
             <span class="label-item label-item-after">
               <button class="btn close" aria-label="close" type="button">
-                <svg class="lexicon-icon lexicon-icon-times" role="presentation">
+                <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                   <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
                 </svg>
               </button>
@@ -106,7 +106,7 @@ exports[`ClayResultsBar should render a results bar with filter labels and searc
             </span>
             <span class="label-item label-item-after">
               <button class="btn close" aria-label="close" type="button">
-                <svg class="lexicon-icon lexicon-icon-times" role="presentation">
+                <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                   <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
                 </svg>
               </button>

@@ -3,7 +3,7 @@
 exports[`ClayAlert should render a "danger" style alert 1`] = `
 <div class="alert alert-danger fade show" role="alert">
   <span class="alert-indicator">
-    <svg class="lexicon-icon lexicon-icon-exclamation-full" role="presentation">
+    <svg class="lexicon-icon lexicon-icon-exclamation-full" focusable="false" role="presentation">
       <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-full"></use>
     </svg>
   </span>
@@ -13,7 +13,7 @@ exports[`ClayAlert should render a "danger" style alert 1`] = `
 exports[`ClayAlert should render a "success" style alert 1`] = `
 <div class="alert alert-success fade show" role="alert">
   <span class="alert-indicator">
-    <svg class="lexicon-icon lexicon-icon-check-circle-full" role="presentation">
+    <svg class="lexicon-icon lexicon-icon-check-circle-full" focusable="false" role="presentation">
       <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#check-circle-full"></use>
     </svg>
   </span>
@@ -23,7 +23,7 @@ exports[`ClayAlert should render a "success" style alert 1`] = `
 exports[`ClayAlert should render a "warning" style alert 1`] = `
 <div class="alert alert-warning fade show" role="alert">
   <span class="alert-indicator">
-    <svg class="lexicon-icon lexicon-icon-warning-full" role="presentation">
+    <svg class="lexicon-icon lexicon-icon-warning-full" focusable="false" role="presentation">
       <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#warning-full"></use>
     </svg>
   </span>
@@ -33,12 +33,12 @@ exports[`ClayAlert should render a "warning" style alert 1`] = `
 exports[`ClayAlert should render a closeable alert 1`] = `
 <div class="alert alert-warning fade alert-dismissible show" role="alert">
   <button class="btn close btn-unstyled" aria-label="close" type="button">
-    <svg class="lexicon-icon lexicon-icon-times" role="presentation">
+    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
       <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
     </svg>
   </button>
   <span class="alert-indicator">
-    <svg class="lexicon-icon lexicon-icon-warning-full" role="presentation">
+    <svg class="lexicon-icon lexicon-icon-warning-full" focusable="false" role="presentation">
       <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#warning-full"></use>
     </svg>
   </span>
@@ -48,7 +48,7 @@ exports[`ClayAlert should render a closeable alert 1`] = `
 exports[`ClayAlert should render an "info" style alert 1`] = `
 <div class="alert alert-info fade show" role="alert">
   <span class="alert-indicator">
-    <svg class="lexicon-icon lexicon-icon-info-circle" role="presentation">
+    <svg class="lexicon-icon lexicon-icon-info-circle" focusable="false" role="presentation">
       <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle"></use>
     </svg>
   </span>
@@ -58,7 +58,7 @@ exports[`ClayAlert should render an "info" style alert 1`] = `
 exports[`ClayAlert should render an alert with classes 1`] = `
 <div class="alert alert-info fade my-custom-class show" role="alert">
   <span class="alert-indicator">
-    <svg class="lexicon-icon lexicon-icon-info-circle" role="presentation">
+    <svg class="lexicon-icon lexicon-icon-info-circle" focusable="false" role="presentation">
       <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle"></use>
     </svg>
   </span>
@@ -68,7 +68,7 @@ exports[`ClayAlert should render an alert with classes 1`] = `
 exports[`ClayAlert should render an alert with id 1`] = `
 <div class="alert alert-info fade show" id="myId" role="alert">
   <span class="alert-indicator">
-    <svg class="lexicon-icon lexicon-icon-info-circle" role="presentation">
+    <svg class="lexicon-icon lexicon-icon-info-circle" focusable="false" role="presentation">
       <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle"></use>
     </svg>
   </span>
@@ -78,7 +78,7 @@ exports[`ClayAlert should render an alert with id 1`] = `
 exports[`ClayAlert should render default markup 1`] = `
 <div class="alert alert-info fade show" role="alert">
   <span class="alert-indicator">
-    <svg class="lexicon-icon lexicon-icon-info-circle" role="presentation">
+    <svg class="lexicon-icon lexicon-icon-info-circle" focusable="false" role="presentation">
       <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle"></use>
     </svg>
   </span>

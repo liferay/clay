@@ -73,7 +73,7 @@ exports[`ClayLabel should render a removable label 1`] = `
   <span class="label-item label-item-expand">Foo</span>
   <span class="label-item label-item-after">
     <button class="btn close" aria-label="close" type="button">
-      <svg class="lexicon-icon lexicon-icon-times" role="presentation">
+      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
         <use xlink:href="icons.svg#times"></use>
       </svg>
     </button>
