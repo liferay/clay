@@ -3,9 +3,10 @@
   "name": "clayui.com",
   "license": "MIT",
   "scripts": {
+    "copy:icons": "cpx '../packages/clay-css/src/images/icons/*.svg' static/images/icons",
     "deploy": "gatsby build && gh-pages -d public -b wedeploy",
-    "develop": "gatsby develop",
-    "build": "gatsby build",
+    "develop": "npm run copy:icons && gatsby develop",
+    "build": "npm run copy:icons && gatsby build",
     "serve": "gatsby serve"
   },
   "dependencies": {
@@ -51,6 +52,7 @@
     "wowjs": "^1.1.3"
   },
   "devDependencies": {
+    "cpx": "^1.5.0",
     "gh-pages": "^1.2.0",
     "globby": "^8.0.1"
   }
