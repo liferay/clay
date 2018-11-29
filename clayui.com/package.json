@@ -3,7 +3,7 @@
   "name": "clayui.com",
   "license": "MIT",
   "scripts": {
-    "copy:icons": "cpx '../packages/clay-css/src/images/icons/*.svg' static/images/icons",
+    "copy:icons": "cpx '../packages/clay-css/lib/images/icons/*.svg' static/images/icons",
     "deploy": "gatsby build && gh-pages -d public -b wedeploy",
     "develop": "npm run copy:icons && gatsby develop",
     "build": "npm run copy:icons && gatsby build",
