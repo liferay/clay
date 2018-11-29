@@ -9,10 +9,8 @@
 	{@param? elementClasses: string}
 	{@param? focusable: bool}
 	{@param? id: string}
-	{@param? title: string}
 
 	{let $attributes kind="attributes"}
-		aria-hidden="true"
 		class="lexicon-icon
 			{sp}lexicon-icon-{$symbol}
 
@@ -30,10 +28,11 @@
 		{if $id}
 			id="{$id}"
 		{/if}
+
+		role="presentation"
 	{/let}
 
 	<svg {$attributes}>
-		<title>{$title ?: $id ?: $symbol}</title>
 		<use xlink:href="{$spritemap}#{$symbol}" />
 	</svg>
 {/template}

@@ -99,8 +99,7 @@ exports[`ClaySticker should render a sticker with classes 1`] = `
 exports[`ClaySticker should render a sticker with icon 1`] = `
 <span class="sticker sticker-rounded sticker-primary">
   <span class="inline-item">
-    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
-      <title>plus</title>
+    <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
       <use xlink:href="icons.svg#plus"></use>
     </svg>
   </span>
