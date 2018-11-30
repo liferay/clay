@@ -93,6 +93,9 @@
 	</div>
 {/template}
 
+/**
+ * This render the content from the multi select.
+ */
 {template .content}
 	{@param dataSource: string|[]|list<?>}
 	{@param helpText: string}
@@ -193,6 +196,9 @@
 	</div>
 {/template}
 
+/**
+ * This render the selected items.
+ */
 {template .items}
 	{@param selectedItems: list<?>}
 	{@param spritemap: string}
@@ -223,6 +229,11 @@
 	{/foreach}
 {/template}
 
+/**
+ * This render the item.
+ * Extension point: Create a new variation above ClayMultiSelect.Item
+ * so you can create your own markup.
+ */
 {deltemplate ClayMultiSelect.Item}
 	{@param data: ?}
 	{@param index: int}
