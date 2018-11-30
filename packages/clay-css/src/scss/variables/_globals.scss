@@ -36,6 +36,10 @@ $container-view: map-merge((
 
 // Fonts
 
+$html-font-size: null !default;
+
+$clay-radix: 1rem !default;
+
 $moz-osx-font-smoothing: null !default;
 $webkit-font-smoothing: null !default;
 

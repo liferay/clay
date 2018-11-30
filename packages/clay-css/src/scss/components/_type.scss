@@ -1,3 +1,7 @@
+html {
+	font-size: $html-font-size;
+}
+
 body {
 	-moz-osx-font-smoothing: $body-moz-osx-font-smoothing;
 	-ms-overflow-style: scrollbar;
