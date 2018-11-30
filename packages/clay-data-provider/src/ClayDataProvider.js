@@ -27,7 +27,10 @@ class ClayDataProvider extends ClayComponent {
 			this._handleDataChange();
 		}
 
-		timeout(this.requestTimeout, fetch(this.data, this.requestOptions))
+		timeout(
+			this.requestTimeout,
+			fetch(this.dataSource, this.requestOptions)
+		)
 			.then(res => res.json())
 			.then(res => {
 				this._dataSource = res;
@@ -107,8 +110,8 @@ class ClayDataProvider extends ClayComponent {
 	created() {
 		this._isResolvedData = false;
 		this._pollingInterval = 0;
-		if (this._hasData(this.data)) {
-			this._dataSource = this.data;
+		if (this._hasData(this.dataSource)) {
+			this._dataSource = this.dataSource;
 			this._isResolvedData = true;
 		} else {
 			this._fetchData();
@@ -192,7 +195,7 @@ ClayDataProvider.STATE = {
 	 * @memberof ClayDataProvider
 	 * @type {!(string|object|array)}
 	 */
-	data: Config.oneOfType([
+	dataSource: Config.oneOfType([
 		Config.array(),
 		Config.object(),
 		Config.string(),
