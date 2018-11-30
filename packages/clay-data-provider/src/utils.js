@@ -38,3 +38,28 @@ export const match = (query, string) => {
 
 	return null;
 };
+
+/**
+ * Implementation of the timeout.
+ * Based on: https://github.com/github/fetch/issues/175#issuecomment-125779262
+ * @param {!number} ms
+ * @param {!Promise} promise
+ * @return {Promise}
+ */
+export const timeout = (ms, promise) => {
+	return new Promise((resolve, reject) => {
+		const timeoutId = setTimeout(() => {
+			reject(new Error('timeout'));
+		}, ms);
+		promise.then(
+			res => {
+				clearTimeout(timeoutId);
+				resolve(res);
+			},
+			err => {
+				clearTimeout(timeoutId);
+				reject(err);
+			}
+		);
+	});
+};
