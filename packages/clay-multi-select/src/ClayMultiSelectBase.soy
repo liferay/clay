@@ -1,4 +1,4 @@
-{namespace ClayMultiSelect}
+{namespace ClayMultiSelectBase}
 
 /**
  * This renders the component's whole content.
@@ -90,6 +90,7 @@
 		onKeydown="{$_handleOnKeydown}"
 		ref="input"
 		type="text"
+		value=""
 	{/let}
 
 	<div class="input-group input-group-stacked-sm-down">
@@ -119,7 +120,7 @@
 				<ul onkeydown="{$_handleOnKeydown}" class="{$classes}" ref="dropdown">
 					{if $filteredItems}
 						{foreach $item in $filteredItems}
-							{delcall ClayMultiSelect.ItemDropdown variant="$contentRenderer" allowemptydefault="true"}
+							{delcall ClayMultiSelectBase.ItemDropdown variant="$contentRenderer" allowemptydefault="true"}
 								{param _handleDropdownItemClick: $_handleDropdownItemClick /}
 								{param data: $item /}
 								{param index: index($item) /}
@@ -160,18 +161,20 @@
 	{@param? selectedItemsInputName: string}
 
 	{foreach $item in $selectedItems}
-		{let $inputAttributes kind="attributes"}
-			{if $selectedItemsInputName}
-				name="{$selectedItemsInputName}"
-			{/if}
+		{if $selectedItemsInputName}
+			{let $inputAttributes kind="attributes"}
+				{if $selectedItemsInputName}
+					name="{$selectedItemsInputName}"
+				{/if}
 
-			type="hidden"
-			value="{$item.value}"
-		{/let}
+				type="hidden"
+				value="{$item.value}"
+			{/let}
 
-		<input {$inputAttributes}>
+			<input {$inputAttributes}>
+		{/if}
 
-		{delcall ClayMultiSelect.Item variant="$contentRenderer" allowemptydefault="true"}
+		{delcall ClayMultiSelectBase.Item variant="$contentRenderer" allowemptydefault="true"}
 			{param _handleCloseButtonClick: $_handleCloseButtonClick /}
 			{param data: $item /}
 			{param index: index($item) /}
@@ -180,7 +183,7 @@
 	{/foreach}
 {/template}
 
-{deltemplate ClayMultiSelect.Item}
+{deltemplate ClayMultiSelectBase.Item}
 	{@param data: ?}
 	{@param index: int}
 	{@param spritemap: string}
@@ -196,7 +199,7 @@
 	{/call}
 {/deltemplate}
 
-{deltemplate ClayMultiSelect.ItemDropdown}
+{deltemplate ClayMultiSelectBase.ItemDropdown}
 	{@param data: ?}
 	{@param index: number}
 	{@param? _handleDropdownItemClick: any}

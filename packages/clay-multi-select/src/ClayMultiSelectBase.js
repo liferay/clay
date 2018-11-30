@@ -1,19 +1,17 @@
 import 'clay-button';
 import 'clay-label';
 import {Config} from 'metal-state';
-import {EventHandler} from 'metal-events';
-import {match} from './utils';
 import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 
-import templates from './ClayMultiSelect.soy.js';
+import templates from './ClayMultiSelectBase.soy.js';
 
 /**
- * Metal ClayMultiSelect component.
+ * Metal ClayMultiSelectBase component.
  * @extends ClayComponent
  */
-class ClayMultiSelect extends ClayComponent {
+class ClayMultiSelectBase extends ClayComponent {
 	/**
 	 * Checks whether the event is from the filteredItems element
 	 * @param {!Event} event
@@ -143,7 +141,7 @@ class ClayMultiSelect extends ClayComponent {
 
 		return !this.emit({
 			data: {
-				index,
+				index: Number(index),
 			},
 			name: 'itemRemoved',
 			originalEvent: event,
@@ -255,7 +253,7 @@ class ClayMultiSelect extends ClayComponent {
 	_setFocusItemDropdown(direction) {
 		if (this.filteredItems.length) {
 			const elements = this.refs.dropdown.querySelectorAll(
-				'a[id="item"]'
+				'a[data-dropdown-item-index]'
 			);
 
 			if (direction && this._dropdownItemFocused === 0) {
@@ -294,44 +292,9 @@ class ClayMultiSelect extends ClayComponent {
 	/**
 	 * @inheritDoc
 	 */
-	created() {
-		this._eventHandler = new EventHandler();
-	}
-
-	/**
-	 * @inheritDoc
-	 */
 	disposed() {
-		this._eventHandler.removeAllListeners();
-	}
-
-	/**
-	 * Helper method to filter a list based on a string.
-	 * @param {!Array<string>} data
-	 * @param {!string} query
-	 * @public
-	 * @return {Array} A list of items containing the corresponding characters
-	 */
-	filterAutocomplete(data, query) {
-		return data
-			.reduce((prev, element, index) => {
-				let result = match(query, element);
-
-				if (result != null) {
-					prev[prev.length] = {
-						index,
-						matches: result.values,
-						originalString: element,
-						score: result.score,
-					};
-				}
-
-				return prev;
-			}, [])
-			.sort((a, b) => {
-				if (a > b) return 1;
-				if (a < b) return -1;
-			});
+		this._itemFocused = null;
+		this._dropdownItemFocused = null;
 	}
 
 	/**
@@ -354,12 +317,12 @@ class ClayMultiSelect extends ClayComponent {
  * @static
  * @type {!Object}
  */
-ClayMultiSelect.STATE = {
+ClayMultiSelectBase.STATE = {
 	/**
 	 * Variation name to render different deltemplates.
 	 * @default undefined
 	 * @instance
-	 * @memberof ClayMultiSelect
+	 * @memberof ClayMultiSelectBase
 	 * @type {?(string|undefined)}
 	 */
 	contentRenderer: Config.string(),
@@ -368,7 +331,7 @@ ClayMultiSelect.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @default undefined
 	 * @instance
-	 * @memberof ClayMultiSelect
+	 * @memberof ClayMultiSelectBase
 	 * @type {?(string|undefined)}
 	 */
 	elementClasses: Config.string(),
@@ -377,7 +340,7 @@ ClayMultiSelect.STATE = {
 	 * List of filtered items for suggestion or autocomplete.
 	 * @default []
 	 * @instance
-	 * @memberof ClayMultiSelect
+	 * @memberof ClayMultiSelectBase
 	 * @type {?Array}
 	 */
 	filteredItems: Config.array(Config.object()).value([]),
@@ -386,7 +349,7 @@ ClayMultiSelect.STATE = {
 	 * Help text to guide the user in the interaction.
 	 * @default undefined
 	 * @instance
-	 * @memberof ClayMultiSelect
+	 * @memberof ClayMultiSelectBase
 	 * @type {!string}
 	 */
 	helpText: Config.string().required(),
@@ -395,7 +358,7 @@ ClayMultiSelect.STATE = {
 	 * Id to be applied to the element.
 	 * @default undefined
 	 * @instance
-	 * @memberof ClayMultiSelect
+	 * @memberof ClayMultiSelectBase
 	 * @type {?(string|undefined)}
 	 */
 	id: Config.string(),
@@ -404,7 +367,7 @@ ClayMultiSelect.STATE = {
 	 * Name of the input.
 	 * @default undefind
 	 * @instance
-	 * @memberof ClayMultiSelect
+	 * @memberof ClayMultiSelectBase
 	 * @type {?(string|undefined)}
 	 */
 	inputName: Config.string(),
@@ -413,7 +376,7 @@ ClayMultiSelect.STATE = {
 	 * Label of the input element.
 	 * @default undefined
 	 * @instance
-	 * @memberof ClayMultiSelect
+	 * @memberof ClayMultiSelectBase
 	 * @type {?(string|undefined)}
 	 */
 	label: Config.string(),
@@ -422,16 +385,16 @@ ClayMultiSelect.STATE = {
 	 * List of the selected Items.
 	 * @default []
 	 * @instance
-	 * @memberof ClayMultiSelect
+	 * @memberof ClayMultiSelectBase
 	 * @type {?Array<Object>}
 	 */
 	selectedItems: Config.array(Config.object()).value([]),
 
 	/**
 	 * Name of the selected items input.
-	 * @default undefind
+	 * @default selectedItems
 	 * @instance
-	 * @memberof ClayMultiSelect
+	 * @memberof ClayMultiSelectBase
 	 * @type {?(string|undefined)}
 	 */
 	selectedItemsInputName: Config.string().value('selectedItems'),
@@ -440,15 +403,15 @@ ClayMultiSelect.STATE = {
 	 * The path to the SVG spritemap file containing the icons.
 	 * @default undefined
 	 * @instance
-	 * @memberof ClayMultiSelect
+	 * @memberof ClayMultiSelectBase
 	 * @type {!string}
 	 */
 	spritemap: Config.string().required(),
 };
 
-defineWebComponent('clay-multi-select', ClayMultiSelect);
+defineWebComponent('clay-multi-select-base', ClayMultiSelectBase);
 
-Soy.register(ClayMultiSelect, templates);
+Soy.register(ClayMultiSelectBase, templates);
 
-export {ClayMultiSelect};
-export default ClayMultiSelect;
+export {ClayMultiSelectBase};
+export default ClayMultiSelectBase;
