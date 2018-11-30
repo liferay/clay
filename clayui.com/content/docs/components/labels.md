@@ -136,7 +136,7 @@ Labels categorize information, providing quick recognition.
 	<span class="label-item label-item-expand">Label Text</span>
 	<span class="label-item label-item-after">
 		<button aria-label="Close" class="close" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times"><use href="/images/icons/icons.svg#times"></use></svg>
+			<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation"><use href="/images/icons/icons.svg#times"></use></svg>
 		</button>
 	</span>
 </span>
@@ -155,7 +155,7 @@ Labels categorize information, providing quick recognition.
 	<span class="label-item label-item-expand">Label Text</span>
 	<span class="label-item label-item-after">
 		<button aria-label="Close" class="close" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+			<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#times"></use>
 			</svg>
 		</button>

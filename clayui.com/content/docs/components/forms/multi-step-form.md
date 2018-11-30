@@ -45,7 +45,7 @@ A multi step form, also known as a wizard, is a determinate progress bar used in
 			<div class="dropdown multi-step-indicator">
 				<div class="multi-step-indicator-label">Step 05</div>
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle multi-step-icon" data-toggle="dropdown" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
+					<svg class="lexicon-icon lexicon-icon-ellipsis-h" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#ellipsis-h"></use>
 					</svg>
 				</a>
@@ -53,7 +53,7 @@ A multi step form, also known as a wizard, is a determinate progress bar used in
 					<a class="active complete dropdown-item" href="#1">
 						5. Step Five
 						<span aria-hidden="true" class="dropdown-item-indicator">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#check" />
 							</svg>
 						</span>
@@ -61,7 +61,7 @@ A multi step form, also known as a wizard, is a determinate progress bar used in
 					<a class="complete dropdown-item" href="#1">
 						6. Step Six
 						<span aria-hidden="true" class="dropdown-item-indicator">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#check" />
 							</svg>
 						</span>
@@ -69,7 +69,7 @@ A multi step form, also known as a wizard, is a determinate progress bar used in
 					<a class="complete dropdown-item" href="#1">
 						7. Step Seven
 						<span aria-hidden="true" class="dropdown-item-indicator">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#check" />
 							</svg>
 						</span>
@@ -77,7 +77,7 @@ A multi step form, also known as a wizard, is a determinate progress bar used in
 					<a class="dropdown-item" href="#1">
 						8. Step Eight
 						<span aria-hidden="true" class="dropdown-item-indicator">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#check" />
 							</svg>
 						</span>
@@ -137,7 +137,7 @@ A multi step form, also known as a wizard, is a determinate progress bar used in
 		<div class="dropdown multi-step-indicator">
 			<div class="multi-step-indicator-label">Step 05</div>
 			<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle multi-step-icon" data-toggle="dropdown" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
+				<svg class="lexicon-icon lexicon-icon-ellipsis-h" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#ellipsis-h"></use>
 				</svg>
 			</a>
@@ -145,7 +145,7 @@ A multi step form, also known as a wizard, is a determinate progress bar used in
 				<a class="active complete dropdown-item" href="#1">
 					5. Step Five
 					<span aria-hidden="true" class="dropdown-item-indicator">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+						<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#check" />
 						</svg>
 					</span>
@@ -153,7 +153,7 @@ A multi step form, also known as a wizard, is a determinate progress bar used in
 				<a class="complete dropdown-item" href="#1">
 					6. Step Six
 					<span aria-hidden="true" class="dropdown-item-indicator">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+						<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#check" />
 						</svg>
 					</span>
@@ -161,7 +161,7 @@ A multi step form, also known as a wizard, is a determinate progress bar used in
 				<a class="complete dropdown-item" href="#1">
 					7. Step Seven
 					<span aria-hidden="true" class="dropdown-item-indicator">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+						<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#check" />
 						</svg>
 					</span>
@@ -169,7 +169,7 @@ A multi step form, also known as a wizard, is a determinate progress bar used in
 				<a class="dropdown-item" href="#1">
 					8. Step Eight
 					<span aria-hidden="true" class="dropdown-item-indicator">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+						<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#check" />
 						</svg>
 					</span>
@@ -234,7 +234,7 @@ A multi step form, also known as a wizard, is a determinate progress bar used in
 			<div class="multi-step-divider"></div>
 			<div class="dropdown multi-step-indicator">
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle multi-step-icon" data-toggle="dropdown" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
+					<svg class="lexicon-icon lexicon-icon-ellipsis-h" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#ellipsis-h"></use>
 					</svg>
 				</a>
@@ -243,7 +243,7 @@ A multi step form, also known as a wizard, is a determinate progress bar used in
 						<a class="dropdown-item" href="#1">
 							5. Step Five
 							<span aria-hidden="true" class="dropdown-item-indicator">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#check" />
 								</svg>
 							</span>
@@ -253,7 +253,7 @@ A multi step form, also known as a wizard, is a determinate progress bar used in
 						<a class="dropdown-item" href="#1">
 							6. Step Six
 							<span aria-hidden="true" class="dropdown-item-indicator">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#check" />
 								</svg>
 							</span>
@@ -263,7 +263,7 @@ A multi step form, also known as a wizard, is a determinate progress bar used in
 						<a class="dropdown-item" href="#1">
 							7. Step Seven
 							<span aria-hidden="true" class="dropdown-item-indicator">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#check" />
 								</svg>
 							</span>
@@ -273,7 +273,7 @@ A multi step form, also known as a wizard, is a determinate progress bar used in
 						<a class="dropdown-item" href="#1">
 							8. Step Eight
 							<span aria-hidden="true" class="dropdown-item-indicator">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#check" />
 								</svg>
 							</span>
@@ -338,7 +338,7 @@ A multi step form, also known as a wizard, is a determinate progress bar used in
 		<div class="multi-step-divider"></div>
 		<div class="dropdown multi-step-indicator">
 			<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle multi-step-icon" data-toggle="dropdown" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
+				<svg class="lexicon-icon lexicon-icon-ellipsis-h" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#ellipsis-h"></use>
 				</svg>
 			</a>
@@ -347,7 +347,7 @@ A multi step form, also known as a wizard, is a determinate progress bar used in
 					<a class="dropdown-item" href="#1">
 						5. Step Five
 						<span aria-hidden="true" class="dropdown-item-indicator">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#check" />
 							</svg>
 						</span>
@@ -357,7 +357,7 @@ A multi step form, also known as a wizard, is a determinate progress bar used in
 					<a class="dropdown-item" href="#1">
 						6. Step Six
 						<span aria-hidden="true" class="dropdown-item-indicator">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#check" />
 							</svg>
 						</span>
@@ -367,7 +367,7 @@ A multi step form, also known as a wizard, is a determinate progress bar used in
 					<a class="dropdown-item" href="#1">
 						7. Step Seven
 						<span aria-hidden="true" class="dropdown-item-indicator">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#check" />
 							</svg>
 						</span>
@@ -377,7 +377,7 @@ A multi step form, also known as a wizard, is a determinate progress bar used in
 					<a class="dropdown-item" href="#1">
 						8. Step Eight
 						<span aria-hidden="true" class="dropdown-item-indicator">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#check" />
 							</svg>
 						</span>

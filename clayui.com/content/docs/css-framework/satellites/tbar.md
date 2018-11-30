@@ -8,7 +8,7 @@ title: "Tbar (Toolbar)"
 	<ul class="tbar-nav">
 		<li class="tbar-item">
 			<a class="component-action disabled" href="#1" role="button" tabindex="-1">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+				<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-left" />
 				</svg>
 			</a>
@@ -25,14 +25,14 @@ title: "Tbar (Toolbar)"
 		</li>
 		<li class="tbar-item">
 			<a class="component-action" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+				<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</a>
 		</li>
 		<li class="tbar-item">
 			<a class="component-action" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+				<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#times" />
 				</svg>
 			</a>
@@ -45,7 +45,7 @@ title: "Tbar (Toolbar)"
 	<ul class="tbar-nav">
 		<li class="tbar-item">
 			<a class="component-action disabled" href="#1" role="button" tabindex="-1">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+				<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-left" />
 				</svg>
 			</a>
@@ -62,14 +62,14 @@ title: "Tbar (Toolbar)"
 		</li>
 		<li class="tbar-item">
 			<a class="component-action" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+				<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</a>
 		</li>
 		<li class="tbar-item">
 			<a class="component-action" href="#1" role="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+				<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#times" />
 				</svg>
 			</a>
@@ -87,7 +87,7 @@ title: "Tbar (Toolbar)"
 		<ul class="tbar-nav">
 			<li class="tbar-item">
 				<a class="component-action disabled" href="#1" role="button" tabindex="-1">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+					<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#angle-left" />
 					</svg>
 				</a>
@@ -101,14 +101,14 @@ title: "Tbar (Toolbar)"
 			</li>
 			<li class="tbar-item">
 				<a class="component-action" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+					<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#angle-right" />
 					</svg>
 				</a>
 			</li>
 			<li class="tbar-item">
 				<a class="component-action" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</a>
@@ -123,7 +123,7 @@ title: "Tbar (Toolbar)"
 		<ul class="tbar-nav">
 			<li class="tbar-item">
 				<a class="component-action disabled" href="#1" role="button" tabindex="-1">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+					<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#angle-left" />
 					</svg>
 				</a>
@@ -137,14 +137,14 @@ title: "Tbar (Toolbar)"
 			</li>
 			<li class="tbar-item">
 				<a class="component-action" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+					<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#angle-right" />
 					</svg>
 				</a>
 			</li>
 			<li class="tbar-item">
 				<a class="component-action" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</a>

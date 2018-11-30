@@ -21,7 +21,7 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="claySmallModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
@@ -74,7 +74,7 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="claySmallModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
@@ -110,7 +110,7 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayDefaultModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
@@ -161,7 +161,7 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayDefaultModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
@@ -199,7 +199,7 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayLargeModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
@@ -252,7 +252,7 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayLargeModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
@@ -288,7 +288,7 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayLargeModalLabel">Add Picture to Documents and Media Library in Liferay Seven</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
@@ -501,7 +501,7 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayLargeModalLabel">Add Picture to Documents and Media Library in Liferay Seven</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
@@ -617,7 +617,7 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayModalFullScreenSmDownLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
@@ -659,7 +659,7 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayModalFullScreenSmDownLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
@@ -716,7 +716,7 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayDefaultModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
@@ -767,7 +767,7 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayDefaultModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
@@ -803,7 +803,7 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayHeaderBodyModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
@@ -840,7 +840,7 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayHeaderBodyModalLabel">Modal Title</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
@@ -937,7 +937,7 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayFullScreenModalIframeLabel">Add Picture to Documents and Media Library in Liferay Seven</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
@@ -986,7 +986,7 @@ A modal displays content in a box on top of the page to capture the user’s att
 			<div class="modal-header">
 				<div class="modal-title" id="clayFullScreenModalIframeLabel">Add Picture to Documents and Media Library in Liferay Seven</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
@@ -1024,14 +1024,14 @@ Add one of the following helper classes to the `modal-dialog` element to style i
 			<div class="modal-header">
 				<div class="modal-title" id="clayModalDangerLabel">
 					<span class="modal-title-indicator">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+						<svg class="lexicon-icon lexicon-icon-exclamation-full" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#exclamation-full" />
 						</svg>
 					</span>
 					Modal Title
 				</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
@@ -1058,14 +1058,14 @@ Add one of the following helper classes to the `modal-dialog` element to style i
 			<div class="modal-header">
 				<div class="modal-title" id="clayModalInfoLabel">
 					<span class="modal-title-indicator">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+						<svg class="lexicon-icon lexicon-icon-info-circle" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#info-circle" />
 						</svg>
 					</span>
 					Modal Title
 				</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
@@ -1088,14 +1088,14 @@ Add one of the following helper classes to the `modal-dialog` element to style i
 			<div class="modal-header">
 				<div class="modal-title" id="clayModalSuccessLabel">
 					<span class="modal-title-indicator">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
+						<svg class="lexicon-icon lexicon-icon-check-circle-full" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#check-circle-full" />
 						</svg>
 					</span>
 					Modal Title
 				</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
@@ -1121,14 +1121,14 @@ Add one of the following helper classes to the `modal-dialog` element to style i
 			<div class="modal-header">
 				<div class="modal-title" id="clayModalWarningLabel">
 					<span class="modal-title-indicator">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+						<svg class="lexicon-icon lexicon-icon-warning-full" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#warning-full" />
 						</svg>
 					</span>
 					Modal Title
 				</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
@@ -1279,14 +1279,14 @@ Add one of the following helper classes to the `modal-dialog` element to style i
 			<div class="modal-header">
 				<div class="modal-title" id="clayModalDangerLabel">
 					<span class="modal-title-indicator">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+						<svg class="lexicon-icon lexicon-icon-exclamation-full" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#exclamation-full" />
 						</svg>
 					</span>
 					Modal Title
 				</div>
 				<button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>

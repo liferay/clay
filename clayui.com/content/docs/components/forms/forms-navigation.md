@@ -17,7 +17,7 @@ For more information on this component and how to use it, see the [Vertical Navi
 		<nav class="menubar menubar-transparent menubar-vertical-expand-lg">
 			<a aria-controls="menubarVerticalLgCollapse01" aria-expanded="false" class="menubar-toggler" data-toggle="collapse" href="#menubarVerticalLgCollapse01" role="button">
 				Details
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#caret-bottom" />
 				</svg>
 			</a>
@@ -27,12 +27,12 @@ For more information on this component and how to use it, see the [Vertical Navi
 						<a aria-controls="menubarVerticalLgNestedCollapse01" aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalLgNestedCollapse01" role="button">
 							Basic Information
 							<span class="collapse-icon-closed">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
+								<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#caret-right" />
 								</svg>
 							</span>
 							<span class="collapse-icon-open">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#caret-bottom" />
 								</svg>
 							</span>
@@ -45,12 +45,12 @@ For more information on this component and how to use it, see the [Vertical Navi
 									<a aria-controls="menubarVerticalLgNestedCollapse02" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalLgNestedCollapse02" role="button">
 										Documents and Media
 										<span class="collapse-icon-closed">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
+											<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
 												<use href="/images/icons/icons.svg#caret-right" />
 											</svg>
 										</span>
 										<span class="collapse-icon-open">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+											<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 												<use href="/images/icons/icons.svg#caret-bottom" />
 											</svg>
 										</span>
@@ -72,12 +72,12 @@ For more information on this component and how to use it, see the [Vertical Navi
 						<a aria-controls="menubarVerticalLgNestedCollapse03" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalLgNestedCollapse03" role="button">
 							SEO
 							<span class="collapse-icon-closed">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
+								<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#caret-right" />
 								</svg>
 							</span>
 							<span class="collapse-icon-open">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#caret-bottom" />
 								</svg>
 							</span>
@@ -93,12 +93,12 @@ For more information on this component and how to use it, see the [Vertical Navi
 						<a aria-controls="menubarVerticalLgNestedCollapse04" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalLgNestedCollapse04" role="button">
 							Advanced
 							<span class="collapse-icon-closed">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
+								<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#caret-right" />
 								</svg>
 							</span>
 							<span class="collapse-icon-open">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#caret-bottom" />
 								</svg>
 							</span>
@@ -163,7 +163,7 @@ For more information on this component and how to use it, see the [Multi Step Fo
 			<div class="dropdown multi-step-indicator">
 				<div class="multi-step-indicator-label">Step 05</div>
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle multi-step-icon" data-toggle="dropdown" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
+					<svg class="lexicon-icon lexicon-icon-ellipsis-h" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#ellipsis-h"></use>
 					</svg>
 				</a>
@@ -171,7 +171,7 @@ For more information on this component and how to use it, see the [Multi Step Fo
 					<a class="active complete dropdown-item" href="#1">
 						5. Step Five
 						<span aria-hidden="true" class="dropdown-item-indicator">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#check" />
 							</svg>
 						</span>
@@ -179,7 +179,7 @@ For more information on this component and how to use it, see the [Multi Step Fo
 					<a class="complete dropdown-item" href="#1">
 						6. Step Six
 						<span aria-hidden="true" class="dropdown-item-indicator">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#check" />
 							</svg>
 						</span>
@@ -187,7 +187,7 @@ For more information on this component and how to use it, see the [Multi Step Fo
 					<a class="complete dropdown-item" href="#1">
 						7. Step Seven
 						<span aria-hidden="true" class="dropdown-item-indicator">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#check" />
 							</svg>
 						</span>
@@ -195,7 +195,7 @@ For more information on this component and how to use it, see the [Multi Step Fo
 					<a class="dropdown-item" href="#1">
 						8. Step Eight
 						<span aria-hidden="true" class="dropdown-item-indicator">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+							<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#check" />
 							</svg>
 						</span>

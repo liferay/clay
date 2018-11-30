@@ -7,7 +7,7 @@ title: "List View Template"
 		<ul class="navbar-nav">
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced" href="#1">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
+					<svg class="lexicon-icon lexicon-icon-product-menu-closed" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#product-menu-closed" />
 					</svg>
 				</a>
@@ -17,7 +17,7 @@ title: "List View Template"
 		<ul class="navbar-nav">
 			<li class="dropdown nav-item">
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+					<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#ellipsis-v" />
 					</svg>
 				</a>
@@ -37,7 +37,7 @@ title: "List View Template"
 	<div class="container-fluid container-fluid-max-xl">
 		<a aria-controls="navigationBarCollapse01" aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#navigationBarCollapse01" role="button">
 			<span class="navbar-text-truncate">App Section 2</span>
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+			<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#caret-bottom" />
 			</svg>
 		</a>
@@ -62,7 +62,7 @@ title: "List View Template"
 					<li class="dropdown nav-item show-dropdown-on-collapse">
 						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
 							<span class="navbar-text-truncate">More</span>
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+							<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#caret-bottom" />
 							</svg>
 						</a>
@@ -93,12 +93,12 @@ title: "List View Template"
 			<li class="dropdown nav-item">
 				<a aria-expanded="false" class="dropdown-toggle nav-link navbar-breakpoint-down-d-none" data-toggle="dropdown" href="#1" role="button">
 					<span class="navbar-text-truncate">Filter and Order</span>
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+					<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<a aria-expanded="false" class="nav-link nav-link-monospaced dropdown-toggle navbar-breakpoint-d-none" data-toggle="dropdown" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter">
+					<svg class="lexicon-icon lexicon-icon-filter" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#filter" />
 					</svg>
 				</a>
@@ -110,7 +110,7 @@ title: "List View Template"
 			</li>
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced order-arrow-up-active" href="#1">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
+					<svg class="lexicon-icon lexicon-icon-order-arrow" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#order-arrow" />
 					</svg>
 				</a>
@@ -124,12 +124,12 @@ title: "List View Template"
 							<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text"/>
 							<span class="input-group-inset-item input-group-inset-item-after">
 								<button class="btn btn-unstyled" type="submit">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#search" />
 									</svg>
 								</button>
 								<button class="btn btn-unstyled d-none" type="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+									<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#times" />
 									</svg>
 								</button>
@@ -142,21 +142,21 @@ title: "List View Template"
 		<ul class="navbar-nav">
 			<li class="nav-item navbar-breakpoint-d-none">
 				<a class="nav-link nav-link-monospaced clay-site-open-overlay-sm-down" href="#1">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+					<svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#search" />
 					</svg>
 				</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced" href="#uniqueSidenavCollapseId1" id="uniqueSidenavToggler1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+					<svg class="lexicon-icon lexicon-icon-info-circle-open" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#info-circle-open" />
 					</svg>
 				</a>
 			</li>
 			<li class="dropdown nav-item">
 				<a aria-expanded="false" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+					<svg class="lexicon-icon lexicon-icon-list" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#list" />
 					</svg>
 				</a>
@@ -164,7 +164,7 @@ title: "List View Template"
 					<li>
 						<a class="active dropdown-item" href="#1">
 							<span class="dropdown-item-indicator">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+								<svg class="lexicon-icon lexicon-icon-list" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#list" />
 								</svg>
 							</span>
@@ -174,7 +174,7 @@ title: "List View Template"
 					<li>
 						<a class="dropdown-item" href="#1">
 							<span class="dropdown-item-indicator">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
+								<svg class="lexicon-icon lexicon-icon-table" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#table" />
 								</svg>
 							</span>
@@ -184,7 +184,7 @@ title: "List View Template"
 					<li>
 						<a class="dropdown-item" href="#1">
 							<span class="dropdown-item-indicator">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
+								<svg class="lexicon-icon lexicon-icon-cards2" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#cards2" />
 								</svg>
 							</span>
@@ -195,7 +195,7 @@ title: "List View Template"
 			</li>
 			<li class="nav-item">
 				<a class="btn btn-primary nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none" href="#1">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+					<svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#plus" />
 					</svg>
 				</a>
@@ -229,7 +229,7 @@ title: "List View Template"
 					<ul class="tbar-nav">
 						<li class="tbar-item">
 							<a class="component-action disabled" href="#disabled" role="button" tabindex="-1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+								<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#angle-left" />
 								</svg>
 							</a>
@@ -243,14 +243,14 @@ title: "List View Template"
 						</li>
 						<li class="tbar-item">
 							<a class="component-action" href="#1" role="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+								<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#angle-right" />
 								</svg>
 							</a>
 						</li>
 						<li class="tbar-item">
 							<a class="component-action sidenav-close" href="#1" role="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#times" />
 								</svg>
 							</a>
@@ -271,7 +271,7 @@ title: "List View Template"
 					<div class="autofit-col">
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+								<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
@@ -291,7 +291,7 @@ title: "List View Template"
 				<nav class="component-navigation-bar navbar navigation-bar navbar-collapse-absolute navbar-expand-md navbar-underline">
 					<a aria-controls="sidebarLightCollapse00" aria-expanded="false" aria-label="Toggle Navigation" class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#sidebarLightCollapse00" role="button">
 						<span class="navbar-text-truncate">Details</span>
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</a>
@@ -371,7 +371,7 @@ title: "List View Template"
 										<div class="autofit-col">
 											<div class="sticker sticker-secondary">
 												<span class="inline-item">
-													<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+													<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
 														<use href="/images/icons/icons.svg#folder" />
 													</svg>
 												</span>
@@ -389,7 +389,7 @@ title: "List View Template"
 										<div class="autofit-col">
 											<div class="sticker sticker-secondary">
 												<span class="inline-item">
-													<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+													<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
 														<use href="/images/icons/icons.svg#folder" />
 													</svg>
 												</span>
@@ -418,7 +418,7 @@ title: "List View Template"
 								<div class="autofit-col">
 									<div class="dropdown dropdown-action">
 										<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="sidebarLightListDropdownId01" role="button">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 												<use href="/images/icons/icons.svg#ellipsis-v" />
 											</svg>
 										</a>
@@ -442,7 +442,7 @@ title: "List View Template"
 								<div class="autofit-col">
 									<div class="dropdown dropdown-action">
 										<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="sidebarLightListDropdownId02" role="button">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 												<use href="/images/icons/icons.svg#ellipsis-v" />
 											</svg>
 										</a>
@@ -481,7 +481,7 @@ title: "List View Template"
 					<div class="autofit-col">
 						<div class="sticker sticker-secondary">
 							<span class="inline-item">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+								<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#folder" />
 								</svg>
 							</span>
@@ -498,24 +498,24 @@ title: "List View Template"
 					<div class="autofit-col">
 						<div class="quick-action-menu">
 							<a class="component-action quick-action-item" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<svg class="lexicon-icon lexicon-icon-trash" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#trash" />
 								</svg>
 							</a>
 							<a class="component-action quick-action-item" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+								<svg class="lexicon-icon lexicon-icon-download" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#download" />
 								</svg>
 							</a>
 							<a class="component-action quick-action-item" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
+								<svg class="lexicon-icon lexicon-icon-expand" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#expand" />
 								</svg>
 							</a>
 						</div>
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+								<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
@@ -539,7 +539,7 @@ title: "List View Template"
 					<div class="autofit-col">
 						<div class="sticker sticker-secondary">
 							<span class="inline-item">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+								<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#folder" />
 								</svg>
 							</span>
@@ -555,24 +555,24 @@ title: "List View Template"
 					<div class="autofit-col">
 						<div class="quick-action-menu">
 							<a class="component-action quick-action-item" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<svg class="lexicon-icon lexicon-icon-trash" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#trash" />
 								</svg>
 							</a>
 							<a class="component-action quick-action-item" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+								<svg class="lexicon-icon lexicon-icon-download" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#download" />
 								</svg>
 							</a>
 							<a class="component-action quick-action-item" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
+								<svg class="lexicon-icon lexicon-icon-expand" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#expand" />
 								</svg>
 							</a>
 						</div>
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+								<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
@@ -599,7 +599,7 @@ title: "List View Template"
 					<div class="autofit-col">
 						<div class="sticker sticker-secondary">
 							<span class="inline-item">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+								<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#folder" />
 								</svg>
 							</span>
@@ -621,24 +621,24 @@ title: "List View Template"
 					<div class="autofit-col">
 						<div class="quick-action-menu">
 							<a class="component-action quick-action-item" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<svg class="lexicon-icon lexicon-icon-trash" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#trash" />
 								</svg>
 							</a>
 							<a class="component-action quick-action-item" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+								<svg class="lexicon-icon lexicon-icon-download" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#download" />
 								</svg>
 							</a>
 							<a class="component-action quick-action-item" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
+								<svg class="lexicon-icon lexicon-icon-expand" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#expand" />
 								</svg>
 							</a>
 						</div>
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+								<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
@@ -662,7 +662,7 @@ title: "List View Template"
 					<div class="autofit-col">
 						<div class="sticker sticker-secondary">
 							<span class="inline-item">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+								<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#folder" />
 								</svg>
 							</span>
@@ -684,24 +684,24 @@ title: "List View Template"
 					<div class="autofit-col">
 						<div class="quick-action-menu">
 							<a class="component-action quick-action-item" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<svg class="lexicon-icon lexicon-icon-trash" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#trash" />
 								</svg>
 							</a>
 							<a class="component-action quick-action-item" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+								<svg class="lexicon-icon lexicon-icon-download" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#download" />
 								</svg>
 							</a>
 							<a class="component-action quick-action-item" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-expand">
+								<svg class="lexicon-icon lexicon-icon-expand" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#expand" />
 								</svg>
 							</a>
 						</div>
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+								<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
@@ -758,7 +758,7 @@ title: "List View Template"
 			<div class="dropdown pagination-items-per-page">
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
 					10 entries
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
+					<svg class="lexicon-icon lexicon-icon-caret-double-l" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#caret-double-l" />
 					</svg>
 				</a>
@@ -774,7 +774,7 @@ title: "List View Template"
 			<ul class="pagination">
 				<li class="disabled page-item">
 					<a class="page-link" href="#1">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+						<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#angle-left" />
 						</svg>
 						<span class="sr-only">Previous</span>
@@ -807,7 +807,7 @@ title: "List View Template"
 				<li class="page-item"><a class="page-link" href="#1">129,221</a></li>
 				<li class="page-item">
 					<a class="page-link" href="#1">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+						<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#angle-right" />
 						</svg>
 						<span class="sr-only">Next</span>

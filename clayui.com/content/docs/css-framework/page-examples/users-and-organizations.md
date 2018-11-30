@@ -7,7 +7,7 @@ title: "Users and Organizations"
 		<ul class="navbar-nav">
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced" href="#1">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
+					<svg class="lexicon-icon lexicon-icon-product-menu-closed" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#product-menu-closed" />
 					</svg>
 				</a>
@@ -17,7 +17,7 @@ title: "Users and Organizations"
 		<ul class="navbar-nav">
 			<li class="dropdown nav-item">
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+					<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#ellipsis-v" />
 					</svg>
 				</a>
@@ -37,7 +37,7 @@ title: "Users and Organizations"
 	<div class="container-fluid container-fluid-max-xl">
 		<a aria-controls="navigationBarCollapse01" aria-expanded="false" aria-label="Toggle Navigation" class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#navigationBarCollapse01" role="button">
 			<span class="navbar-text-truncate">Users</span>
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+			<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#caret-bottom" />
 			</svg>
 		</a>
@@ -83,12 +83,12 @@ title: "Users and Organizations"
 
 <div class="alert alert-danger alert-dismissible alert-fluid" role="alert">
 	<div class="container-fluid container-fluid-max-xl">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+		<svg class="lexicon-icon lexicon-icon-info-circle" focusable="false" role="presentation">
 			<use href="/images/icons/icons.svg#info-circle"></use>
 		</svg>
 		<strong class="lead">Error:</strong> This is an error message.
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+			<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#times" />
 			</svg>
 		</button>
@@ -101,12 +101,12 @@ title: "Users and Organizations"
 			<form>
 				<div class="sheet sheet-lg">
 					<div class="alert alert-dismissible alert-info" role="alert">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+						<svg class="lexicon-icon lexicon-icon-info-circle" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#info-circle"></use>
 						</svg>
 						<strong class="lead">Info:</strong> Street 1 and City are required fields. Postal Code could be required in some countries.
 						<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#times" />
 							</svg>
 						</button>
@@ -116,7 +116,7 @@ title: "Users and Organizations"
 							<label>
 								Street 1
 								<span class="reference-mark">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
+									<svg class="lexicon-icon lexicon-icon-asterisk" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#asterisk" />
 									</svg>
 								</span>
@@ -135,7 +135,7 @@ title: "Users and Organizations"
 							<label>
 								City
 								<span class="reference-mark">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
+									<svg class="lexicon-icon lexicon-icon-asterisk" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#asterisk" />
 									</svg>
 								</span>
@@ -202,12 +202,12 @@ title: "Users and Organizations"
 							<a aria-controls="accordion03CollapseTwo" aria-expanded="true" class="collapse-icon sheet-subtitle" data-toggle="collapse" href="#accordion03CollapseTwo" id="accordion03HeadingTwo" role="tab">
 								<span class="panel-title">Password</span>
 								<span class="collapse-icon-closed">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+									<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#angle-right" />
 									</svg>
 								</span>
 								<span class="collapse-icon-open">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+									<svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#angle-down" />
 									</svg>
 								</span>
@@ -218,7 +218,7 @@ title: "Users and Organizations"
 										<label>
 											Current Password
 											<span class="reference-mark">
-												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
+												<svg class="lexicon-icon lexicon-icon-asterisk" focusable="false" role="presentation">
 													<use href="/images/icons/icons.svg#asterisk" />
 												</svg>
 											</span>
@@ -229,7 +229,7 @@ title: "Users and Organizations"
 										<label>
 											New Password
 											<span class="reference-mark">
-												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
+												<svg class="lexicon-icon lexicon-icon-asterisk" focusable="false" role="presentation">
 													<use href="/images/icons/icons.svg#asterisk" />
 												</svg>
 											</span>
@@ -240,7 +240,7 @@ title: "Users and Organizations"
 										<label>
 											Confirm New Password
 											<span class="reference-mark">
-												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
+												<svg class="lexicon-icon lexicon-icon-asterisk" focusable="false" role="presentation">
 													<use href="/images/icons/icons.svg#asterisk" />
 												</svg>
 											</span>
@@ -254,12 +254,12 @@ title: "Users and Organizations"
 							<a aria-controls="accordion03CollapseOne" aria-expanded="false" class="collapse-icon collapsed sheet-subtitle" data-toggle="collapse" href="#accordion03CollapseOne" id="accordion03HeadingOne" role="tab">
 								<span class="panel-title">Organizations</span>
 								<span class="collapse-icon-closed">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+									<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#angle-right" />
 									</svg>
 								</span>
 								<span class="collapse-icon-open">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+									<svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#angle-down" />
 									</svg>
 								</span>
@@ -274,12 +274,12 @@ title: "Users and Organizations"
 							<a aria-controls="accordion03CollapseThree" aria-expanded="false" class="collapse-icon collapsed sheet-subtitle" data-toggle="collapse" href="#accordion03CollapseThree" id="accordion03HeadingThree" role="tab">
 								<span class="panel-title">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual User Groups</span>
 								<span class="collapse-icon-closed">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+									<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#angle-right" />
 									</svg>
 								</span>
 								<span class="collapse-icon-open">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+									<svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#angle-down" />
 									</svg>
 								</span>
@@ -294,12 +294,12 @@ title: "Users and Organizations"
 							<a aria-controls="accordion03CollapseFour" aria-expanded="false" class="collapse-icon collapsed sheet-subtitle" data-toggle="collapse" href="#accordion03CollapseFour" id="accordion03HeadingFour" role="tab">
 								<span class="panel-title">Roles</span>
 								<span class="collapse-icon-closed">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+									<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#angle-right" />
 									</svg>
 								</span>
 								<span class="collapse-icon-open">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+									<svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#angle-down" />
 									</svg>
 								</span>

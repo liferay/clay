@@ -206,7 +206,7 @@ title: Timelines
 			<div class="panel-body">
 				Panel Text #1
 				<div class="timeline-increment">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-radio-button">
+					<svg class="lexicon-icon lexicon-icon-radio-button" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#radio-button" />
 					</svg>
 				</div>
@@ -218,7 +218,7 @@ title: Timelines
 			<div class="panel-body">
 				Panel Text #2
 				<div class="timeline-increment">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-remove-role">
+					<svg class="lexicon-icon lexicon-icon-remove-role" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#remove-role" />
 					</svg>
 				</div>
@@ -230,7 +230,7 @@ title: Timelines
 			<div class="panel-body">
 				Panel Text #3
 				<div class="timeline-increment">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-repository">
+					<svg class="lexicon-icon lexicon-icon-repository" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#repository" />
 					</svg>
 				</div>
@@ -246,7 +246,7 @@ title: Timelines
 			<div class="panel-body">
 				Panel Text #1
 				<div class="timeline-increment">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-radio-button">
+					<svg class="lexicon-icon lexicon-icon-radio-button" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#radio-button" />
 					</svg>
 				</div>
@@ -258,7 +258,7 @@ title: Timelines
 			<div class="panel-body">
 				Panel Text #2
 				<div class="timeline-increment">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-remove-role">
+					<svg class="lexicon-icon lexicon-icon-remove-role" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#remove-role" />
 					</svg>
 				</div>
@@ -270,7 +270,7 @@ title: Timelines
 			<div class="panel-body">
 				Panel Text #3
 				<div class="timeline-increment">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-repository">
+					<svg class="lexicon-icon lexicon-icon-repository" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#repository" />
 					</svg>
 				</div>

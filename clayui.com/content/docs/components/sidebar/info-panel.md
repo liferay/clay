@@ -20,7 +20,7 @@ An information container that displays additional data for the content displayed
 					<ul class="tbar-nav">
 						<li class="tbar-item">
 							<a class="component-action disabled" href="#disabled" role="button" tabindex="-1">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+								<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#angle-left" />
 								</svg>
 							</a>
@@ -34,14 +34,14 @@ An information container that displays additional data for the content displayed
 						</li>
 						<li class="tbar-item">
 							<a class="component-action" href="#1" role="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+								<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#angle-right" />
 								</svg>
 							</a>
 						</li>
 						<li class="tbar-item">
 							<a class="component-action" href="#1" role="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#times" />
 								</svg>
 							</a>
@@ -62,7 +62,7 @@ An information container that displays additional data for the content displayed
 					<div class="autofit-col">
 						<div class="dropdown dropdown-action">
 							<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+								<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
@@ -82,7 +82,7 @@ An information container that displays additional data for the content displayed
 				<nav class="component-navigation-bar navbar navigation-bar navbar-collapse-absolute navbar-expand-md navbar-underline">
 					<a aria-controls="sidebarLightCollapse00" aria-expanded="false" aria-label="Toggle Navigation" class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#sidebarLightCollapse00" role="button">
 						<span class="navbar-text-truncate">Details</span>
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</a>
@@ -162,7 +162,7 @@ An information container that displays additional data for the content displayed
 										<div class="autofit-col">
 											<div class="sticker sticker-secondary">
 												<span class="inline-item">
-													<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+													<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
 														<use href="/images/icons/icons.svg#folder" />
 													</svg>
 												</span>
@@ -180,7 +180,7 @@ An information container that displays additional data for the content displayed
 										<div class="autofit-col">
 											<div class="sticker sticker-secondary">
 												<span class="inline-item">
-													<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+													<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
 														<use href="/images/icons/icons.svg#folder" />
 													</svg>
 												</span>
@@ -209,7 +209,7 @@ An information container that displays additional data for the content displayed
 								<div class="autofit-col">
 									<div class="dropdown dropdown-action">
 										<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="sidebarLightListDropdownId01" role="button">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 												<use href="/images/icons/icons.svg#ellipsis-v" />
 											</svg>
 										</a>
@@ -233,7 +233,7 @@ An information container that displays additional data for the content displayed
 								<div class="autofit-col">
 									<div class="dropdown dropdown-action">
 										<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="sidebarLightListDropdownId02" role="button">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 												<use href="/images/icons/icons.svg#ellipsis-v" />
 											</svg>
 										</a>
@@ -263,7 +263,7 @@ An information container that displays additional data for the content displayed
 			<ul class="tbar-nav">
 				<li class="tbar-item">
 					<a class="component-action disabled" href="#disabled" role="button" tabindex="-1">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+						<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#angle-left" />
 						</svg>
 					</a>
@@ -277,14 +277,14 @@ An information container that displays additional data for the content displayed
 				</li>
 				<li class="tbar-item">
 					<a class="component-action" href="#1" role="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+						<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#angle-right" />
 						</svg>
 					</a>
 				</li>
 				<li class="tbar-item">
 					<a class="component-action" href="#1" role="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+						<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#times" />
 						</svg>
 					</a>
@@ -305,7 +305,7 @@ An information container that displays additional data for the content displayed
 			<div class="autofit-col">
 				<div class="dropdown dropdown-action">
 					<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+						<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#ellipsis-v" />
 						</svg>
 					</a>
@@ -325,7 +325,7 @@ An information container that displays additional data for the content displayed
 		<nav class="component-navigation-bar navbar navigation-bar navbar-collapse-absolute navbar-expand-md navbar-underline">
 			<a aria-controls="sidebarLightCollapse00" aria-expanded="false" aria-label="Toggle Navigation" class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#sidebarLightCollapse00" role="button">
 				<span class="navbar-text-truncate">Details</span>
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#caret-bottom" />
 				</svg>
 			</a>
@@ -405,7 +405,7 @@ An information container that displays additional data for the content displayed
 								<div class="autofit-col">
 									<div class="sticker sticker-secondary">
 										<span class="inline-item">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+											<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
 												<use href="/images/icons/icons.svg#folder" />
 											</svg>
 										</span>
@@ -423,7 +423,7 @@ An information container that displays additional data for the content displayed
 								<div class="autofit-col">
 									<div class="sticker sticker-secondary">
 										<span class="inline-item">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+											<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
 												<use href="/images/icons/icons.svg#folder" />
 											</svg>
 										</span>
@@ -452,7 +452,7 @@ An information container that displays additional data for the content displayed
 						<div class="autofit-col">
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="sidebarLightListDropdownId01" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
@@ -476,7 +476,7 @@ An information container that displays additional data for the content displayed
 						<div class="autofit-col">
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="sidebarLightListDropdownId02" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>

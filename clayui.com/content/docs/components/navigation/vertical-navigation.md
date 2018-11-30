@@ -17,7 +17,7 @@ The vertical navigation menu displays navigation items in a vertical menu.
 		<nav class="menubar menubar-transparent menubar-vertical-expand-lg">
 			<a aria-controls="menubarVerticalLgCollapse01" aria-expanded="false" class="menubar-toggler" data-toggle="collapse" href="#menubarVerticalLgCollapse01" role="button">
 				Details
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#caret-bottom" />
 				</svg>
 			</a>
@@ -27,12 +27,12 @@ The vertical navigation menu displays navigation items in a vertical menu.
 						<a aria-controls="menubarVerticalLgNestedCollapse01" aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalLgNestedCollapse01" role="button">
 							Basic Information
 							<span class="collapse-icon-closed">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
+								<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#caret-right" />
 								</svg>
 							</span>
 							<span class="collapse-icon-open">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#caret-bottom" />
 								</svg>
 							</span>
@@ -45,12 +45,12 @@ The vertical navigation menu displays navigation items in a vertical menu.
 									<a aria-controls="menubarVerticalLgNestedCollapse02" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalLgNestedCollapse02" role="button">
 										Documents and Media
 										<span class="collapse-icon-closed">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
+											<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
 												<use href="/images/icons/icons.svg#caret-right" />
 											</svg>
 										</span>
 										<span class="collapse-icon-open">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+											<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 												<use href="/images/icons/icons.svg#caret-bottom" />
 											</svg>
 										</span>
@@ -72,12 +72,12 @@ The vertical navigation menu displays navigation items in a vertical menu.
 						<a aria-controls="menubarVerticalLgNestedCollapse03" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalLgNestedCollapse03" role="button">
 							SEO
 							<span class="collapse-icon-closed">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
+								<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#caret-right" />
 								</svg>
 							</span>
 							<span class="collapse-icon-open">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#caret-bottom" />
 								</svg>
 							</span>
@@ -93,12 +93,12 @@ The vertical navigation menu displays navigation items in a vertical menu.
 						<a aria-controls="menubarVerticalLgNestedCollapse04" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalLgNestedCollapse04" role="button">
 							Advanced
 							<span class="collapse-icon-closed">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
+								<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#caret-right" />
 								</svg>
 							</span>
 							<span class="collapse-icon-open">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#caret-bottom" />
 								</svg>
 							</span>
@@ -122,7 +122,7 @@ The vertical navigation menu displays navigation items in a vertical menu.
 <nav class="menubar menubar-transparent menubar-vertical-expand-lg">
 	<a aria-controls="menubarVerticalLgCollapse01" aria-expanded="false" class="menubar-toggler" data-toggle="collapse" href="#menubarVerticalLgCollapse01" role="button">
 		Details
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+		<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 			<use href="/images/icons/icons.svg#caret-bottom" />
 		</svg>
 	</a>
@@ -132,12 +132,12 @@ The vertical navigation menu displays navigation items in a vertical menu.
 				<a aria-controls="menubarVerticalLgNestedCollapse01" aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalLgNestedCollapse01" role="button">
 					Basic Information
 					<span class="collapse-icon-closed">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
+						<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#caret-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
@@ -150,12 +150,12 @@ The vertical navigation menu displays navigation items in a vertical menu.
 							<a aria-controls="menubarVerticalLgNestedCollapse02" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalLgNestedCollapse02" role="button">
 								Documents and Media
 								<span class="collapse-icon-closed">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
+									<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#caret-right" />
 									</svg>
 								</span>
 								<span class="collapse-icon-open">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+									<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#caret-bottom" />
 									</svg>
 								</span>
@@ -177,12 +177,12 @@ The vertical navigation menu displays navigation items in a vertical menu.
 				<a aria-controls="menubarVerticalLgNestedCollapse03" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalLgNestedCollapse03" role="button">
 					SEO
 					<span class="collapse-icon-closed">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
+						<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#caret-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
@@ -198,12 +198,12 @@ The vertical navigation menu displays navigation items in a vertical menu.
 				<a aria-controls="menubarVerticalLgNestedCollapse04" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalLgNestedCollapse04" role="button">
 					Advanced
 					<span class="collapse-icon-closed">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
+						<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#caret-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
@@ -231,7 +231,7 @@ The vertical navigation menu displays navigation items in a vertical menu.
 		<nav class="menubar menubar-transparent menubar-vertical-expand-md">
 			<a aria-controls="menubarVerticalCollapse01" aria-expanded="false" class="menubar-toggler" data-toggle="collapse" href="#menubarVerticalCollapse01" role="button">
 				Details
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#caret-bottom" />
 				</svg>
 			</a>
@@ -241,12 +241,12 @@ The vertical navigation menu displays navigation items in a vertical menu.
 						<a aria-controls="menubarVerticalNestedCollapse01" aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalNestedCollapse01" role="button">
 							Basic Information
 							<span class="collapse-icon-closed">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
+								<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#caret-right" />
 								</svg>
 							</span>
 							<span class="collapse-icon-open">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#caret-bottom" />
 								</svg>
 							</span>
@@ -259,12 +259,12 @@ The vertical navigation menu displays navigation items in a vertical menu.
 									<a aria-controls="menubarVerticalNestedCollapse02" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalNestedCollapse02" role="button">
 										Documents and Media
 										<span class="collapse-icon-closed">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
+											<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
 												<use href="/images/icons/icons.svg#caret-right" />
 											</svg>
 										</span>
 										<span class="collapse-icon-open">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+											<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 												<use href="/images/icons/icons.svg#caret-bottom" />
 											</svg>
 										</span>
@@ -286,12 +286,12 @@ The vertical navigation menu displays navigation items in a vertical menu.
 						<a aria-controls="menubarVerticalNestedCollapse03" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalNestedCollapse03" role="button">
 							SEO
 							<span class="collapse-icon-closed">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
+								<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#caret-right" />
 								</svg>
 							</span>
 							<span class="collapse-icon-open">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#caret-bottom" />
 								</svg>
 							</span>
@@ -307,12 +307,12 @@ The vertical navigation menu displays navigation items in a vertical menu.
 						<a aria-controls="menubarVerticalNestedCollapse04" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalNestedCollapse04" role="button">
 							Advanced
 							<span class="collapse-icon-closed">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
+								<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#caret-right" />
 								</svg>
 							</span>
 							<span class="collapse-icon-open">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#caret-bottom" />
 								</svg>
 							</span>
@@ -336,7 +336,7 @@ The vertical navigation menu displays navigation items in a vertical menu.
 <nav class="menubar menubar-transparent menubar-vertical-expand-md">
 	<a aria-controls="menubarVerticalCollapse01" aria-expanded="false" class="menubar-toggler" data-toggle="collapse" href="#menubarVerticalCollapse01" role="button">
 		Details
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+		<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 			<use href="/images/icons/icons.svg#caret-bottom" />
 		</svg>
 	</a>
@@ -346,12 +346,12 @@ The vertical navigation menu displays navigation items in a vertical menu.
 				<a aria-controls="menubarVerticalNestedCollapse01" aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalNestedCollapse01" role="button">
 					Basic Information
 					<span class="collapse-icon-closed">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
+						<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#caret-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
@@ -364,12 +364,12 @@ The vertical navigation menu displays navigation items in a vertical menu.
 							<a aria-controls="menubarVerticalNestedCollapse02" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalNestedCollapse02" role="button">
 								Documents and Media
 								<span class="collapse-icon-closed">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
+									<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#caret-right" />
 									</svg>
 								</span>
 								<span class="collapse-icon-open">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+									<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#caret-bottom" />
 									</svg>
 								</span>
@@ -391,12 +391,12 @@ The vertical navigation menu displays navigation items in a vertical menu.
 				<a aria-controls="menubarVerticalNestedCollapse03" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalNestedCollapse03" role="button">
 					SEO
 					<span class="collapse-icon-closed">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
+						<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#caret-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>
@@ -412,12 +412,12 @@ The vertical navigation menu displays navigation items in a vertical menu.
 				<a aria-controls="menubarVerticalNestedCollapse04" aria-expanded="false" class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#menubarVerticalNestedCollapse04" role="button">
 					Advanced
 					<span class="collapse-icon-closed">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-right">
+						<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#caret-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#caret-bottom" />
 						</svg>
 					</span>

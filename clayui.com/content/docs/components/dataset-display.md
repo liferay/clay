@@ -21,13 +21,13 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" type="button">
                                 <span class="navbar-breakpoint-down-d-none">
                                     Filter and Order
-                                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
+                                    <svg class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false" role="presentation">
                                         <title>caret-bottom</title>
                                         <use href="/images/icons/icons.svg#caret-bottom"></use>
                                     </svg>
                                 </span>
                                 <span class="navbar-breakpoint-d-none">
-                                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter" focusable="false">
+                                    <svg class="lexicon-icon lexicon-icon-filter" focusable="false" role="presentation">
                                         <title>filter</title>
                                         <use href="/images/icons/icons.svg#filter"></use>
                                     </svg>
@@ -37,7 +37,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                     </li>
                     <li class="nav-item">
                         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" title="Order" type="button">
-                            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow" focusable="false">
+                            <svg class="lexicon-icon lexicon-icon-order-arrow" focusable="false" role="presentation">
                                 <title>order-arrow</title>
                                 <use href="/images/icons/icons.svg#order-arrow"></use>
                             </svg>
@@ -52,13 +52,13 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                                     <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="Search for..." type="text"/>
                                     <span class="input-group-inset-item input-group-inset-item-after">
                                         <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
-                                            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                                            <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                                                 <title>times</title>
                                                 <use href="/images/icons/icons.svg#times"></use>
                                             </svg>
                                         </button>
                                         <button class="btn btn-unstyled" aria-label="search" type="submit">
-                                            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
+                                            <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
                                                 <title>search</title>
                                                 <use href="/images/icons/icons.svg#search"></use>
                                             </svg>
@@ -72,7 +72,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                 <ul class="navbar-nav">
                     <li class="nav-item navbar-breakpoint-d-none">
                         <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
-                            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
+                            <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
                                 <title>search</title>
                                 <use href="/images/icons/icons.svg#search"></use>
                             </svg>
@@ -81,7 +81,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                     <li class="dropdown nav-item">
                         <div class="dropdown">
                             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" title="Display Style" type="button">
-                                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
+                                <svg class="lexicon-icon lexicon-icon-table" focusable="false" role="presentation">
                                     <title>table</title>
                                     <use href="/images/icons/icons.svg#table"></use>
                                 </svg>
@@ -91,7 +91,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                     <li class="nav-item">
                         <div class="dropdown">
                             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced btn-primary" title="New" type="button">
-                                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+                                <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
                                     <title>plus</title>
                                     <use href="/images/icons/icons.svg#plus"></use>
                                 </svg>
@@ -113,7 +113,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                                 <button class="btn btn-unstyled" type="button">
                                     Name
                                     <span class="inline-item inline-item-after">
-                                        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up" focusable="false">
+                                        <svg class="lexicon-icon lexicon-icon-order-arrow-up" focusable="false" role="presentation">
                                             <title>order-arrow-up</title>
                                             <use href="/images/icons/icons.svg#order-arrow-up"></use>
                                         </svg>
@@ -410,13 +410,13 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link btn-unstyled" type="button">
                                 <span class="navbar-breakpoint-down-d-none">
                                     filter-and-order
-                                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false">
+                                    <svg class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false" role="presentation">
                                         <title>caret-bottom</title>
                                         <use href="/images/icons/icons.svg#caret-bottom"></use>
                                     </svg>
                                 </span>
                                 <span class="navbar-breakpoint-d-none">
-                                    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-filter" focusable="false">
+                                    <svg class="lexicon-icon lexicon-icon-filter" focusable="false" role="presentation">
                                         <title>filter</title>
                                         <use href="/images/icons/icons.svg#filter"></use>
                                     </svg>
@@ -426,7 +426,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                     </li>
                     <li class="nav-item">
                         <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" title="order" type="button">
-                            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow" focusable="false">
+                            <svg class="lexicon-icon lexicon-icon-order-arrow" focusable="false" role="presentation">
                                 <title>order-arrow</title>
                                 <use href="/images/icons/icons.svg#order-arrow"></use>
                             </svg>
@@ -441,13 +441,13 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                                     <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" type="text"/>
                                     <span class="input-group-inset-item input-group-inset-item-after">
                                         <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
-                                            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times" focusable="false">
+                                            <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                                                 <title>times</title>
                                                 <use href="/images/icons/icons.svg#times"></use>
                                             </svg>
                                         </button>
                                         <button class="btn btn-unstyled" aria-label="search" type="submit">
-                                            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
+                                            <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
                                                 <title>search</title>
                                                 <use href="/images/icons/icons.svg#search"></use>
                                             </svg>
@@ -461,7 +461,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                 <ul class="navbar-nav">
                     <li class="nav-item navbar-breakpoint-d-none">
                         <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
-                            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search" focusable="false">
+                            <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
                                 <title>search</title>
                                 <use href="/images/icons/icons.svg#search"></use>
                             </svg>
@@ -470,7 +470,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                     <li class="dropdown nav-item">
                         <div class="dropdown">
                             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" title="display-style" type="button">
-                                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-table" focusable="false">
+                                <svg class="lexicon-icon lexicon-icon-table" focusable="false" role="presentation">
                                     <title>table</title>
                                     <use href="/images/icons/icons.svg#table"></use>
                                 </svg>
@@ -480,7 +480,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                     <li class="nav-item">
                         <div class="dropdown">
                             <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-btn nav-btn-monospaced btn-primary" title="new" type="button">
-                                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus" focusable="false">
+                                <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
                                     <title>plus</title>
                                     <use href="/images/icons/icons.svg#plus"></use>
                                 </svg>
@@ -502,7 +502,7 @@ A dataset display is the combination of a <a href="/docs/components/toolbars/man
                                 <button class="btn btn-unstyled" type="button">
                                     Name
                                     <span class="inline-item inline-item-after">
-                                        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow-up" focusable="false">
+                                        <svg class="lexicon-icon lexicon-icon-order-arrow-up" focusable="false" role="presentation">
                                             <title>order-arrow-up</title>
                                             <use href="/images/icons/icons.svg#order-arrow-up"></use>
                                         </svg>

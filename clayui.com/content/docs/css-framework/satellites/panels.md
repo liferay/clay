@@ -96,12 +96,12 @@ To align the content flush to the left and right side of the <code>.panel-group<
 			<a aria-controls="accordion04CollapseTwo" aria-expanded="true" class="collapse-icon sheet-subtitle" data-toggle="collapse" href="#accordion04CollapseTwo" id="accordion04HeadingTwo" role="tab">
 				<span>Password</span>
 				<span class="collapse-icon-closed">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+					<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#angle-right" />
 					</svg>
 				</span>
 				<span class="collapse-icon-open">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+					<svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#angle-down" />
 					</svg>
 				</span>
@@ -112,7 +112,7 @@ To align the content flush to the left and right side of the <code>.panel-group<
 						<label>
 							Current Password
 							<span class="reference-mark">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
+								<svg class="lexicon-icon lexicon-icon-asterisk" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#asterisk" />
 								</svg>
 							</span>
@@ -123,7 +123,7 @@ To align the content flush to the left and right side of the <code>.panel-group<
 						<label>
 							New Password
 							<span class="reference-mark">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
+								<svg class="lexicon-icon lexicon-icon-asterisk" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#asterisk" />
 								</svg>
 							</span>
@@ -134,7 +134,7 @@ To align the content flush to the left and right side of the <code>.panel-group<
 						<label>
 							Confirm New Password
 							<span class="reference-mark">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
+								<svg class="lexicon-icon lexicon-icon-asterisk" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#asterisk" />
 								</svg>
 							</span>
@@ -148,12 +148,12 @@ To align the content flush to the left and right side of the <code>.panel-group<
 			<a aria-controls="accordion04CollapseOne" aria-expanded="false" class="collapse-icon collapsed sheet-subtitle" data-toggle="collapse" href="#accordion04CollapseOne" id="accordion04HeadingOne" role="tab">
 				<span>Organizations</span>
 				<span class="collapse-icon-closed">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+					<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#angle-right" />
 					</svg>
 				</span>
 				<span class="collapse-icon-open">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+					<svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#angle-down" />
 					</svg>
 				</span>
@@ -168,12 +168,12 @@ To align the content flush to the left and right side of the <code>.panel-group<
 			<a aria-controls="accordion04CollapseThree" aria-expanded="false" class="collapse-icon collapsed sheet-subtitle" data-toggle="collapse" href="#accordion04CollapseThree" id="accordion04HeadingThree" role="tab">
 				<span>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual User Groups</span>
 				<span class="collapse-icon-closed">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+					<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#angle-right" />
 					</svg>
 				</span>
 				<span class="collapse-icon-open">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+					<svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#angle-down" />
 					</svg>
 				</span>
@@ -188,12 +188,12 @@ To align the content flush to the left and right side of the <code>.panel-group<
 			<a aria-controls="accordion04CollapseFour" aria-expanded="false" class="collapse-icon collapsed sheet-subtitle" data-toggle="collapse" href="#accordion04CollapseFour" id="accordion04HeadingFour" role="tab">
 				<span>Roles</span>
 				<span class="collapse-icon-closed">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+					<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#angle-right" />
 					</svg>
 				</span>
 				<span class="collapse-icon-open">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+					<svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#angle-down" />
 					</svg>
 				</span>
@@ -213,12 +213,12 @@ To align the content flush to the left and right side of the <code>.panel-group<
 		<a aria-controls="accordion04CollapseTwo" aria-expanded="true" class="collapse-icon sheet-subtitle" data-toggle="collapse" href="#accordion04CollapseTwo" id="accordion04HeadingTwo" role="tab">
 			<span>Password</span>
 			<span class="collapse-icon-closed">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+				<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+				<svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
@@ -229,7 +229,7 @@ To align the content flush to the left and right side of the <code>.panel-group<
 					<label>
 						Current Password
 						<span class="reference-mark">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
+							<svg class="lexicon-icon lexicon-icon-asterisk" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#asterisk" />
 							</svg>
 						</span>
@@ -240,7 +240,7 @@ To align the content flush to the left and right side of the <code>.panel-group<
 					<label>
 						New Password
 						<span class="reference-mark">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
+							<svg class="lexicon-icon lexicon-icon-asterisk" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#asterisk" />
 							</svg>
 						</span>
@@ -251,7 +251,7 @@ To align the content flush to the left and right side of the <code>.panel-group<
 					<label>
 						Confirm New Password
 						<span class="reference-mark">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
+							<svg class="lexicon-icon lexicon-icon-asterisk" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#asterisk" />
 							</svg>
 						</span>
@@ -265,12 +265,12 @@ To align the content flush to the left and right side of the <code>.panel-group<
 		<a aria-controls="accordion04CollapseOne" aria-expanded="false" class="collapse-icon collapsed sheet-subtitle" data-toggle="collapse" href="#accordion04CollapseOne" id="accordion04HeadingOne" role="tab">
 			<span>Organizations</span>
 			<span class="collapse-icon-closed">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+				<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+				<svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
@@ -285,12 +285,12 @@ To align the content flush to the left and right side of the <code>.panel-group<
 		<a aria-controls="accordion04CollapseThree" aria-expanded="false" class="collapse-icon collapsed sheet-subtitle" data-toggle="collapse" href="#accordion04CollapseThree" id="accordion04HeadingThree" role="tab">
 			<span>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual User Groups</span>
 			<span class="collapse-icon-closed">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+				<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+				<svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
@@ -305,12 +305,12 @@ To align the content flush to the left and right side of the <code>.panel-group<
 		<a aria-controls="accordion04CollapseFour" aria-expanded="false" class="collapse-icon collapsed sheet-subtitle" data-toggle="collapse" href="#accordion04CollapseFour" id="accordion04HeadingFour" role="tab">
 			<span>Roles</span>
 			<span class="collapse-icon-closed">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+				<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+				<svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
@@ -335,12 +335,12 @@ To align the content flush to the left and right side of the <code>.panel-group<
 		<button aria-controls="collapseTwo" aria-expanded="false" class="btn btn-unstyled collapse-icon collapsed panel-header panel-header-link" data-parent="#accordion05" data-target="#accordion05CollapseTwo" data-toggle="collapse" id="accordion05HeadingTwo" role="tab" type="button">
 			<span class="panel-title">Collapsible Group Item #1</span>
 			<span class="collapse-icon-closed">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+				<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+				<svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
@@ -355,12 +355,12 @@ To align the content flush to the left and right side of the <code>.panel-group<
 		<button aria-controls="accordion05CollapseOne" aria-expanded="true" class="btn btn-unstyled collapse-icon collapse-icon-middle panel-header panel-header-link" data-parent="#accordion05" data-target="#accordion05CollapseOne" data-toggle="collapse" id="accordion05HeadingOne" role="tab" type="button">
 			<span class="panel-title">Collapsible Group Item #2</span>
 			<span class="collapse-icon-closed">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+				<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+				<svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
@@ -375,12 +375,12 @@ To align the content flush to the left and right side of the <code>.panel-group<
 		<button aria-controls="collapseThree" aria-expanded="false" class="btn btn-unstyled collapse-icon collapsed panel-header panel-header-link" data-parent="#accordion05" data-target="#accordion05CollapseThree" data-toggle="collapse" id="accordion05HeadingThree" role="tab" type="button">
 			<span class="panel-title">Collapsible Group Item #3</span>
 			<span class="collapse-icon-closed">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+				<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-right" />
 				</svg>
 			</span>
 			<span class="collapse-icon-open">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+				<svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-down" />
 				</svg>
 			</span>
