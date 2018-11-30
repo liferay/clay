@@ -57,7 +57,7 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h2>With only items selected</h2>
+			<h2>With only data remote</h2>
 			<div id="selected-block"></div>
 		</div>
 	</div>
@@ -75,7 +75,7 @@
 				value: 'ammonia cookie',
 			}
 		];
-		const dataProvider = [
+		const dataSource = [
 			'Bread',
 			'Ammonia cookie',
 			'Cuisine of Antebellum America',
@@ -98,7 +98,8 @@
 		];
 
 		// Default State
-		new metal.ClayMultiSelect({
+		new metal.ClayMultiSelectBase({
+			data: dataSource,
 			helpText: 'You can use a comma to enter tags',
 			label: 'Tags',
 			selectedItems,
@@ -106,10 +107,8 @@
 		}, '#default-block');
 
 		// With autocomplete
-		new metal.ClayMultiSelect({
-			events: {
-				queryChange: autocomplete,
-			},
+		new metal.ClayMultiSelectBase({
+			data: dataSource,
 			helpText: 'You can use a comma to enter tags',
 			label: 'Tags',
 			selectedItems,
@@ -117,7 +116,8 @@
 		}, '#autocomplete-block');
 
 		// With autocomplete and interaction
-		new metal.ClayMultiSelect({
+		new metal.ClayMultiSelectBase({
+			data: dataSource,
 			label: 'Tags',
 			selectedItems,
 			spritemap,
@@ -132,16 +132,13 @@
 					event.target.selectedItems.push({label, value: label});
 					addToSelectedItems(event);
 				},
-				queryChange: autocomplete,
 			},
 			helpText: 'You can use a comma to enter tags',
 		}, '#interaction-block');
 
-		// With only items selected
-		new metal.ClayMultiSelect({
-			label: 'Tags',
-			selectedItems,
-			spritemap,
+		// With only data remote
+		new metal.ClayMultiSelectBase({
+			data: 'https://api.pro.coinbase.com/currencies',
 			events: {
 				itemRemoved: removeItem,
 				itemSelected: (event) => {
@@ -149,9 +146,11 @@
 					event.target.selectedItems.push({label, value: label});
 					addToSelectedItems(event);
 				},
-				queryChange: autocomplete,
 			},
+			extractData: (elem) => elem.name,
 			helpText: 'You can use a comma to enter tags',
+			label: 'Currencies',
+			spritemap,
 		}, '#selected-block');
 
 		function addToSelectedItems(event) {
@@ -161,19 +160,8 @@
 		}
 
 		function removeItem(event) {
-			event.target.selectedItems.splice(Number(event.data.index), 1);
+			event.target.selectedItems.splice(event.data.index, 1);
 			event.target.selectedItems = event.target.selectedItems;
-		}
-
-		function autocomplete(event) {
-			const query = event.data.value;
-
-			if (query) {
-				const filterAutocomplete = event.target.filterAutocomplete;
-				event.target.filteredItems = filterAutocomplete(dataProvider, query);
-			} else {
-				event.target.filteredItems = [];
-			}
 		}
 
 	</script>
