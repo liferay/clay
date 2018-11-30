@@ -108,6 +108,7 @@ class ClayDataProvider extends ClayComponent {
 		this._isResolvedData = false;
 		this._pollingInterval = 0;
 		if (this._hasData(this.data)) {
+			this._dataSource = this.data;
 			this._isResolvedData = true;
 		} else {
 			this._fetchData();
