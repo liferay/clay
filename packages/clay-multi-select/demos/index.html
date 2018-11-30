@@ -98,8 +98,8 @@
 		];
 
 		// Default State
-		new metal.ClayMultiSelectBase({
-			data: dataSource,
+		new metal.ClayMultiSelect({
+			dataSource,
 			helpText: 'You can use a comma to enter tags',
 			label: 'Tags',
 			selectedItems,
@@ -107,8 +107,8 @@
 		}, '#default-block');
 
 		// With autocomplete
-		new metal.ClayMultiSelectBase({
-			data: dataSource,
+		new metal.ClayMultiSelect({
+			dataSource,
 			helpText: 'You can use a comma to enter tags',
 			label: 'Tags',
 			selectedItems,
@@ -116,8 +116,8 @@
 		}, '#autocomplete-block');
 
 		// With autocomplete and interaction
-		new metal.ClayMultiSelectBase({
-			data: dataSource,
+		new metal.ClayMultiSelect({
+			dataSource,
 			label: 'Tags',
 			selectedItems,
 			spritemap,
@@ -137,8 +137,8 @@
 		}, '#interaction-block');
 
 		// With only data remote
-		new metal.ClayMultiSelectBase({
-			data: 'https://api.pro.coinbase.com/currencies',
+		new metal.ClayMultiSelect({
+			dataSource: 'https://api.pro.coinbase.com/currencies',
 			events: {
 				itemRemoved: removeItem,
 				itemSelected: (event) => {

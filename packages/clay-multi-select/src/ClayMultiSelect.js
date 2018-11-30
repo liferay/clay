@@ -6,13 +6,13 @@ import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 
-import templates from './ClayMultiSelectBase.soy.js';
+import templates from './ClayMultiSelect.soy.js';
 
 /**
- * Metal ClayMultiSelectBase component.
+ * Metal ClayMultiSelect component.
  * @extends ClayComponent
  */
-class ClayMultiSelectBase extends ClayComponent {
+class ClayMultiSelect extends ClayComponent {
 	/**
 	 * Continues the propagation of the Button clicked event.
 	 * @param {!Event} event
@@ -282,12 +282,12 @@ class ClayMultiSelectBase extends ClayComponent {
  * @static
  * @type {!Object}
  */
-ClayMultiSelectBase.STATE = {
+ClayMultiSelect.STATE = {
 	/**
 	 * Variation name to render different deltemplates.
 	 * @default undefined
 	 * @instance
-	 * @memberof ClayMultiSelectBase
+	 * @memberof ClayMultiSelect
 	 * @type {?(string|undefined)}
 	 */
 	contentRenderer: Config.string(),
@@ -297,7 +297,7 @@ ClayMultiSelectBase.STATE = {
 	 * the URL for the data provider to request.
 	 * @instance
 	 * @default undefined
-	 * @memberof ClayMultiSelectBase
+	 * @memberof ClayMultiSelect
 	 * @type {!(string|object|array)}
 	 */
 	dataSource: Config.oneOfType([
@@ -310,7 +310,7 @@ ClayMultiSelectBase.STATE = {
 	 * CSS classes to be applied to the element.
 	 * @default undefined
 	 * @instance
-	 * @memberof ClayMultiSelectBase
+	 * @memberof ClayMultiSelect
 	 * @type {?(string|undefined)}
 	 */
 	elementClasses: Config.string(),
@@ -319,7 +319,7 @@ ClayMultiSelectBase.STATE = {
 	 * Flag to enable the filtred items with autocomplete default.
 	 * @default true
 	 * @instance
-	 * @memberof ClayMultiSelectBase
+	 * @memberof ClayMultiSelect
 	 * @type {?bool}
 	 */
 	enableAutocomplete: Config.bool().value(true),
@@ -328,7 +328,7 @@ ClayMultiSelectBase.STATE = {
 	 * Extracts from the data the item to be compared in autocomplete.
 	 * @instance
 	 * @default (elem) => elem
-	 * @memberof ClayMultiSelectBase
+	 * @memberof ClayMultiSelect
 	 * @type {?(function|undefined)}
 	 */
 	extractData: Config.func(),
@@ -337,7 +337,7 @@ ClayMultiSelectBase.STATE = {
 	 * List of filtered items for suggestion or autocomplete.
 	 * @default []
 	 * @instance
-	 * @memberof ClayMultiSelectBase
+	 * @memberof ClayMultiSelect
 	 * @type {?Array}
 	 */
 	filteredItems: Config.array(Config.object()).value([]),
@@ -346,7 +346,7 @@ ClayMultiSelectBase.STATE = {
 	 * Help text to guide the user in the interaction.
 	 * @default undefined
 	 * @instance
-	 * @memberof ClayMultiSelectBase
+	 * @memberof ClayMultiSelect
 	 * @type {!string}
 	 */
 	helpText: Config.string().required(),
@@ -355,7 +355,7 @@ ClayMultiSelectBase.STATE = {
 	 * Id to be applied to the element.
 	 * @default undefined
 	 * @instance
-	 * @memberof ClayMultiSelectBase
+	 * @memberof ClayMultiSelect
 	 * @type {?(string|undefined)}
 	 */
 	id: Config.string(),
@@ -364,7 +364,7 @@ ClayMultiSelectBase.STATE = {
 	 * Set some initial data while the first request is being made
 	 * @instance
 	 * @default undefined
-	 * @memberof ClayMultiSelectBase
+	 * @memberof ClayMultiSelect
 	 * @type {?(object|array)}
 	 */
 	initialData: Config.oneOfType([Config.object(), Config.array()]),
@@ -373,7 +373,7 @@ ClayMultiSelectBase.STATE = {
 	 * Name of the input.
 	 * @default undefind
 	 * @instance
-	 * @memberof ClayMultiSelectBase
+	 * @memberof ClayMultiSelect
 	 * @type {?(string|undefined)}
 	 */
 	inputName: Config.string(),
@@ -382,7 +382,7 @@ ClayMultiSelectBase.STATE = {
 	 * Value of the input.
 	 * @default undefined
 	 * @instance
-	 * @memberof ClayMultiSelectBase
+	 * @memberof ClayMultiSelect
 	 * @type {?(string|undefined)}
 	 */
 	inputValue: Config.string(),
@@ -391,7 +391,7 @@ ClayMultiSelectBase.STATE = {
 	 * Set ups the request options
 	 * @instance
 	 * @default undefined
-	 * @memberof ClayMultiSelectBase
+	 * @memberof ClayMultiSelect
 	 * @type {?(object|undefined)}
 	 */
 	requestOptions: Config.shapeOf({
@@ -409,7 +409,7 @@ ClayMultiSelectBase.STATE = {
 	 * Flag to define how often to refetch data (ms)
 	 * @instance
 	 * @default 0
-	 * @memberof ClayMultiSelectBase
+	 * @memberof ClayMultiSelect
 	 * @type {?(number|undefined)}
 	 */
 	requestPolling: Config.number().value(0),
@@ -418,7 +418,7 @@ ClayMultiSelectBase.STATE = {
 	 * Define how many attempts will be made when the request fails
 	 * @instance
 	 * @default 5
-	 * @memberof ClayMultiSelectBase
+	 * @memberof ClayMultiSelect
 	 * @type {?(number|undefined)}
 	 */
 	requestRetries: Config.number().value(5),
@@ -427,7 +427,7 @@ ClayMultiSelectBase.STATE = {
 	 * Set timeout of the request
 	 * @instance
 	 * @default 30000
-	 * @memberof ClayMultiSelectBase
+	 * @memberof ClayMultiSelect
 	 * @type {?(number|undefined)}
 	 */
 	requestTimeout: Config.number().value(30000),
@@ -436,7 +436,7 @@ ClayMultiSelectBase.STATE = {
 	 * Label of the input element.
 	 * @default undefined
 	 * @instance
-	 * @memberof ClayMultiSelectBase
+	 * @memberof ClayMultiSelect
 	 * @type {?(string|undefined)}
 	 */
 	label: Config.string(),
@@ -445,7 +445,7 @@ ClayMultiSelectBase.STATE = {
 	 * List of the selected Items.
 	 * @default []
 	 * @instance
-	 * @memberof ClayMultiSelectBase
+	 * @memberof ClayMultiSelect
 	 * @type {?Array<Object>}
 	 */
 	selectedItems: Config.array(Config.object()).value([]),
@@ -454,7 +454,7 @@ ClayMultiSelectBase.STATE = {
 	 * Name of the selected items input.
 	 * @default selectedItems
 	 * @instance
-	 * @memberof ClayMultiSelectBase
+	 * @memberof ClayMultiSelect
 	 * @type {?(string|undefined)}
 	 */
 	selectedItemsInputName: Config.string().value('selectedItems'),
@@ -463,15 +463,15 @@ ClayMultiSelectBase.STATE = {
 	 * The path to the SVG spritemap file containing the icons.
 	 * @default undefined
 	 * @instance
-	 * @memberof ClayMultiSelectBase
+	 * @memberof ClayMultiSelect
 	 * @type {!string}
 	 */
 	spritemap: Config.string().required(),
 };
 
-defineWebComponent('clay-multi-select-base', ClayMultiSelectBase);
+defineWebComponent('clay-multi-select', ClayMultiSelect);
 
-Soy.register(ClayMultiSelectBase, templates);
+Soy.register(ClayMultiSelect, templates);
 
-export {ClayMultiSelectBase};
-export default ClayMultiSelectBase;
+export {ClayMultiSelect};
+export default ClayMultiSelect;

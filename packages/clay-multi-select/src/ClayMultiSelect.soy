@@ -1,4 +1,4 @@
-{namespace ClayMultiSelectBase}
+{namespace ClayMultiSelect}
 
 /**
  * This renders the component's whole content.
@@ -133,7 +133,7 @@
 			{call ClayAutocomplete.render}
 				{param contentRenderer: $contentRenderer /}
 				{param dataSource: $dataSource /}
-				{param elementClasses: 'form-control-tag-group' /}
+				{param elementClasses: 'form-control form-control-tag-group' /}
 				{param enableAutocomplete: $enableAutocomplete /}
 				{param events: [
 					'dataChange': $_handleDataChange,
@@ -214,7 +214,7 @@
 			<input {$inputAttributes}>
 		{/if}
 
-		{delcall ClayMultiSelectBase.Item variant="$contentRenderer" allowemptydefault="true"}
+		{delcall ClayMultiSelect.Item variant="$contentRenderer" allowemptydefault="true"}
 			{param _handleCloseButtonClick: $_handleCloseButtonClick /}
 			{param data: $item /}
 			{param index: index($item) /}
@@ -223,7 +223,7 @@
 	{/foreach}
 {/template}
 
-{deltemplate ClayMultiSelectBase.Item}
+{deltemplate ClayMultiSelect.Item}
 	{@param data: ?}
 	{@param index: int}
 	{@param spritemap: string}
