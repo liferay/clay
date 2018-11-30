@@ -1,3 +1,4 @@
+import 'clay-autocomplete';
 import 'clay-button';
 import 'clay-label';
 import {Config} from 'metal-state';
@@ -12,16 +13,6 @@ import templates from './ClayMultiSelectBase.soy.js';
  * @extends ClayComponent
  */
 class ClayMultiSelectBase extends ClayComponent {
-	/**
-	 * Checks whether the event is from the filteredItems element
-	 * @param {!Event} event
-	 * @protected
-	 * @return {Boolean}
-	 */
-	_isDataFromFilteredItems(event) {
-		return !!event.target.getAttribute('data-dropdown-item-index');
-	}
-
 	/**
 	 * Continues the propagation of the Button clicked event.
 	 * @param {!Event} event
@@ -46,13 +37,47 @@ class ClayMultiSelectBase extends ClayComponent {
 	}
 
 	/**
+	 * Continues the propagation of the data change event
+	 * @param {!Event} event
+	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleDataChange(event) {
+		return !this.emit({
+			data: event.data,
+			name: 'dataChange',
+			originalEvent: event,
+		});
+	}
+
+	/**
 	 * Handle the click on the dropdown item and the propagation of the labelAdded event.
 	 * @param {!Event} event
 	 * @protected
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleDropdownItemClick(event) {
-		return this._handleItemSelected(event);
+		return !this.emit({
+			data: event.data,
+			name: 'itemSelected',
+			originalEvent: event,
+		});
+	}
+
+	/**
+	 * Handles changes in filteredItems and synchronizes with state.
+	 * @param {!Event} event
+	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleFilteredItemsChange(event) {
+		this.filteredItems = event.data;
+
+		return !this.emit({
+			data: event.data,
+			name: 'filteredItems',
+			originalEvent: event,
+		});
 	}
 
 	/**
@@ -62,7 +87,7 @@ class ClayMultiSelectBase extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleItemAdded(event) {
-		const label = event.target.value.toLowerCase().replace(',', '');
+		const label = event.data.value.toLowerCase().replace(',', '');
 
 		if (
 			label.trim() &&
@@ -78,7 +103,7 @@ class ClayMultiSelectBase extends ClayComponent {
 				originalEvent: event,
 			});
 		} else {
-			this.refs.input.value = label;
+			this.refs.formGroupInput.refs.input.value = label;
 		}
 	}
 
@@ -92,7 +117,7 @@ class ClayMultiSelectBase extends ClayComponent {
 	_handleItemFocus(event, direction) {
 		if (this.selectedItems.length) {
 			const {formGroupInput} = this.refs;
-			const items = formGroupInput.querySelectorAll(
+			const items = formGroupInput.element.querySelectorAll(
 				'span[id="item-tag"]'
 			);
 
@@ -103,7 +128,7 @@ class ClayMultiSelectBase extends ClayComponent {
 					: Number(index) + 1;
 
 				if (condition > items.length - 1) {
-					this.refs.input.focus();
+					this.refs.formGroupInput.refs.input.focus();
 					this._removeFocusedItem();
 					return false;
 				} else if (condition >= 0) {
@@ -149,39 +174,21 @@ class ClayMultiSelectBase extends ClayComponent {
 	}
 
 	/**
-	 * Handle the selected item in the dropdown and trigger the itemSelected event.
-	 * @param {!Event} event
-	 * @return {Boolean} If the event has been prevented or not.
-	 */
-	_handleItemSelected(event) {
-		const index = event.target.getAttribute('data-dropdown-item-index');
-		const item = this.filteredItems[Number(index)];
-
-		return !this.emit({
-			data: item,
-			name: 'itemSelected',
-			originalEvent: event,
-		});
-	}
-
-	/**
 	 * Handles input changes and propagates the queryChange event.
 	 * @param {!Event} event
 	 * @protected
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleOnInput(event) {
-		const value = event.target.value.toLowerCase();
-
 		this._removeFocusedItem();
 
-		switch (event.data) {
+		switch (event.data.char) {
 		case ',':
 			return this._handleItemAdded(event);
 		default:
 			return !this.emit({
 				data: {
-					value,
+					value: event.data.value,
 				},
 				name: 'queryChange',
 				originalEvent: event,
@@ -196,18 +203,19 @@ class ClayMultiSelectBase extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleOnKeydown(event) {
-		switch (event.key) {
+		const {value} = this.refs.formGroupInput.refs.input;
+
+		switch (event.data.key) {
 		case 'Enter':
 			event.preventDefault();
 			if (this._itemFocused) {
 				return this._handleItemRemoved(this._itemFocused);
-			} else if (this._isDataFromFilteredItems(event)) {
-				return this._handleItemSelected(event);
-			} else {
+			} else if (value) {
 				return this._handleItemAdded(event);
 			}
+			break;
 		case 'Backspace':
-			if (!this.refs.input.value) {
+			if (!value) {
 				if (!this._itemFocused) {
 					return this._handleItemFocus(event);
 				} else {
@@ -216,20 +224,14 @@ class ClayMultiSelectBase extends ClayComponent {
 			}
 			break;
 		case 'ArrowLeft':
-			if (!this.refs.input.value && this._itemFocused) {
+			if (!value && this._itemFocused) {
 				return this._handleItemFocus(event, true);
 			}
 			break;
 		case 'ArrowRight':
-			if (!this.refs.input.value && this._itemFocused) {
+			if (!value && this._itemFocused) {
 				return this._handleItemFocus(event, false);
 			}
-			break;
-		case 'ArrowUp':
-			this._setFocusItemDropdown(true);
-			break;
-		case 'ArrowDown':
-			this._setFocusItemDropdown(false);
 			break;
 		}
 	}
@@ -246,39 +248,10 @@ class ClayMultiSelectBase extends ClayComponent {
 	}
 
 	/**
-	 * Handle the interactions in the dropdown and add focus on the items.
-	 * @protected
-	 * @param {!Boolean} direction
-	 */
-	_setFocusItemDropdown(direction) {
-		if (this.filteredItems.length) {
-			const elements = this.refs.dropdown.querySelectorAll(
-				'a[data-dropdown-item-index]'
-			);
-
-			if (direction && this._dropdownItemFocused === 0) {
-				this.refs.input.focus();
-				this._dropdownItemFocused = null;
-			} else {
-				this._dropdownItemFocused =
-					this._dropdownItemFocused === null ||
-					elements.length - 1 === this._dropdownItemFocused
-						? 0
-						: direction
-							? this._dropdownItemFocused - 1
-							: this._dropdownItemFocused + 1;
-
-				elements[this._dropdownItemFocused].focus();
-			}
-		}
-	}
-
-	/**
 	 * @inheritDoc
 	 */
 	attached() {
 		this._itemFocused = null;
-		this._dropdownItemFocused = null;
 	}
 
 	/**
@@ -286,7 +259,7 @@ class ClayMultiSelectBase extends ClayComponent {
 	 * @public
 	 */
 	clearInput() {
-		this.refs.input.value = '';
+		this.refs.formGroupInput.refs.input.value = '';
 	}
 
 	/**
@@ -294,21 +267,13 @@ class ClayMultiSelectBase extends ClayComponent {
 	 */
 	disposed() {
 		this._itemFocused = null;
-		this._dropdownItemFocused = null;
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	syncFilteredItems() {
-		this._dropdownItemFocused = null;
 	}
 
 	/**
 	 * @inheritDoc
 	 */
 	syncSelectedItems() {
-		this.refs.input.focus();
+		this.refs.formGroupInput.refs.input.focus();
 	}
 }
 
@@ -328,6 +293,20 @@ ClayMultiSelectBase.STATE = {
 	contentRenderer: Config.string(),
 
 	/**
+	 * The array of data items that the data source contains or
+	 * the URL for the data provider to request.
+	 * @instance
+	 * @default undefined
+	 * @memberof ClayMultiSelectBase
+	 * @type {!(string|object|array)}
+	 */
+	dataSource: Config.oneOfType([
+		Config.string(),
+		Config.object(),
+		Config.array(),
+	]).required(),
+
+	/**
 	 * CSS classes to be applied to the element.
 	 * @default undefined
 	 * @instance
@@ -335,6 +314,24 @@ ClayMultiSelectBase.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	elementClasses: Config.string(),
+
+	/**
+	 * Flag to enable the filtred items with autocomplete default.
+	 * @default true
+	 * @instance
+	 * @memberof ClayMultiSelectBase
+	 * @type {?bool}
+	 */
+	enableAutocomplete: Config.bool().value(true),
+
+	/**
+	 * Extracts from the data the item to be compared in autocomplete.
+	 * @instance
+	 * @default (elem) => elem
+	 * @memberof ClayMultiSelectBase
+	 * @type {?(function|undefined)}
+	 */
+	extractData: Config.func(),
 
 	/**
 	 * List of filtered items for suggestion or autocomplete.
@@ -364,6 +361,15 @@ ClayMultiSelectBase.STATE = {
 	id: Config.string(),
 
 	/**
+	 * Set some initial data while the first request is being made
+	 * @instance
+	 * @default undefined
+	 * @memberof ClayMultiSelectBase
+	 * @type {?(object|array)}
+	 */
+	initialData: Config.oneOfType([Config.object(), Config.array()]),
+
+	/**
 	 * Name of the input.
 	 * @default undefind
 	 * @instance
@@ -371,6 +377,60 @@ ClayMultiSelectBase.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	inputName: Config.string(),
+
+	/**
+	 * Value of the input.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayMultiSelectBase
+	 * @type {?(string|undefined)}
+	 */
+	inputValue: Config.string(),
+
+	/**
+	 * Set ups the request options
+	 * @instance
+	 * @default undefined
+	 * @memberof ClayMultiSelectBase
+	 * @type {?(object|undefined)}
+	 */
+	requestOptions: Config.shapeOf({
+		method: Config.string(),
+		mode: Config.string(),
+		cache: Config.string(),
+		credentials: Config.string(),
+		headers: Config.object(),
+		redirect: Config.string(),
+		referrer: Config.string(),
+		body: Config.object(),
+	}),
+
+	/**
+	 * Flag to define how often to refetch data (ms)
+	 * @instance
+	 * @default 0
+	 * @memberof ClayMultiSelectBase
+	 * @type {?(number|undefined)}
+	 */
+	requestPolling: Config.number().value(0),
+
+	/**
+	 * Define how many attempts will be made when the request fails
+	 * @instance
+	 * @default 5
+	 * @memberof ClayMultiSelectBase
+	 * @type {?(number|undefined)}
+	 */
+	requestRetries: Config.number().value(5),
+
+	/**
+	 * Set timeout of the request
+	 * @instance
+	 * @default 30000
+	 * @memberof ClayMultiSelectBase
+	 * @type {?(number|undefined)}
+	 */
+	requestTimeout: Config.number().value(30000),
 
 	/**
 	 * Label of the input element.

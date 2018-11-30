@@ -4,19 +4,39 @@
  * This renders the component's whole content.
  */
 {template .render}
+	{@param dataSource: string|[]|list<?>}
 	{@param helpText: string}
 	{@param spritemap: string}
 	{@param? _handleButtonClicked: any}
 	{@param? _handleCloseButtonClick: any}
+	{@param? _handleDataChange: any}
 	{@param? _handleDropdownItemClick: any}
+	{@param? _handleFilteredItemsChange: any}
 	{@param? _handleOnInput: any}
 	{@param? _handleOnKeydown: any}
 	{@param? _removeFocusedItem: any}
 	{@param? contentRenderer: string}
 	{@param? elementClasses: string}
+	{@param? enableAutocomplete: bool}
+	{@param? extractData: ?}
 	{@param? filteredItems: list<?>}
 	{@param? id: string}
+	{@param? initialData: []|list<?>}
 	{@param? inputName: string}
+	{@param? inputValue: string}
+	{@param? requestOptions: [
+		method: string,
+		mode: string,
+		cache: string,
+		credentials: string,
+		headers: [],
+		redirect: string,
+		referrer: string,
+		body: []
+	]}
+	{@param? requestPolling: number}
+	{@param? requestRetries: number}
+	{@param? requestTimeout: number}
 	{@param? label: string}
 	{@param? selectedItems: list<?>}
 	{@param? selectedItemsInputName: string}
@@ -47,14 +67,25 @@
 		{call .content}
 			{param _handleButtonClicked: $_handleButtonClicked /}
 			{param _handleCloseButtonClick: $_handleCloseButtonClick /}
+			{param _handleDataChange: $_handleDataChange /}
 			{param _handleDropdownItemClick: $_handleDropdownItemClick /}
+			{param _handleFilteredItemsChange: $_handleFilteredItemsChange /}
 			{param _handleOnInput: $_handleOnInput /}
 			{param _handleOnKeydown: $_handleOnKeydown /}
 			{param _removeFocusedItem: $_removeFocusedItem /}
 			{param contentRenderer: $contentRenderer /}
+			{param dataSource: $dataSource /}
+			{param enableAutocomplete: $enableAutocomplete /}
+			{param extractData: $extractData /}
 			{param filteredItems: $filteredItems /}
 			{param helpText: $helpText /}
+			{param initialData: $initialData /}
 			{param inputName: $inputName /}
+			{param inputValue: $inputValue /}
+			{param requestOptions: $requestOptions /}
+			{param requestPolling: $requestPolling /}
+			{param requestRetries: $requestRetries /}
+			{param requestTimeout: $requestTimeout /}
 			{param selectedItems: $selectedItems /}
 			{param selectedItemsInputName: $selectedItemsInputName /}
 			{param spritemap: $spritemap /}
@@ -63,72 +94,81 @@
 {/template}
 
 {template .content}
+	{@param dataSource: string|[]|list<?>}
 	{@param helpText: string}
 	{@param spritemap: string}
 	{@param? _handleButtonClicked: any}
 	{@param? _handleCloseButtonClick: any}
+	{@param? _handleDataChange: any}
 	{@param? _handleDropdownItemClick: any}
+	{@param? _handleFilteredItemsChange: any}
 	{@param? _handleOnInput: any}
 	{@param? _handleOnKeydown: any}
 	{@param? _removeFocusedItem: any}
 	{@param? contentRenderer: string}
+	{@param? enableAutocomplete: bool}
+	{@param? extractData: ?}
 	{@param? filteredItems: list<?>}
+	{@param? initialData: []|list<?>}
 	{@param? inputName: string}
+	{@param? inputValue: string}
+	{@param? requestOptions: [
+		method: string,
+		mode: string,
+		cache: string,
+		credentials: string,
+		headers: [],
+		redirect: string,
+		referrer: string,
+		body: []
+	]}
+	{@param? requestPolling: number}
+	{@param? requestRetries: number}
+	{@param? requestTimeout: number}
 	{@param? selectedItems: list<?>}
 	{@param? selectedItemsInputName: string}
 
-	{let $inputAttributes kind="attributes"}
-		class="form-control-inset"
-		{if $inputName}
-			id="{$inputName}"
-			name="{$inputName}"
-		{/if}
-
-		onBlur="{$_removeFocusedItem}"
-		onFocus="{$_removeFocusedItem}"
-		onInput="{$_handleOnInput}"
-		onKeydown="{$_handleOnKeydown}"
-		ref="input"
-		type="text"
-		value=""
-	{/let}
-
 	<div class="input-group input-group-stacked-sm-down">
 		<div class="input-group-item">
-			<div data-keydown="{$_handleOnKeydown}" ref="formGroupInput" class="form-control dropdown-full form-control-tag-group">
-				{if $selectedItems}
-					{call .items}
-						{param _handleCloseButtonClick: $_handleCloseButtonClick /}
-						{param contentRenderer: $contentRenderer /}
-						{param selectedItems: $selectedItems /}
-						{param selectedItemsInputName: $selectedItemsInputName /}
-						{param spritemap: $spritemap /}
-					{/call}
-				{/if}
-
-				<input {$inputAttributes} />
-
-				{let $isVisible: $filteredItems and length($filteredItems) > 0 ? true : false /}
-
-				{let $classes kind="text"}
-					dropdown-menu
-					{if $isVisible}
-						{sp}show
+			{call ClayAutocomplete.render}
+				{param contentRenderer: $contentRenderer /}
+				{param dataSource: $dataSource /}
+				{param elementClasses: 'form-control-tag-group' /}
+				{param enableAutocomplete: $enableAutocomplete /}
+				{param events: [
+					'dataChange': $_handleDataChange,
+					'filteredItems': $_handleFilteredItemsChange,
+					'inputOnBlur': $_removeFocusedItem,
+					'inputOnFocus': $_removeFocusedItem,
+					'inputOnKeydown': $_handleOnKeydown,
+					'itemSelected': $_handleDropdownItemClick,
+					'queryChange': $_handleOnInput
+				] /}
+				{param extractData: $extractData /}
+				{param filteredItems: $filteredItems /}
+				{param initialData: $initialData /}
+				{param inputElementClasses: 'form-control-inset' /}
+				{param inputName: $inputName /}
+				{param inputValue: $inputValue /}
+				{param ref: 'formGroupInput' /}
+				{param requestOptions: $requestOptions /}
+				{param requestPolling: $requestPolling /}
+				{param requestRetries: $requestRetries /}
+				{param requestTimeout: $requestTimeout /}
+				{param unstable_content kind="html"}
+					{if $selectedItems}
+						{call .items}
+							{param _handleCloseButtonClick: $_handleCloseButtonClick /}
+							{param contentRenderer: $contentRenderer /}
+							{param selectedItems: $selectedItems /}
+							{param selectedItemsInputName: $selectedItemsInputName /}
+							{param spritemap: $spritemap /}
+						{/call}
 					{/if}
-				{/let}
+				{/param}
+			{/call}
 
-				<ul onkeydown="{$_handleOnKeydown}" class="{$classes}" ref="dropdown">
-					{if $filteredItems}
-						{foreach $item in $filteredItems}
-							{delcall ClayMultiSelectBase.ItemDropdown variant="$contentRenderer" allowemptydefault="true"}
-								{param _handleDropdownItemClick: $_handleDropdownItemClick /}
-								{param data: $item /}
-								{param index: index($item) /}
-							{/delcall}
-						{/foreach}
-					{/if}
-				</ul>
-			</div>
+			{let $isVisible: $filteredItems and length($filteredItems) > 0 ? true : false /}
 
 			{if not $isVisible}
 				<div class="form-feedback-group">
@@ -197,24 +237,4 @@
 		{param label: $data.label /}
 		{param spritemap: $spritemap /}
 	{/call}
-{/deltemplate}
-
-{deltemplate ClayMultiSelectBase.ItemDropdown}
-	{@param data: ?}
-	{@param index: number}
-	{@param? _handleDropdownItemClick: any}
-
-	<li>
-		<a data-onclick="{$_handleDropdownItemClick}" data-dropdown-item-index="{$index}" id="item" class="dropdown-item" href="javascript:;">
-			{if $data.matches and length($data.matches) > 0}
-				{foreach $char in $data.matches}
-					{if $char.match}
-						<strong>{$char.value}</strong>
-					{else}
-						{$char.value}
-					{/if}
-				{/foreach}
-			{/if}
-		</a>
-	</li>
 {/deltemplate}
