@@ -132,15 +132,14 @@ class ClayMultiSelect extends ClayComponent {
 					this._removeFocusedItem();
 					return false;
 				} else if (condition >= 0) {
-					this._itemFocused.classList.remove('label-focus');
 					this._itemFocused = items[condition];
-					this._itemFocused.classList.add('label-focus');
+					this._itemFocused.focus();
 				} else {
 					return false;
 				}
 			} else {
 				this._itemFocused = items[items.length - 1];
-				this._itemFocused.classList.toggle('label-focus');
+				this._itemFocused.focus();
 			}
 
 			return !this.emit({
@@ -242,7 +241,6 @@ class ClayMultiSelect extends ClayComponent {
 	 */
 	_removeFocusedItem() {
 		if (this._itemFocused) {
-			this._itemFocused.classList.remove('label-focus');
 			this._itemFocused = null;
 		}
 	}
