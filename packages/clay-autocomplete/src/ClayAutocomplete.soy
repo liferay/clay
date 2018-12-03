@@ -43,6 +43,8 @@
 			{/if}
 		"
 
+		data-onkeydown="{$_handleOnKeydown}"
+
 		{if $id}
 			id="{$id}"
 		{/if}
@@ -64,7 +66,6 @@
 		{call .dropdown}
 			{param _handleDataChange: $_handleDataChange /}
 			{param _handleDropdownItemClick: $_handleDropdownItemClick /}
-			{param _handleOnKeydown: $_handleOnKeydown /}
 			{param contentRenderer: $contentRenderer /}
 			{param dataSource: $dataSource /}
 			{param filteredItems: $filteredItems /}
@@ -127,7 +128,6 @@
 	{@param dataSource: string|[]|list<?>}
 	{@param? _handleDataChange: any}
 	{@param? _handleDropdownItemClick: any}
-	{@param? _handleOnKeydown: any}
 	{@param? contentRenderer: string}
 	{@param? filteredItems: list<?>}
 	{@param? initialData: []|list<?>}
@@ -156,7 +156,7 @@
 
 	{call ClayDataProvider.render}
 		{param content kind="html"}
-			<ul onkeydown="{$_handleOnKeydown}" class="{$classes}" ref="dropdown">
+			<ul class="{$classes}" ref="dropdown">
 				{if $filteredItems}
 					{foreach $item in $filteredItems}
 						{delcall ClayAutocomplete.Item variant="$contentRenderer" allowemptydefault="true"}
