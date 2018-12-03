@@ -22,7 +22,7 @@ A text input variation used in fields that can be translated into multiple langu
 			<div class="input-group-item input-group-item-shrink">
 				<button aria-expanded="false" aria-haspopup="true" class="btn btn-monospaced btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 					<span class="inline-item">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+						<svg class="lexicon-icon lexicon-icon-es-es" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#es-es"></use>
 						</svg>
 					</span>
@@ -34,7 +34,7 @@ A text input variation used in fields that can be translated into multiple langu
 							<span class="autofit-col autofit-col-expand">
 								<span class="autofit-section">
 									<span class="inline-item inline-item-before">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
+										<svg class="lexicon-icon lexicon-icon-en-us" focusable="false" role="presentation">
 											<use href="/images/icons/icons.svg#en-us"></use>
 										</svg>
 									</span>
@@ -53,7 +53,7 @@ A text input variation used in fields that can be translated into multiple langu
 							<span class="autofit-col autofit-col-expand">
 								<span class="autofit-section">
 									<span class="inline-item inline-item-before">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
+										<svg class="lexicon-icon lexicon-icon-en-gb" focusable="false" role="presentation">
 											<use href="/images/icons/icons.svg#en-gb"></use>
 										</svg>
 									</span>
@@ -72,7 +72,7 @@ A text input variation used in fields that can be translated into multiple langu
 							<span class="autofit-col autofit-col-expand">
 								<span class="autofit-section">
 									<span class="inline-item inline-item-before">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+										<svg class="lexicon-icon lexicon-icon-es-es" focusable="false" role="presentation">
 											<use href="/images/icons/icons.svg#es-es"></use>
 										</svg>
 									</span>
@@ -91,7 +91,7 @@ A text input variation used in fields that can be translated into multiple langu
 							<span class="autofit-col autofit-col-expand">
 								<span class="autofit-section">
 									<span class="inline-item inline-item-before">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
+										<svg class="lexicon-icon lexicon-icon-fr-fr" focusable="false" role="presentation">
 											<use href="/images/icons/icons.svg#fr-fr"></use>
 										</svg>
 									</span>
@@ -122,7 +122,7 @@ A text input variation used in fields that can be translated into multiple langu
 		<div class="input-group-item input-group-item-shrink">
 			<button aria-expanded="false" aria-haspopup="true" class="btn btn-monospaced btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+					<svg class="lexicon-icon lexicon-icon-es-es" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#es-es"></use>
 					</svg>
 				</span>
@@ -134,7 +134,7 @@ A text input variation used in fields that can be translated into multiple langu
 						<span class="autofit-col autofit-col-expand">
 							<span class="autofit-section">
 								<span class="inline-item inline-item-before">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
+									<svg class="lexicon-icon lexicon-icon-en-us" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#en-us"></use>
 									</svg>
 								</span>
@@ -153,7 +153,7 @@ A text input variation used in fields that can be translated into multiple langu
 						<span class="autofit-col autofit-col-expand">
 							<span class="autofit-section">
 								<span class="inline-item inline-item-before">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
+									<svg class="lexicon-icon lexicon-icon-en-gb" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#en-gb"></use>
 									</svg>
 								</span>
@@ -172,7 +172,7 @@ A text input variation used in fields that can be translated into multiple langu
 						<span class="autofit-col autofit-col-expand">
 							<span class="autofit-section">
 								<span class="inline-item inline-item-before">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+									<svg class="lexicon-icon lexicon-icon-es-es" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#es-es"></use>
 									</svg>
 								</span>
@@ -191,7 +191,7 @@ A text input variation used in fields that can be translated into multiple langu
 						<span class="autofit-col autofit-col-expand">
 							<span class="autofit-section">
 								<span class="inline-item inline-item-before">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
+									<svg class="lexicon-icon lexicon-icon-fr-fr" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#fr-fr"></use>
 									</svg>
 								</span>
@@ -228,7 +228,7 @@ A text input variation used in fields that can be translated into multiple langu
 			<div class="input-group-item input-group-item-shrink">
 				<button aria-expanded="false" aria-haspopup="true" class="btn btn-monospaced btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 					<span class="inline-item">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+						<svg class="lexicon-icon lexicon-icon-es-es" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#es-es"></use>
 						</svg>
 					</span>
@@ -240,7 +240,7 @@ A text input variation used in fields that can be translated into multiple langu
 							<span class="autofit-col autofit-col-expand">
 								<span class="autofit-section">
 									<span class="inline-item inline-item-before">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
+										<svg class="lexicon-icon lexicon-icon-en-us" focusable="false" role="presentation">
 											<use href="/images/icons/icons.svg#en-us"></use>
 										</svg>
 									</span>
@@ -259,7 +259,7 @@ A text input variation used in fields that can be translated into multiple langu
 							<span class="autofit-col autofit-col-expand">
 								<span class="autofit-section">
 									<span class="inline-item inline-item-before">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
+										<svg class="lexicon-icon lexicon-icon-en-gb" focusable="false" role="presentation">
 											<use href="/images/icons/icons.svg#en-gb"></use>
 										</svg>
 									</span>
@@ -278,7 +278,7 @@ A text input variation used in fields that can be translated into multiple langu
 							<span class="autofit-col autofit-col-expand">
 								<span class="autofit-section">
 									<span class="inline-item inline-item-before">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+										<svg class="lexicon-icon lexicon-icon-es-es" focusable="false" role="presentation">
 											<use href="/images/icons/icons.svg#es-es"></use>
 										</svg>
 									</span>
@@ -297,7 +297,7 @@ A text input variation used in fields that can be translated into multiple langu
 							<span class="autofit-col autofit-col-expand">
 								<span class="autofit-section">
 									<span class="inline-item inline-item-before">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
+										<svg class="lexicon-icon lexicon-icon-fr-fr" focusable="false" role="presentation">
 											<use href="/images/icons/icons.svg#fr-fr"></use>
 										</svg>
 									</span>
@@ -332,7 +332,7 @@ A text input variation used in fields that can be translated into multiple langu
 		<div class="input-group-item input-group-item-shrink">
 			<button aria-expanded="false" aria-haspopup="true" class="btn btn-monospaced btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
 				<span class="inline-item">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+					<svg class="lexicon-icon lexicon-icon-es-es" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#es-es"></use>
 					</svg>
 				</span>
@@ -344,7 +344,7 @@ A text input variation used in fields that can be translated into multiple langu
 						<span class="autofit-col autofit-col-expand">
 							<span class="autofit-section">
 								<span class="inline-item inline-item-before">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-us">
+									<svg class="lexicon-icon lexicon-icon-en-us" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#en-us"></use>
 									</svg>
 								</span>
@@ -363,7 +363,7 @@ A text input variation used in fields that can be translated into multiple langu
 						<span class="autofit-col autofit-col-expand">
 							<span class="autofit-section">
 								<span class="inline-item inline-item-before">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-en-gb">
+									<svg class="lexicon-icon lexicon-icon-en-gb" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#en-gb"></use>
 									</svg>
 								</span>
@@ -382,7 +382,7 @@ A text input variation used in fields that can be translated into multiple langu
 						<span class="autofit-col autofit-col-expand">
 							<span class="autofit-section">
 								<span class="inline-item inline-item-before">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-es-es">
+									<svg class="lexicon-icon lexicon-icon-es-es" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#es-es"></use>
 									</svg>
 								</span>
@@ -401,7 +401,7 @@ A text input variation used in fields that can be translated into multiple langu
 						<span class="autofit-col autofit-col-expand">
 							<span class="autofit-section">
 								<span class="inline-item inline-item-before">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-fr-fr">
+									<svg class="lexicon-icon lexicon-icon-fr-fr" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#fr-fr"></use>
 									</svg>
 								</span>

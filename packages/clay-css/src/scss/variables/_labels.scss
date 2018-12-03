@@ -1,5 +1,7 @@
 $label-color: null !default;
-$label-link-hover-color: #FFF !default;
+
+$label-link-color: inherit !default;
+$label-link-hover-color: inherit !default;
 
 $label-font-size: 75% !default;
 $label-font-weight: $font-weight-bold !default;
@@ -15,9 +17,13 @@ $label-lexicon-icon-height: 0.875em !default;
 $label-lexicon-icon-margin-top: 0 !default;
 $label-lexicon-icon-width: 0.875em !default;
 
+$label-sticker-border-radius: 100px !default;
+$label-sticker-size: 0.875em !default;
+
 $label-dismissible-text-transform: null !default;
 
 $label-item-spacer-x: 0.5em !default;
+$label-item-spacer-y: null !default;
 
 $label-anchor-text-decoration: none !default;
 $label-anchor-hover-text-decoration: null !default;
@@ -59,158 +65,310 @@ $label-lg: map-merge((
 
 // Label Variants
 
+// $label-primary-color is deprecated as of v2.4.1
 $label-primary-color: $primary !default;
+// $label-primary-hover-color is deprecated as of v2.4.1
 $label-primary-hover-color: darken($label-primary-color, 10%) !default;
+// $label-primary-bg is deprecated as of v2.4.1
 $label-primary-bg: #FFF !default;
+// $label-primary-hover-bg is deprecated as of v2.4.1
 $label-primary-hover-bg: null !default;
+// $label-primary-border-color is deprecated as of v2.4.1
 $label-primary-border-color: $label-primary-color !default;
+// $label-primary-hover-border-color is deprecated as of v2.4.1
 $label-primary-hover-border-color: $label-primary-hover-color !default;
-$label-primary-link-color: $label-primary-color !default;
+// $label-primary-link-color is deprecated as of v2.4.1
+$label-primary-link-color: null !default;
+// $label-primary-link-hover-color is deprecated as of v2.4.1
 $label-primary-link-hover-color: $label-primary-hover-color !default;
 
+$label-primary-close: () !default;
+$label-primary-close: map-merge((
+	hover-color: $label-primary-hover-color,
+	focus-color: $label-primary-hover-color,
+), $label-primary-close);
+
+$label-primary: () !default;
+$label-primary: map-merge((
+	bg: $label-primary-bg,
+	border-color: $label-primary-border-color,
+	color: $label-primary-color,
+	hover-bg: $label-primary-hover-bg,
+	hover-border-color: $label-primary-hover-border-color,
+	hover-color: $label-primary-hover-color,
+	focus-color: $label-primary-hover-color,
+	link-color: $label-primary-link-color,
+	link-hover-color: $label-primary-link-hover-color,
+	close: $label-primary-close,
+), $label-primary);
+
+// $label-secondary-color is deprecated as of v2.4.1
 $label-secondary-color: $secondary !default;
+// $label-secondary-hover-color is deprecated as of v2.4.1
 $label-secondary-hover-color: darken($label-secondary-color, 10%) !default;
+// $label-secondary-bg is deprecated as of v2.4.1
 $label-secondary-bg: #FFF !default;
+// $label-secondary-hover-bg is deprecated as of v2.4.1
 $label-secondary-hover-bg: null !default;
+// $label-secondary-border-color is deprecated as of v2.4.1
 $label-secondary-border-color: $label-secondary-color !default;
+// $label-secondary-hover-border-color is deprecated as of v2.4.1
 $label-secondary-hover-border-color: $label-secondary-hover-color !default;
-$label-secondary-link-color: $label-secondary-color !default;
+// $label-secondary-link-color is deprecated as of v2.4.1
+$label-secondary-link-color: null !default;
+// $label-secondary-link-hover-color is deprecated as of v2.4.1
 $label-secondary-link-hover-color: $label-secondary-hover-color !default;
 
+$label-secondary-close: () !default;
+$label-secondary-close: map-merge((
+	hover-color: $label-secondary-hover-color,
+	focus-color: $label-secondary-hover-color,
+), $label-secondary-close);
+
+$label-secondary: () !default;
+$label-secondary: map-merge((
+	bg: $label-secondary-bg,
+	border-color: $label-secondary-border-color,
+	color: $label-secondary-color,
+	hover-bg: $label-secondary-hover-bg,
+	hover-border-color: $label-secondary-hover-border-color,
+	hover-color: $label-secondary-hover-color,
+	focus-color: $label-secondary-hover-color,
+	link-color: $label-secondary-link-color,
+	link-hover-color: $label-secondary-link-hover-color,
+	close: $label-secondary-close,
+), $label-secondary);
+
+// $label-success-color is deprecated as of v2.4.1
 $label-success-color: $success !default;
+// $label-success-hover-color is deprecated as of v2.4.1
 $label-success-hover-color: darken($label-success-color, 10%) !default;
+// $label-success-bg is deprecated as of v2.4.1
 $label-success-bg: #FFF !default;
+// $label-success-hover-bg is deprecated as of v2.4.1
 $label-success-hover-bg: null !default;
+// $label-success-border-color is deprecated as of v2.4.1
 $label-success-border-color: $label-success-color !default;
+// $label-success-hover-border-color is deprecated as of v2.4.1
 $label-success-hover-border-color: $label-success-hover-color !default;
-$label-success-link-color: $label-success-color !default;
+// $label-success-link-color is deprecated as of v2.4.1
+$label-success-link-color: null !default;
+// $label-success-link-hover-color is deprecated as of v2.4.1
 $label-success-link-hover-color: $label-success-hover-color !default;
 
+$label-success-close: () !default;
+$label-success-close: map-merge((
+	hover-color: $label-success-hover-color,
+	focus-color: $label-success-hover-color,
+), $label-success-close);
+
+$label-success: () !default;
+$label-success: map-merge((
+	bg: $label-primary-bg,
+	border-color: $label-success-border-color,
+	color: $label-success-color,
+	hover-bg: $label-success-hover-bg,
+	hover-border-color: $label-success-hover-border-color,
+	hover-color: $label-success-hover-color,
+	focus-color: $label-success-hover-color,
+	link-color: $label-success-link-color,
+	link-hover-color: $label-success-link-hover-color,
+	close: $label-success-close,
+), $label-success);
+
+// $label-info-color is deprecated as of v2.4.1
 $label-info-color: $info !default;
+// $label-info-hover-color is deprecated as of v2.4.1
 $label-info-hover-color: darken($label-info-color, 10%) !default;
+// $label-info-bg is deprecated as of v2.4.1
 $label-info-bg: #FFF !default;
+// $label-info-hover-bg is deprecated as of v2.4.1
 $label-info-hover-bg: null !default;
+// $label-info-border-color is deprecated as of v2.4.1
 $label-info-border-color: $label-info-color !default;
+// $label-info-hover-border-color is deprecated as of v2.4.1
 $label-info-hover-border-color: $label-info-hover-color !default;
-$label-info-link-color: $label-info-color !default;
+// $label-info-link-color is deprecated as of v2.4.1
+$label-info-link-color: null !default;
+// $label-info-link-hover-color is deprecated as of v2.4.1
 $label-info-link-hover-color: $label-info-hover-color !default;
 
+$label-info-close: () !default;
+$label-info-close: map-merge((
+	hover-color: $label-info-hover-color,
+	focus-color: $label-info-hover-color,
+), $label-info-close);
+
+$label-info: () !default;
+$label-info: map-merge((
+	bg: $label-info-bg,
+	border-color: $label-info-border-color,
+	color: $label-info-color,
+	hover-bg: $label-info-hover-bg,
+	hover-border-color: $label-info-hover-border-color,
+	hover-color: $label-info-hover-color,
+	focus-color: $label-info-hover-color,
+	link-color: $label-info-link-color,
+	link-hover-color: $label-info-link-hover-color,
+	close: $label-info-close,
+), $label-info);
+
+// $label-warning-color is deprecated as of v2.4.1
 $label-warning-color: $warning !default;
+// $label-warning-hover-color is deprecated as of v2.4.1
 $label-warning-hover-color: darken($label-warning-color, 10%) !default;
+// $label-warning-bg is deprecated as of v2.4.1
 $label-warning-bg: #FFF !default;
+// $label-warning-hover-bg is deprecated as of v2.4.1
 $label-warning-hover-bg: null !default;
+// $label-warning-border-color is deprecated as of v2.4.1
 $label-warning-border-color: $label-warning-color !default;
+// $label-warning-hover-border-color is deprecated as of v2.4.1
 $label-warning-hover-border-color: $label-warning-hover-color !default;
-$label-warning-link-color: $label-warning-color !default;
+// $label-warning-link-color is deprecated as of v2.4.1
+$label-warning-link-color: null !default;
+// $label-warning-link-hover-color is deprecated as of v2.4.1
 $label-warning-link-hover-color: $label-warning-hover-color !default;
 
+$label-warning-close: () !default;
+$label-warning-close: map-merge((
+	hover-color: $label-warning-hover-color,
+	focus-color: $label-warning-hover-color,
+), $label-warning-close);
+
+$label-warning: () !default;
+$label-warning: map-merge((
+	bg: $label-primary-bg,
+	border-color: $label-warning-border-color,
+	color: $label-warning-color,
+	hover-bg: $label-warning-hover-bg,
+	hover-border-color: $label-warning-hover-border-color,
+	hover-color: $label-warning-hover-color,
+	focus-color: $label-warning-hover-color,
+	link-color: $label-warning-link-color,
+	link-hover-color: $label-warning-link-hover-color,
+	close: $label-warning-close,
+), $label-warning);
+
+// $label-danger-color is deprecated as of v2.4.1
 $label-danger-color: $danger !default;
+// $label-danger-hover-color is deprecated as of v2.4.1
 $label-danger-hover-color: darken($label-danger-color, 10%) !default;
+// $label-danger-bg is deprecated as of v2.4.1
 $label-danger-bg: #FFF !default;
+// $label-danger-hover-bg is deprecated as of v2.4.1
 $label-danger-hover-bg: null !default;
+// $label-danger-border-color is deprecated as of v2.4.1
 $label-danger-border-color: $label-danger-color !default;
+// $label-danger-hover-border-color is deprecated as of v2.4.1
 $label-danger-hover-border-color: $label-danger-hover-color !default;
-$label-danger-link-color: $label-danger-color !default;
+// $label-danger-link-color is deprecated as of v2.4.1
+$label-danger-link-color: null !default;
+// $label-danger-link-hover-color is deprecated as of v2.4.1
 $label-danger-link-hover-color: $label-danger-hover-color !default;
 
+$label-danger-close: () !default;
+$label-danger-close: map-merge((
+	hover-color: $label-danger-hover-color,
+	focus-color: $label-danger-hover-color,
+), $label-danger-close);
+
+$label-danger: () !default;
+$label-danger: map-merge((
+	bg: $label-danger-bg,
+	border-color: $label-danger-border-color,
+	color: $label-danger-color,
+	hover-bg: $label-danger-hover-bg,
+	hover-border-color: $label-danger-hover-border-color,
+	hover-color: $label-danger-hover-color,
+	focus-color: $label-danger-hover-color,
+	link-color: $label-danger-link-color,
+	link-hover-color: $label-danger-link-hover-color,
+	close: $label-danger-close,
+), $label-danger);
+
+// $label-light-color is deprecated as of v2.4.1
 $label-light-color: $light !default;
+// $label-light-hover-color is deprecated as of v2.4.1
 $label-light-hover-color: darken($label-light-color, 10%) !default;
-$label-light-bg: null !default;
+// $label-light-bg is deprecated as of v2.4.1
+$label-light-bg: $dark !default;
+// $label-light-hover-bg is deprecated as of v2.4.1
 $label-light-hover-bg: null !default;
+// $label-light-border-color is deprecated as of v2.4.1
 $label-light-border-color: $label-light-color !default;
+// $label-light-hover-border-color is deprecated as of v2.4.1
 $label-light-hover-border-color: $label-light-hover-color !default;
-$label-light-link-color: $label-light-color !default;
+// $label-light-link-color is deprecated as of v2.4.1
+$label-light-link-color: null !default;
+// $label-light-link-hover-color is deprecated as of v2.4.1
 $label-light-link-hover-color: $label-light-hover-color !default;
 
+$label-light-close: () !default;
+$label-light-close: map-merge((
+	hover-color: $label-light-hover-color,
+	focus-color: $label-light-hover-color,
+), $label-light-close);
+
+$label-light: () !default;
+$label-light: map-merge((
+	bg: $label-light-bg,
+	border-color: $label-light-border-color,
+	color: $label-light-color,
+	hover-bg: $label-light-hover-bg,
+	hover-border-color: $label-light-hover-border-color,
+	hover-color: $label-light-hover-color,
+	focus-color: $label-light-hover-color,
+	link-color: $label-light-link-color,
+	link-hover-color: $label-light-link-hover-color,
+	close: $label-light-close,
+), $label-light);
+
+// $label-dark-color is deprecated as of v2.4.1
 $label-dark-color: $dark !default;
+// $label-dark-hover-color is deprecated as of v2.4.1
 $label-dark-hover-color: darken($label-dark-color, 10%) !default;
+// $label-dark-bg is deprecated as of v2.4.1
 $label-dark-bg: #FFF !default;
+// $label-dark-hover-bg is deprecated as of v2.4.1
 $label-dark-hover-bg: null !default;
+// $label-dark-border-color is deprecated as of v2.4.1
 $label-dark-border-color: $label-dark-color !default;
+// $label-dark-hover-border-color is deprecated as of v2.4.1
 $label-dark-hover-border-color: $label-dark-hover-color !default;
-$label-dark-link-color: $label-dark-color !default;
+// $label-dark-link-color is deprecated as of v2.4.1
+$label-dark-link-color: null !default;
+// $label-dark-link-hover-color is deprecated as of v2.4.1
 $label-dark-link-hover-color: $label-dark-hover-color !default;
+
+$label-dark-close: () !default;
+$label-dark-close: map-merge((
+	hover-color: $label-dark-hover-color,
+	focus-color: $label-dark-hover-color,
+), $label-dark-close);
+
+$label-dark: () !default;
+$label-dark: map-merge((
+	bg: $label-dark-bg,
+	border-color: $label-dark-border-color,
+	color: $label-dark-color,
+	hover-bg: $label-dark-hover-bg,
+	hover-border-color: $label-dark-hover-border-color,
+	hover-color: $label-dark-hover-color,
+	focus-color: $label-dark-hover-color,
+	link-color: $label-dark-link-color,
+	link-hover-color: $label-dark-link-hover-color,
+	close: $label-dark-close,
+), $label-dark);
 
 $label-palette: () !default;
 $label-palette: map-merge((
-	primary: (
-		bg: $label-primary-bg,
-		hover-bg: $label-primary-hover-bg,
-		border-color: $label-primary-border-color,
-		hover-border-color: $label-primary-hover-border-color,
-		color: $label-primary-color,
-		hover-color: $label-primary-hover-color,
-		link-color: $label-primary-link-color,
-		link-hover-color: $label-primary-link-hover-color
-	),
-	secondary: (
-		bg: $label-secondary-bg,
-		hover-bg: $label-secondary-hover-bg,
-		border-color: $label-secondary-border-color,
-		hover-border-color: $label-secondary-hover-border-color,
-		color: $label-secondary-color,
-		hover-color: $label-secondary-hover-color,
-		link-color: $label-secondary-link-color,
-		link-hover-color: $label-secondary-link-hover-color
-	),
-	success: (
-		bg: $label-success-bg,
-		hover-bg: $label-success-hover-bg,
-		border-color: $label-success-border-color,
-		hover-border-color: $label-success-hover-border-color,
-		color: $label-success-color,
-		hover-color: $label-success-hover-color,
-		link-color: $label-success-link-color,
-		link-hover-color: $label-success-link-hover-color
-	),
-	info: (
-		bg: $label-info-bg,
-		hover-bg: $label-info-hover-bg,
-		border-color: $label-info-border-color,
-		hover-border-color: $label-info-hover-border-color,
-		color: $label-info-color,
-		hover-color: $label-info-hover-color,
-		link-color: $label-info-link-color,
-		link-hover-color: $label-info-link-hover-color
-	),
-	warning: (
-		bg: $label-warning-bg,
-		hover-bg: $label-warning-hover-bg,
-		border-color: $label-warning-border-color,
-		hover-border-color: $label-warning-hover-border-color,
-		color: $label-warning-color,
-		hover-color: $label-warning-hover-color,
-		link-color: $label-warning-link-color,
-		link-hover-color: $label-warning-link-hover-color
-	),
-	danger: (
-		bg: $label-danger-bg,
-		hover-bg: $label-danger-hover-bg,
-		border-color: $label-danger-border-color,
-		hover-border-color: $label-danger-hover-border-color,
-		color: $label-danger-color,
-		hover-color: $label-danger-hover-color,
-		link-color: $label-danger-link-color,
-		link-hover-color: $label-danger-link-hover-color
-	),
-	dark: (
-		bg: $label-dark-bg,
-		hover-bg: $label-dark-hover-bg,
-		border-color: $label-dark-border-color,
-		hover-border-color: $label-dark-hover-border-color,
-		color: $label-dark-color,
-		hover-color: $label-dark-hover-color,
-		link-color: $label-dark-link-color,
-		link-hover-color: $label-dark-link-hover-color
-	),
-	light: (
-		bg: $label-light-bg,
-		hover-bg: $label-light-hover-bg,
-		border-color: $label-light-border-color,
-		hover-border-color: $label-light-hover-border-color,
-		color: $label-light-color,
-		hover-color: $label-light-hover-color,
-		link-color: $label-light-link-color,
-		link-hover-color: $label-light-link-hover-color
-	)
+	primary: $label-primary,
+	secondary: $label-secondary,
+	success: $label-success,
+	info: $label-info,
+	warning: $label-warning,
+	danger: $label-danger,
+	dark: $label-dark,
+	light: $label-light,
 ), $label-palette);

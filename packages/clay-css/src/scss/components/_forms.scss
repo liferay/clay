@@ -99,6 +99,10 @@ label {
 		}
 	}
 
+	&.focus {
+		@include clay-form-control-focus();
+	}
+
 	&[type="range"] {
 		background-color: transparent;
 		border-color: transparent;

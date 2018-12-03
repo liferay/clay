@@ -11,9 +11,17 @@
 	$padding-y: map-get($map, padding-y);
 	$text-transform: map-get($map, text-transform);
 
+	$item-spacer-x: map-get($map, item-spacer-x);
+	$item-spacer-y: map-get($map, item-spacer-y);
+
 	$lexicon-icon-height: setter(map-get($map, lexicon-icon-height), map-get($map, lexicon-icon-width));
 	$lexicon-icon-margin-top: map-get($map, lexicon-icon-margin-top);
 	$lexicon-icon-width: map-get($map, lexicon-icon-width);
+
+	$sticker-border-radius: map-get($map, sticker-border-radius);
+	$sticker-size: map-get($map, sticker-size);
+
+	$close: setter(map-get($map, close), ());
 
 	border-width: $border-width;
 	font-size: $font-size;
@@ -30,6 +38,8 @@
 	padding-top: $padding-y;
 	text-transform: $text-transform;
 
+	// Inline Item in Labels are deprecated in v2.0.0-rc.11 use .label-item
+	// pattern instead
 	.inline-item {
 		a,
 		.btn-unstyled,
@@ -42,6 +52,40 @@
 			margin-top: $lexicon-icon-margin-top;
 			width: $lexicon-icon-width;
 		}
+	}
+
+	.label-item {
+		margin-bottom: $item-spacer-y;
+		margin-top: $item-spacer-y;
+
+		.lexicon-icon {
+			height: $lexicon-icon-height;
+			margin-top: $lexicon-icon-margin-top;
+			width: $lexicon-icon-width;
+		}
+	}
+
+	.label-item-before {
+		margin-right: $item-spacer-x;
+	}
+
+	.label-item-after {
+		margin-left: $item-spacer-x;
+	}
+
+	.close {
+		@include clay-link($close);
+	}
+
+	.sticker {
+		border-radius: $sticker-border-radius;
+		height: $sticker-size;
+		line-height: $sticker-size;
+		width: $sticker-size;
+	}
+
+	.sticker-overlay {
+		border-radius: $sticker-border-radius;
 	}
 }
 
@@ -88,10 +132,28 @@
 				background-color: $focus-bg;
 				border-color: $focus-border-color;
 				box-shadow: $focus-box-shadow;
-				color: $focus-border-color;
+				color: $focus-color;
 				outline: $focus-outline;
 				text-decoration: $focus-text-decoration;
 			}
+		}
+	}
+
+	&[tabindex] {
+		&:hover {
+			background-color: $hover-bg;
+			border-color: $hover-border-color;
+			color: $hover-color;
+			text-decoration: $hover-text-decoration;
+		}
+
+		&:focus {
+			background-color: $focus-bg;
+			border-color: $focus-border-color;
+			box-shadow: $focus-box-shadow;
+			color: $focus-color;
+			outline: $focus-outline;
+			text-decoration: $focus-text-decoration;
 		}
 	}
 
@@ -102,7 +164,8 @@
 		color: $disabled-color;
 	}
 
-	a {
+	a,
+	.btn-unstyled {
 		color: $link-color;
 		text-decoration: $link-text-decoration;
 

@@ -102,14 +102,14 @@ title: "Badges"
 <span class="badge badge-primary">
 	<span class="badge-item badge-item-before">
 		<a href="#1">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
+			<svg class="lexicon-icon lexicon-icon-times-circle" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#times-circle"></use>
 			</svg>
 		</a>
 	</span>
 	<span class="badge-item badge-item-before">
 		<button class="btn btn-unstyled" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+			<svg class="lexicon-icon lexicon-icon-picture" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#picture"></use>
 			</svg>
 		</button>
@@ -118,13 +118,13 @@ title: "Badges"
 		<a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAre</a>
 	</span>
 	<span class="badge-item badge-item-after">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
+		<svg class="lexicon-icon lexicon-icon-camera" focusable="false" role="presentation">
 			<use href="/images/icons/icons.svg#camera"></use>
 		</svg>
 	</span>
 	<span class="badge-item badge-item-after">
 		<button aria-label="Close" class="close" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+			<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#times"></use>
 			</svg>
 		</button>
@@ -135,14 +135,14 @@ title: "Badges"
 <span class="badge badge-primary">
 	<span class="badge-item badge-item-before">
 		<a href="#1">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
+			<svg class="lexicon-icon lexicon-icon-times-circle" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#times-circle"></use>
 			</svg>
 		</a>
 	</span>
 	<span class="badge-item badge-item-before">
 		<button class="btn btn-unstyled" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+			<svg class="lexicon-icon lexicon-icon-picture" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#picture"></use>
 			</svg>
 		</button>
@@ -151,13 +151,13 @@ title: "Badges"
 		<a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAre</a>
 	</span>
 	<span class="badge-item badge-item-after">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
+		<svg class="lexicon-icon lexicon-icon-camera" focusable="false" role="presentation">
 			<use href="/images/icons/icons.svg#camera"></use>
 		</svg>
 	</span>
 	<span class="badge-item badge-item-after">
 		<button aria-label="Close" class="close" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+			<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#times"></use>
 			</svg>
 		</button>
@@ -170,14 +170,14 @@ title: "Badges"
 <span class="badge badge-success">
 	<span class="badge-item badge-item-before">
 		<a href="#1">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
+			<svg class="lexicon-icon lexicon-icon-times-circle" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#times-circle"></use>
 			</svg>
 		</a>
 	</span>
 	<span class="badge-item badge-item-before">
 		<button class="btn btn-unstyled" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+			<svg class="lexicon-icon lexicon-icon-picture" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#picture"></use>
 			</svg>
 		</button>
@@ -188,13 +188,13 @@ title: "Badges"
 		</a>
 	</span>
 	<span class="badge-item badge-item-after">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
+		<svg class="lexicon-icon lexicon-icon-camera" focusable="false" role="presentation">
 			<use href="/images/icons/icons.svg#camera"></use>
 		</svg>
 	</span>
 	<span class="badge-item badge-item-after">
 		<button aria-label="Close" class="close" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+			<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#times"></use>
 			</svg>
 		</button>
@@ -205,14 +205,14 @@ title: "Badges"
 <span class="badge badge-success">
 	<span class="badge-item badge-item-before">
 		<a href="#1">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times-circle">
+			<svg class="lexicon-icon lexicon-icon-times-circle" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#times-circle"></use>
 			</svg>
 		</a>
 	</span>
 	<span class="badge-item badge-item-before">
 		<button class="btn btn-unstyled" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+			<svg class="lexicon-icon lexicon-icon-picture" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#picture"></use>
 			</svg>
 		</button>
@@ -223,13 +223,13 @@ title: "Badges"
 		</a>
 	</span>
 	<span class="badge-item badge-item-after">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-camera">
+		<svg class="lexicon-icon lexicon-icon-camera" focusable="false" role="presentation">
 			<use href="/images/icons/icons.svg#camera"></use>
 		</svg>
 	</span>
 	<span class="badge-item badge-item-after">
 		<button aria-label="Close" class="close" type="button">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+			<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#times"></use>
 			</svg>
 		</button>
