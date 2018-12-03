@@ -13,6 +13,7 @@
 	{@param? size: string}
 	{@param? spritemap: string}
 	{@param? style: bool|string}
+	{@param? tabIndex: string}
 
 	{let $attributes kind="attributes"}
 		class="label
@@ -37,6 +38,12 @@
 
 		{if $id}
 			id="{$id}"
+		{/if}
+
+		{if $tabIndex}
+			tabIndex="{$tabIndex}"
+		{else}
+			tabIndex="0"
 		{/if}
 	{/let}
 
@@ -92,6 +99,7 @@
 				{param ref: 'closeButton' /}
 				{param spritemap: $spritemap /}
 				{param style: false /}
+				{param tabIndex: '-1' /}
 				{param type: 'button' /}
 			{/call}
 		</span>

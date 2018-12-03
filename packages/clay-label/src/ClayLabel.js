@@ -109,6 +109,15 @@ ClayLabel.STATE = {
 		Config.bool(),
 		Config.oneOf(['danger', 'info', 'secondary', 'warning', 'success']),
 	]).value('secondary'),
+
+	/**
+	 * Flag to indicate if the element can be focused.
+	 * @default 0
+	 * @instance
+	 * @memberof ClayLabel
+	 * @type {?string}
+	 */
+	tabIndex: Config.string().value('0'),
 };
 
 defineWebComponent('clay-label', ClayLabel);
