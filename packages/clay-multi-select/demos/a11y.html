@@ -119,6 +119,7 @@
 				itemRemoved: removeItem,
 				itemSelected: (event) => {
 					const label = event.data.originalString.toLowerCase();
+					if (event.target.selectedItems.find(item => item.value === label)) return;
 					event.target.selectedItems.push({label, value: label});
 					addToSelectedItems(event);
 				},
@@ -133,6 +134,7 @@
 				itemRemoved: removeItem,
 				itemSelected: (event) => {
 					const label = event.data.originalString.toLowerCase();
+					if (event.target.selectedItems.find(item => item.value === label)) return;
 					event.target.selectedItems.push({label, value: label});
 					addToSelectedItems(event);
 				},
