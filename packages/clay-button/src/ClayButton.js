@@ -150,6 +150,15 @@ ClayButton.STATE = {
 	]).value('primary'),
 
 	/**
+	 * Flag to indicate if the element can be focused.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayButton
+	 * @type {?(string|undefined)}
+	 */
+	tabIndex: Config.string(),
+
+	/**
 	 * The title attribute of the element.
 	 * @default undefined
 	 * @instance
