@@ -33,10 +33,10 @@ $close: map-merge((
 
 // Heading
 
-$heading-spacer-x: 1rem; // 16px
+$heading-spacer-x: 1rem !default; // 16px
 
-$heading-text-margin-bottom: auto;
-$heading-text-margin-top: auto;
+$heading-text-margin-bottom: auto !default;
+$heading-text-margin-top: auto !default;
 
 // Inline Item
 
