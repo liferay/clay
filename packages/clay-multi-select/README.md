@@ -1,5 +1,9 @@
-# clay-labels-input-field
+# ClayMultiSelect
 
+Use extension points to customize Dropdown items and labels.
+
+* `ClayMultiSelect.Item` - Variation of labels
+* `ClayAutocomplete.Item` - Variation of dropdown items
 
 ## Setup
 
