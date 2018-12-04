@@ -1,3 +1,82 @@
+@mixin clay-button-size($map) {
+	$breakpoint-down: map-get($map, breakpoint-down);
+
+	$border-color: map-get($map, border-color);
+	$border-radius: map-get($map, border-radius);
+	$border-style: map-get($map, border-style);
+	$border-width: map-get($map, border-width);
+	$display: map-get($map, display);
+	$font-size: map-get($map, font-size);
+	$font-weight: map-get($map, font-weight);
+	$height: map-get($map, height);
+	$line-height: map-get($map, line-height);
+	$padding-bottom: map-get($map, padding-bottom);
+	$padding-left: map-get($map, padding-left);
+	$padding-right: map-get($map, padding-right);
+	$padding-top: map-get($map, padding-top);
+	$transition: map-get($map, transition);
+	$user-select: map-get($map, user-select);
+	$vertical-align: map-get($map, vertical-align);
+	$white-space: map-get($map, white-space);
+	$width: map-get($map, width);
+	$word-wrap: map-get($map, word-wrap);
+
+	$inline-item-font-size: map-get($map, inline-item-font-size);
+
+	$section-font-size: map-get($map, section-font-size);
+	$section-font-weight: map-get($map, section-font-weight);
+	$section-line-height: map-get($map, section-line-height);
+
+	$font-size-mobile: map-get($map, font-size-mobile);
+	$height-mobile: map-get($map, height-mobile);
+	$padding-bottom-mobile: map-get($map, padding-bottom-mobile);
+	$padding-left-mobile: map-get($map, padding-left-mobile);
+	$padding-right-mobile: map-get($map, padding-right-mobile);
+	$padding-top-mobile: map-get($map, padding-top-mobile);
+	$width-mobile: map-get($map, width-mobile);
+
+	border-color: $border-color;
+	border-radius: $border-radius;
+	border-style: $border-style;
+	border-width: $border-width;
+	display: $display;
+	font-size: $font-size;
+	font-weight: $font-weight;
+	height: $height;
+	line-height: $line-height;
+	padding-bottom: $padding-bottom;
+	padding-left: $padding-left;
+	padding-right: $padding-right;
+	padding-top: $padding-top;
+	transition: $transition;
+	user-select: $user-select;
+	vertical-align: $vertical-align;
+	white-space: $white-space;
+	width: $width;
+
+	@if ($breakpoint-down) {
+		@include media-breakpoint-down($breakpoint-down) {
+			font-size: $font-size-mobile;
+			height: $height-mobile;
+			padding-bottom: $padding-bottom-mobile;
+			padding-left: $padding-left-mobile;
+			padding-right: $padding-right-mobile;
+			padding-top: $padding-top-mobile;
+			width: $width-mobile;
+		}
+	}
+
+	.inline-item {
+		font-size: $inline-item-font-size;
+	}
+
+	.btn-section {
+		font-size: $section-font-size;
+		font-weight: $section-font-weight;
+		line-height: $section-line-height;
+	}
+}
+
 @mixin clay-button-variant($map) {
 	$bg: map-get($map, bg);
 	$border-color: map-get($map, border-color);
