@@ -212,6 +212,11 @@ $input-group-inset-item-btn: map-merge((
 	padding-top: 0,
 ), $input-group-inset-item-btn);
 
+$input-group-inset-form-file-btn: () !default;
+$input-group-inset-form-file-btn: map-merge((
+	height: 100%,
+), $input-group-inset-form-file-btn);
+
 // Input Group Lg
 
 $input-group-addon-min-width-lg: 3rem !default; // 48px

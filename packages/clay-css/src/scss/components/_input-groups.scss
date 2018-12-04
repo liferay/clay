@@ -222,6 +222,14 @@
 	.btn {
 		@include clay-button-size($input-group-inset-item-btn);
 	}
+
+	.form-file {
+		height: 75%;
+
+		.btn {
+			@include clay-button-size($input-group-inset-form-file-btn);
+		}
+	}
 }
 
 .input-group-item .input-group-inset-before.form-control {
