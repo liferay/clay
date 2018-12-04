@@ -116,6 +116,14 @@ describe('ClayLabel', function() {
 		expect(label).toMatchSnapshot();
 	});
 
+	it('should render a label with tabIndex', function() {
+		label = new ClayLabel({
+			tabIndex: '0',
+		});
+
+		expect(label).toMatchSnapshot();
+	});
+
 	it('should render a closeable label and emit an event on close button click', () => {
 		label = new ClayLabel({
 			label: 'Foo',
