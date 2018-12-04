@@ -253,14 +253,6 @@ class ClayMultiSelect extends ClayComponent {
 	}
 
 	/**
-	 * Clears the input value.
-	 * @public
-	 */
-	clearInput() {
-		this.refs.formGroupInput.refs.input.value = '';
-	}
-
-	/**
 	 * @inheritDoc
 	 */
 	disposed() {
