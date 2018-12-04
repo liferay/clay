@@ -44,7 +44,7 @@ $label-primary-border-color: lighten($label-primary-color, 22.94) !default;
 // $label-primary-hover-border-color is deprecated as of v2.4.1
 $label-primary-hover-border-color: $label-primary-border-color !default;
 
-$label-primary-close: () !default
+$label-primary-close: () !default;
 $label-primary-close: map-merge((
 	transition: none
 ), $label-primary-close);
@@ -68,7 +68,7 @@ $label-secondary-border-color: lighten(saturate(adjust-hue($label-secondary-colo
 // $label-secondary-hover-border-color is deprecated as of v2.4.1
 $label-secondary-hover-border-color: $label-secondary-border-color !default;
 
-$label-secondary-close: () !default
+$label-secondary-close: () !default;
 $label-secondary-close: map-merge((
 	transition: none,
 ), $label-secondary-close);
@@ -93,7 +93,7 @@ $label-success-border-color: lighten(desaturate($label-success-color, 0.14), 24.
 // $label-success-hover-border-color is deprecated as of v2.4.1
 $label-success-hover-border-color: $label-success-border-color !default;
 
-$label-success-close: () !default
+$label-success-close: () !default;
 $label-success-close: map-merge((
 	transition: none,
 ), $label-success-close);
@@ -118,7 +118,7 @@ $label-info-border-color: lighten(saturate($label-info-color, 0.59), 28.04) !def
 // $label-info-hover-border-color is deprecated as of v2.4.1
 $label-info-hover-border-color: $label-info-border-color !default;
 
-$label-info-close: () !default
+$label-info-close: () !default;
 $label-info-close: map-merge((
 	transition: none,
 ), $label-info-close);
@@ -143,7 +143,7 @@ $label-warning-border-color: lighten($label-warning-color, 24.90) !default;
 // $label-warning-hover-border-color is deprecated as of v2.4.1
 $label-warning-hover-border-color: $label-warning-border-color !default;
 
-$label-warning-close: () !default
+$label-warning-close: () !default;
 $label-warning-close: map-merge((
 	transition: none,
 ), $label-warning-close);
@@ -168,7 +168,7 @@ $label-danger-border-color: lighten(desaturate($label-danger-color, 0.25), 28.04
 // $label-danger-hover-border-color is deprecated as of v2.4.1
 $label-danger-hover-border-color: $label-danger-border-color !default;
 
-$label-danger-close: () !default
+$label-danger-close: () !default;
 $label-danger-close: map-merge((
 	transition: none,
 ), $label-danger-close);
@@ -195,7 +195,7 @@ $label-light-border-color: $light !default;
 // $label-light-hover-border-color is deprecated as of v2.4.1
 $label-light-hover-border-color: $label-light-border-color !default;
 
-$label-light-close: () !default
+$label-light-close: () !default;
 $label-light-close: map-merge((
 	transition: none,
 ), $label-light-close);
@@ -221,7 +221,7 @@ $label-dark-border-color: $dark !default;
 // $label-dark-hover-border-color is deprecated as of v2.4.1
 $label-dark-hover-border-color: $label-dark-border-color !default;
 
-$label-dark-close: () !default
+$label-dark-close: () !default;
 $label-dark-close: map-merge((
 	transition: none,
 ), $label-dark-close);
