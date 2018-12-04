@@ -7,7 +7,7 @@ exports[`ClayAlert should render a "danger" style alert 1`] = `
       <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-full"></use>
     </svg>
   </span>
-  <strong class="lead">Danger!</strong>message</div>
+  <strong class="lead">Danger!:</strong>message</div>
 `;
 
 exports[`ClayAlert should render a "success" style alert 1`] = `
@@ -17,7 +17,7 @@ exports[`ClayAlert should render a "success" style alert 1`] = `
       <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#check-circle-full"></use>
     </svg>
   </span>
-  <strong class="lead">Success!</strong>message</div>
+  <strong class="lead">Success!:</strong>message</div>
 `;
 
 exports[`ClayAlert should render a "warning" style alert 1`] = `
@@ -27,7 +27,7 @@ exports[`ClayAlert should render a "warning" style alert 1`] = `
       <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#warning-full"></use>
     </svg>
   </span>
-  <strong class="lead">Warning!</strong>message</div>
+  <strong class="lead">Warning!:</strong>message</div>
 `;
 
 exports[`ClayAlert should render a closeable alert 1`] = `
@@ -42,7 +42,7 @@ exports[`ClayAlert should render a closeable alert 1`] = `
       <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#warning-full"></use>
     </svg>
   </span>
-  <strong class="lead">Warning!</strong>message</div>
+  <strong class="lead">Warning!:</strong>message</div>
 `;
 
 exports[`ClayAlert should render an "info" style alert 1`] = `
@@ -52,7 +52,7 @@ exports[`ClayAlert should render an "info" style alert 1`] = `
       <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle"></use>
     </svg>
   </span>
-  <strong class="lead">Info</strong>message</div>
+  <strong class="lead">Info:</strong>message</div>
 `;
 
 exports[`ClayAlert should render an alert with classes 1`] = `
@@ -62,7 +62,7 @@ exports[`ClayAlert should render an alert with classes 1`] = `
       <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle"></use>
     </svg>
   </span>
-  <strong class="lead">info</strong>message</div>
+  <strong class="lead">info:</strong>message</div>
 `;
 
 exports[`ClayAlert should render an alert with id 1`] = `
@@ -72,7 +72,7 @@ exports[`ClayAlert should render an alert with id 1`] = `
       <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle"></use>
     </svg>
   </span>
-  <strong class="lead">info</strong>message</div>
+  <strong class="lead">info:</strong>message</div>
 `;
 
 exports[`ClayAlert should render default markup 1`] = `
@@ -82,5 +82,5 @@ exports[`ClayAlert should render default markup 1`] = `
       <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle"></use>
     </svg>
   </span>
-  <strong class="lead">info</strong>message</div>
+  <strong class="lead">info:</strong>message</div>
 `;
