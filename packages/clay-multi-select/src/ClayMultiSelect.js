@@ -103,7 +103,7 @@ class ClayMultiSelect extends ClayComponent {
 				originalEvent: event,
 			});
 		} else {
-			this.refs.formGroupInput.refs.input.value = label;
+			this.refs.autocomplete.refs.input.value = label;
 		}
 	}
 
@@ -116,8 +116,8 @@ class ClayMultiSelect extends ClayComponent {
 	 */
 	_handleItemFocus(event, direction) {
 		if (this.selectedItems.length) {
-			const {formGroupInput} = this.refs;
-			const items = formGroupInput.element.querySelectorAll(
+			const {autocomplete} = this.refs;
+			const items = autocomplete.element.querySelectorAll(
 				'span[id="item-tag"]'
 			);
 
@@ -128,7 +128,7 @@ class ClayMultiSelect extends ClayComponent {
 					: Number(index) + 1;
 
 				if (condition > items.length - 1) {
-					this.refs.formGroupInput.refs.input.focus();
+					this.refs.autocomplete.refs.input.focus();
 					this._removeFocusedItem();
 					return false;
 				} else if (condition >= 0) {
@@ -202,7 +202,7 @@ class ClayMultiSelect extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleOnKeydown(event) {
-		const {value} = this.refs.formGroupInput.refs.input;
+		const {value} = this.refs.autocomplete.refs.input;
 
 		switch (event.data.key) {
 		case 'Enter':
@@ -263,7 +263,7 @@ class ClayMultiSelect extends ClayComponent {
 	 * @inheritDoc
 	 */
 	syncSelectedItems() {
-		this.refs.formGroupInput.refs.input.focus();
+		this.refs.autocomplete.refs.input.focus();
 	}
 }
 
