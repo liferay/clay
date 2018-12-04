@@ -27,10 +27,10 @@ $label-lg: map-merge((
 	height: 1.5rem, // 24px
 	padding-x: 0.5rem, // 8px
 	padding-y: 0.3125rem, // 5px
-	item-spacer-y: -0.125rem, // -2px
-	lexicon-icon-height: 1.33333em, // 16px
-	lexicon-icon-width: 1.33333em, // 16px
-	sticker-size: 1rem, // 16px
+	item-spacer-y: -0.0625rem, // -1px
+	lexicon-icon-height: 1em, // 12px
+	lexicon-icon-width: 1em, // 12px
+	sticker-size: 0.875rem, // 14px
 ), $label-lg);
 
 // Label Variants
