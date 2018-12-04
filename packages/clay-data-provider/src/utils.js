@@ -51,15 +51,14 @@ export const timeout = (ms, promise) => {
 		const timeoutId = setTimeout(() => {
 			reject(new Error('timeout'));
 		}, ms);
-		promise.then(
-			res => {
+		promise
+			.then(res => {
 				clearTimeout(timeoutId);
 				resolve(res);
-			},
-			err => {
+			})
+			.catch(err => {
 				clearTimeout(timeoutId);
 				reject(err);
-			}
-		);
+			});
 	});
 };

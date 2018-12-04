@@ -90,9 +90,9 @@ class ClayDataProvider extends ClayComponent {
 	 * @protected
 	 */
 	_setRequestRetries(err, requestRetries) {
-		if (this.requestRetries > 0 && requestRetries > this.requestRetries) {
+		if (this.requestRetries > 0 && requestRetries < this.requestRetries) {
 			console.error(
-				`DataProvider: (${requestRetries}/${
+				`DataProvider: (${requestRetries + 1}/${
 					this.requestRetries
 				}) Request attempt failed`,
 				err
@@ -137,7 +137,7 @@ class ClayDataProvider extends ClayComponent {
 	 */
 	filter(query, extract = elem => elem) {
 		if (!this._isResolvedData) {
-			return;
+			return [];
 		}
 
 		return this._dataSource
