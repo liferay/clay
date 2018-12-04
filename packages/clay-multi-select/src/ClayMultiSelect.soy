@@ -190,6 +190,7 @@
 					{/msg}
 				{/param}
 
+				{param ref: 'button' /}
 				{param style: 'secondary' /}
 			{/call}
 		</div>
@@ -246,6 +247,7 @@
 		{param events: ['close': $_handleCloseButtonClick] /}
 		{param id: 'item-tag' /}
 		{param label: $data.label /}
+		{param ref: 'item' + $index /}
 		{param spritemap: $spritemap /}
 	{/call}
 {/deltemplate}
