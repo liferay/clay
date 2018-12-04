@@ -42,8 +42,6 @@
 
 		{if $tabIndex}
 			tabIndex="{$tabIndex}"
-		{else}
-			tabIndex="0"
 		{/if}
 	{/let}
 
@@ -54,6 +52,7 @@
 			{param href: $href /}
 			{param label: $label /}
 			{param spritemap: $spritemap /}
+			{param tabIndex: $tabIndex /}
 		{/call}
 	</span>
 {/template}
@@ -67,6 +66,7 @@
 	{@param? href: string}
 	{@param? label: html|string}
 	{@param? spritemap: string}
+	{@param? tabIndex: string}
 
 	{let $labelContent kind="html"}
 		<span class="label-item label-item-expand">
@@ -99,7 +99,7 @@
 				{param ref: 'closeButton' /}
 				{param spritemap: $spritemap /}
 				{param style: false /}
-				{param tabIndex: '-1' /}
+				{param tabIndex: $tabIndex ? '-1' : null /}
 				{param type: 'button' /}
 			{/call}
 		</span>
