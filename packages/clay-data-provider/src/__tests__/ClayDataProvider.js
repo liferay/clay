@@ -73,18 +73,20 @@ describe('ClayDataProvider', function() {
 
 		const filteredItem = component.filter('brea');
 
-		expect(filteredItem).toEqual([{
-			index: 0,
-			matches: [
-				{match: true, value: 'B'},
-				{match: true, value: 'r'},
-				{match: true, value: 'e'},
-				{match: true, value: 'a'},
-				{value: 'd'},
-			],
-			originalString: 'Bread',
-			score: 26,
-		}]);
+		expect(filteredItem).toEqual([
+			{
+				index: 0,
+				matches: [
+					{match: true, value: 'B'},
+					{match: true, value: 'r'},
+					{match: true, value: 'e'},
+					{match: true, value: 'a'},
+					{value: 'd'},
+				],
+				originalString: 'Bread',
+				score: 26,
+			},
+		]);
 	});
 
 	describe('remote data', () => {
@@ -107,14 +109,14 @@ describe('ClayDataProvider', function() {
 			expect(fetch.mock.calls[0][0]).toEqual('http://clay.datasource');
 		});
 
-		it('should emit an event on data change', async (done) => {
+		it('should emit an event on data change', async done => {
 			fetch.mockResponseOnce(JSON.stringify(dataSourceRemote));
 
 			component = new ClayDataProvider({
 				content,
 				dataSource: 'http://clay.datasource',
 				events: {
-					dataChange: async (event) => {
+					dataChange: async event => {
 						expect(dataSourceRemote).toEqual(event.data);
 						done();
 					},
@@ -126,14 +128,16 @@ describe('ClayDataProvider', function() {
 			expect(fetch.mock.calls.length).toBe(1);
 		});
 
-		it('should add an initial data while the request is not resolved', async (done) => {
+		it('should add an initial data while the request is not resolved', async done => {
 			utils.timeout = jest.fn((ms, promise) => promise);
-			fetch.mockResponseOnce(() =>
-				new Promise(resolve =>
-					setTimeout(() =>
-						resolve(JSON.stringify(dataSourceRemote)), 20
+			fetch.mockResponseOnce(
+				() =>
+					new Promise(resolve =>
+						setTimeout(
+							() => resolve(JSON.stringify(dataSourceRemote)),
+							20
+						)
 					)
-				)
 			);
 
 			const initialData = [{id: 'foo', name: 'Foo'}];
@@ -143,7 +147,7 @@ describe('ClayDataProvider', function() {
 				dataSource: 'http://clay.datasource',
 				initialData,
 				events: {
-					dataChange: (event) => {
+					dataChange: event => {
 						expect(initialData).toEqual(event.data);
 						done();
 					},

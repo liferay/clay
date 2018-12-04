@@ -395,7 +395,9 @@ describe('ClayMultiSelect', function() {
 				const spy = jest.spyOn(component, 'emit');
 				const {autocomplete} = component.refs;
 
-				triggerEvent(autocomplete.refs.input, 'keydown', {key: 'Backspace'});
+				triggerEvent(autocomplete.refs.input, 'keydown', {
+					key: 'Backspace',
+				});
 
 				jest.runAllTimers();
 
@@ -405,7 +407,9 @@ describe('ClayMultiSelect', function() {
 
 				expect(items[1]).toEqual(document.activeElement);
 
-				triggerEvent(autocomplete.element, 'keydown', {key: 'Backspace'});
+				triggerEvent(autocomplete.element, 'keydown', {
+					key: 'Backspace',
+				});
 
 				expect(spy).toHaveBeenCalled();
 				expect(spy).toHaveBeenCalledWith(
@@ -439,7 +443,9 @@ describe('ClayMultiSelect', function() {
 				const spy = jest.spyOn(component, 'emit');
 				const {autocomplete} = component.refs;
 
-				triggerEvent(autocomplete.refs.input, 'keydown', {key: 'Backspace'});
+				triggerEvent(autocomplete.refs.input, 'keydown', {
+					key: 'Backspace',
+				});
 
 				jest.runAllTimers();
 
@@ -485,7 +491,9 @@ describe('ClayMultiSelect', function() {
 
 			const {autocomplete} = component.refs;
 
-			triggerEvent(autocomplete.refs.input, 'keydown', {key: 'Backspace'});
+			triggerEvent(autocomplete.refs.input, 'keydown', {
+				key: 'Backspace',
+			});
 
 			jest.runAllTimers();
 
@@ -518,7 +526,9 @@ describe('ClayMultiSelect', function() {
 
 			const {autocomplete} = component.refs;
 
-			triggerEvent(autocomplete.refs.input, 'keydown', {key: 'Backspace'});
+			triggerEvent(autocomplete.refs.input, 'keydown', {
+				key: 'Backspace',
+			});
 
 			jest.runAllTimers();
 
@@ -531,7 +541,9 @@ describe('ClayMultiSelect', function() {
 			triggerEvent(autocomplete.element, 'keydown', {key: 'ArrowLeft'});
 			expect(items[0]).toEqual(document.activeElement);
 
-			triggerEvent(autocomplete.element, 'keydown', {key: 'ArrowRight'});
+			triggerEvent(autocomplete.element, 'keydown', {
+				key: 'ArrowRight',
+			});
 			expect(items[1]).toEqual(document.activeElement);
 		});
 
@@ -554,7 +566,9 @@ describe('ClayMultiSelect', function() {
 
 			const {autocomplete} = component.refs;
 
-			triggerEvent(autocomplete.refs.input, 'keydown', {key: 'Backspace'});
+			triggerEvent(autocomplete.refs.input, 'keydown', {
+				key: 'Backspace',
+			});
 
 			jest.runAllTimers();
 
@@ -564,7 +578,9 @@ describe('ClayMultiSelect', function() {
 
 			expect(items[1]).toEqual(document.activeElement);
 
-			triggerEvent(autocomplete.element, 'keydown', {key: 'ArrowRight'});
+			triggerEvent(autocomplete.element, 'keydown', {
+				key: 'ArrowRight',
+			});
 			expect(autocomplete.refs.input).toEqual(document.activeElement);
 		});
 
@@ -587,7 +603,9 @@ describe('ClayMultiSelect', function() {
 
 			const {autocomplete} = component.refs;
 
-			triggerEvent(autocomplete.refs.input, 'keydown', {key: 'Backspace'});
+			triggerEvent(autocomplete.refs.input, 'keydown', {
+				key: 'Backspace',
+			});
 
 			jest.runAllTimers();
 

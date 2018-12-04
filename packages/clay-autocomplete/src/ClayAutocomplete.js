@@ -135,7 +135,10 @@ class ClayAutocomplete extends ClayComponent {
 		switch (event.key) {
 		case 'Enter':
 			event.stopPropagation();
-			if (this.filteredItems.length && event.delegateTarget.tagName !== 'INPUT') {
+			if (
+				this.filteredItems.length &&
+					event.delegateTarget.tagName !== 'INPUT'
+			) {
 				this._handleItemSelected(event);
 			}
 			break;
@@ -174,8 +177,7 @@ class ClayAutocomplete extends ClayComponent {
 				this.refs.input.focus();
 				this._dropdownItemFocused = null;
 			} else if (
-				!(direction === true &&
-				this._dropdownItemFocused === null)
+				!(direction === true && this._dropdownItemFocused === null)
 			) {
 				this._dropdownItemFocused =
 					this._dropdownItemFocused === null ||

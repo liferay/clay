@@ -229,7 +229,11 @@ describe('ClayAutocomplete', function() {
 
 		const {dropdown} = component.refs.dataProvider.refs;
 
-		triggerEvent(dropdown.querySelector('a[data-dropdown-item-index]'), 'keydown', {key: 'Enter'});
+		triggerEvent(
+			dropdown.querySelector('a[data-dropdown-item-index]'),
+			'keydown',
+			{key: 'Enter'}
+		);
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
@@ -324,7 +328,7 @@ describe('ClayAutocomplete', function() {
 					name: 'Ammonia cookie',
 				},
 			],
-			extractData: (elem) => elem.name,
+			extractData: elem => elem.name,
 		});
 
 		const spy = jest.spyOn(component, 'emit');
@@ -420,7 +424,9 @@ describe('ClayAutocomplete', function() {
 				jest.runAllTimers();
 
 				const {dropdown} = component.refs.dataProvider.refs;
-				const elements = dropdown.querySelectorAll('a[data-dropdown-item-index]');
+				const elements = dropdown.querySelectorAll(
+					'a[data-dropdown-item-index]'
+				);
 
 				component._dropdownItemFocused = 1;
 
@@ -452,7 +458,9 @@ describe('ClayAutocomplete', function() {
 				const {dropdown} = component.refs.dataProvider.refs;
 
 				triggerEvent(input, 'keydown', {key: 'ArrowDown'});
-				expect(dropdown.querySelector('a[data-dropdown-item-index]')).toEqual(document.activeElement);
+				expect(
+					dropdown.querySelector('a[data-dropdown-item-index]')
+				).toEqual(document.activeElement);
 				expect(component._dropdownItemFocused).toBe(0);
 			});
 
@@ -472,13 +480,17 @@ describe('ClayAutocomplete', function() {
 				jest.runAllTimers();
 
 				const {dropdown} = component.refs.dataProvider.refs;
-				const elements = dropdown.querySelectorAll('a[data-dropdown-item-index]');
+				const elements = dropdown.querySelectorAll(
+					'a[data-dropdown-item-index]'
+				);
 
 				triggerEvent(input, 'keydown', {key: 'ArrowDown'});
 				expect(elements[0]).toEqual(document.activeElement);
 				expect(component._dropdownItemFocused).toBe(0);
 
-				triggerEvent(component.element, 'keydown', {key: 'ArrowDown'});
+				triggerEvent(component.element, 'keydown', {
+					key: 'ArrowDown',
+				});
 				expect(elements[1]).toEqual(document.activeElement);
 				expect(component._dropdownItemFocused).toBe(1);
 			});
@@ -495,7 +507,9 @@ describe('ClayAutocomplete', function() {
 				jest.runAllTimers();
 
 				const {dropdown} = component.refs.dataProvider.refs;
-				const elements = dropdown.querySelectorAll('a[data-dropdown-item-index]');
+				const elements = dropdown.querySelectorAll(
+					'a[data-dropdown-item-index]'
+				);
 
 				component._dropdownItemFocused = 1;
 
