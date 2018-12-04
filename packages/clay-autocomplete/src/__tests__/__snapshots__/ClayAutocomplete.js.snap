@@ -1,1 +1,214 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayAutocomplete should render a ClayAutocomplete and emit an event on filtered items 1`] = `
+<div class="dropdown-full form-group">
+  <input class="form-control" ref="input" type="text" value="">
+  <ul class="dropdown-menu show" ref="dropdown">
+    <li>
+      <a data-dropdown-item-index="0" id="item" class="dropdown-item" href="javascript:;">
+        <strong>B</strong>
+        <strong>r</strong>ead</a>
+    </li>
+    <li>
+      <a data-dropdown-item-index="1" id="item" class="dropdown-item" href="javascript:;">
+        <strong>B</strong>utte
+        <strong>r</strong> cookie</a>
+    </li>
+    <li>
+      <a data-dropdown-item-index="2" id="item" class="dropdown-item" href="javascript:;">Apple
+        <strong>b</strong>utte
+        <strong>r</strong>
+      </a>
+    </li>
+    <li>
+      <a data-dropdown-item-index="3" id="item" class="dropdown-item" href="javascript:;">
+        <strong>B</strong>a
+        <strong>r</strong>becue</a>
+    </li>
+    <li>
+      <a data-dropdown-item-index="4" id="item" class="dropdown-item" href="javascript:;">
+        <strong>B</strong>ea
+        <strong>r</strong> claw</a>
+    </li>
+    <li>
+      <a data-dropdown-item-index="5" id="item" class="dropdown-item" href="javascript:;">
+        <strong>B</strong>lue cheese d
+        <strong>r</strong>essing</a>
+    </li>
+    <li>
+      <a data-dropdown-item-index="6" id="item" class="dropdown-item" href="javascript:;">Cuisine of Ante
+        <strong>b</strong>ellum Ame
+        <strong>r</strong>ica</a>
+    </li>
+    <li>
+      <a data-dropdown-item-index="7" id="item" class="dropdown-item" href="javascript:;">
+        <strong>B</strong>
+        <strong>r</strong>eakfast burrito</a>
+    </li>
+    <li>
+      <a data-dropdown-item-index="8" id="item" class="dropdown-item" href="javascript:;">
+        <strong>B</strong>
+        <strong>r</strong>unswick stew</a>
+    </li>
+    <li>
+      <a data-dropdown-item-index="9" id="item" class="dropdown-item" href="javascript:;">
+        <strong>B</strong>uffalo bu
+        <strong>r</strong>ger</a>
+    </li>
+    <li>
+      <a data-dropdown-item-index="10" id="item" class="dropdown-item" href="javascript:;">
+        <strong>B</strong>ull
+        <strong>r</strong>oast</a>
+    </li>
+    <li>
+      <a data-dropdown-item-index="11" id="item" class="dropdown-item" href="javascript:;">
+        <strong>B</strong>u
+        <strong>r</strong>nt ends</a>
+    </li>
+    <li>
+      <a data-dropdown-item-index="12" id="item" class="dropdown-item" href="javascript:;">
+        <strong>B</strong>ookbinde
+        <strong>r</strong> soup</a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayAutocomplete should render a ClayAutocomplete and emit an event on item selected 1`] = `
+<div class="dropdown-full form-group">
+  <input class="form-control" ref="input" type="text" value="">
+  <ul class="dropdown-menu show" ref="dropdown">
+    <li>
+      <a data-dropdown-item-index="0" id="item" class="dropdown-item" href="javascript:;">
+        <strong>B</strong>
+        <strong>r</strong>
+        <strong>e</strong>
+        <strong>a</strong>d</a>
+    </li>
+    <li>
+      <a data-dropdown-item-index="1" id="item" class="dropdown-item" href="javascript:;">
+        <strong>B</strong>
+        <strong>r</strong>
+        <strong>e</strong>
+        <strong>a</strong>kfast burrito</a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayAutocomplete should render a ClayAutocomplete and emit an event on item selected when press enter 1`] = `
+<div class="dropdown-full form-group">
+  <input class="form-control" ref="input" type="text" value="">
+  <ul class="dropdown-menu show" ref="dropdown">
+    <li>
+      <a data-dropdown-item-index="0" id="item" class="dropdown-item" href="javascript:;">
+        <strong>B</strong>
+        <strong>r</strong>
+        <strong>e</strong>
+        <strong>a</strong>d</a>
+    </li>
+    <li>
+      <a data-dropdown-item-index="1" id="item" class="dropdown-item" href="javascript:;">
+        <strong>B</strong>
+        <strong>r</strong>
+        <strong>e</strong>
+        <strong>a</strong>kfast burrito</a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayAutocomplete should render a ClayAutocomplete and filtered items with structured data 1`] = `
+<div class="dropdown-full form-group">
+  <input class="form-control" ref="input" type="text" value="">
+  <ul class="dropdown-menu show" ref="dropdown">
+    <li>
+      <a data-dropdown-item-index="0" id="item" class="dropdown-item" href="javascript:;">Br
+        <strong>e</strong>ad</a>
+    </li>
+    <li>
+      <a data-dropdown-item-index="1" id="item" class="dropdown-item" href="javascript:;">Ammonia cooki
+        <strong>e</strong>
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayAutocomplete should render a ClayAutocomplete and not emit an event on filtered items when disabled autocomplete 1`] = `
+<div class="dropdown-full form-group">
+  <input class="form-control" ref="input" type="text" value="">
+  <ul class="dropdown-menu" ref="dropdown"></ul>
+</div>
+`;
+
+exports[`ClayAutocomplete should render a ClayAutocomplete and not emit an event on item selected when press enter on input 1`] = `
+<div class="dropdown-full form-group">
+  <input class="form-control" ref="input" type="text" value="">
+  <ul class="dropdown-menu show" ref="dropdown">
+    <li>
+      <a data-dropdown-item-index="0" id="item" class="dropdown-item" href="javascript:;">
+        <strong>B</strong>
+        <strong>r</strong>
+        <strong>e</strong>
+        <strong>a</strong>d</a>
+    </li>
+    <li>
+      <a data-dropdown-item-index="1" id="item" class="dropdown-item" href="javascript:;">
+        <strong>B</strong>
+        <strong>r</strong>
+        <strong>e</strong>
+        <strong>a</strong>kfast burrito</a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayAutocomplete should render a ClayAutocomplete with classes 1`] = `
+<div class="dropdown-full my-custom-class">
+  <input class="form-control" ref="input" type="text" value="">
+  <ul class="dropdown-menu" ref="dropdown"></ul>
+</div>
+`;
+
+exports[`ClayAutocomplete should render a ClayAutocomplete with id 1`] = `
+<div class="dropdown-full form-group" id="myId">
+  <input class="form-control" ref="input" type="text" value="">
+  <ul class="dropdown-menu" ref="dropdown"></ul>
+</div>
+`;
+
+exports[`ClayAutocomplete should render a ClayAutocomplete with input element classes 1`] = `
+<div class="dropdown-full form-group">
+  <input class="input element classes" ref="input" type="text" value="">
+  <ul class="dropdown-menu" ref="dropdown"></ul>
+</div>
+`;
+
+exports[`ClayAutocomplete should render a ClayAutocomplete with input name 1`] = `
+<div class="dropdown-full form-group">
+  <input class="form-control" id="input name" name="input name" ref="input" type="text" value="">
+  <ul class="dropdown-menu" ref="dropdown"></ul>
+</div>
+`;
+
+exports[`ClayAutocomplete should render a ClayAutocomplete with input value 1`] = `
+<div class="dropdown-full form-group">
+  <input class="form-control" ref="input" type="text" value="input value">
+  <ul class="dropdown-menu" ref="dropdown"></ul>
+</div>
+`;
+
+exports[`ClayAutocomplete should render a ClayAutocomplete with unstable_content 1`] = `
+<div class="dropdown-full form-group">Some content...
+  <input class="form-control" ref="input" type="text" value="">
+  <ul class="dropdown-menu" ref="dropdown"></ul>
+</div>
+`;
+
+exports[`ClayAutocomplete should render the default markup 1`] = `
+<div class="dropdown-full form-group">
+  <input class="form-control" ref="input" type="text" value="">
+  <ul class="dropdown-menu" ref="dropdown"></ul>
+</div>
+`;
