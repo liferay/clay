@@ -69,9 +69,16 @@ class ClayTable extends ClayComponent {
 	 * Continues the propagation of the cell content click event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleCellContentClick(event) {
-		this.emit('cellContentClicked', event);
+		return !this.emit({
+			data: {
+				event,
+			},
+			name: 'cellContentClicked',
+			originalEvent: event,
+		});
 	}
 
 	/**
@@ -87,9 +94,16 @@ class ClayTable extends ClayComponent {
 	 * Continues the propagation of the checkbox changed event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleItemToggled(event) {
-		this.emit('itemToggled', event);
+		return !this.emit({
+			data: {
+				event,
+			},
+			name: 'itemToggled',
+			originalEvent: event,
+		});
 	}
 
 	/**
