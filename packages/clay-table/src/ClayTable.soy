@@ -255,7 +255,11 @@
 
 	{let $attributes kind="attributes"}
 		{if $selectable and $item.selected}
-			class="table-active"
+			class="table-active
+				{if $item.rowClasses}
+					{sp}{$item.rowClasses}
+				{/if}
+			"
 		{/if}
 
 		data-onclick="{$_handleRowContentClick}"
