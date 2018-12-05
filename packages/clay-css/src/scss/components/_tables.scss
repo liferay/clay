@@ -146,7 +146,7 @@ th {
 // Table Striped
 
 .table-striped {
-	tbody tr:nth-of-type(odd) {
+	tbody tr:nth-of-type(#{$table-striped-order}) {
 		td,
 		th {
 			background-color: $table-accent-bg;
@@ -206,7 +206,7 @@ th {
 }
 
 .table-striped {
-	tbody .table-disabled:nth-of-type(odd) {
+	tbody .table-disabled:nth-of-type(#{$table-striped-order}) {
 		td,
 		th {
 			background-color: $table-disabled-bg;
@@ -422,7 +422,7 @@ th {
 // Table List Striped
 
 .table-list.table-striped {
-	tbody tr:nth-of-type(odd) {
+	tbody tr:nth-of-type(#{$table-striped-order}) {
 		td,
 		th {
 			background-color: $table-list-accent-bg;
@@ -496,7 +496,7 @@ th {
 }
 
 .table-list.table-striped {
-	tbody .table-disabled:nth-of-type(odd) {
+	tbody .table-disabled:nth-of-type(#{$table-striped-order}) {
 		td,
 		th {
 			background-color: $table-list-disabled-bg;
@@ -751,13 +751,13 @@ th {
 }
 
 .table-striped {
-	tbody tr:nth-of-type(odd) {
+	tbody tr:nth-of-type(#{$table-striped-order}) {
 		.quick-action-menu {
 			background-color: $table-quick-action-menu-accent-bg;
 		}
 	}
 
-	tbody .table-active:nth-of-type(odd) {
+	tbody .table-active:nth-of-type(#{$table-striped-order}) {
 		.quick-action-menu {
 			background-color: $table-quick-action-menu-accent-active-bg;
 		}
@@ -798,13 +798,13 @@ th {
 }
 
 .table-list.table-striped {
-	tbody tr:nth-of-type(odd) {
+	tbody tr:nth-of-type(#{$table-striped-order}) {
 		.quick-action-menu {
 			background-color: $table-list-quick-action-menu-accent-bg;
 		}
 	}
 
-	tbody .table-active:nth-of-type(odd) {
+	tbody .table-active:nth-of-type(#{$table-striped-order}) {
 		.quick-action-menu {
 			background-color: $table-list-quick-action-menu-accent-active-bg;
 		}
