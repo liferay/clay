@@ -65,13 +65,18 @@
 .custom-control {
 	label {
 		cursor: $custom-control-description-cursor;
-		font-size: 1rem;
+		font-size: $font-size-base;
 	}
 }
 
 .custom-control-label {
 	font-size: $custom-control-description-font-size;
 	line-height: $custom-control-description-line-height;
+	position: static;
+}
+
+label.custom-control-label {
+	font-size: $custom-control-description-font-size;
 }
 
 .custom-control-label-text {
@@ -85,6 +90,11 @@
 	border-style: $custom-control-indicator-border-style;
 	border-width: $custom-control-indicator-border-width;
 	font-size: $custom-control-indicator-size;
+	left: 0;
+}
+
+.custom-control-label::after {
+	left: 0;
 }
 
 .custom-control-input {
