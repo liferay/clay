@@ -223,6 +223,35 @@ class ClayTooltip extends Component {
 	}
 
 	/**
+	 * Set preferred alignment with Align API.
+	 * @private
+	 * @param {!string} value
+	 * @return {number}
+	 */
+	_setPreferredAlign(value) {
+		switch (value) {
+		case 'TopCenter':
+			return Align.TopCenter;
+		case 'RightCenter':
+			return Align.RightCenter;
+		case 'BottomCenter':
+			return Align.BottomCenter;
+		case 'LeftCenter':
+			return Align.LeftCenter;
+		case 'TopRight':
+			return Align.TopRight;
+		case 'BottomRight':
+			return Align.BottomRight;
+		case 'BottomLeft':
+			return Align.BottomLeft;
+		case 'TopLeft':
+			return Align.TopLeft;
+		default:
+			return Align.TopCenter;
+		}
+	}
+
+	/**
 	 * The setter function for the `classMap` staet.
 	 * @memberof ClayTooltip
 	 * @param {Object} val
@@ -370,15 +399,23 @@ ClayTooltip.STATE = {
 
 	/**
 	 * Tooltip position
-	 * @default Align.Bottom
+	 * @default TopCenter
 	 * @instance
 	 * @memberof ClayTooltip
 	 * @type {!string}
 	 */
-	position: {
-		validator: Align.isValidPosition,
-		value: Align.Top,
-	},
+	position: Config.oneOf([
+		'BottomCenter',
+		'BottomLeft',
+		'BottomRight',
+		'LeftCenter',
+		'RightCenter',
+		'TopCenter',
+		'TopLeft',
+		'TopRight',
+	])
+		.setter('_setPreferredAlign')
+		.value('TopCenter'),
 
 	/**
 	 * Selectors
