@@ -96,7 +96,7 @@ describe('ClayResultsBar', function() {
 
 		const spy = jest.spyOn(resultsBar, 'emit');
 
-		resultsBar.refs.label1.refs.closeButton.element.click();
+		resultsBar.refs.label1.refs.label.refs.closeButton.element.click();
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
