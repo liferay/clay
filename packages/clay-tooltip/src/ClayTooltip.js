@@ -77,7 +77,8 @@ class ClayTooltip extends Component {
 			const alignedPosition = Align.align(
 				this.element,
 				this._target,
-				this.position
+				this.position,
+				this.bestAlign
 			);
 
 			if (this.alignedPosition !== alignedPosition) {
@@ -374,6 +375,15 @@ ClayTooltip.STATE = {
 	alignedPosition: {
 		validator: Align.isValidPosition,
 	},
+
+	/**
+	 * Flag to activate the auto best position.
+	 * @default true
+	 * @instance
+	 * @memberof ClayTooltip
+	 * @type {?bool}
+	 */
+	bestAlign: Config.bool().value(true),
 
 	/**
 	 * Element classes.
