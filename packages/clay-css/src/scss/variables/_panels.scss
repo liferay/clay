@@ -25,7 +25,7 @@ $panel-header-collapse-icon-font-size: 0.875rem !default; // 14px
 $panel-header-collapse-icon-bottom: null !default;
 $panel-header-collapse-icon-left: null !default;
 $panel-header-collapse-icon-right: null !default;
-$panel-header-collapse-icon-top: clay-collapse-icon-align($panel-header-padding-y, 0, $panel-header-font-size, $panel-header-line-height) !default;
+$panel-header-collapse-icon-top: clay-collapse-icon-align($panel-header-padding-y, 0, 1em, $panel-header-line-height) !default;
 
 $panel-header-collapse-icon-padding-left: null !default;
 $panel-header-collapse-icon-padding-right: null !default;
