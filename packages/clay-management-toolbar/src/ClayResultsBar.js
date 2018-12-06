@@ -1,6 +1,7 @@
 import 'clay-button';
 import 'clay-label';
 import 'clay-link';
+import './ClayFilterLabel.soy.js';
 import {Config} from 'metal-state';
 import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
