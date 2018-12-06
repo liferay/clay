@@ -297,10 +297,6 @@ a.multi-step-icon {
 				right: 0;
 				text-align: center;
 				top: 0;
-
-				+ .multi-step-indicator {
-					margin-top: calc(1rem * #{$line-height-base});
-				}
 			}
 
 			.multi-step-indicator {
