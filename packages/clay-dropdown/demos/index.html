@@ -117,6 +117,13 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h2>Dropdown with right and left icons</h2>
+			<div id="right-left-icons-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
 			<h2>Dropdown with form button</h2>
 			<div id="button-block"></div>
 		</div>
@@ -676,6 +683,73 @@
 				spritemap: spritemap,
 			},
 			'#right-icons-block'
+		);
+
+		/**
+		 * Dropdown with right and left icons 
+		 **/
+		 new metal.ClayDropdown(
+			{
+				items: [
+					{
+						href: '#1',
+						icons: {
+							left: 'pencil'
+						},
+						label: 'Edit',
+					},
+					{
+						active: true,
+						href: '#2',
+						icons: {
+							left: 'view'
+						},
+						label: 'Preview',
+						separator: true,
+					},
+					{
+						href: '#3',
+						label: 'Expire',
+					},
+					{
+						href: '#4',
+						label: 'View History',
+						separator: true,
+					},
+					{
+						href: '#3',
+						label: 'Permisions',
+						separator: true,
+					},
+					{
+						href: '#4',
+						icons: {
+							left: 'paste'
+						},
+						label: 'Copy',
+					},
+					{
+						href: '#4',
+						icons: {
+							left: 'change',
+							right: 'caret-right'
+						},
+						label: 'Move',
+						separator: true,
+					},
+					{
+						href: '#4',
+						icons: {
+							left: 'trash',
+							right: 'caret-right'
+						},
+						label: 'Move to Recycle bin',
+					},
+				],
+				label: 'Trigger Label',
+				spritemap: spritemap,
+			},
+			'#right-left-icons-block'
 		);
 
 		/**
