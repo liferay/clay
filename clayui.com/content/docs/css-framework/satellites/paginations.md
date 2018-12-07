@@ -27,7 +27,7 @@ title: "Paginations"
 	<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
 	<ul class="pagination">
 		<li class="disabled page-item">
-			<a class="page-link" href="#1" role="button">
+			<a class="page-link" href="#1" role="button" tabindex="-1">
 				<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-left" />
 				</svg>
@@ -90,7 +90,7 @@ title: "Paginations"
 	<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
 	<ul class="pagination">
 		<li class="disabled page-item">
-			<a class="page-link" href="#1" role="button">
+			<a class="page-link" href="#1" role="button" tabindex="-1">
 				<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-left" />
 				</svg>
@@ -155,7 +155,7 @@ title: "Paginations"
 	<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
 	<ul class="pagination">
 		<li class="disabled page-item">
-			<a class="page-link" href="#1" role="button">
+			<a class="page-link" href="#1" role="button" tabindex="-1">
 				<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-left" />
 				</svg>
@@ -218,7 +218,7 @@ title: "Paginations"
 	<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
 	<ul class="pagination">
 		<li class="disabled page-item">
-			<a class="page-link" href="#1" role="button">
+			<a class="page-link" href="#1" role="button" tabindex="-1">
 				<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-left" />
 				</svg>
@@ -283,7 +283,7 @@ title: "Paginations"
 	<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
 	<ul class="pagination">
 		<li class="disabled page-item">
-			<a class="page-link" href="#1" role="button">
+			<a class="page-link" href="#1" role="button" tabindex="-1">
 				<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-left" />
 				</svg>
@@ -346,7 +346,7 @@ title: "Paginations"
 	<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
 	<ul class="pagination">
 		<li class="disabled page-item">
-			<a class="page-link" href="#1" role="button">
+			<a class="page-link" href="#1" role="button" tabindex="-1">
 				<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-left" />
 				</svg>
@@ -411,7 +411,7 @@ title: "Paginations"
 	<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
 	<ul class="pagination">
 		<li class="disabled page-item">
-			<button class="btn btn-unstyled page-link" type="button">
+			<button class="btn btn-unstyled page-link" disabled type="button">
 				<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-left" />
 				</svg>
@@ -480,7 +480,7 @@ title: "Paginations"
 	<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
 	<ul class="pagination">
 		<li class="disabled page-item">
-			<button class="btn btn-unstyled page-link" type="button">
+			<button class="btn btn-unstyled page-link" disabled type="button">
 				<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-left" />
 				</svg>
