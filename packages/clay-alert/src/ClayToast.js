@@ -35,6 +35,14 @@ class ClayToast extends Component {
 	_handleHide() {
 		return !this.emit('hide');
 	}
+
+	/**
+	 * Emits hide alert.
+	 * @public
+	 */
+	close() {
+		this.emit('hide');
+	}
 }
 
 /**
