@@ -66,6 +66,17 @@ describe('ClayResultsBar', function() {
 		expect(resultsBar).toMatchSnapshot();
 	});
 
+	it('should render a results bar with filter labels and tbar inline breakpoint', () => {
+		resultsBar = new ClayResultsBar({
+			filterLabels: filterLabels,
+			spritemap: spritemap,
+			tbarInlineBreakpoint: 'lg',
+			totalItems: 10,
+		});
+
+		expect(resultsBar).toMatchSnapshot();
+	});
+
 	it('should render a results bar and emit an event on clear button click', () => {
 		resultsBar = new ClayResultsBar({
 			filterLabels: [],
