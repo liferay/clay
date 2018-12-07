@@ -83,7 +83,9 @@ ClayResultsBar.STATE = {
 	 * @memberof ClayResultsBar
 	 * @type {?(string|undefined)}
 	 */
-	tbarInlineBreakpoint: Config.oneOf(['lg', 'md', 'sm', 'xl', 'xs']).value('md'),
+	tbarInlineBreakpoint: Config.oneOf(['lg', 'md', 'sm', 'xl', 'xs']).value(
+		'md'
+	),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.

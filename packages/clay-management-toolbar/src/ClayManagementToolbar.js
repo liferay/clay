@@ -517,7 +517,9 @@ ClayManagementToolbar.STATE = {
 	 * @memberof ClayManagementToolbar
 	 * @type {?(string|undefined)}
 	 */
-	tbarInlineBreakpoint: Config.oneOf(['lg', 'md', 'sm', 'xl', 'xs']).value('md'),
+	tbarInlineBreakpoint: Config.oneOf(['lg', 'md', 'sm', 'xl', 'xs']).value(
+		'md'
+	),
 
 	/**
 	 * Total number of items. If totalItems is 0 most of the elements in the bar
