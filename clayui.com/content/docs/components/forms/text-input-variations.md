@@ -30,6 +30,24 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 	</div>
 </div>
 
+```soy
+{call ClayAutocomplete.render}
+	{param dataSource: [
+		'Robert Downey',
+		'Robert Plant',
+		'Robert Baratheon',
+		'Robert De niro'
+	] /}
+	{param inputValue: 'Rob' /}
+{/call}
+```
+```html
+<clay-autocomplete
+	dataSource="['Robert Downey', 'Robert Plant', 'Robert Baratheon', 'Robert De niro']"
+	inputValue="Rob"
+>
+</clay-autocomplete>
+```
 ```html
 <div class="dropdown-full form-group">
 	<input class="form-control" type="text" value="Rob"/>
@@ -49,6 +67,12 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 	</ul>
 </div>
 ```
+
+#### API
+
+<div>
+	[APITable "clay-autocomplete/src/ClayAutocomplete.js"]
+</div>
 
 ### Search field
 
@@ -197,6 +221,37 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 	</div>
 </div>
 
+```soy
+{call ClayMultiSelect.render}
+	{param dataSource: [
+		'wall',
+		'wallpaper',
+		'wonderwall',
+		'winterfell'
+	] /}
+	{param helpText: 'You can use a comma to enter tags' /}
+	{param label: 'Tags' /}
+	{param selectedItems: [
+		[
+			'label': 'wall',
+			'value': 'wall'
+		],
+		[
+			'label': 'wallpaper',
+			'value': 'wallpaper'
+		]
+	] /}
+{/call}
+```
+```html
+<clay-multi-select
+	dataSource="['wall', 'wallpaper', 'wonderwall', 'winterfell']"
+	helpText="You can use a comma to enter tags"
+	label="Tags"
+	selectedItems="[{'label': 'wall', 'value': 'wall'}, {'label': 'wallpaper', 'value': 'wallpaper'}]"
+>
+</clay-multi-select>
+```
 ```html
 <div class="form-group">
 	<label for="tagsField1">Tags</label>
@@ -272,6 +327,12 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 	</div>
 </div>
 ```
+
+#### API
+
+<div>
+	[APITable "clay-multi-select/src/ClayMultiSelect.js"]
+</div>
 
 ### Numeric field
 
