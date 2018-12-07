@@ -1,8 +1,4 @@
 .modal-content {
-	@if not ($modal-content-border-radius == $border-radius-lg) {
-		@include border-radius($modal-content-border-radius);
-	}
-
 	overflow: hidden;
 }
 
