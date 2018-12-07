@@ -5,6 +5,9 @@ $pagination-item-margin-x: 0.125rem !default;
 
 $pagination-link-border-radius: 4px !default;
 
+$pagination-link-first-border-radius: $pagination-link-border-radius !default;
+$pagination-link-last-border-radius: $pagination-link-border-radius !default;
+
 $pagination-bg: transparent !default;
 $pagination-border-color: $pagination-bg !default;
 $pagination-border-width: 0.0625rem !default; // 1px
