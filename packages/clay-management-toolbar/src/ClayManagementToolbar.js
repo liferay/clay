@@ -511,6 +511,15 @@ ClayManagementToolbar.STATE = {
 	spritemap: Config.string().required(),
 
 	/**
+	 * Sets the breakpoint of the results bar.
+	 * @default md
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?(string|undefined)}
+	 */
+	tbarInlineBreakpoint: Config.oneOf(['lg', 'md', 'sm', 'xl', 'xs']).value('md'),
+
+	/**
 	 * Total number of items. If totalItems is 0 most of the elements in the bar
 	 * will appear disabled.
 	 * @default undefined

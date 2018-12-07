@@ -105,6 +105,7 @@
 	{@param? showSearch: bool}
 	{@param? sortingOrder: string}
 	{@param? sortingURL: string}
+	{@param? tbarInlineBreakpoint: string}
 	{@param? totalItems: number}
 	{@param? viewTypes: list<[
 		active: bool,
@@ -190,6 +191,7 @@
 				{param ref: 'resultsBar' /}
 				{param searchValue: $searchValue /}
 				{param spritemap: $spritemap /}
+				{param tbarInlineBreakpoint: $tbarInlineBreakpoint ?: 'md' /}
 				{param totalItems: $totalItems ?: 0 /}
 			{/call}
 		{/if}

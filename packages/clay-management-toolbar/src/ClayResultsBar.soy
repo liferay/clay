@@ -11,8 +11,19 @@
 	{@param? _handleFilterLabelCloseClicked: any}
 	{@param? clearResultsURL: string}
 	{@param? searchValue: string}
+	{@param? tbarInlineBreakpoint: string}
 
-	<nav class="tbar tbar-inline-md-down subnav-tbar subnav-tbar-primary">
+	{let $classes kind="text"}
+		tbar
+		{if $tbarInlineBreakpoint}
+			{sp}tbar-inline-{$tbarInlineBreakpoint}-down
+		{/if}
+
+		{sp}subnav-tbar
+		subnav-tbar-primary
+	{/let}
+
+	<nav class="{$classes}">
 		<div class="container-fluid container-fluid-max-xl">
 			<ul class="tbar-nav tbar-nav-wrap">
 				{let $hasFilterLabels: length($filterLabels) > 0 /}

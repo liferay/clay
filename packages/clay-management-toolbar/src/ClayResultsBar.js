@@ -77,6 +77,15 @@ ClayResultsBar.STATE = {
 	searchValue: Config.string(),
 
 	/**
+	 * Sets the breakpoint of the results bar.
+	 * @default md
+	 * @instance
+	 * @memberof ClayResultsBar
+	 * @type {?(string|undefined)}
+	 */
+	tbarInlineBreakpoint: Config.oneOf(['lg', 'md', 'sm', 'xl', 'xs']).value('md'),
+
+	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 * @default undefined
 	 * @instance
