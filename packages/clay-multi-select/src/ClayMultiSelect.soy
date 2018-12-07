@@ -1,0 +1,254 @@
+{namespace ClayMultiSelect}
+
+/**
+ * This renders the component's whole content.
+ */
+{template .render}
+	{@param dataSource: string|[]|list<?>}
+	{@param helpText: string}
+	{@param spritemap: string}
+	{@param? _handleButtonClicked: any}
+	{@param? _handleCloseButtonClick: any}
+	{@param? _handleDataChange: any}
+	{@param? _handleDropdownItemClick: any}
+	{@param? _handleFilteredItemsChange: any}
+	{@param? _handleOnInput: any}
+	{@param? _handleOnKeydown: any}
+	{@param? _removeFocusedItem: any}
+	{@param? contentRenderer: string}
+	{@param? elementClasses: string}
+	{@param? enableAutocomplete: bool}
+	{@param? extractData: ?}
+	{@param? filteredItems: list<?>}
+	{@param? id: string}
+	{@param? initialData: []|list<?>}
+	{@param? inputName: string}
+	{@param? inputValue: string}
+	{@param? label: string}
+	{@param? requestOptions: [
+		method: string,
+		mode: string,
+		cache: string,
+		credentials: string,
+		headers: [],
+		redirect: string,
+		referrer: string,
+		body: []
+	]}
+	{@param? requestPolling: number}
+	{@param? requestRetries: number}
+	{@param? requestTimeout: number}
+	{@param? selectedItems: list<?>}
+	{@param? selectedItemsInputName: string}
+
+	{let $attributes kind="attributes"}
+		class="from-group
+			{if $elementClasses}
+				{sp}{$elementClasses}
+			{/if}
+		"
+
+		{if $id}
+			id="{$id}"
+		{/if}
+	{/let}
+
+	<div {$attributes}>
+		{if $label}
+			{let $labelAttributes kind="attributes"}
+				{if $inputName}
+					for="{$inputName}"
+				{/if}
+			{/let}
+
+			<label {$labelAttributes}>{$label}</label>
+		{/if}
+
+		{call .content}
+			{param _handleButtonClicked: $_handleButtonClicked /}
+			{param _handleCloseButtonClick: $_handleCloseButtonClick /}
+			{param _handleDataChange: $_handleDataChange /}
+			{param _handleDropdownItemClick: $_handleDropdownItemClick /}
+			{param _handleFilteredItemsChange: $_handleFilteredItemsChange /}
+			{param _handleOnInput: $_handleOnInput /}
+			{param _handleOnKeydown: $_handleOnKeydown /}
+			{param _removeFocusedItem: $_removeFocusedItem /}
+			{param contentRenderer: $contentRenderer /}
+			{param dataSource: $dataSource /}
+			{param enableAutocomplete: $enableAutocomplete /}
+			{param extractData: $extractData /}
+			{param filteredItems: $filteredItems /}
+			{param helpText: $helpText /}
+			{param initialData: $initialData /}
+			{param inputName: $inputName /}
+			{param inputValue: $inputValue /}
+			{param requestOptions: $requestOptions /}
+			{param requestPolling: $requestPolling /}
+			{param requestRetries: $requestRetries /}
+			{param requestTimeout: $requestTimeout /}
+			{param selectedItems: $selectedItems /}
+			{param selectedItemsInputName: $selectedItemsInputName /}
+			{param spritemap: $spritemap /}
+		{/call}
+	</div>
+{/template}
+
+/**
+ * This render the content from the multi select.
+ */
+{template .content}
+	{@param dataSource: string|[]|list<?>}
+	{@param helpText: string}
+	{@param spritemap: string}
+	{@param? _handleButtonClicked: any}
+	{@param? _handleCloseButtonClick: any}
+	{@param? _handleDataChange: any}
+	{@param? _handleDropdownItemClick: any}
+	{@param? _handleFilteredItemsChange: any}
+	{@param? _handleOnInput: any}
+	{@param? _handleOnKeydown: any}
+	{@param? _removeFocusedItem: any}
+	{@param? contentRenderer: string}
+	{@param? enableAutocomplete: bool}
+	{@param? extractData: ?}
+	{@param? filteredItems: list<?>}
+	{@param? initialData: []|list<?>}
+	{@param? inputName: string}
+	{@param? inputValue: string}
+	{@param? requestOptions: [
+		method: string,
+		mode: string,
+		cache: string,
+		credentials: string,
+		headers: [],
+		redirect: string,
+		referrer: string,
+		body: []
+	]}
+	{@param? requestPolling: number}
+	{@param? requestRetries: number}
+	{@param? requestTimeout: number}
+	{@param? selectedItems: list<?>}
+	{@param? selectedItemsInputName: string}
+
+	<div class="input-group input-group-stacked-sm-down">
+		<div class="input-group-item">
+			{call ClayAutocomplete.render}
+				{param contentRenderer: $contentRenderer /}
+				{param dataSource: $dataSource /}
+				{param elementClasses: 'form-control form-control-tag-group' /}
+				{param enableAutocomplete: $enableAutocomplete /}
+				{param events: [
+					'dataChange': $_handleDataChange,
+					'filteredItems': $_handleFilteredItemsChange,
+					'inputOnBlur': $_removeFocusedItem,
+					'inputOnFocus': $_removeFocusedItem,
+					'inputOnKeydown': $_handleOnKeydown,
+					'itemSelected': $_handleDropdownItemClick,
+					'queryChange': $_handleOnInput
+				] /}
+				{param extractData: $extractData /}
+				{param filteredItems: $filteredItems /}
+				{param initialData: $initialData /}
+				{param inputElementClasses: 'form-control-inset' /}
+				{param inputName: $inputName /}
+				{param inputValue: $inputValue /}
+				{param ref: 'autocomplete' /}
+				{param requestOptions: $requestOptions /}
+				{param requestPolling: $requestPolling /}
+				{param requestRetries: $requestRetries /}
+				{param requestTimeout: $requestTimeout /}
+				{param unstable_content kind="html"}
+					{if $selectedItems}
+						{call .items}
+							{param _handleCloseButtonClick: $_handleCloseButtonClick /}
+							{param contentRenderer: $contentRenderer /}
+							{param selectedItems: $selectedItems /}
+							{param selectedItemsInputName: $selectedItemsInputName /}
+							{param spritemap: $spritemap /}
+						{/call}
+					{/if}
+				{/param}
+			{/call}
+
+			{let $isVisible: $filteredItems and length($filteredItems) > 0 ? true : false /}
+
+			{if not $isVisible}
+				<div class="form-feedback-group">
+					<div class="form-text">
+						{$helpText}
+					</div>
+				</div>
+			{/if}
+		</div>
+		<div class="input-group-item input-group-item-shrink">
+			{call ClayButton.render}
+				{param events: ['click': $_handleButtonClicked] /}
+				{param label kind="text"}
+					{msg desc="Select items"}
+						select
+					{/msg}
+				{/param}
+
+				{param ref: 'button' /}
+				{param style: 'secondary' /}
+			{/call}
+		</div>
+	</div>
+{/template}
+
+/**
+ * This render the selected items.
+ */
+{template .items}
+	{@param selectedItems: list<?>}
+	{@param spritemap: string}
+	{@param? _handleCloseButtonClick: any}
+	{@param? contentRenderer: string}
+	{@param? selectedItemsInputName: string}
+
+	{foreach $item in $selectedItems}
+		{if $selectedItemsInputName}
+			{let $inputAttributes kind="attributes"}
+				{if $selectedItemsInputName}
+					name="{$selectedItemsInputName}"
+				{/if}
+
+				type="hidden"
+				value="{$item.value}"
+			{/let}
+
+			<input {$inputAttributes}>
+		{/if}
+
+		{delcall ClayMultiSelect.Item variant="$contentRenderer" allowemptydefault="true"}
+			{param _handleCloseButtonClick: $_handleCloseButtonClick /}
+			{param data: $item /}
+			{param index: index($item) /}
+			{param spritemap: $spritemap /}
+		{/delcall}
+	{/foreach}
+{/template}
+
+/**
+ * This render the item.
+ * Extension point: Create a new variation above ClayMultiSelect.Item
+ * so you can create your own markup.
+ */
+{deltemplate ClayMultiSelect.Item}
+	{@param data: ?}
+	{@param index: int}
+	{@param spritemap: string}
+	{@param? _handleCloseButtonClick: any}
+
+	{call ClayLabel.render}
+		{param closeable: true /}
+		{param data: ['tag': $index] /}
+		{param events: ['close': $_handleCloseButtonClick] /}
+		{param id: 'item-tag' /}
+		{param label: $data.label /}
+		{param ref: 'item' + $index /}
+		{param spritemap: $spritemap /}
+		{param tabIndex: '0' /}
+	{/call}
+{/deltemplate}

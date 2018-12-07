@@ -62,6 +62,12 @@ exports[`ClayLabel should render a label with no style 1`] = `
 </span>
 `;
 
+exports[`ClayLabel should render a label with tabIndex 1`] = `
+<span class="label label-secondary" tabindex="0">
+  <span class="label-item label-item-expand"></span>
+</span>
+`;
+
 exports[`ClayLabel should render a large label 1`] = `
 <span class="label label-secondary label-lg">
   <span class="label-item label-item-expand"></span>

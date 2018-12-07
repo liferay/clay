@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: ClayAutocomplete</title>
+
+	<link rel="stylesheet" href="../../../node_modules/clay-css/lib/css/atlas.css">
+
+	<style>
+		body {
+			background-color: #FFF;
+		}
+
+		.row {
+			margin-bottom: 20px;
+		}
+	</style>
+
+	<script src="../build/globals/clay-autocomplete.js"></script>
+</head>
+<body class="container" role="main">
+	<h1 class="page-title" id="pageTitle">
+		ClayAutocomplete
+	</h1>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h2>Default State</h2>
+			<div id="default-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h2>With disabled autocomplete</h2>
+			<div id="disabled-autocomplete-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h2>With data remote</h2>
+			<div id="data-remote-block"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		const dataSource = [
+			'Bread',
+			'Ammonia cookie',
+			'Cuisine of Antebellum America',
+			'Apple butter',
+			'Apple sauce',
+			'Baked potato',
+			'Barbecue',
+			'Bear claw',
+			'Beef Manhattan',
+			'Blue cheese dressing',
+			'Blue-plate special',
+			'Bookbinder soup',
+			'Breakfast burrito',
+			'Brunswick stew',
+			'Buffalo burger',
+			'Buffalo wing',
+			'Bull roast',
+			'Burnt ends',
+			'Butter cookie',
+		];
+
+		// Default State
+		new metal.ClayAutocomplete({
+			dataSource,
+		}, '#default-block');
+
+		// With disabled autocomplete
+		new metal.ClayAutocomplete({
+			dataSource,
+			enableAutocomplete: false,
+		}, '#disabled-autocomplete-block');
+
+		// With data remote
+		new metal.ClayAutocomplete({
+			dataSource: 'https://api.pro.coinbase.com/currencies',
+			extractData: (elem) => elem.name,
+		}, '#data-remote-block');
+
+	</script>
+</body>
+</html>

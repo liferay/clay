@@ -1,0 +1,59 @@
+{
+    "_handleDropdownItemClick": "(any|null)",
+    "enableAutocomplete": true,
+    "requestRetries": 5,
+    "helpText": "Help text",
+    "_handleOnKeydown": "(any|null)",
+    "_handleDataChange": "(any|null)",
+    "filteredItems": [
+        {
+            "index": 0,
+            "matches": [
+                {
+                    "match": true,
+                    "value": "B"
+                },
+                {
+                    "match": true,
+                    "value": "r"
+                },
+                {
+                    "match": true,
+                    "value": "e"
+                },
+                {
+                    "match": true,
+                    "value": "a"
+                },
+                {
+                    "value": "d"
+                }
+            ],
+            "originalString": "Bread",
+            "score": 26
+        }
+    ],
+    "_handleButtonClicked": "(any|null)",
+    "contentRenderer": "(null|string)",
+    "inputName": "input name",
+    "spritemap": "icons.svg",
+    "requestPolling": 5,
+    "initialData": [],
+    "extractData": "(null|unknown)",
+    "_handleCloseButtonClick": "(any|null)",
+    "_removeFocusedItem": "(any|null)",
+    "_handleFilteredItemsChange": "(any|null)",
+    "_handleOnInput": "(any|null)",
+    "inputValue": "input value",
+    "dataSource": [
+        "Bread"
+    ],
+    "requestTimeout": 10000,
+    "selectedItems": [
+        {
+            "label": "Foo",
+            "value": "foo"
+        }
+    ],
+    "selectedItemsInputName": "selectedItems"
+}

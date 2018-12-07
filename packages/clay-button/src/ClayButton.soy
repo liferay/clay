@@ -17,6 +17,7 @@
 	{@param? size: string}
 	{@param? spritemap: string}
 	{@param? style: bool|string}
+	{@param? tabIndex: string}
 	{@param? title: string}
 	{@param? type: string}
 	{@param? value: string}
@@ -62,6 +63,10 @@
 
 		{if $name}
 			name="{$name}"
+		{/if}
+
+		{if $tabIndex}
+			tabIndex="{$tabIndex}"
 		{/if}
 
 		{if $title}

@@ -173,4 +173,12 @@ describe('ClayButton', function() {
 			'myValue'
 		);
 	});
+
+	it('should render a button with tabIndex', function() {
+		button = new ClayButton({
+			tabIndex: '-1',
+		});
+
+		expect(button).toMatchSnapshot();
+	});
 });
