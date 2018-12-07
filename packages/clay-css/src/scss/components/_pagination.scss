@@ -16,13 +16,14 @@
 
 	.pagination {
 		@include clay-scale-component {
-			margin-top: 0.5rem;
+			margin-top: $pagination-margin-top-mobile;
 		}
 	}
 }
 
 .page-link {
 	@include border-radius($pagination-link-border-radius);
+	@include transition($pagination-link-transition);
 
 	&:focus {
 		z-index: 3;
@@ -38,6 +39,23 @@
 		line-height: $pagination-line-height;
 		max-width: none;
 		padding: $pagination-padding-y $pagination-padding-x;
+
+		&:hover {
+			background-color: $pagination-hover-bg;
+			border-color: $pagination-hover-border-color;
+			color: $pagination-hover-color;
+		}
+
+		&:focus {
+			box-shadow: $pagination-focus-box-shadow;
+		}
+
+		&:disabled {
+			background-color: $pagination-disabled-bg;
+			border-color: $pagination-disabled-border-color;
+			color: $pagination-disabled-color;
+			opacity: $pagination-disabled-opacity;
+		}
 	}
 }
 
@@ -47,10 +65,25 @@
 	margin-right: $pagination-item-margin-x;
 	margin-top: $pagination-item-margin-y;
 
-	&:first-child,
+	&:first-child {
+		.page-link {
+			border-radius: $pagination-link-first-border-radius;
+		}
+	}
+
 	&:last-child {
 		.page-link {
-			@include border-radius($pagination-link-border-radius);
+			border-radius: $pagination-link-last-border-radius;
+		}
+	}
+
+	&.active .page-link {
+		cursor: default;
+
+		&.btn-unstyled {
+			background-color: $pagination-active-bg;
+			border-color: $pagination-active-border-color;
+			color: $pagination-active-color;
 		}
 	}
 
@@ -58,10 +91,6 @@
 		cursor: $pagination-disabled-cursor;
 		opacity: $pagination-disabled-opacity;
 		pointer-events: $pagination-disabled-pointer-events;
-	}
-
-	&.active .page-link {
-		cursor: default;
 	}
 }
 
@@ -84,11 +113,17 @@
 		padding: $pagination-padding-y $pagination-padding-x;
 		text-decoration: none;
 
-		&:hover,
-		&:focus {
+		@include transition($pagination-items-per-page-transition);
+
+		&:hover {
 			background-color: $pagination-items-per-page-hover-bg;
 			border-color: $pagination-items-per-page-hover-border-color;
 			color: $pagination-items-per-page-hover-color;
+		}
+
+		&:focus {
+			box-shadow: $pagination-items-per-page-focus-box-shadow;
+			outline: $pagination-items-per-page-focus-outline;
 		}
 	}
 
