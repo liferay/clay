@@ -107,6 +107,15 @@ class ClayTable extends Component {
  */
 ClayTable.STATE = {
 	/**
+	 * Variant name to render the actions menu
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayTable
+	 * @type {?(string|undefined)}
+	 */
+	actionsMenuVariant: Config.string(),
+
+	/**
 	 * CSS classes to be applied to the element.
 	 * @default undefined
 	 * @instance

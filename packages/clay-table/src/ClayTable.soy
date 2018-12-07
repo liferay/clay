@@ -22,6 +22,7 @@
 	{@param? _handleCellContentClick: any}
 	{@param? _handleItemToggled: any}
 	{@param? _handleSortingClick: any}
+	{@param? actionsMenuVariant: string}
 	{@param? elementClasses: string}
 	{@param? id: string}
 	{@param? items: list<?>}
@@ -62,6 +63,7 @@
 			{call .body}
 				{param _handleCellContentClick: $_handleCellContentClick /}
 				{param _handleItemToggled: $_handleItemToggled /}
+				{param actionsMenuVariant: $actionsMenuVariant /}
 				{param id: $id /}
 				{param items: $items /}
 				{param schema: $schema /}
@@ -121,6 +123,7 @@
 	]}
 	{@param? _handleCellContentClick: any}
 	{@param? _handleItemToggled: any}
+	{@param? actionsMenuVariant: string}
 	{@param? id: string}
 	{@param? items: list<?>}
 	{@param? selectable: bool}
@@ -132,6 +135,7 @@
 			{call .rows}
 				{param _handleCellContentClick: $_handleCellContentClick /}
 				{param _handleItemToggled: $_handleItemToggled /}
+				{param actionsMenuVariant: $actionsMenuVariant /}
 				{param groupName: $id /}
 				{param items: $items /}
 				{param schema: $schema /}
@@ -227,6 +231,7 @@
 	]}
 	{@param? _handleCellContentClick: any}
 	{@param? _handleItemToggled: any}
+	{@param? actionsMenuVariant: string}
 	{@param? groupName: string}
 	{@param? selectable: bool}
 	{@param? showActionsMenu: bool}
@@ -299,28 +304,10 @@
 		{/if}
 
 		{if $showActionsMenu and $item.actionItems and $spritemap}
-			<td>
-				<div class="quick-action-menu">
-					{foreach $actionItem in $item.actionItems}
-						{if $actionItem.quickAction and $actionItem.icon}
-							{call ClayLink.render}
-								{param ariaLabel: $actionItem.label /}
-								{param elementClasses: 'component-action quick-action-item' /}
-								{param href: $actionItem.href /}
-								{param icon: $actionItem.icon /}
-								{param spritemap: $spritemap /}
-								{param title: $actionItem.lable /}
-							{/call}
-						{/if}
-					{/foreach}
-				</div>
-
-				{call ClayActionsDropdown.render}
-					{param items: $item.actionItems /}
-					{param spritemap: $spritemap /}
-					{param triggerClasses: 'component-action' /}
-				{/call}
-			</td>
+			{delcall ClayTable.ActionsMenu variant="$actionsMenuVariant"}
+				{param actionItems: $item.actionItems /}
+				{param spritemap: $spritemap /}
+			{/delcall}
 		{/if}
 	</tr>
 {/template}
@@ -348,6 +335,7 @@
 	]}
 	{@param? _handleCellContentClick: any}
 	{@param? _handleItemToggled: any}
+	{@param? actionsMenuVariant: string}
 	{@param? groupName: string}
 	{@param? selectable: bool}
 	{@param? showActionsMenu: bool}
@@ -379,6 +367,7 @@
 			{call .rows}
 				{param _handleCellContentClick: $_handleCellContentClick /}
 				{param _handleItemToggled: $_handleItemToggled /}
+				{param actionsMenuVariant: $actionsMenuVariant /}
 				{param groupName: $currentgroupName /}
 				{param items: $item.items /}
 				{param schema: $schema /}
@@ -390,6 +379,7 @@
 			{call .row}
 				{param _handleCellContentClick: $_handleCellContentClick /}
 				{param _handleItemToggled: $_handleItemToggled /}
+				{param actionsMenuVariant: $actionsMenuVariant /}
 				{param groupName: $groupName /}
 				{param item: $item /}
 				{param schema: $schema /}
@@ -400,6 +390,37 @@
 		{/if}
 	{/foreach}
 {/template}
+
+/**
+ * This renders the default variant of the actions menu
+ */
+{deltemplate ClayTable.ActionsMenu}
+	{@param actionItems: list<?>}
+	{@param spritemap: string}
+
+	<td>
+		<div class="quick-action-menu">
+			{foreach $actionItem in $actionItems}
+				{if $actionItem.quickAction and $actionItem.icon}
+					{call ClayLink.render}
+						{param ariaLabel: $actionItem.label /}
+						{param elementClasses: 'component-action quick-action-item' /}
+						{param href: $actionItem.href /}
+						{param icon: $actionItem.icon /}
+						{param spritemap: $spritemap /}
+						{param title: $actionItem.lable /}
+					{/call}
+				{/if}
+			{/foreach}
+		</div>
+
+		{call ClayActionsDropdown.render}
+			{param items: $actionItems /}
+			{param spritemap: $spritemap /}
+			{param triggerClasses: 'component-action' /}
+		{/call}
+	</td>
+{/deltemplate}
 
 /**
  * This renders the default variant of a cell
