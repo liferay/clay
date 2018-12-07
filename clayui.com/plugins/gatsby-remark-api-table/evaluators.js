@@ -4,6 +4,7 @@ const VISITOR = {
 	NonNullableType,
 	NullableType,
 	type,
+	TypeApplication,
 	UndefinedLiteral,
 	UnionType,
 };
@@ -43,11 +44,19 @@ function NameExpression(type) {
 function UnionType(type) {
 	return type.elements.map(element => {
 		return VISITOR[element.type](element);
-	}).join('/');
+	}).join('|');
 }
 
 function UndefinedLiteral(type) {
 	return 'undefined';
+}
+
+function TypeApplication(type) {
+	let applications = type.applications.map(element => {
+		return VISITOR[element.type](element);
+	}).join('|');
+
+	return `${VISITOR[type.expression.type](type.expression)}&lt${applications}&gt`;
 }
 
 module.exports = VISITOR;
