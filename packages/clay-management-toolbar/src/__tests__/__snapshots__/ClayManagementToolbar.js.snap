@@ -2093,7 +2093,8 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
           <div class="tbar-section">
             <span class="label label-dismissible component-label tbar-label">
               <span class="label-item label-item-expand">
-                <div class="label-section">&lt;strong&gt;Category:&lt;/strong&gt;Label 3</div>
+                <div class="label-section">
+                  <strong>Category:</strong>Label 3</div>
               </span>
               <span class="label-item label-item-after">
                 <button class="btn close" aria-label="close" type="button">

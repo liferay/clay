@@ -1212,7 +1212,7 @@ describe('ClayManagementToolbar', function() {
 		const spy = jest.spyOn(managementToolbar, 'emit');
 
 		// eslint-disable-next-line
-		managementToolbar.refs.resultsBar.refs.label1.refs.closeButton.element.click();
+		managementToolbar.refs.resultsBar.refs.label1.refs.label.refs.closeButton.element.click();
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
