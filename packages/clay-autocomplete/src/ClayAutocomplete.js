@@ -155,6 +155,7 @@ class ClayAutocomplete extends ClayComponent {
 			data: {
 				value: this.refs.input.value,
 				key: event.key,
+				eventFromInput: event.delegateTarget.tagName === 'INPUT',
 			},
 			name: 'inputOnKeydown',
 			originalEvent: event,
