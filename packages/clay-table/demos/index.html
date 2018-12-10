@@ -258,7 +258,19 @@
 			useDefaultClasses: false,
 			events: {
 				cellContentClicked: (event) => {
-					event.data.event.target.closest('tr').classList.toggle('active');
+					const items = event.target.items;
+
+					event.target.items = items.map(
+						item => Object.assign(
+							{},
+							item,
+							event.data.item.id == item.id
+								? item.rowClasses.includes('active')
+									? {rowClasses: 'table-row'}
+									: {rowClasses: 'table-row active'}
+								: {rowClasses: item.rowClasses}
+						)
+					);
 				},
 			},
 			items: [
