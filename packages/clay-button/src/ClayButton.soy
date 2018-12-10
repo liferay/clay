@@ -17,6 +17,7 @@
 	{@param? size: string}
 	{@param? spritemap: string}
 	{@param? style: bool|string}
+	{@param? tabIndex: string}
 	{@param? title: string}
 	{@param? type: string}
 	{@param? value: string}
@@ -48,9 +49,7 @@
 
 		{if $ariaLabel}
 			aria-label="{$ariaLabel}"
-		{elseif $label}
-			aria-label="{$label}"
-		{elseif $icon}
+		{elseif $icon and not $label}
 			aria-label="{$icon}"
 		{/if}
 
@@ -64,6 +63,10 @@
 
 		{if $name}
 			name="{$name}"
+		{/if}
+
+		{if $tabIndex}
+			tabIndex="{$tabIndex}"
 		{/if}
 
 		{if $title}

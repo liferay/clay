@@ -30,6 +30,7 @@
     "http-server": "^0.9.0",
     "husky": "^0.14.2",
     "jest": "^20.0.4",
+    "jest-fetch-mock": "^2.0.1",
     "lerna": "^3.4.0",
     "metal-jest-serializer": "^2.0.0",
     "metal-soy-critic": "^2.4.0",
@@ -37,12 +38,15 @@
     "prettier-eslint-cli": "^4.7.0"
   },
   "jest": {
+    "setupFiles": [
+      "./scripts/setupTests.js"
+    ],
     "collectCoverage": true,
     "coverageReporters": [
       "json",
       "lcov"
     ],
-    "resolver": "./jest-clay-lerna-resolver",
+    "resolver": "./scripts/jest-clay-lerna-resolver",
     "snapshotSerializers": [
       "metal-jest-serializer"
     ],
@@ -56,10 +60,15 @@
     ]
   },
   "workspaces": {
-    "packages": ["packages/*"],
-    "nohoist": ["**/clay-charts-shared"]
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/clay-charts-shared"
+    ]
   },
   "resolutions": {
-    "js-beautify": "1.7.5"
+    "js-beautify": "1.7.5",
+    "event-stream": "3.3.4"
   }
 }

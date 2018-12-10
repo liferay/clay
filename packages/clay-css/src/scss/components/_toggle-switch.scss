@@ -32,7 +32,7 @@
 		cursor: pointer;
 		display: block;
 		float: left;
-		font-size: 0.75rem;
+		font-size: $toggle-switch-bar-font-size;
 		height: $toggle-switch-bar-height;
 		line-height: $toggle-switch-bar-height;
 		position: relative;
@@ -189,7 +189,7 @@
 .toggle-switch-text {
 	clear: both;
 	display: block;
-	font-size: 0.75rem;
+	font-size: $toggle-switch-text-font-size;
 }
 
 .toggle-switch-text-left {

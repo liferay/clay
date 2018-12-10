@@ -1,7 +1,3 @@
-.breadcrumb {
-	border-radius: $breadcrumb-border-radius;
-}
-
 .breadcrumb-link {
 	display: block;
 	color: $breadcrumb-link-color;
@@ -92,7 +88,6 @@
 .breadcrumb-text-truncate {
 	display: inline-block;
 	max-width: $breadcrumb-text-truncate-max-width;
-	pointer-events: none;
 
 	@include text-truncate;
 

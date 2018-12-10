@@ -65,11 +65,18 @@ ClayIcon.STATE = {
 	/**
 	 * The title of the Clay SVG Icon.
 	 * @default undefined
+	 * @deprecated since version 2.4.x
 	 * @instance
 	 * @memberof ClayIcon
 	 * @type {?(string|undefined)}
 	 */
-	title: Config.string(),
+	title: Config.validator(value => {
+		if (value) {
+			console.warn(
+				'🚨 The `title` API will be deprecated and removed in the next release. See more information https://goo.gl/EycJtK'
+			);
+		}
+	}),
 };
 
 defineWebComponent('clay-icon', ClayIcon);

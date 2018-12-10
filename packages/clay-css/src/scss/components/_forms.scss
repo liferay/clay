@@ -99,6 +99,10 @@ label {
 		}
 	}
 
+	&.focus {
+		@include clay-form-control-focus();
+	}
+
 	&[type="range"] {
 		background-color: transparent;
 		border-color: transparent;
@@ -426,7 +430,11 @@ fieldset[disabled] label {
 		width: 100%;
 
 		&:not(:last-child) {
-			margin-bottom: 1rem;
+			margin-bottom: $form-group-margin-bottom;
+
+			@include media-breakpoint-down(xs) {
+				margin-bottom: $form-group-margin-bottom-mobile;
+			}
 		}
 	}
 

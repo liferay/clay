@@ -18,31 +18,31 @@
 
 	&:focus {
 		+ .btn-primary {
-			@extend .btn-primary.focus !optional;
+			@extend %btn-primary-focus !optional;
 		}
 
 		+ .btn-secondary {
-			@extend .btn-secondary.focus !optional;
+			@extend %btn-secondary-focus !optional;
 		}
 
 		+ .btn-success {
-			@extend .btn-success.focus !optional;
+			@extend %btn-success-focus !optional;
 		}
 
 		+ .btn-warning {
-			@extend .btn-warning.focus !optional;
+			@extend %btn-warning-focus !optional;
 		}
 
 		+ .btn-danger {
-			@extend .btn-danger.focus !optional;
+			@extend %btn-danger-focus !optional;
 		}
 
 		+ .btn-light {
-			@extend .btn-light.focus !optional;
+			@extend %btn-light-focus !optional;
 		}
 
 		+ .btn-dark {
-			@extend .btn-dark.focus !optional;
+			@extend %btn-dark-focus !optional;
 		}
 
 		+ .input-group {
@@ -60,22 +60,23 @@
 	}
 }
 
-.custom-file-input:focus + .custom-file-control {
-	border-radius: 1px;
-}
-
 // Custom Checkbox and Radio
 
 .custom-control {
 	label {
 		cursor: $custom-control-description-cursor;
-		font-size: 1rem;
+		font-size: $font-size-base;
 	}
 }
 
 .custom-control-label {
 	font-size: $custom-control-description-font-size;
 	line-height: $custom-control-description-line-height;
+	position: static;
+}
+
+label.custom-control-label {
+	font-size: $custom-control-description-font-size;
 }
 
 .custom-control-label-text {
@@ -89,6 +90,11 @@
 	border-style: $custom-control-indicator-border-style;
 	border-width: $custom-control-indicator-border-width;
 	font-size: $custom-control-indicator-size;
+	left: 0;
+}
+
+.custom-control-label::after {
+	left: 0;
 }
 
 .custom-control-input {

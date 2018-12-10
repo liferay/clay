@@ -98,7 +98,7 @@ This section demonstrates the different text input types, including usage and va
 	<div class="form-group has-success">
 		<label for="inputSuccess1">
 			has-success
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+			<svg class="lexicon-icon lexicon-icon-asterisk reference-mark" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#asterisk" />
 			</svg>
 		</label>
@@ -107,7 +107,7 @@ This section demonstrates the different text input types, including usage and va
 			<div class="form-feedback-item">This is a form-feedback-item.</div>
 			<div class="form-feedback-item">
 				<span class="form-feedback-indicator">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
+					<svg class="lexicon-icon lexicon-icon-check-circle-full" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#check-circle-full" />
 					</svg>
 				</span>
@@ -122,7 +122,7 @@ This section demonstrates the different text input types, including usage and va
 <div class="form-group has-success">
 	<label for="inputSuccess1">
 		has-success
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+		<svg class="lexicon-icon lexicon-icon-asterisk reference-mark" focusable="false" role="presentation">
 			<use href="/images/icons/icons.svg#asterisk" />
 		</svg>
 	</label>
@@ -131,7 +131,7 @@ This section demonstrates the different text input types, including usage and va
 		<div class="form-feedback-item">This is a form-feedback-item.</div>
 		<div class="form-feedback-item">
 			<span class="form-feedback-indicator">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle-full">
+				<svg class="lexicon-icon lexicon-icon-check-circle-full" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#check-circle-full" />
 				</svg>
 			</span>
@@ -148,7 +148,7 @@ This section demonstrates the different text input types, including usage and va
 	<div class="form-group has-warning">
 		<label for="inputWarning1">
 			has-warning
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+			<svg class="lexicon-icon lexicon-icon-asterisk reference-mark" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#asterisk" />
 			</svg>
 		</label>
@@ -157,7 +157,7 @@ This section demonstrates the different text input types, including usage and va
 			<div class="form-feedback-item">This is a form-feedback-item.</div>
 			<div class="form-feedback-item">
 				<span class="form-feedback-indicator">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+					<svg class="lexicon-icon lexicon-icon-warning-full" focusable="false" role="presentation">
 						`<use href="/images/icons/icons.svg#warning-full" />
 					</svg>
 				</span>
@@ -172,7 +172,7 @@ This section demonstrates the different text input types, including usage and va
 <div class="form-group has-warning">
 	<label for="inputWarning1">
 		has-warning
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+		<svg class="lexicon-icon lexicon-icon-asterisk reference-mark" focusable="false" role="presentation">
 			<use href="/images/icons/icons.svg#asterisk" />
 		</svg>
 	</label>
@@ -181,7 +181,7 @@ This section demonstrates the different text input types, including usage and va
 		<div class="form-feedback-item">This is a form-feedback-item.</div>
 		<div class="form-feedback-item">
 			<span class="form-feedback-indicator">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+				<svg class="lexicon-icon lexicon-icon-warning-full" focusable="false" role="presentation">
 					`<use href="/images/icons/icons.svg#warning-full" />
 				</svg>
 			</span>
@@ -198,7 +198,7 @@ This section demonstrates the different text input types, including usage and va
 	<div class="form-group has-error">
 		<label for="inputError1">
 			has-error
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+			<svg class="lexicon-icon lexicon-icon-asterisk reference-mark" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#asterisk" />
 			</svg>
 		</label>
@@ -207,7 +207,7 @@ This section demonstrates the different text input types, including usage and va
 			<div class="form-feedback-item">This is a form-feedback-item.</div>
 			<div class="form-feedback-item">
 				<span class="form-feedback-indicator">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+					<svg class="lexicon-icon lexicon-icon-exclamation-full" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#exclamation-full" />
 					</svg>
 				</span>
@@ -222,7 +222,7 @@ This section demonstrates the different text input types, including usage and va
 <div class="form-group has-error">
 	<label for="inputError1">
 		has-error
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+		<svg class="lexicon-icon lexicon-icon-asterisk reference-mark" focusable="false" role="presentation">
 			<use href="/images/icons/icons.svg#asterisk" />
 		</svg>
 	</label>
@@ -231,7 +231,7 @@ This section demonstrates the different text input types, including usage and va
 		<div class="form-feedback-item">This is a form-feedback-item.</div>
 		<div class="form-feedback-item">
 			<span class="form-feedback-indicator">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+				<svg class="lexicon-icon lexicon-icon-exclamation-full" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#exclamation-full" />
 				</svg>
 			</span>

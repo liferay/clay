@@ -185,16 +185,6 @@ $input-group-addon-min-width: 2.375rem !default; // 38px
 $input-group-addon-padding-x: null !default;
 $input-group-addon-padding-y: null !default;
 
-// Input Group Sizes
-
-$input-group-addon-min-width-lg: 3rem !default; // 48px
-$input-group-addon-padding-x-lg: $input-padding-x-lg !default;
-$input-group-addon-padding-y-lg: null !default;
-
-$input-group-addon-min-width-sm: 1.9375rem !default; // 31px
-$input-group-addon-padding-x-sm: $input-padding-x-sm !default;
-$input-group-addon-padding-y-sm: null !default;
-
 // Input Group Secondary
 
 $input-group-secondary-addon-bg: $secondary !default;
@@ -202,9 +192,115 @@ $input-group-secondary-addon-border-color: $secondary !default;
 $input-group-secondary-addon-border-width: 0.0625rem !default; // 1px
 $input-group-secondary-addon-color: $white !default;
 
+// Input Group Item
+
+$input-group-item-margin-left: 0.5rem !default;
+
 // Input Group Inset
 
 $input-group-inset-item-color: $input-group-addon-color !default;
+$input-group-inset-item-padding-left: 5px !default;
+$input-group-inset-item-padding-right: 5px !default;
+
+$input-group-inset-item-btn: () !default;
+$input-group-inset-item-btn: map-merge((
+	height: 75%,
+	line-height: 1,
+	padding-bottom: 0,
+	padding-left: $btn-padding-x - 0.1875rem,
+	padding-right: $btn-padding-x - 0.1875rem,
+	padding-top: 0,
+), $input-group-inset-item-btn);
+
+$input-group-inset-form-file-btn: () !default;
+$input-group-inset-form-file-btn: map-merge((
+	height: 100%,
+), $input-group-inset-form-file-btn);
+
+// Input Group Lg
+
+$input-group-addon-min-width-lg: 3rem !default; // 48px
+$input-group-addon-padding-x-lg: $input-padding-x-lg !default;
+$input-group-addon-padding-y-lg: null !default;
+
+$input-group-lg-item-btn: () !default; // .input-group-lg .input-group-item
+$input-group-lg-item-btn: map-merge((
+	breakpoint-down: null,
+	font-size: $btn-font-size-lg,
+	inline-item-font-size: $btn-inline-item-font-size-lg,
+	section-font-size: $btn-section-font-size-lg,
+	font-size-mobile: $btn-font-size-lg-mobile,
+	padding-bottom: $btn-padding-y-lg-mobile,
+	padding-left: $btn-padding-x-lg-mobile,
+	padding-right: $btn-padding-x-lg-mobile,
+	padding-top: $btn-padding-y-lg-mobile,
+), $input-group-lg-item-btn);
+
+$input-group-lg-item-btn-monospaced: () !default;
+$input-group-lg-item-btn-monospaced: map-merge((
+	breakpoint-down: null,
+	height: $btn-monospaced-size-lg,
+	padding-bottom: $btn-monospaced-padding-y-lg,
+	padding-left: $btn-monospaced-padding-x-lg,
+	padding-right: $btn-monospaced-padding-x-lg,
+	padding-top: $btn-monospaced-padding-y-lg,
+	width: $btn-monospaced-size-lg,
+	height-mobile: $btn-monospaced-size-lg-mobile,
+	width-mobile: $btn-monospaced-size-lg-mobile,
+), $input-group-lg-item-btn-monospaced);
+
+$input-group-lg-inset-item-btn: () !default;
+
+$input-group-lg-inset-item-form-file-btn: () !default;
+$input-group-lg-inset-item-form-file-btn: map-merge((
+	breakpoint-down: null,
+	height: 100%,
+	padding-bottom: 0,
+	padding-left: $btn-padding-x - 0.1875rem,
+	padding-right: $btn-padding-x - 0.1875rem,
+	padding-top: 0,
+), $input-group-lg-inset-item-form-file-btn);
+
+// Input Group Sm
+
+$input-group-addon-min-width-sm: 1.9375rem !default; // 31px
+$input-group-addon-padding-x-sm: $input-padding-x-sm !default;
+$input-group-addon-padding-y-sm: null !default;
+
+$input-group-sm-item-btn: () !default;
+$input-group-sm-item-btn: map-merge((
+	font-size: $btn-font-size-sm,
+	inline-item-font-size: $btn-inline-item-font-size-sm,
+	section-font-size: $btn-section-font-size-sm,
+	font-size-mobile: $btn-font-size-sm-mobile,
+	padding-bottom-mobile: $btn-padding-y-sm-mobile,
+	padding-left-mobile: $btn-padding-x-sm-mobile,
+	padding-right-mobile: $btn-padding-x-sm-mobile,
+	padding-top-mobile: $btn-padding-y-sm-mobile,
+), $input-group-sm-item-btn);
+
+$input-group-sm-item-btn-monospaced: () !default;
+$input-group-sm-item-btn-monospaced: map-merge((
+	height: $btn-monospaced-size-sm,
+	padding-bottom: $btn-monospaced-padding-y-sm,
+	padding-left: $btn-monospaced-padding-x-sm,
+	padding-right: $btn-monospaced-padding-x-sm,
+	padding-top: $btn-monospaced-padding-y-sm,
+	width: $btn-monospaced-size-sm,
+	height-mobile: $btn-monospaced-size-sm-mobile,
+	width-mobile: $btn-monospaced-size-sm-mobile,
+), $input-group-sm-item-btn-monospaced);
+
+$input-group-sm-inset-item-btn: () !default;
+
+$input-group-sm-inset-item-form-file-btn: () !default;
+$input-group-sm-inset-item-form-file-btn: map-merge((
+	height: 100%,
+	padding-bottom: 0,
+	padding-left: $btn-padding-x - 0.1875rem,
+	padding-right: $btn-padding-x - 0.1875rem,
+	padding-top: 0,
+), $input-group-sm-inset-item-form-file-btn);
 
 // Input Group Stacked
 

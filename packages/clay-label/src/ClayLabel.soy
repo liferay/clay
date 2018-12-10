@@ -13,6 +13,7 @@
 	{@param? size: string}
 	{@param? spritemap: string}
 	{@param? style: bool|string}
+	{@param? tabIndex: string}
 
 	{let $attributes kind="attributes"}
 		class="label
@@ -38,6 +39,10 @@
 		{if $id}
 			id="{$id}"
 		{/if}
+
+		{if $tabIndex}
+			tabIndex="{$tabIndex}"
+		{/if}
 	{/let}
 
 	<span {$attributes}>
@@ -47,6 +52,7 @@
 			{param href: $href /}
 			{param label: $label /}
 			{param spritemap: $spritemap /}
+			{param tabIndex: $tabIndex /}
 		{/call}
 	</span>
 {/template}
@@ -60,6 +66,7 @@
 	{@param? href: string}
 	{@param? label: html|string}
 	{@param? spritemap: string}
+	{@param? tabIndex: string}
 
 	{let $labelContent kind="html"}
 		<span class="label-item label-item-expand">
@@ -92,6 +99,7 @@
 				{param ref: 'closeButton' /}
 				{param spritemap: $spritemap /}
 				{param style: false /}
+				{param tabIndex: $tabIndex ? '-1' : null /}
 				{param type: 'button' /}
 			{/call}
 		</span>

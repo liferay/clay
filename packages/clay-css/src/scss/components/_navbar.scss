@@ -85,8 +85,8 @@
 }
 
 .navbar-text {
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
+	padding-left: $navbar-nav-link-padding-x;
+	padding-right: $navbar-nav-link-padding-x;
 }
 
 .navbar-collapse {
@@ -104,7 +104,6 @@
 .navbar-text-truncate {
 	display: inline-block;
 	max-width: 100%;
-	pointer-events: none;
 
 	@include text-truncate;
 
@@ -428,7 +427,7 @@
 			bottom: -$navbar-padding-y;
 			content: '';
 			display: block;
-			height: 0.1875rem;
+			height: $nav-underline-link-active-highlight-height;
 			left: 0;
 			position: absolute;
 			right: 0;
@@ -450,7 +449,7 @@
 						bottom: -$navbar-padding-y;
 						content: '';
 						display: block;
-						height: 0.1875rem;
+						height: $nav-underline-link-active-highlight-height;
 						left: 0;
 						position: absolute;
 						right: 0;

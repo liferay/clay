@@ -3,13 +3,19 @@ $pagination-font-size: null !default;
 $pagination-item-margin-x: null !default;
 $pagination-item-margin-y: null !default;
 
-$pagination-link-border-radius: null !default;
+$pagination-link-border-radius: 0 !default;
 $pagination-link-cursor: null !default;
+$pagination-link-transition: none !default;
+
+$pagination-link-first-border-radius: $border-radius 0 0 $border-radius !default;
+$pagination-link-last-border-radius: 0 $border-radius $border-radius 0 !default;
 
 $pagination-margin-bottom: 0.5rem !default;
 
+$pagination-margin-top-mobile: 0.5rem !default;
+
 $pagination-disabled-cursor: $disabled-cursor !default;
-$pagination-disabled-opacity: null !default;
+$pagination-disabled-opacity: 1 !default;
 $pagination-disabled-pointer-events: auto !default;
 
 $pagination-dropdown-menu-spacer-y: null !default;
@@ -19,10 +25,14 @@ $pagination-items-per-page-border-color: $pagination-border-color !default;
 $pagination-items-per-page-border-radius: $border-radius !default;
 $pagination-items-per-page-color: $pagination-color !default;
 $pagination-items-per-page-font-size: $pagination-font-size !default;
+$pagination-items-per-page-transition: $pagination-link-transition !default;
 
 $pagination-items-per-page-hover-bg: $pagination-hover-bg !default;
 $pagination-items-per-page-hover-border-color: $pagination-hover-border-color !default;
 $pagination-items-per-page-hover-color: $pagination-hover-color !default;
+
+$pagination-items-per-page-focus-box-shadow: $pagination-focus-box-shadow !default;
+$pagination-items-per-page-focus-outline: 0 !default;
 
 $pagination-results-color: null !default;
 

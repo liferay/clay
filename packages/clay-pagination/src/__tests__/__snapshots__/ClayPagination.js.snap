@@ -4,8 +4,7 @@ exports[`ClayPagination should render a ClayPagination with 1 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item disabled">
     <a aria-label="previous-page" class=" page-link" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -15,8 +14,7 @@ exports[`ClayPagination should render a ClayPagination with 1 total pages and pa
   </li>
   <li class="page-item disabled">
     <a aria-label="next-page" class=" page-link" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -28,8 +26,7 @@ exports[`ClayPagination should render a ClayPagination with 2 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item disabled">
     <a aria-label="previous-page" class=" page-link" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -42,8 +39,7 @@ exports[`ClayPagination should render a ClayPagination with 2 total pages and pa
   </li>
   <li class="page-item" data-page="2">
     <a aria-label="next-page" class=" page-link" href="#2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -55,8 +51,7 @@ exports[`ClayPagination should render a ClayPagination with 2 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="1">
     <a aria-label="previous-page" class=" page-link" href="#1">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -69,8 +64,7 @@ exports[`ClayPagination should render a ClayPagination with 2 total pages and pa
   </li>
   <li class="page-item disabled">
     <a aria-label="next-page" class=" page-link" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -82,8 +76,7 @@ exports[`ClayPagination should render a ClayPagination with 3 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item disabled">
     <a aria-label="previous-page" class=" page-link" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -99,8 +92,7 @@ exports[`ClayPagination should render a ClayPagination with 3 total pages and pa
   </li>
   <li class="page-item" data-page="2">
     <a aria-label="next-page" class=" page-link" href="#2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -112,8 +104,7 @@ exports[`ClayPagination should render a ClayPagination with 3 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="1">
     <a aria-label="previous-page" class=" page-link" href="#1">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -129,8 +120,7 @@ exports[`ClayPagination should render a ClayPagination with 3 total pages and pa
   </li>
   <li class="page-item" data-page="3">
     <a aria-label="next-page" class=" page-link" href="#3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -142,8 +132,7 @@ exports[`ClayPagination should render a ClayPagination with 3 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="2">
     <a aria-label="previous-page" class=" page-link" href="#2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -159,8 +148,7 @@ exports[`ClayPagination should render a ClayPagination with 3 total pages and pa
   </li>
   <li class="page-item disabled">
     <a aria-label="next-page" class=" page-link" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -172,8 +160,7 @@ exports[`ClayPagination should render a ClayPagination with 4 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item disabled">
     <a aria-label="previous-page" class=" page-link" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -192,8 +179,7 @@ exports[`ClayPagination should render a ClayPagination with 4 total pages and pa
   </li>
   <li class="page-item" data-page="2">
     <a aria-label="next-page" class=" page-link" href="#2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -205,8 +191,7 @@ exports[`ClayPagination should render a ClayPagination with 4 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="1">
     <a aria-label="previous-page" class=" page-link" href="#1">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -225,8 +210,7 @@ exports[`ClayPagination should render a ClayPagination with 4 total pages and pa
   </li>
   <li class="page-item" data-page="3">
     <a aria-label="next-page" class=" page-link" href="#3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -238,8 +222,7 @@ exports[`ClayPagination should render a ClayPagination with 4 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="2">
     <a aria-label="previous-page" class=" page-link" href="#2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -258,8 +241,7 @@ exports[`ClayPagination should render a ClayPagination with 4 total pages and pa
   </li>
   <li class="page-item" data-page="4">
     <a aria-label="next-page" class=" page-link" href="#4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -271,8 +253,7 @@ exports[`ClayPagination should render a ClayPagination with 4 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="3">
     <a aria-label="previous-page" class=" page-link" href="#3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -291,8 +272,7 @@ exports[`ClayPagination should render a ClayPagination with 4 total pages and pa
   </li>
   <li class="page-item disabled">
     <a aria-label="next-page" class=" page-link" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -304,8 +284,7 @@ exports[`ClayPagination should render a ClayPagination with 5 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item disabled">
     <a aria-label="previous-page" class=" page-link" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -327,8 +306,7 @@ exports[`ClayPagination should render a ClayPagination with 5 total pages and pa
   </li>
   <li class="page-item" data-page="2">
     <a aria-label="next-page" class=" page-link" href="#2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -340,8 +318,7 @@ exports[`ClayPagination should render a ClayPagination with 5 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="1">
     <a aria-label="previous-page" class=" page-link" href="#1">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -363,8 +340,7 @@ exports[`ClayPagination should render a ClayPagination with 5 total pages and pa
   </li>
   <li class="page-item" data-page="3">
     <a aria-label="next-page" class=" page-link" href="#3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -376,8 +352,7 @@ exports[`ClayPagination should render a ClayPagination with 5 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="2">
     <a aria-label="previous-page" class=" page-link" href="#2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -399,8 +374,7 @@ exports[`ClayPagination should render a ClayPagination with 5 total pages and pa
   </li>
   <li class="page-item" data-page="4">
     <a aria-label="next-page" class=" page-link" href="#4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -412,8 +386,7 @@ exports[`ClayPagination should render a ClayPagination with 5 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="3">
     <a aria-label="previous-page" class=" page-link" href="#3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -435,8 +408,7 @@ exports[`ClayPagination should render a ClayPagination with 5 total pages and pa
   </li>
   <li class="page-item" data-page="5">
     <a aria-label="next-page" class=" page-link" href="#5">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -448,8 +420,7 @@ exports[`ClayPagination should render a ClayPagination with 5 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="4">
     <a aria-label="previous-page" class=" page-link" href="#4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -471,8 +442,7 @@ exports[`ClayPagination should render a ClayPagination with 5 total pages and pa
   </li>
   <li class="page-item disabled">
     <a aria-label="next-page" class=" page-link" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -484,8 +454,7 @@ exports[`ClayPagination should render a ClayPagination with 6 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item disabled">
     <a aria-label="previous-page" class=" page-link" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -509,8 +478,7 @@ exports[`ClayPagination should render a ClayPagination with 6 total pages and pa
   </li>
   <li class="page-item" data-page="2">
     <a aria-label="next-page" class=" page-link" href="#2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -518,10 +486,10 @@ exports[`ClayPagination should render a ClayPagination with 6 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#5">5</a>
     </li>
   </ul>
@@ -532,8 +500,7 @@ exports[`ClayPagination should render a ClayPagination with 6 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="1">
     <a aria-label="previous-page" class=" page-link" href="#1">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -557,8 +524,7 @@ exports[`ClayPagination should render a ClayPagination with 6 total pages and pa
   </li>
   <li class="page-item" data-page="3">
     <a aria-label="next-page" class=" page-link" href="#3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -566,10 +532,10 @@ exports[`ClayPagination should render a ClayPagination with 6 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#5">5</a>
     </li>
   </ul>
@@ -580,8 +546,7 @@ exports[`ClayPagination should render a ClayPagination with 6 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="2">
     <a aria-label="previous-page" class=" page-link" href="#2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -606,8 +571,7 @@ exports[`ClayPagination should render a ClayPagination with 6 total pages and pa
   </li>
   <li class="page-item" data-page="4">
     <a aria-label="next-page" class=" page-link" href="#4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -619,8 +583,7 @@ exports[`ClayPagination should render a ClayPagination with 6 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="3">
     <a aria-label="previous-page" class=" page-link" href="#3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -645,8 +608,7 @@ exports[`ClayPagination should render a ClayPagination with 6 total pages and pa
   </li>
   <li class="page-item" data-page="5">
     <a aria-label="next-page" class=" page-link" href="#5">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -658,8 +620,7 @@ exports[`ClayPagination should render a ClayPagination with 6 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="4">
     <a aria-label="previous-page" class=" page-link" href="#4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -683,8 +644,7 @@ exports[`ClayPagination should render a ClayPagination with 6 total pages and pa
   </li>
   <li class="page-item" data-page="6">
     <a aria-label="next-page" class=" page-link" href="#6">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -692,10 +652,10 @@ exports[`ClayPagination should render a ClayPagination with 6 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#3">3</a>
     </li>
   </ul>
@@ -706,8 +666,7 @@ exports[`ClayPagination should render a ClayPagination with 6 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="5">
     <a aria-label="previous-page" class=" page-link" href="#5">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -734,8 +693,7 @@ exports[`ClayPagination should render a ClayPagination with 6 total pages and pa
   </li>
   <li class="page-item disabled">
     <a aria-label="next-page" class=" page-link" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -743,7 +701,7 @@ exports[`ClayPagination should render a ClayPagination with 6 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#2">2</a>
     </li>
   </ul>
@@ -754,8 +712,7 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item disabled">
     <a aria-label="previous-page" class=" page-link" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -779,8 +736,7 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
   </li>
   <li class="page-item" data-page="2">
     <a aria-label="next-page" class=" page-link" href="#2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -788,13 +744,13 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#6">6</a>
     </li>
   </ul>
@@ -805,8 +761,7 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="1">
     <a aria-label="previous-page" class=" page-link" href="#1">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -830,8 +785,7 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
   </li>
   <li class="page-item" data-page="3">
     <a aria-label="next-page" class=" page-link" href="#3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -839,13 +793,13 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#6">6</a>
     </li>
   </ul>
@@ -856,8 +810,7 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="2">
     <a aria-label="previous-page" class=" page-link" href="#2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -884,8 +837,7 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
   </li>
   <li class="page-item" data-page="4">
     <a aria-label="next-page" class=" page-link" href="#4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -893,10 +845,10 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#6">6</a>
     </li>
   </ul>
@@ -907,8 +859,7 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="3">
     <a aria-label="previous-page" class=" page-link" href="#3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -936,8 +887,7 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
   </li>
   <li class="page-item" data-page="5">
     <a aria-label="next-page" class=" page-link" href="#5">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -949,8 +899,7 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="4">
     <a aria-label="previous-page" class=" page-link" href="#4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -977,8 +926,7 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
   </li>
   <li class="page-item" data-page="6">
     <a aria-label="next-page" class=" page-link" href="#6">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -986,10 +934,10 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#3">3</a>
     </li>
   </ul>
@@ -1000,8 +948,7 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="5">
     <a aria-label="previous-page" class=" page-link" href="#5">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -1025,8 +972,7 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
   </li>
   <li class="page-item" data-page="7">
     <a aria-label="next-page" class=" page-link" href="#7">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -1034,13 +980,13 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
   </ul>
@@ -1051,8 +997,7 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="6">
     <a aria-label="previous-page" class=" page-link" href="#6">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -1079,8 +1024,7 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
   </li>
   <li class="page-item disabled">
     <a aria-label="next-page" class=" page-link" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -1088,10 +1032,10 @@ exports[`ClayPagination should render a ClayPagination with 7 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#3">3</a>
     </li>
   </ul>
@@ -1102,8 +1046,7 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item disabled">
     <a aria-label="previous-page" class=" page-link" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -1127,8 +1070,7 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
   </li>
   <li class="page-item" data-page="2">
     <a aria-label="next-page" class=" page-link" href="#2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -1136,16 +1078,16 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#7">7</a>
     </li>
   </ul>
@@ -1156,8 +1098,7 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="1">
     <a aria-label="previous-page" class=" page-link" href="#1">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -1181,8 +1122,7 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
   </li>
   <li class="page-item" data-page="3">
     <a aria-label="next-page" class=" page-link" href="#3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -1190,16 +1130,16 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#7">7</a>
     </li>
   </ul>
@@ -1210,8 +1150,7 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="2">
     <a aria-label="previous-page" class=" page-link" href="#2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -1238,8 +1177,7 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
   </li>
   <li class="page-item" data-page="4">
     <a aria-label="next-page" class=" page-link" href="#4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -1247,13 +1185,13 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#7">7</a>
     </li>
   </ul>
@@ -1264,8 +1202,7 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="3">
     <a aria-label="previous-page" class=" page-link" href="#3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -1295,8 +1232,7 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
   </li>
   <li class="page-item" data-page="5">
     <a aria-label="next-page" class=" page-link" href="#5">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -1304,10 +1240,10 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#7">7</a>
     </li>
   </ul>
@@ -1318,8 +1254,7 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="4">
     <a aria-label="previous-page" class=" page-link" href="#4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -1349,8 +1284,7 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
   </li>
   <li class="page-item" data-page="6">
     <a aria-label="next-page" class=" page-link" href="#6">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -1358,10 +1292,10 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#3">3</a>
     </li>
   </ul>
@@ -1372,8 +1306,7 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="5">
     <a aria-label="previous-page" class=" page-link" href="#5">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -1400,8 +1333,7 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
   </li>
   <li class="page-item" data-page="7">
     <a aria-label="next-page" class=" page-link" href="#7">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -1409,13 +1341,13 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
   </ul>
@@ -1426,8 +1358,7 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="6">
     <a aria-label="previous-page" class=" page-link" href="#6">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -1451,8 +1382,7 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
   </li>
   <li class="page-item" data-page="8">
     <a aria-label="next-page" class=" page-link" href="#8">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -1460,16 +1390,16 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#5">5</a>
     </li>
   </ul>
@@ -1480,8 +1410,7 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="7">
     <a aria-label="previous-page" class=" page-link" href="#7">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -1508,8 +1437,7 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
   </li>
   <li class="page-item disabled">
     <a aria-label="next-page" class=" page-link" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -1517,13 +1445,13 @@ exports[`ClayPagination should render a ClayPagination with 8 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
   </ul>
@@ -1534,8 +1462,7 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item disabled">
     <a aria-label="previous-page" class=" page-link" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -1559,8 +1486,7 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
   </li>
   <li class="page-item" data-page="2">
     <a aria-label="next-page" class=" page-link" href="#2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -1568,19 +1494,19 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#7">7</a>
     </li>
-    <li data-page="8">
+    <li tabindex="-1" data-page="8">
       <a class=" dropdown-item" href="#8">8</a>
     </li>
   </ul>
@@ -1591,8 +1517,7 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="1">
     <a aria-label="previous-page" class=" page-link" href="#1">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -1616,8 +1541,7 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
   </li>
   <li class="page-item" data-page="3">
     <a aria-label="next-page" class=" page-link" href="#3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -1625,19 +1549,19 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#7">7</a>
     </li>
-    <li data-page="8">
+    <li tabindex="-1" data-page="8">
       <a class=" dropdown-item" href="#8">8</a>
     </li>
   </ul>
@@ -1648,8 +1572,7 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="2">
     <a aria-label="previous-page" class=" page-link" href="#2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -1676,8 +1599,7 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
   </li>
   <li class="page-item" data-page="4">
     <a aria-label="next-page" class=" page-link" href="#4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -1685,16 +1607,16 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#7">7</a>
     </li>
-    <li data-page="8">
+    <li tabindex="-1" data-page="8">
       <a class=" dropdown-item" href="#8">8</a>
     </li>
   </ul>
@@ -1705,8 +1627,7 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="3">
     <a aria-label="previous-page" class=" page-link" href="#3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -1736,8 +1657,7 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
   </li>
   <li class="page-item" data-page="5">
     <a aria-label="next-page" class=" page-link" href="#5">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -1745,13 +1665,13 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#7">7</a>
     </li>
-    <li data-page="8">
+    <li tabindex="-1" data-page="8">
       <a class=" dropdown-item" href="#8">8</a>
     </li>
   </ul>
@@ -1762,8 +1682,7 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="4">
     <a aria-label="previous-page" class=" page-link" href="#4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -1795,8 +1714,7 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
   </li>
   <li class="page-item" data-page="6">
     <a aria-label="next-page" class=" page-link" href="#6">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -1804,20 +1722,20 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#3">3</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#7">7</a>
     </li>
-    <li data-page="8">
+    <li tabindex="-1" data-page="8">
       <a class=" dropdown-item" href="#8">8</a>
     </li>
   </ul>
@@ -1828,8 +1746,7 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="5">
     <a aria-label="previous-page" class=" page-link" href="#5">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -1859,8 +1776,7 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
   </li>
   <li class="page-item" data-page="7">
     <a aria-label="next-page" class=" page-link" href="#7">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -1868,13 +1784,13 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
   </ul>
@@ -1885,8 +1801,7 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="6">
     <a aria-label="previous-page" class=" page-link" href="#6">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -1913,8 +1828,7 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
   </li>
   <li class="page-item" data-page="8">
     <a aria-label="next-page" class=" page-link" href="#8">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -1922,16 +1836,16 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#5">5</a>
     </li>
   </ul>
@@ -1942,8 +1856,7 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="7">
     <a aria-label="previous-page" class=" page-link" href="#7">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -1967,8 +1880,7 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
   </li>
   <li class="page-item" data-page="9">
     <a aria-label="next-page" class=" page-link" href="#9">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -1976,19 +1888,19 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#6">6</a>
     </li>
   </ul>
@@ -1999,8 +1911,7 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="8">
     <a aria-label="previous-page" class=" page-link" href="#8">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -2027,8 +1938,7 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
   </li>
   <li class="page-item disabled">
     <a aria-label="next-page" class=" page-link" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -2036,16 +1946,16 @@ exports[`ClayPagination should render a ClayPagination with 9 total pages and pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#5">5</a>
     </li>
   </ul>
@@ -2056,8 +1966,7 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 <ul class="clay-pagination pagination">
   <li class="page-item disabled">
     <a aria-label="previous-page" class=" page-link" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -2081,8 +1990,7 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
   </li>
   <li class="page-item" data-page="2">
     <a aria-label="next-page" class=" page-link" href="#2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -2090,22 +1998,22 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#7">7</a>
     </li>
-    <li data-page="8">
+    <li tabindex="-1" data-page="8">
       <a class=" dropdown-item" href="#8">8</a>
     </li>
-    <li data-page="9">
+    <li tabindex="-1" data-page="9">
       <a class=" dropdown-item" href="#9">9</a>
     </li>
   </ul>
@@ -2116,8 +2024,7 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="1">
     <a aria-label="previous-page" class=" page-link" href="#1">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -2141,8 +2048,7 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
   </li>
   <li class="page-item" data-page="3">
     <a aria-label="next-page" class=" page-link" href="#3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -2150,22 +2056,22 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#7">7</a>
     </li>
-    <li data-page="8">
+    <li tabindex="-1" data-page="8">
       <a class=" dropdown-item" href="#8">8</a>
     </li>
-    <li data-page="9">
+    <li tabindex="-1" data-page="9">
       <a class=" dropdown-item" href="#9">9</a>
     </li>
   </ul>
@@ -2176,8 +2082,7 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="2">
     <a aria-label="previous-page" class=" page-link" href="#2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -2204,8 +2109,7 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
   </li>
   <li class="page-item" data-page="4">
     <a aria-label="next-page" class=" page-link" href="#4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -2213,19 +2117,19 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#7">7</a>
     </li>
-    <li data-page="8">
+    <li tabindex="-1" data-page="8">
       <a class=" dropdown-item" href="#8">8</a>
     </li>
-    <li data-page="9">
+    <li tabindex="-1" data-page="9">
       <a class=" dropdown-item" href="#9">9</a>
     </li>
   </ul>
@@ -2236,8 +2140,7 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="3">
     <a aria-label="previous-page" class=" page-link" href="#3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -2267,8 +2170,7 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
   </li>
   <li class="page-item" data-page="5">
     <a aria-label="next-page" class=" page-link" href="#5">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -2276,16 +2178,16 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#7">7</a>
     </li>
-    <li data-page="8">
+    <li tabindex="-1" data-page="8">
       <a class=" dropdown-item" href="#8">8</a>
     </li>
-    <li data-page="9">
+    <li tabindex="-1" data-page="9">
       <a class=" dropdown-item" href="#9">9</a>
     </li>
   </ul>
@@ -2296,8 +2198,7 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="4">
     <a aria-label="previous-page" class=" page-link" href="#4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -2329,8 +2230,7 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
   </li>
   <li class="page-item" data-page="6">
     <a aria-label="next-page" class=" page-link" href="#6">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -2338,23 +2238,23 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#3">3</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#7">7</a>
     </li>
-    <li data-page="8">
+    <li tabindex="-1" data-page="8">
       <a class=" dropdown-item" href="#8">8</a>
     </li>
-    <li data-page="9">
+    <li tabindex="-1" data-page="9">
       <a class=" dropdown-item" href="#9">9</a>
     </li>
   </ul>
@@ -2365,8 +2265,7 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="5">
     <a aria-label="previous-page" class=" page-link" href="#5">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -2398,8 +2297,7 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
   </li>
   <li class="page-item" data-page="7">
     <a aria-label="next-page" class=" page-link" href="#7">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -2407,23 +2305,23 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="8">
+    <li tabindex="-1" data-page="8">
       <a class=" dropdown-item" href="#8">8</a>
     </li>
-    <li data-page="9">
+    <li tabindex="-1" data-page="9">
       <a class=" dropdown-item" href="#9">9</a>
     </li>
   </ul>
@@ -2434,8 +2332,7 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="6">
     <a aria-label="previous-page" class=" page-link" href="#6">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -2465,8 +2362,7 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
   </li>
   <li class="page-item" data-page="8">
     <a aria-label="next-page" class=" page-link" href="#8">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -2474,16 +2370,16 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#5">5</a>
     </li>
   </ul>
@@ -2494,8 +2390,7 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="7">
     <a aria-label="previous-page" class=" page-link" href="#7">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -2522,8 +2417,7 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
   </li>
   <li class="page-item" data-page="9">
     <a aria-label="next-page" class=" page-link" href="#9">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -2531,19 +2425,19 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#6">6</a>
     </li>
   </ul>
@@ -2554,8 +2448,7 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="8">
     <a aria-label="previous-page" class=" page-link" href="#8">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -2579,8 +2472,7 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
   </li>
   <li class="page-item" data-page="10">
     <a aria-label="next-page" class=" page-link" href="#10">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -2588,22 +2480,22 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#7">7</a>
     </li>
   </ul>
@@ -2614,8 +2506,7 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="9">
     <a aria-label="previous-page" class=" page-link" href="#9">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -2642,8 +2533,7 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
   </li>
   <li class="page-item disabled">
     <a aria-label="next-page" class=" page-link" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -2651,19 +2541,19 @@ exports[`ClayPagination should render a ClayPagination with 10 total pages and p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#6">6</a>
     </li>
   </ul>
@@ -2674,8 +2564,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 1 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item disabled">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -2685,8 +2574,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 1 total pa
   </li>
   <li class="page-item disabled">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -2698,8 +2586,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 2 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item disabled">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -2712,8 +2599,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 2 total pa
   </li>
   <li class="page-item" data-page="2">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -2725,8 +2611,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 2 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="1">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=1">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -2739,8 +2624,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 2 total pa
   </li>
   <li class="page-item disabled">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -2752,8 +2636,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 3 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item disabled">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -2769,8 +2652,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 3 total pa
   </li>
   <li class="page-item" data-page="2">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -2782,8 +2664,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 3 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="1">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=1">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -2799,8 +2680,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 3 total pa
   </li>
   <li class="page-item" data-page="3">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -2812,8 +2692,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 3 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="2">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -2829,8 +2708,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 3 total pa
   </li>
   <li class="page-item disabled">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -2842,8 +2720,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 4 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item disabled">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -2862,8 +2739,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 4 total pa
   </li>
   <li class="page-item" data-page="2">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -2875,8 +2751,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 4 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="1">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=1">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -2895,8 +2770,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 4 total pa
   </li>
   <li class="page-item" data-page="3">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -2908,8 +2782,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 4 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="2">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -2928,8 +2801,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 4 total pa
   </li>
   <li class="page-item" data-page="4">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -2941,8 +2813,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 4 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="3">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -2961,8 +2832,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 4 total pa
   </li>
   <li class="page-item disabled">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -2974,8 +2844,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 5 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item disabled">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -2997,8 +2866,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 5 total pa
   </li>
   <li class="page-item" data-page="2">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -3010,8 +2878,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 5 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="1">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=1">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -3033,8 +2900,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 5 total pa
   </li>
   <li class="page-item" data-page="3">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -3046,8 +2912,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 5 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="2">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -3069,8 +2934,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 5 total pa
   </li>
   <li class="page-item" data-page="4">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -3082,8 +2946,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 5 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="3">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -3105,8 +2968,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 5 total pa
   </li>
   <li class="page-item" data-page="5">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=5">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -3118,8 +2980,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 5 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="4">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -3141,8 +3002,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 5 total pa
   </li>
   <li class="page-item disabled">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -3154,8 +3014,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item disabled">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -3179,8 +3038,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pa
   </li>
   <li class="page-item" data-page="2">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -3188,10 +3046,10 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
     </li>
   </ul>
@@ -3202,8 +3060,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="1">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=1">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -3227,8 +3084,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pa
   </li>
   <li class="page-item" data-page="3">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -3236,10 +3092,10 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
     </li>
   </ul>
@@ -3250,8 +3106,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="2">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -3276,8 +3131,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pa
   </li>
   <li class="page-item" data-page="4">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -3289,8 +3143,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="3">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -3315,8 +3168,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pa
   </li>
   <li class="page-item" data-page="5">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=5">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -3328,8 +3180,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="4">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -3353,8 +3204,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pa
   </li>
   <li class="page-item" data-page="6">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=6">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -3362,10 +3212,10 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
     </li>
   </ul>
@@ -3376,8 +3226,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="5">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=5">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -3404,8 +3253,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pa
   </li>
   <li class="page-item disabled">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -3413,7 +3261,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 6 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
     </li>
   </ul>
@@ -3424,8 +3272,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item disabled">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -3449,8 +3296,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
   </li>
   <li class="page-item" data-page="2">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -3458,13 +3304,13 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
     </li>
   </ul>
@@ -3475,8 +3321,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="1">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=1">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -3500,8 +3345,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
   </li>
   <li class="page-item" data-page="3">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -3509,13 +3353,13 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
     </li>
   </ul>
@@ -3526,8 +3370,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="2">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -3554,8 +3397,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
   </li>
   <li class="page-item" data-page="4">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -3563,10 +3405,10 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
     </li>
   </ul>
@@ -3577,8 +3419,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="3">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -3606,8 +3447,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
   </li>
   <li class="page-item" data-page="5">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=5">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -3619,8 +3459,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="4">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -3647,8 +3486,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
   </li>
   <li class="page-item" data-page="6">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=6">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -3656,10 +3494,10 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
     </li>
   </ul>
@@ -3670,8 +3508,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="5">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=5">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -3695,8 +3532,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
   </li>
   <li class="page-item" data-page="7">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=7">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -3704,13 +3540,13 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
     </li>
   </ul>
@@ -3721,8 +3557,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="6">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=6">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -3749,8 +3584,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
   </li>
   <li class="page-item disabled">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -3758,10 +3592,10 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 7 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
     </li>
   </ul>
@@ -3772,8 +3606,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item disabled">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -3797,8 +3630,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
   </li>
   <li class="page-item" data-page="2">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -3806,16 +3638,16 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
     </li>
   </ul>
@@ -3826,8 +3658,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="1">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=1">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -3851,8 +3682,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
   </li>
   <li class="page-item" data-page="3">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -3860,16 +3690,16 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
     </li>
   </ul>
@@ -3880,8 +3710,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="2">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -3908,8 +3737,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
   </li>
   <li class="page-item" data-page="4">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -3917,13 +3745,13 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
     </li>
   </ul>
@@ -3934,8 +3762,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="3">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -3965,8 +3792,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
   </li>
   <li class="page-item" data-page="5">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=5">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -3974,10 +3800,10 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
     </li>
   </ul>
@@ -3988,8 +3814,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="4">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -4019,8 +3844,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
   </li>
   <li class="page-item" data-page="6">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=6">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -4028,10 +3852,10 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
     </li>
   </ul>
@@ -4042,8 +3866,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="5">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=5">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -4070,8 +3893,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
   </li>
   <li class="page-item" data-page="7">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=7">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -4079,13 +3901,13 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
     </li>
   </ul>
@@ -4096,8 +3918,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="6">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=6">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -4121,8 +3942,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
   </li>
   <li class="page-item" data-page="8">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=8">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -4130,16 +3950,16 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
     </li>
   </ul>
@@ -4150,8 +3970,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="7">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=7">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -4178,8 +3997,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
   </li>
   <li class="page-item disabled">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -4187,13 +4005,13 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 8 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
     </li>
   </ul>
@@ -4204,8 +4022,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item disabled">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -4229,8 +4046,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
   </li>
   <li class="page-item" data-page="2">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -4238,19 +4054,19 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
     </li>
-    <li data-page="8">
+    <li tabindex="-1" data-page="8">
       <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
     </li>
   </ul>
@@ -4261,8 +4077,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="1">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=1">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -4286,8 +4101,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
   </li>
   <li class="page-item" data-page="3">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -4295,19 +4109,19 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
     </li>
-    <li data-page="8">
+    <li tabindex="-1" data-page="8">
       <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
     </li>
   </ul>
@@ -4318,8 +4132,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="2">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -4346,8 +4159,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
   </li>
   <li class="page-item" data-page="4">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -4355,16 +4167,16 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
     </li>
-    <li data-page="8">
+    <li tabindex="-1" data-page="8">
       <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
     </li>
   </ul>
@@ -4375,8 +4187,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="3">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -4406,8 +4217,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
   </li>
   <li class="page-item" data-page="5">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=5">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -4415,13 +4225,13 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
     </li>
-    <li data-page="8">
+    <li tabindex="-1" data-page="8">
       <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
     </li>
   </ul>
@@ -4432,8 +4242,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="4">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -4465,8 +4274,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
   </li>
   <li class="page-item" data-page="6">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=6">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -4474,20 +4282,20 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
     </li>
-    <li data-page="8">
+    <li tabindex="-1" data-page="8">
       <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
     </li>
   </ul>
@@ -4498,8 +4306,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="5">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=5">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -4529,8 +4336,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
   </li>
   <li class="page-item" data-page="7">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=7">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -4538,13 +4344,13 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
     </li>
   </ul>
@@ -4555,8 +4361,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="6">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=6">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -4583,8 +4388,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
   </li>
   <li class="page-item" data-page="8">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=8">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -4592,16 +4396,16 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
     </li>
   </ul>
@@ -4612,8 +4416,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="7">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=7">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -4637,8 +4440,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
   </li>
   <li class="page-item" data-page="9">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=9">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -4646,19 +4448,19 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
     </li>
   </ul>
@@ -4669,8 +4471,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="8">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=8">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -4697,8 +4498,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
   </li>
   <li class="page-item disabled">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -4706,16 +4506,16 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 9 total pa
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
     </li>
   </ul>
@@ -4726,8 +4526,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 <ul class="clay-pagination pagination">
   <li class="page-item disabled">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -4751,8 +4550,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
   </li>
   <li class="page-item" data-page="2">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -4760,22 +4558,22 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
     </li>
-    <li data-page="8">
+    <li tabindex="-1" data-page="8">
       <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
     </li>
-    <li data-page="9">
+    <li tabindex="-1" data-page="9">
       <a class=" dropdown-item" href="#mySite?curPage=9">9</a>
     </li>
   </ul>
@@ -4786,8 +4584,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="1">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=1">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -4811,8 +4608,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
   </li>
   <li class="page-item" data-page="3">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -4820,22 +4616,22 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
     </li>
-    <li data-page="8">
+    <li tabindex="-1" data-page="8">
       <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
     </li>
-    <li data-page="9">
+    <li tabindex="-1" data-page="9">
       <a class=" dropdown-item" href="#mySite?curPage=9">9</a>
     </li>
   </ul>
@@ -4846,8 +4642,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="2">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -4874,8 +4669,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
   </li>
   <li class="page-item" data-page="4">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -4883,19 +4677,19 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
     </li>
-    <li data-page="8">
+    <li tabindex="-1" data-page="8">
       <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
     </li>
-    <li data-page="9">
+    <li tabindex="-1" data-page="9">
       <a class=" dropdown-item" href="#mySite?curPage=9">9</a>
     </li>
   </ul>
@@ -4906,8 +4700,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="3">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=3">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -4937,8 +4730,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
   </li>
   <li class="page-item" data-page="5">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=5">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -4946,16 +4738,16 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
     </li>
-    <li data-page="8">
+    <li tabindex="-1" data-page="8">
       <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
     </li>
-    <li data-page="9">
+    <li tabindex="-1" data-page="9">
       <a class=" dropdown-item" href="#mySite?curPage=9">9</a>
     </li>
   </ul>
@@ -4966,8 +4758,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="4">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=4">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -4999,8 +4790,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
   </li>
   <li class="page-item" data-page="6">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=6">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -5008,23 +4798,23 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
     </li>
-    <li data-page="8">
+    <li tabindex="-1" data-page="8">
       <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
     </li>
-    <li data-page="9">
+    <li tabindex="-1" data-page="9">
       <a class=" dropdown-item" href="#mySite?curPage=9">9</a>
     </li>
   </ul>
@@ -5035,8 +4825,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="5">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=5">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -5068,8 +4857,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
   </li>
   <li class="page-item" data-page="7">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=7">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -5077,23 +4865,23 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
     </li>
   </ul>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="8">
+    <li tabindex="-1" data-page="8">
       <a class=" dropdown-item" href="#mySite?curPage=8">8</a>
     </li>
-    <li data-page="9">
+    <li tabindex="-1" data-page="9">
       <a class=" dropdown-item" href="#mySite?curPage=9">9</a>
     </li>
   </ul>
@@ -5104,8 +4892,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="6">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=6">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -5135,8 +4922,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
   </li>
   <li class="page-item" data-page="8">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=8">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -5144,16 +4930,16 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
     </li>
   </ul>
@@ -5164,8 +4950,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="7">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=7">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -5192,8 +4977,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
   </li>
   <li class="page-item" data-page="9">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=9">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -5201,19 +4985,19 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
     </li>
   </ul>
@@ -5224,8 +5008,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="8">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=8">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -5249,8 +5032,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
   </li>
   <li class="page-item" data-page="10">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=10">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -5258,22 +5040,22 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#mySite?curPage=7">7</a>
     </li>
   </ul>
@@ -5284,8 +5066,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 <ul class="clay-pagination pagination">
   <li class="page-item" data-page="9">
     <a aria-label="previous-page" class=" page-link" href="#mySite?curPage=9">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -5312,8 +5093,7 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
   </li>
   <li class="page-item disabled">
     <a aria-label="next-page" class=" page-link" href="#mySite?curPage=">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -5321,19 +5101,19 @@ exports[`ClayPagination should render a ClayPagination with baseHref, 10 total p
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="2">
+    <li tabindex="-1" data-page="2">
       <a class=" dropdown-item" href="#mySite?curPage=2">2</a>
     </li>
-    <li data-page="3">
+    <li tabindex="-1" data-page="3">
       <a class=" dropdown-item" href="#mySite?curPage=3">3</a>
     </li>
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#mySite?curPage=4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#mySite?curPage=5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#mySite?curPage=6">6</a>
     </li>
   </ul>
@@ -5344,8 +5124,7 @@ exports[`ClayPagination should render a ClayPagination with classes 1`] = `
 <ul class="clay-pagination pagination my-custom-class">
   <li class="page-item disabled">
     <a aria-label="previous-page" class=" page-link" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -5369,8 +5148,7 @@ exports[`ClayPagination should render a ClayPagination with classes 1`] = `
   </li>
   <li class="page-item" data-page="2">
     <a aria-label="next-page" class=" page-link" href="#2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -5378,22 +5156,22 @@ exports[`ClayPagination should render a ClayPagination with classes 1`] = `
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#7">7</a>
     </li>
-    <li data-page="8">
+    <li tabindex="-1" data-page="8">
       <a class=" dropdown-item" href="#8">8</a>
     </li>
-    <li data-page="9">
+    <li tabindex="-1" data-page="9">
       <a class=" dropdown-item" href="#9">9</a>
     </li>
   </ul>
@@ -5404,8 +5182,7 @@ exports[`ClayPagination should render a ClayPagination with id 1`] = `
 <ul class="clay-pagination pagination" id="myId">
   <li class="page-item disabled">
     <a aria-label="previous-page" class=" page-link" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -5429,8 +5206,7 @@ exports[`ClayPagination should render a ClayPagination with id 1`] = `
   </li>
   <li class="page-item" data-page="2">
     <a aria-label="next-page" class=" page-link" href="#2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -5438,22 +5214,22 @@ exports[`ClayPagination should render a ClayPagination with id 1`] = `
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#7">7</a>
     </li>
-    <li data-page="8">
+    <li tabindex="-1" data-page="8">
       <a class=" dropdown-item" href="#8">8</a>
     </li>
-    <li data-page="9">
+    <li tabindex="-1" data-page="9">
       <a class=" dropdown-item" href="#9">9</a>
     </li>
   </ul>
@@ -5464,8 +5240,7 @@ exports[`ClayPagination should render the default markup 1`] = `
 <ul class="clay-pagination pagination">
   <li class="page-item disabled">
     <a aria-label="previous-page" class=" page-link" href="#">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left" focusable="false">
-        <title>angle-left</title>
+      <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-left"></use>
       </svg>
     </a>
@@ -5489,8 +5264,7 @@ exports[`ClayPagination should render the default markup 1`] = `
   </li>
   <li class="page-item" data-page="2">
     <a aria-label="next-page" class=" page-link" href="#2">
-      <svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right" focusable="false">
-        <title>angle-right</title>
+      <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
         <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#angle-right"></use>
       </svg>
     </a>
@@ -5498,22 +5272,22 @@ exports[`ClayPagination should render the default markup 1`] = `
 </ul>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
-    <li data-page="4">
+    <li tabindex="-1" data-page="4">
       <a class=" dropdown-item" href="#4">4</a>
     </li>
-    <li data-page="5">
+    <li tabindex="-1" data-page="5">
       <a class=" dropdown-item" href="#5">5</a>
     </li>
-    <li data-page="6">
+    <li tabindex="-1" data-page="6">
       <a class=" dropdown-item" href="#6">6</a>
     </li>
-    <li data-page="7">
+    <li tabindex="-1" data-page="7">
       <a class=" dropdown-item" href="#7">7</a>
     </li>
-    <li data-page="8">
+    <li tabindex="-1" data-page="8">
       <a class=" dropdown-item" href="#8">8</a>
     </li>
-    <li data-page="9">
+    <li tabindex="-1" data-page="9">
       <a class=" dropdown-item" href="#9">9</a>
     </li>
   </ul>

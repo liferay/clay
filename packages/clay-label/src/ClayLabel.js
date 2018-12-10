@@ -1,23 +1,31 @@
 import 'clay-button';
 import 'clay-link';
-import Component from 'metal-component';
+import {Config} from 'metal-state';
+import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
-import {Config} from 'metal-state';
 
 import templates from './ClayLabel.soy.js';
 
 /**
  * Metal Clay Label component.
- * @extends Component
+ * @extends ClayComponent
  */
-class ClayLabel extends Component {
+class ClayLabel extends ClayComponent {
 	/**
 	 * Handle `click` button and emit event `close`.
+	 * @param {!Event} event
 	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
-	_handleCloseButtonClick() {
-		this.emit('close');
+	_handleCloseButtonClick(event) {
+		return !this.emit({
+			data: {
+				label: this.label,
+			},
+			name: 'close',
+			originalEvent: event,
+		});
 	}
 }
 
@@ -101,6 +109,15 @@ ClayLabel.STATE = {
 		Config.bool(),
 		Config.oneOf(['danger', 'info', 'secondary', 'warning', 'success']),
 	]).value('secondary'),
+
+	/**
+	 * Flag to indicate if the element can be focused.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayLabel
+	 * @type {?(string|undefined)}
+	 */
+	tabIndex: Config.string(),
 };
 
 defineWebComponent('clay-label', ClayLabel);

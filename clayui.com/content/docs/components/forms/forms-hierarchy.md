@@ -35,12 +35,12 @@ The definition of the content hierarchy inside a form structure and the componen
 			<a aria-controls="accordion03CollapseTwo" aria-expanded="true" class="collapse-icon sheet-subtitle" data-toggle="collapse" href="#accordion03CollapseTwo" id="accordion03HeadingTwo" role="tab">
 				<span>First Level Collapse 1</span>
 				<span class="collapse-icon-closed">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+					<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#angle-right" />
 					</svg>
 				</span>
 				<span class="collapse-icon-open">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+					<svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#angle-down" />
 					</svg>
 				</span>
@@ -90,12 +90,12 @@ The definition of the content hierarchy inside a form structure and the componen
 			<a aria-controls="accordion03CollapseTwo" aria-expanded="true" class="collapse-icon sheet-subtitle" data-toggle="collapse" href="#accordion03CollapseTwo" id="accordion03HeadingTwo" role="tab">
 				<span>First Level Collapse 1</span>
 				<span class="collapse-icon-closed">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+					<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#angle-right" />
 					</svg>
 				</span>
 				<span class="collapse-icon-open">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
+					<svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#angle-down" />
 					</svg>
 				</span>

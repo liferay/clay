@@ -55,6 +55,20 @@ class ClayDropdown extends ClayComponent {
 	}
 
 	/**
+	 * Continues the propagation of the enter key event
+	 * @param {!Event} event
+	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleItemSelected(event) {
+		return !this.emit({
+			data: event.data,
+			name: 'itemSelected',
+			originalEvent: event,
+		});
+	}
+
+	/**
 	 * Continues the propagation of the toggle event.
 	 * @param {!Event} event
 	 * @return {Boolean} If the event has been prevented or not.

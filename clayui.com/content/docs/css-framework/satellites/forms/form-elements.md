@@ -9,7 +9,7 @@ title: "Form Elements"
 		<label for="basicInputTypeText">
 			Text
 			<span class="reference-mark">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
+				<svg class="lexicon-icon lexicon-icon-asterisk" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#asterisk" />
 				</svg>
 			</span>
@@ -55,7 +55,7 @@ title: "Form Elements"
 	<label for="basicInputTypeText">
 		Text
 		<span class="reference-mark">
-			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
+			<svg class="lexicon-icon lexicon-icon-asterisk" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#asterisk" />
 			</svg>
 		</span>

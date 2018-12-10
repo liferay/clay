@@ -24,7 +24,7 @@ title: "Cards"
 				<div class="autofit-col" style="background-color:aliceblue;">
 					<span class="sticker">
 						<span class="inline-item">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+							<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#folder" />
 							</svg>
 						</span>
@@ -60,7 +60,7 @@ title: "Cards"
 				<div class="autofit-col" style="background-color:aliceblue;">
 					<span class="sticker">
 						<span class="inline-item">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+							<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#folder" />
 							</svg>
 						</span>
@@ -95,7 +95,7 @@ title: "Cards"
 					<section class="autofit-section">
 						<span class="sticker">
 							<span class="inline-item">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+								<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#folder" />
 								</svg>
 							</span>
@@ -175,7 +175,7 @@ title: "Cards"
 						<div class="autofit-col">
 							<span class="sticker">
 								<span class="inline-item">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+									<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#folder" />
 									</svg>
 								</span>
@@ -193,7 +193,7 @@ title: "Cards"
 						<div class="autofit-col">
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
@@ -218,7 +218,7 @@ title: "Cards"
 						<div class="autofit-col">
 							<span class="sticker">
 								<span class="inline-item">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+									<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#folder" />
 									</svg>
 								</span>
@@ -232,7 +232,7 @@ title: "Cards"
 						<div class="autofit-col">
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
@@ -257,7 +257,7 @@ title: "Cards"
 						<div class="autofit-col">
 							<span class="sticker">
 								<span class="inline-item">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+									<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#folder" />
 									</svg>
 								</span>
@@ -275,7 +275,7 @@ title: "Cards"
 						<div class="autofit-col">
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
@@ -300,7 +300,7 @@ title: "Cards"
 						<div class="autofit-col">
 							<span class="sticker">
 								<span class="inline-item">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+									<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#folder" />
 									</svg>
 								</span>
@@ -318,7 +318,7 @@ title: "Cards"
 						<div class="autofit-col">
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
@@ -554,7 +554,7 @@ title: "Cards"
 						<div class="autofit-col">
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
@@ -583,7 +583,7 @@ title: "Cards"
 							<div class="autofit-col">
 								<span class="sticker">
 									<span class="inline-item">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+										<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
 											<use href="/images/icons/icons.svg#folder" />
 										</svg>
 									</span>
@@ -601,7 +601,7 @@ title: "Cards"
 							<div class="autofit-col">
 								<div class="dropdown dropdown-action">
 									<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+										<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 											<use href="/images/icons/icons.svg#ellipsis-v" />
 										</svg>
 									</a>
@@ -656,7 +656,7 @@ title: "Cards"
 								<div class="autofit-col">
 									<div class="dropdown dropdown-action">
 										<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 												<use href="/images/icons/icons.svg#ellipsis-v" />
 											</svg>
 										</a>
@@ -689,7 +689,7 @@ title: "Cards"
 								<div class="autofit-col">
 									<span class="sticker">
 										<span class="inline-item">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+											<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
 												<use href="/images/icons/icons.svg#folder" />
 											</svg>
 										</span>
@@ -707,7 +707,7 @@ title: "Cards"
 								<div class="autofit-col">
 									<div class="dropdown dropdown-action">
 										<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 												<use href="/images/icons/icons.svg#ellipsis-v" />
 											</svg>
 										</a>
@@ -777,7 +777,7 @@ title: "Cards"
 							<div class="autofit-col">
 								<div class="dropdown dropdown-action">
 									<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+										<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 											<use href="/images/icons/icons.svg#ellipsis-v" />
 										</svg>
 									</a>
@@ -807,7 +807,7 @@ title: "Cards"
 							<div class="autofit-col">
 								<span class="sticker">
 									<span class="inline-item">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+										<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
 											<use href="/images/icons/icons.svg#folder" />
 										</svg>
 									</span>
@@ -825,7 +825,7 @@ title: "Cards"
 							<div class="autofit-col">
 								<div class="dropdown dropdown-action">
 									<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+										<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 											<use href="/images/icons/icons.svg#ellipsis-v" />
 										</svg>
 									</a>
@@ -880,7 +880,7 @@ title: "Cards"
 								<div class="autofit-col">
 									<div class="dropdown dropdown-action">
 										<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 												<use href="/images/icons/icons.svg#ellipsis-v" />
 											</svg>
 										</a>
@@ -913,7 +913,7 @@ title: "Cards"
 								<div class="autofit-col">
 									<span class="sticker">
 										<span class="inline-item">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+											<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
 												<use href="/images/icons/icons.svg#folder" />
 											</svg>
 										</span>
@@ -931,7 +931,7 @@ title: "Cards"
 								<div class="autofit-col">
 									<div class="dropdown dropdown-action">
 										<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 												<use href="/images/icons/icons.svg#ellipsis-v" />
 											</svg>
 										</a>
@@ -1006,7 +1006,7 @@ title: "Cards"
 						<div class="autofit-col">
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
@@ -1036,7 +1036,7 @@ title: "Cards"
 						<div class="autofit-col">
 							<span class="sticker">
 								<span class="inline-item">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+									<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#folder" />
 									</svg>
 								</span>
@@ -1054,7 +1054,7 @@ title: "Cards"
 						<div class="autofit-col">
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
@@ -1085,7 +1085,7 @@ title: "Cards"
 						<div class="autofit-col">
 							<span class="sticker">
 								<span class="inline-item">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+									<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#folder" />
 									</svg>
 								</span>
@@ -1103,7 +1103,7 @@ title: "Cards"
 						<div class="autofit-col">
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
@@ -1176,7 +1176,7 @@ title: "Cards"
 						<div class="autofit-col">
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
@@ -1206,7 +1206,7 @@ title: "Cards"
 						<div class="autofit-col">
 							<span class="sticker">
 								<span class="inline-item">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+									<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#folder" />
 									</svg>
 								</span>
@@ -1224,7 +1224,7 @@ title: "Cards"
 						<div class="autofit-col">
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
@@ -1255,7 +1255,7 @@ title: "Cards"
 						<div class="autofit-col">
 							<span class="sticker">
 								<span class="inline-item">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+									<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#folder" />
 									</svg>
 								</span>
@@ -1273,7 +1273,7 @@ title: "Cards"
 						<div class="autofit-col">
 							<div class="dropdown dropdown-action">
 								<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 										<use href="/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>

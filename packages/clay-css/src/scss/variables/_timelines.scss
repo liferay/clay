@@ -1,7 +1,7 @@
 $timeline-border-color: #DDD !default;
 $timeline-border-width: 2px !default;
 
-$timeline-border-modifier: ceil($timeline-border-width / 2);
+$timeline-border-modifier: ceil($timeline-border-width / 2) !default;
 
 $timeline-icon-active-bg: $component-active-bg !default;
 $timeline-icon-active-border-color: $timeline-icon-active-bg !default;

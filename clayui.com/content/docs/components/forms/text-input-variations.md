@@ -30,6 +30,24 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 	</div>
 </div>
 
+```soy
+{call ClayAutocomplete.render}
+	{param dataSource: [
+		'Robert Downey',
+		'Robert Plant',
+		'Robert Baratheon',
+		'Robert De niro'
+	] /}
+	{param inputValue: 'Rob' /}
+{/call}
+```
+```html
+<clay-autocomplete
+	dataSource="['Robert Downey', 'Robert Plant', 'Robert Baratheon', 'Robert De niro']"
+	inputValue="Rob"
+>
+</clay-autocomplete>
+```
 ```html
 <div class="dropdown-full form-group">
 	<input class="form-control" type="text" value="Rob"/>
@@ -50,6 +68,12 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 </div>
 ```
 
+#### API
+
+<div>
+	[APITable "clay-autocomplete/src/ClayAutocomplete.js"]
+</div>
+
 ### Search field
 
 <div class="sheet" style="height:255px;">
@@ -58,12 +82,12 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 			<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text" value="ele"/>
 			<span class="input-group-inset-item input-group-inset-item-after">
 				<button class="btn btn-unstyled" type="submit">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+					<svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#search" />
 					</svg>
 				</button>
 				<button class="btn btn-unstyled" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#times" />
 					</svg>
 				</button>
@@ -92,12 +116,12 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 		<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text" value="ele"/>
 		<span class="input-group-inset-item input-group-inset-item-after">
 			<button class="btn btn-unstyled" type="submit">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+				<svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#search" />
 				</svg>
 			</button>
 			<button class="btn btn-unstyled" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+				<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#times" />
 				</svg>
 			</button>
@@ -148,7 +172,7 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 						<span class="label-item label-item-expand">wall</span>
 						<span class="label-item label-item-after">
 							<button aria-label="Close" class="close" type="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#times"></use>
 								</svg>
 							</button>
@@ -158,7 +182,7 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 						<span class="label-item label-item-expand">wallpaper</span>
 						<span class="label-item label-item-after">
 							<button aria-label="Close" class="close" type="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#times"></use>
 								</svg>
 							</button>
@@ -168,7 +192,7 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 						<span class="label-item label-item-expand">wonderwall</span>
 						<span class="label-item label-item-after">
 							<button aria-label="Close" class="close" type="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#times"></use>
 								</svg>
 							</button>
@@ -178,7 +202,7 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 						<span class="label-item label-item-expand">winterfell</span>
 						<span class="label-item label-item-after">
 							<button aria-label="Close" class="close" type="button">
-								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 									<use href="/images/icons/icons.svg#times"></use>
 								</svg>
 							</button>
@@ -197,6 +221,37 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 	</div>
 </div>
 
+```soy
+{call ClayMultiSelect.render}
+	{param dataSource: [
+		'wall',
+		'wallpaper',
+		'wonderwall',
+		'winterfell'
+	] /}
+	{param helpText: 'You can use a comma to enter tags' /}
+	{param label: 'Tags' /}
+	{param selectedItems: [
+		[
+			'label': 'wall',
+			'value': 'wall'
+		],
+		[
+			'label': 'wallpaper',
+			'value': 'wallpaper'
+		]
+	] /}
+{/call}
+```
+```html
+<clay-multi-select
+	dataSource="['wall', 'wallpaper', 'wonderwall', 'winterfell']"
+	helpText="You can use a comma to enter tags"
+	label="Tags"
+	selectedItems="[{'label': 'wall', 'value': 'wall'}, {'label': 'wallpaper', 'value': 'wallpaper'}]"
+>
+</clay-multi-select>
+```
 ```html
 <div class="form-group">
 	<label for="tagsField1">Tags</label>
@@ -224,7 +279,7 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 					<span class="label-item label-item-expand">wall</span>
 					<span class="label-item label-item-after">
 						<button aria-label="Close" class="close" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#times"></use>
 							</svg>
 						</button>
@@ -234,7 +289,7 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 					<span class="label-item label-item-expand">wallpaper</span>
 					<span class="label-item label-item-after">
 						<button aria-label="Close" class="close" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#times"></use>
 							</svg>
 						</button>
@@ -244,7 +299,7 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 					<span class="label-item label-item-expand">wonderwall</span>
 					<span class="label-item label-item-after">
 						<button aria-label="Close" class="close" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#times"></use>
 							</svg>
 						</button>
@@ -254,7 +309,7 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 					<span class="label-item label-item-expand">winterfell</span>
 					<span class="label-item label-item-after">
 						<button aria-label="Close" class="close" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+							<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#times"></use>
 							</svg>
 						</button>
@@ -272,6 +327,12 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 	</div>
 </div>
 ```
+
+#### API
+
+<div>
+	[APITable "clay-multi-select/src/ClayMultiSelect.js"]
+</div>
 
 ### Numeric field
 
@@ -302,12 +363,12 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 				<div class="input-group-inset-item input-group-inset-item-after">
 					<button class="btn btn-unstyled" type="button">
 						<span class="input-text-label">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-hidden">
+							<svg class="lexicon-icon lexicon-icon-hidden" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#hidden" />
 							</svg>
 						</span>
 						<span class="input-password-label">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
+							<svg class="lexicon-icon lexicon-icon-view" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#view" />
 							</svg>
 						</span>
@@ -324,12 +385,12 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 				<div class="input-group-inset-item input-group-inset-item-after">
 					<button class="btn btn-unstyled" type="button">
 						<span class="input-text-label">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-hidden">
+							<svg class="lexicon-icon lexicon-icon-hidden" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#hidden" />
 							</svg>
 						</span>
 						<span class="input-password-label">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
+							<svg class="lexicon-icon lexicon-icon-view" focusable="false" role="presentation">
 								<use href="/images/icons/icons.svg#view" />
 							</svg>
 						</span>
@@ -349,12 +410,12 @@ This section demonstrates the search, autocomplete, labels input, date, numeric,
 			<div class="input-group-inset-item input-group-inset-item-after">
 				<button class="btn btn-unstyled" type="button">
 					<span class="input-text-label">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-hidden">
+						<svg class="lexicon-icon lexicon-icon-hidden" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#hidden" />
 						</svg>
 					</span>
 					<span class="input-password-label">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
+						<svg class="lexicon-icon lexicon-icon-view" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#view" />
 						</svg>
 					</span>

@@ -43,7 +43,7 @@ You can call Clay components in your SOY templates the same way you would call a
 
 <div class="alert alert-warning" role="alert">
 	<span class="alert-indicator">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+		<svg class="lexicon-icon lexicon-icon-warning-full" focusable="false" role="presentation">
 			<use href="/images/icons/icons.svg#warning-full"></use>
 		</svg>
 	</span>
