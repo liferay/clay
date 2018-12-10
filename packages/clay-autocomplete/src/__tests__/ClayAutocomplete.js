@@ -151,8 +151,9 @@ describe('ClayAutocomplete', function() {
 		expect(spy).toHaveBeenCalledWith(
 			expect.objectContaining({
 				data: {
-					value: 'foo',
+					eventFromInput: true,
 					key: 'o',
+					value: 'foo',
 				},
 				name: 'inputOnKeydown',
 				originalEvent: expect.any(Object),
