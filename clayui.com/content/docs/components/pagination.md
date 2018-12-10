@@ -16,7 +16,7 @@ Pagination provides horizontal navigation between chunks(pages) of a dataset.
 
 <ul class="pagination">
 	<li class="disabled page-item">
-		<a class="page-link" href="#1" role="button">
+		<a class="page-link" href="#1" role="button" tabindex="-1">
 			<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#angle-left" />
 			</svg>
@@ -59,7 +59,7 @@ Pagination provides horizontal navigation between chunks(pages) of a dataset.
 ```html
 <ul class="pagination">
 	<li class="disabled page-item">
-		<a class="page-link" href="#1" role="button">
+		<a class="page-link" href="#1" role="button" tabindex="-1">
 			<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#angle-left" />
 			</svg>
@@ -123,7 +123,7 @@ Pagination provides horizontal navigation between chunks(pages) of a dataset.
 	<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
 	<ul class="pagination">
 		<li class="disabled page-item">
-			<a class="page-link" href="#1" role="button">
+			<a class="page-link" href="#1" role="button" tabindex="-1">
 				<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-left" />
 				</svg>
@@ -184,7 +184,7 @@ Pagination provides horizontal navigation between chunks(pages) of a dataset.
 	<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
 	<ul class="pagination">
 		<li class="disabled page-item">
-			<a class="page-link" href="#1" role="button">
+			<a class="page-link" href="#1" role="button" tabindex="-1">
 				<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
 					<use href="/images/icons/icons.svg#angle-left" />
 				</svg>

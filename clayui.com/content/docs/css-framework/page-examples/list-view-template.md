@@ -773,7 +773,7 @@ title: "List View Template"
 			<div class="pagination-results">Showing 223,922 to 223,932 of 1,292,203 entries.</div>
 			<ul class="pagination">
 				<li class="disabled page-item">
-					<a class="page-link" href="#1">
+					<a class="page-link" href="#1" tabindex="-1">
 						<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#angle-left" />
 						</svg>
