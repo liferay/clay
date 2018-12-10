@@ -54,14 +54,14 @@ class ClayMultiSelect extends ClayComponent {
 	 * Handle the click on the dropdown item and the propagation of the labelAdded event.
 	 * @param {!Event} event
 	 * @protected
-	 * @return {Boolean} If the event has been prevented or not.
+	 * @return {?Boolean} If the event has been prevented or not.
 	 */
 	_handleDropdownItemClick(event) {
-		return !this.emit({
-			data: event.data,
-			name: 'itemSelected',
-			originalEvent: event,
-		});
+		this.filteredItems = [];
+		this.inputValue = '';
+		this.refs.autocomplete.refs.input.focus();
+
+		return this._handleItemAdded(event.data[this.filterField], event, 'itemSelected');
 	}
 
 	/**
@@ -82,12 +82,14 @@ class ClayMultiSelect extends ClayComponent {
 
 	/**
 	 * Continues the propagation of the itemAdded event.
+	 * @param {!String} value
 	 * @param {!Event} event
+	 * @param {?String} eventName
 	 * @protected
-	 * @return {Boolean} If the event has been prevented or not.
+	 * @return {?Boolean} If the event has been prevented or not.
 	 */
-	_handleItemAdded(event) {
-		const label = event.data.value.toLowerCase().replace(',', '');
+	_handleItemAdded(value, event, eventName = 'itemAdded') {
+		const label = value.toLowerCase().replace(',', '');
 
 		if (
 			label.trim() &&
@@ -95,11 +97,15 @@ class ClayMultiSelect extends ClayComponent {
 				itemSelected => itemSelected.label === label
 			)
 		) {
+			const index = this.selectedItems.push({label: label, value: label});
+
+			this.selectedItems = this.selectedItems;
+
 			return !this.emit({
 				data: {
-					label,
+					item: this.selectedItems[index - 1],
 				},
-				name: 'itemAdded',
+				name: eventName,
 				originalEvent: event,
 			});
 		} else {
@@ -160,12 +166,15 @@ class ClayMultiSelect extends ClayComponent {
 	 */
 	_handleItemRemoved(event) {
 		const index = event.getAttribute('data-tag');
+		const item = this.selectedItems[Number(index)];
 
 		this._removeFocusedItem();
+		this.selectedItems.splice(Number(index), 1);
+		this.selectedItems = this.selectedItems;
 
 		return !this.emit({
 			data: {
-				index: Number(index),
+				item,
 			},
 			name: 'itemRemoved',
 			originalEvent: event,
@@ -179,15 +188,17 @@ class ClayMultiSelect extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleOnInput(event) {
+		const value = event.data.value;
+
 		this._removeFocusedItem();
 
 		switch (event.data.char) {
 		case ',':
-			return this._handleItemAdded(event);
+			return this._handleItemAdded(value, event);
 		default:
 			return !this.emit({
 				data: {
-					value: event.data.value,
+					value,
 				},
 				name: 'queryChange',
 				originalEvent: event,
@@ -209,8 +220,8 @@ class ClayMultiSelect extends ClayComponent {
 			event.preventDefault();
 			if (this._itemFocused) {
 				return this._handleItemRemoved(this._itemFocused);
-			} else if (value) {
-				return this._handleItemAdded(event);
+			} else if (value && event.data.eventFromInput) {
+				return this._handleItemAdded(value, event);
 			}
 			break;
 		case 'Backspace':
@@ -331,6 +342,16 @@ ClayMultiSelect.STATE = {
 	 * @type {?Array}
 	 */
 	filteredItems: Config.array(Config.object()).value([]),
+
+	/**
+	 * Set the field name that contains the string to be added when
+	 * the item is selected.
+	 * @default originalString
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @type {?string}
+	 */
+	filterField: Config.string().value('originalString'),
 
 	/**
 	 * Help text to guide the user in the interaction.
