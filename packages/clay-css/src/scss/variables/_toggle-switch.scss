@@ -17,7 +17,7 @@ $toggle-switch-bar-border-color: $input-group-addon-border-color !default;
 $toggle-switch-bar-border-radius: 3px !default;
 $toggle-switch-bar-border-width: 1px !default;
 $toggle-switch-bar-focus-box-shadow: 0 0 3px 2px #66AFE6 !default;
-$toggle-switch-bar-font-size: 12px !default;
+$toggle-switch-bar-font-size: 0.75rem !default; // 12px
 $toggle-switch-bar-font-size-mobile: $toggle-switch-bar-font-size !default;
 $toggle-switch-bar-icon-color: $input-color !default;
 
@@ -43,3 +43,7 @@ $toggle-switch-button-on-icon-color: $toggle-switch-bar-on-bg !default;
 
 $toggle-switch-disabled-cursor: $disabled-cursor !default;
 $toggle-switch-disabled-opacity: 0.4 !default;
+
+// Toggle Switch Text
+
+$toggle-switch-text-font-size: 0.75rem !default;
