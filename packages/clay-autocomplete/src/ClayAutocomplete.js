@@ -294,7 +294,7 @@ ClayAutocomplete.STATE = {
 	 * Set some initial data while the first request is being made
 	 * @default undefined
 	 * @instance
-	 * @memberof ClayMultiSelect
+	 * @memberof ClayAutocomplete
 	 * @type {?(object|array)}
 	 */
 	initialData: Config.oneOfType([Config.object(), Config.array()]),
