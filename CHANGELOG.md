@@ -1,5 +1,27 @@
 # Change Log
 
+## [v2.4.1](https://github.com/liferay/clay/tree/v2.4.1) (2018-11-15)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.4.0...v2.4.1)
+
+**Fixed bugs:**
+
+- Circular dependency in ClayDropdown [\#1311](https://github.com/liferay/clay/issues/1311)
+
+**Closed issues:**
+
+- Clay-charts-react should be private [\#1305](https://github.com/liferay/clay/issues/1305)
+
+**Merged pull requests:**
+
+- v2.4.1 CHANGELOG [\#1316](https://github.com/liferay/clay/pull/1316) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1305 - Set charts-react to private and charts-shared to public [\#1315](https://github.com/liferay/clay/pull/1315) ([carloslancha](https://github.com/carloslancha))
+- v2.4.1 CHANGELOG [\#1314](https://github.com/liferay/clay/pull/1314) ([carloslancha](https://github.com/carloslancha))
+- v2.4.1 CHANGELOG [\#1313](https://github.com/liferay/clay/pull/1313) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1311 - Remove circular dependency in ClayDropdown [\#1312](https://github.com/liferay/clay/pull/1312) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1305 - clay-charts-shared should not be private [\#1310](https://github.com/liferay/clay/pull/1310) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1305 - Clay-charts-react and clay-charts-shared set to private [\#1306](https://github.com/liferay/clay/pull/1306) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1293 - Add tests for clay-charts-react [\#1294](https://github.com/liferay/clay/pull/1294) ([bryceosterhaus](https://github.com/bryceosterhaus))
+
 ## [v2.4.0](https://github.com/liferay/clay/tree/v2.4.0) (2018-11-13)
 [Full Changelog](https://github.com/liferay/clay/compare/v1.0.29...v2.4.0)
 
@@ -15,6 +37,7 @@
 **Closed issues:**
 
 - ClayCSS: SVG Icons Add 9 New Icons for Document Types [\#1298](https://github.com/liferay/clay/issues/1298)
+- Unable to add tests for clay-charts-react [\#1293](https://github.com/liferay/clay/issues/1293)
 - Installation issue with node v10.13.0 and npm v6.4.1 [\#1289](https://github.com/liferay/clay/issues/1289)
 - Create clay-charts for React [\#1280](https://github.com/liferay/clay/issues/1280)
 - Data attributes doesn't get updated in DOM after changing [\#1275](https://github.com/liferay/clay/issues/1275)
