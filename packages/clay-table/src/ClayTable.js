@@ -23,7 +23,6 @@ class ClayTable extends ClayComponent {
 	 * @inheritDoc
 	 */
 	attached() {
-		this._flattenItems = flatten(this.items);
 		this._eventHandler.add(
 			dom.on(document, 'click', this._handleDocClick.bind(this)),
 			dom.delegate(
@@ -47,7 +46,6 @@ class ClayTable extends ClayComponent {
 	 */
 	detached() {
 		super.detached();
-		this._flattenItems = null;
 		this._eventHandler.removeAllListeners();
 	}
 
@@ -76,7 +74,8 @@ class ClayTable extends ClayComponent {
 	_handleCellContentClick(event) {
 		const element = dom.closest(event.target, 'tr');
 		const elementIndex = this._getItemIndex(element);
-		const item = this._flattenItems[elementIndex];
+		const flattenItems = flatten(this.items);
+		const item = flattenItems[elementIndex];
 
 		return !this.emit({
 			data: {
@@ -153,13 +152,6 @@ class ClayTable extends ClayComponent {
 	 */
 	_handleSortingClick(event) {
 		this.emit('sortingButtonClicked', event);
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	syncItems() {
-		this._flattenItems = flatten(this.items);
 	}
 }
 
