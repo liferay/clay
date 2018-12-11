@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ClayResultsBar should render a results bar with filter labels 1`] = `
-<nav class="tbar tbar-inline-md-down subnav-tbar subnav-tbar-primary">
+<nav class="tbar tbar-inline-xs-down subnav-tbar subnav-tbar-primary">
   <div class="container-fluid container-fluid-max-xl">
     <ul class="tbar-nav tbar-nav-wrap">
       <li class="tbar-item">
@@ -64,7 +64,7 @@ exports[`ClayResultsBar should render a results bar with filter labels 1`] = `
 `;
 
 exports[`ClayResultsBar should render a results bar with filter labels and search value 1`] = `
-<nav class="tbar tbar-inline-md-down subnav-tbar subnav-tbar-primary">
+<nav class="tbar tbar-inline-xs-down subnav-tbar subnav-tbar-primary">
   <div class="container-fluid container-fluid-max-xl">
     <ul class="tbar-nav tbar-nav-wrap">
       <li class="tbar-item">
@@ -127,7 +127,7 @@ exports[`ClayResultsBar should render a results bar with filter labels and searc
 `;
 
 exports[`ClayResultsBar should render a results bar with search value 1`] = `
-<nav class="tbar tbar-inline-md-down subnav-tbar subnav-tbar-primary">
+<nav class="tbar tbar-inline-xs-down subnav-tbar subnav-tbar-primary">
   <div class="container-fluid container-fluid-max-xl">
     <ul class="tbar-nav tbar-nav-wrap">
       <li class="tbar-item tbar-item-expand">
@@ -148,7 +148,7 @@ exports[`ClayResultsBar should render a results bar with search value 1`] = `
 `;
 
 exports[`ClayResultsBar should render the default markup 1`] = `
-<nav class="tbar tbar-inline-md-down subnav-tbar subnav-tbar-primary">
+<nav class="tbar tbar-inline-xs-down subnav-tbar subnav-tbar-primary">
   <div class="container-fluid container-fluid-max-xl">
     <ul class="tbar-nav tbar-nav-wrap">
       <li class="tbar-item tbar-item-expand">
