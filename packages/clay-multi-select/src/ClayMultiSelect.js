@@ -61,7 +61,11 @@ class ClayMultiSelect extends ClayComponent {
 		this.inputValue = '';
 		this.refs.autocomplete.refs.input.focus();
 
-		return this._handleItemAdded(event.data[this.filterField], event, 'itemSelected');
+		return this._handleItemAdded(
+			event.data[this.filterField],
+			event,
+			'itemSelected'
+		);
 	}
 
 	/**
@@ -97,7 +101,10 @@ class ClayMultiSelect extends ClayComponent {
 				itemSelected => itemSelected.label === label
 			)
 		) {
-			const index = this.selectedItems.push({label: label, value: label});
+			const index = this.selectedItems.push({
+				label: label,
+				value: label,
+			});
 
 			this.selectedItems = this.selectedItems;
 
