@@ -25,6 +25,7 @@
 	{@param? inputName: string}
 	{@param? inputValue: string}
 	{@param? label: string}
+	{@param? labelLocator: string}
 	{@param? requestOptions: [
 		method: string,
 		mode: string,
@@ -40,6 +41,7 @@
 	{@param? requestTimeout: number}
 	{@param? selectedItems: list<?>}
 	{@param? selectedItemsInputName: string}
+	{@param? valueLocator: string}
 
 	{let $attributes kind="attributes"}
 		class="from-group
@@ -82,6 +84,7 @@
 			{param initialData: $initialData /}
 			{param inputName: $inputName /}
 			{param inputValue: $inputValue /}
+			{param labelLocator: $labelLocator ?: 'label' /}
 			{param requestOptions: $requestOptions /}
 			{param requestPolling: $requestPolling /}
 			{param requestRetries: $requestRetries /}
@@ -89,6 +92,7 @@
 			{param selectedItems: $selectedItems /}
 			{param selectedItemsInputName: $selectedItemsInputName /}
 			{param spritemap: $spritemap /}
+			{param valueLocator: $valueLocator ?: 'value' /}
 		{/call}
 	</div>
 {/template}
@@ -115,6 +119,7 @@
 	{@param? initialData: []|list<?>}
 	{@param? inputName: string}
 	{@param? inputValue: string}
+	{@param? labelLocator: string}
 	{@param? requestOptions: [
 		method: string,
 		mode: string,
@@ -130,6 +135,7 @@
 	{@param? requestTimeout: number}
 	{@param? selectedItems: list<?>}
 	{@param? selectedItemsInputName: string}
+	{@param? valueLocator: string}
 
 	<div class="input-group input-group-stacked-sm-down">
 		<div class="input-group-item">
@@ -163,9 +169,11 @@
 						{call .items}
 							{param _handleCloseButtonClick: $_handleCloseButtonClick /}
 							{param contentRenderer: $contentRenderer /}
+							{param labelLocator: $labelLocator /}
 							{param selectedItems: $selectedItems /}
 							{param selectedItemsInputName: $selectedItemsInputName /}
 							{param spritemap: $spritemap /}
+							{param valueLocator: $valueLocator /}
 						{/call}
 					{/if}
 				{/param}
@@ -205,7 +213,9 @@
 	{@param spritemap: string}
 	{@param? _handleCloseButtonClick: any}
 	{@param? contentRenderer: string}
+	{@param? labelLocator: string}
 	{@param? selectedItemsInputName: string}
+	{@param? valueLocator: string}
 
 	{foreach $item in $selectedItems}
 		{if $selectedItemsInputName}
@@ -215,7 +225,7 @@
 				{/if}
 
 				type="hidden"
-				value="{$item.value}"
+				value="{$item[$valueLocator]}"
 			{/let}
 
 			<input {$inputAttributes}>
@@ -225,6 +235,7 @@
 			{param _handleCloseButtonClick: $_handleCloseButtonClick /}
 			{param data: $item /}
 			{param index: index($item) /}
+			{param labelLocator: $labelLocator/}
 			{param spritemap: $spritemap /}
 		{/delcall}
 	{/foreach}
@@ -240,13 +251,14 @@
 	{@param index: int}
 	{@param spritemap: string}
 	{@param? _handleCloseButtonClick: any}
+	{@param? labelLocator: string}
 
 	{call ClayLabel.render}
 		{param closeable: true /}
 		{param data: ['tag': $index] /}
 		{param events: ['close': $_handleCloseButtonClick] /}
 		{param id: 'item-tag' /}
-		{param label: $data.label /}
+		{param label: $data[$labelLocator] /}
 		{param ref: 'item' + $index /}
 		{param spritemap: $spritemap /}
 		{param tabIndex: '0' /}

@@ -98,12 +98,12 @@ class ClayMultiSelect extends ClayComponent {
 		if (
 			label.trim() &&
 			!this.selectedItems.find(
-				itemSelected => itemSelected.label === label
+				itemSelected => itemSelected[this.labelLocator] === label
 			)
 		) {
 			const index = this.selectedItems.push({
-				label: label,
-				value: label,
+				[this.labelLocator]: label,
+				[this.valueLocator]: label,
 			});
 
 			this.selectedItems = this.selectedItems;
@@ -460,6 +460,15 @@ ClayMultiSelect.STATE = {
 	label: Config.string(),
 
 	/**
+	 * Sets the name of the field to map the label of the item.
+	 * @default label
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @type {?string}
+	 */
+	labelLocator: Config.string().value('label'),
+
+	/**
 	 * List of the selected Items.
 	 * @default []
 	 * @instance
@@ -485,6 +494,15 @@ ClayMultiSelect.STATE = {
 	 * @type {!string}
 	 */
 	spritemap: Config.string().required(),
+
+	/**
+	 * Sets the name of the field to map the value of the item.
+	 * @default value
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @type {?string}
+	 */
+	valueLocator: Config.string().value('value'),
 };
 
 defineWebComponent('clay-multi-select', ClayMultiSelect);
