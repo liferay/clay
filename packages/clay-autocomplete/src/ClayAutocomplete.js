@@ -269,9 +269,11 @@ ClayAutocomplete.STATE = {
 	 * @instance
 	 * @default (elem) => elem
 	 * @memberof ClayAutocomplete
-	 * @type {?(function|undefined)}
+	 * @type {?(function|string)}
 	 */
-	extractData: Config.func(),
+	extractData: Config.oneOfType([Config.func(), Config.string()]).value(
+		elem => elem
+	),
 
 	/**
 	 * List of filtered items for suggestion or autocomplete.

@@ -101,10 +101,11 @@
 		// With only data remote
 		new metal.ClayMultiSelect({
 			dataSource: 'https://api.pro.coinbase.com/currencies',
-			extractData: (elem) => elem.name,
 			helpText: 'You can use a comma to enter tags',
 			label: 'Currencies',
+			labelLocator: 'name',
 			spritemap,
+			valueLocator: 'id',
 		}, '#selected-block');
 
 	</script>
