@@ -147,10 +147,11 @@ class ClayDataProvider extends ClayComponent {
 
 				if (result != null) {
 					prev[prev.length] = {
+						data: element,
 						index,
 						matches: result.values,
-						value: string,
 						score: result.score,
+						value: string,
 					};
 				}
 

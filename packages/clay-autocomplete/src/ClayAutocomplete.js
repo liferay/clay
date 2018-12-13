@@ -70,7 +70,7 @@ class ClayAutocomplete extends ClayComponent {
 		const item = this.filteredItems[Number(index)];
 
 		return !this.emit({
-			data: item,
+			data: item.data,
 			name: 'itemSelected',
 			originalEvent: event,
 		});
