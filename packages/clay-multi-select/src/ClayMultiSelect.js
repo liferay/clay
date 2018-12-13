@@ -353,12 +353,12 @@ ClayMultiSelect.STATE = {
 	/**
 	 * Set the field name that contains the string to be added when
 	 * the item is selected.
-	 * @default originalString
+	 * @default value
 	 * @instance
 	 * @memberof ClayMultiSelect
 	 * @type {?string}
 	 */
-	filterField: Config.string().value('originalString'),
+	filterField: Config.string().value('value'),
 
 	/**
 	 * Help text to guide the user in the interaction.
