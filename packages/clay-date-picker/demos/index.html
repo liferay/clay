@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: ClayDatePicker</title>
+
+	<link rel="stylesheet" href="../../../node_modules/clay-css/lib/css/atlas.css">
+
+	<style>
+		body {
+			background-color: #FFF;
+		}
+
+		.row {
+			margin-bottom: 20px;
+		}
+
+		.header {
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+		}
+
+		.grid {
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+			margin-top: 16px;
+		}
+
+		.rowgroup {
+			display: flex;
+			width: 100%;
+			height: 32px;
+			margin: 4px 0;
+		}
+
+		.day {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 32px;
+			margin: 0 8px;
+			color: #6B6C7E;
+			border-radius: 100%;
+		}
+
+		.day.active {
+			color: #ffffff !important;
+			background-color: #0B5FFF;
+		}
+
+		.day.outside {
+			color: #A7A9BC;
+		}
+
+		.form-caption,
+		.navigation {
+			display: flex;
+		}
+
+		.datepicker {
+			padding: 16px 16px;
+		}
+
+		.dropdown-menu {
+			max-width: 384px;
+			padding: 0;
+		}
+
+		.weekdays {
+			margin-top: 16px;
+			display: flex;
+			width: 100%;
+			height: 21px;
+			align-items: center;
+			padding: 0 8px;
+			justify-content: space-between;
+		}
+
+		.week {
+			color: #272833;
+			font-weight: 600;
+			width: 32px;
+			text-align: center;
+		}
+
+		.extension-time {
+			color: #6B6C7E;
+			background-color: rgba(241, 242, 245, 0.50);
+			padding: 16px 32px;
+			display: flex;
+			align-items: center;
+		}
+
+		.extension-control {
+			display: flex;
+			align-items: center;
+		}
+
+		.extension-time > svg {
+			width: 16px;
+			height: 16px;
+			margin-right: 16px;
+			margin-top: 1px;
+		}
+
+		.datepicker .form-control,
+		.extension-time .form-control {
+			background-color: transparent;
+			border: transparent;
+		}
+	</style>
+
+	<script src="../build/globals/clay-date-picker.js"></script>
+</head>
+<body class="container" role="main">
+	<h1 class="page-title">
+		ClayDatePicker
+	</h1>
+
+	<div class="row row-spacing">
+		<div class="col col-md-3">
+			<h2>Default State</h2>
+			<div id="default-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col col-md-3">
+			<h2>With time</h2>
+			<div id="time-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col col-md-3">
+			<h2>With locale and time</h2>
+			<div id="locale-block"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		const spritemap = '../../../node_modules/clay-css/lib/images/icons/icons.svg';
+
+		// Default State
+		new metal.ClayDatePicker({
+			spritemap,
+			placeholder: 'YYYY-MM-DD',
+			years: [
+				'2018',
+				'2019',
+				'2020',
+				'2021',
+				'2022',
+				'2023',
+				'2024',
+			],
+		}, '#default-block');
+
+		// With time
+		new metal.ClayDatePicker({
+			spritemap,
+			time: true,
+			placeholder: 'YYYY-MM-DD HH:mm',
+			years: [
+				'2018',
+				'2019',
+				'2020',
+				'2021',
+				'2022',
+				'2023',
+				'2024',
+			],
+		}, '#time-block');
+
+		// With locale and time
+		new metal.ClayDatePicker({
+			dateFormat: 'DD.MM.YYYY',
+			placeholder: 'DD.MM.YYYY H:mm',
+			timeFormat: 'H:mm',
+			firstDayOfWeek: 1,
+			spritemap,
+			time: true,
+			weekdaysShort: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+			months: [
+				'Январь',
+				'Февраль',
+				'Март',
+				'Апрель',
+				'Май',
+				'Июнь',
+				'Июль',
+				'Август',
+				'Сентябрь',
+				'Октябрь',
+				'Ноябрь',
+				'Декабрь',
+			],
+			years: [
+				'2018',
+				'2019',
+				'2020',
+				'2021',
+				'2022',
+				'2023',
+				'2024',
+			],
+		}, '#locale-block');
+
+	</script>
+</body>
+</html>

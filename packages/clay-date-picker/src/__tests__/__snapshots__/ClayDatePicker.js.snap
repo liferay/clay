@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayDatePicker should render a ClayDatePicker with classes 1`] = `
+<div class="input-group my-custom-class">
+  <div class="input-group-item">
+    <input class="form-control input-group-inset input-group-inset-after" type="text">
+    <div class="input-group-inset-item input-group-inset-item-after">
+      <button class="btn d-none d-md-inline-block btn-unstyled" aria-label="calendar" type="button">
+        <svg class="lexicon-icon lexicon-icon-calendar" focusable="false" role="presentation">
+          <use xlink:href="icons.svg#calendar"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="dropdown-menu">
+    <div class="datepicker">
+      <div class="weekdays">
+        <div class="week">S</div>
+        <div class="week">M</div>
+        <div class="week">T</div>
+        <div class="week">W</div>
+        <div class="week">T</div>
+        <div class="week">F</div>
+        <div class="week">S</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayDatePicker should render a ClayDatePicker with id 1`] = `
+<div class="input-group" id="myId">
+  <div class="input-group-item">
+    <input class="form-control input-group-inset input-group-inset-after" type="text">
+    <div class="input-group-inset-item input-group-inset-item-after">
+      <button class="btn d-none d-md-inline-block btn-unstyled" aria-label="calendar" type="button">
+        <svg class="lexicon-icon lexicon-icon-calendar" focusable="false" role="presentation">
+          <use xlink:href="icons.svg#calendar"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="dropdown-menu">
+    <div class="datepicker">
+      <div class="weekdays">
+        <div class="week">S</div>
+        <div class="week">M</div>
+        <div class="week">T</div>
+        <div class="week">W</div>
+        <div class="week">T</div>
+        <div class="week">F</div>
+        <div class="week">S</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayDatePicker should render the default markup 1`] = `
+<div class="input-group">
+  <div class="input-group-item">
+    <input class="form-control input-group-inset input-group-inset-after" type="text">
+    <div class="input-group-inset-item input-group-inset-item-after">
+      <button class="btn d-none d-md-inline-block btn-unstyled" aria-label="calendar" type="button">
+        <svg class="lexicon-icon lexicon-icon-calendar" focusable="false" role="presentation">
+          <use xlink:href="icons.svg#calendar"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="dropdown-menu">
+    <div class="datepicker">
+      <div class="weekdays">
+        <div class="week">S</div>
+        <div class="week">M</div>
+        <div class="week">T</div>
+        <div class="week">W</div>
+        <div class="week">T</div>
+        <div class="week">F</div>
+        <div class="week">S</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

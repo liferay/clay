@@ -1,0 +1,256 @@
+{namespace ClayDatePicker}
+
+/**
+ * This renders the component's whole content.
+ */
+{template .render}
+	{@param months: list<?>}
+	{@param spritemap: string}
+	{@param weekdaysShort: list<string>}
+	{@param years: list<?>}
+	{@param? _daySelected: any}
+	{@param? _handleContentClick: any}
+	{@param? _handleDayClicked: any}
+	{@param? _handleDotClicked: any}
+	{@param? _handleNavigateChange: any}
+	{@param? _handleNextMonth: any}
+	{@param? _handleOnInput: any}
+	{@param? _handlePreviousMonth: any}
+	{@param? _handleToggle: any}
+	{@param? _inputValue: string}
+	{@param? _month: int}
+	{@param? _weeks: list<?>}
+	{@param? _year: int}
+	{@param? ariaLabel: string}
+	{@param? contentRenderer: string}
+	{@param? dataContent: ?}
+	{@param? defaultValue: string}
+	{@param? elementClasses: string}
+	{@param? expanded: bool}
+	{@param? firstDayOfWeek: int}
+	{@param? id: string}
+	{@param? placeholder: string}
+	{@param? time: bool}
+
+	{let $attributes kind="attributes"}
+		class="input-group
+			{if $elementClasses}
+				{sp}{$elementClasses}
+			{/if}
+		"
+
+		{if $id}
+			id="{$id}"
+		{/if}
+	{/let}
+
+	<div {$attributes}>
+		<div class="input-group-item">
+			{let $inputAttributes kind="attributes"}
+				{if $ariaLabel}
+					aria-label="{$ariaLabel}"
+				{/if}
+
+				class="form-control input-group-inset input-group-inset-after"
+
+				onInput="{$_handleOnInput}"
+
+				{if $placeholder}
+					placeholder="{$placeholder}"
+				{/if}
+
+				{if $_inputValue}
+					value="{$_inputValue}"
+				{elseif $defaultValue}
+					value="{$defaultValue}"
+				{/if}
+
+				type="text"
+			{/let}
+
+			<input {$inputAttributes}>
+			<div class="input-group-inset-item input-group-inset-item-after">
+				{call ClayButton.render}
+					{param elementClasses: 'd-none d-md-inline-block' /}
+					{param events: ['click': $_handleToggle] /}
+					{param icon: 'calendar' /}
+					{param spritemap: $spritemap /}
+					{param style: 'unstyled' /}
+					{param type: 'button' /}
+				{/call}
+			</div>
+		</div>
+
+		{let $classes kind="text"}
+			dropdown-menu
+			{if $expanded}
+				{sp}show
+			{/if}
+		{/let}
+
+		<div class="{$classes}">
+			<div class="datepicker">
+				{if isNonnull($_month) and isNonnull($_year)}
+					{call .header}
+						{param _handleDotClicked: $_handleDotClicked /}
+						{param _handleNavigateChange: $_handleNavigateChange /}
+						{param _handleNextMonth: $_handleNextMonth /}
+						{param _handlePreviousMonth: $_handlePreviousMonth /}
+						{param _month: $_month /}
+						{param _year: $_year /}
+						{param months: $months /}
+						{param spritemap: $spritemap /}
+						{param years: $years /}
+					{/call}
+				{/if}
+
+				{let $firstDay: $firstDayOfWeek ?: 0 /}
+
+				<div class="weekdays">
+					{for $index in range(7)}
+						{let $weekday: ($index + $firstDay) % 7 /}
+
+						<div class="week">
+							{$weekdaysShort[$weekday]}
+						</div>
+					{/for}
+				</div>
+
+				{if $_weeks}
+					{call .body}
+						{param _daySelected: $_daySelected /}
+						{param _handleDayClicked: $_handleDayClicked /}
+						{param _weeks: $_weeks /}
+					{/call}
+				{/if}
+			</div>
+
+			{if $contentRenderer or $time}
+				{delcall ClayDatePicker.ExtensionPoint variant="$contentRenderer"}
+					{param _handleContentClick: $_handleContentClick /}
+					{param dataContent: $dataContent /}
+					{param spritemap: $spritemap /}
+				{/delcall}
+			{/if}
+		</div>
+	</div>
+{/template}
+
+{template .header}
+	{@param _month: int}
+	{@param _year: int}
+	{@param months: list<?>}
+	{@param spritemap: string}
+	{@param years: list<?>}
+	{@param? _handleDotClicked: any}
+	{@param? _handleNavigateChange: any}
+	{@param? _handleNextMonth: any}
+	{@param? _handlePreviousMonth: any}
+
+	<div class="header">
+		<form class="form-caption">
+			<select name="month" value="{$_month}" class="form-control form-control-sm" onChange="{$_handleNavigateChange}">
+				{foreach $month in $months}
+					<option value="{index($month)}">{$month}</option>
+				{/foreach}
+			</select>
+			<select name="year" value="{$_year}" class="form-control form-control-sm" onChange="{$_handleNavigateChange}">
+				{foreach $year in $years}
+					<option value="{$year}">{$year}</option>
+				{/foreach}
+			</select>
+		</form>
+		<div class="navigation">
+			{call ClayButton.render}
+				{param events: ['click': $_handlePreviousMonth] /}
+				{param icon: 'angle-left' /}
+				{param monospaced: true /}
+				{param size: 'sm' /}
+				{param spritemap: $spritemap /}
+				{param style: 'unstyled' /}
+				{param type: 'button' /}
+			{/call}
+			{call ClayButton.render}
+				{param events: ['click': $_handleDotClicked] /}
+				{param icon: 'live' /}
+				{param monospaced: true /}
+				{param size: 'sm' /}
+				{param spritemap: $spritemap /}
+				{param style: 'unstyled' /}
+				{param type: 'button' /}
+			{/call}
+			{call ClayButton.render}
+				{param events: ['click': $_handleNextMonth] /}
+				{param icon: 'angle-right' /}
+				{param monospaced: true /}
+				{param size: 'sm' /}
+				{param spritemap: $spritemap /}
+				{param style: 'unstyled' /}
+				{param type: 'button' /}
+			{/call}
+		</div>
+	</div>
+{/template}
+
+{template .body}
+	{@param _daySelected: any}
+	{@param _weeks: list<?>}
+	{@param? _handleDayClicked: any}
+
+	<div class="grid">
+		{foreach $week in $_weeks}
+			<div class="rowgroup">
+				{foreach $day in $week}
+					{let $attributes kind="attributes"}
+						ariaLabel="{$day.dateString}"
+
+						class="
+							day
+							{if $day.outside}
+								{sp}outside
+							{/if}
+
+							{if $day.dateString == $_daySelected}
+								{sp}active
+							{/if}
+						"
+
+						tabindex="0"
+
+						onClick="{$_handleDayClicked}"
+					{/let}
+
+					<div {$attributes}>
+						{$day.number}
+					</div>
+				{/foreach}
+			</div>
+		{/foreach}
+	</div>
+{/template}
+
+{deltemplate ClayDatePicker.ExtensionPoint}
+	{@param spritemap: string}
+	{@param? _handleContentClick: any}
+	{@param? dataContent: ?}
+
+	<div class="extension-time">
+		{call ClayIcon.render}
+			{param symbol: 'time' /}
+			{param spritemap: $spritemap /}
+		{/call}
+		<form class="extension-control">
+			<select name="hour" value="{$dataContent ? $dataContent.hour : ''}" class="form-control form-control-sm" onChange="{$_handleContentClick}">
+				{for $value in range(24)}
+					<option value="{$value}">{$value}</option>
+				{/for}
+			</select>
+			<span>:</span>
+			<select name="minute" value="{$dataContent ? $dataContent.minute : ''}" class="form-control form-control-sm" onChange="{$_handleContentClick}">
+				{for $value in range(60)}
+					<option value="{$value}">{$value}</option>
+				{/for}
+			</select>
+		</form>
+	</div>
+{/deltemplate}

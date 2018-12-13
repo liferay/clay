@@ -1,0 +1,57 @@
+{
+  "name": "clay-date-picker",
+  "version": "2.5.0",
+  "description": "Metal ClayDatePicker component",
+  "license": "BSD",
+  "repository": "https://github.com/liferay/clay/tree/master/packages/clay-date-picker",
+  "engines": {
+    "node": ">=0.12.0",
+    "npm": ">=3.0.0"
+  },
+  "main": "lib/ClayDatePicker.js",
+  "esnext:main": "src/ClayDatePicker.js",
+  "jsnext:main": "src/ClayDatePicker.js",
+  "files": [
+    "lib",
+    "src",
+    "test"
+  ],
+  "scripts": {
+    "build": "npm run soy && webpack",
+    "compile": "babel -d lib/ src/ -s --ignore src/__tests__",
+    "prepublish": "npm run soy && npm run compile",
+    "soy": "metalsoy --soyDeps '../../node_modules/clay-+(button|icon)/src/**/*.soy'"
+  },
+  "keywords": [
+    "clay",
+    "metal"
+  ],
+  "dependencies": {
+    "clay-button": "^2.5.0",
+    "clay-component": "^2.5.0",
+    "clay-icon": "^2.5.0",
+    "metal": "^2.16.0",
+    "metal-dom": "^2.16.0",
+    "metal-events": "^2.16.0",
+    "metal-soy": "^2.16.0",
+    "metal-state": "^2.16.0",
+    "metal-web-component": "^2.16.0",
+    "moment": "^2.22.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-node-env-inline": "^0.1.1",
+    "babel-preset-env": "^1.6.0",
+    "browserslist-config-clay": "^2.1.12",
+    "clay-css": "^2.1.12",
+    "metal-dom": "^2.13.2",
+    "metal-tools-soy": "^6.0.0",
+    "webpack": "^3.0.0",
+    "webpack-config-clay": "^2.1.12"
+  },
+  "browserslist": [
+    "extends browserslist-config-clay"
+  ]
+}
