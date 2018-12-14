@@ -11,6 +11,24 @@ exports[`ClayTable should render a ClayTable not using default classes 1`] = `
 </div>
 `;
 
+exports[`ClayTable should render a ClayTable not wrapped 1`] = `
+<table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
+  <thead>
+    <tr></tr>
+  </thead>
+  <tbody></tbody>
+</table>
+`;
+
+exports[`ClayTable should render a ClayTable not wrapped with id 1`] = `
+<table class="table table-autofit table-hover table-list show-quick-actions-on-hover" id="myId">
+  <thead>
+    <tr></tr>
+  </thead>
+  <tbody></tbody>
+</table>
+`;
+
 exports[`ClayTable should render a ClayTable with a basic schema and grouped items 1`] = `
 <div class="table-responsive">
   <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
