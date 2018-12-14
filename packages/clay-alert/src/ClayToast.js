@@ -41,7 +41,7 @@ class ClayToast extends Component {
 	 * @public
 	 */
 	close() {
-		this.emit('hide');
+		this.refs.alertBase.close();
 	}
 }
 
