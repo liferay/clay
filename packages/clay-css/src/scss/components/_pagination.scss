@@ -22,7 +22,14 @@
 }
 
 .page-link {
+	align-items: center;
+
 	@include border-radius($pagination-link-border-radius);
+
+	display: inline-flex;
+	height: $pagination-item-height;
+	justify-content: center;
+
 	@include transition($pagination-link-transition);
 
 	&:focus {
@@ -56,6 +63,10 @@
 			color: $pagination-disabled-color;
 			opacity: $pagination-disabled-opacity;
 		}
+	}
+
+	.lexicon-icon {
+		margin-top: 0;
 	}
 }
 
@@ -100,6 +111,7 @@
 
 	> a,
 	> .btn-unstyled {
+		align-items: center;
 		background-color: $pagination-items-per-page-bg;
 		border-color: $pagination-items-per-page-border-color;
 
@@ -108,7 +120,9 @@
 		border-style: solid;
 		border-width: $pagination-border-width;
 		color: $pagination-items-per-page-color;
-		display: block;
+		display: inline-flex;
+		height: $pagination-item-height;
+		justify-content: center;
 		line-height: $pagination-line-height;
 		padding: $pagination-padding-y $pagination-padding-x;
 		text-decoration: none;
@@ -124,6 +138,11 @@
 		&:focus {
 			box-shadow: $pagination-items-per-page-focus-box-shadow;
 			outline: $pagination-items-per-page-focus-outline;
+		}
+
+		.lexicon-icon {
+			margin-left: $pagination-items-per-page-lexicon-icon-margin-left;
+			margin-top: $pagination-items-per-page-lexicon-icon-margin-top;
 		}
 	}
 
@@ -160,7 +179,9 @@
 	line-height: $pagination-line-height;
 	margin-bottom: $pagination-margin-bottom;
 	margin-right: auto;
+	max-width: 100%;
 	padding: $pagination-padding-y $pagination-padding-x;
+	word-wrap: break-word;
 }
 
 // Pagination Sizes
@@ -168,10 +189,21 @@
 .pagination-sm {
 	.pagination-items-per-page {
 		@include border-radius($pagination-link-border-radius-sm);
+
+		.lexicon-icon {
+			margin-left: $pagination-items-per-page-lexicon-icon-margin-left-sm;
+			margin-right: $pagination-items-per-page-lexicon-icon-margin-top-sm;
+		}
 	}
 
 	.pagination-items-per-page > a,
-	.pagination-items-per-page > .btn-unstyled,
+	.pagination-items-per-page > .btn-unstyled {
+		font-size: $pagination-font-size-sm;
+		height: $pagination-item-height-sm;
+		line-height: $pagination-line-height-sm;
+		padding: $pagination-padding-y-sm $pagination-padding-x;
+	}
+
 	.pagination-results {
 		font-size: $pagination-font-size-sm;
 		line-height: $pagination-line-height-sm;
@@ -180,6 +212,7 @@
 
 	.page-link {
 		font-size: $pagination-font-size-sm;
+		height: $pagination-item-height-sm;
 		line-height: $pagination-line-height-sm;
 
 		&.btn-unstyled {
@@ -191,10 +224,21 @@
 .pagination-lg {
 	.pagination-items-per-page {
 		@include border-radius($pagination-link-border-radius-lg);
+
+		.lexicon-icon {
+			margin-left: $pagination-items-per-page-lexicon-icon-margin-left-lg;
+			margin-right: $pagination-items-per-page-lexicon-icon-margin-top-lg;
+		}
 	}
 
 	.pagination-items-per-page > a,
-	.pagination-items-per-page > .btn-unstyled,
+	.pagination-items-per-page > .btn-unstyled {
+		font-size: $pagination-font-size-lg;
+		height: $pagination-item-height-lg;
+		line-height: $pagination-line-height-lg;
+		padding: $pagination-padding-y-lg $pagination-padding-x;
+	}
+
 	.pagination-results {
 		font-size: $pagination-font-size-lg;
 		line-height: $pagination-line-height-lg;
@@ -203,6 +247,7 @@
 
 	.page-link {
 		font-size: $pagination-font-size-lg;
+		height: $pagination-item-height-lg;
 		line-height: $pagination-line-height-lg;
 
 		&.btn-unstyled {
