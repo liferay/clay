@@ -2,15 +2,7 @@ import ClayDatePicker from '../ClayDatePicker';
 
 let component;
 let spritemap = 'icons.svg';
-let years = [
-	'2018',
-	'2019',
-	'2020',
-	'2021',
-	'2022',
-	'2023',
-	'2024',
-];
+let years = ['2018', '2019', '2020', '2021', '2022', '2023', '2024'];
 
 describe('ClayDatePicker', function() {
 	afterEach(() => {

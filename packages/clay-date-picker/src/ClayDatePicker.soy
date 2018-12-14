@@ -4,9 +4,7 @@
  * This renders the component's whole content.
  */
 {template .render}
-	{@param months: list<?>}
 	{@param spritemap: string}
-	{@param weekdaysShort: list<string>}
 	{@param years: list<?>}
 	{@param? _daySelected: any}
 	{@param? _handleContentClick: any}
@@ -29,8 +27,10 @@
 	{@param? expanded: bool}
 	{@param? firstDayOfWeek: int}
 	{@param? id: string}
+	{@param? months: list<?>}
 	{@param? placeholder: string}
 	{@param? time: bool}
+	{@param? weekdaysShort: list<string>}
 
 	{let $attributes kind="attributes"}
 		class="input-group
@@ -90,7 +90,7 @@
 
 		<div class="{$classes}">
 			<div class="datepicker">
-				{if isNonnull($_month) and isNonnull($_year)}
+				{if $months and isNonnull($_month) and isNonnull($_year)}
 					{call .header}
 						{param _handleDotClicked: $_handleDotClicked /}
 						{param _handleNavigateChange: $_handleNavigateChange /}
@@ -106,15 +106,17 @@
 
 				{let $firstDay: $firstDayOfWeek ?: 0 /}
 
-				<div class="weekdays">
-					{for $index in range(7)}
-						{let $weekday: ($index + $firstDay) % 7 /}
+				{if $weekdaysShort}
+					<div class="weekdays">
+						{for $index in range(7)}
+							{let $weekday: ($index + $firstDay) % 7 /}
 
-						<div class="week">
-							{$weekdaysShort[$weekday]}
-						</div>
-					{/for}
-				</div>
+							<div class="week">
+								{$weekdaysShort[$weekday]}
+							</div>
+						{/for}
+					</div>
+				{/if}
 
 				{if $_weeks}
 					{call .body}
@@ -136,6 +138,8 @@
 	</div>
 {/template}
 
+/**
+ */
 {template .header}
 	{@param _month: int}
 	{@param _year: int}
@@ -192,6 +196,8 @@
 	</div>
 {/template}
 
+/**
+ */
 {template .body}
 	{@param _daySelected: any}
 	{@param _weeks: list<?>}
@@ -229,6 +235,8 @@
 	</div>
 {/template}
 
+/**
+ */
 {deltemplate ClayDatePicker.ExtensionPoint}
 	{@param spritemap: string}
 	{@param? _handleContentClick: any}
@@ -236,8 +244,8 @@
 
 	<div class="extension-time">
 		{call ClayIcon.render}
-			{param symbol: 'time' /}
 			{param spritemap: $spritemap /}
+			{param symbol: 'time' /}
 		{/call}
 		<form class="extension-control">
 			<select name="hour" value="{$dataContent ? $dataContent.hour : ''}" class="form-control form-control-sm" onChange="{$_handleContentClick}">

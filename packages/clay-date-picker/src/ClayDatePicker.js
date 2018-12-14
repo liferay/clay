@@ -261,10 +261,9 @@ ClayDatePicker.STATE = {
 	 * @memberof ClayDatePicker
 	 * @type {?(Date|string|undefined)}
 	 */
-	_inputValue: Config.oneOfType([
-		Config.instanceOf(Date),
-		Config.string(),
-	]).setter('_setValue').internal(),
+	_inputValue: Config.oneOfType([Config.instanceOf(Date), Config.string()])
+		.setter('_setValue')
+		.internal(),
 
 	/**
 	 * The selected month.
