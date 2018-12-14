@@ -1,0 +1,32 @@
+{
+    "_month": 11,
+    "spritemap": "icons.svg",
+    "months": [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+    ],
+    "_handleNextMonth": "(any|null)",
+    "_handlePreviousMonth": "(any|null)",
+    "_handleDotClicked": "(any|null)",
+    "_handleNavigateChange": "(any|null)",
+    "years": [
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024"
+    ],
+    "_year": 2018
+}

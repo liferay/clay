@@ -1,0 +1,69 @@
+{
+    "dataContent": {
+        "hour": 0,
+        "minute": 0
+    },
+    "defaultValue": "(null|string)",
+    "_handleDotClicked": "(any|null)",
+    "elementClasses": "my-element-classes",
+    "years": [
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024"
+    ],
+    "_handleToggle": "(any|null)",
+    "_month": 11,
+    "expanded": false,
+    "_daySelected": "2018 11 12",
+    "_handlePreviousMonth": "(any|null)",
+    "_handleOnInput": "(any|null)",
+    "_weeks": [
+        [
+            {
+                "dateString": "2018 10 26",
+                "number": 26,
+                "outside": true
+            }
+        ]
+    ],
+    "_handleNavigateChange": "(any|null)",
+    "_inputValue": "(null|string)",
+    "id": "(null|string)",
+    "placeholder": "(null|string)",
+    "months": [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+    ],
+    "_handleContentClick": "(any|null)",
+    "_handleDayClicked": "(any|null)",
+    "contentRenderer": "(null|string)",
+    "_year": 2018,
+    "ariaLabel": "(null|string)",
+    "spritemap": "icons.svg",
+    "_handleNextMonth": "(any|null)",
+    "firstDayOfWeek": 0,
+    "time": true,
+    "weekdaysShort": [
+        "S",
+        "M",
+        "T",
+        "W",
+        "T",
+        "F",
+        "S"
+    ]
+}
