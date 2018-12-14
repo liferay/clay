@@ -10,6 +10,21 @@ import Soy from 'metal-soy';
 import templates from './ClayModal.soy.js';
 
 const KEY_CODE_ESC = 27;
+const KEY_CODE_TAB = 9;
+
+const FOCUSABLE_ELEMENTS = [
+	'a[href]',
+	'[contenteditable]',
+	'[tabindex]:not([tabindex^="-"])',
+	'area[href]',
+	'button:not([disabled]):not([aria-hidden])',
+	'embed',
+	'iframe',
+	'input:not([disabled]):not([type="hidden"]):not([aria-hidden])',
+	'object',
+	'select:not([disabled]):not([aria-hidden])',
+	'textarea:not([disabled]):not([aria-hidden])',
+];
 
 /**
  * Metal ClayModal component.
@@ -96,8 +111,50 @@ class ClayModal extends Component {
 		this._isTransitioning = true;
 
 		this._eventHandler.add(
-			dom.on(document, 'keyup', this._handleKeyup.bind(this))
+			dom.on(document, 'keyup', this._handleKeyup.bind(this)),
+			dom.on(document, 'keydown', this._handleKeyDown.bind(this))
 		);
+	}
+
+	/**
+	 * Get all nodes that can be focused.
+	 * @protected
+	 * @return {!Array}
+	 */
+	_getFocusableNodes() {
+		const nodes = this.element.querySelectorAll(FOCUSABLE_ELEMENTS);
+		return Object.keys(nodes).map(key => nodes[key]);
+	}
+
+	/**
+	 * Handles the focus on the elements within the modal.
+	 * @param {!Event} event
+	 * @protected
+	 */
+	_handleKeyDown(event) {
+		if (event.keyCode === KEY_CODE_TAB) {
+			if (!this.element.contains(event.target)) {
+				this.element.focus();
+			} else {
+				const focusableNodes = this._getFocusableNodes();
+				const focusedItemIndex = focusableNodes.indexOf(
+					document.activeElement
+				);
+
+				if (event.shiftKey && focusedItemIndex === 0) {
+					focusableNodes[focusableNodes.length - 1].focus();
+					event.preventDefault();
+				}
+
+				if (
+					!event.shiftKey &&
+					focusedItemIndex === focusableNodes.length - 1
+				) {
+					focusableNodes[0].focus();
+					event.preventDefault();
+				}
+			}
+		}
 	}
 
 	/**
