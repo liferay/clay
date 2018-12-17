@@ -5,7 +5,7 @@ import 'clay-sticker';
 // eslint-disable-next-line
 import { ClayActionsDropdown } from 'clay-dropdown';
 import {Config} from 'metal-state';
-import Component from 'metal-component';
+import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 
@@ -16,7 +16,17 @@ import templates from './ClayCardBase.soy.js';
  * Metal ClayCardBase component.
  * @extends Component
  */
-class ClayCardBase extends Component {
+class ClayCardBase extends ClayComponent {
+	/**
+	 * Continues the propagation of the dropdown action item click event
+	 * @param {!Event} event
+	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleActionItemClicked(event) {
+		return !this.emit('itemClicked', event);
+	}
+
 	/**
 	 * Continues the propagation of the checkbox changed event
 	 * @param {!Event} event
@@ -33,6 +43,16 @@ class ClayCardBase extends Component {
  * @type {!Object}
  */
 ClayCardBase.STATE = {
+	/**
+	 * Component wired to handle the different available events
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayCardBase
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	actionHandler: Config.object(),
+
 	/**
 	 * List of items to display in the actions menu.
 	 * @default undefined

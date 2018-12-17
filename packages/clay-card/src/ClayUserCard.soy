@@ -5,6 +5,7 @@
  */
 {template .render}
 	{@param name: string}
+    {@param? _handleActionItemClicked: any}
 	{@param? _handleItemToggled: any}
 	{@param? actionItems: list<[
 		href: string,
@@ -38,7 +39,10 @@
 		{param contentRenderer: 'user' /}
 		{param disabled: $disabled /}
 		{param elementClasses: $elementClasses /}
-		{param events: ['itemToggled': $_handleItemToggled ] /}
+		{param events: [
+			'itemClicked': $_handleActionItemClicked,
+			'itemToggled': $_handleItemToggled
+		]/}
 		{param href: $href /}
 		{param id: $id /}
 		{param imageAlt: $imageAlt /}
@@ -61,6 +65,7 @@
  */
 {deltemplate ClayCardBase.DescriptiveArea variant="'user'"}
 	{@param title: string}
+	{@param? _handleActionItemClicked: any}
 	{@param? actionItems: list<[
 		href: string,
 		label: string,
@@ -93,6 +98,9 @@
 			{if $actionItems and $spritemap}
 				<div class="autofit-col">
 					{call ClayActionsDropdown.render}
+						{param events: [
+							'itemClicked': $_handleActionItemClicked
+						]/}
 						{param items: $actionItems /}
 						{param spritemap: $spritemap /}
 						{param triggerClasses: 'component-action' /}

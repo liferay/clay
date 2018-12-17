@@ -6,6 +6,7 @@
 {template .render}
 	{@param spritemap: string}
 	{@param title: string}
+    {@param? _handleActionItemClicked: any}
 	{@param? _handleItemCheckboxClick: any}
 	{@param? actionItems: list<[
 		href: string,
@@ -42,6 +43,7 @@
 
 	{let $descriptiveArea kind="html"}
 		{call .descriptiveArea}
+			{param _handleActionItemClicked: $_handleActionItemClicked /}
 			{param actionItems: $actionItems /}
 			{param href: $href /}
 			{param icon: $icon /}
@@ -77,6 +79,7 @@
 {template .descriptiveArea}
 	{@param spritemap: string}
 	{@param title: string}
+    {@param? _handleActionItemClicked: any}
 	{@param? actionItems: list<[
 		href: string,
 		label: string,
@@ -110,6 +113,9 @@
 			{if $actionItems}
 				<div class="autofit-col">
 					{call ClayActionsDropdown.render}
+						{param events: [
+							'itemClicked': $_handleActionItemClicked
+						]/}
 						{param items: $actionItems /}
 						{param spritemap: $spritemap /}
 						{param triggerClasses: 'component-action' /}
