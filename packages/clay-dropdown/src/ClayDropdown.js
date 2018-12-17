@@ -74,6 +74,16 @@ class ClayDropdown extends ClayComponent {
  */
 ClayDropdown.STATE = {
 	/**
+	 * Component wired to handle the different available events
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdown
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	actionHandler: Config.object(),
+
+	/**
 	 * Button configuration to place a button at dropdown footer.
 	 * @default undefined
 	 * @instance

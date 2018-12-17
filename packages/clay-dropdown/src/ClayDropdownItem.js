@@ -43,6 +43,16 @@ class ClayDropdownItem extends ClayComponent {
  */
 ClayDropdownItem.STATE = {
 	/**
+	 * Component wired to handle the different available events
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdownItem
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	actionHandler: Config.object(),
+
+	/**
 	 * Flag to indicate if the item is active or not.
 	 * @default false
 	 * @instance
