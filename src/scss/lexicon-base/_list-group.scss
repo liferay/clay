@@ -200,7 +200,6 @@ button.list-group-heading {
 .list-group-item-field {
 	display: table-cell;
 	padding: $table-cell-padding;
-	position: relative;
 	text-align: center;
 	vertical-align: $tabular-list-group-vertical-alignment;
 	width: 1%;
@@ -219,7 +218,6 @@ button.list-group-heading {
 	max-width: 100px;
 	min-width: 100px;
 	padding: $table-cell-padding;
-	position: relative;
 	vertical-align: $tabular-list-group-vertical-alignment;
 	word-break: break-all \9; // IE9
 	word-wrap: break-word;
@@ -254,6 +252,7 @@ button.list-group-heading {
 	display: table;
 	margin-bottom: 20px;
 	padding: 0;
+	position: relative;
 	width: 100%;
 
 	.list-group-item {
