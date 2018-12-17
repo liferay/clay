@@ -295,7 +295,7 @@ class ClayDropdownBase extends ClayComponent {
 			data: {
 				item: flatten(this.items).find(item => item.active),
 			},
-			name: 'itemSelected',
+			name: 'itemClicked',
 			originalEvent: event,
 		});
 	}
