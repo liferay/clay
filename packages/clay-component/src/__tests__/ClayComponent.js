@@ -59,4 +59,23 @@ describe('ClayComponent', function() {
 			''
 		);
 	});
+
+	it('should create a ClayComponent and run action handler on event emit', () => {
+		const actionHandler = {
+			'eventName': function() {}
+		};
+		const spy = jest.spyOn(actionHandler, 'eventName');
+
+		component = new MyComponent({
+			actionHandler: actionHandler
+		});
+
+		component.emit('eventName');
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			expect.any(Object),
+			expect.any(Object)
+		);
+	});
 });
