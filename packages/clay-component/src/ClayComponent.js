@@ -117,7 +117,8 @@ class ClayComponent extends Component {
 		const listeners = this.getRawListeners_(eventName);
 
 		if (this.actionHandler) {
-			this.actionHandler[eventName] && this.actionHandler[eventName](...args, facade);
+			this.actionHandler[eventName] &&
+				this.actionHandler[eventName](...args, facade);
 		}
 
 		if (listeners.length === 0) {
