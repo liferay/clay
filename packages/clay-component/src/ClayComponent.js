@@ -116,6 +116,10 @@ class ClayComponent extends Component {
 
 		const listeners = this.getRawListeners_(eventName);
 
+		if (this.actionHandler) {
+			this.actionHandler[eventName] && this.actionHandler[eventName](...args, facade);
+		}
+
 		if (listeners.length === 0) {
 			return false;
 		}
@@ -145,6 +149,16 @@ class ClayComponent extends Component {
  * @type {!Object}
  */
 ClayComponent.STATE = {
+	/**
+	 * Component wired to handle the different available events
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayComponent
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	actionHandler: Config.object(),
+
 	/**
 	 * Data to add to the element.
 	 * @default undefined
