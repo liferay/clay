@@ -1,7 +1,7 @@
 import 'clay-icon';
 import 'clay-sticker';
 import './ClayCardBase';
-import Component from 'metal-component';
+import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
@@ -13,14 +13,25 @@ import templates from './ClayImageCard.soy.js';
  * Metal ClayImageCard component.
  * @extends Component
  */
-class ClayImageCard extends Component {
+class ClayImageCard extends ClayComponent {
+	/**
+	 * Continues the propagation of the dropdown action item click event
+	 * @param {!Event} event
+	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleActionItemClicked(event) {
+		return !this.emit('itemClicked', event);
+	}
+
 	/**
 	 * Continues the propagation of the checkbox changed event
 	 * @param {!Event} event
 	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleItemToggled(event) {
-		this.emit('itemToggled', event);
+		return !this.emit('itemToggled', event);
 	}
 }
 
@@ -30,6 +41,16 @@ class ClayImageCard extends Component {
  * @type {!Object}
  */
 ClayImageCard.STATE = {
+	/**
+	 * Component wired to handle the different available events
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayImageCard
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	actionHandler: Config.object(),
+
 	/**
 	 * List of items to display in the actions menu.
 	 * @default undefined
