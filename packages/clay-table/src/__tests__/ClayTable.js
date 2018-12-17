@@ -184,6 +184,16 @@ describe('ClayTable', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a ClayTable not wrapped with id', () => {
+		component = new ClayTable({
+			id: 'myId',
+			schema: {},
+			wrapTable: false,
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
 	it('should render a ClayTable with table classes', () => {
 		component = new ClayTable({
 			tableClasses: 'my-custom-table-class',
@@ -216,6 +226,15 @@ describe('ClayTable', function() {
 		component = new ClayTable({
 			schema: {},
 			wrapTable: true,
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
+	it('should render a ClayTable not wrapped', () => {
+		component = new ClayTable({
+			schema: {},
+			wrapTable: false,
 		});
 
 		expect(component).toMatchSnapshot();
