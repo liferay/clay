@@ -476,6 +476,16 @@ class ClayDropdownBase extends ClayComponent {
  */
 ClayDropdownBase.STATE = {
 	/**
+	 * Component wired to handle the different available events
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdownBase
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	actionHandler: Config.object(),
+
+	/**
 	 * The current position of the tooltip after being aligned via `Align.align`.
 	 * @default Align.isValidPosition
 	 * @instance
