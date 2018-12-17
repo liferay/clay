@@ -263,6 +263,16 @@ ClayManagementToolbar.STATE = {
 		.value(false),
 
 	/**
+	 * Component wired to handle the different available events
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayComponent
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	actionHandler: Config.object(),
+
+	/**
 	 * List of items to display in the actions menu on active state.
 	 * @default []
 	 * @instance
