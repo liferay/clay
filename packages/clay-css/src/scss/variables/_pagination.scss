@@ -1,5 +1,6 @@
 $pagination-font-size: null !default;
 
+$pagination-item-height: 2.375rem !default; // 38px
 $pagination-item-margin-x: null !default;
 $pagination-item-margin-y: null !default;
 
@@ -34,14 +35,25 @@ $pagination-items-per-page-hover-color: $pagination-hover-color !default;
 $pagination-items-per-page-focus-box-shadow: $pagination-focus-box-shadow !default;
 $pagination-items-per-page-focus-outline: 0 !default;
 
+$pagination-items-per-page-lexicon-icon-margin-left: 0.125rem !default; // 2px
+$pagination-items-per-page-lexicon-icon-margin-top: 0.125rem !default; // 2px
+
 $pagination-results-color: null !default;
 
 // Sizes
 
 $pagination-font-size-sm: $font-size-sm !default;
-$pagination-line-height-sm: $line-height-sm !default;
+$pagination-item-height-sm: 1.9375rem !default; // 31px
+$pagination-line-height-sm: 1 !default;
 $pagination-link-border-radius-sm: null !default;
 
+$pagination-items-per-page-lexicon-icon-margin-left-sm: null !default;
+$pagination-items-per-page-lexicon-icon-margin-top-sm: null !default;
+
 $pagination-font-size-lg: $font-size-lg !default;
-$pagination-line-height-lg: $line-height-lg !default;
+$pagination-item-height-lg: 3.5rem !default; // 56px
+$pagination-line-height-lg: 1 !default;
 $pagination-link-border-radius-lg: null !default;
+
+$pagination-items-per-page-lexicon-icon-margin-left-lg: null !default;
+$pagination-items-per-page-lexicon-icon-margin-top-lg: null !default;
