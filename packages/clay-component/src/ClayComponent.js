@@ -116,13 +116,23 @@ class ClayComponent extends Component {
 
 		const listeners = this.getRawListeners_(eventName);
 
-		const handlerName = 'handle' + eventName.charAt(0).toUpperCase() + eventName.slice(1);
+		const handlerName =
+			'handle' + eventName.charAt(0).toUpperCase() + eventName.slice(1);
 
-		if (listeners.length === 0 && (this.defaultEventHandler && !this.defaultEventHandler[handlerName])) {
+		if (
+			listeners.length === 0 &&
+			(this.defaultEventHandler && !this.defaultEventHandler[handlerName])
+		) {
 			return false;
 		}
 
-		this.runListeners_(listeners, args, facade, this.defaultEventHandler, handlerName);
+		this.runListeners_(
+			listeners,
+			args,
+			facade,
+			this.defaultEventHandler,
+			handlerName
+		);
 		return true;
 	}
 
@@ -148,8 +158,9 @@ class ClayComponent extends Component {
 			}
 		}
 
-		defaultEventHandler && defaultEventHandler[handlerName] &&
-			defaultEventHandler[handlerName].apply(defaultEventHandler, args);
+		defaultEventHandler &&
+			defaultEventHandler[handlerName] &&
+			defaultEventHandler[handlerName](...args);
 
 		if (!facade || !facade.preventedDefault) {
 			for (let j = 0; j < defaultListeners.length; j++) {
