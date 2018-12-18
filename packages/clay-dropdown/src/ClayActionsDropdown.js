@@ -96,6 +96,16 @@ ClayActionsDropdown.STATE = {
 	caption: Config.string(),
 
 	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayActionsDropdown
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
+
+	/**
 	 * Flag to indicate if menu is disabled
 	 * @default false
 	 * @instance

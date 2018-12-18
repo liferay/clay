@@ -87,6 +87,16 @@ ClayCreationMenuDropdown.STATE = {
 	}),
 
 	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayCreationMenuDropdown
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
+
+	/**
 	 * Flag to indicate if menu is disabled
 	 * @default false
 	 * @instance

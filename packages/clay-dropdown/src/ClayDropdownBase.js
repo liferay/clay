@@ -528,6 +528,16 @@ ClayDropdownBase.STATE = {
 	contentRenderer: Config.string(),
 
 	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdownBase
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
+
+	/**
 	 * Flag to indicate if menu is disabled
 	 * @default false
 	 * @instance
