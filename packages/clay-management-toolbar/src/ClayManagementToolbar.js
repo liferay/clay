@@ -320,6 +320,16 @@ ClayManagementToolbar.STATE = {
 	customData: Config.object(),
 
 	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
+
+	/**
 	 * Flag to indicate if the managment toolbar is disabled or not.
 	 * @default false
 	 * @instance
