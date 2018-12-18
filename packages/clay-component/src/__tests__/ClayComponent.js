@@ -73,8 +73,6 @@ describe('ClayComponent', function() {
 		component.emit('eventName');
 
 		expect(spy).toHaveBeenCalled();
-		expect(spy).toHaveBeenCalledWith(
-			expect.any(Object)
-		);
+		expect(spy).toHaveBeenCalledWith(expect.any(Object));
 	});
 });
