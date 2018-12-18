@@ -105,6 +105,25 @@ class ClayDataProvider extends ClayComponent {
 	}
 
 	/**
+	 * Handles data mapping.
+	 * @param {!(function|string)} param
+	 * @param {!Array} data
+	 * @protected
+	 * @return {!(string|number)}
+	 */
+	_performCall(param, data) {
+		if (typeof param === 'function') {
+			return param(data);
+		}
+
+		if (typeof data === 'string') {
+			return data;
+		}
+
+		return data[param];
+	}
+
+	/**
 	 * @inheritDoc
 	 */
 	created() {
@@ -131,7 +150,7 @@ class ClayDataProvider extends ClayComponent {
 	/**
 	 * Helper method to filter a list based on a string.
 	 * @param {!string} query
-	 * @param {?function} extract
+	 * @param {?(function|string)} extract
 	 * @public
 	 * @return {Array} A list of items containing the corresponding characters
 	 */
@@ -142,15 +161,16 @@ class ClayDataProvider extends ClayComponent {
 
 		return this._dataSource
 			.reduce((prev, element, index) => {
-				let string = extract(element);
+				let string = this._performCall(extract, element);
 				let result = match(query, string);
 
 				if (result != null) {
 					prev[prev.length] = {
+						data: element,
 						index,
 						matches: result.values,
-						originalString: string,
 						score: result.score,
+						value: string,
 					};
 				}
 

@@ -18,13 +18,13 @@
 	{@param? contentRenderer: string}
 	{@param? elementClasses: string}
 	{@param? enableAutocomplete: bool}
-	{@param? extractData: ?}
 	{@param? filteredItems: list<?>}
 	{@param? id: string}
 	{@param? initialData: []|list<?>}
 	{@param? inputName: string}
 	{@param? inputValue: string}
 	{@param? label: string}
+	{@param? labelLocator: any}
 	{@param? requestOptions: [
 		method: string,
 		mode: string,
@@ -76,12 +76,12 @@
 			{param contentRenderer: $contentRenderer /}
 			{param dataSource: $dataSource /}
 			{param enableAutocomplete: $enableAutocomplete /}
-			{param extractData: $extractData /}
 			{param filteredItems: $filteredItems /}
 			{param helpText: $helpText /}
 			{param initialData: $initialData /}
 			{param inputName: $inputName /}
 			{param inputValue: $inputValue /}
+			{param labelLocator: $labelLocator /}
 			{param requestOptions: $requestOptions /}
 			{param requestPolling: $requestPolling /}
 			{param requestRetries: $requestRetries /}
@@ -110,11 +110,11 @@
 	{@param? _removeFocusedItem: any}
 	{@param? contentRenderer: string}
 	{@param? enableAutocomplete: bool}
-	{@param? extractData: ?}
 	{@param? filteredItems: list<?>}
 	{@param? initialData: []|list<?>}
 	{@param? inputName: string}
 	{@param? inputValue: string}
+	{@param? labelLocator: any}
 	{@param? requestOptions: [
 		method: string,
 		mode: string,
@@ -147,7 +147,7 @@
 					'itemSelected': $_handleDropdownItemClick,
 					'queryChange': $_handleOnInput
 				] /}
-				{param extractData: $extractData /}
+				{param extractData: $labelLocator /}
 				{param filteredItems: $filteredItems /}
 				{param initialData: $initialData /}
 				{param inputElementClasses: 'form-control-inset' /}
