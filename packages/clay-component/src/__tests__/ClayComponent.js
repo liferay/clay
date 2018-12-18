@@ -87,7 +87,7 @@ describe('ClayComponent', function() {
 			defaultEventHandler: defaultEventHandler,
 		});
 
-		component.eventNameDefaultListener = function(event) {};
+		component.eventNameDefaultListener = function() {};
 
 		const spy = jest.spyOn(component, 'eventNameDefaultListener');
 

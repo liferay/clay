@@ -141,6 +141,8 @@ class ClayComponent extends Component {
 	 * @param {!Array} listeners
 	 * @param {!Array} args
 	 * @param {Object} facade
+	 * @param {Object} defaultEventHandler
+	 * @param {String} handlerName
 	 * @protected
 	 */
 	runListeners_(listeners, args, facade, defaultEventHandler, handlerName) {
