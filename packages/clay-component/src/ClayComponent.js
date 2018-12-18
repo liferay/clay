@@ -116,12 +116,46 @@ class ClayComponent extends Component {
 
 		const listeners = this.getRawListeners_(eventName);
 
-		if (listeners.length === 0) {
+		const handlerName = 'handle' + eventName.charAt(0).toUpperCase() + eventName.slice(1);
+
+		if (listeners.length === 0 && (this.defaultEventHandler && !this.defaultEventHandler[handlerName])) {
 			return false;
 		}
 
-		this.runListeners_(listeners, args, facade);
+		this.runListeners_(listeners, args, facade, this.defaultEventHandler, handlerName);
 		return true;
+	}
+
+	/**
+	 * Runs the given listeners.
+	 * @param {!Array} listeners
+	 * @param {!Array} args
+	 * @param {Object} facade
+	 * @protected
+	 */
+	runListeners_(listeners, args, facade, defaultEventHandler, handlerName) {
+		if (facade) {
+			args.push(facade);
+		}
+
+		const defaultListeners = [];
+		for (let i = 0; i < listeners.length; i++) {
+			const listener = listeners[i].fn || listeners[i];
+			if (listeners[i].default) {
+				defaultListeners.push(listener);
+			} else {
+				listener.apply(this, args);
+			}
+		}
+
+		defaultEventHandler && defaultEventHandler[handlerName] &&
+			defaultEventHandler[handlerName].apply(defaultEventHandler, args);
+
+		if (!facade || !facade.preventedDefault) {
+			for (let j = 0; j < defaultListeners.length; j++) {
+				defaultListeners[j].apply(this, args);
+			}
+		}
 	}
 
 	/**
@@ -153,6 +187,16 @@ ClayComponent.STATE = {
 	 * @type {?object}
 	 */
 	data: Config.object(),
+
+	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayComponent
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
 };
 
 export {ClayComponent};
