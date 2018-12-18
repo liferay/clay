@@ -3,7 +3,11 @@
 
 	$aspect-ratio-border-color: setter(map-get($map, aspect-ratio-border-color), $card-border-color);
 	$aspect-ratio-border-style: setter(map-get($map, aspect-ratio-border-style), solid);
-	$aspect-ratio-border-width: setter(map-get($map, aspect-ratio-border-bottom-width), 0 0 0.0625rem 0); // 0 0 1px 0
+
+	 // The Sass map key name `aspect-ratio-border-bottom-width is deprecated as of v2.5.1 use `aspect-ratio-border-width` instead
+	$aspect-ratio-border-bottom-width: setter(map-get($map, aspect-ratio-border-bottom-width), 0 0 0.0625rem 0); // 0 0 1px 0
+
+	$aspect-ratio-border-width: map-get($map, aspect-ratio-border-width);
 	$aspect-ratio-horizontal: setter(map-get($map, aspect-ratio-horizontal), 16);
 	$aspect-ratio-vertical: setter(map-get($map, aspect-ratio-vertical), 9);
 
@@ -30,6 +34,11 @@
 			border-color: $aspect-ratio-border-color;
 			border-style: $aspect-ratio-border-style;
 			border-width: $aspect-ratio-border-width;
+
+			@if not $aspect-ratio-border-width {
+				// `$aspect-ratio-border-bottom-width is deprecated as of v2.5.1 use `$aspect-ratio-border-width` instead
+				border-width: $aspect-ratio-border-bottom-width;
+			}
 
 			@include clay-aspect-ratio($aspect-ratio-horizontal, $aspect-ratio-vertical);
 
