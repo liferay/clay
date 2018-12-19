@@ -119,13 +119,6 @@ class ClayComponent extends Component {
 		const handlerName =
 			'handle' + eventName.charAt(0).toUpperCase() + eventName.slice(1);
 
-		if (
-			listeners.length === 0 &&
-			(this.defaultEventHandler && !this.defaultEventHandler[handlerName])
-		) {
-			return false;
-		}
-
 		this.runListeners_(
 			listeners,
 			args,
