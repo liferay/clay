@@ -1,4 +1,4 @@
-import Component from 'metal-component';
+import ClayComponent from 'clay-component';
 import Soy from 'metal-soy';
 import {Align} from 'metal-position';
 import {Config} from 'metal-state';
@@ -15,9 +15,9 @@ class SingletonEnforcer {}
 
 /**
  * Implementation of ClayTooltip.
- * @extends Component
+ * @extends ClayComponent
  */
-class ClayTooltip extends Component {
+class ClayTooltip extends ClayComponent {
 	/**
 	 * @inheritDoc
 	 */
@@ -384,6 +384,16 @@ ClayTooltip.STATE = {
 	 * @type {?bool}
 	 */
 	bestAlign: Config.bool().value(true),
+
+	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayTooltip
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
 
 	/**
 	 * Element classes.

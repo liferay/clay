@@ -9,7 +9,7 @@ import templates from './ClayDataProvider.soy.js';
 
 /**
  * Metal ClayDataProvider component.
- * @extends Component
+ * @extends ClayComponent
  */
 class ClayDataProvider extends ClayComponent {
 	/**

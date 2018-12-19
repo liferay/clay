@@ -1,4 +1,4 @@
-import Component from 'metal-component';
+import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
@@ -7,9 +7,9 @@ import templates from './ClayRadio.soy.js';
 
 /**
  * Implementation of the Metal Clay Radio.
- * @extends Component
+ * @extends ClayComponent
  */
-class ClayRadio extends Component {}
+class ClayRadio extends ClayComponent {}
 
 /**
  * State definition.
@@ -25,6 +25,16 @@ ClayRadio.STATE = {
 	 * @type {?bool}
 	 */
 	checked: Config.bool().value(false),
+
+	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayRadio
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
 
 	/**
 	 * Flag to indicate if checkbox is disabled.

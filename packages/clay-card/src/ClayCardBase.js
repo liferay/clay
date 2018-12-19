@@ -14,7 +14,7 @@ import templates from './ClayCardBase.soy.js';
 
 /**
  * Metal ClayCardBase component.
- * @extends Component
+ * @extends ClayComponent
  */
 class ClayCardBase extends ClayComponent {
 	/**

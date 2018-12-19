@@ -1,4 +1,4 @@
-import Component from 'metal-component';
+import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
@@ -7,9 +7,9 @@ import templates from './ClayIcon.soy.js';
 
 /**
  * Implementation of the Metal Clay Icon.
- * @extends Component
+ * @extends ClayComponent
  */
-class ClayIcon extends Component {}
+class ClayIcon extends ClayComponent {}
 
 /**
  * State definition.
@@ -17,6 +17,16 @@ class ClayIcon extends Component {}
  * @type {!Object}
  */
 ClayIcon.STATE = {
+	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayIcon
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
+
 	/**
 	 * CSS classes to be applied to the element.
 	 * @default undefined

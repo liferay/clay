@@ -11,7 +11,7 @@ import templates from './ClayImageCard.soy.js';
 
 /**
  * Metal ClayImageCard component.
- * @extends Component
+ * @extends ClayComponent
  */
 class ClayImageCard extends ClayComponent {
 	/**

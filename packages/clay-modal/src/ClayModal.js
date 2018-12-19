@@ -2,7 +2,7 @@ import 'clay-button';
 import 'clay-icon';
 import {Config} from 'metal-state';
 import {EventHandler} from 'metal-events';
-import Component from 'metal-component';
+import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import dom from 'metal-dom';
 import Soy from 'metal-soy';
@@ -13,9 +13,9 @@ const KEY_CODE_ESC = 27;
 
 /**
  * Metal ClayModal component.
- * @extends Component
+ * @extends ClayComponent
  */
-class ClayModal extends Component {
+class ClayModal extends ClayComponent {
 	/**
 	 * @inheritDoc
 	 */
@@ -197,6 +197,16 @@ ClayModal.STATE = {
 	 * @type {?(string|html|undefined)}
 	 */
 	body: Config.any(),
+
+	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayModal
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
 
 	/**
 	 * CSS classes to be applied to the element.

@@ -13,7 +13,7 @@ import templates from './ClayUserCard.soy.js';
 
 /**
  * Metal ClayUserCard component.
- * @extends Component
+ * @extends ClayComponent
  */
 class ClayUserCard extends ClayComponent {
 	/**

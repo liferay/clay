@@ -1,4 +1,4 @@
-import Component from 'metal-component';
+import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
@@ -7,8 +7,9 @@ import templates from './<%= componentName %>.soy.js';
 
 /**
  * Metal <%= componentName %> component.
+ * @extends ClayComponent
  */
-class <%= componentName %> extends Component {
+class <%= componentName %> extends ClayComponent {
 }
 
 /**
@@ -17,6 +18,16 @@ class <%= componentName %> extends Component {
  * @type {!Object}
  */
 <%= componentName %>.STATE = {
+	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof <%= componentName %>
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
+
     /**
 	 * CSS classes to be applied to the element.
 	 * @instance

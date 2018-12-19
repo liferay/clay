@@ -1,5 +1,5 @@
 import './ClayAlertBase';
-import Component from 'metal-component';
+import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
@@ -8,9 +8,9 @@ import templates from './ClayAlert.soy.js';
 
 /**
  * Metal Clay Alert component.
- * @extends Component
+ * @extends ClayComponent
  */
-class ClayAlert extends Component {
+class ClayAlert extends ClayComponent {
 	/**
 	 * @inheritDoc
 	 */
@@ -51,6 +51,16 @@ ClayAlert.STATE = {
 	 * @type {?bool}
 	 */
 	closeable: Config.bool().value(false),
+
+	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayAlert
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
 
 	/**
 	 * Flag to indicate if the alert should be destroyen when close.

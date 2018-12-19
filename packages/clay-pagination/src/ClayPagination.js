@@ -56,6 +56,16 @@ ClayPagination.STATE = {
 	currentPage: Config.number().required(),
 
 	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayPagination
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
+
+	/**
 	 * CSS classes to be applied to the element.
 	 * @default undefined
 	 * @instance
