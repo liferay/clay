@@ -1,7 +1,7 @@
 import 'clay-icon';
 import 'clay-sticker';
 import './ClayCardBase';
-import Component from 'metal-component';
+import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
@@ -11,9 +11,19 @@ import templates from './ClayFileCard.soy.js';
 
 /**
  * Metal ClayFileCard component.
- * @extends Component
+ * @extends ClayComponent
  */
-class ClayFileCard extends Component {
+class ClayFileCard extends ClayComponent {
+	/**
+	 * Continues the propagation of the dropdown action item click event
+	 * @param {!Event} event
+	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleActionItemClicked(event) {
+		return !this.emit('itemClicked', event);
+	}
+
 	/**
 	 * Continues the propagation of the checkbox changed event
 	 * @param {!Event} event
@@ -38,6 +48,25 @@ ClayFileCard.STATE = {
 	 * @type {?(array|undefined)}
 	 */
 	actionItems: actionItemsValidator,
+
+	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayFileCard
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayFileCard
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
 
 	/**
 	 * Flag to indicate if the card is disabled or not.

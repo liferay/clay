@@ -75,6 +75,7 @@ describe('ClayDataProvider', function() {
 
 		expect(filteredItem).toEqual([
 			{
+				data: 'Bread',
 				index: 0,
 				matches: [
 					{match: true, value: 'B'},
@@ -83,7 +84,7 @@ describe('ClayDataProvider', function() {
 					{match: true, value: 'a'},
 					{value: 'd'},
 				],
-				originalString: 'Bread',
+				value: 'Bread',
 				score: 26,
 			},
 		]);

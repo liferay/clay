@@ -55,20 +55,6 @@ class ClayDropdown extends ClayComponent {
 	}
 
 	/**
-	 * Continues the propagation of the enter key event
-	 * @param {!Event} event
-	 * @protected
-	 * @return {Boolean} If the event has been prevented or not.
-	 */
-	_handleItemSelected(event) {
-		return !this.emit({
-			data: event.data,
-			name: 'itemSelected',
-			originalEvent: event,
-		});
-	}
-
-	/**
 	 * Continues the propagation of the toggle event.
 	 * @param {!Event} event
 	 * @return {Boolean} If the event has been prevented or not.
@@ -99,6 +85,25 @@ ClayDropdown.STATE = {
 		style: Config.oneOf(['primary', 'secondary']),
 		type: Config.oneOf(['button', 'reset', 'submit']),
 	}),
+
+	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdown
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdown
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
 
 	/**
 	 * Flag to indicate if menu is disabled

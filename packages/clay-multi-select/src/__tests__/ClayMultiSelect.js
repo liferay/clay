@@ -270,7 +270,10 @@ describe('ClayMultiSelect', function() {
 				expect(spy).toHaveBeenCalledWith(
 					expect.objectContaining({
 						data: {
-							label: 'foo',
+							item: {
+								label: 'foo',
+								value: 'foo',
+							},
 						},
 						name: 'itemAdded',
 						originalEvent: expect.any(Object),
@@ -297,7 +300,10 @@ describe('ClayMultiSelect', function() {
 				expect(spy).toHaveBeenCalledWith(
 					expect.objectContaining({
 						data: {
-							label: 'bar',
+							item: {
+								label: 'bar',
+								value: 'bar',
+							},
 						},
 						name: 'itemAdded',
 						originalEvent: expect.any(Object),
@@ -330,7 +336,10 @@ describe('ClayMultiSelect', function() {
 				expect(spy).not.toHaveBeenCalledWith(
 					expect.objectContaining({
 						data: {
-							label: 'foo',
+							item: {
+								label: 'foo',
+								value: 'foo',
+							},
 						},
 						name: 'itemAdded',
 						originalEvent: expect.any(Object),
@@ -367,7 +376,10 @@ describe('ClayMultiSelect', function() {
 				expect(spy).toHaveBeenCalledWith(
 					expect.objectContaining({
 						data: {
-							index: 1,
+							item: {
+								label: 'Bar',
+								value: 'bar',
+							},
 						},
 						name: 'itemRemoved',
 						originalEvent: expect.any(Object),
@@ -415,7 +427,10 @@ describe('ClayMultiSelect', function() {
 				expect(spy).toHaveBeenCalledWith(
 					expect.objectContaining({
 						data: {
-							index: 1,
+							item: {
+								label: 'Bar',
+								value: 'bar',
+							},
 						},
 						name: 'itemRemoved',
 						originalEvent: expect.any(Object),
@@ -461,7 +476,10 @@ describe('ClayMultiSelect', function() {
 				expect(spy).toHaveBeenCalledWith(
 					expect.objectContaining({
 						data: {
-							index: 1,
+							item: {
+								label: 'Bar',
+								value: 'bar',
+							},
 						},
 						name: 'itemRemoved',
 						originalEvent: expect.any(Object),

@@ -13,7 +13,7 @@ import templates from './ClayDropdownItem.soy.js';
 
 /**
  * Implementation of the Metal Clay Icon.
- * @extends Component
+ * @extends ClayComponent
  */
 class ClayDropdownItem extends ClayComponent {
 	/**
@@ -77,6 +77,16 @@ ClayDropdownItem.STATE = {
 	 * @type {?object}
 	 */
 	data: Config.object(),
+
+	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdownItem
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
 
 	/**
 	 * Flag to indicate if the item is disabled or not

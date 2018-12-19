@@ -1,4 +1,4 @@
-import Component from 'metal-component';
+import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
@@ -7,9 +7,9 @@ import templates from './ClayCheckbox.soy.js';
 
 /**
  * Implementation of the Metal Clay Checkbox.
- * @extends Component
+ * @extends ClayComponent
  */
-class ClayCheckbox extends Component {
+class ClayCheckbox extends ClayComponent {
 	/**
 	 * @inheritDoc
 	 */
@@ -41,6 +41,25 @@ ClayCheckbox.STATE = {
 	 * @type {?bool}
 	 */
 	checked: Config.bool().value(false),
+
+	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayCheckbox
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayCheckbox
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
 
 	/**
 	 * Flag to indicate if checkbox is disabled.

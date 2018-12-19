@@ -4,7 +4,7 @@ import 'clay-sticker';
 // eslint-disable-next-line
 import { ClayActionsDropdown } from 'clay-dropdown';
 import {Config} from 'metal-state';
-import Component from 'metal-component';
+import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 
@@ -13,9 +13,19 @@ import templates from './ClayUserCard.soy.js';
 
 /**
  * Metal ClayUserCard component.
- * @extends Component
+ * @extends ClayComponent
  */
-class ClayUserCard extends Component {
+class ClayUserCard extends ClayComponent {
+	/**
+	 * Continues the propagation of the dropdown action item click event
+	 * @param {!Event} event
+	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleActionItemClicked(event) {
+		return !this.emit('itemClicked', event);
+	}
+
 	/**
 	 * Continues the propagation of the checkbox changed event
 	 * @param {!Event} event
@@ -40,6 +50,25 @@ ClayUserCard.STATE = {
 	 * @type {?(array|undefined)}
 	 */
 	actionItems: actionItemsValidator,
+
+	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayUserCard
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayUserCard
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
 
 	/**
 	 * Flag to indicate if the card is disabled or not.

@@ -56,6 +56,16 @@ ClayLink.STATE = {
 	data: Config.object(),
 
 	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayLink
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
+
+	/**
 	 * Sets the download attribute on the anchor tag.
 	 * @default undefined
 	 * @instance

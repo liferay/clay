@@ -49,6 +49,10 @@
 					{sp}{$tableClasses}
 				{/if}
 			"
+
+			{if $id and $wrapTable == false}
+				id="{$id}"
+			{/if}
 		{/let}
 
 		<table {$tableAttributes}>

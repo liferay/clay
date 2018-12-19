@@ -932,37 +932,28 @@
 		/**
 		 * Dropdown with events in items
 		 **/
-		const handleItemClick = (event) => {
+		const handleItemClick = function (event) {
 			alert('Item clicked!');
-		};
+		}
 
 		new metal.ClayActionsDropdown(
 			{
+				events: {
+					'itemClicked': handleItemClick
+				},
 				items: [
 					{
-						events: {
-							'click': handleItemClick
-						},
 						label: 'Item 1',
 					},
 					{
 						active: true,
-						events: {
-							'click': handleItemClick
-						},
 						label: 'Item 2',
 					},
 					{
 						disabled: true,
-						events: {
-							'click': handleItemClick
-						},
 						label: 'Item 3',
 					},
 					{
-						events: {
-							'click': handleItemClick
-						},
 						label: 'Item 4',
 					},
 				],

@@ -14,6 +14,20 @@ import templates from './ClayMultiSelect.soy.js';
  */
 class ClayMultiSelect extends ClayComponent {
 	/**
+	 * Assemble the schema of the item.
+	 * @param {!string} label
+	 * @param {!string} value
+	 * @protected
+	 * @return {!Object}
+	 */
+	_getItemSchema(label, value) {
+		return {
+			label: label,
+			value: value,
+		};
+	}
+
+	/**
 	 * Continues the propagation of the Button clicked event.
 	 * @param {!Event} event
 	 * @protected
@@ -54,14 +68,18 @@ class ClayMultiSelect extends ClayComponent {
 	 * Handle the click on the dropdown item and the propagation of the labelAdded event.
 	 * @param {!Event} event
 	 * @protected
-	 * @return {Boolean} If the event has been prevented or not.
+	 * @return {?Boolean} If the event has been prevented or not.
 	 */
 	_handleDropdownItemClick(event) {
-		return !this.emit({
-			data: event.data,
-			name: 'itemSelected',
-			originalEvent: event,
-		});
+		this.filteredItems = [];
+		this.inputValue = '';
+		this.refs.autocomplete.refs.input.focus();
+
+		const value = this._performCall(this.valueLocator, event.data);
+		const label = this._performCall(this.labelLocator, event.data);
+		const data = this._getItemSchema(label, value);
+
+		return this._handleItemAdded(value, data, event, 'itemSelected');
 	}
 
 	/**
@@ -82,24 +100,32 @@ class ClayMultiSelect extends ClayComponent {
 
 	/**
 	 * Continues the propagation of the itemAdded event.
+	 * @param {!String} value
+	 * @param {!(object|array|string)} data
 	 * @param {!Event} event
+	 * @param {?String} eventName
 	 * @protected
-	 * @return {Boolean} If the event has been prevented or not.
+	 * @return {?Boolean} If the event has been prevented or not.
 	 */
-	_handleItemAdded(event) {
-		const label = event.data.value.toLowerCase().replace(',', '');
+	_handleItemAdded(value, data, event, eventName = 'itemAdded') {
+		const label = value.toLowerCase().replace(',', '');
 
 		if (
 			label.trim() &&
 			!this.selectedItems.find(
-				itemSelected => itemSelected.label === label
+				itemSelected =>
+					this._performCall(this.valueLocator, itemSelected) === label
 			)
 		) {
+			const index = this.selectedItems.push(data);
+
+			this.selectedItems = this.selectedItems;
+
 			return !this.emit({
 				data: {
-					label,
+					item: this.selectedItems[index - 1],
 				},
-				name: 'itemAdded',
+				name: eventName,
 				originalEvent: event,
 			});
 		} else {
@@ -160,12 +186,15 @@ class ClayMultiSelect extends ClayComponent {
 	 */
 	_handleItemRemoved(event) {
 		const index = event.getAttribute('data-tag');
+		const item = this.selectedItems[Number(index)];
 
 		this._removeFocusedItem();
+		this.selectedItems.splice(Number(index), 1);
+		this.selectedItems = this.selectedItems;
 
 		return !this.emit({
 			data: {
-				index: Number(index),
+				item,
 			},
 			name: 'itemRemoved',
 			originalEvent: event,
@@ -179,15 +208,21 @@ class ClayMultiSelect extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleOnInput(event) {
+		const value = event.data.value;
+
 		this._removeFocusedItem();
 
 		switch (event.data.char) {
 		case ',':
-			return this._handleItemAdded(event);
+			return this._handleItemAdded(
+				value,
+				this._getItemSchema(value, value),
+				event
+			);
 		default:
 			return !this.emit({
 				data: {
-					value: event.data.value,
+					value,
 				},
 				name: 'queryChange',
 				originalEvent: event,
@@ -209,8 +244,12 @@ class ClayMultiSelect extends ClayComponent {
 			event.preventDefault();
 			if (this._itemFocused) {
 				return this._handleItemRemoved(this._itemFocused);
-			} else if (value) {
-				return this._handleItemAdded(event);
+			} else if (value && event.data.eventFromInput) {
+				return this._handleItemAdded(
+					value,
+					this._getItemSchema(value, value),
+					event
+				);
 			}
 			break;
 		case 'Backspace':
@@ -233,6 +272,25 @@ class ClayMultiSelect extends ClayComponent {
 			}
 			break;
 		}
+	}
+
+	/**
+	 * Handles data mapping.
+	 * @param {!(function|string)} param
+	 * @param {!Array} data
+	 * @protected
+	 * @return {!(string|number)}
+	 */
+	_performCall(param, data) {
+		if (typeof param === 'function') {
+			return param(data);
+		}
+
+		if (typeof data === 'string') {
+			return data;
+		}
+
+		return data[param];
 	}
 
 	/**
@@ -283,6 +341,15 @@ ClayMultiSelect.STATE = {
 	contentRenderer: Config.string(),
 
 	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
 	 * The array of data items that the data source contains or
 	 * the URL for the data provider to request.
 	 * @instance
@@ -295,6 +362,16 @@ ClayMultiSelect.STATE = {
 		Config.object(),
 		Config.array(),
 	]).required(),
+
+	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
 
 	/**
 	 * CSS classes to be applied to the element.
@@ -313,15 +390,6 @@ ClayMultiSelect.STATE = {
 	 * @type {?bool}
 	 */
 	enableAutocomplete: Config.bool().value(true),
-
-	/**
-	 * Extracts from the data the item to be compared in autocomplete.
-	 * @instance
-	 * @default (elem) => elem
-	 * @memberof ClayMultiSelect
-	 * @type {?(function|undefined)}
-	 */
-	extractData: Config.func(),
 
 	/**
 	 * List of filtered items for suggestion or autocomplete.
@@ -432,6 +500,17 @@ ClayMultiSelect.STATE = {
 	label: Config.string(),
 
 	/**
+	 * Sets the name of the field to map the label of the item.
+	 * @default label
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @type {?(function|string)}
+	 */
+	labelLocator: Config.oneOfType([Config.func(), Config.string()]).value(
+		'label'
+	),
+
+	/**
 	 * List of the selected Items.
 	 * @default []
 	 * @instance
@@ -457,6 +536,17 @@ ClayMultiSelect.STATE = {
 	 * @type {!string}
 	 */
 	spritemap: Config.string().required(),
+
+	/**
+	 * Sets the name of the field to map the value of the item.
+	 * @default value
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @type {?(function|string)}
+	 */
+	valueLocator: Config.oneOfType([Config.func(), Config.string()]).value(
+		'value'
+	),
 };
 
 defineWebComponent('clay-multi-select', ClayMultiSelect);

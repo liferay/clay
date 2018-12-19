@@ -151,8 +151,9 @@ describe('ClayAutocomplete', function() {
 		expect(spy).toHaveBeenCalledWith(
 			expect.objectContaining({
 				data: {
-					value: 'foo',
+					eventFromInput: true,
 					key: 'o',
+					value: 'foo',
 				},
 				name: 'inputOnKeydown',
 				originalEvent: expect.any(Object),
@@ -205,7 +206,7 @@ describe('ClayAutocomplete', function() {
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
 			expect.objectContaining({
-				data: expect.any(Object),
+				data: 'Bread',
 				name: 'itemSelected',
 				originalEvent: expect.any(Object),
 			})
@@ -238,7 +239,7 @@ describe('ClayAutocomplete', function() {
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
 			expect.objectContaining({
-				data: expect.any(Object),
+				data: 'Bread',
 				name: 'itemSelected',
 				originalEvent: expect.any(Object),
 			})
@@ -262,7 +263,7 @@ describe('ClayAutocomplete', function() {
 
 		expect(spy).not.toHaveBeenCalledWith(
 			expect.objectContaining({
-				data: expect.any(Object),
+				data: 'Bread',
 				name: 'itemSelected',
 				originalEvent: expect.any(Object),
 			})

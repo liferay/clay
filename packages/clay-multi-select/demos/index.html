@@ -33,15 +33,8 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h2>With autocomplete</h2>
-			<div id="autocomplete-block"></div>
-		</div>
-	</div>
-
-	<div class="row row-spacing">
-		<div class="col">
-			<h2>With autocomplete and interaction</h2>
-			<div id="interaction-block"></div>
+			<h2>With disabled autocomplete</h2>
+			<div id="disabled-autocomplete-block"></div>
 		</div>
 	</div>
 
@@ -96,65 +89,24 @@
 			spritemap,
 		}, '#default-block');
 
-		// With autocomplete
+		// With disabled autocomplete
 		new metal.ClayMultiSelect({
-			dataSource,
+			dataSource: [],
+			enableAutocomplete: false,
 			helpText: 'You can use a comma to enter tags',
 			label: 'Tags',
-			selectedItems,
 			spritemap,
-		}, '#autocomplete-block');
-
-		// With autocomplete and interaction
-		new metal.ClayMultiSelect({
-			dataSource,
-			label: 'Tags',
-			selectedItems,
-			spritemap,
-			events: {
-				itemAdded: (event) => {
-					event.target.selectedItems.push({label: event.data.label, value: event.data.label});
-					addToSelectedItems(event);
-				},
-				itemRemoved: removeItem,
-				itemSelected: (event) => {
-					const label = event.data.originalString.toLowerCase();
-					if (event.target.selectedItems.find(item => item.value === label)) return;
-					event.target.selectedItems.push({label, value: label});
-					addToSelectedItems(event);
-				},
-			},
-			helpText: 'You can use a comma to enter tags',
-		}, '#interaction-block');
+		}, '#disabled-autocomplete-block');
 
 		// With only data remote
 		new metal.ClayMultiSelect({
 			dataSource: 'https://api.pro.coinbase.com/currencies',
-			events: {
-				itemRemoved: removeItem,
-				itemSelected: (event) => {
-					const label = event.data.originalString.toLowerCase();
-					if (event.target.selectedItems.find(item => item.value === label)) return;
-					event.target.selectedItems.push({label, value: label});
-					addToSelectedItems(event);
-				},
-			},
-			extractData: (elem) => elem.name,
 			helpText: 'You can use a comma to enter tags',
 			label: 'Currencies',
+			labelLocator: 'name',
 			spritemap,
+			valueLocator: 'id',
 		}, '#selected-block');
-
-		function addToSelectedItems(event) {
-			event.target.selectedItems = event.target.selectedItems;
-			event.target.inputValue = '';
-			event.target.filteredItems = [];
-		}
-
-		function removeItem(event) {
-			event.target.selectedItems.splice(event.data.index, 1);
-			event.target.selectedItems = event.target.selectedItems;
-		}
 
 	</script>
 </body>

@@ -295,7 +295,7 @@ class ClayDropdownBase extends ClayComponent {
 			data: {
 				item: flatten(this.items).find(item => item.active),
 			},
-			name: 'itemSelected',
+			name: 'itemClicked',
 			originalEvent: event,
 		});
 	}
@@ -526,6 +526,25 @@ ClayDropdownBase.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	contentRenderer: Config.string(),
+
+	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdownBase
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdownBase
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
 
 	/**
 	 * Flag to indicate if menu is disabled

@@ -55,20 +55,6 @@ class ClayActionsDropdown extends ClayComponent {
 	}
 
 	/**
-	 * Continues the propagation of the item clicked event
-	 * @param {!Event} event
-	 * @protected
-	 * @return {Boolean} If the event has been prevented or not.
-	 */
-	_handleItemSelected(event) {
-		return !this.emit({
-			data: event.data,
-			name: 'itemSelected',
-			originalEvent: event,
-		});
-	}
-
-	/**
 	 * Continues the propagation of the toggle event.
 	 * @param {!Event} event
 	 * @return {Boolean} If the event has been prevented or not.
@@ -108,6 +94,25 @@ ClayActionsDropdown.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	caption: Config.string(),
+
+	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayActionsDropdown
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayActionsDropdown
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
 
 	/**
 	 * Flag to indicate if menu is disabled

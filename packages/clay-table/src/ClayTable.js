@@ -7,7 +7,7 @@ import 'clay-progress-bar';
 import { ClayActionsDropdown } from 'clay-dropdown';
 import {Config} from 'metal-state';
 import {EventHandler} from 'metal-events';
-import Component from 'metal-component';
+import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import dom from 'metal-dom';
 import Soy from 'metal-soy';
@@ -16,9 +16,9 @@ import templates from './ClayTable.soy.js';
 
 /**
  * Metal ClayTable component.
- * @extends Component
+ * @extends ClayComponent
  */
-class ClayTable extends Component {
+class ClayTable extends ClayComponent {
 	/**
 	 * @inheritDoc
 	 */
@@ -114,6 +114,25 @@ ClayTable.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	actionsMenuVariant: Config.string(),
+
+	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayTable
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayTable
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
 
 	/**
 	 * CSS classes to be applied to the element.

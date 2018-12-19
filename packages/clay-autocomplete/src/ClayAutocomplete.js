@@ -70,7 +70,7 @@ class ClayAutocomplete extends ClayComponent {
 		const item = this.filteredItems[Number(index)];
 
 		return !this.emit({
-			data: item,
+			data: item.data,
 			name: 'itemSelected',
 			originalEvent: event,
 		});
@@ -155,6 +155,7 @@ class ClayAutocomplete extends ClayComponent {
 			data: {
 				value: this.refs.input.value,
 				key: event.key,
+				eventFromInput: event.delegateTarget.tagName === 'INPUT',
 			},
 			name: 'inputOnKeydown',
 			originalEvent: event,
@@ -232,6 +233,15 @@ ClayAutocomplete.STATE = {
 	contentRenderer: Config.string(),
 
 	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayAutocomplete
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
 	 * The array of data items that the data source contains or
 	 * the URL for the data provider to request.
 	 * @default undefined
@@ -244,6 +254,16 @@ ClayAutocomplete.STATE = {
 		Config.object(),
 		Config.array(),
 	]).required(),
+
+	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayAutocomplete
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
 
 	/**
 	 * CSS classes to be applied to the element.
@@ -268,9 +288,11 @@ ClayAutocomplete.STATE = {
 	 * @instance
 	 * @default (elem) => elem
 	 * @memberof ClayAutocomplete
-	 * @type {?(function|undefined)}
+	 * @type {?(function|string)}
 	 */
-	extractData: Config.func(),
+	extractData: Config.oneOfType([Config.func(), Config.string()]).value(
+		elem => elem
+	),
 
 	/**
 	 * List of filtered items for suggestion or autocomplete.

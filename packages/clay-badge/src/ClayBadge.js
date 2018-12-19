@@ -1,4 +1,4 @@
-import Component from 'metal-component';
+import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
@@ -7,9 +7,9 @@ import templates from './ClayBadge.soy.js';
 
 /**
  * Metal Clay Badge component.
- * @extends Component
+ * @extends ClayComponent
  */
-class ClayBadge extends Component {}
+class ClayBadge extends ClayComponent {}
 
 /**
  * State definition.
@@ -17,6 +17,25 @@ class ClayBadge extends Component {}
  * @type {!Object}
  */
 ClayBadge.STATE = {
+	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayBadge
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayBadge
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
+
 	/**
 	 * CSS classes to be applied to the element.
 	 * @default undefined
