@@ -59,4 +59,46 @@ describe('ClayComponent', function() {
 			''
 		);
 	});
+
+	it('should create a ClayComponent and run default event handler on event emit', () => {
+		const defaultEventHandler = {
+			handleEventName: function() {},
+		};
+		const spy = jest.spyOn(defaultEventHandler, 'handleEventName');
+
+		component = new MyComponent({
+			defaultEventHandler: defaultEventHandler,
+		});
+
+		component.emit('eventName');
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(expect.any(Object));
+	});
+
+	it('should create a ClayComponent, run default event handler on event emit and prevent default listener', () => {
+		const defaultEventHandler = {
+			handleEventName: function(event) {
+				event.preventDefault();
+			},
+		};
+
+		component = new MyComponent({
+			defaultEventHandler: defaultEventHandler,
+		});
+
+		component.eventNameDefaultListener = function() {};
+
+		const spy = jest.spyOn(component, 'eventNameDefaultListener');
+
+		component.addListener(
+			'eventName',
+			component.eventNameDefaultListener,
+			true
+		);
+
+		component.emit('eventName');
+
+		expect(spy).not.toHaveBeenCalled();
+	});
 });

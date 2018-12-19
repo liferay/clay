@@ -5,6 +5,7 @@
  */
 {template .render}
     {@param title: string}
+    {@param? _handleActionItemClicked: any}
     {@param? _handleItemToggled: any}
     {@param? actionItems: list<[
         href: string,
@@ -42,7 +43,10 @@
         {param contentRenderer: 'image' /}
         {param disabled: $disabled /}
         {param elementClasses: $classes /}
-        {param events: ['itemToggled': $_handleItemToggled ] /}
+		{param events: [
+			'itemClicked': $_handleActionItemClicked,
+			'itemToggled': $_handleItemToggled
+		]/}
         {param href: $href /}
         {param icon: $icon /}
         {param id: $id /}

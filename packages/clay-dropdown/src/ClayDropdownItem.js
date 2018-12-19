@@ -79,6 +79,16 @@ ClayDropdownItem.STATE = {
 	data: Config.object(),
 
 	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdownItem
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
+
+	/**
 	 * Flag to indicate if the item is disabled or not
 	 * @default false
 	 * @instance
