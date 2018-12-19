@@ -1,5 +1,5 @@
 import ChartBase from './ChartBase';
-import Component from 'metal-component';
+import ClayComponent from 'clay-component';
 import {Config} from 'metal-state';
 import Soy from 'metal-soy';
 import templates from './Chart.soy.js';
@@ -9,11 +9,21 @@ import templates from './Chart.soy.js';
  * @extends ChartBase
  * @extends Component
  */
-class Chart extends Component {}
+class Chart extends ClayComponent {}
 
 Object.assign(Chart.prototype, ChartBase);
 
 Chart.STATE = {
+	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof Chart
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
+
 	/**
 	 * Id to be applied to the element.
 	 * @default undefined

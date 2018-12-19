@@ -11,7 +11,7 @@ import templates from './ClayImageCard.soy.js';
 
 /**
  * Metal ClayImageCard component.
- * @extends Component
+ * @extends ClayComponent
  */
 class ClayImageCard extends ClayComponent {
 	/**
@@ -49,6 +49,15 @@ ClayImageCard.STATE = {
 	 * @type {?(array|object|undefined)}
 	 */
 	actionItems: actionItemsValidator,
+
+	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayImageCard
+	 * @type {?object}
+	 */
+	data: Config.object(),
 
 	/**
 	 * Object that wires events with default listeners

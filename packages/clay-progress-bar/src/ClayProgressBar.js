@@ -1,5 +1,5 @@
 import 'clay-icon';
-import Component from 'metal-component';
+import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
@@ -8,9 +8,9 @@ import templates from './ClayProgressBar.soy.js';
 
 /**
  * Metal Clay Button component.
- * @extends Component
+ * @extends ClayComponent
  */
-class ClayProgressBar extends Component {}
+class ClayProgressBar extends ClayComponent {}
 
 /**
  * State definition.
@@ -18,6 +18,25 @@ class ClayProgressBar extends Component {}
  * @type {!Object}
  */
 ClayProgressBar.STATE = {
+	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayProgressBar
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayProgressBar
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
+
 	/**
 	 * CSS classes to be applied to the element.
 	 * @default undefined

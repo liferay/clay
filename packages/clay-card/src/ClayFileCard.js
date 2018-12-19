@@ -11,7 +11,7 @@ import templates from './ClayFileCard.soy.js';
 
 /**
  * Metal ClayFileCard component.
- * @extends Component
+ * @extends ClayComponent
  */
 class ClayFileCard extends ClayComponent {
 	/**
@@ -48,6 +48,15 @@ ClayFileCard.STATE = {
 	 * @type {?(array|undefined)}
 	 */
 	actionItems: actionItemsValidator,
+
+	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayFileCard
+	 * @type {?object}
+	 */
+	data: Config.object(),
 
 	/**
 	 * Object that wires events with default listeners

@@ -1,5 +1,5 @@
 import './ClayAlertBase';
-import Component from 'metal-component';
+import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
@@ -8,9 +8,9 @@ import templates from './ClayToast.soy.js';
 
 /**
  * Metal Clay Toast component.
- * @extends Component
+ * @extends ClayComponent
  */
-class ClayToast extends Component {
+class ClayToast extends ClayComponent {
 	/**
 	 * @inheritDoc
 	 */
@@ -60,6 +60,25 @@ ClayToast.STATE = {
 	 * @type {?(bool|number)}
 	 */
 	autoClose: Config.oneOfType([Config.bool(), Config.number()]).value(false),
+
+	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayToast
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayToast
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
 
 	/**
 	 * Flag to indicate if the alert should be destroyen when close.

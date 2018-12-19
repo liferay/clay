@@ -8,7 +8,7 @@ import templates from './ClayNavigationBar.soy.js';
 
 /**
  * Metal Clay Navbar component.
- * @extends Component
+ * @extends ClayComponent
  */
 class ClayNavigationBar extends ClayComponent {
 	/**
@@ -139,6 +139,25 @@ ClayNavigationBar.STATE = {
 	_visible: Config.bool()
 		.value(false)
 		.internal(),
+
+	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayNavigationBar
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayNavigationBar
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
 
 	/**
 	 * CSS classes to be applied to the element.

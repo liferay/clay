@@ -14,7 +14,7 @@ import templates from './ClayCardBase.soy.js';
 
 /**
  * Metal ClayCardBase component.
- * @extends Component
+ * @extends ClayComponent
  */
 class ClayCardBase extends ClayComponent {
 	/**
@@ -60,6 +60,15 @@ ClayCardBase.STATE = {
 	 * @type {?array}
 	 */
 	contentRenderer: Config.oneOf(['image', 'file', 'user']).value('image'),
+
+	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayCardBase
+	 * @type {?object}
+	 */
+	data: Config.object(),
 
 	/**
 	 * Object that wires events with default listeners

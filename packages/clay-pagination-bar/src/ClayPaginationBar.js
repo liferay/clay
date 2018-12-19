@@ -9,7 +9,7 @@ import templates from './ClayPaginationBar.soy.js';
 
 /**
  * Metal ClayPaginationBar component.
- * @extends Component
+ * @extends ClayComponent
  */
 class ClayPaginationBar extends ClayComponent {
 	/**
@@ -68,6 +68,25 @@ ClayPaginationBar.STATE = {
 	 * @type {!number}
 	 */
 	currentPage: Config.number().required(),
+
+	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayPaginationBar
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayPaginationBar
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
 
 	/**
 	 * CSS classes to be applied to the element.

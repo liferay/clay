@@ -9,7 +9,7 @@ import templates from './ClayDataProvider.soy.js';
 
 /**
  * Metal ClayDataProvider component.
- * @extends Component
+ * @extends ClayComponent
  */
 class ClayDataProvider extends ClayComponent {
 	/**
@@ -206,6 +206,15 @@ ClayDataProvider.STATE = {
 	 * @type {!html}
 	 */
 	content: Config.required(),
+
+	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDataProvider
+	 * @type {?object}
+	 */
+	data: Config.object(),
 
 	/**
 	 * The array of data items that the data source contains or

@@ -13,7 +13,7 @@ import templates from './ClayDropdownItem.soy.js';
 
 /**
  * Implementation of the Metal Clay Icon.
- * @extends Component
+ * @extends ClayComponent
  */
 class ClayDropdownItem extends ClayComponent {
 	/**

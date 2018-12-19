@@ -46,6 +46,16 @@ ClayButton.STATE = {
 	data: Config.object(),
 
 	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayButton
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
+
+	/**
 	 * The button disabled attribute.
 	 * @default false
 	 * @instance

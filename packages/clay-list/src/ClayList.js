@@ -7,7 +7,7 @@ import 'clay-sticker';
 // eslint-disable-next-line
 import { ClayActionsDropdown } from 'clay-dropdown';
 import {Config} from 'metal-state';
-import Component from 'metal-component';
+import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 
@@ -15,9 +15,9 @@ import templates from './ClayList.soy.js';
 
 /**
  * Metal ClayList component.
- * @extends Component
+ * @extends ClayComponent
  */
-class ClayList extends Component {
+class ClayList extends ClayComponent {
 	/**
 	 * Continues the propagation of the checkbox changed event
 	 * @param {!Event} event
@@ -34,6 +34,25 @@ class ClayList extends Component {
  * @type {!Object}
  */
 ClayList.STATE = {
+	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayList
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayList
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
+
 	/**
 	 * CSS classes to be applied to the element.
 	 * @default undefined

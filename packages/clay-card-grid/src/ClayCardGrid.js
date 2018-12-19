@@ -1,4 +1,4 @@
-import Component from 'metal-component';
+import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
 /* eslint-disable */
@@ -16,9 +16,9 @@ import templates from './ClayCardGrid.soy.js';
 
 /**
  * Metal ClayCardGrid component.
- * @extends Component
+ * @extends ClayComponent
  */
-class ClayCardGrid extends Component {
+class ClayCardGrid extends ClayComponent {
 	/**
 	 * Continues the propagation of the checkbox changed event
 	 * @param {!Event} event
@@ -35,6 +35,25 @@ class ClayCardGrid extends Component {
  * @type {!Object}
  */
 ClayCardGrid.STATE = {
+	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayCardGrid
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
+	 * Object that wires events with default listeners
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayCardGrid
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
+	defaultEventHandler: Config.object(),
+
 	/**
 	 * CSS classes to be applied to the element.
 	 * @default undefined

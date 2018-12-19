@@ -13,7 +13,7 @@ import templates from './ClayHorizontalCard.soy.js';
 
 /**
  * Metal ClayHorizontalCard component.
- * @extends Component
+ * @extends ClayComponent
  */
 class ClayHorizontalCard extends ClayComponent {
 	/**
@@ -50,6 +50,15 @@ ClayHorizontalCard.STATE = {
 	 * @type {?(array|undefined)}
 	 */
 	actionItems: actionItemsValidator,
+
+	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayHorizontalCard
+	 * @type {?object}
+	 */
+	data: Config.object(),
 
 	/**
 	 * Object that wires events with default listeners
