@@ -35,6 +35,15 @@ class ClayList extends ClayComponent {
  */
 ClayList.STATE = {
 	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayList
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
 	 * Object that wires events with default listeners
 	 * @default undefined
 	 * @instance

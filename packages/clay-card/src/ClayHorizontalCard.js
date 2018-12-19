@@ -52,6 +52,15 @@ ClayHorizontalCard.STATE = {
 	actionItems: actionItemsValidator,
 
 	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayHorizontalCard
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
 	 * Object that wires events with default listeners
 	 * @default undefined
 	 * @instance

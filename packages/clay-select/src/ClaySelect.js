@@ -18,6 +18,15 @@ class ClaySelect extends ClayComponent {}
  */
 ClaySelect.STATE = {
 	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClaySelect
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
 	 * Object that wires events with default listeners
 	 * @default undefined
 	 * @instance

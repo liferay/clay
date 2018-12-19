@@ -19,6 +19,15 @@ class ClayProgressBar extends ClayComponent {}
  */
 ClayProgressBar.STATE = {
 	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayProgressBar
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
 	 * Object that wires events with default listeners
 	 * @default undefined
 	 * @instance

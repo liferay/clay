@@ -199,6 +199,15 @@ ClayModal.STATE = {
 	body: Config.any(),
 
 	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayModal
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
 	 * Object that wires events with default listeners
 	 * @default undefined
 	 * @instance

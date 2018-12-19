@@ -528,6 +528,15 @@ ClayDropdownBase.STATE = {
 	contentRenderer: Config.string(),
 
 	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdownBase
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
 	 * Object that wires events with default listeners
 	 * @default undefined
 	 * @instance

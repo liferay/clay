@@ -341,6 +341,15 @@ ClayMultiSelect.STATE = {
 	contentRenderer: Config.string(),
 
 	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
 	 * The array of data items that the data source contains or
 	 * the URL for the data provider to request.
 	 * @instance

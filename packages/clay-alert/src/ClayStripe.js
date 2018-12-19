@@ -62,6 +62,15 @@ ClayStripe.STATE = {
 	autoClose: Config.oneOfType([Config.bool(), Config.number()]).value(false),
 
 	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayStripe
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
 	 * Object that wires events with default listeners
 	 * @default undefined
 	 * @instance

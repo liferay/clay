@@ -208,6 +208,15 @@ ClayDataProvider.STATE = {
 	content: Config.required(),
 
 	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDataProvider
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
 	 * The array of data items that the data source contains or
 	 * the URL for the data provider to request.
 	 * @instance

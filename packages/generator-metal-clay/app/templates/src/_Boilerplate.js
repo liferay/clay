@@ -19,6 +19,15 @@ class <%= componentName %> extends ClayComponent {
  */
 <%= componentName %>.STATE = {
 	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+     * @memberof <%= componentName %>
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+    /**
 	 * Object that wires events with default listeners
 	 * @default undefined
 	 * @instance

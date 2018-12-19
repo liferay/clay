@@ -59,6 +59,15 @@ ClayResultsBar.STATE = {
 	clearResultsURL: Config.string(),
 
 	/**
+	 * Data to add to the element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayResultsBar
+	 * @type {?object}
+	 */
+	data: Config.object(),
+
+	/**
 	 * List of filter label items.
 	 * @default undefined
 	 * @instance
