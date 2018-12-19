@@ -63,6 +63,10 @@
 // Custom Checkbox and Radio
 
 .custom-control {
+	margin-bottom: $custom-control-margin-bottom;
+	margin-top: $custom-control-margin-top;
+	min-height: $custom-control-min-height;
+
 	label {
 		cursor: $custom-control-description-cursor;
 		font-size: $font-size-base;
@@ -91,10 +95,12 @@ label.custom-control-label {
 	border-width: $custom-control-indicator-border-width;
 	font-size: $custom-control-indicator-size;
 	left: 0;
+	top: $custom-control-indicator-position-top;
 }
 
 .custom-control-label::after {
 	left: 0;
+	top: $custom-control-indicator-position-top;
 }
 
 .custom-control-input {
@@ -193,7 +199,7 @@ label.custom-control-label {
 .custom-control-input {
 	height: $custom-control-indicator-size;
 	left: 0;
-	top: (($line-height-base - $custom-control-indicator-size) / 2);
+	top: $custom-control-indicator-position-top;
 	width: $custom-control-indicator-size;
 	z-index: 0;
 }
