@@ -1,8 +1,36 @@
 # Change Log
 
-## [Unreleased](https://github.com/liferay/clay/tree/HEAD)
+## [v2.5.1](https://github.com/liferay/clay/tree/v2.5.1) (2018-12-19)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.5.0...v2.5.1)
 
-[Full Changelog](https://github.com/liferay/clay/compare/v2.4.1...HEAD)
+**Closed issues:**
+
+- ClayCSS: Cards mixin `clay-card-type-asset` has wrong key name for `aspect-ratio-border-width` [\#1406](https://github.com/liferay/clay/issues/1406)
+- All Clay components should extend from ClayComponent instead Component [\#1399](https://github.com/liferay/clay/issues/1399)
+- ClayDropdown itemSelected event should be itemClicked [\#1393](https://github.com/liferay/clay/issues/1393)
+- Add support to Clay Component to receive an actionHandler [\#1392](https://github.com/liferay/clay/issues/1392)
+- ClayTable doesn't render the id when it is not wrapped [\#1390](https://github.com/liferay/clay/issues/1390)
+- ClayCSS: Pagination setting height of page-link has discrepancy between Atlas and Base [\#1388](https://github.com/liferay/clay/issues/1388)
+- ClayCSS: New SVG Icons `cards-full` and `square-hole` [\#1384](https://github.com/liferay/clay/issues/1384)
+- ClayMultiSelect should be fully functional by default without having to handle events [\#1381](https://github.com/liferay/clay/issues/1381)
+- Lexicon CSS Site is out of sync with 1.x [\#1342](https://github.com/liferay/clay/issues/1342)
+- Management toolbar mobile viewports Clear action must be right aligned [\#1226](https://github.com/liferay/clay/issues/1226)
+
+**Merged pull requests:**
+
+- v2.5.1 CHANGELOG [\#1411](https://github.com/liferay/clay/pull/1411) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1399 - All components extend from ClayComponent [\#1410](https://github.com/liferay/clay/pull/1410) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1406 - ClayCSS Mixin `clay-card-type-asset` map key `aspect-ra… [\#1407](https://github.com/liferay/clay/pull/1407) ([pat270](https://github.com/pat270))
+- Fixes \#1392 - Add support for defaultEventHandlers [\#1405](https://github.com/liferay/clay/pull/1405) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1393 - Replace itemSelected in favor of itemClicked [\#1396](https://github.com/liferay/clay/pull/1396) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Fixes \#1390 - Render the id when wrapTable is false [\#1394](https://github.com/liferay/clay/pull/1394) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Fixes \#1388 - ClayCSS Pagination unify the way we set the height of e… [\#1389](https://github.com/liferay/clay/pull/1389) ([pat270](https://github.com/pat270))
+- Fixes \#1384 - ClayCSS added new SVG icons `cards-full` and `square-hole` [\#1385](https://github.com/liferay/clay/pull/1385) ([pat270](https://github.com/pat270))
+-  Fixes \#1226 - Replace tbar-inline-md-down with tbar-inline-xs-down [\#1383](https://github.com/liferay/clay/pull/1383) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Fixes \#1381 - Improvements clay multi select [\#1382](https://github.com/liferay/clay/pull/1382) ([matuzalemsteles](https://github.com/matuzalemsteles))
+
+## [v2.5.0](https://github.com/liferay/clay/tree/v2.5.0) (2018-12-10)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.4.1...v2.5.0)
 
 **Closed issues:**
 
