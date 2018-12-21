@@ -66,6 +66,32 @@ section.row {
 	}
 }
 
+#siteNavToggle {
+	position: absolute;
+	right: 65px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.hide-site-nav {
+	#mainNav {
+		@media (min-width: 768px) {
+			display: none;
+		}
+	}
+
+	#mainContent {
+		@media (min-width: 768px) {
+			padding-left: 0;
+		}
+	}
+
+	.main-nav-container .col-md-12 {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
 #siteConfig {
 	position: absolute;
 	right: 15px;
