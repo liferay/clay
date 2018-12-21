@@ -181,6 +181,103 @@ Management toolbar is an extension of Toolbar. It is a combination of different 
 	</div>
 </nav>
 
+<nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
+	<div class="container-fluid container-fluid-max-xl">
+		<ul class="navbar-nav navbar-nav-expand">
+			<li class="nav-item">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input checked class="custom-control-input" type="checkbox">
+						<span class="custom-control-label"></span>
+					</label>
+				</div>
+			</li>
+			<li class="nav-item">
+				<span class="navbar-text">
+					20 of 200
+					<span class="navbar-breakpoint-down-d-none">items selected</span>
+				</span>
+			</li>
+			<li class="nav-item nav-item-shrink">
+				<button class="btn btn-unstyled nav-link" type="button">
+					<span class="text-truncate-inline">
+						<span class="text-truncate">Clear</span>
+					</span>
+				</button>
+			</li>
+			<li class="nav-item nav-item-shrink">
+				<button class="btn btn-link nav-btn" type="button">
+					<span class="text-truncate-inline">
+						<span class="text-truncate">Select All</span>
+					</span>
+				</button>
+			</li>
+		</ul>
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link nav-link-monospaced" href="#uniqueSidenavCollapseId3" id="uniqueSidenavToggler3" role="button">
+					<svg class="lexicon-icon lexicon-icon-info-circle-open" focusable="false" role="presentation">
+						<use href="/images/icons/icons.svg#info-circle-open" />
+					</svg>
+				</a>
+			</li>
+			<li class="nav-item navbar-breakpoint-down-d-none">
+				<a class="nav-link nav-link-monospaced" href="#1" role="button">
+					<svg class="lexicon-icon lexicon-icon-trash" focusable="false" role="presentation">
+						<use href="/images/icons/icons.svg#trash" />
+					</svg>
+				</a>
+			</li>
+			<li class="nav-item navbar-breakpoint-down-d-none">
+				<a class="nav-link nav-link-monospaced" href="#1" role="button">
+					<svg class="lexicon-icon lexicon-icon-paste" focusable="false" role="presentation">
+						<use href="/images/icons/icons.svg#paste" />
+					</svg>
+				</a>
+			</li>
+			<li class="dropdown nav-item">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
+					<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+						<use href="/images/icons/icons.svg#ellipsis-v" />
+					</svg>
+				</a>
+				<ul class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start">
+					<li>
+						<a class="active dropdown-item" href="#1">
+							<span class="dropdown-item-indicator-start">
+								<svg class="lexicon-icon lexicon-icon-list" focusable="false" role="presentation">
+									<use href="/images/icons/icons.svg#list" />
+								</svg>
+							</span>
+							List View
+						</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#1">
+							<span class="dropdown-item-indicator-start">
+								<svg class="lexicon-icon lexicon-icon-table" focusable="false" role="presentation">
+									<use href="/images/icons/icons.svg#table" />
+								</svg>
+							</span>
+							Table View
+						</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#1">
+							<span class="dropdown-item-indicator-start">
+								<svg class="lexicon-icon lexicon-icon-cards2" focusable="false" role="presentation">
+									<use href="/images/icons/icons.svg#cards2" />
+								</svg>
+							</span>
+							Card View
+						</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</nav>
+
 ```soy
 {call ClayManagementToolbar.render}
 	{param creationMenu: [
