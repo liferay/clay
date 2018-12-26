@@ -164,7 +164,7 @@ $label-success-close: map-merge((
 
 $label-success: () !default;
 $label-success: map-merge((
-	bg: $label-primary-bg,
+	bg: $label-success-bg,
 	border-color: $label-success-border-color,
 	color: $label-success-color,
 	hover-bg: $label-success-hover-bg,
@@ -238,7 +238,7 @@ $label-warning-close: map-merge((
 
 $label-warning: () !default;
 $label-warning: map-merge((
-	bg: $label-primary-bg,
+	bg: $label-warning-bg,
 	border-color: $label-warning-border-color,
 	color: $label-warning-color,
 	hover-bg: $label-warning-hover-bg,
