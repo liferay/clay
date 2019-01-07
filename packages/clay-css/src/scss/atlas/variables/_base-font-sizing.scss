@@ -1,0 +1,468 @@
+$enable-base-font-sizing: true !default;
+
+@if ($enable-base-font-sizing) {
+	$html-font-size: 62.5% !default !global; // 10px
+
+	$clay-radix: 1.6rem !default !global; // 16px
+
+	// GLOBALS
+
+	$primary: #0B5FFF !default !global;
+	$secondary: #6B6C7E !default !global;
+	$success: #287D3D !default !global;
+	$info: #2E5AAC !default !global;
+	$warning: #B95000 !default !global;
+	$danger: #DA1414 !default !global;
+	$light: #F1F2F5 !default !global;
+	$dark: #272834 !default !global;
+
+	$body-color: #272833 !default;
+
+	$font-size-base: $clay-radix !default !global; // 16px
+	$font-size-lg: ($clay-radix * 1.125) !default !global; // 18px
+	$font-size-sm: ($clay-radix * 0.875) !default !global; // 14px
+
+	$h1-font-size: ($clay-radix * 1.625) !default !global; // 26px
+	$h2-font-size: ($clay-radix * 1.375) !default !global; // 22px
+	$h3-font-size: ($clay-radix * 1.1875) !default !global; // 19px
+	$h4-font-size: $clay-radix !default !global; // 16px
+	$h5-font-size: ($clay-radix * 0.875) !default !global; // 14px
+	$h6-font-size: ($clay-radix * 0.8125) !default !global; // 13px
+
+	$border-radius: ($clay-radix * 0.25) !default !global; // 4px
+	$border-radius-lg: ($clay-radix * 0.375) !default !global; // 6px
+	$border-radius-sm: ($clay-radix * 0.1875) !default !global; // 3px
+
+	// ALERTS
+
+	$alert-padding-x: $clay-radix !default !global; // 16px
+	$alert-padding-y: ($clay-radix * 1.09375) !default !global; // 17.5px
+	$alert-border-width: ($clay-radix * 0.0625) !default !global; // 1px
+	$alert-font-size: ($clay-radix * 0.875) !default !global; // 14px
+
+	$alert-title: () !default !global;
+	$alert-title: map-merge((
+		font-size: ($clay-radix * 0.875), // 14px
+		margin-bottom: ($clay-radix * 0.25), // 4px
+	), $alert-title);
+
+	$alert-subtitle: () !default !global;
+	$alert-subtitle: map-merge((
+		font-size: ($clay-radix * 0.75), // 12px
+	), $alert-subtitle);
+
+	$alert-notifications-box-shadow: 0 ($clay-radix * 0.5) ($clay-radix * 2) ($clay-radix * -0.25) rgba(0, 0, 0, 0.3) !default !global;
+
+	// BADGES
+
+	$badge-border-radius: ($clay-radix * 10) !default !global; // 160px
+	$badge-font-size: ($clay-radix * 0.625) !default !global; // 10px
+	$badge-padding-x: ($clay-radix * 0.25) !default !global; // 4px
+	$badge-padding-y: ($clay-radix * 0.09375) !default !global; // 1.5px
+
+	$badge-pill-padding-x: ($clay-radix * 0.25) !default !global; // 4px
+
+	// BREADCRUMBS
+
+	$breadcrumb-font-size: ($clay-radix * 0.875) !default !global; // 14px
+	$breadcrumb-padding-x: ($clay-radix * 0.125) !default !global; // 2px
+
+	// BUTTONS
+
+	$btn-padding-x: ($clay-radix * 0.9375) !default !global; // 15px
+	$btn-padding-y: ($clay-radix * 0.4375) !default !global; // 7px
+
+	$btn-inline-item-font-size: $clay-radix !default !global; // 16px
+
+	$btn-padding-x-lg: ($clay-radix * 1.5) !default !global; // 24px
+	$btn-padding-y-lg: ($clay-radix * 0.59375) !default !global; // 9.5px
+
+	$btn-padding-x-sm: ($clay-radix * 0.75) !default !global; // 12px
+	$btn-padding-y-sm: ($clay-radix * 0.4375) !default !global; // 7px
+
+	$btn-monospaced-padding-y: ($clay-radix * 0.25) !default !global; // 4px
+	$btn-monospaced-size: ($clay-radix * 2.5) !default !global; // 40px
+
+	$btn-monospaced-padding-y-sm: ($clay-radix * 0.1875) !default !global; // 3px
+	$btn-monospaced-size-sm: ($clay-radix * 2) !default !global; // 32px
+
+	$btn-monospaced-padding-y-lg: ($clay-radix * 0.375) !default !global; // 6px
+
+	$btn-group-item-margin-right: $clay-radix !default !global; // 16px
+
+	// LABELS
+
+	$label-border-radius: ($clay-radix * 0.125) !default !global; // 2px
+	$label-font-size: ($clay-radix * 0.625) !default !global; // 10px
+	$label-padding-x: ($clay-radix * 0.25) !default !global; // 4px
+	$label-padding-y: ($clay-radix * 0.125) !default !global; // 2px
+
+	$label-lg: () !default !global;
+	$label-lg: map-merge((
+		font-size: ($clay-radix * 0.75), // 12px
+		height: ($clay-radix * 1.5), // 24px
+		padding-x: ($clay-radix * 0.5), // 8px
+		padding-y: ($clay-radix * 0.3125), // 5px
+		item-spacer-y: ($clay-radix * -0.0625), // -1px
+		sticker-size: ($clay-radix * 0.875), // 14px
+	), $label-lg);
+
+	// STICKERS
+
+	$sticker-font-size: ($clay-radix * 0.625) !default !global; // 10px
+	$sticker-inline-item-font-size: $clay-radix !default !global; // 16px
+
+	$sticker-sm: () !default !global;
+	$sticker-sm: map-merge((
+		font-size: ($clay-radix * 0.5625), // 9px
+		inline-item-font-size: ($clay-radix * 0.75), // 14px
+	), $sticker-sm);
+
+	$sticker-lg: () !default !global;
+	$sticker-lg: map-merge((
+		font-size: ($clay-radix * 0.9375), // 15px
+		inline-item-font-size: ($clay-radix * 1.25), // 20px
+	), $sticker-lg);
+
+	$sticker-xl: () !default !global;
+	$sticker-xl: map-merge((
+		font-size: ($clay-radix * 1.0625), // 17px
+		inline-item-font-size: ($clay-radix * 1.5), // 24px
+	), $sticker-xl);
+
+	$sticker-inside-offset: $clay-radix !default !global; // 16px
+
+	// CARDS
+
+	$card-body-padding-bottom: $clay-radix !default !global;
+	$card-body-padding-left: $clay-radix !default !global;
+	$card-body-padding-right: $clay-radix !default !global;
+	$card-body-padding-top: $clay-radix !default !global;
+
+	$card-title: () !default !global;
+	$card-title: map-merge((
+		font-size: ($clay-radix * 0.875), // 14px
+	), $card-title);
+
+	$card-link: () !default !global;
+	$card-link: map-merge((
+		font-size: ($clay-radix * 0.875), // 14px
+	), $card-link);
+
+	$card-type-asset: () !default !global;
+	$card-type-asset: map-merge((
+		card-body-padding-top: ($clay-radix * 0.75),
+	), $card-type-asset);
+
+	// DROPDOWNS
+
+	$dropdown-font-size: ($clay-radix * 0.875) !default !global; // 14px
+
+	$dropdown-padding-y: ($clay-radix * 0.375) !default !global; // 6px
+
+	$dropdown-item-padding-x: ($clay-radix * 1.25) !default !global; // 20px
+	$dropdown-item-padding-y: ($clay-radix * 0.5) !default !global; // 8px
+
+	$dropdown-header-font-size: ($clay-radix * 0.875) !default !global; // 14px
+	$dropdown-header-margin-top: ($clay-radix * 0.625) !default !global; // 10px
+
+	$dropdown-subheader-font-size: ($clay-radix * 0.75) !default !global; // 12px
+	$dropdown-subheader-margin-top: ($clay-radix * 0.625) !default !global; // 10px
+
+	$dropdown-action-toggle-font-size: $clay-radix !default !global; // 16px
+
+	// FORMS
+
+	$input-font-size-mobile: $clay-radix !default !global; // 16px
+
+	$input-label-font-size: ($clay-radix * 0.875) !default !global; // 14px
+	$input-label-margin-bottom: ($clay-radix * 0.25) !default !global; // 4px
+
+	$input-border-width: ($clay-radix * 0.0625) !default !global; // 1px
+
+	$input-padding-x: $clay-radix !default !global; // 16px
+	$input-padding-y: ($clay-radix * 0.5) !default !global; // 8px
+
+	$input-padding-x-sm: ($clay-radix * 0.75) !default !global; // 12px
+	$input-padding-y-sm: ($clay-radix * 0.25) !default !global; // 4px
+
+	$input-height: ($clay-radix * 2.5) !default !global; // 40px
+	$input-height-lg: ($clay-radix * 3) !default !global; // 48px
+	$input-height-sm: ($clay-radix * 2) !default !global; // 32px
+
+	$form-feedback-font-size: ($clay-radix * 0.875) !default !global; // 14px
+
+	$form-group-margin-bottom: ($clay-radix * 1.5) !default !global; // 24px
+	$form-group-margin-bottom-mobile: $clay-radix !default !global; // 16px
+
+	$form-check-input-gutter: ($clay-radix * 0.875) !default !global; // 14px
+
+	$form-check-label-text-margin-left: ($clay-radix * -0.1875) !default !global; // -3px
+
+	$form-control-label-size: () !default !global;
+	$form-control-label-size: map-merge((
+		border-width: ($clay-radix * 0.0625), // 1px
+		height: ($clay-radix * 1.5), // 24px
+	), $form-control-label-size);
+
+	$input-group-addon-min-width: ($clay-radix * 2.5) !default !global; // 40px
+	$input-group-addon-padding-x: ($clay-radix * 0.75) !default !global; // 12px
+
+	$input-group-addon-min-width-sm: ($clay-radix * 2) !default !global; // 32px
+
+	// LINKS
+
+	$component-title: () !default !global;
+	$component-title: map-merge((
+		font-size: $clay-radix,
+	), $component-title);
+
+	$component-action: () !default !global;
+	$component-action: map-merge((
+		font-size: $clay-radix, // 16px
+	), $component-action);
+
+	// CUSTOM FORMS
+
+	$custom-control-indicator-size: ($clay-radix * 1.0625) !default !global; // 17px
+	$custom-control-indicator-border-width: ($clay-radix * 0.0625) !default !global; // 1px
+
+	$custom-checkbox-indicator-border-radius: ($clay-radix * 0.125) !default !global; // 2px
+
+	// LIST GROUP
+
+	$list-group-font-size: ($clay-radix * 0.875) !default !global; // 14px
+	$list-group-item-padding-x: $clay-radix !default !global; // 16px
+	$list-group-item-padding-y: $clay-radix !default !global; // 16px
+
+	$list-group-header-padding-y: ($clay-radix * 0.5) !default !global; // 8px
+
+	$list-group-header-title: () !default !global;
+	$list-group-header-title: map-merge((
+		font-size: ($clay-radix * 0.75), // 12px
+	), $list-group-header-title);
+
+	$list-group-title: () !default !global;
+	$list-group-title: map-merge((
+		font-size: ($clay-radix * 0.875), // 14px
+	), $list-group-title);
+
+	// MODALS
+
+	$modal-inner-padding: ($clay-radix * 1.5) !default !global; // 24px
+	$modal-header-padding: ($clay-radix * 1.5) !default !global; // 24px
+	$modal-title-font-size: ($clay-radix * 1.25) !default !global; // 20px
+
+	// MULTI STEP NAV
+
+	$multi-step-icon-font-size: ($clay-radix * 0.875) !default !global; // 14px
+	$multi-step-indicator-label-font-size: ($clay-radix * 0.875) !default !global; // 14px
+	$multi-step-title-font-size: ($clay-radix * 0.875) !default !global; // 14px
+
+	// NAVS
+
+	$nav-font-size: ($clay-radix * 0.875) !default !global; // 14px
+	$nav-link-padding-x: $clay-radix !default !global; // 16px
+	$nav-link-padding-y: ($clay-radix * 0.625) !default !global; // 10px
+
+	$nav-nested-spacer-x: $clay-radix !default !global; // 16px
+
+	$nav-tabs-font-size: ($clay-radix * 0.875) !default !global; // 14px
+
+	$nav-tabs-link-padding-y: ($clay-radix * 0.28125) !default !global; // 4.5px
+
+	$nav-tabs-tab-pane-padding: ($clay-radix * 2) !default !global; // 32px
+
+	$nav-underline-link-active-highlight-height: ($clay-radix * 0.125) !default !global; // 2px
+
+	// MENUBAR
+
+	$menubar-vertical-transparent-md: () !default !global;
+	$menubar-vertical-transparent-md: map-merge((
+		link-border-radius: ($clay-radix * 0.375), // 6px
+		toggler-font-size-mobile: ($clay-radix * 0.875), // 14px
+	), $menubar-vertical-transparent-md);
+
+	$menubar-vertical-transparent-lg: () !default !global;
+	$menubar-vertical-transparent-lg: map-merge((
+		link-border-radius: ($clay-radix * 0.375), // 6px
+		toggler-font-size-mobile: ($clay-radix * 0.875), // 14px
+	), $menubar-vertical-transparent-lg);
+
+	// NAVBAR
+
+	$navbar-font-size: ($clay-radix * 0.875) !default !global; // 14px
+
+	// APPLICATION BAR
+
+	$application-bar-size: () !default !global;
+	$application-bar-size: map-merge((
+		title-font-size: ($clay-radix * 1.125), // 18px
+	), $application-bar-size);
+
+	// NAVIGATION BAR
+
+	$navigation-bar-size: () !default !global;
+	$navigation-bar-size: map-merge((
+		collapse-dropdown-item-padding-y-mobile: ($clay-radix * 0.8125), // 13px
+	), $navigation-bar-size);
+
+	// PAGINATION
+
+	$pagination-font-size: ($clay-radix * 0.875) !default !global; // 14px
+
+	$pagination-item-height: ($clay-radix * 2) !default !global; // 32px
+	$pagination-item-margin-x: ($clay-radix * 0.125) !default !global; // 2px
+
+	$pagination-border-width: ($clay-radix * 0.0625) !default !global; // 1px
+	$pagination-padding-x: ($clay-radix * 0.625) !default !global; // 10px
+
+	$pagination-dropdown-menu-spacer-y: ($clay-radix * 0.625) !default !global; // 10px
+
+	$pagination-link-border-radius-sm: ($clay-radix * 0.3125) !default !global; // 5px
+	$pagination-font-size-sm: ($clay-radix * 0.75) !default !global; // 12px
+	$pagination-item-height-sm: ($clay-radix * 1.5) !default !global; // 24px
+
+	$pagination-link-border-radius-lg: ($clay-radix * 0.3125) !default !global; // 5px
+	$pagination-font-size-lg: ($clay-radix * 1.125) !default !global; // 18px
+	$pagination-item-height-lg: ($clay-radix * 2.75) !default !global; //44px
+	$pagination-padding-x-lg: $clay-radix !default !global; // 16px
+
+	// PANELS
+
+	$panel-title-font-size: ($clay-radix * 0.875) !default !global; // 14px
+
+	$panel-collapse-icon-font-size: ($clay-radix * 0.75) !default !global; // 12px
+
+	// POPOVERS
+
+	$popover-max-width: ($clay-radix * 14.5) !default !global; // 232px
+	$popover-inline-scroller-max-height: ($clay-radix * 14.875) !default !global; // 238px
+
+	$popover-arrow-height: ($clay-radix * 0.3) !default !global; // 4.8px
+	$popover-arrow-offset: ($clay-radix * 0.625) !default !global; // 10px
+
+	$popover-header-font-size: ($clay-radix * 0.875) !default !global; // 14px
+	$popover-header-margin-x: $clay-radix !default !global; // 16px
+	$popover-header-padding-y: ($clay-radix * 0.75) !default !global; // 12px
+
+	$popover-body-padding-x: $clay-radix !default !global; // 16px
+	$popover-body-padding-y: ($clay-radix * 0.75) !default !global; // 12px
+
+	// PROGRESS BARS
+
+	$progress-font-size: ($clay-radix * 0.5625) !default !global; // 9px
+	$progress-height: ($clay-radix * 0.5) !default !global; // 8px
+
+	$progress-group-subtitle: () !default !global;
+	$progress-group-subtitle: map-merge((
+		font-size: ($clay-radix * 0.75), // 12px
+	), $progress-group-subtitle);
+
+	$progress-group-addon-font-size: ($clay-radix * 0.875) !default !global; // 14px
+
+	// QUICK ACTION
+
+	$quick-action-font-size: $clay-radix !default !global; // 16px
+
+	// SHEETS
+
+	$sheet-padding-left-mobile: $clay-radix !default !global; // 16px
+	$sheet-padding-right-mobile: $clay-radix !default !global; // 16px
+	$sheet-padding-top-mobile: $clay-radix !default !global; // 16px
+
+	$sheet-header-margin-bottom-mobile: ($clay-radix * 2) !default !global; // 32px
+
+	$sheet-section-margin-bottom-mobile: ($clay-radix * 2) !default !global; // 32px
+
+	$sheet-panel-group-margin-bottom-mobile: $clay-radix !default !global; // 16px
+
+	$sheet-footer-margin-bottom-mobile: $clay-radix !default !global; // 16px
+	$sheet-footer-margin-top-mobile: $clay-radix !default !global; // 16px
+
+	$sheet-title-font-size: ($clay-radix * 1.25) !default !global; // 20px
+	$sheet-title-margin-bottom-mobile: $clay-radix !default !global; // 16px
+
+	$sheet-subtitle-font-size: ($clay-radix * 0.875) !default !global; // 14px
+	$sheet-subtitle-padding-y: ($clay-radix * 0.5) !default !global; // 8px
+	$sheet-subtitle-margin-bottom-mobile: $clay-radix !default !global; // 16px
+
+	$sheet-tertiary-title-margin-bottom-mobile: ($clay-radix * 0.5) !default !global; // 8px
+
+	$sheet-text-margin-bottom-mobile: $clay-radix !default !global; // 16px
+
+	// SIDEBAR
+
+	$sidebar-header-component-title: () !default !global;
+	$sidebar-header-component-title: map-merge((
+		font-size: ($clay-radix * 1.25), // 20px
+	), $sidebar-header-component-title);
+
+	$sidebar-header-component-subtitle: () !default !global;
+	$sidebar-header-component-subtitle: map-merge((
+		font-size: ($clay-radix * 0.75), // 12px
+	), $sidebar-header-component-subtitle);
+
+	$sidebar-dt: () !default !global;
+	$sidebar-dt: map-merge((
+		font-size: ($clay-radix * 0.75) // 12px
+	), $sidebar-dt);
+
+	$sidebar-dd: () !default !global;
+	$sidebar-dd: map-merge((
+		font-size: ($clay-radix * 0.875) // 14px
+	), $sidebar-dd);
+
+	$sidebar-light: () !default !global;
+	$sidebar-light: map-merge((
+		box-shadow: ($clay-radix * -0.25) 0 ($clay-radix * 0.5) ($clay-radix * -0.25) rgba(0, 0, 0, 0.1),
+		dt: (
+			color: $secondary
+		),
+		dd: (
+			clay-link: (
+				color: $body-color
+			)
+		)
+	), $sidebar-light);
+
+	// TABLES
+
+	$table-font-size: ($clay-radix * 0.875) !default !global; // 14px
+
+	$table-divider-font-size: ($clay-radix * 0.75) !default !global; // 12px
+	$table-divider-padding: ($clay-radix * 0.4375) ($clay-radix * 0.75) !default !global; // 7px 12px
+
+	$table-title: () !default !global;
+	$table-title: map-merge((
+		color: $body-color,
+		font-size: ($clay-radix * 0.875), // 14px
+	), $table-title);
+
+	$table-action-link: () !default !global;
+	$table-action-link: map-merge((
+		font-size: $clay-radix, // 16px
+	), $table-action-link);
+
+	// TABLE LIST
+
+	$table-list-divider-padding-x: ($clay-radix * 0.75) !default !global; // 12px
+	$table-list-divider-padding-y: ($clay-radix * 0.4375) !default !global; // 7px
+
+	$table-list-title: () !default !global;
+	$table-list-title: map-merge((
+		font-size: ($clay-radix * 0.875), // 14px
+	), $table-list-title);
+
+	// TOGGLE SWITCH
+
+	$toggle-switch-bar-font-size: ($clay-radix * 0.75) !default !global; // 12px
+	$toggle-switch-bar-font-size-mobile: ($clay-radix * 0.625) !default !global; // 10px
+
+	// TOOLTIP
+
+	$tooltip-font-size: ($clay-radix * 0.875) !default !global; // 14px
+	$tooltip-padding-x: ($clay-radix * 0.75) !default !global; // 12px
+	$tooltip-padding-y: ($clay-radix * 0.75) !default !global; // 12px
+	$tooltip-arrow-offset: ($clay-radix * 0.5) !default !global; // 8px
+}
