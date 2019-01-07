@@ -5,6 +5,17 @@
 $clay-unset: clay-unset !default;
 $clay-unset-placeholder: clay-unset-placeholder !default;
 
+// Sets the font-size on the HTML element. This is the base font-size used for
+// all rem values.
+$html-font-size: null !default;
+
+// A modifier used on all rem values to preserve original Bootstrap 4 and
+// Clay CSS component sizing which is based on 16px. For base font size 
+// 62.5% (10px), `$clay-radix` must be 1.6rem to preserve original sizes.
+// Use the formula `$clay-radix = 16 / $html-font-size` to determine the
+// rem value of `$clay-radix`.
+$clay-radix: 1rem !default;
+
 $enable-scaling-components: false !default;
 $scaling-breakpoint-down: sm !default;
 
@@ -35,10 +46,6 @@ $container-view: map-merge((
 ), $container-view);
 
 // Fonts
-
-$html-font-size: null !default;
-
-$clay-radix: 1rem !default;
 
 $moz-osx-font-smoothing: null !default;
 $webkit-font-smoothing: null !default;
