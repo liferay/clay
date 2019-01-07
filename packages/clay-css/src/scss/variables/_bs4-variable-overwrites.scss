@@ -1,6 +1,8 @@
 // This file is used to overwrite default Bootstrap 4 variables for the Clay
 // Base Theme and should only be limited to the most destructive variables.
 
+@import "_base-font-sizing";
+
 $enable-caret: false !default;
 
 $input-border-width: 0.0625rem !default; // 1px

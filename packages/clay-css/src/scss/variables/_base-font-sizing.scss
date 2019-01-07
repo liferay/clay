@@ -1,0 +1,877 @@
+$enable-base-font-sizing: true !default;
+
+@if ($enable-base-font-sizing) {
+	// Sets the font-size on the HTML element. This is the base font-size used for
+	// all rem values.
+	$html-font-size: 62.5% !default !global; // 10px
+
+	// A modifier used on all rem values to preserve original Bootstrap 4 and
+	// Clay CSS component sizing which is based on 16px. For base font size 
+	// 62.5% (10px), `$clay-radix` must be 1.6rem to preserve original sizes.
+	// Use the formula `$clay-radix = 16 / $html-font-size` to determine the
+	// rem value of `$clay-radix`.
+	$clay-radix: 1.6rem !default !global; // 16px
+
+	// BS4 VARIABLE OVERWRITES
+
+	$input-border-width: ($clay-radix * 0.0625) !default !global; // 1px
+	$input-height: ($clay-radix * 2.375) !default !global; // 38px
+	$input-height-lg: ($clay-radix * 3) !default !global; // 48px
+	$input-height-sm: ($clay-radix * 1.9375) !default !global; // 31px
+
+	// BOOTSTRAP VARS
+
+	$white: #fff !default !global;
+	$gray-100: #f8f9fa !default !global;
+	$gray-200: #e9ecef !default !global;
+	$gray-300: #dee2e6 !default !global;
+	$gray-400: #ced4da !default !global;
+	$gray-500: #adb5bd !default !global;
+	$gray-600: #6c757d !default !global;
+	$gray-700: #495057 !default !global;
+	$gray-800: #343a40 !default !global;
+	$gray-900: #212529 !default !global;
+	$black: #000 !default !global;
+
+	$blue: #007bff !default !global;
+	$indigo: #6610f2 !default !global;
+	$purple: #6f42c1 !default !global;
+	$pink: #e83e8c !default !global;
+	$red: #dc3545 !default !global;
+	$orange: #fd7e14 !default !global;
+	$yellow: #ffc107 !default !global;
+	$green: #28a745 !default !global;
+	$teal: #20c997 !default !global;
+	$cyan: #17a2b8 !default !global;
+
+	$primary: $blue !default !global;
+	$secondary: $gray-600 !default !global;
+	$success: $green !default !global;
+	$info: $cyan !default !global;
+	$warning: $yellow !default !global;
+	$danger: $red !default !global;
+	$light: $gray-100 !default !global;
+	$dark: $gray-800 !default !global;
+
+	$body-color: $gray-900 !default !global;
+
+	$spacer: $clay-radix !default !global; // 16px
+
+	$paragraph-margin-bottom: $clay-radix !default !global;
+
+	$border-radius: ($clay-radix * 0.25) !default !global; // 4px
+	$border-radius-lg: ($clay-radix * 0.375) !default !global; // 6px
+	$border-radius-sm: ($clay-radix * 0.1875) !default !global; // 3px
+
+	$box-shadow-sm: 0 ($clay-radix * 0.125) ($clay-radix * 0.25) rgba($black, .075) !default !global;
+	$box-shadow: 0 ($clay-radix * 0.5) $clay-radix rgba($black, .15) !default !global;
+	$box-shadow-lg: 0 $clay-radix ($clay-radix * 3) rgba($black, .175) !default !global;
+
+	$font-size-base: $clay-radix !default !global; // 16px
+
+	$display1-size: ($clay-radix * 6) !default !global; // 96px
+	$display2-size: ($clay-radix * 5.5) !default !global; // 88px
+	$display3-size: ($clay-radix * 4.5) !default !global; // 72px
+	$display4-size: ($clay-radix * 3.5) !default !global; // 56px
+
+	$kbd-box-shadow: inset 0 ($clay-radix * -0.1) 0 rgba($black, 0.25) !default !global;
+
+	$list-inline-padding: ($clay-radix * 0.5) !default !global; // 8px
+
+	$table-cell-padding: ($clay-radix * 0.75) !default !global;
+	$table-cell-padding-sm: ($clay-radix * 0.3) !default !global;
+
+	$input-btn-padding-y: ($clay-radix * 0.375) !default !global;
+	$input-btn-padding-x: ($clay-radix * 0.75) !default !global;
+
+	$input-btn-focus-width: ($clay-radix * 0.2) !default !global;
+
+	$input-btn-padding-y-sm: ($clay-radix * 0.25) !default !global;
+	$input-btn-padding-x-sm: ($clay-radix * 0.5) !default !global;
+
+	$input-btn-padding-y-lg: ($clay-radix * 0.5) !default !global;
+	$input-btn-padding-x-lg: $clay-radix !default !global;
+
+	$btn-block-spacing-y: ($clay-radix * 0.5) !default !global;
+
+	$label-margin-bottom: ($clay-radix * 0.5) !default !global;
+
+	$form-text-margin-top: ($clay-radix * 0.25) !default !global;
+
+	$form-check-input-gutter: ($clay-radix * 1.25) !default !global;
+	$form-check-input-margin-y: ($clay-radix * 0.3) !default !global;
+	$form-check-input-margin-x: ($clay-radix * 0.25) !default !global;
+
+	$form-check-inline-margin-x: ($clay-radix * 0.75) !default !global;
+	$form-check-inline-input-margin-x: ($clay-radix * 0.3125) !default !global;
+
+	$form-group-margin-bottom: $clay-radix !default !global;
+
+	$custom-control-gutter: ($clay-radix * 1.5) !default !global;
+	$custom-control-spacer-x: $clay-radix !default !global;
+
+	$custom-control-indicator-size: $clay-radix !default !global;
+	$custom-control-indicator-box-shadow: inset 0 ($clay-radix * 0.25) ($clay-radix * 0.25) rgba($black, .1) !default !global;
+
+	$custom-select-padding-y: ($clay-radix * 0.375) !default !global;
+	$custom-select-padding-x: ($clay-radix * 0.75) !default !global;
+	$custom-select-indicator-padding: $clay-radix !default !global;
+
+	$custom-range-track-height: ($clay-radix * 0.5) !default !global;
+	$custom-range-track-border-radius: $clay-radix !default !global;
+	$custom-range-track-box-shadow: inset 0 ($clay-radix * 0.25) ($clay-radix * 0.25) rgba($black, .1) !default !global;
+
+	$custom-range-thumb-width: $clay-radix !default !global;
+	$custom-range-thumb-border-radius: $clay-radix !default !global;
+	$custom-range-thumb-box-shadow: 0 ($clay-radix * 0.1) ($clay-radix * 0.25) rgba($black, .1) !default !global;
+
+	$dropdown-min-width: ($clay-radix * 10) !default !global;
+	$dropdown-padding-y: ($clay-radix * .5) !default !global;
+	$dropdown-spacer: ($clay-radix * .125) !default !global;
+	$dropdown-box-shadow: 0 ($clay-radix * 0.5) $clay-radix rgba($black, .175) !default !global;
+
+	$dropdown-item-padding-y: ($clay-radix * .25) !default !global;
+	$dropdown-item-padding-x: ($clay-radix * 1.5) !default !global;
+
+	$nav-link-padding-y: ($clay-radix * 0.5) !default !global;
+	$nav-link-padding-x: $clay-radix !default !global;
+
+	$navbar-nav-link-padding-x: ($clay-radix * 0.5) !default !global;
+	$navbar-toggler-padding-y: ($clay-radix * 0.25) !default !global;
+	$navbar-toggler-padding-x: ($clay-radix * 0.75) !default !global;
+
+	$pagination-padding-y: ($clay-radix * 0.5) !default !global;
+	$pagination-padding-x: ($clay-radix * 0.75) !default !global;
+	$pagination-padding-y-sm: ($clay-radix * 0.25) !default !global;
+	$pagination-padding-x-sm: ($clay-radix * 0.5) !default !global;
+	$pagination-padding-y-lg: ($clay-radix * 0.75) !default !global;
+	$pagination-padding-x-lg: ($clay-radix * 1.5) !default !global;
+
+	$jumbotron-padding: ($clay-radix * 2) !default !global;
+
+	$card-spacer-y: ($clay-radix * 0.75) !default !global;
+	$card-spacer-x: ($clay-radix * 1.25) !default !global;
+
+	$card-img-overlay-padding: ($clay-radix * 1.25) !default !global;
+
+	$card-columns-gap: ($clay-radix * 1.25) !default !global;
+
+	$tooltip-padding-y: ($clay-radix * 0.25) !default !global;
+	$tooltip-padding-x: ($clay-radix * 0.5) !default !global;
+
+	$tooltip-arrow-width: ($clay-radix * 0.8) !default !global;
+	$tooltip-arrow-height: ($clay-radix * 0.4) !default !global;
+
+	$popover-box-shadow: 0 ($clay-radix * 0.25) ($clay-radix * 0.5) rgba($black, .2) !default !global;
+
+	$popover-header-padding-y: ($clay-radix * 0.5) !default !global;
+	$popover-header-padding-x: ($clay-radix * 0.75) !default !global;
+
+	$popover-arrow-width: $clay-radix !default !global;
+	$popover-arrow-height: ($clay-radix * 0.5) !default !global;
+
+	$badge-pill-border-radius: ($clay-radix * 10) !default !global;
+
+	$modal-inner-padding: $clay-radix !default !global;
+
+	$modal-dialog-margin: ($clay-radix * 0.5) !default !global;
+	$modal-dialog-margin-y-sm-up: ($clay-radix * 1.75) !default !global;
+
+	$modal-content-box-shadow-xs: 0 ($clay-radix * 0.25) ($clay-radix * 0.5) rgba($black, 0.5) !default !global;
+	$modal-content-box-shadow-sm-up: 0 ($clay-radix * 0.5) $clay-radix rgba($black, 0.5) !default !global;
+
+	$modal-header-padding: $clay-radix !default !global;
+
+	$alert-padding-y: ($clay-radix * 0.75) !default !global;
+	$alert-padding-x: ($clay-radix * 1.25) !default !global;
+	$alert-margin-bottom: $clay-radix !default !global;
+
+	$progress-height: $clay-radix !default !global;
+	$progress-box-shadow: inset 0 ($clay-radix * 0.1) ($clay-radix * 0.1) rgba($black, .1) !default !global;
+
+	$list-group-item-padding-y: ($clay-radix * 0.75) !default !global;
+	$list-group-item-padding-x: ($clay-radix * 1.25) !default !global;
+
+	$thumbnail-padding: ($clay-radix * 0.25) !default !global;
+
+	$breadcrumb-padding-y: ($clay-radix * 0.75) !default !global;
+	$breadcrumb-padding-x: $clay-radix !default !global;
+	$breadcrumb-item-padding: ($clay-radix * 0.5) !default !global;
+
+	$breadcrumb-margin-bottom: $clay-radix !default !global;
+
+	$kbd-padding-y: ($clay-radix * 0.2) !default !global;
+	$kbd-padding-x: ($clay-radix * 0.4) !default !global;
+
+	// CLAY BASE VARIABLES
+
+	// GLOBALS
+
+	$container-form-lg: () !default !global;
+	$container-form-lg: map-merge((
+		padding-bottom: ($clay-radix * 3), // 48px
+		padding-top: ($clay-radix * 3), // 48px
+		padding-bottom-mobile: $clay-radix, // 16px
+		padding-top-mobile: $clay-radix, // 16px
+	), $container-form-lg);
+
+	$container-view: () !default !global;
+	$container-view: map-merge((
+		padding-bottom: ($clay-radix * 1.5), // 24px
+		padding-top: ($clay-radix * 1.5), // 24px
+	), $container-view);
+
+	// ALERTS
+
+	$alert-close-font-size: ($clay-radix * 0.875) !default !global; // 14px
+	$alert-close-height: ($clay-radix * 2) !default !global; // 32px
+	$alert-close-position-right: ($clay-radix * 0.5) !default !global; // 8px
+	$alert-close-position-top: ($clay-radix * 0.75) !default !global; // 12px
+
+	$alert-lead-spacer-x: ($clay-radix * 0.3125) !default !global; // 5px
+	$alert-indicator-font-size: ($clay-radix * 1.25) !default !global; // 20px
+
+	$alert-dismissible-padding-right: ($clay-radix * 2.5) !default !global; // 40px
+
+	$alert-notifications-absolute-right: ($clay-radix * 0.5) !default !global; // 8px
+	$alert-notifications-absolute-top: ($clay-radix * 4.75) !default !global; // 76px
+
+	$alert-notifications-absolute-left-mobile: ($clay-radix * 0.5) !default !global; // 8px
+	$alert-notifications-absolute-right-mobile: ($clay-radix * 0.5) !default !global; // 8px
+	$alert-notifications-absolute-top-mobile: ($clay-radix * 4.25) !default !global; // 68px
+
+	$alert-notifications-fixed-bottom: ($clay-radix * 1.25) !default !global; // 20px
+	$alert-notifications-fixed-left: ($clay-radix * 1.25) !default !global; // 20px
+
+	$alert-notifications-fixed-bottom-mobile: $clay-radix !default !global; // 16px
+
+	$alert-notifications-max-width: ($clay-radix * 22.5) !default !global; // 360px
+
+	// BADGES
+
+	$badge-spacer-x: ($clay-radix * 0.25) !default !global; // 4px
+	$badge-spacer-y: ($clay-radix * 0.125) !default !global; // 2px
+	$badge-item-expand-min-width: ($clay-radix * 0.375) !default !global; // 6px
+
+	// BREADCRUMBS
+
+	$breadcrumb-text-truncate-icon-spacer-x: ($clay-radix * 0.875) !default !global; // 14px
+	$breadcrumb-text-truncate-max-width: ($clay-radix * 18.75) - $breadcrumb-text-truncate-icon-spacer-x !default !global; // 300px
+	$breadcrumb-text-truncate-max-width-mobile: ($clay-radix * 9.375) - $breadcrumb-text-truncate-icon-spacer-x !default !global; // 150px
+
+	// BUTTONS
+
+	$btn-section-font-size: ($clay-radix * 0.6875) !default !global; // 11px
+	$btn-section-font-size-lg: ($clay-radix * 0.8125) !default !global; // 13px
+	$btn-section-font-size-sm: ($clay-radix * 0.5625) !default !global; // 9px
+
+	$btn-monospaced-padding-y: ($clay-radix * 0.1875) !default !global; // 3px
+	$btn-monospaced-size: ($clay-radix * 2.375) !default !global; // 38px
+
+	$btn-monospaced-padding-y-lg: ($clay-radix * 0.3125) !default !global; // 5px
+	$btn-monospaced-size-lg: ($clay-radix * 3) !default !global; // 48px
+
+	$btn-monospaced-padding-y-sm: ($clay-radix * 0.125) !default !global; // 2px
+	$btn-monospaced-size-sm: ($clay-radix * 1.9375) !default !global; // 31px
+
+	$btn-toolbar-spacer-x: ($clay-radix * 0.5) !default !global; // 8px
+	$btn-toolbar-spacer-y: ($clay-radix * 0.125) !default !global; // 2px
+
+	// LABELS
+
+	$label-padding-x: ($clay-radix * 0.4375) !default !global; // 7px
+	$label-padding-y: ($clay-radix * 0.1875) !default !global; // 3px
+	$label-spacer-x: ($clay-radix * 0.25) !default !global; // 4px
+	$label-spacer-y: ($clay-radix * 0.125) !default !global; // 2px
+
+	$label-border-width: ($clay-radix * 0.0625) !default !global; // 1px
+
+	$label-lg: () !default !global;
+	$label-lg: map-merge((
+		font-size: ($clay-radix * 0.875), // 14px
+		padding-x: $clay-radix, // 16px
+		padding-y: ($clay-radix * 0.375), // 6px
+	), $label-lg);
+
+	// STICKERS
+
+	$sticker-font-size: ($clay-radix * 0.875) !default !global; // 14px
+	$sticker-size: ($clay-radix * 2) !default !global; // 32px
+
+	$sticker-sm: () !default !global;
+	$sticker-sm: map-merge((
+		font-size: ($clay-radix * 0.75), // 12px
+		size: ($clay-radix * 1.5), // 24px
+	), $sticker-sm);
+
+	$sticker-lg: () !default !global;
+	$sticker-lg: map-merge((
+		font-size: ($clay-radix * 1.125), // 18px
+		size: ($clay-radix * 2.5), // 40px
+	), $sticker-lg);
+
+	$sticker-xl: () !default !global;
+	$sticker-xl: map-merge((
+		font-size: ($clay-radix * 1.25), // 20px
+		size: ($clay-radix * 3), // 48px
+	), $sticker-xl);
+
+	// CARDS
+
+	$card-margin-bottom: ($clay-radix * 1.25) !default !global; // 20px
+
+	$card-section-header-font-size: ($clay-radix * 0.75) !default !global; // 12px
+	$card-section-header-margin-bottom: ($clay-radix * 1.5) !default !global; // 24px
+
+	$card-title: () !default !global;
+	$card-title: map-merge((
+		font-size: $clay-radix, // 16px
+	), $card-title);
+
+	$card-subtitle: () !default !global;
+	$card-subtitle: map-merge((
+		font-size: ($clay-radix * 0.875), // 14px
+	), $card-subtitle);
+
+	$checkbox-position: $clay-radix !default !global; // 16px
+
+	$card-type-asset: () !default !global;
+	$card-type-asset: map-merge((
+		aspect-ratio-border-width: 0 0 ($clay-radix * 0.0625) 0, // 0 0 1px 0
+		dropdown-action-offset-right: -($clay-radix * 0.5), // -8px
+		dropdown-action-offset-top: -($clay-radix * 0.1875), // -3px
+	), $card-type-asset);
+
+	$user-card: () !default !global;
+	$user-card: map-merge((
+		aspect-ratio-border-width: 0 0 ($clay-radix * 0.0625) 0, // 0 0 1px 0
+		asset-icon-min-width: ($clay-radix * 2.5), // 40px
+		dropdown-action-offset-right: -($clay-radix * 0.5), // -8px
+		dropdown-action-offset-top: -($clay-radix * 0.1875), // -3px
+	), $user-card);
+
+	$card-type-directory: () !default !global;
+	$card-type-directory: map-merge((
+		aspect-ratio-border-width: 0 0 ($clay-radix * 0.0625) 0, // 0 0 1px 0
+		dropdown-action-offset-right: -($clay-radix * 0.5), // -8px
+		dropdown-action-offset-top: -($clay-radix * 0.1875), // -3px
+		sticker-font-size: ($clay-radix * 1.125), // 18px
+	), $card-type-directory);
+
+	// DROPDOWN
+
+	$dropdown-subheader-font-size: ($clay-radix * 0.75) !default !global; // 12px
+
+	$dropdown-caption-font-size: ($clay-radix * 0.875) !default !global; // 14px
+
+	$dropdown-item-indicator-size: $clay-radix !default !global; // 16px
+	$dropdown-item-indicator-spacer-x: $clay-radix !default !global; // 16px
+
+	// FORMS
+
+	$input-border-top-width: ($clay-radix * 0.0625) !default !global; // 1px
+	$input-border-right-width: ($clay-radix * 0.0625) !default !global; // 1px
+	$input-border-bottom-width: ($clay-radix * 0.0625) !default !global; // 1px
+	$input-border-left-width: ($clay-radix * 0.0625) !default !global; // 1px
+
+	$form-control-label-size: () !default !global;
+	$form-control-label-size: map-merge((
+		border-width: ($clay-radix * 0.0625), // 1px
+		height: ($clay-radix * 1.25), // 20px
+	), $form-control-label-size);
+
+	$form-check-label-text-margin-left: ($clay-radix * -0.3125) !default !global; // -5px
+	$form-check-label-text-padding-left: ($clay-radix * 0.5) !default !global; // 8px
+
+	$form-feedback-valid-color: $success !default !global;
+	$form-feedback-invalid-color: $danger !default !global;
+	$form-feedback-warning-color: $warning !default !global;
+
+	$input-danger-focus-box-shadow: 0 0 0 ($clay-radix * 0.2) rgba($form-feedback-invalid-color, 0.25) !default !global;
+	$input-success-focus-box-shadow: 0 0 0 ($clay-radix * 0.2) rgba($form-feedback-valid-color, 0.25) !default !global;
+	$input-warning-focus-box-shadow: 0 0 0 ($clay-radix * 0.2) rgba($form-feedback-warning-color, 0.25) !default !global;
+
+	$form-feedback-margin-top: ($clay-radix * 0.25) !default !global; // 4px
+
+	$form-feedback-indicator-margin-x: ($clay-radix * 0.3125) !default !global; // 5px
+
+	$form-text-font-size: ($clay-radix * 0.875) !default !global; // 14px
+
+	$form-group-item-label-max-width: ($clay-radix * 12.5) !default !global; // 200px
+	$form-group-item-label-spacer: ($clay-radix * 2) !default !global; // 32px
+
+	$input-group-addon-min-width: ($clay-radix * 2.375) !default !global; // 38px
+
+	$input-group-secondary-addon-border-width: ($clay-radix * 0.0625) !default !global; // 1px
+
+	$input-group-item-margin-left: ($clay-radix * 0.5) !default !global; // 8px
+
+	$input-group-inset-item-btn: () !default !global;
+	$input-group-inset-item-btn: map-merge((
+		padding-left: $input-btn-padding-x - ($clay-radix * 0.1875),
+		padding-right: $input-btn-padding-x - ($clay-radix * 0.1875),
+	), $input-group-inset-item-btn);
+
+	$input-group-addon-min-width-lg: ($clay-radix * 3) !default !global; // 48px
+
+	$input-group-lg-inset-item-form-file-btn: () !default !global;
+	$input-group-lg-inset-item-form-file-btn: map-merge((
+		padding-left: $input-btn-padding-x - ($clay-radix * 0.1875),
+		padding-right: $input-btn-padding-x - ($clay-radix * 0.1875),
+	), $input-group-lg-inset-item-form-file-btn);
+
+	$input-group-addon-min-width-sm: ($clay-radix * 1.9375) !default !global; // 31px
+
+	$input-group-sm-inset-item-form-file-btn: () !default !global;
+	$input-group-sm-inset-item-form-file-btn: map-merge((
+		padding-left: $input-btn-padding-x - ($clay-radix * 0.1875),
+		padding-right: $input-btn-padding-x - ($clay-radix * 0.1875),
+	), $input-group-sm-inset-item-form-file-btn);
+
+	$input-group-stacked-sm-down: () !default !global;
+	$input-group-stacked-sm-down: map-merge((
+		item-margin-bottom: ($clay-radix * 0.5), // 8px
+		shrink-margin-right: ($clay-radix * 0.5), // 8px
+	), $input-group-stacked-sm-down);
+
+	// LINKS
+
+	$component-title: () !default !global;
+	$component-title: map-merge((
+		font-size: ($clay-radix * 1.125), // 18px
+	), $component-title);
+
+	// CUSTOM FORMS
+
+	$custom-control-description-padding-left: ($clay-radix * 0.5) !default !global; // 8px
+
+	// LIST GROUP
+
+	$list-group-margin-bottom: ($clay-radix * 1.5) !default !global;
+
+	$list-group-item-flex-checkbox-offset-top: ($clay-radix * 0.1875) !default !global; // 3px
+	$list-group-item-flex-offset-top: ($clay-radix * 0.0625) !default !global; // 1px
+	$list-group-item-flex-list-group-title-offset-top: ($clay-radix * -0.25) !default !global; // -4px
+
+	$list-group-header-title: () !default !global;
+	$list-group-header-title: map-merge((
+		font-size: $clay-radix, // 16px
+	), $list-group-header-title);
+
+	$list-group-title: () !default !global;
+	$list-group-title: map-merge((
+		font-size: ($clay-radix * 1.125), // 18px
+	), $list-group-title);
+
+	$list-group-notification-item-border-bottom-width: ($clay-radix * 0.0625) !default !global; // 1px
+	$list-group-notification-item-border-left-width: ($clay-radix * 0.0625) !default !global; // 1px
+	$list-group-notification-item-border-right-width: ($clay-radix * 0.0625) !default !global; // 1px
+	$list-group-notification-item-border-top-width: ($clay-radix * 0.0625) !default !global; // 1px
+
+	$list-group-notification-item-primary: () !default !global;
+	$list-group-notification-item-primary: map-merge((
+		border-left-width: ($clay-radix * 0.5), // 8px
+	), $list-group-notification-item-primary);
+
+	// LOADERS
+
+	$loading-icon-font-size: ($clay-radix * 2.5) !default !global; // 40px
+
+	$loading-icon-font-size-sm: ($clay-radix * 1.25) !default !global; // 20px
+
+	// MODALS
+
+	$modal-header-height: ($clay-radix * 4) !default !global; // 64px
+
+	$modal-footer-padding-y: ($clay-radix * 0.75) !default !global; // 12px
+
+	$modal-item-padding-y: ($clay-radix * 0.25) !default !global; // 4px
+
+	$modal-title-font-size: ($clay-radix * 1.25) !default !global; // 20px
+
+	$modal-title-indicator-font-size: ($clay-radix * 0.875) !default !global; // 14px
+	$modal-title-indicator-spacer-x: ($clay-radix * 0.5) !default !global; // 8px
+
+	$modal-close-spacer-x: ($clay-radix * 0.3125) !default !global; // 5px
+
+	// MULTI STEP NAV
+
+	$multi-step-icon-size: ($clay-radix * 2) !default !global; // 32px
+
+	$multi-step-divider-height: ($clay-radix * 0.25) !default !global; // 4px
+
+	$multi-step-title-margin-bottom: ($clay-radix * 0.625) !default !global; // 10px
+
+	$multi-step-dropdown-indicator-complete-width: ($clay-radix * 0.875) !default !global; // 14px
+
+	// NAVS
+
+	$nav-item-monospaced-size: ($clay-radix * 2) !default !global; // 32px
+
+	$nav-btn-margin-x: ($clay-radix * 0.25) !default !global; // 4px
+
+	$nav-stacked-nav-form-padding-left: ($clay-radix * 0.5) !default !global; // 8px
+	$nav-stacked-nav-form-padding-right: ($clay-radix * 0.5) !default !global; // 8px
+
+	$nav-underline-link-active-highlight-height: ($clay-radix * 0.1875) !default !global; // 3px
+
+	// ICONS
+
+	$collapse-icon-padding-right: ($clay-radix * 2.28125) !default !global; // 45px
+
+	$collapse-icon-position-right: ($clay-radix * 0.9375) !default !global; // 15px
+	$collapse-icon-position-top: clay-collapse-icon-align($nav-link-padding-y, #{$clay-radix * 0.0625}, $font-size-base) !default !global;
+
+	$lexicon-icon-sm-font-size: ($clay-radix * 0.5) !default !global; // 8px
+	$lexicon-icon-lg-font-size: ($clay-radix * 2) !default !global; // 32px
+	$lexicon-icon-xl-font-size: ($clay-radix * 8) !default !global; // 128px
+
+	// MENUBAR
+
+	$menubar-vertical-expand-md: () !default !global;
+	$menubar-vertical-expand-md: map-merge((
+		margin-bottom-mobile: ($clay-radix * 1.5), // 24px
+		max-width: ($clay-radix * 15.625), // 250px
+		border-width-mobile: ($clay-radix * 0.0625), // 1px
+		min-height-mobile: ($clay-radix * 3), // 48px
+		padding-x-mobile: ($clay-radix * 0.5), // 8px
+		collapse-border-width-mobile: ($clay-radix * 0.0625), // 1px
+		collapse-inner-spacer-y-mobile: ($clay-radix * 0.5), // 8px
+		collapse-left-mobile: -($clay-radix * 0.0625), // -1px
+		collapse-right-mobile: -($clay-radix * 0.0625), // -1px
+		toggler-border-width-mobile: ($clay-radix * 0.0625), // 1px
+		toggler-padding-x-mobile: ($clay-radix * 0.5), // 8px
+	), $menubar-vertical-expand-md);
+
+	$menubar-vertical-expand-lg: () !default !global;
+	$menubar-vertical-expand-lg: map-merge((
+		margin-bottom-mobile: ($clay-radix * 1.5), // 24px
+		max-width: ($clay-radix * 15.625), // 250px
+		border-width-mobile: ($clay-radix * 0.0625), // 1px
+		min-height-mobile: ($clay-radix * 3), // 48px
+		padding-x-mobile: ($clay-radix * 0.5), // 8px
+		collapse-border-width-mobile: ($clay-radix * 0.0625), // 1px
+		collapse-inner-spacer-y-mobile: ($clay-radix * 0.5), // 8px
+		collapse-left-mobile: -($clay-radix * 0.0625), // -1px
+		collapse-right-mobile: -($clay-radix * 0.0625), // -1px
+		toggler-border-width-mobile: ($clay-radix * 0.0625), // 1px
+		toggler-padding-x-mobile: ($clay-radix * 0.5), // 8px
+	), $menubar-vertical-expand-lg);
+
+	// NAVBAR
+
+	$navbar-title-font-size: ($clay-radix * 1.25) !default !global; // 20px
+
+	$navbar-text-truncate-spacer-right: ($clay-radix * 1.5625) !default !global; // 25px
+	$navbar-text-truncate-max-width: ($clay-radix * 12.5) !default !global; // 200px
+
+	// APPLICATION BAR
+
+	$application-bar-size: () !default !global;
+	$application-bar-size: map-merge((
+		height: ($clay-radix * 3.5), // 56px
+		height-mobile: ($clay-radix * 3), // 48px
+		btn-monospaced-font-size: $clay-radix, // 16px
+		link-height: ($clay-radix * 2), // 32px
+		link-height-mobile: ($clay-radix * 2), // 32px
+		link-margin-x: ($clay-radix * 0.5), // 8px
+		link-padding-x: ($clay-radix * 0.25), // 4px
+	), $application-bar-size);
+
+	// MANAGEMENT BAR
+
+	$management-bar-size: () !default !global;
+	$management-bar-size: map-merge((
+		height: ($clay-radix * 4), // 64px
+		height-mobile: ($clay-radix * 3), // 48px
+		border-bottom-width: ($clay-radix * 0.0625), // 1px
+		btn-monospaced-font-size: $clay-radix, // 16px
+		link-height: ($clay-radix * 2), // 32px
+		link-height-mobile: ($clay-radix * 2), // 32px
+		link-margin-x: ($clay-radix * 0.5), // 8px
+		link-margin-x-mobile: ($clay-radix * 0.25), // 4px
+		link-padding-x-mobile: ($clay-radix * 0.25), // 4px
+		form-control-height-mobile: ($clay-radix * 2), // 32px
+		toggler-margin-x: ($clay-radix * 0.875), // 14px
+		active-border-bottom-width: ($clay-radix * 0.25), // 4px
+	), $management-bar-size);
+
+	// NAVIGATION BAR
+
+	$navigation-bar-size: () !default !global;
+	$navigation-bar-size: map-merge((
+		border-bottom-width: ($clay-radix * 0.0625), // 1px
+		height: ($clay-radix * 3), // 48px
+		link-padding-x: $clay-radix, // 16px
+		collapse-dropdown-item-padding-x-mobile: $clay-radix, // 16px
+		collapse-dropdown-item-padding-y-mobile: ($clay-radix * 0.71875), // 11.5px
+		active-border-bottom-width: ($clay-radix * 0.25), // 4px
+	), $navigation-bar-size);
+
+	// PAGINATION
+
+	$pagination-item-height: ($clay-radix * 2.375) !default !global; // 38px
+
+	$pagination-margin-bottom: ($clay-radix * 0.5) !default !global; // 8px
+
+	$pagination-margin-top-mobile: ($clay-radix * 0.5) !default !global; // 8px
+
+	$pagination-items-per-page-lexicon-icon-margin-left: ($clay-radix * 0.125) !default !global; // 2px
+	$pagination-items-per-page-lexicon-icon-margin-top: ($clay-radix * 0.125) !default !global; // 2px
+
+	$pagination-item-height-sm: ($clay-radix * 1.9375) !default !global; // 31px
+
+	$pagination-item-height-lg: ($clay-radix * 3.5) !default !global; // 56px
+
+	// PANELS
+
+	$panel-header-padding-x: ($clay-radix * 1.25) !default !global; // 20px
+	$panel-header-padding-y: ($clay-radix * 0.75) !default !global; // 12px
+
+	$panel-header-collapse-icon-font-size: ($clay-radix * 0.875) !default !global; // 14px
+
+	$panel-body-padding-x: ($clay-radix * 1.25) !default !global; // 20px
+	$panel-body-padding-y: ($clay-radix * 0.75) !default !global; // 12px
+
+	$panel-group-flush-body-margin-bottom: ($clay-radix * 1.5) !default !global; // 24px
+
+	$panel-group-flush-collapse-icon-padding-right: ($clay-radix * 1.5) !default !global; // 24px
+
+	// POPOVERS
+
+	$popover-inline-scroller-max-height: ($clay-radix * 14.75) !default !global; // 236px
+
+	$popover-arrow-offset: ($clay-radix * 0.375) !default !global; // 6px
+
+	// PROGRESS BARS
+
+	$progress-min-width: ($clay-radix * 6.25) !default !global; // 100px
+
+	$progress-group-addon-spacer-x: $clay-radix !default !global; // 16px
+
+	$progress-group-stacked-progress-margin-bottom: ($clay-radix * 0.25) !default !global; // 4px
+	$progress-group-stacked-progress-margin-top: ($clay-radix * 0.25) !default !global; // 4px
+
+	// QUICK ACTION
+
+	$quick-action-item-margin-x: ($clay-radix * 0.5) !default !global; // 8px
+
+	$quick-action-item-min-height: ($clay-radix * 2) !default !global; // 32px
+	$quick-action-item-min-width: ($clay-radix * 2) !default !global; // 32px
+
+	// SHEETS
+
+	$sheet-border-width: ($clay-radix * 0.0625) !default !global; // 1px
+
+	$sheet-padding-bottom: ($clay-radix * 0.0625) !default !global; // 1px
+	$sheet-padding-left: ($clay-radix * 1.5) !default !global; // 24px
+	$sheet-padding-right: ($clay-radix * 1.5) !default !global; // 24px
+	$sheet-padding-top: ($clay-radix * 1.5) !default !global; // 24px
+
+	$sheet-header-margin-bottom: ($clay-radix * 3) !default !global; // 48px
+
+	$sheet-section-margin-bottom: ($clay-radix * 3) !default !global; // 48px
+
+	$sheet-panel-group-margin-bottom: ($clay-radix * 1.5) !default !global; // 24px
+
+	$sheet-footer-margin-bottom: ($clay-radix * 1.5) !default !global; // 24px
+	$sheet-footer-margin-top: ($clay-radix * 1.5) !default !global; // 24px
+
+	$sheet-footer-btn-block-sm-down: () !default !global;
+	$sheet-footer-btn-block-sm-down: map-merge((
+		btn-margin-bottom-mobile: $clay-radix, // 16px
+	), $sheet-footer-btn-block-sm-down);
+
+	$sheet-title-font-size: ($clay-radix * 1.5) !default !global; // 24px
+	$sheet-title-margin-bottom: ($clay-radix * 1.5) !default !global; // 24px
+
+	$sheet-title-font-size-mobile: ($clay-radix * 1.25) !default !global; // 20px
+
+	$sheet-subtitle-font-size: ($clay-radix * 0.875) !default !global; // 14px
+	$sheet-subtitle-margin-bottom: ($clay-radix * 1.5) !default !global; // 24px
+	$sheet-subtitle-padding-y: ($clay-radix * 0.3125) !default !global; // 5px
+
+	$sheet-text-margin-bottom: ($clay-radix * 1.5) !default !global; // 24px
+
+	// SIDEBAR
+
+	$sidebar-padding-bottom: ($clay-radix * 1.5) !default !global; // 24px
+	$sidebar-padding-left: ($clay-radix * 1.5) !default !global; // 24px
+	$sidebar-padding-right: ($clay-radix * 1.5) !default !global; // 24px
+	$sidebar-padding-top: ($clay-radix * 1.5) !default !global; // 24px
+
+	$sidebar-header-component-title: () !default !global;
+	$sidebar-header-component-title: map-merge((
+		font-size: ($clay-radix * 1.5), // 24px
+		clay-link: (
+			color: $body-color,
+		),
+	), $sidebar-header-component-title);
+
+	$sidebar-header-component-subtitle: () !default !global;
+	$sidebar-header-component-subtitle: map-merge((
+		font-size: ($clay-radix * 1.125), // 18px
+	), $sidebar-header-component-subtitle);
+
+	$sidebar-dt: () !default !global;
+	$sidebar-dt: map-merge((
+		font-size: ($clay-radix * 0.875), // 14px
+		margin-bottom: ($clay-radix * 0.25), // 4px
+	), $sidebar-dt);
+
+	$sidebar-dd: () !default !global;
+	$sidebar-dd: map-merge((
+		font-size: ($clay-radix * 0.875), // 14px
+		margin-bottom: ($clay-radix * 0.75), // 12px
+	), $sidebar-dd);
+
+	$sidebar-panel-margin-bottom: $clay-radix !default !global; // 16px
+
+	$sidebar-list-group-font-size: ($clay-radix * 0.875) !default !global; // 14px
+
+	$sidebar-list-group-autofit-col-padding-x: ($clay-radix * 0.5) !default !global; // 8px
+	$sidebar-list-group-autofit-col-padding-y: $clay-radix !default !global; // 16px
+
+	$sidebar-light: () !default !global;
+	$sidebar-light: map-merge((
+		dd: (
+			clay-link: (
+				color: $body-color,
+			),
+		),
+		sidebar-list-group-title: (
+			font-size: $clay-radix, // 16px
+			clay-link: (
+				color: $body-color,
+			),
+		),
+	), $sidebar-light);
+
+	// TABLES
+
+	$table-responsive-margin-bottom: ($clay-radix * 1.5) !default !global; // 24px
+
+	$table-head-title-inline-item-spacer-x: ($clay-radix * 0.25) !default !global; // 4px
+
+	$table-cell-expand-min-width: ($clay-radix * 12.5) !default !global; // 200px
+
+	$table-cell-expand-small-max-width: ($clay-radix * 12.5) !default !global; // 200px
+
+	$table-cell-expand-smaller-max-width: ($clay-radix * 12.5) !default !global; // 200px
+
+	$table-cell-expand-smallest-max-width: ($clay-radix * 12.5) !default !global; // 200px
+
+	$table-action-link: () !default !global;
+	$table-action-link: map-merge((
+		height: ($clay-radix * 2), // 32px
+		width: ($clay-radix * 2), // 32px
+	), $table-action-link);
+
+	$table-list-border-x-width: ($clay-radix * 0.0625) !default !global; // 1px
+	$table-list-border-y-width: ($clay-radix * 0.0625) !default !global; // 1px
+
+	$table-list-divider-padding-x: ($clay-radix * 0.75) !default !global; // 12px
+	$table-list-divider-padding-y: ($clay-radix * 0.75) !default !global; // 12px
+
+	$table-list-action-link: () !default !global;
+	$table-list-action-link: map-merge((
+		height: ($clay-radix * 2), // 32px
+		width: ($clay-radix * 2), // 32px
+	), $table-list-action-link);
+
+	$table-valign-top-body-cell-padding-top: $clay-radix !default !global; // 16px
+
+	$table-valign-bottom-body-cell-padding-bottom: $clay-radix !default !global; // 16px
+
+	// TBAR
+
+	$tbar-item-padding-x: ($clay-radix * 0.25) !default !global; // 4px
+
+	$component-tbar: () !default !global;
+	$component-tbar: map-merge((
+		border-width: 0 0 #{$clay-radix * 0.0625} 0, // 0 0 1px 0
+		height: ($clay-radix * 3.5), // 56px
+	), $component-tbar);
+
+	$subnav-tbar-component-title: () !default !global;
+	$subnav-tbar-component-title: map-merge((
+		display: inline-block,
+		font-size: ($clay-radix * 0.875), // 14px
+		margin-bottom: ($clay-radix * 0.25), // 4px
+		margin-top: ($clay-radix * 0.25), // 4px
+	), $subnav-tbar-component-title);
+
+	$subnav-tbar-component-text: () !default !global;
+	$subnav-tbar-component-text: map-merge((
+		margin-bottom: ($clay-radix * 0.25), // 4px
+		margin-top: ($clay-radix * 0.25), // 4px
+	), $subnav-tbar-component-text);
+
+	$subnav-tbar: () !default !global;
+	$subnav-tbar: map-merge((
+		font-size: ($clay-radix * 0.875), // 14px
+		item-padding-x: ($clay-radix * 0.5), // 8px
+		btn-height: ($clay-radix * 1.5), // 24px
+		btn-margin-y: ($clay-radix * 0.125), // 2px
+		btn-monospaced-margin-y: ($clay-radix * 0.125), // 2px
+		btn-monospaced-padding: ($clay-radix * 0.25), // 4px
+		link-margin-y: ($clay-radix * 0.125), // 2px
+		link-padding-x: ($clay-radix * 0.25), // 4px
+		link-padding-y: ($clay-radix * 0.09375), // 1.5px
+		link-monospaced-margin-y: ($clay-radix * 0.125), // 2px
+		link-monospaced-size: ($clay-radix * 1.5), // 24px
+	), $subnav-tbar);
+
+	$subnav-tbar-light: () !default !global;
+	$subnav-tbar-light: map-merge((
+		padding-y: ($clay-radix * 0.125), // 2px
+	), $subnav-tbar-light);
+
+	$subnav-tbar-primary-tbar-label-size: () !default !global;
+	$subnav-tbar-primary-tbar-label-size: map-merge((
+		font-size: ($clay-radix * 0.75), // 12px
+		padding-x: ($clay-radix * 0.625), // 10px
+		padding-y: ($clay-radix * 0.3125), // 5px
+	), $subnav-tbar-primary-tbar-label-size);
+
+	$subnav-tbar-primary: () !default !global;
+	$subnav-tbar-primary: map-merge((
+		padding-x: ($clay-radix * 0.25), // 4px
+		padding-y: ($clay-radix * 0.625), // 10px
+		item-padding-x: ($clay-radix * 0.25), // 4px
+		link-monospaced-margin-y: ($clay-radix * -0.625), // -10px
+		link-monospaced-size: ($clay-radix * 3), // 48px
+	), $subnav-tbar-primary);
+
+	// TOGGLE SWITCH
+
+	$toggle-switch-bar-font-size: ($clay-radix * 0.75) !default !global; // 12px
+
+	$toggle-switch-text-font-size: ($clay-radix * 0.75) !default !global; // 12px
+
+	// TOOLTIP
+
+	$tooltip-arrow-offset: ($clay-radix * 0.25) !default !global; // 4px
+
+	// TYPE
+
+	$reference-mark-font-size: ($clay-radix * 0.75) !default !global; // 12px
+
+	// UTILITIES
+
+	$autofit-col-expand-min-width: ($clay-radix * 3.125) !default !global; // 50px
+
+	$autofit-padded-col-padding-x: ($clay-radix * 0.5) !default !global; // 8px
+	$autofit-padded-col-padding-y: ($clay-radix * 0.25) !default !global; // 4px
+
+	$close: () !default !global;
+	$close: map-merge((
+		font-size: $clay-radix, // 16px
+		height: ($clay-radix * 2), // 32px
+		width: ($clay-radix * 2), // 32px
+	), $close);
+
+	$heading-spacer-x: $clay-radix !default !global; // 16px
+
+	$inline-item-spacer-x: ($clay-radix * 0.5) !default !global; // 8px
+}
