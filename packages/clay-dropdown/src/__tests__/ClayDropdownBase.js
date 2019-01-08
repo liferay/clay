@@ -71,7 +71,7 @@ describe('ClayDropdownBase', function() {
 		expect(clayDropdownBase).toMatchSnapshot();
 	});
 
-	it('should render a dropdown with trigger szie', () => {
+	it('should render a dropdown with trigger size', () => {
 		clayDropdownBase = new ClayDropdownBase({
 			items: [
 				{
