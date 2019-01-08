@@ -147,6 +147,28 @@ describe('ClayDropdownBase', function() {
 		expect(clayDropdownBase).toMatchSnapshot();
 	});
 
+	it('should render a dropdown with items of type item with target', () => {
+		clayDropdownBase = new ClayDropdownBase({
+			items: [
+				{
+					href: 'item1url',
+					label: 'Item 1',
+					target: '_self',
+					title: 'title1',
+				},
+				{
+					href: 'item2url',
+					label: 'Item 2',
+					target: '_blank',
+					title: 'title2',
+				},
+			],
+			label: 'Trigger',
+		});
+
+		expect(clayDropdownBase).toMatchSnapshot();
+	});
+
 	it('should render a dropdown with items of type item and active', () => {
 		clayDropdownBase = new ClayDropdownBase({
 			items: [
