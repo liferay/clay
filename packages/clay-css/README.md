@@ -1,8 +1,3 @@
-## Notice: 2.0.0-beta Release
-
-> This project is under active development, we recommended not using beta
-releases in your project.
-
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ### Jump to Section
@@ -17,12 +12,11 @@ releases in your project.
   - [View the files](#view-the-files)
   - [File Heading Options](#file-heading-options)
   - [Available Build Tasks](#available-build-tasks)
-- [Changelog](#changelog)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## About
-Clay is Liferay's web implementation of the Lexicon Design Language. It is built with HTML, CSS, and Javascript with [Bootstrap](http://getbootstrap.com) as a foundation.
+Clay is Liferay's web implementation of the Lexicon Design Language. It is built with HTML, CSS, and Javascript with [Bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/) as a foundation.
 
 You can view the various components on [the Clay site](http://clayui.com).
 
@@ -39,7 +33,7 @@ If you don't already have it installed. You can find more info here: http://node
 Node and NPM come bundled together, so you only need to install one package.
 
 ### Install the NPM modules
-Run `npm install` inside of the `clay` directory
+Run `npm install` inside of the `packages/clay-css` directory
 
 ### Modify files in src/
 The files are generated from the `src/` directory, however, most of the files you'd be interested in changing are in `src/content/`. Files can be either HTML (`.html`) or Markdown (`.md`).
@@ -82,12 +76,3 @@ This will generate all of the HTML/CSS/etc into the `build/` directory.
 `watch`: Because running a script after every change can get tedious, run `gulp watch` to rebuild the files automatically as you change files.
 
 `serve`: Starts a local server on port 3000 and also runs the watch task.
-
-`release`: This task will create a zip file located in the root of the repo with the version number located in the package.json.
-We use this to deploy into Liferay.
-
-`toc`: If you add a section to the README file, running `gulp toc` will generate a new table of contents.
-
-## Changelog
-
-You can view the [full changelog here](CHANGELOG.md).
