@@ -1,0 +1,35 @@
+{
+	"name": "clay-color-picker",
+	"version": "0.0.1",
+	"private": true,
+	"main": "lib/index.js",
+	"jsnext:main": "src/index.js",
+	"scripts": {
+		"compile": "./node_modules/.bin/babel -d lib/ src/ -s",
+		"prepublish": "npm run compile",
+		"start": "webpack-dev-server --mode development"
+	},
+	"author": "Bryce Osterhaus",
+	"dependencies": {
+		"prop-types": "^15.6.2",
+		"react": "16.7.0-alpha.2",
+		"react-dom": "16.7.0-alpha.2",
+		"tinycolor2": "^1.4.1"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.24.1",
+		"babel-core": "^6.25.0",
+		"babel-loader": "^7.0.0",
+		"babel-preset-env": "^1.6.0",
+		"babel-preset-react": "^6.24.1",
+		"babel-preset-stage-0": "^6.24.1",
+		"css-loader": "^2.1.0",
+		"eslint-plugin-react": "^7.11.1",
+		"html-webpack-plugin": "^3.2.0",
+		"sass-loader": "^7.1.0",
+		"style-loader": "^0.23.1",
+		"webpack": "^4.22.0",
+		"webpack-cli": "^3.1.2",
+		"webpack-dev-server": "^3.1.10"
+	}
+}
