@@ -1,6 +1,7 @@
 $custom-control-indicator-border-color: null !default;
 $custom-control-indicator-border-style: null !default;
 $custom-control-indicator-border-width: null !default;
+$custom-control-indicator-position-top: 0.25rem !default;
 
 $custom-control-indicator-active-border-color: null !default;
 
@@ -31,11 +32,17 @@ $custom-control-indicator-checked-disabled-border-color: $custom-control-indicat
 
 $custom-control-indicator-indeterminate-border-color: null !default;
 
+// Custom Control
+
+$custom-control-margin-bottom: null !default;
+$custom-control-margin-top: null !default;
+$custom-control-min-height: $custom-control-indicator-size + ($custom-control-indicator-position-top * 2) !default;
+
 // Custom Description
 
 $custom-control-description-cursor: $form-check-label-cursor !default;
-$custom-control-description-font-size: null !default;
-$custom-control-description-line-height: $custom-control-indicator-size !default;
+$custom-control-description-font-size: 1rem !default; // 16px
+$custom-control-description-line-height: $custom-control-min-height !default;
 $custom-control-description-padding-left: 0.5rem !default; // 8px
 $custom-control-description-disabled-cursor: $disabled-cursor !default;
 
