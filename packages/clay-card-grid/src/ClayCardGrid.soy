@@ -248,9 +248,9 @@
 		{param selectable: $selectable /}
 		{param selected: $item.selected /}
 		{param spritemap: $spritemap /}
-		{param stickerLabel: $item[$schema.fieldsMap.stickerLabel] /}
 		{param stickerImageAlt: $schema.stickerImageAltsMap ? $schema.stickerImageAltsMap[$item[$schema.fieldsMap.stickerLabel]] ?: $schema.stickerImageAltsMap['*'] : null /}
 		{param stickerImageSrc: $schema.stickerImageSrcsMap ? $schema.stickerImageSrcsMap[$item[$schema.fieldsMap.stickerLabel]] ?: $schema.stickerImageSrcsMap['*'] : null /}
+		{param stickerLabel: $item[$schema.fieldsMap.stickerLabel] /}
 		{param stickerShape: $schema.stickerShapesMap ? $schema.stickerShapesMap[$item[$schema.fieldsMap.stickerLabel]] ?: $schema.stickerShapesMap['*'] : null /}
 		{param stickerStyle: $schema.stickerStylesMap ? $schema.stickerStylesMap[$item[$schema.fieldsMap.stickerLabel]] ?: $schema.stickerStylesMap['*'] : null /}
 		{param subtitle: $item[$schema.fieldsMap.description] /}
