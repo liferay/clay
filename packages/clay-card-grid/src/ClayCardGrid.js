@@ -98,6 +98,8 @@ ClayCardGrid.STATE = {
 		inputNamesMap: Config.object(),
 		inputValueField: Config.string(),
 		labelStylesMap: Config.object(),
+		stickerImageAltsMap: Config.object(),
+		stickerImageSrcsMap: Config.object(),
 		stickerShapesMap: Config.object(),
 		stickerStylesMap: Config.object(),
 		userColorsMap: Config.object(),
