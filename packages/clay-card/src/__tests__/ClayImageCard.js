@@ -425,6 +425,17 @@ describe('ClayImageCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a ClayImageCard with sticker with image', () => {
+		component = new ClayImageCard({
+			spritemap: spritemap,
+			stickerImageAlt: 'my image',
+			stickerImageSrc: './image.jpg',
+			title: 'My Title',
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
 	it('should render a ClayImageCard with href', () => {
 		component = new ClayImageCard({
 			href: '#1',

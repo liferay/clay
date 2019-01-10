@@ -191,6 +191,24 @@ ClayFileCard.STATE = {
 	spritemap: Config.string().required(),
 
 	/**
+	 * Alternate text of the image to be renderer inside the sticker.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayFileCard
+	 * @type {?(string|undefined)}
+	 */
+	stickerImageAlt: Config.string(),
+
+	/**
+	 * Source of the image to be rendered inside the sticker.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayFileCard
+	 * @type {?(string|undefined)}
+	 */
+	stickerImageSrc: Config.string(),
+
+	/**
 	 * Label for the sticker represented in the card.
 	 * @default undefined
 	 * @instance
