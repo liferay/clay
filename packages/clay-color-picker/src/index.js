@@ -48,7 +48,6 @@ const DEFAULT_ARIA_LABELS = {
 };
 
 ColorPicker.propTypes = {
-	allowAny: PropTypes.bool,
 	ariaLabels: PropTypes.shape({
 		selectionIs: PropTypes.string,
 		selectColor: PropTypes.string,
@@ -58,15 +57,18 @@ ColorPicker.propTypes = {
 	name: PropTypes.string,
 	onColorsChange: PropTypes.func,
 	onValueChange: PropTypes.func,
+	showHex: PropTypes.bool,
+	useNative: PropTypes.bool,
 	value: PropTypes.string,
 };
 
 ColorPicker.defaultProps = {
-	allowAny: false,
 	ariaLabels: DEFAULT_ARIA_LABELS,
 	colors: null,
 	onColorsChange: null,
 	onValueChange: () => {},
+	showHex: false,
+	useNative: false,
 	value: '#FFFFFF',
 };
 
@@ -75,17 +77,20 @@ ColorPicker.defaultProps = {
  * @return {React.Component}
  */
 function ColorPicker({
-	allowAny,
 	ariaLabels,
 	colors,
 	label,
 	name,
 	onColorsChange,
 	onValueChange,
+	showHex,
+	useNative,
 	value,
 }) {
 	const containerRef = useRef(null);
 	const inputRef = useRef(null);
+	const valueInputRef = useRef(null);
+
 	const [active, setActive] = useState(false);
 	const [inputValue, setInputValue] = useState(value.substring(1, 7));
 
@@ -130,12 +135,23 @@ function ColorPicker({
 
 	return (
 		<div className="clay-color-picker" ref={containerRef}>
-			{name && <input name={name} type="hidden" value={value} />}
+			{name && (
+				<input
+					name={name}
+					onChange={e =>
+						useNative ? onValueChange(e.target.value) : null
+					}
+					ref={valueInputRef}
+					style={{display: 'none'}}
+					type={useNative ? 'color' : 'text'}
+					value={value}
+				/>
+			)}
 
 			<div className="input-group">
 				<div
 					className={`input-group-item input-group-item-shrink${
-						allowAny || onColorsChange ? ' input-group-prepend' : ''
+						showHex ? ' input-group-prepend' : ''
 					}`}
 				>
 					<span className="input-group-text input-group-text-secondary">
@@ -143,7 +159,11 @@ function ColorPicker({
 							<Splotch
 								aria-label={ariaLabels.selectColor}
 								className="btn btn-secondary"
-								onClick={() => setActive(!active)}
+								onClick={() =>
+									useNative
+										? valueInputRef.current.click()
+										: setActive(!active)
+								}
 								value={value}
 								size={28}
 							/>
@@ -151,7 +171,7 @@ function ColorPicker({
 					</span>
 				</div>
 
-				{(allowAny || onColorsChange) && (
+				{showHex && (
 					<React.Fragment>
 						<div className="input-group-append input-group-item">
 							<input

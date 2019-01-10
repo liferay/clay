@@ -22,6 +22,17 @@ function App() {
 				label="Default Colors"
 				name="colorPicker1"
 				onValueChange={setColor}
+				showHex
+				value={color}
+			/>
+
+			<ColorPicker
+				allowAny
+				label="Default Colors"
+				name="colorPicker1"
+				onValueChange={setColor}
+				showHex
+				useNative
 				value={color}
 			/>
 
