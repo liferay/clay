@@ -11,6 +11,7 @@ let itemShape = {
 	label: Config.oneOfType([Config.number(), Config.string()]),
 	maxItems: Config.number(),
 	separator: Config.bool().value(false),
+	target: Config.oneOf(['_blank', '_self']),
 	title: Config.string(),
 	type: Config.oneOf([
 		'checkbox',

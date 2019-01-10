@@ -352,10 +352,19 @@
 		 **/
 		new metal.ClayDropdown(
 			{
+				itemsIconAlignment: 'left',
 				items: [
 					{
 						label: 'Link 1',
-						href: '#mylink',
+						href: '#mylink1',
+						icon: 'shortcut',
+						target: '_blank',
+						type: 'item',
+					},
+					{
+						label: 'Link 2',
+						href: '#mylink2',
+						target: '_self',
 						type: 'item',
 					},
 				],

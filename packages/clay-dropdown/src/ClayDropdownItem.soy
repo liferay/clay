@@ -19,6 +19,7 @@
 	{@param? maxItems: int}
 	{@param? separator: bool}
 	{@param? spritemap: string}
+	{@param? target: string}
 	{@param? title: string}
 
 	{let $variant: $contentRenderer ?: 'item' /}
@@ -38,6 +39,7 @@
         {param maxItems: $maxItems /}
         {param separator: $separator /}
         {param spritemap: $spritemap /}
+        {param target: $target /}
         {param title: $title /}
     {/delcall}
 {/template}
@@ -60,6 +62,7 @@
 	{@param? maxItems: int}
 	{@param? separator: bool}
 	{@param? spritemap: string}
+	{@param? target: string}
 	{@param? title: string}
 
 	{let $itemContent kind="html"}
@@ -109,6 +112,7 @@
 				{/param}
 
 				{param label: $labelContent /}
+				{param target: $target /}
 				{param title: $title /}
 			{/call}
 		{else}
@@ -152,6 +156,7 @@
 	{@param? maxItems: int}
 	{@param? separator: bool}
 	{@param? spritemap: string}
+	{@param? target: string}
 	{@param? title: string}
 
 	{let $checkbox kind="html"}
@@ -199,6 +204,7 @@
 	{@param? maxItems: int}
 	{@param? separator: bool}
 	{@param? spritemap: string}
+	{@param? target: string}
 	{@param? title: string}
 
 	{if $label and $label != ''}
@@ -236,6 +242,7 @@
 	{@param? maxItems: int}
 	{@param? separator: bool}
 	{@param? spritemap: string}
+	{@param? target: string}
 	{@param? title: string}
 
 	{let $radio kind="html"}
@@ -285,6 +292,7 @@
 	{@param? maxItems: int}
 	{@param? separator: bool}
 	{@param? spritemap: string}
+	{@param? target: string}
 	{@param? title: string}
 
 	{if $label and $label != ''}
@@ -327,6 +335,7 @@
 	{@param? maxItems: int}
 	{@param? separator: bool}
 	{@param? spritemap: string}
+	{@param? target: string}
 	{@param? title: string}
 
 	<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>

@@ -306,6 +306,22 @@ exports[`ClayDropdownBase should render a dropdown with items of type item and d
 </div>
 `;
 
+exports[`ClayDropdownBase should render a dropdown with items of type item with target 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li tabindex="-1">
+      <a class=" dropdown-item" href="item1url" target="_self" title="title1">Item 1</a>
+    </li>
+    <li tabindex="-1">
+      <a class=" dropdown-item" href="item2url" target="_blank" title="title2">Item 2</a>
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`ClayDropdownBase should render a dropdown with items of type item with title 1`] = `
 <div class="dropdown">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
@@ -586,7 +602,7 @@ exports[`ClayDropdownBase should render a dropdown with trigger custom classes 1
 </div>
 `;
 
-exports[`ClayDropdownBase should render a dropdown with trigger szie 1`] = `
+exports[`ClayDropdownBase should render a dropdown with trigger size 1`] = `
 <div class="dropdown">
   <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn my-cutsom-class btn-unstyled" ref="triggerButton" type="button">Trigger</button>
 </div>
