@@ -22,7 +22,6 @@
 	{@param? id: string}
 	{@param? initialData: []|list<?>}
 	{@param? inputName: string}
-	{@param? inputValue: string}
 	{@param? label: string}
 	{@param? labelLocator: any}
 	{@param? requestOptions: [
@@ -39,7 +38,6 @@
 	{@param? requestRetries: number}
 	{@param? requestTimeout: number}
 	{@param? selectedItems: list<?>}
-	{@param? selectedItemsInputName: string}
 
 	{let $attributes kind="attributes"}
 		class="from-group
@@ -55,13 +53,7 @@
 
 	<div {$attributes}>
 		{if $label}
-			{let $labelAttributes kind="attributes"}
-				{if $inputName}
-					for="{$inputName}"
-				{/if}
-			{/let}
-
-			<label {$labelAttributes}>{$label}</label>
+			<label>{$label}</label>
 		{/if}
 
 		{call .content}
@@ -80,14 +72,12 @@
 			{param helpText: $helpText /}
 			{param initialData: $initialData /}
 			{param inputName: $inputName /}
-			{param inputValue: $inputValue /}
 			{param labelLocator: $labelLocator /}
 			{param requestOptions: $requestOptions /}
 			{param requestPolling: $requestPolling /}
 			{param requestRetries: $requestRetries /}
 			{param requestTimeout: $requestTimeout /}
 			{param selectedItems: $selectedItems /}
-			{param selectedItemsInputName: $selectedItemsInputName /}
 			{param spritemap: $spritemap /}
 		{/call}
 	</div>
@@ -113,7 +103,6 @@
 	{@param? filteredItems: list<?>}
 	{@param? initialData: []|list<?>}
 	{@param? inputName: string}
-	{@param? inputValue: string}
 	{@param? labelLocator: any}
 	{@param? requestOptions: [
 		method: string,
@@ -129,7 +118,6 @@
 	{@param? requestRetries: number}
 	{@param? requestTimeout: number}
 	{@param? selectedItems: list<?>}
-	{@param? selectedItemsInputName: string}
 
 	<div class="input-group input-group-stacked-sm-down">
 		<div class="input-group-item">
@@ -151,8 +139,6 @@
 				{param filteredItems: $filteredItems /}
 				{param initialData: $initialData /}
 				{param inputElementClasses: 'form-control-inset' /}
-				{param inputName: $inputName /}
-				{param inputValue: $inputValue /}
 				{param ref: 'autocomplete' /}
 				{param requestOptions: $requestOptions /}
 				{param requestPolling: $requestPolling /}
@@ -163,8 +149,8 @@
 						{call .items}
 							{param _handleCloseButtonClick: $_handleCloseButtonClick /}
 							{param contentRenderer: $contentRenderer /}
+							{param inputName: $inputName /}
 							{param selectedItems: $selectedItems /}
-							{param selectedItemsInputName: $selectedItemsInputName /}
 							{param spritemap: $spritemap /}
 						{/call}
 					{/if}
@@ -205,13 +191,13 @@
 	{@param spritemap: string}
 	{@param? _handleCloseButtonClick: any}
 	{@param? contentRenderer: string}
-	{@param? selectedItemsInputName: string}
+	{@param? inputName: string}
 
 	{foreach $item in $selectedItems}
-		{if $selectedItemsInputName}
+		{if $inputName}
 			{let $inputAttributes kind="attributes"}
-				{if $selectedItemsInputName}
-					name="{$selectedItemsInputName}"
+				{if $inputName}
+					name="{$inputName}"
 				{/if}
 
 				type="hidden"

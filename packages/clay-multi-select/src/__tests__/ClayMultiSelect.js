@@ -69,28 +69,6 @@ describe('ClayMultiSelect', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayMultiSelect with input name', () => {
-		component = new ClayMultiSelect({
-			dataSource,
-			helpText,
-			inputName: 'foo',
-			spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a ClayMultiSelect with input value', () => {
-		component = new ClayMultiSelect({
-			dataSource,
-			helpText,
-			inputValue: 'bar',
-			spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
 	it('should render a ClayMultiSelect with label', () => {
 		component = new ClayMultiSelect({
 			dataSource,
@@ -127,7 +105,7 @@ describe('ClayMultiSelect', function() {
 		component = new ClayMultiSelect({
 			dataSource,
 			helpText,
-			selectedItemsInputName: 'foo',
+			inputName: 'foo',
 			spritemap,
 		});
 
