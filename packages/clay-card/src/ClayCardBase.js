@@ -221,6 +221,24 @@ ClayCardBase.STATE = {
 	spritemap: Config.string(),
 
 	/**
+	 * Alternate text of the image to be renderer inside the sticker.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayCardBase
+	 * @type {?(string|undefined)}
+	 */
+	stickerImageAlt: Config.string(),
+
+	/**
+	 * Source of the image to be rendered inside the sticker.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayCardBase
+	 * @type {?(string|undefined)}
+	 */
+	stickerImageSrc: Config.string(),
+
+	/**
 	 * Label for the sticker represented in the card.
 	 * @instance
 	 * @memberof ClayCardBase

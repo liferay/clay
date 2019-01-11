@@ -188,6 +188,15 @@ ClayDropdownItem.STATE = {
 	spritemap: Config.string(),
 
 	/**
+	 * Sets the HTML attribute target on the anchor tag.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdownItem
+	 * @type {?(string|undefined)}
+	 */
+	target: Config.oneOf(['_blank', '_self']),
+
+	/**
 	 * Title of the item.
 	 * @default undefined
 	 * @instance

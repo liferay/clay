@@ -437,6 +437,25 @@ exports[`ClayImageCard should render a ClayImageCard with sticker style \`warnin
 </div>
 `;
 
+exports[`ClayImageCard should render a ClayImageCard with sticker with image 1`] = `
+<div class="card-type-asset card image-card">
+  <div class="aspect-ratio card-item-first">
+    <span class="sticker sticker-rounded sticker-primary sticker-bottom-left">
+      <span class="sticker-overlay">
+        <img alt="my image" class="sticker-img" src="./image.jpg">
+      </span>
+    </span>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ClayImageCard should render a ClayImageCard with subtitle 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first"></div>

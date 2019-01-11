@@ -72,7 +72,6 @@ class ClayMultiSelect extends ClayComponent {
 	 */
 	_handleDropdownItemClick(event) {
 		this.filteredItems = [];
-		this.inputValue = '';
 		this.refs.autocomplete.refs.input.focus();
 
 		const value = this._performCall(this.valueLocator, event.data);
@@ -428,22 +427,13 @@ ClayMultiSelect.STATE = {
 	initialData: Config.oneOfType([Config.object(), Config.array()]),
 
 	/**
-	 * Name of the input.
-	 * @default undefind
+	 * Name for each selected item input hidden.
+	 * @default selectedItems
 	 * @instance
 	 * @memberof ClayMultiSelect
 	 * @type {?(string|undefined)}
 	 */
-	inputName: Config.string(),
-
-	/**
-	 * Value of the input.
-	 * @default undefined
-	 * @instance
-	 * @memberof ClayMultiSelect
-	 * @type {?(string|undefined)}
-	 */
-	inputValue: Config.string(),
+	inputName: Config.string().value('selectedItems'),
 
 	/**
 	 * Set ups the request options
@@ -518,15 +508,6 @@ ClayMultiSelect.STATE = {
 	 * @type {?Array<Object>}
 	 */
 	selectedItems: Config.array(Config.object()).value([]),
-
-	/**
-	 * Name of the selected items input.
-	 * @default selectedItems
-	 * @instance
-	 * @memberof ClayMultiSelect
-	 * @type {?(string|undefined)}
-	 */
-	selectedItemsInputName: Config.string().value('selectedItems'),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.

@@ -80,4 +80,20 @@
 			toggleSiteCss.prop('checked', !lexiconSiteLink.prop('disabled'));
 		}
 	});
+
+	var siteNavToggle = $('#siteNavToggle');
+
+	siteNavToggle.on('click', function(e) {
+		var el = $(this);
+		var body = $('body');
+
+		if (el.data('nav-hidden')) {
+			el.text('Hide Nav').data('nav-hidden', false);
+			body.removeClass('hide-site-nav');
+		}
+		else {
+			el.text('Show Nav').data('nav-hidden', true);
+			body.addClass('hide-site-nav');
+		}
+	});
 })(window.jQuery);

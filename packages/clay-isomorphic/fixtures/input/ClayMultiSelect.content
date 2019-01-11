@@ -35,7 +35,6 @@
     ],
     "_handleButtonClicked": "(any|null)",
     "contentRenderer": "(null|string)",
-    "inputName": "input name",
     "spritemap": "icons.svg",
     "requestPolling": 5,
     "initialData": [],
@@ -44,7 +43,6 @@
     "_removeFocusedItem": "(any|null)",
     "_handleFilteredItemsChange": "(any|null)",
     "_handleOnInput": "(any|null)",
-    "inputValue": "input value",
     "dataSource": [
         "Bread"
     ],
@@ -55,5 +53,5 @@
             "value": "foo"
         }
     ],
-    "selectedItemsInputName": "selectedItems"
+    "inputName": "selectedItems"
 }

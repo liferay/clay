@@ -24,6 +24,8 @@
 	{@param? labelStylesMap: ?}
 	{@param? selectable: bool}
 	{@param? selected: bool}
+	{@param? stickerImageAlt: string}
+	{@param? stickerImageSrc: string}
 	{@param? stickerLabel: string}
 	{@param? stickerShape: string}
 	{@param? stickerStyle: string}
@@ -56,6 +58,8 @@
 		{param selectable: $selectable /}
 		{param selected: $selected /}
 		{param spritemap: $spritemap /}
+		{param stickerImageAlt: $stickerImageAlt /}
+		{param stickerImageSrc: $stickerImageSrc /}
 		{param stickerLabel: $stickerLabel /}
 		{param stickerShape: $stickerShape /}
 		{param stickerStyle: $stickerStyle /}
@@ -72,6 +76,8 @@
 	{@param? imageAlt: string}
 	{@param? imageSrc: string}
 	{@param? spritemap: string}
+	{@param? stickerImageAlt: string}
+	{@param? stickerImageSrc: string}
 	{@param? stickerLabel: string}
 	{@param? stickerShape: string}
 	{@param? stickerStyle: string}
@@ -85,8 +91,10 @@
 		</div>
 	{/if}
 
-	{if $stickerLabel}
+	{if $stickerLabel or $stickerImageSrc}
 		{call ClaySticker.render}
+			{param imageAlt: $stickerImageAlt /}
+			{param imageSrc: $stickerImageSrc /}
 			{param label: $stickerLabel /}
 			{param position: 'bottom-left' /}
 			{param shape: $stickerShape ?: 'rounded' /}
