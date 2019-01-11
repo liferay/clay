@@ -1,5 +1,29 @@
 # Change Log
 
+## [v2.6.0](https://github.com/liferay/clay/tree/v2.6.0) (2019-01-11)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.5.1...v2.6.0)
+
+**Closed issues:**
+
+- Review ClayMultiselect \(Step 1\) [\#1431](https://github.com/liferay/clay/issues/1431)
+- Clay cards sticker should admite image url for user sticker type [\#1429](https://github.com/liferay/clay/issues/1429)
+- ClayDropdown items should be able to receive link target [\#1425](https://github.com/liferay/clay/issues/1425)
+- ClayCSS: Base Theme Label Success and Label Warning bg is mapped to $label-primary-bg [\#1419](https://github.com/liferay/clay/issues/1419)
+- ClayCSS: Management Bar tweak spacing between items in mobile to make room for a Clear button [\#1417](https://github.com/liferay/clay/issues/1417)
+- ClayCSS: Custom Checkbox/Radio allow more fine grain control over positioning and sizes [\#1415](https://github.com/liferay/clay/issues/1415)
+
+**Merged pull requests:**
+
+- v2.6.0 [\#1433](https://github.com/liferay/clay/pull/1433) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1431 - Review ClayMultiselect \(API CHANGED\) [\#1432](https://github.com/liferay/clay/pull/1432) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1429 - Add sticker image support in clay cards \(API ADDED\) [\#1430](https://github.com/liferay/clay/pull/1430) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1425  Add target property to dropdown links \(API ADDED\) [\#1426](https://github.com/liferay/clay/pull/1426) ([carloslancha](https://github.com/carloslancha))
+- ClayCSS Update readme.md [\#1421](https://github.com/liferay/clay/pull/1421) ([pat270](https://github.com/pat270))
+- Fixes \#1419 - ClayCSS `.label-success` and `.label-warning` shouldn't… [\#1420](https://github.com/liferay/clay/pull/1420) ([pat270](https://github.com/pat270))
+- Fixes \#1417 - ClayCSS: Management Bar tweak spacing between items in mobile [\#1418](https://github.com/liferay/clay/pull/1418) ([pat270](https://github.com/pat270))
+- Fixes \#1415 - ClayCSS Custom Checkbox / Radio calculate spacing based… [\#1416](https://github.com/liferay/clay/pull/1416) ([pat270](https://github.com/pat270))
+- Fixes \#1162 - Control the focus within the modal [\#1397](https://github.com/liferay/clay/pull/1397) ([matuzalemsteles](https://github.com/matuzalemsteles))
+
 ## [v2.5.1](https://github.com/liferay/clay/tree/v2.5.1) (2018-12-19)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.5.0...v2.5.1)
 
@@ -15,6 +39,7 @@
 - ClayMultiSelect should be fully functional by default without having to handle events [\#1381](https://github.com/liferay/clay/issues/1381)
 - Lexicon CSS Site is out of sync with 1.x [\#1342](https://github.com/liferay/clay/issues/1342)
 - Management toolbar mobile viewports Clear action must be right aligned [\#1226](https://github.com/liferay/clay/issues/1226)
+- Modal - Not correct tab order [\#1162](https://github.com/liferay/clay/issues/1162)
 
 **Merged pull requests:**
 
