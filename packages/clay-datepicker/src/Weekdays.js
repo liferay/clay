@@ -11,7 +11,7 @@ function Weekdays({children, firstDayOfWeek, weekdaysShort}) {
 			{weekdaysShort.map((weekday, index) => {
 				return React.Children.only(
 					children({
-						weekday: weekdaysShort[index + (firstDayOfWeek % 7)],
+						weekday: weekdaysShort[(index + firstDayOfWeek) % 7],
 						key: index,
 					})
 				);
