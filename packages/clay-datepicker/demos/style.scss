@@ -20,6 +20,26 @@
 		.datepicker-form {
 			display: flex;
 		}
+
+		.datepicker-form {
+			.form-control {
+				color: #6B6C7E;
+				font-weight: 600;
+			}
+
+			.input-datepicker-month {
+				min-width: 127px;
+			}
+
+			.input-datepicker-year {
+				min-width: 80px;
+			}
+		}
+
+		button {
+			color: #6B6C7E;
+			margin: 0 4px;
+		}
 	}
 
 	.datepicker-weekdays {
@@ -53,13 +73,15 @@
 		}
 
 		.datepicker-day {
-			display: flex;
 			align-items: center;
-			justify-content: center;
-			width: 32px;
-			margin: 0 8px;
-			color: #6B6C7E;
 			border-radius: 100%;
+			color: #6B6C7E;
+			cursor: pointer;
+			display: flex;
+			font-weight: 600;
+			justify-content: center;
+			margin: 0 8px;
+			width: 32px;
 
 			&.active {
 				color: #ffffff;
@@ -68,6 +90,11 @@
 
 			&.outside {
 				color: #A7A9BC;
+				pointer-events: none;
+			}
+
+			&:not(.active):hover {
+				background-color: #F7F8F9;
 			}
 		}
 	}
