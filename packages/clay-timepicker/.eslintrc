@@ -1,0 +1,9 @@
+{
+	"plugins": ["react"],
+	"rules": {
+		"no-unused-vars": ["error", {"ignoreRestSiblings": true}],
+		"react/jsx-uses-react": "error",
+		"react/jsx-uses-vars": "error",
+		"no-mixed-spaces-and-tabs": ["error", "smart-tabs"]
+	}
+}
