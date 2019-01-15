@@ -164,8 +164,8 @@ function ColorPicker({
 										? valueInputRef.current.click()
 										: setActive(!active)
 								}
-								value={value}
 								size={28}
+								value={value}
 							/>
 						</div>
 					</span>
@@ -179,21 +179,6 @@ function ColorPicker({
 									value,
 								])}
 								className="form-control"
-								value={
-									'#' +
-									inputValue.toUpperCase().substring(0, 6)
-								}
-								onChange={event => {
-									const newInputValue = event.target.value;
-
-									const newColor = tinycolor(newInputValue);
-
-									handleNewInputValue(newInputValue);
-
-									if (newColor.isValid()) {
-										onValueChange(newColor.toHexString());
-									}
-								}}
 								onBlur={event => {
 									const newColor = tinycolor(
 										event.target.value
@@ -206,8 +191,23 @@ function ColorPicker({
 									onValueChange(hexString);
 									handleNewInputValue(hexString);
 								}}
+								onChange={event => {
+									const newInputValue = event.target.value;
+
+									const newColor = tinycolor(newInputValue);
+
+									handleNewInputValue(newInputValue);
+
+									if (newColor.isValid()) {
+										onValueChange(newColor.toHexString());
+									}
+								}}
 								ref={inputRef}
 								type="text"
+								value={
+									'#' +
+									inputValue.toUpperCase().substring(0, 6)
+								}
 							/>
 						</div>
 					</React.Fragment>

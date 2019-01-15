@@ -13,10 +13,10 @@ import {HEX_REGEX} from './util';
 function CustomColorIcon() {
 	return (
 		<svg
-			width="12"
+			fill="none"
 			height="17"
 			viewBox="0 0 12 17"
-			fill="none"
+			width="12"
 			xmlns="http://www.w3.org/2000/svg"
 		>
 			<path
@@ -53,14 +53,14 @@ function RGBInput({onChange, name, value}) {
 				</div>
 				<div className="input-group-append input-group-item">
 					<input
-						value={value}
 						className="form-control"
-						type="text"
 						onChange={event => {
 							const newVal = Number(event.target.value);
 
 							onChange({[name]: newVal});
 						}}
+						type="text"
+						value={value}
 					/>
 				</div>
 			</div>
@@ -121,10 +121,10 @@ function Custom({colors, label, onChange, onColorsChange, value}) {
 				<div className="label-container">
 					<label>{label}</label>
 					<button
-						onClick={() => setEditorActive(!editorActive)}
 						className={`${
 							editorActive ? 'active ' : ''
 						}btn btn-monospaced btn-sm`}
+						onClick={() => setEditorActive(!editorActive)}
 						type="button"
 					>
 						<CustomColorIcon />
@@ -136,6 +136,7 @@ function Custom({colors, label, onChange, onColorsChange, value}) {
 				{colors.map((hex, i) => (
 					<Splotch
 						active={i === activeSplotchIndex}
+						key={i}
 						onClick={() => {
 							if (hex === '#FFFFFF') {
 								setEditorActive(true);
@@ -147,7 +148,6 @@ function Custom({colors, label, onChange, onColorsChange, value}) {
 
 							onChange(hex);
 						}}
-						key={i}
 						value={hex}
 					/>
 				))}
@@ -157,8 +157,8 @@ function Custom({colors, label, onChange, onColorsChange, value}) {
 				<React.Fragment>
 					<div className="gradient-info">
 						<GradientSelector
-							hue={hue}
 							color={color}
+							hue={hue}
 							onChange={(saturation, visibility) => {
 								setNewColor(
 									tinycolor({
@@ -174,7 +174,6 @@ function Custom({colors, label, onChange, onColorsChange, value}) {
 							{rgbArr.map(([val, key]) => (
 								<RGBInput
 									key={key}
-									value={val}
 									name={key}
 									onChange={newVal => {
 										const color = tinycolor({
@@ -188,6 +187,7 @@ function Custom({colors, label, onChange, onColorsChange, value}) {
 
 										setNewColor(color);
 									}}
+									value={val}
 								/>
 							))}
 						</div>
@@ -205,11 +205,18 @@ function Custom({colors, label, onChange, onColorsChange, value}) {
 					<div className="input-group hex-info">
 						<div className="input-group-append input-group-item">
 							<input
-								value={
-									'#' + inputVal.toUpperCase().substring(0, 6)
-								}
 								className="form-control"
-								type="text"
+								onBlur={event => {
+									const newColor = tinycolor(
+										event.target.value
+									);
+
+									if (newColor.isValid()) {
+										handleNewInputValue(newColor.toHex());
+									} else {
+										handleNewInputValue(color.toHex());
+									}
+								}}
 								onChange={event => {
 									const inputValue = event.target.value;
 
@@ -222,17 +229,10 @@ function Custom({colors, label, onChange, onColorsChange, value}) {
 										setNewColor(newColor, false);
 									}
 								}}
-								onBlur={event => {
-									const newColor = tinycolor(
-										event.target.value
-									);
-
-									if (newColor.isValid()) {
-										handleNewInputValue(newColor.toHex());
-									} else {
-										handleNewInputValue(color.toHex());
-									}
-								}}
+								type="text"
+								value={
+									'#' + inputVal.toUpperCase().substring(0, 6)
+								}
 							/>
 						</div>
 					</div>

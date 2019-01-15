@@ -24,8 +24,8 @@ function Basic({colors, label, onChange}) {
 			<div className="splotch-grid">
 				{colors.map(hex => (
 					<Splotch
-						onClick={() => onChange(hex)}
 						key={hex}
+						onClick={() => onChange(hex)}
 						value={hex}
 					/>
 				))}

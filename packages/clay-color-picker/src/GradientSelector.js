@@ -143,13 +143,13 @@ class GradientSelector extends React.Component {
 		return (
 			<div
 				className="gradient-selector"
-				style={{
-					background: `hsl(${hue}, 100%, 50%)`,
-				}}
-				ref={this._container}
 				onMouseDown={this.handleMouseDown}
 				onTouchMove={this.handleChange}
 				onTouchStart={this.handleChange}
+				ref={this._container}
+				style={{
+					background: `hsl(${hue}, 100%, 50%)`,
+				}}
 			>
 				<div className="light-gradient" />
 				<div className="dark-gradient" />
