@@ -38,4 +38,4 @@ export function sub(langKey, args, join = true) {
 /**
  * Regex to only handle values of A,B,C,D,E,F,0,1,2,3,4,5,6,7,8,9
  */
-export const HEX_REGEX = /[a-fA-F0-9]+/;
+export const HEX_REGEX = /^[a-fA-F0-9]+$/;
