@@ -37,7 +37,7 @@ class Hue extends React.Component {
 	}
 
 	/**
-	 * Sets the intial left value
+	 * Sets the initial left value
 	 * @param {number} hue
 	 */
 	setInitialCoordinates(hue) {
