@@ -175,6 +175,11 @@ function ClayDatepicker({
 							<DateNavigation
 								currentMonth={currentMonth}
 								months={months}
+								onDotClicked={() => {
+									setCurrentMonth(initialMonth);
+									setDaySelected(initialMonth);
+									setInputValue(initialMonth);
+								}}
 								onMonthChange={setCurrentMonth}
 								spritemap={spritemap}
 								years={years}

@@ -14,6 +14,7 @@ function DateNavigation({
 	currentMonth,
 	daySelected,
 	months,
+	onDotClicked,
 	onMonthChange,
 	spritemap,
 	years,
@@ -68,7 +69,7 @@ function DateNavigation({
 	 * @param {!Event} event
 	 */
 	function handleDotClicked() {
-		onMonthChange(daySelected);
+		onDotClicked();
 	}
 
 	/**
@@ -141,6 +142,7 @@ DateNavigation.propTypes = {
 	currentMonth: PropTypes.instanceOf(Date).isRequired,
 	daySelected: PropTypes.instanceOf(Date),
 	months: PropTypes.array,
+	onDotClicked: PropTypes.func,
 	onMonthChange: PropTypes.func,
 	spritemap: PropTypes.string.isRequired,
 	years: PropTypes.shape({
