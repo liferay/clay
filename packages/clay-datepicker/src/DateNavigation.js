@@ -12,7 +12,6 @@ import Select from './Select';
  */
 function DateNavigation({
 	currentMonth,
-	daySelected,
 	months,
 	onDotClicked,
 	onMonthChange,
@@ -140,7 +139,6 @@ function DateNavigation({
 
 DateNavigation.propTypes = {
 	currentMonth: PropTypes.instanceOf(Date).isRequired,
-	daySelected: PropTypes.instanceOf(Date),
 	months: PropTypes.array,
 	onDotClicked: PropTypes.func,
 	onMonthChange: PropTypes.func,
