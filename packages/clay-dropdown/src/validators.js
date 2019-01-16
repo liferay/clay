@@ -13,14 +13,7 @@ let itemShape = {
 	separator: Config.bool().value(false),
 	target: Config.oneOf(['_blank', '_self']),
 	title: Config.string(),
-	type: Config.oneOf([
-		'checkbox',
-		'group',
-		'item',
-		'radio',
-		'radiogroup',
-		'separator',
-	]).value('item'),
+	type: Config.string().value('item'),
 };
 
 const itemsValidator = Config.arrayOf(Config.shapeOf(itemShape));
