@@ -48,17 +48,61 @@ const DEFAULT_ARIA_LABELS = {
 };
 
 ColorPicker.propTypes = {
+	/**
+	 * Labels for the aria attributes
+	 * @type {?object}
+	 */
 	ariaLabels: PropTypes.shape({
 		selectionIs: PropTypes.string,
 		selectColor: PropTypes.string,
 	}),
+
+	/**
+	 * List of color hex values
+	 * @type {?array}
+	 */
 	colors: PropTypes.arrayOf(PropTypes.string),
+
+	/**
+	 * The label describing the collection of colors in the menu
+	 * @type {?string}
+	 */
 	label: PropTypes.string,
+
+	/**
+	 * The input attribute for name
+	 * @type {?string}
+	 */
 	name: PropTypes.string,
+
+	/**
+	 * Callback for when the list of colors change
+	 * @type {?Function}
+	 */
 	onColorsChange: PropTypes.func,
+
+	/**
+	 * Callback for when the selected color changes
+	 * @type {?Function}
+	 */
 	onValueChange: PropTypes.func,
+
+	/**
+	 * Determines if the hex input should render
+	 * @type {?boolean}
+	 */
 	showHex: PropTypes.bool,
+
+	/**
+	 * Determines if the native color picker should be used
+	 * @type {?boolean}
+	 */
 	useNative: PropTypes.bool,
+
+	/**
+	 * Value of the selected color hex
+	 * @type {?string}
+	 */
 	value: PropTypes.string,
 };
 
