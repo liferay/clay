@@ -49,7 +49,7 @@ export function getWeekArray(d, firstDayOfWeek = 0) {
 		}
 	});
 
-	// unshift days to start the first week
+	// unshift days from start of the first week
 	const firstWeek = weekArray[0];
 	for (let i = 7 - firstWeek.length; i > 0; i -= 1) {
 		const outsideDate = clone(firstWeek[0].date);

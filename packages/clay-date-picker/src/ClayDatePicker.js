@@ -340,7 +340,7 @@ ClayDatePicker.propTypes = {
 	weekdaysShort: PropTypes.arrayOf(PropTypes.string),
 
 	/**
-	 * List of years available for navigate that are added in the selector.
+	 * List of years available for navigation within the selector.
 	 * @default {start: YearNow, end: YearNow}
 	 */
 	years: PropTypes.shape({
