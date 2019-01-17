@@ -65,7 +65,7 @@ function ClayDatePicker({
 
 	/**
 	 * An array of the weeks and days list for the current month
-	 * @type {!Array<Array>}
+	 * @type {!Array<Array<{date: Date, ?outside: bool}>>}
 	 */
 	const [weeks, setWeeks] = useWeeks(currentMonth, firstDayOfWeek);
 
