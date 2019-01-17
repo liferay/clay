@@ -3,6 +3,7 @@ import {Config} from 'metal-state';
 let itemShape = {
 	active: Config.bool().value(false),
 	checked: Config.bool().value(false),
+	contentRenderer: Config.string(),
 	disabled: Config.bool().value(false),
 	href: Config.string(),
 	icon: Config.string(),
