@@ -16,10 +16,10 @@ import Weekday from './Weekday';
 import Weekdays from './Weekdays';
 
 /**
- * ClayDatepicker component.
+ * ClayDatePicker component.
  * @return {React.createElement}
  */
-function ClayDatepicker({
+function ClayDatePicker({
 	ariaLabel,
 	dateFormat,
 	defaultValue,
@@ -230,7 +230,7 @@ function ClayDatepicker({
 
 const DateNow = new Date();
 
-ClayDatepicker.propTypes = {
+ClayDatePicker.propTypes = {
 	/**
 	 * Aria label attribute for the button element.
 	 * @default undefined
@@ -351,7 +351,7 @@ ClayDatepicker.propTypes = {
 	}),
 };
 
-ClayDatepicker.defaultProps = {
+ClayDatePicker.defaultProps = {
 	dateFormat: 'YYYY-MM-DD',
 	expanded: false,
 	firstDayOfWeek: 0,
@@ -380,5 +380,5 @@ ClayDatepicker.defaultProps = {
 	},
 };
 
-export {ClayDatepicker};
-export default ClayDatepicker;
+export {ClayDatePicker};
+export default ClayDatePicker;

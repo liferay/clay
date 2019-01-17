@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import ClayDatepicker from '../src/ClayDatepicker';
+import ClayDatePicker from '../src/ClayDatePicker';
 
 import './style.scss';
 
@@ -11,7 +11,7 @@ const spritemap = './icons.svg';
  */
 function DefaultState() {
 	return (
-		<ClayDatepicker
+		<ClayDatePicker
 			placeholder="YYYY-MM-DD"
 			spritemap={spritemap}
 			years={{
@@ -29,7 +29,7 @@ ReactDOM.render(<DefaultState />, document.getElementById('default-block'));
  */
 function TimeBlock() {
 	return (
-		<ClayDatepicker
+		<ClayDatePicker
 			placeholder="YYYY-MM-DD HH:mm"
 			spritemap={spritemap}
 			time={true}
@@ -48,7 +48,7 @@ ReactDOM.render(<TimeBlock />, document.getElementById('time-block'));
  */
 function LocaleBlock() {
 	return (
-		<ClayDatepicker
+		<ClayDatePicker
 			dateFormat="DD.MM.YYYY"
 			firstDayOfWeek={1}
 			months={[
@@ -84,7 +84,7 @@ ReactDOM.render(<LocaleBlock />, document.getElementById('locale-block'));
  */
 function NativeBlock() {
 	return (
-		<ClayDatepicker
+		<ClayDatePicker
 			placeholder="YYYY-MM-DD"
 			spritemap={spritemap}
 			useNative={true}

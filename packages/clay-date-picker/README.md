@@ -1,6 +1,6 @@
-# clay-datepicker
+# clay-date-picker
 
-ClayDatepicker
+ClayDatePicker
 
 ## Setup
 

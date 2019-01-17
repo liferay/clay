@@ -1,12 +1,12 @@
 {
-  "name": "clay-datepicker",
+  "name": "clay-date-picker",
   "version": "2.5.0",
-  "description": "ClayDatepicker component",
+  "description": "ClayDatePicker component",
   "license": "BSD",
-  "repository": "https://github.com/liferay/clay/tree/master/packages/clay-datepicker",
-  "main": "lib/ClayDatepicker.js",
-  "esnext:main": "src/ClayDatepicker.js",
-  "jsnext:main": "src/ClayDatepicker.js",
+  "repository": "https://github.com/liferay/clay/tree/master/packages/clay-date-picker",
+  "main": "lib/ClayDatePicker.js",
+  "esnext:main": "src/ClayDatePicker.js",
+  "jsnext:main": "src/ClayDatePicker.js",
   "files": [
     "lib",
     "src"
@@ -22,7 +22,7 @@
   ],
   "dependencies": {
     "classnames": "^2.2.6",
-    "clay-timepicker": "^2.5.0",
+    "clay-time-picker": "^2.5.0",
     "moment": "^2.22.2",
     "prop-types": "^15.6.2",
     "react": "^16.8.0-alpha.0",
