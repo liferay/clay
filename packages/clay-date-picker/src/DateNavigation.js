@@ -50,8 +50,9 @@ function DateNavigation({
 			.clone()
 			.add(month, 'M')
 			.toDate();
+		const year = date.getFullYear();
 
-		if (memoizedYears.find(elem => elem.value === date.getFullYear())) {
+		if (memoizedYears.find(elem => elem.value === year)) {
 			onMonthChange(date);
 		}
 	}
