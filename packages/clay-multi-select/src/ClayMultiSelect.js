@@ -202,7 +202,7 @@ class ClayMultiSelect extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleOnInput(event) {
-		const value = event.data.value;
+		const value = event.data.value.replace(',', '');
 
 		this._removeFocusedItem();
 
