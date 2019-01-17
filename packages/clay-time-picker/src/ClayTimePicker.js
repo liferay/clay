@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 /**
- * ClayTimepicker
+ * ClayTimePicker
  * @return {React.createElement}
  */
-function ClayTimepicker({
+function ClayTimePicker({
 	defaultValue,
 	id,
 	max,
@@ -31,7 +31,7 @@ function ClayTimepicker({
 	);
 }
 
-ClayTimepicker.propTypes = {
+ClayTimePicker.propTypes = {
 	defaultValue: PropTypes.string,
 	id: PropTypes.string,
 	max: PropTypes.string,
@@ -42,5 +42,5 @@ ClayTimepicker.propTypes = {
 	value: PropTypes.string,
 };
 
-export {ClayTimepicker};
-export default ClayTimepicker;
+export {ClayTimePicker};
+export default ClayTimePicker;

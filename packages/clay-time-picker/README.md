@@ -1,6 +1,6 @@
-# clay-timepicker
+# clay-time-picker
 
-ClayTimepicker
+ClayTimePicker
 
 ## Setup
 

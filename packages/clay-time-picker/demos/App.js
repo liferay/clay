@@ -1,13 +1,13 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import ClayTimepicker from '../src/ClayTimepicker';
+import ClayTimePicker from '../src/ClayTimePicker';
 
 /**
  * @return {React.Component}
  */
 function DefaultState() {
 	return (
-		<ClayTimepicker />
+		<ClayTimePicker />
 	);
 }
 
