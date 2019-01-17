@@ -46,8 +46,8 @@ function Dropdown({containerRef, children, expanded, onDocumentClick}) {
 }
 
 Dropdown.propTypes = {
-	containerRef: PropTypes.object,
 	children: PropTypes.element,
+	containerRef: PropTypes.object,
 	expanded: PropTypes.bool,
 	onDocumentClick: PropTypes.func,
 };

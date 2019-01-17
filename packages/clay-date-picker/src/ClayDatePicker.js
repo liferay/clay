@@ -95,7 +95,7 @@ function ClayDatePicker({
 	 */
 	function inputChange(event) {
 		const {value} = event.target;
-		const format = `${dateFormat} ${time ? timeFormat : ''}`;
+		const format = time ? `${dateFormat} ${time}` : dateFormat;
 		const date = moment(value, format);
 
 		if (date.isValid()) {
@@ -228,8 +228,6 @@ function ClayDatePicker({
 	);
 }
 
-const DateNow = new Date();
-
 ClayDatePicker.propTypes = {
 	/**
 	 * Aria label attribute for the button element.
@@ -329,7 +327,7 @@ ClayDatePicker.propTypes = {
 	timeFormat: PropTypes.string,
 
 	/**
-	 * Describe a brief tip to help users interact.
+	 * Flag to indicate whether to use native date picker
 	 * @default false
 	 */
 	useNative: PropTypes.bool,
@@ -350,6 +348,8 @@ ClayDatePicker.propTypes = {
 		end: PropTypes.number,
 	}),
 };
+
+const DateNow = new Date();
 
 ClayDatePicker.defaultProps = {
 	dateFormat: 'YYYY-MM-DD',
