@@ -1,4 +1,4 @@
-import ClayTimePicker from 'clay-timepicker';
+import ClayTimePicker from 'clay-time-picker';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
