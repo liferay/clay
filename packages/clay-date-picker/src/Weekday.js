@@ -5,17 +5,17 @@ import PropTypes from 'prop-types';
  * @param {Object} param
  * @return {React.createElement}
  */
-function Week({weekday}) {
+function Weekday({weekday}) {
 	return (
-		<div className="datepicker-week">
+		<div className="datepicker-weekday">
 			<abbr>{weekday}</abbr>
 		</div>
 	);
 }
 
-Week.propTypes = {
+Weekday.propTypes = {
 	weekday: PropTypes.string,
 };
 
-export {Week};
-export default Week;
+export {Weekday};
+export default Weekday;

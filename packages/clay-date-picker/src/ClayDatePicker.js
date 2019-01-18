@@ -12,7 +12,7 @@ import DaysTable from './DaysTable';
 import Dropdown from './Dropdown';
 import InputDate from './InputDate';
 import TimePicker from './TimePicker';
-import Week from './Week';
+import Weekday from './Weekday';
 import WeekdayHeader from './WeekdayHeader';
 
 /**
@@ -189,7 +189,7 @@ function ClayDatePicker({
 								weekdaysShort={weekdaysShort}
 							>
 								{({weekday, key}) => (
-									<Week key={key} weekday={weekday} />
+									<Weekday key={key} weekday={weekday} />
 								)}
 							</WeekdayHeader>
 							<div className="datepicker-body">
