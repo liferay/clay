@@ -105,10 +105,9 @@ function ClayDatePicker({
 
 	/**
 	 * Handles datepicker view
+	 * @return {void}
 	 */
-	function handleCalendarButtonClicked() {
-		setExpanded(!expanded);
-	}
+	const handleCalendarButtonClicked = () => setExpanded(!expanded);
 
 	useEffect(
 		() => {

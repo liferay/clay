@@ -59,25 +59,15 @@ function DateNavigation({
 
 	/**
 	 * Handles the previous month button
+	 * @return {void}
 	 */
-	function handlePreviousMonthClicked() {
-		handleChangeMonth(-1);
-	}
-
-	/**
-	 * Handles the click on the dot button.
-	 * @param {!Event} event
-	 */
-	function handleDotClicked() {
-		onDotClicked();
-	}
+	const handlePreviousMonthClicked = () => handleChangeMonth(-1);
 
 	/**
 	 * Handles the next month button
+	 * @return {void}
 	 */
-	function handleNextMonthClicked() {
-		handleChangeMonth(1);
-	}
+	const handleNextMonthClicked = () => handleChangeMonth(1);
 
 	/**
 	 * Handles the change of the year and month of the header
@@ -120,7 +110,7 @@ function DateNavigation({
 				<Button
 					icon="live"
 					monospaced={true}
-					onClick={handleDotClicked}
+					onClick={onDotClicked}
 					size="sm"
 					spritemap={spritemap}
 					style="unstyled"
