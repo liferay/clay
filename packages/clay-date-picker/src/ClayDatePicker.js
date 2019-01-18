@@ -8,11 +8,11 @@ import {useCurrentMonth, useCurrentTime, useWeeks} from './Hooks';
 import Button from './Button';
 import DateNavigation from './DateNavigation';
 import Day from './Day';
+import DaysTable from './DaysTable';
 import Dropdown from './Dropdown';
 import InputDate from './InputDate';
 import TimePicker from './TimePicker';
 import Week from './Week';
-import Weekday from './Weekday';
 import WeekdayHeader from './WeekdayHeader';
 
 /**
@@ -193,7 +193,7 @@ function ClayDatePicker({
 								)}
 							</WeekdayHeader>
 							<div className="datepicker-body">
-								<Weekday weeks={weeks}>
+								<DaysTable weeks={weeks}>
 									{({day, key}) => (
 										<Day
 											day={day}
@@ -202,7 +202,7 @@ function ClayDatePicker({
 											onClick={handleDayClicked}
 										/>
 									)}
-								</Weekday>
+								</DaysTable>
 							</div>
 						</div>
 						{(footerElement || time) && (
