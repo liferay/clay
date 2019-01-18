@@ -13,7 +13,7 @@ import InputDate from './InputDate';
 import TimePicker from './TimePicker';
 import Week from './Week';
 import Weekday from './Weekday';
-import Weekdays from './Weekdays';
+import WeekdayHeader from './WeekdayHeader';
 
 /**
  * ClayDatePicker component.
@@ -184,14 +184,14 @@ function ClayDatePicker({
 								spritemap={spritemap}
 								years={years}
 							/>
-							<Weekdays
+							<WeekdayHeader
 								firstDayOfWeek={firstDayOfWeek}
 								weekdaysShort={weekdaysShort}
 							>
 								{({weekday, key}) => (
 									<Week key={key} weekday={weekday} />
 								)}
-							</Weekdays>
+							</WeekdayHeader>
 							<div className="datepicker-body">
 								<Weekday weeks={weeks}>
 									{({day, key}) => (
