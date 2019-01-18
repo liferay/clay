@@ -11,7 +11,6 @@ function InputDate({
 	ariaLabel,
 	currentTime,
 	dateFormat,
-	defaultValue,
 	inputName,
 	onChange,
 	placeholder,
@@ -38,9 +37,6 @@ function InputDate({
 		return value;
 	}
 
-	const memoizedDefaultValue = useMemo(() => isValidValue(defaultValue), [
-		value,
-	]);
 	const memoizedValue = useMemo(() => isValidValue(value), [
 		value,
 		currentTime,
@@ -56,7 +52,6 @@ function InputDate({
 			<input
 				aria-label={ariaLabel}
 				className={className}
-				defaultValue={memoizedDefaultValue}
 				onChange={onChange}
 				placeholder={placeholder}
 				type={useNative ? 'date' : 'text'}
@@ -70,10 +65,6 @@ InputDate.propTypes = {
 	ariaLabel: PropTypes.string,
 	currentTime: PropTypes.string.isRequired,
 	dateFormat: PropTypes.string.isRequired,
-	defaultValue: PropTypes.oneOfType([
-		PropTypes.instanceOf(Date),
-		PropTypes.string,
-	]),
 	inputName: PropTypes.string,
 	onChange: PropTypes.func,
 	placeholder: PropTypes.string,

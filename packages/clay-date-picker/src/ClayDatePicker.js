@@ -22,7 +22,6 @@ import WeekdayHeader from './WeekdayHeader';
 function ClayDatePicker({
 	ariaLabel,
 	dateFormat,
-	defaultValue,
 	expanded: initialExpanded,
 	firstDayOfWeek,
 	footerElement,
@@ -36,6 +35,7 @@ function ClayDatePicker({
 	time,
 	timeFormat,
 	useNative,
+	value,
 	weekdaysShort,
 	years,
 }) {
@@ -56,12 +56,6 @@ function ClayDatePicker({
 	 * @type {!Date}
 	 */
 	const [daySelected, setDaySelected] = useState(initialMonth);
-
-	/**
-	 * The input value.
-	 * @type {?(Date|undefined)}
-	 */
-	const [inputValue, setInputValue] = useState(undefined);
 
 	/**
 	 * An array of the weeks and days list for the current month
@@ -86,7 +80,7 @@ function ClayDatePicker({
 	 */
 	function handleDayClicked(date) {
 		setDaySelected(date);
-		setInputValue(date);
+		onValueChange(date);
 	}
 
 	/**
@@ -107,11 +101,7 @@ function ClayDatePicker({
 			}
 		}
 
-		if (onValueChange) {
-			onValueChange(value);
-		}
-
-		setInputValue(value);
+		onValueChange(value);
 	}
 
 	/**
@@ -143,14 +133,13 @@ function ClayDatePicker({
 					ariaLabel={ariaLabel}
 					currentTime={currentTime}
 					dateFormat={dateFormat}
-					defaultValue={defaultValue}
 					inputName={inputName}
 					onChange={inputChange}
 					placeholder={placeholder}
 					time={time}
 					timeFormat={timeFormat}
 					useNative={useNative}
-					value={inputValue}
+					value={value}
 				/>
 				{!useNative && (
 					<div className="input-group-inset-item input-group-inset-item-after">
@@ -178,7 +167,7 @@ function ClayDatePicker({
 								onDotClicked={() => {
 									setCurrentMonth(initialMonth);
 									setDaySelected(initialMonth);
-									setInputValue(initialMonth);
+									onValueChange(initialMonth);
 								}}
 								onMonthChange={setCurrentMonth}
 								spritemap={spritemap}
@@ -241,15 +230,6 @@ ClayDatePicker.propTypes = {
 	 * @default YYYY-MM-DD
 	 */
 	dateFormat: PropTypes.string,
-
-	/**
-	 * Set the initial value of the input.
-	 * @default undefined
-	 */
-	defaultValue: PropTypes.oneOfType([
-		PropTypes.instanceOf(Date),
-		PropTypes.string,
-	]),
 
 	/**
 	 * Flag to indicate if date is expanded.
@@ -333,6 +313,15 @@ ClayDatePicker.propTypes = {
 	useNative: PropTypes.bool,
 
 	/**
+	 * Set the value of the input.
+	 * @default undefined
+	 */
+	value: PropTypes.oneOfType([
+		PropTypes.instanceOf(Date),
+		PropTypes.string,
+	]),
+
+	/**
 	 * Short names of days of the week to use in the header
 	 * of the month. It should start from Sunday.
 	 * @default [S, M, T, W, T, F, S]
@@ -370,6 +359,7 @@ ClayDatePicker.defaultProps = {
 		'November',
 		'December',
 	],
+	onValueChange: () => {},
 	time: false,
 	timeFormat: 'HH:mm',
 	useNative: false,
