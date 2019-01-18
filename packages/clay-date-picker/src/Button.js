@@ -18,11 +18,10 @@ function Button({
 	style,
 	type,
 }) {
-	const classNames = classnames('btn', {
+	const classNames = classnames('btn', className, {
 		'btn-monospaced': monospaced,
 		[`btn-${size}`]: size,
 		[`btn-${style}`]: style,
-		[className]: className,
 	});
 
 	return (

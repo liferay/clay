@@ -71,7 +71,7 @@ export function getWeekArray(d, firstDayOfWeek = 0) {
 /**
  * @return {Array<int>}
  */
-export function range({start, end}) {
+export function range({end, start}) {
 	return Array.from(
 		{
 			length: end - start,

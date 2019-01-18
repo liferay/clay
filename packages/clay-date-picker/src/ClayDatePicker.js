@@ -1,4 +1,3 @@
-import classnames from 'classnames';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef} from 'react';
@@ -89,7 +88,7 @@ function ClayDatePicker({
 	 */
 	function inputChange(event) {
 		const {value} = event.target;
-		const format = time ? `${dateFormat} ${time}` : dateFormat;
+		const format = time ? `${dateFormat} ${timeFormat}` : dateFormat;
 		const date = moment(value, format);
 
 		if (date.isValid()) {
@@ -122,12 +121,8 @@ function ClayDatePicker({
 		[currentMonth]
 	);
 
-	const classNames = classnames('input-group', {
-		[id]: id,
-	});
-
 	return (
-		<div className={classNames} ref={elementRef}>
+		<div className="input-group" id={id} ref={elementRef}>
 			<div className="input-group-item">
 				<InputDate
 					ariaLabel={ariaLabel}
@@ -177,7 +172,7 @@ function ClayDatePicker({
 								firstDayOfWeek={firstDayOfWeek}
 								weekdaysShort={weekdaysShort}
 							>
-								{({weekday, key}) => (
+								{({key, weekday}) => (
 									<Weekday key={key} weekday={weekday} />
 								)}
 							</WeekdayHeader>

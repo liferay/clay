@@ -26,7 +26,7 @@ function DateNavigation({
 					value: elem,
 				};
 			}),
-		[years.start, years.end]
+		[years]
 	);
 
 	const memoizedMonths = useMemo(
@@ -37,7 +37,7 @@ function DateNavigation({
 					value: index,
 				};
 			}),
-		months
+		[months]
 	);
 
 	/**

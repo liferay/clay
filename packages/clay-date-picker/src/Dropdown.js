@@ -6,7 +6,7 @@ import classnames from 'classnames';
  * @param {Object} param
  * @return {React.createElement}
  */
-function Dropdown({containerRef, children, expanded, onDocumentClick}) {
+function Dropdown({children, containerRef, expanded, onDocumentClick}) {
 	/**
 	 * Create a ref to store the dropdown DOM element
 	 */
