@@ -5732,6 +5732,13 @@ eslint-plugin-react@^7.12.3:
     prop-types "^15.6.2"
     resolve "^1.9.0"
 
+eslint-plugin-sort-destructure-keys@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-sort-destructure-keys/-/eslint-plugin-sort-destructure-keys-1.1.0.tgz#da0e0ad3cb00dfef767c5c0362cf1f077563a2d2"
+  integrity sha512-4I/StseGvxK5YMHi4kviOP4Wyf/tOc4L5J4qrmJs12cpLg9Hc+gGyUQykuAFViKnUdJVVFhb2hz/zIJ92OHNTA==
+  dependencies:
+    natural-compare-lite "^1.4.0"
+
 eslint-scope@^3.7.1:
   version "3.7.3"
   resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-3.7.3.tgz#bb507200d3d17f60247636160b4826284b108535"
@@ -5859,7 +5866,7 @@ etag@1.8.1, etag@^1.8.1, etag@~1.8.1:
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
 
-event-stream@3.3.4, event-stream@^3.1.0:
+event-stream@^3.1.0:
   version "3.3.4"
   resolved "https://registry.yarnpkg.com/event-stream/-/event-stream-3.3.4.tgz#4ab4c9a0f5a54db9338b4c34d86bfce8f4b35571"
   integrity sha1-SrTJoPWlTbkzi0w02Gv86PSzVXE=
