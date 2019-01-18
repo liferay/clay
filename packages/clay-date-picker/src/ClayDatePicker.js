@@ -7,7 +7,7 @@ import {useCurrentMonth, useCurrentTime, useWeeks} from './Hooks';
 
 import Button from './Button';
 import DateNavigation from './DateNavigation';
-import Day from './Day';
+import DayNumber from './DayNumber';
 import DaysTable from './DaysTable';
 import Dropdown from './Dropdown';
 import InputDate from './InputDate';
@@ -195,7 +195,7 @@ function ClayDatePicker({
 							<div className="datepicker-body">
 								<DaysTable weeks={weeks}>
 									{({day, key}) => (
-										<Day
+										<DayNumber
 											day={day}
 											daySelected={daySelected}
 											key={key}

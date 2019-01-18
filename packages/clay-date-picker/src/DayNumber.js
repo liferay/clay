@@ -1,13 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import moment from 'moment';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 /**
  * @param {Object} param
  * @return {React.createElement}
  */
-function Day({day, daySelected, onClick}) {
+function DayNumber({day, daySelected, onClick}) {
 	const classNames = classnames('datepicker-day', {
 		outside: day.outside,
 		active:
@@ -33,7 +33,7 @@ function Day({day, daySelected, onClick}) {
 	);
 }
 
-Day.propTypes = {
+DayNumber.propTypes = {
 	day: PropTypes.shape({
 		date: PropTypes.instanceOf(Date),
 		dateString: PropTypes.string,
@@ -43,5 +43,5 @@ Day.propTypes = {
 	onClick: PropTypes.func,
 };
 
-export {Day};
-export default Day;
+export {DayNumber};
+export default DayNumber;
