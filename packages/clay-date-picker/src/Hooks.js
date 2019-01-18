@@ -3,7 +3,7 @@ import * as Helpers from './Helpers';
 import moment from 'moment';
 
 const useWeeks = (currentMonth, firstDayOfWeek) => {
-	const [weeks, set] = useState(
+	const [weeks, set] = useState(() =>
 		Helpers.getWeekArray(currentMonth, firstDayOfWeek)
 	);
 
@@ -18,7 +18,7 @@ const useWeeks = (currentMonth, firstDayOfWeek) => {
 };
 
 const useCurrentMonth = value => {
-	const [currentMonth, set] = useState(
+	const [currentMonth, set] = useState(() =>
 		moment(value)
 			.clone()
 			.set('date', 1)
@@ -43,7 +43,7 @@ const useCurrentMonth = value => {
 };
 
 const useCurrentTime = format => {
-	const [currentTime, set] = useState(
+	const [currentTime, set] = useState(() =>
 		moment()
 			.set('h', 0)
 			.set('m', 0)
