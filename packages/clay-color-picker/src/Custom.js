@@ -4,7 +4,7 @@ import tinycolor from 'tinycolor2';
 import Hue from './Hue';
 import Splotch from './Splotch';
 import GradientSelector from './GradientSelector';
-import {HEX_REGEX} from './util';
+import {useHexInput} from './hooks';
 
 /**
  * Renders custom color icon
@@ -42,7 +42,7 @@ RGBInput.propTypes = {
  * Renders input that displays RGB values
  * @return {React.Component}
  */
-function RGBInput({onChange, name, value}) {
+function RGBInput({name, onChange, value}) {
 	return (
 		<div className="form-group rgb-info">
 			<div className="input-group">
@@ -86,18 +86,12 @@ function Custom({colors, label, onChange, onColorsChange, value}) {
 	const [activeSplotchIndex, setActiveSplotchIndex] = useState(0);
 	const [hue, setHue] = useState(0);
 	const [editorActive, setEditorActive] = useState(false);
-	const [inputVal, setInputValue] = useState(color.toHex());
+	const [hexInputVal, setHexInput] = useHexInput(color.toHex());
 
-	const {r, g, b} = color.toRgb();
+	const {b, g, r} = color.toRgb();
 	const {s, v} = color.toHsv();
 
 	const rgbArr = [[r, 'r'], [g, 'g'], [b, 'b']];
-
-	const handleNewInputValue = value => {
-		const match = value.match(HEX_REGEX);
-
-		setInputValue(match ? match[0] : '');
-	};
 
 	const setNewColor = (colorValue, setInput = true) => {
 		const hexString = colorValue.toHexString();
@@ -111,7 +105,7 @@ function Custom({colors, label, onChange, onColorsChange, value}) {
 		onChange(hexString);
 
 		if (setInput) {
-			handleNewInputValue(colorValue.toHex());
+			setHexInput(colorValue.toHex());
 		}
 	};
 
@@ -212,17 +206,17 @@ function Custom({colors, label, onChange, onColorsChange, value}) {
 									);
 
 									if (newColor.isValid()) {
-										handleNewInputValue(newColor.toHex());
+										setHexInput(newColor.toHex());
 									} else {
-										handleNewInputValue(color.toHex());
+										setHexInput(color.toHex());
 									}
 								}}
 								onChange={event => {
-									const inputValue = event.target.value;
+									const newHexValue = event.target.value;
 
-									handleNewInputValue(inputValue);
+									setHexInput(newHexValue);
 
-									const newColor = tinycolor(inputValue);
+									const newColor = tinycolor(newHexValue);
 
 									if (newColor.isValid()) {
 										setHue(newColor.toHsv().h);
@@ -231,7 +225,8 @@ function Custom({colors, label, onChange, onColorsChange, value}) {
 								}}
 								type="text"
 								value={
-									'#' + inputVal.toUpperCase().substring(0, 6)
+									'#' +
+									hexInputVal.toUpperCase().substring(0, 6)
 								}
 							/>
 						</div>

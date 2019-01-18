@@ -1,138 +1,60 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
+
+import {useMousePosition} from './hooks';
+import {hueToX, xToHue} from './util';
 
 /**
  * Renders Hue component
+ * @return {React.Component}
  */
-class Hue extends React.Component {
-	/** @inheritdoc */
-	constructor(props) {
-		super(props);
+function Hue({onChange, value}) {
+	const containerRef = useRef(null);
 
-		this._container = React.createRef();
+	const {onMouseMove, setXY, x} = useMousePosition(containerRef);
 
-		this.state = {
-			left: 0,
-		};
+	const removeListeners = () => {
+		window.removeEventListener('mousemove', onMouseMove);
+		window.removeEventListener('mouseup', removeListeners);
+	};
 
-		this.handleChange = this.handleChange.bind(this);
-		this.handleMouseDown = this.handleMouseDown.bind(this);
-		this.handleMouseUp = this.handleMouseUp.bind(this);
-		this.unbindEventListeners = this.unbindEventListeners.bind(this);
-	}
+	useEffect(
+		() => {
+			onChange(xToHue(x, containerRef.current));
+		},
+		[x]
+	);
 
-	/** @inheritdoc */
-	componentWillUnmount() {
-		this.unbindEventListeners();
-	}
+	useEffect(
+		() => {
+			setXY({x: hueToX(value, containerRef.current)});
+		},
+		[value]
+	);
 
-	/** @inheritdoc */
-	componentDidMount() {
-		this.setInitialCoordinates(this.props.value);
-	}
+	useEffect(() => removeListeners, []);
 
-	/** @inheritdoc */
-	componentWillReceiveProps(nextProps) {
-		this.setInitialCoordinates(nextProps.value);
-	}
+	return (
+		<div
+			className="hue-selector"
+			onMouseDown={event => {
+				onMouseMove(event);
 
-	/**
-	 * Sets the initial left value
-	 * @param {number} hue
-	 */
-	setInitialCoordinates(hue) {
-		const container = this._container.current;
-
-		const containerRect = container.getBoundingClientRect();
-
-		const newLeft = (hue / 360) * containerRect.width;
-
-		this.setState({
-			left: newLeft,
-		});
-	}
-
-	/**
-	 * Handles the change event
-	 * @param {Object} event
-	 */
-	handleChange(event) {
-		const container = this._container.current;
-
-		const containerRect = container.getBoundingClientRect();
-
-		const x =
-			typeof event.pageX === 'number'
-				? event.pageX
-				: event.touches[0].pageX;
-
-		let left = x - (containerRect.left + window.pageXOffset);
-
-		left =
-			left < 0
-				? 0
-				: left > containerRect.width
-					? containerRect.width
-					: left;
-
-		const selectedHue = (left / containerRect.width) * 360;
-
-		this.props.onChange(selectedHue);
-
-		this.setState({
-			left: left,
-		});
-	}
-
-	/**
-	 * Handles the mousedown event
-	 * @param {Object} event
-	 */
-	handleMouseDown(event) {
-		this.handleChange(event, true);
-
-		window.addEventListener('mousemove', this.handleChange);
-		window.addEventListener('mouseup', this.handleMouseUp);
-	}
-
-	/**
-	 * Handles the mouseup event
-	 */
-	handleMouseUp() {
-		this.unbindEventListeners();
-	}
-
-	/**
-	 * Handles unbinding mouse events
-	 */
-	unbindEventListeners() {
-		window.removeEventListener('mousemove', this.handleChange);
-		window.removeEventListener('mouseup', this.handleMouseUp);
-	}
-
-	/** @inheritdoc */
-	render() {
-		const {left} = this.state;
-		const {value} = this.props;
-
-		return (
-			<div
-				className="hue-selector"
-				onMouseDown={this.handleMouseDown}
-				onTouchMove={this.handleChange}
-				onTouchStart={this.handleChange}
-				ref={this._container}
-			>
-				<span
-					className="pointer"
-					style={{
-						left: left - 7,
-						background: `hsl(${value}, 100%, 50%)`,
-					}}
-				/>
-			</div>
-		);
-	}
+				window.addEventListener('mousemove', onMouseMove);
+				window.addEventListener('mouseup', removeListeners);
+			}}
+			onTouchMove={onMouseMove}
+			ref={containerRef}
+		>
+			<span
+				className="pointer"
+				style={{
+					left: x - 7,
+					background: `hsl(${value}, 100%, 50%)`,
+				}}
+			/>
+		</div>
+	);
 }
 
 Hue.propTypes = {

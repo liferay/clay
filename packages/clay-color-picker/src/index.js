@@ -4,7 +4,8 @@ import tinycolor from 'tinycolor2';
 import Custom from './Custom';
 import Basic from './Basic';
 import Splotch from './Splotch';
-import {HEX_REGEX, sub} from './util';
+import {sub} from './util';
+import {useHexInput} from './hooks';
 import './ColorPicker.scss';
 
 const ESC_KEY_CODE = 27;
@@ -136,44 +137,32 @@ function ColorPicker({
 	const valueInputRef = useRef(null);
 
 	const [active, setActive] = useState(false);
-	const [inputValue, setInputValue] = useState(value.substring(1, 7));
-
-	const handleNewInputValue = value => {
-		const match = value.match(HEX_REGEX);
-
-		setInputValue(match ? match[0] : '');
-	};
+	const [hexInputValue, setHexInput] = useHexInput(value.substring(1, 7));
 
 	useEffect(
 		() => {
-			if (document.activeElement !== inputRef.current) {
-				handleNewInputValue(value.substring(1, 7));
-			}
+			document.activeElement !== inputRef.current
+				? setHexInput(value.substring(1, 7))
+				: undefined;
 		},
 		[value]
 	);
 
 	useEffect(() => {
-		const handleClick = event => {
-			if (
-				containerRef.current &&
-				!containerRef.current.contains(event.target)
-			) {
-				setActive(false);
-			}
-		};
+		const handleClick = event =>
+			containerRef.current && !containerRef.current.contains(event.target)
+				? setActive(false)
+				: undefined;
 
-		const handleEsc = event => {
-			if (event.keyCode === ESC_KEY_CODE) {
-				setActive(false);
-			}
-		};
+		const handleEsc = event =>
+			event.keyCode === ESC_KEY_CODE ? setActive(false) : undefined;
 
-		window.addEventListener('mousedown', handleClick, false);
-		window.addEventListener('keydown', handleEsc, false);
+		window.addEventListener('mousedown', handleClick);
+		window.addEventListener('keydown', handleEsc);
 
 		return () => {
-			window.removeEventListener('keydown', handleEsc, false);
+			window.removeEventListener('mousedown', handleClick);
+			window.removeEventListener('keydown', handleEsc);
 		};
 	}, []);
 
@@ -233,14 +222,14 @@ function ColorPicker({
 										: value;
 
 									onValueChange(hexString);
-									handleNewInputValue(hexString);
+									setHexInput(hexString);
 								}}
 								onChange={event => {
-									const newInputValue = event.target.value;
+									const newHexValue = event.target.value;
 
-									const newColor = tinycolor(newInputValue);
+									const newColor = tinycolor(newHexValue);
 
-									handleNewInputValue(newInputValue);
+									setHexInput(newHexValue);
 
 									if (newColor.isValid()) {
 										onValueChange(newColor.toHexString());
@@ -250,7 +239,7 @@ function ColorPicker({
 								type="text"
 								value={
 									'#' +
-									inputValue.toUpperCase().substring(0, 6)
+									hexInputValue.toUpperCase().substring(0, 6)
 								}
 							/>
 						</div>
