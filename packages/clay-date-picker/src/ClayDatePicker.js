@@ -310,10 +310,7 @@ ClayDatePicker.propTypes = {
 	 * Set the value of the input.
 	 * @default undefined
 	 */
-	value: PropTypes.oneOfType([
-		PropTypes.instanceOf(Date),
-		PropTypes.string,
-	]),
+	value: PropTypes.oneOfType([PropTypes.instanceOf(Date), PropTypes.string]),
 
 	/**
 	 * Short names of days of the week to use in the header
