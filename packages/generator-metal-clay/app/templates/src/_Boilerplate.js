@@ -60,5 +60,4 @@ defineWebComponent('<%= repoName %>', <%= componentName %>);
 
 Soy.register(<%= componentName %>, templates);
 
-export {<%= componentName %>};
 export default <%= componentName %>;
