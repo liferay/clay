@@ -26,24 +26,24 @@
 	{let $variant: $contentRenderer ?: 'item' /}
     
 	{delcall ClayDropdownItem.Item variant="$variant"}
-        {param _handleItemClick: $_handleItemClick /}
-        {param active: $active /}
-        {param checked: $checked /}
-        {param disabled: $disabled /}
-        {param href: $href /}
-        {param icon: $icon /}
-        {param inputName: $inputName /}
-        {param inputValue: $inputValue /}
-        {param items: $items /}
-        {param itemsIconAlignment: $itemsIconAlignment /}
-        {param label: $label ? '' + $label : '' /}
-        {param maxItems: $maxItems /}
-        {param separator: $separator /}
-        {param spritemap: $spritemap /}
-        {param target: $target /}
-        {param title: $title /}
+		{param _handleItemClick: $_handleItemClick /}
+		{param active: $active /}
+		{param checked: $checked /}
+		{param disabled: $disabled /}
+		{param href: $href /}
+		{param icon: $icon /}
+		{param inputName: $inputName /}
+		{param inputValue: $inputValue /}
+		{param items: $items /}
+		{param itemsIconAlignment: $itemsIconAlignment /}
+		{param label: $label ? '' + $label : '' /}
+		{param maxItems: $maxItems /}
+		{param separator: $separator /}
+		{param spritemap: $spritemap /}
+		{param target: $target /}
+		{param title: $title /}
 		{param type: $type /}
-    {/delcall}
+	{/delcall}
 {/template}
 
 /**
