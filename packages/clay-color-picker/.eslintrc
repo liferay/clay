@@ -1,10 +1,12 @@
 {
-	"plugins": ["react"],
+	"plugins": ["react", "react-hooks", "sort-destructure-keys"],
 	"rules": {
 		"no-unused-vars": ["error", {"ignoreRestSiblings": true}],
 		"react/jsx-sort-props": "error",
 		"react/jsx-uses-react": "error",
 		"react/jsx-uses-vars": "error",
+		"react-hooks/rules-of-hooks": "error",
 		"no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+		"sort-destructure-keys/sort-destructure-keys": 2
 	}
 }
