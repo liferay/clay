@@ -4,13 +4,13 @@ let path = require('path');
 let assert = require('yeoman-generator').assert;
 let helpers = require('yeoman-generator').test;
 
-describe.skip('metal-clay-generator:app', function() {
+describe('metal-clay-generator:app', function() {
 	beforeAll(function(done) {
 		helpers
 			.run(path.join(__dirname, '../app'))
 			.withOptions({skipInstall: true})
 			.withPrompts({
-				componentName: 'ClayComponent',
+				componentName: 'MyComponent',
 				repoDescription: 'My awesome Clay component',
 			})
 			.on('end', done);
@@ -20,39 +20,39 @@ describe.skip('metal-clay-generator:app', function() {
 		assert.file([
 			'demos/a11y.html',
 			'demos/index.html',
-			'src/ClayComponent.js',
-			'src/ClayComponent.soy',
-			'src/__tests__/ClayComponent.js',
+			'src/MyComponent.js',
+			'src/MyComponent.soy',
+			'src/__tests__/MyComponent.js',
 			'webpack.config.js',
 			'package.json',
 			'README.md',
 		]);
 	});
 
-	it('content of ClayComponent.js', function() {
+	it('content of MyComponent.js', function() {
 		assert.fileContent(
-			'src/ClayComponent.js',
-			/class ClayComponent extends Component/
+			'src/MyComponent.js',
+			/class MyComponent extends ClayComponent/
 		);
 		assert.fileContent(
-			'src/ClayComponent.js',
-			/Soy\.register\(ClayComponent, templates\)/
+			'src/MyComponent.js',
+			/Soy\.register\(MyComponent, templates\)/
 		);
-		assert.fileContent('src/ClayComponent.js', /export {ClayComponent}/);
+		assert.fileContent('src/MyComponent.js', /export {MyComponent}/);
 		assert.fileContent(
-			'src/ClayComponent.js',
-			/export default ClayComponent/
+			'src/MyComponent.js',
+			/export default MyComponent/
 		);
 	});
 
-	it('content of ClayComponent.soy', function() {
+	it('content of MyComponent.soy', function() {
 		assert.fileContent(
-			'src/ClayComponent.soy',
-			/{namespace ClayComponent}/
+			'src/MyComponent.soy',
+			/\{namespace MyComponent\}/
 		);
 		assert.fileContent(
-			'src/ClayComponent.soy',
-			/<div {\$attributes}>Hello World<\/div>/
+			'src/MyComponent.soy',
+			/<div \{\$attributes\}>Hello World<\/div>/
 		);
 	});
 });
