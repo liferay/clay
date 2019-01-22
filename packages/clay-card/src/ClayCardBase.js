@@ -221,6 +221,24 @@ ClayCardBase.STATE = {
 	spritemap: Config.string(),
 
 	/**
+	 * CSS classes for the inside the sticker.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayCardBase
+	 * @type {?(string|undefined)}
+	 */
+	stickerClasses: Config.string(),
+
+	/**
+	 * Icon to be renderer inside the sticker.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayCardBase
+	 * @type {?(string|undefined)}
+	 */
+	stickerIcon: Config.string(),
+
+	/**
 	 * Alternate text of the image to be renderer inside the sticker.
 	 * @default undefined
 	 * @instance
