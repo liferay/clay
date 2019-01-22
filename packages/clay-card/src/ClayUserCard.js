@@ -212,16 +212,7 @@ ClayUserCard.STATE = {
 	 * @memberof ClayUserCard
 	 * @type {?string}
 	 */
-	userColor: Config.oneOf([
-		'danger',
-		'dark',
-		'info',
-		'light',
-		'primary',
-		'secondary',
-		'success',
-		'warning',
-	]).value('primary'),
+	userColorClass: Config.string(),
 };
 
 defineWebComponent('clay-user-card', ClayUserCard);
