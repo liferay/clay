@@ -1,3 +1,9 @@
+/**
+ * © 2019 Liferay, Inc. <https://liferay.com>
+ * 
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
 import ReactDOM from 'react-dom';
 import React, {useState} from 'react';
 import ClayDatePicker from '../src/ClayDatePicker';
