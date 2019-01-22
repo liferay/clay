@@ -21,7 +21,27 @@ export function getDaysInMonth(d) {
 }
 
 /**
- * Based on https://github.com/gpbl/react-day-picker/blob/master/src/Helpers.js#L55
+ * Utility function to generate a table two days of the month.
+ * Based on (This implementation does not have the fixation of
+ * 6 weeks) https://github.com/gpbl/react-day-picker/blob/master/src/Helpers.js#L55
+ *
+ * @example
+ * getWeekArray(new Date(), 0);
+ *
+ * [
+ *   [
+ *     {
+ *       date: Sun Dec 30 2018 12:00:00 GMT-0300...
+ *       outside: true
+ * 	   },
+ *     ...
+ *   ]
+ *   ...
+ * ]
+ *
+ * The `outside` property references when a day
+ * does not belong to the current month.
+ *
  * @param {!Date} d
  * @param {!number} firstDayOfWeek
  * @return {!Array}

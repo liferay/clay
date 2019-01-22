@@ -2,13 +2,19 @@ import {useState} from 'react';
 import * as Helpers from './Helpers';
 import moment from 'moment';
 
+/**
+ * Generates the table of days of the month.
+ * @param {!Date} currentMonth
+ * @param {!number} firstDayOfWeek
+ * @return {Array}
+ */
 const useWeeks = (currentMonth, firstDayOfWeek) => {
 	const [weeks, set] = useState(() =>
 		Helpers.getWeekArray(currentMonth, firstDayOfWeek)
 	);
 
 	/**
-	 * @param {*} value
+	 * @param {!Date} value
 	 */
 	function setWeeks(value) {
 		set(Helpers.getWeekArray(value, firstDayOfWeek));
@@ -17,31 +23,39 @@ const useWeeks = (currentMonth, firstDayOfWeek) => {
 	return [weeks, setWeeks];
 };
 
+/**
+ * Sets the current month
+ * @param {!Date} value
+ * @return {Array}
+ */
 const useCurrentMonth = value => {
-	const [currentMonth, set] = useState(() =>
-		moment(value)
+	const setDate = date =>
+		moment(date)
 			.clone()
 			.set('date', 1)
 			.set('hour', 12)
-			.toDate()
-	);
+			.set('minute', 0)
+			.set('second', 0)
+			.set('millisecond', 0)
+			.toDate();
+
+	const [currentMonth, set] = useState(() => setDate(value));
 
 	/**
-	 * @param {*} value
+	 * @param {!Date} value
 	 */
 	function setCurrentMonth(value) {
-		set(
-			moment(value)
-				.clone()
-				.set('date', 1)
-				.set('hour', 12)
-				.toDate()
-		);
+		set(setDate(value));
 	}
 
 	return [currentMonth, setCurrentMonth];
 };
 
+/**
+ * Sets the current time
+ * @param {!string} format
+ * @return {Array}
+ */
 const useCurrentTime = format => {
 	const [currentTime, set] = useState(() =>
 		moment()
