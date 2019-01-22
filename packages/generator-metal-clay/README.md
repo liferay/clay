@@ -28,4 +28,4 @@ The generator will ask you a few questions about the package. Once you've answer
 
 ## License
 
-[BSD License](http://opensource.org/licenses/BSD-2-Clause) © Liferay, Inc.
+[BSD License](http://opensource.org/licenses/BSD-3-Clause) © Liferay, Inc.
