@@ -88,6 +88,8 @@
 		{let $variant kind="text"}
 			{if isNonnull($contentRenderer) and $contentRenderer != ''}
 				{$contentRenderer}
+			{elseif isNonnull($item.contentRenderer) and $item.contentRenderer != ''}
+				{$item.contentRenderer}
 			{elseif $item.type}
 				{$item.type}
 			{else}
@@ -114,6 +116,7 @@
 			{param spritemap: $spritemap /}
 			{param target: $item.target /}
 			{param title: $item.title /}
+			{param type: $item.type /}
 		{/call}
 
 		{if $item.separator}

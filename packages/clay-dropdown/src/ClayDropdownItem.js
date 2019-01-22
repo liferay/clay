@@ -204,6 +204,15 @@ ClayDropdownItem.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	title: itemShape.title,
+
+	/**
+	 * Type of the item.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdownItem
+	 * @type {?(string|undefined)}
+	 */
+	type: Config.string(),
 };
 
 defineWebComponent('clay-dropdown-item', ClayDropdownItem);
