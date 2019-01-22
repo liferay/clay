@@ -98,6 +98,15 @@ ClayUserCard.STATE = {
 	href: Config.string(),
 
 	/**
+	 * Icon to be renderer in the visual area of the card.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayFileCard
+	 * @type {?(string|undefined)}
+	 */
+	icon: Config.string(),
+
+	/**
 	 * Id to be applied to the element.
 	 * @default undefined
 	 * @instance
