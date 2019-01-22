@@ -16,6 +16,7 @@
 	{@param? elementClasses: string}
 	{@param? href: string}
 	{@param? id: string}
+	{@param? icon: string}
 	{@param? imageAlt: string}
 	{@param? imageSrc: string}
 	{@param? initials: string}
@@ -44,6 +45,7 @@
 			'itemToggled': $_handleItemToggled
 		]/}
 		{param href: $href /}
+		{param icon: $icon /}
 		{param id: $id /}
 		{param imageAlt: $imageAlt /}
 		{param imageSrc: $imageSrc /}
@@ -115,23 +117,27 @@
  * Render the visual area of the card.
  */
 {deltemplate ClayCardBase.VisualArea variant="'user'"}
-	{@param? icon: string}
-	{@param? imageAlt: string}
-	{@param? imageSrc: string}
-	{@param? spritemap: string}
-	{@param? stickerImageAlt: string}
-	{@param? stickerImageSrc: string}
-	{@param? stickerLabel: string}
-	{@param? stickerShape: string}
-	{@param? stickerStyle: string}
+    {@param? icon: string}
+    {@param? imageAlt: string}
+    {@param? imageSrc: string}
+    {@param? spritemap: string}
+    {@param? stickerClasses: string}
+    {@param? stickerIcon: string}
+    {@param? stickerImageAlt: string}
+    {@param? stickerImageSrc: string}
+    {@param? stickerLabel: string}
+    {@param? stickerShape: string}
+    {@param? stickerStyle: string}
 
 	<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 		{call ClaySticker.render}
+			{param icon: $icon ?: not $imageSrc and not $stickerLabel ? 'user' : null /}
 			{param imageAlt: $imageAlt /}
 			{param imageSrc: $imageSrc /}
 			{param label: $stickerLabel /}
 			{param shape: 'circle' /}
 			{param size: 'xl' /}
+			{param spritemap: $spritemap /}
 			{param style: $stickerStyle ?: 'primary' /}
 		{/call}
 	</div>
