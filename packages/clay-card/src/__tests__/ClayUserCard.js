@@ -157,6 +157,25 @@ describe('ClayUserCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a ClayUserCard with user default icon', () => {
+		component = new ClayUserCard({
+			name: 'User Name',
+			spritemap: spritemap,
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
+	it('should render a ClayUserCard with user icon', () => {
+		component = new ClayUserCard({
+			icon: 'camera',
+			name: 'User Name',
+			spritemap: spritemap,
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
 	it('should render a ClayUserCard with user initials', () => {
 		component = new ClayUserCard({
 			initials: 'DOC',
