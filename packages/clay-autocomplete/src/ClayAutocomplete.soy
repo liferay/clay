@@ -4,7 +4,7 @@
  * This renders the component's whole content.
  */
 {template .render}
-	{@param dataSource: string|[]|list<?>}
+	{@param dataSource: string|[]|list<?>|any}
 	{@param? _handleDataChange: any}
 	{@param? _handleDropdownItemClick: any}
 	{@param? _handleOnBlur: any}
@@ -29,7 +29,6 @@
 		referrer: string,
 		body: []
 	]}
-	{@param? requestPolling: number}
 	{@param? requestRetries: number}
 	{@param? requestTimeout: number}
 	{@param? unstable_content: html}
@@ -71,7 +70,6 @@
 			{param filteredItems: $filteredItems /}
 			{param initialData: $initialData /}
 			{param requestOptions: $requestOptions /}
-			{param requestPolling: $requestPolling /}
 			{param requestRetries: $requestRetries /}
 			{param requestTimeout: $requestTimeout /}
 		{/call}
@@ -125,7 +123,7 @@
  * This render the dropdown content.
  */
 {template .dropdown}
-	{@param dataSource: string|[]|list<?>}
+	{@param dataSource: string|[]|list<?>|any}
 	{@param? _handleDataChange: any}
 	{@param? _handleDropdownItemClick: any}
 	{@param? contentRenderer: string}
@@ -141,7 +139,6 @@
 		referrer: string,
 		body: []
 	]}
-	{@param? requestPolling: number}
 	{@param? requestRetries: number}
 	{@param? requestTimeout: number}
 
@@ -174,7 +171,6 @@
 		{param initialData: $initialData /}
 		{param ref: 'dataProvider' /}
 		{param requestOptions: $requestOptions /}
-		{param requestPolling: $requestPolling /}
 		{param requestRetries: $requestRetries /}
 		{param requestTimeout: $requestTimeout /}
 	{/call}

@@ -349,17 +349,21 @@ ClayMultiSelect.STATE = {
 	data: Config.object(),
 
 	/**
-	 * The array of data items that the data source contains or
-	 * the URL for the data provider to request.
+	 * The array of data items that the data source contains,
+	 * the URL for the data provider to request, or a function
+	 * that receives the query and returns a promise with the
+	 * elements.
+	 *
 	 * @instance
 	 * @default undefined
-	 * @memberof ClayMultiSelect
-	 * @type {!(string|object|array)}
+	 * @memberof ClayDataProvider
+	 * @type {!(string|object|array|function)}
 	 */
 	dataSource: Config.oneOfType([
-		Config.string(),
-		Config.object(),
 		Config.array(),
+		Config.func(),
+		Config.object(),
+		Config.string(),
 	]).required(),
 
 	/**
@@ -452,15 +456,6 @@ ClayMultiSelect.STATE = {
 		referrer: Config.string(),
 		body: Config.object(),
 	}),
-
-	/**
-	 * Flag to define how often to refetch data (ms)
-	 * @instance
-	 * @default 0
-	 * @memberof ClayMultiSelect
-	 * @type {?(number|undefined)}
-	 */
-	requestPolling: Config.number().value(0),
 
 	/**
 	 * Define how many attempts will be made when the request fails
