@@ -89,14 +89,26 @@
 	{@param? _handleFilterLabelCloseClicked: any}
 
 	{foreach $filterLabel in $filterLabels}
-		{call ClayFilterLabel.render}
-			{param _handleFilterLabelCloseClicked: $_handleFilterLabelCloseClicked /}
-			{param closeable: $filterLabel.closeable ?: true /}
-			{param expand: isLast($filterLabel) /}
-			{param label: $filterLabel.label /}
-			{param ref: 'label' + index($filterLabel) /}
-			{param spritemap: $spritemap /}
-		{/call}
+		{let $clayFilterLabelClasses kind="text"}
+			tbar-item
+			{if isLast($filterLabel)}
+				{sp}tbar-item-expand
+			{/if}
+		{/let}
+
+		<li class="{$clayFilterLabelClasses}">
+			<div class="tbar-section">
+				{call ClayFilterLabel.render}
+					{param events: ['filterLabelCloseClicked': $_handleFilterLabelCloseClicked ]/}
+					{param closeable: $filterLabel.closeable ?: true /}
+					{param data: ['labelId': index($filterLabel)] /}
+					{param filterData: $filterLabel.data /}
+					{param label: $filterLabel.label /}
+					{param ref: 'label' + index($filterLabel) /}
+					{param spritemap: $spritemap /}
+				{/call}
+			</div>
+		</li>
 	{/foreach}
 {/template}
 
