@@ -3,7 +3,7 @@ $list-group-color: $secondary !default;
 $list-group-hover-bg: lighten($component-active-bg, 44.90) !default;
 $list-group-active-bg: $list-group-hover-bg !default;
 $list-group-active-border-color: $list-group-border-color !default;
-$list-group-active-color: #272833 !default;
+$list-group-active-color: $dark !default;
 
 $list-group-font-size: 0.875rem !default; // 14px
 $list-group-item-padding-x: 1rem !default; // 16px
@@ -25,7 +25,7 @@ $list-group-header-title: map-merge((
 
 $list-group-title-link: () !default;
 $list-group-title-link: map-merge((
-	hover-color: #272833
+	hover-color: $dark
 ), $list-group-title-link);
 
 $list-group-title: () !default;

@@ -4,8 +4,8 @@ $management-bar-light: map-merge((
 	link-border-radius: $border-radius,
 	link-font-weight: $font-weight-semi-bold,
 	link-hover-color: $body-color,
-	link-hover-bg: rgba(#272833, 0.03),
-	link-active-bg: rgba(#272833, 0.06),
+	link-hover-bg: rgba($dark, 0.03),
+	link-active-bg: rgba($dark, 0.06),
 	link-disabled-bg: transparent
 ), $management-bar-light);
 
@@ -14,7 +14,7 @@ $management-bar-primary: map-merge((
 	link-border-radius: $border-radius,
 	link-font-weight: $font-weight-semi-bold,
 	link-hover-color: $body-color,
-	link-hover-bg: rgba(#272833, 0.03),
-	link-active-bg: rgba(#272833, 0.06),
+	link-hover-bg: rgba($dark, 0.03),
+	link-active-bg: rgba($dark, 0.06),
 	link-disabled-bg: transparent
 ), $management-bar-primary);

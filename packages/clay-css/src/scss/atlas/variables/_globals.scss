@@ -62,7 +62,7 @@ $info: #2E5AAC !default;
 $warning: #B95000 !default;
 $danger: #DA1414 !default;
 $light: #F1F2F5 !default;
-$dark: #272834 !default;
+$dark: #272833 !default;
 
 $theme-colors: () !default;
 $theme-colors: map-merge((
@@ -76,11 +76,11 @@ $theme-colors: map-merge((
 	dark: $dark
 ), $theme-colors);
 
-$yiq-text-dark: #272833 !default;
+$yiq-text-dark: $dark !default;
 $yiq-text-light: #FFF !default;
 
 $body-bg: #F1F2F5 !default;
-$body-color: #272833 !default;
+$body-color: $dark !default;
 $text-muted: lighten(saturate(adjust-hue($body-color, -1), 0.22), 51.96) !default;
 
 $link-color: #0B5FFF !default;
