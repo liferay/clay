@@ -12,6 +12,7 @@
     "src"
   ],
   "scripts": {
+    "build": "webpack --mode development",
     "start": "webpack-dev-server --mode development",
     "compile": "babel -d lib/ src/ -s --ignore src/__tests__",
     "prepublish": "npm run compile"

@@ -1,6 +1,6 @@
 /**
  * © 2019 Liferay, Inc. <https://liferay.com>
- * 
+ *
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
@@ -10,7 +10,7 @@ import ClayDatePicker from '../src/ClayDatePicker';
 
 import './style.scss';
 
-const spritemap = './icons.svg';
+const spritemap = '../../../node_modules/clay-css/lib/images/icons/icons.svg';
 
 /**
  * @return {React.Component}

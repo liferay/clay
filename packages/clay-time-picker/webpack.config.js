@@ -29,9 +29,16 @@ module.exports = {
 			},
 		],
 	},
-	devtool: 'eval-source-map',
+	devtool: 'cheap-module-source-map',
+	devServer: {
+		contentBase: [path.resolve('../../')],
+	},
 	resolve: {
 		mainFields: ['browser', 'esnext:main', 'main'],
+	},
+	output: {
+		path: path.resolve(__dirname, 'build'),
+		filename: './globals/clay-time-picker.js',
 	},
 	plugins: [
 		new HtmlWebpackPlugin({

@@ -29,13 +29,16 @@ module.exports = {
 			},
 		],
 	},
-	devtool: 'eval-source-map',
+	devtool: 'cheap-module-source-map',
 	devServer: {
-		publicPath: '/',
-		contentBase: [path.resolve('../../../', 'node_modules'), path.resolve(__dirname, 'demos')],
+		contentBase: [path.resolve('../../')],
 	},
 	resolve: {
 		mainFields: ['browser', 'esnext:main', 'main'],
+	},
+	output: {
+		path: path.resolve(__dirname, 'build'),
+		filename: './globals/clay-date-picker.js',
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
