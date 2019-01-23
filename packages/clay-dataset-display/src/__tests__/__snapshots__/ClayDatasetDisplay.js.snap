@@ -104,44 +104,50 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 1</div>
+              <div data-labelid="0">
+                <span class="label component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 1</div>
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 2</div>
+              <div data-labelid="1">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 2</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item tbar-item-expand">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">
-                    <strong>Category:</strong>Label 3</div>
+              <div data-labelid="2">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">
+                      <strong>Category:</strong>Label 3</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
@@ -1038,44 +1044,50 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 1</div>
+              <div data-labelid="0">
+                <span class="label component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 1</div>
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 2</div>
+              <div data-labelid="1">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 2</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item tbar-item-expand">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">
-                    <strong>Category:</strong>Label 3</div>
+              <div data-labelid="2">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">
+                      <strong>Category:</strong>Label 3</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
@@ -2082,44 +2094,50 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 1</div>
+              <div data-labelid="0">
+                <span class="label component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 1</div>
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 2</div>
+              <div data-labelid="1">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 2</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item tbar-item-expand">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">
-                    <strong>Category:</strong>Label 3</div>
+              <div data-labelid="2">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">
+                      <strong>Category:</strong>Label 3</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
@@ -2863,44 +2881,50 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 1</div>
+              <div data-labelid="0">
+                <span class="label component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 1</div>
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 2</div>
+              <div data-labelid="1">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 2</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item tbar-item-expand">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">
-                    <strong>Category:</strong>Label 3</div>
+              <div data-labelid="2">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">
+                      <strong>Category:</strong>Label 3</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
@@ -3217,44 +3241,50 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 1</div>
+              <div data-labelid="0">
+                <span class="label component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 1</div>
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 2</div>
+              <div data-labelid="1">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 2</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item tbar-item-expand">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">
-                    <strong>Category:</strong>Label 3</div>
+              <div data-labelid="2">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">
+                      <strong>Category:</strong>Label 3</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
@@ -3454,44 +3484,50 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 1</div>
+              <div data-labelid="0">
+                <span class="label component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 1</div>
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 2</div>
+              <div data-labelid="1">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 2</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item tbar-item-expand">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">
-                    <strong>Category:</strong>Label 3</div>
+              <div data-labelid="2">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">
+                      <strong>Category:</strong>Label 3</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
@@ -3848,44 +3884,50 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 1</div>
+              <div data-labelid="0">
+                <span class="label component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 1</div>
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 2</div>
+              <div data-labelid="1">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 2</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item tbar-item-expand">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">
-                    <strong>Category:</strong>Label 3</div>
+              <div data-labelid="2">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">
+                      <strong>Category:</strong>Label 3</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
@@ -4782,44 +4824,50 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 1</div>
+              <div data-labelid="0">
+                <span class="label component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 1</div>
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 2</div>
+              <div data-labelid="1">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 2</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item tbar-item-expand">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">
-                    <strong>Category:</strong>Label 3</div>
+              <div data-labelid="2">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">
+                      <strong>Category:</strong>Label 3</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
@@ -5826,44 +5874,50 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 1</div>
+              <div data-labelid="0">
+                <span class="label component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 1</div>
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 2</div>
+              <div data-labelid="1">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 2</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item tbar-item-expand">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">
-                    <strong>Category:</strong>Label 3</div>
+              <div data-labelid="2">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">
+                      <strong>Category:</strong>Label 3</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
@@ -6562,44 +6616,50 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 1</div>
+              <div data-labelid="0">
+                <span class="label component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 1</div>
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 2</div>
+              <div data-labelid="1">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 2</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item tbar-item-expand">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">
-                    <strong>Category:</strong>Label 3</div>
+              <div data-labelid="2">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">
+                      <strong>Category:</strong>Label 3</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
@@ -6751,44 +6811,50 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 1</div>
+              <div data-labelid="0">
+                <span class="label component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 1</div>
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 2</div>
+              <div data-labelid="1">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 2</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item tbar-item-expand">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">
-                    <strong>Category:</strong>Label 3</div>
+              <div data-labelid="2">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">
+                      <strong>Category:</strong>Label 3</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
@@ -7480,44 +7546,50 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 1</div>
+              <div data-labelid="0">
+                <span class="label component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 1</div>
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 2</div>
+              <div data-labelid="1">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 2</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item tbar-item-expand">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">
-                    <strong>Category:</strong>Label 3</div>
+              <div data-labelid="2">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">
+                      <strong>Category:</strong>Label 3</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
@@ -7992,44 +8064,50 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 1</div>
+              <div data-labelid="0">
+                <span class="label component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 1</div>
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 2</div>
+              <div data-labelid="1">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 2</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item tbar-item-expand">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">
-                    <strong>Category:</strong>Label 3</div>
+              <div data-labelid="2">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">
+                      <strong>Category:</strong>Label 3</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
@@ -8668,44 +8746,50 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 1</div>
+              <div data-labelid="0">
+                <span class="label component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 1</div>
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 2</div>
+              <div data-labelid="1">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 2</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item tbar-item-expand">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">
-                    <strong>Category:</strong>Label 3</div>
+              <div data-labelid="2">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">
+                      <strong>Category:</strong>Label 3</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
@@ -9559,44 +9643,50 @@ exports[`ClayDatasetDisplay should select and unselect all items 2`] = `
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 1</div>
+              <div data-labelid="0">
+                <span class="label component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 1</div>
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 2</div>
+              <div data-labelid="1">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 2</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item tbar-item-expand">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">
-                    <strong>Category:</strong>Label 3</div>
+              <div data-labelid="2">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">
+                      <strong>Category:</strong>Label 3</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
@@ -10331,44 +10421,50 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 1</div>
+              <div data-labelid="0">
+                <span class="label component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 1</div>
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">Label 2</div>
+              <div data-labelid="1">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">Label 2</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item tbar-item-expand">
             <div class="tbar-section">
-              <span class="label label-dismissible component-label tbar-label">
-                <span class="label-item label-item-expand">
-                  <div class="label-section">
-                    <strong>Category:</strong>Label 3</div>
+              <div data-labelid="2">
+                <span class="label label-dismissible component-label tbar-label">
+                  <span class="label-item label-item-expand">
+                    <div class="label-section">
+                      <strong>Category:</strong>Label 3</div>
+                  </span>
+                  <span class="label-item label-item-after">
+                    <button class="btn close" aria-label="close" type="button">
+                      <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                        <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                      </svg>
+                    </button>
+                  </span>
                 </span>
-                <span class="label-item label-item-after">
-                  <button class="btn close" aria-label="close" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span>
+              </div>
             </div>
           </li>
           <li class="tbar-item">
