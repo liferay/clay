@@ -20,9 +20,6 @@ class ClayLabel extends ClayComponent {
 	 */
 	_handleCloseButtonClick(event) {
 		return !this.emit({
-			data: {
-				label: this.label,
-			},
 			name: 'close',
 			originalEvent: event,
 		});
