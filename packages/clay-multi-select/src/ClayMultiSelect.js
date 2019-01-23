@@ -314,7 +314,7 @@ class ClayMultiSelect extends ClayComponent {
 	 */
 	_tokenize(string, separator = ',') {
 		const hasLastComma = string.endsWith(separator);
-		const values = string.split(/\s*(?:,|$)\s*/).filter(token => token);
+		const values = string.split(/\s*(?:,|$)\s*/).filter(Boolean);
 
 		return {
 			values,
