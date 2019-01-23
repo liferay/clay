@@ -62,7 +62,7 @@ $label-primary: map-merge((
 // $label-secondary-color is deprecated as of v2.4.1
 $label-secondary-color: $secondary !default;
 // $label-secondary-hover-color is deprecated as of v2.4.1
-$label-secondary-hover-color: #272833 !default;
+$label-secondary-hover-color: $dark !default;
 // $label-secondary-border-color is deprecated as of v2.4.1
 $label-secondary-border-color: lighten(saturate(adjust-hue($label-secondary-color, -2), 5.48), 37.06) !default;
 // $label-secondary-hover-border-color is deprecated as of v2.4.1
