@@ -33,7 +33,7 @@ class ClayLabel extends ClayComponent {
  */
 ClayLabel.STATE = {
 	/**
-	 * True or false to activate the close button.
+	 * Flag to indicate if the label is closeable.
 	 * @default false
 	 * @instance
 	 * @memberof ClayLabel
