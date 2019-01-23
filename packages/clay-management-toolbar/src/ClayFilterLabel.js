@@ -73,7 +73,7 @@ ClayFilterLabel.STATE = {
 	 * @memberof ClayLabel
 	 * @type {?(html|string|undefined)}
 	 */
-	label: Config.any(),
+	label: Config.any().required(),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
@@ -82,7 +82,7 @@ ClayFilterLabel.STATE = {
 	 * @memberof ClayLabel
 	 * @type {?(string|undefined)}
 	 */
-	spritemap: Config.string(),
+	spritemap: Config.string().required(),
 };
 
 Soy.register(ClayFilterLabel, templates);

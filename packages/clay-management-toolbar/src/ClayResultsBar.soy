@@ -99,9 +99,9 @@
 		<li class="{$clayFilterLabelClasses}">
 			<div class="tbar-section">
 				{call ClayFilterLabel.render}
-					{param events: ['filterLabelCloseClicked': $_handleFilterLabelCloseClicked ]/}
 					{param closeable: $filterLabel.closeable ?: true /}
 					{param data: ['labelId': index($filterLabel)] /}
+					{param events: ['filterLabelCloseClicked': $_handleFilterLabelCloseClicked ]/}
 					{param filterData: $filterLabel.data /}
 					{param label: $filterLabel.label /}
 					{param ref: 'label' + index($filterLabel) /}
