@@ -68,6 +68,14 @@
 			color: $asset-icon-color;
 			width: $asset-icon-width;
 
+			.inline-item {
+				bottom: 0;
+				left: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+
 			> .lexicon-icon {
 				height: 100%;
 				width: 100%;
