@@ -11,7 +11,13 @@
 	{@param? elementClasses: string}
 	{@param? filterData: ?}
 
-	<div class="{$elementClasses}">
+	{let $elementAttributes kind="attributes"}
+		{if $elementClasses}
+			class="{$elementClasses}"
+		{/if}
+	{/let}
+
+	<div {$elementAttributes}>
 		{call ClayLabel.render}
 			{param closeable: $closeable /}
 			{param data: $filterData /}
