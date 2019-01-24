@@ -16,6 +16,7 @@ Here's a set of guidelines to contribute to Clay and its packages. Use your comm
 - [Style Guides](#style-guides)
 	- [Git Commit Messages](#git-commit-messages)
 	- [JavaScript Style Guide](#javascript-style-guide)
+	- [CSS Guidelines](#css-guidelines)
 	- [Documentation Style Guide](#documentation-style-guide)
 - [Additional Notes](#additional-notes)
 	- [Issue Labels](#issue-labels)
@@ -116,6 +117,10 @@ This section shows you how to write commit messages in Clay. Follow these guidel
 ### JavaScript Style Guide
 
 All JavaScript must adhere to the [Liferay JavaScript style guide](https://www.npmjs.com/package/eslint-config-liferay).
+
+### CSS Guidelines
+
+See guidelines for [contribution with CSS](https://github.com/liferay/clay/blob/develop/packages/clay-css/CONTRIBUTING.md).
 
 ### Documentation Style Guide
 
