@@ -160,4 +160,47 @@ describe('ClayDataProvider', function() {
 			expect(fetch.mock.calls.length).toBe(1);
 		});
 	});
+
+	describe('function data', () => {
+		const items = [
+			'Bread',
+			'Ammonia cookie',
+			'Cuisine of Antebellum America',
+			'Apple butter',
+			'Apple sauce',
+		];
+
+		beforeEach(() => {
+			jest.useFakeTimers();
+		});
+
+		it('should request remote data using a function', () => {
+			const mockFn = jest.fn(query => Promise.resolve(items));
+
+			component = new ClayDataProvider({
+				content,
+				dataSource: mockFn,
+			});
+
+			expect(mockFn.mock.calls.length).toBe(1);
+			expect(mockFn.mock.calls[0][0]).toEqual('');
+		});
+
+		it('should emit an event on data change', done => {
+			const mockFn = jest.fn(query => Promise.resolve(items));
+
+			component = new ClayDataProvider({
+				content,
+				dataSource: mockFn,
+				events: {
+					dataChange: async event => {
+						expect(items).toEqual(event.data);
+						done();
+					},
+				},
+			});
+
+			expect(fetch.mock.calls.length).toBe(1);
+		});
+	});
 });
