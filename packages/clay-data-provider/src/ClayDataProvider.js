@@ -18,6 +18,11 @@ class ClayDataProvider extends ClayComponent {
 	 * @protected
 	 */
 	updateData(query, requestRetries = 0) {
+		if (this._hasData(this.dataSource)) {
+			this._handleDataChange();
+			return;
+		}
+
 		if (this.initialData) {
 			this._dataSource = this.initialData;
 			this._handleDataChange();

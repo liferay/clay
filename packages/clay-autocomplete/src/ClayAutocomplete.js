@@ -18,6 +18,8 @@ class ClayAutocomplete extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleDataChange(event) {
+		this._handleFilteredItems(event)
+
 		return !this.emit({
 			data: event.data,
 			name: 'dataChange',
@@ -42,10 +44,10 @@ class ClayAutocomplete extends ClayComponent {
 	 * @protected
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
-	_handleFilteredItems(event, query) {
-		if (query) {
+	_handleFilteredItems(event) {
+		if (this._query) {
 			this.filteredItems = this.refs.dataProvider.filter(
-				query,
+				this._query,
 				this.extractData
 			);
 		} else {
@@ -109,10 +111,10 @@ class ClayAutocomplete extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleOnInput(event) {
-		const query = event.target.value;
+		this._query = event.target.value;
 
 		if (this.enableAutocomplete) {
-			this._handleFilteredItems(event, query);
+			this.refs.dataProvider.updateData(this._query);
 		}
 
 		return !this.emit({
@@ -223,6 +225,15 @@ class ClayAutocomplete extends ClayComponent {
  * @type {!Object}
  */
 ClayAutocomplete.STATE = {
+	/**
+	 * The current query value
+	 * @instance
+	 * @default undefined
+	 * @memberof ClayAutocomplete
+	 * @type {?(string|undefined)}
+	 */
+	_query: Config.string(),
+
 	/**
 	 * Variation name to render different deltemplates.
 	 * @default undefined
