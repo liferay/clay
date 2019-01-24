@@ -96,6 +96,7 @@
 			<div class="row">
 				<div class="col-md-4" id="user-card-block"></div>
 				<div class="col-md-4" id="user-card-image-block"></div>
+				<div class="col-md-4" id="user-card-icon-block"></div>
 			</div>
 		</div>
 	</div>
@@ -174,7 +175,7 @@
 
 		new metal.ClayImageCard({
 			actionItems: items,
-			stickerLabel: 'SVG',
+			stickerIcon: 'camera',
 			stickerStyle: 'warning',
 			icon: 'camera',
 			spritemap: spritemap,
@@ -212,7 +213,7 @@
 
 		new metal.ClayImageCard({
 			actionItems: items,
-			stickerLabel: 'TT',
+			stickerIcon: 'camera',
 			stickerShape: 'circle',
 			stickerStyle: 'warning',
 			icon: 'camera',
@@ -257,7 +258,7 @@
 
 		new metal.ClayImageCard({
 			actionItems: items,
-			stickerLabel: 'SVG',
+			stickerIcon: 'camera',
 			stickerStyle: 'warning',
 			labels: [
 				{
@@ -326,7 +327,7 @@
 
 		new metal.ClayImageCard({
 			actionItems: items,
-			stickerLabel: 'SVG',
+			stickerIcon: 'camera',
 			stickerStyle: 'warning',
 			icon: 'camera',
 			labels: [
@@ -394,7 +395,7 @@
 
 		new metal.ClayFileCard({
 			actionItems: items,
-			stickerLabel: 'TXT',
+			stickerIcon: 'blogs',
 			stickerStyle: 'warning',
 			labels: [
 				{
@@ -468,6 +469,18 @@
 			subtitle: 'Latest Action',
 		},
 		'#user-card-image-block');
+
+		new metal.ClayUserCard({
+			actionItems: items,
+			disabled: true,
+			name: 'User name',
+			selectable: true,
+			selected: true,
+			spritemap: spritemap,
+			subtitle: 'Latest Action',
+			userColorClass: 'sticker-warning',
+		},
+		'#user-card-icon-block');
 
 		/*
 		 * Horizontal card
