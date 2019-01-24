@@ -32,8 +32,9 @@ class ClayDataProvider extends ClayComponent {
 			this.requestTimeout,
 			isFunction(this.dataSource)
 				? this.dataSource(query)
-				: fetch(this.dataSource, this.requestOptions)
-					.then(res => res.json())
+				: fetch(this.dataSource, this.requestOptions).then(res =>
+					res.json()
+				  )
 		)
 			.then(res => {
 				this._dataSource = res;
@@ -125,7 +126,8 @@ class ClayDataProvider extends ClayComponent {
 			this.updateData('');
 		}
 		this.updateData = debounce(
-			this.updateData.bind(this), this.requestDebounceTime
+			this.updateData.bind(this),
+			this.requestDebounceTime
 		);
 	}
 
