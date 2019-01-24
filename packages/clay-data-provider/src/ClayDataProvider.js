@@ -28,14 +28,17 @@ class ClayDataProvider extends ClayComponent {
 			this._handleDataChange();
 		}
 
-		timeout(
-			this.requestTimeout,
-			isFunction(this.dataSource)
-				? this.dataSource(query)
-				: fetch(this.dataSource, this.requestOptions).then(res =>
-					res.json()
-				  )
-		)
+		let promise;
+
+		if (isFunction(this.dataSource)) {
+			promise = this.dataSource(query);
+		} else {
+			promise = fetch(this.dataSource, this.requestOptions).then(res =>
+				res.json()
+			);
+		}
+
+		timeout(this.requestTimeout, promise)
 			.then(res => {
 				this._dataSource = res;
 				this._isResolvedData = true;
