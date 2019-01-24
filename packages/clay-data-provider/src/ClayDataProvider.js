@@ -1,10 +1,9 @@
 import {Config} from 'metal-state';
 import {isObject, isString, isFunction} from 'metal';
-import {match, timeout} from './utils';
+import {debounce, match, timeout} from './utils';
 import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
-
 import templates from './ClayDataProvider.soy.js';
 
 /**
@@ -119,6 +118,14 @@ class ClayDataProvider extends ClayComponent {
 		} else {
 			this.updateData('');
 		}
+		this.updateData = debounce(this.updateData.bind(this), this.requestDebounceTime)
+	}
+
+	/**
+	 * Function to call when disposing instance
+	 */
+	disposed() {
+		this.updateData.clear()
 	}
 
 	/**
@@ -216,6 +223,15 @@ ClayDataProvider.STATE = {
 	 * @type {?(object|array)}
 	 */
 	initialData: Config.oneOfType([Config.array(), Config.object()]),
+
+	/**
+	 * Set the request debounce time
+	 * @instance
+	 * @default 200
+	 * @memberof ClayDataProvider
+	 * @type {?(number)}
+	 */
+	requestDebounceTime: Config.number().value(200),
 
 	/**
 	 * Set ups the request options

@@ -62,3 +62,33 @@ export const timeout = (ms, promise) => {
 			});
 	});
 };
+
+/**
+ * Debounce function.
+ * Makes sure 'fn' is only run after 'ms' milliseconds of not being called.
+ * @param {!function} fn
+ * @param {!number} ms
+ * @return {function}
+ */
+export const debounce = (fn, ms) => {
+    let timeout
+
+    const debounced = (...args) => {
+        if (timeout) {
+            clearTimeout(timeout)
+        }
+        timeout = setTimeout(() => {
+            timeout = null
+            fn.apply(null, args)
+        }, ms)
+    }
+
+    debounced.clear = () => {
+        if (timeout) {
+            clearTimeout(timeout)
+            timeout = null
+        }
+    }
+
+    return debounced
+}

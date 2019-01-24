@@ -440,6 +440,15 @@ ClayMultiSelect.STATE = {
 	inputName: Config.string().value('selectedItems'),
 
 	/**
+	 * Set the request debounce time
+	 * @instance
+	 * @default 200
+	 * @memberof ClayMultiSelect
+	 * @type {?(number)}
+	 */
+	requestDebounceTime: Config.number().value(200),
+
+	/**
 	 * Set ups the request options
 	 * @instance
 	 * @default undefined

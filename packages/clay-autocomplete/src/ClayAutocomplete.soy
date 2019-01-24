@@ -19,6 +19,7 @@
 	{@param? inputElementClasses: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
+	{@param? requestDebounceTime: number}
 	{@param? requestOptions: [
 		method: string,
 		mode: string,
@@ -69,6 +70,7 @@
 			{param dataSource: $dataSource /}
 			{param filteredItems: $filteredItems /}
 			{param initialData: $initialData /}
+			{param requestDebounceTime: $requestDebounceTime /}
 			{param requestOptions: $requestOptions /}
 			{param requestRetries: $requestRetries /}
 			{param requestTimeout: $requestTimeout /}
@@ -129,6 +131,7 @@
 	{@param? contentRenderer: string}
 	{@param? filteredItems: list<?>}
 	{@param? initialData: []|list<?>}
+	{@param? requestDebounceTime: number}
 	{@param? requestOptions: [
 		method: string,
 		mode: string,
@@ -170,6 +173,7 @@
 		{param events: ['dataChange': $_handleDataChange] /}
 		{param initialData: $initialData /}
 		{param ref: 'dataProvider' /}
+		{param requestDebounceTime: $requestDebounceTime /}
 		{param requestOptions: $requestOptions /}
 		{param requestRetries: $requestRetries /}
 		{param requestTimeout: $requestTimeout /}
