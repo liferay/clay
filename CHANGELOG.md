@@ -1,5 +1,41 @@
 # Change Log
 
+## [v2.7.0](https://github.com/liferay/clay/tree/v2.7.0) (2019-01-24)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.6.0...v2.7.0)
+
+**Closed issues:**
+
+- Color dark is not correct [\#1468](https://github.com/liferay/clay/issues/1468)
+- Missing information in filterLabelCloseClicked [\#1467](https://github.com/liferay/clay/issues/1467)
+- Add support for stickers with icons in Clay Cards [\#1463](https://github.com/liferay/clay/issues/1463)
+- Change erroneous SPDX license specifier from BSD-2-Clause to BSD-3-Clause [\#1461](https://github.com/liferay/clay/issues/1461)
+- Yarn warns about non-SPDX license specifier during install [\#1459](https://github.com/liferay/clay/issues/1459)
+- Re-enable and update generator-metal-clay tests [\#1458](https://github.com/liferay/clay/issues/1458)
+- README refers inconsistently to Yarn and NPM [\#1457](https://github.com/liferay/clay/issues/1457)
+- Add default type in Claybutton [\#1455](https://github.com/liferay/clay/issues/1455)
+- clayui.com has outdated clay packages [\#1441](https://github.com/liferay/clay/issues/1441)
+- Card view vertical distance between cards [\#1437](https://github.com/liferay/clay/issues/1437)
+- Text input variations page update [\#1422](https://github.com/liferay/clay/issues/1422)
+- Clayui.com search suggestion dropdown does not look correctly [\#1413](https://github.com/liferay/clay/issues/1413)
+- Dropdown can't take contentRenderer [\#1398](https://github.com/liferay/clay/issues/1398)
+
+**Merged pull requests:**
+
+- v2.7.0 CHANGELOG [\#1476](https://github.com/liferay/clay/pull/1476) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1463 - Add support for icons in clay cards stickers [\#1475](https://github.com/liferay/clay/pull/1475) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1467 - Send useful filter label item data through components to Management Toolbar [\#1470](https://github.com/liferay/clay/pull/1470) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1468 - Remplace dark color [\#1469](https://github.com/liferay/clay/pull/1469) ([marcoscv-work](https://github.com/marcoscv-work))
+- Fixes \#1461 - Use correct SPDX specifier [\#1462](https://github.com/liferay/clay/pull/1462) ([wincent](https://github.com/wincent))
+- Fixes \#1455 - Add default type in ClayButton.soy [\#1456](https://github.com/liferay/clay/pull/1456) ([boton](https://github.com/boton))
+- Fixes \#1457 - Refer to Yarn consistently in Clay README [\#1454](https://github.com/liferay/clay/pull/1454) ([wincent](https://github.com/wincent))
+- Fixes \#1458 - Re-enable and update generator-metal-clay tests [\#1452](https://github.com/liferay/clay/pull/1452) ([wincent](https://github.com/wincent))
+- Fixes \#1459 - Use SPDX license identifier in package.json files [\#1451](https://github.com/liferay/clay/pull/1451) ([wincent](https://github.com/wincent))
+- Fixes \#1398 - Adds the contentRenderer API to ClayDropdown [\#1445](https://github.com/liferay/clay/pull/1445) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Fixes \#1422 - \(Clayui.com\) Move Multi Select examples to Selectors page [\#1444](https://github.com/liferay/clay/pull/1444) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Fixes \#1413 - \(Clayui.com\) Overlays search styles [\#1443](https://github.com/liferay/clay/pull/1443) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Fixes \#1441 - \(Clayui.com\) Updates Clay packages at clayui.com [\#1442](https://github.com/liferay/clay/pull/1442) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Fixes \#1437 - Change card vertical mrgin [\#1438](https://github.com/liferay/clay/pull/1438) ([marcoscv-work](https://github.com/marcoscv-work))
+
 ## [v2.6.0](https://github.com/liferay/clay/tree/v2.6.0) (2019-01-11)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.5.1...v2.6.0)
 
