@@ -13,6 +13,7 @@ import templates from './ClayDataProvider.soy.js';
 class ClayDataProvider extends ClayComponent {
 	/**
 	 * Makes the request and defines initial data while it is requesting.
+	 * @param {!string} query
 	 * @param {!number} requestRetries
 	 * @protected
 	 */
@@ -69,6 +70,7 @@ class ClayDataProvider extends ClayComponent {
 
 	/**
 	 * Sets up the request retries.
+	 * @param {!string} query
 	 * @param {!string} err
 	 * @param {!number} requestRetries
 	 * @protected
@@ -118,14 +120,16 @@ class ClayDataProvider extends ClayComponent {
 		} else {
 			this.updateData('');
 		}
-		this.updateData = debounce(this.updateData.bind(this), this.requestDebounceTime)
+		this.updateData = debounce(
+			this.updateData.bind(this), this.requestDebounceTime
+		);
 	}
 
 	/**
 	 * Function to call when disposing instance
 	 */
 	disposed() {
-		this.updateData.clear()
+		this.updateData.clear();
 	}
 
 	/**
@@ -177,7 +181,11 @@ ClayDataProvider.STATE = {
 	 * @memberof ClayDataProvider
 	 * @type {?(object|array|function)}
 	 */
-	_dataSource: Config.oneOfType([Config.array(), Config.object(), Config.func()]).internal(),
+	_dataSource: Config.oneOfType([
+		Config.array(),
+		Config.object(),
+		Config.func(),
+	]).internal(),
 
 	/**
 	 * The content renderer.

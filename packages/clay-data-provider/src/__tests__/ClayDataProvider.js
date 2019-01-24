@@ -175,7 +175,7 @@ describe('ClayDataProvider', function() {
 		});
 
 		it('should request remote data using a function', () => {
-			const mockFn = jest.fn(query => Promise.resolve(items));
+			const mockFn = jest.fn(() => Promise.resolve(items));
 
 			component = new ClayDataProvider({
 				content,
@@ -187,7 +187,7 @@ describe('ClayDataProvider', function() {
 		});
 
 		it('should emit an event on data change', done => {
-			const mockFn = jest.fn(query => Promise.resolve(items));
+			const mockFn = jest.fn(() => Promise.resolve(items));
 
 			component = new ClayDataProvider({
 				content,

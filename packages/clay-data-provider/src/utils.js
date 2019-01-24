@@ -71,24 +71,24 @@ export const timeout = (ms, promise) => {
  * @return {function}
  */
 export const debounce = (fn, ms) => {
-    let timeout
+	let timeout;
 
-    const debounced = (...args) => {
-        if (timeout) {
-            clearTimeout(timeout)
-        }
-        timeout = setTimeout(() => {
-            timeout = null
-            fn.apply(null, args)
-        }, ms)
-    }
+	const debounced = (...args) => {
+		if (timeout) {
+			clearTimeout(timeout);
+		}
+		timeout = setTimeout(() => {
+			timeout = null;
+			fn(...args);
+		}, ms);
+	};
 
-    debounced.clear = () => {
-        if (timeout) {
-            clearTimeout(timeout)
-            timeout = null
-        }
-    }
+	debounced.clear = () => {
+		if (timeout) {
+			clearTimeout(timeout);
+			timeout = null;
+		}
+	};
 
-    return debounced
-}
+	return debounced;
+};

@@ -18,7 +18,7 @@ class ClayAutocomplete extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleDataChange(event) {
-		this._handleFilteredItems(event)
+		this._handleFilteredItems(event);
 
 		return !this.emit({
 			data: event.data,
@@ -232,7 +232,7 @@ ClayAutocomplete.STATE = {
 	 * @memberof ClayAutocomplete
 	 * @type {?(string|undefined)}
 	 */
-	_query: Config.string(),
+	_query: Config.string().internal(),
 
 	/**
 	 * Variation name to render different deltemplates.
