@@ -76,6 +76,10 @@ class ClayDataProvider extends ClayComponent {
 	 * @protected
 	 */
 	_setRequestRetries(query, err, requestRetries) {
+		if (this.isDisposed()) {
+			return;
+		}
+
 		if (this.requestRetries > 0 && requestRetries < this.requestRetries) {
 			console.error(
 				`DataProvider: (${requestRetries + 1}/${

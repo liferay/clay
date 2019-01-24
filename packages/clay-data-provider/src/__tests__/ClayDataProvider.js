@@ -186,6 +186,24 @@ describe('ClayDataProvider', function() {
 			expect(mockFn.mock.calls[0][0]).toEqual('');
 		});
 
+		it('should request remote data using a function with the query', () => {
+			const mockFn = jest.fn(() => Promise.resolve(items));
+
+			component = new ClayDataProvider({
+				content,
+				dataSource: mockFn,
+			});
+
+			expect(mockFn.mock.calls.length).toBe(1);
+			expect(mockFn.mock.calls[0][0]).toEqual('');
+
+			component.updateData('query');
+			jest.runAllTimers();
+
+			expect(mockFn.mock.calls.length).toBe(2);
+			expect(mockFn.mock.calls[1][0]).toEqual('query');
+		});
+
 		it('should emit an event on data change', done => {
 			const mockFn = jest.fn(() => Promise.resolve(items));
 
