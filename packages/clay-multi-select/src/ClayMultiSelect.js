@@ -255,6 +255,12 @@ class ClayMultiSelect extends ClayComponent {
 			}
 			break;
 		case 'Backspace':
+			// Prevents page from returning when input is empty.
+			// See: https://support.mozilla.org/en-US/questions/1057630
+			if (!value) {
+				event.preventDefault();
+			}
+
 			if (!value) {
 				if (!this._itemFocused) {
 					return this._handleItemFocus(event);
