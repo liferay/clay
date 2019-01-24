@@ -87,6 +87,15 @@ ClayDropdown.STATE = {
 	}),
 
 	/**
+	 * Content Renderer name of items.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdown
+	 * @type {?(string|undefined)}
+	 */
+	contentRenderer: Config.string(),
+
+	/**
 	 * Data to add to the element.
 	 * @default undefined
 	 * @instance

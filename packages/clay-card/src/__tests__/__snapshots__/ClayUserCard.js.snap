@@ -5,7 +5,11 @@ exports[`ClayUserCard should render a ClayUserCard with actionItems 1`] = `
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
       <span class="sticker sticker-circle sticker-primary sticker-xl">
-        <span class="sticker-overlay"></span>
+        <span class="inline-item">
+          <svg class="lexicon-icon lexicon-icon-user" focusable="false" role="presentation">
+            <use xlink:href="icons.svg#user"></use>
+          </svg>
+        </span>
       </span>
     </div>
   </div>
@@ -43,7 +47,11 @@ exports[`ClayUserCard should render a ClayUserCard with classes 1`] = `
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
       <span class="sticker sticker-circle sticker-primary sticker-xl">
-        <span class="sticker-overlay"></span>
+        <span class="inline-item">
+          <svg class="lexicon-icon lexicon-icon-user" focusable="false" role="presentation">
+            <use xlink:href="icons.svg#user"></use>
+          </svg>
+        </span>
       </span>
     </div>
   </div>
@@ -62,7 +70,11 @@ exports[`ClayUserCard should render a ClayUserCard with href 1`] = `
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
       <span class="sticker sticker-circle sticker-primary sticker-xl">
-        <span class="sticker-overlay"></span>
+        <span class="inline-item">
+          <svg class="lexicon-icon lexicon-icon-user" focusable="false" role="presentation">
+            <use xlink:href="icons.svg#user"></use>
+          </svg>
+        </span>
       </span>
     </div>
   </div>
@@ -81,7 +93,11 @@ exports[`ClayUserCard should render a ClayUserCard with id 1`] = `
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
       <span class="sticker sticker-circle sticker-primary sticker-xl">
-        <span class="sticker-overlay"></span>
+        <span class="inline-item">
+          <svg class="lexicon-icon lexicon-icon-user" focusable="false" role="presentation">
+            <use xlink:href="icons.svg#user"></use>
+          </svg>
+        </span>
       </span>
     </div>
   </div>
@@ -100,7 +116,11 @@ exports[`ClayUserCard should render a ClayUserCard with imageAlt 1`] = `
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
       <span class="sticker sticker-circle sticker-primary sticker-xl">
-        <span class="sticker-overlay"></span>
+        <span class="inline-item">
+          <svg class="lexicon-icon lexicon-icon-user" focusable="false" role="presentation">
+            <use xlink:href="icons.svg#user"></use>
+          </svg>
+        </span>
       </span>
     </div>
   </div>
@@ -140,7 +160,11 @@ exports[`ClayUserCard should render a ClayUserCard with subtitle 1`] = `
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
       <span class="sticker sticker-circle sticker-primary sticker-xl">
-        <span class="sticker-overlay"></span>
+        <span class="inline-item">
+          <svg class="lexicon-icon lexicon-icon-user" focusable="false" role="presentation">
+            <use xlink:href="icons.svg#user"></use>
+          </svg>
+        </span>
       </span>
     </div>
   </div>
@@ -149,6 +173,52 @@ exports[`ClayUserCard should render a ClayUserCard with subtitle 1`] = `
       <div class="autofit-col autofit-col-expand">
         <div class="card-title text-truncate">User Name</div>
         <div class="card-subtitle text-truncate">Author Action</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayUserCard should render a ClayUserCard with user default icon 1`] = `
+<div class="card-type-asset card">
+  <div class="aspect-ratio card-item-first">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+      <span class="sticker sticker-circle sticker-primary sticker-xl">
+        <span class="inline-item">
+          <svg class="lexicon-icon lexicon-icon-user" focusable="false" role="presentation">
+            <use xlink:href="icons.svg#user"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">User Name</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayUserCard should render a ClayUserCard with user icon 1`] = `
+<div class="card-type-asset card">
+  <div class="aspect-ratio card-item-first">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+      <span class="sticker sticker-circle sticker-primary sticker-xl">
+        <span class="inline-item">
+          <svg class="lexicon-icon lexicon-icon-camera" focusable="false" role="presentation">
+            <use xlink:href="icons.svg#camera"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">User Name</div>
       </div>
     </div>
   </div>
@@ -174,144 +244,11 @@ exports[`ClayUserCard should render a ClayUserCard with user initials 1`] = `
 </div>
 `;
 
-exports[`ClayUserCard should render a ClayUserCard with user initials and style \`danger color\` 1`] = `
+exports[`ClayUserCard should render a ClayUserCard with user user color class 1`] = `
 <div class="card-type-asset card">
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <span class="sticker sticker-circle sticker-danger sticker-xl">
-        <span class="sticker-overlay">DOC</span>
-      </span>
-    </div>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <div class="card-title text-truncate">User Name</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayUserCard should render a ClayUserCard with user initials and style \`dark color\` 1`] = `
-<div class="card-type-asset card">
-  <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <span class="sticker sticker-circle sticker-dark sticker-xl">
-        <span class="sticker-overlay">DOC</span>
-      </span>
-    </div>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <div class="card-title text-truncate">User Name</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayUserCard should render a ClayUserCard with user initials and style \`info color\` 1`] = `
-<div class="card-type-asset card">
-  <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <span class="sticker sticker-circle sticker-info sticker-xl">
-        <span class="sticker-overlay">DOC</span>
-      </span>
-    </div>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <div class="card-title text-truncate">User Name</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayUserCard should render a ClayUserCard with user initials and style \`light color\` 1`] = `
-<div class="card-type-asset card">
-  <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <span class="sticker sticker-circle sticker-light sticker-xl">
-        <span class="sticker-overlay">DOC</span>
-      </span>
-    </div>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <div class="card-title text-truncate">User Name</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayUserCard should render a ClayUserCard with user initials and style \`primary color\` 1`] = `
-<div class="card-type-asset card">
-  <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <span class="sticker sticker-circle sticker-primary sticker-xl">
-        <span class="sticker-overlay">DOC</span>
-      </span>
-    </div>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <div class="card-title text-truncate">User Name</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayUserCard should render a ClayUserCard with user initials and style \`secondary color\` 1`] = `
-<div class="card-type-asset card">
-  <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <span class="sticker sticker-circle sticker-secondary sticker-xl">
-        <span class="sticker-overlay">DOC</span>
-      </span>
-    </div>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <div class="card-title text-truncate">User Name</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayUserCard should render a ClayUserCard with user initials and style \`success color\` 1`] = `
-<div class="card-type-asset card">
-  <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <span class="sticker sticker-circle sticker-success sticker-xl">
-        <span class="sticker-overlay">DOC</span>
-      </span>
-    </div>
-  </div>
-  <div class="card-body">
-    <div class="card-row">
-      <div class="autofit-col autofit-col-expand">
-        <div class="card-title text-truncate">User Name</div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayUserCard should render a ClayUserCard with user initials and style \`warning color\` 1`] = `
-<div class="card-type-asset card">
-  <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-      <span class="sticker sticker-circle sticker-warning sticker-xl">
+      <span class="sticker sticker-circle sticker-primary sticker-xl sticker-warning">
         <span class="sticker-overlay">DOC</span>
       </span>
     </div>
@@ -336,7 +273,11 @@ exports[`ClayUserCard should render a disabled ClayUserCard 1`] = `
           <span class="custom-control-label"></span>
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
             <span class="sticker sticker-circle sticker-primary sticker-xl">
-              <span class="sticker-overlay"></span>
+              <span class="inline-item">
+                <svg class="lexicon-icon lexicon-icon-user" focusable="false" role="presentation">
+                  <use xlink:href="icons.svg#user"></use>
+                </svg>
+              </span>
             </span>
           </div>
         </label>
@@ -363,7 +304,11 @@ exports[`ClayUserCard should render a selectable ClayUserCard 1`] = `
           <span class="custom-control-label"></span>
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
             <span class="sticker sticker-circle sticker-primary sticker-xl">
-              <span class="sticker-overlay"></span>
+              <span class="inline-item">
+                <svg class="lexicon-icon lexicon-icon-user" focusable="false" role="presentation">
+                  <use xlink:href="icons.svg#user"></use>
+                </svg>
+              </span>
             </span>
           </div>
         </label>
@@ -390,7 +335,11 @@ exports[`ClayUserCard should render a selectable ClayUserCard with input \`name\
           <span class="custom-control-label"></span>
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
             <span class="sticker sticker-circle sticker-primary sticker-xl">
-              <span class="sticker-overlay"></span>
+              <span class="inline-item">
+                <svg class="lexicon-icon lexicon-icon-user" focusable="false" role="presentation">
+                  <use xlink:href="icons.svg#user"></use>
+                </svg>
+              </span>
             </span>
           </div>
         </label>
@@ -417,7 +366,11 @@ exports[`ClayUserCard should render a selectable ClayUserCard with input \`value
           <span class="custom-control-label"></span>
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
             <span class="sticker sticker-circle sticker-primary sticker-xl">
-              <span class="sticker-overlay"></span>
+              <span class="inline-item">
+                <svg class="lexicon-icon lexicon-icon-user" focusable="false" role="presentation">
+                  <use xlink:href="icons.svg#user"></use>
+                </svg>
+              </span>
             </span>
           </div>
         </label>
@@ -444,7 +397,11 @@ exports[`ClayUserCard should render a selected ClayUserCard 1`] = `
           <span class="custom-control-label"></span>
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
             <span class="sticker sticker-circle sticker-primary sticker-xl">
-              <span class="sticker-overlay"></span>
+              <span class="inline-item">
+                <svg class="lexicon-icon lexicon-icon-user" focusable="false" role="presentation">
+                  <use xlink:href="icons.svg#user"></use>
+                </svg>
+              </span>
             </span>
           </div>
         </label>
@@ -466,7 +423,11 @@ exports[`ClayUserCard should render the default markup 1`] = `
   <div class="aspect-ratio card-item-first">
     <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
       <span class="sticker sticker-circle sticker-primary sticker-xl">
-        <span class="sticker-overlay"></span>
+        <span class="inline-item">
+          <svg class="lexicon-icon lexicon-icon-user" focusable="false" role="presentation">
+            <use xlink:href="icons.svg#user"></use>
+          </svg>
+        </span>
       </span>
     </div>
   </div>

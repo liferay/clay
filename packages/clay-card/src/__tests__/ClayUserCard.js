@@ -157,6 +157,25 @@ describe('ClayUserCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a ClayUserCard with user default icon', () => {
+		component = new ClayUserCard({
+			name: 'User Name',
+			spritemap: spritemap,
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
+	it('should render a ClayUserCard with user icon', () => {
+		component = new ClayUserCard({
+			icon: 'camera',
+			name: 'User Name',
+			spritemap: spritemap,
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
 	it('should render a ClayUserCard with user initials', () => {
 		component = new ClayUserCard({
 			initials: 'DOC',
@@ -167,88 +186,11 @@ describe('ClayUserCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayUserCard with user initials and style `danger color`', () => {
+	it('should render a ClayUserCard with user user color class', () => {
 		component = new ClayUserCard({
 			initials: 'DOC',
 			name: 'User Name',
-			userColor: 'danger',
-			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a ClayUserCard with user initials and style `dark color`', () => {
-		component = new ClayUserCard({
-			initials: 'DOC',
-			name: 'User Name',
-			userColor: 'dark',
-			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a ClayUserCard with user initials and style `info color`', () => {
-		component = new ClayUserCard({
-			initials: 'DOC',
-			name: 'User Name',
-			userColor: 'info',
-			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a ClayUserCard with user initials and style `light color`', () => {
-		component = new ClayUserCard({
-			initials: 'DOC',
-			name: 'User Name',
-			userColor: 'light',
-			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a ClayUserCard with user initials and style `primary color`', () => {
-		component = new ClayUserCard({
-			initials: 'DOC',
-			name: 'User Name',
-			userColor: 'primary',
-			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a ClayUserCard with user initials and style `secondary color`', () => {
-		component = new ClayUserCard({
-			initials: 'DOC',
-			name: 'User Name',
-			userColor: 'secondary',
-			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a ClayUserCard with user initials and style `success color`', () => {
-		component = new ClayUserCard({
-			initials: 'DOC',
-			name: 'User Name',
-			userColor: 'success',
-			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a ClayUserCard with user initials and style `warning color`', () => {
-		component = new ClayUserCard({
-			initials: 'DOC',
-			name: 'User Name',
-			userColor: 'warning',
+			userColorClass: 'sticker-warning',
 			spritemap: spritemap,
 		});
 

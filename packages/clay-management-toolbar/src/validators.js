@@ -54,6 +54,7 @@ filterItemShape.items = filterItemsValidator;
 const filterLabelsValidator = Config.arrayOf(
 	Config.shapeOf({
 		closeable: Config.bool().value(true),
+		data: Config.object(),
 		label: Config.any().required(),
 	})
 );

@@ -99,31 +99,31 @@ If you want to contribute to this project and do not know where to start [good f
 3. Install project dependencies:
 
   ```
-  yarn install
+  yarn
   ```
 
 4. Install dependencies for each package and link them together:
 
   ```
-  npm run lerna
+  yarn lerna
   ```
 
 5. Build all packages
 
   ```
-  npm run build
+  yarn build
   ```
 
 6. Start a local server on port 4000
 
   ```
-  npm run start
+  yarn start
   ```
 
 7. Run tests:
 
   ```
-  npm run test
+  yarn test
   ```
 
 #### Clayui.com
@@ -137,24 +137,18 @@ cd clayui.com
 
 2. Install dependencies:
 ```
-yarn install
-```
-
-or 
-
-```
-npm install
+yarn
 ```
 
 3. Run in development environment
 ```
-npm run develop
+yarn develop
 ```
 
 If you want to test in a production environment so that you do not take risks of inconsistencies, in the root folder:
 
 ```
-npm run site
+yarn site
 ```
 
 ### Important

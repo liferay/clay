@@ -98,6 +98,15 @@ ClayUserCard.STATE = {
 	href: Config.string(),
 
 	/**
+	 * Icon to be renderer in the visual area of the card.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayFileCard
+	 * @type {?(string|undefined)}
+	 */
+	icon: Config.string(),
+
+	/**
 	 * Id to be applied to the element.
 	 * @default undefined
 	 * @instance
@@ -203,16 +212,7 @@ ClayUserCard.STATE = {
 	 * @memberof ClayUserCard
 	 * @type {?string}
 	 */
-	userColor: Config.oneOf([
-		'danger',
-		'dark',
-		'info',
-		'light',
-		'primary',
-		'secondary',
-		'success',
-		'warning',
-	]).value('primary'),
+	userColorClass: Config.string(),
 };
 
 defineWebComponent('clay-user-card', ClayUserCard);

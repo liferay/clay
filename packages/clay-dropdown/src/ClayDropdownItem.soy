@@ -21,27 +21,29 @@
 	{@param? spritemap: string}
 	{@param? target: string}
 	{@param? title: string}
+	{@param? type: string}
 
 	{let $variant: $contentRenderer ?: 'item' /}
     
 	{delcall ClayDropdownItem.Item variant="$variant"}
-        {param _handleItemClick: $_handleItemClick /}
-        {param active: $active /}
-        {param checked: $checked /}
-        {param disabled: $disabled /}
-        {param href: $href /}
-        {param icon: $icon /}
-        {param inputName: $inputName /}
-        {param inputValue: $inputValue /}
-        {param items: $items /}
-        {param itemsIconAlignment: $itemsIconAlignment /}
-        {param label: $label ? '' + $label : '' /}
-        {param maxItems: $maxItems /}
-        {param separator: $separator /}
-        {param spritemap: $spritemap /}
-        {param target: $target /}
-        {param title: $title /}
-    {/delcall}
+		{param _handleItemClick: $_handleItemClick /}
+		{param active: $active /}
+		{param checked: $checked /}
+		{param disabled: $disabled /}
+		{param href: $href /}
+		{param icon: $icon /}
+		{param inputName: $inputName /}
+		{param inputValue: $inputValue /}
+		{param items: $items /}
+		{param itemsIconAlignment: $itemsIconAlignment /}
+		{param label: $label ? '' + $label : '' /}
+		{param maxItems: $maxItems /}
+		{param separator: $separator /}
+		{param spritemap: $spritemap /}
+		{param target: $target /}
+		{param title: $title /}
+		{param type: $type /}
+	{/delcall}
 {/template}
 
 /**
@@ -64,6 +66,7 @@
 	{@param? spritemap: string}
 	{@param? target: string}
 	{@param? title: string}
+	{@param? type: string}
 
 	{let $itemContent kind="html"}
 		{let $elementClasses kind="text"}
@@ -158,6 +161,7 @@
 	{@param? spritemap: string}
 	{@param? target: string}
 	{@param? title: string}
+	{@param? type: string}
 
 	{let $checkbox kind="html"}
 		{call ClayCheckbox.render}
@@ -206,6 +210,7 @@
 	{@param? spritemap: string}
 	{@param? target: string}
 	{@param? title: string}
+	{@param? type: string}
 
 	{if $label and $label != ''}
 		<li class="dropdown-subheader" role="presentation">
@@ -244,6 +249,7 @@
 	{@param? spritemap: string}
 	{@param? target: string}
 	{@param? title: string}
+	{@param? type: string}
 
 	{let $radio kind="html"}
 		{call ClayRadio.render}
@@ -294,6 +300,7 @@
 	{@param? spritemap: string}
 	{@param? target: string}
 	{@param? title: string}
+	{@param? type: string}
 
 	{if $label and $label != ''}
 		<li class="dropdown-subheader" role="presentation">
@@ -337,6 +344,7 @@
 	{@param? spritemap: string}
 	{@param? target: string}
 	{@param? title: string}
+	{@param? type: string}
 
 	<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 {/deltemplate}

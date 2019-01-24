@@ -3,6 +3,7 @@ import {Config} from 'metal-state';
 let itemShape = {
 	active: Config.bool().value(false),
 	checked: Config.bool().value(false),
+	contentRenderer: Config.string(),
 	disabled: Config.bool().value(false),
 	href: Config.string(),
 	icon: Config.string(),
@@ -13,13 +14,16 @@ let itemShape = {
 	separator: Config.bool().value(false),
 	target: Config.oneOf(['_blank', '_self']),
 	title: Config.string(),
-	type: Config.oneOf([
-		'checkbox',
-		'group',
-		'item',
-		'radio',
-		'radiogroup',
-		'separator',
+	type: Config.oneOfType([
+		Config.oneOf([
+			'checkbox',
+			'group',
+			'item',
+			'radio',
+			'radiogroup',
+			'separator',
+		]),
+		Config.string(),
 	]).value('item'),
 };
 

@@ -1,4 +1,4 @@
-.algolia-autocomplete {
+.page-autocomplete .algolia-autocomplete {
     display: block !important;
     flex: 1;
     width: 100%;
@@ -9,7 +9,7 @@
     }
 }
 
-.algolia-autocomplete .ds-dropdown-menu {
+.page-autocomplete .algolia-autocomplete .ds-dropdown-menu {
     width: 100%;
     padding: .75rem 0 !important;
     background-color: #fff;

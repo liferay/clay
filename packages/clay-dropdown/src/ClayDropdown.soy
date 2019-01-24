@@ -9,6 +9,7 @@
 	{@param? _handleButtonClick: any}
 	{@param? _handleItemClick: any}
 	{@param? button: ?}
+	{@param? contentRenderer: string}
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
 	{@param? expanded: bool}
@@ -48,6 +49,7 @@
 
 	{call ClayDropdownBase.render}
 		{param button: $button /}
+		{param contentRenderer: $contentRenderer /}
 		{param disabled: $disabled /}
 		{param elementClasses: $elementClasses /}
 		{param events: [
