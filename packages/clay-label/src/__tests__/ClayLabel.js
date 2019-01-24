@@ -138,9 +138,6 @@ describe('ClayLabel', function() {
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
 			expect.objectContaining({
-				data: {
-					label: expect.any(String),
-				},
 				name: 'close',
 				originalEvent: expect.any(Object),
 			})

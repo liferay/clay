@@ -138,6 +138,7 @@ class ClayManagementToolbar extends ClayComponent {
 	 */
 	_handleFilterLabelCloseClicked(event) {
 		return !this.emit({
+			data: event.data,
 			name: 'filterLabelCloseClicked',
 			originalEvent: event,
 		});

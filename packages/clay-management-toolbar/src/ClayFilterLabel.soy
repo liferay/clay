@@ -8,29 +8,28 @@
 	{@param spritemap: string}
 	{@param? _handleFilterLabelCloseClicked: any}
 	{@param? closeable: bool}
-	{@param? expand: bool}
+	{@param? elementClasses: string}
+	{@param? filterData: ?}
 
-	{let $elementClasses kind="text"}
-		tbar-item
-		{if $expand}
-			{sp}tbar-item-expand
+	{let $elementAttributes kind="attributes"}
+		{if $elementClasses}
+			class="{$elementClasses}"
 		{/if}
 	{/let}
 
-	<li class="{$elementClasses}">
-		<div class="tbar-section">
-			{call ClayLabel.render}
-				{param closeable: $closeable /}
-				{param elementClasses: 'component-label tbar-label' /}
-				{param events: ['close': $_handleFilterLabelCloseClicked] /}
-				{param label kind="html"}
-					<div class="label-section">{$label}</div>
-				{/param}
+	<div {$elementAttributes}>
+		{call ClayLabel.render}
+			{param closeable: $closeable /}
+			{param data: $filterData /}
+			{param elementClasses: 'component-label tbar-label' /}
+			{param events: ['close': $_handleFilterLabelCloseClicked] /}
+			{param label kind="html"}
+				<div class="label-section">{$label}</div>
+			{/param}
 
-				{param ref: 'label' /}
-				{param spritemap: $spritemap /}
-				{param style: false /}
-			{/call}
-		</div>
-	</li>
+			{param ref: 'label' /}
+			{param spritemap: $spritemap /}
+			{param style: false /}
+		{/call}
+	</div>
 {/template}
