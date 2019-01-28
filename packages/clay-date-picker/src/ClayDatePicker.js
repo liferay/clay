@@ -144,7 +144,6 @@ function ClayDatePicker({
 				{!useNative && (
 					<div className="input-group-inset-item input-group-inset-item-after">
 						<Button
-							className="d-none d-md-inline-block"
 							icon="calendar"
 							onClick={handleCalendarButtonClicked}
 							spritemap={spritemap}
@@ -160,7 +159,7 @@ function ClayDatePicker({
 					onDocumentClick={() => setExpanded(false)}
 				>
 					<React.Fragment>
-						<div className="datepicker">
+						<div className="date-picker">
 							<DateNavigation
 								currentMonth={currentMonth}
 								months={months}
@@ -181,7 +180,7 @@ function ClayDatePicker({
 									<Weekday key={key} weekday={weekday} />
 								)}
 							</WeekdayHeader>
-							<div className="datepicker-body">
+							<div className="date-picker-body">
 								<DaysTable weeks={weeks}>
 									{({day, key}) => (
 										<DayNumber
@@ -195,7 +194,7 @@ function ClayDatePicker({
 							</div>
 						</div>
 						{(footerElement || time) && (
-							<div className="datepicker-footer">
+							<div className="date-picker-footer">
 								{time && (
 									<TimePicker
 										currentTime={currentTime}

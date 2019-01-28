@@ -28,9 +28,9 @@ function TimePicker({currentTime, onTimeChange, spritemap, timeFormat}) {
 	}
 
 	return (
-		<div className="datepicker-time">
+		<div className="date-picker-timer">
 			<Icon spritemap={spritemap} symbol="time" />
-			<form className="datepicker-control">
+			<form className="date-picker-control">
 				<ClayTimePicker
 					name="timer"
 					onChange={handleOnChange}

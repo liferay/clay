@@ -15,7 +15,7 @@ function DaysTable({children, weeks}) {
 	return (
 		<React.Fragment>
 			{weeks.map((days, index) => (
-				<div className="datepicker-days-row" key={index}>
+				<div className="date-picker-days-row" key={index}>
 					{days.map((day, index) => {
 						return React.Children.only(
 							children({day, key: index})

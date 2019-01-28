@@ -40,7 +40,7 @@ function Dropdown({children, containerRef, expanded, onDocumentClick}) {
 		};
 	});
 
-	const classNames = classnames('dropdown-menu', {
+	const classNames = classnames('dropdown-date-picker dropdown-menu', {
 		show: expanded,
 	});
 

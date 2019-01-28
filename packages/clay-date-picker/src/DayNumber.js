@@ -14,11 +14,11 @@ import React from 'react';
  * @return {React.createElement}
  */
 function DayNumber({day, daySelected, onClick}) {
-	const classNames = classnames('datepicker-day', {
-		outside: day.outside,
+	const classNames = classnames('date-picker-day', {
 		active:
 			moment(day.date).format('YYYY-MM-DD') ===
 			moment(daySelected).format('YYYY-MM-DD'),
+		outside: day.outside,
 	});
 
 	return (
@@ -32,7 +32,7 @@ function DayNumber({day, daySelected, onClick}) {
 				.format('YYYY MM DD')}
 			className={classNames}
 			onClick={() => onClick(day.date)}
-			tabIndex={0}
+			tabIndex={day.outside ? -1 : 0}
 		>
 			{day.date.getDate()}
 		</div>

@@ -85,9 +85,9 @@ function DateNavigation({
 	}
 
 	return (
-		<div className="datepicker-caption">
-			<form className="datepicker-form">
-				<div className="input-group input-datepicker-month">
+		<div className="date-picker-caption">
+			<form className="date-picker-form">
+				<div className="input-group input-date-picker-month">
 					<Select
 						name="month"
 						onChange={handleFormChange}
@@ -95,7 +95,7 @@ function DateNavigation({
 						value={currentMonth.getMonth()}
 					/>
 				</div>
-				<div className="input-group input-datepicker-year">
+				<div className="input-group input-date-picker-year">
 					<Select
 						name="year"
 						onChange={handleFormChange}
@@ -104,7 +104,7 @@ function DateNavigation({
 					/>
 				</div>
 			</form>
-			<div className="datepicker-navigation">
+			<div className="date-picker-navigation">
 				<Button
 					icon="angle-left"
 					monospaced={true}

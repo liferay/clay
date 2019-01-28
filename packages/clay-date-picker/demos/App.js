@@ -8,8 +8,6 @@ import ReactDOM from 'react-dom';
 import React, {useState} from 'react';
 import ClayDatePicker from '../src/ClayDatePicker';
 
-import './style.scss';
-
 const spritemap = '../../../node_modules/clay-css/lib/images/icons/icons.svg';
 
 /**
