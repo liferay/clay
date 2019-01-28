@@ -17,6 +17,7 @@ import Select from './Select';
  * @return {React.createElement}
  */
 function DateNavigation({
+	ariaLabels,
 	currentMonth,
 	months,
 	onDotClicked,
@@ -106,6 +107,7 @@ function DateNavigation({
 			</form>
 			<div className="date-picker-navigation">
 				<Button
+					ariaLabel={ariaLabels.buttonPreviousMonth}
 					icon="angle-left"
 					monospaced={true}
 					onClick={handlePreviousMonthClicked}
@@ -114,7 +116,8 @@ function DateNavigation({
 					style="unstyled"
 				/>
 				<Button
-					icon="live"
+					ariaLabel={ariaLabels.buttonDot}
+					icon="simple-circle"
 					monospaced={true}
 					onClick={onDotClicked}
 					size="sm"
@@ -122,6 +125,7 @@ function DateNavigation({
 					style="unstyled"
 				/>
 				<Button
+					ariaLabel={ariaLabels.buttonNextMonth}
 					icon="angle-right"
 					monospaced={true}
 					onClick={handleNextMonthClicked}
@@ -135,6 +139,11 @@ function DateNavigation({
 }
 
 DateNavigation.propTypes = {
+	ariaLabels: PropTypes.shape({
+		buttonDot: PropTypes.string,
+		buttonNextMonth: PropTypes.string,
+		buttonPreviousMonth: PropTypes.string,
+	}),
 	currentMonth: PropTypes.instanceOf(Date).isRequired,
 	months: PropTypes.array,
 	onDotClicked: PropTypes.func,

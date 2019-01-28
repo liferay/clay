@@ -25,7 +25,7 @@ import WeekdayHeader from './WeekdayHeader';
  * @return {React.createElement}
  */
 function ClayDatePicker({
-	ariaLabel,
+	ariaLabels,
 	dateFormat,
 	expanded: initialExpanded,
 	firstDayOfWeek,
@@ -130,7 +130,7 @@ function ClayDatePicker({
 		<div className="input-group" id={id} ref={elementRef}>
 			<div className="input-group-item">
 				<InputDate
-					ariaLabel={ariaLabel}
+					ariaLabel={ariaLabels.input}
 					currentTime={currentTime}
 					dateFormat={dateFormat}
 					inputName={inputName}
@@ -161,6 +161,7 @@ function ClayDatePicker({
 					<React.Fragment>
 						<div className="date-picker">
 							<DateNavigation
+								ariaLabels={ariaLabels}
 								currentMonth={currentMonth}
 								months={months}
 								onDotClicked={() => {
@@ -218,10 +219,15 @@ function ClayDatePicker({
 
 ClayDatePicker.propTypes = {
 	/**
-	 * Aria label attribute for the button element.
+	 * Labels for the aria attributes
 	 * @default undefined
 	 */
-	ariaLabel: PropTypes.string,
+	ariaLabels: PropTypes.shape({
+		buttonDot: PropTypes.string,
+		buttonNextMonth: PropTypes.string,
+		buttonPreviousMonth: PropTypes.string,
+		input: PropTypes.string,
+	}),
 
 	/**
 	 * Set the format of how the date will appear in the input element.
@@ -337,6 +343,11 @@ ClayDatePicker.propTypes = {
 const DateNow = new Date();
 
 ClayDatePicker.defaultProps = {
+	ariaLabels: {
+		buttonDot: 'Select current date',
+		buttonNextMonth: 'Select the next month',
+		buttonPreviousMonth: 'Select the previous month',
+	},
 	dateFormat: 'YYYY-MM-DD',
 	expanded: false,
 	firstDayOfWeek: 0,

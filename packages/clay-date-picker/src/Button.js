@@ -15,6 +15,7 @@ import Icon from './Icon';
  * @return {React.createElement}
  */
 function Button({
+	ariaLabel,
 	className,
 	icon,
 	monospaced,
@@ -31,13 +32,19 @@ function Button({
 	});
 
 	return (
-		<button className={classNames} onClick={onClick} type={type}>
+		<button
+			aria-label={ariaLabel}
+			className={classNames}
+			onClick={onClick}
+			type={type}
+		>
 			<Icon spritemap={spritemap} symbol={icon} />
 		</button>
 	);
 }
 
 Button.propTypes = {
+	ariaLabel: PropTypes.string,
 	className: PropTypes.string,
 	icon: PropTypes.string,
 	monospaced: PropTypes.bool,
