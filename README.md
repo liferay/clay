@@ -12,7 +12,7 @@ The pillar to give colors and structure to Clay, where is the css and examples o
 
 ### [Clay Components](./packages)
 
-All components that follow clay-css marking and Lexicon use cases, developed on [Metal.js](https://metaljs.com/) with [Soy (Closure templates)](https://developers.google.com/closure/templates/docs/commands).
+All components that follow clay-css marking and Lexicon use cases, developed on [React.js](http://reactjs.org)
 
 ### [Clayui.com](./clayui.com)
 
@@ -40,39 +40,11 @@ You can find the Clay documentation on the [site](https://clayui.com/docs/compon
 
 You can improve by sending pull requests to this repository.
 
-## Examples
-
-We have several examples on the [site](https://clayui.com/docs/components/alerts.html). Here's the first one to get you started:
-
-```soy
-{call ClayButton.render}
-    {param label: 'Primary' /}
-    {param type: 'button' /}
-{/call}
-```
-
-This example render a "Primary" button on the page, following [Lexicon](https://lexicondesign.io/docs/patterns/buttons.html) patterns.
-
-You will notice that we use a [Soy (Closure templates)](https://developers.google.com/closure/templates/docs/commands) template system that is built on top of [Metal.js](http://metaljs.com/), but if you do not feel comfortable feel free to use WebComponents 😉.
-
-```html
-<clay-button label="Primary" type="button"></clay-button>
-```
-It will do the same.
-
-Each package contains a page with demos, check.
-
 ## Installation
 
 Clay is available as the `clay` package in npm for components and for css like `clay-css`. It is also available on a [CDN](https://cdn.jsdelivr.net/npm/clay/lib/js/clay.js) for components and for css, [check](https://cdn.jsdelivr.net/npm/clay/lib/css/atlas.css). But if you just want the separate components, it's also available in the npm as [clay-](https://www.npmjs.com/search?q=clay-).
 
 See the [Getting Started](https://clayui.com/docs/getting-started/introduction.html) guide for more information.
-
-Even if your application does not use the framework [Metal.js](https://metaljs.com/) Clay is flexible and can be used as WebComponents see some examples with:
-
-* [Angular](examples/angular-with-clay)
-* [React](examples/react-with-clay)
-* [Vue](examples/vue-with-clay)
 
 ## Contributing
 
