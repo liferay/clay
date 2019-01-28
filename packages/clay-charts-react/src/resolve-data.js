@@ -4,7 +4,7 @@ import {isDefAndNotNull, isFunction, isObject, isString} from 'metal';
  * @param {Array|Function|Object} data
  * @return {Promise}
  */
-export function resolveData(data) {
+export default function resolveData(data) {
 	return new Promise((resolve, reject) => {
 		if (Array.isArray(data) || (isObject(data) && !isFunction(data))) {
 			resolve(data);

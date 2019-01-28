@@ -1,22 +1,19 @@
-# clay-charts-react
+# clay-charts
 
 React.js implementation of Clay built on [react-billboardjs](https://github.com/planttheidea/react-billboardjs)
 
 ## Setup
 
-1. Install NodeJS >= v0.12.0 and NPM >= v3.0.0, if you don't have it yet. You
-   can find it [here](https://nodejs.org).
-
-2. Install local dependencies:
+1. Install local dependencies:
 
 ```
-npm install
+yarn
 ```
 
-3. Build the code:
+2. Build the code:
 
 ```
-npm run compile
+yarn compile
 ```
 
 ## Running Demos
@@ -24,13 +21,13 @@ npm run compile
 1. Install local dependencies:
 
 ```
-npm install
+yarn
 ```
 
 2. Start development server
 
 ```
-npm run start
+yarn start
 ```
 
 3. Navigate to `localhost:8080`
@@ -45,17 +42,17 @@ import ClayCharts from 'clay-charts-react';
 <ClayCharts
 	data={{
 		columns: [['data1', 100, 20, 30], ['data2', 20, 70, 100]],
-		type: 'bar',
+		type: 'bar'
 	}}
 />;
 
 // or
 
-import { BarChart } from 'clay-charts-react';
+import {BarChart} from 'clay-charts-react';
 
 <BarChart
 	data={{
-		columns: [['data1', 100, 20, 30], ['data2', 20, 70, 100]],
+		columns: [['data1', 100, 20, 30], ['data2', 20, 70, 100]]
 	}}
 />;
 ```

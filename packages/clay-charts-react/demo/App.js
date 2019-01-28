@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ClayChart, {BarChart, BubbleChart} from '../src/index';
 
-import 'clay-charts-shared/lib/css/main.css';
+import '../src/scss/main.scss';
 
 const COLUMNS = [['data1', 100, 20, 30], ['data2', 20, 70, 100]];
 

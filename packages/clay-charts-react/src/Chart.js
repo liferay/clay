@@ -3,14 +3,12 @@ import BillboardChart from 'react-billboardjs';
 import GeoMap from './GeoMap';
 import Predictive from './Predictive';
 
-import {config} from 'clay-charts-shared';
-
-const {
+import {
 	DEFAULT_COLORS,
 	DEFAULT_GRID_OBJECT,
 	DEFAULT_LINE_CLASSES,
 	DEFAULT_POINT_PATTERNS,
-} = config;
+} from './config';
 
 /**
  * Chart component.
