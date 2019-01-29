@@ -104,7 +104,7 @@ class ClayMultiSelect extends ClayComponent {
 	 * @param {!Event} event
 	 * @param {?String} eventName
 	 * @protected
-	 * @return {?Boolean} If the event has been prevented or not.
+	 * @return {?(Boolean|void)} If the event has been prevented or not.
 	 */
 	_handleItemAdded(value, data, event, eventName = 'itemAdded') {
 		const label = value.toLowerCase().replace(',', '');
@@ -137,7 +137,7 @@ class ClayMultiSelect extends ClayComponent {
 	 * @param {!Event} event
 	 * @param {?Boolean} direction
 	 * @protected
-	 * @return {Boolean} If the event has been prevented or not.
+	 * @return {(Boolean|void)} If the event has been prevented or not.
 	 */
 	_handleItemFocus(event, direction) {
 		if (this.selectedItems.length) {
@@ -204,7 +204,7 @@ class ClayMultiSelect extends ClayComponent {
 	 * Handles input changes and propagates the queryChange event.
 	 * @param {!Event} event
 	 * @protected
-	 * @return {Boolean} If the event has been prevented or not.
+	 * @return {(Boolean|void)} If the event has been prevented or not.
 	 */
 	_handleOnInput(event) {
 		const value = event.data.value;
@@ -236,7 +236,7 @@ class ClayMultiSelect extends ClayComponent {
 	 * Handles form interactions and propagates corresponding events.
 	 * @param {!Event} event
 	 * @protected
-	 * @return {Boolean} If the event has been prevented or not.
+	 * @return {(boolean|void)} If the event has been prevented or not.
 	 */
 	_handleOnKeydown(event) {
 		const {value} = this.refs.autocomplete.refs.input;
