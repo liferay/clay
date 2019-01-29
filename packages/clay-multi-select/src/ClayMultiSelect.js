@@ -213,11 +213,14 @@ class ClayMultiSelect extends ClayComponent {
 
 		switch (event.data.char) {
 		case ',':
-			return this._handleItemAdded(
-				value,
-				this._getItemSchema(value, value),
-				event
-			);
+			if (this.allowInputCreateItem) {
+				return this._handleItemAdded(
+					value,
+					this._getItemSchema(value, value),
+					event
+				);
+			}
+			break;
 		default:
 			return !this.emit({
 				data: {
@@ -243,7 +246,11 @@ class ClayMultiSelect extends ClayComponent {
 			event.preventDefault();
 			if (this._itemFocused) {
 				return this._handleItemRemoved(this._itemFocused);
-			} else if (value && event.data.eventFromInput) {
+			} else if (
+				value &&
+					event.data.eventFromInput &&
+					this.allowInputCreateItem
+			) {
 				return this._handleItemAdded(
 					value,
 					this._getItemSchema(value, value),
@@ -330,6 +337,15 @@ class ClayMultiSelect extends ClayComponent {
  * @type {!Object}
  */
 ClayMultiSelect.STATE = {
+	/**
+	 * Flag to indicate whether input can create item.
+	 * @default false
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @type {?bool}
+	 */
+	allowInputCreateItem: Config.bool().value(true),
+
 	/**
 	 * Variation name to render different deltemplates.
 	 * @default undefined
