@@ -213,7 +213,7 @@ class ClayMultiSelect extends ClayComponent {
 
 		switch (event.data.char) {
 		case ',':
-			if (this.allowInputCreateItem) {
+			if (this.allowItemCreationFromInput) {
 				return this._handleItemAdded(
 					value,
 					this._getItemSchema(value, value),
@@ -249,7 +249,7 @@ class ClayMultiSelect extends ClayComponent {
 			} else if (
 				value &&
 					event.data.eventFromInput &&
-					this.allowInputCreateItem
+					this.allowItemCreationFromInput
 			) {
 				return this._handleItemAdded(
 					value,
@@ -344,7 +344,7 @@ ClayMultiSelect.STATE = {
 	 * @memberof ClayMultiSelect
 	 * @type {?bool}
 	 */
-	allowInputCreateItem: Config.bool().value(true),
+	allowItemCreationFromInput: Config.bool().value(true),
 
 	/**
 	 * Variation name to render different deltemplates.

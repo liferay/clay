@@ -229,9 +229,9 @@ describe('ClayMultiSelect', function() {
 		});
 
 		describe('itemAdded', () => {
-			it('should not emit an event when allowInputCreateItem is false by press enter on input', () => {
+			it('should not emit an event when allowItemCreationFromInput is false by press enter on input', () => {
 				component = new ClayMultiSelect({
-					allowInputCreateItem: false,
+					allowItemCreationFromInput: false,
 					dataSource,
 					helpText,
 					spritemap,
@@ -255,9 +255,9 @@ describe('ClayMultiSelect', function() {
 				);
 			});
 
-			it('should not emit an event when allowInputCreateItem is false by press comma on input', () => {
+			it('should not emit an event when allowItemCreationFromInput is false by press comma on input', () => {
 				component = new ClayMultiSelect({
-					allowInputCreateItem: false,
+					allowItemCreationFromInput: false,
 					dataSource,
 					helpText,
 					spritemap,
