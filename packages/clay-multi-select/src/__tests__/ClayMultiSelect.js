@@ -229,6 +229,57 @@ describe('ClayMultiSelect', function() {
 		});
 
 		describe('itemAdded', () => {
+			it('should not emit an event when allowInputCreateItem is false by press enter on input', () => {
+				component = new ClayMultiSelect({
+					allowInputCreateItem: false,
+					dataSource,
+					helpText,
+					spritemap,
+				});
+
+				const spy = jest.spyOn(component, 'emit');
+				const {input} = component.refs.autocomplete.refs;
+
+				input.value = 'foo';
+				triggerEvent(input, 'keydown', {key: 'Enter'});
+
+				jest.runAllTimers();
+
+				expect(spy).not.toHaveBeenCalled();
+				expect(spy).not.toHaveBeenCalledWith(
+					expect.objectContaining({
+						data: expect.any(Object),
+						name: 'itemAdded',
+						originalEvent: expect.any(Object),
+					})
+				);
+			});
+
+			it('should not emit an event when allowInputCreateItem is false by press comma on input', () => {
+				component = new ClayMultiSelect({
+					allowInputCreateItem: false,
+					dataSource,
+					helpText,
+					spritemap,
+				});
+
+				const spy = jest.spyOn(component, 'emit');
+				const {input} = component.refs.autocomplete.refs;
+
+				input.value = 'bar';
+				triggerEvent(input, 'input', {data: ','});
+
+				jest.runAllTimers();
+
+				expect(spy).not.toHaveBeenCalledWith(
+					expect.objectContaining({
+						data: expect.any(Object),
+						name: 'itemAdded',
+						originalEvent: expect.any(Object),
+					})
+				);
+			});
+
 			it('should emit an event when press enter on the input', () => {
 				component = new ClayMultiSelect({
 					dataSource,
