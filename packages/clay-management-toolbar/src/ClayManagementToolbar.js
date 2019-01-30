@@ -212,6 +212,19 @@ class ClayManagementToolbar extends ClayComponent {
 	}
 
 	/**
+	 * Continues the propagation of the select all button clicked event
+	 * @param {!Event} event
+	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleSelectAllButtonClick(event) {
+		return !this.emit({
+			name: 'selectAllButtonClicked',
+			originalEvent: event,
+		});
+	}
+
+	/**
 	 * Continues the propagation of the checkbox changed event
 	 * @param {!Event} event
 	 * @private
