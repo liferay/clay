@@ -432,6 +432,13 @@ exports[`ClayManagementToolbar should render a management toolbar with actions a
             <span class="navbar-breakpoint-down-d-none">items-selected</span>
           </span>
         </li>
+        <li class="nav-item nav-item-shrink">
+          <button class="btn nav-link btn-unstyled" type="button">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">clear</span>
+            </span>
+          </button>
+        </li>
       </ul>
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -478,6 +485,13 @@ exports[`ClayManagementToolbar should render a management toolbar with actions i
           <span class="navbar-text">1-of-10
             <span class="navbar-breakpoint-down-d-none">items-selected</span>
           </span>
+        </li>
+        <li class="nav-item nav-item-shrink">
+          <button class="btn nav-link btn-unstyled" type="button">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">clear</span>
+            </span>
+          </button>
         </li>
       </ul>
       <ul class="navbar-nav">
@@ -662,6 +676,46 @@ exports[`ClayManagementToolbar should render a management toolbar with classes i
           <span class="navbar-text">1-of-10
             <span class="navbar-breakpoint-down-d-none">items-selected</span>
           </span>
+        </li>
+        <li class="nav-item nav-item-shrink">
+          <button class="btn nav-link btn-unstyled" type="button">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">clear</span>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`ClayManagementToolbar should render a management toolbar with clear selection link in active state 1`] = `
+<div id="myId">
+  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav navbar-nav-expand">
+        <li class="nav-item">
+          <div class="custom-control custom-checkbox">
+            <label>
+              <input checked="" class="custom-control-input" ref="input" type="checkbox">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">select-items</span>
+              </span>
+            </label>
+          </div>
+        </li>
+        <li class="nav-item">
+          <span class="navbar-text">1-of-10
+            <span class="navbar-breakpoint-down-d-none">items-selected</span>
+          </span>
+        </li>
+        <li class="nav-item nav-item-shrink">
+          <a class=" nav-link" href="my-clear-selection-url">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">clear</span>
+            </span>
+          </a>
         </li>
       </ul>
     </div>
@@ -1049,6 +1103,13 @@ exports[`ClayManagementToolbar should render a management toolbar with disabled 
           <span class="navbar-text">1-of-10
             <span class="navbar-breakpoint-down-d-none">items-selected</span>
           </span>
+        </li>
+        <li class="nav-item nav-item-shrink">
+          <button class="btn nav-link btn-unstyled" type="button">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">clear</span>
+            </span>
+          </button>
         </li>
       </ul>
       <ul class="navbar-nav">
@@ -1514,6 +1575,13 @@ exports[`ClayManagementToolbar should render a management toolbar with id in act
             <span class="navbar-breakpoint-down-d-none">items-selected</span>
           </span>
         </li>
+        <li class="nav-item nav-item-shrink">
+          <button class="btn nav-link btn-unstyled" type="button">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">clear</span>
+            </span>
+          </button>
+        </li>
       </ul>
     </div>
   </nav>
@@ -1581,6 +1649,13 @@ exports[`ClayManagementToolbar should render a management toolbar with info butt
           <span class="navbar-text">1-of-10
             <span class="navbar-breakpoint-down-d-none">items-selected</span>
           </span>
+        </li>
+        <li class="nav-item nav-item-shrink">
+          <button class="btn nav-link btn-unstyled" type="button">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">clear</span>
+            </span>
+          </button>
         </li>
       </ul>
       <ul class="navbar-nav">
@@ -1702,6 +1777,13 @@ exports[`ClayManagementToolbar should render a management toolbar with no action
           <span class="navbar-text">1-of-10
             <span class="navbar-breakpoint-down-d-none">items-selected</span>
           </span>
+        </li>
+        <li class="nav-item nav-item-shrink">
+          <button class="btn nav-link btn-unstyled" type="button">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">clear</span>
+            </span>
+          </button>
         </li>
       </ul>
     </div>
@@ -1966,6 +2048,13 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
             <span class="navbar-breakpoint-down-d-none">items-selected</span>
           </span>
         </li>
+        <li class="nav-item nav-item-shrink">
+          <button class="btn nav-link btn-unstyled" type="button">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">clear</span>
+            </span>
+          </button>
+        </li>
       </ul>
     </div>
   </nav>
@@ -2116,6 +2205,86 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
           <div class="tbar-section">
             <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
           </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`ClayManagementToolbar should render a management toolbar with select all button in active state 1`] = `
+<div id="myId">
+  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav navbar-nav-expand">
+        <li class="nav-item">
+          <div class="custom-control custom-checkbox">
+            <label>
+              <input checked="" class="custom-control-input" ref="input" type="checkbox">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">select-items</span>
+              </span>
+            </label>
+          </div>
+        </li>
+        <li class="nav-item">
+          <span class="navbar-text">10-of-10
+            <span class="navbar-breakpoint-down-d-none">items-selected</span>
+          </span>
+        </li>
+        <li class="nav-item nav-item-shrink">
+          <button class="btn nav-link btn-unstyled" type="button">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">clear</span>
+            </span>
+          </button>
+        </li>
+        <li class="nav-item nav-item-shrink">
+          <button class="btn nav-link btn-unstyled" type="button">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">select-all</span>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`ClayManagementToolbar should render a management toolbar with select all link in active state 1`] = `
+<div id="myId">
+  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav navbar-nav-expand">
+        <li class="nav-item">
+          <div class="custom-control custom-checkbox">
+            <label>
+              <input checked="" class="custom-control-input" ref="input" type="checkbox">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">select-items</span>
+              </span>
+            </label>
+          </div>
+        </li>
+        <li class="nav-item">
+          <span class="navbar-text">10-of-10
+            <span class="navbar-breakpoint-down-d-none">items-selected</span>
+          </span>
+        </li>
+        <li class="nav-item nav-item-shrink">
+          <button class="btn nav-link btn-unstyled" type="button">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">clear</span>
+            </span>
+          </button>
+        </li>
+        <li class="nav-item nav-item-shrink">
+          <a class=" nav-link" href="my-select-all-url">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">select-all</span>
+            </span>
+          </a>
         </li>
       </ul>
     </div>
@@ -2289,6 +2458,13 @@ exports[`ClayManagementToolbar should render a management toolbar with state act
           <span class="navbar-text">1-of-10
             <span class="navbar-breakpoint-down-d-none">items-selected</span>
           </span>
+        </li>
+        <li class="nav-item nav-item-shrink">
+          <button class="btn nav-link btn-unstyled" type="button">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">clear</span>
+            </span>
+          </button>
         </li>
       </ul>
     </div>

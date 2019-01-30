@@ -2810,7 +2810,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
             </div>
           </li>
           <li class="nav-item">
-            <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" title="order" type="button">
+            <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" type="button" aria-label="order-arrow" title="order">
               <svg class="lexicon-icon lexicon-icon-order-arrow" focusable="false" role="presentation">
                 <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow"></use>
               </svg>
@@ -3201,6 +3201,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
               <span class="navbar-breakpoint-down-d-none">items-selected</span>
             </span>
           </li>
+          <li class="nav-item nav-item-shrink">
+            <button class="btn nav-link btn-unstyled" type="button">
+              <span class="text-truncate-inline">
+                <span class="text-truncate">clear</span>
+              </span>
+            </button>
+          </li>
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item navbar-breakpoint-down-d-none" data-quick-action-index="0">
@@ -3413,7 +3420,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
             </div>
           </li>
           <li class="nav-item">
-            <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" title="order" type="button">
+            <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" type="button" aria-label="order-arrow" title="order">
               <svg class="lexicon-icon lexicon-icon-order-arrow" focusable="false" role="presentation">
                 <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow"></use>
               </svg>
@@ -6576,6 +6583,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and se
               <span class="navbar-breakpoint-down-d-none">items-selected</span>
             </span>
           </li>
+          <li class="nav-item nav-item-shrink">
+            <button class="btn nav-link btn-unstyled" type="button">
+              <span class="text-truncate-inline">
+                <span class="text-truncate">clear</span>
+              </span>
+            </button>
+          </li>
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item navbar-breakpoint-down-d-none" data-quick-action-index="0">
@@ -6770,6 +6784,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected gro
             <span class="navbar-text">1-of-11
               <span class="navbar-breakpoint-down-d-none">items-selected</span>
             </span>
+          </li>
+          <li class="nav-item nav-item-shrink">
+            <button class="btn nav-link btn-unstyled" type="button">
+              <span class="text-truncate-inline">
+                <span class="text-truncate">clear</span>
+              </span>
+            </button>
           </li>
         </ul>
         <ul class="navbar-nav">
@@ -7505,6 +7526,13 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with selected ite
             <span class="navbar-text">1-of-6
               <span class="navbar-breakpoint-down-d-none">items-selected</span>
             </span>
+          </li>
+          <li class="nav-item nav-item-shrink">
+            <button class="btn nav-link btn-unstyled" type="button">
+              <span class="text-truncate-inline">
+                <span class="text-truncate">clear</span>
+              </span>
+            </button>
           </li>
         </ul>
         <ul class="navbar-nav">
@@ -9603,6 +9631,20 @@ exports[`ClayDatasetDisplay should select and unselect all items 2`] = `
               <span class="navbar-breakpoint-down-d-none">items-selected</span>
             </span>
           </li>
+          <li class="nav-item nav-item-shrink">
+            <button class="btn nav-link btn-unstyled" type="button">
+              <span class="text-truncate-inline">
+                <span class="text-truncate">clear</span>
+              </span>
+            </button>
+          </li>
+          <li class="nav-item nav-item-shrink">
+            <button class="btn nav-link btn-unstyled" type="button">
+              <span class="text-truncate-inline">
+                <span class="text-truncate">select-all</span>
+              </span>
+            </button>
+          </li>
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item navbar-breakpoint-down-d-none" data-quick-action-index="0">
@@ -10350,7 +10392,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
             </div>
           </li>
           <li class="nav-item">
-            <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" title="order" type="button">
+            <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" type="button" aria-label="order-arrow" title="order">
               <svg class="lexicon-icon lexicon-icon-order-arrow" focusable="false" role="presentation">
                 <use xlink:href="../../../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow"></use>
               </svg>
