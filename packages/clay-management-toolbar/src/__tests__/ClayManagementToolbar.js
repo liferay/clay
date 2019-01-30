@@ -549,6 +549,41 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
+	it('should render a management toolbar with clear selection link in active state', () => {
+		managementToolbar = new ClayManagementToolbar({
+			clearSelectionURL: 'my-clear-selection-url',
+			selectable: true,
+			selectedItems: 1,
+			spritemap: spritemap,
+			totalItems: 10,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
+	it('should render a management toolbar with select all button in active state', () => {
+		managementToolbar = new ClayManagementToolbar({
+			selectable: true,
+			selectedItems: 10,
+			spritemap: spritemap,
+			totalItems: 10,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
+	it('should render a management toolbar with select all link in active state', () => {
+		managementToolbar = new ClayManagementToolbar({
+			selectAllURL: 'my-select-all-url',
+			selectable: true,
+			selectedItems: 10,
+			spritemap: spritemap,
+			totalItems: 10,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
 	it('should render a management toolbar with actions in active state', () => {
 		managementToolbar = new ClayManagementToolbar({
 			actionItems: [
@@ -1139,6 +1174,48 @@ describe('ClayManagementToolbar', function() {
 		expect(spy).toHaveBeenCalledWith(
 			expect.objectContaining({
 				name: 'infoButtonClicked',
+				originalEvent: expect.any(Object),
+			})
+		);
+	});
+
+	it('should render a management toolbar and emit an event on clear selection button click', () => {
+		managementToolbar = new ClayManagementToolbar({
+			selectable: true,
+			selectedItems: 1,
+			spritemap: spritemap,
+			totalItems: 10,
+		});
+
+		const spy = jest.spyOn(managementToolbar, 'emit');
+
+		managementToolbar.refs.clearSelectionButton.element.click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				name: 'clearSelectionButtonClicked',
+				originalEvent: expect.any(Object),
+			})
+		);
+	});
+
+	it('should render a management toolbar and emit an event on select all button click', () => {
+		managementToolbar = new ClayManagementToolbar({
+			selectable: true,
+			selectedItems: 10,
+			spritemap: spritemap,
+			totalItems: 10,
+		});
+
+		const spy = jest.spyOn(managementToolbar, 'emit');
+
+		managementToolbar.refs.selectAllButton.element.click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				name: 'selectAllButtonClicked',
 				originalEvent: expect.any(Object),
 			})
 		);
