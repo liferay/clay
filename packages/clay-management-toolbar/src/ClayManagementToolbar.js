@@ -484,6 +484,15 @@ ClayManagementToolbar.STATE = {
 	selectable: Config.bool().value(false),
 
 	/**
+	 * Url for select all link.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?(string|undefined)}
+	 */
+	selectAllURL: Config.string(),
+
+	/**
 	 * Number of selected items.
 	 * @default undefined
 	 * @instance
