@@ -19,6 +19,7 @@
 	{@param? _handleOpenMobileSearchClick: any}
 	{@param? _handleQuickActionClicked: any}
 	{@param? _handleSearchSearchClick: any}
+	{@param? _handleSelectAllButtonClick: any}
 	{@param? _handleSelectPageCheckboxChanged: any}
 	{@param? _handleSortingButtonClicked: any}
 	{@param? _handleViewTypeClicked: any}
@@ -98,6 +99,7 @@
 	{@param? searchInputName: string}
 	{@param? searchInputPlaceholder: string}
 	{@param? searchValue: string}
+	{@param? selectAllURL: string}
 	{@param? selectable: bool}
 	{@param? selectedItems: number}
 	{@param? showAdvancedSearch: bool}
@@ -135,9 +137,11 @@
 				{param _handleClearSelectionButtonClick: $_handleClearSelectionButtonClick /}
 				{param _handleInfoButtonClicked: $_handleInfoButtonClicked /}
 				{param _handleQuickActionClicked: $_handleQuickActionClicked /}
+				{param _handleSelectAllButtonClick: $_handleSelectAllButtonClick /}
 				{param _handleSelectPageCheckboxChanged: $_handleSelectPageCheckboxChanged /}
 				{param actionItems: $actionItems ?: [] /}
 				{param clearSelectionURL: $clearSelectionURL /}
+				{param selectAllURL: $selectAllURL /}
 				{param selectedItems: $selectedItems /}
 				{param showInfoButton: $showInfoButton /}
 				{param spritemap: $spritemap /}
@@ -210,8 +214,10 @@
 	{@param? _handleClearSelectionButtonClick: any}
 	{@param? _handleInfoButtonClicked: any}
 	{@param? _handleQuickActionClicked: any}
+	{@param? _handleSelectAllButtonClick: any}
 	{@param? _handleSelectPageCheckboxChanged: any}
 	{@param? clearSelectionURL: string}
+	{@param? selectAllURL: string}
 	{@param? selectedItems: number}
 	{@param? showInfoButton: bool}
 	{@param? totalItems: number}
@@ -280,6 +286,41 @@
 						{/call}
 					{/if}
 				</li>
+				{if $selectedItems == $totalItems}
+					<li class="nav-item nav-item-shrink">
+						{if $selectAllURL}
+							{call ClayLink.render}
+								{param elementClasses: 'nav-link' /}
+								{param href: $selectAllURL /}
+								{param label kind="html"}
+									<span class="text-truncate-inline">
+										<span class="text-truncate">
+											{msg desc=""}
+												select-all
+											{/msg}
+										</span>
+									</span>
+								{/param}
+							{/call}
+						{else}
+							{call ClayButton.render}
+								{param elementClasses: 'nav-link' /}
+								{param events: ['click': $_handleSelectAllButtonClick] /}
+								{param label kind="html"}
+									<span class="text-truncate-inline">
+										<span class="text-truncate">
+											{msg desc=""}
+												select-all
+											{/msg}
+										</span>
+									</span>
+								{/param}
+								{param style: 'unstyled' /}
+								{param type: 'button' /}
+							{/call}
+						{/if}
+					</li>
+				{/if}
 			</ul>
 
 			{let $hasActionItems: length($actionItems) > 0 /}
