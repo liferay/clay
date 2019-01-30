@@ -7,6 +7,7 @@
 	{@param spritemap: string}
 	{@param? _handleActionItemClicked: any}
 	{@param? _handleClearResultsClick: any}
+	{@param? _handleClearSelectionButtonClick: any}
 	{@param? _handleCloseMobileSearchClick: any}
 	{@param? _handleCreationButtonClicked: any}
 	{@param? _handleCreationMenuItemClicked: any}
@@ -32,6 +33,7 @@
 		type: string
 	]>}
 	{@param? clearResultsURL: string}
+	{@param? clearSelectionURL: string}
 	{@param? contentRenderer: string}
 	{@param? creationMenu: [
 		caption: string,
@@ -130,10 +132,12 @@
 		{if $isActive}
 			{call .active}
 				{param _handleActionItemClicked: $_handleActionItemClicked /}
+				{param _handleClearSelectionButtonClick: $_handleClearSelectionButtonClick /}
 				{param _handleInfoButtonClicked: $_handleInfoButtonClicked /}
 				{param _handleQuickActionClicked: $_handleQuickActionClicked /}
 				{param _handleSelectPageCheckboxChanged: $_handleSelectPageCheckboxChanged /}
 				{param actionItems: $actionItems ?: [] /}
+				{param clearSelectionURL: $clearSelectionURL /}
 				{param selectedItems: $selectedItems /}
 				{param showInfoButton: $showInfoButton /}
 				{param spritemap: $spritemap /}
@@ -203,9 +207,11 @@
 	{@param actionItems: list<?>}
 	{@param spritemap: string}
 	{@param? _handleActionItemClicked: any}
+	{@param? _handleClearSelectionButtonClick: any}
 	{@param? _handleInfoButtonClicked: any}
 	{@param? _handleQuickActionClicked: any}
 	{@param? _handleSelectPageCheckboxChanged: any}
+	{@param? clearSelectionURL: string}
 	{@param? selectedItems: number}
 	{@param? showInfoButton: bool}
 	{@param? totalItems: number}
@@ -240,6 +246,39 @@
 							{/msg}
 						</span>
 					</span>
+				</li>
+				<li class="nav-item nav-item-shrink">
+					{if $clearSelectionURL}
+						{call ClayLink.render}
+							{param elementClasses: 'nav-link' /}
+							{param href: $clearSelectionURL /}
+							{param label kind="html"}
+								<span class="text-truncate-inline">
+									<span class="text-truncate">
+										{msg desc=""}
+											clear
+										{/msg}
+									</span>
+								</span>
+							{/param}
+						{/call}
+					{else}
+						{call ClayButton.render}
+							{param elementClasses: 'nav-link' /}
+							{param events: ['click': $_handleClearSelectionButtonClick] /}
+							{param label kind="html"}
+								<span class="text-truncate-inline">
+									<span class="text-truncate">
+										{msg desc=""}
+											clear
+										{/msg}
+									</span>
+								</span>
+							{/param}
+							{param style: 'unstyled' /}
+							{param type: 'button' /}
+						{/call}
+					{/if}
 				</li>
 			</ul>
 
