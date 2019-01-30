@@ -14,6 +14,8 @@ The pillar to give colors and structure to Clay, where is the css and examples o
 
 All components that follow clay-css marking and Lexicon use cases, developed on [React.js](http://reactjs.org)
 
+> #### If you are looking to use Clay with Metal.js, please reference version [2.x](https://github.com/liferay/clay/tree/master-2.x)
+
 ### [Clayui.com](./clayui.com)
 
 Contains the source code and documentation powering [clayui.com](https://clayui.com/).
@@ -33,10 +35,10 @@ Contains the source code and documentation powering [clayui.com](https://clayui.
 
 You can find the Clay documentation on the [site](https://clayui.com/docs/components/alerts.html).
 
-* [Getting Started](https://clayui.com/docs/getting-started/introduction.html)
-* [Layout](https://clayui.com/docs/layout/grid.html)
-* [Components Library](https://clayui.com/docs/components/alerts.html)
-* [News](https://clayui.com/docs/news/)
+-   [Getting Started](https://clayui.com/docs/getting-started/introduction.html)
+-   [Layout](https://clayui.com/docs/layout/grid.html)
+-   [Components Library](https://clayui.com/docs/components/alerts.html)
+-   [News](https://clayui.com/docs/news/)
 
 You can improve by sending pull requests to this repository.
 
@@ -64,55 +66,58 @@ If you want to contribute to this project and do not know where to start [good f
 
 2. Install global dependencies:
 
-  ```
-  [sudo] npm install -g yarn
-  ```
+```
+[sudo] npm install -g yarn
+```
 
 3. Install project dependencies:
 
-  ```
-  yarn
-  ```
+```
+yarn
+```
 
 4. Install dependencies for each package and link them together:
 
-  ```
-  yarn lerna
-  ```
+```
+yarn lerna
+```
 
 5. Build all packages
 
-  ```
-  yarn build
-  ```
+```
+yarn build
+```
 
 6. Start a local server on port 4000
 
-  ```
-  yarn start
-  ```
+```
+yarn start
+```
 
 7. Run tests:
 
-  ```
-  yarn test
-  ```
+```
+yarn test
+```
 
 #### Clayui.com
 
 To contribute to the documentation and the site in general, you can try to run locally to test your changes:
 
 1. Move to the site folder
+
 ```
 cd clayui.com
 ```
 
 2. Install dependencies:
+
 ```
 yarn
 ```
 
 3. Run in development environment
+
 ```
 yarn develop
 ```
@@ -124,6 +129,7 @@ yarn site
 ```
 
 ### Important
+
 Since travis is failing on executing a11y tests due to out of date suid you need to execute `npm run pa11y` locally before sending any pr to verify we're following accessibility standars.
 
 ## License
