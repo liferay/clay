@@ -2,6 +2,8 @@
 
 Clay is Liferay's web implementation of [Lexicon Experience Language](https://lexicondesign.io/). Built with Bootstrap as a foundation, it's comprised of HTML, CSS, and JS.
 
+🚨This Branch contains the Beta version of Clay v3, if you are looking for the components in Metal.js visit the [2.x branch](https://github.com/liferay/clay/tree/master-2.x)
+
 ## Packages
 
 Clay repository follows the monorepo approach, all the major components that are the pillars of Clay are here in this repository.
@@ -13,8 +15,6 @@ The pillar to give colors and structure to Clay, where is the css and examples o
 ### [Clay Components](./packages)
 
 All components that follow clay-css marking and Lexicon use cases, developed on [React.js](http://reactjs.org)
-
-> #### If you are looking to use Clay with Metal.js, please reference version [2.x](https://github.com/liferay/clay/tree/master-2.x)
 
 ### [Clayui.com](./clayui.com)
 
@@ -54,9 +54,7 @@ Feel free to open up problems or send pull requests. We will always be looking a
 
 > Before opening a issue make sure it exists.
 
-### Good First Issues
-
-If you want to contribute to this project and do not know where to start [good first issues](https://github.com/liferay/clay/labels/good%20first%20issue) is a great place to start.
+See the [contribution guided](/CONTRIBUTING.md) for more details.
 
 ### Setup
 
@@ -127,6 +125,12 @@ If you want to test in a production environment so that you do not take risks of
 ```
 yarn site
 ```
+
+## Migration Guides
+
+Do you already have the Clay v2 components implemented in your project? These handy guides will help you perform the migration from Clay v2 to v3.
+
+-   [Migrate the Clay components from v2 to v3](https://next.clayui.com/docs/guides/migrating-from-v2-to-v3)
 
 ### Important
 
