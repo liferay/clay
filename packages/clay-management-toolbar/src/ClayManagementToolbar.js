@@ -56,6 +56,19 @@ class ClayManagementToolbar extends ClayComponent {
 	}
 
 	/**
+	 * Continues the propagation of the clear selcetion button clicked event
+	 * @param {!Event} event
+	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleClearSelectionButtonClick(event) {
+		return !this.emit({
+			name: 'clearSelectionButtonClicked',
+			originalEvent: event,
+		});
+	}
+
+	/**
 	 * Hides the search in mobile devices
 	 * @private
 	 */
@@ -280,6 +293,15 @@ ClayManagementToolbar.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	clearResultsURL: Config.string(),
+
+	/**
+	 * Url for clear selection link.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?(string|undefined)}
+	 */
+	clearSelectionURL: Config.string(),
 
 	/**
 	 * Name of the content renderer to use template variants.
