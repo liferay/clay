@@ -115,6 +115,7 @@ class ClayAutocomplete extends ClayComponent {
 
 		if (this.enableAutocomplete) {
 			this.refs.dataProvider.updateData(this._query);
+			this._handleFilteredItems(event);
 		}
 
 		return !this.emit({
