@@ -1,3 +1,8 @@
+/**
+ * © 2018 Liferay, Inc. <https://liferay.com>
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
 const path = require('path');
 const HWP = require('html-webpack-plugin');
 

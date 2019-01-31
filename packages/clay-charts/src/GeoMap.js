@@ -1,3 +1,8 @@
+/**
+ * © 2018 Liferay, Inc. <https://liferay.com>
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
 import {isServerSide} from 'metal';
 import * as d3 from 'd3';
 import React from 'react';

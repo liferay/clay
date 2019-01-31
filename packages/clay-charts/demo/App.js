@@ -1,3 +1,8 @@
+/**
+ * © 2018 Liferay, Inc. <https://liferay.com>
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ClayChart, {BarChart, BubbleChart} from '../src/index';
@@ -8,10 +13,9 @@ const COLUMNS = [['data1', 100, 20, 30], ['data2', 20, 70, 100]];
 
 /**
  * Application for rendering demos
- * @augments React.Component
+ * @return {React.Component}
  */
-class App extends React.Component {
-	render() {
+function App() {
 		return (
 			<div style={{maxWidth: 700, margin: '0 auto'}}>
 				<h1>BASIC:</h1>

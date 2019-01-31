@@ -12,12 +12,18 @@
 		}
 	},
 	"extends": "liferay",
-	"plugins": ["no-for-of-loops", "react"],
+	"plugins": ["notice", "no-for-of-loops", "react"],
 	"rules": {
 		"no-for-of-loops/no-for-of-loops": 2,
 		"no-unused-vars": ["error", {"ignoreRestSiblings": true}],
 		"react/jsx-uses-react": "error",
 		"react/jsx-uses-vars": "error",
-		"no-mixed-spaces-and-tabs": ["error", "smart-tabs"]
+		"no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+		"notice/notice": [
+			"error",
+			{
+				"templateFile": "copyright.js"
+			}
+		]
 	}
 }

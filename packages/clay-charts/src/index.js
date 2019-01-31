@@ -1,3 +1,8 @@
+/**
+ * © 2018 Liferay, Inc. <https://liferay.com>
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
 import React from 'react';
 import * as ReactBillboard from 'react-billboardjs';
 import ClayChart from './Chart';
