@@ -242,15 +242,21 @@
 				</li>
 				<li class="nav-item">
 					<span class="navbar-text">
-						{msg desc="Says how many items of the total are selected"}
-							{$selectedItems}-of-{$totalItems}
-						{/msg}
-						{sp}
-						<span class="navbar-breakpoint-down-d-none">
-							{msg desc="Items selected"}
-								items-selected
+						{if $selectedItems == $totalItems}
+							{msg desc="All selected"}
+								all-selected
 							{/msg}
-						</span>
+						{else}
+							{msg desc="Says how many items of the total are selected"}
+								{$selectedItems}-of-{$totalItems}
+							{/msg}
+							{sp}
+							<span class="navbar-breakpoint-down-d-none">
+								{msg desc="Items selected"}
+									items-selected
+								{/msg}
+							</span>
+						{/if}
 					</span>
 				</li>
 				<li class="nav-item nav-item-shrink">
@@ -261,7 +267,7 @@
 							{param label kind="html"}
 								<span class="text-truncate-inline">
 									<span class="text-truncate">
-										{msg desc=""}
+										{msg desc="Clear"}
 											clear
 										{/msg}
 									</span>
@@ -275,7 +281,7 @@
 							{param label kind="html"}
 								<span class="text-truncate-inline">
 									<span class="text-truncate">
-										{msg desc=""}
+										{msg desc="Clear"}
 											clear
 										{/msg}
 									</span>
