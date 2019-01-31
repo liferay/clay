@@ -691,7 +691,7 @@ exports[`ClayManagementToolbar should render a management toolbar with classes i
 `;
 
 exports[`ClayManagementToolbar should render a management toolbar with clear selection link in active state 1`] = `
-<div id="myId">
+<div>
   <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
     <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav navbar-nav-expand">
@@ -2213,7 +2213,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
 `;
 
 exports[`ClayManagementToolbar should render a management toolbar with select all button in active state 1`] = `
-<div id="myId">
+<div>
   <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
     <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav navbar-nav-expand">
@@ -2228,9 +2228,7 @@ exports[`ClayManagementToolbar should render a management toolbar with select al
           </div>
         </li>
         <li class="nav-item">
-          <span class="navbar-text">10-of-10
-            <span class="navbar-breakpoint-down-d-none">items-selected</span>
-          </span>
+          <span class="navbar-text">all-selected</span>
         </li>
         <li class="nav-item nav-item-shrink">
           <button class="btn nav-link btn-unstyled" type="button">
@@ -2253,7 +2251,7 @@ exports[`ClayManagementToolbar should render a management toolbar with select al
 `;
 
 exports[`ClayManagementToolbar should render a management toolbar with select all link in active state 1`] = `
-<div id="myId">
+<div>
   <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
     <div class="container-fluid container-fluid-max-xl">
       <ul class="navbar-nav navbar-nav-expand">
@@ -2268,9 +2266,7 @@ exports[`ClayManagementToolbar should render a management toolbar with select al
           </div>
         </li>
         <li class="nav-item">
-          <span class="navbar-text">10-of-10
-            <span class="navbar-breakpoint-down-d-none">items-selected</span>
-          </span>
+          <span class="navbar-text">all-selected</span>
         </li>
         <li class="nav-item nav-item-shrink">
           <button class="btn nav-link btn-unstyled" type="button">
