@@ -8,10 +8,20 @@ For contributions with Clay v2, go to branch v2 and follow the [contribution gui
 
 #### Table of Contents
 
--   [What Should I Know Before I Get Started?](#what-should-i-know-before-i-get-started) - [Clay and Packages](#clay-and-packages)
--   [How Can I Contribute?](#how-can-i-contribute?) - [Reporting Bugs](#reporting-bugs) - [Your First Pull Request](#your-first-pull-request) - [Proposing a Change](#proposing-a-change) - [Sending a Pull Request](#sending-a-pull-request)
--   [Style Guides](#style-guides) - [Git Commit Messages](#git-commit-messages) - [JavaScript Style Guide](#javascript-style-guide) - [CSS Guidelines](#css-guidelines) - [Documentation Style Guide](#documentation-style-guide)
--   [Additional Notes](#additional-notes) - [Issue Labels](#issue-labels)
+-   [What Should I Know Before I Get Started?](#what-should-i-know-before-i-get-started)
+-   [Clay and Packages](#clay-and-packages)
+-   [How Can I Contribute?](#how-can-i-contribute?)
+-   [Reporting Bugs](#reporting-bugs)
+-   [Your First Pull Request](#your-first-pull-request)
+-   [Proposing a Change](#proposing-a-change)
+-   [Sending a Pull Request](#sending-a-pull-request)
+-   [Style Guides](#style-guides)
+-   [Git Commit Messages](#git-commit-messages)
+-   [JavaScript Style Guide](#javascript-style-guide)
+-   [CSS Guidelines](#css-guidelines)
+-   [Documentation Style Guide](#documentation-style-guide)
+-   [Additional Notes](#additional-notes)
+-   [Issue Labels](#issue-labels)
 
 ## What Should I Know Before I Get Started?
 
