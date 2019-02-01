@@ -396,7 +396,13 @@ ClayMultiSelect.STATE = {
 	 * @memberof ClayMultiSelect
 	 * @type {?bool}
 	 */
-	enableAutocomplete: Config.bool().value(true),
+	enableAutocomplete: Config.validator(value => {
+		if (value) {
+			console.warn(
+				'🚨 `enableAutocomplete` has been deprecated and will be removed in the next major version.'
+			);
+		}
+	}),
 
 	/**
 	 * List of filtered items for suggestion or autocomplete.
