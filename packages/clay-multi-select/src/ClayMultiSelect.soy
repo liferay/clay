@@ -35,7 +35,7 @@
 		referrer: string,
 		body: []
 	]}
-	{@param? requestPolling: number}
+	{@param? pollingInterval: number}
 	{@param? requestRetries: number}
 	{@param? requestTimeout: number}
 	{@param? selectedItems: list<?>}
@@ -76,7 +76,7 @@
 			{param inputName: $inputName /}
 			{param labelLocator: $labelLocator /}
 			{param requestOptions: $requestOptions /}
-			{param requestPolling: $requestPolling /}
+			{param pollingInterval: $pollingInterval /}
 			{param requestRetries: $requestRetries /}
 			{param requestTimeout: $requestTimeout /}
 			{param selectedItems: $selectedItems /}
@@ -117,7 +117,7 @@
 		referrer: string,
 		body: []
 	]}
-	{@param? requestPolling: number}
+	{@param? pollingInterval: number}
 	{@param? requestRetries: number}
 	{@param? requestTimeout: number}
 	{@param? selectedItems: list<?>}
@@ -145,7 +145,7 @@
 				{param inputElementClasses: 'form-control-inset' /}
 				{param ref: 'autocomplete' /}
 				{param requestOptions: $requestOptions /}
-				{param requestPolling: $requestPolling /}
+				{param pollingInterval: $pollingInterval /}
 				{param requestRetries: $requestRetries /}
 				{param requestTimeout: $requestTimeout /}
 				{param unstable_content kind="html"}

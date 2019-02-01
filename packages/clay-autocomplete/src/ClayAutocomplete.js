@@ -370,6 +370,15 @@ ClayAutocomplete.STATE = {
 	inputValue: Config.string(),
 
 	/**
+	 * Flag to define how often to refetch data (ms)
+	 * @instance
+	 * @default 0
+	 * @memberof ClayAutocomplete
+	 * @type {?(number|undefined)}
+	 */
+	pollingInterval: Config.number().value(0),
+
+	/**
 	 * Set ups the request options
 	 * @default undefined
 	 * @instance
@@ -389,12 +398,18 @@ ClayAutocomplete.STATE = {
 
 	/**
 	 * Flag to define how often to refetch data (ms)
-	 * @default 0
 	 * @instance
+	 * @default 0
 	 * @memberof ClayAutocomplete
 	 * @type {?(number|undefined)}
 	 */
-	requestPolling: Config.number().value(0),
+	requestPolling: Config.validator(value => {
+		if (value) {
+			console.warn(
+				'🚨 `requestPolling` has been renamed to `pollingInterval` and will be deprecated and removed in the next release.'
+			);
+		}
+	}),
 
 	/**
 	 * Define how many attempts will be made when the request fails
