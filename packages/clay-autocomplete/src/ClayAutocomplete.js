@@ -54,19 +54,17 @@ class ClayAutocomplete extends ClayComponent {
 	_defaultInputChange(event) {
 		this._query = event.data.value;
 
-		if (this.enableAutocomplete) {			
-			if (this._query) {
-				if (isFunction(this.dataSource)) {
-					this.refs.dataProvider.updateData(this._query);
-				} else {
-					this.filteredItems = this.refs.dataProvider.filter(
-						this._query,
-						this.extractData
-						);
-				}
+		if (this._query) {
+			if (isFunction(this.dataSource)) {
+				this.refs.dataProvider.updateData(this._query);
 			} else {
-				this.filteredItems = [];
+				this.filteredItems = this.refs.dataProvider.filter(
+					this._query,
+					this.extractData
+					);
 			}
+		} else {
+			this.filteredItems = [];
 		}
 	}
 
@@ -302,7 +300,13 @@ ClayAutocomplete.STATE = {
 	 * @memberof ClayAutocomplete
 	 * @type {?bool}
 	 */
-	enableAutocomplete: Config.bool().value(true),
+	enableAutocomplete: Config.validator(value => {
+		if (value) {
+			console.warn(
+				'🚨 `enableAutocomplete` has been deprecated and will be removed in the next major version.'
+			);
+		}
+	}),
 
 	/**
 	 * Extracts from the data the item to be compared in autocomplete.

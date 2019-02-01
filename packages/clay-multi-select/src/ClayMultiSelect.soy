@@ -18,7 +18,7 @@
 	{@param? contentRenderer: string}
 	{@param? debounceTime: number}
 	{@param? elementClasses: string}
-	{@param? enableAutocomplete: bool}
+
 	{@param? filteredItems: list<?>}
 	{@param? id: string}
 	{@param? initialData: []|list<?>}
@@ -69,7 +69,6 @@
 			{param contentRenderer: $contentRenderer ?: ''/}
 			{param dataSource: $dataSource /}
 			{param debounceTime: $debounceTime /}
-			{param enableAutocomplete: $enableAutocomplete /}
 			{param filteredItems: $filteredItems /}
 			{param helpText: $helpText /}
 			{param initialData: $initialData /}
@@ -102,7 +101,7 @@
 	{@param? _removeFocusedItem: any}
 	{@param? contentRenderer: string}
 	{@param? debounceTime: number}
-	{@param? enableAutocomplete: bool}
+
 	{@param? filteredItems: list<?>}
 	{@param? initialData: []|list<?>}
 	{@param? inputName: string}
@@ -129,7 +128,6 @@
 				{param dataSource: $dataSource /}
 				{param debounceTime: $debounceTime /}
 				{param elementClasses: 'form-control form-control-tag-group' /}
-				{param enableAutocomplete: $enableAutocomplete /}
 				{param events: [
 					'dataChange': $_handleDataChange,
 					'filteredItemsChanged': $_handleFilteredItemsChange,
