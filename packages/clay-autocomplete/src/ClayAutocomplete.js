@@ -12,6 +12,27 @@ import templates from './ClayAutocomplete.soy.js';
  */
 class ClayAutocomplete extends ClayComponent {
 	/**
+	 * @inheritDoc
+	 */
+	attached() {
+		this._dropdownItemFocused = null;
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	disposed() {
+		this._dropdownItemFocused = null;
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	syncFilteredItems() {
+		this._dropdownItemFocused = null;
+	}
+
+	/**
 	 * Continues the propagation of the data change event
 	 * @param {!Event} event
 	 * @protected
@@ -193,27 +214,6 @@ class ClayAutocomplete extends ClayComponent {
 				elements[this._dropdownItemFocused].focus();
 			}
 		}
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	attached() {
-		this._dropdownItemFocused = null;
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	disposed() {
-		this._dropdownItemFocused = null;
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	syncFilteredItems() {
-		this._dropdownItemFocused = null;
 	}
 }
 
