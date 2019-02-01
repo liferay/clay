@@ -78,7 +78,7 @@ class ClayDataProvider extends ClayComponent {
 	 * @protected
 	 */
 	_setPolling() {
-		if (this.requestPolling > 0) {
+		if (this.pollingInterval > 0) {
 			if (this._pollingInterval) {
 				clearInterval(this._pollingInterval);
 			}
@@ -86,7 +86,7 @@ class ClayDataProvider extends ClayComponent {
 			this._pollingInterval = setInterval(() => {
 				this._isResolvedData = false;
 				this._fetchData();
-			}, this.requestPolling);
+			}, this.pollingInterval);
 		}
 	}
 
@@ -278,6 +278,15 @@ ClayDataProvider.STATE = {
 	initialData: Config.oneOfType([Config.array(), Config.object()]),
 
 	/**
+	 * Flag to define how often to refetch data (ms)
+	 * @instance
+	 * @default 0
+	 * @memberof ClayDataProvider
+	 * @type {?(number|undefined)}
+	 */
+	pollingInterval: Config.number().value(0),
+
+	/**
 	 * Set ups the request options
 	 * @instance
 	 * @default undefined
@@ -302,7 +311,13 @@ ClayDataProvider.STATE = {
 	 * @memberof ClayDataProvider
 	 * @type {?(number|undefined)}
 	 */
-	requestPolling: Config.number().value(0),
+	requestPolling: Config.validator(value => {
+		if (value) {
+			console.warn(
+				'🚨 `requestPolling` has been renamed to `pollingInterval` and will be deprecated and removed in the next release.'
+			);
+		}
+	}),
 
 	/**
 	 * Define how many attempts will be made when the request fails

@@ -444,6 +444,15 @@ ClayMultiSelect.STATE = {
 	inputName: Config.string().value('selectedItems'),
 
 	/**
+	 * Flag to define how often to refetch data (ms)
+	 * @instance
+	 * @default 0
+	 * @memberof ClayMultiSelect
+	 * @type {?(number|undefined)}
+	 */
+	pollingInterval: Config.number().value(0),
+
+	/**
 	 * Set ups the request options
 	 * @instance
 	 * @default undefined
@@ -468,7 +477,13 @@ ClayMultiSelect.STATE = {
 	 * @memberof ClayMultiSelect
 	 * @type {?(number|undefined)}
 	 */
-	requestPolling: Config.number().value(0),
+	requestPolling: Config.validator(value => {
+		if (value) {
+			console.warn(
+				'🚨 `requestPolling` has been renamed to `pollingInterval` and will be deprecated and removed in the next release.'
+			);
+		}
+	}),
 
 	/**
 	 * Define how many attempts will be made when the request fails
