@@ -38,7 +38,6 @@ describe('metal-clay-generator:app', function() {
 			'src/MyComponent.js',
 			/Soy\.register\(MyComponent, templates\)/
 		);
-		assert.fileContent('src/MyComponent.js', /export {MyComponent}/);
 		assert.fileContent(
 			'src/MyComponent.js',
 			/export default MyComponent/
