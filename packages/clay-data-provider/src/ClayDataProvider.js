@@ -43,7 +43,10 @@ class ClayDataProvider extends ClayComponent {
 				this._dataSource = res;
 				this._isResolvedData = true;
 				this._handleDataChange();
-				this._setPolling();
+				
+				if (this.inputMode === 'polling') {
+					this._setPolling();
+				}
 			})
 			.catch(err => this._setRequestRetries(query, err, requestRetries));
 	}
@@ -148,7 +151,7 @@ class ClayDataProvider extends ClayComponent {
 			this.updateData();
 		}
 
-		if (this.debounceTime) {
+		if (this.inputMode === 'userInput') {
 			this.updateData = debounce(
 				this.updateData.bind(this),
 				this.debounceTime
@@ -276,6 +279,16 @@ ClayDataProvider.STATE = {
 	 * @type {?(object|array)}
 	 */
 	initialData: Config.oneOfType([Config.array(), Config.object()]),
+
+	/**
+	 * Specifies explicitly if request needs to be made with debounce
+	 * (userInput) or with polling (polling)
+	 * @instance
+	 * @default undefined
+	 * @memberof ClayDataProvider
+	 * @type {?(object|array)}
+	 */
+	inputMode: Config.oneOf(['polling', 'userInput']).value('userInput'),
 
 	/**
 	 * Flag to define how often to refetch data (ms)

@@ -30,6 +30,7 @@
 		body: []
 	]}
 	{@param? pollingInterval: number}
+	{@param? requestInputMode: string}
 	{@param? requestRetries: number}
 	{@param? requestTimeout: number}
 	{@param? unstable_content: html}
@@ -73,6 +74,7 @@
 			{param requestOptions: $requestOptions /}
 			{param pollingInterval: $pollingInterval /}
 			{param requestRetries: $requestRetries /}
+			{param requestInputMode: $requestInputMode /}
 			{param requestTimeout: $requestTimeout /}
 		{/call}
 	</div>
@@ -142,6 +144,7 @@
 		body: []
 	]}
 	{@param? pollingInterval: number}
+	{@param? requestInputMode: string}
 	{@param? requestRetries: number}
 	{@param? requestTimeout: number}
 
@@ -176,6 +179,7 @@
 		{param requestOptions: $requestOptions /}
 		{param pollingInterval: $pollingInterval /}
 		{param requestRetries: $requestRetries /}
+		{param requestInputMode: $requestInputMode /}
 		{param requestTimeout: $requestTimeout /}
 	{/call}
 {/template}

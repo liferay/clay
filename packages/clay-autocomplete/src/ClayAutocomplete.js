@@ -383,6 +383,16 @@ ClayAutocomplete.STATE = {
 	pollingInterval: Config.number().value(0),
 
 	/**
+	 * Specifies explicitly if request needs to be made with debounce
+	 * (userInput) or with polling (polling)
+	 * @instance
+	 * @default undefined
+	 * @memberof ClayAutocomplete
+	 * @type {?(object|array)}
+	 */
+	requestInputMode: Config.oneOf(['polling', 'userInput']).value('userInput'),
+
+	/**
 	 * Set ups the request options
 	 * @default undefined
 	 * @instance
