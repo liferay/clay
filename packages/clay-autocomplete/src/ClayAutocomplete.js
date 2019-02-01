@@ -16,6 +16,8 @@ class ClayAutocomplete extends ClayComponent {
 	 */
 	attached() {
 		this._dropdownItemFocused = null;
+		
+		this.addListener('inputChange', this._defaultInputChange, true);
 	}
 
 	/**
@@ -30,6 +32,24 @@ class ClayAutocomplete extends ClayComponent {
 	 */
 	syncFilteredItems() {
 		this._dropdownItemFocused = null;
+	}
+
+	/**
+	 * Filters the items according to received input
+	 * @param {!Event} event
+	 * @private
+	 */
+	_defaultInputChange(event) {
+		const query = event.data.value;
+
+		if (query) {
+			this.filteredItems = this.refs.dataProvider.filter(
+				query,
+				this.extractData
+			);
+		} else {
+			this.filteredItems = [];
+		}
 	}
 
 	/**
@@ -54,30 +74,6 @@ class ClayAutocomplete extends ClayComponent {
 	 */
 	_handleDropdownItemClick(event) {
 		return this._handleItemSelected(event);
-	}
-
-	/**
-	 * Handles the filtered items event and continues to propagate.
-	 * @param {!Event} event
-	 * @param {!string} query
-	 * @protected
-	 * @return {Boolean} If the event has been prevented or not.
-	 */
-	_handleFilteredItems(event, query) {
-		if (query) {
-			this.filteredItems = this.refs.dataProvider.filter(
-				query,
-				this.extractData
-			);
-		} else {
-			this.filteredItems = [];
-		}
-
-		return !this.emit({
-			data: this.filteredItems,
-			name: 'filteredItems',
-			originalEvent: event,
-		});
 	}
 
 	/**
@@ -130,18 +126,12 @@ class ClayAutocomplete extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleOnInput(event) {
-		const query = event.target.value;
-
-		if (this.enableAutocomplete) {
-			this._handleFilteredItems(event, query);
-		}
-
 		return !this.emit({
 			data: {
 				value: event.target.value,
 				char: event.data,
 			},
-			name: 'queryChange',
+			name: 'inputChange',
 			originalEvent: event,
 		});
 	}
