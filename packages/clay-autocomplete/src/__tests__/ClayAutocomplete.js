@@ -284,7 +284,6 @@ describe('ClayAutocomplete', function() {
 			extractData: elem => elem.name,
 		});
 
-		const spy = jest.spyOn(component, 'emit');
 		const {input} = component.refs;
 
 		input.value = 'e';

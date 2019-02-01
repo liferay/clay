@@ -17,7 +17,7 @@ class ClayAutocomplete extends ClayComponent {
 	 */
 	attached() {
 		this._dropdownItemFocused = null;
-		
+
 		this.addListener('dataChange', this._defaultDataChange, true);
 		this.addListener('inputChange', this._defaultInputChange, true);
 	}
@@ -38,13 +38,14 @@ class ClayAutocomplete extends ClayComponent {
 
 	/**
 	 * Sets filtered items with received data
-	 * @param {!Event} event
 	 * @private
 	 */
-	_defaultDataChange(event) {
+	_defaultDataChange() {
 		if (this._query) {
-			this.filteredItems = this.refs.dataProvider.filter(this._query,
-				this.extractData);
+			this.filteredItems = this.refs.dataProvider.filter(
+				this._query,
+				this.extractData
+			);
 		} else {
 			this.filteredItems = [];
 		}
@@ -55,7 +56,7 @@ class ClayAutocomplete extends ClayComponent {
 	 * @param {!Event} event
 	 * @private
 	 */
-	_defaultInputChange(event) {
+	_defaultInputChange(event) {
 		this._query = event.data.value;
 
 		if (this._query) {
@@ -65,7 +66,7 @@ class ClayAutocomplete extends ClayComponent {
 				this.filteredItems = this.refs.dataProvider.filter(
 					this._query,
 					this.extractData
-					);
+				);
 			}
 		} else {
 			this.filteredItems = [];

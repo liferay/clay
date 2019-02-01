@@ -1,6 +1,6 @@
 import {cancelDebounce, debounce} from 'metal-debounce';
 import {Config} from 'metal-state';
-import {isObject, isString, isFunction} from 'metal';
+import {isObject, isFunction} from 'metal';
 import {match, timeout} from './utils';
 import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
@@ -15,6 +15,7 @@ import templates from './ClayDataProvider.soy.js';
 class ClayDataProvider extends ClayComponent {
 	/**
 	 * Makes the request and defines initial data while it is requesting.
+	 * @param {!string} query
 	 * @param {!number} requestRetries
 	 * @protected
 	 */
@@ -43,7 +44,7 @@ class ClayDataProvider extends ClayComponent {
 				this._dataSource = res;
 				this._isResolvedData = true;
 				this._handleDataChange();
-				
+
 				if (this.inputMode === 'polling') {
 					this._setPolling();
 				}
@@ -72,7 +73,7 @@ class ClayDataProvider extends ClayComponent {
 		if (Array.isArray(data) || isObject(data)) {
 			return true;
 		}
-		
+
 		return false;
 	}
 

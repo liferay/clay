@@ -85,7 +85,6 @@ class ClayMultiSelect extends ClayComponent {
 	 * Handles changes in filteredItems and synchronizes with state.
 	 * @param {!Event} event
 	 * @protected
-	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleFilteredItemsChange(event) {
 		if (event.newVal !== event.prevVal) {
@@ -369,7 +368,7 @@ ClayMultiSelect.STATE = {
 	 * @type {?(number)}
 	 */
 	debounceTime: Config.number().value(200),
-	
+
 	/**
 	 * Object that wires events with default listeners
 	 * @default undefined
