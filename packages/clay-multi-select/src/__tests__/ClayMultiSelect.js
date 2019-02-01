@@ -197,32 +197,7 @@ describe('ClayMultiSelect', function() {
 					data: {
 						value: 'foo',
 					},
-					name: 'queryChange',
-					originalEvent: expect.any(Object),
-				})
-			);
-		});
-
-		it('should emit an event when items are filtered', () => {
-			component = new ClayMultiSelect({
-				dataSource,
-				helpText,
-				spritemap,
-			});
-
-			const spy = jest.spyOn(component, 'emit');
-			const {input} = component.refs.autocomplete.refs;
-
-			input.value = 'bre';
-			triggerEvent(input, 'input', {data: 'e'});
-
-			jest.runAllTimers();
-
-			expect(spy).toHaveBeenCalled();
-			expect(spy).toHaveBeenCalledWith(
-				expect.objectContaining({
-					data: expect.any(Object),
-					name: 'filteredItems',
+					name: 'inputChange',
 					originalEvent: expect.any(Object),
 				})
 			);
