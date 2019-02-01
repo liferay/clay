@@ -4,7 +4,7 @@
  * This renders the component's whole content.
  */
 {template .render}
-	{@param dataSource: string|[]|list<?>}
+	{@param dataSource: string|[]|list<?>|any}
 	{@param? _handleDataChange: any}
 	{@param? _handleDropdownItemClick: any}
 	{@param? _handleOnBlur: any}
@@ -125,7 +125,7 @@
  * This render the dropdown content.
  */
 {template .dropdown}
-	{@param dataSource: string|[]|list<?>}
+	{@param dataSource: string|[]|list<?>|any}
 	{@param? _handleDataChange: any}
 	{@param? _handleDropdownItemClick: any}
 	{@param? contentRenderer: string}

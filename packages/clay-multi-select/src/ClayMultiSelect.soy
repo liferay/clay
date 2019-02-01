@@ -16,6 +16,7 @@
 	{@param? _handleOnKeydown: any}
 	{@param? _removeFocusedItem: any}
 	{@param? contentRenderer: string}
+	{@param? debounceTime: number}
 	{@param? elementClasses: string}
 	{@param? enableAutocomplete: bool}
 	{@param? filteredItems: list<?>}
@@ -67,6 +68,7 @@
 			{param _removeFocusedItem: $_removeFocusedItem /}
 			{param contentRenderer: $contentRenderer ?: ''/}
 			{param dataSource: $dataSource /}
+			{param debounceTime: $debounceTime /}
 			{param enableAutocomplete: $enableAutocomplete /}
 			{param filteredItems: $filteredItems /}
 			{param helpText: $helpText /}
@@ -99,6 +101,7 @@
 	{@param? _handleOnKeydown: any}
 	{@param? _removeFocusedItem: any}
 	{@param? contentRenderer: string}
+	{@param? debounceTime: number}
 	{@param? enableAutocomplete: bool}
 	{@param? filteredItems: list<?>}
 	{@param? initialData: []|list<?>}
@@ -124,6 +127,7 @@
 			{call ClayAutocomplete.render}
 				{param contentRenderer: $contentRenderer /}
 				{param dataSource: $dataSource /}
+				{param debounceTime: $debounceTime /}
 				{param elementClasses: 'form-control form-control-tag-group' /}
 				{param enableAutocomplete: $enableAutocomplete /}
 				{param events: [

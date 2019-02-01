@@ -1,5 +1,6 @@
+import {cancelDebounce, debounce} from 'metal-debounce';
 import {Config} from 'metal-state';
-import {isObject, isString} from 'metal';
+import {isObject, isString, isFunction} from 'metal';
 import {match, timeout} from './utils';
 import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
@@ -17,7 +18,7 @@ class ClayDataProvider extends ClayComponent {
 	 * @param {!number} requestRetries
 	 * @protected
 	 */
-	_fetchData(requestRetries = 0) {
+	updateData(query, requestRetries = 0) {
 		if (
 			this.initialData &&
 			!this._pollingInterval &&
@@ -27,18 +28,24 @@ class ClayDataProvider extends ClayComponent {
 			this._handleDataChange();
 		}
 
-		timeout(
-			this.requestTimeout,
-			fetch(this.dataSource, this.requestOptions)
-		)
-			.then(res => res.json())
+		let promise;
+
+		if (isFunction(this.dataSource)) {
+			promise = this.dataSource(query);
+		} else {
+			promise = fetch(this.dataSource, this.requestOptions).then(res =>
+				res.json()
+			);
+		}
+
+		timeout(this.requestTimeout, promise)
 			.then(res => {
 				this._dataSource = res;
 				this._isResolvedData = true;
 				this._handleDataChange();
 				this._setPolling();
 			})
-			.catch(err => this._setRequestRetries(err, requestRetries));
+			.catch(err => this._setRequestRetries(query, err, requestRetries));
 	}
 
 	/**
@@ -61,9 +68,9 @@ class ClayDataProvider extends ClayComponent {
 	_hasData(data) {
 		if (Array.isArray(data) || isObject(data)) {
 			return true;
-		} else if (isString(data)) {
-			return false;
 		}
+		
+		return false;
 	}
 
 	/**
@@ -85,11 +92,16 @@ class ClayDataProvider extends ClayComponent {
 
 	/**
 	 * Sets up the request retries.
+	 * @param {!string} query
 	 * @param {!string} err
 	 * @param {!number} requestRetries
 	 * @protected
 	 */
-	_setRequestRetries(err, requestRetries) {
+	_setRequestRetries(query, err, requestRetries) {
+		if (this.isDisposed()) {
+			return;
+		}
+
 		if (this.requestRetries > 0 && requestRetries < this.requestRetries) {
 			console.error(
 				`DataProvider: (${requestRetries + 1}/${
@@ -98,7 +110,7 @@ class ClayDataProvider extends ClayComponent {
 				err
 			);
 
-			this._fetchData(requestRetries + 1);
+			this.updateData(query, requestRetries + 1);
 		} else {
 			console.error('DataProvider: Error making the requisition', err);
 		}
@@ -133,7 +145,14 @@ class ClayDataProvider extends ClayComponent {
 			this._dataSource = this.dataSource;
 			this._isResolvedData = true;
 		} else {
-			this._fetchData();
+			this.updateData();
+		}
+
+		if (this.debounceTime) {
+			this.updateData = debounce(
+				this.updateData.bind(this),
+				this.debounceTime
+			);
 		}
 	}
 
@@ -145,6 +164,8 @@ class ClayDataProvider extends ClayComponent {
 			clearInterval(this._pollingInterval);
 			this._pollingInterval = null;
 		}
+
+		cancelDebounce(this.updateData);
 	}
 
 	/**
@@ -196,7 +217,11 @@ ClayDataProvider.STATE = {
 	 * @memberof ClayDataProvider
 	 * @type {?(object|array)}
 	 */
-	_dataSource: Config.oneOfType([Config.array(), Config.object()]).internal(),
+	_dataSource: Config.oneOfType([
+		Config.array(),
+		Config.func(),
+		Config.object(),
+	]).internal(),
 
 	/**
 	 * The content renderer.
@@ -217,18 +242,31 @@ ClayDataProvider.STATE = {
 	data: Config.object(),
 
 	/**
-	 * The array of data items that the data source contains or
-	 * the URL for the data provider to request.
+	 * The array of data items that the data source contains,
+	 * the URL for the data provider to request, or a function
+	 * that receives the query and returns a promise with the
+	 * elements.
+	 *
 	 * @instance
 	 * @default undefined
 	 * @memberof ClayDataProvider
-	 * @type {!(string|object|array)}
+	 * @type {!(string|object|array|function)}
 	 */
 	dataSource: Config.oneOfType([
 		Config.array(),
+		Config.func(),
 		Config.object(),
 		Config.string(),
 	]).required(),
+
+	/**
+	 * Set the request debounce time
+	 * @instance
+	 * @default 200
+	 * @memberof ClayDataProvider
+	 * @type {?(number)}
+	 */
+	debounceTime: Config.number().value(200),
 
 	/**
 	 * Set some initial data while the first request is being made

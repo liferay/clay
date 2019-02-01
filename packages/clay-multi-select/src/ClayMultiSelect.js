@@ -349,19 +349,31 @@ ClayMultiSelect.STATE = {
 	data: Config.object(),
 
 	/**
-	 * The array of data items that the data source contains or
-	 * the URL for the data provider to request.
+	 * The array of data items that the data source contains,
+	 * the URL for the data provider to request, or a function
+	 * that receives the query and returns a promise with the
+	 * elements.
 	 * @instance
 	 * @default undefined
-	 * @memberof ClayMultiSelect
-	 * @type {!(string|object|array)}
+	 * @memberof ClayDataProvider
+	 * @type {!(string|object|array|function)}
 	 */
 	dataSource: Config.oneOfType([
-		Config.string(),
-		Config.object(),
 		Config.array(),
+		Config.func(),
+		Config.object(),
+		Config.string(),
 	]).required(),
 
+	/**
+	 * Set the request debounce time
+	 * @instance
+	 * @default 200
+	 * @memberof ClayDataProvider
+	 * @type {?(number)}
+	 */
+	debounceTime: Config.number().value(200),
+	
 	/**
 	 * Object that wires events with default listeners
 	 * @default undefined
