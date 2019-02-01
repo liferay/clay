@@ -42,8 +42,12 @@ class ClayAutocomplete extends ClayComponent {
 	 * @private
 	 */
 	_defaultDataChange(event) {
-		this.filteredItems = this.refs.dataProvider.filter(this._query,
-			this.extractData);
+		if (this._query) {
+			this.filteredItems = this.refs.dataProvider.filter(this._query,
+				this.extractData);
+		} else {
+			this.filteredItems = [];
+		}
 	}
 
 	/**
