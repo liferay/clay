@@ -1,5 +1,6 @@
 import 'clay-data-provider';
 import {Config} from 'metal-state';
+import {isFunction} from 'metal';
 import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
@@ -17,6 +18,7 @@ class ClayAutocomplete extends ClayComponent {
 	attached() {
 		this._dropdownItemFocused = null;
 		
+		this.addListener('dataChange', this._defaultDataChange, true);
 		this.addListener('inputChange', this._defaultInputChange, true);
 	}
 
@@ -35,20 +37,36 @@ class ClayAutocomplete extends ClayComponent {
 	}
 
 	/**
+	 * Sets filtered items with received data
+	 * @param {!Event} event
+	 * @private
+	 */
+	_defaultDataChange(event) {
+		this.filteredItems = this.refs.dataProvider.filter(this._query,
+			this.extractData);
+	}
+
+	/**
 	 * Filters the items according to received input
 	 * @param {!Event} event
 	 * @private
 	 */
 	_defaultInputChange(event) {
-		const query = event.data.value;
+		this._query = event.data.value;
 
-		if (query) {
-			this.filteredItems = this.refs.dataProvider.filter(
-				query,
-				this.extractData
-			);
-		} else {
-			this.filteredItems = [];
+		if (this.enableAutocomplete) {			
+			if (this._query) {
+				if (isFunction(this.dataSource)) {
+					this.refs.dataProvider.updateData(this._query);
+				} else {
+					this.filteredItems = this.refs.dataProvider.filter(
+						this._query,
+						this.extractData
+						);
+				}
+			} else {
+				this.filteredItems = [];
+			}
 		}
 	}
 
