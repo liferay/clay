@@ -19,6 +19,8 @@
 	{@param? inputElementClasses: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
+	{@param? pollingInterval: number}
+	{@param? requestInputMode: string}
 	{@param? requestOptions: [
 		method: string,
 		mode: string,
@@ -29,8 +31,6 @@
 		referrer: string,
 		body: []
 	]}
-	{@param? pollingInterval: number}
-	{@param? requestInputMode: string}
 	{@param? requestRetries: number}
 	{@param? requestTimeout: number}
 	{@param? unstable_content: html}
@@ -71,10 +71,10 @@
 			{param dataSource: $dataSource /}
 			{param filteredItems: $filteredItems /}
 			{param initialData: $initialData /}
-			{param requestOptions: $requestOptions /}
 			{param pollingInterval: $pollingInterval /}
-			{param requestRetries: $requestRetries /}
 			{param requestInputMode: $requestInputMode /}
+			{param requestOptions: $requestOptions /}
+			{param requestRetries: $requestRetries /}
 			{param requestTimeout: $requestTimeout /}
 		{/call}
 	</div>
@@ -133,6 +133,8 @@
 	{@param? contentRenderer: string}
 	{@param? filteredItems: list<?>}
 	{@param? initialData: []|list<?>}
+	{@param? pollingInterval: number}
+	{@param? requestInputMode: string}
 	{@param? requestOptions: [
 		method: string,
 		mode: string,
@@ -143,8 +145,6 @@
 		referrer: string,
 		body: []
 	]}
-	{@param? pollingInterval: number}
-	{@param? requestInputMode: string}
 	{@param? requestRetries: number}
 	{@param? requestTimeout: number}
 
@@ -175,11 +175,11 @@
 		{param dataSource: $dataSource /}
 		{param events: ['dataChange': $_handleDataChange] /}
 		{param initialData: $initialData /}
-		{param ref: 'dataProvider' /}
-		{param requestOptions: $requestOptions /}
 		{param pollingInterval: $pollingInterval /}
-		{param requestRetries: $requestRetries /}
+		{param ref: 'dataProvider' /}
 		{param requestInputMode: $requestInputMode /}
+		{param requestOptions: $requestOptions /}
+		{param requestRetries: $requestRetries /}
 		{param requestTimeout: $requestTimeout /}
 	{/call}
 {/template}
