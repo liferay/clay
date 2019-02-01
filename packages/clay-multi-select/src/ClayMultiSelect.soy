@@ -132,12 +132,12 @@
 				{param enableAutocomplete: $enableAutocomplete /}
 				{param events: [
 					'dataChange': $_handleDataChange,
-					'filteredItems': $_handleFilteredItemsChange,
+					'filteredItemsChanged': $_handleFilteredItemsChange,
+					'inputChange': $_handleOnInput,
 					'inputOnBlur': $_removeFocusedItem,
 					'inputOnFocus': $_removeFocusedItem,
 					'inputOnKeydown': $_handleOnKeydown,
-					'itemSelected': $_handleDropdownItemClick,
-					'queryChange': $_handleOnInput
+					'itemSelected': $_handleDropdownItemClick
 				] /}
 				{param extractData: $labelLocator /}
 				{param filteredItems: $filteredItems /}

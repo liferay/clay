@@ -88,13 +88,9 @@ class ClayMultiSelect extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleFilteredItemsChange(event) {
-		this.filteredItems = event.data;
-
-		return !this.emit({
-			data: event.data,
-			name: 'filteredItems',
-			originalEvent: event,
-		});
+		if (event.newVal !== event.prevVal) {
+			this.filteredItems = event.newVal;
+		}
 	}
 
 	/**
@@ -223,7 +219,7 @@ class ClayMultiSelect extends ClayComponent {
 				data: {
 					value,
 				},
-				name: 'queryChange',
+				name: 'inputChange',
 				originalEvent: event,
 			});
 		}
