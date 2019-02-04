@@ -2,7 +2,7 @@
 
 Clay is Liferay's web implementation of [Lexicon Experience Language](https://lexicondesign.io/). Built with Bootstrap as a foundation, it's comprised of HTML, CSS, and JS.
 
-🚨This Branch contains the Beta version of Clay v3, if you are looking for the components in Metal.js visit the [2.x branch](https://github.com/liferay/clay/tree/master-2.x)
+🚨This Branch contains the Beta version of Clay v3, if you are looking for the components in Metal.js visit the [2.x branch](https://github.com/liferay/clay/tree/2.x)
 
 ## Packages
 
