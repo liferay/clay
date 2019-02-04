@@ -4,7 +4,7 @@ Want to contribute to Clay? There are a few things you need to know before you s
 
 Here's a set of guidelines to contribute to Clay and its packages. Use your common sense, and feel free to propose changes to this document in a pull request.
 
-For contributions with Clay v2, go to branch v2 and follow the [contribution guide](https://github.com/liferay/clay/blob/2.x/CONTRIBUTING.md).
+For contributions with Clay v2, go to branch `2.x-develop` and follow the [contribution guide](https://github.com/liferay/clay/blob/2.x-develop/CONTRIBUTING.md).
 
 #### Table of Contents
 
