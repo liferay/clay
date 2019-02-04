@@ -1,42 +1,54 @@
-import ChartBase from './ChartBase';
-import Component from 'metal-component';
-import {Config} from 'metal-state';
-import Soy from 'metal-soy';
-import templates from './Chart.soy.js';
+/**
+ * © 2018 Liferay, Inc. <https://liferay.com>
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+import React from 'react';
+import BillboardChart from 'react-billboardjs';
+import GeoMap from './GeoMap';
+import Predictive from './Predictive';
+
+import {
+	DEFAULT_COLORS,
+	DEFAULT_GRID_OBJECT,
+	DEFAULT_LINE_CLASSES,
+	DEFAULT_POINT_PATTERNS,
+} from './config';
 
 /**
- * Metal Chart component.
- * @extends ChartBase
- * @extends Component
+ * Chart component.
+ * @param {Object} props
+ * @return {ReactElement}
  */
-class Chart extends Component {}
+export default function(props) {
+	const {color, data, grid, line, point, ...otherProps} = props;
 
-Object.assign(Chart.prototype, ChartBase);
+	let ChartComponent;
 
-Chart.STATE = {
-	/**
-	 * Object that wires events with default listeners
-	 * @default undefined
-	 * @instance
-	 * @memberof Chart
-	 * @review
-	 * @type {?(object|undefined)}
-	 */
-	defaultEventHandler: Config.object(),
+	switch (data.type) {
+	case 'geo-map':
+		ChartComponent = GeoMap;
+		break;
+	case 'predictive':
+		ChartComponent = Predictive;
+		break;
+	default:
+		ChartComponent = BillboardChart;
+	}
 
-	/**
-	 * Id to be applied to the element.
-	 * @default undefined
-	 * @instance
-	 * @memberof Chart
-	 * @type {?(string|undefined)}
-	 */
-	id: Config.string(),
-};
-
-Chart.STATE = Object.assign(Chart.STATE, ChartBase.STATE);
-
-Soy.register(Chart, templates);
-
-export {Chart};
-export default Chart;
+	return (
+		<ChartComponent
+			{...otherProps}
+			data={data}
+			grid={Object.assign(DEFAULT_GRID_OBJECT, grid)}
+			color={Object.assign({pattern: DEFAULT_COLORS}, color)}
+			line={Object.assign({classes: DEFAULT_LINE_CLASSES}, line)}
+			point={Object.assign(
+				{
+					pattern: DEFAULT_POINT_PATTERNS,
+				},
+				point
+			)}
+		/>
+	);
+}

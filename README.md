@@ -2,6 +2,8 @@
 
 Clay is Liferay's web implementation of [Lexicon Experience Language](https://lexicondesign.io/). Built with Bootstrap as a foundation, it's comprised of HTML, CSS, and JS.
 
+🚨This Branch contains the Beta version of Clay v3, if you are looking for the components in Metal.js visit the [2.x branch](https://github.com/liferay/clay/tree/master-2.x)
+
 ## Packages
 
 Clay repository follows the monorepo approach, all the major components that are the pillars of Clay are here in this repository.
@@ -12,7 +14,7 @@ The pillar to give colors and structure to Clay, where is the css and examples o
 
 ### [Clay Components](./packages)
 
-All components that follow clay-css marking and Lexicon use cases, developed on [Metal.js](https://metaljs.com/) with [Soy (Closure templates)](https://developers.google.com/closure/templates/docs/commands).
+All components that follow clay-css marking and Lexicon use cases, developed on [React.js](http://reactjs.org)
 
 ### [Clayui.com](./clayui.com)
 
@@ -33,34 +35,12 @@ Contains the source code and documentation powering [clayui.com](https://clayui.
 
 You can find the Clay documentation on the [site](https://clayui.com/docs/components/alerts.html).
 
-* [Getting Started](https://clayui.com/docs/getting-started/introduction.html)
-* [Layout](https://clayui.com/docs/layout/grid.html)
-* [Components Library](https://clayui.com/docs/components/alerts.html)
-* [News](https://clayui.com/docs/news/)
+-   [Getting Started](https://clayui.com/docs/getting-started/introduction.html)
+-   [Layout](https://clayui.com/docs/layout/grid.html)
+-   [Components Library](https://clayui.com/docs/components/alerts.html)
+-   [News](https://clayui.com/docs/news/)
 
 You can improve by sending pull requests to this repository.
-
-## Examples
-
-We have several examples on the [site](https://clayui.com/docs/components/alerts.html). Here's the first one to get you started:
-
-```soy
-{call ClayButton.render}
-    {param label: 'Primary' /}
-    {param type: 'button' /}
-{/call}
-```
-
-This example render a "Primary" button on the page, following [Lexicon](https://lexicondesign.io/docs/patterns/buttons.html) patterns.
-
-You will notice that we use a [Soy (Closure templates)](https://developers.google.com/closure/templates/docs/commands) template system that is built on top of [Metal.js](http://metaljs.com/), but if you do not feel comfortable feel free to use WebComponents 😉.
-
-```html
-<clay-button label="Primary" type="button"></clay-button>
-```
-It will do the same.
-
-Each package contains a page with demos, check.
 
 ## Installation
 
@@ -68,21 +48,13 @@ Clay is available as the `clay` package in npm for components and for css like `
 
 See the [Getting Started](https://clayui.com/docs/getting-started/introduction.html) guide for more information.
 
-Even if your application does not use the framework [Metal.js](https://metaljs.com/) Clay is flexible and can be used as WebComponents see some examples with:
-
-* [Angular](examples/angular-with-clay)
-* [React](examples/react-with-clay)
-* [Vue](examples/vue-with-clay)
-
 ## Contributing
 
 Feel free to open up problems or send pull requests. We will always be looking at these problems and we will be responding whenever possible.
 
 > Before opening a issue make sure it exists.
 
-### Good First Issues
-
-If you want to contribute to this project and do not know where to start [good first issues](https://github.com/liferay/clay/labels/good%20first%20issue) is a great place to start.
+See the [contribution guided](/CONTRIBUTING.md) for more details.
 
 ### Setup
 
@@ -92,55 +64,58 @@ If you want to contribute to this project and do not know where to start [good f
 
 2. Install global dependencies:
 
-  ```
-  [sudo] npm install -g yarn
-  ```
+```
+[sudo] npm install -g yarn
+```
 
 3. Install project dependencies:
 
-  ```
-  yarn
-  ```
+```
+yarn
+```
 
 4. Install dependencies for each package and link them together:
 
-  ```
-  yarn lerna
-  ```
+```
+yarn lerna
+```
 
 5. Build all packages
 
-  ```
-  yarn build
-  ```
+```
+yarn build
+```
 
 6. Start a local server on port 4000
 
-  ```
-  yarn start
-  ```
+```
+yarn start
+```
 
 7. Run tests:
 
-  ```
-  yarn test
-  ```
+```
+yarn test
+```
 
 #### Clayui.com
 
 To contribute to the documentation and the site in general, you can try to run locally to test your changes:
 
 1. Move to the site folder
+
 ```
 cd clayui.com
 ```
 
 2. Install dependencies:
+
 ```
 yarn
 ```
 
 3. Run in development environment
+
 ```
 yarn develop
 ```
@@ -151,7 +126,14 @@ If you want to test in a production environment so that you do not take risks of
 yarn site
 ```
 
+## Migration Guides
+
+Do you already have the Clay v2 components implemented in your project? These handy guides will help you perform the migration from Clay v2 to v3.
+
+-   [Migrate the Clay components from v2 to v3](https://next.clayui.com/docs/guides/migrating-from-v2-to-v3)
+
 ### Important
+
 Since travis is failing on executing a11y tests due to out of date suid you need to execute `npm run pa11y` locally before sending any pr to verify we're following accessibility standars.
 
 ## License

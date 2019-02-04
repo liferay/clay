@@ -22,8 +22,6 @@ jdk:
 language: java
 
 script:
-  - npm run testSoy
   - npm run checkFormat
   - npm run lint
-  - npm run soy
   - npm run jest
