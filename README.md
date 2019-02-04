@@ -48,6 +48,12 @@ Clay is available as the `clay` package in npm for components and for css like `
 
 See the [Getting Started](https://clayui.com/docs/getting-started/introduction.html) guide for more information.
 
+## Migration Guides
+
+Do you already have the Clay v2 components implemented in your project? These handy guides will help you perform the migration from Clay v2 to v3.
+
+-   (**_Coming soon_**) Migrate the Clay components from v2 to v3
+
 ## Contributing
 
 Feel free to open up problems or send pull requests. We will always be looking at these problems and we will be responding whenever possible.
@@ -125,12 +131,6 @@ If you want to test in a production environment so that you do not take risks of
 ```
 yarn site
 ```
-
-## Migration Guides
-
-Do you already have the Clay v2 components implemented in your project? These handy guides will help you perform the migration from Clay v2 to v3.
-
--   [Migrate the Clay components from v2 to v3](https://next.clayui.com/docs/guides/migrating-from-v2-to-v3)
 
 ### Important
 
