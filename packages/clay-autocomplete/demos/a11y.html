@@ -97,7 +97,7 @@
 			dataSource: (query) => fetch(`https://rickandmortyapi.com/api/character/?name=${query}`)
 									.then(res => res.json())
 									.then(res => res.results)
-									.catch(() => []),
+									.catch((error) => console.log(error)),
 			extractData: (elem) => elem.name,
 		}, '#data-function-block');
 

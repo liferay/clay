@@ -274,7 +274,7 @@ ClayAutocomplete.STATE = {
 	 * Set the request debounce time
 	 * @instance
 	 * @default 200
-	 * @memberof ClayDataProvider
+	 * @memberof ClayAutocomplete
 	 * @type {?(number)}
 	 */
 	debounceTime: Config.number().value(200),
