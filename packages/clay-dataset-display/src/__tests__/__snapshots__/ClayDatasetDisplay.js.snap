@@ -45,7 +45,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             <form action="mySearchURL" method="GET" name="mySearchName" role="search">
               <div class="input-group">
                 <div class="input-group-item">
-                  <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" ref="search" type="text">
+                  <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" ref="search" type="text" value="">
                   <span class="input-group-inset-item input-group-inset-item-after">
                     <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
@@ -985,7 +985,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             <form action="mySearchURL" method="GET" name="mySearchName" role="search">
               <div class="input-group">
                 <div class="input-group-item">
-                  <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" ref="search" type="text">
+                  <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" ref="search" type="text" value="">
                   <span class="input-group-inset-item input-group-inset-item-after">
                     <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
@@ -2035,7 +2035,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay and change view o
             <form action="mySearchURL" method="GET" name="mySearchName" role="search">
               <div class="input-group">
                 <div class="input-group-item">
-                  <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" ref="search" type="text">
+                  <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" ref="search" type="text" value="">
                   <span class="input-group-inset-item input-group-inset-item-after">
                     <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
@@ -2822,7 +2822,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with grouped item
             <form action="mySearchURL" method="GET" name="mySearchName" role="search">
               <div class="input-group">
                 <div class="input-group-item">
-                  <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" ref="search" type="text">
+                  <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" ref="search" type="text" value="">
                   <span class="input-group-inset-item input-group-inset-item-after">
                     <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
@@ -3425,7 +3425,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and de
             <form action="mySearchURL" method="GET" name="mySearchName" role="search">
               <div class="input-group">
                 <div class="input-group-item">
-                  <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" ref="search" type="text">
+                  <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" ref="search" type="text" value="">
                   <span class="input-group-inset-item input-group-inset-item-after">
                     <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
@@ -3825,7 +3825,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <form action="mySearchURL" method="GET" name="mySearchName" role="search">
               <div class="input-group">
                 <div class="input-group-item">
-                  <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" ref="search" type="text">
+                  <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" ref="search" type="text" value="">
                   <span class="input-group-inset-item input-group-inset-item-after">
                     <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
@@ -4765,7 +4765,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <form action="mySearchURL" method="GET" name="mySearchName" role="search">
               <div class="input-group">
                 <div class="input-group-item">
-                  <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" ref="search" type="text">
+                  <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" ref="search" type="text" value="">
                   <span class="input-group-inset-item input-group-inset-item-after">
                     <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
@@ -5815,7 +5815,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with items and li
             <form action="mySearchURL" method="GET" name="mySearchName" role="search">
               <div class="input-group">
                 <div class="input-group-item">
-                  <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" ref="search" type="text">
+                  <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" ref="search" type="text" value="">
                   <span class="input-group-inset-item input-group-inset-item-after">
                     <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
@@ -8005,7 +8005,7 @@ exports[`ClayDatasetDisplay should render a ClayDatasetDisplay with ungrouped it
             <form action="mySearchURL" method="GET" name="mySearchName" role="search">
               <div class="input-group">
                 <div class="input-group-item">
-                  <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" ref="search" type="text">
+                  <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" ref="search" type="text" value="">
                   <span class="input-group-inset-item input-group-inset-item-after">
                     <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
@@ -8687,7 +8687,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 1`] = `
             <form action="mySearchURL" method="GET" name="mySearchName" role="search">
               <div class="input-group">
                 <div class="input-group-item">
-                  <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" ref="search" type="text">
+                  <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" ref="search" type="text" value="">
                   <span class="input-group-inset-item input-group-inset-item-after">
                     <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
@@ -10362,7 +10362,7 @@ exports[`ClayDatasetDisplay should select and unselect all items 3`] = `
             <form action="mySearchURL" method="GET" name="mySearchName" role="search">
               <div class="input-group">
                 <div class="input-group-item">
-                  <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" ref="search" type="text">
+                  <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchInputName" placeholder="search-for" ref="search" type="text" value="">
                   <span class="input-group-inset-item input-group-inset-item-after">
                     <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                       <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
