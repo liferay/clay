@@ -377,5 +377,4 @@ ClayDatePicker.defaultProps = {
 	},
 };
 
-export {ClayDatePicker};
 export default ClayDatePicker;

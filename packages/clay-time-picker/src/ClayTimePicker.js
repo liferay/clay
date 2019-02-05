@@ -48,5 +48,4 @@ ClayTimePicker.propTypes = {
 	value: PropTypes.string,
 };
 
-export {ClayTimePicker};
 export default ClayTimePicker;
