@@ -299,6 +299,16 @@ ClayManagementToolbar.STATE = {
 	actionItems: actionItemsValidator,
 
 	/**
+	 * Satus of the select items checkbox. If checkboxStatus is checked or
+	 * indeterminate the toolbar will be in active state.
+	 * @default unchecked
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?(string|undefined)}
+	 */
+	checkboxStatus: Config.oneOf(['checked', 'indeterminate', 'unchecked']).value('unchecked'),
+
+	/**
 	 * Url for clear results link.
 	 * @default undefined
 	 * @instance
@@ -539,6 +549,15 @@ ClayManagementToolbar.STATE = {
 	showInfoButton: Config.bool().value(false),
 
 	/**
+	 * Flag to indicate if the results bar should be shown or not.
+	 * @default false
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?bool}
+	 */
+	showResultsBar: Config.bool().value(false),
+
+	/**
 	 * Flag to indicate if search should be shown or not.
 	 * @default true
 	 * @instance
@@ -546,6 +565,15 @@ ClayManagementToolbar.STATE = {
 	 * @type {?bool}
 	 */
 	showSearch: Config.bool().value(true),
+
+	/**
+	 * Flag to indicate if select all button should be shown or not.
+	 * @default false
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?bool}
+	 */
+	showSelectAllButton: Config.bool().value(false),
 
 	/**
 	 * Sorting url.
