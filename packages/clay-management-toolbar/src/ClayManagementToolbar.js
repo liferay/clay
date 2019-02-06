@@ -306,7 +306,11 @@ ClayManagementToolbar.STATE = {
 	 * @memberof ClayManagementToolbar
 	 * @type {?(string|undefined)}
 	 */
-	checkboxStatus: Config.oneOf(['checked', 'indeterminate', 'unchecked']).value('unchecked'),
+	checkboxStatus: Config.oneOf([
+		'checked',
+		'indeterminate',
+		'unchecked',
+	]).value('unchecked'),
 
 	/**
 	 * Url for clear results link.

@@ -1,4 +1,3 @@
-
 import ClayDatasetDisplay from '../ClayDatasetDisplay';
 
 let component;
@@ -476,7 +475,7 @@ describe('ClayDatasetDisplay', function() {
 
 		expect(component).toMatchSnapshot();
 	});
-/*
+	/*
 	it('should render a ClayDatasetDisplay with items and list of type `cards` active', () => {
 		defaultConfig.selectedView = 0;
 
