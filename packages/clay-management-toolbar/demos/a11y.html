@@ -33,8 +33,29 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h2>Active State</h2>
-			<div id="active-block"></div>
+			<h2>Active State with checkbox in indeterminate state</h2>
+			<div id="active-indeterminate-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h2>Active State with checkbox checked and select all button</h2>
+			<div id="active-checked-select-all-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h2>Active State with checkbox checked with no select all button and all selected items</h2>
+			<div id="active-checked-no-select-all-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h2>Active State with no actions</h2>
+			<div id="active-no-actions-block"></div>
 		</div>
 	</div>
 
@@ -96,28 +117,28 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h2>With search results</h2>
+			<h2>With results bar</h2>
 			<div id="search-results-bar"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h2>With search results with active state</h2>
+			<h2>With results bar with active state</h2>
 			<div id="search-results-bar-active-state"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h2>With search results and filter labels</h2>
+			<h2>With results bar, search value and filter labels</h2>
 			<div id="search-results-filter-labels"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h2>With filter labels</h2>
+			<h2>With results bar and filter labels</h2>
 			<div id="filter-labels"></div>
 		</div>
 	</div>
@@ -247,7 +268,7 @@
 				label: 'Filter 2',
 			},
 			{
-				label: 'Category: Label 3',
+				label: 'Category: <strong>Label 3</strong>',
 			}
 		]
 
@@ -304,16 +325,53 @@
 		},
 		'#default-block');
 
-		//Active State
+		//Active State with checkbox in indeterminate state
 		new metal.ClayManagementToolbar({
 			actionItems: actionItems,
+			checkboxStatus: 'indeterminate',
 			selectable: true,
 			selectedItems: 5,
 			showInfoButton: true,
 			spritemap: spritemap,
 			totalItems: 10,
 		},
-		'#active-block');
+		'#active-indeterminate-block');
+
+		//Active State with checkbox checked with select all button
+		new metal.ClayManagementToolbar({
+			actionItems: actionItems,
+			checkboxStatus: 'checked',
+			selectable: true,
+			selectedItems: 8,
+			showInfoButton: true,
+			showSelectAllButton: true,
+			spritemap: spritemap,
+			totalItems: 10,
+		},
+		'#active-checked-select-all-block');
+
+		//Active State with select all button without select all button
+		new metal.ClayManagementToolbar({
+			actionItems: actionItems,
+			checkboxStatus: 'checked',
+			selectable: true,
+			selectedItems: 10,
+			showInfoButton: true,
+			spritemap: spritemap,
+			totalItems: 10,
+		},
+		'#active-checked-no-select-all-block');
+
+		// Active state no actions
+		new metal.ClayManagementToolbar({
+			actionItems: [],
+			selectable: true,
+			selectedItems: 5,
+			showInfoButton: true,
+			spritemap: spritemap,
+			totalItems: 10,
+		},
+		'#active-no-actions-block');
 
 		//Disabled State
 		new metal.ClayManagementToolbar({
@@ -394,7 +452,7 @@
 		},
 		'#disabled-block');
 
-		//Disabled State with enabled Search
+		//Disabled State with Search enabled
 		new metal.ClayManagementToolbar({
 			creationMenu: {
 				primaryItems: [
@@ -610,7 +668,7 @@
 		},
 		'#without-filter-sorting-search-block');
 
-		//With search results bar
+		//With results bar
 		new metal.ClayManagementToolbar({
 			events: {
 				'clearButtonClicked': handleClearButton
@@ -620,6 +678,7 @@
 			searchInputName: 'mySearchInputName',
 			searchValue: 'red',
 			selectable: true,
+			showResultsBar: true,
 			sortingOrder: 'asc',
 			spritemap: spritemap,
 			totalItems: 6,
@@ -632,9 +691,10 @@
 			this.totalItems = null;
 		}
 
-		//With search results bar with active state
+		//With results bar with active state
 		new metal.ClayManagementToolbar({
 			actionItems: actionItems,
+			checkboxStatus: 'indeterminate',
 			clearResultsURL: '#pageTitle',
 			filterItems: filterItems,
 			searchFormName: 'mySearchName',
@@ -642,6 +702,7 @@
 			searchValue: 'red',
 			selectable: true,
 			selectedItems: 2,
+			showResultsBar: true,
 			sortingOrder: 'asc',
 			spritemap: spritemap,
 			totalItems: 6,
@@ -649,7 +710,7 @@
 		},
 		'#search-results-bar-active-state');
 
-		//With search results and filter labels
+		//With results bar and filter labels
 		new metal.ClayManagementToolbar({
 			actionItems: actionItems,
 			clearResultsURL: '#clear',
@@ -659,6 +720,7 @@
 			searchInputName: 'mySearchInputName',
 			searchValue: 'red',
 			selectable: true,
+			showResultsBar: true,
 			sortingOrder: 'asc',
 			spritemap: spritemap,
 			totalItems: 6,
@@ -666,7 +728,7 @@
 		},
 		'#search-results-filter-labels');
 
-		//With filter labels and no search results
+		//With results bar, search value and filter labels
 		new metal.ClayManagementToolbar({
 			actionItems: actionItems,
 			clearResultsURL: '#clear',
@@ -675,6 +737,7 @@
 			searchFormName: 'mySearchName',
 			searchInputName: 'mySearchInputName',
 			selectable: true,
+			showResultsBar: true,
 			sortingOrder: 'asc',
 			spritemap: spritemap,
 			totalItems: 6,
