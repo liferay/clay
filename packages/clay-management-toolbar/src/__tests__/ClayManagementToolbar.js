@@ -429,17 +429,6 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a management toolbar with state active', () => {
-		managementToolbar = new ClayManagementToolbar({
-			selectable: true,
-			selectedItems: 1,
-			spritemap: spritemap,
-			totalItems: 10,
-		});
-
-		expect(managementToolbar).toMatchSnapshot();
-	});
-
 	it('should render a disabled management toolbar', () => {
 		managementToolbar = new ClayManagementToolbar({
 			filterItems: [
@@ -525,21 +514,55 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a management toolbar with classes in active state', () => {
+	it('should render a management toolbar with info button', () => {
 		managementToolbar = new ClayManagementToolbar({
-			elementClasses: 'my-custom-class',
-			selectable: true,
-			selectedItems: 1,
 			spritemap: spritemap,
-			totalItems: 10,
+			showInfoButton: true,
 		});
 
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a management toolbar with id in active state', () => {
+	it('should render a management toolbar with results bar', () => {
 		managementToolbar = new ClayManagementToolbar({
 			id: 'myId',
+			searchValue: 'foo',
+			selectable: true,
+			showResultsBar: true,
+			spritemap: spritemap,
+			totalItems: 10,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
+	it('should render a management toolbar with results bar with filter labels', () => {
+		managementToolbar = new ClayManagementToolbar({
+			filterLabels: [
+				{
+					label: 'Label 1',
+				},
+				{
+					label: 'Label 2',
+				},
+				{
+					label: '<strong>Category:</strong>Label 3',
+				},
+			],
+			id: 'myId',
+			searchValue: 'foo',
+			selectable: true,
+			showResultsBar: true,
+			spritemap: spritemap,
+			totalItems: 10,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
+	it('should render a management toolbar in state active with checbkox in indeterminate state', () => {
+		managementToolbar = new ClayManagementToolbar({
+			checkboxStatus: 'indeterminate',
 			selectable: true,
 			selectedItems: 1,
 			spritemap: spritemap,
@@ -549,8 +572,9 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a management toolbar with clear selection link in active state', () => {
+	it('should render a management toolbar in active state with checbkox checked', () => {
 		managementToolbar = new ClayManagementToolbar({
+			checkboxStatus: 'checked',
 			clearSelectionURL: 'my-clear-selection-url',
 			selectable: true,
 			selectedItems: 1,
@@ -561,10 +585,12 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a management toolbar with select all button in active state', () => {
+	it('should render a management toolbar in active state with classes', () => {
 		managementToolbar = new ClayManagementToolbar({
+			elementClasses: 'my-custom-class',
+			checkboxStatus: 'indeterminate',
 			selectable: true,
-			selectedItems: 10,
+			selectedItems: 1,
 			spritemap: spritemap,
 			totalItems: 10,
 		});
@@ -572,11 +598,52 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a management toolbar with select all link in active state', () => {
+	it('should render a management toolbar in active state with id', () => {
 		managementToolbar = new ClayManagementToolbar({
+			checkboxStatus: 'indeterminate',
+			id: 'myId',
+			selectable: true,
+			selectedItems: 1,
+			spritemap: spritemap,
+			totalItems: 10,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
+	it('should render a management toolbar in active state with clear selection link', () => {
+		managementToolbar = new ClayManagementToolbar({
+			checkboxStatus: 'indeterminate',
+			clearSelectionURL: 'my-clear-selection-url',
+			selectable: true,
+			selectedItems: 1,
+			spritemap: spritemap,
+			totalItems: 10,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
+	it('should render a management toolbar in active state with select all button', () => {
+		managementToolbar = new ClayManagementToolbar({
+			checkboxStatus: 'indeterminate',
+			selectable: true,
+			selectedItems: 8,
+			showSelectAllButton: true,
+			spritemap: spritemap,
+			totalItems: 10,
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
+	it('should render a management toolbar in active state with select all link', () => {
+		managementToolbar = new ClayManagementToolbar({
+			checkboxStatus: 'indeterminate',
 			selectAllURL: 'my-select-all-url',
 			selectable: true,
-			selectedItems: 10,
+			selectedItems: 8,
+			showSelectAllButton: true,
 			spritemap: spritemap,
 			totalItems: 10,
 		});
@@ -584,7 +651,7 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a management toolbar with actions in active state', () => {
+	it('should render a management toolbar in active state with actions', () => {
 		managementToolbar = new ClayManagementToolbar({
 			actionItems: [
 				{
@@ -596,6 +663,7 @@ describe('ClayManagementToolbar', function() {
 					href: '#deleteurl',
 				},
 			],
+			checkboxStatus: 'indeterminate',
 			selectable: true,
 			selectedItems: 1,
 			spritemap: spritemap,
@@ -605,9 +673,10 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a management toolbar with no actions when actionsItems is empty in active state', () => {
+	it('should render a management toolbar in active state with no actions when actionsItems is empty', () => {
 		managementToolbar = new ClayManagementToolbar({
 			actionItems: [],
+			checkboxStatus: 'indeterminate',
 			selectable: true,
 			selectedItems: 1,
 			spritemap: spritemap,
@@ -617,7 +686,7 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a management toolbar with actions as quick actions in active state', () => {
+	it('should render a management toolbar in active state with actions as quick actions', () => {
 		managementToolbar = new ClayManagementToolbar({
 			actionItems: [
 				{
@@ -630,6 +699,7 @@ describe('ClayManagementToolbar', function() {
 					quickAction: true,
 				},
 			],
+			checkboxStatus: 'indeterminate',
 			selectable: true,
 			selectedItems: 1,
 			spritemap: spritemap,
@@ -639,7 +709,7 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a management toolbar with disabled actions as quick actions in active state', () => {
+	it('should render a management toolbar in active state with disabled actions as quick actions', () => {
 		managementToolbar = new ClayManagementToolbar({
 			actionItems: [
 				{
@@ -656,6 +726,7 @@ describe('ClayManagementToolbar', function() {
 					quickAction: true,
 				},
 			],
+			checkboxStatus: 'indeterminate',
 			selectable: true,
 			selectedItems: 1,
 			spritemap: spritemap,
@@ -665,17 +736,9 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a management toolbar with info button', () => {
+	it('should render a management toolbar in active state with info button', () => {
 		managementToolbar = new ClayManagementToolbar({
-			spritemap: spritemap,
-			showInfoButton: true,
-		});
-
-		expect(managementToolbar).toMatchSnapshot();
-	});
-
-	it('should render a management toolbar with info button in active state', () => {
-		managementToolbar = new ClayManagementToolbar({
+			checkboxStatus: 'indeterminate',
 			selectable: true,
 			selectedItems: 1,
 			showInfoButton: true,
@@ -686,47 +749,14 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a management toolbar with search results bar', () => {
+	it('should render a management toolbar in active state with search results bar', () => {
 		managementToolbar = new ClayManagementToolbar({
-			id: 'myId',
-			searchValue: 'foo',
-			selectable: true,
-			spritemap: spritemap,
-			totalItems: 10,
-		});
-
-		expect(managementToolbar).toMatchSnapshot();
-	});
-
-	it('should render a management toolbar with search results bar when state is active', () => {
-		managementToolbar = new ClayManagementToolbar({
+			checkboxStatus: 'indeterminate',
 			id: 'myId',
 			searchValue: 'foo',
 			selectable: true,
 			selectedItems: 1,
-			spritemap: spritemap,
-			totalItems: 10,
-		});
-
-		expect(managementToolbar).toMatchSnapshot();
-	});
-
-	it('should render a management toolbar with search results bar with filter labels', () => {
-		managementToolbar = new ClayManagementToolbar({
-			filterLabels: [
-				{
-					label: 'Label 1',
-				},
-				{
-					label: 'Label 2',
-				},
-				{
-					label: '<strong>Category:</strong>Label 3',
-				},
-			],
-			id: 'myId',
-			searchValue: 'foo',
-			selectable: true,
+			showResultsBar: true,
 			spritemap: spritemap,
 			totalItems: 10,
 		});
@@ -758,8 +788,9 @@ describe('ClayManagementToolbar', function() {
 		);
 	});
 
-	it('should render a selectable management toolbar and emit an event on checkbox click on active state', () => {
+	it('should render a selectable management toolbar in active state and emit an event on checkbox click', () => {
 		managementToolbar = new ClayManagementToolbar({
+			checkboxStatus: 'indeterminate',
 			selectable: true,
 			selectedItems: 1,
 			spritemap: spritemap,
@@ -1051,7 +1082,7 @@ describe('ClayManagementToolbar', function() {
 		);
 	});
 
-	it('should render a management toolbar with actions and emit an event on action click', () => {
+	it('should render a management toolbar in active state with actions and emit an event on action click', () => {
 		managementToolbar = new ClayManagementToolbar({
 			actionItems: [
 				{
@@ -1067,6 +1098,7 @@ describe('ClayManagementToolbar', function() {
 					quickAction: true,
 				},
 			],
+			checkboxStatus: 'indeterminate',
 			selectable: true,
 			selectedItems: 1,
 			spritemap: spritemap,
@@ -1087,7 +1119,7 @@ describe('ClayManagementToolbar', function() {
 		);
 	});
 
-	it('should render a management toolbar with actions mixed between quick actions and emit an event on action click and return the expected value', () => {
+	it('should render a management toolbar in active state with actions mixed between quick actions and emit an event on action click and return the expected value', () => {
 		managementToolbar = new ClayManagementToolbar({
 			actionItems: [
 				{
@@ -1109,6 +1141,7 @@ describe('ClayManagementToolbar', function() {
 					quickAction: true,
 				},
 			],
+			checkboxStatus: 'indeterminate',
 			selectable: true,
 			selectedItems: 1,
 			spritemap: spritemap,
@@ -1157,8 +1190,9 @@ describe('ClayManagementToolbar', function() {
 		);
 	});
 
-	it('should render a management toolbar with info button in active state and emit an event on infoButton click', () => {
+	it('should render a management toolbar in active state with info button and emit an event on infoButton click', () => {
 		managementToolbar = new ClayManagementToolbar({
+			checkboxStatus: 'indeterminate',
 			selectable: true,
 			selectedItems: 1,
 			showInfoButton: true,
@@ -1179,8 +1213,9 @@ describe('ClayManagementToolbar', function() {
 		);
 	});
 
-	it('should render a management toolbar and emit an event on clear selection button click', () => {
+	it('should render a management toolbar in active state and emit an event on clear selection button click', () => {
 		managementToolbar = new ClayManagementToolbar({
+			checkboxStatus: 'indeterminate',
 			selectable: true,
 			selectedItems: 1,
 			spritemap: spritemap,
@@ -1200,10 +1235,12 @@ describe('ClayManagementToolbar', function() {
 		);
 	});
 
-	it('should render a management toolbar and emit an event on select all button click', () => {
+	it('should render a management toolbar in active state and emit an event on select all button click', () => {
 		managementToolbar = new ClayManagementToolbar({
+			checkboxStatus: 'indeterminate',
 			selectable: true,
-			selectedItems: 10,
+			selectedItems: 5,
+			showSelectAllButton: true,
 			spritemap: spritemap,
 			totalItems: 10,
 		});
@@ -1221,11 +1258,12 @@ describe('ClayManagementToolbar', function() {
 		);
 	});
 
-	it('should render a management toolbar with a clear results link', () => {
+	it('should render a management toolbar with results bar and a clear results link', () => {
 		managementToolbar = new ClayManagementToolbar({
 			clearResultsURL: '#clear',
 			searchValue: 'foo',
 			selectable: true,
+			showResultsBar: true,
 			spritemap: spritemap,
 			totalItems: 10,
 		});
@@ -1244,10 +1282,11 @@ describe('ClayManagementToolbar', function() {
 		);
 	});
 
-	it('should render a management toolbar and emit an event on clear button click', () => {
+	it('should render a management toolbar with results bar and emit an event on clear button click', () => {
 		managementToolbar = new ClayManagementToolbar({
 			searchValue: 'foo',
 			selectable: true,
+			showResultsBar: true,
 			spritemap: spritemap,
 			totalItems: 10,
 		});
@@ -1265,13 +1304,9 @@ describe('ClayManagementToolbar', function() {
 		);
 	});
 
-	it('should render a management toolbar and emit an event on close label click', () => {
+	it('should render a management toolbar with results bar and emit an event on close label click', () => {
 		managementToolbar = new ClayManagementToolbar({
 			clearResultsURL: '#clear',
-			searchValue: 'foo',
-			selectable: true,
-			spritemap: spritemap,
-			totalItems: 10,
 			filterLabels: [
 				{
 					closeable: false,
@@ -1284,6 +1319,11 @@ describe('ClayManagementToolbar', function() {
 					label: 'Category: Label 3',
 				},
 			],
+			searchValue: 'foo',
+			selectable: true,
+			showResultsBar: true,
+			spritemap: spritemap,
+			totalItems: 10,
 		});
 
 		const spy = jest.spyOn(managementToolbar, 'emit');
