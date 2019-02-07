@@ -19,6 +19,7 @@
 	{@param? preferredAlign: string}
 	{@param? toggle: any}
 	{@param? triggerClasses: string}
+	{@param? triggerTitle: string}
 
 	{let $dropdownElementClasses kind="text"}
 		dropdown-action
@@ -55,9 +56,13 @@
 		{param spritemap: $spritemap /}
 		{param triggerClasses: $triggerClasses /}
 		{param triggerTitle kind="text"}
-			{msg desc=""}
-				actions
-			{/msg}
+			{if isNonnull($triggerTitle)}
+				{$triggerTitle}
+			{else}
+				{msg desc=""}
+					actions
+				{/msg}
+			{/if}
 		{/param}
 	{/call}
 {/template}
