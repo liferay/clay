@@ -3012,6 +3012,10 @@ core-js@^2.4.0, core-js@^2.4.1, core-js@^2.5.0:
   version "2.5.7"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.7.tgz#f972608ff0cead68b841a16a932d0b183791814e"
 
+core-js@^2.5.5:
+  version "2.6.3"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.3.tgz#4b70938bdffdaf64931e66e2db158f0892289c49"
+
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
@@ -8316,6 +8320,12 @@ metal-component@^2.13.2, metal-component@^2.16.0, metal-component@^2.16.6:
     metal-dom "^2.16.6"
     metal-events "^2.16.6"
     metal-state "^2.16.6"
+
+metal-debounce@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/metal-debounce/-/metal-debounce-2.0.1.tgz#c69cfaa458f5a9ddd915382a2d04a404a37f46db"
+  dependencies:
+    core-js "^2.5.5"
 
 metal-dom@^2.0.0, metal-dom@^2.13.2, metal-dom@^2.16.0, metal-dom@^2.16.6:
   version "2.16.6"

@@ -45,6 +45,13 @@
 		</div>
 	</div>
 
+	<div class="row row-spacing">
+		<div class="col">
+			<h2>With function</h2>
+			<div id="data-function-block"></div>
+		</div>
+	</div>
+
 	<script type="text/javascript">
 		const dataSource = [
 			'Bread',
@@ -70,23 +77,29 @@
 
 		// Default State
 		new metal.ClayAutocomplete({
-			data: dataSource,
-			inputName: 'defaultState',
+			dataSource,
 		}, '#default-block');
 
 		// With disabled autocomplete
 		new metal.ClayAutocomplete({
-			data: dataSource,
+			dataSource,
 			enableAutocomplete: false,
-			inputName: 'disabledAutocomplete',
 		}, '#disabled-autocomplete-block');
 
 		// With data remote
 		new metal.ClayAutocomplete({
-			data: 'https://api.pro.coinbase.com/currencies',
+			dataSource: 'https://api.pro.coinbase.com/currencies',
 			extractData: (elem) => elem.name,
-			inputName: 'dataRemote',
 		}, '#data-remote-block');
+
+		// With function
+		new metal.ClayAutocomplete({
+			dataSource: (query) => fetch(`https://rickandmortyapi.com/api/character/?name=${query}`)
+									.then(res => res.json())
+									.then(res => res.results)
+									.catch((error) => console.log(error)),
+			extractData: (elem) => elem.name,
+		}, '#data-function-block');
 
 	</script>
 </body>

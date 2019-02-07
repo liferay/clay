@@ -85,16 +85,11 @@ class ClayMultiSelect extends ClayComponent {
 	 * Handles changes in filteredItems and synchronizes with state.
 	 * @param {!Event} event
 	 * @protected
-	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleFilteredItemsChange(event) {
-		this.filteredItems = event.data;
-
-		return !this.emit({
-			data: event.data,
-			name: 'filteredItems',
-			originalEvent: event,
-		});
+		if (event.newVal !== event.prevVal) {
+			this.filteredItems = event.newVal;
+		}
 	}
 
 	/**
@@ -223,7 +218,7 @@ class ClayMultiSelect extends ClayComponent {
 				data: {
 					value,
 				},
-				name: 'queryChange',
+				name: 'inputChange',
 				originalEvent: event,
 			});
 		}
@@ -349,18 +344,30 @@ ClayMultiSelect.STATE = {
 	data: Config.object(),
 
 	/**
-	 * The array of data items that the data source contains or
-	 * the URL for the data provider to request.
+	 * The array of data items that the data source contains,
+	 * the URL for the data provider to request, or a function
+	 * that receives the query and returns a promise with the
+	 * elements.
 	 * @instance
 	 * @default undefined
-	 * @memberof ClayMultiSelect
-	 * @type {!(string|object|array)}
+	 * @memberof ClayDataProvider
+	 * @type {!(string|object|array|function)}
 	 */
 	dataSource: Config.oneOfType([
-		Config.string(),
-		Config.object(),
 		Config.array(),
+		Config.func(),
+		Config.object(),
+		Config.string(),
 	]).required(),
+
+	/**
+	 * Set the request debounce time
+	 * @instance
+	 * @default 200
+	 * @memberof ClayDataProvider
+	 * @type {?(number)}
+	 */
+	debounceTime: Config.number().value(200),
 
 	/**
 	 * Object that wires events with default listeners
@@ -388,7 +395,13 @@ ClayMultiSelect.STATE = {
 	 * @memberof ClayMultiSelect
 	 * @type {?bool}
 	 */
-	enableAutocomplete: Config.bool().value(true),
+	enableAutocomplete: Config.validator(value => {
+		if (value) {
+			console.warn(
+				'🚨 `enableAutocomplete` has been deprecated and will be removed in the next major version.'
+			);
+		}
+	}),
 
 	/**
 	 * List of filtered items for suggestion or autocomplete.
@@ -436,6 +449,15 @@ ClayMultiSelect.STATE = {
 	inputName: Config.string().value('selectedItems'),
 
 	/**
+	 * Flag to define how often to refetch data (ms)
+	 * @instance
+	 * @default 0
+	 * @memberof ClayMultiSelect
+	 * @type {?(number|undefined)}
+	 */
+	pollingInterval: Config.number().value(0),
+
+	/**
 	 * Set ups the request options
 	 * @instance
 	 * @default undefined
@@ -460,7 +482,13 @@ ClayMultiSelect.STATE = {
 	 * @memberof ClayMultiSelect
 	 * @type {?(number|undefined)}
 	 */
-	requestPolling: Config.number().value(0),
+	requestPolling: Config.validator(value => {
+		if (value) {
+			console.warn(
+				'🚨 `requestPolling` has been renamed to `pollingInterval` and will be deprecated and removed in the next release.'
+			);
+		}
+	}),
 
 	/**
 	 * Define how many attempts will be made when the request fails

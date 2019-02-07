@@ -1,5 +1,6 @@
 import 'clay-data-provider';
 import {Config} from 'metal-state';
+import {isFunction} from 'metal';
 import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
@@ -11,6 +12,67 @@ import templates from './ClayAutocomplete.soy.js';
  * @extends ClayComponent
  */
 class ClayAutocomplete extends ClayComponent {
+	/**
+	 * @inheritDoc
+	 */
+	attached() {
+		this._dropdownItemFocused = null;
+
+		this.addListener('dataChange', this._defaultDataChange, true);
+		this.addListener('inputChange', this._defaultInputChange, true);
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	disposed() {
+		this._dropdownItemFocused = null;
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	syncFilteredItems() {
+		this._dropdownItemFocused = null;
+	}
+
+	/**
+	 * Sets filtered items with received data
+	 * @private
+	 */
+	_defaultDataChange() {
+		if (this._query) {
+			this.filteredItems = this.refs.dataProvider.filter(
+				this._query,
+				this.extractData
+			);
+		} else {
+			this.filteredItems = [];
+		}
+	}
+
+	/**
+	 * Filters the items according to received input
+	 * @param {!Event} event
+	 * @private
+	 */
+	_defaultInputChange(event) {
+		this._query = event.data.value;
+
+		if (this._query) {
+			if (isFunction(this.dataSource)) {
+				this.refs.dataProvider.updateData(this._query);
+			} else {
+				this.filteredItems = this.refs.dataProvider.filter(
+					this._query,
+					this.extractData
+				);
+			}
+		} else {
+			this.filteredItems = [];
+		}
+	}
+
 	/**
 	 * Continues the propagation of the data change event
 	 * @param {!Event} event
@@ -33,30 +95,6 @@ class ClayAutocomplete extends ClayComponent {
 	 */
 	_handleDropdownItemClick(event) {
 		return this._handleItemSelected(event);
-	}
-
-	/**
-	 * Handles the filtered items event and continues to propagate.
-	 * @param {!Event} event
-	 * @param {!string} query
-	 * @protected
-	 * @return {Boolean} If the event has been prevented or not.
-	 */
-	_handleFilteredItems(event, query) {
-		if (query) {
-			this.filteredItems = this.refs.dataProvider.filter(
-				query,
-				this.extractData
-			);
-		} else {
-			this.filteredItems = [];
-		}
-
-		return !this.emit({
-			data: this.filteredItems,
-			name: 'filteredItems',
-			originalEvent: event,
-		});
 	}
 
 	/**
@@ -109,18 +147,12 @@ class ClayAutocomplete extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleOnInput(event) {
-		const query = event.target.value;
-
-		if (this.enableAutocomplete) {
-			this._handleFilteredItems(event, query);
-		}
-
 		return !this.emit({
 			data: {
 				value: event.target.value,
 				char: event.data,
 			},
-			name: 'queryChange',
+			name: 'inputChange',
 			originalEvent: event,
 		});
 	}
@@ -194,27 +226,6 @@ class ClayAutocomplete extends ClayComponent {
 			}
 		}
 	}
-
-	/**
-	 * @inheritDoc
-	 */
-	attached() {
-		this._dropdownItemFocused = null;
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	disposed() {
-		this._dropdownItemFocused = null;
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	syncFilteredItems() {
-		this._dropdownItemFocused = null;
-	}
 }
 
 /**
@@ -242,18 +253,31 @@ ClayAutocomplete.STATE = {
 	data: Config.object(),
 
 	/**
-	 * The array of data items that the data source contains or
-	 * the URL for the data provider to request.
-	 * @default undefined
+	 * The array of data items that the data source contains,
+	 * the URL for the data provider to request, or a function
+	 * that receives the query and returns a promise with the
+	 * elements.
+	 *
 	 * @instance
+	 * @default undefined
 	 * @memberof ClayAutocomplete
-	 * @type {!(string|object|array)}
+	 * @type {!(string|object|array|function)}
 	 */
 	dataSource: Config.oneOfType([
-		Config.string(),
-		Config.object(),
 		Config.array(),
+		Config.func(),
+		Config.object(),
+		Config.string(),
 	]).required(),
+
+	/**
+	 * Set the request debounce time
+	 * @instance
+	 * @default 200
+	 * @memberof ClayAutocomplete
+	 * @type {?(number)}
+	 */
+	debounceTime: Config.number().value(200),
 
 	/**
 	 * Object that wires events with default listeners
@@ -281,7 +305,13 @@ ClayAutocomplete.STATE = {
 	 * @memberof ClayAutocomplete
 	 * @type {?bool}
 	 */
-	enableAutocomplete: Config.bool().value(true),
+	enableAutocomplete: Config.validator(value => {
+		if (value) {
+			console.warn(
+				'🚨 `enableAutocomplete` has been deprecated and will be removed in the next major version.'
+			);
+		}
+	}),
 
 	/**
 	 * Extracts from the data the item to be compared in autocomplete.
@@ -349,6 +379,25 @@ ClayAutocomplete.STATE = {
 	inputValue: Config.string(),
 
 	/**
+	 * Flag to define how often to refetch data (ms)
+	 * @instance
+	 * @default 0
+	 * @memberof ClayAutocomplete
+	 * @type {?(number|undefined)}
+	 */
+	pollingInterval: Config.number().value(0),
+
+	/**
+	 * Specifies explicitly if request needs to be made with debounce
+	 * (userInput) or with polling (polling)
+	 * @instance
+	 * @default undefined
+	 * @memberof ClayAutocomplete
+	 * @type {?(object|array)}
+	 */
+	requestInputMode: Config.oneOf(['polling', 'userInput']).value('userInput'),
+
+	/**
 	 * Set ups the request options
 	 * @default undefined
 	 * @instance
@@ -368,12 +417,18 @@ ClayAutocomplete.STATE = {
 
 	/**
 	 * Flag to define how often to refetch data (ms)
-	 * @default 0
 	 * @instance
+	 * @default 0
 	 * @memberof ClayAutocomplete
 	 * @type {?(number|undefined)}
 	 */
-	requestPolling: Config.number().value(0),
+	requestPolling: Config.validator(value => {
+		if (value) {
+			console.warn(
+				'🚨 `requestPolling` has been renamed to `pollingInterval` and will be deprecated and removed in the next release.'
+			);
+		}
+	}),
 
 	/**
 	 * Define how many attempts will be made when the request fails

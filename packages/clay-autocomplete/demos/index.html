@@ -45,6 +45,13 @@
 		</div>
 	</div>
 
+	<div class="row row-spacing">
+		<div class="col">
+			<h2>With function</h2>
+			<div id="data-function-block"></div>
+		</div>
+	</div>
+
 	<script type="text/javascript">
 		const dataSource = [
 			'Bread',
@@ -84,6 +91,15 @@
 			dataSource: 'https://api.pro.coinbase.com/currencies',
 			extractData: (elem) => elem.name,
 		}, '#data-remote-block');
+
+		// With function
+		new metal.ClayAutocomplete({
+			dataSource: (query) => fetch(`https://rickandmortyapi.com/api/character/?name=${query}`)
+									.then(res => res.json())
+									.then(res => res.results)
+									.catch((error) => console.log(error)),
+			extractData: (elem) => elem.name,
+		}, '#data-function-block');
 
 	</script>
 </body>

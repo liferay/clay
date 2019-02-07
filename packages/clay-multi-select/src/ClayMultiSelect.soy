@@ -16,14 +16,16 @@
 	{@param? _handleOnKeydown: any}
 	{@param? _removeFocusedItem: any}
 	{@param? contentRenderer: string}
+	{@param? debounceTime: number}
 	{@param? elementClasses: string}
-	{@param? enableAutocomplete: bool}
+
 	{@param? filteredItems: list<?>}
 	{@param? id: string}
 	{@param? initialData: []|list<?>}
 	{@param? inputName: string}
 	{@param? label: string}
 	{@param? labelLocator: any}
+	{@param? pollingInterval: number}
 	{@param? requestOptions: [
 		method: string,
 		mode: string,
@@ -34,7 +36,6 @@
 		referrer: string,
 		body: []
 	]}
-	{@param? requestPolling: number}
 	{@param? requestRetries: number}
 	{@param? requestTimeout: number}
 	{@param? selectedItems: list<?>}
@@ -67,14 +68,14 @@
 			{param _removeFocusedItem: $_removeFocusedItem /}
 			{param contentRenderer: $contentRenderer ?: ''/}
 			{param dataSource: $dataSource /}
-			{param enableAutocomplete: $enableAutocomplete /}
+			{param debounceTime: $debounceTime /}
 			{param filteredItems: $filteredItems /}
 			{param helpText: $helpText /}
 			{param initialData: $initialData /}
 			{param inputName: $inputName /}
 			{param labelLocator: $labelLocator /}
+			{param pollingInterval: $pollingInterval /}
 			{param requestOptions: $requestOptions /}
-			{param requestPolling: $requestPolling /}
 			{param requestRetries: $requestRetries /}
 			{param requestTimeout: $requestTimeout /}
 			{param selectedItems: $selectedItems /}
@@ -99,11 +100,13 @@
 	{@param? _handleOnKeydown: any}
 	{@param? _removeFocusedItem: any}
 	{@param? contentRenderer: string}
-	{@param? enableAutocomplete: bool}
+	{@param? debounceTime: number}
+
 	{@param? filteredItems: list<?>}
 	{@param? initialData: []|list<?>}
 	{@param? inputName: string}
 	{@param? labelLocator: any}
+	{@param? pollingInterval: number}
 	{@param? requestOptions: [
 		method: string,
 		mode: string,
@@ -114,7 +117,6 @@
 		referrer: string,
 		body: []
 	]}
-	{@param? requestPolling: number}
 	{@param? requestRetries: number}
 	{@param? requestTimeout: number}
 	{@param? selectedItems: list<?>}
@@ -124,24 +126,24 @@
 			{call ClayAutocomplete.render}
 				{param contentRenderer: $contentRenderer /}
 				{param dataSource: $dataSource /}
+				{param debounceTime: $debounceTime /}
 				{param elementClasses: 'form-control form-control-tag-group' /}
-				{param enableAutocomplete: $enableAutocomplete /}
 				{param events: [
 					'dataChange': $_handleDataChange,
-					'filteredItems': $_handleFilteredItemsChange,
+					'filteredItemsChanged': $_handleFilteredItemsChange,
+					'inputChange': $_handleOnInput,
 					'inputOnBlur': $_removeFocusedItem,
 					'inputOnFocus': $_removeFocusedItem,
 					'inputOnKeydown': $_handleOnKeydown,
-					'itemSelected': $_handleDropdownItemClick,
-					'queryChange': $_handleOnInput
+					'itemSelected': $_handleDropdownItemClick
 				] /}
 				{param extractData: $labelLocator /}
 				{param filteredItems: $filteredItems /}
 				{param initialData: $initialData /}
 				{param inputElementClasses: 'form-control-inset' /}
+				{param pollingInterval: $pollingInterval /}
 				{param ref: 'autocomplete' /}
 				{param requestOptions: $requestOptions /}
-				{param requestPolling: $requestPolling /}
 				{param requestRetries: $requestRetries /}
 				{param requestTimeout: $requestTimeout /}
 				{param unstable_content kind="html"}
