@@ -206,6 +206,15 @@ ClayDropdown.STATE = {
 	searchable: Config.bool().value(false),
 
 	/**
+	 * Flag to indicate if toggle icon should appear or not.
+	 * @default true
+	 * @instance
+	 * @memberof ClayDropdown
+	 * @type {?bool}
+	 */
+	showToggleIcon: Config.bool().value(true),
+
+	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 * @default undefined
 	 * @instance

@@ -19,6 +19,7 @@
 	{@param? label: html|string}
 	{@param? preferredAlign: string}
 	{@param? searchable: bool}
+	{@param? showToggleIcon: bool}
 	{@param? style: string}
 	{@param? toggle: any}
 	{@param? triggerClasses: string}
@@ -38,7 +39,7 @@
 			{$label}
 		{/if}
 
-		{if not $icon}
+		{if (not isNonnull($showToggleIcon) or $showToggleIcon) and not $icon}
 			{call ClayIcon.render}
 				{param elementClasses: 'inline-item inline-item-after' /}
 				{param spritemap: $spritemap /}
