@@ -147,10 +147,13 @@ class ClayAutocomplete extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleOnInput(event) {
+		const {value} = event.target;
+		const char = event.data || value.substr(-1);
+
 		return !this.emit({
 			data: {
-				value: event.target.value,
-				char: event.data,
+				value,
+				char,
 			},
 			name: 'inputChange',
 			originalEvent: event,

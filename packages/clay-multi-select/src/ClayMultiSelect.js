@@ -102,10 +102,10 @@ class ClayMultiSelect extends ClayComponent {
 	 * @return {?Boolean} If the event has been prevented or not.
 	 */
 	_handleItemAdded(value, data, event, eventName = 'itemAdded') {
-		const label = value.toLowerCase().replace(',', '');
+		const label = value.toLowerCase();
 
 		if (
-			label.trim() &&
+			label &&
 			!this.selectedItems.find(
 				itemSelected =>
 					this._performCall(this.valueLocator, itemSelected) === label
@@ -114,6 +114,7 @@ class ClayMultiSelect extends ClayComponent {
 			const index = this.selectedItems.push(data);
 
 			this.selectedItems = this.selectedItems;
+			this.inputValue = null;
 
 			return !this.emit({
 				data: {
@@ -123,7 +124,7 @@ class ClayMultiSelect extends ClayComponent {
 				originalEvent: event,
 			});
 		} else {
-			this.refs.autocomplete.refs.input.value = label;
+			this.inputValue = label;
 		}
 	}
 
@@ -185,6 +186,7 @@ class ClayMultiSelect extends ClayComponent {
 		this._removeFocusedItem();
 		this.selectedItems.splice(Number(index), 1);
 		this.selectedItems = this.selectedItems;
+		this.inputValue = null;
 
 		return !this.emit({
 			data: {
@@ -202,21 +204,27 @@ class ClayMultiSelect extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleOnInput(event) {
-		const value = event.data.value;
+		const {values, valueOut} = this._tokenize(event.data.value);
 
 		this._removeFocusedItem();
 
-		switch (event.data.char) {
-		case ',':
-			return this._handleItemAdded(
-				value,
-				this._getItemSchema(value, value),
-				event
-			);
-		default:
+		if (event.data.char === ',' || values.length > 1) {
+			values.forEach(value => {
+				this._handleItemAdded(
+					value,
+					this._getItemSchema(value, value),
+					event
+				);
+			});
+
+			if (valueOut) {
+				this.inputValue = valueOut;
+			}
+		} else {
 			return !this.emit({
 				data: {
-					value,
+					values,
+					valueOut,
 				},
 				name: 'inputChange',
 				originalEvent: event,
@@ -247,6 +255,12 @@ class ClayMultiSelect extends ClayComponent {
 			}
 			break;
 		case 'Backspace':
+			// Prevents page from returning when input is empty.
+			// See: https://support.mozilla.org/en-US/questions/1057630
+			if (!value) {
+				event.preventDefault();
+			}
+
 			if (!value) {
 				if (!this._itemFocused) {
 					return this._handleItemFocus(event);
@@ -295,6 +309,23 @@ class ClayMultiSelect extends ClayComponent {
 		if (this._itemFocused) {
 			this._itemFocused = null;
 		}
+	}
+
+	/**
+	 * Analyze the string and separate the values that
+	 * get a comma at the end.
+	 * @param {!string} string
+	 * @param {!string} separator
+	 * @return {Object}
+	 */
+	_tokenize(string, separator = ',') {
+		const hasLastComma = string.endsWith(separator);
+		const values = string.split(/\s*(?:,|$)\s*/).filter(Boolean);
+
+		return {
+			values,
+			valueOut: hasLastComma ? null : values.pop(),
+		};
 	}
 
 	/**
@@ -456,6 +487,16 @@ ClayMultiSelect.STATE = {
 	 * @type {?(number|undefined)}
 	 */
 	pollingInterval: Config.number().value(0),
+
+	/*
+	 * Value of the input.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @private
+	 * @type {?(string|undefined)}
+	 */
+	inputValue: Config.string().internal(),
 
 	/**
 	 * Set ups the request options
