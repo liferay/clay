@@ -47,6 +47,13 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h2>Dropdown with small trigger</h2>
+			<div id="no-toggle-icon-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
 			<h2>Dropdown with icon trigger</h2>
 			<div id="icon-trigger-block"></div>
 		</div>
@@ -286,6 +293,38 @@
 				triggerSize: 'sm',
 			},
 			'#size-block'
+		);
+
+		/**
+		 * Dropdown with no toggle icon
+		 **/
+		 new metal.ClayDropdown(
+			{
+				items: [
+					{
+						href: '#1',
+						label: 'Item 1',
+					},
+					{
+						active: true,
+						href: '#2',
+						label: 'Item 2',
+					},
+					{
+						disabled: true,
+						href: '#3',
+						label: 'Item 3',
+					},
+					{
+						href: '#4',
+						label: 'Item 4',
+					},
+				],
+				label: 'Trigger Label',
+				showToggleIcon: false,
+				spritemap: spritemap,
+			},
+			'#no-toggle-icon-block'
 		);
 
 		/**
