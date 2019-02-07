@@ -257,7 +257,11 @@
 
 	{call ClayPortal.render}
 		{param content kind="html"}
-			{$dropdownMenu}
+			{if $expanded}
+				{$dropdownMenu}
+			{else}
+				<span>{sp}</span>
+			{/if}
 		{/param}
 		{param portalElement: '#' + $portalElementId /}
 		{param ref: 'portal' /}
