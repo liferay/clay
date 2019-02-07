@@ -115,6 +115,18 @@ describe('ClayDropdown', function() {
 		expect(clayDropdown).toMatchSnapshot();
 	});
 
+	it('should render a dropdown without toggle icon', () => {
+		clayDropdown = new ClayDropdown({
+			id: 'myId',
+			items: items,
+			label: 'Trigger',
+			showToggleIcon: false,
+			spritemap: 'icons.svg',
+		});
+
+		expect(clayDropdown).toMatchSnapshot();
+	});
+
 	it('should render a dropdown with the `link` style', () => {
 		clayDropdown = new ClayDropdown({
 			items: items,
