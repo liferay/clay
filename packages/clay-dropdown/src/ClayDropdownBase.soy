@@ -9,6 +9,7 @@
 	{@param? _handleButtonClick: any}
 	{@param? _handleItemClick: any}
 	{@param? _handleSearch: any}
+	{@param? ariaLabel: string}
 	{@param? button: ?}
 	{@param? caption: string}
 	{@param? contentRenderer: string}
@@ -44,6 +45,7 @@
 
 	<div {$attributes}>
 		{call .trigger}
+			{param ariaLabel: $ariaLabel /}
 			{param classes: $triggerClasses /}
 			{param disabled: $disabled /}
 			{param expanded: $expanded /}
@@ -269,6 +271,7 @@
  */
 {template .trigger}
 	{@param label: html|string}
+	{@param? ariaLabel: string}
 	{@param? classes: string}
 	{@param? disabled: bool}
 	{@param? expanded: bool}
@@ -284,7 +287,11 @@
 		{/if}
 
 		aria-haspopup="true"
-		aria-label="toggle"
+
+		{if $ariaLabel}
+			aria-label="{$ariaLabel}"
+		{/if}
+
 		class="dropdown-toggle btn
 			{if $classes}
 				{sp}{$classes}

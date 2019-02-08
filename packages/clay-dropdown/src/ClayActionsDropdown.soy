@@ -8,6 +8,7 @@
 	{@param spritemap: string}
 	{@param? _handleButtonClick: any}
 	{@param? _handleItemClick: any}
+	{@param? ariaLabel: string}
 	{@param? button: ?}
 	{@param? caption: string}
 	{@param? disabled: bool}
@@ -35,6 +36,7 @@
 	{/let}
 
 	{call ClayDropdownBase.render}
+		{param ariaLabel: $ariaLabel /}
 		{param button: $button /}
 		{param caption: $caption /}
 		{param disabled: $disabled /}
