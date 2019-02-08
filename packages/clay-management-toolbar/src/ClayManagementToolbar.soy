@@ -7,6 +7,7 @@
 	{@param spritemap: string}
 	{@param? _handleActionItemClicked: any}
 	{@param? _handleClearResultsClick: any}
+	{@param? _handleClearSelectionButtonClick: any}
 	{@param? _handleCloseMobileSearchClick: any}
 	{@param? _handleCreationButtonClicked: any}
 	{@param? _handleCreationMenuItemClicked: any}
@@ -18,6 +19,7 @@
 	{@param? _handleOpenMobileSearchClick: any}
 	{@param? _handleQuickActionClicked: any}
 	{@param? _handleSearchSearchClick: any}
+	{@param? _handleSelectAllButtonClick: any}
 	{@param? _handleSelectPageCheckboxChanged: any}
 	{@param? _handleSortingButtonClicked: any}
 	{@param? _handleViewTypeClicked: any}
@@ -31,7 +33,9 @@
 		separator: bool,
 		type: string
 	]>}
+	{@param? checkboxStatus: string}
 	{@param? clearResultsURL: string}
+	{@param? clearSelectionURL: string}
 	{@param? contentRenderer: string}
 	{@param? creationMenu: [
 		caption: string,
@@ -97,12 +101,15 @@
 	{@param? searchInputPlaceholder: string}
 	{@param? searchValue: string}
 	{@param? selectable: bool}
+	{@param? selectAllURL: string}
 	{@param? selectedItems: number}
 	{@param? showAdvancedSearch: bool}
 	{@param? showCreationMenu: bool}
 	{@param? showFiltersDoneButton: bool}
 	{@param? showInfoButton: bool}
+	{@param? showResultsBar: bool}
 	{@param? showSearch: bool}
+	{@param? showSelectAllButton: bool}
 	{@param? sortingOrder: string}
 	{@param? sortingURL: string}
 	{@param? totalItems: number}
@@ -124,18 +131,24 @@
 		{/if}
 	{/let}
 
-	{let $isActive: $selectedItems and $selectedItems > 0 /}
+	{let $isActive: $checkboxStatus and ($checkboxStatus == 'checked' or $checkboxStatus == 'indeterminate') /}
 
 	<div {$attributes}>
 		{if $isActive}
 			{call .active}
 				{param _handleActionItemClicked: $_handleActionItemClicked /}
+				{param _handleClearSelectionButtonClick: $_handleClearSelectionButtonClick /}
 				{param _handleInfoButtonClicked: $_handleInfoButtonClicked /}
 				{param _handleQuickActionClicked: $_handleQuickActionClicked /}
+				{param _handleSelectAllButtonClick: $_handleSelectAllButtonClick /}
 				{param _handleSelectPageCheckboxChanged: $_handleSelectPageCheckboxChanged /}
 				{param actionItems: $actionItems ?: [] /}
+				{param checkboxStatus: $checkboxStatus /}
+				{param clearSelectionURL: $clearSelectionURL /}
+				{param selectAllURL: $selectAllURL /}
 				{param selectedItems: $selectedItems /}
 				{param showInfoButton: $showInfoButton /}
+				{param showSelectAllButton: $showSelectAllButton /}
 				{param spritemap: $spritemap /}
 				{param totalItems: $totalItems /}
 			{/call}
@@ -179,9 +192,7 @@
 			{/call}
 		{/if}
 
-		{let $isResultsBar: isNonnull($totalItems) and ($searchValue or ($filterLabels and length($filterLabels) > 0)) /}
-
-		{if $isResultsBar}
+		{if $showResultsBar}
 			{call ClayResultsBar.render}
 				{param _handleClearResultsClick: $_handleClearResultsClick /}
 				{param clearResultsURL: $clearResultsURL /}
@@ -203,11 +214,17 @@
 	{@param actionItems: list<?>}
 	{@param spritemap: string}
 	{@param? _handleActionItemClicked: any}
+	{@param? _handleClearSelectionButtonClick: any}
 	{@param? _handleInfoButtonClicked: any}
 	{@param? _handleQuickActionClicked: any}
+	{@param? _handleSelectAllButtonClick: any}
 	{@param? _handleSelectPageCheckboxChanged: any}
+	{@param? checkboxStatus: string}
+	{@param? clearSelectionURL: string}
+	{@param? selectAllURL: string}
 	{@param? selectedItems: number}
 	{@param? showInfoButton: bool}
+	{@param? showSelectAllButton: bool}
 	{@param? totalItems: number}
 
 	<nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
@@ -217,7 +234,7 @@
 					{call ClayCheckbox.render}
 						{param checked: true /}
 						{param events: ['change': $_handleSelectPageCheckboxChanged] /}
-						{param indeterminate: $selectedItems < $totalItems /}
+						{param indeterminate: $checkboxStatus == 'indeterminate' /}
 						{param label kind="text"}
 							{msg desc="Select items checkbox label"}
 								select-items
@@ -230,17 +247,93 @@
 				</li>
 				<li class="nav-item">
 					<span class="navbar-text">
-						{msg desc="Says how many items of the total are selected"}
-							{$selectedItems}-of-{$totalItems}
-						{/msg}
-						{sp}
-						<span class="navbar-breakpoint-down-d-none">
-							{msg desc="Items selected"}
-								items-selected
+						{if $selectedItems == $totalItems}
+							{msg desc="All selected"}
+								all-selected
 							{/msg}
-						</span>
+						{else}
+							{msg desc="Says how many items of the total are selected"}
+								{$selectedItems}-of-{$totalItems}
+							{/msg}
+							{sp}
+							<span class="navbar-breakpoint-down-d-none">
+								{msg desc="Items selected"}
+									items-selected
+								{/msg}
+							</span>
+						{/if}
 					</span>
 				</li>
+				<li class="nav-item nav-item-shrink">
+					{if $clearSelectionURL}
+						{call ClayLink.render}
+							{param elementClasses: 'nav-link' /}
+							{param href: $clearSelectionURL /}
+							{param label kind="html"}
+								<span class="text-truncate-inline">
+									<span class="text-truncate">
+										{msg desc="Clear"}
+											clear
+										{/msg}
+									</span>
+								</span>
+							{/param}
+						{/call}
+					{else}
+						{call ClayButton.render}
+							{param elementClasses: 'nav-link' /}
+							{param events: ['click': $_handleClearSelectionButtonClick] /}
+							{param label kind="html"}
+								<span class="text-truncate-inline">
+									<span class="text-truncate">
+										{msg desc="Clear"}
+											clear
+										{/msg}
+									</span>
+								</span>
+							{/param}
+							{param ref: 'clearSelectionButton' /}
+							{param style: 'unstyled' /}
+							{param type: 'button' /}
+						{/call}
+					{/if}
+				</li>
+				{if $showSelectAllButton}
+					<li class="nav-item nav-item-shrink">
+						{if $selectAllURL}
+							{call ClayLink.render}
+								{param elementClasses: 'nav-link' /}
+								{param href: $selectAllURL /}
+								{param label kind="html"}
+									<span class="text-truncate-inline">
+										<span class="text-truncate">
+											{msg desc=""}
+												select-all
+											{/msg}
+										</span>
+									</span>
+								{/param}
+							{/call}
+						{else}
+							{call ClayButton.render}
+								{param elementClasses: 'nav-link' /}
+								{param events: ['click': $_handleSelectAllButtonClick] /}
+								{param label kind="html"}
+									<span class="text-truncate-inline">
+										<span class="text-truncate">
+											{msg desc=""}
+												select-all
+											{/msg}
+										</span>
+									</span>
+								{/param}
+								{param ref: 'selectAllButton' /}
+								{param style: 'unstyled' /}
+								{param type: 'button' /}
+							{/call}
+						{/if}
+					</li>
+				{/if}
 			</ul>
 
 			{let $hasActionItems: length($actionItems) > 0 /}
@@ -770,6 +863,8 @@
 
 				{if $searchValue}
 					value="{$searchValue}"
+				{else}
+					value=""
 				{/if}
 			{/let}
 

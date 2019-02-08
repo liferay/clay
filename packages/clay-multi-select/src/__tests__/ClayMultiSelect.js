@@ -112,6 +112,23 @@ describe('ClayMultiSelect', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a ClayMultiSelect with multiple values with comma at the end', () => {
+		component = new ClayMultiSelect({
+			dataSource,
+			helpText,
+			spritemap,
+		});
+
+		const {input} = component.refs.autocomplete.refs;
+
+		input.value = 'a , b , something,';
+		triggerEvent(input, 'input', {data: ','});
+
+		jest.runAllTimers();
+
+		expect(component).toMatchSnapshot();
+	});
+
 	describe('Lifecycle', () => {
 		it('should emit an event when the button is clicked', () => {
 			component = new ClayMultiSelect({
@@ -195,34 +212,10 @@ describe('ClayMultiSelect', function() {
 			expect(spy).toHaveBeenCalledWith(
 				expect.objectContaining({
 					data: {
-						value: 'foo',
+						values: [],
+						valueOut: 'foo',
 					},
-					name: 'queryChange',
-					originalEvent: expect.any(Object),
-				})
-			);
-		});
-
-		it('should emit an event when items are filtered', () => {
-			component = new ClayMultiSelect({
-				dataSource,
-				helpText,
-				spritemap,
-			});
-
-			const spy = jest.spyOn(component, 'emit');
-			const {input} = component.refs.autocomplete.refs;
-
-			input.value = 'bre';
-			triggerEvent(input, 'input', {data: 'e'});
-
-			jest.runAllTimers();
-
-			expect(spy).toHaveBeenCalled();
-			expect(spy).toHaveBeenCalledWith(
-				expect.objectContaining({
-					data: expect.any(Object),
-					name: 'filteredItems',
+					name: 'inputChange',
 					originalEvent: expect.any(Object),
 				})
 			);
@@ -269,7 +262,7 @@ describe('ClayMultiSelect', function() {
 				const spy = jest.spyOn(component, 'emit');
 				const {input} = component.refs.autocomplete.refs;
 
-				input.value = 'bar';
+				input.value = 'bar,';
 				triggerEvent(input, 'input', {data: ','});
 
 				jest.runAllTimers();
@@ -310,7 +303,6 @@ describe('ClayMultiSelect', function() {
 
 				jest.runAllTimers();
 
-				expect(spy).not.toHaveBeenCalled();
 				expect(spy).not.toHaveBeenCalledWith(
 					expect.objectContaining({
 						data: {

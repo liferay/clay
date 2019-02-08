@@ -179,7 +179,7 @@ describe('ClayAutocomplete', function() {
 					value: 'bar',
 					char: 'r',
 				},
-				name: 'queryChange',
+				name: 'inputChange',
 				originalEvent: expect.any(Object),
 			})
 		);
@@ -271,54 +271,6 @@ describe('ClayAutocomplete', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayAutocomplete and emit an event on filtered items', () => {
-		component = new ClayAutocomplete({
-			dataSource,
-		});
-
-		const spy = jest.spyOn(component, 'emit');
-		const {input} = component.refs;
-
-		input.value = 'br';
-		triggerEvent(input, 'input', {data: 'r'});
-
-		jest.runAllTimers();
-
-		expect(spy).toHaveBeenCalled();
-		expect(spy).toHaveBeenCalledWith(
-			expect.objectContaining({
-				data: expect.any(Object),
-				name: 'filteredItems',
-				originalEvent: expect.any(Object),
-			})
-		);
-		expect(component).toMatchSnapshot();
-	});
-
-	it('should render a ClayAutocomplete and not emit an event on filtered items when disabled autocomplete', () => {
-		component = new ClayAutocomplete({
-			dataSource,
-			enableAutocomplete: false,
-		});
-
-		const spy = jest.spyOn(component, 'emit');
-		const {input} = component.refs;
-
-		input.value = 'b';
-		triggerEvent(input, 'input', {data: 'b'});
-
-		jest.runAllTimers();
-
-		expect(spy).not.toHaveBeenCalledWith(
-			expect.objectContaining({
-				data: expect.any(Object),
-				name: 'filteredItems',
-				originalEvent: expect.any(Object),
-			})
-		);
-		expect(component).toMatchSnapshot();
-	});
-
 	it('should render a ClayAutocomplete and filtered items with structured data', () => {
 		component = new ClayAutocomplete({
 			dataSource: [
@@ -332,7 +284,6 @@ describe('ClayAutocomplete', function() {
 			extractData: elem => elem.name,
 		});
 
-		const spy = jest.spyOn(component, 'emit');
 		const {input} = component.refs;
 
 		input.value = 'e';
@@ -340,14 +291,6 @@ describe('ClayAutocomplete', function() {
 
 		jest.runAllTimers();
 
-		expect(spy).toHaveBeenCalled();
-		expect(spy).toHaveBeenCalledWith(
-			expect.objectContaining({
-				data: expect.any(Object),
-				name: 'filteredItems',
-				originalEvent: expect.any(Object),
-			})
-		);
 		expect(component).toMatchSnapshot();
 	});
 

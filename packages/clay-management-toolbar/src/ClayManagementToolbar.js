@@ -56,6 +56,19 @@ class ClayManagementToolbar extends ClayComponent {
 	}
 
 	/**
+	 * Continues the propagation of the clear selcetion button clicked event
+	 * @param {!Event} event
+	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleClearSelectionButtonClick(event) {
+		return !this.emit({
+			name: 'clearSelectionButtonClicked',
+			originalEvent: event,
+		});
+	}
+
+	/**
 	 * Hides the search in mobile devices
 	 * @private
 	 */
@@ -199,6 +212,19 @@ class ClayManagementToolbar extends ClayComponent {
 	}
 
 	/**
+	 * Continues the propagation of the select all button clicked event
+	 * @param {!Event} event
+	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleSelectAllButtonClick(event) {
+		return !this.emit({
+			name: 'selectAllButtonClicked',
+			originalEvent: event,
+		});
+	}
+
+	/**
 	 * Continues the propagation of the checkbox changed event
 	 * @param {!Event} event
 	 * @private
@@ -273,6 +299,20 @@ ClayManagementToolbar.STATE = {
 	actionItems: actionItemsValidator,
 
 	/**
+	 * Satus of the select items checkbox. If checkboxStatus is checked or
+	 * indeterminate the toolbar will be in active state.
+	 * @default unchecked
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?(string|undefined)}
+	 */
+	checkboxStatus: Config.oneOf([
+		'checked',
+		'indeterminate',
+		'unchecked',
+	]).value('unchecked'),
+
+	/**
 	 * Url for clear results link.
 	 * @default undefined
 	 * @instance
@@ -280,6 +320,15 @@ ClayManagementToolbar.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	clearResultsURL: Config.string(),
+
+	/**
+	 * Url for clear selection link.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?(string|undefined)}
+	 */
+	clearSelectionURL: Config.string(),
 
 	/**
 	 * Name of the content renderer to use template variants.
@@ -449,6 +498,15 @@ ClayManagementToolbar.STATE = {
 	selectable: Config.bool().value(false),
 
 	/**
+	 * Url for select all link.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?(string|undefined)}
+	 */
+	selectAllURL: Config.string(),
+
+	/**
 	 * Number of selected items.
 	 * @default undefined
 	 * @instance
@@ -495,6 +553,15 @@ ClayManagementToolbar.STATE = {
 	showInfoButton: Config.bool().value(false),
 
 	/**
+	 * Flag to indicate if the results bar should be shown or not.
+	 * @default false
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?bool}
+	 */
+	showResultsBar: Config.bool().value(false),
+
+	/**
 	 * Flag to indicate if search should be shown or not.
 	 * @default true
 	 * @instance
@@ -502,6 +569,15 @@ ClayManagementToolbar.STATE = {
 	 * @type {?bool}
 	 */
 	showSearch: Config.bool().value(true),
+
+	/**
+	 * Flag to indicate if select all button should be shown or not.
+	 * @default false
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?bool}
+	 */
+	showSelectAllButton: Config.bool().value(false),
 
 	/**
 	 * Sorting url.

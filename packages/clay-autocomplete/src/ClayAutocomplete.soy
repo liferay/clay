@@ -4,7 +4,7 @@
  * This renders the component's whole content.
  */
 {template .render}
-	{@param dataSource: string|[]|list<?>}
+	{@param dataSource: string|[]|list<?>|any}
 	{@param? _handleDataChange: any}
 	{@param? _handleDropdownItemClick: any}
 	{@param? _handleOnBlur: any}
@@ -19,6 +19,8 @@
 	{@param? inputElementClasses: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
+	{@param? pollingInterval: number}
+	{@param? requestInputMode: string}
 	{@param? requestOptions: [
 		method: string,
 		mode: string,
@@ -29,7 +31,6 @@
 		referrer: string,
 		body: []
 	]}
-	{@param? requestPolling: number}
 	{@param? requestRetries: number}
 	{@param? requestTimeout: number}
 	{@param? unstable_content: html}
@@ -70,8 +71,9 @@
 			{param dataSource: $dataSource /}
 			{param filteredItems: $filteredItems /}
 			{param initialData: $initialData /}
+			{param pollingInterval: $pollingInterval /}
+			{param requestInputMode: $requestInputMode /}
 			{param requestOptions: $requestOptions /}
-			{param requestPolling: $requestPolling /}
 			{param requestRetries: $requestRetries /}
 			{param requestTimeout: $requestTimeout /}
 		{/call}
@@ -125,12 +127,14 @@
  * This render the dropdown content.
  */
 {template .dropdown}
-	{@param dataSource: string|[]|list<?>}
+	{@param dataSource: string|[]|list<?>|any}
 	{@param? _handleDataChange: any}
 	{@param? _handleDropdownItemClick: any}
 	{@param? contentRenderer: string}
 	{@param? filteredItems: list<?>}
 	{@param? initialData: []|list<?>}
+	{@param? pollingInterval: number}
+	{@param? requestInputMode: string}
 	{@param? requestOptions: [
 		method: string,
 		mode: string,
@@ -141,7 +145,6 @@
 		referrer: string,
 		body: []
 	]}
-	{@param? requestPolling: number}
 	{@param? requestRetries: number}
 	{@param? requestTimeout: number}
 
@@ -172,9 +175,10 @@
 		{param dataSource: $dataSource /}
 		{param events: ['dataChange': $_handleDataChange] /}
 		{param initialData: $initialData /}
+		{param pollingInterval: $pollingInterval /}
 		{param ref: 'dataProvider' /}
+		{param requestInputMode: $requestInputMode /}
 		{param requestOptions: $requestOptions /}
-		{param requestPolling: $requestPolling /}
 		{param requestRetries: $requestRetries /}
 		{param requestTimeout: $requestTimeout /}
 	{/call}

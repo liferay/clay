@@ -44,7 +44,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
@@ -254,24 +254,6 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
       </ul>
     </div>
   </nav>
-  <nav class="tbar tbar-inline-xs-down subnav-tbar subnav-tbar-primary">
-    <div class="container-fluid container-fluid-max-xl">
-      <ul class="tbar-nav tbar-nav-wrap">
-        <li class="tbar-item tbar-item-expand">
-          <div class="tbar-section">
-            <span class="component-text text-truncate-inline">
-              <span class="text-truncate">0-results-for-carcamusas</span>
-            </span>
-          </div>
-        </li>
-        <li class="tbar-item">
-          <div class="tbar-section">
-            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
 </div>
 <div class="dropdown-menu" ref="menu">
   <form>
@@ -334,150 +316,32 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
 </div>
 `;
 
-exports[`ClayManagementToolbar should render a management toolbar with a clear results link 1`] = `
+exports[`ClayManagementToolbar should render a management toolbar in active state with actions 1`] = `
 <div>
-  <nav class="management-bar management-bar-light navbar navbar-expand-md">
+  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
     <div class="container-fluid container-fluid-max-xl">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav navbar-nav-expand">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
             <label>
-              <input class="custom-control-input" ref="input" type="checkbox">
+              <input checked="" class="custom-control-input" ref="input" type="checkbox">
               <span class="custom-control-label">
                 <span class="custom-control-label-text sr-only">select-items</span>
               </span>
             </label>
           </div>
         </li>
-      </ul>
-      <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
-        <div class="container-fluid container-fluid-max-xl">
-          <form method="GET" role="search">
-            <div class="input-group">
-              <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="foo">
-                <span class="input-group-inset-item input-group-inset-item-after">
-                  <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
-                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                      <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
-                    </svg>
-                  </button>
-                  <button class="btn btn-unstyled" aria-label="search" type="submit">
-                    <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
-                      <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
-                    </svg>
-                  </button>
-                </span>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <ul class="navbar-nav">
-        <li class="nav-item navbar-breakpoint-d-none">
-          <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
-            <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
-              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
-            </svg>
-          </button>
-        </li>
         <li class="nav-item">
-          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
-              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
-            </svg>
-          </button>
+          <span class="navbar-text">1-of-10
+            <span class="navbar-breakpoint-down-d-none">items-selected</span>
+          </span>
         </li>
-      </ul>
-    </div>
-  </nav>
-  <nav class="tbar tbar-inline-xs-down subnav-tbar subnav-tbar-primary">
-    <div class="container-fluid container-fluid-max-xl">
-      <ul class="tbar-nav tbar-nav-wrap">
-        <li class="tbar-item tbar-item-expand">
-          <div class="tbar-section">
-            <span class="component-text text-truncate-inline">
-              <span class="text-truncate">10-results-for-foo</span>
+        <li class="nav-item nav-item-shrink">
+          <button class="btn nav-link btn-unstyled" type="button">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">clear</span>
             </span>
-          </div>
-        </li>
-        <li class="tbar-item">
-          <div class="tbar-section">
-            <a class=" component-link tbar-link" href="#clear">clear</a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
-`;
-
-exports[`ClayManagementToolbar should render a management toolbar with actions as quick actions in active state 1`] = `
-<div>
-  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
-    <div class="container-fluid container-fluid-max-xl">
-      <ul class="navbar-nav navbar-nav-expand">
-        <li class="nav-item">
-          <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
-            </label>
-          </div>
-        </li>
-        <li class="nav-item">
-          <span class="navbar-text">1-of-10
-            <span class="navbar-breakpoint-down-d-none">items-selected</span>
-          </span>
-        </li>
-      </ul>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <div class="dropdown dropdown-action">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" ref="triggerButton" title="actions" type="button">
-              <svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-              </svg>
-            </button>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
-<div class="dropdown-menu" ref="menu">
-  <ul class="list-unstyled">
-    <li tabindex="-1">
-      <button class="btn dropdown-item btn-sm btn-link" aria-label="Edit" type="button">Edit</button>
-    </li>
-    <li tabindex="-1">
-      <a class=" dropdown-item" href="#deleteurl">Delete</a>
-    </li>
-  </ul>
-</div>
-`;
-
-exports[`ClayManagementToolbar should render a management toolbar with actions in active state 1`] = `
-<div>
-  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
-    <div class="container-fluid container-fluid-max-xl">
-      <ul class="navbar-nav navbar-nav-expand">
-        <li class="nav-item">
-          <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
-            </label>
-          </div>
-        </li>
-        <li class="nav-item">
-          <span class="navbar-text">1-of-10
-            <span class="navbar-breakpoint-down-d-none">items-selected</span>
-          </span>
+          </button>
         </li>
       </ul>
       <ul class="navbar-nav">
@@ -506,6 +370,499 @@ exports[`ClayManagementToolbar should render a management toolbar with actions i
 </div>
 `;
 
+exports[`ClayManagementToolbar should render a management toolbar in active state with actions as quick actions 1`] = `
+<div>
+  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav navbar-nav-expand">
+        <li class="nav-item">
+          <div class="custom-control custom-checkbox">
+            <label>
+              <input checked="" class="custom-control-input" ref="input" type="checkbox">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">select-items</span>
+              </span>
+            </label>
+          </div>
+        </li>
+        <li class="nav-item">
+          <span class="navbar-text">1-of-10
+            <span class="navbar-breakpoint-down-d-none">items-selected</span>
+          </span>
+        </li>
+        <li class="nav-item nav-item-shrink">
+          <button class="btn nav-link btn-unstyled" type="button">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">clear</span>
+            </span>
+          </button>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <div class="dropdown dropdown-action">
+            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" ref="triggerButton" title="actions" type="button">
+              <svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
+              </svg>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li tabindex="-1">
+      <button class="btn dropdown-item btn-sm btn-link" aria-label="Edit" type="button">Edit</button>
+    </li>
+    <li tabindex="-1">
+      <a class=" dropdown-item" href="#deleteurl">Delete</a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayManagementToolbar should render a management toolbar in active state with checbkox checked 1`] = `
+<div>
+  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav navbar-nav-expand">
+        <li class="nav-item">
+          <div class="custom-control custom-checkbox">
+            <label>
+              <input checked="" class="custom-control-input" ref="input" type="checkbox">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">select-items</span>
+              </span>
+            </label>
+          </div>
+        </li>
+        <li class="nav-item">
+          <span class="navbar-text">1-of-10
+            <span class="navbar-breakpoint-down-d-none">items-selected</span>
+          </span>
+        </li>
+        <li class="nav-item nav-item-shrink">
+          <a class=" nav-link" href="my-clear-selection-url">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">clear</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`ClayManagementToolbar should render a management toolbar in active state with classes 1`] = `
+<div class="my-custom-class">
+  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav navbar-nav-expand">
+        <li class="nav-item">
+          <div class="custom-control custom-checkbox">
+            <label>
+              <input checked="" class="custom-control-input" ref="input" type="checkbox">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">select-items</span>
+              </span>
+            </label>
+          </div>
+        </li>
+        <li class="nav-item">
+          <span class="navbar-text">1-of-10
+            <span class="navbar-breakpoint-down-d-none">items-selected</span>
+          </span>
+        </li>
+        <li class="nav-item nav-item-shrink">
+          <button class="btn nav-link btn-unstyled" type="button">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">clear</span>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`ClayManagementToolbar should render a management toolbar in active state with clear selection link 1`] = `
+<div>
+  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav navbar-nav-expand">
+        <li class="nav-item">
+          <div class="custom-control custom-checkbox">
+            <label>
+              <input checked="" class="custom-control-input" ref="input" type="checkbox">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">select-items</span>
+              </span>
+            </label>
+          </div>
+        </li>
+        <li class="nav-item">
+          <span class="navbar-text">1-of-10
+            <span class="navbar-breakpoint-down-d-none">items-selected</span>
+          </span>
+        </li>
+        <li class="nav-item nav-item-shrink">
+          <a class=" nav-link" href="my-clear-selection-url">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">clear</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`ClayManagementToolbar should render a management toolbar in active state with disabled actions as quick actions 1`] = `
+<div>
+  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav navbar-nav-expand">
+        <li class="nav-item">
+          <div class="custom-control custom-checkbox">
+            <label>
+              <input checked="" class="custom-control-input" ref="input" type="checkbox">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">select-items</span>
+              </span>
+            </label>
+          </div>
+        </li>
+        <li class="nav-item">
+          <span class="navbar-text">1-of-10
+            <span class="navbar-breakpoint-down-d-none">items-selected</span>
+          </span>
+        </li>
+        <li class="nav-item nav-item-shrink">
+          <button class="btn nav-link btn-unstyled" type="button">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">clear</span>
+            </span>
+          </button>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item navbar-breakpoint-down-d-none" data-quick-action-index="0">
+          <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="edit" disabled="disabled" title="Edit" type="button">
+            <svg class="lexicon-icon lexicon-icon-edit" focusable="false" role="presentation">
+              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#edit"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="nav-item navbar-breakpoint-down-d-none" data-quick-action-index="1">
+          <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="trash" disabled="disabled" title="Delete" type="button">
+            <svg class="lexicon-icon lexicon-icon-trash" focusable="false" role="presentation">
+              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="nav-item">
+          <div class="dropdown dropdown-action">
+            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" ref="triggerButton" title="actions" type="button">
+              <svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
+              </svg>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <ul class="list-unstyled">
+    <li tabindex="-1">
+      <button class="btn dropdown-item disabled btn-sm btn-link" aria-label="Edit" disabled="disabled" type="button">Edit</button>
+    </li>
+    <li tabindex="-1">
+      <a class=" dropdown-item disabled" href="javascript:;">Delete</a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ClayManagementToolbar should render a management toolbar in active state with id 1`] = `
+<div id="myId">
+  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav navbar-nav-expand">
+        <li class="nav-item">
+          <div class="custom-control custom-checkbox">
+            <label>
+              <input checked="" class="custom-control-input" ref="input" type="checkbox">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">select-items</span>
+              </span>
+            </label>
+          </div>
+        </li>
+        <li class="nav-item">
+          <span class="navbar-text">1-of-10
+            <span class="navbar-breakpoint-down-d-none">items-selected</span>
+          </span>
+        </li>
+        <li class="nav-item nav-item-shrink">
+          <button class="btn nav-link btn-unstyled" type="button">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">clear</span>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`ClayManagementToolbar should render a management toolbar in active state with info button 1`] = `
+<div>
+  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav navbar-nav-expand">
+        <li class="nav-item">
+          <div class="custom-control custom-checkbox">
+            <label>
+              <input checked="" class="custom-control-input" ref="input" type="checkbox">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">select-items</span>
+              </span>
+            </label>
+          </div>
+        </li>
+        <li class="nav-item">
+          <span class="navbar-text">1-of-10
+            <span class="navbar-breakpoint-down-d-none">items-selected</span>
+          </span>
+        </li>
+        <li class="nav-item nav-item-shrink">
+          <button class="btn nav-link btn-unstyled" type="button">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">clear</span>
+            </span>
+          </button>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="info-circle-open" title="info" type="button">
+            <svg class="lexicon-icon lexicon-icon-info-circle-open" focusable="false" role="presentation">
+              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle-open"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`ClayManagementToolbar should render a management toolbar in active state with no actions when actionsItems is empty 1`] = `
+<div>
+  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav navbar-nav-expand">
+        <li class="nav-item">
+          <div class="custom-control custom-checkbox">
+            <label>
+              <input checked="" class="custom-control-input" ref="input" type="checkbox">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">select-items</span>
+              </span>
+            </label>
+          </div>
+        </li>
+        <li class="nav-item">
+          <span class="navbar-text">1-of-10
+            <span class="navbar-breakpoint-down-d-none">items-selected</span>
+          </span>
+        </li>
+        <li class="nav-item nav-item-shrink">
+          <button class="btn nav-link btn-unstyled" type="button">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">clear</span>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`ClayManagementToolbar should render a management toolbar in active state with search results bar 1`] = `
+<div id="myId">
+  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav navbar-nav-expand">
+        <li class="nav-item">
+          <div class="custom-control custom-checkbox">
+            <label>
+              <input checked="" class="custom-control-input" ref="input" type="checkbox">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">select-items</span>
+              </span>
+            </label>
+          </div>
+        </li>
+        <li class="nav-item">
+          <span class="navbar-text">1-of-10
+            <span class="navbar-breakpoint-down-d-none">items-selected</span>
+          </span>
+        </li>
+        <li class="nav-item nav-item-shrink">
+          <button class="btn nav-link btn-unstyled" type="button">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">clear</span>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <nav class="tbar tbar-inline-xs-down subnav-tbar subnav-tbar-primary">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="tbar-nav tbar-nav-wrap">
+        <li class="tbar-item tbar-item-expand">
+          <div class="tbar-section">
+            <span class="component-text text-truncate-inline">
+              <span class="text-truncate">10-results-for-foo</span>
+            </span>
+          </div>
+        </li>
+        <li class="tbar-item">
+          <div class="tbar-section">
+            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`ClayManagementToolbar should render a management toolbar in active state with select all button 1`] = `
+<div>
+  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav navbar-nav-expand">
+        <li class="nav-item">
+          <div class="custom-control custom-checkbox">
+            <label>
+              <input checked="" class="custom-control-input" ref="input" type="checkbox">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">select-items</span>
+              </span>
+            </label>
+          </div>
+        </li>
+        <li class="nav-item">
+          <span class="navbar-text">8-of-10
+            <span class="navbar-breakpoint-down-d-none">items-selected</span>
+          </span>
+        </li>
+        <li class="nav-item nav-item-shrink">
+          <button class="btn nav-link btn-unstyled" type="button">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">clear</span>
+            </span>
+          </button>
+        </li>
+        <li class="nav-item nav-item-shrink">
+          <button class="btn nav-link btn-unstyled" type="button">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">select-all</span>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`ClayManagementToolbar should render a management toolbar in active state with select all link 1`] = `
+<div>
+  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav navbar-nav-expand">
+        <li class="nav-item">
+          <div class="custom-control custom-checkbox">
+            <label>
+              <input checked="" class="custom-control-input" ref="input" type="checkbox">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">select-items</span>
+              </span>
+            </label>
+          </div>
+        </li>
+        <li class="nav-item">
+          <span class="navbar-text">8-of-10
+            <span class="navbar-breakpoint-down-d-none">items-selected</span>
+          </span>
+        </li>
+        <li class="nav-item nav-item-shrink">
+          <button class="btn nav-link btn-unstyled" type="button">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">clear</span>
+            </span>
+          </button>
+        </li>
+        <li class="nav-item nav-item-shrink">
+          <a class=" nav-link" href="my-select-all-url">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">select-all</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`ClayManagementToolbar should render a management toolbar in state active with checbkox in indeterminate state 1`] = `
+<div>
+  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav navbar-nav-expand">
+        <li class="nav-item">
+          <div class="custom-control custom-checkbox">
+            <label>
+              <input checked="" class="custom-control-input" ref="input" type="checkbox">
+              <span class="custom-control-label">
+                <span class="custom-control-label-text sr-only">select-items</span>
+              </span>
+            </label>
+          </div>
+        </li>
+        <li class="nav-item">
+          <span class="navbar-text">1-of-10
+            <span class="navbar-breakpoint-down-d-none">items-selected</span>
+          </span>
+        </li>
+        <li class="nav-item nav-item-shrink">
+          <button class="btn nav-link btn-unstyled" type="button">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">clear</span>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
 exports[`ClayManagementToolbar should render a management toolbar with advanced search 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
@@ -515,7 +872,7 @@ exports[`ClayManagementToolbar should render a management toolbar with advanced 
         <form method="GET" role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="">
               <span class="input-group-inset-item input-group-inset-item-after">
                 <button class="btn btn-unstyled" aria-label="search" type="submit">
                   <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
@@ -569,7 +926,7 @@ exports[`ClayManagementToolbar should render a management toolbar with ascending
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
@@ -617,7 +974,7 @@ exports[`ClayManagementToolbar should render a management toolbar with classes 1
         <form method="GET" role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="">
               <span class="input-group-inset-item input-group-inset-item-after">
                 <button class="btn btn-unstyled" aria-label="search" type="submit">
                   <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
@@ -643,32 +1000,6 @@ exports[`ClayManagementToolbar should render a management toolbar with classes 1
 </div>
 `;
 
-exports[`ClayManagementToolbar should render a management toolbar with classes in active state 1`] = `
-<div class="my-custom-class">
-  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
-    <div class="container-fluid container-fluid-max-xl">
-      <ul class="navbar-nav navbar-nav-expand">
-        <li class="nav-item">
-          <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
-            </label>
-          </div>
-        </li>
-        <li class="nav-item">
-          <span class="navbar-text">1-of-10
-            <span class="navbar-breakpoint-down-d-none">items-selected</span>
-          </span>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
-`;
-
 exports[`ClayManagementToolbar should render a management toolbar with creation menu 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
@@ -678,7 +1009,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
         <form method="GET" role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="">
               <span class="input-group-inset-item input-group-inset-item-after">
                 <button class="btn btn-unstyled" aria-label="search" type="submit">
                   <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
@@ -714,7 +1045,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
@@ -775,7 +1106,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
@@ -824,7 +1155,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
@@ -892,7 +1223,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
@@ -991,7 +1322,7 @@ exports[`ClayManagementToolbar should render a management toolbar with descendin
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
@@ -1030,67 +1361,6 @@ exports[`ClayManagementToolbar should render a management toolbar with descendin
 </div>
 `;
 
-exports[`ClayManagementToolbar should render a management toolbar with disabled actions as quick actions in active state 1`] = `
-<div>
-  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
-    <div class="container-fluid container-fluid-max-xl">
-      <ul class="navbar-nav navbar-nav-expand">
-        <li class="nav-item">
-          <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
-            </label>
-          </div>
-        </li>
-        <li class="nav-item">
-          <span class="navbar-text">1-of-10
-            <span class="navbar-breakpoint-down-d-none">items-selected</span>
-          </span>
-        </li>
-      </ul>
-      <ul class="navbar-nav">
-        <li class="nav-item navbar-breakpoint-down-d-none" data-quick-action-index="0">
-          <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="edit" disabled="disabled" title="Edit" type="button">
-            <svg class="lexicon-icon lexicon-icon-edit" focusable="false" role="presentation">
-              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#edit"></use>
-            </svg>
-          </button>
-        </li>
-        <li class="nav-item navbar-breakpoint-down-d-none" data-quick-action-index="1">
-          <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="trash" disabled="disabled" title="Delete" type="button">
-            <svg class="lexicon-icon lexicon-icon-trash" focusable="false" role="presentation">
-              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
-            </svg>
-          </button>
-        </li>
-        <li class="nav-item">
-          <div class="dropdown dropdown-action">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn nav-link nav-link-monospaced btn-unstyled" ref="triggerButton" title="actions" type="button">
-              <svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#ellipsis-v"></use>
-              </svg>
-            </button>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
-<div class="dropdown-menu" ref="menu">
-  <ul class="list-unstyled">
-    <li tabindex="-1">
-      <button class="btn dropdown-item disabled btn-sm btn-link" aria-label="Edit" disabled="disabled" type="button">Edit</button>
-    </li>
-    <li tabindex="-1">
-      <a class=" dropdown-item disabled" href="javascript:;">Delete</a>
-    </li>
-  </ul>
-</div>
-`;
-
 exports[`ClayManagementToolbar should render a management toolbar with filters dropdown with items and no done button 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
@@ -1118,7 +1388,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
@@ -1194,7 +1464,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
@@ -1291,7 +1561,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
@@ -1374,7 +1644,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
@@ -1468,7 +1738,7 @@ exports[`ClayManagementToolbar should render a management toolbar with id 1`] = 
         <form method="GET" role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="">
               <span class="input-group-inset-item input-group-inset-item-after">
                 <button class="btn btn-unstyled" aria-label="search" type="submit">
                   <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
@@ -1487,32 +1757,6 @@ exports[`ClayManagementToolbar should render a management toolbar with id 1`] = 
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
           </button>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
-`;
-
-exports[`ClayManagementToolbar should render a management toolbar with id in active state 1`] = `
-<div id="myId">
-  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
-    <div class="container-fluid container-fluid-max-xl">
-      <ul class="navbar-nav navbar-nav-expand">
-        <li class="nav-item">
-          <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
-            </label>
-          </div>
-        </li>
-        <li class="nav-item">
-          <span class="navbar-text">1-of-10
-            <span class="navbar-breakpoint-down-d-none">items-selected</span>
-          </span>
         </li>
       </ul>
     </div>
@@ -1529,7 +1773,7 @@ exports[`ClayManagementToolbar should render a management toolbar with info butt
         <form method="GET" role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="">
               <span class="input-group-inset-item input-group-inset-item-after">
                 <button class="btn btn-unstyled" aria-label="search" type="submit">
                   <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
@@ -1553,41 +1797,6 @@ exports[`ClayManagementToolbar should render a management toolbar with info butt
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
-            </svg>
-          </button>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
-`;
-
-exports[`ClayManagementToolbar should render a management toolbar with info button in active state 1`] = `
-<div>
-  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
-    <div class="container-fluid container-fluid-max-xl">
-      <ul class="navbar-nav navbar-nav-expand">
-        <li class="nav-item">
-          <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
-            </label>
-          </div>
-        </li>
-        <li class="nav-item">
-          <span class="navbar-text">1-of-10
-            <span class="navbar-breakpoint-down-d-none">items-selected</span>
-          </span>
-        </li>
-      </ul>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="info-circle-open" title="info" type="button">
-            <svg class="lexicon-icon lexicon-icon-info-circle-open" focusable="false" role="presentation">
-              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle-open"></use>
             </svg>
           </button>
         </li>
@@ -1607,7 +1816,7 @@ exports[`ClayManagementToolbar should render a management toolbar with links as 
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
@@ -1683,32 +1892,6 @@ exports[`ClayManagementToolbar should render a management toolbar with links as 
 </div>
 `;
 
-exports[`ClayManagementToolbar should render a management toolbar with no actions when actionsItems is empty in active state 1`] = `
-<div>
-  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
-    <div class="container-fluid container-fluid-max-xl">
-      <ul class="navbar-nav navbar-nav-expand">
-        <li class="nav-item">
-          <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
-            </label>
-          </div>
-        </li>
-        <li class="nav-item">
-          <span class="navbar-text">1-of-10
-            <span class="navbar-breakpoint-down-d-none">items-selected</span>
-          </span>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
-`;
-
 exports[`ClayManagementToolbar should render a management toolbar with no search 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
@@ -1728,147 +1911,7 @@ exports[`ClayManagementToolbar should render a management toolbar with no search
 </div>
 `;
 
-exports[`ClayManagementToolbar should render a management toolbar with search action url 1`] = `
-<div>
-  <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container-fluid container-fluid-max-xl">
-      <ul class="navbar-nav"></ul>
-      <div class="navbar-form navbar-form-autofit">
-        <form action="mySearchURL" method="GET" role="search">
-          <div class="input-group">
-            <div class="input-group-item">
-              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
-              <span class="input-group-inset-item input-group-inset-item-after">
-                <button class="btn btn-unstyled" aria-label="search" type="submit">
-                  <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
-                    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
-                  </svg>
-                </button>
-              </span>
-            </div>
-          </div>
-        </form>
-      </div>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
-              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
-            </svg>
-          </button>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
-`;
-
-exports[`ClayManagementToolbar should render a management toolbar with search and customized placeholder 1`] = `
-<div>
-  <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container-fluid container-fluid-max-xl">
-      <ul class="navbar-nav"></ul>
-      <div class="navbar-form navbar-form-autofit">
-        <form method="GET" role="search">
-          <div class="input-group">
-            <div class="input-group-item">
-              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search thread..." ref="search" type="text">
-              <span class="input-group-inset-item input-group-inset-item-after">
-                <button class="btn btn-unstyled" aria-label="search" type="submit">
-                  <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
-                    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
-                  </svg>
-                </button>
-              </span>
-            </div>
-          </div>
-        </form>
-      </div>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
-              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
-            </svg>
-          </button>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
-`;
-
-exports[`ClayManagementToolbar should render a management toolbar with search form name 1`] = `
-<div>
-  <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container-fluid container-fluid-max-xl">
-      <ul class="navbar-nav"></ul>
-      <div class="navbar-form navbar-form-autofit">
-        <form method="GET" name="mySearchName" role="search">
-          <div class="input-group">
-            <div class="input-group-item">
-              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
-              <span class="input-group-inset-item input-group-inset-item-after">
-                <button class="btn btn-unstyled" aria-label="search" type="submit">
-                  <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
-                    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
-                  </svg>
-                </button>
-              </span>
-            </div>
-          </div>
-        </form>
-      </div>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
-              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
-            </svg>
-          </button>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
-`;
-
-exports[`ClayManagementToolbar should render a management toolbar with search input name 1`] = `
-<div>
-  <nav class="management-bar management-bar-light navbar navbar-expand-md">
-    <div class="container-fluid container-fluid-max-xl">
-      <ul class="navbar-nav"></ul>
-      <div class="navbar-form navbar-form-autofit">
-        <form method="GET" role="search">
-          <div class="input-group">
-            <div class="input-group-item">
-              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchName" placeholder="search-for" ref="search" type="text">
-              <span class="input-group-inset-item input-group-inset-item-after">
-                <button class="btn btn-unstyled" aria-label="search" type="submit">
-                  <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
-                    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
-                  </svg>
-                </button>
-              </span>
-            </div>
-          </div>
-        </form>
-      </div>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
-              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
-            </svg>
-          </button>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
-`;
-
-exports[`ClayManagementToolbar should render a management toolbar with search results bar 1`] = `
+exports[`ClayManagementToolbar should render a management toolbar with results bar 1`] = `
 <div id="myId">
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
     <div class="container-fluid container-fluid-max-xl">
@@ -1946,25 +1989,59 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
 </div>
 `;
 
-exports[`ClayManagementToolbar should render a management toolbar with search results bar when state is active 1`] = `
-<div id="myId">
-  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
+exports[`ClayManagementToolbar should render a management toolbar with results bar and a clear results link 1`] = `
+<div>
+  <nav class="management-bar management-bar-light navbar navbar-expand-md">
     <div class="container-fluid container-fluid-max-xl">
-      <ul class="navbar-nav navbar-nav-expand">
+      <ul class="navbar-nav">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
             <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
+              <input class="custom-control-input" ref="input" type="checkbox">
               <span class="custom-control-label">
                 <span class="custom-control-label-text sr-only">select-items</span>
               </span>
             </label>
           </div>
         </li>
+      </ul>
+      <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
+        <div class="container-fluid container-fluid-max-xl">
+          <form method="GET" role="search">
+            <div class="input-group">
+              <div class="input-group-item">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="foo">
+                <span class="input-group-inset-item input-group-inset-item-after">
+                  <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
+                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                      <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#times"></use>
+                    </svg>
+                  </button>
+                  <button class="btn btn-unstyled" aria-label="search" type="submit">
+                    <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
+                      <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
+                    </svg>
+                  </button>
+                </span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <ul class="navbar-nav">
+        <li class="nav-item navbar-breakpoint-d-none">
+          <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="search" type="button">
+            <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
+              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
+            </svg>
+          </button>
+        </li>
         <li class="nav-item">
-          <span class="navbar-text">1-of-10
-            <span class="navbar-breakpoint-down-d-none">items-selected</span>
-          </span>
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
+            <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
+              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </button>
         </li>
       </ul>
     </div>
@@ -1981,7 +2058,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
         </li>
         <li class="tbar-item">
           <div class="tbar-section">
-            <button class="btn component-link tbar-link btn-unstyled" type="button">clear</button>
+            <a class=" component-link tbar-link" href="#clear">clear</a>
           </div>
         </li>
       </ul>
@@ -1990,7 +2067,7 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
 </div>
 `;
 
-exports[`ClayManagementToolbar should render a management toolbar with search results bar with filter labels 1`] = `
+exports[`ClayManagementToolbar should render a management toolbar with results bar with filter labels 1`] = `
 <div id="myId">
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
     <div class="container-fluid container-fluid-max-xl">
@@ -2123,6 +2200,146 @@ exports[`ClayManagementToolbar should render a management toolbar with search re
 </div>
 `;
 
+exports[`ClayManagementToolbar should render a management toolbar with search action url 1`] = `
+<div>
+  <nav class="management-bar management-bar-light navbar navbar-expand-md">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav"></ul>
+      <div class="navbar-form navbar-form-autofit">
+        <form action="mySearchURL" method="GET" role="search">
+          <div class="input-group">
+            <div class="input-group-item">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn btn-unstyled" aria-label="search" type="submit">
+                  <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
+                    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
+            </div>
+          </div>
+        </form>
+      </div>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
+            <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
+              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`ClayManagementToolbar should render a management toolbar with search and customized placeholder 1`] = `
+<div>
+  <nav class="management-bar management-bar-light navbar navbar-expand-md">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav"></ul>
+      <div class="navbar-form navbar-form-autofit">
+        <form method="GET" role="search">
+          <div class="input-group">
+            <div class="input-group-item">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="Search thread..." ref="search" type="text" value="">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn btn-unstyled" aria-label="search" type="submit">
+                  <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
+                    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
+            </div>
+          </div>
+        </form>
+      </div>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
+            <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
+              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`ClayManagementToolbar should render a management toolbar with search form name 1`] = `
+<div>
+  <nav class="management-bar management-bar-light navbar navbar-expand-md">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav"></ul>
+      <div class="navbar-form navbar-form-autofit">
+        <form method="GET" name="mySearchName" role="search">
+          <div class="input-group">
+            <div class="input-group-item">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn btn-unstyled" aria-label="search" type="submit">
+                  <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
+                    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
+            </div>
+          </div>
+        </form>
+      </div>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
+            <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
+              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`ClayManagementToolbar should render a management toolbar with search input name 1`] = `
+<div>
+  <nav class="management-bar management-bar-light navbar navbar-expand-md">
+    <div class="container-fluid container-fluid-max-xl">
+      <ul class="navbar-nav"></ul>
+      <div class="navbar-form navbar-form-autofit">
+        <form method="GET" role="search">
+          <div class="input-group">
+            <div class="input-group-item">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" name="mySearchName" placeholder="search-for" ref="search" type="text" value="">
+              <span class="input-group-inset-item input-group-inset-item-after">
+                <button class="btn btn-unstyled" aria-label="search" type="submit">
+                  <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
+                    <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
+            </div>
+          </div>
+        </form>
+      </div>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
+            <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
+              <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
 exports[`ClayManagementToolbar should render a management toolbar with selection enabled 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
@@ -2144,7 +2361,7 @@ exports[`ClayManagementToolbar should render a management toolbar with selection
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
@@ -2231,7 +2448,7 @@ exports[`ClayManagementToolbar should render a management toolbar with sorting h
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
@@ -2270,32 +2487,6 @@ exports[`ClayManagementToolbar should render a management toolbar with sorting h
 </div>
 `;
 
-exports[`ClayManagementToolbar should render a management toolbar with state active 1`] = `
-<div>
-  <nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
-    <div class="container-fluid container-fluid-max-xl">
-      <ul class="navbar-nav navbar-nav-expand">
-        <li class="nav-item">
-          <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
-            </label>
-          </div>
-        </li>
-        <li class="nav-item">
-          <span class="navbar-text">1-of-10
-            <span class="navbar-breakpoint-down-d-none">items-selected</span>
-          </span>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
-`;
-
 exports[`ClayManagementToolbar should render a management toolbar with view types 1`] = `
 <div>
   <nav class="management-bar management-bar-light navbar navbar-expand-md">
@@ -2306,7 +2497,7 @@ exports[`ClayManagementToolbar should render a management toolbar with view type
           <form method="GET" role="search">
             <div class="input-group">
               <div class="input-group-item">
-                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
+                <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="">
                 <span class="input-group-inset-item input-group-inset-item-after">
                   <button class="btn navbar-breakpoint-d-none btn-unstyled" aria-label="times" type="button">
                     <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
@@ -2391,7 +2582,7 @@ exports[`ClayManagementToolbar should render a management toolbar without creati
         <form method="GET" role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="">
               <span class="input-group-inset-item input-group-inset-item-after">
                 <button class="btn btn-unstyled" aria-label="search" type="submit">
                   <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
@@ -2418,7 +2609,7 @@ exports[`ClayManagementToolbar should render the default markup 1`] = `
         <form method="GET" role="search">
           <div class="input-group">
             <div class="input-group-item">
-              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text">
+              <input aria-label="Search" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" ref="search" type="text" value="">
               <span class="input-group-inset-item input-group-inset-item-after">
                 <button class="btn btn-unstyled" aria-label="search" type="submit">
                   <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
