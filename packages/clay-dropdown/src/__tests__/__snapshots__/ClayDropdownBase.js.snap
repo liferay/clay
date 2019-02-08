@@ -2,7 +2,7 @@
 
 exports[`ClayDropdownBase should close dropdown 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -15,7 +15,7 @@ exports[`ClayDropdownBase should close dropdown 1`] = `
 
 exports[`ClayDropdownBase should close dropdown on document click 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -28,7 +28,7 @@ exports[`ClayDropdownBase should close dropdown on document click 1`] = `
 
 exports[`ClayDropdownBase should open dropdown 1`] = `
 <div class="dropdown show">
-  <button aria-expanded="true" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
+  <button aria-expanded="true" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
 </div>
 <div class="dropdown-menu show" ref="menu" style="top: 0px; left: 0px;">
   <ul class="list-unstyled">
@@ -41,7 +41,7 @@ exports[`ClayDropdownBase should open dropdown 1`] = `
 
 exports[`ClayDropdownBase should render a disabled dropdown 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" disabled="" ref="triggerButton" type="button">Trigger</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" disabled="" ref="triggerButton" type="button">Trigger</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -57,7 +57,7 @@ exports[`ClayDropdownBase should render a disabled dropdown 1`] = `
 
 exports[`ClayDropdownBase should render a dropdown with caption 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -71,7 +71,7 @@ exports[`ClayDropdownBase should render a dropdown with caption 1`] = `
 
 exports[`ClayDropdownBase should render a dropdown with classes 1`] = `
 <div class="dropdown my-cutsom-class">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -87,7 +87,7 @@ exports[`ClayDropdownBase should render a dropdown with classes 1`] = `
 
 exports[`ClayDropdownBase should render a dropdown with groups 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger Label</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger Label</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -111,7 +111,7 @@ exports[`ClayDropdownBase should render a dropdown with groups 1`] = `
 
 exports[`ClayDropdownBase should render a dropdown with help text 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <div class="alert alert-fluid alert-info" role="alert">Help!</div>
@@ -125,7 +125,7 @@ exports[`ClayDropdownBase should render a dropdown with help text 1`] = `
 
 exports[`ClayDropdownBase should render a dropdown with icons on the left 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
 </div>
 <div class="dropdown-menu dropdown-menu-indicator-start" ref="menu">
   <ul class="list-unstyled">
@@ -151,7 +151,7 @@ exports[`ClayDropdownBase should render a dropdown with icons on the left 1`] = 
 
 exports[`ClayDropdownBase should render a dropdown with icons on the right 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
 </div>
 <div class="dropdown-menu dropdown-menu-indicator-end" ref="menu">
   <ul class="list-unstyled">
@@ -179,7 +179,7 @@ exports[`ClayDropdownBase should render a dropdown with icons on the right 1`] =
 
 exports[`ClayDropdownBase should render a dropdown with id 1`] = `
 <div class="dropdown" id="myId">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -195,7 +195,7 @@ exports[`ClayDropdownBase should render a dropdown with id 1`] = `
 
 exports[`ClayDropdownBase should render a dropdown with items of type checkbox 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -226,7 +226,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type checkbox 1
 
 exports[`ClayDropdownBase should render a dropdown with items of type checkbox and checked 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -246,7 +246,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type checkbox a
 
 exports[`ClayDropdownBase should render a dropdown with items of type checkbox and disabled 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -266,7 +266,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type checkbox a
 
 exports[`ClayDropdownBase should render a dropdown with items of type item 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -282,7 +282,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type item 1`] =
 
 exports[`ClayDropdownBase should render a dropdown with items of type item and active 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -295,7 +295,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type item and a
 
 exports[`ClayDropdownBase should render a dropdown with items of type item and disabled 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -308,7 +308,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type item and d
 
 exports[`ClayDropdownBase should render a dropdown with items of type item with target 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -324,7 +324,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type item with 
 
 exports[`ClayDropdownBase should render a dropdown with items of type item with title 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -340,7 +340,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type item with 
 
 exports[`ClayDropdownBase should render a dropdown with items of type radio 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger Label</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger Label</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -401,7 +401,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio 1`] 
 
 exports[`ClayDropdownBase should render a dropdown with items of type radio and checked 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger Label</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger Label</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -462,7 +462,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio and 
 
 exports[`ClayDropdownBase should render a dropdown with items of type radio and disabled 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger Label</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger Label</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -523,7 +523,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio and 
 
 exports[`ClayDropdownBase should render a dropdown with items with separators 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger Label</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger Label</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -548,7 +548,7 @@ exports[`ClayDropdownBase should render a dropdown with items with separators 1`
 
 exports[`ClayDropdownBase should render a dropdown with primary button 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <form>
@@ -568,7 +568,7 @@ exports[`ClayDropdownBase should render a dropdown with primary button 1`] = `
 
 exports[`ClayDropdownBase should render a dropdown with secondary button 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <form>
@@ -588,7 +588,7 @@ exports[`ClayDropdownBase should render a dropdown with secondary button 1`] = `
 
 exports[`ClayDropdownBase should render a dropdown with trigger custom classes 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-sm btn-unstyled" ref="triggerButton" type="button">Trigger</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-sm btn-unstyled" ref="triggerButton" type="button">Trigger</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -604,7 +604,7 @@ exports[`ClayDropdownBase should render a dropdown with trigger custom classes 1
 
 exports[`ClayDropdownBase should render a dropdown with trigger size 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn my-cutsom-class btn-unstyled" ref="triggerButton" type="button">Trigger</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn my-cutsom-class btn-unstyled" ref="triggerButton" type="button">Trigger</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -620,7 +620,7 @@ exports[`ClayDropdownBase should render a dropdown with trigger size 1`] = `
 
 exports[`ClayDropdownBase should render a dropdown with type list with items of type checkbox 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -652,7 +652,7 @@ exports[`ClayDropdownBase should render a dropdown with type list with items of 
 
 exports[`ClayDropdownBase should render a searchable dropdown 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
 </div>
 <div class="dropdown-menu" ref="menu">
   <form>
