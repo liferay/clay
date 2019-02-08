@@ -1,5 +1,31 @@
 # Change Log
 
+## [v2.8.0](https://github.com/liferay/clay/tree/v2.8.0) (2019-02-08)
+[Full Changelog](https://github.com/liferay/clay/compare/v2.7.0...v2.8.0)
+
+**Closed issues:**
+
+- Extend Clay Dropdown Menu to support custom triggers [\#1513](https://github.com/liferay/clay/issues/1513)
+
+**Merged pull requests:**
+
+- v2.8.0 [\#1517](https://github.com/liferay/clay/pull/1517) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1514 - Add support to hide toggle icon \(ADDED API\) [\#1515](https://github.com/liferay/clay/pull/1515) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1490 - Add clear and select all buttons to management toolbar and make component more configurable and with less logic \(ADDED API | BREAKING CHANGE\) [\#1511](https://github.com/liferay/clay/pull/1511) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1507 - Prevent 'undefined' from appearing in Clay management toolbar [\#1508](https://github.com/liferay/clay/pull/1508) ([jrao](https://github.com/jrao))
+- Fixes \#1501 - Fix broken links [\#1502](https://github.com/liferay/clay/pull/1502) ([matuzalemsteles](https://github.com/matuzalemsteles))
+-  Fixes \#1471 - Fixes CI errors [\#1500](https://github.com/liferay/clay/pull/1500) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Fixes \#1498 - Fixes generator-metal-clay tests [\#1499](https://github.com/liferay/clay/pull/1499) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Fixes \#1472 - Add support for debounce and for dataSource functions \(ADDED API | BREAKING CHANGE\) [\#1497](https://github.com/liferay/clay/pull/1497) ([carloslancha](https://github.com/carloslancha))
+- Fixes \#1493 - ClayCSS add SVG Icon Drop [\#1494](https://github.com/liferay/clay/pull/1494) ([pat270](https://github.com/pat270))
+- Fixes \#1487 Initialize contentRenderer attribute by default [\#1488](https://github.com/liferay/clay/pull/1488) ([LuismiBarcos](https://github.com/LuismiBarcos))
+- Fixes \#1471 - Create v3.x with React [\#1485](https://github.com/liferay/clay/pull/1485) ([bryceosterhaus](https://github.com/bryceosterhaus))
+- Revert "Add fix from https://github.com/liferay/clay/commit/0bec13276… [\#1481](https://github.com/liferay/clay/pull/1481) ([SpencerWoo](https://github.com/SpencerWoo))
+- Fixes \#1477 Change btn opacity [\#1478](https://github.com/liferay/clay/pull/1478) ([marcoscv-work](https://github.com/marcoscv-work))
+- \[IFI-419\] Remove redundant export from generator-metal-clay template [\#1453](https://github.com/liferay/clay/pull/1453) ([wincent](https://github.com/wincent))
+- Fixes \#1217 - Adds CONTRIBUTING.md [\#1450](https://github.com/liferay/clay/pull/1450) ([matuzalemsteles](https://github.com/matuzalemsteles))
+- Fixes \#1446, \#1447, \#1448 - Adds the last typed character to char when data is empty and Remove the comma from the value \(ADDED API\) [\#1449](https://github.com/liferay/clay/pull/1449) ([matuzalemsteles](https://github.com/matuzalemsteles))
+
 ## [v2.7.0](https://github.com/liferay/clay/tree/v2.7.0) (2019-01-24)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.6.0...v2.7.0)
 
