@@ -5,18 +5,16 @@ $input-border-width: 0.0625rem;
 
 @import "site/variables";
 
-@import "animations";
-@import "api";
 @import "autocomplete";
 @import "code";
 @import "docsearch";
 @import "footer";
 @import "guide";
+@import "blog";
 @import "landing";
 @import "navbar";
 @import "prismjs";
 @import "sidebar";
-@import "try";
 
 @import "site/site";
 @import "site/content-site";

@@ -22,6 +22,7 @@ const slugWithBar = (path) => {
 const createDocs = (actions, edges, mdx) => {
 	const {createPage, createRedirect} = actions;
 	const docsTemplate = path.resolve(__dirname, '../src/templates/docs.js');
+	const blogTemplate = path.resolve(__dirname, '../src/templates/blog.js');
 
 	edges
 		.filter(({node: {fields: {nightly}}}) => GATSBY_CLAY_NIGHTLY === 'true' ? true : !nightly)
@@ -57,18 +58,35 @@ const createDocs = (actions, edges, mdx) => {
 					redirectInBrowser: true,
 					toPath: slugWithBar(slug),
 				});
+
+				if (!slug.endsWith('/')) {
+					createRedirect({
+						fromPath: redirectFrom + '/',
+						isPermanent: true,
+						redirectInBrowser: true,
+						toPath: slugWithBar(slug),
+					});
+				}
+			}
+
+			let template;
+
+			if (slug.includes('blog/')) {
+				template = blogTemplate;
+			} else if (slug.includes('docs/')) {
+				template = docsTemplate;
 			}
 
 			const component =
 				mdx ?
 					componentWithMDXScope(
-						docsTemplate,
+						template,
 						code.scope,
 						__dirname,
 					) :
-					docsTemplate;
+					template;
 
-			if (slug.includes('docs/') && layout !== 'redirect') {
+			if ((slug.includes('docs/') || slug.includes('blog/')) && layout !== 'redirect') {
 				createPage({
 					path: slug,
 					component,
@@ -89,7 +107,7 @@ module.exports = async ({actions, graphql}) => {
 	});
 
 	return graphql(`
-		query {
+		{
 			allMdx {
 				edges {
 					node {
@@ -120,12 +138,47 @@ module.exports = async ({actions, graphql}) => {
 				}
 			}
 		}
-	`).then(({data, errors}) => {
+	`).then(async ({data, errors}) => {
 		if (errors) {
 			return Promise.reject(errors);
 		}
 
-		createDocs(actions, data.allMdx.edges, true);
+		if (data.allMdx.edges) {
+			createDocs(actions, data.allMdx.edges, true);
+		}
+
 		createDocs(actions, data.allMarkdownRemark.edges, false);
+
+		const newestBlogEntry = await graphql(
+			`
+			  {
+				allMarkdownRemark(
+				  limit: 1
+				  filter: {fileAbsolutePath: {regex: "/blog/"}}
+				  sort: {fields: [fields___date], order: DESC}
+				) {
+				  edges {
+					node {
+					  fields {
+						slug
+					  }
+					}
+				  }
+				}
+			  }
+			`,
+		);
+
+		const newestBlogNode =
+			newestBlogEntry.data.allMarkdownRemark.edges[0].node;
+
+		// Blog landing page should always show the most recent blog entry.
+		['/blog/', '/blog'].map(slug => {
+			actions.createRedirect({
+				fromPath: slug,
+				redirectInBrowser: true,
+				toPath: newestBlogNode.fields.slug,
+			});
+		});
 	});
 };
