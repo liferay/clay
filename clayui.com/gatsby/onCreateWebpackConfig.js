@@ -1,3 +1,9 @@
+/**
+ * © 2018 Liferay, Inc. <https://liferay.com>
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
 const path = require('path');
 
 module.exports = ({actions, stage}) => {
@@ -7,7 +13,7 @@ module.exports = ({actions, stage}) => {
 		module = {
 			rules: [
 				{
-					test: /wowjs|clay-charts|clay-alert|clay-badge|clay-button|clay-dropdown|clay-tooltip|metal-clipboard/,
+					test: /clay-tooltip|metal-clipboard/,
 					loader: 'null-loader',
 				},
 			],

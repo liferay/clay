@@ -1,3 +1,9 @@
+/**
+ * © 2018 Liferay, Inc. <https://liferay.com>
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
 const visit = require('unist-util-visit');
 const {resolve} = require('path');
 const countries = require('countries-list').countries;
@@ -10,7 +16,7 @@ const alternateCodes = {
 	'nb': 'no',
 };
 
-function replaceValue(array) {
+const replaceValue = (array) => {
 	const htmlValue = array.map(item => `<li>
         <svg class="lexicon-icon lexicon-icon-${item.icon}">
             <use xlink:href="/images/icons/icons.svg#${item.icon}" />
@@ -19,9 +25,9 @@ function replaceValue(array) {
     </li>`);
 
 	return htmlValue.join(' ');
-}
+};
 
-function getFiles(dir, glob) {
+const getFiles = (dir, glob) => {
 	const files = globby.sync(dir, {
 		expandDirectories: {
 			files: glob || [],
@@ -41,7 +47,7 @@ function getFiles(dir, glob) {
 	});
 
 	return filelist;
-}
+};
 
 module.exports = ({markdownAST}) => {
 	visit(markdownAST, 'html', node => {
@@ -58,7 +64,9 @@ module.exports = ({markdownAST}) => {
 				const langCode = parts[1];
 				const countryCode = parts[2];
 
-				let lang = langs.getLanguageInfo(alternateCodes[langCode] || langCode).name;
+				let lang = langs.getLanguageInfo(
+					alternateCodes[langCode] || langCode
+				).name;
 
 				if (countryCode) {
 					const country = countries[countryCode.toUpperCase()];
@@ -76,7 +84,10 @@ module.exports = ({markdownAST}) => {
 				};
 			});
 
-			node.value = node.value.replace(foreachFlags, replaceValue(dataFlags));
+			node.value = node.value.replace(
+				foreachFlags,
+				replaceValue(dataFlags)
+			);
 		}
 
 		if (node.value.includes(foreachIcons)) {
@@ -88,7 +99,10 @@ module.exports = ({markdownAST}) => {
 				}
 			}).filter(value => typeof value !== 'undefined');
 
-			node.value = node.value.replace(foreachIcons, replaceValue(dataIcons));
+			node.value = node.value.replace(
+				foreachIcons,
+				replaceValue(dataIcons)
+			);
 		}
 	});
 };

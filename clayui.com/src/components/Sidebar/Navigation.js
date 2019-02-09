@@ -1,8 +1,22 @@
+/**
+ * © 2018 Liferay, Inc. <https://liferay.com>
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
 import React, {Component} from 'react';
 import classNames from 'classnames';
 import {Link} from 'gatsby';
 
+/**
+ */
 class Navigation extends Component {
+	/**
+	 * @param {!number} index
+	 * @param {!number} depth
+	 * @param {!object} section
+	 * @param {!event} event
+	 */
 	_handleOnClick(index, depth, section, event) {
 		event.stopPropagation();
 
@@ -13,7 +27,15 @@ class Navigation extends Component {
 		}
 	}
 
+	/**
+	 * @param {*} section
+	 * @return {boolean}
+	 */
 	_isActive(section) {
+		if (section.alwaysActive) {
+			return true;
+		}
+
 		const {location} = this.props;
 		const match = location.pathname.split('/');
 		const id = match[match.length - 1].split('.');
@@ -25,6 +47,9 @@ class Navigation extends Component {
 		return id[0] === section.id;
 	}
 
+	/**
+	 * @return {React.Component}
+	 */
 	renderNavigationItems() {
 		const {sectionList, location, depth = 0} = this.props;
 
@@ -32,20 +57,28 @@ class Navigation extends Component {
 			let style = classNames({
 				'active': this._isActive(section) === true,
 				'nav-heading': section.items,
-            });
+				'draft': section.draft,
+			});
 
 			return (
 				<li key={index} ref={`navItem${index}${depth}`} className={style} onClick={this._handleOnClick.bind(this, index, depth, section)}>
 					<Anchor page={section} />
 
 					{section.items && (
-						<Navigation sectionList={section.items} location={location} depth={depth + 1} />
+						<Navigation
+							sectionList={section.items}
+							location={location}
+							depth={depth + 1}
+						/>
 					)}
 				</li>
 			);
 		});
 	}
 
+	/**
+	 * @return {React.Component}
+	 */
 	render() {
 		return (
 			<ul className="nav nav-nested nav-pills nav-stacked">
