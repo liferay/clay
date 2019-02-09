@@ -1,12 +1,19 @@
+/**
+ * © 2018 Liferay, Inc. <https://liferay.com>
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
 const path = require('path');
 const {exists, writeFile, ensureDir} = require('fs-extra');
 
 const getMetaRedirect = require('./getMetaRedirect');
 
 // Adapted from https://github.com/getchalk/gatsby-plugin-meta-redirect
-async function writeRedirectsFile(redirects, folder, pathPrefix) {
+const writeRedirectsFile = async (redirects, folder, pathPrefix) => {
 	if (!redirects.length) return;
 
+	// eslint-disable-next-line
 	for (const redirect of redirects) {
 		const {fromPath, toPath} = redirect;
 
@@ -35,7 +42,7 @@ async function writeRedirectsFile(redirects, folder, pathPrefix) {
 			await writeFile(FILE_PATH, data);
 		}
 	}
-}
+};
 
 exports.onPostBuild = ({store}) => {
 	const {redirects, program, config} = store.getState();

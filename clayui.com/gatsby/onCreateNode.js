@@ -1,3 +1,9 @@
+/**
+ * © 2018 Liferay, Inc. <https://liferay.com>
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
 module.exports = exports.onCreateNode = ({node, actions, getNode}) => {
 	const {createNodeField} = actions;
 
