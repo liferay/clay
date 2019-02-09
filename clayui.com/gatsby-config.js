@@ -8,7 +8,11 @@ const clay = require('clay-css');
 const path = require('path');
 
 module.exports = {
+	mapping: {
+		'MarkdownRemark.frontmatter.author': 'AuthorYaml',
+	},
 	plugins: [
+		'gatsby-transformer-authors-yaml',
 		'gatsby-plugin-meta-redirect',
 		{
 			resolve: 'gatsby-plugin-sass',
