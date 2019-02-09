@@ -21,10 +21,6 @@ export default (props) => {
 		}
 	}, []);
 
-	if (enabled) {
-		return [];
-	}
-
 	return (
 		<div className="page-autocomplete ml-3">
 			<div className="input-group">
