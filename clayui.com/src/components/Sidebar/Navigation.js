@@ -90,14 +90,25 @@ class Navigation extends Component {
 
 const Anchor = ({page}) => {
 	if (page.items) {
-		return (
-			<a className="align-middle" href="javascript:;">
-				<span>{page.title}</span>
-				<svg className="collapse-toggle clay-icon icon-monospaced">
-					<use xlinkHref="/images/icons/icons.svg#caret-bottom" />
-				</svg>
-			</a>
-		);
+		if (page.indexVisible) {
+			return (
+				<Link className="align-middle" to={`${page.link}.html`}>
+					<span>{page.title}</span>
+					<svg className="collapse-toggle clay-icon icon-monospaced">
+						<use xlinkHref="/images/icons/icons.svg#caret-bottom" />
+					</svg>
+				</Link>
+			);
+		} else {
+			return (
+				<a className="align-middle" href="javascript:;">
+					<span>{page.title}</span>
+					<svg className="collapse-toggle clay-icon icon-monospaced">
+						<use xlinkHref="/images/icons/icons.svg#caret-bottom" />
+					</svg>
+				</a>
+			);
+		}
 	}
 
 	return (
