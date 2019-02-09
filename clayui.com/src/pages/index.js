@@ -1,186 +1,224 @@
-import React, { Component } from 'react';
+/**
+ * © 2018 Liferay, Inc. <https://liferay.com>
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
+import React from 'react';
 import Helmet from 'react-helmet';
-import { Link } from 'gatsby';
-import LayoutNav from '../components/LayoutNav';
-import {WOW} from 'wowjs';
+import {Link} from 'gatsby';
 
-class Index extends Component {
-    componentDidMount() {
-        this._wow = new WOW();
-        this._wow.init();
-    }
+/**
+ * @return {React.Component}
+ */
+export default () => {
+	const description = 'This is Clay. A web implementation of the Lexicon Experience Language; built by Liferay.';
 
-    componentWillUnmount() {
-        this._wow = null;
-    }
+	return (
+		<div className="home">
+			<Helmet>
+				<title>Clay</title>
+				<meta name="description" content={description} />
+				<meta name="og:description" content={description} />
+				<meta name="twitter:description" content={description} />
+				<meta name="og:title" content="Clay" />
+			</Helmet>
+			<main className="content">
+				<header className="header">
+					<div className="container-fluid">
+						<div className="row">
+							<div className="intro text-left col">
+								<div className="container-fluid container-fluid-max-lg">
+									<Link to="/" className="brand">
+										<img className="logo" src="/images/home/clay_logo.svg" alt="" />
+										<span className="title align-middle">Clay</span>
+									</Link>
+									<h2 className="h2">A Web Implementation of Lexicon Experience Language</h2>
+									<ul className="navbar-nav ml-auto">
+										<li className="nav-item">
+											<Link className="nav-link-intro" to="/docs/get-started/introduction.html">Get Started</Link>
+										</li>
+										<li className="nav-item">
+											<Link className="nav-link-intro" to="/docs/css">Style Guide</Link>
+										</li>
+										<li className="nav-item">
+											<Link className="nav-link-intro" to="/docs/components">Components Library</Link>
+										</li>
+										<li className="nav-item">
+											<Link className="nav-link-intro" to="/blog">Blog</Link>
+										</li>
+										<li className="nav-item">
+											<a href="https://lexicondesign.io" className="nav-link-intro" target="_blank">
+												Lexicon
+												<span class="inline-item inline-item-after">
+													<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
+														<use href="/images/icons/icons.svg#angle-right" />
+													</svg>
+												</span>
+											</a>
+										</li>
+										<li className="nav-item">
+											<a href="https://github.com/liferay/clay" className="nav-link-intro" target="_blank">
+												Github
+												<span class="inline-item inline-item-after">
+													<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
+														<use href="/images/icons/icons.svg#angle-right" />
+													</svg>
+												</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
 
-    render() {
-        const description = "This is Clay. A web implementation of the Lexicon Experience Language; built by Liferay.";
+				<section className="warning hr" id="warning">
+					<div className="container-fluid container-fluid-max-lg text-center spacing">
+						<div className="row">
+							<div className="col-md-12">
+								<h1 className="title-section orange">
+									<svg className="lexicon-icon lexicon-icon-announcement">
+										<use xlinkHref="/images/icons/icons.svg#announcement"></use>
+									</svg>
+                                    Deprecation warnings
+								</h1>
+								<p className="subtitle-section"><b>Clay Components</b> was initially built on top <br /> of Metal.js and is on deprecation warning.</p>
+							</div>
+						</div>
+						<div className="row">
+							<div className="col-md-12">
+								<a href="https://clayui.com" className="btn btn-warning-borderless btn-borderless mr-3" target="_blank">
+                                    Documentation v2
+								</a>
+								<Link to="/blog" className="btn btn-brand-color btn-link">
+									Read more about warnings
+								</Link>
+							</div>
+						</div>
+					</div>
+				</section>
 
-        return (
-            <div className="home">
-                <Helmet>
-                    <title>Clay</title>
-                    <meta name="description" content={description} />
-                    <meta name="og:description" content={description} />
-                    <meta name="twitter:description" content={description} />
-                    <meta name="og:title" content="Clay" />
-                </Helmet>
-                <main className="content">
-                    <header className="header">
-                        <LayoutNav />
+				<section className="components hr" id="components">
+					<div className="container-fluid container-fluid-max-lg text-center spacing">
+						<div className="row">
+							<div className="col-md-12">
+								<img src="/images/react_logo.svg" />
+								<h1 className="title-section mb-2">Clay Components</h1>
+								<h2 className="version-section">v3.0.0 Beta</h2>
+								<p className="subtitle-section">Lexicon follows the approach of Atomic Design and Clay follows <br /> the approach by constructing the components at the top of React.js.</p>
+							</div>
+						</div>
+						<div className="row">
+							<div className="col-md-12">
+								<Link to="/docs/components" className="btn btn-warning-borderless btn-borderless mr-3">
+                                    Documentation
+								</Link>
+							</div>
+						</div>
+					</div>
+				</section>
 
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="intro text-center col">
-                                    <div className="container-fluid container-fluid-max-lg">
-                                        <h1 className="h1">This is Clay</h1>
-                                        <h2 className="h3">A Web Implementation of Lexicon Experience Language</h2>
-                                        <Link to="/docs/get-started/introduction.html" className="btn btn-lg btn-light font-weight-bold mx-3 mb-4">
-                                            Get Started
-                                        </Link>
-                                        <a className="btn btn-lg btn-outline-light font-weight-bold mx-3 mb-4" href="https://github.com/liferay/clay" target="_blank">
-                                            <img className="mr-2" src="/images/home/file-download.svg" alt="" />Download
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </header>
+				<section className="css hr" id="css">
+					<div className="container-fluid container-fluid-max-lg text-left spacing">
+						<div className="row">
+							<div className="col-md-5">
+								<img src="/images/css_illustration2.svg" />
+							</div>
+							<div className="col-md-7">
+								<div className="row">
+									<div className="col-md-12">
+										<h1 className="title-section">ClayCSS</h1>
+										<p className="subtitle-section">Styles can compose a series of variations using our Sass variables and mixins, responsive grid system, and extensive pre-built components.</p>
+										<span className="code-shell">npm i @clay/css</span>
+									</div>
+								</div>
+								<div className="row">
+									<div className="col-md-12">
+										<Link to="/docs/css" className="btn btn-warning-borderless btn-borderless mr-3">
+                                            Documentation
+										</Link>
+										<a href="https://clayui.com" className="btn btn-brand-color btn-link" target="_blank">
+											View Documentation v2
+											<span class="inline-item inline-item-after fs-12">
+												<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
+													<use href="/images/icons/icons.svg#angle-right" />
+												</svg>
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 
-                    <section className="teasers" id="teasers">
-                        <div className="container-fluid container-fluid-max-lg">
-                            <div className="row mb-4">
-                                <div className="col-1 d-none d-md-block">
-                                    <div className="vertical-title text-uppercase text-nowrap">Explore Clay</div>
-                                </div>
+				<section className="contribute" id="css">
+					<div className="container-fluid container-fluid-max-lg text-left">
+						<div className="row">
+							<div className="col-md-12">
+								<h2>Open Source</h2>
+								<p>Clay is distributed in a <br /> Open Source on Github.</p>
+								<a href="https://github.com/liferay/clay" className="btn btn-dark" target="_blank">
+                                    Contribute on GitHub
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
 
-                                <div className="col-md-5 text-center">
-                                    <div className="card wow fadeInUp">
-                                        <div className="card-body mx-4">
-                                            <img className="mx-auto" src="/images/home/what.svg" alt="" />
-                                            <h2 className="font-weight-bold">What is Clay?</h2>
-                                            <p>Clay is Liferay's web implementation of Lexicon Experience Language. Built with Bootstrap as a foundation, it's comprised of HTML, CSS, and JS.</p>
-                                            <Link to="/docs/get-started/clay.html" className="learn-more">
-                                                Learn More
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
+				<section className="link-blocks text-center">
+					<div className="container-fluid container-fluid-max-lg">
+						<div className="row">
+							<div className="body ml-auto col-md-9 mr-auto">
+								<h2 className="title-section">A web implementation of Lexicon</h2>
+								<p className="subtitle-section pb-5">There's always been a distinction between Lexicon as a design system, and Lexicon as a web implementation. Naming them like this didn't help with the distinction, so <b>the web implementation of Lexicon is now called Clay</b>.</p>
+							</div>
+						</div>
+						<div className="row">
+							<div className="col-md-5 ml-auto mb-4">
+								<div className="card h-100">
+									<div className="card-body mx-5">
+										<img className="mx-auto" src="/images/home/lexicon_symbol.svg" alt="" />
+										<p>Visit the current Lexicon <br />
+                                        Experience Language site</p>
+										<a href="https://lexicondesign.io/" className="mb-3" target="_blank">
+                                            Lexicon 2.0
+										</a>
+									</div>
+								</div>
+							</div>
+							<div className="col-md-5 mr-auto mb-4">
+								<div className="card h-100">
+									<div className="card-body mx-5">
+										<img className="mx-auto" src="/images/home/clay_logo_w.svg" alt="" />
+										<p>Visit the previous version of <br />
+                                        Clay at Lexicon CSS project site</p>
+										<a href="https://lexiconcss.wedeploy.io/" className="mb-3" target="_blank">
+                                            Lexicon CSS
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 
-                                <div className="col-md-5 text-center mt-4 mt-md-0">
-                                    <div className="card wow fadeInUp" data-wow-delay="0.1s">
-                                        <div className="card-body mx-4">
-                                            <img className="mx-auto" src="/images/home/news.svg" alt="" />
-                                            <h2 className="font-weight-bold">Release Notes</h2>
-                                            <p>Stay up-to-date on Clay's progress, fixed issues, and new features by visiting our Release Notes.</p>
-                                            <Link to="/docs/news" className="learn-more">
-                                                Learn More
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+				<div className="footer">
+					<div className="container-fluid container-fluid-max-lg">
+						<div className="row">
+							<div className="col-lg text-center text-lg-left mb-4 mb-lg-0">
+								<a href="https://github.com/liferay/clay/graphs/contributors" className="font-weight-bold" target="_blank">Clay Team</a>
+							</div>
 
-                            <div className="row">
-                                <div className="col-md-10 mx-auto">
-                                    <div className="card wow fadeInLeft" data-wow-offset="100">
-                                        <div className="row">
-                                            <div className="col-md-6 text-center">
-                                                <div className="card-body mx-4">
-                                                    <img className="pt-5" src="/images/home/library03.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div className="col-md-6 text-center text-md-left">
-                                                <div className="card-body mx-4 pl-md-0 pt-5">
-                                                    <h2 className="font-weight-bold">Component Library</h2>
-                                                    <p>Browse Clay's extensive Component Library, where you'll find useful components—with extensive code examples—for your web application.</p>
-                                                    <Link to="/docs/components/alerts.html" className="learn-more">
-                                                        Learn More
-                                                    </Link>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section className="contact-us">
-                        <div className="container-fluid container-fluid-max-lg">
-                            <div className="row">
-                                <div className="col-md-4 ml-auto mr-lg-4 wow zoomIn" data-wow-duration="1.2s">
-                                    <div className="text-center text-lg-right">
-                                            <img src="/images/home/participate02.svg" alt="" />
-                                    </div>
-                                </div>
-                                <div className="col-md-6 mr-auto wow zoomIn" data-wow-duration="0.8s">
-                                    <div className="media-body mt-4 text-center text-lg-left">
-                                        <p className="h1 font-weight-bold">Want to contribute? Found an issue? Head on over to the <a href="https://github.com/liferay/clay" className="font-weight-bold" target="_blank">GitHub repo.</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section className="link-blocks text-center">
-                        <div className="container-fluid container-fluid-max-lg">
-                            <div className="row">
-                                <div className="body ml-auto col-md-9 mr-auto">
-                                    <h2 className="h1 font-weight-bold">A web implementation of Lexicon</h2>
-                                    <p className="pb-5 pt-4">There's always been a distinction between Lexicon as a design system, and Lexicon as a web implementation. Naming them like this didn't help with the distinction, so <span className="font-weight-bold">the web implementation of Lexicon is now called Clay</span>.</p>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-md-5 ml-auto mb-4">
-                                    <div className="card h-100 wow fadeInUp">
-                                        <div className="card-body mx-5">
-                                            <img className="mx-auto" src="/images/home/lexicon_symbol.svg" alt="" />
-                                            <p>Visit the current Lexicon <br />
-                                            Experience Language site</p>
-                                            <a href="https://lexicondesign.io/" className="mb-3" target="_blank">
-                                                Lexicon 2.0
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-md-5 mr-auto mb-4">
-                                    <div className="card h-100 wow fadeInUp" data-wow-delay="0.1s">
-                                        <div className="card-body mx-5">
-                                            <img className="mx-auto" src="/images/home/clay_logo_w.svg" alt="" />
-                                            <p>Visit the previous version of <br />
-                                            Clay at Lexicon CSS project site</p>
-                                            <a href="https://lexiconcss.wedeploy.io/" className="mb-3" target="_blank">
-                                                Lexicon CSS
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <div className="footer">
-                        <div className="container-fluid container-fluid-max-lg">
-                            <div className="row">
-                                <div className="col-lg text-center text-lg-left mb-4 mb-lg-0">
-                                    <img className="logo" src="/images/liferayLogo.png"/>
-
-                                    <div className="clearfix d-lg-none"></div>
-
-                                    Brought to you by <a href="http://www.liferay.com" className="font-weight-bold" target="_blank">Liferay, Inc.</a>
-                                </div>
-
-                                <div className="col-lg text-center text-lg-right">
-                                    <div>Powered by <a href="https://wedeploy.com/" className="font-weight-bold" target="_blank">WeDeploy™</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </main>
-            </div>
-    )};
-}
-                        
-export default Index;
+							<div className="col-lg text-center text-lg-right">
+								<div>Copyright © 2019 <a href="https://www.liferay.com/" className="font-weight-bold" target="_blank">Liferay, Inc.</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+	);
+};
