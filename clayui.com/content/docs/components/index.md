@@ -1,6 +1,9 @@
 ---
-layout: "redirect"
-redirect: "/docs/components/alerts.html"
-title: "Lexicon Core Components"
-weight: 3
+title: "React Components"
+version: "v3.0.0 Beta"
+redirectFrom: "/docs/components"
+indexVisible: true
+order: 3
 ---
+
+# Introduction
