@@ -1,7 +1,6 @@
 ---
-title: "Web Components"
+title: "Versioning Policy"
 draft: true
-order: 3
 ---
 
 This is a stub. Help our community expand it.
