@@ -50,8 +50,8 @@ export default () => {
 										<li className="nav-item">
 											<a href="https://lexicondesign.io" className="nav-link-intro" target="_blank">
 												Lexicon
-												<span class="inline-item inline-item-after">
-													<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
+												<span className="inline-item inline-item-after">
+													<svg className="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 														<use href="/images/icons/icons.svg#angle-right" />
 													</svg>
 												</span>
@@ -60,8 +60,8 @@ export default () => {
 										<li className="nav-item">
 											<a href="https://github.com/liferay/clay" className="nav-link-intro" target="_blank">
 												Github
-												<span class="inline-item inline-item-after">
-													<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
+												<span className="inline-item inline-item-after">
+													<svg className="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 														<use href="/images/icons/icons.svg#angle-right" />
 													</svg>
 												</span>
@@ -141,8 +141,8 @@ export default () => {
 										</Link>
 										<a href="https://clayui.com" className="btn btn-brand-color btn-link" target="_blank">
 											View Documentation v2
-											<span class="inline-item inline-item-after fs-12">
-												<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
+											<span className="inline-item inline-item-after fs-12">
+												<svg className="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 													<use href="/images/icons/icons.svg#angle-right" />
 												</svg>
 											</span>
