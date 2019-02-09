@@ -1,31 +1,42 @@
+/**
+ * © 2018 Liferay, Inc. <https://liferay.com>
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
+import React, {useEffect} from 'react';
 import ClayTooltip from 'clay-tooltip';
 import Clipboard from 'metal-clipboard';
 
-class SingletonEnforcer {};
+/**
+ */
+class SingletonEnforcer {}
 
-class CodeClipboard {
-    constructor() {
-        const selector = '.code-container .btn-copy';
+export default (props) => {
+	const selector = '.code-container .btn-copy';
+	let clayTooltip;
+	let clayClipboard;
 
-        this.clayTooltip = new ClayTooltip(new SingletonEnforcer());
-        this.clayClipboard = new Clipboard({
-            selector: selector,
-            text: delegateTarget => {
-                delegateTarget.setAttribute('title', 'Copied');
+	useEffect(() => {
+		clayTooltip = new ClayTooltip(new SingletonEnforcer());
+		clayClipboard = new Clipboard({
+			selector: selector,
+			text: delegateTarget => {
+				delegateTarget.setAttribute('title', 'Copied');
 
-                setTimeout(() => {
-                    delegateTarget.setAttribute('title', 'Copy');
-                }, 2000);
+				setTimeout(() => {
+					delegateTarget.setAttribute('title', 'Copy');
+				}, 2000);
 
-                return delegateTarget.parentNode.querySelector('pre code').innerText;
-            }
-        });
-    }
+				return delegateTarget.parentNode.querySelector('pre code').innerText;
+			},
+		});
 
-    dispose() {
-        this.clayTooltip.dispose();
-        this.clayClipboard.dispose();
-    }
-}
+		return () => {
+			clayTooltip.dispose();
+			clayClipboard.dispose();
+		};
+	}, []);
 
-export default CodeClipboard;
+	return props.children;
+};
