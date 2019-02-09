@@ -4,6 +4,7 @@
 	min-height: 100vh;
 
 	@media (min-width: $screen-sm) {
+		margin-top: $sidebar-top;
 		margin-left: $sidebar-width;
 	}
 
@@ -63,7 +64,7 @@
 	top: $base-size * 2.9;
 
 	@media (min-width: $grid-float-breakpoint) {
-		top: 0;
+		top: 102px;
 	}
 }
 

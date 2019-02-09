@@ -1,21 +1,21 @@
-$dark: #282a36;
-$white: #ffffff;
+$dark: #f5f5f8; // 282a36
+$white: #30313F; // ffffff
 
 $char: #D8DEE9;
-$comment: #6272a4;
-$keyword: #ff79c6;
-$attribute: #50fa7b;
+$comment: #999;
+$keyword: #2f6f9f;
+$attribute: #4f9fcf;
 $lineHighlight: #14161a;
 $primitive: #5a9bcf;
-$string: #f1fa8c;
-$variable: #50fa7b;
+$string: #c23c20;
+$variable: #999;
 $boolean: #ff8b50;
-$punctuation: #ff79c6;
-$tag: #ff79c6;
+$punctuation: #2f6f9f;
+$tag: #2f6f9f;
 $function: #79b6f2;
 $className: #FAC863;
 $method: #6699CC;
-$operator: #ff79c6;
+$operator: #2f6f9f;
 
 .gatsby-highlight {
     background: $dark;

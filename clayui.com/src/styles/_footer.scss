@@ -1,5 +1,4 @@
 .footer {
-	background-color: $footer-bg-color;
 	color: $brand-light-text;
 	min-height: $base-size * 4;
 	padding: $base-size 0;
@@ -17,16 +16,6 @@
 
 		a {
 			font-weight: 600;
-		}
-	}
-
-	img.logo {
-		margin: $base-size / 2 $base-size / 3;
-		max-height: $base-size * 1.333334;
-		padding: 0;
-
-		@media (min-width: $screen-md) {
-			margin: 0 $base-size / 2 0 0;
 		}
 	}
 }
