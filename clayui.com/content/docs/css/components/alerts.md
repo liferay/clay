@@ -177,57 +177,41 @@ This type of alert is specific for toast messages. These type of messages appear
 ```html
 <div class="alert alert-dismissible alert-danger" role="alert">
 	<span class="alert-indicator">
-		<svg class="lexicon-icon lexicon-icon-exclamation-full" focusable="false" role="presentation">
-			<use href="/images/icons/icons.svg#exclamation-full"></use>
-		</svg>
+		...
 	</span>
 	<strong class="lead">Error:</strong> This is an error message
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-			<use href="/images/icons/icons.svg#times" />
-		</svg>
+		...
 	</button>
 </div>
 
 <div class="alert alert-dismissible alert-info" role="alert">
 	<span class="alert-indicator">
-		<svg class="lexicon-icon lexicon-icon-info-circle" focusable="false" role="presentation">
-			<use href="/images/icons/icons.svg#info-circle"></use>
-		</svg>
+		...
 	</span>
 	<strong class="lead">Info:</strong> This is an info message.
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-			<use href="/images/icons/icons.svg#times" />
-		</svg>
+		...
 	</button>
 </div>
 
 <div class="alert alert-dismissible alert-success" role="alert">
 	<span class="alert-indicator">
-		<svg class="lexicon-icon lexicon-icon-check-circle-full" focusable="false" role="presentation">
-			<use href="/images/icons/icons.svg#check-circle-full"></use>
-		</svg>
+		...
 	</span>
 	<strong class="lead">Success:</strong> This is a success message
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-			<use href="/images/icons/icons.svg#times" />
-		</svg>
+		...
 	</button>
 </div>
 
 <div class="alert alert-dismissible alert-warning" role="alert">
 	<span class="alert-indicator">
-		<svg class="lexicon-icon lexicon-icon-warning-full" focusable="false" role="presentation">
-			<use href="/images/icons/icons.svg#warning-full"></use>
-		</svg>
+		...
 	</span>
 	<strong class="lead">Warning:</strong> This is a warning message.
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-			<use href="/images/icons/icons.svg#times" />
-		</svg>
+		...
 	</button>
 </div>
 ```
@@ -274,36 +258,28 @@ Embedded alerts are meant for use in forms. Usually you will only need to use th
 ```html
 <div class="alert alert-danger" role="alert">
 	<span class="alert-indicator">
-		<svg class="lexicon-icon lexicon-icon-exclamation-full" focusable="false" role="presentation">
-			<use href="/images/icons/icons.svg#exclamation-full"></use>
-		</svg>
+		...
 	</span>
 	<strong class="lead">Error:</strong>This is an error message
 </div>
 
 <div class="alert alert-success" role="alert">
 	<span class="alert-indicator">
-		<svg class="lexicon-icon lexicon-icon-check-circle-full" focusable="false" role="presentation">
-			<use href="/images/icons/icons.svg#check-circle-full"></use>
-		</svg>
+		...
 	</span>
 	<strong class="lead">Error:</strong>This is a success message
 </div>
 
 <div class="alert alert-info" role="alert">
 	<span class="alert-indicator">
-		<svg class="lexicon-icon lexicon-icon-info-circle" focusable="false" role="presentation">
-			<use href="/images/icons/icons.svg#info-circle"></use>
-		</svg>
+		...
 	</span>
 	<strong class="lead">Error:</strong>This is an info message
 </div>
 
 <div class="alert alert-warning" role="alert">
 	<span class="alert-indicator">
-		<svg class="lexicon-icon lexicon-icon-warning-full" focusable="false" role="presentation">
-			<use href="/images/icons/icons.svg#warning-full"></use>
-		</svg>
+		...
 	</span>
 	<strong class="lead">Error:</strong>This is a warning message
 </div>
@@ -380,15 +356,11 @@ Stripe alerts are always placed below the last navigation element, either the he
 <div class="alert alert-danger alert-dismissible alert-fluid" role="alert">
 	<div class="container">
 		<span class="alert-indicator">
-			<svg class="lexicon-icon lexicon-icon-exclamation-full" focusable="false" role="presentation">
-				<use href="/images/icons/icons.svg#exclamation-full"></use>
-			</svg>
+			...
 		</span>
 		<strong class="lead">Danger</strong> This is an error message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-				<use href="/images/icons/icons.svg#times" />
-			</svg>
+			...
 		</button>
 	</div>
 </div>
@@ -396,15 +368,11 @@ Stripe alerts are always placed below the last navigation element, either the he
 <div class="alert alert-dismissible alert-fluid alert-success" role="alert">
 	<div class="container">
 		<span class="alert-indicator">
-			<svg class="lexicon-icon lexicon-icon-check-circle-full" focusable="false" role="presentation">
-				<use href="/images/icons/icons.svg#check-circle-full"></use>
-			</svg>
+			...
 		</span>
 		<strong class="lead">Success</strong> This is a success message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-				<use href="/images/icons/icons.svg#times" />
-			</svg>
+			...
 		</button>
 	</div>
 </div>
@@ -412,15 +380,11 @@ Stripe alerts are always placed below the last navigation element, either the he
 <div class="alert alert-dismissible alert-fluid alert-info" role="alert">
 	<div class="container">
 		<span class="alert-indicator">
-			<svg class="lexicon-icon lexicon-icon-info-circle" focusable="false" role="presentation">
-				<use href="/images/icons/icons.svg#info-circle"></use>
-			</svg>
+			...
 		</span>
 		<strong class="lead">Info</strong> This is an info message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-				<use href="/images/icons/icons.svg#times" />
-			</svg>
+			...
 		</button>
 	</div>
 </div>
@@ -428,15 +392,11 @@ Stripe alerts are always placed below the last navigation element, either the he
 <div class="alert alert-dismissible alert-fluid alert-warning" role="alert">
 	<div class="container">
 		<span class="alert-indicator">
-			<svg class="lexicon-icon lexicon-icon-warning-full" focusable="false" role="presentation">
-				<use href="/images/icons/icons.svg#warning-full"></use>
-			</svg>
+			...
 		</span>
 		<strong class="lead">Warning</strong> This is a warning message
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-			<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-				<use href="/images/icons/icons.svg#times" />
-			</svg>
+			...
 		</button>
 	</div>
 </div>
@@ -575,26 +535,24 @@ These examples are not included in the Lexicon design system but they are built 
 				<div class="autofit-col">
 					<div class="autofit-section">
 						<span class="alert-indicator">
-							<svg class="lexicon-icon lexicon-icon-exclamation-full" focusable="false" role="presentation">
-								<use href="/images/icons/icons.svg#exclamation-full" />
-							</svg>
-						</span><strong class="lead">1 Files</strong> couldn't upload.
+							...
+						</span>
+						<strong class="lead">1 Files</strong> couldn't upload.
 					</div>
 				</div>
 				<div class="autofit-col autofit-col-expand">
 					<div class="autofit-section">
 						<button class="btn btn-secondary btn-sm" type="button">
-							<span class="inline-item inline-item-before"><svg class="lexicon-icon lexicon-icon-reload" focusable="false" role="presentation">
-								<use href="/images/icons/icons.svg#reload" />
-							</svg></span>Retry all
+							<span class="inline-item inline-item-before">
+								...
+							</span>
+							Retry all
 						</button>
 					</div>
 				</div>
 			</div>
 			<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-				<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-					<use href="/images/icons/icons.svg#times" />
-				</svg>
+				...
 			</button>
 		</div>
 	</li>
@@ -610,24 +568,22 @@ These examples are not included in the Lexicon design system but they are built 
 							file-upload.RTF
 						</h4>
 						<span class="alert-indicator">
-							<svg class="lexicon-icon lexicon-icon-exclamation-full" focusable="false" role="presentation">
-								<use href="/images/icons/icons.svg#exclamation-full" />
-							</svg>
-						</span><strong class="lead">Error:</strong> couldn't upload.
+							...
+						</span>
+						<strong class="lead">Error:</strong> couldn't upload.
 					</div>
 				</div>
 				<div class="autofit-col">
 					<button class="btn btn-secondary btn-sm" type="button">
-						<span class="inline-item inline-item-before"><svg class="lexicon-icon lexicon-icon-reload" focusable="false" role="presentation">
-							<use href="/images/icons/icons.svg#reload" />
-						</svg></span>Retry
+						<span class="inline-item inline-item-before">
+							...
+						</span>
+						Retry
 					</button>
 				</div>
 			</div>
 			<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-				<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-					<use href="/images/icons/icons.svg#times" />
-				</svg>
+				...
 			</button>
 		</div>
 	</li>
@@ -645,9 +601,7 @@ These examples are not included in the Lexicon design system but they are built 
 				</div>
 			</div>
 			<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-				<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-					<use href="/images/icons/icons.svg#times" />
-				</svg>
+				...
 			</button>
 		</div>
 	</li>
@@ -677,9 +631,7 @@ These examples are not included in the Lexicon design system but they are built 
 				</div>
 			</div>
 			<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-				<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-					<use href="/images/icons/icons.svg#times" />
-				</svg>
+				...
 			</button>
 		</div>
 	</li>
@@ -708,9 +660,7 @@ All alerts accept HTML as their content. You can use the following modifiers:
 ```html
 <div class="alert alert-warning" role="alert">
 	<span class="alert-indicator">
-		<svg class="lexicon-icon lexicon-icon-warning-full" focusable="false" role="presentation">
-			<use href="/images/icons/icons.svg#warning-full"></use>
-		</svg>
+		...
 	</span>
 	<strong class="lead">Warning:</strong> This alert is a <a href="#1" class="alert-link">warning message</a>.
 </div>
@@ -737,15 +687,11 @@ All alerts accept HTML as their content. You can use the following modifiers:
 ```html
 <div class="alert alert-dismissible alert-success" role="alert">
 	<span class="alert-indicator">
-		<svg class="lexicon-icon lexicon-icon-check-circle-full" focusable="false" role="presentation">
-			<use href="/images/icons/icons.svg#check-circle-full"></use>
-		</svg>
+		...
 	</span>
 	<strong class="lead">Success:</strong> This is a success closeable alert
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
-		<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-			<use href="/images/icons/icons.svg#times" />
-		</svg>
+		...
 	</button>
 </div>
 ```
