@@ -1,17 +1,11 @@
 .sidebar-offset {
 	display: flex;
 	flex-direction: column;
+	width: 100%;
 	min-height: 100vh;
-
-	@media (min-width: $screen-sm) {
-		margin-top: $sidebar-top;
-		margin-left: $sidebar-width;
-	}
+	padding: 0;
 
 	.clay-site-container {
-		flex: 1;
-		max-width: $content-max-width;
-
 		@media (min-width: $screen-xs) {
 			padding-left: $base-size;
 			padding-right: $base-size * 2;
@@ -21,50 +15,57 @@
 			padding-left: $base-size * 2;
 			padding-right: $base-size * 4;
 		}
+
+		@media (max-width: $screen-md) {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
 	}
 }
 
-.sidenav-menu-slider .sidenav-menu {
-	width: 100%;
-
-	@media (min-width: $grid-float-breakpoint) {
-		width: $sidebar-width - 100px;
+.sidenav-menu-slider {
+	@media (max-width: $screen-md) {
+		padding: 0;
 	}
 
-	@media (min-width: $screen-sm) {
-		width: $sidebar-width;
+	.sidenav-menu {
+		width: 100%;
 	}
 }
 
-.sidenav-fixed.sidenav-menu-slider {
+.sidenav-sticky.sidenav-menu-slider {
+	position: sticky;
+    top: 4rem;
+    height: calc(100vh - 4rem);
 	visibility: visible;
 
-	&.toggler-expanded {
+	@media (max-width: $screen-md) {
+		height: 0;
+		position: relative;
+		top: 0;
 		width: 100%;
 	}
 
+	&.toggler-expanded {
+		height: auto;
+	}
+
 	&, &.toggler-expanded {
-		@media (max-width: $grid-float-breakpoint - 1) {
+		@media (max-width: $screen-md) {
 			transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-		}
-
-		@media (min-width: $grid-float-breakpoint) {
-			width: $sidebar-width - 100px;
-		}
-
-		@media (min-width: $screen-sm) {
-			width: $sidebar-width;
 		}
 	}
 }
 
-.sidenav-fixed.sidenav-menu-slider .sidenav-menu {
+.sidenav-sticky.sidenav-menu-slider .sidenav-menu {
 	bottom: 0;
 	height: initial;
-	top: $base-size * 2.9;
+	position: absolute;
+	left: 0;
+	top: 0;
 
-	@media (min-width: $grid-float-breakpoint) {
-		top: 102px;
+	@media (max-width: $screen-md) {
+		position: relative;
 	}
 }
 

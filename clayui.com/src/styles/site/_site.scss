@@ -1,10 +1,6 @@
 body {
 	background-color: $bg-color;
 	font-size: 1rem;
-
-	@media (max-width: $grid-float-breakpoint - 1) {
-		margin-top: $margin-top-body;
-	}
 }
 
 .gatsby-code-text {
@@ -24,4 +20,10 @@ body {
 
 .style-toggler {
 	display: none;
+}
+
+.flex-xl-nowrap {
+	@media (min-width: $grid-float-breakpoint) {
+		flex-wrap: nowrap;
+	}
 }

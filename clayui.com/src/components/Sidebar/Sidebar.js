@@ -46,7 +46,7 @@ export default props => (
 
 		<nav
 			ref={SidebarRef}
-			className="sidebar-toggler-content sidenav-fixed sidenav-menu-slider"
+			className="col-xl-3 sidebar-toggler-content sidenav-sticky sidenav-menu-slider"
 			id="clay-sidebar"
 		>
 			<SideNavScroll>
