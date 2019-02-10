@@ -34,40 +34,42 @@ export default () => {
 										<span className="title align-middle">Clay</span>
 									</Link>
 									<h2 className="h2">A Web Implementation of Lexicon Experience Language</h2>
-									<ul className="navbar-nav ml-auto">
-										<li className="nav-item">
-											<Link className="nav-link-intro" to="/docs/get-started/introduction.html">Get Started</Link>
-										</li>
-										<li className="nav-item">
-											<Link className="nav-link-intro" to="/docs/css">Style Guide</Link>
-										</li>
-										<li className="nav-item">
-											<Link className="nav-link-intro" to="/docs/components">Components Library</Link>
-										</li>
-										<li className="nav-item">
-											<Link className="nav-link-intro" to="/blog">Blog</Link>
-										</li>
-										<li className="nav-item">
-											<a href="https://lexicondesign.io" className="nav-link-intro" target="_blank">
-												Lexicon
-												<span className="inline-item inline-item-after">
-													<svg className="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
-														<use href="/images/icons/icons.svg#angle-right" />
-													</svg>
-												</span>
-											</a>
-										</li>
-										<li className="nav-item">
-											<a href="https://github.com/liferay/clay" className="nav-link-intro" target="_blank">
-												Github
-												<span className="inline-item inline-item-after">
-													<svg className="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
-														<use href="/images/icons/icons.svg#angle-right" />
-													</svg>
-												</span>
-											</a>
-										</li>
-									</ul>
+									<div className="navbar-nav-scroll">
+										<ul className="navbar-nav ml-auto">
+											<li className="nav-item">
+												<Link className="nav-link-intro" to="/docs/get-started/introduction.html">Get Started</Link>
+											</li>
+											<li className="nav-item">
+												<Link className="nav-link-intro" to="/docs/css">Style Guide</Link>
+											</li>
+											<li className="nav-item">
+												<Link className="nav-link-intro" to="/docs/components">Components Library</Link>
+											</li>
+											<li className="nav-item">
+												<Link className="nav-link-intro" to="/blog">Blog</Link>
+											</li>
+											<li className="nav-item">
+												<a href="https://lexicondesign.io" className="nav-link-intro" target="_blank">
+													Lexicon
+													<span className="inline-item inline-item-after">
+														<svg className="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
+															<use href="/images/icons/icons.svg#angle-right" />
+														</svg>
+													</span>
+												</a>
+											</li>
+											<li className="nav-item">
+												<a href="https://github.com/liferay/clay" className="nav-link-intro" target="_blank">
+													Github
+													<span className="inline-item inline-item-after">
+														<svg className="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
+															<use href="/images/icons/icons.svg#angle-right" />
+														</svg>
+													</span>
+												</a>
+											</li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>

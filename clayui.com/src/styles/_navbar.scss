@@ -26,28 +26,29 @@
 			margin-right: auto;
 		}
 	}
-	.navbar-nav-scroll {
-		@media (max-width: $grid-float-breakpoint - 1) {
-			max-width: 100%;
-			overflow: hidden;
-			height: 2.5rem;
-
-			.navbar-nav {
-				overflow-x: auto;
-				padding-bottom: 2rem;
-				white-space: nowrap;
-
-				.nav-link {
-					margin-left: 0 !important;
-				}
-			}
-		}
-	}
 	.navbar-nav .nav-link {
 		font-weight: 700;
 	}
 	.logo {
 		max-height: 32px;
+	}
+}
+
+.navbar-nav-scroll {
+	@media (max-width: $grid-float-breakpoint - 1) {
+		max-width: 100%;
+		overflow: hidden;
+		height: 2.5rem;
+
+		.navbar-nav {
+			overflow-x: auto;
+			padding-bottom: 2rem;
+			white-space: nowrap;
+
+			.nav-link {
+				margin-left: 0 !important;
+			}
+		}
 	}
 }
 

@@ -76,8 +76,8 @@
     margin-bottom: 32px;
     padding: 88px 0;
 
-    @media (max-width: $grid-float-breakpoint - 1) {
-        margin-top: - $margin-top-body;
+    @media (max-width: $screen-md) {
+        text-align: center !important;
     }
 
     @include media-breakpoint-up(sm) {
@@ -91,12 +91,20 @@
         .logo {
             max-height: 84px;
             margin-right: 22px;
+
+            @media (max-width: $screen-md) {
+                max-width: 60px;
+            }
         }
     
         .title {
             font-size: 84px;
             font-weight: 700;
             color: $brand-dark;
+
+            @media (max-width: $screen-md) {
+                font-size: 60px;
+            }
         }
 
         &:hover {
@@ -146,6 +154,12 @@
             font-size: 48px;
             margin-bottom: 73px;
         }
+
+        @media (max-width: $screen-md) {
+            font-size: 31px;
+            line-height: 43px;
+            margin-bottom: 40px;
+        }
     }
 
     .h3 {
@@ -194,6 +208,14 @@
         font-size: 42px;
         margin-right: 28px;
     }
+
+    @media (max-width: $screen-md) {
+        font-size: 28px;
+
+        svg {
+            font-size: 36px;
+        }
+    }
 }
 
 .title-section.orange {
@@ -209,6 +231,10 @@
     font-size: 20px;
     font-weight: 400;
     margin: 0;
+
+    @media (max-width: $screen-md) {
+        font-size: 18px;
+    }
 }
 
 .version-section {
@@ -225,7 +251,7 @@
 }
 
 .spacing {
-    padding: 141px 0;
+    padding: 141px 20px;
 }
 
 .hr {
@@ -281,6 +307,15 @@
 
     .code-shell {
         margin-bottom: 46px;
+    }
+}
+
+.css,
+.contribute {
+    .container-fluid {
+        @media (max-width: $screen-md) {
+            text-align: center !important;
+        }
     }
 }
 
