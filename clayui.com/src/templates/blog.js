@@ -47,28 +47,32 @@ export default ({
 			</Helmet>
 			<main className="content">
 				<LayoutNav />
-				<Sidebar data={list} location={location} />
-				<div className="sidebar-offset">
-					<header>
-						<div className="clay-site-container container-fluid">
-							<h1 className="blog-title">{frontmatter.title}</h1>
-							<span className="blog-date">
-								{markdownRemark.fields.date} by {toCommaSeparatedList(frontmatter.author, author => (
-									<a
-										href={author.frontmatter.url}
-										key={author.frontmatter.name}>
-										{author.frontmatter.name}
-									</a>
-								))}
-							</span>
-						</div>
-					</header>
-					<div className="clay-site-container container-fluid">
-						<div className="row">
-							<div className="col-md-12">
-								<article>
-									<div dangerouslySetInnerHTML={{__html: html}} />
-								</article>
+				<div className="container-fluid">
+					<div className="row flex-xl-nowrap">
+						<Sidebar data={list} location={location} />
+						<div className="col-xl-9 sidebar-offset">
+							<header>
+								<div className="clay-site-container container-fluid">
+									<h1 className="blog-title">{frontmatter.title}</h1>
+									<span className="blog-date">
+										{markdownRemark.fields.date} by {toCommaSeparatedList(frontmatter.author, author => (
+											<a
+												href={author.frontmatter.url}
+												key={author.frontmatter.name}>
+												{author.frontmatter.name}
+											</a>
+										))}
+									</span>
+								</div>
+							</header>
+							<div className="clay-site-container container-fluid">
+								<div className="row">
+									<div className="col-md-12">
+										<article>
+											<div dangerouslySetInnerHTML={{__html: html}} />
+										</article>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

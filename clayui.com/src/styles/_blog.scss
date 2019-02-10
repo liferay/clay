@@ -4,6 +4,10 @@
 		font-size: 48px;
 		line-height: 1.2 !important;
 		font-weight: 700 !important;
+
+		@media (max-width: $grid-float-breakpoint - 1) {
+			margin-top: 30px !important;
+		}
 	}
 
 	.blog-date {

@@ -8,6 +8,11 @@
 			padding: $base-size * 2.5 0;
 		}
 
+		@media (max-width: $screen-xs) {
+			padding-top: 25px;
+			padding-bottom: 25px;
+		}
+
 		h1 {
 			color: $brand-dark !important;
 			font-weight: 700 !important;
