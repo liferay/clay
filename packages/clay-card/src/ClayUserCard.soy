@@ -7,6 +7,7 @@
 	{@param name: string}
 	{@param? _handleActionItemClicked: any}
 	{@param? _handleItemToggled: any}
+	{@param? actionAriaLabel: string}
 	{@param? actionItems: list<[
 		href: string,
 		label: string,
@@ -36,6 +37,7 @@
 	{/let}
 
 	{call ClayCardBase.render}
+		{param actionAriaLabel: $actionAriaLabel /}
 		{param actionItems: $actionItems /}
 		{param contentRenderer: 'user' /}
 		{param disabled: $disabled /}
@@ -68,6 +70,7 @@
 {deltemplate ClayCardBase.DescriptiveArea variant="'user'"}
 	{@param title: string}
 	{@param? _handleActionItemClicked: any}
+	{@param? actionAriaLabel: string}
 	{@param? actionItems: list<[
 		href: string,
 		label: string,
@@ -105,6 +108,7 @@
 						]/}
 						{param items: $actionItems /}
 						{param spritemap: $spritemap /}
+						{param $triggerAriaLabel: $actionAriaLabel /}
 						{param triggerClasses: 'component-action' /}
 					{/call}
 				</div>

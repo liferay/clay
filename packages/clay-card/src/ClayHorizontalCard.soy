@@ -8,6 +8,7 @@
 	{@param title: string}
 	{@param? _handleActionItemClicked: any}
 	{@param? _handleItemCheckboxClick: any}
+	{@param? actionAriaLabel: string}
 	{@param? actionItems: list<[
 		href: string,
 		label: string,
@@ -44,6 +45,7 @@
 	{let $descriptiveArea kind="html"}
 		{call .descriptiveArea}
 			{param _handleActionItemClicked: $_handleActionItemClicked /}
+			{param actionAriaLabel: $actionAriaLabel /}
 			{param actionItems: $actionItems /}
 			{param href: $href /}
 			{param icon: $icon /}
@@ -80,6 +82,7 @@
 	{@param spritemap: string}
 	{@param title: string}
 	{@param? _handleActionItemClicked: any}
+	{@param? actionAriaLabel: string}
 	{@param? actionItems: list<[
 		href: string,
 		label: string,
@@ -118,6 +121,7 @@
 						]/}
 						{param items: $actionItems /}
 						{param spritemap: $spritemap /}
+						{param triggerAriaLabel: $actionAriaLabel /}
 						{param triggerClasses: 'component-action' /}
 					{/call}
 				</div>
