@@ -12,13 +12,14 @@
 	{@param? _handleDataChange: any}
 	{@param? _handleDropdownItemClick: any}
 	{@param? _handleFilteredItemsChange: any}
+	{@param? _handleInputOnBlur: any}
+	{@param? _handleInputOnFocus: any}
 	{@param? _handleOnInput: any}
 	{@param? _handleOnKeydown: any}
-	{@param? _removeFocusedItem: any}
+	{@param? _inputFocus: bool}
 	{@param? contentRenderer: string}
 	{@param? debounceTime: number}
 	{@param? elementClasses: string}
-
 	{@param? filteredItems: list<?>}
 	{@param? id: string}
 	{@param? initialData: []|list<?>}
@@ -64,9 +65,11 @@
 			{param _handleDataChange: $_handleDataChange /}
 			{param _handleDropdownItemClick: $_handleDropdownItemClick /}
 			{param _handleFilteredItemsChange: $_handleFilteredItemsChange /}
+			{param _handleInputOnBlur: $_handleInputOnBlur /}
+			{param _handleInputOnFocus: $_handleInputOnFocus /}
 			{param _handleOnInput: $_handleOnInput /}
 			{param _handleOnKeydown: $_handleOnKeydown /}
-			{param _removeFocusedItem: $_removeFocusedItem /}
+			{param _inputFocus: $_inputFocus /}
 			{param contentRenderer: $contentRenderer ?: ''/}
 			{param dataSource: $dataSource /}
 			{param debounceTime: $debounceTime /}
@@ -98,12 +101,13 @@
 	{@param? _handleDataChange: any}
 	{@param? _handleDropdownItemClick: any}
 	{@param? _handleFilteredItemsChange: any}
+	{@param? _handleInputOnBlur: any}
+	{@param? _handleInputOnFocus: any}
 	{@param? _handleOnInput: any}
 	{@param? _handleOnKeydown: any}
-	{@param? _removeFocusedItem: any}
+	{@param? _inputFocus: bool}
 	{@param? contentRenderer: string}
 	{@param? debounceTime: number}
-
 	{@param? filteredItems: list<?>}
 	{@param? initialData: []|list<?>}
 	{@param? inputName: string}
@@ -126,17 +130,24 @@
 
 	<div class="input-group input-group-stacked-sm-down">
 		<div class="input-group-item">
+			{let $autocompleteElementClasses kind="text"}
+				form-control form-control-tag-group
+				{if $_inputFocus}
+					{sp}focus
+				{/if}
+			{/let}
+
 			{call ClayAutocomplete.render}
 				{param contentRenderer: $contentRenderer /}
 				{param dataSource: $dataSource /}
 				{param debounceTime: $debounceTime /}
-				{param elementClasses: 'form-control form-control-tag-group' /}
+				{param elementClasses: $autocompleteElementClasses /}
 				{param events: [
 					'dataChange': $_handleDataChange,
 					'filteredItemsChanged': $_handleFilteredItemsChange,
 					'inputChange': $_handleOnInput,
-					'inputOnBlur': $_removeFocusedItem,
-					'inputOnFocus': $_removeFocusedItem,
+					'inputOnBlur': $_handleInputOnBlur,
+					'inputOnFocus': $_handleInputOnFocus,
 					'inputOnKeydown': $_handleOnKeydown,
 					'itemSelected': $_handleDropdownItemClick
 				] /}

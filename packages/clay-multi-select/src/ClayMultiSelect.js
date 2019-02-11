@@ -93,6 +93,24 @@ class ClayMultiSelect extends ClayComponent {
 	}
 
 	/**
+	 * Handles the input blur
+	 * @protected
+	 */
+	_handleInputOnBlur() {
+		this._removeFocusedItem();
+		this._inputFocus = false;
+	}
+
+	/**
+	 * Handles the input focus
+	 * @protected
+	 */
+	_handleInputOnFocus() {
+		this._removeFocusedItem();
+		this._inputFocus = true;
+	}
+
+	/**
 	 * Continues the propagation of the itemAdded event.
 	 * @param {!String} value
 	 * @param {!(object|array|string)} data
@@ -141,6 +159,8 @@ class ClayMultiSelect extends ClayComponent {
 			const items = autocomplete.element.querySelectorAll(
 				'span[id="item-tag"]'
 			);
+
+			this._inputFocus = true;
 
 			if (this._itemFocused) {
 				const index = this._itemFocused.getAttribute('data-tag');
@@ -356,6 +376,17 @@ class ClayMultiSelect extends ClayComponent {
  * @type {!Object}
  */
 ClayMultiSelect.STATE = {
+	/**
+	 * Flag to indicate that if the input is focused.
+	 * @instance
+	 * @default false
+	 * @memberof ClayMultiSelect
+	 * @type {?bool}
+	 */
+	_inputFocus: Config.bool()
+		.value(false)
+		.internal(),
+
 	/**
 	 * Variation name to render different deltemplates.
 	 * @default undefined
