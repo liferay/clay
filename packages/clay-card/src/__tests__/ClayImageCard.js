@@ -73,6 +73,17 @@ describe('ClayImageCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a ClayImageCard with actionItems and actionAriaLabel', () => {
+		component = new ClayImageCard({
+			actionAriaLabel: 'toggle actions',
+			actionItems: actionItems,
+			spritemap: spritemap,
+			title: 'My Title',
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
 	it('should render a selectable ClayImageCard', () => {
 		component = new ClayImageCard({
 			selectable: true,

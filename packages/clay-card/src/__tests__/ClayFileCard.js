@@ -73,6 +73,17 @@ describe('ClayFileCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a ClayFileCard with actionItems and actionAriaLabel', () => {
+		component = new ClayFileCard({
+			actionAriaLabel: 'toggle actions',
+			actionItems: actionItems,
+			spritemap: spritemap,
+			title: 'My Title',
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
 	it('should render a selectable ClayFileCard', () => {
 		component = new ClayFileCard({
 			selectable: true,
