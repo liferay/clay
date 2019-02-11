@@ -112,6 +112,74 @@ describe('ClayMultiSelect', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a ClayMultiSelect and add the class focus when focus on input', () => {
+		component = new ClayMultiSelect({
+			dataSource,
+			helpText,
+			spritemap,
+		});
+
+		const {input} = component.refs.autocomplete.refs;
+
+		triggerEvent(input, 'focus', {data: 'a'});
+
+		jest.runAllTimers();
+
+		expect(component._inputFocus).toBeTruthy();
+		expect(component).toMatchSnapshot();
+	});
+
+	it('should render a ClayMultiSelect and remove the focus when blur on input', () => {
+		component = new ClayMultiSelect({
+			_inputFocus: true,
+			dataSource,
+			helpText,
+			spritemap,
+		});
+
+		const {input} = component.refs.autocomplete.refs;
+
+		triggerEvent(input, 'focus', {data: 'a'});
+
+		expect(component._inputFocus).toBeTruthy();
+
+		triggerEvent(input, 'blur', {data: 'a'});
+
+		jest.runAllTimers();
+
+		expect(component._inputFocus).toBeFalsy();
+		expect(component).toMatchSnapshot();
+	});
+
+	it('should render a ClayMultiSelect and keep the focus of the input when selecting an item', () => {
+		component = new ClayMultiSelect({
+			dataSource,
+			helpText,
+			selectedItems: [
+				{
+					label: 'Foo',
+					value: 'foo',
+				},
+				{
+					label: 'Bar',
+					value: 'bar',
+				},
+			],
+			spritemap,
+		});
+
+		const {autocomplete} = component.refs;
+
+		triggerEvent(autocomplete.refs.input, 'keydown', {
+			key: 'Backspace',
+		});
+
+		jest.runAllTimers();
+
+		expect(component._inputFocus).toBeTruthy();
+		expect(component).toMatchSnapshot();
+	});
+
 	it('should render a ClayMultiSelect with multiple values with comma at the end', () => {
 		component = new ClayMultiSelect({
 			dataSource,
