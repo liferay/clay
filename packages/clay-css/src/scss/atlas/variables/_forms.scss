@@ -49,7 +49,7 @@ $form-check-label-text-margin-left: -0.1875rem !default; // 3px
 // Skin
 
 $input-color: $body-color !default;
-$input-bg: $body-bg !default;
+$input-bg: $light !default;
 $input-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
 $input-box-shadow: none !default;
 $input-placeholder-color: $secondary !default;
