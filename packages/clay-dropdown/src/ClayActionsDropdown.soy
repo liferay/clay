@@ -18,6 +18,7 @@
 	{@param? itemsIconAlignment: string}
 	{@param? preferredAlign: string}
 	{@param? toggle: any}
+	{@param? triggerAriaLabel: string}
 	{@param? triggerClasses: string}
 
 	{let $dropdownElementClasses kind="text"}
@@ -53,6 +54,7 @@
 		{param preferredAlign: $preferredAlign /}
 		{param ref: 'dropdown' /}
 		{param spritemap: $spritemap /}
+		{param triggerAriaLabel: $triggerAriaLabel /}
 		{param triggerClasses: $triggerClasses /}
 		{param triggerTitle kind="text"}
 			{msg desc=""}

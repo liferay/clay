@@ -73,6 +73,17 @@ describe('ClayHorizontalCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a ClayHorizontalCard with actionItems and actionAriaLabel', () => {
+		component = new ClayHorizontalCard({
+			actionAriaLabel: 'toggle actions',
+			actionItems: actionItems,
+			spritemap: spritemap,
+			title: 'My Title',
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
 	it('should render a selectable ClayHorizontalCard', () => {
 		component = new ClayHorizontalCard({
 			selectable: true,

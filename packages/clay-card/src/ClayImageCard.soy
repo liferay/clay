@@ -7,6 +7,7 @@
     {@param title: string}
     {@param? _handleActionItemClicked: any}
     {@param? _handleItemToggled: any}
+    {@param? actionAriaLabel: string}
     {@param? actionItems: list<[
         href: string,
         label: string,
@@ -43,6 +44,7 @@
     {/let}
 
     {call ClayCardBase.render}
+        {param actionAriaLabel: $actionAriaLabel /}
         {param actionItems: $actionItems /}
         {param contentRenderer: 'image' /}
         {param disabled: $disabled /}

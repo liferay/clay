@@ -235,6 +235,15 @@ ClayDropdown.STATE = {
 	),
 
 	/**
+	 * Aria label attribute for the trigger element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdown
+	 * @type {?(string|undefined)}
+	 */
+	triggerAriaLabel: Config.string(),
+
+	/**
 	 * CSS classes to be applied to the trigger element.
 	 * @default undefined
 	 * @instance

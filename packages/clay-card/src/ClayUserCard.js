@@ -43,6 +43,15 @@ class ClayUserCard extends ClayComponent {
  */
 ClayUserCard.STATE = {
 	/**
+	 * Aria label attribute for the action element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayUserCard
+	 * @type {?(string|undefined)}
+	 */
+	actionAriaLabel: Config.string(),
+
+	/**
 	 * List of items to display in the actions menu.
 	 * @default undefined
 	 * @instance
