@@ -40,14 +40,14 @@
 	visibility: visible;
 
 	@media (max-width: $screen-md) {
-		height: 0;
+		display: none;
 		position: relative;
 		top: 0;
 		width: 100%;
 	}
 
 	&.toggler-expanded {
-		height: auto;
+		display: block;
 	}
 
 	&, &.toggler-expanded {
