@@ -1,6 +1,6 @@
 import State, {validators} from 'metal-state';
 import anim from 'metal-anim';
-import dom from 'metal-dom';
+import dom, {toElement} from 'metal-dom';
 import {EventHandler} from 'metal-events';
 
 const KEY_CODE_ENTER = 13;
@@ -92,17 +92,33 @@ class ClayCollapse extends State {
 	}
 
 	/**
-	 * Adds CSS classes and properties to the `content` element when `collapsed`
-	 * is true
+	 * Adds CSS classes and properties to the `content` and `headers` elements when
+	 * `collapsed` is true
 	 * @protected
 	 */
 	_close() {
-		const {closedClasses, content, openClasses, transitionClasses} = this;
+		const {
+			closedClasses,
+			content,
+			headers,
+			openClasses,
+			transitionClasses,
+		} = this;
 
 		dom.removeClasses(content, `${openClasses} ${transitionClasses}`);
 		dom.addClasses(content, closedClasses);
 		content.setAttribute('aria-expanded', false);
 		content.style.removeProperty('height');
+
+		if (Array.isArray(headers)) {
+			headers.forEach(header => {
+				dom.addClasses(header, 'collapsed');
+				toElement(header).setAttribute('aria-expanded', false);
+			});
+		} else {
+			dom.addClasses(headers, 'collapsed');
+			toElement(headers).setAttribute('aria-expanded', false);
+		}
 	}
 
 	/**
@@ -180,17 +196,27 @@ class ClayCollapse extends State {
 	}
 
 	/**
-	 * Adds CSS classes and properties to the `content` element when `collapsed`
-	 * is false
+	 * Adds CSS classes and properties to the `content` and `headers` elements when
+	 * `collapsed` is false
 	 * @protected
 	 */
 	_open() {
-		const {content, openClasses, transitionClasses} = this;
+		const {content, headers, openClasses, transitionClasses} = this;
 
 		dom.addClasses(content, openClasses);
 		dom.removeClasses(content, transitionClasses);
 		content.setAttribute('aria-expanded', true);
 		content.style.removeProperty('height');
+
+		if (Array.isArray(headers)) {
+			headers.forEach(header => {
+				dom.removeClasses(header, 'collapsed');
+				toElement(header).setAttribute('aria-expanded', true);
+			});
+		} else {
+			dom.removeClasses(headers, 'collapsed');
+			toElement(headers).setAttribute('aria-expanded', true);
+		}
 	}
 
 	/**

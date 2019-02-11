@@ -71,6 +71,26 @@ describe('ClayDropdownBase', function() {
 		expect(clayDropdownBase).toMatchSnapshot();
 	});
 
+	it('should render a dropdown with trigger aria-label', () => {
+		clayDropdownBase = new ClayDropdownBase({
+			items: [
+				{
+					href: 'item1url',
+					label: 'Item 1',
+				},
+				{
+					href: 'item2url',
+					label: 'Item 2',
+				},
+			],
+			label: 'Trigger',
+			triggerAriaLabel: 'toggle',
+			triggerSize: 'sm',
+		});
+
+		expect(clayDropdownBase).toMatchSnapshot();
+	});
+
 	it('should render a dropdown with trigger size', () => {
 		clayDropdownBase = new ClayDropdownBase({
 			items: [

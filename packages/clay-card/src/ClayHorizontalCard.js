@@ -43,6 +43,15 @@ class ClayHorizontalCard extends ClayComponent {
  */
 ClayHorizontalCard.STATE = {
 	/**
+	 * Aria label attribute for the action element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayHorizontalCard
+	 * @type {?(string|undefined)}
+	 */
+	actionAriaLabel: Config.string(),
+
+	/**
 	 * List of items to display in the actions menu.
 	 * @default undefined
 	 * @instance

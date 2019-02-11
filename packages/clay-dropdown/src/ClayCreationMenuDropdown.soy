@@ -20,6 +20,7 @@
 	{@param? primaryItems: list<?>}
 	{@param? secondaryItems: list<?>}
 	{@param? toggle: any}
+	{@param? triggerAriaLabel: string}
 	{@param? triggerClasses: string}
 	{@param? triggerTitle: string}
 	{@param? viewMoreURL: string}
@@ -218,6 +219,7 @@
 		{param ref: 'dropdown' /}
 		{param spritemap: $spritemap /}
 		{param style: 'primary' /}
+		{param triggerAriaLabel: $triggerAriaLabel /}
 		{param triggerClasses: $triggerClasses /}
 		{param triggerTitle kind="text"}
 			{if $triggerTitle}

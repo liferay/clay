@@ -22,6 +22,7 @@
 	{@param? searchable: bool}
 	{@param? spritemap: string}
 	{@param? style: string}
+	{@param? triggerAriaLabel: string}
 	{@param? triggerClasses: string}
 	{@param? triggerSize: string}
 	{@param? triggerTitle: string}
@@ -44,6 +45,7 @@
 
 	<div {$attributes}>
 		{call .trigger}
+			{param ariaLabel: $triggerAriaLabel /}
 			{param classes: $triggerClasses /}
 			{param disabled: $disabled /}
 			{param expanded: $expanded /}
@@ -269,6 +271,7 @@
  */
 {template .trigger}
 	{@param label: html|string}
+	{@param? ariaLabel: string}
 	{@param? classes: string}
 	{@param? disabled: bool}
 	{@param? expanded: bool}
@@ -284,7 +287,11 @@
 		{/if}
 
 		aria-haspopup="true"
-		aria-label="toggle"
+
+		{if $ariaLabel}
+			aria-label="{$ariaLabel}"
+		{/if}
+
 		class="dropdown-toggle btn
 			{if $classes}
 				{sp}{$classes}
