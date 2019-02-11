@@ -9,7 +9,6 @@
 	{@param? _handleButtonClick: any}
 	{@param? _handleItemClick: any}
 	{@param? _handleSearch: any}
-	{@param? ariaLabel: string}
 	{@param? button: ?}
 	{@param? caption: string}
 	{@param? contentRenderer: string}
@@ -23,6 +22,7 @@
 	{@param? searchable: bool}
 	{@param? spritemap: string}
 	{@param? style: string}
+	{@param? triggerAriaLabel: string}
 	{@param? triggerClasses: string}
 	{@param? triggerSize: string}
 	{@param? triggerTitle: string}
@@ -45,7 +45,7 @@
 
 	<div {$attributes}>
 		{call .trigger}
-			{param ariaLabel: $ariaLabel /}
+			{param ariaLabel: $triggerAriaLabel /}
 			{param classes: $triggerClasses /}
 			{param disabled: $disabled /}
 			{param expanded: $expanded /}
