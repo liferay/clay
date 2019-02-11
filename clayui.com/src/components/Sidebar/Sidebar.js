@@ -37,7 +37,7 @@ const SideNavScroll = (props) => {
 export default props => (
 	<React.Fragment>
 		<div className="navbar navbar-mobile navbar-expand-lg navbar-header">
-			<button onClick={onClick} className="navbar-toggler sidebar-toggler p-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<button onClick={onClick} className="navbar-toggler sidebar-toggler ml-auto p-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<svg aria-hidden="true" className="lexicon-icon lexicon-icon-bars">
 					<use xlinkHref="/images/icons/icons.svg#bars" />
 				</svg>
