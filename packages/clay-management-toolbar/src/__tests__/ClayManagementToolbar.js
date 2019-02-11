@@ -1219,6 +1219,7 @@ describe('ClayManagementToolbar', function() {
 			selectable: true,
 			selectedItems: 1,
 			spritemap: spritemap,
+			supportsBulkActions: true,
 			totalItems: 10,
 		});
 
@@ -1242,6 +1243,7 @@ describe('ClayManagementToolbar', function() {
 			selectedItems: 5,
 			showSelectAllButton: true,
 			spritemap: spritemap,
+			supportsBulkActions: true,
 			totalItems: 10,
 		});
 
