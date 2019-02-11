@@ -20,6 +20,7 @@
 	{@param? toggle: any}
 	{@param? triggerAriaLabel: string}
 	{@param? triggerClasses: string}
+	{@param? triggerTitle: string}
 
 	{let $dropdownElementClasses kind="text"}
 		dropdown-action
@@ -57,9 +58,13 @@
 		{param triggerAriaLabel: $triggerAriaLabel /}
 		{param triggerClasses: $triggerClasses /}
 		{param triggerTitle kind="text"}
-			{msg desc=""}
-				actions
-			{/msg}
+			{if isNonnull($triggerTitle)}
+				{$triggerTitle}
+			{else}
+				{msg desc=""}
+					actions
+				{/msg}
+			{/if}
 		{/param}
 	{/call}
 {/template}
