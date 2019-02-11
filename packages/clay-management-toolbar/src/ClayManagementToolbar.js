@@ -84,6 +84,7 @@ class ClayManagementToolbar extends ClayComponent {
 	 */
 	_handleCreationButtonClicked(event) {
 		return !this.emit({
+			data: event.data,
 			name: 'creationButtonClicked',
 			originalEvent: event,
 		});
@@ -605,6 +606,15 @@ ClayManagementToolbar.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	spritemap: Config.string().required(),
+
+	/**
+	 * Flag to indicate that the toolbar supports bulk selection.
+	 * @default false
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {boolean}
+	 */
+	supportsBulkActions: Config.bool().value(false),
 
 	/**
 	 * Total number of items. If totalItems is 0 most of the elements in the bar

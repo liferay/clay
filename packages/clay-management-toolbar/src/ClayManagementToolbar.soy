@@ -44,6 +44,7 @@
 		maxSecondaryItems: int,
 		maxTotalItems: int,
 		primaryItems: list<[
+			data: any,
 			disabled: bool,
 			href: string,
 			icon: string,
@@ -51,10 +52,12 @@
 			separator: bool
 		]>,
 		secondaryItems: list<[
+			data: any,
 			disabled: bool,
 			href: string,
 			icon: string,
 			items: list<[
+				data: any,
 				disabled: bool,
 				href: string,
 				icon: string,
@@ -112,6 +115,7 @@
 	{@param? showSelectAllButton: bool}
 	{@param? sortingOrder: string}
 	{@param? sortingURL: string}
+	{@param? supportsBulkActions: bool}
 	{@param? totalItems: number}
 	{@param? viewTypes: list<[
 		active: bool,
@@ -150,6 +154,7 @@
 				{param showInfoButton: $showInfoButton /}
 				{param showSelectAllButton: $showSelectAllButton /}
 				{param spritemap: $spritemap /}
+				{param supportsBulkActions: $supportsBulkActions /}
 				{param totalItems: $totalItems /}
 			{/call}
 		{else}
@@ -225,6 +230,7 @@
 	{@param? selectedItems: number}
 	{@param? showInfoButton: bool}
 	{@param? showSelectAllButton: bool}
+	{@param? supportsBulkActions: bool}
 	{@param? totalItems: number}
 
 	<nav class="management-bar management-bar-primary navbar navbar-expand-md navbar-nowrap">
@@ -247,9 +253,9 @@
 				</li>
 				<li class="nav-item">
 					<span class="navbar-text">
-						{if $selectedItems == $totalItems}
-							{msg desc="All selected"}
-								all-selected
+						{if $supportsBulkActions and $selectedItems == $totalItems}
+							{msg desc="Says that all possible items are selected when bulk actions are available"}
+								all-{$totalItems}-items-selected
 							{/msg}
 						{else}
 							{msg desc="Says how many items of the total are selected"}
@@ -264,51 +270,18 @@
 						{/if}
 					</span>
 				</li>
-				<li class="nav-item nav-item-shrink">
-					{if $clearSelectionURL}
-						{call ClayLink.render}
-							{param elementClasses: 'nav-link' /}
-							{param href: $clearSelectionURL /}
-							{param label kind="html"}
-								<span class="text-truncate-inline">
-									<span class="text-truncate">
-										{msg desc="Clear"}
-											clear
-										{/msg}
-									</span>
-								</span>
-							{/param}
-						{/call}
-					{else}
-						{call ClayButton.render}
-							{param elementClasses: 'nav-link' /}
-							{param events: ['click': $_handleClearSelectionButtonClick] /}
-							{param label kind="html"}
-								<span class="text-truncate-inline">
-									<span class="text-truncate">
-										{msg desc="Clear"}
-											clear
-										{/msg}
-									</span>
-								</span>
-							{/param}
-							{param ref: 'clearSelectionButton' /}
-							{param style: 'unstyled' /}
-							{param type: 'button' /}
-						{/call}
-					{/if}
-				</li>
-				{if $showSelectAllButton}
+
+				{if $supportsBulkActions}
 					<li class="nav-item nav-item-shrink">
-						{if $selectAllURL}
+						{if $clearSelectionURL}
 							{call ClayLink.render}
 								{param elementClasses: 'nav-link' /}
-								{param href: $selectAllURL /}
+								{param href: $clearSelectionURL /}
 								{param label kind="html"}
 									<span class="text-truncate-inline">
 										<span class="text-truncate">
-											{msg desc=""}
-												select-all
+											{msg desc="Clear"}
+												clear
 											{/msg}
 										</span>
 									</span>
@@ -317,22 +290,59 @@
 						{else}
 							{call ClayButton.render}
 								{param elementClasses: 'nav-link' /}
-								{param events: ['click': $_handleSelectAllButtonClick] /}
+								{param events: ['click': $_handleClearSelectionButtonClick] /}
 								{param label kind="html"}
 									<span class="text-truncate-inline">
 										<span class="text-truncate">
-											{msg desc=""}
-												select-all
+											{msg desc="Clear"}
+												clear
 											{/msg}
 										</span>
 									</span>
 								{/param}
-								{param ref: 'selectAllButton' /}
+								{param ref: 'clearSelectionButton' /}
 								{param style: 'unstyled' /}
 								{param type: 'button' /}
 							{/call}
 						{/if}
 					</li>
+
+					{if $showSelectAllButton}
+						<li class="nav-item nav-item-shrink">
+							{if $selectAllURL}
+								{call ClayLink.render}
+									{param elementClasses: 'nav-link' /}
+									{param href: $selectAllURL /}
+									{param label kind="html"}
+										<span class="text-truncate-inline">
+											<span class="text-truncate">
+												{msg desc=""}
+													select-all
+												{/msg}
+											</span>
+										</span>
+									{/param}
+								{/call}
+							{else}
+								{call ClayButton.render}
+									{param elementClasses: 'nav-link' /}
+									{param events: ['click': $_handleSelectAllButtonClick] /}
+									{param label kind="html"}
+										<span class="text-truncate-inline">
+											<span class="text-truncate">
+												{msg desc=""}
+													select-all
+												{/msg}
+											</span>
+										</span>
+									{/param}
+									{param ref: 'selectAllButton' /}
+									{param style: 'unstyled' /}
+									{param type: 'button' /}
+								{/call}
+							{/if}
+						</li>
+					{/if}
 				{/if}
 			</ul>
 
@@ -416,6 +426,7 @@
 		maxSecondaryItems: int,
 		maxTotalItems: int,
 		primaryItems: list<[
+			data: any,
 			disabled: bool,
 			href: string,
 			icon: string,
@@ -423,10 +434,12 @@
 			separator: bool
 		]>,
 		secondaryItems: list<[
+			data: any,
 			disabled: bool,
 			href: string,
 			icon: string,
 			items: list<[
+				data: any,
 				disabled: bool,
 				href: string,
 				icon: string,
@@ -448,6 +461,7 @@
 			{call ClayLink.render}
 				{param ariaLabel: $item.label /}
 				{param buttonStyle: 'primary' /}
+				{param data: $item.data /}
 				{param elementClasses: 'nav-btn nav-btn-monospaced' /}
 				{param href: $item.href /}
 				{param icon: 'plus' /}
@@ -456,6 +470,7 @@
 			{/call}
 		{else}
 			{call ClayButton.render}
+				{param data: $item.data /}
 				{param elementClasses: 'nav-btn nav-btn-monospaced' /}
 				{param events: ['click': $_handleCreationButtonClicked ] /}
 				{param icon: 'plus' /}
@@ -524,6 +539,7 @@
 		maxSecondaryItems: int,
 		maxTotalItems: int,
 		primaryItems: list<[
+			data: any,
 			disabled: bool,
 			href: string,
 			icon: string,
@@ -531,10 +547,12 @@
 			separator: bool
 		]>,
 		secondaryItems: list<[
+			data: any,
 			disabled: bool,
 			href: string,
 			icon: string,
 			items: list<[
+				data: any,
 				disabled: bool,
 				href: string,
 				icon: string,
