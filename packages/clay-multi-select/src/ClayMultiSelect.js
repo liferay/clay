@@ -381,7 +381,7 @@ ClayMultiSelect.STATE = {
 	 * elements.
 	 * @instance
 	 * @default undefined
-	 * @memberof ClayDataProvider
+	 * @memberof ClayMultiSelect
 	 * @type {!(string|object|array|function)}
 	 */
 	dataSource: Config.oneOfType([
@@ -395,7 +395,7 @@ ClayMultiSelect.STATE = {
 	 * Set the request debounce time
 	 * @instance
 	 * @default 200
-	 * @memberof ClayDataProvider
+	 * @memberof ClayMultiSelect
 	 * @type {?(number)}
 	 */
 	debounceTime: Config.number().value(200),
