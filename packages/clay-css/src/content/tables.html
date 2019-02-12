@@ -1375,6 +1375,63 @@ section: Components
 				</tbody>
 			</table>
 		</div>
+
+		<blockquote class="blockquote">
+			<p><code>table-img</code> is a helper that sets the max-height to 100px on an image inside a table. Depending on your use case, you may need to use it with the <code>autofit-row</code> pattern.</p>
+		</blockquote>
+
+		<div class="table-responsive">
+			<table class="table table-autofit table-nowrap">
+				<thead>
+					<tr>
+						<th></th>
+						<th>ID</th>
+						<th class="table-cell-expand">
+							<span class="text-truncate-inline">
+								<span class="text-truncate" title="Description">Title</span>
+							</span>
+						</th>
+						<th>Status</th>
+						<th>Modified Date</th>
+						<th>Display Date</th>
+						<th>Author</th>
+						<th>Type</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="custom-control custom-checkbox">
+								<label>
+									<input class="custom-control-input" type="checkbox">
+									<span class="custom-control-label"></span>
+								</label>
+							</div>
+						</td>
+						<td>21146</td>
+						<td class="table-cell-expand">
+							<div class="autofit-row">
+								<div class="autofit-col">
+									<img alt="thumbnail" class="table-img" src="../../images/thumbnail_coffee.jpg">
+								</div>
+								<div class="autofit-col autofit-col-expand">
+									<div class="table-title">
+										<span class="text-truncate-inline">
+											<span class="text-truncate" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td>--</td>
+						<td>2 Hours Ago</td>
+						<td>--</td>
+						<td>Stanley Nelson</td>
+						<td>Folder</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
 </div>
 
