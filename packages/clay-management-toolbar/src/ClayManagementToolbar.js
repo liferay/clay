@@ -77,14 +77,32 @@ class ClayManagementToolbar extends ClayComponent {
 	}
 
 	/**
-	 * Continues the propagation of the plus button clicked event
+	 * Continues the propagation of the plus button clicked event. This path only
+	 * happens when there's a single primary item. Thus, the data payload associated
+	 * with the event is simply the first primary item.
 	 * @param {!Event} event
 	 * @private
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleCreationButtonClicked(event) {
+		const creationMenu = this.creationMenu;
+		const primaryItems = creationMenu.primaryItems;
+		const secondaryItems = creationMenu.secondaryItems;
+
+		let payload;
+
+		if (primaryItems) {
+			payload = primaryItems[0];
+		} else {
+			if (secondaryItems.items) {
+				payload = secondaryItems.items[0];
+			} else {
+				payload = secondaryItems[0];
+			}
+		}
+
 		return !this.emit({
-			data: event.data,
+			data: payload,
 			name: 'creationButtonClicked',
 			originalEvent: event,
 		});
