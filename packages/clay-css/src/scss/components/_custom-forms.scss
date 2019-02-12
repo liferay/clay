@@ -85,6 +85,11 @@ label.custom-control-label {
 
 .custom-control-label-text {
 	padding-left: $custom-control-description-padding-left;
+
+	small,
+	.small {
+		font-size: $custom-control-description-small-font-size;
+	}
 }
 
 // Custom Control Indicator
