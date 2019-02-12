@@ -121,7 +121,6 @@ class ClayMultiSelect extends ClayComponent {
 	 * @protected
 	 */
 	_handleInputOnFocus() {
-		this._removeFocusedItem();
 		this._inputFocus = true;
 	}
 
@@ -376,12 +375,7 @@ class ClayMultiSelect extends ClayComponent {
 	 */
 	attached() {
 		this._eventHandler.add(
-			dom.on(
-				document,
-				'click',
-				this._handleDocClick.bind(this),
-				true
-			)
+			dom.on(document, 'click', this._handleDocClick.bind(this), true)
 		);
 	}
 
