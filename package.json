@@ -11,7 +11,7 @@
 		"link": "lerna run link",
 		"lint": "eslint packages/**/*.js examples/**/*.js scripts/**/*.js",
 		"pa11y": "pa11y-ci ./packages/clay-*/demos/a11y.html",
-		"prettier": "prettier-eslint packages/**/**/*.js examples/**/**/*.js scripts/**/**/*.js",
+		"prettier": "prettier-eslint packages/**/**/*.js packages/**/**/*.ts packages/**/**/*.tsx examples/**/**/*.js scripts/**/**/*.js",
 		"start": "http-server . -p 4000",
 		"test": "npm run build && npm run jest && npm run pa11y",
 		"site": "cd clayui.com && npm run build && npm run serve"
