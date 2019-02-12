@@ -898,4 +898,13 @@ th {
 	.table-cell-ws-nowrap {
 		white-space: nowrap;
 	}
+
+	// Image
+
+	.table-img {
+		height: auto;
+		max-height: $table-img-max-height;
+		max-width: none;
+		width: auto;
+	}
 }
