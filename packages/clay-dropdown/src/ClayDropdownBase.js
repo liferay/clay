@@ -429,6 +429,10 @@ class ClayDropdownBase extends ClayComponent {
 	 */
 	syncExpanded() {
 		if (this.expanded) {
+			if (!this._hasExpanded) {
+				this._hasExpanded = true;
+			}
+
 			this._eventHandler.add(
 				dom.on(
 					document,
@@ -572,6 +576,15 @@ ClayDropdownBase.STATE = {
 	 * @type {?bool}
 	 */
 	expanded: Config.bool().value(false),
+
+	/**
+	 * Flag to indicate if menu has expanded.
+	 * @default false
+	 * @instance
+	 * @memberof ClayDropdownBase
+	 * @type {?bool}
+	 */
+	_hasExpanded: Config.bool().value(false),
 
 	/**
 	 * Help text to be shown on top of the open dropdown.

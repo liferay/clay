@@ -9,6 +9,7 @@
 	{@param? _handleButtonClick: any}
 	{@param? _handleItemClick: any}
 	{@param? _handleSearch: any}
+	{@param? _hasExpanded: any}
 	{@param? button: ?}
 	{@param? caption: string}
 	{@param? contentRenderer: string}
@@ -57,6 +58,7 @@
 			{param _handleButtonClick: $_handleButtonClick /}
 			{param _handleItemClick: $_handleItemClick /}
 			{param _handleSearch: $_handleSearch /}
+			{param _hasExpanded: $_hasExpanded /}
 			{param button: $button /}
 			{param caption: $caption /}
 			{param contentRenderer: $contentRenderer ?: '' /}
@@ -257,7 +259,7 @@
 
 	{call ClayPortal.render}
 		{param content kind="html"}
-			{if $expanded}
+			{if $_hasExpanded or $expanded}
 				{$dropdownMenu}
 			{else}
 				<span>{sp}</span>
