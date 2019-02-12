@@ -2,8 +2,10 @@ import 'clay-autocomplete';
 import 'clay-button';
 import 'clay-label';
 import {Config} from 'metal-state';
+import {EventHandler} from 'metal-events';
 import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
+import dom from 'metal-dom';
 import Soy from 'metal-soy';
 
 import templates from './ClayMultiSelect.soy.js';
@@ -82,6 +84,17 @@ class ClayMultiSelect extends ClayComponent {
 	}
 
 	/**
+	 * Handle the click on the document to control the focus of the element
+	 * @param {!Event} event
+	 * @protected
+	 */
+	_handleDocClick(event) {
+		this._inputFocus = this.refs.autocomplete.element.contains(
+			event.target
+		);
+	}
+
+	/**
 	 * Handles changes in filteredItems and synchronizes with state.
 	 * @param {!Event} event
 	 * @protected
@@ -90,6 +103,23 @@ class ClayMultiSelect extends ClayComponent {
 		if (event.newVal !== event.prevVal) {
 			this.filteredItems = event.newVal;
 		}
+	}
+
+	/**
+	 * Handles the input blur
+	 * @protected
+	 */
+	_handleInputOnBlur() {
+		this._removeFocusedItem();
+		this._inputFocus = false;
+	}
+
+	/**
+	 * Handles the input focus
+	 * @protected
+	 */
+	_handleInputOnFocus() {
+		this._inputFocus = true;
 	}
 
 	/**
@@ -141,6 +171,8 @@ class ClayMultiSelect extends ClayComponent {
 			const items = autocomplete.element.querySelectorAll(
 				'span[id="item-tag"]'
 			);
+
+			this._inputFocus = true;
 
 			if (this._itemFocused) {
 				const index = this._itemFocused.getAttribute('data-tag');
@@ -331,14 +363,32 @@ class ClayMultiSelect extends ClayComponent {
 	/**
 	 * @inheritDoc
 	 */
-	attached() {
+	created() {
 		this._itemFocused = null;
+		this._eventHandler = new EventHandler();
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	attached() {
+		this._eventHandler.add(
+			dom.on(document, 'click', this._handleDocClick.bind(this), true)
+		);
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	detached() {
+		this._eventHandler.removeAllListeners();
 	}
 
 	/**
 	 * @inheritDoc
 	 */
 	disposed() {
+		this._eventHandler.removeAllListeners();
 		this._itemFocused = null;
 	}
 
@@ -356,6 +406,17 @@ class ClayMultiSelect extends ClayComponent {
  * @type {!Object}
  */
 ClayMultiSelect.STATE = {
+	/**
+	 * Flag to indicate that if the input is focused.
+	 * @instance
+	 * @default false
+	 * @memberof ClayMultiSelect
+	 * @type {?bool}
+	 */
+	_inputFocus: Config.bool()
+		.value(false)
+		.internal(),
+
 	/**
 	 * Variation name to render different deltemplates.
 	 * @default undefined
@@ -381,7 +442,7 @@ ClayMultiSelect.STATE = {
 	 * elements.
 	 * @instance
 	 * @default undefined
-	 * @memberof ClayDataProvider
+	 * @memberof ClayMultiSelect
 	 * @type {!(string|object|array|function)}
 	 */
 	dataSource: Config.oneOfType([
@@ -395,7 +456,7 @@ ClayMultiSelect.STATE = {
 	 * Set the request debounce time
 	 * @instance
 	 * @default 200
-	 * @memberof ClayDataProvider
+	 * @memberof ClayMultiSelect
 	 * @type {?(number)}
 	 */
 	debounceTime: Config.number().value(200),

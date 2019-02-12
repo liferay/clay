@@ -212,6 +212,15 @@ ClayActionsDropdown.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	triggerClasses: Config.string(),
+
+	/**
+	 * String to be used for title attribute of action dropdown
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayActionsDropdown
+	 * @type {?(string|undefined)}
+	 */
+	triggerTitle: Config.string(),
 };
 
 defineWebComponent('clay-actions-dropdown', ClayActionsDropdown);
