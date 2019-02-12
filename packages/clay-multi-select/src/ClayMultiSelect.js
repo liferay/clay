@@ -93,7 +93,7 @@ class ClayMultiSelect extends ClayComponent {
 			this._inputFocus = true;
 		} else {
 			this._inputFocus = false;
-		}
+this._inputFocus = this.refs.autocomplete.element.contains(event.target);
 	}
 
 	/**
