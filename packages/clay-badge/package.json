@@ -1,0 +1,63 @@
+{
+	"name": "clay-badge",
+	"version": "3.0.0",
+	"license": "BSD-3-Clause",
+	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-badge",
+	"main": "lib/index.js",
+	"esnext:main": "src/index.js",
+	"jsnext:main": "src/index.js",
+	"files": [
+		"lib",
+		"src"
+	],
+	"keywords": [
+		"clay",
+		"react"
+	],
+	"devDependencies": {
+		"@types/jest": "^24.0.3",
+		"@types/react": "^16.8.2",
+		"@types/react-dom": "^16.8.0",
+		"@types/react-test-renderer": "^16.8.0",
+		"awesome-typescript-loader": "^5.2.1",
+		"css-loader": "^2.1.0",
+		"html-webpack-plugin": "^3.2.0",
+		"react": "^16.8.1",
+		"react-dom": "^16.8.1",
+		"react-test-renderer": "^16.6.1",
+		"source-map-loader": "^0.2.4",
+		"style-loader": "^0.23.1",
+		"ts-jest": "^23.10.5",
+		"typescript": "^3.3.3",
+		"webpack": "^4.29.0",
+		"webpack-cli": "^3.1.2",
+		"webpack-dev-server": "^3.1.10"
+	},
+	"peerDependencies": {
+		"react": "^16.8.1",
+		"react-dom": "^16.8.1"
+	},
+	"scripts": {
+		"compile": "tsc",
+		"prepublish": "npm run compile",
+		"start": "webpack-dev-server --mode development",
+		"test": "jest"
+	},
+	"dependencies": {
+		"@types/classnames": "^2.2.7",
+		"classnames": "^2.2.6"
+	},
+	"jest": {
+		"transform": {
+			"^.+\\.tsx?$": "ts-jest"
+		},
+		"testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+		"moduleFileExtensions": [
+			"ts",
+			"tsx",
+			"js",
+			"jsx",
+			"json"
+		]
+	}
+}
