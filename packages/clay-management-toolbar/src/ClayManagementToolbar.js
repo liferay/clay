@@ -85,21 +85,19 @@ class ClayManagementToolbar extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleCreationButtonClicked(event) {
-		const creationMenu = this.creationMenu;
-		const primaryItems = creationMenu.primaryItems;
-		const secondaryItems = creationMenu.secondaryItems;
-
-		let payload;
-
-		if (primaryItems) {
-			payload = primaryItems[0];
-		} else {
-			if (secondaryItems.items) {
-				payload = secondaryItems.items[0];
-			} else {
-				payload = secondaryItems[0];
-			}
-		}
+		const defaultCreationMenu = {
+			primaryItems: null,
+			secondaryItems: null,
+		};
+		const {primaryItems, secondaryItems} =
+			this.creationMenu || defaultCreationMenu;
+		const payload = primaryItems
+			? primaryItems[0]
+			: secondaryItems
+				? secondaryItems[0].items
+					? secondaryItems[0].items[0]
+					: secondaryItems[0]
+				: null;
 
 		return !this.emit({
 			data: payload,
