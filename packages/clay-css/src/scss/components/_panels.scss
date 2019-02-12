@@ -87,6 +87,12 @@
 	font-size: $panel-title-font-size;
 	font-weight: $panel-title-font-weight;
 	text-transform: $panel-title-text-transform;
+
+	small,
+	.small {
+		font-size: $panel-title-small-font-size;
+		margin-left: $panel-title-small-margin-left;
+	}
 }
 
 // Panel Group
