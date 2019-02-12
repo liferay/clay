@@ -2,8 +2,10 @@ import 'clay-autocomplete';
 import 'clay-button';
 import 'clay-label';
 import {Config} from 'metal-state';
+import {EventHandler} from 'metal-events';
 import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
+import dom from 'metal-dom';
 import Soy from 'metal-soy';
 
 import templates from './ClayMultiSelect.soy.js';
@@ -79,6 +81,19 @@ class ClayMultiSelect extends ClayComponent {
 		const data = this._getItemSchema(label, value);
 
 		return this._handleItemAdded(value, data, event, 'itemSelected');
+	}
+
+	/**
+	 * Handle the click on the document to control the focus of the element
+	 * @param {!Event} event
+	 * @protected
+	 */
+	_handleDocClick(event) {
+		if (this.refs.autocomplete.element.contains(event.target)) {
+			this._inputFocus = true;
+		} else {
+			this._inputFocus = false;
+		}
 	}
 
 	/**
@@ -351,14 +366,37 @@ class ClayMultiSelect extends ClayComponent {
 	/**
 	 * @inheritDoc
 	 */
-	attached() {
+	created() {
 		this._itemFocused = null;
+		this._eventHandler = new EventHandler();
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	attached() {
+		this._eventHandler.add(
+			dom.on(
+				document,
+				'click',
+				this._handleDocClick.bind(this),
+				true
+			)
+		);
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	detached() {
+		this._eventHandler.removeAllListeners();
 	}
 
 	/**
 	 * @inheritDoc
 	 */
 	disposed() {
+		this._eventHandler.removeAllListeners();
 		this._itemFocused = null;
 	}
 
