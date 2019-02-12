@@ -89,11 +89,9 @@ class ClayMultiSelect extends ClayComponent {
 	 * @protected
 	 */
 	_handleDocClick(event) {
-		if (this.refs.autocomplete.element.contains(event.target)) {
-			this._inputFocus = true;
-		} else {
-			this._inputFocus = false;
-this._inputFocus = this.refs.autocomplete.element.contains(event.target);
+		this._inputFocus = this.refs.autocomplete.element.contains(
+			event.target
+		);
 	}
 
 	/**
