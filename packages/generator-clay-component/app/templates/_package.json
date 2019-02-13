@@ -1,5 +1,5 @@
 {
-	"name": "<%= repoName %>",
+	"name": "@clay/<%= repoName %>",
 	"version": "3.0.0",
 	"description": "<%= componentName %> component",
 	"license": "BSD-3-Clause",
@@ -13,34 +13,35 @@
 	"jsnext:main": "src/<%= componentName %>.js",
 	"files": ["lib", "src"],
 	"scripts": {
-		"compile": "tsc",
-		"prepublish": "npm run compile",
-		"start": "webpack-dev-server --mode development",
-		"test": "jest"
+		"build": "babel src --root-mode upward --out-dir lib --extensions .ts,.tsx",
+		"build:types": "tsc --project ./tsconfig.declarations.json",
+		"prepublish": "npm run build && npm run build:types",
+		"start": "webpack-dev-server --mode development"
 	},
 	"keywords": ["clay", "react"],
 	"dependencies": {
-		"@types/react": "^16.8.2",
-		"@types/react-dom": "^16.8.0",
 		"classnames": "^2.2.6"
 	},
 	"devDependencies": {
+		"@babel/cli": "^7.0.0",
+		"@babel/core": "^7.0.1",
+		"@babel/preset-env": "^7.0.0",
+		"@babel/preset-react": "^7.0.0",
+		"@babel/preset-typescript": "^7.0.0",
 		"@types/classnames": "^2.2.7",
-		"@types/jest": "^24.0.3",
-		"@types/jest-diff": "^20.0.0",
+		"@types/react": "^16.8.0",
+		"@types/react-dom": "^16.8.0",
 		"@types/react-test-renderer": "^16.8.0",
 		"awesome-typescript-loader": "^5.2.1",
 		"clay-css": "^2.8.3",
 		"css-loader": "^2.1.0",
 		"html-webpack-plugin": "^3.2.0",
-		"jest": "^24.1.0",
 		"react": "^16.8.1",
 		"react-dom": "^16.8.1",
 		"react-test-renderer": "^16.6.1",
 		"source-map-loader": "^0.2.4",
 		"style-loader": "^0.23.1",
-		"ts-jest": "^23.10.5",
-		"typescript": "^3.3.3",
+		"typescript": "^3.0.3",
 		"webpack": "^4.29.0",
 		"webpack-cli": "^3.1.2",
 		"webpack-dev-server": "^3.1.10"
@@ -49,12 +50,5 @@
 		"react": "^16.8.1",
 		"react-dom": "^16.8.1"
 	},
-	"browserslist": ["extends browserslist-config-clay"],
-	"jest": {
-		"transform": {
-			"^.+\\.tsx?$": "ts-jest"
-		},
-		"testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
-		"moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json"]
-	}
+	"browserslist": ["extends browserslist-config-clay"]
 }

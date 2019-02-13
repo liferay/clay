@@ -4,23 +4,22 @@
 
 ## Setup
 
-1. Install NodeJS >= v0.12.0 and NPM >= v3.0.0, if you don't have it yet. You
-can find it [here](https://nodejs.org).
+1. Install `yarn`
 
 2. Install local dependencies:
 
-  ```
-  npm install
-  ```
+```
+yarn install
+```
 
 3. Build the code:
 
-  ```
-  npm run build
-  ```
+```
+yarn start
+```
 
-4. Open the demo at demos/index.html on your browser.
+4. Open the demo at `localhost:8080` on your browser.
 
 ## Contribute
 
-We'd love to get contributions from you! Please, check our [Contributing Guidelines](CONTRIBUTING.md) to see how you can help us improve.
+We'd love to get contributions from you! Please, check our [Contributing Guidelines](https://github.com/liferay/clay/blob/master/CONTRIBUTING.md) to see how you can help us improve.

@@ -72,7 +72,7 @@ module.exports = yeoman.generators.Base.extend({
 	},
 
 	writing: function() {
-		this.destinationRoot(this.repoName);
+		this.destinationRoot('./packages/' + this.repoName);
 		this.fs.copyTpl(
 			this.templatePath('demo/_App.tsx'),
 			this.destinationPath('demo/App.tsx'),
@@ -133,10 +133,6 @@ module.exports = yeoman.generators.Base.extend({
 			}
 		);
 		this.fs.copyTpl(
-			this.templatePath('_tsconfig.json'),
-			this.destinationPath('tsconfig.json')
-		);
-		this.fs.copyTpl(
 			this.templatePath('_README.md'),
 			this.destinationPath('README.md'),
 			{
@@ -154,6 +150,14 @@ module.exports = yeoman.generators.Base.extend({
 				kebabCaseName: this.kebabCaseName,
 				repoName: this.repoName,
 			}
+		);
+		this.fs.copyTpl(
+			this.templatePath('_tsconfig.declarations.json'),
+			this.destinationPath('tsconfig.declarations.json')
+		);
+		this.fs.copyTpl(
+			this.templatePath('_tsconfig.json'),
+			this.destinationPath('tsconfig.json')
 		);
 	},
 

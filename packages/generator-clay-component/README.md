@@ -1,6 +1,6 @@
 # Clay component Generator
 
-> A Yeoman Generator that scaffolds a `clay-component` package.
+> A Yeoman Generator that scaffolds a `clay` component package.
 
 ## Install
 
@@ -25,6 +25,8 @@ yo clay-component
 ```
 
 The generator will ask you a few questions about the package. Once you've answered all of them it will automatically generate a starting structure for you, as well as download all the local dependencies.
+
+_Note: This generator is intended to be used from the root level of the `clay` repository._
 
 ## License
 

@@ -30,6 +30,7 @@ describe('clay-component-generator:app', function() {
 			'webpack.config.js',
 			'package.json',
 			'tsconfig.json',
+			'tsconfig.declarations.json',
 			'README.md',
 		]);
 	});
