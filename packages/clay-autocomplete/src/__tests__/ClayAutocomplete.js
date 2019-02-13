@@ -185,6 +185,31 @@ describe('ClayAutocomplete', function() {
 		);
 	});
 
+	it('should render a ClayAutocomplete with validator and emit an event on query change', () => {
+		component = new ClayAutocomplete({
+			dataSource,
+			validator: /[a-zA-Z0-9_]/g,
+		});
+
+		const spy = jest.spyOn(component, 'emit');
+		const {input} = component.refs;
+
+		input.value = 'b!ar#$';
+		triggerEvent(input, 'input', {});
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				data: {
+					value: 'bar',
+					char: 'r',
+				},
+				name: 'inputChange',
+				originalEvent: expect.any(Object),
+			})
+		);
+	});
+
 	it('should render a ClayAutocomplete and emit an event on item selected', () => {
 		component = new ClayAutocomplete({
 			dataSource,
