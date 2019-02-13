@@ -42,6 +42,7 @@
 	{@param? requestTimeout: number}
 	{@param? selectedItems: list<?>}
 	{@param? showSelectButton: bool}
+	{@param? validator: any}
 
 	{let $attributes kind="attributes"}
 		class="from-group
@@ -87,6 +88,7 @@
 			{param selectedItems: $selectedItems /}
 			{param showSelectButton: $showSelectButton ?: true /}
 			{param spritemap: $spritemap /}
+			{param validator: $validator /}
 		{/call}
 	</div>
 {/template}
@@ -130,6 +132,7 @@
 	{@param? requestTimeout: number}
 	{@param? selectedItems: list<?>}
 	{@param? showSelectButton: bool}
+	{@param? validator: any}
 
 	<div class="input-group input-group-stacked-sm-down">
 		<div class="input-group-item">
@@ -175,6 +178,8 @@
 						{/call}
 					{/if}
 				{/param}
+
+				{param validator: $validator /}
 			{/call}
 
 			{let $isVisible: $filteredItems and length($filteredItems) > 0 ? true : false /}

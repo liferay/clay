@@ -252,6 +252,8 @@ class ClayMultiSelect extends ClayComponent {
 				this.inputValue = valueOut;
 			}
 		} else {
+			this.inputValue = valueOut;
+
 			return !this.emit({
 				data: {
 					values,
@@ -655,6 +657,16 @@ ClayMultiSelect.STATE = {
 	 * @type {!string}
 	 */
 	spritemap: Config.string().required(),
+
+	/**
+	 * Validate the values of the input, use a Regex to validate the
+	 * input characters (e.g /[a-zA-Z0-9_]/g).
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @type {?RegExp}
+	 */
+	validator: Config.instanceOf(RegExp),
 
 	/**
 	 * Sets the name of the field to map the value of the item.
