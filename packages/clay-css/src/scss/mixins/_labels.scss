@@ -74,7 +74,7 @@
 	}
 
 	.close {
-		@include clay-link($close);
+		@include clay-close($close);
 	}
 
 	.sticker {
@@ -177,6 +177,6 @@
 	}
 
 	.close {
-		@include clay-link($close);
+		@include clay-close($close);
 	}
 }
