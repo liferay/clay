@@ -124,6 +124,7 @@ $form-control-label-size: map-merge((
 	lexicon-icon-height: map-get($label-lg, lexicon-icon-height), // 16px
 	lexicon-icon-width: map-get($label-lg, lexicon-icon-width), // 16px
 	sticker-size: map-get($label-lg, sticker-size), // 16px
+	close: map-get($label-lg, close)
 ), $form-control-label-size);
 
 // Form Group
