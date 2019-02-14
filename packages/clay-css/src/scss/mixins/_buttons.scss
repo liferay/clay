@@ -1,15 +1,24 @@
 @mixin clay-button-size($map) {
 	$breakpoint-down: map-get($map, breakpoint-down);
 
+	$align-items: map-get($map, align-items);
 	$border-color: map-get($map, border-color);
 	$border-radius: map-get($map, border-radius);
 	$border-style: map-get($map, border-style);
 	$border-width: map-get($map, border-width);
+	$cursor: map-get($map, cursor);
 	$display: map-get($map, display);
+	$flex-grow: map-get($map, flex-grow);
+	$flex-shrink: map-get($map, flex-shrink);
 	$font-size: map-get($map, font-size);
 	$font-weight: map-get($map, font-weight);
 	$height: map-get($map, height);
+	$justify-content: map-get($map, justify-content);
 	$line-height: map-get($map, line-height);
+	$margin-bottom: map-get($map, margin-bottom);
+	$margin-left: map-get($map, margin-left);
+	$margin-right: map-get($map, margin-right);
+	$margin-top: map-get($map, margin-top);
 	$padding-bottom: map-get($map, padding-bottom);
 	$padding-left: map-get($map, padding-left);
 	$padding-right: map-get($map, padding-right);
@@ -20,6 +29,8 @@
 	$white-space: map-get($map, white-space);
 	$width: map-get($map, width);
 	$word-wrap: map-get($map, word-wrap);
+
+	$disabled-cursor: map-get($map, disabled-cursor);
 
 	$inline-item-font-size: map-get($map, inline-item-font-size);
 
@@ -35,15 +46,23 @@
 	$padding-top-mobile: map-get($map, padding-top-mobile);
 	$width-mobile: map-get($map, width-mobile);
 
+	align-items: $align-items;
 	border-color: $border-color;
 	border-radius: $border-radius;
 	border-style: $border-style;
 	border-width: $border-width;
 	display: $display;
+	flex-grow: $flex-grow;
+	flex-shrink: $flex-shrink;
 	font-size: $font-size;
 	font-weight: $font-weight;
 	height: $height;
+	justify-content: $justify-content;
 	line-height: $line-height;
+	margin-bottom: $margin-bottom;
+	margin-left: $margin-left;
+	margin-right: $margin-right;
+	margin-top: $margin-top;
 	padding-bottom: $padding-bottom;
 	padding-left: $padding-left;
 	padding-right: $padding-right;
@@ -53,6 +72,13 @@
 	vertical-align: $vertical-align;
 	white-space: $white-space;
 	width: $width;
+
+	@at-root {
+		a#{&},
+		button#{&} {
+			cursor: $cursor;
+		}
+	}
 
 	@if ($breakpoint-down) {
 		@include media-breakpoint-down($breakpoint-down) {
@@ -64,6 +90,11 @@
 			padding-top: $padding-top-mobile;
 			width: $width-mobile;
 		}
+	}
+
+	&:disabled,
+	.disabled {
+		cursor: $disabled-cursor;
 	}
 
 	.inline-item {
@@ -81,31 +112,43 @@
 	$bg: map-get($map, bg);
 	$border-color: map-get($map, border-color);
 	$color: map-get($map, color);
+	$opacity: map-get($map, opacity);
+	$text-decoration: map-get($map, text-decoration);
 	$hover-bg: map-get($map, hover-bg);
 	$hover-border-color: map-get($map, hover-border-color);
 	$hover-color: map-get($map, hover-color);
-	$focus-bg: setter(map-get($map, focus-bg), $hover-bg);
-	$focus-border-color: setter(map-get($map, focus-border-color), $hover-border-color);
+	$hover-opacity: map-get($map, hover-opacity);
+	$hover-text-decoration: map-get($map, hover-text-decoration);
+	$focus-bg: map-get($map, focus-bg);
+	$focus-border-color: map-get($map, focus-border-color);
 	$focus-box-shadow: map-get($map, focus-box-shadow);
 	$focus-color: map-get($map, focus-color);
+	$focus-opacity: map-get($map, focus-opacity);
+	$focus-outline: map-get($map, focus-outline);
 	$disabled-bg: map-get($map, disabled-bg);
 	$disabled-border-color: map-get($map, disabled-border-color);
 	$disabled-color: map-get($map, disabled-color);
+	$disabled-opacity: map-get($map, disabled-opacity);
 	$active-bg: map-get($map, active-bg);
 	$active-border-color: map-get($map, active-border-color);
 	$active-box-shadow: map-get($map, active-box-shadow);
 	$active-color: map-get($map, active-color);
+	$active-opacity: map-get($map, active-opacity);
 	$active-focus-box-shadow: setter(map-get($map, active-focus-box-shadow), $focus-box-shadow);
 	$loading-animation: setter(map-get($map, loading-animation), $clay-unset-placeholder);
 
 	background-color: $bg;
 	border-color: $border-color;
 	color: $color;
+	opacity: $opacity;
+	text-decoration: $text-decoration;
 
 	&:hover {
 		background-color: $hover-bg;
 		border-color: $hover-border-color;
 		color: $hover-color;
+		opacity: $hover-opacity;
+		text-decoration: $hover-text-decoration;
 	}
 
 	&:focus,
@@ -114,6 +157,8 @@
 		border-color: $focus-border-color;
 		box-shadow: $focus-box-shadow;
 		color: $focus-color;
+		opacity: $focus-opacity;
+		outline: $focus-outline;
 	}
 
 	&:disabled,
@@ -121,6 +166,7 @@
 		background-color: $disabled-bg;
 		border-color: $disabled-border-color;
 		color: $disabled-color;
+		opacity: $disabled-opacity;
 	}
 
 	&:not([disabled]):not(.disabled):active,
@@ -130,6 +176,7 @@
 		border-color: $active-border-color;
 		box-shadow: $active-box-shadow;
 		color: $active-color;
+		opacity: $active-opacity;
 
 		&:focus {
 			box-shadow: $active-focus-box-shadow;
