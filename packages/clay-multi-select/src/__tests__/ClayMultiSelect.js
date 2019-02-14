@@ -255,7 +255,7 @@ describe('ClayMultiSelect', function() {
 			expect(spy).toHaveBeenCalledWith(
 				expect.objectContaining({
 					data: expect.any(Object),
-					name: 'itemSelected',
+					name: 'itemAdded',
 					originalEvent: expect.any(Object),
 				})
 			);
