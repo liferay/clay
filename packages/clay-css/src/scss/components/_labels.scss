@@ -125,7 +125,7 @@ button.label {
 	}
 
 	.close {
-		@include clay-link($label-close);
+		@include clay-close($label-close);
 	}
 
 	.lexicon-icon {

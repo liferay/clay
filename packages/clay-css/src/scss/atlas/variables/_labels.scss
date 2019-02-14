@@ -31,6 +31,9 @@ $label-lg: map-merge((
 	lexicon-icon-height: 1em, // 12px
 	lexicon-icon-width: 1em, // 12px
 	sticker-size: 0.875rem, // 14px
+	close: (
+		font-size: 0.625rem, // 10px
+	),
 ), $label-lg);
 
 // Label Variants
