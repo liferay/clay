@@ -160,11 +160,4 @@ module.exports = yeoman.generators.Base.extend({
 			this.destinationPath('tsconfig.json')
 		);
 	},
-
-	install: function() {
-		const ps = this.spawnCommand('yarn', ['install', '--no-lockfile'], {
-			stdio: 'ignore',
-		});
-		ps.on('close', code => console.log(`yarn install exited with ${code}`));
-	},
 });

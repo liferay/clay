@@ -5,25 +5,18 @@
  */
 
 module.exports = {
+	transform: {
+		'.(ts|tsx)': 'ts-jest',
+	},
+	testMatch: [
+		process.cwd() + '/**/__tests__/**/*.[jt]s?(x)',
+		process.cwd() + '/**/?(*.)+(spec|test).[jt]s?(x)',
+	],
+	moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
+	setupFiles: [__dirname + '/scripts/setupTests.js'],
 	collectCoverage: true,
 	coverageReporters: ['json', 'lcov'],
-	globals: {
-		'ts-jest': {
-			extends: './babel.config.js',
-		},
-	},
-	moduleFileExtensions: ['ts', 'tsx', 'js'],
-	modulePathIgnorePatterns: ['lib'],
-	resolver: './scripts/jest-clay-lerna-resolver',
-	setupFiles: ['./scripts/setupTests.js'],
-	testMatch: ['**/__tests__/*.+(ts|tsx|js)'],
-	testPathIgnorePatterns: [
-		'browserslist-config-clay',
-		'fixtures',
-		'<rootDir>/examples',
-	],
-	transform: {
-		'^.+\\.(ts|tsx)$': 'ts-jest',
-	},
+	resolver: __dirname + '/scripts/jest-clay-lerna-resolver',
+	testPathIgnorePatterns: ['browserslist-config-clay', 'fixtures', 'lib'],
 	transformIgnorePatterns: ['<rootDir>.*(node_modules)(?!.*clay.*).*$'],
 };

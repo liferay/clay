@@ -1,5 +1,5 @@
 {
-	"name": "@clay/<%= repoName %>",
+	"name": "@clayui/<%= repoName %>",
 	"version": "3.0.0",
 	"description": "<%= componentName %> component",
 	"license": "BSD-3-Clause",
@@ -16,7 +16,8 @@
 		"build": "babel src --root-mode upward --out-dir lib --extensions .ts,.tsx",
 		"build:types": "tsc --project ./tsconfig.declarations.json",
 		"prepublish": "npm run build && npm run build:types",
-		"start": "webpack-dev-server --mode development"
+		"start": "webpack-dev-server --mode development",
+		"test": "jest --config ../../jest.config.js"
 	},
 	"keywords": ["clay", "react"],
 	"dependencies": {
@@ -29,22 +30,25 @@
 		"@babel/preset-react": "^7.0.0",
 		"@babel/preset-typescript": "^7.0.0",
 		"@types/classnames": "^2.2.7",
-		"@types/react": "^16.8.0",
+		"@types/jest": "^23.3.5",
 		"@types/react-dom": "^16.8.0",
 		"@types/react-test-renderer": "^16.8.0",
+		"@types/react": "^16.8.0",
 		"awesome-typescript-loader": "^5.2.1",
 		"clay-css": "^2.8.3",
 		"css-loader": "^2.1.0",
 		"html-webpack-plugin": "^3.2.0",
-		"react": "^16.8.1",
+		"jest": "^24.1.0",
 		"react-dom": "^16.8.1",
 		"react-test-renderer": "^16.6.1",
+		"react": "^16.8.1",
 		"source-map-loader": "^0.2.4",
 		"style-loader": "^0.23.1",
+		"ts-jest": "^23.10.4",
 		"typescript": "^3.0.3",
-		"webpack": "^4.29.0",
 		"webpack-cli": "^3.1.2",
-		"webpack-dev-server": "^3.1.10"
+		"webpack-dev-server": "^3.1.10",
+		"webpack": "^4.29.0"
 	},
 	"peerDependencies": {
 		"react": "^16.8.1",

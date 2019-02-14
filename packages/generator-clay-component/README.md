@@ -13,7 +13,7 @@ First, install [Yeoman](http://yeoman.io/) from [npm](https://www.npmjs.org/):
 Then, install this generator:
 
 ```sh
-[sudo] npm install -g generator-clay
+[sudo] npm install -g generator-clay-component
 ```
 
 ## Usage
