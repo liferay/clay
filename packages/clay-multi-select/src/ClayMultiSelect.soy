@@ -41,6 +41,7 @@
 	{@param? requestRetries: number}
 	{@param? requestTimeout: number}
 	{@param? selectedItems: list<?>}
+	{@param? showSelectButton: bool}
 
 	{let $attributes kind="attributes"}
 		class="from-group
@@ -84,6 +85,7 @@
 			{param requestRetries: $requestRetries /}
 			{param requestTimeout: $requestTimeout /}
 			{param selectedItems: $selectedItems /}
+			{param showSelectButton: $showSelectButton ?: true /}
 			{param spritemap: $spritemap /}
 		{/call}
 	</div>
@@ -127,6 +129,7 @@
 	{@param? requestRetries: number}
 	{@param? requestTimeout: number}
 	{@param? selectedItems: list<?>}
+	{@param? showSelectButton: bool}
 
 	<div class="input-group input-group-stacked-sm-down">
 		<div class="input-group-item">
@@ -184,19 +187,22 @@
 				</div>
 			{/if}
 		</div>
-		<div class="input-group-item input-group-item-shrink">
-			{call ClayButton.render}
-				{param events: ['click': $_handleButtonClicked] /}
-				{param label kind="text"}
-					{msg desc="Select items"}
-						select
-					{/msg}
-				{/param}
 
-				{param ref: 'button' /}
-				{param style: 'secondary' /}
-			{/call}
-		</div>
+		{if $showSelectButton}
+			<div class="input-group-item input-group-item-shrink">
+				{call ClayButton.render}
+					{param events: ['click': $_handleButtonClicked] /}
+					{param label kind="text"}
+						{msg desc="Select items"}
+							select
+						{/msg}
+					{/param}
+
+					{param ref: 'button' /}
+					{param style: 'secondary' /}
+				{/call}
+			</div>
+		{/if}
 	</div>
 {/template}
 
