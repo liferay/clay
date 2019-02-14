@@ -112,6 +112,17 @@ describe('ClayMultiSelect', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a ClayMultiSelect with select button hidden', () => {
+		component = new ClayMultiSelect({
+			dataSource,
+			helpText,
+			showSelectButton: false,
+			spritemap,
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
 	it('should render a ClayMultiSelect and add the class focus when focus on input', () => {
 		component = new ClayMultiSelect({
 			dataSource,
