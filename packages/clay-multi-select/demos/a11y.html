@@ -33,6 +33,13 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h2>With select button hidden</h2>
+			<div id="select-button-hidden-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
 			<h2>With disabled autocomplete</h2>
 			<div id="disabled-autocomplete-block"></div>
 		</div>
@@ -88,6 +95,16 @@
 			selectedItems,
 			spritemap,
 		}, '#default-block');
+
+		// With select button hidden
+		new metal.ClayMultiSelect({
+			dataSource,
+			helpText: 'You can use a comma to enter tags',
+			label: 'Tags',
+			selectedItems,
+			showSelectButton: false,
+			spritemap,
+		}, '#select-button-hidden-block');
 
 		// With disabled autocomplete
 		new metal.ClayMultiSelect({

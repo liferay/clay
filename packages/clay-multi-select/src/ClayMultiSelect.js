@@ -640,6 +640,15 @@ ClayMultiSelect.STATE = {
 	selectedItems: Config.array(Config.object()).value([]),
 
 	/**
+	 * Flag to indicate if select button should be shown or not.
+	 * @default true
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @type {?bool}
+	 */
+	showSelectButton: Config.bool().value(true),
+
+	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 * @default undefined
 	 * @instance
