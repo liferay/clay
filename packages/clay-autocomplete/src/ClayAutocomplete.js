@@ -223,8 +223,6 @@ class ClayAutocomplete extends ClayComponent {
 		// the above components can update the state of the input value.
 		this.inputValue = value;
 
-		this.inputValue = value;
-
 		return !this.emit({
 			data: {
 				value: newValue,
