@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /**
-* Lexicon 1.0.29
+* Lexicon 1.0.30
 *
-* Copyright 2018, Liferay, Inc.
+* Copyright 2019, Liferay, Inc.
 * All rights reserved.
 * MIT license
 */
@@ -8386,6 +8386,7 @@ fieldset[disabled] .btn {
   margin-top: -2px;
 }
 
+.btn-action .lexicon-icon-container,
 .btn-action .lexicon-icon {
   display: block;
   height: 100%;
@@ -8806,11 +8807,19 @@ fieldset[disabled] .btn {
   clear: both;
 }
 
+.lexicon-icon-container {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.lexicon-icon-container .lexicon-icon {
+  display: block;
+}
+
 .lexicon-icon {
   display: inline-block;
   fill: currentColor;
   height: 16px;
-  pointer-events: none;
   transform: translateZ(0);
   vertical-align: middle;
   width: 16px;
@@ -8845,9 +8854,11 @@ a.collapse-icon {
 
 .collapse-icon-closed [class^="icon-"],
 .collapse-icon-closed [class*=" icon-"],
+.collapse-icon-closed .lexicon-icon-container,
 .collapse-icon-closed .lexicon-icon,
 .collapse-icon-open [class^="icon-"],
 .collapse-icon-open [class*=" icon-"],
+.collapse-icon-open .lexicon-icon-container,
 .collapse-icon-open .lexicon-icon {
   display: block;
 }
@@ -8981,6 +8992,10 @@ a .icon-monospaced,
   line-height: 32px;
   width: 32px;
   padding: lx-icon-padding(32px, 16px);
+}
+
+.icon-monospaced .lexicon-icon-container {
+  display: block;
 }
 
 .help-icon {
@@ -11679,6 +11694,10 @@ button.list-group-heading {
   border-width: 0;
   float: left;
   line-height: 32px;
+}
+
+.pagination-items-per-page .lexicon-icon-container .lexicon-icon {
+  margin-left: 0;
 }
 
 .pagination-items-per-page [class*="icon-"] {
