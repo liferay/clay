@@ -20,7 +20,7 @@
 		"sort-imports-es6-autofix"
 	],
 	"rules": {
-		"comma-dangle": ["always", "never"],
+		"comma-dangle": [2, "always"],
 		"default-case": 2,
 		"eol-last": [2, "never"],
 		"max-len": 0,
