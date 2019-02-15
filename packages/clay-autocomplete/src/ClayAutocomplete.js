@@ -349,6 +349,7 @@ ClayAutocomplete.STATE = {
 	_isResults: Config.bool()
 		.value(false)
 		.internal(),
+<<<<<<< HEAD
 
 	/**
 	 * Flag to indicate the characters allowed in the
@@ -359,6 +360,8 @@ ClayAutocomplete.STATE = {
 	 * @type {?RegExp}
 	 */
 	allowedCharacters: Config.instanceOf(RegExp),
+=======
+>>>>>>> SF
 
 	/**
 	 * Variation name to render different deltemplates.
