@@ -419,6 +419,16 @@ ClayMultiSelect.STATE = {
 		.internal(),
 
 	/**
+	 * Flag to indicate the characters allowed in the
+	 * input element (e.g /[a-zA-Z0-9_]/g).
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @type {?RegExp}
+	 */
+	allowedCharacters: Config.instanceOf(RegExp),
+
+	/**
 	 * Variation name to render different deltemplates.
 	 * @default undefined
 	 * @instance
@@ -657,16 +667,6 @@ ClayMultiSelect.STATE = {
 	 * @type {!string}
 	 */
 	spritemap: Config.string().required(),
-
-	/**
-	 * Validate the values of the input, use a Regex to validate the
-	 * input characters (e.g /[a-zA-Z0-9_]/g).
-	 * @default undefined
-	 * @instance
-	 * @memberof ClayMultiSelect
-	 * @type {?RegExp}
-	 */
-	validator: Config.instanceOf(RegExp),
 
 	/**
 	 * Sets the name of the field to map the value of the item.

@@ -150,7 +150,9 @@ class ClayAutocomplete extends ClayComponent {
 	 */
 	_handleOnInput(event) {
 		const {value} = event.target;
-		const newValue = this.validator ? this._runValidation(value) : value;
+		const newValue = this.allowedCharacters
+			? this._getCharactersAllowed(value)
+			: value;
 		const char = newValue.substr(-1);
 
 		// Updates the value of the input with the value
@@ -241,14 +243,14 @@ class ClayAutocomplete extends ClayComponent {
 	}
 
 	/**
-	 * Performs value validation and returns value only
-	 * with accepted characters.
+	 * Gets the accepted characters of the input
+	 * element values
 	 * @param {!string} value
 	 * @protected
 	 * @return {string}
 	 */
-	_runValidation(value) {
-		const regexp = new RegExp(this.validator);
+	_getCharactersAllowed(value) {
+		const regexp = new RegExp(this.allowedCharacters);
 		const match = value.match(regexp);
 
 		return Array.isArray(match) ? match.join('') : '';
@@ -261,6 +263,16 @@ class ClayAutocomplete extends ClayComponent {
  * @type {!Object}
  */
 ClayAutocomplete.STATE = {
+	/**
+	 * Flag to indicate the characters allowed in the
+	 * input element (e.g /[a-zA-Z0-9_]/g).
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayAutocomplete
+	 * @type {?RegExp}
+	 */
+	allowedCharacters: Config.instanceOf(RegExp),
+
 	/**
 	 * Variation name to render different deltemplates.
 	 * @default undefined
@@ -485,16 +497,6 @@ ClayAutocomplete.STATE = {
 	 * @type {?html}
 	 */
 	unstable_content: Config.any(),
-
-	/**
-	 * Validate the values of the input, use a Regex to validate the
-	 * input characters (e.g /[a-zA-Z0-9_]/g).
-	 * @default undefined
-	 * @instance
-	 * @memberof ClayAutocomplete
-	 * @type {?RegExp}
-	 */
-	validator: Config.instanceOf(RegExp),
 };
 
 defineWebComponent('clay-autocomplete', ClayAutocomplete);

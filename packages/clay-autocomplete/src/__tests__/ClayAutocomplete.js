@@ -185,10 +185,10 @@ describe('ClayAutocomplete', function() {
 		);
 	});
 
-	it('should render a ClayAutocomplete with validator and emit an event on query change', () => {
+	it('should render a ClayAutocomplete with allowed characters and emit an event on query change', () => {
 		component = new ClayAutocomplete({
+			allowedCharacters: /[a-zA-Z0-9_]/g,
 			dataSource,
-			validator: /[a-zA-Z0-9_]/g,
 		});
 
 		const spy = jest.spyOn(component, 'emit');
