@@ -3,12 +3,13 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+
 import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
 import <%= componentName %> from '../<%= componentName %>';
 
-describe('<%= componentName %>', function() {
-	it('should render', () => {
+describe('<%= componentName %>', () => {
+	it('renders', () => {
 		const testRenderer = TestRenderer.create(
 			<<%= componentName %> />
 		);

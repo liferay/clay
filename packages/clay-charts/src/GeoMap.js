@@ -3,16 +3,17 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import {isServerSide} from 'metal';
+
 import * as d3 from 'd3';
 import React from 'react';
+import {isServerSide} from 'metal';
 
 import resolveData from './resolve-data';
 
 const DEFAULT_COLOR = {
 	range: {
-		min: '#b1d4ff',
 		max: '#0065e4',
+		min: '#b1d4ff',
 	},
 	selected: '#4b9bff',
 	value: 'pop_est',

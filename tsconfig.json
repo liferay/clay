@@ -10,7 +10,7 @@
 		"removeComments": true,
 		"baseUrl": "./",
 		"paths": {
-			"@clay/*": ["packages/*/src"],
+			"@clayui/*": ["packages/*/src"],
 			"*": ["node_modules", "packages"]
 		}
 	},

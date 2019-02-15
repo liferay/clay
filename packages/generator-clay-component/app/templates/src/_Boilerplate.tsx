@@ -3,11 +3,13 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+
 import * as React from 'react';
-import getCN from 'classnames';
+import classNames from 'classnames';
 
 interface Props {
 	className?: string;
+	[propName: string]: any;
 }
 
 const <%= componentName %>: React.FunctionComponent<Props> = ({
@@ -15,7 +17,7 @@ const <%= componentName %>: React.FunctionComponent<Props> = ({
 	...otherProps
 }) => {
 	return (
-		<div {...otherProps} className={getCN(className)}>{'<%= componentName %>'}</div>
+		<div {...otherProps} className={classNames(className)}>{'<%= componentName %>'}</div>
 	);
 };
 

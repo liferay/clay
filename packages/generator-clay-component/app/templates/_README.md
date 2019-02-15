@@ -9,7 +9,7 @@
 2. Install local dependencies:
 
 ```
-yarn install
+yarn
 ```
 
 3. Build the code:

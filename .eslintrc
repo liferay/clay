@@ -12,18 +12,74 @@
 		}
 	},
 	"extends": "liferay",
-	"plugins": ["notice", "no-for-of-loops", "react"],
+	"plugins": [
+		"notice",
+		"no-for-of-loops",
+		"react",
+		"sort-destructure-keys",
+		"sort-imports-es6-autofix"
+	],
 	"rules": {
+		"comma-dangle": ["always", "never"],
+		"default-case": 2,
+		"eol-last": [2, "never"],
+		"max-len": 0,
+		"no-console": 2,
 		"no-for-of-loops/no-for-of-loops": 2,
-		"no-unused-vars": ["error", {"ignoreRestSiblings": true}],
-		"react/jsx-uses-react": "error",
-		"react/jsx-uses-vars": "error",
 		"no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+		"no-return-assign": [2, "always"],
+		"no-undef": 2,
+		"no-underscore-dangle": [
+			2,
+			{
+				"allowAfterThis": true,
+				"enforceInMethodNames": true
+			}
+		],
+		"no-unused-vars": [
+			2,
+			{
+				"args": "after-used",
+				"ignoreRestSiblings": false,
+				"vars": "all"
+			}
+		],
 		"notice/notice": [
 			"error",
 			{
-				"templateFile": "copyright.js"
+				"template": "/**\n * © 2018 Liferay, Inc. <https://liferay.com>\n *\n * SPDX-License-Identifier: BSD-3-Clause\n */\n"
 			}
-		]
+		],
+		"object-shorthand": 2,
+		"prefer-const": 2,
+		"prefer-template": 2,
+		"quote-props": [2, "as-needed"],
+		"quotes": [2, "single", "avoid-escape"],
+		"react/jsx-boolean-value": 2,
+		"react/jsx-handler-names": 2,
+		"react/jsx-key": 2,
+		"react/jsx-no-bind": 2,
+		"react/jsx-no-literals": 2,
+		"react/jsx-sort-props": 2,
+		"react/jsx-uses-react": "error",
+		"react/jsx-uses-vars": 2,
+		"require-jsdoc": 0,
+		"sort-destructure-keys/sort-destructure-keys": 2,
+		"sort-imports-es6-autofix/sort-imports-es6": [
+			2,
+			{
+				"ignoreCase": true,
+				"ignoreMemberSort": false,
+				"memberSyntaxSortOrder": ["none", "all", "single", "multiple"]
+			}
+		],
+		"sort-keys": [
+			2,
+			"asc",
+			{
+				"caseSensitive": false
+			}
+		],
+		"sort-vars": 2
 	}
 }

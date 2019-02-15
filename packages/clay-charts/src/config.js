@@ -3,6 +3,7 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+
 export const DEFAULT_COLORS = [
 	'#4B9BFF',
 	'#FFB46E',

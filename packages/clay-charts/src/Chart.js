@@ -3,10 +3,11 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import React from 'react';
+
 import BillboardChart from 'react-billboardjs';
 import GeoMap from './GeoMap';
 import Predictive from './Predictive';
+import React from 'react';
 
 import {
 	DEFAULT_COLORS,
@@ -39,9 +40,9 @@ export default function(props) {
 	return (
 		<ChartComponent
 			{...otherProps}
+			color={Object.assign({pattern: DEFAULT_COLORS}, color)}
 			data={data}
 			grid={Object.assign(DEFAULT_GRID_OBJECT, grid)}
-			color={Object.assign({pattern: DEFAULT_COLORS}, color)}
 			line={Object.assign({classes: DEFAULT_LINE_CLASSES}, line)}
 			point={Object.assign(
 				{

@@ -3,9 +3,10 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+
+import ClayChart, {BarChart, BubbleChart} from '../src/index';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ClayChart, {BarChart, BubbleChart} from '../src/index';
 
 import '../src/scss/main.scss';
 
@@ -67,10 +68,6 @@ function App() {
 			<h3>Geo Map</h3>
 			<div style={{height: 380}}>
 				<ClayChart
-					data={{
-						data: './demo/public/world-low-res.geo.json',
-						type: 'geo-map',
-					}}
 					color={{
 						range: {
 							min: '#b1d4ff',
@@ -78,6 +75,10 @@ function App() {
 						},
 						selected: '#4b9bff',
 						value: 'gdp_md_est',
+					}}
+					data={{
+						data: './demo/public/world-low-res.geo.json',
+						type: 'geo-map',
 					}}
 				/>
 			</div>
@@ -175,6 +176,11 @@ function App() {
 			/>
 			<h3>Predictive Forecast</h3>
 			<ClayChart
+				axis={{
+					x: {
+						type: 'timeseries',
+					},
+				}}
 				data={{
 					x: 'x',
 					columns: [
@@ -231,11 +237,6 @@ function App() {
 					},
 				}}
 				predictionDate="2018-06-01"
-				axis={{
-					x: {
-						type: 'timeseries',
-					},
-				}}
 			/>
 			<h3>Regions</h3>
 			<ClayChart

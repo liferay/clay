@@ -3,40 +3,37 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+
 'use strict';
 
-let _ = require('lodash');
-let chalk = require('chalk');
-let yeoman = require('yeoman-generator');
-let yosay = require('yosay');
+const _ = require('lodash');
+const chalk = require('chalk');
+const yeoman = require('yeoman-generator');
+const yosay = require('yosay');
 
 module.exports = yeoman.generators.Base.extend({
-	initializing: function() {
+	initializing() {
 		this.log(
-			yosay(
-				'Welcome, let\'s generate a ' +
-					chalk.blue('Clay') +
-					' component!'
-			)
+			yosay(`Welcome, let's generate a ${chalk.blue('Clay')} component!`)
 		);
 	},
 
-	prompting: function() {
-		let done = this.async();
+	prompting() {
+		const done = this.async();
 
-		let prompts = [
+		const prompts = [
 			{
 				type: 'input',
 				name: 'componentName',
 				message: 'How do you want to name your component?',
 				default: 'ClayComponent',
-				validate: function(input) {
+				validate: input => {
 					if (!input) {
 						return 'You must provide a component name.';
 					}
 					if (!/^[^_\-\s\d][^_\-\s]*$/.test(input)) {
 						return (
-							'Invalid component name. Component names can\'t contain whitespace or ' +
+							"Invalid component name. Component names can't contain whitespace or " +
 							'any of the following characters: "-_". Also, class names can\'t ' +
 							'start with digits.'
 						);
@@ -56,7 +53,7 @@ module.exports = yeoman.generators.Base.extend({
 		this.prompt(
 			prompts,
 			function(props) {
-				let componentName = props.componentName;
+				const {componentName} = props;
 
 				this.camelCaseName = _.camelCase(componentName);
 				this.componentName = componentName;
@@ -71,8 +68,8 @@ module.exports = yeoman.generators.Base.extend({
 		);
 	},
 
-	writing: function() {
-		this.destinationRoot('./packages/' + this.repoName);
+	writing() {
+		this.destinationRoot(`packages/${this.repoName}`);
 		this.fs.copyTpl(
 			this.templatePath('demo/_App.tsx'),
 			this.destinationPath('demo/App.tsx'),
@@ -90,7 +87,7 @@ module.exports = yeoman.generators.Base.extend({
 		);
 		this.fs.copyTpl(
 			this.templatePath('src/_Boilerplate.tsx'),
-			this.destinationPath('src/' + this.componentName + '.tsx'),
+			this.destinationPath(`src/${this.componentName}.tsx`),
 			{
 				buildFormat: this.buildFormat,
 				componentName: this.componentName,
@@ -102,9 +99,7 @@ module.exports = yeoman.generators.Base.extend({
 
 		this.fs.copyTpl(
 			this.templatePath('src/tests/_Boilerplate.tsx'),
-			this.destinationPath(
-				'src/__tests__/' + this.componentName + '.tsx'
-			),
+			this.destinationPath(`src/__tests__/${this.componentName}.tsx`),
 			{
 				componentName: this.componentName,
 				kebabCaseName: this.kebabCaseName,
@@ -113,9 +108,7 @@ module.exports = yeoman.generators.Base.extend({
 		this.fs.copyTpl(
 			this.templatePath('src/tests/__snapshots__/_Boilerplate.tsx.snap'),
 			this.destinationPath(
-				'src/__tests__/__snapshots__/' +
-					this.componentName +
-					'.tsx.snap'
+				`src/__tests__/__snapshots__/${this.componentName}.tsx.snap`
 			),
 			{
 				componentName: this.componentName,
@@ -159,5 +152,13 @@ module.exports = yeoman.generators.Base.extend({
 			this.templatePath('_tsconfig.json'),
 			this.destinationPath('tsconfig.json')
 		);
+	},
+
+	install() {
+		this.log(`${chalk.green('Installing dependencies...')}`);
+
+		const ps = this.spawnCommand('yarn');
+
+		ps.on('close', code => console.log(`yarn install exited with ${code}`));
 	},
 });

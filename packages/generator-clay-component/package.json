@@ -4,7 +4,7 @@
 	"description": "Yeoman generator for Clay components",
 	"license": "BSD-3-Clause",
 	"main": "app/index.js",
-	"repository": "https://github.com/liferay/clay/tree/master/packages/generator-clay",
+	"repository": "https://github.com/liferay/clay/tree/master/packages/generator-clay-component",
 	"scripts": {
 		"test": "jest"
 	},
@@ -16,8 +16,5 @@
 		"lodash": "^3.9.3",
 		"yeoman-generator": "^0.19.0",
 		"yosay": "^1.0.2"
-	},
-	"devDependencies": {
-		"jest": "^24.1.0"
 	}
 }

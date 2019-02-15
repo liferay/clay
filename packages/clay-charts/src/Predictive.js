@@ -3,9 +3,10 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+
+import BillboardChart from 'react-billboardjs';
 import React from 'react';
 import {isDefAndNotNull, isNumber} from 'metal';
-import BillboardChart from 'react-billboardjs';
 
 /**
  * Predictive Chart component.
@@ -28,7 +29,7 @@ export default class PredictiveChart extends React.Component {
 							? {
 								low: element,
 								mid: element,
-								high: element,
+								high: element
 							  }
 							: element;
 					});
@@ -38,19 +39,19 @@ export default class PredictiveChart extends React.Component {
 			});
 		}
 
-		let predictionDate = props.predictionDate;
-		let regions = [];
+		const predictionDate = props.predictionDate;
+		const regions = [];
 
 		if (isDefAndNotNull(predictionDate)) {
 			regions.push({
 				axis: 'x',
-				start: predictionDate,
+				start: predictionDate
 			});
 		}
 
 		this.state = {
 			columns,
-			regions,
+			regions
 		};
 	}
 
@@ -63,7 +64,7 @@ export default class PredictiveChart extends React.Component {
 			<BillboardChart
 				data={{
 					...data,
-					columns,
+					columns
 				}}
 				regions={regions}
 				{...otherProps}

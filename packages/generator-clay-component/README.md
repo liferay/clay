@@ -30,4 +30,4 @@ _Note: This generator is intended to be used from the root level of the `clay` r
 
 ## License
 
-[BSD License](http://opensource.org/licenses/BSD-3-Clause) © Liferay, Inc.
+[BSD-3-Clause License](http://opensource.org/licenses/BSD-3-Clause) © Liferay, Inc.

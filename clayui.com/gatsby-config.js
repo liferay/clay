@@ -1,3 +1,8 @@
+/**
+ * © 2018 Liferay, Inc. <https://liferay.com>
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
 const clay = require('clay-css');
 const path = require('path');
 
@@ -9,14 +14,9 @@ module.exports = {
 			resolve: 'gatsby-plugin-sass',
 			options: {
 				precision: 8,
-				includePaths: clay
-					.includePaths
-					.concat(
-						path.join(
-							clay.includePaths[0],
-							'node_modules'
-						)
-					),
+				includePaths: clay.includePaths.concat(
+					path.join(clay.includePaths[0], 'node_modules')
+				),
 			},
 		},
 		{
@@ -32,7 +32,10 @@ module.exports = {
 				extensions: ['.mdx'],
 				gatsbyRemarkPlugins: [
 					{
-						resolve: path.resolve(__dirname, './plugins/gatsby-remark-foreach-icons'),
+						resolve: path.resolve(
+							__dirname,
+							'./plugins/gatsby-remark-foreach-icons'
+						),
 					},
 					{
 						resolve: 'gatsby-remark-prismjs',
@@ -41,10 +44,16 @@ module.exports = {
 						},
 					},
 					{
-						resolve: path.resolve(__dirname, './plugins/gatsby-remark-use-clipboard'),
+						resolve: path.resolve(
+							__dirname,
+							'./plugins/gatsby-remark-use-clipboard'
+						),
 					},
 					{
-						resolve: path.resolve(__dirname, './plugins/gatsby-remark-api-table'),
+						resolve: path.resolve(
+							__dirname,
+							'./plugins/gatsby-remark-api-table'
+						),
 					},
 				],
 			},

@@ -3,9 +3,10 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import React from 'react';
+
 import * as ReactBillboard from 'react-billboardjs';
 import ClayChart from './Chart';
+import React from 'react';
 
 const setType = type => ({data, ...otherProps}) => (
 	<ClayChart {...otherProps} data={{...data, type}} />

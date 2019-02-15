@@ -3,6 +3,7 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+
 module.exports = [
 	'last 2 Chrome versions',
 	'last 1 Edge versions',
