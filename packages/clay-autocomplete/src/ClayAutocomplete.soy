@@ -6,11 +6,15 @@
 {template .render}
 	{@param dataSource: string|[]|list<?>|any}
 	{@param? _handleDataChange: any}
+	{@param? _handleDataLoading: any}
 	{@param? _handleDropdownItemClick: any}
 	{@param? _handleOnBlur: any}
 	{@param? _handleOnFocus: any}
 	{@param? _handleOnInput: any}
 	{@param? _handleOnKeydown: any}
+	{@param? _isFetching: bool}
+	{@param? _isLoading: bool}
+	{@param? _isResults: bool}
 	{@param? contentRenderer: string}
 	{@param? elementClasses: string}
 	{@param? filteredItems: list<?>}
@@ -36,12 +40,46 @@
 	{@param? requestTimeout: number}
 	{@param? unstable_content: html}
 
+	{let $content kind="html"}
+		{$unstable_content}
+
+		{call .input}
+			{param _handleOnBlur: $_handleOnBlur /}
+			{param _handleOnFocus: $_handleOnFocus /}
+			{param _handleOnInput: $_handleOnInput /}
+			{param _handleOnKeydown: $_handleOnKeydown /}
+			{param _isFetching: $_isFetching /}
+			{param inputElementClasses: $inputElementClasses /}
+			{param inputName: $inputName /}
+			{param inputValue: $inputValue /}
+			{param placeholder: $placeholder /}
+		{/call}
+
+		{call .dropdown}
+			{param _handleDataChange: $_handleDataChange /}
+			{param _handleDataLoading: $_handleDataLoading /}
+			{param _handleDropdownItemClick: $_handleDropdownItemClick /}
+			{param _isLoading: $_isLoading /}
+			{param _isResults: $_isResults /}
+			{param contentRenderer: $contentRenderer /}
+			{param dataSource: $dataSource /}
+			{param filteredItems: $filteredItems /}
+			{param initialData: $initialData /}
+			{param inputValue: $inputValue /}
+			{param pollingInterval: $pollingInterval /}
+			{param requestInputMode: $requestInputMode /}
+			{param requestOptions: $requestOptions /}
+			{param requestRetries: $requestRetries /}
+			{param requestTimeout: $requestTimeout /}
+		{/call}
+	{/let}
+
 	{let $attributes kind="attributes"}
 		class="dropdown-full
 			{if $elementClasses}
 				{sp}{$elementClasses}
 			{else}
-				{sp}form-group
+				{sp}input-group
 			{/if}
 		"
 
@@ -53,32 +91,13 @@
 	{/let}
 
 	<div {$attributes}>
-		{$unstable_content}
-
-		{call .input}
-			{param _handleOnBlur: $_handleOnBlur /}
-			{param _handleOnFocus: $_handleOnFocus /}
-			{param _handleOnInput: $_handleOnInput /}
-			{param _handleOnKeydown: $_handleOnKeydown /}
-			{param inputElementClasses: $inputElementClasses /}
-			{param inputName: $inputName /}
-			{param inputValue: $inputValue /}
-			{param placeholder: $placeholder /}
-		{/call}
-
-		{call .dropdown}
-			{param _handleDataChange: $_handleDataChange /}
-			{param _handleDropdownItemClick: $_handleDropdownItemClick /}
-			{param contentRenderer: $contentRenderer /}
-			{param dataSource: $dataSource /}
-			{param filteredItems: $filteredItems /}
-			{param initialData: $initialData /}
-			{param pollingInterval: $pollingInterval /}
-			{param requestInputMode: $requestInputMode /}
-			{param requestOptions: $requestOptions /}
-			{param requestRetries: $requestRetries /}
-			{param requestTimeout: $requestTimeout /}
-		{/call}
+		{if $elementClasses}
+			{$content}
+		{else}
+			<div class="input-group-item">
+				{$content}
+			</div>
+		{/if}
 	</div>
 {/template}
 
@@ -90,6 +109,7 @@
 	{@param? _handleOnFocus: any}
 	{@param? _handleOnInput: any}
 	{@param? _handleOnKeydown: any}
+	{@param? _isFetching: bool}
 	{@param? inputElementClasses: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
@@ -101,6 +121,10 @@
 				{$inputElementClasses}
 			{else}
 				form-control
+			{/if}
+
+			{if $_isFetching}
+				{sp}input-group-inset input-group-inset-after
 			{/if}
 		"
 
@@ -128,6 +152,14 @@
 	{/let}
 
 	<input {$attributes} />
+
+	{if $_isFetching}
+		<div class="input-group-inset-item input-group-inset-item-after">
+			{call ClayLoadingIndicator.render}
+				{param small: true /}
+			{/call}
+		</div>
+	{/if}
 {/template}
 
 /**
@@ -136,10 +168,14 @@
 {template .dropdown}
 	{@param dataSource: string|[]|list<?>|any}
 	{@param? _handleDataChange: any}
+	{@param? _handleDataLoading: any}
 	{@param? _handleDropdownItemClick: any}
+	{@param? _isLoading: bool}
+	{@param? _isResults: bool}
 	{@param? contentRenderer: string}
 	{@param? filteredItems: list<?>}
 	{@param? initialData: []|list<?>}
+	{@param? inputValue: string}
 	{@param? pollingInterval: number}
 	{@param? requestInputMode: string}
 	{@param? requestOptions: [
@@ -155,7 +191,7 @@
 	{@param? requestRetries: number}
 	{@param? requestTimeout: number}
 
-	{let $isVisible: $filteredItems and length($filteredItems) > 0 ? true : false /}
+	{let $isVisible: $filteredItems and length($filteredItems) > 0 ? true : (isNonnull($inputValue) and not $inputValue == '' and $_isResults) ? true : false /}
 
 	{let $classes kind="text"}
 		dropdown-menu
@@ -165,6 +201,7 @@
 	{/let}
 
 	{call ClayDataProvider.render}
+		{param _isLoading: $_isLoading /}
 		{param content kind="html"}
 			<ul class="{$classes}" ref="dropdown">
 				{if $filteredItems}
@@ -174,17 +211,37 @@
 							{param data: $item /}
 							{param index: index($item) /}
 						{/delcall}
+					{ifempty}
+						<li class="dropdown-item">
+							{msg desc="It says no results were found"}
+								no-results-found
+							{/msg}
+						</li>
 					{/foreach}
 				{/if}
 			</ul>
 		{/param}
 
 		{param dataSource: $dataSource /}
-		{param events: ['dataChange': $_handleDataChange] /}
+		{param events: [
+			'dataChange': $_handleDataChange,
+			'dataLoading': $_handleDataLoading
+		] /}
 		{param initialData: $initialData /}
+		{param inputMode: $requestInputMode /}
+		{param loadingContent kind="html"}
+			<ul class="dropdown-menu show" ref="dropdown">
+				<li class="dropdown-item">
+					{msg desc="Loading data"}
+						loading
+					{/msg}
+					...
+				</li>
+			</ul>
+		{/param}
+
 		{param pollingInterval: $pollingInterval /}
 		{param ref: 'dataProvider' /}
-		{param requestInputMode: $requestInputMode /}
 		{param requestOptions: $requestOptions /}
 		{param requestRetries: $requestRetries /}
 		{param requestTimeout: $requestTimeout /}

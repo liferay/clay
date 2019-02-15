@@ -20,7 +20,7 @@
     "build": "npm run soy && webpack",
     "compile": "babel -d lib/ src/ -s --ignore src/__tests__",
     "prepublish": "npm run soy && npm run compile",
-    "soy": "metalsoy --soyDeps '../../node_modules/clay-data-provider/src/**/*.soy'"
+    "soy": "metalsoy --soyDeps '../../node_modules/clay-+(data-provider|loading-indicator)/src/**/*.soy'"
   },
   "keywords": [
     "clay",
@@ -28,6 +28,7 @@
   ],
   "dependencies": {
     "clay-data-provider": "^2.9.0",
+    "clay-loading-indicator": "^2.9.0",
     "metal": "^2.16.0",
     "metal-component": "^2.16.0",
     "metal-soy": "^2.16.0",

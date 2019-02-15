@@ -1,4 +1,5 @@
 import 'clay-data-provider';
+import 'clay-loading-indicator';
 import {Config} from 'metal-state';
 import {isFunction} from 'metal';
 import ClayComponent from 'clay-component';
@@ -17,6 +18,9 @@ class ClayAutocomplete extends ClayComponent {
 	 */
 	attached() {
 		this._dropdownItemFocused = null;
+		this._isResolvedData = false;
+		this._loadingTimeout = 0;
+		this._requestsCount = 0;
 
 		this.addListener('dataChange', this._defaultDataChange, true);
 		this.addListener('inputChange', this._defaultInputChange, true);
@@ -51,6 +55,8 @@ class ClayAutocomplete extends ClayComponent {
 		} else {
 			this.filteredItems = [];
 		}
+
+		this._isResults = !this.filteredItems.length;
 	}
 
 	/**
@@ -82,9 +88,47 @@ class ClayAutocomplete extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleDataChange(event) {
+		this._isFetching = false;
+		this._isLoading = false;
+		this._isResolvedData = true;
+
+		if (this._requestsCount > 0) {
+			clearTimeout(this._loadingTimeout);
+		}
+
 		return !this.emit({
 			data: event.data,
 			name: 'dataChange',
+			originalEvent: event,
+		});
+	}
+
+	/**
+	 * Continues the propagation of the data loading event
+	 * @param {!Event} event
+	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleDataLoading(event) {
+		const {requestsCount} = event.data;
+
+		this._isFetching = true;
+		this._isResolvedData = false;
+		this._isResults = false;
+		this._requestsCount = requestsCount;
+
+		if (requestsCount > 0 && this.filteredItems.length > 0) {
+			this._loadingTimeout = setTimeout(() => {
+				if (!this._isResolvedData) {
+					this._isLoading = true;
+				}
+			}, 500);
+		} else {
+			this._isLoading = true;
+		}
+
+		return !this.emit({
+			name: 'dataLoading',
 			originalEvent: event,
 		});
 	}
@@ -158,6 +202,8 @@ class ClayAutocomplete extends ClayComponent {
 		// Updates the value of the input with the value
 		// entered by the user in case the validation is false
 		// the above components can update the state of the input value.
+		this.inputValue = value;
+
 		this.inputValue = value;
 
 		return !this.emit({
@@ -263,6 +309,47 @@ class ClayAutocomplete extends ClayComponent {
  * @type {!Object}
  */
 ClayAutocomplete.STATE = {
+	/**
+	 * @default false
+	 * @instance
+	 * @memberof ClayAutocomplete
+	 * @private
+	 * @type {?bool}
+	 */
+	_isError: Config.bool()
+		.value(false)
+		.internal(),
+
+	/**
+	 * @default false
+	 * @instance
+	 * @memberof ClayAutocomplete
+	 * @type {?bool}
+	 */
+	_isFetching: Config.bool()
+		.value(false)
+		.internal(),
+
+	/**
+	 * @default false
+	 * @instance
+	 * @memberof ClayAutocomplete
+	 * @type {?bool}
+	 */
+	_isLoading: Config.bool()
+		.value(false)
+		.internal(),
+
+	/**
+	 * @default false
+	 * @instance
+	 * @memberof ClayAutocomplete
+	 * @type {?bool}
+	 */
+	_isResults: Config.bool()
+		.value(false)
+		.internal(),
+
 	/**
 	 * Flag to indicate the characters allowed in the
 	 * input element (e.g /[a-zA-Z0-9_]/g).
