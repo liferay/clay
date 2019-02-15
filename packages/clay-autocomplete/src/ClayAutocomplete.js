@@ -33,7 +33,9 @@ class ClayAutocomplete extends ClayComponent {
 	 * @inheritDoc
 	 */
 	syncFilteredItems() {
-		this._dropdownItemFocused = null;
+		if (!this.filteredItems.length) {
+			this._dropdownItemFocused = null;
+		}
 	}
 
 	/**
