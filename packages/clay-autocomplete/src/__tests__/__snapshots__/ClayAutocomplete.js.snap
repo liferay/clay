@@ -86,35 +86,53 @@ exports[`ClayAutocomplete should render a ClayAutocomplete and not emit an event
 exports[`ClayAutocomplete should render a ClayAutocomplete with classes 1`] = `
 <div class="dropdown-full my-custom-class">
   <input class="form-control" ref="input" type="text" value="">
-  <ul class="dropdown-menu" ref="dropdown"></ul>
+  <ul class="dropdown-menu" ref="dropdown">
+    <li class="dropdown-item">no-results-found</li>
+  </ul>
 </div>
 `;
 
 exports[`ClayAutocomplete should render a ClayAutocomplete with id 1`] = `
-<div class="dropdown-full form-group" id="myId">
-  <input class="form-control" ref="input" type="text" value="">
-  <ul class="dropdown-menu" ref="dropdown"></ul>
+<div class="dropdown-full input-group" id="myId">
+  <div class="input-group-item">
+    <input class="form-control" ref="input" type="text" value="">
+    <ul class="dropdown-menu" ref="dropdown">
+      <li class="dropdown-item">no-results-found</li>
+    </ul>
+  </div>
 </div>
 `;
 
 exports[`ClayAutocomplete should render a ClayAutocomplete with input element classes 1`] = `
-<div class="dropdown-full form-group">
-  <input class="input element classes" ref="input" type="text" value="">
-  <ul class="dropdown-menu" ref="dropdown"></ul>
+<div class="dropdown-full input-group">
+  <div class="input-group-item">
+    <input class="input element classes" ref="input" type="text" value="">
+    <ul class="dropdown-menu" ref="dropdown">
+      <li class="dropdown-item">no-results-found</li>
+    </ul>
+  </div>
 </div>
 `;
 
 exports[`ClayAutocomplete should render a ClayAutocomplete with input name 1`] = `
-<div class="dropdown-full form-group">
-  <input class="form-control" id="input name" name="input name" ref="input" type="text" value="">
-  <ul class="dropdown-menu" ref="dropdown"></ul>
+<div class="dropdown-full input-group">
+  <div class="input-group-item">
+    <input class="form-control" id="input name" name="input name" ref="input" type="text" value="">
+    <ul class="dropdown-menu" ref="dropdown">
+      <li class="dropdown-item">no-results-found</li>
+    </ul>
+  </div>
 </div>
 `;
 
 exports[`ClayAutocomplete should render a ClayAutocomplete with input value 1`] = `
-<div class="dropdown-full form-group">
-  <input class="form-control" ref="input" type="text" value="input value">
-  <ul class="dropdown-menu" ref="dropdown"></ul>
+<div class="dropdown-full input-group">
+  <div class="input-group-item">
+    <input class="form-control" ref="input" type="text" value="input value">
+    <ul class="dropdown-menu" ref="dropdown">
+      <li class="dropdown-item">no-results-found</li>
+    </ul>
+  </div>
 </div>
 `;
 
@@ -126,15 +144,23 @@ exports[`ClayAutocomplete should render a ClayAutocomplete with placeholder 1`] 
 `;
 
 exports[`ClayAutocomplete should render a ClayAutocomplete with unstable_content 1`] = `
-<div class="dropdown-full form-group">Some content...
-  <input class="form-control" ref="input" type="text" value="">
-  <ul class="dropdown-menu" ref="dropdown"></ul>
+<div class="dropdown-full input-group">
+  <div class="input-group-item">Some content...
+    <input class="form-control" ref="input" type="text" value="">
+    <ul class="dropdown-menu" ref="dropdown">
+      <li class="dropdown-item">no-results-found</li>
+    </ul>
+  </div>
 </div>
 `;
 
 exports[`ClayAutocomplete should render the default markup 1`] = `
-<div class="dropdown-full form-group">
-  <input class="form-control" ref="input" type="text" value="">
-  <ul class="dropdown-menu" ref="dropdown"></ul>
+<div class="dropdown-full input-group">
+  <div class="input-group-item">
+    <input class="form-control" ref="input" type="text" value="">
+    <ul class="dropdown-menu" ref="dropdown">
+      <li class="dropdown-item">no-results-found</li>
+    </ul>
+  </div>
 </div>
 `;

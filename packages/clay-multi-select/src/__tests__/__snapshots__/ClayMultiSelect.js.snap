@@ -17,7 +17,9 @@ exports[`ClayMultiSelect Lifecycle itemAdded should not emit an event when the i
           </span>
         </span>
         <input class="form-control-inset" ref="input" type="text" value="foo">
-        <ul class="dropdown-menu" ref="dropdown"></ul>
+        <ul class="dropdown-menu" ref="dropdown">
+          <li class="dropdown-item">no-results-found</li>
+        </ul>
       </div>
       <div class="form-feedback-group">
         <div class="form-text">You can use a comma to enter tags</div>
@@ -36,7 +38,9 @@ exports[`ClayMultiSelect should render a ClayMultiSelect and add the class focus
     <div class="input-group-item">
       <div class="dropdown-full form-control form-control-tag-group focus">
         <input class="form-control-inset" ref="input" type="text" value="">
-        <ul class="dropdown-menu" ref="dropdown"></ul>
+        <ul class="dropdown-menu" ref="dropdown">
+          <li class="dropdown-item">no-results-found</li>
+        </ul>
       </div>
       <div class="form-feedback-group">
         <div class="form-text">You can use a comma to enter tags</div>
@@ -77,7 +81,9 @@ exports[`ClayMultiSelect should render a ClayMultiSelect and keep the focus of t
           </span>
         </span>
         <input class="form-control-inset" ref="input" type="text" value="">
-        <ul class="dropdown-menu" ref="dropdown"></ul>
+        <ul class="dropdown-menu" ref="dropdown">
+          <li class="dropdown-item">no-results-found</li>
+        </ul>
       </div>
       <div class="form-feedback-group">
         <div class="form-text">You can use a comma to enter tags</div>
@@ -96,7 +102,9 @@ exports[`ClayMultiSelect should render a ClayMultiSelect and remove the focus wh
     <div class="input-group-item">
       <div class="dropdown-full form-control form-control-tag-group">
         <input class="form-control-inset" ref="input" type="text" value="">
-        <ul class="dropdown-menu" ref="dropdown"></ul>
+        <ul class="dropdown-menu" ref="dropdown">
+          <li class="dropdown-item">no-results-found</li>
+        </ul>
       </div>
       <div class="form-feedback-group">
         <div class="form-text">You can use a comma to enter tags</div>
@@ -115,7 +123,9 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with classes 1`] = `
     <div class="input-group-item">
       <div class="dropdown-full form-control form-control-tag-group">
         <input class="form-control-inset" ref="input" type="text" value="">
-        <ul class="dropdown-menu" ref="dropdown"></ul>
+        <ul class="dropdown-menu" ref="dropdown">
+          <li class="dropdown-item">no-results-found</li>
+        </ul>
       </div>
       <div class="form-feedback-group">
         <div class="form-text">You can use a comma to enter tags</div>
@@ -134,7 +144,9 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with id 1`] = `
     <div class="input-group-item">
       <div class="dropdown-full form-control form-control-tag-group">
         <input class="form-control-inset" ref="input" type="text" value="">
-        <ul class="dropdown-menu" ref="dropdown"></ul>
+        <ul class="dropdown-menu" ref="dropdown">
+          <li class="dropdown-item">no-results-found</li>
+        </ul>
       </div>
       <div class="form-feedback-group">
         <div class="form-text">You can use a comma to enter tags</div>
@@ -153,7 +165,9 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with input name from se
     <div class="input-group-item">
       <div class="dropdown-full form-control form-control-tag-group">
         <input class="form-control-inset" ref="input" type="text" value="">
-        <ul class="dropdown-menu" ref="dropdown"></ul>
+        <ul class="dropdown-menu" ref="dropdown">
+          <li class="dropdown-item">no-results-found</li>
+        </ul>
       </div>
       <div class="form-feedback-group">
         <div class="form-text">You can use a comma to enter tags</div>
@@ -173,7 +187,9 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with label 1`] = `
     <div class="input-group-item">
       <div class="dropdown-full form-control form-control-tag-group">
         <input class="form-control-inset" ref="input" type="text" value="">
-        <ul class="dropdown-menu" ref="dropdown"></ul>
+        <ul class="dropdown-menu" ref="dropdown">
+          <li class="dropdown-item">no-results-found</li>
+        </ul>
       </div>
       <div class="form-feedback-group">
         <div class="form-text">You can use a comma to enter tags</div>
@@ -225,7 +241,9 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with multiple values wi
           </span>
         </span>
         <input class="form-control-inset" ref="input" type="text" value="">
-        <ul class="dropdown-menu" ref="dropdown"></ul>
+        <ul class="dropdown-menu" ref="dropdown">
+          <li class="dropdown-item">no-results-found</li>
+        </ul>
       </div>
       <div class="form-feedback-group">
         <div class="form-text">You can use a comma to enter tags</div>
@@ -263,7 +281,9 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with select button hidd
     <div class="input-group-item">
       <div class="dropdown-full form-control form-control-tag-group">
         <input class="form-control-inset" ref="input" type="text" value="">
-        <ul class="dropdown-menu" ref="dropdown"></ul>
+        <ul class="dropdown-menu" ref="dropdown">
+          <li class="dropdown-item">no-results-found</li>
+        </ul>
       </div>
       <div class="form-feedback-group">
         <div class="form-text">You can use a comma to enter tags</div>
@@ -301,7 +321,9 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with selected items 1`]
           </span>
         </span>
         <input class="form-control-inset" ref="input" type="text" value="">
-        <ul class="dropdown-menu" ref="dropdown"></ul>
+        <ul class="dropdown-menu" ref="dropdown">
+          <li class="dropdown-item">no-results-found</li>
+        </ul>
       </div>
       <div class="form-feedback-group">
         <div class="form-text">You can use a comma to enter tags</div>
@@ -320,7 +342,9 @@ exports[`ClayMultiSelect should render the default markup 1`] = `
     <div class="input-group-item">
       <div class="dropdown-full form-control form-control-tag-group">
         <input class="form-control-inset" ref="input" type="text" value="">
-        <ul class="dropdown-menu" ref="dropdown"></ul>
+        <ul class="dropdown-menu" ref="dropdown">
+          <li class="dropdown-item">no-results-found</li>
+        </ul>
       </div>
       <div class="form-feedback-group">
         <div class="form-text">You can use a comma to enter tags</div>
