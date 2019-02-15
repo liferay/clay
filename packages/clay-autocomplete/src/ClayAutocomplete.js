@@ -104,6 +104,22 @@ class ClayAutocomplete extends ClayComponent {
 	}
 
 	/**
+	 * Continues the propagation of the data error event
+	 * @param {!Event} event
+	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleDataError(event) {
+		this._isError = true;
+
+		return !this.emit({
+			data: event.data,
+			name: 'dataError',
+			originalEvent: event,
+		});
+	}
+
+	/**
 	 * Continues the propagation of the data loading event
 	 * @param {!Event} event
 	 * @protected
@@ -112,6 +128,7 @@ class ClayAutocomplete extends ClayComponent {
 	_handleDataLoading(event) {
 		const {requestsCount} = event.data;
 
+		this._isError = false;
 		this._isFetching = true;
 		this._isResolvedData = false;
 		this._isResults = false;
@@ -167,6 +184,8 @@ class ClayAutocomplete extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleOnBlur(event) {
+		this._isError = false;
+
 		return !this.emit({
 			name: 'inputOnBlur',
 			originalEvent: event,
@@ -301,6 +320,15 @@ class ClayAutocomplete extends ClayComponent {
 
 		return Array.isArray(match) ? match.join('') : '';
 	}
+
+	/**
+	 * @inheritDoc
+	 */
+	syncInputValue() {
+		if (this.inputValue === '') {
+			this._isError = false;
+		}
+	}
 }
 
 /**
@@ -324,6 +352,7 @@ ClayAutocomplete.STATE = {
 	 * @default false
 	 * @instance
 	 * @memberof ClayAutocomplete
+	 * @private
 	 * @type {?bool}
 	 */
 	_isFetching: Config.bool()
@@ -334,6 +363,7 @@ ClayAutocomplete.STATE = {
 	 * @default false
 	 * @instance
 	 * @memberof ClayAutocomplete
+	 * @private
 	 * @type {?bool}
 	 */
 	_isLoading: Config.bool()
@@ -344,12 +374,12 @@ ClayAutocomplete.STATE = {
 	 * @default false
 	 * @instance
 	 * @memberof ClayAutocomplete
+	 * @private
 	 * @type {?bool}
 	 */
 	_isResults: Config.bool()
 		.value(false)
 		.internal(),
-<<<<<<< HEAD
 
 	/**
 	 * Flag to indicate the characters allowed in the
@@ -360,8 +390,6 @@ ClayAutocomplete.STATE = {
 	 * @type {?RegExp}
 	 */
 	allowedCharacters: Config.instanceOf(RegExp),
-=======
->>>>>>> SF
 
 	/**
 	 * Variation name to render different deltemplates.
