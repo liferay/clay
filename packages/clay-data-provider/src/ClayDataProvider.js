@@ -20,6 +20,8 @@ class ClayDataProvider extends ClayComponent {
 	 * @protected
 	 */
 	updateData(query, requestRetries = 0) {
+		this._isResolvedData = false;
+
 		if (
 			this.initialData &&
 			!this._pollingInterval &&
@@ -27,6 +29,8 @@ class ClayDataProvider extends ClayComponent {
 		) {
 			this._dataSource = this.initialData;
 			this._handleDataChange();
+		} else {
+			this._handleDataLoading();
 		}
 
 		let promise;
@@ -42,6 +46,7 @@ class ClayDataProvider extends ClayComponent {
 		timeout(this.requestTimeout, promise)
 			.then(res => {
 				this._dataSource = res;
+				this._requestsCount += 1;
 				this._isResolvedData = true;
 				this._handleDataChange();
 
@@ -53,11 +58,27 @@ class ClayDataProvider extends ClayComponent {
 	}
 
 	/**
+	 * Handle triggering the event of loading data
+	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleDataLoading() {
+		return !this.emit({
+			data: {
+				requestsCount: this._requestsCount,
+			},
+			name: 'dataLoading',
+		});
+	}
+
+	/**
 	 * Handles the event when data changed.
 	 * @protected
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleDataChange() {
+		this.isLoading = false;
+
 		return !this.emit({
 			data: this._dataSource,
 			name: 'dataChange',
@@ -145,6 +166,7 @@ class ClayDataProvider extends ClayComponent {
 	created() {
 		this._isResolvedData = false;
 		this._pollingInterval = 0;
+		this._requestsCount = 0;
 		if (this._hasData(this.dataSource)) {
 			this._dataSource = this.dataSource;
 			this._isResolvedData = true;
@@ -290,6 +312,25 @@ ClayDataProvider.STATE = {
 	 * @type {?(object|array)}
 	 */
 	inputMode: Config.oneOf(['polling', 'userInput']).value('userInput'),
+
+	/**
+	 * Flag to indicate the render state. true will
+	 * render the contents of loadingContent.
+	 * @default false
+	 * @instance
+	 * @memberof ClayDataProvider
+	 * @type {?bool}
+	 */
+	isLoading: Config.bool().value(false),
+
+	/**
+	 * The loading content renderer.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDataProvider
+	 * @type {!html}
+	 */
+	loadingContent: Config.any(),
 
 	/**
 	 * Flag to define how often to refetch data (ms)

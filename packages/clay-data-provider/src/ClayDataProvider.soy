@@ -5,6 +5,12 @@
  */
 {template .render}
 	{@param content: any}
+	{@param? loadingContent: any}
+	{@param? _isLoading: bool}
 
-	{$content}
+	{if $_isLoading and $loadingContent}
+		{$loadingContent}
+	{else}
+		{$content}
+	{/if}
 {/template}
