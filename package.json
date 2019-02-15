@@ -9,9 +9,8 @@
 		"lerna": "lerna bootstrap -- --no-optional --no-package-lock",
 		"link": "lerna run link",
 		"lint": "eslint \"**/*.{js,ts,tsx}\"",
-		"pa11y": "pa11y-ci ./packages/clay-*/demos/a11y.html",
 		"prettier": "prettier-eslint \"**/*.{js,ts,tsx}\"",
-		"test": "jest && yarn run pa11y",
+		"test": "jest",
 		"site": "cd clayui.com && npm run build && npm run serve"
 	},
 	"devDependencies": {
@@ -28,7 +27,6 @@
 		"awesome-typescript-loader": "^5.2.1",
 		"clay-css": "^2.8.3",
 		"coveralls": "^3.0.0",
-		"cross-env": "^5.1.3",
 		"css-loader": "^2.1.0",
 		"eslint": "^4.10.0",
 		"eslint-config-liferay": "^2.0.8",
@@ -41,7 +39,6 @@
 		"jest": "^24.1.0",
 		"jest-fetch-mock": "^2.0.1",
 		"lerna": "^3.4.0",
-		"pa11y-ci": "^2.1.1",
 		"prettier-eslint-cli": "^4.7.0",
 		"react": "^16.8.1",
 		"react-dom": "^16.8.1",
