@@ -58,20 +58,6 @@ class ClayDataProvider extends ClayComponent {
 	}
 
 	/**
-	 * Handle triggering the event of loading data
-	 * @protected
-	 * @return {Boolean} If the event has been prevented or not.
-	 */
-	_handleDataLoading() {
-		return !this.emit({
-			data: {
-				requestsCount: this._requestsCount,
-			},
-			name: 'dataLoading',
-		});
-	}
-
-	/**
 	 * Handles the event when data changed.
 	 * @protected
 	 * @return {Boolean} If the event has been prevented or not.
@@ -82,6 +68,33 @@ class ClayDataProvider extends ClayComponent {
 		return !this.emit({
 			data: this._dataSource,
 			name: 'dataChange',
+		});
+	}
+
+	/**
+	 * Handles the event when request error
+	 * @param {!Error} err
+	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleDataError(err) {
+		return !this.emit({
+			data: err,
+			name: 'dataError',
+		});
+	}
+
+	/**
+	 * Handle triggering the event of loading data
+	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleDataLoading() {
+		return !this.emit({
+			data: {
+				requestsCount: this._requestsCount,
+			},
+			name: 'dataLoading',
 		});
 	}
 
@@ -138,6 +151,7 @@ class ClayDataProvider extends ClayComponent {
 			this.updateData(query, requestRetries + 1);
 		} else {
 			console.error('DataProvider: Error making the requisition', err);
+			this._handleDataError(err);
 		}
 	}
 
@@ -295,6 +309,15 @@ ClayDataProvider.STATE = {
 	debounceTime: Config.number().value(200),
 
 	/**
+	 * The error content renderer.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDataProvider
+	 * @type {!html}
+	 */
+	errorContent: Config.any(),
+
+	/**
 	 * Set some initial data while the first request is being made
 	 * @instance
 	 * @default undefined
@@ -312,6 +335,14 @@ ClayDataProvider.STATE = {
 	 * @type {?(object|array)}
 	 */
 	inputMode: Config.oneOf(['polling', 'userInput']).value('userInput'),
+
+	/**
+	 * @default false
+	 * @instance
+	 * @memberof ClayDataProvider
+	 * @type {?bool}
+	 */
+	isError: Config.bool().value(false),
 
 	/**
 	 * Flag to indicate the render state. true will
