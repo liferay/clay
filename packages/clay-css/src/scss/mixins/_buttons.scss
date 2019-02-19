@@ -109,39 +109,133 @@
 }
 
 @mixin clay-button-variant($map) {
+	$breakpoint-down: map-get($map, breakpoint-down);
+
+	$align-items: map-get($map, align-items);
 	$bg: map-get($map, bg);
 	$border-color: map-get($map, border-color);
+	$border-radius: map-get($map, border-radius);
+	$border-style: map-get($map, border-style);
+	$border-width: map-get($map, border-width);
 	$color: map-get($map, color);
+	$cursor: map-get($map, cursor);
+	$display: map-get($map, display);
+	$flex-grow: map-get($map, flex-grow);
+	$flex-shrink: map-get($map, flex-shrink);
+	$font-size: map-get($map, font-size);
+	$font-weight: map-get($map, font-weight);
+	$height: map-get($map, height);
+	$justify-content: map-get($map, justify-content);
+	$line-height: map-get($map, line-height);
+	$margin-bottom: map-get($map, margin-bottom);
+	$margin-left: map-get($map, margin-left);
+	$margin-right: map-get($map, margin-right);
+	$margin-top: map-get($map, margin-top);
 	$opacity: map-get($map, opacity);
+	$padding-bottom: map-get($map, padding-bottom);
+	$padding-left: map-get($map, padding-left);
+	$padding-right: map-get($map, padding-right);
+	$padding-top: map-get($map, padding-top);
 	$text-decoration: map-get($map, text-decoration);
+	$transition: map-get($map, transition);
+	$user-select: map-get($map, user-select);
+	$vertical-align: map-get($map, vertical-align);
+	$white-space: map-get($map, white-space);
+	$width: map-get($map, width);
+	$word-wrap: map-get($map, word-wrap);
+
 	$hover-bg: map-get($map, hover-bg);
 	$hover-border-color: map-get($map, hover-border-color);
 	$hover-color: map-get($map, hover-color);
 	$hover-opacity: map-get($map, hover-opacity);
 	$hover-text-decoration: map-get($map, hover-text-decoration);
+
 	$focus-bg: map-get($map, focus-bg);
 	$focus-border-color: map-get($map, focus-border-color);
 	$focus-box-shadow: map-get($map, focus-box-shadow);
 	$focus-color: map-get($map, focus-color);
 	$focus-opacity: map-get($map, focus-opacity);
 	$focus-outline: map-get($map, focus-outline);
+
 	$disabled-bg: map-get($map, disabled-bg);
 	$disabled-border-color: map-get($map, disabled-border-color);
 	$disabled-color: map-get($map, disabled-color);
+	$disabled-cursor: map-get($map, disabled-cursor);
 	$disabled-opacity: map-get($map, disabled-opacity);
+
 	$active-bg: map-get($map, active-bg);
 	$active-border-color: map-get($map, active-border-color);
 	$active-box-shadow: map-get($map, active-box-shadow);
 	$active-color: map-get($map, active-color);
 	$active-opacity: map-get($map, active-opacity);
 	$active-focus-box-shadow: setter(map-get($map, active-focus-box-shadow), $focus-box-shadow);
+
+	$inline-item-font-size: map-get($map, inline-item-font-size);
+
+	$section-font-size: map-get($map, section-font-size);
+	$section-font-weight: map-get($map, section-font-weight);
+	$section-line-height: map-get($map, section-line-height);
+
+	$font-size-mobile: map-get($map, font-size-mobile);
+	$height-mobile: map-get($map, height-mobile);
+	$padding-bottom-mobile: map-get($map, padding-bottom-mobile);
+	$padding-left-mobile: map-get($map, padding-left-mobile);
+	$padding-right-mobile: map-get($map, padding-right-mobile);
+	$padding-top-mobile: map-get($map, padding-top-mobile);
+	$width-mobile: map-get($map, width-mobile);
+
 	$loading-animation: setter(map-get($map, loading-animation), $clay-unset-placeholder);
 
+	align-items: $align-items;
 	background-color: $bg;
 	border-color: $border-color;
+	border-radius: $border-radius;
+	border-style: $border-style;
+	border-width: $border-width;
 	color: $color;
+	display: $display;
+	flex-grow: $flex-grow;
+	flex-shrink: $flex-shrink;
+	font-size: $font-size;
+	font-weight: $font-weight;
+	height: $height;
+	justify-content: $justify-content;
+	line-height: $line-height;
+	margin-bottom: $margin-bottom;
+	margin-left: $margin-left;
+	margin-right: $margin-right;
+	margin-top: $margin-top;
 	opacity: $opacity;
+	padding-bottom: $padding-bottom;
+	padding-left: $padding-left;
+	padding-right: $padding-right;
+	padding-top: $padding-top;
 	text-decoration: $text-decoration;
+	transition: $transition;
+	user-select: $user-select;
+	vertical-align: $vertical-align;
+	white-space: $white-space;
+	width: $width;
+	word-wrap: $word-wrap;
+
+	@at-root {
+		a#{&},
+		button#{&} {
+			cursor: $cursor;
+		}
+	}
+
+	@if ($breakpoint-down) {
+		@include media-breakpoint-down($breakpoint-down) {
+			font-size: $font-size-mobile;
+			height: $height-mobile;
+			padding-bottom: $padding-bottom-mobile;
+			padding-left: $padding-left-mobile;
+			padding-right: $padding-right-mobile;
+			padding-top: $padding-top-mobile;
+			width: $width-mobile;
+		}
+	}
 
 	&:hover {
 		background-color: $hover-bg;
@@ -166,6 +260,7 @@
 		background-color: $disabled-bg;
 		border-color: $disabled-border-color;
 		color: $disabled-color;
+		cursor: $disabled-cursor;
 		opacity: $disabled-opacity;
 	}
 
@@ -181,6 +276,16 @@
 		&:focus {
 			box-shadow: $active-focus-box-shadow;
 		}
+	}
+
+	.inline-item {
+		font-size: $inline-item-font-size;
+	}
+
+	.btn-section {
+		font-size: $section-font-size;
+		font-weight: $section-font-weight;
+		line-height: $section-line-height;
 	}
 
 	.loading-animation {
