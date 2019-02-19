@@ -88,6 +88,15 @@ describe('ClayAutocomplete', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a ClayAutocomplete with placeholder', () => {
+		component = new ClayAutocomplete({
+			dataSource,
+			placeholder: 'Placeholder',
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
 	it('should render a ClayAutocomplete with unstable_content', () => {
 		component = new ClayAutocomplete({
 			dataSource,
