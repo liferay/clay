@@ -19,6 +19,7 @@
 	{@param? inputElementClasses: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
+	{@param? placeholder: string}
 	{@param? pollingInterval: number}
 	{@param? requestInputMode: string}
 	{@param? requestOptions: [
@@ -62,6 +63,7 @@
 			{param inputElementClasses: $inputElementClasses /}
 			{param inputName: $inputName /}
 			{param inputValue: $inputValue /}
+			{param placeholder: $placeholder /}
 		{/call}
 
 		{call .dropdown}
@@ -91,6 +93,7 @@
 	{@param? inputElementClasses: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
+	{@param? placeholder: string}
 
 	{let $attributes kind="attributes"}
 		class="
@@ -112,6 +115,10 @@
 		onKeydown="{$_handleOnKeydown}"
 		ref="input"
 		type="text"
+
+		{if $placeholder}
+			placeholder="{$placeholder}"
+		{/if}
 
 		{if $inputValue}
 			value="{$inputValue}"

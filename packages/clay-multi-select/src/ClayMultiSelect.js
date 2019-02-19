@@ -540,6 +540,15 @@ ClayMultiSelect.STATE = {
 	inputName: Config.string().value('selectedItems'),
 
 	/**
+	 * Input placeholder.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @type {?(string|undefined)}
+	 */
+	placeholder: Config.string(),
+
+	/**
 	 * Flag to define how often to refetch data (ms)
 	 * @instance
 	 * @default 0
