@@ -1,5 +1,5 @@
 {
-	"name": "@clayui/clay-badge",
+	"name": "@clayui/badge",
 	"version": "3.0.0",
 	"description": "ClayBadge component",
 	"license": "BSD-3-Clause",
@@ -15,7 +15,7 @@
 	"scripts": {
 		"build": "babel src --root-mode upward --out-dir lib --extensions .ts,.tsx",
 		"build:types": "tsc --project ./tsconfig.declarations.json",
-		"prepublish": "npm run build && npm run build:types",
+		"prepublishOnly": "npm run build && npm run build:types",
 		"start": "webpack-dev-server --mode development",
 		"test": "jest --config ../../jest.config.js"
 	},

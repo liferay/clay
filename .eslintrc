@@ -5,9 +5,9 @@
 		"es6": true,
 		"jest": true
 	},
+	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
 		"ecmaFeatures": {
-			"experimentalObjectRestSpread": true,
 			"jsx": true
 		}
 	},

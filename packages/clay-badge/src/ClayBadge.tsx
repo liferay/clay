@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 import * as React from 'react';
-import getCN from 'classnames';
+import classNames from 'classnames';
 
 interface props {
 	label?: string | number;
@@ -14,15 +14,14 @@ interface props {
 }
 
 const ClayBadge: React.FunctionComponent<props> = ({
-	label,
 	className,
-	children,
+	label,
 	type,
 	...otherProps
 }) => (
 	<span
 		{...otherProps}
-		className={getCN('badge', `badge-${type}`, className)}
+		className={classNames('badge', `badge-${type}`, className)}
 	>
 		<span className="badge-item badge-item-expand">{label}</span>
 	</span>

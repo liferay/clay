@@ -8,17 +8,17 @@ import * as TestRenderer from 'react-test-renderer';
 import ClayBadge from '../ClayBadge';
 
 describe('ClayBadge', function() {
-	it('should render', () => {
+	it('renders', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayBadge type="primary" label="4" />
+			<ClayBadge label="4" type="primary" />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('should render with custom className', () => {
+	it('applies custom className', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayBadge className="foo bar" type="primary" label="4" />
+			<ClayBadge className="foo bar" label="4" type="primary" />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
