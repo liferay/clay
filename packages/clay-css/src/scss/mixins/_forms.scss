@@ -5,3 +5,143 @@
 	color: $input-focus-color;
 	outline: 0;
 }
+
+@mixin clay-select-variant($map) {
+	$appearance: map-get($map, appearance);
+	$bg: map-get($map, bg);
+	$bg-clip: map-get($map, bg-clip);
+	$bg-image: map-get($map, bg-image);
+	$bg-position: map-get($map, bg-position);
+	$bg-repeat: map-get($map, bg-repeat);
+	$bg-size: map-get($map, bg-size);
+	$border-color: map-get($map, border-color);
+	$border-radius: map-get($map, border-radius);
+	$border-style: map-get($map, border-style);
+	$border-width: map-get($map, border-width);
+	$box-shadow: map-get($map, box-shadow);
+	$color: map-get($map, color);
+	$cursor: map-get($map, cursor);
+	$display: map-get($map, display);
+	$font-size: map-get($map, font-size);
+	$font-weight: map-get($map, font-weight);
+	$height: map-get($map, height);
+	$line-height: map-get($map, line-height);
+	$min-width: map-get($map, min-width);
+	$outline: map-get($map, outline);
+	$padding-bottom: map-get($map, padding-bottom);
+	$padding-left: map-get($map, padding-left);
+	$padding-right: map-get($map, padding-right);
+	$padding-top: map-get($map, padding-top);
+	$transition: map-get($map, transition);
+	$width: map-get($map, width);
+
+	$hover-bg: map-get($map, hover-bg);
+	$hover-border-color: map-get($map, hover-border-color);
+	$hover-box-shadow: map-get($map, hover-box-shadow);
+	$hover-color: map-get($map, hover-color);
+
+	$focus-bg: map-get($map, focus-bg);
+	$focus-bg-image: map-get($map, focus-bg-image);
+	$focus-border-color: map-get($map, focus-border-color);
+	$focus-box-shadow: map-get($map, focus-box-shadow);
+	$focus-color: map-get($map, focus-color);
+
+	$disabled-bg: map-get($map, disabled-bg);
+	$disabled-bg-image: map-get($map, disabled-bg-image);
+	$disabled-border-color: map-get($map, disabled-border-color);
+	$disabled-box-shadow: map-get($map, disabled-box-shadow);
+	$disabled-color: map-get($map, disabled-color);
+	$disabled-cursor: map-get($map, disabled-cursor);
+	$disabled-opacity:  map-get($map, disabled-opacity);
+
+	background-clip: $bg-clip;
+	border-color: $border-color;
+	border-radius: $border-radius;
+	border-style: $border-style;
+	border-width: $border-width;
+	box-shadow: $box-shadow;
+	color: $color;
+	cursor: $cursor;
+	display: $display;
+	font-size: $font-size;
+	font-weight: $font-weight;
+	line-height: $line-height;
+	min-width: $min-width;
+	outline: $outline;
+	transition: $transition;
+	width: $width;
+
+	&:not([multiple]):not([size]) {
+		-moz-appearance: $appearance;
+		-webkit-appearance: $appearance;
+
+		@if ($appearance) {
+			&::-ms-expand {
+				display: none;
+			}
+		}
+
+		background-color: $bg;
+		background-image: $bg-image;
+		background-position: $bg-position;
+		background-repeat: $bg-repeat;
+		background-size: $bg-size;
+		height: $height;
+		padding-bottom: $padding-bottom;
+		padding-left: $padding-left;
+		padding-right: $padding-right;
+		padding-top: $padding-top;
+
+		&:focus {
+			background-color: $focus-bg;
+			background-image: $focus-bg-image;
+		}
+
+		&:disabled {
+			background-image: $disabled-bg-image;
+		}
+	}
+
+	&:hover {
+		background-color: $hover-bg;
+		border-color: $hover-border-color;
+		box-shadow: $hover-box-shadow;
+		color: $hover-color;
+	}
+
+	&:focus {
+		border-color: $focus-border-color;
+		box-shadow: $focus-box-shadow;
+		color: $focus-color;
+
+		&::-ms-value {
+			// Suppress the nested default white text on blue background highlight given to
+			// the selected option text when the (still closed) <select> receives focus
+			// in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
+			// match the appearance of the native widget.
+			// See https://github.com/twbs/bootstrap/issues/19398.
+
+			background-color: $bg;
+			color: $color;
+		}
+	}
+
+	&:disabled {
+		background-color: $disabled-bg;
+		border-color: $disabled-border-color;
+		box-shadow: $disabled-box-shadow;
+		color: $disabled-color;
+		cursor: $disabled-cursor;
+		opacity: $disabled-opacity;
+
+		> option {
+			@media (-webkit-min-device-pixel-ratio: 0) { // Webkit only
+				color: $disabled-color;
+			}
+		}
+	}
+
+	option {
+		cursor: $input-select-cursor;
+	}
+}
