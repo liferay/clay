@@ -16,6 +16,7 @@
 		"notice",
 		"no-for-of-loops",
 		"react",
+		"react-hooks",
 		"sort-destructure-keys",
 		"sort-imports-es6-autofix"
 	],
@@ -55,6 +56,7 @@
 		"prefer-template": 2,
 		"quote-props": [2, "as-needed"],
 		"quotes": [2, "single", "avoid-escape"],
+		"react-hooks/rules-of-hooks": "error",
 		"react/jsx-boolean-value": 2,
 		"react/jsx-handler-names": 2,
 		"react/jsx-key": 2,

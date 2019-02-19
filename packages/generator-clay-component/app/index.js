@@ -18,15 +18,23 @@ module.exports = yeoman.generators.Base.extend({
 		);
 	},
 
+	install() {
+		this.log(`${chalk.green('Installing dependencies...')}`);
+
+		const ps = this.spawnCommand('yarn');
+
+		ps.on('close', code => console.log(`yarn install exited with ${code}`)); // eslint-disable-line no-console
+	},
+
 	prompting() {
 		const done = this.async();
 
 		const prompts = [
 			{
-				type: 'input',
-				name: 'componentName',
-				message: 'How do you want to name your component?',
 				default: 'ClayComponent',
+				message: 'How do you want to name your component?',
+				name: 'componentName',
+				type: 'input',
 				validate: input => {
 					if (!input) {
 						return 'You must provide a component name.';
@@ -43,17 +51,17 @@ module.exports = yeoman.generators.Base.extend({
 				},
 			},
 			{
-				type: 'input',
-				name: 'repoDescription',
-				message: 'How would you describe this component?',
 				default: 'My awesome Clay component',
+				message: 'How would you describe this component?',
+				name: 'repoDescription',
+				type: 'input',
 			},
 		];
 
 		this.prompt(
 			prompts,
 			function(props) {
-				const {componentName} = props;
+				const {componentName,} = props;
 
 				this.camelCaseName = _.camelCase(componentName);
 				this.componentName = componentName;
@@ -75,8 +83,8 @@ module.exports = yeoman.generators.Base.extend({
 			this.destinationPath('demo/App.tsx'),
 			{
 				camelCaseName: this.camelCaseName,
-				componentName: this.componentName,
 				capitalizeName: this.capitalizeName,
+				componentName: this.componentName,
 				kebabCaseName: this.kebabCaseName,
 				repoName: this.repoName,
 			}
@@ -91,9 +99,9 @@ module.exports = yeoman.generators.Base.extend({
 			{
 				buildFormat: this.buildFormat,
 				componentName: this.componentName,
-				templateLanguage: this.templateLanguage,
 				kebabCaseName: this.kebabCaseName,
 				repoName: this.repoName,
+				templateLanguage: this.templateLanguage,
 			}
 		);
 
@@ -120,19 +128,20 @@ module.exports = yeoman.generators.Base.extend({
 			this.destinationPath('package.json'),
 			{
 				componentName: this.componentName,
+				packageName: this.repoName.replace('clay-', ''),
+				repoDescription: this.repoDescription,
 				repoName: this.repoName,
 				repoOwner: this.repoOwner,
-				repoDescription: this.repoDescription,
 			}
 		);
 		this.fs.copyTpl(
 			this.templatePath('_README.md'),
 			this.destinationPath('README.md'),
 			{
-				repoName: this.repoName,
-				repoDescription: this.repoDescription,
 				componentName: this.componentName,
 				kebabCaseName: this.kebabCaseName,
+				repoDescription: this.repoDescription,
+				repoName: this.repoName,
 			}
 		);
 		this.fs.copyTpl(
@@ -152,13 +161,5 @@ module.exports = yeoman.generators.Base.extend({
 			this.templatePath('_tsconfig.json'),
 			this.destinationPath('tsconfig.json')
 		);
-	},
-
-	install() {
-		this.log(`${chalk.green('Installing dependencies...')}`);
-
-		const ps = this.spawnCommand('yarn');
-
-		ps.on('close', code => console.log(`yarn install exited with ${code}`));
 	},
 });

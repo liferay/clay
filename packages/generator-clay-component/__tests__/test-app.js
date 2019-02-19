@@ -14,7 +14,7 @@ describe('clay-component-generator:app', () => {
 	beforeAll(done => {
 		helpers
 			.run(path.join(__dirname, '../app'))
-			.withOptions({skipInstall: true})
+			.withOptions({skipInstall: true,})
 			.withPrompts({
 				componentName: 'MyComponent',
 				repoDescription: 'My awesome Clay component',

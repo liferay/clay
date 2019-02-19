@@ -8,12 +8,12 @@ module.exports = api => {
 	api.cache(true);
 
 	return {
+		ignore: ['node_modules', '**/__snapshots__/**', '**/__tests__/**',],
 		presets: [
 			'@babel/env',
 			'@babel/preset-react',
 			'@babel/preset-typescript',
 		],
-		ignore: ['node_modules', '**/__snapshots__/**', '**/__tests__/**'],
 		sourceMaps: true,
 	};
 };
