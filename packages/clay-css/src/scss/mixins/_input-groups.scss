@@ -30,3 +30,47 @@
 		}
 	}
 }
+
+@mixin clay-input-group-text-variant($map) {
+	$align-items: map-get($map, align-items);
+	$bg: map-get($map, bg);
+	$border-color: map-get($map, border-color);
+	$border-radius: map-get($map, border-radius);
+	$border-style: map-get($map, border-style);
+	$border-width: map-get($map, border-width);
+	$color: map-get($map, color);
+	$display: map-get($map, display);
+	$font-size: map-get($map, font-size);
+	$font-weight: map-get($map, font-weight);
+	$height: map-get($map, height);
+	$justify-content: map-get($map, justify-content);
+	$line-height: map-get($map, line-height);
+	$min-width: map-get($map, min-width);
+	$padding-bottom: map-get($map, padding-bottom);
+	$padding-left: map-get($map, padding-left);
+	$padding-right: map-get($map, padding-right);
+	$padding-top: map-get($map, padding-top);
+	$text-align: map-get($map, text-align);
+	$white-space: map-get($map, white-space);
+
+	align-items: $align-items;
+	background-color: $bg;
+	border-color: $border-color;
+	border-style: $border-style;
+	border-radius: $border-radius;
+	border-width: $border-width;
+	color: $color;
+	display: $display;
+	font-size: $font-size;
+	font-weight: $font-weight;
+	height: $height;
+	justify-content: $justify-content;
+	line-height: $line-height;
+	min-width: $min-width;
+	padding-bottom: $padding-bottom;
+	padding-left: $padding-left;
+	padding-right: $padding-right;
+	padding-top: $padding-top;
+	text-align: $text-align;
+	white-space: $white-space;
+}
