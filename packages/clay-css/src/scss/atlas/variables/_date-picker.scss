@@ -1,0 +1,43 @@
+// Date Picker Nav
+
+$date-picker-nav-btn: () !default;
+$date-picker-nav-btn: map-merge((
+	bg: transparent,
+	hover-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57),
+	focus-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57),
+	focus-box-shadow: 0 0 0 3px rgba(lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06), 0.5),
+	active-bg: lighten(saturate(adjust-hue($secondary, -12), 8.51), 49.61),
+), $date-picker-nav-btn);
+
+$date-picker-nav-select: () !default;
+$date-picker-nav-select: map-merge((
+	bg: transparent,
+	border-color: transparent,
+	color: $secondary,
+	font-size: $font-size-sm,
+	font-weight: $font-weight-semi-bold,
+	height: $input-height-sm,
+	padding-bottom: 0,
+	padding-left: 0.5rem,
+	padding-top: 0,
+	hover-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57),
+	focus-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57),
+	focus-box-shadow: 0 0 0 2px rgba(lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06), 0.5),
+), $date-picker-nav-select);
+
+// Date Picker Calendar Item
+
+$date-picker-date: () !default;
+$date-picker-date: map-merge((
+	border-radius: 100px,
+	color: $secondary,
+	hover-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57),
+	focus-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57),
+	focus-box-shadow: 0 0 0 3px rgba(lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06), 0.5),
+	focus-outline: 0,
+	active-bg: $component-active-bg,
+	active-color: $component-active-color,
+	active-focus-box-shadow: 0 0 0 3px rgba($component-active-bg, 0.25),
+	disabled-bg: transparent,
+	disabled-opacity: $btn-disabled-opacity,
+), $date-picker-date);
