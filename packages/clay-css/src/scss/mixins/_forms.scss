@@ -92,18 +92,22 @@
 		padding-right: $padding-right;
 		padding-top: $padding-top;
 
+		&:hover {
+			background-color: $hover-bg;
+		}
+
 		&:focus {
 			background-color: $focus-bg;
 			background-image: $focus-bg-image;
 		}
 
 		&:disabled {
+			background-color: $disabled-bg;
 			background-image: $disabled-bg-image;
 		}
 	}
 
 	&:hover {
-		background-color: $hover-bg;
 		border-color: $hover-border-color;
 		box-shadow: $hover-box-shadow;
 		color: $hover-color;
@@ -127,7 +131,6 @@
 	}
 
 	&:disabled {
-		background-color: $disabled-bg;
 		border-color: $disabled-border-color;
 		box-shadow: $disabled-box-shadow;
 		color: $disabled-color;
