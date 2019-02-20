@@ -25,6 +25,9 @@ $date-picker-nav-btn: map-merge((
 	color: $secondary,
 	hover-bg: $gray-200,
 	focus-box-shadow: 0 0 0 $btn-focus-width rgba($component-active-bg, 0.25),
+	disabled-bg: transparent,
+	disabled-color: $secondary,
+	disabled-opacity: $btn-disabled-opacity,
 ), $date-picker-nav-btn);
 
 $date-picker-nav-btn-monospaced: () !default;
