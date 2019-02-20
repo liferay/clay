@@ -1,124 +1,103 @@
-.dropdown-date-picker {
-	max-width: $dropdown-date-picker-max-width;
-	padding: 0;
-}
-
 .date-picker {
-	padding: $date-picker-padding-y $date-picker-padding-x; 
-}
-
-.date-picker-caption {
-	justify-content: space-between;
-	width: $date-picker-caption-width;
-}
-
-.date-picker-body,
-.date-picker-caption,
-.date-picker-day,
-.date-picker-days-row,
-.date-picker-form,
-.date-picker-navigation,
-.date-picker-header {
-	display: flex;
-}
-
-.date-picker-form {
-	.form-control {
-		background-color: $date-picker-form-control-background-color;
-		border-color: $date-picker-form-control-border-color;
-		color: $date-picker-form-control-color;
-		font-weight: $date-picker-form-control-font-weight;
-	}
-
-	.input-date-picker-month {
-		min-width: $date-picker-input-month-min-width;
-	}
-
-	.input-date-picker-year {
-		min-width: $date-picker-input-year-min-width;
+	.input-group-text {
+		@include clay-input-group-text-variant($date-picker-input-group-text);
 	}
 }
 
-.date-picker-navigation {
-	> button {
-		font-size: $date-picker-navigation-button-font-size !important;
-		color: $date-picker-navigation-button-color !important;
-		margin-bottom: $date-picker-navigation-button-margin-bottom;
-		margin-left: $date-picker-navigation-button-margin-left;
-		margin-right: $date-picker-navigation-button-margin-right;
-		margin-top: $date-picker-navigation-button-margin-top;
+// Date Picker Dropdown Menu
+
+.date-picker-dropdown-menu {
+	@include clay-dropdown-menu-variant($date-picker-dropdown-menu);
+}
+
+// Date Picker Nav
+
+.date-picker-nav {
+	@include clay-row($date-picker-nav-row);
+
+	.nav-btn {
+		@include clay-button-variant($date-picker-nav-btn);
+	}
+
+	.nav-btn-monospaced {
+		@include clay-button-variant($date-picker-nav-btn-monospaced);
+	}
+
+	select.form-control {
+		@include clay-select-variant($date-picker-nav-select);
 	}
 }
 
-.date-picker-header {
+.date-picker-nav-item {
 	align-items: center;
-	height: $date-picker-header-height;
-	justify-content: space-between;
-	margin-top: $date-picker-header-margin-top;
-	padding: $date-picker-header-padding-y $date-picker-header-padding-x;
-	width: $date-picker-header-width;
-
-	.date-picker-weekday {
-		color: $date-picker-header-weekday-color;
-		font-weight: $date-picker-header-weekday-font-weight;
-		text-align: center;
-		width: $date-picker-header-weekday-width;
-	}
+	display: flex;
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
 }
 
-.date-picker-body {
-	flex-wrap: wrap;
-	margin-top: $date-picker-body-margin-top;
-	width: $date-picker-body-width;
+.date-picker-nav-item-expand {
+	flex-grow: 1;
+}
+
+.date-picker-nav-controls {
+	display: flex;
+	justify-content: flex-end;
+}
+
+// Date Picker Calendar
+
+.date-picker-calendar {
+	@include clay-container($date-picker-calendar-container);
+}
+
+.date-picker-calendar-header {
+	@include clay-container($date-picker-calendar-header-container);
+}
+
+.date-picker-calendar-body {
+	@include clay-container($date-picker-calendar-body-container);
+}
+
+.date-picker-calendar-footer {
+	@include clay-container($date-picker-calendar-footer-container);
+}
+
+.date-picker-calendar-item {
+	@include clay-button-variant($date-picker-calendar-item);
+}
+
+// Date Picker Days
+
+.date-picker-row {
+	@include clay-row($date-picker-row);
 }
 
 .date-picker-days-row {
-	height: $date-picker-days-row-height;
-	margin-bottom: $date-picker-days-row-margin-bottom;
-	margin-left: $date-picker-days-row-margin-left;
-	margin-right: $date-picker-days-row-margin-right;
-	margin-top: $date-picker-days-row-margin-top;
-	width: $date-picker-days-row-width;
+	@include clay-row($date-picker-days-row);
 }
 
 .date-picker-day {
-	align-items: center;
-	border-radius: $date-picker-day-border-radius;
-	color: $date-picker-day-color;
-	cursor: pointer;
-	font-weight: $date-picker-day-font-weight;
-	justify-content: center;
-	margin-bottom: $date-picker-day-margin-bottom;
-	margin-left: $date-picker-day-margin-left;
-	margin-right: $date-picker-day-margin-right;
-	margin-top: $date-picker-day-margin-top;
-	width: $date-picker-day-width;
-
-	&.outside {
-		color: $date-picker-day-outside-color;
-		pointer-events: none;
-	}
-
-	&.active {
-		background-color: $date-picker-day-active-background-color;
-		color: $date-picker-day-active-color;
-	}
-
-	&:not(.active):hover {
-		background-color: $date-picker-day-hover-background-color;
-	}
+	@include clay-button-variant($date-picker-day);
 }
 
-.date-picker-timer {
-	align-items: center;
-	border-top: 1px solid $date-picker-timer-border-color;
-	color: $date-picker-timer-icon-color;
-	display: flex;
-	padding: $date-picker-timer-padding-y $date-picker-timer-padding-x;
+// Date Picker Date
 
-	.lexicon-icon {
-		font-size: $date-picker-timer-icon-font-size;
-		margin-right: $date-picker-timer-icon-margin-right;
-		margin-top: $date-picker-timer-icon-margin-top;
-	}
+.date-picker-date-row {
+	@include clay-row($date-picker-date-row);
+}
+
+.date-picker-date {
+	@include clay-button-variant($date-picker-date);
+}
+
+// Previous Month Date
+
+.previous-month-date {
+	@include clay-button-variant($date-picker-previous-month-date);
+}
+
+// Next Month Date
+
+.next-month-date {
+	@include clay-button-variant($date-picker-next-month-date);
 }
