@@ -118,6 +118,13 @@ exports[`ClayAutocomplete should render a ClayAutocomplete with input value 1`] 
 </div>
 `;
 
+exports[`ClayAutocomplete should render a ClayAutocomplete with placeholder 1`] = `
+<div class="dropdown-full form-group">
+  <input class="form-control" ref="input" type="text" placeholder="Placeholder" value="">
+  <ul class="dropdown-menu" ref="dropdown"></ul>
+</div>
+`;
+
 exports[`ClayAutocomplete should render a ClayAutocomplete with unstable_content 1`] = `
 <div class="dropdown-full form-group">Some content...
   <input class="form-control" ref="input" type="text" value="">

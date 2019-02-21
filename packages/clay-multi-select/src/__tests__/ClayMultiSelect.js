@@ -69,6 +69,17 @@ describe('ClayMultiSelect', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a ClayMultiSelect with placeholder', () => {
+		component = new ClayMultiSelect({
+			dataSource,
+			helpText,
+			placeholder: 'Placeholder',
+			spritemap,
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
 	it('should render a ClayMultiSelect with label', () => {
 		component = new ClayMultiSelect({
 			dataSource,

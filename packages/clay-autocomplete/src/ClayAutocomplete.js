@@ -386,6 +386,15 @@ ClayAutocomplete.STATE = {
 	inputValue: Config.string(),
 
 	/**
+	 * Input placeholder.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayAutocomplete
+	 * @type {?(string|undefined)}
+	 */
+	placeholder: Config.string(),
+
+	/**
 	 * Flag to define how often to refetch data (ms)
 	 * @instance
 	 * @default 0
