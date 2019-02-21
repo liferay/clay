@@ -45,6 +45,28 @@
 	@extend %aspect-ratio-item-vertical-fluid;
 }
 
+// Flush
+
+%aspect-ratio-item-flush {
+	max-width: none;
+	position: absolute;
+	width: 100.6%; // Fixes subpixel rendering issues
+}
+
+.aspect-ratio-item-flush {
+	@extend %aspect-ratio-item-flush;
+}
+
+%aspect-ratio-item-vertical-flush {
+	height: 100.6%; // Fixes subpixel rendering issues
+	max-height: none;
+	position: absolute;
+}
+
+.aspect-ratio-item-vertical-flush {
+	@extend %aspect-ratio-item-vertical-flush;
+}
+
 // Top Center
 
 %aspect-ratio-item-top-center {
