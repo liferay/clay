@@ -26,6 +26,7 @@ class ClayNavigationBar extends ClayComponent {
 		if (this._isTransitioning && !this._visible) {
 			this._setCollapseHeight();
 		} else if (this._isTransitioning && this._visible) {
+			this._setCollapseHeight();
 			this._removeCollapseHeight();
 		}
 	}
