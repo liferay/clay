@@ -252,6 +252,8 @@ class ClayMultiSelect extends ClayComponent {
 				this.inputValue = valueOut;
 			}
 		} else {
+			this.inputValue = valueOut;
+
 			return !this.emit({
 				data: {
 					values,
@@ -415,6 +417,16 @@ ClayMultiSelect.STATE = {
 	_inputFocus: Config.bool()
 		.value(false)
 		.internal(),
+
+	/**
+	 * Flag to indicate the characters allowed in the
+	 * input element (e.g /[a-zA-Z0-9_]/g).
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @type {?RegExp}
+	 */
+	allowedCharacters: Config.instanceOf(RegExp),
 
 	/**
 	 * Variation name to render different deltemplates.

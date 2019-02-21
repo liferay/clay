@@ -17,6 +17,7 @@
 	{@param? _handleOnInput: any}
 	{@param? _handleOnKeydown: any}
 	{@param? _inputFocus: bool}
+	{@param? allowedCharacters: any}
 	{@param? contentRenderer: string}
 	{@param? debounceTime: number}
 	{@param? elementClasses: string}
@@ -72,6 +73,7 @@
 			{param _handleOnInput: $_handleOnInput /}
 			{param _handleOnKeydown: $_handleOnKeydown /}
 			{param _inputFocus: $_inputFocus /}
+			{param allowedCharacters: $allowedCharacters /}
 			{param contentRenderer: $contentRenderer ?: ''/}
 			{param dataSource: $dataSource /}
 			{param debounceTime: $debounceTime /}
@@ -110,6 +112,7 @@
 	{@param? _handleOnInput: any}
 	{@param? _handleOnKeydown: any}
 	{@param? _inputFocus: bool}
+	{@param? allowedCharacters: any}
 	{@param? contentRenderer: string}
 	{@param? debounceTime: number}
 	{@param? filteredItems: list<?>}
@@ -144,6 +147,7 @@
 			{/let}
 
 			{call ClayAutocomplete.render}
+				{param allowedCharacters: $allowedCharacters /}
 				{param contentRenderer: $contentRenderer /}
 				{param dataSource: $dataSource /}
 				{param debounceTime: $debounceTime /}
