@@ -4,20 +4,22 @@ exports[`ClayMultiSelect Lifecycle itemAdded should not emit an event when the i
 <div class="from-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
-      <div class="dropdown-full form-control form-control-tag-group">
-        <input name="selectedItems" type="hidden" value="foo">
-        <span class="label label-secondary label-dismissible" id="item-tag" tabindex="0" data-tag="0">
-          <span class="label-item label-item-expand">foo</span>
-          <span class="label-item label-item-after">
-            <button class="btn close" aria-label="close" tabindex="-1" type="button">
-              <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                <use xlink:href="icons.svg#times"></use>
-              </svg>
-            </button>
+      <div class="dropdown dropdown-full">
+        <div class=" form-control form-control-tag-group">
+          <input name="selectedItems" type="hidden" value="foo">
+          <span class="label label-secondary label-dismissible" id="item-tag" tabindex="0" data-tag="0">
+            <span class="label-item label-item-expand">foo</span>
+            <span class="label-item label-item-after">
+              <button class="btn close" aria-label="close" tabindex="-1" type="button">
+                <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                  <use xlink:href="icons.svg#times"></use>
+                </svg>
+              </button>
+            </span>
           </span>
-        </span>
-        <input class="form-control-inset" ref="input" type="text" value="foo">
-        <ul class="dropdown-menu" ref="dropdown"></ul>
+          <input class="form-control-inset" ref="input" type="text" value="foo">
+          <ul class="dropdown-menu" ref="dropdown"></ul>
+        </div>
       </div>
       <div class="form-feedback-group">
         <div class="form-text">You can use a comma to enter tags</div>
@@ -34,9 +36,11 @@ exports[`ClayMultiSelect should render a ClayMultiSelect and add the class focus
 <div class="from-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
-      <div class="dropdown-full form-control form-control-tag-group focus">
-        <input class="form-control-inset" ref="input" type="text" value="">
-        <ul class="dropdown-menu" ref="dropdown"></ul>
+      <div class="dropdown dropdown-full">
+        <div class=" form-control form-control-tag-group focus">
+          <input class="form-control-inset" ref="input" type="text" value="">
+          <ul class="dropdown-menu" ref="dropdown"></ul>
+        </div>
       </div>
       <div class="form-feedback-group">
         <div class="form-text">You can use a comma to enter tags</div>
@@ -53,31 +57,33 @@ exports[`ClayMultiSelect should render a ClayMultiSelect and keep the focus of t
 <div class="from-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
-      <div class="dropdown-full form-control form-control-tag-group focus">
-        <input name="selectedItems" type="hidden" value="foo">
-        <span class="label label-secondary label-dismissible" id="item-tag" tabindex="0" data-tag="0">
-          <span class="label-item label-item-expand">Foo</span>
-          <span class="label-item label-item-after">
-            <button class="btn close" aria-label="close" tabindex="-1" type="button">
-              <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                <use xlink:href="icons.svg#times"></use>
-              </svg>
-            </button>
+      <div class="dropdown dropdown-full">
+        <div class=" form-control form-control-tag-group focus">
+          <input name="selectedItems" type="hidden" value="foo">
+          <span class="label label-secondary label-dismissible" id="item-tag" tabindex="0" data-tag="0">
+            <span class="label-item label-item-expand">Foo</span>
+            <span class="label-item label-item-after">
+              <button class="btn close" aria-label="close" tabindex="-1" type="button">
+                <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                  <use xlink:href="icons.svg#times"></use>
+                </svg>
+              </button>
+            </span>
           </span>
-        </span>
-        <input name="selectedItems" type="hidden" value="bar">
-        <span class="label label-secondary label-dismissible" id="item-tag" tabindex="0" data-tag="1">
-          <span class="label-item label-item-expand">Bar</span>
-          <span class="label-item label-item-after">
-            <button class="btn close" aria-label="close" tabindex="-1" type="button">
-              <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                <use xlink:href="icons.svg#times"></use>
-              </svg>
-            </button>
+          <input name="selectedItems" type="hidden" value="bar">
+          <span class="label label-secondary label-dismissible" id="item-tag" tabindex="0" data-tag="1">
+            <span class="label-item label-item-expand">Bar</span>
+            <span class="label-item label-item-after">
+              <button class="btn close" aria-label="close" tabindex="-1" type="button">
+                <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                  <use xlink:href="icons.svg#times"></use>
+                </svg>
+              </button>
+            </span>
           </span>
-        </span>
-        <input class="form-control-inset" ref="input" type="text" value="">
-        <ul class="dropdown-menu" ref="dropdown"></ul>
+          <input class="form-control-inset" ref="input" type="text" value="">
+          <ul class="dropdown-menu" ref="dropdown"></ul>
+        </div>
       </div>
       <div class="form-feedback-group">
         <div class="form-text">You can use a comma to enter tags</div>
@@ -94,9 +100,11 @@ exports[`ClayMultiSelect should render a ClayMultiSelect and remove the focus wh
 <div class="from-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
-      <div class="dropdown-full form-control form-control-tag-group">
-        <input class="form-control-inset" ref="input" type="text" value="">
-        <ul class="dropdown-menu" ref="dropdown"></ul>
+      <div class="dropdown dropdown-full">
+        <div class=" form-control form-control-tag-group">
+          <input class="form-control-inset" ref="input" type="text" value="">
+          <ul class="dropdown-menu" ref="dropdown"></ul>
+        </div>
       </div>
       <div class="form-feedback-group">
         <div class="form-text">You can use a comma to enter tags</div>
@@ -113,9 +121,11 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with classes 1`] = `
 <div class="from-group my-custom-class">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
-      <div class="dropdown-full form-control form-control-tag-group">
-        <input class="form-control-inset" ref="input" type="text" value="">
-        <ul class="dropdown-menu" ref="dropdown"></ul>
+      <div class="dropdown dropdown-full">
+        <div class=" form-control form-control-tag-group">
+          <input class="form-control-inset" ref="input" type="text" value="">
+          <ul class="dropdown-menu" ref="dropdown"></ul>
+        </div>
       </div>
       <div class="form-feedback-group">
         <div class="form-text">You can use a comma to enter tags</div>
@@ -132,9 +142,11 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with id 1`] = `
 <div class="from-group" id="myId">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
-      <div class="dropdown-full form-control form-control-tag-group">
-        <input class="form-control-inset" ref="input" type="text" value="">
-        <ul class="dropdown-menu" ref="dropdown"></ul>
+      <div class="dropdown dropdown-full">
+        <div class=" form-control form-control-tag-group">
+          <input class="form-control-inset" ref="input" type="text" value="">
+          <ul class="dropdown-menu" ref="dropdown"></ul>
+        </div>
       </div>
       <div class="form-feedback-group">
         <div class="form-text">You can use a comma to enter tags</div>
@@ -151,9 +163,11 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with input name from se
 <div class="from-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
-      <div class="dropdown-full form-control form-control-tag-group">
-        <input class="form-control-inset" ref="input" type="text" value="">
-        <ul class="dropdown-menu" ref="dropdown"></ul>
+      <div class="dropdown dropdown-full">
+        <div class=" form-control form-control-tag-group">
+          <input class="form-control-inset" ref="input" type="text" value="">
+          <ul class="dropdown-menu" ref="dropdown"></ul>
+        </div>
       </div>
       <div class="form-feedback-group">
         <div class="form-text">You can use a comma to enter tags</div>
@@ -171,9 +185,11 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with label 1`] = `
   <label>Foo</label>
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
-      <div class="dropdown-full form-control form-control-tag-group">
-        <input class="form-control-inset" ref="input" type="text" value="">
-        <ul class="dropdown-menu" ref="dropdown"></ul>
+      <div class="dropdown dropdown-full">
+        <div class=" form-control form-control-tag-group">
+          <input class="form-control-inset" ref="input" type="text" value="">
+          <ul class="dropdown-menu" ref="dropdown"></ul>
+        </div>
       </div>
       <div class="form-feedback-group">
         <div class="form-text">You can use a comma to enter tags</div>
@@ -190,42 +206,44 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with multiple values wi
 <div class="from-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
-      <div class="dropdown-full form-control form-control-tag-group focus">
-        <input type="hidden" value="a" name="selectedItems">
-        <span class="label label-secondary label-dismissible" id="item-tag" tabindex="0" data-tag="0">
-          <span class="label-item label-item-expand">a</span>
-          <span class="label-item label-item-after">
-            <button class="btn close" aria-label="close" tabindex="-1" type="button">
-              <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                <use xlink:href="icons.svg#times"></use>
-              </svg>
-            </button>
+      <div class="dropdown dropdown-full">
+        <div class=" form-control form-control-tag-group focus">
+          <input type="hidden" value="a" name="selectedItems">
+          <span class="label label-secondary label-dismissible" id="item-tag" tabindex="0" data-tag="0">
+            <span class="label-item label-item-expand">a</span>
+            <span class="label-item label-item-after">
+              <button class="btn close" aria-label="close" tabindex="-1" type="button">
+                <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                  <use xlink:href="icons.svg#times"></use>
+                </svg>
+              </button>
+            </span>
           </span>
-        </span>
-        <input name="selectedItems" type="hidden" value="b">
-        <span class="label label-secondary label-dismissible" id="item-tag" tabindex="0" data-tag="1">
-          <span class="label-item label-item-expand">b</span>
-          <span class="label-item label-item-after">
-            <button class="btn close" aria-label="close" tabindex="-1" type="button">
-              <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                <use xlink:href="icons.svg#times"></use>
-              </svg>
-            </button>
+          <input name="selectedItems" type="hidden" value="b">
+          <span class="label label-secondary label-dismissible" id="item-tag" tabindex="0" data-tag="1">
+            <span class="label-item label-item-expand">b</span>
+            <span class="label-item label-item-after">
+              <button class="btn close" aria-label="close" tabindex="-1" type="button">
+                <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                  <use xlink:href="icons.svg#times"></use>
+                </svg>
+              </button>
+            </span>
           </span>
-        </span>
-        <input name="selectedItems" type="hidden" value="something">
-        <span class="label label-secondary label-dismissible" id="item-tag" tabindex="0" data-tag="2">
-          <span class="label-item label-item-expand">something</span>
-          <span class="label-item label-item-after">
-            <button class="btn close" aria-label="close" tabindex="-1" type="button">
-              <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                <use xlink:href="icons.svg#times"></use>
-              </svg>
-            </button>
+          <input name="selectedItems" type="hidden" value="something">
+          <span class="label label-secondary label-dismissible" id="item-tag" tabindex="0" data-tag="2">
+            <span class="label-item label-item-expand">something</span>
+            <span class="label-item label-item-after">
+              <button class="btn close" aria-label="close" tabindex="-1" type="button">
+                <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                  <use xlink:href="icons.svg#times"></use>
+                </svg>
+              </button>
+            </span>
           </span>
-        </span>
-        <input class="form-control-inset" ref="input" type="text" value="">
-        <ul class="dropdown-menu" ref="dropdown"></ul>
+          <input class="form-control-inset" ref="input" type="text" value="">
+          <ul class="dropdown-menu" ref="dropdown"></ul>
+        </div>
       </div>
       <div class="form-feedback-group">
         <div class="form-text">You can use a comma to enter tags</div>
@@ -261,9 +279,11 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with select button hidd
 <div class="from-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
-      <div class="dropdown-full form-control form-control-tag-group">
-        <input class="form-control-inset" ref="input" type="text" value="">
-        <ul class="dropdown-menu" ref="dropdown"></ul>
+      <div class="dropdown dropdown-full">
+        <div class=" form-control form-control-tag-group">
+          <input class="form-control-inset" ref="input" type="text" value="">
+          <ul class="dropdown-menu" ref="dropdown"></ul>
+        </div>
       </div>
       <div class="form-feedback-group">
         <div class="form-text">You can use a comma to enter tags</div>
@@ -277,31 +297,33 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with selected items 1`]
 <div class="from-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
-      <div class="dropdown-full form-control form-control-tag-group">
-        <input name="selectedItems" type="hidden" value="foo">
-        <span class="label label-secondary label-dismissible" id="item-tag" tabindex="0" data-tag="0">
-          <span class="label-item label-item-expand">Foo</span>
-          <span class="label-item label-item-after">
-            <button class="btn close" aria-label="close" tabindex="-1" type="button">
-              <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                <use xlink:href="icons.svg#times"></use>
-              </svg>
-            </button>
+      <div class="dropdown dropdown-full">
+        <div class=" form-control form-control-tag-group">
+          <input name="selectedItems" type="hidden" value="foo">
+          <span class="label label-secondary label-dismissible" id="item-tag" tabindex="0" data-tag="0">
+            <span class="label-item label-item-expand">Foo</span>
+            <span class="label-item label-item-after">
+              <button class="btn close" aria-label="close" tabindex="-1" type="button">
+                <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                  <use xlink:href="icons.svg#times"></use>
+                </svg>
+              </button>
+            </span>
           </span>
-        </span>
-        <input name="selectedItems" type="hidden" value="bar">
-        <span class="label label-secondary label-dismissible" id="item-tag" tabindex="0" data-tag="1">
-          <span class="label-item label-item-expand">Bar</span>
-          <span class="label-item label-item-after">
-            <button class="btn close" aria-label="close" tabindex="-1" type="button">
-              <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                <use xlink:href="icons.svg#times"></use>
-              </svg>
-            </button>
+          <input name="selectedItems" type="hidden" value="bar">
+          <span class="label label-secondary label-dismissible" id="item-tag" tabindex="0" data-tag="1">
+            <span class="label-item label-item-expand">Bar</span>
+            <span class="label-item label-item-after">
+              <button class="btn close" aria-label="close" tabindex="-1" type="button">
+                <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                  <use xlink:href="icons.svg#times"></use>
+                </svg>
+              </button>
+            </span>
           </span>
-        </span>
-        <input class="form-control-inset" ref="input" type="text" value="">
-        <ul class="dropdown-menu" ref="dropdown"></ul>
+          <input class="form-control-inset" ref="input" type="text" value="">
+          <ul class="dropdown-menu" ref="dropdown"></ul>
+        </div>
       </div>
       <div class="form-feedback-group">
         <div class="form-text">You can use a comma to enter tags</div>
@@ -318,9 +340,11 @@ exports[`ClayMultiSelect should render the default markup 1`] = `
 <div class="from-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
-      <div class="dropdown-full form-control form-control-tag-group">
-        <input class="form-control-inset" ref="input" type="text" value="">
-        <ul class="dropdown-menu" ref="dropdown"></ul>
+      <div class="dropdown dropdown-full">
+        <div class=" form-control form-control-tag-group">
+          <input class="form-control-inset" ref="input" type="text" value="">
+          <ul class="dropdown-menu" ref="dropdown"></ul>
+        </div>
       </div>
       <div class="form-feedback-group">
         <div class="form-text">You can use a comma to enter tags</div>
