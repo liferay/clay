@@ -1,6 +1,5 @@
 .sticker {
 	align-items: center;
-
 	border-color: $sticker-border-color;
 
 	@include border-radius($sticker-border-radius);
@@ -117,6 +116,12 @@
 		left: auto;
 		right: $sticker-outside-offset;
 	}
+}
+
+// Sticker User Icon
+
+.sticker-user-icon {
+	@include clay-sticker-variant($sticker-user-icon);
 }
 
 // Sticker Sizes
