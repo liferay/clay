@@ -1,3 +1,36 @@
+// Simple Toggle Switch
+
+.simple-toggle-switch {
+	align-items: center;
+	display: inline-flex;
+
+	.toggle-switch-check + .toggle-switch-label {
+		margin-right: $simple-toggle-switch-label-spacer-x;
+	}
+
+	.toggle-switch-label {
+		line-height: $simple-toggle-switch-label-line-height;
+		margin-bottom: 0;
+		max-width: calc(100% - #{clay-data-label-text-position($toggle-switch-bar-width, $toggle-switch-bar-padding)});
+
+		@include clay-scale-component {
+			max-width: calc(100% - #{clay-data-label-text-position($toggle-switch-bar-width-mobile, $toggle-switch-bar-padding-mobile)});
+		}
+	}
+}
+
+.simple-toggle-switch-reverse {
+	.toggle-switch-label {
+		margin-right: $simple-toggle-switch-label-spacer-x;
+	}
+
+	.toggle-switch-bar {
+		order: 5;
+	}
+}
+
+// Toggle Switch
+
 .toggle-switch {
 	cursor: pointer;
 }
