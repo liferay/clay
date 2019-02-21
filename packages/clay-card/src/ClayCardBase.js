@@ -62,6 +62,17 @@ ClayCardBase.STATE = {
 	actionItems: actionItemsValidator,
 
 	/**
+	 * CSS classes for the aspect ratio images
+	 * @default aspect-ratio-item-center-middle aspect-ratio-item-fluid
+	 * @instance
+	 * @memberof ClayCardBase
+	 * @type {?(string|undefined)}
+	 */
+	aspectRatioClasses: Config.string().value(
+		'aspect-ratio-item-center-middle aspect-ratio-item-fluid'
+	),
+
+	/**
 	 * Content Renderer name of card.
 	 * @default image
 	 * @instance
