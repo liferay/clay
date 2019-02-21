@@ -1267,9 +1267,12 @@ ChartBase.STATE = {
 	 * @default undefined
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?(string|undefined)}
+	 * @type {?(string|object|undefined)}
 	 */
-	splineInterpolationType: Config.string().setter(value => {
+	splineInterpolationType: Config.oneOfType([
+		Config.string(),
+		Config.object(),
+	]).setter(value => {
 		return value ? {interpolation: {type: value}} : value;
 	}),
 
