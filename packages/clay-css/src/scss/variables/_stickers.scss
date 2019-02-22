@@ -38,6 +38,15 @@ $sticker-outside-offset: -($sticker-size / 2) !default;
 
 $sticker-circle-border-radius: $rounded-circle-border-radius !default;
 
+// Sticker User Icon
+
+$sticker-user-icon: () !default;
+$sticker-user-icon: map-merge((
+	bg: $white,
+	border-radius: $rounded-circle-border-radius,
+	box-shadow: 0 0 0 1px rgba($black, 0.125),
+), $sticker-user-icon);
+
 // Sticker Variants
 
 $sticker-primary-bg: $primary !default;
