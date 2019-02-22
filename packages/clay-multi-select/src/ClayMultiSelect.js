@@ -80,7 +80,7 @@ class ClayMultiSelect extends ClayComponent {
 		const label = this._performCall(this.labelLocator, event.data);
 		const data = this._getItemSchema(label, value);
 
-		return this._handleItemAdded(value, data, event, 'itemSelected');
+		return this._handleItemAdded(value, data, event);
 	}
 
 	/**
@@ -127,11 +127,10 @@ class ClayMultiSelect extends ClayComponent {
 	 * @param {!String} value
 	 * @param {!(object|array|string)} data
 	 * @param {!Event} event
-	 * @param {?String} eventName
 	 * @protected
 	 * @return {?Boolean} If the event has been prevented or not.
 	 */
-	_handleItemAdded(value, data, event, eventName = 'itemAdded') {
+	_handleItemAdded(value, data, event) {
 		const label = value.toLowerCase();
 
 		if (
@@ -150,7 +149,7 @@ class ClayMultiSelect extends ClayComponent {
 				data: {
 					item: this.selectedItems[index - 1],
 				},
-				name: eventName,
+				name: 'itemAdded',
 				originalEvent: event,
 			});
 		} else {
@@ -253,6 +252,8 @@ class ClayMultiSelect extends ClayComponent {
 				this.inputValue = valueOut;
 			}
 		} else {
+			this.inputValue = valueOut;
+
 			return !this.emit({
 				data: {
 					values,
@@ -418,6 +419,16 @@ ClayMultiSelect.STATE = {
 		.internal(),
 
 	/**
+	 * Flag to indicate the characters allowed in the
+	 * input element (e.g /[a-zA-Z0-9_]/g).
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @type {?RegExp}
+	 */
+	allowedCharacters: Config.instanceOf(RegExp),
+
+	/**
 	 * Variation name to render different deltemplates.
 	 * @default undefined
 	 * @instance
@@ -541,6 +552,15 @@ ClayMultiSelect.STATE = {
 	inputName: Config.string().value('selectedItems'),
 
 	/**
+	 * Input placeholder.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @type {?(string|undefined)}
+	 */
+	placeholder: Config.string(),
+
+	/**
 	 * Flag to define how often to refetch data (ms)
 	 * @instance
 	 * @default 0
@@ -638,6 +658,15 @@ ClayMultiSelect.STATE = {
 	 * @type {?Array<Object>}
 	 */
 	selectedItems: Config.array(Config.object()).value([]),
+
+	/**
+	 * Flag to indicate if select button should be shown or not.
+	 * @default true
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @type {?bool}
+	 */
+	showSelectButton: Config.bool().value(true),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.

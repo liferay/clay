@@ -33,7 +33,9 @@ class ClayAutocomplete extends ClayComponent {
 	 * @inheritDoc
 	 */
 	syncFilteredItems() {
-		this._dropdownItemFocused = null;
+		if (!this.filteredItems.length) {
+			this._dropdownItemFocused = null;
+		}
 	}
 
 	/**
@@ -148,11 +150,19 @@ class ClayAutocomplete extends ClayComponent {
 	 */
 	_handleOnInput(event) {
 		const {value} = event.target;
-		const char = event.data || value.substr(-1);
+		const newValue = this.allowedCharacters
+			? this._getCharactersAllowed(value)
+			: value;
+		const char = newValue.substr(-1);
+
+		// Updates the value of the input with the value
+		// entered by the user in case the validation is false
+		// the above components can update the state of the input value.
+		this.inputValue = value;
 
 		return !this.emit({
 			data: {
-				value,
+				value: newValue,
 				char,
 			},
 			name: 'inputChange',
@@ -178,9 +188,11 @@ class ClayAutocomplete extends ClayComponent {
 			}
 			break;
 		case 'ArrowUp':
+			event.preventDefault();
 			this._setFocusItem(true);
 			break;
 		case 'ArrowDown':
+			event.preventDefault();
 			event.stopPropagation();
 			this._setFocusItem(false);
 			break;
@@ -229,6 +241,20 @@ class ClayAutocomplete extends ClayComponent {
 			}
 		}
 	}
+
+	/**
+	 * Gets the accepted characters of the input
+	 * element values
+	 * @param {!string} value
+	 * @protected
+	 * @return {string}
+	 */
+	_getCharactersAllowed(value) {
+		const regexp = new RegExp(this.allowedCharacters);
+		const match = value.match(regexp);
+
+		return Array.isArray(match) ? match.join('') : '';
+	}
 }
 
 /**
@@ -237,6 +263,16 @@ class ClayAutocomplete extends ClayComponent {
  * @type {!Object}
  */
 ClayAutocomplete.STATE = {
+	/**
+	 * Flag to indicate the characters allowed in the
+	 * input element (e.g /[a-zA-Z0-9_]/g).
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayAutocomplete
+	 * @type {?RegExp}
+	 */
+	allowedCharacters: Config.instanceOf(RegExp),
+
 	/**
 	 * Variation name to render different deltemplates.
 	 * @default undefined
@@ -380,6 +416,15 @@ ClayAutocomplete.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	inputValue: Config.string(),
+
+	/**
+	 * Input placeholder.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayAutocomplete
+	 * @type {?(string|undefined)}
+	 */
+	placeholder: Config.string(),
 
 	/**
 	 * Flag to define how often to refetch data (ms)

@@ -69,6 +69,17 @@ describe('ClayMultiSelect', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a ClayMultiSelect with placeholder', () => {
+		component = new ClayMultiSelect({
+			dataSource,
+			helpText,
+			placeholder: 'Placeholder',
+			spritemap,
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
 	it('should render a ClayMultiSelect with label', () => {
 		component = new ClayMultiSelect({
 			dataSource,
@@ -106,6 +117,17 @@ describe('ClayMultiSelect', function() {
 			dataSource,
 			helpText,
 			inputName: 'foo',
+			spritemap,
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
+	it('should render a ClayMultiSelect with select button hidden', () => {
+		component = new ClayMultiSelect({
+			dataSource,
+			helpText,
+			showSelectButton: false,
 			spritemap,
 		});
 
@@ -255,7 +277,7 @@ describe('ClayMultiSelect', function() {
 			expect(spy).toHaveBeenCalledWith(
 				expect.objectContaining({
 					data: expect.any(Object),
-					name: 'itemSelected',
+					name: 'itemAdded',
 					originalEvent: expect.any(Object),
 				})
 			);

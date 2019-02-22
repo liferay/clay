@@ -10,12 +10,14 @@ section: Components
 		<h3>Toggle Switch with Checkbox</h3>
 
 		<div class="sheet">
-			<label class="toggle-switch">
-				<input class="toggle-switch-check" type="checkbox">
-				<span aria-hidden="true" class="toggle-switch-bar">
-					<span class="toggle-switch-handle"></span>
-				</span>
-			</label>
+			<div class="form-group">
+				<label class="toggle-switch">
+					<input class="toggle-switch-check" type="checkbox">
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle"></span>
+					</span>
+				</label>
+			</div>
 		</div>
 	</div>
 </div>
@@ -25,24 +27,136 @@ section: Components
 		<h3>Toggle Switch with Radio</h3>
 
 		<div class="sheet">
-			<label class="toggle-switch">
-				<input class="toggle-switch-check" name="toggleSwitchRadio1" type="radio" value="option1">
-				<span aria-hidden="true" class="toggle-switch-bar">
-					<span class="toggle-switch-handle"></span>
-				</span>
-			</label>
-			<label class="toggle-switch">
-				<input class="toggle-switch-check" name="toggleSwitchRadio1" type="radio" value="option2">
-				<span aria-hidden="true" class="toggle-switch-bar">
-					<span class="toggle-switch-handle"></span>
-				</span>
-			</label>
-			<label class="toggle-switch">
-				<input class="toggle-switch-check" name="toggleSwitchRadio1" type="radio" value="option3">
-				<span aria-hidden="true" class="toggle-switch-bar">
-					<span class="toggle-switch-handle"></span>
-				</span>
-			</label>
+			<div class="form-group">
+				<label class="toggle-switch">
+					<input class="toggle-switch-check" name="toggleSwitchRadio1" type="radio" value="option1">
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle"></span>
+					</span>
+				</label>
+				<label class="toggle-switch">
+					<input class="toggle-switch-check" name="toggleSwitchRadio1" type="radio" value="option2">
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle"></span>
+					</span>
+				</label>
+				<label class="toggle-switch">
+					<input class="toggle-switch-check" name="toggleSwitchRadio1" type="radio" value="option3">
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle"></span>
+					</span>
+				</label>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Simple Toggle Switch</h3>
+
+		<div class="alert alert-warning">
+			Simple Toggle Switch is not compatible with <code>toggle-switch-text</code> or Toggle Switch with Data Attributes.
+		</div>
+
+		<div class="sheet">
+			<div class="form-group">
+				<label class="simple-toggle-switch toggle-switch">
+					<input class="toggle-switch-check" type="checkbox">
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle"></span>
+					</span>
+					<span class="toggle-switch-label">Simple Toggle Switch</span>
+				</label>
+			</div>
+
+			<div class="form-group">
+				<label class="simple-toggle-switch toggle-switch">
+					<input class="toggle-switch-check" type="checkbox">
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle" data-label-off="" data-label-on="">
+							<span class="button-icon button-icon-on toggle-switch-icon">
+								<svg class="lexicon-icon lexicon-icon-unlock" focusable="false" role="presentation">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#unlock" />
+								</svg>
+							</span>
+							<span class="button-icon button-icon-off toggle-switch-icon">
+								<svg class="lexicon-icon lexicon-icon-lock" focusable="false" role="presentation">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#lock" />
+								</svg>
+							</span>
+						</span>
+					</span>
+					<span class="toggle-switch-label">
+						ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
+						<span class="reference-mark">
+							<svg class="lexicon-icon lexicon-icon-asterisk" focusable="false" role="presentation">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
+							</svg>
+						</span>
+					</span>
+				</label>
+			</div>
+
+			<div class="form-group">
+				<label class="simple-toggle-switch toggle-switch">
+					<input class="toggle-switch-check" type="checkbox">
+					<span class="toggle-switch-label">Simple Toggle Switch</span>
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle"></span>
+					</span>
+				</label>
+			</div>
+
+			<div class="form-group">
+				<label class="simple-toggle-switch toggle-switch">
+					<input class="toggle-switch-check" type="checkbox">
+					<span class="toggle-switch-label">
+						ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
+						<span class="reference-mark">
+							<svg class="lexicon-icon lexicon-icon-asterisk" focusable="false" role="presentation">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
+							</svg>
+						</span>
+					</span>
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle" data-label-off="" data-label-on="">
+							<span class="button-icon button-icon-on toggle-switch-icon">
+								<svg class="lexicon-icon lexicon-icon-unlock" focusable="false" role="presentation">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#unlock" />
+								</svg>
+							</span>
+							<span class="button-icon button-icon-off toggle-switch-icon">
+								<svg class="lexicon-icon lexicon-icon-lock" focusable="false" role="presentation">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#lock" />
+								</svg>
+							</span>
+						</span>
+					</span>
+				</label>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Simple Toggle Switch Reverse</h3>
+
+		<blockquote class="blockquote">
+			Add <code>simple-toggle-switch-reverse</code> to <code>simple-toggle-switch</code> to align the label text on the left. This utility should be used when you only have limited access to the toggle switch markup. 
+		</blockquote>
+
+		<div class="sheet">
+			<div class="form-group">
+				<label class="simple-toggle-switch simple-toggle-switch-reverse toggle-switch">
+					<input class="toggle-switch-check" type="checkbox">
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle"></span>
+					</span>
+					<span class="toggle-switch-label">Simple Toggle Switch</span>
+				</label>
+			</div>
 		</div>
 	</div>
 </div>
@@ -291,6 +405,17 @@ section: Components
 			</span>
 		</label>
 	</div>
+
+	<div class="form-group">
+		<label class="disabled simple-toggle-switch toggle-switch">
+			<input class="toggle-switch-check" disabled type="checkbox">
+			<span aria-hidden="true" class="toggle-switch-bar">
+				<span class="toggle-switch-handle"></span>
+			</span>
+			<span class="toggle-switch-label">Simple Toggle Switch</span>
+		</label>
+	</div>
+
 	<div class="form-group">
 		<label class="disabled toggle-switch">
 			<input class="toggle-switch-check" disabled type="checkbox">

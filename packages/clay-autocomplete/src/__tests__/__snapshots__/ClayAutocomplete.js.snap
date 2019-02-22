@@ -2,7 +2,7 @@
 
 exports[`ClayAutocomplete should render a ClayAutocomplete and emit an event on item selected 1`] = `
 <div class="dropdown-full form-group">
-  <input class="form-control" ref="input" type="text" value="">
+  <input class="form-control" ref="input" type="text" value="brea">
   <ul class="dropdown-menu show" ref="dropdown">
     <li>
       <a data-dropdown-item-index="0" id="item" class="dropdown-item" href="javascript:;">
@@ -24,7 +24,7 @@ exports[`ClayAutocomplete should render a ClayAutocomplete and emit an event on 
 
 exports[`ClayAutocomplete should render a ClayAutocomplete and emit an event on item selected when press enter 1`] = `
 <div class="dropdown-full form-group">
-  <input class="form-control" ref="input" type="text" value="">
+  <input class="form-control" ref="input" type="text" value="brea">
   <ul class="dropdown-menu show" ref="dropdown">
     <li>
       <a data-dropdown-item-index="0" id="item" class="dropdown-item" href="javascript:;">
@@ -46,7 +46,7 @@ exports[`ClayAutocomplete should render a ClayAutocomplete and emit an event on 
 
 exports[`ClayAutocomplete should render a ClayAutocomplete and filtered items with structured data 1`] = `
 <div class="dropdown-full form-group">
-  <input class="form-control" ref="input" type="text" value="">
+  <input class="form-control" ref="input" type="text" value="e">
   <ul class="dropdown-menu show" ref="dropdown">
     <li>
       <a data-dropdown-item-index="0" id="item" class="dropdown-item" href="javascript:;">Br
@@ -63,7 +63,7 @@ exports[`ClayAutocomplete should render a ClayAutocomplete and filtered items wi
 
 exports[`ClayAutocomplete should render a ClayAutocomplete and not emit an event on item selected when press enter on input 1`] = `
 <div class="dropdown-full form-group">
-  <input class="form-control" ref="input" type="text" value="">
+  <input class="form-control" ref="input" type="text" value="brea">
   <ul class="dropdown-menu show" ref="dropdown">
     <li>
       <a data-dropdown-item-index="0" id="item" class="dropdown-item" href="javascript:;">
@@ -114,6 +114,13 @@ exports[`ClayAutocomplete should render a ClayAutocomplete with input name 1`] =
 exports[`ClayAutocomplete should render a ClayAutocomplete with input value 1`] = `
 <div class="dropdown-full form-group">
   <input class="form-control" ref="input" type="text" value="input value">
+  <ul class="dropdown-menu" ref="dropdown"></ul>
+</div>
+`;
+
+exports[`ClayAutocomplete should render a ClayAutocomplete with placeholder 1`] = `
+<div class="dropdown-full form-group">
+  <input class="form-control" ref="input" type="text" placeholder="Placeholder" value="">
   <ul class="dropdown-menu" ref="dropdown"></ul>
 </div>
 `;

@@ -88,6 +88,15 @@ describe('ClayAutocomplete', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a ClayAutocomplete with placeholder', () => {
+		component = new ClayAutocomplete({
+			dataSource,
+			placeholder: 'Placeholder',
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
 	it('should render a ClayAutocomplete with unstable_content', () => {
 		component = new ClayAutocomplete({
 			dataSource,
@@ -171,6 +180,31 @@ describe('ClayAutocomplete', function() {
 
 		input.value = 'bar';
 		triggerEvent(input, 'input', {data: 'r'});
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				data: {
+					value: 'bar',
+					char: 'r',
+				},
+				name: 'inputChange',
+				originalEvent: expect.any(Object),
+			})
+		);
+	});
+
+	it('should render a ClayAutocomplete with allowed characters and emit an event on query change', () => {
+		component = new ClayAutocomplete({
+			allowedCharacters: /[a-zA-Z0-9_]/g,
+			dataSource,
+		});
+
+		const spy = jest.spyOn(component, 'emit');
+		const {input} = component.refs;
+
+		input.value = 'b!ar#$';
+		triggerEvent(input, 'input', {});
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
