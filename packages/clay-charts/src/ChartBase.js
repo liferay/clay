@@ -1270,8 +1270,8 @@ ChartBase.STATE = {
 	 * @type {?(string|object|undefined)}
 	 */
 	splineInterpolationType: Config.oneOfType([
-		Config.string(),
 		Config.object(),
+		Config.string(),
 	]).setter(value => {
 		return value ? {interpolation: {type: value}} : value;
 	}),
