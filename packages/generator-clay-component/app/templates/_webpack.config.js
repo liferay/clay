@@ -8,19 +8,19 @@ const path = require('path');
 const HWP = require('html-webpack-plugin');
 
 module.exports = {
-	entry: path.join(__dirname, './demo/App.tsx'),
+	entry: path.join(__dirname, 'demo/App.tsx'),
 	module: {
 		rules: [
-			{loader: 'awesome-typescript-loader', test: /\.tsx?$/,},
-			{enforce: 'pre', loader: 'source-map-loader', test: /\.js$/,},
+			{loader: 'awesome-typescript-loader', test: /\.tsx?$/},
+			{enforce: 'pre', loader: 'source-map-loader', test: /\.js$/},
 			{
 				test: /\.css$/,
-				use: ['style-loader', 'css-loader',],
+				use: ['style-loader', 'css-loader'],
 			},
 		],
 	},
-	plugins: [new HWP({template: path.join(__dirname, './demo/index.html'),}),],
+	plugins: [new HWP({template: path.join(__dirname, './demo/index.html')})],
 	resolve: {
-		extensions: ['.ts', '.tsx', '.js', '.json',],
+		extensions: ['.ts', '.tsx', '.js', '.json'],
 	},
 };

@@ -8,8 +8,8 @@
 		"format": "npm run prettier -- --write",
 		"lerna": "lerna bootstrap -- --no-optional --no-package-lock",
 		"link": "lerna run link",
-		"lint": "eslint \"**/*.{js,ts,tsx}\"",
-		"prettier": "prettier-eslint \"**/*.{js,ts,tsx}\"",
+		"lint": "eslint '**/*.{js,ts,tsx}'",
+		"prettier": "prettier-eslint '**/*.{js,ts,tsx}'",
 		"test": "jest",
 		"site": "cd clayui.com && npm run build && npm run serve"
 	},
