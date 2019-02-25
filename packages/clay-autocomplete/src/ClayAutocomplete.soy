@@ -35,12 +35,15 @@
 	{@param? requestRetries: number}
 	{@param? requestTimeout: number}
 	{@param? unstable_content: html}
+	{@param? useDefaultClasses: bool}
 
 	{let $attributes kind="attributes"}
 		class="
 			{if $elementClasses}
 				{sp}{$elementClasses}
-			{else}
+			{/if}
+
+			{if $useDefaultClasses != false}
 				{sp}dropdown-full form-group
 			{/if}
 		"
