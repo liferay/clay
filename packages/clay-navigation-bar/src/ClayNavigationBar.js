@@ -23,11 +23,11 @@ class ClayNavigationBar extends ClayComponent {
 	 */
 	// eslint-disable-next-line
 	sync_isTransitioning() {
-		if (this._isTransitioning && !this._visible) {
+		if (this._isTransitioning) {
 			this._setCollapseHeight();
-		} else if (this._isTransitioning && this._visible) {
-			this._setCollapseHeight();
-			this._removeCollapseHeight();
+			if (this._visible) {
+				this._removeCollapseHeight();
+			}
 		}
 	}
 
