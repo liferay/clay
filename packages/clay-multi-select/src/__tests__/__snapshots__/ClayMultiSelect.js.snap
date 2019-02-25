@@ -262,7 +262,9 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with placeholder 1`] = 
     <div class="input-group-item">
       <div class="dropdown-full form-control form-control-tag-group">
         <input class="form-control-inset" ref="input" type="text" placeholder="Placeholder" value="">
-        <ul class="dropdown-menu" ref="dropdown"></ul>
+        <ul class="dropdown-menu" ref="dropdown">
+          <li class="dropdown-item">no-results-found</li>
+        </ul>
       </div>
       <div class="form-feedback-group">
         <div class="form-text">You can use a comma to enter tags</div>
