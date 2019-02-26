@@ -13,7 +13,7 @@ import PropTypes from 'prop-types';
  */
 function WeekdayHeader({children, firstDayOfWeek, weekdaysShort}) {
 	return (
-		<div className="date-picker-header">
+		<div className="date-picker-days-row date-picker-row">
 			{weekdaysShort.map((weekday, index) => {
 				return React.Children.only(
 					children({

@@ -15,28 +15,38 @@ import Icon from './Icon';
  * TimePicker
  * @return {React.createElement}
  */
-function TimePicker({currentTime, onTimeChange, spritemap, timeFormat}) {
+function TimePicker({
+	currentTime,
+	onTimeChange,
+	spritemap,
+	timeFormat,
+}) {
 	/**
 	 * Handles the control time picker
 	 * @param {!Event} event
 	 */
 	function handleOnChange(event) {
-		const {timer} = event.target.form;
-		const date = moment(timer.value, timeFormat);
+		const {value} = event.target;
+		const date = moment(value, timeFormat);
 
 		onTimeChange(date.hours(), date.minutes());
 	}
 
 	return (
-		<div className="date-picker-timer">
-			<Icon spritemap={spritemap} symbol="time" />
-			<form className="date-picker-control">
+		<div className="time-picker">
+			<div className="input-group">
+				<div className="input-group-item input-group-item-shrink">
+					<span className="input-group-text">
+						<Icon spritemap={spritemap} symbol="time" />
+					</span>
+				</div>
 				<ClayTimePicker
 					name="timer"
 					onChange={handleOnChange}
 					value={currentTime}
+					wrapTime={false}
 				/>
-			</form>
+			</div>
 		</div>
 	);
 }

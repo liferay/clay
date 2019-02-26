@@ -86,9 +86,9 @@ function DateNavigation({
 	}
 
 	return (
-		<div className="date-picker-caption">
-			<form className="date-picker-form">
-				<div className="input-group input-date-picker-month">
+		<div className="date-picker-calendar-header">
+			<form className="date-picker-nav">
+				<div className="date-picker-nav-item input-date-picker-month">
 					<Select
 						name="month"
 						onChange={handleFormChange}
@@ -96,7 +96,7 @@ function DateNavigation({
 						value={currentMonth.getMonth()}
 					/>
 				</div>
-				<div className="input-group input-date-picker-year">
+				<div className="date-picker-nav-item input-date-picker-year">
 					<Select
 						name="year"
 						onChange={handleFormChange}
@@ -104,36 +104,37 @@ function DateNavigation({
 						value={currentMonth.getFullYear()}
 					/>
 				</div>
+
+				<div className="date-picker-nav-item date-picker-nav-item-expand date-picker-nav-controls">
+					<Button
+						ariaLabel={ariaLabels.buttonPreviousMonth}
+						icon="angle-left"
+						monospaced={true}
+						onClick={handlePreviousMonthClicked}
+						size="sm"
+						spritemap={spritemap}
+						style="unstyled"
+					/>
+					<Button
+						ariaLabel={ariaLabels.buttonDot}
+						icon="simple-circle"
+						monospaced={true}
+						onClick={onDotClicked}
+						size="sm"
+						spritemap={spritemap}
+						style="unstyled"
+					/>
+					<Button
+						ariaLabel={ariaLabels.buttonNextMonth}
+						icon="angle-right"
+						monospaced={true}
+						onClick={handleNextMonthClicked}
+						size="sm"
+						spritemap={spritemap}
+						style="unstyled"
+					/>
+				</div>
 			</form>
-			<div className="date-picker-navigation">
-				<Button
-					ariaLabel={ariaLabels.buttonPreviousMonth}
-					icon="angle-left"
-					monospaced={true}
-					onClick={handlePreviousMonthClicked}
-					size="sm"
-					spritemap={spritemap}
-					style="unstyled"
-				/>
-				<Button
-					ariaLabel={ariaLabels.buttonDot}
-					icon="simple-circle"
-					monospaced={true}
-					onClick={onDotClicked}
-					size="sm"
-					spritemap={spritemap}
-					style="unstyled"
-				/>
-				<Button
-					ariaLabel={ariaLabels.buttonNextMonth}
-					icon="angle-right"
-					monospaced={true}
-					onClick={handleNextMonthClicked}
-					size="sm"
-					spritemap={spritemap}
-					style="unstyled"
-				/>
-			</div>
 		</div>
 	);
 }

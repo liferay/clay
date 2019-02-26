@@ -127,31 +127,35 @@ function ClayDatePicker({
 	);
 
 	return (
-		<div className="input-group" id={id} ref={elementRef}>
-			<div className="input-group-item">
-				<InputDate
-					ariaLabel={ariaLabels.input}
-					currentTime={currentTime}
-					dateFormat={dateFormat}
-					inputName={inputName}
-					onChange={inputChange}
-					placeholder={placeholder}
-					time={time}
-					timeFormat={timeFormat}
-					useNative={useNative}
-					value={value}
-				/>
-				{!useNative && (
-					<div className="input-group-inset-item input-group-inset-item-after">
-						<Button
-							icon="calendar"
-							onClick={handleCalendarButtonClicked}
-							spritemap={spritemap}
-							style="unstyled"
-						/>
-					</div>
-				)}
+		<div className="date-picker" ref={elementRef}>
+			<div className="input-group" id={id}>
+				<div className="input-group-item">
+					<InputDate
+						ariaLabel={ariaLabels.input}
+						currentTime={currentTime}
+						dateFormat={dateFormat}
+						inputName={inputName}
+						onChange={inputChange}
+						placeholder={placeholder}
+						time={time}
+						timeFormat={timeFormat}
+						useNative={useNative}
+						value={value}
+					/>
+					{!useNative && (
+						<div className="input-group-inset-item input-group-inset-item-after">
+							<Button
+								className="date-picker-dropdown-toggle"
+								icon="calendar"
+								onClick={handleCalendarButtonClicked}
+								spritemap={spritemap}
+								style="unstyled"
+							/>
+						</div>
+					)}
+				</div>
 			</div>
+
 			{!useNative && (
 				<Dropdown
 					containerRef={elementRef}
@@ -159,7 +163,7 @@ function ClayDatePicker({
 					onDocumentClick={() => setExpanded(false)}
 				>
 					<React.Fragment>
-						<div className="date-picker">
+						<div className="date-picker-calendar">
 							<DateNavigation
 								ariaLabels={ariaLabels}
 								currentMonth={currentMonth}
@@ -173,15 +177,15 @@ function ClayDatePicker({
 								spritemap={spritemap}
 								years={years}
 							/>
-							<WeekdayHeader
-								firstDayOfWeek={firstDayOfWeek}
-								weekdaysShort={weekdaysShort}
-							>
-								{({key, weekday}) => (
-									<Weekday key={key} weekday={weekday} />
-								)}
-							</WeekdayHeader>
-							<div className="date-picker-body">
+							<div className="date-picker-calendar-body">
+								<WeekdayHeader
+									firstDayOfWeek={firstDayOfWeek}
+									weekdaysShort={weekdaysShort}
+								>
+									{({key, weekday}) => (
+										<Weekday key={key} weekday={weekday} />
+									)}
+								</WeekdayHeader>
 								<DaysTable weeks={weeks}>
 									{({day, key}) => (
 										<DayNumber
@@ -193,23 +197,23 @@ function ClayDatePicker({
 									)}
 								</DaysTable>
 							</div>
-						</div>
-						{(footerElement || time) && (
-							<div className="date-picker-footer">
-								{time && (
-									<TimePicker
-										currentTime={currentTime}
-										onTimeChange={setCurrentTime}
-										spritemap={spritemap}
-										timeFormat={timeFormat}
-									/>
-								)}
-								{!time &&
+							{(footerElement || time) && (
+								<div className="date-picker-calendar-footer">
+									{time && (
+										<TimePicker
+											currentTime={currentTime}
+											onTimeChange={setCurrentTime}
+											spritemap={spritemap}
+											timeFormat={timeFormat}
+										/>
+									)}
+									{!time &&
 									React.Children.only(
 										footerElement({spritemap})
 									)}
-							</div>
-						)}
+								</div>
+							)}
+						</div>
 					</React.Fragment>
 				</Dropdown>
 			)}

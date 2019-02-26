@@ -14,15 +14,15 @@ import React from 'react';
  * @return {React.createElement}
  */
 function DayNumber({day, daySelected, onClick}) {
-	const classNames = classnames('date-picker-day', {
-		active:
+	const classNames = classnames('date-picker-date date-picker-calendar-item', {
+		'active':
 			moment(day.date).format('YYYY-MM-DD') ===
 			moment(daySelected).format('YYYY-MM-DD'),
-		outside: day.outside,
+		'disabled': day.outside,
 	});
 
 	return (
-		<div
+		<button
 			aria-label={moment(day.date)
 				.clone()
 				.set('hour', 12)
@@ -31,11 +31,12 @@ function DayNumber({day, daySelected, onClick}) {
 				.set('millisecond', 0)
 				.format('YYYY MM DD')}
 			className={classNames}
+			disabled={day.outside}
 			onClick={() => onClick(day.date)}
-			tabIndex={day.outside ? -1 : 0}
+			type="button"
 		>
 			{day.date.getDate()}
-		</div>
+		</button>
 	);
 }
 

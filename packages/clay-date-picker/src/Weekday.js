@@ -13,7 +13,7 @@ import PropTypes from 'prop-types';
  */
 function Weekday({weekday}) {
 	return (
-		<div className="date-picker-weekday">
+		<div className="date-picker-day date-picker-calendar-item">
 			<abbr>{weekday}</abbr>
 		</div>
 	);
