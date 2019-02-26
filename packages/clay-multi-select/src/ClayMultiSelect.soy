@@ -139,55 +139,57 @@
 
 	<div class="input-group input-group-stacked-sm-down">
 		<div class="input-group-item">
-			{let $autocompleteElementClasses kind="text"}
-				form-control form-control-tag-group
-				{if $_inputFocus}
-					{sp}focus
-				{/if}
-			{/let}
-
-			{call ClayAutocomplete.render}
-				{param allowedCharacters: $allowedCharacters /}
-				{param contentRenderer: $contentRenderer /}
-				{param dataSource: $dataSource /}
-				{param debounceTime: $debounceTime /}
-				{param elementClasses: $autocompleteElementClasses /}
-				{param events: [
-					'dataChange': $_handleDataChange,
-					'filteredItemsChanged': $_handleFilteredItemsChange,
-					'inputChange': $_handleOnInput,
-					'inputOnBlur': $_handleInputOnBlur,
-					'inputOnFocus': $_handleInputOnFocus,
-					'inputOnKeydown': $_handleOnKeydown,
-					'itemSelected': $_handleDropdownItemClick
-				] /}
-				{param extractData: $labelLocator /}
-				{param filteredItems: $filteredItems /}
-				{param initialData: $initialData /}
-				{param inputElementClasses: 'form-control-inset' /}
-				{param inputValue: $inputValue /}
-				{param placeholder: $placeholder /}
-				{param pollingInterval: $pollingInterval /}
-				{param ref: 'autocomplete' /}
-				{param requestOptions: $requestOptions /}
-				{param requestRetries: $requestRetries /}
-				{param requestTimeout: $requestTimeout /}
-				{param unstable_content kind="html"}
-					{if $selectedItems}
-						{call .items}
-							{param _handleCloseButtonClick: $_handleCloseButtonClick /}
-							{param contentRenderer: $contentRenderer /}
-							{param inputName: $inputName /}
-							{param selectedItems: $selectedItems /}
-							{param spritemap: $spritemap /}
-						{/call}
+			<div class="dropdown dropdown-full">
+				{let $autocompleteElementClasses kind="text"}
+					form-control form-control-tag-group
+					{if $_inputFocus}
+						{sp}focus
 					{/if}
-				{/param}
-			{/call}
+				{/let}
 
-			{let $isVisible: $filteredItems and length($filteredItems) > 0 ? true : false /}
+				{call ClayAutocomplete.render}
+					{param allowedCharacters: $allowedCharacters /}
+					{param contentRenderer: $contentRenderer /}
+					{param dataSource: $dataSource /}
+					{param debounceTime: $debounceTime /}
+					{param elementClasses: $autocompleteElementClasses /}
+					{param events: [
+						'dataChange': $_handleDataChange,
+						'filteredItemsChanged': $_handleFilteredItemsChange,
+						'inputChange': $_handleOnInput,
+						'inputOnBlur': $_handleInputOnBlur,
+						'inputOnFocus': $_handleInputOnFocus,
+						'inputOnKeydown': $_handleOnKeydown,
+						'itemSelected': $_handleDropdownItemClick
+					] /}
+					{param extractData: $labelLocator /}
+					{param filteredItems: $filteredItems /}
+					{param initialData: $initialData /}
+					{param inputElementClasses: 'form-control-inset' /}
+					{param inputValue: $inputValue /}
+					{param placeholder: $placeholder /}
+					{param pollingInterval: $pollingInterval /}
+					{param ref: 'autocomplete' /}
+					{param requestOptions: $requestOptions /}
+					{param requestRetries: $requestRetries /}
+					{param requestTimeout: $requestTimeout /}
+					{param unstable_content kind="html"}
+						{if $selectedItems}
+							{call .items}
+								{param _handleCloseButtonClick: $_handleCloseButtonClick /}
+								{param contentRenderer: $contentRenderer /}
+								{param inputName: $inputName /}
+								{param selectedItems: $selectedItems /}
+								{param spritemap: $spritemap /}
+							{/call}
+						{/if}
+					{/param}
 
-			{if not $isVisible}
+					{param useDefaultClasses: false /}
+				{/call}
+			</div>
+
+			{if $helpText}
 				<div class="form-feedback-group">
 					<div class="form-text">
 						{$helpText}
