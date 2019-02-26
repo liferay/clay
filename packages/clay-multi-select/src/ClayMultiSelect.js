@@ -235,12 +235,12 @@ class ClayMultiSelect extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleOnInput(event) {
-		const {values, valueOut} = this._tokenize(event.data.value);
+		const {sentence, invalidWord} = this._tokenize(event.data.value);
 
 		this._removeFocusedItem();
 
-		if (event.data.char === ',' || values.length > 1) {
-			values.forEach(value => {
+		if (event.data.char === ',' || sentence.length > 1) {
+			sentence.forEach(value => {
 				this._handleItemAdded(
 					value,
 					this._getItemSchema(value, value),
@@ -248,16 +248,16 @@ class ClayMultiSelect extends ClayComponent {
 				);
 			});
 
-			if (valueOut) {
-				this.inputValue = valueOut;
+			if (invalidWord) {
+				this.inputValue = invalidWord;
 			}
 		} else {
-			this.inputValue = valueOut;
+			this.inputValue = invalidWord;
 
 			return !this.emit({
 				data: {
-					values,
-					valueOut,
+					invalidWord,
+					values: sentence,
 				},
 				name: 'inputChange',
 				originalEvent: event,
@@ -352,12 +352,20 @@ class ClayMultiSelect extends ClayComponent {
 	 * @return {Object}
 	 */
 	_tokenize(string, separator = ',') {
-		const hasLastComma = string.endsWith(separator);
-		const values = string.split(/\s*(?:,|$)\s*/).filter(Boolean);
+		const hasComma = string.includes(separator);
+
+		if (hasComma) {
+			const sentence = string.split(/\s*(?:,|$)\s*/).filter(Boolean);
+
+			return {
+				sentence,
+				invalidWord: null,
+			};
+		}
 
 		return {
-			values,
-			valueOut: hasLastComma ? null : values.pop(),
+			sentence: [],
+			invalidWord: string,
 		};
 	}
 
