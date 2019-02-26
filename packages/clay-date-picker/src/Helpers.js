@@ -100,7 +100,7 @@ export function getWeekArray(d, firstDayOfWeek = 0) {
 export function range({end, start}) {
 	return Array.from(
 		{
-			length: end - start,
+			length: end - start + 1,
 		},
 		(v, k) => k + start
 	);

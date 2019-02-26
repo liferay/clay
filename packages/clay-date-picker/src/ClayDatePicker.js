@@ -97,8 +97,13 @@ function ClayDatePicker({
 		const {value} = event.target;
 		const format = time ? `${dateFormat} ${timeFormat}` : dateFormat;
 		const date = moment(value, format);
+		const year = date.year();
 
-		if (date.isValid()) {
+		if (
+			date.isValid()
+			&& year >= years.start
+			&& years.end >= year
+		) {
 			setCurrentMonth(date.toDate());
 			setDaySelected(date.toDate());
 
