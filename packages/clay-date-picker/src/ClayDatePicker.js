@@ -39,6 +39,7 @@ function ClayDatePicker({
 	spritemap,
 	time,
 	timeFormat,
+	timezone,
 	useNative,
 	value,
 	weekdaysShort,
@@ -205,6 +206,7 @@ function ClayDatePicker({
 											onTimeChange={setCurrentTime}
 											spritemap={spritemap}
 											timeFormat={timeFormat}
+											timezone={timezone}
 										/>
 									)}
 									{!time &&
@@ -314,6 +316,12 @@ ClayDatePicker.propTypes = {
 	 * @default HH:mm
 	 */
 	timeFormat: PropTypes.string,
+
+	/**
+	 * Flag to indicate the timezone of the Time Picker.
+	 * @default undefined
+	 */
+	timezone: PropTypes.string,
 
 	/**
 	 * Flag to indicate whether to use native date picker

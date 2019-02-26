@@ -20,6 +20,7 @@ function TimePicker({
 	onTimeChange,
 	spritemap,
 	timeFormat,
+	timezone,
 }) {
 	/**
 	 * Handles the control time picker
@@ -43,6 +44,7 @@ function TimePicker({
 				<ClayTimePicker
 					name="timer"
 					onChange={handleOnChange}
+					timezone={timezone}
 					value={currentTime}
 					wrapTime={false}
 				/>
@@ -56,6 +58,7 @@ TimePicker.propTypes = {
 	onTimeChange: PropTypes.func,
 	spritemap: PropTypes.string,
 	timeFormat: PropTypes.string,
+	timezone: PropTypes.string,
 };
 
 export {TimePicker};
