@@ -303,7 +303,7 @@ describe('ClayMultiSelect', function() {
 				expect.objectContaining({
 					data: {
 						values: [],
-						valueOut: 'foo',
+						invalidWord: 'foo',
 					},
 					name: 'inputChange',
 					originalEvent: expect.any(Object),
