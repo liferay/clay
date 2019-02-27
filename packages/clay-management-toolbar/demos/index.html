@@ -351,6 +351,48 @@
 		},
 		'#active-checked-select-all-block');
 
+		//Active state with checkbox checked selecting one item
+		new metal.ClayManagementToolbar({
+			actionItems: actionItems,
+			checkboxStatus: 'checked',
+			selectable: true,
+			selectedItems: 1,
+			showInfoButton: true,
+			showSelectAllButton: true,
+			spritemap: spritemap,
+			supportsBulkActions: true,
+			totalItems: 10,
+		},
+		'#active-checked-select-all-block');
+
+		//Active state with checkbox checked selecting one item from a unique element selection.
+		new metal.ClayManagementToolbar({
+			actionItems: actionItems,
+			checkboxStatus: 'checked',
+			selectable: true,
+			selectedItems: 1,
+			showInfoButton: true,
+			showSelectAllButton: true,
+			spritemap: spritemap,
+			supportsBulkActions: true,
+			totalItems: 1,
+		},
+		'#active-checked-select-all-block');
+
+		//Active state with checkbox checked don't selecting any items.
+		new metal.ClayManagementToolbar({
+			actionItems: actionItems,
+			checkboxStatus: 'checked',
+			selectable: true,
+			selectedItems: 0,
+			showInfoButton: true,
+			showSelectAllButton: true,
+			spritemap: spritemap,
+			supportsBulkActions: true,
+			totalItems: 1,
+		},
+			'#active-checked-select-all-block');
+
 		//Active State with select all button without select all button
 		new metal.ClayManagementToolbar({
 			actionItems: actionItems,
