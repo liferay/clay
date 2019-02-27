@@ -21,6 +21,7 @@
 	]}
 	{@param? _handleCellContentClick: any}
 	{@param? _handleItemToggled: any}
+	{@param? _handleRowContentClick: any}
 	{@param? _handleSortingClick: any}
 	{@param? actionsMenuVariant: string}
 	{@param? elementClasses: string}
@@ -67,6 +68,7 @@
 			{call .body}
 				{param _handleCellContentClick: $_handleCellContentClick /}
 				{param _handleItemToggled: $_handleItemToggled /}
+				{param _handleRowContentClick: $_handleRowContentClick /}
 				{param actionsMenuVariant: $actionsMenuVariant /}
 				{param id: $id /}
 				{param items: $items /}
@@ -127,6 +129,7 @@
 	]}
 	{@param? _handleCellContentClick: any}
 	{@param? _handleItemToggled: any}
+	{@param? _handleRowContentClick: any}
 	{@param? actionsMenuVariant: string}
 	{@param? id: string}
 	{@param? items: list<?>}
@@ -139,6 +142,7 @@
 			{call .rows}
 				{param _handleCellContentClick: $_handleCellContentClick /}
 				{param _handleItemToggled: $_handleItemToggled /}
+				{param _handleRowContentClick: $_handleRowContentClick /}
 				{param actionsMenuVariant: $actionsMenuVariant /}
 				{param groupName: $id /}
 				{param items: $items /}
@@ -235,13 +239,14 @@
 	]}
 	{@param? _handleCellContentClick: any}
 	{@param? _handleItemToggled: any}
+	{@param? _handleRowContentClick: any}
 	{@param? actionsMenuVariant: string}
 	{@param? groupName: string}
 	{@param? selectable: bool}
 	{@param? showActionsMenu: bool}
 	{@param? spritemap: string}
 
-	<tr>
+	<tr data-onclick="{$_handleRowContentClick}">
 		{if $selectable}
 			<td>
 				{call ClayCheckbox.render}
@@ -339,6 +344,7 @@
 	]}
 	{@param? _handleCellContentClick: any}
 	{@param? _handleItemToggled: any}
+	{@param? _handleRowContentClick: any}
 	{@param? actionsMenuVariant: string}
 	{@param? groupName: string}
 	{@param? selectable: bool}
@@ -371,6 +377,7 @@
 			{call .rows}
 				{param _handleCellContentClick: $_handleCellContentClick /}
 				{param _handleItemToggled: $_handleItemToggled /}
+				{param _handleRowContentClick: $_handleRowContentClick /}
 				{param actionsMenuVariant: $actionsMenuVariant /}
 				{param groupName: $currentgroupName /}
 				{param items: $item.items /}
@@ -383,6 +390,7 @@
 			{call .row}
 				{param _handleCellContentClick: $_handleCellContentClick /}
 				{param _handleItemToggled: $_handleItemToggled /}
+				{param _handleRowContentClick: $_handleRowContentClick /}
 				{param actionsMenuVariant: $actionsMenuVariant /}
 				{param groupName: $groupName /}
 				{param item: $item /}

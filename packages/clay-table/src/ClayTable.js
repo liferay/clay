@@ -77,6 +77,15 @@ class ClayTable extends ClayComponent {
 	}
 
 	/**
+	 * Continues the propagation of the row content click event
+	 * @param {!Event} event
+	 * @private
+	 */
+	_handleRowContentClick(event) {
+		this.emit('rowContentClicked', event);
+	}
+
+	/**
 	 * Handles each row focus in order to add the class `table-focus` to the row.
 	 * This is to handle quickMenu accesibility.
 	 * @param {!Event} event
