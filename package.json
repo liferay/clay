@@ -15,7 +15,7 @@
     "prettier": "prettier-eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js 'examples/*/src/**/*.js'",
     "soy": "lerna run soy",
     "start": "http-server . -p 4000",
-    "test": "npm run build && npm run jest && npm run pa11y",
+    "test": "npm run soy && npm run jest && npm run pa11y",
     "testSoy": "cd packages/clay-isomorphic && ./gradlew testSoy",
     "site": "cd clayui.com && npm run build && npm run serve"
   },
