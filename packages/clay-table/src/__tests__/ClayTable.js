@@ -726,4 +726,48 @@ describe('ClayTable', function() {
 
 		expect(component).toMatchSnapshot();
 	});
+
+	it('should render a ClayTable and emit an event when row clicked', () => {
+		component = new ClayTable({
+			items: recipeItems,
+			schema: {
+				fields: [
+					{
+						fieldName: 'name',
+						label: 'Name',
+						sortable: true,
+						sortingOrder: 'asc',
+					},
+					{
+						fieldName: 'origin',
+						label: 'Origin',
+					},
+				],
+			},
+		});
+
+		const spy = jest.spyOn(component, 'emit');
+
+		component.element.querySelector('table tr td').click();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				data: {
+					item: {
+						difficulty: 2,
+						downloadHref: '#',
+						format: 'PDF',
+						id: '3',
+						name: 'Hamburger',
+						origin: 'U.S.A',
+						spicyLevel: ['No Spicy'],
+						time: '10 min.',
+					},
+				},
+				name: 'rowContentClicked',
+				originalEvent: expect.any(Object),
+			})
+		);
+	});
 });
