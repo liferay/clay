@@ -246,7 +246,15 @@
 	{@param? showActionsMenu: bool}
 	{@param? spritemap: string}
 
-	<tr data-onclick="{$_handleRowContentClick}">
+	{let $attributes kind="attributes"}
+		{if $selectable and $item.selected}
+			class="table-active"
+		{/if}
+
+		data-onclick="{$_handleRowContentClick}"
+	{/let}
+
+	<tr {$attributes}>
 		{if $selectable}
 			<td>
 				{call ClayCheckbox.render}
