@@ -188,14 +188,14 @@ class ClayMultiSelect extends ClayComponent {
 					this._performCall(this.valueLocator, itemSelected) === label
 			)
 		) {
-			const index = this.selectedItems.push(data);
-
-			this.selectedItems = this.selectedItems;
+			const newSelectedItems = this.selectedItems.map(item => item);
+			newSelectedItems.push(data);
+			this.selectedItems = newSelectedItems;
 			this.inputValue = null;
 
 			return !this.emit({
 				data: {
-					item: this.selectedItems[index - 1],
+					item: data,
 				},
 				name: 'itemAdded',
 				originalEvent: event,
@@ -263,8 +263,9 @@ class ClayMultiSelect extends ClayComponent {
 		const item = this.selectedItems[Number(index)];
 
 		this._removeFocusedItem();
-		this.selectedItems.splice(Number(index), 1);
-		this.selectedItems = this.selectedItems;
+		const newSelectedItems = this.selectedItems.map(item => item);
+		newSelectedItems.splice(Number(index), 1);
+		this.selectedItems = newSelectedItems;
 		this.inputValue = null;
 
 		return !this.emit({
