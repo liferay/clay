@@ -576,6 +576,43 @@ describe('ClayTable', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a ClayTable with an schema, items and showCheckbox false', () => {
+		component = new ClayTable({
+			items: [
+				{
+					difficulty: 2,
+					downloadHref: '#',
+					format: 'PDF',
+					id: '3',
+					name: 'Hamburger',
+					origin: 'U.S.A',
+					selected: true,
+					spicyLevel: ['No Spicy'],
+					time: '10 min.',
+				},
+			],
+			schema: {
+				fields: [
+					{
+						fieldName: 'name',
+						label: 'Name',
+					},
+				],
+				inputNameField: 'type',
+				inputNamesMap: {
+					'folder': 'folder',
+					'type': 'chef',
+					'*': 'recipe',
+				},
+				inputValueField: 'id',
+			},
+			selectable: true,
+			showCheckbox: false,
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
 	it('should render a selectable ClayTable with an schema and items', () => {
 		component = new ClayTable({
 			items: recipeItems,
