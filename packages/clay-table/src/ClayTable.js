@@ -242,12 +242,12 @@ ClayTable.STATE = {
 
 	/**
 	 * Flag to indicate if the checkbox is show or not when selectable is true.
-	 * @default true
+	 * @default false
 	 * @instance
 	 * @memberof ClayTable
 	 * @type {?bool}
 	 */
-	showCheckbox: Config.bool().value(true),
+	showCheckbox: Config.bool().value(false),
 
 	/**
 	 * Table responsive sizes. Available `lg`, `md`, `sm` and `xl`.

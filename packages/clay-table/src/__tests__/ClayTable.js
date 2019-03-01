@@ -632,6 +632,7 @@ describe('ClayTable', function() {
 				inputValueField: 'id',
 			},
 			selectable: true,
+			showCheckbox: true,
 		});
 
 		expect(component).toMatchSnapshot();
@@ -661,6 +662,7 @@ describe('ClayTable', function() {
 				inputValueField: 'id',
 			},
 			selectable: true,
+			showCheckbox: true,
 		});
 
 		component.element
