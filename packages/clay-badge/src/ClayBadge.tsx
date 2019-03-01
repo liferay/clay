@@ -6,29 +6,27 @@
 import * as React from 'react';
 import classNames from 'classnames';
 
-interface props {
+interface Props extends React.HTMLAttributes<HTMLSpanElement> {
+	displayType?: string;
 	label?: string | number;
-	className?: string;
-	type?: string;
-	[propName: string]: any;
 }
 
-const ClayBadge: React.FunctionComponent<props> = ({
+const ClayBadge: React.FunctionComponent<Props> = ({
 	className,
+	displayType,
 	label,
-	type,
 	...otherProps
 }) => (
 	<span
 		{...otherProps}
-		className={classNames('badge', `badge-${type}`, className)}
+		className={classNames('badge', `badge-${displayType}`, className)}
 	>
 		<span className="badge-item badge-item-expand">{label}</span>
 	</span>
 );
 
 ClayBadge.defaultProps = {
-	type: 'primary',
+	displayType: 'primary',
 };
 
 export default ClayBadge;
