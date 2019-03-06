@@ -40,14 +40,14 @@ $font-weight-semi-bold: 600 !default;
 $font-weight-bold: 700 !default;
 $font-weight-bolder: 900 !default;
 
-$headings-font-weight: $font-weight-semi-bold !default;
+$headings-font-weight: $font-weight-bold !default;
 
-$h1-font-size: 1.625rem !default; // 26px
-$h2-font-size: 1.375rem !default; // 22px
-$h3-font-size: 1.1875rem !default; // 19px
-$h4-font-size: 1rem !default; // 16px
-$h5-font-size: 0.875rem !default; // 14px
-$h6-font-size: 0.8125rem !default; // 13px
+$h1-font-size: 2.5rem !default;
+$h2-font-size: 2rem !default;
+$h3-font-size: 1.75rem !default;
+$h4-font-size: 1.5rem !default;
+$h5-font-size: 1.25rem !default;
+$h6-font-size: 1rem !default;
 
 $line-height-base: 1.5 !default;
 
