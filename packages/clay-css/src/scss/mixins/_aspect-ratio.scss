@@ -5,3 +5,39 @@
 @mixin clay-aspect-ratio($width: 1, $height: 1) {
 	padding-bottom: percentage($height / $width);
 }
+
+@mixin clay-aspect-ratio-variant($map) {
+	$enabled: setter(map-get($map, enabled), true);
+
+	$border-color: map-get($map, border-color);
+	$border-style: map-get($map, border-style);
+	$border-width: map-get($map, border-width);
+	$color: map-get($map, color);
+	$font-size: map-get($map, font-size);
+	$horizontal: map-get($map, horizontal);
+	$text-align: map-get($map, text-align);
+	$vertical: map-get($map, vertical);
+
+	$lexicon-icon-height: map-get($map, lexicon-icon-height);
+	$lexicon-icon-margin-top: map-get($map, lexicon-icon-margin-top);
+	$lexicon-icon-width: map-get($map, lexicon-icon-width);
+
+	@if ($enabled) {
+		border-color: $border-color;
+		border-style: $border-style;
+		border-width: $border-width;
+		color: $color;
+		font-size: $font-size;
+		text-align: $text-align;
+
+		@if ($horizontal and $vertical) {
+			@include clay-aspect-ratio($horizontal, $vertical);
+		}
+
+		.lexicon-icon {
+			height: $lexicon-icon-height;
+			margin-top: $lexicon-icon-margin-top;
+			width: $lexicon-icon-width;
+		}
+	}
+}
