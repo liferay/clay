@@ -1,0 +1,72 @@
+@mixin clay-after-highlight-variant($map) {
+	$enabled: setter(map-get($map, enabled), true);
+
+	$bg: map-get($map, bg);
+	$border-radius: map-get($map, border-radius);
+	$bottom: map-get($map, bottom);
+	$content: map-get($map, content);
+	$display: map-get($map, display);
+	$height: map-get($map, height);
+	$left: map-get($map, left);
+	$opacity: map-get($map, opacity);
+	$position: map-get($map, position);
+	$right: map-get($map, right);
+	$transition: map-get($map, transition);
+	$top: map-get($map, top);
+
+	$hover-bg: map-get($map, hover-bg);
+	$hover-height: map-get($map, hover-height);
+	$hover-opacity: map-get($map, hover-opacity);
+
+	$focus-bg: map-get($map, focus-bg);
+	$focus-height: map-get($map, focus-height);
+	$focus-opacity: map-get($map, focus-opacity);
+
+	$active-bg: map-get($map, active-bg);
+	$active-height: map-get($map, active-height);
+	$active-opacity: map-get($map, active-opacity);
+
+	@if ($enabled) {
+		&::after {
+			background-color: $bg;
+			border-radius: $border-radius;
+			bottom: $bottom;
+			content: $content;
+			display: $display;
+			height: $height;
+			left: $left;
+			opacity: $opacity;
+			position: $position;
+			right: $right;
+			transition: $transition;
+			top: $top;
+		}
+
+		&:hover,
+		&.hover {
+			&::after {
+				background-color: $hover-bg;
+				height: $hover-height;
+				opacity: $hover-opacity;
+			}
+		}
+
+		&:focus,
+		&.focus {
+			&::after {
+				background-color: $focus-bg;
+				height: $focus-height;
+				opacity: $focus-opacity;
+			}
+		}
+
+		&:active,
+		&.active {
+			&::after {
+				background-color: $active-bg;
+				height: $active-height;
+				opacity: $active-opacity;
+			}
+		}
+	}
+}
