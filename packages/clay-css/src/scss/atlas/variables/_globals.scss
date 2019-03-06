@@ -55,6 +55,29 @@ $font-family-sans-serif: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI
 
 // Theme Base Colors
 
+$white:    #FFF !default;
+$gray-100: #F8F9FA !default;
+$gray-200: #F1F2F5 !default;
+$gray-300: #DEE2E6 !default;
+$gray-400: #CDCED9 !default;
+$gray-500: #A7A9BC !default;
+$gray-600: #6B6C7E !default;
+$gray-700: #495057 !default;
+$gray-800: #393A4A !default;
+$gray-900: #272833 !default;
+$black:    #000 !default;
+
+$blue:    #0B5FFF !default;
+$indigo:  #6610F2 !default;
+$purple:  #6F42C1 !default;
+$pink:    #E83E8C !default;
+$red:     #DA1414 !default;
+$orange:  #B95000 !default;
+$yellow:  #FFC107 !default;
+$green:   #287D3D !default;
+$teal:    #20C997 !default;
+$cyan:    #17A2B8 !default;
+
 $primary: #0B5FFF !default;
 $secondary: #6B6C7E !default;
 $success: #287D3D !default;
