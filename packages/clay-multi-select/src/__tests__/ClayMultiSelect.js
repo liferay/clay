@@ -202,6 +202,45 @@ describe('ClayMultiSelect', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a ClayMultiSelect and clear the input values after the onblur event', () => {
+		component = new ClayMultiSelect({
+			dataSource,
+			helpText,
+			spritemap,
+			inputValue: 'foo',
+		});
+
+		const {input} = component.refs.autocomplete.refs;
+		triggerEvent(input, 'blur', {});
+		jest.runAllTimers();
+
+		expect(component.inputValue).toBe(null);
+		expect(component).toMatchSnapshot();
+	});
+
+	it('should render a ClayMultiSelect and emit the onblur event', () => {
+		component = new ClayMultiSelect({
+			dataSource,
+			helpText,
+			spritemap,
+			inputValue: 'foo',
+		});
+
+		const spy = jest.spyOn(component, 'emit');
+		const {input} = component.refs.autocomplete.refs;
+
+		triggerEvent(input, 'blur', {});
+		jest.runAllTimers();
+
+		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(
+			expect.objectContaining({
+				name: 'inputOnBlur',
+				originalEvent: expect.any(Object),
+			})
+		);
+	});
+
 	it('should render a ClayMultiSelect with multiple values with comma at the end', () => {
 		component = new ClayMultiSelect({
 			dataSource,
