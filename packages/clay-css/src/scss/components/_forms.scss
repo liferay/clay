@@ -215,7 +215,8 @@ select.form-control {
 }
 
 // Will need to be revisted if action is taken on https://github.com/twbs/bootstrap/issues/23058
-select.form-control:not([multiple]):not([size]) {
+select.form-control:not([multiple]):not([size]),
+.form-control-select {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 
@@ -245,14 +246,10 @@ select.form-control:not([multiple]):not([size]) {
 
 // Textarea
 
-textarea {
-	&.form-control {
+textarea.form-control,
+textarea.form-control-plaintext,
+.form-control.form-control-textarea {
 		height: $input-textarea-height;
-	}
-
-	&.form-control-plaintext {
-		height: $input-textarea-height;
-	}
 }
 
 // File
