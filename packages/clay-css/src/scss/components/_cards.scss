@@ -434,6 +434,24 @@
 	@include clay-custom-grid-columns($card-page-item-asset);
 }
 
+// Card Interactive
+
+.card-interactive {
+	@include clay-card-variant($card-interactive);
+
+	label {
+		cursor: $link-cursor;
+	}
+}
+
+.card-interactive-primary {
+	@include clay-card-variant($card-interactive-primary);
+}
+
+.card-interactive-secondary {
+	@include clay-card-variant($card-interactive-secondary);
+}
+
 // Card Type Asset
 
 .card-type-asset {
@@ -456,4 +474,22 @@
 
 .card-type-directory {
 	@include clay-card-type-directory($card-type-directory);
+}
+
+// Card Type Template
+
+.card-type-template {
+	@include clay-card-variant($card-type-template);
+}
+
+// Template Card
+
+.template-card {
+	@include clay-card-variant($template-card);
+}
+
+// Template Card Horizontal
+
+.template-card-horizontal {
+	@include clay-card-variant($template-card-horizontal);
 }

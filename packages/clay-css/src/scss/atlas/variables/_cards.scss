@@ -48,6 +48,26 @@ $checkbox-left-card-padding: 50px !default;
 
 $form-check-card-checked-box-shadow: 0 0 0 2px lighten($component-active-bg, 22.94) !default;
 
+// Card Interactive
+
+$card-interactive: () !default;
+$card-interactive: map-merge((
+	hover-bg: #F7F8F9,
+	focus-border-color: null,
+	focus-box-shadow: 0 0 0 2px #FFF#{','} 0 0 0 4px #719AFF,
+	active-bg: #F1F2F5,
+), $card-interactive);
+
+// Card Interactive Secondary
+
+$card-interactive-secondary: () !default;
+$card-interactive-secondary: map-merge((
+	hover-border-color: transparent,
+	hover-box-shadow: 0 0 0 2px #719AFF,
+	focus-border-color: transparent,
+	focus-box-shadow: 0 0 0 2px #719AFF,
+), $card-interactive-secondary);
+
 // Card Type Asset
 
 $card-type-asset: () !default;
@@ -65,3 +85,18 @@ $file-card: () !default;
 $file-card: map-merge((
 	asset-icon-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06)
 ), $file-card);
+
+// Card Type Template
+
+$card-type-template-after-highlight: () !default;
+$card-type-template-after-highlight: map-merge((
+	bottom: -1px,
+	left: -1px,
+	right: -1px,
+), $card-type-template-after-highlight);
+
+$card-type-template: () !default;
+$card-type-template: map-merge((
+	border-width: 1px,
+	box-shadow: none,
+), $card-type-template);
