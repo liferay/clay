@@ -117,6 +117,9 @@ $form-control-label-size: map-merge((
 	border-width: 0.0625rem, // 1px
 	font-size: map-get($label-lg, font-size),
 	height: 1.5rem, // 24px
+	margin-bottom: 0.3125rem, // 5px
+	margin-right: 0.625rem, // 10px
+	margin-top: 0.3125rem, // 5px
 	padding-x: map-get($label-lg, padding-x),
 	padding-y: map-get($label-lg, padding-y),
 	text-transform: none,
