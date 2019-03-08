@@ -67,6 +67,11 @@
 		}
 	}
 
+	> .card-page:last-child,
+	.card-page-last {
+		margin-bottom: -$card-margin-bottom;
+	}
+
 	&::after {
 		clear: both;
 		content: '';
