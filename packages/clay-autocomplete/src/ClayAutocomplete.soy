@@ -172,11 +172,13 @@
 			<ul class="{$classes}" ref="dropdown">
 				{if $filteredItems}
 					{foreach $item in $filteredItems}
-						{delcall ClayAutocomplete.Item variant="$contentRenderer" allowemptydefault="true"}
-							{param _handleDropdownItemClick: $_handleDropdownItemClick /}
-							{param data: $item /}
-							{param index: index($item) /}
-						{/delcall}
+						<li>
+							<a data-onclick="{$_handleDropdownItemClick}" data-dropdown-item-index="{index($item)}" id="item" class="dropdown-item" href="javascript:;">
+								{delcall ClayAutocomplete.Item variant="$contentRenderer" allowemptydefault="true"}
+									{param data: $item /}
+								{/delcall}
+							</a>
+						</li>
 					{/foreach}
 				{/if}
 			</ul>
@@ -201,20 +203,14 @@
  */
 {deltemplate ClayAutocomplete.Item}
 	{@param data: ?}
-	{@param index: int}
-	{@param? _handleDropdownItemClick: any}
 
-	<li>
-		<a data-onclick="{$_handleDropdownItemClick}" data-dropdown-item-index="{$index}" id="item" class="dropdown-item" href="javascript:;">
-			{if $data.matches and length($data.matches) > 0}
-				{foreach $char in $data.matches}
-					{if $char.match}
-						<strong>{$char.value}</strong>
-					{else}
-						{$char.value}
-					{/if}
-				{/foreach}
+	{if $data.matches and length($data.matches) > 0}
+		{foreach $char in $data.matches}
+			{if $char.match}
+				<strong>{$char.value}</strong>
+			{else}
+				{$char.value}
 			{/if}
-		</a>
-	</li>
+		{/foreach}
+	{/if}
 {/deltemplate}
