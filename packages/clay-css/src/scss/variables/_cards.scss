@@ -73,22 +73,90 @@ $checkbox-position: 1rem !default;
 
 $form-check-card-checked-box-shadow: $input-btn-focus-box-shadow !default;
 
+// Card Interactive
+
+$card-interactive-after-highlight: () !default;
+$card-interactive-after-highlight: map-merge((
+	border-radius: 0 0 $card-border-radius $card-border-radius,
+	bottom: -$card-border-width,
+	content: '',
+	height: 0,
+	left: -$card-border-width,
+	position: absolute,
+	right: -$card-border-width,
+	transition: height 0.15s ease-in-out,
+	hover-height: 4px,
+	active-height: 4px,
+), $card-interactive-after-highlight);
+
+$card-interactive-card-body: () !default;
+$card-interactive-card-body: map-merge((
+	display: block,
+), $card-interactive-card-body);
+
+$card-interactive: () !default;
+$card-interactive: map-merge((
+	cursor: $link-cursor,
+	outline: 0,
+	transition: $btn-transition,
+	hover-bg: $gray-100,
+	hover-text-decoration: none,
+	focus-border-color: $input-focus-border-color,
+	focus-box-shadow: $input-focus-box-shadow,
+	active-bg: $gray-200,
+	after-highlight: $card-interactive-after-highlight,
+	card-body: $card-interactive-card-body,
+), $card-interactive);
+
+// Card Interactive Primary
+
+$card-interactive-primary-after-highlight: () !default;
+$card-interactive-primary-after-highlight: map-merge((
+	hover-bg: $component-active-bg,
+	active-bg: $component-active-bg,
+), $card-interactive-primary-after-highlight);
+
+$card-interactive-primary: () !default;
+$card-interactive-primary: map-merge((
+	after-highlight: $card-interactive-primary-after-highlight,
+), $card-interactive-primary);
+
+// Card Interactive Secondary
+
+$card-interactive-secondary: () !default;
+$card-interactive-secondary: map-merge((
+	color: $dark,
+	hover-color: $dark,
+	hover-bg: $white,
+	hover-border-color: $input-focus-border-color,
+	hover-box-shadow: $input-focus-box-shadow,
+	active-bg: $white,
+), $card-interactive-secondary);
+
 // Card Type Asset
 
 $card-type-asset: () !default;
 
+// Image Card
+
 $image-card: () !default;
+
+// File Card
 
 $file-card: () !default;
 $file-card: map-merge((
 	asset-icon-color: $gray-600
 ), $file-card);
 
+// User Card
+
 $user-card: () !default;
 $user-card: map-merge((
 	asset-icon-min-width: 2.5rem,
 	asset-icon-width: 26%
 ), $user-card);
+
+// Card Page Item Asset
 
 $card-page-item-asset: () !default;
 $card-page-item-asset: map-merge((
@@ -121,7 +189,89 @@ $card-type-directory: map-merge((
 	sticker-font-size: 1.125rem // 18px
 ), $card-type-directory);
 
+// Card Page Item Directory
+
 $card-page-item-directory: () !default;
 $card-page-item-directory: map-merge((
 	$card-page-item-asset
 ), $card-page-item-directory);
+
+// Card Type Template
+
+$card-type-template-after-highlight: () !default;
+
+$card-type-template-aspect-ratio: () !default;
+$card-type-template-aspect-ratio: map-merge((
+	border-width: 0,
+	color: #6B6C7E,
+	horizontal: 16,
+	text-align: center,
+	vertical: 9,
+	lexicon-icon-height: auto,
+	lexicon-icon-width: 28%,
+), $card-type-template-aspect-ratio);
+
+$card-type-template-card-title: () !default;
+$card-type-template-card-title: map-merge((
+	display: block,
+	margin-bottom: 0.5rem,
+), $card-type-template-card-title);
+
+$card-type-template-card-text: () !default;
+$card-type-template-card-text: map-merge((
+	display: block,
+), $card-type-template-card-text);
+
+$card-type-template: () !default;
+$card-type-template: map-merge((
+	color: $dark,
+	hover-color: $dark,
+	after-highlight: $card-type-template-after-highlight,
+	aspect-ratio: $card-type-template-aspect-ratio,
+	card-title: $card-type-template-card-title,
+	card-text: $card-type-template-card-text,
+), $card-type-template);
+
+// Template Card
+
+$template-card-body: () !default;
+$template-card-body: map-merge((
+	padding-top: 0,
+	text-align: center,
+), $template-card-body);
+
+$template-card: () !default;
+$template-card: map-merge((
+	card-body: $template-card-body,
+), $template-card);
+
+// Template Card Horizontal
+
+$template-card-horizontal-sticker: () !default;
+$template-card-horizontal-sticker: map-merge((
+	font-size: 1.25rem,
+), $template-card-horizontal-sticker);
+
+$template-card-horizontal-card-row: () !default;
+$template-card-horizontal-card-row: map-merge((
+	margin-left: -4px,
+	margin-right: -4px,
+	width: auto,
+	autofit-col-padding-left: 4px,
+	autofit-col-padding-right: 4px,
+), $template-card-horizontal-card-row);
+
+$template-card-horizontal-card-title: () !default;
+$template-card-horizontal-card-title: map-merge((
+	color: inherit,
+	margin-bottom: 0,
+), $template-card-horizontal-card-title);
+
+$template-card-horizontal: () !default;
+$template-card-horizontal: map-merge((
+	color: $secondary,
+	hover-color: $secondary,
+	sticker: $template-card-horizontal-sticker,
+	card-row: $template-card-horizontal-card-row,
+	card-title: $template-card-horizontal-card-title,
+), $template-card-horizontal);

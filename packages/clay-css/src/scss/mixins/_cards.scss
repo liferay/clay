@@ -1,3 +1,270 @@
+@mixin clay-card-section-variant($map) {
+	$enabled: setter(map-get($map, enabled), true);
+
+	$bg: map-get($map, bg);
+	$border-color: map-get($map, border-color);
+	$border-radius: map-get($map, border-radius);
+	$border-style: map-get($map, border-style);
+	$border-width: map-get($map, border-width);
+	$display: map-get($map, display);
+	$flex-basis: map-get($map, flex-basis);
+	$flex-direction: map-get($map, flex-direction);
+	$flex-grow: map-get($map, flex-grow);
+	$flex-shrink: map-get($map, flex-shrink);
+	$flex-wrap: map-get($map, flex-wrap);
+	$margin-bottom: map-get($map, margin-bottom);
+	$margin-left: map-get($map, margin-left);
+	$margin-right: map-get($map, margin-right);
+	$margin-top: map-get($map, margin-top);
+	$padding-bottom: map-get($map, padding-bottom);
+	$padding-left: map-get($map, padding-left);
+	$padding-right: map-get($map, padding-right);
+	$padding-top: map-get($map, padding-top);
+	$text-align: map-get($map, text-align);
+	$width: map-get($map, width);
+
+	$autofit-col-padding-left: map-get($map, autofit-col-padding-left);
+	$autofit-col-padding-right: map-get($map, autofit-col-padding-right);
+
+	@if ($enabled) {
+		background-color: $bg;
+		border-color: $border-color;
+		border-radius: $border-radius;
+		border-style: $border-style;
+		border-width: $border-width;
+		display: $display;
+		flex-basis: $flex-basis;
+		flex-direction: $flex-direction;
+		flex-grow: $flex-grow;
+		flex-shrink: $flex-shrink;
+		flex-wrap: $flex-wrap;
+		margin-bottom: $margin-bottom;
+		margin-left: $margin-left;
+		margin-right: $margin-right;
+		margin-top: $margin-top;
+		padding-bottom: $padding-bottom;
+		padding-left: $padding-left;
+		padding-right: $padding-right;
+		padding-top: $padding-top;
+		text-align: $text-align;
+		width: $width;
+
+		.autofit-col {
+			padding-left: $autofit-col-padding-left;
+			padding-right: $autofit-col-padding-right;
+		}
+	}
+}
+
+@mixin clay-card-variant($map) {
+	$enabled: setter(map-get($map, enabled), true);
+
+	$border-color: map-get($map, border-color);
+	$border-style: map-get($map, border-style);
+	$border-width: map-get($map, border-width);
+	$box-shadow: map-get($map, box-shadow);
+	$cursor: map-get($map, cursor);
+	$color: map-get($map, color);
+	$display: map-get($map, display);
+	$flex-basis: map-get($map, flex-basis);
+	$flex-direction: map-get($map, flex-direction);
+	$flex-grow: map-get($map, flex-grow);
+	$flex-shrink: map-get($map, flex-shrink);
+	$margin-bottom: map-get($map, margin-bottom);
+	$min-width: map-get($map, min-width);
+	$outline: map-get($map, outline);
+	$position: map-get($map, position);
+	$text-decoration: map-get($map, text-decoration);
+	$transition: map-get($map, transition);
+	$width: map-get($map, width);
+	$word-wrap: map-get($map, word-wrap);
+
+	$hover-bg: map-get($map, hover-bg);
+	$hover-border-color: map-get($map, hover-border-color);
+	$hover-box-shadow: map-get($map, hover-box-shadow);
+	$hover-color: map-get($map, hover-color);
+	$hover-text-decoration: map-get($map, hover-text-decoration);
+	$hover-card-title: setter(map-get($map, hover-card-title), ());
+	$hover-card-subtitle: setter(map-get($map, hover-card-subtitle), ());
+	$hover-card-text: setter(map-get($map, hover-card-text), ());
+	$hover-card-link: setter(map-get($map, hover-card-link), ());
+
+	$focus-bg: map-get($map, focus-bg);
+	$focus-border-color: map-get($map, focus-border-color);
+	$focus-box-shadow: map-get($map, focus-box-shadow);
+	$focus-color: map-get($map, focus-color);
+	$focus-text-decoration: map-get($map, focus-text-decoration);
+	$focus-card-title: setter(map-get($map, focus-card-title), ());
+	$focus-card-subtitle: setter(map-get($map, focus-card-subtitle), ());
+	$focus-card-text: setter(map-get($map, focus-card-text), ());
+	$focus-card-link: setter(map-get($map, focus-card-link), ());
+
+	$active-bg: map-get($map, active-bg);
+	$active-border-color: map-get($map, active-border-color);
+	$active-color: map-get($map, active-color);
+	$active-card-title: setter(map-get($map, active-card-title), ());
+	$active-card-subtitle: setter(map-get($map, active-card-subtitle), ());
+	$active-card-text: setter(map-get($map, active-card-text), ());
+	$active-card-link: setter(map-get($map, active-card-link), ());
+
+	$after-highlight: setter(map-get($map, after-highlight), ());
+
+	$aspect-ratio: setter(map-get($map, aspect-ratio), ());
+
+	$sticker: setter(map-get($map, sticker), ());
+
+	$card-header: setter(map-get($map, card-header), ());
+
+	$card-body: setter(map-get($map, card-body), ());
+
+	$card-footer: setter(map-get($map, card-footer), ());
+
+	$card-row: setter(map-get($map, card-row), ());
+
+	$card-title: setter(map-get($map, card-title), ());
+
+	$card-subtitle: setter(map-get($map, card-subtitle), ());
+
+	$card-text: setter(map-get($map, card-text), ());
+
+	$card-link: setter(map-get($map, card-link), ());
+
+	@if ($enabled) {
+		border-color: $border-color;
+		border-style: $border-style;
+		border-width: $border-width;
+		box-shadow: $box-shadow;
+		cursor: $cursor;
+		color: $color;
+		display: $display;
+		flex-basis: $flex-basis;
+		flex-direction: $flex-direction;
+		flex-grow: $flex-grow;
+		flex-shrink: $flex-shrink;
+		margin-bottom: $margin-bottom;
+		min-width: $min-width;
+		outline: $outline;
+		position: $position;
+		text-decoration: $text-decoration;
+		transition: $transition;
+		width: $width;
+		word-wrap: $word-wrap;
+
+		&:hover {
+			background-color: $hover-bg;
+			border-color: $hover-border-color;
+			box-shadow: $hover-box-shadow;
+			color: $hover-color;
+			text-decoration: $hover-text-decoration;
+
+			.card-title {
+				@include clay-link($hover-card-title);
+			}
+
+			.card-subtitle {
+				@include clay-link($hover-card-subtitle);
+			}
+
+			.card-text {
+				@include clay-link($hover-card-text);
+			}
+
+			.card-link {
+				@include clay-link($hover-card-link);
+			}
+		}
+
+		&:focus {
+			background-color: $focus-bg;
+			border-color: $focus-border-color;
+			box-shadow: $focus-box-shadow;
+			color: $focus-color;
+			text-decoration: $focus-text-decoration;
+
+			.card-title {
+				@include clay-link($focus-card-title);
+			}
+
+			.card-subtitle {
+				@include clay-link($focus-card-subtitle);
+			}
+
+			.card-text {
+				@include clay-link($focus-card-text);
+			}
+
+			.card-link {
+				@include clay-link($focus-card-link);
+			}
+		}
+
+		&:active,
+		&.active {
+			background-color: $active-bg;
+			border-color: $active-border-color;
+			color: $active-color;
+
+			.card-title {
+				@include clay-link($active-card-title);
+			}
+
+			.card-subtitle {
+				@include clay-link($active-card-subtitle);
+			}
+
+			.card-text {
+				@include clay-link($active-card-text);
+			}
+
+			.card-link {
+				@include clay-link($active-card-link);
+			}
+		}
+
+		@include clay-after-highlight-variant($after-highlight);
+
+		.aspect-ratio {
+			@include clay-aspect-ratio-variant($aspect-ratio);
+		}
+
+		.sticker {
+			@include clay-sticker-variant($sticker);
+		}
+
+		.card-header {
+			@include clay-card-section-variant($card-header);
+		}
+
+		.card-body {
+			@include clay-card-section-variant($card-body);
+		}
+
+		.card-footer {
+			@include clay-card-section-variant($card-footer);
+		}
+
+		.card-row {
+			@include clay-card-section-variant($card-row);
+		}
+
+		.card-title {
+			@include clay-link($card-title);
+		}
+
+		.card-subtitle {
+			@include clay-link($card-subtitle);
+		}
+
+		.card-text {
+			@include clay-link($card-text);
+		}
+
+		.card-link {
+			@include clay-link($card-link);
+		}
+	}
+}
+
 @mixin clay-card-type-asset($map) {
 	$enabled: setter(map-get($map, enabled), true);
 
