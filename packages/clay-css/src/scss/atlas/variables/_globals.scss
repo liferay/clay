@@ -72,13 +72,42 @@ $teal: #20C997 !default;
 $cyan: #17A2B8 !default;
 
 $primary: #0B5FFF !default;
+$primary-d1: darken($primary, 5.10) !default;
+$primary-d2: darken($primary, 10) !default;
+$primary-l1: lighten($primary, 22.94) !default;
+$primary-l2: lighten($primary, 32.94) !default;
+$primary-l3: lighten($primary, 44.90) !default;
+
 $secondary: #6B6C7E !default;
-$success: #287D3D !default;
+$secondary-d1: #393A4A !default;
+$secondary-d2: #30313F !default;
+$secondary-l1: #A7A9BC !default;
+$secondary-l2: #CDCED9 !default;
+$secondary-l3: #E7E7ED !default;
+
 $info: #2E5AAC !default;
+$info-l1: #89A7E0 !default;
+$info-l2: #EEF2FA !default;
+
+$success: #287D3D !default;
+$success-l1: #5ACA75 !default;
+$success-l2: #EDF9F0 !default;
+
 $warning: #B95000 !default;
+$warning-l1: #FF8F39 !default;
+$warning-l2: #FFF4EC !default;
+
 $danger: #DA1414 !default;
+$danger-l1: #F48989 !default;
+$danger-l2: #FEEFEF !default;
+
 $light: #F1F2F5 !default;
+$light-l1: #F7F8F9 !default;
+$light-l2: #FFF !default;
+
 $dark: #272833 !default;
+$dark-l1: #30313F !default;
+$dark-l2: #393A4A !default;
 
 $theme-colors: () !default;
 $theme-colors: map-merge((
