@@ -110,6 +110,10 @@ $input-select-icon-focus: clay-icon(caret-double-l, $input-select-icon-focus-col
 $input-select-icon-disabled-color: $text-muted !default;
 $input-select-icon-disabled: clay-icon(caret-double-l, $input-select-icon-disabled-color) !default;
 
+// Textarea
+
+$input-textarea-height: 100px !default;
+
 // Form Control Label (Labels inside Form Control Tag Group)
 
 $form-control-label-size: () !default;
