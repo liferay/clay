@@ -233,7 +233,7 @@ describe('ClayAutocomplete', function() {
 
 		jest.runAllTimers();
 
-		const {dropdown} = component.refs.dataProvider.refs;
+		const {dropdown} = component.refs.dataProvider.refs.portal.refs;
 
 		dropdown.querySelector('a[data-dropdown-item-index]').click();
 
@@ -262,7 +262,7 @@ describe('ClayAutocomplete', function() {
 
 		jest.runAllTimers();
 
-		const {dropdown} = component.refs.dataProvider.refs;
+		const {dropdown} = component.refs.dataProvider.refs.portal.refs;
 
 		triggerEvent(
 			dropdown.querySelector('a[data-dropdown-item-index]'),
@@ -401,7 +401,7 @@ describe('ClayAutocomplete', function() {
 
 				jest.runAllTimers();
 
-				const {dropdown} = component.refs.dataProvider.refs;
+				const {dropdown} = component.refs.dataProvider.refs.portal.refs;
 				const elements = dropdown.querySelectorAll(
 					'a[data-dropdown-item-index]'
 				);
@@ -433,7 +433,7 @@ describe('ClayAutocomplete', function() {
 
 				jest.runAllTimers();
 
-				const {dropdown} = component.refs.dataProvider.refs;
+				const {dropdown} = component.refs.dataProvider.refs.portal.refs;
 
 				triggerEvent(input, 'keydown', {key: 'ArrowDown'});
 				expect(
@@ -457,7 +457,7 @@ describe('ClayAutocomplete', function() {
 
 				jest.runAllTimers();
 
-				const {dropdown} = component.refs.dataProvider.refs;
+				const {dropdown} = component.refs.dataProvider.refs.portal.refs;
 				const elements = dropdown.querySelectorAll(
 					'a[data-dropdown-item-index]'
 				);
@@ -484,7 +484,7 @@ describe('ClayAutocomplete', function() {
 				triggerEvent(input, 'input', {data: 'a'});
 				jest.runAllTimers();
 
-				const {dropdown} = component.refs.dataProvider.refs;
+				const {dropdown} = component.refs.dataProvider.refs.portal.refs;
 				const elements = dropdown.querySelectorAll(
 					'a[data-dropdown-item-index]'
 				);
