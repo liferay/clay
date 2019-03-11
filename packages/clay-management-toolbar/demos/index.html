@@ -47,6 +47,20 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h2>Active state with checkbox checked selecting one item from a unique element selection</h2>
+			<div id="active-checked-select-all-block-unique"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h2>Active state with checkbox checked don't selecting any items</h2>
+			<div id="active-checked-dont-selecting-any-items"></div>
+		</div>
+	</div>
+
+	 <div class="row row-spacing">
+		<div class="col">
 			<h2>Active State with checkbox checked with no select all button and all selected items</h2>
 			<div id="active-checked-no-select-all-block"></div>
 		</div>
@@ -377,7 +391,7 @@
 			supportsBulkActions: true,
 			totalItems: 1,
 		},
-		'#active-checked-select-all-block');
+		'#active-checked-select-all-block-unique');
 
 		//Active state with checkbox checked don't selecting any items.
 		new metal.ClayManagementToolbar({
@@ -391,7 +405,7 @@
 			supportsBulkActions: true,
 			totalItems: 1,
 		},
-			'#active-checked-select-all-block');
+		'#active-checked-dont-selecting-any-items');
 
 		//Active State with select all button without select all button
 		new metal.ClayManagementToolbar({
