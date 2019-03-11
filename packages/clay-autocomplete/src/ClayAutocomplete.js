@@ -22,7 +22,10 @@ class ClayAutocomplete extends ClayComponent {
 
 		this.addListener('dataChange', this._defaultDataChange, true);
 		this.addListener('inputChange', this._defaultInputChange, true);
-		this.refs.dataProvider.refs.portal.on('rendered', this._handleRenderedPortal.bind(this));
+		this.refs.dataProvider.refs.portal.on(
+			'rendered',
+			this._handleRenderedPortal.bind(this)
+		);
 	}
 
 	/**
@@ -214,15 +217,15 @@ class ClayAutocomplete extends ClayComponent {
 
 		if (alignElement) {
 			const widthElement = alignElement.clientWidth;
-			const bodyElement =
-				this.refs.dataProvider.refs.portal.refs.dropdown;
+			const bodyElement = this.refs.dataProvider.refs.portal.refs
+				.dropdown;
 
 			this._dropdownWidth = widthElement;
 			this._alignedPosition = Align.align(
 				bodyElement,
 				alignElement,
 				Align.BottomCenter,
-				false,
+				false
 			);
 		}
 	}
