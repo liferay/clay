@@ -709,5 +709,5 @@ ClayDropdownBase.STATE = {
 
 Soy.register(ClayDropdownBase, templates);
 
-export {ClayDropdownBase};
+export {ClayDropdownBase, flatten};
 export default ClayDropdownBase;
