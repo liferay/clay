@@ -16,6 +16,39 @@ import templates from './ClayMultiSelect.soy.js';
  */
 class ClayMultiSelect extends ClayComponent {
 	/**
+	 * @inheritDoc
+	 */
+	created() {
+		this._itemFocused = null;
+		this._eventHandler = new EventHandler();
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	attached() {
+		this._eventHandler.add(
+			dom.on(document, 'click', this._handleDocClick.bind(this), true)
+		);
+		this.addListener('inputOnBlur', this._defaultInputOnBlur, true);
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	detached() {
+		this._eventHandler.removeAllListeners();
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	disposed() {
+		this._eventHandler.removeAllListeners();
+		this._itemFocused = null;
+	}
+
+	/**
 	 * Clears the values that are not labeled in the input.
 	 * @protected
 	 */
@@ -374,39 +407,6 @@ class ClayMultiSelect extends ClayComponent {
 			values,
 			valueOut: hasLastComma ? null : values.pop(),
 		};
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	created() {
-		this._itemFocused = null;
-		this._eventHandler = new EventHandler();
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	attached() {
-		this._eventHandler.add(
-			dom.on(document, 'click', this._handleDocClick.bind(this), true)
-		);
-		this.addListener('inputOnBlur', this._defaultInputOnBlur, true);
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	detached() {
-		this._eventHandler.removeAllListeners();
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	disposed() {
-		this._eventHandler.removeAllListeners();
-		this._itemFocused = null;
 	}
 
 	/**

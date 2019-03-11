@@ -14,6 +14,39 @@ import templates from './ClayDataProvider.soy.js';
  */
 class ClayDataProvider extends ClayComponent {
 	/**
+	 * @inheritDoc
+	 */
+	created() {
+		this._isResolvedData = false;
+		this._pollingInterval = 0;
+		if (this._hasData(this.dataSource)) {
+			this._dataSource = this.dataSource;
+			this._isResolvedData = true;
+		} else {
+			this.updateData();
+		}
+
+		if (this.inputMode === 'userInput') {
+			this.updateData = debounce(
+				this.updateData.bind(this),
+				this.debounceTime
+			);
+		}
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	disposed() {
+		if (this._pollingInterval) {
+			clearInterval(this._pollingInterval);
+			this._pollingInterval = null;
+		}
+
+		cancelDebounce(this.updateData);
+	}
+
+	/**
 	 * Makes the request and defines initial data while it is requesting.
 	 * @param {!string} query
 	 * @param {!number} requestRetries
@@ -137,39 +170,6 @@ class ClayDataProvider extends ClayComponent {
 		}
 
 		return data[param];
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	created() {
-		this._isResolvedData = false;
-		this._pollingInterval = 0;
-		if (this._hasData(this.dataSource)) {
-			this._dataSource = this.dataSource;
-			this._isResolvedData = true;
-		} else {
-			this.updateData();
-		}
-
-		if (this.inputMode === 'userInput') {
-			this.updateData = debounce(
-				this.updateData.bind(this),
-				this.debounceTime
-			);
-		}
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	disposed() {
-		if (this._pollingInterval) {
-			clearInterval(this._pollingInterval);
-			this._pollingInterval = null;
-		}
-
-		cancelDebounce(this.updateData);
 	}
 
 	/**
