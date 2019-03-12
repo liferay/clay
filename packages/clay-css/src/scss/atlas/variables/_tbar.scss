@@ -1,7 +1,7 @@
 $component-tbar: () !default;
 $component-tbar: map-merge((
-	border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08),
-	color: $secondary
+	border-color: $gray-300,
+	color: $gray-600,
 ), $component-tbar);
 
 // Subnav Tbar Primary
@@ -32,6 +32,6 @@ $subnav-tbar-primary-disabled: map-merge((
 
 $subnav-tbar-light: () !default;
 $subnav-tbar-light: map-merge((
-	bg-color: #FFF,
-	color: $secondary
+	bg-color: $light-l2,
+	color: $gray-600,
 ), $subnav-tbar-light);
