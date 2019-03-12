@@ -609,6 +609,19 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
+	it('should render a management toolbar in active state with checkbox checked selecting one item from a unique element selection with bulkActions', () => {
+		managementToolbar = new ClayManagementToolbar({
+			checkboxStatus: 'checked',
+			clearSelectionURL: 'my-clear-selection-url',
+			selectable: true,
+			selectedItems: 1,
+			spritemap: spritemap,
+			supportsBulkActions: true,
+			totalItems: 1,
+		});
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
 	it('should render a management toolbar in active state with checkbox checked dont selecting any items', () => {
 		managementToolbar = new ClayManagementToolbar({
 			checkboxStatus: 'checked',
