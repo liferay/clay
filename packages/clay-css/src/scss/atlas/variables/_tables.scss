@@ -1,24 +1,24 @@
-$table-bg: #FFF !default;
-$table-accent-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57) !default;
+$table-bg: $white !default;
+$table-accent-bg: $gray-100 !default;
 $table-hover-bg: lighten($component-active-bg, 44.90) !default;
-$table-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
+$table-border-color: $gray-300 !default;
 $table-font-size: 0.875rem !default;
 
-$table-disabled-color: #D9D9DD !default;
+$table-disabled-color: $gray-500 !default;
 
-$table-head-bg: #FFF !default;
+$table-head-bg: $white !default;
 $table-head-border-bottom-width: 1px !default;
-$table-head-color: $secondary !default;
+$table-head-color: $gray-600 !default;
 $table-head-font-weight: $font-weight-semi-bold !default;
 
 $table-head-link: () !default;
 $table-head-link: map-merge((
-	color: $secondary,
-	hover-color: $body-color
+	color: $gray-600,
+	hover-color: $gray-900,
 ), $table-head-link);
 
-$table-divider-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57) !default;
-$table-divider-color: $secondary !default;
+$table-divider-bg: $gray-100 !default;
+$table-divider-color: $gray-600 !default;
 $table-divider-font-size: 0.75rem !default; // 12px
 $table-divider-font-weight: $font-weight-semi-bold !default;
 $table-divider-padding: 0.4375rem 0.75rem !default;
@@ -26,14 +26,14 @@ $table-divider-text-transform: uppercase !default;
 
 $table-quick-action-menu-accent-bg: $table-accent-bg !default;
 $table-quick-action-menu-accent-active-bg: $table-hover-bg !default;
-$table-quick-action-menu-active-bg: lighten(saturate(adjust-hue($secondary, -12), 8.51), 49.61) !default;
+$table-quick-action-menu-active-bg: $gray-200 !default;
 $table-quick-action-menu-hover-bg: $table-hover-bg !default;
 
 // Table Title
 
 $table-title: () !default;
 $table-title: map-merge((
-	color: $body-color,
+	color: $gray-900,
 	font-size: 0.875rem // 14px
 ), $table-title);
 
@@ -41,10 +41,10 @@ $table-title: map-merge((
 
 $table-action-link: () !default;
 $table-action-link: map-merge((
-	color: $secondary,
+	color: $gray-600,
 	font-size: 1rem, // 16px
 	hover-bg: rgba(0, 0, 0, 0.02),
-	hover-color: $body-color,
+	hover-color: $gray-900,
 	active-bg: rgba(0, 0, 0, 0.04)
 ), $table-action-link);
 
@@ -52,23 +52,23 @@ $table-action-link: map-merge((
 
 $table-link: () !default;
 $table-link: map-merge((
-	color: $body-color,
-	hover-color: $body-color
+	color: $gray-900,
+	hover-color: $gray-900,
 ), $table-link);
 
 // Table List
 
-$table-list-accent-bg: lighten(saturate(adjust-hue($secondary, -27), 6.13), 51.57) !default;
+$table-list-accent-bg: $gray-100 !default;
 $table-list-hover-bg: $table-hover-bg !default;
 $table-list-active-bg: $table-list-hover-bg !default;
-$table-list-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
+$table-list-border-color: $gray-300 !default;
 $table-list-color: $body-color !default;
 
-$table-list-disabled-color: #D9D9DD !default;
+$table-list-disabled-color: $gray-500 !default;
 
-$table-list-head-bg: #FFF !default;
+$table-list-head-bg: $white !default;
 
-$table-list-link-color: $secondary !default;
+$table-list-link-color: $gray-600 !default;
 
 $table-list-divider-padding-x: 0.75rem !default; // 12px
 $table-list-divider-padding-y: 0.4375rem !default; // 7px
@@ -77,30 +77,30 @@ $table-list-divider-padding-y: 0.4375rem !default; // 7px
 
 $table-list-title: () !default;
 $table-list-title: map-merge((
-	color: $body-color,
+	color: $gray-900,
 	font-size: 0.875rem, // 14px
 	line-height: 1.45
 ), $table-list-title);
 
 $table-list-title-link: () !default;
 $table-list-title-link: map-merge((
-	color: $body-color,
-	hover-color: $body-color
+	color: $gray-900,
+	hover-color: $gray-900,
 ), $table-list-title-link);
 
 // Table List Link
 
 $table-list-link: () !default;
 $table-list-link: map-merge((
-	color: $body-color,
-	hover-color: $body-color
+	color: $gray-900,
+	hover-color: $gray-900,
 ), $table-list-link);
 
 // Table List Action Link
 
 $table-list-action-link: () !default;
 $table-list-action-link: map-merge((
-	color: $secondary,
+	color: $gray-600,
 	hover-bg: rgba(0, 0, 0, 0.02),
-	hover-color: $body-color
+	hover-color: $gray-900,
 ), $table-list-action-link);
