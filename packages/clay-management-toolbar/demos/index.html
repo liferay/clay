@@ -33,6 +33,13 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h2>Testing</h2>
+			<div id="testing"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
 			<h2>Active State with checkbox in indeterminate state</h2>
 			<div id="active-indeterminate-block"></div>
 		</div>
@@ -49,6 +56,13 @@
 		<div class="col">
 			<h2>Active state with checkbox checked selecting one item from a unique element selection</h2>
 			<div id="active-checked-select-all-block-unique"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h2>Active state with checkbox checked selecting one item from a unique element selection with bulk actions support enabled</h2>
+			<div id="active-checked-select-all-block-unique-with-bulk-actions"></div>
 		</div>
 	</div>
 
@@ -386,12 +400,21 @@
 			selectable: true,
 			selectedItems: 1,
 			showInfoButton: true,
-			showSelectAllButton: true,
+			spritemap: spritemap,
+			totalItems: 1,
+		},
+		'#active-checked-select-all-block-unique');
+
+		new metal.ClayManagementToolbar({
+			checkboxStatus: 'checked',
+			clearSelectionURL: 'my-clear-selection-url',
+			selectable: true,
+			selectedItems: 1,
 			spritemap: spritemap,
 			supportsBulkActions: true,
 			totalItems: 1,
 		},
-		'#active-checked-select-all-block-unique');
+		'#active-checked-select-all-block-unique-with-bulk-actions');
 
 		//Active state with checkbox checked don't selecting any items.
 		new metal.ClayManagementToolbar({
