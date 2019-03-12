@@ -60,14 +60,6 @@ label {
 	}
 }
 
-.form-group {
-	position: relative;
-
-	@include clay-scale-component {
-		margin-bottom: $form-group-margin-bottom-mobile;
-	}
-}
-
 // Inputs
 
 .form-control {
@@ -395,6 +387,44 @@ fieldset[disabled] label {
 
 .form-control-sm {
 	@extend %clay-form-control-sm;
+}
+
+// Form Group
+
+.form-group {
+	position: relative;
+
+	@include clay-scale-component {
+		margin-bottom: $form-group-margin-bottom-mobile;
+	}
+}
+
+.form-group-sm {
+	margin-bottom: 1rem;
+
+	label {
+		margin-bottom: 0.1875rem;
+	}
+
+	.form-control {
+		@extend %clay-form-control-sm;
+
+		margin-bottom: 0.25rem;
+	}
+
+	select.form-control:not([size]):not([multiple]) {
+		height: $input-height-sm;
+	}
+
+	select[multiple],
+	.form-control[size] {
+		height: auto;
+	}
+
+	.form-feedback-item,
+	.form-text {
+		margin-top: 0;
+	}
 }
 
 // Form Group Autofit
