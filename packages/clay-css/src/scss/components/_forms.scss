@@ -363,48 +363,38 @@ fieldset[disabled] label {
 
 // Input Sizes
 
-.form-control-lg {
-	@if not ($input-font-size-lg == $font-size-lg) {
-		font-size: $input-font-size-lg;
-	}
-
+%clay-form-control-lg {
+	font-size: $input-font-size-lg;
 	height: $input-height-lg;
-
-	@if not ($input-padding-y-lg == $btn-padding-y-lg) {
-		padding-bottom: $input-padding-y-lg;
-		padding-top: $input-padding-y-lg;
-	}
-
-	@if not ($input-padding-x-lg == $btn-padding-x-lg) {
-		padding-left: $input-padding-x-lg;
-		padding-right: $input-padding-x-lg;
-	}
+	padding-bottom: $input-padding-y-lg;
+	padding-left: $input-padding-x-lg;
+	padding-right: $input-padding-x-lg;
+	padding-top: $input-padding-y-lg;
 
 	@include clay-scale-component {
 		height: $input-height-lg-mobile;
 	}
 }
 
-.form-control-sm {
-	@if not ($input-font-size-sm == $font-size-sm) {
-		font-size: $input-font-size-sm;
-	}
+.form-control-lg {
+	@extend %clay-form-control-lg;
+}
 
+%clay-form-control-sm {
+	font-size: $input-font-size-sm;
 	height: $input-height-sm;
-
-	@if not ($input-padding-y-sm == $btn-padding-y-sm) {
-		padding-bottom: $input-padding-y-sm;
-		padding-top: $input-padding-y-sm;
-	}
-
-	@if not ($input-padding-x-sm == $btn-padding-x-sm) {
-		padding-left: $input-padding-x-sm;
-		padding-right: $input-padding-x-sm;
-	}
+	padding-bottom: $input-padding-y-sm;
+	padding-left: $input-padding-x-sm;
+	padding-right: $input-padding-x-sm;
+	padding-top: $input-padding-y-sm;
 
 	@include clay-scale-component {
 		height: $input-height-sm-mobile;
 	}
+}
+
+.form-control-sm {
+	@extend %clay-form-control-sm;
 }
 
 // Form Group Autofit
