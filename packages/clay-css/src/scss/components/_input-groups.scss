@@ -431,3 +431,11 @@
 		}
 	}
 }
+
+// Form Group with Input Group
+
+.form-group-sm {
+	.input-group {
+		@extend %clay-input-group-sm;
+	}
+}
