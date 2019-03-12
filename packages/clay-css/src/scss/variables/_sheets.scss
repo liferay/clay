@@ -1,5 +1,5 @@
-$sheet-bg: $white !default;
-$sheet-border-color: rgba($black, 0.125) !default;
+$sheet-bg: $body-bg !default;
+$sheet-border-color: $gray-300 !default;
 $sheet-border-style: solid !default;
 $sheet-border-width: 0.0625rem !default; // 1px
 

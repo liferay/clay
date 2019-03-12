@@ -7,7 +7,7 @@ $table-margin-bottom: 0 !default;
 
 $table-cell-gutters: $grid-gutter-width / 2 !default; // 15px
 
-$table-disabled-bg: #FFF !default;
+$table-disabled-bg: $white !default;
 $table-disabled-color: #ACACAC !default;
 $table-disabled-cursor: $disabled-cursor !default;
 $table-disabled-pointer-events: none !default;
@@ -32,7 +32,7 @@ $table-data-border-color: $table-border-color !default;
 $table-data-border-style: solid !default;
 $table-data-vertical-align: middle !default;
 
-$table-divider-bg: #FFF !default;
+$table-divider-bg: $white !default;
 $table-divider-color: null !default;
 $table-divider-font-weight: null !default;
 $table-divider-font-size: null !default;
@@ -73,8 +73,8 @@ $table-title: map-merge((
 
 $table-title-link: () !default;
 $table-title-link: map-merge((
-	color: $body-color,
-	hover-color: $body-color
+	color: $gray-900,
+	hover-color: $gray-900,
 ), $table-title-link);
 
 // Table Link
@@ -106,13 +106,13 @@ $table-img-max-height: 100px !default;
 
 // Table List
 
-$table-list-bg: #FFF !default;
+$table-list-bg: $white !default;
 $table-list-color: null !default;
 $table-list-accent-bg: #F2F2F2 !default;
 $table-list-hover-bg: #ECECEC !default;
 $table-list-active-bg: #DADADA !default;
 
-$table-list-disabled-bg: #FFF !default;
+$table-list-disabled-bg: $white !default;
 $table-list-disabled-color: #ACACAC !default;
 $table-list-disabled-cursor: $disabled-cursor !default;
 $table-list-disabled-pointer-events: none !default;
@@ -159,8 +159,8 @@ $table-list-title: map-merge((
 
 $table-list-title-link: () !default;
 $table-list-title-link: map-merge((
-	color: $body-color,
-	hover-color: $body-color
+	color: $gray-900,
+	hover-color: $gray-900,
 ), $table-list-title-link);
 
 // Table List Link

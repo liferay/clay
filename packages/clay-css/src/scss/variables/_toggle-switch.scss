@@ -34,7 +34,7 @@ $toggle-switch-bar-on-bg: $component-active-bg !default;
 $toggle-switch-bar-on-border-color: $toggle-switch-bar-on-bg !default;
 $toggle-switch-bar-on-icon-color: $component-active-color !default;
 
-$toggle-switch-button-on-bg: #FFF !default;
+$toggle-switch-button-on-bg: $white !default;
 $toggle-switch-button-on-border-color: $toggle-switch-bar-on-bg !default;
 $toggle-switch-button-on-border-radius: 0 3px 3px 0 !default;
 $toggle-switch-button-on-icon-color: $toggle-switch-bar-on-bg !default;

@@ -26,7 +26,7 @@ $navigation-bar-light: map-merge((
 $navigation-bar-secondary: () !default;
 $navigation-bar-secondary: map-merge((
 	bg: $secondary,
-	color: #FFF,
+	color: $white,
 	link-color: rgba(255, 255, 255, 0.65),
 	link-hover-color: rgba(255, 255, 255, 0.9),
 	link-active-color: rgba(255, 255, 255, 0.9),

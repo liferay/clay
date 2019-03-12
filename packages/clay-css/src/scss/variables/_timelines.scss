@@ -1,4 +1,4 @@
-$timeline-border-color: #DDD !default;
+$timeline-border-color: $gray-300 !default;
 $timeline-border-width: 2px !default;
 
 $timeline-border-modifier: ceil($timeline-border-width / 2) !default;
