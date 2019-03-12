@@ -282,7 +282,7 @@
 
 // Input Group Sizes
 
-.input-group-lg {
+%clay-input-group-lg {
 	.input-group-item {
 		.btn {
 			@include clay-button-size($input-group-lg-item-btn);
@@ -345,7 +345,11 @@
 	}
 }
 
-.input-group-sm {
+.input-group-lg {
+	@extend %clay-input-group-lg;
+}
+
+%clay-input-group-sm {
 	.input-group-item {
 		.btn {
 			@include clay-button-size($input-group-sm-item-btn);
@@ -406,6 +410,10 @@
 			}
 		}
 	}
+}
+
+.input-group-sm {
+	@extend %clay-input-group-sm;
 }
 
 // Input Group Password
