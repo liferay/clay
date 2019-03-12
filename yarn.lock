@@ -5637,18 +5637,23 @@ escodegen@^1.6.1, escodegen@^1.9.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-google@^0.9.1:
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-google/-/eslint-config-google-0.9.1.tgz#83353c3dba05f72bb123169a4094f4ff120391eb"
-  integrity sha512-5A83D+lH0PA81QMESKbLJd/a3ic8tPZtwUmqNrxMRo54nfFaUvtt89q/+icQ+fd66c2xQHn0KyFkzJDoAUfpZA==
-
-eslint-config-liferay@^2.0.8:
-  version "2.0.18"
-  resolved "https://registry.yarnpkg.com/eslint-config-liferay/-/eslint-config-liferay-2.0.18.tgz#dbd61f248e1bcae38bc500ff4b4414eb9f81bd57"
-  integrity sha512-/LgEpL+e6o6NWhctGhG6k1ELJ+3qCGZuPYpyO/7CC68rrR+GZRfK6t+qYUJAYnUw1tu4yOQQ93nna3jqZYL9CA==
+eslint-config-liferay@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-liferay/-/eslint-config-liferay-3.0.0.tgz#9219a4820719114ed7e9f02c49a51042e0c6cb2b"
+  integrity sha512-8FFCspVYNG44ebP/P4nNpxstWaX+H+JdNOnJjel/Kc5Y4s9rTEXar/xmBARyzU7GTejYxLgNTOqjSy5wrg9Scw==
   dependencies:
-    eslint-config-google "^0.9.1"
+    eslint-config-prettier "4.1.0"
     eslint-plugin-liferayportal "^1.0.0"
+    eslint-plugin-no-for-of-loops "^1.0.0"
+    eslint-plugin-no-only-tests "^2.1.0"
+    eslint-plugin-notice "0.7.8"
+
+eslint-config-prettier@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-4.1.0.tgz#181364895899fff9fd3605fecb5c4f20e7d5f395"
+  integrity sha512-zILwX9/Ocz4SV2vX7ox85AsrAgXV3f2o2gpIicdMIOra48WYqgUnWNH/cR/iHtmD2Vb3dLSC3LiEJnS05Gkw7w==
+  dependencies:
+    get-stdin "^6.0.0"
 
 eslint-plugin-liferayportal@^1.0.0:
   version "1.0.1"
@@ -5657,12 +5662,17 @@ eslint-plugin-liferayportal@^1.0.0:
   dependencies:
     requireindex "~1.1.0"
 
-eslint-plugin-no-for-of-loops@1.0.0:
+eslint-plugin-no-for-of-loops@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-no-for-of-loops/-/eslint-plugin-no-for-of-loops-1.0.0.tgz#a13d91a8f1922f7fefedeab351dc0055994601f6"
   integrity sha1-oT2RqPGSL3/v7eqzUdwAVZlGAfY=
 
-eslint-plugin-notice@^0.7.7:
+eslint-plugin-no-only-tests@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-no-only-tests/-/eslint-plugin-no-only-tests-2.1.0.tgz#9050450bace6abbc457de894116141936fec68e7"
+  integrity sha512-T02dNNDj7sKJNvH7YLKqgv4+BDupxKG4OgadF0AecDHrYTb9hlosxqCgZbFKt28C7Ueof6ziCtEh6rnPvN4YYA==
+
+eslint-plugin-notice@0.7.8:
   version "0.7.8"
   resolved "https://registry.yarnpkg.com/eslint-plugin-notice/-/eslint-plugin-notice-0.7.8.tgz#c6887927061fcf1c638c0559476045a521703006"
   integrity sha512-a18VwxiBp4TmXRVpx7T5D4ilHnMS1Gq/5OMUriCcJGHD72Cbji7qVk19DGOW9vBHnJJKeg0yU95a7/o8JQoMCw==
@@ -6710,6 +6720,11 @@ get-stdin@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-5.0.1.tgz#122e161591e21ff4c52530305693f20e6393a398"
   integrity sha1-Ei4WFZHiH/TFJTAwVpPyDmOTo5g=
+
+get-stdin@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-6.0.0.tgz#9e09bf712b360ab9225e812048f71fde9c89657b"
+  integrity sha512-jp4tHawyV7+fkkSKyvjuLZswblUtz+SQKzSWnBbii16BuZksJlU1wuBYXY75r+duh/llF1ur6oNwi+2ZzjKZ7g==
 
 get-stream@^3.0.0:
   version "3.0.0"
