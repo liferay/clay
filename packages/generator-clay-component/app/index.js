@@ -61,7 +61,7 @@ module.exports = yeoman.generators.Base.extend({
 		this.prompt(
 			prompts,
 			function(props) {
-				const {componentName,} = props;
+				const {componentName} = props;
 
 				this.camelCaseName = _.camelCase(componentName);
 				this.componentName = componentName;

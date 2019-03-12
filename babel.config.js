@@ -8,7 +8,7 @@ module.exports = api => {
 	api.cache(true);
 
 	return {
-		ignore: ['node_modules', '**/__snapshots__/**', '**/__tests__/**',],
+		ignore: ['node_modules', '**/__snapshots__/**', '**/__tests__/**'],
 		presets: [
 			'@babel/env',
 			'@babel/preset-react',

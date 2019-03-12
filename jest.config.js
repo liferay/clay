@@ -6,17 +6,17 @@
 
 module.exports = {
 	collectCoverage: true,
-	coverageReporters: ['json', 'lcov',],
-	moduleFileExtensions: ['ts', 'tsx', 'js', 'json',],
+	coverageReporters: ['json', 'lcov'],
+	moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
 	resolver: `${__dirname}/scripts/jest-clay-lerna-resolver`,
-	setupFiles: [`${__dirname}/scripts/setupTests.js`,],
+	setupFiles: [`${__dirname}/scripts/setupTests.js`],
 	testMatch: [
 		`${process.cwd()}/**/__tests__/**/*.[jt]s?(x)`,
 		`${process.cwd()}/**/?(*.)+(spec|test).[jt]s?(x)`,
 	],
-	testPathIgnorePatterns: ['browserslist-config-clay', 'fixtures', 'lib',],
+	testPathIgnorePatterns: ['browserslist-config-clay', 'fixtures', 'lib'],
 	transform: {
 		'.(ts|tsx)': 'ts-jest',
 	},
-	transformIgnorePatterns: ['<rootDir>.*(node_modules)(?!.*clay.*).*$',],
+	transformIgnorePatterns: ['<rootDir>.*(node_modules)(?!.*clay.*).*$'],
 };
