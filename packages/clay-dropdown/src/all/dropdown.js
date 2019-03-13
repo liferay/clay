@@ -1,6 +1,6 @@
 import ClayActionsDropdown from '../ClayActionsDropdown';
 import ClayCreationMenuDropdown from '../ClayCreationMenuDropdown';
-import ClayDropdownBase from '../ClayDropdownBase';
+import {ClayDropdownBase, flatten} from '../ClayDropdownBase';
 import ClayDropdown from '../ClayDropdown';
 
 export {
@@ -8,4 +8,5 @@ export {
 	ClayCreationMenuDropdown,
 	ClayDropdown,
 	ClayDropdownBase,
+	flatten,
 };

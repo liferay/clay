@@ -1208,6 +1208,45 @@ describe('ClayManagementToolbar', function() {
 		);
 	});
 
+	it('should render a management toolbar in the active action state and not emit a click action event when it is disabled', () => {
+		managementToolbar = new ClayManagementToolbar({
+			actionItems: [
+				{
+					disabled: true,
+					href: '#editurl',
+					icon: 'edit',
+					label: 'Edit',
+					quickAction: true,
+				},
+				{
+					disabled: true,
+					href: '#deleteurl',
+					icon: 'trash',
+					label: 'Delete',
+					quickAction: true,
+				},
+			],
+			checkboxStatus: 'indeterminate',
+			selectable: true,
+			selectedItems: 1,
+			spritemap: spritemap,
+			totalItems: 10,
+		});
+
+		const spy = jest.spyOn(managementToolbar, 'emit');
+
+		managementToolbar.refs.quickAction0.element.click();
+
+		expect(spy).not.toHaveBeenCalled();
+		expect(spy).not.toHaveBeenCalledWith(
+			expect.objectContaining({
+				data: expect.any(Object),
+				name: 'actionItemClicked',
+				originalEvent: expect.any(Object),
+			})
+		);
+	});
+
 	it('should render a management toolbar in active state with actions mixed between quick actions and emit an event on action click and return the expected value', () => {
 		managementToolbar = new ClayManagementToolbar({
 			actionItems: [

@@ -21,6 +21,7 @@
 	]}
 	{@param? _handleCellContentClick: any}
 	{@param? _handleItemToggled: any}
+	{@param? _handleRowContentClick: any}
 	{@param? _handleSortingClick: any}
 	{@param? actionsMenuVariant: string}
 	{@param? elementClasses: string}
@@ -28,6 +29,7 @@
 	{@param? items: list<?>}
 	{@param? selectable: bool}
 	{@param? showActionsMenu: bool}
+	{@param? showCheckbox: bool}
 	{@param? size: string}
 	{@param? spritemap: string}
 	{@param? tableClasses: string}
@@ -61,18 +63,21 @@
 				{param schema: $schema /}
 				{param selectable: $selectable /}
 				{param showActionsMenu: $showActionsMenu /}
+				{param showCheckbox: $showCheckbox /}
 				{param spritemap: $spritemap /}
 			{/call}
 
 			{call .body}
 				{param _handleCellContentClick: $_handleCellContentClick /}
 				{param _handleItemToggled: $_handleItemToggled /}
+				{param _handleRowContentClick: $_handleRowContentClick /}
 				{param actionsMenuVariant: $actionsMenuVariant /}
 				{param id: $id /}
 				{param items: $items /}
 				{param schema: $schema /}
 				{param selectable: $selectable /}
 				{param showActionsMenu: $showActionsMenu /}
+				{param showCheckbox: $showCheckbox /}
 				{param spritemap: $spritemap /}
 			{/call}
 		</table>
@@ -127,11 +132,13 @@
 	]}
 	{@param? _handleCellContentClick: any}
 	{@param? _handleItemToggled: any}
+	{@param? _handleRowContentClick: any}
 	{@param? actionsMenuVariant: string}
 	{@param? id: string}
 	{@param? items: list<?>}
 	{@param? selectable: bool}
 	{@param? showActionsMenu: bool}
+	{@param? showCheckbox: bool}
 	{@param? spritemap: string}
 
 	<tbody>
@@ -139,12 +146,14 @@
 			{call .rows}
 				{param _handleCellContentClick: $_handleCellContentClick /}
 				{param _handleItemToggled: $_handleItemToggled /}
+				{param _handleRowContentClick: $_handleRowContentClick /}
 				{param actionsMenuVariant: $actionsMenuVariant /}
 				{param groupName: $id /}
 				{param items: $items /}
 				{param schema: $schema /}
 				{param selectable: $selectable /}
 				{param showActionsMenu: $showActionsMenu /}
+				{param showCheckbox: $showCheckbox /}
 				{param spritemap: $spritemap /}
 			{/call}
 		{/if}
@@ -173,11 +182,12 @@
 	{@param? _handleSortingClick: any}
 	{@param? selectable: bool}
 	{@param? showActionsMenu: bool}
+	{@param? showCheckbox: bool}
 	{@param? spritemap: string}
 
 	<thead>
 		<tr>
-			{if $selectable}
+			{if $selectable and $showCheckbox}
 				<th></th>
 			{/if}
 
@@ -235,14 +245,24 @@
 	]}
 	{@param? _handleCellContentClick: any}
 	{@param? _handleItemToggled: any}
+	{@param? _handleRowContentClick: any}
 	{@param? actionsMenuVariant: string}
 	{@param? groupName: string}
 	{@param? selectable: bool}
 	{@param? showActionsMenu: bool}
+	{@param? showCheckbox: bool}
 	{@param? spritemap: string}
 
-	<tr>
-		{if $selectable}
+	{let $attributes kind="attributes"}
+		{if $selectable and $item.selected}
+			class="table-active"
+		{/if}
+
+		data-onclick="{$_handleRowContentClick}"
+	{/let}
+
+	<tr {$attributes}>
+		{if $selectable and $showCheckbox}
 			<td>
 				{call ClayCheckbox.render}
 					{param ariaLabelledBy: $groupName ? 'group-' + $groupName : null /}
@@ -339,10 +359,12 @@
 	]}
 	{@param? _handleCellContentClick: any}
 	{@param? _handleItemToggled: any}
+	{@param? _handleRowContentClick: any}
 	{@param? actionsMenuVariant: string}
 	{@param? groupName: string}
 	{@param? selectable: bool}
 	{@param? showActionsMenu: bool}
+	{@param? showCheckbox: bool}
 	{@param? spritemap: string}
 
 	{foreach $item in $items}
@@ -362,7 +384,7 @@
 
 			<tr {$dividerAttributes}>
 				{let $cellAttributes kind="attributes"}
-					colspan="{length($schema.fields) + ($selectable ? 1 : 0) + ($showActionsMenu ? 1 : 0)}"
+					colspan="{length($schema.fields) + ($showCheckbox and $selectable ? 1 : 0) + ($showActionsMenu ? 1 : 0)}"
 				{/let}
 
 				<td {$cellAttributes}>{$item.label}</td>
@@ -371,24 +393,28 @@
 			{call .rows}
 				{param _handleCellContentClick: $_handleCellContentClick /}
 				{param _handleItemToggled: $_handleItemToggled /}
+				{param _handleRowContentClick: $_handleRowContentClick /}
 				{param actionsMenuVariant: $actionsMenuVariant /}
 				{param groupName: $currentgroupName /}
 				{param items: $item.items /}
 				{param schema: $schema /}
 				{param selectable: $selectable /}
 				{param showActionsMenu: $showActionsMenu /}
+				{param showCheckbox: $showCheckbox /}
 				{param spritemap: $spritemap /}
 			{/call}
 		{else}
 			{call .row}
 				{param _handleCellContentClick: $_handleCellContentClick /}
 				{param _handleItemToggled: $_handleItemToggled /}
+				{param _handleRowContentClick: $_handleRowContentClick /}
 				{param actionsMenuVariant: $actionsMenuVariant /}
 				{param groupName: $groupName /}
 				{param item: $item /}
 				{param schema: $schema /}
 				{param selectable: $selectable /}
 				{param showActionsMenu: $showActionsMenu /}
+				{param showCheckbox: $showCheckbox /}
 				{param spritemap: $spritemap /}
 			{/call}
 		{/if}

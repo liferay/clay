@@ -371,7 +371,17 @@
 					{if $hasActionItems}
 						{foreach $item in $actionItems}
 							{if $item.quickAction and $item.icon and $spritemap}
-								<li class="nav-item navbar-breakpoint-down-d-none" data-quick-action-index="{index($item)}" data-onclick="{$_handleQuickActionClicked}">
+								{let $attributes kind="attributes"}
+									class="nav-item navbar-breakpoint-down-d-none"
+
+									{if not $item.disabled}
+										data-onclick="{$_handleQuickActionClicked}"
+									{/if}
+
+									data-quick-action-index="{index($item)}"
+								{/let}
+
+								<li {$attributes}>
 									{if isNonnull($item.href) and (not isNonnull($item.disabled) or $item.disabled == false)}
 										{call ClayLink.render}
 											{param elementClasses: 'nav-link nav-link-monospaced' /}
@@ -699,11 +709,11 @@
 								{param title kind="text"}
 									{if $sortingOrder == 'desc'}
 										{msg desc=""}
-											ascending
+											descending
 										{/msg}
 									{else}
 										{msg desc=""}
-											descending
+											ascending
 										{/msg}
 									{/if}
 								{/param}

@@ -1297,6 +1297,29 @@ exports[`ClayTable should render a ClayTable with an schema, items and action me
 </div>
 `;
 
+exports[`ClayTable should render a ClayTable with an schema, items and showCheckbox false 1`] = `
+<div class="table-responsive">
+  <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
+    <thead>
+      <tr>
+        <th class="table-cell-expand">Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-active">
+        <td class="table-cell-expand">
+          <h1 class="table-list-title">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Hamburger</span>
+            </span>
+          </h1>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
 exports[`ClayTable should render a ClayTable with classes 1`] = `
 <div class="table-responsive my-custom-class">
   <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">

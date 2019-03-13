@@ -4,7 +4,7 @@ import 'clay-label';
 import 'clay-link';
 import 'clay-progress-bar';
 // eslint-disable-next-line
-import { ClayActionsDropdown } from 'clay-dropdown';
+import { ClayActionsDropdown, flatten } from 'clay-dropdown';
 import {Config} from 'metal-state';
 import {EventHandler} from 'metal-events';
 import ClayComponent from 'clay-component';
@@ -50,6 +50,22 @@ class ClayTable extends ClayComponent {
 	}
 
 	/**
+	 * Returns the index of the element.
+	 * @param {!Node} element
+	 * @private
+	 * @return {?(number|undefined)} the index.
+	 */
+	_getItemIndex(element) {
+		return Array.prototype.indexOf.call(
+			Array.prototype.filter.call(
+				element.parentElement.children,
+				childrenElement => !childrenElement.getAttribute('id')
+			),
+			element
+		);
+	}
+
+	/**
 	 * Continues the propagation of the cell content click event
 	 * @param {!Event} event
 	 * @private
@@ -74,6 +90,26 @@ class ClayTable extends ClayComponent {
 	 */
 	_handleItemToggled(event) {
 		this.emit('itemToggled', event);
+	}
+
+	/**
+	 * Continues the propagation of the row content click event
+	 * @param {!Event} event
+	 * @private
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleRowContentClick(event) {
+		const elementIndex = this._getItemIndex(event.delegateTarget);
+		const flattenItems = flatten(this.items);
+		const item = flattenItems[elementIndex];
+
+		return !this.emit({
+			data: {
+				item,
+			},
+			name: 'rowContentClicked',
+			originalEvent: event,
+		});
 	}
 
 	/**
@@ -203,6 +239,15 @@ ClayTable.STATE = {
 	 * @type {?bool}
 	 */
 	showActionsMenu: Config.bool().value(false),
+
+	/**
+	 * Flag to indicate if the checkbox is show or not when selectable is true.
+	 * @default false
+	 * @instance
+	 * @memberof ClayTable
+	 * @type {?bool}
+	 */
+	showCheckbox: Config.bool().value(false),
 
 	/**
 	 * Table responsive sizes. Available `lg`, `md`, `sm` and `xl`.

@@ -16,7 +16,7 @@ $input-border-top-width: $input-border-width !default; // 1px
 $input-border-style: solid !default;
 
 $input-padding-x: 1rem !default; // 16px
-$input-padding-y: 0.5rem !default; // 8px
+$input-padding-y: 0.4375rem !default; // 7px
 
 $input-padding-x-lg: $input-padding-x !default;
 $input-padding-y-lg: $input-padding-y !default;
@@ -110,6 +110,10 @@ $input-select-icon-focus: clay-icon(caret-double-l, $input-select-icon-focus-col
 $input-select-icon-disabled-color: $text-muted !default;
 $input-select-icon-disabled: clay-icon(caret-double-l, $input-select-icon-disabled-color) !default;
 
+// Textarea
+
+$input-textarea-height: 100px !default;
+
 // Form Control Label (Labels inside Form Control Tag Group)
 
 $form-control-label-size: () !default;
@@ -117,6 +121,9 @@ $form-control-label-size: map-merge((
 	border-width: 0.0625rem, // 1px
 	font-size: map-get($label-lg, font-size),
 	height: 1.5rem, // 24px
+	margin-bottom: 0.3125rem, // 5px
+	margin-right: 0.625rem, // 10px
+	margin-top: 0.3125rem, // 5px
 	padding-x: map-get($label-lg, padding-x),
 	padding-y: map-get($label-lg, padding-y),
 	text-transform: none,

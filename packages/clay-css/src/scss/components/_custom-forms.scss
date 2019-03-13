@@ -206,7 +206,7 @@ label.custom-control-label {
 	left: 0;
 	top: $custom-control-indicator-position-top;
 	width: $custom-control-indicator-size;
-	z-index: 0;
+	z-index: 1;
 }
 
 .custom-control-label::before {

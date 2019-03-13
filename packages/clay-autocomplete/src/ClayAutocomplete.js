@@ -506,6 +506,16 @@ ClayAutocomplete.STATE = {
 	 * @type {?html}
 	 */
 	unstable_content: Config.any(),
+
+	/**
+	 * Flag to indicate the autocomplete should use default css
+	 * classes or not.
+	 * @default true
+	 * @instance
+	 * @memberof ClayAutocomplete
+	 * @type {?bool}
+	 */
+	useDefaultClasses: Config.bool().value(true),
 };
 
 defineWebComponent('clay-autocomplete', ClayAutocomplete);
