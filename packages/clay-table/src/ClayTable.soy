@@ -597,3 +597,44 @@
 		{/call}
 	</td>
 {/deltemplate}
+
+/**
+ * This renders a variant of a cell of type image
+ */
+{deltemplate ClayTable.Cell variant="'image'"}
+	{@param fieldSchema: ?}
+	{@param item: ?}
+	{@param value: ?}
+	{@param? _handleCellContentClick: any}
+	{@param? spritemap: string}
+
+	<td>
+		{if $value}
+			{let $content kind="html"}
+				{let $alt: $item[$fieldSchema.altFieldName] /}
+
+				{let $attributes kind="attributes"}
+					{if $alt}
+						alt="{$alt}"
+					{/if}
+
+					class="table-img"
+
+					src="{$value}"
+				{/let}
+
+				<img {$attributes}>
+			{/let}
+
+			{if $fieldSchema.wrapImageAutofit}
+				<div class="autofit-row">
+					<div class="autofit-col">
+						{$content}
+					</div>
+				</div>
+			{else}
+				{$content}
+			{/if}
+		{/if}
+	</td>
+{/deltemplate}
