@@ -174,6 +174,7 @@
 					{foreach $item in $filteredItems}
 						{delcall ClayAutocomplete.Item variant="$contentRenderer" allowemptydefault="true"}
 							{param _handleDropdownItemClick: $_handleDropdownItemClick /}
+							{param contentRenderer: $contentRenderer /}
 							{param data: $item /}
 							{param index: index($item) /}
 						{/delcall}
@@ -195,7 +196,7 @@
 {/template}
 
 /**
- * This renders the item content of a dropdown
+ * This renders the item of a dropdown
  * Extension point: Create a new variation above ClayAutocomplete.Item
  * so you can create your own markup.
  */
@@ -203,18 +204,32 @@
 	{@param data: ?}
 	{@param index: int}
 	{@param? _handleDropdownItemClick: any}
+	{@param? contentRenderer: string}
 
 	<li>
 		<a data-onclick="{$_handleDropdownItemClick}" data-dropdown-item-index="{$index}" id="item" class="dropdown-item" href="javascript:;">
-			{if $data.matches and length($data.matches) > 0}
-				{foreach $char in $data.matches}
-					{if $char.match}
-						<strong>{$char.value}</strong>
-					{else}
-						{$char.value}
-					{/if}
-				{/foreach}
-			{/if}
+			{delcall ClayAutocomplete.ItemContent variant="$contentRenderer" allowemptydefault="true"}
+				{param data: $data /}
+			{/delcall}
 		</a>
 	</li>
+{/deltemplate}
+
+/**
+ * This renders the item content of a dropdown
+ * Extension point: Create a new variation above ClayAutocomplete.ItemContent
+ * so you can create your own markup.
+ */
+{deltemplate ClayAutocomplete.ItemContent}
+	{@param data: ?}
+
+	{if $data.matches and length($data.matches) > 0}
+		{foreach $char in $data.matches}
+			{if $char.match}
+				<strong>{$char.value}</strong>
+			{else}
+				{$char.value}
+			{/if}
+		{/foreach}
+	{/if}
 {/deltemplate}
