@@ -437,6 +437,35 @@ describe('ClayTable', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a ClayTable with an schema with image field and items', () => {
+		component = new ClayTable({
+			items: [
+				{
+					imageSrc: './image1.jpg',
+					imageAlt: 'thumbnail',
+					name: 'Ramen',
+				},
+			],
+			schema: {
+				fields: [
+					{
+						fieldName: 'name',
+						label: 'Name',
+					},
+					{
+						contentRenderer: 'image',
+						fieldName: 'imageSrc',
+						altFieldName: 'imageAlt',
+						label: 'Image',
+						wrapImageAutofit: true,
+					},
+				],
+			},
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
 	it('should render a ClayTable with schema with button field and emit an event on click', () => {
 		const spy = jest.fn();
 
