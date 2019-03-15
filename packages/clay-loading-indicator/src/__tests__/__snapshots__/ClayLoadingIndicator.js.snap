@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`ClayLoadingIndicator should render 1`] = `<span aria-hidden="true" class="loading-animation"></span>`;
-
-exports[`ClayLoadingIndicator should render an indicator with classes 1`] = `<span aria-hidden="true" class="loading-animation my-custom-class"></span>`;
-
-exports[`ClayLoadingIndicator should render an indicator with light color 1`] = `<span aria-hidden="true" class="loading-animation loading-animation-light"></span>`;
-
-exports[`ClayLoadingIndicator should render an indicator with small size 1`] = `<span aria-hidden="true" class="loading-animation loading-animation-sm"></span>`;

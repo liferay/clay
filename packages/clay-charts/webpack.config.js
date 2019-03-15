@@ -1,33 +1,25 @@
-const webpack = require('webpack');
+/**
+ * © 2018 Liferay, Inc. <https://liferay.com>
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+const path = require('path');
+const HWP = require('html-webpack-plugin');
 
 module.exports = {
-	entry: {
-		'charts': './src/charts.js',
-		'charts-jsx': './src/jsx/charts.js',
-	},
+	entry: path.join(__dirname, './demo/App.js'),
 	module: {
 		rules: [
 			{
 				test: /\.js$/,
-				exclude: /(node_modules)/,
-				use: {
-					loader: 'babel-loader',
-					options: {
-						compact: false,
-						presets: ['babel-preset-es2015'],
-						plugins: ['babel-plugin-transform-node-env-inline'],
-					},
-				},
+				exclude: /node_modules/,
+				loader: 'babel-loader',
+			},
+			{
+				test: /\.scss$/,
+				use: ['style-loader', 'css-loader', 'sass-loader'],
 			},
 		],
 	},
-	devtool: 'cheap-module-source-map',
-	output: {
-		library: 'metal',
-		libraryTarget: 'this',
-		filename: './build/globals/clay-[name].js',
-	},
-	plugins: [
-		new webpack.optimize.ModuleConcatenationPlugin()
-	],
+	plugins: [new HWP({template: path.join(__dirname, './demo/index.html')})],
 };

@@ -1,32 +1,56 @@
-$sticker-font-size: 0.625rem !default; // 10px
+$sticker-font-size: 1rem !default; // 16px
 $sticker-font-weight: $font-weight-bold !default;
-
-$sticker-inline-item-font-size: 1rem !default; // 16px
 
 // Sticker Sizes
 
 $sticker-sm: () !default;
 $sticker-sm: map-merge((
-	font-size: 0.5625rem, // 9px
-	inline-item-font-size: 0.75rem // 14px
+	font-size: 0.75rem, // 12px
 ), $sticker-sm);
 
 $sticker-lg: () !default;
 $sticker-lg: map-merge((
-	font-size: 0.9375rem, // 15px
-	inline-item-font-size: 1.25rem // 20px
+	font-size: 1.25rem, // 20px
 ), $sticker-lg);
 
 $sticker-xl: () !default;
 $sticker-xl: map-merge((
-	font-size: 1.0625rem, // 17px
-	inline-item-font-size: 1.5rem // 24px
+	font-size: 1.5rem, // 25px
 ), $sticker-xl);
 
 // Sticker Positions
 
 $sticker-inside-offset: 1rem !default; // 16px
 
+// Sticker User Icon
+
+$sticker-user-icon: () !default;
+$sticker-user-icon: map-merge((
+	box-shadow: 0 0 0 1px #E7E7ED,
+), $sticker-user-icon);
+
 // Sticker Variants
 
+$sticker-primary-bg: #FFF !default;
+$sticker-primary-color: $primary !default;
+
+$sticker-secondary-bg: #FFF !default;
+$sticker-secondary-color: $secondary !default;
+
+$sticker-info-bg: #FFF !default;
+$sticker-info-color: $info !default;
+
+$sticker-success-bg: #FFF !default;
+$sticker-success-color: $success !default;
+
+$sticker-warning-bg: #FFF !default;
+$sticker-warning-color: $warning !default;
+
+$sticker-danger-bg: #FFF !default;
+$sticker-danger-color: $danger !default;
+
+$sticker-light-bg: #FFF !default;
 $sticker-light-color: $dark !default;
+
+$sticker-dark-bg: $dark !default;
+$sticker-dark-color: #FFF !default;

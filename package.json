@@ -1,74 +1,67 @@
 {
-  "private": true,
-  "scripts": {
-    "build": "lerna run build",
-    "compile": "lerna run compile",
-    "checkFormat": "npm run prettier -- --list-different",
-    "coveralls": "node node_modules/coveralls/bin/coveralls.js < coverage/lcov.info",
-    "format": "npm run prettier -- --write",
-    "jest": "cross-env NODE_ENV=test jest",
-    "lerna": "lerna bootstrap -- --no-optional --no-package-lock",
-    "link": "lerna run link",
-    "lint": "eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js 'examples/*/src/**/*.js' && npm run mcritic",
-    "mcritic": "mcritic packages/ --ignore '**/{browserslist-config-clay,clayui.com,generator-metal-clay,node_modules,ClayDropdownItem.soy}/**'",
-    "pa11y": "pa11y-ci ./packages/clay-*/demos/a11y.html",
-    "prettier": "prettier-eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js 'examples/*/src/**/*.js'",
-    "soy": "lerna run soy",
-    "start": "http-server . -p 4000",
-    "test": "npm run build && npm run jest && npm run pa11y",
-    "testSoy": "cd packages/clay-isomorphic && ./gradlew testSoy",
-    "site": "cd clayui.com && npm run build && npm run serve"
-  },
-  "devDependencies": {
-    "babel-preset-metal": "^4.1.0",
-    "coveralls": "^3.0.0",
-    "cross-env": "^5.1.3",
-    "eslint": "^4.10.0",
-    "eslint-config-liferay": "^2.0.8",
-    "eslint-plugin-no-for-of-loops": "1.0.0",
-    "eslint-plugin-react": "^7.4.0",
-    "http-server": "^0.9.0",
-    "husky": "^0.14.2",
-    "jest": "^20.0.4",
-    "jest-fetch-mock": "^2.0.1",
-    "lerna": "^3.4.0",
-    "metal-jest-serializer": "^2.0.0",
-    "metal-soy-critic": "^2.4.0",
-    "pa11y-ci": "^2.1.1",
-    "prettier-eslint-cli": "^4.7.0"
-  },
-  "jest": {
-    "setupFiles": [
-      "./scripts/setupTests.js"
-    ],
-    "collectCoverage": true,
-    "coverageReporters": [
-      "json",
-      "lcov"
-    ],
-    "resolver": "./scripts/jest-clay-lerna-resolver",
-    "snapshotSerializers": [
-      "metal-jest-serializer"
-    ],
-    "testPathIgnorePatterns": [
-      "browserslist-config-clay",
-      "fixtures",
-      "<rootDir>/examples"
-    ],
-    "transformIgnorePatterns": [
-      "<rootDir>.*(node_modules)(?!.*clay.*).*$"
-    ]
-  },
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ],
-    "nohoist": [
-      "**/clay-charts-shared"
-    ]
-  },
-  "resolutions": {
-    "js-beautify": "1.7.5",
-    "event-stream": "3.3.4"
-  }
+	"private": true,
+	"scripts": {
+		"build": "lerna run build",
+		"compile": "lerna run compile",
+		"checkFormat": "npm run prettier -- --list-different",
+		"coveralls": "node node_modules/coveralls/bin/coveralls.js < coverage/lcov.info",
+		"format": "npm run prettier -- --write",
+		"jest": "cross-env NODE_ENV=test jest",
+		"lerna": "lerna bootstrap -- --no-optional --no-package-lock",
+		"link": "lerna run link",
+		"lint": "eslint packages/**/*.js examples/**/*.js scripts/**/*.js",
+		"pa11y": "pa11y-ci ./packages/clay-*/demos/a11y.html",
+		"prettier": "prettier-eslint packages/**/**/*.js examples/**/**/*.js scripts/**/**/*.js",
+		"start": "http-server . -p 4000",
+		"test": "npm run build && npm run jest && npm run pa11y",
+		"site": "cd clayui.com && npm run build && npm run serve"
+	},
+	"devDependencies": {
+		"@babel/preset-react": "^7.0.0",
+		"coveralls": "^3.0.0",
+		"cross-env": "^5.1.3",
+		"eslint": "^4.10.0",
+		"eslint-config-liferay": "^2.0.8",
+		"eslint-plugin-no-for-of-loops": "1.0.0",
+		"eslint-plugin-notice": "^0.7.7",
+		"eslint-plugin-react": "^7.11.1",
+		"http-server": "^0.9.0",
+		"husky": "^0.14.2",
+		"jest": "^20.0.4",
+		"jest-fetch-mock": "^2.0.1",
+		"lerna": "^3.4.0",
+		"pa11y-ci": "^2.1.1",
+		"prettier-eslint-cli": "^4.7.0"
+	},
+	"jest": {
+		"setupFiles": [
+			"./scripts/setupTests.js"
+		],
+		"collectCoverage": true,
+		"coverageReporters": [
+			"json",
+			"lcov"
+		],
+		"resolver": "./scripts/jest-clay-lerna-resolver",
+		"testPathIgnorePatterns": [
+			"browserslist-config-clay",
+			"fixtures",
+			"<rootDir>/examples"
+		],
+		"transformIgnorePatterns": [
+			"<rootDir>.*(node_modules)(?!.*clay.*).*$"
+		]
+	},
+	"workspaces": {
+		"packages": [
+			"packages/*"
+		],
+		"nohoist": [
+			"**/clay-charts-shared"
+		]
+	},
+	"resolutions": {
+		"js-beautify": "1.7.5",
+		"event-stream": "3.3.4"
+	}
 }

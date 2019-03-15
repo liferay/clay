@@ -60,12 +60,15 @@ $input-textarea-height: 150px !default;
 $form-control-label-size: () !default;
 $form-control-label-size: map-merge((
 	border-width: 0.0625rem, // 1px
-	height: 1.25rem // 20px
+	height: 1.25rem, // 20px
+	margin-bottom: 0.25rem, // 4px
+	margin-right: 0.5rem, // 8px
+	margin-top: 0.25rem, // 4px
 ), $form-control-label-size);
 
 // Form Control Tag Group
 
-$form-control-tag-group-padding-y: ($input-height-inner - map-get($form-control-label-size, height) - ($label-spacer-y * 2)) / 2 !default;
+$form-control-tag-group-padding-y: ($input-height-inner - map-get($form-control-label-size, height) - (map-get($form-control-label-size, margin-bottom)) - (map-get($form-control-label-size, margin-top))) / 2 !default;
 
 // Form Control Inset
 
