@@ -106,7 +106,9 @@ class ClayAutocomplete extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleItemSelected(event) {
-		const index = event.delegateTarget.getAttribute('data-dropdown-item-index');
+		const index = event.delegateTarget.getAttribute(
+			'data-dropdown-item-index'
+		);
 		const item = this.filteredItems[Number(index)];
 
 		return !this.emit({
