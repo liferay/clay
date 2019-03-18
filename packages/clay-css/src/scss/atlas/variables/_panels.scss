@@ -20,6 +20,13 @@ $panel-title-text-transform: uppercase !default;
 $panel-title-small-font-size: 100% !default;
 $panel-title-small-margin-left: 0.375rem !default; // 6px
 
+// Panel Group Sm
+
+$panel-group-sm: () !default;
+$panel-group-sm: map-merge((
+	title-font-size: 0.75rem,
+), $panel-group-sm);
+
 // Panel Variants
 
 $panel-secondary: () !default;
