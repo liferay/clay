@@ -4,6 +4,8 @@
 	$align-items: map-get($map, align-items);
 	$bg: map-get($map, bg);
 	$border-color: map-get($map, border-color);
+	$border-style: map-get($map, border-style);
+	$border-width: map-get($map, border-width);
 	$border-radius: map-get($map, border-radius);
 	$color: map-get($map, color);
 	$display: map-get($map, display);
@@ -64,6 +66,8 @@
 	align-items: $align-items;
 	background-color: $bg;
 	border-color: $border-color;
+	border-style: $border-style;
+	border-width: $border-width;
 
 	@include border-radius($border-radius);
 
