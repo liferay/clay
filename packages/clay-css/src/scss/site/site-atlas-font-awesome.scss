@@ -1,1 +1,8 @@
 @import "../atlas";
+
+@import "site";
+
+#claySiteCSS {
+	content: 'clay-atlas';
+	display: none;
+}

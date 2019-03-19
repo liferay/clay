@@ -26,31 +26,31 @@ $sticker-inside-offset: 1rem !default; // 16px
 
 $sticker-user-icon: () !default;
 $sticker-user-icon: map-merge((
-	box-shadow: 0 0 0 1px #E7E7ED,
+	box-shadow: 0 0 0 1px $gray-300,
 ), $sticker-user-icon);
 
 // Sticker Variants
 
-$sticker-primary-bg: #FFF !default;
+$sticker-primary-bg: $white !default;
 $sticker-primary-color: $primary !default;
 
-$sticker-secondary-bg: #FFF !default;
+$sticker-secondary-bg: $white !default;
 $sticker-secondary-color: $secondary !default;
 
-$sticker-info-bg: #FFF !default;
+$sticker-info-bg: $white !default;
 $sticker-info-color: $info !default;
 
-$sticker-success-bg: #FFF !default;
+$sticker-success-bg: $white !default;
 $sticker-success-color: $success !default;
 
-$sticker-warning-bg: #FFF !default;
+$sticker-warning-bg: $white !default;
 $sticker-warning-color: $warning !default;
 
-$sticker-danger-bg: #FFF !default;
+$sticker-danger-bg: $white !default;
 $sticker-danger-color: $danger !default;
 
-$sticker-light-bg: #FFF !default;
+$sticker-light-bg: $white !default;
 $sticker-light-color: $dark !default;
 
 $sticker-dark-bg: $dark !default;
-$sticker-dark-color: #FFF !default;
+$sticker-dark-color: $white !default;

@@ -37,7 +37,7 @@ $input-label-margin-bottom: null !default;
 
 $input-label-for-cursor: $link-cursor !default;
 
-$input-label-disabled-color: $text-muted !default;
+$input-label-disabled-color: $gray-600 !default;
 $input-label-disabled-cursor: $disabled-cursor !default;
 
 $input-label-reference-mark-color: $warning !default;
@@ -171,7 +171,7 @@ $form-feedback-margin-top: 0.25rem !default;
 
 $form-feedback-indicator-margin-x: 0.3125rem !default;
 
-$form-text-color: $text-muted !default;
+$form-text-color: $gray-600 !default;
 $form-text-font-size: 0.875rem !default; // 14px
 $form-text-font-weight: null !default;
 

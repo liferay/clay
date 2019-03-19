@@ -28,10 +28,10 @@ $panel-collapse-icon-font-size: 0.75rem !default; // 12px
 
 $panel-secondary: () !default;
 $panel-secondary: map-merge((
-	border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08),
-	color: $secondary,
+	border-color: $gray-300,
+	color: $gray-600,
 	header-bg: null,
-	header-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08),
+	header-border-color: $gray-300,
 	footer-bg: null,
-	footer-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08)
+	footer-border-color: $gray-300,
 ), $panel-secondary);
