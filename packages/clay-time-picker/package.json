@@ -1,44 +1,25 @@
 {
-  "name": "clay-time-picker",
-  "version": "2.5.0",
+  "name": "@clayui/time-picker",
+  "version": "3.0.0",
   "description": "ClayTimePicker component",
   "license": "BSD-3-Clause",
   "repository": "https://github.com/liferay/clay/tree/master/packages/clay-time-picker",
   "main": "lib/ClayTimePicker.js",
   "esnext:main": "src/ClayTimePicker.js",
   "jsnext:main": "src/ClayTimePicker.js",
-  "files": [
-    "lib",
-    "src"
-  ],
+  "files": ["lib", "src"],
   "scripts": {
-    "build": "webpack --mode development",
-    "start": "webpack-dev-server --mode development",
-    "compile": "babel -d lib/ src/ -s --ignore src/__tests__",
-    "prepublish": "npm run compile"
+    "build": "babel src --root-mode upward --out-dir lib --extensions .ts,.tsx",
+		"build:types": "tsc --project ./tsconfig.declarations.json",
+		"prepublishOnly": "npm run build && npm run build:types",
+		"start": "webpack-dev-server --mode development",
+		"test": "jest --config ../../jest.config.js"
   },
-  "keywords": [
-    "clay",
-    "react"
-  ],
-  "dependencies": {
-    "prop-types": "^15.6.2",
-    "react": "^16.8.0-alpha.0",
-    "react-dom": "^16.8.0-alpha.0"
+  "keywords": ["clay", "react"],
+  "peerDependencies": {
+		"react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "clay-css": "^2.10.0"
   },
-  "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.25.0",
-    "babel-loader": "^7.0.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-react": "^6.24.1",
-    "css-loader": "^2.1.0",
-    "eslint-plugin-react": "^7.12.3",
-    "html-webpack-plugin": "^3.2.0",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.28.4",
-    "webpack-cli": "^3.2.1",
-    "webpack-dev-server": "^3.1.14"
-  }
+  "browserslist": ["extends browserslist-config-clay"]
 }

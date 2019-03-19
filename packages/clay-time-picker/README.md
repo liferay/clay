@@ -4,21 +4,22 @@ ClayTimePicker
 
 ## Setup
 
-1. Install NodeJS >= v6.0.0 and NPM >= v3.0.0, if you don't have it yet. You
-can find it [here](https://nodejs.org).
+1. Install `yarn`
 
 2. Install local dependencies:
 
-  ```
-  yarn install
-  ```
+```
+yarn
+```
 
-3. Start the code:
+3. Build the code:
 
-  ```
-  yarn run start
-  ```
+```
+yarn start
+```
+
+4. Open the demo at `localhost:8080` on your browser.
 
 ## Contribute
 
-We'd love to get contributions from you! Please, check our [Contributing Guidelines](CONTRIBUTING.md) to see how you can help us improve.
+We'd love to get contributions from you! Please, check our [Contributing Guidelines](https://github.com/liferay/clay/blob/master/CONTRIBUTING.md) to see how you can help us improve.

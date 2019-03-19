@@ -1,50 +1,33 @@
+/**
+ * © 2019 Liferay, Inc. <https://liferay.com>
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const webpack = require('webpack');
 
 module.exports = {
-	entry: './demos/App.js',
-	module: {
-		rules: [
-			{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				loader: 'babel-loader',
-				options: {
-					cacheDirectory: true,
-					compact: false,
-					presets: [
-						'babel-preset-env',
-						'babel-preset-react',
-					],
-				},
-			},
-			{
-				test: /\.scss$/,
-				use: [
-					'style-loader',
-					'css-loader',
-					'sass-loader',
-				],
-			},
-		],
-	},
-	devtool: 'cheap-module-source-map',
 	devServer: {
 		contentBase: [path.resolve('../../')],
 	},
-	resolve: {
-		mainFields: ['browser', 'esnext:main', 'main'],
-	},
-	output: {
-		path: path.resolve(__dirname, 'build'),
-		filename: './globals/clay-time-picker.js',
+	entry: path.join(__dirname, 'demos/App.tsx'),
+	module: {
+		rules: [
+			{loader: 'awesome-typescript-loader', test: /\.tsx?$/},
+			{enforce: 'pre', loader: 'source-map-loader', test: /\.js$/},
+			{
+				test: /\.css$/,
+				use: ['style-loader', 'css-loader'],
+			},
+		],
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			inject: true,
-			template: path.resolve(__dirname, './demos/index.html'),
+			template: path.join(__dirname, './demos/index.html'),
 		}),
-		new webpack.HotModuleReplacementPlugin(),
 	],
+	resolve: {
+		extensions: ['.ts', '.tsx', '.js', '.json'],
+	},
 };
