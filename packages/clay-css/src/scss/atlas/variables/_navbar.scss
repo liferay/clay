@@ -4,14 +4,14 @@ $navbar-underline-active-bg: lighten($component-active-bg, 22.94) !default;
 
 // Navbar Light
 
-$navbar-light-color: $secondary !default;
+$navbar-light-color: $gray-600 !default;
 $navbar-light-hover-color: $navbar-light-color !default;
-$navbar-light-active-color: $body-color !default;
+$navbar-light-active-color: $gray-900 !default;
 $navbar-light-disabled-color: $nav-link-disabled-color !default;
 
 // Navbar Dark
 
-$navbar-dark-color: #FFF !default;
+$navbar-dark-color: $white !default;
 $navbar-dark-hover-color: $navbar-dark-color !default;
 $navbar-dark-active-color: $navbar-dark-color !default;
 $navbar-dark-disabled-color: $nav-link-disabled-color !default;

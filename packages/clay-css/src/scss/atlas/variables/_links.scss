@@ -1,6 +1,6 @@
 $link-secondary: () !default;
 $link-secondary: map-merge((
-	hover-color: $body-color
+	hover-color: $gray-900,
 ), $link-secondary);
 
 // Component Title
@@ -23,7 +23,7 @@ $component-subtitle: map-merge((
 
 $component-subtitle-link: () !default;
 $component-subtitle-link: map-merge((
-	hover-color: $body-color
+	hover-color: $gray-900,
 ), $component-subtitle-link);
 
 // Component Action
@@ -31,10 +31,10 @@ $component-subtitle-link: map-merge((
 $component-action: () !default;
 $component-action: map-merge((
 	font-size: 1rem, // 16px
-	hover-bg: rgba($dark, 0.03),
-	hover-color: $body-color,
-	active-bg: rgba($dark, 0.06),
-	active-color: $body-color,
+	hover-bg: rgba($gray-900, 0.03),
+	hover-color: $gray-900,
+	active-bg: rgba($gray-900, 0.06),
+	active-color: $gray-900,
 	btn-focus-box-shadow: map-get($btn-secondary, focus-box-shadow),
 	disabled-bg: transparent
 ), $component-action);
@@ -43,7 +43,7 @@ $component-action: map-merge((
 
 $link-outline-primary: () !default;
 $link-outline-primary: map-merge((
-	hover-bg: lighten($primary, 44.90),
+	hover-bg: $primary-l3,
 	hover-color: $primary,
 	btn-focus-box-shadow: map-get($btn-outline-primary, focus-box-shadow),
 	btn-focus-outline: 0,
@@ -53,11 +53,11 @@ $link-outline-primary: map-merge((
 
 $link-outline-secondary: () !default;
 $link-outline-secondary: map-merge((
-	border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06),
-	hover-bg: rgba($dark, 0.03),
-	hover-color: $body-color,
+	border-color: $secondary-l2,
+	hover-bg: rgba($gray-900, 0.03),
+	hover-color: $gray-900,
 	btn-focus-box-shadow: map-get($btn-secondary, focus-box-shadow),
 	btn-focus-outline: 0,
-	active-bg: rgba($dark, 0.06),
-	active-color: $body-color
+	active-bg: rgba($gray-900, 0.06),
+	active-color: $gray-900,
 ), $link-outline-secondary);

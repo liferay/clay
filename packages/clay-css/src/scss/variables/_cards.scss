@@ -7,7 +7,7 @@ $card-body-padding-left: null !default;
 $card-body-padding-right: null !default;
 $card-body-padding-top: null !default;
 
-$card-section-header-color: $secondary !default;
+$card-section-header-color: $gray-600 !default;
 $card-section-header-font-size: 0.75rem !default;
 $card-section-header-font-weight: $font-weight-semi-bold !default;
 $card-section-header-line-height: 2.5 !default;
@@ -34,7 +34,7 @@ $card-title-link: map-merge((
 
 $card-subtitle: () !default;
 $card-subtitle: map-merge((
-	color: $secondary,
+	color: $gray-600,
 	font-size: 0.875rem, // 14px
 	font-weight: $font-weight-semi-bold,
 	margin-bottom: 0,
@@ -44,7 +44,7 @@ $card-subtitle: map-merge((
 $card-subtitle-link: () !default;
 $card-subtitle-link: map-merge((
 	color: map-get($card-subtitle, color),
-	hover-color: darken($secondary, 15%)
+	hover-color: darken($gray-600, 15%)
 ), $card-subtitle-link);
 
 // Card Link
