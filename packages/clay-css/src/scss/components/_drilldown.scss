@@ -1,0 +1,44 @@
+// Drill Down Transitions
+
+.drilldown-transition {
+	transition: $drilldown-transition;
+}
+
+.drilldown-inner {
+	display: flex;
+	transition: $drilldown-inner-transition;
+}
+
+// Drill Down
+
+.drilldown.dropdown-menu {
+	max-height: none;
+	max-width: none;
+	min-width: 0;
+	overflow: hidden;
+	width: $drilldown-width;
+}
+
+.drilldown .inline-scroller {
+	max-height: $drilldown-inline-scroller-max-height;
+}
+
+.drilldown-item {
+	display: none;
+	flex-shrink: 0;
+	height: 0;
+	width: 100%;
+}
+
+.drilldown-item-header {
+	@include clay-link($drilldown-item-header);
+}
+
+.drilldown-current {
+	display: block;
+	height: auto;
+}
+
+.transitioning {
+	display: block;
+}
