@@ -6,33 +6,37 @@
 
 import classnames from 'classnames';
 import moment from 'moment';
-import PropTypes from 'prop-types';
-import React, {useMemo} from 'react';
+import React, {ChangeEventHandler, FunctionComponent, useMemo} from 'react';
 
-/**
- * @param {Object} param
- * @return {React.createElement}
- */
-function InputDate({
+interface Props {
+	ariaLabel?: string;
+	currentTime: string;
+	dateFormat: string;
+	inputName?: string;
+	onChange: ChangeEventHandler<HTMLInputElement>;
+	placeholder?: string;
+	time: boolean;
+	timeFormat: string;
+	useNative: boolean;
+	value: string;
+}
+
+const InputDate: FunctionComponent<Props> = ({
 	ariaLabel,
 	currentTime,
 	dateFormat,
-	inputName,
+	inputName = 'datePicker',
 	onChange,
 	placeholder,
-	time,
+	time = false,
 	timeFormat,
-	useNative,
+	useNative = false,
 	value,
-}) {
-	/**
-	 * @param {!string} value
-	 * @return {string}
-	 */
-	function isValidValue(value) {
+}) => {
+	const isValidValue = (value: string | Date): string => {
 		const format = time ? `${dateFormat} ${timeFormat}` : dateFormat;
 
-		if (moment(value, format).isValid() && !isNaN(value)) {
+		if (moment(value, format).isValid() && value instanceof Date) {
 			const date = moment(value)
 				.clone()
 				.format(dateFormat);
@@ -40,8 +44,8 @@ function InputDate({
 			return time ? `${date} ${currentTime}` : date;
 		}
 
-		return value;
-	}
+		return value as string;
+	};
 
 	const memoizedValue = useMemo(() => isValidValue(value), [
 		value,
@@ -65,27 +69,6 @@ function InputDate({
 			/>
 		</React.Fragment>
 	);
-}
-
-InputDate.propTypes = {
-	ariaLabel: PropTypes.string,
-	currentTime: PropTypes.string.isRequired,
-	dateFormat: PropTypes.string.isRequired,
-	inputName: PropTypes.string,
-	onChange: PropTypes.func,
-	placeholder: PropTypes.string,
-	time: PropTypes.bool,
-	timeFormat: PropTypes.string,
-	useNative: PropTypes.bool,
-	value: PropTypes.oneOfType([PropTypes.instanceOf(Date), PropTypes.string]),
 };
 
-InputDate.defaultProps = {
-	inputName: 'datePicker',
-	time: false,
-	useNative: false,
-	value: undefined,
-};
-
-export {InputDate};
 export default InputDate;

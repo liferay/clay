@@ -4,34 +4,34 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayTimePicker from 'clay-time-picker';
+import ClayTimePicker from '@clayui/time-picker';
 import moment from 'moment';
-import PropTypes from 'prop-types';
-import React from 'react';
+import React, {ChangeEventHandler, FunctionComponent} from 'react';
 
 import Icon from './Icon';
 
-/**
- * TimePicker
- * @return {React.createElement}
- */
-function TimePicker({
+interface Props {
+	currentTime: string;
+	onTimeChange: (hours: number, minutes: number) => void;
+	spritemap: string;
+	timeFormat: string;
+	timezone?: string;
+}
+
+const TimePicker: FunctionComponent<Props> = ({
 	currentTime,
 	onTimeChange,
 	spritemap,
 	timeFormat,
 	timezone,
-}) {
+}) => {
 	/**
 	 * Handles the control time picker
-	 * @param {!Event} event
 	 */
-	function handleOnChange(event) {
-		const {value} = event.target;
-		const date = moment(value, timeFormat);
-
+	const handleOnChange: ChangeEventHandler<HTMLInputElement> = event => {
+		const date = moment(event.currentTarget.value, timeFormat);
 		onTimeChange(date.hours(), date.minutes());
-	}
+	};
 
 	return (
 		<div className="time-picker">
@@ -51,15 +51,6 @@ function TimePicker({
 			</div>
 		</div>
 	);
-}
-
-TimePicker.propTypes = {
-	currentTime: PropTypes.string,
-	onTimeChange: PropTypes.func,
-	spritemap: PropTypes.string,
-	timeFormat: PropTypes.string,
-	timezone: PropTypes.string,
 };
 
-export {TimePicker};
 export default TimePicker;

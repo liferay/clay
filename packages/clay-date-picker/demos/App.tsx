@@ -4,15 +4,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ReactDOM from 'react-dom';
+import ClayDatePicker, {firstDayOfWeek} from '../src/ClayDatePicker';
 import React, {useState} from 'react';
-import ClayDatePicker from '../src/ClayDatePicker';
+import ReactDOM from 'react-dom';
 
 const spritemap = '../../../node_modules/clay-css/lib/images/icons/icons.svg';
 
-/**
- * @return {React.Component}
- */
 function DefaultState() {
 	const [value, setValue] = useState();
 
@@ -32,9 +29,6 @@ function DefaultState() {
 
 ReactDOM.render(<DefaultState />, document.getElementById('default-block'));
 
-/**
- * @return {React.Component}
- */
 function TimeBlock() {
 	const [value, setValue] = useState();
 
@@ -43,7 +37,8 @@ function TimeBlock() {
 			onValueChange={setValue}
 			placeholder="YYYY-MM-DD HH:mm"
 			spritemap={spritemap}
-			time={true}
+			time
+			timezone="GMT+01:00"
 			value={value}
 			years={{
 				start: 1997,
@@ -55,16 +50,13 @@ function TimeBlock() {
 
 ReactDOM.render(<TimeBlock />, document.getElementById('time-block'));
 
-/**
- * @return {React.Component}
- */
 function LocaleBlock() {
 	const [value, setValue] = useState();
 
 	return (
 		<ClayDatePicker
 			dateFormat="DD.MM.YYYY"
-			firstDayOfWeek={1}
+			firstDayOfWeek={firstDayOfWeek.Monday}
 			months={[
 				'Январь',
 				'Февраль',
@@ -82,7 +74,8 @@ function LocaleBlock() {
 			onValueChange={setValue}
 			placeholder="DD.MM.YYYY HH:mm"
 			spritemap={spritemap}
-			time={true}
+			time
+			timezone="GMT+03:00"
 			value={value}
 			weekdaysShort={['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']}
 			years={{
@@ -95,9 +88,6 @@ function LocaleBlock() {
 
 ReactDOM.render(<LocaleBlock />, document.getElementById('locale-block'));
 
-/**
- * @return {React.Component}
- */
 function NativeBlock() {
 	const [value, setValue] = useState();
 
@@ -106,7 +96,7 @@ function NativeBlock() {
 			onValueChange={setValue}
 			placeholder="YYYY-MM-DD"
 			spritemap={spritemap}
-			useNative={true}
+			useNative
 			value={value}
 		/>
 	);

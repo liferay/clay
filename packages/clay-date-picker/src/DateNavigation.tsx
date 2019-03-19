@@ -6,17 +6,28 @@
 
 import * as Helpers from './Helpers';
 import moment from 'moment';
-import PropTypes from 'prop-types';
-import React, {useMemo} from 'react';
+import React, {
+	ChangeEvent,
+	FunctionComponent,
+	HTMLAttributes,
+	useMemo,
+} from 'react';
+import {IAriaLabels, IYears} from './ClayDatePicker';
 
 import Button from './Button';
-import Select from './Select';
+import Select, {ISelectOption} from './Select';
 
-/**
- * @param {Object} param
- * @return {React.createElement}
- */
-function DateNavigation({
+interface Props extends HTMLAttributes<HTMLDivElement> {
+	ariaLabels: IAriaLabels;
+	currentMonth: Date;
+	months: Array<string>;
+	onDotClicked: () => void;
+	onMonthChange: (date: Date) => void;
+	spritemap: string;
+	years: IYears;
+}
+
+const DateNavigation: FunctionComponent<Props> = ({
 	ariaLabels,
 	currentMonth,
 	months,
@@ -24,8 +35,8 @@ function DateNavigation({
 	onMonthChange,
 	spritemap,
 	years,
-}) {
-	const memoizedYears = useMemo(
+}) => {
+	const memoizedYears: Array<ISelectOption> = useMemo(
 		() =>
 			Helpers.range(years).map(elem => {
 				return {
@@ -36,7 +47,7 @@ function DateNavigation({
 		[years]
 	);
 
-	const memoizedMonths = useMemo(
+	const memoizedMonths: Array<ISelectOption> = useMemo(
 		() =>
 			months.map((month, index) => {
 				return {
@@ -50,9 +61,8 @@ function DateNavigation({
 	/**
 	 * Handles the change of the month from the available
 	 * years in the range
-	 * @param {!number} month
 	 */
-	function handleChangeMonth(month) {
+	function handleChangeMonth(month: number) {
 		const date = moment(currentMonth)
 			.clone()
 			.add(month, 'M')
@@ -66,22 +76,20 @@ function DateNavigation({
 
 	/**
 	 * Handles the previous month button
-	 * @return {void}
 	 */
 	const handlePreviousMonthClicked = () => handleChangeMonth(-1);
 
 	/**
 	 * Handles the next month button
-	 * @return {void}
 	 */
 	const handleNextMonthClicked = () => handleChangeMonth(1);
 
 	/**
 	 * Handles the change of the year and month of the header
-	 * @param {!Event} event
 	 */
-	function handleFormChange(event) {
-		const {month, year} = event.target.form;
+	function handleFormChange(event: ChangeEvent<HTMLSelectElement>) {
+		if (event.currentTarget.form === null) return;
+		const {month, year} = event.currentTarget.form;
 		onMonthChange(new Date(year.value, month.value));
 	}
 
@@ -109,52 +117,34 @@ function DateNavigation({
 					<Button
 						ariaLabel={ariaLabels.buttonPreviousMonth}
 						icon="angle-left"
-						monospaced={true}
+						monospaced
 						onClick={handlePreviousMonthClicked}
 						size="sm"
 						spritemap={spritemap}
-						style="unstyled"
+						variant="unstyled"
 					/>
 					<Button
 						ariaLabel={ariaLabels.buttonDot}
 						icon="simple-circle"
-						monospaced={true}
+						monospaced
 						onClick={onDotClicked}
 						size="sm"
 						spritemap={spritemap}
-						style="unstyled"
+						variant="unstyled"
 					/>
 					<Button
 						ariaLabel={ariaLabels.buttonNextMonth}
 						icon="angle-right"
-						monospaced={true}
+						monospaced
 						onClick={handleNextMonthClicked}
 						size="sm"
 						spritemap={spritemap}
-						style="unstyled"
+						variant="unstyled"
 					/>
 				</div>
 			</form>
 		</div>
 	);
-}
-
-DateNavigation.propTypes = {
-	ariaLabels: PropTypes.shape({
-		buttonDot: PropTypes.string,
-		buttonNextMonth: PropTypes.string,
-		buttonPreviousMonth: PropTypes.string,
-	}),
-	currentMonth: PropTypes.instanceOf(Date).isRequired,
-	months: PropTypes.array,
-	onDotClicked: PropTypes.func,
-	onMonthChange: PropTypes.func,
-	spritemap: PropTypes.string.isRequired,
-	years: PropTypes.shape({
-		start: PropTypes.number,
-		end: PropTypes.number,
-	}),
 };
 
-export {DateNavigation};
 export default DateNavigation;

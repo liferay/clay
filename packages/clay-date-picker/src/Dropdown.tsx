@@ -4,31 +4,45 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {useRef, useEffect} from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import React, {
+	FunctionComponent,
+	HTMLAttributes,
+	MutableRefObject,
+	useEffect,
+	useRef,
+} from 'react';
 
-/**
- * @param {Object} param
- * @return {React.createElement}
- */
-function Dropdown({children, containerRef, expanded, onDocumentClick}) {
+interface Props extends HTMLAttributes<HTMLDivElement> {
+	containerRef: MutableRefObject<HTMLDivElement | null>;
+	expanded: boolean;
+	onDocumentClick: () => void;
+}
+
+const Dropdown: FunctionComponent<Props> = ({
+	children,
+	containerRef,
+	expanded,
+	onDocumentClick,
+}) => {
 	/**
 	 * Create a ref to store the dropdown DOM element
 	 */
-	const elementRef = useRef(null);
+	const elementRef = useRef<HTMLDivElement | null>(null);
 
 	/**
 	 * Handles the click of the document to hide the datepicker.
-	 * @param {!Event} event
-	 * @return {void}
 	 */
-	function handleDocumentClicked(event) {
+	const handleDocumentClicked = (event: MouseEvent) => {
 		const node = containerRef || elementRef;
-		if (node.current && !node.current.contains(event.target)) {
+		if (
+			node.current &&
+			event.target !== null &&
+			!node.current.contains(event.target as HTMLDocument)
+		) {
 			onDocumentClick();
 		}
-	}
+	};
 
 	useEffect(() => {
 		if (expanded) {
@@ -49,13 +63,6 @@ function Dropdown({children, containerRef, expanded, onDocumentClick}) {
 			{children}
 		</div>
 	);
-}
-
-Dropdown.propTypes = {
-	children: PropTypes.element,
-	containerRef: PropTypes.object,
-	expanded: PropTypes.bool,
-	onDocumentClick: PropTypes.func,
 };
 
 Dropdown.defaultProps = {

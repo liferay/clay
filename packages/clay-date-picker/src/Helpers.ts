@@ -4,20 +4,23 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+export interface IDay {
+	date: Date;
+	outside?: boolean;
+}
+
+export type WeekDays = Array<IDay>;
+
+export type Month = Array<WeekDays>;
+
 /**
  * Clone a date object.
- * @param {!Date} d The date to clone
- * @return {!Date} The cloned date
  */
-export function clone(d) {
+export function clone(d: Date) {
 	return new Date(d.getTime());
 }
 
-/**
- * @param {!Date} d
- * @return {!Date}
- */
-export function getDaysInMonth(d) {
+export function getDaysInMonth(d: Date) {
 	const firstDayOfMonth = new Date(d.getFullYear(), d.getMonth(), 1, 12);
 
 	firstDayOfMonth.setMonth(firstDayOfMonth.getMonth() + 1);
@@ -47,20 +50,16 @@ export function getDaysInMonth(d) {
  *
  * The `outside` property references when a day
  * does not belong to the current month.
- *
- * @param {!Date} d
- * @param {!number} firstDayOfWeek
- * @return {!Array}
  */
-export function getWeekArray(d, firstDayOfWeek = 0) {
+export function getWeekArray(d: Date, firstDayOfWeek = 0): Month {
 	const daysInMonth = getDaysInMonth(d);
-	const dayArray = [];
+	const dayArray: Array<IDay> = [];
 
-	let week = [];
-	const weekArray = [];
+	let week: WeekDays = [];
+	const weekArray: Month = [];
 
 	for (let i = 1; i <= daysInMonth; i += 1) {
-		let genDay = new Date(d.getFullYear(), d.getMonth(), i, 12);
+		const genDay = new Date(d.getFullYear(), d.getMonth(), i, 12);
 		dayArray.push({date: genDay});
 	}
 
@@ -94,10 +93,7 @@ export function getWeekArray(d, firstDayOfWeek = 0) {
 	return weekArray;
 }
 
-/**
- * @return {Array<int>}
- */
-export function range({end, start}) {
+export function range({end, start}: {end: number; start: number}) {
 	return Array.from(
 		{
 			length: end - start + 1,
