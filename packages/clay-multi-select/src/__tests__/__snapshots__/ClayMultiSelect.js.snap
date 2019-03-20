@@ -50,6 +50,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect and add the class focus
     </div>
   </div>
 </div>
+<ul class="dropdown-menu" ref="dropdown" style="top: 0px; left: 0px;"></ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect and clear the input values after the onblur event 1`] = `
@@ -59,7 +60,6 @@ exports[`ClayMultiSelect should render a ClayMultiSelect and clear the input val
       <div class="dropdown dropdown-full">
         <div class=" form-control form-control-tag-group">
           <input class="form-control-inset" ref="input" type="text" value="">
-          <ul class="dropdown-menu" ref="dropdown"></ul>
         </div>
       </div>
       <div class="form-feedback-group">
