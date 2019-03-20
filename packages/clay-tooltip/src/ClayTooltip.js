@@ -26,6 +26,7 @@ class ClayTooltip extends ClayComponent {
 			throw new Error('Use ClayTooltip.init to initialize ClayTooltip');
 		}
 		super(config, parentElement);
+		this._timer = undefined;
 	}
 
 	/**
@@ -187,7 +188,48 @@ class ClayTooltip extends ClayComponent {
 	}
 
 	/**
-	 * Handles transionend event.
+	 * Handles touchstart events.
+	 * @memberOf ClayTooltip
+	 * @param {!Event} event
+	 * @private
+	 */
+	_handleTouchStart(event) {
+		this._timer = setTimeout(() => {
+			const content = this._getContent(event.srcElement);
+			this._target = event.srcElement;
+
+			this._content = content;
+
+			if (!this.visible) {
+				this.element.style.display = 'block';
+			}
+			this._isTransitioning = true;
+			this.visible = true;
+			clearTimeout(this._timer);
+		}, 500);
+	}
+
+	/**
+	 * Handle touchend events.
+	 * @memberOf ClayTooltip
+	 * @param {!Event} event
+	 * @private
+	 */
+	_handleTouchEnd(event) {
+		if (this._timer) {
+			clearTimeout(this._timer);
+			this._timer = undefined;
+		}
+		if (this.visible) {
+			this._restoreTitle(event.srcElement);
+
+			this._isTransitioning = true;
+			this.visible = false;
+		}
+	}
+
+	/**
+	 * Handles transitionend event.
 	 * @memberof ClayTooltip
 	 * @private
 	 */
@@ -285,39 +327,65 @@ class ClayTooltip extends ClayComponent {
 
 			for (let i = 0, l = newSelectors.length; i < l; i++) {
 				const selector = newSelectors[i];
+				const handlers = [];
 
-				this._eventHandler.add(
-					dom.delegate(
-						document,
-						'blur',
-						selector,
-						this._handleMouseLeave.bind(this)
-					),
-					dom.delegate(
-						document,
-						'click',
-						selector,
-						this._handleMouseClick.bind(this)
-					),
-					dom.delegate(
-						document,
-						'focus',
-						selector,
-						this._handleMouseEnter.bind(this)
-					),
-					dom.delegate(
-						document,
-						'mouseenter',
-						selector,
-						this._handleMouseEnter.bind(this)
-					),
-					dom.delegate(
-						document,
-						'mouseleave',
-						selector,
-						this._handleMouseLeave.bind(this)
-					)
-				);
+				if (/iPad|iPhone|iPod|android/i.test(navigator.userAgent)) {
+					handlers.push([
+						dom.delegate(
+							document,
+							'touchstart',
+							selector,
+							this._handleTouchStart.bind(this)
+						),
+						dom.delegate(
+							document,
+							'touchend',
+							selector,
+							this._handleTouchEnd.bind(this)
+						),
+						dom.delegate(
+							document,
+							'touchcancel',
+							selector,
+							this._handleTouchEnd.bind(this)
+						),
+					]);
+				} else {
+					handlers.push([
+						dom.delegate(
+							document,
+							'blur',
+							selector,
+							this._handleMouseLeave.bind(this)
+						),
+						dom.delegate(
+							document,
+							'click',
+							selector,
+							this._handleMouseClick.bind(this)
+						),
+						dom.delegate(
+							document,
+							'focus',
+							selector,
+							this._handleMouseEnter.bind(this)
+						),
+						dom.delegate(
+							document,
+							'mouseenter',
+							selector,
+							this._handleMouseEnter.bind(this)
+						),
+						dom.delegate(
+							document,
+							'mouseleave',
+							selector,
+							this._handleMouseLeave.bind(this)
+						),
+					]);
+				}
+
+				this._eventHandler.add(...handlers);
 			}
 		}
 	}
