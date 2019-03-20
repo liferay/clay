@@ -16,6 +16,47 @@ import templates from './ClayMultiSelect.soy.js';
  */
 class ClayMultiSelect extends ClayComponent {
 	/**
+	 * @inheritDoc
+	 */
+	created() {
+		this._itemFocused = null;
+		this._eventHandler = new EventHandler();
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	attached() {
+		this._eventHandler.add(
+			dom.on(document, 'click', this._handleDocClick.bind(this), true)
+		);
+		this.addListener('inputOnBlur', this._defaultInputOnBlur, true);
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	detached() {
+		this._eventHandler.removeAllListeners();
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	disposed() {
+		this._eventHandler.removeAllListeners();
+		this._itemFocused = null;
+	}
+
+	/**
+	 * Clears the values that are not labeled in the input.
+	 * @protected
+	 */
+	_defaultInputOnBlur() {
+		this.inputValue = null;
+	}
+
+	/**
 	 * Assemble the schema of the item.
 	 * @param {!string} label
 	 * @param {!string} value
@@ -107,11 +148,18 @@ class ClayMultiSelect extends ClayComponent {
 
 	/**
 	 * Handles the input blur
+	 * @param {!Event} event
 	 * @protected
+	 * @return {?Boolean} If the event has been prevented or not.
 	 */
-	_handleInputOnBlur() {
+	_handleInputOnBlur(event) {
 		this._removeFocusedItem();
 		this._inputFocus = false;
+
+		return !this.emit({
+			name: 'inputOnBlur',
+			originalEvent: event,
+		});
 	}
 
 	/**
@@ -359,38 +407,6 @@ class ClayMultiSelect extends ClayComponent {
 			values,
 			valueOut: hasLastComma ? null : values.pop(),
 		};
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	created() {
-		this._itemFocused = null;
-		this._eventHandler = new EventHandler();
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	attached() {
-		this._eventHandler.add(
-			dom.on(document, 'click', this._handleDocClick.bind(this), true)
-		);
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	detached() {
-		this._eventHandler.removeAllListeners();
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	disposed() {
-		this._eventHandler.removeAllListeners();
-		this._itemFocused = null;
 	}
 
 	/**

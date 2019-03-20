@@ -30,15 +30,6 @@ class ClayAutocomplete extends ClayComponent {
 	}
 
 	/**
-	 * @inheritDoc
-	 */
-	syncFilteredItems() {
-		if (!this.filteredItems.length) {
-			this._dropdownItemFocused = null;
-		}
-	}
-
-	/**
 	 * Sets filtered items with received data
 	 * @private
 	 */
@@ -256,6 +247,15 @@ class ClayAutocomplete extends ClayComponent {
 		const match = value.match(regexp);
 
 		return Array.isArray(match) ? match.join('') : '';
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	syncFilteredItems() {
+		if (!this.filteredItems.length) {
+			this._dropdownItemFocused = null;
+		}
 	}
 }
 
