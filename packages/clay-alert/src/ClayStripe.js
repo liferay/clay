@@ -81,7 +81,7 @@ ClayStripe.STATE = {
 	defaultEventHandler: Config.object(),
 
 	/**
-	 * Flag to indicate if the alert should be destroyen when close.
+	 * Flag to indicate if the alert should be destroyed when close.
 	 * @default false
 	 * @instance
 	 * @memberof ClayStripe

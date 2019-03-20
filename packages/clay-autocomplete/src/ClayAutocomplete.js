@@ -386,7 +386,7 @@ ClayAutocomplete.STATE = {
 	elementClasses: Config.string(),
 
 	/**
-	 * Flag to enable the filtred items with autocomplete default.
+	 * Flag to enable the filtered items with autocomplete default.
 	 * @default true
 	 * @instance
 	 * @memberof ClayAutocomplete
