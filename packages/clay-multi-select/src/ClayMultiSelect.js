@@ -51,7 +51,6 @@ class ClayMultiSelect extends ClayComponent {
 	 * @inheritDoc
 	 */
 	attached() {
-		this._prevValSelectedItems = this.selectedItems;
 		this._eventHandler.add(
 			dom.on(document, 'click', this._handleDocClick.bind(this), true)
 		);
@@ -438,10 +437,9 @@ class ClayMultiSelect extends ClayComponent {
 	/**
 	 * @inheritDoc
 	 */
-	syncSelectedItems() {
-		if (!arrayIsEquals(this.selectedItems, this._prevValSelectedItems)) {
+	syncSelectedItems(newVal, prevVal) {
+		if (!arrayIsEquals(newVal, prevVal)) {
 			this.refs.autocomplete.refs.input.focus();
-			this._prevValSelectedItems = this.selectedItems.map(item => item);
 		}
 	}
 }
