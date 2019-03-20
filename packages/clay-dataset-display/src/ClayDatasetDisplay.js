@@ -336,7 +336,7 @@ class ClayDatasetDisplay extends ClayComponent {
  */
 ClayDatasetDisplay.STATE = {
 	/**
-	 * The selected items of the item list. For internatl purposes.
+	 * The selected items of the item list. For internal purposes.
 	 * @default undefined
 	 * @instance
 	 * @memberof ClayDatasetDisplay
@@ -345,7 +345,7 @@ ClayDatasetDisplay.STATE = {
 	_selectedItems: Config.array().internal(),
 
 	/**
-	 * The total number of items in the item list. For internatl purposes.
+	 * The total number of items in the item list. For internal purposes.
 	 * @default undefined
 	 * @instance
 	 * @memberof ClayDatasetDisplay

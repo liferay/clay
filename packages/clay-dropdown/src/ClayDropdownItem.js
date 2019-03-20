@@ -61,7 +61,7 @@ ClayDropdownItem.STATE = {
 	checked: itemShape.checked,
 
 	/**
-	 * Name of the contentrendere for the different deltempaltes.
+	 * Name of the content renderer for the different deltempaltes.
 	 * @default undefined
 	 * @instance
 	 * @memberof ClayDropdownItem

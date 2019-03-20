@@ -76,7 +76,7 @@ class ClayTable extends ClayComponent {
 
 	/**
 	 * Handles document click in order to remove the class `table-focus` from
-	 * the focused table row. This is to handle quickMenu accesibility.
+	 * the focused table row. This is to handle quickMenu accessibility.
 	 * @private
 	 */
 	_handleDocClick() {
@@ -114,7 +114,7 @@ class ClayTable extends ClayComponent {
 
 	/**
 	 * Handles each row focus in order to add the class `table-focus` to the row.
-	 * This is to handle quickMenu accesibility.
+	 * This is to handle quickMenu accessibility.
 	 * @param {!Event} event
 	 * @private
 	 */
@@ -287,7 +287,7 @@ ClayTable.STATE = {
 	useDefaultClasses: Config.bool().value(true),
 
 	/**
-	 * Flag to indicate if the table is wraped inside a div or not.
+	 * Flag to indicate if the table is wrapped inside a div or not.
 	 * @default true
 	 * @instance
 	 * @memberof ClayTable

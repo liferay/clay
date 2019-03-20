@@ -560,7 +560,7 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a management toolbar in state active with checbkox in indeterminate state', () => {
+	it('should render a management toolbar in state active with checkbox in indeterminate state', () => {
 		managementToolbar = new ClayManagementToolbar({
 			checkboxStatus: 'indeterminate',
 			selectable: true,
@@ -572,7 +572,7 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a management toolbar in active state with checbkox checked', () => {
+	it('should render a management toolbar in active state with checkbox checked', () => {
 		managementToolbar = new ClayManagementToolbar({
 			checkboxStatus: 'checked',
 			clearSelectionURL: 'my-clear-selection-url',

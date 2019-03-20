@@ -295,7 +295,7 @@ class ClayTooltip extends ClayComponent {
 	}
 
 	/**
-	 * The setter function for the `classMap` staet.
+	 * The setter function for the `classMap` state.
 	 * @memberof ClayTooltip
 	 * @param {Object} val
 	 * @return {!Object}

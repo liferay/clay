@@ -69,7 +69,7 @@ class ClayAlertBase extends ClayComponent {
 	}
 
 	/**
-	 * Handles mouseot event for the alert.
+	 * Handles mouseout event for the alert.
 	 * @private
 	 */
 	_handleMouseOut() {
@@ -149,7 +149,7 @@ ClayAlertBase.STATE = {
 
 	/**
 	 * Set the duration time to auto close the alert.
-	 * @default undfined
+	 * @default undefined
 	 * @instance
 	 * @memberof ClayAlertBase
 	 * @type {?number}
@@ -185,7 +185,7 @@ ClayAlertBase.STATE = {
 	defaultEventHandler: Config.object(),
 
 	/**
-	 * Flag to indicate if the alert should be destroyen when close.
+	 * Flag to indicate if the alert should be destroyed when close.
 	 * @default false
 	 * @instance
 	 * @memberof ClayAlertBase

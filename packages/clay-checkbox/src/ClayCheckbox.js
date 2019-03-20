@@ -89,7 +89,7 @@ ClayCheckbox.STATE = {
 	id: Config.string(),
 
 	/**
-	 * Flag to indicate if checbkox's checked state is indeterminate.
+	 * Flag to indicate if checkbox's checked state is indeterminate.
 	 * @default false
 	 * @instance
 	 * @memberof ClayCheckbox
@@ -107,7 +107,7 @@ ClayCheckbox.STATE = {
 	inline: Config.bool().value(false),
 
 	/**
-	 * Label of the input. Required for accesibility.
+	 * Label of the input. Required for accessibility.
 	 * @default undefined
 	 * @instance
 	 * @memberof ClayCheckbox

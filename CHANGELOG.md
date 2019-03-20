@@ -1105,7 +1105,7 @@
 - sheet-title can contain an "add button" right aligned [\#547](https://github.com/liferay/clay/issues/547)
 - Tabbing through items with box-shadow in a Blink browser \(Chrome\) leaves remnants of the shadow [\#546](https://github.com/liferay/clay/issues/546)
 - aspect-ratio-bg-contain [\#545](https://github.com/liferay/clay/issues/545)
-- Implement Search only content markup in ManagmentToolbar [\#543](https://github.com/liferay/clay/issues/543)
+- Implement Search only content markup in managementToolbar [\#543](https://github.com/liferay/clay/issues/543)
 - Upadte styles for new Clay Card Grid List Markup [\#542](https://github.com/liferay/clay/issues/542)
 - IE: Tabbing through the document focuses SVG elements [\#536](https://github.com/liferay/clay/issues/536)
 - Disabled attribute markup is incorrect for button [\#522](https://github.com/liferay/clay/issues/522)
@@ -1271,7 +1271,7 @@
 **Merged pull requests:**
 
 - v1.0.0-alpha.15 [\#422](https://github.com/liferay/clay/pull/422) ([jbalsas](https://github.com/jbalsas))
-- Add class to managmenttoolbar [\#421](https://github.com/liferay/clay/pull/421) ([marcoscv-work](https://github.com/marcoscv-work))
+- Add class to managementtoolbar [\#421](https://github.com/liferay/clay/pull/421) ([marcoscv-work](https://github.com/marcoscv-work))
 - Add missing SoyDocs [\#420](https://github.com/liferay/clay/pull/420) ([carloslancha](https://github.com/carloslancha))
 - \[Site\] Updates previous lexiconcss site link [\#418](https://github.com/liferay/clay/pull/418) ([jbalsas](https://github.com/jbalsas))
 - Fix managementtoolbar styles [\#417](https://github.com/liferay/clay/pull/417) ([julien](https://github.com/julien))
