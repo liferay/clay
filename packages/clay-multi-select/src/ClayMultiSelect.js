@@ -11,6 +11,30 @@ import Soy from 'metal-soy';
 import templates from './ClayMultiSelect.soy.js';
 
 /**
+ * Compare two arrays
+ * @param {Array} array
+ * @param {Array} otherArray
+ * @private
+ * @return {bool}
+ */
+const arrayIsEquals = (array, otherArray) => {
+	if (!Array.isArray(otherArray)) return false;
+
+	const valueLenght = array.length;
+	const otherLenght = otherArray.length;
+
+	if (valueLenght !== otherLenght) return false;
+
+	const compare = (item1, item2) => item1 === item2;
+
+	for (let i = 0; i < valueLenght; i++) {
+		if (!compare(array[i], otherArray[i])) break;
+	}
+
+	return true;
+};
+
+/**
  * Metal ClayMultiSelect component.
  * @extends ClayComponent
  */
@@ -188,14 +212,14 @@ class ClayMultiSelect extends ClayComponent {
 					this._performCall(this.valueLocator, itemSelected) === label
 			)
 		) {
-			const index = this.selectedItems.push(data);
-
-			this.selectedItems = this.selectedItems;
+			const newSelectedItems = this.selectedItems.map(item => item);
+			newSelectedItems.push(data);
+			this.selectedItems = newSelectedItems;
 			this.inputValue = null;
 
 			return !this.emit({
 				data: {
-					item: this.selectedItems[index - 1],
+					item: data,
 				},
 				name: 'itemAdded',
 				originalEvent: event,
@@ -263,8 +287,9 @@ class ClayMultiSelect extends ClayComponent {
 		const item = this.selectedItems[Number(index)];
 
 		this._removeFocusedItem();
-		this.selectedItems.splice(Number(index), 1);
-		this.selectedItems = this.selectedItems;
+		const newSelectedItems = this.selectedItems.map(item => item);
+		newSelectedItems.splice(Number(index), 1);
+		this.selectedItems = newSelectedItems;
 		this.inputValue = null;
 
 		return !this.emit({
@@ -412,8 +437,10 @@ class ClayMultiSelect extends ClayComponent {
 	/**
 	 * @inheritDoc
 	 */
-	syncSelectedItems() {
-		this.refs.autocomplete.refs.input.focus();
+	syncSelectedItems(newVal, prevVal) {
+		if (!arrayIsEquals(newVal, prevVal)) {
+			this.refs.autocomplete.refs.input.focus();
+		}
 	}
 }
 
