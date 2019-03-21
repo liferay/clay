@@ -98,8 +98,6 @@
 // Panel Group
 
 .panel-group {
-	background-color: $panel-bg;
-
 	@include border-radius($panel-border-radius);
 
 	.panel {
@@ -160,6 +158,10 @@
 		&:first-child,
 		&:last-child {
 			@if ($panel-border-radius > 0) {
+				border-radius: 0;
+			}
+
+			.panel-header.collapsed {
 				border-radius: 0;
 			}
 		}
@@ -270,8 +272,22 @@
 	}
 }
 
+// Panel Group Sizes
+
+.panel-group-sm {
+	.panel {
+		@include clay-panel-variant($panel-group-sm);
+	}
+}
+
 // Panel Variants
 
 .panel-secondary {
 	@include clay-panel-variant($panel-secondary);
+}
+
+// Panel Unstyled
+
+.panel-unstyled {
+	@include clay-panel-variant($panel-unstyled);
 }
