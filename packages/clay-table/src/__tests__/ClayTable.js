@@ -457,7 +457,7 @@ describe('ClayTable', function() {
 						fieldName: 'imageSrc',
 						altFieldName: 'imageAlt',
 						label: 'Image',
-						wrapImageAutofit: true,
+						autofitImage: true,
 					},
 				],
 			},
