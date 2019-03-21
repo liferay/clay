@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ClayMultiSelect Lifecycle itemAdded should not emit an event when the input value exists on the selected items 1`] = `
-<div class="from-group">
+<div class="form-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
       <div class="dropdown dropdown-full">
@@ -33,7 +33,7 @@ exports[`ClayMultiSelect Lifecycle itemAdded should not emit an event when the i
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect and add the class focus when focus on input 1`] = `
-<div class="from-group">
+<div class="form-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
       <div class="dropdown dropdown-full">
@@ -54,7 +54,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect and add the class focus
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect and clear the input values after the onblur event 1`] = `
-<div class="from-group">
+<div class="form-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
       <div class="dropdown dropdown-full">
@@ -75,7 +75,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect and clear the input val
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect and keep the focus of the input when selecting an item 1`] = `
-<div class="from-group">
+<div class="form-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
       <div class="dropdown dropdown-full">
@@ -118,7 +118,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect and keep the focus of t
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect and remove the focus when blur on input 1`] = `
-<div class="from-group">
+<div class="form-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
       <div class="dropdown dropdown-full">
@@ -139,7 +139,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect and remove the focus wh
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with classes 1`] = `
-<div class="from-group my-custom-class">
+<div class="form-group my-custom-class">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
       <div class="dropdown dropdown-full">
@@ -160,7 +160,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with classes 1`] = `
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with id 1`] = `
-<div class="from-group" id="myId">
+<div class="form-group" id="myId">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
       <div class="dropdown dropdown-full">
@@ -181,7 +181,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with id 1`] = `
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with input name from selected items 1`] = `
-<div class="from-group">
+<div class="form-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
       <div class="dropdown dropdown-full">
@@ -202,7 +202,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with input name from se
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with label 1`] = `
-<div class="from-group">
+<div class="form-group">
   <label>Foo</label>
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
@@ -224,7 +224,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with label 1`] = `
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with multiple values with comma at the end 1`] = `
-<div class="from-group">
+<div class="form-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
       <div class="dropdown dropdown-full">
@@ -278,7 +278,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with multiple values wi
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with placeholder 1`] = `
-<div class="from-group">
+<div class="form-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
       <div class="dropdown dropdown-full">
@@ -299,7 +299,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with placeholder 1`] = 
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with select button hidden 1`] = `
-<div class="from-group">
+<div class="form-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
       <div class="dropdown dropdown-full">
@@ -317,7 +317,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with select button hidd
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with selected items 1`] = `
-<div class="from-group">
+<div class="form-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
       <div class="dropdown dropdown-full">
@@ -360,7 +360,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with selected items 1`]
 `;
 
 exports[`ClayMultiSelect should render the default markup 1`] = `
-<div class="from-group">
+<div class="form-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
       <div class="dropdown dropdown-full">
