@@ -453,7 +453,10 @@ ClayTooltip.STATE = {
 	 * @memberof ClayTooltip
 	 * @type {!Array.<string>}
 	 */
-	selectors: Config.array().value(['[data-title]:not([data-title=""])', '[title]:not([title=""]']),
+	selectors: Config.array().value([
+		'[data-title]:not([data-title=""])',
+		'[title]:not([title=""]',
+	]),
 
 	/**
 	 * Tooltip visible when show is called.
