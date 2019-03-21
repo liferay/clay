@@ -19,20 +19,44 @@
 	$breakpoint-up: map-get($map, breakpoint-up);
 	$breakpoint-down: setter(clay-breakpoint-prev($breakpoint-up), null);
 
+	$border-color: map-get($map, border-color);
+	$border-style: map-get($map, border-style);
+	$border-width: map-get($map, border-width);
+	$display: map-get($map, display);
+	$float: map-get($map, float);
+	$margin-bottom: map-get($map, margin-bottom);
+	$margin-left: map-get($map, margin-left);
+	$margin-right: map-get($map, margin-right);
+	$margin-top: map-get($map, margin-top);
+	$max-width: map-get($map, max-width);
+	$min-width: map-get($map, min-width);
 	$padding-bottom: map-get($map, padding-bottom);
 	$padding-left: map-get($map, padding-left);
 	$padding-right: map-get($map, padding-right);
 	$padding-top: map-get($map, padding-top);
+	$position: map-get($map, position);
 
 	$padding-bottom-mobile: map-get($map, padding-bottom-mobile);
 	$padding-left-mobile: map-get($map, padding-left-mobile);
 	$padding-right-mobile: map-get($map, padding-right-mobile);
 	$padding-top-mobile: map-get($map, padding-top-mobile);
 
+	border-color: $border-color;
+	border-style: $border-style;
+	border-width: $border-width;
+	display: $display;
+	float: $float;
+	margin-bottom: $margin-bottom;
+	margin-left: $margin-left;
+	margin-right: $margin-right;
+	margin-top: $margin-top;
+	max-width: $max-width;
+	min-width: $min-width;
 	padding-bottom: $padding-bottom;
 	padding-left: $padding-left;
 	padding-right: $padding-right;
 	padding-top: $padding-top;
+	position: $position;
 
 	@if($breakpoint-down) {
 		@include media-breakpoint-down($breakpoint-down) {
@@ -42,6 +66,24 @@
 			padding-top: $padding-top-mobile;
 		}
 	}
+}
+
+@mixin clay-row($map) {
+	$display: map-get($map, display);
+	$flex-wrap: map-get($map, flex-wrap);
+	$justify-content: map-get($map, justify-content);
+	$margin-bottom: map-get($map, margin-bottom);
+	$margin-left: map-get($map, margin-left);
+	$margin-right: map-get($map, margin-right);
+	$margin-top: map-get($map, margin-top);
+
+	display: $display;
+	flex-wrap: $flex-wrap;
+	justify-content: $justify-content;
+	margin-bottom: $margin-bottom;
+	margin-left: $margin-left;
+	margin-right: $margin-right;
+	margin-top: $margin-top;
 }
 
 @mixin clay-custom-grid-columns($map) {
