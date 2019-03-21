@@ -5,6 +5,7 @@
  */
 {template .render}
 	{@param dataSource: string|[]|list<?>|any}
+	{@param? _dropdownWidth: number}
 	{@param? _handleDataChange: any}
 	{@param? _handleDropdownItemClick: any}
 	{@param? _handleOnBlur: any}
@@ -70,8 +71,10 @@
 		{/call}
 
 		{call .dropdown}
+			{param _dropdownWidth: $_dropdownWidth /}
 			{param _handleDataChange: $_handleDataChange /}
 			{param _handleDropdownItemClick: $_handleDropdownItemClick /}
+			{param _handleOnKeydown: $_handleOnKeydown /}
 			{param contentRenderer: $contentRenderer /}
 			{param dataSource: $dataSource /}
 			{param filteredItems: $filteredItems /}
@@ -138,8 +141,10 @@
  */
 {template .dropdown}
 	{@param dataSource: string|[]|list<?>|any}
+	{@param? _dropdownWidth: number}
 	{@param? _handleDataChange: any}
 	{@param? _handleDropdownItemClick: any}
+	{@param? _handleOnKeydown: any}
 	{@param? contentRenderer: string}
 	{@param? filteredItems: list<?>}
 	{@param? initialData: []|list<?>}
@@ -160,27 +165,44 @@
 
 	{let $isVisible: $filteredItems and length($filteredItems) > 0 ? true : false /}
 
-	{let $classes kind="text"}
-		dropdown-menu
-		{if $isVisible}
-			{sp}show
-		{/if}
+	{let $dropdownContent kind="html"}
+		{let $attributes kind="attributes"}
+			class="dropdown-menu
+				{if $isVisible}
+					{sp}show
+				{/if}
+			"
+
+			data-onkeydown="{$_handleOnKeydown}"
+
+			{if $_dropdownWidth}
+				style="width: {$_dropdownWidth}px; max-width: none;"
+			{/if}
+
+			ref="dropdown"
+		{/let}
+
+		<ul {$attributes}>
+			{if $filteredItems}
+				{foreach $item in $filteredItems}
+					{delcall ClayAutocomplete.Item variant="$contentRenderer" allowemptydefault="true"}
+						{param _handleDropdownItemClick: $_handleDropdownItemClick /}
+						{param contentRenderer: $contentRenderer /}
+						{param data: $item /}
+						{param index: index($item) /}
+					{/delcall}
+				{/foreach}
+			{/if}
+		</ul>
 	{/let}
 
 	{call ClayDataProvider.render}
 		{param content kind="html"}
-			<ul class="{$classes}" ref="dropdown">
-				{if $filteredItems}
-					{foreach $item in $filteredItems}
-						{delcall ClayAutocomplete.Item variant="$contentRenderer" allowemptydefault="true"}
-							{param _handleDropdownItemClick: $_handleDropdownItemClick /}
-							{param contentRenderer: $contentRenderer /}
-							{param data: $item /}
-							{param index: index($item) /}
-						{/delcall}
-					{/foreach}
-				{/if}
-			</ul>
+			{call ClayPortal.render}
+				{param content: $dropdownContent /}
+				{param portalElement: '#clay_dropdown_portal' /}
+				{param ref: 'portal' /}
+			{/call}
 		{/param}
 
 		{param dataSource: $dataSource /}

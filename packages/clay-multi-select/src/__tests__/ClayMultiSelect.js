@@ -308,7 +308,7 @@ describe('ClayMultiSelect', function() {
 
 			const {
 				dropdown,
-			} = component.refs.autocomplete.refs.dataProvider.refs;
+			} = component.refs.autocomplete.refs.dataProvider.refs.portal.refs;
 
 			dropdown.querySelector('a[data-dropdown-item-index]').click();
 
