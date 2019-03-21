@@ -58,6 +58,17 @@ label.toggle-switch {
 	font-weight: $toggle-switch-font-weight;
 	max-width: 100%;
 	position: relative;
+
+	&.disabled {
+		.toggle-switch-label {
+			color: $toggle-switch-label-disabled-color;
+			cursor: $toggle-switch-disabled-cursor;
+		}
+
+		.toggle-switch-text {
+			color: $toggle-switch-text-disabled-color;
+		}
+	}
 }
 
 .toggle-switch-check-bar {
@@ -246,7 +257,7 @@ label.toggle-switch {
 	}
 
 	&:focus ~ .toggle-switch-bar:before {
-		@include box-shadow($toggle-switch-bar-focus-box-shadow);
+		box-shadow: $toggle-switch-bar-focus-box-shadow;
 	}
 }
 
