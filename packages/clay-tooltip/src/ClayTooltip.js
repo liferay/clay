@@ -149,16 +149,7 @@ class ClayTooltip extends ClayComponent {
 	 * @private
 	 */
 	_handleMouseEnter(event) {
-		const content = this._getContent(event.delegateTarget);
-		this._target = event.delegateTarget;
-
-		this._content = content;
-
-		if (!this.visible) {
-			this.element.style.display = 'block';
-		}
-		this._isTransitioning = true;
-		this.visible = true;
+		this._showTooltip(event.delegateTarget);
 	}
 
 	/**
@@ -179,53 +170,30 @@ class ClayTooltip extends ClayComponent {
 	 * @private
 	 */
 	_handleMouseLeave(event) {
-		if (this.visible) {
-			this._restoreTitle(event.delegateTarget);
-
-			this._isTransitioning = true;
-			this.visible = false;
-		}
+		this._hideTooltip(event.delegateTarget);
 	}
 
 	/**
 	 * Handles touchstart events.
-	 * @memberOf ClayTooltip
+	 * @memberof ClayTooltip
 	 * @param {!Event} event
 	 * @private
 	 */
 	_handleTouchStart(event) {
 		this._timer = setTimeout(() => {
-			const content = this._getContent(event.srcElement);
-			this._target = event.srcElement;
-
-			this._content = content;
-
-			if (!this.visible) {
-				this.element.style.display = 'block';
-			}
-			this._isTransitioning = true;
-			this.visible = true;
+			this._showTooltip(event.srcElement);
 			clearTimeout(this._timer);
 		}, 500);
 	}
 
 	/**
 	 * Handle touchend events.
-	 * @memberOf ClayTooltip
+	 * @memberof ClayTooltip
 	 * @param {!Event} event
 	 * @private
 	 */
 	_handleTouchEnd(event) {
-		if (this._timer) {
-			clearTimeout(this._timer);
-			this._timer = undefined;
-		}
-		if (this.visible) {
-			this._restoreTitle(event.srcElement);
-
-			this._isTransitioning = true;
-			this.visible = false;
-		}
+		this._hideTooltip(event.srcElement);
 	}
 
 	/**
@@ -238,6 +206,24 @@ class ClayTooltip extends ClayComponent {
 
 		if (!this.visible) {
 			this.element.style.display = 'none';
+		}
+	}
+
+	/**
+	 * Hides the tooltip on the given element.
+	 * @param {!Element} element
+	 * @private
+	 */
+	_hideTooltip(element) {
+		if (this._timer) {
+			clearTimeout(this._timer);
+			this._timer = undefined;
+		}
+		if (this.visible) {
+			this._restoreTitle(element);
+
+			this._isTransitioning = true;
+			this.visible = false;
 		}
 	}
 
@@ -303,6 +289,25 @@ class ClayTooltip extends ClayComponent {
 	 */
 	setterClassMapFn_(val) {
 		return object.mixin(this.valueClassMapFn_(), val);
+	}
+
+	/**
+	 * Shows the tooltip on a given element.
+	 * @memberof ClayTooltip
+	 * @param {!Element} target
+	 * @private
+	 */
+	_showTooltip(target) {
+		const content = this._getContent(target);
+		this._target = target;
+
+		this._content = content;
+
+		if (!this.visible) {
+			this.element.style.display = 'block';
+		}
+		this._isTransitioning = true;
+		this.visible = true;
 	}
 
 	/**
