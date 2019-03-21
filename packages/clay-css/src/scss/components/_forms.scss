@@ -249,7 +249,7 @@ select.form-control:not([multiple]):not([size]),
 textarea.form-control,
 textarea.form-control-plaintext,
 .form-control.form-control-textarea {
-		height: $input-textarea-height;
+	height: $input-textarea-height;
 }
 
 // File
@@ -368,11 +368,23 @@ fieldset[disabled] label {
 	}
 }
 
+%clay-select-form-control-lg {
+	&:not([size]):not([multiple]) {
+		height: $input-height-lg;
+
+		@include clay-scale-component {
+			height: $input-height-lg-mobile;
+		}
+	}
+}
+
 .form-control-lg {
 	@extend %clay-form-control-lg;
 }
 
 %clay-form-control-sm {
+	@include border-radius($input-border-radius-sm);
+
 	font-size: $input-font-size-sm;
 	height: $input-height-sm;
 	padding-bottom: $input-padding-y-sm;
@@ -385,46 +397,18 @@ fieldset[disabled] label {
 	}
 }
 
+%clay-select-form-control-sm {
+	&:not([size]):not([multiple]) {
+		height: $input-height-sm;
+
+		@include clay-scale-component {
+			height: $input-height-sm-mobile;
+		}
+	}
+}
+
 .form-control-sm {
 	@extend %clay-form-control-sm;
-}
-
-// Form Group
-
-.form-group {
-	position: relative;
-
-	@include clay-scale-component {
-		margin-bottom: $form-group-margin-bottom-mobile;
-	}
-}
-
-.form-group-sm {
-	margin-bottom: 1rem;
-
-	label {
-		margin-bottom: 0.1875rem;
-	}
-
-	.form-control {
-		@extend %clay-form-control-sm;
-
-		margin-bottom: 0.25rem;
-	}
-
-	select.form-control:not([size]):not([multiple]) {
-		height: $input-height-sm;
-	}
-
-	select[multiple],
-	.form-control[size] {
-		height: auto;
-	}
-
-	.form-feedback-item,
-	.form-text {
-		margin-top: 0;
-	}
 }
 
 // Form Group Autofit
@@ -500,5 +484,43 @@ fieldset[disabled] label {
 .form-group-item-label-spacer {
 	@include media-breakpoint-up(sm) {
 		margin-top: $form-group-item-label-spacer;
+	}
+}
+
+// Form Group
+
+.form-group {
+	position: relative;
+
+	@include clay-scale-component {
+		margin-bottom: $form-group-margin-bottom-mobile;
+	}
+}
+
+.form-group-sm {
+	margin-bottom: 1rem;
+
+	label {
+		margin-bottom: 0.1875rem;
+	}
+
+	.form-control {
+		@extend %clay-form-control-sm;
+	}
+
+	select.form-control {
+		@extend %clay-select-form-control-sm;
+	}
+
+	select[multiple],
+	.form-control[size] {
+		height: auto;
+	}
+
+	.form-feedback-item ~ .form-feedback-item,
+	.form-feedback-item ~ .form-text,
+	.form-text ~ .form-feedback-item,
+	.form-text ~ .form-text {
+		margin-top: 0;
 	}
 }
