@@ -252,6 +252,16 @@ textarea.form-control-plaintext,
 	height: $input-textarea-height;
 }
 
+textarea.form-control-lg,
+.form-control-lg.form-control-textarea {
+	height: $input-textarea-height-lg;
+}
+
+textarea.form-control-sm,
+.form-control-sm.form-control-textarea {
+	height: $input-textarea-height-sm;
+}
+
 // File
 
 .form-control-file {
