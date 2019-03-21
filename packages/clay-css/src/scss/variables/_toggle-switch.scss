@@ -46,9 +46,15 @@ $toggle-switch-button-on-icon-color: $toggle-switch-bar-on-bg !default;
 $toggle-switch-disabled-cursor: $disabled-cursor !default;
 $toggle-switch-disabled-opacity: 0.4 !default;
 
+// Toggle Switch Label
+
+$toggle-switch-label-disabled-color: $input-label-disabled-color !default;
+
 // Toggle Switch Text
 
 $toggle-switch-text-font-size: 0.75rem !default;
+
+$toggle-switch-text-disabled-color: $input-label-disabled-color !default;
 
 // Simple Toggle Switch
 
