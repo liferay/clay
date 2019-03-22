@@ -542,6 +542,10 @@ textarea.form-control-sm,
 		margin-bottom: $form-group-sm-input-label-margin-bottom;
 	}
 
+	.btn {
+		@extend %clay-btn-sm;
+	}
+
 	.form-control,
 	.form-control-plaintext {
 		@extend %clay-form-control-sm;

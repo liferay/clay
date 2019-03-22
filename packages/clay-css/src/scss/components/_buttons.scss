@@ -32,6 +32,33 @@
 
 // Button Sizes
 
+%clay-btn-lg {
+	@include border-radius($btn-border-radius-lg);
+
+	font-size: $btn-font-size-lg;
+	line-height: $btn-line-height-lg;
+	padding-bottom: $btn-padding-y-lg;
+	padding-left: $btn-padding-x-lg;
+	padding-right: $btn-padding-x-lg;
+	padding-top: $btn-padding-y-lg;
+
+	@include clay-scale-component {
+		font-size: $btn-font-size-lg-mobile;
+		padding-bottom: $btn-padding-y-lg-mobile;
+		padding-left: $btn-padding-x-lg-mobile;
+		padding-right: $btn-padding-x-lg-mobile;
+		padding-top: $btn-padding-y-lg-mobile;
+	}
+
+	.inline-item {
+		font-size: $btn-inline-item-font-size-lg;
+	}
+
+	.btn-section {
+		font-size: $btn-section-font-size-lg;
+	}
+}
+
 .btn-lg {
 	font-size: $btn-font-size-lg;
 
@@ -49,6 +76,33 @@
 
 	.btn-section {
 		font-size: $btn-section-font-size-lg;
+	}
+}
+
+%clay-btn-sm {
+	@include border-radius($btn-border-radius-sm);
+
+	font-size: $btn-font-size-sm;
+	line-height: $btn-line-height-sm;
+	padding-bottom: $btn-padding-y-sm;
+	padding-left: $btn-padding-x-sm;
+	padding-right: $btn-padding-x-sm;
+	padding-top: $btn-padding-y-sm;
+
+	@include clay-scale-component {
+		font-size: $btn-font-size-sm-mobile;
+		padding-bottom: $btn-padding-y-sm-mobile;
+		padding-left: $btn-padding-x-sm-mobile;
+		padding-right: $btn-padding-x-sm-mobile;
+		padding-top: $btn-padding-y-sm-mobile;
+	}
+
+	.inline-item {
+		font-size: $btn-inline-item-font-size-sm;
+	}
+
+	.btn-section {
+		font-size: $btn-section-font-size-sm;
 	}
 }
 
