@@ -88,7 +88,10 @@ const DateNavigation: FunctionComponent<Props> = ({
 	 * Handles the change of the year and month of the header
 	 */
 	function handleFormChange(event: ChangeEvent<HTMLSelectElement>) {
-		if (event.currentTarget.form === null) return;
+		if (event.currentTarget.form === null) {
+			return;
+		}
+
 		const {month, year} = event.currentTarget.form;
 		onMonthChange(new Date(year.value, month.value));
 	}
