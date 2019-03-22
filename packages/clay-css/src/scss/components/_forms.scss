@@ -252,16 +252,6 @@ textarea.form-control-plaintext,
 	height: $input-textarea-height;
 }
 
-textarea.form-control-lg,
-.form-control-lg.form-control-textarea {
-	height: $input-textarea-height-lg;
-}
-
-textarea.form-control-sm,
-.form-control-sm.form-control-textarea {
-	height: $input-textarea-height-sm;
-}
-
 // File
 
 .form-control-file {
@@ -365,13 +355,26 @@ fieldset[disabled] label {
 
 // Input Sizes
 
+// Bootstrap 4 @extend .form-control-lg; work around
+
 %clay-form-control-lg {
+	@include border-radius($input-border-radius-lg);
+
 	font-size: $input-font-size-lg;
 	height: $input-height-lg;
 	padding-bottom: $input-padding-y-lg;
 	padding-left: $input-padding-x-lg;
 	padding-right: $input-padding-x-lg;
 	padding-top: $input-padding-y-lg;
+
+	@include clay-scale-component {
+		height: $input-height-lg-mobile;
+	}
+}
+
+.form-control-lg {
+	font-size: $input-font-size-lg;
+	height: $input-height-lg;
 
 	@include clay-scale-component {
 		height: $input-height-lg-mobile;
@@ -388,9 +391,16 @@ fieldset[disabled] label {
 	}
 }
 
-.form-control-lg {
-	@extend %clay-form-control-lg;
+%clay-textarea-form-control-lg {
+	height: $input-textarea-height-lg;
 }
+
+textarea.form-control-lg,
+.form-control-lg.form-control-textarea {
+	height: $input-textarea-height-lg;
+}
+
+// Bootstrap 4 @extend .form-control-sm; work around
 
 %clay-form-control-sm {
 	@include border-radius($input-border-radius-sm);
@@ -407,6 +417,15 @@ fieldset[disabled] label {
 	}
 }
 
+.form-control-sm {
+	font-size: $input-font-size-sm;
+	height: $input-height-sm;
+
+	@include clay-scale-component {
+		height: $input-height-sm-mobile;
+	}
+}
+
 %clay-select-form-control-sm {
 	&:not([size]):not([multiple]) {
 		height: $input-height-sm;
@@ -417,8 +436,13 @@ fieldset[disabled] label {
 	}
 }
 
-.form-control-sm {
-	@extend %clay-form-control-sm;
+%clay-textarea-form-control-sm {
+	height: $input-textarea-height-sm;
+}
+
+textarea.form-control-sm,
+.form-control-sm.form-control-textarea {
+	height: $input-textarea-height-sm;
 }
 
 // Form Group Autofit
@@ -525,6 +549,11 @@ fieldset[disabled] label {
 	select[multiple],
 	.form-control[size] {
 		height: auto;
+	}
+
+	textarea.form-control,
+	.form-control.form-control-textarea {
+		@extend %clay-textarea-form-control-sm;
 	}
 
 	.form-feedback-item ~ .form-feedback-item,
