@@ -417,8 +417,12 @@ describe('ClayMultiSelect', function() {
 					helpText,
 					selectedItems: [
 						{
-							label: 'foo',
-							value: 'foo',
+							label: 'Foo',
+							value: '1',
+						},
+						{
+							label: 'Bar',
+							value: '2',
 						},
 					],
 					spritemap,
@@ -427,7 +431,7 @@ describe('ClayMultiSelect', function() {
 				const spy = jest.spyOn(component, 'emit');
 				const {input} = component.refs.autocomplete.refs;
 
-				input.value = 'foo';
+				input.value = 'Foo';
 				triggerEvent(input, 'keydown', {key: 'Enter'});
 
 				jest.runAllTimers();
@@ -436,8 +440,8 @@ describe('ClayMultiSelect', function() {
 					expect.objectContaining({
 						data: {
 							item: {
-								label: 'foo',
-								value: 'foo',
+								label: 'Foo',
+								value: 'Foo',
 							},
 						},
 						name: 'itemAdded',
