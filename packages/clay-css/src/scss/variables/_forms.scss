@@ -81,6 +81,11 @@ $form-control-inset-margin-y: ($input-height - $input-border-bottom-width - $inp
 
 $form-group-margin-bottom-mobile: null !default;
 
+$form-group-sm-margin-bottom: 1rem !default; // 16px
+$form-group-sm-margin-bottom-mobile: null !default;
+$form-group-sm-input-label-margin-bottom: 0.25rem !default; // 4px
+$form-group-sm-item-label-spacer: 1.75rem !default; // 28px
+
 // Form Group Autofit
 
 $form-group-autofit-margin-bottom: $form-group-margin-bottom !default;

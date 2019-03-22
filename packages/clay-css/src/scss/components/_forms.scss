@@ -532,13 +532,18 @@ textarea.form-control-sm,
 }
 
 .form-group-sm {
-	margin-bottom: 1rem;
+	margin-bottom: $form-group-sm-margin-bottom;
 
-	label {
-		margin-bottom: 0.1875rem;
+	@include clay-scale-component {
+		margin-bottom: $form-group-sm-margin-bottom-mobile;
 	}
 
-	.form-control {
+	label {
+		margin-bottom: $form-group-sm-input-label-margin-bottom;
+	}
+
+	.form-control,
+	.form-control-plaintext {
 		@extend %clay-form-control-sm;
 	}
 
@@ -561,5 +566,21 @@ textarea.form-control-sm,
 	.form-text ~ .form-feedback-item,
 	.form-text ~ .form-text {
 		margin-top: 0;
+	}
+
+	.form-group-item-label {
+		@include media-breakpoint-up(sm) {
+			min-height: $input-height-sm;
+
+			> label {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.form-group-item-label-spacer {
+		@include media-breakpoint-up(sm) {
+			margin-top: $form-group-sm-item-label-spacer;
+		}
 	}
 }
