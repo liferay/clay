@@ -9,12 +9,11 @@ import React, {
 	ChangeEvent,
 	FunctionComponent,
 	ReactNode,
-	useEffect,
 	useRef,
 	useState,
 } from 'react';
 
-import {useCurrentMonth, useCurrentTime, useWeeks} from './Hooks';
+import {useCurrentTime, useWeeks} from './Hooks';
 
 import Button from './Button';
 import DateNavigation from './DateNavigation';
@@ -197,9 +196,24 @@ const ClayDatePicker: FunctionComponent<Props> = ({
 	},
 }) => {
 	/**
+	 * Normalize date for always set noon to avoid time zone issues
+	 */
+	const normalizeDate = (date: Date) =>
+		moment(date)
+			.clone()
+			.set('date', 1)
+			.set('hour', 12)
+			.set('minute', 0)
+			.set('second', 0)
+			.set('millisecond', 0)
+			.toDate();
+
+	/**
 	 * Indicates the current month rendered on the screen.
 	 */
-	const [currentMonth, setCurrentMonth] = useCurrentMonth(initialMonth);
+	const [currentMonth, setCurrentMonth] = useState<Date>(() =>
+		normalizeDate(initialMonth)
+	);
 
 	/**
 	 * Indicates the time selected by the user.
@@ -227,24 +241,42 @@ const ClayDatePicker: FunctionComponent<Props> = ({
 	const elementRef = useRef<HTMLDivElement | null>(null);
 
 	/**
-	 * Handles the click on element of the day
+	 * Handles the change of the current month of the Date Picker
+	 * content and takes care of updating the weeks.
 	 */
-	function handleDayClicked(date: Date) {
-		setDaySelected(date);
-		onValueChange(date);
-	}
+	const changeMonth = (date: Date) => {
+		const dateNormalized = normalizeDate(date);
+
+		setCurrentMonth(dateNormalized);
+
+		// It is not necessary to update the weeks when the native
+		// date is enabled. Unnecessary rendering and processing.
+		if (!useNative) {
+			setWeeks(dateNormalized);
+		}
+	};
 
 	/**
-	 * Handles the input change.
+	 * Handles the click on element of the day
 	 */
-	function inputChange(event: ChangeEvent<HTMLInputElement>) {
+	const handleDayClicked = (date: Date) => {
+		setDaySelected(date);
+		onValueChange(date);
+	};
+
+	/**
+	 * Control the value of the input propagating with the call
+	 * of `onValueChange` but does not change what the user types,
+	 * if a date is valid the month of the Date Picker is changed.
+	 */
+	const inputChange = (event: ChangeEvent<HTMLInputElement>) => {
 		const {value} = event.target;
 		const format = time ? `${dateFormat} ${timeFormat}` : dateFormat;
 		const date = moment(value, format);
 		const year = date.year();
 
 		if (date.isValid() && year >= years.start && years.end >= year) {
-			setCurrentMonth(date.toDate());
+			changeMonth(date.toDate());
 			setDaySelected(date.toDate());
 
 			if (time) {
@@ -253,13 +285,13 @@ const ClayDatePicker: FunctionComponent<Props> = ({
 		}
 
 		onValueChange(value);
-	}
+	};
 
 	/**
 	 * Handles dot cliecked
 	 */
 	const handleDotClicked = () => {
-		setCurrentMonth(initialMonth);
+		changeMonth(initialMonth);
 		setDaySelected(initialMonth);
 		onValueChange(initialMonth);
 	};
@@ -273,14 +305,6 @@ const ClayDatePicker: FunctionComponent<Props> = ({
 	 * Handles document click
 	 */
 	const handleDocClick = () => setExpanded(false);
-
-	useEffect(() => {
-		// It is not necessary to update the weeks when the native
-		// date is enabled. Unnecessary rendering and processing.
-		if (!useNative) {
-			setWeeks(currentMonth);
-		}
-	}, [currentMonth]);
 
 	return (
 		<div className="date-picker" ref={elementRef}>
@@ -324,7 +348,7 @@ const ClayDatePicker: FunctionComponent<Props> = ({
 							currentMonth={currentMonth}
 							months={months}
 							onDotClicked={handleDotClicked}
-							onMonthChange={setCurrentMonth}
+							onMonthChange={changeMonth}
 							spritemap={spritemap}
 							years={years}
 						/>

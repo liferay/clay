@@ -25,29 +25,6 @@ const useWeeks = (currentMonth: Date, firstDayOfWeek: firstDayOfWeek) => {
 };
 
 /**
- * Sets the current month
- */
-const useCurrentMonth = (value: Date) => {
-	const setDate = (date: Date) =>
-		moment(date)
-			.clone()
-			.set('date', 1)
-			.set('hour', 12)
-			.set('minute', 0)
-			.set('second', 0)
-			.set('millisecond', 0)
-			.toDate();
-
-	const [currentMonth, set] = useState<Date>(() => setDate(value));
-
-	const setCurrentMonth = (value: Date) => {
-		set(setDate(value));
-	};
-
-	return [currentMonth, setCurrentMonth] as [Date, (value: Date) => void];
-};
-
-/**
  * Sets the current time
  */
 const useCurrentTime = (format: string) => {
@@ -73,4 +50,4 @@ const useCurrentTime = (format: string) => {
 	];
 };
 
-export {useCurrentMonth, useCurrentTime, useWeeks};
+export {useCurrentTime, useWeeks};
