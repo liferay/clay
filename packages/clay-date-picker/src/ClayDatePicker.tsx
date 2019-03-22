@@ -70,7 +70,6 @@ interface Props {
 	 * Function that should return the React element to
 	 * render on the datepicker footer.
 	 */
-
 	footerElement?: (object: {spritemap: string}) => ReactNode;
 
 	/**
@@ -319,57 +318,55 @@ const ClayDatePicker: FunctionComponent<Props> = ({
 					expanded={expanded}
 					onDocumentClick={handleDocClick}
 				>
-					<React.Fragment>
-						<div className="date-picker-calendar">
-							<DateNavigation
-								ariaLabels={ariaLabels}
-								currentMonth={currentMonth}
-								months={months}
-								onDotClicked={handleDotClicked}
-								onMonthChange={setCurrentMonth}
-								spritemap={spritemap}
-								years={years}
-							/>
-							<div className="date-picker-calendar-body">
-								<WeekdayHeader
-									firstDayOfWeek={firstDayOfWeek}
-									weekdaysShort={weekdaysShort}
-								>
-									{({key, weekday}) => (
-										<Weekday key={key} weekday={weekday} />
-									)}
-								</WeekdayHeader>
-								<DaysTable weeks={weeks}>
-									{({day, key}) => (
-										<DayNumber
-											day={day}
-											daySelected={daySelected}
-											key={key}
-											onClick={handleDayClicked}
-										/>
-									)}
-								</DaysTable>
-							</div>
-							{(footerElement || time) && (
-								<div className="date-picker-calendar-footer">
-									{time && (
-										<TimePicker
-											currentTime={currentTime}
-											onTimeChange={setCurrentTime}
-											spritemap={spritemap}
-											timeFormat={timeFormat}
-											timezone={timezone}
-										/>
-									)}
-									{!time &&
-										footerElement &&
-										React.Children.only(
-											footerElement({spritemap})
-										)}
-								</div>
-							)}
+					<div className="date-picker-calendar">
+						<DateNavigation
+							ariaLabels={ariaLabels}
+							currentMonth={currentMonth}
+							months={months}
+							onDotClicked={handleDotClicked}
+							onMonthChange={setCurrentMonth}
+							spritemap={spritemap}
+							years={years}
+						/>
+						<div className="date-picker-calendar-body">
+							<WeekdayHeader
+								firstDayOfWeek={firstDayOfWeek}
+								weekdaysShort={weekdaysShort}
+							>
+								{({key, weekday}) => (
+									<Weekday key={key} weekday={weekday} />
+								)}
+							</WeekdayHeader>
+							<DaysTable weeks={weeks}>
+								{({day, key}) => (
+									<DayNumber
+										day={day}
+										daySelected={daySelected}
+										key={key}
+										onClick={handleDayClicked}
+									/>
+								)}
+							</DaysTable>
 						</div>
-					</React.Fragment>
+						{(footerElement || time) && (
+							<div className="date-picker-calendar-footer">
+								{time && (
+									<TimePicker
+										currentTime={currentTime}
+										onTimeChange={setCurrentTime}
+										spritemap={spritemap}
+										timeFormat={timeFormat}
+										timezone={timezone}
+									/>
+								)}
+								{!time &&
+									footerElement &&
+									React.Children.only(
+										footerElement({spritemap})
+									)}
+							</div>
+						)}
+					</div>
 				</Dropdown>
 			)}
 		</div>
