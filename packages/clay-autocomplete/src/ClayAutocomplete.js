@@ -95,9 +95,7 @@ class ClayAutocomplete extends ClayComponent {
 	_handleDropdownItemClick(event) {
 		return this._handleItemSelected(
 			event,
-			event.delegateTarget.getAttribute(
-				'data-dropdown-item-index'
-			)
+			event.delegateTarget.getAttribute('data-dropdown-item-index')
 		);
 	}
 
@@ -188,9 +186,7 @@ class ClayAutocomplete extends ClayComponent {
 			) {
 				this._handleItemSelected(
 					event,
-					event.target.getAttribute(
-						'data-dropdown-item-index'
-					)
+					event.target.getAttribute('data-dropdown-item-index')
 				);
 			}
 			break;
