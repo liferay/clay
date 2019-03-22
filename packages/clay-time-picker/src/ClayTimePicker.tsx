@@ -37,7 +37,7 @@ const timePickerContent: FunctionComponent<ITPContentProps> = ({
 		</div>
 		{timezone && (
 			<div className="input-group-item input-group-item-shrink">
-				<span className="input-group-text">({timezone})</span>
+				<span className="input-group-text">{`(${timezone})`}</span>
 			</div>
 		)}
 	</React.Fragment>

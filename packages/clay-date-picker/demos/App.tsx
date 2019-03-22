@@ -20,8 +20,8 @@ function DefaultState() {
 			spritemap={spritemap}
 			value={value}
 			years={{
-				start: 1997,
 				end: 2024,
+				start: 1997,
 			}}
 		/>
 	);
@@ -41,8 +41,8 @@ function TimeBlock() {
 			timezone="GMT+01:00"
 			value={value}
 			years={{
-				start: 1997,
 				end: 2024,
+				start: 1997,
 			}}
 		/>
 	);
@@ -79,8 +79,8 @@ function LocaleBlock() {
 			value={value}
 			weekdaysShort={['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']}
 			years={{
-				start: 1997,
 				end: 2024,
+				start: 1997,
 			}}
 		/>
 	);
