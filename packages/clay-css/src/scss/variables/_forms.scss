@@ -242,16 +242,17 @@ $input-group-lg-item-btn: map-merge((
 	inline-item-font-size: $btn-inline-item-font-size-lg,
 	section-font-size: $btn-section-font-size-lg,
 	font-size-mobile: $btn-font-size-lg-mobile,
-	padding-bottom: $btn-padding-y-lg-mobile,
-	padding-left: $btn-padding-x-lg-mobile,
-	padding-right: $btn-padding-x-lg-mobile,
-	padding-top: $btn-padding-y-lg-mobile,
+	padding-bottom-mobile: $btn-padding-y-lg-mobile,
+	padding-left-mobile: $btn-padding-x-lg-mobile,
+	padding-right-mobile: $btn-padding-x-lg-mobile,
+	padding-top-mobile: $btn-padding-y-lg-mobile,
 ), $input-group-lg-item-btn);
 
 $input-group-lg-item-btn-monospaced: () !default;
 $input-group-lg-item-btn-monospaced: map-merge((
 	breakpoint-down: null,
 	height: $btn-monospaced-size-lg,
+	line-height: 1,
 	padding-bottom: $btn-monospaced-padding-y-lg,
 	padding-left: $btn-monospaced-padding-x-lg,
 	padding-right: $btn-monospaced-padding-x-lg,
@@ -262,14 +263,22 @@ $input-group-lg-item-btn-monospaced: map-merge((
 ), $input-group-lg-item-btn-monospaced);
 
 $input-group-lg-inset-item-btn: () !default;
+$input-group-lg-inset-item-btn: map-merge((
+	line-height: 1,
+	padding-bottom: 0,
+	padding-left: 0.75rem,
+	padding-right: 0.75rem,
+	padding-top: 0,
+), $input-group-lg-inset-item-btn);
 
 $input-group-lg-inset-item-form-file-btn: () !default;
 $input-group-lg-inset-item-form-file-btn: map-merge((
 	breakpoint-down: null,
 	height: 100%,
+	line-height: 1,
 	padding-bottom: 0,
-	padding-left: $btn-padding-x - 0.1875rem,
-	padding-right: $btn-padding-x - 0.1875rem,
+	padding-left: 0.75rem,
+	padding-right: 0.75rem,
 	padding-top: 0,
 ), $input-group-lg-inset-item-form-file-btn);
 
@@ -294,6 +303,7 @@ $input-group-sm-item-btn: map-merge((
 $input-group-sm-item-btn-monospaced: () !default;
 $input-group-sm-item-btn-monospaced: map-merge((
 	height: $btn-monospaced-size-sm,
+	line-height: 1,
 	padding-bottom: $btn-monospaced-padding-y-sm,
 	padding-left: $btn-monospaced-padding-x-sm,
 	padding-right: $btn-monospaced-padding-x-sm,
@@ -304,13 +314,21 @@ $input-group-sm-item-btn-monospaced: map-merge((
 ), $input-group-sm-item-btn-monospaced);
 
 $input-group-sm-inset-item-btn: () !default;
+$input-group-sm-inset-item-btn: map-merge((
+	line-height: 1,
+	padding-bottom: 0,
+	padding-left: 0.5rem,
+	padding-right: 0.5rem,
+	padding-top: 0,
+), $input-group-sm-inset-item-btn);
 
 $input-group-sm-inset-item-form-file-btn: () !default;
 $input-group-sm-inset-item-form-file-btn: map-merge((
 	height: 100%,
+	line-height: 1,
 	padding-bottom: 0,
-	padding-left: $btn-padding-x - 0.1875rem,
-	padding-right: $btn-padding-x - 0.1875rem,
+	padding-left: 0.5rem,
+	padding-right: 0.5rem,
 	padding-top: 0,
 ), $input-group-sm-inset-item-form-file-btn);
 
