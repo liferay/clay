@@ -165,7 +165,7 @@ const ClayDatePicker: FunctionComponent<Props> = ({
 	footerElement,
 	id,
 	initialExpanded = false,
-	initialMonth = DateNow,
+	initialMonth = new Date(),
 	inputName,
 	months = [
 		'January',
