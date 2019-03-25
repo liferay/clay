@@ -484,6 +484,37 @@ exports[`ClayTable should render a ClayTable with an schema with button field an
 </div>
 `;
 
+exports[`ClayTable should render a ClayTable with an schema with image field and items 1`] = `
+<div class="table-responsive">
+  <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">
+    <thead>
+      <tr>
+        <th class="table-cell-expand">Name</th>
+        <th>Image</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="table-cell-expand">
+          <h1 class="table-list-title">
+            <span class="text-truncate-inline">
+              <span class="text-truncate">Ramen</span>
+            </span>
+          </h1>
+        </td>
+        <td>
+          <div class="autofit-row">
+            <div class="autofit-col">
+              <img alt="thumbnail" class="table-img" src="./image1.jpg">
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
 exports[`ClayTable should render a ClayTable with an schema with label field and items 1`] = `
 <div class="table-responsive">
   <table class="table table-autofit table-hover table-list show-quick-actions-on-hover">

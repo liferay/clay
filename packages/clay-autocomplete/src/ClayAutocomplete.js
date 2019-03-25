@@ -1,4 +1,6 @@
 import 'clay-data-provider';
+import 'clay-portal';
+import {Align} from 'metal-position';
 import {Config} from 'metal-state';
 import {isFunction} from 'metal';
 import ClayComponent from 'clay-component';
@@ -20,6 +22,10 @@ class ClayAutocomplete extends ClayComponent {
 
 		this.addListener('dataChange', this._defaultDataChange, true);
 		this.addListener('inputChange', this._defaultInputChange, true);
+		this.refs.dataProvider.refs.portal.on(
+			'rendered',
+			this._handleRenderedPortal.bind(this)
+		);
 	}
 
 	/**
@@ -27,15 +33,6 @@ class ClayAutocomplete extends ClayComponent {
 	 */
 	disposed() {
 		this._dropdownItemFocused = null;
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	syncFilteredItems() {
-		if (!this.filteredItems.length) {
-			this._dropdownItemFocused = null;
-		}
 	}
 
 	/**
@@ -106,7 +103,9 @@ class ClayAutocomplete extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleItemSelected(event) {
-		const index = event.target.getAttribute('data-dropdown-item-index');
+		const index = event.delegateTarget.getAttribute(
+			'data-dropdown-item-index'
+		);
 		const item = this.filteredItems[Number(index)];
 
 		return !this.emit({
@@ -210,13 +209,35 @@ class ClayAutocomplete extends ClayComponent {
 	}
 
 	/**
+	 * Handle when the lifecycle `rendered` is called in ClayPortal.
+	 * @protected
+	 */
+	_handleRenderedPortal() {
+		const alignElement = this.element;
+
+		if (alignElement) {
+			const widthElement = alignElement.clientWidth;
+			const bodyElement = this.refs.dataProvider.refs.portal.refs
+				.dropdown;
+
+			this._dropdownWidth = widthElement;
+			this._alignedPosition = Align.align(
+				bodyElement,
+				alignElement,
+				Align.BottomCenter,
+				false
+			);
+		}
+	}
+
+	/**
 	 * Handle the interactions in the dropdown and add focus on the items.
 	 * @param {!Boolean} direction
 	 * @protected
 	 */
 	_setFocusItem(direction) {
 		if (this.filteredItems.length) {
-			const {dropdown} = this.refs.dataProvider.refs;
+			const {dropdown} = this.refs.dataProvider.refs.portal.refs;
 			const elements = dropdown.querySelectorAll(
 				'a[data-dropdown-item-index]'
 			);
@@ -255,6 +276,15 @@ class ClayAutocomplete extends ClayComponent {
 
 		return Array.isArray(match) ? match.join('') : '';
 	}
+
+	/**
+	 * @inheritDoc
+	 */
+	syncFilteredItems() {
+		if (!this.filteredItems.length) {
+			this._dropdownItemFocused = null;
+		}
+	}
 }
 
 /**
@@ -263,6 +293,24 @@ class ClayAutocomplete extends ClayComponent {
  * @type {!Object}
  */
 ClayAutocomplete.STATE = {
+	/**
+	 * The current position of the tooltip after being aligned via `Align.align`.
+	 * @default Align.isValidPosition
+	 * @instance
+	 * @memberof ClayAutocomplete
+	 * @type {!number}
+	 */
+	_alignedPosition: Config.validator(Align.isValidPosition).internal(),
+
+	/**
+	 * Flag to indicate the dropdown width referring to the width of the input.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayAutocomplete
+	 * @type {!number}
+	 */
+	_dropdownWidth: Config.number().internal(),
+
 	/**
 	 * Flag to indicate the characters allowed in the
 	 * input element (e.g /[a-zA-Z0-9_]/g).

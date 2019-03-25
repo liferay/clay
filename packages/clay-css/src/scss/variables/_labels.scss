@@ -31,7 +31,7 @@ $label-anchor-hover-text-decoration: null !default;
 $label-link-text-decoration: underline !default;
 $label-link-hover-text-decoration: none !default;
 
-$label-border-color: $body-color !default;
+$label-border-color: $gray-900 !default;
 $label-border-radius: $border-radius !default;
 $label-border-style: solid !default;
 $label-border-width: 0.0625rem !default;
@@ -70,7 +70,7 @@ $label-primary-color: $primary !default;
 // $label-primary-hover-color is deprecated as of v2.4.1
 $label-primary-hover-color: darken($label-primary-color, 10%) !default;
 // $label-primary-bg is deprecated as of v2.4.1
-$label-primary-bg: #FFF !default;
+$label-primary-bg: $white !default;
 // $label-primary-hover-bg is deprecated as of v2.4.1
 $label-primary-hover-bg: null !default;
 // $label-primary-border-color is deprecated as of v2.4.1
@@ -107,7 +107,7 @@ $label-secondary-color: $secondary !default;
 // $label-secondary-hover-color is deprecated as of v2.4.1
 $label-secondary-hover-color: darken($label-secondary-color, 10%) !default;
 // $label-secondary-bg is deprecated as of v2.4.1
-$label-secondary-bg: #FFF !default;
+$label-secondary-bg: $white !default;
 // $label-secondary-hover-bg is deprecated as of v2.4.1
 $label-secondary-hover-bg: null !default;
 // $label-secondary-border-color is deprecated as of v2.4.1
@@ -144,7 +144,7 @@ $label-success-color: $success !default;
 // $label-success-hover-color is deprecated as of v2.4.1
 $label-success-hover-color: darken($label-success-color, 10%) !default;
 // $label-success-bg is deprecated as of v2.4.1
-$label-success-bg: #FFF !default;
+$label-success-bg: $white !default;
 // $label-success-hover-bg is deprecated as of v2.4.1
 $label-success-hover-bg: null !default;
 // $label-success-border-color is deprecated as of v2.4.1
@@ -181,7 +181,7 @@ $label-info-color: $info !default;
 // $label-info-hover-color is deprecated as of v2.4.1
 $label-info-hover-color: darken($label-info-color, 10%) !default;
 // $label-info-bg is deprecated as of v2.4.1
-$label-info-bg: #FFF !default;
+$label-info-bg: $white !default;
 // $label-info-hover-bg is deprecated as of v2.4.1
 $label-info-hover-bg: null !default;
 // $label-info-border-color is deprecated as of v2.4.1
@@ -218,7 +218,7 @@ $label-warning-color: $warning !default;
 // $label-warning-hover-color is deprecated as of v2.4.1
 $label-warning-hover-color: darken($label-warning-color, 10%) !default;
 // $label-warning-bg is deprecated as of v2.4.1
-$label-warning-bg: #FFF !default;
+$label-warning-bg: $white !default;
 // $label-warning-hover-bg is deprecated as of v2.4.1
 $label-warning-hover-bg: null !default;
 // $label-warning-border-color is deprecated as of v2.4.1
@@ -255,7 +255,7 @@ $label-danger-color: $danger !default;
 // $label-danger-hover-color is deprecated as of v2.4.1
 $label-danger-hover-color: darken($label-danger-color, 10%) !default;
 // $label-danger-bg is deprecated as of v2.4.1
-$label-danger-bg: #FFF !default;
+$label-danger-bg: $white !default;
 // $label-danger-hover-bg is deprecated as of v2.4.1
 $label-danger-hover-bg: null !default;
 // $label-danger-border-color is deprecated as of v2.4.1
@@ -292,7 +292,7 @@ $label-light-color: $light !default;
 // $label-light-hover-color is deprecated as of v2.4.1
 $label-light-hover-color: darken($label-light-color, 10%) !default;
 // $label-light-bg is deprecated as of v2.4.1
-$label-light-bg: $dark !default;
+$label-light-bg: $gray-800 !default;
 // $label-light-hover-bg is deprecated as of v2.4.1
 $label-light-hover-bg: null !default;
 // $label-light-border-color is deprecated as of v2.4.1
@@ -329,7 +329,7 @@ $label-dark-color: $dark !default;
 // $label-dark-hover-color is deprecated as of v2.4.1
 $label-dark-hover-color: darken($label-dark-color, 10%) !default;
 // $label-dark-bg is deprecated as of v2.4.1
-$label-dark-bg: #FFF !default;
+$label-dark-bg: $white !default;
 // $label-dark-hover-bg is deprecated as of v2.4.1
 $label-dark-hover-bg: null !default;
 // $label-dark-border-color is deprecated as of v2.4.1

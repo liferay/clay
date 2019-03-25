@@ -1,4 +1,4 @@
-$panel-bg: #FFF !default;
+$panel-bg: $white !default;
 $panel-border-color: transparent !default;
 $panel-border-style: solid !default;
 
@@ -60,6 +60,17 @@ $panel-title-small-margin-left: null !default;
 
 $panel-group-panel-margin-bottom: -$panel-border-bottom-width !default;
 
+// Panel Group Sm
+
+$panel-group-sm: () !default;
+$panel-group-sm: map-merge((
+	font-size: 0.875rem,
+	header-padding-bottom: 0.5rem,
+	header-padding-top: 0.5rem,
+	title-font-size: 0.875rem,
+	collapse-icon-top: 0.6875rem,
+), $panel-group-sm);
+
 // Panel Group Flush
 
 $panel-group-flush-body-margin-bottom: 1.5rem !default;
@@ -80,3 +91,18 @@ $panel-secondary: map-merge((
 	footer-bg: $gray-100,
 	footer-border-color: rgba($black, 0.125)
 ), $panel-secondary);
+
+// Panel Unstyled
+
+$panel-unstyled: () !default;
+$panel-unstyled: map-merge((
+	bg: transparent,
+	border-radius: 0,
+	border-width: 0,
+	header-border-color: $gray-500,
+	header-border-style: solid,
+	header-border-width: 0 0 1px 0,
+	header-margin-bottom: 1rem,
+	body-margin-bottom: 1rem,
+	body-padding-top: 0,
+), $panel-unstyled);
