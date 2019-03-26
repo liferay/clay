@@ -68,11 +68,9 @@ exports[`ClayList should render a selectable ClayList 1`] = `
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
       <div class="custom-control custom-checkbox">
-        <label>
-          <input class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text sr-only">deselect</span>
-          </span>
+        <input class="custom-control-input" name="folder" value="1" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text sr-only">deselect</span>
         </label>
       </div>
     </div>
@@ -83,11 +81,9 @@ exports[`ClayList should render a selectable ClayList 1`] = `
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
       <div class="custom-control custom-checkbox">
-        <label>
-          <input class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text sr-only">deselect</span>
-          </span>
+        <input class="custom-control-input" name="folder" value="2" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text sr-only">deselect</span>
         </label>
       </div>
     </div>

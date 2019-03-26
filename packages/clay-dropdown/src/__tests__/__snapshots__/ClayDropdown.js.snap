@@ -24,31 +24,25 @@ exports[`ClayDropdown should keep the expanded updated with that of the dropdown
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 5</span>
-          </span>
+        <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 5</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item active" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
@@ -116,31 +110,25 @@ exports[`ClayDropdown should render a disabled dropdown with items 1`] = `
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 5</span>
-          </span>
+        <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 5</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item active" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
@@ -207,31 +195,25 @@ exports[`ClayDropdown should render a dropdown with an icon and label trigger 1`
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 5</span>
-          </span>
+        <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 5</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item active" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
@@ -299,31 +281,25 @@ exports[`ClayDropdown should render a dropdown with an icon trigger 1`] = `
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 5</span>
-          </span>
+        <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 5</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item active" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
@@ -391,31 +367,25 @@ exports[`ClayDropdown should render a dropdown with classes 1`] = `
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 5</span>
-          </span>
+        <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 5</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item active" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
@@ -483,31 +453,25 @@ exports[`ClayDropdown should render a dropdown with id 1`] = `
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 5</span>
-          </span>
+        <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 5</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item active" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
@@ -575,31 +539,25 @@ exports[`ClayDropdown should render a dropdown with items 1`] = `
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 5</span>
-          </span>
+        <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 5</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item active" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
@@ -667,31 +625,25 @@ exports[`ClayDropdown should render a dropdown with the \`link\` style 1`] = `
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 5</span>
-          </span>
+        <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 5</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item active" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
@@ -759,31 +711,25 @@ exports[`ClayDropdown should render a dropdown with the \`primary\` style 1`] = 
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 5</span>
-          </span>
+        <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 5</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item active" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
@@ -851,31 +797,25 @@ exports[`ClayDropdown should render a dropdown with the \`secondary\` style 1`] 
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 5</span>
-          </span>
+        <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 5</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item active" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
@@ -943,31 +883,25 @@ exports[`ClayDropdown should render a dropdown with the \`unstyled\` style by de
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 5</span>
-          </span>
+        <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 5</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item active" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
@@ -1035,31 +969,25 @@ exports[`ClayDropdown should render a dropdown with trigger custom classes 1`] =
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 5</span>
-          </span>
+        <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 5</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item active" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
@@ -1127,31 +1055,25 @@ exports[`ClayDropdown should render a dropdown with trigger size 1`] = `
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 5</span>
-          </span>
+        <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 5</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item active" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
@@ -1215,31 +1137,25 @@ exports[`ClayDropdown should render a dropdown without toggle icon 1`] = `
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 5</span>
-          </span>
+        <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 5</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item active" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
@@ -1323,31 +1239,25 @@ exports[`ClayDropdown should render a searchable dropdown 1`] = `
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 5</span>
-          </span>
+        <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 5</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item active" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
@@ -1415,31 +1325,25 @@ exports[`ClayDropdown should render an expanded dropdown 1`] = `
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 5</span>
-          </span>
+        <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 5</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item active" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>
     <li class="dropdown-item" tabindex="-1">
       <div class="custom-control custom-checkbox custom-control-inline">
-        <label>
-          <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
-          <span class="custom-control-label">
-            <span class="custom-control-label-text">Item 7</span>
-          </span>
+        <input disabled="disabled" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
+        <label class="custom-control-label">
+          <span class="custom-control-label-text">Item 7</span>
         </label>
       </div>
     </li>

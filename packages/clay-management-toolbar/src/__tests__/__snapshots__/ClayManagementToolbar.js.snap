@@ -7,11 +7,9 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
       <ul class="navbar-nav">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
-            <label>
-              <input class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
+            <input class="custom-control-input" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text sr-only">select-items</span>
             </label>
           </div>
         </li>
@@ -103,21 +101,17 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
       <ul class="list-unstyled">
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
-            <label>
-              <input class="custom-control-input" name="item1checkbox" value="1" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 1</span>
-              </span>
+            <input class="custom-control-input" name="item1checkbox" value="1" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 1</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
-            <label>
-              <input class="custom-control-input" name="item2checkbox" value="2" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 2</span>
-              </span>
+            <input class="custom-control-input" name="item2checkbox" value="2" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 2</span>
             </label>
           </div>
         </li>
@@ -165,11 +159,9 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
       <ul class="navbar-nav">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
-            <label>
-              <input class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
+            <input class="custom-control-input" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text sr-only">select-items</span>
             </label>
           </div>
         </li>
@@ -261,21 +253,17 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
       <ul class="list-unstyled">
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
-            <label>
-              <input class="custom-control-input" name="item1checkbox" value="1" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 1</span>
-              </span>
+            <input class="custom-control-input" name="item1checkbox" value="1" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 1</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
-            <label>
-              <input class="custom-control-input" name="item2checkbox" value="2" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 2</span>
-              </span>
+            <input class="custom-control-input" name="item2checkbox" value="2" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 2</span>
             </label>
           </div>
         </li>
@@ -323,11 +311,9 @@ exports[`ClayManagementToolbar should render a management toolbar in active stat
       <ul class="navbar-nav navbar-nav-expand">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
+            <input checked="" class="custom-control-input" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text sr-only">select-items</span>
             </label>
           </div>
         </li>
@@ -370,11 +356,9 @@ exports[`ClayManagementToolbar should render a management toolbar in active stat
       <ul class="navbar-nav navbar-nav-expand">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
+            <input checked="" class="custom-control-input" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text sr-only">select-items</span>
             </label>
           </div>
         </li>
@@ -417,11 +401,9 @@ exports[`ClayManagementToolbar should render a management toolbar in active stat
       <ul class="navbar-nav navbar-nav-expand">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
+            <input checked="" class="custom-control-input" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text sr-only">select-items</span>
             </label>
           </div>
         </li>
@@ -443,11 +425,9 @@ exports[`ClayManagementToolbar should render a management toolbar in active stat
       <ul class="navbar-nav navbar-nav-expand">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
+            <input checked="" class="custom-control-input" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text sr-only">select-items</span>
             </label>
           </div>
         </li>
@@ -469,11 +449,9 @@ exports[`ClayManagementToolbar should render a management toolbar in active stat
       <ul class="navbar-nav navbar-nav-expand">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
+            <input checked="" class="custom-control-input" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text sr-only">select-items</span>
             </label>
           </div>
         </li>
@@ -495,11 +473,9 @@ exports[`ClayManagementToolbar should render a management toolbar in active stat
       <ul class="navbar-nav navbar-nav-expand">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
+            <input checked="" class="custom-control-input" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text sr-only">select-items</span>
             </label>
           </div>
         </li>
@@ -550,11 +526,9 @@ exports[`ClayManagementToolbar should render a management toolbar in active stat
       <ul class="navbar-nav navbar-nav-expand">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
+            <input checked="" class="custom-control-input" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text sr-only">select-items</span>
             </label>
           </div>
         </li>
@@ -576,11 +550,9 @@ exports[`ClayManagementToolbar should render a management toolbar in active stat
       <ul class="navbar-nav navbar-nav-expand">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
+            <input checked="" class="custom-control-input" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text sr-only">select-items</span>
             </label>
           </div>
         </li>
@@ -602,11 +574,9 @@ exports[`ClayManagementToolbar should render a management toolbar in active stat
       <ul class="navbar-nav navbar-nav-expand">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
+            <input checked="" class="custom-control-input" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text sr-only">select-items</span>
             </label>
           </div>
         </li>
@@ -663,11 +633,9 @@ exports[`ClayManagementToolbar should render a management toolbar in active stat
       <ul class="navbar-nav navbar-nav-expand">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
+            <input checked="" class="custom-control-input" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text sr-only">select-items</span>
             </label>
           </div>
         </li>
@@ -689,11 +657,9 @@ exports[`ClayManagementToolbar should render a management toolbar in active stat
       <ul class="navbar-nav navbar-nav-expand">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
+            <input checked="" class="custom-control-input" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text sr-only">select-items</span>
             </label>
           </div>
         </li>
@@ -724,11 +690,9 @@ exports[`ClayManagementToolbar should render a management toolbar in active stat
       <ul class="navbar-nav navbar-nav-expand">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
+            <input checked="" class="custom-control-input" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text sr-only">select-items</span>
             </label>
           </div>
         </li>
@@ -750,11 +714,9 @@ exports[`ClayManagementToolbar should render a management toolbar in active stat
       <ul class="navbar-nav navbar-nav-expand">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
+            <input checked="" class="custom-control-input" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text sr-only">select-items</span>
             </label>
           </div>
         </li>
@@ -1509,21 +1471,17 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
       <ul class="list-unstyled">
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
-            <label>
-              <input class="custom-control-input" name="item1checkbox" value="1" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 1</span>
-              </span>
+            <input class="custom-control-input" name="item1checkbox" value="1" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 1</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-checkbox custom-control-inline">
-            <label>
-              <input class="custom-control-input" name="item2checkbox" value="2" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 2</span>
-              </span>
+            <input class="custom-control-input" name="item2checkbox" value="2" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 2</span>
             </label>
           </div>
         </li>
@@ -1920,11 +1878,9 @@ exports[`ClayManagementToolbar should render a management toolbar with results b
       <ul class="navbar-nav">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
-            <label>
-              <input class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
+            <input class="custom-control-input" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text sr-only">select-items</span>
             </label>
           </div>
         </li>
@@ -1998,11 +1954,9 @@ exports[`ClayManagementToolbar should render a management toolbar with results b
       <ul class="navbar-nav">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
-            <label>
-              <input class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
+            <input class="custom-control-input" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text sr-only">select-items</span>
             </label>
           </div>
         </li>
@@ -2076,11 +2030,9 @@ exports[`ClayManagementToolbar should render a management toolbar with results b
       <ul class="navbar-nav">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
-            <label>
-              <input class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
+            <input class="custom-control-input" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text sr-only">select-items</span>
             </label>
           </div>
         </li>
@@ -2349,11 +2301,9 @@ exports[`ClayManagementToolbar should render a management toolbar with selection
       <ul class="navbar-nav">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
-            <label>
-              <input class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
+            <input class="custom-control-input" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text sr-only">select-items</span>
             </label>
           </div>
         </li>
@@ -2409,11 +2359,9 @@ exports[`ClayManagementToolbar should render a management toolbar with selection
       <ul class="navbar-nav">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
-            <label>
-              <input class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">select-items</span>
-              </span>
+            <input class="custom-control-input" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">select-items</span>
             </label>
           </div>
         </li>

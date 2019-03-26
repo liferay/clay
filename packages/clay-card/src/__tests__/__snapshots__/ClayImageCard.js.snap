@@ -570,10 +570,8 @@ exports[`ClayImageCard should render a disabled ClayImageCard 1`] = `
   <div class="card">
     <div class="aspect-ratio card-item-first">
       <div class="custom-control custom-checkbox">
-        <label>
-          <input disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
-          <span class="custom-control-label"></span>
-        </label>
+        <input disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
+        <label class="custom-control-label"></label>
       </div>
     </div>
     <div class="card-body">
@@ -592,10 +590,8 @@ exports[`ClayImageCard should render a selectable ClayImageCard 1`] = `
   <div class="card">
     <div class="aspect-ratio card-item-first">
       <div class="custom-control custom-checkbox">
-        <label>
-          <input class="custom-control-input" ref="input" type="checkbox">
-          <span class="custom-control-label"></span>
-        </label>
+        <input class="custom-control-input" ref="input" type="checkbox">
+        <label class="custom-control-label"></label>
       </div>
     </div>
     <div class="card-body">
@@ -614,10 +610,8 @@ exports[`ClayImageCard should render a selectable ClayImageCard with input \`nam
   <div class="card">
     <div class="aspect-ratio card-item-first">
       <div class="custom-control custom-checkbox">
-        <label>
-          <input class="custom-control-input" name="checkbox01" ref="input" type="checkbox">
-          <span class="custom-control-label"></span>
-        </label>
+        <input class="custom-control-input" name="checkbox01" ref="input" type="checkbox">
+        <label class="custom-control-label"></label>
       </div>
     </div>
     <div class="card-body">
@@ -636,10 +630,8 @@ exports[`ClayImageCard should render a selectable ClayImageCard with input \`val
   <div class="card">
     <div class="aspect-ratio card-item-first">
       <div class="custom-control custom-checkbox">
-        <label>
-          <input class="custom-control-input" name="checkbox" ref="input" type="checkbox">
-          <span class="custom-control-label"></span>
-        </label>
+        <input class="custom-control-input" name="checkbox" ref="input" type="checkbox">
+        <label class="custom-control-label"></label>
       </div>
     </div>
     <div class="card-body">
@@ -658,10 +650,8 @@ exports[`ClayImageCard should render a selected ClayImageCard 1`] = `
   <div class="card">
     <div class="aspect-ratio card-item-first">
       <div class="custom-control custom-checkbox">
-        <label>
-          <input checked="" class="custom-control-input" ref="input" type="checkbox">
-          <span class="custom-control-label"></span>
-        </label>
+        <input checked="" class="custom-control-input" ref="input" type="checkbox">
+        <label class="custom-control-label"></label>
       </div>
     </div>
     <div class="card-body">

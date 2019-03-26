@@ -167,9 +167,8 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with id 1`] = `
 exports[`ClayHorizontalCard should render a disabled ClayHorizontalCard 1`] = `
 <div class="card-type-directory form-check form-check-card form-check-middle-left">
   <div class="custom-control custom-checkbox">
-    <label>
-      <input disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
-      <span class="custom-control-label"></span>
+    <input disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
+    <label class="custom-control-label">
       <div class="card card-horizontal">
         <div class="card-body">
           <div class="card-row">
@@ -196,9 +195,8 @@ exports[`ClayHorizontalCard should render a disabled ClayHorizontalCard 1`] = `
 exports[`ClayHorizontalCard should render a selectable ClayHorizontalCard 1`] = `
 <div class="card-type-directory form-check form-check-card form-check-middle-left">
   <div class="custom-control custom-checkbox">
-    <label>
-      <input class="custom-control-input" ref="input" type="checkbox">
-      <span class="custom-control-label"></span>
+    <input class="custom-control-input" ref="input" type="checkbox">
+    <label class="custom-control-label">
       <div class="card card-horizontal">
         <div class="card-body">
           <div class="card-row">
@@ -225,9 +223,8 @@ exports[`ClayHorizontalCard should render a selectable ClayHorizontalCard 1`] = 
 exports[`ClayHorizontalCard should render a selectable ClayHorizontalCard with input \`name\` 1`] = `
 <div class="card-type-directory form-check form-check-card form-check-middle-left">
   <div class="custom-control custom-checkbox">
-    <label>
-      <input class="custom-control-input" name="checkbox01" ref="input" type="checkbox">
-      <span class="custom-control-label"></span>
+    <input class="custom-control-input" name="checkbox01" ref="input" type="checkbox">
+    <label class="custom-control-label">
       <div class="card card-horizontal">
         <div class="card-body">
           <div class="card-row">
@@ -254,9 +251,8 @@ exports[`ClayHorizontalCard should render a selectable ClayHorizontalCard with i
 exports[`ClayHorizontalCard should render a selectable ClayHorizontalCard with input \`value\` 1`] = `
 <div class="card-type-directory form-check form-check-card form-check-middle-left">
   <div class="custom-control custom-checkbox">
-    <label>
-      <input class="custom-control-input" value="checkbox" ref="input" type="checkbox">
-      <span class="custom-control-label"></span>
+    <input class="custom-control-input" value="checkbox" ref="input" type="checkbox">
+    <label class="custom-control-label">
       <div class="card card-horizontal">
         <div class="card-body">
           <div class="card-row">
@@ -283,9 +279,8 @@ exports[`ClayHorizontalCard should render a selectable ClayHorizontalCard with i
 exports[`ClayHorizontalCard should render a selected ClayHorizontalCard 1`] = `
 <div class="card-type-directory form-check form-check-card form-check-middle-left">
   <div class="custom-control custom-checkbox">
-    <label>
-      <input checked="" class="custom-control-input" ref="input" type="checkbox">
-      <span class="custom-control-label"></span>
+    <input checked="" class="custom-control-input" ref="input" type="checkbox">
+    <label class="custom-control-label">
       <div class="card card-horizontal">
         <div class="card-body">
           <div class="card-row">

@@ -310,9 +310,8 @@ exports[`ClayUserCard should render a disabled ClayUserCard 1`] = `
   <div class="card">
     <div class="aspect-ratio card-item-first">
       <div class="custom-control custom-checkbox">
-        <label>
-          <input disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
-          <span class="custom-control-label"></span>
+        <input disabled="disabled" class="custom-control-input" ref="input" type="checkbox">
+        <label class="custom-control-label">
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
             <span class="sticker sticker-circle sticker-primary sticker-xl">
               <span class="inline-item">
@@ -341,9 +340,8 @@ exports[`ClayUserCard should render a selectable ClayUserCard 1`] = `
   <div class="card">
     <div class="aspect-ratio card-item-first">
       <div class="custom-control custom-checkbox">
-        <label>
-          <input class="custom-control-input" ref="input" type="checkbox">
-          <span class="custom-control-label"></span>
+        <input class="custom-control-input" ref="input" type="checkbox">
+        <label class="custom-control-label">
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
             <span class="sticker sticker-circle sticker-primary sticker-xl">
               <span class="inline-item">
@@ -372,9 +370,8 @@ exports[`ClayUserCard should render a selectable ClayUserCard with input \`name\
   <div class="card">
     <div class="aspect-ratio card-item-first">
       <div class="custom-control custom-checkbox">
-        <label>
-          <input class="custom-control-input" name="checkbox01" ref="input" type="checkbox">
-          <span class="custom-control-label"></span>
+        <input class="custom-control-input" name="checkbox01" ref="input" type="checkbox">
+        <label class="custom-control-label">
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
             <span class="sticker sticker-circle sticker-primary sticker-xl">
               <span class="inline-item">
@@ -403,9 +400,8 @@ exports[`ClayUserCard should render a selectable ClayUserCard with input \`value
   <div class="card">
     <div class="aspect-ratio card-item-first">
       <div class="custom-control custom-checkbox">
-        <label>
-          <input class="custom-control-input" value="checkbox" ref="input" type="checkbox">
-          <span class="custom-control-label"></span>
+        <input class="custom-control-input" value="checkbox" ref="input" type="checkbox">
+        <label class="custom-control-label">
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
             <span class="sticker sticker-circle sticker-primary sticker-xl">
               <span class="inline-item">
@@ -434,9 +430,8 @@ exports[`ClayUserCard should render a selected ClayUserCard 1`] = `
   <div class="card">
     <div class="aspect-ratio card-item-first">
       <div class="custom-control custom-checkbox">
-        <label>
-          <input checked="" class="custom-control-input" ref="input" type="checkbox">
-          <span class="custom-control-label"></span>
+        <input checked="" class="custom-control-input" ref="input" type="checkbox">
+        <label class="custom-control-label">
           <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
             <span class="sticker sticker-circle sticker-primary sticker-xl">
               <span class="inline-item">
