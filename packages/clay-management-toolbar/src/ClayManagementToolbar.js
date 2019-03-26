@@ -56,7 +56,7 @@ class ClayManagementToolbar extends ClayComponent {
 	}
 
 	/**
-	 * Continues the propagation of the clear selcetion button clicked event
+	 * Continues the propagation of the clear selection button clicked event
 	 * @param {!Event} event
 	 * @private
 	 * @return {Boolean} If the event has been prevented or not.
@@ -406,7 +406,7 @@ ClayManagementToolbar.STATE = {
 	defaultEventHandler: Config.object(),
 
 	/**
-	 * Flag to indicate if the managment toolbar is disabled or not.
+	 * Flag to indicate if the management toolbar is disabled or not.
 	 * @default false
 	 * @instance
 	 * @memberof ClayManagementToolbar
@@ -505,7 +505,7 @@ ClayManagementToolbar.STATE = {
 	searchValue: Config.string(),
 
 	/**
-	 * Flag to indicate if the managment toolbar will control the selection of
+	 * Flag to indicate if the management toolbar will control the selection of
 	 * elements.
 	 * @default undefined
 	 * @instance

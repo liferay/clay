@@ -6,7 +6,7 @@
     "checkFormat": "npm run prettier -- --list-different",
     "coveralls": "node node_modules/coveralls/bin/coveralls.js < coverage/lcov.info",
     "format": "npm run prettier -- --write",
-    "jest": "cross-env NODE_ENV=test jest",
+    "jest": "rm -rf clayui.com/.cache && cross-env NODE_ENV=test jest",
     "lerna": "lerna bootstrap -- --no-optional --no-package-lock",
     "link": "lerna run link",
     "lint": "eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js 'examples/*/src/**/*.js' && npm run mcritic",

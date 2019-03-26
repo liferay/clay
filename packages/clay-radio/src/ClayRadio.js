@@ -82,7 +82,7 @@ ClayRadio.STATE = {
 	inline: Config.bool().value(false),
 
 	/**
-	 * Label of the input. Required for accesibility.
+	 * Label of the input. Required for accessibility.
 	 * @default undefined
 	 * @instance
 	 * @memberof ClayRadio
