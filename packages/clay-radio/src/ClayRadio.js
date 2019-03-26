@@ -9,7 +9,20 @@ import templates from './ClayRadio.soy.js';
  * Implementation of the Metal Clay Radio.
  * @extends ClayComponent
  */
-class ClayRadio extends ClayComponent {}
+class ClayRadio extends ClayComponent {
+	/**
+	 * It does the default behavior of a `label` with the `for`
+	 * attribute pointing to an input radio so that it does
+	 * not cause two events.
+	 */
+	_handleLabelClick() {
+		if (!this.refs.input.disabled) {
+			this.refs.input.checked = true;
+		} else {
+			event.stopPropagation();
+		}
+	}
+}
 
 /**
  * State definition.
