@@ -3,6 +3,7 @@ var gulpsmith = require('gulpsmith');
 var gulpFrontMatter = require('gulp-front-matter');
 var basename = require('basename');
 var r2 = require('gulp-liferay-r2-css');
+var sassdoc = require('sassdoc');
 
 var define = require('metalsmith-define');
 var encodeHTML = require('metalsmith-encode-html');
@@ -20,6 +21,8 @@ var svgstore = require('./lib/svgstore');
 var wrapChangelog = require('./lib/metalsmith/wrap_changelog');
 
 var _s = require('underscore.string');
+
+var pjson = require('../package.json');
 
 module.exports = function(gulp, plugins, _, config) {
 	var license = require('./copyright_banner');
@@ -159,4 +162,69 @@ module.exports = function(gulp, plugins, _, config) {
 			}))
 			.pipe(gulp.dest('./build/css'));
 	});
+
+	gulp.task(
+		'build:sassdoc',
+		function() {
+			var options = {
+				dest: './build/content/api/docs',
+				theme: './sassdoc-theme-clay-css',
+				package: {
+					name: pjson.name,
+					title: 'Clay CSS',
+					version: pjson.version,
+					license: pjson.license,
+					homepage: '../../../',
+					description: pjson.description,
+				},
+				groups: {
+					'undefined': 'Clay CSS',
+					alerts: 'Alerts',
+					applicationBar: 'Application Bar',
+					aspectRatio: 'Aspect Ratio',
+					badges: 'Badges',
+					breadcrumbs: 'Breadcrumbs',
+					bs4overwrites: 'Bootstrap 4 Overwrites',
+					buttons: 'Buttons',
+					cards: 'Cards',
+					customForms: 'Custom Forms',
+					drilldown: 'Drilldown',
+					dropdowns: 'Dropdowns',
+					forms: 'Forms',
+					globals: 'Globals',
+					grid: 'Grid',
+					inputGroups: 'Input Groups',
+					labels: 'Labels',
+					links: 'Links',
+					listGroup: 'List Group',
+					loaders: 'Loaders',
+					managementBar: 'Management Bar',
+					multiStepNav: 'Multi Step Nav',
+					menubar: 'Menubar',
+					modals: 'Modals',
+					nav: 'Nav',
+					navbar: 'Navbar',
+					navigationBar: 'Navigation Bar',
+					pagination: 'Pagination',
+					panels: 'Panels',
+					popovers: 'Popovers',
+					progressBars: 'Progress Bars',
+					quickAction: 'Quick Action',
+					sheet: 'Sheet',
+					sidebar: 'Sidebar',
+					sideNavigation: 'Side Navigation',
+					stickers: 'Stickers',
+					tbar: 'Tbar',
+					tables: 'Tables',
+					timelines: 'Timelines',
+					toggleSwitch: 'Toggle Switch',
+					tooltip: 'Tooltip',
+					utilities: 'Utilities',
+				},
+			};
+
+			return gulp.src(['./src/scss/**/**/*', '!./src/scss/bootstrap/**/*'])
+				.pipe(sassdoc(options));
+		}
+	);
 };
