@@ -9,6 +9,7 @@ $popover-arrow-height: 0.3rem !default;
 $popover-arrow-offset: 0.625rem !default; // 10px
 $popover-arrow-width: $popover-arrow-height * 2 !default;
 
+// $popover-inner-padding is deprecated in v2
 $popover-inner-padding: 0 !default;
 
 $popover-header-bg: #FFF !default;
