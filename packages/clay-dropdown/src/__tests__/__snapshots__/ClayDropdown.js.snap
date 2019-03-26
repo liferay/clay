@@ -51,31 +51,25 @@ exports[`ClayDropdown should keep the expanded updated with that of the dropdown
       <ul class="list-unstyled">
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 8</span>
-              </span>
+            <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 8</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 9</span>
-              </span>
+            <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 9</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 10</span>
-              </span>
+            <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 10</span>
             </label>
           </div>
         </li>
@@ -137,31 +131,25 @@ exports[`ClayDropdown should render a disabled dropdown with items 1`] = `
       <ul class="list-unstyled">
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 8</span>
-              </span>
+            <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 8</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 9</span>
-              </span>
+            <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 9</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 10</span>
-              </span>
+            <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 10</span>
             </label>
           </div>
         </li>
@@ -222,31 +210,25 @@ exports[`ClayDropdown should render a dropdown with an icon and label trigger 1`
       <ul class="list-unstyled">
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 8</span>
-              </span>
+            <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 8</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 9</span>
-              </span>
+            <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 9</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 10</span>
-              </span>
+            <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 10</span>
             </label>
           </div>
         </li>
@@ -308,31 +290,25 @@ exports[`ClayDropdown should render a dropdown with an icon trigger 1`] = `
       <ul class="list-unstyled">
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 8</span>
-              </span>
+            <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 8</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 9</span>
-              </span>
+            <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 9</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 10</span>
-              </span>
+            <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 10</span>
             </label>
           </div>
         </li>
@@ -394,31 +370,25 @@ exports[`ClayDropdown should render a dropdown with classes 1`] = `
       <ul class="list-unstyled">
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 8</span>
-              </span>
+            <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 8</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 9</span>
-              </span>
+            <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 9</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 10</span>
-              </span>
+            <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 10</span>
             </label>
           </div>
         </li>
@@ -480,31 +450,25 @@ exports[`ClayDropdown should render a dropdown with id 1`] = `
       <ul class="list-unstyled">
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 8</span>
-              </span>
+            <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 8</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 9</span>
-              </span>
+            <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 9</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 10</span>
-              </span>
+            <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 10</span>
             </label>
           </div>
         </li>
@@ -566,31 +530,25 @@ exports[`ClayDropdown should render a dropdown with items 1`] = `
       <ul class="list-unstyled">
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 8</span>
-              </span>
+            <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 8</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 9</span>
-              </span>
+            <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 9</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 10</span>
-              </span>
+            <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 10</span>
             </label>
           </div>
         </li>
@@ -652,31 +610,25 @@ exports[`ClayDropdown should render a dropdown with the \`link\` style 1`] = `
       <ul class="list-unstyled">
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 8</span>
-              </span>
+            <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 8</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 9</span>
-              </span>
+            <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 9</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 10</span>
-              </span>
+            <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 10</span>
             </label>
           </div>
         </li>
@@ -738,31 +690,25 @@ exports[`ClayDropdown should render a dropdown with the \`primary\` style 1`] = 
       <ul class="list-unstyled">
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 8</span>
-              </span>
+            <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 8</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 9</span>
-              </span>
+            <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 9</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 10</span>
-              </span>
+            <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 10</span>
             </label>
           </div>
         </li>
@@ -824,31 +770,25 @@ exports[`ClayDropdown should render a dropdown with the \`secondary\` style 1`] 
       <ul class="list-unstyled">
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 8</span>
-              </span>
+            <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 8</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 9</span>
-              </span>
+            <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 9</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 10</span>
-              </span>
+            <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 10</span>
             </label>
           </div>
         </li>
@@ -910,31 +850,25 @@ exports[`ClayDropdown should render a dropdown with the \`unstyled\` style by de
       <ul class="list-unstyled">
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 8</span>
-              </span>
+            <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 8</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 9</span>
-              </span>
+            <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 9</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 10</span>
-              </span>
+            <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 10</span>
             </label>
           </div>
         </li>
@@ -996,31 +930,25 @@ exports[`ClayDropdown should render a dropdown with trigger custom classes 1`] =
       <ul class="list-unstyled">
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 8</span>
-              </span>
+            <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 8</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 9</span>
-              </span>
+            <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 9</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 10</span>
-              </span>
+            <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 10</span>
             </label>
           </div>
         </li>
@@ -1082,31 +1010,25 @@ exports[`ClayDropdown should render a dropdown with trigger size 1`] = `
       <ul class="list-unstyled">
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 8</span>
-              </span>
+            <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 8</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 9</span>
-              </span>
+            <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 9</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 10</span>
-              </span>
+            <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 10</span>
             </label>
           </div>
         </li>
@@ -1164,31 +1086,25 @@ exports[`ClayDropdown should render a dropdown without toggle icon 1`] = `
       <ul class="list-unstyled">
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 8</span>
-              </span>
+            <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 8</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 9</span>
-              </span>
+            <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 9</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 10</span>
-              </span>
+            <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 10</span>
             </label>
           </div>
         </li>
@@ -1266,31 +1182,25 @@ exports[`ClayDropdown should render a searchable dropdown 1`] = `
       <ul class="list-unstyled">
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 8</span>
-              </span>
+            <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 8</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 9</span>
-              </span>
+            <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 9</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 10</span>
-              </span>
+            <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 10</span>
             </label>
           </div>
         </li>
@@ -1352,31 +1262,25 @@ exports[`ClayDropdown should render an expanded dropdown 1`] = `
       <ul class="list-unstyled">
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 8</span>
-              </span>
+            <input class="custom-control-input" value="radio8value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 8</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item active" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 9</span>
-              </span>
+            <input checked="" class="custom-control-input" value="radio9value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 9</span>
             </label>
           </div>
         </li>
         <li class="dropdown-item" tabindex="-1">
           <div class="custom-control custom-radio custom-control-inline">
-            <label>
-              <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text">Item 10</span>
-              </span>
+            <input disabled="disabled" class="custom-control-input" value="radio10value" ref="input" type="radio" role="radio">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text">Item 10</span>
             </label>
           </div>
         </li>
