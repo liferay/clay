@@ -253,9 +253,9 @@
 				</li>
 				<li class="nav-item">
 					<span class="navbar-text">
-						{if $supportsBulkActions and $selectedItems == $totalItems}
-							{msg desc="Says that all possible items are selected when bulk actions are available"}
-								all-{$totalItems}-items-selected
+						{if $selectedItems == $totalItems}
+							{msg desc="Says that all possible items are selected"}
+								all-selected
 							{/msg}
 						{else}
 							{msg desc="Says how many items of the total are selected"}
@@ -264,7 +264,7 @@
 							{sp}
 							<span class="navbar-breakpoint-down-d-none">
 								{msg desc="Items selected"}
-									items-selected
+									selected
 								{/msg}
 							</span>
 						{/if}
