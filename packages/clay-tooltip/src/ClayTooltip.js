@@ -26,6 +26,7 @@ class ClayTooltip extends ClayComponent {
 			throw new Error('Use ClayTooltip.init to initialize ClayTooltip');
 		}
 		super(config, parentElement);
+		this._timer = undefined;
 	}
 
 	/**
@@ -148,16 +149,7 @@ class ClayTooltip extends ClayComponent {
 	 * @private
 	 */
 	_handleMouseEnter(event) {
-		const content = this._getContent(event.delegateTarget);
-		this._target = event.delegateTarget;
-
-		this._content = content;
-
-		if (!this.visible) {
-			this.element.style.display = 'block';
-		}
-		this._isTransitioning = true;
-		this.visible = true;
+		this._showTooltip(event.delegateTarget);
 	}
 
 	/**
@@ -178,16 +170,34 @@ class ClayTooltip extends ClayComponent {
 	 * @private
 	 */
 	_handleMouseLeave(event) {
-		if (this.visible) {
-			this._restoreTitle(event.delegateTarget);
-
-			this._isTransitioning = true;
-			this.visible = false;
-		}
+		this._hideTooltip(event.delegateTarget);
 	}
 
 	/**
-	 * Handles transionend event.
+	 * Handles touchstart events.
+	 * @memberof ClayTooltip
+	 * @param {!Event} event
+	 * @private
+	 */
+	_handleTouchStart(event) {
+		this._timer = setTimeout(() => {
+			this._showTooltip(event.srcElement);
+			clearTimeout(this._timer);
+		}, 500);
+	}
+
+	/**
+	 * Handle touchend events.
+	 * @memberof ClayTooltip
+	 * @param {!Event} event
+	 * @private
+	 */
+	_handleTouchEnd(event) {
+		this._hideTooltip(event.srcElement);
+	}
+
+	/**
+	 * Handles transitionend event.
 	 * @memberof ClayTooltip
 	 * @private
 	 */
@@ -196,6 +206,24 @@ class ClayTooltip extends ClayComponent {
 
 		if (!this.visible) {
 			this.element.style.display = 'none';
+		}
+	}
+
+	/**
+	 * Hides the tooltip on the given element.
+	 * @param {!Element} element
+	 * @private
+	 */
+	_hideTooltip(element) {
+		if (this._timer) {
+			clearTimeout(this._timer);
+			this._timer = undefined;
+		}
+		if (this.visible) {
+			this._restoreTitle(element);
+
+			this._isTransitioning = true;
+			this.visible = false;
 		}
 	}
 
@@ -253,7 +281,7 @@ class ClayTooltip extends ClayComponent {
 	}
 
 	/**
-	 * The setter function for the `classMap` staet.
+	 * The setter function for the `classMap` state.
 	 * @memberof ClayTooltip
 	 * @param {Object} val
 	 * @return {!Object}
@@ -261,6 +289,25 @@ class ClayTooltip extends ClayComponent {
 	 */
 	setterClassMapFn_(val) {
 		return object.mixin(this.valueClassMapFn_(), val);
+	}
+
+	/**
+	 * Shows the tooltip on a given element.
+	 * @memberof ClayTooltip
+	 * @param {!Element} target
+	 * @private
+	 */
+	_showTooltip(target) {
+		const content = this._getContent(target);
+		this._target = target;
+
+		this._content = content;
+
+		if (!this.visible) {
+			this.element.style.display = 'block';
+		}
+		this._isTransitioning = true;
+		this.visible = true;
 	}
 
 	/**
@@ -285,39 +332,65 @@ class ClayTooltip extends ClayComponent {
 
 			for (let i = 0, l = newSelectors.length; i < l; i++) {
 				const selector = newSelectors[i];
+				const handlers = [];
 
-				this._eventHandler.add(
-					dom.delegate(
-						document,
-						'blur',
-						selector,
-						this._handleMouseLeave.bind(this)
-					),
-					dom.delegate(
-						document,
-						'click',
-						selector,
-						this._handleMouseClick.bind(this)
-					),
-					dom.delegate(
-						document,
-						'focus',
-						selector,
-						this._handleMouseEnter.bind(this)
-					),
-					dom.delegate(
-						document,
-						'mouseenter',
-						selector,
-						this._handleMouseEnter.bind(this)
-					),
-					dom.delegate(
-						document,
-						'mouseleave',
-						selector,
-						this._handleMouseLeave.bind(this)
-					)
-				);
+				if (/iPad|iPhone|iPod|android/i.test(navigator.userAgent)) {
+					handlers.push(
+						dom.delegate(
+							document,
+							'touchstart',
+							selector,
+							this._handleTouchStart.bind(this)
+						),
+						dom.delegate(
+							document,
+							'touchend',
+							selector,
+							this._handleTouchEnd.bind(this)
+						),
+						dom.delegate(
+							document,
+							'touchcancel',
+							selector,
+							this._handleTouchEnd.bind(this)
+						)
+					);
+				} else {
+					handlers.push(
+						dom.delegate(
+							document,
+							'blur',
+							selector,
+							this._handleMouseLeave.bind(this)
+						),
+						dom.delegate(
+							document,
+							'click',
+							selector,
+							this._handleMouseClick.bind(this)
+						),
+						dom.delegate(
+							document,
+							'focus',
+							selector,
+							this._handleMouseEnter.bind(this)
+						),
+						dom.delegate(
+							document,
+							'mouseenter',
+							selector,
+							this._handleMouseEnter.bind(this)
+						),
+						dom.delegate(
+							document,
+							'mouseleave',
+							selector,
+							this._handleMouseLeave.bind(this)
+						)
+					);
+				}
+
+				this._eventHandler.add(...handlers);
 			}
 		}
 	}

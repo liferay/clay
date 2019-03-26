@@ -6,9 +6,20 @@ exports[`ClayMultiSelect Lifecycle itemAdded should not emit an event when the i
     <div class="input-group-item">
       <div class="dropdown dropdown-full">
         <div class=" form-control form-control-tag-group">
-          <input name="selectedItems" type="hidden" value="foo">
+          <input name="selectedItems" type="hidden" value="1">
           <span class="label label-secondary label-dismissible" id="item-tag" tabindex="0" data-tag="0">
-            <span class="label-item label-item-expand">foo</span>
+            <span class="label-item label-item-expand">Foo</span>
+            <span class="label-item label-item-after">
+              <button class="btn close" aria-label="close" tabindex="-1" type="button">
+                <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                  <use xlink:href="icons.svg#times"></use>
+                </svg>
+              </button>
+            </span>
+          </span>
+          <input name="selectedItems" type="hidden" value="2">
+          <span class="label label-secondary label-dismissible" id="item-tag" tabindex="0" data-tag="1">
+            <span class="label-item label-item-expand">Bar</span>
             <span class="label-item label-item-after">
               <button class="btn close" aria-label="close" tabindex="-1" type="button">
                 <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">

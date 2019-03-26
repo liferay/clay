@@ -2,12 +2,20 @@
 	cursor: $form-check-input-cursor;
 	height: 14px;
 	width: 14px;
+
+	&:disabled {
+		cursor: $form-check-input-disabled-cursor;
+	}
 }
 
 [type="radio"] {
 	cursor: $form-check-input-cursor;
 	height: 15px;
 	width: 14px;
+
+	&:disabled {
+		cursor: $form-check-input-disabled-cursor;
+	}
 }
 
 fieldset {

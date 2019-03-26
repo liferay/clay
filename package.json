@@ -7,6 +7,7 @@
     "coveralls": "node node_modules/coveralls/bin/coveralls.js < coverage/lcov.info",
     "format": "npm run prettier -- --write",
     "jest": "cross-env NODE_ENV=test jest",
+    "jest:debug": "cross-env NODE_ENV=test node --inspect-brk node_modules/.bin/jest --runInBand",
     "lerna": "lerna bootstrap -- --no-optional --no-package-lock",
     "link": "lerna run link",
     "lint": "eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js 'examples/*/src/**/*.js' && npm run mcritic",
@@ -15,7 +16,8 @@
     "prettier": "prettier-eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js 'examples/*/src/**/*.js'",
     "soy": "lerna run soy",
     "start": "http-server . -p 4000",
-    "test": "npm run build && npm run jest && npm run pa11y",
+    "test": "npm run soy && npm run jest && npm run pa11y",
+    "test:debug": "npm run soy && npm run jest:debug",
     "testSoy": "cd packages/clay-isomorphic && ./gradlew testSoy",
     "site": "cd clayui.com && npm run build && npm run serve"
   },
@@ -52,6 +54,7 @@
     ],
     "testPathIgnorePatterns": [
       "browserslist-config-clay",
+      "clayui.com",
       "fixtures",
       "<rootDir>/examples"
     ],

@@ -560,7 +560,7 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a management toolbar in state active with checbkox in indeterminate state', () => {
+	it('should render a management toolbar in state active with checkbox in indeterminate state', () => {
 		managementToolbar = new ClayManagementToolbar({
 			checkboxStatus: 'indeterminate',
 			selectable: true,
@@ -572,7 +572,7 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
-	it('should render a management toolbar in active state with checbkox checked', () => {
+	it('should render a management toolbar in active state with checkbox checked', () => {
 		managementToolbar = new ClayManagementToolbar({
 			checkboxStatus: 'checked',
 			clearSelectionURL: 'my-clear-selection-url',
@@ -582,6 +582,55 @@ describe('ClayManagementToolbar', function() {
 			totalItems: 10,
 		});
 
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
+	it('should render a management toolbar in active state with checkbox checked selecting just one item', () => {
+		managementToolbar = new ClayManagementToolbar({
+			checkboxStatus: 'checked',
+			clearSelectionURL: 'my-clear-selection-url',
+			selectable: true,
+			selectedItems: 1,
+			spritemap: spritemap,
+			totalItems: 10,
+		});
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
+	it('should render a management toolbar in active state with checkbox checked selecting one item from a unique element selection', () => {
+		managementToolbar = new ClayManagementToolbar({
+			checkboxStatus: 'checked',
+			clearSelectionURL: 'my-clear-selection-url',
+			selectable: true,
+			selectedItems: 1,
+			spritemap: spritemap,
+			totalItems: 1,
+		});
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
+	it('should render a management toolbar in active state with checkbox checked selecting one item from a unique element selection with bulkActions', () => {
+		managementToolbar = new ClayManagementToolbar({
+			checkboxStatus: 'checked',
+			clearSelectionURL: 'my-clear-selection-url',
+			selectable: true,
+			selectedItems: 1,
+			spritemap: spritemap,
+			supportsBulkActions: true,
+			totalItems: 1,
+		});
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
+	it('should render a management toolbar in active state with checkbox checked dont selecting any items', () => {
+		managementToolbar = new ClayManagementToolbar({
+			checkboxStatus: 'checked',
+			clearSelectionURL: 'my-clear-selection-url',
+			selectable: true,
+			selectedItems: 0,
+			spritemap: spritemap,
+			totalItems: 1,
+		});
 		expect(managementToolbar).toMatchSnapshot();
 	});
 

@@ -47,6 +47,27 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h2>Active state with checkbox checked selecting one item from a unique element selection</h2>
+			<div id="active-checked-select-all-block-unique"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h2>Active state with checkbox checked selecting one item from a unique element selection with bulk actions support enabled</h2>
+			<div id="active-checked-select-all-block-unique-with-bulk-actions"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h2>Active state with checkbox checked don't selecting any items</h2>
+			<div id="active-checked-dont-selecting-any-items"></div>
+		</div>
+	</div>
+
+	 <div class="row row-spacing">
+		<div class="col">
 			<h2>Active State with checkbox checked with no select all button and all selected items</h2>
 			<div id="active-checked-no-select-all-block"></div>
 		</div>
@@ -350,6 +371,57 @@
 			totalItems: 10,
 		},
 		'#active-checked-select-all-block');
+
+		//Active state with checkbox checked selecting one item
+		new metal.ClayManagementToolbar({
+			actionItems: actionItems,
+			checkboxStatus: 'checked',
+			selectable: true,
+			selectedItems: 1,
+			showInfoButton: true,
+			showSelectAllButton: true,
+			spritemap: spritemap,
+			supportsBulkActions: true,
+			totalItems: 10,
+		},
+		'#active-checked-select-all-block');
+
+		//Active state with checkbox checked selecting one item from a unique element selection.
+		new metal.ClayManagementToolbar({
+			actionItems: actionItems,
+			checkboxStatus: 'checked',
+			selectable: true,
+			selectedItems: 1,
+			showInfoButton: true,
+			spritemap: spritemap,
+			totalItems: 1,
+		},
+		'#active-checked-select-all-block-unique');
+
+		new metal.ClayManagementToolbar({
+			checkboxStatus: 'checked',
+			clearSelectionURL: 'my-clear-selection-url',
+			selectable: true,
+			selectedItems: 1,
+			spritemap: spritemap,
+			supportsBulkActions: true,
+			totalItems: 1,
+		},
+		'#active-checked-select-all-block-unique-with-bulk-actions');
+
+		//Active state with checkbox checked don't selecting any items.
+		new metal.ClayManagementToolbar({
+			actionItems: actionItems,
+			checkboxStatus: 'checked',
+			selectable: true,
+			selectedItems: 0,
+			showInfoButton: true,
+			showSelectAllButton: true,
+			spritemap: spritemap,
+			supportsBulkActions: true,
+			totalItems: 1,
+		},
+		'#active-checked-dont-selecting-any-items');
 
 		//Active State with select all button without select all button
 		new metal.ClayManagementToolbar({
