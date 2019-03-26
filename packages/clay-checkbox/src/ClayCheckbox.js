@@ -11,6 +11,23 @@ import templates from './ClayCheckbox.soy.js';
  */
 class ClayCheckbox extends ClayComponent {
 	/**
+	 * It does the default behavior of a `label` with the `for`
+	 * attribute pointing to an input checkbox so that it does
+	 * not cause two events.
+	 */
+	_handleLabelClick() {
+		if (!this.refs.input.disabled) {
+			if (this.refs.input.indeterminate) {
+				this.refs.input.indeterminate = false;
+			} else {
+				this.refs.input.checked = !this.refs.input.checked;
+			}
+		} else {
+			event.stopPropagation();
+		}
+	}
+
+	/**
 	 * @inheritDoc
 	 */
 	syncIndeterminate() {

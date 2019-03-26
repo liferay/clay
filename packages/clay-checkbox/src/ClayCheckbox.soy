@@ -4,6 +4,7 @@
  * This renders an icon element based on the Clay Checkbox definition.
  */
 {template .render}
+	{@param? _handleLabelClick: any}
 	{@param? ariaLabelledBy: string}
 	{@param? checked: bool}
 	{@param? disabled: bool}
@@ -35,6 +36,7 @@
 
 	<div {$attributes}>
 		{call .input}
+			{param _handleLabelClick: $_handleLabelClick /}
 			{param ariaLabelledBy: $ariaLabelledBy /}
 			{param checked: $indeterminate or $checked /}
 			{param disabled: $disabled /}
@@ -51,6 +53,7 @@
  * This renders the checkbox input
  */
 {template .input}
+	{@param? _handleLabelClick: any}
 	{@param? ariaLabelledBy: string}
 	{@param? checked: bool}
 	{@param? disabled: bool}
@@ -60,48 +63,46 @@
 	{@param? showLabel: bool}
 	{@param? value: string}
 
-	<label>
-		{let $inputAttributes kind="attributes"}
-			{if $ariaLabelledBy}
-				aria-labelledby="{$ariaLabelledBy}"
-			{/if}
+	{let $inputAttributes kind="attributes"}
+		{if $ariaLabelledBy}
+			aria-labelledby="{$ariaLabelledBy}"
+		{/if}
 
-			{if $checked}
-				checked="checked"
-			{/if}
+		{if $checked}
+			checked="checked"
+		{/if}
 
-			{if $disabled}
-				disabled="disabled"
-			{/if}
+		{if $disabled}
+			disabled="disabled"
+		{/if}
 
-			class="custom-control-input"
+		class="custom-control-input"
 
-			{if $name}
-				name="{$name}"
-			{/if}
+		{if $name}
+			name="{$name}"
+		{/if}
 
-			{if $value}
-				value="{$value}"
-			{/if}
+		{if $value}
+			value="{$value}"
+		{/if}
 
-			ref="input"
-			type="checkbox"
-		{/let}
+		ref="input"
+		type="checkbox"
+	{/let}
 
-		<input {$inputAttributes} />
+	<input {$inputAttributes} />
 
-		<span class="custom-control-label">
-			{if $label}
-				{let $spanLabelClasses kind="text"}
-					custom-control-label-text
-					{if not $showLabel}
-						{sp}sr-only
-					{/if}
-				{/let}
+	<label class="custom-control-label" data-onclick="{$_handleLabelClick}">
+		{if $label}
+			{let $spanLabelClasses kind="text"}
+				custom-control-label-text
+				{if not $showLabel}
+					{sp}sr-only
+				{/if}
+			{/let}
 
-				<span class="{$spanLabelClasses}">{$label}</span>
-			{/if}
-		</span>
+			<span class="{$spanLabelClasses}">{$label}</span>
+		{/if}
 
 		{if $labelContent}
 			{$labelContent}
