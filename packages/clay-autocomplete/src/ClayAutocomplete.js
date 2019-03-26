@@ -93,19 +93,20 @@ class ClayAutocomplete extends ClayComponent {
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleDropdownItemClick(event) {
-		return this._handleItemSelected(event);
+		return this._handleItemSelected(
+			event,
+			event.delegateTarget.getAttribute('data-dropdown-item-index')
+		);
 	}
 
 	/**
 	 * Handle the selected item in the dropdown and trigger the itemSelected event.
 	 * @param {!Event} event
+	 * @param {!string} index
 	 * @protected
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
-	_handleItemSelected(event) {
-		const index = event.delegateTarget.getAttribute(
-			'data-dropdown-item-index'
-		);
+	_handleItemSelected(event, index) {
 		const item = this.filteredItems[Number(index)];
 
 		return !this.emit({
@@ -183,7 +184,10 @@ class ClayAutocomplete extends ClayComponent {
 				this.filteredItems.length &&
 					event.delegateTarget.tagName !== 'INPUT'
 			) {
-				this._handleItemSelected(event);
+				this._handleItemSelected(
+					event,
+					event.target.getAttribute('data-dropdown-item-index')
+				);
 			}
 			break;
 		case 'ArrowUp':

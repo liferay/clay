@@ -145,7 +145,7 @@ class ClayMultiSelect extends ClayComponent {
 		const label = this._performCall(this.labelLocator, event.data);
 		const data = this._getItemSchema(label, value);
 
-		return this._handleItemAdded(value, data, event);
+		return this._handleItemAdded(label, data, event);
 	}
 
 	/**
@@ -209,7 +209,10 @@ class ClayMultiSelect extends ClayComponent {
 			label &&
 			!this.selectedItems.find(
 				itemSelected =>
-					this._performCall(this.valueLocator, itemSelected) === label
+					this._performCall(
+						this.labelLocator,
+						itemSelected
+					).toLowerCase() === label
 			)
 		) {
 			const newSelectedItems = this.selectedItems.map(item => item);
