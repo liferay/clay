@@ -495,11 +495,9 @@ exports[`ClayManagementToolbar should render a management toolbar in active stat
       <ul class="navbar-nav navbar-nav-expand">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
+            <input checked="" class="custom-control-input" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text sr-only">select-items</span>
             </label>
           </div>
         </li>
@@ -756,11 +754,9 @@ exports[`ClayManagementToolbar should render a management toolbar in active stat
       <ul class="navbar-nav navbar-nav-expand">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
+            <input checked="" class="custom-control-input" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text sr-only">select-items</span>
             </label>
           </div>
         </li>
@@ -782,11 +778,9 @@ exports[`ClayManagementToolbar should render a management toolbar in active stat
       <ul class="navbar-nav navbar-nav-expand">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
+            <input checked="" class="custom-control-input" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text sr-only">select-items</span>
             </label>
           </div>
         </li>
@@ -808,11 +802,9 @@ exports[`ClayManagementToolbar should render a management toolbar in state activ
       <ul class="navbar-nav navbar-nav-expand">
         <li class="nav-item">
           <div class="custom-control custom-checkbox">
-            <label>
-              <input checked="" class="custom-control-input" ref="input" type="checkbox">
-              <span class="custom-control-label">
-                <span class="custom-control-label-text sr-only">select-items</span>
-              </span>
+            <input checked="" class="custom-control-input" ref="input" type="checkbox">
+            <label class="custom-control-label">
+              <span class="custom-control-label-text sr-only">select-items</span>
             </label>
           </div>
         </li>
