@@ -186,8 +186,11 @@
 			{/if}
 		"
 
-		data-onclick="{$_handleItemClick}"
-		data-onkeydown="{$_handleItemKeyDown}"
+		{if not $disabled}
+			data-onkeydown="{$_handleItemKeyDown}"
+			data-onchange="{$_handleItemClick}"
+		{/if}
+
 		tabindex="-1"
 	{/let}
 
@@ -278,8 +281,10 @@
 			{/if}
 		"
 
-		data-onclick="{$_handleItemClick}"
-		data-onkeydown="{$_handleItemKeyDown}"
+		{if not $disabled}
+			data-onkeydown="{$_handleItemKeyDown}"
+			data-onchange="{$_handleItemClick}"
+		{/if}
 
 		tabindex="-1"
 	{/let}
