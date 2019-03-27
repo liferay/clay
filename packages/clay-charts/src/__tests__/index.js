@@ -1,5 +1,3 @@
-import 'raf/polyfill'; // React depends on requestAnimationFrame
-
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
 import Chart, {BarChart} from '../index';

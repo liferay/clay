@@ -1,0 +1,79 @@
+@mixin clay-dropdown-menu-variant($map) {
+	$breakpoint-down: map-get($map, breakpoint-down);
+
+	$bg: map-get($map, bg);
+	$bg-clip: map-get($map, bg-clip);
+	$border-color: map-get($map, border-color);
+	$border-radius: map-get($map, border-radius);
+	$border-style: map-get($map, border-style);
+	$border-width: map-get($map, border-width);
+	$box-shadow: map-get($map, box-shadow);
+	$color: map-get($map, color);
+	$display: map-get($map, display);
+	$float: map-get($map, float);
+	$font-size: map-get($map, font-size);
+	$left: map-get($map, left);
+	$list-style: map-get($map, list-style);
+	$margin-bottom: map-get($map, margin-bottom);
+	$margin-left: map-get($map, margin-left);
+	$margin-right: map-get($map, margin-right);
+	$margin-top: map-get($map, margin-top);
+	$max-height: map-get($map, max-height);
+	$max-width: map-get($map, max-width);
+	$min-height: map-get($map, min-height);
+	$min-width: map-get($map, min-width);
+	$overflow: map-get($map, overflow);
+	$padding-bottom: map-get($map, padding-bottom);
+	$padding-left: map-get($map, padding-left);
+	$padding-right: map-get($map, padding-right);
+	$padding-top: map-get($map, padding-top);
+	$position: map-get($map, position);
+	$text-align: map-get($map, text-align);
+	$top: map-get($map, top);
+	$width: map-get($map, width);
+	$z-index: map-get($map, z-index);
+
+	$font-size-mobile: map-get($map, font-size-mobile);
+	$max-height-mobile: map-get($map, max-height-mobile);
+	$max-width-mobile: map-get($map, max-width-mobile);
+
+	background-clip: $bg-clip;
+	background-color: $bg;
+	border-color: $border-color;
+	border-radius: $border-radius;
+	border-style: $border-style;
+	border-width: $border-width;
+	box-shadow: $box-shadow;
+	color: $color;
+	display: $display;
+	float: $float;
+	font-size: $font-size;
+	left: $left;
+	list-style: $list-style;
+	margin-bottom: $margin-bottom;
+	margin-left: $margin-left;
+	margin-right: $margin-right;
+	margin-top: $margin-top;
+	max-height: $max-height;
+	max-width: $max-width;
+	min-height: $min-height;
+	min-width: $min-width;
+	overflow: $overflow;
+	padding-bottom: $padding-bottom;
+	padding-left: $padding-left;
+	padding-right: $padding-right;
+	padding-top: $padding-top;
+	position: $position;
+	text-align: $text-align;
+	top: $top;
+	width: $width;
+	z-index: $z-index;
+
+	@if ($breakpoint-down) {
+		@include media-breakpoint-down($breakpoint-down) {
+			font-size: $font-size-mobile;
+			max-height: $max-height-mobile;
+			max-width: $max-width-mobile;
+		}
+	}
+}

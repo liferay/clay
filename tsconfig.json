@@ -8,9 +8,10 @@
 		"moduleResolution": "node",
 		"esModuleInterop": true,
 		"removeComments": true,
+		"allowJs": true,
 		"baseUrl": "./",
 		"paths": {
-			"@clayui/*": ["packages/*/src"],
+			"@clayui/*": ["./packages/clay-*"],
 			"*": ["node_modules", "packages"]
 		}
 	},

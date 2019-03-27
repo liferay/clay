@@ -26,20 +26,18 @@
 				"enforceInMethodNames": true
 			}
 		],
-		"no-unused-vars": [
-			2,
-			{
-				"args": "after-used",
-				"ignoreRestSiblings": false,
-				"vars": "all"
-			}
-		],
+		"no-unused-vars": 0,
 		"prefer-template": 2,
 		"react-hooks/rules-of-hooks": "error",
 		"react/jsx-boolean-value": 2,
 		"react/jsx-handler-names": 2,
 		"react/jsx-key": 2,
-		"react/jsx-no-bind": 2,
+		"react/jsx-no-bind": [
+			2,
+			{
+				"allowArrowFunctions": true
+			}
+		],
 		"react/jsx-no-literals": 2,
 		"react/jsx-sort-props": 2,
 		"react/jsx-uses-react": "error",
