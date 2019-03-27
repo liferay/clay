@@ -7,9 +7,6 @@ const SPLIT_REGEX = /({\d+})/g;
 
 /**
  * Utility function for substituting variables into language keys.
- *
- * @param langKey This is the language key used
- * @param args Arguments to pass into language key
  */
 export const sub = (langKey: string, args: React.ReactText[]) => {
 	const keyArray = langKey.split(SPLIT_REGEX).filter(val => val.length !== 0);
@@ -33,10 +30,6 @@ export const sub = (langKey: string, args: React.ReactText[]) => {
 
 /**
  * Utility function for getting x & y coordinates for gradient
- *
- * @param {Object} color tinycolor2 object
- * @param {HTMLElement} node
- * @return {Object}
  */
 export const colorToXY = (color: tinycolor.Instance, node: HTMLElement) => {
 	const rect = node.getBoundingClientRect();
@@ -51,10 +44,6 @@ export const colorToXY = (color: tinycolor.Instance, node: HTMLElement) => {
 
 /**
  * Utility function for getting the x position from hue
- *
- * @param {number} hue value of hue
- * @param {HTMLElement} node
- * @return {Object}
  */
 export const hueToX = (hue: number, node: HTMLElement) => {
 	return (hue / 360) * node.getBoundingClientRect().width;
@@ -62,10 +51,6 @@ export const hueToX = (hue: number, node: HTMLElement) => {
 
 /**
  * Utility function for getting hue from the x position
- *
- * @param {number} x left coordinate
- * @param {HTMLElement} node
- * @return {Object}
  */
 export const xToHue = (x: number, node: HTMLElement) => {
 	return (x / node.getBoundingClientRect().width) * 360;
@@ -73,10 +58,6 @@ export const xToHue = (x: number, node: HTMLElement) => {
 
 /**
  * Utility function for getting saturation from the x position
- *
- * @param {number} x left coordinate
- * @param {HTMLElement} node
- * @return {Object}
  */
 export function xToSaturation(x: number, node: HTMLElement) {
 	return Math.round((x * 100) / node.getBoundingClientRect().width);
@@ -84,10 +65,6 @@ export function xToSaturation(x: number, node: HTMLElement) {
 
 /**
  * Utility function for getting visibility from the y position
- *
- * @param {number} y top coordinate
- * @param {HTMLElement} node
- * @return {Object}
  */
 export function yToVisibility(y: number, node: HTMLElement) {
 	return Math.round(-((y * 100) / node.getBoundingClientRect().height) + 100);

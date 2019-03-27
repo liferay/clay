@@ -12,29 +12,26 @@ import {useHexInput} from './hooks';
 
 /**
  * Renders custom color icon
- * @return {React.Component}
  */
-const CustomColorIcon: React.FunctionComponent = () => {
-	return (
-		<svg
-			fill="none"
-			height="17"
-			viewBox="0 0 12 17"
-			width="12"
-			xmlns="http://www.w3.org/2000/svg"
-		>
-			<path
-				d="M11 11C11 13.7614 8.76142 16 6 16C3.23858 16 1 13.7614 1 11C1 9.79197 1.58669 8.71677 2.65995 7.20346C2.85539 6.92789 3.06515 6.64012 3.28534 6.33805C4.11185 5.20415 5.08532 3.86863 6 2.22004C6.91468 3.86863 7.88816 5.20415 8.71467 6.33805C8.93485 6.64013 9.14461 6.92789 9.34005 7.20346C10.4133 8.71677 11 9.79197 11 11Z"
-				stroke="#6B6C7E"
-				strokeWidth="2"
-			/>
-			<path
-				d="M12 11.0001C12 14.3138 9.31371 17.0001 6 17.0001C2.68629 17.0001 0 14.3138 0 11.0001C2 10 3.5 12.5001 6 11.0001C8.5 9.5 10 10 12 11.0001Z"
-				fill="#6B6C7E"
-			/>
-		</svg>
-	);
-};
+const CustomColorIcon: React.FunctionComponent = () => (
+	<svg
+		fill="none"
+		height="17"
+		viewBox="0 0 12 17"
+		width="12"
+		xmlns="http://www.w3.org/2000/svg"
+	>
+		<path
+			d="M11 11C11 13.7614 8.76142 16 6 16C3.23858 16 1 13.7614 1 11C1 9.79197 1.58669 8.71677 2.65995 7.20346C2.85539 6.92789 3.06515 6.64012 3.28534 6.33805C4.11185 5.20415 5.08532 3.86863 6 2.22004C6.91468 3.86863 7.88816 5.20415 8.71467 6.33805C8.93485 6.64013 9.14461 6.92789 9.34005 7.20346C10.4133 8.71677 11 9.79197 11 11Z"
+			stroke="#6B6C7E"
+			strokeWidth="2"
+		/>
+		<path
+			d="M12 11.0001C12 14.3138 9.31371 17.0001 6 17.0001C2.68629 17.0001 0 14.3138 0 11.0001C2 10 3.5 12.5001 6 11.0001C8.5 9.5 10 10 12 11.0001Z"
+			fill="#6B6C7E"
+		/>
+	</svg>
+);
 
 interface RGBInputProps {
 	onChange: ({}) => void;
@@ -44,37 +41,32 @@ interface RGBInputProps {
 
 /**
  * Renders input that displays RGB values
- * @return {React.Component}
  */
 const RGBInput: React.FunctionComponent<RGBInputProps> = ({
 	name,
 	onChange,
 	value,
-}) => {
-	return (
-		<div className="form-group rgb-info">
-			<div className="input-group">
-				<div className="input-group-item input-group-item-shrink input-group-prepend">
-					<span className="input-group-text">
-						{name.toUpperCase()}
-					</span>
-				</div>
-				<div className="input-group-append input-group-item">
-					<input
-						className="form-control"
-						onChange={event => {
-							const newVal = Number(event.target.value);
+}) => (
+	<div className="form-group rgb-info">
+		<div className="input-group">
+			<div className="input-group-item input-group-item-shrink input-group-prepend">
+				<span className="input-group-text">{name.toUpperCase()}</span>
+			</div>
+			<div className="input-group-append input-group-item">
+				<input
+					className="form-control"
+					onChange={event => {
+						const newVal = Number(event.target.value);
 
-							onChange({[name]: newVal});
-						}}
-						type="text"
-						value={value}
-					/>
-				</div>
+						onChange({[name]: newVal});
+					}}
+					type="text"
+					value={value}
+				/>
 			</div>
 		</div>
-	);
-};
+	</div>
+);
 
 interface CustomProps {
 	colors: string[];
@@ -86,7 +78,6 @@ interface CustomProps {
 
 /**
  * Renders the custom color picker
- * @return {React.Component}
  */
 const Custom: React.FunctionComponent<CustomProps> = ({
 	colors,
