@@ -16,7 +16,10 @@ interface HueProps {
 /**
  * Renders Hue component
  */
-const Hue: React.SFC<HueProps> = ({value = 0, onChange = () => {}}) => {
+const Hue: React.FunctionComponent<HueProps> = ({
+	value = 0,
+	onChange = () => {},
+}) => {
 	const containerRef = useRef<HTMLDivElement>(null);
 
 	const {onMouseMove, setXY, x, y} = useMousePosition(containerRef);

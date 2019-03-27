@@ -16,7 +16,7 @@ interface Props {
  * Renders basic color picker
  * @return {React.Component}
  */
-const Basic: React.SFC<Props> = ({colors, label, onChange}) => {
+const Basic: React.FunctionComponent<Props> = ({colors, label, onChange}) => {
 	return (
 		<div className="basic-color-picker">
 			{label && (

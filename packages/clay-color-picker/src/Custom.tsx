@@ -14,7 +14,7 @@ import {useHexInput} from './hooks';
  * Renders custom color icon
  * @return {React.Component}
  */
-const CustomColorIcon: React.SFC = () => {
+const CustomColorIcon: React.FunctionComponent = () => {
 	return (
 		<svg
 			fill="none"
@@ -46,7 +46,11 @@ interface RGBInputProps {
  * Renders input that displays RGB values
  * @return {React.Component}
  */
-const RGBInput: React.SFC<RGBInputProps> = ({name, onChange, value}) => {
+const RGBInput: React.FunctionComponent<RGBInputProps> = ({
+	name,
+	onChange,
+	value,
+}) => {
 	return (
 		<div className="form-group rgb-info">
 			<div className="input-group">
@@ -84,7 +88,7 @@ interface CustomProps {
  * Renders the custom color picker
  * @return {React.Component}
  */
-const Custom: React.SFC<CustomProps> = ({
+const Custom: React.FunctionComponent<CustomProps> = ({
 	colors,
 	label,
 	onChange,
