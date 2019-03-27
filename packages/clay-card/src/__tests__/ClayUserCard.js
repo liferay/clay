@@ -201,7 +201,7 @@ describe('ClayUserCard', function() {
 		component = new ClayUserCard({
 			initials: 'DOC',
 			name: 'User Name',
-			userColorClass: 'sticker-warning',
+			userColorClass: 'warning',
 			spritemap: spritemap,
 		});
 

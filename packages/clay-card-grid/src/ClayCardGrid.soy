@@ -468,6 +468,6 @@
 		{param selected: $item.selected /}
 		{param spritemap: $spritemap /}
 		{param subtitle: $item[$schema.fieldsMap.description] /}
-		{param userColor: $schema.userColorsMap ? $schema.userColorsMap[$item[$schema.fieldsMap.userColor]] ?: $schema.userColorsMap['*'] : $item[$schema.fieldsMap.userColor] /}
+		{param userColorClass: $schema.userColorsMap ? $schema.userColorsMap[$item[$schema.fieldsMap.userColor]] ?: $schema.userColorsMap['*'] : $item[$schema.fieldsMap.userColor] /}
 	{/call}
 {/deltemplate}
