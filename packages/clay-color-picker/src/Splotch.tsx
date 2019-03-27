@@ -17,7 +17,7 @@ interface Props extends React.HTMLAttributes<HTMLButtonElement> {
  * Renders component that displays a color
  * @return {React.Component}
  */
-const Splotch: React.SFC<Props> = ({
+const Splotch: React.FunctionComponent<Props> = ({
 	active,
 	className,
 	size = 24,

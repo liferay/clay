@@ -18,7 +18,7 @@ interface GradientSelectorProps {
 /**
  * Renders GradientSelector component
  */
-const GradientSelector: React.SFC<GradientSelectorProps> = ({
+const GradientSelector: React.FunctionComponent<GradientSelectorProps> = ({
 	color,
 	onChange = () => {},
 	hue = 0,

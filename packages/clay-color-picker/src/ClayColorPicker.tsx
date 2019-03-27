@@ -103,7 +103,7 @@ interface Props {
 	value?: string;
 }
 
-const ColorPicker: React.SFC<Props> = ({
+const ColorPicker: React.FunctionComponent<Props> = ({
 	ariaLabels = DEFAULT_ARIA_LABELS,
 	colors = [],
 	label,
