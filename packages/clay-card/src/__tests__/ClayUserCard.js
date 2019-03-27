@@ -187,19 +187,8 @@ describe('ClayUserCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
-	it('should render a ClayUserCard with user initials', () => {
-		component = new ClayUserCard({
-			initials: 'DOC',
-			name: 'User Name',
-			spritemap: spritemap,
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
 	it('should render a ClayUserCard with user user color class', () => {
 		component = new ClayUserCard({
-			initials: 'DOC',
 			name: 'User Name',
 			userColorClass: 'warning',
 			spritemap: spritemap,

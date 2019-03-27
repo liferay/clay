@@ -90,7 +90,6 @@ let items = [
 		items: [
 			{
 				id: '9',
-				initials: 'FA',
 				name: 'Ferrán Adriá',
 				style: 'fusion',
 				type: 'chef',
@@ -98,14 +97,12 @@ let items = [
 			{
 				id: '10',
 				image: './ramsay.jpg',
-				initials: 'GR',
 				name: 'Gordon Ramsay',
 				style: 'general',
 				type: 'chef',
 			},
 			{
 				id: '11',
-				initials: 'AC',
 				name: 'Alberto Chicote',
 				style: 'general',
 				type: 'chef',
@@ -128,7 +125,6 @@ const schema = {
 		icon: 'type',
 		imageAlt: 'name',
 		imageSrc: 'image',
-		initials: 'initials',
 		labels: 'spicyLevel',
 		stickerLabel: 'format',
 		title: 'name',
