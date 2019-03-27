@@ -138,8 +138,8 @@
 
 	<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 		{call ClaySticker.render}
-			{param elementClasses: $stickerClasses /}
 			{param icon: $icon ?: not $imageSrc and not $stickerLabel ? 'user' : null /}
+			{param elementClasses: 'sticker-user-icon' /}
 			{param imageAlt: $imageAlt /}
 			{param imageSrc: $imageSrc /}
 			{param label: $stickerLabel /}
