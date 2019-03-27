@@ -206,11 +206,15 @@ exports[`ClayCardGrid should render the default markup 1`] = `
     <p class="card-section-header">Chefs</p>
   </li>
   <li class="card-page-item-directory">
-    <div class="card-type-asset card">
+    <div class="card-type-asset card user-card">
       <div class="aspect-ratio card-item-first">
         <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-          <span class="sticker sticker-circle sticker-primary sticker-xl">
-            <span class="sticker-overlay">FA</span>
+          <span class="sticker sticker-circle sticker-danger sticker-user-icon">
+            <span class="inline-item">
+              <svg class="lexicon-icon lexicon-icon-user" focusable="false" role="presentation">
+                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#user"></use>
+              </svg>
+            </span>
           </span>
         </div>
       </div>
@@ -224,10 +228,10 @@ exports[`ClayCardGrid should render the default markup 1`] = `
     </div>
   </li>
   <li class="card-page-item-directory">
-    <div class="card-type-asset card">
+    <div class="card-type-asset card user-card">
       <div class="aspect-ratio card-item-first">
         <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-          <span class="sticker sticker-circle sticker-primary sticker-xl">
+          <span class="sticker sticker-circle sticker-primary sticker-user-icon">
             <span class="sticker-overlay">
               <img alt="Gordon Ramsay" class="sticker-img" src="./ramsay.jpg">
             </span>
@@ -244,11 +248,15 @@ exports[`ClayCardGrid should render the default markup 1`] = `
     </div>
   </li>
   <li class="card-page-item-directory">
-    <div class="card-type-asset card">
+    <div class="card-type-asset card user-card">
       <div class="aspect-ratio card-item-first">
         <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-          <span class="sticker sticker-circle sticker-primary sticker-xl">
-            <span class="sticker-overlay">AC</span>
+          <span class="sticker sticker-circle sticker-primary sticker-user-icon">
+            <span class="inline-item">
+              <svg class="lexicon-icon lexicon-icon-user" focusable="false" role="presentation">
+                <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#user"></use>
+              </svg>
+            </span>
           </span>
         </div>
       </div>
