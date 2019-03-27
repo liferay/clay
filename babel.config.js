@@ -9,6 +9,10 @@ module.exports = api => {
 
 	return {
 		ignore: ['node_modules', '**/__snapshots__/**', '**/__tests__/**'],
+		plugins: [
+			'babel-plugin-dev-expression',
+			'transform-inline-environment-variables',
+		],
 		presets: [
 			'@babel/env',
 			'@babel/preset-react',
