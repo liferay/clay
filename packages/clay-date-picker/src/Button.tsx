@@ -7,7 +7,7 @@
 import classnames from 'classnames';
 import React, {ButtonHTMLAttributes, FunctionComponent} from 'react';
 
-import Icon from './Icon';
+import Icon from '@clayui/icon';
 
 type ButtonVariant = 'link' | 'primary' | 'secondary' | 'unstyled';
 
