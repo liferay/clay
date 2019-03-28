@@ -45,6 +45,17 @@ $dropdown-item-disabled-cursor: $disabled-cursor !default;
 $dropdown-item-indicator-size: 1rem !default;
 $dropdown-item-indicator-spacer-x: 1rem !default;
 
+// Autocomplete Dropdown Menu
+
+$autocomplete-dropdown-menu: () !default;
+$autocomplete-dropdown-menu: map-merge((
+	max-height: calc(9rem + 2px),
+	max-width: none,
+	width: 100%,
+	// https://issues.liferay.com/browse/LPS-92801 causes issues when autocomplete is on main page and modal is opened, eventually needs fixing in ClayAutocomplete
+	z-index: $zindex-modal + 1,
+), $autocomplete-dropdown-menu);
+
 // Dropdown Action
 
 $dropdown-action-toggle-border-radius: $border-radius !default;

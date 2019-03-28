@@ -430,6 +430,22 @@
 	}
 }
 
+// Dropdown Menu Autocomplete
+
+.dropdown-full .autocomplete-dropdown-menu,
+.dropdown-full .dropdown-menu-autocomplete {
+	max-height: map-get($autocomplete-dropdown-menu, max-height-mobile);
+
+	@include media-breakpoint-up(md) {
+		max-height: map-get($autocomplete-dropdown-menu, max-height);
+	}
+}
+
+.autocomplete-dropdown-menu,
+.dropdown-menu-autocomplete {
+	@include clay-dropdown-menu-variant($autocomplete-dropdown-menu);
+}
+
 // Navbar Component Dropdowns
 
 .nav-item.dropdown-full {
