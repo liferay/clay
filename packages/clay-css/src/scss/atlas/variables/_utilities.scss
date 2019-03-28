@@ -8,9 +8,12 @@ $close: map-merge((
 	opacity: 1,
 	hover-color: $gray-900,
 	hover-opacity: 1,
+	focus-box-shadow: $btn-focus-box-shadow,
 	focus-opacity: 1,
+	focus-outline: 0,
 	disabled-color: $gray-600,
-	disabled-opacity: $btn-disabled-opacity
+	disabled-opacity: $btn-disabled-opacity,
+	btn-focus-box-shadow: $btn-focus-box-shadow,
 ), $close);
 
 $page-header-bg: $white !default;
