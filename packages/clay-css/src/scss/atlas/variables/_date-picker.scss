@@ -3,14 +3,14 @@
 $date-picker-nav-btn: () !default;
 $date-picker-nav-btn: map-merge((
 	bg: transparent,
-	hover-bg: #F1F2F5,
-	hover-color: $dark,
-	focus-bg: #F1F2F5,
-	focus-color: $dark,
-	focus-box-shadow: 0 0 0 3px rgba(lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06), 0.5),
-	active-bg: lighten(saturate(adjust-hue($secondary, -12), 8.51), 49.61),
+	hover-bg: $gray-200,
+	hover-color: $gray-900,
+	focus-bg: $gray-200,
+	focus-color: $gray-900,
+	focus-box-shadow: 0 0 0 3px rgba($gray-400, 0.5),
+	active-bg: $gray-200,
 	disabled-bg: transparent,
-	disabled-color: #A7A9BC,
+	disabled-color: $gray-500,
 	disabled-opacity: 1,
 ), $date-picker-nav-btn);
 
@@ -25,11 +25,11 @@ $date-picker-nav-select: map-merge((
 	padding-bottom: 0,
 	padding-left: 0.5rem,
 	padding-top: 0,
-	hover-bg: #F1F2F5,
-	hover-color: $dark,
-	focus-bg: #F1F2F5,
-	focus-box-shadow: 0 0 0 2px rgba(lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06), 0.5),
-	focus-color: $dark,
+	hover-bg: $gray-200,
+	hover-color: $gray-900,
+	focus-bg: $gray-200,
+	focus-box-shadow: 0 0 0 2px rgba($gray-400, 0.5),
+	focus-color: $gray-900,
 	disabled-bg: transparent,
 	disabled-color: $input-disabled-color,
 ), $date-picker-nav-select);
@@ -39,24 +39,24 @@ $date-picker-nav-select: map-merge((
 $date-picker-date: () !default;
 $date-picker-date: map-merge((
 	border-radius: 100px,
-	color: $secondary,
-	hover-bg: #F1F2F5,
-	hover-color: $dark,
-	focus-bg: #F1F2F5,
-	focus-box-shadow: 0 0 0 3px rgba(lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06), 0.5),
-	focus-color: $dark,
+	color: $gray-600,
+	hover-bg: $gray-200,
+	hover-color: $gray-900,
+	focus-bg: $gray-200,
+	focus-box-shadow: 0 0 0 3px rgba($gray-400, 0.5),
+	focus-color: $gray-900,
 	focus-outline: 0,
 	active-bg: $component-active-bg,
 	active-color: $component-active-color,
 	active-focus-box-shadow: 0 0 0 3px rgba($component-active-bg, 0.25),
 	disabled-bg: transparent,
-	disabled-color: #A7A9BC,
+	disabled-color: $gray-500,
 	disabled-opacity: 1,
 ), $date-picker-date);
 
 $date-picker-previous-month-date: () !default;
 $date-picker-previous-month-date: map-merge((
-	color: #A7A9BC,
+	color: $gray-500,
 	opacity: null,
 	focus-opacity: null,
 	active-opacity: null,
@@ -64,7 +64,7 @@ $date-picker-previous-month-date: map-merge((
 
 $date-picker-next-month-date: () !default;
 $date-picker-next-month-date: map-merge((
-	color: #A7A9BC,
+	color: $gray-500,
 	opacity: null,
 	focus-opacity: null,
 	active-opacity: null,
