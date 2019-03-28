@@ -135,8 +135,11 @@
 	{/let}
 
 	{let $itemAttributes kind="attributes"}
-		data-onclick="{$_handleItemClick}"
-		data-onkeydown="{$_handleItemKeyDown}"
+		{if not $disabled}
+			data-onkeydown="{$_handleItemKeyDown}"
+			data-onclick="{$_handleItemClick}"
+		{/if}
+
 		tabindex="-1"
 	{/let}
 
