@@ -84,7 +84,7 @@
 	{@param? _handleItemToggled: any}
 	{@param? selectable: bool}
 
-	<li class="card-page-item-directory">
+	<li class="card-page-item card-page-item-directory">
 		{let $variant kind="text"}
 			{if $schema.contentRenderer}
 				{$schema.contentRenderer}
@@ -142,7 +142,7 @@
 
 	{foreach $item in $items}
 		{if $item.items}
-			<li class="card-page-item-header">
+			<li class="card-page-item card-page-item-header">
 				<p class="card-section-header">{$item.label}</p>
 			</li>
 
