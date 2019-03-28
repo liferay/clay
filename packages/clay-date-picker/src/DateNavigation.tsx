@@ -14,7 +14,8 @@ import React, {
 } from 'react';
 import {IAriaLabels, IYears} from './ClayDatePicker';
 
-import Button from './Button';
+import Button from '@clayui/button';
+import Icon from '@clayui/button';
 import Select, {ISelectOption} from './Select';
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
@@ -118,32 +119,32 @@ const DateNavigation: FunctionComponent<Props> = ({
 
 				<div className="date-picker-nav-item date-picker-nav-item-expand date-picker-nav-controls">
 					<Button
-						ariaLabel={ariaLabels.buttonPreviousMonth}
-						icon="angle-left"
+						aria-label={ariaLabels.buttonPreviousMonth}
+						displayType="unstyled"
 						monospaced
 						onClick={handlePreviousMonthClicked}
-						size="sm"
-						spritemap={spritemap}
-						variant="unstyled"
-					/>
+						small
+					>
+						<Icon spritemap={spritemap} symbol="angle-left" />
+					</Button>
 					<Button
-						ariaLabel={ariaLabels.buttonDot}
-						icon="simple-circle"
+						aria-label={ariaLabels.buttonDot}
+						displayType="unstyled"
 						monospaced
 						onClick={onDotClicked}
-						size="sm"
-						spritemap={spritemap}
-						variant="unstyled"
-					/>
+						small
+					>
+						<Icon spritemap={spritemap} symbol="simple-circle" />
+					</Button>
 					<Button
-						ariaLabel={ariaLabels.buttonNextMonth}
-						icon="angle-right"
+						aria-label={ariaLabels.buttonNextMonth}
+						displayType="unstyled"
 						monospaced
 						onClick={handleNextMonthClicked}
-						size="sm"
-						spritemap={spritemap}
-						variant="unstyled"
-					/>
+						small
+					>
+						<Icon spritemap={spritemap} symbol="angle-right" />
+					</Button>
 				</div>
 			</form>
 		</div>
