@@ -40,7 +40,7 @@ exports[`ClayMultiSelect Lifecycle itemAdded should not emit an event when the i
     </div>
   </div>
 </div>
-<ul class="dropdown-menu" ref="dropdown" style="top: 0px; left: 0px;"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown" style="top: 0px; left: 0px;"></ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect and add the class focus when focus on input 1`] = `
@@ -61,7 +61,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect and add the class focus
     </div>
   </div>
 </div>
-<ul class="dropdown-menu" ref="dropdown" style="top: 0px; left: 0px;"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown" style="top: 0px; left: 0px;"></ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect and clear the input values after the onblur event 1`] = `
@@ -82,7 +82,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect and clear the input val
     </div>
   </div>
 </div>
-<ul class="dropdown-menu" ref="dropdown" style="top: 0px; left: 0px;"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown" style="top: 0px; left: 0px;"></ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect and keep the focus of the input when selecting an item 1`] = `
@@ -125,7 +125,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect and keep the focus of t
     </div>
   </div>
 </div>
-<ul class="dropdown-menu" ref="dropdown" style="top: 0px; left: 0px;"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown" style="top: 0px; left: 0px;"></ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect and remove the focus when blur on input 1`] = `
@@ -146,7 +146,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect and remove the focus wh
     </div>
   </div>
 </div>
-<ul class="dropdown-menu" ref="dropdown" style="top: 0px; left: 0px;"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown" style="top: 0px; left: 0px;"></ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with classes 1`] = `
@@ -167,7 +167,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with classes 1`] = `
     </div>
   </div>
 </div>
-<ul class="dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with id 1`] = `
@@ -188,7 +188,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with id 1`] = `
     </div>
   </div>
 </div>
-<ul class="dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with input name from selected items 1`] = `
@@ -209,7 +209,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with input name from se
     </div>
   </div>
 </div>
-<ul class="dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with label 1`] = `
@@ -231,7 +231,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with label 1`] = `
     </div>
   </div>
 </div>
-<ul class="dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with multiple values with comma at the end 1`] = `
@@ -285,7 +285,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with multiple values wi
     </div>
   </div>
 </div>
-<ul class="dropdown-menu" ref="dropdown" style="top: 0px; left: 0px;"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown" style="top: 0px; left: 0px;"></ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with placeholder 1`] = `
@@ -306,7 +306,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with placeholder 1`] = 
     </div>
   </div>
 </div>
-<ul class="dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with select button hidden 1`] = `
@@ -324,7 +324,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with select button hidd
     </div>
   </div>
 </div>
-<ul class="dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with selected items 1`] = `
@@ -367,7 +367,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with selected items 1`]
     </div>
   </div>
 </div>
-<ul class="dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
 `;
 
 exports[`ClayMultiSelect should render the default markup 1`] = `
@@ -388,5 +388,5 @@ exports[`ClayMultiSelect should render the default markup 1`] = `
     </div>
   </div>
 </div>
-<ul class="dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
 `;
