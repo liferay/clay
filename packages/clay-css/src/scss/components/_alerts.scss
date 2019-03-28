@@ -10,19 +10,7 @@
 	word-wrap: break-word;
 
 	.close {
-		font-size: $alert-close-font-size;
-		height: $alert-close-height;
-		line-height: $alert-close-line-height;
-		opacity: $alert-close-opacity;
-		margin-left: $alert-close-margin-left;
-		padding-bottom: $alert-close-padding-bottom;
-		padding-left: $alert-close-padding-left;
-		padding-right: $alert-close-padding-right;
-		padding-top: $alert-close-padding-top;
-		position: absolute;
-		right: $alert-close-position-right;
-		top: $alert-close-position-top;
-		width: $alert-close-width;
+		@include clay-close($alert-close);
 	}
 
 	.lead {
