@@ -29,6 +29,13 @@ $dropdown-link-disabled-color: $gray-500 !default;
 
 $dropdown-divider-bg: $dropdown-border-color !default;
 
+// Autocomplete Dropdown Menu
+
+$autocomplete-dropdown-menu: () !default;
+$autocomplete-dropdown-menu: map-merge((
+	max-height: 10rem, // 160px
+), $autocomplete-dropdown-menu);
+
 // Dropdown Action
 
 $dropdown-action-toggle-font-size: 1rem !default; // 16px
