@@ -6,10 +6,10 @@ exports[`ClayCardGrid should render a ClayCardGrid with id 1`] = `<ul class="car
 
 exports[`ClayCardGrid should render the default markup 1`] = `
 <ul class="card-page">
-  <li class="card-page-item-header">
+  <li class="card-page-item card-page-item-header">
     <p class="card-section-header">Folders</p>
   </li>
-  <li class="card-page-item-directory">
+  <li class="card-page-item card-page-item-directory">
     <div class="card-type-directory card card-horizontal">
       <div class="card-body">
         <div class="card-row">
@@ -29,7 +29,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
       </div>
     </div>
   </li>
-  <li class="card-page-item-directory">
+  <li class="card-page-item card-page-item-directory">
     <div class="card-type-directory card card-horizontal">
       <div class="card-body">
         <div class="card-row">
@@ -49,10 +49,10 @@ exports[`ClayCardGrid should render the default markup 1`] = `
       </div>
     </div>
   </li>
-  <li class="card-page-item-header">
+  <li class="card-page-item card-page-item-header">
     <p class="card-section-header">Recipes</p>
   </li>
-  <li class="card-page-item-directory">
+  <li class="card-page-item card-page-item-directory">
     <div class="card-type-asset card image-card">
       <div class="aspect-ratio card-item-first">
         <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
@@ -79,7 +79,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
       </div>
     </div>
   </li>
-  <li class="card-page-item-directory">
+  <li class="card-page-item card-page-item-directory">
     <div class="card-type-asset card image-card">
       <div class="aspect-ratio card-item-first">
         <img alt="Ramen" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./ramen.jpg">
@@ -102,7 +102,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
       </div>
     </div>
   </li>
-  <li class="card-page-item-directory">
+  <li class="card-page-item card-page-item-directory">
     <div class="card-type-asset card image-card">
       <div class="aspect-ratio card-item-first">
         <img alt="Paella" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./paella.jpg">
@@ -125,7 +125,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
       </div>
     </div>
   </li>
-  <li class="card-page-item-directory">
+  <li class="card-page-item card-page-item-directory">
     <div class="card-type-asset card image-card">
       <div class="aspect-ratio card-item-first">
         <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
@@ -152,7 +152,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
       </div>
     </div>
   </li>
-  <li class="card-page-item-directory">
+  <li class="card-page-item card-page-item-directory">
     <div class="card-type-asset card image-card">
       <div class="aspect-ratio card-item-first">
         <img alt="Carcamusas" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./carcamusas.jpg">
@@ -175,7 +175,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
       </div>
     </div>
   </li>
-  <li class="card-page-item-directory">
+  <li class="card-page-item card-page-item-directory">
     <div class="card-type-asset card image-card">
       <div class="aspect-ratio card-item-first">
         <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
@@ -202,10 +202,10 @@ exports[`ClayCardGrid should render the default markup 1`] = `
       </div>
     </div>
   </li>
-  <li class="card-page-item-header">
+  <li class="card-page-item card-page-item-header">
     <p class="card-section-header">Chefs</p>
   </li>
-  <li class="card-page-item-directory">
+  <li class="card-page-item card-page-item-directory">
     <div class="card-type-asset card user-card">
       <div class="aspect-ratio card-item-first">
         <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
@@ -227,7 +227,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
       </div>
     </div>
   </li>
-  <li class="card-page-item-directory">
+  <li class="card-page-item card-page-item-directory">
     <div class="card-type-asset card user-card">
       <div class="aspect-ratio card-item-first">
         <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
@@ -247,7 +247,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
       </div>
     </div>
   </li>
-  <li class="card-page-item-directory">
+  <li class="card-page-item card-page-item-directory">
     <div class="card-type-asset card user-card">
       <div class="aspect-ratio card-item-first">
         <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
