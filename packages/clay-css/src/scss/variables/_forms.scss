@@ -68,12 +68,12 @@ $form-control-label-size: map-merge((
 
 // Form Control Tag Group
 
-$form-control-tag-group-padding-y: ($input-height-inner - map-get($form-control-label-size, height) - (map-get($form-control-label-size, margin-bottom)) - (map-get($form-control-label-size, margin-top))) / 2 !default;
+$form-control-tag-group-padding-y: ($input-height - $input-border-bottom-width - $input-border-top-width - map-get($form-control-label-size, height) - (map-get($form-control-label-size, margin-bottom)) - (map-get($form-control-label-size, margin-top))) / 2 !default;
 
 // Form Control Inset
 
 $form-control-inset-min-height: $input-font-size * $input-line-height !default;
-$form-control-inset-margin-y: ($input-height-inner - ($form-control-tag-group-padding-y * 2) - $form-control-inset-min-height) / 2 !default;
+$form-control-inset-margin-y: ($input-height - $input-border-bottom-width - $input-border-top-width - ($form-control-tag-group-padding-y * 2) - $form-control-inset-min-height) / 2 !default;
 
 // Form Group
 
@@ -92,7 +92,7 @@ $form-check-input-disabled-cursor: $disabled-cursor !default;
 
 $form-check-label-cursor: $input-label-for-cursor !default;
 
-$form-check-label-text-margin-left: -0.3125rem !default; // 5px
+$form-check-label-text-margin-left: -0.1875rem !default; // 3px
 $form-check-label-text-padding-left: 0.5rem !default; // 8px
 $form-check-label-text-disabled-cursor: $disabled-cursor !default;
 
