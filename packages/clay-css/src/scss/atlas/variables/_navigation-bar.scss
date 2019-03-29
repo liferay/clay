@@ -5,7 +5,7 @@ $navigation-bar-size: map-merge((
 
 $navigation-bar-light: () !default;
 $navigation-bar-light: map-merge((
-	bg: #FFF,
+	bg: $white,
 	link-font-weight: $font-weight-semi-bold,
 	link-hover-color: $gray-900,
 ), $navigation-bar-light);
