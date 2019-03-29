@@ -22,11 +22,11 @@ $date-picker-nav-row: map-merge((
 
 $date-picker-nav-btn: () !default;
 $date-picker-nav-btn: map-merge((
-	color: $secondary,
+	color: $gray-600,
 	hover-bg: $gray-200,
 	focus-box-shadow: 0 0 0 $btn-focus-width rgba($component-active-bg, 0.25),
 	disabled-bg: transparent,
-	disabled-color: $secondary,
+	disabled-color: $gray-600,
 	disabled-opacity: $btn-disabled-opacity,
 ), $date-picker-nav-btn);
 
@@ -127,7 +127,7 @@ $date-picker-calendar-item: map-merge((
 $date-picker-date: () !default;
 $date-picker-date: map-merge((
 	border-radius: 100px,
-	color: $secondary,
+	color: $gray-600,
 	hover-bg: $gray-200,
 	focus-box-shadow: 0 0 0 $btn-focus-width rgba($component-active-bg, 0.25),
 	focus-outline: 0,

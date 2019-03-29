@@ -11,7 +11,7 @@ $popover-arrow-width: $popover-arrow-height * 2 !default;
 
 $popover-inner-padding: 0 !default;
 
-$popover-header-bg: #FFF !default;
+$popover-header-bg: $white !default;
 $popover-header-border-color: $gray-300 !default;
 $popover-header-color: $gray-900 !default;
 $popover-header-font-size: 0.875rem !default; // 14px
