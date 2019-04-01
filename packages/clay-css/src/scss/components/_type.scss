@@ -2,6 +2,7 @@ body {
 	-moz-osx-font-smoothing: $body-moz-osx-font-smoothing;
 	-ms-overflow-style: scrollbar;
 	-webkit-font-smoothing: $body-webkit-font-smoothing;
+	text-align: $body-text-align;
 
 	@include clay-scale-component {
 		font-size: $font-size-base-mobile;
