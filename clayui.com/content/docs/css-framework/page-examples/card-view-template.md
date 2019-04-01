@@ -488,13 +488,7 @@ title: "Card View Template"
 												</span>
 											</div>
 											<div class="autofit-col autofit-col-expand autofit-col-gutters">
-												<section class="autofit-section">
-													<h3 class="card-title" title="UX Team">
-														<span class="text-truncate-inline">
-															<a class="text-truncate" href="#1">UX Team</a>
-														</span>
-													</h3>
-												</section>
+												<a class="card-title text-truncate" title="UX Team" href="#1">UX Team</a>
 											</div>
 											<div class="autofit-col">
 												<div class="dropdown dropdown-action">
@@ -539,13 +533,7 @@ title: "Card View Template"
 												</span>
 											</div>
 											<div class="autofit-col autofit-col-expand autofit-col-gutters">
-												<section class="autofit-section">
-													<h3 class="card-title" title="Talks">
-														<span class="text-truncate-inline">
-															<span class="text-truncate">Talks</span>
-														</span>
-													</h3>
-												</section>
+												<a class="card-title text-truncate" title="Talks" href="#1">Talks</a>
 											</div>
 											<div class="autofit-col">
 												<div class="dropdown dropdown-action">
@@ -590,13 +578,7 @@ title: "Card View Template"
 												</span>
 											</div>
 											<div class="autofit-col autofit-col-expand autofit-col-gutters">
-												<section class="autofit-section">
-													<h3 class="card-title" title="Branding">
-														<span class="text-truncate-inline">
-															<span class="text-truncate">Branding</span>
-														</span>
-													</h3>
-												</section>
+												<a class="card-title text-truncate" title="Branding" href="#1">Branding</a>
 											</div>
 											<div class="autofit-col">
 												<div class="dropdown dropdown-action">
@@ -641,13 +623,7 @@ title: "Card View Template"
 												</span>
 											</div>
 											<div class="autofit-col autofit-col-expand autofit-col-gutters">
-												<section class="autofit-section">
-													<h3 class="card-title" title="Side Projects">
-														<span class="text-truncate-inline">
-															<span class="text-truncate">Side Projects</span>
-														</span>
-													</h3>
-												</section>
+												<a class="card-title text-truncate" title="Side Projects" href="#1">Side Projects</a>
 											</div>
 											<div class="autofit-col">
 												<div class="dropdown dropdown-action">
@@ -695,21 +671,9 @@ title: "Card View Template"
 								<div class="card-row">
 									<div class="autofit-col autofit-col-expand">
 										<section class="autofit-section">
-											<h3 class="card-title" title="thumbnail_coffee.jpg">
-												<span class="text-truncate-inline">
-													<span class="text-truncate">thumbnail_coffee.jpg</span>
-												</span>
-											</h3>
-											<h3 class="card-title">
-												<span class="text-truncate-inline">
-													<a class="text-truncate" href="#1">thumbnail_coffee.jpg</a>
-												</span>
-											</h3>
-											<div class="card-title">
-												<span class="text-truncate-inline">
-													<a class="text-truncate" href="#1">thumbnail_coffee.jpg</a>
-												</span>
-											</div>
+											<a class="card-title text-truncate" title="thumbnail_coffee.jpg" href="#1">thumbnail_coffee.jpg</a>
+											<a class="card-title text-truncate" href="#1">thumbnail_coffee.jpg</a>
+											<a class="card-title text-truncate" href="#1">thumbnail_coffee.jpg</a>
 											<p class="card-subtitle" title="Author Action">
 												<span class="text-truncate-inline">
 													<span class="text-truncate">Author Action</span>
@@ -771,11 +735,7 @@ title: "Card View Template"
 								<div class="card-row">
 									<div class="autofit-col autofit-col-expand">
 										<section class="autofit-section">
-											<h3 class="card-title" title="thumbnail_coffee.jpg">
-												<span class="text-truncate-inline">
-													<a class="text-truncate" href="#1">thumbnail_coffee.jpg</a>
-												</span>
-											</h3>
+											<a class="card-title text-truncate" title="thumbnail_coffee.jpg" href="#1">thumbnail_coffee.jpg</a>
 											<p class="card-subtitle" title="Author Action">
 												<span class="text-truncate-inline">
 													<span class="text-truncate">Author Action</span>
@@ -827,11 +787,7 @@ title: "Card View Template"
 								<div class="card-row">
 									<div class="autofit-col autofit-col-expand">
 										<section class="autofit-section">
-											<h3 class="card-title" title="thumbnail_coffee.jpg">
-												<span class="text-truncate-inline">
-													<a class="text-truncate" href="#1">thumbnail_coffee.jpg</a>
-												</span>
-											</h3>
+											<a class="card-title text-truncate" title="thumbnail_coffee.jpg" href="#1">thumbnail_coffee.jpg</a>
 											<p class="card-subtitle" title="Author Action">
 												<span class="text-truncate-inline">
 													<span class="text-truncate">Author Action</span>
@@ -882,11 +838,7 @@ title: "Card View Template"
 							<div class="card-body">
 								<div class="card-row">
 									<div class="autofit-col autofit-col-expand">
-										<h3 class="card-title" title="thumbnail_coffee.jpg">
-											<span class="text-truncate-inline">
-												<a class="text-truncate" href="#1">thumbnail_coffee.jpg</a>
-											</span>
-										</h3>
+										<a class="card-title text-truncate" title="thumbnail_coffee.jpg" href="#1">thumbnail_coffee.jpg</a>
 										<p class="card-subtitle" title="Author Action">
 											<span class="text-truncate-inline">
 												<span class="text-truncate">Author Action</span>
