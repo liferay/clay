@@ -11,11 +11,12 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
 	containerProps?: React.HTMLAttributes<HTMLDivElement>;
 	indeterminate?: boolean;
 	inline?: boolean;
-	label?: React.ReactElement | React.ReactText;
+	label?: React.ReactText;
 }
 
 const ClayCheckbox: React.FunctionComponent<Props> = ({
-	checked = false,
+	checked,
+	children,
 	className,
 	containerProps = {className: ''},
 	indeterminate = false,
@@ -49,16 +50,18 @@ const ClayCheckbox: React.FunctionComponent<Props> = ({
 					className={classNames('custom-control-input', className)}
 					ref={inputRef}
 					type="checkbox"
-					value={checked.toString()}
+					value={checked ? 'true' : 'false'}
 				/>
 
-				{label && (
-					<span className="custom-control-label">
+				<span className="custom-control-label">
+					{label && (
 						<span className="custom-control-label-text">
 							{label}
 						</span>
-					</span>
-				)}
+					)}
+
+					{children}
+				</span>
 			</label>
 		</div>
 	);

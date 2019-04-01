@@ -6,10 +6,12 @@ exports[`ClayCheckbox renders 1`] = `
 >
   <label>
     <input
-      checked={false}
       className="custom-control-input"
       type="checkbox"
       value="false"
+    />
+    <span
+      className="custom-control-label"
     />
   </label>
 </div>
@@ -70,7 +72,6 @@ exports[`ClayCheckbox renders as disabled 1`] = `
 >
   <label>
     <input
-      checked={false}
       className="custom-control-input"
       disabled={true}
       type="checkbox"
@@ -95,7 +96,6 @@ exports[`ClayCheckbox renders with a label 1`] = `
 >
   <label>
     <input
-      checked={false}
       className="custom-control-input"
       type="checkbox"
       value="false"
@@ -119,7 +119,6 @@ exports[`ClayCheckbox renders with an indeterminate value 1`] = `
 >
   <label>
     <input
-      checked={false}
       className="custom-control-input"
       type="checkbox"
       value="false"
@@ -143,7 +142,6 @@ exports[`ClayCheckbox renders with an indeterminate value and disabled 1`] = `
 >
   <label>
     <input
-      checked={false}
       className="custom-control-input"
       disabled={true}
       type="checkbox"

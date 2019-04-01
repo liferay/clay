@@ -23,6 +23,13 @@ const App: React.FunctionComponent = () => {
 				onChange={() => setBoxOne(!boxOne)}
 			/>
 
+			<div>{'Hidden label w/ aria-label'}</div>
+			<ClayCheckbox
+				aria-label="hello! Can you see me?"
+				checked={boxOne}
+				onChange={() => setBoxOne(!boxOne)}
+			/>
+
 			<ClayCheckbox
 				checked={boxTwo}
 				label="Checked"
@@ -37,13 +44,24 @@ const App: React.FunctionComponent = () => {
 
 			<ClayCheckbox disabled label="Unchecked disabled" />
 
-			<ClayCheckbox checked disabled label="Checked disabled" />
+			<ClayCheckbox
+				checked
+				disabled
+				label="Checked disabled"
+				onChange={() => {}}
+			/>
 
 			<ClayCheckbox
 				disabled
 				indeterminate
 				label="Indeterminate disabled"
 			/>
+
+			<ClayCheckbox label="With custom JSX">
+				<span className="badge badge-primary">
+					<span className="badge-item badge-item-expand">10</span>
+				</span>
+			</ClayCheckbox>
 		</div>
 	);
 };
