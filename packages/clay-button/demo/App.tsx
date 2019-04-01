@@ -6,30 +6,43 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import ClayButton, {DISPLAY_TYPES} from '../src/ClayButton';
+import ClayButton, {DisplayType} from '../src/ClayButton';
 
 import 'clay-css/lib/css/atlas.css';
 
 const otherButtonTypes = [
-	{displayType: 'primary', label: 'Monospaced', monospaced: true},
-	{block: true, displayType: 'primary', label: 'Block'},
-	{disabled: true, displayType: 'primary', label: 'Disabled'},
-	{displayType: 'primary', label: 'Default Size'},
-	{displayType: 'primary', label: 'Small Size', small: true},
+	{
+		displayType: 'primary',
+		label: 'primary',
+	},
+	{
+		displayType: 'secondary',
+		label: 'secondary',
+	},
+	{
+		displayType: 'link',
+		label: 'link',
+	},
+	{
+		displayType: 'unstyled',
+		label: 'unstyled',
+	},
+	{label: 'Monospaced', monospaced: true},
+	{block: true, label: 'Block'},
+	{disabled: true, label: 'Disabled'},
+	{label: 'Default Size'},
+	{label: 'Small Size', small: true},
 ];
 
 const App: React.FunctionComponent = () => (
 	<div>
-		{DISPLAY_TYPES.map(displayType => ({
-			displayType,
-			label: displayType,
-		}))
-			.concat(otherButtonTypes)
-			.map(({label, ...props}) => (
-				<div style={{marginBottom: 12}}>
-					<ClayButton {...props}>{label}</ClayButton>
-				</div>
-			))}
+		{otherButtonTypes.map(({displayType, label, ...props}, i) => (
+			<div key={i} style={{marginBottom: 12}}>
+				<ClayButton displayType={displayType as DisplayType} {...props}>
+					{label}
+				</ClayButton>
+			</div>
+		))}
 
 		<ClayButton.Group>
 			<ClayButton>{'This'}</ClayButton>

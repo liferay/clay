@@ -7,11 +7,11 @@
 import * as React from 'react';
 import classNames from 'classnames';
 
-export const DISPLAY_TYPES = ['primary', 'secondary', 'link', 'unstyled'];
+export type DisplayType = 'primary' | 'secondary' | 'link' | 'unstyled';
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	block?: boolean;
-	displayType?: typeof DISPLAY_TYPES[number];
+	displayType?: DisplayType;
 	id?: string;
 	monospaced?: boolean;
 	small?: boolean;
@@ -47,7 +47,7 @@ const ClayButton: IClayButton = ({
 
 const ClayButtonGroup: React.FunctionComponent<
 	React.HTMLAttributes<HTMLDivElement>
-> = ({className, children, role = 'group', ...otherProps}) => (
+> = ({children, className, role = 'group', ...otherProps}) => (
 	<div
 		{...otherProps}
 		className={classNames(className, 'btn-group')}
