@@ -426,13 +426,19 @@
 	$link-bg: map-get($map, link-bg);
 	$link-color: map-get($map, link-color);
 	$link-font-weight: map-get($map, link-font-weight);
+	$link-outline: map-get($map, link-outline);
+	$link-transition: map-get($map, link-transition);
 	$link-hover-bg: map-get($map, link-hover-bg);
 	$link-hover-color: map-get($map, link-hover-color);
+	$link-focus-box-shadow: map-get($map, link-focus-box-shadow);
+	$link-focus-color: map-get($map, link-focus-color);
 	$link-active-bg: map-get($map, link-active-bg);
 	$link-active-color: map-get($map, link-active-color);
 	$link-disabled-bg: map-get($map, link-disabled-bg);
+	$link-disabled-box-shadow: map-get($map, link-disabled-box-shadow);
 	$link-disabled-color: map-get($map, link-disabled-color);
 	$link-disabled-opacity: map-get($map, link-disabled-opacity);
+	$link-disabled-pointer-events: map-get($map, link-disabled-pointer-events);
 	$btn-font-weight: setter(map-get($map, btn-font-weight), $link-font-weight);
 	$brand-color: map-get($map, brand-color);
 	$brand-hover-color: map-get($map, brand-hover-color);
@@ -456,10 +462,17 @@
 
 			color: $link-color;
 			font-weight: $link-font-weight;
+			outline: $link-outline;
+			transition: $link-transition;
 
 			&:hover {
 				background-color: $link-hover-bg;
 				color: $link-hover-color;
+			}
+
+			&:focus {
+				box-shadow: $link-focus-box-shadow;
+				color: $link-focus-color;
 			}
 
 			&.active,
@@ -471,8 +484,10 @@
 			&.disabled,
 			&:disabled {
 				background-color: $link-disabled-bg;
+				box-shadow: $link-disabled-box-shadow;
 				color: $link-disabled-color;
 				opacity: $link-disabled-opacity;
+				pointer-events: $link-disabled-pointer-events;
 			}
 		}
 
@@ -482,17 +497,34 @@
 
 		.navbar-brand {
 			background-color: $brand-bg;
+
+			@include border-radius($link-border-radius);
+
 			color: $brand-color;
+			outline: $link-outline;
+			transition: $link-transition;
 
 			&:hover {
 				background-color: $brand-bg;
 				color: $brand-hover-color;
+			}
+
+			&:focus {
+				box-shadow: $link-focus-box-shadow;
+				color: $link-focus-color;
 			}
 		}
 
 		.navbar-toggler {
 			color: $toggler-color;
 			font-weight: $toggler-font-weight;
+			outline: $link-outline;
+			transition: $link-transition;
+
+			&:focus {
+				box-shadow: $link-focus-box-shadow;
+				color: $link-focus-color;
+			}
 		}
 
 		.navbar-toggler-link {
