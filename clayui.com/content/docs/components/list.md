@@ -31,9 +31,9 @@ List is a visual representation of a dataset that provides more flexibility for 
 		</div>
 	</div>
 	<div class="autofit-col autofit-col-expand">
-		<h4 class="list-group-title text-truncate">
+		<p class="list-group-title text-truncate">
 			<a href="#1">Account Example One</a>
-		</h4>
+		</p>
 		<p class="list-group-subtitle text-truncate">Second Level Text</p>
 	</div>
 	<div class="autofit-col">
@@ -220,9 +220,9 @@ List is a visual representation of a dataset that provides more flexibility for 
 		</div>
 	</div>
 	<div class="autofit-col autofit-col-expand">
-		<h4 class="list-group-title text-truncate">
+		<p class="list-group-title text-truncate">
 			<a href="#1">Account Example One</a>
-		</h4>
+		</p>
 		<p class="list-group-subtitle text-truncate">Second Level Text</p>
 	</div>
 	<div class="autofit-col">
@@ -283,9 +283,9 @@ List is a visual representation of a dataset that provides more flexibility for 
 		</div>
 	</div>
 	<div class="autofit-col autofit-col-expand">
-		<h4 class="list-group-title text-truncate">
+		<p class="list-group-title text-truncate">
 			<a href="#1">Account Example One</a>
-		</h4>
+		</p>
 		<p class="list-group-subtitle text-truncate">Second Level Text</p>
 	</div>
 	<div class="autofit-col">
@@ -474,9 +474,9 @@ List is a visual representation of a dataset that provides more flexibility for 
 		</div>
 	</div>
 	<div class="autofit-col autofit-col-expand">
-		<h4 class="list-group-title text-truncate">
+		<p class="list-group-title text-truncate">
 			<a href="#1">Account Example One</a>
-		</h4>
+		</p>
 		<p class="list-group-subtitle text-truncate">Second Level Text</p>
 	</div>
 	<div class="autofit-col">
@@ -543,9 +543,9 @@ List is a visual representation of a dataset that provides more flexibility for 
 			</div>
 		</div>
 		<div class="autofit-col autofit-col-expand">
-			<h4 class="list-group-title text-truncate">
+			<p class="list-group-title text-truncate">
 				<a href="#1">Account Example One</a>
-			</h4>
+			</p>
 			<p class="list-group-subtitle text-truncate">Second Level Text</p>
 		</div>
 		<div class="autofit-col">
@@ -748,9 +748,9 @@ List is a visual representation of a dataset that provides more flexibility for 
 			</div>
 		</div>
 		<div class="autofit-col autofit-col-expand">
-			<h4 class="list-group-title text-truncate">
+			<p class="list-group-title text-truncate">
 				<a href="#1">Account Example One</a>
-			</h4>
+			</p>
 			<p class="list-group-subtitle text-truncate">Second Level Text</p>
 		</div>
 		<div class="autofit-col">
@@ -826,9 +826,9 @@ List is a visual representation of a dataset that provides more flexibility for 
 			</div>
 		</div>
 		<div class="autofit-col autofit-col-expand">
-			<h4 class="list-group-title text-truncate">
+			<p class="list-group-title text-truncate">
 				<a href="#1">Account Example One</a>
-			</h4>
+			</p>
 			<p class="list-group-subtitle text-truncate">Second Level Text</p>
 			<div class="list-group-detail">
 				<span class="label label-success">
@@ -890,9 +890,9 @@ List is a visual representation of a dataset that provides more flexibility for 
 			</div>
 		</div>
 		<div class="autofit-col autofit-col-expand">
-			<h4 class="list-group-title">
+			<p class="list-group-title">
 				<a href="#1">Account Example One</a>
-			</h4>
+			</p>
 			<p class="list-group-subtitle">Second Level Text</p>
 			<div class="list-group-detail">
 				<span class="label label-success">
@@ -1158,9 +1158,9 @@ List is a visual representation of a dataset that provides more flexibility for 
 			</div>
 		</div>
 		<div class="autofit-col autofit-col-expand">
-			<h4 class="list-group-title text-truncate">
+			<p class="list-group-title text-truncate">
 				<a href="#1">Account Example One</a>
-			</h4>
+			</p>
 			<p class="list-group-subtitle text-truncate">Second Level Text</p>
 			<div class="list-group-detail">
 				<span class="label label-success">
@@ -1222,9 +1222,9 @@ List is a visual representation of a dataset that provides more flexibility for 
 			</div>
 		</div>
 		<div class="autofit-col autofit-col-expand">
-			<h4 class="list-group-title">
+			<p class="list-group-title">
 				<a href="#1">Account Example One</a>
-			</h4>
+			</p>
 			<p class="list-group-subtitle">Second Level Text</p>
 			<div class="list-group-detail">
 				<span class="label label-success">
