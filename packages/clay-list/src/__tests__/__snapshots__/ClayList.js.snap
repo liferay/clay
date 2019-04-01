@@ -8,12 +8,12 @@ exports[`ClayList should render a ClayList with items 1`] = `
 <ul class="list-group show-quick-actions-on-hover">
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Photos</h4>
+      <p class="list-group-title text-truncate">Photos</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Videos</h4>
+      <p class="list-group-title text-truncate">Videos</p>
     </div>
   </li>
 </ul>
@@ -23,12 +23,12 @@ exports[`ClayList should render a ClayList with items with description 1`] = `
 <ul class="list-group show-quick-actions-on-hover">
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Photos</h4>
+      <p class="list-group-title text-truncate">Photos</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Videos</h4>
+      <p class="list-group-title text-truncate">Videos</p>
     </div>
   </li>
 </ul>
@@ -38,12 +38,12 @@ exports[`ClayList should render a ClayList with items with links 1`] = `
 <ul class="list-group show-quick-actions-on-hover">
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Photos</h4>
+      <p class="list-group-title text-truncate">Photos</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Videos</h4>
+      <p class="list-group-title text-truncate">Videos</p>
     </div>
   </li>
 </ul>
@@ -77,7 +77,7 @@ exports[`ClayList should render a selectable ClayList 1`] = `
       </div>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Photos</h4>
+      <p class="list-group-title text-truncate">Photos</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
@@ -92,7 +92,7 @@ exports[`ClayList should render a selectable ClayList 1`] = `
       </div>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Videos</h4>
+      <p class="list-group-title text-truncate">Videos</p>
     </div>
   </li>
 </ul>
@@ -111,7 +111,7 @@ exports[`ClayList should render a selectable ClayList with action menu 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Photos</h4>
+      <p class="list-group-title text-truncate">Photos</p>
     </div>
     <div class="autofit-col">
       <div class="quick-action-menu"></div>
@@ -135,7 +135,7 @@ exports[`ClayList should render a selectable ClayList with action menu 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Videos</h4>
+      <p class="list-group-title text-truncate">Videos</p>
     </div>
     <div class="autofit-col">
       <div class="quick-action-menu"></div>
@@ -176,7 +176,7 @@ exports[`ClayList should render a selectable ClayList with action menu 1`] = `
 exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
 <ul class="list-group show-quick-actions-on-hover">
   <li class="list-group-header">
-    <h3 class="list-group-header-title" id="group-0">Folders</h3>
+    <p class="list-group-header-title" id="group-0">Folders</p>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
@@ -189,7 +189,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Photos</h4>
+      <p class="list-group-title text-truncate">Photos</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
@@ -203,11 +203,11 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Videos</h4>
+      <p class="list-group-title text-truncate">Videos</p>
     </div>
   </li>
   <li class="list-group-header">
-    <h3 class="list-group-header-title" id="group-1">Recipes</h3>
+    <p class="list-group-header-title" id="group-1">Recipes</p>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
@@ -220,9 +220,9 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Hamburger</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">U.S.A</p>
     </div>
   </li>
@@ -237,9 +237,9 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Ramen</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">China</p>
     </div>
   </li>
@@ -254,9 +254,9 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Paella</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">Spain</p>
     </div>
   </li>
@@ -271,9 +271,9 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Pizza</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">Italy</p>
     </div>
   </li>
@@ -288,9 +288,9 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Carcamusas</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">Toledo</p>
     </div>
   </li>
@@ -305,14 +305,14 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Tacos</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">Mexico</p>
     </div>
   </li>
   <li class="list-group-header">
-    <h3 class="list-group-header-title" id="group-2">Chefs</h3>
+    <p class="list-group-header-title" id="group-2">Chefs</p>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
@@ -325,21 +325,7 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Ferrán Adriá</h4>
-    </div>
-  </li>
-  <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false" role="presentation">
-            <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
-    <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Gordon Ramsay</h4>
+      <p class="list-group-title text-truncate">Ferrán Adriá</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
@@ -353,7 +339,21 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Alberto Chicote</h4>
+      <p class="list-group-title text-truncate">Gordon Ramsay</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="autofit-col">
+      <span class="sticker sticker-circle sticker-primary">
+        <span class="inline-item">
+          <svg class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false" role="presentation">
+            <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="autofit-col autofit-col-expand">
+      <p class="list-group-title text-truncate">Alberto Chicote</p>
     </div>
   </li>
 </ul>
@@ -362,85 +362,85 @@ exports[`ClayList should render a selectable ClayList with circle icons 1`] = `
 exports[`ClayList should render a selectable ClayList with groups 1`] = `
 <ul class="list-group show-quick-actions-on-hover">
   <li class="list-group-header">
-    <h3 class="list-group-header-title" id="group-0">Folders</h3>
+    <p class="list-group-header-title" id="group-0">Folders</p>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Photos</h4>
+      <p class="list-group-title text-truncate">Photos</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Videos</h4>
+      <p class="list-group-title text-truncate">Videos</p>
     </div>
   </li>
   <li class="list-group-header">
-    <h3 class="list-group-header-title" id="group-1">Recipes</h3>
+    <p class="list-group-header-title" id="group-1">Recipes</p>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Hamburger</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">U.S.A</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Ramen</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">China</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Paella</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">Spain</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Pizza</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">Italy</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Carcamusas</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">Toledo</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Tacos</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">Mexico</p>
     </div>
   </li>
   <li class="list-group-header">
-    <h3 class="list-group-header-title" id="group-2">Chefs</h3>
+    <p class="list-group-header-title" id="group-2">Chefs</p>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Ferrán Adriá</h4>
+      <p class="list-group-title text-truncate">Ferrán Adriá</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Gordon Ramsay</h4>
+      <p class="list-group-title text-truncate">Gordon Ramsay</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Alberto Chicote</h4>
+      <p class="list-group-title text-truncate">Alberto Chicote</p>
     </div>
   </li>
 </ul>
@@ -449,7 +449,7 @@ exports[`ClayList should render a selectable ClayList with groups 1`] = `
 exports[`ClayList should render a selectable ClayList with icons 1`] = `
 <ul class="list-group show-quick-actions-on-hover">
   <li class="list-group-header">
-    <h3 class="list-group-header-title" id="group-0">Folders</h3>
+    <p class="list-group-header-title" id="group-0">Folders</p>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
@@ -462,7 +462,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Photos</h4>
+      <p class="list-group-title text-truncate">Photos</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
@@ -476,11 +476,11 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Videos</h4>
+      <p class="list-group-title text-truncate">Videos</p>
     </div>
   </li>
   <li class="list-group-header">
-    <h3 class="list-group-header-title" id="group-1">Recipes</h3>
+    <p class="list-group-header-title" id="group-1">Recipes</p>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
@@ -493,9 +493,9 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Hamburger</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">U.S.A</p>
     </div>
   </li>
@@ -510,9 +510,9 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Ramen</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">China</p>
     </div>
   </li>
@@ -527,9 +527,9 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Paella</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">Spain</p>
     </div>
   </li>
@@ -544,9 +544,9 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Pizza</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">Italy</p>
     </div>
   </li>
@@ -561,9 +561,9 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Carcamusas</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">Toledo</p>
     </div>
   </li>
@@ -578,14 +578,14 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Tacos</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">Mexico</p>
     </div>
   </li>
   <li class="list-group-header">
-    <h3 class="list-group-header-title" id="group-2">Chefs</h3>
+    <p class="list-group-header-title" id="group-2">Chefs</p>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
@@ -598,21 +598,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Ferrán Adriá</h4>
-    </div>
-  </li>
-  <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-rounded sticker-primary">
-        <span class="inline-item">
-          <svg class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false" role="presentation">
-            <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
-    <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Gordon Ramsay</h4>
+      <p class="list-group-title text-truncate">Ferrán Adriá</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
@@ -626,7 +612,21 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Alberto Chicote</h4>
+      <p class="list-group-title text-truncate">Gordon Ramsay</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="autofit-col">
+      <span class="sticker sticker-rounded sticker-primary">
+        <span class="inline-item">
+          <svg class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false" role="presentation">
+            <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="autofit-col autofit-col-expand">
+      <p class="list-group-title text-truncate">Alberto Chicote</p>
     </div>
   </li>
 </ul>
@@ -635,7 +635,7 @@ exports[`ClayList should render a selectable ClayList with icons 1`] = `
 exports[`ClayList should render a selectable ClayList with label 1`] = `
 <ul class="list-group show-quick-actions-on-hover">
   <li class="list-group-header">
-    <h3 class="list-group-header-title" id="group-0">Folders</h3>
+    <p class="list-group-header-title" id="group-0">Folders</p>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
@@ -648,7 +648,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Photos</h4>
+      <p class="list-group-title text-truncate">Photos</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
@@ -662,11 +662,11 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Videos</h4>
+      <p class="list-group-title text-truncate">Videos</p>
     </div>
   </li>
   <li class="list-group-header">
-    <h3 class="list-group-header-title" id="group-1">Recipes</h3>
+    <p class="list-group-header-title" id="group-1">Recipes</p>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
@@ -679,9 +679,9 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Hamburger</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">U.S.A</p>
       <div class="list-group-detail">
         <span class="label label-success">
@@ -701,9 +701,9 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Ramen</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">China</p>
       <div class="list-group-detail">
         <span class="label label-warning">
@@ -723,9 +723,9 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Paella</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">Spain</p>
       <div class="list-group-detail">
         <span class="label label-success">
@@ -745,9 +745,9 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Pizza</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">Italy</p>
       <div class="list-group-detail">
         <span class="label label-success">
@@ -767,9 +767,9 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Carcamusas</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">Toledo</p>
       <div class="list-group-detail">
         <span class="label label-warning">
@@ -789,9 +789,9 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Tacos</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">Mexico</p>
       <div class="list-group-detail">
         <span class="label label-danger">
@@ -801,7 +801,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
     </div>
   </li>
   <li class="list-group-header">
-    <h3 class="list-group-header-title" id="group-2">Chefs</h3>
+    <p class="list-group-header-title" id="group-2">Chefs</p>
   </li>
   <li class="list-group-item list-group-item-flex">
     <div class="autofit-col">
@@ -814,21 +814,7 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Ferrán Adriá</h4>
-    </div>
-  </li>
-  <li class="list-group-item list-group-item-flex">
-    <div class="autofit-col">
-      <span class="sticker sticker-circle sticker-primary">
-        <span class="inline-item">
-          <svg class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false" role="presentation">
-            <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
-          </svg>
-        </span>
-      </span>
-    </div>
-    <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Gordon Ramsay</h4>
+      <p class="list-group-title text-truncate">Ferrán Adriá</p>
     </div>
   </li>
   <li class="list-group-item list-group-item-flex">
@@ -842,7 +828,21 @@ exports[`ClayList should render a selectable ClayList with label 1`] = `
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">Alberto Chicote</h4>
+      <p class="list-group-title text-truncate">Gordon Ramsay</p>
+    </div>
+  </li>
+  <li class="list-group-item list-group-item-flex">
+    <div class="autofit-col">
+      <span class="sticker sticker-circle sticker-primary">
+        <span class="inline-item">
+          <svg class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false" role="presentation">
+            <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="autofit-col autofit-col-expand">
+      <p class="list-group-title text-truncate">Alberto Chicote</p>
     </div>
   </li>
 </ul>
@@ -861,9 +861,9 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Hamburger</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">U.S.A</p>
       <div class="list-group-detail">
         <span class="label label-success">
@@ -904,9 +904,9 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Ramen</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">China</p>
       <div class="list-group-detail">
         <span class="label label-warning">
@@ -947,9 +947,9 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Paella</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">Spain</p>
       <div class="list-group-detail">
         <span class="label label-success">
@@ -990,9 +990,9 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Pizza</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">Italy</p>
       <div class="list-group-detail">
         <span class="label label-success">
@@ -1033,9 +1033,9 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Carcamusas</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">Toledo</p>
       <div class="list-group-detail">
         <span class="label label-warning">
@@ -1076,9 +1076,9 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
       </span>
     </div>
     <div class="autofit-col autofit-col-expand">
-      <h4 class="list-group-title text-truncate">
+      <p class="list-group-title text-truncate">
         <a href="#">Tacos</a>
-      </h4>
+      </p>
       <p class="list-group-subtitle text-truncate">Mexico</p>
       <div class="list-group-detail">
         <span class="label label-danger">
