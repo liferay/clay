@@ -439,6 +439,7 @@
 	$link-transition: map-get($map, link-transition);
 	$link-hover-bg: map-get($map, link-hover-bg);
 	$link-hover-color: map-get($map, link-hover-color);
+	$link-focus-bg: map-get($map, link-focus-bg);
 	$link-focus-box-shadow: map-get($map, link-focus-box-shadow);
 	$link-focus-color: map-get($map, link-focus-color);
 	$link-active-bg: map-get($map, link-active-bg);
@@ -480,6 +481,7 @@
 			}
 
 			&:focus {
+				background-color: $link-focus-bg;
 				box-shadow: $link-focus-box-shadow;
 				color: $link-focus-color;
 			}
