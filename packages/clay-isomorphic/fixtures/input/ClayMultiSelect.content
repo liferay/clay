@@ -1,10 +1,23 @@
 {
-    "_handleDropdownItemClick": "(any|null)",
-    "enableAutocomplete": true,
-    "requestRetries": 5,
-    "helpText": "Help text",
-    "_handleOnKeydown": "(any|null)",
+    "_handleAutocompleteItemSelected": "(any|null)",
     "_handleDataChange": "(any|null)",
+    "_handleFilteredItemsChange": "(any|null)",
+    "_handleInputBlur": "(any|null)",
+    "_handleInputChange": "(any|null)",
+    "_handleInputFocus": "(any|null)",
+    "_handleInputKeyDown": "(any|null)",
+    "_handleLabelItemClick": "(any|null)",
+    "_handleLabelItemCloseButtonClick": "(any|null)",
+    "_handleLabelItemFocus": "(any|null)",
+    "_handleLabelItemKeyDown": "(any|null)",
+    "_handleSelectButtonClicked": "(any|null)",
+    "_inputFocused": false,
+    "autocompleteFilterCondition": "(null|unknown)",
+    "contentRenderer": "(null|string)",
+    "dataProviderDebounceTime": 200,
+    "dataProviderInitialData": [],
+    "dataSource": "http://clay.datasource",
+    "dropdownPortalElement": "(null|string)",
     "filteredItems": [
         {
             "index": 0,
@@ -33,20 +46,16 @@
             "score": 26
         }
     ],
-    "_handleButtonClicked": "(any|null)",
-    "contentRenderer": "(null|string)",
-    "spritemap": "icons.svg",
-    "requestPolling": 5,
-    "initialData": [],
-    "extractData": "(null|unknown)",
-    "_handleCloseButtonClick": "(any|null)",
-    "_removeFocusedItem": "(any|null)",
-    "_handleFilteredItemsChange": "(any|null)",
-    "_handleOnInput": "(any|null)",
-    "dataSource": [
-        "Bread"
-    ],
-    "requestTimeout": 10000,
+    "helpText": "Help Text",
+    "id": "myId",
+    "inputAllowedCharacters": "(any|null)",
+    "inputName": "selectedItems",
+    "inputValue": "",
+    "labelLocator": "label",
+    "placeholder": "",
+    "pollingInterval": 0,
+    "requestTimeout": 1000,
+    "requestRetries": 10,
     "selectedItems": [
         {
             "label": "Foo",
@@ -54,5 +63,6 @@
         }
     ],
     "showSelectButton": true,
-    "inputName": "selectedItems"
+    "spritemap": "icons.svg",
+    "valueLocator": "value",
 }
