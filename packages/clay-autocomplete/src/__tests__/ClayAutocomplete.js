@@ -243,7 +243,7 @@ describe('ClayAutocomplete', function() {
 			expect.objectContaining({
 				data: {
 					item: {
-						label:'Bread',
+						label: 'Bread',
 						value: 'Bread',
 					},
 				},
@@ -281,7 +281,7 @@ describe('ClayAutocomplete', function() {
 			expect.objectContaining({
 				data: {
 					item: {
-						label:'Bread',
+						label: 'Bread',
 						value: 'Bread',
 					},
 				},
@@ -430,7 +430,6 @@ describe('ClayAutocomplete', function() {
 				expect(input).toEqual(document.activeElement);
 				expect(component._dropdownItemFocused).toBe(null);
 			});
-
 		});
 
 		describe('when press the arrow down', () => {

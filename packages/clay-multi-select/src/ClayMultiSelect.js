@@ -5,34 +5,9 @@ import {Config} from 'metal-state';
 import {EventHandler} from 'metal-events';
 import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
-import dom from 'metal-dom';
 import Soy from 'metal-soy';
 
 import templates from './ClayMultiSelect.soy.js';
-
-/**
- * Compare two arrays
- * @param {Array} array
- * @param {Array} otherArray
- * @private
- * @return {bool}
- */
-const arrayIsEquals = (array, otherArray) => {
-	if (!Array.isArray(otherArray)) return false;
-
-	const valueLenght = array.length;
-	const otherLenght = otherArray.length;
-
-	if (valueLenght !== otherLenght) return false;
-
-	const compare = (item1, item2) => item1 === item2;
-
-	for (let i = 0; i < valueLenght; i++) {
-		if (!compare(array[i], otherArray[i])) break;
-	}
-
-	return true;
-};
 
 /**
  * Metal ClayMultiSelect component.
@@ -96,6 +71,7 @@ class ClayMultiSelect extends ClayComponent {
 	 * Handles the autocomplete selected item event.
 	 * @param {!Event} event
 	 * @protected
+	 * @return {?Boolean} If the event has been prevented or not.
 	 */
 	_defaultAutocompleteItemSelected(event) {
 		const {label, value} = event.data.item;
@@ -144,19 +120,17 @@ class ClayMultiSelect extends ClayComponent {
 
 	/**
 	 *
-	 * @param {!Event} event
 	 * @protected
 	 */
-	_defaultInputFocus(event) {
+	_defaultInputFocus() {
 		this._inputFocused = true;
 	}
 
 	/**
 	 *
-	 * @param {!Event} event
 	 * @protected
 	 */
-	_defaultLabelItemAdded(event) {
+	_defaultLabelItemAdded() {
 		this.inputValue = '';
 		this._inputFocused = true;
 	}
@@ -174,6 +148,7 @@ class ClayMultiSelect extends ClayComponent {
 	 * Handles the click on the close label item button.
 	 * @param {!Event} event
 	 * @protected
+	 * @return {?Boolean} If the event has been prevented or not.
 	 */
 	_defaultLabelItemKeyDown(event) {
 		if (event.data.key == 'Backspace' || event.data.key == 'Enter') {
@@ -224,7 +199,6 @@ class ClayMultiSelect extends ClayComponent {
 	 * Continues the propagation of the filteredItemsChanged event
 	 * @param {!Event} event
 	 * @protected
-	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_handleFilteredItemsChange(event) {
 		if (event.newVal !== event.prevVal) {
@@ -312,6 +286,7 @@ class ClayMultiSelect extends ClayComponent {
 	 * Continues the propagation of the the autocomplete label item click event.
 	 * @param {!Event} event
 	 * @protected
+	 * @return {?Boolean} If the event has been prevented or not.
 	 */
 	_handleLabelItemClick(event) {
 		return !this.emit({
@@ -369,9 +344,7 @@ class ClayMultiSelect extends ClayComponent {
 
 	/**
 	 * Continues the propagation of the itemAdded event.
-	 * @param {!String} value
-	 * @param {!(object|array|string)} data
-	 * @param {!Event} event
+	 * @param {!String} item
 	 * @protected
 	 * @return {?Boolean} If the event has been prevented or not.
 	 */

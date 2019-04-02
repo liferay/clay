@@ -133,7 +133,7 @@ describe('ClayMultiSelect', function() {
 
 		expect(component).toMatchSnapshot();
 	});
-/*
+	/*
 	it('should render a ClayMultiSelect and add the class focus when focus on input', () => {
 		component = new ClayMultiSelect({
 			helpText,
@@ -238,7 +238,7 @@ describe('ClayMultiSelect', function() {
 			})
 		);
 	});
-/*
+	/*
 	it('should render a ClayMultiSelect with multiple values with comma at the end', () => {
 		component = new ClayMultiSelect({
 			dataSource,
@@ -299,7 +299,7 @@ describe('ClayMultiSelect', function() {
 			const {input} = component.refs.autocomplete.refs;
 
 			input.value = 'bre';
-			triggerEvent(input, 'input', {data: {char:'a', value:'a'}});
+			triggerEvent(input, 'input', {data: {char: 'a', value: 'a'}});
 			triggerEvent(input, 'keydown', {key: 'ArrowDown'});
 
 			jest.runAllTimers();
@@ -330,7 +330,7 @@ describe('ClayMultiSelect', function() {
 			const {input} = component.refs.autocomplete.refs;
 
 			input.value = 'foo';
-			triggerEvent(input, 'input', {data: {char:'o', value:'foo'}});
+			triggerEvent(input, 'input', {data: {char: 'o', value: 'foo'}});
 
 			jest.runAllTimers();
 
@@ -346,8 +346,8 @@ describe('ClayMultiSelect', function() {
 				})
 			);
 		});
-		
-/*
+
+		/*
 		describe('itemAdded', () => {
 			it('should emit an event when press enter on the input', () => {
 				component = new ClayMultiSelect({
@@ -448,7 +448,7 @@ describe('ClayMultiSelect', function() {
 				);
 				expect(component).toMatchSnapshot();
 			});
-			
+
 		});
 
 		describe('itemRemoved', () => {

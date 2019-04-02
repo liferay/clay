@@ -6,33 +6,32 @@
 {template .render}
 	{@param helpText: string}
 	{@param spritemap: string}
-	{@param? _handleSelectButtonClicked: any}
-	{@param? _handleLabelItemCloseButtonClick: any}
-	{@param? _handleLabelItemFocus: any}
-	{@param? _handleLabelItemKeyDown: any}
-	{@param? _handleDataChange: any}
 	{@param? _handleAutocompleteItemSelected: any}
+	{@param? _handleDataChange: any}
 	{@param? _handleFilteredItemsChange: any}
-	{@param? _handleLabelItemClick: any}
 	{@param? _handleInputBlur: any}
-	{@param? _handleInputFocus: any}
 	{@param? _handleInputChange: any}
+	{@param? _handleInputFocus: any}
 	{@param? _handleInputKeyDown: any}
+	{@param? _handleLabelItemClick: any}
+	{@param? _handleLabelItemCloseButtonClick: any}
+	{@param? _handleLabelItemKeyDown: any}
+	{@param? _handleSelectButtonClicked: any}
 	{@param? _inputFocused: bool}
-	{@param? inputAllowedCharacters: any}
+	{@param? autocompleteFilterCondition: any}
 	{@param? contentRenderer: string}
 	{@param? dataProviderDebounceTime: number}
+	{@param? dataProviderInitialData: []|list<?>}
 	{@param? dataSource: string|[]|list<?>}
 	{@param? dropdownPortalElement: string}
 	{@param? elementClasses: string}
 	{@param? filteredItems: list<?>}
 	{@param? id: string}
-	{@param? dataProviderInitialData: []|list<?>}
+	{@param? inputAllowedCharacters: any}
 	{@param? inputName: string}
 	{@param? inputValue: string}
 	{@param? label: string}
 	{@param? labelLocator: any}
-	{@param? autocompleteFilterCondition: any}
 	{@param? placeholder: string}
 	{@param? pollingInterval: number}
 	{@param? requestOptions: [
@@ -69,28 +68,28 @@
 		{/if}
 
 		{call .content}
-			{param _handleSelectButtonClicked: $_handleSelectButtonClicked /}
-			{param _handleLabelItemCloseButtonClick: $_handleLabelItemCloseButtonClick /}
-			{param _handleLabelItemFocus: $_handleLabelItemFocus /}
-			{param _handleLabelItemKeyDown: $_handleLabelItemKeyDown /}
-			{param _handleDataChange: $_handleDataChange /}
 			{param _handleAutocompleteItemSelected: $_handleAutocompleteItemSelected /}
+			{param _handleDataChange: $_handleDataChange /}
 			{param _handleFilteredItemsChange: $_handleFilteredItemsChange /}
 			{param _handleInputBlur: $_handleInputBlur /}
-			{param _handleInputFocus: $_handleInputFocus /}
-			{param _handleLabelItemClick: $_handleLabelItemClick /}
 			{param _handleInputChange: $_handleInputChange /}
+			{param _handleInputFocus: $_handleInputFocus /}
 			{param _handleInputKeyDown: $_handleInputKeyDown /}
+			{param _handleLabelItemClick: $_handleLabelItemClick /}
+			{param _handleLabelItemCloseButtonClick: $_handleLabelItemCloseButtonClick /}
+			{param _handleLabelItemKeyDown: $_handleLabelItemKeyDown /}
+			{param _handleSelectButtonClicked: $_handleSelectButtonClicked /}
 			{param _inputFocused: $_inputFocused /}
-			{param inputAllowedCharacters: $inputAllowedCharacters /}
+			{param autocompleteFilterCondition: $autocompleteFilterCondition /}
 			{param contentRenderer: $contentRenderer ?: ''/}
+			{param dataProviderDebounceTime: $dataProviderDebounceTime /}
+			{param dataProviderInitialData: $dataProviderInitialData /}
 			{param dataSource: $dataSource /}
 			{param dropdownPortalElement: $dropdownPortalElement /}
-			{param dataProviderDebounceTime: $dataProviderDebounceTime /}
-			{param autocompleteFilterCondition: $autocompleteFilterCondition /}
 			{param filteredItems: $filteredItems /}
 			{param helpText: $helpText /}
-			{param dataProviderInitialData: $dataProviderInitialData /}
+			{param id: $id /}
+			{param inputAllowedCharacters: $inputAllowedCharacters /}
 			{param inputName: $inputName /}
 			{param inputValue: $inputValue /}
 			{param labelLocator: $labelLocator /}
@@ -103,7 +102,6 @@
 			{param showSelectButton: $showSelectButton ?: true /}
 			{param spritemap: $spritemap /}
 			{param valueLocator: $valueLocator /}
-			{param id: $id /}
 		{/call}
 	</div>
 {/template}
@@ -114,32 +112,31 @@
 {template .content}
 	{@param helpText: string}
 	{@param spritemap: string}
-	{@param? _handleSelectButtonClicked: any}
-	{@param? _handleLabelItemCloseButtonClick: any}
-	{@param? _handleLabelItemFocus: any}
-	{@param? _handleLabelItemKeyDown: any}
-	{@param? _handleDataChange: any}
 	{@param? _handleAutocompleteItemSelected: any}
+	{@param? _handleDataChange: any}
 	{@param? _handleFilteredItemsChange: any}
 	{@param? _handleInputBlur: any}
-	{@param? _handleInputFocus: any}
-	{@param? _handleLabelItemClick: any}
 	{@param? _handleInputChange: any}
+	{@param? _handleInputFocus: any}
 	{@param? _handleInputKeyDown: any}
+	{@param? _handleLabelItemClick: any}
+	{@param? _handleLabelItemCloseButtonClick: any}
+	{@param? _handleLabelItemKeyDown: any}
+	{@param? _handleSelectButtonClicked: any}
 	{@param? _inputFocused: bool}
-	{@param? inputAllowedCharacters: any}
+	{@param? autocompleteFilterCondition: any}
 	{@param? contentRenderer: string}
 	{@param? dataProviderDebounceTime: number}
+	{@param? dataProviderInitialData: []|list<?>}
 	{@param? dataSource: string|[]|list<?>}
 	{@param? dropdownPortalElement: string}
-	{@param? autocompleteFilterCondition: any}
 	{@param? filteredItems: list<?>}
-	{@param? dataProviderInitialData: []|list<?>}
+	{@param? id: string}
+	{@param? inputAllowedCharacters: any}
 	{@param? inputName: string}
 	{@param? inputValue: string}
 	{@param? labelLocator: any}
 	{@param? placeholder: string}
-	{@param? id: string}
 	{@param? pollingInterval: number}
 	{@param? requestOptions: [
 		method: string,
@@ -167,9 +164,10 @@
 					{/if}
 				{/let}
 
-				{call ClayAutocomplete.render}
+				{call ClayAutocomplete.render}					
 					{param allowedCharacters: $inputAllowedCharacters /}
 					{param contentRenderer: $contentRenderer /}
+					{param dataProviderInitialData: $dataProviderInitialData /}
 					{param dataSource: $dataSource ?: [] /}
 					{param debounceTime: $dataProviderDebounceTime /}
 					{param dropdownPortalElement: $dropdownPortalElement /}
@@ -185,7 +183,6 @@
 					] /}
 					{param extractData: $autocompleteFilterCondition /}
 					{param filteredItems: $filteredItems /}
-					{param dataProviderInitialData: $dataProviderInitialData /}
 					{param inputElementClasses: 'form-control-inset' /}
 					{param inputFocused: $_inputFocused /}
 					{param inputValue: $inputValue /}
@@ -200,9 +197,8 @@
 					{param unstable_content kind="html"}
 						{if $selectedItems}
 							{call .items}
-								{param _handleLabelItemCloseButtonClick: $_handleLabelItemCloseButtonClick /}
 								{param _handleLabelItemClick: $_handleLabelItemClick /}
-								{param _handleLabelItemFocus: $_handleLabelItemFocus /}
+								{param _handleLabelItemCloseButtonClick: $_handleLabelItemCloseButtonClick /}
 								{param _handleLabelItemKeyDown: $_handleLabelItemKeyDown /}
 								{param contentRenderer: $contentRenderer /}
 								{param inputName: $inputName /}
@@ -211,7 +207,6 @@
 							{/call}
 						{/if}
 					{/param}
-
 					{param useDefaultClasses: false /}
 					{param valueLocator: $valueLocator /}
 				{/call}
@@ -252,7 +247,6 @@
 	{@param spritemap: string}
 	{@param? _handleLabelItemClick: any}
 	{@param? _handleLabelItemCloseButtonClick: any}
-	{@param? _handleLabelItemFocus: any}
 	{@param? _handleLabelItemKeyDown: any}
 	{@param? contentRenderer: string}
 	{@param? inputName: string}
@@ -274,7 +268,6 @@
 		{delcall ClayMultiSelect.Item variant="$contentRenderer" allowemptydefault="true"}
 			{param _handleLabelItemClick: $_handleLabelItemClick /}
 			{param _handleLabelItemCloseButtonClick: $_handleLabelItemCloseButtonClick /}
-			{param _handleLabelItemFocus: $_handleLabelItemFocus /}
 			{param _handleLabelItemKeyDown: $_handleLabelItemKeyDown /}
 			{param index: index($item) /}
 			{param item: $item /}
@@ -294,9 +287,8 @@
 		label: string
 	]}
 	{@param spritemap: string}
-	{@param? _handleLabelItemCloseButtonClick: any}
 	{@param? _handleLabelItemClick: any}
-	{@param? _handleLabelItemFocus: any}
+	{@param? _handleLabelItemCloseButtonClick: any}
 	{@param? _handleLabelItemKeyDown: any}
 
 	{call ClayLabel.render}
@@ -305,7 +297,6 @@
 		{param events: [
 			'click': $_handleLabelItemClick,
 			'close': $_handleLabelItemCloseButtonClick,
-			'focus': $_handleLabelItemFocus,
 			'keydown': $_handleLabelItemKeyDown
 		] /}
 		{param id: 'item-tag' /}
