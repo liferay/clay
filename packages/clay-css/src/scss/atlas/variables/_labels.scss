@@ -38,6 +38,14 @@ $label-lg: map-merge((
 
 // Label Variants
 
+$label-base: () !default;
+$label-base: map-merge((
+	outline: 0,
+	transition: box-shadow 0.15s ease-in-out,
+	focus-box-shadow: $btn-focus-box-shadow,
+	disabled-box-shadow: none,
+), $label-base);
+
 // $label-primary-color is deprecated as of v2.4.1
 $label-primary-color: $primary !default;
 // $label-primary-hover-color is deprecated as of v2.4.1
@@ -47,19 +55,12 @@ $label-primary-border-color: $primary-l1 !default;
 // $label-primary-hover-border-color is deprecated as of v2.4.1
 $label-primary-hover-border-color: $label-primary-border-color !default;
 
-$label-primary-close: () !default;
-$label-primary-close: map-merge((
-	transition: none
-), $label-primary-close);
-
 $label-primary: () !default;
 $label-primary: map-merge((
 	border-color: $label-primary-border-color,
 	color: $label-primary-color,
 	hover-border-color: $label-primary-hover-border-color,
 	hover-color: $label-primary-hover-color,
-	focus-outline: 0,
-	focus-box-shadow: 0 0 0 1px $primary-l1,
 ), $label-primary);
 
 // $label-secondary-color is deprecated as of v2.4.1
@@ -71,20 +72,12 @@ $label-secondary-border-color: $secondary-l2 !default;
 // $label-secondary-hover-border-color is deprecated as of v2.4.1
 $label-secondary-hover-border-color: $label-secondary-border-color !default;
 
-$label-secondary-close: () !default;
-$label-secondary-close: map-merge((
-	transition: none,
-), $label-secondary-close);
-
 $label-secondary: () !default;
 $label-secondary: map-merge((
 	border-color: $label-secondary-border-color,
 	color: $label-secondary-color,
 	hover-border-color: $label-secondary-hover-border-color,
 	hover-color: $label-secondary-hover-color,
-	focus-border-color: $primary-l1,
-	focus-outline: 0,
-	focus-box-shadow: 0 0 0 1px $primary-l1,
 ), $label-secondary);
 
 // $label-success-color is deprecated as of v2.4.1
@@ -96,20 +89,12 @@ $label-success-border-color: $success-l1 !default;
 // $label-success-hover-border-color is deprecated as of v2.4.1
 $label-success-hover-border-color: $label-success-border-color !default;
 
-$label-success-close: () !default;
-$label-success-close: map-merge((
-	transition: none,
-), $label-success-close);
-
 $label-success: () !default;
 $label-success: map-merge((
 	border-color: $label-success-border-color,
 	color: $label-success-color,
 	hover-border-color: $label-success-hover-border-color,
 	hover-color: $label-success-hover-color,
-	focus-border-color: $primary-l1,
-	focus-outline: 0,
-	focus-box-shadow: 0 0 0 1px $primary-l1,
 ), $label-success);
 
 // $label-info-color is deprecated as of v2.4.1
@@ -121,20 +106,12 @@ $label-info-border-color: $info-l1 !default;
 // $label-info-hover-border-color is deprecated as of v2.4.1
 $label-info-hover-border-color: $label-info-border-color !default;
 
-$label-info-close: () !default;
-$label-info-close: map-merge((
-	transition: none,
-), $label-info-close);
-
 $label-info: () !default;
 $label-info: map-merge((
 	border-color: $label-info-border-color,
 	color: $label-info-color,
 	hover-border-color: $label-info-hover-border-color,
 	hover-color: $label-info-hover-color,
-	focus-border-color: $primary-l1,
-	focus-outline: 0,
-	focus-box-shadow: 0 0 0 1px $primary-l1,
 ), $label-info);
 
 // $label-warning-color is deprecated as of v2.4.1
@@ -146,20 +123,12 @@ $label-warning-border-color: $warning-l1 !default;
 // $label-warning-hover-border-color is deprecated as of v2.4.1
 $label-warning-hover-border-color: $label-warning-border-color !default;
 
-$label-warning-close: () !default;
-$label-warning-close: map-merge((
-	transition: none,
-), $label-warning-close);
-
 $label-warning: () !default;
 $label-warning: map-merge((
 	border-color: $label-warning-border-color,
 	color: $label-warning-color,
 	hover-border-color: $label-warning-hover-border-color,
 	hover-color: $label-warning-hover-color,
-	focus-border-color: $primary-l1,
-	focus-outline: 0,
-	focus-box-shadow: 0 0 0 1px $primary-l1,
 ), $label-warning);
 
 // $label-danger-color is deprecated as of v2.4.1
@@ -171,20 +140,12 @@ $label-danger-border-color: $danger-l1 !default;
 // $label-danger-hover-border-color is deprecated as of v2.4.1
 $label-danger-hover-border-color: $label-danger-border-color !default;
 
-$label-danger-close: () !default;
-$label-danger-close: map-merge((
-	transition: none,
-), $label-danger-close);
-
 $label-danger: () !default;
 $label-danger: map-merge((
 	border-color: $label-danger-border-color,
 	color: $label-danger-color,
 	hover-border-color: $label-danger-hover-border-color,
 	hover-color: $label-danger-hover-color,
-	focus-border-color: $primary-l1,
-	focus-outline: 0,
-	focus-box-shadow: 0 0 0 1px $primary-l1,
 ), $label-danger);
 
 // $label-light-color is deprecated as of v2.4.1
@@ -198,11 +159,6 @@ $label-light-border-color: $light !default;
 // $label-light-hover-border-color is deprecated as of v2.4.1
 $label-light-hover-border-color: $label-light-border-color !default;
 
-$label-light-close: () !default;
-$label-light-close: map-merge((
-	transition: none,
-), $label-light-close);
-
 $label-light: () !default;
 $label-light: map-merge((
 	bg: $label-light-bg,
@@ -210,9 +166,6 @@ $label-light: map-merge((
 	color: $label-light-color,
 	hover-border-color: $label-light-hover-border-color,
 	hover-color: $label-light-hover-color,
-	focus-border-color: $primary-l1,
-	focus-outline: 0,
-	focus-box-shadow: 0 0 0 1px $primary-l1,
 ), $label-light);
 
 // $label-dark-color is deprecated as of v2.4.1
@@ -224,18 +177,10 @@ $label-dark-border-color: $dark !default;
 // $label-dark-hover-border-color is deprecated as of v2.4.1
 $label-dark-hover-border-color: $label-dark-border-color !default;
 
-$label-dark-close: () !default;
-$label-dark-close: map-merge((
-	transition: none,
-), $label-dark-close);
-
 $label-dark: () !default;
 $label-dark: map-merge((
 	border-color: $label-dark-border-color,
 	color: $label-dark-color,
 	hover-border-color: $label-dark-hover-border-color,
 	hover-color: $label-dark-hover-color,
-	focus-border-color: $primary-l1,
-	focus-outline: 0,
-	focus-box-shadow: 0 0 0 1px $primary-l1,
 ), $label-dark);

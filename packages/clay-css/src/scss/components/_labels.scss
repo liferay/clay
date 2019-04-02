@@ -23,6 +23,8 @@
 	white-space: inherit;
 	word-wrap: break-word;
 
+	@include clay-label-variant($label-base);
+
 	a {
 		color: $label-link-color;
 		display: inline-block;
