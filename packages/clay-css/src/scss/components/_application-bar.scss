@@ -2,6 +2,7 @@
 	flex-wrap: nowrap;
 
 	@include clay-navbar-size($application-bar-size);
+	@include clay-navbar-variant($application-bar-base);
 
 	.container,
 	.container-fluid {
