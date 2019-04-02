@@ -160,6 +160,7 @@ describe('ClayAutocomplete', function() {
 		expect(spy).toHaveBeenCalledWith(
 			expect.objectContaining({
 				data: {
+					element: expect.any(Object),
 					eventFromInput: true,
 					key: 'o',
 					value: 'foo',
@@ -240,7 +241,12 @@ describe('ClayAutocomplete', function() {
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
 			expect.objectContaining({
-				data: 'Bread',
+				data: {
+					item: {
+						label:'Bread',
+						value: 'Bread',
+					},
+				},
 				name: 'itemSelected',
 				originalEvent: expect.any(Object),
 			})
@@ -273,7 +279,12 @@ describe('ClayAutocomplete', function() {
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
 			expect.objectContaining({
-				data: 'Bread',
+				data: {
+					item: {
+						label:'Bread',
+						value: 'Bread',
+					},
+				},
 				name: 'itemSelected',
 				originalEvent: expect.any(Object),
 			})
@@ -369,7 +380,8 @@ describe('ClayAutocomplete', function() {
 					dataSource,
 				});
 
-				const {input} = component.refs;
+				const {input, dataProvider} = component.refs;
+				const {dropdown} = dataProvider.refs.portal.refs;
 
 				input.value = 'brea';
 				input.focus();
@@ -381,7 +393,7 @@ describe('ClayAutocomplete', function() {
 
 				component._dropdownItemFocused = 0;
 
-				triggerEvent(component.element, 'keydown', {key: 'ArrowUp'});
+				triggerEvent(dropdown, 'keydown', {key: 'ArrowUp'});
 				expect(input).toEqual(document.activeElement);
 				expect(component._dropdownItemFocused).toBe(null);
 			});
@@ -410,15 +422,17 @@ describe('ClayAutocomplete', function() {
 
 				component._dropdownItemFocused = 1;
 
-				triggerEvent(component.element, 'keydown', {key: 'ArrowUp'});
+				triggerEvent(dropdown, 'keydown', {key: 'ArrowUp'});
 				expect(elements[0]).toEqual(document.activeElement);
 				expect(component._dropdownItemFocused).toBe(0);
 
-				triggerEvent(component.element, 'keydown', {key: 'ArrowUp'});
+				triggerEvent(dropdown, 'keydown', {key: 'ArrowUp'});
 				expect(input).toEqual(document.activeElement);
 				expect(component._dropdownItemFocused).toBe(null);
 			});
+
 		});
+
 		describe('when press the arrow down', () => {
 			it('exit the input to the dropdown', () => {
 				component = new ClayAutocomplete({
@@ -472,7 +486,7 @@ describe('ClayAutocomplete', function() {
 				expect(elements[0]).toEqual(document.activeElement);
 				expect(component._dropdownItemFocused).toBe(0);
 
-				triggerEvent(component.element, 'keydown', {
+				triggerEvent(dropdown, 'keydown', {
 					key: 'ArrowDown',
 				});
 				expect(elements[1]).toEqual(document.activeElement);
