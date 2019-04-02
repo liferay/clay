@@ -59,9 +59,9 @@ const ClayCheckbox: React.FunctionComponent<Props> = ({
 							{label}
 						</span>
 					)}
-
-					{children}
 				</span>
+
+				{children}
 			</label>
 		</div>
 	);
