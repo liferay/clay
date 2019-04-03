@@ -9,8 +9,9 @@ import classNames from 'classnames';
 
 type DisplayType = 'secondary' | 'info' | 'warning' | 'danger' | 'success';
 
-interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
-	closeButtonProps?: React.HTMLAttributes<HTMLButtonElement>;
+interface Props
+	extends React.BaseHTMLAttributes<HTMLAnchorElement | HTMLSpanElement> {
+	closeButtonProps?: React.ButtonHTMLAttributes<HTMLButtonElement>;
 	displayType?: DisplayType;
 	large?: boolean;
 }
@@ -24,8 +25,18 @@ const ClayLabel: React.FunctionComponent<Props> = ({
 	large = false,
 	...otherProps
 }) => {
-	const content = (
-		<>
+	const TagName = href ? 'a' : 'span';
+
+	return (
+		<TagName
+			{...otherProps}
+			className={classNames('label', className, {
+				'label-dismissible': closeButtonProps,
+				'label-lg': large,
+				[`label-${displayType}`]: displayType,
+			})}
+			href={href}
+		>
 			<span className="label-item label-item-expand">{children}</span>
 
 			{closeButtonProps && (
@@ -39,24 +50,8 @@ const ClayLabel: React.FunctionComponent<Props> = ({
 					</button>
 				</span>
 			)}
-		</>
+		</TagName>
 	);
-
-	const attrs = {
-		...otherProps,
-		className: classNames('label', className, {
-			'label-dismissible': closeButtonProps,
-			'label-lg': large,
-			[`label-${displayType}`]: displayType,
-		}),
-		href,
-	};
-
-	if (!href) {
-		delete attrs.href;
-	}
-
-	return React.createElement(href ? 'a' : 'span', attrs, content);
 };
 
 export default ClayLabel;
