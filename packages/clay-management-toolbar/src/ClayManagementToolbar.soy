@@ -462,7 +462,15 @@
 		viewMoreURL: string
 	]}
 
-	{if $creationMenu and (($creationMenu.primaryItems and length($creationMenu.primaryItems) == 1 and (not $creationMenu.secondaryItems or length($creationMenu.secondaryItems) == 0)) or ($creationMenu.secondaryItems and length($creationMenu.secondaryItems) == 1 and (not $creationMenu.primaryItems or length($creationMenu.primaryItems) == 0)))}
+	{let $hasPrimaryItems: $creationMenu and $creationMenu.primaryItems and length($creationMenu.primaryItems) > 0 /}
+
+	{let $hasSecondaryItems: $creationMenu and $creationMenu.secondaryItems and length($creationMenu.secondaryItems) > 0 /}
+
+	{let $hasOnePrimaryItem: $hasPrimaryItems and length($creationMenu.primaryItems) == 1 /}
+	
+	{let $hasOneSecondaryItem: $hasSecondaryItems and length($creationMenu.secondaryItems) == 1 /}
+
+	{if ($hasOnePrimaryItem and not $hasSecondaryItems) or ($hasOneSecondaryItem and not $hasPrimaryItems)}
 		{let $item: $creationMenu.primaryItems and $creationMenu.primaryItems[0] ?
 			$creationMenu.primaryItems[0] :
 			$creationMenu.secondaryItems[0].items ? $creationMenu.secondaryItems[0].items[0] : $creationMenu.secondaryItems[0] /}
@@ -489,7 +497,7 @@
 				{param title: $item.label /}
 			{/call}
 		{/if}
-	{elseif $creationMenu and $creationMenu.primaryItems}
+	{elseif $hasPrimaryItems or $hasSecondaryItems}
 		{call ClayCreationMenuDropdown.render}
 			{param caption: $creationMenu.caption /}
 			{param events: [
