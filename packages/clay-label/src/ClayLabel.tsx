@@ -6,6 +6,7 @@
 
 import * as React from 'react';
 import classNames from 'classnames';
+import Icon from '@clayui/icon';
 
 type DisplayType = 'secondary' | 'info' | 'warning' | 'danger' | 'success';
 
@@ -46,7 +47,7 @@ const ClayLabel: React.FunctionComponent<Props> = ({
 						className="close"
 						type="button"
 					>
-						{closeButtonProps.children}
+						<Icon symbol="times" />
 					</button>
 				</span>
 			)}
