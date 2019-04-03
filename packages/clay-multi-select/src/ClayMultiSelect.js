@@ -249,9 +249,6 @@ class ClayMultiSelect extends ClayComponent {
 			// See: https://support.mozilla.org/en-US/questions/1057630
 			if (!element.value) {
 				event.preventDefault();
-			}
-
-			if (!element.value) {
 				return this._focusLastLabelItem();
 			}
 			break;

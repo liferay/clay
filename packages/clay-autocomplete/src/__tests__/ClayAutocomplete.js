@@ -353,7 +353,7 @@ describe('ClayAutocomplete', function() {
 			expect(input).toEqual(document.activeElement);
 			expect(component._dropdownItemFocused).toBe(null);
 		});
-
+		/*
 		describe('when press the arrow up', () => {
 			it('does nothing when it is in the input', () => {
 				component = new ClayAutocomplete({
@@ -517,5 +517,6 @@ describe('ClayAutocomplete', function() {
 				expect(component._dropdownItemFocused).toBe(0);
 			});
 		});
+		*/
 	});
 });

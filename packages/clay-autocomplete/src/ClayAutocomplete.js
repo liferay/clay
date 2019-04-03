@@ -53,43 +53,47 @@ class ClayAutocomplete extends ClayComponent {
 		}
 	}
 
+	_getUpdatedFilteredItems() {
+		let filteredItems = this.refs.dataProvider.filter(
+			this._query,
+			this.extractData
+		);
+
+		filteredItems.map(filteredItem => {
+			let newFilteredItemData = {};
+
+			if (this.labelLocator) {
+				newFilteredItemData.label = this._performCall(
+					this.labelLocator,
+					filteredItem.data
+				);
+			}
+
+			if (this.valueLocator) {
+				newFilteredItemData.value = this._performCall(
+					this.valueLocator,
+					filteredItem.data
+				);
+			}
+
+			if (typeof filteredItem.data === 'string') {
+				filteredItem.data = newFilteredItemData;
+			} else {
+				filteredItem.data.label = newFilteredItemData.label;
+				filteredItem.data.value = newFilteredItemData.value;
+			}
+		});
+
+		return filteredItems;
+	}
+
 	/**
 	 * Sets filtered items with received data
 	 * @private
 	 */
 	_defaultDataChange() {
 		if (this._query) {
-			let filteredItems = this.refs.dataProvider.filter(
-				this._query,
-				this.extractData
-			);
-
-			filteredItems.map(filteredItem => {
-				let newFilteredItemData = {};
-
-				if (this.labelLocator) {
-					newFilteredItemData.label = this._performCall(
-						this.labelLocator,
-						filteredItem.data
-					);
-				}
-
-				if (this.valueLocator) {
-					newFilteredItemData.value = this._performCall(
-						this.valueLocator,
-						filteredItem.data
-					);
-				}
-
-				if (typeof filteredItem.data === 'string') {
-					filteredItem.data = newFilteredItemData;
-				} else {
-					filteredItem.data.label = newFilteredItemData.label;
-					filteredItem.data.value = newFilteredItemData.value;
-				}
-			});
-
-			this.filteredItems = filteredItems;
+			this.filteredItems = this._getUpdatedFilteredItems();
 		} else {
 			this.filteredItems = [];
 		}
@@ -107,37 +111,7 @@ class ClayAutocomplete extends ClayComponent {
 			if (isFunction(this.dataSource)) {
 				this.refs.dataProvider.updateData(this._query);
 			} else {
-				let filteredItems = this.refs.dataProvider.filter(
-					this._query,
-					this.extractData
-				);
-
-				filteredItems.map(filteredItem => {
-					let newFilteredItemData = {};
-
-					if (this.labelLocator) {
-						newFilteredItemData.label = this._performCall(
-							this.labelLocator,
-							filteredItem.data
-						);
-					}
-
-					if (this.valueLocator) {
-						newFilteredItemData.value = this._performCall(
-							this.valueLocator,
-							filteredItem.data
-						);
-					}
-
-					if (typeof filteredItem.data === 'string') {
-						filteredItem.data = newFilteredItemData;
-					} else {
-						filteredItem.data.label = newFilteredItemData.label;
-						filteredItem.data.value = newFilteredItemData.value;
-					}
-				});
-
-				this.filteredItems = filteredItems;
+				this.filteredItems = this._getUpdatedFilteredItems();
 			}
 		} else {
 			this.filteredItems = [];
@@ -283,14 +257,17 @@ class ClayAutocomplete extends ClayComponent {
 				);
 			}
 			break;
-		case 'ArrowUp':
-			event.preventDefault();
-			this._setFocusItem(true);
-			break;
-		case 'ArrowDown':
-			event.preventDefault();
-			event.stopPropagation();
-			this._setFocusItem(false);
+
+		case 'Tab':
+			if (
+				this.inputFocused &&
+					this.filteredItems &&
+					this.filteredItems.length > 0
+			) {
+				event.preventDefault();
+				event.stopPropagation();
+				this._setFocusItem(event.shiftKey);
+			}
 			break;
 		}
 
