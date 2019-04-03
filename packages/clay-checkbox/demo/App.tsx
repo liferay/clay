@@ -59,7 +59,7 @@ const App: React.FunctionComponent = () => {
 
 			<ClayCheckbox label="With custom JSX">
 				<span className="badge badge-primary">
-					<span className="badge-item badge-item-expand">10</span>
+					<span className="badge-item badge-item-expand">{'10'}</span>
 				</span>
 			</ClayCheckbox>
 		</div>
