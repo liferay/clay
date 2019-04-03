@@ -365,8 +365,9 @@ class ClayMultiSelect extends ClayComponent {
 		item = filteredItem || item;
 
 		if (value && !this._isItemSelected(item)) {
-			this.selectedItems.push(item);
-			this.selectedItems = this.selectedItems;
+			let newSelectedItems = this.selectedItems.map(item => item);
+			newSelectedItems.push(item);
+			this.selectedItems = newSelectedItems;
 
 			return !this.emit({
 				data: {
@@ -486,8 +487,10 @@ class ClayMultiSelect extends ClayComponent {
 		const index = Number(element.getAttribute('data-tag'));
 		const item = this.selectedItems[index];
 
-		this.selectedItems.splice(index, 1);
-		this.selectedItems = this.selectedItems;
+		let newSelectedItems = this.selectedItems.map(item => item);
+		newSelectedItems.splice(index, 1);
+
+		this.selectedItems = newSelectedItems;
 
 		return !this.emit({
 			data: {
