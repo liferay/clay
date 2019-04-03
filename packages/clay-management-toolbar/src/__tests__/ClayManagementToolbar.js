@@ -370,6 +370,45 @@ describe('ClayManagementToolbar', function() {
 		expect(managementToolbar).toMatchSnapshot();
 	});
 
+	it('should render a management toolbar with creation menu and icons on left', () => {
+		managementToolbar = new ClayManagementToolbar({
+			spritemap: spritemap,
+			creationMenu: {
+				itemsIconAlignment: 'left',
+				primaryItems: [
+					{
+						href: '#1',
+						label: 'Add Content 1',
+						icon: 'download',
+					},
+					{
+						href: '#2',
+						label: 'Add Content 2',
+						icon: 'users',
+					},
+				],
+				secondaryItems: [
+					{
+						items: [
+							{
+								href: '#fav1',
+								label: 'Favorite 1',
+								icon: 'globe',
+							},
+							{
+								href: '#fav2',
+								label: 'Favorite 2',
+								icon: 'code',
+							},
+						],
+					},
+				],
+			},
+		});
+
+		expect(managementToolbar).toMatchSnapshot();
+	});
+
 	it('should render a management toolbar with creation menu with primary items and 7 secondary items when more than 7 are passed', () => {
 		managementToolbar = new ClayManagementToolbar({
 			spritemap: spritemap,
