@@ -1,0 +1,42 @@
+{
+	"name": "@clayui/progress-bar",
+	"version": "3.0.0",
+	"description": "ClayProgressBar component",
+	"license": "BSD-3-Clause",
+	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-progress-bar",
+	"engines": {
+		"node": ">=0.12.0",
+		"npm": ">=3.0.0"
+	},
+	"main": "lib/ClayProgressBar.js",
+	"esnext:main": "src/ClayProgressBar.js",
+	"jsnext:main": "src/ClayProgressBar.js",
+	"files": [
+		"lib",
+		"src"
+	],
+	"scripts": {
+		"build": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib --extensions .ts,.tsx",
+		"build:types": "cross-env NODE_ENV=production tsc --project ./tsconfig.declarations.json",
+		"prepublishOnly": "npm run build && npm run build:types",
+		"start": "webpack-dev-server --mode development",
+		"test": "jest --config ../../jest.config.js"
+	},
+	"keywords": [
+		"clay",
+		"react"
+	],
+	"dependencies": {
+		"classnames": "^2.2.6"
+	},
+	"devDependencies": {
+		"clay-css": "^2.12.0"
+	},
+	"peerDependencies": {
+		"react": "^16.8.1",
+		"react-dom": "^16.8.1"
+	},
+	"browserslist": [
+		"extends browserslist-config-clay"
+	]
+}
