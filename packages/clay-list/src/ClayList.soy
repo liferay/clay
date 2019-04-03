@@ -202,7 +202,7 @@
 			{/let}
 
 			<li class="list-group-header">
-				<h3 {$headerAttributes}>{$item.label}</h3>
+				<p {$headerAttributes}>{$item.label}</p>
 			</li>
 
 			{call .items}
@@ -274,7 +274,7 @@
 	{@param? spritemap: string}
 
 	<div class="autofit-col autofit-col-expand">
-		<h4 class="list-group-title text-truncate">
+		<p class="list-group-title text-truncate">
 			{if $fieldSchema.fieldsMap and $fieldSchema.fieldsMap.href and $item[$fieldSchema.fieldsMap.href]}
 				{call ClayLink.render}
 					{param href: $item[$fieldSchema.fieldsMap.href] /}
@@ -283,7 +283,7 @@
 			{else}
 				{$item[$fieldSchema.fieldsMap.title]}
 			{/if}
-		</h4>
+		</p>
 
 		{if $fieldSchema.fieldsMap and $fieldSchema.fieldsMap.description and $item[$fieldSchema.fieldsMap.description]}
 			<p class="list-group-subtitle text-truncate">{$item[$fieldSchema.fieldsMap.description]}</p>
