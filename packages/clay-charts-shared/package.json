@@ -7,9 +7,9 @@
 	"scripts": {
 		"build": "npm run sass && npm run compile && npm run copyAssets",
 		"compile": "./node_modules/.bin/babel -d lib/ src/ -s",
+		"copyAssets": "ncp src/svg lib/svg",
 		"prepublish": "npm run build",
-		"sass": "node-sass src/scss/main.scss -o lib/css --source-map true",
-		"copyAssets": "ncp src/svg lib/svg"
+		"sass": "node-sass src/scss/main.scss -o lib/css --source-map true"
 	},
 	"author": "Bryce Osterhaus",
 	"license": "BSD-3-Clause",

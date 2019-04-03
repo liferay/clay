@@ -13,10 +13,11 @@
 	{@param? _handleOnInput: any}
 	{@param? _handleOnKeydown: any}
 	{@param? contentRenderer: string}
+	{@param? dataProviderInitialData: []|list<?>}
+	{@param? dropdownPortalElement: string}
 	{@param? elementClasses: string}
 	{@param? filteredItems: list<?>}
 	{@param? id: string}
-	{@param? initialData: []|list<?>}
 	{@param? inputElementClasses: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
@@ -49,8 +50,6 @@
 			{/if}
 		"
 
-		data-onkeydown="{$_handleOnKeydown}"
-
 		{if $id}
 			id="{$id}"
 		{/if}
@@ -76,9 +75,10 @@
 			{param _handleDropdownItemClick: $_handleDropdownItemClick /}
 			{param _handleOnKeydown: $_handleOnKeydown /}
 			{param contentRenderer: $contentRenderer /}
+			{param dataProviderInitialData: $dataProviderInitialData /}
 			{param dataSource: $dataSource /}
+			{param dropdownPortalElement: $dropdownPortalElement /}
 			{param filteredItems: $filteredItems /}
-			{param initialData: $initialData /}
 			{param pollingInterval: $pollingInterval /}
 			{param requestInputMode: $requestInputMode /}
 			{param requestOptions: $requestOptions /}
@@ -146,8 +146,9 @@
 	{@param? _handleDropdownItemClick: any}
 	{@param? _handleOnKeydown: any}
 	{@param? contentRenderer: string}
+	{@param? dataProviderInitialData: []|list<?>}
+	{@param? dropdownPortalElement: string}
 	{@param? filteredItems: list<?>}
-	{@param? initialData: []|list<?>}
 	{@param? pollingInterval: number}
 	{@param? requestInputMode: string}
 	{@param? requestOptions: [
@@ -200,14 +201,14 @@
 		{param content kind="html"}
 			{call ClayPortal.render}
 				{param content: $dropdownContent /}
-				{param portalElement: '#clay_dropdown_portal' /}
+				{param portalElement: $dropdownPortalElement ?: '#clay_dropdown_portal' /}
 				{param ref: 'portal' /}
 			{/call}
 		{/param}
 
 		{param dataSource: $dataSource /}
 		{param events: ['dataChange': $_handleDataChange] /}
-		{param initialData: $initialData /}
+		{param initialData: $dataProviderInitialData /}
 		{param pollingInterval: $pollingInterval /}
 		{param ref: 'dataProvider' /}
 		{param requestInputMode: $requestInputMode /}

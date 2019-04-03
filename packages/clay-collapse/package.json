@@ -19,8 +19,9 @@
   "scripts": {
     "build": "webpack",
     "compile": "babel -d lib/ src/ -s --ignore src/__tests__",
+    "link": "npm link",
     "prepublish": "npm run compile",
-    "link": "npm link"
+    "yarnLink": "yarn link"
   },
   "keywords": [
     "clay",

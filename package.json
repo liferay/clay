@@ -14,12 +14,13 @@
     "mcritic": "mcritic packages/ --ignore '**/{browserslist-config-clay,clayui.com,generator-metal-clay,node_modules,ClayDropdownItem.soy}/**'",
     "pa11y": "pa11y-ci ./packages/clay-*/demos/a11y.html",
     "prettier": "prettier-eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js 'examples/*/src/**/*.js'",
+    "site": "cd clayui.com && npm run build && npm run serve",
     "soy": "lerna run soy",
     "start": "http-server . -p 4000",
     "test": "npm run soy && npm run jest && npm run pa11y",
     "test:debug": "npm run soy && npm run jest:debug",
     "testSoy": "cd packages/clay-isomorphic && ./gradlew testSoy",
-    "site": "cd clayui.com && npm run build && npm run serve"
+    "yarnLink": "lerna run yarnLink"
   },
   "devDependencies": {
     "babel-preset-metal": "^4.1.0",

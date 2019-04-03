@@ -7,9 +7,9 @@
 	"jsnext:main": "src/index.js",
 	"scripts": {
 		"compile": "./node_modules/.bin/babel -d lib/ src/ -s --ignore src/__tests__",
+		"copyAssets": "ncp ./node_modules/clay-charts-shared/lib/svg lib/svg && ncp ./node_modules/clay-charts-shared/lib/css lib/css",
 		"prepublish": "npm run compile && npm run copyAssets",
 		"start": "webpack-dev-server --mode development",
-		"copyAssets": "ncp ./node_modules/clay-charts-shared/lib/svg lib/svg && ncp ./node_modules/clay-charts-shared/lib/css lib/css",
 		"test": "jest"
 	},
 	"author": "Bryce Osterhaus",
