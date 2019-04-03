@@ -49,7 +49,7 @@ const ClayIcon: React.FunctionComponent<Props> = ({
 			)}
 			role="presentation"
 		>
-			<use data-href={`${spriteMapVal}#${symbol}`} />
+			<use xlinkHref={`${spriteMapVal}#${symbol}`} />
 		</svg>
 	);
 };
