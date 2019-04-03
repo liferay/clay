@@ -24,7 +24,7 @@
 	cursor: $link-cursor;
 	float: none;
 
-	@include clay-link($close);
+	@include clay-close($close);
 
 	&:disabled,
 	&.disabled {

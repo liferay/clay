@@ -40,6 +40,7 @@
 	{@param? creationMenu: [
 		caption: string,
 		helpText: string,
+		itemsIconAlignment: string,
 		maxPrimaryItems: int,
 		maxSecondaryItems: int,
 		maxTotalItems: int,
@@ -432,6 +433,7 @@
 	{@param? creationMenu: [
 		caption: string,
 		helpText: string,
+		itemsIconAlignment: string,
 		maxPrimaryItems: int,
 		maxSecondaryItems: int,
 		maxTotalItems: int,
@@ -462,10 +464,34 @@
 		viewMoreURL: string
 	]}
 
-	{if $creationMenu and (($creationMenu.primaryItems and length($creationMenu.primaryItems) == 1 and (not $creationMenu.secondaryItems or length($creationMenu.secondaryItems) == 0)) or ($creationMenu.secondaryItems and length($creationMenu.secondaryItems) == 1 and (not $creationMenu.primaryItems or length($creationMenu.primaryItems) == 0)))}
-		{let $item: $creationMenu.primaryItems and $creationMenu.primaryItems[0] ?
-			$creationMenu.primaryItems[0] :
-			$creationMenu.secondaryItems[0].items ? $creationMenu.secondaryItems[0].items[0] : $creationMenu.secondaryItems[0] /}
+	{let $primaryItems: $creationMenu and $creationMenu.primaryItems ? $creationMenu.primaryItems : [] /}
+
+	{let $secondaryItems: $creationMenu and $creationMenu.secondaryItems ? $creationMenu.secondaryItems : [] /}
+
+	{let $hasPrimaryItems: length($primaryItems) > 0 /}
+	
+	{let $hasSecondaryItems: length($secondaryItems) > 0 /}
+
+	{let $firstSecondaryItem: $hasSecondaryItems ? $secondaryItems[0] : null /}
+	
+	{let $secondSecondaryItem: $hasSecondaryItems ? $secondaryItems[1] : null /}
+
+	{let $hasFirstSecondaryItemNestedItems: $firstSecondaryItem and $firstSecondaryItem.items and length($firstSecondaryItem.items) > 0 /}
+
+	{let $hasSecondSecondaryItemNestedItems: $secondSecondaryItem and $secondSecondaryItem.items and length($secondSecondaryItem.items) > 0 /}
+
+	{let $hasOnePrimaryItem: $hasPrimaryItems and length($primaryItems) == 1 /}
+	
+	{let $hasOneSecondaryItem: 
+		($hasSecondaryItems and length($secondaryItems) == 1 and not $hasFirstSecondaryItemNestedItems and not $hasSecondSecondaryItemNestedItems)
+		or ($hasFirstSecondaryItemNestedItems and length($firstSecondaryItem.items) == 1 and not $hasSecondSecondaryItemNestedItems)
+		or ($hasSecondSecondaryItemNestedItems and length($secondSecondaryItem.items) == 1 and not $hasFirstSecondaryItemNestedItems)
+	/}
+
+	{if ($hasOnePrimaryItem and not $hasSecondaryItems) or ($hasOneSecondaryItem and not $hasPrimaryItems)}
+		{let $item: $primaryItems and $primaryItems[0] ?
+			$primaryItems[0] :
+			$secondaryItems[0].items ? $secondaryItems[0].items[0] : $secondaryItems[0] /}
 
 		{if $item.href}
 			{call ClayLink.render}
@@ -489,7 +515,7 @@
 				{param title: $item.label /}
 			{/call}
 		{/if}
-	{elseif $creationMenu and $creationMenu.primaryItems}
+	{elseif $hasPrimaryItems or $hasSecondaryItems}
 		{call ClayCreationMenuDropdown.render}
 			{param caption: $creationMenu.caption /}
 			{param events: [
@@ -497,6 +523,7 @@
 				'moreButtonClicked': $_handleCreationMenuMoreButtonClicked
 			] /}
 			{param helpText: $creationMenu.helpText /}
+			{param itemsIconAlignment: $creationMenu.itemsIconAlignment /}
 			{param maxPrimaryItems: $creationMenu.maxPrimaryItems /}
 			{param maxSecondaryItems: $creationMenu.maxSecondaryItems /}
 			{param maxTotalItems: $creationMenu.maxTotalItems /}
@@ -545,6 +572,7 @@
 	{@param? creationMenu: [
 		caption: string,
 		helpText: string,
+		itemsIconAlignment: string,
 		maxPrimaryItems: int,
 		maxSecondaryItems: int,
 		maxTotalItems: int,

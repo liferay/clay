@@ -21,7 +21,8 @@
     "compile": "babel -d lib/ src/ -s --ignore src/__tests__",
     "link": "npm link",
     "prepublish": "npm run soy && npm run compile",
-    "soy": "metalsoy"
+    "soy": "metalsoy",
+    "yarnLink": "yarn link"
   },
   "keywords": [
     "clay",

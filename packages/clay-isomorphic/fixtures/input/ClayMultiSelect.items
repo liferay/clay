@@ -1,12 +1,15 @@
 {
-    "spritemap": "icons.svg",
-    "_handleCloseButtonClick": "(any|null)",
+    "_handleLabelItemFocus": "(any|null)",
+    "_handleLabelItemCloseButtonClick": "(any|null)",
+    "_handleLabelItemClick": "(any|null)",
+    "_handleLabelItemKeyDown": "(any|null)",
     "contentRenderer": "(null|string)",
+    "inputName": "selectedItems",
     "selectedItems": [
         {
             "label": "Foo",
             "value": "foo"
         }
     ],
-    "inputName": "selectedItems"
+    "spritemap": "icons.svg",
 }

@@ -31,8 +31,35 @@ class ClayAutocomplete extends ClayComponent {
 	/**
 	 * @inheritDoc
 	 */
+	rendered() {
+		if (this.inputFocused === true) {
+			this.refs.input.focus();
+		}
+	}
+
+	/**
+	 * @inheritDoc
+	 */
 	disposed() {
 		this._dropdownItemFocused = null;
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	syncFilteredItems() {
+		if (!this.filteredItems.length) {
+			this._dropdownItemFocused = null;
+		}
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	syncInputFocused(newVal) {
+		if (newVal === true) {
+			this.refs.input.focus();
+		}
 	}
 
 	/**
@@ -41,10 +68,7 @@ class ClayAutocomplete extends ClayComponent {
 	 */
 	_defaultDataChange() {
 		if (this._query) {
-			this.filteredItems = this.refs.dataProvider.filter(
-				this._query,
-				this.extractData
-			);
+			this.filteredItems = this._getUpdatedFilteredItems();
 		} else {
 			this.filteredItems = [];
 		}
@@ -62,14 +86,64 @@ class ClayAutocomplete extends ClayComponent {
 			if (isFunction(this.dataSource)) {
 				this.refs.dataProvider.updateData(this._query);
 			} else {
-				this.filteredItems = this.refs.dataProvider.filter(
-					this._query,
-					this.extractData
-				);
+				this.filteredItems = this._getUpdatedFilteredItems();
 			}
 		} else {
 			this.filteredItems = [];
 		}
+	}
+
+	/**
+	 * Gets the accepted characters of the input
+	 * element values
+	 * @param {!string} value
+	 * @protected
+	 * @return {string}
+	 */
+	_getCharactersAllowed(value) {
+		const regexp = new RegExp(this.allowedCharacters);
+		const match = value.match(regexp);
+
+		return Array.isArray(match) ? match.join('') : '';
+	}
+
+	/**
+	 * Gets the the udpated filtered items
+	 * @protected
+	 * @return {Array}
+	 */
+	_getUpdatedFilteredItems() {
+		let filteredItems = this.refs.dataProvider.filter(
+			this._query,
+			this.extractData
+		);
+
+		filteredItems.map(filteredItem => {
+			let newFilteredItemData = {};
+
+			if (this.labelLocator) {
+				newFilteredItemData.label = this._performCall(
+					this.labelLocator,
+					filteredItem.data
+				);
+			}
+
+			if (this.valueLocator) {
+				newFilteredItemData.value = this._performCall(
+					this.valueLocator,
+					filteredItem.data
+				);
+			}
+
+			if (typeof filteredItem.data === 'string') {
+				filteredItem.data = newFilteredItemData;
+			} else {
+				filteredItem.data.label = newFilteredItemData.label;
+				filteredItem.data.value = newFilteredItemData.value;
+			}
+		});
+
+		return filteredItems;
 	}
 
 	/**
@@ -110,7 +184,9 @@ class ClayAutocomplete extends ClayComponent {
 		const item = this.filteredItems[Number(index)];
 
 		return !this.emit({
-			data: item.data,
+			data: {
+				item: item.data,
+			},
 			name: 'itemSelected',
 			originalEvent: event,
 		});
@@ -190,19 +266,23 @@ class ClayAutocomplete extends ClayComponent {
 				);
 			}
 			break;
-		case 'ArrowUp':
-			event.preventDefault();
-			this._setFocusItem(true);
-			break;
-		case 'ArrowDown':
-			event.preventDefault();
-			event.stopPropagation();
-			this._setFocusItem(false);
+
+		case 'Tab':
+			if (
+				this.inputFocused &&
+					this.filteredItems &&
+					this.filteredItems.length > 0
+			) {
+				event.preventDefault();
+				event.stopPropagation();
+				this._setFocusItem(event.shiftKey);
+			}
 			break;
 		}
 
 		return !this.emit({
 			data: {
+				element: event.target,
 				value: this.refs.input.value,
 				key: event.key,
 				eventFromInput: event.delegateTarget.tagName === 'INPUT',
@@ -235,6 +315,25 @@ class ClayAutocomplete extends ClayComponent {
 	}
 
 	/**
+	 * Handles data mapping.
+	 * @param {!(function|string)} param
+	 * @param {!Array} data
+	 * @protected
+	 * @return {!(string|number)}
+	 */
+	_performCall(param, data) {
+		if (typeof param === 'function') {
+			return param(data);
+		}
+
+		if (typeof data === 'string') {
+			return data;
+		}
+
+		return data[param];
+	}
+
+	/**
 	 * Handle the interactions in the dropdown and add focus on the items.
 	 * @param {!Boolean} direction
 	 * @protected
@@ -264,29 +363,6 @@ class ClayAutocomplete extends ClayComponent {
 
 				elements[this._dropdownItemFocused].focus();
 			}
-		}
-	}
-
-	/**
-	 * Gets the accepted characters of the input
-	 * element values
-	 * @param {!string} value
-	 * @protected
-	 * @return {string}
-	 */
-	_getCharactersAllowed(value) {
-		const regexp = new RegExp(this.allowedCharacters);
-		const match = value.match(regexp);
-
-		return Array.isArray(match) ? match.join('') : '';
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	syncFilteredItems() {
-		if (!this.filteredItems.length) {
-			this._dropdownItemFocused = null;
 		}
 	}
 }
@@ -440,7 +516,12 @@ ClayAutocomplete.STATE = {
 	 * @memberof ClayAutocomplete
 	 * @type {?(object|array)}
 	 */
-	initialData: Config.oneOfType([Config.object(), Config.array()]),
+	dataProviderInitialData: Config.oneOfType([
+		Config.object(),
+		Config.array(),
+	]),
+
+	dropdownPortalElement: Config.string().value('#clay_dropdown_portal'),
 
 	/**
 	 * CSS classes to be applied to the input element.
@@ -450,6 +531,15 @@ ClayAutocomplete.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	inputElementClasses: Config.string(),
+
+	/**
+	 * Flag to indicate that if the input is focused.
+	 * @instance
+	 * @default false
+	 * @memberof ClayAutocomplete
+	 * @type {?bool}
+	 */
+	inputFocused: Config.bool().value(false),
 
 	/**
 	 * Name of the selected items input.
@@ -468,6 +558,17 @@ ClayAutocomplete.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	inputValue: Config.string(),
+
+	/**
+	 * Sets the name of the field to map the label of the item.
+	 * @default label
+	 * @instance
+	 * @memberof ClayAutocomplete
+	 * @type {?(function|string)}
+	 */
+	labelLocator: Config.oneOfType([Config.func(), Config.string()]).value(
+		'label'
+	),
 
 	/**
 	 * Input placeholder.
@@ -568,6 +669,17 @@ ClayAutocomplete.STATE = {
 	 * @type {?bool}
 	 */
 	useDefaultClasses: Config.bool().value(true),
+
+	/**
+	 * Sets the name of the field to map the value of the item.
+	 * @default label
+	 * @instance
+	 * @memberof ClayAutocomplete
+	 * @type {?(function|string)}
+	 */
+	valueLocator: Config.oneOfType([Config.func(), Config.string()]).value(
+		'value'
+	),
 };
 
 defineWebComponent('clay-autocomplete', ClayAutocomplete);

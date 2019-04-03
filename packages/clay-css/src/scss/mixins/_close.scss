@@ -23,6 +23,13 @@
 	$padding-left: map-get($map, padding-left);
 	$padding-right: map-get($map, padding-right);
 	$padding-top: map-get($map, padding-top);
+	$position: map-get($map, position);
+
+	$bottom: map-get($map, bottom);
+	$left: map-get($map, left);
+	$right: map-get($map, right);
+	$top: map-get($map, top);
+
 	$text-align: map-get($map, text-align);
 	$text-decoration: map-get($map, text-decoration);
 	$text-transform: map-get($map, text-transform);
@@ -68,6 +75,7 @@
 
 	@include border-radius($border-radius);
 
+	bottom: $bottom;
 	color: $color;
 	display: $display;
 	font-family: $font-family;
@@ -75,6 +83,7 @@
 	font-weight: $font-weight;
 	height: $height;
 	justify-content: $justify-content;
+	left: $left;
 	line-height: $line-height;
 	margin-bottom: $margin-bottom;
 	margin-left: $margin-left;
@@ -85,9 +94,12 @@
 	padding-left: $padding-left;
 	padding-right: $padding-right;
 	padding-top: $padding-top;
+	position: $position;
+	right: $right;
 	text-align: $text-align;
 	text-decoration: $text-decoration;
 	text-transform: $text-transform;
+	top: $top;
 	transition: $transition;
 	vertical-align: $vertical-align;
 	width: $width;

@@ -4,26 +4,30 @@
  * This renders the component's whole content.
  */
 {template .render}
-	{@param dataSource: string|[]|list<?>}
 	{@param helpText: string}
 	{@param spritemap: string}
-	{@param? _handleButtonClicked: any}
-	{@param? _handleCloseButtonClick: any}
+	{@param? _handleAutocompleteItemSelected: any}
 	{@param? _handleDataChange: any}
-	{@param? _handleDropdownItemClick: any}
 	{@param? _handleFilteredItemsChange: any}
-	{@param? _handleInputOnBlur: any}
-	{@param? _handleInputOnFocus: any}
-	{@param? _handleOnInput: any}
-	{@param? _handleOnKeydown: any}
-	{@param? _inputFocus: bool}
-	{@param? allowedCharacters: any}
+	{@param? _handleInputBlur: any}
+	{@param? _handleInputChange: any}
+	{@param? _handleInputFocus: any}
+	{@param? _handleInputKeyDown: any}
+	{@param? _handleLabelItemClick: any}
+	{@param? _handleLabelItemCloseButtonClick: any}
+	{@param? _handleLabelItemKeyDown: any}
+	{@param? _handleSelectButtonClicked: any}
+	{@param? _inputFocused: bool}
+	{@param? autocompleteFilterCondition: any}
 	{@param? contentRenderer: string}
-	{@param? debounceTime: number}
+	{@param? dataProviderDebounceTime: number}
+	{@param? dataProviderInitialData: []|list<?>}
+	{@param? dataSource: string|[]|list<?>}
+	{@param? dropdownPortalElement: string}
 	{@param? elementClasses: string}
 	{@param? filteredItems: list<?>}
 	{@param? id: string}
-	{@param? initialData: []|list<?>}
+	{@param? inputAllowedCharacters: any}
 	{@param? inputName: string}
 	{@param? inputValue: string}
 	{@param? label: string}
@@ -44,6 +48,7 @@
 	{@param? requestTimeout: number}
 	{@param? selectedItems: list<?>}
 	{@param? showSelectButton: bool}
+	{@param? valueLocator: any}
 
 	{let $attributes kind="attributes"}
 		class="form-group
@@ -63,23 +68,28 @@
 		{/if}
 
 		{call .content}
-			{param _handleButtonClicked: $_handleButtonClicked /}
-			{param _handleCloseButtonClick: $_handleCloseButtonClick /}
+			{param _handleAutocompleteItemSelected: $_handleAutocompleteItemSelected /}
 			{param _handleDataChange: $_handleDataChange /}
-			{param _handleDropdownItemClick: $_handleDropdownItemClick /}
 			{param _handleFilteredItemsChange: $_handleFilteredItemsChange /}
-			{param _handleInputOnBlur: $_handleInputOnBlur /}
-			{param _handleInputOnFocus: $_handleInputOnFocus /}
-			{param _handleOnInput: $_handleOnInput /}
-			{param _handleOnKeydown: $_handleOnKeydown /}
-			{param _inputFocus: $_inputFocus /}
-			{param allowedCharacters: $allowedCharacters /}
+			{param _handleInputBlur: $_handleInputBlur /}
+			{param _handleInputChange: $_handleInputChange /}
+			{param _handleInputFocus: $_handleInputFocus /}
+			{param _handleInputKeyDown: $_handleInputKeyDown /}
+			{param _handleLabelItemClick: $_handleLabelItemClick /}
+			{param _handleLabelItemCloseButtonClick: $_handleLabelItemCloseButtonClick /}
+			{param _handleLabelItemKeyDown: $_handleLabelItemKeyDown /}
+			{param _handleSelectButtonClicked: $_handleSelectButtonClicked /}
+			{param _inputFocused: $_inputFocused /}
+			{param autocompleteFilterCondition: $autocompleteFilterCondition /}
 			{param contentRenderer: $contentRenderer ?: ''/}
+			{param dataProviderDebounceTime: $dataProviderDebounceTime /}
+			{param dataProviderInitialData: $dataProviderInitialData /}
 			{param dataSource: $dataSource /}
-			{param debounceTime: $debounceTime /}
+			{param dropdownPortalElement: $dropdownPortalElement /}
 			{param filteredItems: $filteredItems /}
 			{param helpText: $helpText /}
-			{param initialData: $initialData /}
+			{param id: $id /}
+			{param inputAllowedCharacters: $inputAllowedCharacters /}
 			{param inputName: $inputName /}
 			{param inputValue: $inputValue /}
 			{param labelLocator: $labelLocator /}
@@ -91,6 +101,7 @@
 			{param selectedItems: $selectedItems /}
 			{param showSelectButton: $showSelectButton ?: true /}
 			{param spritemap: $spritemap /}
+			{param valueLocator: $valueLocator /}
 		{/call}
 	</div>
 {/template}
@@ -99,24 +110,29 @@
  * This render the content from the multi select.
  */
 {template .content}
-	{@param dataSource: string|[]|list<?>}
 	{@param helpText: string}
 	{@param spritemap: string}
-	{@param? _handleButtonClicked: any}
-	{@param? _handleCloseButtonClick: any}
+	{@param? _handleAutocompleteItemSelected: any}
 	{@param? _handleDataChange: any}
-	{@param? _handleDropdownItemClick: any}
 	{@param? _handleFilteredItemsChange: any}
-	{@param? _handleInputOnBlur: any}
-	{@param? _handleInputOnFocus: any}
-	{@param? _handleOnInput: any}
-	{@param? _handleOnKeydown: any}
-	{@param? _inputFocus: bool}
-	{@param? allowedCharacters: any}
+	{@param? _handleInputBlur: any}
+	{@param? _handleInputChange: any}
+	{@param? _handleInputFocus: any}
+	{@param? _handleInputKeyDown: any}
+	{@param? _handleLabelItemClick: any}
+	{@param? _handleLabelItemCloseButtonClick: any}
+	{@param? _handleLabelItemKeyDown: any}
+	{@param? _handleSelectButtonClicked: any}
+	{@param? _inputFocused: bool}
+	{@param? autocompleteFilterCondition: any}
 	{@param? contentRenderer: string}
-	{@param? debounceTime: number}
+	{@param? dataProviderDebounceTime: number}
+	{@param? dataProviderInitialData: []|list<?>}
+	{@param? dataSource: string|[]|list<?>}
+	{@param? dropdownPortalElement: string}
 	{@param? filteredItems: list<?>}
-	{@param? initialData: []|list<?>}
+	{@param? id: string}
+	{@param? inputAllowedCharacters: any}
 	{@param? inputName: string}
 	{@param? inputValue: string}
 	{@param? labelLocator: any}
@@ -136,37 +152,42 @@
 	{@param? requestTimeout: number}
 	{@param? selectedItems: list<?>}
 	{@param? showSelectButton: bool}
+	{@param? valueLocator: any}
 
 	<div class="input-group input-group-stacked-sm-down">
 		<div class="input-group-item">
 			<div class="dropdown dropdown-full">
 				{let $autocompleteElementClasses kind="text"}
 					form-control form-control-tag-group
-					{if $_inputFocus}
+					{if $_inputFocused}
 						{sp}focus
 					{/if}
 				{/let}
 
-				{call ClayAutocomplete.render}
-					{param allowedCharacters: $allowedCharacters /}
+				{call ClayAutocomplete.render}					
+					{param allowedCharacters: $inputAllowedCharacters /}
 					{param contentRenderer: $contentRenderer /}
-					{param dataSource: $dataSource /}
-					{param debounceTime: $debounceTime /}
+					{param dataProviderInitialData: $dataProviderInitialData /}
+					{param dataSource: $dataSource ?: [] /}
+					{param debounceTime: $dataProviderDebounceTime /}
+					{param dropdownPortalElement: $dropdownPortalElement /}
 					{param elementClasses: $autocompleteElementClasses /}
 					{param events: [
 						'dataChange': $_handleDataChange,
 						'filteredItemsChanged': $_handleFilteredItemsChange,
-						'inputChange': $_handleOnInput,
-						'inputOnBlur': $_handleInputOnBlur,
-						'inputOnFocus': $_handleInputOnFocus,
-						'inputOnKeydown': $_handleOnKeydown,
-						'itemSelected': $_handleDropdownItemClick
+						'inputChange': $_handleInputChange,
+						'inputOnBlur': $_handleInputBlur,
+						'inputOnFocus': $_handleInputFocus,
+						'inputOnKeydown': $_handleInputKeyDown,
+						'itemSelected': $_handleAutocompleteItemSelected
 					] /}
-					{param extractData: $labelLocator /}
+					{param extractData: $autocompleteFilterCondition /}
 					{param filteredItems: $filteredItems /}
-					{param initialData: $initialData /}
 					{param inputElementClasses: 'form-control-inset' /}
+					{param inputFocused: $_inputFocused /}
 					{param inputValue: $inputValue /}
+					{param key: $id + 'autocomplete' /}
+					{param labelLocator: $labelLocator /}
 					{param placeholder: $placeholder /}
 					{param pollingInterval: $pollingInterval /}
 					{param ref: 'autocomplete' /}
@@ -176,7 +197,9 @@
 					{param unstable_content kind="html"}
 						{if $selectedItems}
 							{call .items}
-								{param _handleCloseButtonClick: $_handleCloseButtonClick /}
+								{param _handleLabelItemClick: $_handleLabelItemClick /}
+								{param _handleLabelItemCloseButtonClick: $_handleLabelItemCloseButtonClick /}
+								{param _handleLabelItemKeyDown: $_handleLabelItemKeyDown /}
 								{param contentRenderer: $contentRenderer /}
 								{param inputName: $inputName /}
 								{param selectedItems: $selectedItems /}
@@ -184,8 +207,8 @@
 							{/call}
 						{/if}
 					{/param}
-
 					{param useDefaultClasses: false /}
+					{param valueLocator: $valueLocator /}
 				{/call}
 			</div>
 
@@ -201,7 +224,7 @@
 		{if $showSelectButton}
 			<div class="input-group-item input-group-item-shrink">
 				{call ClayButton.render}
-					{param events: ['click': $_handleButtonClicked] /}
+					{param events: ['click': $_handleSelectButtonClicked] /}
 					{param label kind="text"}
 						{msg desc="Select items"}
 							select
@@ -222,7 +245,9 @@
 {template .items}
 	{@param selectedItems: list<?>}
 	{@param spritemap: string}
-	{@param? _handleCloseButtonClick: any}
+	{@param? _handleLabelItemClick: any}
+	{@param? _handleLabelItemCloseButtonClick: any}
+	{@param? _handleLabelItemKeyDown: any}
 	{@param? contentRenderer: string}
 	{@param? inputName: string}
 
@@ -241,9 +266,11 @@
 		{/if}
 
 		{delcall ClayMultiSelect.Item variant="$contentRenderer" allowemptydefault="true"}
-			{param _handleCloseButtonClick: $_handleCloseButtonClick /}
-			{param data: $item /}
+			{param _handleLabelItemClick: $_handleLabelItemClick /}
+			{param _handleLabelItemCloseButtonClick: $_handleLabelItemCloseButtonClick /}
+			{param _handleLabelItemKeyDown: $_handleLabelItemKeyDown /}
 			{param index: index($item) /}
+			{param item: $item /}
 			{param spritemap: $spritemap /}
 		{/delcall}
 	{/foreach}
@@ -255,17 +282,25 @@
  * so you can create your own markup.
  */
 {deltemplate ClayMultiSelect.Item}
-	{@param data: ?}
 	{@param index: int}
+	{@param item: [
+		label: string
+	]}
 	{@param spritemap: string}
-	{@param? _handleCloseButtonClick: any}
+	{@param? _handleLabelItemClick: any}
+	{@param? _handleLabelItemCloseButtonClick: any}
+	{@param? _handleLabelItemKeyDown: any}
 
 	{call ClayLabel.render}
 		{param closeable: true /}
 		{param data: ['tag': $index] /}
-		{param events: ['close': $_handleCloseButtonClick] /}
+		{param events: [
+			'click': $_handleLabelItemClick,
+			'close': $_handleLabelItemCloseButtonClick,
+			'keydown': $_handleLabelItemKeyDown
+		] /}
 		{param id: 'item-tag' /}
-		{param label: $data.label /}
+		{param label: $item.label /}
 		{param ref: 'item' + $index /}
 		{param spritemap: $spritemap /}
 		{param tabIndex: '0' /}

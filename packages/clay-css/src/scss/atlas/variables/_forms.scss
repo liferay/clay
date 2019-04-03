@@ -36,15 +36,13 @@ $form-feedback-font-size: 0.875rem !default; // 14px
 
 $form-text-color: $gray-600 !default;
 
+// Form Group
+
 $form-group-margin-bottom: 1.5rem !default; // 24px
 $form-group-margin-bottom-mobile: 1rem !default; // 16px
 
-// Form Check
-
-$form-check-input-gutter: 0.875rem !default;
-$form-check-input-margin-y: 0.41667em !default;
-
-$form-check-label-text-margin-left: -0.1875rem !default; // 3px
+$form-group-sm-input-label-margin-bottom: 0.1875rem !default; // 3px
+$form-group-sm-item-label-spacer: 1.5625rem !default; // 25px
 
 // Skin
 
@@ -113,6 +111,8 @@ $input-select-icon-disabled: clay-icon(caret-double-l, $input-select-icon-disabl
 // Textarea
 
 $input-textarea-height: 100px !default;
+$input-textarea-height-lg: 120px !default;
+$input-textarea-height-sm: 80px !default;
 
 // Form Control Label (Labels inside Form Control Tag Group)
 

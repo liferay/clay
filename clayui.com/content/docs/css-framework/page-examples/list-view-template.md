@@ -261,11 +261,11 @@ title: "List View Template"
 			<div class="sidebar-header">
 				<div class="autofit-row sidebar-section">
 					<div class="autofit-col autofit-col-expand">
-						<h4 class="component-title">
+						<p class="component-title">
 							<span class="text-truncate-inline">
 								<a class="text-truncate" href="#1">Image1.jpg</a>
 							</span>
-						</h4>
+						</p>
 						<p class="component-subtitle">Basic Document</p>
 					</div>
 					<div class="autofit-col">
@@ -467,7 +467,7 @@ title: "List View Template"
 		<form>
 			<ul class="list-group list-group-notification show-quick-actions-on-hover">
 				<li class="list-group-header">
-					<h3 class="list-group-header-title">Group 1</h3>
+					<p class="list-group-header-title">Group 1</p>
 				</li>
 				<li class="list-group-item list-group-item-flex">
 					<div class="autofit-col">
@@ -489,9 +489,9 @@ title: "List View Template"
 					</div>
 					<div class="autofit-col autofit-col-expand">
 						<section class="autofit-section">
-							<h4 class="list-group-title">
+							<p class="list-group-title">
 								<a href="#1">Account Example One</a>
-							</h4>
+							</p>
 							<p class="list-group-subtext">Second Level Text</p>
 						</section>
 					</div>
@@ -547,9 +547,9 @@ title: "List View Template"
 					</div>
 					<div class="autofit-col autofit-col-expand">
 						<section class="autofit-section">
-							<h4 class="list-group-title">
+							<p class="list-group-title">
 								<a href="#1">Account Example Two</a>
-							</h4>
+							</p>
 						</section>
 					</div>
 					<div class="autofit-col">
@@ -585,7 +585,7 @@ title: "List View Template"
 					</div>
 				</li>
 				<li class="list-group-header">
-					<h3 class="list-group-header-title">Group 2</h3>
+					<p class="list-group-header-title">Group 2</p>
 				</li>
 				<li class="list-group-item list-group-item-flex">
 					<div class="autofit-col">
@@ -607,9 +607,9 @@ title: "List View Template"
 					</div>
 					<div class="autofit-col autofit-col-expand">
 						<section class="autofit-section">
-							<h4 class="list-group-title">
+							<p class="list-group-title">
 								<a href="#1">Account Example One</a>
-							</h4>
+							</p>
 							<p class="list-group-subtext">Second Level Text</p>
 							<div class="list-group-detail">
 								<span class="label label-warning">
@@ -670,9 +670,9 @@ title: "List View Template"
 					</div>
 					<div class="autofit-col autofit-col-expand">
 						<section class="autofit-section">
-							<h4 class="list-group-title">
+							<p class="list-group-title">
 								<a href="#1">Account Example Two</a>
-							</h4>
+							</p>
 							<p class="list-group-subtext">Second Level Text</p>
 							<div class="list-group-detail">
 								<span class="label label-info">
@@ -714,41 +714,41 @@ title: "List View Template"
 					</div>
 				</li>
 				<li class="list-group-header">
-					<h3 class="list-group-header-title">Group 3</h3>
+					<p class="list-group-header-title">Group 3</p>
 				</li>
 				<li class="list-group-item list-group-item-flex">
 					<div class="autofit-col autofit-col-expand">
 						<section class="autofit-section">
-							<h4 class="list-group-title">
+							<p class="list-group-title">
 								<a href="#1">Account Example One</a>
-							</h4>
+							</p>
 						</section>
 					</div>
 				</li>
 				<li class="list-group-item list-group-item-flex">
 					<div class="autofit-col autofit-col-expand">
 						<section class="autofit-section">
-							<h4 class="list-group-title">
+							<p class="list-group-title">
 								<a href="#1">Account Example Two</a>
-							</h4>
+							</p>
 						</section>
 					</div>
 				</li>
 				<li class="list-group-item list-group-item-flex">
 					<div class="autofit-col autofit-col-expand">
 						<section class="autofit-section">
-							<h4 class="list-group-title">
+							<p class="list-group-title">
 								<a href="#1">Account Example Three</a>
-							</h4>
+							</p>
 						</section>
 					</div>
 				</li>
 				<li class="list-group-item list-group-item-flex">
 					<div class="autofit-col autofit-col-expand">
 						<section class="autofit-section">
-							<h4 class="list-group-title">
+							<p class="list-group-title">
 								<a href="#1">Account Example Four</a>
-							</h4>
+							</p>
 						</section>
 					</div>
 				</li>

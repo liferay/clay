@@ -1272,18 +1272,18 @@ A dropdown is a list of options related to the element that triggers it.
 	<div class="dropdown-subheader">Favorites</div>
 	<div class="inline-scroller">
 		<ul class="list-unstyled">
-			<li><a class="dropdown-item" href="#1">D Structure</a></ul>
-			<li><a class="dropdown-item" href="#1">F Structure</a></ul>
-			<li><a class="disabled dropdown-item" href="#1" tabindex="-1">H Structure</a></ul>
-			<li><a class="dropdown-item" href="#1">J Structure</a></ul>
-			<li><a class="dropdown-item" href="#1">L Structure</a></ul>
-			<li><a class="dropdown-item" href="#1">M Structure</a></ul>
-			<li><a class="dropdown-item" href="#1">P Structure</a></ul>
-			<li><a class="dropdown-item" href="#1">Q Structure</a></ul>
-			<li><a class="dropdown-item" href="#1">R Structure</a></ul>
-			<li><a class="dropdown-item" href="#1">S Structure</a></ul>
-			<li><a class="dropdown-item" href="#1">T Structure</a></ul>
-			<li><a class="dropdown-item" href="#1">U Structure</a></ul>
+			<li><a class="dropdown-item" href="#1">D Structure</a></li>
+			<li><a class="dropdown-item" href="#1">F Structure</a></li>
+			<li><a class="disabled dropdown-item" href="#1" tabindex="-1">H Structure</a></li>
+			<li><a class="dropdown-item" href="#1">J Structure</a></li>
+			<li><a class="dropdown-item" href="#1">L Structure</a></li>
+			<li><a class="dropdown-item" href="#1">M Structure</a></li>
+			<li><a class="dropdown-item" href="#1">P Structure</a></li>
+			<li><a class="dropdown-item" href="#1">Q Structure</a></li>
+			<li><a class="dropdown-item" href="#1">R Structure</a></li>
+			<li><a class="dropdown-item" href="#1">S Structure</a></li>
+			<li><a class="dropdown-item" href="#1">T Structure</a></li>
+			<li><a class="dropdown-item" href="#1">U Structure</a></li>
 		</ul>
 	</div>
 	<div class="dropdown-caption">Showing 7 of 203 Structures</div>

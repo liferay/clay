@@ -5,34 +5,9 @@ import {Config} from 'metal-state';
 import {EventHandler} from 'metal-events';
 import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
-import dom from 'metal-dom';
 import Soy from 'metal-soy';
 
 import templates from './ClayMultiSelect.soy.js';
-
-/**
- * Compare two arrays
- * @param {Array} array
- * @param {Array} otherArray
- * @private
- * @return {bool}
- */
-const arrayIsEquals = (array, otherArray) => {
-	if (!Array.isArray(otherArray)) return false;
-
-	const valueLenght = array.length;
-	const otherLenght = otherArray.length;
-
-	if (valueLenght !== otherLenght) return false;
-
-	const compare = (item1, item2) => item1 === item2;
-
-	for (let i = 0; i < valueLenght; i++) {
-		if (!compare(array[i], otherArray[i])) break;
-	}
-
-	return true;
-};
 
 /**
  * Metal ClayMultiSelect component.
@@ -51,10 +26,30 @@ class ClayMultiSelect extends ClayComponent {
 	 * @inheritDoc
 	 */
 	attached() {
-		this._eventHandler.add(
-			dom.on(document, 'click', this._handleDocClick.bind(this), true)
+		this.addListener(
+			'autocompleteItemSelected',
+			this._defaultAutocompleteItemSelected,
+			true
 		);
-		this.addListener('inputOnBlur', this._defaultInputOnBlur, true);
+		this.addListener('inputBlur', this._defaultInputBlur, true);
+		this.addListener('inputChange', this._defaultInputChange, true);
+		this.addListener('inputFocus', this._defaultInputFocus, true);
+		this.addListener('labelItemAdded', this._defaultLabelItemAdded, true);
+		this.addListener(
+			'labelItemRemoved',
+			this._defaultLabelItemRemoved,
+			true
+		);
+		this.addListener(
+			'labelItemCloseButtonClick',
+			this._defaultLabelItemCloseButtonClick,
+			true
+		);
+		this.addListener(
+			'labelItemKeyDown',
+			this._defaultLabelItemKeyDown,
+			true
+		);
 	}
 
 	/**
@@ -73,48 +68,117 @@ class ClayMultiSelect extends ClayComponent {
 	}
 
 	/**
-	 * Clears the values that are not labeled in the input.
-	 * @protected
-	 */
-	_defaultInputOnBlur() {
-		this.inputValue = null;
-	}
-
-	/**
-	 * Assemble the schema of the item.
-	 * @param {!string} label
-	 * @param {!string} value
-	 * @protected
-	 * @return {!Object}
-	 */
-	_getItemSchema(label, value) {
-		return {
-			label: label,
-			value: value,
-		};
-	}
-
-	/**
-	 * Continues the propagation of the Button clicked event.
+	 * Handles the autocomplete selected item event.
 	 * @param {!Event} event
 	 * @protected
-	 * @return {Boolean} If the event has been prevented or not.
+	 * @return {?Boolean} If the event has been prevented or not.
 	 */
-	_handleButtonClicked(event) {
-		return !this.emit({
-			name: 'buttonClicked',
-			originalEvent: event,
-		});
+	_defaultAutocompleteItemSelected(event) {
+		const {label, value} = event.data.item;
+
+		this.filteredItems = [];
+
+		const item = this._createItemObject(label, value);
+
+		return this._addLabelItem(item);
 	}
 
 	/**
-	 * Handle the click on the close label button.
-	 * @param {!Object} data
+	 *
 	 * @protected
-	 * @return {Boolean} If the event has been prevented or not.
 	 */
-	_handleCloseButtonClick(data) {
-		return this._handleItemRemoved(data.target.element);
+	_defaultInputBlur() {
+		if (
+			!this.filteredItems ||
+			(this.filteredItems && this.filteredItems.length === 0)
+		) {
+			this._inputFocused = false;
+			this.inputValue = '';
+		}
+	}
+
+	/**
+	 *
+	 * @param {!Event} event
+	 * @protected
+	 */
+	_defaultInputChange(event) {
+		const char = event.data.char;
+		let inputValue = event.data.value;
+		const words = this._getWords(inputValue);
+
+		if (char === ',' || words.length > 1) {
+			words.forEach(word => {
+				this._addLabelItem(this._createItemObject(word, word));
+			});
+
+			inputValue = '';
+		}
+
+		this.inputValue = inputValue;
+	}
+
+	/**
+	 *
+	 * @protected
+	 */
+	_defaultInputFocus() {
+		this._inputFocused = true;
+	}
+
+	/**
+	 *
+	 * @protected
+	 */
+	_defaultLabelItemAdded() {
+		this.inputValue = '';
+		this._inputFocused = true;
+	}
+
+	/**
+	 * Handles the click on the close label item button.
+	 * @param {!Event} event
+	 * @protected
+	 */
+	_defaultLabelItemCloseButtonClick(event) {
+		this._removeLabelItem(event.data.item);
+	}
+
+	/**
+	 * Handles the click on the close label item button.
+	 * @param {!Event} event
+	 * @protected
+	 * @return {?Boolean} If the event has been prevented or not.
+	 */
+	_defaultLabelItemKeyDown(event) {
+		if (event.data.key == 'Backspace' || event.data.key == 'Enter') {
+			event.preventDefault();
+
+			return this._removeLabelItem(event.data.element);
+		}
+	}
+
+	/**
+	 * Focus the input after a labelItem is removed.
+	 * @protected
+	 */
+	_defaultLabelItemRemoved() {
+		this.inputValue = '';
+		this._inputFocused = true;
+	}
+
+	/**
+	 * Continues the propagation of the autocomplete item selected event.
+	 * @param {!Event} event
+	 * @protected
+	 * @return {?Boolean} If the event has been prevented or not.
+	 */
+	_handleAutocompleteItemSelected(event) {
+		return !this.emit({
+			data: event.data,
+			name: 'autocompleteItemSelected',
+			originalEvent: event,
+		});
 	}
 
 	/**
@@ -132,35 +196,7 @@ class ClayMultiSelect extends ClayComponent {
 	}
 
 	/**
-	 * Handle the click on the dropdown item and the propagation of the labelAdded event.
-	 * @param {!Event} event
-	 * @protected
-	 * @return {?Boolean} If the event has been prevented or not.
-	 */
-	_handleDropdownItemClick(event) {
-		this.filteredItems = [];
-		this.refs.autocomplete.refs.input.focus();
-
-		const value = this._performCall(this.valueLocator, event.data);
-		const label = this._performCall(this.labelLocator, event.data);
-		const data = this._getItemSchema(label, value);
-
-		return this._handleItemAdded(label, data, event);
-	}
-
-	/**
-	 * Handle the click on the document to control the focus of the element
-	 * @param {!Event} event
-	 * @protected
-	 */
-	_handleDocClick(event) {
-		this._inputFocus = this.refs.autocomplete.element.contains(
-			event.target
-		);
-	}
-
-	/**
-	 * Handles changes in filteredItems and synchronizes with state.
+	 * Continues the propagation of the filteredItemsChanged event
 	 * @param {!Event} event
 	 * @protected
 	 */
@@ -171,174 +207,31 @@ class ClayMultiSelect extends ClayComponent {
 	}
 
 	/**
-	 * Handles the input blur
+	 * Continues the propagation of the the input blur event.
 	 * @param {!Event} event
 	 * @protected
 	 * @return {?Boolean} If the event has been prevented or not.
 	 */
-	_handleInputOnBlur(event) {
-		this._removeFocusedItem();
-		this._inputFocus = false;
-
+	_handleInputBlur(event) {
 		return !this.emit({
-			name: 'inputOnBlur',
+			data: event.data,
+			name: 'inputBlur',
 			originalEvent: event,
 		});
 	}
 
 	/**
-	 * Handles the input focus
-	 * @protected
-	 */
-	_handleInputOnFocus() {
-		this._inputFocus = true;
-	}
-
-	/**
-	 * Continues the propagation of the itemAdded event.
-	 * @param {!String} value
-	 * @param {!(object|array|string)} data
-	 * @param {!Event} event
-	 * @protected
-	 * @return {?Boolean} If the event has been prevented or not.
-	 */
-	_handleItemAdded(value, data, event) {
-		const label = value.toLowerCase();
-
-		if (
-			label &&
-			!this.selectedItems.find(
-				itemSelected =>
-					this._performCall(
-						this.labelLocator,
-						itemSelected
-					).toLowerCase() === label
-			)
-		) {
-			const newSelectedItems = this.selectedItems.map(item => item);
-			newSelectedItems.push(data);
-			this.selectedItems = newSelectedItems;
-			this.inputValue = null;
-
-			return !this.emit({
-				data: {
-					item: data,
-				},
-				name: 'itemAdded',
-				originalEvent: event,
-			});
-		} else {
-			this.inputValue = label;
-		}
-	}
-
-	/**
-	 * Handle the focus on the selected items and triggers the focused item event.
-	 * @param {!Event} event
-	 * @param {?Boolean} direction
-	 * @protected
-	 * @return {Boolean} If the event has been prevented or not.
-	 */
-	_handleItemFocus(event, direction) {
-		if (this.selectedItems.length) {
-			const {autocomplete} = this.refs;
-			const items = autocomplete.element.querySelectorAll(
-				'span[id="item-tag"]'
-			);
-
-			this._inputFocus = true;
-
-			if (this._itemFocused) {
-				const index = this._itemFocused.getAttribute('data-tag');
-				const condition = direction
-					? Number(index) - 1
-					: Number(index) + 1;
-
-				if (condition > items.length - 1) {
-					this.refs.autocomplete.refs.input.focus();
-					this._removeFocusedItem();
-					return false;
-				} else if (condition >= 0) {
-					this._itemFocused = items[condition];
-					this._itemFocused.focus();
-				} else {
-					return false;
-				}
-			} else {
-				this._itemFocused = items[items.length - 1];
-				this._itemFocused.focus();
-			}
-
-			return !this.emit({
-				data: {
-					item: this._itemFocused,
-				},
-				name: 'itemFocused',
-				originalEvent: event,
-			});
-		}
-	}
-
-	/**
-	 * Handle the focused item removal and propagating the itemRemoved event.
+	 * Continues the propagation of the the input change event.
 	 * @param {!Event} event
 	 * @protected
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
-	_handleItemRemoved(event) {
-		const index = event.getAttribute('data-tag');
-		const item = this.selectedItems[Number(index)];
-
-		this._removeFocusedItem();
-		const newSelectedItems = this.selectedItems.map(item => item);
-		newSelectedItems.splice(Number(index), 1);
-		this.selectedItems = newSelectedItems;
-		this.inputValue = null;
-
+	_handleInputChange(event) {
 		return !this.emit({
-			data: {
-				item,
-			},
-			name: 'itemRemoved',
+			data: event.data,
+			name: 'inputChange',
 			originalEvent: event,
 		});
-	}
-
-	/**
-	 * Handles input changes and propagates the queryChange event.
-	 * @param {!Event} event
-	 * @protected
-	 * @return {Boolean} If the event has been prevented or not.
-	 */
-	_handleOnInput(event) {
-		const {sentence, invalidWord} = this._tokenize(event.data.value);
-
-		this._removeFocusedItem();
-
-		if (event.data.char === ',' || sentence.length > 1) {
-			sentence.forEach(value => {
-				this._handleItemAdded(
-					value,
-					this._getItemSchema(value, value),
-					event
-				);
-			});
-
-			if (invalidWord) {
-				this.inputValue = invalidWord;
-			}
-		} else {
-			this.inputValue = invalidWord;
-
-			return !this.emit({
-				data: {
-					invalidWord,
-					values: sentence,
-				},
-				name: 'inputChange',
-				originalEvent: event,
-			});
-		}
 	}
 
 	/**
@@ -347,111 +240,265 @@ class ClayMultiSelect extends ClayComponent {
 	 * @protected
 	 * @return {Boolean} If the event has been prevented or not.
 	 */
-	_handleOnKeydown(event) {
-		const {value} = this.refs.autocomplete.refs.input;
+	_handleInputKeyDown(event) {
+		const {element, key} = event.data;
 
-		switch (event.data.key) {
-		case 'Enter':
-			event.preventDefault();
-			if (this._itemFocused) {
-				return this._handleItemRemoved(this._itemFocused);
-			} else if (value && event.data.eventFromInput) {
-				return this._handleItemAdded(
-					value,
-					this._getItemSchema(value, value),
-					event
-				);
-			}
-			break;
+		switch (key) {
 		case 'Backspace':
 			// Prevents page from returning when input is empty.
 			// See: https://support.mozilla.org/en-US/questions/1057630
-			if (!value) {
+			if (!element.value) {
 				event.preventDefault();
+				return this._focusLastLabelItem();
 			}
+			break;
 
-			if (!value) {
-				if (!this._itemFocused) {
-					return this._handleItemFocus(event);
-				} else {
-					return this._handleItemRemoved(this._itemFocused);
-				}
-			}
-			break;
-		case 'ArrowLeft':
-			if (!value && this._itemFocused) {
-				return this._handleItemFocus(event, true);
-			}
-			break;
-		case 'ArrowRight':
-			if (!value && this._itemFocused) {
-				return this._handleItemFocus(event, false);
+		case 'Enter':
+			event.preventDefault();
+
+			if (element.value) {
+				return this._addLabelItem(
+					this._createItemObject(element.value, element.value)
+				);
 			}
 			break;
 		}
 	}
 
 	/**
-	 * Handles data mapping.
-	 * @param {!(function|string)} param
-	 * @param {!Array} data
+	 * Continues the propagation of the the input focus event.
+	 * @param {!Event} event
 	 * @protected
-	 * @return {!(string|number)}
+	 * @return {Boolean} If the event has been prevented or not.
 	 */
-	_performCall(param, data) {
-		if (typeof param === 'function') {
-			return param(data);
-		}
-
-		if (typeof data === 'string') {
-			return data;
-		}
-
-		return data[param];
+	_handleInputFocus(event) {
+		return !this.emit({
+			data: event.data,
+			name: 'inputFocus',
+			originalEvent: event,
+		});
 	}
 
 	/**
-	 * Removes the focus from the focused element.
+	 * Continues the propagation of the the autocomplete label item click event.
+	 * @param {!Event} event
 	 * @protected
+	 * @return {?Boolean} If the event has been prevented or not.
 	 */
-	_removeFocusedItem() {
-		if (this._itemFocused) {
-			this._itemFocused = null;
+	_handleLabelItemClick(event) {
+		return !this.emit({
+			data: event.data,
+			name: 'labelItemClick',
+			originalEvent: event,
+		});
+	}
+
+	/**
+	 * Continues the propagation of the item close event.
+	 * @param {!Event} event
+	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleLabelItemCloseButtonClick(event) {
+		return !this.emit({
+			data: Object.assign(event.data || {}, {
+				item: event.target.element,
+			}),
+			name: 'labelItemCloseButtonClick',
+			originalEvent: event,
+		});
+	}
+
+	/**
+	 * Continues the propagation of the item focused event.
+	 * @param {!Event} event
+	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleLabelItemKeyDown(event) {
+		return !this.emit({
+			data: {
+				element: event.currentTarget,
+				key: event.key,
+			},
+			name: 'labelItemKeyDown',
+			originalEvent: event,
+		});
+	}
+
+	/**
+	 * Continues the propagation of the select button clicked event.
+	 * @param {!Event} event
+	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleSelectButtonClicked(event) {
+		return !this.emit({
+			name: 'selectButtonClick',
+			originalEvent: event,
+		});
+	}
+
+	/**
+	 * Continues the propagation of the itemAdded event.
+	 * @param {!String} item
+	 * @protected
+	 * @return {?Boolean} If the event has been prevented or not.
+	 */
+	_addLabelItem(item) {
+		const {label, value} = item;
+
+		const filteredItem = this.filteredItems
+			.filter(filteredItem => {
+				return (
+					filteredItem.data.label.toLowerCase() ===
+					label.toLowerCase()
+				);
+			})
+			.map(filteredItem => {
+				return {
+					label: filteredItem.data.label,
+					value: filteredItem.data.value,
+				};
+			})[0];
+
+		item = filteredItem || item;
+
+		if (value && !this._isItemSelected(item)) {
+			let newSelectedItems = this.selectedItems.map(item => item);
+			newSelectedItems.push(item);
+			this.selectedItems = newSelectedItems;
+
+			return !this.emit({
+				data: {
+					item,
+					selectedItems: this.selectedItems,
+				},
+				name: 'labelItemAdded',
+			});
 		}
+	}
+
+	/**
+	 * Assemble the schema of the item.
+	 * @param {!string} label
+	 * @param {!string} value
+	 * @protected
+	 * @return {!Object}
+	 */
+	_createItemObject(label, value) {
+		return {
+			label: label,
+			value: value,
+		};
+	}
+
+	/**
+	 * Focus a label item and emits the itemFocused event.
+	 * @param {!Element} item
+	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_focusLabelItem(item) {
+		if (item) {
+			item.focus();
+
+			return !this.emit({
+				data: {
+					item,
+				},
+				name: 'labelItemFocused',
+			});
+		}
+	}
+
+	/**
+	 * Focus the last label item.
+	 * @param {!Element} item
+	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_focusLastLabelItem() {
+		const labelItems = this._getLabelItems();
+
+		return this._focusLabelItem(labelItems[labelItems.length - 1]);
+	}
+
+	/**
+	 * Returns all the label items present in the autocomplete
+	 * @protected
+	 * @return {NodeList} The list of label items nodes
+	 */
+	_getLabelItems() {
+		let labelItems = [];
+
+		if (this.selectedItems.length > 0) {
+			const {autocomplete} = this.refs;
+			labelItems = autocomplete.element.querySelectorAll(
+				'span[id="item-tag"]'
+			);
+		}
+
+		return labelItems;
 	}
 
 	/**
 	 * Analyze the string and separate the values that
 	 * get a comma at the end.
 	 * @param {!string} string
-	 * @param {!string} separator
-	 * @return {Object}
+	 * @return {Array}
 	 */
-	_tokenize(string, separator = ',') {
-		const hasComma = string.includes(separator);
+	_getWords(string) {
+		const hasComma = string.includes(',');
 
 		if (hasComma) {
-			const sentence = string.split(/\s*(?:,|$)\s*/).filter(Boolean);
+			const words = string.split(/\s*(?:,|$)\s*/).filter(Boolean);
 
-			return {
-				sentence,
-				invalidWord: null,
-			};
+			return words;
 		}
 
-		return {
-			sentence: [],
-			invalidWord: string,
-		};
+		return [];
 	}
 
 	/**
-	 * @inheritDoc
+	 * @param {!Object} item
+	 * @return {Boolean} If the item is already selected.
 	 */
-	syncSelectedItems(newVal, prevVal) {
-		if (!arrayIsEquals(newVal, prevVal)) {
-			this.refs.autocomplete.refs.input.focus();
-		}
+	_isItemSelected(item) {
+		return Boolean(
+			this.selectedItems.find(selectedItem => {
+				return (
+					selectedItem.label.toLowerCase() ===
+						item.label.toLowerCase() &&
+					selectedItem.value.toLowerCase() ===
+						item.value.toLowerCase()
+				);
+			})
+		);
+	}
+
+	/**
+	 * Removes an item and emits the 'itemRoved' event.
+	 * @param {!Element} element
+	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_removeLabelItem(element) {
+		const index = Number(element.getAttribute('data-tag'));
+		const item = this.selectedItems[index];
+
+		let newSelectedItems = this.selectedItems.map(item => item);
+		newSelectedItems.splice(index, 1);
+
+		this.selectedItems = newSelectedItems;
+
+		return !this.emit({
+			data: {
+				item,
+				selectedItems: this.selectedItems,
+			},
+			name: 'labelItemRemoved',
+		});
 	}
 }
 
@@ -462,25 +509,27 @@ class ClayMultiSelect extends ClayComponent {
  */
 ClayMultiSelect.STATE = {
 	/**
-	 * Flag to indicate that if the input is focused.
+	 * Internal flag to indicate that if the input is focused.
 	 * @instance
 	 * @default false
 	 * @memberof ClayMultiSelect
 	 * @type {?bool}
 	 */
-	_inputFocus: Config.bool()
+	_inputFocused: Config.bool()
 		.value(false)
 		.internal(),
 
 	/**
-	 * Flag to indicate the characters allowed in the
-	 * input element (e.g /[a-zA-Z0-9_]/g).
-	 * @default undefined
+	 * Method or string as condition to filter items in autocomplete.
 	 * @instance
+	 * @default (elem) => elem
 	 * @memberof ClayMultiSelect
-	 * @type {?RegExp}
+	 * @type {?(function|string)}
 	 */
-	allowedCharacters: Config.instanceOf(RegExp),
+	autocompleteFilterCondition: Config.oneOfType([
+		Config.func(),
+		Config.string(),
+	]).value(elem => elem),
 
 	/**
 	 * Variation name to render different deltemplates.
@@ -501,6 +550,27 @@ ClayMultiSelect.STATE = {
 	data: Config.object(),
 
 	/**
+	 * Set the request debounce time
+	 * @instance
+	 * @default 200
+	 * @memberof ClayMultiSelect
+	 * @type {?(number)}
+	 */
+	dataProviderDebounceTime: Config.number().value(200),
+
+	/**
+	 * Set some initial data while the first request is being made
+	 * @instance
+	 * @default undefined
+	 * @memberof ClayMultiSelect
+	 * @type {?(object|array)}
+	 */
+	dataProviderInitialData: Config.oneOfType([
+		Config.object(),
+		Config.array(),
+	]),
+
+	/**
 	 * The array of data items that the data source contains,
 	 * the URL for the data provider to request, or a function
 	 * that receives the query and returns a promise with the
@@ -515,16 +585,7 @@ ClayMultiSelect.STATE = {
 		Config.func(),
 		Config.object(),
 		Config.string(),
-	]).required(),
-
-	/**
-	 * Set the request debounce time
-	 * @instance
-	 * @default 200
-	 * @memberof ClayMultiSelect
-	 * @type {?(number)}
-	 */
-	debounceTime: Config.number().value(200),
+	]),
 
 	/**
 	 * Object that wires events with default listeners
@@ -535,6 +596,8 @@ ClayMultiSelect.STATE = {
 	 * @type {?(object|undefined)}
 	 */
 	defaultEventHandler: Config.object(),
+
+	dropdownPortalElement: Config.string(),
 
 	/**
 	 * CSS classes to be applied to the element.
@@ -588,13 +651,13 @@ ClayMultiSelect.STATE = {
 	id: Config.string(),
 
 	/**
-	 * Set some initial data while the first request is being made
-	 * @instance
+	 * Characters allowed in the input element (e.g /[a-zA-Z0-9_]/g).
 	 * @default undefined
+	 * @instance
 	 * @memberof ClayMultiSelect
-	 * @type {?(object|array)}
+	 * @type {?RegExp}
 	 */
-	initialData: Config.oneOfType([Config.object(), Config.array()]),
+	inputAllowedCharacters: Config.instanceOf(RegExp),
 
 	/**
 	 * Name for each selected item input hidden.
@@ -604,6 +667,36 @@ ClayMultiSelect.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	inputName: Config.string().value('selectedItems'),
+
+	/*
+	 * Value of the input.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @private
+	 * @type {?(string|undefined)}
+	 */
+	inputValue: Config.string().internal(),
+
+	/**
+	 * Label of the input element.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @type {?(string|undefined)}
+	 */
+	label: Config.string(),
+
+	/**
+	 * Sets the name of the field to map the label of the item.
+	 * @default label
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @type {?(function|string)}
+	 */
+	labelLocator: Config.oneOfType([Config.func(), Config.string()]).value(
+		'label'
+	),
 
 	/**
 	 * Input placeholder.
@@ -622,16 +715,6 @@ ClayMultiSelect.STATE = {
 	 * @type {?(number|undefined)}
 	 */
 	pollingInterval: Config.number().value(0),
-
-	/*
-	 * Value of the input.
-	 * @default undefined
-	 * @instance
-	 * @memberof ClayMultiSelect
-	 * @private
-	 * @type {?(string|undefined)}
-	 */
-	inputValue: Config.string().internal(),
 
 	/**
 	 * Set ups the request options
@@ -683,26 +766,6 @@ ClayMultiSelect.STATE = {
 	 * @type {?(number|undefined)}
 	 */
 	requestTimeout: Config.number().value(30000),
-
-	/**
-	 * Label of the input element.
-	 * @default undefined
-	 * @instance
-	 * @memberof ClayMultiSelect
-	 * @type {?(string|undefined)}
-	 */
-	label: Config.string(),
-
-	/**
-	 * Sets the name of the field to map the label of the item.
-	 * @default label
-	 * @instance
-	 * @memberof ClayMultiSelect
-	 * @type {?(function|string)}
-	 */
-	labelLocator: Config.oneOfType([Config.func(), Config.string()]).value(
-		'label'
-	),
 
 	/**
 	 * List of the selected Items.
