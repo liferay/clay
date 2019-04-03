@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
- 
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import ClayLink from '../src/ClayLink';
@@ -13,28 +13,26 @@ import 'clay-css/lib/css/atlas.css';
 const App: React.FunctionComponent = () => {
 	return (
 		<div>
-			<h2>Link Styles</h2>
-			<ClayLink href="#link-styles">
-				{'Default'}
-			</ClayLink>
+			<h2>{'Link Styles'}</h2>
+			<ClayLink href="#link-styles">{'Default'}</ClayLink>
 
-			<ClayLink href="#link-styles" displayType="secondary">
+			<ClayLink displayType="secondary" href="#link-styles">
 				{'Secondary'}
 			</ClayLink>
 
-			<ClayLink href="#link-styles" buttonDisplayType="primary">
+			<ClayLink buttonDisplayType="primary" href="#link-styles">
 				{'Button Primary'}
 			</ClayLink>
 
-			<ClayLink href="#link-styles" buttonDisplayType="secondary">
+			<ClayLink buttonDisplayType="secondary" href="#link-styles">
 				{'Button Secondary'}
 			</ClayLink>
 
-			<ClayLink href="#link-styles" buttonDisplayType="link">
+			<ClayLink buttonDisplayType="link" href="#link-styles">
 				{'Button Link'}
 			</ClayLink>
 
-			<ClayLink href="#link-styles" aria-label="My Link" />
+			<ClayLink aria-label="My Link" href="#link-styles" />
 		</div>
 	);
 };

@@ -10,28 +10,20 @@ import ClayLink from '../ClayLink';
 
 describe('ClayLink', () => {
 	it('renders', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayLink />
-		);
+		const testRenderer = TestRenderer.create(<ClayLink />);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
 	it('renders with href', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayLink
-				href="#links"
-			/>
-		);
+		const testRenderer = TestRenderer.create(<ClayLink href="#links" />);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
 	it('renders with a children content', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayLink>
-				{'My Link'}
-			</ClayLink>
+			<ClayLink>{'My Link'}</ClayLink>
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
@@ -39,9 +31,7 @@ describe('ClayLink', () => {
 
 	it('renders with a display type', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayLink
-				displayType="secondary"
-			/>
+			<ClayLink displayType="secondary" />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
@@ -49,9 +39,7 @@ describe('ClayLink', () => {
 
 	it('renders with a button display type', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayLink
-				buttonDisplayType="primary"
-			/>
+			<ClayLink buttonDisplayType="primary" />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
