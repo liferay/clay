@@ -47,44 +47,19 @@ class ClayAutocomplete extends ClayComponent {
 	/**
 	 * @inheritDoc
 	 */
+	syncFilteredItems() {
+		if (!this.filteredItems.length) {
+			this._dropdownItemFocused = null;
+		}
+	}
+
+	/**
+	 * @inheritDoc
+	 */
 	syncInputFocused(newVal) {
 		if (newVal === true) {
 			this.refs.input.focus();
 		}
-	}
-
-	_getUpdatedFilteredItems() {
-		let filteredItems = this.refs.dataProvider.filter(
-			this._query,
-			this.extractData
-		);
-
-		filteredItems.map(filteredItem => {
-			let newFilteredItemData = {};
-
-			if (this.labelLocator) {
-				newFilteredItemData.label = this._performCall(
-					this.labelLocator,
-					filteredItem.data
-				);
-			}
-
-			if (this.valueLocator) {
-				newFilteredItemData.value = this._performCall(
-					this.valueLocator,
-					filteredItem.data
-				);
-			}
-
-			if (typeof filteredItem.data === 'string') {
-				filteredItem.data = newFilteredItemData;
-			} else {
-				filteredItem.data.label = newFilteredItemData.label;
-				filteredItem.data.value = newFilteredItemData.value;
-			}
-		});
-
-		return filteredItems;
 	}
 
 	/**
@@ -119,22 +94,56 @@ class ClayAutocomplete extends ClayComponent {
 	}
 
 	/**
-	 * Handles data mapping.
-	 * @param {!(function|string)} param
-	 * @param {!Array} data
+	 * Gets the accepted characters of the input
+	 * element values
+	 * @param {!string} value
 	 * @protected
-	 * @return {!(string|number)}
+	 * @return {string}
 	 */
-	_performCall(param, data) {
-		if (typeof param === 'function') {
-			return param(data);
-		}
+	_getCharactersAllowed(value) {
+		const regexp = new RegExp(this.allowedCharacters);
+		const match = value.match(regexp);
 
-		if (typeof data === 'string') {
-			return data;
-		}
+		return Array.isArray(match) ? match.join('') : '';
+	}
 
-		return data[param];
+	/**
+	 * Gets the the udpated filtered items
+	 * @protected
+	 * @return {Array}
+	 */
+	_getUpdatedFilteredItems() {
+		let filteredItems = this.refs.dataProvider.filter(
+			this._query,
+			this.extractData
+		);
+
+		filteredItems.map(filteredItem => {
+			let newFilteredItemData = {};
+
+			if (this.labelLocator) {
+				newFilteredItemData.label = this._performCall(
+					this.labelLocator,
+					filteredItem.data
+				);
+			}
+
+			if (this.valueLocator) {
+				newFilteredItemData.value = this._performCall(
+					this.valueLocator,
+					filteredItem.data
+				);
+			}
+
+			if (typeof filteredItem.data === 'string') {
+				filteredItem.data = newFilteredItemData;
+			} else {
+				filteredItem.data.label = newFilteredItemData.label;
+				filteredItem.data.value = newFilteredItemData.value;
+			}
+		});
+
+		return filteredItems;
 	}
 
 	/**
@@ -306,6 +315,25 @@ class ClayAutocomplete extends ClayComponent {
 	}
 
 	/**
+	 * Handles data mapping.
+	 * @param {!(function|string)} param
+	 * @param {!Array} data
+	 * @protected
+	 * @return {!(string|number)}
+	 */
+	_performCall(param, data) {
+		if (typeof param === 'function') {
+			return param(data);
+		}
+
+		if (typeof data === 'string') {
+			return data;
+		}
+
+		return data[param];
+	}
+
+	/**
 	 * Handle the interactions in the dropdown and add focus on the items.
 	 * @param {!Boolean} direction
 	 * @protected
@@ -335,29 +363,6 @@ class ClayAutocomplete extends ClayComponent {
 
 				elements[this._dropdownItemFocused].focus();
 			}
-		}
-	}
-
-	/**
-	 * Gets the accepted characters of the input
-	 * element values
-	 * @param {!string} value
-	 * @protected
-	 * @return {string}
-	 */
-	_getCharactersAllowed(value) {
-		const regexp = new RegExp(this.allowedCharacters);
-		const match = value.match(regexp);
-
-		return Array.isArray(match) ? match.join('') : '';
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	syncFilteredItems() {
-		if (!this.filteredItems.length) {
-			this._dropdownItemFocused = null;
 		}
 	}
 }
