@@ -15,11 +15,12 @@ import React, {
 
 import {useCurrentTime, useWeeks} from './Hooks';
 
-import Button from './Button';
+import Button from '@clayui/button';
 import DateNavigation from './DateNavigation';
 import DayNumber from './DayNumber';
 import DaysTable from './DaysTable';
 import Dropdown from './Dropdown';
+import Icon from '@clayui/icon';
 import InputDate from './InputDate';
 import TimePicker from './TimePicker';
 import Weekday from './Weekday';
@@ -326,11 +327,11 @@ const ClayDatePicker: FunctionComponent<Props> = ({
 						<div className="input-group-inset-item input-group-inset-item-after">
 							<Button
 								className="date-picker-dropdown-toggle"
-								icon="calendar"
+								displayType="unstyled"
 								onClick={handleCalendarButtonClicked}
-								spritemap={spritemap}
-								variant="unstyled"
-							/>
+							>
+								<Icon spritemap={spritemap} symbol="calendar" />
+							</Button>
 						</div>
 					)}
 				</div>
