@@ -933,66 +933,6 @@ describe('ClayManagementToolbar', function() {
 		);
 	});
 
-	it('should render a management toolbar and emit an event on creation menu click with data from the secondaryItems', () => {
-		managementToolbar = new ClayManagementToolbar({
-			creationMenu: {
-				secondaryItems: [
-					{
-						label: 'Add Content 1',
-					},
-				],
-			},
-			spritemap: spritemap,
-		});
-
-		const spy = jest.spyOn(managementToolbar, 'emit');
-
-		managementToolbar.refs.creationMenu.element.click();
-
-		expect(spy).toHaveBeenCalled();
-		expect(spy).toHaveBeenCalledWith(
-			expect.objectContaining({
-				data: {
-					label: 'Add Content 1',
-				},
-				name: 'creationButtonClicked',
-				originalEvent: expect.any(Object),
-			})
-		);
-	});
-
-	it('should render a management toolbar and emit an event on creation menu click with data from the secondaryItems.items', () => {
-		managementToolbar = new ClayManagementToolbar({
-			creationMenu: {
-				secondaryItems: [
-					{
-						items: [
-							{
-								label: 'Add Content 1',
-							},
-						],
-					},
-				],
-			},
-			spritemap: spritemap,
-		});
-
-		const spy = jest.spyOn(managementToolbar, 'emit');
-
-		managementToolbar.refs.creationMenu.element.click();
-
-		expect(spy).toHaveBeenCalled();
-		expect(spy).toHaveBeenCalledWith(
-			expect.objectContaining({
-				data: {
-					label: 'Add Content 1',
-				},
-				name: 'creationButtonClicked',
-				originalEvent: expect.any(Object),
-			})
-		);
-	});
-
 	it('should render a management toolbar and emit an event on creation menu more button click', () => {
 		managementToolbar = new ClayManagementToolbar({
 			creationMenu: {
