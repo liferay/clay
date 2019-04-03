@@ -9,10 +9,10 @@
 		"esModuleInterop": true,
 		"removeComments": true,
 		"allowJs": true,
-		"baseUrl": "./",
+		"baseUrl": ".",
 		"paths": {
 			"@clayui/*": ["./packages/clay-*"],
-			"*": ["node_modules", "packages"]
+			"*": ["custom-types/*", "node_modules/*", "packages/*"]
 		}
 	},
 	"awesomeTypescriptLoaderOptions": {

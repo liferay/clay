@@ -5,10 +5,9 @@
  */
 
 import ClayTimePicker from '@clayui/time-picker';
+import Icon from '@clayui/icon';
 import moment from 'moment';
 import React, {ChangeEventHandler, FunctionComponent} from 'react';
-
-import Icon from './Icon';
 
 interface Props {
 	currentTime: string;
