@@ -23,9 +23,8 @@
   "scripts": {
     "build": "npm run compile",
     "compile": "gulp compile",
-    "link": "npm link",
-    "prepublish": "npm run compile",
-    "yarnLink": "yarn link"
+    "link": "yarn link",
+    "prepublish": "npm run compile"
   },
   "repository": {
     "type": "git",
