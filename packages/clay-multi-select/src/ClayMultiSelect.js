@@ -76,8 +76,6 @@ class ClayMultiSelect extends ClayComponent {
 	_defaultAutocompleteItemSelected(event) {
 		const {label, value} = event.data.item;
 
-		this.filteredItems = [];
-
 		const item = this._createItemObject(label, value);
 
 		return this._addLabelItem(item);
@@ -362,12 +360,19 @@ class ClayMultiSelect extends ClayComponent {
 				};
 			})[0];
 
-		item = filteredItem || item;
+		if (this.allowOnlyItemsFromAutocomplete) {
+			item = filteredItem;
+		}
+		else {
+			item = filteredItem || item;
+		}
 
-		if (value && !this._isItemSelected(item)) {
+		if (item && value && !this._isItemSelected(item)) {
 			let newSelectedItems = this.selectedItems.map(item => item);
 			newSelectedItems.push(item);
 			this.selectedItems = newSelectedItems;
+
+			this.filteredItems = [];
 
 			return !this.emit({
 				data: {
@@ -518,6 +523,8 @@ ClayMultiSelect.STATE = {
 	_inputFocused: Config.bool()
 		.value(false)
 		.internal(),
+
+	allowOnlyItemsFromAutocomplete: Config.bool().value(false),
 
 	/**
 	 * Method or string as condition to filter items in autocomplete.
