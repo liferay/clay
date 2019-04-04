@@ -676,7 +676,7 @@ ClayMultiSelect.STATE = {
 	 * @private
 	 * @type {?(string|undefined)}
 	 */
-	inputValue: Config.string().internal(),
+	inputValue: Config.string(),
 
 	/**
 	 * Label of the input element.
