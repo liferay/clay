@@ -6,14 +6,29 @@
 import * as React from 'react';
 import classNames from 'classnames';
 
+type DisplayType =
+	| 'primary'
+	| 'secondary'
+	| 'info'
+	| 'error'
+	| 'success'
+	| 'warning';
+
 interface Props extends React.HTMLAttributes<HTMLSpanElement> {
-	displayType?: string;
+	/**
+	 * Determines the color of the badge.
+	 */
+	displayType?: DisplayType;
+
+	/**
+	 * Info that is shown inside of the badge itself.
+	 */
 	label?: string | number;
 }
 
 const ClayBadge: React.FunctionComponent<Props> = ({
 	className,
-	displayType,
+	displayType = 'primary',
 	label,
 	...otherProps
 }) => (
@@ -24,9 +39,5 @@ const ClayBadge: React.FunctionComponent<Props> = ({
 		<span className="badge-item badge-item-expand">{label}</span>
 	</span>
 );
-
-ClayBadge.defaultProps = {
-	displayType: 'primary',
-};
 
 export default ClayBadge;
