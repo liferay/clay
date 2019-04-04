@@ -47,6 +47,13 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h2>Allow only labels from autocomplete</h2>
+			<div id="only-from-autocomplete-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
 			<h2>With only data remote</h2>
 			<div id="selected-block"></div>
 		</div>
@@ -171,8 +178,18 @@
 			helpText: 'You can use a comma to enter tags',
 			label: 'Tags',
 			spritemap,
-			id: 'uno',
 		}, '#disabled-autocomplete-block');
+
+		// Allow only items from autocomplete
+		new metal.ClayMultiSelect({
+			allowOnlyItemsFromAutocomplete: true,
+			autocompleteFilterCondition: 'label',
+			dataSource,
+			helpText: 'You can use a comma to enter tags',
+			label: 'Tags',
+			selectedItems,
+			spritemap,
+		}, '#only-from-autocomplete-block');
 
 		// With only data remote
 		new metal.ClayMultiSelect({
