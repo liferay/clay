@@ -18,7 +18,7 @@ $toggle-switch-bar-bg: $input-group-addon-bg !default;
 $toggle-switch-bar-border-color: $input-group-addon-border-color !default;
 $toggle-switch-bar-border-radius: 3px !default;
 $toggle-switch-bar-border-width: 1px !default;
-$toggle-switch-bar-focus-box-shadow: 0 0 3px 2px #66AFE6 !default;
+$toggle-switch-bar-focus-box-shadow: $input-btn-focus-box-shadow !default;
 $toggle-switch-bar-font-size: 0.75rem !default; // 12px
 $toggle-switch-bar-font-size-mobile: $toggle-switch-bar-font-size !default;
 $toggle-switch-bar-icon-color: $input-color !default;
