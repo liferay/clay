@@ -10,12 +10,25 @@ import classNames from 'classnames';
 export type DisplayType = 'primary' | 'secondary' | 'link' | 'unstyled';
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+	/**
+	 * Renders the button as a block element.
+	 */
 	block?: boolean;
+
+	/**
+	 * Determines how to button is displayed.
+	 */
 	displayType?: DisplayType;
-	id?: string;
+
+	/**
+	 * Flag to indicate if button should be monospaced.
+	 */
 	monospaced?: boolean;
+
+	/**
+	 * Indicates button should be a small variant.
+	 */
 	small?: boolean;
-	title?: string;
 }
 
 interface IClayButton extends React.FunctionComponent<Props> {

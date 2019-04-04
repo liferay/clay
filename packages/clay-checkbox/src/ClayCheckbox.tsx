@@ -8,9 +8,24 @@ import * as React from 'react';
 import classNames from 'classnames';
 
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
+	/**
+	 * Props to add to the outer most container.
+	 */
 	containerProps?: React.HTMLAttributes<HTMLDivElement>;
+
+	/**
+	 * Flag to indicate that checkbox is in an indeterminate state.
+	 */
 	indeterminate?: boolean;
+
+	/**
+	 * Flag to display element `inline`.
+	 */
 	inline?: boolean;
+
+	/**
+	 * Text describes what the checkbox is for.
+	 */
 	label?: React.ReactText;
 }
 

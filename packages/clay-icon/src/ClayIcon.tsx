@@ -12,7 +12,14 @@ export const ClayIconSpriteContext = React.createContext('');
 
 interface Props extends React.SVGAttributes<SVGSVGElement> {
 	className?: string;
+	/**
+	 * Path to the location of the spritemap resource.
+	 */
 	spritemap?: string;
+
+	/**
+	 * The id of the icon in the spritemap.
+	 */
 	symbol: string;
 }
 
