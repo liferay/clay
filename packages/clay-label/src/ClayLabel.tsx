@@ -12,8 +12,19 @@ type DisplayType = 'secondary' | 'info' | 'warning' | 'danger' | 'success';
 
 interface Props
 	extends React.BaseHTMLAttributes<HTMLAnchorElement | HTMLSpanElement> {
+	/**
+	 * HTML properties that are applied to the 'x' button.
+	 */
 	closeButtonProps?: React.ButtonHTMLAttributes<HTMLButtonElement>;
+
+	/**
+	 * Determines the style of the label.
+	 */
 	displayType?: DisplayType;
+
+	/**
+	 * Flag to indicate if the label should be of the `large` variant.
+	 */
 	large?: boolean;
 }
 
