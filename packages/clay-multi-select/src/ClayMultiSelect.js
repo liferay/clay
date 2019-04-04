@@ -362,8 +362,7 @@ class ClayMultiSelect extends ClayComponent {
 
 		if (this.allowOnlyItemsFromAutocomplete) {
 			item = filteredItem;
-		}
-		else {
+		} else {
 			item = filteredItem || item;
 		}
 
@@ -524,6 +523,13 @@ ClayMultiSelect.STATE = {
 		.value(false)
 		.internal(),
 
+	/**
+	 * Flag to indicate if only items from autocomplete should be accepted.
+	 * @default false
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @type {?bool}
+	 */
 	allowOnlyItemsFromAutocomplete: Config.bool().value(false),
 
 	/**
