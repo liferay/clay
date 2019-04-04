@@ -49,7 +49,7 @@ ClayLink has become simpler with v3, removing APIs from `icon` and `image`, maki
 
 ### API Changes
 
-- `buttonStyle` renamed to `buttonDisplayType`
+- `buttonStyle` depreciated
 - `data` depreciated
 - `defaultEventHandler` depreciated
 - `elementClasses` renamed to `className`

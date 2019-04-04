@@ -7,17 +7,11 @@
 import * as React from 'react';
 import classNames from 'classnames';
 
-type DisplayType = 'secondary';
-
-type ButtonDisplayType = 'link' | 'primary' | 'secondary';
-
 interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
-	buttonDisplayType?: ButtonDisplayType;
-	displayType?: DisplayType;
+	displayType?: 'secondary';
 }
 
 const ClayLink: React.FunctionComponent<Props> = ({
-	buttonDisplayType,
 	children,
 	className,
 	displayType,
@@ -25,8 +19,7 @@ const ClayLink: React.FunctionComponent<Props> = ({
 }) => (
 	<a
 		className={classNames(className, {
-			[`btn btn-${buttonDisplayType}`]: buttonDisplayType,
-			[`link-${displayType}`]: !buttonDisplayType && displayType,
+			[`link-${displayType}`]: displayType,
 		})}
 		{...otherProps}
 	>

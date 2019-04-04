@@ -36,12 +36,4 @@ describe('ClayLink', () => {
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
-
-	it('renders with a button display type', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayLink buttonDisplayType="primary" />
-		);
-
-		expect(testRenderer.toJSON()).toMatchSnapshot();
-	});
 });

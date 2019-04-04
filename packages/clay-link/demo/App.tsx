@@ -20,19 +20,9 @@ const App: React.FunctionComponent = () => {
 				{'Secondary'}
 			</ClayLink>
 
-			<ClayLink buttonDisplayType="primary" href="#link-styles">
-				{'Button Primary'}
+			<ClayLink aria-label="My Link" href="#link-styles">
+				{'With Aria Label'}
 			</ClayLink>
-
-			<ClayLink buttonDisplayType="secondary" href="#link-styles">
-				{'Button Secondary'}
-			</ClayLink>
-
-			<ClayLink buttonDisplayType="link" href="#link-styles">
-				{'Button Link'}
-			</ClayLink>
-
-			<ClayLink aria-label="My Link" href="#link-styles" />
 		</div>
 	);
 };
