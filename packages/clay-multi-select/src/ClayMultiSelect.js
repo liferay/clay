@@ -597,6 +597,14 @@ ClayMultiSelect.STATE = {
 	 */
 	defaultEventHandler: Config.object(),
 
+	/**
+	 * Element selector to render the autocomplete dropdown in.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
 	dropdownPortalElement: Config.string(),
 
 	/**
