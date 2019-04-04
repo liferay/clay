@@ -383,7 +383,7 @@
 								{/let}
 
 								<li {$attributes}>
-									{if isNonnull($item.href) and (not isNonnull($item.disabled) or $item.disabled == false)}
+									{if isNonnull($item.href) and $item.href != '' and (not isNonnull($item.disabled) or $item.disabled == false)}
 										{call ClayLink.render}
 											{param elementClasses: 'nav-link nav-link-monospaced' /}
 											{param href: $item.href /}
@@ -493,7 +493,7 @@
 			$primaryItems[0] :
 			$secondaryItems[0].items ? $secondaryItems[0].items[0] : $secondaryItems[0] /}
 
-		{if $item.href}
+		{if isNonnull($item.href) and $item.href != ''}
 			{call ClayLink.render}
 				{param ariaLabel: $item.label /}
 				{param buttonStyle: 'primary' /}
