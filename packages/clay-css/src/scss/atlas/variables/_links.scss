@@ -33,10 +33,15 @@ $component-action: map-merge((
 	font-size: 1rem, // 16px
 	hover-bg: rgba($gray-900, 0.03),
 	hover-color: $gray-900,
+	focus-bg: rgba($gray-900, 0.03),
+	focus-box-shadow: map-get($btn-secondary, focus-box-shadow),
+	focus-color: $gray-900,
+	focus-outline: 0,
 	active-bg: rgba($gray-900, 0.06),
 	active-color: $gray-900,
 	btn-focus-box-shadow: map-get($btn-secondary, focus-box-shadow),
-	disabled-bg: transparent
+	disabled-bg: transparent,
+	disabled-box-shadow: none,
 ), $component-action);
 
 // Link Outline
@@ -45,10 +50,15 @@ $link-outline-primary: () !default;
 $link-outline-primary: map-merge((
 	hover-bg: $primary-l3,
 	hover-color: $primary,
+	focus-bg: $primary-l3,
+	focus-box-shadow: map-get($btn-outline-primary, focus-box-shadow),
+	focus-color: $primary,
+	focus-outline: 0,
 	btn-focus-box-shadow: map-get($btn-outline-primary, focus-box-shadow),
 	btn-focus-outline: 0,
 	active-bg: lighten(desaturate($primary, 42.05), 41.76),
-	active-color: $primary
+	active-color: $primary,
+	disabled-box-shadow: none,
 ), $link-outline-primary);
 
 $link-outline-secondary: () !default;
@@ -56,8 +66,13 @@ $link-outline-secondary: map-merge((
 	border-color: $secondary-l2,
 	hover-bg: rgba($gray-900, 0.03),
 	hover-color: $gray-900,
-	btn-focus-box-shadow: map-get($btn-secondary, focus-box-shadow),
+	focus-bg: rgba($gray-900, 0.03),
+	focus-box-shadow: map-get($btn-outline-secondary, focus-box-shadow),
+	focus-color: $gray-900,
+	focus-outline: 0,
+	btn-focus-box-shadow: map-get($btn-outline-secondary, focus-box-shadow),
 	btn-focus-outline: 0,
 	active-bg: rgba($gray-900, 0.06),
 	active-color: $gray-900,
+	disabled-box-shadow: none,
 ), $link-outline-secondary);
