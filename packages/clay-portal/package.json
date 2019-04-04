@@ -19,10 +19,9 @@
   "scripts": {
     "build": "npm run soy && webpack",
     "compile": "babel -d lib/ src/ -s --ignore src/__tests__",
-    "link": "npm link",
+    "link": "yarn link",
     "prepublish": "npm run soy && npm run compile",
-    "soy": "metalsoy",
-    "yarnLink": "yarn link"
+    "soy": "metalsoy"
   },
   "keywords": [
     "clay",

@@ -19,10 +19,9 @@
 		"build": "npm run soy && webpack && ncp ./node_modules/clay-charts-shared/lib/css build",
 		"compile": "babel -d lib/ src/ -s --ignore src/__tests__",
 		"copyAssets": "ncp ./node_modules/clay-charts-shared/lib/svg lib/svg && ncp ./node_modules/clay-charts-shared/lib/css lib/css",
-		"link": "npm link",
+		"link": "yarn link",
 		"prepublish": "npm run soy && npm run compile && npm run copyAssets",
-		"soy": "metalsoy --soyDeps node_modules/metal*/src/**/*.soy node_modules/clay*/src/**/*.soy",
-		"yarnLink": "yarn link"
+		"soy": "metalsoy --soyDeps node_modules/metal*/src/**/*.soy node_modules/clay*/src/**/*.soy"
 	},
 	"keywords": [
 		"metal"
