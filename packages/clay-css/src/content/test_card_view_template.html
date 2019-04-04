@@ -1013,6 +1013,14 @@ section: Visual Tests
 		formControl.focus();
 	});
 
+	$('.input-group-inset').on('focusin', function(event) {
+		$(this).closest('.input-group-item').addClass('focus');
+	});
+
+	$('.input-group-inset').on('focusout', function(event) {
+		$(this).closest('.input-group-item').removeClass('focus');
+	});
+
 	$('#uniqueSidenavToggler1').sideNavigation({
 		gutter: '24px', // The space between the sidenav-slider and the sidenav-content. Default: 15px.
 		heightType: 'fullHeight',
