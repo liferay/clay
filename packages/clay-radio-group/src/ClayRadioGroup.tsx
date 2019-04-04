@@ -8,9 +8,24 @@ import * as React from 'react';
 import classNames from 'classnames';
 
 interface RadioProps extends React.InputHTMLAttributes<HTMLInputElement> {
+	/**
+	 * Props for the outer most container element.
+	 */
 	containerProps?: React.HTMLAttributes<HTMLDivElement>;
+
+	/**
+	 * Flag to indicate if radio elements should display inline.
+	 */
 	inline?: boolean;
+
+	/**
+	 * Text to describe for radio element.
+	 */
 	label?: React.ReactText;
+
+	/**
+	 * Value provided if element is selected.
+	 */
 	value: React.ReactText;
 }
 
@@ -61,9 +76,26 @@ const Radio: RadioType = ({
 
 interface GroupProps extends React.HTMLAttributes<HTMLDivElement> {
 	children: React.ReactElement<RadioProps>[];
+
+	/**
+	 * Flag to indicate if radio elements should display inline.
+	 */
 	inline?: boolean;
+
+	/**
+	 * Form element `name` that is applied to each radio element.
+	 */
 	name?: string;
+
+	/**
+	 * Callback function for whenever a radio element is selected.
+	 */
 	onSelectedValueChange: (val: React.ReactText) => void;
+
+	/**
+	 * The value that corresponds to the selected radio element. Leave
+	 * undefined if no option is selected.
+	 */
 	selectedValue?: React.ReactText;
 }
 
