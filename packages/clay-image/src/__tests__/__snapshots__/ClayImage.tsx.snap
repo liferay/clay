@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayImage renders 1`] = `
+<img
+  alt="user image"
+  className="img-fluid"
+  src="avatar.png"
+/>
+`;
+
+exports[`ClayImage renders with className 1`] = `
+<img
+  alt="user image"
+  className="sticker-img"
+  src="avatar.png"
+/>
+`;
