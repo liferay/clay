@@ -119,3 +119,13 @@ Using a radio by itself doesn't make much sense, only when 2+ exist does the fun
 	<ClayRadioGroup.Radio label="Three" value="three" />
 </ClayRadioGroup>
 ```
+
+## ClayLabel
+
+### API Changes
+
+-   `style` is now `displayType`
+-   Removed `size` in favor of `large` since there is only default and large options.
+-   Removed `label` in favor of utilizing `children` prop
+-   Added `closeButtonProps` which allows you to add attributes to the nested button.
+    -   This is where you would pass a callback for `onClick`.
