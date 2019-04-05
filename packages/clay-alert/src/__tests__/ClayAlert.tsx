@@ -10,8 +10,52 @@ import ClayAlert from '../ClayAlert';
 
 describe('ClayAlert', () => {
 	it('renders', () => {
+		const testRenderer = TestRenderer.create(<ClayAlert title="Hello!" />);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('renders as a different type', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayAlert />
+			<ClayAlert displayType="danger" title="Hello!" />
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('renders as `stripe` variant', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayAlert stripe title="Hello!" />
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('renders with an icon for closing', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayAlert onClose={() => {}} title="Hello!" />
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('renders with a title and a message with markup', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayAlert title="Hello!">
+				<span>{'test'}</span>
+			</ClayAlert>
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('renders with ToastContainer as a wrapper ', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayAlert.ToastContainer>
+				<ClayAlert title="One!" />
+				<ClayAlert title="Two!" />
+				<ClayAlert title="Three!" />
+			</ClayAlert.ToastContainer>
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();

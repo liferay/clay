@@ -16,6 +16,32 @@ To symbolize this change, Clay is distributing the new packages on the scope npm
 
 > Clay v2 is still being distributed and maintained on the `clay-link`, `clay-button` packages...
 
+## ClayAlert
+
+CLayAlert v3 combines Alert, Stripe Alert, and Toast Notifications all in one.
+
+### API Changes
+
+-   `autoClose` was removed
+-   `closed` was removed in favor of the `onClose` callback
+-   `destroyOnHide` was removed
+-   `style` was renamed to `displayType`
+-   `message` was removed in favor of using `children`
+
+### Compositions
+
+To get to the behavior of Clay Toast Notifications, you need to use `ClayAlert.ToastContainer` as a parent for `ClayAlert`
+
+For Example:
+
+```jsx
+<ClayAlert.ToastContainer>
+	<ClayAlert title="One!" />
+	<ClayAlert title="Two!" />
+	<ClayAlert title="Three!" />
+</ClayAlert.ToastContainer>
+```
+
 ## ClayButton
 
 -   Removed icon dependency within button itself
