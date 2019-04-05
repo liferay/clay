@@ -65,6 +65,8 @@ $label-lg: map-merge((
 
 // Label Variants
 
+$label-base: () !default;
+
 // $label-primary-color is deprecated as of v2.4.1
 $label-primary-color: $primary !default;
 // $label-primary-hover-color is deprecated as of v2.4.1
