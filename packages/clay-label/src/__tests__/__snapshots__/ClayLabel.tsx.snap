@@ -11,3 +11,28 @@ exports[`ClayLabel renders 1`] = `
   </span>
 </span>
 `;
+
+exports[`ClayLabel renders as a link  1`] = `
+<a
+  className="label label-secondary"
+  href="#/foo/bar"
+>
+  <span
+    className="label-item label-item-expand"
+  >
+    Label w/ link
+  </span>
+</a>
+`;
+
+exports[`ClayLabel renders with a different displayType  1`] = `
+<span
+  className="label label-success"
+>
+  <span
+    className="label-item label-item-expand"
+  >
+    Success Label
+  </span>
+</span>
+`;

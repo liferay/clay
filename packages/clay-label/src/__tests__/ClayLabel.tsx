@@ -16,4 +16,20 @@ describe('ClayLabel', () => {
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
+
+	it('renders with a different displayType ', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayLabel displayType="success">{'Success Label'}</ClayLabel>
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('renders as a link ', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayLabel href="#/foo/bar">{'Label w/ link'}</ClayLabel>
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
 });
