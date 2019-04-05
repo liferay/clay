@@ -112,16 +112,20 @@ const ClayRadioGroup: React.FunctionComponent<GroupProps> & {
 }) => {
 	return (
 		<div {...otherProps} className={classNames(className)}>
-			{children.map((child, i) => {
-				return React.cloneElement(child, {
-					...child.props,
-					checked: selectedValue === child.props.value,
-					inline,
-					key: i,
-					name,
-					onChange: () => onSelectedValueChange(child.props.value),
-				});
-			})}
+			{React.Children.map(
+				children,
+				(child: React.ReactElement<RadioProps>, i) => {
+					return React.cloneElement(child, {
+						...child.props,
+						checked: selectedValue === child.props.value,
+						inline,
+						key: i,
+						name,
+						onChange: () =>
+							onSelectedValueChange(child.props.value),
+					});
+				}
+			)}
 		</div>
 	);
 };
