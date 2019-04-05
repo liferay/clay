@@ -129,3 +129,27 @@ Using a radio by itself doesn't make much sense, only when 2+ exist does the fun
 -   Removed `label` in favor of utilizing `children` prop
 -   Added `closeButtonProps` which allows you to add attributes to the nested button.
     -   This is where you would pass a callback for `onClick`.
+
+## ClayProgressBar
+
+ClayLink has become simpler with v3, defaulting to wrap content with `progress-group-feedback` class and having the display status be naturally inferred from the `value`.
+
+If you want to use an icon for the progress value, you will need to manually compose it.
+
+```diff
+<ClayProgressBar
+-	spritemap: {'/images/icons/icons.svg'}
+-	status: {'warning'}
++	warn
+	value: {70}
+>
++	<ClayIcon symbol="check-circle" />
++</ClayProgressBar>
+```
+
+### API Changes
+
+-   `status` removed in favor of `warn`
+-   `spritemap` removed
+-   `feedback` added to determine if `progress-group-feedback` is used
+-   `warn` added to indicate `progress-warning` class
