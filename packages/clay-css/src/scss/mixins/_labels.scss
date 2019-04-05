@@ -93,7 +93,9 @@
 	$bg: map-get($map, bg);
 	$border-color: map-get($map, border-color);
 	$color: map-get($map, color);
+	$outline: map-get($map, outline);
 	$text-decoration: map-get($map, text-decoration);
+	$transition: map-get($map, transition);
 	$hover-bg: map-get($map, hover-bg);
 	$hover-border-color: map-get($map, hover-border-color);
 	$hover-color: map-get($map, hover-color);
@@ -106,6 +108,7 @@
 	$focus-text-decoration: map-get($map, focus-text-decoration);
 	$disabled-bg: map-get($map, disabled-bg);
 	$disabled-border-color: map-get($map, disabled-border-color);
+	$disabled-box-shadow: map-get($map, disabled-box-shadow);
 	$disabled-color: map-get($map, disabled-color);
 	$link-color: map-get($map, link-color);
 	$link-text-decoration: map-get($map, link-text-decoration);
@@ -116,7 +119,9 @@
 	background-color: $bg;
 	border-color: $border-color;
 	color: $color;
+	outline: $outline;
 	text-decoration: $text-decoration;
+	transition: $transition;
 
 	@at-root {
 		a#{&},
@@ -161,6 +166,7 @@
 	&.disabled {
 		background-color: $disabled-bg;
 		border-color: $disabled-border-color;
+		box-shadow: $disabled-box-shadow;
 		color: $disabled-color;
 	}
 
