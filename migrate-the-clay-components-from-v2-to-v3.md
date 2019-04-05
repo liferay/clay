@@ -78,7 +78,7 @@ To get to the behavior of having a ClayLink with icon, use the composition with 
 +</ClayLink>
 ```
 
-To get to the behavior of having a ClayLink with image, use the composition with the new ClayImage component:
+To get to the behavior of having a ClayLink with image, use the composition with the `<img />` tag:
 
 ```diff
 <ClayLink
@@ -86,10 +86,44 @@ To get to the behavior of having a ClayLink with image, use the composition with
 -	imageSrc="image.jpg"
 -	imageAlt="my image"
 -/>
-+	<ClayImage src="image.jpg" alt="my image" />
++	<img src="image.jpg" alt="my image" />
 +</ClayLink>
 ```
 
+## ClaySticker
+
+```diff
+<ClaySticker
+	shape="circle"
+-	label="A"
+-/>
++>
++	{'A'}
++</ClaySticker>
+```
+
+### API Changes
+
+- `data` depreciated
+- `defaultEventHandler` depreciated
+- `elementClasses` renamed to `className`
+- `imageAlt` depreciated
+- `imageSrc` depreciated
+- `label` depreciated
+- `style` renamed to `displayType`
+
+### Compositions
+
+To get to the behavior of having a ClaySticker with image, use the composition with the `<img />` tag:
+
+```diff
+<ClaySticker
+-	imageSrc="image.jpg"
+-	imageAlt="my image"
+-/>
++ <img className="sticker-img" src="image.jpg" alt="my image" />
++</ClaySticker>
+```
 ## ClayIcon
 
 -   Added ability to utilize context for passing spritemap down instead of having to pass the prop everywhere.
