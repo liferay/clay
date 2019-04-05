@@ -6,6 +6,7 @@
 
 import * as React from 'react';
 import classNames from 'classnames';
+import warning from 'warning';
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	/**
@@ -14,28 +15,41 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	feedback?: boolean;
 
 	/**
-	 * Determines what the color the progress bar is.
-	 */
-	status?: 'success' | 'warning';
-
-	/**
 	 * The current value of the progress bar. Should range from 0 to 100.
 	 */
 	value: number;
+
+	/**
+	 * Flag to indicate whether a "warning" color for the bar.
+	 */
+	warn?: boolean;
 }
 
 const ClayProgressBar: React.FunctionComponent<Props> = ({
 	children,
 	className,
-	feedback,
-	status,
-	value,
+	feedback = true,
+	value = 0,
+	warn,
 	...otherProps
 }) => {
-	let addon = children;
+	warning(
+		value >= 0 || value <= 100,
+		'ClayProgressBar requires `value` to be in the range of 0 to 100'
+	);
+
+	let addon = children || `${value}%`;
 
 	if (feedback) {
 		addon = <div className="progress-group-feedback">{addon}</div>;
+	}
+
+	let status;
+
+	if (warn) {
+		status = 'warning';
+	} else if (value === 100) {
+		status = 'success';
 	}
 
 	return (

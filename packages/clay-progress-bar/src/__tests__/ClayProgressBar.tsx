@@ -25,11 +25,9 @@ describe('ClayProgressBar', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('wraps content in feedback classname', () => {
+	it('removes feedback wraping class', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayProgressBar feedback value={50}>
-				{'50%'}
-			</ClayProgressBar>
+			<ClayProgressBar feedback={false} value={50} />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
@@ -37,9 +35,7 @@ describe('ClayProgressBar', () => {
 
 	it('renders as a different status', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayProgressBar status="warning" value={50}>
-				{'50%'}
-			</ClayProgressBar>
+			<ClayProgressBar value={50} warn />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();

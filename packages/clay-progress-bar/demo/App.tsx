@@ -15,23 +15,20 @@ const App: React.FunctionComponent = () => {
 
 	return (
 		<div>
-			<ClayProgressBar value={30}>{'30%'}</ClayProgressBar>
+			<div>{'Default'}</div>
+			<ClayProgressBar value={30} />
 
-			<ClayProgressBar status="success" value={50}>
-				{'50%'}
-			</ClayProgressBar>
+			<div>{'Custom Content'}</div>
+			<ClayProgressBar value={50}>{'6/12'}</ClayProgressBar>
 
-			<ClayProgressBar feedback status="success" value={100}>
-				{'100% as feedback'}
-			</ClayProgressBar>
+			<div>{'Warning color'}</div>
+			<ClayProgressBar value={50} warn />
 
-			<ClayProgressBar
-				feedback={value === 100}
-				status={value === 100 ? 'success' : 'warning'}
-				value={value}
-			>
-				{`${value}%`}
-			</ClayProgressBar>
+			<div>{'Without feedback colors'}</div>
+			<ClayProgressBar feedback={false} value={100} />
+
+			<div>{'Dynamic'}</div>
+			<ClayProgressBar value={value} />
 
 			<button
 				onClick={() => (value >= 10 ? setValue(value - 10) : undefined)}
