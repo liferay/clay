@@ -8,6 +8,9 @@ import * as React from 'react';
 import classNames from 'classnames';
 
 interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+	/**
+	 * Determines how the link is displayed.
+	 */
 	displayType?: 'secondary';
 }
 
