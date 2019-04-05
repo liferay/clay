@@ -26,6 +26,11 @@ interface Props
 	 * Flag to indicate if the label should be of the `large` variant.
 	 */
 	large?: boolean;
+
+	/**
+	 * Path to the location of the spritemap resource used for Icon.
+	 */
+	spritemap?: string;
 }
 
 const ClayLabel: React.FunctionComponent<Props> = ({
@@ -35,6 +40,7 @@ const ClayLabel: React.FunctionComponent<Props> = ({
 	displayType = 'secondary',
 	href,
 	large = false,
+	spritemap,
 	...otherProps
 }) => {
 	const TagName = href ? 'a' : 'span';
@@ -58,7 +64,7 @@ const ClayLabel: React.FunctionComponent<Props> = ({
 						className="close"
 						type="button"
 					>
-						<Icon symbol="times" />
+						<Icon spritemap={spritemap} symbol="times" />
 					</button>
 				</span>
 			)}
