@@ -104,12 +104,12 @@ To get to the behavior of having a ClayLink with image, use the composition with
 
 ### API Changes
 
-- `data` depreciated
-- `defaultEventHandler` depreciated
+- `data` deprecated
+- `defaultEventHandler` deprecated
 - `elementClasses` renamed to `className`
-- `imageAlt` depreciated
-- `imageSrc` depreciated
-- `label` depreciated
+- `imageAlt` deprecated
+- `imageSrc` deprecated
+- `label` deprecated
 - `style` renamed to `displayType`
 
 ### Compositions
