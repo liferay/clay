@@ -20,10 +20,12 @@
 
 	> .inline-item {
 		font-size: $sticker-inline-item-font-size;
+		justify-content: center;
+	}
 
-		.lexicon-icon {
-			margin-top: 0;
-		}
+	> .inline-item .lexicon-icon,
+	.lexicon-icon {
+		margin-top: 0;
 	}
 
 	&.rounded .sticker-overlay {
