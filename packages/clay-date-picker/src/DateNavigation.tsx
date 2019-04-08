@@ -15,7 +15,7 @@ import React, {
 import {IAriaLabels, IYears} from './ClayDatePicker';
 
 import Button from '@clayui/button';
-import Icon from '@clayui/button';
+import Icon from '@clayui/icon';
 import Select, {ISelectOption} from './Select';
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
