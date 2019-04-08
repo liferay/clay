@@ -38,6 +38,8 @@ const ClayProgressBar: React.FunctionComponent<Props> = ({
 		'ClayProgressBar requires `value` to be in the range of 0 to 100'
 	);
 
+	value = Math.min(Math.max(value, 0), 100);
+
 	let addon = children || `${value}%`;
 
 	if (feedback) {
