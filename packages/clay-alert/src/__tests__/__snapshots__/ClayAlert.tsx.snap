@@ -3,6 +3,8 @@
 exports[`ClayAlert renders 1`] = `
 <div
   className="alert alert-info"
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
   role="alert"
 >
   <span
@@ -28,6 +30,8 @@ exports[`ClayAlert renders 1`] = `
 exports[`ClayAlert renders as \`stripe\` variant 1`] = `
 <div
   className="alert alert-fluid alert-info"
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
   role="alert"
 >
   <div
@@ -57,6 +61,8 @@ exports[`ClayAlert renders as \`stripe\` variant 1`] = `
 exports[`ClayAlert renders as a different type 1`] = `
 <div
   className="alert alert-danger"
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
   role="alert"
 >
   <span
@@ -88,6 +94,8 @@ exports[`ClayAlert renders with ToastContainer as a wrapper  1`] = `
   >
     <div
       className="alert alert-info"
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
       role="alert"
     >
       <span
@@ -110,6 +118,8 @@ exports[`ClayAlert renders with ToastContainer as a wrapper  1`] = `
     </div>
     <div
       className="alert alert-info"
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
       role="alert"
     >
       <span
@@ -132,6 +142,8 @@ exports[`ClayAlert renders with ToastContainer as a wrapper  1`] = `
     </div>
     <div
       className="alert alert-info"
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
       role="alert"
     >
       <span
@@ -159,6 +171,8 @@ exports[`ClayAlert renders with ToastContainer as a wrapper  1`] = `
 exports[`ClayAlert renders with a title and a message with markup 1`] = `
 <div
   className="alert alert-info"
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
   role="alert"
 >
   <span
@@ -187,6 +201,8 @@ exports[`ClayAlert renders with a title and a message with markup 1`] = `
 exports[`ClayAlert renders with an icon for closing 1`] = `
 <div
   className="alert alert-dismissible alert-info"
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
   role="alert"
 >
   <span

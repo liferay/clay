@@ -30,14 +30,15 @@ const App: React.FunctionComponent = () => {
 				</div>
 
 				<ClayAlert.ToastContainer>
-					{toastItems.map((value, i) => (
+					{toastItems.map(value => (
 						<ClayAlert
-							key={i}
-							onClose={() =>
-								setToastItems(
-									toastItems.filter((item, j) => i !== j)
-								)
-							}
+							autoClose={1000}
+							key={value}
+							onClose={() => {
+								setToastItems(prevItems =>
+									prevItems.filter(item => item !== value)
+								);
+							}}
 							title={'Hola:'}
 						>{`My value is ${value}`}</ClayAlert>
 					))}
@@ -62,19 +63,31 @@ const App: React.FunctionComponent = () => {
 
 				<div>{'Stripe'}</div>
 
-				<ClayAlert stripe title={'Info'}>
+				<ClayAlert title={'Info'} variant="stripe">
 					{'This is an info alert'}
 				</ClayAlert>
 
-				<ClayAlert displayType="warning" stripe title={'Warning'}>
+				<ClayAlert
+					displayType="warning"
+					title={'Warning'}
+					variant="stripe"
+				>
 					{'This is an warning alert'}
 				</ClayAlert>
 
-				<ClayAlert displayType="danger" stripe title={'Danger'}>
+				<ClayAlert
+					displayType="danger"
+					title={'Danger'}
+					variant="stripe"
+				>
 					{'This is an danger alert'}
 				</ClayAlert>
 
-				<ClayAlert displayType="success" stripe title={'Success'}>
+				<ClayAlert
+					displayType="success"
+					title={'Success'}
+					variant="stripe"
+				>
 					{'This is an success alert'}
 				</ClayAlert>
 

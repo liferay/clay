@@ -22,7 +22,7 @@ CLayAlert v3 combines Alert, Stripe Alert, and Toast Notifications all in one.
 
 ### API Changes
 
--   `autoClose` was removed
+-   `autoClose` accepts either a boolean or number of milliseconds
 -   `closed` was removed in favor of the `onClose` callback
 -   `destroyOnHide` was removed
 -   `style` was renamed to `displayType`
@@ -40,6 +40,29 @@ For Example:
 	<ClayAlert title="Two!" />
 	<ClayAlert title="Three!" />
 </ClayAlert.ToastContainer>
+```
+
+**Note:** If you use `autoClose` and `onClose` is setting state, you need to make sure that `onClose` does so asynchronously. For example below, if you are using the `useState` hook, you need to make sure to use a callback for `setAlerts`.
+
+```diff
+const [alerts, setAlerts] = useState([]);
+
+{alerts.map(alertItem => (
+	<ClayAlert
+		autoClose={1000}
+		key={alertItem}
+		onClose={() => {
+-				setAlerts(
+-					alerts.filter(item => item !== alertItem)
+-				);
++				setAlerts(
++					prevItems => prevItems.filter(item => item !== alertItem)
++				);
+		}}
+	>
+		{alertItem}
+	</ClayAlert>
+))}
 ```
 
 ## ClayButton

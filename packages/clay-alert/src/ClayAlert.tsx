@@ -8,9 +8,53 @@ import * as React from 'react';
 import classNames from 'classnames';
 import Icon from '@clayui/icon';
 
+const useAutoClose = (autoClose?: boolean | number, onClose = () => {}) => {
+	const timer = React.useRef<number | undefined>(undefined);
+
+	let cancelTimer = () => {};
+	let startTimer = () => {};
+
+	if (autoClose) {
+		cancelTimer = () => {
+			if (timer.current) {
+				clearTimeout(timer.current);
+
+				timer.current = undefined;
+			}
+		};
+
+		startTimer = () => {
+			timer.current = setTimeout(
+				onClose,
+				autoClose === true ? 8000 : autoClose
+			);
+		};
+	}
+
+	React.useEffect(() => {
+		if (autoClose && onClose) {
+			startTimer();
+
+			return cancelTimer;
+		}
+	}, []);
+
+	return {
+		cancelAutoCloseTimer: cancelTimer,
+		startAutoCloseTimer: startTimer,
+	};
+};
+
 type DisplayType = 'danger' | 'info' | 'success' | 'warning';
 
 interface ClayAlertProps extends React.HTMLAttributes<HTMLDivElement> {
+	/**
+	 * Flag to indicate alert should automatically call `onClose`. It also
+	 * accepts a duration(in ms) which indicates how long to wait. If `true`
+	 * is passed in, the timeout will be 8000ms.
+	 */
+	autoClose?: boolean | number;
+
 	/**
 	 * Callback function for when the 'x' is clicked.
 	 */
@@ -56,6 +100,7 @@ const ICON_MAP = {
 const ClayAlert: React.FunctionComponent<ClayAlertProps> & {
 	ToastContainer: React.FunctionComponent<ToastContainerProps>;
 } = ({
+	autoClose,
 	children,
 	className,
 	displayType = 'info',
@@ -65,6 +110,11 @@ const ClayAlert: React.FunctionComponent<ClayAlertProps> & {
 	variant,
 	...otherProps
 }) => {
+	const {cancelAutoCloseTimer, startAutoCloseTimer} = useAutoClose(
+		autoClose,
+		onClose
+	);
+
 	const ConditionalContainer: React.FunctionComponent<{}> = ({children}) =>
 		variant === 'stripe' ? (
 			<div className="container">{children}</div>
@@ -80,6 +130,8 @@ const ClayAlert: React.FunctionComponent<ClayAlertProps> & {
 				'alert-fluid': variant === 'stripe',
 				[`alert-${displayType}`]: displayType,
 			})}
+			onMouseOut={startAutoCloseTimer}
+			onMouseOver={cancelAutoCloseTimer}
 			role="alert"
 		>
 			<ConditionalContainer>

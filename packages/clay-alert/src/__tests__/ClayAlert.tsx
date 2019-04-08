@@ -25,7 +25,7 @@ describe('ClayAlert', () => {
 
 	it('renders as `stripe` variant', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayAlert stripe title="Hello!" />
+			<ClayAlert title="Hello!" variant="stripe" />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
