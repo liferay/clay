@@ -22,9 +22,9 @@ interface ClayAlertProps extends React.HTMLAttributes<HTMLDivElement> {
 	displayType?: DisplayType;
 
 	/**
-	 * Flag to indicate the stripe variant.
+	 * Path to the spritemap that Icon should use when referencing symbols.
 	 */
-	stripe?: boolean;
+	spritemap?: string;
 
 	/**
 	 * The summary of the Alert, often is something like 'Error' or 'Info'.
@@ -32,9 +32,9 @@ interface ClayAlertProps extends React.HTMLAttributes<HTMLDivElement> {
 	title: string;
 
 	/**
-	 * Path to the spritemap that Icon should use when referencing symbols.
+	 * Determines the variant of the alert.
 	 */
-	spritemap?: string;
+	variant?: 'stripe';
 }
 
 interface ToastContainerProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -61,19 +61,23 @@ const ClayAlert: React.FunctionComponent<ClayAlertProps> & {
 	displayType = 'info',
 	onClose,
 	spritemap,
-	stripe,
 	title,
+	variant,
 	...otherProps
 }) => {
 	const ConditionalContainer: React.FunctionComponent<{}> = ({children}) =>
-		stripe ? <div className="container">{children}</div> : <>{children}</>;
+		variant === 'stripe' ? (
+			<div className="container">{children}</div>
+		) : (
+			<>{children}</>
+		);
 
 	return (
 		<div
 			{...otherProps}
 			className={classNames(className, 'alert', {
 				'alert-dismissible': onClose,
-				'alert-fluid': stripe,
+				'alert-fluid': variant === 'stripe',
 				[`alert-${displayType}`]: displayType,
 			})}
 			role="alert"
