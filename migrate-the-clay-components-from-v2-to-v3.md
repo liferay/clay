@@ -49,16 +49,16 @@ ClayLink has become simpler with v3, removing APIs from `icon` and `image`, maki
 
 ### API Changes
 
--   `buttonStyle` depreciated
--   `data` depreciated
--   `defaultEventHandler` depreciated
+-   `buttonStyle` deprecated
+-   `data` deprecated
+-   `defaultEventHandler` deprecated
 -   `elementClasses` renamed to `className`
--   `icon` depreciated
--   `iconAlignment` depreciated
--   `imageAlt` depreciated
--   `imageSrc` depreciated
--   `label` depreciated
--   `spritemap` depreciated
+-   `icon` deprecated
+-   `iconAlignment` deprecated
+-   `imageAlt` deprecated
+-   `imageSrc` deprecated
+-   `label` deprecated
+-   `spritemap` deprecated
 -   `style` renamed to `displayType`
 
 ### Compositions
