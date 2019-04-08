@@ -34,8 +34,8 @@ const ClayProgressBar: React.FunctionComponent<Props> = ({
 	...otherProps
 }) => {
 	warning(
-		value >= 0 || value <= 100,
-		'ClayProgressBar requires `value` to be in the range of 0 to 100'
+		value >= 0 && value <= 100,
+		`ClayProgressBar requires \`value\` to be in the range of 0 to 100, it received ${value}.`
 	);
 
 	value = Math.min(Math.max(value, 0), 100);
