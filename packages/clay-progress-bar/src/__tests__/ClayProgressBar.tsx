@@ -17,6 +17,14 @@ describe('ClayProgressBar', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
+	it('renders with success', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayProgressBar value={100} />
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
 	it('renders with additional content', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayProgressBar value={50}>{'50%'}</ClayProgressBar>
@@ -25,9 +33,9 @@ describe('ClayProgressBar', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('removes feedback wraping class', () => {
+	it('with feedback wraping class', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayProgressBar feedback={false} value={50} />
+			<ClayProgressBar feedback value={50} />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();

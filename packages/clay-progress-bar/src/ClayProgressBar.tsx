@@ -6,6 +6,7 @@
 
 import * as React from 'react';
 import classNames from 'classnames';
+import Icon from '@clayui/icon';
 import warning from 'warning';
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
@@ -20,6 +21,11 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	value: number;
 
 	/**
+	 * Path to spritemap for icon symbol.
+	 */
+	spritemap?: string;
+
+	/**
 	 * Flag to indicate whether a "warning" color for the bar.
 	 */
 	warn?: boolean;
@@ -28,7 +34,8 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 const ClayProgressBar: React.FunctionComponent<Props> = ({
 	children,
 	className,
-	feedback = true,
+	feedback = false,
+	spritemap,
 	value = 0,
 	warn,
 	...otherProps
@@ -40,9 +47,15 @@ const ClayProgressBar: React.FunctionComponent<Props> = ({
 
 	value = Math.min(Math.max(value, 0), 100);
 
-	let addon = children || `${value}%`;
+	let addon =
+		children ||
+		(value === 100 ? (
+			<Icon spritemap={spritemap} symbol="check-circle" />
+		) : (
+			`${value}%`
+		));
 
-	if (feedback) {
+	if (value === 100 || feedback) {
 		addon = <div className="progress-group-feedback">{addon}</div>;
 	}
 

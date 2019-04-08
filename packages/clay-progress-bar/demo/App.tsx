@@ -16,19 +16,10 @@ const App: React.FunctionComponent = () => {
 	return (
 		<div>
 			<div>{'Default'}</div>
-			<ClayProgressBar value={30} />
-
-			<div>{'Custom Content'}</div>
-			<ClayProgressBar value={50}>{'6/12'}</ClayProgressBar>
-
-			<div>{'Warning color'}</div>
-			<ClayProgressBar value={50} warn />
-
-			<div>{'Without feedback colors'}</div>
-			<ClayProgressBar feedback={false} value={100} />
-
-			<div>{'Dynamic'}</div>
-			<ClayProgressBar value={value} />
+			<ClayProgressBar
+				spritemap="node_modules/clay-css/lib/images/icons/icons.svg"
+				value={value}
+			/>
 
 			<button
 				onClick={() => (value >= 10 ? setValue(value - 10) : undefined)}
@@ -40,6 +31,15 @@ const App: React.FunctionComponent = () => {
 			>
 				{'+'}
 			</button>
+
+			<div>{'Custom Content'}</div>
+			<ClayProgressBar value={50}>{'6/12'}</ClayProgressBar>
+
+			<div>{'Warning color'}</div>
+			<ClayProgressBar value={50} warn />
+
+			<div>{'With feedback colors'}</div>
+			<ClayProgressBar feedback value={60} />
 		</div>
 	);
 };
