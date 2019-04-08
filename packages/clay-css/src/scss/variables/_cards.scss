@@ -152,8 +152,11 @@ $file-card: map-merge((
 
 $user-card: () !default;
 $user-card: map-merge((
-	asset-icon-min-width: 2.5rem,
-	asset-icon-width: 26%
+	asset-icon-max-width: 80px,
+	asset-icon-min-width: 48px,
+	asset-icon-width: 30%,
+	asset-icon-lexicon-icon-height: auto,
+	asset-icon-lexicon-icon-width: 50%,
 ), $user-card);
 
 // Card Page Item Asset
@@ -161,26 +164,51 @@ $user-card: map-merge((
 $card-page-item-asset: () !default;
 $card-page-item-asset: map-merge((
 	base: (
-		breakpoint: 0,
+		breakpoint: 0, // min-width: 0
 		min-width: 200px,
 		padding-left: $grid-gutter-width / 2,
-		padding-right: $grid-gutter-width / 2
+		padding-right: $grid-gutter-width / 2,
 	),
 	sm: (
-		breakpoint: map-get($grid-breakpoints, sm), // 576px
+		breakpoint: map-get($grid-breakpoints, sm), // min-width: 576px
 		flex-basis: 50%,
-		max-width: 50%
+		max-width: 50%,
 	),
 	md: (
-		breakpoint: map-get($grid-breakpoints, md), // 768px
-		flex-basis: 200px,
-		max-width: 33.3333%
+		breakpoint: map-get($grid-breakpoints, md), // min-width: 768px
+		flex-basis: 33.3333%,
+		max-width: 33.3333%,
 	),
 	lg: (
-		breakpoint: map-get($grid-breakpoints, lg), // 992px
-		max-width: 25%
+		breakpoint: map-get($grid-breakpoints, lg), // min-width: 992px
+		flex-basis: 25%,
+		max-width: 25%,
 	)
 ), $card-page-item-asset);
+
+// Card Page Item User
+
+$card-page-item-user: () !default;
+$card-page-item-user: map-merge((
+	base: (
+		breakpoint: 0, // min-width: 0
+		flex-basis: 50%,
+		max-width: 50%,
+		padding-left: $grid-gutter-width / 2,
+		padding-right: $grid-gutter-width / 2,
+	),
+	sm: (
+		breakpoint: map-get($grid-breakpoints, sm), // min-width: 576px
+		flex-basis: 33.33333%,
+		max-width: 33.33333%,
+		min-width: 200px,
+	),
+	lg: (
+		breakpoint: map-get($grid-breakpoints, lg), // min-width: 992px
+		flex-basis: 20%,
+		max-width: 20%,
+	),
+), $card-page-item-user);
 
 // Card Type Directory
 
