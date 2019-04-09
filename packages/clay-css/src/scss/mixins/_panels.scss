@@ -27,6 +27,8 @@
 
 	$header-collapsed-border-color: map-get($map, header-collapsed-border-color);
 
+	$header-link: setter(map-get($map, header-link), ());
+
 	$title-font-size: map-get($map, title-font-size);
 	$title-font-weight: map-get($map, title-font-weight);
 	$title-text-transform: map-get($map, title-text-transform);
@@ -94,6 +96,10 @@
 				border-color: $border-color;
 			}
 		}
+	}
+
+	.panel-header-link {
+		@include clay-link($header-link);
 	}
 
 	.panel-title {
