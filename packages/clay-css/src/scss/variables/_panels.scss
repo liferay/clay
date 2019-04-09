@@ -111,6 +111,10 @@ $panel-secondary: map-merge((
 // Panel Unstyled
 
 $panel-unstyled-header-link: () !default;
+$panel-unstyled-header-link: map-merge((
+	border-radius: 1px,
+	focus-box-shadow: 0 0 0 $input-btn-focus-width $white#{','} 0 0 0 ($input-btn-focus-width * 2) $input-btn-focus-color,
+), $panel-unstyled-header-link);
 
 $panel-unstyled: () !default;
 $panel-unstyled: map-merge((
