@@ -49,16 +49,16 @@ ClayLink has become simpler with v3, removing APIs from `icon` and `image`, maki
 
 ### API Changes
 
--   `buttonStyle` depreciated
--   `data` depreciated
--   `defaultEventHandler` depreciated
+-   `buttonStyle` deprecated
+-   `data` deprecated
+-   `defaultEventHandler` deprecated
 -   `elementClasses` renamed to `className`
--   `icon` depreciated
--   `iconAlignment` depreciated
--   `imageAlt` depreciated
--   `imageSrc` depreciated
--   `label` depreciated
--   `spritemap` depreciated
+-   `icon` deprecated
+-   `iconAlignment` deprecated
+-   `imageAlt` deprecated
+-   `imageSrc` deprecated
+-   `label` deprecated
+-   `spritemap` deprecated
 -   `style` renamed to `displayType`
 
 ### Compositions
@@ -129,3 +129,24 @@ Using a radio by itself doesn't make much sense, only when 2+ exist does the fun
 -   Removed `label` in favor of utilizing `children` prop
 -   Added `closeButtonProps` which allows you to add attributes to the nested button.
     -   This is where you would pass a callback for `onClick`.
+
+## ClayProgressBar
+
+ClayProgressBar has become simpler with v3 by defaulting many styles based off of the `value` provided. The component is also flexible in that it allows you to compose with custom content where the value is normally displayed.
+
+For example:
+
+```jsx
+<ClayProgressBar value={value}>
+	<span>
+		{'The value is '}
+		<strong>{value}</strong>
+	</span>
+</ClayProgressBar>
+```
+
+### API Changes
+
+-   `status` removed in favor of `warn`
+-   `feedback` added to determine if `progress-group-feedback` is used, default value is false unless value is 100.
+-   `warn` added to indicate `progress-warning` class
