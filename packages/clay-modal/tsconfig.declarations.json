@@ -1,0 +1,8 @@
+{
+	"compilerOptions": {
+		"declarationDir": "./lib"
+	},
+	"extends": "../../tsconfig.declarations.json",
+	"include": ["src"],
+	"exclude": ["**/__tests__/**"]
+}
