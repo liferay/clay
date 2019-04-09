@@ -72,9 +72,7 @@ const ClaySticker: React.FunctionComponent<Props> = ({
 			[`sticker-${size}`]: size,
 		})}
 	>
-		<span className="sticker-overlay">
-			{children}
-		</span>
+		<span className="sticker-overlay">{children}</span>
 	</span>
 );
 

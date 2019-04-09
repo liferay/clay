@@ -24,25 +24,6 @@ exports[`ClaySticker renders with a display type 1`] = `
 </span>
 `;
 
-exports[`ClaySticker renders with a icon 1`] = `
-<span
-  className="sticker sticker-rounded sticker-primary"
->
-  <span
-    className="inline-item"
-  >
-    <svg
-      className="lexicon-icon lexicon-icon-user"
-      role="presentation"
-    >
-      <use
-        data-href="icons.svg#user"
-      />
-    </svg>
-  </span>
-</span>
-`;
-
 exports[`ClaySticker renders with a outside 1`] = `
 <span
   className="sticker sticker-rounded sticker-primary sticker-top-left sticker-outside"
