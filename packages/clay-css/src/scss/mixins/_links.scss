@@ -204,3 +204,9 @@
 		@include clay-link($clay-link);
 	}
 }
+
+// Shortcut for mixin `clay-text-typography`
+
+@mixin clay-title($map) {
+	@include clay-text-typography($map);
+}
