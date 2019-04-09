@@ -125,5 +125,17 @@
 		color: $footer-color;
 	}
 
+	// For Focus Box Shadow
+
+	@at-root {
+		.panel-group.panel-group-flush & {
+			.panel-header-link {
+				&, &.collapsed {
+					border-radius: map-get($header-link, border-radius);
+				}
+			}
+		}
+	}
+
 	@content;
 }
