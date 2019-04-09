@@ -132,24 +132,21 @@ Using a radio by itself doesn't make much sense, only when 2+ exist does the fun
 
 ## ClayProgressBar
 
-ClayProgressBar has become simpler with v3, defaulting to wrap content with `progress-group-feedback` class and having the display status be naturally inferred from the `value`.
+ClayProgressBar has become simpler with v3 by defaulting many styles based off of the `value` provided. The component is also flexible in that it allows you to compose with custom content where the value is normally displayed.
 
-If you want to use an icon for the progress value, you will need to manually compose it.
+For example:
 
-```diff
-<ClayProgressBar
--	spritemap="/images/icons/icons.svg"
--	status="warning"
-+	warn
-	value={70}
->
-+	<ClayIcon symbol="check-circle" />
-+</ClayProgressBar>
+```jsx
+<ClayProgressBar value={value}>
+	<span>
+		{'The value is '}
+		<strong>{value}</strong>
+	</span>
+</ClayProgressBar>
 ```
 
 ### API Changes
 
 -   `status` removed in favor of `warn`
--   `spritemap` removed
--   `feedback` added to determine if `progress-group-feedback` is used
+-   `feedback` added to determine if `progress-group-feedback` is used, default value is false unless value is 100.
 -   `warn` added to indicate `progress-warning` class
