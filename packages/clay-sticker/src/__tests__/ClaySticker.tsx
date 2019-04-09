@@ -58,12 +58,4 @@ describe('ClaySticker', () => {
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
-
-	it('renders with a icon', () => {
-		const testRenderer = TestRenderer.create(
-			<ClaySticker icon="user" spritemap="icons.svg" />
-		);
-
-		expect(testRenderer.toJSON()).toMatchSnapshot();
-	});
 });

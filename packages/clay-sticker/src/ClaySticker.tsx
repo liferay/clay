@@ -6,7 +6,6 @@
 
 import * as React from 'react';
 import classNames from 'classnames';
-import ClayIcon from '@clayui/icon';
 
 type DisplayType =
 	| 'danger'
@@ -32,11 +31,6 @@ interface Props extends React.HTMLAttributes<HTMLSpanElement> {
 	displayType?: DisplayType;
 
 	/**
-	 * Render ClayIcon in the ClaySticker element.
-	 */
-	icon?: string;
-
-	/**
 	 * Flag to indicate if the sticker should be positioned on the outside
 	 * corners when position is defined.
 	 */
@@ -56,23 +50,16 @@ interface Props extends React.HTMLAttributes<HTMLSpanElement> {
 	 * Sticker size.
 	 */
 	size?: Size;
-
-	/**
-	 * The path to the SVG spritemap file containing the icons.
-	 */
-	spritemap?: string;
 }
 
 const ClaySticker: React.FunctionComponent<Props> = ({
 	children,
 	className,
 	displayType = 'primary',
-	icon,
 	outside = false,
 	position,
 	shape = 'rounded',
 	size,
-	spritemap,
 	...otherProps
 }) => (
 	<span
@@ -85,13 +72,8 @@ const ClaySticker: React.FunctionComponent<Props> = ({
 			[`sticker-${size}`]: size,
 		})}
 	>
-		<span
-			className={classNames({
-				'inline-item': icon,
-				'sticker-overlay': !icon,
-			})}
-		>
-			{icon ? <ClayIcon spritemap={spritemap} symbol={icon} /> : children}
+		<span className="sticker-overlay">
+			{children}
 		</span>
 	</span>
 );

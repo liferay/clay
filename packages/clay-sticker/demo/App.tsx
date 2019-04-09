@@ -6,6 +6,7 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import ClayIcon from '@clayui/icon';
 import ClaySticker from '../src/ClaySticker';
 
 import 'clay-css/lib/css/atlas.css';
@@ -22,71 +23,55 @@ const App: React.FunctionComponent = () => {
 
 			<ClaySticker displayType="dark">{'C'}</ClaySticker>
 
-			<ClaySticker displayType="info" icon="user" spritemap={spritemap} />
+			<ClaySticker displayType="info">
+				<ClayIcon spritemap={spritemap} symbol="user" />
+			</ClaySticker>
 
-			<ClaySticker
-				displayType="light"
-				icon="user"
-				spritemap={spritemap}
-			/>
+			<ClaySticker displayType="light">
+				<ClayIcon spritemap={spritemap} symbol="user" />
+			</ClaySticker>
 
-			<ClaySticker
-				displayType="secondary"
-				icon="user"
-				spritemap={spritemap}
-			/>
+			<ClaySticker displayType="secondary">
+				<ClayIcon spritemap={spritemap} symbol="user" />
+			</ClaySticker>
 
-			<ClaySticker
-				displayType="success"
-				icon="user"
-				spritemap={spritemap}
-			/>
+			<ClaySticker displayType="success">
+				<ClayIcon spritemap={spritemap} symbol="user" />
+			</ClaySticker>
 
-			<ClaySticker
-				displayType="unstyled"
-				icon="user"
-				spritemap={spritemap}
-			/>
+			<ClaySticker displayType="unstyled">
+				<ClayIcon spritemap={spritemap} symbol="user" />
+			</ClaySticker>
 
-			<ClaySticker
-				displayType="warning"
-				icon="user"
-				spritemap={spritemap}
-			/>
+			<ClaySticker displayType="warning">
+				<ClayIcon spritemap={spritemap} symbol="user" />
+			</ClaySticker>
 
 			<h2>{'Shape'}</h2>
-			<ClaySticker icon="user" spritemap={spritemap} />
+			<ClaySticker>
+				<ClayIcon spritemap={spritemap} symbol="user" />
+			</ClaySticker>
 
-			<ClaySticker
-				displayType="danger"
-				icon="user"
-				shape="circle"
-				spritemap={spritemap}
-			/>
+			<ClaySticker displayType="danger" shape="circle">
+				<ClayIcon spritemap={spritemap} symbol="user" />
+			</ClaySticker>
 
 			<h2>{'Size'}</h2>
-			<ClaySticker
-				displayType="light"
-				icon="user"
-				size="sm"
-				spritemap={spritemap}
-			/>
+			<ClaySticker displayType="light" size="sm">
+				<ClayIcon spritemap={spritemap} symbol="user" />
+			</ClaySticker>
 
-			<ClaySticker icon="user" spritemap={spritemap} />
+			<ClaySticker>
+				<ClayIcon spritemap={spritemap} symbol="user" />
+			</ClaySticker>
 
-			<ClaySticker
-				displayType="success"
-				icon="user"
-				size="lg"
-				spritemap={spritemap}
-			/>
+			<ClaySticker displayType="success" size="lg">
+				<ClayIcon spritemap={spritemap} symbol="user" />
+			</ClaySticker>
 
-			<ClaySticker
-				displayType="danger"
-				icon="user"
-				size="xl"
-				spritemap={spritemap}
-			/>
+			<ClaySticker displayType="danger" size="xl">
+				<ClayIcon spritemap={spritemap} symbol="user" />
+			</ClaySticker>
 
 			<h2>{'Image'}</h2>
 			<ClaySticker size="sm">

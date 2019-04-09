@@ -107,9 +107,11 @@ To get to the behavior of having a ClayLink with image, use the composition with
 - `data` deprecated
 - `defaultEventHandler` deprecated
 - `elementClasses` renamed to `className`
+- `icon` deprecated
 - `imageAlt` deprecated
 - `imageSrc` deprecated
-- `label` deprecated
+- `label` deprecated in favor of `children`
+- `spritemap` deprecated
 - `style` renamed to `displayType`
 
 ### Compositions
@@ -117,13 +119,27 @@ To get to the behavior of having a ClayLink with image, use the composition with
 To get to the behavior of having a ClaySticker with image, use the composition with the `<img />` tag:
 
 ```diff
-<ClaySticker
+-<ClaySticker
 -	imageSrc="image.jpg"
 -	imageAlt="my image"
 -/>
++<ClaySticker>
 + <img className="sticker-img" src="image.jpg" alt="my image" />
 +</ClaySticker>
 ```
+
+To get to the behavior of having a ClaySticker with icon, use the composition with the `<ClayIcon />` component:
+
+```diff
+-<ClaySticker
+-	spritemap="icons.svg"
+-	symbol="user"
+-/>
++<ClaySticker>
++ <ClayIcon spritemap="icons.svg" symbol="user" />
++</ClaySticker>
+```
+
 ## ClayIcon
 
 -   Added ability to utilize context for passing spritemap down instead of having to pass the prop everywhere.

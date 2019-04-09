@@ -21,8 +21,10 @@
 	},
 	"keywords": ["clay", "react"],
 	"dependencies": {
-		"@clayui/icon": "^3.0.0",
 		"classnames": "^2.2.6"
+	},
+	"devDependencies": {
+		"@clayui/icon": "^3.0.0"
 	},
 	"peerDependencies": {
 		"react": "^16.8.1",
