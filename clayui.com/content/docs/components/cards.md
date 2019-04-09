@@ -24,7 +24,13 @@ Cards are a very specific visual representation of data.
 							<input class="custom-control-input" type="checkbox"/>
 							<span class="custom-control-label"></span>
 							<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg" />
-							<span class="sticker sticker-bottom-left sticker-danger rounded-circle">JPG</span>
+							<span class="sticker sticker-rounded sticker-danger sticker-bottom-left">
+								<span class="inline-item">
+									<svg class="lexicon-icon lexicon-icon-document-image" focusable="false" role="presentation">
+										<use href="/images/icons/icons.svg#document-image"></use>
+									</svg>
+								</span>
+							</span>
 						</label>
 					</div>
 				</div>
@@ -86,8 +92,7 @@ Cards are a very specific visual representation of data.
 	] /}
 	{param selectable: true /}
 	{param spritemap: '/images/icons/icons.svg' /}
-	{param stickerLabel: 'JPG' /}
-	{param stickerShape: 'danger' /}
+	{param stickerIcon: 'document-image' /}
 	{param stickerStyle: 'danger' /}
 	{param subtitle: 'Author Action' /}
 	{param title: 'thumbnail_coffee.jpg' /}
@@ -101,8 +106,7 @@ Cards are a very specific visual representation of data.
 	labels='[{"label": "Approved", "style": "success"}]'
 	selectable="true"
 	spritemap="/images/icons/icons.svg"
-	stickerLabel="JPG"
-	stickerShape="circle"
+	stickerIcon="document-image"
 	stickerStyle="danger"
 	subtitle="Author Action"
 	title="thumbnail_coffee.jpg">
@@ -117,7 +121,13 @@ Cards are a very specific visual representation of data.
 					<input class="custom-control-input" type="checkbox"/>
 					<span class="custom-control-label"></span>
 					<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg" />
-					<span class="sticker sticker-bottom-left sticker-danger rounded-circle">JPG</span>
+					<span class="sticker sticker-rounded sticker-danger sticker-bottom-left">
+						<span class="inline-item">
+							<svg class="lexicon-icon lexicon-icon-document-image" focusable="false" role="presentation">
+								<use href="/images/icons/icons.svg#document-image"></use>
+							</svg>
+						</span>
+					</span>
 				</label>
 			</div>
 		</div>
@@ -167,7 +177,13 @@ Cards are a very specific visual representation of data.
 							<input class="custom-control-input" type="checkbox" checked="true"/>
 							<span class="custom-control-label"></span>
 							<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg" />
-							<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
+							<span class="sticker sticker-rounded sticker-danger sticker-bottom-left">
+								<span class="inline-item">
+									<svg class="lexicon-icon lexicon-icon-document-image" focusable="false" role="presentation">
+										<use href="/images/icons/icons.svg#document-image"></use>
+									</svg>
+								</span>
+							</span>
 						</label>
 					</div>
 				</div>
@@ -231,7 +247,7 @@ Cards are a very specific visual representation of data.
 	{param selected: true /}
 	{param spritemap: '/images/icons/icons.svg' /}
 	{param subtitle: 'Author Action' /}
-	{param stickerLabel: 'JPG' /}
+	{param stickerIcon: 'document-image' /}
 	{param stickerStyle: 'danger' /}
 	{param title: 'thumbnail_coffee.jpg' /}
 {/call}
@@ -245,7 +261,7 @@ Cards are a very specific visual representation of data.
 	selectable="true"
 	selected="true"
 	spritemap="/images/icons/icons.svg"
-	stickerLabel="JPG"
+	stickerIcon="document-image"
 	stickerStyle="danger"
 	subtitle="Author Action"
 	title="thumbnail_coffee.jpg">
@@ -260,7 +276,13 @@ Cards are a very specific visual representation of data.
 					<input class="custom-control-input" type="checkbox" checked="true"/>
 					<span class="custom-control-label"></span>
 					<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg" />
-					<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
+					<span class="sticker sticker-rounded sticker-danger sticker-bottom-left">
+						<span class="inline-item">
+							<svg class="lexicon-icon lexicon-icon-document-image" focusable="false" role="presentation">
+								<use href="/images/icons/icons.svg#document-image"></use>
+							</svg>
+						</span>
+					</span>
 				</label>
 			</div>
 		</div>
@@ -304,7 +326,13 @@ Cards are a very specific visual representation of data.
 	<div class="col-md-4">
 		<div class="card card-type-asset image-card">
 			<div class="aspect-ratio card-item-first">
-				<span class="sticker sticker-bottom-left sticker-info">PNG</span>
+				<span class="sticker sticker-rounded sticker-danger sticker-bottom-left">
+					<span class="inline-item">
+						<svg class="lexicon-icon lexicon-icon-document-image" focusable="false" role="presentation">
+							<use href="/images/icons/icons.svg#document-image"></use>
+						</svg>
+					</span>
+				</span>
 			</div>
 			<div class="card-body">
 				<div class="card-row">
@@ -361,8 +389,8 @@ Cards are a very specific visual representation of data.
 	] /}
 	{param selectable: true /}
 	{param spritemap: '/images/icons/icons.svg' /}
-	{param stickerLabel: 'PNG' /}
-	{param stickerStyle: 'info' /}
+	{param stickerIcon: 'document-image' /}
+	{param stickerStyle: 'danger' /}
 	{param subtitle: 'Author Action' /}
 	{param title: 'empty-background.png' /}
 {/call}
@@ -373,8 +401,8 @@ Cards are a very specific visual representation of data.
 	labels='[{"label": "Rejected", "style": "danger"}]'
 	selectable="true"
 	spritemap="/images/icons/icons.svg"
-	stickerLabel="PNG"
-	stickerStyle="info"
+	stickerIcon="document-image"
+	stickerStyle="danger"
 	subtitle="Author Action"
 	title="thumbnail_coffee.jpg">
 </clay-image-card>
@@ -382,7 +410,13 @@ Cards are a very specific visual representation of data.
 ```html
 <div class="card card-type-asset image-card">
 	<div class="aspect-ratio card-item-first">
-		<span class="sticker sticker-bottom-left sticker-info">PNG</span>
+		<span class="sticker sticker-rounded sticker-danger sticker-bottom-left">
+			<span class="inline-item">
+				<svg class="lexicon-icon lexicon-icon-document-image" focusable="false" role="presentation">
+					<use href="/images/icons/icons.svg#document-image"></use>
+				</svg>
+			</span>
+		</span>
 	</div>
 	<div class="card-body">
 		<div class="card-row">
@@ -435,7 +469,13 @@ Cards are a very specific visual representation of data.
 									<use href="/images/icons/icons.svg#camera" />
 								</svg>
 							</div>
-							<span class="sticker sticker-bottom-left sticker-warning">SVG</span>
+							<span class="sticker sticker-rounded sticker-dark sticker-bottom-left">
+								<span class="inline-item">
+									<svg class="lexicon-icon lexicon-icon-document-vector" focusable="false" role="presentation">
+										<use href="/images/icons/icons.svg#document-vector"></use>
+									</svg>
+								</span>
+							</span>
 						</label>
 					</div>
 				</div>
@@ -476,7 +516,13 @@ Cards are a very specific visual representation of data.
 		<div class="card card-type-asset image-card">
 			<div class="aspect-ratio bg-checkered card-item-first">
 				<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg" />
-				<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
+				<span class="sticker sticker-rounded sticker-danger sticker-bottom-left">
+					<span class="inline-item">
+						<svg class="lexicon-icon lexicon-icon-document-image" focusable="false" role="presentation">
+							<use href="/images/icons/icons.svg#document-image"></use>
+						</svg>
+					</span>
+				</span>
 			</div>
 			<div class="card-body">
 				<div class="card-row">
@@ -512,8 +558,8 @@ Cards are a very specific visual representation of data.
 	] /}
 	{param selectable: true /}
 	{param spritemap: '/images/icons/icons.svg' /}
-	{param stickerLabel: 'SVG' /}
-	{param stickerStyle: 'warning' /}
+	{param stickerIcon: 'document-vector' /}
+	{param stickerStyle: 'dark' /}
 	{param subtitle: 'Author Action' /}
 	{param title: 'lexicon_icon_camera_av93ii2oofffmmmsjf2332.svg' /}
 {/call}
@@ -522,7 +568,7 @@ Cards are a very specific visual representation of data.
 	{param imageAlt: 'thumbnail' /}
 	{param imageSrc: '/images/thumbnail_coffee.jpg' /}
 	{param spritemap: '/images/icons/icons.svg' /}
-	{param stickerLabel: 'JPG' /}
+	{param stickerIcon: 'document-image' /}
 	{param stickerStyle: 'danger' /}
 	{param subtitle: 'Author Action' /}
 	{param title: 'thumbnail_coffee.jpg' /}
@@ -535,8 +581,8 @@ Cards are a very specific visual representation of data.
 	labels='[{"label": "Approved", "style": "success"}]'
 	selectable="true"
 	spritemap="/images/icons/icons.svg"
-	stickerLabel="SVG"
-	stickerStyle="warning"
+	stickerIcon="document-vector"
+	stickerStyle="dark"
 	subtitle="Author Action"
 	title="lexicon_icon_camera_av93ii2oofffmmmsjf2332.jpg">
 </clay-image-card>
@@ -545,7 +591,7 @@ Cards are a very specific visual representation of data.
 	imageAlt="thumbnail"
 	imageSrc="/images/thumbnail_coffee.jpg"
 	spritemap="/images/icons/icons.svg"
-	stickerLabel="JPG"
+	stickerIcon="document-image"
 	stickerStyle="danger"
 	subtitle="Author Action"
 	title="thumbnail_coffee.jpg">
@@ -564,7 +610,13 @@ Cards are a very specific visual representation of data.
 							<use href="/images/icons/icons.svg#camera" />
 						</svg>
 					</div>
-					<span class="sticker sticker-bottom-left sticker-warning">SVG</span>
+					<span class="sticker sticker-rounded sticker-dark sticker-bottom-left">
+						<span class="inline-item">
+							<svg class="lexicon-icon lexicon-icon-document-vector" focusable="false" role="presentation">
+								<use href="/images/icons/icons.svg#document-vector"></use>
+							</svg>
+						</span>
+					</span>
 				</label>
 			</div>
 		</div>
@@ -604,7 +656,13 @@ Cards are a very specific visual representation of data.
 <div class="card card-type-asset">
 	<div class="aspect-ratio bg-checkered card-item-first">
 		<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg" />
-		<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
+		<span class="sticker sticker-rounded sticker-danger sticker-bottom-left">
+			<span class="inline-item">
+				<svg class="lexicon-icon lexicon-icon-document-image" focusable="false" role="presentation">
+					<use href="/images/icons/icons.svg#document-image"></use>
+				</svg>
+			</span>
+		</span>
 	</div>
 	<div class="card-body">
 		<div class="card-row">
@@ -632,8 +690,12 @@ Cards are a very specific visual representation of data.
 		<div class="card card-type-asset user-card">
 			<div class="aspect-ratio card-item-first">
 				<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-					<span class="sticker sticker-danger sticker-xl">
-						<span class="sticker-overlay">HS</span>
+					<span class="sticker sticker-circle sticker-primary sticker-user-icon">
+						<span class="inline-item">
+							<svg class="lexicon-icon lexicon-icon-user" focusable="false" role="presentation">
+								<use href="/images/icons/icons.svg#user"></use>
+							</svg>
+						</span>
 					</span>
 				</div>
 			</div>
@@ -656,8 +718,12 @@ Cards are a very specific visual representation of data.
 							<input class="custom-control-input" type="checkbox"/>
 							<span class="custom-control-label"></span>
 							<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-								<span class="sticker sticker-danger sticker-xl">
-									<span class="sticker-overlay">HS</span>
+								<span class="sticker sticker-circle sticker-danger sticker-user-icon">
+									<span class="inline-item">
+										<svg class="lexicon-icon lexicon-icon-user" focusable="false" role="presentation">
+											<use href="/images/icons/icons.svg#user"></use>
+										</svg>
+									</span>
 								</span>
 							</div>
 						</label>
@@ -695,7 +761,6 @@ Cards are a very specific visual representation of data.
 
 ```soy
 {call ClayUserCard.render}
-	{param initials: 'HS' /}
 	{param name: 'User Name' /}
 	{param spritemap: '/images/icons/icons.svg' /}
 	{param subtitle: 'Latest Action' /}
@@ -714,7 +779,6 @@ Cards are a very specific visual representation of data.
 			'label': 'Save'
 		]
 	] /}
-	{param initials: 'HS' /}
 	{param name: 'User Name' /}
 	{param selectable: true /}
 	{param spritemap: '/images/icons/icons.svg' /}
@@ -724,7 +788,6 @@ Cards are a very specific visual representation of data.
 ```
 ```html
 <clay-user-card
-	initials="HS"
 	name="User Name"
 	spritemap="/images/icons/icons.svg"
 	subtitle="Latest Action"
@@ -733,7 +796,6 @@ Cards are a very specific visual representation of data.
 
 <clay-user-card
 	actionItems='[{"href": "#1", "label": "Edit", "separator": true}, {"href": "#1", "label": "Save"}]'
-	initials="HS"
 	name="User Name"
 	selectable="true"
 	spritemap="/images/icons/icons.svg"
@@ -745,8 +807,12 @@ Cards are a very specific visual representation of data.
 <div class="card card-type-asset user-card">
 	<div class="aspect-ratio card-item-first">
 		<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-			<span class="sticker sticker-danger sticker-xl">
-				<span class="sticker-overlay">HS</span>
+			<span class="sticker sticker-circle sticker-primary sticker-user-icon">
+				<span class="inline-item">
+					<svg class="lexicon-icon lexicon-icon-user" focusable="false" role="presentation">
+						<use href="/images/icons/icons.svg#user"></use>
+					</svg>
+				</span>
 			</span>
 		</div>
 	</div>
@@ -768,8 +834,12 @@ Cards are a very specific visual representation of data.
 					<input class="custom-control-input" type="checkbox"/>
 					<span class="custom-control-label"></span>
 					<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-						<span class="sticker sticker-danger sticker-xl">
-							<span class="sticker-overlay">HS</span>
+						<span class="sticker sticker-circle sticker-danger sticker-user-icon">
+							<span class="inline-item">
+								<svg class="lexicon-icon lexicon-icon-user" focusable="false" role="presentation">
+									<use href="/images/icons/icons.svg#user"></use>
+								</svg>
+							</span>
 						</span>
 					</div>
 				</label>
@@ -824,7 +894,13 @@ Cards are a very specific visual representation of data.
 						<use href="/images/icons/icons.svg#documents-and-media" />
 					</svg>
 				</div>
-				<span class="sticker sticker-bottom-left sticker-danger">DOC</span>
+				<span class="sticker sticker-rounded sticker-primary sticker-bottom-left">
+					<span class="inline-item">
+						<svg class="lexicon-icon lexicon-icon-document-text" focusable="false" role="presentation">
+							<use href="/images/icons/icons.svg#document-text"></use>
+						</svg>
+					</span>
+				</span>
 			</div>
 			<div class="card-body">
 				<div class="card-row">
@@ -854,7 +930,13 @@ Cards are a very specific visual representation of data.
 									<use href="/images/icons/icons.svg#documents-and-media" />
 								</svg>
 							</div>
-							<span class="sticker sticker-bottom-left sticker-danger">DOC</span>
+							<span class="sticker sticker-rounded sticker-primary sticker-bottom-left">
+								<span class="inline-item">
+									<svg class="lexicon-icon lexicon-icon-document-text" focusable="false" role="presentation">
+										<use href="/images/icons/icons.svg#document-text"></use>
+									</svg>
+								</span>
+							</span>
 						</label>
 					</div>
 				</div>
@@ -903,8 +985,8 @@ Cards are a very specific visual representation of data.
 		]
 	] /}
 	{param spritemap: '/images/icons/icons.svg' /}
-	{param stickerLabel: 'DOC' /}
-	{param stickerStyle: 'danger' /}
+	{param stickerIcon: 'document-text' /}
+	{param stickerStyle: 'primary' /}
 	{param subtitle: 'Stevie Ray Vaughn' /}
 	{param title: 'deliverable.doc' /}
 {/call}
@@ -930,8 +1012,8 @@ Cards are a very specific visual representation of data.
 	] /}
 	{param selectable: true /}
 	{param spritemap: '/images/icons/icons.svg' /}
-	{param stickerLabel: 'DOC' /}
-	{param stickerStyle: 'danger' /}
+	{param stickerIcon: 'document-text' /}
+	{param stickerStyle: 'primary' /}
 	{param subtitle: 'Stevie Ray Vaughn' /}
 	{param title: 'deliverable.doc' /}
 {/call}
@@ -941,8 +1023,8 @@ Cards are a very specific visual representation of data.
 	icon="documents-and-media"
 	labels='[{"label": "Approved", "style": "success"}]'
 	spritemap="/images/icons/icons.svg"
-	stickerLabel="DOC"
-	stickerStyle="danger"
+	stickerIcon="document-text"
+	stickerStyle="primary"
 	subtitle="Stevie Ray Vaughn"
 	title="deliverable.doc">
 </clay-file-card>
@@ -953,8 +1035,8 @@ Cards are a very specific visual representation of data.
 	labels='[{"label": "Approved", "style": "success"}]'
 	selectable="true"
 	spritemap="/images/icons/icons.svg"
-	stickerLabel="DOC"
-	stickerStyle="danger"
+	stickerIcon="document-text"
+	stickerStyle="primary"
 	subtitle="Stevie Ray Vaughn"
 	title="deliverable.doc">
 </clay-file-card>
@@ -967,7 +1049,13 @@ Cards are a very specific visual representation of data.
 				<use href="/images/icons/icons.svg#documents-and-media" />
 			</svg>
 		</div>
-		<span class="sticker sticker-bottom-left sticker-danger">DOC</span>
+		<span class="sticker sticker-rounded sticker-primary sticker-bottom-left">
+			<span class="inline-item">
+				<svg class="lexicon-icon lexicon-icon-document-text" focusable="false" role="presentation">
+					<use href="/images/icons/icons.svg#document-text"></use>
+				</svg>
+			</span>
+		</span>
 	</div>
 	<div class="card-body">
 		<div class="card-row">
@@ -996,7 +1084,13 @@ Cards are a very specific visual representation of data.
 							<use href="/images/icons/icons.svg#documents-and-media" />
 						</svg>
 					</div>
-					<span class="sticker sticker-bottom-left sticker-danger">DOC</span>
+					<span class="sticker sticker-rounded sticker-primary sticker-bottom-left">
+						<span class="inline-item">
+							<svg class="lexicon-icon lexicon-icon-document-text" focusable="false" role="presentation">
+								<use href="/images/icons/icons.svg#document-text"></use>
+							</svg>
+						</span>
+					</span>
 				</label>
 			</div>
 		</div>
