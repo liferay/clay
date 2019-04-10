@@ -20,5 +20,10 @@
 		"babelCore": "@babel/core"
 	},
 	"include": ["packages"],
-	"exclude": ["node_modules", "packages/**/lib"]
+	"exclude": [
+		"node_modules",
+		"packages/**/lib",
+		"packages/**/demo",
+		"packages/generator-clay-component"
+	]
 }
