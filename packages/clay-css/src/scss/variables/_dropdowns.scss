@@ -45,6 +45,26 @@ $dropdown-item-disabled-cursor: $disabled-cursor !default;
 $dropdown-item-indicator-size: 1rem !default;
 $dropdown-item-indicator-spacer-x: 1rem !default;
 
+$dropdown-item-base: () !default;
+$dropdown-item-base: map-merge((
+	border-radius: 0,
+	overflow: hidden,
+	padding-bottom: $dropdown-item-padding-y,
+	padding-left: $dropdown-item-padding-x,
+	padding-right: $dropdown-item-padding-x,
+	padding-top: $dropdown-item-padding-y,
+	position: relative,
+	transition: none,
+	white-space: normal,
+	word-wrap: break-word,
+	hover-text-decoration: none,
+	active-color: $dropdown-link-active-color,
+	active-class-font-weight: $dropdown-link-active-font-weight,
+	disabled-color: $dropdown-link-disabled-color,
+	disabled-cursor: $dropdown-item-disabled-cursor,
+	disabled-opacity: 1,
+), $dropdown-item-base);
+
 // Autocomplete Dropdown Menu
 
 $autocomplete-dropdown-menu: () !default;
@@ -52,8 +72,6 @@ $autocomplete-dropdown-menu: map-merge((
 	max-height: calc(9rem + 2px),
 	max-width: none,
 	width: 100%,
-	// https://issues.liferay.com/browse/LPS-92801 causes issues when autocomplete is on main page and modal is opened, eventually needs fixing in ClayAutocomplete
-	z-index: $zindex-modal + 1,
 ), $autocomplete-dropdown-menu);
 
 // Dropdown Action

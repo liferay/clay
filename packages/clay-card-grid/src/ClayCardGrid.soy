@@ -84,7 +84,7 @@
 	{@param? _handleItemToggled: any}
 	{@param? selectable: bool}
 
-	<li class="card-page-item-directory">
+	<li class="card-page-item card-page-item-directory">
 		{let $variant kind="text"}
 			{if $schema.contentRenderer}
 				{$schema.contentRenderer}
@@ -142,7 +142,7 @@
 
 	{foreach $item in $items}
 		{if $item.items}
-			<li class="card-page-item-header">
+			<li class="card-page-item card-page-item-header">
 				<p class="card-section-header">{$item.label}</p>
 			</li>
 
@@ -449,7 +449,6 @@
 		{param href: $item[$schema.fieldsMap.href] /}
 		{param imageAlt: $item[$schema.fieldsMap.imageAlt] /}
 		{param imageSrc: $item[$schema.fieldsMap.imageSrc] /}
-		{param initials: $item[$schema.fieldsMap.initials] /}
 		{param inputName kind="text"}
 			{if $schema.inputName}
 				{$schema.inputName}
@@ -468,6 +467,6 @@
 		{param selected: $item.selected /}
 		{param spritemap: $spritemap /}
 		{param subtitle: $item[$schema.fieldsMap.description] /}
-		{param userColor: $schema.userColorsMap ? $schema.userColorsMap[$item[$schema.fieldsMap.userColor]] ?: $schema.userColorsMap['*'] : $item[$schema.fieldsMap.userColor] /}
+		{param userColorClass: $schema.userColorsMap ? $schema.userColorsMap[$item[$schema.fieldsMap.userColor]] ?: $schema.userColorsMap['*'] : $item[$schema.fieldsMap.userColor] /}
 	{/call}
 {/deltemplate}

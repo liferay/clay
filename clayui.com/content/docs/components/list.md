@@ -12,65 +12,67 @@ List is a visual representation of a dataset that provides more flexibility for 
 
 #### Default states
 
-<li class="list-group-item list-group-item-flex">
-	<div class="autofit-col">
-		<div class="custom-control custom-checkbox">
-			<label>
-				<input class="custom-control-input" type="checkbox"/>
-				<span class="custom-control-label"></span>
-			</label>
-		</div>
-	</div>
-	<div class="autofit-col">
-		<div class="sticker sticker-secondary">
-			<span class="inline-item">
-				<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
-					<use href="/images/icons/icons.svg#folder" />
-				</svg>
-			</span>
-		</div>
-	</div>
-	<div class="autofit-col autofit-col-expand">
-		<p class="list-group-title text-truncate">
-			<a href="#1">Account Example One</a>
-		</p>
-		<p class="list-group-subtitle text-truncate">Second Level Text</p>
-	</div>
-	<div class="autofit-col">
-		<div class="quick-action-menu">
-			<a class="component-action quick-action-item" href="#1" role="button">
-				<svg class="lexicon-icon lexicon-icon-trash" focusable="false" role="presentation">
-					<use href="/images/icons/icons.svg#trash" />
-				</svg>
-			</a>
-			<a class="component-action quick-action-item" href="#1" role="button">
-				<svg class="lexicon-icon lexicon-icon-download" focusable="false" role="presentation">
-					<use href="/images/icons/icons.svg#download" />
-				</svg>
-			</a>
-			<a class="component-action quick-action-item" href="#1" role="button">
-				<svg class="lexicon-icon lexicon-icon-info-circle-open" focusable="false" role="presentation">
-					<use href="/images/icons/icons.svg#info-circle-open" />
-				</svg>
-			</a>
-		</div>
-		<div class="dropdown dropdown-action">
-			<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-				<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-					<use href="/images/icons/icons.svg#ellipsis-v" />
-				</svg>
-			</a>
-			<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-				<ul class="list-unstyled">
-					<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
-					<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
-					<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
-					<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
-				</ul>
+<ul class="list-group">
+	<li class="list-group-item list-group-item-flex">
+		<div class="autofit-col">
+			<div class="custom-control custom-checkbox">
+				<label>
+					<input class="custom-control-input" type="checkbox"/>
+					<span class="custom-control-label"></span>
+				</label>
 			</div>
 		</div>
-	</div>
-</li>
+		<div class="autofit-col">
+			<div class="sticker sticker-secondary">
+				<span class="inline-item">
+					<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
+						<use href="/images/icons/icons.svg#folder" />
+					</svg>
+				</span>
+			</div>
+		</div>
+		<div class="autofit-col autofit-col-expand">
+			<p class="list-group-title text-truncate">
+				<a href="#1">Account Example One</a>
+			</p>
+			<p class="list-group-subtitle text-truncate">Second Level Text</p>
+		</div>
+		<div class="autofit-col">
+			<div class="quick-action-menu">
+				<a class="component-action quick-action-item" href="#1" role="button">
+					<svg class="lexicon-icon lexicon-icon-trash" focusable="false" role="presentation">
+						<use href="/images/icons/icons.svg#trash" />
+					</svg>
+				</a>
+				<a class="component-action quick-action-item" href="#1" role="button">
+					<svg class="lexicon-icon lexicon-icon-download" focusable="false" role="presentation">
+						<use href="/images/icons/icons.svg#download" />
+					</svg>
+				</a>
+				<a class="component-action quick-action-item" href="#1" role="button">
+					<svg class="lexicon-icon lexicon-icon-info-circle-open" focusable="false" role="presentation">
+						<use href="/images/icons/icons.svg#info-circle-open" />
+					</svg>
+				</a>
+			</div>
+			<div class="dropdown dropdown-action">
+				<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+					<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+						<use href="/images/icons/icons.svg#ellipsis-v" />
+					</svg>
+				</a>
+				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+					<ul class="list-unstyled">
+						<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+						<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+						<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+						<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</li>
+</ul>
 
 ```soy
 {call ClayList.render}
@@ -201,128 +203,132 @@ List is a visual representation of a dataset that provides more flexibility for 
 </clay-list>
 ```
 ```html
-<li class="list-group-item list-group-item-flex">
-	<div class="autofit-col">
-		<div class="custom-control custom-checkbox">
-			<label>
-				<input class="custom-control-input" type="checkbox"/>
-				<span class="custom-control-indicator"></span>
-			</label>
-		</div>
-	</div>
-	<div class="autofit-col">
-		<div class="sticker sticker-secondary">
-			<span class="inline-item">
-				<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
-					<use href="/images/icons/icons.svg#folder" />
-				</svg>
-			</span>
-		</div>
-	</div>
-	<div class="autofit-col autofit-col-expand">
-		<p class="list-group-title text-truncate">
-			<a href="#1">Account Example One</a>
-		</p>
-		<p class="list-group-subtitle text-truncate">Second Level Text</p>
-	</div>
-	<div class="autofit-col">
-		<div class="quick-action-menu">
-			<a class="component-action quick-action-item" href="#1" role="button">
-				<svg class="lexicon-icon lexicon-icon-trash" focusable="false" role="presentation">
-					<use href="/images/icons/icons.svg#trash" />
-				</svg>
-			</a>
-			<a class="component-action quick-action-item" href="#1" role="button">
-				<svg class="lexicon-icon lexicon-icon-download" focusable="false" role="presentation">
-					<use href="/images/icons/icons.svg#download" />
-				</svg>
-			</a>
-			<a class="component-action quick-action-item" href="#1" role="button">
-				<svg class="lexicon-icon lexicon-icon-info-circle-open" focusable="false" role="presentation">
-					<use href="/images/icons/icons.svg#info-circle-open" />
-				</svg>
-			</a>
-		</div>
-		<div class="dropdown dropdown-action">
-			<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-				<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-					<use href="/images/icons/icons.svg#ellipsis-v" />
-				</svg>
-			</a>
-			<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-				<ul class="list-unstyled">
-					<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
-					<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
-					<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
-					<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
-				</ul>
+<ul class="list-group">
+	<li class="list-group-item list-group-item-flex">
+		<div class="autofit-col">
+			<div class="custom-control custom-checkbox">
+				<label>
+					<input class="custom-control-input" type="checkbox"/>
+					<span class="custom-control-indicator"></span>
+				</label>
 			</div>
 		</div>
-	</div>
-</li>
+		<div class="autofit-col">
+			<div class="sticker sticker-secondary">
+				<span class="inline-item">
+					<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
+						<use href="/images/icons/icons.svg#folder" />
+					</svg>
+				</span>
+			</div>
+		</div>
+		<div class="autofit-col autofit-col-expand">
+			<p class="list-group-title text-truncate">
+				<a href="#1">Account Example One</a>
+			</p>
+			<p class="list-group-subtitle text-truncate">Second Level Text</p>
+		</div>
+		<div class="autofit-col">
+			<div class="quick-action-menu">
+				<a class="component-action quick-action-item" href="#1" role="button">
+					<svg class="lexicon-icon lexicon-icon-trash" focusable="false" role="presentation">
+						<use href="/images/icons/icons.svg#trash" />
+					</svg>
+				</a>
+				<a class="component-action quick-action-item" href="#1" role="button">
+					<svg class="lexicon-icon lexicon-icon-download" focusable="false" role="presentation">
+						<use href="/images/icons/icons.svg#download" />
+					</svg>
+				</a>
+				<a class="component-action quick-action-item" href="#1" role="button">
+					<svg class="lexicon-icon lexicon-icon-info-circle-open" focusable="false" role="presentation">
+						<use href="/images/icons/icons.svg#info-circle-open" />
+					</svg>
+				</a>
+			</div>
+			<div class="dropdown dropdown-action">
+				<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+					<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+						<use href="/images/icons/icons.svg#ellipsis-v" />
+					</svg>
+				</a>
+				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+					<ul class="list-unstyled">
+						<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+						<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+						<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+						<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</li>
+</ul>
 ```
 
 #### Selected state
 
-<li class="list-group-item list-group-item-flex active">
-	<div class="autofit-col">
-		<div class="custom-control custom-checkbox">
-			<label>
-				<input checked class="custom-control-input" type="checkbox"/>
-				<span class="custom-control-label"></span>
-			</label>
-		</div>
-	</div>
-	<div class="autofit-col">
-		<div class="sticker sticker-secondary">
-			<span class="inline-item">
-				<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
-					<use href="/images/icons/icons.svg#folder" />
-				</svg>
-			</span>
-		</div>
-	</div>
-	<div class="autofit-col autofit-col-expand">
-		<p class="list-group-title text-truncate">
-			<a href="#1">Account Example One</a>
-		</p>
-		<p class="list-group-subtitle text-truncate">Second Level Text</p>
-	</div>
-	<div class="autofit-col">
-		<div class="quick-action-menu">
-			<a class="component-action quick-action-item" href="#1" role="button">
-				<svg class="lexicon-icon lexicon-icon-trash" focusable="false" role="presentation">
-					<use href="/images/icons/icons.svg#trash" />
-				</svg>
-			</a>
-			<a class="component-action quick-action-item" href="#1" role="button">
-				<svg class="lexicon-icon lexicon-icon-download" focusable="false" role="presentation">
-					<use href="/images/icons/icons.svg#download" />
-				</svg>
-			</a>
-			<a class="component-action quick-action-item" href="#1" role="button">
-				<svg class="lexicon-icon lexicon-icon-info-circle-open" focusable="false" role="presentation">
-					<use href="/images/icons/icons.svg#info-circle-open" />
-				</svg>
-			</a>
-		</div>
-		<div class="dropdown dropdown-action">
-			<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-				<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-					<use href="/images/icons/icons.svg#ellipsis-v" />
-				</svg>
-			</a>
-			<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-				<ul class="list-unstyled">
-					<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
-					<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
-					<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
-					<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
-				</ul>
+<ul class="list-group">
+	<li class="list-group-item list-group-item-flex active">
+		<div class="autofit-col">
+			<div class="custom-control custom-checkbox">
+				<label>
+					<input checked class="custom-control-input" type="checkbox"/>
+					<span class="custom-control-label"></span>
+				</label>
 			</div>
 		</div>
-	</div>
-</li>
+		<div class="autofit-col">
+			<div class="sticker sticker-secondary">
+				<span class="inline-item">
+					<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
+						<use href="/images/icons/icons.svg#folder" />
+					</svg>
+				</span>
+			</div>
+		</div>
+		<div class="autofit-col autofit-col-expand">
+			<p class="list-group-title text-truncate">
+				<a href="#1">Account Example One</a>
+			</p>
+			<p class="list-group-subtitle text-truncate">Second Level Text</p>
+		</div>
+		<div class="autofit-col">
+			<div class="quick-action-menu">
+				<a class="component-action quick-action-item" href="#1" role="button">
+					<svg class="lexicon-icon lexicon-icon-trash" focusable="false" role="presentation">
+						<use href="/images/icons/icons.svg#trash" />
+					</svg>
+				</a>
+				<a class="component-action quick-action-item" href="#1" role="button">
+					<svg class="lexicon-icon lexicon-icon-download" focusable="false" role="presentation">
+						<use href="/images/icons/icons.svg#download" />
+					</svg>
+				</a>
+				<a class="component-action quick-action-item" href="#1" role="button">
+					<svg class="lexicon-icon lexicon-icon-info-circle-open" focusable="false" role="presentation">
+						<use href="/images/icons/icons.svg#info-circle-open" />
+					</svg>
+				</a>
+			</div>
+			<div class="dropdown dropdown-action">
+				<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+					<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+						<use href="/images/icons/icons.svg#ellipsis-v" />
+					</svg>
+				</a>
+				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+					<ul class="list-unstyled">
+						<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+						<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+						<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+						<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</li>
+</ul>
 
 ```soy
 {call ClayList.render}
@@ -455,65 +461,67 @@ List is a visual representation of a dataset that provides more flexibility for 
 </clay-list>
 ```
 ```html
-<li class="list-group-item list-group-item-flex active">
-	<div class="autofit-col">
-		<div class="custom-control custom-checkbox">
-			<label>
-				<input checked class="custom-control-input" type="checkbox"/>
-				<span class="custom-control-label"></span>
-			</label>
-		</div>
-	</div>
-	<div class="autofit-col">
-		<div class="sticker sticker-secondary">
-			<span class="inline-item">
-				<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
-					<use href="/images/icons/icons.svg#folder" />
-				</svg>
-			</span>
-		</div>
-	</div>
-	<div class="autofit-col autofit-col-expand">
-		<p class="list-group-title text-truncate">
-			<a href="#1">Account Example One</a>
-		</p>
-		<p class="list-group-subtitle text-truncate">Second Level Text</p>
-	</div>
-	<div class="autofit-col">
-		<div class="quick-action-menu">
-			<a class="component-action quick-action-item" href="#1" role="button">
-				<svg class="lexicon-icon lexicon-icon-trash" focusable="false" role="presentation">
-					<use href="/images/icons/icons.svg#trash" />
-				</svg>
-			</a>
-			<a class="component-action quick-action-item" href="#1" role="button">
-				<svg class="lexicon-icon lexicon-icon-download" focusable="false" role="presentation">
-					<use href="/images/icons/icons.svg#download" />
-				</svg>
-			</a>
-			<a class="component-action quick-action-item" href="#1" role="button">
-				<svg class="lexicon-icon lexicon-icon-info-circle-open" focusable="false" role="presentation">
-					<use href="/images/icons/icons.svg#info-circle-open" />
-				</svg>
-			</a>
-		</div>
-		<div class="dropdown dropdown-action">
-			<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-				<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-					<use href="/images/icons/icons.svg#ellipsis-v" />
-				</svg>
-			</a>
-			<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-				<ul class="list-unstyled">
-					<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
-					<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
-					<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
-					<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
-				</ul>
+<ul class="list-group">
+	<li class="list-group-item list-group-item-flex active">
+		<div class="autofit-col">
+			<div class="custom-control custom-checkbox">
+				<label>
+					<input checked class="custom-control-input" type="checkbox"/>
+					<span class="custom-control-label"></span>
+				</label>
 			</div>
 		</div>
-	</div>
-</li>
+		<div class="autofit-col">
+			<div class="sticker sticker-secondary">
+				<span class="inline-item">
+					<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
+						<use href="/images/icons/icons.svg#folder" />
+					</svg>
+				</span>
+			</div>
+		</div>
+		<div class="autofit-col autofit-col-expand">
+			<p class="list-group-title text-truncate">
+				<a href="#1">Account Example One</a>
+			</p>
+			<p class="list-group-subtitle text-truncate">Second Level Text</p>
+		</div>
+		<div class="autofit-col">
+			<div class="quick-action-menu">
+				<a class="component-action quick-action-item" href="#1" role="button">
+					<svg class="lexicon-icon lexicon-icon-trash" focusable="false" role="presentation">
+						<use href="/images/icons/icons.svg#trash" />
+					</svg>
+				</a>
+				<a class="component-action quick-action-item" href="#1" role="button">
+					<svg class="lexicon-icon lexicon-icon-download" focusable="false" role="presentation">
+						<use href="/images/icons/icons.svg#download" />
+					</svg>
+				</a>
+				<a class="component-action quick-action-item" href="#1" role="button">
+					<svg class="lexicon-icon lexicon-icon-info-circle-open" focusable="false" role="presentation">
+						<use href="/images/icons/icons.svg#info-circle-open" />
+					</svg>
+				</a>
+			</div>
+			<div class="dropdown dropdown-action">
+				<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+					<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+						<use href="/images/icons/icons.svg#ellipsis-v" />
+					</svg>
+				</a>
+				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+					<ul class="list-unstyled">
+						<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+						<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+						<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+						<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</li>
+</ul>
 ```
 
 ### Sections

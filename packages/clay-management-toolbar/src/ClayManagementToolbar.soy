@@ -735,15 +735,9 @@
 								{param ref: 'sortingButton' /}
 								{param spritemap: $spritemap /}
 								{param title kind="text"}
-									{if $sortingOrder == 'desc'}
-										{msg desc=""}
-											descending
-										{/msg}
-									{else}
-										{msg desc=""}
-											ascending
-										{/msg}
-									{/if}
+									{msg desc=""}
+										reverse-sort-direction
+									{/msg}
 								{/param}
 							{/call}
 						{else}
@@ -757,7 +751,7 @@
 								{param style: 'unstyled' /}
 								{param title kind="text"}
 									{msg desc=""}
-										order
+										reverse-sort-direction
 									{/msg}
 								{/param}
 							{/call}
