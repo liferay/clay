@@ -8,6 +8,9 @@ const path = require('path');
 const HWP = require('html-webpack-plugin');
 
 module.exports = {
+	devServer: {
+		contentBase: [path.resolve('../../')],
+	},
 	entry: path.join(__dirname, 'demo/App.tsx'),
 	module: {
 		rules: [
