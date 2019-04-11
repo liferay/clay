@@ -140,6 +140,27 @@ class ClayDropdownBase extends ClayComponent {
 		});
 	}
 
+	_handleItemKeyDown(event) {
+		if (event.key === 'Tab') {
+			const element = event.delegateTarget;
+			const elementIndex = this._getDropdownItemIndex(element);
+			const totalElements = element.parentElement.querySelectorAll('li :not([role="presentation"])').length;
+
+			if ((elementIndex === 0 && event.shiftKey) || elementIndex === totalElements && !event.shiftKey) {
+				event.preventDefault();
+				this.refs.triggerButton.focus();
+			}
+			else if (elementIndex === totalElements - 1 && !event.shiftKey){
+				this.toggle();
+				this.refs.triggerButton.focus();
+			}
+		}
+		else if (event.key === 'Escape') {
+			this.toggle();
+			this.refs.triggerButton.focus();
+		}
+	}
+
 	/**
 	 * Increments to the index to the next item.
 	 * @param {Array} items
@@ -268,39 +289,6 @@ class ClayDropdownBase extends ClayComponent {
 	}
 
 	/**
-	 * Handle key events.
-	 * @param {!Event} event
-	 * @private
-	 */
-	_handleKeyNavigation(event) {
-		if (KEY_NAVIGATION.includes(event.key)) {
-			event.preventDefault();
-
-			if (event.key === KEY_DOWN || event.key === KEY_UP) {
-				this._setNextActive(event.key === KEY_UP);
-			} else if (event.key === KEY_ENTER) {
-				this._handleEnterKey(event);
-			}
-		}
-	}
-
-	/**
-	 * Continues the propagation of the enter key event
-	 * @param {!Event} event
-	 * @protected
-	 * @return {Boolean} If the event has been prevented or not.
-	 */
-	_handleEnterKey(event) {
-		return !this.emit({
-			data: {
-				item: flatten(this.items).find(item => item.active),
-			},
-			name: 'itemClicked',
-			originalEvent: event,
-		});
-	}
-
-	/**
 	 * Handle click key code esc and close dropdown.
 	 * @param {!Event} event
 	 * @private
@@ -328,6 +316,23 @@ class ClayDropdownBase extends ClayComponent {
 					alignElement,
 					this.preferredAlign
 				);
+			}
+		}
+	}
+
+	_handleTriggerKeyDown(event) {
+		if (event.key === 'Tab') {
+			if (event.shiftKey && this.expanded) {
+				this.toggle();
+			}
+			else {
+				let item = this.refs.portal.refs.item0;
+
+				item = item.refs.item0 || item;
+
+				if (item) {
+					item.element.focus();
+				}
 			}
 		}
 	}
@@ -434,13 +439,6 @@ class ClayDropdownBase extends ClayComponent {
 					document,
 					'click',
 					this._handleDocClick.bind(this),
-					true
-				),
-				dom.on(document, 'keyup', this._handleKeyup.bind(this), true),
-				dom.on(
-					document,
-					'keydown',
-					this._handleKeyNavigation.bind(this),
 					true
 				),
 				dom.on(

@@ -27,6 +27,16 @@ class ClayDropdownItem extends ClayComponent {
 	}
 
 	/**
+	 * Continues the propagation of the item clicked event
+	 * @param {!Event} event
+	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleItemKeyDown(event) {
+		return !this.emit('itemKeyDown', event);
+	}
+
+	/**
 	 * @inheritDoc
 	 */
 	syncActive() {
