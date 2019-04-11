@@ -232,6 +232,59 @@ To get to the behavior of having a ClaySticker with icon, use the composition wi
 
 -   Added ability to utilize context for passing spritemap down instead of having to pass the prop everywhere.
 
+## ClayModal
+
+Of more freedom to customize `Footer` but still requiring some rules to make everything work well, always use the `<ClayModal.FooterContainer />` component to align the left and right buttons.
+
+```diff
+<ClayModal
+-	body={<h1>{'Hello World!'}</h1>}
++	onClose={() => setVisible(false)}
+	visible={visible}
+-/>
++>
++	<h1>{'Hello World!'}</h1>
++</ClayModal>
+```
+
+### API Changes
+
+-  `body` deprecated in favor of utilizing `children` prop
+-  `footerButtons` removed in favor of utilizing `renderFooter` prop
+-  `onClose` added
+-  `visible` is the source of truth to open or close the modal, `show` method has been removed.
+-  `data` deprecated
+-  `defaultEventHandler` deprecated
+-  `elementClasses` renamed to `className`
+
+### Compositions
+
+To render the buttons to the footer use the utility and follow some rules to have no problem, in case you forget the component has issued errors in the console to remind you.
+
+-	Do not wrap `FooterContainer` with an HTML tag, use `Fragment` to do so.
+-	Do not use more than two `FooterContainer`. 
+
+```diff
+<ClayModal
+-	body={<h1>{'Hello World!'}</h1>}
++	onClose={() => setVisible(false)}
++	renderFooter={
++		<>
++			<ClayModal.FooterContainer>
++				<ClayButton>{'Cancel'}</ClayButton>
++			</ClayModal.FooterContainer>
++			<ClayModal.FooterContainer>
++				<ClayButton>{'Save'}</ClayButton>
++			</ClayModal.FooterContainer>
++		</>
++	}
+	visible={visible}
+-/>
++>
++	<h1>{'Hello World!'}</h1>
++</ClayModal>
+```
+
 ## ClayRadioGroup, ClayRadio
 
 Using a radio by itself doesn't make much sense, only when 2+ exist does the functionality of radio actually work, which is why we moved from `radio` to `radio-group`. The functionality is the same, but by being grouped together it should make it easier to use because the `ClayRadioGroup` component will internally handle which radio is checked and requires less re-duplication of `inline` and `name` props.
@@ -266,7 +319,7 @@ Using a radio by itself doesn't make much sense, only when 2+ exist does the fun
 -   Removed `size` in favor of `large` since there is only default and large options.
 -   Removed `label` in favor of utilizing `children` prop
 -   Added `closeButtonProps` which allows you to add attributes to the nested button.
-    -   This is where you would pass a callback for `onClick`.
+-   This is where you would pass a callback for `onClick`.
 
 ## ClayProgressBar
 

@@ -1,1 +1,259 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayModal renders 1`] = `
+<div
+  className="fade modal"
+>
+  <div
+    className="modal-dialog"
+    tabIndex={-1}
+  >
+    <div
+      className="modal-content"
+    >
+      <div
+        className="modal-body"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayModal should renders with one element in renderFooter 1`] = `
+<div
+  className="fade modal"
+>
+  <div
+    className="modal-dialog"
+    tabIndex={-1}
+  >
+    <div
+      className="modal-content"
+    >
+      <div
+        className="modal-body modal-body-iframe"
+      >
+        <iframe
+          src="http://localhost"
+          title="http://localhost"
+        />
+      </div>
+      <div
+        className="modal-footer"
+      >
+        <div
+          className="modal-item-first"
+        >
+          <div
+            className="btn-group"
+          >
+            <div
+              className="btn-group-item"
+            >
+              <button
+                className="btn btn-primary"
+                type="button"
+              >
+                Bar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayModal should renders with size 1`] = `
+<div
+  className="fade modal"
+>
+  <div
+    className="modal-dialog modal-lg"
+    tabIndex={-1}
+  >
+    <div
+      className="modal-content"
+    >
+      <div
+        className="modal-body"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayModal should renders with status 1`] = `
+<div
+  className="fade modal"
+>
+  <div
+    className="modal-dialog modal-success"
+    tabIndex={-1}
+  >
+    <div
+      className="modal-content"
+    >
+      <div
+        className="modal-body"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayModal should renders with title 1`] = `
+<div
+  className="fade modal"
+>
+  <div
+    className="modal-dialog"
+    tabIndex={-1}
+  >
+    <div
+      className="modal-content"
+    >
+      <div
+        className="modal-header"
+      >
+        <div
+          className="modal-title"
+        >
+          Foo
+        </div>
+        <button
+          aria-label="close"
+          className="close btn btn-unstyled"
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="lexicon-icon lexicon-icon-times"
+            role="presentation"
+          >
+            <use
+              xlinkHref="icons.svg#times"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        className="modal-body"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayModal should renders with two element in renderFooter 1`] = `
+<div
+  className="fade modal"
+>
+  <div
+    className="modal-dialog"
+    tabIndex={-1}
+  >
+    <div
+      className="modal-content"
+    >
+      <div
+        className="modal-body modal-body-iframe"
+      >
+        <iframe
+          src="http://localhost"
+          title="http://localhost"
+        />
+      </div>
+      <div
+        className="modal-footer"
+      >
+        <div
+          className="modal-item-first"
+        >
+          <div
+            className="btn-group"
+          >
+            <div
+              className="btn-group-item"
+            >
+              <button
+                className="btn btn-primary"
+                type="button"
+              >
+                Bar
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="modal-item-last"
+        >
+          <div
+            className="btn-group"
+          >
+            <div
+              className="btn-group-item"
+            >
+              <button
+                className="btn btn-primary"
+                type="button"
+              >
+                Baz
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayModal should renders with url 1`] = `
+<div
+  className="fade modal"
+>
+  <div
+    className="modal-dialog"
+    tabIndex={-1}
+  >
+    <div
+      className="modal-content"
+    >
+      <div
+        className="modal-body modal-body-iframe"
+      >
+        <iframe
+          src="http://localhost"
+          title="http://localhost"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayModal should renders with visible \`true\` 1`] = `
+Array [
+  <div
+    className="modal-backdrop fade"
+  />,
+  <div
+    className="fade modal d-block"
+  >
+    <div
+      className="modal-dialog"
+      tabIndex={-1}
+    >
+      <div
+        className="modal-content"
+      >
+        <div
+          className="modal-body"
+        />
+      </div>
+    </div>
+  </div>,
+]
+`;
