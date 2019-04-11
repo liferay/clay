@@ -17,8 +17,6 @@ const KEY_CODE_ESC = 27;
 const KEY_ESCAPE = 'Escape';
 const KEY_TAB = 'Tab';
 
-const KEY_NAVIGATION = [KEY_ESCAPE, KEY_TAB];
-
 /**
  * Flattens all items into an array of arrays.
  * @param {Array} items
@@ -202,7 +200,7 @@ class ClayDropdownBase extends ClayComponent {
 	 * @protected
 	 */
 	_handleItemKeyDown(event) {
-		if (event.key === KEY_NAVIGATION.KEY_TAB) {
+		if (event.key === KEY_TAB) {
 			const element = event.delegateTarget;
 			const elementIndex = this._getDropdownItemIndex(element);
 			const totalElements = element.parentElement.querySelectorAll(
@@ -219,7 +217,7 @@ class ClayDropdownBase extends ClayComponent {
 				this.toggle();
 				this.refs.triggerButton.focus();
 			}
-		} else if (event.key === KEY_NAVIGATION.KEY_ESCAPE) {
+		} else if (event.key === KEY_ESCAPE) {
 			this.toggle();
 			this.refs.triggerButton.focus();
 		}
@@ -315,7 +313,7 @@ class ClayDropdownBase extends ClayComponent {
 	 * @protected
 	 */
 	_handleTriggerKeyDown(event) {
-		if (event.key === KEY_NAVIGATION.KEY_TAB) {
+		if (event.key === KEY_TAB) {
 			if (event.shiftKey && this.expanded) {
 				this.toggle();
 			} else {
