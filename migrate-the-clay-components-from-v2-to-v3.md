@@ -78,7 +78,7 @@ To get to the behavior of having a ClayLink with icon, use the composition with 
 +</ClayLink>
 ```
 
-To get to the behavior of having a ClayLink with image, use the composition with the new ClayImage component:
+To get to the behavior of having a ClayLink with image, use the composition with the `<img />` tag:
 
 ```diff
 <ClayLink
@@ -86,8 +86,58 @@ To get to the behavior of having a ClayLink with image, use the composition with
 -	imageSrc="image.jpg"
 -	imageAlt="my image"
 -/>
-+	<ClayImage src="image.jpg" alt="my image" />
++	<img src="image.jpg" alt="my image" />
 +</ClayLink>
+```
+
+## ClaySticker
+
+```diff
+<ClaySticker
+	shape="circle"
+-	label="A"
+-/>
++>
++	{'A'}
++</ClaySticker>
+```
+
+### API Changes
+
+- `data` deprecated
+- `defaultEventHandler` deprecated
+- `elementClasses` renamed to `className`
+- `icon` deprecated
+- `imageAlt` deprecated
+- `imageSrc` deprecated
+- `label` deprecated in favor of `children`
+- `spritemap` deprecated
+- `style` renamed to `displayType`
+
+### Compositions
+
+To get to the behavior of having a ClaySticker with image, use the composition with the `<img />` tag:
+
+```diff
+-<ClaySticker
+-	imageSrc="image.jpg"
+-	imageAlt="my image"
+-/>
++<ClaySticker>
++ <img className="sticker-img" src="image.jpg" alt="my image" />
++</ClaySticker>
+```
+
+To get to the behavior of having a ClaySticker with icon, use the composition with the `<ClayIcon />` component:
+
+```diff
+-<ClaySticker
+-	spritemap="icons.svg"
+-	symbol="user"
+-/>
++<ClaySticker>
++ <ClayIcon spritemap="icons.svg" symbol="user" />
++</ClaySticker>
 ```
 
 ## ClayIcon
