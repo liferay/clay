@@ -44,11 +44,7 @@ describe('ClayModal', () => {
 
 	it('should renders with visible `true`', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayModal
-				onClose={() => {}}
-				spritemap={spritemap}
-				visible
-			/>
+			<ClayModal onClose={() => {}} spritemap={spritemap} visible />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
