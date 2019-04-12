@@ -14,6 +14,8 @@
 	}
 }
 
+// A general mixin used for component containers (e.g., `.container`, `.container-fluid`, `.form-group`, `.input-group-inset-item`)
+
 @mixin clay-container($map) {
 	$enabled: setter(map-get($map, enabled), true);
 	$breakpoint-up: map-get($map, breakpoint-up);
@@ -28,6 +30,7 @@
 	$border-radius: map-get($map, border-radius);
 	$border-style: map-get($map, border-style);
 	$border-width: map-get($map, border-width);
+	$color: map-get($map, color);
 	$display: map-get($map, display);
 	$flex-basis: map-get($map, flex-basis);
 	$flex-direction: map-get($map, flex-direction);
@@ -35,8 +38,12 @@
 	$flex-shrink: map-get($map, flex-shrink);
 	$flex-wrap: map-get($map, flex-wrap);
 	$float: map-get($map, float);
+	$font-family: map-get($map, font-family);
+	$font-size: map-get($map, font-size);
+	$font-weight: map-get($map, font-weight);
 	$height: map-get($map, height);
 	$justify-content: map-get($map, justify-content);
+	$line-height: map-get($map, line-height);
 	$margin-bottom: map-get($map, margin-bottom);
 	$margin-left: map-get($map, margin-left);
 	$margin-right: map-get($map, margin-right);
@@ -45,12 +52,18 @@
 	$max-width: map-get($map, max-width);
 	$min-height: map-get($map, min-height);
 	$min-width: map-get($map, min-width);
+	$opacity: map-get($map, opacity);
 	$order: map-get($map, order);
 	$padding-bottom: map-get($map, padding-bottom);
 	$padding-left: map-get($map, padding-left);
 	$padding-right: map-get($map, padding-right);
 	$padding-top: map-get($map, padding-top);
 	$position: map-get($map, position);
+	$text-align: map-get($map, text-align);
+	$text-decoration: map-get($map, text-decoration);
+	$text-transform: map-get($map, text-transform);
+	$transition: map-get($map, transition);
+	$vertical-align: map-get($map, vertical-align);
 	$width: map-get($map, width);
 
 	$padding-bottom-mobile: map-get($map, padding-bottom-mobile);
@@ -67,7 +80,11 @@
 	border-radius: $border-radius;
 	border-style: $border-style;
 	border-width: $border-width;
+	color: $color;
 	display: $display;
+	font-family: $font-family;
+	font-size: $font-size;
+	font-weight: $font-weight;
 	flex-basis: $flex-basis;
 	flex-direction: $flex-direction;
 	flex-grow: $flex-grow;
@@ -76,6 +93,7 @@
 	float: $float;
 	justify-content: $justify-content;
 	height: $height;
+	line-height: $line-height;
 	margin-bottom: $margin-bottom;
 	margin-left: $margin-left;
 	margin-right: $margin-right;
@@ -84,12 +102,18 @@
 	max-width: $max-width;
 	min-height: $min-height;
 	min-width: $min-width;
+	opacity: $opacity;
 	order: $order;
 	padding-bottom: $padding-bottom;
 	padding-left: $padding-left;
 	padding-right: $padding-right;
 	padding-top: $padding-top;
 	position: $position;
+	text-align: $text-align;
+	text-decoration: $text-decoration;
+	text-transform: $text-transform;
+	transition: $transition;
+	vertical-align: $vertical-align;
 	width: $width;
 
 	@if($breakpoint-down) {
