@@ -71,7 +71,6 @@ class ClayMultiSelect extends ClayComponent {
 	 * Handles the autocomplete selected item event.
 	 * @param {!Event} event
 	 * @protected
-	 * @return {?Boolean} If the event has been prevented or not.
 	 */
 	_defaultAutocompleteItemSelected(event) {
 		const {label, value} = event.data.item;
@@ -107,7 +106,9 @@ class ClayMultiSelect extends ClayComponent {
 
 		if (char === ',' || words.length > 1) {
 			words.forEach(word => {
-				let added = this._addLabelItem(this._createItemObject(word, word));
+				let added = this._addLabelItem(
+					this._createItemObject(word, word)
+				);
 
 				if (added) {
 					inputValue = inputValue.replace(word + ',', '');
@@ -148,7 +149,6 @@ class ClayMultiSelect extends ClayComponent {
 	 * Handles the click on the close label item button.
 	 * @param {!Event} event
 	 * @protected
-	 * @return {?Boolean} If the event has been prevented or not.
 	 */
 	_defaultLabelItemKeyDown(event) {
 		if (event.data.key == 'Backspace' || event.data.key == 'Enter') {
@@ -385,7 +385,7 @@ class ClayMultiSelect extends ClayComponent {
 
 			return true;
 		}
-		
+
 		return false;
 	}
 
