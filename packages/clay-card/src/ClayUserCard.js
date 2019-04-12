@@ -145,11 +145,18 @@ ClayUserCard.STATE = {
 	/**
 	 * Initials of the user.
 	 * @default undefined
+	 * @deprecated
 	 * @instance
 	 * @memberof ClayUserCard
 	 * @type {?(string|undefined)}
 	 */
-	initials: Config.string(),
+	initials: Config.validator(value => {
+		if (value) {
+			console.warn(
+				'🚨 `initials` has been deprecated and will be removed in the next major version.'
+			);
+		}
+	}),
 
 	/**
 	 * Name to be applied to the input element.

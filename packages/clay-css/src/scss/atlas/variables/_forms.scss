@@ -49,13 +49,14 @@ $form-group-sm-item-label-spacer: 1.5625rem !default; // 25px
 $input-color: $gray-900 !default;
 $input-bg: $gray-200 !default;
 $input-border-color: $gray-300 !default;
-$input-box-shadow: none !default;
+// Will need to be revisited if https://github.com/twbs/bootstrap/pull/24821 merge error is fixed
+$input-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
 $input-placeholder-color: $gray-600 !default;
 $input-label-color: $gray-900 !default;
 
 $input-focus-bg: lighten($component-active-bg, 44.90) !default;
 $input-focus-border-color: lighten($component-active-bg, 22.94) !default;
-$input-focus-box-shadow: none !default;
+$input-focus-box-shadow: $component-focus-box-shadow !default;
 
 $input-disabled-color: $gray-500 !default;
 $input-disabled-bg: $input-bg !default;
@@ -68,8 +69,9 @@ $input-readonly-bg: $input-border-color !default;
 
 $input-danger-bg: $danger-l2 !default;
 $input-danger-border-color: $danger-l1 !default;
-$input-danger-box-shadow: none !default;
-$input-danger-focus-box-shadow: none !default;
+// Will need to be revisited if https://github.com/twbs/bootstrap/pull/24821 merge error is fixed
+$input-danger-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
+$input-danger-focus-box-shadow: $input-focus-box-shadow !default;
 $input-danger-color: $input-color !default;
 $input-danger-checkbox-label-color: $danger !default;
 $input-danger-select-icon-color: $input-danger-border-color !default;
@@ -77,8 +79,9 @@ $input-danger-select-icon: clay-icon(caret-double-l, $input-danger-select-icon-c
 
 $input-success-bg: $success-l2 !default;
 $input-success-border-color: $success-l1 !default;
-$input-success-box-shadow: none !default;
-$input-success-focus-box-shadow: none !default;
+// Will need to be revisited if https://github.com/twbs/bootstrap/pull/24821 merge error is fixed
+$input-success-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
+$input-success-focus-box-shadow: $input-focus-box-shadow !default;
 $input-success-color: $input-color !default;
 $input-success-checkbox-label-color: $success !default;
 $input-success-select-icon-color: $input-success-border-color !default;
@@ -86,8 +89,9 @@ $input-success-select-icon: clay-icon(caret-double-l, $input-success-select-icon
 
 $input-warning-bg: $warning-l2 !default;
 $input-warning-border-color: $warning-l1 !default;
-$input-warning-box-shadow: none !default;
-$input-warning-focus-box-shadow: none !default;
+// Will need to be revisited if https://github.com/twbs/bootstrap/pull/24821 merge error is fixed
+$input-warning-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
+$input-warning-focus-box-shadow: $input-focus-box-shadow !default;
 $input-warning-color: $input-color !default;
 $input-warning-checkbox-label-color: $warning !default;
 $input-warning-select-icon-color: $input-warning-border-color !default;
