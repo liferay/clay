@@ -5,6 +5,7 @@
  */
 {template .render}
 	{@param? _handleItemClick: any}
+	{@param? _handleItemKeyDown: any}
 	{@param? active: bool}
 	{@param? checked: bool}
 	{@param? contentRenderer: string}
@@ -27,6 +28,7 @@
     
 	{delcall ClayDropdownItem.Item variant="$variant"}
 		{param _handleItemClick: $_handleItemClick /}
+		{param _handleItemKeyDown: $_handleItemKeyDown /}
 		{param active: $active /}
 		{param checked: $checked /}
 		{param disabled: $disabled /}
@@ -52,6 +54,7 @@
 {deltemplate ClayDropdownItem.Item}
 	{@param label: string}
 	{@param? _handleItemClick: any}
+	{@param? _handleItemKeyDown: any}
 	{@param? active: bool}
 	{@param? checked: bool}
 	{@param? disabled: bool}
@@ -133,6 +136,7 @@
 
 	{let $itemAttributes kind="attributes"}
 		data-onclick="{$_handleItemClick}"
+		data-onkeydown="{$_handleItemKeyDown}"
 		tabindex="-1"
 	{/let}
 
@@ -147,6 +151,7 @@
 {deltemplate ClayDropdownItem.Item variant="'checkbox'"}
 	{@param label: string}
 	{@param? _handleItemClick: any}
+	{@param? _handleItemKeyDown: any}
 	{@param? active: bool}
 	{@param? checked: bool}
 	{@param? disabled: bool}
@@ -182,6 +187,7 @@
 		"
 
 		data-onclick="{$_handleItemClick}"
+		data-onkeydown="{$_handleItemKeyDown}"
 		tabindex="-1"
 	{/let}
 
@@ -196,6 +202,7 @@
 {deltemplate ClayDropdownItem.Item variant="'group'"}
 	{@param label: string}
 	{@param? _handleItemClick: any}
+	{@param? _handleItemKeyDown: any}
 	{@param? active: bool}
 	{@param? checked: bool}
 	{@param? disabled: bool}
@@ -221,6 +228,7 @@
 	{if $items}
 		{call ClayDropdownBase.items}
 			{param _handleItemClick: $_handleItemClick /}
+			{param _handleItemKeyDown: $_handleItemKeyDown /}
 			{param items: $items /}
 			{param itemsIconAlignment: $itemsIconAlignment /}
 			{param maxItems: $maxItems /}
@@ -235,6 +243,7 @@
 {deltemplate ClayDropdownItem.Item variant="'radio'"}
 	{@param label: string}
 	{@param? _handleItemClick: any}
+	{@param? _handleItemKeyDown: any}
 	{@param? active: bool}
 	{@param? checked: bool}
 	{@param? disabled: bool}
@@ -270,6 +279,7 @@
 		"
 
 		data-onclick="{$_handleItemClick}"
+		data-onkeydown="{$_handleItemKeyDown}"
 
 		tabindex="-1"
 	{/let}
@@ -286,6 +296,7 @@
 {deltemplate ClayDropdownItem.Item variant="'radiogroup'"}
 	{@param label: string}
 	{@param? _handleItemClick: any}
+	{@param? _handleItemKeyDown: any}
 	{@param? active: bool}
 	{@param? checked: bool}
 	{@param? disabled: bool}
@@ -313,6 +324,7 @@
 			<ul class="list-unstyled">
 				{call ClayDropdownBase.items}
 					{param _handleItemClick: $_handleItemClick /}
+					{param _handleItemKeyDown: $_handleItemKeyDown /}
 					{param contentRenderer: 'radio' /}
 					{param items: $items /}
 					{param itemsIconAlignment: $itemsIconAlignment /}
@@ -330,6 +342,7 @@
 {deltemplate ClayDropdownItem.Item variant="'separator'"}
 	{@param label: string}
 	{@param? _handleItemClick: any}
+	{@param? _handleItemKeyDown: any}
 	{@param? active: bool}
 	{@param? checked: bool}
 	{@param? disabled: bool}

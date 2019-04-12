@@ -8,7 +8,9 @@
 	{@param label: html|string}
 	{@param? _handleButtonClick: any}
 	{@param? _handleItemClick: any}
+	{@param? _handleItemKeyDown: any}
 	{@param? _handleSearch: any}
+	{@param? _handleTriggerKeyDown: any}
 	{@param? button: ?}
 	{@param? caption: string}
 	{@param? contentRenderer: string}
@@ -45,6 +47,7 @@
 
 	<div {$attributes}>
 		{call .trigger}
+			{param _handleTriggerKeyDown: $_handleTriggerKeyDown /}
 			{param ariaLabel: $triggerAriaLabel /}
 			{param classes: $triggerClasses /}
 			{param disabled: $disabled /}
@@ -58,6 +61,7 @@
 		{call .sections}
 			{param _handleButtonClick: $_handleButtonClick /}
 			{param _handleItemClick: $_handleItemClick /}
+			{param _handleItemKeyDown: $_handleItemKeyDown /}
 			{param _handleSearch: $_handleSearch /}
 			{param button: $button /}
 			{param caption: $caption /}
@@ -79,6 +83,7 @@
 {template .items}
 	{@param items: list<?>}
 	{@param? _handleItemClick: any}
+	{@param? _handleItemKeyDown: any}
 	{@param? contentRenderer: string}
 	{@param? itemsIconAlignment: string}
 	{@param? maxItems: int}
@@ -105,7 +110,10 @@
 			{param contentRenderer: $variant /}
 			{param data: $item.data /}
 			{param disabled: $item.disabled /}
-			{param events: ['itemClicked' : $_handleItemClick ] /}
+			{param events: [
+				'itemClicked' : $_handleItemClick,
+				'itemKeyDown' : $_handleItemKeyDown
+			] /}
 			{param href: $item.href /}
 			{param icon: $item.icon /}
 			{param inputName: $item.inputName /}
@@ -114,6 +122,7 @@
 			{param itemsIconAlignment: $itemsIconAlignment /}
 			{param label: $item.label ? '' + $item.label : '' /}
 			{param maxItems: $item.maxItems /}
+			{param ref: 'item' + $index /}
 			{param separator: $item.separator /}
 			{param spritemap: $spritemap /}
 			{param target: $item.target /}
@@ -162,6 +171,7 @@
 	{@param items: list<?>}
 	{@param? _handleButtonClick: any}
 	{@param? _handleItemClick: any}
+	{@param? _handleItemKeyDown: any}
 	{@param? _handleSearch: any}
 	{@param? button: ?}
 	{@param? caption: string}
@@ -206,6 +216,7 @@
 			{let $listItemsContent kind="html"}
 				{delcall ClayDropdownBase.Content variant="$contentRenderer"}
 					{param _handleItemClick: $_handleItemClick /}
+					{param _handleItemKeyDown: $_handleItemKeyDown /}
 					{param contentRenderer: $contentRenderer /}
 					{param items: $items /}
 					{param itemsIconAlignment: $itemsIconAlignment /}
@@ -271,6 +282,7 @@
  */
 {template .trigger}
 	{@param label: html|string}
+	{@param? _handleTriggerKeyDown: any}
 	{@param? ariaLabel: string}
 	{@param? classes: string}
 	{@param? disabled: bool}
@@ -312,6 +324,7 @@
 			disabled
 		{else}
 			data-onclick="toggle"
+			data-onkeydown="{$_handleTriggerKeyDown}"
 		{/if}
 
 		ref="triggerButton"
@@ -333,6 +346,7 @@
  */
 {deltemplate ClayDropdownBase.Content}
 	{@param? _handleItemClick: any}
+	{@param? _handleItemKeyDown: any}
 	{@param? contentRenderer: string}
 	{@param? items: list<?>}
 	{@param? itemsIconAlignment: string}
@@ -342,6 +356,7 @@
 		<ul class="list-unstyled">
 			{call .items}
 				{param _handleItemClick: $_handleItemClick /}
+				{param _handleItemKeyDown: $_handleItemKeyDown /}
 				{param items: $items /}
 				{param itemsIconAlignment: $itemsIconAlignment /}
 				{param spritemap: $spritemap /}
