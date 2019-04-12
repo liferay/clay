@@ -648,6 +648,91 @@ section: Components
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
+		<h3>Inline Group</h3>
+
+		<blockquote class="blockquote">
+			<p>If you don't want to deal with removing white space, wrap your <code>inline-item</code> markup with <code>inline-group</code>. The trade off is wrapping your text in more html elements.</p>
+		</blockquote>
+
+		<div>
+			<h5>Link with Whitespace</h5>
+			<a class="inline-group" href="#1">
+				<span class="inline-item inline-item-before">
+					<svg class="lexicon-icon lexicon-icon-share" focusable="false" role="presentation">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#share" /></svg>
+				</span>
+				link
+				<span class="inline-item inline-item-after">
+					<svg class="lexicon-icon lexicon-icon-add-cell" focusable="false" role="presentation"><use xlink:href="{{rootPath}}/images/icons/icons.svg#add-cell" /></svg>
+				</span>
+			</a>
+		</div>
+
+		<div>
+			<h5>Button with Whitespace</h5>
+			<button class="btn btn-secondary" type="button">
+				<span class="inline-group">
+					<span class="inline-item inline-item-before">
+						<svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#plus" /></svg>
+					</span>
+					Secondary
+					<span class="inline-item inline-item-after">
+						<svg class="lexicon-icon lexicon-icon-camera" focusable="false" role="presentation">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#camera" /></svg>
+					</span>
+				</span>
+			</button>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Inline Group Before and Inline Group After</h3>
+
+		<blockquote class="blockquote">
+			<p>If you want additional text around your <code>inline-group</code>, wrap the additional text with <code>inline-group-before</code> or <code>inline-group-after</code>.</p>
+		</blockquote>
+
+		<div>
+			<h5>Link with Whitespace</h5>
+			<span class="inline-group-before">Wings eu, pumpkin spice robusta,</span>
+			<a class="inline-group" href="#1">
+				<span class="inline-item inline-item-before">
+					<svg class="lexicon-icon lexicon-icon-share" focusable="false" role="presentation">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#share" /></svg>
+				</span>
+				<span class="inline-item">link</span>
+				<span class="inline-item inline-item-after">
+					<svg class="lexicon-icon lexicon-icon-add-cell" focusable="false" role="presentation"><use xlink:href="{{rootPath}}/images/icons/icons.svg#add-cell" /></svg>
+				</span>
+			</a>
+			<span class="inline-group-after"> kopi-luwak mocha caffeine froth grounds.</span>
+		</div>
+
+		<div>
+			<h5>Link with Whitespace Truncate Text Example</h5>
+			<span class="inline-group-before">Wings eu, pumpkin spice robusta,</span>
+			<a class="inline-group" href="#1">
+				<span class="inline-item inline-item-before">
+					<svg class="lexicon-icon lexicon-icon-share" focusable="false" role="presentation">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#share" /></svg>
+				</span>
+				<span class="text-truncate-inline" style="max-width:calc(100% - 48px);">
+					<span class="text-truncate">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+				</span>
+				<span class="inline-item inline-item-after">
+					<svg class="lexicon-icon lexicon-icon-add-cell" focusable="false" role="presentation"><use xlink:href="{{rootPath}}/images/icons/icons.svg#add-cell" /></svg>
+				</span>
+			</a>
+			<span class="inline-group-after"> kopi-luwak mocha caffeine froth grounds.</span>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
 		<h3>Close</h3>
 
 		<blockquote class="blockquote">
