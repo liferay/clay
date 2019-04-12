@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClaySticker renders 1`] = `
+<span
+  className="sticker sticker-rounded sticker-primary"
+>
+  <span
+    className="sticker-overlay"
+  >
+    A
+  </span>
+</span>
+`;
+
+exports[`ClaySticker renders with a display type 1`] = `
+<span
+  className="sticker sticker-rounded sticker-danger"
+>
+  <span
+    className="sticker-overlay"
+  >
+    B
+  </span>
+</span>
+`;
+
+exports[`ClaySticker renders with a outside 1`] = `
+<span
+  className="sticker sticker-rounded sticker-primary sticker-top-left sticker-outside"
+>
+  <span
+    className="sticker-overlay"
+  >
+    B
+  </span>
+</span>
+`;
+
+exports[`ClaySticker renders with a position 1`] = `
+<span
+  className="sticker sticker-rounded sticker-primary sticker-bottom-left"
+>
+  <span
+    className="sticker-overlay"
+  >
+    B
+  </span>
+</span>
+`;
+
+exports[`ClaySticker renders with a shape circle 1`] = `
+<span
+  className="sticker sticker-circle sticker-primary"
+>
+  <span
+    className="sticker-overlay"
+  >
+    B
+  </span>
+</span>
+`;
+
+exports[`ClaySticker renders with a size 1`] = `
+<span
+  className="sticker sticker-rounded sticker-primary sticker-xl"
+>
+  <span
+    className="sticker-overlay"
+  >
+    B
+  </span>
+</span>
+`;

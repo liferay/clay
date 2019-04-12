@@ -30,11 +30,13 @@
 	$transition: map-get($map, transition);
 	$vertical-align: map-get($map, vertical-align);
 	$width: map-get($map, width);
+	$z-index: map-get($map, z-index);
 
 	$hover-bg: map-get($map, hover-bg);
 	$hover-color: map-get($map, hover-color);
 	$hover-opacity: map-get($map, hover-opacity);
 	$hover-text-decoration: map-get($map, hover-text-decoration);
+	$hover-z-index: map-get($map, hover-z-index);
 
 	$focus-bg: map-get($map, focus-bg);
 	$focus-box-shadow: map-get($map, focus-box-shadow);
@@ -42,10 +44,12 @@
 	$focus-opacity: map-get($map, focus-opacity);
 	$focus-outline: map-get($map, focus-outline);
 	$focus-text-decoration: map-get($map, focus-text-decoration);
+	$focus-z-index: map-get($map, focus-z-index);
 
 	$active-bg: map-get($map, active-bg);
 	$active-border-color: map-get($map, active-border-color);
 	$active-color: map-get($map, active-color);
+	$active-z-index: map-get($map, active-z-index);
 
 	$disabled-bg: map-get($map, disabled-bg);
 	$disabled-border-color: map-get($map, disabled-border-color);
@@ -95,12 +99,14 @@
 	transition: $transition;
 	vertical-align: $vertical-align;
 	width: $width;
+	z-index: $z-index;
 
 	&:hover {
 		background-color: $hover-bg;
 		color: $hover-color;
 		opacity: $hover-opacity;
 		text-decoration: $hover-text-decoration;
+		z-index: $hover-z-index;
 	}
 
 	@at-root {
@@ -119,6 +125,7 @@
 		opacity: $focus-opacity;
 		outline: $focus-outline;
 		text-decoration: $focus-text-decoration;
+		z-index: $focus-z-index;
 	}
 
 	.show > &,
@@ -139,6 +146,7 @@
 		opacity: $disabled-opacity;
 		pointer-events: $disabled-pointer-events;
 		text-decoration: $disabled-text-decoration;
+		z-index: $active-z-index;
 	}
 
 	.lexicon-icon {

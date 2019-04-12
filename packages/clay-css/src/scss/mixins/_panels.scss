@@ -27,6 +27,8 @@
 
 	$header-collapsed-border-color: map-get($map, header-collapsed-border-color);
 
+	$header-link: setter(map-get($map, header-link), ());
+
 	$title-font-size: map-get($map, title-font-size);
 	$title-font-weight: map-get($map, title-font-weight);
 	$title-text-transform: map-get($map, title-text-transform);
@@ -96,6 +98,10 @@
 		}
 	}
 
+	.panel-header-link {
+		@include clay-link($header-link);
+	}
+
 	.panel-title {
 		font-size: $title-font-size;
 		font-weight: $title-font-weight;
@@ -117,6 +123,18 @@
 		background-color: $footer-bg;
 		border-color: $footer-border-color;
 		color: $footer-color;
+	}
+
+	// For Focus Box Shadow
+
+	@at-root {
+		.panel-group.panel-group-flush & {
+			.panel-header-link {
+				&, &.collapsed {
+					border-radius: map-get($header-link, border-radius);
+				}
+			}
+		}
 	}
 
 	@content;

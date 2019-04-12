@@ -22,6 +22,7 @@ jdk:
 language: java
 
 script:
+  - yarn run build
   - yarn run checkFormat
   - yarn run lint
   - yarn run test

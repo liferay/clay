@@ -379,8 +379,12 @@
 	$aspect-ratio-checkered-bg: map-get($map, aspect-ratio-checkered-bg);
 
 	$asset-icon-color: map-get($map, asset-icon-color);
+	$asset-icon-max-width: map-get($map, asset-icon-max-width);
 	$asset-icon-min-width: map-get($map, asset-icon-min-width);
 	$asset-icon-width: map-get($map, asset-icon-width);
+
+	$asset-icon-lexicon-icon-height: map-get($map, asset-icon-lexicon-icon-height);
+	$asset-icon-lexicon-icon-width: map-get($map, asset-icon-lexicon-icon-width);
 
 	@if ($enabled) {
 		.aspect-ratio {
@@ -393,8 +397,14 @@
 
 		.card-type-asset-icon {
 			color: $asset-icon-color;
+			max-width: $asset-icon-max-width;
 			min-width: $asset-icon-min-width;
 			width: $asset-icon-width;
+
+			.lexicon-icon {
+				height: $asset-icon-lexicon-icon-height;
+				width: $asset-icon-lexicon-icon-width;
+			}
 		}
 	}
 }

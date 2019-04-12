@@ -1123,6 +1123,14 @@ section: Components
 </div>
 
 <script>
+	$('.input-group-inset').on('focusin', function(event) {
+		$(this).closest('.input-group-item').addClass('focus');
+	});
+
+	$('.input-group-inset').on('focusout', function(event) {
+		$(this).closest('.input-group-item').removeClass('focus');
+	});
+
 	$('.form-control-tag-group').on('click', function(event) {
 		$(this).find('.form-control-inset').focus();
 	});

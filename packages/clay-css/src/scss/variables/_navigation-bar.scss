@@ -13,6 +13,8 @@ $navigation-bar-size: map-merge((
 	active-border-bottom-width: 0.25rem
 ), $navigation-bar-size);
 
+$navigation-bar-base: () !default;
+
 $navigation-bar-light: () !default;
 $navigation-bar-light: map-merge((
 	bg: $light,
