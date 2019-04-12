@@ -368,7 +368,9 @@ class ClayMultiSelect extends ClayComponent {
 			item = filteredItem || item;
 		}
 
-		if (item && value && !this._isItemSelected(item)) {
+		const itemIsSelected = item && this._isItemSelected(item);
+
+		if (item && value && !itemIsSelected) {
 			let newSelectedItems = this.selectedItems.map(item => item);
 			newSelectedItems.push(item);
 			this.selectedItems = newSelectedItems;
@@ -384,9 +386,17 @@ class ClayMultiSelect extends ClayComponent {
 			});
 
 			return true;
-		}
+		} else {
+			this.emit({
+				data: {
+					itemIsSelected,
+					itemDoesNotExists: !this.creatable && !item,
+				},
+				name: 'errorAddinglabelItem',
+			});
 
-		return false;
+			return false;
+		}
 	}
 
 	/**
