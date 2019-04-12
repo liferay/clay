@@ -233,6 +233,7 @@
 	border-style: solid;
 	border-top-width: $input-border-top-width;
 	display: flex;
+	margin-bottom: 0; // undo margin-bottom on `<label>`
 	padding-left: $input-group-inset-item-padding-left;
 	padding-right: $input-group-inset-item-padding-right;
 	transition: $input-transition;
