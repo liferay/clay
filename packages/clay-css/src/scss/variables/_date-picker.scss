@@ -23,9 +23,11 @@ $date-picker-nav-row: map-merge((
 $date-picker-nav-btn: () !default;
 $date-picker-nav-btn: map-merge((
 	color: $gray-600,
+	transition: $btn-transition,
 	hover-bg: $gray-200,
 	focus-box-shadow: $input-btn-focus-box-shadow,
 	disabled-bg: transparent,
+	disabled-box-shadow: none,
 	disabled-color: $gray-600,
 	disabled-opacity: $btn-disabled-opacity,
 ), $date-picker-nav-btn);
@@ -103,6 +105,7 @@ $date-picker-calendar-footer-container: map-merge((
 $date-picker-calendar-item: () !default;
 $date-picker-calendar-item: map-merge((
 	align-items: center,
+	bg: transparent,
 	border-width: 0,
 	cursor: $link-cursor,
 	disabled-cursor: $disabled-cursor,
@@ -118,6 +121,7 @@ $date-picker-calendar-item: map-merge((
 	padding-left: 0,
 	padding-right: 0,
 	padding-top: 0,
+	transition: $btn-transition,
 	user-select: none,
 	vertical-align: middle,
 	white-space: nowrap,
@@ -134,6 +138,7 @@ $date-picker-date: map-merge((
 	active-bg: $component-active-bg,
 	active-color: $component-active-color,
 	disabled-bg: transparent,
+	disabled-box-shadow: none,
 	disabled-opacity: $btn-disabled-opacity,
 ), $date-picker-date);
 
