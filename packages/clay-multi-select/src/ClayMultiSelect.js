@@ -78,7 +78,7 @@ class ClayMultiSelect extends ClayComponent {
 
 		const item = this._createItemObject(label, value);
 
-		return this._addLabelItem(item);
+		this._addLabelItem(item);
 	}
 
 	/**
@@ -107,10 +107,12 @@ class ClayMultiSelect extends ClayComponent {
 
 		if (char === ',' || words.length > 1) {
 			words.forEach(word => {
-				this._addLabelItem(this._createItemObject(word, word));
-			});
+				let added = this._addLabelItem(this._createItemObject(word, word));
 
-			inputValue = '';
+				if (added) {
+					inputValue = inputValue.replace(word + ',', '');
+				}
+			});
 		}
 
 		this.inputValue = inputValue;
@@ -152,7 +154,7 @@ class ClayMultiSelect extends ClayComponent {
 		if (event.data.key == 'Backspace' || event.data.key == 'Enter') {
 			event.preventDefault();
 
-			return this._removeLabelItem(event.data.element);
+			this._removeLabelItem(event.data.element);
 		}
 	}
 
@@ -255,7 +257,7 @@ class ClayMultiSelect extends ClayComponent {
 			event.preventDefault();
 
 			if (element.value) {
-				return this._addLabelItem(
+				this._addLabelItem(
 					this._createItemObject(element.value, element.value)
 				);
 			}
@@ -341,7 +343,7 @@ class ClayMultiSelect extends ClayComponent {
 	 * Continues the propagation of the itemAdded event.
 	 * @param {!String} item
 	 * @protected
-	 * @return {?Boolean} If the event has been prevented or not.
+	 * @return {?Boolean} If the item has been added or not.
 	 */
 	_addLabelItem(item) {
 		const {label, value} = item;
@@ -360,7 +362,7 @@ class ClayMultiSelect extends ClayComponent {
 				};
 			})[0];
 
-		if (this.allowOnlyItemsFromAutocomplete) {
+		if (!this.creatable) {
 			item = filteredItem;
 		} else {
 			item = filteredItem || item;
@@ -373,14 +375,18 @@ class ClayMultiSelect extends ClayComponent {
 
 			this.filteredItems = [];
 
-			return !this.emit({
+			this.emit({
 				data: {
 					item,
 					selectedItems: this.selectedItems,
 				},
 				name: 'labelItemAdded',
 			});
+
+			return true;
 		}
+		
+		return false;
 	}
 
 	/**
@@ -485,7 +491,6 @@ class ClayMultiSelect extends ClayComponent {
 	 * Removes an item and emits the 'itemRoved' event.
 	 * @param {!Element} element
 	 * @protected
-	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_removeLabelItem(element) {
 		const index = Number(element.getAttribute('data-tag'));
@@ -496,7 +501,7 @@ class ClayMultiSelect extends ClayComponent {
 
 		this.selectedItems = newSelectedItems;
 
-		return !this.emit({
+		this.emit({
 			data: {
 				item,
 				selectedItems: this.selectedItems,
@@ -524,15 +529,6 @@ ClayMultiSelect.STATE = {
 		.internal(),
 
 	/**
-	 * Flag to indicate if only items from autocomplete should be accepted.
-	 * @default false
-	 * @instance
-	 * @memberof ClayMultiSelect
-	 * @type {?bool}
-	 */
-	allowOnlyItemsFromAutocomplete: Config.bool().value(false),
-
-	/**
 	 * Method or string as condition to filter items in autocomplete.
 	 * @instance
 	 * @default (elem) => elem
@@ -552,6 +548,15 @@ ClayMultiSelect.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	contentRenderer: Config.string(),
+
+	/**
+	 * Flag to indicate if only items from autocomplete should be accepted.
+	 * @default true
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @type {?bool}
+	 */
+	creatable: Config.bool().value(true),
 
 	/**
 	 * Data to add to the element.
