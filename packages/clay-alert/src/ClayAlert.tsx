@@ -9,14 +9,20 @@ import classNames from 'classnames';
 import Icon from '@clayui/icon';
 
 const useAutoClose = (autoClose?: boolean | number, onClose = () => {}) => {
+	const startedTime = React.useRef<number>(0);
 	const timer = React.useRef<number | undefined>(undefined);
+	const timeToClose = React.useRef(autoClose === true ? 8000 : autoClose);
 
-	let cancelTimer = () => {};
+	let pauseTimer = () => {};
 	let startTimer = () => {};
 
 	if (autoClose) {
-		cancelTimer = () => {
+		pauseTimer = () => {
 			if (timer.current) {
+				timeToClose.current =
+					(timeToClose.current as number) -
+					(Date.now() - startedTime.current);
+
 				clearTimeout(timer.current);
 
 				timer.current = undefined;
@@ -24,10 +30,8 @@ const useAutoClose = (autoClose?: boolean | number, onClose = () => {}) => {
 		};
 
 		startTimer = () => {
-			timer.current = setTimeout(
-				onClose,
-				autoClose === true ? 8000 : autoClose
-			);
+			startedTime.current = Date.now();
+			timer.current = setTimeout(onClose, timeToClose.current as number);
 		};
 	}
 
@@ -35,12 +39,12 @@ const useAutoClose = (autoClose?: boolean | number, onClose = () => {}) => {
 		if (autoClose && onClose) {
 			startTimer();
 
-			return cancelTimer;
+			return pauseTimer;
 		}
 	}, []);
 
 	return {
-		cancelAutoCloseTimer: cancelTimer,
+		pauseAutoCloseTimer: pauseTimer,
 		startAutoCloseTimer: startTimer,
 	};
 };
@@ -110,7 +114,7 @@ const ClayAlert: React.FunctionComponent<ClayAlertProps> & {
 	variant,
 	...otherProps
 }) => {
-	const {cancelAutoCloseTimer, startAutoCloseTimer} = useAutoClose(
+	const {pauseAutoCloseTimer, startAutoCloseTimer} = useAutoClose(
 		autoClose,
 		onClose
 	);
@@ -131,7 +135,7 @@ const ClayAlert: React.FunctionComponent<ClayAlertProps> & {
 				[`alert-${displayType}`]: displayType,
 			})}
 			onMouseOut={startAutoCloseTimer}
-			onMouseOver={cancelAutoCloseTimer}
+			onMouseOver={pauseAutoCloseTimer}
 			role="alert"
 		>
 			<ConditionalContainer>

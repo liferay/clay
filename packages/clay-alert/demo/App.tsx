@@ -32,7 +32,7 @@ const App: React.FunctionComponent = () => {
 				<ClayAlert.ToastContainer>
 					{toastItems.map(value => (
 						<ClayAlert
-							autoClose={1000}
+							autoClose={5000}
 							key={value}
 							onClose={() => {
 								setToastItems(prevItems =>
