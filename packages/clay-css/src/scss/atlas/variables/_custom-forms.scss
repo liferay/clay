@@ -5,7 +5,8 @@ $custom-control-indicator-border-style: solid !default;
 $custom-control-indicator-border-width: 0.0625rem !default; // 1px
 $custom-control-indicator-box-shadow: none !default;
 
-$custom-control-indicator-focus-box-shadow: 0 0 0 1px $body-bg, 0 0 0 2px lighten($component-active-bg, 22.94) !default;
+$custom-control-indicator-focus-border-color: $custom-control-indicator-border-color !default;
+$custom-control-indicator-focus-box-shadow: $component-focus-box-shadow !default;
 
 $custom-control-indicator-active-bg: $white !default;
 $custom-control-indicator-active-border-color: $custom-control-indicator-border-color !default;

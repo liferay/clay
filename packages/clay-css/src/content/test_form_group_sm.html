@@ -927,3 +927,13 @@ section: Visual Tests
 
 	</div>
 </div>
+
+<script>
+	$('.input-group-inset').on('focusin', function(event) {
+		$(this).closest('.input-group-item').addClass('focus');
+	});
+
+	$('.input-group-inset').on('focusout', function(event) {
+		$(this).closest('.input-group-item').removeClass('focus');
+	});
+</script>

@@ -704,6 +704,14 @@ section: Components
 </div>
 
 <script>
+	$('.input-group-inset').on('focusin', function(event) {
+		$(this).closest('.input-group-item').addClass('focus');
+	});
+
+	$('.input-group-inset').on('focusout', function(event) {
+		$(this).closest('.input-group-item').removeClass('focus');
+	});
+
 	$('.input-group-password .btn').on('click', function(event) {
 		var input = $(this).closest('.input-group-password').find('.form-control');
 		var inputType = input.attr('type');

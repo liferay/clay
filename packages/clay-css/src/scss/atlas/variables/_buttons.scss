@@ -4,7 +4,7 @@ $btn-font-weight: $font-weight-semi-bold !default;
 $btn-padding-x: 0.9375rem !default; // 15px
 $btn-padding-y: 0.4375rem !default; // 7px
 
-$btn-focus-box-shadow: 0 0 0 0.125rem $white#{','} 0 0 0 0.25rem rgba($component-active-bg, 0.5) !default;
+$btn-focus-box-shadow: $component-focus-box-shadow !default;
 
 $btn-disabled-opacity: 0.4 !default;
 
@@ -145,12 +145,12 @@ $btn-light: map-merge((
 	hover-border-color: transparent,
 	focus-bg: $light-d1,
 	focus-border-color: transparent,
-	focus-box-shadow: 0 0 0 0.125rem $black#{','} 0 0 0 0.25rem $primary-l1,
+	focus-box-shadow: $btn-focus-box-shadow,
 	disabled-bg: $light,
 	active-bg: $light-d2,
 	active-border-color: transparent,
 	active-box-shadow: none,
-	active-focus-box-shadow: 0 0 0 0.125rem $black#{','} 0 0 0 0.25rem $primary-l1,
+	active-focus-box-shadow: $btn-focus-box-shadow,
 ), $btn-light);
 
 $btn-dark: () !default;
