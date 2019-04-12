@@ -170,6 +170,16 @@
 	}
 }
 
+.input-group-item.input-group-prepend.focus {
+	@include border-right-radius(0);
+
+	z-index: 1;
+}
+
+.input-group-item.input-group-append.focus {
+	@include border-left-radius(0);
+}
+
 .input-group-inset {
 	flex-grow: 1;
 	order: 5;
@@ -252,11 +262,12 @@
 	@include border-left-radius($input-border-radius);
 
 	border-right-width: 0;
-}
-
-.input-group-inset-item-before {
 	color: $input-group-inset-item-color;
 	order: 3;
+
+	.input-group-append & {
+		@include border-left-radius(0);
+	}
 }
 
 .input-group-item .input-group-inset-after.form-control {
@@ -272,6 +283,12 @@
 	border-left-width: 0;
 	color: $input-group-inset-item-color;
 	order: 9;
+
+	.input-group-prepend & {
+		@include border-right-radius(0);
+
+		z-index: 1;
+	}
 }
 
 // Input Group Stacked
