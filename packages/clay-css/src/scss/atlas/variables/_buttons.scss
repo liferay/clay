@@ -3,6 +3,7 @@ $btn-box-shadow: 0 0 rgba(#000, 0) !default;
 $btn-font-weight: $font-weight-semi-bold !default;
 $btn-padding-x: 0.9375rem !default; // 15px
 $btn-padding-y: 0.4375rem !default; // 7px
+$btn-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
 $btn-focus-box-shadow: $component-focus-box-shadow !default;
 
