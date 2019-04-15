@@ -110,9 +110,7 @@ class ClayMultiSelect extends ClayComponent {
 					this._createItemObject(word, word)
 				);
 
-				if (added) {
-					inputValue = inputValue.replace(word + ',', '');
-				}
+				inputValue = inputValue.replace(word + ',', added ? '' : word);
 			});
 		}
 
