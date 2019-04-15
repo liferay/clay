@@ -119,20 +119,12 @@ ClayDropdownItem.STATE = {
 	/**
 	 * Icon of the item.
 	 * @default undefined
-	 * @deprecated since version 2.4.x
+	 * @deprecated since version 2.13.x
 	 * @instance
 	 * @memberof ClayDropdownItem
 	 * @type {?(string|undefined)}
 	 */
-	icon: itemShape.icon.setter(value => {
-		if (value) {
-			console.warn(
-				'🚨 The `icon` API will be deprecated in favor the `icons` and removed in the next release.'
-			);
-		}
-
-		return value;
-	}),
+	icon: itemShape.icon,
 
 	/**
 	 * Icons of the item.
