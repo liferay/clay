@@ -3,38 +3,17 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+
 import GradientSelector from './GradientSelector';
 import Hue from './Hue';
+import Icon from '@clayui/icon';
 import React, {useState} from 'react';
 import Splotch from './Splotch';
 import tinycolor from 'tinycolor2';
 import {useHexInput} from './hooks';
 
-/**
- * Renders custom color icon
- */
-const CustomColorIcon: React.FunctionComponent = () => (
-	<svg
-		fill="none"
-		height="17"
-		viewBox="0 0 12 17"
-		width="12"
-		xmlns="http://www.w3.org/2000/svg"
-	>
-		<path
-			d="M11 11C11 13.7614 8.76142 16 6 16C3.23858 16 1 13.7614 1 11C1 9.79197 1.58669 8.71677 2.65995 7.20346C2.85539 6.92789 3.06515 6.64012 3.28534 6.33805C4.11185 5.20415 5.08532 3.86863 6 2.22004C6.91468 3.86863 7.88816 5.20415 8.71467 6.33805C8.93485 6.64013 9.14461 6.92789 9.34005 7.20346C10.4133 8.71677 11 9.79197 11 11Z"
-			stroke="#6B6C7E"
-			strokeWidth="2"
-		/>
-		<path
-			d="M12 11.0001C12 14.3138 9.31371 17.0001 6 17.0001C2.68629 17.0001 0 14.3138 0 11.0001C2 10 3.5 12.5001 6 11.0001C8.5 9.5 10 10 12 11.0001Z"
-			fill="#6B6C7E"
-		/>
-	</svg>
-);
-
 interface RGBInputProps {
-	onChange: ({}) => void;
+	onChange: (val: {r?: number; g?: number; b?: number}) => void;
 	name: string;
 	value: number;
 }
@@ -47,14 +26,11 @@ const RGBInput: React.FunctionComponent<RGBInputProps> = ({
 	onChange,
 	value,
 }) => (
-	<div className="form-group rgb-info">
+	<div className="form-group">
 		<div className="input-group">
-			<div className="input-group-item input-group-item-shrink input-group-prepend">
-				<span className="input-group-text">{name.toUpperCase()}</span>
-			</div>
-			<div className="input-group-append input-group-item">
+			<div className="input-group-item">
 				<input
-					className="form-control"
+					className="form-control input-group-inset input-group-inset-before"
 					onChange={event => {
 						const newVal = Number(event.target.value);
 
@@ -63,6 +39,9 @@ const RGBInput: React.FunctionComponent<RGBInputProps> = ({
 					type="text"
 					value={value}
 				/>
+				<label className="input-group-inset-item input-group-inset-item-before">
+					{name.toUpperCase()}
+				</label>
 			</div>
 		</div>
 	</div>
@@ -73,6 +52,7 @@ interface CustomProps {
 	label?: string;
 	onChange: (val: string) => void;
 	onColorsChange: (val: string[]) => void;
+	spritemap: string;
 	value: string;
 }
 
@@ -84,6 +64,7 @@ const Custom: React.FunctionComponent<CustomProps> = ({
 	label,
 	onChange,
 	onColorsChange,
+	spritemap,
 	value,
 }) => {
 	const color = tinycolor(value);
@@ -99,7 +80,7 @@ const Custom: React.FunctionComponent<CustomProps> = ({
 	const rgbArr: [number, string][] = [[r, 'r'], [g, 'g'], [b, 'b']];
 
 	const setNewColor = (colorValue: tinycolor.Instance, setInput = true) => {
-		const hexString = colorValue.toHexString();
+		const hexString = colorValue.toHex();
 
 		const newColors = [...colors];
 
@@ -115,46 +96,51 @@ const Custom: React.FunctionComponent<CustomProps> = ({
 	};
 
 	return (
-		<div>
+		<React.Fragment>
 			{label && (
-				<div className="label-container">
-					<label>{label}</label>
+				<div className="clay-color-header">
+					<span className="component-title">{label}</span>
+
 					<button
 						className={`${
-							editorActive ? 'active ' : ''
-						}btn btn-monospaced btn-sm`}
+							editorActive ? 'close' : ''
+						} component-action`}
 						onClick={() => setEditorActive(!editorActive)}
 						type="button"
 					>
-						<CustomColorIcon />
+						<Icon
+							spritemap={spritemap}
+							symbol={editorActive ? 'times' : 'drop'}
+						/>
 					</button>
 				</div>
 			)}
 
-			<div className="splotch-grid">
+			<div className="clay-color-swatch">
 				{colors.map((hex, i) => (
-					<Splotch
-						active={i === activeSplotchIndex}
-						key={i}
-						onClick={() => {
-							if (hex === '#FFFFFF') {
-								setEditorActive(true);
-							}
+					<div className="clay-color-swatch-item" key={i}>
+						<Splotch
+							active={i === activeSplotchIndex}
+							onClick={() => {
+								if (hex === 'FFFFFF') {
+									setEditorActive(true);
+								}
 
-							setActiveSplotchIndex(i);
+								setActiveSplotchIndex(i);
 
-							setHue(tinycolor(hex).toHsv().h);
+								setHue(tinycolor(hex).toHsv().h);
 
-							onChange(hex);
-						}}
-						value={hex}
-					/>
+								onChange(hex);
+							}}
+							value={hex}
+						/>
+					</div>
 				))}
 			</div>
 
 			{editorActive && (
 				<React.Fragment>
-					<div className="gradient-info">
+					<div className="clay-color-map-group">
 						<GradientSelector
 							color={color}
 							hue={hue}
@@ -169,21 +155,20 @@ const Custom: React.FunctionComponent<CustomProps> = ({
 							}}
 						/>
 
-						<div>
+						<div className="clay-color-map-values">
 							{rgbArr.map(([val, key]) => (
 								<RGBInput
 									key={key}
 									name={key}
 									onChange={newVal => {
 										const color = tinycolor({
-											r,
-											g,
 											b,
+											g,
+											r,
 											...newVal,
 										});
 
 										setHue(color.toHsv().h);
-
 										setNewColor(color);
 									}}
 									value={val}
@@ -201,43 +186,54 @@ const Custom: React.FunctionComponent<CustomProps> = ({
 						value={hue}
 					/>
 
-					<div className="input-group hex-info">
-						<div className="input-group-append input-group-item">
-							<input
-								className="form-control"
-								onBlur={event => {
-									const newColor = tinycolor(
-										event.target.value
-									);
+					<div className="clay-color-footer">
+						<div className="form-group">
+							<div className="input-group">
+								<div className="input-group-item">
+									<input
+										className="form-control input-group-inset input-group-inset-before"
+										onBlur={event => {
+											const newColor = tinycolor(
+												event.target.value
+											);
 
-									if (newColor.isValid()) {
-										setHexInput(newColor.toHex());
-									} else {
-										setHexInput(color.toHex());
-									}
-								}}
-								onChange={event => {
-									const newHexValue = event.target.value;
+											if (newColor.isValid()) {
+												setHexInput(newColor.toHex());
+											} else {
+												setHexInput(color.toHex());
+											}
+										}}
+										onChange={event => {
+											const newHexValue =
+												event.target.value;
 
-									setHexInput(newHexValue);
+											setHexInput(newHexValue);
 
-									const newColor = tinycolor(newHexValue);
+											const newColor = tinycolor(
+												newHexValue
+											);
 
-									if (newColor.isValid()) {
-										setHue(newColor.toHsv().h);
-										setNewColor(newColor, false);
-									}
-								}}
-								type="text"
-								value={`#${hexInputVal
-									.toUpperCase()
-									.substring(0, 6)}`}
-							/>
+											if (newColor.isValid()) {
+												setHue(newColor.toHsv().h);
+												setNewColor(newColor, false);
+											}
+										}}
+										type="text"
+										value={hexInputVal
+											.toUpperCase()
+											.substring(0, 6)}
+									/>
+
+									<label className="input-group-inset-item input-group-inset-item-before">
+										{'#'}
+									</label>
+								</div>
+							</div>
 						</div>
 					</div>
 				</React.Fragment>
 			)}
-		</div>
+		</React.Fragment>
 	);
 };
 

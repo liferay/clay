@@ -45,7 +45,7 @@ const Hue: React.FunctionComponent<HueProps> = ({
 
 	return (
 		<div
-			className="hue-selector"
+			className="clay-color-range clay-color-range-hue"
 			onMouseDown={event => {
 				onMouseMove(event);
 
@@ -54,12 +54,13 @@ const Hue: React.FunctionComponent<HueProps> = ({
 			}}
 			ref={containerRef}
 		>
-			<span
-				className="pointer"
+			<button
+				className="clay-color-pointer clay-color-range-pointer"
 				style={{
-					left: x - 7,
 					background: `hsl(${value}, 100%, 50%)`,
+					left: x - 7,
 				}}
+				type="button"
 			/>
 		</div>
 	);

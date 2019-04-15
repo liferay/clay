@@ -46,6 +46,10 @@ export const colorToXY = (color: tinycolor.Instance, node: HTMLElement) => {
  * Utility function for getting the x position from hue
  */
 export const hueToX = (hue: number, node: HTMLElement) => {
+	if (Number.isNaN(hue)) {
+		return 0;
+	}
+
 	return (hue / 360) * node.getBoundingClientRect().width;
 };
 
@@ -53,6 +57,10 @@ export const hueToX = (hue: number, node: HTMLElement) => {
  * Utility function for getting hue from the x position
  */
 export const xToHue = (x: number, node: HTMLElement) => {
+	if (Number.isNaN(x)) {
+		return 0;
+	}
+
 	return (x / node.getBoundingClientRect().width) * 360;
 };
 

@@ -50,7 +50,7 @@ const GradientSelector: React.FunctionComponent<GradientSelectorProps> = ({
 
 	return (
 		<div
-			className="gradient-selector"
+			className="clay-color-map-hsb clay-color-map"
 			onMouseDown={event => {
 				onMouseMove(event);
 
@@ -59,18 +59,16 @@ const GradientSelector: React.FunctionComponent<GradientSelectorProps> = ({
 			}}
 			ref={containerRef}
 			style={{
-				background: `hsl(${hue}, 100%, 50%)`,
+				backgroundColor: `hsl(${hue}, 100%, 50%)`,
+				backgroundImage: `linear-gradient(to top, #000, rgba(0, 0, 0, 0)), linear-gradient(to right, #FFF, rgba(255, 255, 255, 0))`,
 			}}
 		>
-			<div className="light-gradient" />
-			<div className="dark-gradient" />
-
 			<span
-				className="pointer"
+				className="clay-color-pointer clay-color-map-pointer"
 				style={{
-					top: y - 7,
-					left: x - 7,
 					background: color.toHexString(),
+					left: x - 7,
+					top: y - 7,
 				}}
 			/>
 		</div>

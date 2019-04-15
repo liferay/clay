@@ -16,19 +16,21 @@ interface Props {
  * Renders basic color picker
  */
 const Basic: React.FunctionComponent<Props> = ({colors, label, onChange}) => (
-	<div className="basic-color-picker">
+	<React.Fragment>
 		{label && (
-			<div className="label-container">
-				<label>{label}</label>
+			<div className="clay-color-header">
+				<span className="component-title">{label}</span>
 			</div>
 		)}
 
-		<div className="splotch-grid">
-			{colors.map(hex => (
-				<Splotch key={hex} onClick={() => onChange(hex)} value={hex} />
+		<div className="clay-color-swatch">
+			{colors.map((hex, i) => (
+				<div className="clay-color-swatch-item" key={i}>
+					<Splotch onClick={() => onChange(hex)} value={hex} />
+				</div>
 			))}
 		</div>
-	</div>
+	</React.Fragment>
 );
 
 export default Basic;

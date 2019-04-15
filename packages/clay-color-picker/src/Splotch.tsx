@@ -28,13 +28,13 @@ const Splotch: React.FunctionComponent<Props> = ({
 	return (
 		<button
 			{...otherProps}
-			className={`splotch${` ${className}`}`}
+			className={`btn clay-color-btn ${className ? className : ''}`}
 			style={{
 				...(active ? {outline: 'auto 3px #55ADFF'} : {}),
 				...(requireBorder
 					? {border: '1px solid #E7E7ED'}
 					: {borderWidth: 0}),
-				background: value,
+				background: `#${value}`,
 				height: size,
 				width: size,
 			}}
