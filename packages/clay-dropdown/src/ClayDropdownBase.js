@@ -610,20 +610,11 @@ ClayDropdownBase.STATE = {
 	/**
 	 * Position in which item icons will be placed. Needed if any item has icons.
 	 * @default undefined
-	 * @deprecated since version 2.4.x
 	 * @instance
 	 * @memberof ClayDropdownBase
 	 * @type {?(string|undefined)}
 	 */
-	itemsIconAlignment: Config.oneOf(['left', 'right']).setter(value => {
-		if (value) {
-			console.warn(
-				'🚨 The `itemsIconAlignment` API will be deprecated in favor the `icons` and removed in the next release.'
-			);
-		}
-
-		return value;
-	}),
+	itemsIconAlignment: Config.oneOf(['left', 'right', 'left-right']),
 
 	/**
 	 * Label of the trigger button.

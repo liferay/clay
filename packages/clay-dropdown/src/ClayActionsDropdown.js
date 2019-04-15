@@ -175,7 +175,7 @@ ClayActionsDropdown.STATE = {
 	 * @memberof ClayActionsDropdown
 	 * @type {?(string|undefined)}
 	 */
-	itemsIconAlignment: Config.oneOf(['left', 'right']),
+	itemsIconAlignment: Config.oneOf(['left', 'right', 'left-right']),
 
 	/**
 	 * The preferred alignment for the dropdown content.

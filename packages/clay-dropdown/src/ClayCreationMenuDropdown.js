@@ -157,7 +157,7 @@ ClayCreationMenuDropdown.STATE = {
 	 * @memberof ClayCreationMenuDropdown
 	 * @type {?(string|undefined)}
 	 */
-	itemsIconAlignment: Config.oneOf(['left', 'right']),
+	itemsIconAlignment: Config.oneOf(['left', 'right', 'left-right']),
 
 	/**
 	 * Maximum number of primary items to show. Only take in account when
