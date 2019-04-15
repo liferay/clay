@@ -1090,7 +1090,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
   <ul class="list-unstyled">
     <li tabindex="-1">
       <a class=" dropdown-item" href="#1">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg class="lexicon-icon lexicon-icon-download" focusable="false" role="presentation">
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#download"></use>
           </svg>
@@ -1098,7 +1098,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
     </li>
     <li tabindex="-1">
       <a class=" dropdown-item" href="#2">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg class="lexicon-icon lexicon-icon-users" focusable="false" role="presentation">
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#users"></use>
           </svg>
@@ -1107,7 +1107,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
     <li tabindex="-1">
       <a class=" dropdown-item" href="#fav1">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg class="lexicon-icon lexicon-icon-globe" focusable="false" role="presentation">
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#globe"></use>
           </svg>
@@ -1115,7 +1115,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
     </li>
     <li tabindex="-1">
       <a class=" dropdown-item" href="#fav2">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg class="lexicon-icon lexicon-icon-code" focusable="false" role="presentation">
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#code"></use>
           </svg>
