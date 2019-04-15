@@ -135,8 +135,12 @@
 	{/let}
 
 	{let $itemAttributes kind="attributes"}
-		data-onclick="{$_handleItemClick}"
+		{if not $disabled}
+			data-onclick="{$_handleItemClick}"
+		{/if}
+
 		data-onkeydown="{$_handleItemKeyDown}"
+
 		tabindex="-1"
 	{/let}
 
@@ -186,8 +190,12 @@
 			{/if}
 		"
 
-		data-onclick="{$_handleItemClick}"
+		{if not $disabled}
+			data-onchange="{$_handleItemClick}"
+		{/if}
+
 		data-onkeydown="{$_handleItemKeyDown}"
+
 		tabindex="-1"
 	{/let}
 
@@ -278,7 +286,10 @@
 			{/if}
 		"
 
-		data-onclick="{$_handleItemClick}"
+		{if not $disabled}
+			data-onchange="{$_handleItemClick}"
+		{/if}
+
 		data-onkeydown="{$_handleItemKeyDown}"
 
 		tabindex="-1"

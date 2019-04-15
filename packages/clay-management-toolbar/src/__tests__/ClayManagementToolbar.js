@@ -1,3 +1,4 @@
+import {triggerEvent} from 'metal-dom';
 import ClayManagementToolbar from '../ClayManagementToolbar';
 
 let managementToolbar;
@@ -1149,7 +1150,8 @@ describe('ClayManagementToolbar', function() {
 
 		const element =
 			managementToolbar.refs.filtersDropdown.refs.portal.element;
-		element.querySelector('ul li').click();
+
+		triggerEvent(element.querySelector('ul li'), 'change', {});
 
 		expect(spy).toHaveBeenCalled();
 		expect(spy).toHaveBeenCalledWith(
