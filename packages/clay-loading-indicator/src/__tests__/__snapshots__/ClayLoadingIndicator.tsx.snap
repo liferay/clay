@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayLoadingIndicator renders 1`] = `
+<span
+  aria-hidden="true"
+  className="loading-animation"
+/>
+`;
+
+exports[`ClayLoadingIndicator renders as the light variant 1`] = `
+<span
+  aria-hidden="true"
+  className="loading-animation loading-animation-light"
+/>
+`;
+
+exports[`ClayLoadingIndicator renders as the small and light variant 1`] = `
+<span
+  aria-hidden="true"
+  className="loading-animation loading-animation-light loading-animation-sm"
+/>
+`;
+
+exports[`ClayLoadingIndicator renders as the small variant 1`] = `
+<span
+  aria-hidden="true"
+  className="loading-animation loading-animation-sm"
+/>
+`;
