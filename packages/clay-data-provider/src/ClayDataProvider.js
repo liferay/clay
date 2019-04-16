@@ -401,7 +401,7 @@ ClayDataProvider.STATE = {
 	 * @memberof ClayDataProvider
 	 * @type {?bool}
 	 */
-	isError: Config.bool().value(false),
+	isError: Config.bool().value(false).internal(),
 
 	/**
 	 * Flag to indicate the render state. true will
@@ -411,7 +411,7 @@ ClayDataProvider.STATE = {
 	 * @memberof ClayDataProvider
 	 * @type {?bool}
 	 */
-	isLoading: Config.bool().value(false),
+	isLoading: Config.bool().value(false).internal(),
 
 	/**
 	 * The loading content renderer.
