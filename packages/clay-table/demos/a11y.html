@@ -24,8 +24,17 @@
 		ClayTable
 	</h1>
 
-	<div>
-		<form id="container"></form>
+	<div class="row row-spacing">
+		<div class="col">
+			<form id="container"></form>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h2>Table customize</h2>
+			<form id="customize"></form>
+		</div>
 	</div>
 
 	<script type="text/javascript">
@@ -167,6 +176,7 @@
 			});
 		});
 
+		// Default
 		new metal.ClayTable({
 			items: items,
 			schema: {
@@ -221,6 +231,63 @@
 			showActionsMenu: true,
 			spritemap: spritemap,
 		}, '#container');
+
+		// Table customize
+		new metal.ClayTable({
+			tableClasses: 'table table-autofit table-responsive',
+			useDefaultClasses: false,
+			events: {
+				'cellContentClicked': (event) => {
+					event.data.event.target.closest('tr').classList.toggle('active');
+				},
+			},
+			items: [
+				{
+					id: '1',
+					name: 'Photos',
+					rowClasses: 'table-row',
+					type: 'folder',
+				},
+				{
+					id: '2',
+					name: 'Videos',
+					rowClasses: 'table-row',
+					type: 'folder',
+				}
+			],
+			schema: {
+				fields: [
+					{
+						fieldName: 'name',
+						label: 'Name',
+						sortable: true,
+						sortingOrder: 'asc',
+					},
+					{
+						contentRenderer: 'progressbar',
+						fieldName: 'difficulty',
+						label: 'Difficulty',
+						maxValue: 10,
+						minValue: 0,
+					},
+					{
+						contentRenderer: 'button',
+						fieldName: 'action',
+						label: 'Action'
+					},
+				],
+				inputNameField: 'type',
+				inputNamesMap: {
+					'folder': 'folder',
+					'chef': 'chef',
+					'*': 'recipe'
+				},
+				inputValueField: 'id'
+			},
+			selectable: true,
+			showActionsMenu: false,
+			spritemap: spritemap,
+		}, '#customize');
 	</script>
 </body>
 </html>

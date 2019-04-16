@@ -15,6 +15,15 @@
 		.row {
 			margin-bottom: 20px;
 		}
+
+		.table-row {
+			transition: transform 0.25s;
+		}
+
+		.table-row.active {
+			transform: translate(-200px,0);
+			transition: transform 0.25s;
+		}
 	</style>
 
 	<script src="../build/globals/clay-table.js"></script>
@@ -24,8 +33,17 @@
 		ClayTable
 	</h1>
 
-	<div>
-		<form id="container"></form>
+	<div class="row row-spacing">
+		<div class="col">
+			<form id="container"></form>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h2>Table customize</h2>
+			<form id="customize"></form>
+		</div>
 	</div>
 
 	<script type="text/javascript">
@@ -171,6 +189,7 @@
 			});
 		});
 
+		// Default
 		new metal.ClayTable({
 			items: items,
 			schema: {
@@ -232,6 +251,75 @@
 			showActionsMenu: true,
 			spritemap: spritemap,
 		}, '#container');
+
+		// Table customize
+		new metal.ClayTable({
+			tableClasses: 'table table-autofit table-responsive',
+			useDefaultClasses: false,
+			events: {
+				cellContentClicked: (event) => {
+					const items = event.target.items;
+
+					event.target.items = items.map(
+						item => Object.assign(
+							{},
+							item,
+							event.data.item.id == item.id
+								? item.rowClasses.includes('active')
+									? {rowClasses: 'table-row'}
+									: {rowClasses: 'table-row active'}
+								: {rowClasses: item.rowClasses}
+						)
+					);
+				},
+			},
+			items: [
+				{
+					id: '1',
+					name: 'Photos',
+					rowClasses: 'table-row',
+					type: 'folder',
+				},
+				{
+					id: '2',
+					name: 'Videos',
+					rowClasses: 'table-row',
+					type: 'folder',
+				}
+			],
+			schema: {
+				fields: [
+					{
+						fieldName: 'name',
+						label: 'Name',
+						sortable: true,
+						sortingOrder: 'asc',
+					},
+					{
+						contentRenderer: 'progressbar',
+						fieldName: 'difficulty',
+						label: 'Difficulty',
+						maxValue: 10,
+						minValue: 0,
+					},
+					{
+						contentRenderer: 'button',
+						fieldName: 'action',
+						label: 'Action'
+					},
+				],
+				inputNameField: 'type',
+				inputNamesMap: {
+					'folder': 'folder',
+					'chef': 'chef',
+					'*': 'recipe'
+				},
+				inputValueField: 'id'
+			},
+			selectable: true,
+			showActionsMenu: false,
+			spritemap: spritemap,
+		}, '#customize');
 	</script>
 </body>
 </html>
