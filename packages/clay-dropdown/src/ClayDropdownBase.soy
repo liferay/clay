@@ -116,6 +116,7 @@
 			] /}
 			{param href: $item.href /}
 			{param icon: $item.icon /}
+			{param icons: $item.icons /}
 			{param inputName: $item.inputName /}
 			{param inputValue: $item.inputValue /}
 			{param items: $item.items /}
@@ -186,9 +187,11 @@
 	{let $dropdownMenu kind="html"}
 		{let $listAttributes kind="attributes"}
 			class="dropdown-menu
-				{if $itemsIconAlignment == 'left'}
+				{if $itemsIconAlignment == 'left' or $itemsIconAlignment == 'left-right'}
 					{sp}dropdown-menu-indicator-start
-				{elseif $itemsIconAlignment == 'right'}
+				{/if}
+
+				{if $itemsIconAlignment == 'right' or $itemsIconAlignment == 'left-right'}
 					{sp}dropdown-menu-indicator-end
 				{/if}
 

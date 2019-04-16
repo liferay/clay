@@ -12,6 +12,7 @@
 	{@param? disabled: bool}
 	{@param? href: string}
 	{@param? icon: string}
+	{@param? icons: ?}
 	{@param? inputName: string}
 	{@param? inputValue: string}
 	{@param? items: list<?>}
@@ -34,6 +35,7 @@
 		{param disabled: $disabled /}
 		{param href: $href /}
 		{param icon: $icon /}
+		{param icons: $icons /}
 		{param inputName: $inputName /}
 		{param inputValue: $inputValue /}
 		{param items: $items /}
@@ -60,6 +62,7 @@
 	{@param? disabled: bool}
 	{@param? href: string}
 	{@param? icon: string}
+	{@param? icons: ?}
 	{@param? inputName: string}
 	{@param? inputValue: string}
 	{@param? items: list<?>}
@@ -86,7 +89,15 @@
 		{let $labelContent kind="html"}
 			{let $iconContent kind="html"}
 				{if $icon and $spritemap}
-					<span class="dropdown-item-indicator">
+					{let $classes kind="text"}
+						{if $itemsIconAlignment == 'left'}
+							dropdown-item-indicator-start
+						{elseif $itemsIconAlignment == 'right'}
+							dropdown-item-indicator-end
+						{/if}
+					{/let}
+
+					<span class="{$classes}">
 						{call ClayIcon.render}
 							{param spritemap: $spritemap /}
 							{param symbol: $icon /}
@@ -95,14 +106,32 @@
 				{/if}
 			{/let}
 
-			{if $icon and $itemsIconAlignment == 'left'}
-				{$iconContent}
+			{if $icons and $icons.left and $spritemap}
+				<span class="dropdown-item-indicator-start">
+					{call ClayIcon.render}
+						{param spritemap: $spritemap /}
+						{param symbol: $icons.left /}
+					{/call}
+				</span>
+			{else}
+				{if $icon and $itemsIconAlignment == 'left'}
+					{$iconContent}
+				{/if}
 			{/if}
 
 			{$label}
 
-			{if $icon and $itemsIconAlignment == 'right'}
-				{$iconContent}
+			{if $icons and $icons.right and $spritemap}
+				<span class="dropdown-item-indicator-end">
+					{call ClayIcon.render}
+						{param spritemap: $spritemap /}
+						{param symbol: $icons.right /}
+					{/call}
+				</span>
+			{else}
+				{if $icon and $itemsIconAlignment == 'right'}
+					{$iconContent}
+				{/if}
 			{/if}
 		{/let}
 
@@ -161,6 +190,7 @@
 	{@param? disabled: bool}
 	{@param? href: string}
 	{@param? icon: string}
+	{@param? icons: ?}
 	{@param? inputName: string}
 	{@param? inputValue: string}
 	{@param? items: list<?>}
@@ -216,6 +246,7 @@
 	{@param? disabled: bool}
 	{@param? href: string}
 	{@param? icon: string}
+	{@param? icons: ?}
 	{@param? inputName: string}
 	{@param? inputValue: string}
 	{@param? items: list<?>}
@@ -257,6 +288,7 @@
 	{@param? disabled: bool}
 	{@param? href: string}
 	{@param? icon: string}
+	{@param? icons: ?}
 	{@param? inputName: string}
 	{@param? inputValue: string}
 	{@param? items: list<?>}
@@ -313,6 +345,7 @@
 	{@param? disabled: bool}
 	{@param? href: string}
 	{@param? icon: string}
+	{@param? icons: ?}
 	{@param? inputName: string}
 	{@param? inputValue: string}
 	{@param? items: list<?>}
@@ -359,6 +392,7 @@
 	{@param? disabled: bool}
 	{@param? href: string}
 	{@param? icon: string}
+	{@param? icons: ?}
 	{@param? inputName: string}
 	{@param? inputValue: string}
 	{@param? items: list<?>}

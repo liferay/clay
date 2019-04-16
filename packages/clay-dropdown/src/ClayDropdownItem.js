@@ -119,11 +119,21 @@ ClayDropdownItem.STATE = {
 	/**
 	 * Icon of the item.
 	 * @default undefined
+	 * @deprecated since version 2.13.x
 	 * @instance
 	 * @memberof ClayDropdownItem
 	 * @type {?(string|undefined)}
 	 */
 	icon: itemShape.icon,
+
+	/**
+	 * Icons of the item.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdownItem
+	 * @type {?(object|undefined)}
+	 */
+	icons: itemShape.icons,
 
 	/**
 	 * Name of the item input in case is selectable.
@@ -159,7 +169,7 @@ ClayDropdownItem.STATE = {
 	 * @memberof ClayDropdownBase
 	 * @type {?(string|undefined)}
 	 */
-	itemsIconAlignment: Config.oneOf(['left', 'right']),
+	itemsIconAlignment: Config.oneOf(['left', 'right', 'left-right']),
 
 	/**
 	 * Label of the item.

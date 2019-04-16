@@ -614,7 +614,7 @@ ClayDropdownBase.STATE = {
 	 * @memberof ClayDropdownBase
 	 * @type {?(string|undefined)}
 	 */
-	itemsIconAlignment: Config.oneOf(['left', 'right']),
+	itemsIconAlignment: Config.oneOf(['left', 'right', 'left-right']),
 
 	/**
 	 * Label of the trigger button.
