@@ -18,7 +18,9 @@ class ClayDataProvider extends ClayComponent {
 	 */
 	created() {
 		this._isResolvedData = false;
+		this._loadingTimeout = null;
 		this._pollingInterval = 0;
+		this._requestsCount = 0;
 		if (this._hasData(this.dataSource)) {
 			this._dataSource = this.dataSource;
 			this._isResolvedData = true;
@@ -32,6 +34,10 @@ class ClayDataProvider extends ClayComponent {
 				this.debounceTime
 			);
 		}
+
+		this.addListener('dataChange', this._defaultDataChange, true);
+		this.addListener('dataError', this._defaultDataError, true);
+		this.addListener('dataLoading', this._defaultDataLoading, true);
 	}
 
 	/**
@@ -53,6 +59,8 @@ class ClayDataProvider extends ClayComponent {
 	 * @protected
 	 */
 	updateData(query, requestRetries = 0) {
+		this._isResolvedData = false;
+
 		if (
 			this.initialData &&
 			!this._pollingInterval &&
@@ -60,6 +68,8 @@ class ClayDataProvider extends ClayComponent {
 		) {
 			this._dataSource = this.initialData;
 			this._handleDataChange();
+		} else {
+			this._handleDataLoading();
 		}
 
 		let promise;
@@ -75,6 +85,7 @@ class ClayDataProvider extends ClayComponent {
 		timeout(this.requestTimeout, promise)
 			.then(res => {
 				this._dataSource = res;
+				this._requestsCount += 1;
 				this._isResolvedData = true;
 				this._handleDataChange();
 
@@ -86,6 +97,46 @@ class ClayDataProvider extends ClayComponent {
 	}
 
 	/**
+	 * @protected
+	 */
+	_defaultDataChange() {
+		this.isLoading = false;
+		this.isError = false;
+
+		if (this._requestsCount > 0) {
+			clearTimeout(this._loadingTimeout);
+		}
+	}
+
+	/**
+	 * @protected
+	 */
+	_defaultDataError() {
+		this.isError = true;
+		this.isLoading = false;
+	}
+
+	/**
+	 * @param {!Event} event
+	 * @protected
+	 */
+	_defaultDataLoading(event) {
+		const {requestsCount} = event.data;
+
+		this.isError = false;
+
+		if (requestsCount > 0 && this.delayLoading) {
+			this._loadingTimeout = setTimeout(() => {
+				if (!this._isResolvedData) {
+					this.isLoading = true;
+				}
+			}, this.delayLoadingTimer);
+		} else {
+			this.isLoading = true;
+		}
+	}
+
+	/**
 	 * Handles the event when data changed.
 	 * @protected
 	 * @return {Boolean} If the event has been prevented or not.
@@ -94,6 +145,33 @@ class ClayDataProvider extends ClayComponent {
 		return !this.emit({
 			data: this._dataSource,
 			name: 'dataChange',
+		});
+	}
+
+	/**
+	 * Handles the event when request error
+	 * @param {!Error} err
+	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleDataError(err) {
+		return !this.emit({
+			data: err,
+			name: 'dataError',
+		});
+	}
+
+	/**
+	 * Handle triggering the event of loading data
+	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleDataLoading() {
+		return !this.emit({
+			data: {
+				requestsCount: this._requestsCount,
+			},
+			name: 'dataLoading',
 		});
 	}
 
@@ -150,6 +228,7 @@ class ClayDataProvider extends ClayComponent {
 			this.updateData(query, requestRetries + 1);
 		} else {
 			console.error('DataProvider: Error making the requisition', err);
+			this._handleDataError(err);
 		}
 	}
 
@@ -268,9 +347,34 @@ ClayDataProvider.STATE = {
 	 * @instance
 	 * @default 200
 	 * @memberof ClayDataProvider
-	 * @type {?(number)}
+	 * @type {?number}
 	 */
 	debounceTime: Config.number().value(200),
+
+	/**
+	 * @default false
+	 * @instance
+	 * @memberof ClayDataProvider
+	 * @type {?number}
+	 */
+	delayLoading: Config.bool().value(false),
+
+	/**
+	 * @default 500
+	 * @instance
+	 * @memberof ClayDataProvider
+	 * @type {?number}
+	 */
+	delayLoadingTimer: Config.number().value(500),
+
+	/**
+	 * The error content renderer.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDataProvider
+	 * @type {!html}
+	 */
+	errorContent: Config.any(),
 
 	/**
 	 * Set some initial data while the first request is being made
@@ -290,6 +394,33 @@ ClayDataProvider.STATE = {
 	 * @type {?(object|array)}
 	 */
 	inputMode: Config.oneOf(['polling', 'userInput']).value('userInput'),
+
+	/**
+	 * @default false
+	 * @instance
+	 * @memberof ClayDataProvider
+	 * @type {?bool}
+	 */
+	isError: Config.bool().value(false),
+
+	/**
+	 * Flag to indicate the render state. true will
+	 * render the contents of loadingContent.
+	 * @default false
+	 * @instance
+	 * @memberof ClayDataProvider
+	 * @type {?bool}
+	 */
+	isLoading: Config.bool().value(false),
+
+	/**
+	 * The loading content renderer.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDataProvider
+	 * @type {!html}
+	 */
+	loadingContent: Config.any(),
 
 	/**
 	 * Flag to define how often to refetch data (ms)
