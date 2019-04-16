@@ -7,6 +7,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect and clear the input val
       <div class="dropdown dropdown-full">
         <div class=" form-control form-control-tag-group">
           <input class="form-control-inset" ref="input" type="text" value="">
+          <div></div>
         </div>
       </div>
       <div class="form-feedback-group">
@@ -18,7 +19,9 @@ exports[`ClayMultiSelect should render a ClayMultiSelect and clear the input val
     </div>
   </div>
 </div>
-<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown" style="top: 0px; left: 0px;"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown" style="top: 0px; left: 0px;">
+  <li class="dropdown-item">no-results-found</li>
+</ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect and keep the focus of the input when selecting an item 1`] = `
@@ -50,6 +53,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect and keep the focus of t
             </span>
           </span>
           <input class="form-control-inset" ref="input" type="text" value="">
+          <div></div>
         </div>
       </div>
       <div class="form-feedback-group">
@@ -61,7 +65,9 @@ exports[`ClayMultiSelect should render a ClayMultiSelect and keep the focus of t
     </div>
   </div>
 </div>
-<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
+  <li class="dropdown-item">no-results-found</li>
+</ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with classes 1`] = `
@@ -71,6 +77,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with classes 1`] = `
       <div class="dropdown dropdown-full">
         <div class=" form-control form-control-tag-group">
           <input class="form-control-inset" ref="input" type="text" value="">
+          <div></div>
         </div>
       </div>
       <div class="form-feedback-group">
@@ -82,7 +89,9 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with classes 1`] = `
     </div>
   </div>
 </div>
-<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
+  <li class="dropdown-item">no-results-found</li>
+</ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with id 1`] = `
@@ -92,6 +101,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with id 1`] = `
       <div class="dropdown dropdown-full">
         <div class=" form-control form-control-tag-group">
           <input class="form-control-inset" ref="input" type="text" value="">
+          <div></div>
         </div>
       </div>
       <div class="form-feedback-group">
@@ -103,7 +113,9 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with id 1`] = `
     </div>
   </div>
 </div>
-<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
+  <li class="dropdown-item">no-results-found</li>
+</ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with input name from selected items 1`] = `
@@ -113,6 +125,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with input name from se
       <div class="dropdown dropdown-full">
         <div class=" form-control form-control-tag-group">
           <input class="form-control-inset" ref="input" type="text" value="">
+          <div></div>
         </div>
       </div>
       <div class="form-feedback-group">
@@ -124,7 +137,9 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with input name from se
     </div>
   </div>
 </div>
-<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
+  <li class="dropdown-item">no-results-found</li>
+</ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with label 1`] = `
@@ -135,6 +150,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with label 1`] = `
       <div class="dropdown dropdown-full">
         <div class=" form-control form-control-tag-group">
           <input class="form-control-inset" ref="input" type="text" value="">
+          <div></div>
         </div>
       </div>
       <div class="form-feedback-group">
@@ -146,7 +162,9 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with label 1`] = `
     </div>
   </div>
 </div>
-<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
+  <li class="dropdown-item">no-results-found</li>
+</ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with placeholder 1`] = `
@@ -156,6 +174,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with placeholder 1`] = 
       <div class="dropdown dropdown-full">
         <div class=" form-control form-control-tag-group">
           <input class="form-control-inset" ref="input" type="text" placeholder="Placeholder" value="">
+          <div></div>
         </div>
       </div>
       <div class="form-feedback-group">
@@ -167,7 +186,9 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with placeholder 1`] = 
     </div>
   </div>
 </div>
-<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
+  <li class="dropdown-item">no-results-found</li>
+</ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with select button hidden 1`] = `
@@ -177,6 +198,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with select button hidd
       <div class="dropdown dropdown-full">
         <div class=" form-control form-control-tag-group">
           <input class="form-control-inset" ref="input" type="text" value="">
+          <div></div>
         </div>
       </div>
       <div class="form-feedback-group">
@@ -185,7 +207,9 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with select button hidd
     </div>
   </div>
 </div>
-<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
+  <li class="dropdown-item">no-results-found</li>
+</ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with selected items 1`] = `
@@ -217,6 +241,7 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with selected items 1`]
             </span>
           </span>
           <input class="form-control-inset" ref="input" type="text" value="">
+          <div></div>
         </div>
       </div>
       <div class="form-feedback-group">
@@ -228,7 +253,9 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with selected items 1`]
     </div>
   </div>
 </div>
-<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
+  <li class="dropdown-item">no-results-found</li>
+</ul>
 `;
 
 exports[`ClayMultiSelect should render the default markup 1`] = `
@@ -238,6 +265,7 @@ exports[`ClayMultiSelect should render the default markup 1`] = `
       <div class="dropdown dropdown-full">
         <div class=" form-control form-control-tag-group">
           <input class="form-control-inset" ref="input" type="text" value="">
+          <div></div>
         </div>
       </div>
       <div class="form-feedback-group">
@@ -249,5 +277,7 @@ exports[`ClayMultiSelect should render the default markup 1`] = `
     </div>
   </div>
 </div>
-<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
+  <li class="dropdown-item">no-results-found</li>
+</ul>
 `;
