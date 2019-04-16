@@ -8447,9 +8447,10 @@ metal-tools-soy@^4.2.8:
     vinyl-fs "^2.2.1"
     yargs "^8.0.2"
 
-metal-tools-soy@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/metal-tools-soy/-/metal-tools-soy-6.0.0.tgz#7de8f5a9cdd9ff9ec7dfda871a908dc5a784ae50"
+metal-tools-soy@^4.3.2:
+  version "4.3.2"
+  resolved "https://registry.yarnpkg.com/metal-tools-soy/-/metal-tools-soy-4.3.2.tgz#4ca9ba24f09d73990f47176ecec5a5621b158b5d"
+  integrity sha512-wtVtYHGP6vuPXq7/YTmuuiVkP2DHlxbSiiMJ7cdPzToGiCUoD+JszKv7vaab452uZfMHrfcmO5h6N+K+To4yqA==
   dependencies:
     globby "^6.1.0"
     gulp-if "^2.0.0"
@@ -8461,7 +8462,7 @@ metal-tools-soy@^6.0.0:
     soyparser "^1.0.3"
     stream-combiner "^0.2.2"
     stream-consume "^0.1.0"
-    through2 "^2.0.0"
+    through2 "^2.0.5"
     vinyl-fs "^2.2.1"
     yargs "^8.0.2"
 
@@ -11770,7 +11771,7 @@ through2@^0.6.0, through2@^0.6.1, through2@^0.6.3, through2@^0.6.5:
     readable-stream ">=1.0.33-1 <1.1.0-0"
     xtend ">=4.0.0 <4.1.0-0"
 
-through2@^2.0.0, through2@^2.0.1, through2@^2.0.2, through2@^2.0.3, through2@~2.0.0:
+through2@^2.0.0, through2@^2.0.1, through2@^2.0.2, through2@^2.0.3, through2@^2.0.5, through2@~2.0.0:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.5.tgz#01c1e39eb31d07cb7d03a96a70823260b23132cd"
   dependencies:

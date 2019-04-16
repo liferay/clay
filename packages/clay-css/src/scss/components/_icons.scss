@@ -20,14 +20,14 @@
 }
 
 .order-arrow-down-active {
-	.order-arrow-arrow-down {
-		fill: $order-arrow-down-active-color;
+	.order-arrow-arrow-up {
+		fill: $order-arrow-up-inactive-color;
 	}
 }
 
 .order-arrow-up-active {
-	.order-arrow-arrow-up {
-		fill: $order-arrow-up-active-color;
+	.order-arrow-arrow-down {
+		fill: $order-arrow-down-inactive-color;
 	}
 }
 

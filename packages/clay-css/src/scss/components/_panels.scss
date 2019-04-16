@@ -29,8 +29,6 @@
 			@include border-bottom-radius($panel-header-offset-border-radius);
 		}
 
-		@include transition(border-radius 1s ease, border-width 1s ease);
-
 		border-bottom-width: 0;
 	}
 
@@ -50,19 +48,7 @@
 }
 
 .panel-header-link {
-	color: inherit;
-	display: block;
-	padding: $panel-header-padding-y $panel-header-padding-x;
-	text-decoration: $panel-header-link-text-decoration;
-
-	&:hover {
-		color: inherit;
-		text-decoration: $panel-header-link-hover-text-decoration;
-	}
-
-	&:focus {
-		z-index: 1;
-	}
+	@include clay-link($panel-header-link);
 
 	.collapse-icon {
 		padding-left: $collapse-icon-padding-left;
@@ -127,8 +113,6 @@
 				@if not ($panel-header-offset-border-radius == 0) {
 					@include border-bottom-radius($panel-header-offset-border-radius);
 				}
-
-				@include transition(border-radius 1s ease);
 			}
 		}
 	}
@@ -161,8 +145,10 @@
 				border-radius: 0;
 			}
 
-			.panel-header.collapsed {
-				border-radius: 0;
+			.panel-header {
+				&, &.collapsed {
+					border-radius: 0;
+				}
 			}
 		}
 	}

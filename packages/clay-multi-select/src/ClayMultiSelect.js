@@ -71,16 +71,13 @@ class ClayMultiSelect extends ClayComponent {
 	 * Handles the autocomplete selected item event.
 	 * @param {!Event} event
 	 * @protected
-	 * @return {?Boolean} If the event has been prevented or not.
 	 */
 	_defaultAutocompleteItemSelected(event) {
 		const {label, value} = event.data.item;
 
-		this.filteredItems = [];
-
 		const item = this._createItemObject(label, value);
 
-		return this._addLabelItem(item);
+		this._addLabelItem(item);
 	}
 
 	/**
@@ -109,10 +106,12 @@ class ClayMultiSelect extends ClayComponent {
 
 		if (char === ',' || words.length > 1) {
 			words.forEach(word => {
-				this._addLabelItem(this._createItemObject(word, word));
-			});
+				let added = this._addLabelItem(
+					this._createItemObject(word, word)
+				);
 
-			inputValue = '';
+				inputValue = inputValue.replace(word + ',', added ? '' : word);
+			});
 		}
 
 		this.inputValue = inputValue;
@@ -148,13 +147,12 @@ class ClayMultiSelect extends ClayComponent {
 	 * Handles the click on the close label item button.
 	 * @param {!Event} event
 	 * @protected
-	 * @return {?Boolean} If the event has been prevented or not.
 	 */
 	_defaultLabelItemKeyDown(event) {
 		if (event.data.key == 'Backspace' || event.data.key == 'Enter') {
 			event.preventDefault();
 
-			return this._removeLabelItem(event.data.element);
+			this._removeLabelItem(event.data.element);
 		}
 	}
 
@@ -257,7 +255,7 @@ class ClayMultiSelect extends ClayComponent {
 			event.preventDefault();
 
 			if (element.value) {
-				return this._addLabelItem(
+				this._addLabelItem(
 					this._createItemObject(element.value, element.value)
 				);
 			}
@@ -343,7 +341,7 @@ class ClayMultiSelect extends ClayComponent {
 	 * Continues the propagation of the itemAdded event.
 	 * @param {!String} item
 	 * @protected
-	 * @return {?Boolean} If the event has been prevented or not.
+	 * @return {?Boolean} If the item has been added or not.
 	 */
 	_addLabelItem(item) {
 		const {label, value} = item;
@@ -362,20 +360,40 @@ class ClayMultiSelect extends ClayComponent {
 				};
 			})[0];
 
-		item = filteredItem || item;
+		if (!this.creatable) {
+			item = filteredItem;
+		} else {
+			item = filteredItem || item;
+		}
 
-		if (value && !this._isItemSelected(item)) {
+		const itemIsSelected = item && this._isItemSelected(item);
+
+		if (item && value && !itemIsSelected) {
 			let newSelectedItems = this.selectedItems.map(item => item);
 			newSelectedItems.push(item);
 			this.selectedItems = newSelectedItems;
 
-			return !this.emit({
+			this.filteredItems = [];
+
+			this.emit({
 				data: {
 					item,
 					selectedItems: this.selectedItems,
 				},
 				name: 'labelItemAdded',
 			});
+
+			return true;
+		} else {
+			this.emit({
+				data: {
+					itemIsSelected,
+					itemDoesNotExists: !this.creatable && !item,
+				},
+				name: 'errorAddinglabelItem',
+			});
+
+			return false;
 		}
 	}
 
@@ -481,7 +499,6 @@ class ClayMultiSelect extends ClayComponent {
 	 * Removes an item and emits the 'itemRoved' event.
 	 * @param {!Element} element
 	 * @protected
-	 * @return {Boolean} If the event has been prevented or not.
 	 */
 	_removeLabelItem(element) {
 		const index = Number(element.getAttribute('data-tag'));
@@ -492,7 +509,7 @@ class ClayMultiSelect extends ClayComponent {
 
 		this.selectedItems = newSelectedItems;
 
-		return !this.emit({
+		this.emit({
 			data: {
 				item,
 				selectedItems: this.selectedItems,
@@ -539,6 +556,15 @@ ClayMultiSelect.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	contentRenderer: Config.string(),
+
+	/**
+	 * Flag to indicate if only items from autocomplete should be accepted.
+	 * @default true
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @type {?bool}
+	 */
+	creatable: Config.bool().value(true),
 
 	/**
 	 * Data to add to the element.
@@ -597,6 +623,14 @@ ClayMultiSelect.STATE = {
 	 */
 	defaultEventHandler: Config.object(),
 
+	/**
+	 * Element selector to render the autocomplete dropdown in.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayMultiSelect
+	 * @review
+	 * @type {?(object|undefined)}
+	 */
 	dropdownPortalElement: Config.string(),
 
 	/**

@@ -360,12 +360,21 @@ A dropdown is a list of options related to the element that triggers it.
 
 > Dropdown menus with left icons are suitable for process bars (wizards), when the number of steps do not fit the screen. The dropdown menu with left icons can display the remaining steps.
 
+<div class="alert alert-warning" role="alert">
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+			<use href="/images/icons/icons.svg#warning-full"></use>
+		</svg>
+	</span>
+	<strong class="lead">Warning:</strong> <b>.dropdown-item-indicator</b> is deprecated, use <b>.dropdown-item-indicator-start</b> to get icons on the left.
+</div>
+
 <div class="clay-site-dropdown-menu-container">
 	<div aria-labelledby="theDropdownToggleId" class="dropdown-menu dropdown-menu-indicator-start">
 		<ul class="list-unstyled">
 			<li>
 				<a class="dropdown-item" href="#1">
-					<div class="dropdown-item-indicator">
+					<div class="dropdown-item-indicator-start">
 						<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#check" />
 						</svg>
@@ -375,7 +384,7 @@ A dropdown is a list of options related to the element that triggers it.
 			</li>
 			<li>
 				<a class="dropdown-item" href="#1">
-					<div class="dropdown-item-indicator">
+					<div class="dropdown-item-indicator-start">
 						<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#check" />
 						</svg>
@@ -427,7 +436,7 @@ A dropdown is a list of options related to the element that triggers it.
 	<ul class="list-unstyled">
 		<li>
 			<a class="dropdown-item" href="#1">
-				<div class="dropdown-item-indicator">
+				<div class="dropdown-item-indicator-start">
 					<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#check" />
 					</svg>
@@ -437,7 +446,7 @@ A dropdown is a list of options related to the element that triggers it.
 		</li>
 		<li>
 			<a class="dropdown-item" href="#1">
-				<div class="dropdown-item-indicator">
+				<div class="dropdown-item-indicator-start">
 					<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#check" />
 					</svg>
@@ -456,13 +465,22 @@ A dropdown is a list of options related to the element that triggers it.
 
 > Dropdown menus with right icons are suitable for process bars (wizards) when the number of steps do not fit the screen. It displays the remaining steps and emphasizes the step number by placing the icon on the right side.
 
+<div class="alert alert-warning" role="alert">
+	<span class="alert-indicator">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-warning-full">
+			<use href="/images/icons/icons.svg#warning-full"></use>
+		</svg>
+	</span>
+	<strong class="lead">Warning:</strong> <b>.dropdown-item-indicator</b> is deprecated, use <b>.dropdown-item-indicator-end</b> to get icons on the right.
+</div>
+
 <div class="clay-site-dropdown-menu-container">
 	<div aria-labelledby="theDropdownToggleId" class="dropdown-menu dropdown-menu-indicator-end">
 		<ul class="list-unstyled">
 			<li>
 				<a class="active dropdown-item" href="#1">
 					Selected Option
-					<div class="dropdown-item-indicator">
+					<div class="dropdown-item-indicator-end">
 						<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#check" />
 						</svg>
@@ -472,7 +490,7 @@ A dropdown is a list of options related to the element that triggers it.
 			<li>
 				<a class="dropdown-item" href="#1">
 					Regular Option
-					<div class="dropdown-item-indicator">
+					<div class="dropdown-item-indicator-end">
 						<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 							<use href="/images/icons/icons.svg#check" />
 						</svg>
@@ -525,7 +543,7 @@ A dropdown is a list of options related to the element that triggers it.
 		<li>
 			<a class="active dropdown-item" href="#1">
 				Selected Option
-				<div class="dropdown-item-indicator">
+				<div class="dropdown-item-indicator-end">
 					<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#check" />
 					</svg>
@@ -535,7 +553,7 @@ A dropdown is a list of options related to the element that triggers it.
 		<li>
 			<a class="dropdown-item" href="#1">
 				Regular Option
-				<div class="dropdown-item-indicator">
+				<div class="dropdown-item-indicator-end">
 					<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
 						<use href="/images/icons/icons.svg#check" />
 					</svg>

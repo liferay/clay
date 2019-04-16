@@ -21,6 +21,7 @@ section.row {
 
 	small {
 		display: block;
+		margin-top: 8px;
 	}
 }
 
@@ -34,6 +35,13 @@ section.row {
 
 	a {
 		color: #FFF;
+		margin-right: 8px;
+		vertical-align: middle;
+
+		&:hover {
+			color: rgba(255, 255, 255, 0.8);
+			text-decoration: none;
+		}
 	}
 
 	.container {
@@ -42,26 +50,17 @@ section.row {
 
 	.title {
 		float: left;
-		margin-bottom: 14px;
-		margin-top: 14px;
+		font-size: 1.5rem;
+		margin-bottom: 12.5px;
+		margin-top: 12.5px;
 
-		@include media-breakpoint-up(md) { // min-width 768px
+		@include media-breakpoint-up(md) {
 			margin-left: 18px;
 		}
 
 		.lexicon-version {
 			font-size: 60%;
-			line-height: 16px;
 			vertical-align: middle;
-		}
-	}
-
-	.navbar-toggle {
-		float: left;
-		margin-left: -10px;
-
-		.icon-bar {
-			background-color: #FFF;
 		}
 	}
 }
@@ -119,7 +118,31 @@ section.row {
 	}
 }
 
-.animated-toggle.navbar-toggle .icon-bar {
+#claySiteMobileNavigationToggle {
+	float: left;
+	height: 32px;
+	margin-right: 8px;
+	padding: 0;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 32px;
+}
+
+.docs-icon-bar {
+	background-color: #FFF;
+	display: block;
+	height: 2px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 22px;
+
+	+ .docs-icon-bar {
+		margin-top: 4px;
+	}
+}
+
+.animated-toggle .docs-icon-bar {
 	position: relative;
 	top: 0;
 	transition-delay: 0s 0s 0.2s 0s;
@@ -129,21 +152,22 @@ section.row {
 }
 
 .main-nav-open {
-	.animated-toggle.navbar-toggle {
-		.icon-bar:nth-of-type(even) {
+	.animated-toggle {
+		.docs-icon-bar-1,
+		.docs-icon-bar-3 {
 			top: 6px;
 			-ms-transform: rotate(45deg);
 			transform: rotate(45deg);
 			transition-delay: 0s 0s 0s 0.2s;
 		}
 
-		.icon-bar:nth-of-type(4) {
+		.docs-icon-bar-3 {
 			top: -6px;
 			-ms-transform: rotate(-45deg);
 			transform: rotate(-45deg);
 		}
 
-		.icon-bar:nth-of-type(odd) {
+		.docs-icon-bar-2 {
 			background-color: transparent;
 			opacity: 0;
 		}
@@ -1619,20 +1643,28 @@ $mainNavWidth: 220px;
 
 h1, h2, h3, h4, h5, h6 {
 	.heading-anchor {
+		align-items: center;
 		color: inherit;
 		cursor: pointer;
-		display: inline-block;
+		display: inline-flex;
 		float: right;
 		font-size: 14px;
-		line-height: 1.5;
+		height: 32px;
+		justify-content: center;
+		line-height: 1;
 		text-decoration: none;
-		width: 20px;
+		vertical-align: middle;
+		width: 32px;
+
+		.lexicon-icon {
+			margin-top: 0;
+		}
 	}
 
 	@include media-breakpoint-up(md) { // min-width 768px
 		.heading-anchor {
 			float: none;
-			margin-left: -20px;
+			margin-left: -32px;
 			opacity: 0;
 
 			&:focus {

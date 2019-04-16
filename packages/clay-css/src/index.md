@@ -1,6 +1,6 @@
 ---
 title: Home
-heading: Clay
+heading: Clay CSS
 subHeading: A Web Implementation of Liferay's Experience Language
 navIndex: 0
 ---

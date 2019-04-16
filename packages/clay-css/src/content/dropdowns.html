@@ -1290,4 +1290,12 @@ section: Components
 		$(this).closest('.dropdown-menu').find('.dropdown-item').removeClass('active');
 		$(this).closest('.dropdown-item').toggleClass('active', this.checked);
 	});
+
+	$('.input-group-inset').on('focusin', function(event) {
+		$(this).closest('.input-group-item').addClass('focus');
+	});
+
+	$('.input-group-inset').on('focusout', function(event) {
+		$(this).closest('.input-group-item').removeClass('focus');
+	});
 </script>

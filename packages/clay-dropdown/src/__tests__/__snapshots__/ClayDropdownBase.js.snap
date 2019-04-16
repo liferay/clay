@@ -131,7 +131,7 @@ exports[`ClayDropdownBase should render a dropdown with icons on the left 1`] = 
   <ul class="list-unstyled">
     <li tabindex="-1">
       <a class=" dropdown-item" href="item1url">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
             <use xlink:href="icons.svg#check"></use>
           </svg>
@@ -139,7 +139,7 @@ exports[`ClayDropdownBase should render a dropdown with icons on the left 1`] = 
     </li>
     <li tabindex="-1">
       <a class=" dropdown-item" href="item2url">
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-start">
           <svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
             <use xlink:href="icons.svg#check"></use>
           </svg>
@@ -157,7 +157,7 @@ exports[`ClayDropdownBase should render a dropdown with icons on the right 1`] =
   <ul class="list-unstyled">
     <li tabindex="-1">
       <a class=" dropdown-item" href="item1url">Item 1
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-end">
           <svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
             <use xlink:href="icons.svg#check"></use>
           </svg>
@@ -166,7 +166,7 @@ exports[`ClayDropdownBase should render a dropdown with icons on the right 1`] =
     </li>
     <li tabindex="-1">
       <a class=" dropdown-item" href="item2url">Item 2
-        <span class="dropdown-item-indicator">
+        <span class="dropdown-item-indicator-end">
           <svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
             <use xlink:href="icons.svg#check"></use>
           </svg>

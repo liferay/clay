@@ -254,9 +254,15 @@
 	{@param? spritemap: string}
 
 	{let $attributes kind="attributes"}
-		{if $selectable and $item.selected}
-			class="table-active"
-		{/if}
+		class="
+			{if $selectable and $item.selected}
+				table-active
+			{/if}
+
+			{if $item.rowClasses}
+				{sp}{$item.rowClasses}
+			{/if}
+		"
 
 		data-onclick="{$_handleRowContentClick}"
 	{/let}

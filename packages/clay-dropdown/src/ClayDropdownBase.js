@@ -14,11 +14,8 @@ import templates from './ClayDropdownBase.soy.js';
 
 const KEY_CODE_ESC = 27;
 
-const KEY_DOWN = 'ArrowDown';
-const KEY_UP = 'ArrowUp';
-const KEY_ENTER = 'Enter';
-
-const KEY_NAVIGATION = [KEY_DOWN, KEY_UP, KEY_ENTER];
+const KEY_ESCAPE = 'Escape';
+const KEY_TAB = 'Tab';
 
 /**
  * Flattens all items into an array of arrays.
@@ -70,6 +67,25 @@ class ClayDropdownBase extends ClayComponent {
 	}
 
 	/**
+	 * Reassembles flattened items into the correct items structure.
+	 * This method is used in conjunction with `flatten(..., true)`
+	 * @param {Array} flattenedItems
+	 * @private
+	 * @return {Array}
+	 */
+	_assembleFromFlattenedGroups(flattenedItems) {
+		return this.items.map((item, i) => {
+			if (item.items) {
+				item.items = flattenedItems[i];
+			} else {
+				item = flattenedItems[i][0];
+			}
+
+			return item;
+		});
+	}
+
+	/**
 	 * Toggles the dropdown, closing it when open or opening it when closed.
 	 * @protected
 	 */
@@ -92,6 +108,44 @@ class ClayDropdownBase extends ClayComponent {
 			),
 			element
 		);
+	}
+
+	/**
+	 * Gets the indexes of the next active item.
+	 * @param {Array} items
+	 * @param {Number} initialActive
+	 * @param {Number} initialSubActive
+	 * @param {Boolean} reverse
+	 * @private
+	 * @return {Number}
+	 */
+	_getNextIndexes(items, initialActive, initialSubActive, reverse = false) {
+		let {active, subActive} = this._incrementActiveItemIndex(
+			items,
+			initialActive === -1 ? 0 : initialActive,
+			initialSubActive,
+			reverse
+		);
+
+		const allItems = items.reduce((prev, curr) => prev.concat(curr), []);
+
+		let tick = 0;
+
+		while (items[active][subActive].disabled && tick < allItems.length) {
+			const item = this._incrementActiveItemIndex(
+				items,
+				active,
+				subActive,
+				reverse
+			);
+
+			active = item.active;
+			subActive = item.subActive;
+
+			tick++;
+		}
+
+		return {active, subActive};
 	}
 
 	/**
@@ -141,163 +195,32 @@ class ClayDropdownBase extends ClayComponent {
 	}
 
 	/**
-	 * Increments to the index to the next item.
-	 * @param {Array} items
-	 * @param {Number} active
-	 * @param {Number} subActive
-	 * @param {Boolean} reverse
-	 * @private
-	 * @return {Object}
-	 */
-	_incrementActiveItemIndex(items, active, subActive, reverse) {
-		const totalItems = items.length;
-
-		subActive = reverse ? subActive - 1 : subActive + 1;
-
-		if (reverse) {
-			if (subActive < 0) {
-				const nextActive = active - 1;
-
-				active = nextActive < 0 ? totalItems - 1 : nextActive;
-
-				subActive = items[active].length - 1;
-			}
-		} else {
-			if (subActive === items[active].length) {
-				const nextActive = active + 1;
-
-				active = nextActive === totalItems ? 0 : nextActive;
-
-				subActive = 0;
-			}
-		}
-
-		return {active, subActive};
-	}
-
-	/**
-	 * Gets the indexes of the next active item.
-	 * @param {Array} items
-	 * @param {Number} initialActive
-	 * @param {Number} initialSubActive
-	 * @param {Boolean} reverse
-	 * @private
-	 * @return {Number}
-	 */
-	_getNextIndexes(items, initialActive, initialSubActive, reverse = false) {
-		let {active, subActive} = this._incrementActiveItemIndex(
-			items,
-			initialActive === -1 ? 0 : initialActive,
-			initialSubActive,
-			reverse
-		);
-
-		const allItems = items.reduce((prev, curr) => prev.concat(curr), []);
-
-		let tick = 0;
-
-		while (items[active][subActive].disabled && tick < allItems.length) {
-			const item = this._incrementActiveItemIndex(
-				items,
-				active,
-				subActive,
-				reverse
-			);
-
-			active = item.active;
-			subActive = item.subActive;
-
-			tick++;
-		}
-
-		return {active, subActive};
-	}
-
-	/**
-	 * Sets the next item in the list as active.
-	 * @param {Boolean} reverse
-	 * @private
-	 */
-	_setNextActive(reverse) {
-		const items = flatten(this.items, true);
-		let activeSubIndex = -1;
-
-		const activeIndex = items.findIndex(item => {
-			const subIndex = item.findIndex(item => item.active);
-
-			if (subIndex !== -1) {
-				activeSubIndex = subIndex;
-
-				return true;
-			}
-		});
-
-		const {active, subActive} = this._getNextIndexes(
-			items,
-			activeIndex,
-			activeSubIndex,
-			reverse
-		);
-
-		if (items[activeIndex] && items[activeIndex][activeSubIndex]) {
-			items[activeIndex][activeSubIndex].active = false;
-		}
-
-		items[active][subActive].active = true;
-
-		this.items = this._assembleFromFlattenedGroups(items);
-	}
-
-	/**
-	 * Reassembles flattened items into the correct items structure.
-	 * This method is used in conjunction with `flatten(..., true)`
-	 * @param {Array} flattenedItems
-	 * @private
-	 * @return {Array}
-	 */
-	_assembleFromFlattenedGroups(flattenedItems) {
-		return this.items.map((item, i) => {
-			if (item.items) {
-				item.items = flattenedItems[i];
-			} else {
-				item = flattenedItems[i][0];
-			}
-
-			return item;
-		});
-	}
-
-	/**
-	 * Handle key events.
-	 * @param {!Event} event
-	 * @private
-	 */
-	_handleKeyNavigation(event) {
-		if (KEY_NAVIGATION.includes(event.key)) {
-			event.preventDefault();
-
-			if (event.key === KEY_DOWN || event.key === KEY_UP) {
-				this._setNextActive(event.key === KEY_UP);
-			} else if (event.key === KEY_ENTER) {
-				this._handleEnterKey(event);
-			}
-		}
-	}
-
-	/**
-	 * Continues the propagation of the enter key event
+	 * Handles the item key down event
 	 * @param {!Event} event
 	 * @protected
-	 * @return {Boolean} If the event has been prevented or not.
 	 */
-	_handleEnterKey(event) {
-		return !this.emit({
-			data: {
-				item: flatten(this.items).find(item => item.active),
-			},
-			name: 'itemClicked',
-			originalEvent: event,
-		});
+	_handleItemKeyDown(event) {
+		if (event.key === KEY_TAB) {
+			const element = event.delegateTarget;
+			const elementIndex = this._getDropdownItemIndex(element);
+			const totalElements = element.parentElement.querySelectorAll(
+				'li :not([role="presentation"])'
+			).length;
+
+			if (
+				(elementIndex === 0 && event.shiftKey) ||
+				(elementIndex === totalElements && !event.shiftKey)
+			) {
+				event.preventDefault();
+				this.refs.triggerButton.focus();
+			} else if (elementIndex === totalElements - 1 && !event.shiftKey) {
+				this.toggle();
+				this.refs.triggerButton.focus();
+			}
+		} else if (event.key === KEY_ESCAPE) {
+			this.toggle();
+			this.refs.triggerButton.focus();
+		}
 	}
 
 	/**
@@ -385,6 +308,27 @@ class ClayDropdownBase extends ClayComponent {
 	}
 
 	/**
+	 * Handles the key down event over the trigger
+	 * @param {!Event} event
+	 * @protected
+	 */
+	_handleTriggerKeyDown(event) {
+		if (event.key === KEY_TAB) {
+			if (event.shiftKey && this.expanded) {
+				this.toggle();
+			} else {
+				let item = this.refs.portal.refs.item0;
+
+				item = item.refs.item0 || item;
+
+				if (item) {
+					item.element.focus();
+				}
+			}
+		}
+	}
+
+	/**
 	 * Handles blur window in order to hide menu.
 	 * @private
 	 */
@@ -393,6 +337,76 @@ class ClayDropdownBase extends ClayComponent {
 		if (activeElement != null && activeElement.nodeName === 'IFRAME') {
 			this.toggle();
 		}
+	}
+
+	/**
+	 * Increments to the index to the next item.
+	 * @param {Array} items
+	 * @param {Number} active
+	 * @param {Number} subActive
+	 * @param {Boolean} reverse
+	 * @private
+	 * @return {Object}
+	 */
+	_incrementActiveItemIndex(items, active, subActive, reverse) {
+		const totalItems = items.length;
+
+		subActive = reverse ? subActive - 1 : subActive + 1;
+
+		if (reverse) {
+			if (subActive < 0) {
+				const nextActive = active - 1;
+
+				active = nextActive < 0 ? totalItems - 1 : nextActive;
+
+				subActive = items[active].length - 1;
+			}
+		} else {
+			if (subActive === items[active].length) {
+				const nextActive = active + 1;
+
+				active = nextActive === totalItems ? 0 : nextActive;
+
+				subActive = 0;
+			}
+		}
+
+		return {active, subActive};
+	}
+
+	/**
+	 * Sets the next item in the list as active.
+	 * @param {Boolean} reverse
+	 * @private
+	 */
+	_setNextActive(reverse) {
+		const items = flatten(this.items, true);
+		let activeSubIndex = -1;
+
+		const activeIndex = items.findIndex(item => {
+			const subIndex = item.findIndex(item => item.active);
+
+			if (subIndex !== -1) {
+				activeSubIndex = subIndex;
+
+				return true;
+			}
+		});
+
+		const {active, subActive} = this._getNextIndexes(
+			items,
+			activeIndex,
+			activeSubIndex,
+			reverse
+		);
+
+		if (items[activeIndex] && items[activeIndex][activeSubIndex]) {
+			items[activeIndex][activeSubIndex].active = false;
+		}
+
+		items[active][subActive].active = true;
+
+		this.items = this._assembleFromFlattenedGroups(items);
 	}
 
 	/**
@@ -434,13 +448,6 @@ class ClayDropdownBase extends ClayComponent {
 					document,
 					'click',
 					this._handleDocClick.bind(this),
-					true
-				),
-				dom.on(document, 'keyup', this._handleKeyup.bind(this), true),
-				dom.on(
-					document,
-					'keydown',
-					this._handleKeyNavigation.bind(this),
 					true
 				),
 				dom.on(
@@ -607,7 +614,7 @@ ClayDropdownBase.STATE = {
 	 * @memberof ClayDropdownBase
 	 * @type {?(string|undefined)}
 	 */
-	itemsIconAlignment: Config.oneOf(['left', 'right']),
+	itemsIconAlignment: Config.oneOf(['left', 'right', 'left-right']),
 
 	/**
 	 * Label of the trigger button.

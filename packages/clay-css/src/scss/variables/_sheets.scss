@@ -88,6 +88,18 @@ $sheet-subtitle-link-text-decoration: null !default;
 $sheet-subtitle-link-hover-color: null !default;
 $sheet-subtitle-link-hover-text-decoration: none !default;
 
+$sheet-subtitle-link: () !default;
+$sheet-subtitle-link: map-merge((
+	border-radius: 1px,
+	color: $sheet-subtitle-link-color,
+	text-decoration: $sheet-subtitle-link-text-decoration,
+	transition: box-shadow 0.15s ease-in-out,
+	hover-color: $sheet-subtitle-link-hover-color,
+	hover-text-decoration: $sheet-subtitle-link-hover-text-decoration,
+	focus-box-shadow: 0 0 0 $input-btn-focus-width $white#{','} 0 0 0 ($input-btn-focus-width * 2) $input-btn-focus-color,
+	focus-outline: 0,
+), $sheet-subtitle-link);
+
 $sheet-subtitle-collapse-icon-font-size: null !default;
 $sheet-subtitle-collapse-icon-bottom: null !default;
 $sheet-subtitle-collapse-icon-left: null !default;

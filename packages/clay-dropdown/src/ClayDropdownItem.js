@@ -27,6 +27,16 @@ class ClayDropdownItem extends ClayComponent {
 	}
 
 	/**
+	 * Continues the propagation of the item clicked event
+	 * @param {!Event} event
+	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleItemKeyDown(event) {
+		return !this.emit('itemKeyDown', event);
+	}
+
+	/**
 	 * @inheritDoc
 	 */
 	syncActive() {
@@ -109,11 +119,21 @@ ClayDropdownItem.STATE = {
 	/**
 	 * Icon of the item.
 	 * @default undefined
+	 * @deprecated since version 2.13.x
 	 * @instance
 	 * @memberof ClayDropdownItem
 	 * @type {?(string|undefined)}
 	 */
 	icon: itemShape.icon,
+
+	/**
+	 * Icons of the item.
+	 * @default undefined
+	 * @instance
+	 * @memberof ClayDropdownItem
+	 * @type {?(object|undefined)}
+	 */
+	icons: itemShape.icons,
 
 	/**
 	 * Name of the item input in case is selectable.
@@ -149,7 +169,7 @@ ClayDropdownItem.STATE = {
 	 * @memberof ClayDropdownBase
 	 * @type {?(string|undefined)}
 	 */
-	itemsIconAlignment: Config.oneOf(['left', 'right']),
+	itemsIconAlignment: Config.oneOf(['left', 'right', 'left-right']),
 
 	/**
 	 * Label of the item.

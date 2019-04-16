@@ -20,7 +20,8 @@
     "item": {
         "id": "1",
         "name": "Photos",
-        "type": "folder"
+        "type": "folder",
+        "rowClasses": "my-row-classes"
     },
     "groupName": "group-name",
     "selectable": false,
