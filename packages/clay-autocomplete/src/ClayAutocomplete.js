@@ -1,4 +1,5 @@
 import 'clay-data-provider';
+import 'clay-loading-indicator';
 import 'clay-portal';
 import {Align} from 'metal-position';
 import {Config} from 'metal-state';
@@ -21,6 +22,7 @@ class ClayAutocomplete extends ClayComponent {
 		this._dropdownItemFocused = null;
 
 		this.addListener('dataChange', this._defaultDataChange, true);
+		this.addListener('dataLoading', this._defaultDataLoading, true);
 		this.addListener('inputChange', this._defaultInputChange, true);
 		this.refs.dataProvider.refs.portal.on(
 			'rendered',
@@ -67,11 +69,20 @@ class ClayAutocomplete extends ClayComponent {
 	 * @private
 	 */
 	_defaultDataChange() {
+		this._isFetching = false;
+
 		if (this._query) {
 			this.filteredItems = this._getUpdatedFilteredItems();
 		} else {
 			this.filteredItems = [];
 		}
+	}
+
+	/**
+	 * @private
+	 */
+	_defaultDataLoading() {
+		this._isFetching = true;
 	}
 
 	/**
@@ -156,6 +167,34 @@ class ClayAutocomplete extends ClayComponent {
 		return !this.emit({
 			data: event.data,
 			name: 'dataChange',
+			originalEvent: event,
+		});
+	}
+
+	/**
+	 * Continues the propagation of the data error event
+	 * @param {!Event} event
+	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleDataError(event) {
+		return !this.emit({
+			data: event.data,
+			name: 'dataError',
+			originalEvent: event,
+		});
+	}
+
+	/**
+	 * Continues the propagation of the data loading event
+	 * @param {!Event} event
+	 * @protected
+	 * @return {Boolean} If the event has been prevented or not.
+	 */
+	_handleDataLoading(event) {
+		return !this.emit({
+			data: event.data,
+			name: 'dataLoading',
 			originalEvent: event,
 		});
 	}
@@ -390,6 +429,17 @@ ClayAutocomplete.STATE = {
 	 * @type {!number}
 	 */
 	_dropdownWidth: Config.number().internal(),
+
+	/**
+	 * @default false
+	 * @instance
+	 * @memberof ClayAutocomplete
+	 * @private
+	 * @type {?bool}
+	 */
+	_isFetching: Config.bool()
+		.value(false)
+		.internal(),
 
 	/**
 	 * Flag to indicate the characters allowed in the

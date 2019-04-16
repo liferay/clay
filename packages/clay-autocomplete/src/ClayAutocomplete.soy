@@ -7,11 +7,14 @@
 	{@param dataSource: string|[]|list<?>|any}
 	{@param? _dropdownWidth: number}
 	{@param? _handleDataChange: any}
+	{@param? _handleDataError: any}
+	{@param? _handleDataLoading: any}
 	{@param? _handleDropdownItemClick: any}
 	{@param? _handleOnBlur: any}
 	{@param? _handleOnFocus: any}
 	{@param? _handleOnInput: any}
 	{@param? _handleOnKeydown: any}
+	{@param? _isFetching: bool}
 	{@param? contentRenderer: string}
 	{@param? dataProviderInitialData: []|list<?>}
 	{@param? dropdownPortalElement: string}
@@ -46,7 +49,7 @@
 			{/if}
 
 			{if $useDefaultClasses != false}
-				{sp}dropdown-full form-group
+				{sp}dropdown-full input-group
 			{/if}
 		"
 
@@ -55,7 +58,7 @@
 		{/if}
 	{/let}
 
-	<div {$attributes}>
+	{let $content kind="html"}
 		{$unstable_content}
 
 		{call .input}
@@ -63,6 +66,7 @@
 			{param _handleOnFocus: $_handleOnFocus /}
 			{param _handleOnInput: $_handleOnInput /}
 			{param _handleOnKeydown: $_handleOnKeydown /}
+			{param _isFetching: $_isFetching /}
 			{param inputElementClasses: $inputElementClasses /}
 			{param inputName: $inputName /}
 			{param inputValue: $inputValue /}
@@ -72,6 +76,8 @@
 		{call .dropdown}
 			{param _dropdownWidth: $_dropdownWidth /}
 			{param _handleDataChange: $_handleDataChange /}
+			{param _handleDataError: $_handleDataError /}
+			{param _handleDataLoading: $_handleDataLoading /}
 			{param _handleDropdownItemClick: $_handleDropdownItemClick /}
 			{param _handleOnKeydown: $_handleOnKeydown /}
 			{param contentRenderer: $contentRenderer /}
@@ -79,12 +85,23 @@
 			{param dataSource: $dataSource /}
 			{param dropdownPortalElement: $dropdownPortalElement /}
 			{param filteredItems: $filteredItems /}
+			{param inputValue: $inputValue /}
 			{param pollingInterval: $pollingInterval /}
 			{param requestInputMode: $requestInputMode /}
 			{param requestOptions: $requestOptions /}
 			{param requestRetries: $requestRetries /}
 			{param requestTimeout: $requestTimeout /}
 		{/call}
+	{/let}
+
+	<div {$attributes}>
+		{if $useDefaultClasses != false}
+			<div class="input-group-item">
+				{$content}
+			</div>
+		{else}
+			{$content}
+		{/if}
 	</div>
 {/template}
 
@@ -96,6 +113,7 @@
 	{@param? _handleOnFocus: any}
 	{@param? _handleOnInput: any}
 	{@param? _handleOnKeydown: any}
+	{@param? _isFetching: bool}
 	{@param? inputElementClasses: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
@@ -107,6 +125,10 @@
 				{$inputElementClasses}
 			{else}
 				form-control
+			{/if}
+
+			{if $_isFetching}
+				{sp}input-group-inset input-group-inset-after
 			{/if}
 		"
 
@@ -134,6 +156,15 @@
 	{/let}
 
 	<input {$attributes} />
+
+	<div class="input-group-inset-item input-group-inset-item-after">
+		{if $_isFetching}
+			{call ClayLoadingIndicator.render}
+				{param small: true /}
+			{/call}
+		{/if}
+	</div>
+
 {/template}
 
 /**
@@ -143,12 +174,15 @@
 	{@param dataSource: string|[]|list<?>|any}
 	{@param? _dropdownWidth: number}
 	{@param? _handleDataChange: any}
+	{@param? _handleDataError: any}
+	{@param? _handleDataLoading: any}
 	{@param? _handleDropdownItemClick: any}
 	{@param? _handleOnKeydown: any}
 	{@param? contentRenderer: string}
 	{@param? dataProviderInitialData: []|list<?>}
 	{@param? dropdownPortalElement: string}
 	{@param? filteredItems: list<?>}
+	{@param? inputValue: string}
 	{@param? pollingInterval: number}
 	{@param? requestInputMode: string}
 	{@param? requestOptions: [
@@ -164,25 +198,25 @@
 	{@param? requestRetries: number}
 	{@param? requestTimeout: number}
 
-	{let $isVisible: $filteredItems and length($filteredItems) > 0 ? true : false /}
+	{let $isVisible: ($filteredItems and length($filteredItems) > 0) or $inputValue ? true : false /}
+
+	{let $attributes kind="attributes"}
+		class="autocomplete-dropdown-menu dropdown-menu
+			{if $isVisible}
+				{sp}show
+			{/if}
+		"
+
+		data-onkeydown="{$_handleOnKeydown}"
+
+		{if $_dropdownWidth}
+			style="width: {$_dropdownWidth}px; max-width: none;"
+		{/if}
+
+		ref="dropdown"
+	{/let}
 
 	{let $dropdownContent kind="html"}
-		{let $attributes kind="attributes"}
-			class="autocomplete-dropdown-menu dropdown-menu
-				{if $isVisible}
-					{sp}show
-				{/if}
-			"
-
-			data-onkeydown="{$_handleOnKeydown}"
-
-			{if $_dropdownWidth}
-				style="width: {$_dropdownWidth}px; max-width: none;"
-			{/if}
-
-			ref="dropdown"
-		{/let}
-
 		<ul {$attributes}>
 			{if $filteredItems}
 				{foreach $item in $filteredItems}
@@ -192,6 +226,12 @@
 						{param data: $item /}
 						{param index: index($item) /}
 					{/delcall}
+				{ifempty}
+					<li class="dropdown-item">
+						{msg desc="It says no results were found"}
+							no-results-found
+						{/msg}
+					</li>
 				{/foreach}
 			{/if}
 		</ul>
@@ -207,8 +247,49 @@
 		{/param}
 
 		{param dataSource: $dataSource /}
-		{param events: ['dataChange': $_handleDataChange] /}
+		{param delayLoading: $filteredItems and length($filteredItems) > 0 /}
+		{param errorContent kind="html"}
+			{call ClayPortal.render}
+				{param content kind="html"}
+					<ul {$attributes}>
+						<li class="dropdown-item">
+							{msg desc="It says no results were found"}
+								no-results-found
+							{/msg}
+						</li>
+					</ul>
+				{/param}
+
+				{param portalElement: $dropdownPortalElement ?: '#clay_dropdown_portal' /}
+				{param ref: 'portal' /}
+			{/call}
+		{/param}
+
+		{param events: [
+			'dataChange': $_handleDataChange,
+			'dataError': $_handleDataError,
+			'dataLoading': $_handleDataLoading
+		] /}
+
 		{param initialData: $dataProviderInitialData /}
+		{param loadingContent kind="html"}
+			{call ClayPortal.render}
+				{param content kind="html"}
+					<ul {$attributes}>
+						<li class="dropdown-item">
+							{msg desc="Loading data"}
+								loading
+							{/msg}
+							...
+						</li>
+					</ul>
+				{/param}
+
+				{param portalElement: $dropdownPortalElement ?: '#clay_dropdown_portal' /}
+				{param ref: 'portal' /}
+			{/call}
+		{/param}
+
 		{param pollingInterval: $pollingInterval /}
 		{param ref: 'dataProvider' /}
 		{param requestInputMode: $requestInputMode /}
