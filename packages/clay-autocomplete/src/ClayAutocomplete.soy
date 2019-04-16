@@ -157,13 +157,13 @@
 
 	<input {$attributes} />
 
-	<div class="input-group-inset-item input-group-inset-item-after">
-		{if $_isFetching}
+	{if $_isFetching}
+		<div class="input-group-inset-item input-group-inset-item-after">
 			{call ClayLoadingIndicator.render}
 				{param small: true /}
 			{/call}
-		{/if}
-	</div>
+		</div>
+	{/if}
 
 {/template}
 
