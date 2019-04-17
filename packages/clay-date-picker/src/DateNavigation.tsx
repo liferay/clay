@@ -12,7 +12,7 @@ import React, {
 	HTMLAttributes,
 	useMemo,
 } from 'react';
-import {IAriaLabels, IYears} from './ClayDatePicker';
+import {IAriaLabels, IYears} from './types';
 
 import Button from '@clayui/button';
 import Icon from '@clayui/icon';

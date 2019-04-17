@@ -6,7 +6,7 @@
 
 import * as Helpers from './Helpers';
 import moment from 'moment';
-import {firstDayOfWeek} from './ClayDatePicker';
+import {firstDayOfWeek} from './types';
 import {useState} from 'react';
 
 /**
