@@ -6,32 +6,34 @@
 
 import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
-import ClayLink from '../ClayLink';
+import ClayLoadingIndicator from '..';
 
-describe('ClayLink', () => {
+describe('ClayLoadingIndicator', () => {
 	it('renders', () => {
-		const testRenderer = TestRenderer.create(<ClayLink />);
+		const testRenderer = TestRenderer.create(<ClayLoadingIndicator />);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders with href', () => {
-		const testRenderer = TestRenderer.create(<ClayLink href="#links" />);
-
-		expect(testRenderer.toJSON()).toMatchSnapshot();
-	});
-
-	it('renders with a children content', () => {
+	it('renders as the small variant', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayLink>{'My Link'}</ClayLink>
+			<ClayLoadingIndicator small />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders with a display type', () => {
+	it('renders as the light variant', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayLink displayType="secondary" />
+			<ClayLoadingIndicator light />
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('renders as the small and light variant', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayLoadingIndicator light small />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();

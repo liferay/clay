@@ -8,7 +8,7 @@ import {boolean, select, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
 import 'clay-css/lib/css/atlas.css';
-import ClayButton from '../src/ClayButton';
+import ClayButton from '../src';
 
 storiesOf('ClayButton', module)
 	.add('default', () => (

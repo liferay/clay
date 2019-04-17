@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayProgressBar from '../src/ClayProgressBar';
+import ClayProgressBar from '../src';
 import React from 'react';
 import {boolean, number} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';

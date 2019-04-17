@@ -8,9 +8,9 @@
 		"node": ">=0.12.0",
 		"npm": ">=3.0.0"
 	},
-	"main": "lib/ClayProgressBar.js",
-	"esnext:main": "src/ClayProgressBar.js",
-	"jsnext:main": "src/ClayProgressBar.js",
+	"main": "lib/index.js",
+	"module": "src/index.tsx",
+	"jsnext:main": "src/index.tsx",
 	"files": [
 		"lib",
 		"src"

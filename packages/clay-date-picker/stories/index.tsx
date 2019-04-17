@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import ClayDatePicker, {firstDayOfWeek} from '../src/ClayDatePicker';
+import ClayDatePicker, {firstDayOfWeek} from '../src';
 import React from 'react';
 import {storiesOf} from '@storybook/react';
 

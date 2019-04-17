@@ -6,7 +6,7 @@
 
 import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
-import <%= componentName %> from '../<%= componentName %>';
+import <%= componentName %> from '..';
 
 describe('<%= componentName %>', () => {
 	it('renders', () => {

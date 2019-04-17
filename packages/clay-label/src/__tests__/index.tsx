@@ -6,7 +6,7 @@
 
 import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
-import ClayLabel from '../ClayLabel';
+import ClayLabel from '..';
 
 describe('ClayLabel', () => {
 	it('renders', () => {

@@ -6,7 +6,7 @@
 
 import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
-import ClayButton from '../ClayButton';
+import ClayButton from '..';
 
 describe('ClayButton', () => {
 	it('renders', () => {

@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayLoadingIndicator from '../src/ClayLoadingIndicator';
+import ClayLoadingIndicator from '../src';
 import React from 'react';
 import {boolean} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';

@@ -5,7 +5,7 @@
  */
 
 import ClayIcon from '@clayui/icon';
-import ClaySticker from '../src/ClaySticker';
+import ClaySticker from '../src';
 import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {text} from '@storybook/addon-knobs';

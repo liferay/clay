@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayTimePicker from '../src/ClayTimePicker';
+import ClayTimePicker from '../src';
 import React from 'react';
 import {storiesOf} from '@storybook/react';
 

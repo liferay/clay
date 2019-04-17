@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayIcon, {ClayIconSpriteContext} from '../src/ClayIcon';
+import ClayIcon, {ClayIconSpriteContext} from '../src';
 import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {text} from '@storybook/addon-knobs';

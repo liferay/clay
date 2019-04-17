@@ -8,7 +8,7 @@ import {boolean, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
 import 'clay-css/lib/css/atlas.css';
-import ClayCheckbox from '../src/ClayCheckbox';
+import ClayCheckbox from '../src';
 
 const ClayCheckboxWithState = () => {
 	const [value, setValue] = React.useState<boolean>(false);

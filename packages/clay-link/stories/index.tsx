@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayLink from '../src/ClayLink';
+import ClayLink from '../src';
 import React from 'react';
 import {storiesOf} from '@storybook/react';
 

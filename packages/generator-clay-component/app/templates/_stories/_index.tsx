@@ -6,7 +6,7 @@
 import React from 'react';
 import {boolean, select, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import <%= componentName %> from '../src/<%= componentName %>';
+import <%= componentName %> from '../src';
 
 import 'clay-css/lib/css/atlas.css';
 

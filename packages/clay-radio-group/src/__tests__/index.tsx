@@ -6,7 +6,7 @@
 
 import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
-import ClayRadioGroup from '../ClayRadioGroup';
+import ClayRadioGroup from '..';
 
 describe('ClayRadioGroup', () => {
 	it('renders with options', () => {

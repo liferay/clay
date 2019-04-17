@@ -11,7 +11,7 @@
 		"allowJs": true,
 		"baseUrl": ".",
 		"paths": {
-			"@clayui/*": ["./packages/clay-*"],
+			"@clayui/*": ["packages/clay-*/src"],
 			"*": ["custom-types/*", "node_modules/*", "packages/*"]
 		}
 	},
@@ -23,7 +23,6 @@
 	"exclude": [
 		"node_modules",
 		"packages/**/lib",
-		"packages/**/demo",
 		"packages/generator-clay-component"
 	]
 }
