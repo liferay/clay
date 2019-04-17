@@ -38,7 +38,7 @@ $table-quick-action-menu-hover-bg: $table-hover-bg !default;
 $table-title-link: () !default;
 $table-title-link: map-merge((
 	border-radius: 1px,
-	display: inline-flex,
+	display: inline-block,
 	max-width: 100%,
 	transition: box-shadow 0.15s ease-in-out,
 	focus-box-shadow: $component-focus-box-shadow,
@@ -73,7 +73,7 @@ $table-link: () !default;
 $table-link: map-merge((
 	border-radius: 1px,
 	color: $gray-900,
-	display: inline-flex,
+	display: inline-block,
 	max-width: 100%,
 	transition: box-shadow 0.15s ease-in-out,
 	hover-color: $gray-900,
@@ -111,7 +111,7 @@ $table-list-title-link: () !default;
 $table-list-title-link: map-merge((
 	border-radius: 1px,
 	color: $gray-900,
-	display: inline-flex,
+	display: inline-block,
 	max-width: 100%,
 	transition: box-shadow 0.15s ease-in-out,
 	hover-color: $gray-900,
@@ -125,7 +125,7 @@ $table-list-link: () !default;
 $table-list-link: map-merge((
 	border-radius: 1px,
 	color: $gray-900,
-	display: inline-flex,
+	display: inline-block,
 	max-width: 100%,
 	transition: box-shadow 0.15s ease-in-out,
 	hover-color: $gray-900,
