@@ -1,6 +1,8 @@
 .card,
 .card-horizontal {
+	background-color: $card-bg;
 	border-style: $card-border-style;
+	border-width: $card-border-width;
 
 	@include box-shadow($card-box-shadow);
 
