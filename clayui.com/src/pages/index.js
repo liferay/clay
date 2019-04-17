@@ -126,7 +126,7 @@ export default () => {
 					<div className="container-fluid container-fluid-max-lg text-left spacing">
 						<div className="row">
 							<div className="col-md-5">
-								<img src="/images/css_illustration2.svg" />
+								<img src="/images/css_illustration.svg" />
 							</div>
 							<div className="col-md-7">
 								<div className="row">
