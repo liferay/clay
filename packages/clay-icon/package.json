@@ -19,7 +19,6 @@
 		"build": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib --extensions .ts,.tsx",
 		"build:types": "cross-env NODE_ENV=production tsc --project ./tsconfig.declarations.json",
 		"prepublishOnly": "npm run build && npm run build:types",
-		"start": "webpack-dev-server --mode development",
 		"test": "jest --config ../../jest.config.js"
 	},
 	"keywords": [
@@ -30,15 +29,14 @@
 		"classnames": "^2.2.6",
 		"warning": "^4.0.3"
 	},
-	"devDependencies": {
-		"@types/warning": "^3.0.0",
-		"clay-css": "^2.11.0"
-	},
 	"peerDependencies": {
 		"react": "^16.8.1",
 		"react-dom": "^16.8.1"
 	},
 	"browserslist": [
 		"extends browserslist-config-clay"
-	]
+	],
+	"devDependencies": {
+		"@types/warning": "^3.0.0"
+	}
 }

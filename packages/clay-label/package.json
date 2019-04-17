@@ -11,25 +11,29 @@
 	"main": "lib/ClayLabel.js",
 	"esnext:main": "src/ClayLabel.js",
 	"jsnext:main": "src/ClayLabel.js",
-	"files": ["lib", "src"],
+	"files": [
+		"lib",
+		"src"
+	],
 	"scripts": {
 		"build": "babel src --root-mode upward --out-dir lib --extensions .ts,.tsx",
 		"build:types": "tsc --project ./tsconfig.declarations.json",
 		"prepublishOnly": "npm run build && npm run build:types",
-		"start": "webpack-dev-server --mode development",
 		"test": "jest --config ../../jest.config.js"
 	},
-	"keywords": ["clay", "react"],
+	"keywords": [
+		"clay",
+		"react"
+	],
 	"dependencies": {
 		"@clayui/icon": "^3.0.0",
 		"classnames": "^2.2.6"
-	},
-	"devDependencies": {
-		"clay-css": "^2.12.0"
 	},
 	"peerDependencies": {
 		"react": "^16.8.1",
 		"react-dom": "^16.8.1"
 	},
-	"browserslist": ["extends browserslist-config-clay"]
+	"browserslist": [
+		"extends browserslist-config-clay"
+	]
 }

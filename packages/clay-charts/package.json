@@ -11,7 +11,7 @@
 		"copySvg": "ncp src/svg lib/svg",
 		"prepublish": "npm run build",
 		"sass": "node-sass src/scss/main.scss -o lib/css --source-map true",
-		"start": "webpack-dev-server --mode development",
+		
 		"test": "jest --config ../../jest.config.js"
 	},
 	"author": "Bryce Osterhaus",

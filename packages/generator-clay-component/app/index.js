@@ -79,8 +79,8 @@ module.exports = yeoman.generators.Base.extend({
 	writing() {
 		this.destinationRoot(`packages/${this.repoName}`);
 		this.fs.copyTpl(
-			this.templatePath('demo/_App.tsx'),
-			this.destinationPath('demo/App.tsx'),
+			this.templatePath('stories/_index.tsx'),
+			this.destinationPath('stories/index.tsx'),
 			{
 				camelCaseName: this.camelCaseName,
 				capitalizeName: this.capitalizeName,
@@ -88,10 +88,6 @@ module.exports = yeoman.generators.Base.extend({
 				kebabCaseName: this.kebabCaseName,
 				repoName: this.repoName,
 			}
-		);
-		this.fs.copyTpl(
-			this.templatePath('demo/_index.html'),
-			this.destinationPath('demo/index.html')
 		);
 		this.fs.copyTpl(
 			this.templatePath('src/_Boilerplate.tsx'),
@@ -141,15 +137,6 @@ module.exports = yeoman.generators.Base.extend({
 				componentName: this.componentName,
 				kebabCaseName: this.kebabCaseName,
 				repoDescription: this.repoDescription,
-				repoName: this.repoName,
-			}
-		);
-		this.fs.copyTpl(
-			this.templatePath('_webpack.config.js'),
-			this.destinationPath('webpack.config.js'),
-			{
-				componentName: this.componentName,
-				kebabCaseName: this.kebabCaseName,
 				repoName: this.repoName,
 			}
 		);
