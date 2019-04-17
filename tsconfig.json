@@ -19,7 +19,7 @@
 		"useBabel": true,
 		"babelCore": "@babel/core"
 	},
-	"include": ["packages"],
+	"include": ["packages/*"],
 	"exclude": [
 		"node_modules",
 		"packages/**/lib",
