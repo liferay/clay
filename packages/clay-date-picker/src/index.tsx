@@ -308,6 +308,7 @@ const ClayDatePicker: FunctionComponent<Props> = ({
 						<div className="input-group-inset-item input-group-inset-item-after">
 							<Button
 								className="date-picker-dropdown-toggle"
+								data-testid="date-button"
 								displayType="unstyled"
 								onClick={handleCalendarButtonClicked}
 							>

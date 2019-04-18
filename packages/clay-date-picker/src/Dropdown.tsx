@@ -59,7 +59,7 @@ const Dropdown: FunctionComponent<Props> = ({
 	});
 
 	return (
-		<div className={classNames} ref={elementRef}>
+		<div className={classNames} data-testid="dropdown" ref={elementRef}>
 			{children}
 		</div>
 	);

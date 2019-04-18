@@ -28,6 +28,7 @@ const timePickerContent: FunctionComponent<ITPContentProps> = ({
 			<input
 				{...otherProps}
 				className="form-control"
+				data-testid="time-picker-input"
 				defaultValue={defaultValue}
 				onChange={onChange}
 				onInput={onInput}
