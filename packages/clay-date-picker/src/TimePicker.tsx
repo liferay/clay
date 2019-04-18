@@ -28,7 +28,7 @@ const TimePicker: FunctionComponent<Props> = ({
 	 * Handles the control time picker
 	 */
 	const handleOnChange: ChangeEventHandler<HTMLInputElement> = event => {
-		const date = moment(event.currentTarget.value, timeFormat);
+		const date = moment(event.target.value, timeFormat);
 		onTimeChange(date.hours(), date.minutes());
 	};
 
