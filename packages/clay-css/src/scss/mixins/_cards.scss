@@ -133,95 +133,98 @@
 	$card-link: setter(map-get($map, card-link), ());
 
 	@if ($enabled) {
-		background-color: $bg;
-		border-color: $border-color;
-		border-style: $border-style;
-		border-width: $border-width;
-		box-shadow: $box-shadow;
-		cursor: $cursor;
-		color: $color;
-		display: $display;
-		flex-basis: $flex-basis;
-		flex-direction: $flex-direction;
-		flex-grow: $flex-grow;
-		flex-shrink: $flex-shrink;
-		margin-bottom: $margin-bottom;
-		min-width: $min-width;
-		outline: $outline;
-		position: $position;
-		text-decoration: $text-decoration;
-		transition: $transition;
-		width: $width;
-		word-wrap: $word-wrap;
+		&.card,
+		.card {
+			background-color: $bg;
+			border-color: $border-color;
+			border-style: $border-style;
+			border-width: $border-width;
+			box-shadow: $box-shadow;
+			cursor: $cursor;
+			color: $color;
+			display: $display;
+			flex-basis: $flex-basis;
+			flex-direction: $flex-direction;
+			flex-grow: $flex-grow;
+			flex-shrink: $flex-shrink;
+			margin-bottom: $margin-bottom;
+			min-width: $min-width;
+			outline: $outline;
+			position: $position;
+			text-decoration: $text-decoration;
+			transition: $transition;
+			width: $width;
+			word-wrap: $word-wrap;
 
-		&:hover {
-			background-color: $hover-bg;
-			border-color: $hover-border-color;
-			box-shadow: $hover-box-shadow;
-			color: $hover-color;
-			text-decoration: $hover-text-decoration;
+			&:hover {
+				background-color: $hover-bg;
+				border-color: $hover-border-color;
+				box-shadow: $hover-box-shadow;
+				color: $hover-color;
+				text-decoration: $hover-text-decoration;
 
-			.card-title {
-				@include clay-link($hover-card-title);
+				.card-title {
+					@include clay-link($hover-card-title);
+				}
+
+				.card-subtitle {
+					@include clay-link($hover-card-subtitle);
+				}
+
+				.card-text {
+					@include clay-link($hover-card-text);
+				}
+
+				.card-link {
+					@include clay-link($hover-card-link);
+				}
 			}
 
-			.card-subtitle {
-				@include clay-link($hover-card-subtitle);
+			&:focus {
+				background-color: $focus-bg;
+				border-color: $focus-border-color;
+				box-shadow: $focus-box-shadow;
+				color: $focus-color;
+				text-decoration: $focus-text-decoration;
+
+				.card-title {
+					@include clay-link($focus-card-title);
+				}
+
+				.card-subtitle {
+					@include clay-link($focus-card-subtitle);
+				}
+
+				.card-text {
+					@include clay-link($focus-card-text);
+				}
+
+				.card-link {
+					@include clay-link($focus-card-link);
+				}
 			}
 
-			.card-text {
-				@include clay-link($hover-card-text);
-			}
+			&:active,
+			&.active {
+				background-color: $active-bg;
+				border-color: $active-border-color;
+				color: $active-color;
 
-			.card-link {
-				@include clay-link($hover-card-link);
-			}
-		}
+				.card-title {
+					@include clay-link($active-card-title);
+				}
 
-		&:focus {
-			background-color: $focus-bg;
-			border-color: $focus-border-color;
-			box-shadow: $focus-box-shadow;
-			color: $focus-color;
-			text-decoration: $focus-text-decoration;
+				.card-subtitle {
+					@include clay-link($active-card-subtitle);
+				}
 
-			.card-title {
-				@include clay-link($focus-card-title);
-			}
+				.card-text {
+					@include clay-link($active-card-text);
+				}
 
-			.card-subtitle {
-				@include clay-link($focus-card-subtitle);
-			}
-
-			.card-text {
-				@include clay-link($focus-card-text);
-			}
-
-			.card-link {
-				@include clay-link($focus-card-link);
-			}
-		}
-
-		&:active,
-		&.active {
-			background-color: $active-bg;
-			border-color: $active-border-color;
-			color: $active-color;
-
-			.card-title {
-				@include clay-link($active-card-title);
-			}
-
-			.card-subtitle {
-				@include clay-link($active-card-subtitle);
-			}
-
-			.card-text {
-				@include clay-link($active-card-text);
-			}
-
-			.card-link {
-				@include clay-link($active-card-link);
+				.card-link {
+					@include clay-link($active-card-link);
+				}
 			}
 		}
 
