@@ -59,6 +59,7 @@
 @mixin clay-card-variant($map) {
 	$enabled: setter(map-get($map, enabled), true);
 
+	$bg: map-get($map, bg);
 	$border-color: map-get($map, border-color);
 	$border-style: map-get($map, border-style);
 	$border-width: map-get($map, border-width);
@@ -111,6 +112,8 @@
 
 	$aspect-ratio: setter(map-get($map, aspect-ratio), ());
 
+	$aspect-ratio-item: setter(map-get($map, aspect-ratio-item), ());
+
 	$sticker: setter(map-get($map, sticker), ());
 
 	$card-header: setter(map-get($map, card-header), ());
@@ -130,6 +133,7 @@
 	$card-link: setter(map-get($map, card-link), ());
 
 	@if ($enabled) {
+		background-color: $bg;
 		border-color: $border-color;
 		border-style: $border-style;
 		border-width: $border-width;
@@ -225,6 +229,10 @@
 
 		.aspect-ratio {
 			@include clay-aspect-ratio-variant($aspect-ratio);
+		}
+
+		.aspect-ratio-item {
+			@include clay-aspect-ratio-item-variant($aspect-ratio-item);
 		}
 
 		.sticker {
