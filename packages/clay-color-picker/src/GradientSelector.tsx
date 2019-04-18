@@ -24,10 +24,13 @@ const GradientSelector: React.FunctionComponent<GradientSelectorProps> = ({
 	hue = 0,
 }) => {
 	const containerRef = useRef<HTMLDivElement>(null);
+	const selectorActive = useRef<boolean>(false);
 
 	const {onMouseMove, setXY, x, y} = useMousePosition(containerRef);
 
 	const removeListeners = () => {
+		selectorActive.current = false;
+
 		window.removeEventListener('mousemove', onMouseMove);
 		window.removeEventListener('mouseup', removeListeners);
 	};
@@ -35,13 +38,13 @@ const GradientSelector: React.FunctionComponent<GradientSelectorProps> = ({
 	useEffect(() => {
 		const {current} = containerRef;
 
-		if (current) {
+		if (current && selectorActive.current) {
 			onChange(xToSaturation(x, current), yToVisibility(y, current));
 		}
 	}, [x, y]);
 
 	useEffect(() => {
-		if (containerRef.current) {
+		if (containerRef.current && !selectorActive.current) {
 			setXY(colorToXY(color, containerRef.current));
 		}
 	}, [color]);
@@ -52,6 +55,7 @@ const GradientSelector: React.FunctionComponent<GradientSelectorProps> = ({
 		<div
 			className="clay-color-map-hsb clay-color-map"
 			onMouseDown={event => {
+				selectorActive.current = true;
 				onMouseMove(event);
 
 				window.addEventListener('mousemove', onMouseMove);

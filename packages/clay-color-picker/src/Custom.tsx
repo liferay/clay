@@ -7,7 +7,7 @@
 import GradientSelector from './GradientSelector';
 import Hue from './Hue';
 import Icon from '@clayui/icon';
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import Splotch from './Splotch';
 import tinycolor from 'tinycolor2';
 import {useHexInput} from './hooks';
@@ -25,27 +25,41 @@ const RGBInput: React.FunctionComponent<RGBInputProps> = ({
 	name,
 	onChange,
 	value,
-}) => (
-	<div className="form-group">
-		<div className="input-group">
-			<div className="input-group-item">
-				<input
-					className="form-control input-group-inset input-group-inset-before"
-					onChange={event => {
-						const newVal = Number(event.target.value);
+}) => {
+	const inputRef = useRef(null);
+	const [inputValue, setInputValue] = useState(value);
 
-						onChange({[name]: newVal});
-					}}
-					type="text"
-					value={value}
-				/>
-				<label className="input-group-inset-item input-group-inset-item-before">
-					{name.toUpperCase()}
-				</label>
+	useEffect(() => {
+		if (document.activeElement !== inputRef.current) {
+			setInputValue(value);
+		}
+	}, [value]);
+
+	return (
+		<div className="form-group">
+			<div className="input-group">
+				<div className="input-group-item">
+					<input
+						className="form-control input-group-inset input-group-inset-before"
+						onChange={event => {
+							const newVal = Number(event.target.value);
+
+							setInputValue(newVal);
+
+							onChange({[name]: newVal});
+						}}
+						ref={inputRef}
+						type="text"
+						value={inputValue}
+					/>
+					<label className="input-group-inset-item input-group-inset-item-before">
+						{name.toUpperCase()}
+					</label>
+				</div>
 			</div>
 		</div>
-	</div>
-);
+	);
+};
 
 interface CustomProps {
 	colors: string[];
@@ -161,15 +175,15 @@ const Custom: React.FunctionComponent<CustomProps> = ({
 									key={key}
 									name={key}
 									onChange={newVal => {
-										const color = tinycolor({
+										const newColor = tinycolor({
 											b,
 											g,
 											r,
 											...newVal,
 										});
 
-										setHue(color.toHsv().h);
-										setNewColor(color);
+										setHue(newColor.toHsv().h);
+										setNewColor(newColor);
 									}}
 									value={val}
 								/>

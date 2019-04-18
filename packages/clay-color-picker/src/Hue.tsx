@@ -21,16 +21,19 @@ const Hue: React.FunctionComponent<HueProps> = ({
 	onChange = () => {},
 }) => {
 	const containerRef = useRef<HTMLDivElement>(null);
+	const selectorActive = useRef<boolean>(false);
 
 	const {onMouseMove, setXY, x, y} = useMousePosition(containerRef);
 
 	const removeListeners = () => {
+		selectorActive.current = false;
+
 		window.removeEventListener('mousemove', onMouseMove);
 		window.removeEventListener('mouseup', removeListeners);
 	};
 
 	useEffect(() => {
-		if (containerRef.current) {
+		if (containerRef.current && selectorActive.current) {
 			onChange(xToHue(x, containerRef.current));
 		}
 	}, [x]);
@@ -47,6 +50,8 @@ const Hue: React.FunctionComponent<HueProps> = ({
 		<div
 			className="clay-color-range clay-color-range-hue"
 			onMouseDown={event => {
+				selectorActive.current = true;
+
 				onMouseMove(event);
 
 				window.addEventListener('mousemove', onMouseMove);
