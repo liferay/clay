@@ -7,8 +7,8 @@
 import React, {useState} from 'react';
 import {cleanup, render} from 'react-testing-library';
 
-import {firstDayOfWeek} from '../types';
 import ClayDatePicker from '..';
+import {firstDayOfWeek} from '../types';
 
 const spritemap = 'icons.svg';
 

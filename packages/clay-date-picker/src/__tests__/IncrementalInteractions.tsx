@@ -150,8 +150,8 @@ describe('IncrementalInteractions', () => {
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
 				years={{
-					start: 2017,
 					end: 2020,
+					start: 2017,
 				}}
 			/>
 		);
@@ -246,8 +246,8 @@ describe('IncrementalInteractions', () => {
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
 				years={{
-					start: 2017,
 					end: 2020,
+					start: 2017,
 				}}
 			/>
 		);
@@ -276,8 +276,8 @@ describe('IncrementalInteractions', () => {
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
 				years={{
-					start: 2018,
 					end: 2021,
+					start: 2018,
 				}}
 			/>
 		);
