@@ -6,7 +6,7 @@
 
 import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
-import ClayColorPicker from '../ClayColorPicker';
+import ClayColorPicker from '..';
 import ReactDOM from 'react-dom';
 import {act, Simulate} from 'react-dom/test-utils';
 
