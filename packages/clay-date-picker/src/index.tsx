@@ -270,7 +270,7 @@ const ClayDatePicker: FunctionComponent<Props> = ({
 	};
 
 	/**
-	 * Handles dot cliecked
+	 * Handles dot clicked
 	 */
 	const handleDotClicked = () => {
 		changeMonth(initialMonth);
