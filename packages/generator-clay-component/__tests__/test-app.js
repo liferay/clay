@@ -24,11 +24,9 @@ describe('clay-component-generator:app', () => {
 
 	it('creates files', () => {
 		assert.file([
-			'demo/App.tsx',
-			'demo/index.html',
-			'src/MyComponent.tsx',
-			'src/__tests__/MyComponent.tsx',
-			'webpack.config.js',
+			'stories/index.tsx',
+			'src/index.tsx',
+			'src/__tests__/index.tsx',
 			'package.json',
 			'tsconfig.json',
 			'tsconfig.declarations.json',
@@ -38,9 +36,9 @@ describe('clay-component-generator:app', () => {
 
 	it('produces MyComponent.tsx with templated content', () => {
 		assert.fileContent(
-			'src/MyComponent.tsx',
+			'src/index.tsx',
 			/const MyComponent: React.FunctionComponent<Props> = \(\{/
 		);
-		assert.fileContent('src/MyComponent.tsx', /export default MyComponent/);
+		assert.fileContent('src/index.tsx', /export default MyComponent/);
 	});
 });

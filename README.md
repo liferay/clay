@@ -92,10 +92,10 @@ yarn lerna
 yarn build
 ```
 
-6. Start a local server on port 4000
+6. Start storybook server
 
 ```
-yarn start
+yarn workspace clay-css run build && yarn storybook
 ```
 
 7. Run tests:

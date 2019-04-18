@@ -11,7 +11,7 @@
 		"allowJs": true,
 		"baseUrl": ".",
 		"paths": {
-			"@clayui/*": ["./packages/clay-*"],
+			"@clayui/*": ["packages/clay-*/src"],
 			"*": ["custom-types/*", "node_modules/*", "packages/*"]
 		}
 	},
@@ -19,6 +19,10 @@
 		"useBabel": true,
 		"babelCore": "@babel/core"
 	},
-	"include": ["packages"],
-	"exclude": ["node_modules", "packages/**/lib"]
+	"include": ["packages/*"],
+	"exclude": [
+		"node_modules",
+		"packages/**/lib",
+		"packages/generator-clay-component"
+	]
 }

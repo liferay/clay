@@ -79,8 +79,8 @@ module.exports = yeoman.generators.Base.extend({
 	writing() {
 		this.destinationRoot(`packages/${this.repoName}`);
 		this.fs.copyTpl(
-			this.templatePath('demo/_App.tsx'),
-			this.destinationPath('demo/App.tsx'),
+			this.templatePath('_stories/_index.tsx'),
+			this.destinationPath('stories/index.tsx'),
 			{
 				camelCaseName: this.camelCaseName,
 				capitalizeName: this.capitalizeName,
@@ -90,12 +90,8 @@ module.exports = yeoman.generators.Base.extend({
 			}
 		);
 		this.fs.copyTpl(
-			this.templatePath('demo/_index.html'),
-			this.destinationPath('demo/index.html')
-		);
-		this.fs.copyTpl(
-			this.templatePath('src/_Boilerplate.tsx'),
-			this.destinationPath(`src/${this.componentName}.tsx`),
+			this.templatePath('src/_index.tsx'),
+			this.destinationPath(`src/index.tsx`),
 			{
 				buildFormat: this.buildFormat,
 				componentName: this.componentName,
@@ -106,18 +102,16 @@ module.exports = yeoman.generators.Base.extend({
 		);
 
 		this.fs.copyTpl(
-			this.templatePath('src/tests/_Boilerplate.tsx'),
-			this.destinationPath(`src/__tests__/${this.componentName}.tsx`),
+			this.templatePath('src/tests/_index.tsx'),
+			this.destinationPath(`src/__tests__/index.tsx`),
 			{
 				componentName: this.componentName,
 				kebabCaseName: this.kebabCaseName,
 			}
 		);
 		this.fs.copyTpl(
-			this.templatePath('src/tests/__snapshots__/_Boilerplate.tsx.snap'),
-			this.destinationPath(
-				`src/__tests__/__snapshots__/${this.componentName}.tsx.snap`
-			),
+			this.templatePath('src/tests/__snapshots__/_index.tsx.snap'),
+			this.destinationPath(`src/__tests__/__snapshots__/index.tsx.snap`),
 			{
 				componentName: this.componentName,
 				kebabCaseName: this.kebabCaseName,
@@ -141,15 +135,6 @@ module.exports = yeoman.generators.Base.extend({
 				componentName: this.componentName,
 				kebabCaseName: this.kebabCaseName,
 				repoDescription: this.repoDescription,
-				repoName: this.repoName,
-			}
-		);
-		this.fs.copyTpl(
-			this.templatePath('_webpack.config.js'),
-			this.destinationPath('webpack.config.js'),
-			{
-				componentName: this.componentName,
-				kebabCaseName: this.kebabCaseName,
 				repoName: this.repoName,
 			}
 		);

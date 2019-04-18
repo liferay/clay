@@ -5,7 +5,7 @@
  */
 
 import React, {FunctionComponent, ReactNode} from 'react';
-import {firstDayOfWeek} from './ClayDatePicker';
+import {firstDayOfWeek} from './types';
 
 interface IChildrenProps {
 	key: number;

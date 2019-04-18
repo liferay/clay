@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayProgressBar renders 1`] = `
+<div
+  className="progress-group"
+>
+  <div
+    className="progress"
+  >
+    <div
+      aria-valuemax={100}
+      aria-valuemin={0}
+      aria-valuenow={50}
+      className="progress-bar"
+      role="progressbar"
+      style={
+        Object {
+          "width": "50%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="progress-group-addon"
+  >
+    50%
+  </div>
+</div>
+`;
+
+exports[`ClayProgressBar renders as a different status 1`] = `
+<div
+  className="progress-group progress-warning"
+>
+  <div
+    className="progress"
+  >
+    <div
+      aria-valuemax={100}
+      aria-valuemin={0}
+      aria-valuenow={50}
+      className="progress-bar"
+      role="progressbar"
+      style={
+        Object {
+          "width": "50%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="progress-group-addon"
+  >
+    50%
+  </div>
+</div>
+`;
+
+exports[`ClayProgressBar renders with additional content 1`] = `
+<div
+  className="progress-group"
+>
+  <div
+    className="progress"
+  >
+    <div
+      aria-valuemax={100}
+      aria-valuemin={0}
+      aria-valuenow={50}
+      className="progress-bar"
+      role="progressbar"
+      style={
+        Object {
+          "width": "50%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="progress-group-addon"
+  >
+    50%
+  </div>
+</div>
+`;
+
+exports[`ClayProgressBar renders with success 1`] = `
+<div
+  className="progress-group progress-success"
+>
+  <div
+    className="progress"
+  >
+    <div
+      aria-valuemax={100}
+      aria-valuemin={0}
+      aria-valuenow={100}
+      className="progress-bar"
+      role="progressbar"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="progress-group-addon"
+  >
+    <div
+      className="progress-group-feedback"
+    >
+      <svg
+        className="lexicon-icon lexicon-icon-check-circle"
+        role="presentation"
+      >
+        <use
+          xlinkHref="path/to/spritemap#check-circle"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayProgressBar with feedback wraping class 1`] = `
+<div
+  className="progress-group"
+>
+  <div
+    className="progress"
+  >
+    <div
+      aria-valuemax={100}
+      aria-valuemin={0}
+      aria-valuenow={50}
+      className="progress-bar"
+      role="progressbar"
+      style={
+        Object {
+          "width": "50%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="progress-group-addon"
+  >
+    <div
+      className="progress-group-feedback"
+    >
+      50%
+    </div>
+  </div>
+</div>
+`;
