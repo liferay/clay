@@ -11,6 +11,7 @@ import React, {
 	FunctionComponent,
 	HTMLAttributes,
 	useMemo,
+	useRef,
 } from 'react';
 import {IAriaLabels, IYears} from './types';
 
@@ -59,6 +60,10 @@ const DateNavigation: FunctionComponent<Props> = ({
 		[months]
 	);
 
+	const monthSelectorRef = useRef<HTMLSelectElement | null>(null);
+
+	const yearSelectorRef = useRef<HTMLSelectElement | null>(null);
+
 	/**
 	 * Handles the change of the month from the available
 	 * years in the range
@@ -89,22 +94,23 @@ const DateNavigation: FunctionComponent<Props> = ({
 	 * Handles the change of the year and month of the header
 	 */
 	function handleFormChange(event: ChangeEvent<HTMLSelectElement>) {
-		if (event.currentTarget.form === null) {
-			return;
+		if (monthSelectorRef.current && yearSelectorRef.current) {
+			const year = Number(yearSelectorRef.current.value);
+			const month = Number(monthSelectorRef.current.value);
+			onMonthChange(new Date(year, month));
 		}
-
-		const {month, year} = event.currentTarget.form;
-		onMonthChange(new Date(year.value, month.value));
 	}
 
 	return (
 		<div className="date-picker-calendar-header">
-			<form className="date-picker-nav">
+			<div className="date-picker-nav">
 				<div className="date-picker-nav-item input-date-picker-month">
 					<Select
 						name="month"
 						onChange={handleFormChange}
 						options={memoizedMonths}
+						ref={monthSelectorRef}
+						testId="month-select"
 						value={currentMonth.getMonth()}
 					/>
 				</div>
@@ -113,6 +119,8 @@ const DateNavigation: FunctionComponent<Props> = ({
 						name="year"
 						onChange={handleFormChange}
 						options={memoizedYears}
+						ref={yearSelectorRef}
+						testId="year-select"
 						value={currentMonth.getFullYear()}
 					/>
 				</div>
@@ -146,7 +154,7 @@ const DateNavigation: FunctionComponent<Props> = ({
 						<Icon spritemap={spritemap} symbol="angle-right" />
 					</Button>
 				</div>
-			</form>
+			</div>
 		</div>
 	);
 };
