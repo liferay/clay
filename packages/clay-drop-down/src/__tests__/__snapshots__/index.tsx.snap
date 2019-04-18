@@ -1,1 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayDropDown renders 1`] = `
+<div
+  className="dropdown"
+>
+  <button
+    className="dropdown-toggle btn btn-primary"
+    onClick={[Function]}
+    type="button"
+  >
+    Click Me
+  </button>
+</div>
+`;
+
+exports[`ClayDropDown renders with groups 1`] = `
+<div
+  className="dropdown"
+>
+  <button
+    className="dropdown-toggle btn btn-primary"
+    onClick={[Function]}
+    type="button"
+  >
+    Click Me
+  </button>
+</div>
+`;
+
+exports[`ClayDropDown renders with icons 1`] = `
+<div
+  className="dropdown"
+>
+  <button
+    className="dropdown-toggle btn btn-primary"
+    onClick={[Function]}
+    type="button"
+  >
+    Click Me
+  </button>
+</div>
+`;
+
+exports[`ClayDropDown renders with search input 1`] = `
+<div
+  className="dropdown"
+>
+  <button
+    className="dropdown-toggle btn btn-primary"
+    onClick={[Function]}
+    type="button"
+  >
+    Click Me
+  </button>
+</div>
+`;
