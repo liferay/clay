@@ -218,9 +218,11 @@ $input-group-inset-item-btn: () !default;
 $input-group-inset-item-btn: map-merge((
 	height: 75%,
 	line-height: 1,
+	margin-left: 0.125rem,
+	margin-right: 0.125rem,
 	padding-bottom: 0,
-	padding-left: $btn-padding-x - 0.1875rem,
-	padding-right: $btn-padding-x - 0.1875rem,
+	padding-left: 0.5rem,
+	padding-right: 0.5rem,
 	padding-top: 0,
 ), $input-group-inset-item-btn);
 
@@ -263,13 +265,6 @@ $input-group-lg-item-btn-monospaced: map-merge((
 ), $input-group-lg-item-btn-monospaced);
 
 $input-group-lg-inset-item-btn: () !default;
-$input-group-lg-inset-item-btn: map-merge((
-	line-height: 1,
-	padding-bottom: 0,
-	padding-left: 0.75rem,
-	padding-right: 0.75rem,
-	padding-top: 0,
-), $input-group-lg-inset-item-btn);
 
 $input-group-lg-inset-item-form-file-btn: () !default;
 $input-group-lg-inset-item-form-file-btn: map-merge((
