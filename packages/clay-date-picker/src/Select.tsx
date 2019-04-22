@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {FunctionComponent, SelectHTMLAttributes} from 'react';
+import React, {forwardRef, SelectHTMLAttributes} from 'react';
 
 export interface ISelectOption {
 	label: string | number;
@@ -15,26 +15,34 @@ export interface ISelectOption {
 interface Props extends SelectHTMLAttributes<HTMLSelectElement> {
 	name: string;
 	options: Array<ISelectOption>;
+	testId: string;
 	value: string | number;
 }
 
-const Select: FunctionComponent<Props> = ({name, onChange, options, value}) => (
-	<select
-		className="form-control form-control-sm"
-		name={name}
-		onChange={onChange}
-		value={value}
-	>
-		{options.map((option, index) => (
-			<option
-				key={index}
-				selected={option.selected ? true : undefined}
-				value={option.value}
-			>
-				{option.label}
-			</option>
-		))}
-	</select>
+const Select = forwardRef(
+	(
+		{name, onChange, options, testId, value}: Props,
+		ref: React.Ref<HTMLSelectElement>
+	) => (
+		<select
+			className="form-control form-control-sm"
+			data-testid={testId}
+			name={name}
+			onChange={onChange}
+			ref={ref}
+			value={value}
+		>
+			{options.map((option, index) => (
+				<option
+					key={index}
+					selected={option.selected ? true : undefined}
+					value={option.value}
+				>
+					{option.label}
+				</option>
+			))}
+		</select>
+	)
 );
 
 export default Select;

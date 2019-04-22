@@ -36,6 +36,7 @@
 		"@typescript-eslint/parser": "^1.4.0",
 		"awesome-typescript-loader": "^5.2.1",
 		"babel-plugin-dev-expression": "^0.2.1",
+		"babel-plugin-react-remove-properties": "^0.3.0",
 		"babel-plugin-transform-inline-environment-variables": "^0.4.3",
 		"clay-css": "^2.8.3",
 		"coveralls": "^3.0.0",
@@ -54,6 +55,7 @@
 		"react": "^16.8.1",
 		"react-dom": "^16.8.1",
 		"react-test-renderer": "^16.6.1",
+		"react-testing-library": "^6.1.2",
 		"source-map-loader": "^0.2.4",
 		"ts-jest": "^23.10.4",
 		"typescript": "^3.0.3"

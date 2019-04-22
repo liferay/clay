@@ -8,6 +8,18 @@ module.exports = api => {
 	api.cache(true);
 
 	return {
+		env: {
+			production: {
+				plugins: [
+					[
+						'react-remove-properties',
+						{
+							properties: ['data-testid'],
+						},
+					],
+				],
+			},
+		},
 		ignore: ['node_modules', '**/__snapshots__/**', '**/__tests__/**'],
 		plugins: [
 			'babel-plugin-dev-expression',

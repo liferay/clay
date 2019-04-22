@@ -1,0 +1,2464 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BasicRendering renders by default 1`] = `
+<div
+  className="date-picker"
+>
+  <div
+    className="input-group"
+  >
+    <div
+      className="input-group-item"
+    >
+      <input
+        name="datePicker"
+        type="hidden"
+        value=""
+      />
+      <input
+        className="form-control input-group-inset input-group-inset-after"
+        onChange={[Function]}
+        placeholder="YYYY-MM-DD"
+        type="text"
+        value=""
+      />
+      <div
+        className="input-group-inset-item input-group-inset-item-after"
+      >
+        <button
+          className="date-picker-dropdown-toggle btn btn-unstyled"
+          data-testid="date-button"
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="lexicon-icon lexicon-icon-calendar"
+            role="presentation"
+          >
+            <use
+              xlinkHref="icons.svg#calendar"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="date-picker-dropdown-menu dropdown-menu"
+    data-testid="dropdown"
+  >
+    <div
+      className="date-picker-calendar"
+    >
+      <div
+        className="date-picker-calendar-header"
+      >
+        <div
+          className="date-picker-nav"
+        >
+          <div
+            className="date-picker-nav-item input-date-picker-month"
+          >
+            <select
+              className="form-control form-control-sm"
+              data-testid="month-select"
+              name="month"
+              onChange={[Function]}
+              value={3}
+            >
+              <option
+                value={0}
+              >
+                January
+              </option>
+              <option
+                value={1}
+              >
+                February
+              </option>
+              <option
+                value={2}
+              >
+                March
+              </option>
+              <option
+                value={3}
+              >
+                April
+              </option>
+              <option
+                value={4}
+              >
+                May
+              </option>
+              <option
+                value={5}
+              >
+                June
+              </option>
+              <option
+                value={6}
+              >
+                July
+              </option>
+              <option
+                value={7}
+              >
+                August
+              </option>
+              <option
+                value={8}
+              >
+                September
+              </option>
+              <option
+                value={9}
+              >
+                October
+              </option>
+              <option
+                value={10}
+              >
+                November
+              </option>
+              <option
+                value={11}
+              >
+                December
+              </option>
+            </select>
+          </div>
+          <div
+            className="date-picker-nav-item input-date-picker-year"
+          >
+            <select
+              className="form-control form-control-sm"
+              data-testid="year-select"
+              name="year"
+              onChange={[Function]}
+              value={2019}
+            >
+              <option
+                value={2019}
+              >
+                2019
+              </option>
+            </select>
+          </div>
+          <div
+            className="date-picker-nav-item date-picker-nav-item-expand date-picker-nav-controls"
+          >
+            <button
+              aria-label="Select the previous month"
+              className="btn btn-unstyled btn-monospaced btn-sm"
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className="lexicon-icon lexicon-icon-angle-left"
+                role="presentation"
+              >
+                <use
+                  xlinkHref="icons.svg#angle-left"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Select current date"
+              className="btn btn-unstyled btn-monospaced btn-sm"
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className="lexicon-icon lexicon-icon-simple-circle"
+                role="presentation"
+              >
+                <use
+                  xlinkHref="icons.svg#simple-circle"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Select the next month"
+              className="btn btn-unstyled btn-monospaced btn-sm"
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className="lexicon-icon lexicon-icon-angle-right"
+                role="presentation"
+              >
+                <use
+                  xlinkHref="icons.svg#angle-right"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        className="date-picker-calendar-body"
+      >
+        <div
+          className="date-picker-days-row date-picker-row"
+        >
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              S
+            </abbr>
+          </div>
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              M
+            </abbr>
+          </div>
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              T
+            </abbr>
+          </div>
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              W
+            </abbr>
+          </div>
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              T
+            </abbr>
+          </div>
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              F
+            </abbr>
+          </div>
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              S
+            </abbr>
+          </div>
+        </div>
+        <div
+          className="date-picker-date-row date-picker-row"
+        >
+          <button
+            aria-label="2019 03 31"
+            className="date-picker-date date-picker-calendar-item disabled"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            31
+          </button>
+          <button
+            aria-label="2019 04 01"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            1
+          </button>
+          <button
+            aria-label="2019 04 02"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            2
+          </button>
+          <button
+            aria-label="2019 04 03"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            3
+          </button>
+          <button
+            aria-label="2019 04 04"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            4
+          </button>
+          <button
+            aria-label="2019 04 05"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            5
+          </button>
+          <button
+            aria-label="2019 04 06"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            6
+          </button>
+        </div>
+        <div
+          className="date-picker-date-row date-picker-row"
+        >
+          <button
+            aria-label="2019 04 07"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            7
+          </button>
+          <button
+            aria-label="2019 04 08"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            8
+          </button>
+          <button
+            aria-label="2019 04 09"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            9
+          </button>
+          <button
+            aria-label="2019 04 10"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            10
+          </button>
+          <button
+            aria-label="2019 04 11"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            11
+          </button>
+          <button
+            aria-label="2019 04 12"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            12
+          </button>
+          <button
+            aria-label="2019 04 13"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            13
+          </button>
+        </div>
+        <div
+          className="date-picker-date-row date-picker-row"
+        >
+          <button
+            aria-label="2019 04 14"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            14
+          </button>
+          <button
+            aria-label="2019 04 15"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            15
+          </button>
+          <button
+            aria-label="2019 04 16"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            16
+          </button>
+          <button
+            aria-label="2019 04 17"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            17
+          </button>
+          <button
+            aria-label="2019 04 18"
+            className="date-picker-date date-picker-calendar-item active"
+            onClick={[Function]}
+            type="button"
+          >
+            18
+          </button>
+          <button
+            aria-label="2019 04 19"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            19
+          </button>
+          <button
+            aria-label="2019 04 20"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            20
+          </button>
+        </div>
+        <div
+          className="date-picker-date-row date-picker-row"
+        >
+          <button
+            aria-label="2019 04 21"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            21
+          </button>
+          <button
+            aria-label="2019 04 22"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            22
+          </button>
+          <button
+            aria-label="2019 04 23"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            23
+          </button>
+          <button
+            aria-label="2019 04 24"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            24
+          </button>
+          <button
+            aria-label="2019 04 25"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            25
+          </button>
+          <button
+            aria-label="2019 04 26"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            26
+          </button>
+          <button
+            aria-label="2019 04 27"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            27
+          </button>
+        </div>
+        <div
+          className="date-picker-date-row date-picker-row"
+        >
+          <button
+            aria-label="2019 04 28"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            28
+          </button>
+          <button
+            aria-label="2019 04 29"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            29
+          </button>
+          <button
+            aria-label="2019 04 30"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            30
+          </button>
+          <button
+            aria-label="2019 05 01"
+            className="date-picker-date date-picker-calendar-item disabled"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            1
+          </button>
+          <button
+            aria-label="2019 05 02"
+            className="date-picker-date date-picker-calendar-item disabled"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            2
+          </button>
+          <button
+            aria-label="2019 05 03"
+            className="date-picker-date date-picker-calendar-item disabled"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            3
+          </button>
+          <button
+            aria-label="2019 05 04"
+            className="date-picker-date date-picker-calendar-item disabled"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            4
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`BasicRendering renders date picker with dropdown open 1`] = `
+<div
+  className="date-picker"
+>
+  <div
+    className="input-group"
+  >
+    <div
+      className="input-group-item"
+    >
+      <input
+        name="datePicker"
+        type="hidden"
+        value=""
+      />
+      <input
+        className="form-control input-group-inset input-group-inset-after"
+        onChange={[Function]}
+        placeholder="YYYY-MM-DD"
+        type="text"
+        value=""
+      />
+      <div
+        className="input-group-inset-item input-group-inset-item-after"
+      >
+        <button
+          className="date-picker-dropdown-toggle btn btn-unstyled"
+          data-testid="date-button"
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="lexicon-icon lexicon-icon-calendar"
+            role="presentation"
+          >
+            <use
+              xlinkHref="icons.svg#calendar"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="date-picker-dropdown-menu dropdown-menu show"
+    data-testid="dropdown"
+  >
+    <div
+      className="date-picker-calendar"
+    >
+      <div
+        className="date-picker-calendar-header"
+      >
+        <div
+          className="date-picker-nav"
+        >
+          <div
+            className="date-picker-nav-item input-date-picker-month"
+          >
+            <select
+              className="form-control form-control-sm"
+              data-testid="month-select"
+              name="month"
+              onChange={[Function]}
+              value={3}
+            >
+              <option
+                value={0}
+              >
+                January
+              </option>
+              <option
+                value={1}
+              >
+                February
+              </option>
+              <option
+                value={2}
+              >
+                March
+              </option>
+              <option
+                value={3}
+              >
+                April
+              </option>
+              <option
+                value={4}
+              >
+                May
+              </option>
+              <option
+                value={5}
+              >
+                June
+              </option>
+              <option
+                value={6}
+              >
+                July
+              </option>
+              <option
+                value={7}
+              >
+                August
+              </option>
+              <option
+                value={8}
+              >
+                September
+              </option>
+              <option
+                value={9}
+              >
+                October
+              </option>
+              <option
+                value={10}
+              >
+                November
+              </option>
+              <option
+                value={11}
+              >
+                December
+              </option>
+            </select>
+          </div>
+          <div
+            className="date-picker-nav-item input-date-picker-year"
+          >
+            <select
+              className="form-control form-control-sm"
+              data-testid="year-select"
+              name="year"
+              onChange={[Function]}
+              value={2019}
+            >
+              <option
+                value={2019}
+              >
+                2019
+              </option>
+            </select>
+          </div>
+          <div
+            className="date-picker-nav-item date-picker-nav-item-expand date-picker-nav-controls"
+          >
+            <button
+              aria-label="Select the previous month"
+              className="btn btn-unstyled btn-monospaced btn-sm"
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className="lexicon-icon lexicon-icon-angle-left"
+                role="presentation"
+              >
+                <use
+                  xlinkHref="icons.svg#angle-left"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Select current date"
+              className="btn btn-unstyled btn-monospaced btn-sm"
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className="lexicon-icon lexicon-icon-simple-circle"
+                role="presentation"
+              >
+                <use
+                  xlinkHref="icons.svg#simple-circle"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Select the next month"
+              className="btn btn-unstyled btn-monospaced btn-sm"
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className="lexicon-icon lexicon-icon-angle-right"
+                role="presentation"
+              >
+                <use
+                  xlinkHref="icons.svg#angle-right"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        className="date-picker-calendar-body"
+      >
+        <div
+          className="date-picker-days-row date-picker-row"
+        >
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              S
+            </abbr>
+          </div>
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              M
+            </abbr>
+          </div>
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              T
+            </abbr>
+          </div>
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              W
+            </abbr>
+          </div>
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              T
+            </abbr>
+          </div>
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              F
+            </abbr>
+          </div>
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              S
+            </abbr>
+          </div>
+        </div>
+        <div
+          className="date-picker-date-row date-picker-row"
+        >
+          <button
+            aria-label="2019 03 31"
+            className="date-picker-date date-picker-calendar-item disabled"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            31
+          </button>
+          <button
+            aria-label="2019 04 01"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            1
+          </button>
+          <button
+            aria-label="2019 04 02"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            2
+          </button>
+          <button
+            aria-label="2019 04 03"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            3
+          </button>
+          <button
+            aria-label="2019 04 04"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            4
+          </button>
+          <button
+            aria-label="2019 04 05"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            5
+          </button>
+          <button
+            aria-label="2019 04 06"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            6
+          </button>
+        </div>
+        <div
+          className="date-picker-date-row date-picker-row"
+        >
+          <button
+            aria-label="2019 04 07"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            7
+          </button>
+          <button
+            aria-label="2019 04 08"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            8
+          </button>
+          <button
+            aria-label="2019 04 09"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            9
+          </button>
+          <button
+            aria-label="2019 04 10"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            10
+          </button>
+          <button
+            aria-label="2019 04 11"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            11
+          </button>
+          <button
+            aria-label="2019 04 12"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            12
+          </button>
+          <button
+            aria-label="2019 04 13"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            13
+          </button>
+        </div>
+        <div
+          className="date-picker-date-row date-picker-row"
+        >
+          <button
+            aria-label="2019 04 14"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            14
+          </button>
+          <button
+            aria-label="2019 04 15"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            15
+          </button>
+          <button
+            aria-label="2019 04 16"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            16
+          </button>
+          <button
+            aria-label="2019 04 17"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            17
+          </button>
+          <button
+            aria-label="2019 04 18"
+            className="date-picker-date date-picker-calendar-item active"
+            onClick={[Function]}
+            type="button"
+          >
+            18
+          </button>
+          <button
+            aria-label="2019 04 19"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            19
+          </button>
+          <button
+            aria-label="2019 04 20"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            20
+          </button>
+        </div>
+        <div
+          className="date-picker-date-row date-picker-row"
+        >
+          <button
+            aria-label="2019 04 21"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            21
+          </button>
+          <button
+            aria-label="2019 04 22"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            22
+          </button>
+          <button
+            aria-label="2019 04 23"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            23
+          </button>
+          <button
+            aria-label="2019 04 24"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            24
+          </button>
+          <button
+            aria-label="2019 04 25"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            25
+          </button>
+          <button
+            aria-label="2019 04 26"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            26
+          </button>
+          <button
+            aria-label="2019 04 27"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            27
+          </button>
+        </div>
+        <div
+          className="date-picker-date-row date-picker-row"
+        >
+          <button
+            aria-label="2019 04 28"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            28
+          </button>
+          <button
+            aria-label="2019 04 29"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            29
+          </button>
+          <button
+            aria-label="2019 04 30"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            30
+          </button>
+          <button
+            aria-label="2019 05 01"
+            className="date-picker-date date-picker-calendar-item disabled"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            1
+          </button>
+          <button
+            aria-label="2019 05 02"
+            className="date-picker-date date-picker-calendar-item disabled"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            2
+          </button>
+          <button
+            aria-label="2019 05 03"
+            className="date-picker-date date-picker-calendar-item disabled"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            3
+          </button>
+          <button
+            aria-label="2019 05 04"
+            className="date-picker-date date-picker-calendar-item disabled"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            4
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`BasicRendering renders date picker with native picker 1`] = `
+<div
+  className="date-picker"
+>
+  <div
+    className="input-group"
+  >
+    <div
+      className="input-group-item"
+    >
+      <input
+        name="datePicker"
+        type="hidden"
+        value=""
+      />
+      <input
+        className="form-control input-group-inset"
+        onChange={[Function]}
+        placeholder="YYYY-MM-DD"
+        type="date"
+        value=""
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`BasicRendering renders date picker with time 1`] = `
+<div
+  className="date-picker"
+>
+  <div
+    className="input-group"
+  >
+    <div
+      className="input-group-item"
+    >
+      <input
+        name="datePicker"
+        type="hidden"
+        value=""
+      />
+      <input
+        className="form-control input-group-inset input-group-inset-after"
+        onChange={[Function]}
+        placeholder="YYYY-MM-DD"
+        type="text"
+        value=""
+      />
+      <div
+        className="input-group-inset-item input-group-inset-item-after"
+      >
+        <button
+          className="date-picker-dropdown-toggle btn btn-unstyled"
+          data-testid="date-button"
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="lexicon-icon lexicon-icon-calendar"
+            role="presentation"
+          >
+            <use
+              xlinkHref="icons.svg#calendar"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="date-picker-dropdown-menu dropdown-menu show"
+    data-testid="dropdown"
+  >
+    <div
+      className="date-picker-calendar"
+    >
+      <div
+        className="date-picker-calendar-header"
+      >
+        <div
+          className="date-picker-nav"
+        >
+          <div
+            className="date-picker-nav-item input-date-picker-month"
+          >
+            <select
+              className="form-control form-control-sm"
+              data-testid="month-select"
+              name="month"
+              onChange={[Function]}
+              value={3}
+            >
+              <option
+                value={0}
+              >
+                January
+              </option>
+              <option
+                value={1}
+              >
+                February
+              </option>
+              <option
+                value={2}
+              >
+                March
+              </option>
+              <option
+                value={3}
+              >
+                April
+              </option>
+              <option
+                value={4}
+              >
+                May
+              </option>
+              <option
+                value={5}
+              >
+                June
+              </option>
+              <option
+                value={6}
+              >
+                July
+              </option>
+              <option
+                value={7}
+              >
+                August
+              </option>
+              <option
+                value={8}
+              >
+                September
+              </option>
+              <option
+                value={9}
+              >
+                October
+              </option>
+              <option
+                value={10}
+              >
+                November
+              </option>
+              <option
+                value={11}
+              >
+                December
+              </option>
+            </select>
+          </div>
+          <div
+            className="date-picker-nav-item input-date-picker-year"
+          >
+            <select
+              className="form-control form-control-sm"
+              data-testid="year-select"
+              name="year"
+              onChange={[Function]}
+              value={2019}
+            >
+              <option
+                value={2019}
+              >
+                2019
+              </option>
+            </select>
+          </div>
+          <div
+            className="date-picker-nav-item date-picker-nav-item-expand date-picker-nav-controls"
+          >
+            <button
+              aria-label="Select the previous month"
+              className="btn btn-unstyled btn-monospaced btn-sm"
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className="lexicon-icon lexicon-icon-angle-left"
+                role="presentation"
+              >
+                <use
+                  xlinkHref="icons.svg#angle-left"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Select current date"
+              className="btn btn-unstyled btn-monospaced btn-sm"
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className="lexicon-icon lexicon-icon-simple-circle"
+                role="presentation"
+              >
+                <use
+                  xlinkHref="icons.svg#simple-circle"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Select the next month"
+              className="btn btn-unstyled btn-monospaced btn-sm"
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className="lexicon-icon lexicon-icon-angle-right"
+                role="presentation"
+              >
+                <use
+                  xlinkHref="icons.svg#angle-right"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        className="date-picker-calendar-body"
+      >
+        <div
+          className="date-picker-days-row date-picker-row"
+        >
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              S
+            </abbr>
+          </div>
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              M
+            </abbr>
+          </div>
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              T
+            </abbr>
+          </div>
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              W
+            </abbr>
+          </div>
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              T
+            </abbr>
+          </div>
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              F
+            </abbr>
+          </div>
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              S
+            </abbr>
+          </div>
+        </div>
+        <div
+          className="date-picker-date-row date-picker-row"
+        >
+          <button
+            aria-label="2019 03 31"
+            className="date-picker-date date-picker-calendar-item disabled"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            31
+          </button>
+          <button
+            aria-label="2019 04 01"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            1
+          </button>
+          <button
+            aria-label="2019 04 02"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            2
+          </button>
+          <button
+            aria-label="2019 04 03"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            3
+          </button>
+          <button
+            aria-label="2019 04 04"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            4
+          </button>
+          <button
+            aria-label="2019 04 05"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            5
+          </button>
+          <button
+            aria-label="2019 04 06"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            6
+          </button>
+        </div>
+        <div
+          className="date-picker-date-row date-picker-row"
+        >
+          <button
+            aria-label="2019 04 07"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            7
+          </button>
+          <button
+            aria-label="2019 04 08"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            8
+          </button>
+          <button
+            aria-label="2019 04 09"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            9
+          </button>
+          <button
+            aria-label="2019 04 10"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            10
+          </button>
+          <button
+            aria-label="2019 04 11"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            11
+          </button>
+          <button
+            aria-label="2019 04 12"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            12
+          </button>
+          <button
+            aria-label="2019 04 13"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            13
+          </button>
+        </div>
+        <div
+          className="date-picker-date-row date-picker-row"
+        >
+          <button
+            aria-label="2019 04 14"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            14
+          </button>
+          <button
+            aria-label="2019 04 15"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            15
+          </button>
+          <button
+            aria-label="2019 04 16"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            16
+          </button>
+          <button
+            aria-label="2019 04 17"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            17
+          </button>
+          <button
+            aria-label="2019 04 18"
+            className="date-picker-date date-picker-calendar-item active"
+            onClick={[Function]}
+            type="button"
+          >
+            18
+          </button>
+          <button
+            aria-label="2019 04 19"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            19
+          </button>
+          <button
+            aria-label="2019 04 20"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            20
+          </button>
+        </div>
+        <div
+          className="date-picker-date-row date-picker-row"
+        >
+          <button
+            aria-label="2019 04 21"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            21
+          </button>
+          <button
+            aria-label="2019 04 22"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            22
+          </button>
+          <button
+            aria-label="2019 04 23"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            23
+          </button>
+          <button
+            aria-label="2019 04 24"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            24
+          </button>
+          <button
+            aria-label="2019 04 25"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            25
+          </button>
+          <button
+            aria-label="2019 04 26"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            26
+          </button>
+          <button
+            aria-label="2019 04 27"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            27
+          </button>
+        </div>
+        <div
+          className="date-picker-date-row date-picker-row"
+        >
+          <button
+            aria-label="2019 04 28"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            28
+          </button>
+          <button
+            aria-label="2019 04 29"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            29
+          </button>
+          <button
+            aria-label="2019 04 30"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            30
+          </button>
+          <button
+            aria-label="2019 05 01"
+            className="date-picker-date date-picker-calendar-item disabled"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            1
+          </button>
+          <button
+            aria-label="2019 05 02"
+            className="date-picker-date date-picker-calendar-item disabled"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            2
+          </button>
+          <button
+            aria-label="2019 05 03"
+            className="date-picker-date date-picker-calendar-item disabled"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            3
+          </button>
+          <button
+            aria-label="2019 05 04"
+            className="date-picker-date date-picker-calendar-item disabled"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            4
+          </button>
+        </div>
+      </div>
+      <div
+        className="date-picker-calendar-footer"
+      >
+        <div
+          className="time-picker"
+        >
+          <div
+            className="input-group"
+          >
+            <div
+              className="input-group-item input-group-item-shrink"
+            >
+              <span
+                className="input-group-text"
+              >
+                <svg
+                  className="lexicon-icon lexicon-icon-time"
+                  role="presentation"
+                >
+                  <use
+                    xlinkHref="icons.svg#time"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              className="input-group-item"
+            >
+              <input
+                className="form-control"
+                data-testid="time-picker-input"
+                name="timer"
+                onChange={[Function]}
+                type="time"
+                value="00:00"
+              />
+            </div>
+            <div
+              className="input-group-item input-group-item-shrink"
+            >
+              <span
+                className="input-group-text"
+              >
+                (GMT+01:00)
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`BasicRendering renders the date picker with years range 1`] = `
+<div
+  className="date-picker"
+>
+  <div
+    className="input-group"
+  >
+    <div
+      className="input-group-item"
+    >
+      <input
+        name="datePicker"
+        type="hidden"
+        value=""
+      />
+      <input
+        className="form-control input-group-inset input-group-inset-after"
+        onChange={[Function]}
+        placeholder="YYYY-MM-DD"
+        type="text"
+        value=""
+      />
+      <div
+        className="input-group-inset-item input-group-inset-item-after"
+      >
+        <button
+          className="date-picker-dropdown-toggle btn btn-unstyled"
+          data-testid="date-button"
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="lexicon-icon lexicon-icon-calendar"
+            role="presentation"
+          >
+            <use
+              xlinkHref="icons.svg#calendar"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="date-picker-dropdown-menu dropdown-menu show"
+    data-testid="dropdown"
+  >
+    <div
+      className="date-picker-calendar"
+    >
+      <div
+        className="date-picker-calendar-header"
+      >
+        <div
+          className="date-picker-nav"
+        >
+          <div
+            className="date-picker-nav-item input-date-picker-month"
+          >
+            <select
+              className="form-control form-control-sm"
+              data-testid="month-select"
+              name="month"
+              onChange={[Function]}
+              value={3}
+            >
+              <option
+                value={0}
+              >
+                January
+              </option>
+              <option
+                value={1}
+              >
+                February
+              </option>
+              <option
+                value={2}
+              >
+                March
+              </option>
+              <option
+                value={3}
+              >
+                April
+              </option>
+              <option
+                value={4}
+              >
+                May
+              </option>
+              <option
+                value={5}
+              >
+                June
+              </option>
+              <option
+                value={6}
+              >
+                July
+              </option>
+              <option
+                value={7}
+              >
+                August
+              </option>
+              <option
+                value={8}
+              >
+                September
+              </option>
+              <option
+                value={9}
+              >
+                October
+              </option>
+              <option
+                value={10}
+              >
+                November
+              </option>
+              <option
+                value={11}
+              >
+                December
+              </option>
+            </select>
+          </div>
+          <div
+            className="date-picker-nav-item input-date-picker-year"
+          >
+            <select
+              className="form-control form-control-sm"
+              data-testid="year-select"
+              name="year"
+              onChange={[Function]}
+              value={2019}
+            >
+              <option
+                value={1997}
+              >
+                1997
+              </option>
+              <option
+                value={1998}
+              >
+                1998
+              </option>
+              <option
+                value={1999}
+              >
+                1999
+              </option>
+              <option
+                value={2000}
+              >
+                2000
+              </option>
+              <option
+                value={2001}
+              >
+                2001
+              </option>
+              <option
+                value={2002}
+              >
+                2002
+              </option>
+              <option
+                value={2003}
+              >
+                2003
+              </option>
+              <option
+                value={2004}
+              >
+                2004
+              </option>
+              <option
+                value={2005}
+              >
+                2005
+              </option>
+              <option
+                value={2006}
+              >
+                2006
+              </option>
+              <option
+                value={2007}
+              >
+                2007
+              </option>
+              <option
+                value={2008}
+              >
+                2008
+              </option>
+              <option
+                value={2009}
+              >
+                2009
+              </option>
+              <option
+                value={2010}
+              >
+                2010
+              </option>
+              <option
+                value={2011}
+              >
+                2011
+              </option>
+              <option
+                value={2012}
+              >
+                2012
+              </option>
+              <option
+                value={2013}
+              >
+                2013
+              </option>
+              <option
+                value={2014}
+              >
+                2014
+              </option>
+              <option
+                value={2015}
+              >
+                2015
+              </option>
+              <option
+                value={2016}
+              >
+                2016
+              </option>
+              <option
+                value={2017}
+              >
+                2017
+              </option>
+              <option
+                value={2018}
+              >
+                2018
+              </option>
+              <option
+                value={2019}
+              >
+                2019
+              </option>
+              <option
+                value={2020}
+              >
+                2020
+              </option>
+              <option
+                value={2021}
+              >
+                2021
+              </option>
+              <option
+                value={2022}
+              >
+                2022
+              </option>
+              <option
+                value={2023}
+              >
+                2023
+              </option>
+              <option
+                value={2024}
+              >
+                2024
+              </option>
+            </select>
+          </div>
+          <div
+            className="date-picker-nav-item date-picker-nav-item-expand date-picker-nav-controls"
+          >
+            <button
+              aria-label="Select the previous month"
+              className="btn btn-unstyled btn-monospaced btn-sm"
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className="lexicon-icon lexicon-icon-angle-left"
+                role="presentation"
+              >
+                <use
+                  xlinkHref="icons.svg#angle-left"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Select current date"
+              className="btn btn-unstyled btn-monospaced btn-sm"
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className="lexicon-icon lexicon-icon-simple-circle"
+                role="presentation"
+              >
+                <use
+                  xlinkHref="icons.svg#simple-circle"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Select the next month"
+              className="btn btn-unstyled btn-monospaced btn-sm"
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className="lexicon-icon lexicon-icon-angle-right"
+                role="presentation"
+              >
+                <use
+                  xlinkHref="icons.svg#angle-right"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        className="date-picker-calendar-body"
+      >
+        <div
+          className="date-picker-days-row date-picker-row"
+        >
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              S
+            </abbr>
+          </div>
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              M
+            </abbr>
+          </div>
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              T
+            </abbr>
+          </div>
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              W
+            </abbr>
+          </div>
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              T
+            </abbr>
+          </div>
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              F
+            </abbr>
+          </div>
+          <div
+            className="date-picker-day date-picker-calendar-item"
+          >
+            <abbr>
+              S
+            </abbr>
+          </div>
+        </div>
+        <div
+          className="date-picker-date-row date-picker-row"
+        >
+          <button
+            aria-label="2019 03 31"
+            className="date-picker-date date-picker-calendar-item disabled"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            31
+          </button>
+          <button
+            aria-label="2019 04 01"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            1
+          </button>
+          <button
+            aria-label="2019 04 02"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            2
+          </button>
+          <button
+            aria-label="2019 04 03"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            3
+          </button>
+          <button
+            aria-label="2019 04 04"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            4
+          </button>
+          <button
+            aria-label="2019 04 05"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            5
+          </button>
+          <button
+            aria-label="2019 04 06"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            6
+          </button>
+        </div>
+        <div
+          className="date-picker-date-row date-picker-row"
+        >
+          <button
+            aria-label="2019 04 07"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            7
+          </button>
+          <button
+            aria-label="2019 04 08"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            8
+          </button>
+          <button
+            aria-label="2019 04 09"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            9
+          </button>
+          <button
+            aria-label="2019 04 10"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            10
+          </button>
+          <button
+            aria-label="2019 04 11"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            11
+          </button>
+          <button
+            aria-label="2019 04 12"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            12
+          </button>
+          <button
+            aria-label="2019 04 13"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            13
+          </button>
+        </div>
+        <div
+          className="date-picker-date-row date-picker-row"
+        >
+          <button
+            aria-label="2019 04 14"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            14
+          </button>
+          <button
+            aria-label="2019 04 15"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            15
+          </button>
+          <button
+            aria-label="2019 04 16"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            16
+          </button>
+          <button
+            aria-label="2019 04 17"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            17
+          </button>
+          <button
+            aria-label="2019 04 18"
+            className="date-picker-date date-picker-calendar-item active"
+            onClick={[Function]}
+            type="button"
+          >
+            18
+          </button>
+          <button
+            aria-label="2019 04 19"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            19
+          </button>
+          <button
+            aria-label="2019 04 20"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            20
+          </button>
+        </div>
+        <div
+          className="date-picker-date-row date-picker-row"
+        >
+          <button
+            aria-label="2019 04 21"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            21
+          </button>
+          <button
+            aria-label="2019 04 22"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            22
+          </button>
+          <button
+            aria-label="2019 04 23"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            23
+          </button>
+          <button
+            aria-label="2019 04 24"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            24
+          </button>
+          <button
+            aria-label="2019 04 25"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            25
+          </button>
+          <button
+            aria-label="2019 04 26"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            26
+          </button>
+          <button
+            aria-label="2019 04 27"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            27
+          </button>
+        </div>
+        <div
+          className="date-picker-date-row date-picker-row"
+        >
+          <button
+            aria-label="2019 04 28"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            28
+          </button>
+          <button
+            aria-label="2019 04 29"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            29
+          </button>
+          <button
+            aria-label="2019 04 30"
+            className="date-picker-date date-picker-calendar-item"
+            onClick={[Function]}
+            type="button"
+          >
+            30
+          </button>
+          <button
+            aria-label="2019 05 01"
+            className="date-picker-date date-picker-calendar-item disabled"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            1
+          </button>
+          <button
+            aria-label="2019 05 02"
+            className="date-picker-date date-picker-calendar-item disabled"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            2
+          </button>
+          <button
+            aria-label="2019 05 03"
+            className="date-picker-date date-picker-calendar-item disabled"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            3
+          </button>
+          <button
+            aria-label="2019 05 04"
+            className="date-picker-date date-picker-calendar-item disabled"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            4
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
