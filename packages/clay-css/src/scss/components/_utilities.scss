@@ -259,31 +259,6 @@
 
 // Inline Item
 
-.inline-group {
-	display: inline-flex;
-	line-height: 1;
-	max-width: 100%;
-	vertical-align: middle;
-
-	.inline-item .lexicon-icon {
-		margin-top: 0;
-	}
-
-	.text-truncate {
-		line-height: $line-height-base;
-	}
-}
-
-.inline-group-before {
-	margin-right: calc(#{$inline-item-spacer-x} - 3px);
-	vertical-align: middle;
-}
-
-.inline-group-after {
-	margin-left: calc(#{$inline-item-spacer-x} - 3px);
-	vertical-align: middle;
-}
-
 .inline-item {
 	align-items: center;
 	display: inline-flex;
