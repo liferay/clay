@@ -13,7 +13,7 @@ const spritemap = 'node_modules/clay-css/lib/images/icons/icons.svg';
 describe('ClayNavigationBar', () => {
 	it('renders', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayNavigationBar items={[]} spritemap={''} />
+			<ClayNavigationBar items={[]} spritemap={spritemap} />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
@@ -21,7 +21,7 @@ describe('ClayNavigationBar', () => {
 
 	it('renders with id', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayNavigationBar id="test" items={[]} spritemap="" />
+			<ClayNavigationBar id="test" items={[]} spritemap={spritemap} />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
@@ -29,7 +29,7 @@ describe('ClayNavigationBar', () => {
 
 	it('renders with inverted', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayNavigationBar inverted items={[]} spritemap="" />
+			<ClayNavigationBar inverted items={[]} spritemap={spritemap} />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
