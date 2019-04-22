@@ -16,7 +16,9 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	 * This property is used to pass a MouseEvent from a NavItem to a
 	 * function when this element is clicked.
 	 */
-	onItemClicked?: (event: React.MouseEvent<HTMLLIElement, MouseEvent>) => void | undefined;
+	onItemClicked?: (
+		event: React.MouseEvent<HTMLLIElement, MouseEvent>
+	) => void | undefined;
 
 	/**
 	 * The id that will be given to the Navigation<nav> element
