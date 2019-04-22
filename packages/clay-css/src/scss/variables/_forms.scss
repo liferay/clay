@@ -72,10 +72,63 @@ $form-control-label-size: map-merge((
 
 $form-control-tag-group-padding-y: ($input-height - $input-border-bottom-width - $input-border-top-width - map-get($form-control-label-size, height) - (map-get($form-control-label-size, margin-bottom)) - (map-get($form-control-label-size, margin-top))) / 2 !default;
 
-// Form Control Inset
-
 $form-control-inset-min-height: $input-font-size * $input-line-height !default;
 $form-control-inset-margin-y: ($input-height - $input-border-bottom-width - $input-border-top-width - ($form-control-tag-group-padding-y * 2) - $form-control-inset-min-height) / 2 !default;
+
+$form-control-tag-group: () !default;
+$form-control-tag-group: map-merge((
+	align-items: center,
+	display: flex,
+	flex-wrap: wrap,
+	height: auto,
+	padding-bottom: $form-control-tag-group-padding-y,
+	padding-top: $form-control-tag-group-padding-y,
+), $form-control-tag-group);
+
+$form-control-tag-group-autofit-row: () !default;
+$form-control-tag-group-autofit-row: map-merge((
+		align-items: flex-end,
+		flex-grow: 1,
+		margin-left: -0.5rem,
+		margin-right: -0.5rem,
+		width: auto,
+), $form-control-tag-group-autofit-row);
+
+$form-control-tag-group-autofit-col: () !default;
+$form-control-tag-group-autofit-col: map-merge((
+	padding-left: 0.5rem,
+	padding-right: 0.5rem,
+), $form-control-tag-group-autofit-col);
+
+$form-control-tag-group-inline-item: () !default;
+$form-control-tag-group-inline-item: map-merge((
+	height: $form-control-inset-min-height,
+	margin-bottom: $form-control-inset-margin-y,
+	margin-top: $form-control-inset-margin-y,
+), $form-control-tag-group-inline-item);
+
+$form-control-tag-group-btn: () !default;
+$form-control-tag-group-btn: map-merge((
+	height: $form-control-inset-min-height,
+	line-height: 1,
+	margin-bottom: $form-control-inset-margin-y,
+	margin-top: $form-control-inset-margin-y,
+	padding-bottom: 0,
+	padding-left: $btn-padding-x-sm,
+	padding-right: $btn-padding-x-sm,
+	padding-top: 0,
+), $form-control-tag-group-btn);
+
+$form-control-tag-group-btn-monospaced: () !default;
+$form-control-tag-group-btn-monospaced: map-merge((
+	height: $form-control-inset-min-height,
+	line-height: 1,
+	margin-bottom: $form-control-inset-margin-y,
+	margin-top: $form-control-inset-margin-y,
+	padding-left: 0,
+	padding-right: 0,
+	width: $form-control-inset-min-height,
+), $form-control-tag-group-btn-monospaced);
 
 // Form Group
 

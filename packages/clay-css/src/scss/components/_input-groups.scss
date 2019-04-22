@@ -32,6 +32,9 @@
 	}
 
 	> .dropdown {
+		display: flex;
+		flex-wrap: wrap;
+		word-wrap: break-word;
 		width: 100%;
 	}
 }
