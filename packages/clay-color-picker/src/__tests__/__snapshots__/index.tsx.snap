@@ -1,553 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayColorPicker displays custom color editor 1`] = `
-<div>
-  <div
-    class="clay-color-picker"
-  >
-    <input
-      name="colorPicker2"
-      style="display: none;"
-      type="text"
-      value="008000"
-    />
-    <label>
-      Custom Colors
-    </label>
-    <div
-      class="clay-color input-group"
-    >
-      <div
-        class="input-group-item input-group-item-shrink input-group-prepend"
-      >
-        <div
-          class="input-group-text"
-        >
-          <button
-            aria-label="Select a color"
-            class="btn clay-color-btn dropdown-toggle"
-            style="border-width: 0px; background: rgb(0, 128, 0); height: 28px; width: 28px;"
-            title="008000"
-          />
-          <div
-            class="clay-color-dropdown-menu dropdown-menu show"
-          >
-            <div
-              class="clay-color-header"
-            >
-              <span
-                class="component-title"
-              >
-                Custom Colors
-              </span>
-              <button
-                class="close component-action"
-                type="button"
-              >
-                <svg
-                  class="lexicon-icon lexicon-icon-times"
-                  role="presentation"
-                >
-                  <use
-                    xlink:href="/test/path#times"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div
-              class="clay-color-swatch"
-            >
-              <div
-                class="clay-color-swatch-item"
-              >
-                <button
-                  class="btn clay-color-btn "
-                  style="outline: auto 3px #55ADFF; border-width: 0px; background: rgb(0, 128, 0); height: 24px; width: 24px;"
-                  title="008000"
-                />
-              </div>
-              <div
-                class="clay-color-swatch-item"
-              >
-                <button
-                  class="btn clay-color-btn "
-                  style="border-width: 0px; background: rgb(0, 255, 255); height: 24px; width: 24px;"
-                  title="00FFFF"
-                />
-              </div>
-              <div
-                class="clay-color-swatch-item"
-              >
-                <button
-                  class="btn clay-color-btn "
-                  style="border-width: 0px; background: rgb(0, 0, 255); height: 24px; width: 24px;"
-                  title="0000FF"
-                />
-              </div>
-              <div
-                class="clay-color-swatch-item"
-              >
-                <button
-                  class="btn clay-color-btn "
-                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
-                  title="FFFFFF"
-                />
-              </div>
-              <div
-                class="clay-color-swatch-item"
-              >
-                <button
-                  class="btn clay-color-btn "
-                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
-                  title="FFFFFF"
-                />
-              </div>
-              <div
-                class="clay-color-swatch-item"
-              >
-                <button
-                  class="btn clay-color-btn "
-                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
-                  title="FFFFFF"
-                />
-              </div>
-              <div
-                class="clay-color-swatch-item"
-              >
-                <button
-                  class="btn clay-color-btn "
-                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
-                  title="FFFFFF"
-                />
-              </div>
-              <div
-                class="clay-color-swatch-item"
-              >
-                <button
-                  class="btn clay-color-btn "
-                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
-                  title="FFFFFF"
-                />
-              </div>
-              <div
-                class="clay-color-swatch-item"
-              >
-                <button
-                  class="btn clay-color-btn "
-                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
-                  title="FFFFFF"
-                />
-              </div>
-              <div
-                class="clay-color-swatch-item"
-              >
-                <button
-                  class="btn clay-color-btn "
-                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
-                  title="FFFFFF"
-                />
-              </div>
-              <div
-                class="clay-color-swatch-item"
-              >
-                <button
-                  class="btn clay-color-btn "
-                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
-                  title="FFFFFF"
-                />
-              </div>
-              <div
-                class="clay-color-swatch-item"
-              >
-                <button
-                  class="btn clay-color-btn "
-                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
-                  title="FFFFFF"
-                />
-              </div>
-            </div>
-            <div
-              class="clay-color-map-group"
-            >
-              <div
-                class="clay-color-map-hsb clay-color-map"
-                style="background-color: hsl(0, 100%, 50%);"
-              >
-                <span
-                  class="clay-color-pointer clay-color-map-pointer"
-                  style="background: rgb(0, 128, 0); left: -7px; top: -7px;"
-                />
-              </div>
-              <div
-                class="clay-color-map-values"
-              >
-                <div
-                  class="form-group"
-                >
-                  <div
-                    class="input-group"
-                  >
-                    <div
-                      class="input-group-item"
-                    >
-                      <input
-                        class="form-control input-group-inset input-group-inset-before"
-                        type="text"
-                        value="0"
-                      />
-                      <label
-                        class="input-group-inset-item input-group-inset-item-before"
-                      >
-                        R
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="form-group"
-                >
-                  <div
-                    class="input-group"
-                  >
-                    <div
-                      class="input-group-item"
-                    >
-                      <input
-                        class="form-control input-group-inset input-group-inset-before"
-                        type="text"
-                        value="128"
-                      />
-                      <label
-                        class="input-group-inset-item input-group-inset-item-before"
-                      >
-                        G
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="form-group"
-                >
-                  <div
-                    class="input-group"
-                  >
-                    <div
-                      class="input-group-item"
-                    >
-                      <input
-                        class="form-control input-group-inset input-group-inset-before"
-                        type="text"
-                        value="0"
-                      />
-                      <label
-                        class="input-group-inset-item input-group-inset-item-before"
-                      >
-                        B
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="clay-color-range clay-color-range-hue"
-            >
-              <button
-                class="clay-color-pointer clay-color-range-pointer"
-                style="background: hsl(0, 100%, 50%); left: -7px;"
-                type="button"
-              />
-            </div>
-            <div
-              class="clay-color-footer"
-            >
-              <div
-                class="form-group"
-              >
-                <div
-                  class="input-group"
-                >
-                  <div
-                    class="input-group-item"
-                  >
-                    <input
-                      class="form-control input-group-inset input-group-inset-before"
-                      type="text"
-                      value="008000"
-                    />
-                    <label
-                      class="input-group-inset-item input-group-inset-item-before"
-                    >
-                      #
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="input-group-append input-group-item"
-      >
-        <input
-          aria-label="Color selection is 008000"
-          class="form-control input-group-inset input-group-inset-before"
-          type="text"
-          value="008000"
-        />
-        <label
-          class="input-group-inset-item input-group-inset-item-before"
-        >
-          #
-        </label>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayColorPicker displays custom colors 1`] = `
-<div>
-  <div
-    class="clay-color-picker"
-  >
-    <input
-      name="colorPicker2"
-      style="display: none;"
-      type="text"
-      value="008000"
-    />
-    <label>
-      Custom Colors
-    </label>
-    <div
-      class="clay-color input-group"
-    >
-      <div
-        class="input-group-item input-group-item-shrink input-group-prepend"
-      >
-        <div
-          class="input-group-text"
-        >
-          <button
-            aria-label="Select a color"
-            class="btn clay-color-btn dropdown-toggle"
-            style="border-width: 0px; background: rgb(0, 128, 0); height: 28px; width: 28px;"
-            title="008000"
-          />
-          <div
-            class="clay-color-dropdown-menu dropdown-menu show"
-          >
-            <div
-              class="clay-color-header"
-            >
-              <span
-                class="component-title"
-              >
-                Custom Colors
-              </span>
-              <button
-                class=" component-action"
-                type="button"
-              >
-                <svg
-                  class="lexicon-icon lexicon-icon-drop"
-                  role="presentation"
-                >
-                  <use
-                    xlink:href="/test/path#drop"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div
-              class="clay-color-swatch"
-            >
-              <div
-                class="clay-color-swatch-item"
-              >
-                <button
-                  class="btn clay-color-btn "
-                  style="outline: auto 3px #55ADFF; border-width: 0px; background: rgb(0, 128, 0); height: 24px; width: 24px;"
-                  title="008000"
-                />
-              </div>
-              <div
-                class="clay-color-swatch-item"
-              >
-                <button
-                  class="btn clay-color-btn "
-                  style="border-width: 0px; background: rgb(0, 255, 255); height: 24px; width: 24px;"
-                  title="00FFFF"
-                />
-              </div>
-              <div
-                class="clay-color-swatch-item"
-              >
-                <button
-                  class="btn clay-color-btn "
-                  style="border-width: 0px; background: rgb(0, 0, 255); height: 24px; width: 24px;"
-                  title="0000FF"
-                />
-              </div>
-              <div
-                class="clay-color-swatch-item"
-              >
-                <button
-                  class="btn clay-color-btn "
-                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
-                  title="FFFFFF"
-                />
-              </div>
-              <div
-                class="clay-color-swatch-item"
-              >
-                <button
-                  class="btn clay-color-btn "
-                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
-                  title="FFFFFF"
-                />
-              </div>
-              <div
-                class="clay-color-swatch-item"
-              >
-                <button
-                  class="btn clay-color-btn "
-                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
-                  title="FFFFFF"
-                />
-              </div>
-              <div
-                class="clay-color-swatch-item"
-              >
-                <button
-                  class="btn clay-color-btn "
-                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
-                  title="FFFFFF"
-                />
-              </div>
-              <div
-                class="clay-color-swatch-item"
-              >
-                <button
-                  class="btn clay-color-btn "
-                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
-                  title="FFFFFF"
-                />
-              </div>
-              <div
-                class="clay-color-swatch-item"
-              >
-                <button
-                  class="btn clay-color-btn "
-                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
-                  title="FFFFFF"
-                />
-              </div>
-              <div
-                class="clay-color-swatch-item"
-              >
-                <button
-                  class="btn clay-color-btn "
-                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
-                  title="FFFFFF"
-                />
-              </div>
-              <div
-                class="clay-color-swatch-item"
-              >
-                <button
-                  class="btn clay-color-btn "
-                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
-                  title="FFFFFF"
-                />
-              </div>
-              <div
-                class="clay-color-swatch-item"
-              >
-                <button
-                  class="btn clay-color-btn "
-                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
-                  title="FFFFFF"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="input-group-append input-group-item"
-      >
-        <input
-          aria-label="Color selection is 008000"
-          class="form-control input-group-inset input-group-inset-before"
-          type="text"
-          value="008000"
-        />
-        <label
-          class="input-group-inset-item input-group-inset-item-before"
-        >
-          #
-        </label>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayColorPicker renders 1`] = `
-<div>
-  <div
-    class="clay-color-picker"
-  >
-    <input
-      name="colorPicker1"
-      style="display: none;"
-      type="text"
-      value="FFF"
-    />
-    <label>
-      Default
-    </label>
-    <div
-      class="clay-color input-group"
-    >
-      <div
-        class="input-group-item input-group-item-shrink input-group-prepend"
-      >
-        <div
-          class="input-group-text"
-        >
-          <button
-            aria-label="Select a color"
-            class="btn clay-color-btn dropdown-toggle"
-            style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 28px; width: 28px;"
-            title="FFF"
-          />
-        </div>
-      </div>
-      <div
-        class="input-group-append input-group-item"
-      >
-        <input
-          aria-label="Color selection is FFF"
-          class="form-control input-group-inset input-group-inset-before"
-          type="text"
-          value="FFF"
-        />
-        <label
-          class="input-group-inset-item input-group-inset-item-before"
-        >
-          #
-        </label>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayColorPicker renders with menu displayed 1`] = `
+exports[`Interactions opens color picker drop down when clicked 1`] = `
 <div>
   <div
     class="clay-color-picker"
@@ -880,6 +333,570 @@ exports[`ClayColorPicker renders with menu displayed 1`] = `
           #
         </label>
       </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Interactions opens custom color picker drop down when clicked 1`] = `
+<div>
+  <div
+    class="clay-color-picker"
+  >
+    <input
+      name="colorPicker2"
+      style="display: none;"
+      type="text"
+      value="008000"
+    />
+    <label>
+      Custom Colors
+    </label>
+    <div
+      class="clay-color input-group"
+    >
+      <div
+        class="input-group-item input-group-item-shrink input-group-prepend"
+      >
+        <div
+          class="input-group-text"
+        >
+          <button
+            aria-label="Select a color"
+            class="btn clay-color-btn dropdown-toggle"
+            style="border-width: 0px; background: rgb(0, 128, 0); height: 28px; width: 28px;"
+            title="008000"
+          />
+          <div
+            class="clay-color-dropdown-menu dropdown-menu show"
+          >
+            <div
+              class="clay-color-header"
+            >
+              <span
+                class="component-title"
+              >
+                Custom Colors
+              </span>
+              <button
+                class=" component-action"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-drop"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/test/path#drop"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="clay-color-swatch"
+            >
+              <div
+                class="clay-color-swatch-item"
+              >
+                <button
+                  class="btn clay-color-btn "
+                  style="outline: auto 3px #55ADFF; border-width: 0px; background: rgb(0, 0, 0); height: 24px; width: 24px;"
+                  title="000000"
+                />
+              </div>
+              <div
+                class="clay-color-swatch-item"
+              >
+                <button
+                  class="btn clay-color-btn "
+                  style="border-width: 0px; background: rgb(0, 255, 255); height: 24px; width: 24px;"
+                  title="00FFFF"
+                />
+              </div>
+              <div
+                class="clay-color-swatch-item"
+              >
+                <button
+                  class="btn clay-color-btn "
+                  style="border-width: 0px; background: rgb(0, 0, 255); height: 24px; width: 24px;"
+                  title="0000FF"
+                />
+              </div>
+              <div
+                class="clay-color-swatch-item"
+              >
+                <button
+                  class="btn clay-color-btn "
+                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
+                  title="FFFFFF"
+                />
+              </div>
+              <div
+                class="clay-color-swatch-item"
+              >
+                <button
+                  class="btn clay-color-btn "
+                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
+                  title="FFFFFF"
+                />
+              </div>
+              <div
+                class="clay-color-swatch-item"
+              >
+                <button
+                  class="btn clay-color-btn "
+                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
+                  title="FFFFFF"
+                />
+              </div>
+              <div
+                class="clay-color-swatch-item"
+              >
+                <button
+                  class="btn clay-color-btn "
+                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
+                  title="FFFFFF"
+                />
+              </div>
+              <div
+                class="clay-color-swatch-item"
+              >
+                <button
+                  class="btn clay-color-btn "
+                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
+                  title="FFFFFF"
+                />
+              </div>
+              <div
+                class="clay-color-swatch-item"
+              >
+                <button
+                  class="btn clay-color-btn "
+                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
+                  title="FFFFFF"
+                />
+              </div>
+              <div
+                class="clay-color-swatch-item"
+              >
+                <button
+                  class="btn clay-color-btn "
+                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
+                  title="FFFFFF"
+                />
+              </div>
+              <div
+                class="clay-color-swatch-item"
+              >
+                <button
+                  class="btn clay-color-btn "
+                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
+                  title="FFFFFF"
+                />
+              </div>
+              <div
+                class="clay-color-swatch-item"
+              >
+                <button
+                  class="btn clay-color-btn "
+                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
+                  title="FFFFFF"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="input-group-append input-group-item"
+      >
+        <input
+          aria-label="Color selection is 008000"
+          class="form-control input-group-inset input-group-inset-before"
+          type="text"
+          value="008000"
+        />
+        <label
+          class="input-group-inset-item input-group-inset-item-before"
+        >
+          #
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Interactions opens custom color picker drop down when clicked 2`] = `
+<div>
+  <div
+    class="clay-color-picker"
+  >
+    <input
+      name="colorPicker2"
+      style="display: none;"
+      type="text"
+      value="008000"
+    />
+    <label>
+      Custom Colors
+    </label>
+    <div
+      class="clay-color input-group"
+    >
+      <div
+        class="input-group-item input-group-item-shrink input-group-prepend"
+      >
+        <div
+          class="input-group-text"
+        >
+          <button
+            aria-label="Select a color"
+            class="btn clay-color-btn dropdown-toggle"
+            style="border-width: 0px; background: rgb(0, 128, 0); height: 28px; width: 28px;"
+            title="008000"
+          />
+          <div
+            class="clay-color-dropdown-menu dropdown-menu show"
+          >
+            <div
+              class="clay-color-header"
+            >
+              <span
+                class="component-title"
+              >
+                Custom Colors
+              </span>
+              <button
+                class="close component-action"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-times"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/test/path#times"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="clay-color-swatch"
+            >
+              <div
+                class="clay-color-swatch-item"
+              >
+                <button
+                  class="btn clay-color-btn "
+                  style="outline: auto 3px #55ADFF; border-width: 0px; background: rgb(0, 0, 0); height: 24px; width: 24px;"
+                  title="000000"
+                />
+              </div>
+              <div
+                class="clay-color-swatch-item"
+              >
+                <button
+                  class="btn clay-color-btn "
+                  style="border-width: 0px; background: rgb(0, 255, 255); height: 24px; width: 24px;"
+                  title="00FFFF"
+                />
+              </div>
+              <div
+                class="clay-color-swatch-item"
+              >
+                <button
+                  class="btn clay-color-btn "
+                  style="border-width: 0px; background: rgb(0, 0, 255); height: 24px; width: 24px;"
+                  title="0000FF"
+                />
+              </div>
+              <div
+                class="clay-color-swatch-item"
+              >
+                <button
+                  class="btn clay-color-btn "
+                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
+                  title="FFFFFF"
+                />
+              </div>
+              <div
+                class="clay-color-swatch-item"
+              >
+                <button
+                  class="btn clay-color-btn "
+                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
+                  title="FFFFFF"
+                />
+              </div>
+              <div
+                class="clay-color-swatch-item"
+              >
+                <button
+                  class="btn clay-color-btn "
+                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
+                  title="FFFFFF"
+                />
+              </div>
+              <div
+                class="clay-color-swatch-item"
+              >
+                <button
+                  class="btn clay-color-btn "
+                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
+                  title="FFFFFF"
+                />
+              </div>
+              <div
+                class="clay-color-swatch-item"
+              >
+                <button
+                  class="btn clay-color-btn "
+                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
+                  title="FFFFFF"
+                />
+              </div>
+              <div
+                class="clay-color-swatch-item"
+              >
+                <button
+                  class="btn clay-color-btn "
+                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
+                  title="FFFFFF"
+                />
+              </div>
+              <div
+                class="clay-color-swatch-item"
+              >
+                <button
+                  class="btn clay-color-btn "
+                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
+                  title="FFFFFF"
+                />
+              </div>
+              <div
+                class="clay-color-swatch-item"
+              >
+                <button
+                  class="btn clay-color-btn "
+                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
+                  title="FFFFFF"
+                />
+              </div>
+              <div
+                class="clay-color-swatch-item"
+              >
+                <button
+                  class="btn clay-color-btn "
+                  style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
+                  title="FFFFFF"
+                />
+              </div>
+            </div>
+            <div
+              class="clay-color-map-group"
+            >
+              <div
+                class="clay-color-map-hsb clay-color-map"
+                style="background-color: hsl(0, 100%, 50%);"
+              >
+                <span
+                  class="clay-color-pointer clay-color-map-pointer"
+                  style="background: rgb(0, 0, 0); left: -7px; top: -7px;"
+                />
+              </div>
+              <div
+                class="clay-color-map-values"
+              >
+                <div
+                  class="form-group"
+                >
+                  <div
+                    class="input-group"
+                  >
+                    <div
+                      class="input-group-item"
+                    >
+                      <input
+                        class="form-control input-group-inset input-group-inset-before"
+                        data-testid="rInput"
+                        type="text"
+                        value="0"
+                      />
+                      <label
+                        class="input-group-inset-item input-group-inset-item-before"
+                      >
+                        R
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="form-group"
+                >
+                  <div
+                    class="input-group"
+                  >
+                    <div
+                      class="input-group-item"
+                    >
+                      <input
+                        class="form-control input-group-inset input-group-inset-before"
+                        data-testid="gInput"
+                        type="text"
+                        value="0"
+                      />
+                      <label
+                        class="input-group-inset-item input-group-inset-item-before"
+                      >
+                        G
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="form-group"
+                >
+                  <div
+                    class="input-group"
+                  >
+                    <div
+                      class="input-group-item"
+                    >
+                      <input
+                        class="form-control input-group-inset input-group-inset-before"
+                        data-testid="bInput"
+                        type="text"
+                        value="0"
+                      />
+                      <label
+                        class="input-group-inset-item input-group-inset-item-before"
+                      >
+                        B
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="clay-color-range clay-color-range-hue"
+            >
+              <button
+                class="clay-color-pointer clay-color-range-pointer"
+                style="background: hsl(0, 100%, 50%); left: -7px;"
+                type="button"
+              />
+            </div>
+            <div
+              class="clay-color-footer"
+            >
+              <div
+                class="form-group"
+              >
+                <div
+                  class="input-group"
+                >
+                  <div
+                    class="input-group-item"
+                  >
+                    <input
+                      class="form-control input-group-inset input-group-inset-before"
+                      data-testid="hexInput"
+                      type="text"
+                      value="000000"
+                    />
+                    <label
+                      class="input-group-inset-item input-group-inset-item-before"
+                    >
+                      #
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="input-group-append input-group-item"
+      >
+        <input
+          aria-label="Color selection is 008000"
+          class="form-control input-group-inset input-group-inset-before"
+          type="text"
+          value="008000"
+        />
+        <label
+          class="input-group-inset-item input-group-inset-item-before"
+        >
+          #
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Rendering default 1`] = `
+<div
+  className="clay-color-picker"
+>
+  <input
+    name="colorPicker1"
+    onChange={[Function]}
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="text"
+    value="FFF"
+  />
+  <label>
+    Default
+  </label>
+  <div
+    className="clay-color input-group"
+  >
+    <div
+      className="input-group-item input-group-item-shrink input-group-prepend"
+    >
+      <div
+        className="input-group-text"
+      >
+        <button
+          aria-label="Select a color"
+          className="btn clay-color-btn dropdown-toggle"
+          onClick={[Function]}
+          style={
+            Object {
+              "background": "#FFF",
+              "border": "1px solid #E7E7ED",
+              "height": 28,
+              "width": 28,
+            }
+          }
+          title="FFF"
+        />
+      </div>
+    </div>
+    <div
+      className="input-group-append input-group-item"
+    >
+      <input
+        aria-label="Color selection is FFF"
+        className="form-control input-group-inset input-group-inset-before"
+        onBlur={[Function]}
+        onChange={[Function]}
+        type="text"
+        value="FFF"
+      />
+      <label
+        className="input-group-inset-item input-group-inset-item-before"
+      >
+        #
+      </label>
     </div>
   </div>
 </div>

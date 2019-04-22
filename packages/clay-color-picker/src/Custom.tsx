@@ -41,6 +41,7 @@ const RGBInput: React.FunctionComponent<RGBInputProps> = ({
 				<div className="input-group-item">
 					<input
 						className="form-control input-group-inset input-group-inset-before"
+						data-testid={`${name}Input`}
 						onChange={event => {
 							const newVal = Number(event.target.value);
 
@@ -67,7 +68,6 @@ interface CustomProps {
 	onChange: (val: string) => void;
 	onColorsChange: (val: string[]) => void;
 	spritemap: string;
-	value: string;
 }
 
 /**
@@ -79,13 +79,13 @@ const Custom: React.FunctionComponent<CustomProps> = ({
 	onChange,
 	onColorsChange,
 	spritemap,
-	value,
 }) => {
-	const color = tinycolor(value);
-
 	const [activeSplotchIndex, setActiveSplotchIndex] = useState(0);
-	const [hue, setHue] = useState(0);
 	const [editorActive, setEditorActive] = useState(false);
+
+	const color = tinycolor(colors[activeSplotchIndex]);
+
+	const [hue, setHue] = useState(color.toHsv().h);
 	const [hexInputVal, setHexInput] = useHexInput(color.toHex());
 
 	const {b, g, r} = color.toRgb();
@@ -108,6 +108,10 @@ const Custom: React.FunctionComponent<CustomProps> = ({
 			setHexInput(colorValue.toHex());
 		}
 	};
+
+	React.useEffect(() => {
+		setHexInput(color.toHex());
+	}, [color]);
 
 	return (
 		<React.Fragment>
@@ -206,6 +210,7 @@ const Custom: React.FunctionComponent<CustomProps> = ({
 								<div className="input-group-item">
 									<input
 										className="form-control input-group-inset input-group-inset-before"
+										data-testid="hexInput"
 										onBlur={event => {
 											const newColor = tinycolor(
 												event.target.value

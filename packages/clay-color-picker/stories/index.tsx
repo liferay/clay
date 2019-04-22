@@ -17,10 +17,10 @@ const ClayColorPickerWithState = (props: any) => {
 
 	return (
 		<ClayColorPicker
-			{...props}
 			onValueChange={setColor}
 			spritemap={spritemap}
 			value={color}
+			{...props}
 		/>
 	);
 };
@@ -32,11 +32,15 @@ const ClayColorPickerWithCustomColors = (props: any) => {
 		'0000FF',
 	]);
 
+	const [color, setColor] = React.useState(customColors[0]);
+
 	return (
 		<ClayColorPickerWithState
 			{...props}
 			colors={customColors}
 			onColorsChange={setCustoms}
+			onValueChange={setColor}
+			value={color}
 		/>
 	);
 };
