@@ -1,0 +1,359 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayNavigationBar renders 1`] = `
+<nav
+  className="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light"
+>
+  <div
+    className="container-fluid container-fluid-max-xl"
+  >
+    <a
+      className="navbar-toggler navbar-toggler-link collapsed link-secondary"
+      onClick={[Function]}
+    >
+      <svg
+        className="lexicon-icon lexicon-icon-caret-bottom"
+        role="presentation"
+      >
+        <use
+          xlinkHref="#caret-bottom"
+        />
+      </svg>
+    </a>
+    <div
+      className="navbar-collapse collapse"
+      onTransitionEnd={[Function]}
+    >
+      <div
+        className="container-fluid container-fluid-max-xl"
+      >
+        <ul
+          className="navbar-nav"
+        />
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`ClayNavigationBar renders items as anchor 1`] = `
+<nav
+  className="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light"
+>
+  <div
+    className="container-fluid container-fluid-max-xl"
+  >
+    <a
+      className="navbar-toggler navbar-toggler-link collapsed link-secondary"
+      onClick={[Function]}
+    >
+      Test 1
+      <svg
+        className="lexicon-icon lexicon-icon-caret-bottom"
+        role="presentation"
+      >
+        <use
+          xlinkHref="node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"
+        />
+      </svg>
+    </a>
+    <div
+      className="navbar-collapse collapse"
+      onTransitionEnd={[Function]}
+    >
+      <div
+        className="container-fluid container-fluid-max-xl"
+      >
+        <ul
+          className="navbar-nav"
+        >
+          <li
+            className="nav-item active"
+            data-nav-item-index={0}
+          >
+            <a
+              className="nav-link active link-secondary"
+              href="#1"
+            >
+              <span
+                className="navbar-text-truncate"
+              >
+                Test 1
+              </span>
+            </a>
+          </li>
+          <li
+            className="nav-item"
+            data-nav-item-index={1}
+          >
+            <a
+              className="nav-link link-secondary"
+              href="#2"
+            >
+              <span
+                className="navbar-text-truncate"
+              >
+                Test 2
+              </span>
+            </a>
+          </li>
+          <li
+            className="nav-item"
+            data-nav-item-index={2}
+          >
+            <a
+              className="nav-link link-secondary"
+              href="#3"
+            >
+              <span
+                className="navbar-text-truncate"
+              >
+                Test 3
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`ClayNavigationBar renders items as buttons 1`] = `
+<nav
+  className="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light"
+>
+  <div
+    className="container-fluid container-fluid-max-xl"
+  >
+    <a
+      className="navbar-toggler navbar-toggler-link collapsed link-secondary"
+      onClick={[Function]}
+    >
+      Test 1
+      <svg
+        className="lexicon-icon lexicon-icon-caret-bottom"
+        role="presentation"
+      >
+        <use
+          xlinkHref="node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"
+        />
+      </svg>
+    </a>
+    <div
+      className="navbar-collapse collapse"
+      onTransitionEnd={[Function]}
+    >
+      <div
+        className="container-fluid container-fluid-max-xl"
+      >
+        <ul
+          className="navbar-nav"
+        >
+          <li
+            className="nav-item active"
+            data-nav-item-index={0}
+          >
+            <button
+              className="nav-link active btn btn-unstyled btn-block btn-sm"
+              type="button"
+            >
+              <span
+                className="navbar-text-truncate"
+              >
+                Test 1
+              </span>
+            </button>
+          </li>
+          <li
+            className="nav-item"
+            data-nav-item-index={1}
+          >
+            <button
+              className="nav-link btn btn-unstyled btn-block btn-sm"
+              type="button"
+            >
+              <span
+                className="navbar-text-truncate"
+              >
+                Test 2
+              </span>
+            </button>
+          </li>
+          <li
+            className="nav-item"
+            data-nav-item-index={2}
+          >
+            <button
+              className="nav-link btn btn-unstyled btn-block btn-sm"
+              type="button"
+            >
+              <span
+                className="navbar-text-truncate"
+              >
+                Test 3
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`ClayNavigationBar renders with id 1`] = `
+<nav
+  className="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light"
+  id="test"
+>
+  <div
+    className="container-fluid container-fluid-max-xl"
+  >
+    <a
+      className="navbar-toggler navbar-toggler-link collapsed link-secondary"
+      onClick={[Function]}
+    >
+      <svg
+        className="lexicon-icon lexicon-icon-caret-bottom"
+        role="presentation"
+      >
+        <use
+          xlinkHref="#caret-bottom"
+        />
+      </svg>
+    </a>
+    <div
+      className="navbar-collapse collapse"
+      onTransitionEnd={[Function]}
+    >
+      <div
+        className="container-fluid container-fluid-max-xl"
+      >
+        <ul
+          className="navbar-nav"
+        />
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`ClayNavigationBar renders with inverted 1`] = `
+<nav
+  className="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary"
+>
+  <div
+    className="container-fluid container-fluid-max-xl"
+  >
+    <a
+      className="navbar-toggler navbar-toggler-link collapsed link-secondary"
+      onClick={[Function]}
+    >
+      <svg
+        className="lexicon-icon lexicon-icon-caret-bottom"
+        role="presentation"
+      >
+        <use
+          xlinkHref="#caret-bottom"
+        />
+      </svg>
+    </a>
+    <div
+      className="navbar-collapse collapse"
+      onTransitionEnd={[Function]}
+    >
+      <div
+        className="container-fluid container-fluid-max-xl"
+      >
+        <ul
+          className="navbar-nav"
+        />
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`ClayNavigationBar renders with items 1`] = `
+<nav
+  className="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light"
+>
+  <div
+    className="container-fluid container-fluid-max-xl"
+  >
+    <a
+      className="navbar-toggler navbar-toggler-link collapsed link-secondary"
+      onClick={[Function]}
+    >
+      Test 1
+      <svg
+        className="lexicon-icon lexicon-icon-caret-bottom"
+        role="presentation"
+      >
+        <use
+          xlinkHref="node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"
+        />
+      </svg>
+    </a>
+    <div
+      className="navbar-collapse collapse"
+      onTransitionEnd={[Function]}
+    >
+      <div
+        className="container-fluid container-fluid-max-xl"
+      >
+        <ul
+          className="navbar-nav"
+        >
+          <li
+            className="nav-item active"
+            data-nav-item-index={0}
+          >
+            <a
+              className="nav-link active link-secondary"
+              href="#1"
+            >
+              <span
+                className="navbar-text-truncate"
+              >
+                Test 1
+              </span>
+            </a>
+          </li>
+          <li
+            className="nav-item"
+            data-nav-item-index={1}
+          >
+            <a
+              className="nav-link link-secondary"
+              href="#2"
+            >
+              <span
+                className="navbar-text-truncate"
+              >
+                Test 2
+              </span>
+            </a>
+          </li>
+          <li
+            className="nav-item"
+            data-nav-item-index={2}
+          >
+            <a
+              className="nav-link link-secondary"
+              href="#3"
+            >
+              <span
+                className="navbar-text-truncate"
+              >
+                Test 3
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
