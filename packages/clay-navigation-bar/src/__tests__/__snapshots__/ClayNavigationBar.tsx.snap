@@ -16,7 +16,7 @@ exports[`ClayNavigationBar renders 1`] = `
         role="presentation"
       >
         <use
-          xlinkHref="#caret-bottom"
+          xlinkHref="node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"
         />
       </svg>
     </a>
@@ -219,7 +219,7 @@ exports[`ClayNavigationBar renders with id 1`] = `
         role="presentation"
       >
         <use
-          xlinkHref="#caret-bottom"
+          xlinkHref="node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"
         />
       </svg>
     </a>
@@ -255,7 +255,7 @@ exports[`ClayNavigationBar renders with inverted 1`] = `
         role="presentation"
       >
         <use
-          xlinkHref="#caret-bottom"
+          xlinkHref="node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"
         />
       </svg>
     </a>
