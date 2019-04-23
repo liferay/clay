@@ -54,10 +54,7 @@ const ClayLabel: React.FunctionComponent<Props> = ({
 				[`label-${displayType}`]: displayType,
 			})}
 		>
-			<TagName
-				className="label-item label-item-expand"
-				href={href}
-			>
+			<TagName className="label-item label-item-expand" href={href}>
 				{children}
 			</TagName>
 

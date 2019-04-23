@@ -37,7 +37,7 @@ describe('ClayLabel', () => {
 
 	it('renders as closable', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayLabel 
+			<ClayLabel
 				closeButtonProps={{
 					onClick: () => {},
 				}}
@@ -52,7 +52,7 @@ describe('ClayLabel', () => {
 
 	it('renders as a link and closable ', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayLabel 
+			<ClayLabel
 				closeButtonProps={{
 					onClick: () => {},
 				}}
