@@ -176,12 +176,28 @@ div {
 }
 
 .form-control-tag-group {
-	align-items: center;
-	display: flex;
-	flex-wrap: wrap;
-	height: auto;
-	padding-bottom: $form-control-tag-group-padding-y;
-	padding-top: $form-control-tag-group-padding-y;
+	@include clay-container($form-control-tag-group);
+
+	.autofit-row {
+		@include clay-container($form-control-tag-group-autofit-row);
+	}
+
+	.autofit-col {
+		@include clay-container($form-control-tag-group-autofit-col);
+	}
+
+	.inline-item {
+		@include clay-container($form-control-tag-group-inline-item);
+	}
+
+	.btn {
+		@include clay-button-variant($form-control-tag-group-btn);
+	}
+
+	.btn-monospaced,
+	.component-action {
+		@include clay-button-variant($form-control-tag-group-btn-monospaced);
+	}
 }
 
 .form-control-inset {
