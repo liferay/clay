@@ -168,17 +168,23 @@
 				]
 	/}
 
+	{let $textMore kind="text"}
+		{msg desc=""}
+			more
+		{/msg}
+	{/let}
+
 	{let $showMoreButton:
 		$showingItems < $totalItems ? 
 			isNonnull($viewMoreURL) ?
 				[
 					'buttonStyle': 'secondary',
 					'href': $viewMoreURL,
-					'label': 'More',
+					'label': $textMore,
 				] 
 			:
 				[
-					'label': 'More',
+					'label': $textMore,
 					'style': 'secondary'
 				]
 		:

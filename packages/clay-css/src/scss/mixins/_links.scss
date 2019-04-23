@@ -19,6 +19,7 @@
 	$margin-left: map-get($map, margin-left);
 	$margin-right: map-get($map, margin-right);
 	$margin-top: map-get($map, margin-top);
+	$max-width: map-get($map, max-width);
 	$opacity: map-get($map, opacity);
 	$padding-bottom: map-get($map, padding-bottom);
 	$padding-left: map-get($map, padding-left);
@@ -88,6 +89,7 @@
 	margin-left: $margin-left;
 	margin-right: $margin-right;
 	margin-top: $margin-top;
+	max-width: $max-width;
 	opacity: $opacity;
 	padding-bottom: $padding-bottom;
 	padding-left: $padding-left;
@@ -203,4 +205,10 @@
 	a {
 		@include clay-link($clay-link);
 	}
+}
+
+// Shortcut for mixin `clay-text-typography`
+
+@mixin clay-title($map) {
+	@include clay-text-typography($map);
 }

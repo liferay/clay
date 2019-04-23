@@ -78,20 +78,20 @@
  * Render the visual area of the card.
  */
 {deltemplate ClayCardBase.VisualArea variant="'file'"}
-    {@param? icon: string}
-    {@param? imageAlt: string}
-    {@param? imageSrc: string}
-    {@param? spritemap: string}
-    {@param? stickerClasses: string}
-    {@param? stickerIcon: string}
-    {@param? stickerImageAlt: string}
-    {@param? stickerImageSrc: string}
-    {@param? stickerLabel: string}
-    {@param? stickerShape: string}
-    {@param? stickerStyle: string}
+	{@param? icon: string}
+	{@param? imageAlt: string}
+	{@param? imageSrc: string}
+	{@param? spritemap: string}
+	{@param? stickerClasses: string}
+	{@param? stickerIcon: string}
+	{@param? stickerImageAlt: string}
+	{@param? stickerImageSrc: string}
+	{@param? stickerLabel: string}
+	{@param? stickerShape: string}
+	{@param? stickerStyle: string}
 
 	{if $icon and $spritemap}
-		<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+		<div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 			{call ClayIcon.render}
 				{param spritemap: $spritemap /}
 				{param symbol: $icon /}
