@@ -13,14 +13,6 @@ import ClayLink from '@clayui/link';
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	/**
-	 * This property is used to pass a MouseEvent from a NavItem to a
-	 * function when this element is clicked.
-	 */
-	onItemClicked?: (
-		event: React.MouseEvent<HTMLLIElement, MouseEvent>
-	) => void | undefined;
-
-	/**
 	 * The id that will be given to the Navigation<nav> element
 	 */
 	id?: string;
@@ -34,6 +26,14 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	 * Determines the style of the Navigation Bar
 	 */
 	inverted?: boolean;
+
+	/**
+	 * This property is used to pass a MouseEvent from a NavItem to a
+	 * function when this element is clicked.
+	 */
+	onItemClicked?: (
+		event: React.MouseEvent<HTMLLIElement, MouseEvent>
+	) => void | undefined;
 
 	/**
 	 * Path to the location of the spritemap resource.
@@ -103,7 +103,6 @@ const ClayNavigationBar: React.FunctionComponent<Props> = ({
 
 	return (
 		<nav
-			{...otherProps}
 			className={classNames(
 				className,
 				'navbar',

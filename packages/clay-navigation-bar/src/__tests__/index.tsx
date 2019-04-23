@@ -6,7 +6,7 @@
 
 import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
-import ClayNavigationBar from '../ClayNavigationBar';
+import ClayNavigationBar from '..';
 
 const spritemap = 'node_modules/clay-css/lib/images/icons/icons.svg';
 
@@ -92,18 +92,18 @@ describe('ClayNavigationBar', () => {
 				items={[
 					{
 						active: true,
-						label: 'Test 1',
 						href: '#1',
+						label: 'Test 1',
 					},
 					{
 						active: false,
-						label: 'Test 2',
 						href: '#2',
+						label: 'Test 2',
 					},
 					{
 						active: false,
-						label: 'Test 3',
 						href: '#3',
+						label: 'Test 3',
 					},
 				]}
 				spritemap={spritemap}
