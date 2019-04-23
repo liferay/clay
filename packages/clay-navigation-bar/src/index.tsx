@@ -11,12 +11,10 @@ import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
 import ClayLink from '@clayui/link';
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {
-	/**
-	 * The id that will be given to the Navigation<nav> element
-	 */
-	id?: string;
+import {removeCollapseHeight, setCollapseHeight} from './Helpers';
+import {useTransition} from './Hooks';
 
+interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * An array of items that will be rendered on the dropdown.
 	 */
@@ -50,58 +48,16 @@ const ClayNavigationBar: React.FunctionComponent<Props> = ({
 	...otherProps
 }) => {
 	const [visible, setVisible] = React.useState(false);
-	const [transitioning, setTransitioning] = React.useState(false);
 	const contentRef = React.useRef<HTMLDivElement>(null);
-
-	useEffect(() => {
-		if (transitioning) {
-			setCollapseHeight();
-			if (visible) {
-				removeCollapseHeight();
-			}
-		}
-	}, [transitioning]);
-
-	const handleTransitionEnd = (event: any) => {
-		if (event.target === contentRef.current && transitioning && !visible) {
-			setVisible(true);
-			setTransitioning(false);
-			removeCollapseHeight();
-		} else if (event.target === contentRef.current) {
-			setVisible(false);
-			setTransitioning(false);
-		}
-	};
-
-	const setCollapseHeight = () => {
-		const elementCollapse = contentRef;
-		if (elementCollapse && elementCollapse.current) {
-			elementCollapse.current.setAttribute(
-				'style',
-				`height: ${elementCollapse.current.children[0].clientHeight}px`
-			);
-		}
-	};
-
-	const removeCollapseHeight = () => {
-		if (contentRef && contentRef.current) {
-			contentRef.current.style.removeProperty('height');
-		}
-	};
-
-	const handleClickToggler = (event: any) => {
-		event.preventDefault();
-		if (visible && !transitioning) {
-			setCollapseHeight();
-		}
-
-		if (!transitioning) {
-			setTransitioning(true);
-		}
-	};
+	const [
+		transitioning,
+		handleTransitionEnd,
+		handleClickToggler,
+	] = useTransition(visible, setVisible, contentRef);
 
 	return (
 		<nav
+			{...otherProps}
 			className={classNames(
 				className,
 				'navbar',
