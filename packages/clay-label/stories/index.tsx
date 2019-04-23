@@ -7,13 +7,19 @@
 import ClayLabel from '../src';
 import React from 'react';
 import {storiesOf} from '@storybook/react';
-import {text} from '@storybook/addon-knobs';
 
 import 'clay-css/lib/css/atlas.css';
 
 const spritemap = require('clay-css/lib/images/icons/icons.svg');
 
-const ClayLabelWithState = () => {
+interface Props
+	extends React.BaseHTMLAttributes<HTMLAnchorElement | HTMLSpanElement> {
+}
+
+const ClayLabelWithState: React.FunctionComponent<Props>  = ({
+	children,
+	href
+}) => {
 	const [visible, setVisible] = React.useState<boolean>(true);
 
 	return visible ? (
@@ -22,9 +28,10 @@ const ClayLabelWithState = () => {
 				onClick: () => setVisible(val => !val),
 			}}
 			displayType="success"
+			href={href}
 			spritemap={spritemap}
 		>
-			{'Closable'}
+			{children}
 		</ClayLabel>
 	) : null;
 };
@@ -40,4 +47,9 @@ storiesOf('ClayLabel', module)
 			<ClayLabel href="#/foo/bar">{'Label w/ link'}</ClayLabel>
 		</div>
 	))
-	.add('closable', () => <ClayLabelWithState />);
+	.add('closable', () => (
+		<div>
+			<ClayLabelWithState>{'Closable'}</ClayLabelWithState>
+			<ClayLabelWithState href="#/foo/bar">{'Label w/ link & Closable'}</ClayLabelWithState>
+		</div>
+	));
