@@ -25,7 +25,13 @@ $list-group-header-title: map-merge((
 
 $list-group-title-link: () !default;
 $list-group-title-link: map-merge((
+	border-radius: 1px,
+	display: inline-block,
+	max-width: 100%,
+	transition: box-shadow 0.15s ease-in-out,
 	hover-color: $gray-900,
+	focus-box-shadow: $component-focus-box-shadow,
+	focus-outline: 0,
 ), $list-group-title-link);
 
 $list-group-title: () !default;
@@ -39,14 +45,26 @@ $list-group-title: map-merge((
 
 $list-group-subtitle-link: () !default;
 $list-group-subtitle-link: map-merge((
+	border-radius: 1px,
+	display: inline-block,
+	max-width: 100%,
+	transition: box-shadow 0.15s ease-in-out,
 	hover-color: $gray-900,
+	focus-box-shadow: $component-focus-box-shadow,
+	focus-outline: 0,
 ), $list-group-subtitle-link);
 
 // List Group Text
 
 $list-group-text-link: () !default;
 $list-group-text-link: map-merge((
+	border-radius: 1px,
+	display: inline-block,
+	max-width: 100%,
+	transition: box-shadow 0.15s ease-in-out,
 	hover-color: $gray-900,
+	focus-box-shadow: $component-focus-box-shadow,
+	focus-outline: 0,
 ), $list-group-text-link);
 
 $list-group-text: () !default;
@@ -58,7 +76,13 @@ $list-group-text: map-merge((
 
 $list-group-subtext-link: () !default;
 $list-group-subtext-link: map-merge((
+	border-radius: 1px,
+	display: inline-block,
+	max-width: 100%,
+	transition: box-shadow 0.15s ease-in-out,
 	hover-color: $gray-900,
+	focus-box-shadow: $component-focus-box-shadow,
+	focus-outline: 0,
 ), $list-group-subtext-link);
 
 $list-group-subtext: () !default;
