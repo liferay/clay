@@ -4,10 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayNavigationBar from '../src/ClayNavigationBar';
+import ClayNavigationBar from '../src/index';
 import React from 'react';
 import {storiesOf} from '@storybook/react';
-import {text} from '@storybook/addon-knobs';
 
 import 'clay-css/lib/css/atlas.css';
 
