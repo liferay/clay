@@ -43,7 +43,6 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 
 const ClayNavigationBar: React.FunctionComponent<Props> = ({
 	className,
-	id,
 	inverted = false,
 	items,
 	onItemClicked,
@@ -115,7 +114,6 @@ const ClayNavigationBar: React.FunctionComponent<Props> = ({
 					'navigation-bar-secondary': inverted,
 				}
 			)}
-			id={id}
 		>
 			<div className="container-fluid container-fluid-max-xl">
 				<ClayLink
