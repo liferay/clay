@@ -117,6 +117,7 @@
 	$border-radius: map-get($map, border-radius);
 	$border-style: map-get($map, border-style);
 	$border-width: map-get($map, border-width);
+	$bottom: map-get($map, bottom);
 	$color: map-get($map, color);
 	$cursor: map-get($map, cursor);
 	$display: map-get($map, display);
@@ -126,6 +127,7 @@
 	$font-weight: map-get($map, font-weight);
 	$height: map-get($map, height);
 	$justify-content: map-get($map, justify-content);
+	$left: map-get($map, left);
 	$line-height: map-get($map, line-height);
 	$margin-bottom: map-get($map, margin-bottom);
 	$margin-left: map-get($map, margin-left);
@@ -136,7 +138,10 @@
 	$padding-left: map-get($map, padding-left);
 	$padding-right: map-get($map, padding-right);
 	$padding-top: map-get($map, padding-top);
+	$position: map-get($map, position);
+	$right: map-get($map, right);
 	$text-decoration: map-get($map, text-decoration);
+	$top: map-get($map, top);
 	$transition: map-get($map, transition);
 	$user-select: map-get($map, user-select);
 	$vertical-align: map-get($map, vertical-align);
@@ -193,6 +198,7 @@
 	border-radius: $border-radius;
 	border-style: $border-style;
 	border-width: $border-width;
+	bottom: $bottom;
 	color: $color;
 	display: $display;
 	flex-grow: $flex-grow;
@@ -201,6 +207,7 @@
 	font-weight: $font-weight;
 	height: $height;
 	justify-content: $justify-content;
+	left: $left;
 	line-height: $line-height;
 	margin-bottom: $margin-bottom;
 	margin-left: $margin-left;
@@ -211,7 +218,10 @@
 	padding-left: $padding-left;
 	padding-right: $padding-right;
 	padding-top: $padding-top;
+	position: $position;
+	right: $right;
 	text-decoration: $text-decoration;
+	top: $top;
 	transition: $transition;
 	user-select: $user-select;
 	vertical-align: $vertical-align;
