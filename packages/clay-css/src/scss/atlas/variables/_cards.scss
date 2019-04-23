@@ -95,6 +95,16 @@ $card-type-template-after-highlight: map-merge((
 	right: -1px,
 ), $card-type-template-after-highlight);
 
+$card-type-template-aspect-ratio: () !default;
+$card-type-template-aspect-ratio: map-merge((
+	bg-image: none,
+), $card-type-template-aspect-ratio);
+
+$card-type-template-aspect-ratio-item: () !default;
+$card-type-template-aspect-ratio-item: map-merge((
+	color: $gray-600,
+), $card-type-template-aspect-ratio-item);
+
 $card-type-template: () !default;
 $card-type-template: map-merge((
 	border-width: 1px,

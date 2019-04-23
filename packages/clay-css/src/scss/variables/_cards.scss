@@ -244,6 +244,11 @@ $card-type-template-aspect-ratio: map-merge((
 	lexicon-icon-width: 28%,
 ), $card-type-template-aspect-ratio);
 
+$card-type-template-aspect-ratio-item: () !default;
+$card-type-template-aspect-ratio-item: map-merge((
+	width: 100.6%,
+), $card-type-template-aspect-ratio-item);
+
 $card-type-template-card-title: () !default;
 $card-type-template-card-title: map-merge((
 	display: block,
@@ -261,6 +266,7 @@ $card-type-template: map-merge((
 	hover-color: $gray-900,
 	after-highlight: $card-type-template-after-highlight,
 	aspect-ratio: $card-type-template-aspect-ratio,
+	aspect-ratio-item: $card-type-template-aspect-ratio-item,
 	card-title: $card-type-template-card-title,
 	card-text: $card-type-template-card-text,
 ), $card-type-template);
