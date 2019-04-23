@@ -55,7 +55,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
   <li class="card-page-item card-page-item-directory">
     <div class="card-type-asset card image-card">
       <div class="aspect-ratio card-item-first">
-        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+        <div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
           <svg class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false" role="presentation">
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
@@ -82,7 +82,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
   <li class="card-page-item card-page-item-directory">
     <div class="card-type-asset card image-card">
       <div class="aspect-ratio card-item-first">
-        <img alt="Ramen" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./ramen.jpg">
+        <img alt="Ramen" class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./ramen.jpg">
         <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
           <span class="sticker-overlay">PDF</span>
         </span>
@@ -105,7 +105,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
   <li class="card-page-item card-page-item-directory">
     <div class="card-type-asset card image-card">
       <div class="aspect-ratio card-item-first">
-        <img alt="Paella" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./paella.jpg">
+        <img alt="Paella" class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./paella.jpg">
         <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
           <span class="sticker-overlay">PDF</span>
         </span>
@@ -128,7 +128,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
   <li class="card-page-item card-page-item-directory">
     <div class="card-type-asset card image-card">
       <div class="aspect-ratio card-item-first">
-        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+        <div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
           <svg class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false" role="presentation">
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
@@ -155,7 +155,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
   <li class="card-page-item card-page-item-directory">
     <div class="card-type-asset card image-card">
       <div class="aspect-ratio card-item-first">
-        <img alt="Carcamusas" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./carcamusas.jpg">
+        <img alt="Carcamusas" class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="./carcamusas.jpg">
         <span class="sticker sticker-circle sticker-danger sticker-bottom-left">
           <span class="sticker-overlay">PDF</span>
         </span>
@@ -178,7 +178,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
   <li class="card-page-item card-page-item-directory">
     <div class="card-type-asset card image-card">
       <div class="aspect-ratio card-item-first">
-        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+        <div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
           <svg class="lexicon-icon lexicon-icon-exclamation-circle" focusable="false" role="presentation">
             <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#exclamation-circle"></use>
           </svg>
@@ -208,7 +208,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
   <li class="card-page-item card-page-item-directory">
     <div class="card-type-asset card user-card">
       <div class="aspect-ratio card-item-first">
-        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+        <div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
           <span class="sticker sticker-circle sticker-danger sticker-user-icon">
             <span class="inline-item">
               <svg class="lexicon-icon lexicon-icon-user" focusable="false" role="presentation">
@@ -230,7 +230,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
   <li class="card-page-item card-page-item-directory">
     <div class="card-type-asset card user-card">
       <div class="aspect-ratio card-item-first">
-        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+        <div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
           <span class="sticker sticker-circle sticker-primary sticker-user-icon">
             <span class="sticker-overlay">
               <img alt="Gordon Ramsay" class="sticker-img" src="./ramsay.jpg">
@@ -250,7 +250,7 @@ exports[`ClayCardGrid should render the default markup 1`] = `
   <li class="card-page-item card-page-item-directory">
     <div class="card-type-asset card user-card">
       <div class="aspect-ratio card-item-first">
-        <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+        <div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
           <span class="sticker sticker-circle sticker-primary sticker-user-icon">
             <span class="inline-item">
               <svg class="lexicon-icon lexicon-icon-user" focusable="false" role="presentation">

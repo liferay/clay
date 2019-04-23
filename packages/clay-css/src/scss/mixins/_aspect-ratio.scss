@@ -6,9 +6,45 @@
 	padding-bottom: percentage($height / $width);
 }
 
+@mixin clay-aspect-ratio-item-variant($map) {
+	$enabled: setter(map-get($map, enabled), true);
+
+	$bottom: map-get($map, bottom);
+	$color: map-get($map, color);
+	$display: map-get($map, display);
+	$height: map-get($map, height);
+	$left: map-get($map, left);
+	$max-height: map-get($map, max-height);
+	$max-width: map-get($map, max-width);
+	$overflow: map-get($map, overflow);
+	$position: map-get($map, position);
+	$right: map-get($map, right);
+	$top: map-get($map, top);
+	$width: map-get($map, width);
+	$word-wrap: map-get($map, word-wrap);
+
+	@if ($enabled) {
+		bottom: $bottom;
+		color: $color;
+		display: $display;
+		height: $height;
+		left: $left;
+		max-height: $max-height;
+		max-width: $max-width;
+		overflow: $overflow;
+		position: $position;
+		right: $right;
+		top: $top;
+		width: $width;
+		word-wrap: $word-wrap;
+	}
+}
+
 @mixin clay-aspect-ratio-variant($map) {
 	$enabled: setter(map-get($map, enabled), true);
 
+	$bg: map-get($map, bg);
+	$bg-image: map-get($map, bg-image);
 	$border-color: map-get($map, border-color);
 	$border-style: map-get($map, border-style);
 	$border-width: map-get($map, border-width);
@@ -23,6 +59,8 @@
 	$lexicon-icon-width: map-get($map, lexicon-icon-width);
 
 	@if ($enabled) {
+		background-color: $bg;
+		background-image: $bg-image;
 		border-color: $border-color;
 		border-style: $border-style;
 		border-width: $border-width;
