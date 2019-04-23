@@ -13,16 +13,77 @@ exports[`ClayLabel renders 1`] = `
 `;
 
 exports[`ClayLabel renders as a link  1`] = `
-<a
+<span
   className="label label-secondary"
-  href="#/foo/bar"
+>
+  <a
+    className="label-item label-item-expand"
+    href="#/foo/bar"
+  >
+    Label w/ link
+  </a>
+</span>
+`;
+
+exports[`ClayLabel renders as a link and closable  1`] = `
+<span
+  className="label label-dismissible label-secondary"
+>
+  <a
+    className="label-item label-item-expand"
+    href="#/foo/bar"
+  >
+    Label Closable
+  </a>
+  <span
+    className="label-item label-item-after"
+  >
+    <button
+      className="close"
+      onClick={[Function]}
+      type="button"
+    >
+      <svg
+        className="lexicon-icon lexicon-icon-times"
+        role="presentation"
+      >
+        <use
+          xlinkHref="path/to/spritemap#times"
+        />
+      </svg>
+    </button>
+  </span>
+</span>
+`;
+
+exports[`ClayLabel renders as closable 1`] = `
+<span
+  className="label label-dismissible label-secondary"
 >
   <span
     className="label-item label-item-expand"
   >
-    Label w/ link
+    Label Closable
   </span>
-</a>
+  <span
+    className="label-item label-item-after"
+  >
+    <button
+      className="close"
+      onClick={[Function]}
+      type="button"
+    >
+      <svg
+        className="lexicon-icon lexicon-icon-times"
+        role="presentation"
+      >
+        <use
+          xlinkHref="path/to/spritemap#times"
+        />
+      </svg>
+    </button>
+  </span>
+</span>
 `;
 
 exports[`ClayLabel renders with a different displayType  1`] = `
