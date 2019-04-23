@@ -11,3 +11,7 @@ The main Clay site at clayui.com
 
 ## Serving production generated files:
 `yarn serve`
+
+## Deployment
+
+`yarn deploy --remote upstream`
