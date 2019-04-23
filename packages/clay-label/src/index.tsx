@@ -46,16 +46,17 @@ const ClayLabel: React.FunctionComponent<Props> = ({
 	const TagName = href ? 'a' : 'span';
 
 	return (
-		<TagName
+		<span
 			{...otherProps}
 			className={classNames('label', className, {
 				'label-dismissible': closeButtonProps,
 				'label-lg': large,
 				[`label-${displayType}`]: displayType,
 			})}
-			href={href}
 		>
-			<span className="label-item label-item-expand">{children}</span>
+			<TagName className="label-item label-item-expand" href={href}>
+				{children}
+			</TagName>
 
 			{closeButtonProps && (
 				<span className="label-item label-item-after">
@@ -68,7 +69,7 @@ const ClayLabel: React.FunctionComponent<Props> = ({
 					</button>
 				</span>
 			)}
-		</TagName>
+		</span>
 	);
 };
 

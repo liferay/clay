@@ -6,8 +6,8 @@
 
 import ClayLabel from '../src';
 import React from 'react';
+import {boolean, select, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import {text} from '@storybook/addon-knobs';
 
 import 'clay-css/lib/css/atlas.css';
 
@@ -18,26 +18,32 @@ const ClayLabelWithState = () => {
 
 	return visible ? (
 		<ClayLabel
-			closeButtonProps={{
-				onClick: () => setVisible(val => !val),
-			}}
-			displayType="success"
+			closeButtonProps={
+				boolean('Closeable', false)
+					? {
+							onClick: () => setVisible(val => !val),
+					  }
+					: undefined
+			}
+			displayType={
+				select(
+					'Display Type',
+					{
+						danger: 'danger',
+						info: 'info',
+						secondary: 'secondary',
+						success: 'success',
+						warning: 'warning',
+					},
+					'secondary'
+				) as 'secondary'
+			}
+			href={text('Href', '')}
 			spritemap={spritemap}
 		>
-			{'Closable'}
+			{text('Label', 'Label')}
 		</ClayLabel>
 	) : null;
 };
 
-storiesOf('ClayLabel', module)
-	.add('default', () => (
-		<div>
-			<ClayLabel>{'Default Label'}</ClayLabel>
-			<ClayLabel displayType="info">{'Info Label'}</ClayLabel>
-			<ClayLabel displayType="warning">{'Warning Label'}</ClayLabel>
-			<ClayLabel displayType="danger">{'Danger Label'}</ClayLabel>
-			<ClayLabel displayType="success">{'Success Label'}</ClayLabel>
-			<ClayLabel href="#/foo/bar">{'Label w/ link'}</ClayLabel>
-		</div>
-	))
-	.add('closable', () => <ClayLabelWithState />);
+storiesOf('ClayLabel', module).add('default', () => <ClayLabelWithState />);
