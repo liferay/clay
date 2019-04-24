@@ -730,6 +730,16 @@ ClayAutocomplete.STATE = {
 	valueLocator: Config.oneOfType([Config.func(), Config.string()]).value(
 		'value'
 	),
+
+	/**
+	 * Flag to indicate whether to wrap input with the
+	 * `.autofit` utility classes. See the MultiSelect use case.
+	 * @default false
+	 * @instance
+	 * @memberof ClayAutocomplete
+	 * @type {?bool}
+	 */
+	wrapInput: Config.bool().value(false),
 };
 
 defineWebComponent('clay-autocomplete', ClayAutocomplete);
