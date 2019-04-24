@@ -54,6 +54,8 @@ const ClayNavigationBar: React.FunctionComponent<Props> = ({
 		handleClickToggler,
 	] = useTransition(visible, setVisible, contentRef);
 
+	const activeItem = items.find(item => item.hasOwnProperty('active'));
+
 	return (
 		<nav
 			{...otherProps}
@@ -82,11 +84,8 @@ const ClayNavigationBar: React.FunctionComponent<Props> = ({
 					displayType="secondary"
 					onClick={handleClickToggler}
 				>
-					{items.map(({active, label}) => {
-						if (active) {
-							return label;
-						}
-					})}
+					{activeItem ? activeItem.label : ''}
+
 					<ClayIcon spritemap={spritemap} symbol="caret-bottom" />
 				</ClayLink>
 
