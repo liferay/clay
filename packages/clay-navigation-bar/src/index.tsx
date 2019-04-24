@@ -11,7 +11,6 @@ import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
 import ClayLink from '@clayui/link';
 
-import {removeCollapseHeight, setCollapseHeight} from './Helpers';
 import {useTransition} from './Hooks';
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
