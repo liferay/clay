@@ -6,6 +6,7 @@
 
 import ClayNavigationBar from '../src/index';
 import React from 'react';
+import {boolean} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
 import 'clay-css/lib/css/atlas.css';
@@ -15,6 +16,7 @@ const spritemap = require('clay-css/lib/images/icons/icons.svg');
 storiesOf('ClayNavigationBar', module)
 	.add('default', () => (
 		<ClayNavigationBar
+			inverted={boolean('Inverted', false)}	
 			items={[
 				{
 					active: true,
@@ -30,59 +32,9 @@ storiesOf('ClayNavigationBar', module)
 			spritemap={spritemap}
 		/>
 	))
-	.add('Light with list items as anchors', () => (
+	.add('Navigation Bar with list items as anchors', () => (
 		<ClayNavigationBar
-			items={[
-				{
-					active: true,
-					href: '#',
-					label: 'Test 1',
-				},
-				{
-					active: false,
-					href: '#',
-					label: 'Test 2',
-				},
-				{
-					active: false,
-					href: '#',
-					label: 'Test 3',
-				},
-				{
-					active: false,
-					href: '#',
-					label: 'Test 4',
-				},
-			]}
-			spritemap={spritemap}
-		/>
-	))
-	.add('Light with list items as buttons', () => (
-		<ClayNavigationBar
-			items={[
-				{
-					active: true,
-					label: 'Test 1',
-				},
-				{
-					active: false,
-					label: 'Test 2',
-				},
-				{
-					active: false,
-					label: 'Test 3',
-				},
-				{
-					active: false,
-					label: 'Test 4',
-				},
-			]}
-			spritemap={spritemap}
-		/>
-	))
-	.add('Inverted with list items as anchors', () => (
-		<ClayNavigationBar
-			inverted
+			inverted={boolean('Inverted', false)}
 			items={[
 				{
 					active: true,
@@ -108,9 +60,9 @@ storiesOf('ClayNavigationBar', module)
 			spritemap={spritemap}
 		/>
 	))
-	.add('Inverted with list items as buttons', () => (
+	.add('Navigation Bar with list items as buttons', () => (
 		<ClayNavigationBar
-			inverted
+			inverted={boolean('Inverted', false)}	
 			items={[
 				{
 					active: true,
