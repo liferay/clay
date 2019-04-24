@@ -93,7 +93,6 @@ describe('Interactions', () => {
 
 	describe('color editor interactions', () => {
 		let editorContainer: any;
-		let editorGetByLabelText: any;
 		let editorGetByTestId: any;
 
 		const handleColorsChange = jest.fn();
@@ -130,9 +129,6 @@ describe('Interactions', () => {
 			fireEvent.click(colorEditorToggle as HTMLButtonElement, {});
 
 			editorContainer = container;
-
-			editorGetByLabelText = getByLabelText;
-
 			editorGetByTestId = getByTestId;
 		});
 
@@ -195,7 +191,7 @@ describe('Interactions', () => {
 		});
 
 		it('changes the color by changing the input', () => {
-			const hexInput = editorGetByTestId('hexInput');
+			const hexInput = editorGetByTestId('customHexInput');
 
 			fireEvent.change(hexInput, {target: {value: 'DDDDDD'}});
 
@@ -210,7 +206,7 @@ describe('Interactions', () => {
 
 			fireEvent.click(splotchArray[5], {});
 
-			const hexInput = editorGetByTestId('hexInput');
+			const hexInput = editorGetByTestId('customHexInput');
 
 			fireEvent.change(hexInput, {target: {value: 'DDDDDD'}});
 

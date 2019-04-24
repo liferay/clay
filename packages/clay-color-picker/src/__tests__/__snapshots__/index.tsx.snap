@@ -802,7 +802,7 @@ exports[`Interactions opens custom color picker drop down when clicked 2`] = `
                   >
                     <input
                       class="form-control input-group-inset input-group-inset-before"
-                      data-testid="hexInput"
+                      data-testid="customHexInput"
                       type="text"
                       value="000000"
                     />

@@ -45,7 +45,7 @@ const Hue: React.FunctionComponent<HueProps> = ({
 	}, [value]);
 
 	useEffect(() => removeListeners, []);
-	// console.log(x);
+
 	return (
 		<div
 			className="clay-color-range clay-color-range-hue"

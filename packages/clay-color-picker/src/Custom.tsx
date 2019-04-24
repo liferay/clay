@@ -80,6 +80,7 @@ const Custom: React.FunctionComponent<CustomProps> = ({
 	onColorsChange,
 	spritemap,
 }) => {
+	const inputRef = React.useRef(null);
 	const [activeSplotchIndex, setActiveSplotchIndex] = useState(0);
 	const [editorActive, setEditorActive] = useState(false);
 
@@ -110,7 +111,9 @@ const Custom: React.FunctionComponent<CustomProps> = ({
 	};
 
 	React.useEffect(() => {
-		setHexInput(color.toHex());
+		if (inputRef.current !== document.activeElement) {
+			setHexInput(color.toHex());
+		}
 	}, [color]);
 
 	return (
@@ -210,7 +213,7 @@ const Custom: React.FunctionComponent<CustomProps> = ({
 								<div className="input-group-item">
 									<input
 										className="form-control input-group-inset input-group-inset-before"
-										data-testid="hexInput"
+										data-testid="customHexInput"
 										onBlur={event => {
 											const newColor = tinycolor(
 												event.target.value
@@ -237,6 +240,7 @@ const Custom: React.FunctionComponent<CustomProps> = ({
 												setNewColor(newColor, false);
 											}
 										}}
+										ref={inputRef}
 										type="text"
 										value={hexInputVal
 											.toUpperCase()
