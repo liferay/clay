@@ -51,7 +51,6 @@ const Hue: React.FunctionComponent<HueProps> = ({
 			className="clay-color-range clay-color-range-hue"
 			onMouseDown={event => {
 				selectorActive.current = true;
-
 				onMouseMove(event);
 
 				window.addEventListener('mousemove', onMouseMove);

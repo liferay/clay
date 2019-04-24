@@ -7,11 +7,12 @@
 import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
 import ClayLabel from '..';
+import {cleanup, fireEvent, render} from 'react-testing-library';
 
 const spritemap = 'path/to/spritemap';
 
-describe('ClayLabel', () => {
-	it('renders', () => {
+describe('Rendering', () => {
+	it('default', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayLabel>{'Default Label'}</ClayLabel>
 		);
@@ -19,7 +20,7 @@ describe('ClayLabel', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders with a different displayType ', () => {
+	it('with a different displayType ', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayLabel displayType="success">{'Success Label'}</ClayLabel>
 		);
@@ -27,7 +28,7 @@ describe('ClayLabel', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders as a link ', () => {
+	it('as a link ', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayLabel href="#/foo/bar">{'Label w/ link'}</ClayLabel>
 		);
@@ -64,5 +65,26 @@ describe('ClayLabel', () => {
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+});
+
+describe('Interactions', () => {
+	afterEach(cleanup);
+
+	it('clicking the close button should call closeButtonProps.onClick', () => {
+		const handleClose = jest.fn();
+
+		const {container} = render(
+			<ClayLabel
+				closeButtonProps={{onClick: handleClose}}
+				spritemap="foo/bar"
+			/>
+		);
+
+		const closeButton = container.querySelector('button');
+
+		fireEvent.click(closeButton as HTMLButtonElement, {});
+
+		expect(handleClose).toHaveBeenCalledTimes(1);
 	});
 });

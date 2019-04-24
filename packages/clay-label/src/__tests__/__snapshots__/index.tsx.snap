@@ -1,18 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayLabel renders 1`] = `
-<span
-  className="label label-secondary"
->
-  <span
-    className="label-item label-item-expand"
-  >
-    Default Label
-  </span>
-</span>
-`;
-
-exports[`ClayLabel renders as a link  1`] = `
+exports[`Rendering as a link  1`] = `
 <span
   className="label label-secondary"
 >
@@ -25,7 +13,19 @@ exports[`ClayLabel renders as a link  1`] = `
 </span>
 `;
 
-exports[`ClayLabel renders as a link and closable  1`] = `
+exports[`Rendering default 1`] = `
+<span
+  className="label label-secondary"
+>
+  <span
+    className="label-item label-item-expand"
+  >
+    Default Label
+  </span>
+</span>
+`;
+
+exports[`Rendering renders as a link and closable  1`] = `
 <span
   className="label label-dismissible label-secondary"
 >
@@ -56,7 +56,7 @@ exports[`ClayLabel renders as a link and closable  1`] = `
 </span>
 `;
 
-exports[`ClayLabel renders as closable 1`] = `
+exports[`Rendering renders as closable 1`] = `
 <span
   className="label label-dismissible label-secondary"
 >
@@ -86,7 +86,7 @@ exports[`ClayLabel renders as closable 1`] = `
 </span>
 `;
 
-exports[`ClayLabel renders with a different displayType  1`] = `
+exports[`Rendering with a different displayType  1`] = `
 <span
   className="label label-success"
 >

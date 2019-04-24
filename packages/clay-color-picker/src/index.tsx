@@ -202,7 +202,6 @@ const ColorPicker: React.FunctionComponent<Props> = ({
 										onChange={onValueChange}
 										onColorsChange={onColorsChange}
 										spritemap={spritemap}
-										value={value}
 									/>
 								)}
 							</div>
