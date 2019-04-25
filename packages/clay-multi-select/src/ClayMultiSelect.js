@@ -106,9 +106,8 @@ class ClayMultiSelect extends ClayComponent {
 
 		if (char === ',' || words.length > 1) {
 			words.forEach(word => {
-				const value = word.trim();
 				const added = this._addLabelItem(
-					this._createItemObject(value, value)
+					this._createItemObject(word, word)
 				);
 
 				inputValue = inputValue.replace(word + ',', added ? '' : word);
@@ -256,7 +255,7 @@ class ClayMultiSelect extends ClayComponent {
 			event.preventDefault();
 
 			if (element.value) {
-				let value = element.value.trim();
+				let value = element.value;
 
 				this._addLabelItem(this._createItemObject(value, value));
 			}
@@ -340,7 +339,7 @@ class ClayMultiSelect extends ClayComponent {
 
 	/**
 	 * Continues the propagation of the itemAdded event.
-	 * @param {!String} item
+	 * @param {!Object} item
 	 * @protected
 	 * @return {?Boolean} If the item has been added or not.
 	 */
@@ -407,8 +406,8 @@ class ClayMultiSelect extends ClayComponent {
 	 */
 	_createItemObject(label, value) {
 		return {
-			label: label,
-			value: value,
+			label: label.trim(),
+			value: value.trim(),
 		};
 	}
 
