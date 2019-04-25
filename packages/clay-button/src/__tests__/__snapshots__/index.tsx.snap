@@ -7,6 +7,30 @@ exports[`ClayButton renders 1`] = `
 />
 `;
 
+exports[`ClayButton renders a ButtonGroup with spaced 1`] = `
+<div
+  className="btn-group"
+  role="group"
+>
+  <div
+    className="btn-group-item"
+  >
+    <button
+      className="btn btn-primary"
+      type="button"
+    />
+  </div>
+  <div
+    className="btn-group-item"
+  >
+    <button
+      className="btn btn-primary"
+      type="button"
+    />
+  </div>
+</div>
+`;
+
 exports[`ClayButton renders block 1`] = `
 <button
   className="btn btn-primary btn-block"
