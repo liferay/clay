@@ -3,7 +3,7 @@ $pagination-font-size: null !default;
 // Pagination Item
 
 $pagination-item-height: 2.375rem !default; // 38px
-$pagination-item-margin-x: null !default;
+$pagination-item-margin-x: -0.5px !default;
 $pagination-item-margin-y: null !default;
 
 $pagination-item: () !default;
@@ -63,7 +63,7 @@ $pagination-link-hover: map-merge((
 $pagination-link-focus: () !default;
 $pagination-link-focus: map-merge((
 	box-shadow: $pagination-focus-box-shadow,
-	z-index: 3,
+	z-index: 4,
 ), $pagination-link-focus);
 
 $pagination-link-active: () !default;
@@ -72,7 +72,7 @@ $pagination-link-active: map-merge((
 	border-color: $pagination-active-border-color,
 	cursor: default,
 	color: $pagination-active-color,
-	z-index: 2,
+	z-index: 3,
 ), $pagination-link-active);
 
 $pagination-link-disabled: () !default;
