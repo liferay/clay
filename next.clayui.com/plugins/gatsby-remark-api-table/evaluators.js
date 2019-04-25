@@ -4,15 +4,15 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-const type = (ast) => VISITOR[ast.type.type](ast.type);
+const type = ast => VISITOR[ast.type.type](ast.type);
 
-const defaultValue = (ast) => {
+const defaultValue = ast => {
 	return {
 		[ast.title]: ast.description,
 	};
 };
 
-const NullableType = (ast) => {
+const NullableType = ast => {
 	const {expression} = ast;
 
 	return {
@@ -21,7 +21,7 @@ const NullableType = (ast) => {
 	};
 };
 
-const NonNullableType = (ast) => {
+const NonNullableType = ast => {
 	const {expression} = ast;
 
 	return {
@@ -30,22 +30,28 @@ const NonNullableType = (ast) => {
 	};
 };
 
-const NameExpression = (type) => type.name;
+const NameExpression = type => type.name;
 
-const UnionType = (type) => {
-	return type.elements.map(element => {
-		return VISITOR[element.type](element);
-	}).join('|');
+const UnionType = type => {
+	return type.elements
+		.map(element => {
+			return VISITOR[element.type](element);
+		})
+		.join('|');
 };
 
 const UndefinedLiteral = () => 'undefined';
 
-const TypeApplication = (type) => {
-	let applications = type.applications.map(element => {
-		return VISITOR[element.type](element);
-	}).join('|');
+const TypeApplication = type => {
+	const applications = type.applications
+		.map(element => {
+			return VISITOR[element.type](element);
+		})
+		.join('|');
 
-	return `${VISITOR[type.expression.type](type.expression)}&lt${applications}&gt`;
+	return `${VISITOR[type.expression.type](
+		type.expression
+	)}&lt${applications}&gt`;
 };
 
 const VISITOR = {

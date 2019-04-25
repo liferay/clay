@@ -11,18 +11,20 @@ const globby = require('globby');
 const langs = require('languages');
 
 const alternateCodes = {
-	'in': 'id',
-	'iw': 'he',
-	'nb': 'no',
+	in: 'id',
+	iw: 'he',
+	nb: 'no',
 };
 
-const replaceValue = (array) => {
-	const htmlValue = array.map(item => `<li>
+const replaceValue = array => {
+	const htmlValue = array.map(
+		item => `<li>
         <svg class="lexicon-icon lexicon-icon-${item.icon}">
             <use xlink:href="/images/icons/icons.svg#${item.icon}" />
         </svg>
         <span>${item.name}</span>
-    </li>`);
+    </li>`
+	);
 
 	return htmlValue.join(' ');
 };
@@ -30,19 +32,19 @@ const replaceValue = (array) => {
 const getFiles = (dir, glob) => {
 	const files = globby.sync(dir, {
 		expandDirectories: {
-			files: glob || [],
 			extensions: ['svg'],
+			files: glob || [],
 		},
 	});
 	const filelist = [];
 
 	files.forEach(file => {
 		const name = file.replace(/\.svg$/, '');
-		const nameWithoutExtension = name.replace(dir + '/', '');
+		const nameWithoutExtension = name.replace(`${dir}/`, '');
 
 		filelist.push({
-			name: nameWithoutExtension,
 			icon: nameWithoutExtension,
+			name: nameWithoutExtension,
 		});
 	});
 
@@ -72,15 +74,15 @@ module.exports = ({markdownAST}) => {
 					const country = countries[countryCode.toUpperCase()];
 
 					if (country) {
-						lang += ' (' + country.name + ')';
+						lang += ` (${country.name})`;
 					}
 				}
 
-				let icon = langCode + '-' + countryCode;
+				const icon = `${langCode}-${countryCode}`;
 
 				return {
-					name: lang + ` (${icon.toLowerCase()})`,
 					icon: icon.toLowerCase(),
+					name: `${lang} (${icon.toLowerCase()})`,
 				};
 			});
 
@@ -93,11 +95,13 @@ module.exports = ({markdownAST}) => {
 		if (node.value.includes(foreachIcons)) {
 			let dataIcons = getFiles(path, ['*']);
 
-			dataIcons = dataIcons.map(item => {
-				if (!item.name.includes('flags') && item.name !== 'icons') {
-					return item;
-				}
-			}).filter(value => typeof value !== 'undefined');
+			dataIcons = dataIcons
+				.map(item => {
+					if (!item.name.includes('flags') && item.name !== 'icons') {
+						return item;
+					}
+				})
+				.filter(value => typeof value !== 'undefined');
 
 			node.value = node.value.replace(
 				foreachIcons,

@@ -4,29 +4,24 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {graphql} from 'gatsby';
 import Helmet from 'react-helmet';
 import React from 'react';
+import {graphql} from 'gatsby';
 
-import Sidebar from '../components/Sidebar';
-import LayoutNav from '../components/LayoutNav';
 import getSection from '../utils/getSection';
+import LayoutNav from '../components/LayoutNav';
+import Sidebar from '../components/Sidebar';
 
-export default ({
-	data,
-	location,
-}) => {
+export default ({data, location}) => {
 	const {allMarkdownRemark, markdownRemark} = data;
-	const {
-		frontmatter,
-		excerpt,
-		timeToRead,
-		html,
-	} = markdownRemark;
+	const {excerpt, frontmatter, html, timeToRead} = markdownRemark;
 	const title = `${frontmatter.title} - Clay`;
 
 	const list = allMarkdownRemark.edges.map(({node}) => {
-		const {fields: {slug}, frontmatter: {title}} = node;
+		const {
+			fields: {slug},
+			frontmatter: {title},
+		} = node;
 		return {link: slug.replace('.html', ''), title};
 	});
 
@@ -34,16 +29,13 @@ export default ({
 		<div className="blog">
 			<Helmet>
 				<title>{title}</title>
-				<meta name="description" content={excerpt} />
-				<meta name="og:description" content={excerpt} />
-				<meta name="twitter:description" content={excerpt} />
-				<meta name="og:title" content={title} />
-				<meta name="og:type" content="article" />
-				<meta name="twitter.label1" content="Reading time" />
-				<meta
-					name="twitter:data1"
-					content={`${timeToRead} min read`}
-				/>
+				<meta content={excerpt} name="description" />
+				<meta content={excerpt} name="og:description" />
+				<meta content={excerpt} name="twitter:description" />
+				<meta content={title} name="og:title" />
+				<meta content="article" name="og:type" />
+				<meta content="Reading time" name="twitter.label1" />
+				<meta content={`${timeToRead} min read`} name="twitter:data1" />
 			</Helmet>
 			<main className="content">
 				<LayoutNav />
@@ -53,15 +45,27 @@ export default ({
 						<div className="col-xl-9 sidebar-offset">
 							<header>
 								<div className="clay-site-container container-fluid">
-									<h1 className="blog-title">{frontmatter.title}</h1>
+									<h1 className="blog-title">
+										{frontmatter.title}
+									</h1>
 									<span className="blog-date">
-										{markdownRemark.fields.date} by {toCommaSeparatedList(frontmatter.author, author => (
-											<a
-												href={author.frontmatter.url}
-												key={author.frontmatter.name}>
-												{author.frontmatter.name}
-											</a>
-										))}
+										{markdownRemark.fields.date}
+										{' by '}
+										{toCommaSeparatedList(
+											frontmatter.author,
+											author => (
+												<a
+													href={
+														author.frontmatter.url
+													}
+													key={
+														author.frontmatter.name
+													}
+												>
+													{author.frontmatter.name}
+												</a>
+											)
+										)}
 									</span>
 								</div>
 							</header>
@@ -69,7 +73,11 @@ export default ({
 								<div className="row">
 									<div className="col-md-12">
 										<article>
-											<div dangerouslySetInnerHTML={{__html: html}} />
+											<div
+												dangerouslySetInnerHTML={{
+													__html: html,
+												}}
+											/>
 										</article>
 									</div>
 								</div>
@@ -85,10 +93,7 @@ export default ({
 const addString = (list, string) =>
 	list.push(<span key={`${list.length}-${string}`}>{string}</span>);
 
-const toCommaSeparatedList = (
-	array,
-	renderCallback,
-) => {
+const toCommaSeparatedList = (array, renderCallback) => {
 	if (array.length <= 1) {
 		return array.map(renderCallback);
 	}
@@ -111,40 +116,40 @@ const toCommaSeparatedList = (
 };
 
 export const pageQuery = graphql`
-  query TemplateBlogMarkdown($slug: String!) {
-    markdownRemark(fields: {slug: {eq: $slug}}) {
-      html
-      excerpt(pruneLength: 500)
-      frontmatter {
-        title
-        author {
-          frontmatter {
-            name
-            url
-          }
-        }
-      }
-      fields {
-        date(formatString: "MMMM DD, YYYY")
-        path
-        slug
-      }
-    }
-    allMarkdownRemark(
-      limit: 10
-      filter: {fileAbsolutePath: {regex: "/blog/"}}
-      sort: {fields: [fields___date], order: DESC}
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-          }
-          fields {
-            slug
-          }
-        }
-      }
-    }
-  }
+	query TemplateBlogMarkdown($slug: String!) {
+		markdownRemark(fields: {slug: {eq: $slug}}) {
+			html
+			excerpt(pruneLength: 500)
+			frontmatter {
+				title
+				author {
+					frontmatter {
+						name
+						url
+					}
+				}
+			}
+			fields {
+				date(formatString: "MMMM DD, YYYY")
+				path
+				slug
+			}
+		}
+		allMarkdownRemark(
+			limit: 10
+			filter: {fileAbsolutePath: {regex: "/blog/"}}
+			sort: {fields: [fields___date], order: DESC}
+		) {
+			edges {
+				node {
+					frontmatter {
+						title
+					}
+					fields {
+						slug
+					}
+				}
+			}
+		}
+	}
 `;

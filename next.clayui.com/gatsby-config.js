@@ -15,61 +15,64 @@ module.exports = {
 		'gatsby-transformer-authors-yaml',
 		'gatsby-plugin-meta-redirect',
 		{
-			resolve: 'gatsby-plugin-sass',
 			options: {
+				includePaths: clay.includePaths.concat(
+					path.join(clay.includePaths[0], 'node_modules')
+				),
 				precision: 8,
-				includePaths: clay
-					.includePaths
-					.concat(
-						path.join(
-							clay.includePaths[0],
-							'node_modules'
-						)
-					),
 			},
+			resolve: 'gatsby-plugin-sass',
 		},
 		{
-			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'packages',
 				path: `${__dirname}/content`,
 			},
+			resolve: 'gatsby-source-filesystem',
 		},
 		{
-			resolve: 'gatsby-mdx',
 			options: {
 				extensions: ['.mdx'],
 				gatsbyRemarkPlugins: [
 					{
-						resolve: path.resolve(__dirname, './plugins/gatsby-remark-foreach-icons'),
+						resolve: path.resolve(
+							__dirname,
+							'./plugins/gatsby-remark-foreach-icons'
+						),
 					},
 					{
-						resolve: 'gatsby-remark-prismjs',
 						pluginOptions: {
 							classPrefix: 'gatsby-code-',
 						},
+						resolve: 'gatsby-remark-prismjs',
 					},
 					{
-						resolve: path.resolve(__dirname, './plugins/gatsby-remark-use-clipboard'),
+						resolve: path.resolve(
+							__dirname,
+							'./plugins/gatsby-remark-use-clipboard'
+						),
 					},
 					{
-						resolve: path.resolve(__dirname, './plugins/gatsby-remark-api-table'),
+						resolve: path.resolve(
+							__dirname,
+							'./plugins/gatsby-remark-api-table'
+						),
 					},
 				],
 			},
+			resolve: 'gatsby-mdx',
 		},
 		{
-			resolve: 'gatsby-transformer-remark',
 			options: {
 				plugins: [
 					{
 						resolve: 'gatsby-remark-foreach-icons',
 					},
 					{
-						resolve: 'gatsby-remark-prismjs',
 						options: {
 							classPrefix: 'gatsby-code-',
 						},
+						resolve: 'gatsby-remark-prismjs',
 					},
 					{
 						resolve: 'gatsby-remark-use-clipboard',
@@ -82,12 +85,13 @@ module.exports = {
 					},
 				],
 			},
+			resolve: 'gatsby-transformer-remark',
 		},
 		{
-			resolve: 'gatsby-plugin-google-analytics',
 			options: {
 				trackingId: 'UA-37033501-10',
 			},
+			resolve: 'gatsby-plugin-google-analytics',
 		},
 		'gatsby-plugin-react-helmet',
 	],

@@ -5,8 +5,8 @@
   "scripts": {
     "copy:icons": "cpx '../packages/clay-css/lib/images/icons/*.svg' static/images/icons",
     "deploy": "gatsby build && gh-pages -d public -b wedeploy",
-    "develop": "npm run copy:icons && gatsby develop",
-    "build": "npm run copy:icons && gatsby build",
+    "develop": "gatsby develop",
+    "build": "gatsby build",
     "serve": "gatsby serve"
   },
   "dependencies": {

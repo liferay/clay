@@ -13,8 +13,8 @@ module.exports = ({actions, stage}) => {
 		module = {
 			rules: [
 				{
-					test: /clay-tooltip|metal-clipboard/,
 					loader: 'null-loader',
+					test: /clay-tooltip|metal-clipboard/,
 				},
 			],
 		};
@@ -23,10 +23,10 @@ module.exports = ({actions, stage}) => {
 	actions.setWebpackConfig({
 		module,
 		resolve: {
-			modules: [path.resolve(__dirname, 'src'), 'node_modules'],
 			alias: {
 				$components: path.resolve(__dirname, '../src/components'),
 			},
+			modules: [path.resolve(__dirname, 'src'), 'node_modules'],
 		},
 	});
 };

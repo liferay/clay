@@ -6,9 +6,10 @@
 
 const path = require('path');
 
+// eslint-disable-next-line no-useless-escape
 const BLOG_POST_FILENAME_REGEX = /([0-9]+)\-([0-9]+)\-([0-9]+)\-(.+)\.md$/;
 
-module.exports = exports.onCreateNode = ({node, actions, getNode}) => {
+module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 	const {createNodeField} = actions;
 
 	if (
@@ -19,6 +20,7 @@ module.exports = exports.onCreateNode = ({node, actions, getNode}) => {
 			alwaysActive,
 			description,
 			draft,
+			indexVisible,
 			layout,
 			nightly,
 			order,
@@ -30,7 +32,6 @@ module.exports = exports.onCreateNode = ({node, actions, getNode}) => {
 			redirectFrom,
 			title,
 			version,
-			indexVisible,
 		} = node.frontmatter;
 		const {relativePath, sourceInstanceName} = getNode(node.parent);
 
@@ -57,11 +58,11 @@ module.exports = exports.onCreateNode = ({node, actions, getNode}) => {
 				const date = new Date(year, month - 1, day);
 
 				createNodeField({
-				  node,
-				  name: 'date',
-				  value: date.toJSON(),
+					name: 'date',
+					node,
+					value: date.toJSON(),
 				});
-			  }
+			}
 		}
 
 		createNodeField({
@@ -71,8 +72,8 @@ module.exports = exports.onCreateNode = ({node, actions, getNode}) => {
 		});
 
 		createNodeField({
-			node,
 			name: 'path',
+			node,
 			value: path.join(sourceInstanceName, relativePath),
 		});
 
@@ -131,38 +132,38 @@ module.exports = exports.onCreateNode = ({node, actions, getNode}) => {
 		});
 
 		createNodeField({
-			node,
 			name: 'slug',
+			node,
 			value: slug,
 		});
 
 		createNodeField({
-			node,
 			name: 'title',
+			node,
 			value: title,
 		});
 
 		createNodeField({
-			node,
 			name: 'order',
+			node,
 			value: order || 0,
 		});
 
 		createNodeField({
-			node,
 			name: 'redirect',
+			node,
 			value: redirect || '',
 		});
 
 		createNodeField({
-			node,
 			name: 'redirectFrom',
+			node,
 			value: redirectFrom || '',
 		});
 
 		createNodeField({
-			node,
 			name: 'layout',
+			node,
 			value: layout || '',
 		});
 	}

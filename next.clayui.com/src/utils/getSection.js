@@ -28,30 +28,35 @@ const toSectionElements = (
 	const penultimateSlug = slugs[slugs.length - 2];
 
 	const id = lastSlug === 'index' ? penultimateSlug : lastSlug;
-	const link = '/' + slug;
-	const parentLink = '/' + slug.substring(0, slug.lastIndexOf('/') + 1);
+	const link = `/${slug}`;
+	const parentLink = `/${slug.substring(0, slug.lastIndexOf('/') + 1)}`;
 	const isFolder = lastSlug === 'index';
 	const isRoot =
 		(slugs.length === 3 && isFolder) || (slugs.length === 2 && !isFolder);
 
 	return {
-		id,
-		link,
-		title,
-		parentLink,
-		isFolder,
-		isRoot,
-		order,
 		alwaysActive,
 		draft,
+		id,
 		indexVisible,
+		isFolder,
+		isRoot,
+		link,
+		order,
+		parentLink,
+		title,
 	};
 };
 
 const toSectionItem = (item, paths) => {
 	if (item.isFolder) {
-		item.items = paths.filter(path => path.link !== item.link)
-			.filter(path => path.link === (item.parentLink + path.id + (path.isFolder ? '/index' : '')))
+		item.items = paths
+			.filter(path => path.link !== item.link)
+			.filter(
+				path =>
+					path.link ===
+					item.parentLink + path.id + (path.isFolder ? '/index' : '')
+			)
 			.map(path => toSectionItem(path, paths))
 			.sort(sortByOrderAndTitle);
 	}
@@ -59,18 +64,26 @@ const toSectionItem = (item, paths) => {
 	return item;
 };
 
-const getSection = (data) => {
+const getSection = data => {
 	const elements = data.map(({node}) => {
 		const {
-			fields: {draft, slug, title, alwaysActive, order, indexVisible},
+			fields: {alwaysActive, draft, indexVisible, order, slug, title},
 		} = node;
 
-		return toSectionElements(slug.replace('.html', ''), title, order, alwaysActive, draft, indexVisible);
+		return toSectionElements(
+			slug.replace('.html', ''),
+			title,
+			order,
+			alwaysActive,
+			draft,
+			indexVisible
+		);
 	});
 
-	let rootElements = elements.filter(path => path.isRoot);
+	const rootElements = elements.filter(path => path.isRoot);
 
-	return rootElements.map(path => toSectionItem(path, elements))
+	return rootElements
+		.map(path => toSectionItem(path, elements))
 		.sort(sortByOrderAndTitle);
 };
 

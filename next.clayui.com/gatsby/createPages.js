@@ -15,7 +15,7 @@ const path = require('path');
 
 const {GATSBY_CLAY_NIGHTLY} = process.env;
 
-const slugWithBar = (path) => {
+const slugWithBar = path => {
 	return path.startsWith('/') ? path : `/${path}`;
 };
 
@@ -25,78 +25,75 @@ const createDocs = (actions, edges, mdx) => {
 	const blogTemplate = path.resolve(__dirname, '../src/templates/blog.js');
 
 	edges
-		.filter(({node: {fields: {nightly}}}) => GATSBY_CLAY_NIGHTLY === 'true' ? true : !nightly)
-		.forEach((
-			{
+		.filter(({node: {fields: {nightly}}}) =>
+			GATSBY_CLAY_NIGHTLY === 'true' ? true : !nightly
+		)
+		.forEach(
+			({
 				node: {
-					fields: {
-						layout,
-						redirect,
-						redirectFrom,
-						slug,
-					},
 					code,
+					fields: {layout, redirect, redirectFrom, slug},
 				},
-			}
-		) => {
-			if (redirect) {
-				const slugBar = slugWithBar(slug);
-				const fromPath = slugBar.endsWith('index.html') ? slugBar.replace('index.html', '') : slugBar;
+			}) => {
+				if (redirect) {
+					const slugBar = slugWithBar(slug);
+					const fromPath = slugBar.endsWith('index.html')
+						? slugBar.replace('index.html', '')
+						: slugBar;
 
-				createRedirect({
-					fromPath,
-					isPermanent: true,
-					redirectInBrowser: true,
-					toPath: redirect,
-				});
-			}
-
-			if (redirectFrom) {
-				createRedirect({
-					fromPath: redirectFrom,
-					isPermanent: true,
-					redirectInBrowser: true,
-					toPath: slugWithBar(slug),
-				});
-
-				if (!slug.endsWith('/')) {
 					createRedirect({
-						fromPath: redirectFrom + '/',
+						fromPath,
+						isPermanent: true,
+						redirectInBrowser: true,
+						toPath: redirect,
+					});
+				}
+
+				if (redirectFrom) {
+					createRedirect({
+						fromPath: redirectFrom,
 						isPermanent: true,
 						redirectInBrowser: true,
 						toPath: slugWithBar(slug),
 					});
+
+					if (!slug.endsWith('/')) {
+						createRedirect({
+							fromPath: `${redirectFrom}/`,
+							isPermanent: true,
+							redirectInBrowser: true,
+							toPath: slugWithBar(slug),
+						});
+					}
+				}
+
+				let template;
+
+				if (slug.includes('blog/')) {
+					template = blogTemplate;
+				} else if (slug.includes('docs/')) {
+					template = docsTemplate;
+				}
+
+				const component = mdx
+					? componentWithMDXScope(template, code.scope, __dirname)
+					: template;
+
+				if (
+					(slug.includes('docs/') || slug.includes('blog/')) &&
+					layout !== 'redirect'
+				) {
+					createPage({
+						component,
+						context: {
+							markdownJsx: mdx,
+							slug,
+						},
+						path: slug,
+					});
 				}
 			}
-
-			let template;
-
-			if (slug.includes('blog/')) {
-				template = blogTemplate;
-			} else if (slug.includes('docs/')) {
-				template = docsTemplate;
-			}
-
-			const component =
-				mdx ?
-					componentWithMDXScope(
-						template,
-						code.scope,
-						__dirname,
-					) :
-					template;
-
-			if ((slug.includes('docs/') || slug.includes('blog/')) && layout !== 'redirect') {
-				createPage({
-					path: slug,
-					component,
-					context: {
-						markdownJsx: mdx,
-						slug,
-					},
-				});
-			}
-		});
+		);
 };
 
 module.exports = async ({actions, graphql}) => {
@@ -151,22 +148,22 @@ module.exports = async ({actions, graphql}) => {
 
 		const newestBlogEntry = await graphql(
 			`
-			  {
-				allMarkdownRemark(
-				  limit: 1
-				  filter: {fileAbsolutePath: {regex: "/blog/"}}
-				  sort: {fields: [fields___date], order: DESC}
-				) {
-				  edges {
-					node {
-					  fields {
-						slug
-					  }
+				{
+					allMarkdownRemark(
+						limit: 1
+						filter: {fileAbsolutePath: {regex: "/blog/"}}
+						sort: {fields: [fields___date], order: DESC}
+					) {
+						edges {
+							node {
+								fields {
+									slug
+								}
+							}
+						}
 					}
-				  }
 				}
-			  }
-			`,
+			`
 		);
 
 		const newestBlogNode =

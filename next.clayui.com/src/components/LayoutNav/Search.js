@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 
-export default (props) => {
+export default props => {
 	const [enabled, setEnabled] = useState(true);
 
 	useEffect(() => {

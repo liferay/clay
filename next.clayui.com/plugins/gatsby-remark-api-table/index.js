@@ -10,7 +10,7 @@ const evaluateInstance = require('./visit');
 const fs = require('fs');
 const visit = require('unist-util-visit');
 
-const generateTr = (item) => {
+const generateTr = item => {
 	return `<tr>
         <td><div class="table-title">${item.property}</div></td>
         <td>${item.description}</td>
@@ -21,7 +21,7 @@ const generateTr = (item) => {
 };
 
 module.exports = ({markdownAST}) => {
-	let markdownHtmlNodes = [];
+	const markdownHtmlNodes = [];
 
 	visit(markdownAST, 'html', node => {
 		if (node.value.includes('[APITable')) {
@@ -33,14 +33,18 @@ module.exports = ({markdownAST}) => {
 		markdownHtmlNodes.map(
 			node =>
 				new Promise(async resolve => {
-					const pathFile = path.resolve('../packages/', node.value.split('"')[1]);
+					const pathFile = path.resolve(
+						'../packages/',
+						node.value.split('"')[1]
+					);
 
 					if (!fs.existsSync(pathFile)) {
 						resolve(node);
 						return;
 					}
 
-					await docs.build([pathFile], {shallow: true})
+					await docs
+						.build([pathFile], {shallow: true})
 						.then(docs.formats.json)
 						.then(output => {
 							const json = JSON.parse(output);
@@ -60,7 +64,9 @@ module.exports = ({markdownAST}) => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        ${documentation.map(generateTr).join('')}
+                                        ${documentation
+											.map(generateTr)
+											.join('')}
                                     </tbody>
                                 </table>
                             </div>`;

@@ -16,8 +16,10 @@ const onClick = () => {
 
 let scrollTop = 0;
 
-const SideNavScroll = (props) => {
-	const onScroll = (event) => scrollTop = event.currentTarget.scrollTop;
+const SideNavScroll = props => {
+	const onScroll = event => {
+		scrollTop = event.currentTarget.scrollTop;
+	};
 
 	useEffect(() => {
 		SideNavRef.current.scrollTop = scrollTop;
@@ -25,9 +27,9 @@ const SideNavScroll = (props) => {
 
 	return (
 		<div
-			ref={SideNavRef}
-			onScroll={onScroll}
 			className="sidebar sidebar-clay-site sidenav-menu d-flex flex-column"
+			onScroll={onScroll}
+			ref={SideNavRef}
 		>
 			{props.children}
 		</div>
@@ -37,23 +39,35 @@ const SideNavScroll = (props) => {
 export default props => (
 	<React.Fragment>
 		<div className="navbar navbar-mobile navbar-expand-lg navbar-header">
-			<button onClick={onClick} className="navbar-toggler sidebar-toggler ml-auto p-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<svg aria-hidden="true" className="lexicon-icon lexicon-icon-bars">
+			<button
+				aria-controls="navbarSupportedContent"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+				className="navbar-toggler sidebar-toggler ml-auto p-3"
+				data-target="#navbarSupportedContent"
+				data-toggle="collapse"
+				onClick={onClick}
+				type="button"
+			>
+				<svg
+					aria-hidden="true"
+					className="lexicon-icon lexicon-icon-bars"
+				>
 					<use xlinkHref="/images/icons/icons.svg#bars" />
 				</svg>
 			</button>
 		</div>
 
 		<nav
-			ref={SidebarRef}
 			className="col-xl-3 sidebar-toggler-content sidenav-sticky sidenav-menu-slider"
 			id="clay-sidebar"
+			ref={SidebarRef}
 		>
 			<SideNavScroll>
 				<div className="sidebar-body mb-auto">
 					<Navigation
-						sectionList={props.data}
 						location={props.location}
+						sectionList={props.data}
 					/>
 				</div>
 			</SideNavScroll>

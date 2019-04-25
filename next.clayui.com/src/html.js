@@ -6,28 +6,39 @@
 
 import React from 'react';
 
-export default (props) => {
+export default props => {
 	return (
 		<html lang="en">
 			<head>
 				<meta charSet="utf-8" />
-				<meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+				<meta content="IE=edge" httpEquiv="X-UA-Compatible" />
 				<meta
-					name="viewport"
 					content="width=device-width, initial-scale=1.0"
+					name="viewport"
 				/>
-				<link rel="shortcut icon" type="image/png" href="/images/favicon-32x32.png" sizes="16x16 32x32"/>
+				<link
+					href="/images/favicon-32x32.png"
+					rel="shortcut icon"
+					sizes="16x16 32x32"
+					type="image/png"
+				/>
 				{props.headComponents}
 
-				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+				<link
+					href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+					rel="stylesheet"
+				/>
 			</head>
 			<body {...props.bodyAttributes}>
 				<div
-					id="___gatsby"
 					dangerouslySetInnerHTML={{__html: props.body}}
+					id="___gatsby"
 				/>
 				{props.postBodyComponents}
-				<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+				<script
+					src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"
+					type="text/javascript"
+				/>
 			</body>
 		</html>
 	);

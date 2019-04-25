@@ -1,9 +1,14 @@
+/**
+ * © 2019 Liferay, Inc. <https://liferay.com>
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
 const readFileSync = require('fs').readFileSync;
 const resolve = require('path').resolve;
 const safeLoad = require('js-yaml').safeLoad;
 
 // This is a copy of https://github.com/reactjs/reactjs.org/tree/master/plugins/gatsby-transformer-authors-yaml
-exports.sourceNodes = ({graphql, actions}) => {
+exports.sourceNodes = ({actions, graphql}) => {
 	const {createNode} = actions;
 
 	const path = resolve(__dirname, '../../content/authors.yml');
@@ -15,14 +20,14 @@ exports.sourceNodes = ({graphql, actions}) => {
 		const author = authors[username];
 
 		createNode({
-			id: username,
 			children: [],
-			parent: 'AUTHORS',
-			internal: {
-				type: 'AuthorYaml',
-				contentDigest: JSON.stringify(author),
-			},
 			frontmatter: author,
+			id: username,
+			internal: {
+				contentDigest: JSON.stringify(author),
+				type: 'AuthorYaml',
+			},
+			parent: 'AUTHORS',
 		});
 	});
 };

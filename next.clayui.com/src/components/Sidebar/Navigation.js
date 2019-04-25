@@ -4,20 +4,26 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {Component} from 'react';
 import classNames from 'classnames';
+import React, {Component} from 'react';
 import {Link} from 'gatsby';
 
 /**
  */
 class Navigation extends Component {
+	constructor(props) {
+		super(props);
+
+		this.handleOnClick = this.handleOnClick.bind();
+	}
+
 	/**
 	 * @param {!number} index
 	 * @param {!number} depth
 	 * @param {!object} section
 	 * @param {!event} event
 	 */
-	_handleOnClick(index, depth, section, event) {
+	handleOnClick(index, depth, section, event) {
 		event.stopPropagation();
 
 		const elementRef = this.refs[`navItem${index}${depth}`];
@@ -31,7 +37,7 @@ class Navigation extends Component {
 	 * @param {*} section
 	 * @return {boolean}
 	 */
-	_isActive(section) {
+	isActive(section) {
 		if (section.alwaysActive) {
 			return true;
 		}
@@ -51,24 +57,31 @@ class Navigation extends Component {
 	 * @return {React.Component}
 	 */
 	renderNavigationItems() {
-		const {sectionList, location, depth = 0} = this.props;
+		const {depth = 0, location, sectionList} = this.props;
 
 		return sectionList.map((section, index) => {
-			let style = classNames({
-				'active': this._isActive(section) === true,
+			const style = classNames({
+				active: this.isActive(section) === true,
+				draft: section.draft,
 				'nav-heading': section.items,
-				'draft': section.draft,
 			});
 
 			return (
-				<li key={index} ref={`navItem${index}${depth}`} className={style} onClick={this._handleOnClick.bind(this, index, depth, section)}>
+				<li
+					className={style}
+					key={index}
+					onClick={event =>
+						this.handleOnClick(index, depth, section, event)
+					}
+					ref={`navItem${index}${depth}`}
+				>
 					<Anchor page={section} />
 
 					{section.items && (
 						<Navigation
-							sectionList={section.items}
-							location={location}
 							depth={depth + 1}
+							location={location}
+							sectionList={section.items}
 						/>
 					)}
 				</li>
@@ -112,10 +125,7 @@ const Anchor = ({page}) => {
 	}
 
 	return (
-		<Link
-			to={`${page.link}.html`}
-			className="align-middle"
-		>
+		<Link className="align-middle" to={`${page.link}.html`}>
 			<span>{page.title}</span>
 		</Link>
 	);

@@ -10,14 +10,17 @@ module.exports = ({markdownAST}) => {
 	visit(markdownAST, 'heading', node => {
 		if (
 			node.depth === 1 ||
-            node.depth === 2 ||
-            node.depth === 3 ||
-            node.depth === 4
+			node.depth === 2 ||
+			node.depth === 3 ||
+			node.depth === 4
 		) {
 			node.data = {
 				hProperties: {
-					class: 'clay-h' + node.depth,
-					id: node.children[0].value.toLowerCase().split(' ').join('-'),
+					class: `clay-h${node.depth}`,
+					id: node.children[0].value
+						.toLowerCase()
+						.split(' ')
+						.join('-'),
 				},
 			};
 		}
