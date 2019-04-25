@@ -7,7 +7,9 @@
 	$border-style: map-get($map, border-style);
 	$border-width: map-get($map, border-width);
 	$border-radius: map-get($map, border-radius);
+	$box-shadow: map-get($map, box-shadow);
 	$color: map-get($map, color);
+	$cursor: map-get($map, cursor);
 	$display: map-get($map, display);
 	$font-family: map-get($map, font-family);
 	$font-size: map-get($map, font-size);
@@ -21,10 +23,12 @@
 	$margin-top: map-get($map, margin-top);
 	$max-width: map-get($map, max-width);
 	$opacity: map-get($map, opacity);
+	$outline: map-get($map, outline);
 	$padding-bottom: map-get($map, padding-bottom);
 	$padding-left: map-get($map, padding-left);
 	$padding-right: map-get($map, padding-right);
 	$padding-top: map-get($map, padding-top);
+	$pointer-events: map-get($map, pointer-events);
 	$text-align: map-get($map, text-align);
 	$text-decoration: map-get($map, text-decoration);
 	$text-transform: map-get($map, text-transform);
@@ -34,12 +38,14 @@
 	$z-index: map-get($map, z-index);
 
 	$hover-bg: map-get($map, hover-bg);
+	$hover-border-color: map-get($map, hover-border-color);
 	$hover-color: map-get($map, hover-color);
 	$hover-opacity: map-get($map, hover-opacity);
 	$hover-text-decoration: map-get($map, hover-text-decoration);
 	$hover-z-index: map-get($map, hover-z-index);
 
 	$focus-bg: map-get($map, focus-bg);
+	$focus-border-color: map-get($map, focus-border-color);
 	$focus-box-shadow: map-get($map, focus-box-shadow);
 	$focus-color: map-get($map, focus-color);
 	$focus-opacity: map-get($map, focus-opacity);
@@ -64,6 +70,7 @@
 	$btn-focus-box-shadow: map-get($map, btn-focus-box-shadow);
 	$btn-focus-outline: map-get($map, btn-focus-outline);
 
+	$lexicon-icon-font-size: map-get($map, lexicon-icon-font-size);
 	$lexicon-icon-margin-bottom: map-get($map, lexicon-icon-margin-bottom);
 	$lexicon-icon-margin-left: map-get($map, lexicon-icon-margin-left);
 	$lexicon-icon-margin-right: map-get($map, lexicon-icon-margin-right);
@@ -77,7 +84,9 @@
 
 	@include border-radius($border-radius);
 
+	box-shadow: $box-shadow;
 	color: $color;
+	cursor: $cursor;
 	display: $display;
 	font-family: $font-family;
 	font-size: $font-size;
@@ -91,10 +100,12 @@
 	margin-top: $margin-top;
 	max-width: $max-width;
 	opacity: $opacity;
+	outline: $outline;
 	padding-bottom: $padding-bottom;
 	padding-left: $padding-left;
 	padding-right: $padding-right;
 	padding-top: $padding-top;
+	pointer-events: $pointer-events;
 	text-align: $text-align;
 	text-decoration: $text-decoration;
 	text-transform: $text-transform;
@@ -105,6 +116,7 @@
 
 	&:hover {
 		background-color: $hover-bg;
+		border-color: $hover-border-color;
 		color: $hover-color;
 		opacity: $hover-opacity;
 		text-decoration: $hover-text-decoration;
@@ -122,6 +134,7 @@
 
 	&:focus {
 		background-color: $focus-bg;
+		border-color: $focus-border-color;
 		box-shadow: $focus-box-shadow;
 		color: $focus-color;
 		opacity: $focus-opacity;
@@ -152,6 +165,7 @@
 	}
 
 	.lexicon-icon {
+		font-size: $lexicon-icon-font-size;
 		margin-bottom: $lexicon-icon-margin-bottom;
 		margin-right: $lexicon-icon-margin-right;
 		margin-left: $lexicon-icon-margin-left;
