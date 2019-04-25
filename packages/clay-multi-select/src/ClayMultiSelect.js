@@ -258,9 +258,7 @@ class ClayMultiSelect extends ClayComponent {
 			if (element.value) {
 				let value = element.value.trim();
 
-				this._addLabelItem(
-					this._createItemObject(value, value)
-				);
+				this._addLabelItem(this._createItemObject(value, value));
 			}
 			break;
 		}
@@ -480,6 +478,7 @@ class ClayMultiSelect extends ClayComponent {
 
 		return [];
 	}
+
 	/**
 	 * @param {!Object} item
 	 * @return {Boolean} If the item is already selected.
