@@ -106,9 +106,7 @@ class ClayMultiSelect extends ClayComponent {
 
 		if (char === ',' || words.length > 1) {
 			words.forEach(word => {
-				const added = this._addLabelItem(
-					this._createItemObject(word, word)
-				);
+				const added = this._addLabelItem(this._createItemObject(word));
 
 				inputValue = inputValue.replace(word + ',', added ? '' : word);
 			});
@@ -257,7 +255,7 @@ class ClayMultiSelect extends ClayComponent {
 			if (element.value) {
 				let value = element.value;
 
-				this._addLabelItem(this._createItemObject(value, value));
+				this._addLabelItem(this._createItemObject(value));
 			}
 			break;
 		}
@@ -399,16 +397,17 @@ class ClayMultiSelect extends ClayComponent {
 
 	/**
 	 * Assemble the schema of the item.
+	 * If only label is passed use it as value
 	 * @param {!string} label
-	 * @param {!string} value
+	 * @param {!string} [value=label]
 	 * @protected
 	 * @return {!Object}
 	 */
 	_createItemObject(label, value) {
-		return {
-			label: label.trim(),
-			value: value.trim(),
-		};
+		label = label.trim();
+		value = typeof value !== 'undefined' ? value.trim() : label;
+
+		return {label, value};
 	}
 
 	/**
