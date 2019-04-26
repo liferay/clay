@@ -6,201 +6,144 @@
 
 import * as React from 'react';
 import classNames from 'classnames';
-import ClayButton from '@clayui/button';
-import ClayIcon from '@clayui/icon';
+import {Align} from 'metal-position';
+import {createPortal} from 'react-dom';
+import {useDropdownCloseInteractions} from './hooks';
 
-import DropDownItem, {DropDownItemType} from './Item';
+import Action from './Action';
+import Caption from './Caption';
+import Divider from './Divider';
+import Group from './Group';
+import Help from './Help';
+import Item from './Item';
+import Menu from './Menu';
+import Search from './Search';
 
-interface Props extends React.HTMLAttributes<HTMLButtonElement> {
-	actionButtonProps?: React.HTMLAttributes<HTMLButtonElement>;
-	captionText?: React.ReactText;
-	items: DropDownItemType[];
-	button?: {
-		label: string;
-		onClick: () => {};
-	};
-	disabled?: boolean;
-	helpText?: string;
-	preferredAlign?: string;
-	spritemap?: string;
-	searchable?: boolean;
+const Portal = ({children}: {children: React.ReactNode}) => {
+	const portalRef = React.useRef(document.createElement('div'));
+	const elToMountTo = document && document.body;
+
+	React.useEffect(() => {
+		elToMountTo.appendChild(portalRef.current);
+		return () => {
+			elToMountTo.removeChild(portalRef.current);
+		};
+	}, [elToMountTo]);
+
+	return createPortal(children, portalRef.current);
+};
+
+interface DropDownMenuProps extends React.HTMLAttributes<HTMLUListElement> {
+	alignElement: HTMLElement | null;
+	hasLeftSymbols?: boolean;
+	hasRightSymbols?: boolean;
+	ref?: React.Ref<HTMLUListElement>;
 }
 
-const filterBySearch = (
-	items: DropDownItemType[],
-	query: string
-): DropDownItemType[] => {
-	const newItems = items.map(item => ({...item}));
-
-	if (query) {
-		newItems.filter((item: DropDownItemType) => {
-			if (item.label) {
-				if (item.type === 'group' && item.items) {
-					item.items = item.items.filter(
-						(nestedItem: DropDownItemType) => {
-							if (!nestedItem.label) {
-								return false;
-							}
-
-							return nestedItem.label.match(query);
-						}
-					);
-
-					return !!item.items.length;
-				}
-
-				return item.label && item.label.match(query);
-			}
-
-			return false;
-		});
-	}
-
-	return newItems;
-};
-
-const checkForSymbols = (items: DropDownItemType[]) => {
-	let hasLeftSymbols = false;
-	let hasRightSymbols = false;
-
-	items.find((item: DropDownItemType) => {
-		if (!hasLeftSymbols) {
-			if (item.leftSymbol) {
-				hasLeftSymbols = true;
-			} else if (item.items) {
-				const nestedLeftSymbol = checkForSymbols(
-					item.items as DropDownItemType[]
-				)[0];
-
-				if (nestedLeftSymbol) {
-					hasLeftSymbols = true;
-				}
-			}
-		}
-
-		if (!hasRightSymbols && item.rightSymbol) {
-			if (item.rightSymbol) {
-				hasRightSymbols = true;
-			} else if (item.items) {
-				const nestedRightSymbol = checkForSymbols(
-					item.items as DropDownItemType[]
-				)[1];
-
-				if (nestedRightSymbol) {
-					hasRightSymbols = true;
-				}
-			}
-		}
-
-		return hasLeftSymbols && hasRightSymbols;
-	});
-
-	return [hasLeftSymbols, hasRightSymbols];
-};
-
-const ClayDropDown: React.FunctionComponent<Props> = ({
-	actionButtonProps,
-	captionText,
-	children,
-	className,
-	helpText,
-	items,
-	searchable,
-	spritemap,
-	...otherProps
-}) => {
-	const [active, setActive] = React.useState<boolean>(false);
-	const [searchInput, setSearchInput] = React.useState<string>('');
-
-	const filteredItems = filterBySearch(items, searchInput);
-
-	const [hasLeftSymbols, hasRightSymbols] = checkForSymbols(items);
-
-	return (
-		<div className="dropdown">
-			<ClayButton
+const DropDownMenu: React.ComponentType<DropDownMenuProps> = React.forwardRef(
+	(
+		{
+			alignElement,
+			children,
+			hasLeftSymbols,
+			hasRightSymbols,
+			...otherProps
+		},
+		ref?: React.Ref<HTMLUListElement>
+	) => {
+		return (
+			<ul
 				{...otherProps}
-				className="dropdown-toggle"
-				onClick={() => setActive(val => !val)}
+				className={classNames('dropdown-menu list-unstyled show', {
+					'dropdown-menu-indicator-end': hasRightSymbols,
+					'dropdown-menu-indicator-start': hasLeftSymbols,
+				})}
+				ref={ref}
 			>
 				{children}
-			</ClayButton>
+			</ul>
+		);
+	}
+);
+
+interface Props extends React.HTMLAttributes<HTMLDivElement> {
+	active: boolean;
+	alignmentPosition: number;
+	hasRightSymbols?: boolean;
+	hasLeftSymbols?: boolean;
+	onActiveChange: (val: boolean) => void;
+	trigger: React.ReactElement;
+}
+
+const ClayDropDown: React.FunctionComponent<Props> & {
+	Action: typeof Action;
+	Caption: typeof Caption;
+	Divider: typeof Divider;
+	Group: typeof Group;
+	Help: typeof Help;
+	Item: typeof Item;
+	Menu: typeof Menu;
+	Search: typeof Search;
+} = ({
+	active = false,
+	alignmentPosition = Align.BottomLeft,
+	children,
+	className,
+	hasLeftSymbols,
+	hasRightSymbols,
+	onActiveChange,
+	trigger,
+	...otherProps
+}) => {
+	const alignElementRef = React.useRef<HTMLButtonElement>(null);
+	const menuElementRef = React.useRef<HTMLUListElement>(null);
+
+	useDropdownCloseInteractions(menuElementRef, onActiveChange);
+
+	React.useLayoutEffect(() => {
+		if (alignElementRef.current && menuElementRef.current) {
+			Align.align(
+				menuElementRef.current,
+				alignElementRef.current,
+				alignmentPosition
+			);
+		}
+	});
+
+	return (
+		<div {...otherProps} className="dropdown">
+			<span ref={alignElementRef} style={{display: 'inline-block'}}>
+				{React.cloneElement(trigger, {
+					className: 'dropdown-toggle',
+					onClick: () => onActiveChange(!active),
+				})}
+			</span>
 
 			{active && (
-				<div
-					className={classNames('dropdown-menu show', {
-						'dropdown-menu-indicator-end': hasRightSymbols,
-						'dropdown-menu-indicator-start': hasLeftSymbols,
-					})}
-				>
-					{helpText && (
-						<div
-							className="alert alert-fluid alert-info"
-							role="alert"
-						>
-							{helpText}
-						</div>
-					)}
-
-					{searchable && (
-						<form>
-							<div className="dropdown-section">
-								<div className="input-group input-group-sm">
-									<div className="input-group-item">
-										<input
-											className="form-control input-group-inset input-group-inset-after"
-											onChange={e =>
-												setSearchInput(e.target.value)
-											}
-											placeholder="Search for..."
-											type="text"
-											value={searchInput}
-										/>
-										<span className="input-group-inset-item input-group-inset-item-after">
-											<ClayButton
-												displayType="unstyled"
-												type="button"
-											>
-												<ClayIcon
-													spritemap={spritemap}
-													symbol="search"
-												/>
-											</ClayButton>
-										</span>
-									</div>
-								</div>
-							</div>
-						</form>
-					)}
-
-					<ul className="list-unstyled">
-						{filteredItems.map((item, i) => (
-							<DropDownItem
-								data={item}
-								key={i}
-								spritemap={spritemap}
-							/>
-						))}
-					</ul>
-
-					{captionText && (
-						<div className="dropdown-caption">{captionText}</div>
-					)}
-
-					{actionButtonProps && (
-						<div className="dropdown-section">
-							<button
-								{...actionButtonProps}
-								className="btn btn-block btn-secondary"
-							>
-								{actionButtonProps.children}
-							</button>
-						</div>
-					)}
-				</div>
+				<Portal>
+					<DropDownMenu
+						alignElement={alignElementRef.current}
+						hasLeftSymbols={hasLeftSymbols}
+						hasRightSymbols={hasRightSymbols}
+						ref={menuElementRef}
+					>
+						{children}
+					</DropDownMenu>
+				</Portal>
 			)}
 		</div>
 	);
 };
+
+ClayDropDown.Action = Action;
+ClayDropDown.Caption = Caption;
+ClayDropDown.Divider = Divider;
+ClayDropDown.Group = Group;
+ClayDropDown.Help = Help;
+ClayDropDown.Item = Item;
+ClayDropDown.Menu = Menu;
+ClayDropDown.Search = Search;
+
+export {Align};
 
 export default ClayDropDown;
