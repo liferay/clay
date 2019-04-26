@@ -151,6 +151,20 @@
 	$link-disabled-bg: map-get($map, link-disabled-bg);
 	$link-disabled-color: setter(map-get($map, link-disabled-color), $navbar-light-disabled-color);
 
+	$link: setter(map-get($map, link), ());
+	$link: map-merge((
+		bg: $link-bg,
+		border-radius: $link-border-radius,
+		color: $link-color,
+		hover-bg: $link-hover-bg,
+		hover-color: $link-hover-color,
+		active-bg: $link-active-bg,
+		active-color: $link-active-color,
+		active-class-font-weight: $link-active-font-weight,
+		disabled-bg: $link-disabled-bg,
+		disabled-color: $link-disabled-color,
+	), $link);
+
 	$link-border-radius-mobile: map-get($map, link-border-radius-mobile);
 	$link-color-mobile: setter(map-get($map, link-color-mobile), $dropdown-link-color);
 
@@ -163,6 +177,19 @@
 
 	$link-disabled-bg-mobile: setter(map-get($map, link-disabled-bg-mobile), transparent);
 	$link-disabled-color-mobile: setter(map-get($map, link-disabled-color-mobile), $dropdown-link-disabled-color);
+
+	$link-mobile: setter(map-get($map, link-mobile), ());
+	$link-mobile: map-merge((
+		border-radius: $link-border-radius-mobile,
+		color: $link-color-mobile,
+		hover-bg: $link-hover-bg-mobile,
+		hover-color: $link-hover-color-mobile,
+		active-bg: $link-active-bg-mobile,
+		active-color: $link-active-color-mobile,
+		active-class-font-weight: $link-active-font-weight-mobile,
+		disabled-bg: $link-disabled-bg-mobile,
+		disabled-color: $link-disabled-color-mobile,
+	), $link-mobile);
 
 	// .menubar-collapse
 
@@ -214,45 +241,10 @@
 	}
 
 	.nav-link {
-		background-color: $link-bg;
-		border-radius: $link-border-radius;
-		color: $link-color;
-
-		&:hover {
-			background-color: $link-hover-bg;
-			color: $link-hover-color;
-		}
+		@include clay-link($link);
 
 		@include media-breakpoint-down($breakpoint-down) {
-			border-radius: $link-border-radius-mobile;
-			color: $link-color-mobile;
-
-			&:hover {
-				background-color: $link-hover-bg-mobile;
-				color: $link-hover-color-mobile;
-			}
-		}
-
-		&.active {
-			background-color: $link-active-bg;
-			color: $link-active-color;
-			font-weight: $link-active-font-weight;
-
-			@include media-breakpoint-down($breakpoint-down) {
-				background-color: $link-active-bg-mobile;
-				color: $link-active-color-mobile;
-				font-weight: $link-active-font-weight-mobile;
-			}
-		}
-
-		&.disabled {
-			background-color: $link-disabled-bg;
-			color: $link-disabled-color;
-
-			@include media-breakpoint-down($breakpoint-down) {
-				background-color: $link-disabled-bg-mobile;
-				color: $link-disabled-color-mobile;
-			}
+			@include clay-link($link-mobile);
 		}
 	}
 }
