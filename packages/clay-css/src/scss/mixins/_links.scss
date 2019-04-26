@@ -46,6 +46,7 @@
 
 	$focus-bg: map-get($map, focus-bg);
 	$focus-border-color: map-get($map, focus-border-color);
+	$focus-border-radius: map-get($map, focus-border-radius);
 	$focus-box-shadow: map-get($map, focus-box-shadow);
 	$focus-color: map-get($map, focus-color);
 	$focus-opacity: map-get($map, focus-opacity);
@@ -56,7 +57,14 @@
 	$active-bg: map-get($map, active-bg);
 	$active-border-color: map-get($map, active-border-color);
 	$active-color: map-get($map, active-color);
+	$active-font-weight: map-get($map, active-font-weight);
 	$active-z-index: map-get($map, active-z-index);
+
+	$active-class-bg: setter(map-get($map, active-class-bg), $active-bg);
+	$active-class-border-color: setter(map-get($map, active-class-border-color), $active-border-color);
+	$active-class-color: setter(map-get($map, active-class-color), $active-color);
+	$active-class-font-weight: setter(map-get($map, active-class-font-weight), $active-font-weight);
+	$active-class-z-index: setter(map-get($map, active-class-z-index), $active-z-index);
 
 	$disabled-bg: map-get($map, disabled-bg);
 	$disabled-border-color: map-get($map, disabled-border-color);
@@ -135,6 +143,7 @@
 	&:focus {
 		background-color: $focus-bg;
 		border-color: $focus-border-color;
+		border-radius: $focus-border-radius;
 		box-shadow: $focus-box-shadow;
 		color: $focus-color;
 		opacity: $focus-opacity;
@@ -143,12 +152,21 @@
 		z-index: $focus-z-index;
 	}
 
-	.show > &,
-	&:active,
-	&.active {
+	&:active {
 		background-color: $active-bg;
 		border-color: $active-border-color;
 		color: $active-color;
+		font-weight: $active-font-weight;
+		z-index: $active-z-index;
+	}
+
+	.show > &,
+	&.active {
+		background-color: $active-class-bg;
+		border-color: $active-class-border-color;
+		color: $active-class-color;
+		font-weight: $active-class-font-weight;
+		z-index: $active-class-z-index;
 	}
 
 	&:disabled,
@@ -161,7 +179,6 @@
 		opacity: $disabled-opacity;
 		pointer-events: $disabled-pointer-events;
 		text-decoration: $disabled-text-decoration;
-		z-index: $active-z-index;
 	}
 
 	.lexicon-icon {
