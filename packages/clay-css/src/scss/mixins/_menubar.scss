@@ -140,15 +140,25 @@
 
 	// .nav-link
 
+	// `$link-bg` is deprecated use `$link` instead
 	$link-bg: map-get($map, link-bg);
+	// `$link-border-radius` is deprecated use `$link` instead
 	$link-border-radius: map-get($map, link-border-radius);
+	// `$link-color` is deprecated use `$link` instead
 	$link-color: setter(map-get($map, link-color), $navbar-light-color);
+	// `$link-hover-bg` is deprecated use `$link` instead
 	$link-hover-bg: map-get($map, link-hover-bg);
+	// `$link-hover-color` is deprecated use `$link` instead
 	$link-hover-color: setter(map-get($map, link-hover-color), $navbar-light-hover-color);
+	// `$link-active-bg` is deprecated use `$link` instead
 	$link-active-bg: map-get($map, link-active-bg);
+	// `$link-active-color` is deprecated use `$link` instead
 	$link-active-color: setter(map-get($map, link-active-color), $navbar-light-active-color);
+	// `$link-active-font-weight` is deprecated use `$link` instead
 	$link-active-font-weight: map-get($map, link-active-font-weight);
+	// `$link-disabled-bg` is deprecated use `$link` instead
 	$link-disabled-bg: map-get($map, link-disabled-bg);
+	// `$link-disabled-color` is deprecated use `$link` instead
 	$link-disabled-color: setter(map-get($map, link-disabled-color), $navbar-light-disabled-color);
 
 	$link: setter(map-get($map, link), ());
@@ -165,17 +175,26 @@
 		disabled-color: $link-disabled-color,
 	), $link);
 
+	// `$link-border-radius-mobile` is deprecated use `$link-mobile` instead
 	$link-border-radius-mobile: map-get($map, link-border-radius-mobile);
+	// `$link-color-mobile` is deprecated use `$link-mobile` instead
 	$link-color-mobile: setter(map-get($map, link-color-mobile), $dropdown-link-color);
 
+	// `$link-hover-bg-mobile` is deprecated use `$link-mobile` instead
 	$link-hover-bg-mobile: setter(map-get($map, link-hover-bg-mobile), $dropdown-link-hover-bg);
+	// `$link-hover-color-mobile` is deprecated use `$link-mobile` instead
 	$link-hover-color-mobile: setter(map-get($map, link-hover-color-mobile), $dropdown-link-hover-color);
 
+	// `$link-active-bg-mobile` is deprecated use `$link-mobile` instead
 	$link-active-bg-mobile: setter(map-get($map, link-active-bg-mobile), $dropdown-link-active-bg);
+	// `$link-active-font-weight-mobile` is deprecated use `$link-mobile` instead
 	$link-active-font-weight-mobile: setter(map-get($map, link-active-font-weight-mobile), $dropdown-link-active-font-weight);
+	// `$link-active-color-mobile` is deprecated use `$link-mobile` instead
 	$link-active-color-mobile: setter(map-get($map, link-active-color-mobile), $dropdown-link-active-color);
 
+	// `$link-disabled-bg-mobile` is deprecated use `$link-mobile` instead
 	$link-disabled-bg-mobile: setter(map-get($map, link-disabled-bg-mobile), transparent);
+	// `$link-disabled-color-mobile` is deprecated use `$link-mobile` instead
 	$link-disabled-color-mobile: setter(map-get($map, link-disabled-color-mobile), $dropdown-link-disabled-color);
 
 	$link-mobile: setter(map-get($map, link-mobile), ());
