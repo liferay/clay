@@ -3,136 +3,145 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import ClayDropDown from '../src';
+import ClayButton from '@clayui/button';
+import ClayCheckbox from '@clayui/checkbox';
+import ClayDropDown, {Align} from '../src';
+import ClayRadioGroup from '@clayui/radio-group';
 import React from 'react';
-import {boolean} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
 import 'clay-css/lib/css/atlas.css';
+import {select} from '@storybook/addon-knobs';
 const spritemap = require('clay-css/lib/images/icons/icons.svg');
+
+const DropDownWithState: React.FunctionComponent<any> = ({
+	children,
+	...others
+}) => {
+	const [active, setActive] = React.useState(false);
+
+	return (
+		<ClayDropDown
+			{...others}
+			active={active}
+			alignmentPosition={select(
+				'Alignment Position',
+				{
+					BottomCenter: Align.BottomCenter,
+					BottomLeft: Align.BottomLeft,
+					BottomRight: Align.BottomRight,
+					LeftCenter: Align.LeftCenter,
+					RightCenter: Align.RightCenter,
+					TopCenter: Align.TopCenter,
+					TopLeft: Align.TopLeft,
+					TopRight: Align.TopRight,
+				},
+				Align.BottomRight
+			)}
+			onActiveChange={newVal => setActive(newVal)}
+			trigger={<ClayButton>{'Click Me'}</ClayButton>}
+		>
+			{children}
+		</ClayDropDown>
+	);
+};
 
 storiesOf('ClayDropDown', module)
 	.add('default', () => (
-		<ClayDropDown
-			items={[
+		<DropDownWithState>
+			{[
 				{href: '#one', label: 'one'},
 				{href: '#two', label: 'two'},
 				{href: '#three', label: 'three'},
-			]}
-			searchable={boolean('Searchable', false)}
-			spritemap={spritemap}
-		>
-			{'Click Me'}
-		</ClayDropDown>
+			].map((item, i) => (
+				<ClayDropDown.Item href={item.href} key={i}>
+					{item.label}
+				</ClayDropDown.Item>
+			))}
+		</DropDownWithState>
 	))
 	.add('groups', () => (
-		<ClayDropDown
-			items={[
-				{
-					items: [
-						{href: '#one', label: 'one'},
-						{href: '#two', label: 'two'},
-					],
-					label: 'Strings',
-					type: 'group',
-				},
-				{
-					type: 'divider',
-				},
-				{
-					label: 'hello',
-				},
-				{
-					type: 'divider',
-				},
-				{
-					items: [
-						{href: '#one', label: '1'},
-						{href: '#two', label: '2'},
-					],
-					label: 'Numbers',
-					type: 'group',
-				},
-			]}
-			searchable={boolean('Searchable', false)}
-			spritemap={spritemap}
-		>
-			{'Click Me'}
-		</ClayDropDown>
+		<DropDownWithState>
+			<ClayDropDown.Group header="Group #1">
+				{[
+					{href: '#one', label: 'one'},
+					{href: '#two', label: 'two'},
+					{href: '#three', label: 'three'},
+				].map((item, i) => (
+					<ClayDropDown.Item href={item.href} key={i}>
+						{item.label}
+					</ClayDropDown.Item>
+				))}
+			</ClayDropDown.Group>
+
+			<ClayDropDown.Group header="Group #2">
+				{[
+					{href: '#one', label: 'one'},
+					{href: '#two', label: 'two'},
+					{href: '#three', label: 'three'},
+				].map((item, i) => (
+					<ClayDropDown.Item href={item.href} key={i}>
+						{item.label}
+					</ClayDropDown.Item>
+				))}
+			</ClayDropDown.Group>
+		</DropDownWithState>
 	))
 	.add('checkbox', () => (
-		<ClayDropDown
-			items={[
-				{
-					label: 'Toggle?',
-					onChange: () => alert('clicked checkbox!'),
-					type: 'checkbox',
-				},
-			]}
-			searchable={boolean('Searchable', false)}
-			spritemap={spritemap}
-		>
-			{'Click Me'}
-		</ClayDropDown>
+		<DropDownWithState>
+			<ClayDropDown.Item>
+				<ClayCheckbox label="I'm a checkbox!" />
+			</ClayDropDown.Item>
+		</DropDownWithState>
 	))
 	.add('radio', () => (
-		<ClayDropDown
-			items={[
-				{
-					items: [
-						{label: 'First', value: 'first'},
-						{label: 'Last', value: 'last'},
-					],
-					label: 'Order By',
-					name: 'orderBy',
-					onChange: val => alert(`Selected ${val}`),
-					type: 'radio',
-					value: 'first',
-				},
-			]}
-			spritemap={spritemap}
-		>
-			{'Click Me'}
-		</ClayDropDown>
+		<DropDownWithState>
+			<ClayDropDown.Group header="Order">
+				<ClayDropDown.Item>
+					<ClayRadioGroup.Radio
+						checked
+						label="Ascending"
+						value="asc"
+					/>
+				</ClayDropDown.Item>
+				<ClayDropDown.Item>
+					<ClayRadioGroup.Radio label="Descending" value="desc" />
+				</ClayDropDown.Item>
+			</ClayDropDown.Group>
+		</DropDownWithState>
 	))
-	.add('footer options', () => (
-		<ClayDropDown
-			actionButtonProps={{
-				children: 'See More',
-				onClick: () => alert('Clicked See More!'),
-			}}
-			captionText="4 of 6"
-			items={[
-				{
-					label: 'Toggle',
-				},
-			]}
-			searchable={boolean('Searchable', false)}
-			spritemap={spritemap}
-		>
-			{'Click Me'}
-		</ClayDropDown>
+	.add('caption and help', () => (
+		<DropDownWithState>
+			<ClayDropDown.Help>{'Can I help you?'}</ClayDropDown.Help>
+
+			{[
+				{href: '#one', label: 'one'},
+				{href: '#two', label: 'two'},
+				{href: '#three', label: 'three'},
+			].map((item, i) => (
+				<ClayDropDown.Item href={item.href} key={i}>
+					{item.label}
+				</ClayDropDown.Item>
+			))}
+
+			<ClayDropDown.Caption>{'... or maybe not.'}</ClayDropDown.Caption>
+		</DropDownWithState>
 	))
 	.add('items with icons', () => (
-		<ClayDropDown
-			items={[
-				{
-					label: 'Left Icon',
-					leftSymbol: 'pencil',
-				},
-				{
-					label: 'Right Icon',
-					rightSymbol: 'check',
-				},
-				{
-					label: 'Both Icons',
-					leftSymbol: 'trash',
-					rightSymbol: 'check',
-				},
-			]}
-			searchable={boolean('Searchable', false)}
-			spritemap={spritemap}
-		>
-			{'Click Me'}
-		</ClayDropDown>
+		<DropDownWithState hasLeftSymbols hasRightSymbols>
+			{[
+				{label: 'Left', left: 'trash'},
+				{label: 'Right', right: 'check'},
+				{label: 'Both', left: 'trash', right: 'check'},
+			].map((item, i) => (
+				<ClayDropDown.Item
+					key={i}
+					spritemap={spritemap}
+					symbolLeft={item.left}
+					symbolRight={item.right}
+				>
+					{item.label}
+				</ClayDropDown.Item>
+			))}
+		</DropDownWithState>
 	));
