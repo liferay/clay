@@ -226,6 +226,15 @@
 	$toggler-font-size-mobile: map-get($map, toggler-font-size-mobile);
 	$toggler-font-weight-mobile: map-get($map, toggler-font-weight-mobile);
 
+	$toggler-mobile: setter(map-get($map, toggler-mobile), ());
+	$toggler-mobile: map-merge((
+		border-color: $toggler-border-color-mobile,
+		border-style: $toggler-border-style-mobile,
+		color: $toggler-color-mobile,
+		font-size: $toggler-font-size-mobile,
+		font-weight: $toggler-font-weight-mobile,
+	), $toggler-mobile);
+
 	background-color: $bg;
 	border-color: $border-color;
 	border-style: $border-style;
@@ -251,11 +260,7 @@
 
 	.menubar-toggler {
 		@include media-breakpoint-down($breakpoint-down) {
-			border-color: $toggler-border-color-mobile;
-			border-style: $toggler-border-style-mobile;
-			color: $toggler-color-mobile;
-			font-size: $toggler-font-size-mobile;
-			font-weight: $toggler-font-weight-mobile;
+			@include clay-button-variant($toggler-mobile);
 		}
 	}
 
