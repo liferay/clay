@@ -220,10 +220,15 @@
 
 	// .menubar-toggler
 
+	// `$toggler-border-color-mobile` is deprecated use `$toggler-mobile` instead
 	$toggler-border-color-mobile: map-get($map, toggler-border-color-mobile);
+	// `$toggler-border-style-mobile` is deprecated use `$toggler-mobile` instead
 	$toggler-border-style-mobile: map-get($map, toggler-border-style-mobile);
+	// `$toggler-color-mobile` is deprecated use `$toggler-mobile` instead
 	$toggler-color-mobile: setter(map-get($map, toggler-color-mobile), $link-active-color);
+	// `$toggler-font-size-mobile` is deprecated use `$toggler-mobile` instead
 	$toggler-font-size-mobile: map-get($map, toggler-font-size-mobile);
+	// `$toggler-font-weight-mobile` is deprecated use `$toggler-mobile` instead
 	$toggler-font-weight-mobile: map-get($map, toggler-font-weight-mobile);
 
 	$toggler-mobile: setter(map-get($map, toggler-mobile), ());
