@@ -38,11 +38,8 @@ $panel-header-link: map-merge((
 	color: inherit,
 	display: block,
 	text-decoration: $panel-header-link-text-decoration,
-	transition: box-shadow 0.15s ease-in-out,
 	hover-color: inherit,
 	hover-text-decoration: $panel-header-link-hover-text-decoration,
-	focus-box-shadow: $btn-focus-box-shadow,
-	focus-outline: 0,
 	focus-z-index: 1,
 ), $panel-header-link);
 
@@ -111,10 +108,6 @@ $panel-secondary: map-merge((
 // Panel Unstyled
 
 $panel-unstyled-header-link: () !default;
-$panel-unstyled-header-link: map-merge((
-	border-radius: 1px,
-	focus-box-shadow: 0 0 0 $input-btn-focus-width $white#{','} 0 0 0 ($input-btn-focus-width * 2) $input-btn-focus-color,
-), $panel-unstyled-header-link);
 
 $panel-unstyled: () !default;
 $panel-unstyled: map-merge((
