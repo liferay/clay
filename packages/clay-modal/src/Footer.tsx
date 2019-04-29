@@ -12,7 +12,7 @@ export interface FooterProps {
 	middle?: React.ReactElement;
 }
 
-const Footer: FunctionComponent<FooterProps> = ({first, middle, last}) => (
+const Footer: FunctionComponent<FooterProps> = ({first, last, middle}) => (
 	<div className="modal-footer">
 		<div className="modal-item-first">{first && first}</div>
 		<div className="modal-item">{middle && middle}</div>
