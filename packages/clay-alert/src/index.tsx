@@ -31,7 +31,10 @@ const useAutoClose = (autoClose?: boolean | number, onClose = () => {}) => {
 
 		startTimer = () => {
 			startedTime.current = Date.now();
-			timer.current = setTimeout(onClose, timeToClose.current as number);
+			timer.current = window.setTimeout(
+				onClose,
+				timeToClose.current as number
+			);
 		};
 	}
 
@@ -49,7 +52,7 @@ const useAutoClose = (autoClose?: boolean | number, onClose = () => {}) => {
 	};
 };
 
-type DisplayType = 'danger' | 'info' | 'success' | 'warning';
+export type DisplayType = 'danger' | 'info' | 'success' | 'warning';
 
 interface ClayAlertProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**

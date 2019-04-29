@@ -6,18 +6,24 @@
 
 import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
-import ClayAlert from '../ClayAlert';
+import ClayAlert from '..';
 
 describe('ClayAlert', () => {
 	it('renders', () => {
-		const testRenderer = TestRenderer.create(<ClayAlert title="Hello!" />);
+		const testRenderer = TestRenderer.create(
+			<ClayAlert spritemap="/foo/bar" title="Hello!" />
+		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
 	it('renders as a different type', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayAlert displayType="danger" title="Hello!" />
+			<ClayAlert
+				displayType="danger"
+				spritemap="/foo/bar"
+				title="Hello!"
+			/>
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
@@ -25,7 +31,7 @@ describe('ClayAlert', () => {
 
 	it('renders as `stripe` variant', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayAlert title="Hello!" variant="stripe" />
+			<ClayAlert spritemap="/foo/bar" title="Hello!" variant="stripe" />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
@@ -33,7 +39,7 @@ describe('ClayAlert', () => {
 
 	it('renders with an icon for closing', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayAlert onClose={() => {}} title="Hello!" />
+			<ClayAlert onClose={() => {}} spritemap="/foo/bar" title="Hello!" />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
@@ -41,7 +47,7 @@ describe('ClayAlert', () => {
 
 	it('renders with a title and a message with markup', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayAlert title="Hello!">
+			<ClayAlert spritemap="/foo/bar" title="Hello!">
 				<span>{'test'}</span>
 			</ClayAlert>
 		);
@@ -52,9 +58,9 @@ describe('ClayAlert', () => {
 	it('renders with ToastContainer as a wrapper ', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayAlert.ToastContainer>
-				<ClayAlert title="One!" />
-				<ClayAlert title="Two!" />
-				<ClayAlert title="Three!" />
+				<ClayAlert spritemap="/foo/bar" title="One!" />
+				<ClayAlert spritemap="/foo/bar" title="Two!" />
+				<ClayAlert spritemap="/foo/bar" title="Three!" />
 			</ClayAlert.ToastContainer>
 		);
 
