@@ -22,9 +22,13 @@ const FOCUSABLE_ELEMENTS = [
 	'textarea:not([disabled]):not([aria-hidden])',
 ];
 
-const useModal = (
+/**
+ * A hook that takes care of controlling click, keyup and keydown events
+ * respectively close the modal after a click on the overlay, close the
+ * modal by pressing the ESC key and control the focus within the Modal.
+ */
+const useUserInteractions = (
 	elementRef: MutableRefObject<any>,
-	changeAttachEvent: boolean,
 	onClick: () => void
 ) => {
 	const getFocusableNodes = () => {
@@ -84,27 +88,21 @@ const useModal = (
 		}
 	};
 
-	const removeListeners = () => {
-		document.removeEventListener('keyup', handleKeyup);
-		document.removeEventListener('keydown', handleKeydown);
-		document.removeEventListener('click', handleDocumentClick);
-	};
-
 	/**
 	 * Just listen for keyup, keydown, and click when
 	 * changeAttachEvent is true.
 	 */
 	useEffect(() => {
-		if (changeAttachEvent) {
-			document.addEventListener('click', handleDocumentClick);
-			document.addEventListener('keyup', handleKeyup);
-			document.addEventListener('keydown', handleKeydown);
-		} else {
-			removeListeners();
-		}
+		document.addEventListener('click', handleDocumentClick);
+		document.addEventListener('keyup', handleKeyup);
+		document.addEventListener('keydown', handleKeydown);
 
-		return () => removeListeners();
-	}, [changeAttachEvent]);
+		return () => {
+			document.removeEventListener('keyup', handleKeyup);
+			document.removeEventListener('keydown', handleKeydown);
+			document.removeEventListener('click', handleDocumentClick);
+		};
+	}, []);
 };
 
-export {useModal};
+export {useUserInteractions};
