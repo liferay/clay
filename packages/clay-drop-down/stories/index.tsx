@@ -36,7 +36,7 @@ const DropDownWithState: React.FunctionComponent<any> = ({
 					TopLeft: Align.TopLeft,
 					TopRight: Align.TopRight,
 				},
-				Align.BottomRight
+				Align.BottomLeft
 			)}
 			onActiveChange={newVal => setActive(newVal)}
 			trigger={<ClayButton>{'Click Me'}</ClayButton>}
