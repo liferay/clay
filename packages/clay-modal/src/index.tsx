@@ -4,15 +4,15 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {createPortal} from 'react-dom';
-import {Size} from './types';
-import {useUserInteractions} from './Hook';
 import Body, {BodyProps} from './Body';
 import classNames from 'classnames';
 import Context, {IContext} from './Context';
 import Footer, {FooterProps} from './Footer';
 import Header, {HeaderProps} from './Header';
 import React, {FunctionComponent, useEffect, useRef, useState} from 'react';
+import {createPortal} from 'react-dom';
+import {Size} from './types';
+import {useUserInteractions} from './Hook';
 
 interface Props extends React.HTMLAttributes<HTMLDivElement>, IContext {
 	children?: (onClose: () => void) => React.ReactNode;
@@ -115,7 +115,9 @@ const ClayModal: FunctionComponent<Props> & {
 				>
 					<div className="modal-content">
 						<Context.Provider value={context}>
-							{children && typeof children === 'function' ? children(handleCloseModal) : children}
+							{children && typeof children === 'function'
+								? children(handleCloseModal)
+								: children}
 						</Context.Provider>
 					</div>
 				</div>

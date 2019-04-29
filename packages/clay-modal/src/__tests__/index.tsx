@@ -26,18 +26,17 @@ describe('ClayModal', () => {
 
 	it('renders', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayModal
-				onClose={() => {}}
-				spritemap={spritemap}
-			>
+			<ClayModal onClose={() => {}} spritemap={spritemap}>
 				{onClose => (
 					<>
-						<ClayModal.Header>Foo</ClayModal.Header>
+						<ClayModal.Header>{'Foo'}</ClayModal.Header>
 						<ClayModal.Body>
-							<h1>Hello world!</h1>
+							<h1>{'Hello world!'}</h1>
 						</ClayModal.Body>
 						<ClayModal.Footer
-							last={<Button onClick={onClose}>Primary</Button>}
+							last={
+								<Button onClick={onClose}>{'Primary'}</Button>
+							}
 						/>
 					</>
 				)}
@@ -49,13 +48,8 @@ describe('ClayModal', () => {
 
 	it('renders with Header', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayModal
-				onClose={() => {}}
-				spritemap={spritemap}
-			>
-				{() => (
-					<ClayModal.Header>Foo</ClayModal.Header>
-				)}
+			<ClayModal onClose={() => {}} spritemap={spritemap}>
+				{() => <ClayModal.Header>{'Foo'}</ClayModal.Header>}
 			</ClayModal>
 		);
 
@@ -64,11 +58,7 @@ describe('ClayModal', () => {
 
 	it('renders with size', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayModal
-				onClose={() => {}}
-				size="lg"
-				spritemap={spritemap}
-			/>
+			<ClayModal onClose={() => {}} size="lg" spritemap={spritemap} />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
@@ -88,13 +78,8 @@ describe('ClayModal', () => {
 
 	it('renders a body component with url', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayModal
-				onClose={() => {}}
-				spritemap={spritemap}
-			>
-				{() => (
-					<ClayModal.Body url="http://localhost" />
-				)}
+			<ClayModal onClose={() => {}} spritemap={spritemap}>
+				{() => <ClayModal.Body url="http://localhost" />}
 			</ClayModal>
 		);
 
@@ -103,15 +88,12 @@ describe('ClayModal', () => {
 
 	it('renders a footer component with buttons', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayModal
-				onClose={() => {}}
-				spritemap={spritemap}
-			>
+			<ClayModal onClose={() => {}} spritemap={spritemap}>
 				{onClose => (
 					<ClayModal.Footer
 						first={<Button>{'Bar'}</Button>}
-						middle={<Button>{'Baz'}</Button>}
 						last={<Button onClick={onClose}>{'Foo'}</Button>}
+						middle={<Button>{'Baz'}</Button>}
 					/>
 				)}
 			</ClayModal>

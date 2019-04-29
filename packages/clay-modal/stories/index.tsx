@@ -48,16 +48,16 @@ const ModalWithState: React.FunctionComponent<Props> = ({
 };
 
 const size = {
-	none: null,
-	lg: 'lg',
-	sm: 'sm',
 	'full-screen': 'full-screen',
+	lg: 'lg',
+	none: null,
+	sm: 'sm',
 };
 
 const status = {
-	none: null,
 	danger: 'danger',
 	info: 'info',
+	none: null,
 	success: 'success',
 	warning: 'warning',
 };
@@ -71,7 +71,7 @@ storiesOf('ClayModal', module).add('default', () => (
 			<>
 				<ClayModal.Header>{text('Title', 'Title')}</ClayModal.Header>
 				<ClayModal.Body url={text('Url', null)}>
-					<h1>Hello world!</h1>
+					<h1>{'Hello world!'}</h1>
 				</ClayModal.Body>
 				<ClayModal.Footer
 					first={
@@ -84,7 +84,9 @@ storiesOf('ClayModal', module).add('default', () => (
 							</ClayButton>
 						</ClayButton.Group>
 					}
-					last={<ClayButton onClick={onClose}>Primary</ClayButton>}
+					last={
+						<ClayButton onClick={onClose}>{'Primary'}</ClayButton>
+					}
 				/>
 			</>
 		)}
