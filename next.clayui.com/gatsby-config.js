@@ -12,6 +12,7 @@ module.exports = {
 		'MarkdownRemark.frontmatter.author': 'AuthorYaml',
 	},
 	plugins: [
+		'gatsby-plugin-typescript',
 		'gatsby-transformer-authors-yaml',
 		'gatsby-plugin-meta-redirect',
 		{
