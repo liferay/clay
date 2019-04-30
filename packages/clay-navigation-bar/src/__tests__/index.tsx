@@ -112,13 +112,8 @@ describe('ClayNavigationBar', () => {
 
 		let navigationBarDropdown;
 
-		act(() => {
-			navigationBarDropdown = waitForElement(
-				() => {
-					getByTestId(container, 'NavigationBarDropdown');
-				},
-				{container}
-			);
+		await act(async () => {
+			navigationBarDropdown = await waitForElement(() => getByTestId(container, 'NavigationBarDropdown'));
 		});
 
 		expect(navigationBarDropdown).toBeDefined();
@@ -126,7 +121,7 @@ describe('ClayNavigationBar', () => {
 		expect(navigationBarDropdown).toMatchSnapshot();
 	});
 
-	it('collapses the dropdown expanded when trigger element is clicked', () => {
+	it('collapses the dropdown expanded when trigger element is clicked', async () => {
 		const {container} = render(
 			<ClayNavigationBar
 				data-testid="#1"
@@ -171,13 +166,8 @@ describe('ClayNavigationBar', () => {
 
 		let navigationBarDropdown;
 
-		act(() => {
-			navigationBarDropdown = waitForElement(
-				() => {
-					getByTestId(container, 'NavigationBarDropdown');
-				},
-				{container}
-			);
+		await act(async () => {
+			navigationBarDropdown = await waitForElement(() => getByTestId(container, 'NavigationBarDropdown'));
 		});
 
 		expect(navigationBarDropdown).toBeDefined();
