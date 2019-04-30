@@ -5,18 +5,22 @@
  */
 
 import * as React from 'react';
+import classNames from 'classnames';
 import ClayIcon from '@clayui/icon';
 
 interface Props
 	extends React.HTMLAttributes<HTMLSpanElement | HTMLAnchorElement> {
+	active?: boolean;
 	href?: string;
 	spritemap?: string;
 	symbolLeft?: string;
 	symbolRight?: string;
 }
 
-const DropDownGroup: React.FunctionComponent<Props> = ({
+const DropDownItem: React.FunctionComponent<Props> = ({
+	active,
 	children,
+	className,
 	href,
 	spritemap,
 	symbolLeft,
@@ -27,7 +31,11 @@ const DropDownGroup: React.FunctionComponent<Props> = ({
 
 	return (
 		<li>
-			<ItemElement {...otherProps} className="dropdown-item" href={href}>
+			<ItemElement
+				{...otherProps}
+				className={classNames('dropdown-item', className, {active})}
+				href={href}
+			>
 				{symbolLeft && (
 					<span className="dropdown-item-indicator-start">
 						<ClayIcon spritemap={spritemap} symbol={symbolLeft} />
@@ -46,4 +54,4 @@ const DropDownGroup: React.FunctionComponent<Props> = ({
 	);
 };
 
-export default DropDownGroup;
+export default DropDownItem;

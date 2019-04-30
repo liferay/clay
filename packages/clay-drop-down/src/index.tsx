@@ -16,7 +16,6 @@ import Divider from './Divider';
 import Group from './Group';
 import Help from './Help';
 import Item from './Item';
-import Menu from './Menu';
 import Search from './Search';
 
 const Portal = ({children}: {children: React.ReactNode}) => {
@@ -82,7 +81,6 @@ const ClayDropDown: React.FunctionComponent<Props> & {
 	Group: typeof Group;
 	Help: typeof Help;
 	Item: typeof Item;
-	Menu: typeof Menu;
 	Search: typeof Search;
 } = ({
 	active = false,
@@ -95,16 +93,19 @@ const ClayDropDown: React.FunctionComponent<Props> & {
 	trigger,
 	...otherProps
 }) => {
-	const alignElementRef = React.useRef<HTMLButtonElement>(null);
+	const triggerElementRef = React.useRef<HTMLButtonElement>(null);
 	const menuElementRef = React.useRef<HTMLUListElement>(null);
 
-	useDropdownCloseInteractions(menuElementRef, onActiveChange);
+	useDropdownCloseInteractions(
+		[triggerElementRef, menuElementRef],
+		onActiveChange
+	);
 
 	React.useLayoutEffect(() => {
-		if (alignElementRef.current && menuElementRef.current) {
+		if (triggerElementRef.current && menuElementRef.current) {
 			Align.align(
 				menuElementRef.current,
-				alignElementRef.current,
+				triggerElementRef.current,
 				alignmentPosition
 			);
 		}
@@ -112,7 +113,7 @@ const ClayDropDown: React.FunctionComponent<Props> & {
 
 	return (
 		<div {...otherProps} className="dropdown">
-			<span ref={alignElementRef} style={{display: 'inline-block'}}>
+			<span ref={triggerElementRef} style={{display: 'inline-block'}}>
 				{React.cloneElement(trigger, {
 					className: 'dropdown-toggle',
 					onClick: () => onActiveChange(!active),
@@ -122,7 +123,7 @@ const ClayDropDown: React.FunctionComponent<Props> & {
 			{active && (
 				<Portal>
 					<DropDownMenu
-						alignElement={alignElementRef.current}
+						alignElement={triggerElementRef.current}
 						hasLeftSymbols={hasLeftSymbols}
 						hasRightSymbols={hasRightSymbols}
 						ref={menuElementRef}
@@ -141,7 +142,6 @@ ClayDropDown.Divider = Divider;
 ClayDropDown.Group = Group;
 ClayDropDown.Help = Help;
 ClayDropDown.Item = Item;
-ClayDropDown.Menu = Menu;
 ClayDropDown.Search = Search;
 
 export {Align};
