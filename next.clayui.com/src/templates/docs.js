@@ -67,7 +67,7 @@ export default props => {
 							])}
 							location={location}
 						/>
-						<div className="col-xl-9 sidebar-offset">
+						<div className="col-xl sidebar-offset">
 							<header>
 								<div className="clay-site-container container-fluid">
 									<h1>{frontmatter.title}</h1>
@@ -152,45 +152,20 @@ export default props => {
 								<div className="row">
 									<div className="col-6">
 										<p className="legal">
-											{
-												'Except as otherwise noted, the content of this site is licensed under '
-											}
-											<a
-												href="https://creativecommons.org/licenses/by-sa/4.0/"
-												target="_blank"
-											>
-												{'CC BY-SA'}
-											</a>
-											{' 4.0 license.'}
+											{'How can this be improved? Create an issue!'}
 										</p>
 									</div>
 									<div className="col-6 p-md-0">
 										<ul className="social-icons">
-											<li className="mr-2">
-												<a
-													className="rounded-circle sticker sticker-secondary"
-													href="https://github.com/liferay/clay/issues"
-													target="_blank"
-												>
-													<svg
-														aria-hidden="true"
-														className="lexicon-icon lexicon-icon-bars"
-													>
-														<use xlinkHref="/images/icons/icons.svg#comments" />
-													</svg>
-												</a>
-											</li>
 											<li>
 												<a
 													className="rounded-circle sticker sticker-secondary"
 													href="https://github.com/liferay/clay"
 													target="_blank"
 												>
-													<img
-														alt=""
-														className="lexicon-icon"
-														src="/images/home/GitHub-Mark-64px.svg"
-													/>
+													<svg className="lexicon-icon" height="24" name="github" viewBox="12 12 24 24" width="24">
+														<path d="M24.06 12C17.426 12 12 17.395 12 23.988c0 5.275 3.497 9.83 8.2 11.389.603.12.845-.24.845-.6V32.74c-3.377.72-4.1-1.558-4.1-1.558-.483-1.439-1.327-1.799-1.327-1.799-1.085-.719.12-.719.12-.719 1.206.12 1.81 1.199 1.81 1.199 1.085 1.918 2.894 1.319 3.497 1.079.12-.72.361-1.319.723-1.558-2.532-.36-5.427-1.439-5.427-5.994 0-1.32.483-2.398 1.206-3.237-.12-.36-.482-1.559.12-3.237 0 0 .966-.36 3.257 1.199 1.085-.12 2.17-.36 3.135-.36.965 0 2.05.12 3.015.36 2.291-1.559 3.256-1.199 3.256-1.199.603 1.678.241 2.877.12 3.117a4.854 4.854 0 0 1 1.207 3.237c0 4.555-2.774 5.634-5.548 5.874.483.36.844 1.079.844 2.277v3.237c0 .36.242.72.845.6 4.823-1.559 8.2-6.114 8.2-11.389C36.118 17.395 30.692 12 24.059 12z"></path>
+													</svg>
 												</a>
 											</li>
 										</ul>
@@ -211,8 +186,11 @@ export const pageQuery = graphql`
 			excerpt
 			timeToRead
 			frontmatter {
-				title
+				description
+				packageNpm
 				packageStatus
+				packageVersion
+				title
 			}
 			code {
 				body

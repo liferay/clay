@@ -59,7 +59,7 @@ export default props => (
 		</div>
 
 		<nav
-			className="col-xl-3 sidebar-toggler-content sidenav-sticky sidenav-menu-slider"
+			className="sidebar-toggler-content sidenav-sticky sidenav-menu-slider"
 			id="clay-sidebar"
 			ref={SidebarRef}
 		>

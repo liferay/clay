@@ -6,6 +6,8 @@
 	padding: 0;
 
 	.clay-site-container {
+		max-width: 968px;
+
 		@media (min-width: $screen-xs) {
 			padding-left: $base-size;
 			padding-right: $base-size * 2;
@@ -38,12 +40,14 @@
     top: 4rem;
     height: calc(100vh - 4rem);
 	visibility: visible;
+	max-width: 288px;
 
 	@media (max-width: $screen-md) {
 		display: none;
 		position: relative;
 		top: 0;
 		width: 100%;
+		max-width: 100%;
 	}
 
 	&.toggler-expanded {
