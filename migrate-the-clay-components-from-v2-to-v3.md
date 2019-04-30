@@ -16,6 +16,55 @@ To symbolize this change, Clay is distributing the new packages on the scope npm
 
 > Clay v2 is still being distributed and maintained on the `clay-link`, `clay-button` packages...
 
+## ClayAlert
+
+CLayAlert v3 combines Alert, Stripe Alert, and Toast Notifications all in one.
+
+### API Changes
+
+-   `autoClose` accepts either a boolean or number of milliseconds
+-   `closed` was removed in favor of the `onClose` callback
+-   `destroyOnHide` was removed
+-   `style` was renamed to `displayType`
+-   `message` was removed in favor of using `children`
+
+### Compositions
+
+To get to the behavior of Clay Toast Notifications, you need to use `ClayAlert.ToastContainer` as a parent for `ClayAlert`
+
+For Example:
+
+```jsx
+<ClayAlert.ToastContainer>
+	<ClayAlert title="One!" />
+	<ClayAlert title="Two!" />
+	<ClayAlert title="Three!" />
+</ClayAlert.ToastContainer>
+```
+
+**Note:** If you use `autoClose` and `onClose` is setting state, you need to make sure that `onClose` does so asynchronously. For example below, if you are using the `useState` hook, you need to make sure to use a callback for `setAlerts`.
+
+```diff
+const [alerts, setAlerts] = useState([]);
+
+{alerts.map(alertItem => (
+	<ClayAlert
+		autoClose={1000}
+		key={alertItem}
+		onClose={() => {
+-				setAlerts(
+-					alerts.filter(item => item !== alertItem)
+-				);
++				setAlerts(
++					prevItems => prevItems.filter(item => item !== alertItem)
++				);
+		}}
+	>
+		{alertItem}
+	</ClayAlert>
+))}
+```
+
 ## ClayButton
 
 -   Removed icon dependency within button itself
