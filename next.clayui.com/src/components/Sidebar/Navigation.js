@@ -14,7 +14,7 @@ class Navigation extends Component {
 	constructor(props) {
 		super(props);
 
-		this.handleOnClick = this.handleOnClick.bind();
+		this.handleOnClick = this.handleOnClick.bind(this);
 	}
 
 	/**
@@ -75,7 +75,7 @@ class Navigation extends Component {
 					}
 					ref={`navItem${index}${depth}`}
 				>
-					<Anchor page={section} />
+					<Anchor location={location} page={section} />
 
 					{section.items && (
 						<Navigation
@@ -101,33 +101,22 @@ class Navigation extends Component {
 	}
 }
 
-const Anchor = ({page}) => {
-	if (page.items) {
-		if (page.indexVisible) {
-			return (
-				<Link className="align-middle" to={`${page.link}.html`}>
-					<span>{page.title}</span>
-					<svg className="collapse-toggle clay-icon icon-monospaced">
-						<use xlinkHref="/images/icons/icons.svg#caret-bottom" />
-					</svg>
-				</Link>
-			);
-		} else {
-			return (
-				<a className="align-middle" href="javascript:;">
-					<span>{page.title}</span>
-					<svg className="collapse-toggle clay-icon icon-monospaced">
-						<use xlinkHref="/images/icons/icons.svg#caret-bottom" />
-					</svg>
-				</a>
-			);
-		}
-	}
+const Anchor = ({location, page}) => {
+	const link = `${page.link}.html`;
+	const TagName = location.pathname === link || (page.items && !page.indexVisible) ? 'a' : Link;
+	const props = location.pathname === link || (page.items && !page.indexVisible)
+		? { href: 'javascript:;' }
+		: { to: link }
 
 	return (
-		<Link className="align-middle" to={`${page.link}.html`}>
+		<TagName className="align-middle" {...props}>
 			<span>{page.title}</span>
-		</Link>
+			{page.items && (
+				<svg className="collapse-toggle" height="24" name="keyboardArrowRight" width="24">
+					<path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path> <path d="M0 0h24v24H0V0z" fill="none"></path>
+				</svg>
+			)}
+		</TagName>
 	);
 };
 
