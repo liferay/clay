@@ -23,21 +23,9 @@ interface ListItemProps extends React.HTMLAttributes<HTMLLIElement> {
 	 * Children elements received from ClayNavigationBar.ListItem component.
 	 */
 	children: React.ReactElement;
-
-	/**
-	 * Optional property that defines the label of the element 
-	 * that will trigger the dropdown.
-	 */
-	itemLabel?: string;
 }
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
-	/**
-	 * Optional property that overrides itemLabel property passed to children components
-	 * to manipulate dropdown's trigger label.
-	 */
-	activeLabel?: string;
-
 	/**
 	 * Children elements received from ClayNavigationBar component.
 	 */
@@ -52,22 +40,27 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	 * Path to the location of the spritemap resource.
 	 */
 	spritemap: string;
+
+	/**
+	 * Set up dropdown's trigger label.
+	 */
+	triggerLabel: string;
 }
 
 type ListItemType = React.FunctionComponent<ListItemProps>;
 
 const ListItem: ListItemType = ({
 	active,
-	className,
 	children,
+	className,
 	...otherProps
 }) => {
 	return (
 		<li
 			{...otherProps}
 			className={classNames('nav-item', {
-				className,
 				active,
+				className,
 			})}
 		>
 			{React.Children.map(
@@ -93,11 +86,11 @@ const ListItem: ListItemType = ({
 const ClayNavigationBar: React.FunctionComponent<Props> & {
 	ListItem: ListItemType;
 } = ({
-	activeLabel,
-	className,
 	children,
+	className,
 	inverted = false,
 	spritemap,
+	triggerLabel,
 	...otherProps
 }) => {
 	const [visible, setVisible] = React.useState(false);
@@ -108,23 +101,18 @@ const ClayNavigationBar: React.FunctionComponent<Props> & {
 		handleClickToggler,
 	] = useTransition(visible, setVisible, contentRef);
 
-	const activeElements = children.filter(
-		child => child.props && child.props.active
+	const activeElementsCount = children.filter(child => child.props.active)
+		.length;
+
+	warning(
+		!(activeElementsCount > 1),
+		`You passed ${activeElementsCount} active props to ClayNavigationBar children.`
 	);
 
 	warning(
-		!(!activeLabel && !activeElements.length),
-		`You must provide at least one \`active\` attribute on ClayNavigationBar.ListItem or a \`activeLabel\` to ClayNavigationBar component`
+		triggerLabel,
+		'`triggerLabel` property is required for ClayNavigationBar'
 	);
-
-	warning(
-		!(!activeLabel && activeElements.length > 1),
-		`You passed ${
-			activeElements.length
-		} active props to ClayNavigationBar children, only the first one child will be considered to name the trigger element`
-	);
-
-	const label = activeLabel || activeElements[0].props.itemLabel || '';
 
 	return (
 		<nav
@@ -144,6 +132,7 @@ const ClayNavigationBar: React.FunctionComponent<Props> & {
 		>
 			<div className="container-fluid container-fluid-max-xl">
 				<ClayLink
+					aria-expanded={visible}
 					className={classNames(
 						'navbar-toggler',
 						'navbar-toggler-link',
@@ -154,7 +143,7 @@ const ClayNavigationBar: React.FunctionComponent<Props> & {
 					displayType="secondary"
 					onClick={handleClickToggler}
 				>
-					{label}
+					{triggerLabel}
 
 					<ClayIcon spritemap={spritemap} symbol="caret-bottom" />
 				</ClayLink>
@@ -165,6 +154,7 @@ const ClayNavigationBar: React.FunctionComponent<Props> & {
 						collapsing: transitioning,
 						show: visible,
 					})}
+					data-testid="NavigationBarDropdown"
 					onTransitionEnd={handleTransitionEnd}
 					ref={contentRef}
 				>
