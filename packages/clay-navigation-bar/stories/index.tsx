@@ -4,83 +4,39 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import ClayButton from '@clayui/button';
+import ClayLink from '@clayui/link';
 import ClayNavigationBar from '../src/index';
 import React from 'react';
-import {boolean} from '@storybook/addon-knobs';
+import {boolean, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
 import 'clay-css/lib/css/atlas.css';
 
 const spritemap = require('clay-css/lib/images/icons/icons.svg');
 
-storiesOf('ClayNavigationBar', module)
-	.add('default', () => (
-		<ClayNavigationBar
-			inverted={boolean('Inverted', false)}	
-			items={[
-				{
-					active: true,
-					href: '#',
-					label: 'Test 1',
-				},
-				{
-					active: false,
-					href: '#',
-					label: 'Test 2',
-				},
-			]}
-			spritemap={spritemap}
-		/>
-	))
-	.add('Navigation Bar with list items as anchors', () => (
-		<ClayNavigationBar
-			inverted={boolean('Inverted', false)}
-			items={[
-				{
-					active: true,
-					href: '#',
-					label: 'Test 1',
-				},
-				{
-					active: false,
-					href: '#',
-					label: 'Test 2',
-				},
-				{
-					active: false,
-					href: '#',
-					label: 'Test 3',
-				},
-				{
-					active: false,
-					href: '#',
-					label: 'Test 4',
-				},
-			]}
-			spritemap={spritemap}
-		/>
-	))
-	.add('Navigation Bar with list items as buttons', () => (
-		<ClayNavigationBar
-			inverted={boolean('Inverted', false)}	
-			items={[
-				{
-					active: true,
-					label: 'Test 1',
-				},
-				{
-					active: false,
-					label: 'Test 2',
-				},
-				{
-					active: false,
-					label: 'Test 3',
-				},
-				{
-					active: false,
-					label: 'Test 4',
-				},
-			]}
-			spritemap={spritemap}
-		/>
-	));
+storiesOf('ClayNavigationBar', module).add('default', () => (
+	<ClayNavigationBar
+		inverted={boolean('Inverted: ', false)}
+		spritemap={spritemap}
+		triggerLabel={text('triggerLabel: ', 'Item 1')}
+	>
+		<ClayNavigationBar.ListItem active={boolean('Active 1: ', true)}>
+			<ClayLink className="nav-link" displayType="secondary" href="#1">
+				<span className="navbar-text-truncate">{`Item 1`}</span>
+			</ClayLink>
+		</ClayNavigationBar.ListItem>
+
+		<ClayNavigationBar.ListItem active={boolean('Active 2: ', false)}>
+			<ClayButton block className="nav-link" displayType="unstyled" small>
+				<span className="navbar-text-truncate">{`Item 2`}</span>
+			</ClayButton>
+		</ClayNavigationBar.ListItem>
+
+		<ClayNavigationBar.ListItem active={boolean('Active 3: ', false)}>
+			<ClayLink className="nav-link" displayType="secondary" href="#3">
+				<span className="navbar-text-truncate">{`Item 3`}</span>
+			</ClayLink>
+		</ClayNavigationBar.ListItem>
+	</ClayNavigationBar>
+));
