@@ -148,13 +148,13 @@
 				position: absolute;
 				right: 0;
 				top: 0;
-				transform: rotate(-90deg);
+				transform: rotate(0);
 				transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 				width: 40px;
 			}
 
 			&.active > a > .collapse-toggle {
-				transform: rotate(0);
+				transform: rotate(90deg);
 			}
 		}
 	}
