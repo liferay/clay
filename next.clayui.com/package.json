@@ -1,6 +1,7 @@
 {
   "private": true,
   "name": "clayui.com",
+  "version": "3.0.0",
   "license": "MIT",
   "scripts": {
     "copy:icons": "cpx '../packages/clay-css/lib/images/icons/*.svg' static/images/icons",
