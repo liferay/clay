@@ -165,13 +165,14 @@ ClayNavigationBar has become simpler than the version `v2`, removing APIs from `
 
 ### API Changes:
 
-- `data` deprecated, you can pass as props to the component or elements.
-- `defaultEventHandler` deprecated
-- `elementClasses` deprecated
-- `id` deprecated, you can pass as props to the component or elements.
-- `items` deprecated, in favor of composition. You can pass `<ClayNavigationBar.Item>` component to specify the element that will be rendered on Dropdown.
+-   `data` deprecated, you can pass as props to the component or elements.
+-   `defaultEventHandler` deprecated
+-   `elementClasses` deprecated
+-   `id` deprecated, you can pass as props to the component or elements.
+-   `items` deprecated, in favor of composition. You can pass `<ClayNavigationBar.Item>` component to specify the element that will be rendered on Dropdown.
 
 ### Compositions:
+
 Example:
 
 You want to use Clay button or just a button element inside your dropdown
@@ -273,14 +274,14 @@ Become a low-level API, you can compose Modal's small blocks to get the results 
 
 ### API Changes
 
--  `body` deprecated in favor of utilizing `<ClayModal.Body />` component
--  `data` deprecated
--  `defaultEventHandler` deprecated
--  `elementClasses` renamed to `className`
--  `footerButtons` deprecated in favor of utilizing `<ClayModal.Footer />` component
--  `onClose` added
--  `title` deprecated in favor of utilizing `<ClayModal.Header />` component
--  `visible` deprecated in favor of animating the component when it is mount and unmount.
+-   `body` deprecated in favor of utilizing `<ClayModal.Body />` component
+-   `data` deprecated
+-   `defaultEventHandler` deprecated
+-   `elementClasses` renamed to `className`
+-   `footerButtons` deprecated in favor of utilizing `<ClayModal.Footer />` component
+-   `onClose` added
+-   `title` deprecated in favor of utilizing `<ClayModal.Header />` component
+-   `visible` deprecated in favor of animating the component when it is mount and unmount.
 
 ### Compositions
 
@@ -408,3 +409,36 @@ For example:
 -   `selectable` removed in favor of using `ClayCheckbox`
 -   `schema` removed
 -   `spritemap` only used for `<ClayList.QuickActionMenu.Item />`
+
+## ClayCollapse -> ClayPanel
+
+ClayCollapse has been renamed to ClayPanel due to collapse being just a part of the panel functionality. ClayPanel is now simpler as it now manages its own expanded state internally. ClayPanel also is now created via composition with `<ClayPanel.Body>`, `<ClayPanel.Footer>`, `<ClayPanel.Header>` and `<ClayPanel.Group>`.
+
+For example:
+
+```jsx
+<ClayPanel>
+	<ClayPanel.Header>{'Header!'}</ClayPanel.Header>
+	<ClayPanel.Body>{'Body!'}</ClayPanel.Body>
+	<ClayPanel.Footer>{'Footer!'}</ClayPanel.Footer>
+</ClayPanel>
+
+// or
+<ClayPanel.Group>
+	<ClayPanel>
+		<ClayPanel.Body>{'One!'}</ClayPanel.Body>
+	</ClayPanel>
+	<ClayPanel>
+		<ClayPanel.Body>{'Two!'}</ClayPanel.Body>
+	</ClayPanel>
+</ClayPanel.Group>
+```
+
+### API Changes
+
+-   `closedClasses` removed and uses clay's classes of `collapse` and `show`
+-   `collapsed` renamed to `defaultExpanded` which will only take effect on first render.
+-   `content` removed in favor of `children` prop
+-   `headers` removed in favor of composing with `<ClayPanel.Header>`
+-   `openClasses` removed and uses clay's class of `collapse`
+-   `transitionClasses` removed and manages transitions internally.
