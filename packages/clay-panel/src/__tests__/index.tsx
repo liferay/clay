@@ -88,10 +88,34 @@ describe('ClayPanel Interactions', () => {
 
 		fireEvent.click(closeButton as HTMLButtonElement, {});
 
+		expect(
+			container.querySelector('.panel-collapse.collapsing')
+		).toBeTruthy();
+
+		fireEvent.transitionEnd(
+			container.querySelector(
+				'.panel-collapse.collapsing'
+			) as HTMLDivElement,
+			{}
+		);
+
+		expect(
+			container.querySelector('.panel-collapse.collapsing')
+		).toBeFalsy();
 		expect(container.querySelector('.panel-collapse.show')).toBeTruthy();
-		expect(container.querySelector('.panel-collapse.collapse')).toBeFalsy();
 
 		fireEvent.click(closeButton as HTMLButtonElement, {});
+
+		expect(
+			container.querySelector('.panel-collapse.collapsing')
+		).toBeTruthy();
+
+		fireEvent.transitionEnd(
+			container.querySelector(
+				'.panel-collapse.collapsing'
+			) as HTMLDivElement,
+			{}
+		);
 
 		expect(container.querySelector('.panel-collapse.show')).toBeFalsy();
 		expect(

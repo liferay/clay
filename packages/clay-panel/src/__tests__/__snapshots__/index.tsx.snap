@@ -3,6 +3,7 @@
 exports[`ClayPanel renders 1`] = `
 <div
   className="panel"
+  role="tablist"
 >
   <div
     className="panel-header"
@@ -34,6 +35,7 @@ exports[`ClayPanel renders 1`] = `
 exports[`ClayPanel renders with different displayType 1`] = `
 <div
   className="panel panel-secondary"
+  role="tablist"
 >
   <div
     className="panel-header"
@@ -70,6 +72,7 @@ exports[`ClayPanel renders with multiple panels 1`] = `
 >
   <div
     className="panel"
+    role="tablist"
   >
     <div
       className="panel-header"
@@ -88,6 +91,7 @@ exports[`ClayPanel renders with multiple panels 1`] = `
   </div>
   <div
     className="panel"
+    role="tablist"
   >
     <div
       className="panel-header"
@@ -106,6 +110,7 @@ exports[`ClayPanel renders with multiple panels 1`] = `
   </div>
   <div
     className="panel"
+    role="tablist"
   >
     <button
       aria-expanded={false}
@@ -145,6 +150,7 @@ exports[`ClayPanel renders with multiple panels 1`] = `
     </button>
     <div
       className="panel-collapse collapse"
+      onTransitionEnd={[Function]}
       role="tabpanel"
     >
       <div
