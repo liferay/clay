@@ -16,6 +16,7 @@ import Divider from './Divider';
 import Group from './Group';
 import Help from './Help';
 import Item from './Item';
+import ItemList from './ItemList';
 import Search from './Search';
 
 const Portal = ({children}: {children: React.ReactNode}) => {
@@ -31,39 +32,6 @@ const Portal = ({children}: {children: React.ReactNode}) => {
 
 	return createPortal(children, portalRef.current);
 };
-
-interface DropDownMenuProps extends React.HTMLAttributes<HTMLUListElement> {
-	alignElement: HTMLElement | null;
-	hasLeftSymbols?: boolean;
-	hasRightSymbols?: boolean;
-	ref?: React.Ref<HTMLUListElement>;
-}
-
-const DropDownMenu: React.ComponentType<DropDownMenuProps> = React.forwardRef(
-	(
-		{
-			alignElement,
-			children,
-			hasLeftSymbols,
-			hasRightSymbols,
-			...otherProps
-		},
-		ref?: React.Ref<HTMLUListElement>
-	) => {
-		return (
-			<ul
-				{...otherProps}
-				className={classNames('dropdown-menu list-unstyled show', {
-					'dropdown-menu-indicator-end': hasRightSymbols,
-					'dropdown-menu-indicator-start': hasLeftSymbols,
-				})}
-				ref={ref}
-			>
-				{children}
-			</ul>
-		);
-	}
-);
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	active: boolean;
@@ -81,6 +49,7 @@ const ClayDropDown: React.FunctionComponent<Props> & {
 	Group: typeof Group;
 	Help: typeof Help;
 	Item: typeof Item;
+	ItemList: typeof ItemList;
 	Search: typeof Search;
 } = ({
 	active = false,
@@ -94,7 +63,7 @@ const ClayDropDown: React.FunctionComponent<Props> & {
 	...otherProps
 }) => {
 	const triggerElementRef = React.useRef<HTMLButtonElement>(null);
-	const menuElementRef = React.useRef<HTMLUListElement>(null);
+	const menuElementRef = React.useRef<HTMLDivElement>(null);
 
 	useDropdownCloseInteractions(
 		[triggerElementRef, menuElementRef],
@@ -122,14 +91,15 @@ const ClayDropDown: React.FunctionComponent<Props> & {
 
 			{active && (
 				<Portal>
-					<DropDownMenu
-						alignElement={triggerElementRef.current}
-						hasLeftSymbols={hasLeftSymbols}
-						hasRightSymbols={hasRightSymbols}
+					<div
+						className={classNames('dropdown-menu show', {
+							'dropdown-menu-indicator-end': hasRightSymbols,
+							'dropdown-menu-indicator-start': hasLeftSymbols,
+						})}
 						ref={menuElementRef}
 					>
 						{children}
-					</DropDownMenu>
+					</div>
 				</Portal>
 			)}
 		</div>
@@ -142,6 +112,7 @@ ClayDropDown.Divider = Divider;
 ClayDropDown.Group = Group;
 ClayDropDown.Help = Help;
 ClayDropDown.Item = Item;
+ClayDropDown.ItemList = ItemList;
 ClayDropDown.Search = Search;
 
 export {Align};
