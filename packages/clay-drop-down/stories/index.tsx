@@ -49,99 +49,111 @@ const DropDownWithState: React.FunctionComponent<any> = ({
 storiesOf('ClayDropDown', module)
 	.add('default', () => (
 		<DropDownWithState>
-			{[
-				{href: '#one', label: 'one'},
-				{href: '#two', label: 'two'},
-				{href: '#three', label: 'three'},
-			].map((item, i) => (
-				<ClayDropDown.Item href={item.href} key={i}>
-					{item.label}
-				</ClayDropDown.Item>
-			))}
+			<ClayDropDown.ItemList>
+				{[
+					{href: '#one', label: 'one'},
+					{href: '#two', label: 'two'},
+					{href: '#three', label: 'three'},
+				].map((item, i) => (
+					<ClayDropDown.Item href={item.href} key={i}>
+						{item.label}
+					</ClayDropDown.Item>
+				))}
+			</ClayDropDown.ItemList>
 		</DropDownWithState>
 	))
 	.add('groups', () => (
 		<DropDownWithState>
-			<ClayDropDown.Group header="Group #1">
-				{[
-					{href: '#one', label: 'one'},
-					{href: '#two', label: 'two'},
-					{href: '#three', label: 'three'},
-				].map((item, i) => (
-					<ClayDropDown.Item href={item.href} key={i}>
-						{item.label}
-					</ClayDropDown.Item>
-				))}
-			</ClayDropDown.Group>
+			<ClayDropDown.ItemList>
+				<ClayDropDown.Group header="Group #1">
+					{[
+						{href: '#one', label: 'one'},
+						{href: '#two', label: 'two'},
+						{href: '#three', label: 'three'},
+					].map((item, i) => (
+						<ClayDropDown.Item href={item.href} key={i}>
+							{item.label}
+						</ClayDropDown.Item>
+					))}
+				</ClayDropDown.Group>
 
-			<ClayDropDown.Group header="Group #2">
-				{[
-					{href: '#one', label: 'one'},
-					{href: '#two', label: 'two'},
-					{href: '#three', label: 'three'},
-				].map((item, i) => (
-					<ClayDropDown.Item href={item.href} key={i}>
-						{item.label}
-					</ClayDropDown.Item>
-				))}
-			</ClayDropDown.Group>
+				<ClayDropDown.Group header="Group #2">
+					{[
+						{href: '#one', label: 'one'},
+						{href: '#two', label: 'two'},
+						{href: '#three', label: 'three'},
+					].map((item, i) => (
+						<ClayDropDown.Item href={item.href} key={i}>
+							{item.label}
+						</ClayDropDown.Item>
+					))}
+				</ClayDropDown.Group>
+			</ClayDropDown.ItemList>
 		</DropDownWithState>
 	))
 	.add('checkbox', () => (
 		<DropDownWithState>
-			<ClayDropDown.Item>
-				<ClayCheckbox label="I'm a checkbox!" />
-			</ClayDropDown.Item>
+			<ClayDropDown.ItemList>
+				<ClayDropDown.Item>
+					<ClayCheckbox label="I'm a checkbox!" />
+				</ClayDropDown.Item>
+			</ClayDropDown.ItemList>
 		</DropDownWithState>
 	))
 	.add('radio', () => (
 		<DropDownWithState>
-			<ClayDropDown.Group header="Order">
-				<ClayDropDown.Item>
-					<ClayRadioGroup.Radio
-						checked
-						label="Ascending"
-						value="asc"
-					/>
-				</ClayDropDown.Item>
-				<ClayDropDown.Item>
-					<ClayRadioGroup.Radio label="Descending" value="desc" />
-				</ClayDropDown.Item>
-			</ClayDropDown.Group>
+			<ClayDropDown.ItemList>
+				<ClayDropDown.Group header="Order">
+					<ClayDropDown.Item>
+						<ClayRadioGroup.Radio
+							checked
+							label="Ascending"
+							value="asc"
+						/>
+					</ClayDropDown.Item>
+					<ClayDropDown.Item>
+						<ClayRadioGroup.Radio label="Descending" value="desc" />
+					</ClayDropDown.Item>
+				</ClayDropDown.Group>
+			</ClayDropDown.ItemList>
 		</DropDownWithState>
 	))
 	.add('caption and help', () => (
 		<DropDownWithState>
 			<ClayDropDown.Help>{'Can I help you?'}</ClayDropDown.Help>
 
-			{[
-				{href: '#one', label: 'one'},
-				{href: '#two', label: 'two'},
-				{href: '#three', label: 'three'},
-			].map((item, i) => (
-				<ClayDropDown.Item href={item.href} key={i}>
-					{item.label}
-				</ClayDropDown.Item>
-			))}
+			<ClayDropDown.ItemList>
+				{[
+					{href: '#one', label: 'one'},
+					{href: '#two', label: 'two'},
+					{href: '#three', label: 'three'},
+				].map((item, i) => (
+					<ClayDropDown.Item href={item.href} key={i}>
+						{item.label}
+					</ClayDropDown.Item>
+				))}
+			</ClayDropDown.ItemList>
 
 			<ClayDropDown.Caption>{'... or maybe not.'}</ClayDropDown.Caption>
 		</DropDownWithState>
 	))
 	.add('items with icons', () => (
 		<DropDownWithState hasLeftSymbols hasRightSymbols>
-			{[
-				{label: 'Left', left: 'trash'},
-				{label: 'Right', right: 'check'},
-				{label: 'Both', left: 'trash', right: 'check'},
-			].map((item, i) => (
-				<ClayDropDown.Item
-					key={i}
-					spritemap={spritemap}
-					symbolLeft={item.left}
-					symbolRight={item.right}
-				>
-					{item.label}
-				</ClayDropDown.Item>
-			))}
+			<ClayDropDown.ItemList>
+				{[
+					{label: 'Left', left: 'trash'},
+					{label: 'Right', right: 'check'},
+					{label: 'Both', left: 'trash', right: 'check'},
+				].map((item, i) => (
+					<ClayDropDown.Item
+						key={i}
+						spritemap={spritemap}
+						symbolLeft={item.left}
+						symbolRight={item.right}
+					>
+						{item.label}
+					</ClayDropDown.Item>
+				))}
+			</ClayDropDown.ItemList>
 		</DropDownWithState>
 	));
