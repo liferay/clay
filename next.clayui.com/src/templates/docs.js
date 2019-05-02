@@ -131,6 +131,11 @@ export default props => {
 															h3: Typography.H3,
 															h4: Typography.H4,
 															p: Typography.P,
+															ul: (props) => (
+																<ul className="clay-ul">
+																	{props.children}
+																</ul>
+															)
 														}}
 													>
 														{code.body}
