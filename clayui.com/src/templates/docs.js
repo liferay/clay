@@ -46,7 +46,7 @@ export default class Docs extends Component {
                 </Helmet>
                 <main className="content">
                     <Sidebar location={location} />
-                    <div className="sidebar-offset">
+                    <div className="sidebar-offset" id="clayDocsContent">
                         <header>
                             <div className="clay-site-container container-fluid">
                                 <h1>{frontmatter.title}</h1>

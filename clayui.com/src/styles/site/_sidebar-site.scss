@@ -1,8 +1,19 @@
+#skipToClayDocsContent {
+	opacity: 0;
+	position: absolute;
+	z-index: -1;
+
+	&:focus {
+		opacity: 1;
+		z-index: 1;
+	}
+}
+
 .sidebar-clay-site {
 	background-color: $brand-light;
-	min-width: 370px;
 
 	.navbar-brand {
+		color: $brand-secondary;
 		font-size: $base-size * 1.1666;
 		font-weight: 700;
 
@@ -14,10 +25,6 @@
 	.logo {
 		height: 2.5rem;
 		padding-bottom: 0.1875rem;
-	}
-
-	a, .nav .clay-icon {
-		color: $brand-secondary;
 	}
 
 	.sidebar-header {
@@ -39,22 +46,7 @@
 		padding-top: $base-size;
 	}
 
-	.nav-icons {
-		padding: 0 $base-size $base-size * 4 $base-size * 1.66;
-
-		.sticker-secondary {
-			background-color: #CDCED9;
-		}
-
-		.lexicon-icon {
-			fill: $brand-light;
-			width: 1.3em;
-		}
-	}
-
 	.input-group {
-		width: 100%;
-
 		.input-group-addon {
 			background-color: transparent;
 			border-color: transparent;
@@ -86,7 +78,7 @@
 				color: $brand-light-secondary-text;
 			}
 
-			&:active, &:focus {
+			&:focus {
 				background-color: $brand-lighten;
 				color: $brand-secondary;
 
@@ -105,115 +97,70 @@
 			}
 		}
 	}
+}
 
-	.nav-nested {
-		margin-top: 2px;
-
-		& > li:not(.active) > ul {
-			display: none;
-		}
+#clayuiSiteNavigation {
+	> .nav > li > .clayui-site-nav-link,
+	.active > .clayui-site-nav-link {
+		font-weight: 600;
 	}
 
-	.nav-pills {
-		.nav-heading {
-			display: block;
-		}
+	.nav-heading:not(.active) > .nav {
+		display: none;
+	}
 
-		& > li > {
-			ul > li {
-				padding-left: $base-size;
-			}
+	.active:not(.nav-heading) > .clayui-site-nav-link {
+		background-color: $brand-dark-lighter;
+	}
 
-			a {
-				background-color: transparent;
-				display: block;
-				font-weight: 600;
-				line-height: $base-size / 1.375;
-				min-height: $base-size * 1.675;
-				padding: 0.55rem 1rem;
-				position: relative;
-
-				span {
-					display: inline-block;
-					vertical-align: middle;
-				}
-
-				.clay-icon {
-					display: inline-block;
-					fill: currentColor;
-					height: 16px;
-					transform: translateZ(0);
-					vertical-align: middle;
-					width: 16px;
-				}
-			}
-
-			& ul > li > ul > li > a, .nav .nav > li > a {
-				padding-left: $base-size / 2;
-			}
-
-			.icon-monospaced.clay-icon {
-				float: left;
-				height: 40px;
-				padding: 2px;
-			}
-		}
-
-		& > li.active > a,
-		& > li > ul > li.active > a {
-			background-color: $brand-dark-lighter;
-			border-radius: 6px;
-			font-weight: 600;
-		}
-
-		& > li > ul > li.active > a:focus,
-		& > li > a:focus,
-		& > li > a:hover {
-			background-color: $brand-dark-lighter;
-			border-radius: 6px;
-		}
-
-		& li > ul > li > a {
-			color: $brand-secondary;
-			font-weight: normal;
-		}
-
-		& > li.nav-heading > a, & > li > ul > li.nav-heading > a {
-			&, &:focus {
-				background-color: transparent;
-			}
-
-			&:hover {
-				background-color: $brand-dark-lighter;
-			}
-		}
-
-		& li {
-			> a > .collapse-toggle {
-				display: inline-block;
-				height: 40px;
-				margin: 0;
-				min-height: auto;
-				padding: 12px;
-				position: absolute;
-				right: 0;
-				top: 0;
-				transform: rotate(-90deg);
-				transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-				width: 40px;
-			}
-
-			&.active > a > .collapse-toggle {
-				transform: rotate(0);
-			}
-		}
+	> .nav > li .nav > li {
+		padding-left: $base-size;
 	}
 }
 
-.sidebar-toggler {
-	display: none;
+.clayui-site-nav-link {
+	align-items: center;
+	background-color: transparent;
+	border-radius: 6px;
+	color: $brand-secondary;
+	display: flex;
+	margin-bottom: 2px;
+	min-height: 40px;
+	padding: 0.55rem 1rem;
+	position: relative;
 
-	@media (max-width: $screen-sm - 1) {
-		display: block;
+	&:hover {
+		background-color: $brand-dark-lighter;
+		color: $brand-secondary;
+		text-decoration: none;
 	}
+
+	&:focus {
+		color: $brand-secondary;
+		z-index: 1;
+	}
+
+	.clay-icon {
+		align-items: center;
+		display: inline-flex;
+		fill: currentColor;
+		height: 1em;
+		justify-content: center;
+		vertical-align: middle;
+		width: 1em;
+	}
+
+	.collapse-toggle {
+		font-size: 1rem;
+		margin-top: -8px;
+		position: absolute;
+		right: 12px;
+		top: 50%;
+		transform: rotate(-90deg);
+		transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	}
+}
+
+.active > .clayui-site-nav-link .collapse-toggle {
+	transform: rotate(0);
 }

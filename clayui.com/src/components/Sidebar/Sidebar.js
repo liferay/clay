@@ -124,6 +124,8 @@ export default props => (
 					<SideNavScroll>
 						<div className="sidebar-header">
 							<div className="navbar navbar-expand-lg navbar-header">
+								<a className="btn btn-primary" href="#clayDocsContent" id="skipToClayDocsContent">Skip to Content</a>
+
 								<Link className="navbar-brand" to="/">
 									<img className="logo mr-2" src="/images/clay_logo_w.png" alt="Clay" />
 									<span className="title">Clay </span>
@@ -137,7 +139,9 @@ export default props => (
 								<Search placeholder="Search" />
 							</div>
 
-							<Navigation sectionList={getSection(data)} location={props.location} />
+							<div id="clayuiSiteNavigation">
+								<Navigation sectionList={getSection(data)} location={props.location} />
+							</div>
 						</div>
 					</SideNavScroll>
 				</nav>
