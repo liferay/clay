@@ -48,7 +48,7 @@ class Navigation extends Component {
 
 	render() {
 		return (
-			<ul className="nav nav-nested nav-pills nav-stacked">
+			<ul className="nav nav-stacked">
 				{this.renderNavigationItems()}
 			</ul>
 		);
@@ -58,7 +58,7 @@ class Navigation extends Component {
 const Anchor = ({page}) => {
 	if (page.items) {
 		return (
-			<a className="align-middle" href="javascript:;">
+			<a className="clayui-site-nav-link" href="javascript:;">
 				<span>{page.title}</span>
 				<svg className="collapse-toggle clay-icon icon-monospaced">
 					<use xlinkHref="/images/icons/icons.svg#caret-bottom" />
@@ -70,7 +70,7 @@ const Anchor = ({page}) => {
 	return (
 		<Link
 			to={`${page.link}.html`}
-			className="align-middle"
+			className="clayui-site-nav-link"
 		>
 			<span>{page.title}</span>
 		</Link>

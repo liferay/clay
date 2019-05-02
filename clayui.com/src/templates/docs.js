@@ -46,7 +46,7 @@ export default class Docs extends Component {
                 </Helmet>
                 <main className="content">
                     <Sidebar location={location} />
-                    <div className="sidebar-offset">
+                    <div className="sidebar-offset" id="clayDocsContent">
                         <header>
                             <div className="clay-site-container container-fluid">
                                 <h1>{frontmatter.title}</h1>
@@ -85,14 +85,14 @@ export default class Docs extends Component {
                               <div className="col-6 p-md-0">
                                  <ul className="social-icons">
                                     <li className="mr-2">
-                                        <a className="rounded-circle sticker sticker-secondary" href="https://github.com/liferay/clay/issues" target="_blank">
+                                        <a className="rounded-circle sticker" href="https://github.com/liferay/clay/issues" target="_blank">
                                             <svg aria-hidden="true" className="lexicon-icon lexicon-icon-bars">
                                                 <use xlinkHref="/images/icons/icons.svg#comments" />
                                             </svg>
                                         </a>
                                     </li>
                                     <li>
-                                        <a className="rounded-circle sticker sticker-secondary" href="https://github.com/liferay/clay" target="_blank">
+                                        <a className="rounded-circle sticker" href="https://github.com/liferay/clay" target="_blank">
                                             <img className="lexicon-icon" src="/images/home/GitHub-Mark-64px.svg" alt="" />
                                         </a>
                                     </li>
