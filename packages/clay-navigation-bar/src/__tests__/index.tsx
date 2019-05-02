@@ -31,7 +31,7 @@ describe('ClayNavigationBar', () => {
 				spritemap={spritemap}
 				triggerLabel={label}
 			>
-				<ClayNavigationBar.ListItem active>
+				<ClayNavigationBar.Item active>
 					<ClayLink
 						className="nav-link"
 						displayType="secondary"
@@ -39,9 +39,9 @@ describe('ClayNavigationBar', () => {
 					>
 						<span className="navbar-text-truncate">{label}</span>
 					</ClayLink>
-				</ClayNavigationBar.ListItem>
+				</ClayNavigationBar.Item>
 
-				<ClayNavigationBar.ListItem>
+				<ClayNavigationBar.Item>
 					<ClayButton
 						block
 						className="nav-link"
@@ -50,9 +50,9 @@ describe('ClayNavigationBar', () => {
 					>
 						<span className="navbar-text-truncate">{`Item 2`}</span>
 					</ClayButton>
-				</ClayNavigationBar.ListItem>
+				</ClayNavigationBar.Item>
 
-				<ClayNavigationBar.ListItem>
+				<ClayNavigationBar.Item>
 					<ClayLink
 						className="nav-link"
 						displayType="secondary"
@@ -60,7 +60,7 @@ describe('ClayNavigationBar', () => {
 					>
 						<span className="navbar-text-truncate">{`Item 3`}</span>
 					</ClayLink>
-				</ClayNavigationBar.ListItem>
+				</ClayNavigationBar.Item>
 			</ClayNavigationBar>
 		);
 
@@ -75,7 +75,7 @@ describe('ClayNavigationBar', () => {
 				spritemap={spritemap}
 				triggerLabel={`Trigger Label`}
 			>
-				<ClayNavigationBar.ListItem active>
+				<ClayNavigationBar.Item active>
 					<ClayLink
 						className="nav-link"
 						displayType="secondary"
@@ -83,9 +83,9 @@ describe('ClayNavigationBar', () => {
 					>
 						<span className="navbar-text-truncate">{`Item 1`}</span>
 					</ClayLink>
-				</ClayNavigationBar.ListItem>
+				</ClayNavigationBar.Item>
 
-				<ClayNavigationBar.ListItem>
+				<ClayNavigationBar.Item>
 					<ClayButton
 						block
 						className="nav-link"
@@ -94,7 +94,7 @@ describe('ClayNavigationBar', () => {
 					>
 						<span className="navbar-text-truncate">{`Item 2`}</span>
 					</ClayButton>
-				</ClayNavigationBar.ListItem>
+				</ClayNavigationBar.Item>
 			</ClayNavigationBar>
 		);
 
@@ -113,7 +113,9 @@ describe('ClayNavigationBar', () => {
 		let navigationBarDropdown;
 
 		await act(async () => {
-			navigationBarDropdown = await waitForElement(() => getByTestId(container, 'NavigationBarDropdown'));
+			navigationBarDropdown = await waitForElement(() =>
+				getByTestId(container, 'NavigationBarDropdown')
+			);
 		});
 
 		expect(navigationBarDropdown).toBeDefined();
@@ -129,7 +131,7 @@ describe('ClayNavigationBar', () => {
 				spritemap={spritemap}
 				triggerLabel={`Trigger Label`}
 			>
-				<ClayNavigationBar.ListItem active>
+				<ClayNavigationBar.Item active>
 					<ClayLink
 						className="nav-link"
 						displayType="secondary"
@@ -137,9 +139,9 @@ describe('ClayNavigationBar', () => {
 					>
 						<span className="navbar-text-truncate">{`Item 1`}</span>
 					</ClayLink>
-				</ClayNavigationBar.ListItem>
+				</ClayNavigationBar.Item>
 
-				<ClayNavigationBar.ListItem>
+				<ClayNavigationBar.Item>
 					<ClayButton
 						block
 						className="nav-link"
@@ -148,7 +150,7 @@ describe('ClayNavigationBar', () => {
 					>
 						<span className="navbar-text-truncate">{`Item 2`}</span>
 					</ClayButton>
-				</ClayNavigationBar.ListItem>
+				</ClayNavigationBar.Item>
 			</ClayNavigationBar>
 		);
 
@@ -167,7 +169,9 @@ describe('ClayNavigationBar', () => {
 		let navigationBarDropdown;
 
 		await act(async () => {
-			navigationBarDropdown = await waitForElement(() => getByTestId(container, 'NavigationBarDropdown'));
+			navigationBarDropdown = await waitForElement(() =>
+				getByTestId(container, 'NavigationBarDropdown')
+			);
 		});
 
 		expect(navigationBarDropdown).toBeDefined();
@@ -184,7 +188,7 @@ describe('ClayNavigationBar', () => {
 				spritemap={spritemap}
 				triggerLabel={label}
 			>
-				<ClayNavigationBar.ListItem active>
+				<ClayNavigationBar.Item active>
 					<ClayLink
 						className="nav-link"
 						displayType="secondary"
@@ -192,9 +196,9 @@ describe('ClayNavigationBar', () => {
 					>
 						<span className="navbar-text-truncate">{label}</span>
 					</ClayLink>
-				</ClayNavigationBar.ListItem>
+				</ClayNavigationBar.Item>
 
-				<ClayNavigationBar.ListItem active>
+				<ClayNavigationBar.Item active>
 					<ClayButton
 						block
 						className="nav-link"
@@ -203,9 +207,9 @@ describe('ClayNavigationBar', () => {
 					>
 						<span className="navbar-text-truncate">{`Item 2`}</span>
 					</ClayButton>
-				</ClayNavigationBar.ListItem>
+				</ClayNavigationBar.Item>
 
-				<ClayNavigationBar.ListItem>
+				<ClayNavigationBar.Item>
 					<ClayLink
 						className="nav-link"
 						displayType="secondary"
@@ -213,7 +217,7 @@ describe('ClayNavigationBar', () => {
 					>
 						<span className="navbar-text-truncate">{`Item 3`}</span>
 					</ClayLink>
-				</ClayNavigationBar.ListItem>
+				</ClayNavigationBar.Item>
 			</ClayNavigationBar>
 		);
 
@@ -233,7 +237,7 @@ describe('ClayNavigationBar', () => {
 				spritemap={spritemap}
 				triggerLabel={label}
 			>
-				<ClayNavigationBar.ListItem active>
+				<ClayNavigationBar.Item active>
 					<ClayLink
 						className="nav-link"
 						displayType="secondary"
@@ -241,9 +245,9 @@ describe('ClayNavigationBar', () => {
 					>
 						<span className="navbar-text-truncate">{label}</span>
 					</ClayLink>
-				</ClayNavigationBar.ListItem>
+				</ClayNavigationBar.Item>
 
-				<ClayNavigationBar.ListItem active>
+				<ClayNavigationBar.Item active>
 					<ClayButton
 						block
 						className="nav-link"
@@ -252,7 +256,7 @@ describe('ClayNavigationBar', () => {
 					>
 						<span className="navbar-text-truncate">{`Item 2`}</span>
 					</ClayButton>
-				</ClayNavigationBar.ListItem>
+				</ClayNavigationBar.Item>
 			</ClayNavigationBar>
 		);
 

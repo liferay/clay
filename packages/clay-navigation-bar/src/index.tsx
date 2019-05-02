@@ -13,14 +13,14 @@ import warning from 'warning';
 
 import {useTransition} from './Hooks';
 
-interface ListItemProps extends React.HTMLAttributes<HTMLLIElement> {
+interface ItemProps extends React.HTMLAttributes<HTMLLIElement> {
 	/**
 	 * Determines the active state of an dropdown list item.
 	 */
 	active?: boolean;
 
 	/**
-	 * Children elements received from ClayNavigationBar.ListItem component.
+	 * Children elements received from ClayNavigationBar.Item component.
 	 */
 	children: React.ReactElement;
 }
@@ -29,7 +29,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Children elements received from ClayNavigationBar component.
 	 */
-	children: React.ReactElement<ListItemProps>[];
+	children: React.ReactElement<ItemProps>[];
 
 	/**
 	 * Determines the style of the Navigation Bar
@@ -47,14 +47,9 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	triggerLabel: string;
 }
 
-type ListItemType = React.FunctionComponent<ListItemProps>;
+type ItemType = React.FunctionComponent<ItemProps>;
 
-const ListItem: ListItemType = ({
-	active,
-	children,
-	className,
-	...otherProps
-}) => {
+const Item: ItemType = ({active, children, className, ...otherProps}) => {
 	return (
 		<li
 			{...otherProps}
@@ -65,7 +60,7 @@ const ListItem: ListItemType = ({
 		>
 			{React.Children.map(
 				children,
-				(child: React.ReactElement<ListItemProps>, index) => {
+				(child: React.ReactElement<ItemProps>, index) => {
 					return React.cloneElement(child, {
 						...child.props,
 						className: classNames(
@@ -84,7 +79,7 @@ const ListItem: ListItemType = ({
 };
 
 const ClayNavigationBar: React.FunctionComponent<Props> & {
-	ListItem: ListItemType;
+	Item: ItemType;
 } = ({
 	children,
 	className,
@@ -167,6 +162,6 @@ const ClayNavigationBar: React.FunctionComponent<Props> & {
 	);
 };
 
-ClayNavigationBar.ListItem = ListItem;
+ClayNavigationBar.Item = Item;
 
 export default ClayNavigationBar;

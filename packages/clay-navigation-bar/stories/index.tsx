@@ -21,22 +21,24 @@ storiesOf('ClayNavigationBar', module).add('default', () => (
 		spritemap={spritemap}
 		triggerLabel={text('triggerLabel: ', 'Item 1')}
 	>
-		<ClayNavigationBar.ListItem active={boolean('Active 1: ', true)}>
+		<ClayNavigationBar.Item
+			active={boolean('Active 1: ', true)}
+		>
 			<ClayLink className="nav-link" displayType="secondary" href="#1">
 				<span className="navbar-text-truncate">{`Item 1`}</span>
 			</ClayLink>
-		</ClayNavigationBar.ListItem>
+		</ClayNavigationBar.Item>
 
-		<ClayNavigationBar.ListItem active={boolean('Active 2: ', false)}>
+		<ClayNavigationBar.Item active={boolean('Active 2: ', false)}>
 			<ClayButton block className="nav-link" displayType="unstyled" small>
 				<span className="navbar-text-truncate">{`Item 2`}</span>
 			</ClayButton>
-		</ClayNavigationBar.ListItem>
+		</ClayNavigationBar.Item>
 
-		<ClayNavigationBar.ListItem active={boolean('Active 3: ', false)}>
+		<ClayNavigationBar.Item active={boolean('Active 3: ', false)}>
 			<ClayLink className="nav-link" displayType="secondary" href="#3">
 				<span className="navbar-text-truncate">{`Item 3`}</span>
 			</ClayLink>
-		</ClayNavigationBar.ListItem>
+		</ClayNavigationBar.Item>
 	</ClayNavigationBar>
 ));
