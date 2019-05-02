@@ -171,10 +171,6 @@ class Index extends Component {
 
                                     Brought to you by <a href="http://www.liferay.com" className="font-weight-bold" target="_blank">Liferay, Inc.</a>
                                 </div>
-
-                                <div className="col-lg text-center text-lg-right">
-                                    <div>Powered by <a href="https://wedeploy.com/" className="font-weight-bold" target="_blank">WeDeploy™</a></div>
-                                </div>
                             </div>
                         </div>
                     </div>
