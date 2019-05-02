@@ -11,6 +11,7 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
+    "@clayui/date-picker": "^3.0.0",
     "@mdx-js/mdx": "^0.16.8",
     "@mdx-js/tag": "^0.16.8",
     "axios": "^0.18.0",
@@ -28,7 +29,7 @@
     "gatsby-plugin-react-helmet": "^3.0.6",
     "gatsby-plugin-sass": "^2.0.10",
     "gatsby-plugin-typescript": "^2.0.13",
-    "gatsby-remark-prismjs": "^3.2.4",
+    "gatsby-remark-prismjs": "^3.2.8",
     "gatsby-source-filesystem": "^2.0.20",
     "gatsby-transformer-remark": "^2.2.4",
     "js-yaml": "^3.12.1",
@@ -40,7 +41,8 @@
     "prismjs": "^1.15.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-live": "^2.0.1"
   },
   "devDependencies": {
     "cpx": "^1.5.0",
