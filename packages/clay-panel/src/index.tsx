@@ -11,6 +11,7 @@ import ClayPanelBody from './Body';
 import ClayPanelFooter from './Footer';
 import ClayPanelGroup from './Group';
 import ClayPanelHeader from './Header';
+import {useTransitionHeight} from '@clayui/shared';
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	collapsable?: boolean;
@@ -39,7 +40,19 @@ const ClayPanel: React.FunctionComponent<Props> & {
 	spritemap,
 	...otherProps
 }) => {
+	const panelRef = React.useRef<HTMLDivElement>(null);
 	const [expanded, setExpaned] = React.useState<boolean>(defaultExpanded);
+
+	const [
+		transitioning,
+		handleTransitionEnd,
+		handleClickToggler,
+	] = useTransitionHeight(expanded, setExpaned, panelRef);
+
+	const showIconCollapsed = !(
+		(!expanded && transitioning) ||
+		(expanded && !transitioning)
+	);
 
 	return (
 		<div
@@ -47,6 +60,7 @@ const ClayPanel: React.FunctionComponent<Props> & {
 			className={classNames('panel', className, {
 				[`panel-${displayType}`]: displayType,
 			})}
+			role="tablist"
 		>
 			{!collapsable && (
 				<>
@@ -69,10 +83,10 @@ const ClayPanel: React.FunctionComponent<Props> & {
 							{
 								'collapse-icon': showCollapseIcon,
 								'collapse-icon-middle': showCollapseIcon,
-								collapsed: !expanded,
+								collapsed: showIconCollapsed,
 							}
 						)}
-						onClick={() => setExpaned(val => !val)}
+						onClick={handleClickToggler}
 						role="tab"
 					>
 						<span className="panel-title">{displayTitle}</span>
@@ -97,9 +111,12 @@ const ClayPanel: React.FunctionComponent<Props> & {
 
 					<div
 						className={classNames('panel-collapse', {
-							collapse: !expanded,
+							collapse: !transitioning,
+							collapsing: transitioning,
 							show: expanded,
 						})}
+						onTransitionEnd={handleTransitionEnd}
+						ref={panelRef}
 						role="tabpanel"
 					>
 						{children}
