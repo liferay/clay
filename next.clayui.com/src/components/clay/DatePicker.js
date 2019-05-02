@@ -98,7 +98,7 @@ const DatePickerCustomFooter = () => {
 render(<Component />)`;
 
 	return <Editor code={code} disabled scope={scope} />;
-}
+};
 
 const DatePickerWithTime = () => {
 	const scope = {ClayDatePicker, spritemap, useState};
@@ -124,6 +124,11 @@ const DatePickerWithTime = () => {
 render(<Component />)`;
 
 	return <Editor code={code} disabled scope={scope} />;
-}
+};
 
-export {DatePickerLocale, DatePickerWithTime, DatePickerCustomFooter, DatePickerWithState};
+export {
+	DatePickerLocale,
+	DatePickerWithTime,
+	DatePickerCustomFooter,
+	DatePickerWithState,
+};

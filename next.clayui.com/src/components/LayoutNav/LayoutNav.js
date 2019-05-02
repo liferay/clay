@@ -14,7 +14,11 @@ export default () => (
 		<div className="clay-site-alert alert alert-dark alert-fixed alert-fluid">
 			<b>{'Clay V3 is currently in beta'}</b>
 			{' for ready-to-use components, use '}
-			<a className="link-secondary" href="https://clayui.com" target="_blank">
+			<a
+				className="link-secondary"
+				href="https://clayui.com"
+				target="_blank"
+			>
 				{'Clay V2'}
 			</a>
 			{'.'}

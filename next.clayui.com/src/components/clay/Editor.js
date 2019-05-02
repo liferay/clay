@@ -83,7 +83,13 @@ const theme = {
 };
 
 const Editor = ({code, disabled = false, scope}) => (
-	<LiveProvider code={code} disabled={disabled} noInline scope={scope} theme={theme}>
+	<LiveProvider
+		code={code}
+		disabled={disabled}
+		noInline
+		scope={scope}
+		theme={theme}
+	>
 		<div className="sheet-example">
 			<div className="form-group">
 				<LivePreview />

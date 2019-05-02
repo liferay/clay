@@ -103,18 +103,27 @@ class Navigation extends Component {
 
 const Anchor = ({location, page}) => {
 	const link = `${page.link}.html`;
-	const TagName = location.pathname === link || (page.items && !page.indexVisible) ? 'a' : Link;
-	const props = location.pathname === link || (page.items && !page.indexVisible)
-		? { href: 'javascript:;' }
-		: { to: link }
+	const TagName =
+		location.pathname === link || (page.items && !page.indexVisible)
+			? 'a'
+			: Link;
+	const props =
+		location.pathname === link || (page.items && !page.indexVisible)
+			? {href: 'javascript:;'}
+			: {to: link};
 
 	return (
 		<TagName className="align-middle" {...props}>
 			<span>{page.title}</span>
 			{page.items && (
-				<svg className="collapse-toggle" height="24" name="keyboardArrowRight" width="24">
-					<path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path>
-					<path d="M0 0h24v24H0V0z" fill="none"></path>
+				<svg
+					className="collapse-toggle"
+					height="24"
+					name="keyboardArrowRight"
+					width="24"
+				>
+					<path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+					<path d="M0 0h24v24H0V0z" fill="none" />
 				</svg>
 			)}
 		</TagName>
