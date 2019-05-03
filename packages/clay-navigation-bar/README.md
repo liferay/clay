@@ -1,6 +1,6 @@
 # clay-navigation-bar
 
-My awesome Clay component
+React implementation for navigation bar from clay-css
 
 ## Setup
 
@@ -11,14 +11,6 @@ My awesome Clay component
 ```
 yarn
 ```
-
-3. Build the code:
-
-```
-yarn start
-```
-
-4. Open the demo at `localhost:8080` on your browser.
 
 ## Contribute
 
