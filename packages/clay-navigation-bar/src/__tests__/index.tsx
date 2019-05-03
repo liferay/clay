@@ -262,7 +262,7 @@ describe('ClayNavigationBar', () => {
 
 		expect(mockWarnings).toBeCalled();
 		expect(mockWarnings.mock.calls[0][0]).toBe(
-			'Warning: You passed 2 active props to ClayNavigationBar children.'
+			'Warning: ClayNavigationBar expects 0 or 1 active children, but received 2'
 		);
 		expect(testRenderer.toJSON).toMatchSnapshot();
 		jest.resetAllMocks();
