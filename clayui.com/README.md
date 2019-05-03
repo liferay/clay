@@ -1,7 +1,14 @@
 # clayui.com
 The main Clay site at clayui.com
 
-> Make sure that you have built clay-css package(running yarn lerna on root of monorepo) before run. If you don't did that you will miss some icons.
+## Setup
+1. Install NodeJS >= [v6.11.0](http://nodejs.org/dist/v6.11.0/), if you don't have it yet.
+
+2. Install global dependencies (if you haven't yet)
+`[sudo] npm install -g yarn`
+
+3. Install project dependencies:
+`yarn`
 
 ## Running in development:
 `yarn develop`
