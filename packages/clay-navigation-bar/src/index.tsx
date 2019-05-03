@@ -60,7 +60,7 @@ const Item: ItemType = ({active, children, className, ...otherProps}) => {
 		>
 			{React.Children.map(
 				children,
-				(child: React.ReactElement<ItemProps>, index) => (
+				(child: React.ReactElement<ItemProps>, index) =>
 					React.cloneElement(child, {
 						...child.props,
 						className: classNames(
@@ -72,7 +72,6 @@ const Item: ItemType = ({active, children, className, ...otherProps}) => {
 						),
 						key: index,
 					})
-				)
 			)}
 		</li>
 	);

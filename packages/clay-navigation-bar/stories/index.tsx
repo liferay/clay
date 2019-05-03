@@ -21,9 +21,7 @@ storiesOf('ClayNavigationBar', module).add('default', () => (
 		spritemap={spritemap}
 		triggerLabel={text('triggerLabel: ', 'Item 1')}
 	>
-		<ClayNavigationBar.Item
-			active={boolean('Active 1: ', true)}
-		>
+		<ClayNavigationBar.Item active={boolean('Active 1: ', true)}>
 			<ClayLink className="nav-link" displayType="secondary" href="#1">
 				<span className="navbar-text-truncate">{`Item 1`}</span>
 			</ClayLink>
