@@ -100,8 +100,8 @@ const ClayNavigationBar: React.FunctionComponent<Props> & {
 		.length;
 
 	warning(
-		!(activeElementsCount > 1),
-		`You passed ${activeElementsCount} active props to ClayNavigationBar children.`
+		activeElementsCount <= 1,
+		`ClayNavigationBar expects 0 or 1 active children, but received ${activeElementsCount}`
 	);
 
 	return (
