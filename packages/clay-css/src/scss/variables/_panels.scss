@@ -38,10 +38,17 @@ $panel-header-link: map-merge((
 	color: inherit,
 	display: block,
 	text-decoration: $panel-header-link-text-decoration,
+	transition: border-color 0.1s ease,
 	hover-color: inherit,
 	hover-text-decoration: $panel-header-link-hover-text-decoration,
 	focus-z-index: 1,
 ), $panel-header-link);
+
+$panel-header-collapsed-link: () !default;
+$panel-header-collapsed-link: map-merge((
+	border-color: transparent,
+	transition: border-color 0.75s ease,
+), $panel-header-collapsed-link);
 
 // Panel Body
 
