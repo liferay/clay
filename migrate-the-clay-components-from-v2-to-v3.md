@@ -143,7 +143,7 @@ To get to the behavior of having a ClayLink with image, use the composition with
 
 ClayNavigationBar has become simpler than the version `v2`, removing APIs from `items` and turning more flexible to pass elements by composition. Turning the development more easier when defining your Dropdown's list items but complying with Lexicon specifications.
 
-```
+```diff
  <ClayNavigationBar
 -    items={[{ label: 'Page 1', href: '#1' }, { label: 'Page 2', href: '#2' }]}
      inverted
