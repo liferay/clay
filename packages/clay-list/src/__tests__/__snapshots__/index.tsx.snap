@@ -1,1 +1,123 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayList renders 1`] = `
+<ul
+  className="list-group show-quick-actions-on-hover"
+>
+  <li
+    className="list-group-header"
+  >
+    <h3
+      className="list-group-header-title"
+    >
+      This is a header
+    </h3>
+  </li>
+  <li
+    className="list-group-item list-group-item-flex"
+  >
+    <div
+      className="autofit-col"
+    >
+      Item 1
+    </div>
+    <div
+      className="autofit-col"
+    >
+      ItemField
+    </div>
+    <div
+      className="autofit-col autofit-col-expand"
+    >
+      <h4
+        className="list-group-title"
+      >
+        Item Title and expanded
+      </h4>
+      <p
+        className="list-group-text"
+      >
+        Item Text
+      </p>
+    </div>
+    <div
+      className="autofit-col"
+    >
+      ItemField
+    </div>
+  </li>
+  <li
+    className="list-group-item list-group-item-flex"
+  >
+    <div
+      className="autofit-col"
+    >
+      Item 2
+    </div>
+    <div
+      className="autofit-col autofit-col-expand"
+    >
+      Hover this item for action menu
+    </div>
+    <div
+      className="autofit-col"
+    >
+      <div
+        className="quick-action-menu"
+      >
+        <button
+          className="component-action quick-action-item"
+          onClick={[Function]}
+          role="button"
+        >
+          <svg
+            className="lexicon-icon lexicon-icon-trash"
+            role="presentation"
+          >
+            <use
+              xlinkHref="/foo/bar#trash"
+            />
+          </svg>
+        </button>
+        <button
+          className="component-action quick-action-item"
+          onClick={[Function]}
+          role="button"
+        >
+          <svg
+            className="lexicon-icon lexicon-icon-cog"
+            role="presentation"
+          >
+            <use
+              xlinkHref="/foo/bar#cog"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </li>
+  <li
+    className="list-group-header"
+  >
+    <h3
+      className="list-group-header-title"
+    >
+      This is another header
+    </h3>
+  </li>
+  <li
+    className="list-group-item list-group-item-flex"
+  >
+    <div
+      className="autofit-col"
+    >
+      Item 3
+    </div>
+    <div
+      className="autofit-col"
+    >
+      ItemField
+    </div>
+  </li>
+</ul>
+`;
