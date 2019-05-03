@@ -55,11 +55,23 @@ $nav-tabs-tab-pane-padding: 2rem !default;
 
 $nav-underline-link-color: $gray-600 !default;
 
-$nav-underline-link-highlight-left: 0 !default;
-$nav-underline-link-highlight-right: 0 !default;
+$nav-underline-link-active-color: $gray-900 !default;
 
 $nav-underline-link-disabled-color: $nav-link-disabled-color !default;
 
-$nav-underline-link-active-color: $gray-900 !default;
+$nav-underline-link: () !default;
+$nav-underline-link: map-merge((
+	border-radius: 1px,
+	transition: box-shadow 0.15s ease-in-out,
+	focus-box-shadow: $component-focus-box-shadow,
+	focus-outline: 0,
+	disabled-box-shadow: none,
+), $nav-underline-link);
+
+// Nav Underline Link Highlight
+
+$nav-underline-link-highlight-left: 0 !default;
+$nav-underline-link-highlight-right: 0 !default;
+
 $nav-underline-link-active-highlight: $component-active-bg !default;
 $nav-underline-link-active-highlight-height: 0.125rem !default; // 2px

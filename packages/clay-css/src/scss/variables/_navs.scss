@@ -75,7 +75,33 @@ $nav-underline-link-highlight-palette: null !default;
 $nav-underline-link-color: null !default;
 $nav-underline-link-padding-x: null !default;
 $nav-underline-link-padding-y: null !default;
+
 $nav-underline-link-hover-color: null !default;
+
+$nav-underline-link-active-color: null !default;
+
+$nav-underline-link-disabled-color: null !default;
+
+$nav-underline-link: () !default;
+$nav-underline-link: map-merge((
+	color: $nav-underline-link-color,
+	padding-bottom: $nav-underline-link-padding-y,
+	padding-left: $nav-underline-link-padding-x,
+	padding-right: $nav-underline-link-padding-x,
+	padding-top: $nav-underline-link-padding-y,
+	hover-color: $nav-underline-link-hover-color,
+	focus-color: $nav-underline-link-hover-color,
+	active-class-color: $nav-underline-link-active-color,
+	disabled-color: $nav-underline-link-disabled-color,
+), $nav-underline-link);
+
+$nav-underline-link-show: () !default;
+$nav-underline-link-show: map-merge((
+	color: $nav-underline-link-active-color,
+), $nav-underline-link-show);
+
+// Nav Underline Link Highlight
+
 $nav-underline-link-highlight-content: null !default;
 $nav-underline-link-highlight-height: null !default;
 $nav-underline-link-highlight-bottom: 0 !default;
@@ -83,10 +109,8 @@ $nav-underline-link-highlight-left: $nav-link-padding-x / 2 !default;
 $nav-underline-link-highlight-right: $nav-link-padding-x / 2 !default;
 $nav-underline-link-highlight-top: null !default;
 
-$nav-underline-link-disabled-color: null !default;
-$nav-underline-link-disabled-highlight: null !default;
-
-$nav-underline-link-active-color: null !default;
 $nav-underline-link-active-highlight: $component-active-bg !default;
 $nav-underline-link-active-content: '' !default;
 $nav-underline-link-active-highlight-height: 0.1875rem !default;
+
+$nav-underline-link-disabled-highlight: null !default;
