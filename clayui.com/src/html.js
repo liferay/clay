@@ -15,6 +15,7 @@ class HTML extends Component {
                     {this.props.headComponents}
 
                     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+                    <link id="clayCSSTheme" rel="stylesheet" href="/css/atlas.css" />
                     <script type="text/javascript" src="/js/jquery.min.js"></script>
                     <script type="text/javascript" src="/js/popper.js"></script>
                     <script type="text/javascript" src="/js/bootstrap.js"></script>
