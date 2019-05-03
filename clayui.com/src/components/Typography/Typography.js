@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React from 'react';
 
 export const H1 = props => (
 	<h1 className="clay-h1">{props.children}</h1>

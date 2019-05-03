@@ -34,7 +34,7 @@ class Try extends Component {
     _renderSidebarList() {
         return this._listSidebar.map((element, index) => (
             <li key={index} onClick={this._updateCode.bind(this, element.code)}>
-                <a className="align-middle" href="javascript:;">
+                <a className="align-middle" href="#openPanel" onclick="return false;">
                     <span>{element.title}</span>
                 </a>
             </li>
@@ -67,7 +67,7 @@ class Try extends Component {
                             <div className="sidebar-list sidebar-clay-site">
                                 <ul className="nav nav-nested nav-pills nav-stacked">
                                     <li className="nav-heading active">
-                                        <a className="align-middle" href="javascript:;">
+                                        <a className="align-middle" href="#openPanel" onclick="return false;">
                                             <span>Examples</span>
                                         </a>
                                         <ul className="nav nav-nested nav-pills nav-stacked">
