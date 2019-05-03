@@ -141,7 +141,7 @@ To get to the behavior of having a ClayLink with image, use the composition with
 
 ## ClayNavigationBar
 
-ClayNavigationBar has become more simpler than the version `v2`, removing APIs from `items` and turning more flexible to pass elements by composition. Turning the development more easier when defining your Dropdown's list items but complying with Lexicon specifications.
+ClayNavigationBar has become simpler than the version `v2`, removing APIs from `items` and turning more flexible to pass elements by composition. Turning the development more easier when defining your Dropdown's list items but complying with Lexicon specifications.
 
 ```
  <ClayNavigationBar
