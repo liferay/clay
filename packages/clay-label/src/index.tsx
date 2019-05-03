@@ -23,6 +23,11 @@ interface IProps
 	displayType?: DisplayType;
 
 	/**
+	 * Ref that is attached to container element
+	 */
+	forwardRef?: React.Ref<any>;
+
+	/**
 	 * Flag to indicate if the label should be of the `large` variant.
 	 */
 	large?: boolean;
@@ -38,6 +43,7 @@ const ClayLabel: React.FunctionComponent<IProps> = ({
 	className,
 	closeButtonProps,
 	displayType = 'secondary',
+	forwardRef,
 	href,
 	large = false,
 	spritemap,
@@ -53,6 +59,7 @@ const ClayLabel: React.FunctionComponent<IProps> = ({
 				'label-lg': large,
 				[`label-${displayType}`]: displayType,
 			})}
+			ref={forwardRef}
 		>
 			<TagName className="label-item label-item-expand" href={href}>
 				{children}
@@ -73,4 +80,6 @@ const ClayLabel: React.FunctionComponent<IProps> = ({
 	);
 };
 
-export default ClayLabel;
+export default React.forwardRef((props: IProps, ref?) => (
+	<ClayLabel {...props} forwardRef={ref} />
+));
