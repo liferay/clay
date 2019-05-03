@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {removeCollapseHeight, setCollapseHeight} from './Helpers';
+import {removeCollapseHeight, setCollapseHeight} from './helpers';
 import {useEffect, useState} from 'react';
 
 export function useTransition(
