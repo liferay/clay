@@ -104,11 +104,6 @@ const ClayNavigationBar: React.FunctionComponent<Props> & {
 		`You passed ${activeElementsCount} active props to ClayNavigationBar children.`
 	);
 
-	warning(
-		triggerLabel,
-		'`triggerLabel` property is required for ClayNavigationBar'
-	);
-
 	return (
 		<nav
 			{...otherProps}
