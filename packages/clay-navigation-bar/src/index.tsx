@@ -11,7 +11,7 @@ import ClayIcon from '@clayui/icon';
 import ClayLink from '@clayui/link';
 import warning from 'warning';
 
-import {useTransition} from './Hooks';
+import {useTransition} from './hooks';
 
 interface ItemProps extends React.HTMLAttributes<HTMLLIElement> {
 	/**
