@@ -59,7 +59,6 @@
 	min-height: $min-height;
 	min-width: $min-width;
 	overflow: $overflow;
-	padding-bottom: $padding-bottom;
 	padding-left: $padding-left;
 	padding-right: $padding-right;
 	padding-top: $padding-top;
@@ -68,6 +67,12 @@
 	top: $top;
 	width: $width;
 	z-index: $z-index;
+
+	// Firefox clips overflowing content and doesn't respect `padding-bottom` on `.dropdown-menu`
+
+	&::after {
+		padding-top: $padding-bottom;
+	}
 
 	@if ($breakpoint-down) {
 		@include media-breakpoint-down($breakpoint-down) {
