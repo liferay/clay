@@ -151,7 +151,7 @@ class Index extends Component {
                                             <img className="mx-auto" src="/images/home/clay_logo_w.svg" alt="" />
                                             <p>Visit the previous version of <br />
                                             Clay at Lexicon CSS project site</p>
-                                            <a href="https://lexiconcss.wedeploy.io/" className="mb-3" target="_blank">
+                                            <a href="https://liferay.github.io/lexiconcss/" className="mb-3" target="_blank">
                                                 Lexicon CSS
                                             </a>
                                         </div>
@@ -178,5 +178,5 @@ class Index extends Component {
             </div>
     )};
 }
-                        
+
 export default Index;
