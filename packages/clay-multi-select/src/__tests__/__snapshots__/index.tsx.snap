@@ -1,1 +1,138 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayMultiSelect renders 1`] = `
+<div
+  className="form-group"
+>
+  <div
+    className="input-group input-group-stacked-sm-down"
+  >
+    <div
+      className="input-group-item"
+    >
+      <div
+        className="form-control form-control-tag-group"
+      >
+        <input
+          className="form-control-inset"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onPaste={[Function]}
+          type="text"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayMultiSelect renders with items 1`] = `
+<div
+  className="form-group"
+>
+  <div
+    className="input-group input-group-stacked-sm-down"
+  >
+    <div
+      className="input-group-item"
+    >
+      <div
+        className="form-control form-control-tag-group"
+      >
+        <span
+          className="label label-dismissible label-secondary"
+        >
+          <span
+            className="label-item label-item-expand"
+          >
+            foo
+          </span>
+          <span
+            className="label-item label-item-after"
+          >
+            <button
+              className="close"
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className="lexicon-icon lexicon-icon-times"
+                role="presentation"
+              >
+                <use
+                  xlinkHref="/foo/bar#times"
+                />
+              </svg>
+            </button>
+          </span>
+        </span>
+        <span
+          className="label label-dismissible label-secondary"
+        >
+          <span
+            className="label-item label-item-expand"
+          >
+            bar
+          </span>
+          <span
+            className="label-item label-item-after"
+          >
+            <button
+              className="close"
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className="lexicon-icon lexicon-icon-times"
+                role="presentation"
+              >
+                <use
+                  xlinkHref="/foo/bar#times"
+                />
+              </svg>
+            </button>
+          </span>
+        </span>
+        <span
+          className="label label-dismissible label-secondary"
+        >
+          <span
+            className="label-item label-item-expand"
+          >
+            baz
+          </span>
+          <span
+            className="label-item label-item-after"
+          >
+            <button
+              className="close"
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className="lexicon-icon lexicon-icon-times"
+                role="presentation"
+              >
+                <use
+                  xlinkHref="/foo/bar#times"
+                />
+              </svg>
+            </button>
+          </span>
+        </span>
+        <input
+          className="form-control-inset"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onPaste={[Function]}
+          type="text"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
