@@ -170,6 +170,7 @@ export default props => {
 												<a
 													className="rounded-circle sticker sticker-secondary"
 													href="https://github.com/liferay/clay"
+													rel="noopener noreferrer"
 													target="_blank"
 												>
 													<svg

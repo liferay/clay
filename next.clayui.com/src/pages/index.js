@@ -83,6 +83,7 @@ export default () => {
 												<a
 													className="nav-link-intro"
 													href="https://lexicondesign.io"
+													rel="noopener noreferrer"
 													target="_blank"
 												>
 													{'Lexicon'}
@@ -101,6 +102,7 @@ export default () => {
 												<a
 													className="nav-link-intro"
 													href="https://github.com/liferay/clay"
+													rel="noopener noreferrer"
 													target="_blank"
 												>
 													{'Github'}
@@ -148,6 +150,7 @@ export default () => {
 								<a
 									className="btn btn-warning-borderless btn-borderless mr-3"
 									href="https://clayui.com"
+									rel="noopener noreferrer"
 									target="_blank"
 								>
 									{'Documentation v2'}
@@ -167,7 +170,7 @@ export default () => {
 					<div className="container-fluid container-fluid-max-lg text-center spacing">
 						<div className="row">
 							<div className="col-md-12">
-								<img src="/images/react_logo.svg" />
+								<img alt="" src="/images/react_logo.svg" />
 								<h1 className="title-section mb-2">
 									{'Clay Components'}
 								</h1>
@@ -202,7 +205,7 @@ export default () => {
 					<div className="container-fluid container-fluid-max-lg text-left spacing">
 						<div className="row">
 							<div className="col-md-5">
-								<img src="/images/css_illustration.svg" />
+								<img alt="" src="/images/css_illustration.svg" />
 							</div>
 							<div className="col-md-7">
 								<div className="row">
@@ -231,6 +234,7 @@ export default () => {
 										<a
 											className="btn btn-brand-color btn-link"
 											href="https://clayui.com"
+											rel="noopener noreferrer"
 											target="_blank"
 										>
 											{'View Documentation v2'}
@@ -264,6 +268,7 @@ export default () => {
 								<a
 									className="btn btn-dark"
 									href="https://github.com/liferay/clay"
+									rel="noopener noreferrer"
 									target="_blank"
 								>
 									{'Contribute on GitHub'}
@@ -308,6 +313,7 @@ export default () => {
 										<a
 											className="mb-3"
 											href="https://lexicondesign.io/"
+											rel="noopener noreferrer"
 											target="_blank"
 										>
 											{'Lexicon 2.0'}
@@ -331,6 +337,7 @@ export default () => {
 										<a
 											className="mb-3"
 											href="https://lexiconcss.wedeploy.io/"
+											rel="noopener noreferrer"
 											target="_blank"
 										>
 											{'Lexicon CSS'}
@@ -349,6 +356,7 @@ export default () => {
 								<a
 									className="font-weight-bold"
 									href="https://github.com/liferay/clay/graphs/contributors"
+									rel="noopener noreferrer"
 									target="_blank"
 								>
 									{'Clay Team'}
@@ -361,6 +369,7 @@ export default () => {
 									<a
 										className="font-weight-bold"
 										href="https://www.liferay.com/"
+										rel="noopener noreferrer"
 										target="_blank"
 									>
 										{'Liferay, Inc.'}

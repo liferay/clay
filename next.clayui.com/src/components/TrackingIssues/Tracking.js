@@ -67,6 +67,7 @@ const TableItem = ({comments, date, id, title, url}) => {
 					<a
 						className="text-truncate-inline"
 						href={url}
+						rel="noopener noreferrer"
 						target="_blank"
 					>
 						<span

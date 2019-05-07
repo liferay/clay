@@ -17,6 +17,7 @@ export default () => (
 			<a
 				className="link-secondary"
 				href="https://clayui.com"
+				rel="noopener noreferrer"
 				target="_blank"
 			>
 				{'Clay V2'}
@@ -68,6 +69,7 @@ export default () => (
 							<a
 								className="mx-3 mr-lg-0"
 								href="https://github.com/liferay/clay"
+								rel="noopener noreferrer"
 								target="_blank"
 							>
 								<img
