@@ -153,15 +153,15 @@ To get to the behavior of having a ClayLink with image, use the composition with
 
 ### API Changes
 
-- `data` deprecated
-- `defaultEventHandler` deprecated
-- `elementClasses` renamed to `className`
-- `icon` deprecated
-- `imageAlt` deprecated
-- `imageSrc` deprecated
-- `label` deprecated in favor of `children`
-- `spritemap` deprecated
-- `style` renamed to `displayType`
+-   `data` deprecated
+-   `defaultEventHandler` deprecated
+-   `elementClasses` renamed to `className`
+-   `icon` deprecated
+-   `imageAlt` deprecated
+-   `imageSrc` deprecated
+-   `label` deprecated in favor of `children`
+-   `spritemap` deprecated
+-   `style` renamed to `displayType`
 
 ### Compositions
 
@@ -249,3 +249,60 @@ For example:
 -   `status` removed in favor of `warn`
 -   `feedback` added to determine if `progress-group-feedback` is used, default value is false unless value is 100.
 -   `warn` added to indicate `progress-warning` class
+
+## ClayList
+
+ClayList has changed quite a bit. Instead of being "one size fits all" it is now broken up into its parts so that a List is easily composable to whatever the need and design is. In order to get the same functionality as v2.x, you'll need to compose your own component using these building blocks for ClayList.
+
+For example:
+
+```jsx
+<ClayList>
+	<ClayList.Header>{'This is a header'}</ClayList.Header>
+	<ClayList.Item flex>
+		<ClayList.ItemField>{'Item 1'}</ClayList.ItemField>
+
+		<ClayList.ItemField>{'ItemField'}</ClayList.ItemField>
+
+		<ClayList.ItemField expand>
+			<ClayList.ItemTitle>{`Item Title and expanded`}</ClayList.ItemTitle>
+			<ClayList.ItemText>{'Item Text'}</ClayList.ItemText>
+		</ClayList.ItemField>
+
+		<ClayList.ItemField>{'ItemField'}</ClayList.ItemField>
+	</ClayList.Item>
+
+	<ClayList.Item flex>
+		<ClayList.ItemField>{'Item 2'}</ClayList.ItemField>
+		<ClayList.ItemField expand>
+			{'Hover this item for action menu'}
+		</ClayList.ItemField>
+		<ClayList.ItemField>
+			<ClayList.QuickActionMenu>
+				<ClayList.QuickActionMenu.Item
+					onClick={() => alert('Clicked the trash!')}
+					spritemap={spritemap}
+					symbol="trash"
+				/>
+
+				<ClayList.QuickActionMenu.Item
+					onClick={() => alert('Clicked the cog!')}
+					spritemap={spritemap}
+					symbol="cog"
+				/>
+			</ClayList.QuickActionMenu>
+		</ClayList.ItemField>
+	</ClayList.Item>
+</ClayList>
+```
+
+### API Changes
+
+-   `data` removed
+-   `defaultEventHandler` removed
+-   `elementClasses` renamed to `className`
+-   `id` removed as an explicit prop
+-   `items` removed in favor of composition
+-   `selectable` removed in favor of using `ClayCheckbox`
+-   `schema` removed
+-   `spritemap` only used for `<ClayList.QuickActionMenu.Item />`
