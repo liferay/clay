@@ -80,19 +80,19 @@ export default class Docs extends Component {
                         <footer className="clay-site-container container-fluid">
                            <div className="row">
                               <div className="col-6">
-                                 <p className="legal">Except as otherwise noted, the content of this site is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA</a> 4.0 license.</p>
+                                 <p className="legal">Except as otherwise noted, the content of this site is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener noreferrer" target="_blank">CC BY-SA</a> 4.0 license.</p>
                               </div>
                               <div className="col-6 p-md-0">
                                  <ul className="social-icons">
                                     <li className="mr-2">
-                                        <a className="rounded-circle sticker" href="https://github.com/liferay/clay/issues" target="_blank">
+                                        <a className="rounded-circle sticker" href="https://github.com/liferay/clay/issues" rel="noopener noreferrer" target="_blank">
                                             <svg aria-hidden="true" className="lexicon-icon lexicon-icon-bars">
                                                 <use xlinkHref="/images/icons/icons.svg#comments" />
                                             </svg>
                                         </a>
                                     </li>
                                     <li>
-                                        <a className="rounded-circle sticker" href="https://github.com/liferay/clay" target="_blank">
+                                        <a className="rounded-circle sticker" href="https://github.com/liferay/clay" rel="noopener noreferrer" target="_blank">
                                             <img className="lexicon-icon" src="/images/home/GitHub-Mark-64px.svg" alt="" />
                                         </a>
                                     </li>

@@ -1,5 +1,3 @@
-'use strict';
-
 require('./src/styles/main.scss');
 
 // A stub function is needed because gatsby won't load this file otherwise

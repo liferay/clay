@@ -4,6 +4,7 @@ import {Link} from 'gatsby';
 
 class Navigation extends Component {
 	_handleOnClick(index, depth, section, event) {
+		event.preventDefault();
 		event.stopPropagation();
 
 		const elementRef = this.refs[`navItem${index}${depth}`];
@@ -35,8 +36,8 @@ class Navigation extends Component {
             });
 
 			return (
-				<li key={index} ref={`navItem${index}${depth}`} className={style} onClick={this._handleOnClick.bind(this, index, depth, section)}>
-					<Anchor page={section} />
+				<li key={index} ref={`navItem${index}${depth}`} className={style}>
+					<Anchor page={section} onclick={this._handleOnClick.bind(this, index, depth, section)} />
 
 					{section.items && (
 						<Navigation sectionList={section.items} location={location} depth={depth + 1} />
@@ -55,10 +56,10 @@ class Navigation extends Component {
 	}
 }
 
-const Anchor = ({page}) => {
+const Anchor = ({page, onclick}) => {
 	if (page.items) {
 		return (
-			<a className="clayui-site-nav-link" href="javascript:;">
+			<a className="clayui-site-nav-link" href="#openPanel" onClick={onclick}>
 				<span>{page.title}</span>
 				<svg className="collapse-toggle clay-icon icon-monospaced">
 					<use xlinkHref="/images/icons/icons.svg#caret-bottom" />
