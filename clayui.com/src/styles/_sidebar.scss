@@ -68,5 +68,32 @@
 }
 
 .sidebar-search {
-	margin-bottom: $base-size * 1.8;
+	margin-bottom: 0.5rem;
+}
+
+#themeToggle {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0.5rem;
+	margin-left: 0.125rem;
+
+	.custom-checkbox {
+		display: inline-flex;
+		margin-bottom: 0;
+
+		.custom-control-label-text {
+			font-size: 0.875rem;
+			font-weight: 600;
+		}
+	}
+
+	.clay-site-reset-button {
+		font-size: 0.875rem;
+		font-weight: 600;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }

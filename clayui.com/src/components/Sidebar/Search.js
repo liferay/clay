@@ -22,27 +22,25 @@ class Search extends Component {
 
 		return(
 			<div className="page-autocomplete">
-				<div className="form-group">
-					<div className="input-group">
-						<input
-							className="form-control"
-							id="algolia-doc-search"
-							name="q"
-							placeholder={placeholder}
-							required
-							type="text"
-						/>
+				<div className="input-group">
+					<input
+						className="form-control"
+						id="algolia-doc-search"
+						name="q"
+						placeholder={placeholder}
+						required
+						type="text"
+					/>
 
-						<span className="input-group-addon">
-							<svg className="lexicon-icon">
-								<use xlinkHref="/images/icons/icons.svg#search" />
-							</svg>
-						</span>
-					</div>
+					<span className="input-group-addon">
+						<svg className="lexicon-icon">
+							<use xlinkHref="/images/icons/icons.svg#search" />
+						</svg>
+					</span>
 				</div>
 			</div>
 		);
-	}	
+	}
 }
 
 export default Search;

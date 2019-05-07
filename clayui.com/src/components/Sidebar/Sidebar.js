@@ -3,6 +3,7 @@ import arrangeIntoTree from '../../utils/arrangeIntoTree';
 import Navigation from './Navigation';
 import React, {Component} from 'react';
 import Search from './Search';
+import ThemeToggle from './ThemeToggle';
 
 const SidebarRef = React.createRef();
 const SideNavRef = React.createRef();
@@ -138,6 +139,8 @@ export default props => (
 							<div className="sidebar-search">
 								<Search placeholder="Search" />
 							</div>
+
+							<ThemeToggle />
 
 							<div id="clayuiSiteNavigation">
 								<Navigation sectionList={getSection(data)} location={props.location} />
