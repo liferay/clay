@@ -1,0 +1,22 @@
+.blog {
+	.blog-title {
+		margin-top: 80px !important;
+		font-size: 48px;
+		line-height: 1.2 !important;
+		font-weight: 700 !important;
+
+		@media (max-width: $grid-float-breakpoint - 1) {
+			margin-top: 30px !important;
+		}
+	}
+
+	.blog-date {
+		margin-top: 15px;
+		display: inline-block;
+	}
+
+	article {
+		margin-top: 50px;
+		margin-bottom: 100px;
+	}
+}

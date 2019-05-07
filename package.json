@@ -62,8 +62,10 @@
 	},
 	"workspaces": {
 		"packages": [
-			"packages/*"
-		]
+			"packages/*",
+			"next.clayui.com"
+		],
+		"nohoist": ["gatsby"]
 	},
 	"resolutions": {
 		"js-beautify": "1.7.5",
