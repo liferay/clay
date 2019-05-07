@@ -139,7 +139,7 @@ class Index extends Component {
                                             <img className="mx-auto" src="/images/home/lexicon_symbol.svg" alt="" />
                                             <p>Visit the current Lexicon <br />
                                             Experience Language site</p>
-                                            <a href="https://lexicondesign.io/" className="mb-3" rel="noopener noreferrer" target="_blank">
+                                            <a href="https://liferay.design/lexicon" className="mb-3" rel="noopener noreferrer" target="_blank">
                                                 Lexicon 2.0
                                             </a>
                                         </div>

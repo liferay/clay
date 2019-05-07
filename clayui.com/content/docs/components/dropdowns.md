@@ -6,7 +6,7 @@ title: "Dropdown Menu"
 
 A dropdown is a list of options related to the element that triggers it.
 
-<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/dropdowns.html">Dropdown Menu Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+<div class="alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/dropdowns/">Dropdown Menu Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 ### Types
 

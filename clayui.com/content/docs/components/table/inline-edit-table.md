@@ -6,7 +6,7 @@ title: "Inline Edit Table"
 
 A table variation that lets users modify certain values of the entry without going to the detail page.
 
-<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Table/inlineEditTable.html">Inline Edit Table Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+<div class="alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/table/inline-edit-table/">Inline Edit Table Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 ### Inline Edit Table
 

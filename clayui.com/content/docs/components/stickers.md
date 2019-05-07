@@ -6,7 +6,7 @@ title: "Stickers"
 
 Stickers are a visual way to quickly identify content in a different way than badges and labels.
 
-<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/stickers.html">Stickers Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+<div class="alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/stickers/">Stickers Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 ### Sizes
 

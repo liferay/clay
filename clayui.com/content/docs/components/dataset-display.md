@@ -4,7 +4,7 @@ title: "Dataset Display"
 
 A dataset display is the combination of a <a href="/docs/components/toolbars/management-toolbar.html">management bar</a> with one or multiple data visualization types and a possible mechanism of pagination. The most common visualization types used are <a href="/docs/components/table/table.html">table</a>, <a href="/docs/components/list.html">list</a>, and <a href="/docs/components/card.html">card</a>.
 
-<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/components/dataset-display.html">Dataset Display Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+<div class="alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/dataset-display/">Dataset Display Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 ### Example
 

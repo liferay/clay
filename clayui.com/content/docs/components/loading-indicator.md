@@ -6,7 +6,7 @@ title: "Loading Indicator"
 
 The loading indicator shows the user that	an external process, like a connection, is being executed.
 
-<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/loading_indicator.html">Loading Indicator Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+<div class="alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/loading-indicator/">Loading Indicator Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 ### Size
 

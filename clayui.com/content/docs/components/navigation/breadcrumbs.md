@@ -6,7 +6,7 @@ title: "Breadcrumbs"
 
 Breadcrumb is a secondary navigation pattern that identifies the page position inside a hierarchy.
 
-<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Navigation/breadcrumb.html">Breadcrumbs Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+<div class="alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/navigation/breadcrumb/">Breadcrumbs Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 ### Breadcrumbs
 
