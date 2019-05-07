@@ -6,7 +6,7 @@ title: "Badges"
 
 Badges help highlight important information, such as notifications or new and unread messages. Badges have circular borders and are only used to specify a number.
 
-<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/badges.html">Badges Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+<div class="alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/badges/">Badges Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 ### Clay Badges
 

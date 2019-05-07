@@ -6,7 +6,7 @@ title: "Text Input"
 
 This section demonstrates the different text input types, including usage and validation states.
 
-<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Forms/text_input.html">Text Input Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+<div class="alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/forms/text-input/">Text Input Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 ### Text Field
 

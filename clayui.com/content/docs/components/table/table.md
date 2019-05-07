@@ -6,7 +6,7 @@ title: "Table"
 
 A table is a specific pattern for comparing datasets in a very direct and analytical way.
 
-<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Table/table.html">Table Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+<div class="alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/table/table/">Table Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 ### Table List
 

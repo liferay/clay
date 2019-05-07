@@ -4,7 +4,7 @@ title: "Link"
 
 Also known as hyperlink, the link is a clickable (text or image) element used for navigation purposes.
 
-<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/link.html">Link Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+<div class="alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/link/">Link Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 ## Types
 
