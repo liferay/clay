@@ -13,8 +13,19 @@ import tinycolor from 'tinycolor2';
 import {useHexInput} from './hooks';
 
 interface RGBInputProps {
+	/**
+	 * Callback function for when the input value is changed
+	 */
 	onChange: (val: {r?: number; g?: number; b?: number}) => void;
+
+	/**
+	 * The name of the input. R, G, or B.
+	 */
 	name: string;
+
+	/**
+	 * The value of the input.
+	 */
 	value: number;
 }
 
@@ -63,10 +74,29 @@ const RGBInput: React.FunctionComponent<RGBInputProps> = ({
 };
 
 interface CustomProps {
+	/**
+	 * List of hex's that will display as a color splotch
+	 */
 	colors: string[];
+
+	/**
+	 * Label describing the set of colors provided
+	 */
 	label?: string;
+
+	/**
+	 * Callback for when a color is changed
+	 */
 	onChange: (val: string) => void;
+
+	/**
+	 * Callback for when the list of colors is changed
+	 */
 	onColorsChange: (val: string[]) => void;
+
+	/**
+	 * Path of the location of the icon spritemap
+	 */
 	spritemap: string;
 }
 

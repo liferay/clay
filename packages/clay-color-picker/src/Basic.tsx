@@ -7,8 +7,19 @@ import React from 'react';
 import Splotch from './Splotch';
 
 interface Props {
+	/**
+	 * List of hex's that will display as a color splotch
+	 */
 	colors: string[];
+
+	/**
+	 * Label describing the set of colors provided
+	 */
 	label?: string;
+
+	/**
+	 * Callback for when a color is clicked
+	 */
 	onChange: (val: string) => void;
 }
 

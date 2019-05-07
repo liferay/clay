@@ -9,7 +9,14 @@ import {hueToX, xToHue} from './util';
 import {useMousePosition} from './hooks';
 
 interface HueProps {
+	/**
+	 * Callback function for when the hue value changes
+	 */
 	onChange: (hue: number) => void;
+
+	/**
+	 * The value of the Hue of the color
+	 */
 	value: number;
 }
 
