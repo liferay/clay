@@ -22,12 +22,20 @@ export default props => {
 					sizes="16x16 32x32"
 					type="image/png"
 				/>
+				<link
+					href="/css/atlas.css"
+					id="clayCSSTheme"
+					rel="stylesheet"
+				/>
 				{props.headComponents}
 
 				<link
 					href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
 					rel="stylesheet"
 				/>
+				<script src="/js/jquery.min.js" />
+				<script src="/js/popper.js" />
+				<script src="/js/bootstrap.js" />
 			</head>
 			<body {...props.bodyAttributes}>
 				<div
@@ -35,10 +43,7 @@ export default props => {
 					id="___gatsby"
 				/>
 				{props.postBodyComponents}
-				<script
-					src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"
-					type="text/javascript"
-				/>
+				<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" />
 			</body>
 		</html>
 	);

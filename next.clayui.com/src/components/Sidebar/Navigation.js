@@ -24,6 +24,7 @@ class Navigation extends Component {
 	 * @param {!event} event
 	 */
 	handleOnClick(index, depth, section, event) {
+		event.preventDefault();
 		event.stopPropagation();
 
 		const elementRef = this.refs[`navItem${index}${depth}`];
@@ -70,12 +71,15 @@ class Navigation extends Component {
 				<li
 					className={style}
 					key={index}
-					onClick={event =>
-						this.handleOnClick(index, depth, section, event)
-					}
 					ref={`navItem${index}${depth}`}
 				>
-					<Anchor location={location} page={section} />
+					<Anchor
+						location={location}
+						onclick={event =>
+							this.handleOnClick(index, depth, section, event)
+						}
+						page={section}
+					/>
 
 					{section.items && (
 						<Navigation
@@ -94,14 +98,14 @@ class Navigation extends Component {
 	 */
 	render() {
 		return (
-			<ul className="nav nav-nested nav-pills nav-stacked">
+			<ul className="nav nav-nested-margins">
 				{this.renderNavigationItems()}
 			</ul>
 		);
 	}
 }
 
-const Anchor = ({location, page}) => {
+const Anchor = ({location, onclick, page}) => {
 	const link = `${page.link}.html`;
 	const TagName =
 		location.pathname === link || (page.items && !page.indexVisible)
@@ -109,18 +113,18 @@ const Anchor = ({location, page}) => {
 			: Link;
 	const props =
 		location.pathname === link || (page.items && !page.indexVisible)
-			? {href: 'javascript:;'}
+			? {href: '#openNav', onClick: onclick}
 			: {to: link};
 
 	return (
-		<TagName className="align-middle" {...props}>
+		<TagName className="nav-link" {...props}>
 			<span>{page.title}</span>
 			{page.items && (
 				<svg
 					className="collapse-toggle"
-					height="24"
+					focusable="false"
 					name="keyboardArrowRight"
-					width="24"
+					role="presentation"
 				>
 					<path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
 					<path d="M0 0h24v24H0V0z" fill="none" />
