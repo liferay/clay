@@ -10108,11 +10108,12 @@ button.link-outline {
 .clay-color-dropdown-menu {
   max-height: 394px;
   max-width: none;
-  padding-bottom: 0.5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 1rem;
   width: 272px; }
+  .clay-color-dropdown-menu::after {
+    padding-top: 0.5rem; }
   .clay-color-dropdown-menu .component-action:hover {
     background-color: transparent;
     color: #000; }
@@ -10353,11 +10354,12 @@ label.custom-control-label {
 .date-picker-dropdown-menu {
   max-height: none;
   max-width: 370px;
-  padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
   width: 100%; }
+  .date-picker-dropdown-menu::after {
+    padding-top: 0; }
 
 .date-picker-nav {
   display: flex;
@@ -11759,7 +11761,7 @@ a.collapse-icon {
     margin-left: 1rem; }
 
 .nav-tabs .nav-link {
-  white-space: nowrap; }
+  border-radius: 0.25rem 0.25rem 0 0; }
 
 .nav-tabs + .tab-content .tab-pane.active:first-child {
   border-top-left-radius: 0; }
@@ -11774,14 +11776,13 @@ a.collapse-icon {
 .dropdown-item[data-toggle="tab"].active .dropdown-item-indicator-end {
   display: block; }
 
-.nav-underline .nav-link { }
-  .nav-underline .nav-link:after {
-    bottom: 0;
-    display: block;
-    position: absolute;
-    left: 0.5rem;
-    right: 0.5rem;
-    width: auto; }
+.nav-underline .nav-link::after {
+  bottom: 0;
+  display: block;
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  width: auto; }
 
 .nav-underline .nav-item .nav-link.active:after {
   background-color: #007BFF; }
@@ -14516,8 +14517,7 @@ a.collapse-icon {
   width: 100%; }
   .panel-header.collapsed {
     border-bottom-right-radius: calc(0.25rem - 1px);
-    border-bottom-left-radius: calc(0.25rem - 1px);
-    border-bottom-width: 0; }
+    border-bottom-left-radius: calc(0.25rem - 1px); }
   .panel-header .collapse-icon-closed,
   .panel-header .collapse-icon-open {
     font-size: 0.875rem;
@@ -14525,11 +14525,15 @@ a.collapse-icon {
 
 .panel-header-link {
   color: inherit;
-  display: block; }
+  display: block;
+  transition: border-color 0.1s ease; }
   .panel-header-link:hover {
     color: inherit; }
   .panel-header-link:focus {
     z-index: 1; }
+  .panel-header-link.panel-header.collapsed {
+    border-color: transparent;
+    transition: border-color 0.75s ease; }
   .panel-header-link .collapse-icon {
     padding-right: 2.28125rem; }
 
@@ -16386,7 +16390,7 @@ label.toggle-switch {
       left: 0;
       position: absolute;
       top: 0;
-      transition: background-color 100ms ease-in, border-color 100ms ease-in, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in;
+      transition: background-color 100ms ease-in, border-color 100ms ease-in, box-shadow 150ms ease-in-out, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in;
       width: 25px; }
     .toggle-switch-check:empty ~ .toggle-switch-bar:before {
       background-color: #e9ecef;
@@ -16400,15 +16404,15 @@ label.toggle-switch {
       left: 0;
       position: absolute;
       top: 0;
-      transition: background-color 100ms ease-in, border-color 100ms ease-in, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in;
+      transition: background-color 100ms ease-in, border-color 100ms ease-in, box-shadow 150ms ease-in-out, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in;
       width: 50px; }
     .toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-handle:after {
       content: attr(data-label-off);
       margin-left: 58px;
-      transition: background-color 100ms ease-in, border-color 100ms ease-in, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in;
+      transition: background-color 100ms ease-in, border-color 100ms ease-in, box-shadow 150ms ease-in-out, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in;
       white-space: nowrap; }
     .toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-handle:before {
-      transition: background-color 100ms ease-in, border-color 100ms ease-in, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in; }
+      transition: background-color 100ms ease-in, border-color 100ms ease-in, box-shadow 150ms ease-in-out, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in; }
     .toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-icon {
       color: #495057;
       left: 0;
@@ -16417,7 +16421,7 @@ label.toggle-switch {
       text-align: center;
       text-indent: 0;
       top: 0;
-      transition: background-color 100ms ease-in, border-color 100ms ease-in, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in;
+      transition: background-color 100ms ease-in, border-color 100ms ease-in, box-shadow 150ms ease-in-out, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in;
       width: 25px;
       z-index: 1; }
     .toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-icon-on {

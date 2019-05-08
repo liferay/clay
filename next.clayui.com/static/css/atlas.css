@@ -10923,11 +10923,12 @@ button.link-outline {
 .clay-color-dropdown-menu {
   max-height: 394px;
   max-width: none;
-  padding-bottom: 0.5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 1rem;
   width: 272px; }
+  .clay-color-dropdown-menu::after {
+    padding-top: 0.5rem; }
   .clay-color-dropdown-menu .close {
     color: #6B6C7E;
     font-size: 0.875rem;
@@ -11198,11 +11199,12 @@ label.custom-control-label {
 .date-picker-dropdown-menu {
   max-height: none;
   max-width: 370px;
-  padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
   width: 100%; }
+  .date-picker-dropdown-menu::after {
+    padding-top: 0; }
 
 .date-picker-nav {
   display: flex;
@@ -12726,15 +12728,21 @@ a.collapse-icon {
 
 .nav-tabs {
   font-size: 0.875rem; }
+  .nav-tabs .nav-link {
+    border-radius: 0.25rem 0.25rem 0 0;
+    color: #6B6C7E;
+    padding-bottom: 0.28125rem;
+    padding-top: 0.28125rem;
+    transition: box-shadow 0.15s ease-in-out; }
+    .nav-tabs .nav-link:focus {
+      box-shadow: 0 0 0 0.125rem #FFF, 0 0 0 0.25rem #80acff;
+      outline: 0; }
+    .nav-tabs .nav-link:disabled, .nav-tabs .nav-link.disabled {
+      box-shadow: none; }
   .nav-tabs .nav-item.show .nav-link {
     background-color: transparent;
     border-color: transparent transparent transparent transparent;
     color: #272833; }
-  .nav-tabs .nav-link {
-    color: #6B6C7E;
-    padding-bottom: 0.28125rem;
-    padding-top: 0.28125rem;
-    white-space: nowrap; }
   .nav-tabs + .tab-content .tab-pane {
     background-color: #FFF;
     border-radius: 4px;
@@ -12753,28 +12761,36 @@ a.collapse-icon {
   display: block; }
 
 .nav-underline .nav-link {
-  color: #6B6C7E; }
-  .nav-underline .nav-link:after {
-    bottom: 0;
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: auto; }
+  border-radius: 1px;
+  color: #6B6C7E;
+  transition: box-shadow 0.15s ease-in-out; }
+  .nav-underline .nav-link:focus {
+    box-shadow: 0 0 0 0.125rem #FFF, 0 0 0 0.25rem #80acff;
+    outline: 0; }
+  .show > .nav-underline .nav-link, .nav-underline .nav-link.active {
+    color: #272833; }
+  .nav-underline .nav-link:disabled, .nav-underline .nav-link.disabled {
+    box-shadow: none;
+    color: #A7A9BC; }
+
+.nav-underline .nav-item.show .nav-link {
+  color: #272833; }
+
+.nav-underline .nav-link::after {
+  bottom: 0;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: auto; }
 
 .nav-underline .nav-item .nav-link.active:after {
   background-color: #0B5FFF; }
 
-.nav-underline .nav-link.active,
-.nav-underline .nav-item.show .nav-link {
-  color: #272833; }
-  .nav-underline .nav-link.active:after,
-  .nav-underline .nav-item.show .nav-link:after {
-    content: "";
-    height: 0.125rem; }
-
-.nav-underline .nav-link.disabled {
-  color: #A7A9BC; }
+.nav-underline .nav-link.active:after,
+.nav-underline .nav-item.show .nav-link:after {
+  content: "";
+  height: 0.125rem; }
 
 .menubar {
   position: relative; }
@@ -15751,8 +15767,7 @@ a.collapse-icon {
   width: 100%; }
   .panel-header.collapsed {
     border-bottom-right-radius: calc(0.25rem - 1px);
-    border-bottom-left-radius: calc(0.25rem - 1px);
-    border-bottom-width: 0; }
+    border-bottom-left-radius: calc(0.25rem - 1px); }
   .panel-header .collapse-icon-closed,
   .panel-header .collapse-icon-open {
     font-size: 0.75rem;
@@ -15769,6 +15784,9 @@ a.collapse-icon {
     box-shadow: 0 0 0 0.125rem #FFF, 0 0 0 0.25rem #80acff;
     outline: 0;
     z-index: 1; }
+  .panel-header-link.panel-header.collapsed {
+    border-color: transparent;
+    transition: border-color 0.75s ease; }
   .panel-header-link .collapse-icon {
     padding-right: 2.28125rem; }
 
@@ -17794,7 +17812,7 @@ label.toggle-switch {
       left: 4px;
       position: absolute;
       top: 4px;
-      transition: background-color 100ms ease-in, border-color 100ms ease-in, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in;
+      transition: background-color 100ms ease-in, border-color 100ms ease-in, box-shadow 150ms ease-in-out, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in;
       width: 24px; }
     .toggle-switch-check:empty ~ .toggle-switch-bar:before {
       background-color: #A7A9BC;
@@ -17808,15 +17826,15 @@ label.toggle-switch {
       left: 0;
       position: absolute;
       top: 0;
-      transition: background-color 100ms ease-in, border-color 100ms ease-in, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in;
+      transition: background-color 100ms ease-in, border-color 100ms ease-in, box-shadow 150ms ease-in-out, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in;
       width: 60px; }
     .toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-handle:after {
       content: attr(data-label-off);
       margin-left: 68px;
-      transition: background-color 100ms ease-in, border-color 100ms ease-in, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in;
+      transition: background-color 100ms ease-in, border-color 100ms ease-in, box-shadow 150ms ease-in-out, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in;
       white-space: nowrap; }
     .toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-handle:before {
-      transition: background-color 100ms ease-in, border-color 100ms ease-in, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in; }
+      transition: background-color 100ms ease-in, border-color 100ms ease-in, box-shadow 150ms ease-in-out, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in; }
     .toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-icon {
       color: #FFF;
       left: 4px;
@@ -17825,7 +17843,7 @@ label.toggle-switch {
       text-align: center;
       text-indent: 0;
       top: 4px;
-      transition: background-color 100ms ease-in, border-color 100ms ease-in, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in;
+      transition: background-color 100ms ease-in, border-color 100ms ease-in, box-shadow 150ms ease-in-out, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in;
       width: 24px;
       z-index: 1; }
     .toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-icon-on {
