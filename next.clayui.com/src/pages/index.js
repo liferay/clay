@@ -205,7 +205,10 @@ export default () => {
 					<div className="container-fluid container-fluid-max-lg text-left spacing">
 						<div className="row">
 							<div className="col-md-5">
-								<img alt="" src="/images/css_illustration.svg" />
+								<img
+									alt=""
+									src="/images/css_illustration.svg"
+								/>
 							</div>
 							<div className="col-md-7">
 								<div className="row">
