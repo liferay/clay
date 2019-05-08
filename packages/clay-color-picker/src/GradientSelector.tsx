@@ -10,8 +10,19 @@ import {colorToXY, xToSaturation, yToVisibility} from './util';
 import {useMousePosition} from './hooks';
 
 interface GradientSelectorProps {
+	/**
+	 * Color value that is currently selected.
+	 */
 	color: tinycolor.Instance;
+
+	/**
+	 * The numerical hue value of the color
+	 */
 	hue?: number;
+
+	/**
+	 * Callback function for when saturation or visibility values change
+	 */
 	onChange?: (saturation: number, visibility: number) => void;
 }
 

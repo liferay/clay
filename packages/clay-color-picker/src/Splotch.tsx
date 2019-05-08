@@ -7,9 +7,19 @@ import React from 'react';
 import tinycolor from 'tinycolor2';
 
 interface Props extends React.HTMLAttributes<HTMLButtonElement> {
+	/**
+	 * Flag that indicates whether the splotch is the active one selected
+	 */
 	active?: boolean;
-	className?: string;
+
+	/**
+	 * Pixel size of how big the splotch should be. 24 would be a height and width of 24px.
+	 */
 	size?: number;
+
+	/**
+	 * The hex value of the splotch color
+	 */
 	value: string;
 }
 
