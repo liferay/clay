@@ -7,11 +7,11 @@ exports[`ClayList renders 1`] = `
   <li
     className="list-group-header"
   >
-    <h3
+    <p
       className="list-group-header-title"
     >
       This is a header
-    </h3>
+    </p>
   </li>
   <li
     className="list-group-item list-group-item-flex"
@@ -29,11 +29,11 @@ exports[`ClayList renders 1`] = `
     <div
       className="autofit-col autofit-col-expand"
     >
-      <h4
+      <p
         className="list-group-title"
       >
         Item Title and expanded
-      </h4>
+      </p>
       <p
         className="list-group-text"
       >
@@ -99,11 +99,11 @@ exports[`ClayList renders 1`] = `
   <li
     className="list-group-header"
   >
-    <h3
+    <p
       className="list-group-header-title"
     >
       This is another header
-    </h3>
+    </p>
   </li>
   <li
     className="list-group-item list-group-item-flex"

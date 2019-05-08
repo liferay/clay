@@ -11,12 +11,12 @@ const ItemTitle: React.FunctionComponent<
 	React.HTMLAttributes<HTMLHeadingElement>
 > = ({children, className, ...otherProps}) => {
 	return (
-		<h4
+		<p
 			{...otherProps}
 			className={classNames('list-group-title', className)}
 		>
 			{children}
-		</h4>
+		</p>
 	);
 };
 
