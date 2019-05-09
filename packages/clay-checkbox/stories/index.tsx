@@ -15,7 +15,7 @@ const ClayCheckboxWithState = () => {
 
 	return (
 		<ClayCheckbox
-			checked={boolean('Checked', value)}
+			checked={value}
 			disabled={boolean('Disabled', false)}
 			indeterminate={boolean('Indeterminate', false)}
 			label={text('Label', 'Default')}
@@ -34,7 +34,11 @@ storiesOf('ClayCheckbox', module)
 		/>
 	))
 	.add('custom JSX content', () => (
-		<ClayCheckbox label="Badge" onChange={() => {}}>
+		<ClayCheckbox
+			checked={boolean('Checked', false)}
+			label="Badge"
+			onChange={() => {}}
+		>
 			<span className="badge badge-primary">
 				<span className="badge-item badge-item-expand">{'10'}</span>
 			</span>

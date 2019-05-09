@@ -9,6 +9,11 @@ import classNames from 'classnames';
 
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
 	/**
+	 * Flag to indicate if input is checked or not.
+	 */
+	checked: boolean;
+
+	/**
 	 * Props to add to the outer most container.
 	 */
 	containerProps?: React.HTMLAttributes<HTMLDivElement>;
@@ -27,6 +32,11 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
 	 * Text describes what the checkbox is for.
 	 */
 	label?: React.ReactText;
+
+	/**
+	 * Callback for when checkbox value is changed
+	 */
+	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const ClayCheckbox: React.FunctionComponent<Props> = ({
