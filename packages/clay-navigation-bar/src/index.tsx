@@ -53,9 +53,8 @@ const Item: ItemType = ({active, children, className, ...otherProps}) => {
 	return (
 		<li
 			{...otherProps}
-			className={classNames('nav-item', {
-				active,
-				className,
+			className={classNames('nav-item', className, {
+				active
 			})}
 		>
 			{React.Children.map(
