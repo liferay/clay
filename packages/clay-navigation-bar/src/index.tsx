@@ -51,24 +51,15 @@ type ItemType = React.FunctionComponent<ItemProps>;
 
 const Item: ItemType = ({active, children, className, ...otherProps}) => {
 	return (
-		<li
-			{...otherProps}
-			className={classNames('nav-item', className, {
-				active
-			})}
-		>
+		<li {...otherProps} className={classNames('nav-item', className)}>
 			{React.Children.map(
 				children,
 				(child: React.ReactElement<ItemProps>, index) =>
 					React.cloneElement(child, {
 						...child.props,
-						className: classNames(
-							'nav-link',
-							child.props.className,
-							{
-								active,
-							}
-						),
+						className: classNames(child.props.className, {
+							active,
+						}),
 						key: index,
 					})
 			)}
