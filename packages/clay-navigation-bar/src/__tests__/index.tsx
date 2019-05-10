@@ -67,7 +67,9 @@ describe('ClayNavigationBar', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders a dropdown when clicking the collapsed element from NavigationBar', async () => {
+	// Skipped until React@16.9.0 will be released. 
+	// See https://github.com/liferay/clay/pull/1884#discussion_r282942724 for more informations
+	xit('renders a dropdown when clicking the collapsed element from NavigationBar', async () => {
 		const {container} = render(
 			<ClayNavigationBar
 				inverted
@@ -122,7 +124,9 @@ describe('ClayNavigationBar', () => {
 		expect(navigationBarDropdown).toMatchSnapshot();
 	});
 
-	it('collapses the dropdown expanded when trigger element is clicked', async () => {
+	// Skipped until React@16.9.0 will be released. 
+	// See https://github.com/liferay/clay/pull/1884#discussion_r282942724 for more informations
+	xit('collapses the dropdown expanded when trigger element is clicked', async () => {
 		const {container} = render(
 			<ClayNavigationBar
 				inverted
