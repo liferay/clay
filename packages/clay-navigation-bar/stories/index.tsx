@@ -35,7 +35,7 @@ storiesOf('ClayNavigationBar', module).add('default', () => (
 
 		<ClayNavigationBar.Item active={boolean('Active 3: ', false)}>
 			<a className="nav-link link-secondary" href="#1">
-				<span className="navbar-text-truncate">Item 3</span>
+				<span className="navbar-text-truncate">{`Item 3`}</span>
 			</a>
 		</ClayNavigationBar.Item>
 		<ClayNavigationBar.Item active={boolean('Active 4: ', false)}>
@@ -43,7 +43,7 @@ storiesOf('ClayNavigationBar', module).add('default', () => (
 				className="nav-link btn btn-unstyled btn-block btn-sm"
 				type="button"
 			>
-				<span className="navbar-text-truncate">Item 4</span>
+				<span className="navbar-text-truncate">{`Item 4`}</span>
 			</button>
 		</ClayNavigationBar.Item>
 	</ClayNavigationBar>
