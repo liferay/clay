@@ -195,55 +195,65 @@ To get to the behavior of having a ClaySticker with icon, use the composition wi
 
 ## ClayModal
 
-Of more freedom to customize `Footer` but still requiring some rules to make everything work well, always use the `<ClayModal.FooterContainer />` component to align the left and right buttons.
+Become a low-level API, you can compose Modal's small blocks to get the results recommended by Lexicon but allow you to stylize the Modal content and continue to get the benefits of the components.
 
 ```diff
 <ClayModal
 -	body={<h1>{'Hello World!'}</h1>}
+-	footerButtons={[{label: 'Primary'}, {label: 'Close', type: 'close'}]}
+-	title="Modal Title"
+-	visible={visible}
 +	onClose={() => setVisible(false)}
-	visible={visible}
 -/>
 +>
-+	<h1>{'Hello World!'}</h1>
++	{onClose => (
++		<>
++			<ClayModal.Header>Modal Title</ClayModal.Header>
++			<ClayModal.Body>
++				<h1>{'Hello World!'}</h1>
++			</ClayModal.Body>
++			<ClayModal.Footer
++				first={
++					<ClayButton.Group spaced>
++						<ClayButton displayType="secondary">
++							{'Secondary'}
++						</ClayButton>
++						<ClayButton displayType="secondary">
++							{'Secondary'}
++						</ClayButton>
++					</ClayButton.Group>
++				}
++				last={
++					<ClayButton onClick={onClose}>{'Primary'}</ClayButton>
++				}
++			/>
++		</>
++	)}
 +</ClayModal>
 ```
 
 ### API Changes
 
--  `body` deprecated in favor of utilizing `children` prop
--  `footerButtons` removed in favor of utilizing `renderFooter` prop
--  `onClose` added
--  `visible` is the source of truth to open or close the modal, `show` method has been removed.
+-  `body` deprecated in favor of utilizing `<ClayModal.Body />` component
 -  `data` deprecated
 -  `defaultEventHandler` deprecated
 -  `elementClasses` renamed to `className`
+-  `footerButtons` deprecated in favor of utilizing `<ClayModal.Footer />` component
+-  `onClose` added
+-  `title` deprecated in favor of utilizing `<ClayModal.Header />` component
+-  `visible` deprecated in favor of animating the component when it is mount and unmount.
 
 ### Compositions
 
-To render the buttons to the footer use the utility and follow some rules to have no problem, in case you forget the component has issued errors in the console to remind you.
+To render an iframe inside Modal, you can compose with the `<ClayModal.Body />` component by passing the url to the prop `url`.
 
--	Do not wrap `FooterContainer` with an HTML tag, use `Fragment` to do so.
--	Do not use more than two `FooterContainer`. 
-
-```diff
-<ClayModal
--	body={<h1>{'Hello World!'}</h1>}
-+	onClose={() => setVisible(false)}
-+	renderFooter={
-+		<>
-+			<ClayModal.FooterContainer>
-+				<ClayButton>{'Cancel'}</ClayButton>
-+			</ClayModal.FooterContainer>
-+			<ClayModal.FooterContainer>
-+				<ClayButton>{'Save'}</ClayButton>
-+			</ClayModal.FooterContainer>
-+		</>
-+	}
-	visible={visible}
--/>
-+>
-+	<h1>{'Hello World!'}</h1>
-+</ClayModal>
+```jsx
+<ClayModal>
+	{() => (
+		<ClayModal.Header>{'Title'}</ClayModal.Header>
+		<ClayModal.Body url="https://clayui.com" />
+	)}
+</ClayModal>
 ```
 
 ## ClayRadioGroup, ClayRadio
