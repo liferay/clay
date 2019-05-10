@@ -70,7 +70,6 @@ describe('ClayNavigationBar', () => {
 	it('renders a dropdown when clicking the collapsed element from NavigationBar', async () => {
 		const {container} = render(
 			<ClayNavigationBar
-				data-testid="#1"
 				inverted
 				spritemap={spritemap}
 				triggerLabel={`Trigger Label`}
@@ -126,7 +125,6 @@ describe('ClayNavigationBar', () => {
 	it('collapses the dropdown expanded when trigger element is clicked', async () => {
 		const {container} = render(
 			<ClayNavigationBar
-				data-testid="#1"
 				inverted
 				spritemap={spritemap}
 				triggerLabel={`Trigger Label`}
