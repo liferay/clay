@@ -139,6 +139,45 @@ To get to the behavior of having a ClayLink with image, use the composition with
 +</ClayLink>
 ```
 
+## ClayNavigationBar
+
+ClayNavigationBar has become simpler than the version `v2`, removing APIs from `items` and making the development more flexible passing elements by composition.
+
+```diff
+ <ClayNavigationBar
+-    items={[{ label: 'Page 1', href: '#1' }, { label: 'Page 2', href: '#2' }]}
+     inverted
+     spritemap={spritemap}
+ >
++    <ClayNavigationBar.Item active>
++        <ClayLink className="nav-link" displayType="secondary" href="#1">
++            <span className="navbar-text-truncate">Page 1</span>
++        </ClayLink>
++    </ClayNavigationBar.Item>
++
++    <ClayNavigationBar.Item>
++        <ClayLink className="nav-link" displayType="secondary" href="#2">
++            <span className="navbar-text-truncate">Page 2</span>
++        </ClayLink>
++    </ClayNavigationBar.Item>
+ </ClayNavigationBar>
+```
+
+### API Changes:
+
+- `data` deprecated, you can pass as props to the component or elements.
+- `defaultEventHandler` deprecated
+- `elementClasses` deprecated
+- `id` deprecated, you can pass as props to the component or elements.
+- `items` deprecated, in favor of composition. You can pass `<ClayNavigationBar.Item>` component to specify the element that will be rendered on Dropdown.
+
+### Compositions:
+Example:
+
+You want to use Clay button or just a button element inside your dropdown
+
+To get the behavior of having a ClayNavigationBar using Buttons instead of Link you just need to pass `<ClayButton>` or just a `<button>` element to child of `<ClayNavigationBar.Item>` component.
+
 ## ClaySticker
 
 ```diff
