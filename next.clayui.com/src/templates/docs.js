@@ -29,16 +29,16 @@ export default props => {
 	const title = `${frontmatter.title} - Clay`;
 
 	const mapStatus = {
-		beta: 'warning',
-		deprecated: 'danger',
-		'new release': 'info',
-		pending: 'secondary',
-		stable: 'success',
+		beta: `warning`,
+		deprecated: `danger`,
+		'new release': `info`,
+		pending: `secondary`,
+		stable: `success`,
 	};
 
 	useEffect(() => {
 		document
-			.querySelectorAll('.clay-site-custom-checkbox-indeterminate')
+			.querySelectorAll(`.clay-site-custom-checkbox-indeterminate`)
 			.forEach(item => {
 				item.indeterminate = true;
 			});
@@ -78,7 +78,7 @@ export default props => {
 									)}
 									{frontmatter.packageNpm && (
 										<p className="docs-package-npm">
-											{'npm install '}
+											{`npm install `}
 											{frontmatter.packageNpm}
 										</p>
 									)}
@@ -159,9 +159,7 @@ export default props => {
 								<div className="row">
 									<div className="col-6">
 										<p className="legal">
-											{
-												'How can this be improved? Create an issue!'
-											}
+											{`How can this be improved? Create an issue!`}
 										</p>
 									</div>
 									<div className="col-6 p-md-0">

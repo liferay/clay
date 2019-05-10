@@ -6,39 +6,39 @@
 
 'use strict';
 
-const path = require('path');
-const assert = require('yeoman-generator').assert;
-const helpers = require('yeoman-generator').test;
+const path = require(`path`);
+const assert = require(`yeoman-generator`).assert;
+const helpers = require(`yeoman-generator`).test;
 
-describe('clay-component-generator:app', () => {
+describe(`clay-component-generator:app`, () => {
 	beforeAll(done => {
 		helpers
-			.run(path.join(__dirname, '../app'))
+			.run(path.join(__dirname, `../app`))
 			.withOptions({skipInstall: true})
 			.withPrompts({
-				componentName: 'MyComponent',
-				repoDescription: 'My awesome Clay component',
+				componentName: `MyComponent`,
+				repoDescription: `My awesome Clay component`,
 			})
-			.on('end', done);
+			.on(`end`, done);
 	});
 
-	it('creates files', () => {
+	it(`creates files`, () => {
 		assert.file([
-			'stories/index.tsx',
-			'src/index.tsx',
-			'src/__tests__/index.tsx',
-			'package.json',
-			'tsconfig.json',
-			'tsconfig.declarations.json',
-			'README.md',
+			`stories/index.tsx`,
+			`src/index.tsx`,
+			`src/__tests__/index.tsx`,
+			`package.json`,
+			`tsconfig.json`,
+			`tsconfig.declarations.json`,
+			`README.md`,
 		]);
 	});
 
-	it('produces MyComponent.tsx with templated content', () => {
+	it(`produces MyComponent.tsx with templated content`, () => {
 		assert.fileContent(
-			'src/index.tsx',
+			`src/index.tsx`,
 			/const MyComponent: React.FunctionComponent<Props> = \(\{/
 		);
-		assert.fileContent('src/index.tsx', /export default MyComponent/);
+		assert.fileContent(`src/index.tsx`, /export default MyComponent/);
 	});
 });

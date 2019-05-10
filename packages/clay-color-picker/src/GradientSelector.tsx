@@ -42,8 +42,8 @@ const GradientSelector: React.FunctionComponent<GradientSelectorProps> = ({
 	const removeListeners = () => {
 		selectorActive.current = false;
 
-		window.removeEventListener('mousemove', onMouseMove);
-		window.removeEventListener('mouseup', removeListeners);
+		window.removeEventListener(`mousemove`, onMouseMove);
+		window.removeEventListener(`mouseup`, removeListeners);
 	};
 
 	useEffect(() => {
@@ -69,8 +69,8 @@ const GradientSelector: React.FunctionComponent<GradientSelectorProps> = ({
 				selectorActive.current = true;
 				onMouseMove(event);
 
-				window.addEventListener('mousemove', onMouseMove);
-				window.addEventListener('mouseup', removeListeners);
+				window.addEventListener(`mousemove`, onMouseMove);
+				window.addEventListener(`mouseup`, removeListeners);
 			}}
 			ref={containerRef}
 			style={{

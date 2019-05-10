@@ -8,7 +8,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 import Icon from '@clayui/icon';
 
-type DisplayType = 'secondary' | 'info' | 'warning' | 'danger' | 'success';
+type DisplayType = `secondary` | `info` | `warning` | `danger` | `success`;
 
 interface Props
 	extends React.BaseHTMLAttributes<HTMLAnchorElement | HTMLSpanElement> {
@@ -37,18 +37,18 @@ const ClayLabel: React.FunctionComponent<Props> = ({
 	children,
 	className,
 	closeButtonProps,
-	displayType = 'secondary',
+	displayType = `secondary`,
 	href,
 	large = false,
 	spritemap,
 	...otherProps
 }) => {
-	const TagName = href ? 'a' : 'span';
+	const TagName = href ? `a` : `span`;
 
 	return (
 		<span
 			{...otherProps}
-			className={classNames('label', className, {
+			className={classNames(`label`, className, {
 				'label-dismissible': closeButtonProps,
 				'label-lg': large,
 				[`label-${displayType}`]: displayType,

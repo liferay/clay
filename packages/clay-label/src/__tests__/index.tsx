@@ -9,34 +9,34 @@ import * as TestRenderer from 'react-test-renderer';
 import ClayLabel from '..';
 import {cleanup, fireEvent, render} from 'react-testing-library';
 
-const spritemap = 'path/to/spritemap';
+const spritemap = `path/to/spritemap`;
 
-describe('Rendering', () => {
-	it('default', () => {
+describe(`Rendering`, () => {
+	it(`default`, () => {
 		const testRenderer = TestRenderer.create(
-			<ClayLabel>{'Default Label'}</ClayLabel>
+			<ClayLabel>{`Default Label`}</ClayLabel>
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('with a different displayType ', () => {
+	it(`with a different displayType `, () => {
 		const testRenderer = TestRenderer.create(
-			<ClayLabel displayType="success">{'Success Label'}</ClayLabel>
+			<ClayLabel displayType="success">{`Success Label`}</ClayLabel>
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('as a link ', () => {
+	it(`as a link `, () => {
 		const testRenderer = TestRenderer.create(
-			<ClayLabel href="#/foo/bar">{'Label w/ link'}</ClayLabel>
+			<ClayLabel href="#/foo/bar">{`Label w/ link`}</ClayLabel>
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders as closable', () => {
+	it(`renders as closable`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayLabel
 				closeButtonProps={{
@@ -44,14 +44,14 @@ describe('Rendering', () => {
 				}}
 				spritemap={spritemap}
 			>
-				{'Label Closable'}
+				{`Label Closable`}
 			</ClayLabel>
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders as a link and closable ', () => {
+	it(`renders as a link and closable `, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayLabel
 				closeButtonProps={{
@@ -60,7 +60,7 @@ describe('Rendering', () => {
 				href="#/foo/bar"
 				spritemap={spritemap}
 			>
-				{'Label Closable'}
+				{`Label Closable`}
 			</ClayLabel>
 		);
 
@@ -68,10 +68,10 @@ describe('Rendering', () => {
 	});
 });
 
-describe('Interactions', () => {
+describe(`Interactions`, () => {
 	afterEach(cleanup);
 
-	it('clicking the close button should call closeButtonProps.onClick', () => {
+	it(`clicking the close button should call closeButtonProps.onClick`, () => {
 		const handleClose = jest.fn();
 
 		const {container} = render(
@@ -81,7 +81,7 @@ describe('Interactions', () => {
 			/>
 		);
 
-		const closeButton = container.querySelector('button');
+		const closeButton = container.querySelector(`button`);
 
 		fireEvent.click(closeButton as HTMLButtonElement, {});
 

@@ -13,43 +13,43 @@ import {sub} from './util';
 import {useDropdownCloseInteractions, useHexInput} from './hooks';
 
 const DEFAULT_COLORS = [
-	'000000',
-	'5F5F5F',
-	'9A9A9A',
-	'CBCBCB',
-	'E1E1E1',
-	'FFFFFF',
-	'FF0D0D',
-	'FF8A1C',
-	'2BA676',
-	'006EF8',
-	'7F26FF',
-	'FF21A0',
-	'FF5F5F',
-	'FFB46E',
-	'50D2A0',
-	'4B9BFF',
-	'AF78FF',
-	'FF73C3',
-	'FFB1B1',
-	'FFDEC0',
-	'91E3C3',
-	'9DC8FF',
-	'DFCAFF',
-	'FFC5E6',
-	'FFD9D9',
-	'FFF3E8',
-	'B1EBD5',
-	'C5DFFF',
-	'F8F2FF',
-	'FFEDF7',
+	`000000`,
+	`5F5F5F`,
+	`9A9A9A`,
+	`CBCBCB`,
+	`E1E1E1`,
+	`FFFFFF`,
+	`FF0D0D`,
+	`FF8A1C`,
+	`2BA676`,
+	`006EF8`,
+	`7F26FF`,
+	`FF21A0`,
+	`FF5F5F`,
+	`FFB46E`,
+	`50D2A0`,
+	`4B9BFF`,
+	`AF78FF`,
+	`FF73C3`,
+	`FFB1B1`,
+	`FFDEC0`,
+	`91E3C3`,
+	`9DC8FF`,
+	`DFCAFF`,
+	`FFC5E6`,
+	`FFD9D9`,
+	`FFF3E8`,
+	`B1EBD5`,
+	`C5DFFF`,
+	`F8F2FF`,
+	`FFEDF7`,
 ];
 
-const BLANK_COLORS = Array(12).fill('FFFFFF');
+const BLANK_COLORS = Array(12).fill(`FFFFFF`);
 
 const DEFAULT_ARIA_LABELS = {
-	selectColor: 'Select a color',
-	selectionIs: 'Color selection is {0}',
+	selectColor: `Select a color`,
+	selectionIs: `Color selection is {0}`,
 };
 
 interface Props {
@@ -123,7 +123,7 @@ const ColorPicker: React.FunctionComponent<Props> = ({
 	spritemap,
 	title,
 	useNative = false,
-	value = 'FFFFFF',
+	value = `FFFFFF`,
 }) => {
 	const dropdownContainerRef = useRef<HTMLDivElement>(null);
 	const inputRef = useRef<HTMLInputElement>(null);
@@ -149,8 +149,8 @@ const ColorPicker: React.FunctionComponent<Props> = ({
 						useNative ? onValueChange(e.target.value) : null
 					}
 					ref={valueInputRef}
-					style={{display: 'none'}}
-					type={useNative ? 'color' : 'text'}
+					style={{display: `none`}}
+					type={useNative ? `color` : `text`}
 					value={value}
 				/>
 			)}
@@ -160,7 +160,7 @@ const ColorPicker: React.FunctionComponent<Props> = ({
 			<div className="clay-color input-group">
 				<div
 					className={`input-group-item input-group-item-shrink${
-						showHex ? ' input-group-prepend' : ''
+						showHex ? ` input-group-prepend` : ``
 					}`}
 				>
 					<div
@@ -241,7 +241,7 @@ const ColorPicker: React.FunctionComponent<Props> = ({
 						/>
 
 						<label className="input-group-inset-item input-group-inset-item-before">
-							{'#'}
+							{`#`}
 						</label>
 					</div>
 				)}

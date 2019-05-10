@@ -13,7 +13,7 @@ const ItemTitle: React.FunctionComponent<
 	return (
 		<p
 			{...otherProps}
-			className={classNames('list-group-title', className)}
+			className={classNames(`list-group-title`, className)}
 		>
 			{children}
 		</p>

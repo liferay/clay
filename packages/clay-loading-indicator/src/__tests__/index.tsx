@@ -8,14 +8,14 @@ import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
 import ClayLoadingIndicator from '..';
 
-describe('ClayLoadingIndicator', () => {
-	it('renders', () => {
+describe(`ClayLoadingIndicator`, () => {
+	it(`renders`, () => {
 		const testRenderer = TestRenderer.create(<ClayLoadingIndicator />);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders as the small variant', () => {
+	it(`renders as the small variant`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayLoadingIndicator small />
 		);
@@ -23,7 +23,7 @@ describe('ClayLoadingIndicator', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders as the light variant', () => {
+	it(`renders as the light variant`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayLoadingIndicator light />
 		);
@@ -31,7 +31,7 @@ describe('ClayLoadingIndicator', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders as the small and light variant', () => {
+	it(`renders as the small and light variant`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayLoadingIndicator light small />
 		);

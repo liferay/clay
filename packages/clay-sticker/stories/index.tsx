@@ -12,16 +12,16 @@ import {text} from '@storybook/addon-knobs';
 
 import 'clay-css/lib/css/atlas.css';
 
-const spritemap = require('clay-css/lib/images/icons/icons.svg');
+const spritemap = require(`clay-css/lib/images/icons/icons.svg`);
 
-storiesOf('ClaySticker', module)
-	.add('default', () => (
+storiesOf(`ClaySticker`, module)
+	.add(`default`, () => (
 		<div>
-			<ClaySticker>{text('Content', 'A')}</ClaySticker>
+			<ClaySticker>{text(`Content`, `A`)}</ClaySticker>
 
-			<ClaySticker displayType="danger">{'B'}</ClaySticker>
+			<ClaySticker displayType="danger">{`B`}</ClaySticker>
 
-			<ClaySticker displayType="dark">{'C'}</ClaySticker>
+			<ClaySticker displayType="dark">{`C`}</ClaySticker>
 
 			<ClaySticker displayType="info">
 				<ClayIcon spritemap={spritemap} symbol="user" />
@@ -48,7 +48,7 @@ storiesOf('ClaySticker', module)
 			</ClaySticker>
 		</div>
 	))
-	.add('shape', () => (
+	.add(`shape`, () => (
 		<div>
 			<ClaySticker>
 				<ClayIcon spritemap={spritemap} symbol="user" />
@@ -58,7 +58,7 @@ storiesOf('ClaySticker', module)
 			</ClaySticker>
 		</div>
 	))
-	.add('size', () => (
+	.add(`size`, () => (
 		<div>
 			<ClaySticker displayType="light" size="sm">
 				<ClayIcon spritemap={spritemap} symbol="user" />
@@ -77,7 +77,7 @@ storiesOf('ClaySticker', module)
 			</ClaySticker>
 		</div>
 	))
-	.add('image', () => (
+	.add(`image`, () => (
 		<div>
 			<ClaySticker size="sm">
 				<img alt="placeholder" src="https://via.placeholder.com/50" />

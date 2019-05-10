@@ -37,17 +37,17 @@ const UnionType = type => {
 		.map(element => {
 			return VISITOR[element.type](element);
 		})
-		.join('|');
+		.join(`|`);
 };
 
-const UndefinedLiteral = () => 'undefined';
+const UndefinedLiteral = () => `undefined`;
 
 const TypeApplication = type => {
 	const applications = type.applications
 		.map(element => {
 			return VISITOR[element.type](element);
 		})
-		.join('|');
+		.join(`|`);
 
 	return `${VISITOR[type.expression.type](
 		type.expression

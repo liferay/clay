@@ -35,7 +35,7 @@ const Radio: RadioType = ({
 	checked,
 	children,
 	className,
-	containerProps = {className: ''},
+	containerProps = {className: ``},
 	inline,
 	label,
 	...otherProps
@@ -44,7 +44,7 @@ const Radio: RadioType = ({
 		<div
 			{...containerProps}
 			className={classNames(
-				'custom-control custom-radio',
+				`custom-control custom-radio`,
 				containerProps.className,
 				{
 					'custom-control-inline': inline,
@@ -55,7 +55,7 @@ const Radio: RadioType = ({
 				<input
 					{...otherProps}
 					checked={checked}
-					className={classNames('custom-control-input', className)}
+					className={classNames(`custom-control-input`, className)}
 					role="radio"
 					type="radio"
 				/>

@@ -12,23 +12,23 @@ module.exports = api => {
 			production: {
 				plugins: [
 					[
-						'react-remove-properties',
+						`react-remove-properties`,
 						{
-							properties: ['data-testid'],
+							properties: [`data-testid`],
 						},
 					],
 				],
 			},
 		},
-		ignore: ['node_modules', '**/__snapshots__/**', '**/__tests__/**'],
+		ignore: [`node_modules`, `**/__snapshots__/**`, `**/__tests__/**`],
 		plugins: [
-			'babel-plugin-dev-expression',
-			'transform-inline-environment-variables',
+			`babel-plugin-dev-expression`,
+			`transform-inline-environment-variables`,
 		],
 		presets: [
-			'@babel/env',
-			'@babel/preset-react',
-			'@babel/preset-typescript',
+			`@babel/env`,
+			`@babel/preset-react`,
+			`@babel/preset-typescript`,
 		],
 		sourceMaps: true,
 	};

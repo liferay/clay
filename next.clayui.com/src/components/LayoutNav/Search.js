@@ -12,9 +12,9 @@ export default props => {
 	useEffect(() => {
 		if (window.docsearch) {
 			window.docsearch({
-				apiKey: 'bc205a621e5176b8720081c2a3de450c',
-				indexName: 'clay',
-				inputSelector: '#algolia-doc-search',
+				apiKey: `bc205a621e5176b8720081c2a3de450c`,
+				indexName: `clay`,
+				inputSelector: `#algolia-doc-search`,
 			});
 		} else {
 			setEnabled(false);

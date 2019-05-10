@@ -8,8 +8,8 @@ import React from 'react';
 import {useResource} from '../Hooks';
 
 const Tracking = ({query}) => {
-	const issues = useResource('https://api.github.com/search/issues', {
-		method: 'GET',
+	const issues = useResource(`https://api.github.com/search/issues`, {
+		method: `GET`,
 		params: {
 			q: query,
 		},
@@ -20,14 +20,14 @@ const Tracking = ({query}) => {
 			<table className="table table-autofit">
 				<thead>
 					<tr>
-						<th>{'ID'}</th>
+						<th>{`ID`}</th>
 						<th className="table-cell-minw-300 table-cell-expand">
-							{'Title'}
+							{`Title`}
 						</th>
 						<th className="table-cell-expand-small table-cell-ws-nowrap">
-							{'Date'}
+							{`Date`}
 						</th>
-						<th className="table-cell-expand-smaller">{'Date'}</th>
+						<th className="table-cell-expand-smaller">{`Date`}</th>
 					</tr>
 				</thead>
 				<tbody>

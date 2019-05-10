@@ -11,7 +11,7 @@ const SidebarRef = React.createRef();
 const SideNavRef = React.createRef();
 
 const onClick = () => {
-	SidebarRef.current.classList.toggle('toggler-expanded');
+	SidebarRef.current.classList.toggle(`toggler-expanded`);
 };
 
 let scrollTop = 0;

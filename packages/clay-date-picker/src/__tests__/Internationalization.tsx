@@ -10,13 +10,13 @@ import {cleanup, render} from 'react-testing-library';
 import ClayDatePicker from '..';
 import {firstDayOfWeek} from '../types';
 
-const spritemap = 'icons.svg';
+const spritemap = `icons.svg`;
 
 const ariaLabels = {
-	buttonDot: 'Select current date',
-	buttonNextMonth: 'Select the next month',
-	buttonPreviousMonth: 'Select the previous month',
-	input: 'input-test',
+	buttonDot: `Select current date`,
+	buttonNextMonth: `Select the next month`,
+	buttonPreviousMonth: `Select the previous month`,
+	input: `input-test`,
 };
 
 const DatePickerWithState = ({
@@ -35,10 +35,10 @@ const DatePickerWithState = ({
 	);
 };
 
-describe('Internationalization', () => {
+describe(`Internationalization`, () => {
 	afterEach(cleanup);
 
-	it('should render the date picker in russian', () => {
+	it(`should render the date picker in russian`, () => {
 		const {container} = render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
@@ -46,23 +46,23 @@ describe('Internationalization', () => {
 				firstDayOfWeek={firstDayOfWeek.Monday}
 				initialExpanded
 				months={[
-					'Январь',
-					'Февраль',
-					'Март',
-					'Апрель',
-					'Май',
-					'Июнь',
-					'Июль',
-					'Август',
-					'Сентябрь',
-					'Октябрь',
-					'Ноябрь',
-					'Декабрь',
+					`Январь`,
+					`Февраль`,
+					`Март`,
+					`Апрель`,
+					`Май`,
+					`Июнь`,
+					`Июль`,
+					`Август`,
+					`Сентябрь`,
+					`Октябрь`,
+					`Ноябрь`,
+					`Декабрь`,
 				]}
 				placeholder="DD.MM.YYYY HH:mm"
 				spritemap={spritemap}
 				time
-				weekdaysShort={['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']}
+				weekdaysShort={[`Вс`, `Пн`, `Вт`, `Ср`, `Чт`, `Пт`, `Сб`]}
 				years={{
 					end: 2024,
 					start: 1997,
@@ -73,8 +73,8 @@ describe('Internationalization', () => {
 		expect(container.firstChild).toMatchSnapshot();
 	});
 
-	describe('FirstDayOfWeek', () => {
-		it('first day of the week should start on Sunday', () => {
+	describe(`FirstDayOfWeek`, () => {
+		it(`first day of the week should start on Sunday`, () => {
 			const {container} = render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
@@ -88,7 +88,7 @@ describe('Internationalization', () => {
 			expect(container.firstChild).toMatchSnapshot();
 		});
 
-		it('first day of the week should start on Monday', () => {
+		it(`first day of the week should start on Monday`, () => {
 			const {container} = render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
@@ -101,7 +101,7 @@ describe('Internationalization', () => {
 			expect(container.firstChild).toMatchSnapshot();
 		});
 
-		it('first day of the week should start on Tuesday', () => {
+		it(`first day of the week should start on Tuesday`, () => {
 			const {container} = render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
@@ -115,7 +115,7 @@ describe('Internationalization', () => {
 			expect(container.firstChild).toMatchSnapshot();
 		});
 
-		it('first day of the week should start on Wednesday', () => {
+		it(`first day of the week should start on Wednesday`, () => {
 			const {container} = render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
@@ -129,7 +129,7 @@ describe('Internationalization', () => {
 			expect(container.firstChild).toMatchSnapshot();
 		});
 
-		it('first day of the week should start on Thursday', () => {
+		it(`first day of the week should start on Thursday`, () => {
 			const {container} = render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
@@ -143,7 +143,7 @@ describe('Internationalization', () => {
 			expect(container.firstChild).toMatchSnapshot();
 		});
 
-		it('first day of the week should start on Friday', () => {
+		it(`first day of the week should start on Friday`, () => {
 			const {container} = render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
@@ -157,7 +157,7 @@ describe('Internationalization', () => {
 			expect(container.firstChild).toMatchSnapshot();
 		});
 
-		it('first day of the week should start on Saturday', () => {
+		it(`first day of the week should start on Saturday`, () => {
 			const {container} = render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}

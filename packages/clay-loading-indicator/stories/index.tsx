@@ -11,9 +11,9 @@ import {storiesOf} from '@storybook/react';
 
 import 'clay-css/lib/css/atlas.css';
 
-storiesOf('ClayLoadingIndicator', module).add('default', () => (
+storiesOf(`ClayLoadingIndicator`, module).add(`default`, () => (
 	<ClayLoadingIndicator
-		light={boolean('Light', false)}
-		small={boolean('Small', false)}
+		light={boolean(`Light`, false)}
+		small={boolean(`Small`, false)}
 	/>
 ));

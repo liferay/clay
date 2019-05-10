@@ -6,27 +6,27 @@
 
 'use strict';
 
-require('dotenv').config({
+require(`dotenv`).config({
 	path: `.env.${process.env.NODE_ENV}`,
 });
 
-const componentWithMDXScope = require('gatsby-mdx/component-with-mdx-scope');
-const path = require('path');
+const componentWithMDXScope = require(`gatsby-mdx/component-with-mdx-scope`);
+const path = require(`path`);
 
 const {GATSBY_CLAY_NIGHTLY} = process.env;
 
 const slugWithBar = path => {
-	return path.startsWith('/') ? path : `/${path}`;
+	return path.startsWith(`/`) ? path : `/${path}`;
 };
 
 const createDocs = (actions, edges, mdx) => {
 	const {createPage, createRedirect} = actions;
-	const docsTemplate = path.resolve(__dirname, '../src/templates/docs.js');
-	const blogTemplate = path.resolve(__dirname, '../src/templates/blog.js');
+	const docsTemplate = path.resolve(__dirname, `../src/templates/docs.js`);
+	const blogTemplate = path.resolve(__dirname, `../src/templates/blog.js`);
 
 	edges
 		.filter(({node: {fields: {nightly}}}) =>
-			GATSBY_CLAY_NIGHTLY === 'true' ? true : !nightly
+			GATSBY_CLAY_NIGHTLY === `true` ? true : !nightly
 		)
 		.forEach(
 			({
@@ -37,8 +37,8 @@ const createDocs = (actions, edges, mdx) => {
 			}) => {
 				if (redirect) {
 					const slugBar = slugWithBar(slug);
-					const fromPath = slugBar.endsWith('index.html')
-						? slugBar.replace('index.html', '')
+					const fromPath = slugBar.endsWith(`index.html`)
+						? slugBar.replace(`index.html`, ``)
 						: slugBar;
 
 					createRedirect({
@@ -57,7 +57,7 @@ const createDocs = (actions, edges, mdx) => {
 						toPath: slugWithBar(slug),
 					});
 
-					if (!slug.endsWith('/')) {
+					if (!slug.endsWith(`/`)) {
 						createRedirect({
 							fromPath: `${redirectFrom}/`,
 							isPermanent: true,
@@ -69,9 +69,9 @@ const createDocs = (actions, edges, mdx) => {
 
 				let template;
 
-				if (slug.includes('blog/')) {
+				if (slug.includes(`blog/`)) {
 					template = blogTemplate;
-				} else if (slug.includes('docs/')) {
+				} else if (slug.includes(`docs/`)) {
 					template = docsTemplate;
 				}
 
@@ -80,8 +80,8 @@ const createDocs = (actions, edges, mdx) => {
 					: template;
 
 				if (
-					(slug.includes('docs/') || slug.includes('blog/')) &&
-					layout !== 'redirect'
+					(slug.includes(`docs/`) || slug.includes(`blog/`)) &&
+					layout !== `redirect`
 				) {
 					createPage({
 						component,
@@ -98,9 +98,9 @@ const createDocs = (actions, edges, mdx) => {
 
 module.exports = async ({actions, graphql}) => {
 	actions.createRedirect({
-		fromPath: '/index.html',
+		fromPath: `/index.html`,
 		redirectInBrowser: true,
-		toPath: '/',
+		toPath: `/`,
 	});
 
 	return graphql(`
@@ -170,7 +170,7 @@ module.exports = async ({actions, graphql}) => {
 			newestBlogEntry.data.allMarkdownRemark.edges[0].node;
 
 		// Blog landing page should always show the most recent blog entry.
-		['/blog/', '/blog'].map(slug => {
+		[`/blog/`, `/blog`].map(slug => {
 			actions.createRedirect({
 				fromPath: slug,
 				redirectInBrowser: true,

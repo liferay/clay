@@ -62,15 +62,15 @@ const ClayProgressBar: React.FunctionComponent<Props> = ({
 	let status;
 
 	if (warn) {
-		status = 'warning';
+		status = `warning`;
 	} else if (value === 100) {
-		status = 'success';
+		status = `success`;
 	}
 
 	return (
 		<div
 			{...otherProps}
-			className={classNames(className, 'progress-group', {
+			className={classNames(className, `progress-group`, {
 				[`progress-${status}`]: status,
 			})}
 		>

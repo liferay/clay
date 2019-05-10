@@ -9,24 +9,24 @@ import * as TestRenderer from 'react-test-renderer';
 
 import ClayDatePicker from '..';
 
-const spritemap = 'icons.svg';
+const spritemap = `icons.svg`;
 
-describe('BasicRendering', () => {
-	it('renders by default', () => {
+describe(`BasicRendering`, () => {
+	it(`renders by default`, () => {
 		const component = TestRenderer.create(
 			<ClayDatePicker
 				initialMonth={new Date(2019, 3, 18)}
 				onValueChange={() => {}}
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
-				value={''}
+				value={``}
 			/>
 		);
 
 		expect(component.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders date picker with dropdown open', () => {
+	it(`renders date picker with dropdown open`, () => {
 		const component = TestRenderer.create(
 			<ClayDatePicker
 				initialExpanded
@@ -34,14 +34,14 @@ describe('BasicRendering', () => {
 				onValueChange={() => {}}
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
-				value={''}
+				value={``}
 			/>
 		);
 
 		expect(component.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders date picker with time', () => {
+	it(`renders date picker with time`, () => {
 		const component = TestRenderer.create(
 			<ClayDatePicker
 				initialExpanded
@@ -51,14 +51,14 @@ describe('BasicRendering', () => {
 				spritemap={spritemap}
 				time
 				timezone="GMT+01:00"
-				value={''}
+				value={``}
 			/>
 		);
 
 		expect(component.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders date picker with native picker', () => {
+	it(`renders date picker with native picker`, () => {
 		const component = TestRenderer.create(
 			<ClayDatePicker
 				initialExpanded
@@ -67,14 +67,14 @@ describe('BasicRendering', () => {
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
 				useNative
-				value={''}
+				value={``}
 			/>
 		);
 
 		expect(component.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders the date picker with years range', () => {
+	it(`renders the date picker with years range`, () => {
 		const component = TestRenderer.create(
 			<ClayDatePicker
 				initialExpanded
@@ -82,7 +82,7 @@ describe('BasicRendering', () => {
 				onValueChange={() => {}}
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
-				value={''}
+				value={``}
 				years={{
 					end: 2024,
 					start: 1997,

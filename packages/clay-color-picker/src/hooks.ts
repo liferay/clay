@@ -50,7 +50,7 @@ export function useHexInput(hex: string): [string, (val: string) => void] {
 	const handleNewInputValue = (value: string) => {
 		const match = value.match(HEX_REGEX);
 
-		setInputValue(match ? match[0] : '');
+		setInputValue(match ? match[0] : ``);
 	};
 
 	return [inputValue, handleNewInputValue];
@@ -79,12 +79,12 @@ export function useDropdownCloseInteractions(
 		const handleEsc = (event: KeyboardEvent) =>
 			event.keyCode === ESC_KEY_CODE ? setActive(false) : undefined;
 
-		window.addEventListener('mousedown', handleClick);
-		window.addEventListener('keydown', handleEsc);
+		window.addEventListener(`mousedown`, handleClick);
+		window.addEventListener(`keydown`, handleEsc);
 
 		return () => {
-			window.removeEventListener('mousedown', handleClick);
-			window.removeEventListener('keydown', handleEsc);
+			window.removeEventListener(`mousedown`, handleClick);
+			window.removeEventListener(`keydown`, handleEsc);
 		};
 	}, []);
 }

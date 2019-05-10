@@ -8,7 +8,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 import warning from 'warning';
 
-export const ClayIconSpriteContext = React.createContext('');
+export const ClayIconSpriteContext = React.createContext(``);
 
 interface Props extends React.SVGAttributes<SVGSVGElement> {
 	className?: string;
@@ -37,7 +37,7 @@ const ClayIcon: React.FunctionComponent<Props> = ({
 
 	warning(
 		spriteMapVal,
-		'ClayIcon requires a `spritemap` via prop or ClayIconSpriteContext'
+		`ClayIcon requires a \`spritemap\` via prop or ClayIconSpriteContext`
 	);
 
 	return (

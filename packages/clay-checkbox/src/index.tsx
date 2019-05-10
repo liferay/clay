@@ -43,7 +43,7 @@ const ClayCheckbox: React.FunctionComponent<Props> = ({
 	checked,
 	children,
 	className,
-	containerProps = {className: ''},
+	containerProps = {className: ``},
 	indeterminate = false,
 	inline,
 	label,
@@ -61,7 +61,7 @@ const ClayCheckbox: React.FunctionComponent<Props> = ({
 		<div
 			{...containerProps}
 			className={classNames(
-				'custom-control custom-checkbox',
+				`custom-control custom-checkbox`,
 				containerProps.className,
 				{
 					'custom-control-inline': inline,
@@ -72,10 +72,10 @@ const ClayCheckbox: React.FunctionComponent<Props> = ({
 				<input
 					{...otherProps}
 					checked={checked}
-					className={classNames('custom-control-input', className)}
+					className={classNames(`custom-control-input`, className)}
 					ref={inputRef}
 					type="checkbox"
-					value={checked ? 'true' : 'false'}
+					value={checked ? `true` : `false`}
 				/>
 
 				<span className="custom-control-label">

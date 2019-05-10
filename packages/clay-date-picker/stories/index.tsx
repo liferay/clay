@@ -9,10 +9,10 @@ import {storiesOf} from '@storybook/react';
 
 import 'clay-css/lib/css/atlas.css';
 
-const spritemap = require('clay-css/lib/images/icons/icons.svg');
+const spritemap = require(`clay-css/lib/images/icons/icons.svg`);
 
 const ClayDatePickerWithState = (props: {[key: string]: any}) => {
-	const [value, setValue] = React.useState<string | Date>('');
+	const [value, setValue] = React.useState<string | Date>(``);
 
 	return (
 		<ClayDatePicker
@@ -24,13 +24,13 @@ const ClayDatePickerWithState = (props: {[key: string]: any}) => {
 	);
 };
 
-storiesOf('ClayDatePicker', module)
+storiesOf(`ClayDatePicker`, module)
 	.addDecorator(storyFn => (
 		<div className="form-group" style={{maxWidth: 520}}>
 			{storyFn()}
 		</div>
 	))
-	.add('default', () => (
+	.add(`default`, () => (
 		<ClayDatePickerWithState
 			placeholder="YYYY-MM-DD"
 			spritemap={spritemap}
@@ -40,7 +40,7 @@ storiesOf('ClayDatePicker', module)
 			}}
 		/>
 	))
-	.add('time', () => (
+	.add(`time`, () => (
 		<ClayDatePickerWithState
 			placeholder="YYYY-MM-DD HH:mm"
 			spritemap={spritemap}
@@ -52,36 +52,36 @@ storiesOf('ClayDatePicker', module)
 			}}
 		/>
 	))
-	.add('locale', () => (
+	.add(`locale`, () => (
 		<ClayDatePickerWithState
 			dateFormat="DD.MM.YYYY"
 			firstDayOfWeek={firstDayOfWeek.Monday}
 			months={[
-				'Январь',
-				'Февраль',
-				'Март',
-				'Апрель',
-				'Май',
-				'Июнь',
-				'Июль',
-				'Август',
-				'Сентябрь',
-				'Октябрь',
-				'Ноябрь',
-				'Декабрь',
+				`Январь`,
+				`Февраль`,
+				`Март`,
+				`Апрель`,
+				`Май`,
+				`Июнь`,
+				`Июль`,
+				`Август`,
+				`Сентябрь`,
+				`Октябрь`,
+				`Ноябрь`,
+				`Декабрь`,
 			]}
 			placeholder="DD.MM.YYYY HH:mm"
 			spritemap={spritemap}
 			time
 			timezone="GMT+03:00"
-			weekdaysShort={['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']}
+			weekdaysShort={[`Вс`, `Пн`, `Вт`, `Ср`, `Чт`, `Пт`, `Сб`]}
 			years={{
 				end: 2024,
 				start: 1997,
 			}}
 		/>
 	))
-	.add('native', () => (
+	.add(`native`, () => (
 		<ClayDatePickerWithState
 			placeholder="YYYY-MM-DD"
 			spritemap={spritemap}

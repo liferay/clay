@@ -8,28 +8,28 @@ import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
 import ClayLink from '..';
 
-describe('ClayLink', () => {
-	it('renders', () => {
+describe(`ClayLink`, () => {
+	it(`renders`, () => {
 		const testRenderer = TestRenderer.create(<ClayLink />);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders with href', () => {
+	it(`renders with href`, () => {
 		const testRenderer = TestRenderer.create(<ClayLink href="#links" />);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders with a children content', () => {
+	it(`renders with a children content`, () => {
 		const testRenderer = TestRenderer.create(
-			<ClayLink>{'My Link'}</ClayLink>
+			<ClayLink>{`My Link`}</ClayLink>
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders with a display type', () => {
+	it(`renders with a display type`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayLink displayType="secondary" />
 		);

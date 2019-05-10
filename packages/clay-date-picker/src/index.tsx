@@ -138,11 +138,11 @@ const DateNow = new Date();
  */
 const ClayDatePicker: FunctionComponent<Props> = ({
 	ariaLabels = {
-		buttonDot: 'Select current date',
-		buttonNextMonth: 'Select the next month',
-		buttonPreviousMonth: 'Select the previous month',
+		buttonDot: `Select current date`,
+		buttonNextMonth: `Select the next month`,
+		buttonPreviousMonth: `Select the previous month`,
 	},
-	dateFormat = 'YYYY-MM-DD',
+	dateFormat = `YYYY-MM-DD`,
 	firstDayOfWeek = 0,
 	footerElement,
 	id,
@@ -150,28 +150,28 @@ const ClayDatePicker: FunctionComponent<Props> = ({
 	initialMonth = new Date(),
 	inputName,
 	months = [
-		'January',
-		'February',
-		'March',
-		'April',
-		'May',
-		'June',
-		'July',
-		'August',
-		'September',
-		'October',
-		'November',
-		'December',
+		`January`,
+		`February`,
+		`March`,
+		`April`,
+		`May`,
+		`June`,
+		`July`,
+		`August`,
+		`September`,
+		`October`,
+		`November`,
+		`December`,
 	],
 	onValueChange = () => {},
 	placeholder,
 	spritemap,
 	time = false,
-	timeFormat = 'HH:mm',
+	timeFormat = `HH:mm`,
 	timezone,
 	useNative = false,
 	value,
-	weekdaysShort = ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+	weekdaysShort = [`S`, `M`, `T`, `W`, `T`, `F`, `S`],
 	years = {
 		end: DateNow.getFullYear(),
 		start: DateNow.getFullYear(),
@@ -183,11 +183,11 @@ const ClayDatePicker: FunctionComponent<Props> = ({
 	const normalizeDate = (date: Date) =>
 		moment(date)
 			.clone()
-			.set('date', 1)
-			.set('hour', 12)
-			.set('minute', 0)
-			.set('second', 0)
-			.set('millisecond', 0)
+			.set(`date`, 1)
+			.set(`hour`, 12)
+			.set(`minute`, 0)
+			.set(`second`, 0)
+			.set(`millisecond`, 0)
 			.toDate();
 
 	/**

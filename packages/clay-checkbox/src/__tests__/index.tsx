@@ -8,8 +8,8 @@ import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
 import ClayCheckbox from '..';
 
-describe('ClayCheckbox', () => {
-	it('renders', () => {
+describe(`ClayCheckbox`, () => {
+	it(`renders`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayCheckbox checked={false} onChange={() => {}} />
 		);
@@ -17,7 +17,7 @@ describe('ClayCheckbox', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders with a label', () => {
+	it(`renders with a label`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayCheckbox
 				checked={false}
@@ -28,14 +28,14 @@ describe('ClayCheckbox', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders as checked', () => {
+	it(`renders as checked`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayCheckbox checked label="Checked" onChange={() => {}} />
 		);
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders with an indeterminate value', () => {
+	it(`renders with an indeterminate value`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayCheckbox
 				checked
@@ -47,7 +47,7 @@ describe('ClayCheckbox', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders as disabled', () => {
+	it(`renders as disabled`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayCheckbox
 				checked={false}
@@ -59,7 +59,7 @@ describe('ClayCheckbox', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders as checked and disabled', () => {
+	it(`renders as checked and disabled`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayCheckbox
 				checked
@@ -71,7 +71,7 @@ describe('ClayCheckbox', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders with an indeterminate value and disabled', () => {
+	it(`renders with an indeterminate value and disabled`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayCheckbox
 				checked

@@ -6,8 +6,8 @@
 
 const sortByOrderAndTitle = (a, b) => {
 	const regexSpace = /\s+/g;
-	const titleA = a.title.toUpperCase().replace(regexSpace, '');
-	const titleB = b.title.toUpperCase().replace(regexSpace, '');
+	const titleA = a.title.toUpperCase().replace(regexSpace, ``);
+	const titleB = b.title.toUpperCase().replace(regexSpace, ``);
 
 	if (a.order && b.order) return a.order - b.order;
 
@@ -23,14 +23,14 @@ const toSectionElements = (
 	draft,
 	indexVisible
 ) => {
-	const slugs = slug.split('/');
+	const slugs = slug.split(`/`);
 	const lastSlug = slugs[slugs.length - 1];
 	const penultimateSlug = slugs[slugs.length - 2];
 
-	const id = lastSlug === 'index' ? penultimateSlug : lastSlug;
+	const id = lastSlug === `index` ? penultimateSlug : lastSlug;
 	const link = `/${slug}`;
-	const parentLink = `/${slug.substring(0, slug.lastIndexOf('/') + 1)}`;
-	const isFolder = lastSlug === 'index';
+	const parentLink = `/${slug.substring(0, slug.lastIndexOf(`/`) + 1)}`;
+	const isFolder = lastSlug === `index`;
 	const isRoot =
 		(slugs.length === 3 && isFolder) || (slugs.length === 2 && !isFolder);
 
@@ -55,7 +55,7 @@ const toSectionItem = (item, paths) => {
 			.filter(
 				path =>
 					path.link ===
-					item.parentLink + path.id + (path.isFolder ? '/index' : '')
+					item.parentLink + path.id + (path.isFolder ? `/index` : ``)
 			)
 			.map(path => toSectionItem(path, paths))
 			.sort(sortByOrderAndTitle);
@@ -71,7 +71,7 @@ const getSection = data => {
 		} = node;
 
 		return toSectionElements(
-			slug.replace('.html', ''),
+			slug.replace(`.html`, ``),
 			title,
 			order,
 			alwaysActive,

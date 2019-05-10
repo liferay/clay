@@ -29,7 +29,7 @@ const ClayLoadingIndicator: React.FunctionComponent<Props> = ({
 		<span
 			aria-hidden="true"
 			{...otherProps}
-			className={classNames(className, 'loading-animation', {
+			className={classNames(className, `loading-animation`, {
 				'loading-animation-light': light,
 				'loading-animation-sm': small,
 			})}

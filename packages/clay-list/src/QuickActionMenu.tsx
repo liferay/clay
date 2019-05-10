@@ -34,13 +34,13 @@ const QuickActionMenuItem: React.FunctionComponent<ItemProps> = ({
 	symbol,
 	...otherProps
 }) => {
-	const ElementTag = href ? 'a' : 'button';
+	const ElementTag = href ? `a` : `button`;
 
 	return (
 		<ElementTag
 			{...otherProps}
 			className={classNames(
-				'component-action quick-action-item',
+				`component-action quick-action-item`,
 				className
 			)}
 			href={href}

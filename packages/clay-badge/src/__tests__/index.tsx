@@ -7,8 +7,8 @@ import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
 import ClayBadge from '..';
 
-describe('ClayBadge', function() {
-	it('renders', () => {
+describe(`ClayBadge`, function() {
+	it(`renders`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayBadge displayType="primary" label="4" />
 		);
@@ -16,7 +16,7 @@ describe('ClayBadge', function() {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('applies custom className', () => {
+	it(`applies custom className`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayBadge className="foo bar" displayType="primary" label="4" />
 		);

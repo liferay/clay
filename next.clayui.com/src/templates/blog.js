@@ -22,7 +22,7 @@ export default ({data, location}) => {
 			fields: {slug},
 			frontmatter: {title},
 		} = node;
-		return {link: slug.replace('.html', ''), title};
+		return {link: slug.replace(`.html`, ``), title};
 	});
 
 	return (
@@ -50,7 +50,7 @@ export default ({data, location}) => {
 									</h1>
 									<span className="blog-date">
 										{markdownRemark.fields.date}
-										{' by '}
+										{` by `}
 										{toCommaSeparatedList(
 											frontmatter.author,
 											author => (
@@ -102,10 +102,10 @@ const toCommaSeparatedList = (array, renderCallback) => {
 
 	array.forEach((item, index) => {
 		if (index === array.length - 1) {
-			addString(list, array.length === 2 ? ' and ' : ', and ');
+			addString(list, array.length === 2 ? ` and ` : `, and `);
 			list.push(renderCallback(item, index));
 		} else if (index > 0) {
-			addString(list, ', ');
+			addString(list, `, `);
 			list.push(renderCallback(item, index));
 		} else {
 			list.push(renderCallback(item, index));

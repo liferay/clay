@@ -8,21 +8,21 @@ import * as React from 'react';
 import classNames from 'classnames';
 
 type DisplayType =
-	| 'danger'
-	| 'dark'
-	| 'info'
-	| 'light'
-	| 'primary'
-	| 'secondary'
-	| 'success'
-	| 'unstyled'
-	| 'warning';
+	| `danger`
+	| `dark`
+	| `info`
+	| `light`
+	| `primary`
+	| `secondary`
+	| `success`
+	| `unstyled`
+	| `warning`;
 
-type Shape = 'circle' | 'rounded';
+type Shape = `circle` | `rounded`;
 
-type Position = 'bottom-left' | 'bottom-right' | 'top-left' | 'top-right';
+type Position = `bottom-left` | `bottom-right` | `top-left` | `top-right`;
 
-type Size = 'lg' | 'sm' | 'xl';
+type Size = `lg` | `sm` | `xl`;
 
 interface Props extends React.HTMLAttributes<HTMLSpanElement> {
 	/**
@@ -55,16 +55,16 @@ interface Props extends React.HTMLAttributes<HTMLSpanElement> {
 const ClaySticker: React.FunctionComponent<Props> = ({
 	children,
 	className,
-	displayType = 'primary',
+	displayType = `primary`,
 	outside = false,
 	position,
-	shape = 'rounded',
+	shape = `rounded`,
 	size,
 	...otherProps
 }) => (
 	<span
 		{...otherProps}
-		className={classNames('sticker', className, {
+		className={classNames(`sticker`, className, {
 			[`sticker-${shape}`]: shape,
 			[`sticker-${displayType}`]: displayType,
 			[`sticker-${position}`]: position,

@@ -4,16 +4,16 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-const path = require('path');
+const path = require(`path`);
 
 module.exports = ({actions, stage}) => {
 	let module = {};
 
-	if (stage === 'build-html') {
+	if (stage === `build-html`) {
 		module = {
 			rules: [
 				{
-					loader: 'null-loader',
+					loader: `null-loader`,
 					test: /clay-tooltip|metal-clipboard/,
 				},
 			],
@@ -24,9 +24,9 @@ module.exports = ({actions, stage}) => {
 		module,
 		resolve: {
 			alias: {
-				$components: path.resolve(__dirname, '../src/components'),
+				$components: path.resolve(__dirname, `../src/components`),
 			},
-			modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+			modules: [path.resolve(__dirname, `src`), `node_modules`],
 		},
 	});
 };

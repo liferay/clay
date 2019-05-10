@@ -32,7 +32,7 @@ const ClayList: React.FunctionComponent<Props> & {
 	return (
 		<ul
 			{...otherProps}
-			className={classNames('list-group', className, {
+			className={classNames(`list-group`, className, {
 				'show-quick-actions-on-hover': showQuickActionsOnHover,
 			})}
 		>

@@ -8,7 +8,7 @@ import ClayDatePicker from '@clayui/date-picker';
 import Editor from './Editor';
 import React, {useState} from 'react';
 
-const spritemap = '/images/icons/icons.svg';
+const spritemap = `/images/icons/icons.svg`;
 
 const DatePickerWithState = () => {
 	const scope = {ClayDatePicker, spritemap, useState};

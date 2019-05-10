@@ -10,23 +10,22 @@ import {storiesOf} from '@storybook/react';
 import 'clay-css/lib/css/atlas.css';
 import ClayAlert, {DisplayType} from '../src';
 
-const spritemap = require('clay-css/lib/images/icons/icons.svg');
+const spritemap = require(`clay-css/lib/images/icons/icons.svg`);
 
 const ClayToastDemo = () => {
 	const [toastItems, setToastItems] = React.useState<number[]>([]);
 	return (
-		<>
+		<React.Fragment>
 			<div>
-				{'Toast Items'}
+				{`Toast Items`}
 				<button
 					onClick={() =>
 						setToastItems([...toastItems, Math.random() * 100])
 					}
 				>
-					{'Add'}
+					{`Add`}
 				</button>
 			</div>
-
 			<ClayAlert.ToastContainer>
 				{toastItems.map(value => (
 					<ClayAlert
@@ -38,11 +37,11 @@ const ClayToastDemo = () => {
 							);
 						}}
 						spritemap={spritemap}
-						title={'Hola:'}
+						title={`Hola:`}
 					>{`My value is ${value}`}</ClayAlert>
 				))}
 			</ClayAlert.ToastContainer>
-		</>
+		</React.Fragment>
 	);
 };
 
@@ -50,50 +49,49 @@ const ClayDismissibleDemo = () => {
 	const [showDismisible, setShowDismisible] = React.useState<boolean>(true);
 
 	return (
-		<>
+		<React.Fragment>
 			<div>
-				{'Dismissible Notification'}
+				{`Dismissible Notification`}
 				{!showDismisible && (
 					<button onClick={() => setShowDismisible(true)}>
-						{'Show'}
+						{`Show`}
 					</button>
 				)}
 			</div>
-
 			{showDismisible && (
 				<ClayAlert
 					onClose={() => setShowDismisible(false)}
 					spritemap={spritemap}
-					title={'Info'}
+					title={`Info`}
 				>
-					{'This alert is dismissable'}
+					{`This alert is dismissable`}
 				</ClayAlert>
 			)}
-		</>
+		</React.Fragment>
 	);
 };
 
-storiesOf('ClayAlert', module)
-	.add('default', () => (
+storiesOf(`ClayAlert`, module)
+	.add(`default`, () => (
 		<ClayAlert
 			displayType={
 				select(
-					'Display Type',
+					`Display Type`,
 					{
-						danger: 'danger',
-						info: 'info',
-						success: 'success',
-						warning: 'warning',
+						danger: `danger`,
+						info: `info`,
+						success: `success`,
+						warning: `warning`,
 					},
-					'info'
+					`info`
 				) as DisplayType
 			}
 			spritemap={spritemap}
-			title={text('Title', 'Info')}
-			variant={boolean('Stripe Variant', false) ? 'stripe' : undefined}
+			title={text(`Title`, `Info`)}
+			variant={boolean(`Stripe Variant`, false) ? `stripe` : undefined}
 		>
-			{text('Content', 'This is an alert!')}
+			{text(`Content`, `This is an alert!`)}
 		</ClayAlert>
 	))
-	.add('Toast', () => <ClayToastDemo />)
-	.add('Dismissible', () => <ClayDismissibleDemo />);
+	.add(`Toast`, () => <ClayToastDemo />)
+	.add(`Dismissible`, () => <ClayDismissibleDemo />);

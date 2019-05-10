@@ -35,8 +35,8 @@ const Hue: React.FunctionComponent<HueProps> = ({
 	const removeListeners = () => {
 		selectorActive.current = false;
 
-		window.removeEventListener('mousemove', onMouseMove);
-		window.removeEventListener('mouseup', removeListeners);
+		window.removeEventListener(`mousemove`, onMouseMove);
+		window.removeEventListener(`mouseup`, removeListeners);
 	};
 
 	useEffect(() => {
@@ -60,8 +60,8 @@ const Hue: React.FunctionComponent<HueProps> = ({
 				selectorActive.current = true;
 				onMouseMove(event);
 
-				window.addEventListener('mousemove', onMouseMove);
-				window.addEventListener('mouseup', removeListeners);
+				window.addEventListener(`mousemove`, onMouseMove);
+				window.addEventListener(`mouseup`, removeListeners);
 			}}
 			ref={containerRef}
 		>

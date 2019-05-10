@@ -46,15 +46,15 @@ const Dropdown: FunctionComponent<Props> = ({
 
 	useEffect(() => {
 		if (expanded) {
-			document.addEventListener('click', handleDocumentClicked);
+			document.addEventListener(`click`, handleDocumentClicked);
 		}
 
 		return () => {
-			document.removeEventListener('click', handleDocumentClicked);
+			document.removeEventListener(`click`, handleDocumentClicked);
 		};
 	});
 
-	const classNames = classnames('date-picker-dropdown-menu dropdown-menu', {
+	const classNames = classnames(`date-picker-dropdown-menu dropdown-menu`, {
 		show: expanded,
 	});
 

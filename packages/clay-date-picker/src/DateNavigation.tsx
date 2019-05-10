@@ -71,7 +71,7 @@ const DateNavigation: FunctionComponent<Props> = ({
 	function handleChangeMonth(month: number) {
 		const date = moment(currentMonth)
 			.clone()
-			.add(month, 'M')
+			.add(month, `M`)
 			.toDate();
 		const year = date.getFullYear();
 

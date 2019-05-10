@@ -11,7 +11,7 @@ import {storiesOf} from '@storybook/react';
 import 'clay-css/lib/css/atlas.css';
 
 const RadioGroupWithState = ({inline}: {inline?: boolean}) => {
-	const [value, setValue] = React.useState<string>('one');
+	const [value, setValue] = React.useState<string>(`one`);
 
 	return (
 		<ClayRadioGroup
@@ -26,6 +26,6 @@ const RadioGroupWithState = ({inline}: {inline?: boolean}) => {
 	);
 };
 
-storiesOf('ClayRadioGroup', module)
-	.add('default', () => <RadioGroupWithState />)
-	.add('inline', () => <RadioGroupWithState inline />);
+storiesOf(`ClayRadioGroup`, module)
+	.add(`default`, () => <RadioGroupWithState />)
+	.add(`inline`, () => <RadioGroupWithState inline />);

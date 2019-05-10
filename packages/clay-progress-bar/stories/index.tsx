@@ -11,15 +11,15 @@ import {storiesOf} from '@storybook/react';
 
 import 'clay-css/lib/css/atlas.css';
 
-const spritemap = require('clay-css/lib/images/icons/icons.svg');
+const spritemap = require(`clay-css/lib/images/icons/icons.svg`);
 
-storiesOf('ClayProgressBar', module).add('default', () => (
+storiesOf(`ClayProgressBar`, module).add(`default`, () => (
 	<div>
 		<ClayProgressBar
-			feedback={boolean('Feedback', false)}
+			feedback={boolean(`Feedback`, false)}
 			spritemap={spritemap}
-			value={number('Value', 50)}
-			warn={boolean('Warn', false)}
+			value={number(`Value`, 50)}
+			warn={boolean(`Warn`, false)}
 		/>
 
 		<ClayProgressBar spritemap={spritemap} value={100} />

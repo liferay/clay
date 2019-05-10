@@ -15,7 +15,7 @@ const Header: React.FunctionComponent<React.HTMLAttributes<HTMLLIElement>> = ({
 	return (
 		<li
 			{...otherProps}
-			className={classNames('list-group-header', className)}
+			className={classNames(`list-group-header`, className)}
 		>
 			<p className="list-group-header-title">{children}</p>
 		</li>

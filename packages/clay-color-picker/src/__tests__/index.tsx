@@ -23,8 +23,8 @@ const mockClientRect = (element: HTMLElement) => {
 	});
 };
 
-describe('Rendering', () => {
-	it('default', () => {
+describe(`Rendering`, () => {
+	it(`default`, () => {
 		const component = TestRenderer.create(
 			<ClayColorPicker
 				label="Default Colors"
@@ -40,10 +40,10 @@ describe('Rendering', () => {
 	});
 });
 
-describe('Interactions', () => {
+describe(`Interactions`, () => {
 	afterEach(cleanup);
 
-	it('opens color picker drop down when clicked', () => {
+	it(`opens color picker drop down when clicked`, () => {
 		const {container} = render(
 			<ClayColorPicker
 				label="Default Colors"
@@ -55,17 +55,17 @@ describe('Interactions', () => {
 			/>
 		);
 
-		const dropdownToggle = container.querySelector('.dropdown-toggle');
+		const dropdownToggle = container.querySelector(`.dropdown-toggle`);
 
 		fireEvent.click(dropdownToggle as HTMLButtonElement, {});
 
 		expect(container).toMatchSnapshot();
 	});
 
-	it('opens custom color picker drop down when clicked', () => {
+	it(`opens custom color picker drop down when clicked`, () => {
 		const {container} = render(
 			<ClayColorPicker
-				colors={['000000', '00FFFF', '0000FF']}
+				colors={[`000000`, `00FFFF`, `0000FF`]}
 				label="Custom Colors"
 				name="colorPicker2"
 				onColorsChange={() => {}}
@@ -76,14 +76,14 @@ describe('Interactions', () => {
 			/>
 		);
 
-		const dropdownToggle = container.querySelector('.dropdown-toggle');
+		const dropdownToggle = container.querySelector(`.dropdown-toggle`);
 
 		fireEvent.click(dropdownToggle as HTMLButtonElement, {});
 
 		expect(container).toMatchSnapshot();
 
 		const colorEditorToggle = (container as HTMLElement).querySelector(
-			'.clay-color-header button'
+			`.clay-color-header button`
 		);
 
 		fireEvent.click(colorEditorToggle as HTMLButtonElement, {});
@@ -91,7 +91,7 @@ describe('Interactions', () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	describe('color editor interactions', () => {
+	describe(`color editor interactions`, () => {
 		let editorContainer: any;
 		let editorGetByTestId: any;
 
@@ -108,7 +108,7 @@ describe('Interactions', () => {
 		beforeEach(() => {
 			const {container, getByLabelText, getByTestId} = render(
 				<ClayColorPicker
-					colors={['5BB0A5', '00FFFF', '0000FF']}
+					colors={[`5BB0A5`, `00FFFF`, `0000FF`]}
 					label="Custom Colors"
 					name="colorPicker2"
 					onColorsChange={handleColorsChange}
@@ -118,12 +118,12 @@ describe('Interactions', () => {
 				/>
 			);
 
-			const dropdownToggle = container.querySelector('.dropdown-toggle');
+			const dropdownToggle = container.querySelector(`.dropdown-toggle`);
 
 			fireEvent.click(dropdownToggle as HTMLButtonElement, {});
 
 			const colorEditorToggle = (container as HTMLElement).querySelector(
-				'.clay-color-header button'
+				`.clay-color-header button`
 			);
 
 			fireEvent.click(colorEditorToggle as HTMLButtonElement, {});
@@ -132,18 +132,18 @@ describe('Interactions', () => {
 			editorGetByTestId = getByTestId;
 		});
 
-		it('changes the color by changing the gradient', () => {
+		it(`changes the color by changing the gradient`, () => {
 			const gradientMap = editorContainer.querySelector(
-				'.clay-color-map-hsb'
+				`.clay-color-map-hsb`
 			);
 
 			mockClientRect(gradientMap);
 
-			const mouseDown = getMouseEvent('mousedown', {pageX: 0, pageY: 0});
+			const mouseDown = getMouseEvent(`mousedown`, {pageX: 0, pageY: 0});
 
 			fireEvent(gradientMap, mouseDown);
 
-			const mouseMove = getMouseEvent('mousemove', {
+			const mouseMove = getMouseEvent(`mousemove`, {
 				pageX: 50,
 				pageY: 50,
 			});
@@ -151,67 +151,67 @@ describe('Interactions', () => {
 			fireEvent(gradientMap, mouseMove);
 
 			expect(handleColorsChange).toBeCalledTimes(1);
-			expect(handleColorsChange.mock.calls[0][0][0]).toBe('659c95');
+			expect(handleColorsChange.mock.calls[0][0][0]).toBe(`659c95`);
 		});
 
-		it('changes the color by changing the hue', () => {
+		it(`changes the color by changing the hue`, () => {
 			const hueSelector = editorContainer.querySelector(
-				'.clay-color-range-hue'
+				`.clay-color-range-hue`
 			);
 
 			mockClientRect(hueSelector);
 
-			const mouseDown = getMouseEvent('mousedown', {pageX: 0, pageY: 0});
+			const mouseDown = getMouseEvent(`mousedown`, {pageX: 0, pageY: 0});
 
 			fireEvent(hueSelector, mouseDown);
 
-			const mouseMove = getMouseEvent('mousemove', {
+			const mouseMove = getMouseEvent(`mousemove`, {
 				pageX: 50,
 			});
 
 			fireEvent(hueSelector, mouseMove);
 
 			expect(handleColorsChange).toBeCalledTimes(1);
-			expect(handleColorsChange.mock.calls[0][0][0]).toBe('5bb062');
+			expect(handleColorsChange.mock.calls[0][0][0]).toBe(`5bb062`);
 		});
 
-		it('changes the color by changing the RGB', () => {
-			const rInput = editorGetByTestId('rInput');
-			const bInput = editorGetByTestId('bInput');
-			const gInput = editorGetByTestId('gInput');
+		it(`changes the color by changing the RGB`, () => {
+			const rInput = editorGetByTestId(`rInput`);
+			const bInput = editorGetByTestId(`bInput`);
+			const gInput = editorGetByTestId(`gInput`);
 
-			fireEvent.change(rInput, {target: {value: '200'}});
+			fireEvent.change(rInput, {target: {value: `200`}});
 			expect(handleColorsChange).toBeCalledTimes(1);
 
-			fireEvent.change(gInput, {target: {value: '200'}});
+			fireEvent.change(gInput, {target: {value: `200`}});
 			expect(handleColorsChange).toBeCalledTimes(2);
 
-			fireEvent.change(bInput, {target: {value: '200'}});
+			fireEvent.change(bInput, {target: {value: `200`}});
 			expect(handleColorsChange).toBeCalledTimes(3);
 		});
 
-		it('changes the color by changing the input', () => {
-			const hexInput = editorGetByTestId('customHexInput');
+		it(`changes the color by changing the input`, () => {
+			const hexInput = editorGetByTestId(`customHexInput`);
 
-			fireEvent.change(hexInput, {target: {value: 'DDDDDD'}});
+			fireEvent.change(hexInput, {target: {value: `DDDDDD`}});
 
 			expect(handleColorsChange).toBeCalledTimes(1);
 			expect(handleColorsChange.mock.calls[0]).toMatchObject({});
 		});
 
-		it('ability to change color of clicked splotch', () => {
+		it(`ability to change color of clicked splotch`, () => {
 			const splotchArray = editorContainer.querySelectorAll(
-				'.clay-color-dropdown-menu .clay-color-swatch-item'
+				`.clay-color-dropdown-menu .clay-color-swatch-item`
 			);
 
 			fireEvent.click(splotchArray[5], {});
 
-			const hexInput = editorGetByTestId('customHexInput');
+			const hexInput = editorGetByTestId(`customHexInput`);
 
-			fireEvent.change(hexInput, {target: {value: 'DDDDDD'}});
+			fireEvent.change(hexInput, {target: {value: `DDDDDD`}});
 
 			expect(handleColorsChange).toBeCalledTimes(1);
-			expect(handleColorsChange.mock.calls[0][0][0]).toBe('dddddd');
+			expect(handleColorsChange.mock.calls[0][0][0]).toBe(`dddddd`);
 		});
 	});
 });

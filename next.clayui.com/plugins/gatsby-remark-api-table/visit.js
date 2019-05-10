@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-const VISITOR = require('./evaluators');
+const VISITOR = require(`./evaluators`);
 
 const evaluateTags = ast => {
 	return ast

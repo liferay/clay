@@ -3,16 +3,16 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const readFileSync = require('fs').readFileSync;
-const resolve = require('path').resolve;
-const safeLoad = require('js-yaml').safeLoad;
+const readFileSync = require(`fs`).readFileSync;
+const resolve = require(`path`).resolve;
+const safeLoad = require(`js-yaml`).safeLoad;
 
 // This is a copy of https://github.com/reactjs/reactjs.org/tree/master/plugins/gatsby-transformer-authors-yaml
 exports.sourceNodes = ({actions, graphql}) => {
 	const {createNode} = actions;
 
-	const path = resolve(__dirname, '../../content/authors.yml');
-	const file = readFileSync(path, 'utf8');
+	const path = resolve(__dirname, `../../content/authors.yml`);
+	const file = readFileSync(path, `utf8`);
 	const authors = safeLoad(file);
 
 	// authors.yml structure is {[username: string]: {name: string, url: string}}
@@ -25,9 +25,9 @@ exports.sourceNodes = ({actions, graphql}) => {
 			id: username,
 			internal: {
 				contentDigest: JSON.stringify(author),
-				type: 'AuthorYaml',
+				type: `AuthorYaml`,
 			},
-			parent: 'AUTHORS',
+			parent: `AUTHORS`,
 		});
 	});
 };

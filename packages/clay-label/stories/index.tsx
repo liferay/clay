@@ -11,7 +11,7 @@ import {storiesOf} from '@storybook/react';
 
 import 'clay-css/lib/css/atlas.css';
 
-const spritemap = require('clay-css/lib/images/icons/icons.svg');
+const spritemap = require(`clay-css/lib/images/icons/icons.svg`);
 
 const ClayLabelWithState = () => {
 	const [visible, setVisible] = React.useState<boolean>(true);
@@ -19,7 +19,7 @@ const ClayLabelWithState = () => {
 	return visible ? (
 		<ClayLabel
 			closeButtonProps={
-				boolean('Closeable', false)
+				boolean(`Closeable`, false)
 					? {
 							onClick: () => setVisible(val => !val),
 					  }
@@ -27,23 +27,23 @@ const ClayLabelWithState = () => {
 			}
 			displayType={
 				select(
-					'Display Type',
+					`Display Type`,
 					{
-						danger: 'danger',
-						info: 'info',
-						secondary: 'secondary',
-						success: 'success',
-						warning: 'warning',
+						danger: `danger`,
+						info: `info`,
+						secondary: `secondary`,
+						success: `success`,
+						warning: `warning`,
 					},
-					'secondary'
-				) as 'secondary'
+					`secondary`
+				) as `secondary`
 			}
-			href={text('Href', '')}
+			href={text(`Href`, ``)}
 			spritemap={spritemap}
 		>
-			{text('Label', 'Label')}
+			{text(`Label`, `Label`)}
 		</ClayLabel>
 	) : null;
 };
 
-storiesOf('ClayLabel', module).add('default', () => <ClayLabelWithState />);
+storiesOf(`ClayLabel`, module).add(`default`, () => <ClayLabelWithState />);

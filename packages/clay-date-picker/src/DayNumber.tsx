@@ -17,11 +17,11 @@ interface Props {
 
 const DayNumber: FunctionComponent<Props> = ({day, daySelected, onClick}) => {
 	const classNames = classnames(
-		'date-picker-date date-picker-calendar-item',
+		`date-picker-date date-picker-calendar-item`,
 		{
 			active:
-				moment(day.date).format('YYYY-MM-DD') ===
-				moment(daySelected).format('YYYY-MM-DD'),
+				moment(day.date).format(`YYYY-MM-DD`) ===
+				moment(daySelected).format(`YYYY-MM-DD`),
 			disabled: day.outside,
 		}
 	);
@@ -32,11 +32,11 @@ const DayNumber: FunctionComponent<Props> = ({day, daySelected, onClick}) => {
 		<button
 			aria-label={moment(day.date)
 				.clone()
-				.set('hour', 12)
-				.set('minute', 0)
-				.set('second', 0)
-				.set('millisecond', 0)
-				.format('YYYY MM DD')}
+				.set(`hour`, 12)
+				.set(`minute`, 0)
+				.set(`second`, 0)
+				.set(`millisecond`, 0)
+				.format(`YYYY MM DD`)}
 			className={classNames}
 			disabled={day.outside}
 			onClick={handleClick}

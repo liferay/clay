@@ -24,7 +24,7 @@ const ItemField: React.FunctionComponent<Props> = ({
 	return (
 		<div
 			{...otherProps}
-			className={classNames('autofit-col', className, {
+			className={classNames(`autofit-col`, className, {
 				'autofit-col-expand': expand,
 			})}
 		>

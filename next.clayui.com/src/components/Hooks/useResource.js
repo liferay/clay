@@ -17,8 +17,8 @@ function useResource(url, options) {
 	useEffect(() => {
 		axios({
 			headers: {
-				Accept: 'application/json',
-				'Content-Type': 'application/json',
+				Accept: `application/json`,
+				'Content-Type': `application/json`,
 			},
 			url,
 			...options,

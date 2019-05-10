@@ -6,24 +6,24 @@
 
 'use strict';
 
-const _ = require('lodash');
-const chalk = require('chalk');
-const yeoman = require('yeoman-generator');
-const yosay = require('yosay');
+const _ = require(`lodash`);
+const chalk = require(`chalk`);
+const yeoman = require(`yeoman-generator`);
+const yosay = require(`yosay`);
 
 module.exports = yeoman.generators.Base.extend({
 	initializing() {
 		this.log(
-			yosay(`Welcome, let's generate a ${chalk.blue('Clay')} component!`)
+			yosay(`Welcome, let's generate a ${chalk.blue(`Clay`)} component!`)
 		);
 	},
 
 	install() {
-		this.log(`${chalk.green('Installing dependencies...')}`);
+		this.log(`${chalk.green(`Installing dependencies...`)}`);
 
-		const ps = this.spawnCommand('yarn');
+		const ps = this.spawnCommand(`yarn`);
 
-		ps.on('close', code => console.log(`yarn install exited with ${code}`)); // eslint-disable-line no-console
+		ps.on(`close`, code => console.log(`yarn install exited with ${code}`)); // eslint-disable-line no-console
 	},
 
 	prompting() {
@@ -31,19 +31,19 @@ module.exports = yeoman.generators.Base.extend({
 
 		const prompts = [
 			{
-				default: 'ClayComponent',
-				message: 'How do you want to name your component?',
-				name: 'componentName',
-				type: 'input',
+				default: `ClayComponent`,
+				message: `How do you want to name your component?`,
+				name: `componentName`,
+				type: `input`,
 				validate: input => {
 					if (!input) {
-						return 'You must provide a component name.';
+						return `You must provide a component name.`;
 					}
 					if (!/^[^_\-\s\d][^_\-\s]*$/.test(input)) {
 						return (
-							"Invalid component name. Component names can't contain whitespace or " +
-							'any of the following characters: "-_". Also, class names can\'t ' +
-							'start with digits.'
+							`Invalid component name. Component names can't contain whitespace or ` +
+							`any of the following characters: "-_". Also, class names can't ` +
+							`start with digits.`
 						);
 					}
 
@@ -51,10 +51,10 @@ module.exports = yeoman.generators.Base.extend({
 				},
 			},
 			{
-				default: 'My awesome Clay component',
-				message: 'How would you describe this component?',
-				name: 'repoDescription',
-				type: 'input',
+				default: `My awesome Clay component`,
+				message: `How would you describe this component?`,
+				name: `repoDescription`,
+				type: `input`,
 			},
 		];
 
@@ -79,8 +79,8 @@ module.exports = yeoman.generators.Base.extend({
 	writing() {
 		this.destinationRoot(`packages/${this.repoName}`);
 		this.fs.copyTpl(
-			this.templatePath('_stories/_index.tsx'),
-			this.destinationPath('stories/index.tsx'),
+			this.templatePath(`_stories/_index.tsx`),
+			this.destinationPath(`stories/index.tsx`),
 			{
 				camelCaseName: this.camelCaseName,
 				capitalizeName: this.capitalizeName,
@@ -90,7 +90,7 @@ module.exports = yeoman.generators.Base.extend({
 			}
 		);
 		this.fs.copyTpl(
-			this.templatePath('src/_index.tsx'),
+			this.templatePath(`src/_index.tsx`),
 			this.destinationPath(`src/index.tsx`),
 			{
 				buildFormat: this.buildFormat,
@@ -102,7 +102,7 @@ module.exports = yeoman.generators.Base.extend({
 		);
 
 		this.fs.copyTpl(
-			this.templatePath('src/tests/_index.tsx'),
+			this.templatePath(`src/tests/_index.tsx`),
 			this.destinationPath(`src/__tests__/index.tsx`),
 			{
 				componentName: this.componentName,
@@ -110,7 +110,7 @@ module.exports = yeoman.generators.Base.extend({
 			}
 		);
 		this.fs.copyTpl(
-			this.templatePath('src/tests/__snapshots__/_index.tsx.snap'),
+			this.templatePath(`src/tests/__snapshots__/_index.tsx.snap`),
 			this.destinationPath(`src/__tests__/__snapshots__/index.tsx.snap`),
 			{
 				componentName: this.componentName,
@@ -118,19 +118,19 @@ module.exports = yeoman.generators.Base.extend({
 			}
 		);
 		this.fs.copyTpl(
-			this.templatePath('_package.json'),
-			this.destinationPath('package.json'),
+			this.templatePath(`_package.json`),
+			this.destinationPath(`package.json`),
 			{
 				componentName: this.componentName,
-				packageName: this.repoName.replace('clay-', ''),
+				packageName: this.repoName.replace(`clay-`, ``),
 				repoDescription: this.repoDescription,
 				repoName: this.repoName,
 				repoOwner: this.repoOwner,
 			}
 		);
 		this.fs.copyTpl(
-			this.templatePath('_README.md'),
-			this.destinationPath('README.md'),
+			this.templatePath(`_README.md`),
+			this.destinationPath(`README.md`),
 			{
 				componentName: this.componentName,
 				kebabCaseName: this.kebabCaseName,
@@ -139,12 +139,12 @@ module.exports = yeoman.generators.Base.extend({
 			}
 		);
 		this.fs.copyTpl(
-			this.templatePath('_tsconfig.declarations.json'),
-			this.destinationPath('tsconfig.declarations.json')
+			this.templatePath(`_tsconfig.declarations.json`),
+			this.destinationPath(`tsconfig.declarations.json`)
 		);
 		this.fs.copyTpl(
-			this.templatePath('_tsconfig.json'),
-			this.destinationPath('tsconfig.json')
+			this.templatePath(`_tsconfig.json`),
+			this.destinationPath(`tsconfig.json`)
 		);
 	},
 });

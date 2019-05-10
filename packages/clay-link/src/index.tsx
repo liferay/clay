@@ -11,7 +11,7 @@ interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	/**
 	 * Determines how the link is displayed.
 	 */
-	displayType?: 'secondary';
+	displayType?: `secondary`;
 }
 
 const ClayLink: React.FunctionComponent<Props> = ({

@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-const path = require('path');
+const path = require(`path`);
 
 // eslint-disable-next-line no-useless-escape
 const BLOG_POST_FILENAME_REGEX = /([0-9]+)\-([0-9]+)\-([0-9]+)\-(.+)\.md$/;
@@ -13,8 +13,8 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 	const {createNodeField} = actions;
 
 	if (
-		node.internal.type === 'Mdx' ||
-		node.internal.type === 'MarkdownRemark'
+		node.internal.type === `Mdx` ||
+		node.internal.type === `MarkdownRemark`
 	) {
 		const {
 			alwaysActive,
@@ -38,15 +38,15 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 		let slug = permalink;
 
 		if (!slug) {
-			if (relativePath.includes('docs')) {
-				if (relativePath.endsWith('.md')) {
-					slug = relativePath.replace('.md', '.html');
+			if (relativePath.includes(`docs`)) {
+				if (relativePath.endsWith(`.md`)) {
+					slug = relativePath.replace(`.md`, `.html`);
 				} else {
-					slug = relativePath.replace('.mdx', '.html');
+					slug = relativePath.replace(`.mdx`, `.html`);
 				}
 			}
 
-			if (relativePath.includes('blog')) {
+			if (relativePath.includes(`blog`)) {
 				const match = BLOG_POST_FILENAME_REGEX.exec(relativePath);
 				const year = match[1];
 				const month = match[2];
@@ -58,7 +58,7 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 				const date = new Date(year, month - 1, day);
 
 				createNodeField({
-					name: 'date',
+					name: `date`,
 					node,
 					value: date.toJSON(),
 				});
@@ -66,105 +66,105 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 		}
 
 		createNodeField({
-			name: 'indexVisible',
+			name: `indexVisible`,
 			node,
 			value: indexVisible || false,
 		});
 
 		createNodeField({
-			name: 'path',
+			name: `path`,
 			node,
 			value: path.join(sourceInstanceName, relativePath),
 		});
 
 		createNodeField({
-			name: 'alwaysActive',
+			name: `alwaysActive`,
 			node,
 			value: alwaysActive || false,
 		});
 
 		createNodeField({
-			name: 'draft',
+			name: `draft`,
 			node,
 			value: draft || false,
 		});
 
 		createNodeField({
-			name: 'packageStatus',
+			name: `packageStatus`,
 			node,
-			value: packageStatus || '',
+			value: packageStatus || ``,
 		});
 
 		createNodeField({
-			name: 'packageVersion',
+			name: `packageVersion`,
 			node,
-			value: packageVersion || '',
+			value: packageVersion || ``,
 		});
 
 		createNodeField({
-			name: 'description',
+			name: `description`,
 			node,
-			value: description || '',
+			value: description || ``,
 		});
 
 		createNodeField({
-			name: 'packageNpm',
+			name: `packageNpm`,
 			node,
-			value: packageNpm || '',
+			value: packageNpm || ``,
 		});
 
 		createNodeField({
-			name: 'version',
+			name: `version`,
 			node,
-			value: version || '',
+			value: version || ``,
 		});
 
 		createNodeField({
-			name: 'nightly',
+			name: `nightly`,
 			node,
 			value: nightly ? true : false,
 		});
 
 		createNodeField({
-			name: 'title',
+			name: `title`,
 			node,
 			value: node.frontmatter.title,
 		});
 
 		createNodeField({
-			name: 'slug',
+			name: `slug`,
 			node,
 			value: slug,
 		});
 
 		createNodeField({
-			name: 'title',
+			name: `title`,
 			node,
 			value: title,
 		});
 
 		createNodeField({
-			name: 'order',
+			name: `order`,
 			node,
 			value: order || 0,
 		});
 
 		createNodeField({
-			name: 'redirect',
+			name: `redirect`,
 			node,
-			value: redirect || '',
+			value: redirect || ``,
 		});
 
 		createNodeField({
-			name: 'redirectFrom',
+			name: `redirectFrom`,
 			node,
-			value: redirectFrom || '',
+			value: redirectFrom || ``,
 		});
 
 		createNodeField({
-			name: 'layout',
+			name: `layout`,
 			node,
-			value: layout || '',
+			value: layout || ``,
 		});
 	}
 };

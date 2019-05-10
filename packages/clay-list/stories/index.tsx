@@ -13,40 +13,40 @@ import {storiesOf} from '@storybook/react';
 
 import 'clay-css/lib/css/atlas.css';
 
-const spritemap = require('clay-css/lib/images/icons/icons.svg');
+const spritemap = require(`clay-css/lib/images/icons/icons.svg`);
 
-storiesOf('ClayList', module)
-	.add('simple', () => (
+storiesOf(`ClayList`, module)
+	.add(`simple`, () => (
 		<ClayList>
-			<ClayList.Header>{'This is a header'}</ClayList.Header>
+			<ClayList.Header>{`This is a header`}</ClayList.Header>
 			<ClayList.Item flex>
-				<ClayList.ItemField>{'Item 1'}</ClayList.ItemField>
+				<ClayList.ItemField>{`Item 1`}</ClayList.ItemField>
 
-				<ClayList.ItemField>{'ItemField'}</ClayList.ItemField>
+				<ClayList.ItemField>{`ItemField`}</ClayList.ItemField>
 
 				<ClayList.ItemField expand>
 					<ClayList.ItemTitle>{`Item Title and expanded`}</ClayList.ItemTitle>
-					<ClayList.ItemText>{'Item Text'}</ClayList.ItemText>
+					<ClayList.ItemText>{`Item Text`}</ClayList.ItemText>
 				</ClayList.ItemField>
 
-				<ClayList.ItemField>{'ItemField'}</ClayList.ItemField>
+				<ClayList.ItemField>{`ItemField`}</ClayList.ItemField>
 			</ClayList.Item>
 
 			<ClayList.Item flex>
-				<ClayList.ItemField>{'Item 2'}</ClayList.ItemField>
+				<ClayList.ItemField>{`Item 2`}</ClayList.ItemField>
 				<ClayList.ItemField expand>
-					{'Hover this item for action menu'}
+					{`Hover this item for action menu`}
 				</ClayList.ItemField>
 				<ClayList.ItemField>
 					<ClayList.QuickActionMenu>
 						<ClayList.QuickActionMenu.Item
-							onClick={() => alert('Clicked the trash!')}
+							onClick={() => alert(`Clicked the trash!`)}
 							spritemap={spritemap}
 							symbol="trash"
 						/>
 
 						<ClayList.QuickActionMenu.Item
-							onClick={() => alert('Clicked the cog!')}
+							onClick={() => alert(`Clicked the cog!`)}
 							spritemap={spritemap}
 							symbol="cog"
 						/>
@@ -54,17 +54,17 @@ storiesOf('ClayList', module)
 				</ClayList.ItemField>
 			</ClayList.Item>
 
-			<ClayList.Header>{'This is another header'}</ClayList.Header>
+			<ClayList.Header>{`This is another header`}</ClayList.Header>
 			<ClayList.Item flex>
-				<ClayList.ItemField>{'Item 3'}</ClayList.ItemField>
+				<ClayList.ItemField>{`Item 3`}</ClayList.ItemField>
 
-				<ClayList.ItemField>{'ItemField'}</ClayList.ItemField>
+				<ClayList.ItemField>{`ItemField`}</ClayList.ItemField>
 			</ClayList.Item>
 		</ClayList>
 	))
-	.add('complex', () => {
+	.add(`complex`, () => {
 		const activeIndex = select(
-			'Active Index',
+			`Active Index`,
 			{
 				1: 1,
 				2: 2,
@@ -105,20 +105,20 @@ storiesOf('ClayList', module)
 							</ClayList.ItemTitle>
 
 							<ClayList.ItemText>
-								{'This is subtitle information...'}
+								{`This is subtitle information...`}
 							</ClayList.ItemText>
 						</ClayList.ItemField>
 
 						<ClayList.ItemField>
 							<ClayList.QuickActionMenu>
 								<ClayList.QuickActionMenu.Item
-									onClick={() => alert('Clicked the trash!')}
+									onClick={() => alert(`Clicked the trash!`)}
 									spritemap={spritemap}
 									symbol="trash"
 								/>
 
 								<ClayList.QuickActionMenu.Item
-									onClick={() => alert('Clicked the cog!')}
+									onClick={() => alert(`Clicked the cog!`)}
 									spritemap={spritemap}
 									symbol="cog"
 								/>

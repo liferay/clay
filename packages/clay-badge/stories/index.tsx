@@ -10,22 +10,22 @@ import {storiesOf} from '@storybook/react';
 import 'clay-css/lib/css/atlas.css';
 import ClayBadge from '../src';
 
-storiesOf('ClayBadge', module).add('default', () => (
+storiesOf(`ClayBadge`, module).add(`default`, () => (
 	<ClayBadge
 		displayType={
 			select(
-				'Display Type',
+				`Display Type`,
 				{
-					error: 'error',
-					info: 'info',
-					primary: 'primary',
-					secondary: 'secondary',
-					success: 'success',
-					warning: 'warning',
+					error: `error`,
+					info: `info`,
+					primary: `primary`,
+					secondary: `secondary`,
+					success: `success`,
+					warning: `warning`,
 				},
-				'primary'
-			) as 'primary'
+				`primary`
+			) as `primary`
 		}
-		label={text('Label', '100')}
+		label={text(`Label`, `100`)}
 	/>
 ));

@@ -10,10 +10,10 @@ import {storiesOf} from '@storybook/react';
 
 import 'clay-css/lib/css/atlas.css';
 
-const spritemap = require('clay-css/lib/images/icons/icons.svg');
+const spritemap = require(`clay-css/lib/images/icons/icons.svg`);
 
 const ClayColorPickerWithState = (props: any) => {
-	const [color, setColor] = React.useState('FFFFFF');
+	const [color, setColor] = React.useState(`FFFFFF`);
 
 	return (
 		<ClayColorPicker
@@ -27,9 +27,9 @@ const ClayColorPickerWithState = (props: any) => {
 
 const ClayColorPickerWithCustomColors = (props: any) => {
 	const [customColors, setCustoms] = React.useState([
-		'008000',
-		'00FFFF',
-		'0000FF',
+		`008000`,
+		`00FFFF`,
+		`0000FF`,
 	]);
 
 	const [color, setColor] = React.useState(customColors[0]);
@@ -45,28 +45,28 @@ const ClayColorPickerWithCustomColors = (props: any) => {
 	);
 };
 
-storiesOf('ClayColorPicker', module)
-	.add('default', () => (
+storiesOf(`ClayColorPicker`, module)
+	.add(`default`, () => (
 		<ClayColorPickerWithState
-			label={text('Label', 'Default Colors')}
+			label={text(`Label`, `Default Colors`)}
 			name="colorPicker1"
-			showHex={boolean('Show Hex', true)}
-			title={text('Title', 'Default')}
+			showHex={boolean(`Show Hex`, true)}
+			title={text(`Title`, `Default`)}
 		/>
 	))
-	.add('custom colors', () => (
+	.add(`custom colors`, () => (
 		<ClayColorPickerWithCustomColors
-			label={text('Label', 'Custom Colors')}
+			label={text(`Label`, `Custom Colors`)}
 			name="colorPicker2"
-			showHex={boolean('Show Hex', true)}
-			title={text('Title', 'Default')}
+			showHex={boolean(`Show Hex`, true)}
+			title={text(`Title`, `Default`)}
 		/>
 	))
-	.add('native', () => (
+	.add(`native`, () => (
 		<ClayColorPickerWithState
-			label={text('Label', 'Default Colors')}
+			label={text(`Label`, `Default Colors`)}
 			name="colorPicker3"
-			showHex={boolean('Show Hex', true)}
+			showHex={boolean(`Show Hex`, true)}
 			title="Native"
 			useNative
 		/>

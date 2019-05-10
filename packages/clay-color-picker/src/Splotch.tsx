@@ -33,16 +33,16 @@ const Splotch: React.FunctionComponent<Props> = ({
 	value,
 	...otherProps
 }) => {
-	const requireBorder = tinycolor.readability('#FFF', value) < 1.1;
+	const requireBorder = tinycolor.readability(`#FFF`, value) < 1.1;
 
 	return (
 		<button
 			{...otherProps}
-			className={`btn clay-color-btn ${className ? className : ''}`}
+			className={`btn clay-color-btn ${className ? className : ``}`}
 			style={{
-				...(active ? {outline: 'auto 3px #55ADFF'} : {}),
+				...(active ? {outline: `auto 3px #55ADFF`} : {}),
 				...(requireBorder
-					? {border: '1px solid #E7E7ED'}
+					? {border: `1px solid #E7E7ED`}
 					: {borderWidth: 0}),
 				background: `#${value}`,
 				height: size,

@@ -8,14 +8,14 @@ import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
 import ClayButton from '..';
 
-describe('ClayButton', () => {
-	it('renders', () => {
+describe(`ClayButton`, () => {
+	it(`renders`, () => {
 		const testRenderer = TestRenderer.create(<ClayButton />);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders with a different display type', () => {
+	it(`renders with a different display type`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayButton displayType="link" />
 		);
@@ -23,7 +23,7 @@ describe('ClayButton', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders disabled', () => {
+	it(`renders disabled`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayButton disabled displayType="primary" />
 		);
@@ -31,7 +31,7 @@ describe('ClayButton', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders block', () => {
+	it(`renders block`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayButton block displayType="primary" />
 		);
@@ -39,7 +39,7 @@ describe('ClayButton', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders monospaced', () => {
+	it(`renders monospaced`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayButton displayType="primary" monospaced />
 		);
@@ -47,7 +47,7 @@ describe('ClayButton', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders small', () => {
+	it(`renders small`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayButton displayType="primary" small />
 		);
@@ -55,7 +55,7 @@ describe('ClayButton', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders with a ButtonGroup', () => {
+	it(`renders with a ButtonGroup`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayButton.Group>
 				<ClayButton />

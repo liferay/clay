@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-const path = require('path');
-const {ensureDir, exists, writeFile} = require('fs-extra');
+const path = require(`path`);
+const {ensureDir, exists, writeFile} = require(`fs-extra`);
 
-const getMetaRedirect = require('./getMetaRedirect');
+const getMetaRedirect = require(`./getMetaRedirect`);
 
 // Adapted from https://github.com/getchalk/gatsby-plugin-meta-redirect
 const writeRedirectsFile = async (redirects, folder, pathPrefix) => {
@@ -17,12 +17,12 @@ const writeRedirectsFile = async (redirects, folder, pathPrefix) => {
 	for (const redirect of redirects) {
 		const {fromPath, toPath} = redirect;
 
-		if (fromPath.endsWith('index.html')) continue;
+		if (fromPath.endsWith(`index.html`)) continue;
 
 		const FILE_PATH = path.join(
 			folder,
-			fromPath.replace(pathPrefix, ''),
-			'index.html'
+			fromPath.replace(pathPrefix, ``),
+			`index.html`
 		);
 
 		let fileExists;
@@ -48,11 +48,11 @@ const writeRedirectsFile = async (redirects, folder, pathPrefix) => {
 exports.onPostBuild = ({store}) => {
 	const {config, program, redirects} = store.getState();
 
-	let pathPrefix = '';
+	let pathPrefix = ``;
 	if (program.prefixPaths) {
 		pathPrefix = config.pathPrefix;
 	}
 
-	const folder = path.join(program.directory, 'public');
+	const folder = path.join(program.directory, `public`);
 	return writeRedirectsFile(redirects, folder, pathPrefix);
 };

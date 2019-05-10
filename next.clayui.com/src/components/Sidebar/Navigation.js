@@ -29,8 +29,8 @@ class Navigation extends Component {
 
 		const elementRef = this.refs[`navItem${index}${depth}`];
 
-		if (!elementRef.classList.contains('active') || !!section.items) {
-			elementRef.classList.toggle('active');
+		if (!elementRef.classList.contains(`active`) || !!section.items) {
+			elementRef.classList.toggle(`active`);
 		}
 	}
 
@@ -44,8 +44,8 @@ class Navigation extends Component {
 		}
 
 		const {location} = this.props;
-		const match = location.pathname.split('/');
-		const id = match[match.length - 1].split('.');
+		const match = location.pathname.split(`/`);
+		const id = match[match.length - 1].split(`.`);
 
 		if (section.items) {
 			return match.includes(section.id);
@@ -109,11 +109,11 @@ const Anchor = ({location, onclick, page}) => {
 	const link = `${page.link}.html`;
 	const TagName =
 		location.pathname === link || (page.items && !page.indexVisible)
-			? 'a'
+			? `a`
 			: Link;
 	const props =
 		location.pathname === link || (page.items && !page.indexVisible)
-			? {href: '#openNav', onClick: onclick}
+			? {href: `#openNav`, onClick: onclick}
 			: {to: link};
 
 	return (

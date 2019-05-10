@@ -8,8 +8,8 @@ import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
 import ClayProgressBar from '..';
 
-describe('ClayProgressBar', () => {
-	it('renders', () => {
+describe(`ClayProgressBar`, () => {
+	it(`renders`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayProgressBar spritemap="path/to/spritemap" value={50} />
 		);
@@ -17,7 +17,7 @@ describe('ClayProgressBar', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders with success', () => {
+	it(`renders with success`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayProgressBar spritemap="path/to/spritemap" value={100} />
 		);
@@ -25,17 +25,17 @@ describe('ClayProgressBar', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders with additional content', () => {
+	it(`renders with additional content`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayProgressBar spritemap="path/to/spritemap" value={50}>
-				{'50%'}
+				{`50%`}
 			</ClayProgressBar>
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('with feedback wraping class', () => {
+	it(`with feedback wraping class`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayProgressBar
 				feedback
@@ -47,7 +47,7 @@ describe('ClayProgressBar', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders as a different status', () => {
+	it(`renders as a different status`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayProgressBar spritemap="path/to/spritemap" value={50} warn />
 		);

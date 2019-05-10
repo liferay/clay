@@ -4,11 +4,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-const visit = require('unist-util-visit');
+const visit = require(`unist-util-visit`);
 
 module.exports = ({markdownAST}) => {
-	visit(markdownAST, 'html', node => {
-		if (typeof node.lang === 'undefined') {
+	visit(markdownAST, `html`, node => {
+		if (typeof node.lang === `undefined`) {
 			return;
 		}
 

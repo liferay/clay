@@ -122,7 +122,7 @@ const Custom: React.FunctionComponent<CustomProps> = ({
 	const {b, g, r} = color.toRgb();
 	const {s, v} = color.toHsv();
 
-	const rgbArr: [number, string][] = [[r, 'r'], [g, 'g'], [b, 'b']];
+	const rgbArr: [number, string][] = [[r, `r`], [g, `g`], [b, `b`]];
 
 	const setNewColor = (colorValue: tinycolor.Instance, setInput = true) => {
 		const hexString = colorValue.toHex();
@@ -154,14 +154,14 @@ const Custom: React.FunctionComponent<CustomProps> = ({
 
 					<button
 						className={`${
-							editorActive ? 'close' : ''
+							editorActive ? `close` : ``
 						} component-action`}
 						onClick={() => setEditorActive(!editorActive)}
 						type="button"
 					>
 						<Icon
 							spritemap={spritemap}
-							symbol={editorActive ? 'times' : 'drop'}
+							symbol={editorActive ? `times` : `drop`}
 						/>
 					</button>
 				</div>
@@ -173,7 +173,7 @@ const Custom: React.FunctionComponent<CustomProps> = ({
 						<Splotch
 							active={i === activeSplotchIndex}
 							onClick={() => {
-								if (hex === 'FFFFFF') {
+								if (hex === `FFFFFF`) {
 									setEditorActive(true);
 								}
 
@@ -278,7 +278,7 @@ const Custom: React.FunctionComponent<CustomProps> = ({
 									/>
 
 									<label className="input-group-inset-item input-group-inset-item-before">
-										{'#'}
+										{`#`}
 									</label>
 								</div>
 							</div>

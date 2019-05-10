@@ -9,12 +9,12 @@ import * as TestRenderer from 'react-test-renderer';
 import ClayRadioGroup from '..';
 import {cleanup, fireEvent, render} from 'react-testing-library';
 
-describe('Rendering', () => {
-	it('default', () => {
+describe(`Rendering`, () => {
+	it(`default`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayRadioGroup
 				onSelectedValueChange={() => {}}
-				selectedValue={'one'}
+				selectedValue={`one`}
 			>
 				<ClayRadioGroup.Radio label="One" value="one" />
 				<ClayRadioGroup.Radio label="Two" value="two" />
@@ -26,16 +26,16 @@ describe('Rendering', () => {
 	});
 });
 
-describe('Interactions', () => {
+describe(`Interactions`, () => {
 	afterEach(cleanup);
 
-	it('selecting a radio element should fire the onSelectedValueChange prop with the new value', () => {
+	it(`selecting a radio element should fire the onSelectedValueChange prop with the new value`, () => {
 		const handleSelectedChange = jest.fn();
 
 		const {getByLabelText} = render(
 			<ClayRadioGroup
 				onSelectedValueChange={handleSelectedChange}
-				selectedValue={'one'}
+				selectedValue={`one`}
 			>
 				<ClayRadioGroup.Radio label="One" value="one" />
 				<ClayRadioGroup.Radio label="Two" value="two" />
@@ -43,11 +43,11 @@ describe('Interactions', () => {
 			</ClayRadioGroup>
 		);
 
-		const radioThree = getByLabelText('Three');
+		const radioThree = getByLabelText(`Three`);
 
 		fireEvent.click(radioThree as HTMLButtonElement, {});
 
 		expect(handleSelectedChange).toHaveBeenCalledTimes(1);
-		expect(handleSelectedChange).toHaveBeenCalledWith('three');
+		expect(handleSelectedChange).toHaveBeenCalledWith(`three`);
 	});
 });

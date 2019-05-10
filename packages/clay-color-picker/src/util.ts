@@ -25,7 +25,7 @@ export const sub = (langKey: string, args: React.ReactText[]) => {
 		}
 	}
 
-	return keyArray.join('');
+	return keyArray.join(``);
 };
 
 /**

@@ -25,7 +25,7 @@ const InputDate: FunctionComponent<Props> = ({
 	ariaLabel,
 	currentTime,
 	dateFormat,
-	inputName = 'datePicker',
+	inputName = `datePicker`,
 	onChange,
 	placeholder,
 	time = false,
@@ -52,7 +52,7 @@ const InputDate: FunctionComponent<Props> = ({
 		currentTime,
 	]);
 
-	const className = classnames('form-control input-group-inset', {
+	const className = classnames(`form-control input-group-inset`, {
 		'input-group-inset-after': !useNative,
 	});
 
@@ -64,7 +64,7 @@ const InputDate: FunctionComponent<Props> = ({
 				className={className}
 				onChange={onChange}
 				placeholder={placeholder}
-				type={useNative ? 'date' : 'text'}
+				type={useNative ? `date` : `text`}
 				value={memoizedValue}
 			/>
 		</React.Fragment>

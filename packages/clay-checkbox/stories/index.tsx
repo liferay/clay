@@ -16,31 +16,31 @@ const ClayCheckboxWithState = () => {
 	return (
 		<ClayCheckbox
 			checked={value}
-			disabled={boolean('Disabled', false)}
-			indeterminate={boolean('Indeterminate', false)}
-			label={text('Label', 'Default')}
+			disabled={boolean(`Disabled`, false)}
+			indeterminate={boolean(`Indeterminate`, false)}
+			label={text(`Label`, `Default`)}
 			onChange={() => setValue(val => !val)}
 		/>
 	);
 };
 
-storiesOf('ClayCheckbox', module)
-	.add('default', () => <ClayCheckboxWithState />)
-	.add('hidden label w/ aria-label', () => (
+storiesOf(`ClayCheckbox`, module)
+	.add(`default`, () => <ClayCheckboxWithState />)
+	.add(`hidden label w/ aria-label`, () => (
 		<ClayCheckbox
 			aria-label="hello! Can you see me?"
-			checked={boolean('Checked', false)}
+			checked={boolean(`Checked`, false)}
 			onChange={() => {}}
 		/>
 	))
-	.add('custom JSX content', () => (
+	.add(`custom JSX content`, () => (
 		<ClayCheckbox
-			checked={boolean('Checked', false)}
+			checked={boolean(`Checked`, false)}
 			label="Badge"
 			onChange={() => {}}
 		>
 			<span className="badge badge-primary">
-				<span className="badge-item badge-item-expand">{'10'}</span>
+				<span className="badge-item badge-item-expand">{`10`}</span>
 			</span>
 		</ClayCheckbox>
 	));

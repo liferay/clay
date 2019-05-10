@@ -10,8 +10,8 @@ export const H1 = props => (
 		className="clay-h1"
 		id={props.children
 			.toLowerCase()
-			.split(' ')
-			.join('-')}
+			.split(` `)
+			.join(`-`)}
 	>
 		{props.children}
 	</h1>
@@ -22,8 +22,8 @@ export const H2 = props => (
 		className="clay-h2"
 		id={props.children
 			.toLowerCase()
-			.split(' ')
-			.join('-')}
+			.split(` `)
+			.join(`-`)}
 	>
 		{props.children}
 	</h2>
@@ -34,8 +34,8 @@ export const H3 = props => (
 		className="clay-h3"
 		id={props.children
 			.toLowerCase()
-			.split(' ')
-			.join('-')}
+			.split(` `)
+			.join(`-`)}
 	>
 		{props.children}
 	</h3>
@@ -46,8 +46,8 @@ export const H4 = props => (
 		className="clay-h4"
 		id={props.children
 			.toLowerCase()
-			.split(' ')
-			.join('-')}
+			.split(` `)
+			.join(`-`)}
 	>
 		{props.children}
 	</h4>

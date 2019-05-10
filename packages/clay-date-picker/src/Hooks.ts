@@ -30,16 +30,16 @@ const useWeeks = (currentMonth: Date, firstDayOfWeek: firstDayOfWeek) => {
 const useCurrentTime = (format: string) => {
 	const [currentTime, set] = useState<string>(() =>
 		moment()
-			.set('h', 0)
-			.set('m', 0)
+			.set(`h`, 0)
+			.set(`m`, 0)
 			.format(format)
 	);
 
 	function setCurrentTime(hours: number, minutes: number): void {
 		set(
 			moment()
-				.set('h', hours)
-				.set('m', minutes)
+				.set(`h`, hours)
+				.set(`m`, minutes)
 				.format(format)
 		);
 	}

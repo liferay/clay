@@ -52,7 +52,7 @@ const useAutoClose = (autoClose?: boolean | number, onClose = () => {}) => {
 	};
 };
 
-export type DisplayType = 'danger' | 'info' | 'success' | 'warning';
+export type DisplayType = `danger` | `info` | `success` | `warning`;
 
 interface ClayAlertProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
@@ -85,7 +85,7 @@ interface ClayAlertProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Determines the variant of the alert.
 	 */
-	variant?: 'stripe';
+	variant?: `stripe`;
 }
 
 interface ToastContainerProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -98,10 +98,10 @@ interface ToastContainerProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const ICON_MAP = {
-	danger: 'exclamation-full',
-	info: 'info-circle',
-	success: 'check-circle-full',
-	warning: 'warning-full',
+	danger: `exclamation-full`,
+	info: `info-circle`,
+	success: `check-circle-full`,
+	warning: `warning-full`,
 };
 
 const ClayAlert: React.FunctionComponent<ClayAlertProps> & {
@@ -110,7 +110,7 @@ const ClayAlert: React.FunctionComponent<ClayAlertProps> & {
 	autoClose,
 	children,
 	className,
-	displayType = 'info',
+	displayType = `info`,
 	onClose,
 	spritemap,
 	title,
@@ -123,7 +123,7 @@ const ClayAlert: React.FunctionComponent<ClayAlertProps> & {
 	);
 
 	const ConditionalContainer: React.FunctionComponent<{}> = ({children}) =>
-		variant === 'stripe' ? (
+		variant === `stripe` ? (
 			<div className="container">{children}</div>
 		) : (
 			<>{children}</>
@@ -132,9 +132,9 @@ const ClayAlert: React.FunctionComponent<ClayAlertProps> & {
 	return (
 		<div
 			{...otherProps}
-			className={classNames(className, 'alert', {
+			className={classNames(className, `alert`, {
 				'alert-dismissible': onClose,
-				'alert-fluid': variant === 'stripe',
+				'alert-fluid': variant === `stripe`,
 				[`alert-${displayType}`]: displayType,
 			})}
 			onMouseOut={startAutoCloseTimer}
@@ -172,7 +172,7 @@ ClayAlert.ToastContainer = ({children, className, ...otherProps}) => {
 	return (
 		<div
 			{...otherProps}
-			className={classNames(className, 'alert-container container')}
+			className={classNames(className, `alert-container container`)}
 		>
 			<div className="alert-notifications alert-notifications-fixed">
 				{children}

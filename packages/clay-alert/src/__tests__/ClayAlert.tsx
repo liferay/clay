@@ -8,8 +8,8 @@ import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
 import ClayAlert from '..';
 
-describe('ClayAlert', () => {
-	it('renders', () => {
+describe(`ClayAlert`, () => {
+	it(`renders`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayAlert spritemap="/foo/bar" title="Hello!" />
 		);
@@ -17,7 +17,7 @@ describe('ClayAlert', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders as a different type', () => {
+	it(`renders as a different type`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayAlert
 				displayType="danger"
@@ -29,7 +29,7 @@ describe('ClayAlert', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders as `stripe` variant', () => {
+	it(`renders as \`stripe\` variant`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayAlert spritemap="/foo/bar" title="Hello!" variant="stripe" />
 		);
@@ -37,7 +37,7 @@ describe('ClayAlert', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders with an icon for closing', () => {
+	it(`renders with an icon for closing`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayAlert onClose={() => {}} spritemap="/foo/bar" title="Hello!" />
 		);
@@ -45,17 +45,17 @@ describe('ClayAlert', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders with a title and a message with markup', () => {
+	it(`renders with a title and a message with markup`, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayAlert spritemap="/foo/bar" title="Hello!">
-				<span>{'test'}</span>
+				<span>{`test`}</span>
 			</ClayAlert>
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders with ToastContainer as a wrapper ', () => {
+	it(`renders with ToastContainer as a wrapper `, () => {
 		const testRenderer = TestRenderer.create(
 			<ClayAlert.ToastContainer>
 				<ClayAlert spritemap="/foo/bar" title="One!" />

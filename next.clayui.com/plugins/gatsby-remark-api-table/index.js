@@ -4,11 +4,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-const path = require('path');
-const docs = require('documentation');
-const evaluateInstance = require('./visit');
-const fs = require('fs');
-const visit = require('unist-util-visit');
+const path = require(`path`);
+const docs = require(`documentation`);
+const evaluateInstance = require(`./visit`);
+const fs = require(`fs`);
+const visit = require(`unist-util-visit`);
 
 const generateTr = item => {
 	return `<tr>
@@ -23,8 +23,8 @@ const generateTr = item => {
 module.exports = ({markdownAST}) => {
 	const markdownHtmlNodes = [];
 
-	visit(markdownAST, 'html', node => {
-		if (node.value.includes('[APITable')) {
+	visit(markdownAST, `html`, node => {
+		if (node.value.includes(`[APITable`)) {
 			markdownHtmlNodes.push(node);
 		}
 	});
@@ -34,8 +34,8 @@ module.exports = ({markdownAST}) => {
 			node =>
 				new Promise(async resolve => {
 					const pathFile = path.resolve(
-						'../packages/',
-						node.value.split('"')[1]
+						`../packages/`,
+						node.value.split(`"`)[1]
 					);
 
 					if (!fs.existsSync(pathFile)) {
@@ -66,7 +66,7 @@ module.exports = ({markdownAST}) => {
                                     <tbody>
                                         ${documentation
 											.map(generateTr)
-											.join('')}
+											.join(``)}
                                     </tbody>
                                 </table>
                             </div>`;

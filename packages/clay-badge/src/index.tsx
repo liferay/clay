@@ -7,12 +7,12 @@ import * as React from 'react';
 import classNames from 'classnames';
 
 type DisplayType =
-	| 'primary'
-	| 'secondary'
-	| 'info'
-	| 'error'
-	| 'success'
-	| 'warning';
+	| `primary`
+	| `secondary`
+	| `info`
+	| `error`
+	| `success`
+	| `warning`;
 
 interface Props extends React.HTMLAttributes<HTMLSpanElement> {
 	/**
@@ -28,13 +28,13 @@ interface Props extends React.HTMLAttributes<HTMLSpanElement> {
 
 const ClayBadge: React.FunctionComponent<Props> = ({
 	className,
-	displayType = 'primary',
+	displayType = `primary`,
 	label,
 	...otherProps
 }) => (
 	<span
 		{...otherProps}
-		className={classNames('badge', `badge-${displayType}`, className)}
+		className={classNames(`badge`, `badge-${displayType}`, className)}
 	>
 		<span className="badge-item badge-item-expand">{label}</span>
 	</span>
