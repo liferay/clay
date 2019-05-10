@@ -14,9 +14,9 @@ export interface FooterProps {
 
 const Footer: FunctionComponent<FooterProps> = ({first, last, middle}) => (
 	<div className="modal-footer">
-		<div className="modal-item-first">{first && first}</div>
-		<div className="modal-item">{middle && middle}</div>
-		<div className="modal-item-last">{last && last}</div>
+		<div className="modal-item-first">{first}</div>
+		<div className="modal-item">{middle}</div>
+		<div className="modal-item-last">{last}</div>
 	</div>
 );
 
