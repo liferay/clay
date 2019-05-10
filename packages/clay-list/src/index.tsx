@@ -14,6 +14,10 @@ import QuickActionMenu from './QuickActionMenu';
 import React from 'react';
 
 interface Props extends React.HTMLAttributes<HTMLUListElement> {
+	/**
+	 * Flag to indicate if action items should be shown on hover.
+	 * Defaults to `true`
+	 */
 	showQuickActionsOnHover?: boolean;
 }
 

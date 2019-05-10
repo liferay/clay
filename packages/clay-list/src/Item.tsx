@@ -7,11 +7,29 @@ import classNames from 'classnames';
 import React from 'react';
 
 interface Props extends React.HTMLAttributes<HTMLLIElement> {
-	accentColor?: string;
+	/**
+	 * Flag to indicate if the `list-group-item-action` class should be applied.
+	 */
 	action?: boolean;
+
+	/**
+	 * Flag to indicate if item is active or selected.
+	 */
 	active?: boolean;
+
+	/**
+	 * Flag to indicate if item should be displayed with a disabled style.
+	 */
 	disabled?: boolean;
+
+	/**
+	 * Flag to indicate if item should be `display: flex`.
+	 */
 	flex?: boolean;
+
+	/**
+	 * Flag to indicate if item is used as a header.
+	 */
 	header?: boolean;
 }
 

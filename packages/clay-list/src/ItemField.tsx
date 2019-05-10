@@ -8,6 +8,10 @@ import classNames from 'classnames';
 import React from 'react';
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
+	/**
+	 * Flag to indicate if field should automatically expand its width
+	 * to fit in the containing space.
+	 */
 	expand?: boolean;
 }
 

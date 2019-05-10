@@ -10,8 +10,19 @@ import React from 'react';
 
 interface ItemProps
 	extends React.HTMLAttributes<HTMLAnchorElement | HTMLSpanElement> {
+	/**
+	 * Value of path the item should link to.
+	 */
 	href?: string;
+
+	/**
+	 * Path to icon spritemap.
+	 */
 	spritemap?: string;
+
+	/**
+	 * Name of icon symbol
+	 */
 	symbol: string;
 }
 
