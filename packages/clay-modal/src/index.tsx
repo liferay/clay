@@ -21,11 +21,6 @@ interface Props extends React.HTMLAttributes<HTMLDivElement>, IContext {
 	 * The size of element modal.
 	 */
 	size?: Size;
-
-	/**
-	 * The path to the SVG spritemap file containing the icons.
-	 */
-	spritemap?: string;
 }
 
 const Portal = ({children}: {children: React.ReactNode}) => {
