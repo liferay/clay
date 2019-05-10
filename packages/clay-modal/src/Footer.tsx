@@ -7,8 +7,22 @@
 import React, {FunctionComponent} from 'react';
 
 export interface FooterProps {
+	/**
+	 * Sets the elements that are positioned `first following
+	 * the LTR direction on the footer.
+	 */
 	first?: React.ReactElement;
+
+	/**
+	 * Sets the elements that are positioned `last` following
+	 * the LTR direction on the footer.
+	 */
 	last?: React.ReactElement;
+
+	/**
+	 * Sets the elements that are positioned in the middle
+	 * of the footer.
+	 */
 	middle?: React.ReactElement;
 }
 
