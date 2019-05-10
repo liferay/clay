@@ -79,10 +79,10 @@ exports[`ClayNavigationBar renders 1`] = `
           className="navbar-nav"
         >
           <li
-            className="nav-item active"
+            className="nav-item"
           >
             <a
-              className="nav-link nav-link active link-secondary"
+              className="nav-link active link-secondary"
               href="#1"
             >
               <span
@@ -96,7 +96,7 @@ exports[`ClayNavigationBar renders 1`] = `
             className="nav-item"
           >
             <button
-              className="nav-link nav-link btn btn-unstyled btn-block btn-sm"
+              className="nav-link btn btn-unstyled btn-block btn-sm"
               type="button"
             >
               <span
@@ -110,7 +110,7 @@ exports[`ClayNavigationBar renders 1`] = `
             className="nav-item"
           >
             <a
-              className="nav-link nav-link link-secondary"
+              className="nav-link link-secondary"
               href="#3"
             >
               <span
@@ -206,10 +206,10 @@ exports[`ClayNavigationBar renders when passing more than one active item 1`] = 
           className="navbar-nav"
         >
           <li
-            className="nav-item active"
+            className="nav-item"
           >
             <a
-              className="nav-link nav-link active link-secondary"
+              className="nav-link active link-secondary"
               href="#1"
             >
               <span
@@ -220,10 +220,10 @@ exports[`ClayNavigationBar renders when passing more than one active item 1`] = 
             </a>
           </li>
           <li
-            className="nav-item active"
+            className="nav-item"
           >
             <button
-              className="nav-link nav-link active btn btn-unstyled btn-block btn-sm"
+              className="nav-link active btn btn-unstyled btn-block btn-sm"
               type="button"
             >
               <span
@@ -237,7 +237,7 @@ exports[`ClayNavigationBar renders when passing more than one active item 1`] = 
             className="nav-item"
           >
             <a
-              className="nav-link nav-link link-secondary"
+              className="nav-link link-secondary"
               href="#3"
             >
               <span
