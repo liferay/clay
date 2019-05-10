@@ -155,7 +155,7 @@ ClayNavigationBar has become simpler than the version `v2`, removing APIs from `
 +        </ClayLink>
 +    </ClayNavigationBar.Item>
 +
-+    <ClayNavigationBar.Item handle>
++    <ClayNavigationBar.Item>
 +        <ClayLink className="nav-link" displayType="secondary" href="#2">
 +            <span className="navbar-text-truncate">Page 2</span>
 +        </ClayLink>
