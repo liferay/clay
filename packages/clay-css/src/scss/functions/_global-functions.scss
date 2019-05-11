@@ -1,6 +1,10 @@
-// Sass ternary shorthand: if($variable-name, true, false)
-// @param $var - The variable name
-// @param $val - The default value
+////
+/// @group globals
+////
+
+/// A helper function for setting default values in variables inside mixins if no value is declared. If the value of a variable is `clay-unset`, `setter` returns a value of `null` which prevents Sass from outputting the declaration. If the value of a variable is `null`, `setter` returns the default, `$val`.
+/// @param {Any} $var - The Sass variable
+/// @param {Any} $val - The default value to return if `$var` is `null`
 
 @function setter($var, $val: false) {
 	@if ($var == clay-unset) {
@@ -14,9 +18,8 @@
 	@return $val;
 }
 
-// Returns a number with the opposite sign, generally used for null values so
-// Sass doesn't output value '-null'
-// @param $num - a number
+/// A helper function that returns the opposite of a number, generally used for `null` values so Sass doesn't output a value `-null`. Returns `null` if `$num` is not a number.
+/// @param {Any} $num - The variable 
 
 @function math-sign($num) {
 	@if (type-of($num) == 'number') {
@@ -26,9 +29,9 @@
 	@return null;
 }
 
-// Helper for displaying warning messages for required variables
-// @param $var - The variable to check
-// @param $msg - The error message
+/// A helper function for displaying warning messages for required variables.
+/// @param {Any} $var - The variable to check
+/// @param {String} $msg['This value is required!'] - The error message to display
 
 @function required($var, $msg: 'This value is required!') {
 	@if not ($var) {
@@ -93,10 +96,10 @@
 	@return $number;
 }
 
-// Returns name of previous breakpoint or null if first breakpoint
-// @param $name - breakpoint name {xs|sm|md|lg|xl}
-// @param $breakpoints - Sass map that defines the breakpoints to use
-// @param $breakpoint-names - A Sass list of all the keys in $breakpoints
+/// A function that returns the name of the previous breakpoint relative to the breakpoint passed in through `$name` in the Sass map `$grid-breakpoints`. If the breakpoint does not exist in the Sass map, it returns the first breakpoint key.
+/// @param {Key} $name - The breakpoint name or keys in `$grid-breakpoints` (e.g., `xs`, `sm`, `md`, `lg`, `xl`)
+/// @param {Map} $breakpoints[$grid-breakpoints] - A map that defines the breakpoints
+/// @param {List} $breakpoint-names[map-keys($breakpoints)] - A list of all the keys in $breakpoints
 
 @function clay-breakpoint-prev($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
 	@each $value in $breakpoint-names {
@@ -108,12 +111,11 @@
 	@return nth($breakpoint-names, 1);
 }
 
-// str-replace and svg-url functions from http://codepen.io/jakob-e/pen/doMoML
-
-// Function to replace characters in a string
-// @param $string - the string to operate on
-// @param $search - the character to replace
-// @param $replace - the character to replace $search with
+/// A function to replace all instances of a specific character in a string.
+/// @param {String} $string - The string to operate on
+/// @param {String} $search - The character to replace
+/// @param {String} $replace[''] - The character to replace `$search` with
+/// @link http://codepen.io/jakob-e/pen/doMoML
 
 @function clay-str-replace($string, $search, $replace: '') {
 	$index: str-index($string, $search);
@@ -127,8 +129,9 @@
 	@return $string;
 }
 
-// Function to encode SVG and provide back a data url
-// @param $svg - The SVG markup to encode
+/// A function to encode an SVG and provide back a data URI to be used in `background-image`. If the SVG uses double quotes to delimit attribute names and values, wrap the SVG in single quotes or vice versa.
+/// @param {String} $svg - The SVG markup to encode
+/// @link http://codepen.io/jakob-e/pen/doMoML
 
 @function clay-svg-url($svg) {
 	$encoded: '';
@@ -157,15 +160,18 @@
 	@return url("data:image/svg+xml;charset=utf8,#{$encoded}");
 }
 
-// Function that colors and returns a specified lexicon icon as data uri
-// @param $name - Icon name e.g. angle-right
-// @param $color - Color of icon
+/// A function that returns a specific Lexicon Icon with a specific color as a data URI to be used in `background-image`.
+/// @param {String} $name - The Lexicon Icon name (e.g., angle-right)
+/// @param {Color} $color - The color of the Lexicon Icon
 
 @function clay-icon($name, $color) {
 	$lx-icons: clay-get-icons($color);
 
 	@return clay-svg-url(map-get($lx-icons, $name));
 }
+
+/// A function that returns all the Lexicon Icons with a specific color.
+/// @param {Color} $color[''] - The color to use for all the Lexicon Icons
 
 @function clay-get-icons($color: '') {
 	// Don't touch the $lx-icons variable. It's auto-generated to contain all of the icons from the icons directory

@@ -1,7 +1,8 @@
-// $clay-unset is deprecated as of v2.4.1 we will not support unsetting
-// variables in version 2 because it violates the Sass spec. If you
-// are using libsass you can still unset variables with the syntax
-// `$my-var: !default;`.
+////
+/// @group globals
+////
+
+/// @deprecated as of v2.4.1 we will not support unsetting variables in version 2 because it violates the Sass spec. If you are using libsass you can still unset Clay CSS / Bootstrap variables with the syntax `$my-var: !default;`.
 $clay-unset: clay-unset !default;
 $clay-unset-placeholder: clay-unset-placeholder !default;
 
