@@ -60,13 +60,10 @@ const ClayCheckbox: React.FunctionComponent<IProps> = ({
 	return (
 		<div
 			{...containerProps}
-			className={classNames(
-				'custom-control custom-checkbox',
-				{
-					[`${containerProps.className}`]: containerProps.className,
-					'custom-control-inline': inline,
-				}
-			)}
+			className={classNames('custom-control custom-checkbox', {
+				[`${containerProps.className}`]: containerProps.className,
+				'custom-control-inline': inline,
+			})}
 		>
 			<label>
 				<input

@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {SelectHTMLAttributes} from 'react';
 import classNames from 'classnames';
+import React, {SelectHTMLAttributes} from 'react';
 
 export interface ISelectOption {
 	label: string;
@@ -69,15 +69,13 @@ const ClaySelect: React.FunctionComponent<Props> = ({
 	...otherProps
 }) => {
 	return (
-		<div 
+		<div
 			{...containerProps}
-			className={classNames(
-				{
-					[`${containerProps.className}`]: containerProps.className,
-					'form-group-item': inline,
-					'form-group': !inline
-				}
-			)}
+			className={classNames({
+				[`${containerProps.className}`]: containerProps.className,
+				'form-group-item': inline,
+				'form-group': !inline,
+			})}
 		>
 			{label && <label htmlFor={id}>{label}</label>}
 
@@ -100,7 +98,6 @@ const ClaySelect: React.FunctionComponent<Props> = ({
 						{option.label}
 					</option>
 				))}
-
 			</select>
 		</div>
 	);
