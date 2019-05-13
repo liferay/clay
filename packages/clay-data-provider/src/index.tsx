@@ -17,7 +17,7 @@ interface IChildrenProps {
 }
 
 interface Props extends IDataProvider {
-	children?: (data: IChildrenProps) => React.ReactNode;
+	children: (data: IChildrenProps) => React.ReactElement;
 
 	/**
 	 * Set to true means that network status information will be passed
@@ -62,18 +62,16 @@ const ClayDataProvider: React.FunctionComponent<Props> = ({
 		setState(payload);
 	};
 
-	const {resource, refetch} = useResource({
+	const {refetch, resource} = useResource({
 		...otherProps,
 		onNetworkStatusChange: handleNetworkStatus,
 	});
 
-	const payload: IChildrenProps = {
+	return children({
 		...state,
 		data: resource,
 		refetch,
-	};
-
-	return <>{children && children(payload)}</>;
+	});
 };
 
 export default ClayDataProvider;
