@@ -70,6 +70,32 @@ describe('Rendering', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
+	it('with an option selected', () => {
+		const testRenderer = TestRenderer.create(
+			<ClaySelect
+				label="Select Label"
+				name="mySelectName"
+				options={[
+					{
+						label: 'Option 1',
+						value: '1',
+					},
+					{
+						label: 'Option 2',
+						selected: true,
+						value: '2',
+					},
+					{
+						label: 'Option 3',
+						value: '3',
+					},
+				]}
+			/>
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
 	it('disabled', () => {
 		const testRenderer = TestRenderer.create(
 			<ClaySelect disabled label="Select Label" options={options} />
