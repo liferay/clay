@@ -7,4 +7,5 @@
 import Portal from './Portal';
 import useTransitionHeight from './useTransitionHeight';
 
+export {useDebounce} from './useDebounce';
 export {Portal, useTransitionHeight};

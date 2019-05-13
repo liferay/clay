@@ -14,7 +14,7 @@ import {
 	TSymbolData,
 } from './types';
 import {timeout} from './util';
-import {useDebounce} from './useDebounce';
+import {useDebounce} from '@clayui/shared';
 import {useEffect, useRef, useState} from 'react';
 
 interface IResource extends IDataProvider {
@@ -100,7 +100,7 @@ const useResource = ({
 
 	const getRetryDelay = (retryAttempts: number) => {
 		const {
-			delay: {jitter, initial},
+			delay: {initial, jitter},
 		} = fetchRetry;
 		const baseDelay = jitter ? initial : initial / 2;
 
