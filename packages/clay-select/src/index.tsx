@@ -92,7 +92,7 @@ const ClaySelect: React.FunctionComponent<Props> = ({
 				{options.map((option, index) => (
 					<option
 						key={index}
-						selected={option.selected ? true : undefined}
+						selected={option.selected}
 						value={option.value}
 					>
 						{option.label}
