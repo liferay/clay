@@ -73,8 +73,8 @@ const ClaySelect: React.FunctionComponent<Props> = ({
 			{...containerProps}
 			className={classNames({
 				[`${containerProps.className}`]: containerProps.className,
-				'form-group-item': inline,
 				'form-group': !inline,
+				'form-group-item': inline,
 			})}
 		>
 			{label && <label htmlFor={id}>{label}</label>}
