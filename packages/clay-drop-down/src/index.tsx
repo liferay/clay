@@ -5,10 +5,7 @@
  */
 
 import * as React from 'react';
-import classNames from 'classnames';
-import {Align} from 'metal-position';
 import {createPortal} from 'react-dom';
-import {useDropdownCloseInteractions} from './hooks';
 
 import Action from './Action';
 import Caption from './Caption';
@@ -17,6 +14,7 @@ import Group from './Group';
 import Help from './Help';
 import Item from './Item';
 import ItemList from './ItemList';
+import Menu, {Align} from './Menu';
 import Search from './Search';
 
 const Portal = ({children}: {children: React.ReactNode}) => {
@@ -50,10 +48,11 @@ const ClayDropDown: React.FunctionComponent<Props> & {
 	Help: typeof Help;
 	Item: typeof Item;
 	ItemList: typeof ItemList;
+	Menu: typeof Menu;
 	Search: typeof Search;
 } = ({
 	active = false,
-	alignmentPosition = Align.BottomLeft,
+	alignmentPosition,
 	children,
 	className,
 	hasLeftSymbols,
@@ -65,21 +64,6 @@ const ClayDropDown: React.FunctionComponent<Props> & {
 	const triggerElementRef = React.useRef<HTMLButtonElement>(null);
 	const menuElementRef = React.useRef<HTMLDivElement>(null);
 
-	useDropdownCloseInteractions(
-		[triggerElementRef, menuElementRef],
-		onActiveChange
-	);
-
-	React.useLayoutEffect(() => {
-		if (triggerElementRef.current && menuElementRef.current) {
-			Align.align(
-				menuElementRef.current,
-				triggerElementRef.current,
-				alignmentPosition
-			);
-		}
-	});
-
 	return (
 		<div {...otherProps} className="dropdown">
 			<span ref={triggerElementRef} style={{display: 'inline-block'}}>
@@ -89,19 +73,19 @@ const ClayDropDown: React.FunctionComponent<Props> & {
 				})}
 			</span>
 
-			{active && (
-				<Portal>
-					<div
-						className={classNames('dropdown-menu show', {
-							'dropdown-menu-indicator-end': hasRightSymbols,
-							'dropdown-menu-indicator-start': hasLeftSymbols,
-						})}
-						ref={menuElementRef}
-					>
-						{children}
-					</div>
-				</Portal>
-			)}
+			<Portal>
+				<Menu
+					active={active}
+					alignElementRef={triggerElementRef}
+					alignmentPosition={alignmentPosition}
+					hasLeftSymbols={hasLeftSymbols}
+					hasRightSymbols={hasRightSymbols}
+					onSetActive={onActiveChange}
+					ref={menuElementRef}
+				>
+					{children}
+				</Menu>
+			</Portal>
 		</div>
 	);
 };
@@ -111,6 +95,7 @@ ClayDropDown.Caption = Caption;
 ClayDropDown.Divider = Divider;
 ClayDropDown.Group = Group;
 ClayDropDown.Help = Help;
+ClayDropDown.Menu = Menu;
 ClayDropDown.Item = Item;
 ClayDropDown.ItemList = ItemList;
 ClayDropDown.Search = Search;
