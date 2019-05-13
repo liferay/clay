@@ -34,7 +34,7 @@ storiesOf('ClayButton', module)
 		</ClayButton>
 	))
 	.add('button group', () => (
-		<ClayButton.Group>
+		<ClayButton.Group spaced={boolean('Spaced', false) as false}>
 			<ClayButton>{'This'}</ClayButton>
 			<ClayButton displayType="secondary">{'is'}</ClayButton>
 			<ClayButton>{'a'}</ClayButton>

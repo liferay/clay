@@ -232,6 +232,69 @@ To get to the behavior of having a ClaySticker with icon, use the composition wi
 
 -   Added ability to utilize context for passing spritemap down instead of having to pass the prop everywhere.
 
+## ClayModal
+
+Become a low-level API, you can compose Modal's small blocks to get the results recommended by Lexicon but allow you to stylize the Modal content and continue to get the benefits of the components.
+
+```diff
+<ClayModal
+-	body={<h1>{'Hello World!'}</h1>}
+-	footerButtons={[{label: 'Primary'}, {label: 'Close', type: 'close'}]}
+-	title="Modal Title"
+-	visible={visible}
++	onClose={() => setVisible(false)}
+-/>
++>
++	{onClose => (
++		<>
++			<ClayModal.Header>Modal Title</ClayModal.Header>
++			<ClayModal.Body>
++				<h1>{'Hello World!'}</h1>
++			</ClayModal.Body>
++			<ClayModal.Footer
++				first={
++					<ClayButton.Group spaced>
++						<ClayButton displayType="secondary">
++							{'Secondary'}
++						</ClayButton>
++						<ClayButton displayType="secondary">
++							{'Secondary'}
++						</ClayButton>
++					</ClayButton.Group>
++				}
++				last={
++					<ClayButton onClick={onClose}>{'Primary'}</ClayButton>
++				}
++			/>
++		</>
++	)}
++</ClayModal>
+```
+
+### API Changes
+
+-  `body` deprecated in favor of utilizing `<ClayModal.Body />` component
+-  `data` deprecated
+-  `defaultEventHandler` deprecated
+-  `elementClasses` renamed to `className`
+-  `footerButtons` deprecated in favor of utilizing `<ClayModal.Footer />` component
+-  `onClose` added
+-  `title` deprecated in favor of utilizing `<ClayModal.Header />` component
+-  `visible` deprecated in favor of animating the component when it is mount and unmount.
+
+### Compositions
+
+To render an iframe inside Modal, you can compose with the `<ClayModal.Body />` component by passing the url to the prop `url`.
+
+```jsx
+<ClayModal>
+	{() => (
+		<ClayModal.Header>{'Title'}</ClayModal.Header>
+		<ClayModal.Body url="https://clayui.com" />
+	)}
+</ClayModal>
+```
+
 ## ClayRadioGroup, ClayRadio
 
 Using a radio by itself doesn't make much sense, only when 2+ exist does the functionality of radio actually work, which is why we moved from `radio` to `radio-group`. The functionality is the same, but by being grouped together it should make it easier to use because the `ClayRadioGroup` component will internally handle which radio is checked and requires less re-duplication of `inline` and `name` props.
@@ -266,7 +329,7 @@ Using a radio by itself doesn't make much sense, only when 2+ exist does the fun
 -   Removed `size` in favor of `large` since there is only default and large options.
 -   Removed `label` in favor of utilizing `children` prop
 -   Added `closeButtonProps` which allows you to add attributes to the nested button.
-    -   This is where you would pass a callback for `onClick`.
+-   This is where you would pass a callback for `onClick`.
 
 ## ClayProgressBar
 

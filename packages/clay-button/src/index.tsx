@@ -31,8 +31,15 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	small?: boolean;
 }
 
+interface ButtonGroupProps extends React.HTMLAttributes<HTMLDivElement> {
+	/**
+	 * Flag to indicate the spacing between the buttons.
+	 */
+	spaced?: boolean;
+}
+
 interface IClayButton extends React.FunctionComponent<Props> {
-	Group: typeof ClayButtonGroup;
+	Group: React.FunctionComponent<ButtonGroupProps>;
 }
 
 const ClayButton: IClayButton = ({
@@ -58,15 +65,26 @@ const ClayButton: IClayButton = ({
 	</button>
 );
 
-const ClayButtonGroup: React.FunctionComponent<
-	React.HTMLAttributes<HTMLDivElement>
-> = ({children, className, role = 'group', ...otherProps}) => (
+const ClayButtonGroup: React.FunctionComponent<ButtonGroupProps> = ({
+	children,
+	className,
+	role = 'group',
+	spaced,
+	...otherProps
+}) => (
 	<div
 		{...otherProps}
 		className={classNames(className, 'btn-group')}
 		role={role}
 	>
-		{children}
+		{spaced
+			? React.Children.map(children, (child, i) =>
+					React.cloneElement(
+						<div className="btn-group-item">{child}</div>,
+						{key: i}
+					)
+			  )
+			: children}
 	</div>
 );
 

@@ -64,4 +64,15 @@ describe('ClayButton', () => {
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
+
+	it('renders a ButtonGroup with spaced', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayButton.Group spaced>
+				<ClayButton />
+				<ClayButton />
+			</ClayButton.Group>
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
 });
