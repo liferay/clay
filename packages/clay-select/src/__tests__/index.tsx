@@ -11,25 +11,22 @@ import ClaySelect from '..';
 const options = [
 	{
 		label: 'Option 1',
-		value: '1'
+		value: '1',
 	},
 	{
 		label: 'Option 2',
-		value: '2'
+		value: '2',
 	},
 	{
 		label: 'Option 3',
-		value: '3'
-	}
+		value: '3',
+	},
 ];
 
 describe('Rendering', () => {
 	it('with required attributes', () => {
 		const testRenderer = TestRenderer.create(
-			<ClaySelect 
-				label='Select Label'
-				options={options}
-			/>
+			<ClaySelect label="Select Label" options={options} />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
@@ -37,11 +34,11 @@ describe('Rendering', () => {
 
 	it('with container properties', () => {
 		const testRenderer = TestRenderer.create(
-			<ClaySelect 
+			<ClaySelect
 				containerProps={{
-					className:"customContainerClassName"
+					className: 'customContainerClassName',
 				}}
-				label='Select Label'
+				label="Select Label"
 				options={options}
 			/>
 		);
@@ -51,9 +48,9 @@ describe('Rendering', () => {
 
 	it('with id', () => {
 		const testRenderer = TestRenderer.create(
-			<ClaySelect 
+			<ClaySelect
 				id="mySelectId"
-				label='Select Label'
+				label="Select Label"
 				options={options}
 			/>
 		);
@@ -63,8 +60,8 @@ describe('Rendering', () => {
 
 	it('with name', () => {
 		const testRenderer = TestRenderer.create(
-			<ClaySelect 
-				label='Select Label'
+			<ClaySelect
+				label="Select Label"
 				name="mySelectName"
 				options={options}
 			/>
@@ -75,11 +72,7 @@ describe('Rendering', () => {
 
 	it('disabled', () => {
 		const testRenderer = TestRenderer.create(
-			<ClaySelect 
-				disabled
-				label='Select Label'
-				options={options}
-			/>
+			<ClaySelect disabled label="Select Label" options={options} />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
@@ -87,11 +80,7 @@ describe('Rendering', () => {
 
 	it('with multiple options allowed', () => {
 		const testRenderer = TestRenderer.create(
-			<ClaySelect 
-				label='Select Label'
-				multiple
-				options={options}
-			/>
+			<ClaySelect label="Select Label" multiple options={options} />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
@@ -99,11 +88,7 @@ describe('Rendering', () => {
 
 	it('inline', () => {
 		const testRenderer = TestRenderer.create(
-			<ClaySelect 
-				inline={true}
-				label='Select Label'
-				options={options}
-			/>
+			<ClaySelect inline label="Select Label" options={options} />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
