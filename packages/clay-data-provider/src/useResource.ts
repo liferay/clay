@@ -53,11 +53,11 @@ const useResource = ({
 		[SYMBOL_ORIGIN]: true,
 	},
 	fetchRetry = {
+		attempts: 5,
 		delay: {
 			initial: 300,
 			jitter: true,
 		},
-		attempts: 5,
 	},
 	storageMaxSize = 20,
 	variables = null,
@@ -65,18 +65,18 @@ const useResource = ({
 	const [resource, setResource] = useState<any>(null);
 
 	const getStorageCache = () => {
-		if (storage[SYMBOL_DATA_PROVIDER]) {
-			return storage[SYMBOL_DATA_PROVIDER] as TSymbolData;
+		if (!storage[SYMBOL_DATA_PROVIDER]) {
+			storage[SYMBOL_DATA_PROVIDER] = new LRU(storageMaxSize);
 		}
 
-		return (storage[SYMBOL_DATA_PROVIDER] = new LRU(storageMaxSize));
+		return storage[SYMBOL_DATA_PROVIDER] as TSymbolData;
 	};
 
 	let networkStatus = useRef<NetworkStatus>(NetworkStatus.Unused).current;
 
-	let pollingIntervalIdRef = useRef<null | NodeJS.Timeout>(null).current;
+	let pollingIntervalId = useRef<null | NodeJS.Timeout>(null).current;
 
-	let retryDelayIntervalIdRef = useRef<null | NodeJS.Timeout>(null).current;
+	let retryDelayIntervalId = useRef<null | NodeJS.Timeout>(null).current;
 
 	const cache = useRef<TSymbolData>(getStorageCache()).current;
 
@@ -93,8 +93,8 @@ const useResource = ({
 	};
 
 	const cleanRetry = () => {
-		if (retryDelayIntervalIdRef) {
-			clearInterval(retryDelayIntervalIdRef);
+		if (retryDelayIntervalId) {
+			clearInterval(retryDelayIntervalId);
 		}
 	};
 
@@ -102,6 +102,7 @@ const useResource = ({
 		const {
 			delay: {initial, jitter},
 		} = fetchRetry;
+
 		const baseDelay = jitter ? initial : initial / 2;
 
 		let delay = Math.min(baseDelay * 2 ** retryAttempts);
@@ -120,22 +121,26 @@ const useResource = ({
 
 		if (attempts > 0 && retryAttempts < attempts) {
 			const delay = getRetryDelay(retryAttempts);
+
+			// eslint-disable-next-line no-console
 			console.warn(
 				`DataProvider: Trying ${retryAttempts +
 					1} of ${attempts} will happen in ${delay}ms`
 			);
-			retryDelayIntervalIdRef = setInterval(() => {
+
+			retryDelayIntervalId = setInterval(() => {
 				handleFetch(retryAttempts + 1);
 			}, delay);
 		} else {
 			setNetworkStatus(NetworkStatus.Error);
+			// eslint-disable-next-line no-console
 			console.error('DataProvider: Error making the requisition', err);
 		}
 	};
 
 	const cleanPoll = () => {
-		if (pollingIntervalIdRef) {
-			clearInterval(pollingIntervalIdRef);
+		if (pollingIntervalId) {
+			clearInterval(pollingIntervalId);
 		}
 	};
 
@@ -181,7 +186,7 @@ const useResource = ({
 	const setupPoll = () => {
 		cleanPoll();
 
-		pollingIntervalIdRef = setInterval(() => {
+		pollingIntervalId = setInterval(() => {
 			performFetch(NetworkStatus.Polling);
 		}, pollInterval);
 	};
@@ -278,7 +283,7 @@ const useResource = ({
 		};
 	}, []);
 
-	return {resource, refetch: handleRefetch};
+	return {refetch: handleRefetch, resource};
 };
 
 export {useResource};

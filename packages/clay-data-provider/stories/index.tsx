@@ -26,7 +26,7 @@ const ClayDataProviderWithVariablesAndStorage = () => {
 				storage={store}
 				variables={{name: value}}
 			>
-				{({networkStatus, refetch, data, error}) => {
+				{({data, error, networkStatus, refetch}) => {
 					return (
 						<>
 							<div className="autofit-row autofit-padded-no-gutters-x">
@@ -48,7 +48,7 @@ const ClayDataProviderWithVariablesAndStorage = () => {
 										onClick={() => refetch()}
 										type="button"
 									>
-										Refetch
+										{'Refetch'}
 									</button>
 								</div>
 							</div>
@@ -67,12 +67,12 @@ const ClayDataProviderWithVariablesAndStorage = () => {
 								<ul className="list-group">
 									{networkStatus === 1 && (
 										<li className="list-group-item list-group-item-flex disabled">
-											Loading...
+											{'Loading...'}
 										</li>
 									)}
 									{error && (
 										<li className="list-group-item list-group-item-flex disabled">
-											Result is not found
+											{'Result is not found'}
 										</li>
 									)}
 									{!error &&
@@ -85,7 +85,7 @@ const ClayDataProviderWithVariablesAndStorage = () => {
 											>
 												<div className="autofit-col autofit-col-expand">
 													<p className="list-group-title text-truncate">
-														Name
+														{'Name'}
 													</p>
 													<p className="list-group-subtitle text-truncate">
 														{item.name}
@@ -132,7 +132,7 @@ storiesOf('ClayDataProvider', module)
 								onClick={() => props.refetch()}
 								type="button"
 							>
-								Refetch
+								{'Refetch'}
 							</button>
 						</div>
 					</div>
@@ -140,10 +140,10 @@ storiesOf('ClayDataProvider', module)
 						<div className="col-md-5">
 							<p className="text-truncate-inline">
 								<small>
-									The polling is enabled with an interval of
+									{`The polling is enabled with an interval of
 									5s, modify the values through the Storybook
 									knobs. This markup is for testing purposes
-									only with the ClayDataProvider component.
+									only with the ClayDataProvider component.`}
 								</small>
 							</p>
 						</div>
@@ -169,12 +169,12 @@ storiesOf('ClayDataProvider', module)
 						</li>
 						{props.networkStatus === 1 && (
 							<li className="list-group-item list-group-item-flex disabled">
-								Loading...
+								{'Loading...'}
 							</li>
 						)}
 						{props.error && (
 							<li className="list-group-item list-group-item-flex disabled">
-								Error
+								{'Error'}
 							</li>
 						)}
 						{props.data &&

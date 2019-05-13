@@ -45,14 +45,14 @@ const ClayDataProvider: React.FunctionComponent<Props> = ({
 	 * a new rendering.
 	 */
 	const [state, setState] = useState<State>(() => ({
-		loading: false,
 		error: false,
+		loading: false,
 	}));
 
 	const handleNetworkStatus = (status: NetworkStatus) => {
 		const payload: State = {
-			loading: status < 4,
 			error: status === 5,
+			loading: status < 4,
 		};
 
 		if (notifyOnNetworkStatusChange) {
