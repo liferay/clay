@@ -11,7 +11,7 @@ import ClayIcon from '@clayui/icon';
 import ClayLink from '@clayui/link';
 import warning from 'warning';
 
-import {useTransition} from './hooks';
+import {useTransitionHeight} from '@clayui/shared';
 
 interface ItemProps extends React.HTMLAttributes<HTMLLIElement> {
 	/**
@@ -83,7 +83,7 @@ const ClayNavigationBar: React.FunctionComponent<Props> & {
 		transitioning,
 		handleTransitionEnd,
 		handleClickToggler,
-	] = useTransition(visible, setVisible, contentRef);
+	] = useTransitionHeight(visible, setVisible, contentRef);
 
 	const activeElementsCount = children.filter(child => child.props.active)
 		.length;
