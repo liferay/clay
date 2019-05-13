@@ -61,6 +61,38 @@ exports[`Rendering inline 1`] = `
 </div>
 `;
 
+exports[`Rendering with an option selected 1`] = `
+<div
+  className="form-group"
+>
+  <label>
+    Select Label
+  </label>
+  <select
+    aria-label="Select Label"
+    className="form-control"
+    name="mySelectName"
+  >
+    <option
+      value="1"
+    >
+      Option 1
+    </option>
+    <option
+      selected={true}
+      value="2"
+    >
+      Option 2
+    </option>
+    <option
+      value="3"
+    >
+      Option 3
+    </option>
+  </select>
+</div>
+`;
+
 exports[`Rendering with container properties 1`] = `
 <div
   className="customContainerClassName form-group"
