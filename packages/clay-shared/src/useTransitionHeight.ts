@@ -4,10 +4,32 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {removeCollapseHeight, setCollapseHeight} from './helpers';
 import {useEffect, useState} from 'react';
 
-export function useTransition(
+/**
+ * Removes the height style that triggers a transition when collapse
+ * @param collapseElementRef
+ */
+function removeCollapseHeight(collapseElementRef: React.RefObject<any>) {
+	if (collapseElementRef && collapseElementRef.current) {
+		collapseElementRef.current.style.removeProperty('height');
+	}
+}
+
+/**
+ * Adds a height style that triggers a transition when collapsed
+ * @param collapseElementRef
+ */
+function setCollapseHeight(collapseElementRef: React.RefObject<any>) {
+	if (collapseElementRef && collapseElementRef.current) {
+		collapseElementRef.current.setAttribute(
+			'style',
+			`height: ${collapseElementRef.current.children[0].clientHeight}px`
+		);
+	}
+}
+
+export function useTransitionHeight(
 	visible: Boolean,
 	setVisible: any,
 	contentRef: React.RefObject<any>
@@ -52,4 +74,4 @@ export function useTransition(
 	];
 }
 
-export default {useTransition};
+export default {useTransitionHeight};
