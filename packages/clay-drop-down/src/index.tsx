@@ -5,7 +5,7 @@
  */
 
 import * as React from 'react';
-import {createPortal} from 'react-dom';
+import {Portal} from '@clayui/shared';
 
 import Action from './Action';
 import Caption from './Caption';
@@ -16,20 +16,6 @@ import Item from './Item';
 import ItemList from './ItemList';
 import Menu, {Align} from './Menu';
 import Search from './Search';
-
-const Portal = ({children}: {children: React.ReactNode}) => {
-	const portalRef = React.useRef(document.createElement('div'));
-	const elToMountTo = document && document.body;
-
-	React.useEffect(() => {
-		elToMountTo.appendChild(portalRef.current);
-		return () => {
-			elToMountTo.removeChild(portalRef.current);
-		};
-	}, [elToMountTo]);
-
-	return createPortal(children, portalRef.current);
-};
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	active: boolean;

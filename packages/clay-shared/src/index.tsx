@@ -4,4 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-export {useTransitionHeight} from './useTransitionHeight';
+import Portal from './Portal';
+import useTransitionHeight from './useTransitionHeight';
+
+export {Portal, useTransitionHeight};
