@@ -95,7 +95,11 @@ storiesOf('ClayDropDown', module)
 		<DropDownWithState>
 			<ClayDropDown.ItemList>
 				<ClayDropDown.Item>
-					<ClayCheckbox label="I'm a checkbox!" />
+					<ClayCheckbox
+						checked
+						label="I'm a checkbox!"
+						onChange={() => {}}
+					/>
 				</ClayDropDown.Item>
 			</ClayDropDown.ItemList>
 		</DropDownWithState>
