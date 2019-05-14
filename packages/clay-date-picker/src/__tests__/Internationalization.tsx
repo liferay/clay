@@ -39,7 +39,7 @@ describe('Internationalization', () => {
 	afterEach(cleanup);
 
 	it('should render the date picker in russian', () => {
-		const {container} = render(
+		render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
 				dateFormat="DD.MM.YYYY"
@@ -70,12 +70,12 @@ describe('Internationalization', () => {
 			/>
 		);
 
-		expect(container.firstChild).toMatchSnapshot();
+		expect(document.body).toMatchSnapshot();
 	});
 
 	describe('FirstDayOfWeek', () => {
 		it('first day of the week should start on Sunday', () => {
-			const {container} = render(
+			render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
 					firstDayOfWeek={firstDayOfWeek.Sunday}
@@ -85,11 +85,11 @@ describe('Internationalization', () => {
 				/>
 			);
 
-			expect(container.firstChild).toMatchSnapshot();
+			expect(document.body).toMatchSnapshot();
 		});
 
 		it('first day of the week should start on Monday', () => {
-			const {container} = render(
+			render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
 					initialExpanded
@@ -98,11 +98,11 @@ describe('Internationalization', () => {
 				/>
 			);
 
-			expect(container.firstChild).toMatchSnapshot();
+			expect(document.body).toMatchSnapshot();
 		});
 
 		it('first day of the week should start on Tuesday', () => {
-			const {container} = render(
+			render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
 					firstDayOfWeek={firstDayOfWeek.Tuesday}
@@ -112,11 +112,11 @@ describe('Internationalization', () => {
 				/>
 			);
 
-			expect(container.firstChild).toMatchSnapshot();
+			expect(document.body).toMatchSnapshot();
 		});
 
 		it('first day of the week should start on Wednesday', () => {
-			const {container} = render(
+			render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
 					firstDayOfWeek={firstDayOfWeek.Wednesday}
@@ -126,11 +126,11 @@ describe('Internationalization', () => {
 				/>
 			);
 
-			expect(container.firstChild).toMatchSnapshot();
+			expect(document.body).toMatchSnapshot();
 		});
 
 		it('first day of the week should start on Thursday', () => {
-			const {container} = render(
+			render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
 					firstDayOfWeek={firstDayOfWeek.Thursday}
@@ -140,11 +140,11 @@ describe('Internationalization', () => {
 				/>
 			);
 
-			expect(container.firstChild).toMatchSnapshot();
+			expect(document.body).toMatchSnapshot();
 		});
 
 		it('first day of the week should start on Friday', () => {
-			const {container} = render(
+			render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
 					firstDayOfWeek={firstDayOfWeek.Friday}
@@ -154,11 +154,11 @@ describe('Internationalization', () => {
 				/>
 			);
 
-			expect(container.firstChild).toMatchSnapshot();
+			expect(document.body).toMatchSnapshot();
 		});
 
 		it('first day of the week should start on Saturday', () => {
-			const {container} = render(
+			render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
 					firstDayOfWeek={firstDayOfWeek.Saturday}
@@ -168,7 +168,7 @@ describe('Internationalization', () => {
 				/>
 			);
 
-			expect(container.firstChild).toMatchSnapshot();
+			expect(document.body).toMatchSnapshot();
 		});
 	});
 });
