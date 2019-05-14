@@ -508,3 +508,51 @@ Usage Example:
 -   `elementClasses` removed in favor of `className`
 -   `spritemap` stays the same
 -   `totalPages` stays the same
+
+## ClayDataProvider
+
+DataProvider has changed a lot in terms of API but adds many new features and status information from the network.
+
+Receiving improvements in the mechanism of failed requests attempts, avoiding thundering herd, local cache mechanism, and API to add storage referral.
+
+See the documentation to get the most out of the component.
+
+```diff
+<ClayDataProvider
+-	content={...}
+-	dataSource={...}
+-	initialData={...}
+-	pollingInterval={5}
+-	inputMode={...}
+-	requestRetries={...}
+-	requestTimeout={...}
+-	requestOptions={...}
++	fetchDelay={300}
++	fetchOptions={...}
++	fetchPolicy="no-cache"
++	fetchRetry={...}
++	fetchTimeout={6000}
++	link="https://clay.dataprovider"
++	pollInterval={5}
++	storage={...}
++	storageMaxSize={20}
++	variables={{name: value}}
+-/>
++>
++	{({data, error, networkStatus, refetch}) => ()}
++</ClayDataProvider>
+```
+
+### API Changes
+
+-   `content` removed in favor of using `children`
+-   `data` deprecated
+-   `dataSource` renamed to `link` and accept only Function and string
+-   `debounceTime` renamed to `fetchDelay`
+-   `defaultEventHandler` deprecated
+-   `initialData` deprecated
+-   `inputMode` deprecated
+-   `pollingInterval` renamed to `pollInterval`
+-   `requestOptions` renamed to `fetchOptions`
+-   `requestRetries` renamed to `fetchRetry`
+-   `requestTimeout` renamed to `fetchTimeout`
