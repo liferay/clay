@@ -19,7 +19,7 @@ import Button from '@clayui/button';
 import DateNavigation from './DateNavigation';
 import DayNumber from './DayNumber';
 import DaysTable from './DaysTable';
-import Dropdown from './Dropdown';
+import DropDown from '@clayui/drop-down';
 import Icon from '@clayui/icon';
 import InputDate from './InputDate';
 import TimePicker from './TimePicker';
@@ -220,7 +220,12 @@ const ClayDatePicker: FunctionComponent<Props> = ({
 	/**
 	 * Create a ref to store the datepicker DOM element
 	 */
-	const elementRef = useRef<HTMLDivElement | null>(null);
+	const dropdownContainerRef = useRef<HTMLDivElement | null>(null);
+
+	/**
+	 * Create a ref to store the datepicker DOM element
+	 */
+	const triggerElementRef = useRef<HTMLDivElement | null>(null);
 
 	/**
 	 * Handles the change of the current month of the Date Picker
@@ -283,14 +288,9 @@ const ClayDatePicker: FunctionComponent<Props> = ({
 	 */
 	const handleCalendarButtonClicked = () => setExpanded(!expanded);
 
-	/**
-	 * Handles document click
-	 */
-	const handleDocClick = () => setExpanded(false);
-
 	return (
-		<div className="date-picker" ref={elementRef}>
-			<div className="input-group" id={id}>
+		<div className="date-picker">
+			<div className="input-group" id={id} ref={triggerElementRef}>
 				<div className="input-group-item">
 					<InputDate
 						ariaLabel={ariaLabels.input}
@@ -320,10 +320,13 @@ const ClayDatePicker: FunctionComponent<Props> = ({
 			</div>
 
 			{!useNative && (
-				<Dropdown
-					containerRef={elementRef}
-					expanded={expanded}
-					onDocumentClick={handleDocClick}
+				<DropDown.Menu
+					active={expanded}
+					alignElementRef={triggerElementRef}
+					className="date-picker-dropdown-menu"
+					data-testid="dropdown"
+					onSetActive={setExpanded}
+					ref={dropdownContainerRef}
 				>
 					<div className="date-picker-calendar">
 						<DateNavigation
@@ -374,7 +377,7 @@ const ClayDatePicker: FunctionComponent<Props> = ({
 							</div>
 						)}
 					</div>
-				</Dropdown>
+				</DropDown.Menu>
 			)}
 		</div>
 	);
