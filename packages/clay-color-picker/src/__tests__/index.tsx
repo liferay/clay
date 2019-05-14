@@ -24,8 +24,10 @@ const mockClientRect = (element: HTMLElement) => {
 };
 
 describe('Rendering', () => {
+	afterEach(cleanup);
+
 	it('default', () => {
-		const component = TestRenderer.create(
+		render(
 			<ClayColorPicker
 				label="Default Colors"
 				name="colorPicker1"
@@ -36,7 +38,7 @@ describe('Rendering', () => {
 			/>
 		);
 
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(document.body).toMatchSnapshot();
 	});
 });
 
@@ -59,7 +61,9 @@ describe('Interactions', () => {
 
 		fireEvent.click(dropdownToggle as HTMLButtonElement, {});
 
-		expect(container).toMatchSnapshot();
+		expect(document.querySelector('.dropdown-menu')!.classList).toContain(
+			'show'
+		);
 	});
 
 	it('opens custom color picker drop down when clicked', () => {
@@ -82,17 +86,18 @@ describe('Interactions', () => {
 
 		expect(container).toMatchSnapshot();
 
-		const colorEditorToggle = (container as HTMLElement).querySelector(
+		const colorEditorToggle = (document.body as HTMLElement).querySelector(
 			'.clay-color-header button'
 		);
 
 		fireEvent.click(colorEditorToggle as HTMLButtonElement, {});
 
-		expect(container).toMatchSnapshot();
+		expect(
+			document.querySelector('clay-color-dropdown-menu')
+		).toMatchSnapshot();
 	});
 
 	describe('color editor interactions', () => {
-		let editorContainer: any;
 		let editorGetByTestId: any;
 
 		const handleColorsChange = jest.fn();
@@ -106,7 +111,7 @@ describe('Interactions', () => {
 		});
 
 		beforeEach(() => {
-			const {container, getByLabelText, getByTestId} = render(
+			const {container, getByTestId} = render(
 				<ClayColorPicker
 					colors={['5BB0A5', '00FFFF', '0000FF']}
 					label="Custom Colors"
@@ -118,58 +123,53 @@ describe('Interactions', () => {
 				/>
 			);
 
-			const dropdownToggle = container.querySelector('.dropdown-toggle');
+			const dropdownToggle = document.querySelector('.dropdown-toggle');
 
 			fireEvent.click(dropdownToggle as HTMLButtonElement, {});
 
-			const colorEditorToggle = (container as HTMLElement).querySelector(
+			const colorEditorToggle = (document.body as HTMLElement).querySelector(
 				'.clay-color-header button'
 			);
 
 			fireEvent.click(colorEditorToggle as HTMLButtonElement, {});
 
-			editorContainer = container;
 			editorGetByTestId = getByTestId;
 		});
 
 		it('changes the color by changing the gradient', () => {
-			const gradientMap = editorContainer.querySelector(
-				'.clay-color-map-hsb'
-			);
+			const gradientMap = document.querySelector('.clay-color-map-hsb');
 
-			mockClientRect(gradientMap);
+			mockClientRect(gradientMap as HTMLElement);
 
 			const mouseDown = getMouseEvent('mousedown', {pageX: 0, pageY: 0});
 
-			fireEvent(gradientMap, mouseDown);
+			fireEvent(gradientMap as HTMLElement, mouseDown);
 
 			const mouseMove = getMouseEvent('mousemove', {
 				pageX: 50,
 				pageY: 50,
 			});
 
-			fireEvent(gradientMap, mouseMove);
+			fireEvent(gradientMap as HTMLElement, mouseMove);
 
 			expect(handleColorsChange).toBeCalledTimes(1);
 			expect(handleColorsChange.mock.calls[0][0][0]).toBe('659c95');
 		});
 
 		it('changes the color by changing the hue', () => {
-			const hueSelector = editorContainer.querySelector(
-				'.clay-color-range-hue'
-			);
+			const hueSelector = document.querySelector('.clay-color-range-hue');
 
-			mockClientRect(hueSelector);
+			mockClientRect(hueSelector as HTMLElement);
 
 			const mouseDown = getMouseEvent('mousedown', {pageX: 0, pageY: 0});
 
-			fireEvent(hueSelector, mouseDown);
+			fireEvent(hueSelector as HTMLElement, mouseDown);
 
 			const mouseMove = getMouseEvent('mousemove', {
 				pageX: 50,
 			});
 
-			fireEvent(hueSelector, mouseMove);
+			fireEvent(hueSelector as HTMLElement, mouseMove);
 
 			expect(handleColorsChange).toBeCalledTimes(1);
 			expect(handleColorsChange.mock.calls[0][0][0]).toBe('5bb062');
@@ -200,7 +200,7 @@ describe('Interactions', () => {
 		});
 
 		it('ability to change color of clicked splotch', () => {
-			const splotchArray = editorContainer.querySelectorAll(
+			const splotchArray = document.querySelectorAll(
 				'.clay-color-dropdown-menu .clay-color-swatch-item'
 			);
 
