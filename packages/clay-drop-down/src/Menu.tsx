@@ -7,6 +7,7 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import {Align} from 'metal-position';
+import {Portal} from '@clayui/shared';
 import {useDropdownCloseInteractions} from './hooks';
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
@@ -88,17 +89,19 @@ const DropDownMenu = React.forwardRef<HTMLDivElement, Props>((
 	});
 
 	return (
-		<div
-			{...otherProps}
-			className={classNames('dropdown-menu', className, {
-				'dropdown-menu-indicator-end': hasRightSymbols,
-				'dropdown-menu-indicator-start': hasLeftSymbols,
-				show: active,
-			})}
-			ref={ref}
-		>
-			{children}
-		</div>
+		<Portal>
+			<div
+				{...otherProps}
+				className={classNames('dropdown-menu', className, {
+					'dropdown-menu-indicator-end': hasRightSymbols,
+					'dropdown-menu-indicator-start': hasLeftSymbols,
+					show: active,
+				})}
+				ref={ref}
+			>
+				{children}
+			</div>
+		</Portal>
 	);
 });
 

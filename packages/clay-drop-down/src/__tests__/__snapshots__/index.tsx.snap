@@ -336,23 +336,3 @@ exports[`ClayDropDown renders with search input 1`] = `
   </div>
 </body>
 `;
-
-exports[`ClayDropDown renders without menu 1`] = `
-<body>
-  <div>
-    <div
-      class="dropdown"
-    >
-      <span
-        style="display: inline-block;"
-      >
-        <button
-          class="dropdown-toggle"
-        >
-          Click Me
-        </button>
-      </span>
-    </div>
-  </div>
-</body>
-`;

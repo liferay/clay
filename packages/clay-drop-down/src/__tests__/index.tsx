@@ -51,7 +51,9 @@ describe('ClayDropDown', () => {
 			</DropDownWithState>
 		);
 
-		expect(document.body).toMatchSnapshot();
+		expect(document.body.querySelector('.dropdown-menu')).not.toContain(
+			'show'
+		);
 	});
 
 	it('renders dropdown menu when clicked', () => {
@@ -112,13 +114,17 @@ describe('ClayDropDown', () => {
 
 		fireEvent.click(toggleButton as HTMLButtonElement, {});
 
-		expect(document.body.querySelector('.dropdown-menu')).toBeTruthy();
+		expect(
+			document.body.querySelector('.dropdown-menu')!.classList
+		).toContain('show');
 
 		const outsideElement = getByTestId('OUTSIDE_ELEMENT');
 
 		fireEvent.mouseDown(outsideElement as HTMLDivElement, {});
 
-		expect(document.body.querySelector('.dropdown-menu')).toBeFalsy();
+		expect(
+			document.body.querySelector('.dropdown-menu')!.classList
+		).not.toContain('show');
 	});
 
 	it('renders with search input', () => {

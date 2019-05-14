@@ -5,7 +5,6 @@
  */
 
 import * as React from 'react';
-import {Portal} from '@clayui/shared';
 
 import Action from './Action';
 import Caption from './Caption';
@@ -59,19 +58,17 @@ const ClayDropDown: React.FunctionComponent<Props> & {
 				})}
 			</span>
 
-			<Portal>
-				<Menu
-					active={active}
-					alignElementRef={triggerElementRef}
-					alignmentPosition={alignmentPosition}
-					hasLeftSymbols={hasLeftSymbols}
-					hasRightSymbols={hasRightSymbols}
-					onSetActive={onActiveChange}
-					ref={menuElementRef}
-				>
-					{children}
-				</Menu>
-			</Portal>
+			<Menu
+				active={active}
+				alignElementRef={triggerElementRef}
+				alignmentPosition={alignmentPosition}
+				hasLeftSymbols={hasLeftSymbols}
+				hasRightSymbols={hasRightSymbols}
+				onSetActive={onActiveChange}
+				ref={menuElementRef}
+			>
+				{children}
+			</Menu>
 		</div>
 	);
 };
