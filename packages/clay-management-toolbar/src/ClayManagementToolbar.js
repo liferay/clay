@@ -316,6 +316,15 @@ ClayManagementToolbar.STATE = {
 	actionItems: actionItemsValidator,
 
 	/**
+	 * Active status is visible
+	 * @default false
+	 * @instance
+	 * @memberof ClayManagementToolbar
+	 * @type {?(boolean|undefined)}
+	 */
+	active: Config.bool().value(false),
+
+	/**
 	 * Satus of the select items checkbox. If checkboxStatus is checked or
 	 * indeterminate the toolbar will be in active state.
 	 * @default unchecked

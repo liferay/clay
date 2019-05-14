@@ -33,6 +33,7 @@
 		separator: bool,
 		type: string
 	]>}
+	{@param? active: bool}
 	{@param? checkboxStatus: string}
 	{@param? clearResultsURL: string}
 	{@param? clearSelectionURL: string}
@@ -136,10 +137,8 @@
 		{/if}
 	{/let}
 
-	{let $isActive: $checkboxStatus and ($checkboxStatus == 'checked' or $checkboxStatus == 'indeterminate') /}
-
 	<div {$attributes}>
-		{if $isActive}
+		{if $active}
 			{call .active}
 				{param _handleActionItemClicked: $_handleActionItemClicked /}
 				{param _handleClearSelectionButtonClick: $_handleClearSelectionButtonClick /}
@@ -239,7 +238,7 @@
 			<ul class="navbar-nav navbar-nav-expand">
 				<li class="nav-item">
 					{call ClayCheckbox.render}
-						{param checked: true /}
+						{param checked: $checkboxStatus != 'unchecked' /}
 						{param events: ['change': $_handleSelectPageCheckboxChanged] /}
 						{param indeterminate: $checkboxStatus == 'indeterminate' /}
 						{param label kind="text"}
@@ -469,11 +468,11 @@
 	{let $secondaryItems: $creationMenu and $creationMenu.secondaryItems ? $creationMenu.secondaryItems : [] /}
 
 	{let $hasPrimaryItems: length($primaryItems) > 0 /}
-	
+
 	{let $hasSecondaryItems: length($secondaryItems) > 0 /}
 
 	{let $firstSecondaryItem: $hasSecondaryItems ? $secondaryItems[0] : null /}
-	
+
 	{let $secondSecondaryItem: $hasSecondaryItems ? $secondaryItems[1] : null /}
 
 	{let $hasFirstSecondaryItemNestedItems: $firstSecondaryItem and $firstSecondaryItem.items and length($firstSecondaryItem.items) > 0 /}
@@ -481,8 +480,8 @@
 	{let $hasSecondSecondaryItemNestedItems: $secondSecondaryItem and $secondSecondaryItem.items and length($secondSecondaryItem.items) > 0 /}
 
 	{let $hasOnePrimaryItem: $hasPrimaryItems and length($primaryItems) == 1 /}
-	
-	{let $hasOneSecondaryItem: 
+
+	{let $hasOneSecondaryItem:
 		($hasSecondaryItems and length($secondaryItems) == 1 and not $hasFirstSecondaryItemNestedItems and not $hasSecondSecondaryItemNestedItems)
 		or ($hasFirstSecondaryItemNestedItems and length($firstSecondaryItem.items) == 1 and not $hasSecondSecondaryItemNestedItems)
 		or ($hasSecondSecondaryItemNestedItems and length($secondSecondaryItem.items) == 1 and not $hasFirstSecondaryItemNestedItems)
