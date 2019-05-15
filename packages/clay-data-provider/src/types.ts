@@ -51,7 +51,7 @@ export interface IFetchRetryDelay {
 	 *
 	 * Note that if jittering is enabled, this is the average delay.
 	 */
-	initial: number;
+	initial?: number;
 
 	/**
 	 * Whether delays between attempts should be randomized.
@@ -59,19 +59,19 @@ export interface IFetchRetryDelay {
 	 * This helps avoid thundering herd type situations by better
 	 * distributing load during major outages.
 	 */
-	jitter: boolean;
+	jitter?: boolean;
 }
 
 export interface IFetchRetry {
 	/**
 	 * The maximum number of times to try a single request before giving up.
 	 */
-	attempts: number;
+	attempts?: number;
 
 	/**
 	 * Configuration for the delay strategy to use.
 	 */
-	delay: IFetchRetryDelay;
+	delay?: IFetchRetryDelay;
 }
 
 export interface IDataProvider {

@@ -8,6 +8,8 @@ import LRU from 'lru-cache';
 import {
 	FetchPolicy,
 	IDataProvider,
+	IFetchRetry,
+	IFetchRetryDelay,
 	NetworkStatus,
 	SYMBOL_DATA_PROVIDER,
 	SYMBOL_ORIGIN,
@@ -52,13 +54,7 @@ const useResource = ({
 		 */
 		[SYMBOL_ORIGIN]: true,
 	},
-	fetchRetry = {
-		attempts: 5,
-		delay: {
-			initial: 300,
-			jitter: true,
-		},
-	},
+	fetchRetry = {},
 	storageMaxSize = 20,
 	variables = null,
 }: IResource) => {
@@ -101,23 +97,22 @@ const useResource = ({
 	};
 
 	const getRetryDelay = (retryAttempts: number) => {
-		const {
-			delay: {initial, jitter},
-		} = fetchRetry;
+		const {delay = {}} = fetchRetry;
+		const {initial = 300, jitter = true} = delay;
 
 		const baseDelay = jitter ? initial : initial / 2;
 
-		let delay = Math.min(baseDelay * 2 ** retryAttempts);
+		let value = Math.min(baseDelay * 2 ** retryAttempts);
 
 		if (jitter) {
-			delay = Math.random() * delay;
+			value = Math.random() * value;
 		}
 
-		return delay;
+		return value;
 	};
 
 	const handleFetchRetry = (err: any, retryAttempts: number) => {
-		const {attempts} = fetchRetry;
+		const {attempts = 5} = fetchRetry;
 
 		cleanRetry();
 
