@@ -78,6 +78,8 @@ const useResource = ({
 
 	let retryDelayIntervalId = useRef<null | NodeJS.Timeout>(null).current;
 
+	const firstRenderRef = useRef<boolean>(true);
+
 	const cache = useRef<TSymbolData>(getStorageCache()).current;
 
 	const debouncedVariablesChange = useDebounce(variables, fetchDelay);
@@ -266,11 +268,14 @@ const useResource = ({
 	};
 
 	useEffect(() => {
-		performFetch(NetworkStatus.Refetch);
+		if (!firstRenderRef.current) {
+			performFetch(NetworkStatus.Refetch);
+		}
 	}, [debouncedVariablesChange]);
 
 	useEffect(() => {
 		performFetch(NetworkStatus.Loading);
+		firstRenderRef.current = false;
 
 		return () => {
 			// Reset the cache only if the storage reference is
