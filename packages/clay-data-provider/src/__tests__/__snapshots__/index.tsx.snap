@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayDataProvider calls clay.data and return data 1`] = `"<h1>Foo</h1>"`;
+
+exports[`ClayDataProvider calls clay.data and return data from cache 1`] = `"<h1>Foo</h1>"`;
+
+exports[`ClayDataProvider calls clay.data and returns data from the cache and fetches data on the network 1`] = `"<h1>Foo</h1>"`;
+
+exports[`ClayDataProvider calls clay.data and returns data from the cache and fetches data on the network 2`] = `"<h1>Bar</h1>"`;
+
+exports[`ClayDataProvider calls clay.data and returns the timeout error 1`] = `"<h1>Timeout Error</h1>"`;
+
+exports[`ClayDataProvider calls clay.data with polling of 50ms 1`] = `"<h1>1</h1>"`;
+
+exports[`ClayDataProvider calls clay.data with polling of 50ms 2`] = `"<h1>2</h1>"`;
+
+exports[`ClayDataProvider calls clay.data with polling of 50ms 3`] = `"<h1>3</h1>"`;
+
+exports[`ClayDataProvider make 5 attempts when the request fails 1`] = `"<h1>Error</h1>"`;
+
+exports[`ClayDataProvider make 5 attempts with jitter disabled when the request fails 1`] = `"<h1>Error</h1>"`;
