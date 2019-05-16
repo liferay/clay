@@ -11,9 +11,7 @@ $navigation-bar-size: map-merge((
 
 $navigation-bar-base: () !default;
 $navigation-bar-base: map-merge((
-	link-border-radius: $border-radius,
 	link-outline: 0,
-	link-transition: box-shadow 0.15s ease-in-out,
 	link-focus-box-shadow: $btn-focus-box-shadow,
 	link-disabled-box-shadow: none,
 ), $navigation-bar-base);
