@@ -1,3 +1,34 @@
+////
+/// @group sidebar
+////
+
+/// A mixin to create Sidebar color variants (e.g., `<div class="sidebar my-custom-sidebar-variant"></div>`).
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// bg: {Color | String | Null},
+/// border-color: {Color | String | List | Null},
+/// border-bottom-width: {Number | String}, // Default: 0
+/// border-left-width: {Number | String}, // Default: 0
+/// border-right-width: {Number | String}, // Default: 0
+/// border-top-width: {Number | String}, // Default: 0
+/// box-shadow: {String | List | Null},
+/// color: {Color | String | Null},
+/// panel-bg: {Color | String | Null},
+/// component-header-title: {Map | Null}, // Pass parameters to `clay-text-typography` mixin
+/// component-header-subtitle: {Map | Null}, // Pass parameters to `clay-text-typography` mixin
+/// component-link: {Map | Null}, // Pass parameters to `clay-text-typography` mixin
+/// dt: {Map | Null}, // Pass parameters to `clay-text-typography` mixin
+/// dd: {Map | Null}, // Pass parameters to `clay-text-typography` mixin
+/// sidebar-list-group-item-bg: {Color | String | Null},
+/// sidebar-list-group-item-border-color: {Color | String | List | Null},
+/// sidebar-list-group-title: {Map | Null}, // Pass parameters to `clay-text-typography` mixin
+/// sidebar-list-group-subtitle: {Map | Null}, // Pass parameters to `clay-text-typography` mixin
+/// sidebar-list-group-text: {Map | Null}, // Pass parameters to `clay-text-typography` mixin
+/// sidebar-list-group-subtext: {Map | Null}, // Pass parameters to `clay-text-typography` mixin
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
+
 @mixin clay-sidebar-variant($map) {
 	$bg: map-get($map, bg);
 	$border-color: map-get($map, border-color);

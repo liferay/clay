@@ -1,5 +1,72 @@
-// A mixin for styling `.close` overwrites Bootstrap 4.1.2's 
-// `&:not(:disabled):not(.disabled)` selector
+////
+/// @group utilities
+////
+
+// A mixin for styling `.close` overwrites Bootstrap 4.1.2's `&:not(:disabled):not(.disabled)` selector
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// align-items: {String | Null},
+/// bg: {Color | String | Null},
+/// border-color: {Color | String | List | Null},
+/// border-radius: {Number | String | List | Null},
+/// color: {Color | String | Null},
+/// display: {String | Null},
+/// font-family: {String | List | Null},
+/// font-size: {Number | String | Null},
+/// font-weight: {Number | String | Null},
+/// height: {Number | String | Null},
+/// justify-content: {String | Null},
+/// line-height: {Number | String | Null},
+/// margin-bottom: {Number | String | Null},
+/// margin-left: {Number | String | Null},
+/// margin-right: {Number | String | Null},
+/// margin-top: {Number | String | Null},
+/// opacity: {Number | String | Null},
+/// padding-bottom: {Number | String | Null},
+/// padding-left: {Number | String | Null},
+/// padding-right: {Number | String | Null},
+/// padding-top: {Number | String | Null},
+/// position: {String | Null},
+/// bottom: {Number | String | Null},
+/// left: {Number | String | Null},
+/// right: {Number | String | Null},
+/// top: {Number | String | Null},
+/// text-align: {String | Null},
+/// text-decoration: {String | Null},
+/// text-transform: {String | List | Null},
+/// transition: {String | List | Null},
+/// vertical-align: {String | Null},
+/// width: {Number | String | Null},
+/// hover-bg: {Color | String | Null},
+/// hover-color: {Color | String | Null},
+/// hover-opacity: {Number | String | Null},
+/// hover-text-decoration: {String | Null},
+/// focus-bg: {Color | String | Null},
+/// focus-box-shadow: {String | List | Null},
+/// focus-color: {Color | String | Null},
+/// focus-opacity: {Number | String | Null},
+/// focus-outline: {Number | String | Null},
+/// focus-text-decoration: {String | Null},
+/// active-bg: {Color | String | Null},
+/// active-border-color: {Color | String | List | Null},
+/// active-color: {Color | String | Null},
+/// disabled-bg: {Color | String | Null},
+/// disabled-border-color: {Color | String | List | Null},
+/// disabled-box-shadow: {String | List | Null},
+/// disabled-color: {Color | String | Null},
+/// disabled-cursor: {String | Null},
+/// disabled-opacity: {Number | String | Null},
+/// disabled-pointer-events: {String | Null},
+/// disabled-text-decoration: {String | Null},
+/// btn-focus-box-shadow: {String | List | Null},
+/// btn-focus-outline: {Number | String | Null},
+/// lexicon-icon-margin-bottom: {Number | String | Null},
+/// lexicon-icon-margin-left: {Number | String | Null},
+/// lexicon-icon-margin-right: {Number | String | Null},
+/// lexicon-icon-margin-top: {Number | String | Null},
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
 
 @mixin clay-close($map) {
 	$align-items: map-get($map, align-items);

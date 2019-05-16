@@ -1,3 +1,47 @@
+////
+/// @group menubar
+////
+
+/// A mixin for creating alternate breakpoints for `.menubar-vertical-expand-{breakpoint}`.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// breakpoint-up: {String}, // This uses Bootstrap 4's breakpoint up to calculate breakpoint down. Use `breakpoint-down` instead
+/// breakpoint-down: {String}, // The Bootstrap 4 Breakpoint {xs | sm | md | lg | xl}
+/// border-color: {Color | String | List | Null},
+/// border-style: {String | List | Null},
+/// border-width: {Number | String | List | Null},
+/// max-width: {String | Number}, // Default: 15.625rem
+/// border-color-mobile: {Color | String | List}, // Default: transparent
+/// border-style-mobile: {String | List}, // Default: solid
+/// border-width-mobile: {Number | String | List}, // Default: 0.0625rem
+/// margin-bottom-mobile: {Number | String | Null},
+/// margin-left-mobile: {Number | String | Null},
+/// margin-right-mobile: {Number | String | Null},
+/// margin-top-mobile: {Number | String | Null},
+/// max-width-mobile: {Number | String}, // Default: none
+/// min-height-mobile: {Number | String}, // Default: 3rem
+/// padding-x-mobile: {Number | String}, // Default: 0.5rem
+/// padding-y-mobile: {Number | String | Null},
+/// collapse-border-color-mobile: {Color | String}, // Default: transparent
+/// collapse-border-style-mobile: {String | List}, // Default: solid
+/// collapse-border-width-mobile: {Number | String | List}, // Default: 0.0625rem
+/// collapse-inner-spacer-y-mobile: {Number | String}, // Default: 0.5rem
+/// collapse-margin-top-mobile: {Number | String | Null},
+/// collapse-max-width-mobile: {Number | String | Null},
+/// collapse-left-mobile: {Number | String}, // Default: -0.0625rem
+/// collapse-right-mobile: {Number | String}, // Default: -0.0625rem
+/// collapse-z-index-mobile: {Number | String | Null},
+/// toggler-border-color-mobile: {Color | String | List}, // Default: transparent
+/// toggler-border-style-mobile: {String | List}, // Default: solid
+/// toggler-border-width-mobile: {Number | String | List}, // Default: 0.0625rem
+/// toggler-height-mobile: {Number | String}, // Default: 2rem
+/// toggler-padding-x-mobile: {Number | String}, // Default: 0.5rem
+/// toggler-padding-y-mobile: {Number | String | Null},
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
+
 @mixin clay-menubar-vertical-expand($map) {
 	$enabled: setter(map-get($map, enabled), true);
 	$breakpoint-up: setter(map-get($map, breakpoint-up), md);
@@ -122,6 +166,78 @@
 		}
 	}
 }
+
+/// A mixin that creates a `menubar-vertical-expand-{breakpoint}` variant.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// breakpoint-up: {String}, // This uses Bootstrap 4's breakpoint up to calculate breakpoint down. Use `breakpoint-down` instead
+/// breakpoint-down: {String}, // The Bootstrap 4 Breakpoint {xs | sm | md | lg | xl}
+/// bg: {Color | String | Null},
+/// border-color: {Color | String | List | Null},
+/// border-style: {String | List | Null},
+/// // `$link-bg` is deprecated use `$link` instead
+/// link-bg: {Color | String | Null},
+/// // `$link-border-radius` is deprecated use `$link` instead
+/// link-border-radius: {Number | String | List | Null},
+/// // `$link-color` is deprecated use `$link` instead
+/// link-color: {Color | String}, // Default: $navbar-light-color
+/// // `$link-hover-bg` is deprecated use `$link` instead
+/// link-hover-bg: {Color | String | Null},
+/// // `$link-hover-color` is deprecated use `$link` instead
+/// link-hover-color: {Color | String}, // Default: $navbar-light-hover-color
+/// // `$link-active-bg` is deprecated use `$link` instead
+/// link-active-bg: {Color | String | Null},
+/// // `$link-active-color` is deprecated use `$link` instead
+/// link-active-color: {Color | String}, // Default: $navbar-light-active-color
+/// // `$link-active-font-weight` is deprecated use `$link` instead
+/// link-active-font-weight: {Number | String | Null},
+/// // `$link-disabled-bg` is deprecated use `$link` instead
+/// link-disabled-bg: {Color | String | Null},
+/// // `$link-disabled-color` is deprecated use `$link` instead
+/// link-disabled-color: {Color | String}, // Default: $navbar-light-disabled-color
+/// link: {Map | Null}, // Pass parameters to `clay-link` mixin
+/// bg-mobile: {Color | String | Null},
+/// border-color-mobile: {Color | String | List | Null},
+/// border-style-mobile: {String | List | Null},
+/// // `$link-border-radius-mobile` is deprecated use `$link-mobile` instead
+/// link-border-radius-mobile: {Number | String | List | Null},
+/// // `$link-color-mobile` is deprecated use `$link-mobile` instead
+/// link-color-mobile: {Color | String}, // Default: $dropdown-link-color
+/// // `$link-hover-bg-mobile` is deprecated use `$link-mobile` instead
+/// link-hover-bg-mobile: {Color | String}, // Default: $dropdown-link-hover-bg
+/// // `$link-hover-color-mobile` is deprecated use `$link-mobile` instead
+/// link-hover-color-mobile: {Color | String}, // Default: $dropdown-link-hover-color
+/// // `$link-active-bg-mobile` is deprecated use `$link-mobile` instead
+/// link-active-bg-mobile: {Color | String}, // Default: $dropdown-link-active-bg
+/// // `$link-active-font-weight-mobile` is deprecated use `$link-mobile` instead
+/// link-active-font-weight-mobile: {Number | String}, // Default: $dropdown-link-active-font-weight
+/// // `$link-active-color-mobile` is deprecated use `$link-mobile` instead
+/// link-active-color-mobile: {Color | String}, // Default: $dropdown-link-active-color
+/// // `$link-disabled-bg-mobile` is deprecated use `$link-mobile` instead
+/// link-disabled-bg-mobile: {Color | String}, // Default: transparent
+/// // `$link-disabled-color-mobile` is deprecated use `$link-mobile` instead
+/// link-disabled-color-mobile: {Color | String}, // Default: $dropdown-link-disabled-color
+/// link-mobile: {Map | Null}, // Pass parameters to `clay-link` mixin
+/// collapse-bg-mobile: {Color | String}, // Default: $dropdown-bg
+/// collapse-border-color-mobile: {Color | String}, // Default: $dropdown-border-color
+/// collapse-border-radius-mobile: {Number | String | List}, // Default: $border-radius
+/// collapse-border-style-mobile: {String | List | Null},
+/// collapse-box-shadow-mobile: {String | List}, // Default: $dropdown-box-shadow
+/// // `$toggler-border-color-mobile` is deprecated use `$toggler-mobile` instead
+/// toggler-border-color-mobile: {Color | String | Null},
+/// // `$toggler-border-style-mobile` is deprecated use `$toggler-mobile` instead
+/// toggler-border-style-mobile: {String | List | Null},
+/// // `$toggler-color-mobile` is deprecated use `$toggler-mobile` instead
+/// toggler-color-mobile: {Color | String}, // Default: $link-active-color
+/// // `$toggler-font-size-mobile` is deprecated use `$toggler-mobile` instead
+/// toggler-font-size-mobile: {Number | String | Null},
+/// // `$toggler-font-weight-mobile` is deprecated use `$toggler-mobile` instead
+/// toggler-font-weight-mobile: {Number | String | Null},
+/// toggler-mobile: {Map | Null}, // Pass parameters to `clay-button-variant` mixin
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
 
 @mixin clay-menubar-vertical-variant($map) {
 	$enable: setter(map-get($map, enable), true);

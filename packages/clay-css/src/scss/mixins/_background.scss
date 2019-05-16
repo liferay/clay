@@ -1,6 +1,13 @@
-// Creates a checkered background
-// @param $fg-color - foreground color to use
-// @param $bg-color - background color to use
+////
+/// @group utilities
+////
+
+/// A mixin for creating checkered backgrounds.
+/// @param {Color} $fg-color[$gray-200] - The foreground color to use
+/// @param {Color} $bg-color[null] - The background color to use
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
 
 @mixin clay-bg-checkered($fg-color: $gray-200, $bg-color: null) {
 	background-color: $bg-color;
@@ -9,8 +16,20 @@
 	background-size: 20px 20px;
 }
 
-// Replace any *-indicator with another icon via background-image, e.g. 
-// .modal-title-indicator
+/// A mixin that replaces any `*-indicator` component with another icon via `background-image` (e.g., `.modal-title-indicator`, `.dropdown-item-indicator-start`, or `.panel-header .collapse-icon-closed`).
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// indicator: {String}, // The SVG as a data URI, use clay-icon() or clay-svg-url()
+/// indicator-bg-position: {List}, // Default: top 0.125rem left
+/// indicator-bg-size: {Number | String | List}, // Default: 100%
+/// indicator-display: {String}, // Default: inline-block
+/// indicator-height: {Number | String}, // Default: #{$line-height-base}em
+/// indicator-text-indent: {Number | String | Null},
+/// indicator-vertical-align: {String}, // Default: middle
+/// indicator-width: {Number | String}, // Default: 1em
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
 
 @mixin clay-indicator-bg($map) {
 	$indicator: map-get($map, indicator);

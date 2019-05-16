@@ -1,3 +1,11 @@
+////
+/// @group timelines
+////
+
+/// A mixin that places the `.timeline-item::before` element on the right side. This mixin is used in `.timeline-right`.
+/// @todo
+/// - Add @link to documentation
+
 @mixin clay-timeline-item-reverse() {
 	padding-left: 0;
 	padding-right: $timeline-inner-spacing;
@@ -21,6 +29,13 @@
 		transform: translate(50%, -50%);
 	}
 }
+
+/// A mixin that helps with spacing in a `.timeline`. 
+/// @param {Number} $outer-spacing - Sets `padding-left` or `padding-right` on `.timeline` relative to where the increments are positioned. 
+/// @param {Number} $inner-spacing - Sets `padding-left` on `.timeline-item` if the `.panel` is positioned on the right and `padding-right` if `.panel` is positioned on the left.
+/// @param {Number} $item-padding-y[10px] - Sets `padding-top` and `padding-bottom` on `.timeline-item`.
+/// @todo
+/// - Add @link to documentation
 
 @mixin clay-timeline-spacing($outer-spacing, $inner-spacing, $item-padding-y: 10px) {
 	&.timeline {
