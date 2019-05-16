@@ -137,8 +137,13 @@
 		{/if}
 	{/let}
 
+	{let $isActive: isNonnull($active)
+		? $active
+		: $checkboxStatus and ($checkboxStatus == 'checked' or $checkboxStatus == 'indeterminate')
+	/}
+
 	<div {$attributes}>
-		{if $active}
+		{if $isActive}
 			{call .active}
 				{param _handleActionItemClicked: $_handleActionItemClicked /}
 				{param _handleClearSelectionButtonClick: $_handleClearSelectionButtonClick /}

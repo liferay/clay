@@ -322,7 +322,7 @@ ClayManagementToolbar.STATE = {
 	 * @memberof ClayManagementToolbar
 	 * @type {?(boolean|undefined)}
 	 */
-	active: Config.bool().value(false),
+	active: Config.bool(),
 
 	/**
 	 * Satus of the select items checkbox. If checkboxStatus is checked or
