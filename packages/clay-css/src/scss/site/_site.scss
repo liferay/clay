@@ -1856,3 +1856,26 @@ body.sidenav-transition {
 		width: 50%;
 	}
 }
+
+// API Page
+
+$my-button-variant: () !default;
+$my-button-variant: map-merge((
+	bg: #C142A0,
+	border-width: 0,
+	color: #FFF,
+	font-size: 13px,
+	font-weight: 700,
+	line-height: 1,
+	padding-bottom: 12px,
+	padding-left: 15px,
+	padding-right: 15px,
+	padding-top: 12px,
+	hover-bg: #AC388E,
+	hover-color: #FFF,
+	active-bg: #9D3381,
+), $my-button-variant);
+
+.my-button-variant {
+	@include clay-button-variant($my-button-variant);
+}
