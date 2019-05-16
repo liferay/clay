@@ -442,3 +442,42 @@ For example:
 -   `headers` removed in favor of composing with `<ClayPanel.Header>`
 -   `openClasses` removed and uses clay's class of `collapse`
 -   `transitionClasses` removed and manages transitions internally.
+
+## ClayDropDown
+
+ClayDropDown's API has been refactored quite a bit and is now created via composition. This gives the end user greater flexibility in how the dropdown is created and what the dropdown is used for. The following components are available for composition.
+
+```jsx
+<ClayDropDown>
+<ClayDropDown.Action>
+<ClayDropDown.Caption>
+<ClayDropDown.Divider>
+<ClayDropDown.Group>
+<ClayDropDown.Help>
+<ClayDropDown.Menu>
+<ClayDropDown.Item>
+<ClayDropDown.ItemList>
+<ClayDropDown.Search>
+```
+
+ClayDropDown also exports `<ClayDropDown.Menu>` which can be used independently of the other components and can be used in any place that is in need of a 'floating menu.' To see uses of this, check out `ClayColorPicker` or `ClayDatePicker`.
+
+### Compositions
+
+```jsx
+<ClayDropDown
+	active={active}
+	onActiveChange={newVal => setActive(newVal)}
+	trigger={<ClayButton>{'Click Me'}</ClayButton>}
+>
+	<ClayDropDown.ItemList>
+		<ClayDropDown.Item href="/bar">Bar</ClayDropDown.Item>
+
+		<ClayDropDown.Item href="/baz">Baz</ClayDropDown.Item>
+
+		<ClayDropDown.Item href="/qux">Qux</ClayDropDown.Item>
+	</ClayDropDown.ItemList>
+</ClayDropDown>
+```
+
+See `ClayDropDown` in our storybook for more compositions and examples of use.

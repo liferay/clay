@@ -7,7 +7,10 @@
 import * as React from 'react';
 
 const DropDownGroup: React.FunctionComponent<{
-	header: string;
+	/**
+	 * Value provided is a display component that is a header for the items in the group.
+	 */
+	header?: string;
 }> = ({children, header}) => {
 	return (
 		<>

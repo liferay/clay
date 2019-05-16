@@ -10,10 +10,29 @@ import ClayIcon from '@clayui/icon';
 
 interface Props
 	extends React.HTMLAttributes<HTMLSpanElement | HTMLAnchorElement> {
+	/**
+	 * Flag that indicates if item is selected.
+	 */
 	active?: boolean;
+
+	/**
+	 * Path for item to link to.
+	 */
 	href?: string;
+
+	/**
+	 * Path to icon spritemap from clay-css.
+	 */
 	spritemap?: string;
+
+	/**
+	 * Flag that indicates if there is an icon symbol on the left side.
+	 */
 	symbolLeft?: string;
+
+	/**
+	 * Flag that indicates if there is an icon symbol on the right side.
+	 */
 	symbolRight?: string;
 }
 

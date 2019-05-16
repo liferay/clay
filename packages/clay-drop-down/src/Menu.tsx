@@ -33,7 +33,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	 * Align.LeftCenter = 6;
 	 * Align.TopLeft = 7;
 	 *
-	 * Defaults to BottomLEft
+	 * Defaults to BottomLeft
 	 */
 	alignmentPosition?: number;
 
