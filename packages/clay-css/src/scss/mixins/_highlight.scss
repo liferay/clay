@@ -1,3 +1,36 @@
+////
+/// @group Utilities
+////
+
+/// A mixin to create custom underline highlights or overwrite highlights on an element using the CSS pseudo element `::after`.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// bg: {Color | String | Null},
+/// border-radius: {Number | String | List | Null},
+/// bottom: {Number | String | Null},
+/// content: {String | Null},
+/// display: {String | Null},
+/// height: {Number | String | Null},
+/// left: {Number | String | Null},
+/// opacity: {Number | String | Null},
+/// position: {String | Null},
+/// right: {Number | String | Null},
+/// transition: {String | List | Null},
+/// top: {Number | String | Null},
+/// hover-bg: {Color | String | Null},
+/// hover-height: {Number | String | Null},
+/// hover-opacity: {Number | String | Null},
+/// focus-bg: {Color | String | Null},
+/// focus-height: {Number | String | Null},
+/// focus-opacity: {Number | String | Null},
+/// active-bg: {Color | String | Null},
+/// active-height: {Number | String | Null},
+/// active-opacity: {Number | String | Null},
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
+
 @mixin clay-after-highlight-variant($map) {
 	$enabled: setter(map-get($map, enabled), true);
 

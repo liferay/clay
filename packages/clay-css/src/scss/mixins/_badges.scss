@@ -1,3 +1,21 @@
+////
+/// @group badges
+////
+
+/// A mixin for creating custom `badge` sizes.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// border-width: {List | Number}, // Default: $badge-border-width
+/// font-size: {Number | String | Null},
+/// height: {Number | String | Null},
+/// padding-x: {Number | String | Null},
+/// padding-y: {Number | String}, // Default: 0
+/// lexicon-icon-height: {Number | String | Null},
+/// lexicon-icon-margin-top: {Number | String | Null},
+/// lexicon-icon-width: {Number | String | Null},
+/// @todo
+/// - Update or Deprecate this mixin in favor of a `clay-badge-variant` mixin
+
 @mixin clay-badge-size($map) {
 	$border-width: setter(map-get($map, border-width), $badge-border-width);
 	$font-size: map-get($map, font-size);

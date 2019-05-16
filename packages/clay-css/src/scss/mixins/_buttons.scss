@@ -1,3 +1,11 @@
+////
+/// @group buttons
+////
+
+/// A mixin that helps create custom button sizes
+/// @deprecated use the mixin `clay-button-variant` instead
+/// @param {Map} $map - A map of `key: value` pairs.
+
 @mixin clay-button-size($map) {
 	$breakpoint-down: map-get($map, breakpoint-down);
 
@@ -107,6 +115,86 @@
 		line-height: $section-line-height;
 	}
 }
+
+/// A mixin to create button variants, use this instead of `clay-button-size()`. You can base your variant off Bootstrap's `.btn` class or create your own base class (e.g., `<button class="btn my-custom-btn-primary"></button>` or `<button class="my-custom-btn my-custom-btn-primary"></button>`).
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// breakpoint-down: {String, Null}, // The Bootstrap 4 Breakpoint {xs | sm | md | lg | xl}
+/// align-items: {String | Null},
+/// bg: {Color | String | Null},
+/// border-color: {Color | String | List | Null},
+/// border-radius: {Number | String | List | Null},
+/// border-style: {String | Null},
+/// border-width: {Number | String | List | Null},
+/// bottom: {Number | String | Null},
+/// color: {Color | String | Null},
+/// cursor: {String | Null},
+/// display: {String | Null},
+/// flex-grow: {Number | String | Null},
+/// flex-shrink: {Number | String | Null},
+/// font-size: {Number | String | Null},
+/// font-weight: {Number | String | Null},
+/// height: {Number | String | Null},
+/// justify-content: {String | Null},
+/// left: {Number | String | Null},
+/// line-height: {Number | String | Null},
+/// margin-bottom: {Number | String | Null},
+/// margin-left: {Number | String | Null},
+/// margin-right: {Number | String | Null},
+/// margin-top: {Number | String | Null},
+/// opacity: {Number | String | Null},
+/// padding-bottom: {Number | String | Null},
+/// padding-left: {Number | String | Null},
+/// padding-right: {Number | String | Null},
+/// padding-top: {Number | String | Null},
+/// position: {String | Null},
+/// right: {Number | String | Null},
+/// text-decoration: {String | Null},
+/// top: {Number | String | Null},
+/// transition: {List | Null},
+/// user-select: {String | Null},
+/// vertical-align: {String | Null},
+/// white-space: {String | Null},
+/// width: {Number | String | Null},
+/// word-wrap: {String | Null},
+/// hover-bg: {Color | String | Null},
+/// hover-border-color: {Color | String | List | Null},
+/// hover-color: {Color | String | Null},
+/// hover-opacity: {Number | String | Null},
+/// hover-text-decoration: {String | Null},
+/// focus-bg: {Color | String | Null},
+/// focus-border-color: {Color | String | List | Null},
+/// focus-box-shadow: {String | List | Null}
+/// focus-color: {Color | String | Null},
+/// focus-opacity: {Number | String | Null},
+/// focus-outline: {Number | String | Null},
+/// disabled-bg: {Color | String | Null},
+/// disabled-border-color: {Color | String | List | Null},
+/// disabled-box-shadow: {String | List | Null},
+/// disabled-color: {Color | String | Null},
+/// disabled-cursor: {String | Null},
+/// disabled-opacity: {Number | String | Null},
+/// active-bg: {Color | String | Null},
+/// active-border-color: {Color | String | List | Null},
+/// active-box-shadow: {String | List | Null},
+/// active-color: {Color | String | Null},
+/// active-opacity: {Number | String | Null},
+/// active-focus-box-shadow: {String | List}, // Default: $focus-box-shadow
+/// inline-item-font-size: {Number | String | Null},
+/// section-font-size: {Number | String | Null},
+/// section-font-weight: {Number | String | Null},
+/// section-line-height: {Number | String | Null},
+/// font-size-mobile: {Number | String | Null},
+/// height-mobile: {Number | String | Null},
+/// padding-bottom-mobile: {Number | String | Null},
+/// padding-left-mobile: {Number | String | Null},
+/// padding-right-mobile: {Number | String | Null},
+/// padding-top-mobile: {Number | String | Null},
+/// width-mobile: {Number | String | Null},
+/// loading-animation: {String | Null}, // The placeholder name 'loading-animation' or 'loading-animation-light'
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
 
 @mixin clay-button-variant($map) {
 	$breakpoint-down: map-get($map, breakpoint-down);
