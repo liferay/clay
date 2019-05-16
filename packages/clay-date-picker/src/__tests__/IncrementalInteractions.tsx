@@ -44,7 +44,7 @@ describe('IncrementalInteractions', () => {
 	afterEach(cleanup);
 
 	it('date entered in the input element should reflect on the date picker', () => {
-		const {container, getByLabelText, getByTestId} = render(
+		const {getByLabelText, getByTestId} = render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
 				initialExpanded
@@ -64,11 +64,11 @@ describe('IncrementalInteractions', () => {
 		expect(dayNumber.classList).toContain('active');
 		expect(monthSelect.value).toBe('3');
 		expect(yearSelect.value).toBe('2019');
-		expect(container.firstChild).toMatchSnapshot();
+		expect(document.body).toMatchSnapshot();
 	});
 
 	it('clicking on the date icon should open the dropdown', () => {
-		const {container, getByTestId} = render(
+		const {getByTestId} = render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
 				placeholder="YYYY-MM-DD"
@@ -81,11 +81,11 @@ describe('IncrementalInteractions', () => {
 		fireEvent.click(getByTestId('date-button'), {});
 
 		expect(dropdown.classList).toContain('show');
-		expect(container.firstChild).toMatchSnapshot();
+		expect(document.body).toMatchSnapshot();
 	});
 
 	it('clicking on the date icon should close the dropdown when it is open', () => {
-		const {container, getByTestId} = render(
+		const {getByTestId} = render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
 				initialExpanded
@@ -99,29 +99,33 @@ describe('IncrementalInteractions', () => {
 		fireEvent.click(getByTestId('date-button'), {});
 
 		expect(dropdown.classList).not.toContain('show');
-		expect(container.firstChild).toMatchSnapshot();
+		expect(document.body).toMatchSnapshot();
 	});
 
 	it('clicking outside the dropdown should close the same', () => {
-		const {container, getByTestId} = render(
-			<DatePickerWithState
-				ariaLabels={ariaLabels}
-				initialExpanded
-				placeholder="YYYY-MM-DD"
-				spritemap={spritemap}
-			/>
+		const {getByTestId} = render(
+			<>
+				<DatePickerWithState
+					ariaLabels={ariaLabels}
+					initialExpanded
+					placeholder="YYYY-MM-DD"
+					spritemap={spritemap}
+				/>
+
+				<div data-testid="outsideElement">{'OUTSIDE ELEMENT'}</div>
+			</>
 		);
 
 		const dropdown = getByTestId('dropdown');
 
-		fireEvent.click(document.body, {});
+		fireEvent.mouseDown(getByTestId('outsideElement'), {});
 
 		expect(dropdown.classList).not.toContain('show');
-		expect(container.firstChild).toMatchSnapshot();
+		expect(document.body).toMatchSnapshot();
 	});
 
 	it('clicking a month on the selector should change the content to the corresponding month', () => {
-		const {container, getByTestId} = render(
+		const {getByTestId} = render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
 				initialExpanded
@@ -139,11 +143,11 @@ describe('IncrementalInteractions', () => {
 		});
 
 		expect(monthSelect.value).toBe('6');
-		expect(container.firstChild).toMatchSnapshot();
+		expect(document.body).toMatchSnapshot();
 	});
 
 	it('clicking on the year selector should switch to the year of the corresponding month selected', () => {
-		const {container, getByTestId} = render(
+		const {getByTestId} = render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
 				initialExpanded
@@ -165,7 +169,7 @@ describe('IncrementalInteractions', () => {
 		});
 
 		expect(yearSelect.value).toBe('2018');
-		expect(container.firstChild).toMatchSnapshot();
+		expect(document.body).toMatchSnapshot();
 	});
 
 	it('clicking on the back arrow button the content must be updated with the corresponding month', () => {
@@ -194,7 +198,7 @@ describe('IncrementalInteractions', () => {
 	});
 
 	it('clicking on the dot button should select current date', () => {
-		const {container, getByLabelText} = render(
+		const {getByLabelText} = render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
 				initialExpanded
@@ -211,7 +215,7 @@ describe('IncrementalInteractions', () => {
 
 		expect(input.value).toBe('2019-04-18');
 		expect(dayNumber.classList).toContain('active');
-		expect(container.firstChild).toMatchSnapshot();
+		expect(document.body).toMatchSnapshot();
 	});
 
 	it('clicking on the next arrow button the content must be updated with the corresponding month', () => {

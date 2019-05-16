@@ -29,7 +29,7 @@ function setCollapseHeight(collapseElementRef: React.RefObject<any>) {
 	}
 }
 
-export function useTransitionHeight(
+function useTransitionHeight(
 	visible: Boolean,
 	setVisible: any,
 	contentRef: React.RefObject<any>
@@ -74,4 +74,4 @@ export function useTransitionHeight(
 	];
 }
 
-export default {useTransitionHeight};
+export default useTransitionHeight;

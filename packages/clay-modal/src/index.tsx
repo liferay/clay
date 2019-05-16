@@ -10,7 +10,7 @@ import Context, {IContext} from './Context';
 import Footer, {FooterProps} from './Footer';
 import Header, {HeaderProps} from './Header';
 import React, {FunctionComponent, useEffect, useRef, useState} from 'react';
-import {createPortal} from 'react-dom';
+import {Portal} from '@clayui/shared';
 import {Size} from './types';
 import {useUserInteractions} from './Hook';
 
@@ -22,20 +22,6 @@ interface Props extends React.HTMLAttributes<HTMLDivElement>, IContext {
 	 */
 	size?: Size;
 }
-
-const Portal = ({children}: {children: React.ReactNode}) => {
-	const portalRef = useRef(document.createElement('div')).current;
-	const elToMountTo = document && document.body;
-
-	useEffect(() => {
-		elToMountTo.appendChild(portalRef);
-		return () => {
-			elToMountTo.removeChild(portalRef);
-		};
-	}, [elToMountTo]);
-
-	return createPortal(children, portalRef);
-};
 
 const delay = (fn: Function) => {
 	setTimeout(() => {

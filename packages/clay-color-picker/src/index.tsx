@@ -6,11 +6,12 @@
 
 import Basic from './Basic';
 import Custom from './Custom';
+import DropDown from '@clayui/drop-down';
 import React, {useEffect, useRef, useState} from 'react';
 import Splotch from './Splotch';
 import tinycolor from 'tinycolor2';
 import {sub} from './util';
-import {useDropdownCloseInteractions, useHexInput} from './hooks';
+import {useHexInput} from './hooks';
 
 const DEFAULT_COLORS = [
 	'000000',
@@ -125,14 +126,13 @@ const ColorPicker: React.FunctionComponent<Props> = ({
 	useNative = false,
 	value = 'FFFFFF',
 }) => {
+	const triggerElementRef = useRef<HTMLDivElement>(null);
 	const dropdownContainerRef = useRef<HTMLDivElement>(null);
 	const inputRef = useRef<HTMLInputElement>(null);
 	const valueInputRef = useRef<HTMLInputElement>(null);
 
 	const [active, setActive] = useState(false);
 	const [hexInputValue, setHexInputValue] = useHexInput(value);
-
-	useDropdownCloseInteractions(dropdownContainerRef, setActive);
 
 	useEffect(() => {
 		if (document.activeElement !== inputRef.current) {
@@ -157,16 +157,13 @@ const ColorPicker: React.FunctionComponent<Props> = ({
 
 			{title && <label>{title}</label>}
 
-			<div className="clay-color input-group">
+			<div className="clay-color input-group" ref={triggerElementRef}>
 				<div
 					className={`input-group-item input-group-item-shrink${
 						showHex ? ' input-group-prepend' : ''
 					}`}
 				>
-					<div
-						className="input-group-text"
-						ref={dropdownContainerRef}
-					>
+					<div className="input-group-text">
 						<Splotch
 							aria-label={ariaLabels.selectColor}
 							className="dropdown-toggle"
@@ -178,34 +175,6 @@ const ColorPicker: React.FunctionComponent<Props> = ({
 							size={28}
 							value={value}
 						/>
-
-						{active && (
-							<div className="clay-color-dropdown-menu dropdown-menu show">
-								{!onColorsChange && (
-									<Basic
-										colors={colors || DEFAULT_COLORS}
-										label={label}
-										onChange={onValueChange}
-									/>
-								)}
-
-								{onColorsChange && (
-									<Custom
-										colors={
-											colors
-												? colors
-														.concat(BLANK_COLORS)
-														.slice(0, 12)
-												: BLANK_COLORS
-										}
-										label={label}
-										onChange={onValueChange}
-										onColorsChange={onColorsChange}
-										spritemap={spritemap}
-									/>
-								)}
-							</div>
-						)}
 					</div>
 				</div>
 
@@ -246,6 +215,36 @@ const ColorPicker: React.FunctionComponent<Props> = ({
 					</div>
 				)}
 			</div>
+
+			<DropDown.Menu
+				active={active}
+				alignElementRef={triggerElementRef}
+				className="clay-color-dropdown-menu"
+				onSetActive={setActive}
+				ref={dropdownContainerRef}
+			>
+				{!onColorsChange && (
+					<Basic
+						colors={colors || DEFAULT_COLORS}
+						label={label}
+						onChange={onValueChange}
+					/>
+				)}
+
+				{onColorsChange && (
+					<Custom
+						colors={
+							colors
+								? colors.concat(BLANK_COLORS).slice(0, 12)
+								: BLANK_COLORS
+						}
+						label={label}
+						onChange={onValueChange}
+						onColorsChange={onColorsChange}
+						spritemap={spritemap}
+					/>
+				)}
+			</DropDown.Menu>
 		</div>
 	);
 };

@@ -1,0 +1,338 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayDropDown renders dropdown menu when clicked 1`] = `
+<body>
+  <div>
+    <div
+      class="dropdown"
+    >
+      <span
+        style="display: inline-block;"
+      >
+        <button
+          class="dropdown-toggle"
+        >
+          Click Me
+        </button>
+      </span>
+    </div>
+  </div>
+  <div>
+    <div
+      class="dropdown-menu show"
+      style="top: 0px; left: 0px;"
+    >
+      <ul
+        class="list-unstyled"
+      >
+        <li>
+          <a
+            class="dropdown-item"
+            href="#one"
+          >
+            one
+          </a>
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            href="#two"
+          >
+            two
+          </a>
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            href="#three"
+          >
+            three
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`ClayDropDown renders with groups 1`] = `
+<body>
+  <div>
+    <div
+      class="dropdown"
+    >
+      <span
+        style="display: inline-block;"
+      >
+        <button
+          class="dropdown-toggle"
+        >
+          Click Me
+        </button>
+      </span>
+    </div>
+  </div>
+  <div>
+    <div
+      class="dropdown-menu show"
+      style="top: 0px; left: 0px;"
+    >
+      <ul
+        class="list-unstyled"
+      >
+        <li
+          class="dropdown-subheader"
+          role="presentation"
+        >
+          Group #1
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            href="#one"
+          >
+            one
+          </a>
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            href="#two"
+          >
+            two
+          </a>
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            href="#three"
+          >
+            three
+          </a>
+        </li>
+        <li
+          class="dropdown-subheader"
+          role="presentation"
+        >
+          Group #2
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            href="#one"
+          >
+            one
+          </a>
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            href="#two"
+          >
+            two
+          </a>
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            href="#three"
+          >
+            three
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`ClayDropDown renders with icons 1`] = `
+<body>
+  <div>
+    <div
+      class="dropdown"
+    >
+      <span
+        style="display: inline-block;"
+      >
+        <button
+          class="dropdown-toggle"
+        >
+          Click Me
+        </button>
+      </span>
+    </div>
+  </div>
+  <div>
+    <div
+      class="dropdown-menu dropdown-menu-indicator-end dropdown-menu-indicator-start show"
+      style="top: 0px; left: 0px;"
+    >
+      <ul
+        class="list-unstyled"
+      >
+        <li>
+          <span
+            class="dropdown-item"
+          >
+            <span
+              class="dropdown-item-indicator-start"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-trash"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/foo/bar#trash"
+                />
+              </svg>
+            </span>
+            Left
+          </span>
+        </li>
+        <li>
+          <span
+            class="dropdown-item"
+          >
+            Right
+            <span
+              class="dropdown-item-indicator-end"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-check"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/foo/bar#check"
+                />
+              </svg>
+            </span>
+          </span>
+        </li>
+        <li>
+          <span
+            class="dropdown-item"
+          >
+            <span
+              class="dropdown-item-indicator-start"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-trash"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/foo/bar#trash"
+                />
+              </svg>
+            </span>
+            Both
+            <span
+              class="dropdown-item-indicator-end"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-check"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/foo/bar#check"
+                />
+              </svg>
+            </span>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`ClayDropDown renders with search input 1`] = `
+<body>
+  <div>
+    <div
+      class="dropdown"
+    >
+      <span
+        style="display: inline-block;"
+      >
+        <button
+          class="dropdown-toggle"
+        >
+          Click Me
+        </button>
+      </span>
+    </div>
+  </div>
+  <div>
+    <div
+      class="dropdown-menu show"
+      style="top: 0px; left: 0px;"
+    >
+      <form>
+        <div
+          class="dropdown-section"
+        >
+          <div
+            class="input-group input-group-sm"
+          >
+            <div
+              class="input-group-item"
+            >
+              <input
+                class="form-control input-group-inset input-group-inset-after"
+                type="text"
+                value="test"
+              />
+              <span
+                class="input-group-inset-item input-group-inset-item-after"
+              >
+                <button
+                  class="btn btn-unstyled"
+                  type="button"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-search"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="/foo/bar#search"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </form>
+      <ul
+        class="list-unstyled"
+      >
+        <li>
+          <a
+            class="dropdown-item"
+            href="#one"
+          >
+            one
+          </a>
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            href="#two"
+          >
+            two
+          </a>
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            href="#three"
+          >
+            three
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+`;

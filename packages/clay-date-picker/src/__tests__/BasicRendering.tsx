@@ -5,15 +5,17 @@
  */
 
 import * as React from 'react';
-import * as TestRenderer from 'react-test-renderer';
+import {cleanup, render} from 'react-testing-library';
 
 import ClayDatePicker from '..';
 
 const spritemap = 'icons.svg';
 
 describe('BasicRendering', () => {
+	afterEach(cleanup);
+
 	it('renders by default', () => {
-		const component = TestRenderer.create(
+		render(
 			<ClayDatePicker
 				initialMonth={new Date(2019, 3, 18)}
 				onValueChange={() => {}}
@@ -23,11 +25,11 @@ describe('BasicRendering', () => {
 			/>
 		);
 
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(document.body).toMatchSnapshot();
 	});
 
 	it('renders date picker with dropdown open', () => {
-		const component = TestRenderer.create(
+		render(
 			<ClayDatePicker
 				initialExpanded
 				initialMonth={new Date(2019, 3, 18)}
@@ -38,11 +40,11 @@ describe('BasicRendering', () => {
 			/>
 		);
 
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(document.body).toMatchSnapshot();
 	});
 
 	it('renders date picker with time', () => {
-		const component = TestRenderer.create(
+		render(
 			<ClayDatePicker
 				initialExpanded
 				initialMonth={new Date(2019, 3, 18)}
@@ -55,11 +57,11 @@ describe('BasicRendering', () => {
 			/>
 		);
 
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(document.body).toMatchSnapshot();
 	});
 
 	it('renders date picker with native picker', () => {
-		const component = TestRenderer.create(
+		render(
 			<ClayDatePicker
 				initialExpanded
 				initialMonth={new Date(2019, 3, 18)}
@@ -71,11 +73,11 @@ describe('BasicRendering', () => {
 			/>
 		);
 
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(document.body).toMatchSnapshot();
 	});
 
 	it('renders the date picker with years range', () => {
-		const component = TestRenderer.create(
+		render(
 			<ClayDatePicker
 				initialExpanded
 				initialMonth={new Date(2019, 3, 18)}
@@ -90,6 +92,6 @@ describe('BasicRendering', () => {
 			/>
 		);
 
-		expect(component.toJSON()).toMatchSnapshot();
+		expect(document.body).toMatchSnapshot();
 	});
 });
