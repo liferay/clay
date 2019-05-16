@@ -4,18 +4,15 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import LRU from 'lru-cache';
 import {
 	FetchPolicy,
 	IDataProvider,
-	IFetchRetry,
-	IFetchRetryDelay,
 	NetworkStatus,
-	SYMBOL_DATA_PROVIDER,
 	SYMBOL_ORIGIN,
-	TSymbolData,
+	TVariables,
 } from './types';
 import {timeout} from './util';
+import {useCache} from './useCache';
 import {useDebounce} from '@clayui/shared';
 import {useEffect, useRef, useState} from 'react';
 
@@ -23,7 +20,7 @@ interface IResource extends IDataProvider {
 	onNetworkStatusChange?: (status: NetworkStatus) => void;
 }
 
-const evaluteVariables = (variables: any): string | null => {
+const getQueryParams = (variables: any): string | null => {
 	if (!variables) {
 		return null;
 	}
@@ -60,14 +57,6 @@ const useResource = ({
 }: IResource) => {
 	const [resource, setResource] = useState<any>(null);
 
-	const getStorageCache = () => {
-		if (!storage[SYMBOL_DATA_PROVIDER]) {
-			storage[SYMBOL_DATA_PROVIDER] = new LRU(storageMaxSize);
-		}
-
-		return storage[SYMBOL_DATA_PROVIDER] as TSymbolData;
-	};
-
 	let networkStatus = useRef<NetworkStatus>(NetworkStatus.Unused).current;
 
 	let pollingIntervalId = useRef<null | NodeJS.Timeout>(null).current;
@@ -76,7 +65,13 @@ const useResource = ({
 
 	const firstRenderRef = useRef<boolean>(true);
 
-	const cache = useRef<TSymbolData>(getStorageCache()).current;
+	const cache = useCache(
+		fetchPolicy,
+		storage,
+		storageMaxSize,
+		link,
+		variables
+	);
 
 	const debouncedVariablesChange = useDebounce(variables, fetchDelay);
 
@@ -86,7 +81,7 @@ const useResource = ({
 	};
 
 	const handleRefetch = () => {
-		handleFetch();
+		doFetch();
 		setNetworkStatus(NetworkStatus.Refetch);
 	};
 
@@ -126,7 +121,7 @@ const useResource = ({
 			);
 
 			retryDelayIntervalId = setInterval(() => {
-				handleFetch(retryAttempts + 1);
+				doFetch(retryAttempts + 1);
 			}, delay);
 		} else {
 			setNetworkStatus(NetworkStatus.Error);
@@ -141,53 +136,6 @@ const useResource = ({
 		}
 	};
 
-	const cacheSatisfies = () => {
-		if (typeof link === 'string') {
-			return `${link}:${JSON.stringify(variables)}`;
-		}
-
-		return null;
-	};
-
-	const evaluteCachePolicy = () => {
-		switch (fetchPolicy) {
-			case FetchPolicy.CacheFirst:
-			case FetchPolicy.CacheAndNetwork:
-				return true;
-			case FetchPolicy.NoCache:
-			default:
-				return false;
-		}
-	};
-
-	const getCache = () => {
-		const key = cacheSatisfies();
-
-		if (key && cache.has(key)) {
-			return cache.get(key);
-		}
-
-		return null;
-	};
-
-	const evaluteSetCache = (value: any) => {
-		const key = cacheSatisfies();
-
-		if (key) {
-			return cache.set(key, value);
-		}
-
-		return null;
-	};
-
-	const setupPoll = () => {
-		cleanPoll();
-
-		pollingIntervalId = setInterval(() => {
-			performFetch(NetworkStatus.Polling);
-		}, pollInterval);
-	};
-
 	const fetchOnComplete = (result: any) => {
 		// Should clear retry interval if any of the
 		// attempts are successful.
@@ -196,45 +144,32 @@ const useResource = ({
 		setResource(result);
 		setNetworkStatus(NetworkStatus.Unused);
 
-		if (evaluteCachePolicy()) {
-			evaluteSetCache(result);
-		}
+		cache.set(result);
 
 		if (pollInterval > 0) {
-			setupPoll();
+			cleanPoll();
+
+			pollingIntervalId = setInterval(() => {
+				maybeFetch(NetworkStatus.Polling);
+			}, pollInterval);
 		}
 	};
 
-	const performCache = () => {
-		if (evaluteCachePolicy()) {
-			const cacheData = getCache();
-
-			if (cacheData) {
-				fetchOnComplete(cacheData);
-
-				// When fetch policy is only cache-first and gets the data from
-				// the cache, it should not perform a request, only when it is
-				// cache-and-network.
-				if (fetchPolicy === FetchPolicy.CacheFirst) {
-					return false;
-				}
-			}
-		}
-
-		return true;
-	};
-
-	const evaluateUrl = (): string => {
+	const getUrlFormat = (
+		link: string,
+		variables: TVariables,
+		fetchOptions?: RequestInit
+	) => {
 		if (fetchOptions && fetchOptions.method !== 'GET') {
-			return link as string;
+			return link;
 		}
 
-		const query = evaluteVariables(variables);
+		const query = getQueryParams(variables);
 
-		return query ? `${link}/${query}` : (link as string);
+		return query ? `${link}/${query}` : link;
 	};
 
-	const handleFetch = (retryAttempts = 0) => {
+	const doFetch = (retryAttempts = 0) => {
 		let promise: Promise<any>;
 
 		switch (typeof link) {
@@ -242,9 +177,10 @@ const useResource = ({
 				promise = link();
 				break;
 			case 'string':
-				promise = fetch(evaluateUrl(), fetchOptions).then(res =>
-					res.json()
-				);
+				promise = fetch(
+					getUrlFormat(link, variables, fetchOptions),
+					fetchOptions
+				).then(res => res.json());
 				break;
 			default:
 				return null;
@@ -255,21 +191,32 @@ const useResource = ({
 			.catch(err => handleFetchRetry(err, retryAttempts));
 	};
 
-	const performFetch = (status: NetworkStatus) => {
-		if (performCache()) {
-			setNetworkStatus(status);
-			handleFetch();
+	const maybeFetch = (status: NetworkStatus) => {
+		const cacheData = cache.get();
+
+		if (cacheData) {
+			fetchOnComplete(cacheData);
+
+			// When fetch policy is only cache-first and gets the data from
+			// the cache, it should not perform a request, only when it is
+			// cache-and-network.
+			if (fetchPolicy === FetchPolicy.CacheFirst) {
+				return false;
+			}
 		}
+
+		setNetworkStatus(status);
+		doFetch();
 	};
 
 	useEffect(() => {
 		if (!firstRenderRef.current) {
-			performFetch(NetworkStatus.Refetch);
+			maybeFetch(NetworkStatus.Refetch);
 		}
 	}, [debouncedVariablesChange]);
 
 	useEffect(() => {
-		performFetch(NetworkStatus.Loading);
+		maybeFetch(NetworkStatus.Loading);
 		firstRenderRef.current = false;
 
 		return () => {

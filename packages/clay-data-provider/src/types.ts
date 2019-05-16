@@ -36,6 +36,10 @@ export enum FetchPolicy {
 
 export type TSymbolData = LRU<{}, {}>;
 
+export type TLink = Function | string;
+
+export type TVariables = Object | null;
+
 export interface IStorage {
 	[SYMBOL_DATA_PROVIDER]?: TSymbolData;
 	[SYMBOL_ORIGIN]?: boolean;
@@ -131,7 +135,7 @@ export interface IDataProvider {
 	 * you will lose some benefits of the data provider,
 	 * always try to avoid.
 	 */
-	link: Function | string;
+	link: TLink;
 
 	/**
 	 * The interval is set in milliseconds, setting the value to zero
@@ -170,5 +174,5 @@ export interface IDataProvider {
 	 * output for the link:
 	 * '/?name=Matu'
 	 */
-	variables?: Object | null;
+	variables?: TVariables;
 }
