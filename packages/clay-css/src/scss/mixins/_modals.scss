@@ -1,5 +1,21 @@
-// Creates a Modal color variant
-// @param $map - Sass map that contain Modal Variant properties to modify
+////
+/// @group modals
+////
+
+/// A mixin to create a Modal color variant. This is used in `.modal-danger`, `.modal-info`, `.modal-success`, and `.modal-warning`.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// header-bg: {Color | String | Null},
+/// header-border-color: {Color | String | List | Null},
+/// header-color: {Color | String | Null},
+///	// header-close-color is deprecated in v2.0.0-rc.12 use header-close instead
+/// header-close-color: {Color | String},
+/// header-close: {Map | Null}, // Pass parameters to `clay-link` mixin
+/// body-bg: {Color | String | Null},
+/// body-color: {Color | String | Null},
+/// footer-bg: {Color | String | Null},
+/// footer-border-color: {Color | String | List | Null},
+
 
 @mixin clay-modal-variant($map) {
 	$header-bg: map-get($map, header-bg);

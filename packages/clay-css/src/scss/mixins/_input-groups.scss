@@ -1,3 +1,21 @@
+////
+/// @group inputGroups
+////
+
+/// A mixin that stacks an `.input-group` that uses an `.input-group-item` at a specific `max-width` breakpoint. This sets the `.input-group-item` width to 100% and `.input-group-item-shrink` width to auto at the `max-width` breakpoint.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// breakpoint: {String | Null}, // This uses Bootstrap 4's breakpoint up to calculate breakpoint down. Use `breakpoint-down` instead. // Default: md
+/// breakpoint-down: {String, Null}, // The Bootstrap 4 Breakpoint {xs | sm | md | lg | xl}
+/// item-margin-bottom: {Number | String | Null}, // `.input-group-item`
+/// item-margin-left: {Number | String | Null}, // `.input-group-item`
+/// item-margin-right: {Number | String | Null}, // `.input-group-item`
+/// item-margin-top: {Number | String | Null}, // `.input-group-item`
+/// shrink-margin-bottom: {Number | String | Null}, // `.input-group-item-shrink`
+/// shrink-margin-left: {Number | String | Null}, // `.input-group-item-shrink`
+/// shrink-margin-right: {Number | String | Null}, // `.input-group-item-shrink`
+/// shrink-margin-top: {Number | String | Null}, // `.input-group-item-shrink`
+
 @mixin clay-input-group-stacked($map) {
 	$breakpoint: setter(map-get($map, breakpoint), md);
 	$breakpoint-down: clay-breakpoint-prev($breakpoint);
@@ -30,6 +48,31 @@
 		}
 	}
 }
+
+/// A mixin for customizing or creating variants of `input-group-text`.
+/// @deprecated use `clay-container` instead
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// align-items: {String | Null},
+/// bg: {Color | String | Null},
+/// border-color: {Color | String | List | Null},
+/// border-radius: {Number | String | List | Null},
+/// border-style: {String | List | Null},
+/// border-width: {Number | String | List | Null},
+/// color: {Color | String | Null},
+/// display: {String | Null},
+/// font-size: {Number | String | Null},
+/// font-weight: {Number | String | Null},
+/// height: {Number | String | Null},
+/// justify-content: {String | Null},
+/// line-height: {Number | String | Null},
+/// min-width: {Number | String | Null},
+/// padding-bottom: {Number | String | Null},
+/// padding-left: {Number | String | Null},
+/// padding-right: {Number | String | Null},
+/// padding-top: {Number | String | Null},
+/// text-align: {String | Null},
+/// white-space: {String | Null},
 
 @mixin clay-input-group-text-variant($map) {
 	$align-items: map-get($map, align-items);

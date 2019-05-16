@@ -1,3 +1,13 @@
+////
+/// @group utilities
+////
+
+/// A mixin for creating monospaced elements.
+/// @param {Number} $size - The width and height of the element
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
+
 @mixin clay-monospace($size) {
 	height: $size;
 	line-height: $size;
