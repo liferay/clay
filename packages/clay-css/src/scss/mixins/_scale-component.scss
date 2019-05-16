@@ -1,3 +1,10 @@
+////
+/// @group utilities
+////
+
+/// A mixin to help trigger the "mobile" view in most Clay CSS components. The Base Theme is set to `false`. The Atlas Theme is set to `true` and the breakpoint is `media-breakpoint-down(sm)` or `max-width: 767px`. You can change the breakpoint by modifying the global variable `$scaling-breakpoint-down`.
+/// @param {Bool} $scale[$enable-scaling-components] - Enables or disables this mixin
+
 @mixin clay-scale-component($scale: $enable-scaling-components) {
 	@if ($scale) {
 		@include media-breakpoint-down($scaling-breakpoint-down) {

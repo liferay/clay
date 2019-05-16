@@ -1,3 +1,7 @@
+////
+/// @group Forms
+////
+
 @mixin clay-form-control-focus() {
 	background-color: $input-focus-bg;
 	border-color: $input-focus-border-color;
@@ -5,6 +9,70 @@
 	color: $input-focus-color;
 	outline: 0;
 }
+
+/// A mixin to create Form Control variants. You can base your variant off Bootstrap's `.form-control` class or create your own base class (e.g., `<input class="form-control my-custom-form-control" type="text" />` or `<input class="my-custom-form-control" type="text" />`).
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// bg: {Color | String | Null},
+/// bg-clip: {String | Null},
+/// bg-image: {String | List | Null},
+/// bg-position: {String | List | Null},
+/// bg-repeat: {String | List | Null},
+/// bg-size: {Number | String | List | Null},
+/// border-color: {Color | String | List | Null},
+/// border-radius: {Number | String | List | Null},
+/// border-style: {String | List | Null},
+/// border-width: {Number | String | List | Null},
+/// box-shadow: {String | List | Null},
+/// color: {Color | String | Null},
+/// cursor: {String | Null},
+/// display: {String | Null},
+/// font-size: {Number | String | Null},
+/// font-weight: {Number | String | Null},
+/// height: {Number | String | Null},
+/// line-height: {Number | String | Null},
+/// min-width: {Number | String | Null},
+/// outline: {Number | String | Null},
+/// padding-bottom: {Number | String | Null},
+/// padding-left: {Number | String | Null},
+/// padding-right: {Number | String | Null},
+/// padding-top: {Number | String | Null},
+/// text-align: {String | Null},
+/// transition: {String | List | Null},
+/// width: {Number | String | Null},
+/// placeholder-color: {Color | String | Null},
+/// placeholder-opacity: {Number | String | Null},
+/// hover-bg: {Color | String | Null},
+/// hover-border-color: {Color | String | List | Null},
+/// hover-box-shadow: {String | List | Null},
+/// hover-color: {Color | String | Null},
+/// hover-placeholder-color: {Color | String | Null},
+/// focus-bg: {Color | String | Null},
+/// focus-bg-image: {String | List | Null},
+/// focus-border-color: {Color | String | List | Null},
+/// focus-box-shadow: {String | List | Null},
+/// focus-color: {Color | String | Null},
+/// focus-placeholder-color: {Color | String | Null},
+/// readonly-bg: {Color | String | Null},
+/// readonly-bg-image: {String | List | Null},
+/// readonly-border-color: {Color | String | List | Null},
+/// readonly-box-shadow: {String | List | Null},
+/// readonly-color: {Color | String | Null},
+/// readonly-cursor: {String | Null},
+/// readonly-opacity: {Number | String | Null},
+/// readonly-placeholder-color: {Color | String | Null},
+/// disabled-bg: {Color | String | Null},
+/// disabled-bg-image: {String | List | Null},
+/// disabled-border-color: {Color | String | List | Null},
+/// disabled-box-shadow: {String | List | Null},
+/// disabled-color: {Color | String | Null},
+/// disabled-cursor: {String | Null},
+/// disabled-opacity: {Number | String | Null},
+/// disabled-placeholder-color: {Color | String | Null},
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
 
 @mixin clay-form-control-variant($map) {
 	$enabled: setter(map-get($map, enabled), true);
@@ -157,6 +225,56 @@
 	}
 }
 
+/// A mixin to create Select Form Control variants. You can base your variant off Bootstrap's `select.form-control` selector or create your own base class (e.g., `<select class="form-control my-custom-form-control"></select>` or `<select class="my-custom-form-control"></select>`).
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// appearance: {String | Null},
+/// bg: {Color | String | Null},
+/// bg-clip: {String | Null},
+/// bg-image: {String | List | Null},
+/// bg-position: {String | List | Null},
+/// bg-repeat: {String | List | Null},
+/// bg-size: {Number | String | List | Null},
+/// border-color: {Color | String | List | Null},
+/// border-radius: {Number | String | List | Null},
+/// border-style: {String | List | Null},
+/// border-width: {Number | String | List | Null},
+/// box-shadow: {String | List | Null},
+/// color: {Color | String | Null},
+/// cursor: {String | Null},
+/// display: {String | Null},
+/// font-size: {Number | String | Null},
+/// font-weight: {Number | String | Null},
+/// height: {Number | String | Null},
+/// line-height: {Number | String | Null},
+/// min-width: {Number | String | Null},
+/// outline: {Number | String | Null},
+/// padding-bottom: {Number | String | Null},
+/// padding-left: {Number | String | Null},
+/// padding-right: {Number | String | Null},
+/// padding-top: {Number | String | Null},
+/// transition: {String | List | Null},
+/// width: {Number | String | Null},
+/// hover-bg: {Color | String | Null},
+/// hover-border-color: {Color | String | List | Null},
+/// hover-box-shadow: {String | List | Null},
+/// hover-color: {Color | String | Null},
+/// focus-bg: {Color | String | Null},
+/// focus-bg-image: {String | List | Null},
+/// focus-border-color: {Color | String | List | Null},
+/// focus-box-shadow: {String | List | Null},
+/// focus-color: {Color | String | Null},
+/// disabled-bg: {Color | String | Null},
+/// disabled-bg-image: {String | List | Null},
+/// disabled-border-color: {Color | String | List | Null},
+/// disabled-box-shadow: {String | List | Null},
+/// disabled-color: {Color | String | Null},
+/// disabled-cursor: {String | Null},
+/// disabled-opacity: {Number | String | Null},
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
+
 @mixin clay-select-variant($map) {
 	$appearance: map-get($map, appearance);
 	$bg: map-get($map, bg);
@@ -203,7 +321,7 @@
 	$disabled-box-shadow: map-get($map, disabled-box-shadow);
 	$disabled-color: map-get($map, disabled-color);
 	$disabled-cursor: map-get($map, disabled-cursor);
-	$disabled-opacity:  map-get($map, disabled-opacity);
+	$disabled-opacity: map-get($map, disabled-opacity);
 
 	background-clip: $bg-clip;
 	border-color: $border-color;

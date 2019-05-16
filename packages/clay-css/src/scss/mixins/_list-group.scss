@@ -1,3 +1,33 @@
+////
+/// @group listGroup
+////
+
+/// A mixin for creating `.list-group-notification .list-group-item` variants. 
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// bg: {Color | String | Null}, // Default: $list-group-bg
+/// border-bottom-color: {Color | Null}, // Default: $list-group-notification-item-border-bottom-color
+/// border-left-color: {Color | Null}, // Default: $list-group-notification-item-border-left-color
+/// border-right-color: {Color | Null}, // Default: $list-group-notification-item-border-right-color
+/// border-top-color: {Color | Null}, // Default: $list-group-notification-item-border-top-color
+/// border-bottom-width: {Number | Null}, // Default: $list-group-notification-item-border-bottom-width
+/// border-left-width: {Number | Null}, // Default: $list-group-notification-item-border-left-width
+/// border-right-width: {Number | Null}, // Default: $list-group-notification-item-border-right-width
+/// border-top-width: {Number | Null}, // Default: $list-group-notification-item-border-top-width
+/// border-bottom-left-radius: {Number | String | Null},
+/// border-bottom-right-radius: {Number | String | Null},
+/// border-top-left-radius: {Number | String | Null},
+/// border-top-right-radius: {Number | String | Null},
+/// color: {Color | String | Null},
+/// active-bg: {Color | String | Null}, // Default: $list-group-active-bg
+/// active-border-bottom-color: {Color | Null}, // Default: $list-group-notification-item-active-border-bottom-color
+/// active-border-left-color: {Color | Null}, // Default: $list-group-notification-item-active-border-left-color
+/// active-border-right-color: {Color | Null}, // Default: $list-group-notification-item-active-border-right-color
+/// active-border-top-color: {Color | Null}, // Default: $list-group-notification-item-active-border-top-color
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
+
 @mixin clay-list-group-notification-item-variant($map) {
 	$bg: setter(map-get($map, bg), $list-group-bg);
 	$border-bottom-color: setter(map-get($map, border-bottom-color), $list-group-notification-item-border-bottom-color);
