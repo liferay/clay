@@ -9,8 +9,19 @@ import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
 
 interface Props extends React.HTMLAttributes<HTMLInputElement> {
+	/**
+	 * Callback for when input value changes.
+	 */
 	onChange: (event: React.FormEvent<HTMLInputElement>) => void;
+
+	/**
+	 * Path to icon spritemap from clay-css.
+	 */
 	spritemap: string;
+
+	/**
+	 * Value of the searchInput
+	 */
 	value: React.ReactText;
 }
 

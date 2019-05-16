@@ -17,11 +17,34 @@ import Menu, {Align} from './Menu';
 import Search from './Search';
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
+	/**
+	 * Flag to indicate if the DropDown menu is active or not.
+	 */
 	active: boolean;
+
+	/**
+	 * Default position of menu element. Values come from `metal-position`.
+	 */
 	alignmentPosition: number;
+
+	/**
+	 * Flag to indicate if menu contains icon symbols on the right side.
+	 */
 	hasRightSymbols?: boolean;
+
+	/**
+	 * Flag to indicate if menu contains icon symbols on the left side.
+	 */
 	hasLeftSymbols?: boolean;
+
+	/**
+	 * Callback for when the active state changes.
+	 */
 	onActiveChange: (val: boolean) => void;
+
+	/**
+	 * Element that is used as the trigger which will activate the dropdown on click.
+	 */
 	trigger: React.ReactElement;
 }
 
