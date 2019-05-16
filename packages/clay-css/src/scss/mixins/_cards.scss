@@ -1,3 +1,38 @@
+////
+/// @group Cards
+////
+
+/// A mixin that styles a Card Section (e.g., `.card-header`, `.card-body`, `.card-footer` or `.card-row`). This mixin is used by `clay-card-variant`.
+/// @param {Map} $map - A map of key-value pairs. The keys are defined in the mixin. Example below:
+/// @example
+/// enabled: {Bool},  // Set to false to prevent mixin styles from being output. Default: true
+/// bg: {Color | String | Null},
+/// border-color: {Color | String | List | Null},
+/// border-radius: {Number | String | List | Null},
+/// border-style: {String | List | Null},
+/// border-width: {Number | String | List | Null},
+/// display: {String | Null},
+/// flex-basis: {Number | String | Null},
+/// flex-direction: {String | Null},
+/// flex-grow: {Number | String | Null},
+/// flex-shrink: {Number | String | Null},
+/// flex-wrap: {String | Null},
+/// margin-bottom: {Number | String | Null},
+/// margin-left: {Number | String | Null},
+/// margin-right: {Number | String | Null},
+/// margin-top: {Number | String | Null},
+/// padding-bottom: {Number | String | Null},
+/// padding-left: {Number | String | Null},
+/// padding-right: {Number | String | Null},
+/// padding-top: {Number | String | Null},
+/// text-align: {String | Null},
+/// width: {Number | String | Null},
+/// autofit-col-padding-left: {Number | String | Null},
+/// autofit-col-padding-right: {Number | String | Null},
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
+
 @mixin clay-card-section-variant($map) {
 	$enabled: setter(map-get($map, enabled), true);
 
@@ -55,6 +90,71 @@
 		}
 	}
 }
+
+/// A mixin that styles a custom Card.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// enabled: {Bool},  // Set to false to prevent mixin styles from being output. Default: true
+/// bg: {Color | String | Null},
+/// border-color: {Color | String | List | Null},
+/// border-style: {String | List | Null},
+/// border-width: {Number | String | List | Null},
+/// box-shadow: {String | List | Null},
+/// cursor: {String | Null},
+/// color: {Color | String | Null},
+/// display: {String | Null},
+/// flex-basis: {Number | String | Null},
+/// flex-direction: {String | Null},
+/// flex-grow: {Number | String | Null},
+/// flex-shrink: {Number | String | Null},
+/// margin-bottom: {Number | String | Null},
+/// min-width: {Number | String | Null},
+/// outline: {Number | String | Null},
+/// position: {String | Null},
+/// text-decoration: {String | Null},
+/// transition: {String | List | Null},
+/// width: {Number | String | Null},
+/// word-wrap: {String | Null},
+/// hover-bg: {Color | String | Null},
+/// hover-border-color: {Color | String | List | Null},
+/// hover-box-shadow: {String | List | Null},
+/// hover-color: {Color | String | Null},
+/// hover-text-decoration: {String | Null},
+/// hover-card-title: {Map | Null}, // Pass parameters to `clay-link` mixin
+/// hover-card-subtitle: {Map | Null}, // Pass parameters to `clay-link` mixin
+/// hover-card-text: {Map | Null}, // Pass parameters to `clay-link` mixin
+/// hover-card-link: {Map | Null}, // Pass parameters to `clay-link` mixin
+/// focus-bg: {Color | String | Null},
+/// focus-border-color: {Color | String | List | Null},
+/// focus-box-shadow: {String | List | Null},
+/// focus-color: {Color | String | Null},
+/// focus-text-decoration: {String | Null},
+/// focus-card-title: {Map | Null}, // Pass parameters to `clay-link` mixin
+/// focus-card-subtitle: {Map | Null}, // Pass parameters to `clay-link` mixin
+/// focus-card-text: {Map | Null}, // Pass parameters to `clay-link` mixin
+/// focus-card-link: {Map | Null}, // Pass parameters to `clay-link` mixin
+/// active-bg: {Color | String | Null},
+/// active-border-color: {Color | String | List | Null},
+/// active-color: {Color | String | Null},
+/// active-card-title: {Map | Null}, // Pass parameters to `clay-link` mixin
+/// active-card-subtitle: {Map | Null}, // Pass parameters to `clay-link` mixin
+/// active-card-text: {Map | Null}, // Pass parameters to `clay-link` mixin
+/// active-card-link: {Map | Null}, // Pass parameters to `clay-link` mixin
+/// after-highlight: {Map | Null}, // Pass parameters to `clay-after-highlight-variant` mixin
+/// aspect-ratio: {Map | Null}, // Pass parameters to `clay-aspect-ratio-variant` mixin
+/// aspect-ratio-item: {Map | Null}, // Pass parameters to `clay-aspect-ratio-item-variant` mixin
+/// sticker: {Map | Null}, // Pass parameters to `clay-sticker-variant` mixin
+/// card-header: {Map | Null}, // Pass parameters to `clay-card-section-variant` mixin
+/// card-body: {Map | Null}, // Pass parameters to `clay-card-section-variant` mixin
+/// card-footer: {Map | Null}, // Pass parameters to `clay-card-section-variant` mixin
+/// card-row: {Map | Null}, // Pass parameters to `clay-card-section-variant` mixin
+/// card-title: {Map | Null}, // Pass parameters to `clay-link` mixin
+/// card-subtitle: {Map | Null}, // Pass parameters to `clay-link` mixin
+/// card-text: {Map | Null}, // Pass parameters to `clay-link` mixin
+/// card-link: {Map | Null}, // Pass parameters to `clay-link` mixin
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
 
 @mixin clay-card-variant($map) {
 	$enabled: setter(map-get($map, enabled), true);
@@ -276,13 +376,41 @@
 	}
 }
 
+/// A mixin for creating the base component `.card-type-asset` that is used with `.image-card`, `.file-card`, `.user-card`.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// aspect-ratio-border-color: {Color | String | List | Null}, // Default: $card-border-color
+/// aspect-ratio-border-style: {String | List | Null}, // Default: solid
+/// aspect-ratio-border-bottom-width: {Number | List | Null}, // deprecated as of v2.5.1 use `aspect-ratio-border-width` instead. Default: 0 0 0.0625rem 0
+/// aspect-ratio-border-width: {Number | List | Null}, // Default: $aspect-ratio-border-width
+/// aspect-ratio-horizontal: {Number | Null}, // Sets the `clay-aspect-ratio` `$width`. Default: 16
+/// aspect-ratio-vertical: {Number | Null}, // Sets the `clay-aspect-ratio` `$height`. Default: 9
+/// card-body-padding-bottom: {Number | String | Null},
+/// card-body-padding-left: {Number | String | Null},
+/// card-body-padding-right: {Number | String | Null},
+/// card-body-padding-top: {Number | String | Null},
+/// card-row-align-items: {String | Null}, // Default: flex-start
+/// checkbox-cursor: {String | Null}, // Default: $link-cursor
+/// asset-icon-color: {Color | String | Null},
+/// asset-icon-width: {Number | String | Null}, // Default: 22.225%
+/// asset-icon-sticker-border-radius: {Number | List | Null}, // Default: 50%
+/// asset-icon-sticker-font-size: {Number | String | Null}, // Default: 2vw
+/// dropdown-action-offset-bottom: {Number | String | Null},
+/// dropdown-action-offset-left: {Number | String | Null},
+/// dropdown-action-offset-right: {Number | String | Null}, // Default: -0.5rem
+/// dropdown-action-offset-top: {Number | String | Null}, // Default: -0.1875rem
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
+
 @mixin clay-card-type-asset($map) {
 	$enabled: setter(map-get($map, enabled), true);
 
 	$aspect-ratio-border-color: setter(map-get($map, aspect-ratio-border-color), $card-border-color);
 	$aspect-ratio-border-style: setter(map-get($map, aspect-ratio-border-style), solid);
 
-	 // The Sass map key name `aspect-ratio-border-bottom-width is deprecated as of v2.5.1 use `aspect-ratio-border-width` instead
+	// The Sass map key name `aspect-ratio-border-bottom-width` is deprecated as of v2.5.1 use `aspect-ratio-border-width` instead
 	$aspect-ratio-border-bottom-width: setter(map-get($map, aspect-ratio-border-bottom-width), 0 0 0.0625rem 0); // 0 0 1px 0
 
 	$aspect-ratio-border-width: map-get($map, aspect-ratio-border-width);
@@ -382,6 +510,23 @@
 	}
 }
 
+/// A mixin to create `.card-type-asset` variants. This mixin is used by `.image-card`, `.file-card`, `.user-card`.
+/// @param {Map} $map - A map of key-value pairs. The keys are defined in the mixin. Example below:
+/// @example
+/// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// aspect-ratio-bg: {Color | String | Null},
+/// aspect-ratio-checkered-fg: {Color | Null}, // Pass parameter to `clay-bg-checkered` mixin 
+/// aspect-ratio-checkered-bg: {Color},
+/// asset-icon-color: {Color | String | Null},
+/// asset-icon-max-width: {Number | String | Null},
+/// asset-icon-min-width: {Number | String | Null},
+/// asset-icon-width: {Number | String | Null},
+/// asset-icon-lexicon-icon-height: {Number | String | Null},
+/// asset-icon-lexicon-icon-width: {Number | String | Null},
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
+
 @mixin clay-card-type-asset-variant($map) {
 	$enabled: setter(map-get($map, enabled), true);
 
@@ -419,6 +564,25 @@
 		}
 	}
 }
+
+/// A mixin for creating the base component `.card-type-directory`.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// card-body-padding-bottom: {Number | String | Null},
+/// card-body-padding-left: {Number | String | Null},
+/// card-body-padding-right: {Number | String | Null},
+/// card-body-padding-top: {Number | String | Null},
+/// sticker-font-size: {Number | String | Null},
+/// sticker-line-height: {Number | String | Null},
+/// sticker-size: {Number | String | Null},
+/// dropdown-action-offset-bottom: {Number | String | Null},
+/// dropdown-action-offset-left: {Number | String | Null},
+/// dropdown-action-offset-right: {Number | String | Null}, // Default: -0.5rem
+/// dropdown-action-offset-top: {Number | String | Null},
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
 
 @mixin clay-card-type-directory($map) {
 	$enabled: setter(map-get($map, enabled), true);
