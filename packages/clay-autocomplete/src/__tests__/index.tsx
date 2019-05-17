@@ -10,9 +10,7 @@ import ClayAutocomplete from '..';
 
 describe('ClayAutocomplete', () => {
 	it('renders', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayAutocomplete />
-		);
+		const testRenderer = TestRenderer.create(<ClayAutocomplete />);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
