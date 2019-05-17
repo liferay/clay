@@ -25,6 +25,7 @@
 /// sidebar-list-group-subtitle: {Map | Null}, // Pass parameters to `clay-text-typography` mixin
 /// sidebar-list-group-text: {Map | Null}, // Pass parameters to `clay-text-typography` mixin
 /// sidebar-list-group-subtext: {Map | Null}, // Pass parameters to `clay-text-typography` mixin
+/// panel-unstyled: {Map | Null}, // Pass parameters to `clay-panel-variant` mixin
 /// @todo
 /// - Add @example
 /// - Add @link to documentation
@@ -53,6 +54,8 @@
 	$sidebar-list-group-subtitle: setter(map-get($map, sidebar-list-group-subtitle), ());
 	$sidebar-list-group-text: setter(map-get($map, sidebar-list-group-text), ());
 	$sidebar-list-group-subtext: setter(map-get($map, sidebar-list-group-subtext), ());
+
+	$panel-unstyled: setter(map-get($map, panel-unstyled), ());
 
 	background-color: $bg;
 	border-color: $border-color;
@@ -110,5 +113,9 @@
 
 	.sidebar-dd {
 		@include clay-text-typography($dd);
+	}
+
+	.panel-unstyled {
+		@include clay-panel-variant($panel-unstyled);
 	}
 }
