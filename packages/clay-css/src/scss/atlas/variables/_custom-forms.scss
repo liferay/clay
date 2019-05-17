@@ -1,3 +1,7 @@
+////
+/// @group customForms
+////
+
 $custom-control-indicator-size: 1.0625rem !default; // 17px
 $custom-control-indicator-bg: $white !default;
 $custom-control-indicator-border-color: $gray-400 !default;
@@ -17,21 +21,25 @@ $custom-control-indicator-disabled-border-color: $input-disabled-border-color !d
 
 // Custom Control Indicator Checked
 
-// $custom-control-indicator-active-checked-bg is deprecated as of v2.2.1
+// @deprecated as of v2.2.1 use `$custom-control-indicator-checked-active-bg` instead
+
 $custom-control-indicator-active-checked-bg: $component-active-bg !default;
 $custom-control-indicator-checked-active-bg: $custom-control-indicator-active-checked-bg !default;
 
-// $custom-control-indicator-active-checked-border-color is deprecated as of v2.2.1
+// @deprecated as of v2.2.1 use `$custom-control-indicator-checked-active-border-color` instead
+
 $custom-control-indicator-active-checked-border-color: $custom-control-indicator-checked-active-bg !default;
 $custom-control-indicator-checked-active-border-color: $custom-control-indicator-active-checked-border-color !default;
 
 $custom-control-indicator-checked-border-color: $custom-control-indicator-checked-active-bg !default;
 
-// $custom-control-indicator-disabled-checked-bg is deprecated as of v2.2.1
+// @deprecated as of v2.2.1 use `$custom-control-indicator-checked-disabled-bg` instead
+
 $custom-control-indicator-disabled-checked-bg: lighten($component-active-bg, 32.94) !default;
 $custom-control-indicator-checked-disabled-bg: $custom-control-indicator-disabled-checked-bg !default;
 
-// $custom-control-indicator-disabled-checked-border-color is deprecated as of v2.2.1
+// @deprecated as of v2.2.1 use `$custom-control-indicator-checked-disabled-border-color` instead
+
 $custom-control-indicator-disabled-checked-border-color: $custom-control-indicator-disabled-checked-bg !default;
 $custom-control-indicator-checked-disabled-border-color: $custom-control-indicator-disabled-checked-border-color !default;
 
@@ -65,6 +73,7 @@ $custom-radio-indicator-icon-checked-bg-size: 65% !default;
 
 $custom-radio-indicator-disabled-border-color: $custom-control-indicator-disabled-bg !default;
 
-// $custom-radio-indicator-disabled-checked-border-color is deprecated as of v2.2.1
+// @deprecated as of v2.2.1 use `$custom-radio-indicator-checked-disabled-border-color` instead
+
 $custom-radio-indicator-disabled-checked-border-color: $custom-control-indicator-disabled-checked-border-color !default;
 $custom-radio-indicator-checked-disabled-border-color: $custom-radio-indicator-disabled-checked-border-color !default;
