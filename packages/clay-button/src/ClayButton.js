@@ -187,6 +187,16 @@ ClayButton.STATE = {
 	type: Config.oneOf(['button', 'reset', 'submit']).value('button'),
 
 	/**
+	 * Flag to indicate the button should use default css
+	 * classes or not.
+	 * @default true
+	 * @instance
+	 * @memberof ClayButton
+	 * @type {?bool}
+	 */
+	useDefaultClasses: Config.bool().value(true),
+
+	/**
 	 * The value attribute value of the element.
 	 * @default undefined
 	 * @instance

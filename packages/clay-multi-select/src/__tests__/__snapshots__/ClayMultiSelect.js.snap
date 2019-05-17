@@ -4,9 +4,14 @@ exports[`ClayMultiSelect should render a ClayMultiSelect and clear the input val
 <div class="form-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
-      <div class="dropdown dropdown-full">
+      <div class="dropdown">
         <div class=" form-control form-control-tag-group">
-          <input class="form-control-inset" ref="input" type="text" value="">
+          <span class="autofit-row">
+            <span class="autofit-col autofit-col-expand">
+              <input class="form-control-inset" ref="input" type="text" value="">
+            </span>
+          </span>
+          <div></div>
         </div>
       </div>
       <div class="form-feedback-group">
@@ -18,20 +23,24 @@ exports[`ClayMultiSelect should render a ClayMultiSelect and clear the input val
     </div>
   </div>
 </div>
-<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown" style="top: 0px; left: 0px;"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown" style="top: 0px; left: 0px;">
+  <li>
+    <span class="disabled dropdown-item">no-results-found</span>
+  </li>
+</ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect and keep the focus of the input when selecting an item 1`] = `
 <div class="form-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
-      <div class="dropdown dropdown-full">
+      <div class="dropdown">
         <div class=" form-control form-control-tag-group">
           <input name="selectedItems" type="hidden" value="foo">
           <span class="label label-secondary label-dismissible" id="item-tag" tabindex="0" data-tag="0">
             <span class="label-item label-item-expand">Foo</span>
             <span class="label-item label-item-after">
-              <button class="btn close" aria-label="close" tabindex="-1" type="button">
+              <button class=" close" aria-label="close" tabindex="-1" type="button">
                 <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                   <use xlink:href="icons.svg#times"></use>
                 </svg>
@@ -42,14 +51,19 @@ exports[`ClayMultiSelect should render a ClayMultiSelect and keep the focus of t
           <span class="label label-secondary label-dismissible" id="item-tag" tabindex="0" data-tag="1">
             <span class="label-item label-item-expand">Bar</span>
             <span class="label-item label-item-after">
-              <button class="btn close" aria-label="close" tabindex="-1" type="button">
+              <button class=" close" aria-label="close" tabindex="-1" type="button">
                 <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                   <use xlink:href="icons.svg#times"></use>
                 </svg>
               </button>
             </span>
           </span>
-          <input class="form-control-inset" ref="input" type="text" value="">
+          <span class="autofit-row">
+            <span class="autofit-col autofit-col-expand">
+              <input class="form-control-inset" ref="input" type="text" value="">
+            </span>
+          </span>
+          <div></div>
         </div>
       </div>
       <div class="form-feedback-group">
@@ -61,16 +75,25 @@ exports[`ClayMultiSelect should render a ClayMultiSelect and keep the focus of t
     </div>
   </div>
 </div>
-<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
+  <li>
+    <span class="disabled dropdown-item">no-results-found</span>
+  </li>
+</ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with classes 1`] = `
 <div class="form-group my-custom-class">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
-      <div class="dropdown dropdown-full">
+      <div class="dropdown">
         <div class=" form-control form-control-tag-group">
-          <input class="form-control-inset" ref="input" type="text" value="">
+          <span class="autofit-row">
+            <span class="autofit-col autofit-col-expand">
+              <input class="form-control-inset" ref="input" type="text" value="">
+            </span>
+          </span>
+          <div></div>
         </div>
       </div>
       <div class="form-feedback-group">
@@ -82,16 +105,25 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with classes 1`] = `
     </div>
   </div>
 </div>
-<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
+  <li>
+    <span class="disabled dropdown-item">no-results-found</span>
+  </li>
+</ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with id 1`] = `
 <div class="form-group" id="myId">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
-      <div class="dropdown dropdown-full">
+      <div class="dropdown">
         <div class=" form-control form-control-tag-group">
-          <input class="form-control-inset" ref="input" type="text" value="">
+          <span class="autofit-row">
+            <span class="autofit-col autofit-col-expand">
+              <input class="form-control-inset" ref="input" type="text" value="">
+            </span>
+          </span>
+          <div></div>
         </div>
       </div>
       <div class="form-feedback-group">
@@ -103,16 +135,25 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with id 1`] = `
     </div>
   </div>
 </div>
-<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
+  <li>
+    <span class="disabled dropdown-item">no-results-found</span>
+  </li>
+</ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with input name from selected items 1`] = `
 <div class="form-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
-      <div class="dropdown dropdown-full">
+      <div class="dropdown">
         <div class=" form-control form-control-tag-group">
-          <input class="form-control-inset" ref="input" type="text" value="">
+          <span class="autofit-row">
+            <span class="autofit-col autofit-col-expand">
+              <input class="form-control-inset" ref="input" type="text" value="">
+            </span>
+          </span>
+          <div></div>
         </div>
       </div>
       <div class="form-feedback-group">
@@ -124,7 +165,11 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with input name from se
     </div>
   </div>
 </div>
-<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
+  <li>
+    <span class="disabled dropdown-item">no-results-found</span>
+  </li>
+</ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with label 1`] = `
@@ -132,9 +177,14 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with label 1`] = `
   <label>Foo</label>
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
-      <div class="dropdown dropdown-full">
+      <div class="dropdown">
         <div class=" form-control form-control-tag-group">
-          <input class="form-control-inset" ref="input" type="text" value="">
+          <span class="autofit-row">
+            <span class="autofit-col autofit-col-expand">
+              <input class="form-control-inset" ref="input" type="text" value="">
+            </span>
+          </span>
+          <div></div>
         </div>
       </div>
       <div class="form-feedback-group">
@@ -146,16 +196,25 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with label 1`] = `
     </div>
   </div>
 </div>
-<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
+  <li>
+    <span class="disabled dropdown-item">no-results-found</span>
+  </li>
+</ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with placeholder 1`] = `
 <div class="form-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
-      <div class="dropdown dropdown-full">
+      <div class="dropdown">
         <div class=" form-control form-control-tag-group">
-          <input class="form-control-inset" ref="input" type="text" placeholder="Placeholder" value="">
+          <span class="autofit-row">
+            <span class="autofit-col autofit-col-expand">
+              <input class="form-control-inset" ref="input" type="text" placeholder="Placeholder" value="">
+            </span>
+          </span>
+          <div></div>
         </div>
       </div>
       <div class="form-feedback-group">
@@ -167,16 +226,25 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with placeholder 1`] = 
     </div>
   </div>
 </div>
-<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
+  <li>
+    <span class="disabled dropdown-item">no-results-found</span>
+  </li>
+</ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with select button hidden 1`] = `
 <div class="form-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
-      <div class="dropdown dropdown-full">
+      <div class="dropdown">
         <div class=" form-control form-control-tag-group">
-          <input class="form-control-inset" ref="input" type="text" value="">
+          <span class="autofit-row">
+            <span class="autofit-col autofit-col-expand">
+              <input class="form-control-inset" ref="input" type="text" value="">
+            </span>
+          </span>
+          <div></div>
         </div>
       </div>
       <div class="form-feedback-group">
@@ -185,20 +253,24 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with select button hidd
     </div>
   </div>
 </div>
-<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
+  <li>
+    <span class="disabled dropdown-item">no-results-found</span>
+  </li>
+</ul>
 `;
 
 exports[`ClayMultiSelect should render a ClayMultiSelect with selected items 1`] = `
 <div class="form-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
-      <div class="dropdown dropdown-full">
+      <div class="dropdown">
         <div class=" form-control form-control-tag-group">
           <input name="selectedItems" type="hidden" value="foo">
           <span class="label label-secondary label-dismissible" id="item-tag" tabindex="0" data-tag="0">
             <span class="label-item label-item-expand">Foo</span>
             <span class="label-item label-item-after">
-              <button class="btn close" aria-label="close" tabindex="-1" type="button">
+              <button class=" close" aria-label="close" tabindex="-1" type="button">
                 <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                   <use xlink:href="icons.svg#times"></use>
                 </svg>
@@ -209,14 +281,19 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with selected items 1`]
           <span class="label label-secondary label-dismissible" id="item-tag" tabindex="0" data-tag="1">
             <span class="label-item label-item-expand">Bar</span>
             <span class="label-item label-item-after">
-              <button class="btn close" aria-label="close" tabindex="-1" type="button">
+              <button class=" close" aria-label="close" tabindex="-1" type="button">
                 <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                   <use xlink:href="icons.svg#times"></use>
                 </svg>
               </button>
             </span>
           </span>
-          <input class="form-control-inset" ref="input" type="text" value="">
+          <span class="autofit-row">
+            <span class="autofit-col autofit-col-expand">
+              <input class="form-control-inset" ref="input" type="text" value="">
+            </span>
+          </span>
+          <div></div>
         </div>
       </div>
       <div class="form-feedback-group">
@@ -228,16 +305,25 @@ exports[`ClayMultiSelect should render a ClayMultiSelect with selected items 1`]
     </div>
   </div>
 </div>
-<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
+  <li>
+    <span class="disabled dropdown-item">no-results-found</span>
+  </li>
+</ul>
 `;
 
 exports[`ClayMultiSelect should render the default markup 1`] = `
 <div class="form-group">
   <div class="input-group input-group-stacked-sm-down">
     <div class="input-group-item">
-      <div class="dropdown dropdown-full">
+      <div class="dropdown">
         <div class=" form-control form-control-tag-group">
-          <input class="form-control-inset" ref="input" type="text" value="">
+          <span class="autofit-row">
+            <span class="autofit-col autofit-col-expand">
+              <input class="form-control-inset" ref="input" type="text" value="">
+            </span>
+          </span>
+          <div></div>
         </div>
       </div>
       <div class="form-feedback-group">
@@ -249,5 +335,9 @@ exports[`ClayMultiSelect should render the default markup 1`] = `
     </div>
   </div>
 </div>
-<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown"></ul>
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
+  <li>
+    <span class="disabled dropdown-item">no-results-found</span>
+  </li>
+</ul>
 `;

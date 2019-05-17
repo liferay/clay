@@ -21,7 +21,7 @@
     "compile": "babel -d lib/ src/ -s --ignore src/__tests__",
     "link": "yarn link",
     "prepublish": "npm run soy && npm run compile",
-    "soy": "metalsoy --soyDeps '../../node_modules/clay-+(label|data-provider|portal|autocomplete|button|link|icon)/src/**/*.soy'"
+    "soy": "metalsoy --soyDeps '../../node_modules/clay-+(label|data-provider|portal|autocomplete|button|link|loading-indicator|icon)/src/**/*.soy'"
   },
   "keywords": [
     "clay",

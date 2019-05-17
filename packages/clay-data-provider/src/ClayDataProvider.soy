@@ -5,6 +5,18 @@
  */
 {template .render}
 	{@param content: any}
+	{@param? errorContent: any}
+	{@param? isError: bool}
+	{@param? isLoading: bool}
+	{@param? loadingContent: any}
 
-	{$content}
+	<div>
+		{if $isLoading and $loadingContent}
+			{$loadingContent}
+		{elseif $isError and $errorContent}
+			{$errorContent}
+		{else}
+			{$content}
+		{/if}
+	</div>
 {/template}

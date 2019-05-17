@@ -156,7 +156,7 @@
 
 	<div class="input-group input-group-stacked-sm-down">
 		<div class="input-group-item">
-			<div class="dropdown dropdown-full">
+			<div class="dropdown">
 				{let $autocompleteElementClasses kind="text"}
 					form-control form-control-tag-group
 					{if $_inputFocused}
@@ -209,6 +209,7 @@
 					{/param}
 					{param useDefaultClasses: false /}
 					{param valueLocator: $valueLocator /}
+					{param wrapInput: true /}
 				{/call}
 			</div>
 
