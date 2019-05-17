@@ -33,6 +33,13 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h2>Active State with checkbox unchecked</h2>
+			<div id="active-unchecked-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
 			<h2>Active State with checkbox in indeterminate state</h2>
 			<div id="active-indeterminate-block"></div>
 		</div>
@@ -77,6 +84,13 @@
 		<div class="col">
 			<h2>Active State with no actions</h2>
 			<div id="active-no-actions-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h2>Active state no actions with CreationMenu and icons on the left</h2>
+			<div id="active-with-creation-menu-icons-left"></div>
 		</div>
 	</div>
 
@@ -346,6 +360,19 @@
 		},
 		'#default-block');
 
+		//Active State with checkbox unchecked
+		new metal.ClayManagementToolbar({
+			actionItems: actionItems,
+			active: true,
+			checkboxStatus: 'unchecked',
+			selectable: true,
+			selectedItems: 5,
+			showInfoButton: true,
+			spritemap: spritemap,
+			totalItems: 10,
+		},
+		'#active-unchecked-block');
+
 		//Active State with checkbox in indeterminate state
 		new metal.ClayManagementToolbar({
 			actionItems: actionItems,
@@ -446,6 +473,94 @@
 			totalItems: 10,
 		},
 		'#active-no-actions-block');
+
+		// Active state no actions with CreationMenu and icons on the left
+		new metal.ClayManagementToolbar({
+			actionItems: [],
+			creationMenu: {
+				itemsIconAlignment: 'left',
+				primaryItems: [
+					{
+						href: '#primary1',
+						label: 'Primary 1',
+						icon: 'download',
+					},
+					{
+						href: '#primary2',
+						label: 'Primary 2',
+						icon: 'users',
+					},
+					{
+						href: '#primary3',
+						label: 'Primary 3',
+						icon: 'view',
+					},
+					{
+						href: '#primary4',
+						label: 'Primary 4',
+						icon: 'lock',
+					}
+				],
+				secondaryItems: [
+					{
+						items: [
+							{
+								href: '#pageTitle',
+								label: 'Add Content 1',
+								icon: 'globe',
+							},
+							{
+								href: '#pageTitle',
+								label: 'Add Content 2',
+								icon: 'code',
+							},
+							{
+								href: '#pageTitle',
+								label: 'Add Content 3',
+								icon: 'comments',
+							},
+							{
+								href: '#pageTitle',
+								label: 'Add Content 4',
+								icon: 'home',
+							},
+							{
+								href: '#pageTitle',
+								label: 'Add Content 5',
+								icon: 'anonymize',
+							},
+						],
+					},
+					{
+						items: [
+							{
+								href: '#pageTitle',
+								label: 'Add Content 6',
+								icon: 'chip',
+							},
+							{
+								href: '#pageTitle',
+								label: 'Add Content 7',
+								icon: 'bold',
+							},
+							{
+								href: '#pageTitle',
+								label: 'Add Content 8',
+								icon: 'audio',
+							},
+						],
+					},
+				],
+				viewMoreURL: '#viewMore',
+			},
+
+			selectable: true,
+			selectedItems: 5,
+			showInfoButton: true,
+			spritemap: spritemap,
+			totalItems: 10,
+		},
+		'#active-with-creation-menu-icons-left');
 
 		//Disabled State
 		new metal.ClayManagementToolbar({
