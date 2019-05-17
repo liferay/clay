@@ -1,3 +1,7 @@
+////
+/// @group panels
+////
+
 // Panel Header
 
 $panel-header-border-bottom-width: 0 !default;
@@ -35,7 +39,9 @@ $panel-group-sm: map-merge((
 ), $panel-group-sm);
 
 // Panel Collapse Icon
-// $panel-collapse-icon-font-size is deprecated in v2 use $panel-header-collapse-icon-font-size instead
+
+/// @deprecated as of v2.11.0 use `$panel-header-collapse-icon-font-size` instead. This is left over from V1.
+
 $panel-collapse-icon-font-size: 0.75rem !default;
 
 // Panel Variants
