@@ -16,6 +16,11 @@ interface Props
 	active?: boolean;
 
 	/**
+	 * Flag that indicates if item is disabled or not.
+	 */
+	disabled?: boolean;
+
+	/**
 	 * Path for item to link to.
 	 */
 	href?: string;
@@ -40,6 +45,7 @@ const DropDownItem: React.FunctionComponent<Props> = ({
 	active,
 	children,
 	className,
+	disabled,
 	href,
 	spritemap,
 	symbolLeft,
@@ -52,7 +58,10 @@ const DropDownItem: React.FunctionComponent<Props> = ({
 		<li>
 			<ItemElement
 				{...otherProps}
-				className={classNames('dropdown-item', className, {active})}
+				className={classNames('dropdown-item', className, {
+					active,
+					disabled,
+				})}
 				href={href}
 			>
 				{symbolLeft && (
