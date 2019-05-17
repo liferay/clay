@@ -481,3 +481,28 @@ ClayDropDown also exports `<ClayDropDown.Menu>` which can be used independently 
 ```
 
 See `ClayDropDown` in our storybook for more compositions and examples of use.
+
+## ClayPagination
+
+ClayPagination's API is very similar to v2.x with a few slight changes. See API changed below.
+
+Usage Example:
+
+```jsx
+<ClayPagination
+	activePage={5}
+	hrefConstructor={page => `/#${page}`}
+	spritemap={spritemap}
+	totalPages={25}
+/>
+```
+
+### API Changes
+
+-   `baseHref` removed in favor of `hrefConstructor` which allows function that passes the page as the variable.
+-   `currentPage` renamed to `activePage`
+-   `data` removed
+-   `defaultEventHandler` removed in favor of `onPageChange` callback
+-   `elementClasses` removed in favor of `className`
+-   `spritemap` stays the same
+-   `totalPages` stays the same
