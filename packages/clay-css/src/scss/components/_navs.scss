@@ -170,19 +170,12 @@
 .nav-tabs {
 	font-size: $nav-tabs-font-size;
 
-	.nav-item.show .nav-link {
-		background-color: $nav-tabs-link-show-bg;
-		border-color: $nav-tabs-link-show-border-color;
-		color: $nav-tabs-link-show-color;
+	.nav-link {
+		@include clay-link($nav-tabs-link);
 	}
 
-	.nav-link {
-		color: $nav-tabs-link-color;
-		padding-bottom: $nav-tabs-link-padding-y;
-		padding-left: $nav-tabs-link-padding-x;
-		padding-right: $nav-tabs-link-padding-x;
-		padding-top: $nav-tabs-link-padding-y;
-		white-space: nowrap;
+	.nav-item.show .nav-link {
+		@include clay-link($nav-tabs-link-show);
 	}
 
 	+ .tab-content {
@@ -232,25 +225,23 @@
 	font-size: $nav-underline-font-size;
 
 	.nav-link {
-		color: $nav-underline-link-color;
-		padding: $nav-underline-link-padding-y $nav-underline-link-padding-x;
+		@include clay-link($nav-underline-link);
+	}
 
-		&:hover,
-		&:focus {
-			color: $nav-underline-link-hover-color;
-		}
+	.nav-item.show .nav-link {
+		@include clay-link($nav-underline-link-show);
+	}
 
-		&:after {
-			bottom: $nav-underline-link-highlight-bottom;
-			content: $nav-underline-link-highlight-content;
-			display: block;
-			height: $nav-underline-link-highlight-height;
-			position: absolute;
-			left: $nav-underline-link-highlight-left;
-			right: $nav-underline-link-highlight-right;
-			top: $nav-underline-link-highlight-top;
-			width: auto;
-		}
+	.nav-link::after {
+		bottom: $nav-underline-link-highlight-bottom;
+		content: $nav-underline-link-highlight-content;
+		display: block;
+		height: $nav-underline-link-highlight-height;
+		position: absolute;
+		left: $nav-underline-link-highlight-left;
+		right: $nav-underline-link-highlight-right;
+		top: $nav-underline-link-highlight-top;
+		width: auto;
 	}
 
 	.nav-item .nav-link.active:after {
@@ -259,8 +250,6 @@
 
 	.nav-link.active,
 	.nav-item.show .nav-link {
-		color: $nav-underline-link-active-color;
-
 		&:after {
 			@if not ($nav-underline-link-active-content == $nav-underline-link-highlight-content) {
 				content: $nav-underline-link-active-content;
@@ -274,9 +263,5 @@
 
 	.nav-item .nav-link.disabled:after {
 		background-color: $nav-underline-link-disabled-highlight;
-	}
-
-	.nav-link.disabled {
-		color: $nav-underline-link-disabled-color;
 	}
 }

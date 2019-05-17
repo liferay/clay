@@ -1,12 +1,29 @@
 $pagination-font-size: null !default;
 
+// Pagination Item
+
 $pagination-item-height: 2.375rem !default; // 38px
-$pagination-item-margin-x: null !default;
+// `$pagination-item-margin-x` is deprecated use `$pagination-item` instead
+$pagination-item-margin-x: -0.5px !default;
+// `$pagination-item-margin-y` is deprecated use `$pagination-item` instead
 $pagination-item-margin-y: null !default;
 
+$pagination-item: () !default;
+$pagination-item: map-merge((
+	margin-bottom: $pagination-item-margin-y,
+	margin-left: $pagination-item-margin-x,
+	margin-right: $pagination-item-margin-x,
+	margin-top: $pagination-item-margin-y,
+), $pagination-item);
+
+// Pagination Link
+
+// `$pagination-link-border-radius` is deprecated use `$pagination-link` instead
 $pagination-link-border-radius: 0 !default;
+// `$pagination-link-cursor` is deprecated use `$pagination-link` instead
 $pagination-link-cursor: null !default;
-$pagination-link-transition: none !default;
+// `$pagination-link-transition` is deprecated use `$pagination-link` instead
+$pagination-link-transition: null !default;
 
 $pagination-link-first-border-radius: $border-radius 0 0 $border-radius !default;
 $pagination-link-last-border-radius: 0 $border-radius $border-radius 0 !default;
@@ -15,28 +32,161 @@ $pagination-margin-bottom: 0.5rem !default;
 
 $pagination-margin-top-mobile: 0.5rem !default;
 
+// `$pagination-disabled-cursor` is deprecated use `$pagination-link-disabled` instead
 $pagination-disabled-cursor: $disabled-cursor !default;
+// `$pagination-disabled-opacity` is deprecated use `$pagination-link-disabled` instead
 $pagination-disabled-opacity: 1 !default;
+// `$pagination-disabled-pointer-events` is deprecated use `$pagination-link-disabled` instead
 $pagination-disabled-pointer-events: auto !default;
+
+// Pagination Link
+
+$pagination-link: () !default;
+$pagination-link: map-merge((
+	align-items: center,
+	bg: $pagination-bg,
+	border-radius: $pagination-link-border-radius,
+	border-width: $pagination-border-width,
+	cursor: $pagination-link-cursor,
+	display: inline-flex,
+	height: $pagination-item-height,
+	justify-content: center,
+	line-height: $pagination-line-height,
+	margin-left: 0,
+	padding-bottom: $pagination-padding-y,
+	padding-left: $pagination-padding-x,
+	padding-right: $pagination-padding-x,
+	padding-top: $pagination-padding-y,
+	transition: $pagination-link-transition,
+	lexicon-icon-margin-top: 0,
+), $pagination-link);
+
+$pagination-link-hover: () !default;
+$pagination-link-hover: map-merge((
+	bg: $pagination-hover-bg,
+	border-color: $pagination-hover-border-color,
+	color: $pagination-hover-color,
+), $pagination-link-hover);
+
+$pagination-link-focus: () !default;
+$pagination-link-focus: map-merge((
+	box-shadow: $pagination-focus-box-shadow,
+	z-index: 4,
+), $pagination-link-focus);
+
+$pagination-link-active: () !default;
+$pagination-link-active: map-merge((
+	bg: $pagination-active-bg,
+	border-color: $pagination-active-border-color,
+	cursor: default,
+	color: $pagination-active-color,
+	z-index: 3,
+), $pagination-link-active);
+
+$pagination-link-disabled: () !default;
+$pagination-link-disabled: map-merge((
+	bg: $pagination-disabled-bg,
+	border-color: $pagination-disabled-border-color,
+	box-shadow: none,
+	color: $pagination-disabled-color,
+	cursor: $pagination-disabled-cursor,
+	opacity: $pagination-disabled-opacity,
+	pointer-events: $pagination-disabled-pointer-events,
+	z-index: 0,
+), $pagination-link-disabled);
+
+// Pagination Dropdown Menu
 
 $pagination-dropdown-menu-spacer-y: null !default;
 
+// Pagination Items Per Page
+
+// `$pagination-items-per-page-bg` is deprecated use `$pagination-items-per-page-link` instead
 $pagination-items-per-page-bg: null !default;
+// `$pagination-items-per-page-border-color` is deprecated use `$pagination-items-per-page-link` instead
 $pagination-items-per-page-border-color: $pagination-border-color !default;
+// `$pagination-items-per-page-border-radius` is deprecated use `$pagination-items-per-page-link` instead
 $pagination-items-per-page-border-radius: $border-radius !default;
+// `$pagination-items-per-page-color` is deprecated use `$pagination-items-per-page-link` instead
 $pagination-items-per-page-color: $pagination-color !default;
 $pagination-items-per-page-font-size: $pagination-font-size !default;
+// `$pagination-items-per-page-transition` is deprecated use `$pagination-items-per-page-link` instead
 $pagination-items-per-page-transition: $pagination-link-transition !default;
 
+// `$pagination-items-per-page-hover-bg` is deprecated use `$pagination-items-per-page-link-hover` instead
 $pagination-items-per-page-hover-bg: $pagination-hover-bg !default;
+// `$pagination-items-per-page-hover-border-color` is deprecated use `$pagination-items-per-page-link-hover` instead
 $pagination-items-per-page-hover-border-color: $pagination-hover-border-color !default;
+// `$pagination-items-per-page-hover-color` is deprecated use `$pagination-items-per-page-link-hover` instead
 $pagination-items-per-page-hover-color: $pagination-hover-color !default;
 
+// `$pagination-items-per-page-focus-box-shadow` is deprecated use `$pagination-items-per-page-link-focus` instead
 $pagination-items-per-page-focus-box-shadow: $pagination-focus-box-shadow !default;
+// `$pagination-items-per-page-focus-outline` is deprecated use `$pagination-items-per-page-link-focus` instead
 $pagination-items-per-page-focus-outline: 0 !default;
 
+// `$pagination-items-per-page-lexicon-icon-margin-left` is deprecated use `$pagination-items-per-page-link` instead
 $pagination-items-per-page-lexicon-icon-margin-left: 0.125rem !default; // 2px
+// `$pagination-items-per-page-lexicon-icon-margin-top` is deprecated use `$pagination-items-per-page-link` instead
 $pagination-items-per-page-lexicon-icon-margin-top: 0.125rem !default; // 2px
+
+// Pagination Items Per Page Link
+
+$pagination-items-per-page-link: () !default;
+$pagination-items-per-page-link: map-merge((
+	align-items: center,
+	bg: $pagination-items-per-page-bg,
+	border-color: $pagination-items-per-page-border-color,
+	border-radius: $pagination-items-per-page-border-radius,
+	border-style: solid,
+	border-width: $pagination-border-width,
+	color: $pagination-items-per-page-color,
+	display: inline-flex,
+	height: $pagination-item-height,
+	justify-content: center,
+	line-height: $pagination-line-height,
+	padding-bottom: $pagination-padding-y,
+	padding-left: $pagination-padding-x,
+	padding-right: $pagination-padding-x,
+	padding-top: $pagination-padding-y,
+	text-decoration: none,
+	transition: $pagination-items-per-page-transition,
+	lexicon-icon-margin-left: $pagination-items-per-page-lexicon-icon-margin-left,
+	lexicon-icon-margin-top: $pagination-items-per-page-lexicon-icon-margin-top,
+), $pagination-items-per-page-link);
+
+$pagination-items-per-page-link-hover: () !default;
+$pagination-items-per-page-link-hover: map-merge((
+	bg: $pagination-items-per-page-hover-bg,
+	border-color: $pagination-items-per-page-hover-border-color,
+	color: $pagination-items-per-page-hover-color,
+), $pagination-items-per-page-link-hover);
+
+$pagination-items-per-page-link-focus: () !default;
+$pagination-items-per-page-link-focus: map-merge((
+	box-shadow: $pagination-items-per-page-focus-box-shadow,
+	outline: $pagination-items-per-page-focus-outline,
+), $pagination-items-per-page-link-focus);
+
+$pagination-items-per-page-link-active: () !default;
+$pagination-items-per-page-link-active: map-merge((
+	bg: $pagination-active-bg,
+	border-color: $pagination-active-border-color,
+	color: $pagination-active-color,
+), $pagination-items-per-page-link-active);
+
+$pagination-items-per-page-link-disabled: () !default;
+$pagination-items-per-page-link-disabled: map-merge((
+	bg: $pagination-disabled-bg,
+	border-color: $pagination-disabled-border-color,
+	box-shadow: none,
+	color: $pagination-disabled-color,
+	cursor: $pagination-disabled-cursor,
+	opacity: $pagination-disabled-opacity,
+	pointer-events: $pagination-disabled-pointer-events,
+), $pagination-items-per-page-link-disabled);
+
+// Pagination Results
 
 $pagination-results-color: null !default;
 

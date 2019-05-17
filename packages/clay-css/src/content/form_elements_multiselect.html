@@ -1,0 +1,625 @@
+---
+title: Form Elements (Multi Select)
+section: Components
+---
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Clay Multiselect</h3>
+
+		<div class="alert alert-warning">This requires external javascript to populate, add labels, and show / hide the <code>dropdown-menu</code>.</div>
+
+		<div class="sheet">
+			<div class="form-group">
+				<div class="clay-multiselect">
+					<label for="tagsField1">Tags</label>
+					<div class="input-group input-group-stacked-sm-down">
+						<div class="input-group-item">
+							<div class="dropdown">
+								<div class="form-control form-control-tag-group">
+									<span class="autofit-row">
+										<span class="autofit-col autofit-col-expand">
+											<input class="form-control-inset" id="tagsField1" type="text" value="some value">
+										</span>
+									</span>
+								</div>
+								<ul class="autocomplete-dropdown-menu dropdown-menu">
+									<li><a class="dropdown-item" href="#1"><strong>some value</strong></a></li>
+									<li><a class="dropdown-item" href="#1"><strong>some value</strong> meal</a></li>
+								</ul>
+							</div>
+							<div class="form-feedback-group">
+								<div class="form-text">You can use a comma to enter tags.</div>
+							</div>
+						</div>
+						<div class="input-group-item input-group-item-shrink">
+							<button class="btn btn-secondary" type="button">Select</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Clay Multiselect with Labels</h3>
+
+		<div class="sheet">
+			<div class="form-group">
+				<div class="clay-multiselect">
+					<label for="tagsField2">Tags</label>
+					<div class="input-group input-group-stacked-sm-down">
+						<div class="input-group-item">
+							<div class="dropdown">
+								<div class="form-control form-control-tag-group">
+									<span class="label label-dismissible label-secondary" tabindex="0">
+										<span class="label-item label-item-before">
+											<span class="sticker">
+												<span class="sticker-overlay">
+													<img alt="thumbnail" class="sticker-img" src="../../images/thumbnail_dock.jpg">
+												</span>
+											</span>
+										</span>
+										<span class="label-item label-item-expand">wall</span>
+										<span class="label-item label-item-after">
+											<button aria-label="Close" class="close" tabindex="-1" type="button">
+												<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
+												</svg>
+											</button>
+										</span>
+									</span>
+									<span class="label label-dismissible label-secondary" tabindex="0">
+										<span class="label-item label-item-before">
+											<span class="sticker">
+												<span class="sticker-overlay">
+													<img alt="thumbnail" class="sticker-img" src="../../images/thumbnail_dock.jpg">
+												</span>
+											</span>
+										</span>
+										<span class="label-item label-item-expand">wallpaper</span>
+										<span class="label-item label-item-after">
+											<button aria-label="Close" class="close" tabindex="-1" type="button">
+												<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
+												</svg>
+											</button>
+										</span>
+									</span>
+									<span class="label label-dismissible label-secondary" tabindex="0">
+										<span class="label-item label-item-before">
+											<span class="sticker">
+												<span class="sticker-overlay">
+													<img alt="thumbnail" class="sticker-img" src="../../images/thumbnail_dock.jpg">
+												</span>
+											</span>
+										</span>
+										<span class="label-item label-item-expand">wonderwall</span>
+										<span class="label-item label-item-after">
+											<button aria-label="Close" class="close" tabindex="-1" type="button">
+												<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
+												</svg>
+											</button>
+										</span>
+									</span>
+									<span class="label label-dismissible label-secondary" tabindex="0">
+										<span class="label-item label-item-expand">winterfell</span>
+										<span class="label-item label-item-after">
+											<button aria-label="Close" class="close" tabindex="-1" type="button">
+												<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
+												</svg>
+											</button>
+										</span>
+									</span>
+									<span class="label label-dismissible label-secondary" tabindex="0">
+										<span class="label-item label-item-expand">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAre</span>
+										<span class="label-item label-item-after">
+											<button aria-label="Close" class="close" tabindex="-1" type="button">
+												<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
+												</svg>
+											</button>
+										</span>
+									</span>
+									<span class="autofit-row">
+										<span class="autofit-col autofit-col-expand">
+											<input class="form-control-inset" id="tagsField2" type="text" value="some value">
+										</span>
+									</span>
+								</div>
+								<ul class="autocomplete-dropdown-menu dropdown-menu">
+									<li><a class="dropdown-item" href="#1"><strong>some value</strong></a></li>
+									<li><a class="dropdown-item" href="#1"><strong>some value</strong> meal</a></li>
+								</ul>
+							</div>
+							<div class="form-feedback-group">
+								<div class="form-text">You can use a comma to enter tags. ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.</div>
+							</div>
+						</div>
+						<div class="input-group-item input-group-item-shrink">
+							<button class="btn btn-secondary" type="button">Select</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Clay Multiselect with Loading</h3>
+
+		<div class="sheet">
+			<div class="form-group">
+				<div class="clay-multiselect">
+					<label for="tagsField2">Tags</label>
+					<div class="input-group input-group-stacked-sm-down">
+						<div class="input-group-item">
+							<div class="dropdown">
+								<div class="form-control form-control-tag-group">
+									<span class="label label-dismissible label-secondary" tabindex="0">
+										<span class="label-item label-item-before">
+											<span class="sticker">
+												<span class="sticker-overlay">
+													<img alt="thumbnail" class="sticker-img" src="../../images/thumbnail_dock.jpg">
+												</span>
+											</span>
+										</span>
+										<span class="label-item label-item-expand">wall</span>
+										<span class="label-item label-item-after">
+											<button aria-label="Close" class="close" tabindex="-1" type="button">
+												<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
+												</svg>
+											</button>
+										</span>
+									</span>
+									<span class="label label-dismissible label-secondary" tabindex="0">
+										<span class="label-item label-item-before">
+											<span class="sticker">
+												<span class="sticker-overlay">
+													<img alt="thumbnail" class="sticker-img" src="../../images/thumbnail_dock.jpg">
+												</span>
+											</span>
+										</span>
+										<span class="label-item label-item-expand">wallpaper</span>
+										<span class="label-item label-item-after">
+											<button aria-label="Close" class="close" tabindex="-1" type="button">
+												<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
+												</svg>
+											</button>
+										</span>
+									</span>
+									<span class="label label-dismissible label-secondary" tabindex="0">
+										<span class="label-item label-item-before">
+											<span class="sticker">
+												<span class="sticker-overlay">
+													<img alt="thumbnail" class="sticker-img" src="../../images/thumbnail_dock.jpg">
+												</span>
+											</span>
+										</span>
+										<span class="label-item label-item-expand">wonderwall</span>
+										<span class="label-item label-item-after">
+											<button aria-label="Close" class="close" tabindex="-1" type="button">
+												<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
+												</svg>
+											</button>
+										</span>
+									</span>
+									<span class="label label-dismissible label-secondary" tabindex="0">
+										<span class="label-item label-item-expand">winterfell</span>
+										<span class="label-item label-item-after">
+											<button aria-label="Close" class="close" tabindex="-1" type="button">
+												<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
+												</svg>
+											</button>
+										</span>
+									</span>
+									<span class="label label-dismissible label-secondary" tabindex="0">
+										<span class="label-item label-item-expand">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAre</span>
+										<span class="label-item label-item-after">
+											<button aria-label="Close" class="close" tabindex="-1" type="button">
+												<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
+												</svg>
+											</button>
+										</span>
+									</span>
+									<span class="autofit-row">
+										<span class="autofit-col autofit-col-expand">
+											<input class="form-control-inset" id="tagsField2" type="text" value="some value">
+										</span>
+										<span class="autofit-col">
+											<span class="inline-item">
+												<span class="loading-animation" role="presentation"></span>
+											</span>
+										</span>
+									</span>
+								</div>
+								<ul class="autocomplete-dropdown-menu dropdown-menu show">
+									<li><span class="disabled dropdown-item">Loading...</span></li>
+								</ul>
+							</div>
+
+							<div class="form-feedback-group">
+								<div class="form-text">You can use a comma to enter tags. ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.</div>
+							</div>
+						</div>
+						<div class="input-group-item input-group-item-shrink">
+							<button class="btn btn-secondary" type="button">Select All the Things</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Clay Multiselect with Other Things</h3>
+
+		<div class="sheet">
+			<div class="form-group">
+				<div class="clay-multiselect">
+					<label for="tagsField3">Tags</label>
+					<div class="input-group input-group-stacked-sm-down">
+						<div class="input-group-item">
+							<div class="dropdown">
+								<div class="form-control form-control-tag-group">
+									<span class="label label-dismissible label-secondary" tabindex="0">
+										<span class="label-item label-item-before">
+											<span class="sticker">
+												<span class="sticker-overlay">
+													<img alt="thumbnail" class="sticker-img" src="../../images/thumbnail_dock.jpg">
+												</span>
+											</span>
+										</span>
+										<span class="label-item label-item-expand">wall</span>
+										<span class="label-item label-item-after">
+											<button aria-label="Close" class="close" tabindex="-1" type="button">
+												<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
+												</svg>
+											</button>
+										</span>
+									</span>
+									<span class="autofit-row">
+										<span class="autofit-col">
+											<a class="component-action" href="#1" role="button">
+												<svg class="lexicon-icon lexicon-icon-times-circle" focusable="false" role="presentation">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#times-circle"></use>
+												</svg>
+											</a>
+										</span>
+										<span class="autofit-col autofit-col-expand">
+											<input class="form-control-inset" id="tagsField3" type="text" value="some value">
+										</span>
+										<span class="autofit-col">
+											<span class="inline-item">
+												<span class="loading-animation" role="presentation"></span>
+											</span>
+										</span>
+										<span class="autofit-col">
+											<span class="inline-item">
+												<a href="#1">link</a>
+											</span>
+										</span>
+										<span class="autofit-col">
+											<button class="btn btn-monospaced btn-secondary" type="button">
+												<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
+												</svg>
+											</button>
+										</span>
+										<span class="autofit-col">
+											<button class="btn btn-primary" type="button">Button</button>
+										</span>
+									</span>
+								</div>
+								<ul class="autocomplete-dropdown-menu dropdown-menu">
+									<li><span class="disabled dropdown-item">Loading...</span></li>
+								</ul>
+							</div>
+
+							<div class="form-feedback-group">
+								<div class="form-text">You can use a comma to enter tags. ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.</div>
+							</div>
+						</div>
+						<div class="input-group-item input-group-item-shrink">
+							<button class="btn btn-secondary" type="button">Select All the Things</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Clay Multiselect with Contenteditable Elements</h3>
+
+		<div class="sheet">
+			<div class="form-group">
+				<label for="formControlContentEditable1">Label (Content Editable)</label>
+
+				<div class="input-group input-group-stacked-sm-down">
+					<div class="input-group-item">
+						<div class="dropdown">
+							<div class="form-control form-control-tag-group">
+								<span class="autofit-row">
+									<span class="autofit-col autofit-col-expand">
+										<textarea aria-hidden="true" class="form-control-hidden" id="formControlContentEditable1" tabindex="-1"></textarea>
+										<div class="form-control-inset" contenteditable="true"></div>
+									</span>
+								</span>
+							</div>
+							<ul class="autocomplete-dropdown-menu dropdown-menu">
+								<li><a class="dropdown-item" href="#1"><strong>some value</strong></a></li>
+								<li><a class="dropdown-item" href="#1"><strong>some value</strong> meal</a></li>
+							</ul>
+						</div>
+						<div class="form-feedback-group">
+							<div class="form-text">You can use a comma to enter tags. ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.</div>
+						</div>
+					</div>
+
+					<div class="input-group-item input-group-item-shrink">
+						<button class="btn btn-secondary" type="submit">Select</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="tagsContentEditableField2">Tags (Content Editable)</label>
+
+				<div class="input-group input-group-stacked-sm-down">
+					<div class="input-group-item">
+						<div class="dropdown">
+							<div class="form-control form-control-tag-group">
+								<span class="label label-dismissible label-secondary" tabindex="0">
+									<span class="label-item label-item-before">
+										<span class="sticker">
+											<span class="sticker-overlay">
+												<img alt="thumbnail" class="sticker-img" src="../../images/thumbnail_dock.jpg">
+											</span>
+										</span>
+									</span>
+									<span class="label-item label-item-expand">wall</span>
+									<span class="label-item label-item-after">
+										<button aria-label="Close" class="close" tabindex="-1" type="button">
+											<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
+											</svg>
+										</button>
+									</span>
+								</span>
+								<span class="label label-dismissible label-secondary" tabindex="0">
+									<span class="label-item label-item-before">
+										<span class="sticker">
+											<span class="sticker-overlay">
+												<img alt="thumbnail" class="sticker-img" src="../../images/thumbnail_dock.jpg">
+											</span>
+										</span>
+									</span>
+									<span class="label-item label-item-expand">wallpaper</span>
+									<span class="label-item label-item-after">
+										<button aria-label="Close" class="close" tabindex="-1" type="button">
+											<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
+											</svg>
+										</button>
+									</span>
+								</span>
+
+								<span class="autofit-row">
+									<span class="autofit-col autofit-col-expand">
+										<input aria-hidden="true" class="form-control-hidden" id="tagsContentEditableField2" tabindex="-1" type="text">
+										<span class="form-control-inset" contenteditable>some value</span>
+									</span>
+								</span>
+							</div>
+							<ul class="autocomplete-dropdown-menu dropdown-menu">
+								<li><a class="dropdown-item" href="#1"><strong>some value</strong></a></li>
+								<li><a class="dropdown-item" href="#1"><strong>some value</strong> meal</a></li>
+							</ul>
+						</div>
+						<div class="form-feedback-group">
+							<div class="form-text">You can use a comma to enter tags. ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.</div>
+						</div>
+					</div>
+
+					<div class="input-group-item input-group-item-shrink">
+						<button class="btn btn-secondary" type="submit">Select</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="formControlContentEditableLoading1">Label (Content Editable)</label>
+
+				<div class="input-group input-group-stacked-sm-down">
+					<div class="input-group-item">
+						<div class="dropdown">
+							<div class="form-control form-control-tag-group">
+								<span class="autofit-row">
+									<span class="autofit-col autofit-col-expand">
+										<input aria-hidden="true" class="form-control-hidden" id="formControlContentEditableLoading1" tabindex="-1" type="text">
+										<div class="form-control-inset" contenteditable="true"></div>
+									</span>
+									<span class="autofit-col">
+										<span class="inline-item">
+											<span class="loading-animation" role="presentation"></span>
+										</span>
+									</span>
+								</span>
+							</div>
+							<ul class="autocomplete-dropdown-menu dropdown-menu">
+								<li><a class="dropdown-item" href="#1"><strong>some value</strong></a></li>
+								<li><a class="dropdown-item" href="#1"><strong>some value</strong> meal</a></li>
+							</ul>
+						</div>
+						<div class="form-feedback-group">
+							<div class="form-text">You can use a comma to enter tags. ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.</div>
+						</div>
+					</div>
+
+					<div class="input-group-item input-group-item-shrink">
+						<button class="btn btn-secondary" type="submit">Select</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="tagsContentEditableLoading2">Tags (Content Editable)</label>
+
+				<div class="input-group input-group-stacked-sm-down">
+					<div class="input-group-item">
+						<div class="dropdown">
+							<div class="form-control form-control-tag-group">
+								<span class="label label-dismissible label-secondary" tabindex="0">
+									<span class="label-item label-item-before">
+										<span class="sticker">
+											<span class="sticker-overlay">
+												<img alt="thumbnail" class="sticker-img" src="../../images/thumbnail_dock.jpg">
+											</span>
+										</span>
+									</span>
+									<span class="label-item label-item-expand">wall</span>
+									<span class="label-item label-item-after">
+										<button aria-label="Close" class="close" tabindex="-1" type="button">
+											<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
+											</svg>
+										</button>
+									</span>
+								</span>
+								<span class="label label-dismissible label-secondary" tabindex="0">
+									<span class="label-item label-item-before">
+										<span class="sticker">
+											<span class="sticker-overlay">
+												<img alt="thumbnail" class="sticker-img" src="../../images/thumbnail_dock.jpg">
+											</span>
+										</span>
+									</span>
+									<span class="label-item label-item-expand">wallpaper</span>
+									<span class="label-item label-item-after">
+										<button aria-label="Close" class="close" tabindex="-1" type="button">
+											<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
+											</svg>
+										</button>
+									</span>
+								</span>
+
+								<span class="autofit-row">
+									<span class="autofit-col autofit-col-expand">
+										<input aria-hidden="true" class="form-control-hidden" id="tagsContentEditableLoading2" tabindex="-1" type="text">
+										<span class="form-control-inset" contenteditable>some value</span>
+									</span>
+									<span class="autofit-col">
+										<span class="inline-item">
+											<span class="loading-animation" role="presentation"></span>
+										</span>
+									</span>
+								</span>
+							</div>
+							<ul class="autocomplete-dropdown-menu dropdown-menu">
+								<li><a class="dropdown-item" href="#1"><strong>some value</strong></a></li>
+								<li><a class="dropdown-item" href="#1"><strong>some value</strong> meal</a></li>
+							</ul>
+						</div>
+						<div class="form-feedback-group">
+							<div class="form-text">You can use a comma to enter tags. ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.</div>
+						</div>
+					</div>
+
+					<div class="input-group-item input-group-item-shrink">
+						<button class="btn btn-secondary" type="submit">Select</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</div>
+
+<script>
+	$('.input-group-inset').on('focusin', function(event) {
+		$(this).closest('.input-group-item').addClass('focus');
+	});
+
+	$('.input-group-inset').on('focusout', function(event) {
+		$(this).closest('.input-group-item').removeClass('focus');
+	});
+
+	$('.form-control-tag-group').on('click', function(event) {
+		$(this).find('.form-control-inset').focus();
+	});
+
+	$('.form-control-tag-group .label').on('click', function(event) {
+		event.stopPropagation();
+	});
+
+	$('.form-control-tag-group .label').on('keydown', function(event) {
+		var $this = $(this);
+
+		event.stopPropagation();
+
+		if (event.keyCode === 13) {
+			setTimeout(function() {
+				$this.find('.close').focus();
+			}, 0);
+		}
+	});
+
+	$('.form-control-tag-group .label-dismissible .close').on('click', function(event) {
+		event.stopPropagation();
+
+		if ($(this).closest('.label-dismissible').find('+ .label-dismissible').length === 0) {
+			$(this).closest('.form-control-tag-group').find('.form-control-inset').focus();
+		}
+		else {
+			$(this).closest('.label-dismissible').find('+ .label-dismissible').focus();
+		}
+		$(this).closest('.label-dismissible').remove();
+	});
+
+	$('.form-control-tag-group .btn').on('click', function(event) {
+		event.stopPropagation();
+	});
+
+	$('.form-control-tag-group a').on('click', function(event) {
+		event.stopPropagation();
+	});
+
+	$('.form-control-inset').on('focusin', function(event) {
+		$(this).closest('.form-control-tag-group').addClass('focus');
+	});
+
+	$('.form-control-inset').on('focusout', function(event) {
+		$(this).closest('.form-control-tag-group').removeClass('focus');
+	});
+
+	$('.form-control-hidden').on('focus', function(event) {
+		$(this).closest('.form-control-tag-group').find('form-control-inset').focus();
+	});
+
+	$('.form-control-hidden').on('focus', function(event) {
+		$(this).parent().find('.form-control').focus();
+	});
+</script>

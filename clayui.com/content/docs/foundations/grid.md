@@ -7,7 +7,7 @@ redirectFrom: "/docs/layout/grid.html"
 
 The aim of the Lexicon layout framework is to provide a common structural reference that contributes to streamlining the component construction and page composition processes, as well as favoring visual consistency between the different elements of the interface.
 
-<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/designPrinciples/grid.html">Grid Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+<div class="alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/foundations/grid/">Grid Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 ### Container
 

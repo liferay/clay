@@ -20,10 +20,15 @@
 	{@param? tabIndex: string}
 	{@param? title: string}
 	{@param? type: string}
+	{@param? useDefaultClasses: bool}
 	{@param? value: string}
 
 	{let $attributes kind="attributes"}
-		class="btn
+		class="
+			{if $useDefaultClasses != false}
+				btn
+			{/if}
+
 			{if $block}
 				{sp}btn-block
 			{/if}

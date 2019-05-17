@@ -14,6 +14,18 @@ $breadcrumb-link-text-decoration: $link-decoration !default;
 $breadcrumb-link-hover-color: $link-hover-color !default;
 $breadcrumb-link-hover-text-decoration: $link-hover-decoration !default;
 
+$breadcrumb-link: () !default;
+$breadcrumb-link: map-merge((
+	color: $breadcrumb-link-color,
+	display: block,
+	text-decoration: $breadcrumb-link-text-decoration,
+	text-transform: $breadcrumb-text-transform,
+	hover-color: $breadcrumb-link-hover-color,
+	hover-text-decoration: $breadcrumb-link-hover-text-decoration,
+	focus-color: $breadcrumb-link-hover-color,
+	focus-text-decoration: $breadcrumb-link-hover-text-decoration,
+), $breadcrumb-link);
+
 $breadcrumb-divider-color: $breadcrumb-active-color !default;
 $breadcrumb-divider-font-family: null !default;
 $breadcrumb-divider-font-weight: null !default;

@@ -1,5 +1,55 @@
-// Creates a Panel color variant
-// @param $map - Sass map that contain Panel Variant properties to modify
+////
+/// @group panels
+////
+
+/// A mixin to create Panel variants. You can base your variant off `.panel` or create your own base class (e.g., `<div class="panel my-custom-panel-variant"></div>` or `<div class="my-custom-panel"></div>`).
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// bg: {Color | String | Null},
+/// border-color: {Color | String | List | Null},
+/// border-style: {String | List | Null},
+/// border-width: {Number | String | List | Null},
+/// box-shadow: {String | List | Null},
+/// color: {Color | String | Null},
+/// font-size: {Number | String | Null},
+/// header-bg: {Color | String | Null},
+/// header-border-color: {Color | String | List | Null},
+/// header-border-style: {String | List | Null},
+/// header-border-width: {Number | String | List | Null},
+/// header-color: {Color | String | Null},
+/// header-margin-bottom: {Number | String | Null},
+/// header-margin-left: {Number | String | Null},
+/// header-margin-right: {Number | String | Null},
+/// header-margin-top: {Number | String | Null},
+/// header-padding-bottom: {Number | String | Null},
+/// header-padding-left: {Number | String | Null},
+/// header-padding-right: {Number | String | Null},
+/// header-padding-top: {Number | String | Null},
+/// header-transition: {String | List | Null},
+/// header-collapsed-border-color: {Color | String | List | Null},
+/// header-link: {Map | Null}, // Pass parameters to `clay-link` mixin
+/// title-font-size: {Number | String | Null},
+/// title-font-weight: {Number | String | Null},
+/// title-text-transform: {String | List | Null},
+/// collapse-icon-bottom: {Number | String | Null},
+/// collapse-icon-font-size: {Number | String | Null},
+/// collapse-icon-left: {Number | String | Null},
+/// collapse-icon-right: {Number | String | Null},
+/// collapse-icon-top: {Number | String | Null},
+/// body-margin-bottom: {Number | String | Null},
+/// body-margin-left: {Number | String | Null},
+/// body-margin-right: {Number | String | Null},
+/// body-margin-top: {Number | String | Null},
+/// body-padding-bottom: {Number | String | Null},
+/// body-padding-left: {Number | String | Null},
+/// body-padding-right: {Number | String | Null},
+/// body-padding-top: {Number | String | Null},
+/// footer-bg: {Color | String | Null},
+/// footer-border-color: {Color | String | List | Null},
+/// footer-color: {Color | String | Null},
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
 
 @mixin clay-panel-variant($map) {
 	$bg: map-get($map, bg);

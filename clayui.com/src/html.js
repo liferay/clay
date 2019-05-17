@@ -12,6 +12,7 @@ class HTML extends Component {
                         content="width=device-width, initial-scale=1.0"
                     />
                     <link rel="shortcut icon" type="image/png" href="/images/favicon-32x32.png" sizes="16x16 32x32"/>
+                    <link id="clayCSSTheme" rel="stylesheet" href="/css/atlas.css" />
                     {this.props.headComponents}
 
                     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />

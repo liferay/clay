@@ -59,7 +59,7 @@ class LayoutNav extends Component {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="mx-3 mr-lg-0" href="https://github.com/liferay/clay" target="_blank">
+                            <a className="mx-3 mr-lg-0" href="https://github.com/liferay/clay" rel="noopener noreferrer" target="_blank">
                                 <img src="/images/home/GitHub-Mark-64px.svg" alt="" />
                             </a>
                         </li>

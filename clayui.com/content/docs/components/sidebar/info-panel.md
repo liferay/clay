@@ -6,7 +6,7 @@ title: "Info Panel"
 
 An information container that displays additional data for the content displayed in the main visual area.
 
-<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/satellites/Sidebar/infopanel.html">Info Panel Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+<div class="alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/satellite-components/sidebar/infopanel">Info Panel Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 ### Sidebar light
 

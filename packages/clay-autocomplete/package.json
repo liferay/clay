@@ -21,7 +21,7 @@
     "compile": "babel -d lib/ src/ -s --ignore src/__tests__",
     "link": "yarn link",
     "prepublish": "npm run soy && npm run compile",
-    "soy": "metalsoy --soyDeps '../../node_modules/clay-+(data-provider|portal)/src/**/*.soy'"
+    "soy": "metalsoy --soyDeps '../../node_modules/clay-+(data-provider|portal|loading-indicator)/src/**/*.soy'"
   },
   "keywords": [
     "clay",
@@ -29,6 +29,7 @@
   ],
   "dependencies": {
     "clay-data-provider": "^2.14.2",
+    "clay-loading-indicator": "^2.14.2",
     "clay-portal": "^2.14.2",
     "metal": "^2.16.0",
     "metal-component": "^2.16.0",

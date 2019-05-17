@@ -39,7 +39,7 @@ class Index extends Component {
                                         <Link to="/docs/get-started/introduction.html" className="btn btn-lg btn-light font-weight-bold mx-3 mb-4">
                                             Get Started
                                         </Link>
-                                        <a className="btn btn-lg btn-outline-light font-weight-bold mx-3 mb-4" href="https://github.com/liferay/clay" target="_blank">
+                                        <a className="btn btn-lg btn-outline-light font-weight-bold mx-3 mb-4" href="https://github.com/liferay/clay" rel="noopener noreferrer" target="_blank">
                                             <img className="mr-2" src="/images/home/file-download.svg" alt="" />Download
                                         </a>
                                     </div>
@@ -117,7 +117,7 @@ class Index extends Component {
                                 </div>
                                 <div className="col-md-6 mr-auto wow zoomIn" data-wow-duration="0.8s">
                                     <div className="media-body mt-4 text-center text-lg-left">
-                                        <p className="h1 font-weight-bold">Want to contribute? Found an issue? Head on over to the <a href="https://github.com/liferay/clay" className="font-weight-bold" target="_blank">GitHub repo.</a></p>
+                                        <p className="h1 font-weight-bold">Want to contribute? Found an issue? Head on over to the <a href="https://github.com/liferay/clay" className="font-weight-bold" rel="noopener noreferrer" target="_blank">GitHub repo.</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -139,7 +139,7 @@ class Index extends Component {
                                             <img className="mx-auto" src="/images/home/lexicon_symbol.svg" alt="" />
                                             <p>Visit the current Lexicon <br />
                                             Experience Language site</p>
-                                            <a href="https://lexicondesign.io/" className="mb-3" target="_blank">
+                                            <a href="https://liferay.design/lexicon" className="mb-3" rel="noopener noreferrer" target="_blank">
                                                 Lexicon 2.0
                                             </a>
                                         </div>
@@ -151,7 +151,7 @@ class Index extends Component {
                                             <img className="mx-auto" src="/images/home/clay_logo_w.svg" alt="" />
                                             <p>Visit the previous version of <br />
                                             Clay at Lexicon CSS project site</p>
-                                            <a href="https://lexiconcss.wedeploy.io/" className="mb-3" target="_blank">
+                                            <a href="https://liferay.github.io/lexiconcss/" className="mb-3" rel="noopener noreferrer" target="_blank">
                                                 Lexicon CSS
                                             </a>
                                         </div>
@@ -165,15 +165,11 @@ class Index extends Component {
                         <div className="container-fluid container-fluid-max-lg">
                             <div className="row">
                                 <div className="col-lg text-center text-lg-left mb-4 mb-lg-0">
-                                    <img className="logo" src="/images/liferayLogo.png"/>
+                                    <img className="logo" src="/images/liferayLogo.png" alt="" />
 
                                     <div className="clearfix d-lg-none"></div>
 
-                                    Brought to you by <a href="http://www.liferay.com" className="font-weight-bold" target="_blank">Liferay, Inc.</a>
-                                </div>
-
-                                <div className="col-lg text-center text-lg-right">
-                                    <div>Powered by <a href="https://wedeploy.com/" className="font-weight-bold" target="_blank">WeDeploy™</a></div>
+                                    Brought to you by <a href="http://www.liferay.com" className="font-weight-bold" rel="noopener noreferrer" target="_blank">Liferay, Inc.</a>
                                 </div>
                             </div>
                         </div>
@@ -182,5 +178,5 @@ class Index extends Component {
             </div>
     )};
 }
-                        
+
 export default Index;

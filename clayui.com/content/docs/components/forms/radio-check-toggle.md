@@ -6,7 +6,7 @@ title: "Checkbox, Radio, and Toggle"
 
 Checkboxes, radios, and toggles provide users with different selection and activation tools.
 
-<div class="alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/Forms/radio_check_toggle.html">Checkbox, Radio, and Toggle Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+<div class="alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/forms/radio-check-toggle/">Checkbox, Radio, and Toggle Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 ### Checkbox
 

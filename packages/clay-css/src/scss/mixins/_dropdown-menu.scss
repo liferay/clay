@@ -1,3 +1,49 @@
+////
+/// @group Dropdowns
+////
+
+/// A mixin to create Dropdown Menu variants. You can base your variant off Bootstrap's `.dropdown-menu` class or create your own base class (e.g., `<div class="dropdown-menu my-custom-dropdown-menu"></div>` or `<div class="my-custom-dropdown-menu"></div>`).
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// breakpoint-down: {String, Null}, // The Bootstrap 4 Breakpoint {xs | sm | md | lg | xl}
+/// bg: {Color | String | Null},
+/// bg-clip: {String | Null},
+/// border-color: {Color | String | List | Null},
+/// border-radius: {Number | String | List | Null},
+/// border-style: {String | List | Null},
+/// border-width: {Number | String | List | Null},
+/// box-shadow: {String | List | Null},
+/// color: {Color | String | Null},
+/// display: {String | Null},
+/// float: {String | Null},
+/// font-size: {Number | String | Null},
+/// left: {Number | String | Null},
+/// list-style: {String | Null},
+/// margin-bottom: {Number | String | Null},
+/// margin-left: {Number | String | Null},
+/// margin-right: {Number | String | Null},
+/// margin-top: {Number | String | Null},
+/// max-height: {Number | String | Null},
+/// max-width: {Number | String | Null},
+/// min-height: {Number | String | Null},
+/// min-width: {Number | String | Null},
+/// overflow: {String | Null},
+/// padding-bottom: {Number | String | Null},
+/// padding-left: {Number | String | Null},
+/// padding-right: {Number | String | Null},
+/// padding-top: {Number | String | Null},
+/// position: {String | Null},
+/// text-align: {String | Null},
+/// top: {Number | String | Null},
+/// width: {Number | String | Null},
+/// z-index: {Number | String | Null},
+/// font-size-mobile: {Number | String | Null},
+/// max-height-mobile: {Number | String | Null},
+/// max-width-mobile: {Number | String | Null},
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
+
 @mixin clay-dropdown-menu-variant($map) {
 	$breakpoint-down: map-get($map, breakpoint-down);
 
@@ -59,7 +105,6 @@
 	min-height: $min-height;
 	min-width: $min-width;
 	overflow: $overflow;
-	padding-bottom: $padding-bottom;
 	padding-left: $padding-left;
 	padding-right: $padding-right;
 	padding-top: $padding-top;
@@ -69,6 +114,12 @@
 	width: $width;
 	z-index: $z-index;
 
+	// Firefox clips overflowing content and doesn't respect `padding-bottom` on `.dropdown-menu`
+
+	&::after {
+		padding-top: $padding-bottom;
+	}
+
 	@if ($breakpoint-down) {
 		@include media-breakpoint-down($breakpoint-down) {
 			font-size: $font-size-mobile;
@@ -77,6 +128,63 @@
 		}
 	}
 }
+
+/// A mixin to create Dropdown Item variants. You can base your variant off Bootstrap's `.dropdown-item` class or create your own base class (e.g., `<a class="dropdown-item my-custom-dropdown-item" href="/"></a>` or `<a class="my-custom-dropdown-item" href="/"></a>`).
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// bg: {Color | String | Null},
+/// border-radius: {Number | String | List | Null},
+/// border-width: {Number | String | List | Null},
+/// clear: {String | Null},
+/// color: {Color | String | Null},
+/// display: {String | Null},
+/// font-size: {Number | String | Null},
+/// font-weight: {Number | String | Null},
+/// outline: {Number | String | Null},
+/// overflow: {String | Null},
+/// padding-bottom: {Number | String | Null},
+/// padding-left: {Number | String | Null},
+/// padding-right: {Number | String | Null},
+/// padding-top: {Number | String | Null},
+/// position: {String | Null},
+/// text-align: {String | Null},
+/// transition: {String | List | Null},
+/// white-space: {String | Null},
+/// width: {Number | String | Null},
+/// word-wrap: {String | Null},
+/// hover-bg: {Color | String | Null},
+/// hover-color: {Color | String | Null},
+/// hover-opacity: {Number | String | Null},
+/// hover-text-decoration: {String | Null},
+/// focus-bg: {Color | String | Null},
+/// focus-border-radius: {Number | String | List | Null},
+/// focus-box-shadow: {String | List | Null},
+/// focus-color: {Color | String | Null},
+/// focus-opacity: {Number | String | Null},
+/// focus-outline: {Number | String | Null},
+/// focus-text-decoration: {String | Null},
+/// active-bg: {Color | String | Null},
+/// active-border-color: {String | List | Null},
+/// active-color: {Color | String | Null},
+/// active-font-weight: {Number | String | Null},
+/// active-text-decoration: {String | Null},
+/// active-class-bg: {Color | String | Null},
+/// active-class-border-color: {Color | String | List | Null},
+/// active-class-color: {Color | String | Null},
+/// active-class-font-weight: {Number | String | Null},
+/// active-class-text-decoration: {String | Null},
+/// disabled-bg: {Color | String | Null},
+/// disabled-border-color: {Color | String | List | Null},
+/// disabled-box-shadow: {String | List | Null},
+/// disabled-color: {Color | String | Null},
+/// disabled-cursor: {String | Null},
+/// disabled-opacity: {Number | String | Null},
+/// disabled-pointer-events: {String | Null},
+/// disabled-text-decoration: {String | Null},
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
 
 @mixin clay-dropdown-item-variant($map) {
 	$enabled: setter(map-get($map, enabled), true);

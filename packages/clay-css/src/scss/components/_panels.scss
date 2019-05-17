@@ -28,8 +28,6 @@
 		@if not ($panel-header-offset-border-radius == 0) {
 			@include border-bottom-radius($panel-header-offset-border-radius);
 		}
-
-		border-bottom-width: 0;
 	}
 
 	&.collapse-icon {
@@ -49,6 +47,10 @@
 
 .panel-header-link {
 	@include clay-link($panel-header-link);
+
+	&.panel-header.collapsed {
+		@include clay-link($panel-header-collapsed-link);
+	}
 
 	.collapse-icon {
 		padding-left: $collapse-icon-padding-left;
