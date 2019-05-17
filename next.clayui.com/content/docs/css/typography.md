@@ -5,7 +5,7 @@ order: 3
 redirectFrom: "/docs/layout/typography.html"
 ---
 
-<div class="clay-site-alert alert alert-info">Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/designPrinciples/typography.html">Typography Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+<div class="clay-site-alert alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/foundations/typography/">Typography Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 <div class="nav-toc">
 
