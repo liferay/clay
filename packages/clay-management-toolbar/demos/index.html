@@ -33,6 +33,13 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h2>Active State with checkbox unchecked</h2>
+			<div id="active-unchecked-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
 			<h2>Active State with checkbox in indeterminate state</h2>
 			<div id="active-indeterminate-block"></div>
 		</div>
@@ -352,6 +359,19 @@
 			viewTypes: viewTypes,
 		},
 		'#default-block');
+
+		//Active State with checkbox unchecked
+		new metal.ClayManagementToolbar({
+			actionItems: actionItems,
+			active: true,
+			checkboxStatus: 'unchecked',
+			selectable: true,
+			selectedItems: 5,
+			showInfoButton: true,
+			spritemap: spritemap,
+			totalItems: 10,
+		},
+		'#active-unchecked-block');
 
 		//Active State with checkbox in indeterminate state
 		new metal.ClayManagementToolbar({
