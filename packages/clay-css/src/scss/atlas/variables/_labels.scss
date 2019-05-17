@@ -1,3 +1,7 @@
+////
+/// @group labels
+////
+
 $label-border-radius: 0.125rem !default; // 2px
 $label-font-size: 0.625rem !default; // 10px
 $label-font-weight: $font-weight-semi-bold !default;
@@ -46,13 +50,21 @@ $label-base: map-merge((
 	disabled-box-shadow: none,
 ), $label-base);
 
-// $label-primary-color is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-primary` instead
+
 $label-primary-color: $primary !default;
-// $label-primary-hover-color is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-primary` instead
+
 $label-primary-hover-color: $primary-d2 !default;
-// $label-primary-border-color is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-primary` instead
+
 $label-primary-border-color: $primary-l1 !default;
-// $label-primary-hover-border-color is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-primary` instead
+
 $label-primary-hover-border-color: $label-primary-border-color !default;
 
 $label-primary: () !default;
@@ -63,13 +75,20 @@ $label-primary: map-merge((
 	hover-color: $label-primary-hover-color,
 ), $label-primary);
 
-// $label-secondary-color is deprecated as of v2.4.1
+// @deprecated as of v2.4.1 use the Sass map `$label-secondary` instead
+
 $label-secondary-color: $secondary !default;
-// $label-secondary-hover-color is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-secondary` instead
+
 $label-secondary-hover-color: $gray-900 !default;
-// $label-secondary-border-color is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-secondary` instead
+
 $label-secondary-border-color: $secondary-l2 !default;
-// $label-secondary-hover-border-color is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-secondary` instead
+
 $label-secondary-hover-border-color: $label-secondary-border-color !default;
 
 $label-secondary: () !default;
@@ -80,13 +99,20 @@ $label-secondary: map-merge((
 	hover-color: $label-secondary-hover-color,
 ), $label-secondary);
 
-// $label-success-color is deprecated as of v2.4.1
+// @deprecated as of v2.4.1 use the Sass map `$label-success` instead
+
 $label-success-color: $success !default;
-// $label-success-hover-color is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-success` instead
+
 $label-success-hover-color: $success-d2 !default;
-// $label-success-border-color is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-success` instead
+
 $label-success-border-color: $success-l1 !default;
-// $label-success-hover-border-color is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-success` instead
+
 $label-success-hover-border-color: $label-success-border-color !default;
 
 $label-success: () !default;
@@ -97,13 +123,20 @@ $label-success: map-merge((
 	hover-color: $label-success-hover-color,
 ), $label-success);
 
-// $label-info-color is deprecated as of v2.4.1
+// @deprecated as of v2.4.1 use the Sass map `$label-info` instead
+
 $label-info-color: $info !default;
-// $label-info-hover-color is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-info` instead
+
 $label-info-hover-color: $info-d2 !default;
-// $label-info-border-color is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-info` instead
+
 $label-info-border-color: $info-l1 !default;
-// $label-info-hover-border-color is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-info` instead
+
 $label-info-hover-border-color: $label-info-border-color !default;
 
 $label-info: () !default;
@@ -114,13 +147,20 @@ $label-info: map-merge((
 	hover-color: $label-info-hover-color,
 ), $label-info);
 
-// $label-warning-color is deprecated as of v2.4.1
+// @deprecated as of v2.4.1 use the Sass map `$label-warning` instead
+
 $label-warning-color: $warning !default;
-// $label-warning-hover-color is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-warning` instead
+
 $label-warning-hover-color: $warning-d2 !default;
-// $label-warning-border-color is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-warning` instead
+
 $label-warning-border-color: $warning-l1 !default;
-// $label-warning-hover-border-color is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-warning` instead
+
 $label-warning-hover-border-color: $label-warning-border-color !default;
 
 $label-warning: () !default;
@@ -131,13 +171,20 @@ $label-warning: map-merge((
 	hover-color: $label-warning-hover-color,
 ), $label-warning);
 
-// $label-danger-color is deprecated as of v2.4.1
+// @deprecated as of v2.4.1 use the Sass map `$label-danger` instead
+
 $label-danger-color: $danger !default;
-// $label-danger-hover-color is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-danger` instead
+
 $label-danger-hover-color: $danger-d2 !default;
-// $label-danger-border-color is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-danger` instead
+
 $label-danger-border-color: $danger-l1 !default;
-// $label-danger-hover-border-color is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-danger` instead
+
 $label-danger-hover-border-color: $label-danger-border-color !default;
 
 $label-danger: () !default;
@@ -148,15 +195,24 @@ $label-danger: map-merge((
 	hover-color: $label-danger-hover-color,
 ), $label-danger);
 
-// $label-light-color is deprecated as of v2.4.1
+// @deprecated as of v2.4.1 use the Sass map `$label-light` instead
+
 $label-light-color: $light !default;
-// $label-light-hover-color is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-light` instead
+
 $label-light-hover-color: $light-d2 !default;
-// $label-light-bg is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-light` instead
+
 $label-light-bg: $dark !default;
-// $label-light-border-color is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-light` instead
+
 $label-light-border-color: $light !default;
-// $label-light-hover-border-color is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-light` instead
+
 $label-light-hover-border-color: $label-light-border-color !default;
 
 $label-light: () !default;
@@ -168,13 +224,20 @@ $label-light: map-merge((
 	hover-color: $label-light-hover-color,
 ), $label-light);
 
-// $label-dark-color is deprecated as of v2.4.1
+// @deprecated as of v2.4.1 use the Sass map `$label-dark` instead
+
 $label-dark-color: $dark !default;
-// $label-dark-hover-color is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-dark` instead
+
 $label-dark-hover-color: $dark-l2 !default;
-// $label-dark-border-color is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-dark` instead
+
 $label-dark-border-color: $dark !default;
-// $label-dark-hover-border-color is deprecated as of v2.4.1
+
+// @deprecated as of v2.4.1 use the Sass map `$label-dark` instead
+
 $label-dark-hover-border-color: $label-dark-border-color !default;
 
 $label-dark: () !default;

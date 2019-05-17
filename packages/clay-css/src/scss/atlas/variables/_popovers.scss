@@ -1,3 +1,7 @@
+////
+/// @group popovers
+////
+
 $popover-border-color: transparent !default;
 $popover-border-radius: $border-radius !default; // 4px
 $popover-box-shadow: 0 1px 15px -2px rgba(0, 0, 0, 0.2) !default;
@@ -9,7 +13,8 @@ $popover-arrow-height: 0.3rem !default;
 $popover-arrow-offset: 0.625rem !default; // 10px
 $popover-arrow-width: $popover-arrow-height * 2 !default;
 
-// $popover-inner-padding is deprecated in v2
+/// @deprecated as of v2.11.1 with no replacement. This is left over from V1.
+
 $popover-inner-padding: 0 !default;
 
 $popover-header-bg: $white !default;
