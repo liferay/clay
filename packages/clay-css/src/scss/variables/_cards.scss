@@ -120,7 +120,6 @@ $card-interactive-primary-after-highlight: map-merge((
 
 $card-interactive-primary: () !default;
 $card-interactive-primary: map-merge((
-	hover-box-shadow: $input-btn-focus-box-shadow,
 	focus-bg: $gray-100,
 	active-bg: $gray-200,
 	after-highlight: $card-interactive-primary-after-highlight,
