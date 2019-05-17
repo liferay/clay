@@ -5,6 +5,7 @@
  */
 
 import * as React from 'react';
+import classNames from 'classnames';
 
 import Action from './Action';
 import Caption from './Caption';
@@ -16,7 +17,7 @@ import ItemList from './ItemList';
 import Menu, {Align} from './Menu';
 import Search from './Search';
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {
+interface Props extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	/**
 	 * Flag to indicate if the DropDown menu is active or not.
 	 */
@@ -25,7 +26,12 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Default position of menu element. Values come from `metal-position`.
 	 */
-	alignmentPosition: number;
+	alignmentPosition?: number;
+
+	/**
+	 * HTML element tag that the container should render.
+	 */
+	containerElement?: 'div' | 'li';
 
 	/**
 	 * Flag to indicate if menu contains icon symbols on the right side.
@@ -63,6 +69,7 @@ const ClayDropDown: React.FunctionComponent<Props> & {
 	alignmentPosition,
 	children,
 	className,
+	containerElement = 'div',
 	hasLeftSymbols,
 	hasRightSymbols,
 	onActiveChange,
@@ -72,11 +79,19 @@ const ClayDropDown: React.FunctionComponent<Props> & {
 	const triggerElementRef = React.useRef<HTMLButtonElement>(null);
 	const menuElementRef = React.useRef<HTMLDivElement>(null);
 
+	const ContainerElement = containerElement;
+
 	return (
-		<div {...otherProps} className="dropdown">
+		<ContainerElement
+			{...otherProps}
+			className={classNames('dropdown', className)}
+		>
 			<span ref={triggerElementRef} style={{display: 'inline-block'}}>
 				{React.cloneElement(trigger, {
-					className: 'dropdown-toggle',
+					className: classNames(
+						'dropdown-toggle',
+						trigger.props.className
+					),
 					onClick: () => onActiveChange(!active),
 				})}
 			</span>
@@ -92,7 +107,7 @@ const ClayDropDown: React.FunctionComponent<Props> & {
 			>
 				{children}
 			</Menu>
-		</div>
+		</ContainerElement>
 	);
 };
 
