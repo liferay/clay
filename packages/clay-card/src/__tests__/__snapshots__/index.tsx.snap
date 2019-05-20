@@ -745,3 +745,463 @@ exports[`ClayCard renders a ClayCard as user selectable card 1`] = `
   </div>
 </div>
 `;
+
+exports[`ClayCard renders a group of ClayCards 1`] = `
+Array [
+  <ul
+    className="card-page"
+  >
+    <li
+      className="card-page-item card-page-item-header"
+    >
+      <p
+        className="card-section-header"
+      >
+        Test Files
+      </p>
+    </li>
+    <li
+      className="card-page-item card-page-item-directory"
+    >
+      <div
+        className="card card-type-asset file-card"
+      >
+        <div
+          className="card-item-first aspect-ratio"
+        >
+          <div
+            className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
+          >
+            <svg
+              className="lexicon-icon lexicon-icon-documents-and-media"
+              role="presentation"
+            >
+              <use
+                xlinkHref="/path/to/some/resource.svg#documents-and-media"
+              />
+            </svg>
+          </div>
+          <span
+            className="sticker sticker-rounded sticker-danger sticker-bottom-left"
+          >
+            <span
+              className="sticker-overlay"
+            >
+              DOC
+            </span>
+          </span>
+        </div>
+        <div
+          className="card-body"
+        >
+          <div
+            className="card-row"
+          >
+            <div
+              className="autofit-col autofit-col-expand"
+            >
+              <section
+                className="autofit-section"
+              >
+                <div
+                  className="card-title text-truncate"
+                >
+                  deliverable.doc
+                </div>
+                <div
+                  className="card-subtitle text-truncate"
+                >
+                  Stevie Ray Vaughn
+                </div>
+                <div
+                  className="card-detail"
+                >
+                  <span
+                    className="label label-success"
+                  >
+                    <span
+                      className="label-item label-item-expand"
+                    >
+                      Approved
+                    </span>
+                  </span>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="card-page-item card-page-item-directory"
+    >
+      <div
+        className="card card-type-asset file-card"
+      >
+        <div
+          className="card-item-first aspect-ratio"
+        >
+          <div
+            className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
+          >
+            <svg
+              className="lexicon-icon lexicon-icon-documents-and-media"
+              role="presentation"
+            >
+              <use
+                xlinkHref="/path/to/some/resource.svg#documents-and-media"
+              />
+            </svg>
+          </div>
+          <span
+            className="sticker sticker-rounded sticker-danger sticker-bottom-left"
+          >
+            <span
+              className="sticker-overlay"
+            >
+              DOC
+            </span>
+          </span>
+        </div>
+        <div
+          className="card-body"
+        >
+          <div
+            className="card-row"
+          >
+            <div
+              className="autofit-col autofit-col-expand"
+            >
+              <section
+                className="autofit-section"
+              >
+                <div
+                  className="card-title text-truncate"
+                >
+                  deliverable.doc
+                </div>
+                <div
+                  className="card-subtitle text-truncate"
+                >
+                  Stevie Ray Vaughn
+                </div>
+                <div
+                  className="card-detail"
+                >
+                  <span
+                    className="label label-success"
+                  >
+                    <span
+                      className="label-item label-item-expand"
+                    >
+                      Approved
+                    </span>
+                  </span>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="card-page-item card-page-item-directory"
+    >
+      <div
+        className="card card-type-asset file-card"
+      >
+        <div
+          className="card-item-first aspect-ratio"
+        >
+          <div
+            className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
+          >
+            <svg
+              className="lexicon-icon lexicon-icon-documents-and-media"
+              role="presentation"
+            >
+              <use
+                xlinkHref="/path/to/some/resource.svg#documents-and-media"
+              />
+            </svg>
+          </div>
+          <span
+            className="sticker sticker-rounded sticker-danger sticker-bottom-left"
+          >
+            <span
+              className="sticker-overlay"
+            >
+              DOC
+            </span>
+          </span>
+        </div>
+        <div
+          className="card-body"
+        >
+          <div
+            className="card-row"
+          >
+            <div
+              className="autofit-col autofit-col-expand"
+            >
+              <section
+                className="autofit-section"
+              >
+                <div
+                  className="card-title text-truncate"
+                >
+                  deliverable.doc
+                </div>
+                <div
+                  className="card-subtitle text-truncate"
+                >
+                  Stevie Ray Vaughn
+                </div>
+                <div
+                  className="card-detail"
+                >
+                  <span
+                    className="label label-success"
+                  >
+                    <span
+                      className="label-item label-item-expand"
+                    >
+                      Approved
+                    </span>
+                  </span>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>,
+  <ul
+    className="card-page"
+  >
+    <li
+      className="card-page-item card-page-item-header"
+    >
+      <p
+        className="card-section-header"
+      >
+        Test Users
+      </p>
+    </li>
+    <li
+      className="card-page-item card-page-item-directory"
+    >
+      <div
+        className="card card-type-asset form-check form-check-card form-check-top-left user-card"
+      >
+        <div
+          className="card"
+        >
+          <div
+            className="card-item-first aspect-ratio"
+          >
+            <div
+              className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
+            >
+              <span
+                className="sticker sticker-user-icon sticker-circle sticker-secondary"
+              >
+                <span
+                  className="sticker-overlay"
+                >
+                  <svg
+                    className="lexicon-icon lexicon-icon-user"
+                    role="presentation"
+                  >
+                    <use
+                      xlinkHref="/path/to/some/resource.svg#user"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div
+            className="card-body"
+          >
+            <div
+              className="card-row"
+            >
+              <div
+                className="autofit-col autofit-col-expand"
+              >
+                <div
+                  className="card-title text-truncate"
+                >
+                  Macaulay Culkin
+                </div>
+                <div
+                  className="card-subtitle text-truncate"
+                >
+                  Author Action
+                </div>
+                <div
+                  className="card-detail"
+                >
+                  <span
+                    className="label label-success"
+                  >
+                    <span
+                      className="label-item label-item-expand"
+                    >
+                      Approved
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="card-page-item card-page-item-directory"
+    >
+      <div
+        className="card card-type-asset form-check form-check-card form-check-top-left user-card"
+      >
+        <div
+          className="card"
+        >
+          <div
+            className="card-item-first aspect-ratio"
+          >
+            <div
+              className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
+            >
+              <span
+                className="sticker sticker-user-icon sticker-circle sticker-secondary"
+              >
+                <span
+                  className="sticker-overlay"
+                >
+                  <svg
+                    className="lexicon-icon lexicon-icon-user"
+                    role="presentation"
+                  >
+                    <use
+                      xlinkHref="/path/to/some/resource.svg#user"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div
+            className="card-body"
+          >
+            <div
+              className="card-row"
+            >
+              <div
+                className="autofit-col autofit-col-expand"
+              >
+                <div
+                  className="card-title text-truncate"
+                >
+                  Macaulay Culkin
+                </div>
+                <div
+                  className="card-subtitle text-truncate"
+                >
+                  Author Action
+                </div>
+                <div
+                  className="card-detail"
+                >
+                  <span
+                    className="label label-success"
+                  >
+                    <span
+                      className="label-item label-item-expand"
+                    >
+                      Approved
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="card-page-item card-page-item-directory"
+    >
+      <div
+        className="card card-type-asset form-check form-check-card form-check-top-left user-card"
+      >
+        <div
+          className="card"
+        >
+          <div
+            className="card-item-first aspect-ratio"
+          >
+            <div
+              className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
+            >
+              <span
+                className="sticker sticker-user-icon sticker-circle sticker-secondary"
+              >
+                <span
+                  className="sticker-overlay"
+                >
+                  <svg
+                    className="lexicon-icon lexicon-icon-user"
+                    role="presentation"
+                  >
+                    <use
+                      xlinkHref="/path/to/some/resource.svg#user"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div
+            className="card-body"
+          >
+            <div
+              className="card-row"
+            >
+              <div
+                className="autofit-col autofit-col-expand"
+              >
+                <div
+                  className="card-title text-truncate"
+                >
+                  Macaulay Culkin
+                </div>
+                <div
+                  className="card-subtitle text-truncate"
+                >
+                  Author Action
+                </div>
+                <div
+                  className="card-detail"
+                >
+                  <span
+                    className="label label-success"
+                  >
+                    <span
+                      className="label-item label-item-expand"
+                    >
+                      Approved
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>,
+]
+`;
