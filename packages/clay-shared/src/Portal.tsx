@@ -7,8 +7,12 @@
 import * as React from 'react';
 import {createPortal} from 'react-dom';
 
-const Portal: React.FunctionComponent<React.HTMLAttributes<HTMLDivElement>> = ({children}) => {
-	const portalRef = React.useRef(typeof document !== 'undefined' && document.createElement('div'));
+const Portal: React.FunctionComponent<React.HTMLAttributes<HTMLDivElement>> = ({
+	children,
+}) => {
+	const portalRef = React.useRef(
+		typeof document !== 'undefined' && document.createElement('div')
+	);
 	const elToMountTo = typeof document !== 'undefined' && document.body;
 
 	React.useEffect(() => {
@@ -26,11 +30,7 @@ const Portal: React.FunctionComponent<React.HTMLAttributes<HTMLDivElement>> = ({
 		return createPortal(children, portalRef.current);
 	}
 
-	return (
-		<>
-			{children}
-		</>
-	);
+	return <>{children}</>;
 };
 
 export default Portal;
