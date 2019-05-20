@@ -13,6 +13,7 @@ import {AspectRatio, CardAspectRatioType} from './AspectRatio';
 import {Body, CardBodyProps, CardBodyType} from './Body';
 import {CardDescriptionType, Description} from './Description';
 import {CardDetailType, Detail} from './Detail';
+import {CardGroupType, Group} from './Group';
 import {CardHeaderType, Header} from './Header';
 
 export interface CardProps {
@@ -37,6 +38,7 @@ const ClayCard: React.FunctionComponent<Props> & {
 	Body: CardBodyType;
 	Detail: CardDetailType;
 	Description: CardDescriptionType;
+	Group: CardGroupType;
 	Header: CardHeaderType;
 } = ({
 	children,
@@ -122,6 +124,8 @@ ClayCard.Body = Body;
 ClayCard.Detail = Detail;
 
 ClayCard.Description = Description;
+
+ClayCard.Group = Group;
 
 ClayCard.Header = Header;
 
