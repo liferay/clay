@@ -28,7 +28,11 @@ const PaginationEllipsis: React.FunctionComponent<PaginationEllipsisProps> = ({
 			className="page-item"
 			containerElement="li"
 			onActiveChange={newVal => setActive(newVal)}
-			trigger={<ClayButton className="page-link">{'...'}</ClayButton>}
+			trigger={
+				<ClayButton className="page-link" displayType="unstyled">
+					{'...'}
+				</ClayButton>
+			}
 		>
 			<ClayDropDown.ItemList>
 				{items &&

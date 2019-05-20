@@ -38,7 +38,7 @@ exports[`ClayPagination renders 1`] = `
         style="display: inline-block;"
       >
         <button
-          class="dropdown-toggle page-link btn btn-primary"
+          class="dropdown-toggle page-link btn btn-unstyled"
           type="button"
         >
           ...
@@ -97,7 +97,7 @@ exports[`ClayPagination renders 1`] = `
         style="display: inline-block;"
       >
         <button
-          class="dropdown-toggle page-link btn btn-primary"
+          class="dropdown-toggle page-link btn btn-unstyled"
           type="button"
         >
           ...
