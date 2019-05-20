@@ -23,7 +23,7 @@ const CardFileSelectable = (props: any) => (
 					/>
 				</div>
 				<ClaySticker displayType="danger" position="bottom-left">
-					DOC
+					{'DOC'}
 				</ClaySticker>
 			</ClayCheckboxWithState>
 		</ClayCard.Header>
@@ -31,13 +31,15 @@ const CardFileSelectable = (props: any) => (
 			<div className="autofit-col autofit-col-expand">
 				<section className="autofit-section">
 					<ClayCard.Description type="title">
-						deliverable.doc
+						{'deliverable.doc'}
 					</ClayCard.Description>
 					<ClayCard.Description type="subtitle">
-						Stevie Ray Vaughn
+						{'Stevie Ray Vaughn'}
 					</ClayCard.Description>
 					<ClayCard.Detail>
-						<ClayLabel displayType="success">Approved</ClayLabel>
+						<ClayLabel displayType="success">
+							{'Approved'}
+						</ClayLabel>
 					</ClayCard.Detail>
 				</section>
 			</div>

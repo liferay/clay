@@ -15,7 +15,7 @@ const CardInteractiveWithIcon = (props: any) => (
 			<ClayIcon spritemap={props.spritemap} symbol="page-template" />
 		</ClayCard.Header>
 		<ClayCard.Body>
-			<ClayCard.Description type="title">Blog</ClayCard.Description>
+			<ClayCard.Description type="title">{'Blog'}</ClayCard.Description>
 		</ClayCard.Body>
 	</ClayCard>
 );

@@ -38,24 +38,19 @@ export const Body: CardBodyType = ({children, className, ...otherProps}) => {
 					className={classNames('card-body', className)}
 					{...otherProps}
 				>
-					                    
 					<div className="card-row">{children}</div>
-					                
 				</div>
-				            
 			</div>
 		);
 	}
 
 	return (
 		<TagName className={classNames('card-body', className)} {...otherProps}>
-			            
 			{isCardType.interactive ? (
 				children
 			) : (
 				<TagName className="card-row">{children}</TagName>
 			)}
-			        
 		</TagName>
 	);
 };

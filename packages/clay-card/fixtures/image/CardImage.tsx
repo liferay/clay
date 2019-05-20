@@ -31,13 +31,13 @@ const CardImage = (props: any) => (
 		<ClayCard.Body>
 			<div className="autofit-col autofit-col-expand">
 				<ClayCard.Description type="title">
-					thumbnail_coffee.jpg
+					{'thumbnail_coffee.jpg'}
 				</ClayCard.Description>
 				<ClayCard.Description type="subtitle">
-					Author Action
+					{'Author Action'}
 				</ClayCard.Description>
 				<ClayCard.Detail>
-					<ClayLabel displayType="success">Approved</ClayLabel>
+					<ClayLabel displayType="success">{'Approved'}</ClayLabel>
 				</ClayCard.Detail>
 			</div>
 		</ClayCard.Body>

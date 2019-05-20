@@ -142,13 +142,13 @@ ClayCard v3 became a Low-Level API, decomposed to ClayCard.AspectRatio, ClayCard
 + 		<ClayCard.Body>
 + 			<div className="autofit-col autofit-col-expand">
 + 				<ClayCard.Description type="title">
-+ 					Macaulay Culkin
++ 					Adélaide
 + 				</ClayCard.Description>
 + 				<ClayCard.Description type="subtitle">
 + 					Author Action
 + 				</ClayCard.Description>
 + 				<ClayCard.Detail>
-+ 					<ClayLabel displayType="warning">Rejected</ClayLabel>
++ 					<ClayLabel displayType="warning">{'Rejected'}</ClayLabel>
 + 				</ClayCard.Detail>
 + 			</div>
 + 		</ClayCard.Body>
@@ -190,7 +190,7 @@ To get to the behavior of having a ClayCard with an image, use the following com
 +					Author Action
 +				</ClayCard.Description>
 +				<ClayCard.Detail>
-+					<ClayLabel displayType="success">Approved</ClayLabel>
++					<ClayLabel displayType="success">{'Approved'}</ClayLabel>
 +				</ClayCard.Detail>
 +			</div>
 +		</ClayCard.Body>
@@ -223,7 +223,7 @@ To get to the behavior of having a ClayCard with a user image, use the following
 + 					Author Action
 + 				</ClayCard.Description>
 + 				<ClayCard.Detail>
-+ 					<ClayLabel displayType="success">Approved</ClayLabel>
++ 					<ClayLabel displayType="success">{'Approved'}</ClayLabel>
 + 				</ClayCard.Detail>
 + 			</div>
 + 		</ClayCard.Body>
@@ -277,7 +277,7 @@ To get to the behavior of having a ClayCard with a folder, use the following com
 + 					Stevie Ray Vaughn
 + 				</ClayCard.Description>
 + 				<ClayCard.Detail>
-+ 					<ClayLabel displayType="success">Approved</ClayLabel>
++ 					<ClayLabel displayType="success">{'Approved'}</ClayLabel>
 + 				</ClayCard.Detail>
 + 			</section>
 + 		</div>

@@ -21,7 +21,7 @@ const CardHorizontalInteractive = (props: any) => (
 			<span className="autofit-col autofit-col-expand">
 				<span className="autofit-section">
 					<ClayCard.Description truncate type="title">
-						Full Page Application
+						{'Full Page Application'}
 					</ClayCard.Description>
 				</span>
 			</span>

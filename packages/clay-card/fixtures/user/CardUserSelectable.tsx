@@ -36,13 +36,13 @@ const CardUserSelectable = (props: any) => (
 		<ClayCard.Body>
 			<div className="autofit-col autofit-col-expand">
 				<ClayCard.Description type="title">
-					Adélaide
+					{'Adélaide'}
 				</ClayCard.Description>
 				<ClayCard.Description type="subtitle">
-					Author Action
+					{'Author Action'}
 				</ClayCard.Description>
 				<ClayCard.Detail>
-					<ClayLabel displayType="warning">Rejected</ClayLabel>
+					<ClayLabel displayType="warning">{'Rejected'}</ClayLabel>
 				</ClayCard.Detail>
 			</div>
 		</ClayCard.Body>

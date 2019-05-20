@@ -31,6 +31,11 @@ interface IProps extends React.HTMLAttributes<HTMLSpanElement> {
 	displayType?: DisplayType;
 
 	/**
+	 * Turns the sticker inline
+	 */
+	inline?: boolean;
+
+	/**
 	 * Flag to indicate if the sticker should be positioned on the outside
 	 * corners when position is defined.
 	 */
@@ -40,11 +45,6 @@ interface IProps extends React.HTMLAttributes<HTMLSpanElement> {
 	 * Position of the sticker in relation to the contents.
 	 */
 	position?: Position;
-
-	/**
-	 * Turns the sticker inline
-	 */
-	inline?: boolean;
 
 	/**
 	 * Shape of the sticker.
@@ -61,8 +61,8 @@ const ClaySticker: React.FunctionComponent<IProps> = ({
 	children,
 	className,
 	displayType = 'primary',
-	outside = false,
 	inline,
+	outside = false,
 	position,
 	shape = 'rounded',
 	size,

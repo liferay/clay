@@ -14,10 +14,12 @@ const CardInteractiveNoTruncateDescription = (props: any) => (
 		</ClayCard.Header>
 		<ClayCard.Body>
 			<ClayCard.Description type="title">
-				Content Page
+				{'Content Page'}
 			</ClayCard.Description>
 			<ClayCard.Description truncate={false} type="text">
-				This is an example of card-type-template using an anchor tag.
+				{
+					'This is an example of card-type-template using an anchor tag.'
+				}
 			</ClayCard.Description>
 		</ClayCard.Body>
 	</ClayCard>

@@ -22,7 +22,7 @@ const CardFolderSelectable = (props: any) => (
 				</div>
 				<div className="autofit-col autofit-col-expand autofit-col-gutters">
 					<ClayCard.Description type="title">
-						Very Large Folder
+						{'Very Large Folder'}
 					</ClayCard.Description>
 				</div>
 			</ClayCard.Body>

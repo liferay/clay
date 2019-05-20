@@ -14,10 +14,10 @@ const CardInteractive = (props: any) => (
 		</ClayCard.Header>
 		<ClayCard.Body>
 			<ClayCard.Description type="title">
-				Widget Page
+				{'Widget Page'}
 			</ClayCard.Description>
 			<ClayCard.Description type="text">
-				Build a page by adding widgets and content.
+				{'Build a page by adding widgets and content.'}
 			</ClayCard.Description>
 		</ClayCard.Body>
 	</ClayCard>
