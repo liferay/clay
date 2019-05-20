@@ -130,6 +130,10 @@
 			border-color: $header-collapsed-border-color;
 		}
 
+		&.panel-header-link {
+			@include clay-link($header-link);
+		}
+
 		&:not(.collapse-icon-middle) {
 			.collapse-icon-closed,
 			.collapse-icon-open {
@@ -146,10 +150,6 @@
 				border-color: $border-color;
 			}
 		}
-	}
-
-	.panel-header-link {
-		@include clay-link($header-link);
 	}
 
 	.panel-title {
