@@ -93,7 +93,9 @@ const ClayCard: React.FunctionComponent<Props> & {
 					selectable && isCardType.directory,
 				'file-card': isCardType.file,
 				'form-check form-check-card form-check-top-left':
-					(selectable && isCardType.file || isCardType.image) || isCardType.user,
+					(selectable && isCardType.file) ||
+					isCardType.image ||
+					isCardType.user,
 				'image-card': isCardType.image,
 				'template-card': isCardType.interactive,
 				'template-card-horizontal': isCardType.horizontalInteractive,

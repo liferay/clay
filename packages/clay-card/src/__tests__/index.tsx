@@ -62,14 +62,14 @@ describe('ClayCard', () => {
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
-	})
+	});
 	it('renders a ClayCard as a selectable file card', () => {
 		const testRenderer = TestRenderer.create(
 			<CardFileSelectable spritemap={imageOrSpritemap} />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
-	})
+	});
 	it('renders a ClayCard as template navigation card', () => {
 		const testRenderer = TestRenderer.create(
 			<CardInteractive image={imageOrSpritemap} />
