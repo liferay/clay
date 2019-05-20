@@ -25,6 +25,7 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 
 import 'clay-css/lib/css/atlas.css';
+import ClayCard from '../src';
 
 const contentImage = require('./static/content.svg');
 const portletImage = require('./static/portlet.svg');
@@ -32,6 +33,18 @@ const portletImage = require('./static/portlet.svg');
 const spritemap = require('clay-css/lib/images/icons/icons.svg');
 
 storiesOf('ClayCard', module)
+	.add('with group', () => (
+		<>
+			<ClayCard.Group label="files">
+				<CardFile spritemap={spritemap} />
+				<CardFileSelectable spritemap={spritemap} />
+			</ClayCard.Group>
+			<ClayCard.Group label="images">
+				<CardImage spritemap={spritemap} />
+				<CardImage spritemap={spritemap} />
+			</ClayCard.Group>
+		</>
+	))
 	.add('with image', () => (
 		<div className="row">
 			<div className="col-md-4">
@@ -54,17 +67,7 @@ storiesOf('ClayCard', module)
 			</div>
 		</div>
 	))
-	.add('with file', () => (
-		<div className="row">
-			<div className="col-md-4">
-				<CardFile spritemap={spritemap} />
-			</div>
 
-			<div className="col-md-4">
-				<CardFileSelectable spritemap={spritemap} />
-			</div>
-		</div>
-	))
 	.add('with folder card', () => (
 		<div className="row">
 			<div className="col-md-4">
@@ -77,23 +80,19 @@ storiesOf('ClayCard', module)
 		</div>
 	))
 	.add('with navigation card variant', () => (
-		<>
-			<div className="row">
-				<div className="col-md-4">
-					<CardInteractive image={portletImage} />
-				</div>
-
-				<div className="col-md-4">
-					<CardInteractiveNoTruncateDescription
-						image={contentImage}
-					/>
-				</div>
-				<div className="col-md-4">
-					<CardInteractiveWithIcon spritemap={spritemap} />
-				</div>
-				<div className="col-md-4">
-					<CardHorizontalInteractive spritemap={spritemap} />
-				</div>
+		<div className="row">
+			<div className="col-md-4">
+				<CardInteractive image={portletImage} />
 			</div>
-		</>
+
+			<div className="col-md-4">
+				<CardInteractiveNoTruncateDescription image={contentImage} />
+			</div>
+			<div className="col-md-4">
+				<CardInteractiveWithIcon spritemap={spritemap} />
+			</div>
+			<div className="col-md-4">
+				<CardHorizontalInteractive spritemap={spritemap} />
+			</div>
+		</div>
 	));
