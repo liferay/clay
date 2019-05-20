@@ -7,6 +7,8 @@
 import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
 
+import ClayCard from '../index';
+
 import CardFile from '../../fixtures/file/CardFile';
 import CardFileSelectable from '../../fixtures/file/CardFileSelectable';
 
@@ -108,6 +110,24 @@ describe('ClayCard', () => {
 	it('renders a ClayCard as user selectable card', () => {
 		const testRenderer = TestRenderer.create(
 			<CardUserSelectable spritemap={imageOrSpritemap} />
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+	it('renders a group of ClayCards', () => {
+		const testRenderer = TestRenderer.create(
+			<>
+				<ClayCard.Group label="Test Files">
+					<CardFile spritemap={imageOrSpritemap} />
+					<CardFile spritemap={imageOrSpritemap} />
+					<CardFile spritemap={imageOrSpritemap} />
+				</ClayCard.Group>
+				<ClayCard.Group label="Test Users">
+					<CardUser spritemap={imageOrSpritemap} />
+					<CardUser spritemap={imageOrSpritemap} />
+					<CardUser spritemap={imageOrSpritemap} />
+				</ClayCard.Group>
+			</>
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
