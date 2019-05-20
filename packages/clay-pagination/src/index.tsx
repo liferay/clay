@@ -66,12 +66,41 @@ const getPages = (
 };
 
 interface Props extends React.HTMLAttributes<HTMLUListElement> {
+	/**
+	 * The page that is currently active. The first page is `1`.
+	 */
 	activePage: number;
+
+	/**
+	 * The number of pages to show on each side of the active page before
+	 * using an ellipsis dropdown.
+	 */
 	ellipsisBuffer?: number;
+
+	/**
+	 * The page numbers that should be disabled. For example, `[2,5,6]`.
+	 */
 	disabledPages?: number[];
+
+	/**
+	 * Function used to create the href provided for each page link.
+	 */
 	hrefConstructor?: (page?: number) => string;
+
+	/**
+	 * Callback for when the active page changes. This is only used if
+	 * an href is not provided.
+	 */
 	onPageChange?: (page?: number) => void;
+
+	/**
+	 * The total number of pages in the pagination list.
+	 */
 	totalPages: number;
+
+	/**
+	 * Path to spritemap from clay-css.
+	 */
 	spritemap: string;
 }
 
