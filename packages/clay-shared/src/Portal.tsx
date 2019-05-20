@@ -7,18 +7,30 @@
 import * as React from 'react';
 import {createPortal} from 'react-dom';
 
-const Portal = ({children}: {children: React.ReactNode}) => {
-	const portalRef = React.useRef(document.createElement('div'));
-	const elToMountTo = document && document.body;
+const Portal: React.FunctionComponent<React.HTMLAttributes<HTMLDivElement>> = ({
+	children,
+}) => {
+	const portalRef = React.useRef(
+		typeof document !== 'undefined' && document.createElement('div')
+	);
+	const elToMountTo = typeof document !== 'undefined' && document.body;
 
 	React.useEffect(() => {
-		elToMountTo.appendChild(portalRef.current);
+		if (elToMountTo && portalRef.current) {
+			elToMountTo.appendChild(portalRef.current);
+		}
 		return () => {
-			elToMountTo.removeChild(portalRef.current);
+			if (elToMountTo && portalRef.current) {
+				elToMountTo.removeChild(portalRef.current);
+			}
 		};
 	}, [elToMountTo]);
 
-	return createPortal(children, portalRef.current);
+	if (portalRef.current) {
+		return createPortal(children, portalRef.current);
+	}
+
+	return <>{children}</>;
 };
 
 export default Portal;
