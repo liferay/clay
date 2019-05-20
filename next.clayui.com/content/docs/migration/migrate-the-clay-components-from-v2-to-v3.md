@@ -285,6 +285,26 @@ To get to the behavior of having a ClayCard with a folder, use the following com
 + </ClayCard>
 ```
 
+To get the behavior of having a ClayCardGrid with Cards, use the following composition with ClayCard:
+
+```diff
+- <ClayCardGrid spritemap={spritemap} items={items} schema={schema} />
++ <ClayCard.Group label="Test Files">
++	<CardFile spritemap={imageOrSpritemap} />
++	<CardFile spritemap={imageOrSpritemap} />
++	<CardFile spritemap={imageOrSpritemap} />
++ </ClayCard.Group>
++ <ClayCard.Group label="Test Users">
++	<CardUser spritemap={imageOrSpritemap} />
++	<CardUser spritemap={imageOrSpritemap} />
++	<CardUser spritemap={imageOrSpritemap} />
++ </ClayCard.Group>
+```
+
+## ClayCardGrid
+
+ClayCardGrid was deprecated due ClayCard.Group.
+
 ## ClayLink
 
 ClayLink has become simpler with v3, removing APIs from `icon` and `image`, making it flexible for you to define your content but complying with [Lexicon specifications](http://lexicondesign.io).
