@@ -49,6 +49,8 @@ const useResource = ({
 
 	let retryDelayIntervalId = useRef<null | NodeJS.Timeout>(null).current;
 
+	// A flag to identify if the first rendering happened to avoid
+	// two requests.
 	const firstRenderRef = useRef<boolean>(true);
 
 	const cache = useCache(
@@ -83,7 +85,7 @@ const useResource = ({
 
 		const baseDelay = jitter ? initial : initial / 2;
 
-		let value = Math.min(baseDelay * 2 ** retryAttempts);
+		let value = baseDelay * 2 ** retryAttempts;
 
 		if (jitter) {
 			value = Math.random() * value;

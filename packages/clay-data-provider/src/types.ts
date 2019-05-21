@@ -92,7 +92,7 @@ export interface IDataProvider {
 	fetchDelay?: number;
 
 	/**
-	 * Set ups the request options.
+	 * Options passed to request configuration.
 	 */
 	fetchOptions?: RequestInit;
 
