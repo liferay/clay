@@ -38,7 +38,11 @@ export type TSymbolData = LRU<{}, {}>;
 
 export type TLink = Function | string;
 
-export type TVariables = Object | null;
+export interface IVariables {
+	[propName: string]: any;
+}
+
+export type TVariables = IVariables | null;
 
 export interface IStorage {
 	[SYMBOL_DATA_PROVIDER]?: TSymbolData;

@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import Uri from 'metal-uri';
 import {
 	FetchPolicy,
 	IDataProvider,
@@ -19,21 +20,6 @@ import {useEffect, useRef, useState} from 'react';
 interface IResource extends IDataProvider {
 	onNetworkStatusChange?: (status: NetworkStatus) => void;
 }
-
-const getQueryParams = (variables: any): string | null => {
-	if (!variables) {
-		return null;
-	}
-
-	const keys = Object.keys(variables);
-
-	return keys
-		.map((key, index) => {
-			const param = `${key}=${variables[key]}`;
-			return index === keys.length - 1 ? `?${param}` : param;
-		})
-		.join('&');
-};
 
 const useResource = ({
 	fetchDelay = 300,
@@ -160,13 +146,17 @@ const useResource = ({
 		variables: TVariables,
 		fetchOptions?: RequestInit
 	) => {
-		if (fetchOptions && fetchOptions.method !== 'GET') {
-			return link;
+		const uri = new Uri(link);
+
+		if ((fetchOptions && fetchOptions.method !== 'GET') || !variables) {
+			return uri.toString();
 		}
 
-		const query = getQueryParams(variables);
+		const keys = Object.keys(variables);
 
-		return query ? `${link}/${query}` : link;
+		keys.forEach(key => uri.addParameterValue(key, variables[key]));
+
+		return uri.toString();
 	};
 
 	const doFetch = (retryAttempts = 0) => {
