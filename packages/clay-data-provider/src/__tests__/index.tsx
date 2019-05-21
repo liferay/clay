@@ -75,7 +75,7 @@ describe('ClayDataProvider', () => {
 
 		await wait(() => expect(fetchMock.mock.calls.length).toEqual(1));
 
-		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data');
+		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data/');
 		expect(container.innerHTML).toMatchSnapshot();
 	});
 
@@ -121,7 +121,7 @@ describe('ClayDataProvider', () => {
 
 		await wait(() => expect(fetchMock.mock.calls.length).toEqual(1));
 
-		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data');
+		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data/');
 		expect(container.innerHTML).toMatchSnapshot();
 	});
 
@@ -149,7 +149,7 @@ describe('ClayDataProvider', () => {
 
 		expect(fetchMock.mock.calls.length).toEqual(1);
 
-		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data');
+		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data/');
 		expect(container.innerHTML).toMatchSnapshot();
 	});
 
@@ -183,7 +183,7 @@ describe('ClayDataProvider', () => {
 		expect(spy.mock.calls[4][0]).not.toBe(
 			'DataProvider: Trying 5 of 5 will happen in 2400ms'
 		);
-		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data');
+		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data/');
 		expect(container.innerHTML).toMatchSnapshot();
 
 		spy.mockRestore();
@@ -222,7 +222,7 @@ describe('ClayDataProvider', () => {
 		expect(spy.mock.calls[4][0]).toBe(
 			'DataProvider: Trying 5 of 5 will happen in 2400ms'
 		);
-		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data');
+		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data/');
 		expect(container.innerHTML).toMatchSnapshot();
 
 		spy.mockRestore();
@@ -311,6 +311,6 @@ describe('ClayDataProvider', () => {
 		await wait(() => expect(fetchMock.mock.calls.length).toEqual(3));
 		expect(container.innerHTML).toMatchSnapshot();
 
-		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data');
+		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data/');
 	});
 });
