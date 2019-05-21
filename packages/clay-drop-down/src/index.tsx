@@ -69,7 +69,7 @@ const ClayDropDown: React.FunctionComponent<Props> & {
 	alignmentPosition,
 	children,
 	className,
-	containerElement = 'div',
+	containerElement: ContainerElement = 'div',
 	hasLeftSymbols,
 	hasRightSymbols,
 	onActiveChange,
@@ -78,8 +78,6 @@ const ClayDropDown: React.FunctionComponent<Props> & {
 }) => {
 	const triggerElementRef = React.useRef<HTMLButtonElement>(null);
 	const menuElementRef = React.useRef<HTMLDivElement>(null);
-
-	const ContainerElement = containerElement;
 
 	return (
 		<ContainerElement
