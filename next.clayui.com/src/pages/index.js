@@ -82,7 +82,7 @@ export default () => {
 											<li className="nav-item">
 												<a
 													className="nav-link-intro"
-													href="https://lexicondesign.io"
+													href="https://liferay.design/lexicon"
 													rel="noopener noreferrer"
 													target="_blank"
 												>
@@ -315,7 +315,7 @@ export default () => {
 										</p>
 										<a
 											className="mb-3"
-											href="https://lexicondesign.io/"
+											href="https://liferay.design/lexicon"
 											rel="noopener noreferrer"
 											target="_blank"
 										>

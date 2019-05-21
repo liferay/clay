@@ -22,11 +22,11 @@ description: "Alerts are used to capture the attention of the user in an intrusi
 </div>
 
 <div class="clay-site-alert alert alert-info">
-	Check the <a href="https://lexicondesign.io">Lexicon</a> <a href="https://lexicondesign.io/docs/patterns/alerts.html">Alerts Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
+	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/alerts/">Alerts Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
 </div>
 
 <div class="clay-site-alert alert alert-warning">
-	See the implementation of the <a href="/docs/components/alerts.html">Alerts component in React</a> following the Lexicon <a href="https://lexicondesign.io/docs/patterns/alerts.html">Alerts Pattern</a>.
+	See the implementation of the <a href="/docs/components/alerts.html">Alerts component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/alerts/">Alerts Pattern</a>.
 </div>
 
 # Colors
@@ -58,7 +58,7 @@ Lexicon adopts in its design system the following colors below:
 
 ## Non-standard colors
 
-The colors below do not follow Lexicon standards but follow the idea of [​​satellite components](https://lexicondesign.io/docs/lexicon/), Clay provides non-standard colors to give you more flexibility to build UI that belong to the product.
+The colors below do not follow Lexicon standards but follow the idea of [​​satellite components](https://liferay.design/lexicon), Clay provides non-standard colors to give you more flexibility to build UI that belong to the product.
 
 <div class="row">
 	<div class="col-md-3">
