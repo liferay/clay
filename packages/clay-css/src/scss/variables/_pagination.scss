@@ -1,11 +1,19 @@
+////
+/// @group pagination
+////
+
 $pagination-font-size: null !default;
 
 // Pagination Item
 
 $pagination-item-height: 2.375rem !default; // 38px
-// `$pagination-item-margin-x` is deprecated use `$pagination-item` instead
+
+/// @deprecated as of v2 use the Sass map `$pagination-item` instead
+
 $pagination-item-margin-x: -0.5px !default;
-// `$pagination-item-margin-y` is deprecated use `$pagination-item` instead
+
+/// @deprecated as of v2 use the Sass map `$pagination-item` instead
+
 $pagination-item-margin-y: null !default;
 
 $pagination-item: () !default;
@@ -18,11 +26,16 @@ $pagination-item: map-merge((
 
 // Pagination Link
 
-// `$pagination-link-border-radius` is deprecated use `$pagination-link` instead
+/// @deprecated as of v2 use the Sass map `$pagination-link` instead
+
 $pagination-link-border-radius: 0 !default;
-// `$pagination-link-cursor` is deprecated use `$pagination-link` instead
+
+/// @deprecated as of v2 use the Sass map `$pagination-link` instead
+
 $pagination-link-cursor: null !default;
-// `$pagination-link-transition` is deprecated use `$pagination-link` instead
+
+/// @deprecated as of v2 use the Sass map `$pagination-link` instead
+
 $pagination-link-transition: null !default;
 
 $pagination-link-first-border-radius: $border-radius 0 0 $border-radius !default;
@@ -32,11 +45,16 @@ $pagination-margin-bottom: 0.5rem !default;
 
 $pagination-margin-top-mobile: 0.5rem !default;
 
-// `$pagination-disabled-cursor` is deprecated use `$pagination-link-disabled` instead
+/// @deprecated as of v2 use the Sass map `$pagination-link-disabled` instead
+
 $pagination-disabled-cursor: $disabled-cursor !default;
-// `$pagination-disabled-opacity` is deprecated use `$pagination-link-disabled` instead
+
+/// @deprecated as of v2 use the Sass map `$pagination-link-disabled` instead
+
 $pagination-disabled-opacity: 1 !default;
-// `$pagination-disabled-pointer-events` is deprecated use `$pagination-link-disabled` instead
+
+/// @deprecated as of v2 use the Sass map `$pagination-link-disabled` instead
+
 $pagination-disabled-pointer-events: auto !default;
 
 // Pagination Link
@@ -101,33 +119,53 @@ $pagination-dropdown-menu-spacer-y: null !default;
 
 // Pagination Items Per Page
 
-// `$pagination-items-per-page-bg` is deprecated use `$pagination-items-per-page-link` instead
+/// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link` instead
+
 $pagination-items-per-page-bg: null !default;
-// `$pagination-items-per-page-border-color` is deprecated use `$pagination-items-per-page-link` instead
+
+/// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link` instead
+
 $pagination-items-per-page-border-color: $pagination-border-color !default;
-// `$pagination-items-per-page-border-radius` is deprecated use `$pagination-items-per-page-link` instead
+
+/// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link` instead
+
 $pagination-items-per-page-border-radius: $border-radius !default;
-// `$pagination-items-per-page-color` is deprecated use `$pagination-items-per-page-link` instead
+
+/// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link` instead
+
 $pagination-items-per-page-color: $pagination-color !default;
 $pagination-items-per-page-font-size: $pagination-font-size !default;
-// `$pagination-items-per-page-transition` is deprecated use `$pagination-items-per-page-link` instead
+
+/// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link` instead
+
 $pagination-items-per-page-transition: $pagination-link-transition !default;
 
-// `$pagination-items-per-page-hover-bg` is deprecated use `$pagination-items-per-page-link-hover` instead
+/// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link-hover` instead
+
 $pagination-items-per-page-hover-bg: $pagination-hover-bg !default;
-// `$pagination-items-per-page-hover-border-color` is deprecated use `$pagination-items-per-page-link-hover` instead
+
+/// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link-hover` instead
+
 $pagination-items-per-page-hover-border-color: $pagination-hover-border-color !default;
-// `$pagination-items-per-page-hover-color` is deprecated use `$pagination-items-per-page-link-hover` instead
+
+/// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link-hover` instead
+
 $pagination-items-per-page-hover-color: $pagination-hover-color !default;
 
-// `$pagination-items-per-page-focus-box-shadow` is deprecated use `$pagination-items-per-page-link-focus` instead
+/// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link-focus` instead
+
 $pagination-items-per-page-focus-box-shadow: $pagination-focus-box-shadow !default;
-// `$pagination-items-per-page-focus-outline` is deprecated use `$pagination-items-per-page-link-focus` instead
+
+/// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link-focus` instead
+
 $pagination-items-per-page-focus-outline: 0 !default;
 
-// `$pagination-items-per-page-lexicon-icon-margin-left` is deprecated use `$pagination-items-per-page-link` instead
+/// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link` instead
+
 $pagination-items-per-page-lexicon-icon-margin-left: 0.125rem !default; // 2px
-// `$pagination-items-per-page-lexicon-icon-margin-top` is deprecated use `$pagination-items-per-page-link` instead
+
+/// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link` instead
+
 $pagination-items-per-page-lexicon-icon-margin-top: 0.125rem !default; // 2px
 
 // Pagination Items Per Page Link

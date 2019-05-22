@@ -104,7 +104,7 @@ exports[`ClayAutocomplete should render a ClayAutocomplete with classes 1`] = `
 </div>
 <ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
   <li>
-    <span class="disabled dropdown-item">no-results-found</span>
+    <span class="disabled dropdown-item">no-results-were-found</span>
   </li>
 </ul>
 `;
@@ -118,7 +118,7 @@ exports[`ClayAutocomplete should render a ClayAutocomplete with id 1`] = `
 </div>
 <ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
   <li>
-    <span class="disabled dropdown-item">no-results-found</span>
+    <span class="disabled dropdown-item">no-results-were-found</span>
   </li>
 </ul>
 `;
@@ -132,7 +132,7 @@ exports[`ClayAutocomplete should render a ClayAutocomplete with input element cl
 </div>
 <ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
   <li>
-    <span class="disabled dropdown-item">no-results-found</span>
+    <span class="disabled dropdown-item">no-results-were-found</span>
   </li>
 </ul>
 `;
@@ -146,7 +146,7 @@ exports[`ClayAutocomplete should render a ClayAutocomplete with input name 1`] =
 </div>
 <ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
   <li>
-    <span class="disabled dropdown-item">no-results-found</span>
+    <span class="disabled dropdown-item">no-results-were-found</span>
   </li>
 </ul>
 `;
@@ -160,7 +160,7 @@ exports[`ClayAutocomplete should render a ClayAutocomplete with input value 1`] 
 </div>
 <ul class="autocomplete-dropdown-menu dropdown-menu show" ref="dropdown">
   <li>
-    <span class="disabled dropdown-item">no-results-found</span>
+    <span class="disabled dropdown-item">no-results-were-found</span>
   </li>
 </ul>
 `;
@@ -174,7 +174,7 @@ exports[`ClayAutocomplete should render a ClayAutocomplete with placeholder 1`] 
 </div>
 <ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
   <li>
-    <span class="disabled dropdown-item">no-results-found</span>
+    <span class="disabled dropdown-item">no-results-were-found</span>
   </li>
 </ul>
 `;
@@ -188,7 +188,7 @@ exports[`ClayAutocomplete should render a ClayAutocomplete with unstable_content
 </div>
 <ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
   <li>
-    <span class="disabled dropdown-item">no-results-found</span>
+    <span class="disabled dropdown-item">no-results-were-found</span>
   </li>
 </ul>
 `;
@@ -202,7 +202,7 @@ exports[`ClayAutocomplete should render the default markup 1`] = `
 </div>
 <ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
   <li>
-    <span class="disabled dropdown-item">no-results-found</span>
+    <span class="disabled dropdown-item">no-results-were-found</span>
   </li>
 </ul>
 `;
