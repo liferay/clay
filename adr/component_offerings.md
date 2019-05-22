@@ -45,7 +45,7 @@ The decision going forward is to create 2 sets of components
 
 #### Composable:
 
-![Composable Drop Down](./images/component_structure_2.png)
+![Composable Drop Down](./images/component_offerings_2.png)
 
 ```jsx
 <ClayDropDown>
@@ -70,7 +70,7 @@ Composing gives the user more control over the layout and interactions.
 
 #### High-level:
 
-![High Level Drop Down](./images/component_structure_1.png)
+![High Level Drop Down](./images/component_offerings_1.png)
 
 ```jsx
 <ClayDropDownWithPagination
