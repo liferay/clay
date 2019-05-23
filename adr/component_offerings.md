@@ -7,7 +7,7 @@ The primary issue we are facing right now is determining how "high-level" the co
 This boils down to two main goals:
 
 -   Provide enough flexibility and low-level components for teams to quickly build and deliver applications without being blocked by us
--   Provide quality high level components that allow teams to quickly build applications with the best possible interactions (UX) that are consistent, performant, accessible and extensible without the need of repeating themselves over and over again.
+-   Provide quality high level components that allow teams to quickly build applications with the best possible interactions (UX) that are consistent, performant, accessible and extensible without the need of repeating themselves over and over again. These high-level components are composed of low-level components
 
 ```jsx
 <ClayCard>
@@ -66,7 +66,7 @@ The decision going forward is to create 2 sets of components
 </ClayDropDown>
 ```
 
-Composing gives the user more control over the layout and interactions.
+Composing gives the user more control over the layout and interactions. Our "sell" here for the low-level components are for cases where users need to create other behaviors or customize their components in more detail.
 
 #### High-level:
 
@@ -107,7 +107,7 @@ Composing gives the user more control over the layout and interactions.
 
 You'll notice that the high-level component handles much of the interactions internally. It will handle the click of the `show more`, paginate, and update language as necessary. In fact, even this high-level component will be made from the smaller low-level building blocks.
 
-Finally, both the high-level and low-level components will be exported from each package. The low-level component will be exported as default, but the high-level ones will be exported by name. The high-level components should be put into a
+Finally, both the high-level and low-level components will be exported from each package. The low-level component will be exported as default, but the high-level ones will be exported by name. The high-level components should be descriptive in name, following the pattern of `{ComponentName}{Variant}`.
 
 For example:
 
@@ -116,6 +116,8 @@ export {ClayDropDownWithPagination};
 
 export default ClayDropDown;
 ```
+
+The purpose of this would be to expose descriptive high-level components as well as the basic building blocks of the component as the default export.
 
 ## Consequences
 
@@ -130,5 +132,7 @@ Benefits:
 Drawbacks:
 
 -   More lines of code to maintain.
+-   Increased API surface area, with corresponding requirement to maintain backwards compatibility.
+-   Risk of exposing implementation details as low-level API.
 -   Possible lock-in scenarios when using high-level components. Teams might need to move from a high-level component to a composition scenario in case they need to add something not already covered.
 -   Increased uncertainty... what approach should a developer use and when?
