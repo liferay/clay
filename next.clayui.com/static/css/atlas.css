@@ -10017,7 +10017,6 @@ button.label {
   .dropdown-item:hover {
     text-decoration: none; }
   .dropdown-item:focus {
-    border-radius: 0.375rem;
     box-shadow: inset 0 0 0 0.125rem #80acff, inset 0 0 0 0.25rem #FFF;
     outline: 0;
     text-decoration: none; }
@@ -12899,8 +12898,7 @@ a.collapse-icon {
           background-color: #f0f5ff;
           color: #272833; }
         .menubar-vertical-expand-md.menubar-transparent .nav-link:focus {
-          background-color: #f0f5ff;
-          border-radius: 0.375rem; }
+          background-color: #f0f5ff; }
         .menubar-vertical-expand-md.menubar-transparent .nav-link:active {
           background-color: #f0f5ff;
           color: #272833; }
@@ -13013,8 +13011,7 @@ a.collapse-icon {
           background-color: #f0f5ff;
           color: #272833; }
         .menubar-vertical-expand-lg.menubar-transparent .nav-link:focus {
-          background-color: #f0f5ff;
-          border-radius: 0.375rem; }
+          background-color: #f0f5ff; }
         .menubar-vertical-expand-lg.menubar-transparent .nav-link:active {
           background-color: #f0f5ff;
           color: #272833; }
@@ -15281,9 +15278,7 @@ a.collapse-icon {
     height: 0.25rem; }
   .navigation-bar .nav-link,
   .navigation-bar .navbar-nav .btn-unstyled {
-    border-radius: 0.25rem;
-    outline: 0;
-    transition: box-shadow 0.15s ease-in-out; }
+    outline: 0; }
     .navigation-bar .nav-link:focus,
     .navigation-bar .navbar-nav .btn-unstyled:focus {
       box-shadow: 0 0 0 0.125rem #FFF, 0 0 0 0.25rem #80acff; }
@@ -15292,14 +15287,11 @@ a.collapse-icon {
     .navigation-bar .navbar-nav .btn-unstyled:disabled {
       box-shadow: none; }
   .navigation-bar .navbar-brand {
-    border-radius: 0.25rem;
-    outline: 0;
-    transition: box-shadow 0.15s ease-in-out; }
+    outline: 0; }
     .navigation-bar .navbar-brand:focus {
       box-shadow: 0 0 0 0.125rem #FFF, 0 0 0 0.25rem #80acff; }
   .navigation-bar .navbar-toggler {
-    outline: 0;
-    transition: box-shadow 0.15s ease-in-out; }
+    outline: 0; }
     .navigation-bar .navbar-toggler:focus {
       box-shadow: 0 0 0 0.125rem #FFF, 0 0 0 0.25rem #80acff; }
   @media (max-width: 575.98px) {
