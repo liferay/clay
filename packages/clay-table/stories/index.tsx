@@ -40,9 +40,9 @@ storiesOf('ClayTable', module)
 			'',
 			'',
 			'',
-			<DownloadButton />,
-			<ClayProgressBar spritemap={spritemap} value={0} />,
-			<ClayDropdownWithTrigger />,
+			<DownloadButton key={5} />,
+			<ClayProgressBar key={6} spritemap={spritemap} value={0} />,
+			<ClayDropdownWithTrigger key={7} />,
 		];
 
 		return (
@@ -54,18 +54,18 @@ storiesOf('ClayTable', module)
 						'middle'
 					)}
 					bordered={boolean('bordered', false)}
-					headingNoWrap={boolean('heading no wrap', false)}
 					headVerticalAlignment={select(
 						'head vertical alignment',
 						{bottom: 'bottom', middle: 'middle', top: 'top'},
 						'middle'
 					)}
+					headingNoWrap={boolean('heading no wrap', false)}
 					hover={boolean('hover', true)}
 					noWrap={boolean('no wrap', false)}
 					responsive={boolean('responsive', false)}
 					responsiveSize={select(
 						'responsive size',
-						{sm: 'sm', md: 'md', lg: 'lg', xl: 'xl'},
+						{lg: 'lg', md: 'md', sm: 'sm', xl: 'xl'},
 						'sm'
 					)}
 					striped={boolean('striped', false)}
@@ -86,8 +86,8 @@ storiesOf('ClayTable', module)
 									symbol="order-arrow-up"
 								/>
 							</ClayTable.Cell>
-							{HeadCellTitles.map(title => (
-								<ClayTable.Cell headingCell>
+							{HeadCellTitles.map((title, index) => (
+								<ClayTable.Cell headingCell key={index}>
 									{title}
 								</ClayTable.Cell>
 							))}
@@ -104,8 +104,10 @@ storiesOf('ClayTable', module)
 							<ClayTable.Cell expanded headingTitle>
 								{'Photos'}
 							</ClayTable.Cell>
-							{rowCellItems.map(child => (
-								<ClayTable.Cell>{child}</ClayTable.Cell>
+							{rowCellItems.map((child, index) => (
+								<ClayTable.Cell key={index}>
+									{child}
+								</ClayTable.Cell>
 							))}
 						</ClayTable.Row>
 
@@ -113,8 +115,10 @@ storiesOf('ClayTable', module)
 							<ClayTable.Cell expanded headingTitle>
 								{'Videos'}
 							</ClayTable.Cell>
-							{rowCellItems.map(child => (
-								<ClayTable.Cell>{child}</ClayTable.Cell>
+							{rowCellItems.map((child, index) => (
+								<ClayTable.Cell key={index}>
+									{child}
+								</ClayTable.Cell>
 							))}
 						</ClayTable.Row>
 
@@ -135,7 +139,7 @@ storiesOf('ClayTable', module)
 							</ClayTable.Cell>
 							<ClayTable.Cell>
 								<ClayLabel displayType="success">
-									No Spicy
+									{'No Spicy'}
 								</ClayLabel>
 							</ClayTable.Cell>
 							<ClayTable.Cell>
@@ -165,7 +169,7 @@ storiesOf('ClayTable', module)
 							</ClayTable.Cell>
 							<ClayTable.Cell>
 								<ClayLabel displayType="warning">
-									Spicy
+									{'Spicy'}
 								</ClayLabel>
 							</ClayTable.Cell>
 							<ClayTable.Cell>
@@ -194,8 +198,10 @@ storiesOf('ClayTable', module)
 							<ClayTable.Cell expanded headingTitle>
 								{'Ferrán Adriá'}
 							</ClayTable.Cell>
-							{rowCellItems.map(child => (
-								<ClayTable.Cell>{child}</ClayTable.Cell>
+							{rowCellItems.map((child, index) => (
+								<ClayTable.Cell key={index}>
+									{child}
+								</ClayTable.Cell>
 							))}
 						</ClayTable.Row>
 					</ClayTable.Body>
@@ -214,7 +220,7 @@ storiesOf('ClayTable', module)
 		];
 
 		const rowCellTitles = [
-			<ClayCheckboxWithState />,
+			<ClayCheckboxWithState key={0} />,
 			'21146',
 			'Some regular text',
 			'--',
@@ -232,18 +238,18 @@ storiesOf('ClayTable', module)
 						'middle'
 					)}
 					bordered={boolean('bordered', false)}
-					headingNoWrap={boolean('heading no wrap', false)}
 					headVerticalAlignment={select(
 						'head vertical alignment',
 						{bottom: 'bottom', middle: 'middle', top: 'top'},
 						'middle'
 					)}
+					headingNoWrap={boolean('heading no wrap', false)}
 					hover={boolean('hover', true)}
 					noWrap={boolean('no wrap', true)}
 					responsive={boolean('responsive', false)}
 					responsiveSize={select(
 						'responsive size',
-						{sm: 'sm', md: 'md', lg: 'lg', xl: 'xl'},
+						{lg: 'lg', md: 'md', sm: 'sm', xl: 'xl'},
 						'sm'
 					)}
 					striped={boolean('striped', false)}
@@ -256,8 +262,12 @@ storiesOf('ClayTable', module)
 					<ClayTable.Head>
 						<ClayTable.Row>
 							<ClayTable.Cell />
-							{HeadCellTitles.map(title => (
-								<ClayTable.Cell headingCell headingTitle>
+							{HeadCellTitles.map((title, index) => (
+								<ClayTable.Cell
+									headingCell
+									headingTitle
+									key={index}
+								>
 									<span className="text-truncate">
 										{title}
 									</span>
@@ -273,18 +283,24 @@ storiesOf('ClayTable', module)
 							</ClayTable.Cell>
 						</ClayTable.Row>
 						<ClayTable.Row>
-							{rowCellTitles.map(title => (
-								<ClayTable.Cell>{title}</ClayTable.Cell>
+							{rowCellTitles.map((title, index) => (
+								<ClayTable.Cell key={index}>
+									{title}
+								</ClayTable.Cell>
 							))}
 						</ClayTable.Row>
 						<ClayTable.Row>
-							{rowCellTitles.map(title => (
-								<ClayTable.Cell>{title}</ClayTable.Cell>
+							{rowCellTitles.map((title, index) => (
+								<ClayTable.Cell key={index}>
+									{title}
+								</ClayTable.Cell>
 							))}
 						</ClayTable.Row>
 						<ClayTable.Row>
-							{rowCellTitles.map(title => (
-								<ClayTable.Cell>{title}</ClayTable.Cell>
+							{rowCellTitles.map((title, index) => (
+								<ClayTable.Cell key={index}>
+									{title}
+								</ClayTable.Cell>
 							))}
 						</ClayTable.Row>
 					</ClayTable.Body>
@@ -301,18 +317,18 @@ storiesOf('ClayTable', module)
 					'middle'
 				)}
 				bordered={boolean('bordered', false)}
-				headingNoWrap={boolean('heading no wrap', false)}
 				headVerticalAlignment={select(
 					'head vertical alignment',
 					{bottom: 'bottom', middle: 'middle', top: 'top'},
 					'middle'
 				)}
+				headingNoWrap={boolean('heading no wrap', false)}
 				hover={boolean('hover', true)}
 				noWrap={boolean('no wrap', false)}
 				responsive={boolean('responsive', false)}
 				responsiveSize={select(
 					'responsive size',
-					{sm: 'sm', md: 'md', lg: 'lg', xl: 'xl'},
+					{lg: 'lg', md: 'md', sm: 'sm', xl: 'xl'},
 					'sm'
 				)}
 				striped={boolean('striped', true)}
