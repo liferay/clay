@@ -1,0 +1,356 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayTable renders 1`] = `
+<div
+  className=""
+>
+  <table
+    className="table table-autofit table-list"
+  />
+</div>
+`;
+
+exports[`ClayTable renders a Cell delimited 1`] = `
+<div
+  className=""
+>
+  <table
+    className="table table-autofit table-list table-striped"
+  >
+    <thead>
+      <tr
+        className=""
+      >
+        <th
+          className="table-cell-start table-focus"
+        >
+          Start
+        </th>
+        <th
+          className="table-focus"
+        >
+          <button
+            type="button"
+          >
+            Dummy
+          </button>
+        </th>
+        <th
+          className="table-focus"
+        >
+          <button
+            type="button"
+          >
+            Dummy
+          </button>
+        </th>
+        <th
+          className="table-cell-end table-focus"
+        >
+          End
+        </th>
+      </tr>
+    </thead>
+  </table>
+</div>
+`;
+
+exports[`ClayTable renders a Cell with text alignment set to center 1`] = `
+<div
+  className=""
+>
+  <table
+    className="table table-autofit table-list table-striped"
+  >
+    <thead>
+      <tr
+        className=""
+      >
+        <th
+          className="table-focus text-center"
+        >
+          <a
+            href="#1"
+          >
+            Link
+          </a>
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</div>
+`;
+
+exports[`ClayTable renders a full bottom vertical aligned table 1`] = `
+<div
+  className=""
+>
+  <table
+    className="table table-autofit table-list thead-valign-bottom table-valign-bottom"
+  >
+    <thead />
+    <tbody />
+  </table>
+</div>
+`;
+
+exports[`ClayTable renders a no wrapped table 1`] = `
+<div
+  className=""
+>
+  <table
+    className="table table-autofit table-list table-heading-nowrap table-nowrap"
+  >
+    <thead />
+    <tbody />
+  </table>
+</div>
+`;
+
+exports[`ClayTable renders a responsive table 1`] = `
+<div
+  className="table-responsive table-responsive-sm"
+>
+  <table
+    className="table table-autofit table-list"
+  >
+    <thead />
+    <tbody />
+  </table>
+</div>
+`;
+
+exports[`ClayTable renders a responsive table 2`] = `
+<div
+  className="table-responsive table-responsive-sm"
+>
+  <table
+    className="table table-autofit table-list"
+  >
+    <thead />
+    <tbody />
+  </table>
+</div>
+`;
+
+exports[`ClayTable renders a table bordered 1`] = `
+<div
+  className=""
+>
+  <table
+    className="table table-autofit table-list table-bordered"
+  >
+    <thead />
+    <tbody />
+  </table>
+</div>
+`;
+
+exports[`ClayTable renders a table hover 1`] = `
+<div
+  className=""
+>
+  <table
+    className="table table-autofit table-list show-quick-actions-on-hover table-hover"
+  >
+    <thead />
+    <tbody />
+  </table>
+</div>
+`;
+
+exports[`ClayTable renders a table striped 1`] = `
+<div
+  className=""
+>
+  <table
+    className="table table-autofit table-list table-striped"
+  >
+    <thead />
+    <tbody />
+  </table>
+</div>
+`;
+
+exports[`ClayTable renders a table with a Body 1`] = `
+<div
+  className=""
+>
+  <table
+    className="table table-autofit table-list"
+  >
+    <tbody />
+  </table>
+</div>
+`;
+
+exports[`ClayTable renders a table with a Head 1`] = `
+<div
+  className=""
+>
+  <table
+    className="table table-autofit table-list"
+  >
+    <thead />
+  </table>
+</div>
+`;
+
+exports[`ClayTable renders a table with a Head and Body 1`] = `
+<div
+  className=""
+>
+  <table
+    className="table table-autofit table-list"
+  >
+    <thead />
+    <tbody />
+  </table>
+</div>
+`;
+
+exports[`ClayTable renders a table with an active row 1`] = `
+<div
+  className=""
+>
+  <table
+    className="table table-autofit table-list"
+  >
+    <tbody>
+      <tr
+        className="table-active"
+      />
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`ClayTable renders a table with multiple Cells into Row 1`] = `
+<div
+  className=""
+>
+  <table
+    className="table table-autofit table-list"
+  >
+    <tbody>
+      <tr
+        className=""
+      >
+        <td
+          className=""
+        >
+          One
+        </td>
+        <td
+          className=""
+        >
+          <button
+            type="button"
+          >
+            Two
+          </button>
+        </td>
+        <td
+          className=""
+        >
+          Three
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`ClayTable renders a table with multiple rows into Body 1`] = `
+<div
+  className=""
+>
+  <table
+    className="table table-autofit table-list"
+  >
+    <tbody>
+      <tr
+        className=""
+      />
+      <tr
+        className=""
+      />
+      <tr
+        className=""
+      />
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`ClayTable renders a table with multiple rows into Head 1`] = `
+<div
+  className=""
+>
+  <table
+    className="table table-autofit table-list"
+  >
+    <thead>
+      <tr
+        className=""
+      />
+      <tr
+        className=""
+      />
+      <tr
+        className=""
+      />
+    </thead>
+  </table>
+</div>
+`;
+
+exports[`ClayTable renders with a headingTitle 1`] = `
+<div
+  className=""
+>
+  <table
+    className="table table-autofit table-list"
+  >
+    <tbody>
+      <tr
+        className="table-divider"
+      >
+        <td
+          className=""
+          colSpan={8}
+        >
+          Recipes
+        </td>
+      </tr>
+      <tr
+        className=""
+      >
+        <td
+          className="table-cell-expand"
+        >
+          <p
+            className="table-list-title"
+          >
+            Hamburger
+          </p>
+        </td>
+        <td
+          className=""
+        />
+        <td
+          className=""
+        >
+          U.S.A
+        </td>
+        <td
+          className="text-right"
+        >
+          10 min.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
