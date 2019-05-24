@@ -7,7 +7,7 @@ import ClayCheckbox from '@clayui/checkbox';
 
 import React from 'react';
 
-const ClayCheckboxWithState = (props: any) => {
+export const ClayCheckboxWithState = (props: any) => {
 	const [value, setValue] = React.useState<boolean>(false);
 
 	return (
@@ -21,5 +21,3 @@ const ClayCheckboxWithState = (props: any) => {
 		</ClayCheckbox>
 	);
 };
-
-export default ClayCheckboxWithState;

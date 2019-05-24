@@ -21,7 +21,8 @@ export const Detail: React.FunctionComponent<CardDetailProps> = ({
 	const {displayType} = React.useContext(Context);
 
 	const TagName =
-		displayType === 'interactive' || displayType === 'horizontal-interactive'
+		displayType === 'interactive' ||
+		displayType === 'horizontal-interactive'
 			? 'span'
 			: 'div';
 

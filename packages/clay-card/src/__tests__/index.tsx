@@ -5,131 +5,548 @@
  */
 
 import * as React from 'react';
-import * as TestRenderer from 'react-test-renderer';
+
+import {cleanup, render} from 'react-testing-library';
 
 import ClayCard from '../index';
+import ClayIcon from '@clayui/icon';
+import ClayLabel from '@clayui/label';
+import ClaySticker from '@clayui/sticker';
 
-import CardFile from '../../fixtures/file/CardFile';
-import CardFileSelectable from '../../fixtures/file/CardFileSelectable';
-
-import CardFolder from '../../fixtures/folder/CardFolder';
-import CardFolderSelectable from '../../fixtures/folder/CardFolderSelectable';
-
-import CardHorizontalInteractive from '../../fixtures/interactive/CardHorizontalInteractive';
-
-import CardImage from '../../fixtures/image/CardImage';
-import CardImageSelectable from '../../fixtures/image/CardImageSelectable';
-
-import CardInteractive from '../../fixtures/interactive/CardInteractive';
-import CardInteractiveNoTruncateDescription from '../../fixtures/interactive/CardInteractiveNoTruncateDescription';
-import CardInteractiveWithIcon from '../../fixtures/interactive/CardInteractiveWithIcon';
-
-import CardUser from '../../fixtures/user/CardUser';
-import CardUserSelectable from '../../fixtures/user/CardUserSelectable';
-
-const imageOrSpritemap = '/path/to/some/resource.svg';
+import {ClayCheckboxWithState} from '../../fixtures/ClayCheckboxWithState';
 
 describe('ClayCard', () => {
+	afterEach(cleanup);
+
 	it('renders a ClayCard as a directory', () => {
-		const testRenderer = TestRenderer.create(
-			<CardFolder spritemap={imageOrSpritemap} />
+		const {container} = render(
+			<ClayCard displayType="horizontal">
+				<ClayCard.Body>
+					<div className="flex-col">
+						<ClaySticker displayType="secondary" inline>
+							<ClayIcon
+								spritemap="/path/to/some/resource.svg"
+								symbol="folder"
+							/>
+						</ClaySticker>
+					</div>
+					<div className="autofit-col autofit-col-expand autofit-col-gutters">
+						<div className="autofit-section">
+							<ClayCard.Description type="title">
+								{'Very Large Folder'}
+							</ClayCard.Description>
+						</div>
+					</div>
+				</ClayCard.Body>
+			</ClayCard>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a ClayCard as a selectable folder', () => {
-		const testRenderer = TestRenderer.create(
-			<CardFolderSelectable spritemap={imageOrSpritemap} />
+		const {container} = render(
+			<ClayCard displayType="horizontal" selectable>
+				<ClayCheckboxWithState>
+					<ClayCard.Body>
+						<div className="autofit-col">
+							<ClaySticker displayType="secondary" inline>
+								<ClayIcon
+									spritemap="/path/to/some/resource.svg"
+									symbol="folder"
+								/>
+							</ClaySticker>
+						</div>
+						<div className="autofit-col autofit-col-expand autofit-col-gutters">
+							<ClayCard.Description type="title">
+								{'Very Large Folder'}
+							</ClayCard.Description>
+						</div>
+					</ClayCard.Body>
+				</ClayCheckboxWithState>
+			</ClayCard>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a ClayCard as image card', () => {
-		const testRenderer = TestRenderer.create(
-			<CardImage spritemap={imageOrSpritemap} />
+		const {container} = render(
+			<ClayCard displayType="image">
+				<ClayCard.AspectRatio className="card-item-first">
+					<img
+						alt="thumbnail"
+						className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid"
+						src="https://via.placeholder.com/256"
+					/>
+					<ClaySticker
+						displayType="danger"
+						position="bottom-left"
+						shape="rounded"
+					>
+						<ClayIcon
+							spritemap="/path/to/some/resource.svg"
+							symbol="document-image"
+						/>
+					</ClaySticker>
+				</ClayCard.AspectRatio>
+
+				<ClayCard.Body>
+					<div className="autofit-col autofit-col-expand">
+						<ClayCard.Description type="title">
+							{'thumbnail_coffee.jpg'}
+						</ClayCard.Description>
+						<ClayCard.Description type="subtitle">
+							{'Author Action'}
+						</ClayCard.Description>
+						<ClayCard.Detail>
+							<ClayLabel displayType="success">
+								{'Approved'}
+							</ClayLabel>
+						</ClayCard.Detail>
+					</div>
+				</ClayCard.Body>
+			</ClayCard>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a ClayCard as a selectable image card', () => {
-		const testRenderer = TestRenderer.create(
-			<CardImageSelectable spritemap={imageOrSpritemap} />
+		const {container} = render(
+			<ClayCard displayType="image" selectable>
+				<ClayCard.AspectRatio className="card-item-first">
+					<ClayCheckboxWithState>
+						<ClayCard.AspectRatio>
+							<img
+								alt="thumbnail"
+								className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid"
+								src="https://via.placeholder.com/256"
+							/>
+						</ClayCard.AspectRatio>
+						<ClaySticker
+							displayType="danger"
+							position="bottom-left"
+							shape="rounded"
+						>
+							<ClayIcon
+								spritemap="/path/to/some/resource.svg"
+								symbol="document-image"
+							/>
+						</ClaySticker>
+					</ClayCheckboxWithState>
+				</ClayCard.AspectRatio>
+
+				<ClayCard.Body>
+					<div className="autofit-col autofit-col-expand">
+						<ClayCard.Description type="title">
+							{'thumbnail_coffee.jpg'}
+						</ClayCard.Description>
+						<ClayCard.Description type="subtitle">
+							{'Author Action'}
+						</ClayCard.Description>
+						<ClayCard.Detail>
+							<ClayLabel displayType="success">
+								{'Approved'}
+							</ClayLabel>
+						</ClayCard.Detail>
+					</div>
+				</ClayCard.Body>
+			</ClayCard>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a ClayCard as a file card', () => {
-		const testRenderer = TestRenderer.create(
-			<CardFile spritemap={imageOrSpritemap} />
+		const {container} = render(
+			<ClayCard displayType="file">
+				<ClayCard.AspectRatio className="card-item-first">
+					<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+						<ClayIcon
+							spritemap="/path/to/some/resource.svg"
+							symbol="documents-and-media"
+						/>
+					</div>
+					<ClaySticker displayType="danger" position="bottom-left">
+						{'DOC'}
+					</ClaySticker>
+				</ClayCard.AspectRatio>
+				<ClayCard.Body>
+					<div className="autofit-col autofit-col-expand">
+						<section className="autofit-section">
+							<ClayCard.Description type="title">
+								{'deliverable.doc'}
+							</ClayCard.Description>
+							<ClayCard.Description type="subtitle">
+								{'Stevie Ray Vaughn'}
+							</ClayCard.Description>
+							<ClayCard.Detail>
+								<ClayLabel displayType="success">
+									{'Approved'}
+								</ClayLabel>
+							</ClayCard.Detail>
+						</section>
+					</div>
+				</ClayCard.Body>
+			</ClayCard>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a ClayCard as a selectable file card', () => {
-		const testRenderer = TestRenderer.create(
-			<CardFileSelectable spritemap={imageOrSpritemap} />
+		const {container} = render(
+			<ClayCard displayType="file" selectable>
+				<ClayCard.AspectRatio className="card-item-first">
+					<ClayCheckboxWithState>
+						<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+							<ClayIcon
+								spritemap="/path/to/some/resource.svg"
+								symbol="documents-and-media"
+							/>
+						</div>
+						<ClaySticker
+							displayType="danger"
+							position="bottom-left"
+						>
+							{'DOC'}
+						</ClaySticker>
+					</ClayCheckboxWithState>
+				</ClayCard.AspectRatio>
+				<ClayCard.Body>
+					<div className="autofit-col autofit-col-expand">
+						<section className="autofit-section">
+							<ClayCard.Description type="title">
+								{'deliverable.doc'}
+							</ClayCard.Description>
+							<ClayCard.Description type="subtitle">
+								{'Stevie Ray Vaughn'}
+							</ClayCard.Description>
+							<ClayCard.Detail>
+								<ClayLabel displayType="success">
+									{'Approved'}
+								</ClayLabel>
+							</ClayCard.Detail>
+						</section>
+					</div>
+				</ClayCard.Body>
+			</ClayCard>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a ClayCard as template navigation card', () => {
-		const testRenderer = TestRenderer.create(
-			<CardInteractive image={imageOrSpritemap} />
+		const {container} = render(
+			<ClayCard displayType="interactive">
+				<ClayCard.AspectRatio>
+					<span className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
+						<img
+							alt="portlet image"
+							src="/path/to/some/resource.gif"
+						/>
+					</span>
+				</ClayCard.AspectRatio>
+				<ClayCard.Body>
+					<ClayCard.Description type="title">
+						{'Widget Page'}
+					</ClayCard.Description>
+					<ClayCard.Description type="text">
+						{'Build a page by adding widgets and content.'}
+					</ClayCard.Description>
+				</ClayCard.Body>
+			</ClayCard>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a ClayCard as a template navigation card truncating text on description', () => {
-		const testRenderer = TestRenderer.create(
-			<CardInteractiveNoTruncateDescription image={imageOrSpritemap} />
+		const {container} = render(
+			<ClayCard displayType="interactive">
+				<ClayCard.AspectRatio>
+					<span className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
+						<img
+							alt="content image"
+							src="/path/to/some/resource.gif"
+						/>
+					</span>
+				</ClayCard.AspectRatio>
+				<ClayCard.Body>
+					<ClayCard.Description type="title">
+						{'Content Page'}
+					</ClayCard.Description>
+					<ClayCard.Description truncate={false} type="text">
+						{
+							'This is an example of card-type-template using an anchor tag.'
+						}
+					</ClayCard.Description>
+				</ClayCard.Body>
+			</ClayCard>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a ClayCard as template navigation card with icon instead of image', () => {
-		const testRenderer = TestRenderer.create(
-			<CardInteractiveWithIcon spritemap={imageOrSpritemap} />
+		const {container} = render(
+			<ClayCard displayType="interactive">
+				<ClayCard.AspectRatio>
+					<span className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
+						<ClayIcon
+							spritemap="/path/to/some/resource.svg"
+							symbol="page-template"
+						/>
+					</span>
+				</ClayCard.AspectRatio>
+				<ClayCard.Body>
+					<ClayCard.Description type="title">
+						{'Blog'}
+					</ClayCard.Description>
+				</ClayCard.Body>
+			</ClayCard>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a ClayCard as template navigation card as horizontal card', () => {
-		const testRenderer = TestRenderer.create(
-			<CardHorizontalInteractive spritemap={imageOrSpritemap} />
+		const {container} = render(
+			<ClayCard displayType="horizontal-interactive">
+				<ClayCard.Body>
+					<span className="autofit-col">
+						<ClaySticker displayType="light" inline>
+							<ClayIcon
+								spritemap="/path/to/some/resource.svg"
+								symbol="page"
+							/>
+						</ClaySticker>
+					</span>
+					<span className="autofit-col autofit-col-expand">
+						<span className="autofit-section">
+							<ClayCard.Description truncate type="title">
+								{'Full Page Application'}
+							</ClayCard.Description>
+						</span>
+					</span>
+				</ClayCard.Body>
+			</ClayCard>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a ClayCard as user card', () => {
-		const testRenderer = TestRenderer.create(
-			<CardUser spritemap={imageOrSpritemap} />
+		const {container} = render(
+			<ClayCard displayType="user">
+				<ClayCard.AspectRatio className="card-item-first">
+					<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+						<ClaySticker
+							className="sticker-user-icon"
+							displayType="secondary"
+							shape="circle"
+						>
+							<ClayIcon
+								spritemap="/path/to/some/resource.svg"
+								symbol="user"
+							/>
+						</ClaySticker>
+					</div>
+				</ClayCard.AspectRatio>
+
+				<ClayCard.Body>
+					<div className="autofit-col autofit-col-expand">
+						<ClayCard.Description type="title">
+							{'Adélaide'}
+						</ClayCard.Description>
+						<ClayCard.Description type="subtitle">
+							{'Author Action'}
+						</ClayCard.Description>
+						<ClayCard.Detail>
+							<ClayLabel displayType="success">
+								{'Approved'}
+							</ClayLabel>
+						</ClayCard.Detail>
+					</div>
+				</ClayCard.Body>
+			</ClayCard>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a ClayCard as user selectable card', () => {
-		const testRenderer = TestRenderer.create(
-			<CardUserSelectable spritemap={imageOrSpritemap} />
+		const {container} = render(
+			<ClayCard displayType="user" selectable>
+				<ClayCard.AspectRatio className="card-item-first">
+					<ClayCheckboxWithState>
+						<ClayCard.AspectRatio>
+							<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+								<ClaySticker
+									className="sticker-user-icon"
+									displayType="secondary"
+									shape="circle"
+								>
+									<ClayIcon
+										spritemap="/path/to/some/resource.svg"
+										symbol="user"
+									/>
+								</ClaySticker>
+							</div>
+						</ClayCard.AspectRatio>
+					</ClayCheckboxWithState>
+				</ClayCard.AspectRatio>
+
+				<ClayCard.Body>
+					<div className="autofit-col autofit-col-expand">
+						<ClayCard.Description type="title">
+							{'Adélaide'}
+						</ClayCard.Description>
+						<ClayCard.Description type="subtitle">
+							{'Author Action'}
+						</ClayCard.Description>
+						<ClayCard.Detail>
+							<ClayLabel displayType="warning">
+								{'Rejected'}
+							</ClayLabel>
+						</ClayCard.Detail>
+					</div>
+				</ClayCard.Body>
+			</ClayCard>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a group of ClayCards', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<>
 				<ClayCard.Group label="Test Files">
-					<CardFile spritemap={imageOrSpritemap} />
-					<CardFile spritemap={imageOrSpritemap} />
-					<CardFile spritemap={imageOrSpritemap} />
+					<ClayCard displayType="file">
+						<ClayCard.AspectRatio className="card-item-first">
+							<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+								<ClayIcon
+									spritemap="/path/to/some/resource.svg"
+									symbol="documents-and-media"
+								/>
+							</div>
+							<ClaySticker
+								displayType="danger"
+								position="bottom-left"
+							>
+								{'DOC'}
+							</ClaySticker>
+						</ClayCard.AspectRatio>
+						<ClayCard.Body>
+							<div className="autofit-col autofit-col-expand">
+								<section className="autofit-section">
+									<ClayCard.Description type="title">
+										{'deliverable.doc'}
+									</ClayCard.Description>
+									<ClayCard.Description type="subtitle">
+										{'Stevie Ray Vaughn'}
+									</ClayCard.Description>
+									<ClayCard.Detail>
+										<ClayLabel displayType="success">
+											{'Approved'}
+										</ClayLabel>
+									</ClayCard.Detail>
+								</section>
+							</div>
+						</ClayCard.Body>
+					</ClayCard>
+					<ClayCard displayType="file">
+						<ClayCard.AspectRatio className="card-item-first">
+							<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+								<ClayIcon
+									spritemap="/path/to/some/resource.svg"
+									symbol="documents-and-media"
+								/>
+							</div>
+							<ClaySticker
+								displayType="danger"
+								position="bottom-left"
+							>
+								{'DOC'}
+							</ClaySticker>
+						</ClayCard.AspectRatio>
+						<ClayCard.Body>
+							<div className="autofit-col autofit-col-expand">
+								<section className="autofit-section">
+									<ClayCard.Description type="title">
+										{'deliverable.doc'}
+									</ClayCard.Description>
+									<ClayCard.Description type="subtitle">
+										{'Stevie Ray Vaughn'}
+									</ClayCard.Description>
+									<ClayCard.Detail>
+										<ClayLabel displayType="success">
+											{'Approved'}
+										</ClayLabel>
+									</ClayCard.Detail>
+								</section>
+							</div>
+						</ClayCard.Body>
+					</ClayCard>
 				</ClayCard.Group>
 				<ClayCard.Group label="Test Users">
-					<CardUser spritemap={imageOrSpritemap} />
-					<CardUser spritemap={imageOrSpritemap} />
-					<CardUser spritemap={imageOrSpritemap} />
+					<ClayCard displayType="user">
+						<ClayCard.AspectRatio className="card-item-first">
+							<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+								<ClaySticker
+									className="sticker-user-icon"
+									displayType="secondary"
+									shape="circle"
+								>
+									<ClayIcon
+										spritemap="/path/to/some/resource.svg"
+										symbol="user"
+									/>
+								</ClaySticker>
+							</div>
+						</ClayCard.AspectRatio>
+
+						<ClayCard.Body>
+							<div className="autofit-col autofit-col-expand">
+								<ClayCard.Description type="title">
+									{'Adélaide'}
+								</ClayCard.Description>
+								<ClayCard.Description type="subtitle">
+									{'Author Action'}
+								</ClayCard.Description>
+								<ClayCard.Detail>
+									<ClayLabel displayType="success">
+										{'Approved'}
+									</ClayLabel>
+								</ClayCard.Detail>
+							</div>
+						</ClayCard.Body>
+					</ClayCard>
+					<ClayCard displayType="user">
+						<ClayCard.AspectRatio className="card-item-first">
+							<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+								<ClaySticker
+									className="sticker-user-icon"
+									displayType="secondary"
+									shape="circle"
+								>
+									<ClayIcon
+										spritemap="/path/to/some/resource.svg"
+										symbol="user"
+									/>
+								</ClaySticker>
+							</div>
+						</ClayCard.AspectRatio>
+
+						<ClayCard.Body>
+							<div className="autofit-col autofit-col-expand">
+								<ClayCard.Description type="title">
+									{'Adélaide'}
+								</ClayCard.Description>
+								<ClayCard.Description type="subtitle">
+									{'Author Action'}
+								</ClayCard.Description>
+								<ClayCard.Detail>
+									<ClayLabel displayType="success">
+										{'Approved'}
+									</ClayLabel>
+								</ClayCard.Detail>
+							</div>
+						</ClayCard.Body>
+					</ClayCard>
 				</ClayCard.Group>
 			</>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 });

@@ -1,48 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ClayCard renders a ClayCard as a directory 1`] = `
-<div
-  className="card"
->
+<div>
   <div
-    className="card card-horizontal"
+    class="card"
   >
     <div
-      className="card-body"
+      class="card card-horizontal"
     >
       <div
-        className="card-row"
+        class="card-body"
       >
         <div
-          className="flex-col"
-        >
-          <span
-            className="sticker sticker-rounded sticker-secondary"
-          >
-            <span
-              className="sticker-overlay inline-item"
-            >
-              <svg
-                className="lexicon-icon lexicon-icon-folder"
-                role="presentation"
-              >
-                <use
-                  xlinkHref="/path/to/some/resource.svg#folder"
-                />
-              </svg>
-            </span>
-          </span>
-        </div>
-        <div
-          className="autofit-col autofit-col-expand autofit-col-gutters"
+          class="card-row"
         >
           <div
-            className="autofit-section"
+            class="flex-col"
+          >
+            <span
+              class="sticker sticker-rounded sticker-secondary"
+            >
+              <span
+                class="sticker-overlay inline-item"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-folder"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/path/to/some/resource.svg#folder"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+          <div
+            class="autofit-col autofit-col-expand autofit-col-gutters"
           >
             <div
-              className="card-title text-truncate"
+              class="autofit-section"
             >
-              Very Large Folder
+              <div
+                class="card-title text-truncate"
+              >
+                Very Large Folder
+              </div>
             </div>
           </div>
         </div>
@@ -53,155 +55,65 @@ exports[`ClayCard renders a ClayCard as a directory 1`] = `
 `;
 
 exports[`ClayCard renders a ClayCard as a file card 1`] = `
-<div
-  className="card card-type-asset file-card"
->
+<div>
   <div
-    className="card-item-first aspect-ratio"
+    class="card card-type-asset file-card"
   >
     <div
-      className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
-    >
-      <svg
-        className="lexicon-icon lexicon-icon-documents-and-media"
-        role="presentation"
-      >
-        <use
-          xlinkHref="/path/to/some/resource.svg#documents-and-media"
-        />
-      </svg>
-    </div>
-    <span
-      className="sticker sticker-rounded sticker-danger sticker-bottom-left"
-    >
-      <span
-        className="sticker-overlay"
-      >
-        DOC
-      </span>
-    </span>
-  </div>
-  <div
-    className="card-body"
-  >
-    <div
-      className="card-row"
+      class="card-item-first aspect-ratio"
     >
       <div
-        className="autofit-col autofit-col-expand"
+        class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
       >
-        <section
-          className="autofit-section"
+        <svg
+          class="lexicon-icon lexicon-icon-documents-and-media"
+          role="presentation"
         >
-          <div
-            className="card-title text-truncate"
-          >
-            deliverable.doc
-          </div>
-          <div
-            className="card-subtitle text-truncate"
-          >
-            Stevie Ray Vaughn
-          </div>
-          <div
-            className="card-detail"
-          >
-            <span
-              className="label label-success"
-            >
-              <span
-                className="label-item label-item-expand"
-              >
-                Approved
-              </span>
-            </span>
-          </div>
-        </section>
+          <use
+            xlink:href="/path/to/some/resource.svg#documents-and-media"
+          />
+        </svg>
       </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayCard renders a ClayCard as a selectable file card 1`] = `
-<div
-  className="card-type-asset file-card form-check form-check-card form-check-top-left"
->
-  <div
-    className="card"
-  >
-    <div
-      className="card-item-first aspect-ratio"
-    >
-      <div
-        className="custom-control custom-checkbox"
+      <span
+        class="sticker sticker-rounded sticker-danger sticker-bottom-left"
       >
-        <label>
-          <input
-            checked={false}
-            className="custom-control-input"
-            disabled={false}
-            onChange={[Function]}
-            type="checkbox"
-            value="false"
-          />
-          <span
-            className="custom-control-label"
-          />
-          <div
-            className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
-          >
-            <svg
-              className="lexicon-icon lexicon-icon-documents-and-media"
-              role="presentation"
-            >
-              <use
-                xlinkHref="/path/to/some/resource.svg#documents-and-media"
-              />
-            </svg>
-          </div>
-          <span
-            className="sticker sticker-rounded sticker-danger sticker-bottom-left"
-          >
-            <span
-              className="sticker-overlay"
-            >
-              DOC
-            </span>
-          </span>
-        </label>
-      </div>
+        <span
+          class="sticker-overlay"
+        >
+          DOC
+        </span>
+      </span>
     </div>
     <div
-      className="card-body"
+      class="card-body"
     >
       <div
-        className="card-row"
+        class="card-row"
       >
         <div
-          className="autofit-col autofit-col-expand"
+          class="autofit-col autofit-col-expand"
         >
           <section
-            className="autofit-section"
+            class="autofit-section"
           >
             <div
-              className="card-title text-truncate"
+              class="card-title text-truncate"
             >
               deliverable.doc
             </div>
             <div
-              className="card-subtitle text-truncate"
+              class="card-subtitle text-truncate"
             >
               Stevie Ray Vaughn
             </div>
             <div
-              className="card-detail"
+              class="card-detail"
             >
               <span
-                className="label label-success"
+                class="label label-success"
               >
                 <span
-                  className="label-item label-item-expand"
+                  class="label-item label-item-expand"
                 >
                   Approved
                 </span>
@@ -215,155 +127,244 @@ exports[`ClayCard renders a ClayCard as a selectable file card 1`] = `
 </div>
 `;
 
-exports[`ClayCard renders a ClayCard as a selectable folder 1`] = `
-<div
-  className="card-type-directory form-check form-check-card form-check-middle-left"
->
+exports[`ClayCard renders a ClayCard as a selectable file card 1`] = `
+<div>
   <div
-    className="custom-control custom-checkbox"
+    class="card-type-asset file-card form-check form-check-card form-check-top-left"
   >
-    <label>
-      <input
-        checked={false}
-        className="custom-control-input"
-        disabled={false}
-        onChange={[Function]}
-        type="checkbox"
-        value="false"
-      />
-      <span
-        className="custom-control-label"
-      />
+    <div
+      class="card"
+    >
       <div
-        className="card card-horizontal"
+        class="card-item-first aspect-ratio"
       >
         <div
-          className="card-body"
+          class="custom-control custom-checkbox"
         >
-          <div
-            className="card-row"
-          >
+          <label>
+            <input
+              class="custom-control-input"
+              type="checkbox"
+              value="false"
+            />
+            <span
+              class="custom-control-label"
+            />
             <div
-              className="autofit-col"
+              class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-documents-and-media"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/path/to/some/resource.svg#documents-and-media"
+                />
+              </svg>
+            </div>
+            <span
+              class="sticker sticker-rounded sticker-danger sticker-bottom-left"
             >
               <span
-                className="sticker sticker-rounded sticker-secondary"
+                class="sticker-overlay"
               >
-                <span
-                  className="sticker-overlay inline-item"
-                >
-                  <svg
-                    className="lexicon-icon lexicon-icon-folder"
-                    role="presentation"
-                  >
-                    <use
-                      xlinkHref="/path/to/some/resource.svg#folder"
-                    />
-                  </svg>
-                </span>
+                DOC
               </span>
-            </div>
-            <div
-              className="autofit-col autofit-col-expand autofit-col-gutters"
+            </span>
+          </label>
+        </div>
+      </div>
+      <div
+        class="card-body"
+      >
+        <div
+          class="card-row"
+        >
+          <div
+            class="autofit-col autofit-col-expand"
+          >
+            <section
+              class="autofit-section"
             >
               <div
-                className="card-title text-truncate"
+                class="card-title text-truncate"
               >
-                Very Large Folder
+                deliverable.doc
+              </div>
+              <div
+                class="card-subtitle text-truncate"
+              >
+                Stevie Ray Vaughn
+              </div>
+              <div
+                class="card-detail"
+              >
+                <span
+                  class="label label-success"
+                >
+                  <span
+                    class="label-item label-item-expand"
+                  >
+                    Approved
+                  </span>
+                </span>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCard renders a ClayCard as a selectable folder 1`] = `
+<div>
+  <div
+    class="card-type-directory form-check form-check-card form-check-middle-left"
+  >
+    <div
+      class="custom-control custom-checkbox"
+    >
+      <label>
+        <input
+          class="custom-control-input"
+          type="checkbox"
+          value="false"
+        />
+        <span
+          class="custom-control-label"
+        />
+        <div
+          class="card card-horizontal"
+        >
+          <div
+            class="card-body"
+          >
+            <div
+              class="card-row"
+            >
+              <div
+                class="autofit-col"
+              >
+                <span
+                  class="sticker sticker-rounded sticker-secondary"
+                >
+                  <span
+                    class="sticker-overlay inline-item"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-folder"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="/path/to/some/resource.svg#folder"
+                      />
+                    </svg>
+                  </span>
+                </span>
+              </div>
+              <div
+                class="autofit-col autofit-col-expand autofit-col-gutters"
+              >
+                <div
+                  class="card-title text-truncate"
+                >
+                  Very Large Folder
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </label>
+      </label>
+    </div>
   </div>
 </div>
 `;
 
 exports[`ClayCard renders a ClayCard as a selectable image card 1`] = `
-<div
-  className="card-type-asset form-check form-check-card form-check-top-left image-card"
->
+<div>
   <div
-    className="card"
+    class="card-type-asset form-check form-check-card form-check-top-left image-card"
   >
     <div
-      className="card-item-first aspect-ratio"
+      class="card"
     >
       <div
-        className="custom-control custom-checkbox"
-      >
-        <label>
-          <input
-            checked={false}
-            className="custom-control-input"
-            disabled={false}
-            onChange={[Function]}
-            type="checkbox"
-            value="false"
-          />
-          <span
-            className="custom-control-label"
-          />
-          <div
-            className="aspect-ratio"
-          >
-            <img
-              alt="thumbnail"
-              className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid"
-              src="https://via.placeholder.com/256"
-            />
-          </div>
-          <span
-            className="sticker sticker-rounded sticker-danger sticker-bottom-left"
-          >
-            <span
-              className="sticker-overlay"
-            >
-              <svg
-                className="lexicon-icon lexicon-icon-document-image"
-                role="presentation"
-              >
-                <use
-                  xlinkHref="/path/to/some/resource.svg#document-image"
-                />
-              </svg>
-            </span>
-          </span>
-        </label>
-      </div>
-    </div>
-    <div
-      className="card-body"
-    >
-      <div
-        className="card-row"
+        class="card-item-first aspect-ratio"
       >
         <div
-          className="autofit-col autofit-col-expand"
+          class="custom-control custom-checkbox"
         >
-          <div
-            className="card-title text-truncate"
-          >
-            thumbnail_coffee.jpg
-          </div>
-          <div
-            className="card-subtitle text-truncate"
-          >
-            Author Action
-          </div>
-          <div
-            className="card-detail"
-          >
+          <label>
+            <input
+              class="custom-control-input"
+              type="checkbox"
+              value="false"
+            />
             <span
-              className="label label-success"
+              class="custom-control-label"
+            />
+            <div
+              class="aspect-ratio"
+            >
+              <img
+                alt="thumbnail"
+                class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid"
+                src="https://via.placeholder.com/256"
+              />
+            </div>
+            <span
+              class="sticker sticker-rounded sticker-danger sticker-bottom-left"
             >
               <span
-                className="label-item label-item-expand"
+                class="sticker-overlay"
               >
-                Approved
+                <svg
+                  class="lexicon-icon lexicon-icon-document-image"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/path/to/some/resource.svg#document-image"
+                  />
+                </svg>
               </span>
             </span>
+          </label>
+        </div>
+      </div>
+      <div
+        class="card-body"
+      >
+        <div
+          class="card-row"
+        >
+          <div
+            class="autofit-col autofit-col-expand"
+          >
+            <div
+              class="card-title text-truncate"
+            >
+              thumbnail_coffee.jpg
+            </div>
+            <div
+              class="card-subtitle text-truncate"
+            >
+              Author Action
+            </div>
+            <div
+              class="card-detail"
+            >
+              <span
+                class="label label-success"
+              >
+                <span
+                  class="label-item label-item-expand"
+                >
+                  Approved
+                </span>
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -373,276 +374,97 @@ exports[`ClayCard renders a ClayCard as a selectable image card 1`] = `
 `;
 
 exports[`ClayCard renders a ClayCard as a template navigation card truncating text on description 1`] = `
-<a
-  className="card card-interactive card-interactive-primary card-type-template template-card"
->
-  <span
-    className="aspect-ratio"
+<div>
+  <a
+    class="card card-interactive card-interactive-primary card-type-template template-card"
   >
     <span
-      className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush"
-    >
-      <img
-        alt="content image"
-        src="/path/to/some/resource.svg"
-      />
-    </span>
-  </span>
-  <span
-    className="card-body"
-  >
-    <span
-      className="card-title text-truncate"
-    >
-      Content Page
-    </span>
-    <span
-      className="card-text"
-    >
-      This is an example of card-type-template using an anchor tag.
-    </span>
-  </span>
-</a>
-`;
-
-exports[`ClayCard renders a ClayCard as image card 1`] = `
-<div
-  className="card card-type-asset form-check form-check-card form-check-top-left image-card"
->
-  <div
-    className="card-item-first aspect-ratio"
-  >
-    <img
-      alt="thumbnail"
-      className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid"
-      src="https://via.placeholder.com/256"
-    />
-    <span
-      className="sticker sticker-rounded sticker-danger sticker-bottom-left"
+      class="aspect-ratio"
     >
       <span
-        className="sticker-overlay"
+        class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush"
       >
-        <svg
-          className="lexicon-icon lexicon-icon-document-image"
-          role="presentation"
-        >
-          <use
-            xlinkHref="/path/to/some/resource.svg#document-image"
-          />
-        </svg>
+        <img
+          alt="content image"
+          src="/path/to/some/resource.gif"
+        />
       </span>
     </span>
-  </div>
-  <div
-    className="card-body"
-  >
-    <div
-      className="card-row"
+    <span
+      class="card-body"
     >
-      <div
-        className="autofit-col autofit-col-expand"
+      <span
+        class="card-title text-truncate"
       >
-        <div
-          className="card-title text-truncate"
-        >
-          thumbnail_coffee.jpg
-        </div>
-        <div
-          className="card-subtitle text-truncate"
-        >
-          Author Action
-        </div>
-        <div
-          className="card-detail"
-        >
-          <span
-            className="label label-success"
-          >
-            <span
-              className="label-item label-item-expand"
-            >
-              Approved
-            </span>
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
+        Content Page
+      </span>
+      <span
+        class="card-text"
+      >
+        This is an example of card-type-template using an anchor tag.
+      </span>
+    </span>
+  </a>
 </div>
 `;
 
-exports[`ClayCard renders a ClayCard as template navigation card 1`] = `
-<a
-  className="card card-interactive card-interactive-primary card-type-template template-card"
->
-  <span
-    className="aspect-ratio"
+exports[`ClayCard renders a ClayCard as image card 1`] = `
+<div>
+  <div
+    class="card card-type-asset form-check form-check-card form-check-top-left image-card"
   >
-    <span
-      className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush"
+    <div
+      class="card-item-first aspect-ratio"
     >
       <img
-        alt="portlet image"
-        src="/path/to/some/resource.svg"
+        alt="thumbnail"
+        class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid"
+        src="https://via.placeholder.com/256"
       />
-    </span>
-  </span>
-  <span
-    className="card-body"
-  >
-    <span
-      className="card-title text-truncate"
-    >
-      Widget Page
-    </span>
-    <span
-      className="card-text text-truncate"
-    >
-      Build a page by adding widgets and content.
-    </span>
-  </span>
-</a>
-`;
-
-exports[`ClayCard renders a ClayCard as template navigation card as horizontal card 1`] = `
-<a
-  className="card card-interactive card-interactive-primary card-type-template template-card-horizontal"
->
-  <span
-    className="card-body"
-  >
-    <span
-      className="card-row"
-    >
       <span
-        className="autofit-col"
+        class="sticker sticker-rounded sticker-danger sticker-bottom-left"
       >
         <span
-          className="sticker sticker-rounded sticker-light"
+          class="sticker-overlay"
         >
-          <span
-            className="sticker-overlay inline-item"
+          <svg
+            class="lexicon-icon lexicon-icon-document-image"
+            role="presentation"
           >
-            <svg
-              className="lexicon-icon lexicon-icon-page"
-              role="presentation"
-            >
-              <use
-                xlinkHref="/path/to/some/resource.svg#page"
-              />
-            </svg>
-          </span>
+            <use
+              xlink:href="/path/to/some/resource.svg#document-image"
+            />
+          </svg>
         </span>
       </span>
-      <span
-        className="autofit-col autofit-col-expand"
-      >
-        <span
-          className="autofit-section"
-        >
-          <span
-            className="card-title text-truncate"
-          >
-            Full Page Application
-          </span>
-        </span>
-      </span>
-    </span>
-  </span>
-</a>
-`;
-
-exports[`ClayCard renders a ClayCard as template navigation card with icon instead of image 1`] = `
-<a
-  className="card card-interactive card-interactive-primary card-type-template template-card"
->
-  <span
-    className="aspect-ratio"
-  >
-    <span
-      className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush"
-    >
-      <svg
-        className="lexicon-icon lexicon-icon-page-template"
-        role="presentation"
-      >
-        <use
-          xlinkHref="/path/to/some/resource.svg#page-template"
-        />
-      </svg>
-    </span>
-  </span>
-  <span
-    className="card-body"
-  >
-    <span
-      className="card-title text-truncate"
-    >
-      Blog
-    </span>
-  </span>
-</a>
-`;
-
-exports[`ClayCard renders a ClayCard as user card 1`] = `
-<div
-  className="card card-type-asset form-check form-check-card form-check-top-left user-card"
->
-  <div
-    className="card"
-  >
-    <div
-      className="card-item-first aspect-ratio"
-    >
-      <div
-        className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
-      >
-        <span
-          className="sticker sticker-user-icon sticker-circle sticker-secondary"
-        >
-          <span
-            className="sticker-overlay"
-          >
-            <svg
-              className="lexicon-icon lexicon-icon-user"
-              role="presentation"
-            >
-              <use
-                xlinkHref="/path/to/some/resource.svg#user"
-              />
-            </svg>
-          </span>
-        </span>
-      </div>
     </div>
     <div
-      className="card-body"
+      class="card-body"
     >
       <div
-        className="card-row"
+        class="card-row"
       >
         <div
-          className="autofit-col autofit-col-expand"
+          class="autofit-col autofit-col-expand"
         >
           <div
-            className="card-title text-truncate"
+            class="card-title text-truncate"
           >
-            Adélaide
+            thumbnail_coffee.jpg
           </div>
           <div
-            className="card-subtitle text-truncate"
+            class="card-subtitle text-truncate"
           >
             Author Action
           </div>
           <div
-            className="card-detail"
+            class="card-detail"
           >
             <span
-              className="label label-success"
+              class="label label-success"
             >
               <span
-                className="label-item label-item-expand"
+                class="label-item label-item-expand"
               >
                 Approved
               </span>
@@ -655,89 +477,279 @@ exports[`ClayCard renders a ClayCard as user card 1`] = `
 </div>
 `;
 
-exports[`ClayCard renders a ClayCard as user selectable card 1`] = `
-<div
-  className="card-type-asset form-check form-check-card form-check-top-left user-card"
->
+exports[`ClayCard renders a ClayCard as template navigation card 1`] = `
+<div>
+  <a
+    class="card card-interactive card-interactive-primary card-type-template template-card"
+  >
+    <span
+      class="aspect-ratio"
+    >
+      <span
+        class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush"
+      >
+        <img
+          alt="portlet image"
+          src="/path/to/some/resource.gif"
+        />
+      </span>
+    </span>
+    <span
+      class="card-body"
+    >
+      <span
+        class="card-title text-truncate"
+      >
+        Widget Page
+      </span>
+      <span
+        class="card-text text-truncate"
+      >
+        Build a page by adding widgets and content.
+      </span>
+    </span>
+  </a>
+</div>
+`;
+
+exports[`ClayCard renders a ClayCard as template navigation card as horizontal card 1`] = `
+<div>
+  <a
+    class="card card-interactive card-interactive-primary card-type-template template-card-horizontal"
+  >
+    <span
+      class="card-body"
+    >
+      <span
+        class="card-row"
+      >
+        <span
+          class="autofit-col"
+        >
+          <span
+            class="sticker sticker-rounded sticker-light"
+          >
+            <span
+              class="sticker-overlay inline-item"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-page"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/path/to/some/resource.svg#page"
+                />
+              </svg>
+            </span>
+          </span>
+        </span>
+        <span
+          class="autofit-col autofit-col-expand"
+        >
+          <span
+            class="autofit-section"
+          >
+            <span
+              class="card-title text-truncate"
+            >
+              Full Page Application
+            </span>
+          </span>
+        </span>
+      </span>
+    </span>
+  </a>
+</div>
+`;
+
+exports[`ClayCard renders a ClayCard as template navigation card with icon instead of image 1`] = `
+<div>
+  <a
+    class="card card-interactive card-interactive-primary card-type-template template-card"
+  >
+    <span
+      class="aspect-ratio"
+    >
+      <span
+        class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush"
+      >
+        <svg
+          class="lexicon-icon lexicon-icon-page-template"
+          role="presentation"
+        >
+          <use
+            xlink:href="/path/to/some/resource.svg#page-template"
+          />
+        </svg>
+      </span>
+    </span>
+    <span
+      class="card-body"
+    >
+      <span
+        class="card-title text-truncate"
+      >
+        Blog
+      </span>
+    </span>
+  </a>
+</div>
+`;
+
+exports[`ClayCard renders a ClayCard as user card 1`] = `
+<div>
   <div
-    className="card"
+    class="card card-type-asset form-check form-check-card form-check-top-left user-card"
   >
     <div
-      className="card-item-first aspect-ratio"
+      class="card"
     >
       <div
-        className="custom-control custom-checkbox"
+        class="card-item-first aspect-ratio"
       >
-        <label>
-          <input
-            checked={false}
-            className="custom-control-input"
-            disabled={false}
-            onChange={[Function]}
-            type="checkbox"
-            value="false"
-          />
+        <div
+          class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
+        >
           <span
-            className="custom-control-label"
-          />
+            class="sticker sticker-user-icon sticker-circle sticker-secondary"
+          >
+            <span
+              class="sticker-overlay"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-user"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/path/to/some/resource.svg#user"
+                />
+              </svg>
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        class="card-body"
+      >
+        <div
+          class="card-row"
+        >
           <div
-            className="aspect-ratio"
+            class="autofit-col autofit-col-expand"
           >
             <div
-              className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
+              class="card-title text-truncate"
+            >
+              Adélaide
+            </div>
+            <div
+              class="card-subtitle text-truncate"
+            >
+              Author Action
+            </div>
+            <div
+              class="card-detail"
             >
               <span
-                className="sticker sticker-user-icon sticker-circle sticker-secondary"
+                class="label label-success"
               >
                 <span
-                  className="sticker-overlay"
+                  class="label-item label-item-expand"
                 >
-                  <svg
-                    className="lexicon-icon lexicon-icon-user"
-                    role="presentation"
-                  >
-                    <use
-                      xlinkHref="/path/to/some/resource.svg#user"
-                    />
-                  </svg>
+                  Approved
                 </span>
               </span>
             </div>
           </div>
-        </label>
+        </div>
       </div>
     </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCard renders a ClayCard as user selectable card 1`] = `
+<div>
+  <div
+    class="card-type-asset form-check form-check-card form-check-top-left user-card"
+  >
     <div
-      className="card-body"
+      class="card"
     >
       <div
-        className="card-row"
+        class="card-item-first aspect-ratio"
       >
         <div
-          className="autofit-col autofit-col-expand"
+          class="custom-control custom-checkbox"
+        >
+          <label>
+            <input
+              class="custom-control-input"
+              type="checkbox"
+              value="false"
+            />
+            <span
+              class="custom-control-label"
+            />
+            <div
+              class="aspect-ratio"
+            >
+              <div
+                class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
+              >
+                <span
+                  class="sticker sticker-user-icon sticker-circle sticker-secondary"
+                >
+                  <span
+                    class="sticker-overlay"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-user"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="/path/to/some/resource.svg#user"
+                      />
+                    </svg>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div
+        class="card-body"
+      >
+        <div
+          class="card-row"
         >
           <div
-            className="card-title text-truncate"
+            class="autofit-col autofit-col-expand"
           >
-            Adélaide
-          </div>
-          <div
-            className="card-subtitle text-truncate"
-          >
-            Author Action
-          </div>
-          <div
-            className="card-detail"
-          >
-            <span
-              className="label label-warning"
+            <div
+              class="card-title text-truncate"
+            >
+              Adélaide
+            </div>
+            <div
+              class="card-subtitle text-truncate"
+            >
+              Author Action
+            </div>
+            <div
+              class="card-detail"
             >
               <span
-                className="label-item label-item-expand"
+                class="label label-warning"
               >
-                Rejected
+                <span
+                  class="label-item label-item-expand"
+                >
+                  Rejected
+                </span>
               </span>
-            </span>
+            </div>
           </div>
         </div>
       </div>
@@ -747,80 +759,80 @@ exports[`ClayCard renders a ClayCard as user selectable card 1`] = `
 `;
 
 exports[`ClayCard renders a group of ClayCards 1`] = `
-Array [
+<div>
   <ul
-    className="card-page"
+    class="card-page"
   >
     <li
-      className="card-page-item card-page-item-header"
+      class="card-page-item card-page-item-header"
     >
       <p
-        className="card-section-header"
+        class="card-section-header"
       >
         Test Files
       </p>
     </li>
     <li
-      className="card-page-item card-page-item-directory"
+      class="card-page-item card-page-item-directory"
     >
       <div
-        className="card card-type-asset file-card"
+        class="card card-type-asset file-card"
       >
         <div
-          className="card-item-first aspect-ratio"
+          class="card-item-first aspect-ratio"
         >
           <div
-            className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
+            class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
           >
             <svg
-              className="lexicon-icon lexicon-icon-documents-and-media"
+              class="lexicon-icon lexicon-icon-documents-and-media"
               role="presentation"
             >
               <use
-                xlinkHref="/path/to/some/resource.svg#documents-and-media"
+                xlink:href="/path/to/some/resource.svg#documents-and-media"
               />
             </svg>
           </div>
           <span
-            className="sticker sticker-rounded sticker-danger sticker-bottom-left"
+            class="sticker sticker-rounded sticker-danger sticker-bottom-left"
           >
             <span
-              className="sticker-overlay"
+              class="sticker-overlay"
             >
               DOC
             </span>
           </span>
         </div>
         <div
-          className="card-body"
+          class="card-body"
         >
           <div
-            className="card-row"
+            class="card-row"
           >
             <div
-              className="autofit-col autofit-col-expand"
+              class="autofit-col autofit-col-expand"
             >
               <section
-                className="autofit-section"
+                class="autofit-section"
               >
                 <div
-                  className="card-title text-truncate"
+                  class="card-title text-truncate"
                 >
                   deliverable.doc
                 </div>
                 <div
-                  className="card-subtitle text-truncate"
+                  class="card-subtitle text-truncate"
                 >
                   Stevie Ray Vaughn
                 </div>
                 <div
-                  className="card-detail"
+                  class="card-detail"
                 >
                   <span
-                    className="label label-success"
+                    class="label label-success"
                   >
                     <span
-                      className="label-item label-item-expand"
+                      class="label-item label-item-expand"
                     >
                       Approved
                     </span>
@@ -833,66 +845,66 @@ Array [
       </div>
     </li>
     <li
-      className="card-page-item card-page-item-directory"
+      class="card-page-item card-page-item-directory"
     >
       <div
-        className="card card-type-asset file-card"
+        class="card card-type-asset file-card"
       >
         <div
-          className="card-item-first aspect-ratio"
+          class="card-item-first aspect-ratio"
         >
           <div
-            className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
+            class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
           >
             <svg
-              className="lexicon-icon lexicon-icon-documents-and-media"
+              class="lexicon-icon lexicon-icon-documents-and-media"
               role="presentation"
             >
               <use
-                xlinkHref="/path/to/some/resource.svg#documents-and-media"
+                xlink:href="/path/to/some/resource.svg#documents-and-media"
               />
             </svg>
           </div>
           <span
-            className="sticker sticker-rounded sticker-danger sticker-bottom-left"
+            class="sticker sticker-rounded sticker-danger sticker-bottom-left"
           >
             <span
-              className="sticker-overlay"
+              class="sticker-overlay"
             >
               DOC
             </span>
           </span>
         </div>
         <div
-          className="card-body"
+          class="card-body"
         >
           <div
-            className="card-row"
+            class="card-row"
           >
             <div
-              className="autofit-col autofit-col-expand"
+              class="autofit-col autofit-col-expand"
             >
               <section
-                className="autofit-section"
+                class="autofit-section"
               >
                 <div
-                  className="card-title text-truncate"
+                  class="card-title text-truncate"
                 >
                   deliverable.doc
                 </div>
                 <div
-                  className="card-subtitle text-truncate"
+                  class="card-subtitle text-truncate"
                 >
                   Stevie Ray Vaughn
                 </div>
                 <div
-                  className="card-detail"
+                  class="card-detail"
                 >
                   <span
-                    className="label label-success"
+                    class="label label-success"
                   >
                     <span
-                      className="label-item label-item-expand"
+                      class="label-item label-item-expand"
                     >
                       Approved
                     </span>
@@ -904,118 +916,46 @@ Array [
         </div>
       </div>
     </li>
-    <li
-      className="card-page-item card-page-item-directory"
-    >
-      <div
-        className="card card-type-asset file-card"
-      >
-        <div
-          className="card-item-first aspect-ratio"
-        >
-          <div
-            className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
-          >
-            <svg
-              className="lexicon-icon lexicon-icon-documents-and-media"
-              role="presentation"
-            >
-              <use
-                xlinkHref="/path/to/some/resource.svg#documents-and-media"
-              />
-            </svg>
-          </div>
-          <span
-            className="sticker sticker-rounded sticker-danger sticker-bottom-left"
-          >
-            <span
-              className="sticker-overlay"
-            >
-              DOC
-            </span>
-          </span>
-        </div>
-        <div
-          className="card-body"
-        >
-          <div
-            className="card-row"
-          >
-            <div
-              className="autofit-col autofit-col-expand"
-            >
-              <section
-                className="autofit-section"
-              >
-                <div
-                  className="card-title text-truncate"
-                >
-                  deliverable.doc
-                </div>
-                <div
-                  className="card-subtitle text-truncate"
-                >
-                  Stevie Ray Vaughn
-                </div>
-                <div
-                  className="card-detail"
-                >
-                  <span
-                    className="label label-success"
-                  >
-                    <span
-                      className="label-item label-item-expand"
-                    >
-                      Approved
-                    </span>
-                  </span>
-                </div>
-              </section>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-  </ul>,
+  </ul>
   <ul
-    className="card-page"
+    class="card-page"
   >
     <li
-      className="card-page-item card-page-item-header"
+      class="card-page-item card-page-item-header"
     >
       <p
-        className="card-section-header"
+        class="card-section-header"
       >
         Test Users
       </p>
     </li>
     <li
-      className="card-page-item card-page-item-directory"
+      class="card-page-item card-page-item-directory"
     >
       <div
-        className="card card-type-asset form-check form-check-card form-check-top-left user-card"
+        class="card card-type-asset form-check form-check-card form-check-top-left user-card"
       >
         <div
-          className="card"
+          class="card"
         >
           <div
-            className="card-item-first aspect-ratio"
+            class="card-item-first aspect-ratio"
           >
             <div
-              className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
+              class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
             >
               <span
-                className="sticker sticker-user-icon sticker-circle sticker-secondary"
+                class="sticker sticker-user-icon sticker-circle sticker-secondary"
               >
                 <span
-                  className="sticker-overlay"
+                  class="sticker-overlay"
                 >
                   <svg
-                    className="lexicon-icon lexicon-icon-user"
+                    class="lexicon-icon lexicon-icon-user"
                     role="presentation"
                   >
                     <use
-                      xlinkHref="/path/to/some/resource.svg#user"
+                      xlink:href="/path/to/some/resource.svg#user"
                     />
                   </svg>
                 </span>
@@ -1023,32 +963,32 @@ Array [
             </div>
           </div>
           <div
-            className="card-body"
+            class="card-body"
           >
             <div
-              className="card-row"
+              class="card-row"
             >
               <div
-                className="autofit-col autofit-col-expand"
+                class="autofit-col autofit-col-expand"
               >
                 <div
-                  className="card-title text-truncate"
+                  class="card-title text-truncate"
                 >
                   Adélaide
                 </div>
                 <div
-                  className="card-subtitle text-truncate"
+                  class="card-subtitle text-truncate"
                 >
                   Author Action
                 </div>
                 <div
-                  className="card-detail"
+                  class="card-detail"
                 >
                   <span
-                    className="label label-success"
+                    class="label label-success"
                   >
                     <span
-                      className="label-item label-item-expand"
+                      class="label-item label-item-expand"
                     >
                       Approved
                     </span>
@@ -1061,32 +1001,32 @@ Array [
       </div>
     </li>
     <li
-      className="card-page-item card-page-item-directory"
+      class="card-page-item card-page-item-directory"
     >
       <div
-        className="card card-type-asset form-check form-check-card form-check-top-left user-card"
+        class="card card-type-asset form-check form-check-card form-check-top-left user-card"
       >
         <div
-          className="card"
+          class="card"
         >
           <div
-            className="card-item-first aspect-ratio"
+            class="card-item-first aspect-ratio"
           >
             <div
-              className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
+              class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
             >
               <span
-                className="sticker sticker-user-icon sticker-circle sticker-secondary"
+                class="sticker sticker-user-icon sticker-circle sticker-secondary"
               >
                 <span
-                  className="sticker-overlay"
+                  class="sticker-overlay"
                 >
                   <svg
-                    className="lexicon-icon lexicon-icon-user"
+                    class="lexicon-icon lexicon-icon-user"
                     role="presentation"
                   >
                     <use
-                      xlinkHref="/path/to/some/resource.svg#user"
+                      xlink:href="/path/to/some/resource.svg#user"
                     />
                   </svg>
                 </span>
@@ -1094,32 +1034,32 @@ Array [
             </div>
           </div>
           <div
-            className="card-body"
+            class="card-body"
           >
             <div
-              className="card-row"
+              class="card-row"
             >
               <div
-                className="autofit-col autofit-col-expand"
+                class="autofit-col autofit-col-expand"
               >
                 <div
-                  className="card-title text-truncate"
+                  class="card-title text-truncate"
                 >
                   Adélaide
                 </div>
                 <div
-                  className="card-subtitle text-truncate"
+                  class="card-subtitle text-truncate"
                 >
                   Author Action
                 </div>
                 <div
-                  className="card-detail"
+                  class="card-detail"
                 >
                   <span
-                    className="label label-success"
+                    class="label label-success"
                   >
                     <span
-                      className="label-item label-item-expand"
+                      class="label-item label-item-expand"
                     >
                       Approved
                     </span>
@@ -1131,77 +1071,6 @@ Array [
         </div>
       </div>
     </li>
-    <li
-      className="card-page-item card-page-item-directory"
-    >
-      <div
-        className="card card-type-asset form-check form-check-card form-check-top-left user-card"
-      >
-        <div
-          className="card"
-        >
-          <div
-            className="card-item-first aspect-ratio"
-          >
-            <div
-              className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
-            >
-              <span
-                className="sticker sticker-user-icon sticker-circle sticker-secondary"
-              >
-                <span
-                  className="sticker-overlay"
-                >
-                  <svg
-                    className="lexicon-icon lexicon-icon-user"
-                    role="presentation"
-                  >
-                    <use
-                      xlinkHref="/path/to/some/resource.svg#user"
-                    />
-                  </svg>
-                </span>
-              </span>
-            </div>
-          </div>
-          <div
-            className="card-body"
-          >
-            <div
-              className="card-row"
-            >
-              <div
-                className="autofit-col autofit-col-expand"
-              >
-                <div
-                  className="card-title text-truncate"
-                >
-                  Adélaide
-                </div>
-                <div
-                  className="card-subtitle text-truncate"
-                >
-                  Author Action
-                </div>
-                <div
-                  className="card-detail"
-                >
-                  <span
-                    className="label label-success"
-                  >
-                    <span
-                      className="label-item label-item-expand"
-                    >
-                      Approved
-                    </span>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-  </ul>,
-]
+  </ul>
+</div>
 `;
