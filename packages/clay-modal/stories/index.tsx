@@ -6,7 +6,7 @@
 
 import ClayButton from '@clayui/button';
 import ClayModal from '../src';
-import React from 'react';
+import React, {useState} from 'react';
 import {select, text} from '@storybook/addon-knobs';
 import {Size, Status} from '../src/types';
 import {storiesOf} from '@storybook/react';
@@ -26,7 +26,7 @@ const ModalWithState: React.FunctionComponent<Props> = ({
 	size,
 	status,
 }) => {
-	const [visible, setVisible] = React.useState<boolean>(false);
+	const [visible, setVisible] = useState<boolean>(false);
 
 	return (
 		<>

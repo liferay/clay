@@ -10,7 +10,7 @@ import ClayPanelBody from './Body';
 import ClayPanelFooter from './Footer';
 import ClayPanelGroup from './Group';
 import ClayPanelHeader from './Header';
-import React from 'react';
+import React, {useRef, useState} from 'react';
 import {useTransitionHeight} from '@clayui/shared';
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
@@ -40,8 +40,8 @@ const ClayPanel: React.FunctionComponent<Props> & {
 	spritemap,
 	...otherProps
 }) => {
-	const panelRef = React.useRef<HTMLDivElement>(null);
-	const [expanded, setExpaned] = React.useState<boolean>(defaultExpanded);
+	const panelRef = useRef<HTMLDivElement>(null);
+	const [expanded, setExpaned] = useState<boolean>(defaultExpanded);
 
 	const [
 		transitioning,

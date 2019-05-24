@@ -5,7 +5,7 @@
  */
 
 import classNames from 'classnames';
-import React from 'react';
+import React, {useRef} from 'react';
 
 import Action from './Action';
 import Caption from './Caption';
@@ -76,8 +76,8 @@ const ClayDropDown: React.FunctionComponent<Props> & {
 	trigger,
 	...otherProps
 }) => {
-	const triggerElementRef = React.useRef<HTMLButtonElement>(null);
-	const menuElementRef = React.useRef<HTMLDivElement>(null);
+	const triggerElementRef = useRef<HTMLButtonElement>(null);
+	const menuElementRef = useRef<HTMLDivElement>(null);
 
 	return (
 		<ContainerElement

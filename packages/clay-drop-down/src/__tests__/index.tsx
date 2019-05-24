@@ -4,16 +4,15 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as TestRenderer from 'react-test-renderer';
 import ClayDropDown from '..';
-import React from 'react';
+import React, {useState} from 'react';
 import {cleanup, fireEvent, render} from 'react-testing-library';
 
 const DropDownWithState: React.FunctionComponent<any> = ({
 	children,
 	...others
 }) => {
-	const [active, setActive] = React.useState(false);
+	const [active, setActive] = useState(false);
 
 	return (
 		<ClayDropDown

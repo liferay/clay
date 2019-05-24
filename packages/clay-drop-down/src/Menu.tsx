@@ -5,7 +5,7 @@
  */
 
 import classNames from 'classnames';
-import React from 'react';
+import React, {useLayoutEffect} from 'react';
 import {Align} from 'metal-position';
 import {Portal} from '@clayui/shared';
 import {useDropdownCloseInteractions} from './hooks';
@@ -75,7 +75,7 @@ const DropDownMenu = React.forwardRef<HTMLDivElement, Props>((
 		onSetActive
 	);
 
-	React.useLayoutEffect(() => {
+	useLayoutEffect(() => {
 		if (
 			alignElementRef.current &&
 			(ref as React.RefObject<HTMLDivElement>).current

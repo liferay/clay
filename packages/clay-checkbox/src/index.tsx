@@ -5,7 +5,7 @@
  */
 
 import classNames from 'classnames';
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
 	/**
@@ -49,9 +49,9 @@ const ClayCheckbox: React.FunctionComponent<Props> = ({
 	label,
 	...otherProps
 }) => {
-	const inputRef = React.useRef<HTMLInputElement | null>(null);
+	const inputRef = useRef<HTMLInputElement | null>(null);
 
-	React.useEffect(() => {
+	useEffect(() => {
 		if (inputRef.current) {
 			inputRef.current.indeterminate = indeterminate;
 		}

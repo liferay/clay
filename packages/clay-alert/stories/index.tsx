@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import React from 'react';
+import React, {useState} from 'react';
 import {boolean, select, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
@@ -13,7 +13,7 @@ import ClayAlert, {DisplayType} from '../src';
 const spritemap = require('clay-css/lib/images/icons/icons.svg');
 
 const ClayToastDemo = () => {
-	const [toastItems, setToastItems] = React.useState<number[]>([]);
+	const [toastItems, setToastItems] = useState<number[]>([]);
 	return (
 		<>
 			<div>
@@ -47,7 +47,7 @@ const ClayToastDemo = () => {
 };
 
 const ClayDismissibleDemo = () => {
-	const [showDismisible, setShowDismisible] = React.useState<boolean>(true);
+	const [showDismisible, setShowDismisible] = useState<boolean>(true);
 
 	return (
 		<>

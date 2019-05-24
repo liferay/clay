@@ -5,13 +5,13 @@
  */
 
 import ClayRadioGroup from '../src';
-import React from 'react';
+import React, {useState} from 'react';
 import {storiesOf} from '@storybook/react';
 
 import 'clay-css/lib/css/atlas.css';
 
 const RadioGroupWithState = ({inline}: {inline?: boolean}) => {
-	const [value, setValue] = React.useState<string>('one');
+	const [value, setValue] = useState<string>('one');
 
 	return (
 		<ClayRadioGroup

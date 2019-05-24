@@ -6,12 +6,12 @@
 
 import classNames from 'classnames';
 import Icon from '@clayui/icon';
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 
 const useAutoClose = (autoClose?: boolean | number, onClose = () => {}) => {
-	const startedTime = React.useRef<number>(0);
-	const timer = React.useRef<number | undefined>(undefined);
-	const timeToClose = React.useRef(autoClose === true ? 8000 : autoClose);
+	const startedTime = useRef<number>(0);
+	const timer = useRef<number | undefined>(undefined);
+	const timeToClose = useRef(autoClose === true ? 8000 : autoClose);
 
 	let pauseTimer = () => {};
 	let startTimer = () => {};
@@ -38,7 +38,7 @@ const useAutoClose = (autoClose?: boolean | number, onClose = () => {}) => {
 		};
 	}
 
-	React.useEffect(() => {
+	useEffect(() => {
 		if (autoClose && onClose) {
 			startTimer();
 

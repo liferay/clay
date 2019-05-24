@@ -5,7 +5,7 @@
  */
 
 import classNames from 'classnames';
-import React from 'react';
+import React, {useContext} from 'react';
 import warning from 'warning';
 
 export const ClayIconSpriteContext = React.createContext('');
@@ -29,7 +29,7 @@ const ClayIcon: React.FunctionComponent<Props> = ({
 	symbol,
 	...otherProps
 }) => {
-	let spriteMapVal = React.useContext(ClayIconSpriteContext);
+	let spriteMapVal = useContext(ClayIconSpriteContext);
 
 	if (spritemap) {
 		spriteMapVal = spritemap;

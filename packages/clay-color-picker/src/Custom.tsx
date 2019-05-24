@@ -110,7 +110,7 @@ const Custom: React.FunctionComponent<CustomProps> = ({
 	onColorsChange,
 	spritemap,
 }) => {
-	const inputRef = React.useRef(null);
+	const inputRef = useRef(null);
 	const [activeSplotchIndex, setActiveSplotchIndex] = useState(0);
 	const [editorActive, setEditorActive] = useState(false);
 
@@ -140,7 +140,7 @@ const Custom: React.FunctionComponent<CustomProps> = ({
 		}
 	};
 
-	React.useEffect(() => {
+	useEffect(() => {
 		if (inputRef.current !== document.activeElement) {
 			setHexInput(color.toHex());
 		}

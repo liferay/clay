@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 import ClayDatePicker, {firstDayOfWeek} from '../src';
-import React from 'react';
+import React, {useState} from 'react';
 import {storiesOf} from '@storybook/react';
 
 import 'clay-css/lib/css/atlas.css';
@@ -12,7 +12,7 @@ import 'clay-css/lib/css/atlas.css';
 const spritemap = require('clay-css/lib/images/icons/icons.svg');
 
 const ClayDatePickerWithState = (props: {[key: string]: any}) => {
-	const [value, setValue] = React.useState<string | Date>('');
+	const [value, setValue] = useState<string | Date>('');
 
 	return (
 		<ClayDatePicker

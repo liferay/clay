@@ -7,7 +7,7 @@ import ClayButton from '@clayui/button';
 import ClayCheckbox from '@clayui/checkbox';
 import ClayDropDown, {Align} from '../src';
 import ClayRadioGroup from '@clayui/radio-group';
-import React from 'react';
+import React, {useState} from 'react';
 import {storiesOf} from '@storybook/react';
 
 import 'clay-css/lib/css/atlas.css';
@@ -18,7 +18,7 @@ const DropDownWithState: React.FunctionComponent<any> = ({
 	children,
 	...others
 }) => {
-	const [active, setActive] = React.useState(false);
+	const [active, setActive] = useState(false);
 
 	return (
 		<ClayDropDown

@@ -5,7 +5,7 @@
  */
 
 import classNames from 'classnames';
-import React from 'react';
+import React, {useRef, useState} from 'react';
 
 import ClayIcon from '@clayui/icon';
 import ClayLink from '@clayui/link';
@@ -77,8 +77,8 @@ const ClayNavigationBar: React.FunctionComponent<Props> & {
 	triggerLabel,
 	...otherProps
 }) => {
-	const [visible, setVisible] = React.useState(false);
-	const contentRef = React.useRef<HTMLDivElement>(null);
+	const [visible, setVisible] = useState(false);
+	const contentRef = useRef<HTMLDivElement>(null);
 	const [
 		transitioning,
 		handleTransitionEnd,
