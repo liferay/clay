@@ -32,16 +32,14 @@ export const Group: React.FunctionComponent<CardGroupProps> = ({
 				</li>
 			)}
 
-			{React.Children.map(children, (child, index) =>
-				React.cloneElement(
-					<li
-						className="card-page-item card-page-item-directory"
-						key={index}
-					>
-						{child}
-					</li>
-				)
-			)}
+			{React.Children.map(children, (child, index) => (
+				<li
+					className="card-page-item card-page-item-directory"
+					key={index}
+				>
+					{child}
+				</li>
+			))}
 		</ul>
 	);
 };
