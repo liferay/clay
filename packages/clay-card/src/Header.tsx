@@ -20,7 +20,7 @@ interface CardHeaderProps
 
 export type CardHeaderType = React.FunctionComponent<CardHeaderProps>;
 
-export const Header: React.FunctionComponent<CardHeaderProps> = ({
+export const Header: CardHeaderType = ({
 	children,
 }) => {
 	const {displayType} = React.useContext(Context);
