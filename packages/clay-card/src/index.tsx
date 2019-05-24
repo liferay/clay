@@ -7,7 +7,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import Context from './Context';
-import {CardDisplayType} from './types';
 
 import {AspectRatio} from './AspectRatio';
 import {Body, CardBodyProps} from './Body';
@@ -15,6 +14,7 @@ import {Description} from './Description';
 import {Detail} from './Detail';
 import {Group} from './Group';
 
+type CardDisplayType = 'file' | 'image' | 'user';
 export interface CardProps {
 	displayType?: CardDisplayType;
 
@@ -65,23 +65,13 @@ const ClayCard: React.FunctionComponent<Props> & {
 
 	const isCardType = {
 		file: displayType === 'file',
-		horizontal,
 		image: displayType === 'image',
-		interactive,
 		user: displayType === 'user',
 	};
 
-	const TagHeaderName =
-		isCardType.interactive ||
-		(isCardType.horizontal && isCardType.interactive)
-			? 'a'
-			: 'div';
+	const TagHeaderName = interactive ? 'a' : 'div';
 
-	const TagName =
-		isCardType.interactive ||
-		(isCardType.horizontal && isCardType.interactive)
-			? 'span'
-			: 'div';
+	const TagName = interactive ? 'span' : 'div';
 
 	return (
 		<TagHeaderName
@@ -89,28 +79,23 @@ const ClayCard: React.FunctionComponent<Props> & {
 			className={classNames(className, {
 				card: !selectable,
 				'card-interactive card-interactive-primary card-type-template':
-					(isCardType.horizontal && isCardType.interactive) ||
-					isCardType.interactive,
+					(horizontal && interactive) || interactive,
 				'card-type-asset':
-					!isCardType.horizontal &&
-					!isCardType.interactive &&
-					!(isCardType.horizontal && isCardType.interactive),
+					!horizontal && !interactive && !(horizontal && interactive),
 				'card-type-directory form-check form-check-card form-check-middle-left':
-					selectable && isCardType.horizontal,
+					selectable && horizontal,
 				'file-card': isCardType.file,
 				'form-check form-check-card form-check-top-left':
 					(selectable && isCardType.file) ||
 					isCardType.image ||
 					isCardType.user,
 				'image-card': isCardType.image,
-				'template-card':
-					isCardType.interactive && !isCardType.horizontal,
-				'template-card-horizontal':
-					isCardType.horizontal && isCardType.interactive,
+				'template-card': interactive && !horizontal,
+				'template-card-horizontal': horizontal && interactive,
 				'user-card': isCardType.user,
 			})}
 		>
-			{(selectable && !isCardType.horizontal) ||
+			{(selectable && !horizontal) ||
 			(selectable && isCardType.image) ||
 			isCardType.user ? (
 				<TagName className="card">
