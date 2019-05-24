@@ -195,7 +195,7 @@ To get to the behavior of having a ClayCard with an image, use the following com
 +			</div>
 +		</ClayCard.Body>
 +	</ClayCard>
-``
+```
 
 To get to the behavior of having a ClayCard with a user image, use the following composition with ClayCard:
 
