@@ -5,15 +5,17 @@
  */
 
 import React from 'react';
-import * as TestRenderer from 'react-test-renderer';
+import {cleanup, render} from 'react-testing-library';
 import <%= componentName %> from '..';
 
 describe('<%= componentName %>', () => {
+	afterEach(cleanup);
+
 	it('renders', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<<%= componentName %> />
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 });
