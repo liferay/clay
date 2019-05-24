@@ -97,7 +97,7 @@
 	{@param? stickerShape: string}
 	{@param? stickerStyle: string}
 
-		{let $defaultAspectRatioClasses: $aspectRatioClasses ?: 'aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid' /}
+		{let $defaultAspectRatioClasses: $aspectRatioClasses ?: 'aspect-ratio-item-center-middle aspect-ratio-item-fluid' /}
 
 		{if $imageSrc}
 			{let $imageAttributes kind="attributes"}
@@ -107,7 +107,7 @@
 					{/if}
 				"
 
-				class="{$defaultAspectRatioClasses}"
+				class="aspect-ratio-item {$defaultAspectRatioClasses}"
 				src="{$imageSrc}"
 			{/let}
 
