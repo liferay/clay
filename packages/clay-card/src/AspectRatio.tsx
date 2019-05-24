@@ -9,6 +9,10 @@ import classNames from 'classnames';
 
 import React from 'react';
 
+type BackgroundImageAspectRatioType = 'contain' | 'cover' | 'center';
+
+type ContainerAspectRatioType = '1/1' | '3/2' | '4/3' | '8/5' | '16/9';
+
 interface CardAspectRatioProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Aspect ratio to be applied on the background image of the card.
@@ -25,13 +29,9 @@ interface CardAspectRatioProps extends React.HTMLAttributes<HTMLDivElement> {
 		| React.ReactElement<HTMLElement>;
 }
 
-type BackgroundImageAspectRatioType = 'contain' | 'cover' | 'center';
-
 export type CardAspectRatioType = React.FunctionComponent<CardAspectRatioProps>;
 
-type ContainerAspectRatioType = '1/1' | '3/2' | '4/3' | '8/5' | '16/9';
-
-export const AspectRatio: React.FunctionComponent<CardAspectRatioProps> = ({
+export const AspectRatio: CardAspectRatioType = ({
 	backgroundImageAspectRatio,
 	children,
 	className,
