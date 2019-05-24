@@ -23,10 +23,6 @@ interface CardAspectRatioProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * Contrains an image for a given Aspect Ratio.
 	 */
 	containerAspectRatio?: ContainerAspectRatioType;
-
-	children:
-		| React.ReactElement<HTMLElement>[]
-		| React.ReactElement<HTMLElement>;
 }
 
 export const AspectRatio: React.FunctionComponent<CardAspectRatioProps> = ({

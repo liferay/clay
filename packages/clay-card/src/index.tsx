@@ -47,15 +47,7 @@ const ClayCard: React.FunctionComponent<Props> & {
 }) => {
 	const Content: React.FunctionComponent<Props> = ({children}) => (
 		<Context.Provider value={{displayType}}>
-			{React.Children.map(
-				children,
-				(child: React.ReactElement<CardBodyProps>, index: number) => {
-					return React.cloneElement(child, {
-						...child.props,
-						key: index,
-					});
-				}
-			)}
+			{children}
 		</Context.Provider>
 	);
 
