@@ -62,7 +62,7 @@ const ClayCard: React.FunctionComponent<Props> & {
 	const isCardType = {
 		file: displayType === 'file',
 		horizontal: displayType === 'horizontal',
-		horizontalInteractive: displayType === 'horizontal interactive',
+		horizontalInteractive: displayType === 'horizontal-interactive',
 		image: displayType === 'image',
 		interactive: displayType === 'interactive',
 		user: displayType === 'user',

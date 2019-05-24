@@ -22,7 +22,7 @@ export const Detail: CardDetailType = ({
 }) => {
 	const {displayType} = React.useContext(Context);
 	const isCardType = {
-		horizontalInteractive: displayType === 'horizontal interactive',
+		horizontalInteractive: displayType === 'horizontal-interactive',
 		interactive: displayType === 'interactive',
 	};
 

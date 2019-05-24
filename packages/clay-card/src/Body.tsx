@@ -22,7 +22,7 @@ export const Body: CardBodyType = ({children, className, ...otherProps}) => {
 
 	const isCardType = {
 		horizontal: displayType === 'horizontal',
-		horizontalInteractive: displayType === 'horizontal interactive',
+		horizontalInteractive: displayType === 'horizontal-interactive',
 		interactive: displayType === 'interactive',
 	};
 

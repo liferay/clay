@@ -12,4 +12,4 @@ export type CardDisplayType =
 	| 'image'
 	| 'interactive'
 	| 'user'
-	| 'horizontal interactive';
+	| 'horizontal-interactive';

@@ -36,7 +36,7 @@ export const Description: CardDescriptionType = ({
 }) => {
 	const {displayType} = React.useContext(Context);
 	const isCardType = {
-		horizontalInteractive: displayType === 'horizontal interactive',
+		horizontalInteractive: displayType === 'horizontal-interactive',
 		interactive: displayType === 'interactive',
 	};
 	const TagName =

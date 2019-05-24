@@ -11,7 +11,7 @@ import ClaySticker from '@clayui/sticker';
 import React from 'react';
 
 const CardHorizontalInteractive = (props: any) => (
-	<ClayCard displayType="horizontal interactive">
+	<ClayCard displayType="horizontal-interactive">
 		<ClayCard.Body>
 			<span className="autofit-col">
 				<ClaySticker displayType="light" inline>
