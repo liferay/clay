@@ -33,7 +33,7 @@ storiesOf('ClayCard', module)
 						</div>
 						<div className="autofit-col autofit-col-expand autofit-col-gutters">
 							<div className="autofit-section">
-								<ClayCard.Description type="title">
+								<ClayCard.Description displayType="title">
 									{'Very Large Folder'}
 								</ClayCard.Description>
 							</div>
@@ -55,7 +55,7 @@ storiesOf('ClayCard', module)
 								</ClaySticker>
 							</div>
 							<div className="autofit-col autofit-col-expand autofit-col-gutters">
-								<ClayCard.Description type="title">
+								<ClayCard.Description displayType="title">
 									{'Very Large Folder'}
 								</ClayCard.Description>
 							</div>
@@ -86,10 +86,10 @@ storiesOf('ClayCard', module)
 					<ClayCard.Body>
 						<div className="autofit-col autofit-col-expand">
 							<section className="autofit-section">
-								<ClayCard.Description type="title">
+								<ClayCard.Description displayType="title">
 									{'deliverable.doc'}
 								</ClayCard.Description>
-								<ClayCard.Description type="subtitle">
+								<ClayCard.Description displayType="subtitle">
 									{'Stevie Ray Vaughn'}
 								</ClayCard.Description>
 								<ClayCard.Detail>
@@ -121,10 +121,10 @@ storiesOf('ClayCard', module)
 					<ClayCard.Body>
 						<div className="autofit-col autofit-col-expand">
 							<section className="autofit-section">
-								<ClayCard.Description type="title">
+								<ClayCard.Description displayType="title">
 									{'deliverable.doc'}
 								</ClayCard.Description>
-								<ClayCard.Description type="subtitle">
+								<ClayCard.Description displayType="subtitle">
 									{'Stevie Ray Vaughn'}
 								</ClayCard.Description>
 								<ClayCard.Detail>
@@ -159,10 +159,10 @@ storiesOf('ClayCard', module)
 
 					<ClayCard.Body>
 						<div className="autofit-col autofit-col-expand">
-							<ClayCard.Description type="title">
+							<ClayCard.Description displayType="title">
 								{'thumbnail_coffee.jpg'}
 							</ClayCard.Description>
-							<ClayCard.Description type="subtitle">
+							<ClayCard.Description displayType="subtitle">
 								{'Author Action'}
 							</ClayCard.Description>
 							<ClayCard.Detail>
@@ -194,10 +194,10 @@ storiesOf('ClayCard', module)
 
 					<ClayCard.Body>
 						<div className="autofit-col autofit-col-expand">
-							<ClayCard.Description type="title">
+							<ClayCard.Description displayType="title">
 								{'thumbnail_coffee.jpg'}
 							</ClayCard.Description>
-							<ClayCard.Description type="subtitle">
+							<ClayCard.Description displayType="subtitle">
 								{'Author Action'}
 							</ClayCard.Description>
 							<ClayCard.Detail>
@@ -239,10 +239,10 @@ storiesOf('ClayCard', module)
 
 					<ClayCard.Body>
 						<div className="autofit-col autofit-col-expand">
-							<ClayCard.Description type="title">
+							<ClayCard.Description displayType="title">
 								{'thumbnail_coffee.jpg'}
 							</ClayCard.Description>
-							<ClayCard.Description type="subtitle">
+							<ClayCard.Description displayType="subtitle">
 								{'Author Action'}
 							</ClayCard.Description>
 							<ClayCard.Detail>
@@ -277,10 +277,10 @@ storiesOf('ClayCard', module)
 
 					<ClayCard.Body>
 						<div className="autofit-col autofit-col-expand">
-							<ClayCard.Description type="title">
+							<ClayCard.Description displayType="title">
 								{'thumbnail_coffee.jpg'}
 							</ClayCard.Description>
-							<ClayCard.Description type="subtitle">
+							<ClayCard.Description displayType="subtitle">
 								{'Author Action'}
 							</ClayCard.Description>
 							<ClayCard.Detail>
@@ -304,10 +304,10 @@ storiesOf('ClayCard', module)
 						</span>
 					</ClayCard.AspectRatio>
 					<ClayCard.Body>
-						<ClayCard.Description type="title">
+						<ClayCard.Description displayType="title">
 							{'Widget Page'}
 						</ClayCard.Description>
-						<ClayCard.Description type="text">
+						<ClayCard.Description displayType="text">
 							{'Build a page by adding widgets and content.'}
 						</ClayCard.Description>
 					</ClayCard.Body>
@@ -322,10 +322,13 @@ storiesOf('ClayCard', module)
 						</span>
 					</ClayCard.AspectRatio>
 					<ClayCard.Body>
-						<ClayCard.Description type="title">
+						<ClayCard.Description displayType="title">
 							{'Content Page'}
 						</ClayCard.Description>
-						<ClayCard.Description truncate={false} type="text">
+						<ClayCard.Description
+							displayType="text"
+							truncate={false}
+						>
 							{
 								'This is an example of card-type-template using an anchor tag.'
 							}
@@ -344,7 +347,7 @@ storiesOf('ClayCard', module)
 						</span>
 					</ClayCard.AspectRatio>
 					<ClayCard.Body>
-						<ClayCard.Description type="title">
+						<ClayCard.Description displayType="title">
 							{'Blog'}
 						</ClayCard.Description>
 					</ClayCard.Body>
@@ -360,7 +363,7 @@ storiesOf('ClayCard', module)
 						</span>
 						<span className="autofit-col autofit-col-expand">
 							<span className="autofit-section">
-								<ClayCard.Description truncate type="title">
+								<ClayCard.Description truncate displayType="title">
 									{'Full Page Application'}
 								</ClayCard.Description>
 							</span>
@@ -395,10 +398,10 @@ storiesOf('ClayCard', module)
 
 					<ClayCard.Body>
 						<div className="autofit-col autofit-col-expand">
-							<ClayCard.Description type="title">
+							<ClayCard.Description displayType="title">
 								{'Adélaide'}
 							</ClayCard.Description>
-							<ClayCard.Description type="subtitle">
+							<ClayCard.Description displayType="subtitle">
 								{'Author Action'}
 							</ClayCard.Description>
 							<ClayCard.Detail>
@@ -427,10 +430,10 @@ storiesOf('ClayCard', module)
 
 					<ClayCard.Body>
 						<div className="autofit-col autofit-col-expand">
-							<ClayCard.Description type="title">
+							<ClayCard.Description displayType="title">
 								{'Adélaide'}
 							</ClayCard.Description>
-							<ClayCard.Description type="subtitle">
+							<ClayCard.Description displayType="subtitle">
 								{'Author Action'}
 							</ClayCard.Description>
 							<ClayCard.Detail>

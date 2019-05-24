@@ -15,21 +15,21 @@ interface CardDescriptionProps extends React.HTMLAttributes<HTMLDivElement> {
 	children: React.ReactText;
 
 	/**
+	 * Type of description that can be applied for a text.
+	 */
+	displayType: CardDescriptionDisplayType;
+
+	/**
 	 * Truncates the text inside a description.
 	 */
 	truncate?: boolean;
-
-	/**
-	 * Type of description that can be applied for a text.
-	 */
-	type: CardDescriptionDisplayType;
 }
 
 export const Description: React.FunctionComponent<CardDescriptionProps> = ({
 	children,
 	className,
+	displayType,
 	truncate = true,
-	type,
 	...otherProps
 }) => {
 	const {interactive} = React.useContext(Context);
@@ -38,7 +38,7 @@ export const Description: React.FunctionComponent<CardDescriptionProps> = ({
 
 	return (
 		<TagName
-			className={classNames(className, `card-${type}`, {
+			className={classNames(className, `card-${displayType}`, {
 				'text-truncate': truncate,
 			})}
 			{...otherProps}
