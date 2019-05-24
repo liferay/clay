@@ -16,7 +16,7 @@ interface IChildrenProps {
 	refetch: Function;
 }
 
-interface Props extends IDataProvider {
+interface IProps extends IDataProvider {
 	children: (data: IChildrenProps) => React.ReactElement;
 
 	/**
@@ -28,13 +28,13 @@ interface Props extends IDataProvider {
 	notifyOnNetworkStatusChange?: boolean;
 }
 
-interface State {
+interface IState {
 	error: boolean;
 	loading: boolean;
 	networkStatus?: NetworkStatus;
 }
 
-const ClayDataProvider: React.FunctionComponent<Props> = ({
+const ClayDataProvider: React.FunctionComponent<IProps> = ({
 	children,
 	notifyOnNetworkStatusChange = false,
 	...otherProps
@@ -44,13 +44,13 @@ const ClayDataProvider: React.FunctionComponent<Props> = ({
 	 * is enabled, this will inform of the fetch status and cause
 	 * a new rendering.
 	 */
-	const [state, setState] = useState<State>(() => ({
+	const [state, setState] = useState<IState>(() => ({
 		error: false,
 		loading: false,
 	}));
 
 	const handleNetworkStatus = (status: NetworkStatus) => {
-		const payload: State = {
+		const payload: IState = {
 			error: status === 5,
 			loading: status < 4,
 		};
