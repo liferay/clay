@@ -7,7 +7,7 @@
 export type CardDescriptionDisplayType = 'text' | 'title' | 'subtitle';
 
 export type CardDisplayType =
-	| 'directory'
+	| 'horizontal'
 	| 'file'
 	| 'image'
 	| 'interactive'

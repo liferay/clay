@@ -12,7 +12,7 @@ import ClaySticker from '@clayui/sticker';
 import React from 'react';
 
 const CardFolderSelectable = (props: any) => (
-	<ClayCard displayType="directory" selectable>
+	<ClayCard displayType="horizontal" selectable>
 		<ClayCheckboxWithState>
 			<ClayCard.Body>
 				<div className="autofit-col">

@@ -41,7 +41,7 @@ const ClayCard: React.FunctionComponent<Props> & {
 } = ({
 	children,
 	className,
-	displayType = 'directory',
+	displayType = 'horizontal',
 	selectable = false,
 	...otherProps
 }) => {
@@ -60,8 +60,8 @@ const ClayCard: React.FunctionComponent<Props> & {
 	);
 
 	const isCardType = {
-		directory: displayType === 'directory',
 		file: displayType === 'file',
+		horizontal: displayType === 'horizontal',
 		horizontalInteractive: displayType === 'horizontal interactive',
 		image: displayType === 'image',
 		interactive: displayType === 'interactive',
@@ -86,11 +86,11 @@ const ClayCard: React.FunctionComponent<Props> & {
 				'card-interactive card-interactive-primary card-type-template':
 					isCardType.horizontalInteractive || isCardType.interactive,
 				'card-type-asset':
-					!isCardType.directory &&
+					!isCardType.horizontal &&
 					!isCardType.interactive &&
 					!isCardType.horizontalInteractive,
 				'card-type-directory form-check form-check-card form-check-middle-left':
-					selectable && isCardType.directory,
+					selectable && isCardType.horizontal,
 				'file-card': isCardType.file,
 				'form-check form-check-card form-check-top-left':
 					(selectable && isCardType.file) ||
@@ -102,7 +102,7 @@ const ClayCard: React.FunctionComponent<Props> & {
 				'user-card': isCardType.user,
 			})}
 		>
-			{(selectable && !isCardType.directory) ||
+			{(selectable && !isCardType.horizontal) ||
 			(selectable && isCardType.image) ||
 			isCardType.user ? (
 				<TagName className="card">

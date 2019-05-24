@@ -11,7 +11,7 @@ import ClaySticker from '@clayui/sticker';
 import React from 'react';
 
 const CardFolder = (props: any) => (
-	<ClayCard displayType="directory">
+	<ClayCard displayType="horizontal">
 		<ClayCard.Body>
 			<div className="flex-col">
 				<ClaySticker displayType="secondary" inline>

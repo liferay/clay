@@ -3,6 +3,7 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+import 'clay-css/lib/css/atlas.css';
 import CardFile from '../fixtures/file/CardFile';
 import CardFileSelectable from '../fixtures/file/CardFileSelectable';
 import CardFolder from '../fixtures/folder/CardFolder';
@@ -18,7 +19,6 @@ import CardUserSelectable from '../fixtures/user/CardUserSelectable';
 import ClayCard from '../src';
 import React from 'react';
 import {storiesOf} from '@storybook/react';
-import 'clay-css/lib/css/atlas.css';
 
 const contentImage = require('./static/content.svg');
 const portletImage = require('./static/portlet.svg');

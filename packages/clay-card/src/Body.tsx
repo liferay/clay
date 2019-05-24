@@ -21,7 +21,7 @@ export const Body: CardBodyType = ({children, className, ...otherProps}) => {
 	const {displayType} = React.useContext(Context);
 
 	const isCardType = {
-		directory: displayType === 'directory',
+		horizontal: displayType === 'horizontal',
 		horizontalInteractive: displayType === 'horizontal interactive',
 		interactive: displayType === 'interactive',
 	};
@@ -31,7 +31,7 @@ export const Body: CardBodyType = ({children, className, ...otherProps}) => {
 			? 'span'
 			: 'div';
 
-	if (isCardType.directory) {
+	if (isCardType.horizontal) {
 		return (
 			<div className="card card-horizontal">
 				<div

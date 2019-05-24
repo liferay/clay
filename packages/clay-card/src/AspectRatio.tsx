@@ -40,7 +40,7 @@ export const AspectRatio: CardAspectRatioType = ({
 	const {displayType} = React.useContext(Context);
 
 	const isCardType = {
-		directory: displayType === 'directory',
+		horizontal: displayType === 'horizontal',
 		interactive: displayType === 'interactive',
 	};
 
