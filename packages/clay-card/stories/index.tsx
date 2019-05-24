@@ -5,27 +5,20 @@
  */
 import CardFile from '../fixtures/file/CardFile';
 import CardFileSelectable from '../fixtures/file/CardFileSelectable';
-
 import CardFolder from '../fixtures/folder/CardFolder';
 import CardFolderSelectable from '../fixtures/folder/CardFolderSelectable';
-
 import CardHorizontalInteractive from '../fixtures/interactive/CardHorizontalInteractive';
-
 import CardImage from '../fixtures/image/CardImage';
 import CardImageSelectable from '../fixtures/image/CardImageSelectable';
-
 import CardInteractive from '../fixtures/interactive/CardInteractive';
 import CardInteractiveNoTruncateDescription from '../fixtures/interactive/CardInteractiveNoTruncateDescription';
 import CardInteractiveWithIcon from '../fixtures/interactive/CardInteractiveWithIcon';
-
 import CardUser from '../fixtures/user/CardUser';
 import CardUserSelectable from '../fixtures/user/CardUserSelectable';
-
+import ClayCard from '../src';
 import React from 'react';
 import {storiesOf} from '@storybook/react';
-
 import 'clay-css/lib/css/atlas.css';
-import ClayCard from '../src';
 
 const contentImage = require('./static/content.svg');
 const portletImage = require('./static/portlet.svg');
