@@ -3,9 +3,9 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import * as React from 'react';
 import ClayButton from '@clayui/button';
 import ClayDropDown from '@clayui/drop-down';
+import React from 'react';
 
 export interface PaginationEllipsisProps {
 	items?: number[];

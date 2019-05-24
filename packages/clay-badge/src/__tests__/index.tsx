@@ -3,9 +3,9 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
 import ClayBadge from '..';
+import React from 'react';
 
 describe('ClayBadge', function() {
 	it('renders', () => {

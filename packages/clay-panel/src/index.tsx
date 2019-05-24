@@ -4,13 +4,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
 import classNames from 'classnames';
 import ClayIcon from '@clayui/icon';
 import ClayPanelBody from './Body';
 import ClayPanelFooter from './Footer';
 import ClayPanelGroup from './Group';
 import ClayPanelHeader from './Header';
+import React from 'react';
 import {useTransitionHeight} from '@clayui/shared';
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {

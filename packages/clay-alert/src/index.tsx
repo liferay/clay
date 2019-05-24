@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
 import classNames from 'classnames';
 import Icon from '@clayui/icon';
+import React from 'react';
 
 const useAutoClose = (autoClose?: boolean | number, onClose = () => {}) => {
 	const startedTime = React.useRef<number>(0);

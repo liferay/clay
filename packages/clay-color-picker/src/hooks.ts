@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import * as React from 'react';
+import React from 'react';
 import {isNumber} from 'util';
 
 /**

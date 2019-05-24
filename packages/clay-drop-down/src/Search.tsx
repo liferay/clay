@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
 import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
+import React from 'react';
 
 interface Props extends React.HTMLAttributes<HTMLInputElement> {
 	/**
