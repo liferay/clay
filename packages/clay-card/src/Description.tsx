@@ -32,13 +32,9 @@ export const Description: React.FunctionComponent<CardDescriptionProps> = ({
 	type,
 	...otherProps
 }) => {
-	const {displayType} = React.useContext(Context);
+	const {interactive} = React.useContext(Context);
 
-	const TagName =
-		displayType === 'interactive' ||
-		displayType === 'horizontal-interactive'
-			? 'span'
-			: 'div';
+	const TagName = interactive ? 'span' : 'div';
 
 	return (
 		<TagName

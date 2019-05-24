@@ -20,20 +20,20 @@ export const Body: React.FunctionComponent<CardBodyProps> = ({
 	className,
 	...otherProps
 }) => {
-	const {displayType} = React.useContext(Context);
+	const {horizontal, interactive} = React.useContext(Context);
 
 	const isCardType = {
-		horizontal: displayType === 'horizontal',
-		horizontalInteractive: displayType === 'horizontal-interactive',
-		interactive: displayType === 'interactive',
+		horizontal,
+		interactive,
 	};
 
 	const TagName =
-		isCardType.interactive || isCardType.horizontalInteractive
+		isCardType.interactive ||
+		(isCardType.horizontal && isCardType.interactive)
 			? 'span'
 			: 'div';
 
-	if (isCardType.horizontal) {
+	if (isCardType.horizontal && !isCardType.interactive) {
 		return (
 			<div className="card card-horizontal">
 				<div
@@ -48,7 +48,7 @@ export const Body: React.FunctionComponent<CardBodyProps> = ({
 
 	return (
 		<TagName className={classNames('card-body', className)} {...otherProps}>
-			{isCardType.interactive ? (
+			{isCardType.interactive && !isCardType.horizontal ? (
 				children
 			) : (
 				<TagName className="card-row">{children}</TagName>

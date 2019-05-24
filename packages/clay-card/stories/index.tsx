@@ -21,7 +21,7 @@ storiesOf('ClayCard', module)
 	.add('with folder card', () => (
 		<div className="row">
 			<div className="col-md-4">
-				<ClayCard displayType="horizontal">
+				<ClayCard horizontal>
 					<ClayCard.Body>
 						<div className="flex-col">
 							<ClaySticker displayType="secondary" inline>
@@ -43,7 +43,7 @@ storiesOf('ClayCard', module)
 			</div>
 
 			<div className="col-md-4">
-				<ClayCard displayType="horizontal" selectable>
+				<ClayCard horizontal selectable>
 					<ClayCheckboxWithState>
 						<ClayCard.Body>
 							<div className="autofit-col">
@@ -297,7 +297,7 @@ storiesOf('ClayCard', module)
 	.add('with navigation card variant', () => (
 		<div className="row">
 			<div className="col-md-4">
-				<ClayCard displayType="interactive">
+				<ClayCard interactive>
 					<ClayCard.AspectRatio>
 						<span className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
 							<img alt="portlet image" src={portletImage} />
@@ -315,7 +315,7 @@ storiesOf('ClayCard', module)
 			</div>
 
 			<div className="col-md-4">
-				<ClayCard displayType="interactive">
+				<ClayCard interactive>
 					<ClayCard.AspectRatio>
 						<span className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
 							<img alt="content image" src={contentImage} />
@@ -334,7 +334,7 @@ storiesOf('ClayCard', module)
 				</ClayCard>
 			</div>
 			<div className="col-md-4">
-				<ClayCard displayType="interactive">
+				<ClayCard interactive>
 					<ClayCard.AspectRatio>
 						<span className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
 							<ClayIcon
@@ -351,7 +351,7 @@ storiesOf('ClayCard', module)
 				</ClayCard>
 			</div>
 			<div className="col-md-4">
-				<ClayCard displayType="horizontal-interactive">
+				<ClayCard horizontal interactive>
 					<ClayCard.Body>
 						<span className="autofit-col">
 							<ClaySticker inline>

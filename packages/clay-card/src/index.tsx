@@ -19,6 +19,16 @@ export interface CardProps {
 	displayType?: CardDisplayType;
 
 	/**
+	 * This property, when enabled, is used to apply horizontal styles into cards.
+	 */
+	horizontal?: boolean;
+
+	/**
+	 * This property, when enabled, is used to apply interactive styles into cards.
+	 */
+	interactive?: boolean;
+
+	/**
 	 * Flag that indicates if the card can be selectable.
 	 */
 	selectable?: boolean;
@@ -41,32 +51,35 @@ const ClayCard: React.FunctionComponent<Props> & {
 } = ({
 	children,
 	className,
-	displayType = 'horizontal',
+	displayType,
+	horizontal,
+	interactive,
 	selectable = false,
 	...otherProps
 }) => {
 	const Content: React.FunctionComponent<Props> = ({children}) => (
-		<Context.Provider value={{displayType}}>
+		<Context.Provider value={{displayType, horizontal, interactive}}>
 			{children}
 		</Context.Provider>
 	);
 
 	const isCardType = {
 		file: displayType === 'file',
-		horizontal: displayType === 'horizontal',
-		horizontalInteractive: displayType === 'horizontal-interactive',
+		horizontal,
 		image: displayType === 'image',
-		interactive: displayType === 'interactive',
+		interactive,
 		user: displayType === 'user',
 	};
 
 	const TagHeaderName =
-		isCardType.interactive || isCardType.horizontalInteractive
+		isCardType.interactive ||
+		(isCardType.horizontal && isCardType.interactive)
 			? 'a'
 			: 'div';
 
 	const TagName =
-		isCardType.interactive || isCardType.horizontalInteractive
+		isCardType.interactive ||
+		(isCardType.horizontal && isCardType.interactive)
 			? 'span'
 			: 'div';
 
@@ -76,11 +89,12 @@ const ClayCard: React.FunctionComponent<Props> & {
 			className={classNames(className, {
 				card: !selectable,
 				'card-interactive card-interactive-primary card-type-template':
-					isCardType.horizontalInteractive || isCardType.interactive,
+					(isCardType.horizontal && isCardType.interactive) ||
+					isCardType.interactive,
 				'card-type-asset':
 					!isCardType.horizontal &&
 					!isCardType.interactive &&
-					!isCardType.horizontalInteractive,
+					!(isCardType.horizontal && isCardType.interactive),
 				'card-type-directory form-check form-check-card form-check-middle-left':
 					selectable && isCardType.horizontal,
 				'file-card': isCardType.file,
@@ -89,8 +103,10 @@ const ClayCard: React.FunctionComponent<Props> & {
 					isCardType.image ||
 					isCardType.user,
 				'image-card': isCardType.image,
-				'template-card': isCardType.interactive,
-				'template-card-horizontal': isCardType.horizontalInteractive,
+				'template-card':
+					isCardType.interactive && !isCardType.horizontal,
+				'template-card-horizontal':
+					isCardType.horizontal && isCardType.interactive,
 				'user-card': isCardType.user,
 			})}
 		>

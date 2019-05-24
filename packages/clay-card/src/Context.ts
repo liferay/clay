@@ -9,6 +9,10 @@ import {createContext} from 'react';
 
 export interface IContext {
 	displayType?: CardDisplayType;
+
+	horizontal?: boolean;
+
+	interactive?: boolean;
 }
 
 export default createContext({} as IContext);

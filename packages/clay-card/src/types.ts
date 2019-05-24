@@ -3,10 +3,4 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-export type CardDisplayType =
-	| 'horizontal'
-	| 'file'
-	| 'image'
-	| 'interactive'
-	| 'user'
-	| 'horizontal-interactive';
+export type CardDisplayType = 'file' | 'image' | 'user';

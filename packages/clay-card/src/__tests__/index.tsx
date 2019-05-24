@@ -20,7 +20,7 @@ describe('ClayCard', () => {
 
 	it('renders a ClayCard as a directory', () => {
 		const {container} = render(
-			<ClayCard displayType="horizontal">
+			<ClayCard horizontal>
 				<ClayCard.Body>
 					<div className="flex-col">
 						<ClaySticker displayType="secondary" inline>
@@ -45,7 +45,7 @@ describe('ClayCard', () => {
 	});
 	it('renders a ClayCard as a selectable folder', () => {
 		const {container} = render(
-			<ClayCard displayType="horizontal" selectable>
+			<ClayCard horizontal selectable>
 				<ClayCheckboxWithState>
 					<ClayCard.Body>
 						<div className="autofit-col">
@@ -233,7 +233,7 @@ describe('ClayCard', () => {
 	});
 	it('renders a ClayCard as template navigation card', () => {
 		const {container} = render(
-			<ClayCard displayType="interactive">
+			<ClayCard interactive>
 				<ClayCard.AspectRatio>
 					<span className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
 						<img
@@ -257,7 +257,7 @@ describe('ClayCard', () => {
 	});
 	it('renders a ClayCard as a template navigation card truncating text on description', () => {
 		const {container} = render(
-			<ClayCard displayType="interactive">
+			<ClayCard interactive>
 				<ClayCard.AspectRatio>
 					<span className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
 						<img
@@ -283,7 +283,7 @@ describe('ClayCard', () => {
 	});
 	it('renders a ClayCard as template navigation card with icon instead of image', () => {
 		const {container} = render(
-			<ClayCard displayType="interactive">
+			<ClayCard interactive>
 				<ClayCard.AspectRatio>
 					<span className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
 						<ClayIcon
@@ -304,7 +304,7 @@ describe('ClayCard', () => {
 	});
 	it('renders a ClayCard as template navigation card as horizontal card', () => {
 		const {container} = render(
-			<ClayCard displayType="horizontal-interactive">
+			<ClayCard horizontal interactive>
 				<ClayCard.Body>
 					<span className="autofit-col">
 						<ClaySticker displayType="light" inline>
