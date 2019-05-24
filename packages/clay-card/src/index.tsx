@@ -116,13 +116,9 @@ const ClayCard: React.FunctionComponent<Props> & {
 };
 
 ClayCard.AspectRatio = AspectRatio;
-
 ClayCard.Body = Body;
-
 ClayCard.Detail = Detail;
-
 ClayCard.Description = Description;
-
 ClayCard.Group = Group;
 
 export default ClayCard;
