@@ -118,11 +118,8 @@ const useResource = ({
 		}
 	};
 
-	const cleanPoll = () => {
-		if (pollingIntervalId) {
-			clearInterval(pollingIntervalId);
-		}
-	};
+	const cleanPoll = () =>
+		pollingIntervalId && clearInterval(pollingIntervalId);
 
 	const fetchOnComplete = (result: any) => {
 		// Should clear retry interval if any of the

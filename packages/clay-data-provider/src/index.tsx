@@ -17,7 +17,16 @@ interface IChildrenProps {
 }
 
 interface IProps extends IDataProvider {
-	children: (data: IChildrenProps) => React.ReactElement;
+	/**
+	 * It uses a render props pattern made popular by libraries
+	 * like React Motion and React Router.
+	 *
+	 * Children as a function is required for the DataProvider
+	 * to pass the props with data information, network status,
+	 * refetch method and others. If this is an impediment try
+	 * using the `useResource` hook.
+	 */
+	children: (props: IChildrenProps) => React.ReactElement;
 
 	/**
 	 * Set to true means that network status information will be passed
