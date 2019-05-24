@@ -3,9 +3,6 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-
-export type CardDescriptionDisplayType = 'text' | 'title' | 'subtitle';
-
 export type CardDisplayType =
 	| 'horizontal'
 	| 'file'

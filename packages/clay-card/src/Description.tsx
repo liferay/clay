@@ -9,7 +9,7 @@ import classNames from 'classnames';
 
 import Context from './Context';
 
-import {CardDescriptionDisplayType} from './types';
+type CardDescriptionDisplayType = 'text' | 'title' | 'subtitle';
 
 interface CardDescriptionProps extends React.HTMLAttributes<HTMLDivElement> {
 	children: React.ReactText;
@@ -25,9 +25,7 @@ interface CardDescriptionProps extends React.HTMLAttributes<HTMLDivElement> {
 	type: CardDescriptionDisplayType;
 }
 
-export type CardDescriptionType = React.FunctionComponent<CardDescriptionProps>;
-
-export const Description: CardDescriptionType = ({
+export const Description: React.FunctionComponent<CardDescriptionProps> = ({
 	children,
 	className,
 	truncate = true,

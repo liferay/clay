@@ -13,9 +13,7 @@ interface CardDetailProps extends React.HTMLAttributes<HTMLDivElement> {
 	children: React.ReactNode;
 }
 
-export type CardDetailType = React.FunctionComponent<CardDetailProps>;
-
-export const Detail: CardDetailType = ({
+export const Detail: React.FunctionComponent<CardDetailProps> = ({
 	children,
 	className,
 	...otherProps

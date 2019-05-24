@@ -9,11 +9,11 @@ import classNames from 'classnames';
 import Context from './Context';
 import {CardDisplayType} from './types';
 
-import {AspectRatio, CardAspectRatioType} from './AspectRatio';
-import {Body, CardBodyProps, CardBodyType} from './Body';
-import {CardDescriptionType, Description} from './Description';
-import {CardDetailType, Detail} from './Detail';
-import {CardGroupType, Group} from './Group';
+import {AspectRatio} from './AspectRatio';
+import {Body, CardBodyProps} from './Body';
+import {Description} from './Description';
+import {Detail} from './Detail';
+import {Group} from './Group';
 
 export interface CardProps {
 	displayType?: CardDisplayType;
@@ -33,11 +33,11 @@ interface Props
 }
 
 const ClayCard: React.FunctionComponent<Props> & {
-	AspectRatio: CardAspectRatioType;
-	Body: CardBodyType;
-	Detail: CardDetailType;
-	Description: CardDescriptionType;
-	Group: CardGroupType;
+	AspectRatio: typeof AspectRatio;
+	Body: typeof Body;
+	Detail: typeof Detail;
+	Description: typeof Description;
+	Group: typeof Group;
 } = ({
 	children,
 	className,

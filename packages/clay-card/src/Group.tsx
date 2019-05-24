@@ -16,8 +16,6 @@ interface CardGroupProps extends React.HTMLAttributes<HTMLUListElement> {
 	label?: string;
 }
 
-export type CardGroupType = React.FunctionComponent<CardGroupProps>;
-
 export const Group: React.FunctionComponent<CardGroupProps> = ({
 	children,
 	className,

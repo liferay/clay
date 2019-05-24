@@ -15,9 +15,11 @@ export interface CardBodyProps extends React.HTMLAttributes<HTMLDivElement> {
 		| React.ReactElement<HTMLElement>;
 }
 
-export type CardBodyType = React.FunctionComponent<CardBodyProps>;
-
-export const Body: CardBodyType = ({children, className, ...otherProps}) => {
+export const Body: React.FunctionComponent<CardBodyProps> = ({
+	children,
+	className,
+	...otherProps
+}) => {
 	const {displayType} = React.useContext(Context);
 
 	const isCardType = {

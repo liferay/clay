@@ -29,9 +29,7 @@ interface CardAspectRatioProps extends React.HTMLAttributes<HTMLDivElement> {
 		| React.ReactElement<HTMLElement>;
 }
 
-export type CardAspectRatioType = React.FunctionComponent<CardAspectRatioProps>;
-
-export const AspectRatio: CardAspectRatioType = ({
+export const AspectRatio: React.FunctionComponent<CardAspectRatioProps> = ({
 	backgroundImageAspectRatio,
 	children,
 	className,
