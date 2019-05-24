@@ -5,6 +5,7 @@
  */
 
 import Uri from 'metal-uri';
+import warning from 'warning';
 import {
 	FetchPolicy,
 	IDataProvider,
@@ -113,8 +114,7 @@ const useResource = ({
 			}, delay);
 		} else {
 			setNetworkStatus(NetworkStatus.Error);
-			// eslint-disable-next-line no-console
-			console.error('DataProvider: Error making the requisition', err);
+			warning(false, `DataProvider: Error making the requisition ${err}`);
 		}
 	};
 
