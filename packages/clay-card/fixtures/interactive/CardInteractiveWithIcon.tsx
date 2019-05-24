@@ -11,9 +11,11 @@ import React from 'react';
 
 const CardInteractiveWithIcon = (props: any) => (
 	<ClayCard displayType="interactive">
-		<ClayCard.Header>
-			<ClayIcon spritemap={props.spritemap} symbol="page-template" />
-		</ClayCard.Header>
+		<ClayCard.AspectRatio>
+			<span className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
+				<ClayIcon spritemap={props.spritemap} symbol="page-template" />
+			</span>
+		</ClayCard.AspectRatio>
 		<ClayCard.Body>
 			<ClayCard.Description type="title">{'Blog'}</ClayCard.Description>
 		</ClayCard.Body>

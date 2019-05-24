@@ -14,7 +14,7 @@ import React from 'react';
 
 const CardUserSelectable = (props: any) => (
 	<ClayCard displayType="user" selectable>
-		<ClayCard.Header>
+		<ClayCard.AspectRatio className="card-item-first">
 			<ClayCheckboxWithState>
 				<ClayCard.AspectRatio>
 					<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
@@ -31,7 +31,7 @@ const CardUserSelectable = (props: any) => (
 					</div>
 				</ClayCard.AspectRatio>
 			</ClayCheckboxWithState>
-		</ClayCard.Header>
+		</ClayCard.AspectRatio>
 
 		<ClayCard.Body>
 			<div className="autofit-col autofit-col-expand">

@@ -14,7 +14,7 @@ import React from 'react';
 
 const CardFileSelectable = (props: any) => (
 	<ClayCard displayType="file" selectable>
-		<ClayCard.Header>
+		<ClayCard.AspectRatio className="card-item-first">
 			<ClayCheckboxWithState>
 				<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 					<ClayIcon
@@ -26,7 +26,7 @@ const CardFileSelectable = (props: any) => (
 					{'DOC'}
 				</ClaySticker>
 			</ClayCheckboxWithState>
-		</ClayCard.Header>
+		</ClayCard.AspectRatio>
 		<ClayCard.Body>
 			<div className="autofit-col autofit-col-expand">
 				<section className="autofit-section">

@@ -13,7 +13,7 @@ import React from 'react';
 
 const CardUser = (props: any) => (
 	<ClayCard displayType="user">
-		<ClayCard.Header>
+		<ClayCard.AspectRatio className="card-item-first">
 			<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 				<ClaySticker
 					className="sticker-user-icon"
@@ -23,7 +23,7 @@ const CardUser = (props: any) => (
 					<ClayIcon spritemap={props.spritemap} symbol="user" />
 				</ClaySticker>
 			</div>
-		</ClayCard.Header>
+		</ClayCard.AspectRatio>
 
 		<ClayCard.Body>
 			<div className="autofit-col autofit-col-expand">

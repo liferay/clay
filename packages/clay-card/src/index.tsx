@@ -14,7 +14,6 @@ import {Body, CardBodyProps, CardBodyType} from './Body';
 import {CardDescriptionType, Description} from './Description';
 import {CardDetailType, Detail} from './Detail';
 import {CardGroupType, Group} from './Group';
-import {CardHeaderType, Header} from './Header';
 
 export interface CardProps {
 	displayType?: CardDisplayType;
@@ -39,7 +38,6 @@ const ClayCard: React.FunctionComponent<Props> & {
 	Detail: CardDetailType;
 	Description: CardDescriptionType;
 	Group: CardGroupType;
-	Header: CardHeaderType;
 } = ({
 	children,
 	className,
@@ -126,7 +124,5 @@ ClayCard.Detail = Detail;
 ClayCard.Description = Description;
 
 ClayCard.Group = Group;
-
-ClayCard.Header = Header;
 
 export default ClayCard;

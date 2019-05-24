@@ -13,7 +13,7 @@ import React from 'react';
 
 const CardImage = (props: any) => (
 	<ClayCard displayType="image">
-		<ClayCard.Header>
+		<ClayCard.AspectRatio className="card-item-first">
 			<img
 				alt="thumbnail"
 				className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid"
@@ -26,7 +26,7 @@ const CardImage = (props: any) => (
 			>
 				<ClayIcon spritemap={props.spritemap} symbol="document-image" />
 			</ClaySticker>
-		</ClayCard.Header>
+		</ClayCard.AspectRatio>
 
 		<ClayCard.Body>
 			<div className="autofit-col autofit-col-expand">

@@ -13,7 +13,7 @@ import React from 'react';
 
 const CardFile = (props: any) => (
 	<ClayCard displayType="file">
-		<ClayCard.Header>
+		<ClayCard.AspectRatio className="card-item-first">
 			<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 				<ClayIcon
 					spritemap={props.spritemap}
@@ -23,7 +23,7 @@ const CardFile = (props: any) => (
 			<ClaySticker displayType="danger" position="bottom-left">
 				{'DOC'}
 			</ClaySticker>
-		</ClayCard.Header>
+		</ClayCard.AspectRatio>
 		<ClayCard.Body>
 			<div className="autofit-col autofit-col-expand">
 				<section className="autofit-section">

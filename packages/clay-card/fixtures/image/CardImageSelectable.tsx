@@ -14,7 +14,7 @@ import React from 'react';
 
 const CardImageSelectable = (props: any) => (
 	<ClayCard displayType="image" selectable>
-		<ClayCard.Header>
+		<ClayCard.AspectRatio className="card-item-first">
 			<ClayCheckboxWithState>
 				<ClayCard.AspectRatio>
 					<img
@@ -34,7 +34,7 @@ const CardImageSelectable = (props: any) => (
 					/>
 				</ClaySticker>
 			</ClayCheckboxWithState>
-		</ClayCard.Header>
+		</ClayCard.AspectRatio>
 
 		<ClayCard.Body>
 			<div className="autofit-col autofit-col-expand">
