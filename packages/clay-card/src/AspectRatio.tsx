@@ -37,12 +37,7 @@ export const AspectRatio: React.FunctionComponent<CardAspectRatioProps> = ({
 }) => {
 	const {displayType} = React.useContext(Context);
 
-	const isCardType = {
-		horizontal: displayType === 'horizontal',
-		interactive: displayType === 'interactive',
-	};
-
-	const TagName = isCardType.interactive ? 'span' : 'div';
+	const TagName = displayType === 'interactive' ? 'span' : 'div';
 
 	return (
 		<TagName
