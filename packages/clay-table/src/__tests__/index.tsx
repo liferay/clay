@@ -5,45 +5,49 @@
  */
 
 import * as React from 'react';
-import * as TestRenderer from 'react-test-renderer';
+
+import {cleanup, render} from 'react-testing-library';
+
 import ClayTable from '..';
 
 describe('ClayTable', () => {
-	it('renders', () => {
-		const testRenderer = TestRenderer.create(<ClayTable />);
+	afterEach(cleanup);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+	it('renders', () => {
+		const {container} = render(<ClayTable />);
+
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a table with a Body', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayTable>
 				<ClayTable.Body />
 			</ClayTable>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a table with a Head', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayTable>
 				<ClayTable.Head />
 			</ClayTable>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a table with a Head and Body', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayTable>
 				<ClayTable.Head />
 				<ClayTable.Body />
 			</ClayTable>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a table with multiple rows into Head', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayTable>
 				<ClayTable.Head>
 					<ClayTable.Row />
@@ -53,10 +57,10 @@ describe('ClayTable', () => {
 			</ClayTable>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a table with multiple rows into Body', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayTable>
 				<ClayTable.Body>
 					<ClayTable.Row />
@@ -66,10 +70,10 @@ describe('ClayTable', () => {
 			</ClayTable>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a table with multiple Cells into Row', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayTable>
 				<ClayTable.Body>
 					<ClayTable.Row>
@@ -83,10 +87,10 @@ describe('ClayTable', () => {
 			</ClayTable>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a table with an active row', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayTable>
 				<ClayTable.Body>
 					<ClayTable.Row active />
@@ -94,65 +98,65 @@ describe('ClayTable', () => {
 			</ClayTable>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a table bordered', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayTable bordered>
 				<ClayTable.Head />
 				<ClayTable.Body />
 			</ClayTable>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a table hover', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayTable hover>
 				<ClayTable.Head />
 				<ClayTable.Body />
 			</ClayTable>
 		);
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a no wrapped table', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayTable headingNoWrap noWrap>
 				<ClayTable.Head />
 				<ClayTable.Body />
 			</ClayTable>
 		);
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a table striped', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayTable striped>
 				<ClayTable.Head />
 				<ClayTable.Body />
 			</ClayTable>
 		);
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a responsive table', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayTable responsive responsiveSize="sm">
 				<ClayTable.Head />
 				<ClayTable.Body />
 			</ClayTable>
 		);
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a responsive table', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayTable responsive responsiveSize="sm">
 				<ClayTable.Head />
 				<ClayTable.Body />
 			</ClayTable>
 		);
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a full bottom vertical aligned table', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayTable
 				headVerticalAlignment="bottom"
 				tableVerticalAlignment="bottom"
@@ -161,10 +165,10 @@ describe('ClayTable', () => {
 				<ClayTable.Body />
 			</ClayTable>
 		);
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a Cell with text alignment set to center', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayTable striped>
 				<ClayTable.Head>
 					<ClayTable.Row>
@@ -176,10 +180,10 @@ describe('ClayTable', () => {
 				<ClayTable.Body />
 			</ClayTable>
 		);
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders a Cell delimited', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayTable striped>
 				<ClayTable.Head>
 					<ClayTable.Row>
@@ -199,10 +203,10 @@ describe('ClayTable', () => {
 				</ClayTable.Head>
 			</ClayTable>
 		);
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	it('renders with a headingTitle', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayTable>
 				<ClayTable.Body>
 					<ClayTable.Row divider>
@@ -222,6 +226,6 @@ describe('ClayTable', () => {
 				</ClayTable.Body>
 			</ClayTable>
 		);
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 });
