@@ -4,19 +4,25 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-const path = require('path');
-const docs = require('documentation');
-const evaluateInstance = require('./visit');
 const fs = require('fs');
+const path = require('path');
+const reactDocs = require('react-docgen');
 const visit = require('unist-util-visit');
 
-const generateTr = item => {
+const generateTr = (item, key) => {
 	return `<tr>
-        <td><div class="table-title">${item.property}</div></td>
+        <td><div class="table-title">${key}</div></td>
         <td>${item.description}</td>
-        <td>${item.type}</td>
-        <td>${item.required}</td>
-        <td>${item.default}</td>
+        <td>{${
+			item.tsType.raw
+				? JSON.stringify(item.tsType.raw)
+				: `"${item.tsType.name}"`
+		}}</td>
+        <td>{${
+			item.defaultValue === undefined
+				? item.defaultValue
+				: JSON.stringify(item.defaultValue.value)
+		}}</td>
     </tr>`;
 };
 
@@ -43,35 +49,29 @@ module.exports = ({markdownAST}) => {
 						return;
 					}
 
-					await docs
-						.build([pathFile], {shallow: true})
-						.then(docs.formats.json)
-						.then(output => {
-							const json = JSON.parse(output);
-							const documentation = evaluateInstance(
-								json[0].members.instance
-							);
+					const content = fs.readFileSync(pathFile);
+					const AST = await reactDocs.parse(content, null, null, {
+						filename: pathFile,
+					});
+					const propsKeys = Object.keys(AST.props);
 
-							node.value = `<div class="table-responsive">
-                                <table class="table table-autofit">
-                                    <thead>
-                                        <tr>
-                                            <th>Property</th>
-                                            <th>Description</th>
-                                            <th>Type</th>
-                                            <th>Required</th>
-                                            <th>Default</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        ${documentation
-											.map(generateTr)
-											.join('')}
-                                    </tbody>
-                                </table>
-                            </div>`;
-							resolve(node);
-						});
+					node.value = `<div class="table-responsive">
+						<table class="table table-autofit table-striped">
+							<thead>
+								<tr>
+									<th>Property</th>
+									<th>Description</th>
+									<th>Type</th>
+									<th>Default</th>
+								</tr>
+							</thead>
+							<tbody>
+								${propsKeys.map(key => generateTr(AST.props[key], key)).join('')}
+							</tbody>
+						</table>
+					</div>`;
+
+					resolve(node);
 				})
 		)
 	);
