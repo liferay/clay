@@ -21,7 +21,48 @@ import 'clay-css/lib/css/atlas.css';
 const spritemap = require('clay-css/lib/images/icons/icons.svg');
 
 storiesOf('ClayTable', module)
-	.add('default', () => {
+	.add('default', () => (
+		<ClayTable>
+			<ClayTable.Head>
+				<ClayTable.Row>
+					<ClayTable.Cell headingCell headingTitle expanded>
+						{'Teams'}
+					</ClayTable.Cell>
+					<ClayTable.Cell headingCell headingTitle>
+						{'Region'}
+					</ClayTable.Cell>
+					<ClayTable.Cell headingCell headingTitle>
+						{'Country'}
+					</ClayTable.Cell>
+				</ClayTable.Row>
+			</ClayTable.Head>
+			<ClayTable.Body>
+				<ClayTable.Row>
+					<ClayTable.Cell headingTitle>
+						{'White and Red'}
+					</ClayTable.Cell>
+					<ClayTable.Cell>
+						{'South America'}
+					</ClayTable.Cell>
+					<ClayTable.Cell>
+						{'Brazil'}
+					</ClayTable.Cell>
+				</ClayTable.Row>
+				<ClayTable.Row>
+					<ClayTable.Cell headingTitle>
+						{'White and Purple'}
+					</ClayTable.Cell>
+					<ClayTable.Cell>
+						{'Europe'}
+					</ClayTable.Cell>
+					<ClayTable.Cell>
+						{'Spain'}
+					</ClayTable.Cell>
+				</ClayTable.Row>
+			</ClayTable.Body>
+		</ClayTable>
+	))
+	.add('with hover', () => {
 		const DownloadButton = () => (
 			<ClayButton displayType="secondary">{'Download'}</ClayButton>
 		);
