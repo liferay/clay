@@ -16,7 +16,7 @@ type ResposiveSizeType = 'lg' | 'md' | 'sm' | 'xl';
 
 type VerticalAlignmentType = 'bottom' | 'middle' | 'top';
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {
+interface Props extends React.HTMLAttributes<HTMLTableElement> {
 	/**
 	 * This property vertically align the contents
 	 * inside the table body according a given position.
@@ -92,29 +92,24 @@ const ClayTable: React.FunctionComponent<Props> & {
 	...otherProps
 }) => {
 	return (
-		<div
-			{...otherProps}
-			className={classNames(className, {
+		<table
+			className={classNames('table table-autofit table-list', {
+				'show-quick-actions-on-hover': hover,
+				'table-bordered': bordered,
+				'table-heading-nowrap': headingNoWrap,
+				'table-hover': hover,
+				'table-nowrap': noWrap,
 				'table-responsive': responsive,
 				[`table-responsive-${responsiveSize}`]: responsiveSize,
+				'table-striped': striped,
+				[`tbody-valign-${bodyVerticalAlignment}`]: bodyVerticalAlignment,
+				[`thead-valign-${headVerticalAlignment}`]: headVerticalAlignment,
+				[`table-valign-${tableVerticalAlignment}`]: tableVerticalAlignment,
 			})}
+			{...otherProps}
 		>
-			<table
-				className={classNames('table table-autofit table-list', {
-					'show-quick-actions-on-hover': hover,
-					'table-bordered': bordered,
-					'table-heading-nowrap': headingNoWrap,
-					'table-hover': hover,
-					'table-nowrap': noWrap,
-					'table-striped': striped,
-					[`tbody-valign-${bodyVerticalAlignment}`]: bodyVerticalAlignment,
-					[`thead-valign-${headVerticalAlignment}`]: headVerticalAlignment,
-					[`table-valign-${tableVerticalAlignment}`]: tableVerticalAlignment,
-				})}
-			>
-				{children}
-			</table>
-		</div>
+			{children}
+		</table>
 	);
 };
 

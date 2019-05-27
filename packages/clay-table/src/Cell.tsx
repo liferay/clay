@@ -33,11 +33,6 @@ interface CellProps extends TableCellBaseProps {
 	 */
 	columnTextAlignment?: ColumnTextAlignmentType;
 
-	children?:
-		| React.ReactElement<HTMLElement>[]
-		| React.ReactElement<HTMLElement>
-		| React.ReactText;
-
 	/**
 	 * Fills out the remaining space inside a Cell.
 	 */
@@ -55,8 +50,6 @@ interface CellProps extends TableCellBaseProps {
 	 */
 	headingTitle?: boolean;
 }
-
-export type TableCellType = React.FunctionComponent<CellProps>;
 
 const Cell: React.FunctionComponent<CellProps> = ({
 	align,
@@ -78,17 +71,15 @@ const Cell: React.FunctionComponent<CellProps> = ({
 				'table-cell-expand': expanded,
 				[`table-cell-${cellDelimiter}`]: cellDelimiter,
 				[`table-column-text-${columnTextAlignment}`]: columnTextAlignment,
-				'table-focus': headingCell,
 				[`text-${align}`]: align,
 			})}
 		>
 			{headingTitle
-				? React.Children.map(children, (child, i) =>
-						React.cloneElement(
-							<p className="table-list-title">{child}</p>,
-							{key: i}
-						)
-				  )
+				? React.Children.map(children, (child, i) => (
+						<p className="table-list-title" key={i}>
+							{child}
+						</p>
+				  ))
 				: children}
 		</TagName>
 	);

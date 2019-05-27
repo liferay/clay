@@ -8,12 +8,8 @@ import * as React from 'react';
 
 const Head: React.FunctionComponent<
 	React.TableHTMLAttributes<HTMLTableSectionElement>
-> = ({children, className, ...otherProps}) => {
-	return (
-		<thead {...otherProps} className={className}>
-			{children}
-		</thead>
-	);
+> = ({children, ...otherProps}) => {
+	return <thead {...otherProps}>{children}</thead>;
 };
 
 export default Head;
