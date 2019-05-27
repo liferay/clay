@@ -6,8 +6,7 @@
 
 import * as React from 'react';
 import classNames from 'classnames';
-
-type CellDelimiterType = 'start' | 'end';
+import {TDelimiterType} from './types';
 
 type ColumnTextAlignmentType = 'center' | 'end' | 'start';
 
@@ -27,7 +26,7 @@ interface CellProps extends TableCellBaseProps {
 	 * and need to hide it using CSS. This property can be added to the "new"
 	 * first or last cell to maintain table styles on the left and right side.
 	 */
-	cellDelimiter?: CellDelimiterType;
+	cellDelimiter?: TDelimiterType;
 
 	/**
 	 * Aligns horizontally contents inside the Cell.
