@@ -7,10 +7,14 @@
 import * as React from 'react';
 import classNames from 'classnames';
 
-import Body, {TableBodyType} from './Body';
-import Cell, {TableCellType} from './Cell';
-import Head, {TableHeadType} from './Head';
-import Row, {TableRowType} from './Row';
+import Body from './Body';
+import Cell from './Cell';
+import Head from './Head';
+import Row from './Row';
+
+type ResposiveSizeType = 'lg' | 'md' | 'sm' | 'xl';
+
+type VerticalAlignmentType = 'bottom' | 'middle' | 'top';
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	/**
@@ -67,15 +71,11 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	tableVerticalAlignment?: VerticalAlignmentType;
 }
 
-type ResposiveSizeType = 'lg' | 'md' | 'sm' | 'xl';
-
-type VerticalAlignmentType = 'bottom' | 'middle' | 'top';
-
 const ClayTable: React.FunctionComponent<Props> & {
-	Body: TableBodyType;
-	Cell: TableCellType;
-	Head: TableHeadType;
-	Row: TableRowType;
+	Body: typeof Body;
+	Cell: typeof Cell;
+	Head: typeof Head;
+	Row: typeof Row;
 } = ({
 	bodyVerticalAlignment,
 	bordered,

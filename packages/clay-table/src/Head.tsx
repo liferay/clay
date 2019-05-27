@@ -6,16 +6,9 @@
 
 import * as React from 'react';
 
-interface HeadProps
-	extends React.TableHTMLAttributes<HTMLTableSectionElement> {}
-
-export type TableHeadType = React.FunctionComponent<HeadProps>;
-
-const Head: React.FunctionComponent<HeadProps> = ({
-	children,
-	className,
-	...otherProps
-}) => {
+const Head: React.FunctionComponent<
+	React.TableHTMLAttributes<HTMLTableSectionElement>
+> = ({children, className, ...otherProps}) => {
 	return (
 		<thead {...otherProps} className={className}>
 			{children}

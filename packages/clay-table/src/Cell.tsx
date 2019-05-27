@@ -7,6 +7,15 @@
 import * as React from 'react';
 import classNames from 'classnames';
 
+type CellDelimiterType = 'start' | 'end';
+
+type ColumnTextAlignmentType = 'center' | 'end' | 'start';
+
+type TableCellBaseProps = React.ThHTMLAttributes<HTMLTableHeaderCellElement> &
+	React.TdHTMLAttributes<HTMLTableDataCellElement>;
+
+type TextCellAlignmentType = 'center' | 'left' | 'right';
+
 interface CellProps extends TableCellBaseProps {
 	/**
 	 * Aligns the text inside the Cell.
@@ -47,17 +56,6 @@ interface CellProps extends TableCellBaseProps {
 	 */
 	headingTitle?: boolean;
 }
-
-type CellDelimiterType = 'start' | 'end';
-
-type ColumnTextAlignmentType = 'center' | 'end' | 'start';
-
-type TextCellAlignmentType = 'center' | 'left' | 'right';
-
-export type TableCellBaseProps = React.ThHTMLAttributes<
-	HTMLTableHeaderCellElement
-> &
-	React.TdHTMLAttributes<HTMLTableDataCellElement>;
 
 export type TableCellType = React.FunctionComponent<CellProps>;
 

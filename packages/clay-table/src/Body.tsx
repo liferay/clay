@@ -6,16 +6,9 @@
 
 import * as React from 'react';
 
-interface BodyProps
-	extends React.TableHTMLAttributes<HTMLTableSectionElement> {}
-
-export type TableBodyType = React.FunctionComponent<BodyProps>;
-
-const Body: React.FunctionComponent<BodyProps> = ({
-	children,
-	className,
-	...otherProps
-}) => {
+const Body: React.FunctionComponent<
+	React.TableHTMLAttributes<HTMLTableSectionElement>
+> = ({children, className, ...otherProps}) => {
 	return (
 		<tbody {...otherProps} className={className}>
 			{children}
