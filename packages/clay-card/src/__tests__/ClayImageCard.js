@@ -457,6 +457,18 @@ describe('ClayImageCard', function() {
 		expect(component).toMatchSnapshot();
 	});
 
+	it('should render a ClayImageCard with aspect ratio classes', () => {
+		component = new ClayImageCard({
+			aspectRatioClasses:
+				'aspect-ratio-item-center-middle aspect-ratio-item-flush',
+			imageSrc: 'thumbnail_coffee.jpg',
+			spritemap: spritemap,
+			title: 'My Title',
+		});
+
+		expect(component).toMatchSnapshot();
+	});
+
 	it('should render a ClayImageCard with href', () => {
 		component = new ClayImageCard({
 			href: '#1',
