@@ -20,20 +20,7 @@ export const Body: React.FunctionComponent<CardBodyProps> = ({
 
 	const TagName = interactive ? 'span' : 'div';
 
-	if (horizontal && !interactive) {
-		return (
-			<div className="card card-horizontal">
-				<div
-					className={classNames('card-body', className)}
-					{...otherProps}
-				>
-					<div className="card-row">{children}</div>
-				</div>
-			</div>
-		);
-	}
-
-	return (
+	const Content: React.FunctionComponent<CardBodyProps> = ({children}) => (
 		<TagName className={classNames('card-body', className)} {...otherProps}>
 			{interactive && !horizontal ? (
 				children
@@ -42,4 +29,14 @@ export const Body: React.FunctionComponent<CardBodyProps> = ({
 			)}
 		</TagName>
 	);
+
+	if (horizontal && !interactive) {
+		return (
+			<div className="card card-horizontal">
+				<Content>{children}</Content>
+			</div>
+		);
+	}
+
+	return <Content>{children}</Content>;
 };
