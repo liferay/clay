@@ -25,7 +25,7 @@ storiesOf('ClayTable', module)
 		<ClayTable>
 			<ClayTable.Head>
 				<ClayTable.Row>
-					<ClayTable.Cell headingCell headingTitle expanded>
+					<ClayTable.Cell expanded headingCell headingTitle>
 						{'Teams'}
 					</ClayTable.Cell>
 					<ClayTable.Cell headingCell headingTitle>
@@ -41,23 +41,15 @@ storiesOf('ClayTable', module)
 					<ClayTable.Cell headingTitle>
 						{'White and Red'}
 					</ClayTable.Cell>
-					<ClayTable.Cell>
-						{'South America'}
-					</ClayTable.Cell>
-					<ClayTable.Cell>
-						{'Brazil'}
-					</ClayTable.Cell>
+					<ClayTable.Cell>{'South America'}</ClayTable.Cell>
+					<ClayTable.Cell>{'Brazil'}</ClayTable.Cell>
 				</ClayTable.Row>
 				<ClayTable.Row>
 					<ClayTable.Cell headingTitle>
 						{'White and Purple'}
 					</ClayTable.Cell>
-					<ClayTable.Cell>
-						{'Europe'}
-					</ClayTable.Cell>
-					<ClayTable.Cell>
-						{'Spain'}
-					</ClayTable.Cell>
+					<ClayTable.Cell>{'Europe'}</ClayTable.Cell>
+					<ClayTable.Cell>{'Spain'}</ClayTable.Cell>
 				</ClayTable.Row>
 			</ClayTable.Body>
 		</ClayTable>
