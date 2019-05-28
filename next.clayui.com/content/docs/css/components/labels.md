@@ -1,0 +1,412 @@
+---
+title: "Labels"
+description: "Labels categorize information, providing quick recognition."
+---
+
+<div class="nav-toc">
+
+- [Label Variations](#label-variations)
+- [Sizes](#sizes)
+- [Variations](#variations)
+	- [Simple Label](#simple-label)
+	- [Label Dismissible](#label-dismissible)
+	- [Label with Link](#label-with-link)
+	- [Interactive Label](#interactive-label)
+	- [Interactive Label Examples](#interactive-label-examples)
+	- [Labels as an Anchor Tag](#labels-as-an-anchor-tag)
+
+</div>
+
+<div class="clay-site-alert alert alert-info">
+	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/labels/">Labels Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
+</div>
+
+<div class="clay-site-alert alert alert-warning">
+	See the implementation of the <a href="/docs/components/labels.html">Labels component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/labels/">Labels Pattern</a>.
+</div>
+
+### Label Variations
+
+<div class="sheet-example">
+	<span class="label label-primary"><span class="label-item label-item-expand">Primary</span></span>
+	<span class="label label-secondary"><span class="label-item label-item-expand">Secondary</span></span>
+	<span class="label label-info"><span class="label-item label-item-expand">Info</span></span>
+	<span class="label label-warning"><span class="label-item label-item-expand">Warning</span></span>
+	<span class="label label-danger"><span class="label-item label-item-expand">Danger</span></span>
+	<span class="label label-success"><span class="label-item label-item-expand">Success</span></span>
+	<span class="label label-light"><span class="label-item label-item-expand">Light</span></span>
+	<span class="label label-dark"><span class="label-item label-item-expand">Dark</span></span>
+</div>
+
+```html
+<span class="label label-primary"><span class="label-item label-item-expand">Primary</span></span>
+<span class="label label-secondary"><span class="label-item label-item-expand">Secondary</span></span>
+<span class="label label-info"><span class="label-item label-item-expand">Info</span></span>
+<span class="label label-warning"><span class="label-item label-item-expand">Warning</span></span>
+<span class="label label-danger"><span class="label-item label-item-expand">Danger</span></span>
+<span class="label label-success"><span class="label-item label-item-expand">Success</span></span>
+<span class="label label-light"><span class="label-item label-item-expand">Light</span></span>
+<span class="label label-dark"><span class="label-item label-item-expand">Dark</span></span>
+```
+
+### Sizes
+
+> Use `label-lg` to make the label larger, or use the mixin label-size($sassMap) to create a custom sized label:
+
+<div class="sheet-example">
+	<span class="label label-secondary"><span class="label-item label-item-expand">Normal Label</span></span>
+	<span class="label label-lg label-success"><span class="label-item label-item-expand">Large Label</span></span>
+</div>
+
+```html
+<span class="label label-secondary">
+	<span class="label-item label-item-expand">
+		Normal Label
+	</span>
+</span>
+<span class="label label-lg label-success">
+	<span class="label-item label-item-expand">
+		Large Label
+	</span>
+</span>
+```
+
+### Variations
+
+#### Simple Label
+
+<div class="sheet-example">
+	<span class="label label-secondary"><span class="label-item label-item-expand">Simple Label</span></span>
+</div>
+
+```html
+<span class="label label-secondary">
+	<span class="label-item label-item-expand">
+		Simple Label
+	</span>
+</span>
+```
+
+#### Label Dismissible
+
+<div class="sheet-example">
+	<span class="label label-dismissible label-secondary">
+		<span class="label-item label-item-before">
+			<span class="sticker">
+				<span class="sticker-overlay">
+					<img alt="thumbnail" class="sticker-img" src="/images/thumbnail_dock.jpg">
+				</span>
+			</span>
+		</span>
+		<span class="label-item label-item-before">
+			<svg class="lexicon-icon lexicon-icon-times-circle" focusable="false" role="presentation">
+				<use xlink:href="/images/icons/icons.svg#times-circle"></use>
+			</svg>
+		</span>
+		<span class="label-item label-item-before">
+			<button class="btn btn-unstyled" type="button">
+				<svg class="lexicon-icon lexicon-icon-add-cell" focusable="false" role="presentation">
+					<use xlink:href="/images/icons/icons.svg#add-cell"></use>
+				</svg>
+			</button>
+		</span>
+		<span class="label-item label-item-expand">
+			<a href="#1">Label Dismissible</a>
+		</span>
+		<span class="label-item label-item-after">
+			<button aria-label="Close" class="close" type="button">
+				<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+					<use xlink:href="/images/icons/icons.svg#times"></use>
+				</svg>
+			</button>
+		</span>
+	</span>
+</div>
+
+```html
+<span class="label label-dismissible label-secondary">
+	<span class="label-item label-item-before">
+		<span class="sticker">
+			...
+		</span>
+	</span>
+	<span class="label-item label-item-before">
+		...
+	</span>
+	<span class="label-item label-item-before">
+		...
+	</span>
+	<span class="label-item label-item-expand">
+		<a href="#1">Label Dismissible</a>
+	</span>
+	<span class="label-item label-item-after">
+		<button aria-label="Close" class="close" type="button">
+			...
+		</button>
+	</span>
+</span>
+```
+
+#### Label with Link
+
+<div class="sheet-example">
+	<span class="label label-dismissible label-lg label-success">
+		<span class="label-item label-item-before">
+			<span class="sticker">
+				<span class="sticker-overlay">
+					<img alt="thumbnail" class="sticker-img" src="/images/thumbnail_dock.jpg">
+				</span>
+			</span>
+		</span>
+		<span class="label-item label-item-before">
+			<svg class="lexicon-icon lexicon-icon-times-circle" focusable="false" role="presentation">
+				<use xlink:href="/images/icons/icons.svg#times-circle"></use>
+			</svg>
+		</span>
+		<span class="label-item label-item-before">
+			<svg class="lexicon-icon lexicon-icon-add-cell" focusable="false" role="presentation">
+				<use xlink:href="/images/icons/icons.svg#add-cell"></use>
+			</svg>
+		</span>
+		<span class="label-item label-item-expand">
+			<a href="#1">Label with Link</a>
+		</span>
+		<span class="label-item label-item-after">
+			<button aria-label="Close" class="close" type="button">
+				<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+					<use xlink:href="/images/icons/icons.svg#times"></use>
+				</svg>
+			</button>
+		</span>
+	</span>
+</div>
+
+```html
+<span class="label label-dismissible label-lg label-success">
+	<span class="label-item label-item-before">
+		<span class="sticker">
+			...
+		</span>
+	</span>
+	<span class="label-item label-item-before">
+		...
+	</span>
+	<span class="label-item label-item-before">
+		...
+	</span>
+	<span class="label-item label-item-expand">
+		<a href="#1">Label with Link</a>
+	</span>
+	<span class="label-item label-item-after">
+		<button aria-label="Close" class="close" type="button">
+			...
+		</button>
+	</span>
+</span>
+```
+
+#### Interactive Label
+
+Add the `tabindex="0"` attribute to the `.label` element to create an interactive label with multiple controls inside. The inner controls should have the attribute `tabindex="-1"` to remove them from the tab order. The inner controls can be placed back in the tab order by changing back to `tabindex="0"` with javascript.
+
+> Implementing Interactive Labels require custom javascript.
+
+<div class="sheet-example">
+	<span class="label label-dismissible label-secondary" tabindex="0">
+		<span class="label-item label-item-before">
+			<span class="sticker">
+				<span class="sticker-overlay">
+					<img alt="thumbnail" class="sticker-img" src="/images/thumbnail_dock.jpg">
+				</span>
+			</span>
+		</span>
+		<span class="label-item label-item-before">
+			<button class="btn btn-unstyled" type="button" tabindex="-1">
+				<svg class="lexicon-icon lexicon-icon-times-circle" focusable="false" role="presentation">
+					<use xlink:href="/images/icons/icons.svg#times-circle"></use>
+				</svg>
+			</button>
+		</span>
+		<span class="label-item label-item-before">
+			<a href="#1" role="button" tabindex="-1">
+				<svg class="lexicon-icon lexicon-icon-add-cell" focusable="false" role="presentation">
+					<use xlink:href="/images/icons/icons.svg#add-cell"></use>
+				</svg>
+			</a>
+		</span>
+		<span class="label-item label-item-expand">
+			<a href="#1" tabindex="-1">Interactive Label</a>
+		</span>
+		<span class="label-item label-item-after">
+			<button aria-label="Close" class="close" tabindex="-1" type="button">
+				<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+					<use xlink:href="/images/icons/icons.svg#times"></use>
+				</svg>
+			</button>
+		</span>
+	</span>
+</div>
+
+```html
+<span class="label label-dismissible label-secondary" tabindex="0">
+	<span class="label-item label-item-before">
+		<span class="sticker">
+			...
+		</span>
+	</span>
+	<span class="label-item label-item-before">
+		<button class="btn btn-unstyled" type="button" tabindex="-1">
+			...
+		</button>
+	</span>
+	<span class="label-item label-item-before">
+		<a href="#1" role="button" tabindex="-1">
+			...
+		</a>
+	</span>
+	<span class="label-item label-item-expand">
+		<a href="#1" tabindex="-1">Interactive Label</a>
+	</span>
+	<span class="label-item label-item-after">
+		<button aria-label="Close" class="close" tabindex="-1" type="button">
+			...
+		</button>
+	</span>
+</span>
+```
+
+#### Interactive Label Examples
+
+<div class="sheet-example">
+	<div class="sheet">
+		<div class="form-group">
+			<label for="tagsField2">Tags</label>
+			<div class="input-group input-group-stacked-sm-down">
+				<div class="input-group-item">
+					<div class="form-control form-control-tag-group">
+						<span class="label label-dismissible label-secondary" tabindex="0">
+							<span class="label-item label-item-expand">winterfell</span>
+							<span class="label-item label-item-after">
+								<button aria-label="Close" class="close" tabindex="-1" type="button">
+									<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+										<use xlink:href="/images/icons/icons.svg#times"></use>
+									</svg>
+								</button>
+							</span>
+						</span>
+						<span class="label label-dismissible label-secondary" tabindex="0">
+							<span class="label-item label-item-expand">Stark</span>
+							<span class="label-item label-item-after">
+								<button aria-label="Close" class="close" tabindex="-1" type="button">
+									<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+										<use xlink:href="/images/icons/icons.svg#times"></use>
+									</svg>
+								</button>
+							</span>
+						</span>
+						<input class="form-control-inset" id="tagsField2" type="text" value="some value">
+					</div>
+					<div class="form-feedback-group">
+						<div class="form-text">Type a comma or press return to enter a tag.</div>
+					</div>
+				</div>
+				<div class="input-group-item input-group-item-shrink">
+					<button class="btn btn-secondary" type="button">Select</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+```html
+<div class="sheet">
+	<div class="form-group">
+		<label for="tagsField2">Tags</label>
+		<div class="input-group input-group-stacked-sm-down">
+			<div class="input-group-item">
+				<div class="form-control form-control-tag-group">
+					<span class="label label-dismissible label-secondary" tabindex="0">
+						<span class="label-item label-item-expand">winterfell</span>
+						<span class="label-item label-item-after">
+							<button aria-label="Close" class="close" tabindex="-1" type="button">
+								...
+							</button>
+						</span>
+					</span>
+					<span class="label label-dismissible label-secondary" tabindex="0">
+						<span class="label-item label-item-expand">Stark</span>
+						<span class="label-item label-item-after">
+							<button aria-label="Close" class="close" tabindex="-1" type="button">
+								...
+							</button>
+						</span>
+					</span>
+					<input class="form-control-inset" id="tagsField2" type="text" value="some value">
+				</div>
+				<div class="form-feedback-group">
+					<div class="form-text">Type a comma or press return to enter a tag.</div>
+				</div>
+			</div>
+			<div class="input-group-item input-group-item-shrink">
+				<button class="btn btn-secondary" type="button">Select</button>
+			</div>
+		</div>
+	</div>
+</div>
+```
+
+#### Labels as an Anchor Tag
+
+<div class="sheet-example">
+	<a class="label label-primary" href="#1">
+		<span class="label-item label-item-expand">Primary</span>
+	</a>
+	<a class="label label-secondary" href="#1">
+		<span class="label-item label-item-expand">Secondary</span>
+	</a>
+	<a class="label label-success" href="#1">
+		<span class="label-item label-item-expand">Success</span>
+	</a>
+	<a class="label label-info" href="#1">
+		<span class="label-item label-item-expand">Info</span>
+	</a>
+	<a class="label label-warning" href="#1">
+		<span class="label-item label-item-expand">Warning</span>
+	</a>
+	<a class="label label-danger" href="#1">
+		<span class="label-item label-item-expand">Danger</span>
+	</a>
+	<a class="label label-light" href="#1">
+		<span class="label-item label-item-expand">Light</span>
+	</a>
+	<a class="label label-dark" href="#1">
+		<span class="label-item label-item-expand">Dark</span>
+	</a>
+</div>
+
+```html
+<a class="label label-primary" href="#1">
+	<span class="label-item label-item-expand">Primary</span>
+</a>
+<a class="label label-secondary" href="#1">
+	<span class="label-item label-item-expand">Secondary</span>
+</a>
+<a class="label label-success" href="#1">
+	<span class="label-item label-item-expand">Success</span>
+</a>
+<a class="label label-info" href="#1">
+	<span class="label-item label-item-expand">Info</span>
+</a>
+<a class="label label-warning" href="#1">
+	<span class="label-item label-item-expand">Warning</span>
+</a>
+<a class="label label-danger" href="#1">
+	<span class="label-item label-item-expand">Danger</span>
+</a>
+<a class="label label-light" href="#1">
+	<span class="label-item label-item-expand">Light</span>
+</a>
+<a class="label label-dark" href="#1">
+	<span class="label-item label-item-expand">Dark</span>
+</a>
+```
