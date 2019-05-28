@@ -36,11 +36,7 @@ export interface CardProps {
 
 interface Props
 	extends CardProps,
-		React.BaseHTMLAttributes<HTMLAnchorElement | HTMLDivElement> {
-	children:
-		| React.ReactElement<CardBodyProps>[]
-		| React.ReactElement<CardBodyProps>;
-}
+		React.BaseHTMLAttributes<HTMLAnchorElement | HTMLDivElement> {}
 
 const ClayCard: React.FunctionComponent<Props> & {
 	AspectRatio: typeof AspectRatio;

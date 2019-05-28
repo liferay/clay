@@ -9,9 +9,7 @@ import classNames from 'classnames';
 
 import Context from './Context';
 
-interface CardDetailProps extends React.HTMLAttributes<HTMLDivElement> {
-	children: React.ReactNode;
-}
+interface CardDetailProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export const Detail: React.FunctionComponent<CardDetailProps> = ({
 	children,

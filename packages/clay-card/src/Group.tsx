@@ -8,8 +8,6 @@ import * as React from 'react';
 import classNames from 'classnames';
 
 interface CardGroupProps extends React.HTMLAttributes<HTMLUListElement> {
-	children: React.ReactElement<HTMLBaseElement>[] | React.ReactElement;
-
 	/**
 	 * Header's label of Card Group
 	 */

@@ -12,8 +12,6 @@ import Context from './Context';
 type CardDescriptionDisplayType = 'text' | 'title' | 'subtitle';
 
 interface CardDescriptionProps extends React.HTMLAttributes<HTMLDivElement> {
-	children: React.ReactText;
-
 	/**
 	 * Type of description that can be applied for a text.
 	 */
