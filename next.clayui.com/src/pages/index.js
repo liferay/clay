@@ -339,7 +339,7 @@ export default () => {
 										</p>
 										<a
 											className="mb-3"
-											href="https://lexiconcss.wedeploy.io/"
+											href="https://liferay.github.io/lexiconcss/"
 											rel="noopener noreferrer"
 											target="_blank"
 										>
