@@ -270,7 +270,7 @@ describe('ClayCard', () => {
 					<ClayCard.Description displayType="title">
 						{'Content Page'}
 					</ClayCard.Description>
-					<ClayCard.Description truncate={false} displayType="text">
+					<ClayCard.Description displayType="text" truncate={false}>
 						{
 							'This is an example of card-type-template using an anchor tag.'
 						}
@@ -316,7 +316,7 @@ describe('ClayCard', () => {
 					</span>
 					<span className="autofit-col autofit-col-expand">
 						<span className="autofit-section">
-							<ClayCard.Description truncate displayType="title">
+							<ClayCard.Description displayType="title" truncate>
 								{'Full Page Application'}
 							</ClayCard.Description>
 						</span>

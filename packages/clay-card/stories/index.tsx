@@ -363,7 +363,10 @@ storiesOf('ClayCard', module)
 						</span>
 						<span className="autofit-col autofit-col-expand">
 							<span className="autofit-section">
-								<ClayCard.Description truncate displayType="title">
+								<ClayCard.Description
+									displayType="title"
+									truncate
+								>
 									{'Full Page Application'}
 								</ClayCard.Description>
 							</span>
