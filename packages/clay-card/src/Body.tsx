@@ -9,11 +9,7 @@ import classNames from 'classnames';
 
 import Context from './Context';
 
-export interface CardBodyProps extends React.HTMLAttributes<HTMLDivElement> {
-	children:
-		| React.ReactElement<HTMLElement>[]
-		| React.ReactElement<HTMLElement>;
-}
+export interface CardBodyProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export const Body: React.FunctionComponent<CardBodyProps> = ({
 	children,
@@ -22,18 +18,9 @@ export const Body: React.FunctionComponent<CardBodyProps> = ({
 }) => {
 	const {horizontal, interactive} = React.useContext(Context);
 
-	const isCardType = {
-		horizontal,
-		interactive,
-	};
+	const TagName = interactive ? 'span' : 'div';
 
-	const TagName =
-		isCardType.interactive ||
-		(isCardType.horizontal && isCardType.interactive)
-			? 'span'
-			: 'div';
-
-	if (isCardType.horizontal && !isCardType.interactive) {
+	if (horizontal && !interactive) {
 		return (
 			<div className="card card-horizontal">
 				<div
@@ -48,7 +35,7 @@ export const Body: React.FunctionComponent<CardBodyProps> = ({
 
 	return (
 		<TagName className={classNames('card-body', className)} {...otherProps}>
-			{isCardType.interactive && !isCardType.horizontal ? (
+			{interactive && !horizontal ? (
 				children
 			) : (
 				<TagName className="card-row">{children}</TagName>
