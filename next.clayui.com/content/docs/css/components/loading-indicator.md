@@ -5,9 +5,13 @@ description: "The loading indicator shows the user that an external process, lik
 
 <div class="nav-toc">
 
-- [Loading Icon Dotted](#loading-icon-dotted)
-- [Loading Icon Dotted Light](#loading-icon-dotted-light)
-- [Button with Loading Icon Dotted](#button-with-loading-icon-dotted)
+- [Sizes](#sizes)
+- [Variations](#variations)
+  - [Regular](#regular)
+  - [Light](#light)
+- [Compositions](#compositions)
+  - [Button](#button)
+  - [Autocomplete](#autocomplete)
 
 </div>
 
@@ -19,27 +23,37 @@ description: "The loading indicator shows the user that an external process, lik
 	See the implementation of the <a href="/docs/components/loading-indicator.html">Loading Indicator component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/loading-indicator/">Loading Indicator Pattern</a>.
 </div>
 
-> These animations are made using only CSS.
+<div class="clay-site-alert alert alert-info">
+	These animations are made using only CSS.
+</div>
 
-### Loading Icon Dotted
+### Sizes
 
 <div class="sheet-example">
-	<span aria-hidden="true" class="loading-animation loading-animation-sm"></span>
+	<div class="row">
+		<span aria-hidden="true" class="loading-animation loading-animation-sm"></span>
+		<span aria-hidden="true" class="loading-animation"></span>
+	</div>
 </div>
 
 ```html
 <span aria-hidden="true" class="loading-animation loading-animation-sm"></span>
-```
-
-<div class="sheet-example">
-	<span aria-hidden="true" class="loading-animation"></span>
-</div>
-
-```html
 <span aria-hidden="true" class="loading-animation"></span>
 ```
 
-### Loading Icon Dotted Light
+### Variations
+
+#### Regular
+
+<div class="sheet-example">
+	<span aria-hidden="true" class="loading-animation loading-animation"></span>
+</div>
+
+```html
+<span aria-hidden="true" class="loading-animation loading-animation"></span>
+```
+
+#### Light
 
 <div class="bg-dark sheet-example">
 	<span aria-hidden="true" class="loading-animation loading-animation-light"></span>
@@ -49,7 +63,9 @@ description: "The loading indicator shows the user that an external process, lik
 <span aria-hidden="true" class="loading-animation loading-animation-light"></span>
 ```
 
-### Button with Loading Icon Dotted
+### Compositions
+
+#### Button
 
 <div class="sheet-example">
 	<button class="btn btn-primary" type="button">
