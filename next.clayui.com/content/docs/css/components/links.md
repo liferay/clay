@@ -59,7 +59,7 @@ Use `.single-link` on an anchor to add a semi-bold style to the link and should 
 
 Use these patterns for links, titles, subtitles in components.
 
-> The colors, sizing, and other CSS Properties can change for these items depending on the component you put them in (requires custom CSS).
+The colors, sizing, and other CSS Properties can change for these items depending on the component you put them in (requires custom CSS).
 
 <div class="sheet-example">
 	<a class="component-link" href="#1">.component-link</a>

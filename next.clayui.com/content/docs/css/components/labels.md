@@ -51,7 +51,7 @@ description: "Labels categorize information, providing quick recognition."
 
 ### Sizes
 
-> Use `label-lg` to make the label larger, or use the mixin label-size($sassMap) to create a custom sized label:
+Use `label-lg` to make the label larger, or use the mixin label-size($sassMap) to create a custom sized label:
 
 <div class="sheet-example">
 	<span class="label label-secondary"><span class="label-item label-item-expand">Normal Label</span></span>
@@ -209,7 +209,7 @@ description: "Labels categorize information, providing quick recognition."
 
 Add the `tabindex="0"` attribute to the `.label` element to create an interactive label with multiple controls inside. The inner controls should have the attribute `tabindex="-1"` to remove them from the tab order. The inner controls can be placed back in the tab order by changing back to `tabindex="0"` with javascript.
 
-> Implementing Interactive Labels require custom javascript.
+Implementing Interactive Labels require custom javascript.
 
 <div class="sheet-example">
 	<span class="label label-dismissible label-secondary" tabindex="0">

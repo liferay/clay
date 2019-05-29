@@ -23,7 +23,7 @@ description: "Icons are a visual representation of an idea and/or action."
 
 ## Usage
 
-> We use SVG elements that link to an SVG sprite, like so:
+We use SVG elements that link to an SVG sprite, like so:
 
 ```html
 <svg class="lexicon-icon lexicon-icon-add-column" focusable="false" role="presentation">
@@ -39,13 +39,13 @@ Note that the ID after the # symbol is the ID of the icon to use, so if you want
 
 ### Language Flags
 
-> People tend to have pretty strong opinions on whether flags should be used as a visual cue for indicating a language, mainly because in many parts of the world the flag may have cultural and geographic meanings that we might not be aware of, or the flag itself isn't fully accurate to the dialects spoken in that region.
+People tend to have pretty strong opinions on whether flags should be used as a visual cue for indicating a language, mainly because in many parts of the world the flag may have cultural and geographic meanings that we might not be aware of, or the flag itself isn't fully accurate to the dialects spoken in that region.
 
-> While we understand this reasoning, we've found that when a user is not familiar with the currently displayed language, flags somewhat eliminate the use of other mechanisms, such as the name of the language (since the current language could be in an entirely different character set). Given this, there is often at least some familiarity with the identity of a country that speaks a shared language.
+While we understand this reasoning, we've found that when a user is not familiar with the currently displayed language, flags somewhat eliminate the use of other mechanisms, such as the name of the language (since the current language could be in an entirely different character set). Given this, there is often at least some familiarity with the identity of a country that speaks a shared language.
 
-> Or, to paraphrase Winston Churchill, "Using flags is the worst system for indicating language, except for all others". :)
+Or, to paraphrase Winston Churchill, "Using flags is the worst system for indicating language, except for all others". :)
 
-> To use the flags below, follow the same process as you would for a standard icon, and use the locale and country code indicated in parenthesis for the icon's name (e.g. to use the Japanese icon, you would use `ja-jp`)
+To use the flags below, follow the same process as you would for a standard icon, and use the locale and country code indicated in parenthesis for the icon's name (e.g. to use the Japanese icon, you would use `ja-jp`)
 
 <ul class="lexicon-icon-list list-unstyled">
 	[foreach Flags]
@@ -53,7 +53,7 @@ Note that the ID after the # symbol is the ID of the icon to use, so if you want
 
 ### SVG Icons as Background Images
 
-> We have created a Sass function to turn Lexicon SVG icon's into data uri schemes, which enables you to use them as a background images on an HTML element. The Sass function `lx-icon(icon-name, color)` takes the name of a Lexicon SVG Icon and a color. For example, the Sass rule set `.site-add-cell {lb} background-image: lx-icon(add-cell, #5AF); background-size: contain; display: inline-block; height: 20px; width: 20px; {rb}` will place the SVG icon add-cell as a background-image on any element with class site-add-cell.
+We have created a Sass function to turn Lexicon SVG icon's into data uri schemes, which enables you to use them as a background images on an HTML element. The Sass function `lx-icon(icon-name, color)` takes the name of a Lexicon SVG Icon and a color. For example, the Sass rule set `.site-add-cell {lb} background-image: lx-icon(add-cell, #5AF); background-size: contain; display: inline-block; height: 20px; width: 20px; {rb}` will place the SVG icon add-cell as a background-image on any element with class site-add-cell.
 
 <span class="clay-site-add-cell clay-site-svg-bg">add-cell</span>
 <span class="clay-site-add-column clay-site-svg-bg">add-column</span>
@@ -66,7 +66,7 @@ Note that the ID after the # symbol is the ID of the icon to use, so if you want
 
 ### Svg-url()
 
-> You can turn your custom SVG into a data uri using the Sass function `svg-url($svg)`, where `$svg` is the code for your inline SVG. The function returns `url(your_svg_as_data_uri)`.
+You can turn your custom SVG into a data uri using the Sass function `svg-url($svg)`, where `$svg` is the code for your inline SVG. The function returns `url(your_svg_as_data_uri)`.
 
 <div class="alert alert-info">
 	When using `svg-url()`, wrap your inline SVG code with single quotes if your SVG's attributes are delimited with double quotes.
