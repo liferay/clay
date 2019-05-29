@@ -499,10 +499,10 @@ Place any checkbox or radio option within an input group’s addon instead of te
 
 ## Inset
 
-You can insert buttons and links into input group items with the following helper classes: .input-group-inset, `.input-group-inset-before`, `.input-group-inset-after`, `.input-group-inset-item`, `.input-group-inset-item-before`, and `.input-group-inset-item-after.` Use the -before classes to inset the button/link at the beginning of the input group, or use the -after classes to inset the button/link at the end of the input group.
+You can insert buttons and links into input group items with the following helper classes: `.input-group-inset`, `.input-group-inset-before`, `.input-group-inset-after`, `.input-group-inset-item`, `.input-group-inset-item-before`, and `.input-group-inset-item-after.` Use the -before classes to inset the button/link at the beginning of the input group, or use the -after classes to inset the button/link at the end of the input group.
 
 <div class="clay-site-alert alert alert-warning">
-	To retain the focus styles around the `.input-group-inset` component when a button or link inside is focused, add the focus class to the `.input-group-item`. Focus Box Shadows are only supported in `.input-group-inset` with `.input-group-item.focus`. `.input-prepend` and .input-append aren't supported with `.input-group-inset`.
+	To retain the focus styles around the `.input-group-inset` component when a button or link inside is focused, add the focus class to the `.input-group-item`. Focus Box Shadows are only supported in `.input-group-inset` with `.input-group-item.focus`. `.input-prepend` and `.input-append` aren't supported with `.input-group-inset`.
 </div>
 
 <div class="sheet-example">

@@ -1,6 +1,6 @@
 ---
 title: "Multi Select"
-description: "Multi select is the field type that allows writing text to create “tags” that are represented in the shape of labels. This components counts with auto complete feature."
+description: "Multi select is the field type that allows writing text to create “tags” that are represented in the shape of labels."
 ---
 
 <div class="nav-toc">

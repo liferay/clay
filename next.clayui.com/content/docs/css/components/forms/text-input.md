@@ -191,7 +191,7 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 			<div class="form-feedback-item">
 				<span class="form-feedback-indicator">
 					<svg class="lexicon-icon lexicon-icon-warning-full" focusable="false" role="presentation">
-						`<use href="/images/icons/icons.svg#warning-full" />
+						<use href="/images/icons/icons.svg#warning-full" />
 					</svg>
 				</span>
 				This is a form-feedback-indicator.
@@ -215,7 +215,7 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 		<div class="form-feedback-item">
 			<span class="form-feedback-indicator">
 				<svg class="lexicon-icon lexicon-icon-warning-full" focusable="false" role="presentation">
-					`<use href="/images/icons/icons.svg#warning-full" />
+					<use href="/images/icons/icons.svg#warning-full" />
 				</svg>
 			</span>
 			This is a form-feedback-indicator.
