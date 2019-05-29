@@ -251,17 +251,23 @@ Add the `tabindex="0"` attribute to the `.label` element to create an interactiv
 <span class="label label-dismissible label-secondary" tabindex="0">
 	<span class="label-item label-item-before">
 		<span class="sticker">
-			...
+			<span class="sticker-overlay">
+				<img alt="thumbnail" class="sticker-img" src="/images/thumbnail_dock.jpg">
+			</span>
 		</span>
 	</span>
 	<span class="label-item label-item-before">
 		<button class="btn btn-unstyled" type="button" tabindex="-1">
-			...
+			<svg class="lexicon-icon lexicon-icon-times-circle" focusable="false" role="presentation">
+				<use xlink:href="/images/icons/icons.svg#times-circle"></use>
+			</svg>
 		</button>
 	</span>
 	<span class="label-item label-item-before">
 		<a href="#1" role="button" tabindex="-1">
-			...
+			<svg class="lexicon-icon lexicon-icon-add-cell" focusable="false" role="presentation">
+				<use xlink:href="/images/icons/icons.svg#add-cell"></use>
+			</svg>
 		</a>
 	</span>
 	<span class="label-item label-item-expand">
@@ -269,90 +275,12 @@ Add the `tabindex="0"` attribute to the `.label` element to create an interactiv
 	</span>
 	<span class="label-item label-item-after">
 		<button aria-label="Close" class="close" tabindex="-1" type="button">
-			...
+			<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+				<use xlink:href="/images/icons/icons.svg#times"></use>
+			</svg>
 		</button>
 	</span>
 </span>
-```
-
-#### Interactive Label Examples
-
-<div class="sheet-example">
-	<div class="sheet">
-		<div class="form-group">
-			<label for="tagsField2">Tags</label>
-			<div class="input-group input-group-stacked-sm-down">
-				<div class="input-group-item">
-					<div class="form-control form-control-tag-group">
-						<span class="label label-dismissible label-secondary" tabindex="0">
-							<span class="label-item label-item-expand">winterfell</span>
-							<span class="label-item label-item-after">
-								<button aria-label="Close" class="close" tabindex="-1" type="button">
-									<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-										<use xlink:href="/images/icons/icons.svg#times"></use>
-									</svg>
-								</button>
-							</span>
-						</span>
-						<span class="label label-dismissible label-secondary" tabindex="0">
-							<span class="label-item label-item-expand">Stark</span>
-							<span class="label-item label-item-after">
-								<button aria-label="Close" class="close" tabindex="-1" type="button">
-									<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-										<use xlink:href="/images/icons/icons.svg#times"></use>
-									</svg>
-								</button>
-							</span>
-						</span>
-						<input class="form-control-inset" id="tagsField2" type="text" value="some value">
-					</div>
-					<div class="form-feedback-group">
-						<div class="form-text">Type a comma or press return to enter a tag.</div>
-					</div>
-				</div>
-				<div class="input-group-item input-group-item-shrink">
-					<button class="btn btn-secondary" type="button">Select</button>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-```html
-<div class="sheet">
-	<div class="form-group">
-		<label for="tagsField2">Tags</label>
-		<div class="input-group input-group-stacked-sm-down">
-			<div class="input-group-item">
-				<div class="form-control form-control-tag-group">
-					<span class="label label-dismissible label-secondary" tabindex="0">
-						<span class="label-item label-item-expand">winterfell</span>
-						<span class="label-item label-item-after">
-							<button aria-label="Close" class="close" tabindex="-1" type="button">
-								...
-							</button>
-						</span>
-					</span>
-					<span class="label label-dismissible label-secondary" tabindex="0">
-						<span class="label-item label-item-expand">Stark</span>
-						<span class="label-item label-item-after">
-							<button aria-label="Close" class="close" tabindex="-1" type="button">
-								...
-							</button>
-						</span>
-					</span>
-					<input class="form-control-inset" id="tagsField2" type="text" value="some value">
-				</div>
-				<div class="form-feedback-group">
-					<div class="form-text">Type a comma or press return to enter a tag.</div>
-				</div>
-			</div>
-			<div class="input-group-item input-group-item-shrink">
-				<button class="btn btn-secondary" type="button">Select</button>
-			</div>
-		</div>
-	</div>
-</div>
 ```
 
 #### Labels as an Anchor Tag
