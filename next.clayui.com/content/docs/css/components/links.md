@@ -161,6 +161,20 @@ Use these patterns for actions in components.
 <a class="link-outline link-outline-borderless link-outline-secondary" href="#1">Secondary</a>
 ```
 
+### External Link
+
+<div class="sheet-example">
+	<a aria-label="External Link" class="link-secondary" href="#link-styles" title="External Link">
+		External Link
+	</a>
+</div>
+
+```html
+<a aria-label="External Link" class="link-secondary" href="#link-styles" title="External Link">
+	External Link
+</a>
+```
+
 ### Link Monospaced
 
 <div class="sheet-example">
@@ -225,5 +239,19 @@ Use these patterns for actions in components.
 			<use href="/images/icons/icons.svg#picture" />
 		</svg>
 	</span>
+</a>
+```
+
+### Title Link
+
+<div class="sheet-example">
+	<a aria-label="Title Link" class="component-title link-secondary" href="#title-link" title="Title">
+		Title Link
+	</a>
+</div>
+
+```html
+<a aria-label="Title Link" class="component-title link-secondary" href="#title-link" title="Title">
+	Title Link
 </a>
 ```
