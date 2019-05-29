@@ -21,7 +21,7 @@ description: "Icons are a visual representation of an idea and/or action."
 	See the implementation of the <a href="/docs/components/icons.html">Icons component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/icons/">Icons Pattern</a>.
 </div>
 
-### Usage
+## Usage
 
 > We use SVG elements that link to an SVG sprite, like so:
 
