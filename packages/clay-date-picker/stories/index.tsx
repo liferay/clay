@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 import 'clay-css/lib/css/atlas.css';
-import ClayDatePicker, {firstDayOfWeek} from '../src';
+import ClayDatePicker, {FirstDayOfWeek} from '../src';
 import React, {useState} from 'react';
 import {storiesOf} from '@storybook/react';
 
@@ -54,7 +54,7 @@ storiesOf('ClayDatePicker', module)
 	.add('locale', () => (
 		<ClayDatePickerWithState
 			dateFormat="DD.MM.YYYY"
-			firstDayOfWeek={firstDayOfWeek.Monday}
+			firstDayOfWeek={FirstDayOfWeek.Monday}
 			months={[
 				'Январь',
 				'Февраль',

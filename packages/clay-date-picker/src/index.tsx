@@ -25,9 +25,9 @@ import InputDate from './InputDate';
 import TimePicker from './TimePicker';
 import Weekday from './Weekday';
 import WeekdayHeader from './WeekdayHeader';
-import {firstDayOfWeek, IAriaLabels, IYears} from './types';
+import {FirstDayOfWeek, IAriaLabels, IYears} from './types';
 
-export {firstDayOfWeek, IAriaLabels, IYears};
+export {FirstDayOfWeek, IAriaLabels, IYears};
 
 interface IProps {
 	/**
@@ -45,7 +45,7 @@ interface IProps {
 	 * Set the first day of the week, starting from
 	 * 0 (Sunday) to 6 (Saturday).
 	 */
-	firstDayOfWeek?: firstDayOfWeek;
+	firstDayOfWeek?: FirstDayOfWeek;
 
 	/**
 	 * Function that should return the React element to
