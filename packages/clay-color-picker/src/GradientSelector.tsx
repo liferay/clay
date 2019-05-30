@@ -5,7 +5,6 @@
  */
 import React, {useEffect, useRef} from 'react';
 import tinycolor from 'tinycolor2';
-
 import {colorToXY, xToSaturation, yToVisibility} from './util';
 import {useMousePosition} from './hooks';
 

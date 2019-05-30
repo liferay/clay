@@ -5,11 +5,10 @@
  */
 
 import * as TestRenderer from 'react-test-renderer';
-import React from 'react';
-
 import ClayButton from '@clayui/button';
 import ClayLink from '@clayui/link';
 import ClayNavigationBar from '..';
+import React from 'react';
 import {
 	act,
 	fireEvent,

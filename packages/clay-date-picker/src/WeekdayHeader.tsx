@@ -5,7 +5,7 @@
  */
 
 import React, {FunctionComponent, ReactNode} from 'react';
-import {firstDayOfWeek} from './types';
+import {FirstDayOfWeek} from './types';
 
 interface IChildrenProps {
 	key: number;
@@ -14,7 +14,7 @@ interface IChildrenProps {
 
 interface IProps {
 	children: (object: IChildrenProps) => ReactNode;
-	firstDayOfWeek: firstDayOfWeek;
+	firstDayOfWeek: FirstDayOfWeek;
 	weekdaysShort: Array<string>;
 }
 

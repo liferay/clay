@@ -4,12 +4,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import 'clay-css/lib/css/atlas.css';
 import ClayProgressBar from '../src';
 import React from 'react';
 import {boolean, number} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-
-import 'clay-css/lib/css/atlas.css';
 
 const spritemap = require('clay-css/lib/images/icons/icons.svg');
 

@@ -3,12 +3,11 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+import 'clay-css/lib/css/atlas.css';
 import ClayPagination from '../src';
 import React, {useState} from 'react';
 import {number} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-
-import 'clay-css/lib/css/atlas.css';
 
 const spritemap = require('clay-css/lib/images/icons/icons.svg');
 

@@ -4,12 +4,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import 'clay-css/lib/css/atlas.css';
 import ClayIcon, {ClayIconSpriteContext} from '../src';
 import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {text} from '@storybook/addon-knobs';
-
-import 'clay-css/lib/css/atlas.css';
 
 const spritemap = require('clay-css/lib/images/icons/icons.svg');
 

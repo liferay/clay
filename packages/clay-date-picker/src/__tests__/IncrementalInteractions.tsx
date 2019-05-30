@@ -4,10 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import ClayDatePicker from '..';
 import React, {useState} from 'react';
 import {cleanup, fireEvent, render} from 'react-testing-library';
-
-import ClayDatePicker from '..';
 
 const spritemap = 'icons.svg';
 

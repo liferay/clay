@@ -5,12 +5,10 @@
  */
 
 import classNames from 'classnames';
-import React, {useRef, useState} from 'react';
-
 import ClayIcon from '@clayui/icon';
 import ClayLink from '@clayui/link';
+import React, {useRef, useState} from 'react';
 import warning from 'warning';
-
 import {useTransitionHeight} from '@clayui/shared';
 
 interface IItemProps extends React.HTMLAttributes<HTMLLIElement> {

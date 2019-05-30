@@ -3,11 +3,10 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+import 'clay-css/lib/css/atlas.css';
 import ClayDatePicker, {firstDayOfWeek} from '../src';
 import React, {useState} from 'react';
 import {storiesOf} from '@storybook/react';
-
-import 'clay-css/lib/css/atlas.css';
 
 const spritemap = require('clay-css/lib/images/icons/icons.svg');
 

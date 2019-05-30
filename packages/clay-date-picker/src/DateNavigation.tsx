@@ -5,13 +5,12 @@
  */
 
 import * as Helpers from './Helpers';
-import moment from 'moment';
-import React, {FunctionComponent, HTMLAttributes, useMemo, useRef} from 'react';
-import {IAriaLabels, IYears} from './types';
-
 import Button from '@clayui/button';
 import Icon from '@clayui/icon';
+import moment from 'moment';
+import React, {FunctionComponent, HTMLAttributes, useMemo, useRef} from 'react';
 import Select, {ISelectOption} from './Select';
+import {IAriaLabels, IYears} from './types';
 
 interface IProps extends HTMLAttributes<HTMLDivElement> {
 	ariaLabels: IAriaLabels;
