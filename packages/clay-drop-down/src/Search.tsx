@@ -26,13 +26,12 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 }
 
 const DropDownSearch: React.FunctionComponent<IProps> = ({
-	children,
 	className,
 	spritemap,
 	...otherProps
 }) => {
 	return (
-		<form>
+		<form className={className}>
 			<div className="dropdown-section">
 				<div className="input-group input-group-sm">
 					<div className="input-group-item">

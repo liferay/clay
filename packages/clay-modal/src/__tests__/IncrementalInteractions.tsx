@@ -10,7 +10,6 @@ import ClayModal from '..';
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import {
-	act,
 	cleanup,
 	fireEvent,
 	render,

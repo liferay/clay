@@ -6,7 +6,7 @@
 
 import ClayTooltip from 'clay-tooltip';
 import Clipboard from 'metal-clipboard';
-import React, {useEffect} from 'react';
+import {useEffect} from 'react';
 
 /**
  */

@@ -27,7 +27,6 @@ interface IItemProps
 }
 
 const QuickActionMenuItem: React.FunctionComponent<IItemProps> = ({
-	children,
 	className,
 	href,
 	spritemap,
@@ -57,7 +56,10 @@ const QuickActionMenu: React.FunctionComponent<
 	Item: typeof QuickActionMenuItem;
 } = ({children, className, ...otherProps}) => {
 	return (
-		<div {...otherProps} className="quick-action-menu">
+		<div
+			{...otherProps}
+			className={classNames('quick-action-menu', className)}
+		>
 			{children}
 		</div>
 	);

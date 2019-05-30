@@ -6,13 +6,7 @@
 
 import * as Helpers from './Helpers';
 import moment from 'moment';
-import React, {
-	ChangeEvent,
-	FunctionComponent,
-	HTMLAttributes,
-	useMemo,
-	useRef,
-} from 'react';
+import React, {FunctionComponent, HTMLAttributes, useMemo, useRef} from 'react';
 import {IAriaLabels, IYears} from './types';
 
 import Button from '@clayui/button';
@@ -93,7 +87,7 @@ const DateNavigation: FunctionComponent<IProps> = ({
 	/**
 	 * Handles the change of the year and month of the header
 	 */
-	function handleFormChange(event: ChangeEvent<HTMLSelectElement>) {
+	function handleFormChange() {
 		if (monthSelectorRef.current && yearSelectorRef.current) {
 			const year = Number(yearSelectorRef.current.value);
 			const month = Number(monthSelectorRef.current.value);

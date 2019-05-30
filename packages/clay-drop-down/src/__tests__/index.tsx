@@ -30,7 +30,7 @@ describe('ClayDropDown', () => {
 	afterEach(cleanup);
 
 	it('renders without menu', () => {
-		const {container} = render(
+		render(
 			<DropDownWithState>
 				<ClayDropDown.ItemList>
 					{[

@@ -15,7 +15,7 @@ const spritemap = 'icons.svg';
 describe('ClayModal', () => {
 	beforeAll(() => {
 		// @ts-ignore
-		ReactDOM.createPortal = jest.fn((element, node) => {
+		ReactDOM.createPortal = jest.fn(element => {
 			return element;
 		});
 	});

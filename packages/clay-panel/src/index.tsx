@@ -110,11 +110,15 @@ const ClayPanel: React.FunctionComponent<IProps> & {
 					</button>
 
 					<div
-						className={classNames('panel-collapse', {
-							collapse: !transitioning,
-							collapsing: transitioning,
-							show: expanded,
-						})}
+						className={classNames(
+							'panel-collapse',
+							collapseClassNames,
+							{
+								collapse: !transitioning,
+								collapsing: transitioning,
+								show: expanded,
+							}
+						)}
 						onTransitionEnd={handleTransitionEnd}
 						ref={panelRef}
 						role="tabpanel"

@@ -7,7 +7,7 @@
 import React, {useEffect, useState} from 'react';
 
 export default props => {
-	const [enabled, setEnabled] = useState(true);
+	const [enabled, setEnabled] = useState(true); // eslint-disable-line @typescript-eslint/no-unused-vars
 
 	useEffect(() => {
 		if (window.docsearch) {

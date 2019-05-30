@@ -6,13 +6,13 @@
 
 import * as Helpers from './Helpers';
 import moment from 'moment';
-import {firstDayOfWeek} from './types';
+import {FirstDayOfWeek} from './types';
 import {useState} from 'react';
 
 /**
  * Generates the table of days of the month.
  */
-const useWeeks = (currentMonth: Date, firstDayOfWeek: firstDayOfWeek) => {
+const useWeeks = (currentMonth: Date, firstDayOfWeek: FirstDayOfWeek) => {
 	const [weeks, set] = useState<Helpers.Month>(() =>
 		Helpers.getWeekArray(currentMonth, firstDayOfWeek)
 	);
