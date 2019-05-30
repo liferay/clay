@@ -13,6 +13,7 @@
 	},
 	"extends": "liferay",
 	"plugins": [
+		"@typescript-eslint",
 		"react",
 		"react-hooks",
 		"sort-destructure-keys",
