@@ -29,7 +29,7 @@ import {firstDayOfWeek, IAriaLabels, IYears} from './types';
 
 export {firstDayOfWeek, IAriaLabels, IYears};
 
-interface Props {
+interface IProps {
 	/**
 	 * Labels for the aria attributes
 	 */
@@ -136,7 +136,7 @@ const DateNow = new Date();
 /**
  * ClayDatePicker component.
  */
-const ClayDatePicker: FunctionComponent<Props> = ({
+const ClayDatePicker: FunctionComponent<IProps> = ({
 	ariaLabels = {
 		buttonDot: 'Select current date',
 		buttonNextMonth: 'Select the next month',

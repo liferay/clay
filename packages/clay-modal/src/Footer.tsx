@@ -6,7 +6,7 @@
 
 import React, {FunctionComponent} from 'react';
 
-export interface FooterProps {
+interface IFooterProps {
 	/**
 	 * Sets the elements that are positioned `first following
 	 * the LTR direction on the footer.
@@ -26,7 +26,7 @@ export interface FooterProps {
 	middle?: React.ReactElement;
 }
 
-const Footer: FunctionComponent<FooterProps> = ({first, last, middle}) => (
+const Footer: FunctionComponent<IFooterProps> = ({first, last, middle}) => (
 	<div className="modal-footer">
 		<div className="modal-item-first">{first}</div>
 		<div className="modal-item">{middle}</div>

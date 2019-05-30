@@ -13,7 +13,7 @@ import ClayPanelHeader from './Header';
 import React, {useRef, useState} from 'react';
 import {useTransitionHeight} from '@clayui/shared';
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {
+interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	collapsable?: boolean;
 	collapseClassNames?: string;
 	defaultExpanded?: boolean;
@@ -23,7 +23,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	spritemap?: string;
 }
 
-const ClayPanel: React.FunctionComponent<Props> & {
+const ClayPanel: React.FunctionComponent<IProps> & {
 	Body: typeof ClayPanelBody;
 	Footer: typeof ClayPanelFooter;
 	Group: typeof ClayPanelGroup;

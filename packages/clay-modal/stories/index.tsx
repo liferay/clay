@@ -15,13 +15,13 @@ import 'clay-css/lib/css/atlas.css';
 
 const spritemap = require('clay-css/lib/images/icons/icons.svg');
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {
+interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	children?: (onClose: () => void) => React.ReactNode;
 	size?: Size;
 	status?: Status;
 }
 
-const ModalWithState: React.FunctionComponent<Props> = ({
+const ModalWithState: React.FunctionComponent<IProps> = ({
 	children,
 	size,
 	status,

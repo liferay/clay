@@ -8,7 +8,7 @@ import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
 import React from 'react';
 
-interface Props extends React.HTMLAttributes<HTMLInputElement> {
+interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	/**
 	 * Callback for when input value changes.
 	 */
@@ -25,7 +25,7 @@ interface Props extends React.HTMLAttributes<HTMLInputElement> {
 	value: React.ReactText;
 }
 
-const DropDownSearch: React.FunctionComponent<Props> = ({
+const DropDownSearch: React.FunctionComponent<IProps> = ({
 	children,
 	className,
 	spritemap,

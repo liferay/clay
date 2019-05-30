@@ -7,14 +7,14 @@ import ClayButton from '@clayui/button';
 import ClayDropDown from '@clayui/drop-down';
 import React, {useState} from 'react';
 
-export interface PaginationEllipsisProps {
+export interface IPaginationEllipsisProps {
 	items?: number[];
 	disabledPages?: number[];
 	hrefConstructor?: (page?: number) => string;
 	onPageChange?: (page?: number) => void;
 }
 
-const PaginationEllipsis: React.FunctionComponent<PaginationEllipsisProps> = ({
+const PaginationEllipsis: React.FunctionComponent<IPaginationEllipsisProps> = ({
 	disabledPages = [],
 	hrefConstructor,
 	items,

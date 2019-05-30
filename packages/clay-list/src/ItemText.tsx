@@ -6,13 +6,13 @@
 import classNames from 'classnames';
 import React from 'react';
 
-interface Props extends React.HTMLAttributes<HTMLParagraphElement> {
+interface IProps extends React.HTMLAttributes<HTMLParagraphElement> {
 	/**
 	 * Flag to indicate if content should be styled as subtext.
 	 */
 	subtext?: boolean;
 }
-const ItemText: React.FunctionComponent<Props> = ({
+const ItemText: React.FunctionComponent<IProps> = ({
 	children,
 	className,
 	subtext,

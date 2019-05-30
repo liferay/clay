@@ -13,7 +13,7 @@ import ItemTitle from './ItemTitle';
 import QuickActionMenu from './QuickActionMenu';
 import React from 'react';
 
-interface Props extends React.HTMLAttributes<HTMLUListElement> {
+interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	/**
 	 * Flag to indicate if action items should be shown on hover.
 	 * Defaults to `true`
@@ -21,7 +21,7 @@ interface Props extends React.HTMLAttributes<HTMLUListElement> {
 	showQuickActionsOnHover?: boolean;
 }
 
-const ClayList: React.FunctionComponent<Props> & {
+const ClayList: React.FunctionComponent<IProps> & {
 	Header: typeof Header;
 	Item: typeof Item;
 	ItemField: typeof ItemField;

@@ -6,7 +6,7 @@
 import React from 'react';
 import Splotch from './Splotch';
 
-interface Props {
+interface IProps {
 	/**
 	 * List of hex's that will display as a color splotch
 	 */
@@ -26,7 +26,7 @@ interface Props {
 /**
  * Renders basic color picker
  */
-const Basic: React.FunctionComponent<Props> = ({colors, label, onChange}) => (
+const Basic: React.FunctionComponent<IProps> = ({colors, label, onChange}) => (
 	<React.Fragment>
 		{label && (
 			<div className="clay-color-header">

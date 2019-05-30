@@ -19,7 +19,7 @@ import Button from '@clayui/button';
 import Icon from '@clayui/icon';
 import Select, {ISelectOption} from './Select';
 
-interface Props extends HTMLAttributes<HTMLDivElement> {
+interface IProps extends HTMLAttributes<HTMLDivElement> {
 	ariaLabels: IAriaLabels;
 	currentMonth: Date;
 	months: Array<string>;
@@ -29,7 +29,7 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 	years: IYears;
 }
 
-const DateNavigation: FunctionComponent<Props> = ({
+const DateNavigation: FunctionComponent<IProps> = ({
 	ariaLabels,
 	currentMonth,
 	months,

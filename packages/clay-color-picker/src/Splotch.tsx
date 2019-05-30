@@ -6,7 +6,7 @@
 import React from 'react';
 import tinycolor from 'tinycolor2';
 
-interface Props extends React.HTMLAttributes<HTMLButtonElement> {
+interface IProps extends React.HTMLAttributes<HTMLButtonElement> {
 	/**
 	 * Flag that indicates whether the splotch is the active one selected
 	 */
@@ -26,7 +26,7 @@ interface Props extends React.HTMLAttributes<HTMLButtonElement> {
 /**
  * Renders component that displays a color
  */
-const Splotch: React.FunctionComponent<Props> = ({
+const Splotch: React.FunctionComponent<IProps> = ({
 	active,
 	className,
 	size = 24,

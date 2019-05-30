@@ -7,13 +7,9 @@
 import classNames from 'classnames';
 import React from 'react';
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {}
-
-const ClayPanelBody: React.FunctionComponent<Props> = ({
-	children,
-	className,
-	...otherProps
-}) => {
+const ClayPanelBody: React.FunctionComponent<
+	React.HTMLAttributes<HTMLDivElement>
+> = ({children, className, ...otherProps}) => {
 	return (
 		<div {...otherProps} className={classNames('panel-body', className)}>
 			{children}

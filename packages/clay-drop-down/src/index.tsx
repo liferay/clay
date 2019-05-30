@@ -17,7 +17,7 @@ import ItemList from './ItemList';
 import Menu, {Align} from './Menu';
 import Search from './Search';
 
-interface Props extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
+interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	/**
 	 * Flag to indicate if the DropDown menu is active or not.
 	 */
@@ -54,7 +54,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	trigger: React.ReactElement;
 }
 
-const ClayDropDown: React.FunctionComponent<Props> & {
+const ClayDropDown: React.FunctionComponent<IProps> & {
 	Action: typeof Action;
 	Caption: typeof Caption;
 	Divider: typeof Divider;

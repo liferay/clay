@@ -7,7 +7,7 @@
 import classNames from 'classnames';
 import React, {useEffect, useRef} from 'react';
 
-interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
+interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	/**
 	 * Flag to indicate if input is checked or not.
 	 */
@@ -39,7 +39,7 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
 	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const ClayCheckbox: React.FunctionComponent<Props> = ({
+const ClayCheckbox: React.FunctionComponent<IProps> = ({
 	checked,
 	children,
 	className,

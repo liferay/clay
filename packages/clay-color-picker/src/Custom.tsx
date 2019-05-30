@@ -12,7 +12,7 @@ import Splotch from './Splotch';
 import tinycolor from 'tinycolor2';
 import {useHexInput} from './hooks';
 
-interface RGBInputProps {
+interface IRGBInputProps {
 	/**
 	 * Callback function for when the input value is changed
 	 */
@@ -32,7 +32,7 @@ interface RGBInputProps {
 /**
  * Renders input that displays RGB values
  */
-const RGBInput: React.FunctionComponent<RGBInputProps> = ({
+const RGBInput: React.FunctionComponent<IRGBInputProps> = ({
 	name,
 	onChange,
 	value,
@@ -73,7 +73,7 @@ const RGBInput: React.FunctionComponent<RGBInputProps> = ({
 	);
 };
 
-interface CustomProps {
+interface IProps {
 	/**
 	 * List of hex's that will display as a color splotch
 	 */
@@ -103,7 +103,7 @@ interface CustomProps {
 /**
  * Renders the custom color picker
  */
-const Custom: React.FunctionComponent<CustomProps> = ({
+const Custom: React.FunctionComponent<IProps> = ({
 	colors,
 	label,
 	onChange,

@@ -10,7 +10,7 @@ import {Align} from 'metal-position';
 import {Portal} from '@clayui/shared';
 import {useDropdownCloseInteractions} from './hooks';
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {
+interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Flag to indicate if menu is showing or not.
 	 */
@@ -53,7 +53,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	onSetActive: (val: boolean) => void;
 }
 
-const DropDownMenu = React.forwardRef<HTMLDivElement, Props>((
+const DropDownMenu = React.forwardRef<HTMLDivElement, IProps>((
 	{
 		active,
 		alignElementRef,

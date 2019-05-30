@@ -24,7 +24,7 @@ type Position = 'bottom-left' | 'bottom-right' | 'top-left' | 'top-right';
 
 type Size = 'lg' | 'sm' | 'xl';
 
-interface Props extends React.HTMLAttributes<HTMLSpanElement> {
+interface IProps extends React.HTMLAttributes<HTMLSpanElement> {
 	/**
 	 * Determines the color of the sticker.
 	 */
@@ -52,7 +52,7 @@ interface Props extends React.HTMLAttributes<HTMLSpanElement> {
 	size?: Size;
 }
 
-const ClaySticker: React.FunctionComponent<Props> = ({
+const ClaySticker: React.FunctionComponent<IProps> = ({
 	children,
 	className,
 	displayType = 'primary',

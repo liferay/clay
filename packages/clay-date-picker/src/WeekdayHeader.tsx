@@ -12,13 +12,13 @@ interface IChildrenProps {
 	weekday: string;
 }
 
-interface Props {
+interface IProps {
 	children: (object: IChildrenProps) => ReactNode;
 	firstDayOfWeek: firstDayOfWeek;
 	weekdaysShort: Array<string>;
 }
 
-const WeekdayHeader: FunctionComponent<Props> = ({
+const WeekdayHeader: FunctionComponent<IProps> = ({
 	children,
 	firstDayOfWeek = 0,
 	weekdaysShort,

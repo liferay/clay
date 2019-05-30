@@ -8,7 +8,7 @@ import React, {useEffect, useRef} from 'react';
 import {hueToX, xToHue} from './util';
 import {useMousePosition} from './hooks';
 
-interface HueProps {
+interface IProps {
 	/**
 	 * Callback function for when the hue value changes
 	 */
@@ -23,7 +23,7 @@ interface HueProps {
 /**
  * Renders Hue component
  */
-const Hue: React.FunctionComponent<HueProps> = ({
+const Hue: React.FunctionComponent<IProps> = ({
 	value = 0,
 	onChange = () => {},
 }) => {

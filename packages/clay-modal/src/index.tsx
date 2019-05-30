@@ -4,17 +4,17 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import Body, {BodyProps} from './Body';
+import Body from './Body';
 import classNames from 'classnames';
 import Context, {IContext} from './Context';
-import Footer, {FooterProps} from './Footer';
-import Header, {HeaderProps} from './Header';
+import Footer from './Footer';
+import Header from './Header';
 import React, {FunctionComponent, useEffect, useRef, useState} from 'react';
 import {Portal} from '@clayui/shared';
 import {Size} from './types';
 import {useUserInteractions} from './Hook';
 
-interface Props extends React.HTMLAttributes<HTMLDivElement>, IContext {
+interface IProps extends React.HTMLAttributes<HTMLDivElement>, IContext {
 	children?: (onClose: () => void) => React.ReactNode;
 
 	/**
@@ -31,10 +31,10 @@ const delay = (fn: Function) => {
 
 const modalOpenClassName = 'modal-open';
 
-const ClayModal: FunctionComponent<Props> & {
-	Body: FunctionComponent<BodyProps>;
-	Footer: FunctionComponent<FooterProps>;
-	Header: FunctionComponent<HeaderProps>;
+const ClayModal: FunctionComponent<IProps> & {
+	Body: typeof Body;
+	Footer: typeof Footer;
+	Header: typeof Header;
 } = ({
 	children,
 	className,

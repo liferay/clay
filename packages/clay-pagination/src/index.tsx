@@ -6,7 +6,7 @@
 import classNames from 'classnames';
 import ClayIcon from '@clayui/icon';
 import PaginationEllipsis, {
-	PaginationEllipsisProps,
+	IPaginationEllipsisProps,
 } from './PaginationEllipsis';
 import PaginationItem from './PaginationItem';
 import React from 'react';
@@ -17,7 +17,7 @@ const getBufferList = (
 	items: number[],
 	start: number,
 	end: number,
-	ellipsisProps: PaginationEllipsisProps
+	ellipsisProps: IPaginationEllipsisProps
 ): (number | JSX.Element)[] => {
 	const removedItems = items.slice(start, Math.max(end, start));
 
@@ -36,7 +36,7 @@ const getPages = (
 	activeIndex: number,
 	ellipsisBuffer: number,
 	pages: number[],
-	ellipsisProps: PaginationEllipsisProps
+	ellipsisProps: IPaginationEllipsisProps
 ) => {
 	const lastIndex = pages.length - 1;
 
@@ -65,7 +65,7 @@ const getPages = (
 	];
 };
 
-interface Props extends React.HTMLAttributes<HTMLUListElement> {
+interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	/**
 	 * The page that is currently active. The first page is `1`.
 	 */
@@ -104,7 +104,7 @@ interface Props extends React.HTMLAttributes<HTMLUListElement> {
 	spritemap: string;
 }
 
-const Pagination: React.FunctionComponent<Props> = ({
+const Pagination: React.FunctionComponent<IProps> = ({
 	activePage,
 	className,
 	disabledPages = [],

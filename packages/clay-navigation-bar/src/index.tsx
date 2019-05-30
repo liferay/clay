@@ -13,7 +13,7 @@ import warning from 'warning';
 
 import {useTransitionHeight} from '@clayui/shared';
 
-interface ItemProps extends React.HTMLAttributes<HTMLLIElement> {
+interface IItemProps extends React.HTMLAttributes<HTMLLIElement> {
 	/**
 	 * Determines the active state of an dropdown list item.
 	 */
@@ -25,11 +25,31 @@ interface ItemProps extends React.HTMLAttributes<HTMLLIElement> {
 	children: React.ReactElement;
 }
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {
+type ItemType = React.FunctionComponent<IItemProps>;
+
+const Item: ItemType = ({active, children, className, ...otherProps}) => {
+	return (
+		<li {...otherProps} className={classNames('nav-item', className)}>
+			{React.Children.map(
+				children,
+				(child: React.ReactElement<IItemProps>, index) =>
+					React.cloneElement(child, {
+						...child.props,
+						className: classNames(child.props.className, {
+							active,
+						}),
+						key: index,
+					})
+			)}
+		</li>
+	);
+};
+
+interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Children elements received from ClayNavigationBar component.
 	 */
-	children: React.ReactElement<ItemProps>[];
+	children: React.ReactElement<IItemProps>[];
 
 	/**
 	 * Determines the style of the Navigation Bar
@@ -47,27 +67,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	triggerLabel: string;
 }
 
-type ItemType = React.FunctionComponent<ItemProps>;
-
-const Item: ItemType = ({active, children, className, ...otherProps}) => {
-	return (
-		<li {...otherProps} className={classNames('nav-item', className)}>
-			{React.Children.map(
-				children,
-				(child: React.ReactElement<ItemProps>, index) =>
-					React.cloneElement(child, {
-						...child.props,
-						className: classNames(child.props.className, {
-							active,
-						}),
-						key: index,
-					})
-			)}
-		</li>
-	);
-};
-
-const ClayNavigationBar: React.FunctionComponent<Props> & {
+const ClayNavigationBar: React.FunctionComponent<IProps> & {
 	Item: ItemType;
 } = ({
 	children,

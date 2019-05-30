@@ -8,7 +8,7 @@ import classnames from 'classnames';
 import moment from 'moment';
 import React, {ChangeEventHandler, FunctionComponent, useMemo} from 'react';
 
-interface Props {
+interface IProps {
 	ariaLabel?: string;
 	currentTime: string;
 	dateFormat: string;
@@ -21,7 +21,7 @@ interface Props {
 	value: string;
 }
 
-const InputDate: FunctionComponent<Props> = ({
+const InputDate: FunctionComponent<IProps> = ({
 	ariaLabel,
 	currentTime,
 	dateFormat,
