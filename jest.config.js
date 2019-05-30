@@ -9,7 +9,7 @@ module.exports = {
 	coverageReporters: ['json', 'lcov'],
 	moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
 	resolver: `${__dirname}/scripts/jest-clay-lerna-resolver`,
-	setupFiles: [`${__dirname}/scripts/setupTests.js`, 'raf/polyfill'],
+	setupFiles: [`${__dirname}/scripts/setupTests.ts`, 'raf/polyfill'],
 	testMatch: [
 		`${process.cwd()}/**/__tests__/**/*.[jt]s?(x)`,
 		`${process.cwd()}/**/?(*.)+(spec|test).[jt]s?(x)`,
