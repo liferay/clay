@@ -28,7 +28,7 @@ const useResource = ({
 	fetchPolicy = FetchPolicy.NoCache,
 	fetchTimeout = 6000,
 	link,
-	onNetworkStatusChange = () => {},
+	onNetworkStatusChange: dispatchNetworkStatus = () => {},
 	pollInterval = 0,
 	storage = {
 		/**
@@ -43,8 +43,6 @@ const useResource = ({
 	variables = null,
 }: IResource) => {
 	const [resource, setResource] = useState<any>(null);
-
-	let networkStatus = useRef<NetworkStatus>(NetworkStatus.Unused).current;
 
 	let pollingIntervalId = useRef<null | NodeJS.Timeout>(null).current;
 
@@ -64,14 +62,9 @@ const useResource = ({
 
 	const debouncedVariablesChange = useDebounce(variables, fetchDelay);
 
-	const setNetworkStatus = (status: NetworkStatus) => {
-		networkStatus = status;
-		onNetworkStatusChange(status);
-	};
-
 	const handleRefetch = () => {
 		doFetch();
-		setNetworkStatus(NetworkStatus.Refetch);
+		dispatchNetworkStatus(NetworkStatus.Refetch);
 	};
 
 	const cleanRetry = () => {
@@ -113,7 +106,7 @@ const useResource = ({
 				doFetch(retryAttempts + 1);
 			}, delay);
 		} else {
-			setNetworkStatus(NetworkStatus.Error);
+			dispatchNetworkStatus(NetworkStatus.Error);
 			warning(false, `DataProvider: Error making the requisition ${err}`);
 		}
 	};
@@ -127,7 +120,7 @@ const useResource = ({
 		cleanRetry();
 
 		setResource(result);
-		setNetworkStatus(NetworkStatus.Unused);
+		dispatchNetworkStatus(NetworkStatus.Unused);
 
 		cache.set(result);
 
@@ -194,7 +187,7 @@ const useResource = ({
 			}
 		}
 
-		setNetworkStatus(status);
+		dispatchNetworkStatus(status);
 		doFetch();
 	};
 
