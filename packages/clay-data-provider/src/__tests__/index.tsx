@@ -9,7 +9,7 @@ import DataProvider from '../';
 import LRU from 'lru-cache';
 import React from 'react';
 import {cleanup, render, wait} from 'react-testing-library';
-import {FetchMock} from 'jest-fetch-mock';
+import {FetchMock} from 'jest-fetch-mock'; // eslint-disable-line @typescript-eslint/no-unused-vars
 import {FetchPolicy, SYMBOL_DATA_PROVIDER, SYMBOL_ORIGIN} from '../types';
 
 const setupCache = (key: string, data: Object) => {
