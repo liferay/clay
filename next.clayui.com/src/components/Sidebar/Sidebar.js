@@ -5,7 +5,7 @@
  */
 
 import Navigation from './Navigation';
-import React, {useEffect} from 'react';
+import React, {useLayoutEffect} from 'react';
 
 const SidebarRef = React.createRef();
 const SideNavRef = React.createRef();
@@ -21,7 +21,7 @@ const SideNavScroll = props => {
 		scrollTop = event.currentTarget.scrollTop;
 	};
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		SideNavRef.current.scrollTop = scrollTop;
 	}, []);
 
