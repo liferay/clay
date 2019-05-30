@@ -3,12 +3,11 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+import 'clay-css/lib/css/atlas.css';
+import ClayButton from '../src';
 import React from 'react';
 import {boolean, select, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-
-import 'clay-css/lib/css/atlas.css';
-import ClayButton from '../src';
 
 storiesOf('ClayButton', module)
 	.add('default', () => (

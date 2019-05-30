@@ -4,13 +4,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
 import classNames from 'classnames';
+import React, {useContext} from 'react';
 import warning from 'warning';
 
 export const ClayIconSpriteContext = React.createContext('');
 
-interface Props extends React.SVGAttributes<SVGSVGElement> {
+interface IProps extends React.SVGAttributes<SVGSVGElement> {
 	className?: string;
 	/**
 	 * Path to the location of the spritemap resource.
@@ -23,13 +23,13 @@ interface Props extends React.SVGAttributes<SVGSVGElement> {
 	symbol: string;
 }
 
-const ClayIcon: React.FunctionComponent<Props> = ({
+const ClayIcon: React.FunctionComponent<IProps> = ({
 	className,
 	spritemap,
 	symbol,
 	...otherProps
 }) => {
-	let spriteMapVal = React.useContext(ClayIconSpriteContext);
+	let spriteMapVal = useContext(ClayIconSpriteContext);
 
 	if (spritemap) {
 		spriteMapVal = spritemap;

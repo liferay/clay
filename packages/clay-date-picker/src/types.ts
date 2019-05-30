@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-export enum firstDayOfWeek {
+export enum FirstDayOfWeek {
 	Sunday = 0,
 	Monday = 1,
 	Tuesday = 2,

@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {useState} from 'react';
+import React from 'react';
 import {LiveEditor, LiveError, LivePreview, LiveProvider} from 'react-live';
 
 const theme = {

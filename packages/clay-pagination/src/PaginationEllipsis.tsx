@@ -3,24 +3,24 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import * as React from 'react';
 import ClayButton from '@clayui/button';
 import ClayDropDown from '@clayui/drop-down';
+import React, {useState} from 'react';
 
-export interface PaginationEllipsisProps {
+export interface IPaginationEllipsisProps {
 	items?: number[];
 	disabledPages?: number[];
 	hrefConstructor?: (page?: number) => string;
 	onPageChange?: (page?: number) => void;
 }
 
-const PaginationEllipsis: React.FunctionComponent<PaginationEllipsisProps> = ({
+const PaginationEllipsis: React.FunctionComponent<IPaginationEllipsisProps> = ({
 	disabledPages = [],
 	hrefConstructor,
 	items,
 	onPageChange,
 }) => {
-	const [active, setActive] = React.useState(false);
+	const [active, setActive] = useState(false);
 
 	return (
 		<ClayDropDown

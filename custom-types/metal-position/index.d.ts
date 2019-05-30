@@ -6,7 +6,7 @@
 // See https://github.com/metal/metal-plugins/blob/master/packages/metal-position/src/Align.js#L207
 
 declare module 'metal-position' {
-	interface AlignType {
+	interface IAlignType {
 		align: (
 			element: HTMLElement,
 			alignElement: HTMLElement,
@@ -23,7 +23,7 @@ declare module 'metal-position' {
 		TopLeft: 7;
 	}
 
-	const Align: AlignType;
+	const Align: IAlignType;
 
 	export {Align};
 }

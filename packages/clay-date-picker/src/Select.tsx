@@ -12,7 +12,7 @@ export interface ISelectOption {
 	value: string | number;
 }
 
-interface Props extends SelectHTMLAttributes<HTMLSelectElement> {
+interface IProps extends SelectHTMLAttributes<HTMLSelectElement> {
 	name: string;
 	options: Array<ISelectOption>;
 	testId: string;
@@ -21,7 +21,7 @@ interface Props extends SelectHTMLAttributes<HTMLSelectElement> {
 
 const Select = forwardRef(
 	(
-		{name, onChange, options, testId, value}: Props,
+		{name, onChange, options, testId, value}: IProps,
 		ref: React.Ref<HTMLSelectElement>
 	) => (
 		<select

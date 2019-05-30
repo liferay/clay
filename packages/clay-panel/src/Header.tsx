@@ -4,16 +4,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
 import classNames from 'classnames';
+import React from 'react';
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {}
-
-const ClayPanelHeader: React.FunctionComponent<Props> = ({
-	children,
-	className,
-	...otherProps
-}) => {
+const ClayPanelHeader: React.FunctionComponent<
+	React.HTMLAttributes<HTMLDivElement>
+> = ({children, className, ...otherProps}) => {
 	return (
 		<div {...otherProps} className={classNames('panel-header', className)}>
 			{children}

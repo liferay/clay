@@ -8,7 +8,7 @@ import classNames from 'classnames';
 import ClayIcon from '@clayui/icon';
 import React from 'react';
 
-interface ItemProps
+interface IItemProps
 	extends React.HTMLAttributes<HTMLAnchorElement | HTMLSpanElement> {
 	/**
 	 * Value of path the item should link to.
@@ -26,8 +26,7 @@ interface ItemProps
 	symbol: string;
 }
 
-const QuickActionMenuItem: React.FunctionComponent<ItemProps> = ({
-	children,
+const QuickActionMenuItem: React.FunctionComponent<IItemProps> = ({
 	className,
 	href,
 	spritemap,
@@ -57,7 +56,10 @@ const QuickActionMenu: React.FunctionComponent<
 	Item: typeof QuickActionMenuItem;
 } = ({children, className, ...otherProps}) => {
 	return (
-		<div {...otherProps} className="quick-action-menu">
+		<div
+			{...otherProps}
+			className={classNames('quick-action-menu', className)}
+		>
 			{children}
 		</div>
 	);

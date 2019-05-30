@@ -6,7 +6,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-interface Props extends React.HTMLAttributes<HTMLLIElement> {
+interface IProps extends React.HTMLAttributes<HTMLLIElement> {
 	/**
 	 * Flag to indicate if the `list-group-item-action` class should be applied.
 	 */
@@ -33,7 +33,7 @@ interface Props extends React.HTMLAttributes<HTMLLIElement> {
 	header?: boolean;
 }
 
-const ClayItem: React.FunctionComponent<Props> = ({
+const ClayItem: React.FunctionComponent<IProps> = ({
 	action = false,
 	active = false,
 	children,

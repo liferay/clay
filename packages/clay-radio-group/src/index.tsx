@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
 import classNames from 'classnames';
+import React from 'react';
 
-interface RadioProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface IRadioProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	/**
 	 * Props for the outer most container element.
 	 */
@@ -29,9 +29,7 @@ interface RadioProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	value: React.ReactText;
 }
 
-type RadioType = React.FunctionComponent<RadioProps>;
-
-const Radio: RadioType = ({
+const Radio: React.FunctionComponent<IRadioProps> = ({
 	checked,
 	children,
 	className,
@@ -74,8 +72,8 @@ const Radio: RadioType = ({
 	);
 };
 
-interface GroupProps extends React.HTMLAttributes<HTMLDivElement> {
-	children: React.ReactElement<RadioProps>[];
+interface IGroupProps extends React.HTMLAttributes<HTMLDivElement> {
+	children: React.ReactElement<IRadioProps>[];
 
 	/**
 	 * Flag to indicate if radio elements should display inline.
@@ -99,8 +97,8 @@ interface GroupProps extends React.HTMLAttributes<HTMLDivElement> {
 	selectedValue?: React.ReactText;
 }
 
-const ClayRadioGroup: React.FunctionComponent<GroupProps> & {
-	Radio: RadioType;
+const ClayRadioGroup: React.FunctionComponent<IGroupProps> & {
+	Radio: typeof Radio;
 } = ({
 	children,
 	className,
@@ -114,7 +112,7 @@ const ClayRadioGroup: React.FunctionComponent<GroupProps> & {
 		<div {...otherProps} className={classNames(className)}>
 			{React.Children.map(
 				children,
-				(child: React.ReactElement<RadioProps>, i) => {
+				(child: React.ReactElement<IRadioProps>, i) => {
 					return React.cloneElement(child, {
 						...child.props,
 						checked: selectedValue === child.props.value,

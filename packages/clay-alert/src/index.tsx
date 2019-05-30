@@ -4,14 +4,14 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
 import classNames from 'classnames';
 import Icon from '@clayui/icon';
+import React, {useEffect, useRef} from 'react';
 
 const useAutoClose = (autoClose?: boolean | number, onClose = () => {}) => {
-	const startedTime = React.useRef<number>(0);
-	const timer = React.useRef<number | undefined>(undefined);
-	const timeToClose = React.useRef(autoClose === true ? 8000 : autoClose);
+	const startedTime = useRef<number>(0);
+	const timer = useRef<number | undefined>(undefined);
+	const timeToClose = useRef(autoClose === true ? 8000 : autoClose);
 
 	let pauseTimer = () => {};
 	let startTimer = () => {};
@@ -38,7 +38,7 @@ const useAutoClose = (autoClose?: boolean | number, onClose = () => {}) => {
 		};
 	}
 
-	React.useEffect(() => {
+	useEffect(() => {
 		if (autoClose && onClose) {
 			startTimer();
 
@@ -54,7 +54,7 @@ const useAutoClose = (autoClose?: boolean | number, onClose = () => {}) => {
 
 export type DisplayType = 'danger' | 'info' | 'success' | 'warning';
 
-interface ClayAlertProps extends React.HTMLAttributes<HTMLDivElement> {
+interface IClayAlertProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Flag to indicate alert should automatically call `onClose`. It also
 	 * accepts a duration(in ms) which indicates how long to wait. If `true`
@@ -88,13 +88,13 @@ interface ClayAlertProps extends React.HTMLAttributes<HTMLDivElement> {
 	variant?: 'stripe';
 }
 
-interface ToastContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+interface IToastContainerProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Chilren of the ToastContainer must be a ClayAlert
 	 */
 	children?:
-		| React.ReactElement<ClayAlertProps>
-		| React.ReactElement<ClayAlertProps>[];
+		| React.ReactElement<IClayAlertProps>
+		| React.ReactElement<IClayAlertProps>[];
 }
 
 const ICON_MAP = {
@@ -104,8 +104,8 @@ const ICON_MAP = {
 	warning: 'warning-full',
 };
 
-const ClayAlert: React.FunctionComponent<ClayAlertProps> & {
-	ToastContainer: React.FunctionComponent<ToastContainerProps>;
+const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
+	ToastContainer: React.FunctionComponent<IToastContainerProps>;
 } = ({
 	autoClose,
 	children,

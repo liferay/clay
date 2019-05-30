@@ -53,7 +53,7 @@ const DEFAULT_ARIA_LABELS = {
 	selectionIs: 'Color selection is {0}',
 };
 
-interface Props {
+interface IProps {
 	/**
 	 * Labels for the aria attributes
 	 */
@@ -113,7 +113,7 @@ interface Props {
 	value?: string;
 }
 
-const ColorPicker: React.FunctionComponent<Props> = ({
+const ColorPicker: React.FunctionComponent<IProps> = ({
 	ariaLabels = DEFAULT_ARIA_LABELS,
 	colors,
 	label,

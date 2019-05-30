@@ -3,17 +3,17 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import * as React from 'react';
 import classNames from 'classnames';
+import React from 'react';
 
-interface PaginationItemProps
+interface IPaginationItemProps
 	extends React.HTMLAttributes<HTMLAnchorElement | HTMLButtonElement> {
 	active?: boolean;
 	disabled?: boolean;
 	href?: string;
 }
 
-const PaginationItem: React.FunctionComponent<PaginationItemProps> = ({
+const PaginationItem: React.FunctionComponent<IPaginationItemProps> = ({
 	active = false,
 	children,
 	disabled = false,

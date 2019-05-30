@@ -4,13 +4,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
 import classNames from 'classnames';
 import Icon from '@clayui/icon';
+import React from 'react';
 
 type DisplayType = 'secondary' | 'info' | 'warning' | 'danger' | 'success';
 
-interface Props
+interface IProps
 	extends React.BaseHTMLAttributes<HTMLAnchorElement | HTMLSpanElement> {
 	/**
 	 * HTML properties that are applied to the 'x' button.
@@ -33,7 +33,7 @@ interface Props
 	spritemap?: string;
 }
 
-const ClayLabel: React.FunctionComponent<Props> = ({
+const ClayLabel: React.FunctionComponent<IProps> = ({
 	children,
 	className,
 	closeButtonProps,

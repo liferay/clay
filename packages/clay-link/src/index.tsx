@@ -4,17 +4,17 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
 import classNames from 'classnames';
+import React from 'react';
 
-interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	/**
 	 * Determines how the link is displayed.
 	 */
 	displayType?: 'secondary';
 }
 
-const ClayLink: React.FunctionComponent<Props> = ({
+const ClayLink: React.FunctionComponent<IProps> = ({
 	children,
 	className,
 	displayType,

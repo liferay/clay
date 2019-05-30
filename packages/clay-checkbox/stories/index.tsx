@@ -3,15 +3,14 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import React from 'react';
+import 'clay-css/lib/css/atlas.css';
+import ClayCheckbox from '../src';
+import React, {useState} from 'react';
 import {boolean, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
-import 'clay-css/lib/css/atlas.css';
-import ClayCheckbox from '../src';
-
 const ClayCheckboxWithState = () => {
-	const [value, setValue] = React.useState<boolean>(false);
+	const [value, setValue] = useState<boolean>(false);
 
 	return (
 		<ClayCheckbox

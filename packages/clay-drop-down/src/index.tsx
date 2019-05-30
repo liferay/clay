@@ -4,20 +4,19 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
-import classNames from 'classnames';
-
 import Action from './Action';
 import Caption from './Caption';
+import classNames from 'classnames';
 import Divider from './Divider';
 import Group from './Group';
 import Help from './Help';
 import Item from './Item';
 import ItemList from './ItemList';
 import Menu, {Align} from './Menu';
+import React, {useRef} from 'react';
 import Search from './Search';
 
-interface Props extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
+interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	/**
 	 * Flag to indicate if the DropDown menu is active or not.
 	 */
@@ -54,7 +53,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	trigger: React.ReactElement;
 }
 
-const ClayDropDown: React.FunctionComponent<Props> & {
+const ClayDropDown: React.FunctionComponent<IProps> & {
 	Action: typeof Action;
 	Caption: typeof Caption;
 	Divider: typeof Divider;
@@ -76,8 +75,8 @@ const ClayDropDown: React.FunctionComponent<Props> & {
 	trigger,
 	...otherProps
 }) => {
-	const triggerElementRef = React.useRef<HTMLButtonElement>(null);
-	const menuElementRef = React.useRef<HTMLDivElement>(null);
+	const triggerElementRef = useRef<HTMLButtonElement>(null);
+	const menuElementRef = useRef<HTMLDivElement>(null);
 
 	return (
 		<ContainerElement

@@ -8,7 +8,6 @@ import Helmet from 'react-helmet';
 import React from 'react';
 import {graphql} from 'gatsby';
 
-import getSection from '../utils/getSection';
 import LayoutNav from '../components/LayoutNav';
 import Sidebar from '../components/Sidebar';
 

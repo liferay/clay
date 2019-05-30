@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
 import classNames from 'classnames';
+import React, {useEffect, useRef} from 'react';
 
-interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
+interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	/**
 	 * Flag to indicate if input is checked or not.
 	 */
@@ -39,7 +39,7 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
 	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const ClayCheckbox: React.FunctionComponent<Props> = ({
+const ClayCheckbox: React.FunctionComponent<IProps> = ({
 	checked,
 	children,
 	className,
@@ -49,9 +49,9 @@ const ClayCheckbox: React.FunctionComponent<Props> = ({
 	label,
 	...otherProps
 }) => {
-	const inputRef = React.useRef<HTMLInputElement | null>(null);
+	const inputRef = useRef<HTMLInputElement | null>(null);
 
-	React.useEffect(() => {
+	useEffect(() => {
 		if (inputRef.current) {
 			inputRef.current.indeterminate = indeterminate;
 		}

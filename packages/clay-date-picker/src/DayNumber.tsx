@@ -9,13 +9,13 @@ import moment from 'moment';
 import React, {FunctionComponent} from 'react';
 import {IDay} from './Helpers';
 
-interface Props {
+interface IProps {
 	day: IDay;
 	daySelected: Date;
 	onClick: (date: Date) => void;
 }
 
-const DayNumber: FunctionComponent<Props> = ({day, daySelected, onClick}) => {
+const DayNumber: FunctionComponent<IProps> = ({day, daySelected, onClick}) => {
 	const classNames = classnames(
 		'date-picker-date date-picker-calendar-item',
 		{

@@ -3,8 +3,8 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import * as React from 'react';
 import classNames from 'classnames';
+import React from 'react';
 
 type DisplayType =
 	| 'primary'
@@ -14,7 +14,7 @@ type DisplayType =
 	| 'success'
 	| 'warning';
 
-interface Props extends React.HTMLAttributes<HTMLSpanElement> {
+interface IProps extends React.HTMLAttributes<HTMLSpanElement> {
 	/**
 	 * Determines the color of the badge.
 	 */
@@ -26,7 +26,7 @@ interface Props extends React.HTMLAttributes<HTMLSpanElement> {
 	label?: string | number;
 }
 
-const ClayBadge: React.FunctionComponent<Props> = ({
+const ClayBadge: React.FunctionComponent<IProps> = ({
 	className,
 	displayType = 'primary',
 	label,

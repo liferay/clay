@@ -11,10 +11,6 @@ interface ITPContentProps extends InputHTMLAttributes<HTMLInputElement> {
 	timezone?: string;
 }
 
-interface Props extends ITPContentProps {
-	wrapTime?: boolean;
-}
-
 const timePickerContent: FunctionComponent<ITPContentProps> = ({
 	defaultValue,
 	onChange,
@@ -44,7 +40,11 @@ const timePickerContent: FunctionComponent<ITPContentProps> = ({
 	</React.Fragment>
 );
 
-const ClayTimePicker: FunctionComponent<Props> = ({
+interface IProps extends ITPContentProps {
+	wrapTime?: boolean;
+}
+
+const ClayTimePicker: FunctionComponent<IProps> = ({
 	wrapTime = true,
 	...otherProps
 }) => {

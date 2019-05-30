@@ -5,21 +5,14 @@
  */
 
 import * as Helpers from './Helpers';
-import moment from 'moment';
-import React, {
-	ChangeEvent,
-	FunctionComponent,
-	HTMLAttributes,
-	useMemo,
-	useRef,
-} from 'react';
-import {IAriaLabels, IYears} from './types';
-
 import Button from '@clayui/button';
 import Icon from '@clayui/icon';
+import moment from 'moment';
+import React, {FunctionComponent, HTMLAttributes, useMemo, useRef} from 'react';
 import Select, {ISelectOption} from './Select';
+import {IAriaLabels, IYears} from './types';
 
-interface Props extends HTMLAttributes<HTMLDivElement> {
+interface IProps extends HTMLAttributes<HTMLDivElement> {
 	ariaLabels: IAriaLabels;
 	currentMonth: Date;
 	months: Array<string>;
@@ -29,7 +22,7 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 	years: IYears;
 }
 
-const DateNavigation: FunctionComponent<Props> = ({
+const DateNavigation: FunctionComponent<IProps> = ({
 	ariaLabels,
 	currentMonth,
 	months,
@@ -93,7 +86,7 @@ const DateNavigation: FunctionComponent<Props> = ({
 	/**
 	 * Handles the change of the year and month of the header
 	 */
-	function handleFormChange(event: ChangeEvent<HTMLSelectElement>) {
+	function handleFormChange() {
 		if (monthSelectorRef.current && yearSelectorRef.current) {
 			const year = Number(yearSelectorRef.current.value);
 			const month = Number(monthSelectorRef.current.value);

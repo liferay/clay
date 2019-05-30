@@ -4,10 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
-import * as TestRenderer from 'react-test-renderer';
 import ClayColorPicker from '..';
 import getMouseEvent from '../../tests-util';
+import React from 'react';
 import {cleanup, fireEvent, render} from 'react-testing-library';
 
 const mockClientRect = (element: HTMLElement) => {
@@ -111,7 +110,7 @@ describe('Interactions', () => {
 		});
 
 		beforeEach(() => {
-			const {container, getByTestId} = render(
+			const {getByTestId} = render(
 				<ClayColorPicker
 					colors={['5BB0A5', '00FFFF', '0000FF']}
 					label="Custom Colors"

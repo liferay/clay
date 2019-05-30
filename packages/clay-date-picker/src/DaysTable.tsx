@@ -12,12 +12,12 @@ interface IChildrenFn {
 	key: number;
 }
 
-interface Props {
+interface IProps {
 	children: (object: IChildrenFn) => ReactNode;
 	weeks: Month;
 }
 
-const DaysTable: FunctionComponent<Props> = ({children, weeks}) => {
+const DaysTable: FunctionComponent<IProps> = ({children, weeks}) => {
 	return (
 		<React.Fragment>
 			{weeks.map((days, index) => (

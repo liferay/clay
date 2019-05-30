@@ -6,11 +6,11 @@
 
 import React, {FunctionComponent} from 'react';
 
-interface Props {
+interface IProps {
 	weekday: string;
 }
 
-const Weekday: FunctionComponent<Props> = ({weekday}) => (
+const Weekday: FunctionComponent<IProps> = ({weekday}) => (
 	<div className="date-picker-day date-picker-calendar-item">
 		<abbr>{weekday}</abbr>
 	</div>

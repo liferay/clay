@@ -3,12 +3,11 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+import 'clay-css/lib/css/atlas.css';
+import ClayBadge from '../src';
 import React from 'react';
 import {select, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-
-import 'clay-css/lib/css/atlas.css';
-import ClayBadge from '../src';
 
 storiesOf('ClayBadge', module).add('default', () => (
 	<ClayBadge

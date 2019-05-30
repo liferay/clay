@@ -9,7 +9,7 @@ import Icon from '@clayui/icon';
 import moment from 'moment';
 import React, {ChangeEventHandler, FunctionComponent} from 'react';
 
-interface Props {
+interface IProps {
 	currentTime: string;
 	onTimeChange: (hours: number, minutes: number) => void;
 	spritemap: string;
@@ -17,7 +17,7 @@ interface Props {
 	timezone?: string;
 }
 
-const TimePicker: FunctionComponent<Props> = ({
+const TimePicker: FunctionComponent<IProps> = ({
 	currentTime,
 	onTimeChange,
 	spritemap,

@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
 import classNames from 'classnames';
+import React from 'react';
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {
+interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Flag to indicate the 'light' variant
 	 */
@@ -19,7 +19,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	small?: boolean;
 }
 
-const ClayLoadingIndicator: React.FunctionComponent<Props> = ({
+const ClayLoadingIndicator: React.FunctionComponent<IProps> = ({
 	className,
 	light,
 	small,

@@ -4,11 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import 'clay-css/lib/css/atlas.css';
 import ClayLink from '../src';
 import React from 'react';
 import {storiesOf} from '@storybook/react';
-
-import 'clay-css/lib/css/atlas.css';
 
 storiesOf('ClayLink', module).add('default', () => (
 	<div>

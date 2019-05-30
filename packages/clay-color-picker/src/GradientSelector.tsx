@@ -5,11 +5,10 @@
  */
 import React, {useEffect, useRef} from 'react';
 import tinycolor from 'tinycolor2';
-
 import {colorToXY, xToSaturation, yToVisibility} from './util';
 import {useMousePosition} from './hooks';
 
-interface GradientSelectorProps {
+interface IProps {
 	/**
 	 * Color value that is currently selected.
 	 */
@@ -29,7 +28,7 @@ interface GradientSelectorProps {
 /**
  * Renders GradientSelector component
  */
-const GradientSelector: React.FunctionComponent<GradientSelectorProps> = ({
+const GradientSelector: React.FunctionComponent<IProps> = ({
 	color,
 	onChange = () => {},
 	hue = 0,

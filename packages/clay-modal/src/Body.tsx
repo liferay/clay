@@ -7,14 +7,14 @@
 import classNames from 'classnames';
 import React, {FunctionComponent, HTMLAttributes} from 'react';
 
-export interface BodyProps extends HTMLAttributes<HTMLDivElement> {
+interface IBodyProps extends HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Url to place an iframe in the body of the modal.
 	 */
 	url?: string;
 }
 
-const Body: FunctionComponent<BodyProps> = ({children, url}) => (
+const Body: FunctionComponent<IBodyProps> = ({children, url}) => (
 	<div
 		className={classNames('modal-body', {
 			'modal-body-iframe': url,

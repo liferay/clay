@@ -4,11 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import ClayDatePicker from '..';
 import React, {useState} from 'react';
 import {cleanup, render} from 'react-testing-library';
-
-import ClayDatePicker from '..';
-import {firstDayOfWeek} from '../types';
+import {FirstDayOfWeek} from '../types';
 
 const spritemap = 'icons.svg';
 
@@ -43,7 +42,7 @@ describe('Internationalization', () => {
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
 				dateFormat="DD.MM.YYYY"
-				firstDayOfWeek={firstDayOfWeek.Monday}
+				firstDayOfWeek={FirstDayOfWeek.Monday}
 				initialExpanded
 				months={[
 					'Январь',
@@ -78,7 +77,7 @@ describe('Internationalization', () => {
 			render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
-					firstDayOfWeek={firstDayOfWeek.Sunday}
+					firstDayOfWeek={FirstDayOfWeek.Sunday}
 					initialExpanded
 					placeholder="YYYY-MM-DD"
 					spritemap={spritemap}
@@ -105,7 +104,7 @@ describe('Internationalization', () => {
 			render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
-					firstDayOfWeek={firstDayOfWeek.Tuesday}
+					firstDayOfWeek={FirstDayOfWeek.Tuesday}
 					initialExpanded
 					placeholder="YYYY-MM-DD"
 					spritemap={spritemap}
@@ -119,7 +118,7 @@ describe('Internationalization', () => {
 			render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
-					firstDayOfWeek={firstDayOfWeek.Wednesday}
+					firstDayOfWeek={FirstDayOfWeek.Wednesday}
 					initialExpanded
 					placeholder="YYYY-MM-DD"
 					spritemap={spritemap}
@@ -133,7 +132,7 @@ describe('Internationalization', () => {
 			render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
-					firstDayOfWeek={firstDayOfWeek.Thursday}
+					firstDayOfWeek={FirstDayOfWeek.Thursday}
 					initialExpanded
 					placeholder="YYYY-MM-DD"
 					spritemap={spritemap}
@@ -147,7 +146,7 @@ describe('Internationalization', () => {
 			render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
-					firstDayOfWeek={firstDayOfWeek.Friday}
+					firstDayOfWeek={FirstDayOfWeek.Friday}
 					initialExpanded
 					placeholder="YYYY-MM-DD"
 					spritemap={spritemap}
@@ -161,7 +160,7 @@ describe('Internationalization', () => {
 			render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
-					firstDayOfWeek={firstDayOfWeek.Saturday}
+					firstDayOfWeek={FirstDayOfWeek.Saturday}
 					initialExpanded
 					placeholder="YYYY-MM-DD"
 					spritemap={spritemap}

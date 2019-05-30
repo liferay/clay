@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-interface FakeMouseEventInit {
+interface IFakeMouseEventInit {
 	bubbles?: boolean;
 	cancelable?: boolean;
 	composed?: boolean;
@@ -35,7 +35,7 @@ class FakeMouseEvent extends MouseEvent {
 	x: number;
 	y: number;
 
-	constructor(type: string, values: FakeMouseEventInit) {
+	constructor(type: string, values: IFakeMouseEventInit) {
 		const {offsetX, offsetY, pageX, pageY, x, y, ...mouseValues} = values;
 
 		super(type, mouseValues);
@@ -51,7 +51,7 @@ class FakeMouseEvent extends MouseEvent {
 
 export default function getMouseEvent(
 	type: string,
-	values: FakeMouseEventInit
+	values: IFakeMouseEventInit
 ): FakeMouseEvent {
 	values = {
 		bubbles: true,

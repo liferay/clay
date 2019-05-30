@@ -4,29 +4,28 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import 'clay-css/lib/css/atlas.css';
 import ClayButton from '@clayui/button';
 import ClayModal from '../src';
-import React from 'react';
+import React, {useState} from 'react';
 import {select, text} from '@storybook/addon-knobs';
 import {Size, Status} from '../src/types';
 import {storiesOf} from '@storybook/react';
 
-import 'clay-css/lib/css/atlas.css';
-
 const spritemap = require('clay-css/lib/images/icons/icons.svg');
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {
+interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	children?: (onClose: () => void) => React.ReactNode;
 	size?: Size;
 	status?: Status;
 }
 
-const ModalWithState: React.FunctionComponent<Props> = ({
+const ModalWithState: React.FunctionComponent<IProps> = ({
 	children,
 	size,
 	status,
 }) => {
-	const [visible, setVisible] = React.useState<boolean>(false);
+	const [visible, setVisible] = useState<boolean>(false);
 
 	return (
 		<>

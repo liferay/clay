@@ -4,12 +4,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
 import classNames from 'classnames';
+import React from 'react';
 
 export type DisplayType = 'primary' | 'secondary' | 'link' | 'unstyled';
 
-interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	/**
 	 * Renders the button as a block element.
 	 */
@@ -31,15 +31,15 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	small?: boolean;
 }
 
-interface ButtonGroupProps extends React.HTMLAttributes<HTMLDivElement> {
+interface IButtonGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Flag to indicate the spacing between the buttons.
 	 */
 	spaced?: boolean;
 }
 
-interface IClayButton extends React.FunctionComponent<Props> {
-	Group: React.FunctionComponent<ButtonGroupProps>;
+interface IClayButton extends React.FunctionComponent<IProps> {
+	Group: React.FunctionComponent<IButtonGroupProps>;
 }
 
 const ClayButton: IClayButton = ({
@@ -65,7 +65,7 @@ const ClayButton: IClayButton = ({
 	</button>
 );
 
-const ClayButtonGroup: React.FunctionComponent<ButtonGroupProps> = ({
+const ClayButtonGroup: React.FunctionComponent<IButtonGroupProps> = ({
 	children,
 	className,
 	role = 'group',

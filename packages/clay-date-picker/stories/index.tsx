@@ -3,16 +3,15 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import ClayDatePicker, {firstDayOfWeek} from '../src';
-import React from 'react';
-import {storiesOf} from '@storybook/react';
-
 import 'clay-css/lib/css/atlas.css';
+import ClayDatePicker, {FirstDayOfWeek} from '../src';
+import React, {useState} from 'react';
+import {storiesOf} from '@storybook/react';
 
 const spritemap = require('clay-css/lib/images/icons/icons.svg');
 
 const ClayDatePickerWithState = (props: {[key: string]: any}) => {
-	const [value, setValue] = React.useState<string | Date>('');
+	const [value, setValue] = useState<string | Date>('');
 
 	return (
 		<ClayDatePicker
@@ -55,7 +54,7 @@ storiesOf('ClayDatePicker', module)
 	.add('locale', () => (
 		<ClayDatePickerWithState
 			dateFormat="DD.MM.YYYY"
-			firstDayOfWeek={firstDayOfWeek.Monday}
+			firstDayOfWeek={FirstDayOfWeek.Monday}
 			months={[
 				'Январь',
 				'Февраль',

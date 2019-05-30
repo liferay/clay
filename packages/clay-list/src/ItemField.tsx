@@ -7,7 +7,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {
+interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Flag to indicate if field should automatically expand its width
 	 * to fit in the containing space.
@@ -15,7 +15,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	expand?: boolean;
 }
 
-const ItemField: React.FunctionComponent<Props> = ({
+const ItemField: React.FunctionComponent<IProps> = ({
 	children,
 	className,
 	expand,

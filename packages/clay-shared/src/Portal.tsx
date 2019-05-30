@@ -4,18 +4,18 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
+import React, {useEffect, useRef} from 'react';
 import {createPortal} from 'react-dom';
 
 const Portal: React.FunctionComponent<React.HTMLAttributes<HTMLDivElement>> = ({
 	children,
 }) => {
-	const portalRef = React.useRef(
+	const portalRef = useRef(
 		typeof document !== 'undefined' && document.createElement('div')
 	);
 	const elToMountTo = typeof document !== 'undefined' && document.body;
 
-	React.useEffect(() => {
+	useEffect(() => {
 		if (elToMountTo && portalRef.current) {
 			elToMountTo.appendChild(portalRef.current);
 		}

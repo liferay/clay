@@ -10,7 +10,6 @@ import ClayModal from '..';
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import {
-	act,
 	cleanup,
 	fireEvent,
 	render,
@@ -20,12 +19,12 @@ import {
 
 const spritemap = 'icons.svg';
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {
+interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	initialVisible?: boolean;
 	children?: any;
 }
 
-const ModalWithState: React.FunctionComponent<Props> = ({
+const ModalWithState: React.FunctionComponent<IProps> = ({
 	children,
 	initialVisible = false,
 	...props

@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
+import React, {useEffect} from 'react';
 
 const ESC_KEY_CODE = 27;
 
@@ -15,7 +15,7 @@ export function useDropdownCloseInteractions(
 	nodeRefs: React.RefObject<HTMLElement> | React.RefObject<HTMLElement>[],
 	setActive: (val: boolean) => void
 ) {
-	React.useEffect(() => {
+	useEffect(() => {
 		const handleClick = (event: MouseEvent) => {
 			const nodes: Node[] = (Array.isArray(nodeRefs)
 				? nodeRefs

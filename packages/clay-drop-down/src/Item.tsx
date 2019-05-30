@@ -4,11 +4,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
 import classNames from 'classnames';
 import ClayIcon from '@clayui/icon';
+import React from 'react';
 
-interface Props
+interface IProps
 	extends React.HTMLAttributes<HTMLSpanElement | HTMLAnchorElement> {
 	/**
 	 * Flag that indicates if item is selected.
@@ -41,7 +41,7 @@ interface Props
 	symbolRight?: string;
 }
 
-const DropDownItem: React.FunctionComponent<Props> = ({
+const DropDownItem: React.FunctionComponent<IProps> = ({
 	active,
 	children,
 	className,

@@ -4,16 +4,16 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
 import classNames from 'classnames';
 import ClayIcon from '@clayui/icon';
 import ClayPanelBody from './Body';
 import ClayPanelFooter from './Footer';
 import ClayPanelGroup from './Group';
 import ClayPanelHeader from './Header';
+import React, {useRef, useState} from 'react';
 import {useTransitionHeight} from '@clayui/shared';
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {
+interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	collapsable?: boolean;
 	collapseClassNames?: string;
 	defaultExpanded?: boolean;
@@ -23,7 +23,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	spritemap?: string;
 }
 
-const ClayPanel: React.FunctionComponent<Props> & {
+const ClayPanel: React.FunctionComponent<IProps> & {
 	Body: typeof ClayPanelBody;
 	Footer: typeof ClayPanelFooter;
 	Group: typeof ClayPanelGroup;
@@ -40,8 +40,8 @@ const ClayPanel: React.FunctionComponent<Props> & {
 	spritemap,
 	...otherProps
 }) => {
-	const panelRef = React.useRef<HTMLDivElement>(null);
-	const [expanded, setExpaned] = React.useState<boolean>(defaultExpanded);
+	const panelRef = useRef<HTMLDivElement>(null);
+	const [expanded, setExpaned] = useState<boolean>(defaultExpanded);
 
 	const [
 		transitioning,
@@ -110,11 +110,15 @@ const ClayPanel: React.FunctionComponent<Props> & {
 					</button>
 
 					<div
-						className={classNames('panel-collapse', {
-							collapse: !transitioning,
-							collapsing: transitioning,
-							show: expanded,
-						})}
+						className={classNames(
+							'panel-collapse',
+							collapseClassNames,
+							{
+								collapse: !transitioning,
+								collapsing: transitioning,
+								show: expanded,
+							}
+						)}
 						onTransitionEnd={handleTransitionEnd}
 						ref={panelRef}
 						role="tabpanel"

@@ -4,12 +4,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
-
 import ClayButton from '@clayui/button';
 import ClayLink from '@clayui/link';
 import ClayNavigationBar from '..';
+import React from 'react';
 import {
 	act,
 	fireEvent,

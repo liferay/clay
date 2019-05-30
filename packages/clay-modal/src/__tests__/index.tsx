@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
 import Button from '@clayui/button';
 import ClayModal from '..';
+import React from 'react';
 import ReactDOM from 'react-dom';
 
 const spritemap = 'icons.svg';
@@ -15,7 +15,7 @@ const spritemap = 'icons.svg';
 describe('ClayModal', () => {
 	beforeAll(() => {
 		// @ts-ignore
-		ReactDOM.createPortal = jest.fn((element, node) => {
+		ReactDOM.createPortal = jest.fn(element => {
 			return element;
 		});
 	});

@@ -5,20 +5,20 @@
  */
 
 import React, {FunctionComponent, ReactNode} from 'react';
-import {firstDayOfWeek} from './types';
+import {FirstDayOfWeek} from './types';
 
 interface IChildrenProps {
 	key: number;
 	weekday: string;
 }
 
-interface Props {
+interface IProps {
 	children: (object: IChildrenProps) => ReactNode;
-	firstDayOfWeek: firstDayOfWeek;
+	firstDayOfWeek: FirstDayOfWeek;
 	weekdaysShort: Array<string>;
 }
 
-const WeekdayHeader: FunctionComponent<Props> = ({
+const WeekdayHeader: FunctionComponent<IProps> = ({
 	children,
 	firstDayOfWeek = 0,
 	weekdaysShort,

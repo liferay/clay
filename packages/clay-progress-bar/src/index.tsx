@@ -4,12 +4,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
 import classNames from 'classnames';
 import Icon from '@clayui/icon';
+import React from 'react';
 import warning from 'warning';
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {
+interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Flag to indicate if `children` should be wrapped as `feedback`.
 	 */
@@ -31,7 +31,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	warn?: boolean;
 }
 
-const ClayProgressBar: React.FunctionComponent<Props> = ({
+const ClayProgressBar: React.FunctionComponent<IProps> = ({
 	children,
 	className,
 	feedback = false,

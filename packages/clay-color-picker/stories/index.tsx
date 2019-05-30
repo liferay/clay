@@ -3,17 +3,16 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+import 'clay-css/lib/css/atlas.css';
 import ClayColorPicker from '../src';
-import React from 'react';
+import React, {useState} from 'react';
 import {boolean, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-
-import 'clay-css/lib/css/atlas.css';
 
 const spritemap = require('clay-css/lib/images/icons/icons.svg');
 
 const ClayColorPickerWithState = (props: any) => {
-	const [color, setColor] = React.useState('FFFFFF');
+	const [color, setColor] = useState('FFFFFF');
 
 	return (
 		<ClayColorPicker
@@ -26,13 +25,9 @@ const ClayColorPickerWithState = (props: any) => {
 };
 
 const ClayColorPickerWithCustomColors = (props: any) => {
-	const [customColors, setCustoms] = React.useState([
-		'008000',
-		'00FFFF',
-		'0000FF',
-	]);
+	const [customColors, setCustoms] = useState(['008000', '00FFFF', '0000FF']);
 
-	const [color, setColor] = React.useState(customColors[0]);
+	const [color, setColor] = useState(customColors[0]);
 
 	return (
 		<ClayColorPickerWithState

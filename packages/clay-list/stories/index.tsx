@@ -3,6 +3,7 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+import 'clay-css/lib/css/atlas.css';
 import ClayCheckbox from '@clayui/checkbox';
 import ClayIcon from '@clayui/icon';
 import ClayList from '../src';
@@ -10,8 +11,6 @@ import ClaySticker from '@clayui/sticker';
 import React from 'react';
 import {select} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-
-import 'clay-css/lib/css/atlas.css';
 
 const spritemap = require('clay-css/lib/images/icons/icons.svg');
 
