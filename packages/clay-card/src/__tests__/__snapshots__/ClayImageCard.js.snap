@@ -64,6 +64,21 @@ exports[`ClayImageCard should render a ClayImageCard with actionItems and action
 </div>
 `;
 
+exports[`ClayImageCard should render a ClayImageCard with aspect ratio classes 1`] = `
+<div class="card-type-asset card image-card">
+  <div class="aspect-ratio card-item-first">
+    <img alt="" class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush" src="thumbnail_coffee.jpg">
+  </div>
+  <div class="card-body">
+    <div class="card-row">
+      <div class="autofit-col autofit-col-expand">
+        <div class="card-title text-truncate">My Title</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ClayImageCard should render a ClayImageCard with classes 1`] = `
 <div class="card-type-asset card image-card my-custom-class">
   <div class="aspect-ratio card-item-first"></div>
@@ -93,7 +108,7 @@ exports[`ClayImageCard should render a ClayImageCard with href 1`] = `
 exports[`ClayImageCard should render a ClayImageCard with icon 1`] = `
 <div class="card-type-asset card image-card">
   <div class="aspect-ratio card-item-first">
-    <div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+    <div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
       <svg class="lexicon-icon lexicon-icon-documents" focusable="false" role="presentation">
         <use xlink:href="icons.svg#documents"></use>
       </svg>

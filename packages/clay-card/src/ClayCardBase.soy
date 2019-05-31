@@ -13,6 +13,7 @@
 		label: string,
 		separator: bool
 	]>}
+	{@param? aspectRatioClasses: string}
 	{@param? contentRenderer: string}
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
@@ -73,6 +74,7 @@
 
 	{let $visualArea kind="html"}
 		{delcall ClayCardBase.VisualArea variant="$variant"}
+			{param aspectRatioClasses: $aspectRatioClasses /}
 			{param icon: $icon /}
 			{param imageAlt: $imageAlt /}
 			{param imageSrc: $imageSrc /}
@@ -198,6 +200,7 @@
  * This renders the visual area of the card
  */
 {deltemplate ClayCardBase.VisualArea}
+	{@param? aspectRatioClasses: string}
 	{@param? icon: string}
 	{@param? imageAlt: string}
 	{@param? imageSrc: string}

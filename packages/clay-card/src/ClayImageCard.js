@@ -60,6 +60,17 @@ ClayImageCard.STATE = {
 	actionItems: actionItemsValidator,
 
 	/**
+	 * CSS classes for the aspect ratio images
+	 * @default aspect-ratio-item-center-middle aspect-ratio-item-fluid
+	 * @instance
+	 * @memberof ClayImageCard
+	 * @type {?(string|undefined)}
+	 */
+	aspectRatioClasses: Config.string().value(
+		'aspect-ratio-item-center-middle aspect-ratio-item-fluid'
+	),
+
+	/**
 	 * Data to add to the element.
 	 * @default undefined
 	 * @instance

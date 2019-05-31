@@ -13,6 +13,7 @@
 		label: string,
 		separator: bool
 	]>}
+	{@param? aspectRatioClasses: string}
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
 	{@param? href: string}
@@ -46,6 +47,7 @@
 	{call ClayCardBase.render}
 		{param actionAriaLabel: $actionAriaLabel /}
 		{param actionItems: $actionItems /}
+		{param aspectRatioClasses: $aspectRatioClasses /}
 		{param contentRenderer: 'image' /}
 		{param disabled: $disabled /}
 		{param elementClasses: $classes /}
@@ -82,6 +84,7 @@
  * Render the visual area of the card.
  */
 {deltemplate ClayCardBase.VisualArea variant="'image'"}
+	{@param? aspectRatioClasses: string}
 	{@param? icon: string}
 	{@param? imageAlt: string}
 	{@param? imageSrc: string}
@@ -94,12 +97,7 @@
 	{@param? stickerShape: string}
 	{@param? stickerStyle: string}
 
-		{let $aspectRatioClasses kind="text"}
-			aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid
-			{if not $imageSrc and $icon and $spritemap}
-				{sp}card-type-asset-icon
-			{/if}
-		{/let}
+		{let $defaultAspectRatioClasses: $aspectRatioClasses ?: 'aspect-ratio-item-center-middle aspect-ratio-item-fluid' /}
 
 		{if $imageSrc}
 			{let $imageAttributes kind="attributes"}
@@ -109,13 +107,20 @@
 					{/if}
 				"
 
-				class="{$aspectRatioClasses}"
+				class="aspect-ratio-item {$defaultAspectRatioClasses}"
 				src="{$imageSrc}"
 			{/let}
 
 			<img {$imageAttributes} />
 		{elseif $icon and $spritemap}
-			<div class="{$aspectRatioClasses}">
+			{let $iconAspectRatioClasses kind="text"}
+				{$defaultAspectRatioClasses}
+				{if not $imageSrc and $icon and $spritemap}
+					{sp}card-type-asset-icon
+				{/if}
+			{/let}
+
+			<div class="{$iconAspectRatioClasses}">
 				{call ClayIcon.render}
 					{param spritemap: $spritemap /}
 					{param symbol: $icon /}
