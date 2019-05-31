@@ -20,7 +20,14 @@
 	},
 	"keywords": ["clay", "react"],
 	"dependencies": {
+		"@clayui/drop-down": "^3.0.0",
+		"@clayui/form": "^3.0.0",
+		"@clayui/loading-indicator": "^3.0.0",
 		"classnames": "^2.2.6"
+	},
+	"devDependencies": {
+		"@clayui/shared": "^3.0.0",
+		"@clayui/data-provider": "^3.0.0"
 	},
 	"peerDependencies": {
 		"react": "^16.8.1",

@@ -4,16 +4,35 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
-import * as TestRenderer from 'react-test-renderer';
 import ClayAutocomplete from '..';
+import React from 'react';
+import {cleanup, render} from 'react-testing-library';
 
 describe('ClayAutocomplete', () => {
-	it('renders', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayAutocomplete />
-		);
+	afterEach(cleanup);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+	it('renders', () => {
+		render(<ClayAutocomplete />);
+
+		expect(document.body).toMatchSnapshot();
+	});
+
+	it('renders Autocomplete with other markup component', () => {
+		const MyMarkup = React.forwardRef<
+			HTMLDivElement,
+			React.HTMLAttributes<HTMLDivElement>
+		>(({children, ...otherProps}, ref) => (
+			<div
+				{...otherProps}
+				className="form-control form-control-tag-group"
+				ref={ref}
+			>
+				{children}
+			</div>
+		));
+
+		render(<ClayAutocomplete component={MyMarkup} />);
+
+		expect(document.body).toMatchSnapshot();
 	});
 });

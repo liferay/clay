@@ -1,1 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayAutocomplete renders 1`] = `
+<body>
+  <div>
+    <div
+      class="input-group"
+    >
+      <div
+        class="input-group-item"
+      />
+    </div>
+  </div>
+</body>
+`;
+
+exports[`ClayAutocomplete renders Autocomplete with other markup component 1`] = `
+<body>
+  <div>
+    <div
+      class="form-control form-control-tag-group"
+    />
+  </div>
+</body>
+`;
