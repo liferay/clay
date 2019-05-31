@@ -1,6 +1,6 @@
 ---
 title: "Stickers"
-description: "Stickers are a visual way to quickly identify content in a different way than badges and labels."
+description: "Stickers are a visual way to quickly identify content."
 ---
 
 <div class="nav-toc">
