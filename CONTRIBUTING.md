@@ -4,7 +4,7 @@ Want to contribute to Clay? There are a few things you need to know before you s
 
 Here's a set of guidelines to contribute to Clay and its packages. Use your common sense, and feel free to propose changes to this document in a pull request.
 
-For contributions with Clay v2, go to branch `2.x-develop` and follow the [contribution guide](https://github.com/liferay/clay/blob/2.x-develop/CONTRIBUTING.md).
+**For contributions to Clay v2, go to branch `2.x-develop` and follow the [contribution guide](https://github.com/liferay/clay/blob/2.x-develop/CONTRIBUTING.md).**
 
 #### Table of Contents
 
@@ -88,7 +88,7 @@ Suggestions for enhancement or API changes are tracked as [Github issues](https:
 
 This section shows you how to send a pull request. The main staff are always monitoring pull requests, so rest assured that they will review yours. Follow these guidelines so the maintainers can complete a thorough review of your request.
 
-> Since Travis is failing on executing **a11y tests** due to out of date suid you need to execute `npm run pa11y` locally before sending any PR to verify we're following accessibility standards.
+> Be sure to check the accessibility tab of the Storybook to ensure accessibility tests are going pass.
 
 #### Before Sending a Pull Request
 
@@ -107,10 +107,27 @@ This section shows you how to send a pull request. The main staff are always mon
 
 This section shows you how to write commit messages in Clay. Follow these guidelines to help us maintain order and make it easier to locate your changes.
 
-#### Before You Make a Commit Message
+Each commit message consists of a header, a body and a footer. The header has a special format that includes a type, a scope and a subject:
 
--   Make sure that the problem or change you are making doesn't already exists.
--   Start the commit message with the word **Fixes**, and always follow it with a reference to the issue: - Fixes #0 - bla bla - Fixes #0, #1 - bla bla
+```
+<type>(<scope>): <subject>
+```
+
+The header is mandatory and the scope of the header is optional.
+
+> Clay follows the "[Conventional Commits](https://www.conventionalcommits.org/)" specification.
+
+#### Type
+
+- **feat**: A new feature
+- **fix**: A bug fix
+- **docs**: Documentation-only changes
+- **refactor**: A code change that neither fixes a bug nor adds a feature
+- **chore**: Changes in the build process, auxiliary tools, libraries, tests or formatting
+
+#### Scope
+
+The scope could be anything specifying place of the commit change. For example `feat(@clayui/dropdown)`, `feat(@clayui/css)`, `fix(next.clayui.com)`, `docs(Badge)`, `fix(useCache)`, etc...
 
 ### JavaScript Style Guide
 
@@ -122,19 +139,15 @@ See guidelines for [contribution with CSS](https://github.com/liferay/clay/blob/
 
 ### Documentation Style Guide
 
--   Use [JSDOC](http://usejsdoc.org/) for documentation in your JavaScript code.
+Clay uses [TypeScript](https://www.typescriptlang.org/), obviating the need to write explicit [JSDOC](http://usejsdoc.org/) annotations for parameter and return types. We still write descriptions, however, for `interface`, `type`, `enum` etc to make it easier to use components.
 
-#### Example
-
-```javascript
-/**
- * Data to add to the element.
- * @default undefined
- * @instance
- * @memberof ClayActionsDropdown
- * @type {?object}
- */
-data: Config.object();
+```typescript
+interface IProps {
+	/**
+	 * Default position of menu element. Values come from `metal-position`.
+	 */
+	alignmentPosition?: number;
+}
 ```
 
 ## Additional Notes
