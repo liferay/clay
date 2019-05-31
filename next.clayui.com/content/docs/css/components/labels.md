@@ -5,14 +5,13 @@ description: "Labels categorize information, providing quick recognition."
 
 <div class="nav-toc">
 
-- [Label Variations](#label-variations)
+- [Colors](#colors)
 - [Sizes](#sizes)
 - [Variations](#variations)
 	- [Simple Label](#simple-label)
 	- [Label Dismissible](#label-dismissible)
 	- [Label with Link](#label-with-link)
 	- [Interactive Label](#interactive-label)
-	- [Interactive Label Examples](#interactive-label-examples)
 	- [Labels as an Anchor Tag](#labels-as-an-anchor-tag)
 
 </div>
@@ -25,7 +24,7 @@ description: "Labels categorize information, providing quick recognition."
 	See the implementation of the <a href="/docs/components/labels.html">Labels component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/labels/">Labels Pattern</a>.
 </div>
 
-### Label Variations
+### Colors
 
 <div class="sheet-example">
 	<span class="label label-primary"><span class="label-item label-item-expand">Primary</span></span>
