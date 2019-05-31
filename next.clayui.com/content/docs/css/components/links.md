@@ -13,7 +13,9 @@ description: "Also known as a hyperlink, a link is a clickable (text or image) e
 	- [Button](#button)
 - [Link Outline](#link-outline)
 - [Link Outline Borderless](#link-outline-borderless)
+- [External Link](#external-link)
 - [Link Monospaced](#link-monospaced)
+- [Title Link](#title-link)
 
 </div>
 
