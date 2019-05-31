@@ -1,6 +1,6 @@
 {
 	"name": "clay-charts-react",
-	"version": "2.15.1",
+	"version": "2.16.0",
 	"description": "Implementation of clay-charts in React.js",
 	"private": true,
 	"main": "lib/index.js",
@@ -15,7 +15,7 @@
 	"author": "Bryce Osterhaus",
 	"license": "BSD-3-Clause",
 	"dependencies": {
-		"clay-charts-shared": "^2.15.1",
+		"clay-charts-shared": "^2.16.0",
 		"react-billboardjs": "^1.4.3"
 	},
 	"peerDependencies": {
