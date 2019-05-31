@@ -5,6 +5,7 @@ description: "List is a visual representation of a dataset that provides more fl
 
 <div class="nav-toc">
 
+- [Example](#example)
 - [Variations](#variations)
 	- [Bordered](#bordered)
     - [Default](#default)
@@ -19,12 +20,100 @@ description: "List is a visual representation of a dataset that provides more fl
 	    - [Active](#active)
 	    - [Display Types](#display-types)
         - [Active Display Types](#active-display-types)
-- [Examples of use](#examples-of-use)
-    - [Sections](#sections)
 
 </div>
 
 <div class="alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/list/">List Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
+
+List sections help separate content by a specific category or type.
+
+### Example
+
+<div class="sheet-example">
+    <ul class="list-group">
+        <li class="list-group-header">
+            <h3 class="list-group-header-title">List Section</h3>
+        </li>
+        <li class="list-group-item list-group-item-flex">
+            <div class="autofit-col">
+                <div class="custom-control custom-checkbox">
+                    <label>
+                        <input class="custom-control-input" type="checkbox"/>
+                        <span class="custom-control-label"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="autofit-col">
+                <div class="sticker sticker-secondary">
+                    <span class="inline-item">
+                        <svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
+                            <use href="/images/icons/icons.svg#folder" />
+                        </svg>
+                    </span>
+                </div>
+            </div>
+            <div class="autofit-col autofit-col-expand">
+                <p class="list-group-title text-truncate">
+                    <a href="#1">Account Example One</a>
+                </p>
+                <p class="list-group-subtitle text-truncate">Second Level Text</p>
+            </div>
+            <div class="autofit-col">
+                <div class="dropdown dropdown-action">
+                    <a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+                        <svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+                            <use href="/images/icons/icons.svg#ellipsis-v" />
+                        </svg>
+                    </a>
+                    <div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+                        <ul class="list-unstyled">
+                            <li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+                            <li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+                            <li><a class="dropdown-item" href="#1" role="button">Move</a></li>
+                            <li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+```html
+<ul class="list-group">
+	<li class="list-group-header">
+		<h3 class="list-group-header-title">List Section</h3>
+	</li>
+	<li class="list-group-item list-group-item-flex">
+		<div class="autofit-col">
+			<div class="custom-control custom-checkbox">
+				<label>
+					<input class="custom-control-input" type="checkbox"/>
+					<span class="custom-control-label"></span>
+				</label>
+			</div>
+		</div>
+		<div class="autofit-col">
+			<div class="sticker sticker-secondary">
+				<span class="inline-item">
+					...
+				</span>
+			</div>
+		</div>
+		<div class="autofit-col autofit-col-expand">
+			<p class="list-group-title text-truncate">
+				<a href="#1">Account Example One</a>
+			</p>
+			<p class="list-group-subtitle text-truncate">Second Level Text</p>
+		</div>
+		<div class="autofit-col">
+			<div class="dropdown dropdown-action">
+				...
+			</div>
+		</div>
+	</li>
+</ul>
+```
 
 ### Variations
 
@@ -1244,94 +1333,6 @@ Add the class `show-dropdown-action-on-active` to display `dropdown-menu`s when 
 					...
 				</a>
 			</div>
-			<div class="dropdown dropdown-action">
-				...
-			</div>
-		</div>
-	</li>
-</ul>
-```
-
-#### Sections
-
-List sections help separate content by a specific category or type.
-
-<ul class="list-group">
-	<li class="list-group-header">
-		<h3 class="list-group-header-title">List Section</h3>
-	</li>
-	<li class="list-group-item list-group-item-flex">
-		<div class="autofit-col">
-			<div class="custom-control custom-checkbox">
-				<label>
-					<input class="custom-control-input" type="checkbox"/>
-					<span class="custom-control-label"></span>
-				</label>
-			</div>
-		</div>
-		<div class="autofit-col">
-			<div class="sticker sticker-secondary">
-				<span class="inline-item">
-					<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
-						<use href="/images/icons/icons.svg#folder" />
-					</svg>
-				</span>
-			</div>
-		</div>
-		<div class="autofit-col autofit-col-expand">
-			<p class="list-group-title text-truncate">
-				<a href="#1">Account Example One</a>
-			</p>
-			<p class="list-group-subtitle text-truncate">Second Level Text</p>
-		</div>
-		<div class="autofit-col">
-			<div class="dropdown dropdown-action">
-				<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-					<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-						<use href="/images/icons/icons.svg#ellipsis-v" />
-					</svg>
-				</a>
-				<div aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-					<ul class="list-unstyled">
-						<li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
-						<li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
-						<li><a class="dropdown-item" href="#1" role="button">Move</a></li>
-						<li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</li>
-</ul>
-
-```html
-<ul class="list-group">
-	<li class="list-group-header">
-		<h3 class="list-group-header-title">List Section</h3>
-	</li>
-	<li class="list-group-item list-group-item-flex">
-		<div class="autofit-col">
-			<div class="custom-control custom-checkbox">
-				<label>
-					<input class="custom-control-input" type="checkbox"/>
-					<span class="custom-control-label"></span>
-				</label>
-			</div>
-		</div>
-		<div class="autofit-col">
-			<div class="sticker sticker-secondary">
-				<span class="inline-item">
-					...
-				</span>
-			</div>
-		</div>
-		<div class="autofit-col autofit-col-expand">
-			<p class="list-group-title text-truncate">
-				<a href="#1">Account Example One</a>
-			</p>
-			<p class="list-group-subtitle text-truncate">Second Level Text</p>
-		</div>
-		<div class="autofit-col">
 			<div class="dropdown dropdown-action">
 				...
 			</div>
