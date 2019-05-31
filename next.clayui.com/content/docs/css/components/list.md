@@ -13,13 +13,13 @@ description: "List is a visual representation of a dataset that provides more fl
 - [Group Elements](#group-elements)
     - [Header](#header)
 	- [Items](#items)
+        - [Colors](#colors)
+        - [Active Colors](#active-colors)
 	    - [Items as Links and Buttons](#items-as-links-and-buttons)
 	    - [Actions on Hover](#actions-on-hover)
 	        - [Anchors](#anchors)
             - [Buttons](#buttons)
 	    - [Active](#active)
-	    - [Display Types](#display-types)
-        - [Active Display Types](#active-display-types)
 
 </div>
 
@@ -683,6 +683,58 @@ Use the `.list-group-header` and `.list-group-header-title` class.
 
 #### Items
 
+##### Colors
+
+<div class="sheet-example">
+    <ul class="list-group">
+        <li class="list-group-item">List Item Normal</li>
+        <li class="list-group-item list-group-item-success">List Item Success</li>
+        <li class="list-group-item list-group-item-info">List Item Info</li>
+        <li class="list-group-item list-group-item-warning">List Item Warning</li>
+        <li class="list-group-item list-group-item-danger">List Item Danger</li>
+        <li class="list-group-item list-group-item-light">List Item Light</li>
+        <li class="list-group-item list-group-item-dark">List Item Dark</li>
+    </ul>
+</div>
+
+```html
+<ul class="list-group">
+	<li class="list-group-item">List Item Normal</li>
+	<li class="list-group-item list-group-item-success">List Item Success</li>
+	<li class="list-group-item list-group-item-info">List Item Info</li>
+	<li class="list-group-item list-group-item-warning">List Item Warning</li>
+	<li class="list-group-item list-group-item-danger">List Item Danger</li>
+	<li class="list-group-item list-group-item-light">List Item Light</li>
+	<li class="list-group-item list-group-item-dark">List Item Dark</li>
+</ul>
+```
+
+##### Active Colors
+
+<div class="sheet-example">
+    <div class="list-group">
+        <a class="active list-group-item list-group-item-action" href="#1">List Item Action Normal Active</a>
+        <a class="active list-group-item list-group-item-action list-group-item-success" href="#1">List Item Action Success Active</a>
+        <a class="active list-group-item list-group-item-action list-group-item-info" href="#1">List Item Action Info Active</a>
+        <a class="active list-group-item list-group-item-action list-group-item-warning" href="#1">List Item Action Warning Active</a>
+        <a class="active list-group-item list-group-item-action list-group-item-danger" href="#1">List Item Action Danger Active</a>
+        <a class="active list-group-item list-group-item-action list-group-item-light" href="#1">List Item Action Light Active</a>
+        <a class="active list-group-item list-group-item-action list-group-item-dark" href="#1">List Item Action Dark Active</a>
+    </div>
+</div>
+
+```html
+<div class="list-group">
+    <a class="active list-group-item list-group-item-action" href="#1">List Item Action Normal Active</a>
+    <a class="active list-group-item list-group-item-action list-group-item-success" href="#1">List Item Action Success Active</a>
+    <a class="active list-group-item list-group-item-action list-group-item-info" href="#1">List Item Action Info Active</a>
+    <a class="active list-group-item list-group-item-action list-group-item-warning" href="#1">List Item Action Warning Active</a>
+    <a class="active list-group-item list-group-item-action list-group-item-danger" href="#1">List Item Action Danger Active</a>
+    <a class="active list-group-item list-group-item-action list-group-item-light" href="#1">List Item Action Light Active</a>
+    <a class="active list-group-item list-group-item-action list-group-item-dark" href="#1">List Item Action Dark Active</a>
+</div>
+```
+
 ##### Items as Links and Buttons
 
 <div class="sheet-example">
@@ -1045,58 +1097,6 @@ Use the `.active` class on the same element that you putted `.list-group-item`.
 		</div>
 	</li>
 </ul>
-```
-
-##### Display Types
-
-<div class="sheet-example">
-    <ul class="list-group">
-        <li class="list-group-item">List Item Normal</li>
-        <li class="list-group-item list-group-item-success">List Item Success</li>
-        <li class="list-group-item list-group-item-info">List Item Info</li>
-        <li class="list-group-item list-group-item-warning">List Item Warning</li>
-        <li class="list-group-item list-group-item-danger">List Item Danger</li>
-        <li class="list-group-item list-group-item-light">List Item Light</li>
-        <li class="list-group-item list-group-item-dark">List Item Dark</li>
-    </ul>
-</div>
-
-```html
-<ul class="list-group">
-	<li class="list-group-item">List Item Normal</li>
-	<li class="list-group-item list-group-item-success">List Item Success</li>
-	<li class="list-group-item list-group-item-info">List Item Info</li>
-	<li class="list-group-item list-group-item-warning">List Item Warning</li>
-	<li class="list-group-item list-group-item-danger">List Item Danger</li>
-	<li class="list-group-item list-group-item-light">List Item Light</li>
-	<li class="list-group-item list-group-item-dark">List Item Dark</li>
-</ul>
-```
-
-##### Active Display Types
-
-<div class="sheet-example">
-    <div class="list-group">
-        <a class="active list-group-item list-group-item-action" href="#1">List Item Action Normal Active</a>
-        <a class="active list-group-item list-group-item-action list-group-item-success" href="#1">List Item Action Success Active</a>
-        <a class="active list-group-item list-group-item-action list-group-item-info" href="#1">List Item Action Info Active</a>
-        <a class="active list-group-item list-group-item-action list-group-item-warning" href="#1">List Item Action Warning Active</a>
-        <a class="active list-group-item list-group-item-action list-group-item-danger" href="#1">List Item Action Danger Active</a>
-        <a class="active list-group-item list-group-item-action list-group-item-light" href="#1">List Item Action Light Active</a>
-        <a class="active list-group-item list-group-item-action list-group-item-dark" href="#1">List Item Action Dark Active</a>
-    </div>
-</div>
-
-```html
-<div class="list-group">
-    <a class="active list-group-item list-group-item-action" href="#1">List Item Action Normal Active</a>
-    <a class="active list-group-item list-group-item-action list-group-item-success" href="#1">List Item Action Success Active</a>
-    <a class="active list-group-item list-group-item-action list-group-item-info" href="#1">List Item Action Info Active</a>
-    <a class="active list-group-item list-group-item-action list-group-item-warning" href="#1">List Item Action Warning Active</a>
-    <a class="active list-group-item list-group-item-action list-group-item-danger" href="#1">List Item Action Danger Active</a>
-    <a class="active list-group-item list-group-item-action list-group-item-light" href="#1">List Item Action Light Active</a>
-    <a class="active list-group-item list-group-item-action list-group-item-dark" href="#1">List Item Action Dark Active</a>
-</div>
 ```
 
 ### Example of use
