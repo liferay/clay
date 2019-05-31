@@ -508,7 +508,6 @@ You can justify the nav items according the tab content just adding `.nav-justif
 </div>
 ```
 
-
 ## Grid
 
 Use bootstrap's grid inside list items in `nav-tabs`.
