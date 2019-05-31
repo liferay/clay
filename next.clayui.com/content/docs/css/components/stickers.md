@@ -115,7 +115,7 @@ Place them anywhere relative to your container using positional sticker classes 
 
 # Sizes
 
-Stickers come in 4 sizes `sm`, normal, `lg`, and `xl`. Create your own custom size with the `sticker-size` mixin.
+Stickers come in 4 sizes `sm`, default, `lg`, and `xl`. Create your own custom size with the `sticker-size` mixin.
 
 <div class="sheet-example">
     <span class="sticker sticker-primary sticker-sm">133</span>
