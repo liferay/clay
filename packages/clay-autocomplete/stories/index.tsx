@@ -4,14 +4,14 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {FetchPolicy, NetworkStatus} from '@clayui/data-provider/src/types';
-import {storiesOf} from '@storybook/react';
-import {useDebounce} from '@clayui/shared';
-import {useResource} from '@clayui/data-provider';
 import ClayAutocomplete from '../src';
 import ClayDropDown from '@clayui/drop-down';
 import fuzzy from 'fuzzy';
 import React, {useState} from 'react';
+import {FetchPolicy, NetworkStatus} from '@clayui/data-provider/src/types';
+import {storiesOf} from '@storybook/react';
+import {useDebounce} from '@clayui/shared';
+import {useResource} from '@clayui/data-provider';
 
 import 'clay-css/lib/css/atlas.css';
 
@@ -37,7 +37,7 @@ const LoadingWithDebounce = ({
 	return render;
 };
 
-const optionsFuzzy = { pre: '<strong>', post: '</strong>' };
+const optionsFuzzy = {post: '</strong>', pre: '<strong>'};
 
 interface IProps {
 	name: string;
@@ -85,13 +85,12 @@ const ClayAutocompleteWithState = () => {
 						networkStatus={networkStatus}
 						render={
 							<>
-								{(error ||
-									(resource && resource.error)) && (
+								{(error || (resource && resource.error)) && (
 									<ClayDropDown.Item className="disabled">
 										{'No Results Found'}
 									</ClayDropDown.Item>
 								)}
-								{!(error) &&
+								{!error &&
 									resource &&
 									resource.results &&
 									resource.results.map((item: any) => (
@@ -99,7 +98,10 @@ const ClayAutocompleteWithState = () => {
 											key={item.id}
 											onClick={() => setValue(item.name)}
 										>
-											<Item name={item.name} value={value} />
+											<Item
+												name={item.name}
+												value={value}
+											/>
 										</ClayDropDown.Item>
 									))}
 							</>
