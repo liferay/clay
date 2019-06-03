@@ -4,13 +4,14 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayAutocomplete from '../src';
-import ClayDropDown from '@clayui/drop-down';
-import React, {useState} from 'react';
 import {FetchPolicy, NetworkStatus} from '@clayui/data-provider/src/types';
 import {storiesOf} from '@storybook/react';
 import {useDebounce} from '@clayui/shared';
 import {useResource} from '@clayui/data-provider';
+import ClayAutocomplete from '../src';
+import ClayDropDown from '@clayui/drop-down';
+import fuzzy from 'fuzzy';
+import React, {useState} from 'react';
 
 import 'clay-css/lib/css/atlas.css';
 
@@ -36,6 +37,23 @@ const LoadingWithDebounce = ({
 	return render;
 };
 
+const optionsFuzzy = { pre: '<strong>', post: '</strong>' };
+
+interface IProps {
+	name: string;
+	value: string;
+}
+
+const Item: React.FunctionComponent<IProps> = ({name, value}) => {
+	const match = fuzzy.match(value, name, optionsFuzzy);
+
+	if (match) {
+		return <div dangerouslySetInnerHTML={{__html: match.rendered}} />;
+	}
+
+	return <>{name}</>;
+};
+
 const ClayAutocompleteWithState = () => {
 	const [value, setValue] = useState('');
 	const [networkStatus, setNetworkStatus] = useState<NetworkStatus>(
@@ -48,6 +66,10 @@ const ClayAutocompleteWithState = () => {
 		variables: {name: value},
 	});
 
+	const initialLoading = networkStatus === 1;
+	const loading = networkStatus < 4;
+	const error = networkStatus === 5;
+
 	return (
 		<ClayAutocomplete>
 			<ClayAutocomplete.Input
@@ -55,21 +77,21 @@ const ClayAutocompleteWithState = () => {
 				value={value}
 			/>
 			<ClayAutocomplete.DropDown
-				active={(!!resource && !!value) || networkStatus === 1}
+				active={(!!resource && !!value) || initialLoading}
 			>
 				<ClayDropDown.ItemList>
 					<LoadingWithDebounce
-						loading={networkStatus < 4}
+						loading={loading}
 						networkStatus={networkStatus}
 						render={
 							<>
-								{(networkStatus === 5 ||
+								{(error ||
 									(resource && resource.error)) && (
 									<ClayDropDown.Item className="disabled">
 										{'No Results Found'}
 									</ClayDropDown.Item>
 								)}
-								{!(networkStatus === 5) &&
+								{!(error) &&
 									resource &&
 									resource.results &&
 									resource.results.map((item: any) => (
@@ -77,7 +99,7 @@ const ClayAutocompleteWithState = () => {
 											key={item.id}
 											onClick={() => setValue(item.name)}
 										>
-											{item.name}
+											<Item name={item.name} value={value} />
 										</ClayDropDown.Item>
 									))}
 							</>
@@ -85,7 +107,7 @@ const ClayAutocompleteWithState = () => {
 					/>
 				</ClayDropDown.ItemList>
 			</ClayAutocomplete.DropDown>
-			{networkStatus < 4 && <ClayAutocomplete.LoadingIndicator />}
+			{loading && <ClayAutocomplete.LoadingIndicator />}
 		</ClayAutocomplete>
 	);
 };
