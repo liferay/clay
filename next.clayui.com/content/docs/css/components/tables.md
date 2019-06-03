@@ -1513,7 +1513,7 @@ The helpers `table-cell-ws-normal` and `table-cell-ws-nowrap` sets `white-space`
                 <td class="table-cell-expand">
                     <div class="autofit-row">
                         <div class="autofit-col">
-                            <img alt="thumbnail" class="table-img" src="../../images/thumbnail_coffee.jpg">
+                            <img alt="thumbnail" class="table-img" src="/images/thumbnail_coffee.jpg">
                         </div>
                         <div class="autofit-col autofit-col-expand">
                             <div class="table-title">
@@ -1566,7 +1566,7 @@ The helpers `table-cell-ws-normal` and `table-cell-ws-nowrap` sets `white-space`
             <td class="table-cell-expand">
                 <div class="autofit-row">
                     <div class="autofit-col">
-                        <img alt="thumbnail" class="table-img" src="../../images/thumbnail_coffee.jpg">
+                        <img alt="thumbnail" class="table-img" src="/images/thumbnail_coffee.jpg">
                     </div>
                     <div class="autofit-col autofit-col-expand">
                         <div class="table-title">
