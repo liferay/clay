@@ -27,10 +27,7 @@ export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Div component to render. It can be a one component that will replace the markup.
 	 */
-	component?:
-		| typeof LoadingIndicatorMarkup
-		| React.ComponentType<any>
-		| React.ComponentType<React.HTMLAttributes<HTMLDivElement>>;
+	component?: React.ComponentType<any>;
 }
 
 const LoadingIndicator: React.FunctionComponent<IProps> = ({

@@ -28,7 +28,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Div component to render. It can be a one component that will replace the markup.
 	 */
-	component?: typeof AutocompleteMarkup | React.ComponentType<any>;
+	component?: React.ForwardRefExoticComponent<any>;
 }
 
 const ClayAutocomplete: React.FunctionComponent<IProps> & {

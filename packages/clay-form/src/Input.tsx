@@ -17,10 +17,7 @@ export interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	/**
 	 * Input component to render. Can either be a string like 'input' or a component.
 	 */
-	component?:
-		| 'input'
-		| React.ComponentType<any>
-		| React.ComponentType<React.InputHTMLAttributes<HTMLInputElement>>;
+	component?: 'input' | React.ForwardRefExoticComponent<any>;
 }
 
 const Input = React.forwardRef<HTMLInputElement, IProps>(
