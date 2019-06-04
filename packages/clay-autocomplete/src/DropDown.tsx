@@ -32,12 +32,12 @@ const DropDown: React.FunctionComponent<IProps> = ({
 	onSetActive = () => {},
 }) => {
 	const {containerElementRef} = useContext(Context);
+	const menuElementRef = React.useRef<HTMLDivElement>(null);
 
 	if (!alignElementRef) {
 		alignElementRef = containerElementRef;
 	}
 
-	const menuElementRef = React.useRef<HTMLDivElement>(null);
 	const alignElementWidth =
 		alignElementRef.current && alignElementRef.current.clientWidth;
 
