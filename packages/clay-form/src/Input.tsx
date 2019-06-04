@@ -15,14 +15,7 @@ export interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 }
 
 const Input = React.forwardRef<HTMLInputElement, IProps>(
-	(
-		{
-			className,
-			component: Component = 'input',
-			...otherProps
-		},
-		ref
-	) => (
+	({className, component: Component = 'input', ...otherProps}, ref) => (
 		<Component
 			{...otherProps}
 			className={classNames('form-control', className)}
