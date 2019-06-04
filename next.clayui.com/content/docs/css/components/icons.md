@@ -37,7 +37,7 @@ Note that the ID after the # symbol is the ID of the icon to use, so if you want
 	[foreach Icons]
 </ul>
 
-### Language Flags
+## Language Flags
 
 People tend to have pretty strong opinions on whether flags should be used as a visual cue for indicating a language, mainly because in many parts of the world the flag may have cultural and geographic meanings that we might not be aware of, or the flag itself isn't fully accurate to the dialects spoken in that region.
 
@@ -64,7 +64,7 @@ We have created a Sass function to turn Lexicon SVG icon's into data uri schemes
 <span class="clay-site-svg-bg clay-site-times-circle">times-circle</span>
 <span class="clay-site-svg-bg clay-site-workflow">workflow</span>
 
-### Svg-url()
+## Svg-url()
 
 You can turn your custom SVG into a data uri using the Sass function `svg-url($svg)`, where `$svg` is the code for your inline SVG. The function returns `url(your_svg_as_data_uri)`.
 
@@ -74,7 +74,7 @@ You can turn your custom SVG into a data uri using the Sass function `svg-url($s
 
 <span class="clay-site-linux-tux clay-site-svg-bg">Linux Tux</span>
 
-### Why do we use SVG
+## Why do we use SVG
 
 <p id="lexicon-icon-explanation">
   Font icons, while fairly simple, suffer drawbacks, such as sub-pixel aliasing. This results in a lower quality than we would like.
