@@ -20,7 +20,7 @@ Use the `inline-item inline-item-before`, `inline-item inline-item-middle`, and 
 	For this component to function and space properly, the white space must be removed between text and icons from the markup inside the component. It's generally easier to remove all white space inside the link, button, or component. In the examples below, whitespaces in button and link are slightly off and the link underline on hover is a bit wide.
 </div>
 
-# Link without Whitespace
+## Link without Whitespace
 <div class="sheet-example">
 	<a href="#1">
 		<span class="inline-item inline-item-before"><svg class="lexicon-icon lexicon-icon-share" focusable="false" role="presentation"><use href="/images/icons/icons.svg#share" /></svg></span>link<span class="inline-item inline-item-middle"><svg class="lexicon-icon lexicon-icon-question-circle" focusable="false" role="presentation"><use href="/images/icons/icons.svg#question-circle" /></svg></span><span class="inline-item inline-item-middle"><svg class="lexicon-icon lexicon-icon-question-circle" focusable="false" role="presentation"><use href="/images/icons/icons.svg#question-circle" /></svg></span><span class="inline-item inline-item-middle"><svg class="lexicon-icon lexicon-icon-question-circle" focusable="false" role="presentation"><use href="/images/icons/icons.svg#question-circle" /></svg></span>why, but ok.<span class="inline-item inline-item-after"><svg class="lexicon-icon lexicon-icon-add-cell" focusable="false" role="presentation"><use href="/images/icons/icons.svg#add-cell" /></svg></span>
@@ -33,7 +33,7 @@ Use the `inline-item inline-item-before`, `inline-item inline-item-middle`, and 
 </a>
 ```
 
-# Link with Whitespace
+## Link with Whitespace
 
 <div class="sheet-example">
 	<a href="#1">
@@ -67,7 +67,7 @@ Use the `inline-item inline-item-before`, `inline-item inline-item-middle`, and 
 </a>
 ```
 
-# Button without Whitespace
+## Button without Whitespace
 
 <div class="sheet-example">
 	<button class="btn btn-secondary" type="button"><span class="inline-item inline-item-before"><svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation"><use href="/images/icons/icons.svg#plus" /></svg></span>Secondary<span class="inline-item inline-item-after"><svg class="lexicon-icon lexicon-icon-camera" focusable="false" role="presentation"><use href="/images/icons/icons.svg#camera" /></svg></span></button>
@@ -87,7 +87,7 @@ Use the `inline-item inline-item-before`, `inline-item inline-item-middle`, and 
 </button>
 ```
 
-# Button with Whitespace
+## Button with Whitespace
 
 <div class="sheet-example">
 	<button class="btn btn-secondary" type="button">
@@ -117,11 +117,11 @@ Use the `inline-item inline-item-before`, `inline-item inline-item-middle`, and 
 </button>
 ```
 
-# Close
+## Close
 
 A Button or Link for closing stuff.
 
-## Anchor
+### Anchor
 
 <div class="sheet-example">
 	<a aria-label="Close" class="close" href="#1" role="button">
@@ -161,7 +161,7 @@ A Button or Link for closing stuff.
 </a>
 ```
 
-## Button
+### Button
 
 <div class="sheet-example">
 	<button aria-label="Close" class="close" type="button">
