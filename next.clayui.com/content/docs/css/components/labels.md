@@ -8,11 +8,11 @@ description: "Labels categorize information, providing quick recognition."
 - [Colors](#colors)
 - [Sizes](#sizes)
 - [Variations](#variations)
-	- [Simple Label](#simple-label)
-	- [Label Dismissible](#label-dismissible)
-	- [Label with Link](#label-with-link)
-	- [Interactive Label](#interactive-label)
-	- [Labels as an Anchor Tag](#labels-as-an-anchor-tag)
+	- [Simple](#label)
+	- [Dismissible](#dismissible)
+	- [Link](#link)
+	- [Interactive](#interactive)
+	- [Anchor Tag](#anchor-tag)
 
 </div>
 
@@ -24,7 +24,7 @@ description: "Labels categorize information, providing quick recognition."
 	See the implementation of the <a href="/docs/components/labels.html">Labels component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/labels/">Labels Pattern</a>.
 </div>
 
-### Colors
+## Colors
 
 <div class="sheet-example">
 	<span class="label label-primary"><span class="label-item label-item-expand">Primary</span></span>
@@ -48,9 +48,9 @@ description: "Labels categorize information, providing quick recognition."
 <span class="label label-dark"><span class="label-item label-item-expand">Dark</span></span>
 ```
 
-### Sizes
+## Sizes
 
-Use `label-lg` to make the label larger, or use the mixin label-size($sassMap) to create a custom sized label:
+Use `label-lg` to make the label larger, or use the mixin `label-size($sassMap)` to create a custom sized label:
 
 <div class="sheet-example">
 	<span class="label label-secondary"><span class="label-item label-item-expand">Normal Label</span></span>
@@ -70,9 +70,9 @@ Use `label-lg` to make the label larger, or use the mixin label-size($sassMap) t
 </span>
 ```
 
-### Variations
+## Variations
 
-#### Simple Label
+### Simple
 
 <div class="sheet-example">
 	<span class="label label-secondary"><span class="label-item label-item-expand">Simple Label</span></span>
@@ -86,7 +86,7 @@ Use `label-lg` to make the label larger, or use the mixin label-size($sassMap) t
 </span>
 ```
 
-#### Label Dismissible
+### Dismissible
 
 <div class="sheet-example">
 	<span class="label label-dismissible label-secondary">
@@ -146,7 +146,7 @@ Use `label-lg` to make the label larger, or use the mixin label-size($sassMap) t
 </span>
 ```
 
-#### Label with Link
+### Link
 
 <div class="sheet-example">
 	<span class="label label-dismissible label-lg label-success">
@@ -204,7 +204,7 @@ Use `label-lg` to make the label larger, or use the mixin label-size($sassMap) t
 </span>
 ```
 
-#### Interactive Label
+### Interactive
 
 Add the `tabindex="0"` attribute to the `.label` element to create an interactive label with multiple controls inside. The inner controls should have the attribute `tabindex="-1"` to remove them from the tab order. The inner controls can be placed back in the tab order by changing back to `tabindex="0"` with javascript.
 
@@ -282,7 +282,7 @@ Implementing Interactive Labels require custom javascript.
 </span>
 ```
 
-#### Labels as an Anchor Tag
+### Anchor Tag
 
 <div class="sheet-example">
 	<a class="label label-primary" href="#1">

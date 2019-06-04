@@ -9144,10 +9144,6 @@ button.label {
 .card-interactive label {
   cursor: pointer; }
 
-.card-interactive-primary.card:hover,
-.card-interactive-primary .card:hover {
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-
 .card-interactive-primary.card:focus,
 .card-interactive-primary .card:focus {
   background-color: #f8f9fa; }
@@ -14526,7 +14522,7 @@ a.collapse-icon {
 .panel-header-link {
   color: inherit;
   display: block;
-  transition: border-color 0.1s ease; }
+  transition: border-color 0.1s ease, border-radius 0.5s ease; }
   .panel-header-link:hover {
     color: inherit; }
   .panel-header-link:focus {
@@ -14672,6 +14668,8 @@ a.collapse-icon {
     border-style: solid;
     border-width: 0 0 1px 0;
     margin-bottom: 1rem; }
+    .panel-unstyled .panel-header.collapsed {
+      border-color: #adb5bd; }
   .panel-unstyled .panel-body {
     margin-bottom: 1rem;
     padding-top: 0; }

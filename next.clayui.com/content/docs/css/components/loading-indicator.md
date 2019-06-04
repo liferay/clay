@@ -27,7 +27,7 @@ description: "The loading indicator shows the user that an external process, lik
 	These animations are made using only CSS.
 </div>
 
-### Sizes
+## Sizes
 
 <div class="sheet-example">
 	<div class="row">
@@ -41,9 +41,9 @@ description: "The loading indicator shows the user that an external process, lik
 <span aria-hidden="true" class="loading-animation"></span>
 ```
 
-### Variations
+## Variations
 
-#### Regular
+### Regular
 
 <div class="sheet-example">
 	<span aria-hidden="true" class="loading-animation loading-animation"></span>
@@ -53,7 +53,7 @@ description: "The loading indicator shows the user that an external process, lik
 <span aria-hidden="true" class="loading-animation loading-animation"></span>
 ```
 
-#### Light
+### Light
 
 <div class="bg-dark sheet-example">
 	<span aria-hidden="true" class="loading-animation loading-animation-light"></span>
@@ -63,9 +63,9 @@ description: "The loading indicator shows the user that an external process, lik
 <span aria-hidden="true" class="loading-animation loading-animation-light"></span>
 ```
 
-### Compositions
+## Compositions
 
-#### Button
+### Button
 
 <div class="sheet-example">
 	<button class="btn btn-primary" type="button">

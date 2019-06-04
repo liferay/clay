@@ -6,12 +6,8 @@ description: "Progress bar indicates the percentage completed of a task."
 <div class="nav-toc">
 
 - [Colors](#colors)
-    - [Progress](#progress)
-    - [Progress Group](#progress-group)
+    - [Group](#group)
 - [Sizes](#sizes)
-    - [Normal](#normal)
-    - [Large](#large)
-    - [Height](#height)
 - [Groups](#groups)
     - [Addon](#addon)
     - [Stacked](#stacked)
@@ -30,15 +26,13 @@ description: "Progress bar indicates the percentage completed of a task."
 	See the implementation of the <a href="/docs/components/progress-bars.html">Progress Bars component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/progress-bars/">Progress Bars Pattern</a>.
 </div>
 
-# Colors
+## Colors
 
 Add `progress-danger`, `progress-info`, `progress-success`, or `progress-warning` to `progress-group` or `progress` to provide visual feedback for different progress states. Color a block of text or icon by wrapping it with progress-group-feedback.
 
 <div class="clay-site-alert alert alert-warning">
-    Using the color classes will set the background-color on progress-bar, no need to use [Bootstrap 4 background utility classes](https://getbootstrap.com/docs/4.3/components/progress/#backgrounds).
+    Using the color classes will set the background-color on progress-bar, no need to use <a alt="Bootstrap 4 background utility classes" href="https://getbootstrap.com/docs/4.3/components/progress/#backgrounds">Bootstrap 4 background utility classes</a>.
 </div>
-
-## Progress
 
 <div class="sheet-example">
     <div class="mb-3 progress">
@@ -76,7 +70,7 @@ Add `progress-danger`, `progress-info`, `progress-success`, or `progress-warning
 </div>
 ```
 
-## Progress Group
+### Group
 
 <div class="sheet-example">
     <div class="progress-group">
@@ -192,9 +186,9 @@ Add `progress-danger`, `progress-info`, `progress-success`, or `progress-warning
 </div>
 ```
 
-# Sizes
+## Sizes
 
-## Normal
+We only set a `height` value on the `.progress`, so if you change that value the inner `.progress-bar` will automatically resize accordingly.
 
 <div class="sheet-example">
     <div class="progress mb-2">
@@ -206,11 +200,6 @@ Add `progress-danger`, `progress-info`, `progress-success`, or `progress-warning
         </div>
         <div class="progress-group-addon">60%</div>
     </div>
-</div>
-
-## Large
-
-<div class="sheet-example">
     <div class="mb-2 progress progress-lg">
         <div aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 45%;">45%</div>
     </div>
@@ -220,9 +209,21 @@ Add `progress-danger`, `progress-info`, `progress-success`, or `progress-warning
         </div>
         <div class="progress-group-addon">60%</div>
     </div>
+    <div class="progress" style="height: 20px;">
+        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
 </div>
 
 ```html
+<div class="progress">
+    <div aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 25%;">25%</div>
+</div>
+<div class="progress-group">
+    <div class="progress">
+        <div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 60%;"></div>
+    </div>
+    <div class="progress-group-addon">60%</div>
+</div>
 <div class="progress progress-lg">
     <div aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 45%;">45%</div>
 </div>
@@ -232,27 +233,14 @@ Add `progress-danger`, `progress-info`, `progress-success`, or `progress-warning
     </div>
     <div class="progress-group-addon">60%</div>
 </div>
-```
-
-## Height
-
-We only set a `height` value on the `.progress`, so if you change that value the inner `.progress-bar` will automatically resize accordingly.
-
-<div class="sheet-example">
-    <div class="progress" style="height: 20px;">
-        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
-</div>
-
-```html
 <div class="progress" style="height: 20px;">
     <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 ```
 
-# Groups
+## Groups
 
-## Addon
+### Addon
 
 Place an addon on either side of a progress component with `progress-group` and `progress-group-addon`.
 
@@ -334,7 +322,7 @@ Place an addon on either side of a progress component with `progress-group` and 
 </div>
 ```
 
-## Stacked
+### Stacked
 
 Add `progress-group-stacked` to `progress-group` stack the addons and progress component.
 
@@ -366,7 +354,7 @@ Add `progress-group-stacked` to `progress-group` stack the addons and progress c
 </div>
 ```
 
-# Multiple Progress Bars
+## Multiple Progress Bars
 
 If you need multiple progress bars, use [Bootstrap 4's background utilities](https://getbootstrap.com/docs/4.3/components/progress/#multiple-bars), `bg-primary`, `bg-success`, `bg-info`, `bg-warning`, and `bg-danger` on `progress-bar`.
 
@@ -429,7 +417,7 @@ If you need multiple progress bars, use [Bootstrap 4's background utilities](htt
 ```
 
 
-# Labels
+## Labels
 
 Add labels to your progress bars by placing text within the `.progress-bar`.
 
@@ -445,7 +433,7 @@ Add labels to your progress bars by placing text within the `.progress-bar`.
 </div>
 ```
 
-# Striped
+## Striped
 
 Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gradient over the progress bar’s background color.
 
@@ -485,7 +473,7 @@ Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gra
 </div>
 ```
 
-# Animated Stripes
+## Animated Stripes
 
 The striped gradient can also be animated. Add `.progress-bar-animated` to `.progress-bar` to animate the stripes right to left via CSS3 animations.
 
