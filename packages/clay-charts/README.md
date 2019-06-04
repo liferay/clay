@@ -1,58 +1,17 @@
 # clay-charts
 
-React.js implementation of Clay built on [react-billboardjs](https://github.com/planttheidea/react-billboardjs)
+React implementation of charts in clay-css
 
 ## Setup
 
-1. Install local dependencies:
+1. Install `yarn`
+
+2. Install local dependencies:
 
 ```
 yarn
 ```
 
-2. Build the code:
+## Contribute
 
-```
-yarn compile
-```
-
-## Running Demos
-
-1. Install local dependencies:
-
-```
-yarn
-```
-
-2. Start development server
-
-```
-yarn start
-```
-
-3. Navigate to `localhost:8080`
-
-## Basic Usage
-
-See [billboard.js](https://naver.github.io/billboard.js/release/latest/doc/) and [react-billboardjs](https://github.com/planttheidea/react-billboardjs) for a more in depth API
-
-```jsx
-import ClayCharts from 'clay-charts-react';
-
-<ClayCharts
-	data={{
-		columns: [['data1', 100, 20, 30], ['data2', 20, 70, 100]],
-		type: 'bar'
-	}}
-/>;
-
-// or
-
-import {BarChart} from 'clay-charts-react';
-
-<BarChart
-	data={{
-		columns: [['data1', 100, 20, 30], ['data2', 20, 70, 100]]
-	}}
-/>;
-```
+We'd love to get contributions from you! Please, check our [Contributing Guidelines](https://github.com/liferay/clay/blob/master/CONTRIBUTING.md) to see how you can help us improve.

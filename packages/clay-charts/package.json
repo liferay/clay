@@ -1,50 +1,39 @@
 {
-	"name": "@clayui/clay-charts",
+	"name": "@clayui/charts",
 	"version": "3.0.0",
 	"description": "React.js wrapper for D3 and billboard.js",
 	"private": true,
 	"main": "lib/index.js",
+	"types": "lib/index.d.ts",
 	"ts:main": "src/index.tsx",
 	"scripts": {
-		"build": "npm run sass && npm run compile && npm run copySvg",
-		"compile": "./node_modules/.bin/babel -d lib/ src/ -s --ignore src/__tests__",
+		"build:types": "cross-env NODE_ENV=production tsc --project ./tsconfig.declarations.json",
+		"build": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib --extensions .ts,.tsx",
 		"copySvg": "ncp src/svg lib/svg",
-		"prepublish": "npm run build",
+		"prepublishOnly": "npm run sass && npm run build && npm run build:types && npm run copySvg",
 		"sass": "node-sass src/scss/main.scss -o lib/css --source-map true",
-		
 		"test": "jest --config ../../jest.config.js"
 	},
-	"author": "Bryce Osterhaus",
-	"license": "BSD-3-Clause",
+	"keywords": [
+		"clay",
+		"react"
+	],
 	"dependencies": {
-		"d3": "^5.7.0",
-		"metal": "^2.16.6",
+		"billboard.js": "^1.8.0",
+		"classnames": "^2.2.6",
+		"d3": "^5.9.2",
 		"react-billboardjs": "^1.4.3"
 	},
 	"peerDependencies": {
-		"react": "^16.5.2",
-		"react-dom": "^16.6.0"
+		"react": "^16.8.1",
+		"react-dom": "^16.8.1"
 	},
+	"browserslist": [
+		"extends browserslist-config-clay"
+	],
 	"devDependencies": {
-		"babel-cli": "^6.24.1",
-		"babel-core": "^6.25.0",
-		"babel-loader": "^7.0.0",
-		"babel-preset-env": "^1.6.0",
-		"babel-preset-react": "^6.24.1",
-		"babel-preset-stage-3": "^6.24.1",
-		"css-loader": "^1.0.0",
-		"html-webpack-plugin": "^3.2.0",
+		"@types/d3": "^5.7.2",
 		"ncp": "^2.0.0",
-		"node-sass": "^4.11.0",
-		"raf": "^3.4.1",
-		"react": "^16.6.0",
-		"react-billboardjs": "^1.4.3",
-		"react-dom": "^16.6.0",
-		"react-test-renderer": "^16.6.1",
-		"sass-loader": "^7.1.0",
-		"style-loader": "^0.23.1",
-		"webpack": "^4.29.0",
-		"webpack-cli": "^3.1.2",
-		"webpack-dev-server": "^3.1.10"
+		"node-sass": "^4.12.0"
 	}
 }

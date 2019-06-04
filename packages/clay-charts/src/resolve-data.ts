@@ -5,20 +5,18 @@
  */
 import {isDefAndNotNull, isFunction, isObject, isString} from 'metal';
 
-/**
- * @param {Array|Function|Object} data
- * @return {Promise}
- */
-export default function resolveData(data) {
+type DataType = Array<any> | Function | RequestInfo;
+
+export default function resolveData(data: DataType): Promise<DataType> {
 	return new Promise((resolve, reject) => {
 		if (Array.isArray(data) || (isObject(data) && !isFunction(data))) {
 			resolve(data);
-		} else if (isFunction(data)) {
-			data().then(val => resolve(val));
+		} else if (data instanceof Function) {
+			data().then((val: any) => resolve(val));
 		} else if (isString(data)) {
-			fetch(data, {cors: 'cors'})
+			fetch(data, {mode: 'cors'})
 				.then(res => res.json())
-				.then(res => {
+				.then((res: any) => {
 					if (!isDefAndNotNull(res)) {
 						return reject(res);
 					}

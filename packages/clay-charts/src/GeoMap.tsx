@@ -3,16 +3,26 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import {isServerSide} from 'metal';
+
 import * as d3 from 'd3';
 import React from 'react';
-
 import resolveData from './resolve-data';
+import {Data, Grid, LineOptions, PointOptions} from 'billboard.js';
+import {FeatureCollection} from 'geojson';
+import {
+	GeoPath,
+	GeoPermissibleObjects,
+	GeoProjection,
+	ScaleLinear,
+	Selection,
+	ValueFn,
+} from 'd3';
+import {isServerSide} from 'metal';
 
 const DEFAULT_COLOR = {
 	range: {
-		min: '#b1d4ff',
 		max: '#0065e4',
+		min: '#b1d4ff',
 	},
 	selected: '#4b9bff',
 	value: 'pop_est',
@@ -20,17 +30,33 @@ const DEFAULT_COLOR = {
 
 /**
  * Geomap Base class.
- * @class Geomap
  */
 class GeomapBase {
-	/**
-	 * @inheritDoc
-	 */
-	constructor(config) {
+	_color?: any;
+	_data: any;
+	_domainMax?: number;
+	_domainMin?: number;
+	_element?: any;
+	_handleClickHandler?: ValueFn<any, unknown, void>;
+	_height?: number | string;
+	_internalPollingInterval?: number | null;
+	_onDataLoadHandler?: any;
+	_pollingInterval?: number;
+	_selected?: any;
+	_width?: number | string;
+	colorScale?: ScaleLinear<number, number>;
+	mapLayer?: Selection<SVGGElement, unknown, null, undefined>;
+	path?: GeoPath<any, GeoPermissibleObjects>;
+	pollingInterval?: number;
+	projection?: GeoProjection;
+	rect?: Selection<SVGRectElement, unknown, null, undefined>;
+	svg?: Selection<SVGSVGElement, unknown, null, undefined>;
+	svgGroup?: Selection<SVGGElement, unknown, null, undefined>;
+
+	constructor(config: any) {
 		this._data = config.data;
 		this._element = config.element;
 		this._color = config.color || DEFAULT_COLOR;
-		this._id = config.id;
 		this._pollingInterval = config.pollingInterval;
 
 		this._height = '100%';
@@ -67,10 +93,11 @@ class GeomapBase {
 			.attr('height', h)
 			.on('click', this._handleClickHandler);
 
-		const bounds = this.svg.node().getBoundingClientRect();
+		const bounds = this.svg.node()!.getBoundingClientRect();
 
 		this.svgGroup = this.svg.append('g');
 		this.mapLayer = this.svgGroup.append('g');
+
 		this.projection = d3
 			.geoMercator()
 			.scale(100)
@@ -82,7 +109,7 @@ class GeomapBase {
 		this._onDataLoadHandler = this._onDataLoad.bind(this);
 
 		resolveData(this._data)
-			.then(val => {
+			.then((val: any) => {
 				this._onDataLoadHandler.apply(this, [null, val]);
 
 				if (this._internalPollingInterval) {
@@ -91,11 +118,11 @@ class GeomapBase {
 
 				if (this.pollingInterval) {
 					this._internalPollingInterval = setInterval(() => {
-						this._updateData(this.data);
+						this._updateData(this._data);
 					}, this._pollingInterval);
 				}
 			})
-			.catch(err => {
+			.catch((err: Error) => {
 				this._onDataLoadHandler.apply(this, [err, null]);
 			});
 	}
@@ -120,16 +147,15 @@ class GeomapBase {
 
 	/**
 	 * Fill function
-	 * @param {Object} d
-	 * @protected
-	 * @return {Number}
 	 */
-	_fillFn(d) {
+	_fillFn(d: any) {
 		const value = d && d.properties ? d.properties[this._color.value] : 0;
-		return this.colorScale(value);
+
+		return this.colorScale!(value);
 	}
+
 	/**
-	 * @inheritDoc
+	 * Returns the height and width size.
 	 */
 	getSize() {
 		return {
@@ -140,10 +166,8 @@ class GeomapBase {
 
 	/**
 	 * Click handler
-	 * @param {Object} d
-	 * @protected
 	 */
-	_handleClick(d) {
+	_handleClick(d: any) {
 		if (d && this._selected !== d) {
 			this._selected = d;
 		} else {
@@ -151,53 +175,44 @@ class GeomapBase {
 		}
 
 		// Highlight the clicked province
-		this.mapLayer
-			.selectAll('path')
-			.style('fill', d =>
-				this._selected && d === this._selected
-					? this._color.selected
-					: this._fillFn.bind(this)(d)
-			);
+		this.mapLayer!.selectAll('path').style('fill', (d: any) =>
+			this._selected && d === this._selected
+				? this._color.selected
+				: this._fillFn.bind(this)(d)
+		);
 	}
 
 	/**
 	 * Mouse over handler
-	 * @param {Object} feature
-	 * @param {Number} idx
-	 * @param {Array} selection
-	 * @protected
 	 */
-	_handleMouseOver(feature, idx, selection) {
+	_handleMouseOver(feature: object, idx: number, selection: [any]) {
 		const node = selection[idx];
 		d3.select(node).style('fill', this._color.selected);
 	}
 
 	/**
 	 * Mouse over handler
-	 * @param {Object} feature
-	 * @param {Number} idx
-	 * @param {Array} selection
-	 * @protected
 	 */
-	_handleMouseOut(feature, idx, selection) {
+	_handleMouseOut(feature: object, idx: number, selection: [any]) {
 		const node = selection[idx];
+
 		d3.select(node).style('fill', this._fillFn.bind(this));
 	}
 
 	/**
 	 * Data load handler
-	 * @param {Error} err
-	 * @param {Object} mapData
-	 * @protected
 	 */
-	_onDataLoad(err, mapData) {
+	_onDataLoad(err: Error, mapData: FeatureCollection) {
 		if (err) {
 			throw err;
 		}
+
 		const features = mapData.features;
 
 		// Calculate domain based on values received
-		const values = features.map(f => f.properties[this._color.value]);
+		const values = features.map(
+			(f: any) => f.properties[this._color.value]
+		);
 
 		this._domainMin = Math.min.apply(null, values);
 		this._domainMax = Math.max.apply(null, values);
@@ -207,25 +222,27 @@ class GeomapBase {
 			.domain([this._domainMin, this._domainMax])
 			.range([this._color.range.min, this._color.range.max]);
 
-		this.mapLayer
-			.selectAll('path')
+		this.mapLayer!.selectAll('path')
 			.data(features)
 			.enter()
 			.append('path')
-			.attr('d', this.path)
+			.attr('d', this.path as any)
 			.attr('vector-effect', 'non-scaling-stroke')
 			.attr('fill', this._fillFn.bind(this))
-			.on('click', this._handleClickHandler)
-			.on('mouseout', this._handleMouseOut.bind(this))
-			.on('mouseover', this._handleMouseOver.bind(this));
+			.on('click', this._handleClickHandler!)
+			.on('mouseout', this._handleMouseOut.bind(this) as ValueFn<
+				SVGPathElement,
+				unknown,
+				void
+			>)
+			.on('mouseover', this._handleMouseOver.bind(this) as ValueFn<
+				SVGPathElement,
+				unknown,
+				void
+			>);
 	}
 
-	/**
-	 * @inheritDoc
-	 * @param {Object} data The updated data
-	 * @protected
-	 */
-	_updateData(data) {
+	_updateData(data: any) {
 		resolveData(data)
 			.then(val => {
 				this._onDataLoadHandler.apply(this, [null, val]);
@@ -236,61 +253,45 @@ class GeomapBase {
 	}
 }
 
+interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+	color: string;
+	data: {data: Data};
+	element: any;
+	grid: Grid;
+	line: LineOptions;
+	point: PointOptions;
+	pollingInterval: number;
+	[key: string]: any;
+}
+
 /**
  * GeoMap Chart component.
- * @extends React.Component
- * @param {Object} props
- * @return {ReactElement}
  */
-export default class GeomapReact extends React.Component {
-	/** @inheritdoc */
-	constructor(props) {
-		super(props);
+const Geomap: React.FunctionComponent<IProps> = ({data, ...otherProps}) => {
+	const containerRef = React.useRef(null);
+	const geoMapInstanceRef = React.useRef<any>();
 
-		this._containerRef = React.createRef();
-	}
+	React.useEffect(() => {
+		if (geoMapInstanceRef) {
+			geoMapInstanceRef.current = new GeomapBase({
+				...otherProps,
+				data: data.data,
+				element: containerRef.current,
+			});
 
-	/** @inheritdoc */
-	componentDidMount() {
-		const {data, ...otherProps} = this.props;
+			geoMapInstanceRef.current.attached();
+		}
 
-		this._geoMapInstance = new GeomapBase({
-			...otherProps,
-			data: data.data,
-			element: this._containerRef.current,
-		});
+		return () => {
+			geoMapInstanceRef.current.disposed();
+		};
+	}, []);
 
-		this._geoMapInstance.attached();
-	}
+	const {height = '100%', width = '100%'} = geoMapInstanceRef.current
+		? geoMapInstanceRef.current.getSize()
+		: {};
 
-	/** @inheritdoc */
-	componentWillUnmount() {
-		this._geoMapInstance.disposed();
-	}
+	return <div style={{height, width}} {...otherProps} ref={containerRef} />;
+};
 
-	/** @inheritdoc */
-	render() {
-		const {
-			color,
-			data,
-			element,
-			grid,
-			line,
-			point,
-			pollingInterval,
-			...otherProps
-		} = this.props;
-
-		const {height = '100%', width = '100%'} = this._geoMapInstance
-			? this._geoMapInstance.getSize()
-			: {};
-
-		return (
-			<div
-				style={{height, width}}
-				{...otherProps}
-				ref={this._containerRef}
-			/>
-		);
-	}
-}
+export default Geomap;
