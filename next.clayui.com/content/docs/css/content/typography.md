@@ -26,7 +26,7 @@ redirectFrom: "/docs/layout/typography.html"
 
 </div>
 
-# Headings
+## Headings
 
 <div class="sheet-example">
     <h1>h1 Article Heading <small>Sub text</small></h1>
@@ -46,7 +46,7 @@ redirectFrom: "/docs/layout/typography.html"
 <h6>h6 Article Heading <small>Sub text</small></h6>
 ```
 
-# Lead
+## Lead
 
 <div class="sheet-example">
     <p class="lead"> Lead Body Text: Milk filter lungo as galão roast that crema blue mountain shop turkish. </p>
@@ -56,7 +56,7 @@ redirectFrom: "/docs/layout/typography.html"
 <p class="lead"> Lead Body Text: Milk filter lungo as galão roast that crema blue mountain shop turkish. </p>
 ```
 
-# Inline Text Elements
+## Inline Text Elements
 
 <div class="sheet-example">
     <p><a href="#1">Anchor Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</a></p>
@@ -92,7 +92,7 @@ redirectFrom: "/docs/layout/typography.html"
 <p>capitalized text: <span class="text-capitalize">capitalized text</span></p>
 ```
 
-# Reference Mark
+## Reference Mark
 
 Use `<span class="reference-mark"></span>` to add a reference mark next to some text.
 
@@ -112,7 +112,7 @@ Use `<span class="reference-mark"></span>` to add a reference mark next to some 
 <div><a class="reference-mark" href="#referenceMark4"><svg class="lexicon-icon lexicon-icon-asterisk" focusable="false" role="presentation"><use href="/images/icons/icons.svg#asterisk" /></svg></a> A reference to the text above, respectively.</div>
 ```
 
-# Text Truncate
+## Text Truncate
 
 Shorten long lines of text with the `text-truncate` class. This uses `display: block;` and should be used to truncate text in block level elements.
 
@@ -124,7 +124,7 @@ Shorten long lines of text with the `text-truncate` class. This uses `display: b
 <p class="text-truncate">Milk filter lungo as galão roast that crema blue mountain shop turkish. Milk filter lungo as galão roast that crema blue mountain shop turkish. Milk filter lungo as galão roast that crema blue mountain shop turkish.</p>
 ```
 
-## Text Truncate Inline
+### Text Truncate Inline
 
 You can also use the `text-truncate-inline` class to shorten long lines of text.
 
@@ -140,7 +140,7 @@ You can also use the `text-truncate-inline` class to shorten long lines of text.
 <a class="text-truncate-inline" href="#1"><span class="text-truncate">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span></a> Milk filter lungo as galão roast that crema <a class="text-truncate-inline" href="#1"><span class="text-truncate">
 ```
 
-# Contextual Texts
+## Contextual Texts
 
 <div class="sheet-example">
     <div>
@@ -176,7 +176,7 @@ You can also use the `text-truncate-inline` class to shorten long lines of text.
 <a href="#1" class="text-danger">text-danger: Milk filter lungo as galão roast that crema blue mountain shop turkish.</a>
 ```
 
-## Contextual Backgrounds
+### Contextual Backgrounds
 
 <div class="sheet-example">
     <div>
@@ -208,7 +208,7 @@ You can also use the `text-truncate-inline` class to shorten long lines of text.
 <span class="bg-danger">bg-danger: Milk filter lungo as galão roast that crema blue mountain shop turkish.</span>
 ```
 
-# Address
+## Address
 
 <div class="sheet-example">
     <address>
@@ -236,7 +236,7 @@ You can also use the `text-truncate-inline` class to shorten long lines of text.
 </address>
 ```
 
-# Inline Code
+## Inline Code
 
 <div class="sheet-example">
     <p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
@@ -246,7 +246,7 @@ You can also use the `text-truncate-inline` class to shorten long lines of text.
 <p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
 ```
 
-# User Input
+## User Input
 
 <div class="sheet-example">
     <p>For example, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd> to edit settings.</p>
@@ -256,7 +256,7 @@ You can also use the `text-truncate-inline` class to shorten long lines of text.
 <p>For example, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd> to edit settings.</p>
 ```
 
-# Variables
+## Variables
 
 <div class="sheet-example">
     <p>For example, <var>y</var> = <var>m</var><var>x</var> + <var>b</var></p>
@@ -266,7 +266,7 @@ You can also use the `text-truncate-inline` class to shorten long lines of text.
 <p>For example, <var>y</var> = <var>m</var><var>x</var> + <var>b</var></p>
 ```
 
-# Sample Output
+## Sample Output
 
 <div class="sheet-example">
     <samp>This text is meant to be treated as sample output from a computer program.</samp>
@@ -276,7 +276,7 @@ You can also use the `text-truncate-inline` class to shorten long lines of text.
 <samp>This text is meant to be treated as sample output from a computer program.</samp>
 ```
 
-# Blockquote
+## Blockquote
 
 <div class="sheet-example">
     <blockquote class="blockquote">
