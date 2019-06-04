@@ -29,7 +29,7 @@ description: "Alerts are used to capture the attention of the user in an intrusi
 	See the implementation of the <a href="/docs/components/alerts.html">Alerts component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/alerts/">Alerts Pattern</a>.
 </div>
 
-# Colors
+## Colors
 
 Lexicon adopts in its design system the following colors below:
 
@@ -56,7 +56,7 @@ Lexicon adopts in its design system the following colors below:
 	</div>
 </div>
 
-## Non-standard colors
+### Non-standard colors
 
 The colors below do not follow Lexicon standards but follow the idea of [​​satellite components](https://liferay.design/lexicon), Clay provides non-standard colors to give you more flexibility to build UI that belong to the product.
 
@@ -83,9 +83,9 @@ The colors below do not follow Lexicon standards but follow the idea of [​​s
 	</div>
 </div>
 
-# Examples
+## Examples
 
-## Toast
+### Toast
 
 This type of alert is specific for toast messages. These type of messages appear on the top right corner of the screen. The maximum width of a toast message is 360px, and the height can vary depending on the number of rows. It always has a close action.
 
@@ -216,7 +216,7 @@ This type of alert is specific for toast messages. These type of messages appear
 </div>
 ```
 
-## Embedded
+### Embedded
 
 Embedded alerts are meant for use in forms. Usually you will only need to use the information one. Its width depends on the width of the container it is placed in, always respecting the container margins to the content. The close action is not required for embedded alerts.
 
@@ -402,11 +402,11 @@ Stripe alerts are always placed below the last navigation element, either the he
 </div>
 ```
 
-# Non-standard examples
+## Non-standard examples
 
 These examples are not included in the Lexicon design system but they are built using foundations and Lexicon core components, these components may belong to the product or application.
 
-## Alert Lists
+### Alert Lists
 
 <div class="sheet-example">
 	<ul class="alert-list">
@@ -638,9 +638,9 @@ These examples are not included in the Lexicon design system but they are built 
 </ul>
 ```
 
-# Additional Options
+## Additional Options
 
-## Mixed HTML Content
+### Mixed HTML Content
 
 All alerts accept HTML as their content. You can use the following modifiers:
 - `.lead` inside of an alert to make the beginning of your message stand out
@@ -666,7 +666,7 @@ All alerts accept HTML as their content. You can use the following modifiers:
 </div>
 ```
 
-## Dismissible Alerts
+### Dismissible Alerts
 
 <div class="sheet-example">
 	<div class="alert alert-dismissible alert-success" role="alert">
@@ -696,7 +696,7 @@ All alerts accept HTML as their content. You can use the following modifiers:
 </div>
 ```
 
-## Alert Notifications Absolute
+### Alert Notifications Absolute
 
 An absolute positioned container for placing alerts on the top right corner relative to `.alert-container`. Use this to create sticky positioned alerts with javascript, modifying the CSS property `transform: translateY();` or `margin-top` when `scrollY` reaches a specific threshold. This component should generally be placed at the top of the page for sticky alerts aligned at the top.
 
@@ -708,7 +708,7 @@ An absolute positioned container for placing alerts on the top right corner rela
 </div>
 ```
 
-## Fixed Notifications
+### Fixed Notifications
 
 A fixed positioned container for placing alerts on the top right corner of the page. This component can generally be placed anywhere on the page.
 
