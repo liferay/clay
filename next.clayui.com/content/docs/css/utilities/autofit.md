@@ -4,16 +4,16 @@ title: "Autofit"
 
 <div class="nav-toc">
 
-- [Autofit Row](#autofit-row)
-- [Autofit Spacing](#autofit-spacing)
-- [Autofit Row Vertical Alignment](#autofit-row-vertical-alignment)
-- [Autofit Float](#autofit-float)
-	- [Autofit Float End](#autofit-float-end)
+- [Row](#row)
+- [Spacing](#spacing)
+- [Row Vertical Alignment](#row-vertical-alignment)
+- [Float](#float)
+- [Float End](#float-end)
 - [Nesting Autofit Rows](#nesting-autofit-rows)
 
 </div>
 
-# Autofit Row
+## Row
 
 Make content expand to fill remaining space or create equally spaced content with the `.autofit-row`, `.autofit-col`, and `.autofit-col-expand` classes.
 
@@ -249,7 +249,7 @@ Make content expand to fill remaining space or create equally spaced content wit
 </div>
 ```
 
-# Autofit Spacing
+## Spacing
 
 The `autofit-padded` class should be added to `autofit-row` to give padding to all `autofit-col`s that are direct children of `autofit-row`.
 
@@ -259,7 +259,7 @@ The `autofit-padded-no-gutters-y` class gives padding to all `autofit-col`s that
 
 The `autofit-padded-no-gutters` class gives padding to all `autofit-col`s that are direct children of `autofit-row`. It has negative margins on the top, right, bottom, and left to offset the padding (Generally used if nesting `.autofit-row`).
 
-# Autofit Row Vertical Alignment
+# Row Vertical Alignment
 
 Autofit Row vertically aligns to the top by default.
 
@@ -267,7 +267,7 @@ The `autofit-row-center` class vertically aligns items in `autofit-row` to the m
 
 The `autofit-row-end` class vertically aligns items in `autofit-row` to the bottom.
 
-# Autofit Float
+## Float
 
 The component `autofit-float` or `.autofit-float-{sm|md}-down` simulates the behavior of floated elements in `.autofit-row`. Items that break to a new line will be aligned to the left.
 
@@ -407,7 +407,7 @@ This pattern provides the benefit of aligning content via flexbox without losing
 </div>
 ```
 
-## Autofit Float End
+## Float End
 
 Mimic "right floated" elements.
 
@@ -554,7 +554,7 @@ Aligning items to the left will require nesting `autofit-float autofit-row` insi
 </div>
 ```
 
-# Nesting Autofit Rows
+## Nesting Autofit Rows
 
 <div class="sheet-example">
 	<div class="card">
