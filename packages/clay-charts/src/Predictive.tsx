@@ -6,7 +6,6 @@
 import BillboardChart from 'react-billboardjs';
 import React from 'react';
 import {Data} from 'billboard.js';
-import {isDefAndNotNull, isNumber} from 'metal';
 
 interface IProps {
 	data: Data;
@@ -27,7 +26,7 @@ const PredictiveChart: React.FunctionComponent<IProps> = ({
 		columns = columns.map((dataSeries: any) => {
 			if (dataSeries[0] !== 'x') {
 				dataSeries = dataSeries.map((element: any) => {
-					return isNumber(element)
+					return typeof element === 'number'
 						? {
 								high: element,
 								low: element,
@@ -43,7 +42,7 @@ const PredictiveChart: React.FunctionComponent<IProps> = ({
 
 	const regions = [];
 
-	if (isDefAndNotNull(predictionDate)) {
+	if (predictionDate) {
 		regions.push({
 			axis: 'x',
 			start: predictionDate,

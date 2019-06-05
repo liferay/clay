@@ -16,8 +16,8 @@ export const DEFAULT_COLORS = [
 ];
 
 export const DEFAULT_GRID_OBJECT = {
-	x: {show: true},
-	y: {show: true},
+	x: { show: true },
+	y: { show: true },
 };
 
 export const DEFAULT_LINE_CLASSES = [

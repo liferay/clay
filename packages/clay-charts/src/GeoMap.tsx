@@ -17,7 +17,6 @@ import {
 	Selection,
 	ValueFn,
 } from 'd3';
-import {isServerSide} from 'metal';
 
 const DEFAULT_COLOR = {
 	range: {
@@ -39,7 +38,7 @@ class GeomapBase {
 	_element?: any;
 	_handleClickHandler?: ValueFn<any, unknown, void>;
 	_height?: number | string;
-	_internalPollingInterval?: number | null;
+	_internalPollingInterval?: NodeJS.Timeout | null;
 	_onDataLoadHandler?: any;
 	_pollingInterval?: number;
 	_selected?: any;
@@ -67,10 +66,6 @@ class GeomapBase {
 	 * Function to call when component is first mounting/attaching
 	 */
 	attached() {
-		if (isServerSide()) {
-			return;
-		}
-
 		const w =
 			typeof this._width === 'string' ? this._width : `${this._width}px`;
 		const h =
@@ -131,10 +126,6 @@ class GeomapBase {
 	 * Function to call when disposing instance
 	 */
 	disposed() {
-		if (isServerSide()) {
-			return;
-		}
-
 		if (this._internalPollingInterval) {
 			clearInterval(this._internalPollingInterval);
 			this._internalPollingInterval = null;

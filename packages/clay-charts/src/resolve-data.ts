@@ -3,24 +3,23 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import {isDefAndNotNull, isFunction, isObject, isString} from 'metal';
 
 type DataType = Array<any> | Function | RequestInfo;
 
 export default function resolveData(data: DataType): Promise<DataType> {
 	return new Promise((resolve, reject) => {
-		if (Array.isArray(data) || (isObject(data) && !isFunction(data))) {
+		if (Array.isArray(data) || (typeof data === "object" && data !== null && typeof data !== 'function')) {
 			resolve(data);
 		} else if (data instanceof Function) {
 			data().then((val: any) => resolve(val));
-		} else if (isString(data)) {
-			fetch(data, {mode: 'cors'})
+		} else if (typeof data === 'string') {
+			fetch(data, { mode: 'cors' })
 				.then(res => res.json())
 				.then((res: any) => {
-					if (!isDefAndNotNull(res)) {
+					if (!res) {
 						return reject(res);
 					}
-					if (isDefAndNotNull(res.data)) {
+					if (res.data) {
 						return resolve(res.data);
 					} else {
 						return resolve(res);
