@@ -6,17 +6,32 @@
 
 import 'clay-css/lib/css/atlas.css';
 import ClayCard from '../src';
+import ClayCheckbox from '@clayui/checkbox';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClaySticker from '@clayui/sticker';
 import React from 'react';
-import {ClayCheckboxWithState} from '../fixtures/ClayCheckboxWithState';
 import {storiesOf} from '@storybook/react';
 
 const contentImage = require('./static/content.svg');
 const portletImage = require('./static/portlet.svg');
 
 const spritemap = require('clay-css/lib/images/icons/icons.svg');
+
+const ClayCheckboxWithState = (props: any) => {
+	const [value, setValue] = React.useState<boolean>(false);
+
+	return (
+		<ClayCheckbox
+			checked={value}
+			disabled={false}
+			indeterminate={false}
+			onChange={() => setValue(val => !val)}
+		>
+			{props.children}
+		</ClayCheckbox>
+	);
+};
 
 storiesOf('ClayCard', module)
 	.add('with folder card', () => (

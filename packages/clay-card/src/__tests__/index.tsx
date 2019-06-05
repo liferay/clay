@@ -5,12 +5,27 @@
  */
 
 import ClayCard from '../index';
+import ClayCheckbox from '@clayui/checkbox';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClaySticker from '@clayui/sticker';
 import React from 'react';
-import {ClayCheckboxWithState} from '../../fixtures/ClayCheckboxWithState';
 import {cleanup, render} from 'react-testing-library';
+
+const ClayCheckboxWithState = (props: any) => {
+	const [value, setValue] = React.useState<boolean>(false);
+
+	return (
+		<ClayCheckbox
+			checked={value}
+			disabled={false}
+			indeterminate={false}
+			onChange={() => setValue(val => !val)}
+		>
+			{props.children}
+		</ClayCheckbox>
+	);
+};
 
 describe('ClayCard', () => {
 	afterEach(cleanup);
