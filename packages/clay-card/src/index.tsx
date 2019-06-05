@@ -12,21 +12,12 @@ import {Body} from './Body';
 import {Description} from './Description';
 import {Detail} from './Detail';
 import {Group} from './Group';
+import {IContext} from './Context';
 
 type CardDisplayType = 'file' | 'image' | 'user';
 
-export interface ICardProps {
+export interface ICardProps extends IContext {
 	displayType?: CardDisplayType;
-
-	/**
-	 * This property, when enabled, is used to apply horizontal styles into cards.
-	 */
-	horizontal?: boolean;
-
-	/**
-	 * This property, when enabled, is used to apply interactive styles into cards.
-	 */
-	interactive?: boolean;
 
 	/**
 	 * Flag that indicates if the card can be selectable.
@@ -54,7 +45,7 @@ const ClayCard: React.FunctionComponent<IProps> & {
 	...otherProps
 }) => {
 	const Content: React.FunctionComponent<IProps> = ({children}) => (
-		<Context.Provider value={{displayType, horizontal, interactive}}>
+		<Context.Provider value={{horizontal, interactive}}>
 			{children}
 		</Context.Provider>
 	);
