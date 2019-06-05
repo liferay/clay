@@ -3,18 +3,17 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+
+import ClayButton from '@clayui/button';
+import ClayCheckboxWithState from '../fixtures/ClayCheckboxWithState';
+import ClayDropdownWithTrigger from '../fixtures/ClayDropdownWithTrigger';
+import ClayIcon from '@clayui/icon';
+import ClayLabel from '@clayui/label';
+import ClayProgressBar from '@clayui/progress-bar';
 import ClayTable from '../src';
 import React from 'react';
 import {boolean, select} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-
-import ClayButton from '@clayui/button';
-import ClayIcon from '@clayui/icon';
-import ClayLabel from '@clayui/label';
-import ClayProgressBar from '@clayui/progress-bar';
-
-import ClayCheckboxWithState from '../fixtures/ClayCheckboxWithState';
-import ClayDropdownWithTrigger from '../fixtures/ClayDropdownWithTrigger';
 
 import 'clay-css/lib/css/atlas.css';
 

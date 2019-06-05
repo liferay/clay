@@ -4,12 +4,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
-import classNames from 'classnames';
-
 import Body from './Body';
 import Cell from './Cell';
+import classNames from 'classnames';
 import Head from './Head';
+import React from 'react';
 import Row from './Row';
 
 type ResposiveSizeType = 'lg' | 'md' | 'sm' | 'xl';
