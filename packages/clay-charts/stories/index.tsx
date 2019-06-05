@@ -11,17 +11,30 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 
 const COLUMNS = [['data1', 100, 20, 30], ['data2', 20, 70, 100]];
+const COLUMNS_2 = [['data1', 10, 50, 60], ['data2', 70, 30, 10]];
 
 const MAP_DATA = require('./static/map.json');
 
+const ChartWithState = () => {
+	const [active, setActive] = React.useState(false);
+
+	return (
+		<div>
+			<button onClick={() => setActive(val => !val)}>
+				{'Change Data'}
+			</button>
+
+			<BarChart
+				data={{
+					columns: active ? COLUMNS : COLUMNS_2,
+				}}
+			/>
+		</div>
+	);
+};
+
 storiesOf('ClayCharts', module)
-	.add('bar', () => (
-		<BarChart
-			data={{
-				columns: COLUMNS,
-			}}
-		/>
-	))
+	.add('bar', () => <ChartWithState />)
 	.add('bubble', () => (
 		<BubbleChart
 			data={{

@@ -32,13 +32,13 @@ const DEFAULT_COLOR = {
  */
 class GeomapBase {
 	_color?: any;
-	_data: any;
+	_data: Data;
 	_domainMax?: number;
 	_domainMin?: number;
 	_element?: any;
 	_handleClickHandler?: ValueFn<any, unknown, void>;
 	_height?: number | string;
-	_internalPollingInterval?: NodeJS.Timeout | null;
+	_internalPollingInterval?: any;
 	_onDataLoadHandler?: any;
 	_pollingInterval?: number;
 	_selected?: any;

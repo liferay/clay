@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import BillboardChart from 'react-billboardjs';
+import BillboardWrapper from './BillboardWrapper';
 import GeoMap from './GeoMap';
 import Predictive from './Predictive';
 import React from 'react';
@@ -66,7 +66,7 @@ export default function({
 			ChartComponent = Predictive;
 			break;
 		default:
-			ChartComponent = BillboardChart;
+			ChartComponent = BillboardWrapper;
 	}
 
 	return (

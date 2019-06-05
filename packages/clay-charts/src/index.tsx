@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as ReactBillboard from 'react-billboardjs';
 import BaseChart, {IProps, Types} from './BaseChart';
+import Billboard from './BillboardWrapper';
 import React from 'react';
 
 const setType = (type: Types) => ({data, ...otherProps}: IProps) => (
@@ -27,6 +27,6 @@ export const RadarChart = setType('radar');
 export const ScatterChart = setType('scatter');
 export const SplineChart = setType('spline');
 export const StepChart = setType('step');
-export {ReactBillboard};
+export {Billboard};
 
 export default BaseChart;

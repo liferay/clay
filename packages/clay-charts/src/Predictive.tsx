@@ -3,7 +3,8 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import BillboardChart from 'react-billboardjs';
+
+import BillboardWrapper from './BillboardWrapper';
 import React from 'react';
 import {Data} from 'billboard.js';
 
@@ -50,12 +51,14 @@ const PredictiveChart: React.FunctionComponent<IProps> = ({
 	}
 
 	return (
-		<BillboardChart
-			data={{
-				...data,
-				columns,
-			}}
-			regions={regions}
+		<BillboardWrapper
+			data={
+				{
+					...data,
+					columns,
+				} as any
+			}
+			regions={regions as any}
 			{...otherProps}
 		/>
 	);
