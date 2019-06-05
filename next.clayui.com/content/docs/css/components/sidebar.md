@@ -7,7 +7,7 @@ description: "A vertical panel that appears from the right or the left side of t
 
 - [Structure](#structure)
 - [Variations](#variation)
-    - [Sidebar Light](#sidebar-light)
+    - [Light](#light)
 
 </div>
 
@@ -15,29 +15,35 @@ description: "A vertical panel that appears from the right or the left side of t
 	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/sidebar/">Sidebar Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
 </div>
 
-# Structure
+## Structure
 
 Sidebar is an opinionated container to display related content.
 
 Is composed by:
 
+```html
 <div class="sidebar-header">
     Sidebar Header
 </div>
+```
 
+```html
 <div class="sidebar-body">
     Sidebar Body
 </div>
+```
 
+```html
 <div class="sidebar-footer">
     Sidebar Footer
 </div>
+```
 
-# Variations
+## Variations
 
-## Sidebar Light
+### Sidebar Light
 
-> Just add `sidebar-light` class on the same element that you are using `sidebar`.
+Just add `sidebar-light` class on the same element that you are using `sidebar`.
 
 <div class="sheet-example">
     <div class="sidebar sidebar-light">
