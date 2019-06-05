@@ -4,12 +4,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
 import classNames from 'classnames';
 import Context from './Context';
-
+import React from 'react';
 import {AspectRatio} from './AspectRatio';
-import {Body, CardBodyProps} from './Body';
+import {Body} from './Body';
 import {Description} from './Description';
 import {Detail} from './Detail';
 import {Group} from './Group';

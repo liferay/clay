@@ -3,6 +3,7 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+
 import {createContext} from 'react';
 
 export interface IContext {

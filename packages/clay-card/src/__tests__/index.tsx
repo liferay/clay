@@ -4,16 +4,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
-
-import {cleanup, render} from 'react-testing-library';
-
 import ClayCard from '../index';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClaySticker from '@clayui/sticker';
-
+import React from 'react';
 import {ClayCheckboxWithState} from '../../fixtures/ClayCheckboxWithState';
+import {cleanup, render} from 'react-testing-library';
 
 describe('ClayCard', () => {
 	afterEach(cleanup);

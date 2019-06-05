@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
 import classNames from 'classnames';
+import React from 'react';
 
 interface CardGroupProps extends React.HTMLAttributes<HTMLUListElement> {
 	/**

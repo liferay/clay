@@ -3,10 +3,9 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import Context from './Context';
 
 import classNames from 'classnames';
-
+import Context from './Context';
 import React from 'react';
 
 type BackgroundImageAspectRatioType = 'contain' | 'cover' | 'center';
