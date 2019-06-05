@@ -15,7 +15,7 @@ type ResposiveSizeType = 'lg' | 'md' | 'sm' | 'xl';
 
 type VerticalAlignmentType = 'bottom' | 'middle' | 'top';
 
-interface Props extends React.HTMLAttributes<HTMLTableElement> {
+interface IProps extends React.HTMLAttributes<HTMLTableElement> {
 	/**
 	 * This property vertically align the contents
 	 * inside the table body according a given position.
@@ -70,7 +70,7 @@ interface Props extends React.HTMLAttributes<HTMLTableElement> {
 	tableVerticalAlignment?: VerticalAlignmentType;
 }
 
-const ClayTable: React.FunctionComponent<Props> & {
+const ClayTable: React.FunctionComponent<IProps> & {
 	Body: typeof Body;
 	Cell: typeof Cell;
 	Head: typeof Head;

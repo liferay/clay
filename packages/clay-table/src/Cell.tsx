@@ -15,7 +15,7 @@ type TableCellBaseProps = React.ThHTMLAttributes<HTMLTableHeaderCellElement> &
 
 type TextCellAlignmentType = 'center' | 'left' | 'right';
 
-interface CellProps extends TableCellBaseProps {
+interface ICellProps extends TableCellBaseProps {
 	/**
 	 * Aligns the text inside the Cell.
 	 */
@@ -51,7 +51,7 @@ interface CellProps extends TableCellBaseProps {
 	headingTitle?: boolean;
 }
 
-const Cell: React.FunctionComponent<CellProps> = ({
+const Cell: React.FunctionComponent<ICellProps> = ({
 	align,
 	cellDelimiter,
 	children,

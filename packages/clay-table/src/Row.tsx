@@ -8,7 +8,7 @@ import classNames from 'classnames';
 import React from 'react';
 import {TDelimiterType} from './types';
 
-interface RowProps extends React.HTMLAttributes<HTMLTableRowElement> {
+interface IRowProps extends React.HTMLAttributes<HTMLTableRowElement> {
 	/**
 	 * Forces the active state inside the row.
 	 */
@@ -26,7 +26,7 @@ interface RowProps extends React.HTMLAttributes<HTMLTableRowElement> {
 	rowDelimiter?: TDelimiterType;
 }
 
-const Row: React.FunctionComponent<RowProps> = ({
+const Row: React.FunctionComponent<IRowProps> = ({
 	active = false,
 	children,
 	className,
