@@ -14,6 +14,7 @@ import {Detail} from './Detail';
 import {Group} from './Group';
 
 type CardDisplayType = 'file' | 'image' | 'user';
+
 export interface ICardProps {
 	displayType?: CardDisplayType;
 
