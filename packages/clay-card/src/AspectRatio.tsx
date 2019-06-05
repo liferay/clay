@@ -12,7 +12,8 @@ type BackgroundImageAspectRatioType = 'contain' | 'cover' | 'center';
 
 type ContainerAspectRatioType = '1/1' | '3/2' | '4/3' | '8/5' | '16/9';
 
-interface ICardAspectRatioProps extends React.HTMLAttributes<HTMLDivElement> {
+interface ICardAspectRatioProps
+	extends React.HTMLAttributes<HTMLDivElement | HTMLSpanElement> {
 	/**
 	 * Aspect ratio to be applied on the background image of the card.
 	 */

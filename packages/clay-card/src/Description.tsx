@@ -10,7 +10,8 @@ import React from 'react';
 
 type CardDescriptionDisplayType = 'text' | 'title' | 'subtitle';
 
-interface ICardDescriptionProps extends React.HTMLAttributes<HTMLDivElement> {
+interface ICardDescriptionProps
+	extends React.HTMLAttributes<HTMLDivElement | HTMLSpanElement> {
 	/**
 	 * Type of description that can be applied for a text.
 	 */
