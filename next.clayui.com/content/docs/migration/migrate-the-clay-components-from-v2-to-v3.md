@@ -157,7 +157,7 @@ ClayCard v3 became a Low-Level API, decomposed to ClayCard.AspectRatio, ClayCard
 
 ### API Changes:
 
-- Only the `spritemap` property was keeped comparing to the v2 API. Take a look on the documentation if you have any doubts.
+- Only the `spritemap` property was kept compared to the v2 API.
 
 ### Compositions:
 
@@ -303,7 +303,7 @@ To get the behavior of having a ClayCardGrid with Cards, use the following compo
 
 ## ClayCardGrid
 
-ClayCardGrid was deprecated due ClayCard.Group.
+ClayCardGrid was deprecated due to ClayCard.Group.
 
 ## ClayLink
 
