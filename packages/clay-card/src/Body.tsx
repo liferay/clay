@@ -8,9 +8,7 @@ import classNames from 'classnames';
 import Context from './Context';
 import React from 'react';
 
-export interface CardBodyProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-export const Body: React.FunctionComponent<CardBodyProps> = ({
+export const Body: React.FunctionComponent<React.HTMLAttributes<HTMLDivElement>> = ({
 	children,
 	className,
 	...otherProps
@@ -19,7 +17,7 @@ export const Body: React.FunctionComponent<CardBodyProps> = ({
 
 	const TagName = interactive ? 'span' : 'div';
 
-	const Content: React.FunctionComponent<CardBodyProps> = ({children}) => (
+	const Content: React.FunctionComponent<React.HTMLAttributes<HTMLDivElement>> = ({children}) => (
 		<TagName className={classNames('card-body', className)} {...otherProps}>
 			{interactive && !horizontal ? (
 				children

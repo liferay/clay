@@ -8,9 +8,7 @@ import classNames from 'classnames';
 import Context from './Context';
 import React from 'react';
 
-interface CardDetailProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-export const Detail: React.FunctionComponent<CardDetailProps> = ({
+export const Detail: React.FunctionComponent<React.HTMLAttributes<HTMLDivElement>> = ({
 	children,
 	className,
 	...otherProps

@@ -14,7 +14,7 @@ import {Detail} from './Detail';
 import {Group} from './Group';
 
 type CardDisplayType = 'file' | 'image' | 'user';
-export interface CardProps {
+export interface ICardProps {
 	displayType?: CardDisplayType;
 
 	/**
@@ -33,11 +33,11 @@ export interface CardProps {
 	selectable?: boolean;
 }
 
-interface Props
-	extends CardProps,
+interface IProps
+	extends ICardProps,
 		React.BaseHTMLAttributes<HTMLAnchorElement | HTMLDivElement> {}
 
-const ClayCard: React.FunctionComponent<Props> & {
+const ClayCard: React.FunctionComponent<IProps> & {
 	AspectRatio: typeof AspectRatio;
 	Body: typeof Body;
 	Detail: typeof Detail;
@@ -52,7 +52,7 @@ const ClayCard: React.FunctionComponent<Props> & {
 	selectable = false,
 	...otherProps
 }) => {
-	const Content: React.FunctionComponent<Props> = ({children}) => (
+	const Content: React.FunctionComponent<IProps> = ({children}) => (
 		<Context.Provider value={{displayType, horizontal, interactive}}>
 			{children}
 		</Context.Provider>
