@@ -10,7 +10,7 @@ import React from 'react';
 
 type CardDescriptionDisplayType = 'text' | 'title' | 'subtitle';
 
-interface CardDescriptionProps extends React.HTMLAttributes<HTMLDivElement> {
+interface ICardDescriptionProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Type of description that can be applied for a text.
 	 */
@@ -22,7 +22,7 @@ interface CardDescriptionProps extends React.HTMLAttributes<HTMLDivElement> {
 	truncate?: boolean;
 }
 
-export const Description: React.FunctionComponent<CardDescriptionProps> = ({
+export const Description: React.FunctionComponent<ICardDescriptionProps> = ({
 	children,
 	className,
 	displayType,

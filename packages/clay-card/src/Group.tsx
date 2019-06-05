@@ -7,14 +7,14 @@
 import classNames from 'classnames';
 import React from 'react';
 
-interface CardGroupProps extends React.HTMLAttributes<HTMLUListElement> {
+interface ICardGroupProps extends React.HTMLAttributes<HTMLUListElement> {
 	/**
 	 * Header's label of Card Group
 	 */
 	label?: string;
 }
 
-export const Group: React.FunctionComponent<CardGroupProps> = ({
+export const Group: React.FunctionComponent<ICardGroupProps> = ({
 	children,
 	className,
 	label,
