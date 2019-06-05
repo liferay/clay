@@ -34,7 +34,7 @@ description: "A table is a specific pattern for comparing datasets in a very dir
 </div>
 
 <div class="clay-site-alert alert alert-warning">
-    `show-quick-actions-on-hover` will need Javascript to add class table-focus on the table row when an item inside is focused to make it keyboard accessible.
+    <code class="gatsby-code-text">show-quick-actions-on-hover</code> will need Javascript to add class table-focus on the table row when an item inside is focused to make it keyboard accessible.
 </div>
 
 A table is styled like a list. The active state can be invoked by adding class `table-active` to the `<tr></tr>` element.
@@ -309,9 +309,9 @@ A table is styled like a list. The active state can be invoked by adding class `
 </table>
 ```
 
-### Variants
+## Variants
 
-#### Striped
+### Striped
 
 Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`.
 
@@ -425,7 +425,7 @@ Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`
 </table>
 ```
 
-#### Bordered
+### Bordered
 
 Add `.table-bordered` for borders on all sides of the table and cells.
 
@@ -539,7 +539,7 @@ Add `.table-bordered` for borders on all sides of the table and cells.
 </table>
 ```
 
-#### Hoverable
+### Hoverable
 
 <div class="sheet-example">
     <table class="table table-hover">
@@ -651,7 +651,7 @@ Add `.table-bordered` for borders on all sides of the table and cells.
 </table>
 ```
 
-#### Small
+### Small
 
 Add `.table-sm` to make tables more compact by cutting cell padding in half.
 
@@ -765,7 +765,7 @@ Add `.table-sm` to make tables more compact by cutting cell padding in half.
 </table>
 ```
 
-### Inline Edit Table
+## Inline Edit Table
 
 <div class="sheet-example">
     <table class="table table-autofit table-list table-nowrap table-responsive">
@@ -961,11 +961,11 @@ Add `.table-sm` to make tables more compact by cutting cell padding in half.
 </table>
 ```
 
-### Responsiveness
+## Responsiveness
 
 Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a `.table` with `.table-responsive`. Or, pick a maximum breakpoint with which to have a responsive table up to by using `.table-responsive{-sm|-md|-lg|-xl}`.
 
-#### Always Responsive
+### Always Responsive
 
 Across every breakpoint, use `.table-responsive` for horizontally scrolling tables.
 
@@ -1024,7 +1024,7 @@ Across every breakpoint, use `.table-responsive` for horizontally scrolling tabl
     </div>
 </div>
 
-#### Breakpoints
+### Breakpoints
 
 Use `.table-responsive{-sm|-md|-lg|-xl}` as needed to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.
 
@@ -1215,15 +1215,15 @@ Use `.table-responsive{-sm|-md|-lg|-xl}` as needed to create responsive tables u
 </div>
 ```
 
-### Helpers
+## Helpers
 
-#### Autofit
+### Autofit
 
 `table-autofit` constrains table columns to be only as wide as its content, but must be used with `table-cell-expand`. `table-cell-expand` will fill the remaining space.
 
-#### Alignment
+### Alignment
 
-##### Vertical
+#### Vertical
 
 We have added some classes to help vertically align contents inside a table. The classes `table-valign-bottom`, `table-valign-middle`, and `table-valign-top` on `<table>` will vertically align table cell contents on the bottom, middle, and top, respectively.
 
@@ -1231,11 +1231,11 @@ The classes `thead-valign-bottom`, `thead-valign-middle`, and `thead-valign-top`
 
 The classes `tbody-valign-bottom`, `tbody-valign-middle`, and `tbody-valign-top` on `<table>` will vertically align the contents inside the table body.
 
-##### Horizontal
+#### Horizontal
 
 We have added some classes to help horizontally align contents inside a table column. The classes `table-column-text-start`, `table-column-text-center`, and `table-column-text-end` will align text left, center, and right respectively.
 
-#### Cell Utilities
+### Cell Utilities
 
 Use `table-cell-expand-small`, `table-cell-expand-smaller`, `table-cell-expand-smallest` with `table-cell-expand` to size columns smaller relative to the widest column.
 
@@ -1331,7 +1331,7 @@ The helpers `table-cell-ws-normal` and `table-cell-ws-nowrap` sets `white-space`
 </table>
 ```
 
-#### Heading No Wrap
+### Heading No Wrap
 
 `table-heading-nowrap` keeps headings on one line.
 
@@ -1427,7 +1427,7 @@ The helpers `table-cell-ws-normal` and `table-cell-ws-nowrap` sets `white-space`
 </table>
 ```
 
-#### Table No Wrap
+### Table No Wrap
 
 `table-nowrap` keeps everything on one line.
 
@@ -1477,7 +1477,7 @@ The helpers `table-cell-ws-normal` and `table-cell-ws-nowrap` sets `white-space`
     </table>
 </div>
 
-#### Image
+### Image
 
 `table-img` is a helper that sets the max-height to 100px on an image inside a table. Depending on your use case, you may need to use it with the `autofit-row` pattern.
 
