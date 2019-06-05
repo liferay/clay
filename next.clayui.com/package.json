@@ -4,10 +4,11 @@
   "version": "3.0.0",
   "license": "MIT",
   "scripts": {
-    "copy:clay-css": "yarn copy:clay-css-css && yarn copy:clay-css-icons && yarn copy:clay-css-js",
+    "copy:clay-css": "yarn copy:clay-css-css && yarn copy:clay-css-icons && yarn copy:clay-css-js && yarn copy:clay-css-site-images",
     "copy:clay-css-css": "cpx '../node_modules/clay-css/lib/css/*.{css,css.map}' static/css",
     "copy:clay-css-icons": "cpx '../node_modules/clay-css/lib/images/icons/*.svg' static/images/icons",
     "copy:clay-css-js": "cpx '../node_modules/clay-css/lib/js/*.{js,js.map}' static/js",
+    "copy:clay-css-site-images": "cpx '../node_modules/clay-css/src/content/site-images/*.svg' static/images",
     "deploy": "gatsby build && gh-pages -d public -b wedeploy",
     "develop": "yarn copy:clay-css && gatsby develop",
     "build": "yarn copy:clay-css && gatsby build",
