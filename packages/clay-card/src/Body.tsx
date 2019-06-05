@@ -8,16 +8,14 @@ import classNames from 'classnames';
 import Context from './Context';
 import React from 'react';
 
-export const Body: React.FunctionComponent<React.HTMLAttributes<HTMLDivElement>> = ({
-	children,
-	className,
-	...otherProps
-}) => {
+export const Body: React.FunctionComponent<
+	React.HTMLAttributes<HTMLDivElement>
+> = ({children, className, ...otherProps}) => {
 	const {horizontal, interactive} = React.useContext(Context);
 
 	const TagName = interactive ? 'span' : 'div';
 
-	const Content: React.FunctionComponent<React.HTMLAttributes<HTMLDivElement>> = ({children}) => (
+	const content = (
 		<TagName className={classNames('card-body', className)} {...otherProps}>
 			{interactive && !horizontal ? (
 				children
@@ -28,12 +26,8 @@ export const Body: React.FunctionComponent<React.HTMLAttributes<HTMLDivElement>>
 	);
 
 	if (horizontal && !interactive) {
-		return (
-			<div className="card card-horizontal">
-				<Content>{children}</Content>
-			</div>
-		);
+		return <div className="card card-horizontal">{content}</div>;
 	}
 
-	return <Content>{children}</Content>;
+	return content;
 };
