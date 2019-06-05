@@ -10,6 +10,7 @@ description: "This section demonstrates the different text input types, includin
 - [Read only](#read-only)
 - [Sizes](#sizes)
 - [Textarea](#textarea)
+- [Select menu](#select-menu)
 - [Validations](#validations)
 	- [Success](#success)
 	- [Warning](#warning)
@@ -120,6 +121,62 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 <div class="form-group">
 	<label for="basicInputTypeTextarea">Textarea</label>
 	<textarea class="form-control" id="basicInputTypeTextarea" placeholder="Placeholder"></textarea>
+</div>
+```
+
+## Select menu
+
+<div class="sheet-example">
+	<div class="form-group">
+		<select class="form-control" id="regularSelectElement">
+			<option>Sample 1</option>
+			<option>Sample 2</option>
+			<option>Sample 3</option>
+			<option>Sample 4</option>
+		</select>
+	</div>
+</div>
+
+```html
+<div class="form-group">
+	<select class="form-control" id="regularSelectElement">
+		<option>Sample 1</option>
+		<option>Sample 2</option>
+		<option>Sample 3</option>
+		<option>Sample 4</option>
+	</select>
+</div>
+```
+
+<div class="sheet-example">
+	<div class="form-group">
+		<label for="multipleSelectOptionsSelectElement">Select Element with Multiple Select Options</label>
+		<select class="form-control" id="multipleSelectOptionsSelectElement" multiple>
+			<option>Sample 1</option>
+			<option>Sample 2</option>
+			<option>Sample 3</option>
+			<option>Sample 4</option>
+			<option>Sample 5</option>
+			<option>Sample 6</option>
+			<option>Sample 7</option>
+			<option>Sample 8</option>
+		</select>
+	</div>
+</div>
+
+```html
+<div class="form-group">
+	<label for="multipleSelectOptionsSelectElement">Select Element with Multiple Select Options</label>
+	<select class="form-control" id="multipleSelectOptionsSelectElement" multiple>
+		<option>Sample 1</option>
+		<option>Sample 2</option>
+		<option>Sample 3</option>
+		<option>Sample 4</option>
+		<option>Sample 5</option>
+		<option>Sample 6</option>
+		<option>Sample 7</option>
+		<option>Sample 8</option>
+	</select>
 </div>
 ```
 
