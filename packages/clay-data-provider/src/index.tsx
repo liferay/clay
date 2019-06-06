@@ -83,4 +83,5 @@ const ClayDataProvider: React.FunctionComponent<IProps> = ({
 	});
 };
 
+export {useResource};
 export default ClayDataProvider;

@@ -2,7 +2,35 @@
 title: "Migrate the Clay components from v2 to v3"
 ---
 
-This is a reference for upgrading your components from Clay v2 to Clay v3, this symbolizes that you are migrating your application from [Metal.js](https://metaljs.com) to [React.js](https://reactjs.org). Although there is a lot of coverage here, you probably do not have to do everything. We will do our best to keep things easy to follow, and as sequential as possible, so you can quickly get rocking in v3!
+<div class="nav-toc">
+
+- [Why you should migrate](#why-you-should-migrate)
+- [General changes](#general-changes)
+
+</div>
+
+<div class="nav-toc">
+
+- [ClayAlert](#clayalert)
+- [ClayButton](#claybutton)
+- [ClayLink](#claylink)
+- [ClayNavigationBar](#claynavigationbar)
+- [ClaySticker](#claysticker)
+- [ClayIcon](#clayicon)
+- [ClayModal](#claymodal)
+- [ClayRadioGroup, ClayRadio](#clayradiogroup,-clayradio)
+- [ClayLabel](#claylabel)
+- [ClayProgressBar](#clayprogressbar)
+- [ClayList](#claylist)
+- [ClayCollapse -> ClayPanel](#claycollapse-->-claypanel)
+- [ClayDropDown](#claydropdown)
+- [ClayPagination](#claypagination)
+- [ClayDataProvider](#claydataprovider)
+- [ClayAutocomplete](#clayautocomplete)
+
+</div>
+
+ference for upgrading your components from Clay v2 to Clay v3, this symbolizes that you are migrating your application from [Metal.js](https://metaljs.com) to [React.js](https://reactjs.org). Although there is a lot of coverage here, you probably do not have to do everything. We will do our best to keep things easy to follow, and as sequential as possible, so you can quickly get rocking in v3!
 
 ## Why you should migrate
 
@@ -556,3 +584,40 @@ See the documentation to get the most out of the component.
 -   `requestOptions` renamed to `fetchOptions`
 -   `requestRetries` renamed to `fetchRetry`
 -   `requestTimeout` renamed to `fetchTimeout`
+
+## ClayAutocomplete
+
+Autocomplete has received many changes due to the change of approach we had in v2 to be delivered with composition. We recommend that you read the component documentation for a better understanding.
+
+For example purposes you can get to the same result you had in v2 using composition, autocomplete alone does not do what it really promises, you need to compose with other components, ClayDropDown, ClayDataProvider and LoadingIndicator is where all the beauty of it is, it decreases the coupling and gigantic lists of API descriptions and offers flexibility for customizing and implementing new rules.
+
+```diff
+<ClayAutocomplete
+-	dataSource={dataSource}
+-	placeholder="Placeholder"
+-	extractData={(elem) => elem.name}
+-	requestRetries={0}
+-	...
+-/>
++>
++	<ClayAutocomplete.Input
++		onChange={event => setValue(event.target.value)}
++		value={value}
++	/>
++	<ClayAutocomplete.DropDown
++		active={(!!resource && !!value) || initialLoading}
++	>
++		<ClayDropDown.ItemList>
++			{resource.map(item => (
++				<ClayAutocomplete.Item
++					key={item.id}
++					match={value}
++					onClick={() => setValue(item.name)}
++					value={item.name}
++				/>
++			))}
++		</ClayDropDown.ItemList>
++	</ClayAutocomplete.DropDown>
++	{loading && <ClayAutocomplete.LoadingIndicator />}
++</ClayAutocomplete>
+```

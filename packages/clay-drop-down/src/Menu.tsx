@@ -22,6 +22,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	alignElementRef: React.RefObject<HTMLElement>;
 
 	/**
+	 * Flag to suggest or not the best region to align menu element.
+	 */
+	autoBestAlign?: boolean;
+
+	/**
 	 * Default position of menu element. Values come from `metal-position`.
 	 *
 	 * Align.TopCenter = 0;
@@ -58,6 +63,7 @@ const DropDownMenu = React.forwardRef<HTMLDivElement, IProps>((
 		active,
 		alignElementRef,
 		alignmentPosition = Align.BottomLeft,
+		autoBestAlign = true,
 		children,
 		className,
 		hasLeftSymbols,
@@ -83,7 +89,8 @@ const DropDownMenu = React.forwardRef<HTMLDivElement, IProps>((
 			Align.align(
 				(ref as React.RefObject<HTMLElement>).current!,
 				alignElementRef.current,
-				alignmentPosition
+				alignmentPosition,
+				autoBestAlign
 			);
 		}
 	});
