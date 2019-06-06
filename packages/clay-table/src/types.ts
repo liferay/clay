@@ -3,4 +3,4 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-export type TDelimiterType = 'start' | 'end';
+export type TDelimiter = 'start' | 'end';

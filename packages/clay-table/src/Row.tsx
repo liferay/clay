@@ -6,7 +6,7 @@
 
 import classNames from 'classnames';
 import React from 'react';
-import {TDelimiterType} from './types';
+import {TDelimiter} from './types';
 
 interface IRowProps extends React.HTMLAttributes<HTMLTableRowElement> {
 	/**
@@ -23,7 +23,7 @@ interface IRowProps extends React.HTMLAttributes<HTMLTableRowElement> {
 	 * This property can be added to the "new" first
 	 * or last ClayTable.Row to maintain table styles on the top and bottom sides.
 	 */
-	rowDelimiter?: TDelimiterType;
+	rowDelimiter?: TDelimiter;
 }
 
 const Row: React.FunctionComponent<IRowProps> = ({
