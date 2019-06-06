@@ -6,7 +6,6 @@
 
 import ClayAutocomplete from '../src';
 import ClayDropDown from '@clayui/drop-down';
-import fuzzy from 'fuzzy';
 import React, {useState} from 'react';
 import {FetchPolicy, NetworkStatus} from '@clayui/data-provider/src/types';
 import {storiesOf} from '@storybook/react';
@@ -35,23 +34,6 @@ const LoadingWithDebounce = ({
 	}
 
 	return render;
-};
-
-const optionsFuzzy = {post: '</strong>', pre: '<strong>'};
-
-interface IProps {
-	name: string;
-	value: string;
-}
-
-const Item: React.FunctionComponent<IProps> = ({name, value}) => {
-	const match = fuzzy.match(value, name, optionsFuzzy);
-
-	if (match) {
-		return <div dangerouslySetInnerHTML={{__html: match.rendered}} />;
-	}
-
-	return <>{name}</>;
 };
 
 const ClayAutocompleteWithState = () => {
@@ -94,15 +76,12 @@ const ClayAutocompleteWithState = () => {
 									resource &&
 									resource.results &&
 									resource.results.map((item: any) => (
-										<ClayDropDown.Item
+										<ClayAutocomplete.Item
 											key={item.id}
+											match={value}
 											onClick={() => setValue(item.name)}
-										>
-											<Item
-												name={item.name}
-												value={value}
-											/>
-										</ClayDropDown.Item>
+											value={item.name}
+										/>
 									))}
 							</>
 						}

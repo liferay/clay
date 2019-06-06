@@ -8,6 +8,7 @@ import classNames from 'classnames';
 import Context from './Context';
 import DropDown from './DropDown';
 import Input from './Input';
+import Item from './Item';
 import LoadingIndicator from './LoadingIndicator';
 import React, {useRef, useState} from 'react';
 
@@ -34,6 +35,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 const ClayAutocomplete: React.FunctionComponent<IProps> & {
 	DropDown: typeof DropDown;
 	Input: typeof Input;
+	Item: typeof Item;
 	LoadingIndicator: typeof LoadingIndicator;
 } = ({
 	children,
@@ -65,6 +67,7 @@ const ClayAutocomplete: React.FunctionComponent<IProps> & {
 
 ClayAutocomplete.DropDown = DropDown;
 ClayAutocomplete.Input = Input;
+ClayAutocomplete.Item = Item;
 ClayAutocomplete.LoadingIndicator = LoadingIndicator;
 
 export default ClayAutocomplete;
