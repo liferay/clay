@@ -5,7 +5,7 @@
  */
 
 import * as React from 'react';
-import Input, {IProps as IInputProps} from './Input';
+import Input from './Input';
 
 const ClayForm: React.FunctionComponent<
 	React.HTMLAttributes<HTMLDivElement>
@@ -17,5 +17,4 @@ const ClayForm: React.FunctionComponent<
 
 ClayForm.Input = Input;
 
-export {IInputProps};
 export default ClayForm;

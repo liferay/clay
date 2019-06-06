@@ -7,7 +7,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-export interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	/**
 	 * Input component to render. Can either be a string like 'input' or a component.
 	 */

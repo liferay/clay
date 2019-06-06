@@ -5,13 +5,13 @@
  */
 
 import classNames from 'classnames';
-import ClayForm, {IInputProps} from '@clayui/form';
+import ClayForm from '@clayui/form';
 import Context from './Context';
 import React, {useContext} from 'react';
 
 export interface IProps
 	extends React.InputHTMLAttributes<HTMLInputElement>,
-		IInputProps {}
+		React.ComponentProps<typeof ClayForm.Input> {}
 
 const Input = React.forwardRef<HTMLInputElement, IProps>(
 	({className, ...othersProps}, ref) => {
