@@ -5,16 +5,17 @@
  */
 
 import ClayAutocomplete from '..';
-import React from 'react';
+import Context from '../Context';
+import React, {useRef} from 'react';
 import {cleanup, render} from 'react-testing-library';
 
 describe('ClayAutocomplete', () => {
 	afterEach(cleanup);
 
 	it('renders', () => {
-		render(<ClayAutocomplete />);
+		const {container} = render(<ClayAutocomplete />);
 
-		expect(document.body).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('renders Autocomplete with other markup component', () => {
@@ -31,7 +32,118 @@ describe('ClayAutocomplete', () => {
 			</div>
 		));
 
-		render(<ClayAutocomplete component={MyMarkup} />);
+		const {container} = render(<ClayAutocomplete component={MyMarkup} />);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders Item with matches values', () => {
+		const {container} = render(
+			<ClayAutocomplete.Item match="Baz" value="Bar" />
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders LoadingIndicator', () => {
+		const LoadingIndicatorWithContext = () => (
+			<Context.Provider
+				value={{
+					containerElementRef: {current: null},
+					loading: false,
+					onLoadingChange: jest.fn(),
+				}}
+			>
+				<ClayAutocomplete.LoadingIndicator />
+			</Context.Provider>
+		);
+		const {container} = render(<LoadingIndicatorWithContext />);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders LoadingIndicator with other markup component', () => {
+		const MyMarkup: React.FunctionComponent<
+			React.HTMLAttributes<HTMLSpanElement>
+		> = ({children}) => (
+			<span className="autofit-col">
+				<span className="inline-item">{children}</span>
+			</span>
+		);
+		const LoadingIndicatorWithContext = () => (
+			<Context.Provider
+				value={{
+					containerElementRef: {current: null},
+					loading: false,
+					onLoadingChange: jest.fn(),
+				}}
+			>
+				<ClayAutocomplete.LoadingIndicator component={MyMarkup} />
+			</Context.Provider>
+		);
+
+		const {container} = render(<LoadingIndicatorWithContext />);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders LoadingIndicator and calls the onLoadingChange', () => {
+		const spyFn = jest.fn();
+		const LoadingIndicatorWithContext = () => (
+			<Context.Provider
+				value={{
+					containerElementRef: {current: null},
+					loading: false,
+					onLoadingChange: spyFn,
+				}}
+			>
+				<ClayAutocomplete.LoadingIndicator />
+			</Context.Provider>
+		);
+
+		render(<LoadingIndicatorWithContext />);
+
+		expect(spyFn).toBeCalled();
+		expect(spyFn).toBeCalledWith(true);
+	});
+
+	it('renders Input with classNames when loading for true', () => {
+		const InputWithContext = () => (
+			<Context.Provider
+				value={{
+					containerElementRef: {current: null},
+					loading: true,
+					onLoadingChange: jest.fn(),
+				}}
+			>
+				<ClayAutocomplete.Input />
+			</Context.Provider>
+		);
+
+		const {container} = render(<InputWithContext />);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders DropDown with alignment with container', () => {
+		const DropDownAndInputWithContext = () => {
+			const containerElementRef = useRef<HTMLDivElement>(null);
+
+			return (
+				<Context.Provider
+					value={{
+						containerElementRef,
+						loading: false,
+						onLoadingChange: jest.fn(),
+					}}
+				>
+					<ClayAutocomplete.Input />
+					<ClayAutocomplete.DropDown active />
+				</Context.Provider>
+			);
+		};
+
+		render(<DropDownAndInputWithContext />);
 
 		expect(document.body).toMatchSnapshot();
 	});
