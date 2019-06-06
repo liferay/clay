@@ -6,7 +6,7 @@ description: "Forms obtain user data and transmit it to the system to either sto
 <div class="nav-toc">
 
 - [Autofit](#autofit)
-	- [Horizontal](#horizontal)
+- [Horizontal](#horizontal)
 
 </div>
 
@@ -310,7 +310,7 @@ To make a `.form-group-item` shrink to the size of its content add `.form-group-
 </form>
 ```
 
-### Horizontal
+## Horizontal
 
 Create horizontal forms by placing each `input` inside `form-group-item` and `label` inside `form-group-item form-group-item-label form-group-item-shrink` and set a min-width on `.form-group-item-label`.
 
