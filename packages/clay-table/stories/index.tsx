@@ -4,9 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import 'clay-css/lib/css/atlas.css';
 import ClayButton from '@clayui/button';
-import ClayCheckboxWithState from '../fixtures/ClayCheckboxWithState';
-import ClayDropdownWithTrigger from '../fixtures/ClayDropdownWithTrigger';
+import ClayCheckbox from '@clayui/checkbox';
+import ClayDropDown, {Align} from '@clayui/drop-down';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClayProgressBar from '@clayui/progress-bar';
@@ -15,7 +16,56 @@ import React from 'react';
 import {boolean, select} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
-import 'clay-css/lib/css/atlas.css';
+function ClayCheckboxWithState(props: any) {
+	const [value, setValue] = React.useState<boolean>(false);
+
+	return (
+		<ClayCheckbox
+			checked={value}
+			disabled={false}
+			indeterminate={false}
+			onChange={() => setValue(val => !val)}
+		>
+			{props.children}
+		</ClayCheckbox>
+	);
+};
+
+const DropDownWithState: React.FunctionComponent<any> = ({
+	children,
+	...others
+}) => {
+	const [active, setActive] = React.useState(false);
+	return (
+		<ClayDropDown
+			{...others}
+			active={active}
+			alignmentPosition={Align.BottomRight}
+			onActiveChange={newVal => setActive(newVal)}
+			trigger={<ClayIcon spritemap={spritemap} symbol="ellipsis-v" />}
+		>
+			{children}
+		</ClayDropDown>
+	);
+};
+
+function ClayDropdownWithTrigger() {
+	return (
+		<DropDownWithState>
+			<ClayDropDown.ItemList>
+				{[
+					{href: '#1', label: 'One'},
+					{href: '#2', label: 'Two'},
+					{href: '#3', label: 'Three'},
+				].map((item, i) => (
+					<ClayDropDown.Item href={item.href} key={i}>
+						{item.label}
+					</ClayDropDown.Item>
+				))}
+			</ClayDropDown.ItemList>
+		</DropDownWithState>
+	);
+};
 
 const spritemap = require('clay-css/lib/images/icons/icons.svg');
 
