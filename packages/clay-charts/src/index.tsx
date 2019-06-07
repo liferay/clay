@@ -1,32 +1,96 @@
 /**
- * © 2019 Liferay, Inc. <https://liferay.com>
+ * © 2018 Liferay, Inc. <https://liferay.com>
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import BaseChart, {IProps, Types} from './BaseChart';
-import Billboard from './BillboardWrapper';
+import BillboardWrapper from './BillboardWrapper';
+import GeoMap from './GeoMap';
+import Predictive from './Predictive';
 import React from 'react';
+import {
+	bb,
+	ChartTypes,
+	Data,
+	Grid,
+	LineOptions,
+	PointOptions,
+} from 'billboard.js';
+import {
+	DEFAULT_COLORS,
+	DEFAULT_GRID_OBJECT,
+	DEFAULT_LINE_CLASSES,
+	DEFAULT_POINT_PATTERNS,
+} from './config';
 
-const setType = (type: Types) => ({data, ...otherProps}: IProps) => (
-	<BaseChart {...otherProps} data={{...data, type}} />
-);
+export type Types = ChartTypes | 'geo-map' | 'predictive';
 
-export const AreaLineChart = setType('area-line-range');
-export const AreaSplineChart = setType('area-spline');
-export const AreaStepChart = setType('area-step');
-export const BarChart = setType('bar');
-export const BubbleChart = setType('bubble');
-export const DonutChart = setType('donut');
-export const GaugeChart = setType('gauge');
-export const Geomap = setType('geo-map');
-export const LineChart = setType('line');
-export const PieChart = setType('pie');
-export const PredictiveChart = setType('predictive');
-export const RadarChart = setType('radar');
-export const ScatterChart = setType('scatter');
-export const SplineChart = setType('spline');
-export const StepChart = setType('step');
-export {Billboard};
+interface IDataType extends Omit<Omit<Data, 'type'>, 'columns'> {
+	columns?: any;
+	type?: Types;
+}
 
-export default BaseChart;
+type ColorType =
+	| string
+	| {
+			range: {
+				min: string;
+				max: string;
+			};
+			selected: string;
+			value: string;
+	  };
+
+export interface IProps {
+	color?: ColorType;
+	data: IDataType | IDataType & {data: IDataType};
+	grid?: Grid;
+	line?: LineOptions;
+	point?: PointOptions;
+	[key: string]: any;
+}
+
+/**
+ * Chart component.
+ */
+export default function({
+	color,
+	data,
+	grid,
+	line,
+	point,
+	...otherProps
+}: IProps) {
+	let ChartComponent;
+
+	switch (data.type as Types) {
+		case 'geo-map':
+			ChartComponent = GeoMap;
+			break;
+		case 'predictive':
+			delete data.type;
+
+			ChartComponent = Predictive;
+			break;
+		default:
+			ChartComponent = BillboardWrapper;
+	}
+
+	return (
+		<ChartComponent
+			{...otherProps}
+			color={Object.assign({pattern: DEFAULT_COLORS}, color)}
+			data={data}
+			grid={Object.assign(DEFAULT_GRID_OBJECT, grid)}
+			line={Object.assign({classes: DEFAULT_LINE_CLASSES}, line)}
+			point={Object.assign(
+				{
+					pattern: DEFAULT_POINT_PATTERNS,
+				},
+				point
+			)}
+		/>
+	);
+}
+
+export {bb};

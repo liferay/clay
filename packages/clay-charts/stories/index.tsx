@@ -6,7 +6,7 @@
 
 import '../src/scss/main.scss';
 import 'clay-css/lib/css/atlas.css';
-import ClayChart, {BarChart, BubbleChart} from '../src';
+import ClayChart from '../src';
 import React from 'react';
 import {storiesOf} from '@storybook/react';
 
@@ -24,9 +24,10 @@ const ChartWithState = () => {
 				{'Change Data'}
 			</button>
 
-			<BarChart
+			<ClayChart
 				data={{
 					columns: active ? COLUMNS : COLUMNS_2,
+					type: 'bar',
 				}}
 			/>
 		</div>
@@ -36,9 +37,10 @@ const ChartWithState = () => {
 storiesOf('ClayCharts', module)
 	.add('bar', () => <ChartWithState />)
 	.add('bubble', () => (
-		<BubbleChart
+		<ClayChart
 			data={{
 				columns: COLUMNS,
+				type: 'bubble',
 			}}
 		/>
 	))
