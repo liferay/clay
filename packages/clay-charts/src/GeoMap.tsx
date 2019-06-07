@@ -7,7 +7,7 @@
 import * as d3 from 'd3';
 import React from 'react';
 import resolveData from './resolve-data';
-import {Data, Grid, LineOptions, PointOptions} from 'billboard.js';
+import {Data, Grid, PointOptions} from 'billboard.js';
 import {FeatureCollection} from 'geojson';
 import {
 	GeoPath,
@@ -244,21 +244,23 @@ class GeomapBase {
 	}
 }
 
-interface IProps extends React.HTMLAttributes<HTMLDivElement> {
-	color: string;
-	data: {data: Data};
-	element: any;
-	grid: Grid;
-	line: LineOptions;
-	point: PointOptions;
-	pollingInterval: number;
+export interface IProps {
+	elementProps?: React.HTMLAttributes<HTMLDivElement>;
+	grid?: Grid;
+	predictionDate?: any;
+	point?: PointOptions;
+	pollingInterval?: number;
 	[key: string]: any;
 }
 
 /**
  * GeoMap Chart component.
  */
-const Geomap: React.FunctionComponent<IProps> = ({data, ...otherProps}) => {
+const Geomap: React.FunctionComponent<IProps> = ({
+	data,
+	elementProps = {},
+	...otherProps
+}) => {
 	const containerRef = React.useRef(null);
 	const geoMapInstanceRef = React.useRef<any>();
 
@@ -266,7 +268,7 @@ const Geomap: React.FunctionComponent<IProps> = ({data, ...otherProps}) => {
 		if (geoMapInstanceRef) {
 			geoMapInstanceRef.current = new GeomapBase({
 				...otherProps,
-				data: data.data,
+				data,
 				element: containerRef.current,
 			});
 
@@ -282,7 +284,7 @@ const Geomap: React.FunctionComponent<IProps> = ({data, ...otherProps}) => {
 		? geoMapInstanceRef.current.getSize()
 		: {};
 
-	return <div style={{height, width}} {...otherProps} ref={containerRef} />;
+	return <div style={{height, width}} {...elementProps} ref={containerRef} />;
 };
 
 export default Geomap;

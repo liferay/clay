@@ -10,7 +10,8 @@ import {Data} from 'billboard.js';
 
 interface IProps {
 	data: Data;
-	predictionDate: any;
+	predictionDate?: any;
+	[key: string]: any;
 }
 
 /**

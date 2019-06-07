@@ -5,7 +5,7 @@
  */
 
 import BillboardWrapper from './BillboardWrapper';
-import GeoMap from './GeoMap';
+import GeoMap, {IProps} from './GeoMap';
 import Predictive from './Predictive';
 import React from 'react';
 import {
@@ -30,23 +30,12 @@ interface IDataType extends Omit<Omit<Data, 'type'>, 'columns'> {
 	type?: Types;
 }
 
-type ColorType =
-	| string
-	| {
-			range: {
-				min: string;
-				max: string;
-			};
-			selected: string;
-			value: string;
-	  };
-
 export interface IProps {
-	color?: ColorType;
-	data: IDataType | IDataType & {data: IDataType};
+	data: IDataType;
 	grid?: Grid;
 	line?: LineOptions;
 	point?: PointOptions;
+	pollingInterval: number;
 	[key: string]: any;
 }
 
@@ -65,6 +54,8 @@ export default function({
 
 	switch (data.type as Types) {
 		case 'geo-map':
+			delete data.type;
+
 			ChartComponent = GeoMap;
 			break;
 		case 'predictive':
@@ -80,7 +71,7 @@ export default function({
 		<ChartComponent
 			{...otherProps}
 			color={Object.assign({pattern: DEFAULT_COLORS}, color)}
-			data={data}
+			data={data as Data}
 			grid={Object.assign(DEFAULT_GRID_OBJECT, grid)}
 			line={Object.assign({classes: DEFAULT_LINE_CLASSES}, line)}
 			point={Object.assign(

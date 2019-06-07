@@ -92,7 +92,7 @@ storiesOf('ClayCharts', module)
 					value: 'gdp_md_est',
 				}}
 				data={{
-					data: MAP_DATA,
+					...MAP_DATA,
 					type: 'geo-map',
 				}}
 			/>
