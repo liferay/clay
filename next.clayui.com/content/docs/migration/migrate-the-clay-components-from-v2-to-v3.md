@@ -115,7 +115,7 @@ const [alerts, setAlerts] = useState([]);
 
 ## ClayCard
 
-ClayCard v3 became a Low-Level API, decomposed to ClayCard.AspectRatio, ClayCard.Body,ClayCard.Description, ClayCard.Detail and ClayCard.Header.
+ClayCard v3 became a Low-Level API, decomposed to ClayCard.AspectRatio, ClayCard.Body,ClayCard.Description, ClayCard.Caption and ClayCard.Header.
 
 ```diff
 - <ClayUserCard name="User Name" spritemap={spritemap} selectable />
@@ -147,9 +147,9 @@ ClayCard v3 became a Low-Level API, decomposed to ClayCard.AspectRatio, ClayCard
 + 				<ClayCard.Description type="subtitle">
 + 					Author Action
 + 				</ClayCard.Description>
-+ 				<ClayCard.Detail>
++ 				<ClayCard.Caption>
 + 					<ClayLabel displayType="warning">{'Rejected'}</ClayLabel>
-+ 				</ClayCard.Detail>
++ 				</ClayCard.Caption>
 + 			</div>
 + 		</ClayCard.Body>
 + 	</ClayCard>
@@ -189,9 +189,9 @@ To get to the behavior of having a ClayCard with an image, use the following com
 +				<ClayCard.Description type="subtitle">
 +					Author Action
 +				</ClayCard.Description>
-+				<ClayCard.Detail>
++				<ClayCard.Caption>
 +					<ClayLabel displayType="success">{'Approved'}</ClayLabel>
-+				</ClayCard.Detail>
++				</ClayCard.Caption>
 +			</div>
 +		</ClayCard.Body>
 +	</ClayCard>
@@ -222,9 +222,9 @@ To get to the behavior of having a ClayCard with a user image, use the following
 + 				<ClayCard.Description type="subtitle">
 + 					Author Action
 + 				</ClayCard.Description>
-+ 				<ClayCard.Detail>
++ 				<ClayCard.Caption>
 + 					<ClayLabel displayType="success">{'Approved'}</ClayLabel>
-+ 				</ClayCard.Detail>
++ 				</ClayCard.Caption>
 + 			</div>
 + 		</ClayCard.Body>
 + 	</ClayCard>
@@ -276,9 +276,9 @@ To get to the behavior of having a ClayCard with a folder, use the following com
 + 				<ClayCard.Description type="subtitle">
 + 					Stevie Ray Vaughn
 + 				</ClayCard.Description>
-+ 				<ClayCard.Detail>
++ 				<ClayCard.Caption>
 + 					<ClayLabel displayType="success">{'Approved'}</ClayLabel>
-+ 				</ClayCard.Detail>
++ 				</ClayCard.Caption>
 + 			</section>
 + 		</div>
 + 	</ClayCard.Body>

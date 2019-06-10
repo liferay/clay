@@ -9,8 +9,8 @@ import Context from './Context';
 import React from 'react';
 import {AspectRatio} from './AspectRatio';
 import {Body} from './Body';
+import {Caption} from './Caption';
 import {Description} from './Description';
-import {Detail} from './Detail';
 import {Group} from './Group';
 import {IContext} from './Context';
 
@@ -32,7 +32,7 @@ interface IProps
 const ClayCard: React.FunctionComponent<IProps> & {
 	AspectRatio: typeof AspectRatio;
 	Body: typeof Body;
-	Detail: typeof Detail;
+	Caption: typeof Caption;
 	Description: typeof Description;
 	Group: typeof Group;
 } = ({
@@ -97,7 +97,7 @@ const ClayCard: React.FunctionComponent<IProps> & {
 
 ClayCard.AspectRatio = AspectRatio;
 ClayCard.Body = Body;
-ClayCard.Detail = Detail;
+ClayCard.Caption = Caption;
 ClayCard.Description = Description;
 ClayCard.Group = Group;
 

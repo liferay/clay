@@ -108,11 +108,11 @@ storiesOf('ClayCard', module)
 								<ClayCard.Description displayType="subtitle">
 									{'Stevie Ray Vaughn'}
 								</ClayCard.Description>
-								<ClayCard.Detail>
+								<ClayCard.Caption>
 									<ClayLabel displayType="success">
 										{'Approved'}
 									</ClayLabel>
-								</ClayCard.Detail>
+								</ClayCard.Caption>
 							</section>
 						</div>
 					</ClayCard.Body>
@@ -143,11 +143,11 @@ storiesOf('ClayCard', module)
 								<ClayCard.Description displayType="subtitle">
 									{'Stevie Ray Vaughn'}
 								</ClayCard.Description>
-								<ClayCard.Detail>
+								<ClayCard.Caption>
 									<ClayLabel displayType="success">
 										{'Approved'}
 									</ClayLabel>
-								</ClayCard.Detail>
+								</ClayCard.Caption>
 							</section>
 						</div>
 					</ClayCard.Body>
@@ -181,11 +181,11 @@ storiesOf('ClayCard', module)
 							<ClayCard.Description displayType="subtitle">
 								{'Author Action'}
 							</ClayCard.Description>
-							<ClayCard.Detail>
+							<ClayCard.Caption>
 								<ClayLabel displayType="success">
 									{'Approved'}
 								</ClayLabel>
-							</ClayCard.Detail>
+							</ClayCard.Caption>
 						</div>
 					</ClayCard.Body>
 				</ClayCard>
@@ -216,11 +216,11 @@ storiesOf('ClayCard', module)
 							<ClayCard.Description displayType="subtitle">
 								{'Author Action'}
 							</ClayCard.Description>
-							<ClayCard.Detail>
+							<ClayCard.Caption>
 								<ClayLabel displayType="success">
 									{'Approved'}
 								</ClayLabel>
-							</ClayCard.Detail>
+							</ClayCard.Caption>
 						</div>
 					</ClayCard.Body>
 				</ClayCard>
@@ -261,11 +261,11 @@ storiesOf('ClayCard', module)
 							<ClayCard.Description displayType="subtitle">
 								{'Author Action'}
 							</ClayCard.Description>
-							<ClayCard.Detail>
+							<ClayCard.Caption>
 								<ClayLabel displayType="success">
 									{'Approved'}
 								</ClayLabel>
-							</ClayCard.Detail>
+							</ClayCard.Caption>
 						</div>
 					</ClayCard.Body>
 				</ClayCard>
@@ -299,11 +299,11 @@ storiesOf('ClayCard', module)
 							<ClayCard.Description displayType="subtitle">
 								{'Author Action'}
 							</ClayCard.Description>
-							<ClayCard.Detail>
+							<ClayCard.Caption>
 								<ClayLabel displayType="success">
 									{'Approved'}
 								</ClayLabel>
-							</ClayCard.Detail>
+							</ClayCard.Caption>
 						</div>
 					</ClayCard.Body>
 				</ClayCard>
@@ -423,11 +423,11 @@ storiesOf('ClayCard', module)
 							<ClayCard.Description displayType="subtitle">
 								{'Author Action'}
 							</ClayCard.Description>
-							<ClayCard.Detail>
+							<ClayCard.Caption>
 								<ClayLabel displayType="warning">
 									{'Rejected'}
 								</ClayLabel>
-							</ClayCard.Detail>
+							</ClayCard.Caption>
 						</div>
 					</ClayCard.Body>
 				</ClayCard>
@@ -455,11 +455,11 @@ storiesOf('ClayCard', module)
 							<ClayCard.Description displayType="subtitle">
 								{'Author Action'}
 							</ClayCard.Description>
-							<ClayCard.Detail>
+							<ClayCard.Caption>
 								<ClayLabel displayType="success">
 									{'Approved'}
 								</ClayLabel>
-							</ClayCard.Detail>
+							</ClayCard.Caption>
 						</div>
 					</ClayCard.Body>
 				</ClayCard>
