@@ -1,140 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Rendering disabled 1`] = `
-<div
-  className="form-group"
->
-  <label>
-    Select Label
-  </label>
+exports[`Rendering renders ClaySelect 1`] = `
+<div>
   <select
     aria-label="Select Label"
-    className="form-control"
-    disabled={true}
-  >
-    <option
-      value="1"
-    >
-      Option 1
-    </option>
-    <option
-      value="2"
-    >
-      Option 2
-    </option>
-    <option
-      value="3"
-    >
-      Option 3
-    </option>
-  </select>
+    class="form-control"
+    id="mySelectId"
+  />
 </div>
 `;
 
-exports[`Rendering inline 1`] = `
-<div
-  className="form-group-item"
->
-  <label>
-    Select Label
-  </label>
+exports[`Rendering renders ClaySelect with Option 1`] = `
+<div>
   <select
     aria-label="Select Label"
-    className="form-control"
-  >
-    <option
-      value="1"
-    >
-      Option 1
-    </option>
-    <option
-      value="2"
-    >
-      Option 2
-    </option>
-    <option
-      value="3"
-    >
-      Option 3
-    </option>
-  </select>
-</div>
-`;
-
-exports[`Rendering with an option selected 1`] = `
-<div
-  className="form-group"
->
-  <label>
-    Select Label
-  </label>
-  <select
-    aria-label="Select Label"
-    className="form-control"
-    name="mySelectName"
-  >
-    <option
-      value="1"
-    >
-      Option 1
-    </option>
-    <option
-      selected={true}
-      value="2"
-    >
-      Option 2
-    </option>
-    <option
-      value="3"
-    >
-      Option 3
-    </option>
-  </select>
-</div>
-`;
-
-exports[`Rendering with container properties 1`] = `
-<div
-  className="customContainerClassName form-group"
->
-  <label>
-    Select Label
-  </label>
-  <select
-    aria-label="Select Label"
-    className="form-control"
-  >
-    <option
-      value="1"
-    >
-      Option 1
-    </option>
-    <option
-      value="2"
-    >
-      Option 2
-    </option>
-    <option
-      value="3"
-    >
-      Option 3
-    </option>
-  </select>
-</div>
-`;
-
-exports[`Rendering with id 1`] = `
-<div
-  className="form-group"
->
-  <label
-    htmlFor="mySelectId"
-  >
-    Select Label
-  </label>
-  <select
-    aria-label="Select Label"
-    className="form-control"
+    class="form-control"
     id="mySelectId"
   >
     <option
@@ -156,78 +36,32 @@ exports[`Rendering with id 1`] = `
 </div>
 `;
 
-exports[`Rendering with multiple options allowed 1`] = `
-<div
-  className="form-group"
->
-  <label>
-    Select Label
-  </label>
-  <select
-    aria-label="Select Label"
-    className="form-control"
-    multiple={true}
+exports[`Rendering renders ClaySelect.Option 1`] = `
+<div>
+  <option
+    value="1"
   >
-    <option
-      value="1"
-    >
-      Option 1
-    </option>
-    <option
-      value="2"
-    >
-      Option 2
-    </option>
-    <option
-      value="3"
-    >
-      Option 3
-    </option>
-  </select>
+    Option 1
+  </option>
+  <option
+    value="2"
+  >
+    Option 2
+  </option>
+  <option
+    value="3"
+  >
+    Option 3
+  </option>
 </div>
 `;
 
-exports[`Rendering with name 1`] = `
-<div
-  className="form-group"
->
-  <label>
-    Select Label
-  </label>
+exports[`Rendering renders ClaySelectWithOption 1`] = `
+<div>
   <select
     aria-label="Select Label"
-    className="form-control"
-    name="mySelectName"
-  >
-    <option
-      value="1"
-    >
-      Option 1
-    </option>
-    <option
-      value="2"
-    >
-      Option 2
-    </option>
-    <option
-      value="3"
-    >
-      Option 3
-    </option>
-  </select>
-</div>
-`;
-
-exports[`Rendering with required attributes 1`] = `
-<div
-  className="form-group"
->
-  <label>
-    Select Label
-  </label>
-  <select
-    aria-label="Select Label"
-    className="form-control"
+    class="form-control"
+    id="mySelectId"
   >
     <option
       value="1"

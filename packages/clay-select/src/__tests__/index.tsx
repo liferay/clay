@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
-import * as TestRenderer from 'react-test-renderer';
-import ClaySelect from '..';
+import React from 'react';
+import {cleanup, render} from 'react-testing-library';
+import ClaySelect, {ClaySelectWithOption} from '..';
 
 const options = [
 	{
@@ -24,99 +24,51 @@ const options = [
 ];
 
 describe('Rendering', () => {
-	it('with required attributes', () => {
-		const testRenderer = TestRenderer.create(
-			<ClaySelect label="Select Label" options={options} />
-		);
+	afterEach(cleanup);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
-	});
-
-	it('with container properties', () => {
-		const testRenderer = TestRenderer.create(
+	it('renders ClaySelect', () => {
+		const {container} = render(
 			<ClaySelect
-				containerProps={{
-					className: 'customContainerClassName',
-				}}
-				label="Select Label"
-				options={options}
-			/>
-		);
-
-		expect(testRenderer.toJSON()).toMatchSnapshot();
-	});
-
-	it('with id', () => {
-		const testRenderer = TestRenderer.create(
-			<ClaySelect
+				aria-label="Select Label"
 				id="mySelectId"
-				label="Select Label"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders ClaySelect.Option', () => {
+		const {container} = render(
+			<>
+				{options.map(item => <ClaySelect.Option {...item} key={item.label} />)}
+			</>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders ClaySelect with Option', () => {
+		const {container} = render(
+			<ClaySelect
+				aria-label="Select Label"
+				id="mySelectId"
+			>
+				{options.map(item => <ClaySelect.Option {...item} key={item.label} />)}
+			</ClaySelect>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders ClaySelectWithOption', () => {
+		const {container} = render(
+			<ClaySelectWithOption
+				aria-label="Select Label"
+				id="mySelectId"
 				options={options}
 			/>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
-	});
-
-	it('with name', () => {
-		const testRenderer = TestRenderer.create(
-			<ClaySelect
-				label="Select Label"
-				name="mySelectName"
-				options={options}
-			/>
-		);
-
-		expect(testRenderer.toJSON()).toMatchSnapshot();
-	});
-
-	it('with an option selected', () => {
-		const testRenderer = TestRenderer.create(
-			<ClaySelect
-				label="Select Label"
-				name="mySelectName"
-				options={[
-					{
-						label: 'Option 1',
-						value: '1',
-					},
-					{
-						label: 'Option 2',
-						selected: true,
-						value: '2',
-					},
-					{
-						label: 'Option 3',
-						value: '3',
-					},
-				]}
-			/>
-		);
-
-		expect(testRenderer.toJSON()).toMatchSnapshot();
-	});
-
-	it('disabled', () => {
-		const testRenderer = TestRenderer.create(
-			<ClaySelect disabled label="Select Label" options={options} />
-		);
-
-		expect(testRenderer.toJSON()).toMatchSnapshot();
-	});
-
-	it('with multiple options allowed', () => {
-		const testRenderer = TestRenderer.create(
-			<ClaySelect label="Select Label" multiple options={options} />
-		);
-
-		expect(testRenderer.toJSON()).toMatchSnapshot();
-	});
-
-	it('inline', () => {
-		const testRenderer = TestRenderer.create(
-			<ClaySelect inline label="Select Label" options={options} />
-		);
-
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 });
