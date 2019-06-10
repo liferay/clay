@@ -27,6 +27,7 @@ title: "Migrate the Clay components from v2 to v3"
 - [ClayPagination](#claypagination)
 - [ClayDataProvider](#claydataprovider)
 - [ClayAutocomplete](#clayautocomplete)
+- [ClaySelect](#clayselect)
 
 </div>
 
@@ -620,4 +621,47 @@ For example purposes you can get to the same result you had in v2 using composit
 +	</ClayAutocomplete.DropDown>
 +	{loading && <ClayAutocomplete.LoadingIndicator />}
 +</ClayAutocomplete>
+```
+
+## ClaySelect
+
+If you use ClaySelect only for simple cases that do not need props for `options`, you can use `<ClaySelectWithOption />` which will have the same result as the previous version.
+
+```jsx
+<ClaySelectWithOption
+	aria-label="Select Label"
+	id="mySelectId"
+	options={[
+		{
+			label: 'Option 1',
+			value: '1',
+		},
+		{
+			label: 'Option 2',
+			value: '2',
+		},
+	]}
+/>
+```
+
+### API Changes
+
+-	`data` deprecated
+-	`inline` deprecated
+-	`label` deprecated
+-   `defaultEventHandler` deprecated
+-   `elementClasses` renamed to `className`
+
+### Compositions
+
+Still you can take advantage of composition if you think `ClaySelectWithOption` does not cover your cases.
+
+```jsx
+<ClaySelect
+	aria-label="Select Label"
+	id="mySelectId"
+>
+	<ClaySelect.Option label="Option 1" value="1" />
+	<ClaySelect.Option label="Option 2" value="2" />
+</ClaySelect>
 ```

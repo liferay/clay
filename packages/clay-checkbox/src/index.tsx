@@ -43,7 +43,7 @@ const ClayCheckbox: React.FunctionComponent<IProps> = ({
 	checked,
 	children,
 	className,
-	containerProps = {className: ''},
+	containerProps = {},
 	indeterminate = false,
 	inline,
 	label,
