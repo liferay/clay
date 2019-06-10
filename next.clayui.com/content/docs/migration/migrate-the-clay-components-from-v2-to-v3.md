@@ -452,6 +452,93 @@ To get to the behavior of having a ClaySticker with icon, use the composition wi
 +</ClaySticker>
 ```
 
+## ClayTable
+
+ClayTable has become more simpler than v2 with Table Head, Body, Row and Cell compositions. Removing all necessary schemas and complex APIs from the component and possibiliting a lot of variations with compositions.
+
+```diff
+- <ClayTable
+-     items={[
+-         {
+-             items: [
+-                 {
+-                     team: 'White and Red team from Recife',
+-                     region: 'South America',
+-                     country: 'Brazil'
+-                 },
+-                 {
+-                     team: 'White and Purple team',
+-                     region: 'Europe',
+-                     country: 'Spain'
+-                 },
+-             ]
+-         }
+-     ]}
+-     schema={
+-         fields: [
+-             {
+-                 fieldName: 'team',
+-                 label: 'Teams',
+-             },
+-             {
+-                 fieldName: 'region',
+-                 label: 'Region',
+-             },
+-             {
+-                 fieldName: 'country',
+-                 label: 'Country',
+-             }
+-         ],
+-         inputNameField: 'type'
+-     }
+-     spritemap={spritemap}
+- />
++ <ClayTable hover responsive>
++     <ClayTable.Head>
++         <ClayTable.Row>
++             <ClayTable.Cell headingCell headingTitle expanded>
++                 {'Teams'}
++             </ClayTable.Cell>
++             <ClayTable.Cell headingCell headingTitle>
++                 {'Region'}
++             </ClayTable.Cell>
++             <ClayTable.Cell headingCell headingTitle>
++                 {'Country'}
++             </ClayTable.Cell>
++         </ClayTable.Row>
++     </ClayTable.Head>
++     <ClayTable.Body>
++         <ClayTable.Row>
++             <ClayTable.Cell headingTitle>
++                 {'White and Red team from Recife'}
++             </ClayTable.Cell>
++             <ClayTable.Cell>
++                 {'South America'}
++             </ClayTable.Cell>
++             <ClayTable.Cell>
++                 {'Brazil'}
++             </ClayTable.Cell>
++         </ClayTable.Row>
++         <ClayTable.Row>
++             <ClayTable.Cell headingTitle>
++                 {'White and Purple team'}
++             </ClayTable.Cell>
++             <ClayTable.Cell>
++                 {'Europe'}
++             </ClayTable.Cell>
++             <ClayTable.Cell>
++                 {'Spain'}
++             </ClayTable.Cell>
++         </ClayTable.Row>
++     </ClayTable.Body>
++ </ClayTable>
+```
+
+### API Changes
+
+- Take a look on Clay v3 website for more information.
+
+
 ## ClayIcon
 
 -   Added ability to utilize context for passing spritemap down instead of having to pass the prop everywhere.
