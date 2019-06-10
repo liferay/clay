@@ -6,25 +6,25 @@ description: "Popovers and Tooltips are patterns used to show helpful informatio
 <div class="nav-toc">
 
 - [Popover](#popover)
-    - [Popover Position](#popover-position)
-        - [Popover Top](#popover-top)
-        - [Popover Right](#popover-right)
-        - [Popover Bottom](#popover-bottom)
-        - [Popover Left](#popover-left)
+    - [Position](#popover-position)
+        - [Top](#popover-top)
+        - [Right](#popover-right)
+        - [Bottom](#popover-bottom)
+        - [Left](#popover-left)
 - [Tooltip](#tooltip)
-    - [Tooltip Position](#popover-position)
-        - [Tooltip Top](#tooltip-top)
-        - [Tooltip Right](#tooltip-right)
-        - [Tooltip Bottom](#tooltip-bottom)
-        - [Tooltip Left](#tooltip-left)
+    - [Position](#tooltip-position)
+        - [Top](#tooltip-top)
+        - [Right](#tooltip-right)
+        - [Bottom](#tooltip-bottom)
+        - [Left](#tooltip-left)
 
 </div>
 
-# Popover
+## Popover
 
-## Position
+### Position
 
-### Popover Top
+#### Top
 
 <div class="sheet-example">
     <div class="clay-site-popover-display">
@@ -88,7 +88,7 @@ description: "Popovers and Tooltips are patterns used to show helpful informatio
 </div>
 ```
 
-### Popover Right
+#### Right
 
 <div class="sheet-example">
     <div class="clay-site-popover-display">
@@ -152,7 +152,7 @@ description: "Popovers and Tooltips are patterns used to show helpful informatio
 </div>
 ```
 
-### Popover Bottom
+#### Bottom
 
 <div class="sheet-example">
     <div class="clay-site-popover-display">
@@ -216,7 +216,7 @@ description: "Popovers and Tooltips are patterns used to show helpful informatio
 </div>
 ```
 
-### Popover Left
+#### Left
 
 <div class="sheet-example">
     <div class="clay-site-popover-display">
@@ -280,11 +280,11 @@ description: "Popovers and Tooltips are patterns used to show helpful informatio
 </div>
 ```
 
-# Tooltip
+## Tooltip
 
-## Tooltip Position
+### Position
 
-### Tooltip Top
+#### Top
 
 <div class="sheet-example">
     <div class="clay-site-tooltip-display">
@@ -330,7 +330,7 @@ description: "Popovers and Tooltips are patterns used to show helpful informatio
 </div>
 ```
 
-### Tooltip Right
+#### Right
 
 <div class="sheet-example">
     <div class="clay-site-tooltip-display">
@@ -376,7 +376,7 @@ description: "Popovers and Tooltips are patterns used to show helpful informatio
 </div>
 ```
 
-### Tooltip Bottom
+#### Bottom
 
 <div class="sheet-example">
     <div class="clay-site-tooltip-display">
@@ -422,7 +422,7 @@ description: "Popovers and Tooltips are patterns used to show helpful informatio
 </div>
 ```
 
-### Tooltip Left
+#### Left
 
 <div class="sheet-example">
     <div class="clay-site-tooltip-display">
