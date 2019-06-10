@@ -1,3 +1,7 @@
+////
+/// @group customForms
+////
+
 $custom-control-indicator-border-color: null !default;
 $custom-control-indicator-border-style: null !default;
 $custom-control-indicator-border-width: null !default;
@@ -10,21 +14,25 @@ $custom-control-indicator-disabled-cursor: $disabled-cursor !default;
 
 // Custom Control Indicator Checked
 
-// $custom-control-indicator-active-checked-bg is deprecated as of v2.2.1
+/// @deprecated as of v2.2.1 use `$custom-control-indicator-checked-active-bg` instead
+
 $custom-control-indicator-active-checked-bg: null !default;
 $custom-control-indicator-checked-active-bg: $custom-control-indicator-active-checked-bg !default;
 
-// $custom-control-indicator-active-checked-border-color is deprecated as of v2.2.1
+/// @deprecated as of v2.2.1 use `$custom-control-indicator-checked-active-border-color` instead
+
 $custom-control-indicator-active-checked-border-color: null !default;
 $custom-control-indicator-checked-active-border-color: $custom-control-indicator-active-checked-border-color !default;
 
 $custom-control-indicator-checked-border-color: null !default;
 
-// $custom-control-indicator-disabled-checked-bg is deprecated as of v2.2.1
+/// @deprecated as of v2.2.1 use `$custom-control-indicator-checked-disabled-bg` instead
+
 $custom-control-indicator-disabled-checked-bg: null !default;
 $custom-control-indicator-checked-disabled-bg: $custom-control-indicator-disabled-checked-bg !default;
 
-// $custom-control-indicator-disabled-checked-border-color is deprecated as of v2.2.1
+/// @deprecated as of v2.2.1 use `$custom-control-indicator-checked-disabled-border-color` instead
+
 $custom-control-indicator-disabled-checked-border-color: null !default;
 $custom-control-indicator-checked-disabled-border-color: $custom-control-indicator-disabled-checked-border-color !default;
 
@@ -59,6 +67,7 @@ $custom-radio-indicator-icon-checked-bg-size: null !default;
 
 $custom-radio-indicator-disabled-border-color: null !default;
 
-// $custom-radio-indicator-disabled-checked-border-color is deprecated as of v2.2.1
+/// @deprecated as of v2.2.1 use `$custom-radio-indicator-checked-disabled-border-color` instead
+
 $custom-radio-indicator-disabled-checked-border-color: null !default;
 $custom-radio-indicator-checked-disabled-border-color: $custom-radio-indicator-disabled-checked-border-color !default;

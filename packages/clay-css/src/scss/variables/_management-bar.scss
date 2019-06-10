@@ -1,3 +1,5 @@
+$management-bar-base: () !default;
+
 $management-bar-size: () !default;
 $management-bar-size: map-merge((
 	scaling-navbar: true,
@@ -31,7 +33,7 @@ $management-bar-light: map-merge((
 
 $management-bar-primary: () !default;
 $management-bar-primary: map-merge((
-	bg: lighten($primary, 44.90),
+	bg: $primary-l3,
 	border-color: $primary,
 	color: $navbar-light-color,
 	link-color: $navbar-light-color,

@@ -1,0 +1,43 @@
+{
+	"name": "@clayui/color-picker",
+	"version": "3.0.0",
+	"description": "ClayColorPicker component",
+	"license": "BSD-3-Clause",
+	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-color-picker",
+	"engines": {
+		"node": ">=0.12.0",
+		"npm": ">=3.0.0"
+	},
+	"main": "lib/index.js",
+	"module": "src/index.js",
+	"jsnext:main": "src/index.js",
+	"files": [
+		"lib",
+		"src"
+	],
+	"scripts": {
+		"build": "babel src --root-mode upward --out-dir lib --extensions .ts,.tsx",
+		"build:types": "tsc --project ./tsconfig.declarations.json",
+		"prepublishOnly": "npm run build && npm run build:types",
+		"test": "jest --config ../../jest.config.js"
+	},
+	"keywords": [
+		"clay",
+		"react"
+	],
+	"dependencies": {
+		"@clayui/icon": "^3.0.0",
+		"classnames": "^2.2.6",
+		"tinycolor2": "^1.4.1"
+	},
+	"devDependencies": {
+		"@types/tinycolor2": "^1.4.1"
+	},
+	"peerDependencies": {
+		"react": "^16.8.1",
+		"react-dom": "^16.8.1"
+	},
+	"browserslist": [
+		"extends browserslist-config-clay"
+	]
+}

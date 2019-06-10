@@ -1,14 +1,97 @@
-// Calculates and sets aspect ratio
-// @param $width - width
-// @param $height - height
+////
+/// @group aspectRatio
+////
+
+/// A mixin that sets the width to height ratio of an element using `padding-bottom`. This element must be `position: relative` and items nested inside this element must use `position: absolute`.
+/// @param {Number} $width[1] - The ratio width (e.g., 16)
+/// @param {Number} $height[1] - The ratio height (e.g., 9)
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
 
 @mixin clay-aspect-ratio($width: 1, $height: 1) {
 	padding-bottom: percentage($height / $width);
 }
 
+/// A mixin that helps style a custom `aspect-ratio-item` component.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// bottom: {Number | String | Null},
+/// color: {Color | String | Null},
+/// display: {String | Null},
+/// height: {Number | String | Null},
+/// left: {Number | String | Null},
+/// max-height: {Number | String | Null},
+/// max-width: {Number | String | Null},
+/// overflow: {String | Null},
+/// position: {String | Null},
+/// right: {Number | String | Null},
+/// top: {Number | String | Null},
+/// width: {Number | String | Null},
+/// word-wrap: {String | Null},
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
+
+@mixin clay-aspect-ratio-item-variant($map) {
+	$enabled: setter(map-get($map, enabled), true);
+
+	$bottom: map-get($map, bottom);
+	$color: map-get($map, color);
+	$display: map-get($map, display);
+	$height: map-get($map, height);
+	$left: map-get($map, left);
+	$max-height: map-get($map, max-height);
+	$max-width: map-get($map, max-width);
+	$overflow: map-get($map, overflow);
+	$position: map-get($map, position);
+	$right: map-get($map, right);
+	$top: map-get($map, top);
+	$width: map-get($map, width);
+	$word-wrap: map-get($map, word-wrap);
+
+	@if ($enabled) {
+		bottom: $bottom;
+		color: $color;
+		display: $display;
+		height: $height;
+		left: $left;
+		max-height: $max-height;
+		max-width: $max-width;
+		overflow: $overflow;
+		position: $position;
+		right: $right;
+		top: $top;
+		width: $width;
+		word-wrap: $word-wrap;
+	}
+}
+
+/// A mixin that styles an aspect ratio container.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// border-color: {Color | String | Null},
+/// border-style: {String | Null},
+/// border-width: {Number | List | Null},
+/// color: {Color | String | Null},
+/// font-size: {Number | String | Null},
+/// horizontal: {Number | Null}, // Sets the `clay-aspect-ratio` `$width` (e.g., 16)
+/// text-align: {String | Null},
+/// vertical: {Number | Null}, // Sets the `clay-aspect-ratio` `$height` (e.g., 9)
+/// lexicon-icon-height: {Number | String | Null},
+/// lexicon-icon-margin-top: {Number | String | Null},
+/// lexicon-icon-width: {Number | String | Null},
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
+
 @mixin clay-aspect-ratio-variant($map) {
 	$enabled: setter(map-get($map, enabled), true);
 
+	$bg: map-get($map, bg);
+	$bg-image: map-get($map, bg-image);
 	$border-color: map-get($map, border-color);
 	$border-style: map-get($map, border-style);
 	$border-width: map-get($map, border-width);
@@ -23,6 +106,8 @@
 	$lexicon-icon-width: map-get($map, lexicon-icon-width);
 
 	@if ($enabled) {
+		background-color: $bg;
+		background-image: $bg-image;
 		border-color: $border-color;
 		border-style: $border-style;
 		border-width: $border-width;

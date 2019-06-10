@@ -1,0 +1,28 @@
+{
+	"compilerOptions": {
+		"noEmit": true,
+		"strict": true,
+		"jsx": "react",
+		"target": "esnext",
+		"module": "esnext",
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"removeComments": true,
+		"allowJs": true,
+		"baseUrl": ".",
+		"paths": {
+			"@clayui/*": ["packages/clay-*/src"],
+			"*": ["custom-types/*", "node_modules/*", "packages/*"]
+		}
+	},
+	"awesomeTypescriptLoaderOptions": {
+		"useBabel": true,
+		"babelCore": "@babel/core"
+	},
+	"include": ["packages/*"],
+	"exclude": [
+		"node_modules",
+		"packages/**/lib",
+		"packages/generator-clay-component"
+	]
+}

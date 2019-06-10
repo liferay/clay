@@ -1,12 +1,42 @@
+////
+/// @group pagination
+////
+
 $pagination-font-size: null !default;
 
+// Pagination Item
+
 $pagination-item-height: 2.375rem !default; // 38px
-$pagination-item-margin-x: null !default;
+
+/// @deprecated as of v2 use the Sass map `$pagination-item` instead
+
+$pagination-item-margin-x: -0.5px !default;
+
+/// @deprecated as of v2 use the Sass map `$pagination-item` instead
+
 $pagination-item-margin-y: null !default;
 
+$pagination-item: () !default;
+$pagination-item: map-merge((
+	margin-bottom: $pagination-item-margin-y,
+	margin-left: $pagination-item-margin-x,
+	margin-right: $pagination-item-margin-x,
+	margin-top: $pagination-item-margin-y,
+), $pagination-item);
+
+// Pagination Link
+
+/// @deprecated as of v2 use the Sass map `$pagination-link` instead
+
 $pagination-link-border-radius: 0 !default;
+
+/// @deprecated as of v2 use the Sass map `$pagination-link` instead
+
 $pagination-link-cursor: null !default;
-$pagination-link-transition: none !default;
+
+/// @deprecated as of v2 use the Sass map `$pagination-link` instead
+
+$pagination-link-transition: null !default;
 
 $pagination-link-first-border-radius: $border-radius 0 0 $border-radius !default;
 $pagination-link-last-border-radius: 0 $border-radius $border-radius 0 !default;
@@ -15,28 +45,186 @@ $pagination-margin-bottom: 0.5rem !default;
 
 $pagination-margin-top-mobile: 0.5rem !default;
 
+/// @deprecated as of v2 use the Sass map `$pagination-link-disabled` instead
+
 $pagination-disabled-cursor: $disabled-cursor !default;
+
+/// @deprecated as of v2 use the Sass map `$pagination-link-disabled` instead
+
 $pagination-disabled-opacity: 1 !default;
+
+/// @deprecated as of v2 use the Sass map `$pagination-link-disabled` instead
+
 $pagination-disabled-pointer-events: auto !default;
+
+// Pagination Link
+
+$pagination-link: () !default;
+$pagination-link: map-merge((
+	align-items: center,
+	bg: $pagination-bg,
+	border-radius: $pagination-link-border-radius,
+	border-width: $pagination-border-width,
+	cursor: $pagination-link-cursor,
+	display: inline-flex,
+	height: $pagination-item-height,
+	justify-content: center,
+	line-height: $pagination-line-height,
+	margin-left: 0,
+	padding-bottom: $pagination-padding-y,
+	padding-left: $pagination-padding-x,
+	padding-right: $pagination-padding-x,
+	padding-top: $pagination-padding-y,
+	transition: $pagination-link-transition,
+	lexicon-icon-margin-top: 0,
+), $pagination-link);
+
+$pagination-link-hover: () !default;
+$pagination-link-hover: map-merge((
+	bg: $pagination-hover-bg,
+	border-color: $pagination-hover-border-color,
+	color: $pagination-hover-color,
+), $pagination-link-hover);
+
+$pagination-link-focus: () !default;
+$pagination-link-focus: map-merge((
+	box-shadow: $pagination-focus-box-shadow,
+	z-index: 4,
+), $pagination-link-focus);
+
+$pagination-link-active: () !default;
+$pagination-link-active: map-merge((
+	bg: $pagination-active-bg,
+	border-color: $pagination-active-border-color,
+	cursor: default,
+	color: $pagination-active-color,
+	z-index: 3,
+), $pagination-link-active);
+
+$pagination-link-disabled: () !default;
+$pagination-link-disabled: map-merge((
+	bg: $pagination-disabled-bg,
+	border-color: $pagination-disabled-border-color,
+	box-shadow: none,
+	color: $pagination-disabled-color,
+	cursor: $pagination-disabled-cursor,
+	opacity: $pagination-disabled-opacity,
+	pointer-events: $pagination-disabled-pointer-events,
+	z-index: 0,
+), $pagination-link-disabled);
+
+// Pagination Dropdown Menu
 
 $pagination-dropdown-menu-spacer-y: null !default;
 
+// Pagination Items Per Page
+
+/// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link` instead
+
 $pagination-items-per-page-bg: null !default;
+
+/// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link` instead
+
 $pagination-items-per-page-border-color: $pagination-border-color !default;
+
+/// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link` instead
+
 $pagination-items-per-page-border-radius: $border-radius !default;
+
+/// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link` instead
+
 $pagination-items-per-page-color: $pagination-color !default;
 $pagination-items-per-page-font-size: $pagination-font-size !default;
+
+/// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link` instead
+
 $pagination-items-per-page-transition: $pagination-link-transition !default;
 
+/// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link-hover` instead
+
 $pagination-items-per-page-hover-bg: $pagination-hover-bg !default;
+
+/// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link-hover` instead
+
 $pagination-items-per-page-hover-border-color: $pagination-hover-border-color !default;
+
+/// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link-hover` instead
+
 $pagination-items-per-page-hover-color: $pagination-hover-color !default;
 
+/// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link-focus` instead
+
 $pagination-items-per-page-focus-box-shadow: $pagination-focus-box-shadow !default;
+
+/// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link-focus` instead
+
 $pagination-items-per-page-focus-outline: 0 !default;
 
+/// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link` instead
+
 $pagination-items-per-page-lexicon-icon-margin-left: 0.125rem !default; // 2px
+
+/// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link` instead
+
 $pagination-items-per-page-lexicon-icon-margin-top: 0.125rem !default; // 2px
+
+// Pagination Items Per Page Link
+
+$pagination-items-per-page-link: () !default;
+$pagination-items-per-page-link: map-merge((
+	align-items: center,
+	bg: $pagination-items-per-page-bg,
+	border-color: $pagination-items-per-page-border-color,
+	border-radius: $pagination-items-per-page-border-radius,
+	border-style: solid,
+	border-width: $pagination-border-width,
+	color: $pagination-items-per-page-color,
+	display: inline-flex,
+	height: $pagination-item-height,
+	justify-content: center,
+	line-height: $pagination-line-height,
+	padding-bottom: $pagination-padding-y,
+	padding-left: $pagination-padding-x,
+	padding-right: $pagination-padding-x,
+	padding-top: $pagination-padding-y,
+	text-decoration: none,
+	transition: $pagination-items-per-page-transition,
+	lexicon-icon-margin-left: $pagination-items-per-page-lexicon-icon-margin-left,
+	lexicon-icon-margin-top: $pagination-items-per-page-lexicon-icon-margin-top,
+), $pagination-items-per-page-link);
+
+$pagination-items-per-page-link-hover: () !default;
+$pagination-items-per-page-link-hover: map-merge((
+	bg: $pagination-items-per-page-hover-bg,
+	border-color: $pagination-items-per-page-hover-border-color,
+	color: $pagination-items-per-page-hover-color,
+), $pagination-items-per-page-link-hover);
+
+$pagination-items-per-page-link-focus: () !default;
+$pagination-items-per-page-link-focus: map-merge((
+	box-shadow: $pagination-items-per-page-focus-box-shadow,
+	outline: $pagination-items-per-page-focus-outline,
+), $pagination-items-per-page-link-focus);
+
+$pagination-items-per-page-link-active: () !default;
+$pagination-items-per-page-link-active: map-merge((
+	bg: $pagination-active-bg,
+	border-color: $pagination-active-border-color,
+	color: $pagination-active-color,
+), $pagination-items-per-page-link-active);
+
+$pagination-items-per-page-link-disabled: () !default;
+$pagination-items-per-page-link-disabled: map-merge((
+	bg: $pagination-disabled-bg,
+	border-color: $pagination-disabled-border-color,
+	box-shadow: none,
+	color: $pagination-disabled-color,
+	cursor: $pagination-disabled-cursor,
+	opacity: $pagination-disabled-opacity,
+	pointer-events: $pagination-disabled-pointer-events,
+), $pagination-items-per-page-link-disabled);
+
+// Pagination Results
 
 $pagination-results-color: null !default;
 

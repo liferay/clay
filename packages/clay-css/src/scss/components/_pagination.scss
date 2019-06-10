@@ -21,145 +21,106 @@
 	}
 }
 
+// Pagination Link
+
 .page-link {
-	align-items: center;
+	@include clay-link($pagination-link);
 
-	@include border-radius($pagination-link-border-radius);
-
-	display: inline-flex;
-	height: $pagination-item-height;
-	justify-content: center;
-
-	@include transition($pagination-link-transition);
+	&:hover {
+		@include clay-link($pagination-link-hover);
+	}
 
 	&:focus {
-		z-index: 3;
+		@include clay-link($pagination-link-focus);
 	}
 
-	&:not(:disabled):not(.disabled) {
-		cursor: $pagination-link-cursor;
+	&:active,
+	&.active {
+		@include clay-link($pagination-link-active);
 	}
 
-	&.btn-unstyled {
-		background-color: $pagination-bg;
-		border-width: $pagination-border-width;
-		line-height: $pagination-line-height;
-		max-width: none;
-		padding: $pagination-padding-y $pagination-padding-x;
-
-		&:hover {
-			background-color: $pagination-hover-bg;
-			border-color: $pagination-hover-border-color;
-			color: $pagination-hover-color;
-		}
-
-		&:focus {
-			box-shadow: $pagination-focus-box-shadow;
-		}
-
-		&:disabled {
-			background-color: $pagination-disabled-bg;
-			border-color: $pagination-disabled-border-color;
-			color: $pagination-disabled-color;
-			opacity: $pagination-disabled-opacity;
-		}
-	}
-
-	.lexicon-icon {
-		margin-top: 0;
+	&:disabled,
+	&.disabled {
+		@include clay-link($pagination-link-disabled);
 	}
 }
+
+.page-item.active,
+.page-item.show {
+	.page-link {
+		@include clay-link($pagination-link-active);
+	}
+}
+
+.page-item.disabled {
+	.page-link {
+		@include clay-link($pagination-link-disabled);
+	}
+}
+
+// Pagination Item
 
 .page-item {
-	margin-bottom: $pagination-item-margin-y;
-	margin-left: $pagination-item-margin-x;
-	margin-right: $pagination-item-margin-x;
-	margin-top: $pagination-item-margin-y;
-
-	&:first-child {
-		.page-link {
-			border-radius: $pagination-link-first-border-radius;
-		}
-	}
-
-	&:last-child {
-		.page-link {
-			border-radius: $pagination-link-last-border-radius;
-		}
-	}
-
-	&.active .page-link {
-		cursor: default;
-
-		&.btn-unstyled {
-			background-color: $pagination-active-bg;
-			border-color: $pagination-active-border-color;
-			color: $pagination-active-color;
-		}
-	}
-
-	&.disabled .page-link {
-		cursor: $pagination-disabled-cursor;
-		opacity: $pagination-disabled-opacity;
-		pointer-events: $pagination-disabled-pointer-events;
-	}
+	@include clay-container($pagination-item);
 }
+
+.page-item:first-child .page-link,
+.page-link-first {
+	border-radius: $pagination-link-first-border-radius;
+}
+
+.page-item:last-child .page-link,
+.page-link-last {
+	border-radius: $pagination-link-last-border-radius;
+}
+
+// Pagination Items Per Page
 
 .pagination-items-per-page {
 	font-size: $pagination-items-per-page-font-size;
 	margin-bottom: $pagination-margin-bottom;
 
 	> a,
-	> .btn-unstyled {
-		align-items: center;
-		background-color: $pagination-items-per-page-bg;
-		border-color: $pagination-items-per-page-border-color;
-
-		@include border-radius($pagination-items-per-page-border-radius);
-
-		border-style: solid;
-		border-width: $pagination-border-width;
-		color: $pagination-items-per-page-color;
-		display: inline-flex;
-		height: $pagination-item-height;
-		justify-content: center;
-		line-height: $pagination-line-height;
-		padding: $pagination-padding-y $pagination-padding-x;
-		text-decoration: none;
-
-		@include transition($pagination-items-per-page-transition);
+	> button {
+		@include clay-link($pagination-items-per-page-link);
 
 		&:hover {
-			background-color: $pagination-items-per-page-hover-bg;
-			border-color: $pagination-items-per-page-hover-border-color;
-			color: $pagination-items-per-page-hover-color;
+			@include clay-link($pagination-items-per-page-link-hover);
 		}
 
 		&:focus {
-			box-shadow: $pagination-items-per-page-focus-box-shadow;
-			outline: $pagination-items-per-page-focus-outline;
+			@include clay-link($pagination-items-per-page-link-focus);
 		}
 
-		.lexicon-icon {
-			margin-left: $pagination-items-per-page-lexicon-icon-margin-left;
-			margin-top: $pagination-items-per-page-lexicon-icon-margin-top;
+		&:active,
+		&.active {
+			@include clay-link($pagination-items-per-page-link-active);
+		}
+
+		&:disabled,
+		&.disabled {
+			@include clay-link($pagination-items-per-page-link-disabled);
+		}
+	}
+
+	&.active,
+	&.show {
+		> a,
+		> button {
+			@include clay-link($pagination-items-per-page-link-active);
+		}
+	}
+
+	&.disabled {
+		> a,
+		> button {
+			@include clay-link($pagination-items-per-page-link-disabled);
 		}
 	}
 
 	+ .pagination-results {
 		@include clay-scale-component {
 			margin-left: auto;
-		}
-	}
-}
-
-.show {
-	&.page-item,
-	&.pagination-items-per-page {
-		.dropdown-toggle {
-			background-color: $pagination-active-bg;
-			border-color: $pagination-active-border-color;
-			color: $pagination-active-color;
 		}
 	}
 }

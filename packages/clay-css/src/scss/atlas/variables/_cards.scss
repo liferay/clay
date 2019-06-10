@@ -13,7 +13,7 @@ $card-inner-border-radius: if($card-border-width > 0, calc(#{$card-border-radius
 
 $card-title: () !default;
 $card-title: map-merge((
-	color: $body-color,
+	color: $gray-900,
 	font-size: 0.875rem // 14px
 ), $card-title);
 
@@ -31,16 +31,16 @@ $card-subtitle: map-merge((
 
 $card-subtitle-link: () !default;
 $card-subtitle-link: map-merge((
-	hover-color: $secondary
+	hover-color: $gray-600,
 ), $card-subtitle-link);
 
 // Card Link
 
 $card-link: () !default;
 $card-link: map-merge((
-	color: $secondary,
+	color: $gray-600,
 	font-size: 0.875rem, // 14px
-	hover-color: $secondary,
+	hover-color: $gray-600,
 	hover-text-decoration: underline
 ), $card-link);
 
@@ -72,18 +72,18 @@ $card-interactive-secondary: map-merge((
 
 $card-type-asset: () !default;
 $card-type-asset: map-merge((
-	aspect-ratio-border-color: lighten(map-get($theme-colors, secondary), 46%),
+	aspect-ratio-border-color: $gray-300,
 	card-body-padding-top: 0.75rem
 ), $card-type-asset);
 
 $image-card: () !default;
 $image-card: map-merge((
-	aspect-ratio-checkered-fg: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08)
+	aspect-ratio-checkered-fg: $gray-300,
 ), $image-card);
 
 $file-card: () !default;
 $file-card: map-merge((
-	asset-icon-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06)
+	asset-icon-color: $gray-400,
 ), $file-card);
 
 // Card Type Template
@@ -94,6 +94,16 @@ $card-type-template-after-highlight: map-merge((
 	left: -1px,
 	right: -1px,
 ), $card-type-template-after-highlight);
+
+$card-type-template-aspect-ratio: () !default;
+$card-type-template-aspect-ratio: map-merge((
+	bg-image: none,
+), $card-type-template-aspect-ratio);
+
+$card-type-template-aspect-ratio-item: () !default;
+$card-type-template-aspect-ratio-item: map-merge((
+	color: $gray-600,
+), $card-type-template-aspect-ratio-item);
 
 $card-type-template: () !default;
 $card-type-template: map-merge((

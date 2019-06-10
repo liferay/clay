@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rendering renders ClaySelect 1`] = `
+<div>
+  <select
+    aria-label="Select Label"
+    class="form-control"
+    id="mySelectId"
+  />
+</div>
+`;
+
+exports[`Rendering renders ClaySelect with Option 1`] = `
+<div>
+  <select
+    aria-label="Select Label"
+    class="form-control"
+    id="mySelectId"
+  >
+    <option
+      value="1"
+    >
+      Option 1
+    </option>
+    <option
+      value="2"
+    >
+      Option 2
+    </option>
+    <option
+      value="3"
+    >
+      Option 3
+    </option>
+  </select>
+</div>
+`;
+
+exports[`Rendering renders ClaySelect.Option 1`] = `
+<div>
+  <option
+    value="1"
+  >
+    Option 1
+  </option>
+  <option
+    value="2"
+  >
+    Option 2
+  </option>
+  <option
+    value="3"
+  >
+    Option 3
+  </option>
+</div>
+`;
+
+exports[`Rendering renders ClaySelectWithOption 1`] = `
+<div>
+  <select
+    aria-label="Select Label"
+    class="form-control"
+    id="mySelectId"
+  >
+    <option
+      value="1"
+    >
+      Option 1
+    </option>
+    <option
+      value="2"
+    >
+      Option 2
+    </option>
+    <option
+      value="3"
+    >
+      Option 3
+    </option>
+  </select>
+</div>
+`;

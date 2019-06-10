@@ -1,21 +1,5 @@
 .breadcrumb-link {
-	display: block;
-	color: $breadcrumb-link-color;
-
-	@if not ($breadcrumb-link-text-decoration == $link-decoration) {
-		text-decoration: $breadcrumb-link-text-decoration;
-	}
-
-	text-transform: $breadcrumb-text-transform;
-
-	&:hover,
-	&:focus {
-		color: $breadcrumb-link-hover-color;
-
-		@if not ($breadcrumb-link-hover-text-decoration == $link-hover-decoration) {
-			text-decoration: $breadcrumb-link-hover-text-decoration;
-		}
-	}
+	@include clay-link($breadcrumb-link);
 
 	> .breadcrumb-text-truncate {
 		text-decoration: $breadcrumb-link-text-decoration;

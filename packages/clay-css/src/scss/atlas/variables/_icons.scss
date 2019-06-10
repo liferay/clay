@@ -1,2 +1,2 @@
-$order-arrow-down-active-color: lighten(saturate(adjust-hue($secondary, -3), 5.39), 23.92) !default;
+$order-arrow-down-active-color: $gray-500 !default;
 $order-arrow-up-active-color: $order-arrow-down-active-color !default;

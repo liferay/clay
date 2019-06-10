@@ -29,28 +29,33 @@ $sidebar-dd: map-merge((
 
 // Sidebar List Group
 
-$sidebar-list-group-border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06) !default;
+$sidebar-list-group-border-color: $secondary-l2 !default;
 
 // Sidebar Light
 
 $sidebar-light: () !default;
 $sidebar-light: map-merge((
-	bg: #FFF,
+	bg: $white,
 	border-left-width: 0,
 	box-shadow: -0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
-	panel-bg: $light,
+	panel-bg: $gray-200,
 	dt: (
-		color: $secondary
+		color: $gray-600
 	),
 	dd: (
 		clay-link: (
-			color: $body-color
+			color: $gray-900
 		)
-	)
+	),
+	panel-unstyled: (
+		header-link: (
+			focus-box-shadow: 0 0 0 0.25rem $white#{','} 0 0 0 0.375rem $primary-l1,
+		),
+	),
 ), $sidebar-light);
 
 $sidebar-light-navigation-bar: () !default;
 $sidebar-light-navigation-bar: map-merge((
-	bg: #FFF,
-	border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06)
+	bg: $white,
+	border-color: $secondary-l2
 ), $sidebar-light-navigation-bar);

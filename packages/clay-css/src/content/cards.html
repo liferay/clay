@@ -11,7 +11,7 @@ section: Components
 	<div class="col-md-4">
 		<div class="card card-type-asset image-card">
 			<div class="aspect-ratio card-item-first">
-				<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="../../images/thumbnail_coffee.jpg">
+				<img alt="thumbnail"class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="../../images/thumbnail_coffee.jpg">
 				<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
 			</div>
 			<div class="card-body">
@@ -42,7 +42,7 @@ section: Components
 						<label>
 							<input class="custom-control-input" type="checkbox">
 							<span class="custom-control-label"></span>
-							<img alt="thumbnail"class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="../../images/thumbnail_coffee.jpg">
+							<img alt="thumbnail"class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="../../images/thumbnail_coffee.jpg">
 							<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
 						</label>
 					</div>
@@ -173,7 +173,7 @@ section: Components
 	<div class="col-md-4">
 		<div class="card card-type-asset image-card">
 			<div class="aspect-ratio card-item-first">
-				<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+				<div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 					<svg class="lexicon-icon lexicon-icon-camera" focusable="false" role="presentation">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#camera" />
 					</svg>
@@ -208,7 +208,7 @@ section: Components
 						<label>
 							<input class="custom-control-input" type="checkbox">
 							<span class="custom-control-label"></span>
-							<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+							<div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 								<svg class="lexicon-icon lexicon-icon-camera" focusable="false" role="presentation">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#camera" />
 								</svg>
@@ -270,7 +270,7 @@ section: Components
 	<div class="col-md-4">
 		<div class="card card-type-asset file-card">
 			<div class="aspect-ratio card-item-first">
-				<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+				<div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 					<svg class="lexicon-icon lexicon-icon-documents-and-media" focusable="false" role="presentation">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#documents-and-media" />
 					</svg>
@@ -310,7 +310,7 @@ section: Components
 						<label>
 							<input class="custom-control-input" type="checkbox">
 							<span class="custom-control-label"></span>
-							<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+							<div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 								<svg class="lexicon-icon lexicon-icon-documents-and-media" focusable="false" role="presentation">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#documents-and-media" />
 								</svg>
@@ -371,7 +371,7 @@ section: Components
 	<div class="col-md-4">
 		<div class="card card-type-asset user-card">
 			<div class="aspect-ratio card-item-first">
-				<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+				<div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 					<span class="sticker sticker-secondary sticker-user-icon">
 						<span class="sticker-overlay">
 							<img alt="thumbnail" class="sticker-img" src="../../images/thumbnail_coffee.jpg">
@@ -402,7 +402,7 @@ section: Components
 	<div class="col-md-4">
 		<div class="card card-type-asset user-card">
 			<div class="aspect-ratio card-item-first">
-				<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+				<div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 					<span class="sticker sticker-secondary sticker-user-icon">
 						<span class="sticker-overlay">
 							<img alt="thumbnail" class="sticker-img" src="../../images/long_user_image.png">
@@ -433,7 +433,7 @@ section: Components
 	<div class="col-md-4">
 		<div class="card card-type-asset user-card">
 			<div class="aspect-ratio card-item-first">
-				<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+				<div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 					<span class="sticker sticker-secondary sticker-user-icon">
 						<span class="sticker-overlay">
 							<img alt="thumbnail" class="sticker-img" src="../../images/tv-at-beach.png">
@@ -469,9 +469,13 @@ section: Components
 						<label>
 							<input class="custom-control-input" type="checkbox">
 							<span class="custom-control-label"></span>
-							<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-								<span class="sticker sticker-danger sticker-user-icon">
-									<span class="sticker-overlay">HS</span>
+							<div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+								<span class="sticker sticker-user-icon">
+									<span class="sticker-overlay">
+										<svg class="lexicon-icon lexicon-icon-user" focusable="false" role="presentation">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#user" />
+										</svg>
+									</span>
 								</span>
 							</div>
 						</label>
@@ -609,12 +613,8 @@ section: Components
 	<div class="col-md-4">
 		<div class="card card-interactive card-interactive-primary card-type-template template-card" tabindex="0">
 			<div class="aspect-ratio card-item-first">
-				<div class="aspect-ratio-item-center-middle aspect-ratio-item-flush">
-					<div class="aspect-ratio">
-						<div class="aspect-ratio-item-center-middle aspect-ratio-item-flush">
-							<img src="{{rootPath}}/content/site-images/portlet.svg" />
-						</div>
-					</div>
+				<div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
+					<img src="{{rootPath}}/content/site-images/portlet.svg" />
 				</div>
 			</div>
 			<div class="card-body">
@@ -627,7 +627,7 @@ section: Components
 	<div class="col-md-4">
 		<a class="card card-interactive card-interactive-primary card-type-template template-card" href="#1">
 			<span class="aspect-ratio">
-				<span class="aspect-ratio-item-center-middle aspect-ratio-item-flush">
+				<span class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
 					<img src="{{rootPath}}/content/site-images/content.svg" />
 				</span>
 			</span>
@@ -641,7 +641,7 @@ section: Components
 	<div class="col-md-4">
 		<div class="card card-interactive card-interactive-primary card-type-template template-card" tabindex="0">
 			<div class="aspect-ratio">
-				<div class="aspect-ratio-item-center-middle aspect-ratio-item-flush">
+				<div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
 					<svg class="lexicon-icon lexicon-icon-page-template" focusable="false" role="presentation">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#page-template" />
 					</svg>
@@ -1252,7 +1252,7 @@ section: Components
 	<div class="col-md-4 col-6">
 		<div class="card card-rounded">
 			<div class="aspect-ratio card-item-first">
-				<img alt="thumbnail" class="aspect-ratio-item-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
+				<img alt="thumbnail" class="aspect-ratio-item aspect-ratio-item-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
 			</div>
 
 			<div class="card-body" style="text-align:center;">
@@ -1436,7 +1436,7 @@ section: Components
 					<span class="custom-control-label"></span>
 					<div class="card">
 						<div class="aspect-ratio card-item-first">
-							<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="../../images/thumbnail_coffee.jpg">
+							<img alt="thumbnail" class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="../../images/thumbnail_coffee.jpg">
 							<span class="sticker sticker-bottom-left sticker-warning">PNG</span>
 						</div>
 						<div class="card-body">
@@ -1560,7 +1560,7 @@ section: Components
 				<input class="form-check-input" name="cardRadios" type="radio" value="cardOption1">
 				<div class="card">
 					<div class="aspect-ratio card-item-first">
-						<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="../../images/thumbnail_coffee.jpg">
+						<img alt="thumbnail" class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="../../images/thumbnail_coffee.jpg">
 						<span class="sticker sticker-bottom-left sticker-warning">PNG</span>
 					</div>
 					<div class="card-body">
@@ -1665,7 +1665,7 @@ section: Components
 					<span class="custom-control-label"></span>
 					<div class="card">
 						<div class="aspect-ratio card-item-first">
-							<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="../../images/thumbnail_coffee.jpg">
+							<img alt="thumbnail" class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="../../images/thumbnail_coffee.jpg">
 							<span class="sticker sticker-bottom-left sticker-warning">PNG</span>
 						</div>
 						<div class="card-body">
@@ -1793,7 +1793,7 @@ section: Components
 			</label>
 			<div class="card">
 				<div class="aspect-ratio card-item-first">
-					<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="../../images/thumbnail_coffee.jpg">
+					<img alt="thumbnail" class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="../../images/thumbnail_coffee.jpg">
 					<span class="sticker sticker-bottom-left sticker-warning">PNG</span>
 				</div>
 				<div class="card-body">
@@ -1966,7 +1966,7 @@ section: Components
 			</label>
 			<div class="card">
 				<div class="aspect-ratio card-item-first">
-					<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="../../images/thumbnail_coffee.jpg">
+					<img alt="thumbnail" class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="../../images/thumbnail_coffee.jpg">
 					<span class="sticker sticker-bottom-left sticker-warning">PNG</span>
 				</div>
 				<div class="card-body">

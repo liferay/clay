@@ -1,8 +1,15 @@
-// Indents each nested navigation by $indent (15px default)
-// @param $indent - amount to indent in pixels
-// @param $nest-level - number of levels to iterate
-// @param $nav-class - class name of nav element
-// @param $i - start value
+////
+/// @group nav
+////
+
+/// A mixin to indent each nested navigation using `padding-left`.
+/// @param {Number} $indent[15px] - The amount to indent in pixels
+/// @param {Number} $nest-level[15] - The number of times to iterate
+/// @param {String} $nav-class[".nav"] - The class name of nav the element
+/// @param {Number} $i[1] - The starting loop index
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
 
 @mixin clay-nav-nested($indent: 15px, $nest-level: 15, $nav-class: ".nav", $i: 1) {
 	@for $i from (1) through $nest-level {

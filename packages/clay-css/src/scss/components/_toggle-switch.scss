@@ -1,11 +1,17 @@
 // Simple Toggle Switch
 
 .simple-toggle-switch {
-	align-items: center;
-	display: inline-flex;
+	&.toggle-switch {
+		align-items: center;
+		display: inline-flex;
+	}
 
 	.toggle-switch-check + .toggle-switch-label {
 		margin-right: $simple-toggle-switch-label-spacer-x;
+	}
+
+	.toggle-switch-label + .toggle-switch-check-bar {
+		margin-left: $simple-toggle-switch-label-spacer-x;
 	}
 
 	.toggle-switch-label {
@@ -24,6 +30,14 @@
 		margin-right: $simple-toggle-switch-label-spacer-x;
 	}
 
+	.toggle-switch-check-bar {
+		order: 5;
+
+		.toggle-switch-bar {
+			order: 0;
+		}
+	}
+
 	.toggle-switch-bar {
 		order: 5;
 	}
@@ -31,14 +45,40 @@
 
 // Toggle Switch
 
+label.toggle-switch {
+	cursor: $toggle-switch-cursor;
+
+	&.disabled {
+		cursor: $toggle-switch-disabled-cursor;
+	}
+}
+
 .toggle-switch {
-	cursor: pointer;
+	display: inline-block;
+	font-weight: $toggle-switch-font-weight;
+	max-width: 100%;
+	position: relative;
+
+	&.disabled {
+		.toggle-switch-label {
+			color: $toggle-switch-label-disabled-color;
+			cursor: $toggle-switch-disabled-cursor;
+		}
+
+		.toggle-switch-text {
+			color: $toggle-switch-text-disabled-color;
+		}
+	}
+}
+
+.toggle-switch-check-bar {
+	display: inline-flex;
+	position: relative;
 }
 
 .toggle-switch-bar {
 	.toggle-switch-handle {
 		display: block;
-		float: left;
 		min-width: $toggle-switch-bar-width;
 		text-transform: uppercase;
 	}
@@ -57,14 +97,21 @@
 }
 
 .toggle-switch-check {
+	bottom: 0;
 	font-size: 62.5%;
+	height: $toggle-switch-bar-height;
 	opacity: 0;
 	position: absolute;
+	width: $toggle-switch-bar-width;
+	z-index: 2;
+
+	@include clay-scale-component {
+		height: $toggle-switch-bar-height-mobile;
+		width: $toggle-switch-bar-width-mobile;
+	}
 
 	&:empty ~ .toggle-switch-bar {
-		cursor: pointer;
-		display: block;
-		float: left;
+		display: inline-flex;
 		font-size: $toggle-switch-bar-font-size;
 		height: $toggle-switch-bar-height;
 		line-height: $toggle-switch-bar-height;
@@ -210,7 +257,7 @@
 	}
 
 	&:focus ~ .toggle-switch-bar:before {
-		@include box-shadow($toggle-switch-bar-focus-box-shadow);
+		box-shadow: $toggle-switch-bar-focus-box-shadow;
 	}
 }
 
@@ -220,20 +267,18 @@
 }
 
 .toggle-switch-text {
-	clear: both;
 	display: block;
 	font-size: $toggle-switch-text-font-size;
 }
 
 .toggle-switch-text-left {
-	float: left;
+	display: inline-flex;
 	line-height: $toggle-switch-bar-height;
 	margin-right: 8px;
 }
 
 .toggle-switch-text-right {
-	clear: none;
-	float: left;
+	display: inline-flex;
 	line-height: $toggle-switch-bar-height;
 	margin-left: 8px;
 }

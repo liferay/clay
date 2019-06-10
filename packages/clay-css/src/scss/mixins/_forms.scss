@@ -1,7 +1,419 @@
+////
+/// @group Forms
+////
+
 @mixin clay-form-control-focus() {
 	background-color: $input-focus-bg;
 	border-color: $input-focus-border-color;
 	box-shadow: $input-focus-box-shadow;
 	color: $input-focus-color;
 	outline: 0;
+}
+
+/// A mixin to create Form Control variants. You can base your variant off Bootstrap's `.form-control` class or create your own base class (e.g., `<input class="form-control my-custom-form-control" type="text" />` or `<input class="my-custom-form-control" type="text" />`).
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// bg: {Color | String | Null},
+/// bg-clip: {String | Null},
+/// bg-image: {String | List | Null},
+/// bg-position: {String | List | Null},
+/// bg-repeat: {String | List | Null},
+/// bg-size: {Number | String | List | Null},
+/// border-color: {Color | String | List | Null},
+/// border-radius: {Number | String | List | Null},
+/// border-style: {String | List | Null},
+/// border-width: {Number | String | List | Null},
+/// box-shadow: {String | List | Null},
+/// color: {Color | String | Null},
+/// cursor: {String | Null},
+/// display: {String | Null},
+/// font-size: {Number | String | Null},
+/// font-weight: {Number | String | Null},
+/// height: {Number | String | Null},
+/// line-height: {Number | String | Null},
+/// min-width: {Number | String | Null},
+/// outline: {Number | String | Null},
+/// padding-bottom: {Number | String | Null},
+/// padding-left: {Number | String | Null},
+/// padding-right: {Number | String | Null},
+/// padding-top: {Number | String | Null},
+/// text-align: {String | Null},
+/// transition: {String | List | Null},
+/// width: {Number | String | Null},
+/// placeholder-color: {Color | String | Null},
+/// placeholder-opacity: {Number | String | Null},
+/// hover-bg: {Color | String | Null},
+/// hover-border-color: {Color | String | List | Null},
+/// hover-box-shadow: {String | List | Null},
+/// hover-color: {Color | String | Null},
+/// hover-placeholder-color: {Color | String | Null},
+/// focus-bg: {Color | String | Null},
+/// focus-bg-image: {String | List | Null},
+/// focus-border-color: {Color | String | List | Null},
+/// focus-box-shadow: {String | List | Null},
+/// focus-color: {Color | String | Null},
+/// focus-placeholder-color: {Color | String | Null},
+/// readonly-bg: {Color | String | Null},
+/// readonly-bg-image: {String | List | Null},
+/// readonly-border-color: {Color | String | List | Null},
+/// readonly-box-shadow: {String | List | Null},
+/// readonly-color: {Color | String | Null},
+/// readonly-cursor: {String | Null},
+/// readonly-opacity: {Number | String | Null},
+/// readonly-placeholder-color: {Color | String | Null},
+/// disabled-bg: {Color | String | Null},
+/// disabled-bg-image: {String | List | Null},
+/// disabled-border-color: {Color | String | List | Null},
+/// disabled-box-shadow: {String | List | Null},
+/// disabled-color: {Color | String | Null},
+/// disabled-cursor: {String | Null},
+/// disabled-opacity: {Number | String | Null},
+/// disabled-placeholder-color: {Color | String | Null},
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
+
+@mixin clay-form-control-variant($map) {
+	$enabled: setter(map-get($map, enabled), true);
+
+	$bg: map-get($map, bg);
+	$bg-clip: map-get($map, bg-clip);
+	$bg-image: map-get($map, bg-image);
+	$bg-position: map-get($map, bg-position);
+	$bg-repeat: map-get($map, bg-repeat);
+	$bg-size: map-get($map, bg-size);
+	$border-color: map-get($map, border-color);
+	$border-radius: map-get($map, border-radius);
+	$border-style: map-get($map, border-style);
+	$border-width: map-get($map, border-width);
+	$box-shadow: map-get($map, box-shadow);
+	$color: map-get($map, color);
+	$cursor: map-get($map, cursor);
+	$display: map-get($map, display);
+	$font-size: map-get($map, font-size);
+	$font-weight: map-get($map, font-weight);
+	$height: map-get($map, height);
+	$line-height: map-get($map, line-height);
+	$min-width: map-get($map, min-width);
+	$outline: map-get($map, outline);
+	$padding-bottom: map-get($map, padding-bottom);
+	$padding-left: map-get($map, padding-left);
+	$padding-right: map-get($map, padding-right);
+	$padding-top: map-get($map, padding-top);
+	$text-align: map-get($map, text-align);
+	$transition: map-get($map, transition);
+	$width: map-get($map, width);
+	$placeholder-color: map-get($map, placeholder-color);
+	$placeholder-opacity: map-get($map, placeholder-opacity);
+
+	$hover-bg: map-get($map, hover-bg);
+	$hover-border-color: map-get($map, hover-border-color);
+	$hover-box-shadow: map-get($map, hover-box-shadow);
+	$hover-color: map-get($map, hover-color);
+	$hover-placeholder-color: map-get($map, hover-placeholder-color);
+
+	$focus-bg: map-get($map, focus-bg);
+	$focus-bg-image: map-get($map, focus-bg-image);
+	$focus-border-color: map-get($map, focus-border-color);
+	$focus-box-shadow: map-get($map, focus-box-shadow);
+	$focus-color: map-get($map, focus-color);
+	$focus-placeholder-color: map-get($map, focus-placeholder-color);
+
+	$readonly-bg: map-get($map, readonly-bg);
+	$readonly-bg-image: map-get($map, readonly-bg-image);
+	$readonly-border-color: map-get($map, readonly-border-color);
+	$readonly-box-shadow: map-get($map, readonly-box-shadow);
+	$readonly-color: map-get($map, readonly-color);
+	$readonly-cursor: map-get($map, readonly-cursor);
+	$readonly-opacity: map-get($map, readonly-opacity);
+	$readonly-placeholder-color: map-get($map, readonly-placeholder-color);
+
+	$disabled-bg: map-get($map, disabled-bg);
+	$disabled-bg-image: map-get($map, disabled-bg-image);
+	$disabled-border-color: map-get($map, disabled-border-color);
+	$disabled-box-shadow: map-get($map, disabled-box-shadow);
+	$disabled-color: map-get($map, disabled-color);
+	$disabled-cursor: map-get($map, disabled-cursor);
+	$disabled-opacity: map-get($map, disabled-opacity);
+	$disabled-placeholder-color: map-get($map, disabled-placeholder-color);
+
+	@if ($enabled) {
+		background-color: $bg;
+		background-clip: $bg-clip;
+		background-image: $bg-image;
+		background-position: $bg-position;
+		background-repeat: $bg-repeat;
+		background-size: $bg-size;
+		border-color: $border-color;
+		border-radius: $border-radius;
+		border-style: $border-style;
+		border-width: $border-width;
+		box-shadow: $box-shadow;
+		color: $color;
+		cursor: $cursor;
+		display: $display;
+		font-size: $font-size;
+		font-weight: $font-weight;
+		height: $height;
+		line-height: $line-height;
+		min-width: $min-width;
+		outline: $outline;
+		padding-bottom: $padding-bottom;
+		padding-left: $padding-left;
+		padding-right: $padding-right;
+		padding-top: $padding-top;
+		text-align: $text-align;
+		transition: $transition;
+		width: $width;
+
+		&::placeholder {
+			color: $placeholder-color;
+			opacity: $placeholder-opacity;
+		}
+
+		&:hover {
+			background-color: $hover-bg;
+			border-color: $hover-border-color;
+			box-shadow: $hover-box-shadow;
+			color: $hover-color;
+
+			&::placeholder {
+				color: $hover-placeholder-color;
+			}
+		}
+
+		&:focus {
+			background-color: $focus-bg;
+			background-image: $focus-bg-image;
+			border-color: $focus-border-color;
+			box-shadow: $focus-box-shadow;
+			color: $focus-color;
+
+			&::placeholder {
+				color: $focus-placeholder-color;
+			}
+		}
+
+		&[readonly] {
+			background-color: $readonly-bg;
+			background-image: $readonly-bg-image;
+			border-color: $readonly-border-color;
+			box-shadow: $readonly-box-shadow;
+			color: $readonly-color;
+			cursor: $readonly-cursor;
+			opacity: $readonly-opacity;
+
+			&::placeholder {
+				color: $readonly-placeholder-color;
+			}
+		}
+
+		&:disabled {
+			background-color: $disabled-bg;
+			background-image: $disabled-bg-image;
+			border-color: $disabled-border-color;
+			box-shadow: $disabled-box-shadow;
+			color: $disabled-color;
+			cursor: $disabled-cursor;
+			opacity: $disabled-opacity;
+
+			&::placeholder {
+				color: $disabled-placeholder-color;
+			}
+		}
+	}
+}
+
+/// A mixin to create Select Form Control variants. You can base your variant off Bootstrap's `select.form-control` selector or create your own base class (e.g., `<select class="form-control my-custom-form-control"></select>` or `<select class="my-custom-form-control"></select>`).
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// appearance: {String | Null},
+/// bg: {Color | String | Null},
+/// bg-clip: {String | Null},
+/// bg-image: {String | List | Null},
+/// bg-position: {String | List | Null},
+/// bg-repeat: {String | List | Null},
+/// bg-size: {Number | String | List | Null},
+/// border-color: {Color | String | List | Null},
+/// border-radius: {Number | String | List | Null},
+/// border-style: {String | List | Null},
+/// border-width: {Number | String | List | Null},
+/// box-shadow: {String | List | Null},
+/// color: {Color | String | Null},
+/// cursor: {String | Null},
+/// display: {String | Null},
+/// font-size: {Number | String | Null},
+/// font-weight: {Number | String | Null},
+/// height: {Number | String | Null},
+/// line-height: {Number | String | Null},
+/// min-width: {Number | String | Null},
+/// outline: {Number | String | Null},
+/// padding-bottom: {Number | String | Null},
+/// padding-left: {Number | String | Null},
+/// padding-right: {Number | String | Null},
+/// padding-top: {Number | String | Null},
+/// transition: {String | List | Null},
+/// width: {Number | String | Null},
+/// hover-bg: {Color | String | Null},
+/// hover-border-color: {Color | String | List | Null},
+/// hover-box-shadow: {String | List | Null},
+/// hover-color: {Color | String | Null},
+/// focus-bg: {Color | String | Null},
+/// focus-bg-image: {String | List | Null},
+/// focus-border-color: {Color | String | List | Null},
+/// focus-box-shadow: {String | List | Null},
+/// focus-color: {Color | String | Null},
+/// disabled-bg: {Color | String | Null},
+/// disabled-bg-image: {String | List | Null},
+/// disabled-border-color: {Color | String | List | Null},
+/// disabled-box-shadow: {String | List | Null},
+/// disabled-color: {Color | String | Null},
+/// disabled-cursor: {String | Null},
+/// disabled-opacity: {Number | String | Null},
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
+
+@mixin clay-select-variant($map) {
+	$appearance: map-get($map, appearance);
+	$bg: map-get($map, bg);
+	$bg-clip: map-get($map, bg-clip);
+	$bg-image: map-get($map, bg-image);
+	$bg-position: map-get($map, bg-position);
+	$bg-repeat: map-get($map, bg-repeat);
+	$bg-size: map-get($map, bg-size);
+	$border-color: map-get($map, border-color);
+	$border-radius: map-get($map, border-radius);
+	$border-style: map-get($map, border-style);
+	$border-width: map-get($map, border-width);
+	$box-shadow: map-get($map, box-shadow);
+	$color: map-get($map, color);
+	$cursor: map-get($map, cursor);
+	$display: map-get($map, display);
+	$font-size: map-get($map, font-size);
+	$font-weight: map-get($map, font-weight);
+	$height: map-get($map, height);
+	$line-height: map-get($map, line-height);
+	$min-width: map-get($map, min-width);
+	$outline: map-get($map, outline);
+	$padding-bottom: map-get($map, padding-bottom);
+	$padding-left: map-get($map, padding-left);
+	$padding-right: map-get($map, padding-right);
+	$padding-top: map-get($map, padding-top);
+	$transition: map-get($map, transition);
+	$width: map-get($map, width);
+
+	$hover-bg: map-get($map, hover-bg);
+	$hover-border-color: map-get($map, hover-border-color);
+	$hover-box-shadow: map-get($map, hover-box-shadow);
+	$hover-color: map-get($map, hover-color);
+
+	$focus-bg: map-get($map, focus-bg);
+	$focus-bg-image: map-get($map, focus-bg-image);
+	$focus-border-color: map-get($map, focus-border-color);
+	$focus-box-shadow: map-get($map, focus-box-shadow);
+	$focus-color: map-get($map, focus-color);
+
+	$disabled-bg: map-get($map, disabled-bg);
+	$disabled-bg-image: map-get($map, disabled-bg-image);
+	$disabled-border-color: map-get($map, disabled-border-color);
+	$disabled-box-shadow: map-get($map, disabled-box-shadow);
+	$disabled-color: map-get($map, disabled-color);
+	$disabled-cursor: map-get($map, disabled-cursor);
+	$disabled-opacity: map-get($map, disabled-opacity);
+
+	background-clip: $bg-clip;
+	border-color: $border-color;
+	border-radius: $border-radius;
+	border-style: $border-style;
+	border-width: $border-width;
+	box-shadow: $box-shadow;
+	color: $color;
+	cursor: $cursor;
+	display: $display;
+	font-size: $font-size;
+	font-weight: $font-weight;
+	line-height: $line-height;
+	min-width: $min-width;
+	outline: $outline;
+	transition: $transition;
+	width: $width;
+
+	&:not([multiple]):not([size]) {
+		-moz-appearance: $appearance;
+		-webkit-appearance: $appearance;
+
+		@if ($appearance) {
+			&::-ms-expand {
+				display: none;
+			}
+		}
+
+		background-color: $bg;
+		background-image: $bg-image;
+		background-position: $bg-position;
+		background-repeat: $bg-repeat;
+		background-size: $bg-size;
+		height: $height;
+		padding-bottom: $padding-bottom;
+		padding-left: $padding-left;
+		padding-right: $padding-right;
+		padding-top: $padding-top;
+
+		&:hover {
+			background-color: $hover-bg;
+		}
+
+		&:focus {
+			background-color: $focus-bg;
+			background-image: $focus-bg-image;
+		}
+
+		&:disabled {
+			background-color: $disabled-bg;
+			background-image: $disabled-bg-image;
+		}
+	}
+
+	&:hover {
+		border-color: $hover-border-color;
+		box-shadow: $hover-box-shadow;
+		color: $hover-color;
+	}
+
+	&:focus {
+		border-color: $focus-border-color;
+		box-shadow: $focus-box-shadow;
+		color: $focus-color;
+
+		&::-ms-value {
+			// Suppress the nested default white text on blue background highlight given to
+			// the selected option text when the (still closed) <select> receives focus
+			// in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
+			// match the appearance of the native widget.
+			// See https://github.com/twbs/bootstrap/issues/19398.
+
+			background-color: $bg;
+			color: $color;
+		}
+	}
+
+	&:disabled {
+		border-color: $disabled-border-color;
+		box-shadow: $disabled-box-shadow;
+		color: $disabled-color;
+		cursor: $disabled-cursor;
+		opacity: $disabled-opacity;
+
+		> option {
+			@media (-webkit-min-device-pixel-ratio: 0) { // Webkit only
+				color: $disabled-color;
+			}
+		}
+	}
+
+	option {
+		cursor: $input-select-cursor;
+	}
 }

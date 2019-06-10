@@ -1,3 +1,29 @@
+////
+/// @group nav
+////
+
+/// A mixin to create a `.nav` color variant.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// bg: {Color | String | Null},
+/// link-bg: {Color | String | Null},
+/// link-border-radius: {Number | String | List | Null},
+/// link-color: {Color | String | Null},
+/// link-font-weight: {Number | String | Null},
+/// link-hover-bg: {Color | String | Null},
+/// link-hover-color: {Color | String | Null},
+/// link-focus-bg: {Color | String | Null},
+/// link-focus-color: {Color | String | Null},
+/// link-disabled-bg: {Color | String}, // Default: transparent
+/// link-disabled-color: {Color | String}, // Default: $nav-link-disabled-color
+/// link-disabled-opacity: {Number | String | Null},
+/// link-active-bg: {Color | String | Null},
+/// link-active-color: {Color | String | Null},
+/// link-active-font-weight: {Number | String | Null},
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
+
 @mixin clay-nav-variant($map) {
 	$bg: map-get($map, bg);
 	$link-bg: map-get($map, link-bg);

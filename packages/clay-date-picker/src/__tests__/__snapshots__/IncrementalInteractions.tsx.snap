@@ -1,0 +1,3709 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IncrementalInteractions clicking a month on the selector should change the content to the corresponding month 1`] = `
+<body>
+  <div>
+    <div
+      class="date-picker"
+    >
+      <div
+        class="input-group"
+      >
+        <div
+          class="input-group-item"
+        >
+          <input
+            name="datePicker"
+            type="hidden"
+            value=""
+          />
+          <input
+            aria-label="input-test"
+            class="form-control input-group-inset input-group-inset-after"
+            placeholder="YYYY-MM-DD"
+            type="text"
+            value=""
+          />
+          <div
+            class="input-group-inset-item input-group-inset-item-after"
+          >
+            <button
+              class="date-picker-dropdown-toggle btn btn-unstyled"
+              data-testid="date-button"
+              type="button"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-calendar"
+                role="presentation"
+              >
+                <use
+                  xlink:href="icons.svg#calendar"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      class="dropdown-menu date-picker-dropdown-menu show"
+      data-testid="dropdown"
+      style="top: 0px; left: 0px;"
+    >
+      <div
+        class="date-picker-calendar"
+      >
+        <div
+          class="date-picker-calendar-header"
+        >
+          <div
+            class="date-picker-nav"
+          >
+            <div
+              class="date-picker-nav-item input-date-picker-month"
+            >
+              <select
+                class="form-control form-control-sm"
+                data-testid="month-select"
+                name="month"
+              >
+                <option
+                  value="0"
+                >
+                  January
+                </option>
+                <option
+                  value="1"
+                >
+                  February
+                </option>
+                <option
+                  value="2"
+                >
+                  March
+                </option>
+                <option
+                  value="3"
+                >
+                  April
+                </option>
+                <option
+                  value="4"
+                >
+                  May
+                </option>
+                <option
+                  value="5"
+                >
+                  June
+                </option>
+                <option
+                  value="6"
+                >
+                  July
+                </option>
+                <option
+                  value="7"
+                >
+                  August
+                </option>
+                <option
+                  value="8"
+                >
+                  September
+                </option>
+                <option
+                  value="9"
+                >
+                  October
+                </option>
+                <option
+                  value="10"
+                >
+                  November
+                </option>
+                <option
+                  value="11"
+                >
+                  December
+                </option>
+              </select>
+            </div>
+            <div
+              class="date-picker-nav-item input-date-picker-year"
+            >
+              <select
+                class="form-control form-control-sm"
+                data-testid="year-select"
+                name="year"
+              >
+                <option
+                  value="2019"
+                >
+                  2019
+                </option>
+              </select>
+            </div>
+            <div
+              class="date-picker-nav-item date-picker-nav-item-expand date-picker-nav-controls"
+            >
+              <button
+                aria-label="Select the previous month"
+                class="btn btn-unstyled btn-monospaced btn-sm"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-angle-left"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="icons.svg#angle-left"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="Select current date"
+                class="btn btn-unstyled btn-monospaced btn-sm"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-simple-circle"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="icons.svg#simple-circle"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="Select the next month"
+                class="btn btn-unstyled btn-monospaced btn-sm"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-angle-right"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="icons.svg#angle-right"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="date-picker-calendar-body"
+        >
+          <div
+            class="date-picker-days-row date-picker-row"
+          >
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                S
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                M
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                T
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                W
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                T
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                F
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                S
+              </abbr>
+            </div>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 06 30"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              30
+            </button>
+            <button
+              aria-label="2019 07 01"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              1
+            </button>
+            <button
+              aria-label="2019 07 02"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              2
+            </button>
+            <button
+              aria-label="2019 07 03"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              3
+            </button>
+            <button
+              aria-label="2019 07 04"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              4
+            </button>
+            <button
+              aria-label="2019 07 05"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              5
+            </button>
+            <button
+              aria-label="2019 07 06"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              6
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 07 07"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              7
+            </button>
+            <button
+              aria-label="2019 07 08"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              8
+            </button>
+            <button
+              aria-label="2019 07 09"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              9
+            </button>
+            <button
+              aria-label="2019 07 10"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              10
+            </button>
+            <button
+              aria-label="2019 07 11"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              11
+            </button>
+            <button
+              aria-label="2019 07 12"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              12
+            </button>
+            <button
+              aria-label="2019 07 13"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              13
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 07 14"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              14
+            </button>
+            <button
+              aria-label="2019 07 15"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              15
+            </button>
+            <button
+              aria-label="2019 07 16"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              16
+            </button>
+            <button
+              aria-label="2019 07 17"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              17
+            </button>
+            <button
+              aria-label="2019 07 18"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              18
+            </button>
+            <button
+              aria-label="2019 07 19"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              19
+            </button>
+            <button
+              aria-label="2019 07 20"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              20
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 07 21"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              21
+            </button>
+            <button
+              aria-label="2019 07 22"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              22
+            </button>
+            <button
+              aria-label="2019 07 23"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              23
+            </button>
+            <button
+              aria-label="2019 07 24"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              24
+            </button>
+            <button
+              aria-label="2019 07 25"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              25
+            </button>
+            <button
+              aria-label="2019 07 26"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              26
+            </button>
+            <button
+              aria-label="2019 07 27"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              27
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 07 28"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              28
+            </button>
+            <button
+              aria-label="2019 07 29"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              29
+            </button>
+            <button
+              aria-label="2019 07 30"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              30
+            </button>
+            <button
+              aria-label="2019 07 31"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              31
+            </button>
+            <button
+              aria-label="2019 08 01"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              1
+            </button>
+            <button
+              aria-label="2019 08 02"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              2
+            </button>
+            <button
+              aria-label="2019 08 03"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              3
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`IncrementalInteractions clicking on the date icon should close the dropdown when it is open 1`] = `
+<body>
+  <div>
+    <div
+      class="date-picker"
+    >
+      <div
+        class="input-group"
+      >
+        <div
+          class="input-group-item"
+        >
+          <input
+            name="datePicker"
+            type="hidden"
+            value=""
+          />
+          <input
+            aria-label="input-test"
+            class="form-control input-group-inset input-group-inset-after"
+            placeholder="YYYY-MM-DD"
+            type="text"
+            value=""
+          />
+          <div
+            class="input-group-inset-item input-group-inset-item-after"
+          >
+            <button
+              class="date-picker-dropdown-toggle btn btn-unstyled"
+              data-testid="date-button"
+              type="button"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-calendar"
+                role="presentation"
+              >
+                <use
+                  xlink:href="icons.svg#calendar"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      class="dropdown-menu date-picker-dropdown-menu"
+      data-testid="dropdown"
+      style="top: 0px; left: 0px;"
+    >
+      <div
+        class="date-picker-calendar"
+      >
+        <div
+          class="date-picker-calendar-header"
+        >
+          <div
+            class="date-picker-nav"
+          >
+            <div
+              class="date-picker-nav-item input-date-picker-month"
+            >
+              <select
+                class="form-control form-control-sm"
+                data-testid="month-select"
+                name="month"
+              >
+                <option
+                  value="0"
+                >
+                  January
+                </option>
+                <option
+                  value="1"
+                >
+                  February
+                </option>
+                <option
+                  value="2"
+                >
+                  March
+                </option>
+                <option
+                  value="3"
+                >
+                  April
+                </option>
+                <option
+                  value="4"
+                >
+                  May
+                </option>
+                <option
+                  value="5"
+                >
+                  June
+                </option>
+                <option
+                  value="6"
+                >
+                  July
+                </option>
+                <option
+                  value="7"
+                >
+                  August
+                </option>
+                <option
+                  value="8"
+                >
+                  September
+                </option>
+                <option
+                  value="9"
+                >
+                  October
+                </option>
+                <option
+                  value="10"
+                >
+                  November
+                </option>
+                <option
+                  value="11"
+                >
+                  December
+                </option>
+              </select>
+            </div>
+            <div
+              class="date-picker-nav-item input-date-picker-year"
+            >
+              <select
+                class="form-control form-control-sm"
+                data-testid="year-select"
+                name="year"
+              >
+                <option
+                  value="2019"
+                >
+                  2019
+                </option>
+              </select>
+            </div>
+            <div
+              class="date-picker-nav-item date-picker-nav-item-expand date-picker-nav-controls"
+            >
+              <button
+                aria-label="Select the previous month"
+                class="btn btn-unstyled btn-monospaced btn-sm"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-angle-left"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="icons.svg#angle-left"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="Select current date"
+                class="btn btn-unstyled btn-monospaced btn-sm"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-simple-circle"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="icons.svg#simple-circle"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="Select the next month"
+                class="btn btn-unstyled btn-monospaced btn-sm"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-angle-right"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="icons.svg#angle-right"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="date-picker-calendar-body"
+        >
+          <div
+            class="date-picker-days-row date-picker-row"
+          >
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                S
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                M
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                T
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                W
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                T
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                F
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                S
+              </abbr>
+            </div>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 03 31"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              31
+            </button>
+            <button
+              aria-label="2019 04 01"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              1
+            </button>
+            <button
+              aria-label="2019 04 02"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              2
+            </button>
+            <button
+              aria-label="2019 04 03"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              3
+            </button>
+            <button
+              aria-label="2019 04 04"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              4
+            </button>
+            <button
+              aria-label="2019 04 05"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              5
+            </button>
+            <button
+              aria-label="2019 04 06"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              6
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 04 07"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              7
+            </button>
+            <button
+              aria-label="2019 04 08"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              8
+            </button>
+            <button
+              aria-label="2019 04 09"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              9
+            </button>
+            <button
+              aria-label="2019 04 10"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              10
+            </button>
+            <button
+              aria-label="2019 04 11"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              11
+            </button>
+            <button
+              aria-label="2019 04 12"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              12
+            </button>
+            <button
+              aria-label="2019 04 13"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              13
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 04 14"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              14
+            </button>
+            <button
+              aria-label="2019 04 15"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              15
+            </button>
+            <button
+              aria-label="2019 04 16"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              16
+            </button>
+            <button
+              aria-label="2019 04 17"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              17
+            </button>
+            <button
+              aria-label="2019 04 18"
+              class="date-picker-date date-picker-calendar-item active"
+              type="button"
+            >
+              18
+            </button>
+            <button
+              aria-label="2019 04 19"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              19
+            </button>
+            <button
+              aria-label="2019 04 20"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              20
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 04 21"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              21
+            </button>
+            <button
+              aria-label="2019 04 22"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              22
+            </button>
+            <button
+              aria-label="2019 04 23"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              23
+            </button>
+            <button
+              aria-label="2019 04 24"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              24
+            </button>
+            <button
+              aria-label="2019 04 25"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              25
+            </button>
+            <button
+              aria-label="2019 04 26"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              26
+            </button>
+            <button
+              aria-label="2019 04 27"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              27
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 04 28"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              28
+            </button>
+            <button
+              aria-label="2019 04 29"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              29
+            </button>
+            <button
+              aria-label="2019 04 30"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              30
+            </button>
+            <button
+              aria-label="2019 05 01"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              1
+            </button>
+            <button
+              aria-label="2019 05 02"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              2
+            </button>
+            <button
+              aria-label="2019 05 03"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              3
+            </button>
+            <button
+              aria-label="2019 05 04"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              4
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`IncrementalInteractions clicking on the date icon should open the dropdown 1`] = `
+<body>
+  <div>
+    <div
+      class="date-picker"
+    >
+      <div
+        class="input-group"
+      >
+        <div
+          class="input-group-item"
+        >
+          <input
+            name="datePicker"
+            type="hidden"
+            value=""
+          />
+          <input
+            aria-label="input-test"
+            class="form-control input-group-inset input-group-inset-after"
+            placeholder="YYYY-MM-DD"
+            type="text"
+            value=""
+          />
+          <div
+            class="input-group-inset-item input-group-inset-item-after"
+          >
+            <button
+              class="date-picker-dropdown-toggle btn btn-unstyled"
+              data-testid="date-button"
+              type="button"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-calendar"
+                role="presentation"
+              >
+                <use
+                  xlink:href="icons.svg#calendar"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      class="dropdown-menu date-picker-dropdown-menu show"
+      data-testid="dropdown"
+      style="top: 0px; left: 0px;"
+    >
+      <div
+        class="date-picker-calendar"
+      >
+        <div
+          class="date-picker-calendar-header"
+        >
+          <div
+            class="date-picker-nav"
+          >
+            <div
+              class="date-picker-nav-item input-date-picker-month"
+            >
+              <select
+                class="form-control form-control-sm"
+                data-testid="month-select"
+                name="month"
+              >
+                <option
+                  value="0"
+                >
+                  January
+                </option>
+                <option
+                  value="1"
+                >
+                  February
+                </option>
+                <option
+                  value="2"
+                >
+                  March
+                </option>
+                <option
+                  value="3"
+                >
+                  April
+                </option>
+                <option
+                  value="4"
+                >
+                  May
+                </option>
+                <option
+                  value="5"
+                >
+                  June
+                </option>
+                <option
+                  value="6"
+                >
+                  July
+                </option>
+                <option
+                  value="7"
+                >
+                  August
+                </option>
+                <option
+                  value="8"
+                >
+                  September
+                </option>
+                <option
+                  value="9"
+                >
+                  October
+                </option>
+                <option
+                  value="10"
+                >
+                  November
+                </option>
+                <option
+                  value="11"
+                >
+                  December
+                </option>
+              </select>
+            </div>
+            <div
+              class="date-picker-nav-item input-date-picker-year"
+            >
+              <select
+                class="form-control form-control-sm"
+                data-testid="year-select"
+                name="year"
+              >
+                <option
+                  value="2019"
+                >
+                  2019
+                </option>
+              </select>
+            </div>
+            <div
+              class="date-picker-nav-item date-picker-nav-item-expand date-picker-nav-controls"
+            >
+              <button
+                aria-label="Select the previous month"
+                class="btn btn-unstyled btn-monospaced btn-sm"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-angle-left"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="icons.svg#angle-left"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="Select current date"
+                class="btn btn-unstyled btn-monospaced btn-sm"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-simple-circle"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="icons.svg#simple-circle"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="Select the next month"
+                class="btn btn-unstyled btn-monospaced btn-sm"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-angle-right"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="icons.svg#angle-right"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="date-picker-calendar-body"
+        >
+          <div
+            class="date-picker-days-row date-picker-row"
+          >
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                S
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                M
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                T
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                W
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                T
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                F
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                S
+              </abbr>
+            </div>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 03 31"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              31
+            </button>
+            <button
+              aria-label="2019 04 01"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              1
+            </button>
+            <button
+              aria-label="2019 04 02"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              2
+            </button>
+            <button
+              aria-label="2019 04 03"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              3
+            </button>
+            <button
+              aria-label="2019 04 04"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              4
+            </button>
+            <button
+              aria-label="2019 04 05"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              5
+            </button>
+            <button
+              aria-label="2019 04 06"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              6
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 04 07"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              7
+            </button>
+            <button
+              aria-label="2019 04 08"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              8
+            </button>
+            <button
+              aria-label="2019 04 09"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              9
+            </button>
+            <button
+              aria-label="2019 04 10"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              10
+            </button>
+            <button
+              aria-label="2019 04 11"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              11
+            </button>
+            <button
+              aria-label="2019 04 12"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              12
+            </button>
+            <button
+              aria-label="2019 04 13"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              13
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 04 14"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              14
+            </button>
+            <button
+              aria-label="2019 04 15"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              15
+            </button>
+            <button
+              aria-label="2019 04 16"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              16
+            </button>
+            <button
+              aria-label="2019 04 17"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              17
+            </button>
+            <button
+              aria-label="2019 04 18"
+              class="date-picker-date date-picker-calendar-item active"
+              type="button"
+            >
+              18
+            </button>
+            <button
+              aria-label="2019 04 19"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              19
+            </button>
+            <button
+              aria-label="2019 04 20"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              20
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 04 21"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              21
+            </button>
+            <button
+              aria-label="2019 04 22"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              22
+            </button>
+            <button
+              aria-label="2019 04 23"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              23
+            </button>
+            <button
+              aria-label="2019 04 24"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              24
+            </button>
+            <button
+              aria-label="2019 04 25"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              25
+            </button>
+            <button
+              aria-label="2019 04 26"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              26
+            </button>
+            <button
+              aria-label="2019 04 27"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              27
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 04 28"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              28
+            </button>
+            <button
+              aria-label="2019 04 29"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              29
+            </button>
+            <button
+              aria-label="2019 04 30"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              30
+            </button>
+            <button
+              aria-label="2019 05 01"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              1
+            </button>
+            <button
+              aria-label="2019 05 02"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              2
+            </button>
+            <button
+              aria-label="2019 05 03"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              3
+            </button>
+            <button
+              aria-label="2019 05 04"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              4
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`IncrementalInteractions clicking on the dot button should select current date 1`] = `
+<body>
+  <div>
+    <div
+      class="date-picker"
+    >
+      <div
+        class="input-group"
+      >
+        <div
+          class="input-group-item"
+        >
+          <input
+            name="datePicker"
+            type="hidden"
+            value="2019-04-18"
+          />
+          <input
+            aria-label="input-test"
+            class="form-control input-group-inset input-group-inset-after"
+            placeholder="YYYY-MM-DD"
+            type="text"
+            value="2019-04-18"
+          />
+          <div
+            class="input-group-inset-item input-group-inset-item-after"
+          >
+            <button
+              class="date-picker-dropdown-toggle btn btn-unstyled"
+              data-testid="date-button"
+              type="button"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-calendar"
+                role="presentation"
+              >
+                <use
+                  xlink:href="icons.svg#calendar"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      class="dropdown-menu date-picker-dropdown-menu show"
+      data-testid="dropdown"
+      style="top: 0px; left: 0px;"
+    >
+      <div
+        class="date-picker-calendar"
+      >
+        <div
+          class="date-picker-calendar-header"
+        >
+          <div
+            class="date-picker-nav"
+          >
+            <div
+              class="date-picker-nav-item input-date-picker-month"
+            >
+              <select
+                class="form-control form-control-sm"
+                data-testid="month-select"
+                name="month"
+              >
+                <option
+                  value="0"
+                >
+                  January
+                </option>
+                <option
+                  value="1"
+                >
+                  February
+                </option>
+                <option
+                  value="2"
+                >
+                  March
+                </option>
+                <option
+                  value="3"
+                >
+                  April
+                </option>
+                <option
+                  value="4"
+                >
+                  May
+                </option>
+                <option
+                  value="5"
+                >
+                  June
+                </option>
+                <option
+                  value="6"
+                >
+                  July
+                </option>
+                <option
+                  value="7"
+                >
+                  August
+                </option>
+                <option
+                  value="8"
+                >
+                  September
+                </option>
+                <option
+                  value="9"
+                >
+                  October
+                </option>
+                <option
+                  value="10"
+                >
+                  November
+                </option>
+                <option
+                  value="11"
+                >
+                  December
+                </option>
+              </select>
+            </div>
+            <div
+              class="date-picker-nav-item input-date-picker-year"
+            >
+              <select
+                class="form-control form-control-sm"
+                data-testid="year-select"
+                name="year"
+              >
+                <option
+                  value="2019"
+                >
+                  2019
+                </option>
+              </select>
+            </div>
+            <div
+              class="date-picker-nav-item date-picker-nav-item-expand date-picker-nav-controls"
+            >
+              <button
+                aria-label="Select the previous month"
+                class="btn btn-unstyled btn-monospaced btn-sm"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-angle-left"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="icons.svg#angle-left"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="Select current date"
+                class="btn btn-unstyled btn-monospaced btn-sm"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-simple-circle"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="icons.svg#simple-circle"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="Select the next month"
+                class="btn btn-unstyled btn-monospaced btn-sm"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-angle-right"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="icons.svg#angle-right"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="date-picker-calendar-body"
+        >
+          <div
+            class="date-picker-days-row date-picker-row"
+          >
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                S
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                M
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                T
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                W
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                T
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                F
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                S
+              </abbr>
+            </div>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 03 31"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              31
+            </button>
+            <button
+              aria-label="2019 04 01"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              1
+            </button>
+            <button
+              aria-label="2019 04 02"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              2
+            </button>
+            <button
+              aria-label="2019 04 03"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              3
+            </button>
+            <button
+              aria-label="2019 04 04"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              4
+            </button>
+            <button
+              aria-label="2019 04 05"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              5
+            </button>
+            <button
+              aria-label="2019 04 06"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              6
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 04 07"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              7
+            </button>
+            <button
+              aria-label="2019 04 08"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              8
+            </button>
+            <button
+              aria-label="2019 04 09"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              9
+            </button>
+            <button
+              aria-label="2019 04 10"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              10
+            </button>
+            <button
+              aria-label="2019 04 11"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              11
+            </button>
+            <button
+              aria-label="2019 04 12"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              12
+            </button>
+            <button
+              aria-label="2019 04 13"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              13
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 04 14"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              14
+            </button>
+            <button
+              aria-label="2019 04 15"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              15
+            </button>
+            <button
+              aria-label="2019 04 16"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              16
+            </button>
+            <button
+              aria-label="2019 04 17"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              17
+            </button>
+            <button
+              aria-label="2019 04 18"
+              class="date-picker-date date-picker-calendar-item active"
+              type="button"
+            >
+              18
+            </button>
+            <button
+              aria-label="2019 04 19"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              19
+            </button>
+            <button
+              aria-label="2019 04 20"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              20
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 04 21"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              21
+            </button>
+            <button
+              aria-label="2019 04 22"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              22
+            </button>
+            <button
+              aria-label="2019 04 23"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              23
+            </button>
+            <button
+              aria-label="2019 04 24"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              24
+            </button>
+            <button
+              aria-label="2019 04 25"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              25
+            </button>
+            <button
+              aria-label="2019 04 26"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              26
+            </button>
+            <button
+              aria-label="2019 04 27"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              27
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 04 28"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              28
+            </button>
+            <button
+              aria-label="2019 04 29"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              29
+            </button>
+            <button
+              aria-label="2019 04 30"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              30
+            </button>
+            <button
+              aria-label="2019 05 01"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              1
+            </button>
+            <button
+              aria-label="2019 05 02"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              2
+            </button>
+            <button
+              aria-label="2019 05 03"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              3
+            </button>
+            <button
+              aria-label="2019 05 04"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              4
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`IncrementalInteractions clicking on the year selector should switch to the year of the corresponding month selected 1`] = `
+<body>
+  <div>
+    <div
+      class="date-picker"
+    >
+      <div
+        class="input-group"
+      >
+        <div
+          class="input-group-item"
+        >
+          <input
+            name="datePicker"
+            type="hidden"
+            value=""
+          />
+          <input
+            aria-label="input-test"
+            class="form-control input-group-inset input-group-inset-after"
+            placeholder="YYYY-MM-DD"
+            type="text"
+            value=""
+          />
+          <div
+            class="input-group-inset-item input-group-inset-item-after"
+          >
+            <button
+              class="date-picker-dropdown-toggle btn btn-unstyled"
+              data-testid="date-button"
+              type="button"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-calendar"
+                role="presentation"
+              >
+                <use
+                  xlink:href="icons.svg#calendar"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      class="dropdown-menu date-picker-dropdown-menu show"
+      data-testid="dropdown"
+      style="top: 0px; left: 0px;"
+    >
+      <div
+        class="date-picker-calendar"
+      >
+        <div
+          class="date-picker-calendar-header"
+        >
+          <div
+            class="date-picker-nav"
+          >
+            <div
+              class="date-picker-nav-item input-date-picker-month"
+            >
+              <select
+                class="form-control form-control-sm"
+                data-testid="month-select"
+                name="month"
+              >
+                <option
+                  value="0"
+                >
+                  January
+                </option>
+                <option
+                  value="1"
+                >
+                  February
+                </option>
+                <option
+                  value="2"
+                >
+                  March
+                </option>
+                <option
+                  value="3"
+                >
+                  April
+                </option>
+                <option
+                  value="4"
+                >
+                  May
+                </option>
+                <option
+                  value="5"
+                >
+                  June
+                </option>
+                <option
+                  value="6"
+                >
+                  July
+                </option>
+                <option
+                  value="7"
+                >
+                  August
+                </option>
+                <option
+                  value="8"
+                >
+                  September
+                </option>
+                <option
+                  value="9"
+                >
+                  October
+                </option>
+                <option
+                  value="10"
+                >
+                  November
+                </option>
+                <option
+                  value="11"
+                >
+                  December
+                </option>
+              </select>
+            </div>
+            <div
+              class="date-picker-nav-item input-date-picker-year"
+            >
+              <select
+                class="form-control form-control-sm"
+                data-testid="year-select"
+                name="year"
+              >
+                <option
+                  value="2017"
+                >
+                  2017
+                </option>
+                <option
+                  value="2018"
+                >
+                  2018
+                </option>
+                <option
+                  value="2019"
+                >
+                  2019
+                </option>
+                <option
+                  value="2020"
+                >
+                  2020
+                </option>
+              </select>
+            </div>
+            <div
+              class="date-picker-nav-item date-picker-nav-item-expand date-picker-nav-controls"
+            >
+              <button
+                aria-label="Select the previous month"
+                class="btn btn-unstyled btn-monospaced btn-sm"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-angle-left"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="icons.svg#angle-left"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="Select current date"
+                class="btn btn-unstyled btn-monospaced btn-sm"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-simple-circle"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="icons.svg#simple-circle"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="Select the next month"
+                class="btn btn-unstyled btn-monospaced btn-sm"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-angle-right"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="icons.svg#angle-right"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="date-picker-calendar-body"
+        >
+          <div
+            class="date-picker-days-row date-picker-row"
+          >
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                S
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                M
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                T
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                W
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                T
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                F
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                S
+              </abbr>
+            </div>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2018 04 01"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              1
+            </button>
+            <button
+              aria-label="2018 04 02"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              2
+            </button>
+            <button
+              aria-label="2018 04 03"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              3
+            </button>
+            <button
+              aria-label="2018 04 04"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              4
+            </button>
+            <button
+              aria-label="2018 04 05"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              5
+            </button>
+            <button
+              aria-label="2018 04 06"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              6
+            </button>
+            <button
+              aria-label="2018 04 07"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              7
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2018 04 08"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              8
+            </button>
+            <button
+              aria-label="2018 04 09"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              9
+            </button>
+            <button
+              aria-label="2018 04 10"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              10
+            </button>
+            <button
+              aria-label="2018 04 11"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              11
+            </button>
+            <button
+              aria-label="2018 04 12"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              12
+            </button>
+            <button
+              aria-label="2018 04 13"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              13
+            </button>
+            <button
+              aria-label="2018 04 14"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              14
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2018 04 15"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              15
+            </button>
+            <button
+              aria-label="2018 04 16"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              16
+            </button>
+            <button
+              aria-label="2018 04 17"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              17
+            </button>
+            <button
+              aria-label="2018 04 18"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              18
+            </button>
+            <button
+              aria-label="2018 04 19"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              19
+            </button>
+            <button
+              aria-label="2018 04 20"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              20
+            </button>
+            <button
+              aria-label="2018 04 21"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              21
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2018 04 22"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              22
+            </button>
+            <button
+              aria-label="2018 04 23"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              23
+            </button>
+            <button
+              aria-label="2018 04 24"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              24
+            </button>
+            <button
+              aria-label="2018 04 25"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              25
+            </button>
+            <button
+              aria-label="2018 04 26"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              26
+            </button>
+            <button
+              aria-label="2018 04 27"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              27
+            </button>
+            <button
+              aria-label="2018 04 28"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              28
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2018 04 29"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              29
+            </button>
+            <button
+              aria-label="2018 04 30"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              30
+            </button>
+            <button
+              aria-label="2018 05 01"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              1
+            </button>
+            <button
+              aria-label="2018 05 02"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              2
+            </button>
+            <button
+              aria-label="2018 05 03"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              3
+            </button>
+            <button
+              aria-label="2018 05 04"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              4
+            </button>
+            <button
+              aria-label="2018 05 05"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              5
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`IncrementalInteractions clicking outside the dropdown should close the same 1`] = `
+<body>
+  <div>
+    <div
+      class="date-picker"
+    >
+      <div
+        class="input-group"
+      >
+        <div
+          class="input-group-item"
+        >
+          <input
+            name="datePicker"
+            type="hidden"
+            value=""
+          />
+          <input
+            aria-label="input-test"
+            class="form-control input-group-inset input-group-inset-after"
+            placeholder="YYYY-MM-DD"
+            type="text"
+            value=""
+          />
+          <div
+            class="input-group-inset-item input-group-inset-item-after"
+          >
+            <button
+              class="date-picker-dropdown-toggle btn btn-unstyled"
+              data-testid="date-button"
+              type="button"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-calendar"
+                role="presentation"
+              >
+                <use
+                  xlink:href="icons.svg#calendar"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      data-testid="outsideElement"
+    >
+      OUTSIDE ELEMENT
+    </div>
+  </div>
+  <div>
+    <div
+      class="dropdown-menu date-picker-dropdown-menu"
+      data-testid="dropdown"
+      style="top: 0px; left: 0px;"
+    >
+      <div
+        class="date-picker-calendar"
+      >
+        <div
+          class="date-picker-calendar-header"
+        >
+          <div
+            class="date-picker-nav"
+          >
+            <div
+              class="date-picker-nav-item input-date-picker-month"
+            >
+              <select
+                class="form-control form-control-sm"
+                data-testid="month-select"
+                name="month"
+              >
+                <option
+                  value="0"
+                >
+                  January
+                </option>
+                <option
+                  value="1"
+                >
+                  February
+                </option>
+                <option
+                  value="2"
+                >
+                  March
+                </option>
+                <option
+                  value="3"
+                >
+                  April
+                </option>
+                <option
+                  value="4"
+                >
+                  May
+                </option>
+                <option
+                  value="5"
+                >
+                  June
+                </option>
+                <option
+                  value="6"
+                >
+                  July
+                </option>
+                <option
+                  value="7"
+                >
+                  August
+                </option>
+                <option
+                  value="8"
+                >
+                  September
+                </option>
+                <option
+                  value="9"
+                >
+                  October
+                </option>
+                <option
+                  value="10"
+                >
+                  November
+                </option>
+                <option
+                  value="11"
+                >
+                  December
+                </option>
+              </select>
+            </div>
+            <div
+              class="date-picker-nav-item input-date-picker-year"
+            >
+              <select
+                class="form-control form-control-sm"
+                data-testid="year-select"
+                name="year"
+              >
+                <option
+                  value="2019"
+                >
+                  2019
+                </option>
+              </select>
+            </div>
+            <div
+              class="date-picker-nav-item date-picker-nav-item-expand date-picker-nav-controls"
+            >
+              <button
+                aria-label="Select the previous month"
+                class="btn btn-unstyled btn-monospaced btn-sm"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-angle-left"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="icons.svg#angle-left"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="Select current date"
+                class="btn btn-unstyled btn-monospaced btn-sm"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-simple-circle"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="icons.svg#simple-circle"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="Select the next month"
+                class="btn btn-unstyled btn-monospaced btn-sm"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-angle-right"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="icons.svg#angle-right"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="date-picker-calendar-body"
+        >
+          <div
+            class="date-picker-days-row date-picker-row"
+          >
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                S
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                M
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                T
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                W
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                T
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                F
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                S
+              </abbr>
+            </div>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 03 31"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              31
+            </button>
+            <button
+              aria-label="2019 04 01"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              1
+            </button>
+            <button
+              aria-label="2019 04 02"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              2
+            </button>
+            <button
+              aria-label="2019 04 03"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              3
+            </button>
+            <button
+              aria-label="2019 04 04"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              4
+            </button>
+            <button
+              aria-label="2019 04 05"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              5
+            </button>
+            <button
+              aria-label="2019 04 06"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              6
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 04 07"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              7
+            </button>
+            <button
+              aria-label="2019 04 08"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              8
+            </button>
+            <button
+              aria-label="2019 04 09"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              9
+            </button>
+            <button
+              aria-label="2019 04 10"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              10
+            </button>
+            <button
+              aria-label="2019 04 11"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              11
+            </button>
+            <button
+              aria-label="2019 04 12"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              12
+            </button>
+            <button
+              aria-label="2019 04 13"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              13
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 04 14"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              14
+            </button>
+            <button
+              aria-label="2019 04 15"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              15
+            </button>
+            <button
+              aria-label="2019 04 16"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              16
+            </button>
+            <button
+              aria-label="2019 04 17"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              17
+            </button>
+            <button
+              aria-label="2019 04 18"
+              class="date-picker-date date-picker-calendar-item active"
+              type="button"
+            >
+              18
+            </button>
+            <button
+              aria-label="2019 04 19"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              19
+            </button>
+            <button
+              aria-label="2019 04 20"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              20
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 04 21"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              21
+            </button>
+            <button
+              aria-label="2019 04 22"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              22
+            </button>
+            <button
+              aria-label="2019 04 23"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              23
+            </button>
+            <button
+              aria-label="2019 04 24"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              24
+            </button>
+            <button
+              aria-label="2019 04 25"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              25
+            </button>
+            <button
+              aria-label="2019 04 26"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              26
+            </button>
+            <button
+              aria-label="2019 04 27"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              27
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 04 28"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              28
+            </button>
+            <button
+              aria-label="2019 04 29"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              29
+            </button>
+            <button
+              aria-label="2019 04 30"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              30
+            </button>
+            <button
+              aria-label="2019 05 01"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              1
+            </button>
+            <button
+              aria-label="2019 05 02"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              2
+            </button>
+            <button
+              aria-label="2019 05 03"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              3
+            </button>
+            <button
+              aria-label="2019 05 04"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              4
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`IncrementalInteractions date entered in the input element should reflect on the date picker 1`] = `
+<body>
+  <div>
+    <div
+      class="date-picker"
+    >
+      <div
+        class="input-group"
+      >
+        <div
+          class="input-group-item"
+        >
+          <input
+            name="datePicker"
+            type="hidden"
+            value="2019-04-10"
+          />
+          <input
+            aria-label="input-test"
+            class="form-control input-group-inset input-group-inset-after"
+            placeholder="YYYY-MM-DD"
+            type="text"
+            value="2019-04-10"
+          />
+          <div
+            class="input-group-inset-item input-group-inset-item-after"
+          >
+            <button
+              class="date-picker-dropdown-toggle btn btn-unstyled"
+              data-testid="date-button"
+              type="button"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-calendar"
+                role="presentation"
+              >
+                <use
+                  xlink:href="icons.svg#calendar"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      class="dropdown-menu date-picker-dropdown-menu show"
+      data-testid="dropdown"
+      style="top: 0px; left: 0px;"
+    >
+      <div
+        class="date-picker-calendar"
+      >
+        <div
+          class="date-picker-calendar-header"
+        >
+          <div
+            class="date-picker-nav"
+          >
+            <div
+              class="date-picker-nav-item input-date-picker-month"
+            >
+              <select
+                class="form-control form-control-sm"
+                data-testid="month-select"
+                name="month"
+              >
+                <option
+                  value="0"
+                >
+                  January
+                </option>
+                <option
+                  value="1"
+                >
+                  February
+                </option>
+                <option
+                  value="2"
+                >
+                  March
+                </option>
+                <option
+                  value="3"
+                >
+                  April
+                </option>
+                <option
+                  value="4"
+                >
+                  May
+                </option>
+                <option
+                  value="5"
+                >
+                  June
+                </option>
+                <option
+                  value="6"
+                >
+                  July
+                </option>
+                <option
+                  value="7"
+                >
+                  August
+                </option>
+                <option
+                  value="8"
+                >
+                  September
+                </option>
+                <option
+                  value="9"
+                >
+                  October
+                </option>
+                <option
+                  value="10"
+                >
+                  November
+                </option>
+                <option
+                  value="11"
+                >
+                  December
+                </option>
+              </select>
+            </div>
+            <div
+              class="date-picker-nav-item input-date-picker-year"
+            >
+              <select
+                class="form-control form-control-sm"
+                data-testid="year-select"
+                name="year"
+              >
+                <option
+                  value="2019"
+                >
+                  2019
+                </option>
+              </select>
+            </div>
+            <div
+              class="date-picker-nav-item date-picker-nav-item-expand date-picker-nav-controls"
+            >
+              <button
+                aria-label="Select the previous month"
+                class="btn btn-unstyled btn-monospaced btn-sm"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-angle-left"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="icons.svg#angle-left"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="Select current date"
+                class="btn btn-unstyled btn-monospaced btn-sm"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-simple-circle"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="icons.svg#simple-circle"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="Select the next month"
+                class="btn btn-unstyled btn-monospaced btn-sm"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-angle-right"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="icons.svg#angle-right"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="date-picker-calendar-body"
+        >
+          <div
+            class="date-picker-days-row date-picker-row"
+          >
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                S
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                M
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                T
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                W
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                T
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                F
+              </abbr>
+            </div>
+            <div
+              class="date-picker-day date-picker-calendar-item"
+            >
+              <abbr>
+                S
+              </abbr>
+            </div>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 03 31"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              31
+            </button>
+            <button
+              aria-label="2019 04 01"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              1
+            </button>
+            <button
+              aria-label="2019 04 02"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              2
+            </button>
+            <button
+              aria-label="2019 04 03"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              3
+            </button>
+            <button
+              aria-label="2019 04 04"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              4
+            </button>
+            <button
+              aria-label="2019 04 05"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              5
+            </button>
+            <button
+              aria-label="2019 04 06"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              6
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 04 07"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              7
+            </button>
+            <button
+              aria-label="2019 04 08"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              8
+            </button>
+            <button
+              aria-label="2019 04 09"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              9
+            </button>
+            <button
+              aria-label="2019 04 10"
+              class="date-picker-date date-picker-calendar-item active"
+              type="button"
+            >
+              10
+            </button>
+            <button
+              aria-label="2019 04 11"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              11
+            </button>
+            <button
+              aria-label="2019 04 12"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              12
+            </button>
+            <button
+              aria-label="2019 04 13"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              13
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 04 14"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              14
+            </button>
+            <button
+              aria-label="2019 04 15"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              15
+            </button>
+            <button
+              aria-label="2019 04 16"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              16
+            </button>
+            <button
+              aria-label="2019 04 17"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              17
+            </button>
+            <button
+              aria-label="2019 04 18"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              18
+            </button>
+            <button
+              aria-label="2019 04 19"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              19
+            </button>
+            <button
+              aria-label="2019 04 20"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              20
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 04 21"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              21
+            </button>
+            <button
+              aria-label="2019 04 22"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              22
+            </button>
+            <button
+              aria-label="2019 04 23"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              23
+            </button>
+            <button
+              aria-label="2019 04 24"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              24
+            </button>
+            <button
+              aria-label="2019 04 25"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              25
+            </button>
+            <button
+              aria-label="2019 04 26"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              26
+            </button>
+            <button
+              aria-label="2019 04 27"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              27
+            </button>
+          </div>
+          <div
+            class="date-picker-date-row date-picker-row"
+          >
+            <button
+              aria-label="2019 04 28"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              28
+            </button>
+            <button
+              aria-label="2019 04 29"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              29
+            </button>
+            <button
+              aria-label="2019 04 30"
+              class="date-picker-date date-picker-calendar-item"
+              type="button"
+            >
+              30
+            </button>
+            <button
+              aria-label="2019 05 01"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              1
+            </button>
+            <button
+              aria-label="2019 05 02"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              2
+            </button>
+            <button
+              aria-label="2019 05 03"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              3
+            </button>
+            <button
+              aria-label="2019 05 04"
+              class="date-picker-date date-picker-calendar-item disabled"
+              disabled=""
+              type="button"
+            >
+              4
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;

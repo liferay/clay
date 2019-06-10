@@ -19,13 +19,13 @@
 			<div class="container-fluid">
 				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
 
-				<button type="button" class="animated-toggle btn btn-primary d-md-none navbar-toggle navbar-toggler mt-2 hidden-sm-up">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-bars">
-						<use xlink:href="<%= rootPath %>/images/icons/icons.svg#bars" />
-					</svg>
+				<button class="animated-toggle btn btn-primary d-md-none hidden-sm-up" id="claySiteMobileNavigationToggle" type="button">
+					<span class="docs-icon-bar docs-icon-bar-1"></span>
+					<span class="docs-icon-bar docs-icon-bar-2"></span>
+					<span class="docs-icon-bar docs-icon-bar-3"></span>
 				</button>
 
-				<h4 class="title"><a href="<%= rootPath %>">Clay</a> <span class="label label-primary label-sm lexicon-version">v<%= version %></span></h4>
+				<h4 class="title"><a href="<%= rootPath %>/..">Clay CSS</a> <span class="label label-primary lexicon-version">v<%= version %></span></h4>
 
 				<% include site_config %>
 			</div>

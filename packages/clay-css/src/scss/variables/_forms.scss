@@ -37,7 +37,7 @@ $input-label-margin-bottom: null !default;
 
 $input-label-for-cursor: $link-cursor !default;
 
-$input-label-disabled-color: $text-muted !default;
+$input-label-disabled-color: $gray-600 !default;
 $input-label-disabled-cursor: $disabled-cursor !default;
 
 $input-label-reference-mark-color: $warning !default;
@@ -54,6 +54,8 @@ $input-readonly-focus-color: null !default;
 $input-readonly-cursor: null !default;
 
 $input-textarea-height: 150px !default;
+$input-textarea-height-lg: 190px !default;
+$input-textarea-height-sm: 120px !default;
 
 // Form Control Label (Labels inside Form Control Tag Group)
 
@@ -68,16 +70,76 @@ $form-control-label-size: map-merge((
 
 // Form Control Tag Group
 
-$form-control-tag-group-padding-y: ($input-height-inner - map-get($form-control-label-size, height) - (map-get($form-control-label-size, margin-bottom)) - (map-get($form-control-label-size, margin-top))) / 2 !default;
-
-// Form Control Inset
+$form-control-tag-group-padding-y: ($input-height - $input-border-bottom-width - $input-border-top-width - map-get($form-control-label-size, height) - (map-get($form-control-label-size, margin-bottom)) - (map-get($form-control-label-size, margin-top))) / 2 !default;
 
 $form-control-inset-min-height: $input-font-size * $input-line-height !default;
-$form-control-inset-margin-y: ($input-height-inner - ($form-control-tag-group-padding-y * 2) - $form-control-inset-min-height) / 2 !default;
+$form-control-inset-margin-y: ($input-height - $input-border-bottom-width - $input-border-top-width - ($form-control-tag-group-padding-y * 2) - $form-control-inset-min-height) / 2 !default;
+
+$form-control-tag-group: () !default;
+$form-control-tag-group: map-merge((
+	align-items: center,
+	display: flex,
+	flex-wrap: wrap,
+	height: auto,
+	padding-bottom: $form-control-tag-group-padding-y,
+	padding-top: $form-control-tag-group-padding-y,
+), $form-control-tag-group);
+
+$form-control-tag-group-autofit-row: () !default;
+$form-control-tag-group-autofit-row: map-merge((
+		align-items: flex-end,
+		flex-grow: 1,
+		margin-left: -0.5rem,
+		margin-right: -0.5rem,
+		width: auto,
+), $form-control-tag-group-autofit-row);
+
+$form-control-tag-group-autofit-col: () !default;
+$form-control-tag-group-autofit-col: map-merge((
+	padding-left: 0.5rem,
+	padding-right: 0.5rem,
+), $form-control-tag-group-autofit-col);
+
+$form-control-tag-group-inline-item: () !default;
+$form-control-tag-group-inline-item: map-merge((
+	height: $form-control-inset-min-height,
+	margin-bottom: $form-control-inset-margin-y,
+	margin-top: $form-control-inset-margin-y,
+), $form-control-tag-group-inline-item);
+
+$form-control-tag-group-btn: () !default;
+$form-control-tag-group-btn: map-merge((
+	height: $form-control-inset-min-height,
+	line-height: 1,
+	margin-bottom: $form-control-inset-margin-y,
+	margin-top: $form-control-inset-margin-y,
+	padding-bottom: 0,
+	padding-left: $btn-padding-x-sm,
+	padding-right: $btn-padding-x-sm,
+	padding-top: 0,
+), $form-control-tag-group-btn);
+
+$form-control-tag-group-btn-monospaced: () !default;
+$form-control-tag-group-btn-monospaced: map-merge((
+	height: $form-control-inset-min-height,
+	line-height: 1,
+	margin-bottom: $form-control-inset-margin-y,
+	margin-top: $form-control-inset-margin-y,
+	padding-left: 0,
+	padding-right: 0,
+	width: $form-control-inset-min-height,
+), $form-control-tag-group-btn-monospaced);
 
 // Form Group
 
 $form-group-margin-bottom-mobile: null !default;
+
+$form-group-sm-margin-bottom: 1rem !default; // 16px
+$form-group-sm-margin-bottom-mobile: null !default;
+$form-group-sm-input-label-margin-bottom: 0.25rem !default; // 4px
+$form-group-sm-item-label-spacer: 1.75rem !default; // 28px
+
+// Form Group Autofit
 
 $form-group-autofit-margin-bottom: $form-group-margin-bottom !default;
 
@@ -92,7 +154,7 @@ $form-check-input-disabled-cursor: $disabled-cursor !default;
 
 $form-check-label-cursor: $input-label-for-cursor !default;
 
-$form-check-label-text-margin-left: -0.3125rem !default; // 5px
+$form-check-label-text-margin-left: -0.1875rem !default; // 3px
 $form-check-label-text-padding-left: 0.5rem !default; // 8px
 $form-check-label-text-disabled-cursor: $disabled-cursor !default;
 
@@ -105,7 +167,7 @@ $input-danger-focus-bg: null !default;
 $input-danger-border-color: $form-feedback-invalid-color !default;
 $input-danger-focus-border-color: null !default;
 $input-danger-box-shadow: null !default;
-$input-danger-focus-box-shadow: 0 0 0 0.2rem rgba($form-feedback-invalid-color, 0.25) !default;
+$input-danger-focus-box-shadow: 0 0 0 $input-focus-width rgba($form-feedback-invalid-color, 0.25) !default;
 $input-danger-color: null !default;
 $input-danger-focus-color: null !default;
 
@@ -119,7 +181,7 @@ $input-success-focus-bg: null !default;
 $input-success-border-color: $form-feedback-valid-color !default;
 $input-success-focus-border-color: null !default;
 $input-success-box-shadow: null !default;
-$input-success-focus-box-shadow: 0 0 0 0.2rem rgba($form-feedback-valid-color, 0.25) !default;
+$input-success-focus-box-shadow: 0 0 0 $input-focus-width rgba($form-feedback-valid-color, 0.25) !default;
 $input-success-color: null !default;
 $input-success-focus-color: null !default;
 
@@ -133,7 +195,7 @@ $input-warning-focus-bg: null !default;
 $input-warning-border-color: $form-feedback-warning-color !default;
 $input-warning-focus-border-color: null !default;
 $input-warning-box-shadow: null !default;
-$input-warning-focus-box-shadow: 0 0 0 0.2rem rgba($form-feedback-warning-color, 0.25) !default;
+$input-warning-focus-box-shadow: 0 0 0 $input-focus-width rgba($form-feedback-warning-color, 0.25) !default;
 $input-warning-color: null !default;
 $input-warning-focus-color: null !default;
 
@@ -171,7 +233,7 @@ $form-feedback-margin-top: 0.25rem !default;
 
 $form-feedback-indicator-margin-x: 0.3125rem !default;
 
-$form-text-color: $text-muted !default;
+$form-text-color: $gray-600 !default;
 $form-text-font-size: 0.875rem !default; // 14px
 $form-text-font-weight: null !default;
 
@@ -209,9 +271,11 @@ $input-group-inset-item-btn: () !default;
 $input-group-inset-item-btn: map-merge((
 	height: 75%,
 	line-height: 1,
+	margin-left: 0.125rem,
+	margin-right: 0.125rem,
 	padding-bottom: 0,
-	padding-left: $btn-padding-x - 0.1875rem,
-	padding-right: $btn-padding-x - 0.1875rem,
+	padding-left: 0.5rem,
+	padding-right: 0.5rem,
 	padding-top: 0,
 ), $input-group-inset-item-btn);
 
@@ -233,16 +297,17 @@ $input-group-lg-item-btn: map-merge((
 	inline-item-font-size: $btn-inline-item-font-size-lg,
 	section-font-size: $btn-section-font-size-lg,
 	font-size-mobile: $btn-font-size-lg-mobile,
-	padding-bottom: $btn-padding-y-lg-mobile,
-	padding-left: $btn-padding-x-lg-mobile,
-	padding-right: $btn-padding-x-lg-mobile,
-	padding-top: $btn-padding-y-lg-mobile,
+	padding-bottom-mobile: $btn-padding-y-lg-mobile,
+	padding-left-mobile: $btn-padding-x-lg-mobile,
+	padding-right-mobile: $btn-padding-x-lg-mobile,
+	padding-top-mobile: $btn-padding-y-lg-mobile,
 ), $input-group-lg-item-btn);
 
 $input-group-lg-item-btn-monospaced: () !default;
 $input-group-lg-item-btn-monospaced: map-merge((
 	breakpoint-down: null,
 	height: $btn-monospaced-size-lg,
+	line-height: 1,
 	padding-bottom: $btn-monospaced-padding-y-lg,
 	padding-left: $btn-monospaced-padding-x-lg,
 	padding-right: $btn-monospaced-padding-x-lg,
@@ -258,9 +323,10 @@ $input-group-lg-inset-item-form-file-btn: () !default;
 $input-group-lg-inset-item-form-file-btn: map-merge((
 	breakpoint-down: null,
 	height: 100%,
+	line-height: 1,
 	padding-bottom: 0,
-	padding-left: $btn-padding-x - 0.1875rem,
-	padding-right: $btn-padding-x - 0.1875rem,
+	padding-left: 0.75rem,
+	padding-right: 0.75rem,
 	padding-top: 0,
 ), $input-group-lg-inset-item-form-file-btn);
 
@@ -285,6 +351,7 @@ $input-group-sm-item-btn: map-merge((
 $input-group-sm-item-btn-monospaced: () !default;
 $input-group-sm-item-btn-monospaced: map-merge((
 	height: $btn-monospaced-size-sm,
+	line-height: 1,
 	padding-bottom: $btn-monospaced-padding-y-sm,
 	padding-left: $btn-monospaced-padding-x-sm,
 	padding-right: $btn-monospaced-padding-x-sm,
@@ -295,13 +362,21 @@ $input-group-sm-item-btn-monospaced: map-merge((
 ), $input-group-sm-item-btn-monospaced);
 
 $input-group-sm-inset-item-btn: () !default;
+$input-group-sm-inset-item-btn: map-merge((
+	line-height: 1,
+	padding-bottom: 0,
+	padding-left: 0.5rem,
+	padding-right: 0.5rem,
+	padding-top: 0,
+), $input-group-sm-inset-item-btn);
 
 $input-group-sm-inset-item-form-file-btn: () !default;
 $input-group-sm-inset-item-form-file-btn: map-merge((
 	height: 100%,
+	line-height: 1,
 	padding-bottom: 0,
-	padding-left: $btn-padding-x - 0.1875rem,
-	padding-right: $btn-padding-x - 0.1875rem,
+	padding-left: 0.5rem,
+	padding-right: 0.5rem,
 	padding-top: 0,
 ), $input-group-sm-inset-item-form-file-btn);
 

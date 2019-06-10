@@ -24,7 +24,7 @@
 	cursor: $link-cursor;
 	float: none;
 
-	@include clay-link($close);
+	@include clay-close($close);
 
 	&:disabled,
 	&.disabled {
@@ -270,6 +270,10 @@
 
 	.lexicon-icon {
 		margin-top: $inline-item-lexicon-icon-margin-top;
+	}
+
+	.loading-animation {
+		font-size: $inline-item-loading-animation-font-size;
 	}
 }
 

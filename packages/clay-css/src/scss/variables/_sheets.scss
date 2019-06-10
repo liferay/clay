@@ -1,5 +1,5 @@
-$sheet-bg: $white !default;
-$sheet-border-color: rgba($black, 0.125) !default;
+$sheet-bg: $body-bg !default;
+$sheet-border-color: $gray-300 !default;
 $sheet-border-style: solid !default;
 $sheet-border-width: 0.0625rem !default; // 1px
 
@@ -87,6 +87,14 @@ $sheet-subtitle-link-color: $sheet-subtitle-color !default;
 $sheet-subtitle-link-text-decoration: null !default;
 $sheet-subtitle-link-hover-color: null !default;
 $sheet-subtitle-link-hover-text-decoration: none !default;
+
+$sheet-subtitle-link: () !default;
+$sheet-subtitle-link: map-merge((
+	color: $sheet-subtitle-link-color,
+	text-decoration: $sheet-subtitle-link-text-decoration,
+	hover-color: $sheet-subtitle-link-hover-color,
+	hover-text-decoration: $sheet-subtitle-link-hover-text-decoration,
+), $sheet-subtitle-link);
 
 $sheet-subtitle-collapse-icon-font-size: null !default;
 $sheet-subtitle-collapse-icon-bottom: null !default;

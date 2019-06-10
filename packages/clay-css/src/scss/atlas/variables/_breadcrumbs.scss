@@ -2,10 +2,18 @@ $breadcrumb-bg: transparent !default;
 $breadcrumb-font-size: 0.875rem !default; // 14px
 $breadcrumb-padding-x: 0.125rem !default; // 2px
 
-$breadcrumb-link-color: $secondary !default;
+$breadcrumb-link-color: $gray-600 !default;
 $breadcrumb-link-hover-color: $breadcrumb-link-color !default;
 
-$breadcrumb-active-color: $body-color !default;
+$breadcrumb-link: () !default;
+$breadcrumb-link: map-merge((
+	border-radius: 1px,
+	transition: box-shadow 0.15s ease-in-out,
+	focus-box-shadow: $component-focus-box-shadow,
+	focus-outline: 0,
+), $breadcrumb-link);
+
+$breadcrumb-active-color: $gray-900 !default;
 
 $breadcrumb-divider-color: $breadcrumb-link-color !default;
 $breadcrumb-divider-svg-icon-height: 0.6em !default;

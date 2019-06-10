@@ -1,0 +1,577 @@
+---
+title: Dropdowns (Drill Down)
+section: Components
+---
+
+<blockquote class="blockquote">
+	<p>Each <code>drilldown-item</code> must have a unique id. To switch to the next <code>drilldown-item</code>, add the attribute <code>data-drilldown="next"</code> and a <code>href="#theDrilldownItemId"</code> attribute linking to the <code>drilldown-item</code> you would like to switch to.</p>
+	<p>The value <code>next</code> on <code>data-drilldown</code> should slide the items to the left and the value <code>prev</code> should slide to the right.</p>
+</blockquote>
+
+<div class="alert alert-warning">
+	This requires external javascript to transition each <code>drilldown-item</code> on click. The javascript is not bundled with Clay CSS.
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Dropdown Menu Drill Down with Toggle</h3>
+	</div>
+
+	<div class="col-md-6">
+
+<div class="dropdown">
+	<button aria-expanded="false" aria-haspopup="true" class="link-outline link-outline-primary dropdown-toggle" data-toggle="dropdown" id="dropdownSites1" type="button">
+		Dropdown
+	</button>
+	<div aria-labelledby="dropdownSites1" class="drilldown dropdown-menu dropdown-menu-indicator-end">
+		<div class="drilldown-inner">
+			<div class="drilldown-current drilldown-item" id="firstDrillDownItem">
+				<div class="drilldown-item-inner">
+					<ul class="inline-scroller">
+						<li><a class="dropdown-item" href="#1">Folder</a></li>
+						<li>
+							<a class="dropdown-item" data-drilldown="next" href="#documentId1">
+								Document
+								<span class="dropdown-item-indicator-end">
+									<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-right" />
+									</svg>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" data-drilldown="next" href="#shortcutId1">
+								Shortcut
+								<span class="dropdown-item-indicator-end">
+									<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-right" />
+									</svg>
+								</span>
+							</a>
+						</li>
+						<li><a class="dropdown-item" href="#1">Repository</a></li>
+						<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="drilldown-item" id="documentId1">
+				<div class="drilldown-item-inner">
+					<a class="drilldown-item-header dropdown-item" data-drilldown="prev" href="#firstDrillDownItem">
+						<span class="dropdown-item-indicator-start">
+							<svg class="lexicon-icon lexicon-icon-caret-left" focusable="false" role="presentation">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-left" />
+							</svg>
+						</span>
+						Document
+					</a>
+					<div class="dropdown-divider"></div>
+
+					<ul class="inline-scroller">
+						<li><a class="dropdown-item" href="#1">Basic Document</a></li>
+						<li>
+							<a class="dropdown-item" data-drilldown="next" href="#contractId1">
+								Contract
+								<span class="dropdown-item-indicator-end">
+									<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-right" />
+									</svg>
+								</span>
+							</a>
+						</li>
+						<li><a class="dropdown-item" href="#1">Marketing Banner</a></li>
+						<li><a class="dropdown-item" href="#1">Online Training</a></li>
+						<li><a class="dropdown-item" href="#1">Sales Presentation</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="drilldown-item" id="contractId1">
+				<div class="drilldown-item-inner">
+					<a class="drilldown-item-header dropdown-item" data-drilldown="prev" href="#documentId1">
+						<span class="dropdown-item-indicator-start">
+							<svg class="lexicon-icon lexicon-icon-caret-left" focusable="false" role="presentation">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-left" />
+							</svg>
+						</span>
+						Contract
+					</a>
+					<div class="dropdown-divider"></div>
+					<ul class="inline-scroller">
+						<li><a class="dropdown-item" href="#1">Contract Document #1</a></li>
+						<li><a class="dropdown-item" href="#1">Contract Document #2</a></li>
+						<li><a class="dropdown-item" href="#1">Contract Document #3</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="drilldown-item" id="shortcutId1">
+				<div class="drilldown-item-inner">
+					<a class="drilldown-item-header dropdown-item" data-drilldown="prev" href="#firstDrillDownItem">
+						<span class="dropdown-item-indicator-start">
+							<svg class="lexicon-icon lexicon-icon-caret-left" focusable="false" role="presentation">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-left" />
+							</svg>
+						</span>
+						Shortcut
+					</a>
+					<div class="dropdown-divider"></div>
+
+					<ul class="inline-scroller">
+						<li><a class="dropdown-item" href="#1">Shortcut #1</a></li>
+						<li><a class="dropdown-item" href="#1">Shortcut #2</a></li>
+						<li><a class="dropdown-item" href="#1">Shortcut #3</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row clay-site-dropdown-display">
+	<div class="col-md-12">
+		<h3>Dropdown Menu Drill Down</h3>
+	</div>
+
+	<div class="col-md-6">
+		<div aria-labelledby="theDropdownToggleId" class="drilldown dropdown-menu dropdown-menu-indicator-end">
+			<div class="drilldown-inner">
+				<div class="drilldown-current drilldown-item" id="demoFirstDrillDownItem">
+					<div class="drilldown-item-inner">
+						<ul class="inline-scroller">
+							<li><a class="dropdown-item" href="#1">Folder</a></li>
+							<li>
+								<a class="dropdown-item" data-drilldown="next" href="#demoDocumentId">
+									Document
+									<span class="dropdown-item-indicator-end">
+										<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-right" />
+										</svg>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" data-drilldown="next" href="#demoShortcutId">
+									Shortcut
+									<span class="dropdown-item-indicator-end">
+										<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-right" />
+										</svg>
+									</span>
+								</a>
+							</li>
+							<li><a class="dropdown-item" href="#1">Repository</a></li>
+							<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="drilldown-item" id="demoDocumentId">
+					<div class="drilldown-item-inner">
+						<a class="drilldown-item-header dropdown-item" data-drilldown="prev" href="#demoFirstDrillDownItem">
+							<span class="dropdown-item-indicator-start">
+								<svg class="lexicon-icon lexicon-icon-caret-left" focusable="false" role="presentation">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-left" />
+								</svg>
+							</span>
+							Document
+						</a>
+						<div class="dropdown-divider"></div>
+
+						<ul class="inline-scroller">
+							<li><a class="dropdown-item" href="#1">Basic Document</a></li>
+							<li>
+								<a class="dropdown-item" data-drilldown="next" href="#demoContractId">
+									Contract
+									<span class="dropdown-item-indicator-end">
+										<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-right" />
+										</svg>
+									</span>
+								</a>
+							</li>
+							<li><a class="dropdown-item" href="#1">Marketing Banner</a></li>
+							<li><a class="dropdown-item" href="#1">Online Training</a></li>
+							<li><a class="dropdown-item" href="#1">Sales Presentation</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="drilldown-item" id="demoContractId">
+					<div class="drilldown-item-inner">
+						<a class="drilldown-item-header dropdown-item" data-drilldown="prev" href="#demoDocumentId">
+							<span class="dropdown-item-indicator-start">
+								<svg class="lexicon-icon lexicon-icon-caret-left" focusable="false" role="presentation">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-left" />
+								</svg>
+							</span>
+							Contract
+						</a>
+						<div class="dropdown-divider"></div>
+						<ul class="inline-scroller">
+							<li><a class="dropdown-item" href="#1">Contract Document #1</a></li>
+							<li><a class="dropdown-item" href="#1">Contract Document #2</a></li>
+							<li><a class="dropdown-item" href="#1">Contract Document #3</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="drilldown-item" id="demoShortcutId">
+					<div class="drilldown-item-inner">
+						<a class="drilldown-item-header dropdown-item" data-drilldown="prev" href="#demoFirstDrillDownItem">
+							<span class="dropdown-item-indicator-start">
+								<svg class="lexicon-icon lexicon-icon-caret-left" focusable="false" role="presentation">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-left" />
+								</svg>
+							</span>
+							Shortcut
+						</a>
+						<div class="dropdown-divider"></div>
+						<ul class="inline-scroller">
+							<li><a class="dropdown-item" href="#1">Shortcut #1</a></li>
+							<li><a class="dropdown-item" href="#1">Shortcut #2</a></li>
+							<li><a class="dropdown-item" href="#1">Shortcut #3</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Drilldown Test Site Code</h3>
+
+		<pre><code>```<script>
+$(document).on('click', '[data-drilldown]', function(event) {
+	var drilldownItemArr = [];
+
+	var dataDrilldown = $(this).data('drilldown');
+
+	var drilldownInner = $(this).closest('.drilldown-inner');
+
+	var currentDrilldownItemId = '#' + $(this).closest('.drilldown-item').attr('id');
+	var currentDrilldownItem = $(currentDrilldownItemId);
+
+	var nextDrilldownItemId = $(this).attr('href');
+	var nextDrilldownItem = $(nextDrilldownItemId);
+
+	event.preventDefault();
+	event.stopPropagation();
+
+	drilldownInner.find('.drilldown-item').each(function(index, item) {
+		drilldownItemArr.push('#' + $(this).attr('id'));
+	});
+
+	var currentItemPos = drilldownItemArr.indexOf(currentDrilldownItemId);
+	var nextItemPos = drilldownItemArr.indexOf(nextDrilldownItemId);
+
+	drilldownInner.css('height', drilldownInner.height());
+
+	function drilldownItemTransitionend(element, focus) {
+		element.on('transitionend.clay', function(event) {
+			$(this)
+				.removeClass('transitioning')
+				.removeClass('drilldown-transition')
+				.removeClass('drilldown-next')
+				.css('transform', '')
+				.off('transitionend.clay');
+
+			if (focus) {
+				$(this).find('.dropdown-item')[0].focus();
+			}
+		});
+	}
+
+	if (dataDrilldown === 'next') {
+		// slides to the left
+		if (currentItemPos < nextItemPos) { // in order
+			currentDrilldownItem
+				.addClass('transitioning')
+				.removeClass('drilldown-current');
+
+			nextDrilldownItem
+				.addClass('transitioning')
+				.addClass('drilldown-current');
+
+			drilldownInner.css('height', nextDrilldownItem.find('.drilldown-item-inner').height());
+
+			drilldownInner.on('transitionend.clay', function(event) {
+				currentDrilldownItem
+					.addClass('drilldown-transition')
+					.css('transform', 'translateX(-100%)');
+
+				nextDrilldownItem
+					.addClass('drilldown-transition')
+					.css('transform', 'translateX(-100%)');
+
+				$(this).css('height', '').off('transitionend.clay');
+			});
+
+			drilldownItemTransitionend(currentDrilldownItem);
+			drilldownItemTransitionend(nextDrilldownItem, true);
+		}
+		else if (currentItemPos > nextItemPos) { // out of order
+			currentDrilldownItem
+				.addClass('transitioning')
+				.removeClass('drilldown-current')
+				.css('transform', 'translateX(-100%)');
+
+			nextDrilldownItem
+				.addClass('transitioning')
+				.addClass('drilldown-current')
+				.css('transform', 'translateX(100%)');
+
+			drilldownInner.css('height', nextDrilldownItem.find('.drilldown-item-inner').height());
+
+			drilldownInner.on('transitionend.clay', function(event) {
+				currentDrilldownItem
+					.addClass('drilldown-transition')
+					.css('transform', 'translateX(-200%)');
+
+				nextDrilldownItem
+					.addClass('drilldown-transition')
+					.css('transform', '');
+
+				$(this).css('height', '');
+				$(this).off('transitionend.clay');
+			});
+
+			drilldownItemTransitionend(currentDrilldownItem);
+			drilldownItemTransitionend(nextDrilldownItem, true);
+		}
+	}
+
+	if (dataDrilldown === 'prev') {
+		// slides to the right
+		if (currentItemPos > nextItemPos) { // in order
+			currentDrilldownItem
+				.addClass('transitioning')
+				.removeClass('drilldown-current')
+				.css('transform', 'translateX(-100%)');
+
+			nextDrilldownItem
+				.addClass('transitioning')
+				.addClass('drilldown-current')
+				.css('transform', 'translateX(-100%)');
+
+			drilldownInner.css('height', nextDrilldownItem.find('.drilldown-item-inner').height());
+
+			drilldownInner.on('transitionend.clay', function(event) {
+				currentDrilldownItem
+					.addClass('drilldown-transition')
+					.css('transform', '');
+
+				nextDrilldownItem
+					.addClass('drilldown-transition')
+					.css('transform', '');
+
+				$(this).css('height', '');
+				$(this).off('transitionend.clay');
+			});
+
+			drilldownItemTransitionend(currentDrilldownItem);
+			drilldownItemTransitionend(nextDrilldownItem, true);
+		}
+		else if (currentItemPos < nextItemPos) { // out of order
+			currentDrilldownItem
+				.addClass('transitioning')
+				.removeClass('drilldown-current');
+
+			nextDrilldownItem
+				.addClass('transitioning')
+				.addClass('drilldown-current')
+				.css('transform', 'translateX(-200%)');
+
+			drilldownInner.css('height', nextDrilldownItem.find('.drilldown-item-inner').height());
+
+			drilldownInner.on('transitionend.clay', function(event) {
+				currentDrilldownItem
+					.addClass('drilldown-transition')
+					.css('transform', 'translateX(100%)');
+
+				nextDrilldownItem
+					.addClass('drilldown-transition')
+					.css('transform', 'translateX(-100%)');
+
+				$(this).css('height', '');
+				$(this).off('transitionend.clay');
+			});
+
+			drilldownItemTransitionend(currentDrilldownItem);
+			drilldownItemTransitionend(nextDrilldownItem, true);
+		}
+	}
+});
+</script>```</code></pre>
+	</div>
+</div>
+
+<script>
+$(document).on('click', '[data-drilldown]', function(event) {
+	var drilldownItemArr = [];
+
+	var dataDrilldown = $(this).data('drilldown');
+
+	var drilldownInner = $(this).closest('.drilldown-inner');
+
+	var currentDrilldownItemId = '#' + $(this).closest('.drilldown-item').attr('id');
+	var currentDrilldownItem = $(currentDrilldownItemId);
+
+	var nextDrilldownItemId = $(this).attr('href');
+	var nextDrilldownItem = $(nextDrilldownItemId);
+
+	event.preventDefault();
+	event.stopPropagation();
+
+	drilldownInner.find('.drilldown-item').each(function(index, item) {
+		drilldownItemArr.push('#' + $(this).attr('id'));
+	});
+
+	var currentItemPos = drilldownItemArr.indexOf(currentDrilldownItemId);
+	var nextItemPos = drilldownItemArr.indexOf(nextDrilldownItemId);
+
+	drilldownInner.css('height', drilldownInner.height());
+
+	function drilldownItemTransitionend(element, focus) {
+		element.on('transitionend.clay', function(event) {
+			$(this)
+				.removeClass('transitioning')
+				.removeClass('drilldown-transition')
+				.removeClass('drilldown-next')
+				.css('transform', '')
+				.off('transitionend.clay');
+
+			if (focus) {
+				$(this).find('.dropdown-item')[0].focus();
+			}
+		});
+	}
+
+	if (dataDrilldown === 'next') {
+		// slides to the left
+		if (currentItemPos < nextItemPos) { // in order
+			currentDrilldownItem
+				.addClass('transitioning')
+				.removeClass('drilldown-current');
+
+			nextDrilldownItem
+				.addClass('transitioning')
+				.addClass('drilldown-current');
+
+			drilldownInner.css('height', nextDrilldownItem.find('.drilldown-item-inner').height());
+
+			drilldownInner.on('transitionend.clay', function(event) {
+				currentDrilldownItem
+					.addClass('drilldown-transition')
+					.css('transform', 'translateX(-100%)');
+
+				nextDrilldownItem
+					.addClass('drilldown-transition')
+					.css('transform', 'translateX(-100%)');
+
+				$(this).css('height', '').off('transitionend.clay');
+			});
+
+			drilldownItemTransitionend(currentDrilldownItem);
+			drilldownItemTransitionend(nextDrilldownItem, true);
+		}
+		else if (currentItemPos > nextItemPos) { // out of order
+			currentDrilldownItem
+				.addClass('transitioning')
+				.removeClass('drilldown-current')
+				.css('transform', 'translateX(-100%)');
+
+			nextDrilldownItem
+				.addClass('transitioning')
+				.addClass('drilldown-current')
+				.css('transform', 'translateX(100%)');
+
+			drilldownInner.css('height', nextDrilldownItem.find('.drilldown-item-inner').height());
+
+			drilldownInner.on('transitionend.clay', function(event) {
+				currentDrilldownItem
+					.addClass('drilldown-transition')
+					.css('transform', 'translateX(-200%)');
+
+				nextDrilldownItem
+					.addClass('drilldown-transition')
+					.css('transform', '');
+
+				$(this).css('height', '');
+				$(this).off('transitionend.clay');
+			});
+
+			drilldownItemTransitionend(currentDrilldownItem);
+			drilldownItemTransitionend(nextDrilldownItem, true);
+		}
+	}
+
+	if (dataDrilldown === 'prev') {
+		// slides to the right
+		if (currentItemPos > nextItemPos) { // in order
+			currentDrilldownItem
+				.addClass('transitioning')
+				.removeClass('drilldown-current')
+				.css('transform', 'translateX(-100%)');
+
+			nextDrilldownItem
+				.addClass('transitioning')
+				.addClass('drilldown-current')
+				.css('transform', 'translateX(-100%)');
+
+			drilldownInner.css('height', nextDrilldownItem.find('.drilldown-item-inner').height());
+
+			drilldownInner.on('transitionend.clay', function(event) {
+				currentDrilldownItem
+					.addClass('drilldown-transition')
+					.css('transform', '');
+
+				nextDrilldownItem
+					.addClass('drilldown-transition')
+					.css('transform', '');
+
+				$(this).css('height', '');
+				$(this).off('transitionend.clay');
+			});
+
+			drilldownItemTransitionend(currentDrilldownItem);
+			drilldownItemTransitionend(nextDrilldownItem, true);
+		}
+		else if (currentItemPos < nextItemPos) { // out of order
+			currentDrilldownItem
+				.addClass('transitioning')
+				.removeClass('drilldown-current');
+
+			nextDrilldownItem
+				.addClass('transitioning')
+				.addClass('drilldown-current')
+				.css('transform', 'translateX(-200%)');
+
+			drilldownInner.css('height', nextDrilldownItem.find('.drilldown-item-inner').height());
+
+			drilldownInner.on('transitionend.clay', function(event) {
+				currentDrilldownItem
+					.addClass('drilldown-transition')
+					.css('transform', 'translateX(100%)');
+
+				nextDrilldownItem
+					.addClass('drilldown-transition')
+					.css('transform', 'translateX(-100%)');
+
+				$(this).css('height', '');
+				$(this).off('transitionend.clay');
+			});
+
+			drilldownItemTransitionend(currentDrilldownItem);
+			drilldownItemTransitionend(nextDrilldownItem, true);
+		}
+	}
+});
+</script>

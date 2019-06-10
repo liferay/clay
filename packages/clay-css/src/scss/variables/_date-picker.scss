@@ -1,0 +1,168 @@
+// Date Picker Dropdown Menu
+
+$date-picker-dropdown-menu: () !default;
+$date-picker-dropdown-menu: map-merge((
+	max-height: none,
+	max-width: 370px,
+	padding-bottom: 0,
+	padding-left: 0,
+	padding-right: 0,
+	padding-top: 0,
+	width: 100%,
+), $date-picker-dropdown-menu);
+
+// Date Picker Nav
+
+$date-picker-nav-row: () !default;
+$date-picker-nav-row: map-merge((
+	display: flex,
+	margin-left: -0.25rem,
+	margin-right: -0.25rem,
+), $date-picker-nav-row);
+
+$date-picker-nav-btn: () !default;
+$date-picker-nav-btn: map-merge((
+	color: $gray-600,
+	transition: $btn-transition,
+	hover-bg: $gray-200,
+	focus-box-shadow: $input-btn-focus-box-shadow,
+	disabled-bg: transparent,
+	disabled-box-shadow: none,
+	disabled-color: $gray-600,
+	disabled-opacity: $btn-disabled-opacity,
+), $date-picker-nav-btn);
+
+$date-picker-nav-btn-monospaced: () !default;
+$date-picker-nav-btn-monospaced: map-merge((
+	margin-bottom: 0,
+	margin-top: 0,
+), $date-picker-nav-btn-monospaced);
+
+$date-picker-nav-select: () !default;
+$date-picker-nav-select: map-merge((), $date-picker-nav-select);
+
+// Date Picker Row
+
+$date-picker-row: () !default;
+$date-picker-row: map-merge((
+	display: flex,
+	justify-content: space-between,
+	margin-bottom: 0.5rem,
+	margin-top: 0.5rem,
+), $date-picker-row);
+
+$date-picker-days-row: () !default;
+$date-picker-days-row: map-merge((
+	margin-bottom: 1rem,
+	margin-top: 0,
+), $date-picker-days-row);
+
+$date-picker-date-row: () !default;
+
+// Date Picker Day
+
+$date-picker-day: () !default;
+$date-picker-day: map-merge((
+	height: 1.3125rem,
+), $date-picker-day);
+
+// Date Picker Calendar
+
+$date-picker-calendar-container: () !default;
+$date-picker-calendar-container: map-merge((
+	float: left,
+	min-width: 100%,
+), $date-picker-calendar-container);
+
+$date-picker-calendar-header-container: () !default;
+$date-picker-calendar-header-container: map-merge((
+	padding-bottom: 1rem,
+	padding-left: 1rem,
+	padding-right: 1rem,
+	padding-top: 1rem,
+), $date-picker-calendar-header-container);
+
+$date-picker-calendar-body-container: () !default;
+$date-picker-calendar-body-container: map-merge((
+	padding-left: 1rem,
+	padding-right: 1rem,
+	padding-bottom: 0.5rem,
+), $date-picker-calendar-body-container);
+
+$date-picker-calendar-footer-container: () !default;
+$date-picker-calendar-footer-container: map-merge((
+	border-color: $gray-400,
+	border-style: solid,
+	border-width: 1px 0 0 0,
+	padding-bottom: 1rem,
+	padding-left: 1.5rem,
+	padding-right: 1.5rem,
+	padding-top: 1rem,
+), $date-picker-calendar-footer-container);
+
+// Date Picker Calendar Item
+
+$date-picker-calendar-item: () !default;
+$date-picker-calendar-item: map-merge((
+	align-items: center,
+	bg: transparent,
+	border-width: 0,
+	cursor: $link-cursor,
+	disabled-cursor: $disabled-cursor,
+	display: inline-flex,
+	flex-shrink: 0,
+	font-weight: $font-weight-semi-bold,
+	height: 2rem,
+	justify-content: center,
+	line-height: 1,
+	margin-left: 0.5rem,
+	margin-right: 0.5rem,
+	padding-bottom: 0,
+	padding-left: 0,
+	padding-right: 0,
+	padding-top: 0,
+	transition: $btn-transition,
+	user-select: none,
+	vertical-align: middle,
+	white-space: nowrap,
+	width: 2rem,
+), $date-picker-calendar-item);
+
+$date-picker-date: () !default;
+$date-picker-date: map-merge((
+	border-radius: 100px,
+	color: $gray-600,
+	hover-bg: $gray-200,
+	focus-box-shadow: $input-btn-focus-box-shadow,
+	focus-outline: 0,
+	active-bg: $component-active-bg,
+	active-color: $component-active-color,
+	disabled-bg: transparent,
+	disabled-box-shadow: none,
+	disabled-opacity: $btn-disabled-opacity,
+), $date-picker-date);
+
+$date-picker-previous-month-date: () !default;
+$date-picker-previous-month-date: map-merge((
+	opacity: 0.65,
+	focus-opacity: 1,
+	active-opacity: 1,
+), $date-picker-previous-month-date);
+
+$date-picker-next-month-date: () !default;
+$date-picker-next-month-date: map-merge((
+	opacity: 0.65,
+	focus-opacity: 1,
+	active-opacity: 1,
+), $date-picker-next-month-date);
+
+// Date Picker Input Group
+
+$date-picker-input-group-text: () !default;
+$date-picker-input-group-text: map-merge((
+	bg: transparent,
+	border-color: transparent,
+	min-width: 2rem,
+	padding-left: 0.25rem,
+	padding-right: 0.25rem,
+), $date-picker-input-group-text);

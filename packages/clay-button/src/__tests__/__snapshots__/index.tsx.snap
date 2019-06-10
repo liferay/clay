@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayButton renders 1`] = `
+<button
+  className="btn btn-primary"
+  type="button"
+/>
+`;
+
+exports[`ClayButton renders a ButtonGroup with spaced 1`] = `
+<div
+  className="btn-group"
+  role="group"
+>
+  <div
+    className="btn-group-item"
+  >
+    <button
+      className="btn btn-primary"
+      type="button"
+    />
+  </div>
+  <div
+    className="btn-group-item"
+  >
+    <button
+      className="btn btn-primary"
+      type="button"
+    />
+  </div>
+</div>
+`;
+
+exports[`ClayButton renders block 1`] = `
+<button
+  className="btn btn-primary btn-block"
+  type="button"
+/>
+`;
+
+exports[`ClayButton renders disabled 1`] = `
+<button
+  className="btn btn-primary"
+  disabled={true}
+  type="button"
+/>
+`;
+
+exports[`ClayButton renders monospaced 1`] = `
+<button
+  className="btn btn-primary btn-monospaced"
+  type="button"
+/>
+`;
+
+exports[`ClayButton renders small 1`] = `
+<button
+  className="btn btn-primary btn-sm"
+  type="button"
+/>
+`;
+
+exports[`ClayButton renders with a ButtonGroup 1`] = `
+<div
+  className="btn-group"
+  role="group"
+>
+  <button
+    className="btn btn-primary"
+    type="button"
+  />
+</div>
+`;
+
+exports[`ClayButton renders with a different display type 1`] = `
+<button
+  className="btn btn-link"
+  type="button"
+/>
+`;

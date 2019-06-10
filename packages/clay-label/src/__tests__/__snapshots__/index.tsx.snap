@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rendering as a link  1`] = `
+<span
+  className="label label-secondary"
+>
+  <a
+    className="label-item label-item-expand"
+    href="#/foo/bar"
+  >
+    Label w/ link
+  </a>
+</span>
+`;
+
+exports[`Rendering default 1`] = `
+<span
+  className="label label-secondary"
+>
+  <span
+    className="label-item label-item-expand"
+  >
+    Default Label
+  </span>
+</span>
+`;
+
+exports[`Rendering renders as a link and closable  1`] = `
+<span
+  className="label label-dismissible label-secondary"
+>
+  <a
+    className="label-item label-item-expand"
+    href="#/foo/bar"
+  >
+    Label Closable
+  </a>
+  <span
+    className="label-item label-item-after"
+  >
+    <button
+      className="close"
+      onClick={[Function]}
+      type="button"
+    >
+      <svg
+        className="lexicon-icon lexicon-icon-times"
+        role="presentation"
+      >
+        <use
+          xlinkHref="path/to/spritemap#times"
+        />
+      </svg>
+    </button>
+  </span>
+</span>
+`;
+
+exports[`Rendering renders as closable 1`] = `
+<span
+  className="label label-dismissible label-secondary"
+>
+  <span
+    className="label-item label-item-expand"
+  >
+    Label Closable
+  </span>
+  <span
+    className="label-item label-item-after"
+  >
+    <button
+      className="close"
+      onClick={[Function]}
+      type="button"
+    >
+      <svg
+        className="lexicon-icon lexicon-icon-times"
+        role="presentation"
+      >
+        <use
+          xlinkHref="path/to/spritemap#times"
+        />
+      </svg>
+    </button>
+  </span>
+</span>
+`;
+
+exports[`Rendering with a different displayType  1`] = `
+<span
+  className="label label-success"
+>
+  <span
+    className="label-item label-item-expand"
+  >
+    Success Label
+  </span>
+</span>
+`;

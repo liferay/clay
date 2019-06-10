@@ -1,6 +1,18 @@
 // This file is used to overwrite default Bootstrap 4 variables for the Clay
 // Base Theme and should only be limited to the most destructive variables.
 
+// More semantic variable name: maps Clay CSS `$component-focus-box-shadow` to Bootstrap's `$input-btn-focus-box-shadow` for global focus styles
+
+$white: #FFF !default;
+$blue: #007BFF !default;
+$primary: $blue !default;
+$component-active-color: $white !default;
+$component-active-bg: $primary !default;
+$input-btn-focus-width: .2rem !default;
+$input-btn-focus-color: rgba($component-active-bg, .25) !default;
+$component-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
+$input-btn-focus-box-shadow: $component-focus-box-shadow !default;
+
 $enable-caret: false !default;
 
 $spacer: 1rem !default;
@@ -22,6 +34,8 @@ $input-height: 2.375rem !default; // 38px
 $input-height-lg: 3rem !default; // 48px
 $input-height-sm: 1.9375rem !default; // 31px
 
+$form-check-input-gutter: 0 !default;
+$form-check-input-margin-y: 0 !default;
 $form-check-inline-input-margin-x: auto !default;
 
 $table-accent-bg: #F2F2F2 !default;

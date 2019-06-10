@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayAutocomplete renders 1`] = `
+<div>
+  <div
+    class="input-group"
+  >
+    <div
+      class="input-group-item"
+    />
+  </div>
+</div>
+`;
+
+exports[`ClayAutocomplete renders Autocomplete with other markup component 1`] = `
+<div>
+  <div
+    class="form-control form-control-tag-group"
+  />
+</div>
+`;
+
+exports[`ClayAutocomplete renders DropDown with alignment with container 1`] = `
+<body>
+  <div>
+    <input
+      class="form-control"
+    />
+  </div>
+  <div>
+    <div
+      class="dropdown-menu autocomplete-dropdown-menu show"
+      style="max-width: none;"
+    />
+  </div>
+</body>
+`;
+
+exports[`ClayAutocomplete renders Input with classNames when loading for true 1`] = `
+<div>
+  <input
+    class="form-control input-group-inset input-group-inset-after"
+  />
+</div>
+`;
+
+exports[`ClayAutocomplete renders Item with matches values 1`] = `
+<div>
+  <li>
+    <span
+      class="dropdown-item"
+    >
+      Bar
+    </span>
+  </li>
+</div>
+`;
+
+exports[`ClayAutocomplete renders LoadingIndicator 1`] = `
+<div>
+  <div
+    class="input-group-inset-item input-group-inset-item-after"
+  >
+    <span
+      class="inline-item inline-item-middle"
+    >
+      <span
+        aria-hidden="true"
+        class="loading-animation loading-animation-sm"
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`ClayAutocomplete renders LoadingIndicator with other markup component 1`] = `
+<div>
+  <span
+    class="autofit-col"
+  >
+    <span
+      class="inline-item"
+    >
+      <span
+        aria-hidden="true"
+        class="loading-animation loading-animation-sm"
+      />
+    </span>
+  </span>
+</div>
+`;

@@ -1,0 +1,367 @@
+////
+/// @group Dropdowns
+////
+
+/// A mixin to create Dropdown Menu variants. You can base your variant off Bootstrap's `.dropdown-menu` class or create your own base class (e.g., `<div class="dropdown-menu my-custom-dropdown-menu"></div>` or `<div class="my-custom-dropdown-menu"></div>`).
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// breakpoint-down: {String, Null}, // The Bootstrap 4 Breakpoint {xs | sm | md | lg | xl}
+/// bg: {Color | String | Null},
+/// bg-clip: {String | Null},
+/// border-color: {Color | String | List | Null},
+/// border-radius: {Number | String | List | Null},
+/// border-style: {String | List | Null},
+/// border-width: {Number | String | List | Null},
+/// box-shadow: {String | List | Null},
+/// color: {Color | String | Null},
+/// display: {String | Null},
+/// float: {String | Null},
+/// font-size: {Number | String | Null},
+/// left: {Number | String | Null},
+/// list-style: {String | Null},
+/// margin-bottom: {Number | String | Null},
+/// margin-left: {Number | String | Null},
+/// margin-right: {Number | String | Null},
+/// margin-top: {Number | String | Null},
+/// max-height: {Number | String | Null},
+/// max-width: {Number | String | Null},
+/// min-height: {Number | String | Null},
+/// min-width: {Number | String | Null},
+/// overflow: {String | Null},
+/// padding-bottom: {Number | String | Null},
+/// padding-left: {Number | String | Null},
+/// padding-right: {Number | String | Null},
+/// padding-top: {Number | String | Null},
+/// position: {String | Null},
+/// text-align: {String | Null},
+/// top: {Number | String | Null},
+/// width: {Number | String | Null},
+/// z-index: {Number | String | Null},
+/// font-size-mobile: {Number | String | Null},
+/// max-height-mobile: {Number | String | Null},
+/// max-width-mobile: {Number | String | Null},
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
+
+@mixin clay-dropdown-menu-variant($map) {
+	$breakpoint-down: map-get($map, breakpoint-down);
+
+	$bg: map-get($map, bg);
+	$bg-clip: map-get($map, bg-clip);
+	$border-color: map-get($map, border-color);
+	$border-radius: map-get($map, border-radius);
+	$border-style: map-get($map, border-style);
+	$border-width: map-get($map, border-width);
+	$box-shadow: map-get($map, box-shadow);
+	$color: map-get($map, color);
+	$display: map-get($map, display);
+	$float: map-get($map, float);
+	$font-size: map-get($map, font-size);
+	$left: map-get($map, left);
+	$list-style: map-get($map, list-style);
+	$margin-bottom: map-get($map, margin-bottom);
+	$margin-left: map-get($map, margin-left);
+	$margin-right: map-get($map, margin-right);
+	$margin-top: map-get($map, margin-top);
+	$max-height: map-get($map, max-height);
+	$max-width: map-get($map, max-width);
+	$min-height: map-get($map, min-height);
+	$min-width: map-get($map, min-width);
+	$overflow: map-get($map, overflow);
+	$padding-bottom: map-get($map, padding-bottom);
+	$padding-left: map-get($map, padding-left);
+	$padding-right: map-get($map, padding-right);
+	$padding-top: map-get($map, padding-top);
+	$position: map-get($map, position);
+	$text-align: map-get($map, text-align);
+	$top: map-get($map, top);
+	$width: map-get($map, width);
+	$z-index: map-get($map, z-index);
+
+	$font-size-mobile: map-get($map, font-size-mobile);
+	$max-height-mobile: map-get($map, max-height-mobile);
+	$max-width-mobile: map-get($map, max-width-mobile);
+
+	background-clip: $bg-clip;
+	background-color: $bg;
+	border-color: $border-color;
+	border-radius: $border-radius;
+	border-style: $border-style;
+	border-width: $border-width;
+	box-shadow: $box-shadow;
+	color: $color;
+	display: $display;
+	float: $float;
+	font-size: $font-size;
+	left: $left;
+	list-style: $list-style;
+	margin-bottom: $margin-bottom;
+	margin-left: $margin-left;
+	margin-right: $margin-right;
+	margin-top: $margin-top;
+	max-height: $max-height;
+	max-width: $max-width;
+	min-height: $min-height;
+	min-width: $min-width;
+	overflow: $overflow;
+	padding-left: $padding-left;
+	padding-right: $padding-right;
+	padding-top: $padding-top;
+	position: $position;
+	text-align: $text-align;
+	top: $top;
+	width: $width;
+	z-index: $z-index;
+
+	// Firefox clips overflowing content and doesn't respect `padding-bottom` on `.dropdown-menu`
+
+	&::after {
+		padding-top: $padding-bottom;
+	}
+
+	@if ($breakpoint-down) {
+		@include media-breakpoint-down($breakpoint-down) {
+			font-size: $font-size-mobile;
+			max-height: $max-height-mobile;
+			max-width: $max-width-mobile;
+		}
+	}
+}
+
+/// A mixin to create Dropdown Item variants. You can base your variant off Bootstrap's `.dropdown-item` class or create your own base class (e.g., `<a class="dropdown-item my-custom-dropdown-item" href="/"></a>` or `<a class="my-custom-dropdown-item" href="/"></a>`).
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// bg: {Color | String | Null},
+/// border-radius: {Number | String | List | Null},
+/// border-width: {Number | String | List | Null},
+/// clear: {String | Null},
+/// color: {Color | String | Null},
+/// display: {String | Null},
+/// font-size: {Number | String | Null},
+/// font-weight: {Number | String | Null},
+/// outline: {Number | String | Null},
+/// overflow: {String | Null},
+/// padding-bottom: {Number | String | Null},
+/// padding-left: {Number | String | Null},
+/// padding-right: {Number | String | Null},
+/// padding-top: {Number | String | Null},
+/// position: {String | Null},
+/// text-align: {String | Null},
+/// transition: {String | List | Null},
+/// white-space: {String | Null},
+/// width: {Number | String | Null},
+/// word-wrap: {String | Null},
+/// hover-bg: {Color | String | Null},
+/// hover-color: {Color | String | Null},
+/// hover-opacity: {Number | String | Null},
+/// hover-text-decoration: {String | Null},
+/// focus-bg: {Color | String | Null},
+/// focus-border-radius: {Number | String | List | Null},
+/// focus-box-shadow: {String | List | Null},
+/// focus-color: {Color | String | Null},
+/// focus-opacity: {Number | String | Null},
+/// focus-outline: {Number | String | Null},
+/// focus-text-decoration: {String | Null},
+/// active-bg: {Color | String | Null},
+/// active-border-color: {String | List | Null},
+/// active-color: {Color | String | Null},
+/// active-font-weight: {Number | String | Null},
+/// active-text-decoration: {String | Null},
+/// active-class-bg: {Color | String | Null},
+/// active-class-border-color: {Color | String | List | Null},
+/// active-class-color: {Color | String | Null},
+/// active-class-font-weight: {Number | String | Null},
+/// active-class-text-decoration: {String | Null},
+/// disabled-bg: {Color | String | Null},
+/// disabled-border-color: {Color | String | List | Null},
+/// disabled-box-shadow: {String | List | Null},
+/// disabled-color: {Color | String | Null},
+/// disabled-cursor: {String | Null},
+/// disabled-opacity: {Number | String | Null},
+/// disabled-pointer-events: {String | Null},
+/// disabled-text-decoration: {String | Null},
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
+
+@mixin clay-dropdown-item-variant($map) {
+	$enabled: setter(map-get($map, enabled), true);
+
+	$bg: map-get($map, bg);
+	$border-radius: map-get($map, border-radius);
+	$border-width: map-get($map, border-width);
+	$clear: map-get($map, clear);
+	$color: map-get($map, color);
+	$display: map-get($map, display);
+	$font-size: map-get($map, font-size);
+	$font-weight: map-get($map, font-weight);
+	$outline: map-get($map, outline);
+	$overflow: map-get($map, overflow);
+	$padding-bottom: map-get($map, padding-bottom);
+	$padding-left: map-get($map, padding-left);
+	$padding-right: map-get($map, padding-right);
+	$padding-top: map-get($map, padding-top);
+	$position: map-get($map, position);
+	$text-align: map-get($map, text-align);
+	$transition: map-get($map, transition);
+	$white-space: map-get($map, white-space);
+	$width: map-get($map, width);
+	$word-wrap: map-get($map, word-wrap);
+
+	$hover-bg: map-get($map, hover-bg);
+	$hover-color: map-get($map, hover-color);
+	$hover-opacity: map-get($map, hover-opacity);
+	$hover-text-decoration: map-get($map, hover-text-decoration);
+
+	$focus-bg: map-get($map, focus-bg);
+	$focus-border-radius: map-get($map, focus-border-radius);
+	$focus-box-shadow: map-get($map, focus-box-shadow);
+	$focus-color: map-get($map, focus-color);
+	$focus-opacity: map-get($map, focus-opacity);
+	$focus-outline: map-get($map, focus-outline);
+	$focus-text-decoration: map-get($map, focus-text-decoration);
+
+	$active-bg: map-get($map, active-bg);
+	$active-border-color: map-get($map, active-border-color);
+	$active-color: map-get($map, active-color);
+	$active-font-weight: map-get($map, active-font-weight);
+	$active-text-decoration: map-get($map, active-text-decoration);
+
+	$active-class-bg: map-get($map, active-class-bg);
+	$active-class-border-color: map-get($map, active-class-border-color);
+	$active-class-color: map-get($map, active-class-color);
+	$active-class-font-weight: map-get($map, active-class-font-weight);
+	$active-class-text-decoration: map-get($map, active-class-text-decoration);
+
+	$disabled-bg: map-get($map, disabled-bg);
+	$disabled-border-color: map-get($map, disabled-border-color);
+	$disabled-box-shadow: map-get($map, disabled-box-shadow);
+	$disabled-color: map-get($map, disabled-color);
+	$disabled-cursor: map-get($map, disabled-cursor);
+	$disabled-opacity: map-get($map, disabled-opacity);
+	$disabled-pointer-events: map-get($map, disabled-pointer-events);
+	$disabled-text-decoration: map-get($map, disabled-text-decoration);
+
+	@if ($enabled) {
+		background-color: $bg; // For `<button>`s set to `transparent` in Bootstrap
+
+		@include border-radius($border-radius);
+
+		border-width: $border-width; // For `<button>`s set to `0` in Bootstrap
+		clear: $clear;
+		color: $color;
+		display: $display;
+		font-size: $font-size;
+		font-weight: $font-weight;
+		outline: $outline;
+		overflow: $overflow;
+		padding-bottom: $padding-bottom;
+		padding-left: $padding-left;
+		padding-right: $padding-right;
+		padding-top: $padding-top;
+		position: $position;
+		text-align: $text-align; // For `<button>`s set to `left` in Bootstrap
+		transition: $transition;
+		white-space: $white-space;
+		width: $width; // For `<button>`s set to `100%` in Bootstrap
+		word-wrap: $word-wrap;
+
+		&:hover {
+			background-color: $hover-bg;
+			color: $hover-color;
+			opacity: $hover-opacity;
+			text-decoration: $hover-text-decoration;
+		}
+
+		&:focus {
+			background-color: $focus-bg;
+
+			@include border-radius($focus-border-radius);
+
+			box-shadow: $focus-box-shadow;
+			color: $focus-color;
+			opacity: $focus-opacity;
+			outline: $focus-outline;
+			text-decoration: $focus-text-decoration;
+		}
+
+		&:active {
+			background-color: $active-bg;
+			border-color: $active-border-color;
+			color: $active-color;
+			font-weight: $active-font-weight;
+			text-decoration: $active-text-decoration;
+
+			label {
+				color: $active-color;
+			}
+
+			.form-check-label {
+				color: $active-color;
+				font-weight: $active-font-weight;
+			}
+
+			.custom-control-label {
+				font-weight: $active-font-weight;
+			}
+		}
+
+		&.active {
+			background-color: $active-class-bg;
+			border-color: $active-class-border-color;
+			color: $active-class-color;
+			font-weight: $active-class-font-weight;
+			text-decoration: $active-class-text-decoration;
+
+			label {
+				color: $active-class-color;
+			}
+
+			.form-check-label {
+				color: $active-class-color;
+				font-weight: $active-class-font-weight;
+			}
+
+			.custom-control-label {
+				font-weight: $active-class-font-weight;
+			}
+		}
+
+		// Overwrite Bootstrap's Ensure active button styles are not applied to disabled buttons
+		// https://github.com/twbs/bootstrap/commit/de3973b5e74058e37fd15fecc4cb7b9fd3409def
+
+		&.btn:not([disabled]):not(.disabled):active,
+		&.btn:not([disabled]):not(.disabled).active {
+			&:focus {
+				box-shadow: $focus-box-shadow;
+			}
+		}
+
+		&:disabled,
+		&.disabled {
+			background-color: $disabled-bg;
+			border-color: $disabled-border-color;
+			box-shadow: $disabled-box-shadow;
+			color: $disabled-color;
+			cursor: $disabled-cursor;
+			opacity: $disabled-opacity;
+			pointer-events: $disabled-pointer-events;
+			text-decoration: $disabled-text-decoration;
+
+			label,
+			.form-check-label {
+				color: $disabled-color;
+			}
+		}
+
+		.form-check-label {
+			font-weight: $font-weight;
+		}
+
+		.custom-control-label {
+			font-weight: $font-weight;
+		}
+	}
+}

@@ -1,9 +1,53 @@
-// $clay-unset is deprecated as of v2.4.1 we will not support unsetting
-// variables in version 2 because it violates the Sass spec. If you
-// are using libsass you can still unset variables with the syntax
-// `$my-var: !default;`.
+////
+/// @group globals
+////
+
+/// @deprecated as of v2.4.1 we will not support unsetting variables in version 2 because it violates the Sass spec. If you are using libsass you can still unset Clay CSS / Bootstrap variables with the syntax `$my-var: !default;`.
+
 $clay-unset: clay-unset !default;
 $clay-unset-placeholder: clay-unset-placeholder !default;
+
+$primary-d1: darken($primary, 7.5) !default;
+$primary-d2: darken($primary, 10) !default;
+$primary-l1: lighten($primary, 22.94) !default;
+$primary-l2: lighten($primary, 32.94) !default;
+$primary-l3: lighten($primary, 44.90) !default;
+
+$secondary-d1: darken($secondary, 7.5) !default;
+$secondary-d2: darken($secondary, 10) !default;
+$secondary-l1: lighten($secondary, 22.94) !default;
+$secondary-l2: lighten($secondary, 32.94) !default;
+$secondary-l3: lighten($secondary, 44.90) !default;
+
+$info-d1: darken($info, 7.5) !default;
+$info-d2: darken($info, 10) !default;
+$info-l1: lighten($info, 22.94) !default;
+$info-l2: lighten($info, 32.94) !default;
+
+$success-d1: darken($success, 7.5) !default;
+$success-d2: darken($success, 10) !default;
+$success-l1: lighten($success, 22.94) !default;
+$success-l2: lighten($success, 32.94) !default;
+
+$warning-d1: darken($warning, 7.5) !default;
+$warning-d2: darken($warning, 10) !default;
+$warning-l1: lighten($warning, 22.94) !default;
+$warning-l2: lighten($warning, 32.94) !default;
+
+$danger-d1: darken($danger, 7.5) !default;
+$danger-d2: darken($danger, 10) !default;
+$danger-l1: lighten($danger, 22.94) !default;
+$danger-l2: lighten($danger, 32.94) !default;
+
+$light-d1: darken($light, 7.5) !default;
+$light-d2: darken($light, 10) !default;
+$light-l1: lighten($light, 22.94) !default;
+$light-l2: lighten($light, 32.94) !default;
+
+$dark-d1: darken($dark, 7.5) !default;
+$dark-d2: darken($dark, 10) !default;
+$dark-l1: lighten($dark, 22.94) !default;
+$dark-l2: lighten($dark, 32.94) !default;
 
 $enable-scaling-components: false !default;
 $scaling-breakpoint-down: sm !default;
@@ -58,6 +102,7 @@ $h6-font-size-mobile: null !default;
 
 $body-moz-osx-font-smoothing: $moz-osx-font-smoothing !default;
 $body-webkit-font-smoothing: $webkit-font-smoothing !default;
+$body-text-align: inherit !default;
 
 // Z-Index Variables
 

@@ -1,17 +1,72 @@
+////
+/// @group alerts
+////
+
 $alert-border-style: solid !default;
 
+/// @deprecated as of v2.12.0 use the Sass map `$alert-close` instead
+
 $alert-close-font-size: 0.875rem !default; // 14px
+
+/// @deprecated as of v2.12.0 use the Sass map `$alert-close` instead
+
 $alert-close-height: 2rem !default; // 32px
+
+/// @deprecated as of v2.12.0 use the Sass map `$alert-close` instead
+
 $alert-close-line-height: null !default;
+
+/// @deprecated as of v2.12.0 use the Sass map `$alert-close` instead
+
 $alert-close-opacity: null !default;
+
+/// @deprecated as of v2.12.0 use the Sass map `$alert-close` instead
+
 $alert-close-margin-left: null !default;
+
+/// @deprecated as of v2.12.0 use the Sass map `$alert-close` instead
+
 $alert-close-padding-bottom: 0 !default;
+
+/// @deprecated as of v2.12.0 use the Sass map `$alert-close` instead
+
 $alert-close-padding-left: 0 !default;
+
+/// @deprecated as of v2.12.0 use the Sass map `$alert-close` instead
+
 $alert-close-padding-right: 0 !default;
+
+/// @deprecated as of v2.12.0 use the Sass map `$alert-close` instead
+
 $alert-close-padding-top: 0 !default;
+
+/// @deprecated as of v2.12.0 use the Sass map `$alert-close` instead
+
 $alert-close-position-right: 0.5rem !default; // 8px
+
+/// @deprecated as of v2.12.0 use the Sass map `$alert-close` instead
+
 $alert-close-position-top: 0.75rem !default; // 12px
+
+/// @deprecated as of v2.12.0 use the Sass map `$alert-close` instead
+
 $alert-close-width: $alert-close-height !default;
+
+$alert-close: () !default;
+$alert-close: map-merge((
+	font-size: $alert-close-font-size,
+	height: $alert-close-height,
+	line-height: $alert-close-line-height,
+	margin-left: $alert-close-margin-left,
+	opacity: $alert-close-opacity,
+	padding-bottom: $alert-close-padding-bottom,
+	padding-left: $alert-close-padding-left,
+	padding-right: $alert-close-padding-right,
+	padding-top: $alert-close-padding-top,
+	right: $alert-close-position-right,
+	top: $alert-close-position-top,
+	width: $alert-close-width,
+), $alert-close);
 
 $alert-font-size: null !default;
 

@@ -2,12 +2,20 @@
 	cursor: $form-check-input-cursor;
 	height: 14px;
 	width: 14px;
+
+	&:disabled {
+		cursor: $form-check-input-disabled-cursor;
+	}
 }
 
 [type="radio"] {
 	cursor: $form-check-input-cursor;
 	height: 15px;
 	width: 14px;
+
+	&:disabled {
+		cursor: $form-check-input-disabled-cursor;
+	}
 }
 
 fieldset {
@@ -49,14 +57,6 @@ label {
 		margin-left: $input-label-reference-mark-spacer;
 		margin-right: $input-label-reference-mark-spacer;
 		vertical-align: $input-label-reference-mark-vertical-align;
-	}
-}
-
-.form-group {
-	position: relative;
-
-	@include clay-scale-component {
-		margin-bottom: $form-group-margin-bottom-mobile;
 	}
 }
 
@@ -176,12 +176,28 @@ div {
 }
 
 .form-control-tag-group {
-	align-items: center;
-	display: flex;
-	flex-wrap: wrap;
-	height: auto;
-	padding-bottom: $form-control-tag-group-padding-y;
-	padding-top: $form-control-tag-group-padding-y;
+	@include clay-container($form-control-tag-group);
+
+	.autofit-row {
+		@include clay-container($form-control-tag-group-autofit-row);
+	}
+
+	.autofit-col {
+		@include clay-container($form-control-tag-group-autofit-col);
+	}
+
+	.inline-item {
+		@include clay-container($form-control-tag-group-inline-item);
+	}
+
+	.btn {
+		@include clay-button-variant($form-control-tag-group-btn);
+	}
+
+	.btn-monospaced,
+	.component-action {
+		@include clay-button-variant($form-control-tag-group-btn-monospaced);
+	}
 }
 
 .form-control-inset {
@@ -249,7 +265,7 @@ select.form-control:not([multiple]):not([size]),
 textarea.form-control,
 textarea.form-control-plaintext,
 .form-control.form-control-textarea {
-		height: $input-textarea-height;
+	height: $input-textarea-height;
 }
 
 // File
@@ -355,48 +371,94 @@ fieldset[disabled] label {
 
 // Input Sizes
 
-.form-control-lg {
-	@if not ($input-font-size-lg == $font-size-lg) {
-		font-size: $input-font-size-lg;
-	}
+// Bootstrap 4 @extend .form-control-lg; work around
 
+%clay-form-control-lg {
+	@include border-radius($input-border-radius-lg);
+
+	font-size: $input-font-size-lg;
 	height: $input-height-lg;
-
-	@if not ($input-padding-y-lg == $btn-padding-y-lg) {
-		padding-bottom: $input-padding-y-lg;
-		padding-top: $input-padding-y-lg;
-	}
-
-	@if not ($input-padding-x-lg == $btn-padding-x-lg) {
-		padding-left: $input-padding-x-lg;
-		padding-right: $input-padding-x-lg;
-	}
+	padding-bottom: $input-padding-y-lg;
+	padding-left: $input-padding-x-lg;
+	padding-right: $input-padding-x-lg;
+	padding-top: $input-padding-y-lg;
 
 	@include clay-scale-component {
 		height: $input-height-lg-mobile;
 	}
 }
 
-.form-control-sm {
-	@if not ($input-font-size-sm == $font-size-sm) {
-		font-size: $input-font-size-sm;
-	}
+.form-control-lg {
+	font-size: $input-font-size-lg;
+	height: $input-height-lg;
 
+	@include clay-scale-component {
+		height: $input-height-lg-mobile;
+	}
+}
+
+%clay-select-form-control-lg {
+	&:not([size]):not([multiple]) {
+		height: $input-height-lg;
+
+		@include clay-scale-component {
+			height: $input-height-lg-mobile;
+		}
+	}
+}
+
+%clay-textarea-form-control-lg {
+	height: $input-textarea-height-lg;
+}
+
+textarea.form-control-lg,
+.form-control-lg.form-control-textarea {
+	height: $input-textarea-height-lg;
+}
+
+// Bootstrap 4 @extend .form-control-sm; work around
+
+%clay-form-control-sm {
+	@include border-radius($input-border-radius-sm);
+
+	font-size: $input-font-size-sm;
 	height: $input-height-sm;
-
-	@if not ($input-padding-y-sm == $btn-padding-y-sm) {
-		padding-bottom: $input-padding-y-sm;
-		padding-top: $input-padding-y-sm;
-	}
-
-	@if not ($input-padding-x-sm == $btn-padding-x-sm) {
-		padding-left: $input-padding-x-sm;
-		padding-right: $input-padding-x-sm;
-	}
+	padding-bottom: $input-padding-y-sm;
+	padding-left: $input-padding-x-sm;
+	padding-right: $input-padding-x-sm;
+	padding-top: $input-padding-y-sm;
 
 	@include clay-scale-component {
 		height: $input-height-sm-mobile;
 	}
+}
+
+.form-control-sm {
+	font-size: $input-font-size-sm;
+	height: $input-height-sm;
+
+	@include clay-scale-component {
+		height: $input-height-sm-mobile;
+	}
+}
+
+%clay-select-form-control-sm {
+	&:not([size]):not([multiple]) {
+		height: $input-height-sm;
+
+		@include clay-scale-component {
+			height: $input-height-sm-mobile;
+		}
+	}
+}
+
+%clay-textarea-form-control-sm {
+	height: $input-textarea-height-sm;
+}
+
+textarea.form-control-sm,
+.form-control-sm.form-control-textarea {
+	height: $input-textarea-height-sm;
 }
 
 // Form Group Autofit
@@ -472,5 +534,73 @@ fieldset[disabled] label {
 .form-group-item-label-spacer {
 	@include media-breakpoint-up(sm) {
 		margin-top: $form-group-item-label-spacer;
+	}
+}
+
+// Form Group
+
+.form-group {
+	position: relative;
+
+	@include clay-scale-component {
+		margin-bottom: $form-group-margin-bottom-mobile;
+	}
+}
+
+.form-group-sm {
+	margin-bottom: $form-group-sm-margin-bottom;
+
+	@include clay-scale-component {
+		margin-bottom: $form-group-sm-margin-bottom-mobile;
+	}
+
+	label {
+		margin-bottom: $form-group-sm-input-label-margin-bottom;
+	}
+
+	.btn {
+		@extend %clay-btn-sm;
+	}
+
+	.form-control,
+	.form-control-plaintext {
+		@extend %clay-form-control-sm;
+	}
+
+	select.form-control {
+		@extend %clay-select-form-control-sm;
+	}
+
+	select[multiple],
+	.form-control[size] {
+		height: auto;
+	}
+
+	textarea.form-control,
+	.form-control.form-control-textarea {
+		@extend %clay-textarea-form-control-sm;
+	}
+
+	.form-feedback-item ~ .form-feedback-item,
+	.form-feedback-item ~ .form-text,
+	.form-text ~ .form-feedback-item,
+	.form-text ~ .form-text {
+		margin-top: 0;
+	}
+
+	.form-group-item-label {
+		@include media-breakpoint-up(sm) {
+			min-height: $input-height-sm;
+
+			> label {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.form-group-item-label-spacer {
+		@include media-breakpoint-up(sm) {
+			margin-top: $form-group-sm-item-label-spacer;
+		}
 	}
 }

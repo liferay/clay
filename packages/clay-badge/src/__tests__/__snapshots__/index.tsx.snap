@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayBadge applies custom className 1`] = `
+<span
+  className="badge badge-primary foo bar"
+>
+  <span
+    className="badge-item badge-item-expand"
+  >
+    4
+  </span>
+</span>
+`;
+
+exports[`ClayBadge renders 1`] = `
+<span
+  className="badge badge-primary"
+>
+  <span
+    className="badge-item badge-item-expand"
+  >
+    4
+  </span>
+</span>
+`;

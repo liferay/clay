@@ -107,9 +107,9 @@ $subnav-tbar-light: map-merge((
 
 $subnav-tbar-primary-component-link: () !default;
 $subnav-tbar-primary-component-link: map-merge((
-	color: $body-color,
-	hover-color: $body-color,
-	disabled-color: $secondary,
+	color: $gray-900,
+	hover-color: $gray-900,
+	disabled-color: $gray-600,
 	disabled-cursor: $disabled-cursor,
 	disabled-opacity: $btn-disabled-opacity,
 	disabled-text-decoration: none
@@ -118,7 +118,7 @@ $subnav-tbar-primary-component-link: map-merge((
 $subnav-tbar-primary-component-label-close: () !default;
 $subnav-tbar-primary-component-label-close: map-merge((
 	focus-color: inherit,
-	disabled-color: $secondary,
+	disabled-color: $gray-600,
 	disabled-opacity: $btn-disabled-opacity
 ), $subnav-tbar-primary-component-label-close);
 
@@ -138,7 +138,7 @@ $subnav-tbar-primary-tbar-label-size: map-merge((
 
 $subnav-tbar-primary: () !default;
 $subnav-tbar-primary: map-merge((
-	bg-color: lighten($primary, 32.94),
+	bg-color: $primary-l2,
 	padding-x: 0.25rem,
 	padding-y: 0.625rem,
 	item-justify-content: flex-start,

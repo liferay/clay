@@ -1,3 +1,18 @@
+////
+/// @group stickers
+////
+
+/// A mixin that helps create custom Sticker sizes.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// font-size: {Number | String | Null},
+/// inline-item-font-size: {Number | String | Null},
+/// outside-offset: {Number | String}, // Default: -(map-get($map, size) / 2)
+/// size: {Number | String | Null},
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
+
 @mixin clay-sticker-size($map) {
 	$font-size: map-get($map, font-size);
 	$inline-item-font-size: map-get($map, inline-item-font-size);
@@ -34,6 +49,32 @@
 		}
 	}
 }
+
+/// A mixin to create sticker variants. You can base your variant off `.sticker` or create your own base class (e.g., `<span class="sticker my-custom-sticker-variant"></span>` or `<span class="my-custom-sticker"></span>`).
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// align-items: {String | Null},
+/// background-color: {Color | String | Null}, // An alias for bg
+/// bg: {Color | String | Null}, // Default: $background-color
+/// border-color: {Color | String | List | Null},
+/// border-radius: {Number | String | List | Null},
+/// border-style: {String | List | Null},
+/// border-width: {Number | String | List | Null},
+/// box-shadow: {String | List | Null},
+/// color: {Color | String | Null},
+/// display: {String | Null},
+/// font-size: {Number | String | Null},
+/// font-weight: {Number | String | Null},
+/// height: {Number | String | Null},
+/// justify-content: {String | Null},
+/// line-height: {Number | String | Null},
+/// position: {String | Null},
+/// text-align: {String | Null},
+/// vertical-align: {String | Null},
+/// width: {Number | String | Null},
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
 
 @mixin clay-sticker-variant($map) {
 	$align-items: map-get($map, align-items);

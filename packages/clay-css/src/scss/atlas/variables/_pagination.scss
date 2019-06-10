@@ -1,10 +1,27 @@
+////
+/// @group pagination
+////
+
 $pagination-font-size: 0.875rem !default; // 14px
 $pagination-line-height: 1 !default;
 
+// Pagination Item
+
 $pagination-item-height: 2rem !default; // 32px
-$pagination-item-margin-x: 0.125rem !default;
+
+// @deprecated as of v2 use the Sass map `$pagination-item` instead
+
+$pagination-item-margin-x: 0.25rem !default; // 4px
+
+// Pagination Link
+
+// @deprecated as of v2 use the Sass map `$pagination-link` instead
 
 $pagination-link-border-radius: 4px !default;
+
+// @deprecated as of v2 use the Sass map `$pagination-link` instead
+
+$pagination-link-transition: box-shadow 0.15s ease-in-out !default;
 
 $pagination-link-first-border-radius: $pagination-link-border-radius !default;
 $pagination-link-last-border-radius: $pagination-link-border-radius !default;
@@ -12,13 +29,13 @@ $pagination-link-last-border-radius: $pagination-link-border-radius !default;
 $pagination-bg: transparent !default;
 $pagination-border-color: $pagination-bg !default;
 $pagination-border-width: 0.0625rem !default; // 1px
-$pagination-color: $secondary !default;
+$pagination-color: $gray-600 !default;
 $pagination-padding-x: 0.625rem !default; // 10px
 $pagination-padding-y: 0 !default;
 
 $pagination-hover-bg: rgba(0, 0, 0, 0.02) !default;
 $pagination-hover-border-color: transparent !default;
-$pagination-hover-color: $body-color !default;
+$pagination-hover-color: $gray-900 !default;
 
 $pagination-active-bg: rgba(0, 0, 0, 0.04) !default;
 $pagination-active-border-color: transparent !default;
@@ -26,10 +43,33 @@ $pagination-active-color: $pagination-hover-color !default;
 
 $pagination-disabled-bg: transparent !default;
 $pagination-disabled-border-color: $pagination-disabled-bg !default;
-$pagination-disabled-color: $secondary !default;
+$pagination-disabled-color: $gray-600 !default;
+
+// @deprecated as of v2 use the Sass map `$pagination-link-disabled` instead
+
 $pagination-disabled-opacity: 0.5 !default;
 
+$pagination-link-focus: () !default;
+$pagination-link-focus: map-merge((
+	bg: $pagination-hover-bg,
+	border-color: $pagination-hover-border-color,
+	color: $pagination-hover-color,
+), $pagination-link-focus);
+
+// Pagination Dropdown Menu
+
 $pagination-dropdown-menu-spacer-y: 0.625rem !default; // 10px
+
+// Pagination Items Per Page Link
+
+$pagination-items-per-page-link-focus: () !default;
+$pagination-items-per-page-link-focus: map-merge((
+	bg: map-get($pagination-link-focus, bg),
+	border-color: map-get($pagination-link-focus, border-color),
+	color: map-get($pagination-link-focus, color),
+), $pagination-items-per-page-link-focus);
+
+// Pagination Results
 
 $pagination-results-color: $pagination-color !default;
 

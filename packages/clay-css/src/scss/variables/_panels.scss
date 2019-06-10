@@ -1,4 +1,4 @@
-$panel-bg: #FFF !default;
+$panel-bg: $white !default;
 $panel-border-color: transparent !default;
 $panel-border-style: solid !default;
 
@@ -33,6 +33,23 @@ $panel-header-collapse-icon-padding-right: null !default;
 $panel-header-link-text-decoration: null !default;
 $panel-header-link-hover-text-decoration: null !default;
 
+$panel-header-link: () !default;
+$panel-header-link: map-merge((
+	color: inherit,
+	display: block,
+	text-decoration: $panel-header-link-text-decoration,
+	transition: border-color 0.1s ease#{','} border-radius 0.5s ease,
+	hover-color: inherit,
+	hover-text-decoration: $panel-header-link-hover-text-decoration,
+	focus-z-index: 1,
+), $panel-header-link);
+
+$panel-header-collapsed-link: () !default;
+$panel-header-collapsed-link: map-merge((
+	border-color: transparent,
+	transition: border-color 0.75s ease,
+), $panel-header-collapsed-link);
+
 // Panel Body
 
 $panel-body-padding-x: 1.25rem !default;
@@ -60,6 +77,17 @@ $panel-title-small-margin-left: null !default;
 
 $panel-group-panel-margin-bottom: -$panel-border-bottom-width !default;
 
+// Panel Group Sm
+
+$panel-group-sm: () !default;
+$panel-group-sm: map-merge((
+	font-size: 0.875rem,
+	header-padding-bottom: 0.5rem,
+	header-padding-top: 0.5rem,
+	title-font-size: 0.875rem,
+	collapse-icon-top: 0.6875rem,
+), $panel-group-sm);
+
 // Panel Group Flush
 
 $panel-group-flush-body-margin-bottom: 1.5rem !default;
@@ -72,11 +100,33 @@ $panel-group-flush-collapse-icon-padding-right: 1.5rem !default;
 
 // Panel Variants
 
+$panel-secondary-header-link: () !default;
+
 $panel-secondary: () !default;
 $panel-secondary: map-merge((
 	border-color: rgba($black, 0.125),
 	header-bg: $gray-100,
 	header-border-color: rgba($black, 0.125),
+	header-link: $panel-secondary-header-link,
 	footer-bg: $gray-100,
 	footer-border-color: rgba($black, 0.125)
 ), $panel-secondary);
+
+// Panel Unstyled
+
+$panel-unstyled-header-link: () !default;
+
+$panel-unstyled: () !default;
+$panel-unstyled: map-merge((
+	bg: transparent,
+	border-radius: 0,
+	border-width: 0,
+	header-border-color: $gray-500,
+	header-border-style: solid,
+	header-border-width: 0 0 1px 0,
+	header-margin-bottom: 1rem,
+	header-collapsed-border-color: $gray-500,
+	header-link: $panel-unstyled-header-link,
+	body-margin-bottom: 1rem,
+	body-padding-top: 0,
+), $panel-unstyled);

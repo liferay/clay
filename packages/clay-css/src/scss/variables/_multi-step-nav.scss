@@ -3,15 +3,30 @@ $multi-step-nav-padding-x: 15px !default;
 $multi-step-nav-padding-y: 0 !default;
 
 $multi-step-icon-bg: $gray-200 !default;
+$multi-step-icon-border-color: null !default;
+$multi-step-icon-border-style: null !default;
+$multi-step-icon-border-width: 0 !default;
 $multi-step-icon-color: rgba($black, 0.5) !default;
+$multi-step-icon-cursor: $link-cursor !default;
 $multi-step-icon-border-radius: $border-radius !default;
 $multi-step-icon-font-size: $font-size-base !default;
 $multi-step-icon-font-weight: null !default;
+$multi-step-icon-padding-bottom: 0 !default;
+$multi-step-icon-padding-left: 0 !default;
+$multi-step-icon-padding-right: 0 !default;
+$multi-step-icon-padding-top: 0 !default;
 $multi-step-icon-size: 2rem !default;
+$multi-step-icon-transition: box-shadow 0.15s ease-in-out !default;
 
 $multi-step-icon-hover-bg: $multi-step-icon-bg !default;
 $multi-step-icon-hover-color: rgba($black, 0.7) !default;
 $multi-step-icon-hover-text-decoration: none !default;
+
+$multi-step-icon-focus-bg: $multi-step-icon-hover-bg !default;
+$multi-step-icon-focus-box-shadow: $btn-focus-box-shadow !default;
+$multi-step-icon-focus-color: $multi-step-icon-hover-color !default;
+$multi-step-icon-focus-outline: 0 !default;
+$multi-step-icon-focus-text-decoration: $multi-step-icon-hover-text-decoration !default;
 
 $multi-step-divider-bg: $gray-200 !default;
 $multi-step-divider-height: 0.25rem !default;
@@ -35,8 +50,8 @@ $multi-step-item-margin-bottom: 10px !default;
 $multi-step-item-width: 75px !default;
 $multi-step-item-fixed-width: 150px !default;
 
-$multi-step-icon-complete-color: #FFF !default;
-$multi-step-icon-complete-bg: $secondary !default;
+$multi-step-icon-complete-color: $white !default;
+$multi-step-icon-complete-bg: $gray-600 !default;
 $multi-step-icon-complete-bg-image: clay-icon(check, $multi-step-icon-complete-color) !default;
 $multi-step-icon-complete-bg-position: center !default;
 $multi-step-icon-complete-bg-size: $multi-step-icon-font-size !default;
@@ -57,6 +72,8 @@ $multi-step-icon-disabled-bg-position: null !default;
 $multi-step-icon-disabled-bg-size: null !default;
 $multi-step-icon-disabled-color: $gray-400 !default;
 $multi-step-icon-disabled-cursor: $disabled-cursor !default;
+$multi-step-icon-disabled-opacity: 1 !default;
+$multi-step-icon-disabled-focus-box-shadow: none !default;
 $multi-step-divider-disabled-bg: $multi-step-icon-disabled-bg !default;
 $multi-step-title-disabled-color: $multi-step-icon-disabled-color !default;
 $multi-step-indicator-label-disabled-color: $multi-step-title-disabled-color !default;

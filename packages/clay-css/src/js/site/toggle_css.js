@@ -13,6 +13,28 @@
 		return $('link[href$="site-main.css"]');
 	};
 
+	var checkCSSLoaded = function(cssHref) {
+		function loaded () {
+			clearInterval(checkCSS);
+
+			$(document).trigger('claySiteToggleTheme');
+
+			$('#claySiteCSS').remove();
+		};
+
+		var clayBase = cssHref.match(/site-lexicon-font-awesome.css$/);
+
+		var theme = clayBase ? '"clay-base"' : '"clay-atlas"';
+
+		var checkCSS = setInterval(function() {
+			if ($('#claySiteCSS').css('content') === theme) {
+				loaded();
+			}
+		}, 100);
+
+		$('body').append('<div id="claySiteCSS"></div>');
+	};
+
 	var toggleLexiconLink = function() {
 		var lexiconLink = getLexiconLink();
 
@@ -27,6 +49,8 @@
 			lexiconLink.prop('href', href);
 
 			localStorage.setItem('nate.lexiconHref', href);
+
+			checkCSSLoaded(href);
 		}
 	};
 
@@ -79,6 +103,8 @@
 
 			toggleSiteCss.prop('checked', !lexiconSiteLink.prop('disabled'));
 		}
+
+		checkCSSLoaded(lexiconHref);
 	});
 
 	var siteNavToggle = $('#siteNavToggle');

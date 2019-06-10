@@ -1,6 +1,8 @@
 .card,
 .card-horizontal {
+	background-color: $card-bg;
 	border-style: $card-border-style;
+	border-width: $card-border-width;
 
 	@include box-shadow($card-box-shadow);
 
@@ -418,16 +420,24 @@
 
 .card-page {
 	@extend %clay-custom-grid-wrapper;
-}
 
-.card-page-equal-height {
-	.card-page-item {
-		display: flex;
-		flex-direction: column;
-	}
+	&.card-page-equal-height {
+		.card-page-item,
+		.card-page-item-asset,
+		.card-page-item-directory {
+			display: flex;
+			flex-direction: column;
+		}
 
-	.card {
-		flex-grow: 1;
+		.form-check-card {
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+		}
+
+		.card {
+			flex-grow: 1;
+		}
 	}
 }
 
@@ -443,6 +453,10 @@
 
 .card-page-item-asset {
 	@include clay-custom-grid-columns($card-page-item-asset);
+}
+
+.card-page-item-user {
+	@include clay-custom-grid-columns($card-page-item-user);
 }
 
 // Card Interactive

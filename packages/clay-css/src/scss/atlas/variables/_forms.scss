@@ -34,62 +34,64 @@ $input-height-inner-sm: $input-height-sm - $input-height-border !default;
 
 $form-feedback-font-size: 0.875rem !default; // 14px
 
-$form-text-color: $secondary !default;
+$form-text-color: $gray-600 !default;
+
+// Form Group
 
 $form-group-margin-bottom: 1.5rem !default; // 24px
 $form-group-margin-bottom-mobile: 1rem !default; // 16px
 
-// Form Check
-
-$form-check-input-gutter: 0.875rem !default;
-$form-check-input-margin-y: 0.41667em !default;
-
-$form-check-label-text-margin-left: -0.1875rem !default; // 3px
+$form-group-sm-input-label-margin-bottom: 0.1875rem !default; // 3px
+$form-group-sm-item-label-spacer: 1.5625rem !default; // 25px
 
 // Skin
 
-$input-color: $body-color !default;
-$input-bg: $body-bg !default;
-$input-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
-$input-box-shadow: none !default;
-$input-placeholder-color: $secondary !default;
-$input-label-color: $body-color !default;
+$input-color: $gray-900 !default;
+$input-bg: $gray-200 !default;
+$input-border-color: $gray-300 !default;
+// Will need to be revisited if https://github.com/twbs/bootstrap/pull/24821 merge error is fixed
+$input-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
+$input-placeholder-color: $gray-600 !default;
+$input-label-color: $gray-900 !default;
 
 $input-focus-bg: lighten($component-active-bg, 44.90) !default;
 $input-focus-border-color: lighten($component-active-bg, 22.94) !default;
-$input-focus-box-shadow: none !default;
+$input-focus-box-shadow: $component-focus-box-shadow !default;
 
-$input-disabled-color: $text-muted !default;
+$input-disabled-color: $gray-500 !default;
 $input-disabled-bg: $input-bg !default;
 $input-disabled-border-color: $input-bg !default;
 $input-placeholder-disabled-color: $input-disabled-color !default;
 
-$input-label-disabled-color: $text-muted !default;
+$input-label-disabled-color: $gray-500 !default;
 
 $input-readonly-bg: $input-border-color !default;
 
-$input-danger-bg: lighten(saturate($danger, 5.04), 50.00) !default;
-$input-danger-border-color: lighten(desaturate($danger, 0.25), 28.04) !default;
-$input-danger-box-shadow: none !default;
-$input-danger-focus-box-shadow: none !default;
+$input-danger-bg: $danger-l2 !default;
+$input-danger-border-color: $danger-l1 !default;
+// Will need to be revisited if https://github.com/twbs/bootstrap/pull/24821 merge error is fixed
+$input-danger-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
+$input-danger-focus-box-shadow: $input-focus-box-shadow !default;
 $input-danger-color: $input-color !default;
 $input-danger-checkbox-label-color: $danger !default;
 $input-danger-select-icon-color: $input-danger-border-color !default;
 $input-danger-select-icon: clay-icon(caret-double-l, $input-danger-select-icon-color) !default;
 
-$input-success-bg: lighten(desaturate($success, 1.52), 62.94) !default;
-$input-success-border-color: lighten(desaturate($success, 0.14), 24.90) !default;
-$input-success-box-shadow: none !default;
-$input-success-focus-box-shadow: none !default;
+$input-success-bg: $success-l2 !default;
+$input-success-border-color: $success-l1 !default;
+// Will need to be revisited if https://github.com/twbs/bootstrap/pull/24821 merge error is fixed
+$input-success-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
+$input-success-focus-box-shadow: $input-focus-box-shadow !default;
 $input-success-color: $input-color !default;
 $input-success-checkbox-label-color: $success !default;
 $input-success-select-icon-color: $input-success-border-color !default;
 $input-success-select-icon: clay-icon(caret-double-l, $input-success-select-icon-color) !default;
 
-$input-warning-bg: lighten(adjust-hue($warning, -1), 60.00) !default;
-$input-warning-border-color: lighten($warning, 24.90) !default;
-$input-warning-box-shadow: none !default;
-$input-warning-focus-box-shadow: none !default;
+$input-warning-bg: $warning-l2 !default;
+$input-warning-border-color: $warning-l1 !default;
+// Will need to be revisited if https://github.com/twbs/bootstrap/pull/24821 merge error is fixed
+$input-warning-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
+$input-warning-focus-box-shadow: $input-focus-box-shadow !default;
 $input-warning-color: $input-color !default;
 $input-warning-checkbox-label-color: $warning !default;
 $input-warning-select-icon-color: $input-warning-border-color !default;
@@ -101,18 +103,20 @@ $input-select-bg-position: right 0.5em center !default;
 $input-select-bg-size: 1.5em auto !default;
 $input-select-padding-right: 2em !default;
 
-$input-select-icon-color: $secondary !default;
+$input-select-icon-color: $gray-600 !default;
 $input-select-icon: clay-icon(caret-double-l, $input-select-icon-color) !default;
 
 $input-select-icon-focus-color: $input-select-icon-color !default;
 $input-select-icon-focus: clay-icon(caret-double-l, $input-select-icon-focus-color) !default;
 
-$input-select-icon-disabled-color: $text-muted !default;
+$input-select-icon-disabled-color: $gray-500 !default;
 $input-select-icon-disabled: clay-icon(caret-double-l, $input-select-icon-disabled-color) !default;
 
 // Textarea
 
 $input-textarea-height: 100px !default;
+$input-textarea-height-lg: 120px !default;
+$input-textarea-height-sm: 80px !default;
 
 // Form Control Label (Labels inside Form Control Tag Group)
 
@@ -140,9 +144,9 @@ $form-group-item-label-spacer: ($input-label-font-size * $line-height-base) + $i
 
 // Input Groups
 
-$input-group-addon-bg: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
+$input-group-addon-bg: $gray-300 !default;
 $input-group-addon-border-color: $input-group-addon-bg !default;
-$input-group-addon-color: $secondary !default;
+$input-group-addon-color: $gray-600 !default;
 $input-group-addon-font-weight: $font-weight-semi-bold !default;
 $input-group-addon-min-width: 2.5rem !default; // 40px
 $input-group-addon-padding-x: 0.75rem !default; // 12px
@@ -153,6 +157,6 @@ $input-group-addon-min-width-sm: 2rem !default; // 32px
 
 // Input Group Secondary
 
-$input-group-secondary-addon-bg: #FFF !default;
-$input-group-secondary-addon-border-color: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06) !default;
+$input-group-secondary-addon-bg: $white !default;
+$input-group-secondary-addon-border-color: $secondary-l2 !default;
 $input-group-secondary-addon-color: $secondary !default;

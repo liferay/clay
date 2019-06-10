@@ -32,6 +32,9 @@
 	}
 
 	> .dropdown {
+		display: flex;
+		flex-wrap: wrap;
+		word-wrap: break-word;
 		width: 100%;
 	}
 }
@@ -137,6 +140,10 @@
 	.form-check {
 		margin-bottom: 0;
 	}
+
+	.lexicon-icon {
+		margin-top: 0;
+	}
 }
 
 .input-group-text-secondary {
@@ -164,6 +171,16 @@
 		background-color: $input-focus-bg;
 		border-color: $input-focus-border-color;
 	}
+}
+
+.input-group-item.input-group-prepend.focus {
+	@include border-right-radius(0);
+
+	z-index: 1;
+}
+
+.input-group-item.input-group-append.focus {
+	@include border-left-radius(0);
 }
 
 .input-group-inset {
@@ -219,6 +236,7 @@
 	border-style: solid;
 	border-top-width: $input-border-top-width;
 	display: flex;
+	margin-bottom: 0; // undo margin-bottom on `<label>`
 	padding-left: $input-group-inset-item-padding-left;
 	padding-right: $input-group-inset-item-padding-right;
 	transition: $input-transition;
@@ -248,11 +266,12 @@
 	@include border-left-radius($input-border-radius);
 
 	border-right-width: 0;
-}
-
-.input-group-inset-item-before {
 	color: $input-group-inset-item-color;
 	order: 3;
+
+	.input-group-append & {
+		@include border-left-radius(0);
+	}
 }
 
 .input-group-item .input-group-inset-after.form-control {
@@ -268,6 +287,12 @@
 	border-left-width: 0;
 	color: $input-group-inset-item-color;
 	order: 9;
+
+	.input-group-prepend & {
+		@include border-right-radius(0);
+
+		z-index: 1;
+	}
 }
 
 // Input Group Stacked
@@ -278,7 +303,7 @@
 
 // Input Group Sizes
 
-.input-group-lg {
+%clay-input-group-lg {
 	.input-group-item {
 		.btn {
 			@include clay-button-size($input-group-lg-item-btn);
@@ -341,7 +366,11 @@
 	}
 }
 
-.input-group-sm {
+.input-group-lg {
+	@extend %clay-input-group-lg;
+}
+
+%clay-input-group-sm {
 	.input-group-item {
 		.btn {
 			@include clay-button-size($input-group-sm-item-btn);
@@ -404,6 +433,10 @@
 	}
 }
 
+.input-group-sm {
+	@extend %clay-input-group-sm;
+}
+
 // Input Group Password
 
 .input-group-password {
@@ -417,5 +450,13 @@
 		.input-text-label {
 			display: none;
 		}
+	}
+}
+
+// Form Group with Input Group
+
+.form-group-sm {
+	.input-group {
+		@extend %clay-input-group-sm;
 	}
 }

@@ -29,6 +29,7 @@ gulp.task('build', function(cb) {
 		'build:svg:scss-icons',
 		'build:metalsmith',
 		'build:rtl',
+		'build:sassdoc',
 		function(err) {
 			gulp.emit('build:finished', err);
 

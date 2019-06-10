@@ -9,17 +9,15 @@ $popover-arrow-height: 0.3rem !default;
 $popover-arrow-offset: 0.625rem !default; // 10px
 $popover-arrow-width: $popover-arrow-height * 2 !default;
 
-$popover-inner-padding: 0 !default;
-
-$popover-header-bg: #FFF !default;
-$popover-header-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
-$popover-header-color: $body-color !default;
+$popover-header-bg: $white !default;
+$popover-header-border-color: $gray-300 !default;
+$popover-header-color: $gray-900 !default;
 $popover-header-font-size: 0.875rem !default; // 14px
 $popover-header-margin-x: 1rem !default; // 16px
 $popover-header-margin-y: 0 !default;
 $popover-header-padding-x: 0 !default;
 $popover-header-padding-y: 0.75rem !default; // 12px
 
-$popover-body-color: $secondary !default;
+$popover-body-color: $gray-600 !default;
 $popover-body-padding-x: 1rem !default; // 16px
 $popover-body-padding-y: 0.75rem !default; // 12px

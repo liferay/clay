@@ -1,3 +1,4 @@
+// `clay-navbar-size` is deprecated as of v2.11.1
 // Sizes Navbar Desktop and Mobile based on height, font-size, and padding
 // @param $map - Sass map that contain Navbar properties to modify
 
@@ -38,8 +39,6 @@
 	$title-font-weight: map-get($map, title-font-weight);
 	$title-margin-bottom: map-get($map, title-margin-bottom);
 	$title-text-transform: map-get($map, title-text-transform);
-	$active-border-bottom-width: setter(map-get($map, active-border-bottom-width), 0.125rem);
-	$active-border-offset-x: map-get($map, active-border-offset-x);
 	$nav-item-dropdown-margin-top: map-get($map, nav-item-dropdown-margin-top);
 
 	$height-mobile: setter(map-get($map, height-mobile), $height);
@@ -77,7 +76,14 @@
 	$toggler-link-margin-x: setter(map-get($map, toggler-link-margin-x), 0);
 	$toggler-link-margin-y: map-get($map, toggler-link-margin-y);
 	$toggler-link-padding-x: setter(map-get($map, toggler-link-padding-x), $link-padding-x-mobile);
-	$toggler-link-padding-y: ($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($toggler-link-font-size * $toggler-link-line-height)) / 2;
+	$toggler-link-padding-y: setter(map-get($map, toggler-link-padding-y), ($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($toggler-link-font-size * $toggler-link-line-height)) / 2);
+
+	$active-border-bottom-width: setter(map-get($map, active-border-bottom-width), 0.125rem);
+	$active-border-offset-x: map-get($map, active-border-offset-x);
+	$active-border-offset-bottom: setter(map-get($map, active-border-offset-bottom), -$border-bottom-width - $padding-y - $link-margin-y);
+	$active-border-offset-top: map-get($map, active-border-offset-top);
+
+	$active-border-offset-bottom-mobile: setter(map-get($map, active-border-offset-bottom-mobile), -$border-bottom-width - $padding-y - $link-margin-y-mobile);
 
 	@if ($enabled) {
 		@include border-radius($navbar-border-radius);
@@ -383,10 +389,11 @@
 		&.navbar-underline {
 			.navbar-toggler-link {
 				&:after {
-					bottom: -$border-bottom-width - $padding-y - $link-margin-y-mobile;
+					bottom: $active-border-offset-bottom-mobile;
 					height: $active-border-bottom-width;
 					left: $active-border-offset-x;
 					right: $active-border-offset-x;
+					top: $active-border-offset-top;
 				}
 			}
 		}
@@ -400,10 +407,11 @@
 					@include media-breakpoint-up($next) {
 						.navbar-nav .nav-link {
 							&.active:after {
-								bottom: -$border-bottom-width - $padding-y - $link-margin-y;
+								bottom: $active-border-offset-bottom;
 								height: $active-border-bottom-width;
 								left: $active-border-offset-x;
 								right: $active-border-offset-x;
+								top: $active-border-offset-top;
 							}
 						}
 					}
@@ -413,6 +421,7 @@
 	}
 }
 
+// `clay-navbar-variant` is deprecated as of v2.11.1
 // Creates a Navbar color variant
 // @param $map - Sass map that contain Navbar Variant properties to modify
 
@@ -426,13 +435,20 @@
 	$link-bg: map-get($map, link-bg);
 	$link-color: map-get($map, link-color);
 	$link-font-weight: map-get($map, link-font-weight);
+	$link-outline: map-get($map, link-outline);
+	$link-transition: map-get($map, link-transition);
 	$link-hover-bg: map-get($map, link-hover-bg);
 	$link-hover-color: map-get($map, link-hover-color);
+	$link-focus-bg: map-get($map, link-focus-bg);
+	$link-focus-box-shadow: map-get($map, link-focus-box-shadow);
+	$link-focus-color: map-get($map, link-focus-color);
 	$link-active-bg: map-get($map, link-active-bg);
 	$link-active-color: map-get($map, link-active-color);
 	$link-disabled-bg: map-get($map, link-disabled-bg);
+	$link-disabled-box-shadow: map-get($map, link-disabled-box-shadow);
 	$link-disabled-color: map-get($map, link-disabled-color);
 	$link-disabled-opacity: map-get($map, link-disabled-opacity);
+	$link-disabled-pointer-events: map-get($map, link-disabled-pointer-events);
 	$btn-font-weight: setter(map-get($map, btn-font-weight), $link-font-weight);
 	$brand-color: map-get($map, brand-color);
 	$brand-hover-color: map-get($map, brand-hover-color);
@@ -456,10 +472,18 @@
 
 			color: $link-color;
 			font-weight: $link-font-weight;
+			outline: $link-outline;
+			transition: $link-transition;
 
 			&:hover {
 				background-color: $link-hover-bg;
 				color: $link-hover-color;
+			}
+
+			&:focus {
+				background-color: $link-focus-bg;
+				box-shadow: $link-focus-box-shadow;
+				color: $link-focus-color;
 			}
 
 			&.active,
@@ -471,8 +495,10 @@
 			&.disabled,
 			&:disabled {
 				background-color: $link-disabled-bg;
+				box-shadow: $link-disabled-box-shadow;
 				color: $link-disabled-color;
 				opacity: $link-disabled-opacity;
+				pointer-events: $link-disabled-pointer-events;
 			}
 		}
 
@@ -482,17 +508,34 @@
 
 		.navbar-brand {
 			background-color: $brand-bg;
+
+			@include border-radius($link-border-radius);
+
 			color: $brand-color;
+			outline: $link-outline;
+			transition: $link-transition;
 
 			&:hover {
 				background-color: $brand-bg;
 				color: $brand-hover-color;
+			}
+
+			&:focus {
+				box-shadow: $link-focus-box-shadow;
+				color: $link-focus-color;
 			}
 		}
 
 		.navbar-toggler {
 			color: $toggler-color;
 			font-weight: $toggler-font-weight;
+			outline: $link-outline;
+			transition: $link-transition;
+
+			&:focus {
+				box-shadow: $link-focus-box-shadow;
+				color: $link-focus-color;
+			}
 		}
 
 		.navbar-toggler-link {

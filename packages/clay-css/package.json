@@ -1,6 +1,6 @@
 {
   "name": "clay-css",
-  "version": "2.7.0",
+  "version": "2.10.0",
   "description": "Liferay's web implementation of the Lexicon Design Language",
   "main": "index.js",
   "files": [
@@ -53,7 +53,7 @@
   "devDependencies": {
     "async": "^2.6.0",
     "basename": "^0.1.2",
-    "bootstrap": "4.1.1",
+    "bootstrap": "4.3.1",
     "browser-sync": "^2.14.0",
     "cheerio": "^0.20.0",
     "del": "^3.0.0",
@@ -86,9 +86,10 @@
     "metalsmith-sass": "^1.2.1",
     "metalsmith-templates": "^0.7.0",
     "node-sass": "^4.8.1",
-    "popper.js": "1.14.3",
+    "popper.js": "1.14.7",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.1",
+    "sassdoc": "^2.5.1",
     "string-sub": "0.0.1",
     "underscore.string": "^3.2.2"
   }

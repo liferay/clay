@@ -1025,4 +1025,12 @@ section: Components
 		$(this).addClass('d-none');
 		formControl.focus();
 	});
+
+	$('.input-group-inset').on('focusin', function(event) {
+		$(this).closest('.input-group-item').addClass('focus');
+	});
+
+	$('.input-group-inset').on('focusout', function(event) {
+		$(this).closest('.input-group-item').removeClass('focus');
+	});
 </script>

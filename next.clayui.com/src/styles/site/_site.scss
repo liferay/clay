@@ -1,0 +1,30 @@
+body {
+	background-color: $bg-color;
+	font-size: 1rem;
+}
+
+.language-text,
+.gatsby-code-text {
+	background-color: #ffd6cc;
+	color: initial;
+}
+
+// Source Sans Pro applied only on:
+
+.clay-docs-title,
+.sidebar-clay-site,
+.home {
+	font-family: $font-family-system;
+}
+
+// temporal hide
+
+.style-toggler {
+	display: none;
+}
+
+.flex-xl-nowrap {
+	@media (min-width: $grid-float-breakpoint) {
+		flex-wrap: nowrap;
+	}
+}

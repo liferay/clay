@@ -7,7 +7,7 @@ $card-body-padding-left: null !default;
 $card-body-padding-right: null !default;
 $card-body-padding-top: null !default;
 
-$card-section-header-color: $secondary !default;
+$card-section-header-color: $gray-600 !default;
 $card-section-header-font-size: 0.75rem !default;
 $card-section-header-font-weight: $font-weight-semi-bold !default;
 $card-section-header-line-height: 2.5 !default;
@@ -34,7 +34,7 @@ $card-title-link: map-merge((
 
 $card-subtitle: () !default;
 $card-subtitle: map-merge((
-	color: $secondary,
+	color: $gray-600,
 	font-size: 0.875rem, // 14px
 	font-weight: $font-weight-semi-bold,
 	margin-bottom: 0,
@@ -44,7 +44,7 @@ $card-subtitle: map-merge((
 $card-subtitle-link: () !default;
 $card-subtitle-link: map-merge((
 	color: map-get($card-subtitle, color),
-	hover-color: darken($secondary, 15%)
+	hover-color: darken($gray-600, 15%)
 ), $card-subtitle-link);
 
 // Card Link
@@ -86,6 +86,7 @@ $card-interactive-after-highlight: map-merge((
 	right: -$card-border-width,
 	transition: height 0.15s ease-in-out,
 	hover-height: 4px,
+	focus-height: 4px,
 	active-height: 4px,
 ), $card-interactive-after-highlight);
 
@@ -102,7 +103,7 @@ $card-interactive: map-merge((
 	hover-bg: $gray-100,
 	hover-text-decoration: none,
 	focus-border-color: $input-focus-border-color,
-	focus-box-shadow: $input-focus-box-shadow,
+	focus-box-shadow: $input-btn-focus-box-shadow,
 	active-bg: $gray-200,
 	after-highlight: $card-interactive-after-highlight,
 	card-body: $card-interactive-card-body,
@@ -113,11 +114,14 @@ $card-interactive: map-merge((
 $card-interactive-primary-after-highlight: () !default;
 $card-interactive-primary-after-highlight: map-merge((
 	hover-bg: $component-active-bg,
+	focus-bg: $component-active-bg,
 	active-bg: $component-active-bg,
 ), $card-interactive-primary-after-highlight);
 
 $card-interactive-primary: () !default;
 $card-interactive-primary: map-merge((
+	focus-bg: $gray-100,
+	active-bg: $gray-200,
 	after-highlight: $card-interactive-primary-after-highlight,
 ), $card-interactive-primary);
 
@@ -125,11 +129,11 @@ $card-interactive-primary: map-merge((
 
 $card-interactive-secondary: () !default;
 $card-interactive-secondary: map-merge((
-	color: $dark,
-	hover-color: $dark,
+	color: $gray-900,
+	hover-color: $gray-900,
 	hover-bg: $white,
 	hover-border-color: $input-focus-border-color,
-	hover-box-shadow: $input-focus-box-shadow,
+	hover-box-shadow: $input-btn-focus-box-shadow,
 	active-bg: $white,
 ), $card-interactive-secondary);
 
@@ -152,8 +156,11 @@ $file-card: map-merge((
 
 $user-card: () !default;
 $user-card: map-merge((
-	asset-icon-min-width: 2.5rem,
-	asset-icon-width: 26%
+	asset-icon-max-width: 80px,
+	asset-icon-min-width: 48px,
+	asset-icon-width: 30%,
+	asset-icon-lexicon-icon-height: auto,
+	asset-icon-lexicon-icon-width: 50%,
 ), $user-card);
 
 // Card Page Item Asset
@@ -161,26 +168,51 @@ $user-card: map-merge((
 $card-page-item-asset: () !default;
 $card-page-item-asset: map-merge((
 	base: (
-		breakpoint: 0,
+		breakpoint: 0, // min-width: 0
 		min-width: 200px,
 		padding-left: $grid-gutter-width / 2,
-		padding-right: $grid-gutter-width / 2
+		padding-right: $grid-gutter-width / 2,
 	),
 	sm: (
-		breakpoint: map-get($grid-breakpoints, sm), // 576px
+		breakpoint: map-get($grid-breakpoints, sm), // min-width: 576px
 		flex-basis: 50%,
-		max-width: 50%
+		max-width: 50%,
 	),
 	md: (
-		breakpoint: map-get($grid-breakpoints, md), // 768px
-		flex-basis: 200px,
-		max-width: 33.3333%
+		breakpoint: map-get($grid-breakpoints, md), // min-width: 768px
+		flex-basis: 33.3333%,
+		max-width: 33.3333%,
 	),
 	lg: (
-		breakpoint: map-get($grid-breakpoints, lg), // 992px
-		max-width: 25%
+		breakpoint: map-get($grid-breakpoints, lg), // min-width: 992px
+		flex-basis: 25%,
+		max-width: 25%,
 	)
 ), $card-page-item-asset);
+
+// Card Page Item User
+
+$card-page-item-user: () !default;
+$card-page-item-user: map-merge((
+	base: (
+		breakpoint: 0, // min-width: 0
+		flex-basis: 50%,
+		max-width: 50%,
+		padding-left: $grid-gutter-width / 2,
+		padding-right: $grid-gutter-width / 2,
+	),
+	sm: (
+		breakpoint: map-get($grid-breakpoints, sm), // min-width: 576px
+		flex-basis: 33.33333%,
+		max-width: 33.33333%,
+		min-width: 200px,
+	),
+	lg: (
+		breakpoint: map-get($grid-breakpoints, lg), // min-width: 992px
+		flex-basis: 20%,
+		max-width: 20%,
+	),
+), $card-page-item-user);
 
 // Card Type Directory
 
@@ -203,13 +235,18 @@ $card-type-template-after-highlight: () !default;
 $card-type-template-aspect-ratio: () !default;
 $card-type-template-aspect-ratio: map-merge((
 	border-width: 0,
-	color: #6B6C7E,
+	color: $gray-600,
 	horizontal: 16,
 	text-align: center,
 	vertical: 9,
 	lexicon-icon-height: auto,
 	lexicon-icon-width: 28%,
 ), $card-type-template-aspect-ratio);
+
+$card-type-template-aspect-ratio-item: () !default;
+$card-type-template-aspect-ratio-item: map-merge((
+	width: 100.6%,
+), $card-type-template-aspect-ratio-item);
 
 $card-type-template-card-title: () !default;
 $card-type-template-card-title: map-merge((
@@ -224,10 +261,11 @@ $card-type-template-card-text: map-merge((
 
 $card-type-template: () !default;
 $card-type-template: map-merge((
-	color: $dark,
-	hover-color: $dark,
+	color: $gray-900,
+	hover-color: $gray-900,
 	after-highlight: $card-type-template-after-highlight,
 	aspect-ratio: $card-type-template-aspect-ratio,
+	aspect-ratio-item: $card-type-template-aspect-ratio-item,
 	card-title: $card-type-template-card-title,
 	card-text: $card-type-template-card-text,
 ), $card-type-template);
@@ -269,8 +307,8 @@ $template-card-horizontal-card-title: map-merge((
 
 $template-card-horizontal: () !default;
 $template-card-horizontal: map-merge((
-	color: $secondary,
-	hover-color: $secondary,
+	color: $gray-600,
+	hover-color: $gray-600,
 	sticker: $template-card-horizontal-sticker,
 	card-row: $template-card-horizontal-card-row,
 	card-title: $template-card-horizontal-card-title,

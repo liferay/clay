@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayPanel renders 1`] = `
+<div
+  className="panel"
+  role="tablist"
+>
+  <div
+    className="panel-header"
+  >
+    <span
+      className="panel-title"
+    >
+      Display Title
+    </span>
+  </div>
+  <div
+    className="panel-header"
+  >
+    Header!
+  </div>
+  <div
+    className="panel-body"
+  >
+    Body!
+  </div>
+  <div
+    className="panel-footer"
+  >
+    Footer!
+  </div>
+</div>
+`;
+
+exports[`ClayPanel renders with different displayType 1`] = `
+<div
+  className="panel panel-secondary"
+  role="tablist"
+>
+  <div
+    className="panel-header"
+  >
+    <span
+      className="panel-title"
+    >
+      Display Title
+    </span>
+  </div>
+  <div
+    className="panel-header"
+  >
+    Header!
+  </div>
+  <div
+    className="panel-body"
+  >
+    Body!
+  </div>
+  <div
+    className="panel-footer"
+  >
+    Footer!
+  </div>
+</div>
+`;
+
+exports[`ClayPanel renders with multiple panels 1`] = `
+<div
+  aria-orientation="vertical"
+  className="panel-group"
+  role="tablist"
+>
+  <div
+    className="panel"
+    role="tablist"
+  >
+    <div
+      className="panel-header"
+    >
+      <span
+        className="panel-title"
+      >
+        Display Title
+      </span>
+    </div>
+    <div
+      className="panel-body"
+    >
+      Body!
+    </div>
+  </div>
+  <div
+    className="panel"
+    role="tablist"
+  >
+    <div
+      className="panel-header"
+    >
+      <span
+        className="panel-title"
+      >
+        Display Title
+      </span>
+    </div>
+    <div
+      className="panel-body"
+    >
+      Body!
+    </div>
+  </div>
+  <div
+    className="panel"
+    role="tablist"
+  >
+    <button
+      aria-expanded={false}
+      className="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
+      onClick={[Function]}
+      role="tab"
+    >
+      <span
+        className="panel-title"
+      >
+        Display Title
+      </span>
+      <span
+        className="collapse-icon-closed"
+      >
+        <svg
+          className="lexicon-icon lexicon-icon-angle-right"
+          role="presentation"
+        >
+          <use
+            xlinkHref="/foo/bar#angle-right"
+          />
+        </svg>
+      </span>
+      <span
+        className="collapse-icon-open"
+      >
+        <svg
+          className="lexicon-icon lexicon-icon-angle-down"
+          role="presentation"
+        >
+          <use
+            xlinkHref="/foo/bar#angle-down"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      className="panel-collapse collapse"
+      onTransitionEnd={[Function]}
+      role="tabpanel"
+    >
+      <div
+        className="panel-body"
+      >
+        Body!
+      </div>
+    </div>
+  </div>
+</div>
+`;

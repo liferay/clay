@@ -1,7 +1,9 @@
-// $clay-unset is deprecated as of v2.4.1 we will not support unsetting
-// variables in version 2 because it violates the Sass spec. If you
-// are using libsass you can still unset variables with the syntax
-// `$my-var: !default;`.
+////
+/// @group globals
+////
+
+// @deprecated as of v2.4.1 we will not support unsetting variables in version 2 because it violates the Sass spec. If you are using libsass you can still unset Clay CSS / Bootstrap variables with the syntax `$my-var: !default;`.
+
 $clay-unset: clay-unset !default;
 $clay-unset-placeholder: clay-unset-placeholder !default;
 
@@ -49,9 +51,9 @@ $headings-font-weight: $font-weight-bold !default;
 // Theme Base Colors
 
 $white: #FFF !default;
-$gray-100: #F8F9FA !default;
+$gray-100: #F7F8F9 !default;
 $gray-200: #F1F2F5 !default;
-$gray-300: #DEE2E6 !default;
+$gray-300: #E7E7ED !default;
 $gray-400: #CDCED9 !default;
 $gray-500: #A7A9BC !default;
 $gray-600: #6B6C7E !default;
@@ -72,13 +74,54 @@ $teal: #20C997 !default;
 $cyan: #17A2B8 !default;
 
 $primary: #0B5FFF !default;
+$primary-d1: darken($primary, 5.10) !default;
+$primary-d2: darken($primary, 10) !default;
+$primary-l1: lighten($primary, 22.94) !default;
+$primary-l2: lighten($primary, 32.94) !default;
+$primary-l3: lighten($primary, 44.90) !default;
+
 $secondary: #6B6C7E !default;
-$success: #287D3D !default;
+$secondary-d1: darken(saturate($secondary, 4.82), 20) !default;
+$secondary-d2: darken(saturate($secondary, 5.36), 23.92) !default;
+$secondary-l1: lighten(saturate(adjust-hue($secondary, -3), 5.39), 23.92) !default;
+$secondary-l2: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06) !default;
+$secondary-l3: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
+
 $info: #2E5AAC !default;
+$info-d1: darken($info, 5.10) !default;
+$info-d2: darken($info, 10) !default;
+$info-l1: lighten(saturate($info, 0.59), 28.04) !default;
+$info-l2: lighten(desaturate($info, 3.25), 52.94) !default;
+
+$success: #287D3D !default;
+$success-d1: darken($success, 5.10) !default;
+$success-d2: darken($success, 10) !default;
+$success-l1: lighten(desaturate($success, 0.14), 24.90) !default;
+$success-l2: lighten(desaturate($success, 1.52), 62.94) !default;
+
 $warning: #B95000 !default;
+$warning-d1: darken($warning, 5.10) !default;
+$warning-d2: darken($warning, 10) !default;
+$warning-l1: lighten($warning, 24.90) !default;
+$warning-l2: lighten($warning, 60) !default;
+
 $danger: #DA1414 !default;
+$danger-d1: darken($danger, 5.10) !default;
+$danger-d2: darken($danger, 10) !default;
+$danger-l1: lighten(desaturate($danger, 0.25), 28.04) !default;
+$danger-l2: lighten(saturate($danger, 5.04), 50) !default;
+
 $light: #F1F2F5 !default;
+$light-d1: darken($light, 5.10) !default;
+$light-d2: darken($light, 10) !default;
+$light-l1: lighten(desaturate(adjust-hue($light, -15), 2.38), 1.96) !default;
+$light-l2: lighten(desaturate(adjust-hue($light, -225), 16.67), 4.71) !default;
+
 $dark: #272833 !default;
+$dark-d1: darken($dark, 5.10) !default;
+$dark-d2: darken($dark, 10) !default;
+$dark-l1: lighten(saturate($dark, 0.18), 4.12) !default;
+$dark-l2: lighten(desaturate($dark, 0.36), 8.04) !default;
 
 $theme-colors: () !default;
 $theme-colors: map-merge((
@@ -92,18 +135,20 @@ $theme-colors: map-merge((
 	dark: $dark
 ), $theme-colors);
 
-$yiq-text-dark: $dark !default;
-$yiq-text-light: #FFF !default;
+$yiq-text-dark: $gray-900 !default;
+$yiq-text-light: $white !default;
 
-$body-bg: #F1F2F5 !default;
-$body-color: $dark !default;
-$text-muted: lighten(saturate(adjust-hue($body-color, -1), 0.22), 51.96) !default;
+$body-bg: $gray-200 !default;
+$body-color: $gray-900 !default;
+$text-muted: $gray-500 !default;
 
-$link-color: #0B5FFF !default;
-$link-hover-color: darken($link-color, 8%) !default;
+$link-color: $primary !default;
+$link-hover-color: $primary-d2 !default;
 
 $component-active-bg: #0B5FFF !default;
 $component-active-color: #FFF !default;
+
+$component-focus-box-shadow: 0 0 0 0.125rem $white#{','} 0 0 0 0.25rem $primary-l1 !default;
 
 // Spacing
 
@@ -113,7 +158,7 @@ $spacers: map-merge((
 	0: 0,
 	1: ($spacer * .25),
 	2: ($spacer * .5),
-	3: ($spacer * .75),
+	3: ($spacer * 1),
 	4: ($spacer * 1.5),
 	5: ($spacer * 3),
 	6: ($spacer * 4.5),

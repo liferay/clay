@@ -21,6 +21,7 @@ section.row {
 
 	small {
 		display: block;
+		margin-top: 8px;
 	}
 }
 
@@ -34,6 +35,13 @@ section.row {
 
 	a {
 		color: #FFF;
+		margin-right: 8px;
+		vertical-align: middle;
+
+		&:hover {
+			color: rgba(255, 255, 255, 0.8);
+			text-decoration: none;
+		}
 	}
 
 	.container {
@@ -42,26 +50,17 @@ section.row {
 
 	.title {
 		float: left;
-		margin-bottom: 14px;
-		margin-top: 14px;
+		font-size: 1.5rem;
+		margin-bottom: 12.5px;
+		margin-top: 12.5px;
 
-		@include media-breakpoint-up(md) { // min-width 768px
+		@include media-breakpoint-up(md) {
 			margin-left: 18px;
 		}
 
 		.lexicon-version {
 			font-size: 60%;
-			line-height: 16px;
 			vertical-align: middle;
-		}
-	}
-
-	.navbar-toggle {
-		float: left;
-		margin-left: -10px;
-
-		.icon-bar {
-			background-color: #FFF;
 		}
 	}
 }
@@ -119,7 +118,31 @@ section.row {
 	}
 }
 
-.animated-toggle.navbar-toggle .icon-bar {
+#claySiteMobileNavigationToggle {
+	float: left;
+	height: 32px;
+	margin-right: 8px;
+	padding: 0;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 32px;
+}
+
+.docs-icon-bar {
+	background-color: #FFF;
+	display: block;
+	height: 2px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 22px;
+
+	+ .docs-icon-bar {
+		margin-top: 4px;
+	}
+}
+
+.animated-toggle .docs-icon-bar {
 	position: relative;
 	top: 0;
 	transition-delay: 0s 0s 0.2s 0s;
@@ -129,21 +152,22 @@ section.row {
 }
 
 .main-nav-open {
-	.animated-toggle.navbar-toggle {
-		.icon-bar:nth-of-type(even) {
+	.animated-toggle {
+		.docs-icon-bar-1,
+		.docs-icon-bar-3 {
 			top: 6px;
 			-ms-transform: rotate(45deg);
 			transform: rotate(45deg);
 			transition-delay: 0s 0s 0s 0.2s;
 		}
 
-		.icon-bar:nth-of-type(4) {
+		.docs-icon-bar-3 {
 			top: -6px;
 			-ms-transform: rotate(-45deg);
 			transform: rotate(-45deg);
 		}
 
-		.icon-bar:nth-of-type(odd) {
+		.docs-icon-bar-2 {
 			background-color: transparent;
 			opacity: 0;
 		}
@@ -162,6 +186,952 @@ section.row {
 	display: inline-block;
 	padding: 4px;
 	vertical-align: baseline;
+}
+
+// Colors Page
+
+.clay-site-swatch {
+	display: block;
+	padding: 0.5rem 1rem;
+}
+
+.clay-site-hex {
+	margin-left: 6px;
+	margin-right: 12px;
+	text-transform: uppercase;
+}
+
+.clay-site-hex,
+.clay-site-rgb,
+.clay-site-var {
+	-moz-user-select: all;
+	-ms-user-select: all;
+	-webkit-user-select: all;
+	user-select: all;
+}
+
+.clay-site-swatch-text {
+	&::-moz-selection {
+		background-color: #FFF;
+	}
+
+	&::selection {
+		background-color: #FFF;
+	}
+}
+
+// Colors Page (Grays)
+
+@mixin clay-site-selection($color) {
+	&::-moz-selection {
+		background-color: color-yiq($color);
+		color: color-yiq(color-yiq($color));
+	}
+
+	&::selection {
+		background-color: color-yiq($color);
+		color: color-yiq(color-yiq($color));
+	}
+}
+
+.clay-site-swatch-white {
+	background-color: $white;
+	color: color-yiq($white);
+	content: '#{$white}';
+
+	.clay-site-var {
+		content: '$white';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($white);
+	}
+}
+
+.clay-site-swatch-gray-100 {
+	background-color: $gray-100;
+	color: color-yiq($gray-100);
+	content: '#{$gray-100}';
+
+	.clay-site-var {
+		content: '$gray-100';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($gray-100);
+	}
+}
+
+.clay-site-swatch-gray-200 {
+	background-color: $gray-200;
+	color: color-yiq($gray-200);
+	content: '#{$gray-200}';
+
+	.clay-site-var {
+		content: '$gray-200';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($gray-200);
+	}
+}
+
+.clay-site-swatch-gray-300 {
+	background-color: $gray-300;
+	color: color-yiq($gray-300);
+	content: '#{$gray-300}';
+
+	.clay-site-var {
+		content: '$gray-300';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($gray-300);
+	}
+}
+
+.clay-site-swatch-gray-400 {
+	background-color: $gray-400;
+	color: color-yiq($gray-400);
+	content: '#{$gray-400}';
+
+	.clay-site-var {
+		content: '$gray-400';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($gray-400);
+	}
+}
+
+.clay-site-swatch-gray-500 {
+	background-color: $gray-500;
+	color: color-yiq($gray-500);
+	content: '#{$gray-500}';
+
+	.clay-site-var {
+		content: '$gray-500';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($gray-500);
+	}
+}
+
+.clay-site-swatch-gray-600 {
+	background-color: $gray-600;
+	color: color-yiq($gray-600);
+	content: '#{$gray-600}';
+
+	.clay-site-var {
+		content: '$gray-600';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($gray-600);
+	}
+}
+
+.clay-site-swatch-gray-700 {
+	background-color: $gray-700;
+	color: color-yiq($gray-700);
+	content: '#{$gray-700}';
+
+	.clay-site-var {
+		content: '$gray-700';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($gray-700);
+	}
+}
+
+.clay-site-swatch-gray-800 {
+	background-color: $gray-800;
+	color: color-yiq($gray-800);
+	content: '#{$gray-800}';
+
+	.clay-site-var {
+		content: '$gray-800';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($gray-800);
+	}
+}
+
+.clay-site-swatch-gray-900 {
+	background-color: $gray-900;
+	color: color-yiq($gray-900);
+	content: '#{$gray-900}';
+
+	.clay-site-var {
+		content: '$gray-900';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($gray-900);
+	}
+}
+
+.clay-site-swatch-black {
+	background-color: $black;
+	color: color-yiq($black);
+	content: '#{$black}';
+
+	.clay-site-var {
+		content: '$black';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($black);
+	}
+}
+
+// Colors Page (Colors)
+
+.clay-site-swatch-blue {
+	background-color: $blue;
+	color: color-yiq($blue);
+	content: '#{$blue}';
+
+	.clay-site-var {
+		content: '$blue';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($blue);
+	}
+}
+
+.clay-site-swatch-indigo {
+	background-color: $indigo;
+	color: color-yiq($indigo);
+	content: '#{$indigo}';
+
+	.clay-site-var {
+		content: '$indigo';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($indigo);
+	}
+}
+
+.clay-site-swatch-purple {
+	background-color: $purple;
+	color: color-yiq($purple);
+	content: '#{$purple}';
+
+	.clay-site-var {
+		content: '$purple';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($purple);
+	}
+}
+
+.clay-site-swatch-pink {
+	background-color: $pink;
+	color: color-yiq($pink);
+	content: '#{$pink}';
+
+	.clay-site-var {
+		content: '$pink';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($pink);
+	}
+}
+
+.clay-site-swatch-red {
+	background-color: $red;
+	color: color-yiq($red);
+	content: '#{$red}';
+
+	.clay-site-var {
+		content: '$red';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($red);
+	}
+}
+
+.clay-site-swatch-orange {
+	background-color: $orange;
+	color: color-yiq($orange);
+	content: '#{$orange}';
+
+	.clay-site-var {
+		content: '$orange';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($orange);
+	}
+}
+
+.clay-site-swatch-yellow {
+	background-color: $yellow;
+	color: color-yiq($yellow);
+	content: '#{$yellow}';
+
+	.clay-site-var {
+		content: '$yellow';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($yellow);
+	}
+}
+
+.clay-site-swatch-green {
+	background-color: $green;
+	color: color-yiq($green);
+	content: '#{$green}';
+
+	.clay-site-var {
+		content: '$green';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($green);
+	}
+}
+
+.clay-site-swatch-teal {
+	background-color: $teal;
+	color: color-yiq($teal);
+	content: '#{$teal}';
+
+	.clay-site-var {
+		content: '$teal';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($teal);
+	}
+}
+
+.clay-site-swatch-cyan {
+	background-color: $cyan;
+	color: color-yiq($cyan);
+	content: '#{$cyan}';
+
+	.clay-site-var {
+		content: '$cyan';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($cyan);
+	}
+}
+
+// Colors Page (Primary)
+
+.clay-site-swatch-primary {
+	background-color: $primary;
+	color: color-yiq($primary);
+	content: '#{$primary}';
+
+	.clay-site-var {
+		content: '$primary';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($primary);
+	}
+}
+
+.clay-site-swatch-primary-d1 {
+	background-color: $primary-d1;
+	color: color-yiq($primary-d1);
+	content: '#{$primary-d1}';
+
+	.clay-site-var {
+		content: '$primary-d1';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($primary-d1);
+	}
+}
+
+.clay-site-swatch-primary-d2 {
+	background-color: $primary-d2;
+	color: color-yiq($primary-d2);
+	content: '#{$primary-d2}';
+
+	.clay-site-var {
+		content: '$primary-d2';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($primary-d2);
+	}
+}
+
+.clay-site-swatch-primary-l1 {
+	background-color: $primary-l1;
+	color: color-yiq($primary-l1);
+	content: '#{$primary-l1}';
+
+	.clay-site-var {
+		content: '$primary-l1';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($primary-l1);
+	}
+}
+
+.clay-site-swatch-primary-l2 {
+	background-color: $primary-l2;
+	color: color-yiq($primary-l2);
+	content: '#{$primary-l2}';
+
+	.clay-site-var {
+		content: '$primary-l2';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($primary-l2);
+	}
+}
+
+.clay-site-swatch-primary-l3 {
+	background-color: $primary-l3;
+	color: color-yiq($primary-l3);
+	content: '#{$primary-l3}';
+
+	.clay-site-var {
+		content: '$primary-l3';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($primary-l3);
+	}
+}
+
+// Colors Page (Secondary)
+
+.clay-site-swatch-secondary {
+	background-color: $secondary;
+	color: color-yiq($secondary);
+	content: '#{$secondary}';
+
+	.clay-site-var {
+		content: '$secondary';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($secondary);
+	}
+}
+
+.clay-site-swatch-secondary-d1 {
+	background-color: $secondary-d1;
+	color: color-yiq($secondary-d1);
+	content: '#{$secondary-d1}';
+
+	.clay-site-var {
+		content: '$secondary-d1';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($secondary-d1);
+	}
+}
+
+.clay-site-swatch-secondary-d2 {
+	background-color: $secondary-d2;
+	color: color-yiq($secondary-d2);
+	content: '#{$secondary-d2}';
+
+	.clay-site-var {
+		content: '$secondary-d2';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($secondary-d2);
+	}
+}
+
+.clay-site-swatch-secondary-l1 {
+	background-color: $secondary-l1;
+	color: color-yiq($secondary-l1);
+	content: '#{$secondary-l1}';
+
+	.clay-site-var {
+		content: '$secondary-l1';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($secondary-l1);
+	}
+}
+
+.clay-site-swatch-secondary-l2 {
+	background-color: $secondary-l2;
+	color: color-yiq($secondary-l2);
+	content: '#{$secondary-l2}';
+
+	.clay-site-var {
+		content: '$secondary-l2';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($secondary-l2);
+	}
+}
+
+.clay-site-swatch-secondary-l3 {
+	background-color: $secondary-l3;
+	color: color-yiq($secondary-l3);
+	content: '#{$secondary-l3}';
+
+	.clay-site-var {
+		content: '$secondary-l3';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($secondary-l3);
+	}
+}
+
+// Colors Page (Info)
+
+.clay-site-swatch-info {
+	background-color: $info;
+	color: color-yiq($info);
+	content: '#{$info}';
+
+	.clay-site-var {
+		content: '$info';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($info);
+	}
+}
+
+.clay-site-swatch-info-d1 {
+	background-color: $info-d1;
+	color: color-yiq($info-d1);
+	content: '#{$info-d1}';
+
+	.clay-site-var {
+		content: '$info-d1';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($info-d1);
+	}
+}
+
+.clay-site-swatch-info-d2 {
+	background-color: $info-d2;
+	color: color-yiq($info-d2);
+	content: '#{$info-d2}';
+
+	.clay-site-var {
+		content: '$info-d2';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($info-d2);
+	}
+}
+
+.clay-site-swatch-info-l1 {
+	background-color: $info-l1;
+	color: color-yiq($info-l1);
+	content: '#{$info-l1}';
+
+	.clay-site-var {
+		content: '$info-l1';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($info-l1);
+	}
+}
+
+.clay-site-swatch-info-l2 {
+	background-color: $info-l2;
+	color: color-yiq($info-l2);
+	content: '#{$info-l2}';
+
+	.clay-site-var {
+		content: '$info-l2';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($info-l2);
+	}
+}
+
+// Colors Page (Success)
+
+.clay-site-swatch-success {
+	background-color: $success;
+	color: color-yiq($success);
+	content: '#{$success}';
+
+	.clay-site-var {
+		content: '$success';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($success);
+	}
+}
+
+.clay-site-swatch-success-d1 {
+	background-color: $success-d1;
+	color: color-yiq($success-d1);
+	content: '#{$success-d1}';
+
+	.clay-site-var {
+		content: '$success-d1';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($success-d1);
+	}
+}
+
+.clay-site-swatch-success-d2 {
+	background-color: $success-d2;
+	color: color-yiq($success-d2);
+	content: '#{$success-d2}';
+
+	.clay-site-var {
+		content: '$success-d2';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($success-d2);
+	}
+}
+
+.clay-site-swatch-success-l1 {
+	background-color: $success-l1;
+	color: color-yiq($success-l1);
+	content: '#{$success-l1}';
+
+	.clay-site-var {
+		content: '$success-l1';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($success-l1);
+	}
+}
+
+.clay-site-swatch-success-l2 {
+	background-color: $success-l2;
+	color: color-yiq($success-l2);
+	content: '#{$success-l2}';
+
+	.clay-site-var {
+		content: '$success-l2';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($success-l2);
+	}
+}
+
+// Colors Page (Warning)
+
+.clay-site-swatch-warning {
+	background-color: $warning;
+	color: color-yiq($warning);
+	content: '#{$warning}';
+
+	.clay-site-var {
+		content: '$warning';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($warning);
+	}
+}
+
+.clay-site-swatch-warning-d1 {
+	background-color: $warning-d1;
+	color: color-yiq($warning-d1);
+	content: '#{$warning-d1}';
+
+	.clay-site-var {
+		content: '$warning-d1';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($warning-d1);
+	}
+}
+
+.clay-site-swatch-warning-d2 {
+	background-color: $warning-d2;
+	color: color-yiq($warning-d2);
+	content: '#{$warning-d2}';
+
+	.clay-site-var {
+		content: '$warning-d2';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($warning-d2);
+	}
+}
+
+.clay-site-swatch-warning-l1 {
+	background-color: $warning-l1;
+	color: color-yiq($warning-l1);
+	content: '#{$warning-l1}';
+
+	.clay-site-var {
+		content: '$warning-l1';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($warning-l1);
+	}
+}
+
+.clay-site-swatch-warning-l2 {
+	background-color: $warning-l2;
+	color: color-yiq($warning-l2);
+	content: '#{$warning-l2}';
+
+	.clay-site-var {
+		content: '$warning-l2';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($warning-l2);
+	}
+}
+
+// Colors Page (Danger)
+
+.clay-site-swatch-danger {
+	background-color: $danger;
+	color: color-yiq($danger);
+	content: '#{$danger}';
+
+	.clay-site-var {
+		content: '$danger';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($danger);
+	}
+}
+
+.clay-site-swatch-danger-d1 {
+	background-color: $danger-d1;
+	color: color-yiq($danger-d1);
+	content: '#{$danger-d1}';
+
+	.clay-site-var {
+		content: '$danger-d1';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($danger-d1);
+	}
+}
+
+.clay-site-swatch-danger-d2 {
+	background-color: $danger-d2;
+	color: color-yiq($danger-d2);
+	content: '#{$danger-d2}';
+
+	.clay-site-var {
+		content: '$danger-d2';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($danger-d2);
+	}
+}
+
+.clay-site-swatch-danger-l1 {
+	background-color: $danger-l1;
+	color: color-yiq($danger-l1);
+	content: '#{$danger-l1}';
+
+	.clay-site-var {
+		content: '$danger-l1';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($danger-l1);
+	}
+}
+
+.clay-site-swatch-danger-l2 {
+	background-color: $danger-l2;
+	color: color-yiq($danger-l2);
+	content: '#{$danger-l2}';
+
+	.clay-site-var {
+		content: '$danger-l2';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($danger-l2);
+	}
+}
+
+// Colors Page (Light)
+
+.clay-site-swatch-light {
+	background-color: $light;
+	color: color-yiq($light);
+	content: '#{$light}';
+
+	.clay-site-var {
+		content: '$light';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($light);
+	}
+}
+
+.clay-site-swatch-light-d1 {
+	background-color: $light-d1;
+	color: color-yiq($light-d1);
+	content: '#{$light-d1}';
+
+	.clay-site-var {
+		content: '$light-d1';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($light-d1);
+	}
+}
+
+.clay-site-swatch-light-d2 {
+	background-color: $light-d2;
+	color: color-yiq($light-d2);
+	content: '#{$light-d2}';
+
+	.clay-site-var {
+		content: '$light-d2';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($light-d2);
+	}
+}
+
+.clay-site-swatch-light-l1 {
+	background-color: $light-l1;
+	color: color-yiq($light-l1);
+	content: '#{$light-l1}';
+
+	.clay-site-var {
+		content: '$light-l1';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($light-l1);
+	}
+}
+
+.clay-site-swatch-light-l2 {
+	background-color: $light-l2;
+	color: color-yiq($light-l2);
+	content: '#{$light-l2}';
+
+	.clay-site-var {
+		content: '$light-l2';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($light-l2);
+	}
+}
+
+// Colors Page (Dark)
+
+.clay-site-swatch-dark {
+	background-color: $dark;
+	color: color-yiq($dark);
+	content: '#{$dark}';
+
+	.clay-site-var {
+		content: '$dark';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($dark);
+	}
+}
+
+.clay-site-swatch-dark-d1 {
+	background-color: $dark-d1;
+	color: color-yiq($dark-d1);
+	content: '#{$dark-d1}';
+
+	.clay-site-var {
+		content: '$dark-d1';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($dark-d1);
+	}
+}
+
+.clay-site-swatch-dark-d2 {
+	background-color: $dark-d2;
+	color: color-yiq($dark-d2);
+	content: '#{$dark-d2}';
+
+	.clay-site-var {
+		content: '$dark-d2';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($dark-d2);
+	}
+}
+
+.clay-site-swatch-dark-l1 {
+	background-color: $dark-l1;
+	color: color-yiq($dark-l1);
+	content: '#{$dark-l1}';
+
+	.clay-site-var {
+		content: '$dark-l1';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($dark-l1);
+	}
+}
+
+.clay-site-swatch-dark-l2 {
+	background-color: $dark-l2;
+	color: color-yiq($dark-l2);
+	content: '#{$dark-l2}';
+
+	.clay-site-var {
+		content: '$dark-l2';
+	}
+
+	.clay-site-swatch-text {
+		@include clay-site-selection($dark-l2);
+	}
 }
 
 // Alerts Page
@@ -673,20 +1643,28 @@ $mainNavWidth: 220px;
 
 h1, h2, h3, h4, h5, h6 {
 	.heading-anchor {
+		align-items: center;
 		color: inherit;
 		cursor: pointer;
-		display: inline-block;
+		display: inline-flex;
 		float: right;
 		font-size: 14px;
-		line-height: 1.5;
+		height: 32px;
+		justify-content: center;
+		line-height: 1;
 		text-decoration: none;
-		width: 20px;
+		vertical-align: middle;
+		width: 32px;
+
+		.lexicon-icon {
+			margin-top: 0;
+		}
 	}
 
 	@include media-breakpoint-up(md) { // min-width 768px
 		.heading-anchor {
 			float: none;
-			margin-left: -20px;
+			margin-left: -32px;
 			opacity: 0;
 
 			&:focus {
@@ -877,4 +1855,27 @@ body.sidenav-transition {
 		float: left;
 		width: 50%;
 	}
+}
+
+// API Page
+
+$my-button-variant: () !default;
+$my-button-variant: map-merge((
+	bg: #C142A0,
+	border-width: 0,
+	color: #FFF,
+	font-size: 13px,
+	font-weight: 700,
+	line-height: 1,
+	padding-bottom: 12px,
+	padding-left: 15px,
+	padding-right: 15px,
+	padding-top: 12px,
+	hover-bg: #AC388E,
+	hover-color: #FFF,
+	active-bg: #9D3381,
+), $my-button-variant);
+
+.my-button-variant {
+	@include clay-button-variant($my-button-variant);
 }

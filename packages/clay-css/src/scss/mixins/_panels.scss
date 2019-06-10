@@ -1,25 +1,149 @@
-// Creates a Panel color variant
-// @param $map - Sass map that contain Panel Variant properties to modify
+////
+/// @group panels
+////
+
+/// A mixin to create Panel variants. You can base your variant off `.panel` or create your own base class (e.g., `<div class="panel my-custom-panel-variant"></div>` or `<div class="my-custom-panel"></div>`).
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// bg: {Color | String | Null},
+/// border-color: {Color | String | List | Null},
+/// border-style: {String | List | Null},
+/// border-width: {Number | String | List | Null},
+/// box-shadow: {String | List | Null},
+/// color: {Color | String | Null},
+/// font-size: {Number | String | Null},
+/// header-bg: {Color | String | Null},
+/// header-border-color: {Color | String | List | Null},
+/// header-border-style: {String | List | Null},
+/// header-border-width: {Number | String | List | Null},
+/// header-color: {Color | String | Null},
+/// header-margin-bottom: {Number | String | Null},
+/// header-margin-left: {Number | String | Null},
+/// header-margin-right: {Number | String | Null},
+/// header-margin-top: {Number | String | Null},
+/// header-padding-bottom: {Number | String | Null},
+/// header-padding-left: {Number | String | Null},
+/// header-padding-right: {Number | String | Null},
+/// header-padding-top: {Number | String | Null},
+/// header-transition: {String | List | Null},
+/// header-collapsed-border-color: {Color | String | List | Null},
+/// header-link: {Map | Null}, // Pass parameters to `clay-link` mixin
+/// title-font-size: {Number | String | Null},
+/// title-font-weight: {Number | String | Null},
+/// title-text-transform: {String | List | Null},
+/// collapse-icon-bottom: {Number | String | Null},
+/// collapse-icon-font-size: {Number | String | Null},
+/// collapse-icon-left: {Number | String | Null},
+/// collapse-icon-right: {Number | String | Null},
+/// collapse-icon-top: {Number | String | Null},
+/// body-margin-bottom: {Number | String | Null},
+/// body-margin-left: {Number | String | Null},
+/// body-margin-right: {Number | String | Null},
+/// body-margin-top: {Number | String | Null},
+/// body-padding-bottom: {Number | String | Null},
+/// body-padding-left: {Number | String | Null},
+/// body-padding-right: {Number | String | Null},
+/// body-padding-top: {Number | String | Null},
+/// footer-bg: {Color | String | Null},
+/// footer-border-color: {Color | String | List | Null},
+/// footer-color: {Color | String | Null},
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
 
 @mixin clay-panel-variant($map) {
+	$bg: map-get($map, bg);
 	$border-color: map-get($map, border-color);
+	$border-style: map-get($map, border-style);
+	$border-width: map-get($map, border-width);
 	$box-shadow: map-get($map, box-shadow);
 	$color: map-get($map, color);
+	$font-size: map-get($map, font-size);
+
 	$header-bg: map-get($map, header-bg);
 	$header-border-color: map-get($map, header-border-color);
+	$header-border-style: map-get($map, header-border-style);
+	$header-border-width: map-get($map, header-border-width);
 	$header-color: map-get($map, header-color);
+	$header-margin-bottom: map-get($map, header-margin-bottom);
+	$header-margin-left: map-get($map, header-margin-left);
+	$header-margin-right: map-get($map, header-margin-right);
+	$header-margin-top: map-get($map, header-margin-top);
+	$header-padding-bottom: map-get($map, header-padding-bottom);
+	$header-padding-left: map-get($map, header-padding-left);
+	$header-padding-right: map-get($map, header-padding-right);
+	$header-padding-top: map-get($map, header-padding-top);
+	$header-transition: map-get($map, header-transition);
+
+	$header-collapsed-border-color: map-get($map, header-collapsed-border-color);
+
+	$header-link: setter(map-get($map, header-link), ());
+
+	$title-font-size: map-get($map, title-font-size);
+	$title-font-weight: map-get($map, title-font-weight);
+	$title-text-transform: map-get($map, title-text-transform);
+
+	$collapse-icon-bottom: map-get($map, collapse-icon-bottom);
+	$collapse-icon-font-size: map-get($map, collapse-icon-font-size);
+	$collapse-icon-left: map-get($map, collapse-icon-left);
+	$collapse-icon-right: map-get($map, collapse-icon-right);
+	$collapse-icon-top: map-get($map, collapse-icon-top);
+
+	$body-margin-bottom: map-get($map, body-margin-bottom);
+	$body-margin-left: map-get($map, body-margin-left);
+	$body-margin-right: map-get($map, body-margin-right);
+	$body-margin-top: map-get($map, body-margin-top);
+	$body-padding-bottom: map-get($map, body-padding-bottom);
+	$body-padding-left: map-get($map, body-padding-left);
+	$body-padding-right: map-get($map, body-padding-right);
+	$body-padding-top: map-get($map, body-padding-top);
+
 	$footer-bg: map-get($map, footer-bg);
 	$footer-border-color: map-get($map, footer-border-color);
 	$footer-color: map-get($map, footer-color);
 
+	background-color: $bg;
 	border-color: $border-color;
+	border-style: $border-style;
+	border-width: $border-width;
 	box-shadow: $box-shadow;
 	color: $color;
+	font-size: $font-size;
 
 	.panel-header {
 		background-color: $header-bg;
 		border-color: $header-border-color;
+		border-style: $header-border-style;
+		border-width: $header-border-width;
 		color: $header-color;
+		margin-bottom: $header-margin-bottom;
+		margin-left: $header-margin-left;
+		margin-right: $header-margin-right;
+		margin-top: $header-margin-top;
+		padding-bottom: $header-padding-bottom;
+		padding-left: $header-padding-left;
+		padding-right: $header-padding-right;
+		padding-top: $header-padding-top;
+		transition: $header-transition;
+
+		&.collapsed {
+			border-color: $header-collapsed-border-color;
+		}
+
+		&.panel-header-link {
+			@include clay-link($header-link);
+		}
+
+		&:not(.collapse-icon-middle) {
+			.collapse-icon-closed,
+			.collapse-icon-open {
+				bottom: $collapse-icon-bottom;
+				font-size: $collapse-icon-font-size;
+				left: $collapse-icon-left;
+				right: $collapse-icon-right;
+				top: $collapse-icon-top;
+			}
+		}
 
 		.panel-group & {
 			+ .panel-collapse > .panel-body {
@@ -28,10 +152,39 @@
 		}
 	}
 
+	.panel-title {
+		font-size: $title-font-size;
+		font-weight: $title-font-weight;
+		text-transform: $title-text-transform;
+	}
+
+	.panel-body {
+		margin-bottom: $body-margin-bottom;
+		margin-left: $body-margin-left;
+		margin-right: $body-margin-right;
+		margin-top: $body-margin-top;
+		padding-bottom: $body-padding-bottom;
+		padding-left: $body-padding-left;
+		padding-right: $body-padding-right;
+		padding-top: $body-padding-top;
+	}
+
 	.panel-footer {
 		background-color: $footer-bg;
 		border-color: $footer-border-color;
 		color: $footer-color;
+	}
+
+	// For Focus Box Shadow
+
+	@at-root {
+		.panel-group.panel-group-flush & {
+			.panel-header-link {
+				&, &.collapsed {
+					border-radius: map-get($header-link, border-radius);
+				}
+			}
+		}
 	}
 
 	@content;

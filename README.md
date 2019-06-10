@@ -1,8 +1,8 @@
 # 🏺 [Clay](https://clayui.com/) &middot; [![Build Status](https://travis-ci.org/liferay/clay.svg?branch=master)](https://travis-ci.org/liferay/clay) [![Coverage Status](https://coveralls.io/repos/github/liferay/clay/badge.svg)](https://coveralls.io/github/liferay/clay)
 
-Clay is Liferay's web implementation of [Lexicon Experience Language](https://lexicondesign.io/). Built with Bootstrap as a foundation, it's comprised of HTML, CSS, and JS.
+Clay is Liferay's web implementation of [Lexicon Experience Language](https://liferay.design/lexicon). Built with Bootstrap as a foundation, it's comprised of HTML, CSS, and JS.
 
-🚨This Branch contains the Beta version of Clay v3, if you are looking for the components in Metal.js visit the [2.x branch](https://github.com/liferay/clay/tree/2.x)
+**🚨This Branch contains the Beta version of Clay v3, if you are looking for the components in Metal.js visit the [2.x branch](https://github.com/liferay/clay/tree/2.x)**
 
 ## Packages
 
@@ -16,9 +16,9 @@ The pillar to give colors and structure to Clay, where is the css and examples o
 
 All components that follow clay-css marking and Lexicon use cases, developed on [React.js](http://reactjs.org)
 
-### [Clayui.com](./clayui.com)
+### [Next.clayui.com](./next.clayui.com)
 
-Contains the source code and documentation powering [clayui.com](https://clayui.com/).
+Contains the source code and documentation powering [next.clayui.com](https://next.clayui.com/).
 
 ## Browser support
 
@@ -33,12 +33,12 @@ Contains the source code and documentation powering [clayui.com](https://clayui.
 
 ## Documentation
 
-You can find the Clay documentation on the [site](https://clayui.com/docs/components/alerts.html).
+You can find the Clay documentation on the [site](https://next.clayui.com/docs).
 
--   [Getting Started](https://clayui.com/docs/getting-started/introduction.html)
--   [Layout](https://clayui.com/docs/layout/grid.html)
--   [Components Library](https://clayui.com/docs/components/alerts.html)
--   [News](https://clayui.com/docs/news/)
+-   [Getting Started](https://next.clayui.com/docs/get-started/introduction.html)
+-   [CSS](https://next.clayui.com/docs/css/index.html)
+-   [React Components](https://next.clayui.com/docs/components/index.html)
+-   [Blog](https://next.clayui.com/blog/2019/02/07/clay-v3-beta.html)
 
 You can improve by sending pull requests to this repository.
 
@@ -46,13 +46,13 @@ You can improve by sending pull requests to this repository.
 
 Clay is available as the `clay` package in npm for components and for css like `clay-css`. It is also available on a [CDN](https://cdn.jsdelivr.net/npm/clay/lib/js/clay.js) for components and for css, [check](https://cdn.jsdelivr.net/npm/clay/lib/css/atlas.css). But if you just want the separate components, it's also available in the npm as [clay-](https://www.npmjs.com/search?q=clay-).
 
-See the [Getting Started](https://clayui.com/docs/getting-started/introduction.html) guide for more information.
+See the [Getting Started](https://next.clayui.com/docs/get-started/introduction.html) guide for more information.
 
 ## Migration Guides
 
 Do you already have the Clay v2 components implemented in your project? These handy guides will help you perform the migration from Clay v2 to v3.
 
--   (**_Coming soon_**) Migrate the Clay components from v2 to v3
+-   [Migrate the Clay components from v2 to v3](https://next.clayui.com/docs/migration/migrate-the-clay-components-from-v2-to-v3.html)
 
 ## Contributing
 
@@ -92,10 +92,10 @@ yarn lerna
 yarn build
 ```
 
-6. Start a local server on port 4000
+6. Start storybook server
 
 ```
-yarn start
+yarn workspace clay-css run build && yarn storybook
 ```
 
 7. Run tests:
@@ -104,7 +104,7 @@ yarn start
 yarn test
 ```
 
-#### Clayui.com
+#### next.clayui.com
 
 To contribute to the documentation and the site in general, you can try to run locally to test your changes:
 
@@ -131,10 +131,6 @@ If you want to test in a production environment so that you do not take risks of
 ```
 yarn site
 ```
-
-### Important
-
-Since travis is failing on executing a11y tests due to out of date suid you need to execute `npm run pa11y` locally before sending any pr to verify we're following accessibility standars.
 
 ## License
 

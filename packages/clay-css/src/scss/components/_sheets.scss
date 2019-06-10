@@ -194,13 +194,7 @@ fieldset {
 }
 
 a.sheet-subtitle {
-	color: $sheet-subtitle-link-color;
-	text-decoration: $sheet-subtitle-link-text-decoration;
-
-	&:hover {
-		color: $sheet-subtitle-link-hover-color;
-		text-decoration: $sheet-subtitle-link-hover-text-decoration;
-	}
+	@include clay-link($sheet-subtitle-link);
 }
 
 // Sheet Tertiary Title

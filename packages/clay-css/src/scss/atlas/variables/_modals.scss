@@ -1,4 +1,4 @@
-$modal-backdrop-bg: lighten($body-color, 8%) !default;
+$modal-backdrop-bg: $gray-800 !default;
 $modal-backdrop-opacity: 0.8 !default;
 
 $modal-content-box-shadow-xs: 0 0 3px 1px rgba(0, 0, 0, 0.2) !default;
@@ -6,7 +6,7 @@ $modal-content-border-color: transparent !default;
 
 $modal-inner-padding: 1.5rem !default; // 24px
 
-$modal-header-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
+$modal-header-border-color: $gray-300 !default;
 $modal-header-padding: 1.5rem !default; // 24px
 
 $modal-title-font-size: 1.25rem !default; // 20px
@@ -16,8 +16,8 @@ $modal-title-font-weight: $font-weight-bold !default;
 
 $modal-success: () !default;
 $modal-success: map-merge((
-	header-bg: lighten(desaturate(#287d3d, 1.52), 62.94),
-	header-border-color: lighten(desaturate(#287d3d, 0.14), 24.90),
+	header-bg: $success-l2,
+	header-border-color: $success-l1,
 	header-color: $success,
 	header-close: (
 		color: $success,
@@ -31,8 +31,8 @@ $modal-success: map-merge((
 
 $modal-info: () !default;
 $modal-info: map-merge((
-	header-bg: lighten(desaturate(adjust-hue($info, 1), 3.25), 52.94),
-	header-border-color: lighten(saturate($info, 0.59), 28.04),
+	header-bg: $info-l2,
+	header-border-color: $info-l1,
 	header-color: $info,
 	header-close: (
 		color: $info,
@@ -46,8 +46,8 @@ $modal-info: map-merge((
 
 $modal-warning: () !default;
 $modal-warning: map-merge((
-	header-bg: lighten(adjust-hue($warning, -1), 60.00),
-	header-border-color: lighten($warning, 24.90),
+	header-bg: $warning-l2,
+	header-border-color: $warning-l1,
 	header-color: $warning,
 	header-close: (
 		color: $warning,
@@ -61,8 +61,8 @@ $modal-warning: map-merge((
 
 $modal-danger: () !default;
 $modal-danger: map-merge((
-	header-bg: lighten(saturate($danger, 5.04), 50.00),
-	header-border-color: lighten(desaturate($danger, 0.25), 28.04),
+	header-bg: $danger-l2,
+	header-border-color: $danger-l1,
 	header-color: $danger,
 	header-close: (
 		color: $danger,

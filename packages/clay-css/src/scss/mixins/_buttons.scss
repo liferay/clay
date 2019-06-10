@@ -1,15 +1,32 @@
+////
+/// @group buttons
+////
+
+/// A mixin that helps create custom button sizes
+/// @deprecated use the mixin `clay-button-variant` instead
+/// @param {Map} $map - A map of `key: value` pairs.
+
 @mixin clay-button-size($map) {
 	$breakpoint-down: map-get($map, breakpoint-down);
 
+	$align-items: map-get($map, align-items);
 	$border-color: map-get($map, border-color);
 	$border-radius: map-get($map, border-radius);
 	$border-style: map-get($map, border-style);
 	$border-width: map-get($map, border-width);
+	$cursor: map-get($map, cursor);
 	$display: map-get($map, display);
+	$flex-grow: map-get($map, flex-grow);
+	$flex-shrink: map-get($map, flex-shrink);
 	$font-size: map-get($map, font-size);
 	$font-weight: map-get($map, font-weight);
 	$height: map-get($map, height);
+	$justify-content: map-get($map, justify-content);
 	$line-height: map-get($map, line-height);
+	$margin-bottom: map-get($map, margin-bottom);
+	$margin-left: map-get($map, margin-left);
+	$margin-right: map-get($map, margin-right);
+	$margin-top: map-get($map, margin-top);
 	$padding-bottom: map-get($map, padding-bottom);
 	$padding-left: map-get($map, padding-left);
 	$padding-right: map-get($map, padding-right);
@@ -20,6 +37,8 @@
 	$white-space: map-get($map, white-space);
 	$width: map-get($map, width);
 	$word-wrap: map-get($map, word-wrap);
+
+	$disabled-cursor: map-get($map, disabled-cursor);
 
 	$inline-item-font-size: map-get($map, inline-item-font-size);
 
@@ -35,15 +54,23 @@
 	$padding-top-mobile: map-get($map, padding-top-mobile);
 	$width-mobile: map-get($map, width-mobile);
 
+	align-items: $align-items;
 	border-color: $border-color;
 	border-radius: $border-radius;
 	border-style: $border-style;
 	border-width: $border-width;
 	display: $display;
+	flex-grow: $flex-grow;
+	flex-shrink: $flex-shrink;
 	font-size: $font-size;
 	font-weight: $font-weight;
 	height: $height;
+	justify-content: $justify-content;
 	line-height: $line-height;
+	margin-bottom: $margin-bottom;
+	margin-left: $margin-left;
+	margin-right: $margin-right;
+	margin-top: $margin-top;
 	padding-bottom: $padding-bottom;
 	padding-left: $padding-left;
 	padding-right: $padding-right;
@@ -53,6 +80,13 @@
 	vertical-align: $vertical-align;
 	white-space: $white-space;
 	width: $width;
+
+	@at-root {
+		a#{&},
+		button#{&} {
+			cursor: $cursor;
+		}
+	}
 
 	@if ($breakpoint-down) {
 		@include media-breakpoint-down($breakpoint-down) {
@@ -66,6 +100,11 @@
 		}
 	}
 
+	&:disabled,
+	.disabled {
+		cursor: $disabled-cursor;
+	}
+
 	.inline-item {
 		font-size: $inline-item-font-size;
 	}
@@ -77,35 +116,232 @@
 	}
 }
 
+/// A mixin to create button variants, use this instead of `clay-button-size()`. You can base your variant off Bootstrap's `.btn` class or create your own base class (e.g., `<button class="btn my-custom-btn-primary"></button>` or `<button class="my-custom-btn my-custom-btn-primary"></button>`).
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// breakpoint-down: {String, Null}, // The Bootstrap 4 Breakpoint {xs | sm | md | lg | xl}
+/// align-items: {String | Null},
+/// bg: {Color | String | Null},
+/// border-color: {Color | String | List | Null},
+/// border-radius: {Number | String | List | Null},
+/// border-style: {String | Null},
+/// border-width: {Number | String | List | Null},
+/// bottom: {Number | String | Null},
+/// color: {Color | String | Null},
+/// cursor: {String | Null},
+/// display: {String | Null},
+/// flex-grow: {Number | String | Null},
+/// flex-shrink: {Number | String | Null},
+/// font-size: {Number | String | Null},
+/// font-weight: {Number | String | Null},
+/// height: {Number | String | Null},
+/// justify-content: {String | Null},
+/// left: {Number | String | Null},
+/// line-height: {Number | String | Null},
+/// margin-bottom: {Number | String | Null},
+/// margin-left: {Number | String | Null},
+/// margin-right: {Number | String | Null},
+/// margin-top: {Number | String | Null},
+/// opacity: {Number | String | Null},
+/// padding-bottom: {Number | String | Null},
+/// padding-left: {Number | String | Null},
+/// padding-right: {Number | String | Null},
+/// padding-top: {Number | String | Null},
+/// position: {String | Null},
+/// right: {Number | String | Null},
+/// text-decoration: {String | Null},
+/// top: {Number | String | Null},
+/// transition: {List | Null},
+/// user-select: {String | Null},
+/// vertical-align: {String | Null},
+/// white-space: {String | Null},
+/// width: {Number | String | Null},
+/// word-wrap: {String | Null},
+/// hover-bg: {Color | String | Null},
+/// hover-border-color: {Color | String | List | Null},
+/// hover-color: {Color | String | Null},
+/// hover-opacity: {Number | String | Null},
+/// hover-text-decoration: {String | Null},
+/// focus-bg: {Color | String | Null},
+/// focus-border-color: {Color | String | List | Null},
+/// focus-box-shadow: {String | List | Null}
+/// focus-color: {Color | String | Null},
+/// focus-opacity: {Number | String | Null},
+/// focus-outline: {Number | String | Null},
+/// disabled-bg: {Color | String | Null},
+/// disabled-border-color: {Color | String | List | Null},
+/// disabled-box-shadow: {String | List | Null},
+/// disabled-color: {Color | String | Null},
+/// disabled-cursor: {String | Null},
+/// disabled-opacity: {Number | String | Null},
+/// active-bg: {Color | String | Null},
+/// active-border-color: {Color | String | List | Null},
+/// active-box-shadow: {String | List | Null},
+/// active-color: {Color | String | Null},
+/// active-opacity: {Number | String | Null},
+/// active-focus-box-shadow: {String | List}, // Default: $focus-box-shadow
+/// inline-item-font-size: {Number | String | Null},
+/// section-font-size: {Number | String | Null},
+/// section-font-weight: {Number | String | Null},
+/// section-line-height: {Number | String | Null},
+/// font-size-mobile: {Number | String | Null},
+/// height-mobile: {Number | String | Null},
+/// padding-bottom-mobile: {Number | String | Null},
+/// padding-left-mobile: {Number | String | Null},
+/// padding-right-mobile: {Number | String | Null},
+/// padding-top-mobile: {Number | String | Null},
+/// width-mobile: {Number | String | Null},
+/// loading-animation: {String | Null}, // The placeholder name 'loading-animation' or 'loading-animation-light'
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
+
 @mixin clay-button-variant($map) {
+	$breakpoint-down: map-get($map, breakpoint-down);
+
+	$align-items: map-get($map, align-items);
 	$bg: map-get($map, bg);
 	$border-color: map-get($map, border-color);
+	$border-radius: map-get($map, border-radius);
+	$border-style: map-get($map, border-style);
+	$border-width: map-get($map, border-width);
+	$bottom: map-get($map, bottom);
 	$color: map-get($map, color);
+	$cursor: map-get($map, cursor);
+	$display: map-get($map, display);
+	$flex-grow: map-get($map, flex-grow);
+	$flex-shrink: map-get($map, flex-shrink);
+	$font-size: map-get($map, font-size);
+	$font-weight: map-get($map, font-weight);
+	$height: map-get($map, height);
+	$justify-content: map-get($map, justify-content);
+	$left: map-get($map, left);
+	$line-height: map-get($map, line-height);
+	$margin-bottom: map-get($map, margin-bottom);
+	$margin-left: map-get($map, margin-left);
+	$margin-right: map-get($map, margin-right);
+	$margin-top: map-get($map, margin-top);
+	$opacity: map-get($map, opacity);
+	$padding-bottom: map-get($map, padding-bottom);
+	$padding-left: map-get($map, padding-left);
+	$padding-right: map-get($map, padding-right);
+	$padding-top: map-get($map, padding-top);
+	$position: map-get($map, position);
+	$right: map-get($map, right);
+	$text-decoration: map-get($map, text-decoration);
+	$top: map-get($map, top);
+	$transition: map-get($map, transition);
+	$user-select: map-get($map, user-select);
+	$vertical-align: map-get($map, vertical-align);
+	$white-space: map-get($map, white-space);
+	$width: map-get($map, width);
+	$word-wrap: map-get($map, word-wrap);
+
 	$hover-bg: map-get($map, hover-bg);
 	$hover-border-color: map-get($map, hover-border-color);
 	$hover-color: map-get($map, hover-color);
-	$focus-bg: setter(map-get($map, focus-bg), $hover-bg);
-	$focus-border-color: setter(map-get($map, focus-border-color), $hover-border-color);
+	$hover-opacity: map-get($map, hover-opacity);
+	$hover-text-decoration: map-get($map, hover-text-decoration);
+
+	$focus-bg: map-get($map, focus-bg);
+	$focus-border-color: map-get($map, focus-border-color);
 	$focus-box-shadow: map-get($map, focus-box-shadow);
 	$focus-color: map-get($map, focus-color);
+	$focus-opacity: map-get($map, focus-opacity);
+	$focus-outline: map-get($map, focus-outline);
+
 	$disabled-bg: map-get($map, disabled-bg);
 	$disabled-border-color: map-get($map, disabled-border-color);
+	$disabled-box-shadow: map-get($map, disabled-box-shadow);
 	$disabled-color: map-get($map, disabled-color);
+	$disabled-cursor: map-get($map, disabled-cursor);
+	$disabled-opacity: map-get($map, disabled-opacity);
+
 	$active-bg: map-get($map, active-bg);
 	$active-border-color: map-get($map, active-border-color);
 	$active-box-shadow: map-get($map, active-box-shadow);
 	$active-color: map-get($map, active-color);
+	$active-opacity: map-get($map, active-opacity);
 	$active-focus-box-shadow: setter(map-get($map, active-focus-box-shadow), $focus-box-shadow);
+
+	$inline-item-font-size: map-get($map, inline-item-font-size);
+
+	$section-font-size: map-get($map, section-font-size);
+	$section-font-weight: map-get($map, section-font-weight);
+	$section-line-height: map-get($map, section-line-height);
+
+	$font-size-mobile: map-get($map, font-size-mobile);
+	$height-mobile: map-get($map, height-mobile);
+	$padding-bottom-mobile: map-get($map, padding-bottom-mobile);
+	$padding-left-mobile: map-get($map, padding-left-mobile);
+	$padding-right-mobile: map-get($map, padding-right-mobile);
+	$padding-top-mobile: map-get($map, padding-top-mobile);
+	$width-mobile: map-get($map, width-mobile);
+
 	$loading-animation: setter(map-get($map, loading-animation), $clay-unset-placeholder);
 
+	align-items: $align-items;
 	background-color: $bg;
 	border-color: $border-color;
+	border-radius: $border-radius;
+	border-style: $border-style;
+	border-width: $border-width;
+	bottom: $bottom;
 	color: $color;
+	display: $display;
+	flex-grow: $flex-grow;
+	flex-shrink: $flex-shrink;
+	font-size: $font-size;
+	font-weight: $font-weight;
+	height: $height;
+	justify-content: $justify-content;
+	left: $left;
+	line-height: $line-height;
+	margin-bottom: $margin-bottom;
+	margin-left: $margin-left;
+	margin-right: $margin-right;
+	margin-top: $margin-top;
+	opacity: $opacity;
+	padding-bottom: $padding-bottom;
+	padding-left: $padding-left;
+	padding-right: $padding-right;
+	padding-top: $padding-top;
+	position: $position;
+	right: $right;
+	text-decoration: $text-decoration;
+	top: $top;
+	transition: $transition;
+	user-select: $user-select;
+	vertical-align: $vertical-align;
+	white-space: $white-space;
+	width: $width;
+	word-wrap: $word-wrap;
+
+	@at-root {
+		a#{&},
+		button#{&} {
+			cursor: $cursor;
+		}
+	}
+
+	@if ($breakpoint-down) {
+		@include media-breakpoint-down($breakpoint-down) {
+			font-size: $font-size-mobile;
+			height: $height-mobile;
+			padding-bottom: $padding-bottom-mobile;
+			padding-left: $padding-left-mobile;
+			padding-right: $padding-right-mobile;
+			padding-top: $padding-top-mobile;
+			width: $width-mobile;
+		}
+	}
 
 	&:hover {
 		background-color: $hover-bg;
 		border-color: $hover-border-color;
 		color: $hover-color;
+		opacity: $hover-opacity;
+		text-decoration: $hover-text-decoration;
 	}
 
 	&:focus,
@@ -114,13 +350,18 @@
 		border-color: $focus-border-color;
 		box-shadow: $focus-box-shadow;
 		color: $focus-color;
+		opacity: $focus-opacity;
+		outline: $focus-outline;
 	}
 
 	&:disabled,
 	&.disabled {
 		background-color: $disabled-bg;
 		border-color: $disabled-border-color;
+		box-shadow: $disabled-box-shadow;
 		color: $disabled-color;
+		cursor: $disabled-cursor;
+		opacity: $disabled-opacity;
 	}
 
 	&:not([disabled]):not(.disabled):active,
@@ -130,10 +371,21 @@
 		border-color: $active-border-color;
 		box-shadow: $active-box-shadow;
 		color: $active-color;
+		opacity: $active-opacity;
 
 		&:focus {
 			box-shadow: $active-focus-box-shadow;
 		}
+	}
+
+	.inline-item {
+		font-size: $inline-item-font-size;
+	}
+
+	.btn-section {
+		font-size: $section-font-size;
+		font-weight: $section-font-weight;
+		line-height: $section-line-height;
 	}
 
 	.loading-animation {

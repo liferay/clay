@@ -54,75 +54,16 @@
 }
 
 .dropdown-item {
-	overflow: hidden;
-	position: relative;
-	white-space: normal;
-	word-wrap: break-word;
-
-	&.active {
-		font-weight: $dropdown-link-active-font-weight;
-
-		label {
-			color: $dropdown-link-active-color;
-		}
-
-		.form-check-label {
-			color: $dropdown-link-active-color;
-			font-weight: $dropdown-link-active-font-weight;
-		}
-
-		.custom-control-label {
-			font-weight: $dropdown-link-active-font-weight;
-		}
-	}
-
-	&.disabled,
-	&:disabled {
-		cursor: $dropdown-item-disabled-cursor;
-
-		label,
-		.form-check-label {
-			color: $dropdown-link-disabled-color;
-		}
-
-		&.btn-link,
-		&.btn-unstyled {
-			opacity: 1;
-		}
-	}
-
-	&.btn-link {
-		line-height: $line-height-base;
-		transition: none;
-
-		&:hover,
-		&:focus {
-			text-decoration: none;
-		}
-	}
-
-	&.btn-unstyled {
-		font-weight: $dropdown-link-font-weight;
-		padding: $dropdown-item-padding-y $dropdown-item-padding-x;
-		transition: none;
-	}
+	@include clay-dropdown-item-variant($dropdown-item-base);
 
 	.form-check {
 		margin-bottom: 0;
-	}
-
-	.form-check-label {
-		font-weight: $dropdown-link-font-weight;
 	}
 
 	.custom-control {
 		margin-bottom: 0;
 		margin-right: 0;
 		min-height: $custom-control-indicator-size;
-	}
-
-	.custom-control-label {
-		font-weight: $dropdown-link-font-weight;
 	}
 }
 
@@ -141,6 +82,16 @@
 	max-width: $dropdown-max-width;
 	min-height: $dropdown-min-height;
 	overflow: auto;
+
+	// Firefox clips overflowing content and doesn't respect `padding-bottom` on `.dropdown-menu`
+
+	padding-bottom: 0;
+
+	&::after {
+		content: '';
+		display: block;
+		padding-top: $dropdown-padding-y;
+	}
 
 	@include media-breakpoint-down(md) {
 		max-height: $dropdown-max-height-mobile;
@@ -428,6 +379,22 @@
 	@include media-breakpoint-up(lg) { // min-width 992px
 		min-width: $dropdown-wide-width;
 	}
+}
+
+// Dropdown Menu Autocomplete
+
+.dropdown-full .autocomplete-dropdown-menu,
+.dropdown-full .dropdown-menu-autocomplete {
+	max-height: map-get($autocomplete-dropdown-menu, max-height-mobile);
+
+	@include media-breakpoint-up(md) {
+		max-height: map-get($autocomplete-dropdown-menu, max-height);
+	}
+}
+
+.autocomplete-dropdown-menu,
+.dropdown-menu-autocomplete {
+	@include clay-dropdown-menu-variant($autocomplete-dropdown-menu);
 }
 
 // Navbar Component Dropdowns

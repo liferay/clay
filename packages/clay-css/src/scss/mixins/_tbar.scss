@@ -1,3 +1,60 @@
+////
+/// @group tbar
+////
+
+/// A mixin to create tbar variants, must be based off `.tbar` (e.g., `<nav class="tbar my-custom-tbar-variant"></nav>`).
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// border-color: {Color | String | List | Null},
+/// border-style: {String | List | Null},
+/// border-width: {Number | String | List | Null},
+/// bg-color: {Color | String | Null},
+/// color: {Color | String | Null},
+/// font-size: {Number | String | Null},
+/// height: {Number | String | Null},
+/// padding-x: {Number | String | Null},
+/// padding-y: {Number | String | Null},
+/// strong-font-weight: {Number | String | Null},
+/// item-justify-content: {String | Null},
+/// item-padding-x: {Number | String | Null},
+/// item-padding-y: {Number | String | Null},
+/// btn-height: {Number | String | Null},
+/// btn-font-size: {Number | String | Null}, // Default: $font-size
+/// btn-font-weight: {Number | String | Null},
+/// btn-line-height: {Number | String | Null},
+/// btn-margin-x: {Number | String | Null},
+/// btn-margin-y: {Number | String | Null},
+/// btn-padding-x: {Number | String | Null},
+/// btn-padding-y: {Number | String | Null},
+/// btn-monospaced-border-radius: {Number | String | List | Null},
+/// btn-monospaced-border-width: {Number | String | List | Null},
+/// btn-monospaced-font-size: {Number | String | Null},
+/// btn-monospaced-margin-x: {Number | String | Null},
+/// btn-monospaced-margin-y: {Number | String | Null},
+/// btn-monospaced-padding: {Number | String | List | Null},
+/// btn-monospaced-size: {Number | String | Null}, // Default: $btn-height
+/// link-margin-x: {Number | String | Null},
+/// link-margin-y: {Number | String | Null},
+/// link-padding-x: {Number | String | Null},
+/// link-padding-y: {Number | String | Null},
+/// link-monospaced-border-radius: {Number | String | List | Null},
+/// link-monospaced-border-width: {Number | String | List | Null},
+/// link-monospaced-font-size: {Number | String | Null},
+/// link-monospaced-margin-x: {Number | String | Null},
+/// link-monospaced-margin-y: {Number | String | Null},
+/// link-monospaced-padding: {Number | String | List | Null},
+/// link-monospaced-size: {Number | String | Null},
+/// section-text-align: {String | Null},
+/// component-action: {Map | Null}, // Pass parameters to `clay-link` mixin
+/// component-link: {Map | Null}, // Pass parameters to `clay-link` mixin
+/// component-title: {Map | Null}, // Pass parameters to `clay-text-typography` mixin
+/// component-text: {Map | Null}, // Pass parameters to `clay-text-typography` mixin
+/// component-label: {Map | Null}, // Pass parameters to `clay-label-variant` mixin
+/// tbar-label-size: {Map | Null}, // Pass parameters to `clay-label-size` mixin
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
+
 @mixin clay-tbar-variant($map) {
 	$border-color: map-get($map, border-color);
 	$border-style: map-get($map, border-style);
@@ -171,6 +228,16 @@
 		@include clay-label-size($tbar-label-size);
 	}
 }
+
+/// A mixin for `tbar` to force `tbar-nav`, `tbar-item`, `tbar-section`, and `component-title` inline at specific breakpoints. This mixin is used in `.tbar-inline-xs-down`, `.tbar-inline-sm-down`, `.tbar-inline-md-down`, `.tbar-inline-lg-down`, and `.tbar-inline-xl-down`.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// breakpoint-down: {String, Null}, // The Bootstrap 4 Breakpoint {xs | sm | md | lg | xl}
+/// item-padding-left: {Number | String | Null},
+/// item-padding-right: {Number | String | Null},
+/// @todo
+/// - Add @example
+/// - Add @link to documentation
 
 @mixin clay-tbar-inline-down($map) {
 	$breakpoint-down: map-get($map, breakpoint-down);

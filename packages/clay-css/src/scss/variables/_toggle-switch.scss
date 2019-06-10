@@ -1,4 +1,6 @@
-$toggle-switch-transition: background-color 100ms ease-in, border-color 100ms ease-in, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in !default;
+$toggle-switch-cursor: $link-cursor !default;
+$toggle-switch-font-weight: $input-label-font-weight !default;
+$toggle-switch-transition: background-color 100ms ease-in, border-color 100ms ease-in, box-shadow 150ms ease-in-out, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in !default;
 
 // must all be same units--start
 $toggle-switch-bar-padding: 0 !default; // space between button and bar, can be negative value
@@ -16,7 +18,7 @@ $toggle-switch-bar-bg: $input-group-addon-bg !default;
 $toggle-switch-bar-border-color: $input-group-addon-border-color !default;
 $toggle-switch-bar-border-radius: 3px !default;
 $toggle-switch-bar-border-width: 1px !default;
-$toggle-switch-bar-focus-box-shadow: 0 0 3px 2px #66AFE6 !default;
+$toggle-switch-bar-focus-box-shadow: $input-btn-focus-box-shadow !default;
 $toggle-switch-bar-font-size: 0.75rem !default; // 12px
 $toggle-switch-bar-font-size-mobile: $toggle-switch-bar-font-size !default;
 $toggle-switch-bar-icon-color: $input-color !default;
@@ -34,7 +36,7 @@ $toggle-switch-bar-on-bg: $component-active-bg !default;
 $toggle-switch-bar-on-border-color: $toggle-switch-bar-on-bg !default;
 $toggle-switch-bar-on-icon-color: $component-active-color !default;
 
-$toggle-switch-button-on-bg: #FFF !default;
+$toggle-switch-button-on-bg: $white !default;
 $toggle-switch-button-on-border-color: $toggle-switch-bar-on-bg !default;
 $toggle-switch-button-on-border-radius: 0 3px 3px 0 !default;
 $toggle-switch-button-on-icon-color: $toggle-switch-bar-on-bg !default;
@@ -44,9 +46,15 @@ $toggle-switch-button-on-icon-color: $toggle-switch-bar-on-bg !default;
 $toggle-switch-disabled-cursor: $disabled-cursor !default;
 $toggle-switch-disabled-opacity: 0.4 !default;
 
+// Toggle Switch Label
+
+$toggle-switch-label-disabled-color: $input-label-disabled-color !default;
+
 // Toggle Switch Text
 
 $toggle-switch-text-font-size: 0.75rem !default;
+
+$toggle-switch-text-disabled-color: $input-label-disabled-color !default;
 
 // Simple Toggle Switch
 

@@ -1,0 +1,214 @@
+---
+title: Form Elements (Autocomplete)
+section: Components
+---
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Clay Autocomplete</h3>
+
+		<blockquote class="blockquote">
+			<p>Add the class <code>.autocomplete-dropdown-menu</code> to <code>dropdown-menu</code> to size the Dropdown Menu according to Lexicon Design specifications.</p>
+		</blockquote>
+
+		<div class="alert alert-warning">This requires external javascript to populate and show / hide the <code>dropdown-menu</code>.</div>
+
+		<div class="sheet" style="height:18rem;">
+			<div class="form-group">
+				<div class="clay-autocomplete">
+					<label for="autocompleteName1">Name</label>
+					<div class="input-group">
+						<div class="input-group-item">
+							<div class="dropdown">
+								<input class="form-control" id="autocompleteName1" type="text" value="Rob">
+								<ul class="autocomplete-dropdown-menu dropdown-menu show">
+									<li>
+										<a class="dropdown-item" href="#1">Rob<strong>ert Downey Jr.</strong></a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#1">Rob<strong>ert Plant</strong></a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#1">Rob<strong>ert Baratheon</strong></a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#1">Rob<strong>ert De Niro</strong></a>
+									</li>
+								</ul>
+							</div>
+							<div class="form-feedback-group">
+							<div class="form-text">You can use a comma to enter tags. ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.</div>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Clay Autocomplete Dropdown Menu Overflow</h3>
+
+		<div class="sheet" style="height:18rem;">
+			<div class="clay-autocomplete">
+				<label for="autocompleteName2">Name</label>
+				<div class="input-group">
+					<div class="input-group-item">
+						<div class="dropdown">
+							<input class="form-control" id="autocompleteName2" type="text" value="Don">
+							<ul class="autocomplete-dropdown-menu dropdown-menu show">
+								<li>
+									<a class="dropdown-item" href="#1">Don<strong>ald Duck</strong></a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="#1"><strong>J.P. "The </strong>Don<strong>" Walker</strong></a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="#1">Don<strong> Wheeler</strong></a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="#1"><strong>Luke</strong> Don<strong>ald</strong></a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="#1">Don <strong>King</strong></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Clay Autocomplete Search Field Example</h3>
+
+		<div class="alert alert-warning">This requires external javascript to display the clear text button, clear the search input, to populate, and show / hide the <code>dropdown-menu</code>.</div>
+
+		<div class="sheet" style="height:18rem;">
+			<div class="clay-autocomplete">
+				<label for="autocompleteMarketplace1">Marketplace</label>
+				<div class="input-group">
+					<div class="input-group-item">
+						<div class="dropdown">
+							<input class="form-control input-group-inset input-group-inset-after" id="autocompleteMarketplace1" placeholder="Search for..." type="text" value="ele">
+							<span class="input-group-inset-item input-group-inset-item-after">
+								<button class="btn btn-unstyled" type="submit">
+									<svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#search" />
+									</svg>
+								</button>
+								<button class="btn btn-unstyled" type="button">
+									<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+									</svg>
+								</button>
+							</span>
+							<ul class="autocomplete-dropdown-menu dropdown-menu show">
+								<li>
+									<a class="dropdown-item" href="#1">ele<strong>ctric toothbrush</strong></a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="#1">ele<strong>ctric kettle</strong></a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="#1">ele<strong>ctric razor</strong></a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="#1">ele<strong>ctrodes for tents</strong></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Clay Autocomplete Loading</h3>
+
+		<div class="sheet" style="height:11rem;">
+			<div class="clay-autocomplete">
+				<label for="autocompleteMarketplace2">Marketplace</label>
+				<div class="input-group">
+					<div class="input-group-item">
+						<div class="dropdown">
+							<input class="form-control input-group-inset input-group-inset-after" id="autocompleteMarketplace2" type="text" value="H">
+							<span class="input-group-inset-item input-group-inset-item-after">
+								<span class="inline-item inline-item-middle">
+									<span class="loading-animation" role="presentation"></span>
+								</span>
+							</span>
+							<ul class="autocomplete-dropdown-menu dropdown-menu show">
+								<li>
+									<span class="disabled dropdown-item">Loading...</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Clay Autocomplete Loading (Search Field)</h3>
+
+		<div class="sheet" style="height:11rem;">
+			<div class="clay-autocomplete">
+				<label for="autocompleteMarketplace3">Marketplace</label>
+				<div class="input-group">
+					<div class="input-group-item">
+						<div class="dropdown">
+							<input class="form-control input-group-inset input-group-inset-after" id="autocompleteMarketplace3" placeholder="Search for..." type="text" value="ele">
+							<span class="input-group-inset-item input-group-inset-item-after">
+								<span class="inline-item inline-item-middle">
+									<span class="loading-animation" role="presentation"></span>
+								</span>
+								<button class="btn btn-unstyled" type="submit">
+									<svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#search" />
+									</svg>
+								</button>
+								<button class="btn btn-unstyled" type="button">
+									<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+									</svg>
+								</button>
+							</span>
+							<ul class="autocomplete-dropdown-menu dropdown-menu show">
+								<li>
+									<span class="disabled dropdown-item">Loading...</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<script>
+	$('.input-group-inset').on('focusin', function(event) {
+		$(this).closest('.input-group-item').addClass('focus');
+	});
+
+	$('.input-group-inset').on('focusout', function(event) {
+		$(this).closest('.input-group-item').removeClass('focus');
+	});
+</script>

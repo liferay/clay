@@ -2,8 +2,8 @@ $single-link-font-weight: $font-weight-semi-bold !default;
 
 $component-link: () !default;
 $component-link: map-merge((
-	color: $secondary,
-	hover-color: darken($secondary, 15%)
+	color: $gray-600,
+	hover-color: darken($gray-600, 15%)
 ), $component-link);
 
 $link-primary: () !default;
@@ -22,7 +22,7 @@ $link-secondary: map-merge((
 
 $component-title: () !default;
 $component-title: map-merge((
-	color: $body-color,
+	color: $gray-900,
 	font-size: 1.125rem,
 	font-weight: $headings-font-weight,
 	line-height: $headings-line-height,
@@ -32,22 +32,22 @@ $component-title: map-merge((
 
 $component-title-link: () !default;
 $component-title-link: map-merge((
-	color: $body-color,
-	hover-color: darken($body-color, 15%)
+	color: $gray-900,
+	hover-color: darken($gray-900, 15%)
 ), $component-title-link);
 
 // Component Subtitle
 
 $component-subtitle: () !default;
 $component-subtitle: map-merge((
-	color: $secondary,
+	color: $gray-600,
 	margin-bottom: 0
 ), $component-subtitle);
 
 $component-subtitle-link: () !default;
 $component-subtitle-link: map-merge((
-	color: $secondary,
-	hover-color: darken($secondary, 15%)
+	color: $gray-600,
+	hover-color: darken($gray-600, 15%)
 ), $component-subtitle-link);
 
 // Component Action
@@ -59,11 +59,11 @@ $component-action: map-merge((
 	border-radius: $border-radius,
 	color: $secondary,
 	hover-bg: $secondary,
-	hover-color: #FFF,
+	hover-color: $white,
 	btn-focus-box-shadow: 0 0 0 $btn-focus-width rgba($secondary, 0.5),
 	btn-focus-outline: 0,
 	active-bg: $secondary,
-	active-color: #FFF,
+	active-color: $white,
 	disabled-bg: transparent,
 	disabled-color: $secondary,
 	disabled-cursor: $disabled-cursor,
@@ -87,7 +87,7 @@ $link-outline-primary: map-merge((
 	border-color: $primary,
 	color: $primary,
 	hover-bg: $primary,
-	hover-color: #FFF,
+	hover-color: $white,
 	btn-focus-box-shadow: 0 0 0 $btn-focus-width rgba($primary, 0.5),
 	btn-focus-outline: 0,
 	disabled-bg: transparent,
@@ -95,7 +95,7 @@ $link-outline-primary: map-merge((
 	disabled-cursor: $btn-disabled-cursor,
 	disabled-opacity: $btn-disabled-opacity,
 	active-bg: $primary,
-	active-color: #FFF
+	active-color: $white,
 ), $link-outline-primary);
 
 $link-outline-secondary: () !default;
@@ -103,7 +103,7 @@ $link-outline-secondary: map-merge((
 	border-color: $secondary,
 	color: $secondary,
 	hover-bg: $secondary,
-	hover-color: #FFF,
+	hover-color: $white,
 	btn-focus-box-shadow: 0 0 0 $btn-focus-width rgba($secondary, 0.5),
 	btn-focus-outline: 0,
 	disabled-bg: transparent,
@@ -111,7 +111,7 @@ $link-outline-secondary: map-merge((
 	disabled-cursor: $btn-disabled-cursor,
 	disabled-opacity: $btn-disabled-opacity,
 	active-bg: $secondary,
-	active-color: #FFF
+	active-color: $white,
 ), $link-outline-secondary);
 
 // Link Monospaced

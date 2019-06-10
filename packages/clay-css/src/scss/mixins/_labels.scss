@@ -1,3 +1,31 @@
+////
+/// @group Labels
+////
+
+/// A mixin for creating `.label` size variants.
+/// @deprecated use `clay-label-variant` instead
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// border-width: {Number | String | List | Null}, // Default: $label-border-width
+/// font-size: {Number | String | Null},
+/// height: {Number | String | Null},
+/// line-height: {Number | String | Null},
+/// margin-bottom: {Number | String | Null},
+/// margin-left: {Number | String | Null},
+/// margin-right: {Number | String | Null},
+/// margin-top: {Number | String | Null},
+/// padding-x: {Number | String | Null},
+/// padding-y: {Number | String | Null},
+/// text-transform: {String | List | Null},
+/// item-spacer-x: {Number | String | Null},
+/// item-spacer-y: {Number | String | Null},
+/// lexicon-icon-height: {Number | String | Null}, // Default: map-get($map, lexicon-icon-width)
+/// lexicon-icon-margin-top: {Number | String | Null},
+/// lexicon-icon-width: {Number | String | Null},
+/// sticker-border-radius: {Number | String | List | Null},
+/// sticker-size: {Number | String | Null},
+/// close: {Map | Null}, // Pass parameters to `clay-close` mixin
+
 @mixin clay-label-size($map) {
 	$border-width: setter(map-get($map, border-width), $label-border-width);
 	$font-size: map-get($map, font-size);
@@ -89,11 +117,42 @@
 	}
 }
 
+/// A mixin for creating `.label` color variants.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// bg: {Color | String | Null},
+/// border-color: {Color | String | List | Null},
+/// color: {Color | String | Null},
+/// outline: {Number | String | Null},
+/// text-decoration: {String | Null},
+/// transition: {String | List | Null},
+/// hover-bg: {Color | String | Null},
+/// hover-border-color: {Color | String | List | Null},
+/// hover-color: {Color | String | Null},
+/// hover-text-decoration: {String | Null},
+/// focus-bg: {Color | String | Null},
+/// focus-border-color: {Color | String | List | Null},
+/// focus-box-shadow: {String | List | Null},
+/// focus-color: {Color | String | Null},
+/// focus-outline: {Number | String | Null},
+/// focus-text-decoration: {String | Null},
+/// disabled-bg: {Color | String | Null},
+/// disabled-border-color: {Color | String | List | Null},
+/// disabled-box-shadow: {String | List | Null},
+/// disabled-color: {Color | String | Null},
+/// link-color: {Color | String | Null},
+/// link-text-decoration: {String | Null},
+/// link-hover-color: {Color | String | Null},
+/// link-hover-text-decoration: {String | Null},
+/// close: {Map | Null}, // Pass parameters to `clay-close` mixin
+
 @mixin clay-label-variant($map) {
 	$bg: map-get($map, bg);
 	$border-color: map-get($map, border-color);
 	$color: map-get($map, color);
+	$outline: map-get($map, outline);
 	$text-decoration: map-get($map, text-decoration);
+	$transition: map-get($map, transition);
 	$hover-bg: map-get($map, hover-bg);
 	$hover-border-color: map-get($map, hover-border-color);
 	$hover-color: map-get($map, hover-color);
@@ -106,6 +165,7 @@
 	$focus-text-decoration: map-get($map, focus-text-decoration);
 	$disabled-bg: map-get($map, disabled-bg);
 	$disabled-border-color: map-get($map, disabled-border-color);
+	$disabled-box-shadow: map-get($map, disabled-box-shadow);
 	$disabled-color: map-get($map, disabled-color);
 	$link-color: map-get($map, link-color);
 	$link-text-decoration: map-get($map, link-text-decoration);
@@ -116,7 +176,9 @@
 	background-color: $bg;
 	border-color: $border-color;
 	color: $color;
+	outline: $outline;
 	text-decoration: $text-decoration;
+	transition: $transition;
 
 	@at-root {
 		a#{&},
@@ -161,6 +223,7 @@
 	&.disabled {
 		background-color: $disabled-bg;
 		border-color: $disabled-border-color;
+		box-shadow: $disabled-box-shadow;
 		color: $disabled-color;
 	}
 

@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayAlert renders 1`] = `
+<div
+  className="alert alert-info"
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+  role="alert"
+>
+  <span
+    className="alert-indicator"
+  >
+    <svg
+      className="lexicon-icon lexicon-icon-info-circle"
+      role="presentation"
+    >
+      <use
+        xlinkHref="/foo/bar#info-circle"
+      />
+    </svg>
+  </span>
+  <strong
+    className="lead"
+  >
+    Hello!
+  </strong>
+</div>
+`;
+
+exports[`ClayAlert renders as \`stripe\` variant 1`] = `
+<div
+  className="alert alert-fluid alert-info"
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+  role="alert"
+>
+  <div
+    className="container"
+  >
+    <span
+      className="alert-indicator"
+    >
+      <svg
+        className="lexicon-icon lexicon-icon-info-circle"
+        role="presentation"
+      >
+        <use
+          xlinkHref="/foo/bar#info-circle"
+        />
+      </svg>
+    </span>
+    <strong
+      className="lead"
+    >
+      Hello!
+    </strong>
+  </div>
+</div>
+`;
+
+exports[`ClayAlert renders as a different type 1`] = `
+<div
+  className="alert alert-danger"
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+  role="alert"
+>
+  <span
+    className="alert-indicator"
+  >
+    <svg
+      className="lexicon-icon lexicon-icon-exclamation-full"
+      role="presentation"
+    >
+      <use
+        xlinkHref="/foo/bar#exclamation-full"
+      />
+    </svg>
+  </span>
+  <strong
+    className="lead"
+  >
+    Hello!
+  </strong>
+</div>
+`;
+
+exports[`ClayAlert renders with ToastContainer as a wrapper  1`] = `
+<div
+  className="alert-container container"
+>
+  <div
+    className="alert-notifications alert-notifications-fixed"
+  >
+    <div
+      className="alert alert-info"
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      role="alert"
+    >
+      <span
+        className="alert-indicator"
+      >
+        <svg
+          className="lexicon-icon lexicon-icon-info-circle"
+          role="presentation"
+        >
+          <use
+            xlinkHref="/foo/bar#info-circle"
+          />
+        </svg>
+      </span>
+      <strong
+        className="lead"
+      >
+        One!
+      </strong>
+    </div>
+    <div
+      className="alert alert-info"
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      role="alert"
+    >
+      <span
+        className="alert-indicator"
+      >
+        <svg
+          className="lexicon-icon lexicon-icon-info-circle"
+          role="presentation"
+        >
+          <use
+            xlinkHref="/foo/bar#info-circle"
+          />
+        </svg>
+      </span>
+      <strong
+        className="lead"
+      >
+        Two!
+      </strong>
+    </div>
+    <div
+      className="alert alert-info"
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      role="alert"
+    >
+      <span
+        className="alert-indicator"
+      >
+        <svg
+          className="lexicon-icon lexicon-icon-info-circle"
+          role="presentation"
+        >
+          <use
+            xlinkHref="/foo/bar#info-circle"
+          />
+        </svg>
+      </span>
+      <strong
+        className="lead"
+      >
+        Three!
+      </strong>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayAlert renders with a title and a message with markup 1`] = `
+<div
+  className="alert alert-info"
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+  role="alert"
+>
+  <span
+    className="alert-indicator"
+  >
+    <svg
+      className="lexicon-icon lexicon-icon-info-circle"
+      role="presentation"
+    >
+      <use
+        xlinkHref="/foo/bar#info-circle"
+      />
+    </svg>
+  </span>
+  <strong
+    className="lead"
+  >
+    Hello!
+  </strong>
+  <span>
+    test
+  </span>
+</div>
+`;
+
+exports[`ClayAlert renders with an icon for closing 1`] = `
+<div
+  className="alert alert-dismissible alert-info"
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+  role="alert"
+>
+  <span
+    className="alert-indicator"
+  >
+    <svg
+      className="lexicon-icon lexicon-icon-info-circle"
+      role="presentation"
+    >
+      <use
+        xlinkHref="/foo/bar#info-circle"
+      />
+    </svg>
+  </span>
+  <strong
+    className="lead"
+  >
+    Hello!
+  </strong>
+  <button
+    aria-label="Close"
+    className="close"
+    onClick={[Function]}
+    type="button"
+  >
+    <svg
+      className="lexicon-icon lexicon-icon-times"
+      role="presentation"
+    >
+      <use
+        xlinkHref="/foo/bar#times"
+      />
+    </svg>
+  </button>
+</div>
+`;

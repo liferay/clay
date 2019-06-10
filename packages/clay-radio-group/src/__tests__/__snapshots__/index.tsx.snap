@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rendering default 1`] = `
+<div
+  className=""
+>
+  <div
+    className="custom-control custom-radio"
+  >
+    <label>
+      <input
+        checked={true}
+        className="custom-control-input"
+        onChange={[Function]}
+        role="radio"
+        type="radio"
+        value="one"
+      />
+      <span
+        className="custom-control-label"
+      >
+        <span
+          className="custom-control-label-text"
+        >
+          One
+        </span>
+      </span>
+    </label>
+  </div>
+  <div
+    className="custom-control custom-radio"
+  >
+    <label>
+      <input
+        checked={false}
+        className="custom-control-input"
+        onChange={[Function]}
+        role="radio"
+        type="radio"
+        value="two"
+      />
+      <span
+        className="custom-control-label"
+      >
+        <span
+          className="custom-control-label-text"
+        >
+          Two
+        </span>
+      </span>
+    </label>
+  </div>
+  <div
+    className="custom-control custom-radio"
+  >
+    <label>
+      <input
+        checked={false}
+        className="custom-control-input"
+        onChange={[Function]}
+        role="radio"
+        type="radio"
+        value="three"
+      />
+      <span
+        className="custom-control-label"
+      >
+        <span
+          className="custom-control-label-text"
+        >
+          Three
+        </span>
+      </span>
+    </label>
+  </div>
+</div>
+`;

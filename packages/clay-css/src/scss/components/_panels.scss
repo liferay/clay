@@ -28,10 +28,6 @@
 		@if not ($panel-header-offset-border-radius == 0) {
 			@include border-bottom-radius($panel-header-offset-border-radius);
 		}
-
-		@include transition(border-radius 1s ease, border-width 1s ease);
-
-		border-bottom-width: 0;
 	}
 
 	&.collapse-icon {
@@ -50,18 +46,10 @@
 }
 
 .panel-header-link {
-	color: inherit;
-	display: block;
-	padding: $panel-header-padding-y $panel-header-padding-x;
-	text-decoration: $panel-header-link-text-decoration;
+	@include clay-link($panel-header-link);
 
-	&:hover {
-		color: inherit;
-		text-decoration: $panel-header-link-hover-text-decoration;
-	}
-
-	&:focus {
-		z-index: 1;
+	&.panel-header.collapsed {
+		@include clay-link($panel-header-collapsed-link);
 	}
 
 	.collapse-icon {
@@ -98,8 +86,6 @@
 // Panel Group
 
 .panel-group {
-	background-color: $panel-bg;
-
 	@include border-radius($panel-border-radius);
 
 	.panel {
@@ -129,8 +115,6 @@
 				@if not ($panel-header-offset-border-radius == 0) {
 					@include border-bottom-radius($panel-header-offset-border-radius);
 				}
-
-				@include transition(border-radius 1s ease);
 			}
 		}
 	}
@@ -161,6 +145,12 @@
 		&:last-child {
 			@if ($panel-border-radius > 0) {
 				border-radius: 0;
+			}
+
+			.panel-header {
+				&, &.collapsed {
+					border-radius: 0;
+				}
 			}
 		}
 	}
@@ -270,8 +260,22 @@
 	}
 }
 
+// Panel Group Sizes
+
+.panel-group-sm {
+	.panel {
+		@include clay-panel-variant($panel-group-sm);
+	}
+}
+
 // Panel Variants
 
 .panel-secondary {
 	@include clay-panel-variant($panel-secondary);
+}
+
+// Panel Unstyled
+
+.panel-unstyled {
+	@include clay-panel-variant($panel-unstyled);
 }

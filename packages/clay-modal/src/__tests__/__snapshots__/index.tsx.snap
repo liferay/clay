@@ -1,0 +1,244 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayModal renders 1`] = `
+Array [
+  <div
+    className="modal-backdrop fade"
+  />,
+  <div
+    className="fade modal d-block"
+  >
+    <div
+      className="modal-dialog"
+      tabIndex={-1}
+    >
+      <div
+        className="modal-content"
+      >
+        <div
+          className="modal-header"
+        >
+          <div
+            className="modal-title"
+          >
+            Foo
+          </div>
+          <button
+            aria-label="close"
+            className="close btn btn-unstyled"
+            onClick={[Function]}
+            type="button"
+          >
+            <svg
+              className="lexicon-icon lexicon-icon-times"
+              role="presentation"
+            >
+              <use
+                xlinkHref="icons.svg#times"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          className="modal-body"
+        >
+          <h1>
+            Hello world!
+          </h1>
+        </div>
+        <div
+          className="modal-footer"
+        >
+          <div
+            className="modal-item-first"
+          />
+          <div
+            className="modal-item"
+          />
+          <div
+            className="modal-item-last"
+          >
+            <button
+              className="btn btn-primary"
+              onClick={[Function]}
+              type="button"
+            >
+              Primary
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`ClayModal renders a body component with url 1`] = `
+Array [
+  <div
+    className="modal-backdrop fade"
+  />,
+  <div
+    className="fade modal d-block"
+  >
+    <div
+      className="modal-dialog"
+      tabIndex={-1}
+    >
+      <div
+        className="modal-content"
+      >
+        <div
+          className="modal-body modal-body-iframe"
+        >
+          <iframe
+            src="http://localhost"
+            title="http://localhost"
+          />
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`ClayModal renders a footer component with buttons 1`] = `
+Array [
+  <div
+    className="modal-backdrop fade"
+  />,
+  <div
+    className="fade modal d-block"
+  >
+    <div
+      className="modal-dialog"
+      tabIndex={-1}
+    >
+      <div
+        className="modal-content"
+      >
+        <div
+          className="modal-footer"
+        >
+          <div
+            className="modal-item-first"
+          >
+            <button
+              className="btn btn-primary"
+              type="button"
+            >
+              Bar
+            </button>
+          </div>
+          <div
+            className="modal-item"
+          >
+            <button
+              className="btn btn-primary"
+              type="button"
+            >
+              Baz
+            </button>
+          </div>
+          <div
+            className="modal-item-last"
+          >
+            <button
+              className="btn btn-primary"
+              onClick={[Function]}
+              type="button"
+            >
+              Foo
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`ClayModal renders with Header 1`] = `
+Array [
+  <div
+    className="modal-backdrop fade"
+  />,
+  <div
+    className="fade modal d-block"
+  >
+    <div
+      className="modal-dialog"
+      tabIndex={-1}
+    >
+      <div
+        className="modal-content"
+      >
+        <div
+          className="modal-header"
+        >
+          <div
+            className="modal-title"
+          >
+            Foo
+          </div>
+          <button
+            aria-label="close"
+            className="close btn btn-unstyled"
+            onClick={[Function]}
+            type="button"
+          >
+            <svg
+              className="lexicon-icon lexicon-icon-times"
+              role="presentation"
+            >
+              <use
+                xlinkHref="icons.svg#times"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`ClayModal renders with size 1`] = `
+Array [
+  <div
+    className="modal-backdrop fade"
+  />,
+  <div
+    className="fade modal d-block"
+  >
+    <div
+      className="modal-dialog modal-lg"
+      tabIndex={-1}
+    >
+      <div
+        className="modal-content"
+      />
+    </div>
+  </div>,
+]
+`;
+
+exports[`ClayModal renders with status 1`] = `
+Array [
+  <div
+    className="modal-backdrop fade"
+  />,
+  <div
+    className="fade modal d-block"
+  >
+    <div
+      className="modal-dialog modal-success"
+      tabIndex={-1}
+    >
+      <div
+        className="modal-content"
+      />
+    </div>
+  </div>,
+]
+`;

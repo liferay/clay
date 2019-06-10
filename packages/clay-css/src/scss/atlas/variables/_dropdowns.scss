@@ -1,4 +1,5 @@
-$dropdown-border-color: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
+$dropdown-bg: $white !default;
+$dropdown-border-color: $gray-300 !default;
 $dropdown-border-width: 0 !default;
 $dropdown-box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.3) !default;
 $dropdown-font-size: 0.875rem !default; // 14px
@@ -7,27 +8,44 @@ $dropdown-padding-y: 0.375rem !default; // 6px
 $dropdown-min-height: 40px !default;
 $dropdown-min-width: 240px !default;
 $dropdown-max-width: 240px !default;
+$dropdown-spacer: 0.3125rem !default; // 5px
 
-$dropdown-item-padding-x: 1.25rem !default; // 20px
-$dropdown-item-padding-y: 0.5rem !default; // 8px
-
-$dropdown-header-color: $secondary !default;
+$dropdown-header-color: $gray-600 !default;
 $dropdown-header-font-size: 0.875rem !default; // 14px
 $dropdown-header-margin-top: 0.625rem !default; // 10px
 
 $dropdown-subheader-font-size: 0.75rem !default; // 12px
 $dropdown-subheader-margin-top: 0.625rem !default; // 10px
 
-$dropdown-link-color: $secondary !default;
+$dropdown-link-color: $gray-600 !default;
 $dropdown-link-font-weight: $font-weight-normal !default;
-$dropdown-link-hover-color: $body-color !default;
+$dropdown-link-hover-color: $gray-900 !default;
 $dropdown-link-hover-bg: lighten($component-active-bg, 44.90) !default;
 $dropdown-link-active-color: $dropdown-link-hover-color !default;
 $dropdown-link-active-bg: $dropdown-link-hover-bg !default;
 $dropdown-link-active-font-weight: $font-weight-semi-bold !default;
-$dropdown-link-disabled-color: lighten(desaturate(adjust-hue($body-color, -1), 0.74), 51.76) !default;
+$dropdown-link-disabled-color: $gray-500 !default;
+
+$dropdown-item-padding-x: 1.25rem !default; // 20px
+$dropdown-item-padding-y: 0.5rem !default; // 8px
+
+$dropdown-item-base: () !default;
+$dropdown-item-base: map-merge((
+	font-size: inherit,
+	// Weird box-shadow inset with border-radius render in IE https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/12515080/
+	focus-box-shadow: inset 0 0 0 0.125rem $primary-l1#{','} inset 0 0 0 0.25rem $white,
+	focus-outline: 0,
+	focus-text-decoration: none,
+), $dropdown-item-base);
 
 $dropdown-divider-bg: $dropdown-border-color !default;
+
+// Autocomplete Dropdown Menu
+
+$autocomplete-dropdown-menu: () !default;
+$autocomplete-dropdown-menu: map-merge((
+	max-height: 10rem, // 160px
+), $autocomplete-dropdown-menu);
 
 // Dropdown Action
 

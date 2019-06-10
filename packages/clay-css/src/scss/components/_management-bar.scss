@@ -1,5 +1,6 @@
 .management-bar {
 	@include clay-navbar-size($management-bar-size);
+	@include clay-navbar-variant($management-bar-base);
 }
 
 .management-bar-light {

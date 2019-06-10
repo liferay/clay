@@ -1,16 +1,19 @@
-$bg-checkered-fg: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
+$bg-checkered-fg: $gray-300 !default;
 
 // Close
 
 $close: () !default;
 $close: map-merge((
-	color: $body-color,
+	color: $gray-900,
 	opacity: 1,
-	hover-color: $body-color,
+	hover-color: $gray-900,
 	hover-opacity: 1,
+	focus-box-shadow: $btn-focus-box-shadow,
 	focus-opacity: 1,
-	disabled-color: $secondary,
-	disabled-opacity: $btn-disabled-opacity
+	focus-outline: 0,
+	disabled-color: $gray-600,
+	disabled-opacity: $btn-disabled-opacity,
+	btn-focus-box-shadow: $btn-focus-box-shadow,
 ), $close);
 
-$page-header-bg: #FFF !default;
+$page-header-bg: $white !default;

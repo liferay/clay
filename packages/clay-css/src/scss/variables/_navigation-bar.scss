@@ -13,6 +13,8 @@ $navigation-bar-size: map-merge((
 	active-border-bottom-width: 0.25rem
 ), $navigation-bar-size);
 
+$navigation-bar-base: () !default;
+
 $navigation-bar-light: () !default;
 $navigation-bar-light: map-merge((
 	bg: $light,
@@ -26,7 +28,7 @@ $navigation-bar-light: map-merge((
 $navigation-bar-secondary: () !default;
 $navigation-bar-secondary: map-merge((
 	bg: $secondary,
-	color: #FFF,
+	color: $white,
 	link-color: rgba(255, 255, 255, 0.65),
 	link-hover-color: rgba(255, 255, 255, 0.9),
 	link-active-color: rgba(255, 255, 255, 0.9),

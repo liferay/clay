@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayIcon renders 1`] = `
+<svg
+  className="lexicon-icon lexicon-icon-cool-icon"
+  role="presentation"
+>
+  <use
+    xlinkHref="/path/to/some/resource.svg#cool-icon"
+  />
+</svg>
+`;
+
+exports[`ClayIcon renders with context spritemap 1`] = `
+<svg
+  className="lexicon-icon lexicon-icon-cool-icon"
+  role="presentation"
+>
+  <use
+    xlinkHref="foo/bar.svg#cool-icon"
+  />
+</svg>
+`;

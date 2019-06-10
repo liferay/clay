@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayLink renders 1`] = `
+<a
+  className=""
+/>
+`;
+
+exports[`ClayLink renders with a children content 1`] = `
+<a
+  className=""
+>
+  My Link
+</a>
+`;
+
+exports[`ClayLink renders with a display type 1`] = `
+<a
+  className="link-secondary"
+/>
+`;
+
+exports[`ClayLink renders with href 1`] = `
+<a
+  className=""
+  href="#links"
+/>
+`;

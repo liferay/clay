@@ -1,0 +1,66 @@
+{
+	"env": {
+		"browser": true,
+		"node": true,
+		"es6": true,
+		"jest": true
+	},
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"extends": "liferay",
+	"plugins": [
+		"@typescript-eslint",
+		"react",
+		"react-hooks",
+		"sort-destructure-keys",
+		"sort-imports-es6-autofix"
+	],
+	"rules": {
+		"@typescript-eslint/no-unused-vars": 2,
+		"@typescript-eslint/interface-name-prefix": ["error", "always"],
+		"no-underscore-dangle": [
+			2,
+			{
+				"allowAfterThis": true,
+				"enforceInMethodNames": true
+			}
+		],
+		"no-unused-vars": 0,
+		"prefer-template": 2,
+		"react-hooks/rules-of-hooks": "error",
+		"react/jsx-boolean-value": 2,
+		"react/jsx-key": 2,
+		"react/jsx-no-bind": [
+			2,
+			{
+				"allowArrowFunctions": true
+			}
+		],
+		"react/jsx-no-literals": 2,
+		"react/jsx-sort-props": 2,
+		"react/jsx-uses-react": "error",
+		"react/jsx-uses-vars": 2,
+		"require-jsdoc": 0,
+		"sort-destructure-keys/sort-destructure-keys": 2,
+		"sort-imports-es6-autofix/sort-imports-es6": [
+			2,
+			{
+				"ignoreCase": true,
+				"ignoreMemberSort": false,
+				"memberSyntaxSortOrder": ["none", "all", "single", "multiple"]
+			}
+		],
+		"sort-keys": [
+			2,
+			"asc",
+			{
+				"caseSensitive": false
+			}
+		],
+		"sort-vars": 2
+	}
+}

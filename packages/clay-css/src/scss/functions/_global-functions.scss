@@ -1,6 +1,10 @@
-// Sass ternary shorthand: if($variable-name, true, false)
-// @param $var - The variable name
-// @param $val - The default value
+////
+/// @group globals
+////
+
+/// A helper function for setting default values in variables inside mixins if no value is declared. If the value of a variable is `clay-unset`, `setter` returns a value of `null` which prevents Sass from outputting the declaration. If the value of a variable is `null`, `setter` returns the default, `$val`.
+/// @param {Any} $var - The Sass variable
+/// @param {Any} $val - The default value to return if `$var` is `null`
 
 @function setter($var, $val: false) {
 	@if ($var == clay-unset) {
@@ -14,9 +18,8 @@
 	@return $val;
 }
 
-// Returns a number with the opposite sign, generally used for null values so
-// Sass doesn't output value '-null'
-// @param $num - a number
+/// A helper function that returns the opposite of a number, generally used for `null` values so Sass doesn't output a value `-null`. Returns `null` if `$num` is not a number.
+/// @param {Any} $num - The variable 
 
 @function math-sign($num) {
 	@if (type-of($num) == 'number') {
@@ -26,9 +29,9 @@
 	@return null;
 }
 
-// Helper for displaying warning messages for required variables
-// @param $var - The variable to check
-// @param $msg - The error message
+/// A helper function for displaying warning messages for required variables.
+/// @param {Any} $var - The variable to check
+/// @param {String} $msg['This value is required!'] - The error message to display
 
 @function required($var, $msg: 'This value is required!') {
 	@if not ($var) {
@@ -93,10 +96,10 @@
 	@return $number;
 }
 
-// Returns name of previous breakpoint or null if first breakpoint
-// @param $name - breakpoint name {xs|sm|md|lg|xl}
-// @param $breakpoints - Sass map that defines the breakpoints to use
-// @param $breakpoint-names - A Sass list of all the keys in $breakpoints
+/// A function that returns the name of the previous breakpoint relative to the breakpoint passed in through `$name` in the Sass map `$grid-breakpoints`. If the breakpoint does not exist in the Sass map, it returns the first breakpoint key.
+/// @param {Key} $name - The breakpoint name or keys in `$grid-breakpoints` (e.g., `xs`, `sm`, `md`, `lg`, `xl`)
+/// @param {Map} $breakpoints[$grid-breakpoints] - A map that defines the breakpoints
+/// @param {List} $breakpoint-names[map-keys($breakpoints)] - A list of all the keys in $breakpoints
 
 @function clay-breakpoint-prev($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
 	@each $value in $breakpoint-names {
@@ -108,12 +111,11 @@
 	@return nth($breakpoint-names, 1);
 }
 
-// str-replace and svg-url functions from http://codepen.io/jakob-e/pen/doMoML
-
-// Function to replace characters in a string
-// @param $string - the string to operate on
-// @param $search - the character to replace
-// @param $replace - the character to replace $search with
+/// A function to replace all instances of a specific character in a string.
+/// @param {String} $string - The string to operate on
+/// @param {String} $search - The character to replace
+/// @param {String} $replace[''] - The character to replace `$search` with
+/// @link http://codepen.io/jakob-e/pen/doMoML
 
 @function clay-str-replace($string, $search, $replace: '') {
 	$index: str-index($string, $search);
@@ -127,8 +129,9 @@
 	@return $string;
 }
 
-// Function to encode SVG and provide back a data url
-// @param $svg - The SVG markup to encode
+/// A function to encode an SVG and provide back a data URI to be used in `background-image`. If the SVG uses double quotes to delimit attribute names and values, wrap the SVG in single quotes or vice versa.
+/// @param {String} $svg - The SVG markup to encode
+/// @link http://codepen.io/jakob-e/pen/doMoML
 
 @function clay-svg-url($svg) {
 	$encoded: '';
@@ -157,15 +160,18 @@
 	@return url("data:image/svg+xml;charset=utf8,#{$encoded}");
 }
 
-// Function that colors and returns a specified lexicon icon as data uri
-// @param $name - Icon name e.g. angle-right
-// @param $color - Color of icon
+/// A function that returns a specific Lexicon Icon with a specific color as a data URI to be used in `background-image`.
+/// @param {String} $name - The Lexicon Icon name (e.g., angle-right)
+/// @param {Color} $color - The color of the Lexicon Icon
 
 @function clay-icon($name, $color) {
 	$lx-icons: clay-get-icons($color);
 
 	@return clay-svg-url(map-get($lx-icons, $name));
 }
+
+/// A function that returns all the Lexicon Icons with a specific color.
+/// @param {Color} $color[''] - The color to use for all the Lexicon Icons
 
 @function clay-get-icons($color: '') {
 	// Don't touch the $lx-icons variable. It's auto-generated to contain all of the icons from the icons directory
@@ -481,6 +487,8 @@
 
 	'sv-se': '<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path fill="#C0CFD8" d="M0 64h512v384H0z"/><path fill="#0035A0" d="M16 80h480v352H16z"/><path fill="#FCD638" d="M144 80h64v352h-64z"/><path fill="#FCD638" d="M16 224h480.1v64H16z"/></svg>',
 
+	'ta-in': '<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path fill="#C0CFD8" d="M0 64h512v384H0z"/><path fill="#F5984C" d="M16 80.3h480v112H16z"/><path fill="#75BD4A" d="M16 320h480v112H16z"/><path fill="#FFF" d="M16 192h480v128H16z"/><circle fill="#0035A0" cx="256" cy="256" r="40"/></svg>',
+
 	'th-th': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#C0CFD8" d="M0 64h512v384H0z"/><path fill="#F01616" d="M16 372.5h480v58H16z"/><path fill="#FFF" d="M16 313.9h480v58H16z"/><path fill="#241B50" d="M16 198h480v116H16z"/><path fill="#FFF" d="M16 139.9h480v58H16z"/><path fill="#F01616" d="M16 82h480v58H16z"/></svg>',
 
 	'tr-tr': '<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path fill="#C0CFD8" d="M0 64h512v384H0z"/><path fill="#E03232" d="M16 80h480v352H16z"/><path fill="#FFF" d="M240 336c-44.2 0-80-35.8-80-80s35.8-80 80-80c2 0 4 .4 6 .6-15.4-10.5-34-16.6-54-16.6-53 0-96 43-96 96s43 96 96 96c20 0 38.6-6.1 54-16.6-2 .2-4 .6-6 .6z"/><path fill="#FFF" d="M253.2 202l20.6 25.7 30.7-11.6-18 27.4 20.5 25.7-31.7-8.7-18.1 27.5-1.5-32.8-31.7-8.7 30.8-11.6z"/></svg>',
@@ -573,6 +581,8 @@
 
 	'message': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="lexicon-icon-outline message-speech-balloon-outline" d="M480 31.9H32c-19.2 0-32 12.8-32 32v320c0 19.2 12.8 32 32 32h64v32c0 25.6 32 44.8 54.4 22.4l54.4-54.4H480c19.2 0 32-12.8 32-32v-320c0-19.2-12.8-32-32-32zm-32 320H64v-256h384v256z" fill="#{$color}"/><path class="lexicon-icon-outline message-speech-balloon-content1" d="M336 159.9H144c-22.4 0-22.4 32 0 32h192c19.2 0 22.4-32 0-32z" fill="#{$color}"/><path class="lexicon-icon-outline message-speech-balloon-content2" d="M272 255.9H144c-22.4 0-22.4 32 0 32h128c19.2 0 22.4-32 0-32z" fill="#{$color}"/></svg>',
 
+	'minus-circle': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="lexicon-icon-outline" d="M256.4 0c-340.8 0-342.8 512 0 512 338.8 0 342.8-512 0-512zm128.3 304H128.1c-64.2 0-63.2-96 0-96h256.6c64.1 0 66.1 96 0 96z" fill="#{$color}"/></svg>',
+
 	'mobile-device-rules': '<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 448.1588"><path class="lexicon-icon-body" d="M192 0H64C28.8 0 0 28.8 0 64v320.159c0 35.2 28.8 64 64 64h128c35.2 0 64-28.8 64-64V64c0-35.2-28.8-64-64-64zm-63 416.159c-8.836 0-16-7.164-16-16s7.163-16 16-16 16 7.163 16 16-7.163 16-16 16zm63-96v30.804H64V64h128v256.159z"/><circle class="lexicon-icon-outline" cx="320" cy="96" r="32" fill="#{$color}"/><circle class="lexicon-icon-outline" cx="320" cy="352" r="32" fill="#{$color}"/><circle class="lexicon-icon-outline" cx="320" cy="224" r="32" fill="#{$color}"/><path class="lexicon-icon-outline" d="M416 128h64c17.673 0 32-14.327 32-32s-14.327-32-32-32h-64c-17.673 0-32 14.327-32 32s14.327 32 32 32zM480 192h-64c-17.673 0-32 14.327-32 32s14.327 32 32 32h64c17.673 0 32-14.327 32-32s-14.327-32-32-32zM480 320h-64c-17.673 0-32 14.327-32 32s14.327 32 32 32h64c17.673 0 32-14.327 32-32s-14.327-32-32-32z" fill="#{$color}"/></svg>',
 
 	'mobile-landscape': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="lexicon-icon-outline" d="M0 128v256c0 35.2 28.8 64 64 64h384c35.2 0 64-28.8 64-64V128c0-35.2-28.8-64-64-64H64C28.8 64 0 92.8 0 128zm480 110v32c0 22-32 20-32 0v-32c0-22 32-21 32 0zm-96-109.3c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V160.7c0-17.7 14.3-32 32-32h288z" fill="#{$color}"/></svg>',
@@ -622,6 +632,8 @@
 	'phone': '<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path class="lexicon-icon-body" fill="none" d="M490.9 363.4l-2.8-5.1C468.3 322.4 359.9 304 358.9 304l-2.4-.1-10.8 1.5c-16.9 3.9-31 15.7-50.5 33.8-25.2-14.7-52.4-37.6-68.7-54.3-16.7-17.1-39.9-47.7-52.4-71.6 22-21.6 37.4-38.7 38.4-61.7 0-1-13.8-110.1-48.9-131.7l-5.1-3.1C148.9 11.1 131 .4 109.2.4c-5.4 0-10.8.7-17 2.3-6.9 2-13.3 4.8-20 9.1C55.9 23 26.2 46.7 11.7 78c-13.5 30.8-4.4 187.9 113.4 311 111.6 116.8 241.2 122.7 266.1 122.7 6.4 0 15.1-.3 22.4-1.6l2.8-.1 6.7-2.5c32.2-13.2 56.9-41.7 68.4-57.2 26.9-34.8 6.3-73.7-.6-86.9z"/><path class="lexicon-icon-outline" d="M490.9 363.4l-2.8-5.1C468.3 322.4 359.9 304 358.9 304l-2.4-.1-10.8 1.5c-16.9 3.9-31 15.7-50.5 33.8-25.2-14.7-52.4-37.6-68.7-54.3-16.7-17.1-39.9-47.7-52.4-71.6 22-21.6 37.4-38.7 38.4-61.7 0-1-13.8-110.1-48.9-131.7l-5.1-3.1C148.9 11.1 131 .4 109.2.4c-5.4 0-10.8.7-17 2.3-6.9 2-13.3 4.8-20 9.1C55.9 23 26.2 46.7 11.7 78c-13.5 30.8-4.4 187.9 113.4 311 111.6 116.8 241.2 122.7 266.1 122.7 6.4 0 15.1-.3 22.4-1.6l2.8-.1 6.7-2.5c32.2-13.2 56.9-41.7 68.4-57.2 26.9-34.8 6.3-73.7-.6-86.9zm-45.5 51.7c-10.5 14-27.3 31.3-42.6 38-1.5.2-5.4.6-11.6.6-20.7 0-128.8-5.1-224.1-104.8C67 244.3 62.6 119 65.5 100c6.6-12.7 21.2-27.7 38.7-39.8.5-.3 1.9-1.1 3.4-1.6 5.5-1.4 15.6 4.6 21 7.8l2.4 1.5c8.1 13.5 20.6 63.6 23.3 81.2-3.8 6.4-19.2 21.4-27.7 29.8l-1 1.1c-11.9 12.8-15.5 31.2-8.9 47.3 14.2 32.9 45.9 75.3 68.4 98.3 22.1 22.8 59.4 53.4 93.2 70.6 16.3 8.1 36.3 4.8 49.1-7.5 10.1-9.4 25-23.4 30.6-26.3 17.6 3.4 67.7 18.2 80.8 26.7l1.1 2c7 13.2 8.6 19.9 5.5 24z" fill="#{$color}"/></svg>',
 
 	'picture': '<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path class="lexicon-icon-outline" d="M168.45 88.689c0 45.13-36.585 81.717-81.717 81.717S5.016 133.821 5.016 88.689c0-45.13 36.586-81.717 81.717-81.717s81.717 36.586 81.717 81.717zM505.454 480.481L335.262 201.5c-5.408-8.894-17.717-10.388-25.116-3.095L200.361 306.839l-40.306-39.808c-7.4-7.329-19.709-5.798-25.116 3.096L6.548 480.484C.003 491.228 7.722 505.03 20.351 505.03h471.337c12.594 0 20.313-13.803 13.767-24.546z" fill="#{$color}"/></svg>',
+
+	'pin': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="lexicon-icon-outline pin-tack" fill="#{$color}" d="M0 512l140-216.5 77.6 77.4z"/><path class="lexicon-icon-outline pin-body" d="M501.9 140.7l-129.2-129c-35.4-32-76.7 8.8-58.1 41.9l-175.4 85.8c-34.8-34.8-84.3 14.6-50.9 52.9L321 424.5c29.6 29.4 87.9-11.4 51.7-51.6l85.9-175.1c35.9 18.9 71.3-24.5 43.3-57.1z" fill="#{$color}"/></svg>',
 
 	'play': '<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path class="lexicon-icon-outline" d="M127.499 453.745V58.255c0-46.992 26.018-58.255 57.841-25.017l189.245 197.744c13.165 13.751 13.165 36.28 0 50.067L185.34 478.794c-31.788 33.205-57.841 21.941-57.841-25.05z" fill="#{$color}"/></svg>',
 
@@ -690,6 +702,8 @@
 	'shopping-cart': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><circle class="lexicon-icon-outline shopping-cart-wheel1" cx="144" cy="464" r="48" fill="#{$color}"/><circle class="lexicon-icon-outline shopping-cart-wheel2" cx="432" cy="464" r="48" fill="#{$color}"/><path class="lexicon-icon-outline shopping-cart-basket" d="M495.9 352.1H192.5c-17.7 0-32.4-14.2-32.4-31.8s14.9-31.9 32.6-31.9c2.5 0 305-34.8 305-34.8 8.1-.9 14.2-7.7 14.2-15.9V80.1c0-8.8-7.1-15.9-15.9-15.9H129.2l-20.8-53.9C106 4.1 100.1 0 93.5 0H16c-21.5.7-21.1 31.7.1 32h66.5l88.2 228.5c-24.4 9-42.6 32.2-42.6 59.7 0 35.3 29.2 63.8 64.5 63.8H496c21.9-1.5 20.6-31-.1-31.9zm-207.8-192v-64h94.5L384 160l-95.9.1zm192-.1H416l.1-64h64v64zM256 96.1l.1 63.9h-89.9l-24.7-63.9H256z" fill="#{$color}"/></svg>',
 
 	'shortcut': '<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path class="lexicon-icon-outline" d="M480 320c-17.673 0-32 14.327-32 32v96H64V64h96c17.673 0 32-14.327 32-32S177.673 0 160 0H64C28.71 0 0 28.71 0 64v384c0 35.29 28.71 64 64 64h384c35.29 0 64-28.71 64-64v-96c0-17.673-14.327-32-32-32z" fill="#{$color}"/><path class="lexicon-icon-outline" d="M480 0H320c-17.673 0-32 14.327-32 32s14.327 32 32 32h82.746L265.373 201.373c-12.497 12.497-12.497 32.757 0 45.255C271.621 252.875 279.811 256 288 256s16.379-3.124 22.627-9.373L448 109.254V192c0 17.673 14.327 32 32 32s32-14.327 32-32V32c0-17.673-14.327-32-32-32z" fill="#{$color}"/></svg>',
+
+	'simple-circle': '<svg xmlns="http://www.w3.org/2000/svg" height="512" width="512" viewBox="0 0 512 512"><path class="lexicon-icon-outline" fill-rule="evenodd" d="M256 384c70.691 0 128-57.309 128-128 0-70.692-57.309-128-128-128-70.692 0-128 57.308-128 128 0 70.691 57.308 128 128 128z" fill="#{$color}"/></svg>',
 
 	'simulation-menu-closed': '<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path class="lexicon-icon-outline" d="M480 224h-2.272C463.695 125.898 386.101 48.304 288 34.272V32c0-17.673-14.327-32-32-32-17.673 0-32 14.327-32 32v2.272C125.898 48.305 48.304 125.899 34.272 224H32c-17.673 0-32 14.327-32 32 0 17.673 14.327 32 32 32h2.272C48.305 386.101 125.899 463.696 224 477.728V480c0 17.673 14.327 32 32 32 17.673 0 32-14.327 32-32v-2.272C386.101 463.695 463.696 386.101 477.728 288H480c17.673 0 32-14.327 32-32 0-17.673-14.327-32-32-32zM324.493 93.811c20.952 8.862 39.779 21.559 55.958 37.738s28.876 35.006 37.738 55.958A174.098 174.098 0 0 1 429.105 224h-32.673a143.188 143.188 0 0 0-7.767-24.066c-7.255-17.153-17.632-32.548-30.841-45.757s-28.604-23.585-45.757-30.84a143.246 143.246 0 0 0-24.066-7.766V82.897a174.011 174.011 0 0 1 36.493 10.915zM224 224h-58.53c9.642-27.275 31.255-48.888 58.53-58.53V224zm0 64v58.53c-27.274-9.642-48.888-31.255-58.53-58.53H224zm64 0h58.53c-9.642 27.274-31.255 48.889-58.53 58.53V288zm0-64v-58.53c27.274 9.642 48.889 31.255 58.53 58.53H288zM93.811 187.507c8.862-20.952 21.559-39.779 37.738-55.958s35.006-28.876 55.958-37.738A174.035 174.035 0 0 1 224 82.896v32.674a143.366 143.366 0 0 0-24.066 7.766c-17.153 7.255-32.548 17.632-45.757 30.841s-23.585 28.604-30.84 45.757A143.246 143.246 0 0 0 115.571 224H82.897a174.011 174.011 0 0 1 10.915-36.493zm93.696 230.682c-20.952-8.862-39.779-21.559-55.958-37.738s-28.876-35.006-37.738-55.958A174.035 174.035 0 0 1 82.896 288h32.674a143.366 143.366 0 0 0 7.766 24.066c7.255 17.153 17.632 32.548 30.841 45.757s28.604 23.586 45.757 30.841A143.34 143.34 0 0 0 224 396.431v32.673a174.014 174.014 0 0 1-36.493-10.916zm230.682-93.696c-8.862 20.952-21.559 39.779-37.738 55.958s-35.006 28.876-55.958 37.738A174.098 174.098 0 0 1 288 429.105v-32.673a143.188 143.188 0 0 0 24.066-7.767c17.153-7.255 32.548-17.632 45.757-30.841s23.586-28.604 30.841-45.757a143.34 143.34 0 0 0 7.767-24.066h32.673a174.014 174.014 0 0 1-10.916 36.493z" fill="#{$color}"/></svg>',
 
@@ -770,6 +784,8 @@
 	'undo': '<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path class="lexicon-icon-outline" d="M73.4 137.4l96-96c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-41.2 41.2H288c88.2 0 160 71.8 160 160s-71.8 160-160 160c-17.7 0-32-14.3-32-32s14.3-32 32-32c52.9 0 96-43.1 96-96s-43.1-96-96-96H173l41.4 41.4c12.5 12.5 12.5 32.8 0 45.3-6.2 6.2-14.4 9.4-22.6 9.4-8.2 0-16.4-3.1-22.6-9.4l-95.8-96c-12.5-12.5-12.5-32.7 0-45.2z" fill="#{$color}"/></svg>',
 
 	'unlock': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="lexicon-icon-outline" d="M364.8 223.9H192v-96.1c0-84 128-84.7 128 0v31.5h32v-31.5c0-127.4-192-128.1-192 0v96.1h-19.2c-28.2 0-44.8 23-44.8 51.2v153.7c0 28.2 16.6 51.2 44.8 51.2h224c28.2 0 51.2-23 51.2-51.2V275.1c0-28.2-23-51.2-51.2-51.2zM288 416h-64v-96.1h64V416z" fill="#{$color}"/></svg>',
+
+	'unpin': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="lexicon-icon-outline unpin-tack" fill="#{$color}" d="M0 512l140-216.5 77.6 77.4z"/><path class="lexicon-icon-outline unpin-body" d="M414.8 458.6l-362-362C12 55 69-4 115 36.4l362 362c42 46.6-15 103.6-62.2 60.2z" fill="#{$color}"/><path class="lexicon-icon-outline unpin-head" d="M501.9 140.7l-129.2-129c-35.4-32-76.7 8.8-58.1 41.9L247 87l180 174 31.6-63.2c35.9 18.9 71.3-24.5 43.3-57.1z" fill="#{$color}"/></svg>',
 
 	'upload-multiple': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="lexicon-icon-outline upload-multiple-arrow-up" d="M278.9 9.9c-14.9-13.5-32.6-12.8-45.8 0l-71.5 71.5c-28.8 26.6 10.8 77.1 45.8 45.8l16.7-16.7v113.6c0 42.3 64 42 64 0V110.5l16.7 16.7c28 29.1 76.5-13.6 45.8-45.8L278.9 9.9z" fill="#{$color}"/><path class="lexicon-icon-outline upload-multiple-bracket" d="M383.9 256.1v64H128.1v-64c0-43-64-41.7-64 0V384h383.7V256.1c.1-42-63.9-42.3-63.9 0z" fill="#{$color}"/><path class="lexicon-icon-outline upload-multiple-line" fill="#{$color}" d="M64 448h384v64H64z"/></svg>',
 
