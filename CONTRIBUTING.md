@@ -4,7 +4,7 @@ Want to contribute to Clay? There are a few things you need to know before you s
 
 Here's a set of guidelines to contribute to Clay and its packages. Use your common sense, and feel free to propose changes to this document in a pull request.
 
-**For contributions to Clay v2, go to branch `2.x-develop` and follow the [contribution guide](https://github.com/liferay/clay/blob/2.x-develop/CONTRIBUTING.md).**
+**For contributions to Clay v2, go to branch `2.x` and follow the [contribution guide](https://github.com/liferay/clay/blob/2.x/CONTRIBUTING.md).**
 
 #### Table of Contents
 
@@ -31,7 +31,7 @@ The Clay repository follows the monorepo approach; the pillars of Clay, all the 
 
 -   [clay-css](https://github.com/liferay/clay/blob/master/packages/clay-css) - Provides the colors and structure for Clay. It contains the CSS and example HTML markup for each component.
 -   [clay-components](https://github.com/liferay/clay/blob/master/packages) - The components that follow clay-css markup and Lexicon use cases. They are developed on React.js in version 3.x.
--   [clayui.com](https://github.com/liferay/clay/blob/master/clayui.com) - Contains the source code and documentation for clayui.com.
+-   [next.clayui.com](https://github.com/liferay/clay/blob/master/next.clayui.com) - Contains the source code and documentation for next.clayui.com.
 
 ## How Can I Contribute?
 
@@ -92,7 +92,7 @@ This section shows you how to send a pull request. The main staff are always mon
 
 #### Before Sending a Pull Request
 
--   Fork the repository and create your branch from **develop**.
+-   Fork the repository and create your branch from **master**.
 -   Run `yarn` at the root of the repository to install the project dependencies.
 -   Run `yarn lerna` to install the dependencies of each package and link them together.
 -   Run `yarn build` to build all packages.
