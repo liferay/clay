@@ -113,6 +113,198 @@ const [alerts, setAlerts] = useState([]);
 +</Button>
 ```
 
+## ClayCard
+
+ClayCard v3 became a Low-Level API, decomposed to ClayCard.AspectRatio, ClayCard.Body,ClayCard.Description, ClayCard.Caption and ClayCard.Header.
+
+```diff
+- <ClayUserCard name="User Name" spritemap={spritemap} selectable />
++ <ClayCard displayType="user" selectable>
++ 		<ClayCard.Header>
++ 			<ClayCheckboxWithState>
++ 				<ClayCard.AspectRatio>
++ 					<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
++ 						<ClaySticker
++ 							className="sticker-user-icon"
++ 							displayType="secondary"
++ 							shape="circle"
++ 						>
++ 							<ClayIcon
++ 								spritemap={props.spritemap}
++ 								symbol="user"
++ 							/>
++ 						</ClaySticker>
++ 					</div>
++ 				</ClayCard.AspectRatio>
++ 			</ClayCheckboxWithState>
++ 		</ClayCard.Header>
++ 
++ 		<ClayCard.Body>
++ 			<div className="autofit-col autofit-col-expand">
++ 				<ClayCard.Description type="title">
++ 					Adélaide
++ 				</ClayCard.Description>
++ 				<ClayCard.Description type="subtitle">
++ 					Author Action
++ 				</ClayCard.Description>
++ 				<ClayCard.Caption>
++ 					<ClayLabel displayType="warning">{'Rejected'}</ClayLabel>
++ 				</ClayCard.Caption>
++ 			</div>
++ 		</ClayCard.Body>
++ 	</ClayCard>
+```
+
+### API Changes:
+
+- Only the `spritemap` property was kept compared to the v2 API.
+
+### Compositions:
+
+To get to the behavior of having a ClayCard with an image, use the following composition with ClayCard:
+
+```diff
+- <ClayImageCard labels={[label: 'Approved']} imageSrc="https://via.placeholder.com/256" spritemap={spritemap} subtitle="Author Action" title="My Title" />
++ <ClayCard displayType="image">
++ 		<ClayCard.Header>
++			<img
++				alt="thumbnail"
++				className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid"
++				src="https://via.placeholder.com/256"
++			/>
++			<ClaySticker
++				displayType="danger"
++				position="bottom-left"
++				shape="rounded"
++			>
++				<ClayIcon spritemap={props.spritemap} symbol="document-image" />
++			</ClaySticker>
++		</ClayCard.Header>
++
++		<ClayCard.Body>
++			<div className="autofit-col autofit-col-expand">
++				<ClayCard.Description type="title">
++					My Title
++				</ClayCard.Description>
++				<ClayCard.Description type="subtitle">
++					Author Action
++				</ClayCard.Description>
++				<ClayCard.Caption>
++					<ClayLabel displayType="success">{'Approved'}</ClayLabel>
++				</ClayCard.Caption>
++			</div>
++		</ClayCard.Body>
++	</ClayCard>
+```
+
+To get to the behavior of having a ClayCard with a user image, use the following composition with ClayCard:
+
+```diff
+- <ClayUserCard labels={[label: 'Approved']} spritemap={spritemap} subtitle="Author Action" title="Adélaide" />
++ <ClayCard displayType="user">
++ 		<ClayCard.Header>
++ 			<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
++ 				<ClaySticker
++ 					className="sticker-user-icon"
++ 					displayType="secondary"
++ 					shape="circle"
++ 				>
++ 					<ClayIcon spritemap={props.spritemap} symbol="user" />
++ 				</ClaySticker>
++ 			</div>
++ 		</ClayCard.Header>
++ 
++ 		<ClayCard.Body>
++ 			<div className="autofit-col autofit-col-expand">
++ 				<ClayCard.Description type="title">
++ 					Adélaide
++ 				</ClayCard.Description>
++ 				<ClayCard.Description type="subtitle">
++ 					Author Action
++ 				</ClayCard.Description>
++ 				<ClayCard.Caption>
++ 					<ClayLabel displayType="success">{'Approved'}</ClayLabel>
++ 				</ClayCard.Caption>
++ 			</div>
++ 		</ClayCard.Body>
++ 	</ClayCard>
+```
+
+To get to the behavior of having a ClayCard with a horizontal, use the following composition with ClayCard:
+
+```diff
+- <ClayHorizontalCard spritemap={spritemap} icon="folder" title="Very Large Folder" />
++ <ClayCard displayType="directory">
++ 	<ClayCard.Body>
++ 		<div className="flex-col">
++ 			<ClaySticker displayType="secondary" inline>
++ 				<ClayIcon spritemap={props.spritemap} symbol="folder" />
++ 			</ClaySticker>
++ 		</div>
++ 		<div className="autofit-col autofit-col-expand autofit-col-gutters">
++ 			<div className="autofit-section">
++ 				<ClayCard.Description type="title">
++ 					Very Large Folder
++ 				</ClayCard.Description>
++ 			</div>
++ 		</div>
++ 	</ClayCard.Body>
++ </ClayCard>
+```
+
+To get to the behavior of having a ClayCard with a folder, use the following composition with ClayCard:
+
+```diff
+- <ClayCardFile labels={[{label: 'Approved'}]} spritemap={spritemap} title="deliverable.doc" subtitle="Stevie Ray Vaughn" />
++ <ClayCard displayType="file" selectable>
++ 	<ClayCard.Header>
++ 		<ClayCheckboxWithState>
++ 			<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
++ 				<ClayIcon spritemap={props.spritemap} symbol="documents-and-media" />
++ 			</div>
++ 			<ClaySticker displayType="danger" position="bottom-left">
++ 				DOC
++ 			</ClaySticker>
++ 		</ClayCheckboxWithState>
++ 	</ClayCard.Header>
++ 	<ClayCard.Body>
++ 		<div className="autofit-col autofit-col-expand">
++ 			<section className="autofit-section">
++ 				<ClayCard.Description type="title">
++ 					deliverable.doc
++ 				</ClayCard.Description>
++ 				<ClayCard.Description type="subtitle">
++ 					Stevie Ray Vaughn
++ 				</ClayCard.Description>
++ 				<ClayCard.Caption>
++ 					<ClayLabel displayType="success">{'Approved'}</ClayLabel>
++ 				</ClayCard.Caption>
++ 			</section>
++ 		</div>
++ 	</ClayCard.Body>
++ </ClayCard>
+```
+
+To get the behavior of having a ClayCardGrid with Cards, use the following composition with ClayCard:
+
+```diff
+- <ClayCardGrid spritemap={spritemap} items={items} schema={schema} />
++ <ClayCard.Group label="Test Files">
++	<CardFile spritemap={imageOrSpritemap} />
++	<CardFile spritemap={imageOrSpritemap} />
++	<CardFile spritemap={imageOrSpritemap} />
++ </ClayCard.Group>
++ <ClayCard.Group label="Test Users">
++	<CardUser spritemap={imageOrSpritemap} />
++	<CardUser spritemap={imageOrSpritemap} />
++	<CardUser spritemap={imageOrSpritemap} />
++ </ClayCard.Group>
+```
+
+## ClayCardGrid
+
+ClayCardGrid was deprecated due to ClayCard.Group.
+
 ## ClayLink
 
 ClayLink has become simpler with v3, removing APIs from `icon` and `image`, making it flexible for you to define your content but complying with [Lexicon specifications](http://lexicondesign.io).
