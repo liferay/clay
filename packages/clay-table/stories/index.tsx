@@ -29,7 +29,7 @@ function ClayCheckboxWithState(props: any) {
 			{props.children}
 		</ClayCheckbox>
 	);
-};
+}
 
 const DropDownWithState: React.FunctionComponent<any> = ({
 	children,
@@ -49,6 +49,8 @@ const DropDownWithState: React.FunctionComponent<any> = ({
 	);
 };
 
+const thumbnail = require('./static/thumbnail_coffee.jpg');
+
 function ClayDropdownWithTrigger() {
 	return (
 		<DropDownWithState>
@@ -65,7 +67,7 @@ function ClayDropdownWithTrigger() {
 			</ClayDropDown.ItemList>
 		</DropDownWithState>
 	);
-};
+}
 
 const spritemap = require('clay-css/lib/images/icons/icons.svg');
 
@@ -108,6 +110,32 @@ storiesOf('ClayTable', module)
 			<ClayButton displayType="secondary">{'Download'}</ClayButton>
 		);
 
+		const ImageCell = () => (
+			<div className="autofit-row">
+				<div className="autofit-col">
+					<img
+						alt="thumbnail"
+						className="table-img"
+						src={thumbnail}
+					/>
+				</div>
+				<div className="autofit-col autofit-col-expand">
+					<div className="table-title">
+						<span className="text-truncate-inline">
+							<span
+								className="text-truncate"
+								title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds."
+							>
+								{
+									'Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.'
+								}
+							</span>
+						</span>
+					</div>
+				</div>
+			</div>
+		);
+
 		const HeadCellTitles = [
 			'Image',
 			'Origin',
@@ -115,6 +143,7 @@ storiesOf('ClayTable', module)
 			'Spicy Level',
 			'Download',
 			'Difficulty',
+			'',
 		];
 
 		const rowCellItems = [
@@ -214,7 +243,9 @@ storiesOf('ClayTable', module)
 							<ClayTable.Cell expanded headingTitle>
 								{'Hamburger'}
 							</ClayTable.Cell>
-							<ClayTable.Cell />
+							<ClayTable.Cell>
+								<ImageCell />
+							</ClayTable.Cell>
 							<ClayTable.Cell>{'U.S.A'}</ClayTable.Cell>
 							<ClayTable.Cell align="right">
 								{'10 min.'}
@@ -244,7 +275,9 @@ storiesOf('ClayTable', module)
 							<ClayTable.Cell expanded headingTitle>
 								{'Ramen'}
 							</ClayTable.Cell>
-							<ClayTable.Cell />
+							<ClayTable.Cell>
+								<ImageCell />
+							</ClayTable.Cell>
 							<ClayTable.Cell>{'China'}</ClayTable.Cell>
 							<ClayTable.Cell align="right">
 								{'90 min.'}
