@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import ClaySelect, {ClaySelectWithOption} from '..';
 import React from 'react';
 import {cleanup, render} from 'react-testing-library';
-import ClaySelect, {ClaySelectWithOption} from '..';
 
 const options = [
 	{
@@ -28,10 +28,7 @@ describe('Rendering', () => {
 
 	it('renders ClaySelect', () => {
 		const {container} = render(
-			<ClaySelect
-				aria-label="Select Label"
-				id="mySelectId"
-			/>
+			<ClaySelect aria-label="Select Label" id="mySelectId" />
 		);
 
 		expect(container).toMatchSnapshot();
@@ -40,7 +37,9 @@ describe('Rendering', () => {
 	it('renders ClaySelect.Option', () => {
 		const {container} = render(
 			<>
-				{options.map(item => <ClaySelect.Option {...item} key={item.label} />)}
+				{options.map(item => (
+					<ClaySelect.Option {...item} key={item.label} />
+				))}
 			</>
 		);
 
@@ -49,11 +48,10 @@ describe('Rendering', () => {
 
 	it('renders ClaySelect with Option', () => {
 		const {container} = render(
-			<ClaySelect
-				aria-label="Select Label"
-				id="mySelectId"
-			>
-				{options.map(item => <ClaySelect.Option {...item} key={item.label} />)}
+			<ClaySelect aria-label="Select Label" id="mySelectId">
+				{options.map(item => (
+					<ClaySelect.Option {...item} key={item.label} />
+				))}
 			</ClaySelect>
 		);
 

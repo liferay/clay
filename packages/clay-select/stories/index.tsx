@@ -25,7 +25,7 @@ storiesOf('ClaySelect', module)
 	.add('with low-level APIs (composition)', () => (
 		<div className="sheet">
 			<div className="form-group">
-				<label htmlFor="mySelectId">Select Label</label>
+				<label htmlFor="mySelectId">{'Select Label'}</label>
 				<ClaySelect
 					aria-label="Select Label"
 					disabled={boolean('Disabled', false)}
@@ -34,6 +34,7 @@ storiesOf('ClaySelect', module)
 				>
 					{options.map(item => (
 						<ClaySelect.Option
+							key={item.value}
 							label={item.label}
 							value={item.value}
 						/>
@@ -45,7 +46,7 @@ storiesOf('ClaySelect', module)
 	.add('with high-level', () => (
 		<div className="sheet">
 			<div className="form-group">
-				<label htmlFor="mySelectId">Select Label</label>
+				<label htmlFor="mySelectId">{'Select Label'}</label>
 				<ClaySelectWithOption
 					aria-label="Select Label"
 					disabled={boolean('Disabled', false)}
