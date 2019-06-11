@@ -176,7 +176,7 @@ const ClayDatePicker: FunctionComponent<IProps> = ({
 		end: DateNow.getFullYear(),
 		start: DateNow.getFullYear(),
 	},
-}) => {
+}: IProps) => {
 	/**
 	 * Normalize date for always set noon to avoid time zone issues
 	 */

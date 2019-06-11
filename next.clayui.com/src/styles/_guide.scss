@@ -173,3 +173,55 @@
 .fs-12 {
 	font-size: 12px !important;
 }
+
+.list-api {
+	list-style-type: none;
+	margin: 0;
+    padding: 0
+}
+
+.list-api-item {
+	margin-top: 32px;
+}
+
+.list-api-item-title {
+	border-bottom: 2px solid rgb(244, 245, 247);
+	padding-bottom: 8px;
+	margin-bottom: 8px;
+}
+
+.list-api-item-name {
+	color: #b3472c;
+    display: inline-block;
+    margin-right: 0.8em;
+    background: #ffd6cc;
+    border-radius: 3px;
+    padding: 0px 0.2em;
+}
+
+.list-api-item-type {
+	color: #5e6c84;
+    display: inline-block;
+    background: #f4f5f7;
+    border-radius: 3px;
+    padding: 0px 0.2em;
+}
+
+.list-api-item-default {
+	color: #5e6c84;
+	font-weight: 500;
+}
+
+.list-api-item-required {
+	color: #DA1414;
+	margin-left: 8px;
+}
+
+.list-api-item-code {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	font-size: 0.8rem;
+	line-height: 1.4;
+	color: #b3472b;
+	display: inline-block;
+}
