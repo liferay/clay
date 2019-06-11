@@ -47,7 +47,7 @@ const ClayDataProvider: React.FunctionComponent<IProps> = ({
 	children,
 	notifyOnNetworkStatusChange = false,
 	...otherProps
-}) => {
+}: IProps) => {
 	/**
 	 * networkStatus is only updated when notifyOnNetworkStatusChange
 	 * is enabled, this will inform of the fetch status and cause
@@ -76,11 +76,17 @@ const ClayDataProvider: React.FunctionComponent<IProps> = ({
 		onNetworkStatusChange: handleNetworkStatus,
 	});
 
-	return children({
-		...state,
-		data: resource,
-		refetch,
-	});
+	// Adding a fragment is a hack to dribble the
+	// react-docgen to identify that it is a component.
+	return (
+		<>
+			{children({
+				...state,
+				data: resource,
+				refetch,
+			})}
+		</>
+	);
 };
 
 export {useResource};
