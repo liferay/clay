@@ -10,20 +10,32 @@ const reactDocs = require('react-docgen');
 const visit = require('unist-util-visit');
 
 const generateTr = (item, key) => {
-	return `<tr>
-        <td><div class="table-title">${key}</div></td>
-        <td>${item.description}</td>
-        <td>{${
-			item.tsType.raw
-				? JSON.stringify(item.tsType.raw)
-				: `"${item.tsType.name}"`
-		}}</td>
-        <td>{${
-			item.defaultValue === undefined
-				? item.defaultValue
-				: JSON.stringify(item.defaultValue.value)
-		}}</td>
-    </tr>`;
+	return `<li class="list-api-item">
+		<p class="list-api-item-title">
+			<code class="list-api-item-name">${key}</code>
+			${
+				item.tsType && item.tsType.name
+					? `<code class="list-api-item-type">{"${
+							item.tsType.name
+					  }"}</code>`
+					: ''
+			}
+			<code class="list-api-item-default">{' = '}{${
+				item.defaultValue === undefined
+					? `"undefined"`
+					: JSON.stringify(item.defaultValue.value)
+			}}</code>
+			${
+				item.required
+					? `<code class="list-api-item-required">{"required"}</code>`
+					: ''
+			}
+		</p>
+		<div class="list-api-item-desc">${item.description}</div>
+		<code class="list-api-item-code">{${item.tsType &&
+			item.tsType.raw &&
+			JSON.stringify(item.tsType.raw)}}</code>
+	</li>`;
 };
 
 module.exports = ({markdownAST}) => {
@@ -49,27 +61,25 @@ module.exports = ({markdownAST}) => {
 						return;
 					}
 
-					const content = fs.readFileSync(pathFile);
-					const AST = await reactDocs.parse(content, null, null, {
-						filename: pathFile,
-					});
-					const propsKeys = Object.keys(AST.props);
+					try {
+						const content = fs.readFileSync(pathFile, 'utf8');
+						const AST = await reactDocs.parse(content, null, null, {
+							filename: pathFile,
+						});
+						const propsKeys = Object.keys(AST.props);
 
-					node.value = `<div class="table-responsive">
-						<table class="table table-autofit table-striped">
-							<thead>
-								<tr>
-									<th>Property</th>
-									<th>Description</th>
-									<th>Type</th>
-									<th>Default</th>
-								</tr>
-							</thead>
-							<tbody>
-								${propsKeys.map(key => generateTr(AST.props[key], key)).join('')}
-							</tbody>
-						</table>
-					</div>`;
+						node.value = `<ul class="list-api">${propsKeys
+							.map(key => generateTr(AST.props[key], key))
+							.join('')}</ul>`;
+					} catch (error) {
+						node.value = `<ul class="list-api">
+							<li class="list-api-item">
+							<code class="list-api-item-type">{'${error.message}'}</code>
+							</li>
+						</ul>`;
+						// eslint-disable-next-line no-console
+						console.error(error.message);
+					}
 
 					resolve(node);
 				})
