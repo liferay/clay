@@ -12,7 +12,7 @@ const visit = require('unist-util-visit');
 const generateTr = (item, key) => {
 	return `<li class="list-api-item">
 		<p class="list-api-item-title">
-			<code class="list-api-item-name">${key}</code>
+			<code class="list-api-item-name" id="${key}">${key}</code>
 			${
 				item.tsType && item.tsType.name
 					? `<code class="list-api-item-type">{"${
