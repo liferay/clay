@@ -77,10 +77,12 @@ export default props => {
 										</p>
 									)}
 									{frontmatter.packageNpm && (
-										<p className="docs-package-npm">
-											{'npm install '}
-											{frontmatter.packageNpm}
-										</p>
+										<code class="gatsby-code-text">
+											<p className="docs-package-npm">
+												{'yarn add '}
+												{frontmatter.packageNpm}
+											</p>
+										</code>
 									)}
 									{frontmatter.description && (
 										<p className="docs-description">
