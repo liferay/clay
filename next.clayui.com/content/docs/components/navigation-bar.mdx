@@ -1,0 +1,39 @@
+---
+title: "Navigation Bar"
+description: "A navigation bar, navbar, is a horizontal bar that provides several access points to different parts of a system."
+packageNpm: "@clay/navigation-bar"
+packageVersion: "3.0.0"
+packageStatus: "Beta"
+---
+
+import {NavigationBar} from '../../../src/components/clay/NavigationBar';
+
+<div class="nav-toc">
+
+- [Variants and Best Pratices](#variants-and-best-pratices)
+    - [Item](#item)
+- [API](#api)
+
+</div>
+
+<div class="clay-site-alert alert alert-info">
+	Check the <a href="https://liferay.design/lexicon/">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/navigation/horizontal-nav/">Navigation Bar Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
+</div>
+
+## Variants and Best Pratices
+
+- As described on Lexicon, a NavigationBar can be styled with an inverted theme. It displays navigation items in a dark background with light text. It is always placed right below the header. Use `inverted` property for this.
+
+- `triggerLabel` property is mandatory because it specifies the name of the trigger of the dropdown that will be placed when the screen when on small screens.
+
+### Item
+
+For enabling more personalization on NavigationBar items, you can pass `<ClayNavigationBar.Item>` component to specify the element that will be rendered as an item.
+
+- Use the property `active` to specify which element is currently active on the navigation.
+
+- `nav-link` class is mandatory for styling the children of ClayNavigationBar.Item as a NavigationBarItem but if you don't prefer to follow lexicon, you can style with you want.
+
+<NavigationBar />
+
+## API
