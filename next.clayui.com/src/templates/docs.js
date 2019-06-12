@@ -9,6 +9,7 @@ import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import React, {useEffect} from 'react';
 import {graphql} from 'gatsby';
 import {Link} from 'gatsby';
+import { MDXProvider } from "@mdx-js/react";
 
 import CodeClipboard from '../components/CodeClipboard';
 import getSection from '../utils/getSection';
@@ -124,7 +125,7 @@ export default props => {
 										<article>
 											<CodeClipboard>
 												{markdownJsx ? (
-													<MDXRenderer
+													<MDXProvider
 														components={{
 															h1: Typography.H1,
 															h2: Typography.H2,
@@ -132,7 +133,7 @@ export default props => {
 															h4: Typography.H4,
 															p: Typography.P,
 															ul: props => (
-																<ul className="clay-ul">
+																<ul className={props.className ? props.className : 'clay-ul'}>
 																	{
 																		props.children
 																	}
@@ -140,8 +141,12 @@ export default props => {
 															),
 														}}
 													>
-														{code.body}
-													</MDXRenderer>
+														<MDXRenderer
+															
+														>
+															{code.body}
+														</MDXRenderer>
+													</MDXProvider>
 												) : (
 													<div
 														dangerouslySetInnerHTML={{
