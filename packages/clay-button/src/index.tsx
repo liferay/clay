@@ -6,6 +6,7 @@
 
 import classNames from 'classnames';
 import React from 'react';
+import {ClayButtonGroup, IButtonGroupProps} from './Group';
 
 export type DisplayType = 'primary' | 'secondary' | 'link' | 'unstyled';
 
@@ -31,13 +32,6 @@ interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	small?: boolean;
 }
 
-interface IButtonGroupProps extends React.HTMLAttributes<HTMLDivElement> {
-	/**
-	 * Flag to indicate the spacing between the buttons.
-	 */
-	spaced?: boolean;
-}
-
 interface IClayButton extends React.FunctionComponent<IProps> {
 	Group: React.FunctionComponent<IButtonGroupProps>;
 }
@@ -51,7 +45,7 @@ const ClayButton: IClayButton = ({
 	small,
 	type = 'button',
 	...otherProps
-}) => (
+}: IProps) => (
 	<button
 		{...otherProps}
 		className={classNames(className, 'btn', `btn-${displayType}`, {
@@ -63,29 +57,6 @@ const ClayButton: IClayButton = ({
 	>
 		{children}
 	</button>
-);
-
-const ClayButtonGroup: React.FunctionComponent<IButtonGroupProps> = ({
-	children,
-	className,
-	role = 'group',
-	spaced,
-	...otherProps
-}) => (
-	<div
-		{...otherProps}
-		className={classNames(className, 'btn-group')}
-		role={role}
-	>
-		{spaced
-			? React.Children.map(children, (child, i) =>
-					React.cloneElement(
-						<div className="btn-group-item">{child}</div>,
-						{key: i}
-					)
-			  )
-			: children}
-	</div>
 );
 
 ClayButton.Group = ClayButtonGroup;
