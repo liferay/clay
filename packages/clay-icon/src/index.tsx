@@ -28,7 +28,7 @@ const ClayIcon: React.FunctionComponent<IProps> = ({
 	spritemap,
 	symbol,
 	...otherProps
-}) => {
+}: IProps) => {
 	let spriteMapVal = useContext(ClayIconSpriteContext);
 
 	if (spritemap) {
