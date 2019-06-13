@@ -7,12 +7,12 @@
 import ClayLink from '@clayui/link';
 import ClayNavigationBar from '@clayui/navigation-bar';
 import Editor from './Editor';
-import React, {useState} from 'react';
+import React from 'react';
 
 const spritemap = '/images/icons/icons.svg';
 
 const NavigationBar = () => {
-	const scope = {ClayLink, ClayNavigationBar, spritemap, useState};
+	const scope = {ClayLink, ClayNavigationBar, spritemap};
 	const code = `const Component = () => {
 
 	return (
