@@ -21,6 +21,10 @@ class ClayAutocomplete extends ClayComponent {
 	attached() {
 		this._dropdownItemFocused = null;
 
+		document.addEventListener(
+			'click',
+			this._handleDocumentClick.bind(this)
+		);
 		this.addListener('dataChange', this._defaultDataChange, true);
 		this.addListener('dataLoading', this._defaultDataLoading, true);
 		this.addListener('inputChange', this._defaultInputChange, true);
@@ -92,6 +96,8 @@ class ClayAutocomplete extends ClayComponent {
 	 */
 	_defaultInputChange(event) {
 		this._query = event.data.value;
+
+		this.expanded = true;
 
 		if (this._query) {
 			if (isFunction(this.dataSource)) {
@@ -200,6 +206,18 @@ class ClayAutocomplete extends ClayComponent {
 	}
 
 	/**
+	 * Handles the dropdown hiding when clicking outside the autocomplete
+	 * component
+	 * @param {!Event} event
+	 */
+	_handleDocumentClick(event) {
+		if (event.target === this.element) {
+			return;
+		}
+		this.expanded = false;
+	}
+
+	/**
 	 * Continues the propagation of the item clicked event
 	 * @param {!Event} event
 	 * @protected
@@ -221,6 +239,8 @@ class ClayAutocomplete extends ClayComponent {
 	 */
 	_handleItemSelected(event, index) {
 		const item = this.filteredItems[Number(index)];
+
+		this.expanded = false;
 
 		return !this.emit({
 			data: {
@@ -529,6 +549,17 @@ ClayAutocomplete.STATE = {
 			);
 		}
 	}),
+
+	/**
+	 * Flag to indicate if dropdown is expanded.
+	 * @default false
+	 * @instance
+	 * @memberof ClayAutocomplete
+	 * @type {?bool}
+	 */
+	expanded: Config.bool()
+		.value(false)
+		.internal(),
 
 	/**
 	 * Extracts from the data the item to be compared in autocomplete.

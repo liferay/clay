@@ -19,6 +19,7 @@
 	{@param? dataProviderInitialData: []|list<?>}
 	{@param? dropdownPortalElement: string}
 	{@param? elementClasses: string}
+	{@param? expanded: bool}
 	{@param? filteredItems: list<?>}
 	{@param? id: string}
 	{@param? inputElementClasses: string}
@@ -86,6 +87,7 @@
 			{param dataProviderInitialData: $dataProviderInitialData /}
 			{param dataSource: $dataSource /}
 			{param dropdownPortalElement: $dropdownPortalElement /}
+			{param expanded: $expanded /}
 			{param filteredItems: $filteredItems /}
 			{param inputValue: $inputValue /}
 			{param pollingInterval: $pollingInterval /}
@@ -203,8 +205,8 @@
 	{@param? contentRenderer: string}
 	{@param? dataProviderInitialData: []|list<?>}
 	{@param? dropdownPortalElement: string}
+	{@param? expanded: bool}
 	{@param? filteredItems: list<?>}
-	{@param? inputValue: string}
 	{@param? pollingInterval: number}
 	{@param? requestInputMode: string}
 	{@param? requestOptions: [
@@ -220,11 +222,9 @@
 	{@param? requestRetries: number}
 	{@param? requestTimeout: number}
 
-	{let $isVisible: ($filteredItems and length($filteredItems) > 0) or $inputValue ? true : false /}
-
 	{let $attributes kind="attributes"}
 		class="autocomplete-dropdown-menu dropdown-menu
-			{if $isVisible}
+			{if $expanded}
 				{sp}show
 			{/if}
 		"
