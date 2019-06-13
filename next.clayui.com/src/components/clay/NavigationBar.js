@@ -41,4 +41,33 @@ render(<Component />)`;
 	return <Editor code={code} scope={scope} />;
 };
 
-export {NavigationBar};
+const NavigationBarWithStyledItem = () => {
+    const scope = {ClayNavigationBar, spritemap};
+    const code = `const Component = () => {
+
+    const btnStyle = {
+        padding: "5.5px 16px 5.5px 16px",
+        borderColor: "var(--indigo)"
+    };
+
+    return (
+        <ClayNavigationBar triggerLabel="Item 1" spritemap={spritemap}>
+            <ClayNavigationBar.Item active>
+                    <button className="btn btn-unstyled btn-block btn-sm" style={btnStyle} type="button">Item 1</button>
+            </ClayNavigationBar.Item>
+            <ClayNavigationBar.Item>
+                    <button className="btn btn-unstyled btn-block btn-sm" style={btnStyle} type="button">Item 2</button>
+            </ClayNavigationBar.Item>
+            <ClayNavigationBar.Item>
+                    <button className="btn btn-unstyled btn-block btn-sm" style={btnStyle} type="button">Item 3</button>
+            </ClayNavigationBar.Item>
+        </ClayNavigationBar>
+    );
+}
+    
+render(<Component />)`;
+    
+    return <Editor code={code} scope={scope} />;
+}
+
+export {NavigationBar, NavigationBarWithStyledItem};
