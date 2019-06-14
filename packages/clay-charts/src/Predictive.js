@@ -13,7 +13,7 @@ import BillboardChart from 'react-billboardjs';
  * @param {Object} props
  * @return {ReactElement}
  */
-export default class PredictiveChart extends React.Component {
+class PredictiveChartBase extends React.Component {
 	/** @inheritdoc */
 	constructor(props) {
 		super(props);
@@ -57,13 +57,15 @@ export default class PredictiveChart extends React.Component {
 	/** @inheritdoc */
 	render() {
 		const {columns, regions} = this.state;
-		const {data, predictionDate, ...otherProps} = this.props;
+		const {data, predictionDate, forwardedRef, ...otherProps} = this.props;
 
 		return (
 			<BillboardChart
+				ref={forwardedRef}
 				data={{
 					...data,
 					columns,
+					type: 'line',
 				}}
 				regions={regions}
 				{...otherProps}
@@ -71,3 +73,7 @@ export default class PredictiveChart extends React.Component {
 		);
 	}
 }
+
+export default React.forwardRef((props, ref) => (
+  <PredictiveChartBase forwardedRef={ref} {...props} />
+));
