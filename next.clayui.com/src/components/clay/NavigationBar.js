@@ -42,8 +42,8 @@ render(<Component />)`;
 };
 
 const NavigationBarWithStyledItem = () => {
-    const scope = {ClayNavigationBar, spritemap};
-    const code = `const Component = () => {
+	const scope = {ClayNavigationBar, spritemap};
+	const code = `const Component = () => {
 
     const btnStyle = {
         padding: "5.5px 16px 5.5px 16px",
@@ -66,8 +66,8 @@ const NavigationBarWithStyledItem = () => {
 }
     
 render(<Component />)`;
-    
-    return <Editor code={code} scope={scope} />;
-}
+
+	return <Editor code={code} scope={scope} />;
+};
 
 export {NavigationBar, NavigationBarWithStyledItem};
