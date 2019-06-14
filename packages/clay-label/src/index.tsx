@@ -42,7 +42,7 @@ const ClayLabel: React.FunctionComponent<IProps> = ({
 	large = false,
 	spritemap,
 	...otherProps
-}) => {
+}: IProps) => {
 	const TagName = href ? 'a' : 'span';
 
 	return (

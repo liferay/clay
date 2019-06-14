@@ -1,0 +1,70 @@
+---
+title: "Label"
+description: "Labels are a visual pattern used to categorize information providing quick and easy recognition."
+packageNpm: "@clayui/label"
+packageVersion: "3.0.0"
+packageStatus: "Beta"
+---
+
+import {Label, LabelClosingActions, LabelDisplayTypes, LabelLink, LabelSizes, LabelWithChildren} from '../../../src/components/clay/Label';
+
+<div class="nav-toc">
+
+- [Variants and Best Pratices](#variants-and-best-pratices)
+    - [Display Types](#display-types)
+    - [Sizes](#sizes)
+    - [Links](#links)
+    - [Closing Actions](#closing-actions)
+    - [With Children](#with-children)
+- [API](#api)
+
+</div>
+
+<div class="clay-site-alert alert alert-info">
+Check the <a href="https://liferay.design/lexicon/">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/labels/">Labels Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
+</div>
+
+## Variants and Best Pratices
+
+### Display Types
+
+Using [`displayType`](#api-displayType) property you can use these color variations on Label component:
+
+<LabelDisplayTypes />
+
+### Sizes
+
+You can use [`large`](#api-large) property for making the component being displayed should be large sized.
+
+<LabelSizes />
+
+### Links
+
+The element turns an anchor element when passing `href` property. See the example:
+
+<LabelLink />
+
+### Closing Actions
+
+<div class="clay-site-alert alert alert-warning">
+    This property is mandatory if you want make your label dismissible.
+</div>
+
+Use [`closeButtonProps`](#api-closeButtonProps) property for applying custom properties to the button that wraps the closing icon.
+
+In this example, an Id was settled for the closing element:
+<LabelClosingActions />
+
+You can also set a state for the visibility of the ClayLabel for example, handling `onClick` property on the closing element.
+
+<Label />
+
+### With Children
+
+<LabelWithChildren />
+
+## API
+
+<div>
+    [APITable "clay-label/src/index.tsx"]
+</div>
