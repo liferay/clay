@@ -1,0 +1,50 @@
+---
+title: "Select"
+description: "A form control element used to select from several provided options and enter data."
+packageNpm: "@clayui/select"
+packageVersion: "3.0.0"
+packageStatus: "Beta"
+---
+
+import {Select, SelectWithOption} from '../../../src/components/clay/Select';
+
+<div class="nav-toc">
+
+- [Variants and Best Pratices](#variants-and-best-pratices)
+    - [SelectWithOption](#selectwithoption)
+- [API](#api)
+
+</div>
+
+<div class="clay-site-alert alert alert-info">
+	Check the <a href="https://liferay.design/lexicon/">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/forms/selector/">Selectors Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
+</div>
+
+## Variants and Best Pratices
+
+### Default
+
+This pattern is completely different from a dropdown. A selector is a native component with a data provider. A dropdown, however, opens a panel that could contain multiple and different natural elements.
+
+Use `ClaySelect.Option` for wrapping an option item.
+
+<Select />
+
+### SelectWithOption
+
+If you use ClaySelect only for simple cases that do not need props for [`options`](#api-options), you can use `<ClaySelectWithOption />` which will have the same result as the previous version.
+
+<SelectWithOption />
+
+## API
+
+### Select and Select.Option Variants
+
+These components don't have an API. Use the same attributes of a `<select>` element for `ClaySelect` and the same attributes of a `<option>` element for `ClaySelect.Option` variant.
+
+### SelectWithOption
+
+<div>
+    [APITable "clay-select/src/SelectWithOption.tsx"]
+</div>
+
