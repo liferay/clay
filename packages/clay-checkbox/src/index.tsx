@@ -48,7 +48,7 @@ const ClayCheckbox: React.FunctionComponent<IProps> = ({
 	inline,
 	label,
 	...otherProps
-}) => {
+}: IProps) => {
 	const inputRef = useRef<HTMLInputElement | null>(null);
 
 	useEffect(() => {
