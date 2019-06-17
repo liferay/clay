@@ -3,6 +3,7 @@ import 'clay-loading-indicator';
 import 'clay-portal';
 import {Align} from 'metal-position';
 import {Config} from 'metal-state';
+import {dom} from 'metal-dom';
 import {isFunction} from 'metal';
 import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
@@ -21,7 +22,8 @@ class ClayAutocomplete extends ClayComponent {
 	attached() {
 		this._dropdownItemFocused = null;
 
-		document.addEventListener(
+		this._documentClickHandler = dom.on(
+			document,
 			'click',
 			this._handleDocumentClick.bind(this)
 		);
@@ -48,6 +50,7 @@ class ClayAutocomplete extends ClayComponent {
 	 * @inheritDoc
 	 */
 	disposed() {
+		this._documentClickHandler.removeListener();
 		this._dropdownItemFocused = null;
 	}
 
