@@ -24,7 +24,9 @@ import {Select, SelectWithOption} from '../../../src/components/clay/Select';
 
 ### Default
 
-This pattern is completely different from a dropdown. A selector is a native component with a data provider. A dropdown, however, opens a panel that could contain multiple and different natural elements.
+`ClaySelect` and `ClaySelect.Option` are `<select>` and `<option>` elements respectivetly that are styled using ClayCSS classes.
+
+`ClaySelect` represents a control that provides a menu of options (`ClaySelect.Option`). `ClaySelect.Option` defines an option in a select list.
 
 Use `ClaySelect.Option` for wrapping an option item.
 
@@ -40,7 +42,7 @@ If you use ClaySelect only for simple cases that do not need props for [`options
 
 ### Select and Select.Option Variants
 
-These components don't have an API. Use the same attributes of a `<select>` element for `ClaySelect` and the same attributes of a `<option>` element for `ClaySelect.Option` variant.
+ClaySelect have the same React API of `<select>` element. Also, `ClaySelect.Option` has the same API of `<option>` React element.
 
 ### SelectWithOption
 
