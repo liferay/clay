@@ -6,8 +6,6 @@
 
 import * as d3 from 'd3';
 import React from 'react';
-import resolveData from './resolve-data';
-import {Data, Grid, PointOptions} from 'billboard.js';
 import {FeatureCollection} from 'geojson';
 import {
 	GeoPath,
@@ -17,6 +15,7 @@ import {
 	Selection,
 	ValueFn,
 } from 'd3';
+import {Grid, PointOptions} from 'billboard.js';
 
 const DEFAULT_COLOR = {
 	range: {
@@ -32,14 +31,13 @@ const DEFAULT_COLOR = {
  */
 class GeomapBase {
 	_color?: any;
-	_data: Data;
+	_data: FeatureCollection;
 	_domainMax?: number;
 	_domainMin?: number;
 	_element?: any;
 	_handleClickHandler?: ValueFn<any, unknown, void>;
 	_height?: number | string;
 	_internalPollingInterval?: any;
-	_onDataLoadHandler?: any;
 	_pollingInterval?: number;
 	_selected?: any;
 	_width?: number | string;
@@ -101,25 +99,17 @@ class GeomapBase {
 		this.path = d3.geoPath().projection(this.projection);
 		this._selected = null;
 
-		this._onDataLoadHandler = this._onDataLoad.bind(this);
+		this._onDataLoad(this._data);
 
-		resolveData(this._data)
-			.then((val: any) => {
-				this._onDataLoadHandler.apply(this, [null, val]);
+		if (this._internalPollingInterval) {
+			clearInterval(this._internalPollingInterval);
+		}
 
-				if (this._internalPollingInterval) {
-					clearInterval(this._internalPollingInterval);
-				}
-
-				if (this.pollingInterval) {
-					this._internalPollingInterval = setInterval(() => {
-						this._updateData(this._data);
-					}, this._pollingInterval);
-				}
-			})
-			.catch((err: Error) => {
-				this._onDataLoadHandler.apply(this, [err, null]);
-			});
+		if (this.pollingInterval) {
+			this._internalPollingInterval = setInterval(() => {
+				this._onDataLoad(this._data);
+			}, this._pollingInterval);
+		}
 	}
 
 	/**
@@ -193,11 +183,7 @@ class GeomapBase {
 	/**
 	 * Data load handler
 	 */
-	_onDataLoad(err: Error, mapData: FeatureCollection) {
-		if (err) {
-			throw err;
-		}
-
+	_onDataLoad(mapData: FeatureCollection) {
 		const features = mapData.features;
 
 		// Calculate domain based on values received
@@ -231,16 +217,6 @@ class GeomapBase {
 				unknown,
 				void
 			>);
-	}
-
-	_updateData(data: any) {
-		resolveData(data)
-			.then(val => {
-				this._onDataLoadHandler.apply(this, [null, val]);
-			})
-			.catch(err => {
-				this._onDataLoadHandler.apply(this, [err, null]);
-			});
 	}
 }
 
