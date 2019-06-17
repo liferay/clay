@@ -28,6 +28,7 @@ class ClayAutocomplete extends ClayComponent {
 		this.addListener('dataChange', this._defaultDataChange, true);
 		this.addListener('dataLoading', this._defaultDataLoading, true);
 		this.addListener('inputChange', this._defaultInputChange, true);
+		this.addListener('itemSelected', this._defaultItemSelected, true);
 		this.refs.dataProvider.refs.portal.on(
 			'rendered',
 			this._handleRenderedPortal.bind(this)
@@ -108,6 +109,13 @@ class ClayAutocomplete extends ClayComponent {
 		} else {
 			this.filteredItems = [];
 		}
+	}
+
+	/**
+	 * @private
+	 */
+	_defaultItemSelected() {
+		this._expanded = false;
 	}
 
 	/**
@@ -239,8 +247,6 @@ class ClayAutocomplete extends ClayComponent {
 	 */
 	_handleItemSelected(event, index) {
 		const item = this.filteredItems[Number(index)];
-
-		this._expanded = false;
 
 		return !this.emit({
 			data: {
