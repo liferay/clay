@@ -67,7 +67,7 @@ const ClaySticker: React.FunctionComponent<IProps> = ({
 	shape = 'rounded',
 	size,
 	...otherProps
-}) => (
+}: IProps) => (
 	<span
 		{...otherProps}
 		className={classNames('sticker', className, {

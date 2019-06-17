@@ -1,0 +1,75 @@
+---
+title: "Sticker"
+description: "Stickers are a visual way to quickly identify content in a different way than badges and labels."
+packageNpm: "@clayui/sticker"
+packageVersion: "3.0.0"
+packageStatus: "Beta"
+---
+
+import {Sticker, StickerColors, StickerSizes, StickerPositions, StickerOutside, StickerOverlay, StickerUserIcon} from '../../../src/components/clay/Sticker';
+
+<div class="nav-toc">
+
+- [Variants and Best Pratices](#variants-and-best-pratices)
+    - [Colors](#colors)
+    - [Sizes](#sizes)
+    - [Shape](#shape)
+    - [Position](#position)
+    - [Outside](#outside)
+    - [Overlay](#overlay)
+    - [User Icon](#user-icon)
+- [API](#api)
+
+</div>
+
+<div class="clay-site-alert alert alert-info">
+Check the <a href="https://liferay.design/lexicon/">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/stickers/">Stickers Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
+</div>
+
+## Variants and Best Pratices
+
+Use stickers to visually identify elements in a dataset that are part of the same group. Stickers can be any color.
+
+<Sticker />
+
+### Colors
+
+You can use stickers with the following colors using [`displayType`](#api-displayType) property:
+
+<StickerColors />
+
+### Sizes
+
+Also, you can use the following sizes on your Sticker just setting up [`size`](#api-size):
+
+<StickerSizes />
+
+### Position
+
+You can set a desired alignment of sticker according to a parent element, just set up the [`position`](#api-position) property.
+
+<StickerPositions />
+
+### Outside
+
+If you want to set the position of the sticker on the outside corners, use [`outside`](#api-outside) property in conjunction with [`position`](#api-position) property like the following example:
+
+<StickerOutside />
+
+### Overlay
+
+Overlay content over stickers by nesting `sticker-overlay` elements as children of ClaySticker.
+
+<StickerOverlay />
+
+### User Icon
+
+If you want to use a ClaySticker as User Icon add `sticker-user-icon` on className of the `ClaySticker` component like the example below:
+
+<StickerUserIcon />
+
+## API
+
+<div>
+[APITable "clay-sticker/src/index.tsx"]
+</div>
