@@ -13,7 +13,7 @@ exports[`ClayCharts renders 1`] = `
     >
       <defs>
         <clippath
-          id="bb-1559932936124-clip"
+          id="bb-1560811908868-clip"
         >
           <rect
             height="226"
@@ -21,7 +21,7 @@ exports[`ClayCharts renders 1`] = `
           />
         </clippath>
         <clippath
-          id="bb-1559932936124-clip-xaxis"
+          id="bb-1560811908868-clip-xaxis"
         >
           <rect
             height="110"
@@ -31,7 +31,7 @@ exports[`ClayCharts renders 1`] = `
           />
         </clippath>
         <clippath
-          id="bb-1559932936124-clip-yaxis"
+          id="bb-1560811908868-clip-yaxis"
         >
           <rect
             height="250"
@@ -41,7 +41,7 @@ exports[`ClayCharts renders 1`] = `
           />
         </clippath>
         <clippath
-          id="bb-1559932936124-clip-grid"
+          id="bb-1560811908868-clip-grid"
         >
           <rect
             height="226"
@@ -60,12 +60,12 @@ exports[`ClayCharts renders 1`] = `
         />
         <g
           class="bb-regions"
-          clip-path="url(http://localhost/#bb-1559932936124-clip)"
+          clip-path="url(http://localhost/#bb-1560811908868-clip)"
           style="visibility: visible;"
         />
         <g
           class="bb-grid"
-          clip-path="url(http://localhost/#bb-1559932936124-clip-grid)"
+          clip-path="url(http://localhost/#bb-1560811908868-clip-grid)"
           style="visibility: visible;"
         >
           <g
@@ -178,7 +178,7 @@ exports[`ClayCharts renders 1`] = `
         </g>
         <g
           class="bb-chart"
-          clip-path="url(http://localhost/#bb-1559932936124-clip)"
+          clip-path="url(http://localhost/#bb-1560811908868-clip)"
         >
           <g
             class="bb-event-rects bb-event-rects-single"
@@ -338,7 +338,7 @@ exports[`ClayCharts renders 1`] = `
         </g>
         <g
           class="bb-axis bb-axis-x"
-          clip-path="url(http://localhost/#bb-1559932936124-clip-xaxis)"
+          clip-path="url(http://localhost/#bb-1560811908868-clip-xaxis)"
           style="visibility: visible; opacity: 1;"
           transform="translate(0, 226)"
         >

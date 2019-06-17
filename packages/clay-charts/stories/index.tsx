@@ -34,6 +34,28 @@ const ChartWithState = () => {
 	);
 };
 
+const ChartWithRef = () => {
+	const chartRef = React.useRef<HTMLDivElement>(null);
+
+	return (
+		<div>
+			<button
+				onClick={() => chartRef.current!.classList!.toggle('d-none')}
+			>
+				{'Hide Chart Element'}
+			</button>
+
+			<ClayChart
+				data={{
+					columns: COLUMNS,
+					type: 'bar',
+				}}
+				ref={chartRef}
+			/>
+		</div>
+	);
+};
+
 storiesOf('ClayCharts', module)
 	.add('bar', () => <ChartWithState />)
 	.add('bubble', () => (
@@ -312,4 +334,5 @@ storiesOf('ClayCharts', module)
 				x: 'x',
 			}}
 		/>
-	));
+	))
+	.add('w/ custom ref', () => <ChartWithRef />);

@@ -222,6 +222,7 @@ class GeomapBase {
 
 export interface IProps {
 	elementProps?: React.HTMLAttributes<HTMLDivElement>;
+	forwardRef: React.RefObject<HTMLDivElement>;
 	grid?: Grid;
 	predictionDate?: any;
 	point?: PointOptions;
@@ -235,9 +236,9 @@ export interface IProps {
 const Geomap: React.FunctionComponent<IProps> = ({
 	data,
 	elementProps = {},
+	forwardRef,
 	...otherProps
 }) => {
-	const containerRef = React.useRef(null);
 	const geoMapInstanceRef = React.useRef<any>();
 
 	React.useEffect(() => {
@@ -245,7 +246,7 @@ const Geomap: React.FunctionComponent<IProps> = ({
 			geoMapInstanceRef.current = new GeomapBase({
 				...otherProps,
 				data,
-				element: containerRef.current,
+				element: forwardRef.current,
 			});
 
 			geoMapInstanceRef.current.attached();
@@ -260,7 +261,14 @@ const Geomap: React.FunctionComponent<IProps> = ({
 		? geoMapInstanceRef.current.getSize()
 		: {};
 
-	return <div style={{height, width}} {...elementProps} ref={containerRef} />;
+	return <div style={{height, width}} {...elementProps} ref={forwardRef} />;
 };
 
-export default Geomap;
+export default React.forwardRef<HTMLDivElement, Omit<IProps, 'forwardRef'>>(
+	(props, ref) => (
+		<Geomap
+			forwardRef={ref as React.RefObject<HTMLDivElement>}
+			{...props}
+		/>
+	)
+);

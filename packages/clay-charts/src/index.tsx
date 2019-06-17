@@ -32,6 +32,7 @@ interface IDataType extends Omit<Omit<Data, 'type'>, 'columns'> {
 
 export interface IProps {
 	data: IDataType;
+	forwardRef: React.RefObject<HTMLDivElement>;
 	grid?: Grid;
 	line?: LineOptions;
 	point?: PointOptions;
@@ -42,14 +43,15 @@ export interface IProps {
 /**
  * Chart component.
  */
-export default function({
+const ClayChart: React.FunctionComponent<IProps> = ({
 	color,
 	data,
+	forwardRef,
 	grid,
 	line,
 	point,
 	...otherProps
-}: IProps) {
+}) => {
 	let ChartComponent;
 
 	switch (data.type as Types) {
@@ -80,8 +82,24 @@ export default function({
 				},
 				point
 			)}
+			ref={forwardRef}
 		/>
 	);
-}
+};
 
 export {bb};
+
+export default React.forwardRef<HTMLDivElement, Omit<IProps, 'forwardRef'>>(
+	(props, ref) => {
+		const defaultRef = React.useRef<HTMLDivElement>(null);
+
+		return (
+			<ClayChart
+				forwardRef={
+					(ref as React.RefObject<HTMLDivElement>) || defaultRef
+				}
+				{...props}
+			/>
+		);
+	}
+);
