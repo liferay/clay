@@ -14,12 +14,12 @@
 	{@param? _handleOnFocus: any}
 	{@param? _handleOnInput: any}
 	{@param? _handleOnKeydown: any}
+	{@param? _expanded: bool}
 	{@param? _isFetching: bool}
 	{@param? contentRenderer: string}
 	{@param? dataProviderInitialData: []|list<?>}
 	{@param? dropdownPortalElement: string}
 	{@param? elementClasses: string}
-	{@param? expanded: bool}
 	{@param? filteredItems: list<?>}
 	{@param? id: string}
 	{@param? inputElementClasses: string}
@@ -78,6 +78,7 @@
 
 		{call .dropdown}
 			{param _dropdownWidth: $_dropdownWidth /}
+			{param _expanded: $_expanded ?: false /}
 			{param _handleDataChange: $_handleDataChange /}
 			{param _handleDataError: $_handleDataError /}
 			{param _handleDataLoading: $_handleDataLoading /}
@@ -87,7 +88,6 @@
 			{param dataProviderInitialData: $dataProviderInitialData /}
 			{param dataSource: $dataSource /}
 			{param dropdownPortalElement: $dropdownPortalElement /}
-			{param expanded: $expanded /}
 			{param filteredItems: $filteredItems /}
 			{param inputValue: $inputValue /}
 			{param pollingInterval: $pollingInterval /}
@@ -202,10 +202,10 @@
 	{@param? _handleDataLoading: any}
 	{@param? _handleDropdownItemClick: any}
 	{@param? _handleOnKeydown: any}
+	{@param? _expanded: bool}
 	{@param? contentRenderer: string}
 	{@param? dataProviderInitialData: []|list<?>}
 	{@param? dropdownPortalElement: string}
-	{@param? expanded: bool}
 	{@param? filteredItems: list<?>}
 	{@param? pollingInterval: number}
 	{@param? requestInputMode: string}
@@ -224,7 +224,7 @@
 
 	{let $attributes kind="attributes"}
 		class="autocomplete-dropdown-menu dropdown-menu
-			{if $expanded}
+			{if $_expanded}
 				{sp}show
 			{/if}
 		"

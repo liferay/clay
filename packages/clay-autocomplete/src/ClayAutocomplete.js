@@ -97,7 +97,7 @@ class ClayAutocomplete extends ClayComponent {
 	_defaultInputChange(event) {
 		this._query = event.data.value;
 
-		this.expanded = true;
+		this._expanded = true;
 
 		if (this._query) {
 			if (isFunction(this.dataSource)) {
@@ -214,7 +214,7 @@ class ClayAutocomplete extends ClayComponent {
 		if (event.target === this.element) {
 			return;
 		}
-		this.expanded = false;
+		this._expanded = false;
 	}
 
 	/**
@@ -240,7 +240,7 @@ class ClayAutocomplete extends ClayComponent {
 	_handleItemSelected(event, index) {
 		const item = this.filteredItems[Number(index)];
 
-		this.expanded = false;
+		this._expanded = false;
 
 		return !this.emit({
 			data: {
@@ -451,6 +451,18 @@ ClayAutocomplete.STATE = {
 	_dropdownWidth: Config.number().internal(),
 
 	/**
+	 * Flag to indicate if dropdown is expanded.
+	 * @default false
+	 * @instance
+	 * @memberof ClayAutocomplete
+	 * @private
+	 * @type {?bool}
+	 */
+	_expanded: Config.bool()
+		.value(false)
+		.internal(),
+
+	/**
 	 * @default false
 	 * @instance
 	 * @memberof ClayAutocomplete
@@ -549,17 +561,6 @@ ClayAutocomplete.STATE = {
 			);
 		}
 	}),
-
-	/**
-	 * Flag to indicate if dropdown is expanded.
-	 * @default false
-	 * @instance
-	 * @memberof ClayAutocomplete
-	 * @type {?bool}
-	 */
-	expanded: Config.bool()
-		.value(false)
-		.internal(),
 
 	/**
 	 * Extracts from the data the item to be compared in autocomplete.
