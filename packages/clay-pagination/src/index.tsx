@@ -113,7 +113,7 @@ const Pagination: React.FunctionComponent<IProps> = ({
 	onPageChange,
 	spritemap,
 	totalPages,
-}) => {
+}: IProps) => {
 	const previousPage = activePage - 1;
 	const previousHref = hrefConstructor && hrefConstructor(previousPage);
 
