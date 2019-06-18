@@ -19,7 +19,7 @@ const ClayLink: React.FunctionComponent<IProps> = ({
 	className,
 	displayType,
 	...otherProps
-}) => (
+}: IProps) => (
 	<a
 		className={classNames(className, {
 			[`link-${displayType}`]: displayType,
