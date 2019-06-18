@@ -10,9 +10,7 @@ import React from 'react';
 
 const spritemap = '/images/icons/icons.svg';
 
-export const ProgressBar = () => {
-	const scope = {ClayProgressBar, spritemap};
-	const code = `const Component = () => {
+const ProgressBarCode = `const Component = () => {
 	
 	return (
 		<>
@@ -35,12 +33,14 @@ export const ProgressBar = () => {
 
 render(<Component />)`;
 
+export const ProgressBar = () => {
+	const scope = {ClayProgressBar, spritemap};
+	const code = ProgressBarCode;
+
 	return <Editor code={code} scope={scope} />;
 };
 
-export const ProgressBarFeedback = () => {
-	const scope = {ClayProgressBar, spritemap};
-	const code = `const Component = () => {
+const ProgressBarFeedbackCode = `const Component = () => {
 	
 	return (
 		<>
@@ -72,12 +72,14 @@ export const ProgressBarFeedback = () => {
 
 render(<Component />)`;
 
+export const ProgressBarFeedback = () => {
+	const scope = {ClayProgressBar, spritemap};
+	const code = ProgressBarFeedbackCode;
+
 	return <Editor code={code} scope={scope} />;
 };
 
-export const ProgressBarStatus = () => {
-	const scope = {ClayProgressBar, spritemap};
-	const code = `const Component = () => {
+const ProgressBarStatusCode = `const Component = () => {
 	
 	return (
 		<>
@@ -112,6 +114,10 @@ export const ProgressBarStatus = () => {
 }
 
 render(<Component />)`;
+
+export const ProgressBarStatus = () => {
+	const scope = {ClayProgressBar, spritemap};
+	const code = ProgressBarStatusCode;
 
 	return <Editor code={code} scope={scope} />;
 };
