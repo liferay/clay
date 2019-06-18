@@ -53,4 +53,8 @@ export const H4 = props => (
 	</h4>
 );
 
-export const P = props => <p className={props.className ? props.className :'clay-p'}>{props.children}</p>;
+export const P = props => (
+	<p className={props.className ? props.className : 'clay-p'}>
+		{props.children}
+	</p>
+);

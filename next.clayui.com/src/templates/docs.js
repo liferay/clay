@@ -9,7 +9,7 @@ import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import React, {useEffect} from 'react';
 import {graphql} from 'gatsby';
 import {Link} from 'gatsby';
-import { MDXProvider } from "@mdx-js/react";
+import {MDXProvider} from '@mdx-js/react';
 
 import CodeClipboard from '../components/CodeClipboard';
 import getSection from '../utils/getSection';
@@ -133,7 +133,13 @@ export default props => {
 															h4: Typography.H4,
 															p: Typography.P,
 															ul: props => (
-																<ul className={props.className ? props.className : 'clay-ul'}>
+																<ul
+																	className={
+																		props.className
+																			? props.className
+																			: 'clay-ul'
+																	}
+																>
 																	{
 																		props.children
 																	}
@@ -141,9 +147,7 @@ export default props => {
 															),
 														}}
 													>
-														<MDXRenderer
-															
-														>
+														<MDXRenderer>
 															{code.body}
 														</MDXRenderer>
 													</MDXProvider>

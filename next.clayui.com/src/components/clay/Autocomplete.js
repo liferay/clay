@@ -84,11 +84,15 @@ const autocompleteWithDataProviderCode = `const Component = () => {
 render(<Component />)`;
 
 const AutocompleteWithDataProvider = () => {
-	const scope = {ClayAutocomplete, ClayDataProvider, ClayDropDown, spritemap, useResource, useState};
+	const scope = {
+		ClayAutocomplete,
+		ClayDataProvider,
+		ClayDropDown,
+		spritemap,
+		useResource,
+		useState,
+	};
 	return <Editor code={autocompleteWithDataProviderCode} scope={scope} />;
 };
 
-export {
-	AutocompleteWithLoadingState,
-	AutocompleteWithDataProvider,
-};
+export {AutocompleteWithLoadingState, AutocompleteWithDataProvider};
