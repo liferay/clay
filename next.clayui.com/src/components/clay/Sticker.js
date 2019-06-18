@@ -12,21 +12,21 @@ import React from 'react';
 
 const spritemap = '/images/icons/icons.svg';
 
-export const Sticker = () => {
-	const scope = {ClaySticker, spritemap};
-	const code = `const Component = () => {
+const StickerCode = `const Component = () => {
 	return (
 		<ClaySticker displayType="dark">A</ClaySticker>
 	)
 }
- render(<Component />)`;
+render(<Component />)`;
+
+export const Sticker = () => {
+	const scope = {ClaySticker, spritemap};
+	const code = StickerCode;
 
 	return <Editor code={code} scope={scope} />;
 };
 
-export const StickerColors = () => {
-	const scope = {ClayIcon, ClaySticker, spritemap};
-	const code = `const Component = () => {
+const StickerColorsCode = `const Component = () => {
 	return (
 		<>
 			<ClaySticker displayType="danger">
@@ -63,14 +63,16 @@ export const StickerColors = () => {
 		</>
 	)
 }
- render(<Component />)`;
+render(<Component />)`;
+
+export const StickerColors = () => {
+	const scope = {ClayIcon, ClaySticker, spritemap};
+	const code = StickerColorsCode;
 
 	return <Editor code={code} scope={scope} />;
 };
 
-export const StickerSizes = () => {
-	const scope = {ClayIcon, ClaySticker, spritemap};
-	const code = `const Component = () => {
+const StickerSizesCode = `const Component = () => {
 	return (
 		<>
 			<ClaySticker displayType="light" size="sm">
@@ -91,14 +93,16 @@ export const StickerSizes = () => {
 		</>
 	)
 }
- render(<Component />)`;
+render(<Component />)`;
+
+export const StickerSizes = () => {
+	const scope = {ClayIcon, ClaySticker, spritemap};
+	const code = StickerSizesCode;
 
 	return <Editor code={code} scope={scope} />;
 };
 
-export const StickerPositions = () => {
-	const scope = {ClayIcon, ClaySticker, spritemap};
-	const code = `const Component = () => {
+const StickerPositionsCode = `const Component = () => {
 
 	return (
 		<div className="row">
@@ -129,14 +133,16 @@ export const StickerPositions = () => {
 		</div>
 	)
 }
- render(<Component />)`;
+render(<Component />)`;
+
+export const StickerPositions = () => {
+	const scope = {ClayIcon, ClaySticker, spritemap};
+	const code = StickerPositionsCode;
 
 	return <Editor code={code} scope={scope} />;
 };
 
-export const StickerOutside = () => {
-	const scope = {ClayButton, ClayIcon, ClaySticker, spritemap};
-	const code = `const Component = () => {
+const StickerOutsideCode = `const Component = () => {
 	return (
 		<ClayButton displayType="primary">
 			Button
@@ -146,14 +152,16 @@ export const StickerOutside = () => {
 		</ClayButton>
 	)
 }
- render(<Component />)`;
+render(<Component />)`;
+
+export const StickerOutside = () => {
+	const scope = {ClayButton, ClayIcon, ClaySticker, spritemap};
+	const code = StickerOutsideCode;
 
 	return <Editor code={code} scope={scope} />;
 };
 
-export const StickerOverlay = () => {
-	const scope = {ClaySticker};
-	const code = `const Component = () => {
+const StickerOverlayCode = `const Component = () => {
 	return (
 		<>
 			<ClaySticker displayType="dark" size="xl">
@@ -167,29 +175,35 @@ export const StickerOverlay = () => {
 		</>
 	)
 }
- render(<Component />)`;
+render(<Component />)`;
+
+export const StickerOverlay = () => {
+	const scope = {ClaySticker};
+	const code = StickerOverlayCode;
 
 	return <Editor code={code} scope={scope} />;
 };
 
+const StickerUserIconCode = `const Component = () => {
+	return (
+		<>
+			<ClaySticker className="sticker-user-icon" size="xl">
+				<div className="sticker-overlay">
+					<img className="sticker-img" src="/images/long_user_image.png" />
+				</div>
+			</ClaySticker>
+			<ClaySticker className="sticker-user-icon" size="xl">
+				{'BS'}
+			</ClaySticker>
+		</>
+	)
+}
+render(<Component />)`;
+
 export const StickerUserIcon = () => {
 	const scope = {ClaySticker};
 
-	const code = `const Component = () => {
-		return (
-			<>
-				<ClaySticker className="sticker-user-icon" size="xl">
-					<div className="sticker-overlay">
-						<img className="sticker-img" src="/images/long_user_image.png" />
-					</div>
-				</ClaySticker>
-				<ClaySticker className="sticker-user-icon" size="xl">
-					{'BS'}
-				</ClaySticker>
-			</>
-		)
-	}
-  render(<Component />)`;
+	const code = StickerUserIconCode;
 
 	return <Editor code={code} scope={scope} />;
 };
