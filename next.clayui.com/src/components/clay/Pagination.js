@@ -10,9 +10,7 @@ import React, {useState} from 'react';
 
 const spritemap = '/images/icons/icons.svg';
 
-export const Pagination = () => {
-	const scope = {ClayPagination, spritemap, useState};
-	const code = `const Component = () => {
+const PaginationCode = `const Component = () => {
 	const initialActivePage = 1;
 	const [active, setActive] = useState(initialActivePage);
 
@@ -26,14 +24,16 @@ export const Pagination = () => {
 	  	/>
 	);
 }
- render(<Component />)`;
+render(<Component />)`;
+
+export const Pagination = () => {
+	const scope = {ClayPagination, spritemap, useState};
+	const code = PaginationCode;
 
 	return <Editor code={code} scope={scope} />;
 };
 
-export const PaginationWithLinks = () => {
-	const scope = {ClayPagination, spritemap, useState};
-	const code = `const Component = () => {
+const PaginationWithLinksCode = `const Component = () => {
 	const initialActivePage = 1;
 	const [active, setActive] = useState(initialActivePage);
 
@@ -48,14 +48,16 @@ export const PaginationWithLinks = () => {
 	  	/>
 	);
 }
- render(<Component />)`;
+render(<Component />)`;
+
+export const PaginationWithLinks = () => {
+	const scope = {ClayPagination, spritemap, useState};
+	const code = PaginationWithLinksCode;
 
 	return <Editor code={code} scope={scope} />;
 };
 
-export const PaginationEllipsisBuffer = () => {
-	const scope = {ClayPagination, spritemap, useState};
-	const code = `const Component = () => {
+const PaginationEllipsisBufferCode = `const Component = () => {
 	const initialActivePage = 1;
 	const [active, setActive] = useState(initialActivePage);
 
@@ -69,14 +71,16 @@ export const PaginationEllipsisBuffer = () => {
 	  	/>
 	);
 }
- render(<Component />)`;
+render(<Component />)`;
+
+export const PaginationEllipsisBuffer = () => {
+	const scope = {ClayPagination, spritemap, useState};
+	const code = PaginationEllipsisBufferCode;
 
 	return <Editor code={code} scope={scope} />;
 };
 
-export const PaginationDisabledPages = () => {
-	const scope = {ClayPagination, spritemap, useState};
-	const code = `const Component = () => {
+const PaginationDisabledPagesCode = `const Component = () => {
 	const initialActivePage = 1;
 	const [active, setActive] = useState(initialActivePage);
 
@@ -91,7 +95,11 @@ export const PaginationDisabledPages = () => {
 	  	/>
 	);
 }
- render(<Component />)`;
+render(<Component />)`;
+
+export const PaginationDisabledPages = () => {
+	const scope = {ClayPagination, spritemap, useState};
+	const code = PaginationDisabledPagesCode;
 
 	return <Editor code={code} scope={scope} />;
 };
