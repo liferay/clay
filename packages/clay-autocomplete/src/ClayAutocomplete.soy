@@ -6,6 +6,7 @@
 {template .render}
 	{@param dataSource: string|[]|list<?>|any}
 	{@param? _dropdownWidth: number}
+	{@param? _expanded: bool}
 	{@param? _handleDataChange: any}
 	{@param? _handleDataError: any}
 	{@param? _handleDataLoading: any}
@@ -14,7 +15,6 @@
 	{@param? _handleOnFocus: any}
 	{@param? _handleOnInput: any}
 	{@param? _handleOnKeydown: any}
-	{@param? _expanded: bool}
 	{@param? _isFetching: bool}
 	{@param? contentRenderer: string}
 	{@param? dataProviderInitialData: []|list<?>}
@@ -197,12 +197,12 @@
 {template .dropdown}
 	{@param dataSource: string|[]|list<?>|any}
 	{@param? _dropdownWidth: number}
+	{@param? _expanded: bool}
 	{@param? _handleDataChange: any}
 	{@param? _handleDataError: any}
 	{@param? _handleDataLoading: any}
 	{@param? _handleDropdownItemClick: any}
 	{@param? _handleOnKeydown: any}
-	{@param? _expanded: bool}
 	{@param? contentRenderer: string}
 	{@param? dataProviderInitialData: []|list<?>}
 	{@param? dropdownPortalElement: string}
