@@ -11,9 +11,7 @@ import React from 'react';
 
 const spritemap = '/images/icons/icons.svg';
 
-const NavigationBar = () => {
-	const scope = {ClayLink, ClayNavigationBar, spritemap};
-	const code = `const Component = () => {
+const NavigationBarCode = `const Component = () => {
 
 	return (
         <ClayNavigationBar triggerLabel="Item 1" spritemap={spritemap}>
@@ -36,14 +34,16 @@ const NavigationBar = () => {
 	);
 }
 
-render(<Component />)`;
+render(<Component />);`;
+
+const NavigationBar = () => {
+	const scope = {ClayLink, ClayNavigationBar, spritemap};
+	const code = NavigationBarCode;
 
 	return <Editor code={code} scope={scope} />;
 };
 
-const NavigationBarWithStyledItem = () => {
-	const scope = {ClayNavigationBar, spritemap};
-	const code = `const Component = () => {
+const NavigationBarWithStyledItemCode = `const Component = () => {
 
     const btnStyle = {
         padding: "5.5px 16px 5.5px 16px",
@@ -65,7 +65,11 @@ const NavigationBarWithStyledItem = () => {
     );
 }
     
-render(<Component />)`;
+render(<Component />);`;
+
+const NavigationBarWithStyledItem = () => {
+	const scope = {ClayNavigationBar, spritemap};
+	const code = NavigationBarWithStyledItemCode;
 
 	return <Editor code={code} scope={scope} />;
 };
