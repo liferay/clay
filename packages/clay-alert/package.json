@@ -1,6 +1,6 @@
 {
   "name": "clay-alert",
-  "version": "2.16.0",
+  "version": "2.16.1",
   "description": "Metal Clay Alert component.",
   "license": "BSD-3-Clause",
   "repository": "https://github.com/liferay/clay/tree/master/packages/clay-alert",
@@ -28,9 +28,9 @@
     "metal"
   ],
   "dependencies": {
-    "clay-button": "^2.16.0",
-    "clay-component": "^2.16.0",
-    "clay-icon": "^2.16.0",
+    "clay-button": "^2.16.1",
+    "clay-component": "^2.16.1",
+    "clay-icon": "^2.16.1",
     "metal": "^2.16.0",
     "metal-component": "^2.16.0",
     "metal-soy": "^2.16.0",
@@ -43,11 +43,11 @@
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-node-env-inline": "^0.1.1",
     "babel-preset-env": "^1.6.0",
-    "browserslist-config-clay": "^2.16.0",
-    "clay-css": "^2.16.0",
+    "browserslist-config-clay": "^2.16.1",
+    "clay-css": "^2.16.1",
     "metal-tools-soy": "^4.3.2",
     "webpack": "^3.0.0",
-    "webpack-config-clay": "^2.16.0"
+    "webpack-config-clay": "^2.16.1"
   },
   "browserslist": [
     "extends browserslist-config-clay"
