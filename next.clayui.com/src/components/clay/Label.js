@@ -10,9 +10,7 @@ import React, {useState} from 'react';
 
 const spritemap = '/images/icons/icons.svg';
 
-export const Label = () => {
-	const scope = {ClayLabel, spritemap, useState};
-	const code = `const Component = () => {
+const LabelCode = `const Component = () => {
 	const [visible, setVisible] = useState(true);
 
 	return visible ? (
@@ -29,15 +27,17 @@ export const Label = () => {
 		</ClayLabel>
 	) : null;
 }
- render(<Component />)`;
+render(<Component />)`;
+
+export const Label = () => {
+	const scope = {ClayLabel, spritemap, useState};
+	const code = LabelCode;
 
 	return <Editor code={code} scope={scope} />;
 };
 
-export const LabelClosingActions = () => {
-	const scope = {ClayLabel, spritemap};
-	const code = `const Component = () => (
-		<ClayLabel
+const LabelClosingActionsCode = `const Component = () => (
+	<ClayLabel
 		closeButtonProps={
 			{
 				id: 'closeId'
@@ -49,106 +49,111 @@ export const LabelClosingActions = () => {
 		Label Text
 	</ClayLabel>
 )
- render(<Component />)`;
+render(<Component />)`;
+
+export const LabelClosingActions = () => {
+	const scope = {ClayLabel, spritemap};
+	const code = LabelClosingActionsCode;
 
 	return <Editor code={code} scope={scope} />;
 };
+
+const LabelDisplayTypesCode = `const Component = () => {
+	return (
+		<>
+			<ClayLabel
+				displayType="success"
+				spritemap={spritemap}
+			>
+				Label Success
+			</ClayLabel>
+			<ClayLabel
+				displayType="info"
+				spritemap={spritemap}
+			>
+				Label Info
+			</ClayLabel>
+			<ClayLabel
+				displayType="secondary"
+				spritemap={spritemap}
+			>
+				Label Secondary
+			</ClayLabel>
+			<ClayLabel
+				displayType="warning"
+				spritemap={spritemap}
+			>
+				Label Warning
+			</ClayLabel>
+			<ClayLabel
+				displayType="danger"
+				spritemap={spritemap}
+			>
+				Label Danger
+			</ClayLabel>
+		</>
+	)
+}
+render(<Component />)`;
 
 export const LabelDisplayTypes = () => {
 	const scope = {ClayLabel, spritemap};
-	const code = `const Component = () => {
-
-		return (
-			<>
-				<ClayLabel
-					displayType="success"
-					spritemap={spritemap}
-				>
-					Label Success
-				</ClayLabel>
-				<ClayLabel
-					displayType="info"
-					spritemap={spritemap}
-				>
-					Label Info
-				</ClayLabel>
-				<ClayLabel
-					displayType="secondary"
-					spritemap={spritemap}
-				>
-					Label Secondary
-				</ClayLabel>
-				<ClayLabel
-					displayType="warning"
-					spritemap={spritemap}
-				>
-					Label Warning
-				</ClayLabel>
-				<ClayLabel
-					displayType="danger"
-					spritemap={spritemap}
-				>
-					Label Danger
-				</ClayLabel>
-			</>
-		)
-}
- render(<Component />)`;
+	const code = LabelDisplayTypesCode;
 
 	return <Editor code={code} scope={scope} />;
 };
+
+const LabelLinkCode = `const Component = () => {
+	return (
+		<>
+			<ClayLabel
+				displayType="info"
+				href="#1"
+				spritemap={spritemap}
+			>
+				Label Link
+			</ClayLabel>
+		</>
+	)
+}
+render(<Component />)`;
 
 export const LabelLink = () => {
 	const scope = {ClayLabel, spritemap};
-	const code = `const Component = () => {
-
-		return (
-			<>
-				<ClayLabel
-					displayType="info"
-					href="#1"
-					spritemap={spritemap}
-				>
-					Label Link
-				</ClayLabel>
-			</>
-		)
-}
- render(<Component />)`;
+	const code = LabelLinkCode;
 
 	return <Editor code={code} scope={scope} />;
 };
+
+const LabelSizesCode = `const Component = () => {
+	return (
+		<>
+			<ClayLabel
+				displayType="info"
+				spritemap={spritemap}
+			>
+				Label Default
+			</ClayLabel>
+			<ClayLabel
+				displayType="info"
+				large
+				spritemap={spritemap}
+			>
+				Label Large
+			</ClayLabel>
+		</>
+	)
+}
+render(<Component />)`;
 
 export const LabelSizes = () => {
 	const scope = {ClayLabel, spritemap};
-	const code = `const Component = () => {
-
-		return (
-			<>
-				<ClayLabel
-					displayType="info"
-					spritemap={spritemap}
-				>
-					Label Default
-				</ClayLabel>
-				<ClayLabel
-					displayType="info"
-					large
-					spritemap={spritemap}
-				>
-					Label Large
-				</ClayLabel>
-			</>
-		)
-}
- render(<Component />)`;
+	const code = LabelSizesCode;
 
 	return <Editor code={code} scope={scope} />;
 };
 
-export const LabelWithChildren = () => {
-	const scope = {ClayLabel, spritemap};
-	const code = `const Component = () => (
+const LabelWithChildrenCode = `const Component = () => (
 	<div class="col-md-4">
 		<ClayLabel
 			displayType="success"
@@ -161,6 +166,10 @@ export const LabelWithChildren = () => {
 	</div>
 )
  render(<Component />)`;
+
+export const LabelWithChildren = () => {
+	const scope = {ClayLabel, spritemap};
+	const code = LabelWithChildrenCode;
 
 	return <Editor code={code} scope={scope} />;
 };
