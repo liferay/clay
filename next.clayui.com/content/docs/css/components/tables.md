@@ -34,6 +34,10 @@ description: "A table is a specific pattern for comparing datasets in a very dir
 </div>
 
 <div class="clay-site-alert alert alert-warning">
+	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#table">WAI-ARIA</a> accessibility pratices for tables when writting your markup.
+</div>
+
+<div class="clay-site-alert alert alert-warning">
     <code class="gatsby-code-text">show-quick-actions-on-hover</code> will need Javascript to add class table-focus on the table row when an item inside is focused to make it keyboard accessible.
 </div>
 

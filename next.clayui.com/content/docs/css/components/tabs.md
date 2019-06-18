@@ -18,6 +18,10 @@ description: "Tabs organize similar content together into individual sections in
     Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/alerts/">Alerts Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
 </div>
 
+<div class="clay-site-alert alert alert-warning">
+	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#tabpanel">WAI-ARIA</a> accessibility pratices for Tabs when writting your markup.
+</div>
+
 ## Classic
 
 <div class="sheet-example">

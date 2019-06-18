@@ -29,6 +29,10 @@ description: "Alerts are used to capture the attention of the user in an intrusi
 	See the implementation of the <a href="/docs/components/alerts.html">Alerts component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/alerts/">Alerts Pattern</a>.
 </div>
 
+<div class="clay-site-alert alert alert-warning">
+	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#alert">WAI-ARIA</a> accessibility pratices for alerts when writting your markup.
+</div>
+
 ## Colors
 
 Lexicon adopts in its design system the following colors below:
