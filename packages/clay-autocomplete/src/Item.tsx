@@ -27,7 +27,7 @@ const Item: React.FunctionComponent<IProps> = ({
 	match,
 	value,
 	...otherProps
-}) => {
+}: IProps) => {
 	const fuzzyMatchResult = fuzzy.match(match, value, optionsFuzzy);
 
 	return (

@@ -14,7 +14,7 @@ export interface IProps
 		React.ComponentProps<typeof ClayForm.Input> {}
 
 const Input = React.forwardRef<HTMLInputElement, IProps>(
-	({className, ...othersProps}, ref) => {
+	({className, ...othersProps}: IProps, ref) => {
 		const {loading} = useContext(Context);
 
 		return (
