@@ -6,6 +6,7 @@
 {template .render}
 	{@param dataSource: string|[]|list<?>|any}
 	{@param? _dropdownWidth: number}
+	{@param? _expanded: bool}
 	{@param? _handleDataChange: any}
 	{@param? _handleDataError: any}
 	{@param? _handleDataLoading: any}
@@ -77,6 +78,7 @@
 
 		{call .dropdown}
 			{param _dropdownWidth: $_dropdownWidth /}
+			{param _expanded: $_expanded ?: false /}
 			{param _handleDataChange: $_handleDataChange /}
 			{param _handleDataError: $_handleDataError /}
 			{param _handleDataLoading: $_handleDataLoading /}
@@ -195,6 +197,7 @@
 {template .dropdown}
 	{@param dataSource: string|[]|list<?>|any}
 	{@param? _dropdownWidth: number}
+	{@param? _expanded: bool}
 	{@param? _handleDataChange: any}
 	{@param? _handleDataError: any}
 	{@param? _handleDataLoading: any}
@@ -204,7 +207,6 @@
 	{@param? dataProviderInitialData: []|list<?>}
 	{@param? dropdownPortalElement: string}
 	{@param? filteredItems: list<?>}
-	{@param? inputValue: string}
 	{@param? pollingInterval: number}
 	{@param? requestInputMode: string}
 	{@param? requestOptions: [
@@ -220,11 +222,9 @@
 	{@param? requestRetries: number}
 	{@param? requestTimeout: number}
 
-	{let $isVisible: ($filteredItems and length($filteredItems) > 0) or $inputValue ? true : false /}
-
 	{let $attributes kind="attributes"}
 		class="autocomplete-dropdown-menu dropdown-menu
-			{if $isVisible}
+			{if $_expanded}
 				{sp}show
 			{/if}
 		"

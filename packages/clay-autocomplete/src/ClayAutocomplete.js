@@ -3,6 +3,7 @@ import 'clay-loading-indicator';
 import 'clay-portal';
 import {Align} from 'metal-position';
 import {Config} from 'metal-state';
+import {dom} from 'metal-dom';
 import {isFunction} from 'metal';
 import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
@@ -21,9 +22,15 @@ class ClayAutocomplete extends ClayComponent {
 	attached() {
 		this._dropdownItemFocused = null;
 
+		this._documentClickHandler = dom.on(
+			document,
+			'click',
+			this._handleDocumentClick.bind(this)
+		);
 		this.addListener('dataChange', this._defaultDataChange, true);
 		this.addListener('dataLoading', this._defaultDataLoading, true);
 		this.addListener('inputChange', this._defaultInputChange, true);
+		this.addListener('itemSelected', this._defaultItemSelected, true);
 		this.refs.dataProvider.refs.portal.on(
 			'rendered',
 			this._handleRenderedPortal.bind(this)
@@ -43,6 +50,7 @@ class ClayAutocomplete extends ClayComponent {
 	 * @inheritDoc
 	 */
 	disposed() {
+		this._documentClickHandler.removeListener();
 		this._dropdownItemFocused = null;
 	}
 
@@ -93,6 +101,8 @@ class ClayAutocomplete extends ClayComponent {
 	_defaultInputChange(event) {
 		this._query = event.data.value;
 
+		this._expanded = true;
+
 		if (this._query) {
 			if (isFunction(this.dataSource)) {
 				this.refs.dataProvider.updateData(this._query);
@@ -102,6 +112,13 @@ class ClayAutocomplete extends ClayComponent {
 		} else {
 			this.filteredItems = [];
 		}
+	}
+
+	/**
+	 * @private
+	 */
+	_defaultItemSelected() {
+		this._expanded = false;
 	}
 
 	/**
@@ -197,6 +214,18 @@ class ClayAutocomplete extends ClayComponent {
 			name: 'dataLoading',
 			originalEvent: event,
 		});
+	}
+
+	/**
+	 * Handles the dropdown hiding when clicking outside the autocomplete
+	 * component
+	 * @param {!Event} event
+	 */
+	_handleDocumentClick(event) {
+		if (event.target === this.element) {
+			return;
+		}
+		this._expanded = false;
 	}
 
 	/**
@@ -429,6 +458,18 @@ ClayAutocomplete.STATE = {
 	 * @type {!number}
 	 */
 	_dropdownWidth: Config.number().internal(),
+
+	/**
+	 * Flag to indicate if dropdown is expanded.
+	 * @default false
+	 * @instance
+	 * @memberof ClayAutocomplete
+	 * @private
+	 * @type {?bool}
+	 */
+	_expanded: Config.bool()
+		.value(false)
+		.internal(),
 
 	/**
 	 * @default false

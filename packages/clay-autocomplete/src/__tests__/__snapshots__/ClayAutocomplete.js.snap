@@ -158,7 +158,7 @@ exports[`ClayAutocomplete should render a ClayAutocomplete with input value 1`] 
     <div></div>
   </div>
 </div>
-<ul class="autocomplete-dropdown-menu dropdown-menu show" ref="dropdown">
+<ul class="autocomplete-dropdown-menu dropdown-menu" ref="dropdown">
   <li>
     <span class="disabled dropdown-item">no-results-were-found</span>
   </li>
