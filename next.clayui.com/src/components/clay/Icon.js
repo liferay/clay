@@ -10,10 +10,7 @@ import React from 'react';
 
 const spritemap = '/images/icons/icons.svg';
 
-export const Icon = () => {
-	const scope = {ClayIcon, spritemap};
-	const code = `const Component = () => {
-
+const IconCode = `const Component = () => {
 	return (
 		<ClayIcon symbol="heart" spritemap={spritemap} />
 	);
@@ -21,13 +18,14 @@ export const Icon = () => {
 
 render(<Component />)`;
 
+export const Icon = () => {
+	const scope = {ClayIcon, spritemap};
+	const code = IconCode;
+
 	return <Editor code={code} scope={scope} />;
 };
 
-export const IconWithContext = () => {
-	const scope = {ClayIcon, ClayIconSpriteContext, spritemap};
-	const code = `const Component = () => {
-
+const IconWithContextCode = `const Component = () => {
 	return (
 		<ClayIconSpriteContext.Provider value={spritemap}>
 			<ClayIcon symbol="add-cell" />
@@ -36,6 +34,10 @@ export const IconWithContext = () => {
 }
 
 render(<Component />)`;
+
+export const IconWithContext = () => {
+	const scope = {ClayIcon, ClayIconSpriteContext, spritemap};
+	const code = IconWithContextCode;
 
 	return <Editor code={code} scope={scope} />;
 };
