@@ -8,9 +8,7 @@ import ClaySelect, {ClaySelectWithOption} from '@clayui/select';
 import Editor from './Editor';
 import React from 'react';
 
-export const Select = () => {
-	const scope = {ClaySelect};
-	const code = `const Component = () => {
+const SelectCode = `const Component = () => {
 	const options = [
 		{
 			label: 'Option 1',
@@ -39,12 +37,14 @@ export const Select = () => {
 
 render(<Component />)`;
 
+export const Select = () => {
+	const scope = {ClaySelect};
+	const code = SelectCode;
+
 	return <Editor code={code} scope={scope} />;
 };
 
-export const SelectWithOption = () => {
-	const scope = {ClaySelectWithOption};
-	const code = `const Component = () => {
+const SelectWithOptionCode = `const Component = () => {
 	const options = [
 		{
 			label: 'Option 1',
@@ -65,6 +65,10 @@ export const SelectWithOption = () => {
 }
 
 render(<Component />)`;
+
+export const SelectWithOption = () => {
+	const scope = {ClaySelectWithOption};
+	const code = SelectWithOptionCode;
 
 	return <Editor code={code} scope={scope} />;
 };
