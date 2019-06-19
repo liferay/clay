@@ -5,10 +5,10 @@
  */
 
 import React, {HTMLAttributes, useCallback, useLayoutEffect} from 'react';
-import {bb, Chart, ChartOptions} from 'billboard.js';
+import {bb, ChartOptions} from 'billboard.js';
 
 interface IProps extends ChartOptions {
-	forwardRef: React.RefObject<HTMLDivElement>;
+	forwardRef: React.MutableRefObject<any>;
 	elementProps?: HTMLAttributes<HTMLDivElement>;
 }
 
@@ -17,19 +17,19 @@ const BillboardWrapper: React.FunctionComponent<IProps> = ({
 	elementProps = {},
 	...otherProps
 }) => {
-	let chart = React.useRef<Chart | null>(null).current;
+	const elementRef = React.useRef<HTMLDivElement>(null);
 
 	const updateChart = useCallback((args: any) => {
 		const {data, unloadBeforeLoad} = args;
 
-		if (!chart) {
-			chart = bb.generate({
-				bindto: forwardRef.current,
+		if (!forwardRef.current) {
+			forwardRef.current = bb.generate({
+				bindto: elementRef.current,
 				...args,
 			});
 		}
 
-		chart.load(
+		forwardRef.current.load(
 			unloadBeforeLoad
 				? {
 						...data,
@@ -43,16 +43,16 @@ const BillboardWrapper: React.FunctionComponent<IProps> = ({
 		requestAnimationFrame(() => updateChart(otherProps));
 
 		return () => {
-			if (chart) {
+			if (forwardRef.current) {
 				try {
-					chart.destroy();
+					forwardRef.current.destroy();
 				} catch (error) {
 					// eslint-disable-next-line no-console
 					console.error('Internal billboard.js error', error);
 				}
 			}
 
-			chart = null;
+			forwardRef.current = null;
 		};
 	}, []);
 
@@ -60,14 +60,11 @@ const BillboardWrapper: React.FunctionComponent<IProps> = ({
 		updateChart(otherProps);
 	}, [otherProps]);
 
-	return <div {...elementProps} ref={forwardRef} />;
+	return <div {...elementProps} ref={elementRef} />;
 };
 
 export default React.forwardRef<HTMLDivElement, Omit<IProps, 'forwardRef'>>(
 	(props, ref) => (
-		<BillboardWrapper
-			forwardRef={ref as React.RefObject<HTMLDivElement>}
-			{...props}
-		/>
+		<BillboardWrapper forwardRef={ref as React.RefObject<any>} {...props} />
 	)
 );

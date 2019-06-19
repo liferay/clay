@@ -34,15 +34,49 @@ const ChartWithState = () => {
 	);
 };
 
+const GeomapWithRef = () => {
+	const [size, setSize] = React.useState({});
+	const chartRef = React.useRef<any>(null);
+
+	return (
+		<div>
+			<button onClick={() => setSize(chartRef.current!.getSize())}>
+				{'Get Size'}
+			</button>
+			<div>{`Size: ${JSON.stringify(size)}`}</div>
+
+			<div style={{height: 380}}>
+				<ClayChart
+					color={{
+						range: {
+							max: '#0065e4',
+							min: '#b1d4ff',
+						},
+						selected: '#4b9bff',
+						value: 'gdp_md_est',
+					}}
+					data={{
+						...MAP_DATA,
+						type: 'geo-map',
+					}}
+					ref={chartRef}
+				/>
+			</div>
+		</div>
+	);
+};
+
 const ChartWithRef = () => {
-	const chartRef = React.useRef<HTMLDivElement>(null);
+	const chartRef = React.useRef<any>(null);
 
 	return (
 		<div>
 			<button
-				onClick={() => chartRef.current!.classList!.toggle('d-none')}
+				onClick={() => {
+					chartRef.current!.hide('data1');
+				}}
 			>
-				{'Hide Chart Element'}
+				{'Hide "data1"'}
 			</button>
 
 			<ClayChart
@@ -335,4 +369,5 @@ storiesOf('ClayCharts', module)
 			}}
 		/>
 	))
-	.add('w/ custom ref', () => <ChartWithRef />);
+	.add('bar w/ custom ref', () => <ChartWithRef />)
+	.add('map w/ custom ref', () => <GeomapWithRef />);

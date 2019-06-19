@@ -32,7 +32,7 @@ interface IDataType extends Omit<Omit<Data, 'type'>, 'columns'> {
 
 export interface IProps {
 	data: IDataType;
-	forwardRef: React.RefObject<HTMLDivElement>;
+	forwardRef: React.MutableRefObject<any>;
 	grid?: Grid;
 	line?: LineOptions;
 	point?: PointOptions;
@@ -91,13 +91,11 @@ export {bb};
 
 export default React.forwardRef<HTMLDivElement, Omit<IProps, 'forwardRef'>>(
 	(props, ref) => {
-		const defaultRef = React.useRef<HTMLDivElement>(null);
+		const defaultRef = React.useRef<any>();
 
 		return (
 			<ClayChart
-				forwardRef={
-					(ref as React.RefObject<HTMLDivElement>) || defaultRef
-				}
+				forwardRef={(ref as React.MutableRefObject<any>) || defaultRef}
 				{...props}
 			/>
 		);

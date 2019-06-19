@@ -222,7 +222,7 @@ class GeomapBase {
 
 export interface IProps {
 	elementProps?: React.HTMLAttributes<HTMLDivElement>;
-	forwardRef: React.RefObject<HTMLDivElement>;
+	forwardRef: React.MutableRefObject<any>;
 	grid?: Grid;
 	predictionDate?: any;
 	point?: PointOptions;
@@ -239,36 +239,33 @@ const Geomap: React.FunctionComponent<IProps> = ({
 	forwardRef,
 	...otherProps
 }) => {
-	const geoMapInstanceRef = React.useRef<any>();
+	const elementRef = React.useRef<HTMLDivElement>(null);
 
 	React.useEffect(() => {
-		if (geoMapInstanceRef) {
-			geoMapInstanceRef.current = new GeomapBase({
+		if (forwardRef) {
+			forwardRef.current = new GeomapBase({
 				...otherProps,
 				data,
-				element: forwardRef.current,
+				element: elementRef.current,
 			});
 
-			geoMapInstanceRef.current.attached();
+			forwardRef.current.attached();
 		}
 
 		return () => {
-			geoMapInstanceRef.current.disposed();
+			forwardRef.current.disposed();
 		};
 	}, []);
 
-	const {height = '100%', width = '100%'} = geoMapInstanceRef.current
-		? geoMapInstanceRef.current.getSize()
+	const {height = '100%', width = '100%'} = forwardRef.current
+		? forwardRef.current.getSize()
 		: {};
 
-	return <div style={{height, width}} {...elementProps} ref={forwardRef} />;
+	return <div style={{height, width}} {...elementProps} ref={elementRef} />;
 };
 
-export default React.forwardRef<HTMLDivElement, Omit<IProps, 'forwardRef'>>(
+export default React.forwardRef<any, Omit<IProps, 'forwardRef'>>(
 	(props, ref) => (
-		<Geomap
-			forwardRef={ref as React.RefObject<HTMLDivElement>}
-			{...props}
-		/>
+		<Geomap forwardRef={ref as React.MutableRefObject<any>} {...props} />
 	)
 );

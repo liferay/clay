@@ -10,7 +10,7 @@ import {Data} from 'billboard.js';
 
 interface IProps {
 	data: Data;
-	forwardRef: React.Ref<HTMLDivElement>;
+	forwardRef: React.MutableRefObject<any>;
 	predictionDate?: any;
 	[key: string]: any;
 }
@@ -70,6 +70,10 @@ const PredictiveChart: React.FunctionComponent<IProps> = ({
 
 export default React.forwardRef<HTMLDivElement, Omit<IProps, 'forwardRef'>>(
 	({data, ...otherProps}, ref) => (
-		<PredictiveChart data={data} forwardRef={ref} {...otherProps} />
+		<PredictiveChart
+			data={data}
+			forwardRef={ref as React.MutableRefObject<any>}
+			{...otherProps}
+		/>
 	)
 );
