@@ -30,7 +30,7 @@ const AspectRatio: React.FunctionComponent<ICardAspectRatioProps> = ({
 	children,
 	className,
 	containerAspectRatio,
-}) => {
+}: ICardAspectRatioProps) => {
 	const {interactive} = React.useContext(Context);
 
 	const TagName = interactive ? 'span' : 'div';

@@ -19,7 +19,7 @@ const Group: React.FunctionComponent<ICardGroupProps> = ({
 	className,
 	label,
 	...otherProps
-}) => {
+}: ICardGroupProps) => {
 	return (
 		<ul {...otherProps} className={classNames('card-page', className)}>
 			{label && (

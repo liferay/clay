@@ -43,7 +43,7 @@ const ClayCard: React.FunctionComponent<IProps> & {
 	interactive,
 	selectable = false,
 	...otherProps
-}) => {
+}: IProps) => {
 	const Content: React.FunctionComponent<IProps> = ({children}) => (
 		<Context.Provider value={{horizontal, interactive}}>
 			{children}

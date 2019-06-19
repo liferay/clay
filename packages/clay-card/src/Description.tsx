@@ -29,7 +29,7 @@ const Description: React.FunctionComponent<ICardDescriptionProps> = ({
 	displayType,
 	truncate = true,
 	...otherProps
-}) => {
+}: ICardDescriptionProps) => {
 	const {interactive} = React.useContext(Context);
 
 	const TagName = interactive ? 'span' : 'div';
