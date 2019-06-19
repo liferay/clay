@@ -24,7 +24,7 @@ const ClayLoadingIndicator: React.FunctionComponent<IProps> = ({
 	light,
 	small,
 	...otherProps
-}) => {
+}: IProps) => {
 	return (
 		<span
 			aria-hidden="true"

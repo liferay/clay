@@ -34,7 +34,7 @@ const LoadingIndicator: React.FunctionComponent<IProps> = ({
 	className,
 	component: Component = LoadingIndicatorMarkup,
 	...otherProps
-}) => {
+}: IProps) => {
 	const {onLoadingChange} = useContext(Context);
 
 	useEffect(() => {
