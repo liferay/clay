@@ -8,8 +8,6 @@ import ClayDropDown from '@clayui/drop-down';
 import Editor from './Editor';
 import React, {useState} from 'react';
 
-const spritemap = '/images/icons/icons.svg';
-
 const dropDownCode = `const Component = () => {
 	const [active, setActive] = useState(false);
 
@@ -41,10 +39,8 @@ const dropDownCode = `const Component = () => {
 render(<Component />)`;
 
 const DropDown = () => {
-	const scope = {ClayDropDown, spritemap, useState};
+	const scope = {ClayDropDown, useState};
 	return <Editor code={dropDownCode} scope={scope} />;
 };
 
-export {
-	DropDown,
-};
+export {DropDown};

@@ -13,7 +13,10 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	header?: string;
 }
 
-const DropDownGroup: React.FunctionComponent<IProps> = ({children, header}: IProps) => {
+const DropDownGroup: React.FunctionComponent<IProps> = ({
+	children,
+	header,
+}: IProps) => {
 	return (
 		<>
 			{header && (
