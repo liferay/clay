@@ -162,17 +162,41 @@ section: Components
 							</div>
 
 							<div class="date-picker-calendar-footer">
-								<div class="time-picker">
+								<div class="clay-time">
 									<div class="input-group">
 										<div class="input-group-item input-group-item-shrink">
-											<span class="input-group-text">
+											<div class="input-group-text">
 												<svg class="lexicon-icon lexicon-icon-time" focusable="false" role="presentation">
 													<use xlink:href="{{rootPath}}/images/icons/icons.svg#time"></use>
 												</svg>
-											</span>
+											</div>
 										</div>
 										<div class="input-group-item">
-											<input class="form-control" name="timer" type="time" value="00:00">
+											<div class="form-control">
+												<div class="clay-time-edit">
+													<input class="clay-time-hours form-control-inset" id="timePicker12hTimeZoneIcon" maxlength="2" name="uniqueNameHours" type="text" value="12">
+													<span class="clay-time-divider">:</span>
+													<input class="clay-time-minutes form-control-inset" maxlength="2" name="uniqueNameMinutes" type="text" value="00">
+													<input class="clay-time-ampm form-control-inset" maxlength="2" name="uniqueNameAmpm" type="text" value="PM">
+												</div>
+
+												<div class="clay-time-action-group">
+													<div class="clay-time-action-group-item">
+														<div class="btn-group-vertical clay-time-inner-spin" role="group">
+															<button class="btn btn-secondary clay-time-inner-spin-btn clay-time-inner-spin-btn-inc" type="button">
+																<svg class="lexicon-icon lexicon-icon-angle-up" focusable="false" role="presentation">
+																	<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-up"></use>
+																</svg>
+															</button>
+															<button class="btn btn-secondary clay-time-inner-spin-btn clay-time-inner-spin-btn-dec" type="button">
+																<svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
+																	<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-down"></use>
+																</svg>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
 										<div class="input-group-item input-group-item-shrink">
 											<span class="input-group-text">(GMT+01:00)</span>
