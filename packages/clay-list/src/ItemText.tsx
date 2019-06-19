@@ -17,7 +17,7 @@ const ItemText: React.FunctionComponent<IProps> = ({
 	className,
 	subtext,
 	...otherProps
-}) => {
+}: IProps) => {
 	return (
 		<p
 			{...otherProps}

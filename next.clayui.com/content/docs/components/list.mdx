@@ -1,0 +1,118 @@
+---
+title: "List"
+description: "Lists are a visual representation of a dataset, based on groups of related content, that is organized vertically."
+packageNpm: "@clayui/list"
+packageVersion: "3.0.0"
+packageStatus: "Beta"
+---
+
+import {List, ListHeader, ListItem, ListItemField, ListItemText, ListItemTitle, ListQuickActionsMenu} from '../../../src/components/clay/List';
+
+<div class="nav-toc">
+
+- [Variants and Best Pratices](#variants-and-best-pratices)
+    - [Header](#header)
+    - [Item](#item)
+    - [Item Field](#item-field)
+    - [Item Text](#item-text)
+	- [Item Title](#item-title)
+	- [Quick Action Menu](#quick-action-menu)
+- [API](#api)
+
+</div>
+
+<div class="clay-site-alert alert alert-info">
+	Check the <a href="https://liferay.design/lexicon/">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/lists/">Lists Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
+</div>
+
+## Variants and Best Pratices
+
+A list can composable by a Header, an Item and Quick Actions.
+
+<List />
+
+### Header
+
+Use `Header` composition to define a Header section on List.
+
+<ListHeader />
+
+### Item
+
+Use `Item` composition to define Items on List.
+
+<ListItem />
+
+### ItemField
+
+Use `ItemField` inside `Item` composition for wrapping anything inside `Item`.
+
+Use [`expand`](#api-expand) property to indicate if field should automatically expand its width to fit in the containing space.
+
+<ListItemField />
+
+### ItemText
+
+If you want to define texts inside the `Item`, use `ItemText` variant.
+
+Also, you can use this component to define subtexts, use [`subtext`](#api-subtext) property.
+
+<ListItemText />
+
+### ItemTitle
+
+Use `ItemTitle` composition for defining titles.
+
+<ListItemTitle />
+
+### QuickActionMenu
+
+Use `QuickActionMenu` composition inside `Item` for defining a QuickActionMenu. 
+
+Wrap `QuickActionMenu.Item` inside `QuickActionMenu` for defining an `Item` of QuickActionMenu. See the following example:
+
+<ListQuickActionsMenu />
+
+## API
+
+### ClayList
+
+<div>
+	[APITable "clay-list/src/index.tsx"]
+</div>
+
+### ClayList.Header
+
+<code class="list-api-item-type">Extends from {`React.HTMLAttributes<HTMLLIElement>`}</code>
+
+### ClayList.Item
+
+<div>
+	[APITable "clay-list/src/Item.tsx"]
+</div>
+
+### ClayList.ItemField
+
+<div>
+	[APITable "clay-list/src/ItemField.tsx"]
+</div>
+
+### ClayList.ItemText
+
+<div>
+	[APITable "clay-list/src/ItemText.tsx"]
+</div>
+
+### ClayList.ItemTitle
+
+<code class="list-api-item-type">Extends from {`React.HTMLAttributes<HTMLHeadingElement>`}</code>
+
+### ClayList.QuickActionMenu
+
+<code class="list-api-item-type">Extends from {`React.HTMLAttributes<HTMLDivElement>`}</code>
+
+### ClayList.QuickActionMenu.Item
+
+<div>
+	[APITable "clay-list/src/QuickActionMenuItem.tsx"]
+</div>
