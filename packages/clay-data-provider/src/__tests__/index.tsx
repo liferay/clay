@@ -10,15 +10,23 @@ import LRU from 'lru-cache';
 import React from 'react';
 import {cleanup, render, wait} from 'react-testing-library';
 import {FetchMock} from 'jest-fetch-mock'; // eslint-disable-line @typescript-eslint/no-unused-vars
-import {FetchPolicy, SYMBOL_DATA_PROVIDER, SYMBOL_ORIGIN} from '../types';
+import {
+	FetchPolicy,
+	IStorage,
+	SYMBOL_DATA_PROVIDER,
+	SYMBOL_ORIGIN,
+	TSymbolData,
+} from '../types';
 
-const setupCache = (key: string, data: Object) => {
+const setupCache = (key: string, data: Object): IStorage => {
+	const symbolDataProvider: TSymbolData = new LRU(10);
+
+	symbolDataProvider.set(key, data);
+
 	const cache = {
-		[SYMBOL_DATA_PROVIDER]: new LRU(10),
+		[SYMBOL_DATA_PROVIDER]: symbolDataProvider,
 		[SYMBOL_ORIGIN]: true,
 	};
-
-	cache[SYMBOL_DATA_PROVIDER].set(key, data);
 
 	return cache;
 };
