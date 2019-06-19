@@ -53,7 +53,7 @@ class GeomapBase {
 	constructor(config: any) {
 		this._data = config.data;
 		this._element = config.element;
-		this._color = config.color || DEFAULT_COLOR;
+		this._color = {...DEFAULT_COLOR, ...config.color};
 		this._pollingInterval = config.pollingInterval;
 
 		this._height = '100%';

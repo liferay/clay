@@ -20,23 +20,19 @@ const BillboardWrapper: React.FunctionComponent<IProps> = ({
 	const elementRef = React.useRef<HTMLDivElement>(null);
 
 	const updateChart = useCallback((args: any) => {
-		const {data, unloadBeforeLoad} = args;
+		const {data, ...otherArgs} = args;
 
-		if (!forwardRef.current) {
-			forwardRef.current = bb.generate({
-				bindto: elementRef.current,
-				...args,
-			});
+		if (elementRef.current) {
+			if (!forwardRef.current) {
+				forwardRef.current = bb.generate({
+					bindto: elementRef.current,
+					data,
+					...otherArgs,
+				});
+			}
+
+			forwardRef.current.load(data);
 		}
-
-		forwardRef.current.load(
-			unloadBeforeLoad
-				? {
-						...data,
-						unload: true,
-				  }
-				: data
-		);
 	}, []);
 
 	useLayoutEffect(() => {
