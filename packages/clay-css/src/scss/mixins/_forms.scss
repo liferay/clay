@@ -14,6 +14,7 @@
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
 /// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// align-items: {String | Null},
 /// bg: {Color | String | Null},
 /// bg-clip: {String | Null},
 /// bg-image: {String | List | Null},
@@ -28,10 +29,14 @@
 /// color: {Color | String | Null},
 /// cursor: {String | Null},
 /// display: {String | Null},
+/// flex-wrap: {String | Null},
 /// font-size: {Number | String | Null},
 /// font-weight: {Number | String | Null},
 /// height: {Number | String | Null},
+/// justify-content: {String | Null},
 /// line-height: {Number | String | Null},
+/// max-width: {Number | String | Null},
+/// min-height: {Number | String | Null},
 /// min-width: {Number | String | Null},
 /// outline: {Number | String | Null},
 /// padding-bottom: {Number | String | Null},
@@ -39,6 +44,7 @@
 /// padding-right: {Number | String | Null},
 /// padding-top: {Number | String | Null},
 /// text-align: {String | Null},
+/// text-transform: {String | Null},
 /// transition: {String | List | Null},
 /// width: {Number | String | Null},
 /// placeholder-color: {Color | String | Null},
@@ -77,6 +83,7 @@
 @mixin clay-form-control-variant($map) {
 	$enabled: setter(map-get($map, enabled), true);
 
+	$align-items: map-get($map, align-items);
 	$bg: map-get($map, bg);
 	$bg-clip: map-get($map, bg-clip);
 	$bg-image: map-get($map, bg-image);
@@ -91,10 +98,14 @@
 	$color: map-get($map, color);
 	$cursor: map-get($map, cursor);
 	$display: map-get($map, display);
+	$flex-wrap: map-get($map, flex-wrap);
 	$font-size: map-get($map, font-size);
 	$font-weight: map-get($map, font-weight);
 	$height: map-get($map, height);
+	$justify-content: map-get($map, justify-content);
 	$line-height: map-get($map, line-height);
+	$max-width: map-get($map, max-width);
+	$min-height: map-get($map, min-height);
 	$min-width: map-get($map, min-width);
 	$outline: map-get($map, outline);
 	$padding-bottom: map-get($map, padding-bottom);
@@ -102,6 +113,7 @@
 	$padding-right: map-get($map, padding-right);
 	$padding-top: map-get($map, padding-top);
 	$text-align: map-get($map, text-align);
+	$text-transform: map-get($map, text-transform);
 	$transition: map-get($map, transition);
 	$width: map-get($map, width);
 	$placeholder-color: map-get($map, placeholder-color);
@@ -139,6 +151,7 @@
 	$disabled-placeholder-color: map-get($map, disabled-placeholder-color);
 
 	@if ($enabled) {
+		align-items: $align-items;
 		background-color: $bg;
 		background-clip: $bg-clip;
 		background-image: $bg-image;
@@ -153,10 +166,14 @@
 		color: $color;
 		cursor: $cursor;
 		display: $display;
+		flex-wrap: $flex-wrap;
 		font-size: $font-size;
 		font-weight: $font-weight;
 		height: $height;
+		justify-content: $justify-content;
 		line-height: $line-height;
+		max-width: $max-width;
+		min-height: $min-height;
 		min-width: $min-width;
 		outline: $outline;
 		padding-bottom: $padding-bottom;
@@ -164,6 +181,7 @@
 		padding-right: $padding-right;
 		padding-top: $padding-top;
 		text-align: $text-align;
+		text-transform: $text-transform;
 		transition: $transition;
 		width: $width;
 
@@ -209,7 +227,8 @@
 			}
 		}
 
-		&:disabled {
+		&:disabled,
+		&.disabled {
 			background-color: $disabled-bg;
 			background-image: $disabled-bg-image;
 			border-color: $disabled-border-color;
