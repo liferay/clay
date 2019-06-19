@@ -8,9 +8,11 @@ import classNames from 'classnames';
 import Context from './Context';
 import React from 'react';
 
-const Body: React.FunctionComponent<
-	React.HTMLAttributes<HTMLDivElement>
-> = ({children, className, ...otherProps}) => {
+const Body: React.FunctionComponent<React.HTMLAttributes<HTMLDivElement>> = ({
+	children,
+	className,
+	...otherProps
+}) => {
 	const {horizontal, interactive} = React.useContext(Context);
 
 	const TagName = interactive ? 'span' : 'div';
