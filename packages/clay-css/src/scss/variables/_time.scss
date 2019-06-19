@@ -1,0 +1,82 @@
+$clay-time-btn: () !default;
+$clay-time-btn: map-merge((
+	align-items: center,
+	display: inline-flex,
+	font-size: 0.75rem,
+	height: 1.5rem,
+	justify-content: center,
+	padding-bottom: 0,
+	padding-left: 0,
+	padding-right: 0,
+	padding-top: 0,
+	width: 1.5rem,
+), $clay-time-btn);
+
+$clay-time-form-control: () !default;
+$clay-time-form-control: map-merge((
+	align-items: center,
+	display: inline-flex,
+	flex-wrap: wrap,
+	padding-bottom: 0.125rem,
+	padding-top: 0.125rem,
+), $clay-time-form-control);
+
+$clay-time-form-control-inset: () !default;
+$clay-time-form-control-inset: map-merge((
+	margin-bottom: 0,
+	margin-top: 0,
+	text-align: center,
+	width: 1.25rem,
+), $clay-time-form-control-inset);
+
+$clay-time-ampm: () !default;
+$clay-time-ampm: map-merge((
+	font-weight: 500,
+	margin-left: 0.25rem,
+	text-transform: uppercase,
+	width: 1.5rem,
+), $clay-time-ampm);
+
+$clay-time-input-group-text: () !default;
+$clay-time-input-group-text: map-merge((
+	bg: transparent,
+	border-color: transparent,
+	padding-bottom: 0,
+	padding-left: 0,
+	padding-right: 0,
+	padding-top: 0,
+), $clay-time-input-group-text);
+
+$clay-time-divider-margin-left: -3px !default;
+$clay-time-divider-margin-right: -3px !default;
+
+$clay-time-edit: () !default;
+$clay-time-edit: map-merge((
+	margin-right: auto,
+	padding-left: 0.5rem,
+	padding-right: 0.5rem,
+), $clay-time-edit);
+
+$clay-time-inner-spin: () !default;
+$clay-time-inner-spin: map-merge((
+	border-color: $secondary-d1,
+	border-radius: 8px,
+	border-style: solid,
+	border-width: $btn-border-width,
+), $clay-time-inner-spin);
+
+$clay-time-inner-spin-btn: () !default;
+$clay-time-inner-spin-btn: map-merge((
+	align-items: center,
+	border-radius: map-get($clay-time-inner-spin, border-radius),
+	border-width: 0,
+	display: inline-flex,
+	font-size: 8px,
+	height: auto,
+	justify-content: center,
+	padding-bottom: 2px,
+	padding-left: 2px,
+	padding-right: 2px,
+	padding-top: 2px,
+	width: auto,
+), $clay-time-inner-spin-btn);
