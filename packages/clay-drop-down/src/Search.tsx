@@ -29,7 +29,7 @@ const DropDownSearch: React.FunctionComponent<IProps> = ({
 	className,
 	spritemap,
 	...otherProps
-}) => {
+}: IProps) => {
 	return (
 		<form className={className}>
 			<div className="dropdown-section">

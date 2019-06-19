@@ -51,7 +51,7 @@ const DropDownItem: React.FunctionComponent<IProps> = ({
 	symbolLeft,
 	symbolRight,
 	...otherProps
-}) => {
+}: IProps) => {
 	const ItemElement = href ? 'a' : 'span';
 
 	return (
