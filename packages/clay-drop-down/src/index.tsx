@@ -74,7 +74,7 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 	onActiveChange,
 	trigger,
 	...otherProps
-}) => {
+}: IProps) => {
 	const triggerElementRef = useRef<HTMLButtonElement>(null);
 	const menuElementRef = useRef<HTMLDivElement>(null);
 

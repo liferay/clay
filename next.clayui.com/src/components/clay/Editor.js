@@ -91,10 +91,8 @@ const Editor = ({code, disabled = false, scope}) => (
 		theme={theme}
 	>
 		<div className="sheet-example">
-			<div className="form-group">
-				<LivePreview />
-				<LiveError />
-			</div>
+			<LivePreview />
+			<LiveError />
 		</div>
 		<div className="gatsby-highlight">
 			<LiveEditor />

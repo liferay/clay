@@ -70,7 +70,7 @@ const DropDownMenu = React.forwardRef<HTMLDivElement, IProps>((
 		hasRightSymbols,
 		onSetActive,
 		...otherProps
-	},
+	}: IProps,
 	// TS + refs don't always play nicely together, which is why it is casted
 	// in so many places below.
 	// See https://github.com/microsoft/TypeScript/issues/30748#issuecomment-480197036

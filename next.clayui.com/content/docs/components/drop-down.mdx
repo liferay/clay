@@ -1,0 +1,91 @@
+---
+title: "DropDown"
+description: "A dropdown menu displays a list of options for the element that triggers it."
+packageNpm: "@clayui/drop-down"
+packageVersion: "3.0.0"
+packageStatus: "Beta"
+---
+
+import {DropDown} from '../../../src/components/clay/DropDown';
+
+<div class="nav-toc">
+
+- [API](#api)
+  - [DropDown](#dropdown)
+  - [DropDown.Action](#dropdown.action)
+  - [DropDown.Caption](#dropdown.caption)
+  - [DropDown.Divider](#dropdown.divider)
+  - [DropDown.Group](#dropdown.group)
+  - [DropDown.Help](#dropdown.help)
+  - [DropDown.Item](#dropdown.item)
+  - [DropDown.ItemList](#dropdown.itemlist)
+  - [DropDown.Menu](#dropdown.menu)
+  - [DropDown.Search](#dropdown.search)
+
+</div>
+
+<div class="clay-site-alert alert alert-info">
+	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/dropdowns/">Dropdown Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
+</div>
+
+DropDown is delivered for composition offering flexibility for customization.
+
+<DropDown />
+
+You may want to use only the content of DropDown for other cases, such as mounting an `Autocomplete`, so use `DropDown.Menu` instead of `DropDown` which gives you the flexibility to only control content without a trigger.
+
+<div class="clay-site-alert alert alert-warning">
+	<code class="language-text">DropDown</code> consists of a <code class="language-text">DropDown.Menu</code> that controls the trigger and uses it as the basis for aligning DropDown content.
+</div>
+
+## API
+
+### DropDown
+
+<div>
+	[APITable "clay-drop-down/src/index.tsx"]
+</div>
+
+### DropDown.Action
+
+<code class="list-api-item-type">Extends from {`React.HTMLAttributes<HTMLButtonElement>`}</code>
+
+### DropDown.Caption
+
+<code class="list-api-item-type">Extends from {`React.HTMLAttributes<HTMLDivElement>`}</code>
+
+### DropDown.Divider
+
+<code class="list-api-item-type">Extends from {`React.HTMLAttributes<HTMLLIElement>`}</code>
+
+### DropDown.Group
+
+<div>
+	[APITable "clay-drop-down/src/Group.tsx"]
+</div>
+
+### DropDown.Help
+
+<code class="list-api-item-type">Extends from {`React.HTMLAttributes<HTMLDivElement>`}</code>
+
+### DropDown.Item
+
+<div>
+	[APITable "clay-drop-down/src/Item.tsx"]
+</div>
+
+### DropDown.ItemList
+
+<code class="list-api-item-type">Extends from {`React.HTMLAttributes<HTMLUListElement>`}</code>
+
+### DropDown.Menu
+
+<div>
+	[APITable "clay-drop-down/src/Menu.tsx"]
+</div>
+
+### DropDown.Search
+
+<div>
+	[APITable "clay-drop-down/src/Search.tsx"]
+</div>
