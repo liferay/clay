@@ -103,6 +103,14 @@ label {
 		@include clay-form-control-focus();
 	}
 
+	&.disabled {
+		background-color: $input-disabled-bg;
+		border-color: $input-disabled-border-color;
+		color: $input-disabled-color;
+		cursor: $input-disabled-cursor;
+		opacity: $input-disabled-opacity;
+	}
+
 	&[type="range"] {
 		background-color: transparent;
 		border-color: transparent;
@@ -212,6 +220,14 @@ div {
 
 	&:focus {
 		outline: 0;
+	}
+
+	&:disabled {
+		background-color: $input-disabled-bg;
+		border-color: $input-disabled-border-color;
+		color: $input-disabled-color;
+		cursor: $input-disabled-cursor;
+		opacity: $input-disabled-opacity;
 	}
 }
 
