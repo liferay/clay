@@ -1,0 +1,45 @@
+---
+title: "Icon"
+description: "Icons are a visual representation of an idea and/or action."
+packageNpm: "@clayui/icon"
+packageVersion: "3.0.0"
+packageStatus: "Beta"
+---
+
+import {Icon, IconWithContext} from '../../../src/components/clay/Icon';
+
+<div class="nav-toc">
+
+- [Best Pratices](#variants-and-best-pratices)
+    - [Using Context](#using-context)
+- [API](#api)
+
+</div>
+
+<div class="clay-site-alert alert alert-info">
+	Check the <a href="https://liferay.design/lexicon/">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/icons/">Icons Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
+</div>
+
+## Best Pratices
+
+For Icons, we use SVG elements that link to an SVG sprite. So, it becomes necessary to pass a parameter that points to a path where this [`spritemap`](#api-spritemap) is located.
+
+- See the complete list of symbols and flags that are offered by Clay's spritemap [here](/docs/css/components/icons.html)
+
+<Icon />
+
+### Using Context
+
+<div class="clay-site-alert alert alert-info">
+    For V3, an API was added to utilize context for passing spritemap down instead of having to pass the prop everywhere.
+</div>
+
+Just import `ClayIconSpriteContext` from the package and use your provider.
+
+<IconWithContext />
+
+## API
+
+<div>
+	[APITable "clay-icon/src/index.tsx"]
+</div>
