@@ -4,7 +4,7 @@
 	"description": "React.js wrapper for D3 and billboard.js",
 	"private": true,
 	"main": "lib/index.js",
-	"jsnext:main": "src/index.tsx",
+	"ts:main": "src/index.tsx",
 	"scripts": {
 		"build": "npm run sass && npm run compile && npm run copySvg",
 		"compile": "./node_modules/.bin/babel -d lib/ src/ -s --ignore src/__tests__",

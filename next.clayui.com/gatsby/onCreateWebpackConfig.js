@@ -26,6 +26,7 @@ module.exports = ({actions, stage}) => {
 			alias: {
 				$components: path.resolve(__dirname, '../src/components'),
 			},
+			mainFields: ['ts:main', 'module', 'main'],
 			modules: [path.resolve(__dirname, 'src'), 'node_modules'],
 		},
 	});

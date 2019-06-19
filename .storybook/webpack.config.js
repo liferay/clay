@@ -14,6 +14,9 @@ module.exports = ({config}) => {
 		test: /\.(ts|tsx)$/,
 		use: [require.resolve('awesome-typescript-loader')],
 	});
+
+	config.resolve.mainFields = ['ts:main', 'module', 'main'];
+
 	config.resolve.extensions.push('.ts', '.tsx');
 	return config;
 };

@@ -9,8 +9,8 @@
 		"npm": ">=3.0.0"
 	},
 	"main": "lib/index.js",
-	"module": "src/index.js",
-	"jsnext:main": "src/index.js",
+	"types": "lib/index.d.ts",
+	"ts:main": "src/index.tsx",
 	"files": [
 		"lib",
 		"src"
