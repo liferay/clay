@@ -18,7 +18,7 @@ interface IProps extends React.ComponentProps<typeof Select> {
 const SelectWithOption: React.FunctionComponent<IProps> = ({
 	options = [],
 	...otherProps
-}) => (
+}: IProps) => (
 	<Select {...otherProps}>
 		{options.map((option, index) => (
 			<Option {...option} key={index} />
