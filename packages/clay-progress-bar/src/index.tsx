@@ -39,7 +39,7 @@ const ClayProgressBar: React.FunctionComponent<IProps> = ({
 	value = 0,
 	warn,
 	...otherProps
-}) => {
+}: IProps) => {
 	warning(
 		value >= 0 && value <= 100,
 		`ClayProgressBar requires \`value\` to be in the range of 0 to 100, it received ${value}.`

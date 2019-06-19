@@ -1,0 +1,48 @@
+---
+title: "Progress Bar"
+description: "Progress bar indicates the percentage completed of a task."
+packageNpm: "@clayui/progress-bar"
+packageVersion: "3.0.0"
+packageStatus: "Beta"
+---
+
+import {ProgressBar, ProgressBarFeedback, ProgressBarStatus} from '../../../src/components/clay/ProgressBar';
+
+<div class="nav-toc">
+
+- [Variations and Best Pratices](#variations-and-best-pratices)
+- [API](#api)
+
+</div>
+
+<div class="clay-site-alert alert alert-info">
+	Check the <a href="https://liferay.design/lexicon/">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/progress-bars/">Progress Bars Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
+</div>
+
+## Variations and Best Pratices
+
+Progress Bar is used to indicate a percentage of something.
+
+<ProgressBar />
+
+### Status
+
+You can use [`value`](#api-value) property to define the percentage value of the progress bar.
+
+When [`value`](#api-value) is 100, the color of the progress bar will be styled to `success`.
+
+Also, you can use [`warn`](#api-warn) property to set the color of the progress bar fixed on `warning`.
+
+<ProgressBarStatus />
+
+### Feedback
+
+Use [`feedback`](#api-feedback) property to provide the same visual feedback to all items wrapped by ClayProgressBar.
+
+<ProgressBarFeedback />
+
+## API
+
+<div>
+    [APITable "clay-progress-bar/src/index.tsx"]
+</div>
