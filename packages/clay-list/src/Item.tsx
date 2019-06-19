@@ -42,7 +42,7 @@ const ClayItem: React.FunctionComponent<IProps> = ({
 	flex = false,
 	header = false,
 	...otherProps
-}) => {
+}: IProps) => {
 	return (
 		<li
 			{...otherProps}

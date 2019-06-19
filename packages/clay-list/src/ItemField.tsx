@@ -20,7 +20,7 @@ const ItemField: React.FunctionComponent<IProps> = ({
 	className,
 	expand,
 	...otherProps
-}) => {
+}: IProps) => {
 	return (
 		<div
 			{...otherProps}
