@@ -7,11 +7,11 @@
 import classNames from 'classnames';
 import Context from './Context';
 import React from 'react';
-import {AspectRatio} from './AspectRatio';
-import {Body} from './Body';
-import {Caption} from './Caption';
-import {Description} from './Description';
-import {Group} from './Group';
+import AspectRatio from './AspectRatio';
+import Body from './Body';
+import Caption from './Caption';
+import Description from './Description';
+import Group from './Group';
 import {IContext} from './Context';
 
 type CardDisplayType = 'file' | 'image' | 'user';

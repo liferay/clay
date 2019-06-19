@@ -23,7 +23,7 @@ interface ICardDescriptionProps
 	truncate?: boolean;
 }
 
-export const Description: React.FunctionComponent<ICardDescriptionProps> = ({
+const Description: React.FunctionComponent<ICardDescriptionProps> = ({
 	children,
 	className,
 	displayType,
@@ -45,3 +45,5 @@ export const Description: React.FunctionComponent<ICardDescriptionProps> = ({
 		</TagName>
 	);
 };
+
+export default Description;

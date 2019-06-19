@@ -8,7 +8,7 @@ import classNames from 'classnames';
 import Context from './Context';
 import React from 'react';
 
-export const Caption: React.FunctionComponent<
+const Caption: React.FunctionComponent<
 	React.HTMLAttributes<HTMLDivElement | HTMLSpanElement>
 > = ({children, className, ...otherProps}) => {
 	const {interactive} = React.useContext(Context);
@@ -24,3 +24,5 @@ export const Caption: React.FunctionComponent<
 		</TagName>
 	);
 };
+
+export default Caption;

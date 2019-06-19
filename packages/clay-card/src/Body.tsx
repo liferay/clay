@@ -8,7 +8,7 @@ import classNames from 'classnames';
 import Context from './Context';
 import React from 'react';
 
-export const Body: React.FunctionComponent<
+const Body: React.FunctionComponent<
 	React.HTMLAttributes<HTMLDivElement>
 > = ({children, className, ...otherProps}) => {
 	const {horizontal, interactive} = React.useContext(Context);
@@ -31,3 +31,5 @@ export const Body: React.FunctionComponent<
 
 	return content;
 };
+
+export default Body;
