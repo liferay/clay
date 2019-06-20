@@ -16,6 +16,14 @@ description: "Multi select is the field type that allows writing text to create 
 	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/forms/selector/">Multi Select Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
 </div>
 
+<div class="clay-site-alert alert alert-warning">
+	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/examples/grid/LayoutGrids.html">WAI-ARIA</a> accessibility pratices for grids when writting your markup.
+</div>
+
+<div class="clay-site-alert alert alert-warning">
+	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#aria_lh_search">WAI-ARIA</a> accessibility pratices for search when writting your markup.
+</div>
+
 ## Example
 
 <div class="clay-site-alert alert alert-warning">

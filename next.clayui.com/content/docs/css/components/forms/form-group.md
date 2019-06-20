@@ -10,6 +10,10 @@ description: "Forms obtain user data and transmit it to the system to either sto
 
 </div>
 
+<div class="clay-site-alert alert alert-warning">
+	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#aria_lh_form">WAI-ARIA</a> accessibility pratices for Form Elements when writting your markup.
+</div>
+
 The `.form-group` class is the easiest way to add some structure to forms. It provides a flexible class that encourages proper grouping of labels, controls, optional help text, and form validation messaging. By default it only applies `margin-bottom`, but it picks up additional styles in `.form-inline` as needed. Use it with `<fieldset>`s, `<div>`s, or nearly any other element.
 
 <div class="sheet-example">

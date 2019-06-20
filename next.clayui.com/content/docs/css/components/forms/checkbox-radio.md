@@ -21,6 +21,10 @@ description: "Checkboxes and radios provide users with different selection and a
 	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/forms/radio-check-toggle/">Checkbox and Radio Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
 </div>
 
+<div class="clay-site-alert alert alert-warning">
+	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#checkbox">WAI-ARIA</a> accessibility pratices for checkboxes when writting your markup.
+</div>
+
 ## Checkboxes and Radios
 
 Default checkboxes and radios are improved upon with the help of `.form-check`, **a single class for both input types that improves the layout and behavior of their HTML elements**. Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.
