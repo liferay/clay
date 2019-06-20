@@ -219,9 +219,6 @@ export const pageQuery = graphql`
 			htmlAst
 			frontmatter {
 				description
-				packageNpm
-				packageStatus
-				packageVersion
 				title
 				version
 			}
