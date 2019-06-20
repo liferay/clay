@@ -78,7 +78,7 @@ export default props => {
 									)}
 									{frontmatter.packageNpm && (
 										<p className="docs-package-npm">
-											{'npm install '}
+											{'yarn add '}
 											{frontmatter.packageNpm}
 										</p>
 									)}

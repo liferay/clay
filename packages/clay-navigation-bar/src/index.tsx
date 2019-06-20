@@ -9,39 +9,8 @@ import ClayIcon from '@clayui/icon';
 import ClayLink from '@clayui/link';
 import React, {useRef, useState} from 'react';
 import warning from 'warning';
+import {IItemProps, Item} from './Item';
 import {useTransitionHeight} from '@clayui/shared';
-
-interface IItemProps extends React.HTMLAttributes<HTMLLIElement> {
-	/**
-	 * Determines the active state of an dropdown list item.
-	 */
-	active?: boolean;
-
-	/**
-	 * Children elements received from ClayNavigationBar.Item component.
-	 */
-	children: React.ReactElement;
-}
-
-type ItemType = React.FunctionComponent<IItemProps>;
-
-const Item: ItemType = ({active, children, className, ...otherProps}) => {
-	return (
-		<li {...otherProps} className={classNames('nav-item', className)}>
-			{React.Children.map(
-				children,
-				(child: React.ReactElement<IItemProps>, index) =>
-					React.cloneElement(child, {
-						...child.props,
-						className: classNames(child.props.className, {
-							active,
-						}),
-						key: index,
-					})
-			)}
-		</li>
-	);
-};
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
@@ -66,7 +35,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const ClayNavigationBar: React.FunctionComponent<IProps> & {
-	Item: ItemType;
+	Item: typeof Item;
 } = ({
 	children,
 	className,
@@ -74,7 +43,7 @@ const ClayNavigationBar: React.FunctionComponent<IProps> & {
 	spritemap,
 	triggerLabel,
 	...otherProps
-}) => {
+}: IProps) => {
 	const [visible, setVisible] = useState(false);
 	const contentRef = useRef<HTMLDivElement>(null);
 	const [
