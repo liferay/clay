@@ -58,6 +58,16 @@ export default () => (
 							</Link>
 						</li>
 						<li className="nav-item">
+							<a
+								className="nav-link ml-3"
+								href="http://storybook.clayui.com"
+								rel="noopener noreferrer"
+								target="_blank"
+							>
+								{'Storybook'}
+							</a>
+						</li>
+						<li className="nav-item">
 							<Link className="nav-link ml-3" to="/blog">
 								{'Blog'}
 							</Link>
