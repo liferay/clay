@@ -28,10 +28,13 @@ title: 'Migrate the Clay components from v2 to v3'
 -   [ClayDataProvider](#claydataprovider)
 -   [ClayAutocomplete](#clayautocomplete)
 -   [ClaySelect](#clayselect)
+-   [ClayCharts](#claycharts)
 
 </div>
 
 ference for upgrading your components from Clay v2 to Clay v3, this symbolizes that you are migrating your application from [Metal.js](https://metaljs.com) to [React.js](https://reactjs.org). Although there is a lot of coverage here, you probably do not have to do everything. We will do our best to keep things easy to follow, and as sequential as possible, so you can quickly get rocking in v3!
+
+It is worth remembering that this documentation is a work in progress.
 
 ## Why you should migrate
 
@@ -42,6 +45,11 @@ This documentation page covers how to migrate from v2 to v3. The reason is cover
 ## General changes
 
 Clay v3 is introducing the rewriting of components in React and new components, the Framework change leads to some API changes that may no longer make sense for a context with React, wait for API changes and renames.
+
+These components are intended to be consumed via composition, this increases flexibility and more customization. We will also be delivering components with a higher level of logic as well, you can notice the nomenclature:
+
+- `<ClayDropDown.Item />`: renders basic markup.
+- `<ClayDropDownWithPagination />`: renders a number of items and includes logic for functionality.
 
 To symbolize this change, Clay is distributing the new packages on the scope npm `@clayui`, so you will find the packages `clay-link`, `clay-button`... on `@clayui/link`, `@clayui/button`.
 

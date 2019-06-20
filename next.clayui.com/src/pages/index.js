@@ -196,6 +196,23 @@ export default () => {
 								>
 									{'Documentation'}
 								</Link>
+								<a
+									className="btn btn-brand-color btn-link"
+									href="http://storybook.clayui.com"
+									rel="noopener noreferrer"
+									target="_blank"
+								>
+									{'Storybook'}
+									<span className="inline-item inline-item-after fs-12">
+										<svg
+											className="lexicon-icon lexicon-icon-angle-right"
+											focusable="false"
+											role="presentation"
+										>
+											<use href="/images/icons/icons.svg#angle-right" />
+										</svg>
+									</span>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -222,7 +239,7 @@ export default () => {
 											}
 										</p>
 										<span className="code-shell">
-											{'npm i @clay/css'}
+											{'yarn add @clay/css'}
 										</span>
 									</div>
 								</div>
