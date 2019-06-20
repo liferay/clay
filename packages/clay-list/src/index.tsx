@@ -28,7 +28,12 @@ const ClayList: React.FunctionComponent<IProps> & {
 	ItemText: typeof ItemText;
 	ItemTitle: typeof ItemTitle;
 	QuickActionMenu: typeof QuickActionMenu;
-} = ({children, className, showQuickActionsOnHover = true, ...otherProps}) => {
+} = ({
+	children,
+	className,
+	showQuickActionsOnHover = true,
+	...otherProps
+}: IProps) => {
 	return (
 		<ul
 			{...otherProps}

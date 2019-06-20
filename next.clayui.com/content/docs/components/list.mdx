@@ -1,0 +1,76 @@
+---
+title: "List"
+description: "Lists are a visual representation of a dataset, based on groups of related content, that is organized vertically."
+packageNpm: "@clayui/list"
+packageVersion: "3.0.0"
+packageStatus: "Beta"
+---
+
+import {List, ListQuickActionsMenu} from '../../../src/components/clay/List';
+
+<div class="nav-toc">
+
+- [Quick Action Menu](#quick-action-menu)
+- [API](#api)
+
+</div>
+
+<div class="clay-site-alert alert alert-info">
+	Check the <a href="https://liferay.design/lexicon/">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/lists/">Lists Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
+</div>
+
+A list can composable by a Header, an Item and Quick Actions.
+
+<List />
+
+## QuickActionMenu
+
+Use `QuickActionMenu` composition inside `Item` for defining a QuickActionMenu. 
+
+Wrap `QuickActionMenu.Item` inside `QuickActionMenu` for defining an `Item` of QuickActionMenu. See the following example:
+
+<ListQuickActionsMenu />
+
+## API
+
+### ClayList
+
+<div>
+	[APITable "clay-list/src/index.tsx"]
+</div>
+
+### ClayList.Header
+
+<code class="list-api-item-type">Extends from {`React.HTMLAttributes<HTMLLIElement>`}</code>
+
+### ClayList.Item
+
+<div>
+	[APITable "clay-list/src/Item.tsx"]
+</div>
+
+### ClayList.ItemField
+
+<div>
+	[APITable "clay-list/src/ItemField.tsx"]
+</div>
+
+### ClayList.ItemText
+
+<div>
+	[APITable "clay-list/src/ItemText.tsx"]
+</div>
+
+### ClayList.ItemTitle
+
+<code class="list-api-item-type">Extends from {`React.HTMLAttributes<HTMLHeadingElement>`}</code>
+
+### ClayList.QuickActionMenu
+
+<code class="list-api-item-type">Extends from {`React.HTMLAttributes<HTMLDivElement>`}</code>
+
+### ClayList.QuickActionMenu.Item
+
+<div>
+	[APITable "clay-list/src/QuickActionMenuItem.tsx"]
+</div>
