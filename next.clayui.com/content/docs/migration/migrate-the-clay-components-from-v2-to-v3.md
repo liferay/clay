@@ -1,33 +1,33 @@
 ---
-title: "Migrate the Clay components from v2 to v3"
+title: 'Migrate the Clay components from v2 to v3'
 ---
 
 <div class="nav-toc">
 
-- [Why you should migrate](#why-you-should-migrate)
-- [General changes](#general-changes)
+-   [Why you should migrate](#why-you-should-migrate)
+-   [General changes](#general-changes)
 
 </div>
 
 <div class="nav-toc">
 
-- [ClayAlert](#clayalert)
-- [ClayButton](#claybutton)
-- [ClayLink](#claylink)
-- [ClayNavigationBar](#claynavigationbar)
-- [ClaySticker](#claysticker)
-- [ClayIcon](#clayicon)
-- [ClayModal](#claymodal)
-- [ClayRadioGroup, ClayRadio](#clayradiogroup,-clayradio)
-- [ClayLabel](#claylabel)
-- [ClayProgressBar](#clayprogressbar)
-- [ClayList](#claylist)
-- [ClayCollapse -> ClayPanel](#claycollapse-->-claypanel)
-- [ClayDropDown](#claydropdown)
-- [ClayPagination](#claypagination)
-- [ClayDataProvider](#claydataprovider)
-- [ClayAutocomplete](#clayautocomplete)
-- [ClaySelect](#clayselect)
+-   [ClayAlert](#clayalert)
+-   [ClayButton](#claybutton)
+-   [ClayLink](#claylink)
+-   [ClayNavigationBar](#claynavigationbar)
+-   [ClaySticker](#claysticker)
+-   [ClayIcon](#clayicon)
+-   [ClayModal](#claymodal)
+-   [ClayRadioGroup, ClayRadio](#clayradiogroup,-clayradio)
+-   [ClayLabel](#claylabel)
+-   [ClayProgressBar](#clayprogressbar)
+-   [ClayList](#claylist)
+-   [ClayCollapse -> ClayPanel](#claycollapse-->-claypanel)
+-   [ClayDropDown](#claydropdown)
+-   [ClayPagination](#claypagination)
+-   [ClayDataProvider](#claydataprovider)
+-   [ClayAutocomplete](#clayautocomplete)
+-   [ClaySelect](#clayselect)
 
 </div>
 
@@ -138,7 +138,7 @@ ClayCard v3 became a Low-Level API, decomposed to ClayCard.AspectRatio, ClayCard
 + 				</ClayCard.AspectRatio>
 + 			</ClayCheckboxWithState>
 + 		</ClayCard.Header>
-+ 
++
 + 		<ClayCard.Body>
 + 			<div className="autofit-col autofit-col-expand">
 + 				<ClayCard.Description type="title">
@@ -157,7 +157,7 @@ ClayCard v3 became a Low-Level API, decomposed to ClayCard.AspectRatio, ClayCard
 
 ### API Changes:
 
-- Only the `spritemap` property was kept compared to the v2 API.
+-   Only the `spritemap` property was kept compared to the v2 API.
 
 ### Compositions:
 
@@ -213,7 +213,7 @@ To get to the behavior of having a ClayCard with a user image, use the following
 + 				</ClaySticker>
 + 			</div>
 + 		</ClayCard.Header>
-+ 
++
 + 		<ClayCard.Body>
 + 			<div className="autofit-col autofit-col-expand">
 + 				<ClayCard.Description type="title">
@@ -536,8 +536,7 @@ ClayTable has become more simpler than v2 with Table Head, Body, Row and Cell co
 
 ### API Changes
 
-- Take a look on Clay v3 website for more information.
-
+-   Take a look on Clay v3 website for more information.
 
 ## ClayIcon
 
@@ -925,9 +924,9 @@ If you use ClaySelect only for simple cases that do not need props for `options`
 
 ### API Changes
 
--	`data` deprecated
--	`inline` deprecated
--	`label` deprecated
+-   `data` deprecated
+-   `inline` deprecated
+-   `label` deprecated
 -   `defaultEventHandler` deprecated
 -   `elementClasses` renamed to `className`
 
@@ -936,11 +935,29 @@ If you use ClaySelect only for simple cases that do not need props for `options`
 Still you can take advantage of composition if you think `ClaySelectWithOption` does not cover your cases.
 
 ```jsx
-<ClaySelect
-	aria-label="Select Label"
-	id="mySelectId"
->
+<ClaySelect aria-label="Select Label" id="mySelectId">
 	<ClaySelect.Option label="Option 1" value="1" />
 	<ClaySelect.Option label="Option 2" value="2" />
 </ClaySelect>
 ```
+
+## ClayCharts
+
+With the new clay-charts, we removed the dependency of `react-billboardjs` and implemented the interaction with Billboard ourself to give us more leverage. There are not many other changes and the component should be very similar to how it was used before in metal-jsx.
+
+```jsx
+<ClayChart
+	data={{
+		columns: [
+			['data1', 100, 20, 30, 50, 40, 80, 220, 300],
+			['data2', 20, 70, 100, 340, 160, 20, 80, 200],
+		],
+		type: 'scatter',
+	}}
+/>
+```
+
+### API Changes
+
+-   removed named exports such as `BarChart` in favor of `type` prop in `data`.
+-   if a ref is provided, its value is the instance of the billboard.js chart.

@@ -22,13 +22,6 @@
 	"rules": {
 		"@typescript-eslint/no-unused-vars": 2,
 		"@typescript-eslint/interface-name-prefix": ["error", "always"],
-		"no-underscore-dangle": [
-			2,
-			{
-				"allowAfterThis": true,
-				"enforceInMethodNames": true
-			}
-		],
 		"no-unused-vars": 0,
 		"prefer-template": 2,
 		"react-hooks/rules-of-hooks": "error",

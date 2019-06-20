@@ -15,6 +15,15 @@ module.exports = ({config}) => {
 		use: [require.resolve('awesome-typescript-loader')],
 	});
 
+	config.module.rules.push({
+		test: /\.scss$/,
+		use: [
+			require.resolve('style-loader'),
+			require.resolve('css-loader'),
+			require.resolve('sass-loader'),
+		],
+	});
+
 	config.resolve.mainFields = ['ts:main', 'module', 'main'];
 
 	config.resolve.extensions.push('.ts', '.tsx');

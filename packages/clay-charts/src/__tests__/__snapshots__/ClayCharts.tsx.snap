@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayCharts renders 1`] = `<div />`;
+
+exports[`ClayCharts renders a map 1`] = `
+<div
+  style={
+    Object {
+      "height": "100%",
+      "width": "100%",
+    }
+  }
+/>
+`;
+
+exports[`ClayCharts renders when using a ref 1`] = `<div />`;
