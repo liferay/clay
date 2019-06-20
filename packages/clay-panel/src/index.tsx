@@ -39,7 +39,7 @@ const ClayPanel: React.FunctionComponent<IProps> & {
 	showCollapseIcon = true,
 	spritemap,
 	...otherProps
-}) => {
+}: IProps) => {
 	const panelRef = useRef<HTMLDivElement>(null);
 	const [expanded, setExpaned] = useState<boolean>(defaultExpanded);
 
