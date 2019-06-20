@@ -43,7 +43,7 @@ const ClayModal: FunctionComponent<IProps> & {
 	spritemap,
 	status,
 	...otherProps
-}) => {
+}: IProps) => {
 	const [visibleClassShow, setVisibleClassShow] = useState<boolean>(false);
 
 	const modalDialogElementRef = useRef<HTMLDivElement | null>(null);

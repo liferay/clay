@@ -18,7 +18,7 @@ const ICON_MAP = {
 	warning: 'question-circle-full',
 };
 
-const Header: FunctionComponent<HeaderProps> = ({children}) => {
+const Header: FunctionComponent<HeaderProps> = ({children}: HeaderProps) => {
 	const {onClose, spritemap, status} = useContext(Context);
 
 	return (
