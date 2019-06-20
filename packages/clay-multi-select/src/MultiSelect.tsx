@@ -3,6 +3,7 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+
 import classNames from 'classnames';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
@@ -12,34 +13,50 @@ const COMMA = 188;
 
 const KEYS = [COMMA];
 
-interface IProps extends React.HTMLAttributes<HTMLInputElement> {
+export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
+	children?: React.ReactChild | React.ReactChild[];
 	errorMessage?: string;
+	forwardRef?: React.Ref<HTMLDivElement>;
 	helpText?: string;
-	initialValue?: string;
 	inputValue?: string;
 	items: string[];
 	label?: React.ReactText;
 	onItemsChange: (val: string[]) => void;
+	onInputChange?: (val: string) => void;
 	spritemap?: string;
 	validateOnBlur?: boolean;
 	validationFn?: (val?: string) => boolean;
 }
 
 const MultiSelect: React.FunctionComponent<IProps> = ({
+	children,
 	errorMessage,
+	forwardRef,
 	helpText,
-	initialValue,
 	items,
 	label,
 	onItemsChange,
 	spritemap,
 	validateOnBlur = false,
 	validationFn = () => true,
+	inputValue = '',
+	onInputChange,
 	...otherProps
 }) => {
-	const [inputValue, setInputValue] = React.useState(initialValue);
 	const [isValid, setIsValid] = React.useState(true);
 	const [isFocused, setIsFocused] = React.useState();
+
+	const setNewValue = (newVal: string) => {
+		if (validationFn(newVal)) {
+			onItemsChange([...items, newVal]);
+
+			if (onInputChange) {
+				onInputChange('');
+			}
+		} else {
+			setIsValid(false);
+		}
+	};
 
 	const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
 		const {keyCode} = event;
@@ -47,13 +64,7 @@ const MultiSelect: React.FunctionComponent<IProps> = ({
 		if (inputValue && KEYS.includes(keyCode)) {
 			event.preventDefault();
 
-			if (validationFn(inputValue)) {
-				onItemsChange([...items, inputValue]);
-
-				setInputValue('');
-			} else {
-				setIsValid(false);
-			}
+			setNewValue(inputValue);
 		} else {
 			setIsValid(true);
 		}
@@ -65,13 +76,7 @@ const MultiSelect: React.FunctionComponent<IProps> = ({
 		setIsFocused(false);
 
 		if (value && validateOnBlur) {
-			if (validationFn(value)) {
-				onItemsChange([...items, value]);
-
-				setInputValue('');
-			} else {
-				setIsValid(false);
-			}
+			setNewValue(value);
 		}
 	};
 
@@ -101,7 +106,7 @@ const MultiSelect: React.FunctionComponent<IProps> = ({
 	};
 
 	return (
-		<div className="form-group">
+		<div className="form-group" ref={forwardRef}>
 			{label && <label>{label}</label>}
 
 			<div className="input-group input-group-stacked-sm-down">
@@ -136,7 +141,8 @@ const MultiSelect: React.FunctionComponent<IProps> = ({
 							className="form-control-inset"
 							onBlur={handleBlur}
 							onChange={event =>
-								setInputValue(event.target.value)
+								onInputChange &&
+								onInputChange(event.target.value)
 							}
 							onFocus={() => setIsFocused(true)}
 							onKeyDown={handleKeyDown}
@@ -144,6 +150,8 @@ const MultiSelect: React.FunctionComponent<IProps> = ({
 							type="text"
 							value={inputValue}
 						/>
+
+						{children}
 					</div>
 
 					{helpText && (
@@ -172,4 +180,17 @@ const MultiSelect: React.FunctionComponent<IProps> = ({
 	);
 };
 
-export default MultiSelect;
+export default React.forwardRef<HTMLDivElement, IProps>(
+	({inputValue, onInputChange, ...otherProps}, ref?) => {
+		const [value, setValue] = React.useState('');
+
+		return (
+			<MultiSelect
+				forwardRef={ref}
+				inputValue={onInputChange ? inputValue : value}
+				onInputChange={onInputChange || setValue}
+				{...otherProps}
+			/>
+		);
+	}
+);

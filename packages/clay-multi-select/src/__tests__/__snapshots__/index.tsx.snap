@@ -21,6 +21,7 @@ exports[`ClayMultiSelect renders 1`] = `
           onKeyDown={[Function]}
           onPaste={[Function]}
           type="text"
+          value=""
         />
       </div>
     </div>
@@ -130,6 +131,7 @@ exports[`ClayMultiSelect renders with items 1`] = `
           onKeyDown={[Function]}
           onPaste={[Function]}
           type="text"
+          value=""
         />
       </div>
     </div>

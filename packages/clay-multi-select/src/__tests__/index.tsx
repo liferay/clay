@@ -6,7 +6,7 @@
 
 import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
-import ClayMultiSelect from '..';
+import ClayMultiSelect, {ClayMultiSelectWithAutocomplete} from '..';
 import {cleanup, fireEvent, render} from 'react-testing-library';
 
 describe('ClayMultiSelect', () => {
@@ -120,6 +120,31 @@ describe('Interactions', () => {
 
 		fireEvent.click(
 			container.querySelector('.label .close') as HTMLButtonElement,
+			{}
+		);
+
+		expect(onItemsChangeFn).toHaveBeenCalled();
+	});
+
+	it('clicking on autocomplete item adds calls onItemsChange', () => {
+		const onItemsChangeFn = jest.fn();
+
+		render(
+			<ClayMultiSelectWithAutocomplete
+				inputValue="two"
+				items={['foo']}
+				onItemsChange={onItemsChangeFn}
+				sourceItems={['one', 'two', 'three', 'four']}
+				spritemap="/foo/bar"
+			/>
+		);
+
+		expect(document.querySelectorAll('.dropdown-item').length).toEqual(1);
+
+		expect(onItemsChangeFn).not.toHaveBeenCalled();
+
+		fireEvent.click(
+			document.querySelectorAll('.dropdown-item')[0] as HTMLLIElement,
 			{}
 		);
 
