@@ -82,7 +82,7 @@ const theme = {
 	],
 };
 
-const Editor = ({code, disabled = false, scope}) => (
+const Editor = ({code, disabled = false, preview = true, scope}) => (
 	<LiveProvider
 		code={code}
 		disabled={disabled}
@@ -90,10 +90,12 @@ const Editor = ({code, disabled = false, scope}) => (
 		scope={scope}
 		theme={theme}
 	>
-		<div className="sheet-example">
-			<LivePreview />
-			<LiveError />
-		</div>
+		{preview && (
+			<div className="sheet-example">
+				<LivePreview />
+				<LiveError />
+			</div>
+		)}
 		<div className="gatsby-highlight">
 			<LiveEditor />
 		</div>
