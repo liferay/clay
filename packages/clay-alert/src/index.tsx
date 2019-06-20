@@ -7,6 +7,7 @@
 import classNames from 'classnames';
 import Icon from '@clayui/icon';
 import React, {useEffect, useRef} from 'react';
+import {ToastContainer} from './ToastContainer';
 
 const useAutoClose = (autoClose?: boolean | number, onClose = () => {}) => {
 	const startedTime = useRef<number>(0);
@@ -54,7 +55,7 @@ const useAutoClose = (autoClose?: boolean | number, onClose = () => {}) => {
 
 export type DisplayType = 'danger' | 'info' | 'success' | 'warning';
 
-interface IClayAlertProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface IClayAlertProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Flag to indicate alert should automatically call `onClose`. It also
 	 * accepts a duration(in ms) which indicates how long to wait. If `true`
@@ -88,15 +89,6 @@ interface IClayAlertProps extends React.HTMLAttributes<HTMLDivElement> {
 	variant?: 'stripe';
 }
 
-interface IToastContainerProps extends React.HTMLAttributes<HTMLDivElement> {
-	/**
-	 * Chilren of the ToastContainer must be a ClayAlert
-	 */
-	children?:
-		| React.ReactElement<IClayAlertProps>
-		| React.ReactElement<IClayAlertProps>[];
-}
-
 const ICON_MAP = {
 	danger: 'exclamation-full',
 	info: 'info-circle',
@@ -105,7 +97,7 @@ const ICON_MAP = {
 };
 
 const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
-	ToastContainer: React.FunctionComponent<IToastContainerProps>;
+	ToastContainer: typeof ToastContainer;
 } = ({
 	autoClose,
 	children,
@@ -116,7 +108,7 @@ const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
 	title,
 	variant,
 	...otherProps
-}) => {
+}: IClayAlertProps) => {
 	const {pauseAutoCloseTimer, startAutoCloseTimer} = useAutoClose(
 		autoClose,
 		onClose
@@ -168,17 +160,6 @@ const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
 	);
 };
 
-ClayAlert.ToastContainer = ({children, className, ...otherProps}) => {
-	return (
-		<div
-			{...otherProps}
-			className={classNames(className, 'alert-container container')}
-		>
-			<div className="alert-notifications alert-notifications-fixed">
-				{children}
-			</div>
-		</div>
-	);
-};
+ClayAlert.ToastContainer = ToastContainer;
 
 export default ClayAlert;

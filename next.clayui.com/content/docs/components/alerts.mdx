@@ -1,15 +1,39 @@
 ---
 title: "Alerts"
-description: "Alerts are used to capture the attention of the user in an intrusive way. They can be used just to say that something went right, or perhaps to say that something needs to be reviewed."
-packageStatus: "Pending"
+description: "Alerts are used to capture the attention of the user in an intrusive way."
+packageNpm: "@clayui/alert"
+packageVersion: "3.0.0"
+packageStatus: "Beta"
 ---
 
-import Tracking from '../../../src/components/TrackingIssues';
+import {Alert} from '../../../src/components/clay/Alerts';
 
-## Tracking
+<div class="nav-toc">
 
-Are issues related to this component, use this information only for the purpose of knowing how the movement around the creation of this component.
+- [API](#api)
 
-[Open an issue](https://github.com/liferay/clay/issues)
+</div>
 
-<Tracking query="ClayAlert+repo:liferay/clay" />
+<div class="clay-site-alert alert alert-info">
+	Check the <a href="https://liferay.design/lexicon/">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/alerts/">Alerts Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
+</div>
+
+You can use alert with the following variants:
+
+<Alert />
+
+We recommend that you review the use cases in the <a href="https://storybook-clayui.netlify.com/?path=/story/clayalert--default">Storybook</a>.
+
+## API
+
+### ClayAlert
+
+<div>
+	[APITable "clay-alert/src/index.tsx"]
+</div>
+
+### ClayAlert.ToastContainer
+
+<div>
+	[APITable "clay-alert/src/ToastContainer.tsx"]
+</div>
