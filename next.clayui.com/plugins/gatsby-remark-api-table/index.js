@@ -31,7 +31,7 @@ const generateTr = (item, key) => {
 					: ''
 			}
 		</p>
-		<div class="list-api-item-desc">${item.description}</div>
+		<div class="list-api-item-desc">{${JSON.stringify(item.description)}}</div>
 		<code class="list-api-item-code">{${item.tsType &&
 			item.tsType.raw &&
 			JSON.stringify(item.tsType.raw)}}</code>
