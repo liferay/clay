@@ -31,7 +31,7 @@ const ClayBadge: React.FunctionComponent<IProps> = ({
 	displayType = 'primary',
 	label,
 	...otherProps
-}) => (
+}: IProps) => (
 	<span
 		{...otherProps}
 		className={classNames('badge', `badge-${displayType}`, className)}
