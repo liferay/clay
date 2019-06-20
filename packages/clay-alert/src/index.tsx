@@ -7,7 +7,7 @@
 import classNames from 'classnames';
 import Icon from '@clayui/icon';
 import React, {useEffect, useRef} from 'react';
-import {IToastContainerProps, ToastContainer} from './ToastContainer';
+import {ToastContainer} from './ToastContainer';
 
 const useAutoClose = (autoClose?: boolean | number, onClose = () => {}) => {
 	const startedTime = useRef<number>(0);
@@ -97,7 +97,7 @@ const ICON_MAP = {
 };
 
 const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
-	ToastContainer: React.FunctionComponent<IToastContainerProps>;
+	ToastContainer: typeof ToastContainer;
 } = ({
 	autoClose,
 	children,
