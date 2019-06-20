@@ -125,7 +125,7 @@ const ColorPicker: React.FunctionComponent<IProps> = ({
 	title,
 	useNative = false,
 	value = 'FFFFFF',
-}) => {
+}: IProps) => {
 	const triggerElementRef = useRef<HTMLDivElement>(null);
 	const dropdownContainerRef = useRef<HTMLDivElement>(null);
 	const inputRef = useRef<HTMLInputElement>(null);
