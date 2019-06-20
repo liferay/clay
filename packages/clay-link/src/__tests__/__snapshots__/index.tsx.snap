@@ -6,6 +6,24 @@ exports[`ClayLink renders 1`] = `
 />
 `;
 
+exports[`ClayLink renders borderless links 1`] = `
+<a
+  className="link-outline-borderless"
+  href="#1"
+>
+  Borderless
+</a>
+`;
+
+exports[`ClayLink renders outline links 1`] = `
+<a
+  className="link-outline link-outline-primary"
+  href="#1"
+>
+  Outline
+</a>
+`;
+
 exports[`ClayLink renders with a children content 1`] = `
 <a
   className=""
@@ -25,4 +43,13 @@ exports[`ClayLink renders with href 1`] = `
   className=""
   href="#links"
 />
+`;
+
+exports[`ClayLink renders with monospaced 1`] = `
+<a
+  className="link-monospaced link-outline link-outline-borderless link-outline-primary"
+  href="#1"
+>
+  M
+</a>
 `;

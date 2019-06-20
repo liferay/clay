@@ -36,4 +36,40 @@ describe('ClayLink', () => {
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
+
+	it('renders with monospaced', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayLink
+				borderless
+				displayType="primary"
+				href="#1"
+				monospaced
+				outline
+			>
+				{'M'}
+			</ClayLink>
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('renders outline links', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayLink displayType="primary" href="#1" outline>
+				{'Outline'}
+			</ClayLink>
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('renders borderless links', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayLink borderless href="#1">
+				{'Borderless'}
+			</ClayLink>
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
 });
