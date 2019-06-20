@@ -35,16 +35,16 @@ import {
 
 ## Introduction
 
-ClayDataProvider is a simple but very powerful client, it was designed to help you consume data easily but keeping all concern with data caching, attempts, polling, network status and avoiding [the thundering herd problem](https://en.wikipedia.org/wiki/Thundering_herd_problem). He is simple and powerful because:
+ClayDataProvider is a simple but very powerful component, it was designed to help you consume data easily and gives functionality of data caching, attempts, polling, network status and avoiding [the thundering herd problem](https://en.wikipedia.org/wiki/Thundering_herd_problem). It is simple and powerful because:
 
-- **Easy adoption**, you can use incrementally in your application and only use the `useResource` hook or `ClayDataProvider` component and have all the functionality available for only a single request.
-- **Simple to start**, use the basics you already know and then take advantage to set it to get the most out of it.
-- **Built for the data to reflect what users are doing in your application**, it works perfectly for cases where the data changes according to user interaction.
-- **Extensible**, enjoy the single cache in only one source of truth and save the data between navigations to be used in future interactions.
+- **Easy adoption**, you can incrementally use in your application and both `useResource` hook and `ClayDataProvider` component and have all the functionality available.
+- **Simple to start**, use the basics you already know or take advantage of the full set of features to get the most out of it.
+- **Built for data to reflect what users are doing in your application**, it works perfectly for cases where data changes according to user interaction.
+- **Extensible**, enjoy the single cache in only one source of truth and save data between navigations to be used in future interactions.
 
 ## Getting started
 
-To consume the data, you can work with two different ways in React, using the `<ClayDataProvider />` component or `useResource` hook. We recommend that you use `useResource` for cases where your component has more logic to handle the data, so it decreases the complexity above the renders and eliminates a lot of logic within JSX, use `<ClayDataProvider />` for simpler cases that do not have so much logic involved in the data or when you are not familiar with hooks.
+To consume data, you can work with two different ways in React, using the `<ClayDataProvider />` component or `useResource` hook. We recommend that you use `useResource` for cases where your component has more logic to handle data, so it decreases the complexity and eliminates logic within JSX, use `<ClayDataProvider />` for simpler cases that do not have so much logic involved in the data or when you are not familiar with hooks.
 
 <DataProvider />
 
@@ -75,7 +75,7 @@ The DataProvider provides network status information for you if you want to crea
 
 <DataProviderWithNetworkStatus />
 
-Using network status with hooks is another path, it does not provide an abstraction for `loading`, `error` and `networkStatus` and all information is collected through the `onNetworkStatusChange` callback.
+Using network status with hooks is another option, it does not provide an abstraction for `loading`, `error` and `networkStatus` and all information is collected through the `onNetworkStatusChange` callback.
 
 - `loading` is equivalent to `networkStatus < 4`
 - `error` is equivalent to `status === 5`
@@ -116,7 +116,7 @@ These two features combined help alleviate [the thundering herd problem](https:/
 
 ### Caching data at root level
 
-The DataProvider can be used on small components that need some data and if it is very reused by the application in other pages, it does not make sense to consult this data every time the user interacts with it in other parts of your application, you can take advantage of the root level cache, ensuring that the next user interactions in the component are with the data in the cache, even if it is on other pages.
+The DataProvider can be used on small components that need some data and if it is very reused by the application in other pages, it does not make sense to consult this data every time the user interacts with it in other parts of your application, you can take advantage of the root level cache, ensuring that the next user interactions in the component are with data in the cache, even if it is on other pages.
 
 <DataProviderWithCacheRootLevel />
 
