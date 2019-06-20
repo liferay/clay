@@ -29,7 +29,7 @@ const LabelCode = `const Component = () => {
 }
 render(<Component />)`;
 
-export const Label = () => {
+const Label = () => {
 	const scope = {ClayLabel, spritemap, useState};
 	const code = LabelCode;
 
@@ -51,7 +51,7 @@ const LabelClosingActionsCode = `const Component = () => (
 )
 render(<Component />)`;
 
-export const LabelClosingActions = () => {
+const LabelClosingActions = () => {
 	const scope = {ClayLabel, spritemap};
 	const code = LabelClosingActionsCode;
 
@@ -96,80 +96,11 @@ const LabelDisplayTypesCode = `const Component = () => {
 }
 render(<Component />)`;
 
-export const LabelDisplayTypes = () => {
+const LabelDisplayTypes = () => {
 	const scope = {ClayLabel, spritemap};
 	const code = LabelDisplayTypesCode;
 
 	return <Editor code={code} scope={scope} />;
 };
 
-const LabelLinkCode = `const Component = () => {
-	return (
-		<>
-			<ClayLabel
-				displayType="info"
-				href="#1"
-				spritemap={spritemap}
-			>
-				Label Link
-			</ClayLabel>
-		</>
-	)
-}
-render(<Component />)`;
-
-export const LabelLink = () => {
-	const scope = {ClayLabel, spritemap};
-	const code = LabelLinkCode;
-
-	return <Editor code={code} scope={scope} />;
-};
-
-const LabelSizesCode = `const Component = () => {
-	return (
-		<>
-			<ClayLabel
-				displayType="info"
-				spritemap={spritemap}
-			>
-				Label Default
-			</ClayLabel>
-			<ClayLabel
-				displayType="info"
-				large
-				spritemap={spritemap}
-			>
-				Label Large
-			</ClayLabel>
-		</>
-	)
-}
-render(<Component />)`;
-
-export const LabelSizes = () => {
-	const scope = {ClayLabel, spritemap};
-	const code = LabelSizesCode;
-
-	return <Editor code={code} scope={scope} />;
-};
-
-const LabelWithChildrenCode = `const Component = () => (
-	<div class="col-md-4">
-		<ClayLabel
-			displayType="success"
-			spritemap={spritemap}
-		>
-			<span className="text-truncate">
-				Pneumonoultramicroscopicsilicovolcanoconiosis
-			</span>
-		</ClayLabel>
-	</div>
-)
- render(<Component />)`;
-
-export const LabelWithChildren = () => {
-	const scope = {ClayLabel, spritemap};
-	const code = LabelWithChildrenCode;
-
-	return <Editor code={code} scope={scope} />;
-};
+export {Label, LabelClosingActions, LabelDisplayTypes};
