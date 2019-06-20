@@ -7,7 +7,8 @@
 import classNames from 'classnames';
 import React from 'react';
 
-export interface IRadioProps extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface IRadioProps
+	extends React.InputHTMLAttributes<HTMLInputElement> {
 	/**
 	 * Props for the outer most container element.
 	 */
