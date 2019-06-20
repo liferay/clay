@@ -89,7 +89,7 @@ const ClayTable: React.FunctionComponent<IProps> & {
 	striped,
 	tableVerticalAlignment,
 	...otherProps
-}) => {
+}: IProps) => {
 	return (
 		<table
 			className={classNames(
