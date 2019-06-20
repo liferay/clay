@@ -46,10 +46,10 @@ This documentation page covers how to migrate from v2 to v3. The reason is cover
 
 Clay v3 is introducing the rewriting of components in React and new components, the Framework change leads to some API changes that may no longer make sense for a context with React, wait for API changes and renames.
 
-We are also betting on the delivery of components oriented to composition, simple components that do very well what is defined, this increases the space for flexibility and more customization but also increase the work of composing but we will be delivering the components with a higher level of logic also, you can notice the nomenclature:
+These components are intended to be consumed via composition, this increases flexibility and more customization. We will also be delivering components with a higher level of logic as well, you can notice the nomenclature:
 
-- `<ClayDropDown.Item />`: does render an item very well.
-- `<ClayDropDownWithPagination />`: renders a number of items and some more logic.
+- `<ClayDropDown.Item />`: renders basic markup.
+- `<ClayDropDownWithPagination />`: renders a number of items and includes logic for functionality.
 
 To symbolize this change, Clay is distributing the new packages on the scope npm `@clayui`, so you will find the packages `clay-link`, `clay-button`... on `@clayui/link`, `@clayui/button`.
 
