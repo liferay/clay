@@ -26,7 +26,11 @@ interface IFooterProps {
 	middle?: React.ReactElement;
 }
 
-const Footer: FunctionComponent<IFooterProps> = ({first, last, middle}) => (
+const Footer: FunctionComponent<IFooterProps> = ({
+	first,
+	last,
+	middle,
+}: IFooterProps) => (
 	<div className="modal-footer">
 		<div className="modal-item-first">{first}</div>
 		<div className="modal-item">{middle}</div>

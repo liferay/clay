@@ -41,7 +41,7 @@ const ClayPanelGroup: React.FunctionComponent<IProps> = ({
 	fluidLast,
 	flush,
 	...otherProps
-}) => {
+}: IProps) => {
 	return (
 		<div
 			{...otherProps}

@@ -33,7 +33,7 @@ const Row: React.FunctionComponent<IRowProps> = ({
 	divider = false,
 	rowDelimiter,
 	...otherProps
-}) => {
+}: IRowProps) => {
 	return (
 		<tr
 			{...otherProps}

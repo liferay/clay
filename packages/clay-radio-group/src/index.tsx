@@ -5,72 +5,8 @@
  */
 
 import classNames from 'classnames';
+import Radio, {IRadioProps} from './Radio';
 import React from 'react';
-
-interface IRadioProps extends React.InputHTMLAttributes<HTMLInputElement> {
-	/**
-	 * Props for the outer most container element.
-	 */
-	containerProps?: React.HTMLAttributes<HTMLDivElement>;
-
-	/**
-	 * Flag to indicate if radio elements should display inline.
-	 */
-	inline?: boolean;
-
-	/**
-	 * Text to describe for radio element.
-	 */
-	label?: React.ReactText;
-
-	/**
-	 * Value provided if element is selected.
-	 */
-	value: React.ReactText;
-}
-
-const Radio: React.FunctionComponent<IRadioProps> = ({
-	checked,
-	children,
-	className,
-	containerProps = {className: ''},
-	inline,
-	label,
-	...otherProps
-}) => {
-	return (
-		<div
-			{...containerProps}
-			className={classNames(
-				'custom-control custom-radio',
-				containerProps.className,
-				{
-					'custom-control-inline': inline,
-				}
-			)}
-		>
-			<label>
-				<input
-					{...otherProps}
-					checked={checked}
-					className={classNames('custom-control-input', className)}
-					role="radio"
-					type="radio"
-				/>
-
-				<span className="custom-control-label">
-					{label && (
-						<span className="custom-control-label-text">
-							{label}
-						</span>
-					)}
-				</span>
-
-				{children}
-			</label>
-		</div>
-	);
-};
 
 interface IGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 	children: React.ReactElement<IRadioProps>[];
@@ -107,7 +43,7 @@ const ClayRadioGroup: React.FunctionComponent<IGroupProps> & {
 	onSelectedValueChange,
 	selectedValue,
 	...otherProps
-}) => {
+}: IGroupProps) => {
 	return (
 		<div {...otherProps} className={classNames(className)}>
 			{React.Children.map(

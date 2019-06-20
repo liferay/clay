@@ -61,7 +61,7 @@ const Cell: React.FunctionComponent<ICellProps> = ({
 	headingCell = false,
 	headingTitle = false,
 	...otherProps
-}) => {
+}: ICellProps) => {
 	const TagName = headingCell ? 'th' : 'td';
 
 	return (
