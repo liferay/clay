@@ -25,12 +25,12 @@ interface ICardAspectRatioProps
 	containerAspectRatio?: ContainerAspectRatioType;
 }
 
-export const AspectRatio: React.FunctionComponent<ICardAspectRatioProps> = ({
+const AspectRatio: React.FunctionComponent<ICardAspectRatioProps> = ({
 	backgroundImageAspectRatio,
 	children,
 	className,
 	containerAspectRatio,
-}) => {
+}: ICardAspectRatioProps) => {
 	const {interactive} = React.useContext(Context);
 
 	const TagName = interactive ? 'span' : 'div';
@@ -50,3 +50,5 @@ export const AspectRatio: React.FunctionComponent<ICardAspectRatioProps> = ({
 		</TagName>
 	);
 };
+
+export default AspectRatio;

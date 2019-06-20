@@ -23,13 +23,13 @@ interface ICardDescriptionProps
 	truncate?: boolean;
 }
 
-export const Description: React.FunctionComponent<ICardDescriptionProps> = ({
+const Description: React.FunctionComponent<ICardDescriptionProps> = ({
 	children,
 	className,
 	displayType,
 	truncate = true,
 	...otherProps
-}) => {
+}: ICardDescriptionProps) => {
 	const {interactive} = React.useContext(Context);
 
 	const TagName = interactive ? 'span' : 'div';
@@ -45,3 +45,5 @@ export const Description: React.FunctionComponent<ICardDescriptionProps> = ({
 		</TagName>
 	);
 };
+
+export default Description;

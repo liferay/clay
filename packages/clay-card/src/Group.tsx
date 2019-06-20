@@ -14,12 +14,12 @@ interface ICardGroupProps extends React.HTMLAttributes<HTMLUListElement> {
 	label?: string;
 }
 
-export const Group: React.FunctionComponent<ICardGroupProps> = ({
+const Group: React.FunctionComponent<ICardGroupProps> = ({
 	children,
 	className,
 	label,
 	...otherProps
-}) => {
+}: ICardGroupProps) => {
 	return (
 		<ul {...otherProps} className={classNames('card-page', className)}>
 			{label && (

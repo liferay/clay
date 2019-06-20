@@ -4,14 +4,14 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import AspectRatio from './AspectRatio';
+import Body from './Body';
+import Caption from './Caption';
 import classNames from 'classnames';
 import Context from './Context';
+import Description from './Description';
+import Group from './Group';
 import React from 'react';
-import {AspectRatio} from './AspectRatio';
-import {Body} from './Body';
-import {Caption} from './Caption';
-import {Description} from './Description';
-import {Group} from './Group';
 import {IContext} from './Context';
 
 type CardDisplayType = 'file' | 'image' | 'user';
@@ -43,7 +43,7 @@ const ClayCard: React.FunctionComponent<IProps> & {
 	interactive,
 	selectable = false,
 	...otherProps
-}) => {
+}: IProps) => {
 	const Content: React.FunctionComponent<IProps> = ({children}) => (
 		<Context.Provider value={{horizontal, interactive}}>
 			{children}
