@@ -10,7 +10,6 @@ import {AutocompleteWithLoadingState, AutocompleteWithDataProvider} from '../../
 
 <div class="nav-toc">
 
-- [Item](#item)
 - [Loading state](#loading-state)
 - [Data from outside](#data-from-outside)
 - [API](#api)
@@ -39,7 +38,7 @@ Autocomplete provides the necessary components for you to compose with the other
 </ClayAutocomplete.DropDown>
 ```
 
-When you already have the raw data and do not need to consult them, it becomes simpler to create an autocomplete. It is important that you **create a filter of your data** according to the value entered in the input element, following your business rule.
+If you already have the raw data, it is becomes simpler to create an autocomplete but it is important that you **create a filter for your data** according to the value entered in the input element.
 
 ```jsx
 <ClayAutocomplete>
@@ -61,34 +60,9 @@ When you already have the raw data and do not need to consult them, it becomes s
 </ClayAutocomplete>
 ```
 
-## Item
-
-`ClayAutocomplete.Item` is a wrapper above `ClayDropDown.Item` but covers the use case to underline the bold characters in case you follow the Lexicon. Feel free to create your own match rule using `ClayDropDown.Item` which will give you more freedom to do so.
-
-<div class="sheet-example">
-	<ul class="list-unstyled">
-		<li>
-			<span class="dropdown-item">
-				<div>
-					<strong>C</strong>
-					<strong>l</strong>
-					ay
-				</div>
-			</span>
-		</li>
-	</ul>
-</div>
-
-```jsx
-<ClayAutocomplete.Item
-	match="Cl"
-	value="Clay"
-/>
-```
-
 ## Loading state
 
-`<ClayAutocomplete.LoadingIndicator />` is used for cases where you need to provide the user with feedback that is loading new data to fill in the suggestion box, it does communicate with `<ClayAutocomplete.Input />` for the markup can adjust.
+`<ClayAutocomplete.LoadingIndicator />` is used for providing feedback that data is loading in the suggestion box, it communicates with `<ClayAutocomplete.Input />` so that the markup can adjust.
 
 <div class="clay-site-alert alert alert-warning">
 	<strong class="lead">Warning</strong>
@@ -99,7 +73,7 @@ When you already have the raw data and do not need to consult them, it becomes s
 
 ## Data from outside
 
-For cases where you do not have all the data in the client and need to pass the value for the filter to the backend, use the data provider for this, `<ClayDataProvider />` component or `useResource` hook.
+For cases where you do not have all the data in the client and need to pass the value for the filter to the backend, use the `<ClayDataProvider />` component or `useResource` hook for this.
 
 <AutocompleteWithDataProvider />
 
@@ -122,6 +96,8 @@ For cases where you do not have all the data in the client and need to pass the 
 <code class="list-api-item-type">Extends from `ClayForm.Input`</code>
 
 ### Autocomplete.Item
+
+`ClayAutocomplete.Item` is a wrapper around `ClayDropDown.Item` but also underlines the bold characters that are matched. Feel free to create your own match rule using `ClayDropDown.Item`'s API.
 
 <div>
 	[APITable "clay-autocomplete/src/Item.tsx"]
