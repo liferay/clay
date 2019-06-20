@@ -5,11 +5,12 @@
  */
 
 import 'clay-css/lib/css/atlas.css';
+import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
 import ClaySticker from '../src';
 import React from 'react';
+import {boolean, select, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import {text} from '@storybook/addon-knobs';
 
 const spritemap = require('clay-css/lib/images/icons/icons.svg');
 
@@ -94,4 +95,63 @@ storiesOf('ClaySticker', module)
 				<img alt="placeholder" src="https://via.placeholder.com/50" />
 			</ClaySticker>
 		</div>
+	))
+	.add('positions', () => (
+		<>
+			<div className="row">
+				<div className="col-sm-1">
+					<div className="aspect-ratio">
+						<img
+							className="aspect-ratio-item aspect-ratio-item-fluid"
+							src="https://via.placeholder.com/200"
+						/>
+						<ClaySticker
+							position={
+								select(
+									'Position',
+									{
+										'bottom-left': 'bottom-left',
+										'bottom-right': 'bottom-right',
+										'top-left': 'top-left',
+										'top-right': 'top-right',
+									},
+									'top-left'
+								) as 'top-left'
+							}
+							size="sm"
+						>
+							{'A'}
+						</ClaySticker>
+					</div>
+				</div>
+			</div>
+		</>
+	))
+	.add('outside', () => (
+		<>
+			<ClayButton displayType="primary">
+				{'Button'}
+				<ClaySticker
+					displayType="danger"
+					outside={boolean('outside', true)}
+					position="top-left"
+					shape="circle"
+				>
+					<ClayIcon spritemap={spritemap} symbol="announcement" />
+				</ClaySticker>
+			</ClayButton>
+		</>
+	))
+	.add('overlay', () => (
+		<>
+			<ClaySticker displayType="dark" size="xl">
+				<div className="sticker-overlay">
+					<img
+						className="sticker-img"
+						src="https://via.placeholder.com/200"
+					/>
+				</div>
+				<div className="sticker-overlay">{'BC'}</div>
+			</ClaySticker>
+		</>
 	));

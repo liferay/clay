@@ -6,65 +6,36 @@ packageVersion: "3.0.0"
 packageStatus: "Beta"
 ---
 
-import {Sticker, StickerColors, StickerSizes, StickerPositions, StickerOutside, StickerOverlay, StickerUserIcon} from '../../../src/components/clay/Sticker';
+import {Sticker, StickerColorsAndSizes, StickerPositions, StickerOutside, StickerOverlay, StickerUserIcon} from '../../../src/components/clay/Sticker';
 
 <div class="nav-toc">
 
-- [Variants and Best Pratices](#variants-and-best-pratices)
-    - [Colors](#colors)
-    - [Sizes](#sizes)
-    - [Shape](#shape)
-    - [Position](#position)
-    - [Outside](#outside)
-    - [Overlay](#overlay)
-    - [User Icon](#user-icon)
+- [User Icon](#user-icon)
 - [API](#api)
 
+</div>
+
+<div class="clay-site-alert alert alert-warning">
+Please, take a look at our <a href="https://storybook-clayui.netlify.com/?path=/story/claysticker--default">Storybook</a> for more information about this component.
 </div>
 
 <div class="clay-site-alert alert alert-info">
 Check the <a href="https://liferay.design/lexicon/">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/stickers/">Stickers Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
 </div>
 
-## Variants and Best Pratices
-
-Use stickers to visually identify elements in a dataset that are part of the same group. Stickers can be any color.
-
-<Sticker />
-
-### Colors
-
-You can use stickers with the following colors using [`displayType`](#api-displayType) property:
-
-<StickerColors />
-
-### Sizes
+Use stickers to visually identify elements in a dataset that are part of the same group. Stickers can be any color. Set sticker's color using [`displayType`](#api-displayType) property.
 
 Also, you can use the following sizes on your Sticker just setting up [`size`](#api-size):
 
-<StickerSizes />
+<StickerColorsAndSizes />
 
-### Position
+You can set a desired alignment of sticker according to a parent element, just setting up the [`position`](#api-position) property. If you want to set the position of the sticker on the outside corners, use [`outside`](#api-outside) property in conjunction with [`position`](#api-position) property.
 
-You can set a desired alignment of sticker according to a parent element, just set up the [`position`](#api-position) property.
-
-<StickerPositions />
-
-### Outside
-
-If you want to set the position of the sticker on the outside corners, use [`outside`](#api-outside) property in conjunction with [`position`](#api-position) property like the following example:
-
-<StickerOutside />
-
-### Overlay
-
-Overlay content over stickers by nesting `sticker-overlay` elements as children of ClaySticker.
-
-<StickerOverlay />
+Overlay content over stickers by nesting `sticker-overlay` elements as children of ClaySticker. Check our example on [Storybook](https://storybook-clayui.netlify.com/?path=/story/claysticker--overlay)
 
 ### User Icon
 
-If you want to use a ClaySticker as User Icon add `sticker-user-icon` on className of the `ClaySticker` component like the example below:
+Use a ClaySticker as User Icon just adding `sticker-user-icon` on className of the `ClaySticker` component like the example below:
 
 <StickerUserIcon />
 

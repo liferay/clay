@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
 import ClaySticker from '@clayui/sticker';
 import Editor from './Editor';
@@ -26,60 +25,26 @@ export const Sticker = () => {
 	return <Editor code={code} scope={scope} />;
 };
 
-const StickerColorsCode = `const Component = () => {
+const StickerColorsAndSizesCode = `const Component = () => {
 	return (
 		<>
-			<ClaySticker displayType="danger">
+			<ClaySticker displayType="danger" size="sm">
 				<ClayIcon spritemap={spritemap} symbol="user" />
 			</ClaySticker>
 
-			<ClaySticker displayType="dark">
+			<ClaySticker displayType="dark" size="md">
 				<ClayIcon spritemap={spritemap} symbol="user" />
 			</ClaySticker>
 
-			<ClaySticker displayType="info">
+			<ClaySticker displayType="info" size="lg">
 				<ClayIcon spritemap={spritemap} symbol="user" />
 			</ClaySticker>
 
-			<ClaySticker displayType="light">
+			<ClaySticker displayType="light" size="xl">
 				<ClayIcon spritemap={spritemap} symbol="user" />
 			</ClaySticker>
 
-			<ClaySticker displayType="secondary">
-				<ClayIcon spritemap={spritemap} symbol="user" />
-			</ClaySticker>
-
-			<ClaySticker displayType="success">
-				<ClayIcon spritemap={spritemap} symbol="user" />
-			</ClaySticker>
-
-			<ClaySticker displayType="unstyled">
-				<ClayIcon spritemap={spritemap} symbol="user" />
-			</ClaySticker>
-
-			<ClaySticker displayType="warning">
-				<ClayIcon spritemap={spritemap} symbol="user" />
-			</ClaySticker>
-		</>
-	)
-}
-render(<Component />)`;
-
-export const StickerColors = () => {
-	const scope = {ClayIcon, ClaySticker, spritemap};
-	const code = StickerColorsCode;
-
-	return <Editor code={code} scope={scope} />;
-};
-
-const StickerSizesCode = `const Component = () => {
-	return (
-		<>
-			<ClaySticker displayType="light" size="sm">
-				<ClayIcon spritemap={spritemap} symbol="user" />
-			</ClaySticker>
-
-			<ClaySticker>
+			<ClaySticker displayType="secondary" size="xl">
 				<ClayIcon spritemap={spritemap} symbol="user" />
 			</ClaySticker>
 
@@ -87,7 +52,11 @@ const StickerSizesCode = `const Component = () => {
 				<ClayIcon spritemap={spritemap} symbol="user" />
 			</ClaySticker>
 
-			<ClaySticker displayType="danger" size="xl">
+			<ClaySticker displayType="unstyled" size="md">
+				<ClayIcon spritemap={spritemap} symbol="user" />
+			</ClaySticker>
+
+			<ClaySticker displayType="warning" size="sm">
 				<ClayIcon spritemap={spritemap} symbol="user" />
 			</ClaySticker>
 		</>
@@ -95,91 +64,9 @@ const StickerSizesCode = `const Component = () => {
 }
 render(<Component />)`;
 
-export const StickerSizes = () => {
+export const StickerColorsAndSizes = () => {
 	const scope = {ClayIcon, ClaySticker, spritemap};
-	const code = StickerSizesCode;
-
-	return <Editor code={code} scope={scope} />;
-};
-
-const StickerPositionsCode = `const Component = () => {
-
-	return (
-		<div className="row">
-			<div className="col-md-3">
-				<div className="aspect-ratio">
-					<img className="aspect-ratio-item aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg" />
-					<ClaySticker position="bottom-left" size="xl">A</ClaySticker>
-				</div>
-			</div>
-			<div className="col-md-3">
-				<div className="aspect-ratio">
-					<img className="aspect-ratio-item aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg" />
-					<ClaySticker position="bottom-right" size="xl">A</ClaySticker>
-				</div>
-			</div>
-			<div className="col-md-3">
-				<div className="aspect-ratio">
-					<img className="aspect-ratio-item aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg" />
-					<ClaySticker position="top-left" size="xl">A</ClaySticker>
-				</div>
-			</div>
-			<div className="col-md-3">
-				<div className="aspect-ratio">
-					<img className="aspect-ratio-item aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg" />
-					<ClaySticker position="top-right" size="xl">A</ClaySticker>
-				</div>
-			</div>
-		</div>
-	)
-}
-render(<Component />)`;
-
-export const StickerPositions = () => {
-	const scope = {ClayIcon, ClaySticker, spritemap};
-	const code = StickerPositionsCode;
-
-	return <Editor code={code} scope={scope} />;
-};
-
-const StickerOutsideCode = `const Component = () => {
-	return (
-		<ClayButton displayType="primary">
-			Button
-			<ClaySticker displayType="danger" position="top-left" outside shape="circle">
-				<ClayIcon spritemap={spritemap} symbol="announcement" />
-			</ClaySticker>
-		</ClayButton>
-	)
-}
-render(<Component />)`;
-
-export const StickerOutside = () => {
-	const scope = {ClayButton, ClayIcon, ClaySticker, spritemap};
-	const code = StickerOutsideCode;
-
-	return <Editor code={code} scope={scope} />;
-};
-
-const StickerOverlayCode = `const Component = () => {
-	return (
-		<>
-			<ClaySticker displayType="dark" size="xl">
-				<div className="sticker-overlay">
-					<img class="sticker-img" src="/images/long_user_image.png" />
-				</div>
-				<div className="sticker-overlay">
-					{'BC'}
-				</div>
-			</ClaySticker>
-		</>
-	)
-}
-render(<Component />)`;
-
-export const StickerOverlay = () => {
-	const scope = {ClaySticker};
-	const code = StickerOverlayCode;
+	const code = StickerColorsAndSizesCode;
 
 	return <Editor code={code} scope={scope} />;
 };
