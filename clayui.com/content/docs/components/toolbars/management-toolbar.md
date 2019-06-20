@@ -135,7 +135,7 @@ Management toolbar is an extension of Toolbar. It is a combination of different 
 					</label>
 				</div>
 			</li>
-			<li class="nav-item">
+			<li class="nav-item nav-item-shrink">
 				<span class="navbar-text">
 					3 of 7
 					<span class="navbar-breakpoint-down-d-none"> selected</span>
@@ -187,7 +187,7 @@ Management toolbar is an extension of Toolbar. It is a combination of different 
 					</label>
 				</div>
 			</li>
-			<li class="nav-item">
+			<li class="nav-item nav-item-shrink">
 				<span class="navbar-text">
 					20 of 200
 					<span class="navbar-breakpoint-down-d-none"> selected</span>
@@ -511,7 +511,7 @@ Management toolbar is an extension of Toolbar. It is a combination of different 
 					</label>
 				</div>
 			</li>
-			<li class="nav-item">
+			<li class="nav-item nav-item-shrink">
 				<span class="navbar-text">
 					3 of 7
 					<span class="navbar-breakpoint-down-d-none"> items selected</span>
