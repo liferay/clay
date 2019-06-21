@@ -1,6 +1,13 @@
 .management-bar {
 	@include clay-navbar-size($management-bar-size);
 	@include clay-navbar-variant($management-bar-base);
+
+	&.navbar-nowrap {
+		.navbar-text {
+			white-space: normal;
+			word-wrap: break-word;
+		}
+	}
 }
 
 .management-bar-light {
