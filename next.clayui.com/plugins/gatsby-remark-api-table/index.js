@@ -41,7 +41,7 @@ const generateTr = (item, key) => {
 module.exports = ({markdownAST}) => {
 	const markdownHtmlNodes = [];
 
-	visit(markdownAST, 'html', node => {
+	visit(markdownAST, 'jsx', node => {
 		if (node.value.includes('[APITable')) {
 			markdownHtmlNodes.push(node);
 		}

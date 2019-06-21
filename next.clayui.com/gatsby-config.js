@@ -42,7 +42,7 @@ module.exports = {
 						),
 					},
 					{
-						pluginOptions: {
+						options: {
 							classPrefix: 'gatsby-code-',
 						},
 						resolve: 'gatsby-remark-prismjs',
@@ -77,9 +77,6 @@ module.exports = {
 					},
 					{
 						resolve: 'gatsby-remark-use-clipboard',
-					},
-					{
-						resolve: 'gatsby-remark-api-table',
 					},
 					{
 						resolve: 'gatsby-remark-typography',

@@ -30,7 +30,7 @@ const DropDown: React.FunctionComponent<IProps> = ({
 	alignElementRef,
 	children,
 	onSetActive = () => {},
-}) => {
+}: IProps) => {
 	const {containerElementRef} = useContext(Context);
 	const menuElementRef = React.useRef<HTMLDivElement>(null);
 

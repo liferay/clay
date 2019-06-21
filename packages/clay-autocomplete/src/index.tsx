@@ -42,7 +42,7 @@ const ClayAutocomplete: React.FunctionComponent<IProps> & {
 	className,
 	component: Component = AutocompleteMarkup,
 	...otherProps
-}) => {
+}: IProps) => {
 	const containerElementRef = useRef<HTMLDivElement>(null);
 	const [loading, setLoading] = useState(false);
 
