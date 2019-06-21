@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import 'clay-css/lib/css/atlas.css';
+import '@clayui/css/lib/css/atlas.css';
 import ClayCard from '../src';
 import ClayCheckbox from '@clayui/checkbox';
 import ClayIcon from '@clayui/icon';
@@ -16,7 +16,7 @@ import {storiesOf} from '@storybook/react';
 const contentImage = require('./static/content.svg');
 const portletImage = require('./static/portlet.svg');
 
-const spritemap = require('clay-css/lib/images/icons/icons.svg');
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
 const ClayCheckboxWithState = (props: any) => {
 	const [value, setValue] = React.useState<boolean>(false);

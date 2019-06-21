@@ -7,6 +7,6 @@ import ClayForm from '../src';
 import React from 'react';
 import {storiesOf} from '@storybook/react';
 
-import 'clay-css/lib/css/atlas.css';
+import '@clayui/css/lib/css/atlas.css';
 
 storiesOf('ClayForm', module).add('default', () => <ClayForm />);

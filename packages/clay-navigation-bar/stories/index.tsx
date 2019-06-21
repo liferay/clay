@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import 'clay-css/lib/css/atlas.css';
+import '@clayui/css/lib/css/atlas.css';
 import ClayButton from '@clayui/button';
 import ClayLink from '@clayui/link';
 import ClayNavigationBar from '../src/index';
@@ -12,7 +12,7 @@ import React from 'react';
 import {boolean, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
-const spritemap = require('clay-css/lib/images/icons/icons.svg');
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
 storiesOf('ClayNavigationBar', module).add('default', () => (
 	<ClayNavigationBar

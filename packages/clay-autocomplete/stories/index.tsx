@@ -12,7 +12,7 @@ import {storiesOf} from '@storybook/react';
 import {useDebounce} from '@clayui/shared';
 import {useResource} from '@clayui/data-provider';
 
-import 'clay-css/lib/css/atlas.css';
+import '@clayui/css/lib/css/atlas.css';
 
 const LoadingWithDebounce = ({
 	loading,

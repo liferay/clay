@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-const clay = require('clay-css');
+const clay = require('@clayui/css');
 const path = require('path');
 
 module.exports = {

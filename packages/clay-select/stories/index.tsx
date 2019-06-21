@@ -8,7 +8,7 @@ import React from 'react';
 import {boolean} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
-import 'clay-css/lib/css/atlas.css';
+import '@clayui/css/lib/css/atlas.css';
 
 const options = [
 	{

@@ -4,13 +4,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import 'clay-css/lib/css/atlas.css';
+import '@clayui/css/lib/css/atlas.css';
 import ClayIcon from '@clayui/icon';
 import ClayLink from '../src';
 import React from 'react';
 import {storiesOf} from '@storybook/react';
 
-const spritemap = require('clay-css/lib/images/icons/icons.svg');
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
 storiesOf('ClayLink', module)
 	.add('default', () => (

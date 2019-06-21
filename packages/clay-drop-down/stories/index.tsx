@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import 'clay-css/lib/css/atlas.css';
+import '@clayui/css/lib/css/atlas.css';
 import ClayButton from '@clayui/button';
 import ClayCheckbox from '@clayui/checkbox';
 import ClayDropDown, {Align} from '../src';
@@ -12,7 +12,7 @@ import React, {useState} from 'react';
 import {select} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
-const spritemap = require('clay-css/lib/images/icons/icons.svg');
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
 const DropDownWithState: React.FunctionComponent<any> = ({
 	children,

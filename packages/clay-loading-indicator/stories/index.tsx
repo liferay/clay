@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import 'clay-css/lib/css/atlas.css';
+import '@clayui/css/lib/css/atlas.css';
 import ClayLoadingIndicator from '../src';
 import React from 'react';
 import {boolean} from '@storybook/addon-knobs';

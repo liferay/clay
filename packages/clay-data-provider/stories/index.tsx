@@ -9,7 +9,7 @@ import {FetchPolicy} from '../src/types';
 import {number} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
-import 'clay-css/lib/css/atlas.css';
+import '@clayui/css/lib/css/atlas.css';
 
 const Store = React.createContext({});
 

@@ -3,13 +3,13 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import 'clay-css/lib/css/atlas.css';
+import '@clayui/css/lib/css/atlas.css';
 import ClayPagination from '../src';
 import React, {useState} from 'react';
 import {number} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
-const spritemap = require('clay-css/lib/images/icons/icons.svg');
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
 const PaginationWithState = (props: any) => {
 	const [active, setActive] = useState(8);

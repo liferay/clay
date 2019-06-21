@@ -5,7 +5,7 @@
  */
 
 import '../src/scss/main.scss';
-import 'clay-css/lib/css/atlas.css';
+import '@clayui/css/lib/css/atlas.css';
 import ClayChart from '../src';
 import React from 'react';
 import {storiesOf} from '@storybook/react';
