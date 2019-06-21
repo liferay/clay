@@ -189,7 +189,7 @@ describe('ClayNavigationBar', () => {
 				spritemap={spritemap}
 				triggerLabel={label}
 			>
-				<ClayNavigationBar.Item active>
+				<ClayNavigationBar.Item>
 					<ClayLink
 						className="nav-link"
 						displayType="secondary"
