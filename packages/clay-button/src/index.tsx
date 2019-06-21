@@ -6,7 +6,7 @@
 
 import classNames from 'classnames';
 import React from 'react';
-import {ClayButtonGroup, IButtonGroupProps} from './Group';
+import {ClayButtonGroup} from './Group';
 
 export type DisplayType = 'primary' | 'secondary' | 'link' | 'unstyled';
 
@@ -33,7 +33,7 @@ interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 interface IClayButton extends React.FunctionComponent<IProps> {
-	Group: React.FunctionComponent<IButtonGroupProps>;
+	Group: typeof ClayButtonGroup;
 }
 
 const ClayButton: IClayButton = ({
