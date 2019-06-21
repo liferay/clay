@@ -24,7 +24,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement>, IContext {
 }
 
 const delay = (fn: Function) => {
-	setTimeout(() => {
+	return setTimeout(() => {
 		fn();
 	}, 100);
 };
@@ -55,9 +55,8 @@ const ClayModal: FunctionComponent<IProps> & {
 	const handleCloseModal = () => {
 		document.body.classList.remove(modalOpenClassName);
 		setVisibleClassShow(false);
-		delay(() => {
-			onClose();
-		});
+
+		delay(onClose);
 	};
 
 	const context = {
@@ -70,7 +69,13 @@ const ClayModal: FunctionComponent<IProps> & {
 
 	useEffect(() => {
 		document.body.classList.add(modalOpenClassName);
-		delay(() => setVisibleClassShow(true));
+		const timer = delay(() => {
+			setVisibleClassShow(true);
+		});
+
+		return () => {
+			clearTimeout(timer);
+		};
 	}, []);
 
 	return (
