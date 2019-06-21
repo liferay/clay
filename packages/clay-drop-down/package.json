@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/drop-down",
-	"version": "3.0.0",
+	"version": "3.0.0-milestone.1",
 	"description": "ClayDropDown component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-drop-down",
@@ -26,11 +26,11 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/button": "^3.0.0",
-		"@clayui/checkbox": "^3.0.0",
-		"@clayui/icon": "^3.0.0",
-		"@clayui/radio-group": "^3.0.0",
-		"@clayui/shared": "^3.0.0",
+		"@clayui/button": "^3.0.0-milestone.1",
+		"@clayui/checkbox": "^3.0.0-milestone.1",
+		"@clayui/icon": "^3.0.0-milestone.1",
+		"@clayui/radio-group": "^3.0.0-milestone.1",
+		"@clayui/shared": "^3.0.0-milestone.1",
 		"classnames": "^2.2.6",
 		"metal-position": "^2.1.2"
 	},

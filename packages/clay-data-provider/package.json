@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/data-provider",
-	"version": "3.0.0",
+	"version": "3.0.0-milestone.1",
 	"description": "ClayDataProvider component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-data-provider",
@@ -26,7 +26,7 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/shared": "^3.0.0",
+		"@clayui/shared": "^3.0.0-milestone.1",
 		"classnames": "^2.2.6",
 		"fast-json-stable-stringify": "^2.0.0",
 		"lru-cache": "^5.1.1",

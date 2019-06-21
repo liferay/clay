@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/time-picker",
-	"version": "3.0.0",
+	"version": "3.0.0-milestone.1",
 	"description": "ClayTimePicker component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-time-picker",
@@ -22,9 +22,9 @@
 		"react"
 	],
 	"peerDependencies": {
+		"clay-css": "^2.10.0",
 		"react": "^16.8.1",
-		"react-dom": "^16.8.1",
-		"clay-css": "^2.10.0"
+		"react-dom": "^16.8.1"
 	},
 	"browserslist": [
 		"extends browserslist-config-clay"

@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/modal",
-	"version": "3.0.0",
+	"version": "3.0.0-milestone.1",
 	"description": "ClayModal component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-modal",
@@ -26,9 +26,9 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/button": "^3.0.0",
-		"@clayui/icon": "^3.0.0",
-		"@clayui/shared": "^3.0.0",
+		"@clayui/button": "^3.0.0-milestone.1",
+		"@clayui/icon": "^3.0.0-milestone.1",
+		"@clayui/shared": "^3.0.0-milestone.1",
 		"classnames": "^2.2.6"
 	},
 	"peerDependencies": {

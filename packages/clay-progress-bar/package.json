@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/progress-bar",
-	"version": "3.0.0",
+	"version": "3.0.0-milestone.1",
 	"description": "ClayProgressBar component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-progress-bar",
@@ -26,7 +26,7 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/icon": "^3.0.0",
+		"@clayui/icon": "^3.0.0-milestone.1",
 		"classnames": "^2.2.6",
 		"warning": "^4.0.3"
 	},

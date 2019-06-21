@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/list",
-	"version": "3.0.0",
+	"version": "3.0.0-milestone.1",
 	"description": "ClayList component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-list",
@@ -26,12 +26,12 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/icon": "^3.0.0",
+		"@clayui/icon": "^3.0.0-milestone.1",
 		"classnames": "^2.2.6"
 	},
 	"devDependencies": {
-		"@clayui/checkbox": "^3.0.0",
-		"@clayui/sticker": "^3.0.0"
+		"@clayui/checkbox": "^3.0.0-milestone.1",
+		"@clayui/sticker": "^3.0.0-milestone.1"
 	},
 	"peerDependencies": {
 		"react": "^16.8.1",

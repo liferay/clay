@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/pagination",
-	"version": "3.0.0",
+	"version": "3.0.0-milestone.1",
 	"description": "ClayPagination component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-pagination",
@@ -26,9 +26,9 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/button": "^3.0.0",
-		"@clayui/drop-down": "^3.0.0",
-		"@clayui/icon": "^3.0.0",
+		"@clayui/button": "^3.0.0-milestone.1",
+		"@clayui/drop-down": "^3.0.0-milestone.1",
+		"@clayui/icon": "^3.0.0-milestone.1",
 		"classnames": "^2.2.6"
 	},
 	"peerDependencies": {

@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/sticker",
-	"version": "3.0.0",
+	"version": "3.0.0-milestone.1",
 	"description": "ClaySticker component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-sticker",
@@ -29,7 +29,7 @@
 		"classnames": "^2.2.6"
 	},
 	"devDependencies": {
-		"@clayui/icon": "^3.0.0"
+		"@clayui/icon": "^3.0.0-milestone.1"
 	},
 	"peerDependencies": {
 		"react": "^16.8.1",

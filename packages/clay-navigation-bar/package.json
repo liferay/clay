@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/navigation-bar",
-	"version": "3.0.0",
+	"version": "3.0.0-milestone.1",
 	"description": "ClayNavigationBar component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-navigation-bar",
@@ -26,11 +26,11 @@
 		"react"
 	],
 	"dependencies": {
-		"classnames": "^2.2.6",
-		"@clayui/button": "^3.0.0",
-		"@clayui/icon": "^3.0.0",
-		"@clayui/link": "^3.0.0",
-		"@clayui/shared": "^3.0.0"
+		"@clayui/button": "^3.0.0-milestone.1",
+		"@clayui/icon": "^3.0.0-milestone.1",
+		"@clayui/link": "^3.0.0-milestone.1",
+		"@clayui/shared": "^3.0.0-milestone.1",
+		"classnames": "^2.2.6"
 	},
 	"peerDependencies": {
 		"react": "^16.8.1",
