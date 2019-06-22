@@ -13,6 +13,7 @@ storiesOf('ClayButton', module)
 	.add('default', () => (
 		<ClayButton
 			block={boolean('Block', false) as false}
+			borderless={boolean('Borderless', false) as false}
 			disabled={boolean('Disabled', false) as false}
 			displayType={
 				select(
@@ -27,6 +28,7 @@ storiesOf('ClayButton', module)
 				) as 'primary'
 			}
 			monospaced={boolean('Monospaced', false) as false}
+			outline={boolean('Outline', false) as false}
 			small={boolean('Small', false) as false}
 		>
 			{text('children', 'Click Me')}

@@ -33,7 +33,14 @@ exports[`ClayButton renders a ButtonGroup with spaced 1`] = `
 
 exports[`ClayButton renders block 1`] = `
 <button
-  className="btn btn-primary btn-block"
+  className="btn btn-block btn-primary"
+  type="button"
+/>
+`;
+
+exports[`ClayButton renders borderless 1`] = `
+<button
+  className="btn btn-outline-borderless btn-primary"
   type="button"
 />
 `;
@@ -48,14 +55,21 @@ exports[`ClayButton renders disabled 1`] = `
 
 exports[`ClayButton renders monospaced 1`] = `
 <button
-  className="btn btn-primary btn-monospaced"
+  className="btn btn-monospaced btn-primary"
+  type="button"
+/>
+`;
+
+exports[`ClayButton renders outline 1`] = `
+<button
+  className="btn btn-outline-primary"
   type="button"
 />
 `;
 
 exports[`ClayButton renders small 1`] = `
 <button
-  className="btn btn-primary btn-sm"
+  className="btn btn-sm btn-primary"
   type="button"
 />
 `;

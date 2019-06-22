@@ -12,6 +12,11 @@ export type DisplayType = 'primary' | 'secondary' | 'link' | 'unstyled';
 
 interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	/**
+	 * Flag to indicate if link should be borderless.
+	 */
+	borderless?: boolean;
+
+	/**
 	 * Renders the button as a block element.
 	 */
 	block?: boolean;
@@ -27,6 +32,11 @@ interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	monospaced?: boolean;
 
 	/**
+	 * Flag to indicate if link need have an outline.
+	 */
+	outline?: boolean;
+
+	/**
 	 * Indicates button should be a small variant.
 	 */
 	small?: boolean;
@@ -38,22 +48,27 @@ interface IClayButton extends React.FunctionComponent<IProps> {
 
 const ClayButton: IClayButton = ({
 	block,
+	borderless,
 	children,
 	className,
 	displayType = 'primary',
 	monospaced,
+	outline,
 	small,
 	type = 'button',
 	...otherProps
 }: IProps) => (
 	<button
-		{...otherProps}
-		className={classNames(className, 'btn', `btn-${displayType}`, {
+		className={classNames(className, 'btn', {
 			'btn-block': block,
 			'btn-monospaced': monospaced,
+			'btn-outline-borderless': borderless,
 			'btn-sm': small,
+			[`btn-${displayType}`]: displayType && !outline,
+			[`btn-outline-${displayType}`]: displayType && outline,
 		})}
 		type={type}
+		{...otherProps}
 	>
 		{children}
 	</button>

@@ -31,9 +31,25 @@ describe('ClayButton', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
+	it('renders borderless', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayButton borderless displayType="primary" />
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
 	it('renders block', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayButton block displayType="primary" />
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('renders outline', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayButton displayType="primary" outline />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
