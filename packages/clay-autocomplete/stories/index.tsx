@@ -6,10 +6,10 @@
 
 import ClayAutocomplete from '../src';
 import ClayDropDown from '@clayui/drop-down';
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {FetchPolicy, NetworkStatus} from '@clayui/data-provider/src/types';
 import {storiesOf} from '@storybook/react';
-import {useDebounce} from '@clayui/shared';
+import {useDebounce, useKeyHandlerForList} from '@clayui/shared';
 import {useResource} from '@clayui/data-provider';
 
 import '@clayui/css/lib/css/atlas.css';
@@ -36,7 +36,95 @@ const LoadingWithDebounce = ({
 	return render;
 };
 
-const ClayAutocompleteWithState = () => {
+const AutocompleteBasic = () => {
+	const [value, setValue] = useState('');
+
+	return (
+		<ClayAutocomplete>
+			<ClayAutocomplete.Input
+				onChange={(event: any) => setValue(event.target.value)}
+				value={value}
+			/>
+
+			<ClayAutocomplete.DropDown active={!!value}>
+				<ClayDropDown.ItemList>
+					{['one', 'two', 'three', 'four', 'five']
+						.filter(item => item.match(value))
+						.map(item => (
+							<ClayAutocomplete.Item
+								key={item}
+								match={value}
+								onClick={() => setValue(item)}
+								value={item}
+							/>
+						))}
+				</ClayDropDown.ItemList>
+			</ClayAutocomplete.DropDown>
+		</ClayAutocomplete>
+	);
+};
+
+const AutocompleteWithKeyboardFunctionality = () => {
+	const activeListItemRef = useRef<HTMLLIElement>(null);
+	const inputRef = useRef<HTMLInputElement>(null);
+	const [value, setValue] = useState('');
+	const [activeIndex, setActiveIndex] = useState(0);
+
+	const [active, setActive] = useState(!!value);
+
+	const filteredItems = ['one', 'two', 'three', 'four', 'five'].filter(item =>
+		item.match(value)
+	);
+
+	const keyHandler = useKeyHandlerForList({
+		activeListItemRef,
+		index: activeIndex,
+		inputRef,
+		onIndexChange: setActiveIndex,
+		onIndexSelect: (index: number) => setValue(filteredItems[index]),
+		totalItems: filteredItems.length,
+	});
+
+	useEffect(() => {
+		setActive(!!value);
+	}, [value]);
+
+	useEffect(() => {
+		setActiveIndex(0);
+	}, [active]);
+
+	return (
+		<ClayAutocomplete>
+			<ClayAutocomplete.Input
+				onChange={(event: any) => setValue(event.target.value)}
+				onKeyDown={keyHandler}
+				ref={inputRef}
+				value={value}
+			/>
+
+			<ClayAutocomplete.DropDown active={active} onSetActive={setActive}>
+				<ClayDropDown.ItemList>
+					{filteredItems.map((item, i) => (
+						<ClayAutocomplete.Item
+							active={i === activeIndex}
+							key={item}
+							match={value}
+							onClick={() => setValue(item)}
+							ref={
+								activeIndex === i
+									? activeListItemRef
+									: undefined
+							}
+							value={item}
+						/>
+					))}
+				</ClayDropDown.ItemList>
+			</ClayAutocomplete.DropDown>
+		</ClayAutocomplete>
+	);
+};
+
+const AutocompleteWithAsyncData = () => {
 	const [value, setValue] = useState('');
 	const [networkStatus, setNetworkStatus] = useState<NetworkStatus>(
 		NetworkStatus.Unused
@@ -55,9 +143,10 @@ const ClayAutocompleteWithState = () => {
 	return (
 		<ClayAutocomplete>
 			<ClayAutocomplete.Input
-				onChange={event => setValue(event.target.value)}
+				onChange={(event: any) => setValue(event.target.value)}
 				value={value}
 			/>
+
 			<ClayAutocomplete.DropDown
 				active={(!!resource && !!value) || initialLoading}
 			>
@@ -93,18 +182,40 @@ const ClayAutocompleteWithState = () => {
 	);
 };
 
-storiesOf('ClayAutocomplete', module).add(
-	'with low-level APIs (composition)',
-	() => (
+storiesOf('ClayAutocomplete', module)
+	.add('basic', () => (
+		<div className="row">
+			<div className="col-md-5">
+				<div className="sheet">
+					<div className="form-group">
+						<label>{'Numbers (one-five)'}</label>
+						<AutocompleteBasic />
+					</div>
+				</div>
+			</div>
+		</div>
+	))
+	.add('w/ keyboard functionality', () => (
+		<div className="row">
+			<div className="col-md-5">
+				<div className="sheet">
+					<div className="form-group">
+						<label>{'Numbers (one-five)'}</label>
+						<AutocompleteWithKeyboardFunctionality />
+					</div>
+				</div>
+			</div>
+		</div>
+	))
+	.add('w/ async data', () => (
 		<div className="row">
 			<div className="col-md-5">
 				<div className="sheet">
 					<div className="form-group">
 						<label>{'Name'}</label>
-						<ClayAutocompleteWithState />
+						<AutocompleteWithAsyncData />
 					</div>
 				</div>
 			</div>
 		</div>
-	)
-);
+	));

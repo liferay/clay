@@ -7,7 +7,7 @@
 import classNames from 'classnames';
 import React, {useLayoutEffect} from 'react';
 import {Align} from 'metal-position';
-import {Portal} from '@clayui/shared';
+import {ClayPortal} from '@clayui/shared';
 import {useDropdownCloseInteractions} from './hooks';
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -96,7 +96,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>((
 	});
 
 	return (
-		<Portal>
+		<ClayPortal>
 			<div
 				{...otherProps}
 				className={classNames('dropdown-menu', className, {
@@ -108,7 +108,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>((
 			>
 				{children}
 			</div>
-		</Portal>
+		</ClayPortal>
 	);
 });
 
