@@ -31,7 +31,7 @@ const InputDate: FunctionComponent<IProps> = ({
 	time = false,
 	timeFormat,
 	useNative = false,
-	value,
+	value = '',
 }) => {
 	const isValidValue = (value: string | Date): string => {
 		const format = time ? `${dateFormat} ${timeFormat}` : dateFormat;

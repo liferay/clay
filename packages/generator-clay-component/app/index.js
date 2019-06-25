@@ -19,11 +19,16 @@ module.exports = yeoman.generators.Base.extend({
 	},
 
 	install() {
-		this.log(`${chalk.green('Installing dependencies...')}`);
+		if (!this.options.skipInstall) {
+			this.log(`${chalk.green('Installing dependencies...')}`);
 
-		const ps = this.spawnCommand('yarn');
+			const ps = this.spawnCommand('yarn');
 
-		ps.on('close', code => console.log(`yarn install exited with ${code}`)); // eslint-disable-line no-console
+			ps.on(
+				'close',
+				code => console.log(`yarn install exited with ${code}`) // eslint-disable-line no-console
+			);
+		}
 	},
 
 	prompting() {

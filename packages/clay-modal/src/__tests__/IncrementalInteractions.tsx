@@ -9,13 +9,7 @@ import Button from '@clayui/button';
 import ClayModal from '..';
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
-import {
-	cleanup,
-	fireEvent,
-	render,
-	wait,
-	waitForElement,
-} from 'react-testing-library';
+import {cleanup, fireEvent, render} from 'react-testing-library';
 
 const spritemap = 'icons.svg';
 
@@ -50,13 +44,19 @@ const ModalWithState: React.FunctionComponent<IProps> = ({
 };
 
 describe('Modal -> IncrementalInteractions', () => {
-	afterEach(cleanup);
+	afterEach(() => {
+		jest.clearAllTimers();
+
+		cleanup();
+	});
 
 	// this is just a little hack to silence a warning that we'll get until react
 	// fixes this: https://github.com/facebook/react/pull/14853
 	// https://github.com/testing-library/react-testing-library/issues/281
 	const originalError = console.error;
 	beforeAll(() => {
+		jest.useFakeTimers();
+
 		// @ts-ignore
 		ReactDOM.createPortal = jest.fn(element => {
 			return element;
@@ -70,102 +70,97 @@ describe('Modal -> IncrementalInteractions', () => {
 	});
 
 	afterAll(() => {
+		jest.useRealTimers();
+
 		console.error = originalError;
 	});
 
-	it('open the modal', async () => {
+	it('open the modal', () => {
 		const {container, getByLabelText} = render(<ModalWithState />);
 
 		expect(document.body.classList).not.toContain('modal-open');
 
 		fireEvent.click(getByLabelText('button'), {});
 
-		const backdropEl = await waitForElement(() =>
-			container.querySelector('.modal-backdrop.fade.show')
-		);
-
 		expect(document.body.classList).toContain('modal-open');
+		expect(
+			container.querySelector('.modal-backdrop.fade.show')
+		).toBeDefined();
+		expect(
+			container.querySelector('.fade.modal.d-block.show')
+		).toBeDefined();
+	});
+
+	it('close the modal by clicking on the overlay', () => {
+		render(<ModalWithState initialVisible />);
+
+		jest.runAllTimers();
+
+		const backdropElSelector = '.modal-backdrop.fade.show';
+		const modalElSelector = '.fade.modal.d-block.show';
+
+		const backdropEl = document.querySelector(backdropElSelector);
+		const modalEl = document.querySelector(modalElSelector);
+
 		expect(backdropEl).toBeDefined();
+		expect(modalEl).toBeDefined();
+
+		fireEvent.click(backdropEl!, {});
+
+		expect(document.body.classList).not.toContain('modal-open');
+		expect(document.querySelector(backdropElSelector)).toBeNull();
+		expect(document.querySelector(modalElSelector)).toBeNull();
 	});
 
-	it('close the modal by clicking on the overlay', async done => {
+	it('close the modal when pressing ESC', () => {
 		const {container} = render(<ModalWithState initialVisible />);
 
-		const backdropEl: any = await waitForElement(() =>
-			container.querySelector('.modal-backdrop.fade.show')
-		);
-		const modalEl: any = await waitForElement(() =>
-			container.querySelector('.fade.modal.d-block.show')
-		);
+		jest.runAllTimers();
 
-		expect(backdropEl.classList).toContain('show');
-		expect(modalEl.classList).toContain('show');
+		const backdropElSelector = '.modal-backdrop.fade.show';
+		const modalElSelector = '.fade.modal.d-block.show';
 
-		fireEvent.click(document.body, {});
+		const backdropEl = document.querySelector(backdropElSelector);
+		const modalEl = document.querySelector(modalElSelector);
 
-		await wait(() => {
-			expect(document.body.classList).not.toContain('modal-open');
-			expect(backdropEl.classList).not.toContain('show');
-			expect(modalEl.classList).not.toContain('show');
-			done();
-		});
-	});
-
-	it('close the modal when pressing ESC', async done => {
-		const {container} = render(<ModalWithState initialVisible />);
-
-		const backdropEl: any = await waitForElement(() =>
-			container.querySelector('.modal-backdrop.fade.show')
-		);
-		const modalEl: any = await waitForElement(() =>
-			container.querySelector('.fade.modal.d-block.show')
-		);
-
-		expect(backdropEl.classList).toContain('show');
-		expect(modalEl.classList).toContain('show');
+		expect(backdropEl).toBeDefined();
+		expect(modalEl).toBeDefined();
 
 		fireEvent.keyUp(container, {keyCode: 27});
 
-		await wait(() => {
-			expect(document.body.classList).not.toContain('modal-open');
-			expect(backdropEl.classList).not.toContain('show');
-			expect(modalEl.classList).not.toContain('show');
-			done();
-		});
+		expect(document.body.classList).not.toContain('modal-open');
+		expect(document.querySelector(backdropElSelector)).toBeNull();
+		expect(document.querySelector(modalElSelector)).toBeNull();
 	});
 
-	it('close the modal when clicking on the close button of the Header component', async done => {
-		const {container, getByLabelText} = render(
+	it('close the modal when clicking on the close button of the Header component', () => {
+		const {getByLabelText} = render(
 			<ModalWithState initialVisible>
 				<ClayModal.Header>{'Title'}</ClayModal.Header>
 			</ModalWithState>
 		);
 
-		const backdropEl: any = await waitForElement(() =>
-			container.querySelector('.modal-backdrop.fade.show')
-		);
-		const modalEl: any = await waitForElement(() =>
-			container.querySelector('.fade.modal.d-block.show')
-		);
-		const buttonHeaderCloseEl: any = await waitForElement(() =>
-			getByLabelText('close')
-		);
+		jest.runAllTimers();
 
-		expect(backdropEl.classList).toContain('show');
-		expect(modalEl.classList).toContain('show');
+		const backdropElSelector = '.modal-backdrop.fade.show';
+		const modalElSelector = '.fade.modal.d-block.show';
+
+		const backdropEl = document.querySelector(backdropElSelector);
+		const modalEl = document.querySelector(modalElSelector);
+		const buttonHeaderCloseEl = getByLabelText('close');
+
+		expect(backdropEl).toBeDefined();
+		expect(modalEl).toBeDefined();
 
 		fireEvent.click(buttonHeaderCloseEl);
 
-		await wait(() => {
-			expect(document.body.classList).not.toContain('modal-open');
-			expect(backdropEl.classList).not.toContain('show');
-			expect(modalEl.classList).not.toContain('show');
-			done();
-		});
+		expect(document.body.classList).not.toContain('modal-open');
+		expect(document.querySelector(backdropElSelector)).toBeNull();
+		expect(document.querySelector(modalElSelector)).toBeNull();
 	});
 
-	it('close the modal when click on the button of Footer component', async done => {
-		const {container, getByLabelText} = render(
+	it('close the modal when click on the button of Footer component', () => {
+		const {getByLabelText} = render(
 			<ModalWithState initialVisible>
 				{(onClose: any) => (
 					<ClayModal.Footer
@@ -179,26 +174,22 @@ describe('Modal -> IncrementalInteractions', () => {
 			</ModalWithState>
 		);
 
-		const backdropEl: any = await waitForElement(() =>
-			container.querySelector('.modal-backdrop.fade.show')
-		);
-		const modalEl: any = await waitForElement(() =>
-			container.querySelector('.fade.modal.d-block.show')
-		);
-		const buttonFooterCloseEl: any = await waitForElement(() =>
-			getByLabelText('buttonFooter')
-		);
+		jest.runAllTimers();
 
-		expect(backdropEl.classList).toContain('show');
-		expect(modalEl.classList).toContain('show');
+		const backdropElSelector = '.modal-backdrop.fade.show';
+		const modalElSelector = '.fade.modal.d-block.show';
+
+		const backdropEl = document.querySelector(backdropElSelector);
+		const modalEl = document.querySelector(modalElSelector);
+		const buttonFooterCloseEl = getByLabelText('buttonFooter');
+
+		expect(backdropEl).toBeDefined();
+		expect(modalEl).toBeDefined();
 
 		fireEvent.click(buttonFooterCloseEl);
 
-		await wait(() => {
-			expect(document.body.classList).not.toContain('modal-open');
-			expect(backdropEl.classList).not.toContain('show');
-			expect(modalEl.classList).not.toContain('show');
-			done();
-		});
+		expect(document.body.classList).not.toContain('modal-open');
+		expect(document.querySelector(backdropElSelector)).toBeNull();
+		expect(document.querySelector(modalElSelector)).toBeNull();
 	});
 });
