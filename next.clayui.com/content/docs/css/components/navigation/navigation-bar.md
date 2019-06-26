@@ -21,6 +21,10 @@ description: "A navigation bar, is a horizontal bar that provides several access
     Bootstrap 4 doesn't support Dropdown Menu's with Popper.js positioning inside Navbars. They align them manually via CSS classes. See <a href="http://localhost:8000/docs/css/components/dropdown.html#alignment">Dropdown Alignment</a>.
 </div>
 
+<div class="clay-site-alert alert alert-warning">
+	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#aria_lh_navigation">WAI-ARIA</a> accessibility pratices for alerts when writting your markup.
+</div>
+
 ## Light
 
 <div class="sheet-example">

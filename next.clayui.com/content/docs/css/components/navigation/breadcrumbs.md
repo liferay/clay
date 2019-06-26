@@ -13,6 +13,10 @@ Use `<span class="breadcrumb-text-truncate"></span>` inside breadcrumb links to 
     Breadcrumb will use <code class="gatsby-code-text">$breadcrumb-divider-svg-icon</code> by default, set $breadcrumb-divider-svg-icon: none; if you wish to use the UTF-8 charset or third-party icon font.
 </div>
 
+<div class="clay-site-alert alert alert-warning">
+	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#breadcrumb">WAI-ARIA</a> accessibility pratices for alerts when writting your markup.
+</div>
+
 <div class="sheet-example">
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
