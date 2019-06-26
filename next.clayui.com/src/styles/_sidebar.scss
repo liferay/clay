@@ -33,12 +33,18 @@
 	.sidenav-menu {
 		width: 100%;
 	}
+
+	.sidebar-logo {
+		.sidebar-logo-image {
+			max-height: 32px;
+		}
+	}
 }
 
 .sidenav-sticky.sidenav-menu-slider {
 	position: sticky;
-    top: 4rem;
-    height: calc(100vh - 4rem);
+    top: 0;
+    height: 100vh;
 	visibility: visible;
 	max-width: 288px;
 
