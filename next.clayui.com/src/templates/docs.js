@@ -58,7 +58,6 @@ export default props => {
 				<meta content={`${timeToRead} min read`} name="twitter:data1" />
 			</Helmet>
 			<main className="content">
-				<LayoutNav />
 				<div className="container-fluid">
 					<div className="row flex-xl-nowrap">
 						<Sidebar

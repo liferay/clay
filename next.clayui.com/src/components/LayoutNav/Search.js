@@ -22,7 +22,7 @@ export default props => {
 	}, []);
 
 	return (
-		<div className="page-autocomplete ml-3">
+		<div className="page-autocomplete">
 			<div className="input-group">
 				<input
 					className="form-control"

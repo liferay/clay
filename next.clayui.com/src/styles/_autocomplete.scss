@@ -13,44 +13,13 @@
 		}
 
 		input.form-control {
-			background-color: $brand-bg-dark;
+			background-color: white;
 			border-radius: 4px;
-			border-width: 0;
-			color: $brand-light-secondary-text;
 			padding-left: 0.875rem;
 			padding-right: $base-size * 1.5;
-			transition: 0.2s all;
 
 			&::-moz-placeholder {
-				color: $brand-light-secondary-text;
 				opacity: 1;
-			}
-
-			&:-ms-input-placeholder {
-				color: $brand-light-secondary-text;
-			}
-
-			&::-webkit-input-placeholder {
-				color: $brand-light-secondary-text;
-			}
-
-			&:active, &:focus {
-				background-color: #21222b;
-				min-width: 300px;
-				transition: 0.2s all;
-
-				&::-moz-placeholder {
-					color: $brand-secondary;
-					opacity: 1;
-				}
-
-				&:-ms-input-placeholder {
-					color: $brand-secondary;
-				}
-
-				&::-webkit-input-placeholder {
-					color: $brand-secondary;
-				}
 			}
 		}
 	}
