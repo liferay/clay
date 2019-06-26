@@ -12,6 +12,10 @@ description: "Management toolbar is an extension of Toolbar. It is a combination
 - [Only Search](#only-search)
     - [Always Open](#always-open)
     - [Collapses in Mobile](#collapses-in-mobile)
+- [Search](#search)
+    - [Summary](#summary)
+    - [Results](#results)
+    - [Results with Filter](#results-with-filter)
 - [Using Buttons](#using-buttons)
 
 </div>
@@ -1052,6 +1056,219 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
                         <use href="/images/icons/icons.svg#search"></use>
                     </svg>
                 </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+```
+
+- [Search](#search)
+    - [Summary](#summary)
+    - [Results](#results)
+    - [Results with Filter](#results-with-filter)
+
+## Search
+
+### Summary
+
+<div class="sheet-example">
+    <nav class="tbar subnav-tbar subnav-tbar-primary">
+        <div class="container-fluid container-fluid-max-xl">
+            <ul class="tbar-nav">
+                <li class="tbar-item tbar-item-expand">
+                    <div class="tbar-section">
+                        <span class="component-title text-truncate-inline">
+                                <span class="text-truncate">Results for Master (19 Items)</span>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+```html
+<nav class="tbar subnav-tbar subnav-tbar-primary">
+    <div class="container-fluid container-fluid-max-xl">
+        <ul class="tbar-nav">
+            <li class="tbar-item tbar-item-expand">
+                <div class="tbar-section">
+                    <span class="component-title text-truncate-inline">
+							<span class="text-truncate">Results for Master (19 Items)</span>
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+```
+
+### Results
+
+<div class="sheet-example">
+    <nav class="tbar subnav-tbar subnav-tbar-primary">
+        <div class="container-fluid container-fluid-max-xl">
+            <ul class="tbar-nav">
+                <li class="tbar-item tbar-item-expand">
+                    <div class="tbar-section">
+                        <span class="component-text text-truncate-inline">
+                            <span class="text-truncate">25,392 results for
+                                <strong>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</strong></span>
+                        </span>
+                    </div>
+                </li>
+                <li class="tbar-item">
+                    <button class="btn btn-unstyled component-link tbar-link" type="button">Clear</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+```html
+<nav class="tbar subnav-tbar subnav-tbar-primary">
+    <div class="container-fluid container-fluid-max-xl">
+        <ul class="tbar-nav">
+            <li class="tbar-item tbar-item-expand">
+                <div class="tbar-section">
+                    <span class="component-text text-truncate-inline">
+                        <span class="text-truncate">25,392 results for
+                            <strong>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</strong></span>
+                    </span>
+                </div>
+            </li>
+            <li class="tbar-item">
+                <button class="btn btn-unstyled component-link tbar-link" type="button">Clear</button>
+            </li>
+        </ul>
+    </div>
+</nav>
+```
+
+### Results with Filter
+
+<div class="sheet-example">
+    <nav class="tbar tbar-inline-md-down subnav-tbar subnav-tbar-primary">
+        <div class="container-fluid container-fluid-max-xl">
+            <ul class="tbar-nav tbar-nav-wrap">
+                <li class="tbar-item">
+                    <div class="tbar-section">
+                        <span class="component-text text-truncate-inline">
+                            <span class="text-truncate">6 results for "<strong>red</strong>"</span>
+                        </span>
+                    </div>
+                </li>
+                <li class="tbar-item">
+                    <div class="tbar-section">
+                        <span class="label component-label tbar-label">
+                            <span class="label-item label-item-expand">
+                                <div class="label-section">Filter 1</div>
+                            </span>
+                        </span>
+                    </div>
+                </li>
+                <li class="tbar-item">
+                    <div class="tbar-section">
+                        <span class="label label-dismissible component-label tbar-label">
+                            <span class="label-item label-item-expand">
+                                <div class="label-section">Filter 2</div>
+                            </span>
+                            <span class="label-item label-item-after">
+                                <button class="btn close" aria-label="close" type="button">
+                                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                                        <title>times</title>
+                                        <use href="/images/icons/icons.svg#times"></use>
+                                    </svg>
+                                </button>
+                            </span>
+                        </span>
+                    </div>
+                </li>
+                <li class="tbar-item tbar-item-expand">
+                    <div class="tbar-section">
+                        <span class="label label-dismissible component-label tbar-label">
+                            <span class="label-item label-item-expand">
+                                <div class="label-section">Category: <strong>Label 3</strong></div>
+                            </span>
+                            <span class="label-item label-item-after">
+                                <button class="btn close" aria-label="close" type="button">
+                                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                                        <title>times</title>
+                                        <use href="/images/icons/icons.svg#times"></use>
+                                    </svg>
+                                </button>
+                            </span>
+                        </span>
+                    </div>
+                </li>
+                <li class="tbar-item">
+                    <div class="tbar-section">
+                        <a class=" component-link tbar-link" href="#clear">clear</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+```html
+<nav class="tbar tbar-inline-md-down subnav-tbar subnav-tbar-primary">
+    <div class="container-fluid container-fluid-max-xl">
+        <ul class="tbar-nav tbar-nav-wrap">
+            <li class="tbar-item">
+                <div class="tbar-section">
+                    <span class="component-text text-truncate-inline">
+                        <span class="text-truncate">6 results for "<strong>red</strong>"</span>
+                    </span>
+                </div>
+            </li>
+            <li class="tbar-item">
+                <div class="tbar-section">
+                    <span class="label component-label tbar-label">
+                        <span class="label-item label-item-expand">
+                            <div class="label-section">Filter 1</div>
+                        </span>
+                    </span>
+                </div>
+            </li>
+            <li class="tbar-item">
+                <div class="tbar-section">
+                    <span class="label label-dismissible component-label tbar-label">
+                        <span class="label-item label-item-expand">
+                            <div class="label-section">Filter 2</div>
+                        </span>
+                        <span class="label-item label-item-after">
+                            <button class="btn close" aria-label="close" type="button">
+                                <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                                    <title>times</title>
+                                    <use href="/images/icons/icons.svg#times"></use>
+                                </svg>
+                            </button>
+                        </span>
+                    </span>
+                </div>
+            </li>
+            <li class="tbar-item tbar-item-expand">
+                <div class="tbar-section">
+                    <span class="label label-dismissible component-label tbar-label">
+                        <span class="label-item label-item-expand">
+                            <div class="label-section">Category: <strong>Label 3</strong></div>
+                        </span>
+                        <span class="label-item label-item-after">
+                            <button class="btn close" aria-label="close" type="button">
+                                <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                                    <title>times</title>
+                                    <use href="/images/icons/icons.svg#times"></use>
+                                </svg>
+                            </button>
+                        </span>
+                    </span>
+                </div>
+            </li>
+            <li class="tbar-item">
+                <div class="tbar-section">
+                    <a class=" component-link tbar-link" href="#clear">clear</a>
+                </div>
             </li>
         </ul>
     </div>
