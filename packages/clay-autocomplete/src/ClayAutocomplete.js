@@ -335,6 +335,17 @@ class ClayAutocomplete extends ClayComponent {
 			}
 			break;
 
+		case 'ArrowUp':
+			event.preventDefault();
+			this._setFocusItem(true);
+			break;
+
+		case 'ArrowDown':
+			event.preventDefault();
+			event.stopPropagation();
+			this._setFocusItem(false);
+			break;
+
 		case 'Tab':
 			if (
 				this.inputFocused &&
