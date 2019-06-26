@@ -77,33 +77,33 @@ export default props => (
 							<span className="sidebar-logo-title align-middle h3 font-weight-700 ml-2">{'Clay'}</span>
 						</Link>
 
-						<div className="label label-danger mr-auto" title="Version">v 0.1.0</div>
+						<div className="sidebar-icon-links">
+							<a
+								className="mr-2"
+								href="http://storybook.clayui.com"
+								rel="noopener noreferrer"
+								target="_blank"
+								title="Storybook"
+								>
+								<img
+									alt=""
+									src="/images/home/clay_icon_storybook.svg"
+									/>
+							</a>
 
-						<a
-							className="mr-2"
-							href="http://storybook.clayui.com"
-							rel="noopener noreferrer"
-							target="_blank"
-							title="Storybook"
-							>
-							<img
-								alt=""
-								src="/images/home/clay_icon_storybook.svg"
-								/>
-						</a>
-
-						<a
-							className=""
-							href="https://github.com/liferay/clay"
-							rel="noopener noreferrer"
-							target="_blank"
-							title="GitHub"
-							>
-							<img
-								alt=""
-								src="/images/home/clay_icon_github.svg"
-								/>
-						</a>
+							<a
+								className=""
+								href="https://github.com/liferay/clay"
+								rel="noopener noreferrer"
+								target="_blank"
+								title="GitHub"
+								>
+								<img
+									alt=""
+									src="/images/home/clay_icon_github.svg"
+									/>
+							</a>
+						</div>
 					</div>
 
 					<div className="mt-3 mb-4">
