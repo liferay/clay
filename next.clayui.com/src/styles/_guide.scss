@@ -1,22 +1,14 @@
 .docs {
 	header {
-		padding: $base-size / 2 0;
-		background-color: $docs-header-bg-color;
-		margin-bottom: 22px;
+		padding: $base-size 0;
 
 		@media (min-width: $grid-float-breakpoint) {
-			padding: $base-size * 2.5 0;
+			padding: $base-size * 1.5 0;
 		}
 
 		@media (max-width: $screen-xs) {
 			padding-top: 25px;
 			padding-bottom: 25px;
-		}
-
-		h1 {
-			color: $brand-dark !important;
-			font-weight: 700 !important;
-			font-size: $base-size * 1.416666666666667;
 		}
 
 		.docs-title-version {
@@ -27,7 +19,6 @@
 		}
 
 		.docs-package-npm {
-			color: $brand-lighter;
 			font-size: 18px;
 			font-weight: 600;
 			margin: 17px 0;
