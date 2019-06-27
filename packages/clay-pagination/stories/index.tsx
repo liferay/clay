@@ -122,7 +122,7 @@ storiesOf('ClayPagination', module)
 
 					<ClayPagination
 						activePage={activePage}
-						onPageChange={(page) => page && setActivePage(page)}
+						onPageChange={page => page && setActivePage(page)}
 						spritemap={spritemap}
 						totalPages={Math.ceil(numberOfItems / perPage)}
 					/>
