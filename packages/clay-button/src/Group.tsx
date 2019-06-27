@@ -6,8 +6,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-export interface IButtonGroupProps
-	extends React.HTMLAttributes<HTMLDivElement> {
+interface IButtonGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Flag to indicate the spacing between the buttons.
 	 */
