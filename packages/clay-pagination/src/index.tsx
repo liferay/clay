@@ -104,7 +104,7 @@ interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	spritemap: string;
 }
 
-const Pagination: React.FunctionComponent<IProps> = ({
+const ClayPagination: React.FunctionComponent<IProps> = ({
 	activePage,
 	className,
 	disabledPages = [],
@@ -174,4 +174,4 @@ const Pagination: React.FunctionComponent<IProps> = ({
 	);
 };
 
-export default Pagination;
+export default ClayPagination;

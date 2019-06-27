@@ -13,7 +13,7 @@ interface IButtonGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 	spaced?: boolean;
 }
 
-export const ClayButtonGroup: React.FunctionComponent<IButtonGroupProps> = ({
+const ClayButtonGroup: React.FunctionComponent<IButtonGroupProps> = ({
 	children,
 	className,
 	role = 'group',
@@ -35,3 +35,5 @@ export const ClayButtonGroup: React.FunctionComponent<IButtonGroupProps> = ({
 			: children}
 	</div>
 );
+
+export default ClayButtonGroup;

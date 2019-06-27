@@ -25,7 +25,7 @@ interface ICardAspectRatioProps
 	containerAspectRatio?: ContainerAspectRatioType;
 }
 
-const AspectRatio: React.FunctionComponent<ICardAspectRatioProps> = ({
+const ClayCardAspectRatio: React.FunctionComponent<ICardAspectRatioProps> = ({
 	backgroundImageAspectRatio,
 	children,
 	className,
@@ -51,4 +51,4 @@ const AspectRatio: React.FunctionComponent<ICardAspectRatioProps> = ({
 	);
 };
 
-export default AspectRatio;
+export default ClayCardAspectRatio;

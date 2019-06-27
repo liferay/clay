@@ -18,7 +18,9 @@ const ICON_MAP = {
 	warning: 'question-circle-full',
 };
 
-const Header: FunctionComponent<HeaderProps> = ({children}: HeaderProps) => {
+const ClayModalHeader: FunctionComponent<HeaderProps> = ({
+	children,
+}: HeaderProps) => {
 	const {onClose, spritemap, status} = useContext(Context);
 
 	return (
@@ -41,4 +43,4 @@ const Header: FunctionComponent<HeaderProps> = ({children}: HeaderProps) => {
 	);
 };
 
-export default Header;
+export default ClayModalHeader;

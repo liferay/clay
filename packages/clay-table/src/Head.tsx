@@ -6,10 +6,10 @@
 
 import React from 'react';
 
-const Head: React.FunctionComponent<
+const ClayTableHead: React.FunctionComponent<
 	React.TableHTMLAttributes<HTMLTableSectionElement>
 > = ({children, ...otherProps}) => {
 	return <thead {...otherProps}>{children}</thead>;
 };
 
-export default Head;
+export default ClayTableHead;

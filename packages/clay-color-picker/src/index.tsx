@@ -113,7 +113,7 @@ interface IProps {
 	value?: string;
 }
 
-const ColorPicker: React.FunctionComponent<IProps> = ({
+const ClayColorPicker: React.FunctionComponent<IProps> = ({
 	ariaLabels = DEFAULT_ARIA_LABELS,
 	colors,
 	label,
@@ -249,4 +249,4 @@ const ColorPicker: React.FunctionComponent<IProps> = ({
 	);
 };
 
-export default ColorPicker;
+export default ClayColorPicker;

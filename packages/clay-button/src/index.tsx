@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import ButtonGroup from './Group';
 import classNames from 'classnames';
 import React from 'react';
-import {ClayButtonGroup} from './Group';
 
 export type DisplayType = 'primary' | 'secondary' | 'link' | 'unstyled';
 
@@ -43,7 +43,7 @@ interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 interface IClayButton extends React.FunctionComponent<IProps> {
-	Group: typeof ClayButtonGroup;
+	Group: typeof ButtonGroup;
 }
 
 const ClayButton: IClayButton = ({
@@ -75,6 +75,6 @@ const ClayButton: IClayButton = ({
 	</button>
 );
 
-ClayButton.Group = ClayButtonGroup;
+ClayButton.Group = ButtonGroup;
 
 export default ClayButton;

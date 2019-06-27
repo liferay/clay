@@ -17,7 +17,10 @@ interface IProps {
 	weeks: Month;
 }
 
-const DaysTable: FunctionComponent<IProps> = ({children, weeks}) => {
+const ClayDatePickerDaysTable: FunctionComponent<IProps> = ({
+	children,
+	weeks,
+}) => {
 	return (
 		<React.Fragment>
 			{weeks.map((days, index) => (
@@ -34,4 +37,4 @@ const DaysTable: FunctionComponent<IProps> = ({children, weeks}) => {
 	);
 };
 
-export default DaysTable;
+export default ClayDatePickerDaysTable;

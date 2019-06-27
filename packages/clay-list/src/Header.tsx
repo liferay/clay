@@ -7,11 +7,9 @@
 import classNames from 'classnames';
 import React from 'react';
 
-const Header: React.FunctionComponent<React.HTMLAttributes<HTMLLIElement>> = ({
-	children,
-	className,
-	...otherProps
-}) => {
+const ClayListHeader: React.FunctionComponent<
+	React.HTMLAttributes<HTMLLIElement>
+> = ({children, className, ...otherProps}) => {
 	return (
 		<li
 			{...otherProps}
@@ -22,4 +20,4 @@ const Header: React.FunctionComponent<React.HTMLAttributes<HTMLLIElement>> = ({
 	);
 };
 
-export default Header;
+export default ClayListHeader;

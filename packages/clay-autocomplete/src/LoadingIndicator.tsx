@@ -30,7 +30,7 @@ export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	component?: React.ComponentType<any>;
 }
 
-const LoadingIndicator: React.FunctionComponent<IProps> = ({
+const ClayAutocompleteLoadingIndicator: React.FunctionComponent<IProps> = ({
 	className,
 	component: Component = LoadingIndicatorMarkup,
 	...otherProps
@@ -52,4 +52,4 @@ const LoadingIndicator: React.FunctionComponent<IProps> = ({
 	);
 };
 
-export default LoadingIndicator;
+export default ClayAutocompleteLoadingIndicator;

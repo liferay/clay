@@ -51,7 +51,7 @@ interface ICellProps extends TableCellBaseProps {
 	headingTitle?: boolean;
 }
 
-const Cell: React.FunctionComponent<ICellProps> = ({
+const ClayTableCell: React.FunctionComponent<ICellProps> = ({
 	align,
 	cellDelimiter,
 	children,
@@ -85,4 +85,4 @@ const Cell: React.FunctionComponent<ICellProps> = ({
 	);
 };
 
-export default Cell;
+export default ClayTableCell;

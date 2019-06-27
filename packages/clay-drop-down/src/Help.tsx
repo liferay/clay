@@ -7,7 +7,7 @@
 import classnames from 'classnames';
 import React from 'react';
 
-const DropDownHelp: React.FunctionComponent<
+const ClayDropDownHelp: React.FunctionComponent<
 	React.HTMLAttributes<HTMLDivElement>
 > = ({children, className, ...otherProps}) => {
 	return (
@@ -21,4 +21,4 @@ const DropDownHelp: React.FunctionComponent<
 	);
 };
 
-export default DropDownHelp;
+export default ClayDropDownHelp;

@@ -26,7 +26,7 @@ interface IFooterProps {
 	middle?: React.ReactElement;
 }
 
-const Footer: FunctionComponent<IFooterProps> = ({
+const ClayModalFooter: FunctionComponent<IFooterProps> = ({
 	first,
 	last,
 	middle,
@@ -38,4 +38,4 @@ const Footer: FunctionComponent<IFooterProps> = ({
 	</div>
 );
 
-export default Footer;
+export default ClayModalFooter;

@@ -7,7 +7,7 @@
 import classNames from 'classnames';
 import Icon from '@clayui/icon';
 import React, {useEffect, useRef} from 'react';
-import {ToastContainer} from './ToastContainer';
+import ToastContainer from './ToastContainer';
 
 const useAutoClose = (autoClose?: boolean | number, onClose = () => {}) => {
 	const startedTime = useRef<number>(0);

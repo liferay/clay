@@ -7,7 +7,7 @@
 import classnames from 'classnames';
 import React from 'react';
 
-const DropDownCaption: React.FunctionComponent<
+const ClayDropDownCaption: React.FunctionComponent<
 	React.HTMLAttributes<HTMLDivElement>
 > = ({children, className, ...otherProps}) => {
 	return (
@@ -20,4 +20,4 @@ const DropDownCaption: React.FunctionComponent<
 	);
 };
 
-export default DropDownCaption;
+export default ClayDropDownCaption;

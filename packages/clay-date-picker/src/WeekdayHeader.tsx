@@ -18,7 +18,7 @@ interface IProps {
 	weekdaysShort: Array<string>;
 }
 
-const WeekdayHeader: FunctionComponent<IProps> = ({
+const ClayDatePickerWeekdayHeader: FunctionComponent<IProps> = ({
 	children,
 	firstDayOfWeek = 0,
 	weekdaysShort,
@@ -35,4 +35,4 @@ const WeekdayHeader: FunctionComponent<IProps> = ({
 	</div>
 );
 
-export default WeekdayHeader;
+export default ClayDatePickerWeekdayHeader;

@@ -13,7 +13,7 @@ interface IPaginationItemProps
 	href?: string;
 }
 
-const PaginationItem: React.FunctionComponent<IPaginationItemProps> = ({
+const ClayPaginationItem: React.FunctionComponent<IPaginationItemProps> = ({
 	active = false,
 	children,
 	disabled = false,
@@ -38,4 +38,4 @@ const PaginationItem: React.FunctionComponent<IPaginationItemProps> = ({
 	);
 };
 
-export default PaginationItem;
+export default ClayPaginationItem;

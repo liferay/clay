@@ -7,16 +7,16 @@
 import classNames from 'classnames';
 import ClayIcon from '@clayui/icon';
 import ClayLink from '@clayui/link';
+import Item from './Item';
 import React, {useRef, useState} from 'react';
 import warning from 'warning';
-import {IItemProps, Item} from './Item';
 import {useTransitionHeight} from '@clayui/shared';
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Children elements received from ClayNavigationBar component.
 	 */
-	children: React.ReactElement<IItemProps>[];
+	children: React.ReactElement<React.ComponentProps<typeof Item>>[];
 
 	/**
 	 * Determines the style of the Navigation Bar

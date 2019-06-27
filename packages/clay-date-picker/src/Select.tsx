@@ -19,7 +19,7 @@ interface IProps extends SelectHTMLAttributes<HTMLSelectElement> {
 	value: string | number;
 }
 
-const Select = forwardRef(
+const ClayDatePickerSelect = forwardRef(
 	(
 		{name, onChange, options, testId, value}: IProps,
 		ref: React.Ref<HTMLSelectElement>
@@ -45,4 +45,4 @@ const Select = forwardRef(
 	)
 );
 
-export default Select;
+export default ClayDatePickerSelect;

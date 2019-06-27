@@ -10,10 +10,10 @@ interface IProps {
 	weekday: string;
 }
 
-const Weekday: FunctionComponent<IProps> = ({weekday}) => (
+const ClayDatePickerWeekday: FunctionComponent<IProps> = ({weekday}) => (
 	<div className="date-picker-day date-picker-calendar-item">
 		<abbr>{weekday}</abbr>
 	</div>
 );
 
-export default Weekday;
+export default ClayDatePickerWeekday;

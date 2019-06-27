@@ -24,4 +24,8 @@ interface IContext {
 	containerElementRef: React.RefObject<HTMLElement>;
 }
 
-export default React.createContext({} as IContext);
+const context = React.createContext({} as IContext);
+
+context.displayName = 'ClayAutocompleteContext';
+
+export default context;

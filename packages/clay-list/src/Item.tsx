@@ -33,7 +33,7 @@ interface IProps extends React.HTMLAttributes<HTMLLIElement> {
 	header?: boolean;
 }
 
-const ClayItem: React.FunctionComponent<IProps> = ({
+const ClayListItem: React.FunctionComponent<IProps> = ({
 	action = false,
 	active = false,
 	children,
@@ -59,4 +59,4 @@ const ClayItem: React.FunctionComponent<IProps> = ({
 		</li>
 	);
 };
-export default ClayItem;
+export default ClayListItem;
