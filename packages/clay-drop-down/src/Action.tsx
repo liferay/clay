@@ -8,7 +8,7 @@ import classNames from 'classnames';
 import ClayButton from '@clayui/button';
 import React from 'react';
 
-const DropDownAction: React.FunctionComponent<
+const ClayDropDownAction: React.FunctionComponent<
 	React.HTMLAttributes<HTMLButtonElement>
 > = ({children, className, ...otherProps}) => {
 	return (
@@ -18,4 +18,4 @@ const DropDownAction: React.FunctionComponent<
 	);
 };
 
-export default DropDownAction;
+export default ClayDropDownAction;

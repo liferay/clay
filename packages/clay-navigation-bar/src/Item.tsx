@@ -6,7 +6,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-export interface IItemProps extends React.HTMLAttributes<HTMLLIElement> {
+interface IItemProps extends React.HTMLAttributes<HTMLLIElement> {
 	/**
 	 * Determines the active state of an dropdown list item.
 	 */
@@ -18,7 +18,7 @@ export interface IItemProps extends React.HTMLAttributes<HTMLLIElement> {
 	children: React.ReactElement;
 }
 
-export const Item: React.FunctionComponent<IItemProps> = ({
+const ClayNavigationBarIcon: React.FunctionComponent<IItemProps> = ({
 	active = false,
 	children,
 	className,
@@ -40,3 +40,5 @@ export const Item: React.FunctionComponent<IItemProps> = ({
 		</li>
 	);
 };
+
+export default ClayNavigationBarIcon;

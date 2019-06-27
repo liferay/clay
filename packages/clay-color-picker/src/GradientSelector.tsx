@@ -28,7 +28,7 @@ interface IProps {
 /**
  * Renders GradientSelector component
  */
-const GradientSelector: React.FunctionComponent<IProps> = ({
+const ClayColorPickerGradientSelector: React.FunctionComponent<IProps> = ({
 	color,
 	onChange = () => {},
 	hue = 0,
@@ -89,4 +89,4 @@ const GradientSelector: React.FunctionComponent<IProps> = ({
 	);
 };
 
-export default GradientSelector;
+export default ClayColorPickerGradientSelector;

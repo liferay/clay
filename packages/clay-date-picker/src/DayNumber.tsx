@@ -15,7 +15,11 @@ interface IProps {
 	onClick: (date: Date) => void;
 }
 
-const DayNumber: FunctionComponent<IProps> = ({day, daySelected, onClick}) => {
+const ClayDatePickerDayNumber: FunctionComponent<IProps> = ({
+	day,
+	daySelected,
+	onClick,
+}) => {
 	const classNames = classnames(
 		'date-picker-date date-picker-calendar-item',
 		{
@@ -47,4 +51,4 @@ const DayNumber: FunctionComponent<IProps> = ({day, daySelected, onClick}) => {
 	);
 };
 
-export default DayNumber;
+export default ClayDatePickerDayNumber;

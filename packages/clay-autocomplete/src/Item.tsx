@@ -23,7 +23,7 @@ interface IProps extends React.ComponentProps<typeof ClayDropDown.Item> {
 
 const optionsFuzzy = {post: '</strong>', pre: '<strong>'};
 
-const Item: React.FunctionComponent<IProps> = ({
+const ClayAutocompleteItem: React.FunctionComponent<IProps> = ({
 	match,
 	value,
 	...otherProps
@@ -45,4 +45,4 @@ const Item: React.FunctionComponent<IProps> = ({
 	);
 };
 
-export default Item;
+export default ClayAutocompleteItem;

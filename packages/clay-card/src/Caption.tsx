@@ -8,7 +8,7 @@ import classNames from 'classnames';
 import Context from './Context';
 import React from 'react';
 
-const Caption: React.FunctionComponent<
+const ClayCardCaption: React.FunctionComponent<
 	React.HTMLAttributes<HTMLDivElement | HTMLSpanElement>
 > = ({children, className, ...otherProps}) => {
 	const {interactive} = React.useContext(Context);
@@ -25,4 +25,4 @@ const Caption: React.FunctionComponent<
 	);
 };
 
-export default Caption;
+export default ClayCardCaption;

@@ -16,7 +16,7 @@ interface IToastContainerProps extends React.HTMLAttributes<HTMLDivElement> {
 		| React.ReactElement<IClayAlertProps>[];
 }
 
-export const ToastContainer = ({
+const ClayToastContainer = ({
 	children,
 	className,
 	...otherProps
@@ -32,3 +32,5 @@ export const ToastContainer = ({
 		</div>
 	);
 };
+
+export default ClayToastContainer;

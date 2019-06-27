@@ -17,7 +17,7 @@ interface IProps {
 	timezone?: string;
 }
 
-const TimePicker: FunctionComponent<IProps> = ({
+const ClayDatePickerTimePicker: FunctionComponent<IProps> = ({
 	currentTime,
 	onTimeChange,
 	spritemap,
@@ -52,4 +52,4 @@ const TimePicker: FunctionComponent<IProps> = ({
 	);
 };
 
-export default TimePicker;
+export default ClayDatePickerTimePicker;

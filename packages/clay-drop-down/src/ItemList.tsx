@@ -7,7 +7,7 @@
 import classnames from 'classnames';
 import React from 'react';
 
-const DropDownItemList: React.FunctionComponent<
+const ClayDropDownItemList: React.FunctionComponent<
 	React.HTMLAttributes<HTMLUListElement>
 > = ({children, className, ...otherProps}) => {
 	return (
@@ -17,4 +17,4 @@ const DropDownItemList: React.FunctionComponent<
 	);
 };
 
-export default DropDownItemList;
+export default ClayDropDownItemList;

@@ -26,7 +26,7 @@ interface IItemProps
 	symbol: string;
 }
 
-export const QuickActionMenuItem: React.FunctionComponent<IItemProps> = ({
+const ClayListQuickActionMenuItem: React.FunctionComponent<IItemProps> = ({
 	className,
 	href,
 	spritemap,
@@ -49,3 +49,5 @@ export const QuickActionMenuItem: React.FunctionComponent<IItemProps> = ({
 		</ElementTag>
 	);
 };
+
+export default ClayListQuickActionMenuItem;

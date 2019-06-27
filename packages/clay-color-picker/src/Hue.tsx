@@ -22,7 +22,7 @@ interface IProps {
 /**
  * Renders Hue component
  */
-const Hue: React.FunctionComponent<IProps> = ({
+const ClayColorPickerHue: React.FunctionComponent<IProps> = ({
 	value = 0,
 	onChange = () => {},
 }) => {
@@ -76,4 +76,4 @@ const Hue: React.FunctionComponent<IProps> = ({
 	);
 };
 
-export default Hue;
+export default ClayColorPickerHue;

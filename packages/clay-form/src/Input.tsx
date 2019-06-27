@@ -14,7 +14,7 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	component?: 'input' | React.ForwardRefExoticComponent<any>;
 }
 
-const Input = React.forwardRef<HTMLInputElement, IProps>(
+const ClayFormInput = React.forwardRef<HTMLInputElement, IProps>(
 	({className, component: Component = 'input', ...otherProps}, ref) => (
 		<Component
 			{...otherProps}
@@ -24,4 +24,4 @@ const Input = React.forwardRef<HTMLInputElement, IProps>(
 	)
 );
 
-export default Input;
+export default ClayFormInput;

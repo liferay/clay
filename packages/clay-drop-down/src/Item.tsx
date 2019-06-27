@@ -41,7 +41,7 @@ interface IProps
 	symbolRight?: string;
 }
 
-const DropDownItem: React.FunctionComponent<IProps> = ({
+const ClayDropDownItem: React.FunctionComponent<IProps> = ({
 	active,
 	children,
 	className,
@@ -82,4 +82,4 @@ const DropDownItem: React.FunctionComponent<IProps> = ({
 	);
 };
 
-export default DropDownItem;
+export default ClayDropDownItem;

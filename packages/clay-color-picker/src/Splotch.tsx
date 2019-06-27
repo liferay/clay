@@ -26,7 +26,7 @@ interface IProps extends React.HTMLAttributes<HTMLButtonElement> {
 /**
  * Renders component that displays a color
  */
-const Splotch: React.FunctionComponent<IProps> = ({
+const ClayColorPickerSplotch: React.FunctionComponent<IProps> = ({
 	active,
 	className,
 	size = 24,
@@ -53,4 +53,4 @@ const Splotch: React.FunctionComponent<IProps> = ({
 	);
 };
 
-export default Splotch;
+export default ClayColorPickerSplotch;

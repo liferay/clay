@@ -12,7 +12,7 @@ interface IProps extends React.HTMLAttributes<HTMLParagraphElement> {
 	 */
 	subtext?: boolean;
 }
-const ItemText: React.FunctionComponent<IProps> = ({
+const ClayListItemText: React.FunctionComponent<IProps> = ({
 	children,
 	className,
 	subtext,
@@ -31,4 +31,4 @@ const ItemText: React.FunctionComponent<IProps> = ({
 	);
 };
 
-export default ItemText;
+export default ClayListItemText;

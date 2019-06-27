@@ -28,4 +28,4 @@ const context = React.createContext({} as IContext);
 
 context.displayName = 'ClayAutocompleteContext';
 
-export default context
+export default context;

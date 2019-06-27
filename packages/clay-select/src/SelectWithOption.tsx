@@ -15,7 +15,7 @@ interface IProps extends React.ComponentProps<typeof Select> {
 	options: Array<React.ComponentProps<typeof Option>>;
 }
 
-const SelectWithOption: React.FunctionComponent<IProps> = ({
+const ClaySelectWithOption: React.FunctionComponent<IProps> = ({
 	options = [],
 	...otherProps
 }: IProps) => (
@@ -26,4 +26,4 @@ const SelectWithOption: React.FunctionComponent<IProps> = ({
 	</Select>
 );
 
-export default SelectWithOption;
+export default ClaySelectWithOption;

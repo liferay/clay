@@ -58,7 +58,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	onSetActive: (val: boolean) => void;
 }
 
-const DropDownMenu = React.forwardRef<HTMLDivElement, IProps>((
+const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>((
 	{
 		active,
 		alignElementRef,
@@ -114,4 +114,4 @@ const DropDownMenu = React.forwardRef<HTMLDivElement, IProps>((
 
 export {Align};
 
-export default DropDownMenu;
+export default ClayDropDownMenu;

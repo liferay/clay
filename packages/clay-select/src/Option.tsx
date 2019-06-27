@@ -6,8 +6,8 @@
 
 import React, {OptionHTMLAttributes} from 'react';
 
-const Option: React.FunctionComponent<
+const ClaySelectOption: React.FunctionComponent<
 	OptionHTMLAttributes<HTMLOptionElement>
 > = ({label, ...otherProps}) => <option {...otherProps}>{label}</option>;
 
-export default Option;
+export default ClaySelectOption;

@@ -25,7 +25,7 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	value: React.ReactText;
 }
 
-const DropDownSearch: React.FunctionComponent<IProps> = ({
+const ClayDropDownSearch: React.FunctionComponent<IProps> = ({
 	className,
 	spritemap,
 	...otherProps
@@ -56,4 +56,4 @@ const DropDownSearch: React.FunctionComponent<IProps> = ({
 	);
 };
 
-export default DropDownSearch;
+export default ClayDropDownSearch;

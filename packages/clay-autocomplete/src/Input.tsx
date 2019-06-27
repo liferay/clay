@@ -13,7 +13,7 @@ export interface IProps
 	extends React.InputHTMLAttributes<HTMLInputElement>,
 		React.ComponentProps<typeof ClayForm.Input> {}
 
-const Input = React.forwardRef<HTMLInputElement, IProps>(
+const ClayAutocompleteInput = React.forwardRef<HTMLInputElement, IProps>(
 	({className, ...othersProps}: IProps, ref) => {
 		const {loading} = useContext(Context);
 
@@ -29,4 +29,4 @@ const Input = React.forwardRef<HTMLInputElement, IProps>(
 	}
 );
 
-export default Input;
+export default ClayAutocompleteInput;
