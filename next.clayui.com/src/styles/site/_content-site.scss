@@ -7,8 +7,8 @@
 	.container-fluid > .row > .col-md-12 > div,
 	article {
 		> h1,
-		.clay-h1, 
-		.clay-h2, 
+		.clay-h1,
+		.clay-h2,
 		.clay-h3 {
 			color: $gray-800;
 			font-weight: 600;
@@ -18,7 +18,7 @@
 
 			@media (min-width: $grid-float-breakpoint) {
 				margin-bottom: $base-size;
-				margin-top: $base-size * 2;
+				margin-top: $base-size;
 			}
 		}
 	}
@@ -29,8 +29,6 @@
 
 	header {
 		.clay-site-container.container-fluid > h1 {
-			margin: 0;
-
 			@media (max-width: $grid-float-breakpoint - 1) {
 				font-size: 24px;
 			}
