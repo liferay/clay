@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {createContext} from 'react';
-import {Status} from './types';
+import { createContext } from 'react';
+import { Status } from './types';
 
 export interface IContext {
 	/**
@@ -24,4 +24,8 @@ export interface IContext {
 	status?: Status;
 }
 
-export default createContext({} as IContext);
+const context = createContext({} as IContext);
+
+context.displayName = 'ClayModalContext';
+
+export default context
