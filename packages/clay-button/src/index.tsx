@@ -64,8 +64,9 @@ const ClayButton: IClayButton = ({
 			'btn-monospaced': monospaced,
 			'btn-outline-borderless': borderless,
 			'btn-sm': small,
-			[`btn-${displayType}`]: displayType && !outline,
-			[`btn-outline-${displayType}`]: displayType && outline,
+			[`btn-${displayType}`]: displayType && !outline && !borderless,
+			[`btn-outline-${displayType}`]:
+				displayType && (outline || borderless),
 		})}
 		type={type}
 		{...otherProps}
