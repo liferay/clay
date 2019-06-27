@@ -40,7 +40,7 @@ exports[`ClayButton renders block 1`] = `
 
 exports[`ClayButton renders borderless 1`] = `
 <button
-  className="btn btn-outline-borderless btn-primary"
+  className="btn btn-outline-borderless btn-outline-primary"
   type="button"
 />
 `;
