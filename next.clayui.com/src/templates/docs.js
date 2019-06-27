@@ -13,7 +13,6 @@ import {MDXProvider} from '@mdx-js/react';
 
 import CodeClipboard from '../components/CodeClipboard';
 import getSection from '../utils/getSection';
-import LayoutNav from '../components/LayoutNav';
 import Sidebar from '../components/Sidebar';
 import Typography from '../components/Typography';
 
