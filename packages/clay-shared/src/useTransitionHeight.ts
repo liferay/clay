@@ -30,11 +30,11 @@ function setCollapseHeight(collapseElementRef: React.RefObject<any>) {
 }
 
 function useTransitionHeight(
-	visible: Boolean,
+	visible: boolean,
 	setVisible: any,
 	contentRef: React.RefObject<any>
 ) {
-	const [transitioning, setTransitioning] = useState<Boolean>(false);
+	const [transitioning, setTransitioning] = useState<boolean>(false);
 
 	useEffect(() => {
 		if (transitioning) {
@@ -68,7 +68,7 @@ function useTransitionHeight(
 	};
 
 	return [transitioning, handleTransitionEnd, willTriggerTransition] as [
-		Boolean,
+		boolean,
 		(event: React.TransitionEvent) => void,
 		(event: React.MouseEvent | MouseEvent) => void
 	];
