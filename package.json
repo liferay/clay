@@ -12,7 +12,7 @@
 		"prettier": "prettier-eslint '**/*.{js,ts,tsx}'",
 		"test": "jest",
 		"site": "cd clayui.com && npm run build && npm run serve",
-		"storybook": "start-storybook",
+		"storybook": "start-storybook -p 8888",
 		"storybook:build": "build-storybook -c .storybook -o .storybook-static"
 	},
 	"devDependencies": {
