@@ -5,7 +5,7 @@
  */
 
 import * as TestRenderer from 'react-test-renderer';
-import ClayButton from '..';
+import ClayButton, {ClayButtonWithIcon} from '..';
 import React from 'react';
 
 describe('ClayButton', () => {
@@ -87,6 +87,14 @@ describe('ClayButton', () => {
 				<ClayButton />
 				<ClayButton />
 			</ClayButton.Group>
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('renders ButtonWithIcon', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayButtonWithIcon spritemap="/some/path" symbol="trash" />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
