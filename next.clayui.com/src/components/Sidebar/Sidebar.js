@@ -92,7 +92,7 @@ export default props => (
 							>
 								<img
 									alt=""
-									src="/images/home/clay_icon_storybook.svg"
+									src="/images/docs/clay_icon_storybook.svg"
 								/>
 							</a>
 
@@ -105,7 +105,7 @@ export default props => (
 							>
 								<img
 									alt=""
-									src="/images/home/clay_icon_github.svg"
+									src="/images/docs/clay_icon_github.svg"
 								/>
 							</a>
 						</div>

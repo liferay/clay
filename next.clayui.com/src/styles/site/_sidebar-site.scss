@@ -63,10 +63,8 @@
 		}
 	}
 
-	.draft > .nav-link:after {
-		content: '(draft)';
-		font-size: 0.6rem;
-		margin-left: 0.25rem;
+	.draft {
+		display: none;
 	}
 
 	.active {
