@@ -69,23 +69,27 @@ export default props => {
 						<div className="col-xl sidebar-offset">
 							<header>
 								<div className="clay-site-container container-fluid">
-									<h1>{frontmatter.title}</h1>
-									{frontmatter.version && (
-										<p className="docs-title-version">
-											{frontmatter.version}
-										</p>
-									)}
-									{frontmatter.packageNpm && (
-										<p className="docs-package-npm">
-											{'yarn add '}
-											{frontmatter.packageNpm}
-										</p>
-									)}
-									{frontmatter.description && (
-										<p className="docs-description">
-											{frontmatter.description}
-										</p>
-									)}
+									<div className="row border-bottom pb-5">
+										<div className="col-12">
+											<h1>{frontmatter.title}</h1>
+											{frontmatter.version && (
+												<p className="docs-title-version">
+													{frontmatter.version}
+												</p>
+											)}
+											{frontmatter.packageNpm && (
+												<p className="docs-package-npm">
+													{'yarn add '}
+													{frontmatter.packageNpm}
+												</p>
+											)}
+											{frontmatter.description && (
+												<p className="docs-description">
+													{frontmatter.description}
+												</p>
+											)}
+										</div>
+									</div>
 								</div>
 							</header>
 
@@ -163,7 +167,7 @@ export default props => {
 							</div>
 
 							<footer className="clay-site-container container-fluid">
-								<div className="row">
+								<div className="row border-top py-5">
 									<div className="col-6">
 										<p className="legal">
 											{
