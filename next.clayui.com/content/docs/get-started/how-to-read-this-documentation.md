@@ -1,10 +1,10 @@
 ---
-title: "Components Status"
-order: 4
-draft: true
+title: "How to read this documentation"
+description: "The status of each package is shown in the corresponding documentation"
+order: 3
 ---
 
-Clay is constantly evolving and creating new components. The status of each package is shown in the corresponding documentation, to be sure about the progress of the packages and to know which ones are safe to use.
+Clay is constantly evolving and creating new components. The status of each package is shown in the corresponding documentation, The status of each package is shown in the corresponding documentation.
 
 <div class="table-responsive">
 	<table class="table table-autofit ">
