@@ -20,13 +20,21 @@ const BillboardWrapper: React.FunctionComponent<IProps> = ({
 	const elementRef = React.useRef<HTMLDivElement>(null);
 
 	const updateChart = useCallback((args: any) => {
-		const {data, ...otherArgs} = args;
+		const {data, onafterinit, ...otherArgs} = args;
 
 		if (elementRef.current) {
 			if (!forwardRef.current) {
 				forwardRef.current = bb.generate({
 					bindto: elementRef.current,
 					data,
+					onafterinit() {
+						if (onafterinit) {
+							// Called async so that `forwardRef.current`
+							// will be set to the chart before calling
+							// `onafterinit`
+							setTimeout(() => onafterinit(), 0);
+						}
+					},
 					...otherArgs,
 				});
 			}
