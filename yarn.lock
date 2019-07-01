@@ -15163,13 +15163,6 @@ metal-state@^2.16.0, metal-state@^2.16.6, metal-state@^2.16.8:
     metal "^2.16.8"
     metal-events "^2.16.8"
 
-metal-structs@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/metal-structs/-/metal-structs-1.0.2.tgz#3b4f585f169e61cabb2ccd7ee5f0d97b60b1fc8a"
-  integrity sha512-LoGpcDtHvheGrG0e3eTPlb1vG52M06LbYtD4Oyb1EkVSMUvxpAjwuzVh4eUTkCLH9facAgoLlwkO2j07NBrdeA==
-  dependencies:
-    metal "^2.16.6"
-
 metal-tabs@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/metal-tabs/-/metal-tabs-2.3.1.tgz#3dda4197356e9a63636bc903cb5dc7b04c520c44"
@@ -15178,17 +15171,6 @@ metal-tabs@^2.3.1:
     metal-component "^2.0.0"
     metal-keyboard-focus "^2.0.0"
     metal-soy "^2.0.0"
-
-metal-uri@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/metal-uri/-/metal-uri-3.1.2.tgz#a24b6adf129d28ca775ac6c8fd4d6750c0d043f6"
-  integrity sha512-xrjNUkD8khilyeOZwdtmTHuGyDHb5rvEPneQszpfscxg6svrkrAtRvr/UGYRQLnXDTzI/IMZUNuE2tvJ0SNwyg==
-  dependencies:
-    metal "^2.16.6"
-    metal-structs "^1.0.2"
-    path-browserify "0.0.0"
-    resolve-pathname "^2.2.0"
-    url-parse "^1.1.9"
 
 metal@^2.0.0, metal@^2.16.0, metal@^2.16.6, metal@^2.16.8:
   version "2.16.8"
@@ -21989,7 +21971,7 @@ url-parse-lax@^3.0.0:
   dependencies:
     prepend-http "^2.0.0"
 
-url-parse@^1.1.8, url-parse@^1.1.9, url-parse@^1.4.3:
+url-parse@^1.1.8, url-parse@^1.4.3:
   version "1.4.7"
   resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.4.7.tgz#a8a83535e8c00a316e403a5db4ac1b9b853ae278"
   integrity sha512-d3uaVyzDB9tQoSXFvuSUNFibTd9zxd2bkVrDRvF5TmvWWQwqE4lgYJ5m+x1DbecWkw+LK4RNl2CU1hHuOKPVlg==
