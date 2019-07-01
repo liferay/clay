@@ -7,6 +7,22 @@ exports[`ClayButton renders 1`] = `
 />
 `;
 
+exports[`ClayButton renders ButtonWithIcon 1`] = `
+<button
+  className="btn btn-monospaced btn-primary"
+  type="button"
+>
+  <svg
+    className="lexicon-icon lexicon-icon-trash"
+    role="presentation"
+  >
+    <use
+      xlinkHref="/some/path#trash"
+    />
+  </svg>
+</button>
+`;
+
 exports[`ClayButton renders a ButtonGroup with spaced 1`] = `
 <div
   className="btn-group"
