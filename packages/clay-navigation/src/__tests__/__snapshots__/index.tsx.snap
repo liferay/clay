@@ -1,1 +1,176 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayNavigation renders 1`] = `
+<div>
+  <div
+    class=""
+  >
+    ClayNavigation
+  </div>
+</div>
+`;
+
+exports[`ClayNavigation renders a Breadcrumb 1`] = `
+<div>
+  <ol
+    class="breadcrumb"
+  >
+    <li
+      class="breadcrumb-item active"
+    >
+      <span
+        class="breadcrumb-text-truncate"
+        title="1"
+      >
+        1
+      </span>
+    </li>
+    <li
+      class="breadcrumb-item"
+    >
+      <a
+        class="breadcrumb-link"
+        href="#2"
+        role="button"
+      >
+        2
+      </a>
+    </li>
+    <li
+      class="breadcrumb-item"
+    >
+      <a
+        class="breadcrumb-link"
+        href="#3"
+        role="button"
+      >
+        3
+      </a>
+    </li>
+    <li
+      class="breadcrumb-item"
+    >
+      <a
+        class="breadcrumb-link"
+        href="#4"
+        role="button"
+      >
+        4
+      </a>
+    </li>
+    <li
+      class="breadcrumb-item"
+    >
+      <a
+        class="breadcrumb-link"
+        href="#5"
+        role="button"
+      >
+        5
+      </a>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`ClayNavigation renders a Breadcrumb with properties passed by \`ellipsisProps\` 1`] = `
+<div>
+  <ol
+    class="breadcrumb"
+  >
+    <li
+      class="breadcrumb-item active"
+    >
+      <span
+        class="breadcrumb-text-truncate"
+        title="1"
+      >
+        1
+      </span>
+    </li>
+    <li
+      class="breadcrumb-item"
+    >
+      <a
+        class="breadcrumb-link"
+        href="#2"
+        role="button"
+      >
+        2
+      </a>
+    </li>
+    <li
+      class="dropdown breadcrumb-item"
+      style="font-size: 15px;"
+    >
+      <span
+        style="display: inline-block;"
+      >
+        <button
+          class="dropdown-toggle breadcrumb-link btn btn-unstyled"
+          type="button"
+        >
+          <svg
+            class="lexicon-icon lexicon-icon-ellipsis-h"
+            role="presentation"
+          >
+            <use
+              xlink:href="path/to/spritemap#ellipsis-h"
+            />
+          </svg>
+          <svg
+            class="lexicon-icon lexicon-icon-caret-bottom"
+            role="presentation"
+          >
+            <use
+              xlink:href="path/to/spritemap#caret-bottom"
+            />
+          </svg>
+        </button>
+      </span>
+    </li>
+    <li
+      class="breadcrumb-item"
+    >
+      <a
+        class="breadcrumb-link"
+        href="#5"
+        role="button"
+      >
+        5
+      </a>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`ClayNavigation should throw a warning when not passing \`active\` to any \`items\` on Breadcrumb 1`] = `
+<div>
+  <ol
+    class="breadcrumb"
+  >
+    <li
+      class="breadcrumb-item"
+    >
+      <a
+        class="breadcrumb-link"
+        href="#1"
+        role="button"
+      >
+        1
+      </a>
+    </li>
+    <li
+      class="breadcrumb-item"
+    >
+      <a
+        class="breadcrumb-link"
+        href="#2"
+        role="button"
+      >
+        2
+      </a>
+    </li>
+  </ol>
+</div>
+`;
