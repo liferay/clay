@@ -46,6 +46,11 @@ interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	totalPages: number;
 
 	/**
+	 * The size of pagination element.
+	 */
+	size?: 'lg' | 'sm';
+
+	/**
 	 * Path to spritemap from clay-css.
 	 */
 	spritemap?: string;
@@ -58,6 +63,7 @@ const ClayPagination: React.FunctionComponent<IProps> = ({
 	ellipsisBuffer = ELLIPSIS_BUFFER,
 	hrefConstructor,
 	onPageChange,
+	size,
 	spritemap,
 	totalPages,
 }: IProps) => {
@@ -72,7 +78,11 @@ const ClayPagination: React.FunctionComponent<IProps> = ({
 		.map((item, index) => index + 1);
 
 	return (
-		<ul className={classNames('pagination pagination-root', className)}>
+		<ul
+			className={classNames('pagination pagination-root', className, {
+				[`pagination-${size}`]: size,
+			})}
+		>
 			<PaginationItem
 				data-testid="prevArrow"
 				disabled={activePage === 1}

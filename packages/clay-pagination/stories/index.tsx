@@ -47,6 +47,37 @@ storiesOf('ClayPagination', module)
 
 		return <PaginationWithState totalPages={totalPages} />;
 	})
+	.add('sizes', () => {
+		const totalPages = number('Number of pages', 25);
+
+		return (
+			<>
+				<ClayPagination
+					activePage={number('Active Page', 8)}
+					ellipsisBuffer={number('Ellipsis Buffer', 2)}
+					hrefConstructor={page => `/#${page}`}
+					size="sm"
+					spritemap={spritemap}
+					totalPages={totalPages}
+				/>
+				<ClayPagination
+					activePage={number('Active Page', 8)}
+					ellipsisBuffer={number('Ellipsis Buffer', 2)}
+					hrefConstructor={page => `/#${page}`}
+					spritemap={spritemap}
+					totalPages={totalPages}
+				/>
+				<ClayPagination
+					activePage={number('Active Page', 8)}
+					ellipsisBuffer={number('Ellipsis Buffer', 2)}
+					hrefConstructor={page => `/#${page}`}
+					size="lg"
+					spritemap={spritemap}
+					totalPages={totalPages}
+				/>
+			</>
+		);
+	})
 	.add('w/ disabled pages', () => {
 		const totalPages = number('Number of pages', 5);
 

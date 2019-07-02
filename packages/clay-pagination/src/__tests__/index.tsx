@@ -23,6 +23,7 @@ describe('ClayPagination', () => {
 		const {container} = render(
 			<ClayPagination
 				activePage={12}
+				size="lg"
 				spritemap={spritemap}
 				totalPages={25}
 			/>
