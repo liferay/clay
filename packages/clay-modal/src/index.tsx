@@ -10,7 +10,7 @@ import Context, {IContext} from './Context';
 import Footer from './Footer';
 import Header from './Header';
 import React, {FunctionComponent, useEffect, useRef, useState} from 'react';
-import {Portal} from '@clayui/shared';
+import {ClayPortal} from '@clayui/shared';
 import {Size} from './types';
 import {useUserInteractions} from './Hook';
 
@@ -79,7 +79,7 @@ const ClayModal: FunctionComponent<IProps> & {
 	}, []);
 
 	return (
-		<Portal>
+		<ClayPortal>
 			<div
 				className={classNames('modal-backdrop fade', {
 					show: visibleClassShow,
@@ -108,7 +108,7 @@ const ClayModal: FunctionComponent<IProps> & {
 					</div>
 				</div>
 			</div>
-		</Portal>
+		</ClayPortal>
 	);
 };
 
