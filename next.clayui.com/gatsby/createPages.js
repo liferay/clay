@@ -22,6 +22,7 @@ const slugWithBar = path => {
 const createDocs = (actions, edges, mdx) => {
 	const {createPage, createRedirect} = actions;
 	const docsTemplate = path.resolve(__dirname, '../src/templates/docs.js');
+	const componentsTemplate = path.resolve(__dirname, '../src/templates/components.js');
 	const blogTemplate = path.resolve(__dirname, '../src/templates/blog.js');
 
 	edges
@@ -71,6 +72,8 @@ const createDocs = (actions, edges, mdx) => {
 
 				if (slug.includes('blog/')) {
 					template = blogTemplate;
+				} else if (slug.includes('docs/components')) {
+					template = componentsTemplate;
 				} else if (slug.includes('docs/')) {
 					template = docsTemplate;
 				}
