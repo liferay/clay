@@ -4,18 +4,22 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React from 'react';
 import classNames from 'classnames';
+import React from 'react';
+import {Breadcrumb} from './Breadcrumb';
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {}
-
-const ClayNavigation: React.FunctionComponent<Props> = ({
-	className,
-	...otherProps
-}) => {
+const ClayNavigation: React.FunctionComponent<
+	React.HTMLAttributes<HTMLDivElement>
+> & {
+	Breadcrumb: typeof Breadcrumb;
+} = ({className, ...otherProps}) => {
 	return (
-		<div {...otherProps} className={classNames(className)}>{'ClayNavigation'}</div>
+		<div {...otherProps} className={classNames(className)}>
+			{'ClayNavigation'}
+		</div>
 	);
 };
+
+ClayNavigation.Breadcrumb = Breadcrumb;
 
 export default ClayNavigation;
