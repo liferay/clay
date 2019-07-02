@@ -24,4 +24,8 @@ export interface IContext {
 	status?: Status;
 }
 
-export default createContext({} as IContext);
+const context = createContext({} as IContext);
+
+context.displayName = 'ClayModalContext';
+
+export default context;

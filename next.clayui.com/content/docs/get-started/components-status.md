@@ -1,6 +1,7 @@
 ---
 title: "Components Status"
 order: 4
+draft: true
 ---
 
 Clay is constantly evolving and creating new components. The status of each package is shown in the corresponding documentation, to be sure about the progress of the packages and to know which ones are safe to use.

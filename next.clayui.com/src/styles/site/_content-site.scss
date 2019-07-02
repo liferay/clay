@@ -29,8 +29,6 @@
 
 	header {
 		.clay-site-container.container-fluid > h1 {
-			margin: 0;
-
 			@media (max-width: $grid-float-breakpoint - 1) {
 				font-size: 24px;
 			}

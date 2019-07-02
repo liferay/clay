@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import Uri from 'metal-uri';
 import warning from 'warning';
 import {
 	FetchPolicy,
@@ -138,7 +137,7 @@ const useResource = ({
 		variables: TVariables,
 		fetchOptions?: RequestInit
 	) => {
-		const uri = new Uri(link);
+		const uri = new URL(link);
 
 		if ((fetchOptions && fetchOptions.method !== 'GET') || !variables) {
 			return uri.toString();
@@ -146,7 +145,7 @@ const useResource = ({
 
 		const keys = Object.keys(variables);
 
-		keys.forEach(key => uri.addParameterValue(key, variables[key]));
+		keys.forEach(key => uri.searchParams.set(key, variables[key]));
 
 		return uri.toString();
 	};

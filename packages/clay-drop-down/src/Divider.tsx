@@ -6,10 +6,10 @@
 
 import React from 'react';
 
-const Divider: React.FunctionComponent<
+const ClayDropDownDivider: React.FunctionComponent<
 	React.HTMLAttributes<HTMLLIElement>
 > = () => (
 	<li aria-hidden="true" className="dropdown-divider" role="presentation" />
 );
 
-export default Divider;
+export default ClayDropDownDivider;

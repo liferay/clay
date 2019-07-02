@@ -21,7 +21,7 @@ interface IProps {
 	value: string;
 }
 
-const InputDate: FunctionComponent<IProps> = ({
+const ClayDatePickerInputDate: FunctionComponent<IProps> = ({
 	ariaLabel,
 	currentTime,
 	dateFormat,
@@ -71,4 +71,4 @@ const InputDate: FunctionComponent<IProps> = ({
 	);
 };
 
-export default InputDate;
+export default ClayDatePickerInputDate;

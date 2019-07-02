@@ -14,7 +14,10 @@ interface IBodyProps extends HTMLAttributes<HTMLDivElement> {
 	url?: string;
 }
 
-const Body: FunctionComponent<IBodyProps> = ({children, url}: IBodyProps) => (
+const ClayModalBody: FunctionComponent<IBodyProps> = ({
+	children,
+	url,
+}: IBodyProps) => (
 	<div
 		className={classNames('modal-body', {
 			'modal-body-iframe': url,
@@ -24,4 +27,4 @@ const Body: FunctionComponent<IBodyProps> = ({children, url}: IBodyProps) => (
 	</div>
 );
 
-export default Body;
+export default ClayModalBody;

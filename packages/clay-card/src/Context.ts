@@ -22,4 +22,8 @@ export interface IContext {
 	interactive?: boolean;
 }
 
-export default createContext({} as IContext);
+const context = createContext({} as IContext);
+
+context.displayName = 'ClayCardContext';
+
+export default context;

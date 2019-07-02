@@ -30,7 +30,7 @@ export interface IRadioProps
 	value: React.ReactText;
 }
 
-const Radio: React.FunctionComponent<IRadioProps> = ({
+const ClayRadioGroupRadio: React.FunctionComponent<IRadioProps> = ({
 	checked,
 	children,
 	className,
@@ -73,4 +73,4 @@ const Radio: React.FunctionComponent<IRadioProps> = ({
 	);
 };
 
-export default Radio;
+export default ClayRadioGroupRadio;

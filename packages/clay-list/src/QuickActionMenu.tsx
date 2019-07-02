@@ -5,10 +5,10 @@
  */
 
 import classNames from 'classnames';
+import QuickActionMenuItem from './QuickActionMenuItem';
 import React from 'react';
-import {QuickActionMenuItem} from './QuickActionMenuItem';
 
-const QuickActionMenu: React.FunctionComponent<
+const ClayListQuickActionMenu: React.FunctionComponent<
 	React.HTMLAttributes<HTMLDivElement>
 > & {
 	Item: typeof QuickActionMenuItem;
@@ -23,6 +23,6 @@ const QuickActionMenu: React.FunctionComponent<
 	);
 };
 
-QuickActionMenu.Item = QuickActionMenuItem;
+ClayListQuickActionMenu.Item = QuickActionMenuItem;
 
-export default QuickActionMenu;
+export default ClayListQuickActionMenu;

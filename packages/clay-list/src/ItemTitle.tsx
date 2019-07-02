@@ -7,7 +7,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-const ItemTitle: React.FunctionComponent<
+const ClayListItemTitle: React.FunctionComponent<
 	React.HTMLAttributes<HTMLHeadingElement>
 > = ({children, className, ...otherProps}) => {
 	return (
@@ -20,4 +20,4 @@ const ItemTitle: React.FunctionComponent<
 	);
 };
 
-export default ItemTitle;
+export default ClayListItemTitle;

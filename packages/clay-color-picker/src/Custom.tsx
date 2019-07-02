@@ -103,7 +103,7 @@ interface IProps {
 /**
  * Renders the custom color picker
  */
-const Custom: React.FunctionComponent<IProps> = ({
+const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 	colors,
 	label,
 	onChange,
@@ -290,4 +290,4 @@ const Custom: React.FunctionComponent<IProps> = ({
 	);
 };
 
-export default Custom;
+export default ClayColorPickerCustom;

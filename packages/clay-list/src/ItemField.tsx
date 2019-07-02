@@ -15,7 +15,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	expand?: boolean;
 }
 
-const ItemField: React.FunctionComponent<IProps> = ({
+const ClayListItemField: React.FunctionComponent<IProps> = ({
 	children,
 	className,
 	expand,
@@ -33,4 +33,4 @@ const ItemField: React.FunctionComponent<IProps> = ({
 	);
 };
 
-export default ItemField;
+export default ClayListItemField;

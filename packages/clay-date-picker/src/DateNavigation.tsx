@@ -22,7 +22,7 @@ interface IProps extends HTMLAttributes<HTMLDivElement> {
 	years: IYears;
 }
 
-const DateNavigation: FunctionComponent<IProps> = ({
+const ClayDatePickerDateNavigation: FunctionComponent<IProps> = ({
 	ariaLabels,
 	currentMonth,
 	months,
@@ -152,4 +152,4 @@ const DateNavigation: FunctionComponent<IProps> = ({
 	);
 };
 
-export default DateNavigation;
+export default ClayDatePickerDateNavigation;

@@ -26,7 +26,7 @@ interface IRowProps extends React.HTMLAttributes<HTMLTableRowElement> {
 	rowDelimiter?: TDelimiter;
 }
 
-const Row: React.FunctionComponent<IRowProps> = ({
+const ClayTableRow: React.FunctionComponent<IRowProps> = ({
 	active = false,
 	children,
 	className,
@@ -48,4 +48,4 @@ const Row: React.FunctionComponent<IRowProps> = ({
 	);
 };
 
-export default Row;
+export default ClayTableRow;

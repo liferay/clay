@@ -8,7 +8,7 @@ import classNames from 'classnames';
 import Option from './Option';
 import React, {SelectHTMLAttributes} from 'react';
 
-const Select: React.FunctionComponent<
+const ClaySelectSelect: React.FunctionComponent<
 	SelectHTMLAttributes<HTMLSelectElement>
 > & {
 	Option: typeof Option;
@@ -18,6 +18,6 @@ const Select: React.FunctionComponent<
 	</select>
 );
 
-Select.Option = Option;
+ClaySelectSelect.Option = Option;
 
-export default Select;
+export default ClaySelectSelect;

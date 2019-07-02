@@ -26,7 +26,11 @@ interface IProps {
 /**
  * Renders basic color picker
  */
-const Basic: React.FunctionComponent<IProps> = ({colors, label, onChange}) => (
+const ClayColorPickerBasic: React.FunctionComponent<IProps> = ({
+	colors,
+	label,
+	onChange,
+}) => (
 	<React.Fragment>
 		{label && (
 			<div className="clay-color-header">
@@ -44,4 +48,4 @@ const Basic: React.FunctionComponent<IProps> = ({colors, label, onChange}) => (
 	</React.Fragment>
 );
 
-export default Basic;
+export default ClayColorPickerBasic;

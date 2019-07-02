@@ -96,7 +96,7 @@ exports[`ClayNavigationBar renders 1`] = `
             className="nav-item"
           >
             <button
-              className="nav-link btn btn-unstyled btn-block btn-sm"
+              className="nav-link btn btn-block btn-sm btn-unstyled"
               type="button"
             >
               <span
@@ -223,7 +223,7 @@ exports[`ClayNavigationBar renders when passing more than one active item 1`] = 
             className="nav-item"
           >
             <button
-              className="nav-link active btn btn-unstyled btn-block btn-sm"
+              className="nav-link active btn btn-block btn-sm btn-unstyled"
               type="button"
             >
               <span

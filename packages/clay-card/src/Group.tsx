@@ -14,7 +14,7 @@ interface ICardGroupProps extends React.HTMLAttributes<HTMLUListElement> {
 	label?: string;
 }
 
-const Group: React.FunctionComponent<ICardGroupProps> = ({
+const ClayCardGroup: React.FunctionComponent<ICardGroupProps> = ({
 	children,
 	className,
 	label,
@@ -40,4 +40,4 @@ const Group: React.FunctionComponent<ICardGroupProps> = ({
 	);
 };
 
-export default Group;
+export default ClayCardGroup;

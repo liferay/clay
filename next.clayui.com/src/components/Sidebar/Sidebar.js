@@ -6,8 +6,8 @@
 
 import Navigation from './Navigation';
 import React, {useLayoutEffect} from 'react';
-import {Link} from 'gatsby';
 import Search from '../LayoutNav/Search';
+import {Link} from 'gatsby';
 
 const SidebarRef = React.createRef();
 const SideNavRef = React.createRef();
@@ -68,13 +68,18 @@ export default props => (
 			<SideNavScroll>
 				<div className="sidebar-body mb-auto">
 					<div className="d-flex justify-content-between align-items-center">
-						<Link className="sidebar-logo text-reset text-decoration-none d-inline-block p-2 mb-1" to="/">
+						<Link
+							className="sidebar-logo text-reset text-decoration-none d-inline-block p-2 mb-1"
+							to="/"
+						>
 							<img
 								alt="Clay"
 								className="sidebar-logo-image align-middle"
 								src="/images/clay_logo_w.png"
-								/>
-							<span className="sidebar-logo-title align-middle h3 font-weight-700 ml-2">{'Clay'}</span>
+							/>
+							<span className="sidebar-logo-title align-middle h3 font-weight-700 ml-2">
+								{'Clay'}
+							</span>
 						</Link>
 
 						<div className="sidebar-icon-links">
@@ -84,11 +89,11 @@ export default props => (
 								rel="noopener noreferrer"
 								target="_blank"
 								title="Storybook"
-								>
+							>
 								<img
 									alt=""
-									src="/images/home/clay_icon_storybook.svg"
-									/>
+									src="/images/docs/clay_icon_storybook.svg"
+								/>
 							</a>
 
 							<a
@@ -97,11 +102,11 @@ export default props => (
 								rel="noopener noreferrer"
 								target="_blank"
 								title="GitHub"
-								>
+							>
 								<img
 									alt=""
-									src="/images/home/clay_icon_github.svg"
-									/>
+									src="/images/docs/clay_icon_github.svg"
+								/>
 							</a>
 						</div>
 					</div>

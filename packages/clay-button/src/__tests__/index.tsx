@@ -5,7 +5,7 @@
  */
 
 import * as TestRenderer from 'react-test-renderer';
-import ClayButton from '..';
+import ClayButton, {ClayButtonWithIcon} from '..';
 import React from 'react';
 
 describe('ClayButton', () => {
@@ -31,9 +31,25 @@ describe('ClayButton', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
+	it('renders borderless', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayButton borderless displayType="primary" />
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
 	it('renders block', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayButton block displayType="primary" />
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('renders outline', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayButton displayType="primary" outline />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
@@ -71,6 +87,14 @@ describe('ClayButton', () => {
 				<ClayButton />
 				<ClayButton />
 			</ClayButton.Group>
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('renders ButtonWithIcon', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayButtonWithIcon spritemap="/some/path" symbol="trash" />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();

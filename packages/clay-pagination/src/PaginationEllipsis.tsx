@@ -14,12 +14,9 @@ export interface IPaginationEllipsisProps {
 	onPageChange?: (page?: number) => void;
 }
 
-const PaginationEllipsis: React.FunctionComponent<IPaginationEllipsisProps> = ({
-	disabledPages = [],
-	hrefConstructor,
-	items,
-	onPageChange,
-}) => {
+const ClayPaginationEllipsis: React.FunctionComponent<
+	IPaginationEllipsisProps
+> = ({disabledPages = [], hrefConstructor, items, onPageChange}) => {
 	const [active, setActive] = useState(false);
 
 	return (
@@ -55,4 +52,4 @@ const PaginationEllipsis: React.FunctionComponent<IPaginationEllipsisProps> = ({
 	);
 };
 
-export default PaginationEllipsis;
+export default ClayPaginationEllipsis;
