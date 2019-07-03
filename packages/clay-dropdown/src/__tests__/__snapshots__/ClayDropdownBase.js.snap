@@ -697,3 +697,33 @@ exports[`ClayDropdownBase should render a searchable dropdown 1`] = `
   </ul>
 </div>
 `;
+
+exports[`ClayDropdownBase should render a searchable dropdown without form tag 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger</button>
+</div>
+<div class="dropdown-menu" ref="menu">
+  <div class="dropdown-section">
+    <div class="input-group input-group-sm">
+      <div class="input-group-item">
+        <input aria-label="Search for..." class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text" ref="searchInput">
+        <span class="input-group-inset-item input-group-inset-item-after">
+          <button class="btn btn-link" aria-label="search" type="button">
+            <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
+              <use xlink:href="icons.svg#search"></use>
+            </svg>
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+  <ul class="list-unstyled">
+    <li tabindex="-1">
+      <a class=" dropdown-item" href="item1url">Item 1</a>
+    </li>
+    <li tabindex="-1">
+      <a class=" dropdown-item" href="item2url">Item 2</a>
+    </li>
+  </ul>
+</div>
+`;
