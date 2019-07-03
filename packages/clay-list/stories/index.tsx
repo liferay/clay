@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 import '@clayui/css/lib/css/atlas.css';
-import ClayCheckbox from '@clayui/checkbox';
+import ClayForm from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayList from '../src';
 import ClaySticker from '@clayui/sticker';
@@ -82,7 +82,7 @@ storiesOf('ClayList', module)
 						key={item}
 					>
 						<ClayList.ItemField>
-							<ClayCheckbox
+							<ClayForm.Checkbox
 								aria-label="checkbox"
 								checked={item === activeIndex}
 								onChange={() => {}}

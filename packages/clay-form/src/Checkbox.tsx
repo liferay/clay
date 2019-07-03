@@ -39,7 +39,7 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const ClayCheckbox: React.FunctionComponent<IProps> = ({
+const ClayFormCheckbox: React.FunctionComponent<IProps> = ({
 	checked,
 	children,
 	className,
@@ -92,4 +92,4 @@ const ClayCheckbox: React.FunctionComponent<IProps> = ({
 	);
 };
 
-export default ClayCheckbox;
+export default ClayFormCheckbox;

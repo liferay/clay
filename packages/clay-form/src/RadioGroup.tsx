@@ -5,8 +5,8 @@
  */
 
 import classNames from 'classnames';
-import Radio, {IRadioProps} from './Radio';
 import React from 'react';
+import {IRadioProps} from './Radio';
 
 interface IGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 	children: Array<React.ReactElement<IRadioProps>>;
@@ -33,9 +33,7 @@ interface IGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 	selectedValue?: React.ReactText;
 }
 
-const ClayRadioGroup: React.FunctionComponent<IGroupProps> & {
-	Radio: typeof Radio;
-} = ({
+const ClayRadioGroup: React.FunctionComponent<IGroupProps> = ({
 	children,
 	className,
 	inline,
@@ -63,7 +61,5 @@ const ClayRadioGroup: React.FunctionComponent<IGroupProps> & {
 		</div>
 	);
 };
-
-ClayRadioGroup.Radio = Radio;
 
 export default ClayRadioGroup;
