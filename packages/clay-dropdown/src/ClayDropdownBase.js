@@ -712,6 +712,16 @@ ClayDropdownBase.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	triggerTitle: Config.string(),
+
+	/**
+	 * Flag to indicate whether the search element will be wrapped
+	 * with `<form />` tag.
+	 * @default true
+	 * @instance
+	 * @memberof ClayDropdownBase
+	 * @type {?bool}
+	 */
+	useSearchableWithForm: Config.bool().value(true),
 };
 
 Soy.register(ClayDropdownBase, templates);

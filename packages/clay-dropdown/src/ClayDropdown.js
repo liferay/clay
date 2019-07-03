@@ -269,6 +269,16 @@ ClayDropdown.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	triggerSize: Config.oneOf(['sm']),
+
+	/**
+	 * Flag to indicate whether the search element will be wrapped
+	 * with `<form />` tag.
+	 * @default true
+	 * @instance
+	 * @memberof ClayDropdown
+	 * @type {?bool}
+	 */
+	useSearchableWithForm: Config.bool().value(true),
 };
 
 defineWebComponent('clay-dropdown', ClayDropdown);
