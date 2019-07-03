@@ -148,7 +148,7 @@ const useResourceWithVariablesChangeCode = `const Component = () => {
 	const {resource} = useResource({
 		link: 'https://rickandmortyapi.com/api/character/',
 		fetchDelay: 300,
-		variables={{name: value}}
+		variables: {name: value}
 	});
 
 	return null;
