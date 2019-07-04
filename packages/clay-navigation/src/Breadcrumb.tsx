@@ -113,27 +113,24 @@ export const Breadcrumb: React.FunctionComponent<IProps> = ({
 		'ClayNavigation.Breadcrumb expects one unique `active` item on `items`.'
 	);
 
+	const breadCrumbItems = ellipsisBuffer
+		? getBreadcrumbItems(ellipsisBuffer, items, ellipsisProps, spritemap)
+		: items;
+
 	return (
 		<ol {...otherProps} className={classNames('breadcrumb', className)}>
-			{(ellipsisBuffer
-				? getBreadcrumbItems(
-						ellipsisBuffer,
-						items,
-						ellipsisProps,
-						spritemap
-				  )
-				: items
-			).map((item: IBreadcrumbItem | React.ReactElement, i: number) =>
-				React.isValidElement(item) ? (
-					React.cloneElement(item, {key: `ellipsis${i}`})
-				) : (
-					<BreadcrumbItem
-						active={item.active}
-						href={item.href}
-						key={`breadcrumbItem${i}`}
-						label={item.label}
-					/>
-				)
+			{breadCrumbItems.map(
+				(item: IBreadcrumbItem | React.ReactElement, i: number) =>
+					React.isValidElement(item) ? (
+						React.cloneElement(item, {key: `ellipsis${i}`})
+					) : (
+						<BreadcrumbItem
+							active={item.active}
+							href={item.href}
+							key={`breadcrumbItem${i}`}
+							label={item.label}
+						/>
+					)
 			)}
 		</ol>
 	);
