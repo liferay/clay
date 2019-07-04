@@ -28,6 +28,7 @@
 	{@param? triggerClasses: string}
 	{@param? triggerSize: string}
 	{@param? triggerTitle: string}
+	{@param? useSearchableWithForm: bool}
 
 	{let $attributes kind="attributes"}
 		class="dropdown
@@ -73,6 +74,7 @@
 			{param portalElementId: $portalElementId /}
 			{param searchable: $searchable /}
 			{param spritemap: $spritemap /}
+			{param useSearchableWithForm: $useSearchableWithForm ?: true /}
 		{/call}
 	</div>
 {/template}
@@ -145,8 +147,9 @@
 {template .search}
 	{@param spritemap: string}
 	{@param? _handleSearch: any}
+	{@param? useSearchableWithForm: bool}
 
-	<form>
+	{let $content kind="html"}
 		<div class="dropdown-section">
 			<div class="input-group input-group-sm">
 				<div class="input-group-item">
@@ -162,7 +165,15 @@
 				</div>
 			</div>
 		</div>
-	</form>
+	{/let}
+
+	{if $useSearchableWithForm}
+		<form>
+			{$content}
+		</form>
+	{else}
+		{$content}
+	{/if}
 {/template}
 
 /**
@@ -183,6 +194,7 @@
 	{@param? portalElementId: string}
 	{@param? searchable: bool}
 	{@param? spritemap: string}
+	{@param? useSearchableWithForm: bool}
 
 	{let $dropdownMenu kind="html"}
 		{let $listAttributes kind="attributes"}
@@ -213,6 +225,7 @@
 				{call .search}
 					{param _handleSearch: $_handleSearch /}
 					{param spritemap: $spritemap /}
+					{param useSearchableWithForm: $useSearchableWithForm /}
 				{/call}
 			{/if}
 

@@ -636,6 +636,27 @@ describe('ClayDropdownBase', function() {
 		expect(clayDropdownBase).toMatchSnapshot();
 	});
 
+	it('should render a searchable dropdown without form tag', () => {
+		clayDropdownBase = new ClayDropdownBase({
+			items: [
+				{
+					href: 'item1url',
+					label: 'Item 1',
+				},
+				{
+					href: 'item2url',
+					label: 'Item 2',
+				},
+			],
+			label: 'Trigger',
+			searchable: true,
+			spritemap: 'icons.svg',
+			useSearchableWithForm: false,
+		});
+
+		expect(clayDropdownBase).toMatchSnapshot();
+	});
+
 	it('should open dropdown', () => {
 		clayDropdownBase = new ClayDropdownBase({
 			items: [
