@@ -11,12 +11,19 @@ import {BreadcrumbEllipsis} from './BreadcrumbEllipsis';
 import {BreadcrumbItem, IBreadcrumbItem} from './BreadcrumbItem';
 
 interface IProps extends React.HTMLAttributes<HTMLOListElement> {
+	/**
+	 * The number of Breadcrumb Items to show on each side of the active Breadcrumb Item before
+	 * using an ellipsis dropdown.
+	 */
 	ellipsisBuffer?: number;
-
+	/**
+	 * Use this property for defining `otherProps` that will be passed to ellipsis dropdown trigger.
+	 */
 	ellipsisProps?: Object;
-
+	/**
+	 * Property to define Breadcrumb's items.
+	 */
 	items: Array<IBreadcrumbItem>;
-
 	spritemap: string;
 }
 

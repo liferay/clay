@@ -11,7 +11,6 @@ import {IBreadcrumbItem} from './BreadcrumbItem';
 
 export interface IBreadcrumbEllipsisProps {
 	items?: Array<IBreadcrumbItem>;
-
 	spritemap: string;
 }
 

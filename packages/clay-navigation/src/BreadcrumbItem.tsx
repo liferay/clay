@@ -8,9 +8,7 @@ import React from 'react';
 
 export interface IBreadcrumbItem {
 	active?: boolean;
-
 	href: string;
-
 	label: string;
 }
 
