@@ -16,16 +16,25 @@ interface IProps extends React.HTMLAttributes<HTMLOListElement> {
 	 * using an ellipsis dropdown.
 	 */
 	ellipsisBuffer?: number;
+
 	/**
 	 * Use this property for defining `otherProps` that will be passed to ellipsis dropdown trigger.
 	 */
 	ellipsisProps?: Object;
+
 	/**
 	 * Property to define Breadcrumb's items.
 	 */
 	items: Array<IBreadcrumbItem>;
+
 	spritemap: string;
 }
+
+const findActiveItems = (items: Array<IBreadcrumbItem>) => {
+	return items.filter(item => {
+		return item.active;
+	});
+};
 
 const getBufferList = (
 	items: Array<IBreadcrumbItem>,
@@ -54,7 +63,9 @@ const getBreadcrumbItems = (
 	ellipsisProps: Object,
 	spritemap: string
 ) => {
-	const activeIndex = items.findIndex(item => item.active);
+	const activeItems = findActiveItems(items);
+
+	const activeIndex = items.indexOf(activeItems[0]);
 
 	const lastIndex = items.length - 1;
 
@@ -98,8 +109,8 @@ export const Breadcrumb: React.FunctionComponent<IProps> = ({
 	...otherProps
 }: IProps) => {
 	warning(
-		items.findIndex(item => item.active) != -1,
-		'ClayNavigation.Breadcrumb expects at least one `active` item on `items`.'
+		findActiveItems(items).length === 1,
+		'ClayNavigation.Breadcrumb expects one unique `active` item on `items`.'
 	);
 
 	return (
