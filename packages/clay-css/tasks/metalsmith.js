@@ -99,6 +99,17 @@ module.exports = function(gulp, plugins, _, config) {
 					transform: function(filepath, file, index, length, targetFile) {
 						var basename = path.basename(filepath, '.svg');
 
+						var deprecatedIcons = [
+							'announcement',
+							'sticky',
+							'urgent',
+						];
+
+						if (deprecatedIcons.indexOf(basename) >= 0) {
+							console.log(basename);
+							return '';
+						}
+
 						return _.sub(TPL_SVG_LI, basename);
 					}
 				}))
