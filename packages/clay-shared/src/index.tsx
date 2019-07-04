@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+export const noop = () => {};
 export {ClayPortal} from './Portal';
 export {getEllipsisItems} from './getEllipsisItems';
 export {useDebounce} from './useDebounce';
