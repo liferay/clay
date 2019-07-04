@@ -9,6 +9,7 @@ import ClayDropDown from '@clayui/drop-down';
 import ClayIcon from '@clayui/icon';
 import ClayPagination from '../src';
 import React, {useState} from 'react';
+import {ClayPaginationWithBar} from '../src/ClayPaginationWithBar';
 import {number} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
@@ -162,4 +163,15 @@ storiesOf('ClayPagination', module)
 		};
 
 		return <PaginationBar numberOfItems={500} />;
+	})
+	.add('using ClayPaginationWithBar component', () => {
+		return (
+			<ClayPaginationWithBar
+				ellipsisBuffer={number('Ellipsis Buffer: ', 3)}
+				selectedDelta={number('Selected delta: ', 13)}
+				selectedPage={number('Selected page: ', 1)}
+				spritemap={spritemap}
+				totalItems={number('Number of items: ', 300)}
+			/>
+		);
 	});
