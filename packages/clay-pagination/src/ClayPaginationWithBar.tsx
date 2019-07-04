@@ -10,7 +10,7 @@ import ClayDropDown from '@clayui/drop-down';
 import ClayIcon from '@clayui/icon';
 import ClayPagination from '../src/index';
 import React, {useState} from 'react';
-import {noop} from '@clayui/shared';
+import {noop, sub} from '@clayui/shared';
 
 const defaultDeltas = [
 	{
@@ -46,6 +46,14 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 
 	hrefConstructor?: (page?: number) => string;
 
+	labels?: {
+		paginationResults: string;
+
+		perPageItems: string;
+
+		selectPerPageItems: string;
+	};
+
 	onDeltaChange?: (page?: number) => void;
 
 	onPageChange?: (page?: number) => void;
@@ -61,11 +69,18 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	totalItems: number;
 }
 
+const DEFAULT_LABELS = {
+	paginationResults: 'Showing {0} to {1} of {2}',
+	perPageItems: '{0} items',
+	selectPerPageItems: '{0} items',
+};
+
 export const ClayPaginationWithBar: React.FunctionComponent<IProps> = ({
 	deltas = defaultDeltas,
 	disabledPages,
 	ellipsisBuffer,
 	hrefConstructor,
+	labels = DEFAULT_LABELS,
 	onDeltaChange = noop,
 	onPageChange = noop,
 	selectedDelta = defaultDeltas[0].value,
@@ -95,7 +110,7 @@ export const ClayPaginationWithBar: React.FunctionComponent<IProps> = ({
 						data-testid="selectPaginationBar"
 						displayType="unstyled"
 					>
-						{`${perPage} items`}
+						{sub(labels.perPageItems, [perPage])}
 						<ClayIcon
 							spritemap={spritemap}
 							symbol="caret-double-l"
@@ -115,16 +130,18 @@ export const ClayPaginationWithBar: React.FunctionComponent<IProps> = ({
 								}
 							}}
 						>
-							{`${item.label} items`}
+							{sub(labels.selectPerPageItems, [item.label])}
 						</ClayDropDown.Item>
 					))}
 				</ClayDropDown.ItemList>
 			</ClayDropDown>
 
 			<div className="pagination-results">
-				{`Showing ${activePage} to ${Math.ceil(
-					totalItems / perPage
-				)} of ${totalItems}`}
+				{sub(labels.paginationResults, [
+					activePage,
+					Math.ceil(totalItems / perPage),
+					totalItems,
+				])}
 			</div>
 
 			<ClayPagination
