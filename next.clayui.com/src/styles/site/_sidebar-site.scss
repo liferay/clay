@@ -3,7 +3,12 @@
 
 	.sidebar-header {
 		background-color: $brand-light;
-		padding: 0;
+
+		.sidebar-logo {
+			.sidebar-logo-image {
+				max-height: 32px;
+			}
+		}
 
 		@media (min-width: $grid-float-breakpoint) {
 			padding: $base-size * 1.33 $base-size $base-size * 2.4 $base-size * 0.33;
@@ -16,8 +21,6 @@
 
 	.sidebar-body {
 		overflow: visible;
-		padding-bottom: $base-size * 2;
-		padding-top: $base-size;
 	}
 
 	.nav-nested-margins > li .nav > li {
