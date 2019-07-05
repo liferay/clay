@@ -84,7 +84,7 @@ export default props => (
 
 						<div className="sidebar-icon-links">
 							<a
-								className="mr-2"
+								className="mr-2 p-1"
 								href="http://storybook.clayui.com"
 								rel="noopener noreferrer"
 								target="_blank"
@@ -97,7 +97,7 @@ export default props => (
 							</a>
 
 							<a
-								className=""
+								className="p-1"
 								href="https://github.com/liferay/clay"
 								rel="noopener noreferrer"
 								target="_blank"
