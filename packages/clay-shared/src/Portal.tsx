@@ -7,7 +7,7 @@
 import React, {useEffect, useRef} from 'react';
 import {createPortal} from 'react-dom';
 
-const ClayPortal: React.FunctionComponent<
+export const ClayPortal: React.FunctionComponent<
 	React.HTMLAttributes<HTMLDivElement>
 > = ({children}) => {
 	const portalRef = useRef(
@@ -32,5 +32,3 @@ const ClayPortal: React.FunctionComponent<
 
 	return <>{children}</>;
 };
-
-export default ClayPortal;

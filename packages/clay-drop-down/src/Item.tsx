@@ -20,6 +20,8 @@ interface IProps
 	 */
 	disabled?: boolean;
 
+	forwardRef?: React.Ref<HTMLLIElement>;
+
 	/**
 	 * Path for item to link to.
 	 */
@@ -46,6 +48,7 @@ const ClayDropDownItem: React.FunctionComponent<IProps> = ({
 	children,
 	className,
 	disabled,
+	forwardRef,
 	href,
 	spritemap,
 	symbolLeft,
@@ -55,7 +58,7 @@ const ClayDropDownItem: React.FunctionComponent<IProps> = ({
 	const ItemElement = href ? 'a' : 'span';
 
 	return (
-		<li>
+		<li aria-selected={active} ref={forwardRef} tabIndex={-1}>
 			<ItemElement
 				{...otherProps}
 				className={classNames('dropdown-item', className, {
@@ -82,4 +85,8 @@ const ClayDropDownItem: React.FunctionComponent<IProps> = ({
 	);
 };
 
-export default ClayDropDownItem;
+export default React.forwardRef(
+	(props: Omit<IProps, 'forwardRef'>, ref?: React.Ref<HTMLLIElement>) => (
+		<ClayDropDownItem {...props} forwardRef={ref} />
+	)
+);

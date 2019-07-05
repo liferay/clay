@@ -29,7 +29,7 @@ function setCollapseHeight(collapseElementRef: React.RefObject<any>) {
 	}
 }
 
-function useTransitionHeight(
+export function useTransitionHeight(
 	visible: boolean,
 	setVisible: any,
 	contentRef: React.RefObject<any>
@@ -73,5 +73,3 @@ function useTransitionHeight(
 		(event: React.MouseEvent | MouseEvent) => void
 	];
 }
-
-export default useTransitionHeight;
