@@ -129,6 +129,7 @@ export const Breadcrumb: React.FunctionComponent<IProps> = ({
 							href={item.href}
 							key={`breadcrumbItem${i}`}
 							label={item.label}
+							onItemClick={item.onItemClick}
 						/>
 					)
 			)}

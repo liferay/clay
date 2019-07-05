@@ -18,6 +18,7 @@ export const BreadcrumbEllipsis: React.FunctionComponent<
 	IBreadcrumbEllipsisProps
 > = ({items, spritemap, ...otherProps}) => {
 	const [active, setActive] = useState(false);
+
 	return (
 		<ClayDropDown
 			active={active}
@@ -34,8 +35,12 @@ export const BreadcrumbEllipsis: React.FunctionComponent<
 		>
 			<ClayDropDown.ItemList>
 				{items &&
-					items.map(({href, label}, i) => (
-						<ClayDropDown.Item href={href} key={i}>
+					items.map(({href, label, onItemClick}, i) => (
+						<ClayDropDown.Item
+							href={href}
+							key={i}
+							onClick={onItemClick}
+						>
 							{label}
 						</ClayDropDown.Item>
 					))}

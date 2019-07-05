@@ -4,18 +4,25 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 import classNames from 'classnames';
+import ClayButton from '@clayui/button';
 import React from 'react';
 
 export interface IBreadcrumbItem {
 	active?: boolean;
-	href: string;
+	href?: string;
 	label: string;
+
+	/**
+	 * Callback for when a Breadcrumb item is clicked.
+	 */
+	onItemClick?: (event: React.SyntheticEvent) => void;
 }
 
 export const BreadcrumbItem = ({
 	active,
 	href,
 	label,
+	onItemClick,
 	...otherProps
 }: IBreadcrumbItem) => {
 	return (
@@ -23,16 +30,21 @@ export const BreadcrumbItem = ({
 			className={classNames('breadcrumb-item', {
 				active,
 			})}
+			onClick={onItemClick}
 			{...otherProps}
 		>
-			{active ? (
-				<span className="breadcrumb-text-truncate" title={label}>
-					{label}
-				</span>
-			) : (
+			{href ? (
 				<a className="breadcrumb-link" href={href} role="button">
 					{label}
 				</a>
+			) : (
+				<ClayButton
+					className="breadcrumb-text-truncate"
+					displayType="unstyled"
+					title={label}
+				>
+					{label}
+				</ClayButton>
 			)}
 		</li>
 	);
