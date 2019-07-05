@@ -63,7 +63,7 @@ export default props => (
 
 					<div className="sidebar-icon-links d-flex align-items-center">
 						<a
-							className=""
+							className="p-1"
 							href="http://storybook.clayui.com"
 							rel="noopener noreferrer"
 							target="_blank"
@@ -76,7 +76,7 @@ export default props => (
 						</a>
 
 						<a
-							className="mx-2"
+							className="mx-2 p-1"
 							href="https://github.com/liferay/clay"
 							rel="noopener noreferrer"
 							target="_blank"
@@ -92,7 +92,7 @@ export default props => (
 							aria-controls="navbarSupportedContent"
 							aria-expanded="false"
 							aria-label="Toggle navigation"
-							className="btn sidebar-toggler p-1"
+							className="btn sidebar-toggler py-1 px-2"
 							data-target="#navbarSupportedContent"
 							data-toggle="collapse"
 							onClick={onClick}
