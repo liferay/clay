@@ -29,7 +29,7 @@ const SideNavScroll = props => {
 
 	return (
 		<div
-			className="sidebar sidebar-clay-site sidenav-menu d-flex flex-column"
+			className="sidebar sidebar-clay-site sidenav-menu d-flex flex-column p-3"
 			onScroll={onScroll}
 			ref={SideNavRef}
 		>
@@ -40,77 +40,80 @@ const SideNavScroll = props => {
 
 export default props => (
 	<React.Fragment>
-		<div className="navbar navbar-mobile navbar-expand-lg navbar-header">
-			<button
-				aria-controls="navbarSupportedContent"
-				aria-expanded="false"
-				aria-label="Toggle navigation"
-				className="navbar-toggler sidebar-toggler ml-auto p-3"
-				data-target="#navbarSupportedContent"
-				data-toggle="collapse"
-				onClick={onClick}
-				type="button"
-			>
-				<svg
-					aria-hidden="true"
-					className="lexicon-icon lexicon-icon-bars"
-				>
-					<use xlinkHref="/images/icons/icons.svg#bars" />
-				</svg>
-			</button>
-		</div>
-
 		<nav
 			className="sidebar-toggler-content sidenav-sticky sidenav-menu-slider"
 			id="clay-sidebar"
 			ref={SidebarRef}
 		>
 			<SideNavScroll>
-				<div className="sidebar-body mb-auto">
-					<div className="d-flex justify-content-between align-items-center">
-						<Link
-							className="sidebar-logo text-reset text-decoration-none d-inline-block p-2 mb-1"
-							to="/"
+				<div className="sidebar-header d-flex justify-content-between align-items-center p-0">
+					<Link
+						className="sidebar-logo text-reset text-decoration-none d-inline-block p-2 mb-1"
+						to="/"
+					>
+						<img
+							alt="Clay"
+							className="sidebar-logo-image align-middle"
+							src="/images/clay_logo_w.png"
+						/>
+						<span className="sidebar-logo-title align-middle h3 font-weight-700 ml-2">
+							{'Clay'}
+						</span>
+					</Link>
+
+					<div className="sidebar-icon-links d-flex align-items-center">
+						<a
+							className=""
+							href="http://storybook.clayui.com"
+							rel="noopener noreferrer"
+							target="_blank"
+							title="Storybook"
 						>
 							<img
-								alt="Clay"
-								className="sidebar-logo-image align-middle"
-								src="/images/clay_logo_w.png"
+								alt=""
+								src="/images/docs/clay_icon_storybook.svg"
 							/>
-							<span className="sidebar-logo-title align-middle h3 font-weight-700 ml-2">
-								{'Clay'}
-							</span>
-						</Link>
+						</a>
 
-						<div className="sidebar-icon-links">
-							<a
-								className="mr-2"
-								href="http://storybook.clayui.com"
-								rel="noopener noreferrer"
-								target="_blank"
-								title="Storybook"
-							>
-								<img
-									alt=""
-									src="/images/docs/clay_icon_storybook.svg"
-								/>
-							</a>
+						<a
+							className="mx-2"
+							href="https://github.com/liferay/clay"
+							rel="noopener noreferrer"
+							target="_blank"
+							title="GitHub"
+						>
+							<img
+								alt=""
+								src="/images/docs/clay_icon_github.svg"
+							/>
+						</a>
 
-							<a
-								className=""
-								href="https://github.com/liferay/clay"
-								rel="noopener noreferrer"
-								target="_blank"
-								title="GitHub"
+						<button
+							aria-controls="navbarSupportedContent"
+							aria-expanded="false"
+							aria-label="Toggle navigation"
+							className="btn sidebar-toggler p-1"
+							data-target="#navbarSupportedContent"
+							data-toggle="collapse"
+							onClick={onClick}
+							type="button"
+						>
+							<svg
+								aria-hidden="true"
+								className="lexicon-icon lexicon-icon-bars"
 							>
-								<img
-									alt=""
-									src="/images/docs/clay_icon_github.svg"
-								/>
-							</a>
-						</div>
+								<use xlinkHref="/images/icons/icons.svg#bars" />
+							</svg>
+							<svg
+								aria-hidden="true"
+								className="lexicon-icon lexicon-icon-times"
+							>
+								<use xlinkHref="/images/icons/icons.svg#times" />
+							</svg>
+						</button>
 					</div>
-
+				</div>
+				<div className="sidebar-body p-0">
 					<div className="mt-3 mb-4">
 						<Search placeholder="Search..." />
 					</div>
