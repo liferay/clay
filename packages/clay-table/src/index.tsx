@@ -91,28 +91,33 @@ const ClayTable: React.FunctionComponent<IProps> & {
 	...otherProps
 }: IProps) => {
 	return (
-		<table
-			className={classNames(
-				'table table-autofit table-list',
-				{
-					'show-quick-actions-on-hover': hover,
-					'table-bordered': bordered,
-					'table-heading-nowrap': headingNoWrap,
-					'table-hover': hover,
-					'table-nowrap': noWrap,
-					'table-responsive': responsive,
-					[`table-responsive-${responsiveSize}`]: responsiveSize,
-					'table-striped': striped,
-					[`tbody-valign-${bodyVerticalAlignment}`]: bodyVerticalAlignment,
-					[`thead-valign-${headVerticalAlignment}`]: headVerticalAlignment,
-					[`table-valign-${tableVerticalAlignment}`]: tableVerticalAlignment,
-				},
-				className
-			)}
-			{...otherProps}
+		<div
+			className={classNames({
+				'table-responsive': responsive,
+				[`table-responsive-${responsiveSize}`]: responsiveSize,
+			})}
 		>
-			{children}
-		</table>
+			<table
+				className={classNames(
+					'table table-autofit table-list',
+					{
+						'show-quick-actions-on-hover': hover,
+						'table-bordered': bordered,
+						'table-heading-nowrap': headingNoWrap,
+						'table-hover': hover,
+						'table-nowrap': noWrap,
+						'table-striped': striped,
+						[`tbody-valign-${bodyVerticalAlignment}`]: bodyVerticalAlignment,
+						[`thead-valign-${headVerticalAlignment}`]: headVerticalAlignment,
+						[`table-valign-${tableVerticalAlignment}`]: tableVerticalAlignment,
+					},
+					className
+				)}
+				{...otherProps}
+			>
+				{children}
+			</table>
+		</div>
 	);
 };
 
