@@ -2,319 +2,391 @@
 
 exports[`ClayTable renders 1`] = `
 <div>
-  <table
-    class="table table-autofit table-list show-quick-actions-on-hover table-hover table-responsive"
-  />
+  <div
+    class="table-responsive"
+  >
+    <table
+      class="table table-autofit table-list show-quick-actions-on-hover table-hover"
+    />
+  </div>
 </div>
 `;
 
 exports[`ClayTable renders a Cell delimited 1`] = `
 <div>
-  <table
-    class="table table-autofit table-list show-quick-actions-on-hover table-hover table-responsive table-striped"
+  <div
+    class="table-responsive"
   >
-    <thead>
-      <tr
-        class=""
-      >
-        <th
-          class="table-cell-start"
-        >
-          Start
-        </th>
-        <th
+    <table
+      class="table table-autofit table-list show-quick-actions-on-hover table-hover table-striped"
+    >
+      <thead>
+        <tr
           class=""
         >
-          <button
-            type="button"
+          <th
+            class="table-cell-start"
           >
-            Dummy
-          </button>
-        </th>
-        <th
-          class=""
-        >
-          <button
-            type="button"
+            Start
+          </th>
+          <th
+            class=""
           >
-            Dummy
-          </button>
-        </th>
-        <th
-          class="table-cell-end"
-        >
-          End
-        </th>
-      </tr>
-    </thead>
-  </table>
+            <button
+              type="button"
+            >
+              Dummy
+            </button>
+          </th>
+          <th
+            class=""
+          >
+            <button
+              type="button"
+            >
+              Dummy
+            </button>
+          </th>
+          <th
+            class="table-cell-end"
+          >
+            End
+          </th>
+        </tr>
+      </thead>
+    </table>
+  </div>
 </div>
 `;
 
 exports[`ClayTable renders a Cell with text alignment set to center 1`] = `
 <div>
-  <table
-    class="table table-autofit table-list show-quick-actions-on-hover table-hover table-responsive table-striped"
+  <div
+    class="table-responsive"
   >
-    <thead>
-      <tr
-        class=""
-      >
-        <th
-          class="text-center"
+    <table
+      class="table table-autofit table-list show-quick-actions-on-hover table-hover table-striped"
+    >
+      <thead>
+        <tr
+          class=""
         >
-          <a
-            href="#1"
+          <th
+            class="text-center"
           >
-            Link
-          </a>
-        </th>
-      </tr>
-    </thead>
-    <tbody />
-  </table>
+            <a
+              href="#1"
+            >
+              Link
+            </a>
+          </th>
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>
 </div>
 `;
 
 exports[`ClayTable renders a full bottom vertical aligned table 1`] = `
 <div>
-  <table
-    class="table table-autofit table-list show-quick-actions-on-hover table-hover table-responsive thead-valign-bottom table-valign-bottom"
+  <div
+    class="table-responsive"
   >
-    <thead />
-    <tbody />
-  </table>
+    <table
+      class="table table-autofit table-list show-quick-actions-on-hover table-hover thead-valign-bottom table-valign-bottom"
+    >
+      <thead />
+      <tbody />
+    </table>
+  </div>
 </div>
 `;
 
 exports[`ClayTable renders a no wrapped table 1`] = `
 <div>
-  <table
-    class="table table-autofit table-list show-quick-actions-on-hover table-heading-nowrap table-hover table-nowrap table-responsive"
+  <div
+    class="table-responsive"
   >
-    <thead />
-    <tbody />
-  </table>
+    <table
+      class="table table-autofit table-list show-quick-actions-on-hover table-heading-nowrap table-hover table-nowrap"
+    >
+      <thead />
+      <tbody />
+    </table>
+  </div>
 </div>
 `;
 
 exports[`ClayTable renders a responsive table 1`] = `
 <div>
-  <table
-    class="table table-autofit table-list show-quick-actions-on-hover table-hover table-responsive table-responsive-sm"
+  <div
+    class="table-responsive table-responsive-sm"
   >
-    <thead />
-    <tbody />
-  </table>
+    <table
+      class="table table-autofit table-list show-quick-actions-on-hover table-hover"
+    >
+      <thead />
+      <tbody />
+    </table>
+  </div>
 </div>
 `;
 
 exports[`ClayTable renders a responsive table 2`] = `
 <div>
-  <table
-    class="table table-autofit table-list show-quick-actions-on-hover table-hover table-responsive table-responsive-sm"
+  <div
+    class="table-responsive table-responsive-sm"
   >
-    <thead />
-    <tbody />
-  </table>
+    <table
+      class="table table-autofit table-list show-quick-actions-on-hover table-hover"
+    >
+      <thead />
+      <tbody />
+    </table>
+  </div>
 </div>
 `;
 
 exports[`ClayTable renders a table bordered 1`] = `
 <div>
-  <table
-    class="table table-autofit table-list show-quick-actions-on-hover table-bordered table-hover table-responsive"
+  <div
+    class="table-responsive"
   >
-    <thead />
-    <tbody />
-  </table>
+    <table
+      class="table table-autofit table-list show-quick-actions-on-hover table-bordered table-hover"
+    >
+      <thead />
+      <tbody />
+    </table>
+  </div>
 </div>
 `;
 
 exports[`ClayTable renders a table hover 1`] = `
 <div>
-  <table
-    class="table table-autofit table-list show-quick-actions-on-hover table-hover table-responsive"
+  <div
+    class="table-responsive"
   >
-    <thead />
-    <tbody />
-  </table>
+    <table
+      class="table table-autofit table-list show-quick-actions-on-hover table-hover"
+    >
+      <thead />
+      <tbody />
+    </table>
+  </div>
 </div>
 `;
 
 exports[`ClayTable renders a table striped 1`] = `
 <div>
-  <table
-    class="table table-autofit table-list show-quick-actions-on-hover table-hover table-responsive table-striped"
+  <div
+    class="table-responsive"
   >
-    <thead />
-    <tbody />
-  </table>
+    <table
+      class="table table-autofit table-list show-quick-actions-on-hover table-hover table-striped"
+    >
+      <thead />
+      <tbody />
+    </table>
+  </div>
 </div>
 `;
 
 exports[`ClayTable renders a table with a Body 1`] = `
 <div>
-  <table
-    class="table table-autofit table-list show-quick-actions-on-hover table-hover table-responsive"
+  <div
+    class="table-responsive"
   >
-    <tbody />
-  </table>
+    <table
+      class="table table-autofit table-list show-quick-actions-on-hover table-hover"
+    >
+      <tbody />
+    </table>
+  </div>
 </div>
 `;
 
 exports[`ClayTable renders a table with a Head 1`] = `
 <div>
-  <table
-    class="table table-autofit table-list show-quick-actions-on-hover table-hover table-responsive"
+  <div
+    class="table-responsive"
   >
-    <thead />
-  </table>
+    <table
+      class="table table-autofit table-list show-quick-actions-on-hover table-hover"
+    >
+      <thead />
+    </table>
+  </div>
 </div>
 `;
 
 exports[`ClayTable renders a table with a Head and Body 1`] = `
 <div>
-  <table
-    class="table table-autofit table-list show-quick-actions-on-hover table-hover table-responsive"
+  <div
+    class="table-responsive"
   >
-    <thead />
-    <tbody />
-  </table>
+    <table
+      class="table table-autofit table-list show-quick-actions-on-hover table-hover"
+    >
+      <thead />
+      <tbody />
+    </table>
+  </div>
 </div>
 `;
 
 exports[`ClayTable renders a table with an active row 1`] = `
 <div>
-  <table
-    class="table table-autofit table-list show-quick-actions-on-hover table-hover table-responsive"
+  <div
+    class="table-responsive"
   >
-    <tbody>
-      <tr
-        class="table-active"
-      />
-    </tbody>
-  </table>
+    <table
+      class="table table-autofit table-list show-quick-actions-on-hover table-hover"
+    >
+      <tbody>
+        <tr
+          class="table-active"
+        />
+      </tbody>
+    </table>
+  </div>
 </div>
 `;
 
 exports[`ClayTable renders a table with multiple Cells into Row 1`] = `
 <div>
-  <table
-    class="table table-autofit table-list show-quick-actions-on-hover table-hover table-responsive"
+  <div
+    class="table-responsive"
   >
-    <tbody>
-      <tr
-        class=""
-      >
-        <td
+    <table
+      class="table table-autofit table-list show-quick-actions-on-hover table-hover"
+    >
+      <tbody>
+        <tr
           class=""
         >
-          One
-        </td>
-        <td
-          class=""
-        >
-          <button
-            type="button"
+          <td
+            class=""
           >
-            Two
-          </button>
-        </td>
-        <td
-          class=""
-        >
-          Three
-        </td>
-      </tr>
-    </tbody>
-  </table>
+            One
+          </td>
+          <td
+            class=""
+          >
+            <button
+              type="button"
+            >
+              Two
+            </button>
+          </td>
+          <td
+            class=""
+          >
+            Three
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 `;
 
 exports[`ClayTable renders a table with multiple rows into Body 1`] = `
 <div>
-  <table
-    class="table table-autofit table-list show-quick-actions-on-hover table-hover table-responsive"
+  <div
+    class="table-responsive"
   >
-    <tbody>
-      <tr
-        class=""
-      />
-      <tr
-        class=""
-      />
-      <tr
-        class=""
-      />
-    </tbody>
-  </table>
+    <table
+      class="table table-autofit table-list show-quick-actions-on-hover table-hover"
+    >
+      <tbody>
+        <tr
+          class=""
+        />
+        <tr
+          class=""
+        />
+        <tr
+          class=""
+        />
+      </tbody>
+    </table>
+  </div>
 </div>
 `;
 
 exports[`ClayTable renders a table with multiple rows into Head 1`] = `
 <div>
-  <table
-    class="table table-autofit table-list show-quick-actions-on-hover table-hover table-responsive"
+  <div
+    class="table-responsive"
   >
-    <thead>
-      <tr
-        class=""
-      />
-      <tr
-        class=""
-      />
-      <tr
-        class=""
-      />
-    </thead>
-  </table>
+    <table
+      class="table table-autofit table-list show-quick-actions-on-hover table-hover"
+    >
+      <thead>
+        <tr
+          class=""
+        />
+        <tr
+          class=""
+        />
+        <tr
+          class=""
+        />
+      </thead>
+    </table>
+  </div>
 </div>
 `;
 
 exports[`ClayTable renders with a headingTitle 1`] = `
 <div>
-  <table
-    class="table table-autofit table-list show-quick-actions-on-hover table-hover table-responsive"
+  <div
+    class="table-responsive"
   >
-    <tbody>
-      <tr
-        class="table-divider"
-      >
-        <td
-          class=""
-          colspan="8"
+    <table
+      class="table table-autofit table-list show-quick-actions-on-hover table-hover"
+    >
+      <tbody>
+        <tr
+          class="table-divider"
         >
-          Recipes
-        </td>
-      </tr>
-      <tr
-        class=""
-      >
-        <td
-          class="table-cell-expand"
-        >
-          <p
-            class="table-list-title"
+          <td
+            class=""
+            colspan="8"
           >
-            Hamburger
-          </p>
-        </td>
-        <td
-          class=""
-        />
-        <td
+            Recipes
+          </td>
+        </tr>
+        <tr
           class=""
         >
-          U.S.A
-        </td>
-        <td
-          class="text-right"
-        >
-          10 min.
-        </td>
-      </tr>
-    </tbody>
-  </table>
+          <td
+            class="table-cell-expand"
+          >
+            <p
+              class="table-list-title"
+            >
+              Hamburger
+            </p>
+          </td>
+          <td
+            class=""
+          />
+          <td
+            class=""
+          >
+            U.S.A
+          </td>
+          <td
+            class="text-right"
+          >
+            10 min.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 `;
