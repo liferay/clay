@@ -52,7 +52,7 @@ const getPages = (
 		ellipsisProps
 	);
 
-	return [
+	const newArray = [
 		pages[0],
 		...leftBuffer,
 		...pages.slice(
@@ -61,8 +61,13 @@ const getPages = (
 			Math.min(activeIndex + ellipsisBuffer + 1, lastIndex)
 		),
 		...rightBuffer,
-		pages[lastIndex],
 	];
+
+	if (pages.length > 1) {
+		newArray.push(pages[lastIndex]);
+	}
+
+	return newArray;
 };
 
 interface IProps extends React.HTMLAttributes<HTMLUListElement> {
