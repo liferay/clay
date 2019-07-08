@@ -10,7 +10,7 @@ interface IProps {
 	/**
 	 * List of hex's that will display as a color splotch
 	 */
-	colors: string[];
+	colors: Array<string>;
 
 	/**
 	 * Label describing the set of colors provided

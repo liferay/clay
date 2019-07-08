@@ -77,7 +77,7 @@ interface IProps {
 	/**
 	 * List of hex's that will display as a color splotch
 	 */
-	colors: string[];
+	colors: Array<string>;
 
 	/**
 	 * Label describing the set of colors provided
@@ -92,7 +92,7 @@ interface IProps {
 	/**
 	 * Callback for when the list of colors is changed
 	 */
-	onColorsChange: (val: string[]) => void;
+	onColorsChange: (val: Array<string>) => void;
 
 	/**
 	 * Path of the location of the icon spritemap
@@ -122,7 +122,7 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 	const {b, g, r} = color.toRgb();
 	const {s, v} = color.toHsv();
 
-	const rgbArr: [number, string][] = [[r, 'r'], [g, 'g'], [b, 'b']];
+	const rgbArr: Array<[number, string]> = [[r, 'r'], [g, 'g'], [b, 'b']];
 
 	const setNewColor = (colorValue: tinycolor.Instance, setInput = true) => {
 		const hexString = colorValue.toHex();

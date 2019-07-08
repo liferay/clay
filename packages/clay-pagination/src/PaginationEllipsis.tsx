@@ -8,8 +8,8 @@ import ClayDropDown from '@clayui/drop-down';
 import React, {useState} from 'react';
 
 export interface IPaginationEllipsisProps {
-	items?: number[];
-	disabledPages?: number[];
+	items?: Array<number>;
+	disabledPages?: Array<number>;
 	hrefConstructor?: (page?: number) => string;
 	onPageChange?: (page?: number) => void;
 }

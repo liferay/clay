@@ -9,7 +9,7 @@ import Radio, {IRadioProps} from './Radio';
 import React from 'react';
 
 interface IGroupProps extends React.HTMLAttributes<HTMLDivElement> {
-	children: React.ReactElement<IRadioProps>[];
+	children: Array<React.ReactElement<IRadioProps>>;
 
 	/**
 	 * Flag to indicate if radio elements should display inline.

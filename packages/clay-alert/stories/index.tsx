@@ -12,7 +12,7 @@ import {storiesOf} from '@storybook/react';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
 const ClayToastDemo = () => {
-	const [toastItems, setToastItems] = useState<number[]>([]);
+	const [toastItems, setToastItems] = useState<Array<number>>([]);
 	return (
 		<>
 			<div>
