@@ -13,7 +13,7 @@ interface IToastContainerProps extends React.HTMLAttributes<HTMLDivElement> {
 	 */
 	children?:
 		| React.ReactElement<IClayAlertProps>
-		| React.ReactElement<IClayAlertProps>[];
+		| Array<React.ReactElement<IClayAlertProps>>;
 }
 
 const ClayToastContainer = ({

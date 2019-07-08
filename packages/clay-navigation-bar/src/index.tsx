@@ -16,7 +16,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Children elements received from ClayNavigationBar component.
 	 */
-	children: React.ReactElement<React.ComponentProps<typeof Item>>[];
+	children: Array<React.ReactElement<React.ComponentProps<typeof Item>>>;
 
 	/**
 	 * Determines the style of the Navigation Bar

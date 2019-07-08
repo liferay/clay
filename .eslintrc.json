@@ -20,6 +20,7 @@
 		"sort-imports-es6-autofix"
 	],
 	"rules": {
+		"@typescript-eslint/array-type": [2, "generic"],
 		"@typescript-eslint/no-unused-vars": 2,
 		"@typescript-eslint/interface-name-prefix": ["error", "always"],
 		"no-unused-vars": 0,

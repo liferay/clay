@@ -65,7 +65,7 @@ interface IProps {
 	/**
 	 * List of color hex values
 	 */
-	colors?: string[];
+	colors?: Array<string>;
 
 	/**
 	 * The label describing the collection of colors in the menu
@@ -80,7 +80,7 @@ interface IProps {
 	/**
 	 * Callback for when the list of colors change
 	 */
-	onColorsChange?: (val: string[]) => void;
+	onColorsChange?: (val: Array<string>) => void;
 
 	/**
 	 * Callback for when the selected color changes

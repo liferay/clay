@@ -14,11 +14,11 @@ import React from 'react';
 const ELLIPSIS_BUFFER = 2;
 
 const getBufferList = (
-	items: number[],
+	items: Array<number>,
 	start: number,
 	end: number,
 	ellipsisProps: IPaginationEllipsisProps
-): (number | JSX.Element)[] => {
+): Array<number | JSX.Element> => {
 	const removedItems = items.slice(start, Math.max(end, start));
 
 	return removedItems.length > 1
@@ -35,7 +35,7 @@ const getBufferList = (
 const getPages = (
 	activeIndex: number,
 	ellipsisBuffer: number,
-	pages: number[],
+	pages: Array<number>,
 	ellipsisProps: IPaginationEllipsisProps
 ) => {
 	const lastIndex = pages.length - 1;
@@ -85,7 +85,7 @@ interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	/**
 	 * The page numbers that should be disabled. For example, `[2,5,6]`.
 	 */
-	disabledPages?: number[];
+	disabledPages?: Array<number>;
 
 	/**
 	 * Function used to create the href provided for each page link.

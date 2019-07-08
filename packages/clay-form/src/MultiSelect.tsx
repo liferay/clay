@@ -41,7 +41,7 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	/**
 	 * Values that display as label items
 	 */
-	items: string[];
+	items: Array<string>;
 
 	/**
 	 * Description of the input
@@ -51,7 +51,7 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	/**
 	 * Callback for when items are added or removed
 	 */
-	onItemsChange: (val: string[]) => void;
+	onItemsChange: (val: Array<string>) => void;
 
 	/**
 	 * Callback for when the input value changes
@@ -61,7 +61,7 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	/**
 	 * List of pre-populated items that will show up in a dropdown menu
 	 */
-	sourceItems?: string[];
+	sourceItems?: Array<string>;
 
 	/**
 	 * Path to spritemap for clay icons
