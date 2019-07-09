@@ -8,8 +8,8 @@
 	.clay-site-container {
 		max-width: 700px;
 
-		@media (min-width: 1320px) {
-			margin-left: 0; // to apply only to components
+		@media (min-width: $screen-lg) {
+			margin-right: 33%;
 		}
 	}
 }
