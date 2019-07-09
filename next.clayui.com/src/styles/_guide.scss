@@ -105,7 +105,7 @@
 	}
 
 	.nav-toc-title {
-		@media (min-width: 1320px) {
+		@media (min-width: $screen-lg) {
 			display: none;
 		}
 	}
@@ -130,7 +130,7 @@
 			margin: 0;
 		}
 
-		@media (min-width: 1320px) {
+		@media (min-width: $screen-lg) {
 			background-color: white;
 			margin-bottom: 0;
 			max-height: 100vh;
