@@ -1,26 +1,15 @@
 .sidebar-offset {
 	display: flex;
 	flex-direction: column;
-	width: 100%;
 	min-height: 100vh;
-	padding: 0;
+	padding: 0 0 0 2rem;
+	width: 100%;
 
 	.clay-site-container {
-		max-width: 800px;
+		max-width: 700px;
 
-		@media (min-width: $screen-xs) {
-			padding-left: $base-size;
-			padding-right: $base-size * 2;
-		}
-
-		@media (min-width: $screen-md) {
-			padding-left: $base-size * 2;
-			padding-right: $base-size * 4;
-		}
-
-		@media (max-width: $screen-md) {
-			padding-left: 30px;
-			padding-right: 30px;
+		@media (min-width: $screen-lg) {
+			margin-right: 33%;
 		}
 	}
 }
