@@ -106,7 +106,6 @@ module.exports = function(gulp, plugins, _, config) {
 						];
 
 						if (deprecatedIcons.indexOf(basename) >= 0) {
-							console.log(basename);
 							return '';
 						}
 
