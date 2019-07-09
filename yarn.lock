@@ -961,6 +961,20 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@clayui/checkbox@^3.0.0-milestone.1":
+  version "3.0.0-milestone.1"
+  resolved "https://registry.yarnpkg.com/@clayui/checkbox/-/checkbox-3.0.0-milestone.1.tgz#feb4bc6f631fbe95feaf25ef854b8b69ad1f9f3c"
+  integrity sha512-wI1/EWjaBdQOYa2j4QJ14nTzNKinj1cDKJG2osK2RXeF+so3Xs4LMxrhIuUjjnrXkGKBGSrKMhrdxUd3WCuvWw==
+  dependencies:
+    classnames "^2.2.6"
+
+"@clayui/radio-group@^3.0.0-milestone.1":
+  version "3.0.0-milestone.1"
+  resolved "https://registry.yarnpkg.com/@clayui/radio-group/-/radio-group-3.0.0-milestone.1.tgz#11ba02348a674f33408cc6e5adc84d7307fdec4a"
+  integrity sha512-OgifsBUNSpvFWOIJD5MzzhIhlHKlgVxUQ+oB2OTrGbchGv+NSoTVC54Mu89VTYTAKzsw1XUbM/cw/beavMULLQ==
+  dependencies:
+    classnames "^2.2.6"
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.3.tgz#099139eaec7ebf07a27c1786a3ff64f39464d2ef"

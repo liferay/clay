@@ -63,3 +63,58 @@ storiesOf('ClayForm', module)
 	.add('InputWithMultiSelect w/ sourceItems', () => (
 		<ClayMultiSelectWithAutocomplete />
 	));
+
+const ClayCheckboxWithState = () => {
+	const [value, setValue] = React.useState<boolean>(false);
+
+	return (
+		<ClayForm.Checkbox
+			checked={value}
+			disabled={boolean('Disabled', false)}
+			indeterminate={boolean('Indeterminate', false)}
+			label={text('Label', 'Default')}
+			onChange={() => setValue(val => !val)}
+		/>
+	);
+};
+
+storiesOf('ClayCheckbox', module)
+	.add('default', () => <ClayCheckboxWithState />)
+	.add('hidden label w/ aria-label', () => (
+		<ClayForm.Checkbox
+			aria-label="hello! Can you see me?"
+			checked={boolean('Checked', false)}
+			onChange={() => {}}
+		/>
+	))
+	.add('custom JSX content', () => (
+		<ClayForm.Checkbox
+			checked={boolean('Checked', false)}
+			label="Badge"
+			onChange={() => {}}
+		>
+			<span className="badge badge-primary">
+				<span className="badge-item badge-item-expand">{'10'}</span>
+			</span>
+		</ClayForm.Checkbox>
+	));
+
+const RadioGroupWithState = ({inline}: {inline?: boolean}) => {
+	const [value, setValue] = React.useState<string>('one');
+
+	return (
+		<ClayForm.RadioGroup
+			inline={inline}
+			onSelectedValueChange={val => setValue(val as string)}
+			selectedValue={value}
+		>
+			<ClayForm.Radio label="One" value="one" />
+			<ClayForm.Radio label="Two" value="two" />
+			<ClayForm.Radio label="Three" value="three" />
+		</ClayForm.RadioGroup>
+	);
+};
+
+storiesOf('ClayRadioGroup', module)
+	.add('default', () => <RadioGroupWithState />)
+	.add('inline', () => <RadioGroupWithState inline />);

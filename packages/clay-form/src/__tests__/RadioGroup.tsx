@@ -5,7 +5,8 @@
  */
 
 import * as TestRenderer from 'react-test-renderer';
-import ClayRadioGroup from '..';
+import ClayRadio from '../Radio';
+import ClayRadioGroup from '../RadioGroup';
 import React from 'react';
 import {cleanup, fireEvent, render} from 'react-testing-library';
 
@@ -16,9 +17,9 @@ describe('Rendering', () => {
 				onSelectedValueChange={() => {}}
 				selectedValue={'one'}
 			>
-				<ClayRadioGroup.Radio label="One" value="one" />
-				<ClayRadioGroup.Radio label="Two" value="two" />
-				<ClayRadioGroup.Radio label="Three" value="three" />
+				<ClayRadio label="One" value="one" />
+				<ClayRadio label="Two" value="two" />
+				<ClayRadio label="Three" value="three" />
 			</ClayRadioGroup>
 		);
 
@@ -37,9 +38,9 @@ describe('Interactions', () => {
 				onSelectedValueChange={handleSelectedChange}
 				selectedValue={'one'}
 			>
-				<ClayRadioGroup.Radio label="One" value="one" />
-				<ClayRadioGroup.Radio label="Two" value="two" />
-				<ClayRadioGroup.Radio label="Three" value="three" />
+				<ClayRadio label="One" value="one" />
+				<ClayRadio label="Two" value="two" />
+				<ClayRadio label="Three" value="three" />
 			</ClayRadioGroup>
 		);
 

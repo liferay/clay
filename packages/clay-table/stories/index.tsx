@@ -6,8 +6,8 @@
 
 import '@clayui/css/lib/css/atlas.css';
 import ClayButton from '@clayui/button';
-import ClayCheckbox from '@clayui/checkbox';
 import ClayDropDown, {Align} from '@clayui/drop-down';
+import ClayForm from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClayProgressBar from '@clayui/progress-bar';
@@ -20,14 +20,14 @@ function ClayCheckboxWithState(props: any) {
 	const [value, setValue] = React.useState<boolean>(false);
 
 	return (
-		<ClayCheckbox
+		<ClayForm.Checkbox
 			checked={value}
 			disabled={false}
 			indeterminate={false}
 			onChange={() => setValue(val => !val)}
 		>
 			{props.children}
-		</ClayCheckbox>
+		</ClayForm.Checkbox>
 	);
 }
 

@@ -5,9 +5,8 @@
  */
 import '@clayui/css/lib/css/atlas.css';
 import ClayButton from '@clayui/button';
-import ClayCheckbox from '@clayui/checkbox';
 import ClayDropDown, {Align} from '../src';
-import ClayRadioGroup from '@clayui/radio-group';
+import ClayForm from '@clayui/form';
 import React, {useState} from 'react';
 import {select} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
@@ -95,7 +94,7 @@ storiesOf('ClayDropDown', module)
 		<DropDownWithState>
 			<ClayDropDown.ItemList>
 				<ClayDropDown.Item>
-					<ClayCheckbox
+					<ClayForm.Checkbox
 						checked
 						label="I'm a checkbox!"
 						onChange={() => {}}
@@ -109,14 +108,10 @@ storiesOf('ClayDropDown', module)
 			<ClayDropDown.ItemList>
 				<ClayDropDown.Group header="Order">
 					<ClayDropDown.Item>
-						<ClayRadioGroup.Radio
-							checked
-							label="Ascending"
-							value="asc"
-						/>
+						<ClayForm.Radio checked label="Ascending" value="asc" />
 					</ClayDropDown.Item>
 					<ClayDropDown.Item>
-						<ClayRadioGroup.Radio label="Descending" value="desc" />
+						<ClayForm.Radio label="Descending" value="desc" />
 					</ClayDropDown.Item>
 				</ClayDropDown.Group>
 			</ClayDropDown.ItemList>

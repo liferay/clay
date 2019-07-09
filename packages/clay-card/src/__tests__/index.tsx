@@ -5,7 +5,7 @@
  */
 
 import ClayCard from '../index';
-import ClayCheckbox from '@clayui/checkbox';
+import ClayForm from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClaySticker from '@clayui/sticker';
@@ -16,14 +16,14 @@ const ClayCheckboxWithState = (props: any) => {
 	const [value, setValue] = React.useState<boolean>(false);
 
 	return (
-		<ClayCheckbox
+		<ClayForm.Checkbox
 			checked={value}
 			disabled={false}
 			indeterminate={false}
 			onChange={() => setValue(val => !val)}
 		>
 			{props.children}
-		</ClayCheckbox>
+		</ClayForm.Checkbox>
 	);
 };
 
