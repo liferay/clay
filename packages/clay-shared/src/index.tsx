@@ -8,3 +8,4 @@ export {ClayPortal} from './Portal';
 export {useKeyHandlerForList} from './useKeyHandlerForList';
 export {useDebounce} from './useDebounce';
 export {useTransitionHeight} from './useTransitionHeight';
+export {useFocusManagement} from './useFocusManagement';
