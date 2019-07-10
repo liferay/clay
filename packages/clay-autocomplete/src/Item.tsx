@@ -9,6 +9,8 @@ import fuzzy from 'fuzzy';
 import React from 'react';
 
 interface IProps extends React.ComponentProps<typeof ClayDropDown.Item> {
+	anchorRef?: React.Ref<HTMLAnchorElement>;
+
 	forwardRef?: React.Ref<HTMLLIElement>;
 
 	/**
@@ -26,6 +28,7 @@ interface IProps extends React.ComponentProps<typeof ClayDropDown.Item> {
 const optionsFuzzy = {post: '</strong>', pre: '<strong>'};
 
 const ClayAutocompleteItem: React.FunctionComponent<IProps> = ({
+	anchorRef,
 	forwardRef,
 	match = '',
 	value,
@@ -34,7 +37,12 @@ const ClayAutocompleteItem: React.FunctionComponent<IProps> = ({
 	const fuzzyMatch = fuzzy.match(match, value, optionsFuzzy);
 
 	return (
-		<ClayDropDown.Item {...otherProps} ref={forwardRef}>
+		<ClayDropDown.Item
+			{...otherProps}
+			anchorRef={anchorRef}
+			ref={forwardRef}
+			tabIndex={-1}
+		>
 			{match && fuzzyMatch ? (
 				<div
 					dangerouslySetInnerHTML={{
