@@ -9,10 +9,14 @@ import ClayDropDown from '@clayui/drop-down';
 import React, {useEffect, useRef, useState} from 'react';
 import {FetchPolicy, NetworkStatus} from '@clayui/data-provider/src/types';
 import {storiesOf} from '@storybook/react';
-import {useDebounce, useKeyHandlerForList} from '@clayui/shared';
+import {useDebounce, useFocusManagement} from '@clayui/shared';
 import {useResource} from '@clayui/data-provider';
 
 import '@clayui/css/lib/css/atlas.css';
+
+const TAB_KEY_CODE = 9;
+const ARROW_UP_KEY_CODE = 38;
+const ARROW_DOWN_KEY_CODE = 40;
 
 const LoadingWithDebounce = ({
 	loading,
@@ -65,40 +69,45 @@ const AutocompleteBasic = () => {
 };
 
 const AutocompleteWithKeyboardFunctionality = () => {
-	const activeListItemRef = useRef<HTMLLIElement>(null);
-	const inputRef = useRef<HTMLInputElement>(null);
+	const inputRef = useRef<HTMLInputElement | null>(null);
 	const [value, setValue] = useState('');
-	const [activeIndex, setActiveIndex] = useState(0);
-
 	const [active, setActive] = useState(!!value);
+	const focusManager = useFocusManagement();
 
 	const filteredItems = ['one', 'two', 'three', 'four', 'five'].filter(item =>
 		item.match(value)
 	);
 
-	const keyHandler = useKeyHandlerForList({
-		activeListItemRef,
-		index: activeIndex,
-		inputRef,
-		onIndexChange: setActiveIndex,
-		onIndexSelect: (index: number) => setValue(filteredItems[index]),
-		totalItems: filteredItems.length,
-	});
+	const onKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+		const {keyCode, shiftKey} = event;
+
+		if (
+			keyCode === ARROW_DOWN_KEY_CODE ||
+			(keyCode === TAB_KEY_CODE && !shiftKey)
+		) {
+			event.preventDefault();
+			focusManager.focusNext();
+		} else if (
+			keyCode === ARROW_UP_KEY_CODE ||
+			(keyCode === TAB_KEY_CODE && shiftKey)
+		) {
+			event.preventDefault();
+			focusManager.focusPrevious();
+		}
+	};
 
 	useEffect(() => {
 		setActive(!!value);
 	}, [value]);
 
-	useEffect(() => {
-		setActiveIndex(0);
-	}, [active]);
-
 	return (
-		<ClayAutocomplete>
+		<ClayAutocomplete onKeyDown={onKeyDown}>
 			<ClayAutocomplete.Input
 				onChange={(event: any) => setValue(event.target.value)}
-				onKeyDown={keyHandler}
-				ref={inputRef}
+				ref={ref => {
+					focusManager.createScope(ref, 'input');
+					inputRef.current = ref;
+				}}
 				value={value}
 			/>
 
@@ -106,15 +115,12 @@ const AutocompleteWithKeyboardFunctionality = () => {
 				<ClayDropDown.ItemList>
 					{filteredItems.map((item, i) => (
 						<ClayAutocomplete.Item
-							active={i === activeIndex}
+							anchorRef={ref =>
+								focusManager.createScope(ref, `item${i}`, true)
+							}
 							key={item}
 							match={value}
 							onClick={() => setValue(item)}
-							ref={
-								activeIndex === i
-									? activeListItemRef
-									: undefined
-							}
 							value={item}
 						/>
 					))}
