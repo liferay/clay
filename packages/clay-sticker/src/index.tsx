@@ -7,7 +7,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-type DisplayType =
+export type DisplayType =
 	| 'danger'
 	| 'dark'
 	| 'info'

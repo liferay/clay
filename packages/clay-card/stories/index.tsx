@@ -5,7 +5,7 @@
  */
 
 import '@clayui/css/lib/css/atlas.css';
-import ClayCard, {ClayCardWithImage} from '../src';
+import ClayCard, {ClayCardWithImage, ClayCardWithUser} from '../src';
 import ClayForm from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
@@ -45,13 +45,47 @@ const ClayCardWithImageAndState = (props: any) => {
 	);
 };
 
+const ClayCardWithuserAndState = (props: any) => {
+	const [selected, setSelected] = React.useState<boolean>(false);
+
+	return (
+		<ClayCardWithUser
+			{...props}
+			onSelectChange={setSelected}
+			selected={selected}
+		/>
+	);
+};
+
 storiesOf('ClayCard', module)
-	.add('with folder card', () => (
+	.addDecorator(story => (
 		<div className="row">
-			<div className="col-md-4">
-				<ClayCard horizontal>
+			<div className="col-md-4">{story()}</div>
+		</div>
+	))
+	.add('with folder card', () => (
+		<>
+			<ClayCard horizontal>
+				<ClayCard.Body>
+					<div className="flex-col">
+						<ClaySticker displayType="secondary" inline>
+							<ClayIcon spritemap={spritemap} symbol="folder" />
+						</ClaySticker>
+					</div>
+					<div className="autofit-col autofit-col-expand autofit-col-gutters">
+						<div className="autofit-section">
+							<ClayCard.Description displayType="title">
+								{'Very Large Folder'}
+							</ClayCard.Description>
+						</div>
+					</div>
+				</ClayCard.Body>
+			</ClayCard>
+
+			<ClayCard horizontal selectable>
+				<ClayCheckboxWithState>
 					<ClayCard.Body>
-						<div className="flex-col">
+						<div className="autofit-col">
 							<ClaySticker displayType="secondary" inline>
 								<ClayIcon
 									spritemap={spritemap}
@@ -60,38 +94,14 @@ storiesOf('ClayCard', module)
 							</ClaySticker>
 						</div>
 						<div className="autofit-col autofit-col-expand autofit-col-gutters">
-							<div className="autofit-section">
-								<ClayCard.Description displayType="title">
-									{'Very Large Folder'}
-								</ClayCard.Description>
-							</div>
+							<ClayCard.Description displayType="title">
+								{'Very Large Folder'}
+							</ClayCard.Description>
 						</div>
 					</ClayCard.Body>
-				</ClayCard>
-			</div>
-
-			<div className="col-md-4">
-				<ClayCard horizontal selectable>
-					<ClayCheckboxWithState>
-						<ClayCard.Body>
-							<div className="autofit-col">
-								<ClaySticker displayType="secondary" inline>
-									<ClayIcon
-										spritemap={spritemap}
-										symbol="folder"
-									/>
-								</ClaySticker>
-							</div>
-							<div className="autofit-col autofit-col-expand autofit-col-gutters">
-								<ClayCard.Description displayType="title">
-									{'Very Large Folder'}
-								</ClayCard.Description>
-							</div>
-						</ClayCard.Body>
-					</ClayCheckboxWithState>
-				</ClayCard>
-			</div>
-		</div>
+				</ClayCheckboxWithState>
+			</ClayCard>
+		</>
 	))
 	.add('with group', () => (
 		<>
@@ -240,189 +250,125 @@ storiesOf('ClayCard', module)
 		</>
 	))
 	.add('ClayCardWithImage', () => (
-		<div className="row">
-			<div className="col-md-4">
-				<h3>{'Selectable'}</h3>
-				<ClayCardWithImageAndState
-					description="Author Action"
-					imageSrc="https://via.placeholder.com/256"
-					label={{
-						displayType: 'success',
-						value: 'Approved',
-					}}
-					spritemap={spritemap}
-					title="thumbnail_coffee.jpg"
-				/>
-			</div>
+		<>
+			<h3>{'Selectable'}</h3>
+			<ClayCardWithImageAndState
+				description="Author Action"
+				imageSrc="https://via.placeholder.com/256"
+				label={{
+					displayType: 'success',
+					value: 'Approved',
+				}}
+				spritemap={spritemap}
+				title="thumbnail_coffee.jpg"
+			/>
 
-			<div className="col-md-4">
-				<h3>{'Non-Selectable'}</h3>
-				<ClayCardWithImage
-					description="Author Action"
-					imageSrc="https://via.placeholder.com/256"
-					label={{
-						displayType: 'success',
-						value: 'Approved',
-					}}
-					spritemap={spritemap}
-					title="thumbnail_coffee.jpg"
-				/>
-			</div>
-		</div>
+			<h3>{'Non-Selectable'}</h3>
+			<ClayCardWithImage
+				description="Author Action"
+				imageSrc="https://via.placeholder.com/256"
+				label={{
+					displayType: 'success',
+					value: 'Approved',
+				}}
+				spritemap={spritemap}
+				title="thumbnail_coffee.jpg"
+			/>
+		</>
 	))
 	.add('with navigation card variant', () => (
-		<div className="row">
-			<div className="col-md-4">
-				<ClayCard interactive>
-					<ClayCard.AspectRatio>
-						<span className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
-							<img alt="portlet image" src={portletImage} />
-						</span>
-					</ClayCard.AspectRatio>
-					<ClayCard.Body>
-						<ClayCard.Description displayType="title">
-							{'Widget Page'}
-						</ClayCard.Description>
-						<ClayCard.Description displayType="text">
-							{'Build a page by adding widgets and content.'}
-						</ClayCard.Description>
-					</ClayCard.Body>
-				</ClayCard>
-			</div>
+		<>
+			<ClayCard interactive>
+				<ClayCard.AspectRatio>
+					<span className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
+						<img alt="portlet image" src={portletImage} />
+					</span>
+				</ClayCard.AspectRatio>
+				<ClayCard.Body>
+					<ClayCard.Description displayType="title">
+						{'Widget Page'}
+					</ClayCard.Description>
+					<ClayCard.Description displayType="text">
+						{'Build a page by adding widgets and content.'}
+					</ClayCard.Description>
+				</ClayCard.Body>
+			</ClayCard>
 
-			<div className="col-md-4">
-				<ClayCard interactive>
-					<ClayCard.AspectRatio>
-						<span className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
-							<img alt="content image" src={contentImage} />
+			<ClayCard interactive>
+				<ClayCard.AspectRatio>
+					<span className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
+						<img alt="content image" src={contentImage} />
+					</span>
+				</ClayCard.AspectRatio>
+				<ClayCard.Body>
+					<ClayCard.Description displayType="title">
+						{'Content Page'}
+					</ClayCard.Description>
+					<ClayCard.Description displayType="text" truncate={false}>
+						{
+							'This is an example of card-type-template using an anchor tag.'
+						}
+					</ClayCard.Description>
+				</ClayCard.Body>
+			</ClayCard>
+
+			<ClayCard interactive>
+				<ClayCard.AspectRatio>
+					<span className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
+						<ClayIcon
+							spritemap={spritemap}
+							symbol="page-template"
+						/>
+					</span>
+				</ClayCard.AspectRatio>
+				<ClayCard.Body>
+					<ClayCard.Description displayType="title">
+						{'Blog'}
+					</ClayCard.Description>
+				</ClayCard.Body>
+			</ClayCard>
+
+			<ClayCard horizontal interactive>
+				<ClayCard.Body>
+					<span className="autofit-col">
+						<ClaySticker inline>
+							<ClayIcon spritemap={spritemap} symbol="page" />
+						</ClaySticker>
+					</span>
+					<span className="autofit-col autofit-col-expand">
+						<span className="autofit-section">
+							<ClayCard.Description displayType="title" truncate>
+								{'Full Page Application'}
+							</ClayCard.Description>
 						</span>
-					</ClayCard.AspectRatio>
-					<ClayCard.Body>
-						<ClayCard.Description displayType="title">
-							{'Content Page'}
-						</ClayCard.Description>
-						<ClayCard.Description
-							displayType="text"
-							truncate={false}
-						>
-							{
-								'This is an example of card-type-template using an anchor tag.'
-							}
-						</ClayCard.Description>
-					</ClayCard.Body>
-				</ClayCard>
-			</div>
-			<div className="col-md-4">
-				<ClayCard interactive>
-					<ClayCard.AspectRatio>
-						<span className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
-							<ClayIcon
-								spritemap={spritemap}
-								symbol="page-template"
-							/>
-						</span>
-					</ClayCard.AspectRatio>
-					<ClayCard.Body>
-						<ClayCard.Description displayType="title">
-							{'Blog'}
-						</ClayCard.Description>
-					</ClayCard.Body>
-				</ClayCard>
-			</div>
-			<div className="col-md-4">
-				<ClayCard horizontal interactive>
-					<ClayCard.Body>
-						<span className="autofit-col">
-							<ClaySticker inline>
-								<ClayIcon spritemap={spritemap} symbol="page" />
-							</ClaySticker>
-						</span>
-						<span className="autofit-col autofit-col-expand">
-							<span className="autofit-section">
-								<ClayCard.Description
-									displayType="title"
-									truncate
-								>
-									{'Full Page Application'}
-								</ClayCard.Description>
-							</span>
-						</span>
-					</ClayCard.Body>
-				</ClayCard>
-			</div>
-		</div>
+					</span>
+				</ClayCard.Body>
+			</ClayCard>
+		</>
 	))
-	.add('with user', () => (
-		<div className="row">
-			<div className="col-md-4">
-				<ClayCard displayType="user" selectable>
-					<ClayCard.AspectRatio className="card-item-first">
-						<ClayCheckboxWithState>
-							<ClayCard.AspectRatio>
-								<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-									<ClaySticker
-										className="sticker-user-icon"
-										displayType="secondary"
-										shape="circle"
-									>
-										<ClayIcon
-											spritemap={spritemap}
-											symbol="user"
-										/>
-									</ClaySticker>
-								</div>
-							</ClayCard.AspectRatio>
-						</ClayCheckboxWithState>
-					</ClayCard.AspectRatio>
+	.add('ClayCardWithUser', () => (
+		<>
+			<h3>{'Selectable'}</h3>
+			<ClayCardWithuserAndState
+				description="Author Action"
+				label={{
+					displayType: 'danger',
+					value: 'Denied',
+				}}
+				name="Adélaide"
+				spritemap={spritemap}
+			/>
 
-					<ClayCard.Body>
-						<div className="autofit-col autofit-col-expand">
-							<ClayCard.Description displayType="title">
-								{'Adélaide'}
-							</ClayCard.Description>
-							<ClayCard.Description displayType="subtitle">
-								{'Author Action'}
-							</ClayCard.Description>
-							<ClayCard.Caption>
-								<ClayLabel displayType="warning">
-									{'Rejected'}
-								</ClayLabel>
-							</ClayCard.Caption>
-						</div>
-					</ClayCard.Body>
-				</ClayCard>
-			</div>
-
-			<div className="col-md-4">
-				<ClayCard displayType="user">
-					<ClayCard.AspectRatio className="card-item-first">
-						<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-							<ClaySticker
-								className="sticker-user-icon"
-								displayType="secondary"
-								shape="circle"
-							>
-								<ClayIcon spritemap={spritemap} symbol="user" />
-							</ClaySticker>
-						</div>
-					</ClayCard.AspectRatio>
-
-					<ClayCard.Body>
-						<div className="autofit-col autofit-col-expand">
-							<ClayCard.Description displayType="title">
-								{'Adélaide'}
-							</ClayCard.Description>
-							<ClayCard.Description displayType="subtitle">
-								{'Author Action'}
-							</ClayCard.Description>
-							<ClayCard.Caption>
-								<ClayLabel displayType="success">
-									{'Approved'}
-								</ClayLabel>
-							</ClayCard.Caption>
-						</div>
-					</ClayCard.Body>
-				</ClayCard>
-			</div>
-		</div>
+			<h3>{'Non-Selectable'}</h3>
+			<ClayCardWithUser
+				description="Author Action"
+				label={{
+					displayType: 'success',
+					value: 'Approved',
+				}}
+				name="Adélaide"
+				spritemap={spritemap}
+				userDisplayType="danger"
+			/>
+		</>
 	));
