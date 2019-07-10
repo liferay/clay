@@ -6,9 +6,15 @@
 
 import ClayCard from './Card';
 import {ClayCardWithFile} from './CardWithFile';
+import {ClayCardWithFolder} from './CardWithFolder';
 import {ClayCardWithImage} from './CardWithImage';
 import {ClayCardWithUser} from './CardWithUser';
 
-export {ClayCardWithImage, ClayCardWithUser, ClayCardWithFile};
+export {
+	ClayCardWithImage,
+	ClayCardWithUser,
+	ClayCardWithFile,
+	ClayCardWithFolder,
+};
 
 export default ClayCard;

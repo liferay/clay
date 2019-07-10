@@ -7,6 +7,7 @@
 import '@clayui/css/lib/css/atlas.css';
 import ClayCard, {
 	ClayCardWithFile,
+	ClayCardWithFolder,
 	ClayCardWithImage,
 	ClayCardWithUser,
 } from '../src';
@@ -71,6 +72,17 @@ const ClayCardWithFileAndState = (props: any) => {
 		/>
 	);
 };
+const ClayCardWithFolderAndState = (props: any) => {
+	const [selected, setSelected] = React.useState<boolean>(false);
+
+	return (
+		<ClayCardWithFolder
+			{...props}
+			onSelectChange={setSelected}
+			selected={selected}
+		/>
+	);
+};
 
 storiesOf('ClayCard', module)
 	.addDecorator(story => (
@@ -80,42 +92,14 @@ storiesOf('ClayCard', module)
 	))
 	.add('with folder card', () => (
 		<>
-			<ClayCard horizontal>
-				<ClayCard.Body>
-					<div className="flex-col">
-						<ClaySticker displayType="secondary" inline>
-							<ClayIcon spritemap={spritemap} symbol="folder" />
-						</ClaySticker>
-					</div>
-					<div className="autofit-col autofit-col-expand autofit-col-gutters">
-						<div className="autofit-section">
-							<ClayCard.Description displayType="title">
-								{'Very Large Folder'}
-							</ClayCard.Description>
-						</div>
-					</div>
-				</ClayCard.Body>
-			</ClayCard>
+			<h3>{'Selectable'}</h3>
+			<ClayCardWithFolderAndState
+				spritemap={spritemap}
+				title="~/foo/bar"
+			/>
 
-			<ClayCard horizontal selectable>
-				<ClayCheckboxWithState>
-					<ClayCard.Body>
-						<div className="autofit-col">
-							<ClaySticker displayType="secondary" inline>
-								<ClayIcon
-									spritemap={spritemap}
-									symbol="folder"
-								/>
-							</ClaySticker>
-						</div>
-						<div className="autofit-col autofit-col-expand autofit-col-gutters">
-							<ClayCard.Description displayType="title">
-								{'Very Large Folder'}
-							</ClayCard.Description>
-						</div>
-					</ClayCard.Body>
-				</ClayCheckboxWithState>
-			</ClayCard>
+			<h3>{'Non-Selectable'}</h3>
+			<ClayCardWithFolder spritemap={spritemap} title="deliverable" />
 		</>
 	))
 	.add('with group', () => (

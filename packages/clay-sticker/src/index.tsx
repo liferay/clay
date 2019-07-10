@@ -8,6 +8,7 @@ import classNames from 'classnames';
 import React from 'react';
 
 export type DisplayType =
+	| ''
 	| 'danger'
 	| 'dark'
 	| 'info'
@@ -60,7 +61,7 @@ interface IProps extends React.HTMLAttributes<HTMLSpanElement> {
 const ClaySticker: React.FunctionComponent<IProps> = ({
 	children,
 	className,
-	displayType = 'primary',
+	displayType = '',
 	inline,
 	outside = false,
 	position,
