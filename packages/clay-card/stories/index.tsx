@@ -5,7 +5,11 @@
  */
 
 import '@clayui/css/lib/css/atlas.css';
-import ClayCard, {ClayCardWithImage, ClayCardWithUser} from '../src';
+import ClayCard, {
+	ClayCardWithFile,
+	ClayCardWithImage,
+	ClayCardWithUser,
+} from '../src';
 import ClayForm from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
@@ -50,6 +54,17 @@ const ClayCardWithuserAndState = (props: any) => {
 
 	return (
 		<ClayCardWithUser
+			{...props}
+			onSelectChange={setSelected}
+			selected={selected}
+		/>
+	);
+};
+const ClayCardWithFileAndState = (props: any) => {
+	const [selected, setSelected] = React.useState<boolean>(false);
+
+	return (
+		<ClayCardWithFile
 			{...props}
 			onSelectChange={setSelected}
 			selected={selected}
@@ -273,6 +288,31 @@ storiesOf('ClayCard', module)
 				}}
 				spritemap={spritemap}
 				title="thumbnail_coffee.jpg"
+			/>
+		</>
+	))
+	.add('ClayCardWithFile', () => (
+		<>
+			<h3>{'Selectable'}</h3>
+			<ClayCardWithFileAndState
+				description="Stevie Ray Vaughn"
+				label={{
+					displayType: 'success',
+					value: 'Approved',
+				}}
+				spritemap={spritemap}
+				title="deliverable.doc"
+			/>
+
+			<h3>{'Non-Selectable'}</h3>
+			<ClayCardWithFile
+				description="Stevie Ray Vaughn"
+				label={{
+					displayType: 'success',
+					value: 'Approved',
+				}}
+				spritemap={spritemap}
+				title="deliverable.doc"
 			/>
 		</>
 	))
