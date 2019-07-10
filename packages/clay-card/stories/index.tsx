@@ -5,7 +5,7 @@
  */
 
 import '@clayui/css/lib/css/atlas.css';
-import ClayCard from '../src';
+import ClayCard, {ClayCardWithImage} from '../src';
 import ClayForm from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
@@ -30,6 +30,18 @@ const ClayCheckboxWithState = (props: any) => {
 		>
 			{props.children}
 		</ClayForm.Checkbox>
+	);
+};
+
+const ClayCardWithImageAndState = (props: any) => {
+	const [selected, setSelected] = React.useState<boolean>(false);
+
+	return (
+		<ClayCardWithImage
+			{...props}
+			onSelectChange={setSelected}
+			selected={selected}
+		/>
 	);
 };
 
@@ -227,86 +239,34 @@ storiesOf('ClayCard', module)
 			</ClayCard.Group>
 		</>
 	))
-	.add('with image', () => (
+	.add('ClayCardWithImage', () => (
 		<div className="row">
 			<div className="col-md-4">
-				<ClayCard displayType="image" selectable>
-					<ClayCard.AspectRatio className="card-item-first">
-						<ClayCheckboxWithState>
-							<ClayCard.AspectRatio>
-								<img
-									alt="thumbnail"
-									className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid"
-									src="https://via.placeholder.com/256"
-								/>
-							</ClayCard.AspectRatio>
-							<ClaySticker
-								displayType="danger"
-								position="bottom-left"
-								shape="rounded"
-							>
-								<ClayIcon
-									spritemap={spritemap}
-									symbol="document-image"
-								/>
-							</ClaySticker>
-						</ClayCheckboxWithState>
-					</ClayCard.AspectRatio>
-
-					<ClayCard.Body>
-						<div className="autofit-col autofit-col-expand">
-							<ClayCard.Description displayType="title">
-								{'thumbnail_coffee.jpg'}
-							</ClayCard.Description>
-							<ClayCard.Description displayType="subtitle">
-								{'Author Action'}
-							</ClayCard.Description>
-							<ClayCard.Caption>
-								<ClayLabel displayType="success">
-									{'Approved'}
-								</ClayLabel>
-							</ClayCard.Caption>
-						</div>
-					</ClayCard.Body>
-				</ClayCard>
+				<h3>{'Selectable'}</h3>
+				<ClayCardWithImageAndState
+					description="Author Action"
+					imageSrc="https://via.placeholder.com/256"
+					label={{
+						displayType: 'success',
+						value: 'Approved',
+					}}
+					spritemap={spritemap}
+					title="thumbnail_coffee.jpg"
+				/>
 			</div>
 
 			<div className="col-md-4">
-				<ClayCard displayType="image">
-					<ClayCard.AspectRatio className="card-item-first">
-						<img
-							alt="thumbnail"
-							className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid"
-							src="https://via.placeholder.com/256"
-						/>
-						<ClaySticker
-							displayType="danger"
-							position="bottom-left"
-							shape="rounded"
-						>
-							<ClayIcon
-								spritemap={spritemap}
-								symbol="document-image"
-							/>
-						</ClaySticker>
-					</ClayCard.AspectRatio>
-
-					<ClayCard.Body>
-						<div className="autofit-col autofit-col-expand">
-							<ClayCard.Description displayType="title">
-								{'thumbnail_coffee.jpg'}
-							</ClayCard.Description>
-							<ClayCard.Description displayType="subtitle">
-								{'Author Action'}
-							</ClayCard.Description>
-							<ClayCard.Caption>
-								<ClayLabel displayType="success">
-									{'Approved'}
-								</ClayLabel>
-							</ClayCard.Caption>
-						</div>
-					</ClayCard.Body>
-				</ClayCard>
+				<h3>{'Non-Selectable'}</h3>
+				<ClayCardWithImage
+					description="Author Action"
+					imageSrc="https://via.placeholder.com/256"
+					label={{
+						displayType: 'success',
+						value: 'Approved',
+					}}
+					spritemap={spritemap}
+					title="thumbnail_coffee.jpg"
+				/>
 			</div>
 		</div>
 	))

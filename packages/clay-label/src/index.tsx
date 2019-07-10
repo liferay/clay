@@ -8,7 +8,12 @@ import classNames from 'classnames';
 import Icon from '@clayui/icon';
 import React from 'react';
 
-type DisplayType = 'secondary' | 'info' | 'warning' | 'danger' | 'success';
+export type DisplayType =
+	| 'secondary'
+	| 'info'
+	| 'warning'
+	| 'danger'
+	| 'success';
 
 interface IProps
 	extends React.BaseHTMLAttributes<HTMLAnchorElement | HTMLSpanElement> {
