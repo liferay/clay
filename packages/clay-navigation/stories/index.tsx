@@ -68,30 +68,6 @@ storiesOf('ClayNavigation', module)
 			spritemap={spritemap}
 		/>
 	))
-	.add('should throw a warning', () => (
-		<ClayNavigation.Breadcrumb
-			ellipsisBuffer={number('Ellipsis Buffer', 3)}
-			items={[
-				{
-					href: '#1',
-					label: 'Home',
-				},
-				{
-					href: '#2',
-					label: 'About',
-				},
-				{
-					href: '#3',
-					label: 'Contact',
-				},
-				{
-					href: '#4',
-					label: 'Projects',
-				},
-			]}
-			spritemap={spritemap}
-		/>
-	))
 	.add('without anchors', () => (
 		<ClayNavigation.Breadcrumb
 			ellipsisBuffer={number('Ellipsis Buffer', 3)}
