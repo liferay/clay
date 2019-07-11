@@ -105,7 +105,7 @@ const ClayPagination: React.FunctionComponent<IProps> = ({
 						href={
 							hrefConstructor && hrefConstructor(page as number)
 						}
-						key={page as number}
+						key={`page${index}` as string}
 						onClick={() =>
 							onPageChange && onPageChange(page as number)
 						}
