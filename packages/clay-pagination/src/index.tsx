@@ -5,70 +5,12 @@
  */
 import classNames from 'classnames';
 import ClayIcon from '@clayui/icon';
-import PaginationEllipsis, {
-	IPaginationEllipsisProps,
-} from './PaginationEllipsis';
+import PaginationEllipsis from './PaginationEllipsis';
 import PaginationItem from './PaginationItem';
 import React from 'react';
+import {getEllipsisItems} from '@clayui/shared';
 
 const ELLIPSIS_BUFFER = 2;
-
-const getBufferList = (
-	items: Array<number>,
-	start: number,
-	end: number,
-	ellipsisProps: IPaginationEllipsisProps
-): Array<number | JSX.Element> => {
-	const removedItems = items.slice(start, Math.max(end, start));
-
-	return removedItems.length > 1
-		? [
-				<PaginationEllipsis
-					{...ellipsisProps}
-					items={removedItems}
-					key="paginationEllipsis"
-				/>,
-		  ]
-		: removedItems;
-};
-
-const getPages = (
-	activeIndex: number,
-	ellipsisBuffer: number,
-	pages: Array<number>,
-	ellipsisProps: IPaginationEllipsisProps
-) => {
-	const lastIndex = pages.length - 1;
-
-	const leftBufferEnd = activeIndex - ellipsisBuffer;
-	// Add 1 to account for active index
-	const rightBufferStart = activeIndex + ellipsisBuffer + 1;
-
-	const leftBuffer = getBufferList(pages, 1, leftBufferEnd, ellipsisProps);
-	const rightBuffer = getBufferList(
-		pages,
-		rightBufferStart,
-		lastIndex,
-		ellipsisProps
-	);
-
-	const newArray = [
-		pages[0],
-		...leftBuffer,
-		...pages.slice(
-			Math.max(activeIndex - ellipsisBuffer, 1),
-			// Add 1 to account for active index
-			Math.min(activeIndex + ellipsisBuffer + 1, lastIndex)
-		),
-		...rightBuffer,
-	];
-
-	if (pages.length > 1) {
-		newArray.push(pages[lastIndex]);
-	}
-
-	return newArray;
-};
 
 interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	/**
@@ -141,13 +83,19 @@ const ClayPagination: React.FunctionComponent<IProps> = ({
 			</PaginationItem>
 
 			{(ellipsisBuffer
-				? getPages(activePage - 1, ellipsisBuffer, pages, {
-						disabledPages,
-						hrefConstructor,
-						onPageChange,
-				  })
+				? getEllipsisItems(
+						ellipsisBuffer,
+						pages,
+						PaginationEllipsis,
+						{
+							disabledPages,
+							hrefConstructor,
+							onPageChange,
+						},
+						activePage - 1
+				  )
 				: pages
-			).map((page: number | JSX.Element, index: number) =>
+			).map((page: number | JSX.Element | Object, index: number) =>
 				React.isValidElement(page) ? (
 					React.cloneElement(page, {key: `ellipsis${index}`})
 				) : (
