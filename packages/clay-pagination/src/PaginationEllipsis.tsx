@@ -35,6 +35,7 @@ const ClayPaginationEllipsis: React.FunctionComponent<
 				{items &&
 					items.map(page => (
 						<ClayDropDown.Item
+							data-testid={`testId${page}`}
 							disabled={disabledPages.includes(page)}
 							href={
 								hrefConstructor
