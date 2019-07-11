@@ -44,6 +44,7 @@ export const BreadcrumbEllipsis: React.FunctionComponent<
 							href={href}
 							key={`breadcrumbEllipsisItem${i}`}
 							onClick={onItemClick}
+							title={label}
 						>
 							{label}
 						</ClayDropDown.Item>

@@ -10,8 +10,6 @@ import React from 'react';
 import {number} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
-const onItemClick = (event: React.SyntheticEvent) => console.log(event.target);
-
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
 storiesOf('ClayNavigation', module)
@@ -68,56 +66,60 @@ storiesOf('ClayNavigation', module)
 			spritemap={spritemap}
 		/>
 	))
-	.add('without anchors', () => (
-		<ClayNavigation.Breadcrumb
-			ellipsisBuffer={number('Ellipsis Buffer', 3)}
-			items={[
-				{
-					active: true,
-					label: 'Home',
-					onItemClick,
-				},
-				{
-					label: 'About',
-					onItemClick,
-				},
-				{
-					label: 'Contact',
-					onItemClick,
-				},
-				{
-					label: 'Projects',
-					onItemClick,
-				},
-				{
-					label: 'Five',
-					onItemClick,
-				},
-				{
-					label: 'Six',
-					onItemClick,
-				},
-				{
-					label: 'Seven',
-					onItemClick,
-				},
-				{
-					label: 'Eight',
-					onItemClick,
-				},
-				{
-					label: 'Nine',
-					onItemClick,
-				},
-				{
-					label: 'Ten',
-					onItemClick,
-				},
-				{
-					label: 'Eleven',
-					onItemClick,
-				},
-			]}
-			spritemap={spritemap}
-		/>
-	));
+	.add('without anchors', () => {
+		const onItemClick = (event: any) => alert(event.target.title);
+
+		return (
+			<ClayNavigation.Breadcrumb
+				ellipsisBuffer={number('Ellipsis Buffer', 3)}
+				items={[
+					{
+						active: true,
+						label: 'Home',
+						onItemClick,
+					},
+					{
+						label: 'About',
+						onItemClick,
+					},
+					{
+						label: 'Contact',
+						onItemClick,
+					},
+					{
+						label: 'Projects',
+						onItemClick,
+					},
+					{
+						label: 'Five',
+						onItemClick,
+					},
+					{
+						label: 'Six',
+						onItemClick,
+					},
+					{
+						label: 'Seven',
+						onItemClick,
+					},
+					{
+						label: 'Eight',
+						onItemClick,
+					},
+					{
+						label: 'Nine',
+						onItemClick,
+					},
+					{
+						label: 'Ten',
+						onItemClick,
+					},
+					{
+						label: 'Eleven',
+						onItemClick,
+					},
+				]}
+				spritemap={spritemap}
+			/>
+		);
+	});
