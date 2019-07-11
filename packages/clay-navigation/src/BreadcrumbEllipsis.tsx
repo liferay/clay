@@ -16,7 +16,7 @@ export interface IBreadcrumbEllipsisProps {
 
 export const BreadcrumbEllipsis: React.FunctionComponent<
 	IBreadcrumbEllipsisProps
-> = ({items, spritemap, ...otherProps}) => {
+> = ({items = [], spritemap, ...otherProps}) => {
 	const [active, setActive] = useState(false);
 
 	return (
@@ -26,7 +26,11 @@ export const BreadcrumbEllipsis: React.FunctionComponent<
 			containerElement="li"
 			onActiveChange={newVal => setActive(newVal)}
 			trigger={
-				<ClayButton className="breadcrumb-link" displayType="unstyled">
+				<ClayButton
+					className="breadcrumb-link"
+					data-testid="breadcrumbDropdownTrigger"
+					displayType="unstyled"
+				>
 					<ClayIcon spritemap={spritemap} symbol="ellipsis-h" />
 					<ClayIcon spritemap={spritemap} symbol="caret-bottom" />
 				</ClayButton>
@@ -38,7 +42,7 @@ export const BreadcrumbEllipsis: React.FunctionComponent<
 					items.map(({href, label, onItemClick}, i) => (
 						<ClayDropDown.Item
 							href={href}
-							key={i}
+							key={`breadcrumbEllipsisItem${i}`}
 							onClick={onItemClick}
 						>
 							{label}
