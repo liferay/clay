@@ -67,7 +67,7 @@ export const getEllipsisItems = (
 		spritemap
 	);
 
-	return [
+	const newArray = [
 		items[0],
 		...leftBuffer,
 		...items.slice(
@@ -76,6 +76,11 @@ export const getEllipsisItems = (
 			Math.min(activeIndex + ellipsisBuffer + 1, lastIndex)
 		),
 		...rightBuffer,
-		items[lastIndex],
 	];
+
+	if (items.length > 1) {
+		newArray.push(items[lastIndex]);
+	}
+
+	return newArray;
 };
