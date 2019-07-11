@@ -2,11 +2,7 @@
 
 exports[`ClayNavigation renders 1`] = `
 <div>
-  <div
-    class=""
-  >
-    ClayNavigation
-  </div>
+  <div />
 </div>
 `;
 
@@ -20,6 +16,7 @@ exports[`ClayNavigation renders a Breadcrumb 1`] = `
     >
       <span
         class="breadcrumb-text-truncate"
+        data-testid="testId1"
         title="1"
       >
         1
@@ -30,69 +27,7 @@ exports[`ClayNavigation renders a Breadcrumb 1`] = `
     >
       <a
         class="breadcrumb-link"
-        href="#2"
-        role="button"
-      >
-        2
-      </a>
-    </li>
-    <li
-      class="breadcrumb-item"
-    >
-      <a
-        class="breadcrumb-link"
-        href="#3"
-        role="button"
-      >
-        3
-      </a>
-    </li>
-    <li
-      class="breadcrumb-item"
-    >
-      <a
-        class="breadcrumb-link"
-        href="#4"
-        role="button"
-      >
-        4
-      </a>
-    </li>
-    <li
-      class="breadcrumb-item"
-    >
-      <a
-        class="breadcrumb-link"
-        href="#5"
-        role="button"
-      >
-        5
-      </a>
-    </li>
-  </ol>
-</div>
-`;
-
-exports[`ClayNavigation renders a Breadcrumb with properties passed by \`ellipsisProps\` 1`] = `
-<div>
-  <ol
-    class="breadcrumb"
-  >
-    <li
-      class="breadcrumb-item active"
-    >
-      <span
-        class="breadcrumb-text-truncate"
-        title="1"
-      >
-        1
-      </span>
-    </li>
-    <li
-      class="breadcrumb-item"
-    >
-      <a
-        class="breadcrumb-link"
+        data-testid="testId2"
         href="#2"
         role="button"
       >
@@ -101,13 +36,13 @@ exports[`ClayNavigation renders a Breadcrumb with properties passed by \`ellipsi
     </li>
     <li
       class="dropdown breadcrumb-item"
-      style="font-size: 15px;"
     >
       <span
         style="display: inline-block;"
       >
         <button
           class="dropdown-toggle breadcrumb-link btn btn-unstyled"
+          data-testid="breadcrumbDropdownTrigger"
           type="button"
         >
           <svg
@@ -134,11 +69,161 @@ exports[`ClayNavigation renders a Breadcrumb with properties passed by \`ellipsi
     >
       <a
         class="breadcrumb-link"
+        data-testid="testId5"
         href="#5"
         role="button"
       >
         5
       </a>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`ClayNavigation renders a Breadcrumb with properties passed by \`ellipsisProps\` 1`] = `
+<div>
+  <ol
+    class="breadcrumb"
+  >
+    <li
+      class="breadcrumb-item active"
+    >
+      <span
+        class="breadcrumb-text-truncate"
+        data-testid="testId1"
+        title="1"
+      >
+        1
+      </span>
+    </li>
+    <li
+      class="breadcrumb-item"
+    >
+      <a
+        class="breadcrumb-link"
+        data-testid="testId2"
+        href="#2"
+        role="button"
+      >
+        2
+      </a>
+    </li>
+    <li
+      class="dropdown breadcrumb-item"
+    >
+      <span
+        style="display: inline-block;"
+      >
+        <button
+          class="dropdown-toggle breadcrumb-link btn btn-unstyled"
+          data-testid="breadcrumbDropdownTrigger"
+          type="button"
+        >
+          <svg
+            class="lexicon-icon lexicon-icon-ellipsis-h"
+            role="presentation"
+          >
+            <use
+              xlink:href="path/to/spritemap#ellipsis-h"
+            />
+          </svg>
+          <svg
+            class="lexicon-icon lexicon-icon-caret-bottom"
+            role="presentation"
+          >
+            <use
+              xlink:href="path/to/spritemap#caret-bottom"
+            />
+          </svg>
+        </button>
+      </span>
+    </li>
+    <li
+      class="breadcrumb-item"
+    >
+      <a
+        class="breadcrumb-link"
+        data-testid="testId5"
+        href="#5"
+        role="button"
+      >
+        5
+      </a>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`ClayNavigation should emit an event when an item is clicked 1`] = `
+<div>
+  <ol
+    class="breadcrumb"
+  >
+    <li
+      class="breadcrumb-item active"
+    >
+      <button
+        class="breadcrumb-text-truncate btn btn-unstyled"
+        data-testid="testId1"
+        title="1"
+        type="button"
+      >
+        1
+      </button>
+    </li>
+    <li
+      class="breadcrumb-item"
+    >
+      <button
+        class="breadcrumb-text-truncate btn btn-unstyled"
+        data-testid="testId2"
+        title="2"
+        type="button"
+      >
+        2
+      </button>
+    </li>
+    <li
+      class="dropdown breadcrumb-item"
+    >
+      <span
+        style="display: inline-block;"
+      >
+        <button
+          class="dropdown-toggle breadcrumb-link btn btn-unstyled"
+          data-testid="breadcrumbDropdownTrigger"
+          type="button"
+        >
+          <svg
+            class="lexicon-icon lexicon-icon-ellipsis-h"
+            role="presentation"
+          >
+            <use
+              xlink:href="path/to/spritemap#ellipsis-h"
+            />
+          </svg>
+          <svg
+            class="lexicon-icon lexicon-icon-caret-bottom"
+            role="presentation"
+          >
+            <use
+              xlink:href="path/to/spritemap#caret-bottom"
+            />
+          </svg>
+        </button>
+      </span>
+    </li>
+    <li
+      class="breadcrumb-item"
+    >
+      <button
+        class="breadcrumb-text-truncate btn btn-unstyled"
+        data-testid="testId5"
+        title="5"
+        type="button"
+      >
+        5
+      </button>
     </li>
   </ol>
 </div>
@@ -154,6 +239,7 @@ exports[`ClayNavigation should throw a warning when not passing \`active\` to an
     >
       <a
         class="breadcrumb-link"
+        data-testid="testId1"
         href="#1"
         role="button"
       >
@@ -165,6 +251,7 @@ exports[`ClayNavigation should throw a warning when not passing \`active\` to an
     >
       <a
         class="breadcrumb-link"
+        data-testid="testId2"
         href="#2"
         role="button"
       >

@@ -32,26 +32,12 @@ exports[`ClayPagination renders 1`] = `
       </button>
     </li>
     <li
-      class="dropdown page-item"
-    >
-      <span
-        style="display: inline-block;"
-      >
-        <button
-          class="dropdown-toggle page-link btn btn-unstyled"
-          type="button"
-        >
-          ...
-        </button>
-      </span>
-    </li>
-    <li
       class="page-item"
     >
       <button
         class="page-link"
       >
-        10
+        2
       </button>
     </li>
     <li
@@ -60,34 +46,7 @@ exports[`ClayPagination renders 1`] = `
       <button
         class="page-link"
       >
-        11
-      </button>
-    </li>
-    <li
-      class="page-item active"
-    >
-      <button
-        class="page-link"
-      >
-        12
-      </button>
-    </li>
-    <li
-      class="page-item"
-    >
-      <button
-        class="page-link"
-      >
-        13
-      </button>
-    </li>
-    <li
-      class="page-item"
-    >
-      <button
-        class="page-link"
-      >
-        14
+        3
       </button>
     </li>
     <li
