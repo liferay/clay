@@ -8,7 +8,7 @@ description: "Icons are a visual representation of an idea and/or action."
 - [Usage](#usage)
 - [Language Flags](#language-flags)
 - [SVG Icons as Background Images](#svg-icons-as-background-images)
-- [SVG-url()](#svg-url())
+- [Clay-SVG-url()](#clay-svg-url())
 - [Why do we use SVG?](#why-do-we-use-svg)
 
 </div>
@@ -53,7 +53,7 @@ To use the flags below, follow the same process as you would for a standard icon
 
 ### SVG Icons as Background Images
 
-We have created a Sass function to turn Lexicon SVG icon's into data uri schemes, which enables you to use them as a background images on an HTML element. The Sass function `lx-icon(icon-name, color)` takes the name of a Lexicon SVG Icon and a color. For example, the Sass rule set `.site-add-cell {lb} background-image: lx-icon(add-cell, #5AF); background-size: contain; display: inline-block; height: 20px; width: 20px; {rb}` will place the SVG icon add-cell as a background-image on any element with class site-add-cell.
+We have created a Sass function to turn Lexicon SVG icon's into data uri schemes, which enables you to use them as a background images on an HTML element. The Sass function `clay-icon(icon-name, color)` takes the name of a Lexicon SVG Icon and a color. For example, the Sass rule set `.site-add-cell { background-image: clay-icon(add-cell, #5AF); background-size: contain; display: inline-block; height: 20px; width: 20px; }` will place the SVG icon add-cell as a background-image on any element with class site-add-cell.
 
 <span class="clay-site-add-cell clay-site-svg-bg">add-cell</span>
 <span class="clay-site-add-column clay-site-svg-bg">add-column</span>
@@ -64,12 +64,12 @@ We have created a Sass function to turn Lexicon SVG icon's into data uri schemes
 <span class="clay-site-svg-bg clay-site-times-circle">times-circle</span>
 <span class="clay-site-svg-bg clay-site-workflow">workflow</span>
 
-## Svg-url()
+## Clay-svg-url()
 
-You can turn your custom SVG into a data uri using the Sass function `svg-url($svg)`, where `$svg` is the code for your inline SVG. The function returns `url(your_svg_as_data_uri)`.
+You can turn your custom SVG into a data uri using the Sass function `clay-svg-url($svg)`, where `$svg` is the code for your inline SVG. The function returns `url(your_svg_as_data_uri)`.
 
 <div class="alert alert-info">
-	When using `svg-url()`, wrap your inline SVG code with single quotes if your SVG's attributes are delimited with double quotes.
+	When using `clay-svg-url()`, wrap your inline SVG code with single quotes if your SVG's attributes are delimited with double quotes.
 </div>
 
 <span class="clay-site-linux-tux clay-site-svg-bg">Linux Tux</span>
