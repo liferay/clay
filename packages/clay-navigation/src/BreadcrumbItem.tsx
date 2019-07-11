@@ -25,27 +25,63 @@ export const BreadcrumbItem = ({
 	onItemClick,
 	...otherProps
 }: IBreadcrumbItem) => {
+	const ItemElement = ({
+		active,
+		href,
+		label,
+		onItemClick,
+	}: IBreadcrumbItem) => {
+		if (href && !active) {
+			return (
+				<a
+					className="breadcrumb-link"
+					data-testid={`testId${label}`}
+					href={href}
+					role="button"
+				>
+					{label}
+				</a>
+			);
+		}
+
+		if (onItemClick) {
+			return (
+				<ClayButton
+					className="breadcrumb-text-truncate"
+					data-testid={`testId${label}`}
+					displayType="unstyled"
+					onClick={onItemClick}
+					title={label}
+				>
+					{label}
+				</ClayButton>
+			);
+		}
+
+		return (
+			<span
+				className="breadcrumb-text-truncate"
+				data-testid={`testId${label}`}
+				title={label}
+			>
+				{label}
+			</span>
+		);
+	};
+
 	return (
 		<li
 			className={classNames('breadcrumb-item', {
 				active,
 			})}
-			onClick={onItemClick}
 			{...otherProps}
 		>
-			{href ? (
-				<a className="breadcrumb-link" href={href} role="button">
-					{label}
-				</a>
-			) : (
-				<ClayButton
-					className="breadcrumb-text-truncate"
-					displayType="unstyled"
-					title={label}
-				>
-					{label}
-				</ClayButton>
-			)}
+			<ItemElement
+				active={active}
+				href={href}
+				label={label}
+				onItemClick={onItemClick}
+			/>
 		</li>
 	);
 };
