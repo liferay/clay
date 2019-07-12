@@ -82,7 +82,8 @@ const useUserInteractions = (
 		if (
 			elementRef.current &&
 			event.target !== null &&
-			!elementRef.current.contains(event.target as HTMLDivElement)
+			!elementRef.current.contains(event.target as HTMLDivElement) &&
+			document.contains(event.target as HTMLElement)
 		) {
 			onClick();
 		}
