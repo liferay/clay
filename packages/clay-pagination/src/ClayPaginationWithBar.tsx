@@ -14,16 +14,10 @@ import {noop, sub} from '@clayui/shared';
 
 const defaultDeltas = [10, 20, 30, 50];
 
-interface IDelta {
-	label: string;
-
-	value: number;
-}
-
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
-	deltas?: Array<IDelta>;
+	deltas?: Array<number>;
 
-	disabledPages?: number[];
+	disabledPages?: Array<number>;
 
 	ellipsisBuffer?: number;
 
@@ -102,18 +96,18 @@ export const ClayPaginationWithBar: React.FunctionComponent<IProps> = ({
 				}
 			>
 				<ClayDropDown.ItemList>
-					{deltas.map((item, i) => (
+					{deltas.map((delta: number, i) => (
 						<ClayDropDown.Item
 							data-testid={`dropdownItem${i}`}
 							key={`dropdownItem${i}`}
 							onClick={() => {
-								setPerPage(item.value);
+								setPerPage(delta);
 								if (onDeltaChange) {
-									onDeltaChange(item.value);
+									onDeltaChange(delta);
 								}
 							}}
 						>
-							{sub(labels.selectPerPageItems, [item.label])}
+							{sub(labels.selectPerPageItems, [String(delta)])}
 						</ClayDropDown.Item>
 					))}
 				</ClayDropDown.ItemList>
