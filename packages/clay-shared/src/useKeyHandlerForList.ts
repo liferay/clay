@@ -43,8 +43,8 @@ export function useKeyHandlerForList({
 		if (keyCode === UP_ARROW_KEY_CODE || keyCode === DOWN_ARROW_KEY_CODE) {
 			event.preventDefault();
 
-			const nextIndex = index === totalItems - 1 ? 0 : index + 1;
-			const prevIndex = index === 0 ? totalItems - 1 : index - 1;
+			const nextIndex = index === totalItems - 1 ? -1 : index + 1;
+			const prevIndex = index === -1 ? totalItems - 1 : index - 1;
 
 			onIndexChange(
 				keyCode === UP_ARROW_KEY_CODE ? prevIndex : nextIndex

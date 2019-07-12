@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import ClayForm from '../src';
+import ClayForm, {ClayInputWithAutocomplete} from '../src';
 import React from 'react';
 import {storiesOf} from '@storybook/react';
 
@@ -50,6 +50,38 @@ const ClayMultiSelectWithAutocomplete = () => {
 	);
 };
 
+const AutoCompleteWithState = ({items, ...otherProps}: any) => {
+	const [value, setValue] = React.useState('');
+
+	const filteredItems = items.filter((val: any) =>
+		(typeof val === 'string'
+			? val
+			: `${val.firstName} ${val.lastName}`
+		).match(new RegExp(value, 'gi'))
+	);
+
+	return (
+		<div className="sheet">
+			<div className="form-group">
+				<ClayInputWithAutocomplete
+					{...otherProps}
+					items={filteredItems}
+					loading={boolean('Loading', false)}
+					onItemSelect={(val: any) =>
+						setValue(
+							typeof val === 'string'
+								? val
+								: `${val.firstName} ${val.lastName}`
+						)
+					}
+					onValueChange={setValue}
+					value={value}
+				/>
+			</div>
+		</div>
+	);
+};
+
 storiesOf('ClayForm', module)
 	.add('default', () => <ClayForm />)
 	.add('InputWithMultiSelect', () => (
@@ -62,6 +94,21 @@ storiesOf('ClayForm', module)
 	))
 	.add('InputWithMultiSelect w/ sourceItems', () => (
 		<ClayMultiSelectWithAutocomplete />
+	))
+	.add('InputWithAutocomplete', () => (
+		<AutoCompleteWithState items={['one', 'two', 'three', 'four']} />
+	))
+	.add('InputWithAutocomplete w/ objects', () => (
+		<AutoCompleteWithState
+			itemSelector={(person: any) =>
+				`${person.firstName} ${person.lastName}`
+			}
+			items={[
+				{firstName: 'Joe', lastName: 'Bloggs'},
+				{firstName: 'Steve', lastName: 'Nash'},
+				{firstName: 'Abraham', lastName: 'Kuyper'},
+			]}
+		/>
 	));
 
 const ClayCheckboxWithState = () => {

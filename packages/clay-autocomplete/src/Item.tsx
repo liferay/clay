@@ -14,7 +14,7 @@ interface IProps extends React.ComponentProps<typeof ClayDropDown.Item> {
 	/**
 	 * Match is the string that will be compared with value.
 	 */
-	match: string;
+	match?: string;
 
 	/**
 	 * Value is the string that will be compared to the characters of
@@ -27,18 +27,18 @@ const optionsFuzzy = {post: '</strong>', pre: '<strong>'};
 
 const ClayAutocompleteItem: React.FunctionComponent<IProps> = ({
 	forwardRef,
-	match,
+	match = '',
 	value,
 	...otherProps
 }: IProps) => {
-	const fuzzyMatchResult = fuzzy.match(match, value, optionsFuzzy);
+	const fuzzyMatch = fuzzy.match(match, value, optionsFuzzy);
 
 	return (
 		<ClayDropDown.Item {...otherProps} ref={forwardRef}>
-			{fuzzyMatchResult ? (
+			{match && fuzzyMatch ? (
 				<div
 					dangerouslySetInnerHTML={{
-						__html: fuzzyMatchResult.rendered,
+						__html: fuzzyMatch.rendered,
 					}}
 				/>
 			) : (

@@ -29,4 +29,6 @@ ClayForm.MultiSelect = MultiSelect;
 ClayForm.Radio = Radio;
 ClayForm.RadioGroup = RadioGroup;
 
+export {ClayInputWithAutocomplete} from './InputWithAutocomplete';
+
 export default ClayForm;
