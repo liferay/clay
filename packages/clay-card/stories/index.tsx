@@ -5,12 +5,13 @@
  */
 
 import '@clayui/css/lib/css/atlas.css';
-import ClayCard from '../src';
+import ClayCard, {ClayCardWithUser} from '../src';
 import ClayForm from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClaySticker from '@clayui/sticker';
 import React from 'react';
+import {boolean} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
 const contentImage = require('./static/content.svg');
@@ -395,42 +396,43 @@ storiesOf('ClayCard', module)
 	.add('with user', () => (
 		<div className="row">
 			<div className="col-md-4">
-				<ClayCard displayType="user" selectable>
-					<ClayCard.AspectRatio className="card-item-first">
-						<ClayCheckboxWithState>
-							<ClayCard.AspectRatio>
-								<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-									<ClaySticker
-										className="sticker-user-icon"
-										displayType="secondary"
-										shape="circle"
-									>
-										<ClayIcon
-											spritemap={spritemap}
-											symbol="user"
-										/>
-									</ClaySticker>
-								</div>
-							</ClayCard.AspectRatio>
-						</ClayCheckboxWithState>
-					</ClayCard.AspectRatio>
+				<ClayCardWithUser
+					description="Assistant to the regional manager"
+					href="#"
+					labels={[
+						{
+							displayType: 'success',
+							value: 'Awesome',
+						},
+						{
+							displayType: 'danger',
+							value: 'Crazy',
+						},
+					]}
+					name="Abraham Kuyper"
+					onSelectChange={() => {}}
+					selected={boolean('selected', false)}
+					spritemap={spritemap}
+				/>
 
-					<ClayCard.Body>
-						<div className="autofit-col autofit-col-expand">
-							<ClayCard.Description displayType="title">
-								{'Adélaide'}
-							</ClayCard.Description>
-							<ClayCard.Description displayType="subtitle">
-								{'Author Action'}
-							</ClayCard.Description>
-							<ClayCard.Caption>
-								<ClayLabel displayType="warning">
-									{'Rejected'}
-								</ClayLabel>
-							</ClayCard.Caption>
-						</div>
-					</ClayCard.Body>
-				</ClayCard>
+				<ClayCardWithUser
+					description="Assistant to the regional manager"
+					labels={[
+						{
+							displayType: 'success',
+							value: 'Awesome',
+						},
+						{
+							displayType: 'danger',
+							value: 'Crazy',
+						},
+					]}
+					name="Abraham Kuyper"
+					onSelectChange={() => {}}
+					selected={boolean('selected', false)}
+					spritemap={spritemap}
+					userImageSrc="https://via.placeholder.com/256"
+				/>
 			</div>
 
 			<div className="col-md-4">
