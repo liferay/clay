@@ -121,8 +121,10 @@ export const ClayPaginationWithBar: React.FunctionComponent<IProps> = ({
 
 			<div className="pagination-results">
 				{sub(labels.paginationResults, [
-					activePage,
-					Math.ceil(totalItems / perPage),
+					(activePage - 1) * perPage + 1,
+					activePage * perPage < totalItems
+						? activePage * perPage
+						: totalItems,
 					totalItems,
 				])}
 			</div>
