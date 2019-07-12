@@ -12,24 +12,7 @@ import ClayPagination from '../src/index';
 import React, {useState} from 'react';
 import {noop, sub} from '@clayui/shared';
 
-const defaultDeltas = [
-	{
-		label: '10',
-		value: 10,
-	},
-	{
-		label: '20',
-		value: 20,
-	},
-	{
-		label: '30',
-		value: 30,
-	},
-	{
-		label: '50',
-		value: 50,
-	},
-];
+const defaultDeltas = [10, 20, 30, 50];
 
 interface IDelta {
 	label: string;
@@ -83,16 +66,16 @@ export const ClayPaginationWithBar: React.FunctionComponent<IProps> = ({
 	labels = DEFAULT_LABELS,
 	onDeltaChange = noop,
 	onPageChange = noop,
-	selectedDelta = defaultDeltas[0].value,
-	selectedPage = 1,
+	initialSelectedDelta = defaultDeltas[0],
+	initialActivePage = 1,
 	size,
 	spritemap,
 	totalItems,
 	...otherProps
 }: IProps) => {
 	const [active, setActive] = useState<boolean>(false);
-	const [activePage, setActivePage] = useState<number>(selectedPage);
-	const [perPage, setPerPage] = useState<number>(selectedDelta);
+	const [activePage, setActivePage] = useState<number>(initialActivePage);
+	const [perPage, setPerPage] = useState<number>(initialSelectedDelta);
 
 	return (
 		<div
