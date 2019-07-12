@@ -168,10 +168,10 @@ storiesOf('ClayPagination', module)
 		return (
 			<ClayPaginationWithBar
 				ellipsisBuffer={number('Ellipsis Buffer: ', 3)}
-				selectedDelta={number('Selected delta: ', 13)}
-				selectedPage={number('Selected page: ', 1)}
+				initialActivePage={number('Selected page: ', 1)}
+				initialSelectedDelta={number('Selected delta: ', 10)}
 				spritemap={spritemap}
-				totalItems={number('Number of items: ', 300)}
+				totalItems={number('Number of items: ', 21)}
 			/>
 		);
 	});
