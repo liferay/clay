@@ -2,7 +2,7 @@
 
 exports[`ClaySticker renders 1`] = `
 <span
-  className="sticker sticker-rounded sticker-primary"
+  className="sticker sticker-rounded"
 >
   <span
     className="sticker-overlay"
@@ -26,7 +26,7 @@ exports[`ClaySticker renders with a display type 1`] = `
 
 exports[`ClaySticker renders with a outside 1`] = `
 <span
-  className="sticker sticker-rounded sticker-primary sticker-top-left sticker-outside"
+  className="sticker sticker-rounded sticker-top-left sticker-outside"
 >
   <span
     className="sticker-overlay"
@@ -38,7 +38,7 @@ exports[`ClaySticker renders with a outside 1`] = `
 
 exports[`ClaySticker renders with a position 1`] = `
 <span
-  className="sticker sticker-rounded sticker-primary sticker-bottom-left"
+  className="sticker sticker-rounded sticker-bottom-left"
 >
   <span
     className="sticker-overlay"
@@ -50,7 +50,7 @@ exports[`ClaySticker renders with a position 1`] = `
 
 exports[`ClaySticker renders with a shape circle 1`] = `
 <span
-  className="sticker sticker-circle sticker-primary"
+  className="sticker sticker-circle"
 >
   <span
     className="sticker-overlay"
@@ -62,7 +62,7 @@ exports[`ClaySticker renders with a shape circle 1`] = `
 
 exports[`ClaySticker renders with a size 1`] = `
 <span
-  className="sticker sticker-rounded sticker-primary sticker-xl"
+  className="sticker sticker-rounded sticker-xl"
 >
   <span
     className="sticker-overlay"

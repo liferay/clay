@@ -11,11 +11,18 @@ import React from 'react';
 type CardDescriptionDisplayType = 'text' | 'title' | 'subtitle';
 
 interface ICardDescriptionProps
-	extends React.HTMLAttributes<HTMLDivElement | HTMLSpanElement> {
+	extends React.HTMLAttributes<
+		HTMLAnchorElement | HTMLDivElement | HTMLSpanElement
+	> {
 	/**
 	 * Type of description that can be applied for a text.
 	 */
 	displayType: CardDescriptionDisplayType;
+
+	/**
+	 * Path or URL
+	 */
+	href?: string;
 
 	/**
 	 * Truncates the text inside a description.
@@ -27,18 +34,22 @@ const ClayCardDescription: React.FunctionComponent<ICardDescriptionProps> = ({
 	children,
 	className,
 	displayType,
+	href,
 	truncate = true,
 	...otherProps
 }: ICardDescriptionProps) => {
 	const {interactive} = React.useContext(Context);
 
-	const TagName = interactive ? 'span' : 'div';
+	const interactiveTag = interactive ? 'span' : 'div';
+
+	const TagName = href ? 'a' : interactiveTag;
 
 	return (
 		<TagName
 			className={classNames(className, `card-${displayType}`, {
 				'text-truncate': truncate,
 			})}
+			href={href}
 			{...otherProps}
 		>
 			{children}

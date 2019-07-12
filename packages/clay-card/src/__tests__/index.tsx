@@ -4,13 +4,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayCard from '../index';
+import ClayCard, {ClayCardWithUser} from '../index';
 import ClayForm from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClaySticker from '@clayui/sticker';
 import React from 'react';
-import {cleanup, render} from 'react-testing-library';
+import {cleanup, fireEvent, render} from 'react-testing-library';
 
 const ClayCheckboxWithState = (props: any) => {
 	const [value, setValue] = React.useState<boolean>(false);
@@ -557,6 +557,72 @@ describe('ClayCard', () => {
 					</ClayCard>
 				</ClayCard.Group>
 			</>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders ClayCardWithUser as selectable', () => {
+		const onSelectChangeFn = jest.fn();
+
+		const {container} = render(
+			<ClayCardWithUser
+				description="Test"
+				href="#"
+				labels={[
+					{
+						displayType: 'success',
+						value: 'Awesome',
+					},
+				]}
+				name="Foo Bar"
+				onSelectChange={onSelectChangeFn}
+				selected={false}
+				spritemap="/path/to/some/resource.svg"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+
+		fireEvent.click(container.querySelector('label') as HTMLElement, {});
+
+		expect(onSelectChangeFn).toHaveBeenCalled();
+	});
+
+	it('renders ClayCardWithUser with icon', () => {
+		const {container} = render(
+			<ClayCardWithUser
+				description="Test"
+				href="#"
+				labels={[
+					{
+						displayType: 'success',
+						value: 'Awesome',
+					},
+				]}
+				name="Foo Bar"
+				spritemap="/path/to/some/resource.svg"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders ClayCardWithUser with image', () => {
+		const {container} = render(
+			<ClayCardWithUser
+				description="Test"
+				href="#"
+				labels={[
+					{
+						displayType: 'success',
+						value: 'Awesome',
+					},
+				]}
+				name="Foo Bar"
+				spritemap="/path/to/some/resource.svg"
+				userImageSrc="/path/to/image.jpg"
+			/>
 		);
 
 		expect(container).toMatchSnapshot();

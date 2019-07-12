@@ -1,5 +1,235 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ClayCard renders ClayCardWithUser as selectable 1`] = `
+<div>
+  <div
+    class="card-type-asset form-check form-check-card form-check-top-left user-card"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="card-item-first aspect-ratio"
+      >
+        <div
+          class="custom-control custom-checkbox"
+        >
+          <label>
+            <input
+              class="custom-control-input"
+              type="checkbox"
+              value="false"
+            />
+            <span
+              class="custom-control-label"
+            />
+            <div
+              class="aspect-ratio-item-center-middle card-type-asset-icon"
+            >
+              <span
+                class="sticker sticker-user-icon sticker-circle"
+              >
+                <span
+                  class="sticker-overlay"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-user"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="/path/to/some/resource.svg#user"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div
+        class="card-body"
+      >
+        <div
+          class="card-row"
+        >
+          <div
+            class="autofit-col autofit-col-expand"
+          >
+            <a
+              class="card-title text-truncate"
+              href="#"
+            >
+              Foo Bar
+            </a>
+            <div
+              class="card-subtitle text-truncate"
+            >
+              Test
+            </div>
+            <div
+              class="card-detail"
+            >
+              <span
+                class="label label-success"
+              >
+                <span
+                  class="label-item label-item-expand"
+                >
+                  Awesome
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCard renders ClayCardWithUser with icon 1`] = `
+<div>
+  <div
+    class="card card-type-asset form-check form-check-card form-check-top-left user-card"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="card-item-first aspect-ratio"
+      >
+        <div
+          class="aspect-ratio-item-center-middle card-type-asset-icon"
+        >
+          <span
+            class="sticker sticker-user-icon sticker-circle"
+          >
+            <span
+              class="sticker-overlay"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-user"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/path/to/some/resource.svg#user"
+                />
+              </svg>
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        class="card-body"
+      >
+        <div
+          class="card-row"
+        >
+          <div
+            class="autofit-col autofit-col-expand"
+          >
+            <a
+              class="card-title text-truncate"
+              href="#"
+            >
+              Foo Bar
+            </a>
+            <div
+              class="card-subtitle text-truncate"
+            >
+              Test
+            </div>
+            <div
+              class="card-detail"
+            >
+              <span
+                class="label label-success"
+              >
+                <span
+                  class="label-item label-item-expand"
+                >
+                  Awesome
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCard renders ClayCardWithUser with image 1`] = `
+<div>
+  <div
+    class="card card-type-asset form-check form-check-card form-check-top-left user-card"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="card-item-first aspect-ratio"
+      >
+        <div
+          class="aspect-ratio-item-center-middle card-type-asset-icon"
+        >
+          <span
+            class="sticker sticker-user-icon sticker-circle"
+          >
+            <span
+              class="sticker-overlay"
+            >
+              <img
+                alt="thumbnail"
+                class="aspect-ratio-item-fluid"
+                src="/path/to/image.jpg"
+              />
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        class="card-body"
+      >
+        <div
+          class="card-row"
+        >
+          <div
+            class="autofit-col autofit-col-expand"
+          >
+            <a
+              class="card-title text-truncate"
+              href="#"
+            >
+              Foo Bar
+            </a>
+            <div
+              class="card-subtitle text-truncate"
+            >
+              Test
+            </div>
+            <div
+              class="card-detail"
+            >
+              <span
+                class="label label-success"
+              >
+                <span
+                  class="label-item label-item-expand"
+                >
+                  Awesome
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ClayCard renders a ClayCard as a directory 1`] = `
 <div>
   <div
