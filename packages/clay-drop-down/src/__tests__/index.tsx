@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayDropDown from '..';
+import ClayDropDown, {ClayDropDownWithBasicItems} from '..';
 import React, {useState} from 'react';
 import {cleanup, fireEvent, render} from 'react-testing-library';
 
@@ -233,5 +233,32 @@ describe('ClayDropDown', () => {
 		fireEvent.click(toggleButton as HTMLButtonElement, {});
 
 		expect(document.body).toMatchSnapshot();
+	});
+
+	it('onClick is called for dropdown item', () => {
+		const onClickFn = jest.fn();
+
+		const {container} = render(
+			<ClayDropDownWithBasicItems
+				items={[
+					{
+						label: 'clickable',
+						onClick: onClickFn,
+					},
+				]}
+				trigger={<button>{'Click Me'}</button>}
+			/>
+		);
+
+		const toggleButton = container.querySelector('.dropdown-toggle');
+
+		fireEvent.click(toggleButton as HTMLButtonElement, {});
+
+		fireEvent.click(
+			document.querySelector('.dropdown-item') as HTMLButtonElement,
+			{}
+		);
+
+		expect(onClickFn).toHaveBeenCalled();
 	});
 });

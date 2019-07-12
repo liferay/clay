@@ -5,7 +5,7 @@
  */
 import '@clayui/css/lib/css/atlas.css';
 import ClayButton from '@clayui/button';
-import ClayDropDown, {Align} from '../src';
+import ClayDropDown, {Align, ClayDropDownWithBasicItems} from '../src';
 import ClayForm from '@clayui/form';
 import React, {useState} from 'react';
 import {select} from '@storybook/addon-knobs';
@@ -155,4 +155,22 @@ storiesOf('ClayDropDown', module)
 				))}
 			</ClayDropDown.ItemList>
 		</DropDownWithState>
+	))
+	.add('ClayDropDownWithBasicItems', () => (
+		<ClayDropDownWithBasicItems
+			items={[
+				{
+					label: 'clickable',
+					onClick: () => {
+						alert('you clicked!');
+					},
+				},
+				{type: 'divider'},
+				{
+					href: '#',
+					label: 'linkable',
+				},
+			]}
+			trigger={<ClayButton>{'Click Me'}</ClayButton>}
+		/>
 	));
