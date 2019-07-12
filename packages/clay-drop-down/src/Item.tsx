@@ -50,12 +50,14 @@ const ClayDropDownItem: React.FunctionComponent<IProps> = ({
 	disabled,
 	forwardRef,
 	href,
+	onClick,
 	spritemap,
 	symbolLeft,
 	symbolRight,
 	...otherProps
 }: IProps) => {
-	const ItemElement = href ? 'a' : 'span';
+	const clickableElement = onClick ? 'button' : 'span';
+	const ItemElement = href ? 'a' : clickableElement;
 
 	return (
 		<li aria-selected={active} ref={forwardRef} tabIndex={-1}>
@@ -66,6 +68,7 @@ const ClayDropDownItem: React.FunctionComponent<IProps> = ({
 					disabled,
 				})}
 				href={href}
+				onClick={onClick}
 			>
 				{symbolLeft && (
 					<span className="dropdown-item-indicator-start">
