@@ -15,12 +15,22 @@ import {noop, sub} from '@clayui/shared';
 const defaultDeltas = [10, 20, 30, 50];
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+	/**
+	 * Possible values of items per page.
+	 */
 	deltas?: Array<number>;
 
 	disabledPages?: Array<number>;
 
+	/**
+	 * The number of pages to show on each side of the active page before
+	 * using an ellipsis dropdown.
+	 */
 	ellipsisBuffer?: number;
 
+	/**
+	 * Function used to create the href provided for each page link.
+	 */
 	hrefConstructor?: (page?: number) => string;
 
 	labels?: {
@@ -33,16 +43,35 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 
 	onDeltaChange?: (page?: number) => void;
 
+	/**
+	 * Callback for when the active page changes. This is only used if
+	 * an href is not provided.
+	 */
 	onPageChange?: (page?: number) => void;
 
-	selectedDelta?: number;
+	/**
+	 * Initialize the page that is currently active. The first page is `1`.
+	 */
+	initialActivePage?: number;
 
-	selectedPage?: number;
+	/**
+	 * Initializes delta. Default is `10`.
+	 */
+	initialSelectedDelta?: number;
 
+	/**
+	 * The size of pagination element.
+	 */
 	size?: 'sm' | 'lg';
 
+	/**
+	 * Path to spritemap from clay-css.
+	 */
 	spritemap: string;
 
+	/**
+	 * The total number of items in the pagination list.
+	 */
 	totalItems: number;
 }
 
