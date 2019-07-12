@@ -146,7 +146,7 @@ describe('ClayPaginationWithBar', () => {
 		const {container} = render(
 			<ClayPaginationWithBar
 				onPageChange={changeMock}
-				selectedPage={12}
+				initialActivePage={12}
 				spritemap={spritemap}
 				totalItems={100}
 			/>
@@ -173,7 +173,7 @@ describe('ClayPaginationWithBar', () => {
 		const {container} = render(
 			<ClayPaginationWithBar
 				onDeltaChange={deltaChangeMock}
-				selectedPage={12}
+				initialActivePage={12}
 				spritemap={spritemap}
 				totalItems={100}
 			/>
@@ -198,7 +198,7 @@ describe('ClayPaginationWithBar', () => {
 	it('shows dropdown when pagination dropdown is clicked', () => {
 		const {container} = render(
 			<ClayPaginationWithBar
-				selectedPage={12}
+				initialActivePage={12}
 				spritemap={spritemap}
 				totalItems={100}
 			/>
