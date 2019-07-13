@@ -106,7 +106,6 @@ module.exports = function(gulp, plugins, _, config) {
 						];
 
 						if (deprecatedIcons.indexOf(basename) >= 0) {
-							console.log(basename);
 							return '';
 						}
 
@@ -206,6 +205,7 @@ module.exports = function(gulp, plugins, _, config) {
 					grid: 'Grid',
 					inputGroups: 'Input Groups',
 					labels: 'Labels',
+					lineClamp: 'Line Clamp',
 					links: 'Links',
 					listGroup: 'List Group',
 					loaders: 'Loaders',

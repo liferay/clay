@@ -1,0 +1,23 @@
+////
+/// @group lineClamp
+////
+
+/// A mixin for truncating text to a specific number of lines. Browsers that support `-webkit-line-clamp` (Chrome, Safari, and Firefox 68+) will show an ellipsis to indicate truncated text. Browsers that don't support it will be missing the ellipsis (IE, Edge, Firefox 67 and below).
+/// @param {Number} $lines[3] - The number of lines to clamp
+/// @param {Number} $line-height[$line-height-base] - The element's `line-height`
+/// @param {Number} $font-size[1em] - The `font-size` of the element
+
+@mixin clay-line-clamp($lines: 3, $line-height: $line-height-base, $font-size: 1em) {
+	display: block;
+	height: calc(#{$font-size} * #{$line-height} * #{$lines});
+	position: relative;
+	overflow: hidden;
+
+	@supports (-webkit-line-clamp: #{$lines}) {
+		-webkit-box-orient: vertical;  
+		display: -webkit-box;
+		height: auto;
+		-webkit-line-clamp: $lines;
+		max-height: calc(#{$font-size} * #{$line-height} * #{$lines});
+	}
+}
