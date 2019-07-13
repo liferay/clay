@@ -195,6 +195,7 @@ module.exports = function(gulp, plugins, _, config) {
 					grid: 'Grid',
 					inputGroups: 'Input Groups',
 					labels: 'Labels',
+					lineClamp: 'Line Clamp',
 					links: 'Links',
 					listGroup: 'List Group',
 					loaders: 'Loaders',
