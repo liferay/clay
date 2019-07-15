@@ -8,8 +8,19 @@ import ClayButton from '@clayui/button';
 import React from 'react';
 
 export interface IBreadcrumbItem {
+	/**
+	 * Flag to indicate if the Breadcrumb item is active or not.
+	 */
 	active?: boolean;
+
+	/**
+	 * This value is used to be the target of the link.
+	 */
 	href?: string;
+
+	/**
+	 * Label of the Breadcrumb item
+	 */
 	label: string;
 
 	/**
