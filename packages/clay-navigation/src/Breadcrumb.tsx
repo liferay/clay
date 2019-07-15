@@ -59,7 +59,6 @@ export const Breadcrumb: React.FunctionComponent<IProps> = ({
 				BreadcrumbEllipsis,
 				ellipsisProps,
 				items.indexOf(activeItems[0]),
-				activeItems,
 				spritemap
 		  )
 		: items;

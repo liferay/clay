@@ -33,17 +33,10 @@ export const getEllipsisItems = (
 	ellipsisBuffer: number,
 	items: Array<Object> = [],
 	EllipsisComponent: React.ComponentType<any>,
-	ellipsisProps?: Object,
-	activeIndex?: number,
-	activeItems?: Array<Object>,
+	ellipsisProps: Object = {},
+	activeIndex: number = 0,
 	spritemap?: string
 ) => {
-	if (activeItems) {
-		activeIndex = items.indexOf(activeItems[0]);
-	} else {
-		activeIndex = 0;
-	}
-
 	const lastIndex = items.length - 1;
 
 	const leftBufferEnd = activeIndex - ellipsisBuffer;
