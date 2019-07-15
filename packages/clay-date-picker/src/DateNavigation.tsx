@@ -18,7 +18,12 @@ interface IProps extends HTMLAttributes<HTMLDivElement> {
 	months: Array<string>;
 	onDotClicked: () => void;
 	onMonthChange: (date: Date) => void;
+
+	/**
+	 * Path to the location of the spritemap resource.
+	 */
 	spritemap: string;
+
 	years: IYears;
 }
 

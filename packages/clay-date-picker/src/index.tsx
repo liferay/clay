@@ -89,7 +89,7 @@ interface IProps {
 	placeholder?: string;
 
 	/**
-	 * The path to the SVG spritemap file containing the icons.
+	 * Path to the location of the spritemap resource.
 	 */
 	spritemap: string;
 

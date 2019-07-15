@@ -10,7 +10,14 @@ import React, {useState} from 'react';
 import {IBreadcrumbItem} from './BreadcrumbItem';
 
 export interface IBreadcrumbEllipsisProps {
+	/**
+	 * Property to define BreadcrumbEllipsis's items.
+	 */
 	items?: Array<IBreadcrumbItem>;
+
+	/**
+	 * Path to the location of the spritemap resource.
+	 */
 	spritemap: string;
 }
 

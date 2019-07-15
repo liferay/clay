@@ -93,7 +93,7 @@ interface IProps {
 	showHex?: boolean;
 
 	/**
-	 * Path to spritemap for Icon
+	 * Path to the location of the spritemap resource.
 	 */
 	spritemap: string;
 

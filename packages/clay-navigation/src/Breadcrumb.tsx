@@ -28,6 +28,9 @@ interface IProps extends React.HTMLAttributes<HTMLOListElement> {
 	 */
 	items: Array<IBreadcrumbItem>;
 
+	/**
+	 * Path to the location of the spritemap resource.
+	 */
 	spritemap: string;
 }
 

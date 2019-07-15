@@ -95,7 +95,7 @@ interface IProps {
 	onColorsChange: (val: Array<string>) => void;
 
 	/**
-	 * Path of the location of the icon spritemap
+	 * Path to the location of the spritemap resource.
 	 */
 	spritemap: string;
 }
