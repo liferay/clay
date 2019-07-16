@@ -5,7 +5,7 @@
  */
 
 import '@clayui/css/lib/css/atlas.css';
-import ClayCard, {ClayCardWithUser} from '../src';
+import ClayCard, {ClayCardWithNavigation, ClayCardWithUser} from '../src';
 import ClayForm from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
@@ -14,7 +14,6 @@ import React from 'react';
 import {boolean} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
-const contentImage = require('./static/content.svg');
 const portletImage = require('./static/portlet.svg');
 
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
@@ -314,82 +313,33 @@ storiesOf('ClayCard', module)
 	.add('with navigation card variant', () => (
 		<div className="row">
 			<div className="col-md-4">
-				<ClayCard interactive>
-					<ClayCard.AspectRatio>
-						<span className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
-							<img alt="portlet image" src={portletImage} />
-						</span>
-					</ClayCard.AspectRatio>
-					<ClayCard.Body>
-						<ClayCard.Description displayType="title">
-							{'Widget Page'}
-						</ClayCard.Description>
-						<ClayCard.Description displayType="text">
-							{'Build a page by adding widgets and content.'}
-						</ClayCard.Description>
-					</ClayCard.Body>
-				</ClayCard>
-			</div>
-
-			<div className="col-md-4">
-				<ClayCard interactive>
-					<ClayCard.AspectRatio>
-						<span className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
-							<img alt="content image" src={contentImage} />
-						</span>
-					</ClayCard.AspectRatio>
-					<ClayCard.Body>
-						<ClayCard.Description displayType="title">
-							{'Content Page'}
-						</ClayCard.Description>
-						<ClayCard.Description
-							displayType="text"
-							truncate={false}
-						>
-							{
-								'This is an example of card-type-template using an anchor tag.'
-							}
-						</ClayCard.Description>
-					</ClayCard.Body>
-				</ClayCard>
+				<ClayCardWithNavigation
+					description="Pick and choose your layout..."
+					onClick={() => alert('clicked')}
+					spritemap={spritemap}
+					title="onClick Card with icon"
+				>
+					<ClayIcon spritemap={spritemap} symbol="page-template" />
+				</ClayCardWithNavigation>
 			</div>
 			<div className="col-md-4">
-				<ClayCard interactive>
-					<ClayCard.AspectRatio>
-						<span className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
-							<ClayIcon
-								spritemap={spritemap}
-								symbol="page-template"
-							/>
-						</span>
-					</ClayCard.AspectRatio>
-					<ClayCard.Body>
-						<ClayCard.Description displayType="title">
-							{'Blog'}
-						</ClayCard.Description>
-					</ClayCard.Body>
-				</ClayCard>
+				<ClayCardWithNavigation
+					description="Pick and choose your layout..."
+					href="#"
+					spritemap={spritemap}
+					title="href Card with img"
+				>
+					<img alt="portlet image" src={portletImage} />
+				</ClayCardWithNavigation>
 			</div>
 			<div className="col-md-4">
-				<ClayCard horizontal interactive>
-					<ClayCard.Body>
-						<span className="autofit-col">
-							<ClaySticker inline>
-								<ClayIcon spritemap={spritemap} symbol="page" />
-							</ClaySticker>
-						</span>
-						<span className="autofit-col autofit-col-expand">
-							<span className="autofit-section">
-								<ClayCard.Description
-									displayType="title"
-									truncate
-								>
-									{'Full Page Application'}
-								</ClayCard.Description>
-							</span>
-						</span>
-					</ClayCard.Body>
-				</ClayCard>
+				<ClayCardWithNavigation
+					description="Pick and choose your layout..."
+					horizontal
+					horizontalSymbol="page"
+					spritemap={spritemap}
+					title="Layout Page"
+				/>
 			</div>
 		</div>
 	))

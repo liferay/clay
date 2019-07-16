@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayCard, {ClayCardWithUser} from '../index';
+import ClayCard, {ClayCardWithNavigation, ClayCardWithUser} from '../index';
 import ClayForm from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
@@ -626,5 +626,39 @@ describe('ClayCard', () => {
 		);
 
 		expect(container).toMatchSnapshot();
+	});
+
+	it('renders ClayCardWithNavigation with image', () => {
+		const {container} = render(
+			<ClayCardWithNavigation
+				description="Pick and choose your layout..."
+				href="#"
+				spritemap="foo/bar"
+				title="Layout Page"
+			>
+				<img alt="portlet image" src="/some/path" />
+			</ClayCardWithNavigation>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('calls onClick callback', () => {
+		const onClickFn = jest.fn();
+
+		const {container} = render(
+			<ClayCardWithNavigation
+				description="Pick and choose your layout..."
+				onClick={onClickFn}
+				spritemap="foo/bar"
+				title="Layout Page"
+			>
+				<img alt="portlet image" src="/some/path" />
+			</ClayCardWithNavigation>
+		);
+
+		fireEvent.click(container.querySelector('img') as HTMLElement, {});
+
+		expect(onClickFn).toHaveBeenCalledTimes(1);
 	});
 });
