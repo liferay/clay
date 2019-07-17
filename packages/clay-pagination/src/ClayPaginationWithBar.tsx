@@ -20,6 +20,9 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 */
 	deltas?: Array<number>;
 
+	/**
+	 * The page numbers that should be disabled. For example, `[2,5,6]`.
+	 */
 	disabledPages?: Array<number>;
 
 	/**
@@ -33,6 +36,10 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 */
 	hrefConstructor?: (page?: number) => string;
 
+	/**
+	 * Labels for changing some texts inside the component.
+	 * Use this property for i18n.
+	 */
 	labels?: {
 		paginationResults: string;
 
@@ -41,6 +48,10 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 		selectPerPageItems: string;
 	};
 
+	/**
+	 * Callback for when the number of elements per page changes. This is only used if
+	 * an href is not provided.
+	 */
 	onDeltaChange?: (page?: number) => void;
 
 	/**
