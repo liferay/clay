@@ -4,9 +4,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayMultiStepNav from '..';
+import '@testing-library/jest-dom/extend-expect';
+import ClayMultiStepNav, {ClayMultiStepNavWithBasicItems} from '..';
 import React from 'react';
-import {cleanup, fireEvent, render} from 'react-testing-library';
+import {cleanup, fireEvent, render} from '@testing-library/react';
+
+const spritemap = 'path/to/spritemap';
 
 const ClayMultiStepNavWithState = () => {
 	const [value, setValue] = React.useState<number>(1);
@@ -68,6 +71,19 @@ const ClayMultiStepNavWithState = () => {
 	);
 };
 
+const ClayMultiStepNavWithBasicItemsWithState = (props: any) => {
+	const [active, setActive] = React.useState(0);
+
+	return (
+		<ClayMultiStepNavWithBasicItems
+			activeIndex={active}
+			onIndexChange={setActive}
+			spritemap={spritemap}
+			{...props}
+		/>
+	);
+};
+
 describe('ClayMultiStepNav', () => {
 	afterEach(cleanup);
 
@@ -83,5 +99,85 @@ describe('ClayMultiStepNav', () => {
 		fireEvent.click(getByText('3'));
 
 		expect(container).toMatchSnapshot();
+	});
+});
+
+describe('ClayMultiStepNavWithBasicItems', () => {
+	afterEach(cleanup);
+
+	it('renders', () => {
+		const {container} = render(
+			<ClayMultiStepNavWithBasicItemsWithState
+				steps={[
+					{
+						subTitle: 'SubOne',
+						title: 'One',
+					},
+					{
+						subTitle: 'SubTwo',
+						title: 'Two',
+					},
+				]}
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('activates step on click', () => {
+		const {getByText} = render(
+			<ClayMultiStepNavWithBasicItemsWithState
+				steps={[
+					{
+						subTitle: 'SubOne',
+						title: 'One',
+					},
+					{
+						subTitle: 'SubTwo',
+						title: 'Two',
+					},
+				]}
+			/>
+		);
+
+		expect(getByText('2').parentNode!.parentNode!).not.toHaveClass(
+			'active'
+		);
+
+		fireEvent.click(getByText('2'));
+
+		expect(getByText('2').parentNode!.parentNode!).toHaveClass('active');
+	});
+
+	it('clicking on dropdown item activates that step', () => {
+		const {getByText} = render(
+			<ClayMultiStepNavWithBasicItemsWithState
+				maxStepsShown={2}
+				steps={[
+					{
+						title: 'One',
+					},
+					{
+						title: 'Two',
+					},
+					{
+						title: 'Three',
+					},
+					{
+						title: 'Four',
+					},
+				]}
+			/>
+		);
+
+		fireEvent.click(getByText('...'));
+
+		expect(document.querySelector('.dropdown-menu')).toHaveClass('show');
+
+		fireEvent.click(document.querySelector(
+			'.dropdown-item'
+		) as HTMLElement);
+
+		expect(document.querySelector('.dropdown-item')).toHaveClass('active');
 	});
 });

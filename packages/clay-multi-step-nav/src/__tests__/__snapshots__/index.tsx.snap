@@ -3,7 +3,7 @@
 exports[`ClayMultiStepNav activates step on click 1`] = `
 <div>
   <ol
-    class="multi-step-nav multi-step-nav-collapse-sm multi-step-indicator-label-bottom"
+    class="multi-step-nav multi-step-indicator-label-bottom multi-step-nav-collapse-sm"
   >
     <li
       class="multi-step-item complete multi-step-item-expand"
@@ -130,7 +130,7 @@ exports[`ClayMultiStepNav activates step on click 1`] = `
 exports[`ClayMultiStepNav renders 1`] = `
 <div>
   <ol
-    class="multi-step-nav multi-step-nav-collapse-sm multi-step-indicator-label-bottom"
+    class="multi-step-nav multi-step-indicator-label-bottom multi-step-nav-collapse-sm"
   >
     <li
       class="multi-step-item complete multi-step-item-expand"
@@ -240,6 +240,67 @@ exports[`ClayMultiStepNav renders 1`] = `
           class="multi-step-icon"
         >
           4
+        </span>
+      </div>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`ClayMultiStepNavWithBasicItems renders 1`] = `
+<div>
+  <ol
+    class="multi-step-nav multi-step-indicator-label-bottom multi-step-nav-collapse-sm"
+  >
+    <li
+      class="multi-step-item active multi-step-item-expand"
+    >
+      <div
+        class="multi-step-title"
+      >
+        One
+      </div>
+      <div
+        class="multi-step-divider"
+      />
+      <div
+        class="multi-step-indicator"
+      >
+        <div
+          class="multi-step-indicator-label"
+        >
+          SubOne
+        </div>
+        <span
+          class="multi-step-icon"
+        >
+          1
+        </span>
+      </div>
+    </li>
+    <li
+      class="multi-step-item"
+    >
+      <div
+        class="multi-step-title"
+      >
+        Two
+      </div>
+      <div
+        class="multi-step-divider"
+      />
+      <div
+        class="multi-step-indicator"
+      >
+        <div
+          class="multi-step-indicator-label"
+        >
+          SubTwo
+        </div>
+        <span
+          class="multi-step-icon"
+        >
+          2
         </span>
       </div>
     </li>
