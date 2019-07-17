@@ -51,6 +51,7 @@ exports[`ClayAutocomplete renders Item with matches values 1`] = `
   >
     <span
       class="dropdown-item"
+      tabindex="-1"
     >
       Bar
     </span>
