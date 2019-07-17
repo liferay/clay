@@ -42,31 +42,33 @@ export const BreadcrumbItem = ({
 		label,
 		onItemClick,
 	}: IBreadcrumbItem) => {
-		if (href && !active) {
-			return (
-				<a
-					className="breadcrumb-link"
-					data-testid={`testId${label}`}
-					href={href}
-					role="button"
-				>
-					{label}
-				</a>
-			);
-		}
+		if (!active) {
+			if (href) {
+				return (
+					<a
+						className="breadcrumb-link"
+						data-testid={`testId${label}`}
+						href={href}
+						role="button"
+					>
+						{label}
+					</a>
+				);
+			}
 
-		if (onItemClick) {
-			return (
-				<ClayButton
-					className="breadcrumb-text-truncate"
-					data-testid={`testId${label}`}
-					displayType="unstyled"
-					onClick={onItemClick}
-					title={label}
-				>
-					{label}
-				</ClayButton>
-			);
+			if (onItemClick) {
+				return (
+					<ClayButton
+						className="breadcrumb-text-truncate"
+						data-testid={`testId${label}`}
+						displayType="unstyled"
+						onClick={onItemClick}
+						title={label}
+					>
+						{label}
+					</ClayButton>
+				);
+			}
 		}
 
 		return (
