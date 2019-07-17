@@ -89,7 +89,7 @@ storiesOf('ClayPagination', module)
 			/>
 		);
 	})
-	.add('w/ bar', () => {
+	.add('w/ bar low-levels', () => {
 		const PaginationBar = ({numberOfItems}: any) => {
 			const [active, setActive] = React.useState(false);
 			const [activePage, setActivePage] = React.useState(1);
