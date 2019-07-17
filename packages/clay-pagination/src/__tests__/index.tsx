@@ -145,8 +145,8 @@ describe('ClayPaginationWithBar', () => {
 
 		const {container} = render(
 			<ClayPaginationWithBar
-				onPageChange={changeMock}
 				initialActivePage={12}
+				onPageChange={changeMock}
 				spritemap={spritemap}
 				totalItems={100}
 			/>
@@ -172,8 +172,8 @@ describe('ClayPaginationWithBar', () => {
 
 		const {container} = render(
 			<ClayPaginationWithBar
-				onDeltaChange={deltaChangeMock}
 				initialActivePage={12}
+				onDeltaChange={deltaChangeMock}
 				spritemap={spritemap}
 				totalItems={100}
 			/>
