@@ -11,7 +11,7 @@
 		"lint": "eslint '**/*.{js,ts,tsx}'",
 		"prettier": "prettier-eslint '**/*.{js,ts,tsx}'",
 		"test": "jest",
-		"site": "cd clayui.com && npm run build && npm run serve",
+		"site": "cd next.clayui.com && npm run build && npm run serve",
 		"storybook": "start-storybook -p 8888",
 		"storybook:build": "build-storybook -c .storybook -o .storybook-static"
 	},

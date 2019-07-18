@@ -15,7 +15,7 @@ storiesOf('ClayBadge', module).add('default', () => (
 			select(
 				'Display Type',
 				{
-					error: 'error',
+					danger: 'danger',
 					info: 'info',
 					primary: 'primary',
 					secondary: 'secondary',
