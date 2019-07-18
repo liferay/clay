@@ -33,7 +33,7 @@ const createDocs = (actions, edges, mdx) => {
 			({
 				node: {
 					code,
-					fields: {layout, redirect, redirectFrom, slug},
+					fields: {layout, redirect, redirectFrom, slug, sibling},
 				},
 			}) => {
 				if (redirect) {
@@ -90,6 +90,7 @@ const createDocs = (actions, edges, mdx) => {
 						component,
 						context: {
 							markdownJsx: mdx,
+							sibling,
 							slug,
 						},
 						path: slug,
@@ -124,6 +125,7 @@ module.exports = async ({actions, graphql}) => {
 							redirect
 							redirectFrom
 							slug
+							sibling
 						}
 						code {
 							scope
@@ -140,6 +142,7 @@ module.exports = async ({actions, graphql}) => {
 							redirect
 							redirectFrom
 							slug
+							sibling
 						}
 					}
 				}
