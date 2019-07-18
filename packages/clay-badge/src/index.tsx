@@ -10,7 +10,7 @@ type DisplayType =
 	| 'primary'
 	| 'secondary'
 	| 'info'
-	| 'error'
+	| 'danger'
 	| 'success'
 	| 'warning';
 

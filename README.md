@@ -111,7 +111,7 @@ To contribute to the documentation and the site in general, you can try to run l
 1. Move to the site folder
 
 ```
-cd clayui.com
+cd next.clayui.com
 ```
 
 2. Install dependencies:

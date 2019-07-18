@@ -18,7 +18,7 @@ const BadgeCode = `const Component = () => {
             <ClayBadge displayType="secondary" label="100" />
             <ClayBadge displayType="info" label="100" />
             <ClayBadge displayType="warning" label="100" />
-            <ClayBadge displayType="error" label="100" />
+            <ClayBadge displayType="danger" label="100" />
         </>
 	);
 }
