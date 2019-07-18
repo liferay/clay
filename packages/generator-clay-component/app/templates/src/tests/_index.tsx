@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {cleanup, render} from 'react-testing-library';
+import {cleanup, render} from '@testing-library/react';
 import React from 'react';
 import <%= componentName %> from '..';
 

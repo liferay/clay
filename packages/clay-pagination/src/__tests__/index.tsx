@@ -12,7 +12,7 @@ import {
 	getByTestId,
 	getByText,
 	render,
-} from 'react-testing-library';
+} from '@testing-library/react';
 
 const spritemap = 'path/to/spritemap';
 
@@ -89,7 +89,7 @@ describe('ClayPagination', () => {
 	});
 
 	it('shows dropdown when ellipsis is clicked', () => {
-		const {container} = render(
+		const {getAllByText} = render(
 			<ClayPagination
 				activePage={12}
 				spritemap={spritemap}
@@ -97,7 +97,7 @@ describe('ClayPagination', () => {
 			/>
 		);
 
-		fireEvent.click(getByText(container, '...') as HTMLElement, {});
+		fireEvent.click(getAllByText('...')[0] as HTMLElement, {});
 
 		expect(
 			document.body.querySelector('.dropdown-menu')!.classList
@@ -107,7 +107,7 @@ describe('ClayPagination', () => {
 	it('calls onPageChange when iitem is clicked in dropdown-menu', () => {
 		const changeMock = jest.fn();
 
-		const {container} = render(
+		const {getAllByText} = render(
 			<ClayPagination
 				activePage={12}
 				onPageChange={changeMock}
@@ -116,7 +116,7 @@ describe('ClayPagination', () => {
 			/>
 		);
 
-		fireEvent.click(getByText(container, '...') as HTMLElement, {});
+		fireEvent.click(getAllByText('...')[0] as HTMLElement, {});
 
 		fireEvent.click(getByText(document.body, '4') as HTMLElement, {});
 

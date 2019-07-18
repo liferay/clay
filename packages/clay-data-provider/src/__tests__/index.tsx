@@ -8,7 +8,7 @@
 import DataProvider from '../';
 import LRU from 'lru-cache';
 import React from 'react';
-import {cleanup, render, wait} from 'react-testing-library';
+import {cleanup, render, wait} from '@testing-library/react';
 import {FetchMock} from 'jest-fetch-mock'; // eslint-disable-line @typescript-eslint/no-unused-vars
 import {
 	FetchPolicy,
@@ -36,7 +36,7 @@ describe('ClayDataProvider', () => {
 
 	// this is just a little hack to silence a warning that we'll get until react
 	// fixes this: https://github.com/facebook/react/pull/14853
-	// https://github.com/testing-library/react-testing-library/issues/281
+	// https://github.com/testing-library/react/issues/281
 	// eslint-disable-next-line no-console
 	const originalError = console.error;
 	// eslint-disable-next-line no-console

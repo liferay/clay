@@ -16,7 +16,7 @@ import {
 	getByText,
 	render,
 	waitForElement,
-} from 'react-testing-library';
+} from '@testing-library/react';
 
 const spritemap = 'node_modules/clay-css/lib/images/icons/icons.svg';
 

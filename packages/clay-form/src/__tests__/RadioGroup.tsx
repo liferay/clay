@@ -8,7 +8,7 @@ import * as TestRenderer from 'react-test-renderer';
 import ClayRadio from '../Radio';
 import ClayRadioGroup from '../RadioGroup';
 import React from 'react';
-import {cleanup, fireEvent, render} from 'react-testing-library';
+import {cleanup, fireEvent, render} from '@testing-library/react';
 
 describe('Rendering', () => {
 	it('default', () => {

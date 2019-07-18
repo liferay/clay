@@ -6,7 +6,7 @@
 
 import ClayDatePicker from '..';
 import React, {useState} from 'react';
-import {cleanup, fireEvent, render} from 'react-testing-library';
+import {cleanup, fireEvent, render} from '@testing-library/react';
 
 const spritemap = 'icons.svg';
 

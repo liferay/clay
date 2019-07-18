@@ -31,7 +31,7 @@ const ChartWithRef = () => {
  *
  * Currently these tests only render the root element of the charts and not the svg
  * content, which is not ideal. react-test-renderer doesn't support tests that rely
- * on refs very well and react-testing-library keeps erroring for nodes not found,
+ * on refs very well and @testing-library/react keeps erroring for nodes not found,
  * which seems to stem from jsdom.
  */
 describe('ClayCharts', () => {
