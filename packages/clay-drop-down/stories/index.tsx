@@ -173,4 +173,25 @@ storiesOf('ClayDropDown', module)
 			]}
 			trigger={<ClayButton>{'Click Me'}</ClayButton>}
 		/>
+	))
+	.add('ClayDropDownWithBasicItems w/ icons', () => (
+		<ClayDropDownWithBasicItems
+			items={[
+				{
+					label: 'clickable',
+					onClick: () => {
+						alert('you clicked!');
+					},
+					symbolLeft: 'trash',
+				},
+				{type: 'divider'},
+				{
+					href: '#',
+					label: 'linkable',
+					symbolRight: 'pencil',
+				},
+			]}
+			spritemap={spritemap}
+			trigger={<ClayButton>{'Click Me'}</ClayButton>}
+		/>
 	));
