@@ -22,9 +22,11 @@ export default props => {
 		location,
 		pageContext: {markdownJsx},
 	} = props;
-	const {allMarkdownRemark, allMdx, markdownRemark, mdx, testedu} = data;
+	const {allMarkdownRemark, allMdx, markdownRemark, mdx, tabs} = data;
 	const {code, excerpt, frontmatter, html, timeToRead} =
-		mdx || markdownRemark || testedu;
+		mdx || markdownRemark;
+
+	const hasTabs = tabs.edges.length > 0;
 
 	const title = `${frontmatter.title} - Clay`;
 
@@ -89,17 +91,18 @@ export default props => {
 												</p>
 											)}
 										</div>
-
-                                        <div className="col-12 mt-5">
-                                            <ul className="nav nav-underline nav-justified border-bottom" role="tablist">
-                                                <li className="nav-item">
-                                                    <a aria-controls="advanced" aria-expanded="true" className="active nav-link" data-toggle="tab" href="#advanced" id="advancedTab" role="tab">React Component</a>
-                                                </li>
-                                                <li className="nav-item">
-                                                    <a aria-controls="simple" className="nav-link" data-toggle="tab" href="#simple" id="simpleTab" role="tab">CSS / Markup</a>
-                                                </li>
-                                            </ul>
-                                        </div>
+										{hasTabs && (
+											<div className="col-12 mt-5">
+												<ul className="nav nav-underline nav-justified border-bottom" role="tablist">
+													<li className="nav-item">
+														<a aria-controls="advanced" aria-expanded="true" className="active nav-link" data-toggle="tab" href="#advanced" id="advancedTab" role="tab">React Component</a>
+													</li>
+													<li className="nav-item">
+														<a aria-controls="simple" className="nav-link" data-toggle="tab" href="#simple" id="simpleTab" role="tab">CSS / Markup</a>
+													</li>
+												</ul>
+											</div>
+										)}
 									</div>
 								</div>
 							</header>
@@ -174,12 +177,14 @@ export default props => {
                                                     </CodeClipboard>
                                                 </article>
                                             </div>
-                                            <div aria-labelledby="simpleTab" className="fade tab-pane" id="simple" role="tabpanel">
-                                                <div
-                                                    dangerouslySetInnerHTML={{
-                                                        __html: testedu.edges[0].node.html,
-                                                    }}
-                                                />
+											<div aria-labelledby="simpleTab" className="fade tab-pane" id="simple" role="tabpanel">
+												{hasTabs && (
+													<div
+														dangerouslySetInnerHTML={{
+															__html: tabs.edges[0].node.html,
+														}}
+                                                	/>
+												)}
                                             </div>
                                         </div>
                                     </div>
@@ -227,7 +232,7 @@ export default props => {
 };
 
 export const pageQuery = graphql`
-	query($slug: String!, $title: String = "Alerts") {
+	query($slug: String!, $sibling: String!) {
 		mdx(fields: {slug: {eq: $slug}}) {
 			excerpt
 			timeToRead
@@ -283,16 +288,12 @@ export const pageQuery = graphql`
 				}
 			}
         }
-        testedu:allMarkdownRemark (
-            filter: {
-                fields: {title: {eq: $title}}
-            }
-        ) {
-            edges {
-                node {
-                    html
-                }
-            }
-        }
+		tabs: allMarkdownRemark(filter: {fields: {slug: {eq: $sibling}}}) {
+			edges {
+			  node {
+				html
+			  }
+			}
+		}
 	}
 `;
