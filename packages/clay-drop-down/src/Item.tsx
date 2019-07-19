@@ -20,6 +20,8 @@ interface IProps
 	 */
 	disabled?: boolean;
 
+	anchorRef?: React.Ref<any>;
+
 	forwardRef?: React.Ref<HTMLLIElement>;
 
 	/**
@@ -45,6 +47,7 @@ interface IProps
 
 const ClayDropDownItem: React.FunctionComponent<IProps> = ({
 	active,
+	anchorRef,
 	children,
 	className,
 	disabled,
@@ -69,6 +72,7 @@ const ClayDropDownItem: React.FunctionComponent<IProps> = ({
 				})}
 				href={href}
 				onClick={onClick}
+				ref={anchorRef}
 			>
 				{symbolLeft && (
 					<span className="dropdown-item-indicator-start">
