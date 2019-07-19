@@ -42,38 +42,44 @@ interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	small?: boolean;
 }
 
-interface IClayButton extends React.FunctionComponent<IProps> {
-	Group: typeof ButtonGroup;
-}
+type Button = React.ForwardRefExoticComponent<
+	IProps & React.RefAttributes<HTMLButtonElement>
+> & {Group: typeof ButtonGroup};
 
-const ClayButton: IClayButton = ({
-	block,
-	borderless,
-	children,
-	className,
-	displayType = 'primary',
-	monospaced,
-	outline,
-	small,
-	type = 'button',
-	...otherProps
-}: IProps) => (
-	<button
-		className={classNames(className, 'btn', {
-			'btn-block': block,
-			'btn-monospaced': monospaced,
-			'btn-outline-borderless': borderless,
-			'btn-sm': small,
-			[`btn-${displayType}`]: displayType && !outline && !borderless,
-			[`btn-outline-${displayType}`]:
-				displayType && (outline || borderless),
-		})}
-		type={type}
-		{...otherProps}
-	>
-		{children}
-	</button>
-);
+const ClayButton = React.forwardRef(
+	(
+		{
+			block,
+			borderless,
+			children,
+			className,
+			displayType = 'primary',
+			monospaced,
+			outline,
+			small,
+			type = 'button',
+			...otherProps
+		}: IProps,
+		ref
+	) => (
+		<button
+			className={classNames(className, 'btn', {
+				'btn-block': block,
+				'btn-monospaced': monospaced,
+				'btn-outline-borderless': borderless,
+				'btn-sm': small,
+				[`btn-${displayType}`]: displayType && !outline && !borderless,
+				[`btn-outline-${displayType}`]:
+					displayType && (outline || borderless),
+			})}
+			ref={ref}
+			type={type}
+			{...otherProps}
+		>
+			{children}
+		</button>
+	)
+) as Button;
 
 ClayButton.Group = ButtonGroup;
 
