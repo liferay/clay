@@ -4,7 +4,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayCard, {ClayCardWithNavigation, ClayCardWithUser} from '../index';
+import ClayCard, {
+	ClayCardWithFile,
+	ClayCardWithHorizontal,
+	ClayCardWithNavigation,
+	ClayCardWithUser,
+} from '../index';
 import ClayForm from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
@@ -561,8 +566,12 @@ describe('ClayCard', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+});
 
-	it('renders ClayCardWithUser as selectable', () => {
+describe('ClayCardWithUser', () => {
+	afterEach(cleanup);
+
+	it('renders as selectable', () => {
 		const onSelectChangeFn = jest.fn();
 
 		const {container} = render(
@@ -589,7 +598,7 @@ describe('ClayCard', () => {
 		expect(onSelectChangeFn).toHaveBeenCalled();
 	});
 
-	it('renders ClayCardWithUser with icon', () => {
+	it('renders with icon', () => {
 		const {container} = render(
 			<ClayCardWithUser
 				description="Test"
@@ -608,7 +617,7 @@ describe('ClayCard', () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it('renders ClayCardWithUser with image', () => {
+	it('renders with image', () => {
 		const {container} = render(
 			<ClayCardWithUser
 				description="Test"
@@ -660,5 +669,119 @@ describe('ClayCard', () => {
 		fireEvent.click(container.querySelector('img') as HTMLElement, {});
 
 		expect(onClickFn).toHaveBeenCalledTimes(1);
+	});
+});
+
+describe('ClayCardWithHorizontal', () => {
+	afterEach(cleanup);
+
+	it('renders as not selectable', () => {
+		const {container} = render(
+			<ClayCardWithHorizontal
+				href="#"
+				spritemap="/path/to/some/resource.svg"
+				title="Foo Bar"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders as selectable', () => {
+		const onSelectChangeFn = jest.fn();
+
+		const {container} = render(
+			<ClayCardWithHorizontal
+				href="#"
+				onSelectChange={onSelectChangeFn}
+				selected={false}
+				spritemap="/path/to/some/resource.svg"
+				title="Foo Bar"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+
+		fireEvent.click(container.querySelector('label') as HTMLElement, {});
+
+		expect(onSelectChangeFn).toHaveBeenCalled();
+	});
+});
+
+describe('ClayCardWithFile', () => {
+	afterEach(cleanup);
+
+	it('renders as not selectable', () => {
+		const {container} = render(
+			<ClayCardWithFile
+				description="A cool description"
+				href="#"
+				labels={[
+					{
+						displayType: 'success',
+						value: 'Awesome',
+					},
+				]}
+				spritemap="/some/spritemap"
+				title="Very Large File"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders as selectable', () => {
+		const onSelectChangeFn = jest.fn();
+
+		const {container} = render(
+			<ClayCardWithFile
+				href="#"
+				onSelectChange={onSelectChangeFn}
+				selected={false}
+				spritemap="/path/to/some/resource.svg"
+				title="Foo Bar"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+
+		fireEvent.click(container.querySelector('label') as HTMLElement, {});
+
+		expect(onSelectChangeFn).toHaveBeenCalledTimes(1);
+	});
+
+	it('clicking dropdown item calls callback and not call onSelectChange', () => {
+		const onDropDownItemClick = jest.fn();
+		const onSelectChangeFn = jest.fn();
+
+		const {container} = render(
+			<ClayCardWithFile
+				actions={[
+					{
+						label: 'clickable',
+						onClick: onDropDownItemClick,
+					},
+				]}
+				description="A cool description"
+				href="#"
+				onSelectChange={onSelectChangeFn}
+				selected={false}
+				spritemap="/path/to/some/resource.svg"
+				title="Selectable File"
+			/>
+		);
+
+		fireEvent.click(
+			container.querySelector('.dropdown-toggle') as HTMLElement,
+			{}
+		);
+
+		fireEvent.click(
+			document.querySelector('.dropdown-item') as HTMLElement,
+			{}
+		);
+
+		expect(onDropDownItemClick).toHaveBeenCalledTimes(1);
+		expect(onSelectChangeFn).not.toHaveBeenCalledTimes(1);
 	});
 });
