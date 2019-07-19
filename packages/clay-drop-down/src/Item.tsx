@@ -20,14 +20,14 @@ interface IProps
 	 */
 	disabled?: boolean;
 
-	anchorRef?: React.Ref<any>;
-
 	forwardRef?: React.Ref<HTMLLIElement>;
 
 	/**
 	 * Path for item to link to.
 	 */
 	href?: string;
+
+	innerRef?: React.Ref<any>;
 
 	/**
 	 * Path to icon spritemap from clay-css.
@@ -47,12 +47,12 @@ interface IProps
 
 const ClayDropDownItem: React.FunctionComponent<IProps> = ({
 	active,
-	anchorRef,
 	children,
 	className,
 	disabled,
 	forwardRef,
 	href,
+	innerRef,
 	onClick,
 	spritemap,
 	symbolLeft,
@@ -72,7 +72,7 @@ const ClayDropDownItem: React.FunctionComponent<IProps> = ({
 				})}
 				href={href}
 				onClick={onClick}
-				ref={anchorRef}
+				ref={innerRef}
 			>
 				{symbolLeft && (
 					<span className="dropdown-item-indicator-start">

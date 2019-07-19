@@ -115,7 +115,7 @@ const AutocompleteWithKeyboardFunctionality = () => {
 				<ClayDropDown.ItemList>
 					{filteredItems.map((item, i) => (
 						<ClayAutocomplete.Item
-							anchorRef={ref =>
+							innerRef={ref =>
 								focusManager.createScope(ref, `item${i}`, true)
 							}
 							key={item}

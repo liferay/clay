@@ -84,7 +84,7 @@ export const ClayDropDownWithBasicItems: React.FunctionComponent<IProps> = ({
 
 					return (
 						<ClayDropDown.Item
-							anchorRef={(ref: HTMLLinkElement) =>
+							innerRef={(ref: HTMLLinkElement) =>
 								focusManager.createScope(ref, `item${i}`, true)
 							}
 							key={i}
