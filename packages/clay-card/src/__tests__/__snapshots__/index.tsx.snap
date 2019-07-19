@@ -1,5 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ClayCard renders ClayCardWithNavigation with image 1`] = `
+<div>
+  <a
+    class="card card-interactive card-interactive-primary card-type-template template-card"
+    href="#"
+    tabindex="0"
+  >
+    <span
+      class="aspect-ratio"
+    >
+      <span
+        class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush"
+      >
+        <img
+          alt="portlet image"
+          src="/some/path"
+        />
+      </span>
+    </span>
+    <span
+      class="card-body"
+    >
+      <span
+        class="card-title text-truncate"
+      >
+        Layout Page
+      </span>
+      <span
+        class="card-text text-truncate"
+      >
+        Pick and choose your layout...
+      </span>
+    </span>
+  </a>
+</div>
+`;
+
 exports[`ClayCard renders ClayCardWithUser as selectable 1`] = `
 <div>
   <div
@@ -607,6 +644,7 @@ exports[`ClayCard renders a ClayCard as a template navigation card truncating te
 <div>
   <a
     class="card card-interactive card-interactive-primary card-type-template template-card"
+    href="javascript:;"
   >
     <span
       class="aspect-ratio"
@@ -711,6 +749,7 @@ exports[`ClayCard renders a ClayCard as template navigation card 1`] = `
 <div>
   <a
     class="card card-interactive card-interactive-primary card-type-template template-card"
+    href="javascript:;"
   >
     <span
       class="aspect-ratio"
@@ -746,6 +785,7 @@ exports[`ClayCard renders a ClayCard as template navigation card as horizontal c
 <div>
   <a
     class="card card-interactive card-interactive-primary card-type-template template-card-horizontal"
+    href="javascript:;"
   >
     <span
       class="card-body"
@@ -796,6 +836,7 @@ exports[`ClayCard renders a ClayCard as template navigation card with icon inste
 <div>
   <a
     class="card card-interactive card-interactive-primary card-type-template template-card"
+    href="javascript:;"
   >
     <span
       class="aspect-ratio"

@@ -17,6 +17,9 @@ import {IContext} from './Context';
 type CardDisplayType = 'file' | 'image' | 'user';
 
 export interface ICardProps extends IContext {
+	/**
+	 * Determines the style of the card
+	 */
 	displayType?: CardDisplayType;
 
 	/**
@@ -27,7 +30,9 @@ export interface ICardProps extends IContext {
 
 interface IProps
 	extends ICardProps,
-		React.BaseHTMLAttributes<HTMLAnchorElement | HTMLDivElement> {}
+		React.BaseHTMLAttributes<
+			HTMLAnchorElement | HTMLSpanElement | HTMLDivElement
+		> {}
 
 const ClayCard: React.FunctionComponent<IProps> & {
 	AspectRatio: typeof AspectRatio;
@@ -40,7 +45,9 @@ const ClayCard: React.FunctionComponent<IProps> & {
 	className,
 	displayType,
 	horizontal,
+	href = 'javascript:;',
 	interactive,
+	onClick,
 	selectable = false,
 	...otherProps
 }: IProps) => {
@@ -81,6 +88,9 @@ const ClayCard: React.FunctionComponent<IProps> & {
 				'template-card-horizontal': horizontal && interactive,
 				'user-card': isCardType.user,
 			})}
+			href={interactive ? href : undefined}
+			onClick={onClick}
+			role={onClick ? 'button' : undefined}
 		>
 			{(selectable && !horizontal) ||
 			(selectable && isCardType.image) ||
