@@ -7,7 +7,7 @@
 import ClayColorPicker from '..';
 import getMouseEvent from '../../tests-util';
 import React from 'react';
-import {cleanup, fireEvent, render} from 'react-testing-library';
+import {cleanup, fireEvent, render} from '@testing-library/react';
 
 const mockClientRect = (element: HTMLElement) => {
 	element.getBoundingClientRect = () => ({

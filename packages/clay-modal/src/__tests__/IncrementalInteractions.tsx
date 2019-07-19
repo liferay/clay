@@ -9,7 +9,7 @@ import Button from '@clayui/button';
 import ClayModal from '..';
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
-import {cleanup, fireEvent, render} from 'react-testing-library';
+import {cleanup, fireEvent, render} from '@testing-library/react';
 
 const spritemap = 'icons.svg';
 
@@ -52,7 +52,7 @@ describe('Modal -> IncrementalInteractions', () => {
 
 	// this is just a little hack to silence a warning that we'll get until react
 	// fixes this: https://github.com/facebook/react/pull/14853
-	// https://github.com/testing-library/react-testing-library/issues/281
+	// https://github.com/testing-library/react/issues/281
 	const originalError = console.error;
 	beforeAll(() => {
 		jest.useFakeTimers();

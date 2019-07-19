@@ -6,7 +6,7 @@
 
 import ClaySelect, {ClaySelectWithOption} from '..';
 import React from 'react';
-import {cleanup, render} from 'react-testing-library';
+import {cleanup, render} from '@testing-library/react';
 
 const options = [
 	{

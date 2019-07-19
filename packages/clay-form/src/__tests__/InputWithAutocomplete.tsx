@@ -6,7 +6,7 @@
 
 import * as React from 'react';
 import {ClayInputWithAutocomplete} from '../InputWithAutocomplete';
-import {cleanup, fireEvent, render} from 'react-testing-library';
+import {cleanup, fireEvent, render} from '@testing-library/react';
 
 describe('InputWithAutocomplete', () => {
 	beforeAll(() => {

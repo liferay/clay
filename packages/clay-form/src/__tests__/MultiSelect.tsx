@@ -7,7 +7,7 @@
 import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
 import ClayMultiSelect from '../MultiSelect';
-import {cleanup, fireEvent, render} from 'react-testing-library';
+import {cleanup, fireEvent, render} from '@testing-library/react';
 
 const ClayMultiSelectWithState = (props: any) => {
 	const [items, setItems] = React.useState(props.items as [] | []);

@@ -10,7 +10,7 @@ import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClaySticker from '@clayui/sticker';
 import React from 'react';
-import {cleanup, fireEvent, render} from 'react-testing-library';
+import {cleanup, fireEvent, render} from '@testing-library/react';
 
 const ClayCheckboxWithState = (props: any) => {
 	const [value, setValue] = React.useState<boolean>(false);
