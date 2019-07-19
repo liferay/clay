@@ -5,7 +5,11 @@
  */
 
 import '@clayui/css/lib/css/atlas.css';
-import ClayCard, {ClayCardWithNavigation, ClayCardWithUser} from '../src';
+import ClayCard, {
+	ClayCardWithFolder,
+	ClayCardWithNavigation,
+	ClayCardWithUser,
+} from '../src';
 import ClayForm from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
@@ -33,51 +37,48 @@ const ClayCheckboxWithState = (props: any) => {
 	);
 };
 
+const ClayCardWithFolderWithState = (props: any) => {
+	const [value, setValue] = React.useState<boolean>(false);
+
+	return (
+		<ClayCardWithFolder
+			onSelectChange={newVal => setValue(newVal)}
+			selected={value}
+			{...props}
+		/>
+	);
+};
+
 storiesOf('ClayCard', module)
-	.add('with folder card', () => (
+	.add('CardWithFolder', () => (
 		<div className="row">
 			<div className="col-md-4">
-				<ClayCard horizontal>
-					<ClayCard.Body>
-						<div className="flex-col">
-							<ClaySticker displayType="secondary" inline>
-								<ClayIcon
-									spritemap={spritemap}
-									symbol="folder"
-								/>
-							</ClaySticker>
-						</div>
-						<div className="autofit-col autofit-col-expand autofit-col-gutters">
-							<div className="autofit-section">
-								<ClayCard.Description displayType="title">
-									{'Very Large Folder'}
-								</ClayCard.Description>
-							</div>
-						</div>
-					</ClayCard.Body>
-				</ClayCard>
+				<ClayCardWithFolder
+					href="#"
+					name="Very Large Folder"
+					spritemap={spritemap}
+				/>
 			</div>
 
 			<div className="col-md-4">
-				<ClayCard horizontal selectable>
-					<ClayCheckboxWithState>
-						<ClayCard.Body>
-							<div className="autofit-col">
-								<ClaySticker displayType="secondary" inline>
-									<ClayIcon
-										spritemap={spritemap}
-										symbol="folder"
-									/>
-								</ClaySticker>
-							</div>
-							<div className="autofit-col autofit-col-expand autofit-col-gutters">
-								<ClayCard.Description displayType="title">
-									{'Very Large Folder'}
-								</ClayCard.Description>
-							</div>
-						</ClayCard.Body>
-					</ClayCheckboxWithState>
-				</ClayCard>
+				<ClayCardWithFolderWithState
+					actions={[
+						{
+							label: 'clickable',
+							onClick: () => {
+								alert('you clicked!');
+							},
+						},
+						{type: 'divider'},
+						{
+							href: '#',
+							label: 'linkable',
+						},
+					]}
+					href="#"
+					name="Selectable Folder"
+					spritemap={spritemap}
+				/>
 			</div>
 		</div>
 	))

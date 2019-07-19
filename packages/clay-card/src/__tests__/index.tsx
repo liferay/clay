@@ -4,7 +4,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayCard, {ClayCardWithNavigation, ClayCardWithUser} from '../index';
+import ClayCard, {
+	ClayCardWithFolder,
+	ClayCardWithNavigation,
+	ClayCardWithUser,
+} from '../index';
 import ClayForm from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
@@ -561,8 +565,12 @@ describe('ClayCard', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+});
 
-	it('renders ClayCardWithUser as selectable', () => {
+describe('ClayCardWithUser', () => {
+	afterEach(cleanup);
+
+	it('renders as selectable', () => {
 		const onSelectChangeFn = jest.fn();
 
 		const {container} = render(
@@ -589,7 +597,7 @@ describe('ClayCard', () => {
 		expect(onSelectChangeFn).toHaveBeenCalled();
 	});
 
-	it('renders ClayCardWithUser with icon', () => {
+	it('renders with icon', () => {
 		const {container} = render(
 			<ClayCardWithUser
 				description="Test"
@@ -608,7 +616,7 @@ describe('ClayCard', () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it('renders ClayCardWithUser with image', () => {
+	it('renders with image', () => {
 		const {container} = render(
 			<ClayCardWithUser
 				description="Test"
@@ -660,5 +668,41 @@ describe('ClayCard', () => {
 		fireEvent.click(container.querySelector('img') as HTMLElement, {});
 
 		expect(onClickFn).toHaveBeenCalledTimes(1);
+	});
+});
+
+describe('ClayCardWithFolder', () => {
+	afterEach(cleanup);
+
+	it('renders as not selectable', () => {
+		const {container} = render(
+			<ClayCardWithFolder
+				href="#"
+				name="Foo Bar"
+				spritemap="/path/to/some/resource.svg"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders as selectable', () => {
+		const onSelectChangeFn = jest.fn();
+
+		const {container} = render(
+			<ClayCardWithFolder
+				href="#"
+				name="Foo Bar"
+				onSelectChange={onSelectChangeFn}
+				selected={false}
+				spritemap="/path/to/some/resource.svg"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+
+		fireEvent.click(container.querySelector('label') as HTMLElement, {});
+
+		expect(onSelectChangeFn).toHaveBeenCalled();
 	});
 });

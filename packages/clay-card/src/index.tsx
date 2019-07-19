@@ -5,9 +5,10 @@
  */
 
 import ClayCard from './Card';
+import {ClayCardWithFolder} from './CardWithFolder';
 import {ClayCardWithNavigation} from './CardWithNavigation';
 import {ClayCardWithUser} from './CardWithUser';
 
-export {ClayCardWithNavigation, ClayCardWithUser};
+export {ClayCardWithFolder, ClayCardWithNavigation, ClayCardWithUser};
 
 export default ClayCard;
