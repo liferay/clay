@@ -1,272 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayCard renders ClayCardWithNavigation with image 1`] = `
-<div>
-  <a
-    class="card card-interactive card-interactive-primary card-type-template template-card"
-    href="#"
-    tabindex="0"
-  >
-    <span
-      class="aspect-ratio"
-    >
-      <span
-        class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush"
-      >
-        <img
-          alt="portlet image"
-          src="/some/path"
-        />
-      </span>
-    </span>
-    <span
-      class="card-body"
-    >
-      <span
-        class="card-title text-truncate"
-      >
-        Layout Page
-      </span>
-      <span
-        class="card-text text-truncate"
-      >
-        Pick and choose your layout...
-      </span>
-    </span>
-  </a>
-</div>
-`;
-
-exports[`ClayCard renders ClayCardWithUser as selectable 1`] = `
-<div>
-  <div
-    class="card-type-asset form-check form-check-card form-check-top-left user-card"
-  >
-    <div
-      class="card"
-    >
-      <div
-        class="card-item-first aspect-ratio"
-      >
-        <div
-          class="custom-control custom-checkbox"
-        >
-          <label>
-            <input
-              class="custom-control-input"
-              type="checkbox"
-              value="false"
-            />
-            <span
-              class="custom-control-label"
-            />
-            <div
-              class="aspect-ratio-item-center-middle card-type-asset-icon"
-            >
-              <span
-                class="sticker sticker-user-icon sticker-circle"
-              >
-                <span
-                  class="sticker-overlay"
-                >
-                  <svg
-                    class="lexicon-icon lexicon-icon-user"
-                    role="presentation"
-                  >
-                    <use
-                      xlink:href="/path/to/some/resource.svg#user"
-                    />
-                  </svg>
-                </span>
-              </span>
-            </div>
-          </label>
-        </div>
-      </div>
-      <div
-        class="card-body"
-      >
-        <div
-          class="card-row"
-        >
-          <div
-            class="autofit-col autofit-col-expand"
-          >
-            <a
-              class="card-title text-truncate"
-              href="#"
-            >
-              Foo Bar
-            </a>
-            <div
-              class="card-subtitle text-truncate"
-            >
-              Test
-            </div>
-            <div
-              class="card-detail"
-            >
-              <span
-                class="label label-success"
-              >
-                <span
-                  class="label-item label-item-expand"
-                >
-                  Awesome
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayCard renders ClayCardWithUser with icon 1`] = `
-<div>
-  <div
-    class="card card-type-asset form-check form-check-card form-check-top-left user-card"
-  >
-    <div
-      class="card"
-    >
-      <div
-        class="card-item-first aspect-ratio"
-      >
-        <div
-          class="aspect-ratio-item-center-middle card-type-asset-icon"
-        >
-          <span
-            class="sticker sticker-user-icon sticker-circle"
-          >
-            <span
-              class="sticker-overlay"
-            >
-              <svg
-                class="lexicon-icon lexicon-icon-user"
-                role="presentation"
-              >
-                <use
-                  xlink:href="/path/to/some/resource.svg#user"
-                />
-              </svg>
-            </span>
-          </span>
-        </div>
-      </div>
-      <div
-        class="card-body"
-      >
-        <div
-          class="card-row"
-        >
-          <div
-            class="autofit-col autofit-col-expand"
-          >
-            <a
-              class="card-title text-truncate"
-              href="#"
-            >
-              Foo Bar
-            </a>
-            <div
-              class="card-subtitle text-truncate"
-            >
-              Test
-            </div>
-            <div
-              class="card-detail"
-            >
-              <span
-                class="label label-success"
-              >
-                <span
-                  class="label-item label-item-expand"
-                >
-                  Awesome
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayCard renders ClayCardWithUser with image 1`] = `
-<div>
-  <div
-    class="card card-type-asset form-check form-check-card form-check-top-left user-card"
-  >
-    <div
-      class="card"
-    >
-      <div
-        class="card-item-first aspect-ratio"
-      >
-        <div
-          class="aspect-ratio-item-center-middle card-type-asset-icon"
-        >
-          <span
-            class="sticker sticker-user-icon sticker-circle"
-          >
-            <span
-              class="sticker-overlay"
-            >
-              <img
-                alt="thumbnail"
-                class="aspect-ratio-item-fluid"
-                src="/path/to/image.jpg"
-              />
-            </span>
-          </span>
-        </div>
-      </div>
-      <div
-        class="card-body"
-      >
-        <div
-          class="card-row"
-        >
-          <div
-            class="autofit-col autofit-col-expand"
-          >
-            <a
-              class="card-title text-truncate"
-              href="#"
-            >
-              Foo Bar
-            </a>
-            <div
-              class="card-subtitle text-truncate"
-            >
-              Test
-            </div>
-            <div
-              class="card-detail"
-            >
-              <span
-                class="label label-success"
-              >
-                <span
-                  class="label-item label-item-expand"
-                >
-                  Awesome
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`ClayCard renders a ClayCard as a directory 1`] = `
 <div>
   <div
@@ -307,11 +40,20 @@ exports[`ClayCard renders a ClayCard as a directory 1`] = `
             <div
               class="autofit-section"
             >
-              <div
-                class="card-title text-truncate"
+              <h3
+                class="card-title"
+                title="Very Large Folder"
               >
-                Very Large Folder
-              </div>
+                <span
+                  class="text-truncate-inline"
+                >
+                  <span
+                    class="text-truncate"
+                  >
+                    Very Large Folder
+                  </span>
+                </span>
+              </h3>
             </div>
           </div>
         </div>
@@ -363,16 +105,34 @@ exports[`ClayCard renders a ClayCard as a file card 1`] = `
           <section
             class="autofit-section"
           >
-            <div
-              class="card-title text-truncate"
+            <h3
+              class="card-title"
+              title="deliverable.doc"
             >
-              deliverable.doc
-            </div>
-            <div
-              class="card-subtitle text-truncate"
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                >
+                  deliverable.doc
+                </span>
+              </span>
+            </h3>
+            <span
+              class="card-subtitle"
+              title="Stevie Ray Vaughn"
             >
-              Stevie Ray Vaughn
-            </div>
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                >
+                  Stevie Ray Vaughn
+                </span>
+              </span>
+            </span>
             <div
               class="card-detail"
             >
@@ -453,16 +213,34 @@ exports[`ClayCard renders a ClayCard as a selectable file card 1`] = `
             <section
               class="autofit-section"
             >
-              <div
-                class="card-title text-truncate"
+              <h3
+                class="card-title"
+                title="deliverable.doc"
               >
-                deliverable.doc
-              </div>
-              <div
-                class="card-subtitle text-truncate"
+                <span
+                  class="text-truncate-inline"
+                >
+                  <span
+                    class="text-truncate"
+                  >
+                    deliverable.doc
+                  </span>
+                </span>
+              </h3>
+              <span
+                class="card-subtitle"
+                title="Stevie Ray Vaughn"
               >
-                Stevie Ray Vaughn
-              </div>
+                <span
+                  class="text-truncate-inline"
+                >
+                  <span
+                    class="text-truncate"
+                  >
+                    Stevie Ray Vaughn
+                  </span>
+                </span>
+              </span>
               <div
                 class="card-detail"
               >
@@ -534,11 +312,20 @@ exports[`ClayCard renders a ClayCard as a selectable folder 1`] = `
               <div
                 class="autofit-col autofit-col-expand autofit-col-gutters"
               >
-                <div
-                  class="card-title text-truncate"
+                <h3
+                  class="card-title"
+                  title="Very Large Folder"
                 >
-                  Very Large Folder
-                </div>
+                  <span
+                    class="text-truncate-inline"
+                  >
+                    <span
+                      class="text-truncate"
+                    >
+                      Very Large Folder
+                    </span>
+                  </span>
+                </h3>
               </div>
             </div>
           </div>
@@ -609,16 +396,34 @@ exports[`ClayCard renders a ClayCard as a selectable image card 1`] = `
           <div
             class="autofit-col autofit-col-expand"
           >
-            <div
-              class="card-title text-truncate"
+            <h3
+              class="card-title"
+              title="thumbnail_coffee.jpg"
             >
-              thumbnail_coffee.jpg
-            </div>
-            <div
-              class="card-subtitle text-truncate"
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                >
+                  thumbnail_coffee.jpg
+                </span>
+              </span>
+            </h3>
+            <span
+              class="card-subtitle"
+              title="Author Action"
             >
-              Author Action
-            </div>
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                >
+                  Author Action
+                </span>
+              </span>
+            </span>
             <div
               class="card-detail"
             >
@@ -661,16 +466,34 @@ exports[`ClayCard renders a ClayCard as a template navigation card truncating te
     <span
       class="card-body"
     >
-      <span
-        class="card-title text-truncate"
+      <h3
+        class="card-title"
+        title="Content Page"
       >
-        Content Page
-      </span>
-      <span
+        <span
+          class="text-truncate-inline"
+        >
+          <span
+            class="text-truncate"
+          >
+            Content Page
+          </span>
+        </span>
+      </h3>
+      <div
         class="card-text"
+        title="This is an example of card-type-template using an anchor tag."
       >
-        This is an example of card-type-template using an anchor tag.
-      </span>
+        <span
+          class=""
+        >
+          <span
+            class=""
+          >
+            This is an example of card-type-template using an anchor tag.
+          </span>
+        </span>
+      </div>
     </span>
   </a>
 </div>
@@ -715,16 +538,34 @@ exports[`ClayCard renders a ClayCard as image card 1`] = `
         <div
           class="autofit-col autofit-col-expand"
         >
-          <div
-            class="card-title text-truncate"
+          <h3
+            class="card-title"
+            title="thumbnail_coffee.jpg"
           >
-            thumbnail_coffee.jpg
-          </div>
-          <div
-            class="card-subtitle text-truncate"
+            <span
+              class="text-truncate-inline"
+            >
+              <span
+                class="text-truncate"
+              >
+                thumbnail_coffee.jpg
+              </span>
+            </span>
+          </h3>
+          <span
+            class="card-subtitle"
+            title="Author Action"
           >
-            Author Action
-          </div>
+            <span
+              class="text-truncate-inline"
+            >
+              <span
+                class="text-truncate"
+              >
+                Author Action
+              </span>
+            </span>
+          </span>
           <div
             class="card-detail"
           >
@@ -766,16 +607,34 @@ exports[`ClayCard renders a ClayCard as template navigation card 1`] = `
     <span
       class="card-body"
     >
-      <span
-        class="card-title text-truncate"
+      <h3
+        class="card-title"
+        title="Widget Page"
       >
-        Widget Page
-      </span>
-      <span
-        class="card-text text-truncate"
+        <span
+          class="text-truncate-inline"
+        >
+          <span
+            class="text-truncate"
+          >
+            Widget Page
+          </span>
+        </span>
+      </h3>
+      <div
+        class="card-text"
+        title="Build a page by adding widgets and content."
       >
-        Build a page by adding widgets and content.
-      </span>
+        <span
+          class="text-truncate-inline"
+        >
+          <span
+            class="text-truncate"
+          >
+            Build a page by adding widgets and content.
+          </span>
+        </span>
+      </div>
     </span>
   </a>
 </div>
@@ -819,11 +678,20 @@ exports[`ClayCard renders a ClayCard as template navigation card as horizontal c
           <span
             class="autofit-section"
           >
-            <span
-              class="card-title text-truncate"
+            <h3
+              class="card-title"
+              title="Full Page Application"
             >
-              Full Page Application
-            </span>
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                >
+                  Full Page Application
+                </span>
+              </span>
+            </h3>
           </span>
         </span>
       </span>
@@ -857,11 +725,20 @@ exports[`ClayCard renders a ClayCard as template navigation card with icon inste
     <span
       class="card-body"
     >
-      <span
-        class="card-title text-truncate"
+      <h3
+        class="card-title"
+        title="Blog"
       >
-        Blog
-      </span>
+        <span
+          class="text-truncate-inline"
+        >
+          <span
+            class="text-truncate"
+          >
+            Blog
+          </span>
+        </span>
+      </h3>
     </span>
   </a>
 </div>
@@ -908,16 +785,34 @@ exports[`ClayCard renders a ClayCard as user card 1`] = `
           <div
             class="autofit-col autofit-col-expand"
           >
-            <div
-              class="card-title text-truncate"
+            <h3
+              class="card-title"
+              title="Adélaide"
             >
-              Adélaide
-            </div>
-            <div
-              class="card-subtitle text-truncate"
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                >
+                  Adélaide
+                </span>
+              </span>
+            </h3>
+            <span
+              class="card-subtitle"
+              title="Author Action"
             >
-              Author Action
-            </div>
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                >
+                  Author Action
+                </span>
+              </span>
+            </span>
             <div
               class="card-detail"
             >
@@ -998,16 +893,34 @@ exports[`ClayCard renders a ClayCard as user selectable card 1`] = `
           <div
             class="autofit-col autofit-col-expand"
           >
-            <div
-              class="card-title text-truncate"
+            <h3
+              class="card-title"
+              title="Adélaide"
             >
-              Adélaide
-            </div>
-            <div
-              class="card-subtitle text-truncate"
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                >
+                  Adélaide
+                </span>
+              </span>
+            </h3>
+            <span
+              class="card-subtitle"
+              title="Author Action"
             >
-              Author Action
-            </div>
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                >
+                  Author Action
+                </span>
+              </span>
+            </span>
             <div
               class="card-detail"
             >
@@ -1086,16 +999,34 @@ exports[`ClayCard renders a group of ClayCards 1`] = `
               <section
                 class="autofit-section"
               >
-                <div
-                  class="card-title text-truncate"
+                <h3
+                  class="card-title"
+                  title="deliverable.doc"
                 >
-                  deliverable.doc
-                </div>
-                <div
-                  class="card-subtitle text-truncate"
+                  <span
+                    class="text-truncate-inline"
+                  >
+                    <span
+                      class="text-truncate"
+                    >
+                      deliverable.doc
+                    </span>
+                  </span>
+                </h3>
+                <span
+                  class="card-subtitle"
+                  title="Stevie Ray Vaughn"
                 >
-                  Stevie Ray Vaughn
-                </div>
+                  <span
+                    class="text-truncate-inline"
+                  >
+                    <span
+                      class="text-truncate"
+                    >
+                      Stevie Ray Vaughn
+                    </span>
+                  </span>
+                </span>
                 <div
                   class="card-detail"
                 >
@@ -1158,16 +1089,34 @@ exports[`ClayCard renders a group of ClayCards 1`] = `
               <section
                 class="autofit-section"
               >
-                <div
-                  class="card-title text-truncate"
+                <h3
+                  class="card-title"
+                  title="deliverable.doc"
                 >
-                  deliverable.doc
-                </div>
-                <div
-                  class="card-subtitle text-truncate"
+                  <span
+                    class="text-truncate-inline"
+                  >
+                    <span
+                      class="text-truncate"
+                    >
+                      deliverable.doc
+                    </span>
+                  </span>
+                </h3>
+                <span
+                  class="card-subtitle"
+                  title="Stevie Ray Vaughn"
                 >
-                  Stevie Ray Vaughn
-                </div>
+                  <span
+                    class="text-truncate-inline"
+                  >
+                    <span
+                      class="text-truncate"
+                    >
+                      Stevie Ray Vaughn
+                    </span>
+                  </span>
+                </span>
                 <div
                   class="card-detail"
                 >
@@ -1242,16 +1191,34 @@ exports[`ClayCard renders a group of ClayCards 1`] = `
               <div
                 class="autofit-col autofit-col-expand"
               >
-                <div
-                  class="card-title text-truncate"
+                <h3
+                  class="card-title"
+                  title="Adélaide"
                 >
-                  Adélaide
-                </div>
-                <div
-                  class="card-subtitle text-truncate"
+                  <span
+                    class="text-truncate-inline"
+                  >
+                    <span
+                      class="text-truncate"
+                    >
+                      Adélaide
+                    </span>
+                  </span>
+                </h3>
+                <span
+                  class="card-subtitle"
+                  title="Author Action"
                 >
-                  Author Action
-                </div>
+                  <span
+                    class="text-truncate-inline"
+                  >
+                    <span
+                      class="text-truncate"
+                    >
+                      Author Action
+                    </span>
+                  </span>
+                </span>
                 <div
                   class="card-detail"
                 >
@@ -1313,16 +1280,34 @@ exports[`ClayCard renders a group of ClayCards 1`] = `
               <div
                 class="autofit-col autofit-col-expand"
               >
-                <div
-                  class="card-title text-truncate"
+                <h3
+                  class="card-title"
+                  title="Adélaide"
                 >
-                  Adélaide
-                </div>
-                <div
-                  class="card-subtitle text-truncate"
+                  <span
+                    class="text-truncate-inline"
+                  >
+                    <span
+                      class="text-truncate"
+                    >
+                      Adélaide
+                    </span>
+                  </span>
+                </h3>
+                <span
+                  class="card-subtitle"
+                  title="Author Action"
                 >
-                  Author Action
-                </div>
+                  <span
+                    class="text-truncate-inline"
+                  >
+                    <span
+                      class="text-truncate"
+                    >
+                      Author Action
+                    </span>
+                  </span>
+                </span>
                 <div
                   class="card-detail"
                 >
@@ -1343,5 +1328,670 @@ exports[`ClayCard renders a group of ClayCards 1`] = `
       </div>
     </li>
   </ul>
+</div>
+`;
+
+exports[`ClayCardWithHorizontal renders as not selectable 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <div
+      class="card card-horizontal"
+    >
+      <div
+        class="card-body"
+      >
+        <div
+          class="card-row"
+        >
+          <div
+            class="autofit-col"
+          >
+            <span
+              class="sticker sticker-rounded"
+            >
+              <span
+                class="sticker-overlay inline-item"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-folder"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/path/to/some/resource.svg#folder"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+          <div
+            class="autofit-col autofit-col-expand autofit-col-gutters"
+          >
+            <h3
+              class="card-title"
+              title="Foo Bar"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <a
+                  class="text-truncate"
+                  href="#"
+                >
+                  Foo Bar
+                </a>
+              </span>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardWithHorizontal renders as selectable 1`] = `
+<div>
+  <div
+    class="card-type-directory form-check form-check-card form-check-middle-left"
+  >
+    <div
+      class="custom-control custom-checkbox"
+    >
+      <label>
+        <input
+          class="custom-control-input"
+          type="checkbox"
+          value="false"
+        />
+        <span
+          class="custom-control-label"
+        />
+        <div
+          class="card card-horizontal"
+        >
+          <div
+            class="card-body"
+          >
+            <div
+              class="card-row"
+            >
+              <div
+                class="autofit-col"
+              >
+                <span
+                  class="sticker sticker-rounded"
+                >
+                  <span
+                    class="sticker-overlay inline-item"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-folder"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="/path/to/some/resource.svg#folder"
+                      />
+                    </svg>
+                  </span>
+                </span>
+              </div>
+              <div
+                class="autofit-col autofit-col-expand autofit-col-gutters"
+              >
+                <h3
+                  class="card-title"
+                  title="Foo Bar"
+                >
+                  <span
+                    class="text-truncate-inline"
+                  >
+                    <a
+                      class="text-truncate"
+                      href="#"
+                    >
+                      Foo Bar
+                    </a>
+                  </span>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardWithInfo renders as not selectable 1`] = `
+<div>
+  <div
+    class="card card-type-asset file-card"
+  >
+    <div
+      class="card-item-first aspect-ratio"
+    >
+      <div
+        class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
+      >
+        <svg
+          class="lexicon-icon lexicon-icon-documents-and-media"
+          role="presentation"
+        >
+          <use
+            xlink:href="/some/spritemap#documents-and-media"
+          />
+        </svg>
+      </div>
+      <span
+        class="sticker sticker-rounded sticker-primary sticker-bottom-left"
+      >
+        <span
+          class="sticker-overlay"
+        >
+          <svg
+            class="lexicon-icon lexicon-icon-document-text"
+            role="presentation"
+          >
+            <use
+              xlink:href="/some/spritemap#document-text"
+            />
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div
+      class="card-body"
+    >
+      <div
+        class="card-row"
+      >
+        <div
+          class="autofit-col autofit-col-expand"
+        >
+          <h3
+            class="card-title"
+            title="Very Large File"
+          >
+            <span
+              class="text-truncate-inline"
+            >
+              <a
+                class="text-truncate"
+                href="#"
+              >
+                Very Large File
+              </a>
+            </span>
+          </h3>
+          <span
+            class="card-subtitle"
+            title="A cool description"
+          >
+            <span
+              class="text-truncate-inline"
+            >
+              <span
+                class="text-truncate"
+              >
+                A cool description
+              </span>
+            </span>
+          </span>
+          <div
+            class="card-detail"
+          >
+            <span
+              class="label label-success"
+            >
+              <span
+                class="label-item label-item-expand"
+              >
+                Awesome
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardWithInfo renders as selectable 1`] = `
+<div>
+  <div
+    class="card-type-asset file-card form-check form-check-card form-check-top-left"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="custom-control custom-checkbox"
+      >
+        <label>
+          <input
+            class="custom-control-input"
+            type="checkbox"
+            value="false"
+          />
+          <span
+            class="custom-control-label"
+          />
+          <div
+            class="card-item-first aspect-ratio"
+          >
+            <div
+              class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-documents-and-media"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/path/to/some/resource.svg#documents-and-media"
+                />
+              </svg>
+            </div>
+            <span
+              class="sticker sticker-rounded sticker-primary sticker-bottom-left"
+            >
+              <span
+                class="sticker-overlay"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-document-text"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/path/to/some/resource.svg#document-text"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+        </label>
+      </div>
+      <div
+        class="card-body"
+      >
+        <div
+          class="card-row"
+        >
+          <div
+            class="autofit-col autofit-col-expand"
+          >
+            <h3
+              class="card-title"
+              title="Foo Bar"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <a
+                  class="text-truncate"
+                  href="#"
+                >
+                  Foo Bar
+                </a>
+              </span>
+            </h3>
+            <span
+              class="card-subtitle"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                />
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardWithUser renders ClayCardWithNavigation with image 1`] = `
+<div>
+  <a
+    class="card card-interactive card-interactive-primary card-type-template template-card"
+    href="#"
+    tabindex="0"
+  >
+    <span
+      class="aspect-ratio"
+    >
+      <span
+        class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush"
+      >
+        <img
+          alt="portlet image"
+          src="/some/path"
+        />
+      </span>
+    </span>
+    <span
+      class="card-body"
+    >
+      <h3
+        class="card-title"
+        title="Layout Page"
+      >
+        <span
+          class="text-truncate-inline"
+        >
+          <span
+            class="text-truncate"
+          >
+            Layout Page
+          </span>
+        </span>
+      </h3>
+      <div
+        class="card-text"
+        title="Pick and choose your layout..."
+      >
+        <span
+          class="text-truncate-inline"
+        >
+          <span
+            class="text-truncate"
+          >
+            Pick and choose your layout...
+          </span>
+        </span>
+      </div>
+    </span>
+  </a>
+</div>
+`;
+
+exports[`ClayCardWithUser renders as selectable 1`] = `
+<div>
+  <div
+    class="card-type-asset form-check form-check-card form-check-top-left user-card"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="card-item-first aspect-ratio"
+      >
+        <div
+          class="custom-control custom-checkbox"
+        >
+          <label>
+            <input
+              class="custom-control-input"
+              type="checkbox"
+              value="false"
+            />
+            <span
+              class="custom-control-label"
+            />
+            <div
+              class="aspect-ratio-item-center-middle card-type-asset-icon"
+            >
+              <span
+                class="sticker sticker-user-icon sticker-circle"
+              >
+                <span
+                  class="sticker-overlay"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-user"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="/path/to/some/resource.svg#user"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div
+        class="card-body"
+      >
+        <div
+          class="card-row"
+        >
+          <div
+            class="autofit-col autofit-col-expand"
+          >
+            <h3
+              class="card-title"
+              title="Foo Bar"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <a
+                  class="text-truncate"
+                  href="#"
+                >
+                  Foo Bar
+                </a>
+              </span>
+            </h3>
+            <span
+              class="card-subtitle"
+              title="Test"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                >
+                  Test
+                </span>
+              </span>
+            </span>
+            <div
+              class="card-detail"
+            >
+              <span
+                class="label label-success"
+              >
+                <span
+                  class="label-item label-item-expand"
+                >
+                  Awesome
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardWithUser renders with icon 1`] = `
+<div>
+  <div
+    class="card card-type-asset form-check form-check-card form-check-top-left user-card"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="card-item-first aspect-ratio"
+      >
+        <div
+          class="aspect-ratio-item-center-middle card-type-asset-icon"
+        >
+          <span
+            class="sticker sticker-user-icon sticker-circle"
+          >
+            <span
+              class="sticker-overlay"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-user"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/path/to/some/resource.svg#user"
+                />
+              </svg>
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        class="card-body"
+      >
+        <div
+          class="card-row"
+        >
+          <div
+            class="autofit-col autofit-col-expand"
+          >
+            <h3
+              class="card-title"
+              title="Foo Bar"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <a
+                  class="text-truncate"
+                  href="#"
+                >
+                  Foo Bar
+                </a>
+              </span>
+            </h3>
+            <span
+              class="card-subtitle"
+              title="Test"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                >
+                  Test
+                </span>
+              </span>
+            </span>
+            <div
+              class="card-detail"
+            >
+              <span
+                class="label label-success"
+              >
+                <span
+                  class="label-item label-item-expand"
+                >
+                  Awesome
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardWithUser renders with image 1`] = `
+<div>
+  <div
+    class="card card-type-asset form-check form-check-card form-check-top-left user-card"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="card-item-first aspect-ratio"
+      >
+        <div
+          class="aspect-ratio-item-center-middle card-type-asset-icon"
+        >
+          <span
+            class="sticker sticker-user-icon sticker-circle"
+          >
+            <span
+              class="sticker-overlay"
+            >
+              <img
+                alt="thumbnail"
+                class="aspect-ratio-item-fluid"
+                src="/path/to/image.jpg"
+              />
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        class="card-body"
+      >
+        <div
+          class="card-row"
+        >
+          <div
+            class="autofit-col autofit-col-expand"
+          >
+            <h3
+              class="card-title"
+              title="Foo Bar"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <a
+                  class="text-truncate"
+                  href="#"
+                >
+                  Foo Bar
+                </a>
+              </span>
+            </h3>
+            <span
+              class="card-subtitle"
+              title="Test"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                >
+                  Test
+                </span>
+              </span>
+            </span>
+            <div
+              class="card-detail"
+            >
+              <span
+                class="label label-success"
+              >
+                <span
+                  class="label-item label-item-expand"
+                >
+                  Awesome
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;

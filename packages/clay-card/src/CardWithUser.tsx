@@ -10,8 +10,14 @@ import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClaySticker, {DisplayType as StickerDisplayType} from '@clayui/sticker';
 import React from 'react';
+import {ClayDropDownWithBasicItems} from '@clayui/drop-down';
 
 interface IProps {
+	/**
+	 * List of actions in the dropdown menu
+	 */
+	actions?: React.ComponentProps<typeof ClayDropDownWithBasicItems>['items'];
+
 	/**
 	 * Value of the description of the user
 	 */
@@ -25,7 +31,7 @@ interface IProps {
 	/**
 	 * List of labels that are applied to the user
 	 */
-	labels: Array<
+	labels?: Array<
 		React.ComponentProps<typeof ClayLabel> & {value: React.ReactText}
 	>;
 
@@ -61,6 +67,7 @@ interface IProps {
 }
 
 export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
+	actions,
 	description,
 	href,
 	labels,
@@ -117,14 +124,33 @@ export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 					<ClayCard.Description displayType="subtitle">
 						{description}
 					</ClayCard.Description>
-					<ClayCard.Caption>
-						{labels.map(({value, ...others}, i: number) => (
-							<ClayLabel {...others} key={i}>
-								{value}
-							</ClayLabel>
-						))}
-					</ClayCard.Caption>
+					{labels && (
+						<ClayCard.Caption>
+							{labels.map(({value, ...others}, i: number) => (
+								<ClayLabel {...others} key={i}>
+									{value}
+								</ClayLabel>
+							))}
+						</ClayCard.Caption>
+					)}
 				</div>
+
+				{actions && (
+					<div className="autofit-col">
+						<ClayDropDownWithBasicItems
+							items={actions}
+							spritemap={spritemap}
+							trigger={
+								<button className="component-action">
+									<ClayIcon
+										spritemap={spritemap}
+										symbol="ellipsis-v"
+									/>
+								</button>
+							}
+						/>
+					</div>
+				)}
 			</ClayCard.Body>
 		</ClayCard>
 	);
