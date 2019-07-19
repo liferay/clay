@@ -6,6 +6,7 @@
 
 import ClayDropDown from './DropDown';
 import React, {useState} from 'react';
+import {useFocusManagement} from '@clayui/shared';
 
 interface IItem {
 	active?: boolean;
@@ -31,15 +32,38 @@ interface IProps {
 	spritemap?: string;
 }
 
+const TAB_KEY_CODE = 9;
+const ARROW_UP_KEY_CODE = 38;
+const ARROW_DOWN_KEY_CODE = 40;
+
 export const ClayDropDownWithBasicItems: React.FunctionComponent<IProps> = ({
 	items,
 	spritemap,
 	trigger,
 }: IProps) => {
 	const [active, setActive] = useState(false);
+	const focusManager = useFocusManagement();
 
 	const hasRightSymbols = !!items.find(item => item.symbolRight);
 	const hasLeftSymbols = !!items.find(item => item.symbolLeft);
+
+	const onKeyDown = (event: React.KeyboardEvent<any>) => {
+		const {keyCode, shiftKey} = event;
+
+		if (
+			keyCode === ARROW_DOWN_KEY_CODE ||
+			(keyCode === TAB_KEY_CODE && !shiftKey)
+		) {
+			event.preventDefault();
+			focusManager.focusNext();
+		} else if (
+			keyCode === ARROW_UP_KEY_CODE ||
+			(keyCode === TAB_KEY_CODE && shiftKey)
+		) {
+			event.preventDefault();
+			focusManager.focusPrevious();
+		}
+	};
 
 	return (
 		<ClayDropDown
@@ -47,7 +71,10 @@ export const ClayDropDownWithBasicItems: React.FunctionComponent<IProps> = ({
 			hasLeftSymbols={hasLeftSymbols}
 			hasRightSymbols={hasRightSymbols}
 			onActiveChange={(newVal: boolean) => setActive(newVal)}
-			trigger={trigger}
+			onKeyDown={onKeyDown}
+			trigger={React.cloneElement(trigger, {
+				ref: (ref: any) => focusManager.createScope(ref, 'trigger'),
+			})}
 		>
 			<ClayDropDown.ItemList>
 				{items.map((item: IItem, i: number) => {
@@ -57,6 +84,9 @@ export const ClayDropDownWithBasicItems: React.FunctionComponent<IProps> = ({
 
 					return (
 						<ClayDropDown.Item
+							innerRef={(ref: HTMLLinkElement) =>
+								focusManager.createScope(ref, `item${i}`, true)
+							}
 							key={i}
 							spritemap={spritemap}
 							{...item}
