@@ -1609,43 +1609,130 @@ exports[`BasicRendering renders date picker with time 1`] = `
             class="time-picker"
           >
             <div
-              class="input-group"
+              class="clay-time"
             >
               <div
-                class="input-group-item input-group-item-shrink"
+                class="input-group"
               >
-                <span
-                  class="input-group-text"
+                <div
+                  class="input-group-item input-group-item-shrink"
                 >
-                  <svg
-                    class="lexicon-icon lexicon-icon-time"
-                    role="presentation"
+                  <div
+                    class="input-group-text"
                   >
-                    <use
-                      xlink:href="icons.svg#time"
-                    />
-                  </svg>
-                </span>
-              </div>
-              <div
-                class="input-group-item"
-              >
-                <input
-                  class="form-control"
-                  data-testid="time-picker-input"
-                  name="timer"
-                  type="time"
-                  value="00:00"
-                />
-              </div>
-              <div
-                class="input-group-item input-group-item-shrink"
-              >
-                <span
-                  class="input-group-text"
+                    <svg
+                      class="lexicon-icon lexicon-icon-time"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="icons.svg#time"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="input-group-item input-group-item-shrink"
                 >
-                  (GMT+01:00)
-                </span>
+                  <div
+                    class="form-control"
+                    data-testid="formControl"
+                  >
+                    <div
+                      class="clay-time-edit"
+                    >
+                      <input
+                        class="clay-time-hours form-control-inset"
+                        data-testid="hours"
+                        maxlength="2"
+                        type="text"
+                        value="0"
+                      />
+                      <span
+                        class="clay-time-divider"
+                      >
+                        :
+                      </span>
+                      <input
+                        class="clay-time-minutes form-control-inset"
+                        data-testid="minutes"
+                        maxlength="2"
+                        type="text"
+                        value="0"
+                      />
+                    </div>
+                    <div
+                      class="clay-time-action-group"
+                    >
+                      <div
+                        class="clay-time-action-group-item"
+                        data-testid="containerReset"
+                        style="opacity: 0; pointer-events: none;"
+                      >
+                        <button
+                          class="clay-time-clear-btn btn btn-unstyled"
+                          type="button"
+                        >
+                          <svg
+                            class="lexicon-icon lexicon-icon-times-circle"
+                            role="presentation"
+                          >
+                            <use
+                              xlink:href="icons.svg#times-circle"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                      <div
+                        class="clay-time-action-group-item"
+                        data-testid="containerSpin"
+                        style="opacity: 0;"
+                      >
+                        <div
+                          class="btn-group-vertical clay-time-inner-spin"
+                          role="group"
+                        >
+                          <button
+                            class="clay-time-inner-spin-btn clay-time-inner-spin-btn-inc btn btn-secondary"
+                            data-testid="spinInc"
+                            type="button"
+                          >
+                            <svg
+                              class="lexicon-icon lexicon-icon-angle-up"
+                              role="presentation"
+                            >
+                              <use
+                                xlink:href="icons.svg#angle-up"
+                              />
+                            </svg>
+                          </button>
+                          <button
+                            class="clay-time-inner-spin-btn clay-time-inner-spin-btn-dec btn btn-secondary"
+                            data-testid="spinDec"
+                            type="button"
+                          >
+                            <svg
+                              class="lexicon-icon lexicon-icon-angle-down"
+                              role="presentation"
+                            >
+                              <use
+                                xlink:href="icons.svg#angle-down"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="input-group-item input-group-item-shrink"
+                >
+                  <span
+                    class="input-group-text"
+                  >
+                    (GMT+01:00)
+                  </span>
+                </div>
               </div>
             </div>
           </div>

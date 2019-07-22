@@ -357,13 +357,9 @@ describe('IncrementalInteractions', () => {
 			);
 
 			const input: any = getByLabelText(ariaLabels.input);
-			const inputTimePicker: any = getByTestId('time-picker-input');
+			const hoursEl = getByTestId('hours') as HTMLInputElement;
 
-			fireEvent.change(inputTimePicker, {
-				target: {
-					value: '00:20',
-				},
-			});
+			fireEvent.keyDown(hoursEl, {key: '10'});
 
 			expect(input.value).toBe('');
 		});
@@ -381,17 +377,13 @@ describe('IncrementalInteractions', () => {
 
 			const input: any = getByLabelText(ariaLabels.input);
 			const dayNumber = getByLabelText('2019 04 24');
-			const inputTimePicker: any = getByTestId('time-picker-input');
+			const hoursEl = getByTestId('hours') as HTMLInputElement;
 
 			fireEvent.click(dayNumber);
 
-			fireEvent.change(inputTimePicker, {
-				target: {
-					value: '00:20',
-				},
-			});
+			fireEvent.keyDown(hoursEl, {key: '10'});
 
-			expect(input.value).toBe('2019-04-24 00:20');
+			expect(input.value).toBe('2019-04-24 10:0');
 		});
 
 		it('value entered in the input value must be reflected in the time picker', () => {
@@ -406,7 +398,8 @@ describe('IncrementalInteractions', () => {
 			);
 
 			const input: any = getByLabelText(ariaLabels.input);
-			const inputTimePicker: any = getByTestId('time-picker-input');
+			const hoursEl = getByTestId('hours') as HTMLInputElement;
+			const minutesEl = getByTestId('minutes') as HTMLInputElement;
 
 			fireEvent.change(input, {
 				target: {
@@ -414,7 +407,8 @@ describe('IncrementalInteractions', () => {
 				},
 			});
 
-			expect(inputTimePicker.value).toBe('01:20');
+			expect(hoursEl.value).toBe('1');
+			expect(minutesEl.value).toBe('20');
 		});
 	});
 });
