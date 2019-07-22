@@ -13,7 +13,7 @@ export interface IBreadcrumbEllipsisProps {
 	/**
 	 * Property to define BreadcrumbEllipsis's items.
 	 */
-	items?: Array<IBreadcrumbItem>;
+	items: Array<IBreadcrumbItem>;
 
 	/**
 	 * Path to the location of the spritemap resource.
@@ -23,7 +23,7 @@ export interface IBreadcrumbEllipsisProps {
 
 export const BreadcrumbEllipsis: React.FunctionComponent<
 	IBreadcrumbEllipsisProps
-> = ({items = [], spritemap, ...otherProps}) => {
+> = ({items, spritemap, ...otherProps}) => {
 	const [active, setActive] = useState(false);
 
 	return (
