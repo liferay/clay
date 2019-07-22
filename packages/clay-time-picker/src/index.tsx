@@ -134,7 +134,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 		minutes: DEFAULT_VALUE,
 	},
 	onInputChange = () => {},
-}) => {
+}: IProps) => {
 	const useConfig: Config = config[use12Hours ? 'use12Hours' : 'use24Hours'];
 	const [actionVisible, setActionVisible] = useState(false);
 	const [isFocused, setIsFocused] = useState();
