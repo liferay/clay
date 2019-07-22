@@ -6,7 +6,34 @@
 
 import '@clayui/css/lib/css/atlas.css';
 import ClayTimePicker from '../src';
-import React from 'react';
+import React, {useState} from 'react';
+import {boolean, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
-storiesOf('ClayTimePicker', module).add('default', () => <ClayTimePicker />);
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+
+const TimePickerWithState = (props: any) => {
+	const [state, setState] = useState({
+		hours: '--',
+		minutes: '--',
+	});
+
+	return (
+		<ClayTimePicker {...props} onInputChange={setState} values={state} />
+	);
+};
+
+storiesOf('ClayTimePicker', module).add('default', () => (
+	<div className="sheet">
+		<div className="form-group">
+			<label>{'Time Picker'}</label>
+			<TimePickerWithState
+				disabled={boolean('Disabled', false)}
+				icon={boolean('Show icon', false)}
+				spritemap={spritemap}
+				timezone={text('Timezone', 'GMT+01:00')}
+				use12Hours={boolean('Use 12 hours', false)}
+			/>
+		</div>
+	</div>
+));

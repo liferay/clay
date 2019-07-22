@@ -99,12 +99,6 @@ interface IProps {
 	time?: boolean;
 
 	/**
-	 * Set the format of how the time will appear in the input element.
-	 * See available: https://momentjs.com/docs/#/parsing/string-format/
-	 */
-	timeFormat?: string;
-
-	/**
 	 * Flag to indicate the timezone of the Time Picker.
 	 */
 	timezone?: string;
@@ -132,6 +126,7 @@ interface IProps {
 }
 
 const DateNow = new Date();
+const TIME_FORMAT = 'H:m';
 
 /**
  * ClayDatePicker component.
@@ -167,7 +162,6 @@ const ClayDatePicker: FunctionComponent<IProps> = ({
 	placeholder,
 	spritemap,
 	time = false,
-	timeFormat = 'HH:mm',
 	timezone,
 	useNative = false,
 	value,
@@ -200,7 +194,7 @@ const ClayDatePicker: FunctionComponent<IProps> = ({
 	/**
 	 * Indicates the time selected by the user.
 	 */
-	const [currentTime, setCurrentTime] = useCurrentTime(timeFormat);
+	const [currentTime, setCurrentTime] = useCurrentTime(TIME_FORMAT);
 
 	/**
 	 * The day selected by the user.
@@ -258,7 +252,7 @@ const ClayDatePicker: FunctionComponent<IProps> = ({
 	 */
 	const inputChange = (event: ChangeEvent<HTMLInputElement>) => {
 		const {value} = event.target;
-		const format = time ? `${dateFormat} ${timeFormat}` : dateFormat;
+		const format = time ? `${dateFormat} ${TIME_FORMAT}` : dateFormat;
 		const date = moment(value, format);
 		const year = date.year();
 
@@ -283,6 +277,21 @@ const ClayDatePicker: FunctionComponent<IProps> = ({
 		onValueChange(initialMonth);
 	};
 
+	const handleTimeChange = (
+		hours: number | string,
+		minutes: number | string
+	) => {
+		const format = time ? `${dateFormat} ${TIME_FORMAT}` : dateFormat;
+
+		// Hack to force InputDate to add `currentTime` to the value of
+		// the input when the value was edited by the user.
+		if (typeof value === 'string' && moment(value, format).isValid()) {
+			onValueChange(moment(value, format).toDate());
+		}
+
+		setCurrentTime(hours, minutes);
+	};
+
 	/**
 	 * Handles datepicker view
 	 */
@@ -300,7 +309,7 @@ const ClayDatePicker: FunctionComponent<IProps> = ({
 						onChange={inputChange}
 						placeholder={placeholder}
 						time={time}
-						timeFormat={timeFormat}
+						timeFormat={TIME_FORMAT}
 						useNative={useNative}
 						value={value}
 					/>
@@ -363,9 +372,8 @@ const ClayDatePicker: FunctionComponent<IProps> = ({
 								{time && (
 									<TimePicker
 										currentTime={currentTime}
-										onTimeChange={setCurrentTime}
+										onTimeChange={handleTimeChange}
 										spritemap={spritemap}
-										timeFormat={timeFormat}
 										timezone={timezone}
 									/>
 								)}

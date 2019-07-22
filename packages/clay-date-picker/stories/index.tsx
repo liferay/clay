@@ -25,8 +25,10 @@ const ClayDatePickerWithState = (props: {[key: string]: any}) => {
 
 storiesOf('ClayDatePicker', module)
 	.addDecorator(storyFn => (
-		<div className="form-group" style={{maxWidth: 520}}>
-			{storyFn()}
+		<div className="sheet">
+			<div className="form-group" style={{maxWidth: 520}}>
+				{storyFn()}
+			</div>
 		</div>
 	))
 	.add('default', () => (
