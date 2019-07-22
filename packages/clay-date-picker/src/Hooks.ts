@@ -35,18 +35,28 @@ const useCurrentTime = (format: string) => {
 			.format(format)
 	);
 
-	function setCurrentTime(hours: number, minutes: number): void {
-		set(
-			moment()
+	function setCurrentTime(
+		hours: number | string,
+		minutes: number | string
+	): void {
+		if (typeof hours !== 'string') {
+			hours = moment()
 				.set('h', hours)
+				.format('H');
+		}
+
+		if (typeof minutes !== 'string') {
+			minutes = moment()
 				.set('m', minutes)
-				.format(format)
-		);
+				.format('m');
+		}
+
+		set(`${hours}:${minutes}`);
 	}
 
 	return [currentTime, setCurrentTime] as [
 		string,
-		(hours: number, minutes: number) => void
+		(hours: number | string, minutes: number | string) => void
 	];
 };
 

@@ -4,50 +4,66 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayTimePicker from '@clayui/time-picker';
-import Icon from '@clayui/icon';
-import moment from 'moment';
-import React, {ChangeEventHandler, FunctionComponent} from 'react';
+import ClayTimePicker, {Input} from '@clayui/time-picker';
+import React, {useEffect, useState} from 'react';
 
 interface IProps {
 	currentTime: string;
-	onTimeChange: (hours: number, minutes: number) => void;
+	onTimeChange: (hours: number | string, minutes: number | string) => void;
 	spritemap: string;
-	timeFormat: string;
 	timezone?: string;
 }
 
-const ClayDatePickerTimePicker: FunctionComponent<IProps> = ({
+const DEFAULT_VALUE = '--';
+
+const ClayDatePickerTimePicker: React.FunctionComponent<IProps> = ({
 	currentTime,
 	onTimeChange,
 	spritemap,
-	timeFormat,
 	timezone,
 }) => {
+	const [values, setValues] = useState<Input>({
+		ampm: DEFAULT_VALUE,
+		hours: DEFAULT_VALUE,
+		minutes: DEFAULT_VALUE,
+	});
+
 	/**
 	 * Handles the control time picker
 	 */
-	const handleOnChange: ChangeEventHandler<HTMLInputElement> = event => {
-		const date = moment(event.target.value, timeFormat);
-		onTimeChange(date.hours(), date.minutes());
+	const handleOnChange = (values: Input) => {
+		const hours =
+			values.hours === DEFAULT_VALUE
+				? DEFAULT_VALUE
+				: Number(values.hours);
+		const minutes =
+			values.minutes === DEFAULT_VALUE
+				? DEFAULT_VALUE
+				: Number(values.minutes);
+
+		setValues(values);
+		onTimeChange(hours, minutes);
 	};
+
+	useEffect(() => {
+		const time = currentTime.split(':');
+
+		setValues(prevValues => ({
+			...prevValues,
+			hours: String(time[0]),
+			minutes: String(time[1]),
+		}));
+	}, [currentTime]);
 
 	return (
 		<div className="time-picker">
-			<div className="input-group">
-				<div className="input-group-item input-group-item-shrink">
-					<span className="input-group-text">
-						<Icon spritemap={spritemap} symbol="time" />
-					</span>
-				</div>
-				<ClayTimePicker
-					name="timer"
-					onChange={handleOnChange}
-					timezone={timezone}
-					value={currentTime}
-					wrapTime={false}
-				/>
-			</div>
+			<ClayTimePicker
+				icon
+				onInputChange={handleOnChange}
+				spritemap={spritemap}
+				timezone={timezone}
+				values={values}
+			/>
 		</div>
 	);
 };
