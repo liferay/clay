@@ -17,7 +17,7 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	/**
 	 * Path to the location of the spritemap resource.
 	 */
-	spritemap: string;
+	spritemap?: string;
 
 	/**
 	 * Value of the searchInput

@@ -31,7 +31,7 @@ interface IProps extends React.HTMLAttributes<HTMLOListElement> {
 	/**
 	 * Path to the location of the spritemap resource.
 	 */
-	spritemap: string;
+	spritemap?: string;
 }
 
 const findActiveItems = (items: Array<IBreadcrumbItem>) => {

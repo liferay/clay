@@ -26,7 +26,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Path to the location of the spritemap resource.
 	 */
-	spritemap: string;
+	spritemap?: string;
 
 	/**
 	 * Set up dropdown's trigger label.

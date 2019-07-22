@@ -14,7 +14,7 @@ interface IProps {
 	/**
 	 * Path to the location of the spritemap resource.
 	 */
-	spritemap: string;
+	spritemap?: string;
 
 	timezone?: string;
 }

@@ -48,7 +48,7 @@ interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	/**
 	 * Path to spritemap from clay-css.
 	 */
-	spritemap: string;
+	spritemap?: string;
 }
 
 const ClayPagination: React.FunctionComponent<IProps> = ({
