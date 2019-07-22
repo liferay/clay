@@ -68,18 +68,19 @@ export const Breadcrumb: React.FunctionComponent<IProps> = ({
 
 	return (
 		<ol {...otherProps} className={classNames('breadcrumb', className)}>
-			{breadCrumbItems.map((item: any, i: number) =>
-				React.isValidElement(item) ? (
-					React.cloneElement(item, {key: `ellipsis${i}`})
-				) : (
-					<BreadcrumbItem
-						active={item.active}
-						href={item.href}
-						key={`breadcrumbItem${i}`}
-						label={item.label}
-						onItemClick={item.onItemClick}
-					/>
-				)
+			{breadCrumbItems.map(
+				(item: IBreadcrumbItem | React.ReactNode, i: number) =>
+					React.isValidElement(item) ? (
+						React.cloneElement(item, {key: `ellipsis${i}`})
+					) : (
+						<BreadcrumbItem
+							active={(item as IBreadcrumbItem).active}
+							href={(item as IBreadcrumbItem).href}
+							key={`breadcrumbItem${i}`}
+							label={(item as IBreadcrumbItem).label}
+							onItemClick={(item as IBreadcrumbItem).onItemClick}
+						/>
+					)
 			)}
 		</ol>
 	);
