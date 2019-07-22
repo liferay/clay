@@ -21,6 +21,12 @@
 		"clay",
 		"react"
 	],
+	"dependencies": {
+		"@clayui/button": "^3.0.0-milestone.1",
+		"@clayui/icon": "^3.0.0-milestone.1",
+		"@clayui/shared": "^3.0.0-milestone.1",
+		"classnames": "^2.2.6"
+	},
 	"devDependencies": {
 		"@clayui/css": "^3.0.0-milestone.1"
 	},
