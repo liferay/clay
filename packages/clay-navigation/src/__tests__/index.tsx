@@ -111,23 +111,23 @@ describe('ClayNavigation', () => {
 			{
 				active: true,
 				label: '1',
-				onItemClick: itemClickMock,
+				onClick: itemClickMock,
 			},
 			{
 				label: '2',
-				onItemClick: itemClickMock,
+				onClick: itemClickMock,
 			},
 			{
 				label: '3',
-				onItemClick: itemClickMock,
+				onClick: itemClickMock,
 			},
 			{
 				label: '4',
-				onItemClick: itemClickMock,
+				onClick: itemClickMock,
 			},
 			{
 				label: '5',
-				onItemClick: itemClickMock,
+				onClick: itemClickMock,
 			},
 		];
 

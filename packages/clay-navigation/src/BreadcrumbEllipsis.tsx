@@ -45,11 +45,11 @@ export const BreadcrumbEllipsis: React.FunctionComponent<
 			{...otherProps}
 		>
 			<ClayDropDown.ItemList>
-				{items.map(({href, label, onItemClick}, i) => (
+				{items.map(({href, label, onClick}, i) => (
 					<ClayDropDown.Item
 						href={href}
 						key={`breadcrumbEllipsisItem${i}`}
-						onClick={onItemClick}
+						onClick={onClick}
 						title={label}
 					>
 						{label}

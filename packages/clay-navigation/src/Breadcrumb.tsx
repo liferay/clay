@@ -78,7 +78,7 @@ export const Breadcrumb: React.FunctionComponent<IProps> = ({
 							href={(item as IBreadcrumbItem).href}
 							key={`breadcrumbItem${i}`}
 							label={(item as IBreadcrumbItem).label}
-							onItemClick={(item as IBreadcrumbItem).onItemClick}
+							onClick={(item as IBreadcrumbItem).onClick}
 						/>
 					)
 			)}

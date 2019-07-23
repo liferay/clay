@@ -76,47 +76,47 @@ storiesOf('ClayNavigation', module)
 					{
 						active: true,
 						label: 'Home',
-						onItemClick,
+						onClick: onItemClick,
 					},
 					{
 						label: 'About',
-						onItemClick,
+						onClick: onItemClick,
 					},
 					{
 						label: 'Contact',
-						onItemClick,
+						onClick: onItemClick,
 					},
 					{
 						label: 'Projects',
-						onItemClick,
+						onClick: onItemClick,
 					},
 					{
 						label: 'Five',
-						onItemClick,
+						onClick: onItemClick,
 					},
 					{
 						label: 'Six',
-						onItemClick,
+						onClick: onItemClick,
 					},
 					{
 						label: 'Seven',
-						onItemClick,
+						onClick: onItemClick,
 					},
 					{
 						label: 'Eight',
-						onItemClick,
+						onClick: onItemClick,
 					},
 					{
 						label: 'Nine',
-						onItemClick,
+						onClick: onItemClick,
 					},
 					{
 						label: 'Ten',
-						onItemClick,
+						onClick: onItemClick,
 					},
 					{
 						label: 'Eleven',
-						onItemClick,
+						onClick: onItemClick,
 					},
 				]}
 				spritemap={spritemap}

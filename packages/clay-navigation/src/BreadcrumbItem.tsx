@@ -26,14 +26,14 @@ export interface IBreadcrumbItem {
 	/**
 	 * Callback for when a Breadcrumb item is clicked.
 	 */
-	onItemClick?: (event: React.SyntheticEvent) => void;
+	onClick?: (event: React.SyntheticEvent) => void;
 }
 
 export const BreadcrumbItem = ({
 	active,
 	href,
 	label,
-	onItemClick,
+	onClick,
 	...otherProps
 }: IBreadcrumbItem) => (
 	<li
@@ -51,12 +51,12 @@ export const BreadcrumbItem = ({
 			>
 				{label}
 			</a>
-		) : onItemClick ? (
+		) : onClick ? (
 			<ClayButton
 				className="breadcrumb-text-truncate"
 				data-testid={`testId${label}`}
 				displayType="unstyled"
-				onClick={onItemClick}
+				onClick={onClick}
 				title={label}
 			>
 				{label}
