@@ -5,14 +5,35 @@
  */
 import React from 'react';
 
+interface IBufferList {
+	/**
+	 * Component to be used as a Ellipsis.
+	 */
+	EllipsisComponent: React.ComponentType<any>;
+
+	/**
+	 * Use this property for defining `otherProps` that will be passed to ellipsis dropdown trigger.
+	 */
+	ellipsisProps?: Object;
+
+	/**
+	 * Property to define BreadcrumbEllipsis's items.
+	 */
+	items: Array<Object>;
+
+	/**
+	 * Path to the location of the spritemap resource.
+	 */
+	spritemap?: string;
+}
+
 const getBufferList = (
-	items: Array<Object>,
 	start: number,
 	end: number,
-	EllipsisComponent: React.ComponentType<any>,
-	ellipsisProps?: Object,
-	spritemap?: string
+	config: IBufferList
 ): Array<Object | number | React.ReactElement> => {
+	const {EllipsisComponent, ellipsisProps, items, spritemap} = config;
+
 	const removedItems = items.slice(start, Math.max(end, start));
 
 	if (removedItems.length > 1) {
@@ -30,35 +51,20 @@ const getBufferList = (
 };
 
 export const getEllipsisItems = (
+	config: IBufferList,
 	ellipsisBuffer: number,
-	items: Array<Object> = [],
-	EllipsisComponent: React.ComponentType<any>,
-	ellipsisProps: Object = {},
-	activeIndex: number = 0,
-	spritemap?: string
+	activeIndex: number = 0
 ) => {
+	const {items} = config;
+
 	const lastIndex = items.length - 1;
 
 	const leftBufferEnd = activeIndex - ellipsisBuffer;
 
 	const rightBufferStart = activeIndex + ellipsisBuffer + 1;
 
-	const leftBuffer = getBufferList(
-		items,
-		1,
-		leftBufferEnd,
-		EllipsisComponent,
-		ellipsisProps,
-		spritemap
-	);
-	const rightBuffer = getBufferList(
-		items,
-		rightBufferStart,
-		lastIndex,
-		EllipsisComponent,
-		ellipsisProps,
-		spritemap
-	);
+	const leftBuffer = getBufferList(1, leftBufferEnd, config);
+	const rightBuffer = getBufferList(rightBufferStart, lastIndex, config);
 
 	const newArray = [
 		items[0],

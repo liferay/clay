@@ -57,12 +57,14 @@ export const Breadcrumb: React.FunctionComponent<IProps> = ({
 
 	const breadCrumbItems = ellipsisBuffer
 		? getEllipsisItems(
+				{
+					EllipsisComponent: BreadcrumbEllipsis,
+					ellipsisProps,
+					items,
+					spritemap,
+				},
 				ellipsisBuffer,
-				items,
-				BreadcrumbEllipsis,
-				ellipsisProps,
-				items.indexOf(activeItems[0]),
-				spritemap
+				items.indexOf(activeItems[0])
 		  )
 		: items;
 

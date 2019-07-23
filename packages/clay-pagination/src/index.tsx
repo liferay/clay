@@ -84,14 +84,16 @@ const ClayPagination: React.FunctionComponent<IProps> = ({
 
 			{(ellipsisBuffer
 				? getEllipsisItems(
-						ellipsisBuffer,
-						pages,
-						PaginationEllipsis,
 						{
-							disabledPages,
-							hrefConstructor,
-							onPageChange,
+							EllipsisComponent: PaginationEllipsis,
+							ellipsisProps: {
+								disabledPages,
+								hrefConstructor,
+								onPageChange,
+							},
+							items: pages,
 						},
+						ellipsisBuffer,
 						activePage - 1
 				  )
 				: pages
