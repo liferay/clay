@@ -35,43 +35,33 @@ export const BreadcrumbItem = ({
 	label,
 	onItemClick,
 	...otherProps
-}: IBreadcrumbItem) => {
-	const ItemElement = ({
-		active,
-		href,
-		label,
-		onItemClick,
-	}: IBreadcrumbItem) => {
-		if (!active) {
-			if (href) {
-				return (
-					<a
-						className="breadcrumb-link"
-						data-testid={`testId${label}`}
-						href={href}
-						role="button"
-					>
-						{label}
-					</a>
-				);
-			}
-
-			if (onItemClick) {
-				return (
-					<ClayButton
-						className="breadcrumb-text-truncate"
-						data-testid={`testId${label}`}
-						displayType="unstyled"
-						onClick={onItemClick}
-						title={label}
-					>
-						{label}
-					</ClayButton>
-				);
-			}
-		}
-
-		return (
+}: IBreadcrumbItem) => (
+	<li
+		className={classNames('breadcrumb-item', {
+			active,
+		})}
+		{...otherProps}
+	>
+		{!active && href ? (
+			<a
+				className="breadcrumb-link"
+				data-testid={`testId${label}`}
+				href={href}
+				role="button"
+			>
+				{label}
+			</a>
+		) : onItemClick ? (
+			<ClayButton
+				className="breadcrumb-text-truncate"
+				data-testid={`testId${label}`}
+				displayType="unstyled"
+				onClick={onItemClick}
+				title={label}
+			>
+				{label}
+			</ClayButton>
+		) : (
 			<span
 				className="breadcrumb-text-truncate"
 				data-testid={`testId${label}`}
@@ -79,22 +69,6 @@ export const BreadcrumbItem = ({
 			>
 				{label}
 			</span>
-		);
-	};
-
-	return (
-		<li
-			className={classNames('breadcrumb-item', {
-				active,
-			})}
-			{...otherProps}
-		>
-			<ItemElement
-				active={active}
-				href={href}
-				label={label}
-				onItemClick={onItemClick}
-			/>
-		</li>
-	);
-};
+		)}
+	</li>
+);
