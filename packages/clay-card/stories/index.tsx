@@ -11,12 +11,12 @@ import ClayCard, {
 	ClayCardWithNavigation,
 	ClayCardWithUser,
 } from '../src';
-import ClayForm from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClaySticker from '@clayui/sticker';
 import React from 'react';
 import {boolean} from '@storybook/addon-knobs';
+import {ClayCheckbox} from '@clayui/form';
 import {storiesOf} from '@storybook/react';
 
 const portletImage = require('./static/portlet.svg');
@@ -27,14 +27,14 @@ const ClayCheckboxWithState = (props: any) => {
 	const [value, setValue] = React.useState<boolean>(false);
 
 	return (
-		<ClayForm.Checkbox
+		<ClayCheckbox
 			checked={value}
 			disabled={false}
 			indeterminate={false}
 			onChange={() => setValue(val => !val)}
 		>
 			{props.children}
-		</ClayForm.Checkbox>
+		</ClayCheckbox>
 	);
 };
 

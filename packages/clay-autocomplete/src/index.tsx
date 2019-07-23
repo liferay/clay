@@ -4,25 +4,21 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import classNames from 'classnames';
 import Context from './Context';
 import DropDown from './DropDown';
 import Input from './Input';
 import Item from './Item';
 import LoadingIndicator from './LoadingIndicator';
 import React, {useRef, useState} from 'react';
+import {ClayInput} from '@clayui/form';
 
 const AutocompleteMarkup = React.forwardRef<
 	HTMLDivElement,
 	React.HTMLAttributes<HTMLDivElement>
->(({children, className, ...otherProps}, ref) => (
-	<div
-		{...otherProps}
-		className={classNames('input-group', className)}
-		ref={ref}
-	>
-		<div className="input-group-item">{children}</div>
-	</div>
+>(({children, ...otherProps}, ref) => (
+	<ClayInput.Group {...otherProps} ref={ref}>
+		<ClayInput.GroupItem>{children}</ClayInput.GroupItem>
+	</ClayInput.Group>
 ));
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {

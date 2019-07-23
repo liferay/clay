@@ -10,6 +10,7 @@ import DropDown from '@clayui/drop-down';
 import React, {useEffect, useRef, useState} from 'react';
 import Splotch from './Splotch';
 import tinycolor from 'tinycolor2';
+import {ClayInput} from '@clayui/form';
 import {sub} from '@clayui/shared';
 import {useHexInput} from './hooks';
 
@@ -157,13 +158,9 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 
 			{title && <label>{title}</label>}
 
-			<div className="clay-color input-group" ref={triggerElementRef}>
-				<div
-					className={`input-group-item input-group-item-shrink${
-						showHex ? ' input-group-prepend' : ''
-					}`}
-				>
-					<div className="input-group-text">
+			<ClayInput.Group className="clay-color" ref={triggerElementRef}>
+				<ClayInput.GroupItem prepend={showHex} shrink>
+					<ClayInput.GroupText>
 						<Splotch
 							aria-label={ariaLabels.selectColor}
 							className="dropdown-toggle"
@@ -175,14 +172,14 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 							size={28}
 							value={value}
 						/>
-					</div>
-				</div>
+					</ClayInput.GroupText>
+				</ClayInput.GroupItem>
 
 				{showHex && (
-					<div className="input-group-append input-group-item">
-						<input
+					<ClayInput.GroupItem append>
+						<ClayInput
 							aria-label={sub(ariaLabels.selectionIs, [value])}
-							className="form-control input-group-inset input-group-inset-before"
+							insetBefore
 							onBlur={event => {
 								const newColor = tinycolor(event.target.value);
 
@@ -209,12 +206,12 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 							value={hexInputValue.toUpperCase().substring(0, 6)}
 						/>
 
-						<label className="input-group-inset-item input-group-inset-item-before">
+						<ClayInput.GroupInsetItem before tag="label">
 							{'#'}
-						</label>
-					</div>
+						</ClayInput.GroupInsetItem>
+					</ClayInput.GroupItem>
 				)}
-			</div>
+			</ClayInput.Group>
 
 			<DropDown.Menu
 				active={active}

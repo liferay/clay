@@ -3,7 +3,13 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import ClayForm, {ClayInputWithAutocomplete} from '../src';
+import ClayForm, {
+	ClayCheckbox,
+	ClayInputWithAutocomplete,
+	ClayInputWithMultiSelect,
+	ClayRadio,
+	ClayRadioGroup,
+} from '../src';
 import React from 'react';
 import {storiesOf} from '@storybook/react';
 
@@ -18,7 +24,7 @@ const ClayMultiSelectWithState = (props: any) => {
 
 	return (
 		<div className="sheet">
-			<ClayForm.MultiSelect
+			<ClayInputWithMultiSelect
 				{...props}
 				inputValue={value}
 				items={items}
@@ -38,7 +44,7 @@ const ClayMultiSelectWithAutocomplete = () => {
 
 	return (
 		<div className="sheet">
-			<ClayForm.MultiSelect
+			<ClayInputWithMultiSelect
 				inputValue={value}
 				items={selectedItems}
 				onInputChange={setValue}
@@ -115,7 +121,7 @@ const ClayCheckboxWithState = () => {
 	const [value, setValue] = React.useState<boolean>(false);
 
 	return (
-		<ClayForm.Checkbox
+		<ClayCheckbox
 			checked={value}
 			disabled={boolean('Disabled', false)}
 			indeterminate={boolean('Indeterminate', false)}
@@ -128,14 +134,14 @@ const ClayCheckboxWithState = () => {
 storiesOf('ClayCheckbox', module)
 	.add('default', () => <ClayCheckboxWithState />)
 	.add('hidden label w/ aria-label', () => (
-		<ClayForm.Checkbox
+		<ClayCheckbox
 			aria-label="hello! Can you see me?"
 			checked={boolean('Checked', false)}
 			onChange={() => {}}
 		/>
 	))
 	.add('custom JSX content', () => (
-		<ClayForm.Checkbox
+		<ClayCheckbox
 			checked={boolean('Checked', false)}
 			label="Badge"
 			onChange={() => {}}
@@ -143,22 +149,22 @@ storiesOf('ClayCheckbox', module)
 			<span className="badge badge-primary">
 				<span className="badge-item badge-item-expand">{'10'}</span>
 			</span>
-		</ClayForm.Checkbox>
+		</ClayCheckbox>
 	));
 
 const RadioGroupWithState = ({inline}: {inline?: boolean}) => {
 	const [value, setValue] = React.useState<string>('one');
 
 	return (
-		<ClayForm.RadioGroup
+		<ClayRadioGroup
 			inline={inline}
 			onSelectedValueChange={val => setValue(val as string)}
 			selectedValue={value}
 		>
-			<ClayForm.Radio label="One" value="one" />
-			<ClayForm.Radio label="Two" value="two" />
-			<ClayForm.Radio label="Three" value="three" />
-		</ClayForm.RadioGroup>
+			<ClayRadio label="One" value="one" />
+			<ClayRadio label="Two" value="two" />
+			<ClayRadio label="Three" value="three" />
+		</ClayRadioGroup>
 	);
 };
 

@@ -6,11 +6,11 @@
 
 import classNames from 'classnames';
 import ClayCard from './Card';
-import ClayForm from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClaySticker from '@clayui/sticker';
 import React from 'react';
+import {ClayCheckbox} from '@clayui/form';
 import {ClayDropDownWithBasicItems} from '@clayui/drop-down';
 
 interface IProps {
@@ -147,14 +147,14 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 			selectable={!!onSelectChange}
 		>
 			{onSelectChange && (
-				<ClayForm.Checkbox
+				<ClayCheckbox
 					checked={selected}
 					disabled={false}
 					indeterminate={false}
 					onChange={() => onSelectChange(!selected)}
 				>
 					{headerContent}
-				</ClayForm.Checkbox>
+				</ClayCheckbox>
 			)}
 
 			{!onSelectChange && headerContent}

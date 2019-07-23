@@ -7,7 +7,8 @@
 import classNames from 'classnames';
 import ClayAutocomplete from '@clayui/autocomplete';
 import ClayDropDown from '@clayui/drop-down';
-import ClayIcon from '@clayui/icon';
+import ClayForm from './Form';
+import ClayInput from './Input';
 import ClayLabel from '@clayui/label';
 import React, {useLayoutEffect, useRef, useState} from 'react';
 import {FocusScope, useFocusManagement} from '@clayui/shared';
@@ -75,7 +76,7 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	isValid?: boolean;
 }
 
-const MultiSelect: React.FunctionComponent<IProps> = ({
+const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 	errorMessage,
 	forwardRef,
 	helpText,
@@ -145,16 +146,16 @@ const MultiSelect: React.FunctionComponent<IProps> = ({
 	};
 
 	return (
-		<div
-			className={classNames('form-group', {
+		<ClayForm.Group
+			className={classNames({
 				['has-error']: !isValid,
 			})}
 			ref={forwardRef}
 		>
 			{label && <label>{label}</label>}
 
-			<div className="input-group input-group-stacked-sm-down">
-				<div className="input-group-item">
+			<ClayInput.Group stacked>
+				<ClayInput.GroupItem>
 					<FocusScope arrowKeys={false} focusManager={focusManager}>
 						<div
 							className={classNames(
@@ -266,42 +267,39 @@ const MultiSelect: React.FunctionComponent<IProps> = ({
 					</FocusScope>
 
 					{helpText && (
-						<div className="form-feedback-group">
-							<div className="form-text">{helpText}</div>
-						</div>
+						<ClayForm.FeedbackGroup>
+							<ClayForm.Text>{helpText}</ClayForm.Text>
+						</ClayForm.FeedbackGroup>
 					)}
 
 					{!isValid && errorMessage && (
-						<div className="form-feedback-group">
-							<div className="form-feedback-item">
-								<span className="form-feedback-indicator">
-									<ClayIcon
-										spritemap={spritemap}
-										symbol="info-circle"
-									/>
-								</span>
+						<ClayForm.FeedbackGroup>
+							<ClayForm.FeedbackItem>
+								<ClayForm.FeedbackIndicator
+									spritemap={spritemap}
+									symbol="info-circle"
+								/>
 
 								{errorMessage}
-							</div>
-						</div>
+							</ClayForm.FeedbackItem>
+						</ClayForm.FeedbackGroup>
 					)}
-				</div>
-			</div>
-		</div>
+				</ClayInput.GroupItem>
+			</ClayInput.Group>
+		</ClayForm.Group>
 	);
 };
 
-export default React.forwardRef<HTMLDivElement, Omit<IProps, 'forwardRef'>>(
-	(props, ref?) => {
-		const defaultRef = useRef<HTMLDivElement>(null);
+export const ClayInputWithMultiSelect = React.forwardRef<
+	HTMLDivElement,
+	Omit<IProps, 'forwardRef'>
+>((props, ref?) => {
+	const defaultRef = useRef<HTMLDivElement>(null);
 
-		return (
-			<MultiSelect
-				forwardRef={
-					(ref as React.RefObject<HTMLDivElement>) || defaultRef
-				}
-				{...props}
-			/>
-		);
-	}
-);
+	return (
+		<ClayMultiSelect
+			forwardRef={(ref as React.RefObject<HTMLDivElement>) || defaultRef}
+			{...props}
+		/>
+	);
+});

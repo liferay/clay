@@ -1,3 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ClayForm FeedbackGroup renders 1`] = `
+<div
+  className="form-feedback-group"
+/>
+`;
+
+exports[`ClayForm FeedbackIndicator renders 1`] = `
+<span
+  className="form-feedback-indicator"
+>
+  <svg
+    className="lexicon-icon lexicon-icon-test"
+    role="presentation"
+  >
+    <use
+      xlinkHref="/some/path#test"
+    />
+  </svg>
+</span>
+`;
+
+exports[`ClayForm FeedbackItem renders 1`] = `
+<div
+  className="form-feedback-item"
+/>
+`;
+
+exports[`ClayForm Group renders 1`] = `
+<div
+  className="form-group"
+/>
+`;
+
+exports[`ClayForm Input.Group renders 1`] = `
+<div
+  className="input-group"
+/>
+`;
+
+exports[`ClayForm Input.GroupItem renders 1`] = `
+<div
+  className="input-group-item"
+/>
+`;
+
+exports[`ClayForm Text renders 1`] = `
+<div
+  className="form-text"
+/>
+`;
+
 exports[`ClayForm renders 1`] = `null`;

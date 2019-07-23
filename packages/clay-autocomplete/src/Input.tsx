@@ -4,28 +4,19 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import classNames from 'classnames';
-import ClayForm from '@clayui/form';
 import Context from './Context';
 import React, {useContext} from 'react';
+import {ClayInput} from '@clayui/form';
 
 export interface IProps
 	extends React.InputHTMLAttributes<HTMLInputElement>,
-		React.ComponentProps<typeof ClayForm.Input> {}
+		React.ComponentProps<typeof ClayInput> {}
 
 const ClayAutocompleteInput = React.forwardRef<HTMLInputElement, IProps>(
-	({className, ...othersProps}: IProps, ref) => {
+	(props, ref) => {
 		const {loading} = useContext(Context);
 
-		return (
-			<ClayForm.Input
-				{...othersProps}
-				className={classNames(className, {
-					'input-group-inset input-group-inset-after': loading,
-				})}
-				ref={ref}
-			/>
-		);
+		return <ClayInput {...props} insetAfter={loading} ref={ref} />;
 	}
 );
 

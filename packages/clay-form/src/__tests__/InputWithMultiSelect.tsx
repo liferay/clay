@@ -6,15 +6,15 @@
 
 import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
-import ClayMultiSelect from '../MultiSelect';
+import {ClayInputWithMultiSelect} from '../InputWithMultiSelect';
 import {cleanup, fireEvent, render} from '@testing-library/react';
 
-const ClayMultiSelectWithState = (props: any) => {
+const ClayInputWithMultiSelectWithState = (props: any) => {
 	const [items, setItems] = React.useState(props.items as [] | []);
 	const [value, setValue] = React.useState('');
 
 	return (
-		<ClayMultiSelect
+		<ClayInputWithMultiSelect
 			inputValue={value}
 			items={items}
 			onInputChange={setValue}
@@ -25,10 +25,13 @@ const ClayMultiSelectWithState = (props: any) => {
 	);
 };
 
-describe('ClayMultiSelect', () => {
+describe('ClayInputWithMultiSelect', () => {
 	it('renders', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayMultiSelectWithState items={[]} spritemap="/foo/bar" />
+			<ClayInputWithMultiSelectWithState
+				items={[]}
+				spritemap="/foo/bar"
+			/>
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
@@ -36,7 +39,7 @@ describe('ClayMultiSelect', () => {
 
 	it('renders with items', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayMultiSelectWithState
+			<ClayInputWithMultiSelectWithState
 				items={['foo', 'bar', 'baz']}
 				spritemap="/foo/bar"
 			/>
@@ -47,7 +50,7 @@ describe('ClayMultiSelect', () => {
 
 	it('renders as not valid', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayMultiSelectWithState
+			<ClayInputWithMultiSelectWithState
 				errorMessage="WRONG"
 				isValid={false}
 				items={['foo', 'bar', 'baz']}
@@ -63,7 +66,7 @@ describe('Interactions', () => {
 	afterEach(cleanup);
 
 	it('adding text and hitting `,` should add a new items', () => {
-		const {container} = render(<ClayMultiSelectWithState />);
+		const {container} = render(<ClayInputWithMultiSelectWithState />);
 
 		const input = container.querySelector('input');
 
@@ -90,7 +93,7 @@ describe('Interactions', () => {
 		const onItemsChangeFn = jest.fn();
 
 		const {container} = render(
-			<ClayMultiSelectWithState
+			<ClayInputWithMultiSelectWithState
 				items={['foo']}
 				onItemsChange={onItemsChangeFn}
 				spritemap="/foo/bar"
@@ -113,7 +116,7 @@ describe('Interactions', () => {
 		const onItemsChangeFn = jest.fn();
 
 		const {container} = render(
-			<ClayMultiSelectWithState
+			<ClayInputWithMultiSelectWithState
 				items={['foo', 'bar']}
 				onItemsChange={onItemsChangeFn}
 				spritemap="/foo/bar"
@@ -143,7 +146,7 @@ describe('Interactions', () => {
 		const onItemsChangeFn = jest.fn();
 
 		render(
-			<ClayMultiSelectWithState
+			<ClayInputWithMultiSelectWithState
 				items={['foo']}
 				onItemsChange={onItemsChangeFn}
 				sourceItems={['one', 'two', 'three', 'four']}

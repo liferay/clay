@@ -7,6 +7,7 @@
 import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
 import React from 'react';
+import {ClayInput} from '@clayui/form';
 
 interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	/**
@@ -33,24 +34,20 @@ const ClayDropDownSearch: React.FunctionComponent<IProps> = ({
 	return (
 		<form className={className}>
 			<div className="dropdown-section">
-				<div className="input-group input-group-sm">
-					<div className="input-group-item">
-						<input
-							{...otherProps}
-							className="form-control input-group-inset input-group-inset-after"
-							type="text"
-						/>
+				<ClayInput.Group small>
+					<ClayInput.GroupItem>
+						<ClayInput {...otherProps} insetAfter type="text" />
 
-						<span className="input-group-inset-item input-group-inset-item-after">
+						<ClayInput.GroupInsetItem after tag="span">
 							<ClayButton displayType="unstyled" type="button">
 								<ClayIcon
 									spritemap={spritemap}
 									symbol="search"
 								/>
 							</ClayButton>
-						</span>
-					</div>
-				</div>
+						</ClayInput.GroupInsetItem>
+					</ClayInput.GroupItem>
+				</ClayInput.Group>
 			</div>
 		</form>
 	);
