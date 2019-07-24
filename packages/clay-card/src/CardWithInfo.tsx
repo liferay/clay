@@ -87,7 +87,7 @@ interface IProps {
 	title: string;
 }
 
-export const ClayCardWithFile: React.FunctionComponent<IProps> = ({
+export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 	actions,
 	description,
 	flushHorizontal,

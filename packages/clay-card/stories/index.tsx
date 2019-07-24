@@ -6,8 +6,8 @@
 
 import '@clayui/css/lib/css/atlas.css';
 import ClayCard, {
-	ClayCardWithFile,
 	ClayCardWithHorizontal,
+	ClayCardWithInfo,
 	ClayCardWithNavigation,
 	ClayCardWithUser,
 } from '../src';
@@ -39,13 +39,13 @@ const ClayCheckboxWithState = (props: any) => {
 };
 
 storiesOf('ClayCard', module)
-	.add('ClayCardWithFile', () => {
+	.add('ClayCardWithInfo', () => {
 		const [value, setValue] = React.useState<boolean>(false);
 
 		return (
 			<div className="row">
 				<div className="col-md-4">
-					<ClayCardWithFile
+					<ClayCardWithInfo
 						description="A cool description"
 						href="#"
 						labels={[
@@ -60,7 +60,7 @@ storiesOf('ClayCard', module)
 				</div>
 
 				<div className="col-md-4">
-					<ClayCardWithFile
+					<ClayCardWithInfo
 						actions={[
 							{
 								label: 'clickable',
@@ -108,7 +108,7 @@ storiesOf('ClayCard', module)
 		return (
 			<div className="row">
 				<div className="col-md-4">
-					<ClayCardWithFile
+					<ClayCardWithInfo
 						description="Author Action"
 						flushHorizontal={flushHorizontal}
 						flushVertical={flushVertical}
@@ -128,7 +128,7 @@ storiesOf('ClayCard', module)
 				</div>
 
 				<div className="col-md-4">
-					<ClayCardWithFile
+					<ClayCardWithInfo
 						description="Author Action"
 						flushHorizontal={flushHorizontal}
 						flushVertical={flushVertical}

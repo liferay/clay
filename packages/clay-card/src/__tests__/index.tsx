@@ -5,8 +5,8 @@
  */
 
 import ClayCard, {
-	ClayCardWithFile,
 	ClayCardWithHorizontal,
+	ClayCardWithInfo,
 	ClayCardWithNavigation,
 	ClayCardWithUser,
 } from '../index';
@@ -708,12 +708,12 @@ describe('ClayCardWithHorizontal', () => {
 	});
 });
 
-describe('ClayCardWithFile', () => {
+describe('ClayCardWithInfo', () => {
 	afterEach(cleanup);
 
 	it('renders as not selectable', () => {
 		const {container} = render(
-			<ClayCardWithFile
+			<ClayCardWithInfo
 				description="A cool description"
 				href="#"
 				labels={[
@@ -734,7 +734,7 @@ describe('ClayCardWithFile', () => {
 		const onSelectChangeFn = jest.fn();
 
 		const {container} = render(
-			<ClayCardWithFile
+			<ClayCardWithInfo
 				href="#"
 				onSelectChange={onSelectChangeFn}
 				selected={false}
@@ -755,7 +755,7 @@ describe('ClayCardWithFile', () => {
 		const onSelectChangeFn = jest.fn();
 
 		const {container} = render(
-			<ClayCardWithFile
+			<ClayCardWithInfo
 				actions={[
 					{
 						label: 'clickable',

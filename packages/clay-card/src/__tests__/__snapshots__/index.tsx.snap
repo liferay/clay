@@ -1331,198 +1331,6 @@ exports[`ClayCard renders a group of ClayCards 1`] = `
 </div>
 `;
 
-exports[`ClayCardWithFile renders as not selectable 1`] = `
-<div>
-  <div
-    class="card card-type-asset file-card"
-  >
-    <div
-      class="card-item-first aspect-ratio"
-    >
-      <div
-        class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
-      >
-        <svg
-          class="lexicon-icon lexicon-icon-documents-and-media"
-          role="presentation"
-        >
-          <use
-            xlink:href="/some/spritemap#documents-and-media"
-          />
-        </svg>
-      </div>
-      <span
-        class="sticker sticker-rounded sticker-primary sticker-bottom-left"
-      >
-        <span
-          class="sticker-overlay"
-        >
-          <svg
-            class="lexicon-icon lexicon-icon-document-text"
-            role="presentation"
-          >
-            <use
-              xlink:href="/some/spritemap#document-text"
-            />
-          </svg>
-        </span>
-      </span>
-    </div>
-    <div
-      class="card-body"
-    >
-      <div
-        class="card-row"
-      >
-        <div
-          class="autofit-col autofit-col-expand"
-        >
-          <h3
-            class="card-title"
-            title="Very Large File"
-          >
-            <span
-              class="text-truncate-inline"
-            >
-              <a
-                class="text-truncate"
-                href="#"
-              >
-                Very Large File
-              </a>
-            </span>
-          </h3>
-          <span
-            class="card-subtitle"
-            title="A cool description"
-          >
-            <span
-              class="text-truncate-inline"
-            >
-              <span
-                class="text-truncate"
-              >
-                A cool description
-              </span>
-            </span>
-          </span>
-          <div
-            class="card-detail"
-          >
-            <span
-              class="label label-success"
-            >
-              <span
-                class="label-item label-item-expand"
-              >
-                Awesome
-              </span>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayCardWithFile renders as selectable 1`] = `
-<div>
-  <div
-    class="card-type-asset file-card form-check form-check-card form-check-top-left"
-  >
-    <div
-      class="card"
-    >
-      <div
-        class="custom-control custom-checkbox"
-      >
-        <label>
-          <input
-            class="custom-control-input"
-            type="checkbox"
-            value="false"
-          />
-          <span
-            class="custom-control-label"
-          />
-          <div
-            class="card-item-first aspect-ratio"
-          >
-            <div
-              class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
-            >
-              <svg
-                class="lexicon-icon lexicon-icon-documents-and-media"
-                role="presentation"
-              >
-                <use
-                  xlink:href="/path/to/some/resource.svg#documents-and-media"
-                />
-              </svg>
-            </div>
-            <span
-              class="sticker sticker-rounded sticker-primary sticker-bottom-left"
-            >
-              <span
-                class="sticker-overlay"
-              >
-                <svg
-                  class="lexicon-icon lexicon-icon-document-text"
-                  role="presentation"
-                >
-                  <use
-                    xlink:href="/path/to/some/resource.svg#document-text"
-                  />
-                </svg>
-              </span>
-            </span>
-          </div>
-        </label>
-      </div>
-      <div
-        class="card-body"
-      >
-        <div
-          class="card-row"
-        >
-          <div
-            class="autofit-col autofit-col-expand"
-          >
-            <h3
-              class="card-title"
-              title="Foo Bar"
-            >
-              <span
-                class="text-truncate-inline"
-              >
-                <a
-                  class="text-truncate"
-                  href="#"
-                >
-                  Foo Bar
-                </a>
-              </span>
-            </h3>
-            <span
-              class="card-subtitle"
-            >
-              <span
-                class="text-truncate-inline"
-              >
-                <span
-                  class="text-truncate"
-                />
-              </span>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`ClayCardWithHorizontal renders as not selectable 1`] = `
 <div>
   <div
@@ -1652,6 +1460,198 @@ exports[`ClayCardWithHorizontal renders as selectable 1`] = `
           </div>
         </div>
       </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardWithInfo renders as not selectable 1`] = `
+<div>
+  <div
+    class="card card-type-asset file-card"
+  >
+    <div
+      class="card-item-first aspect-ratio"
+    >
+      <div
+        class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
+      >
+        <svg
+          class="lexicon-icon lexicon-icon-documents-and-media"
+          role="presentation"
+        >
+          <use
+            xlink:href="/some/spritemap#documents-and-media"
+          />
+        </svg>
+      </div>
+      <span
+        class="sticker sticker-rounded sticker-primary sticker-bottom-left"
+      >
+        <span
+          class="sticker-overlay"
+        >
+          <svg
+            class="lexicon-icon lexicon-icon-document-text"
+            role="presentation"
+          >
+            <use
+              xlink:href="/some/spritemap#document-text"
+            />
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div
+      class="card-body"
+    >
+      <div
+        class="card-row"
+      >
+        <div
+          class="autofit-col autofit-col-expand"
+        >
+          <h3
+            class="card-title"
+            title="Very Large File"
+          >
+            <span
+              class="text-truncate-inline"
+            >
+              <a
+                class="text-truncate"
+                href="#"
+              >
+                Very Large File
+              </a>
+            </span>
+          </h3>
+          <span
+            class="card-subtitle"
+            title="A cool description"
+          >
+            <span
+              class="text-truncate-inline"
+            >
+              <span
+                class="text-truncate"
+              >
+                A cool description
+              </span>
+            </span>
+          </span>
+          <div
+            class="card-detail"
+          >
+            <span
+              class="label label-success"
+            >
+              <span
+                class="label-item label-item-expand"
+              >
+                Awesome
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardWithInfo renders as selectable 1`] = `
+<div>
+  <div
+    class="card-type-asset file-card form-check form-check-card form-check-top-left"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="custom-control custom-checkbox"
+      >
+        <label>
+          <input
+            class="custom-control-input"
+            type="checkbox"
+            value="false"
+          />
+          <span
+            class="custom-control-label"
+          />
+          <div
+            class="card-item-first aspect-ratio"
+          >
+            <div
+              class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-documents-and-media"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/path/to/some/resource.svg#documents-and-media"
+                />
+              </svg>
+            </div>
+            <span
+              class="sticker sticker-rounded sticker-primary sticker-bottom-left"
+            >
+              <span
+                class="sticker-overlay"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-document-text"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/path/to/some/resource.svg#document-text"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+        </label>
+      </div>
+      <div
+        class="card-body"
+      >
+        <div
+          class="card-row"
+        >
+          <div
+            class="autofit-col autofit-col-expand"
+          >
+            <h3
+              class="card-title"
+              title="Foo Bar"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <a
+                  class="text-truncate"
+                  href="#"
+                >
+                  Foo Bar
+                </a>
+              </span>
+            </h3>
+            <span
+              class="card-subtitle"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                />
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
