@@ -53,7 +53,7 @@ const BreadcrumbWithState = () => {
 };
 
 storiesOf('ClayNavigation', module)
-	.add('default', () => (
+	.add('w/ breadcrumb', () => (
 		<ClayNavigation.Breadcrumb
 			ellipsisBuffer={number('Ellipsis Buffer', 3)}
 			items={[
@@ -106,7 +106,7 @@ storiesOf('ClayNavigation', module)
 			spritemap={spritemap}
 		/>
 	))
-	.add('without anchors', () => {
+	.add('w/ breadcrumb without anchors', () => {
 		const onItemClick = (event: any) => alert(event.target.title);
 
 		return (
@@ -163,4 +163,4 @@ storiesOf('ClayNavigation', module)
 			/>
 		);
 	})
-	.add('using state', () => <BreadcrumbWithState />);
+	.add('w/ breadcrumb using state', () => <BreadcrumbWithState />);
