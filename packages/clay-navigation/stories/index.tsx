@@ -12,6 +12,46 @@ import {storiesOf} from '@storybook/react';
 
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
+const BreadcrumbWithState = () => {
+	const [active, setActive] = React.useState<number>(0);
+
+	const items = [
+		{
+			active: active === 0,
+			label: 'Home',
+			onClick: () => setActive(0),
+		},
+		{
+			active: active === 1,
+			label: 'Blog',
+			onClick: () => setActive(1),
+		},
+		{
+			active: active === 2,
+			label: 'About',
+			onClick: () => setActive(2),
+		},
+		{
+			active: active === 3,
+			label: 'Partners',
+			onClick: () => setActive(3),
+		},
+		{
+			active: active === 4,
+			label: 'Contact Us',
+			onClick: () => setActive(4),
+		},
+	];
+
+	return (
+		<ClayNavigation.Breadcrumb
+			ellipsisBuffer={1}
+			items={items}
+			spritemap={spritemap}
+		/>
+	);
+};
+
 storiesOf('ClayNavigation', module)
 	.add('default', () => (
 		<ClayNavigation.Breadcrumb
@@ -122,4 +162,5 @@ storiesOf('ClayNavigation', module)
 				spritemap={spritemap}
 			/>
 		);
-	});
+	})
+	.add('using state', () => <BreadcrumbWithState />);
