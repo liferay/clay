@@ -16,11 +16,6 @@ interface IProps {
 	description?: React.ReactText;
 
 	/**
-	 * Path or url for click through
-	 */
-	href?: string;
-
-	/**
 	 * Flag to indicate if card should be the `horizontal` variant
 	 */
 	horizontal?: boolean;
@@ -29,6 +24,11 @@ interface IProps {
 	 * Icon to display when card is `horizontal`
 	 */
 	horizontalSymbol?: string;
+
+	/**
+	 * Path or url for click through
+	 */
+	href?: string;
 
 	/**
 	 * Callback for when card is clicked on

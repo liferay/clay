@@ -79,7 +79,7 @@ export const ClayDropDownWithBasicItems: React.FunctionComponent<IProps> = ({
 			<ClayDropDown.ItemList>
 				{items.map((item: IItem, i: number) => {
 					if (item.type === 'divider') {
-						return <ClayDropDown.Divider key={i} />;
+						return <ClayDropDown.Divider />;
 					}
 
 					return (

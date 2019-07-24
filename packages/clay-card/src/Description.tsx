@@ -5,13 +5,14 @@
  */
 
 import classNames from 'classnames';
+import Context from './Context';
 import React from 'react';
 
 type CardDescriptionDisplayType = 'text' | 'title' | 'subtitle';
 
 interface ICardDescriptionProps
 	extends React.HTMLAttributes<
-		HTMLHeadingElement | HTMLDivElement | HTMLSpanElement
+		HTMLAnchorElement | HTMLDivElement | HTMLSpanElement
 	> {
 	/**
 	 * Type of description that can be applied for a text.
@@ -29,12 +30,6 @@ interface ICardDescriptionProps
 	truncate?: boolean;
 }
 
-const CARD_TYPE_ELEMENTS = {
-	subtitle: 'span',
-	text: 'div',
-	title: 'h3',
-};
-
 const ClayCardDescription: React.FunctionComponent<ICardDescriptionProps> = ({
 	children,
 	className,
@@ -43,24 +38,22 @@ const ClayCardDescription: React.FunctionComponent<ICardDescriptionProps> = ({
 	truncate = true,
 	...otherProps
 }: ICardDescriptionProps) => {
-	const OuterTag = CARD_TYPE_ELEMENTS[displayType] as ('span' | 'div' | 'h3');
-	const InnerTag = href ? 'a' : 'span';
+	const {interactive} = React.useContext(Context);
+
+	const interactiveTag = interactive ? 'span' : 'div';
+
+	const TagName = href ? 'a' : interactiveTag;
 
 	return (
-		<OuterTag
-			className={classNames(className, `card-${displayType}`)}
-			title={children ? children.toString() : undefined}
+		<TagName
+			className={classNames(className, `card-${displayType}`, {
+				'text-truncate': truncate,
+			})}
+			href={href}
 			{...otherProps}
 		>
-			<span className={truncate ? 'text-truncate-inline' : ''}>
-				<InnerTag
-					className={truncate ? 'text-truncate' : ''}
-					href={href}
-				>
-					{children}
-				</InnerTag>
-			</span>
-		</OuterTag>
+			{children}
+		</TagName>
 	);
 };
 
