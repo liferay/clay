@@ -10,7 +10,12 @@ import React, {useEffect, useState} from 'react';
 interface IProps {
 	currentTime: string;
 	onTimeChange: (hours: number | string, minutes: number | string) => void;
-	spritemap: string;
+
+	/**
+	 * Path to the location of the spritemap resource.
+	 */
+	spritemap?: string;
+
 	timezone?: string;
 }
 

@@ -53,7 +53,7 @@ interface IProps {
 	/**
 	 * Path to clay icon spritemap
 	 */
-	spritemap: string;
+	spritemap?: string;
 
 	/**
 	 * Displays the color of the user icon

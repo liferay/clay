@@ -118,7 +118,10 @@ describe('ClayPagination', () => {
 
 		fireEvent.click(getAllByText('...')[0] as HTMLElement, {});
 
-		fireEvent.click(getByText(document.body, '4') as HTMLElement, {});
+		fireEvent.click(
+			getByTestId(document.body, 'testId4') as HTMLElement,
+			{}
+		);
 
 		expect(changeMock).toHaveBeenLastCalledWith(4);
 	});

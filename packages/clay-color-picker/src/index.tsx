@@ -93,9 +93,9 @@ interface IProps {
 	showHex?: boolean;
 
 	/**
-	 * Path to spritemap for Icon
+	 * Path to the location of the spritemap resource.
 	 */
-	spritemap: string;
+	spritemap?: string;
 
 	/**
 	 * Title to describe the color picker form element

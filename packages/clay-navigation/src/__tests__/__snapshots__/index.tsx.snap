@@ -1,0 +1,295 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayNavigation renders 1`] = `
+<div>
+  <div />
+</div>
+`;
+
+exports[`ClayNavigation renders a Breadcrumb 1`] = `
+<div>
+  <ol
+    class="breadcrumb"
+  >
+    <li
+      class="breadcrumb-item active"
+    >
+      <span
+        class="breadcrumb-text-truncate"
+        data-testid="testId1"
+        title="1"
+      >
+        1
+      </span>
+    </li>
+    <li
+      class="breadcrumb-item"
+    >
+      <a
+        class="breadcrumb-link"
+        data-testid="testId2"
+        href="#2"
+        role="button"
+      >
+        <span
+          class="breadcrumb-text-truncate"
+        >
+          2
+        </span>
+      </a>
+    </li>
+    <li
+      class="dropdown breadcrumb-item"
+    >
+      <span
+        style="display: inline-block;"
+      >
+        <button
+          class="dropdown-toggle breadcrumb-link btn btn-unstyled"
+          data-testid="breadcrumbDropdownTrigger"
+          type="button"
+        >
+          <svg
+            class="lexicon-icon lexicon-icon-ellipsis-h"
+            role="presentation"
+          >
+            <use
+              xlink:href="path/to/spritemap#ellipsis-h"
+            />
+          </svg>
+          <svg
+            class="lexicon-icon lexicon-icon-caret-bottom"
+            role="presentation"
+          >
+            <use
+              xlink:href="path/to/spritemap#caret-bottom"
+            />
+          </svg>
+        </button>
+      </span>
+    </li>
+    <li
+      class="breadcrumb-item"
+    >
+      <a
+        class="breadcrumb-link"
+        data-testid="testId5"
+        href="#5"
+        role="button"
+      >
+        <span
+          class="breadcrumb-text-truncate"
+        >
+          5
+        </span>
+      </a>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`ClayNavigation renders a Breadcrumb with properties passed by \`ellipsisProps\` 1`] = `
+<div>
+  <ol
+    class="breadcrumb"
+  >
+    <li
+      class="breadcrumb-item active"
+    >
+      <span
+        class="breadcrumb-text-truncate"
+        data-testid="testId1"
+        title="1"
+      >
+        1
+      </span>
+    </li>
+    <li
+      class="breadcrumb-item"
+    >
+      <a
+        class="breadcrumb-link"
+        data-testid="testId2"
+        href="#2"
+        role="button"
+      >
+        <span
+          class="breadcrumb-text-truncate"
+        >
+          2
+        </span>
+      </a>
+    </li>
+    <li
+      class="dropdown breadcrumb-item"
+      style="font-size: 15px;"
+    >
+      <span
+        style="display: inline-block;"
+      >
+        <button
+          class="dropdown-toggle breadcrumb-link btn btn-unstyled"
+          data-testid="breadcrumbDropdownTrigger"
+          type="button"
+        >
+          <svg
+            class="lexicon-icon lexicon-icon-ellipsis-h"
+            role="presentation"
+          >
+            <use
+              xlink:href="path/to/spritemap#ellipsis-h"
+            />
+          </svg>
+          <svg
+            class="lexicon-icon lexicon-icon-caret-bottom"
+            role="presentation"
+          >
+            <use
+              xlink:href="path/to/spritemap#caret-bottom"
+            />
+          </svg>
+        </button>
+      </span>
+    </li>
+    <li
+      class="breadcrumb-item"
+    >
+      <a
+        class="breadcrumb-link"
+        data-testid="testId5"
+        href="#5"
+        role="button"
+      >
+        <span
+          class="breadcrumb-text-truncate"
+        >
+          5
+        </span>
+      </a>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`ClayNavigation should emit an event when an item is clicked 1`] = `
+<div>
+  <ol
+    class="breadcrumb"
+  >
+    <li
+      class="breadcrumb-item active"
+    >
+      <span
+        class="breadcrumb-text-truncate"
+        data-testid="testId1"
+        title="1"
+      >
+        1
+      </span>
+    </li>
+    <li
+      class="breadcrumb-item"
+    >
+      <button
+        class="breadcrumb-link btn btn-unstyled"
+        data-testid="testId2"
+        title="2"
+        type="button"
+      >
+        <span
+          class="breadcrumb-text-truncate"
+        >
+          2
+        </span>
+      </button>
+    </li>
+    <li
+      class="dropdown breadcrumb-item"
+    >
+      <span
+        style="display: inline-block;"
+      >
+        <button
+          class="dropdown-toggle breadcrumb-link btn btn-unstyled"
+          data-testid="breadcrumbDropdownTrigger"
+          type="button"
+        >
+          <svg
+            class="lexicon-icon lexicon-icon-ellipsis-h"
+            role="presentation"
+          >
+            <use
+              xlink:href="path/to/spritemap#ellipsis-h"
+            />
+          </svg>
+          <svg
+            class="lexicon-icon lexicon-icon-caret-bottom"
+            role="presentation"
+          >
+            <use
+              xlink:href="path/to/spritemap#caret-bottom"
+            />
+          </svg>
+        </button>
+      </span>
+    </li>
+    <li
+      class="breadcrumb-item"
+    >
+      <button
+        class="breadcrumb-link btn btn-unstyled"
+        data-testid="testId5"
+        title="5"
+        type="button"
+      >
+        <span
+          class="breadcrumb-text-truncate"
+        >
+          5
+        </span>
+      </button>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`ClayNavigation should throw a warning when not passing \`active\` to any \`items\` on Breadcrumb 1`] = `
+<div>
+  <ol
+    class="breadcrumb"
+  >
+    <li
+      class="breadcrumb-item"
+    >
+      <a
+        class="breadcrumb-link"
+        data-testid="testId1"
+        href="#1"
+        role="button"
+      >
+        <span
+          class="breadcrumb-text-truncate"
+        >
+          1
+        </span>
+      </a>
+    </li>
+    <li
+      class="breadcrumb-item"
+    >
+      <a
+        class="breadcrumb-link"
+        data-testid="testId2"
+        href="#2"
+        role="button"
+      >
+        <span
+          class="breadcrumb-text-truncate"
+        >
+          2
+        </span>
+      </a>
+    </li>
+  </ol>
+</div>
+`;

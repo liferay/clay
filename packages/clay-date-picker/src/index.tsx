@@ -51,7 +51,7 @@ interface IProps {
 	 * Function that should return the React element to
 	 * render on the datepicker footer.
 	 */
-	footerElement?: (object: {spritemap: string}) => ReactNode;
+	footerElement?: (object: {spritemap?: string}) => ReactNode;
 
 	/**
 	 * Id to be applied to the element.
@@ -89,9 +89,9 @@ interface IProps {
 	placeholder?: string;
 
 	/**
-	 * The path to the SVG spritemap file containing the icons.
+	 * Path to the location of the spritemap resource.
 	 */
-	spritemap: string;
+	spritemap?: string;
 
 	/**
 	 * Flag to enable datetime selection.

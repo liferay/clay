@@ -15,9 +15,9 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	onChange: (event: React.FormEvent<HTMLInputElement>) => void;
 
 	/**
-	 * Path to icon spritemap from clay-css.
+	 * Path to the location of the spritemap resource.
 	 */
-	spritemap: string;
+	spritemap?: string;
 
 	/**
 	 * Value of the searchInput
