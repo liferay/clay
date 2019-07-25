@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/label",
-	"version": "3.0.0-milestone.1",
+	"version": "3.0.0-milestone.2",
 	"description": "ClayLabel component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-label",
@@ -26,11 +26,11 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/icon": "^3.0.0-milestone.1",
+		"@clayui/icon": "^3.0.0-milestone.2",
 		"classnames": "^2.2.6"
 	},
 	"devDependencies": {
-		"@clayui/css": "^3.0.0-milestone.1"
+		"@clayui/css": "^3.0.0-milestone.2"
 	},
 	"peerDependencies": {
 		"react": "^16.8.1",
