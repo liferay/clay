@@ -139,7 +139,7 @@ describe('ClayNavigation', () => {
 			/>
 		);
 
-		fireEvent.click(getByTestId('testId1'));
+		fireEvent.click(getByTestId('testId5'));
 
 		expect(itemClickMock).toHaveBeenCalled();
 
