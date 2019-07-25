@@ -49,9 +49,9 @@ export const BreadcrumbItem = ({
 				href={href}
 				role="button"
 			>
-				{label}
+				<span className="breadcrumb-text-truncate">{label}</span>
 			</a>
-		) : onClick ? (
+		) : !active && onClick ? (
 			<ClayButton
 				className="breadcrumb-link"
 				data-testid={`testId${label}`}
@@ -59,9 +59,7 @@ export const BreadcrumbItem = ({
 				onClick={onClick}
 				title={label}
 			>
-				<span className="breadcrumb-text-truncate">
-					{label}
-				</span>
+				<span className="breadcrumb-text-truncate">{label}</span>
 			</ClayButton>
 		) : (
 			<span
