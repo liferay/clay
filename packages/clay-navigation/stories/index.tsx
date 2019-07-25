@@ -107,7 +107,8 @@ storiesOf('ClayNavigation', module)
 		/>
 	))
 	.add('w/ breadcrumb without anchors', () => {
-		const onItemClick = (event: any) => alert(event.target.title);
+		const onItemClick = (event: any) =>
+			alert(event.target.parentElement.title);
 
 		return (
 			<ClayNavigation.Breadcrumb
