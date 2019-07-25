@@ -31,7 +31,11 @@ exports[`ClayNavigation renders a Breadcrumb 1`] = `
         href="#2"
         role="button"
       >
-        2
+        <span
+          class="breadcrumb-text-truncate"
+        >
+          2
+        </span>
       </a>
     </li>
     <li
@@ -73,7 +77,11 @@ exports[`ClayNavigation renders a Breadcrumb 1`] = `
         href="#5"
         role="button"
       >
-        5
+        <span
+          class="breadcrumb-text-truncate"
+        >
+          5
+        </span>
       </a>
     </li>
   </ol>
@@ -105,7 +113,11 @@ exports[`ClayNavigation renders a Breadcrumb with properties passed by \`ellipsi
         href="#2"
         role="button"
       >
-        2
+        <span
+          class="breadcrumb-text-truncate"
+        >
+          2
+        </span>
       </a>
     </li>
     <li
@@ -148,7 +160,11 @@ exports[`ClayNavigation renders a Breadcrumb with properties passed by \`ellipsi
         href="#5"
         role="button"
       >
-        5
+        <span
+          class="breadcrumb-text-truncate"
+        >
+          5
+        </span>
       </a>
     </li>
   </ol>
@@ -163,25 +179,28 @@ exports[`ClayNavigation should emit an event when an item is clicked 1`] = `
     <li
       class="breadcrumb-item active"
     >
-      <button
-        class="breadcrumb-text-truncate btn btn-unstyled"
+      <span
+        class="breadcrumb-text-truncate"
         data-testid="testId1"
         title="1"
-        type="button"
       >
         1
-      </button>
+      </span>
     </li>
     <li
       class="breadcrumb-item"
     >
       <button
-        class="breadcrumb-text-truncate btn btn-unstyled"
+        class="breadcrumb-link btn btn-unstyled"
         data-testid="testId2"
         title="2"
         type="button"
       >
-        2
+        <span
+          class="breadcrumb-text-truncate"
+        >
+          2
+        </span>
       </button>
     </li>
     <li
@@ -218,12 +237,16 @@ exports[`ClayNavigation should emit an event when an item is clicked 1`] = `
       class="breadcrumb-item"
     >
       <button
-        class="breadcrumb-text-truncate btn btn-unstyled"
+        class="breadcrumb-link btn btn-unstyled"
         data-testid="testId5"
         title="5"
         type="button"
       >
-        5
+        <span
+          class="breadcrumb-text-truncate"
+        >
+          5
+        </span>
       </button>
     </li>
   </ol>
@@ -244,7 +267,11 @@ exports[`ClayNavigation should throw a warning when not passing \`active\` to an
         href="#1"
         role="button"
       >
-        1
+        <span
+          class="breadcrumb-text-truncate"
+        >
+          1
+        </span>
       </a>
     </li>
     <li
@@ -256,7 +283,11 @@ exports[`ClayNavigation should throw a warning when not passing \`active\` to an
         href="#2"
         role="button"
       >
-        2
+        <span
+          class="breadcrumb-text-truncate"
+        >
+          2
+        </span>
       </a>
     </li>
   </ol>
