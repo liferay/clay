@@ -6,7 +6,7 @@
 
 import classNames from 'classnames';
 import ClayAutocomplete from '@clayui/autocomplete';
-import ClayDropDown from '@clayui/drop-down/src';
+import ClayDropDown from '@clayui/drop-down';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import React, {useLayoutEffect, useRef, useState} from 'react';
