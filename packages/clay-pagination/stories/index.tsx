@@ -165,11 +165,28 @@ storiesOf('ClayPagination', module)
 		return <PaginationBar numberOfItems={500} />;
 	})
 	.add('using ClayPaginationWithBar component', () => {
+		const deltas = [
+			{
+				href: '#1',
+				value: 1,
+			},
+			{
+				value: 2,
+			},
+			{
+				href: '#3',
+				value: 3,
+			},
+			{
+				value: 4,
+			},
+		];
+
 		return (
 			<ClayPaginationWithBar
+				deltas={deltas}
 				ellipsisBuffer={number('Ellipsis Buffer: ', 3)}
 				initialActivePage={number('Selected page: ', 1)}
-				initialSelectedDelta={number('Selected delta: ', 10)}
 				spritemap={spritemap}
 				totalItems={number('Number of items: ', 21)}
 			/>

@@ -12,13 +12,38 @@ import ClayPagination from '../src/index';
 import React, {useState} from 'react';
 import {noop, sub} from '@clayui/shared';
 
-const defaultDeltas = [10, 20, 30, 50];
+const defaultDeltas = [
+	{
+		value: 10,
+	},
+	{
+		value: 20,
+	},
+	{
+		value: 30,
+	},
+	{
+		value: 50,
+	},
+];
+
+interface IDelta {
+	/**
+	 * Path or URL to be used for some SPA focused use cases.
+	 */
+	href?: string;
+
+	/**
+	 * Value of the delta
+	 */
+	value: number;
+}
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Possible values of items per page.
 	 */
-	deltas?: Array<number>;
+	deltas?: Array<IDelta>;
 
 	/**
 	 * The page numbers that should be disabled. For example, `[2,5,6]`.
@@ -68,7 +93,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Initializes delta. Default is `10`.
 	 */
-	initialSelectedDelta?: number;
+	initialSelectedDelta?: IDelta;
 
 	/**
 	 * The size of pagination element.
@@ -100,7 +125,7 @@ export const ClayPaginationWithBar: React.FunctionComponent<IProps> = ({
 	labels = DEFAULT_LABELS,
 	onDeltaChange = noop,
 	onPageChange = noop,
-	initialSelectedDelta = defaultDeltas[0],
+	initialSelectedDelta = deltas[0],
 	initialActivePage = 1,
 	size,
 	spritemap,
@@ -109,7 +134,7 @@ export const ClayPaginationWithBar: React.FunctionComponent<IProps> = ({
 }: IProps) => {
 	const [active, setActive] = useState<boolean>(false);
 	const [activePage, setActivePage] = useState<number>(initialActivePage);
-	const [perPage, setPerPage] = useState<number>(initialSelectedDelta);
+	const [perPage, setPerPage] = useState<number>(initialSelectedDelta.value);
 
 	return (
 		<div
@@ -136,18 +161,23 @@ export const ClayPaginationWithBar: React.FunctionComponent<IProps> = ({
 				}
 			>
 				<ClayDropDown.ItemList>
-					{deltas.map((delta: number, i) => (
+					{deltas.map(({href, value}: IDelta, i: number) => (
 						<ClayDropDown.Item
 							data-testid={`dropdownItem${i}`}
+							href={href}
 							key={`dropdownItem${i}`}
-							onClick={() => {
-								setPerPage(delta);
-								if (onDeltaChange) {
-									onDeltaChange(delta);
-								}
-							}}
+							onClick={
+								href
+									? undefined
+									: () => {
+											setPerPage(value);
+											if (onDeltaChange) {
+												onDeltaChange(value);
+											}
+									  }
+							}
 						>
-							{sub(labels.selectPerPageItems, [String(delta)])}
+							{sub(labels.selectPerPageItems, [String(value)])}
 						</ClayDropDown.Item>
 					))}
 				</ClayDropDown.ItemList>
