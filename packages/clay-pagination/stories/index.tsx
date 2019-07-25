@@ -7,9 +7,8 @@ import '@clayui/css/lib/css/atlas.css';
 import ClayButton from '@clayui/button';
 import ClayDropDown from '@clayui/drop-down';
 import ClayIcon from '@clayui/icon';
-import ClayPagination from '../src';
+import ClayPagination, {ClayPaginationWithBar} from '../src';
 import React, {useState} from 'react';
-import {ClayPaginationWithBar} from '../src/ClayPaginationWithBar';
 import {number} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 

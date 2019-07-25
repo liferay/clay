@@ -4,9 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayPagination from '..';
+import ClayPagination, {ClayPaginationWithBar} from '..';
 import React from 'react';
-import {ClayPaginationWithBar} from '../PaginationWithBar';
 import {
 	cleanup,
 	fireEvent,
