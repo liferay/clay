@@ -6,15 +6,11 @@ exports[`ClayDropDown renders dropdown menu when clicked 1`] = `
     <div
       class="dropdown"
     >
-      <span
-        style="display: inline-block;"
+      <button
+        class="dropdown-toggle"
       >
-        <button
-          class="dropdown-toggle"
-        >
-          Click Me
-        </button>
-      </span>
+        Click Me
+      </button>
     </div>
   </div>
   <div>
@@ -67,15 +63,11 @@ exports[`ClayDropDown renders with groups 1`] = `
     <div
       class="dropdown"
     >
-      <span
-        style="display: inline-block;"
+      <button
+        class="dropdown-toggle"
       >
-        <button
-          class="dropdown-toggle"
-        >
-          Click Me
-        </button>
-      </span>
+        Click Me
+      </button>
     </div>
   </div>
   <div>
@@ -170,15 +162,11 @@ exports[`ClayDropDown renders with icons 1`] = `
     <div
       class="dropdown"
     >
-      <span
-        style="display: inline-block;"
+      <button
+        class="dropdown-toggle"
       >
-        <button
-          class="dropdown-toggle"
-        >
-          Click Me
-        </button>
-      </span>
+        Click Me
+      </button>
     </div>
   </div>
   <div>
@@ -276,15 +264,11 @@ exports[`ClayDropDown renders with search input 1`] = `
     <div
       class="dropdown"
     >
-      <span
-        style="display: inline-block;"
+      <button
+        class="dropdown-toggle"
       >
-        <button
-          class="dropdown-toggle"
-        >
-          Click Me
-        </button>
-      </span>
+        Click Me
+      </button>
     </div>
   </div>
   <div>
