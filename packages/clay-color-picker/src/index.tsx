@@ -10,7 +10,7 @@ import DropDown from '@clayui/drop-down';
 import React, {useEffect, useRef, useState} from 'react';
 import Splotch from './Splotch';
 import tinycolor from 'tinycolor2';
-import {sub} from './util';
+import {sub} from '@clayui/shared';
 import {useHexInput} from './hooks';
 
 const DEFAULT_COLORS = [

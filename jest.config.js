@@ -14,7 +14,12 @@ module.exports = {
 		`${process.cwd()}/**/__tests__/**/*.[jt]s?(x)`,
 		`${process.cwd()}/**/?(*.)+(spec|test).[jt]s?(x)`,
 	],
-	testPathIgnorePatterns: ['browserslist-config-clay', 'fixtures', 'lib'],
+	testPathIgnorePatterns: [
+		'browserslist-config-clay',
+		'fixtures',
+		'lib',
+		'next.clayui.com',
+	],
 	transform: {
 		'.(ts|tsx)': 'ts-jest',
 	},

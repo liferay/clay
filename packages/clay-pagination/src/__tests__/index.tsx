@@ -6,6 +6,7 @@
 
 import ClayPagination from '..';
 import React from 'react';
+import {ClayPaginationWithBar} from '../ClayPaginationWithBar';
 import {
 	cleanup,
 	fireEvent,
@@ -23,6 +24,7 @@ describe('ClayPagination', () => {
 		const {container} = render(
 			<ClayPagination
 				activePage={12}
+				size="lg"
 				spritemap={spritemap}
 				totalPages={25}
 			/>
@@ -104,7 +106,7 @@ describe('ClayPagination', () => {
 		).toContain('show');
 	});
 
-	it('calls onPageChange when iitem is clicked in dropdown-menu', () => {
+	it('calls onPageChange when an item is clicked in dropdown-menu', () => {
 		const changeMock = jest.fn();
 
 		const {getAllByText} = render(
@@ -124,5 +126,91 @@ describe('ClayPagination', () => {
 		);
 
 		expect(changeMock).toHaveBeenLastCalledWith(4);
+	});
+});
+
+describe('ClayPaginationWithBar', () => {
+	afterEach(cleanup);
+
+	it('renders', () => {
+		const {container} = render(
+			<ClayPaginationWithBar spritemap={spritemap} totalItems={100} />
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('calls onPageChange when arrow is clicked', () => {
+		const changeMock = jest.fn();
+
+		const {container} = render(
+			<ClayPaginationWithBar
+				initialActivePage={12}
+				onPageChange={changeMock}
+				spritemap={spritemap}
+				totalItems={100}
+			/>
+		);
+
+		fireEvent.click(
+			getByTestId(container, 'prevArrow') as HTMLButtonElement,
+			{}
+		);
+
+		expect(changeMock).toHaveBeenLastCalledWith(11);
+
+		fireEvent.click(
+			getByTestId(container, 'nextArrow') as HTMLButtonElement,
+			{}
+		);
+
+		expect(changeMock).toHaveBeenLastCalledWith(12);
+	});
+
+	it('calls onDeltaChange when select is expanded', () => {
+		const deltaChangeMock = jest.fn();
+
+		const {container} = render(
+			<ClayPaginationWithBar
+				initialActivePage={12}
+				onDeltaChange={deltaChangeMock}
+				spritemap={spritemap}
+				totalItems={100}
+			/>
+		);
+
+		fireEvent.click(
+			getByTestId(container, 'selectPaginationBar') as HTMLButtonElement,
+			{}
+		);
+
+		fireEvent.click(
+			getByTestId(
+				window.document.documentElement,
+				'dropdownItem1'
+			) as HTMLButtonElement,
+			{}
+		);
+
+		expect(deltaChangeMock).toHaveBeenLastCalledWith(20);
+	});
+
+	it('shows dropdown when pagination dropdown is clicked', () => {
+		const {container} = render(
+			<ClayPaginationWithBar
+				initialActivePage={12}
+				spritemap={spritemap}
+				totalItems={100}
+			/>
+		);
+
+		fireEvent.click(
+			getByTestId(container, 'selectPaginationBar') as HTMLElement,
+			{}
+		);
+
+		expect(
+			document.body.querySelector('.dropdown-menu')!.classList
+		).toContain('show');
 	});
 });
