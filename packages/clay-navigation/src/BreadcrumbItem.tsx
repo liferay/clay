@@ -53,13 +53,15 @@ export const BreadcrumbItem = ({
 			</a>
 		) : onClick ? (
 			<ClayButton
-				className="breadcrumb-text-truncate"
+				className="breadcrumb-link"
 				data-testid={`testId${label}`}
 				displayType="unstyled"
 				onClick={onClick}
 				title={label}
 			>
-				{label}
+				<span className="breadcrumb-text-truncate">
+					{label}
+				</span>
 			</ClayButton>
 		) : (
 			<span
