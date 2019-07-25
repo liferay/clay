@@ -6,7 +6,7 @@
 
 import ClayPagination from '..';
 import React from 'react';
-import {ClayPaginationWithBar} from '../ClayPaginationWithBar';
+import {ClayPaginationWithBar} from '../PaginationWithBar';
 import {
 	cleanup,
 	fireEvent,
