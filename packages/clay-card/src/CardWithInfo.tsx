@@ -10,7 +10,7 @@ import ClayForm from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClaySticker from '@clayui/sticker';
-import React, {ImgHTMLAttributes} from 'react';
+import React from 'react';
 import {ClayDropDownWithBasicItems} from '@clayui/drop-down';
 
 interface IProps {
