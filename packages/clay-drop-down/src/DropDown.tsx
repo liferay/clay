@@ -91,7 +91,11 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 				onClick: () => onActiveChange(!active),
 				ref: (node: HTMLButtonElement) => {
 					triggerElementRef.current = node;
-					// Call the original ref, if any
+					// Call the original ref, if any.
+					// Type is any because the React.ReactElement
+					// interface does not necessarily state that trigger
+					// will always be a fiber under the hood, so we have
+					// to declare any to get away from it.
 					const {ref} = trigger as any;
 					if (typeof ref === 'function') {
 						ref(node);
