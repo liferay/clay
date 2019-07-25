@@ -41,32 +41,28 @@ exports[`ClayNavigation renders a Breadcrumb 1`] = `
     <li
       class="dropdown breadcrumb-item"
     >
-      <span
-        style="display: inline-block;"
+      <button
+        class="dropdown-toggle breadcrumb-link btn btn-unstyled"
+        data-testid="breadcrumbDropdownTrigger"
+        type="button"
       >
-        <button
-          class="dropdown-toggle breadcrumb-link btn btn-unstyled"
-          data-testid="breadcrumbDropdownTrigger"
-          type="button"
+        <svg
+          class="lexicon-icon lexicon-icon-ellipsis-h"
+          role="presentation"
         >
-          <svg
-            class="lexicon-icon lexicon-icon-ellipsis-h"
-            role="presentation"
-          >
-            <use
-              xlink:href="path/to/spritemap#ellipsis-h"
-            />
-          </svg>
-          <svg
-            class="lexicon-icon lexicon-icon-caret-bottom"
-            role="presentation"
-          >
-            <use
-              xlink:href="path/to/spritemap#caret-bottom"
-            />
-          </svg>
-        </button>
-      </span>
+          <use
+            xlink:href="path/to/spritemap#ellipsis-h"
+          />
+        </svg>
+        <svg
+          class="lexicon-icon lexicon-icon-caret-bottom"
+          role="presentation"
+        >
+          <use
+            xlink:href="path/to/spritemap#caret-bottom"
+          />
+        </svg>
+      </button>
     </li>
     <li
       class="breadcrumb-item"
@@ -124,32 +120,28 @@ exports[`ClayNavigation renders a Breadcrumb with properties passed by \`ellipsi
       class="dropdown breadcrumb-item"
       style="font-size: 15px;"
     >
-      <span
-        style="display: inline-block;"
+      <button
+        class="dropdown-toggle breadcrumb-link btn btn-unstyled"
+        data-testid="breadcrumbDropdownTrigger"
+        type="button"
       >
-        <button
-          class="dropdown-toggle breadcrumb-link btn btn-unstyled"
-          data-testid="breadcrumbDropdownTrigger"
-          type="button"
+        <svg
+          class="lexicon-icon lexicon-icon-ellipsis-h"
+          role="presentation"
         >
-          <svg
-            class="lexicon-icon lexicon-icon-ellipsis-h"
-            role="presentation"
-          >
-            <use
-              xlink:href="path/to/spritemap#ellipsis-h"
-            />
-          </svg>
-          <svg
-            class="lexicon-icon lexicon-icon-caret-bottom"
-            role="presentation"
-          >
-            <use
-              xlink:href="path/to/spritemap#caret-bottom"
-            />
-          </svg>
-        </button>
-      </span>
+          <use
+            xlink:href="path/to/spritemap#ellipsis-h"
+          />
+        </svg>
+        <svg
+          class="lexicon-icon lexicon-icon-caret-bottom"
+          role="presentation"
+        >
+          <use
+            xlink:href="path/to/spritemap#caret-bottom"
+          />
+        </svg>
+      </button>
     </li>
     <li
       class="breadcrumb-item"
@@ -206,32 +198,28 @@ exports[`ClayNavigation should emit an event when an item is clicked 1`] = `
     <li
       class="dropdown breadcrumb-item"
     >
-      <span
-        style="display: inline-block;"
+      <button
+        class="dropdown-toggle breadcrumb-link btn btn-unstyled"
+        data-testid="breadcrumbDropdownTrigger"
+        type="button"
       >
-        <button
-          class="dropdown-toggle breadcrumb-link btn btn-unstyled"
-          data-testid="breadcrumbDropdownTrigger"
-          type="button"
+        <svg
+          class="lexicon-icon lexicon-icon-ellipsis-h"
+          role="presentation"
         >
-          <svg
-            class="lexicon-icon lexicon-icon-ellipsis-h"
-            role="presentation"
-          >
-            <use
-              xlink:href="path/to/spritemap#ellipsis-h"
-            />
-          </svg>
-          <svg
-            class="lexicon-icon lexicon-icon-caret-bottom"
-            role="presentation"
-          >
-            <use
-              xlink:href="path/to/spritemap#caret-bottom"
-            />
-          </svg>
-        </button>
-      </span>
+          <use
+            xlink:href="path/to/spritemap#ellipsis-h"
+          />
+        </svg>
+        <svg
+          class="lexicon-icon lexicon-icon-caret-bottom"
+          role="presentation"
+        >
+          <use
+            xlink:href="path/to/spritemap#caret-bottom"
+          />
+        </svg>
+      </button>
     </li>
     <li
       class="breadcrumb-item"

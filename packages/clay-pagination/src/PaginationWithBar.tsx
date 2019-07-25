@@ -8,7 +8,7 @@ import classNames from 'classnames';
 import ClayButton from '@clayui/button';
 import ClayDropDown from '@clayui/drop-down';
 import ClayIcon from '@clayui/icon';
-import ClayPagination from '../src/index';
+import ClayPagination from './index';
 import React, {useState} from 'react';
 import {noop, sub} from '@clayui/shared';
 

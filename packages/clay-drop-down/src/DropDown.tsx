@@ -75,7 +75,7 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 	trigger,
 	...otherProps
 }: IProps) => {
-	const triggerElementRef = useRef<HTMLButtonElement>(null);
+	const triggerElementRef = useRef<HTMLButtonElement | null>(null);
 	const menuElementRef = useRef<HTMLDivElement>(null);
 
 	return (
@@ -83,15 +83,25 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 			{...otherProps}
 			className={classNames('dropdown', className)}
 		>
-			<span ref={triggerElementRef} style={{display: 'inline-block'}}>
-				{React.cloneElement(trigger, {
-					className: classNames(
-						'dropdown-toggle',
-						trigger.props.className
-					),
-					onClick: () => onActiveChange(!active),
-				})}
-			</span>
+			{React.cloneElement(trigger, {
+				className: classNames(
+					'dropdown-toggle',
+					trigger.props.className
+				),
+				onClick: () => onActiveChange(!active),
+				ref: (node: HTMLButtonElement) => {
+					triggerElementRef.current = node;
+					// Call the original ref, if any.
+					// Type is any because the React.ReactElement
+					// interface does not necessarily state that trigger
+					// will always be a fiber under the hood, so we have
+					// to declare any to get away from it.
+					const {ref} = trigger as any;
+					if (typeof ref === 'function') {
+						ref(node);
+					}
+				},
+			})}
 
 			<Menu
 				active={active}

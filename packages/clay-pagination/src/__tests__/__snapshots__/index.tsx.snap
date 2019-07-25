@@ -34,16 +34,12 @@ exports[`ClayPagination renders 1`] = `
     <li
       class="dropdown page-item"
     >
-      <span
-        style="display: inline-block;"
+      <button
+        class="dropdown-toggle page-link btn btn-unstyled"
+        type="button"
       >
-        <button
-          class="dropdown-toggle page-link btn btn-unstyled"
-          type="button"
-        >
-          ...
-        </button>
-      </span>
+        ...
+      </button>
     </li>
     <li
       class="page-item"
@@ -93,16 +89,12 @@ exports[`ClayPagination renders 1`] = `
     <li
       class="dropdown page-item"
     >
-      <span
-        style="display: inline-block;"
+      <button
+        class="dropdown-toggle page-link btn btn-unstyled"
+        type="button"
       >
-        <button
-          class="dropdown-toggle page-link btn btn-unstyled"
-          type="button"
-        >
-          ...
-        </button>
-      </span>
+        ...
+      </button>
     </li>
     <li
       class="page-item"
@@ -196,25 +188,21 @@ exports[`ClayPaginationWithBar renders 1`] = `
     <div
       class="dropdown pagination-items-per-page"
     >
-      <span
-        style="display: inline-block;"
+      <button
+        class="dropdown-toggle btn btn-unstyled"
+        data-testid="selectPaginationBar"
+        type="button"
       >
-        <button
-          class="dropdown-toggle btn btn-unstyled"
-          data-testid="selectPaginationBar"
-          type="button"
+        10 items
+        <svg
+          class="lexicon-icon lexicon-icon-caret-double-l"
+          role="presentation"
         >
-          10 items
-          <svg
-            class="lexicon-icon lexicon-icon-caret-double-l"
-            role="presentation"
-          >
-            <use
-              xlink:href="path/to/spritemap#caret-double-l"
-            />
-          </svg>
-        </button>
-      </span>
+          <use
+            xlink:href="path/to/spritemap#caret-double-l"
+          />
+        </svg>
+      </button>
     </div>
     <div
       class="pagination-results"
@@ -272,16 +260,12 @@ exports[`ClayPaginationWithBar renders 1`] = `
       <li
         class="dropdown page-item"
       >
-        <span
-          style="display: inline-block;"
+        <button
+          class="dropdown-toggle page-link btn btn-unstyled"
+          type="button"
         >
-          <button
-            class="dropdown-toggle page-link btn btn-unstyled"
-            type="button"
-          >
-            ...
-          </button>
-        </span>
+          ...
+        </button>
       </li>
       <li
         class="page-item"
