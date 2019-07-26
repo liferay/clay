@@ -107,7 +107,7 @@ export default props => {
 															id="advancedTab"
 															role="tab"
 														>
-															React Component
+															{'React Component'}
 														</a>
 													</li>
 													<li className="nav-item">
@@ -119,7 +119,7 @@ export default props => {
 															id="simpleTab"
 															role="tab"
 														>
-															CSS / Markup
+															{'CSS / Markup'}
 														</a>
 													</li>
 												</ul>
