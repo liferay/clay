@@ -21,9 +21,9 @@
     }
   },
   "scripts": {
-    "build": "npm run compile",
+    "build": "yarn compile",
     "compile": "gulp compile",
-    "prepublish": "npm run compile",
+    "prepublish": "yarn compile",
     "link": "npm link"
   },
   "repository": {

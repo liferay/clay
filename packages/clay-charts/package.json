@@ -9,7 +9,7 @@
 		"build:types": "cross-env NODE_ENV=production tsc --project ./tsconfig.declarations.json",
 		"build": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib --extensions .ts,.tsx",
 		"copySvg": "ncp src/svg lib/svg",
-		"prepublishOnly": "npm run sass && npm run build && npm run build:types && npm run copySvg",
+		"prepublishOnly": "yarn sass && yarn build && yarn build:types && yarn copySvg",
 		"sass": "node-sass src/scss/main.scss -o lib/css --source-map true",
 		"test": "jest --config ../../jest.config.js"
 	},
