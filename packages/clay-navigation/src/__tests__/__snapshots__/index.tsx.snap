@@ -1,12 +1,84 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayNavigation renders 1`] = `
+exports[`ClayBreadcrumbNav calls callback when an item is clicked 1`] = `
 <div>
-  <div />
+  <ol
+    class="breadcrumb"
+  >
+    <li
+      class="breadcrumb-item active"
+    >
+      <span
+        class="breadcrumb-text-truncate"
+        data-testid="testId1"
+        title="1"
+      >
+        1
+      </span>
+    </li>
+    <li
+      class="breadcrumb-item"
+    >
+      <button
+        class="breadcrumb-link btn btn-unstyled"
+        data-testid="testId2"
+        title="2"
+        type="button"
+      >
+        <span
+          class="breadcrumb-text-truncate"
+        >
+          2
+        </span>
+      </button>
+    </li>
+    <li
+      class="dropdown breadcrumb-item"
+    >
+      <button
+        class="dropdown-toggle breadcrumb-link btn btn-unstyled"
+        data-testid="breadcrumbDropdownTrigger"
+        type="button"
+      >
+        <svg
+          class="lexicon-icon lexicon-icon-ellipsis-h"
+          role="presentation"
+        >
+          <use
+            xlink:href="path/to/spritemap#ellipsis-h"
+          />
+        </svg>
+        <svg
+          class="lexicon-icon lexicon-icon-caret-bottom"
+          role="presentation"
+        >
+          <use
+            xlink:href="path/to/spritemap#caret-bottom"
+          />
+        </svg>
+      </button>
+    </li>
+    <li
+      class="breadcrumb-item"
+    >
+      <button
+        class="breadcrumb-link btn btn-unstyled"
+        data-testid="testId5"
+        title="5"
+        type="button"
+      >
+        <span
+          class="breadcrumb-text-truncate"
+        >
+          5
+        </span>
+      </button>
+    </li>
+  </ol>
 </div>
 `;
 
-exports[`ClayNavigation renders a Breadcrumb 1`] = `
+exports[`ClayBreadcrumbNav renders 1`] = `
 <div>
   <ol
     class="breadcrumb"
@@ -84,7 +156,7 @@ exports[`ClayNavigation renders a Breadcrumb 1`] = `
 </div>
 `;
 
-exports[`ClayNavigation renders a Breadcrumb with properties passed by \`ellipsisProps\` 1`] = `
+exports[`ClayBreadcrumbNav renders with properties passed by \`ellipsisProps\` 1`] = `
 <div>
   <ol
     class="breadcrumb"
@@ -163,85 +235,7 @@ exports[`ClayNavigation renders a Breadcrumb with properties passed by \`ellipsi
 </div>
 `;
 
-exports[`ClayNavigation should emit an event when an item is clicked 1`] = `
-<div>
-  <ol
-    class="breadcrumb"
-  >
-    <li
-      class="breadcrumb-item active"
-    >
-      <span
-        class="breadcrumb-text-truncate"
-        data-testid="testId1"
-        title="1"
-      >
-        1
-      </span>
-    </li>
-    <li
-      class="breadcrumb-item"
-    >
-      <button
-        class="breadcrumb-link btn btn-unstyled"
-        data-testid="testId2"
-        title="2"
-        type="button"
-      >
-        <span
-          class="breadcrumb-text-truncate"
-        >
-          2
-        </span>
-      </button>
-    </li>
-    <li
-      class="dropdown breadcrumb-item"
-    >
-      <button
-        class="dropdown-toggle breadcrumb-link btn btn-unstyled"
-        data-testid="breadcrumbDropdownTrigger"
-        type="button"
-      >
-        <svg
-          class="lexicon-icon lexicon-icon-ellipsis-h"
-          role="presentation"
-        >
-          <use
-            xlink:href="path/to/spritemap#ellipsis-h"
-          />
-        </svg>
-        <svg
-          class="lexicon-icon lexicon-icon-caret-bottom"
-          role="presentation"
-        >
-          <use
-            xlink:href="path/to/spritemap#caret-bottom"
-          />
-        </svg>
-      </button>
-    </li>
-    <li
-      class="breadcrumb-item"
-    >
-      <button
-        class="breadcrumb-link btn btn-unstyled"
-        data-testid="testId5"
-        title="5"
-        type="button"
-      >
-        <span
-          class="breadcrumb-text-truncate"
-        >
-          5
-        </span>
-      </button>
-    </li>
-  </ol>
-</div>
-`;
-
-exports[`ClayNavigation should throw a warning when not passing \`active\` to any \`items\` on Breadcrumb 1`] = `
+exports[`ClayBreadcrumbNav throws a warning when not passing \`active\` to any \`items\` 1`] = `
 <div>
   <ol
     class="breadcrumb"
@@ -279,5 +273,101 @@ exports[`ClayNavigation should throw a warning when not passing \`active\` to an
       </a>
     </li>
   </ol>
+</div>
+`;
+
+exports[`ClayNavigation renders 1`] = `
+<div>
+  <ul
+    class="nav"
+  >
+    <div />
+  </ul>
+</div>
+`;
+
+exports[`ClayVerticalNav renders 1`] = `
+<div>
+  <nav
+    class="menubar menubar-transparent menubar-vertical-expand-md"
+  >
+    <button
+      class="menubar-toggler"
+    >
+      Home
+      <svg
+        class="lexicon-icon lexicon-icon-caret-bottom"
+        focusable="false"
+        role="presentation"
+      >
+        <use
+          xlink:href="/path/to#caret-bottom"
+        />
+      </svg>
+    </button>
+    <div
+      class="collapse menubar-collapse"
+    >
+      <ul
+        class="nav nav-nested"
+      >
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link collapse-icon"
+            role="button"
+          >
+            Home
+            <span
+              class="collapse-icon-closed"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-caret-right"
+                focusable="false"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/path/to#caret-right"
+                />
+              </svg>
+            </span>
+            <span
+              class="collapse-icon-open"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-caret-bottom"
+                focusable="false"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/path/to#caret-bottom"
+                />
+              </svg>
+            </span>
+          </a>
+          <div
+            class="collapse show"
+          >
+            <ul
+              class="nav nav-stacked"
+            >
+              <li
+                class="nav-item"
+              >
+                <a
+                  class="nav-link"
+                  href="#nested1"
+                  role="button"
+                >
+                  Nested1
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </div>
 `;

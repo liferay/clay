@@ -5,8 +5,8 @@
  */
 
 import '@clayui/css/lib/css/atlas.css';
-import ClayNavigation from '../src';
 import React from 'react';
+import {ClayBreadcrumbNav, ClayVerticalNav} from '../src';
 import {number} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
@@ -44,7 +44,7 @@ const BreadcrumbWithState = () => {
 	];
 
 	return (
-		<ClayNavigation.Breadcrumb
+		<ClayBreadcrumbNav
 			ellipsisBuffer={1}
 			items={items}
 			spritemap={spritemap}
@@ -54,7 +54,7 @@ const BreadcrumbWithState = () => {
 
 storiesOf('ClayNavigation', module)
 	.add('w/ breadcrumb', () => (
-		<ClayNavigation.Breadcrumb
+		<ClayBreadcrumbNav
 			ellipsisBuffer={number('Ellipsis Buffer', 3)}
 			items={[
 				{
@@ -111,7 +111,7 @@ storiesOf('ClayNavigation', module)
 			alert(event.target.parentElement.title);
 
 		return (
-			<ClayNavigation.Breadcrumb
+			<ClayBreadcrumbNav
 				ellipsisBuffer={number('Ellipsis Buffer', 3)}
 				items={[
 					{
@@ -164,4 +164,50 @@ storiesOf('ClayNavigation', module)
 			/>
 		);
 	})
-	.add('w/ breadcrumb using state', () => <BreadcrumbWithState />);
+	.add('w/ breadcrumb using state', () => <BreadcrumbWithState />)
+	.add('w/ vertical', () => {
+		return (
+			<ClayVerticalNav
+				activeLabel="Five"
+				items={[
+					{
+						initialExpanded: true,
+						items: [
+							{
+								href: '#nested1',
+								label: 'Nested1',
+							},
+						],
+						label: 'Home',
+					},
+					{
+						href: '#2',
+						label: 'About',
+					},
+					{
+						href: '#3',
+						label: 'Contact',
+					},
+					{
+						items: [
+							{
+								active: true,
+								href: '#5',
+								label: 'Five',
+							},
+							{
+								href: '#6',
+								label: 'Six',
+							},
+						],
+						label: 'Projects',
+					},
+					{
+						href: '#7',
+						label: 'Seven',
+					},
+				]}
+				spritemap={spritemap}
+			/>
+		);
+	});

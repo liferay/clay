@@ -4,15 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React from 'react';
-import {Breadcrumb} from './Breadcrumb';
+import Nav from './Nav';
+import {ClayBreadcrumbNav} from './Breadcrumb';
+import {ClayVerticalNav} from './Vertical';
 
-const ClayNavigation: React.FunctionComponent<any> & {
-	Breadcrumb: typeof Breadcrumb;
-} = ({children}) => {
-	return children;
-};
+export {ClayBreadcrumbNav, ClayVerticalNav};
 
-ClayNavigation.Breadcrumb = Breadcrumb;
-
-export default ClayNavigation;
+export default Nav;
