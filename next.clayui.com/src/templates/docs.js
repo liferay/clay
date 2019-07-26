@@ -20,7 +20,7 @@ export default props => {
 	const {
 		data,
 		location,
-		pageContext: {markdownJsx},
+		pageContext: {blacklist, markdownJsx},
 	} = props;
 	const {allMarkdownRemark, allMdx, markdownRemark, mdx} = data;
 	const {code, excerpt, frontmatter, html, timeToRead} =
@@ -60,10 +60,10 @@ export default props => {
 				<div className="container-fluid">
 					<div className="row flex-xl-nowrap">
 						<Sidebar
-							data={getSection([
-								...allMarkdownRemark.edges,
-								...allMdx.edges,
-							])}
+							data={getSection(
+								[...allMarkdownRemark.edges, ...allMdx.edges],
+								blacklist
+							)}
 							location={location}
 						/>
 						<div className="col-xl sidebar-offset">
@@ -208,7 +208,7 @@ export default props => {
 };
 
 export const pageQuery = graphql`
-	query($slug: String!) {
+	query($blacklist: [String!], $slug: String!) {
 		mdx(fields: {slug: {eq: $slug}}) {
 			excerpt
 			timeToRead
@@ -249,7 +249,7 @@ export const pageQuery = graphql`
 				}
 			}
 		}
-		allMarkdownRemark {
+		allMarkdownRemark(filter: {fields: {slug: {nin: $blacklist}}}) {
 			edges {
 				node {
 					fields {

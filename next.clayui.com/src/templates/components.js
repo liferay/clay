@@ -20,7 +20,7 @@ export default props => {
 	const {
 		data,
 		location,
-		pageContext: {markdownJsx},
+		pageContext: {blacklist = [], markdownJsx},
 	} = props;
 	const {allMarkdownRemark, allMdx, markdownRemark, mdx, tabs} = data;
 	const {code, excerpt, frontmatter, html, timeToRead} =
@@ -36,7 +36,7 @@ export default props => {
 		'new release': 'info',
 		pending: 'secondary',
 		stable: 'success',
-    };
+	};
 
 	useEffect(() => {
 		document
@@ -44,7 +44,7 @@ export default props => {
 			.forEach(item => {
 				item.indeterminate = true;
 			});
-    }, []);
+	}, []);
 
 	return (
 		<div className="docs">
@@ -62,10 +62,10 @@ export default props => {
 				<div className="container-fluid">
 					<div className="row flex-xl-nowrap">
 						<Sidebar
-							data={getSection([
-								...allMarkdownRemark.edges,
-								...allMdx.edges,
-							])}
+							data={getSection(
+								[...allMarkdownRemark.edges, ...allMdx.edges],
+								blacklist
+							)}
 							location={location}
 						/>
 						<div className="col-xl sidebar-offset">
@@ -93,12 +93,34 @@ export default props => {
 										</div>
 										{hasTabs && (
 											<div className="col-12 mt-5">
-												<ul className="nav nav-underline nav-justified border-bottom" role="tablist">
+												<ul
+													className="nav nav-underline nav-justified border-bottom"
+													role="tablist"
+												>
 													<li className="nav-item">
-														<a aria-controls="advanced" aria-expanded="true" className="active nav-link" data-toggle="tab" href="#advanced" id="advancedTab" role="tab">React Component</a>
+														<a
+															aria-controls="advanced"
+															aria-expanded="true"
+															className="active nav-link"
+															data-toggle="tab"
+															href="#advanced"
+															id="advancedTab"
+															role="tab"
+														>
+															React Component
+														</a>
 													</li>
 													<li className="nav-item">
-														<a aria-controls="simple" className="nav-link" data-toggle="tab" href="#simple" id="simpleTab" role="tab">CSS / Markup</a>
+														<a
+															aria-controls="simple"
+															className="nav-link"
+															data-toggle="tab"
+															href="#simple"
+															id="simpleTab"
+															role="tab"
+														>
+															CSS / Markup
+														</a>
 													</li>
 												</ul>
 											</div>
@@ -107,89 +129,109 @@ export default props => {
 								</div>
 							</header>
 
-                            <div className="clay-site-container container-fluid">
-                                <div className="row">
-                                    <div className="col-12">
-                                        {/* {mdx.frontmatter.title} */}
-                                        <div className="tab-content">
-                                            <div aria-labelledby="advancedTab" className="active fade show tab-pane" id="advanced" role="tabpanel">
-                                                {frontmatter.packageStatus && (
-                                                    <Link
-                                                        className="clay-site-label"
-                                                        to="/docs/get-started/components-status.html"
-                                                    >
-                                                        <span
-                                                            className={`label label-${
-                                                                mapStatus[
-                                                                    frontmatter.packageStatus.toLowerCase()
-                                                                ]
-                                                            }`}
-                                                        >
-                                                            <span className="label-item label-item-expand">
-                                                                {frontmatter.packageStatus}
-                                                            </span>
-                                                        </span>
-                                                        {frontmatter.packageVersion && (
-                                                            <span className="label label-secondary">
-                                                                <span className="label-item label-item-expand">
-                                                                    {frontmatter.packageVersion}
-                                                                </span>
-                                                            </span>
-                                                        )}
-                                                    </Link>
-                                                )}
-                                                <article>
-                                                    <CodeClipboard>
-                                                        {markdownJsx ? (
-                                                            <MDXProvider
-                                                                components={{
-                                                                    h1: Typography.H1,
-                                                                    h2: Typography.H2,
-                                                                    h3: Typography.H3,
-                                                                    h4: Typography.H4,
-                                                                    p: Typography.P,
-                                                                    ul: props => (
-                                                                        <ul
-                                                                            className={
-                                                                                props.className
-                                                                                    ? props.className
-                                                                                    : 'clay-ul'
-                                                                            }
-                                                                        >
-                                                                            {
-                                                                                props.children
-                                                                            }
-                                                                        </ul>
-                                                                    ),
-                                                                }}
-                                                            >
-                                                                <MDXRenderer>
-                                                                    {code.body}
-                                                                </MDXRenderer>
-                                                            </MDXProvider>
-                                                        ) : (
-                                                            <div
-                                                                dangerouslySetInnerHTML={{
-                                                                    __html: html,
-                                                                }}
-                                                            />
-                                                        )}
-                                                    </CodeClipboard>
-                                                </article>
-                                            </div>
-											<div aria-labelledby="simpleTab" className="fade tab-pane" id="simple" role="tabpanel">
+							<div className="clay-site-container container-fluid">
+								<div className="row">
+									<div className="col-12">
+										<div className="tab-content">
+											<div
+												aria-labelledby="advancedTab"
+												className="active fade show tab-pane"
+												id="advanced"
+												role="tabpanel"
+											>
+												{frontmatter.packageStatus && (
+													<Link
+														className="clay-site-label"
+														to="/docs/get-started/components-status.html"
+													>
+														<span
+															className={`label label-${
+																mapStatus[
+																	frontmatter.packageStatus.toLowerCase()
+																]
+															}`}
+														>
+															<span className="label-item label-item-expand">
+																{
+																	frontmatter.packageStatus
+																}
+															</span>
+														</span>
+														{frontmatter.packageVersion && (
+															<span className="label label-secondary">
+																<span className="label-item label-item-expand">
+																	{
+																		frontmatter.packageVersion
+																	}
+																</span>
+															</span>
+														)}
+													</Link>
+												)}
+												<article>
+													<CodeClipboard>
+														{markdownJsx ? (
+															<MDXProvider
+																components={{
+																	h1:
+																		Typography.H1,
+																	h2:
+																		Typography.H2,
+																	h3:
+																		Typography.H3,
+																	h4:
+																		Typography.H4,
+																	p:
+																		Typography.P,
+																	ul: props => (
+																		<ul
+																			className={
+																				props.className
+																					? props.className
+																					: 'clay-ul'
+																			}
+																		>
+																			{
+																				props.children
+																			}
+																		</ul>
+																	),
+																}}
+															>
+																<MDXRenderer>
+																	{code.body}
+																</MDXRenderer>
+															</MDXProvider>
+														) : (
+															<div
+																dangerouslySetInnerHTML={{
+																	__html: html,
+																}}
+															/>
+														)}
+													</CodeClipboard>
+												</article>
+											</div>
+											<div
+												aria-labelledby="simpleTab"
+												className="fade tab-pane"
+												id="simple"
+												role="tabpanel"
+											>
 												{hasTabs && (
 													<div
 														dangerouslySetInnerHTML={{
-															__html: tabs.edges[0].node.html,
+															__html:
+																tabs.edges[0]
+																	.node.html,
 														}}
-                                                	/>
+													/>
 												)}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 							<footer className="clay-site-container container-fluid">
 								<div className="row border-top py-5">
 									<div className="col-6">
@@ -232,7 +274,7 @@ export default props => {
 };
 
 export const pageQuery = graphql`
-	query($slug: String!, $sibling: String!) {
+	query($blacklist: [String!], $slug: String!, $sibling: String!) {
 		mdx(fields: {slug: {eq: $slug}}) {
 			excerpt
 			timeToRead
@@ -273,7 +315,7 @@ export const pageQuery = graphql`
 				}
 			}
 		}
-		allMarkdownRemark {
+		allMarkdownRemark(filter: {fields: {slug: {nin: $blacklist}}}) {
 			edges {
 				node {
 					fields {
@@ -287,12 +329,12 @@ export const pageQuery = graphql`
 					}
 				}
 			}
-        }
+		}
 		tabs: allMarkdownRemark(filter: {fields: {slug: {eq: $sibling}}}) {
 			edges {
-			  node {
-				html
-			  }
+				node {
+					html
+				}
 			}
 		}
 	}

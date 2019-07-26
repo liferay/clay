@@ -19,10 +19,13 @@ const slugWithBar = path => {
 	return path.startsWith('/') ? path : `/${path}`;
 };
 
-const createDocs = (actions, edges, mdx) => {
+const createDocs = (actions, edges, mdx, blacklist = []) => {
 	const {createPage, createRedirect} = actions;
 	const docsTemplate = path.resolve(__dirname, '../src/templates/docs.js');
-	const componentsTemplate = path.resolve(__dirname, '../src/templates/components.js');
+	const componentsTemplate = path.resolve(
+		__dirname,
+		'../src/templates/components.js'
+	);
 	const blogTemplate = path.resolve(__dirname, '../src/templates/blog.js');
 
 	edges
@@ -33,9 +36,21 @@ const createDocs = (actions, edges, mdx) => {
 			({
 				node: {
 					code,
-					fields: {layout, redirect, redirectFrom, slug, sibling},
+					fields: {layout, redirect, redirectFrom, sibling, slug},
 				},
 			}) => {
+				const hasSibling = blacklist.find(
+					({
+						node: {
+							fields: {sibling},
+						},
+					}) => sibling === slug
+				);
+
+				if (hasSibling) {
+					return;
+				}
+
 				if (redirect) {
 					const slugBar = slugWithBar(slug);
 					const fromPath = slugBar.endsWith('index.html')
@@ -86,9 +101,18 @@ const createDocs = (actions, edges, mdx) => {
 					(slug.includes('docs/') || slug.includes('blog/')) &&
 					layout !== 'redirect'
 				) {
+					const blacklistSlugs = blacklist.map(
+						({
+							node: {
+								fields: {sibling},
+							},
+						}) => sibling
+					);
+
 					createPage({
 						component,
 						context: {
+							blacklist: blacklistSlugs,
 							markdownJsx: mdx,
 							sibling,
 							slug,
@@ -153,11 +177,19 @@ module.exports = async ({actions, graphql}) => {
 			return Promise.reject(errors);
 		}
 
+		const blacklist = data.allMdx.edges.filter(
+			({
+				node: {
+					fields: {sibling},
+				},
+			}) => sibling
+		);
+
 		if (data.allMdx.edges) {
-			createDocs(actions, data.allMdx.edges, true);
+			createDocs(actions, data.allMdx.edges, true, blacklist);
 		}
 
-		createDocs(actions, data.allMarkdownRemark.edges, false);
+		createDocs(actions, data.allMarkdownRemark.edges, false, blacklist);
 
 		const newestBlogEntry = await graphql(
 			`
