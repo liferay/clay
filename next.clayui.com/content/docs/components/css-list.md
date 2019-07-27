@@ -271,7 +271,7 @@ Add the class `show-dropdown-action-on-active` to display `dropdown-menu`s when 
 </ul>
 ```
 
-More examples can be found in <a href="/docs/css/components/dataset-display.html">dataset template</a>.
+More examples can be found in <a href="/docs/components/dataset-display.html">dataset template</a>.
 
 ## Variations
 

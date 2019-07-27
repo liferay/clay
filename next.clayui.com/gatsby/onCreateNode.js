@@ -30,6 +30,7 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 			path: permalink,
 			redirect,
 			redirectFrom,
+			sibling,
 			title,
 			version,
 		} = node.frontmatter;
@@ -159,6 +160,12 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 			name: 'redirectFrom',
 			node,
 			value: redirectFrom || '',
+		});
+
+		createNodeField({
+			name: 'sibling',
+			node,
+			value: sibling || '',
 		});
 
 		createNodeField({

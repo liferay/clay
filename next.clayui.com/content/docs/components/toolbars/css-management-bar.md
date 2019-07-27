@@ -27,7 +27,7 @@ description: "Management toolbar is an extension of Toolbar. It is a combination
 </div>
 
 <div class="alert alert-warning">
-    Bootstrap 4 doesn't support Dropdown Menu's with Popper.js positioning inside Navbars. They align them manually via CSS classes. See <a href="http://localhost:8000/docs/css/components/dropdown.html#alignment">Dropdown Alignment</a>.
+    Bootstrap 4 doesn't support Dropdown Menu's with Popper.js positioning inside Navbars. They align them manually via CSS classes. See <a href="http://localhost:8000/docs/components/dropdown.html#alignment">Dropdown Alignment</a>.
 </div>
 
 ## Light
