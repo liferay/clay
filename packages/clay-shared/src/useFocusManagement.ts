@@ -191,8 +191,10 @@ export function useFocusManagement(loop: boolean = false) {
 			if (backwards) {
 				lastPositionRef.current = size;
 			} else {
-				lastPositionRef.current =
-					activeNode === focusManagerRef.current[0].value ? 1 : 0;
+				// Causes interaction not to start from the first item in the queue
+				// and continues to focus regardless of where it is.
+				const activeElementIndex = focusManagerRef.current.findIndex(el => el.value === activeNode);
+				lastPositionRef.current = activeElementIndex !== -1 ? activeElementIndex + 1 : 0;
 			}
 		} else {
 			lastPositionRef.current = backwards
