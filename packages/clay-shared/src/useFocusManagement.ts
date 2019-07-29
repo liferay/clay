@@ -193,12 +193,14 @@ export function useFocusManagement(loop: boolean = false) {
 			} else {
 				// Causes interaction not to start from the first item in the queue
 				// and continues to focus regardless of where it is.
-				const activeElementIndex = focusManagerRef.current.findIndex(el => el.value === activeNode);
+				const activeElementIndex = focusManagerRef.current.findIndex(
+					el => el.value === activeNode
+				);
 
 				// Fixes the last position, this can happen in cases where list
 				// elements have been deleted but the lastPosition has not been reset or when
 				// the active element is the last in the queue.
-				if ((activeElementIndex + 1) > size) {
+				if (activeElementIndex + 1 > size) {
 					// If there is no element outside the scope focusable,
 					// then go back to the beginning.
 					if (sequence === 1) {
@@ -212,7 +214,8 @@ export function useFocusManagement(loop: boolean = false) {
 						return;
 					}
 				} else {
-					lastPositionRef.current = activeElementIndex !== -1 ? activeElementIndex + 1 : 0;
+					lastPositionRef.current =
+						activeElementIndex !== -1 ? activeElementIndex + 1 : 0;
 				}
 			}
 		} else {
