@@ -53,9 +53,6 @@ export function useFocusManagement(loop: boolean = false) {
 				focusManagerRef.current[elementIndex] = schema;
 			}
 		} else {
-			if (lastPositionRef.current !== null) {
-				lastPositionRef.current = 0;
-			}
 			focusManagerRef.current.splice(elementIndex, 1);
 		}
 	};
