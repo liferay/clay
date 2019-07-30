@@ -6,13 +6,13 @@
 
 import ClayDropDown from './DropDown';
 import React, {useState} from 'react';
-import {useFocusManagement} from '@clayui/shared';
+import {FocusScope, useFocusManagement} from '@clayui/shared';
 
 interface IItem {
 	active?: boolean;
+	disabled?: boolean;
 	href?: string;
 	label?: string;
-	type?: 'divider';
 	onClick?: (
 		event: React.MouseEvent<
 			HTMLSpanElement | HTMLButtonElement | HTMLAnchorElement,
@@ -20,12 +20,18 @@ interface IItem {
 		>,
 		item: IItem
 	) => void;
-	symbolRight?: string;
 	symbolLeft?: string;
+	symbolRight?: string;
+	type?: 'divider';
 }
 
 interface IProps {
 	className?: string;
+
+	/**
+	 * HTML element tag that the container should render.
+	 */
+	containerElement?: 'div' | 'li';
 
 	/**
 	 * List of items to display in drop down menu
@@ -35,17 +41,14 @@ interface IProps {
 	/**
 	 * Element that is used for opening menu
 	 */
-	trigger: React.ReactElement;
+	trigger: React.ReactElement | React.ForwardRefExoticComponent<any>;
 
 	spritemap?: string;
 }
 
-const TAB_KEY_CODE = 9;
-const ARROW_UP_KEY_CODE = 38;
-const ARROW_DOWN_KEY_CODE = 40;
-
 export const ClayDropDownWithBasicItems: React.FunctionComponent<IProps> = ({
 	className,
+	containerElement,
 	items,
 	spritemap,
 	trigger,
@@ -56,61 +59,49 @@ export const ClayDropDownWithBasicItems: React.FunctionComponent<IProps> = ({
 	const hasRightSymbols = !!items.find(item => item.symbolRight);
 	const hasLeftSymbols = !!items.find(item => item.symbolLeft);
 
-	const onKeyDown = (event: React.KeyboardEvent<any>) => {
-		const {keyCode, shiftKey} = event;
-
-		if (
-			keyCode === ARROW_DOWN_KEY_CODE ||
-			(keyCode === TAB_KEY_CODE && !shiftKey)
-		) {
-			event.preventDefault();
-			focusManager.focusNext();
-		} else if (
-			keyCode === ARROW_UP_KEY_CODE ||
-			(keyCode === TAB_KEY_CODE && shiftKey)
-		) {
-			event.preventDefault();
-			focusManager.focusPrevious();
-		}
-	};
-
 	return (
-		<ClayDropDown
-			active={active}
-			className={className}
-			hasLeftSymbols={hasLeftSymbols}
-			hasRightSymbols={hasRightSymbols}
-			onActiveChange={(newVal: boolean) => setActive(newVal)}
-			onKeyDown={onKeyDown}
-			trigger={React.cloneElement(trigger, {
-				ref: (ref: any) => focusManager.createScope(ref, 'trigger'),
-			})}
-		>
-			<ClayDropDown.ItemList>
-				{items.map(({onClick, ...item}: IItem, i: number) => {
-					if (item.type === 'divider') {
-						return <ClayDropDown.Divider key={i} />;
-					}
-
-					return (
-						<ClayDropDown.Item
-							innerRef={(ref: HTMLLinkElement) =>
-								focusManager.createScope(ref, `item${i}`, true)
-							}
-							key={i}
-							onClick={
-								onClick
-									? event => onClick(event, item)
-									: undefined
-							}
-							spritemap={spritemap}
-							{...item}
-						>
-							{item.label}
-						</ClayDropDown.Item>
-					);
+		<FocusScope focusManager={focusManager}>
+			<ClayDropDown
+				active={active}
+				className={className}
+				containerElement={containerElement}
+				hasLeftSymbols={hasLeftSymbols}
+				hasRightSymbols={hasRightSymbols}
+				onActiveChange={(newVal: boolean) => setActive(newVal)}
+				trigger={React.cloneElement(trigger as React.ReactElement, {
+					ref: (ref: any) => focusManager.createScope(ref, 'trigger'),
 				})}
-			</ClayDropDown.ItemList>
-		</ClayDropDown>
+			>
+				<ClayDropDown.ItemList>
+					{items.map(({onClick, ...item}: IItem, i: number) => {
+						if (item.type === 'divider') {
+							return <ClayDropDown.Divider key={i} />;
+						}
+
+						return (
+							<ClayDropDown.Item
+								innerRef={(ref: HTMLLinkElement) =>
+									focusManager.createScope(
+										ref,
+										`item${i}`,
+										true
+									)
+								}
+								key={i}
+								onClick={
+									onClick
+										? event => onClick(event, item)
+										: undefined
+								}
+								spritemap={spritemap}
+								{...item}
+							>
+								{item.label}
+							</ClayDropDown.Item>
+						);
+					})}
+				</ClayDropDown.ItemList>
+			</ClayDropDown>
+		</FocusScope>
 	);
 };
