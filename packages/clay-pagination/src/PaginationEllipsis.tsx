@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 import ClayButton from '@clayui/button';
-import ClayDropDown from '@clayui/drop-down';
-import React, {useState} from 'react';
+import React from 'react';
+import {ClayDropDownWithBasicItems} from '@clayui/drop-down';
 
 export interface IPaginationEllipsisProps {
 	items?: Array<number>;
@@ -16,40 +16,25 @@ export interface IPaginationEllipsisProps {
 
 const ClayPaginationEllipsis: React.FunctionComponent<
 	IPaginationEllipsisProps
-> = ({disabledPages = [], hrefConstructor, items, onPageChange}) => {
-	const [active, setActive] = useState(false);
+> = ({disabledPages = [], hrefConstructor, items = [], onPageChange}) => {
+	const pages = items.map(page => ({
+		disabled: disabledPages.includes(page),
+		href: hrefConstructor ? hrefConstructor(page) : 'javascript:;',
+		label: String(page),
+		onClick: () => onPageChange && onPageChange(page),
+	}));
 
 	return (
-		<ClayDropDown
-			active={active}
+		<ClayDropDownWithBasicItems
 			className="page-item"
 			containerElement="li"
-			onActiveChange={newVal => setActive(newVal)}
+			items={pages}
 			trigger={
 				<ClayButton className="page-link" displayType="unstyled">
 					{'...'}
 				</ClayButton>
 			}
-		>
-			<ClayDropDown.ItemList>
-				{items &&
-					items.map(page => (
-						<ClayDropDown.Item
-							data-testid={`testId${page}`}
-							disabled={disabledPages.includes(page)}
-							href={
-								hrefConstructor
-									? hrefConstructor(page)
-									: 'javascript:;'
-							}
-							key={page}
-							onClick={() => onPageChange && onPageChange(page)}
-						>
-							{page}
-						</ClayDropDown.Item>
-					))}
-			</ClayDropDown.ItemList>
-		</ClayDropDown>
+		/>
 	);
 };
 
