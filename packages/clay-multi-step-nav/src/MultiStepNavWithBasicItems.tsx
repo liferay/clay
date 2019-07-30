@@ -50,17 +50,16 @@ interface IProps extends React.ComponentProps<typeof ClayMultiStepNav> {
 
 const MAX_STEPS_SHOWN = 7;
 
-const IndicatorWithInnerRef = React.forwardRef<
-	HTMLButtonElement,
-	any
->(({spritemap, ...otherProps}, ref) => (
-	<ClayMultiStepNav.Indicator
-		{...otherProps}
-		innerRef={ref}
-		label="..."
-		spritemap={spritemap}
-	/>
-));
+const IndicatorWithInnerRef = React.forwardRef<HTMLButtonElement, any>(
+	({spritemap, ...otherProps}, ref) => (
+		<ClayMultiStepNav.Indicator
+			{...otherProps}
+			innerRef={ref}
+			label="..."
+			spritemap={spritemap}
+		/>
+	)
+);
 
 export const ClayMultiStepNavWithBasicItems: React.FunctionComponent<
 	IProps
