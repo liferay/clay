@@ -24,7 +24,7 @@ exports[`ClayMultiStepNav activates step on click 1`] = `
         >
           SubOne
         </div>
-        <span
+        <button
           class="multi-step-icon"
         >
           <svg
@@ -35,7 +35,7 @@ exports[`ClayMultiStepNav activates step on click 1`] = `
               xlink:href="/foo/bar#check"
             />
           </svg>
-        </span>
+        </button>
       </div>
     </li>
     <li
@@ -57,7 +57,7 @@ exports[`ClayMultiStepNav activates step on click 1`] = `
         >
           SubTwo
         </div>
-        <span
+        <button
           class="multi-step-icon"
         >
           <svg
@@ -68,7 +68,7 @@ exports[`ClayMultiStepNav activates step on click 1`] = `
               xlink:href="/foo/bar#check"
             />
           </svg>
-        </span>
+        </button>
       </div>
     </li>
     <li
@@ -90,11 +90,11 @@ exports[`ClayMultiStepNav activates step on click 1`] = `
         >
           SubThree
         </div>
-        <span
+        <button
           class="multi-step-icon"
         >
           3
-        </span>
+        </button>
       </div>
     </li>
     <li
@@ -116,11 +116,11 @@ exports[`ClayMultiStepNav activates step on click 1`] = `
         >
           SubFour
         </div>
-        <span
+        <button
           class="multi-step-icon"
         >
           4
-        </span>
+        </button>
       </div>
     </li>
   </ol>
@@ -151,7 +151,7 @@ exports[`ClayMultiStepNav renders 1`] = `
         >
           SubOne
         </div>
-        <span
+        <button
           class="multi-step-icon"
         >
           <svg
@@ -162,7 +162,7 @@ exports[`ClayMultiStepNav renders 1`] = `
               xlink:href="/foo/bar#check"
             />
           </svg>
-        </span>
+        </button>
       </div>
     </li>
     <li
@@ -184,11 +184,11 @@ exports[`ClayMultiStepNav renders 1`] = `
         >
           SubTwo
         </div>
-        <span
+        <button
           class="multi-step-icon"
         >
           2
-        </span>
+        </button>
       </div>
     </li>
     <li
@@ -210,11 +210,11 @@ exports[`ClayMultiStepNav renders 1`] = `
         >
           SubThree
         </div>
-        <span
+        <button
           class="multi-step-icon"
         >
           3
-        </span>
+        </button>
       </div>
     </li>
     <li
@@ -236,11 +236,11 @@ exports[`ClayMultiStepNav renders 1`] = `
         >
           SubFour
         </div>
-        <span
+        <button
           class="multi-step-icon"
         >
           4
-        </span>
+        </button>
       </div>
     </li>
   </ol>
@@ -271,11 +271,11 @@ exports[`ClayMultiStepNavWithBasicItems renders 1`] = `
         >
           SubOne
         </div>
-        <span
+        <button
           class="multi-step-icon"
         >
           1
-        </span>
+        </button>
       </div>
     </li>
     <li
@@ -297,11 +297,11 @@ exports[`ClayMultiStepNavWithBasicItems renders 1`] = `
         >
           SubTwo
         </div>
-        <span
+        <button
           class="multi-step-icon"
         >
           2
-        </span>
+        </button>
       </div>
     </li>
   </ol>

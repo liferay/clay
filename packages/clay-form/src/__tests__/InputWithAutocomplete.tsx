@@ -9,13 +9,9 @@ import {ClayInputWithAutocomplete} from '../InputWithAutocomplete';
 import {cleanup, fireEvent, render} from '@testing-library/react';
 
 describe('InputWithAutocomplete', () => {
-	beforeAll(() => {
-		Element.prototype.scrollIntoView = jest.fn();
-	});
-
 	afterEach(cleanup);
 
-	it('hitting down arrow and then hitting enter calls onItemSelect', () => {
+	it('hitting enter calls onItemSelect', () => {
 		const itemSelectFn = jest.fn();
 		const valueChangeFn = jest.fn();
 
@@ -37,7 +33,7 @@ describe('InputWithAutocomplete', () => {
 		);
 
 		fireEvent.keyDown(
-			container.querySelector('input') as HTMLInputElement,
+			document.querySelector('.dropdown-item') as HTMLButtonElement,
 			{
 				keyCode: 13,
 			}

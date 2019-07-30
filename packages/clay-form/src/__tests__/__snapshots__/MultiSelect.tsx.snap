@@ -12,6 +12,7 @@ exports[`ClayMultiSelect renders 1`] = `
     >
       <div
         className="form-control form-control-tag-group"
+        onKeyDown={[Function]}
       >
         <input
           className="form-control-inset"
@@ -41,6 +42,7 @@ exports[`ClayMultiSelect renders as not valid 1`] = `
     >
       <div
         className="form-control form-control-tag-group"
+        onKeyDown={[Function]}
       >
         <span
           className="label label-dismissible label-secondary"
@@ -178,6 +180,7 @@ exports[`ClayMultiSelect renders with items 1`] = `
     >
       <div
         className="form-control form-control-tag-group"
+        onKeyDown={[Function]}
       >
         <span
           className="label label-dismissible label-secondary"
