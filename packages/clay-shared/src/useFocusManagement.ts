@@ -108,7 +108,11 @@ export function useFocusManagement(loop: boolean = false) {
 	};
 
 	const handleNextElementOutsideScope = (event: KeyboardEvent) => {
-		if (event.keyCode === TAB_KEY_CODE && event.shiftKey) {
+		if (
+			event.keyCode === TAB_KEY_CODE &&
+			event.shiftKey &&
+			focusManagerRef.current.length > 0
+		) {
 			event.preventDefault();
 			lastPositionRef.current = focusManagerRef.current.length;
 			moveFocusInScope(true);
