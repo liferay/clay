@@ -55,6 +55,8 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	};
 }
 
+const KEY_CODE_ESC = 27;
+
 const ClayDropDown: React.FunctionComponent<IProps> & {
 	Action: typeof Action;
 	Caption: typeof Caption;
@@ -80,10 +82,17 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 	const triggerElementRef = useRef<HTMLButtonElement | null>(null);
 	const menuElementRef = useRef<HTMLDivElement>(null);
 
+	const handleKeyUp = (event: React.KeyboardEvent<HTMLElement>) => {
+		if (event.keyCode === KEY_CODE_ESC) {
+			onActiveChange(!active);
+		}
+	};
+
 	return (
 		<ContainerElement
 			{...otherProps}
 			className={classNames('dropdown', className)}
+			onKeyUp={handleKeyUp}
 		>
 			{React.cloneElement(trigger, {
 				className: classNames(
