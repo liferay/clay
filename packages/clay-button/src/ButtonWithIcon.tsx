@@ -13,14 +13,12 @@ interface IProps extends React.ComponentProps<typeof ClayButton> {
 	symbol: string;
 }
 
-const ClayButtonWithIcon: React.FunctionComponent<IProps> = ({
-	spritemap,
-	symbol,
-	...otherProps
-}) => (
-	<ClayButton {...otherProps} monospaced>
-		<ClayIcon spritemap={spritemap} symbol={symbol} />
-	</ClayButton>
+const ClayButtonWithIcon = React.forwardRef<HTMLButtonElement, IProps>(
+	({spritemap, symbol, ...otherProps}, ref) => (
+		<ClayButton {...otherProps} monospaced ref={ref}>
+			<ClayIcon spritemap={spritemap} symbol={symbol} />
+		</ClayButton>
+	)
 );
 
 export default ClayButtonWithIcon;
