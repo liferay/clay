@@ -6,26 +6,28 @@
 
 import classNames from 'classnames';
 import ClayButton from '@clayui/button';
-import ClayDropDown from '@clayui/drop-down';
 import ClayIcon from '@clayui/icon';
 import ClayPagination from './index';
 import React, {useState} from 'react';
+import {ClayDropDownWithBasicItems} from '@clayui/drop-down';
 import {noop, sub} from '@clayui/shared';
 
 const defaultDeltas = [
 	{
-		value: 10,
+		label: 10,
 	},
 	{
-		value: 20,
+		label: 20,
 	},
 	{
-		value: 30,
+		label: 30,
 	},
 	{
-		value: 50,
+		label: 50,
 	},
 ];
+
+type Items = React.ComponentProps<typeof ClayDropDownWithBasicItems>['items'];
 
 interface IDelta {
 	/**
@@ -34,9 +36,9 @@ interface IDelta {
 	href?: string;
 
 	/**
-	 * Value of the delta
+	 * Label of the delta
 	 */
-	value: number;
+	label: number;
 }
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -132,9 +134,31 @@ export const ClayPaginationWithBar: React.FunctionComponent<IProps> = ({
 	totalItems,
 	...otherProps
 }: IProps) => {
-	const [active, setActive] = useState<boolean>(false);
 	const [activePage, setActivePage] = useState<number>(initialActivePage);
-	const [perPage, setPerPage] = useState<number>(initialSelectedDelta.value);
+	const [perPage, setPerPage] = useState<number>(
+		initialSelectedDelta.label as number
+	);
+	const items: Items = deltas.map(({href, label}) => {
+		const item: {
+			href?: string;
+			label?: string;
+			onClick?: () => void;
+		} = {
+			href,
+			label: sub(labels.selectPerPageItems, [String(label)]),
+		};
+
+		if (!href) {
+			item.onClick = () => {
+				setPerPage(label as number);
+				if (onDeltaChange) {
+					onDeltaChange(label as number);
+				}
+			};
+		}
+
+		return item;
+	});
 
 	return (
 		<div
@@ -143,10 +167,9 @@ export const ClayPaginationWithBar: React.FunctionComponent<IProps> = ({
 			})}
 			{...otherProps}
 		>
-			<ClayDropDown
-				active={active}
+			<ClayDropDownWithBasicItems
 				className="pagination-items-per-page"
-				onActiveChange={newVal => setActive(newVal)}
+				items={items}
 				trigger={
 					<ClayButton
 						data-testid="selectPaginationBar"
@@ -159,29 +182,7 @@ export const ClayPaginationWithBar: React.FunctionComponent<IProps> = ({
 						/>
 					</ClayButton>
 				}
-			>
-				<ClayDropDown.ItemList>
-					{deltas.map(({href, value}: IDelta, i: number) => (
-						<ClayDropDown.Item
-							data-testid={`dropdownItem${i}`}
-							href={href}
-							key={`dropdownItem${i}`}
-							onClick={
-								href
-									? undefined
-									: () => {
-											setPerPage(value);
-											if (onDeltaChange) {
-												onDeltaChange(value);
-											}
-									  }
-							}
-						>
-							{sub(labels.selectPerPageItems, [String(value)])}
-						</ClayDropDown.Item>
-					))}
-				</ClayDropDown.ItemList>
-			</ClayDropDown>
+			/>
 
 			<div className="pagination-results">
 				{sub(labels.paginationResults, [

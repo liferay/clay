@@ -6,13 +6,7 @@
 
 import ClayPagination, {ClayPaginationWithBar} from '..';
 import React from 'react';
-import {
-	cleanup,
-	fireEvent,
-	getByTestId,
-	getByText,
-	render,
-} from '@testing-library/react';
+import {cleanup, fireEvent, getByText, render} from '@testing-library/react';
 
 const spritemap = 'path/to/spritemap';
 
@@ -48,7 +42,7 @@ describe('ClayPagination', () => {
 	it('calls onPageChange when arrow is clicked', () => {
 		const changeMock = jest.fn();
 
-		const {container} = render(
+		const {getByTestId} = render(
 			<ClayPagination
 				activePage={12}
 				onPageChange={changeMock}
@@ -57,17 +51,11 @@ describe('ClayPagination', () => {
 			/>
 		);
 
-		fireEvent.click(
-			getByTestId(container, 'prevArrow') as HTMLButtonElement,
-			{}
-		);
+		fireEvent.click(getByTestId('prevArrow'), {});
 
 		expect(changeMock).toHaveBeenLastCalledWith(11);
 
-		fireEvent.click(
-			getByTestId(container, 'nextArrow') as HTMLButtonElement,
-			{}
-		);
+		fireEvent.click(getByTestId('nextArrow'), {});
 
 		expect(changeMock).toHaveBeenLastCalledWith(13);
 	});
@@ -75,7 +63,7 @@ describe('ClayPagination', () => {
 	it('calls onPageChange when individual page is clicked', () => {
 		const changeMock = jest.fn();
 
-		const {container} = render(
+		const {getByText} = render(
 			<ClayPagination
 				activePage={12}
 				onPageChange={changeMock}
@@ -84,7 +72,7 @@ describe('ClayPagination', () => {
 			/>
 		);
 
-		fireEvent.click(getByText(container, '25') as HTMLElement, {});
+		fireEvent.click(getByText('25'), {});
 
 		expect(changeMock).toHaveBeenLastCalledWith(25);
 	});
@@ -108,7 +96,7 @@ describe('ClayPagination', () => {
 	it('calls onPageChange when an item is clicked in dropdown-menu', () => {
 		const changeMock = jest.fn();
 
-		const {getAllByText} = render(
+		const {getAllByText, getByTestId} = render(
 			<ClayPagination
 				activePage={12}
 				onPageChange={changeMock}
@@ -119,10 +107,7 @@ describe('ClayPagination', () => {
 
 		fireEvent.click(getAllByText('...')[0] as HTMLElement, {});
 
-		fireEvent.click(
-			getByTestId(document.body, 'testId4') as HTMLElement,
-			{}
-		);
+		fireEvent.click(getByTestId('testId4'), {});
 
 		expect(changeMock).toHaveBeenLastCalledWith(4);
 	});
@@ -142,7 +127,7 @@ describe('ClayPaginationWithBar', () => {
 	it('calls onPageChange when arrow is clicked', () => {
 		const changeMock = jest.fn();
 
-		const {container} = render(
+		const {getByTestId} = render(
 			<ClayPaginationWithBar
 				initialActivePage={12}
 				onPageChange={changeMock}
@@ -151,17 +136,11 @@ describe('ClayPaginationWithBar', () => {
 			/>
 		);
 
-		fireEvent.click(
-			getByTestId(container, 'prevArrow') as HTMLButtonElement,
-			{}
-		);
+		fireEvent.click(getByTestId('prevArrow'), {});
 
 		expect(changeMock).toHaveBeenLastCalledWith(11);
 
-		fireEvent.click(
-			getByTestId(container, 'nextArrow') as HTMLButtonElement,
-			{}
-		);
+		fireEvent.click(getByTestId('nextArrow'), {});
 
 		expect(changeMock).toHaveBeenLastCalledWith(12);
 	});
@@ -169,7 +148,7 @@ describe('ClayPaginationWithBar', () => {
 	it('calls onDeltaChange when select is expanded', () => {
 		const deltaChangeMock = jest.fn();
 
-		const {container} = render(
+		const {getByTestId} = render(
 			<ClayPaginationWithBar
 				initialActivePage={12}
 				onDeltaChange={deltaChangeMock}
@@ -178,24 +157,15 @@ describe('ClayPaginationWithBar', () => {
 			/>
 		);
 
-		fireEvent.click(
-			getByTestId(container, 'selectPaginationBar') as HTMLButtonElement,
-			{}
-		);
+		fireEvent.click(getByTestId('selectPaginationBar'), {});
 
-		fireEvent.click(
-			getByTestId(
-				window.document.documentElement,
-				'dropdownItem1'
-			) as HTMLButtonElement,
-			{}
-		);
+		fireEvent.click(getByText(document.body, '20 items'), {});
 
 		expect(deltaChangeMock).toHaveBeenLastCalledWith(20);
 	});
 
 	it('shows dropdown when pagination dropdown is clicked', () => {
-		const {container} = render(
+		const {getByTestId} = render(
 			<ClayPaginationWithBar
 				initialActivePage={12}
 				spritemap={spritemap}
@@ -203,10 +173,7 @@ describe('ClayPaginationWithBar', () => {
 			/>
 		);
 
-		fireEvent.click(
-			getByTestId(container, 'selectPaginationBar') as HTMLElement,
-			{}
-		);
+		fireEvent.click(getByTestId('selectPaginationBar'), {});
 
 		expect(
 			document.body.querySelector('.dropdown-menu')!.classList

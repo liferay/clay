@@ -9,7 +9,9 @@ import ClayIcon from '@clayui/icon';
 import React from 'react';
 
 interface IProps
-	extends React.HTMLAttributes<HTMLSpanElement | HTMLAnchorElement> {
+	extends React.HTMLAttributes<
+		HTMLSpanElement | HTMLButtonElement | HTMLAnchorElement
+	> {
 	/**
 	 * Flag that indicates if item is selected.
 	 */

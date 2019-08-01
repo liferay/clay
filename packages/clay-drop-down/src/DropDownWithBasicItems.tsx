@@ -13,12 +13,20 @@ interface IItem {
 	href?: string;
 	label?: string;
 	type?: 'divider';
-	onClick?: () => void;
+	onClick?: (
+		event: React.MouseEvent<
+			HTMLSpanElement | HTMLButtonElement | HTMLAnchorElement,
+			MouseEvent
+		>,
+		item: IItem
+	) => void;
 	symbolRight?: string;
 	symbolLeft?: string;
 }
 
 interface IProps {
+	className?: string;
+
 	/**
 	 * List of items to display in drop down menu
 	 */
@@ -37,6 +45,7 @@ const ARROW_UP_KEY_CODE = 38;
 const ARROW_DOWN_KEY_CODE = 40;
 
 export const ClayDropDownWithBasicItems: React.FunctionComponent<IProps> = ({
+	className,
 	items,
 	spritemap,
 	trigger,
@@ -68,6 +77,7 @@ export const ClayDropDownWithBasicItems: React.FunctionComponent<IProps> = ({
 	return (
 		<ClayDropDown
 			active={active}
+			className={className}
 			hasLeftSymbols={hasLeftSymbols}
 			hasRightSymbols={hasRightSymbols}
 			onActiveChange={(newVal: boolean) => setActive(newVal)}
@@ -77,7 +87,7 @@ export const ClayDropDownWithBasicItems: React.FunctionComponent<IProps> = ({
 			})}
 		>
 			<ClayDropDown.ItemList>
-				{items.map((item: IItem, i: number) => {
+				{items.map(({onClick, ...item}: IItem, i: number) => {
 					if (item.type === 'divider') {
 						return <ClayDropDown.Divider key={i} />;
 					}
@@ -88,6 +98,11 @@ export const ClayDropDownWithBasicItems: React.FunctionComponent<IProps> = ({
 								focusManager.createScope(ref, `item${i}`, true)
 							}
 							key={i}
+							onClick={
+								onClick
+									? event => onClick(event, item)
+									: undefined
+							}
 							spritemap={spritemap}
 							{...item}
 						>
