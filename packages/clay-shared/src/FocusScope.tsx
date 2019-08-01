@@ -8,7 +8,18 @@ import React from 'react';
 import {useFocusManagement} from './useFocusManagement';
 
 interface IProps {
+	/**
+	 * Flag that indicates if the focus will be controlled by the arrow keys.
+	 * Disabling means that it will still be controlled by tab and shift + tab.
+	 */
 	arrowKeys?: boolean;
+
+	children: React.ReactElement;
+
+	/**
+	 * Instance of `useFocusManagement` hook so FocusScope can control focus
+	 * via tab or arrow keys.
+	 */
 	focusManager: ReturnType<typeof useFocusManagement>;
 }
 
@@ -16,6 +27,13 @@ const ARROW_DOWN_KEY_CODE = 40;
 const ARROW_UP_KEY_CODE = 38;
 const TAB_KEY_CODE = 9;
 
+/**
+ * FocusScope is a component only for controlling focus and listening
+ * for children's key down events, since the component handles the `onKeyDown`
+ * event, the component has assumed that you have scoped all focusable items
+ * and should be controlled if only a part of your scope being added on
+ * `createScope` there may be problems of focus experience.
+ */
 export const FocusScope: React.FunctionComponent<IProps> = ({
 	arrowKeys = true,
 	children,
@@ -39,14 +57,14 @@ export const FocusScope: React.FunctionComponent<IProps> = ({
 		}
 	};
 
-	return React.cloneElement(children as React.FunctionComponentElement<any>, {
+	return React.cloneElement(children, {
 		onKeyDown: (event: React.KeyboardEvent) => {
 			onKeyDown(event);
 
-			// If the element already exists a `onKeyDown` event should invoke it as well.
-			// Any here is because React interfaces do not expose what lies under the hood.
-			if ((children as any).props.onKeyDown) {
-				(children as any).props.onKeyDown(event);
+			// If the element already exists a `onKeyDown` event should
+			// invoke it as well.
+			if (children.props.onKeyDown) {
+				children.props.onKeyDown(event);
 			}
 		},
 	});
