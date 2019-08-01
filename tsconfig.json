@@ -11,7 +11,7 @@
 		"allowJs": true,
 		"baseUrl": ".",
 		"paths": {
-			"@clayui/*": ["packages/clay-*/src"],
+			"@clayui/*": ["node_modules/@clayui/*/src"],
 			"*": ["custom-types/*", "node_modules/*", "packages/*"]
 		}
 	},
