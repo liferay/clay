@@ -33,7 +33,7 @@ const CARD_TYPE_ELEMENTS = {
 	subtitle: 'span',
 	text: 'div',
 	title: 'h3',
-};
+} as const;
 
 const ClayCardDescription: React.FunctionComponent<ICardDescriptionProps> = ({
 	children,
@@ -43,7 +43,7 @@ const ClayCardDescription: React.FunctionComponent<ICardDescriptionProps> = ({
 	truncate = true,
 	...otherProps
 }: ICardDescriptionProps) => {
-	const OuterTag = CARD_TYPE_ELEMENTS[displayType] as ('span' | 'div' | 'h3');
+	const OuterTag = CARD_TYPE_ELEMENTS[displayType];
 	const InnerTag = href ? 'a' : 'span';
 
 	return (
