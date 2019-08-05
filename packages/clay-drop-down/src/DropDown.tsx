@@ -50,7 +50,9 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	/**
 	 * Element that is used as the trigger which will activate the dropdown on click.
 	 */
-	trigger: React.ReactElement & {ref?: (node: HTMLButtonElement | null) => void};
+	trigger: React.ReactElement & {
+		ref?: (node: HTMLButtonElement | null) => void;
+	};
 }
 
 const ClayDropDown: React.FunctionComponent<IProps> & {
