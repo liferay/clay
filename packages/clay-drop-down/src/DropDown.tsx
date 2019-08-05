@@ -50,7 +50,9 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	/**
 	 * Element that is used as the trigger which will activate the dropdown on click.
 	 */
-	trigger: React.ReactElement;
+	trigger: React.ReactElement & {
+		ref?: (node: HTMLButtonElement | null) => void;
+	};
 }
 
 const ClayDropDown: React.FunctionComponent<IProps> & {
@@ -92,11 +94,7 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 				ref: (node: HTMLButtonElement) => {
 					triggerElementRef.current = node;
 					// Call the original ref, if any.
-					// Type is any because the React.ReactElement
-					// interface does not necessarily state that trigger
-					// will always be a fiber under the hood, so we have
-					// to declare any to get away from it.
-					const {ref} = trigger as any;
+					const {ref} = trigger;
 					if (typeof ref === 'function') {
 						ref(node);
 					}
