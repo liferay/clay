@@ -10,6 +10,7 @@ import ClayDropDown from '@clayui/drop-down';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import React, {useLayoutEffect, useRef, useState} from 'react';
+import {FocusScope, useFocusManagement} from '@clayui/shared';
 
 const BACKSPACE_KEY = 8;
 const COMMA_KEY = 188;
@@ -88,10 +89,11 @@ const MultiSelect: React.FunctionComponent<IProps> = ({
 	spritemap,
 	...otherProps
 }) => {
-	const inputRef = useRef<HTMLInputElement>(null);
-	const lastItemRef = useRef<HTMLSpanElement>(null);
+	const inputRef = useRef<HTMLInputElement | null>(null);
+	const lastItemRef = useRef<HTMLSpanElement | null>(null);
 	const [active, setActive] = useState(false);
 	const [isFocused, setIsFocused] = useState();
+	const focusManager = useFocusManagement();
 
 	useLayoutEffect(() => {
 		if (sourceItems) {
@@ -153,100 +155,115 @@ const MultiSelect: React.FunctionComponent<IProps> = ({
 
 			<div className="input-group input-group-stacked-sm-down">
 				<div className="input-group-item">
-					<div
-						className={classNames(
-							'form-control form-control-tag-group',
-							{
-								focus: isFocused && isValid,
-							}
-						)}
-					>
-						{items.map((item, i) => {
-							const removeItem = () =>
-								onItemsChange([
-									...items.slice(0, i),
-									...items.slice(i + 1),
-								]);
+					<FocusScope arrowKeys={false} focusManager={focusManager}>
+						<div
+							className={classNames(
+								'form-control form-control-tag-group',
+								{
+									focus: isFocused && isValid,
+								}
+							)}
+						>
+							{items.map((item, i) => {
+								const removeItem = () =>
+									onItemsChange([
+										...items.slice(0, i),
+										...items.slice(i + 1),
+									]);
 
-							return (
-								<ClayLabel
-									closeButtonProps={{
-										onClick: removeItem,
-									}}
-									key={i}
-									onKeyDown={({keyCode}) => {
-										if (keyCode !== BACKSPACE_KEY) {
-											return;
-										}
+								return (
+									<ClayLabel
+										closeButtonProps={{
+											onClick: removeItem,
+										}}
+										key={i}
+										onKeyDown={({keyCode}) => {
+											if (keyCode !== BACKSPACE_KEY) {
+												return;
+											}
+											if (inputRef.current) {
+												inputRef.current.focus();
+											}
+											removeItem();
+										}}
+										ref={(ref: HTMLSpanElement) => {
+											focusManager.createScope(
+												ref,
+												`label${i}`
+											);
 
-										if (inputRef.current) {
-											inputRef.current.focus();
-										}
+											if (i === items.length - 1) {
+												lastItemRef.current = ref;
+											}
+										}}
+										spritemap={spritemap}
+										tabIndex={0}
+									>
+										{item}
+									</ClayLabel>
+								);
+							})}
 
-										removeItem();
-									}}
-									ref={
-										i === items.length - 1
-											? lastItemRef
-											: undefined
-									}
-									spritemap={spritemap}
-									tabIndex={0}
+							<input
+								{...otherProps}
+								className="form-control-inset"
+								onBlur={() => setIsFocused(false)}
+								onChange={event =>
+									onInputChange(
+										event.target.value.replace(',', '')
+									)
+								}
+								onFocus={() => setIsFocused(true)}
+								onKeyDown={handleKeyDown}
+								onPaste={handlePaste}
+								ref={ref => {
+									inputRef.current = ref;
+									focusManager.createScope(ref, 'input');
+								}}
+								type="text"
+								value={inputValue}
+							/>
+
+							{sourceItems && (
+								<ClayAutocomplete.DropDown
+									active={active}
+									alignElementRef={forwardRef}
+									onSetActive={setActive}
 								>
-									{item}
-								</ClayLabel>
-							);
-						})}
+									<ClayDropDown.ItemList>
+										{sourceItems
+											.filter(
+												item =>
+													inputValue &&
+													item.match(inputValue)
+											)
+											.map(item => (
+												<ClayAutocomplete.Item
+													innerRef={ref =>
+														focusManager.createScope(
+															ref,
+															`item${item}`,
+															true
+														)
+													}
+													key={item}
+													match={inputValue}
+													onClick={() => {
+														onItemsChange([
+															...items,
+															item,
+														]);
 
-						<input
-							{...otherProps}
-							className="form-control-inset"
-							onBlur={() => setIsFocused(false)}
-							onChange={event =>
-								onInputChange(
-									event.target.value.replace(',', '')
-								)
-							}
-							onFocus={() => setIsFocused(true)}
-							onKeyDown={handleKeyDown}
-							onPaste={handlePaste}
-							ref={inputRef}
-							type="text"
-							value={inputValue}
-						/>
-
-						{sourceItems && (
-							<ClayAutocomplete.DropDown
-								active={active}
-								alignElementRef={forwardRef}
-								onSetActive={setActive}
-							>
-								<ClayDropDown.ItemList>
-									{sourceItems
-										.filter(
-											item =>
-												inputValue &&
-												item.match(inputValue)
-										)
-										.map(item => (
-											<ClayAutocomplete.Item
-												key={item}
-												match={inputValue}
-												onClick={() => {
-													onItemsChange([
-														...items,
-														item,
-													]);
-
-													onInputChange('');
-												}}
-												value={item}
-											/>
-										))}
-								</ClayDropDown.ItemList>
-							</ClayAutocomplete.DropDown>
-						)}
-					</div>
+														onInputChange('');
+													}}
+													value={item}
+												/>
+											))}
+									</ClayDropDown.ItemList>
+								</ClayAutocomplete.DropDown>
+							)}
+						</div>
+					</FocusScope>
 
 					{helpText && (
 						<div className="form-feedback-group">

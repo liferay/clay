@@ -53,9 +53,6 @@ export function useFocusManagement(loop: boolean = false) {
 				focusManagerRef.current[elementIndex] = schema;
 			}
 		} else {
-			if (lastPositionRef.current !== null) {
-				lastPositionRef.current = 0;
-			}
 			focusManagerRef.current.splice(elementIndex, 1);
 		}
 	};
@@ -111,7 +108,11 @@ export function useFocusManagement(loop: boolean = false) {
 	};
 
 	const handleNextElementOutsideScope = (event: KeyboardEvent) => {
-		if (event.keyCode === TAB_KEY_CODE && event.shiftKey) {
+		if (
+			event.keyCode === TAB_KEY_CODE &&
+			event.shiftKey &&
+			focusManagerRef.current.length > 0
+		) {
 			event.preventDefault();
 			lastPositionRef.current = focusManagerRef.current.length;
 			moveFocusInScope(true);
@@ -194,8 +195,32 @@ export function useFocusManagement(loop: boolean = false) {
 			if (backwards) {
 				lastPositionRef.current = size;
 			} else {
-				lastPositionRef.current =
-					activeNode === focusManagerRef.current[0].value ? 1 : 0;
+				// Causes interaction not to start from the first item in the queue
+				// and continues to focus regardless of where it is.
+				const activeElementIndex = focusManagerRef.current.findIndex(
+					el => el.value === activeNode
+				);
+
+				// Fixes the last position, this can happen in cases where list
+				// elements have been deleted but the lastPosition has not been reset or when
+				// the active element is the last in the queue.
+				if (activeElementIndex + 1 > size) {
+					// If there is no element outside the scope focusable,
+					// then go back to the beginning.
+					if (sequence === 1) {
+						lastPositionRef.current = 0;
+					} else {
+						lastPositionRef.current = activeElementIndex;
+
+						// Call `moveFocusInScope` to check for any out-of-scope
+						// elements that can be focused.
+						moveFocusInScope(backwards, sequence + 1);
+						return;
+					}
+				} else {
+					lastPositionRef.current =
+						activeElementIndex !== -1 ? activeElementIndex + 1 : 0;
+				}
 			}
 		} else {
 			lastPositionRef.current = backwards
@@ -234,6 +259,9 @@ export function useFocusManagement(loop: boolean = false) {
 					'keydown',
 					handleNextElementOutsideScope
 				);
+
+				// Sets the value to null only to remove reference and prevent
+				// memory leak cases.
 				nextElementOutsideScopeRef.current = null;
 			}
 		};

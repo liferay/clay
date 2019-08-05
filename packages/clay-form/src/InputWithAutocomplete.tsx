@@ -6,8 +6,8 @@
 
 import ClayAutocomplete from '@clayui/autocomplete';
 import ClayDropDown from '@clayui/drop-down';
-import React, {useEffect, useRef, useState} from 'react';
-import {useKeyHandlerForList} from '@clayui/shared';
+import React, {useEffect, useState} from 'react';
+import {FocusScope, useFocusManagement} from '@clayui/shared';
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	/**
@@ -46,6 +46,8 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	showLoadingMessage?: boolean;
 }
 
+const ENTER_KEY_CODE = 13;
+
 export const ClayInputWithAutocomplete: React.FunctionComponent<IProps> = ({
 	items = [],
 	itemSelector = val => val as string,
@@ -57,73 +59,75 @@ export const ClayInputWithAutocomplete: React.FunctionComponent<IProps> = ({
 	value = '',
 	...otherProps
 }) => {
-	const activeListItemRef = useRef<HTMLLIElement>(null);
-	const inputRef = useRef<HTMLInputElement>(null);
-	const [activeIndex, setActiveIndex] = useState(-1);
 	const [active, setActive] = useState(!!value);
+	const focusManager = useFocusManagement();
 
-	const keyHandler = useKeyHandlerForList({
-		activeListItemRef,
-		index: activeIndex,
-		inputRef,
-		onIndexChange: setActiveIndex,
-		onIndexSelect: (index: number) => onItemSelect(items[index]),
-		totalItems: items.length,
-	});
+	const handleKeyEnter = (
+		event: React.KeyboardEvent<HTMLSpanElement | HTMLAnchorElement>,
+		item: string | object
+	) => {
+		if (event.keyCode === ENTER_KEY_CODE) {
+			onItemSelect(item);
+		}
+	};
 
 	useEffect(() => {
 		setActive(!!value);
 	}, [value]);
 
-	useEffect(() => {
-		setActiveIndex(-1);
-	}, [active]);
-
 	return (
-		<ClayAutocomplete>
-			<ClayAutocomplete.Input
-				{...otherProps}
-				onChange={e => onValueChange(e.target.value)}
-				onKeyDown={keyHandler}
-				ref={inputRef}
-				value={value}
-			/>
+		<FocusScope focusManager={focusManager}>
+			<ClayAutocomplete>
+				<ClayAutocomplete.Input
+					{...otherProps}
+					onChange={e => onValueChange(e.target.value)}
+					ref={ref => focusManager.createScope(ref, 'input')}
+					value={value}
+				/>
 
-			{((loading && showLoadingMessage) || !!items.length) && (
-				<ClayAutocomplete.DropDown
-					active={active}
-					onSetActive={setActive}
-				>
-					<ClayDropDown.ItemList>
-						{!loading &&
-							items.map((item, i) => (
+				{((loading && showLoadingMessage) || !!items.length) && (
+					<ClayAutocomplete.DropDown
+						active={active}
+						onSetActive={setActive}
+					>
+						<ClayDropDown.ItemList>
+							{!loading &&
+								items.map((item, i) => (
+									<ClayAutocomplete.Item
+										innerRef={ref =>
+											focusManager.createScope(
+												ref,
+												`item${i}`,
+												true
+											)
+										}
+										key={itemSelector(item)}
+										match={value.toString()}
+										onClick={() =>
+											onItemSelect(itemSelector(item))
+										}
+										onKeyDown={event =>
+											handleKeyEnter(
+												event,
+												itemSelector(item)
+											)
+										}
+										value={itemSelector(item)}
+									/>
+								))}
+
+							{loading && showLoadingMessage && (
 								<ClayAutocomplete.Item
-									active={i === activeIndex}
-									key={itemSelector(item)}
-									match={value.toString()}
-									onClick={() =>
-										onItemSelect(itemSelector(item))
-									}
-									ref={
-										activeIndex === i
-											? activeListItemRef
-											: undefined
-									}
-									value={itemSelector(item)}
+									disabled
+									value={loadingMessage}
 								/>
-							))}
+							)}
+						</ClayDropDown.ItemList>
+					</ClayAutocomplete.DropDown>
+				)}
 
-						{loading && showLoadingMessage && (
-							<ClayAutocomplete.Item
-								disabled
-								value={loadingMessage}
-							/>
-						)}
-					</ClayDropDown.ItemList>
-				</ClayAutocomplete.DropDown>
-			)}
-
-			{loading && <ClayAutocomplete.LoadingIndicator />}
-		</ClayAutocomplete>
+				{loading && <ClayAutocomplete.LoadingIndicator />}
+			</ClayAutocomplete>
+		</FocusScope>
 	);
 };

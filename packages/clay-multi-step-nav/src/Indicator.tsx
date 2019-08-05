@@ -13,6 +13,8 @@ interface IProps {
 	 */
 	complete?: boolean;
 
+	innerRef?: React.Ref<HTMLButtonElement>;
+
 	/**
 	 * Value to display above step icon
 	 */
@@ -35,17 +37,21 @@ interface IProps {
 }
 
 const ClayMultiStepNavIndicator = React.forwardRef<HTMLDivElement, IProps>(
-	({complete, label, onClick, spritemap, subTitle}, ref) => (
+	({complete, innerRef, label, onClick, spritemap, subTitle}, ref) => (
 		<div className="multi-step-indicator" ref={ref}>
 			{subTitle && (
 				<div className="multi-step-indicator-label">{subTitle}</div>
 			)}
 
-			<span className="multi-step-icon" onClick={onClick}>
+			<button
+				className="multi-step-icon"
+				onClick={onClick}
+				ref={innerRef}
+			>
 				{complete && <ClayIcon spritemap={spritemap} symbol="check" />}
 
 				{!complete && label}
-			</span>
+			</button>
 		</div>
 	)
 );

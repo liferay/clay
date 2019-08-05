@@ -12,3 +12,4 @@ export {useKeyHandlerForList} from './useKeyHandlerForList';
 export {useTransitionHeight} from './useTransitionHeight';
 export {useFocusManagement} from './useFocusManagement';
 export {sub} from './sub';
+export {FocusScope} from './FocusScope';

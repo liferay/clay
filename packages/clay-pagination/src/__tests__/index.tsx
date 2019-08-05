@@ -96,7 +96,7 @@ describe('ClayPagination', () => {
 	it('calls onPageChange when an item is clicked in dropdown-menu', () => {
 		const changeMock = jest.fn();
 
-		const {getAllByText, getByTestId} = render(
+		const {getAllByText} = render(
 			<ClayPagination
 				activePage={12}
 				onPageChange={changeMock}
@@ -107,7 +107,7 @@ describe('ClayPagination', () => {
 
 		fireEvent.click(getAllByText('...')[0] as HTMLElement, {});
 
-		fireEvent.click(getByTestId('testId4'), {});
+		fireEvent.click(getByText(document.body, '4') as HTMLAnchorElement, {});
 
 		expect(changeMock).toHaveBeenLastCalledWith(4);
 	});
