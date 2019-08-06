@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import LRU from 'lru-cache';
+import {LRUCache} from './LRUCache';
 
 export const SYMBOL_DATA_PROVIDER = Symbol('clay.data.provider');
 
@@ -34,7 +34,7 @@ export enum FetchPolicy {
 	CacheAndNetwork = 'cache-and-network',
 }
 
-export type TSymbolData = LRU<{}, {}>;
+export type TSymbolData = LRUCache<string, {}>;
 
 export type TLink = Function | string;
 
