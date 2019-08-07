@@ -4,18 +4,18 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayForm from '@clayui/form';
 import Editor from './Editor';
 import React, {useState} from 'react';
+import {ClayCheckbox} from '@clayui/form';
 
 const spritemap = '/images/icons/icons.svg';
 
 export const Checkbox = () => {
-	const scope = {ClayForm, spritemap};
+	const scope = {ClayCheckbox, spritemap};
 	const code = `const Component = () => {
 	
 	return (
-		<ClayForm.Checkbox
+		<ClayCheckbox
 			aria-label="hello! Can you see me?"
 			checked={true}
 			readOnly
@@ -29,7 +29,7 @@ render(<Component />)`;
 };
 
 export const CheckboxContainerProps = () => {
-	const scope = {ClayForm, spritemap, useState};
+	const scope = {ClayCheckbox, spritemap, useState};
 	const code = `const Component = () => {
 	const [value, setValue] = useState(false);
 
@@ -38,7 +38,7 @@ export const CheckboxContainerProps = () => {
 	};
 
 	return (
-		<ClayForm.Checkbox
+		<ClayCheckbox
 			aria-label="I'm checked indefinitely"
 			checked={true}
 			containerProps={data}
@@ -53,12 +53,12 @@ render(<Component />)`;
 };
 
 export const CheckboxIndeterminate = () => {
-	const scope = {ClayForm, spritemap, useState};
+	const scope = {ClayCheckbox, spritemap, useState};
 	const code = `const Component = () => {
 	const [value, setValue] = useState(false);
 
 	return (
-		<ClayForm.Checkbox
+		<ClayCheckbox
 			aria-label="I'm indeterminate"
 			checked={value}
 			onChange={() => setValue(val => !val)}
@@ -73,27 +73,27 @@ render(<Component />)`;
 };
 
 export const CheckboxesInline = () => {
-	const scope = {ClayForm, spritemap, useState};
+	const scope = {ClayCheckbox, spritemap, useState};
 	const code = `const Component = () => {
 	const [value, setValue] = useState(false);
 
 	return (
 		<>
-			<ClayForm.Checkbox
+			<ClayCheckbox
 				aria-label="Option 1"
 				checked={value}
 				onChange={() => setValue(val => !val)}
 				label="Option 1"
 				inline
 			/>
-			<ClayForm.Checkbox
+			<ClayCheckbox
 				aria-label="Option 2"
 				checked={value}
 				onChange={() => setValue(val => !val)}
 				label="Option 2"
 				inline
 			/>
-			<ClayForm.Checkbox
+			<ClayCheckbox
 				aria-label="Option 3"
 				checked={value}
 				onChange={() => setValue(val => !val)}
@@ -110,12 +110,12 @@ render(<Component />)`;
 };
 
 export const CheckboxLabel = () => {
-	const scope = {ClayForm, spritemap, useState};
+	const scope = {ClayCheckbox, spritemap, useState};
 	const code = `const Component = () => {
 	const [value, setValue] = useState(false);
 
 	return (
-		<ClayForm.Checkbox
+		<ClayCheckbox
 			aria-label="Option 1"
 			checked={value}
 			onChange={() => setValue(val => !val)}
@@ -130,12 +130,12 @@ render(<Component />)`;
 };
 
 export const CheckboxWithCallback = () => {
-	const scope = {ClayForm, spritemap, useState};
+	const scope = {ClayCheckbox, spritemap, useState};
 	const code = `const Component = () => {
 	const [value, setValue] = useState(false);
 
 	return (
-		<ClayForm.Checkbox
+		<ClayCheckbox
 			checked={value}
 			onChange={() => setValue(val => !val)}
 		/>
