@@ -7,27 +7,27 @@
 import '@clayui/css/lib/css/atlas.css';
 import ClayButton from '@clayui/button';
 import ClayDropDown, {Align} from '@clayui/drop-down';
-import ClayForm from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClayProgressBar from '@clayui/progress-bar';
 import ClayTable from '../src';
 import React from 'react';
 import {boolean, select} from '@storybook/addon-knobs';
+import {ClayCheckbox} from '@clayui/form';
 import {storiesOf} from '@storybook/react';
 
 function ClayCheckboxWithState(props: any) {
 	const [value, setValue] = React.useState<boolean>(false);
 
 	return (
-		<ClayForm.Checkbox
+		<ClayCheckbox
 			checked={value}
 			disabled={false}
 			indeterminate={false}
 			onChange={() => setValue(val => !val)}
 		>
 			{props.children}
-		</ClayForm.Checkbox>
+		</ClayCheckbox>
 	);
 }
 

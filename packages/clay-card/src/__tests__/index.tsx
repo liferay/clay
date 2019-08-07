@@ -10,25 +10,25 @@ import ClayCard, {
 	ClayCardWithNavigation,
 	ClayCardWithUser,
 } from '../index';
-import ClayForm from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClaySticker from '@clayui/sticker';
 import React from 'react';
+import {ClayCheckbox} from '@clayui/form';
 import {cleanup, fireEvent, render} from '@testing-library/react';
 
 const ClayCheckboxWithState = (props: any) => {
 	const [value, setValue] = React.useState<boolean>(false);
 
 	return (
-		<ClayForm.Checkbox
+		<ClayCheckbox
 			checked={value}
 			disabled={false}
 			indeterminate={false}
 			onChange={() => setValue(val => !val)}
 		>
 			{props.children}
-		</ClayForm.Checkbox>
+		</ClayCheckbox>
 	);
 };
 

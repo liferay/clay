@@ -1070,7 +1070,7 @@ exports[`BasicRendering renders date picker with native picker 1`] = `
             value=""
           />
           <input
-            class="form-control input-group-inset"
+            class="form-control"
             placeholder="YYYY-MM-DD"
             type="date"
             value=""
@@ -1727,11 +1727,11 @@ exports[`BasicRendering renders date picker with time 1`] = `
                 <div
                   class="input-group-item input-group-item-shrink"
                 >
-                  <span
+                  <div
                     class="input-group-text"
                   >
                     (GMT+01:00)
-                  </span>
+                  </div>
                 </div>
               </div>
             </div>

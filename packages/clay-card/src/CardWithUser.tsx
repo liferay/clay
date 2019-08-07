@@ -5,11 +5,11 @@
  */
 
 import ClayCard from './Card';
-import ClayForm from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClaySticker, {DisplayType as StickerDisplayType} from '@clayui/sticker';
 import React from 'react';
+import {ClayCheckbox} from '@clayui/form';
 import {ClayDropDownWithBasicItems} from '@clayui/drop-down';
 
 interface IProps {
@@ -103,14 +103,14 @@ export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 		<ClayCard displayType="user" selectable={!!onSelectChange}>
 			<ClayCard.AspectRatio className="card-item-first">
 				{onSelectChange && (
-					<ClayForm.Checkbox
+					<ClayCheckbox
 						checked={selected}
 						disabled={false}
 						indeterminate={false}
 						onChange={() => onSelectChange(!selected)}
 					>
 						{content}
-					</ClayForm.Checkbox>
+					</ClayCheckbox>
 				)}
 
 				{!onSelectChange && content}

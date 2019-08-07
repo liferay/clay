@@ -4,30 +4,30 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayForm from '@clayui/form';
 import Editor from './Editor';
 import React, {useState} from 'react';
+import {ClayRadio, ClayRadioGroup} from '@clayui/form';
 
 const radioGroupCode = `const Component = () => {
 	const [value, setValue] = useState('one');
 
 	return (
-		<ClayForm.RadioGroup
+		<ClayRadioGroup
 			inline
 			onSelectedValueChange={val => setValue(val)}
 			selectedValue={value}
 		>
-			<ClayForm.Radio label="One" value="one" />
-			<ClayForm.Radio label="Two" value="two" />
-			<ClayForm.Radio label="Three" value="three" />
-		</ClayForm.RadioGroup>
+			<ClayRadio label="One" value="one" />
+			<ClayRadio label="Two" value="two" />
+			<ClayRadio label="Three" value="three" />
+		</ClayRadioGroup>
 	);
 }
 
 render(<Component />)`;
 
 const RadioGroup = () => {
-	const scope = {ClayForm, useState};
+	const scope = {ClayRadio, ClayRadioGroup, useState};
 	return <Editor code={radioGroupCode} scope={scope} />;
 };
 

@@ -8,6 +8,7 @@ import classNames from 'classnames';
 import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
 import React, {useEffect, useRef, useState} from 'react';
+import {ClayInput} from '@clayui/form';
 import {useFocusManagement} from '@clayui/shared';
 
 type ConfigMaxMin = {
@@ -298,18 +299,15 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 
 	return (
 		<div className="clay-time">
-			<div className="input-group">
+			<ClayInput.Group>
 				{icon && (
-					<div className="input-group-item input-group-item-shrink">
-						<div className="input-group-text">
+					<ClayInput.GroupItem shrink>
+						<ClayInput.GroupText>
 							<ClayIcon spritemap={spritemap} symbol="time" />
-						</div>
-					</div>
+						</ClayInput.GroupText>
+					</ClayInput.GroupItem>
 				)}
-				<div
-					className="input-group-item input-group-item-shrink"
-					onKeyDown={handleFocusManagement}
-				>
+				<ClayInput.GroupItem onKeyDown={handleFocusManagement} shrink>
 					<div
 						className={classNames('form-control', {
 							disabled,
@@ -469,13 +467,13 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 							</div>
 						</div>
 					</div>
-				</div>
+				</ClayInput.GroupItem>
 				{timezone && (
-					<div className="input-group-item input-group-item-shrink">
-						<span className="input-group-text">{`(${timezone})`}</span>
-					</div>
+					<ClayInput.GroupItem shrink>
+						<ClayInput.GroupText>{`(${timezone})`}</ClayInput.GroupText>
+					</ClayInput.GroupItem>
 				)}
-			</div>
+			</ClayInput.Group>
 		</div>
 	);
 };

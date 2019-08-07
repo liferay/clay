@@ -5,10 +5,10 @@
  */
 
 import ClayCard from './Card';
-import ClayForm from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClaySticker from '@clayui/sticker';
 import React from 'react';
+import {ClayCheckbox} from '@clayui/form';
 import {ClayDropDownWithBasicItems} from '@clayui/drop-down';
 
 interface IProps {
@@ -89,14 +89,14 @@ export const ClayCardWithHorizontal: React.FunctionComponent<IProps> = ({
 	return (
 		<ClayCard horizontal selectable={!!onSelectChange}>
 			{onSelectChange && (
-				<ClayForm.Checkbox
+				<ClayCheckbox
 					checked={selected}
 					disabled={false}
 					indeterminate={false}
 					onChange={() => onSelectChange(!selected)}
 				>
 					{content}
-				</ClayForm.Checkbox>
+				</ClayCheckbox>
 			)}
 
 			{!onSelectChange && content}

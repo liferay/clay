@@ -25,6 +25,7 @@ import InputDate from './InputDate';
 import TimePicker from './TimePicker';
 import Weekday from './Weekday';
 import WeekdayHeader from './WeekdayHeader';
+import {ClayInput} from '@clayui/form';
 import {FirstDayOfWeek, IAriaLabels, IYears} from './types';
 
 export {FirstDayOfWeek, IAriaLabels, IYears};
@@ -299,8 +300,8 @@ const ClayDatePicker: FunctionComponent<IProps> = ({
 
 	return (
 		<div className="date-picker">
-			<div className="input-group" id={id} ref={triggerElementRef}>
-				<div className="input-group-item">
+			<ClayInput.Group id={id} ref={triggerElementRef}>
+				<ClayInput.GroupItem>
 					<InputDate
 						ariaLabel={ariaLabels.input}
 						currentTime={currentTime}
@@ -314,7 +315,7 @@ const ClayDatePicker: FunctionComponent<IProps> = ({
 						value={value}
 					/>
 					{!useNative && (
-						<div className="input-group-inset-item input-group-inset-item-after">
+						<ClayInput.GroupInsetItem after>
 							<Button
 								className="date-picker-dropdown-toggle"
 								data-testid="date-button"
@@ -323,10 +324,10 @@ const ClayDatePicker: FunctionComponent<IProps> = ({
 							>
 								<Icon spritemap={spritemap} symbol="calendar" />
 							</Button>
-						</div>
+						</ClayInput.GroupInsetItem>
 					)}
-				</div>
-			</div>
+				</ClayInput.GroupItem>
+			</ClayInput.Group>
 
 			{!useNative && (
 				<DropDown.Menu

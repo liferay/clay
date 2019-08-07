@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayMultiSelect renders 1`] = `
+exports[`ClayInputWithMultiSelect renders 1`] = `
 <div
   className="form-group"
 >
@@ -30,7 +30,7 @@ exports[`ClayMultiSelect renders 1`] = `
 </div>
 `;
 
-exports[`ClayMultiSelect renders as not valid 1`] = `
+exports[`ClayInputWithMultiSelect renders as not valid 1`] = `
 <div
   className="form-group has-error"
 >
@@ -168,7 +168,7 @@ exports[`ClayMultiSelect renders as not valid 1`] = `
 </div>
 `;
 
-exports[`ClayMultiSelect renders with items 1`] = `
+exports[`ClayInputWithMultiSelect renders with items 1`] = `
 <div
   className="form-group"
 >

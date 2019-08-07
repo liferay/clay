@@ -15,7 +15,7 @@ exports[`Interactions opens custom color picker drop down when clicked 1`] = `
       Custom Colors
     </label>
     <div
-      class="clay-color input-group"
+      class="input-group clay-color"
     >
       <div
         class="input-group-item input-group-item-shrink input-group-prepend"
@@ -32,7 +32,7 @@ exports[`Interactions opens custom color picker drop down when clicked 1`] = `
         </div>
       </div>
       <div
-        class="input-group-append input-group-item"
+        class="input-group-item input-group-append"
       >
         <input
           aria-label="Color selection is 008000"
@@ -69,7 +69,7 @@ exports[`Rendering default 1`] = `
         Default
       </label>
       <div
-        class="clay-color input-group"
+        class="input-group clay-color"
       >
         <div
           class="input-group-item input-group-item-shrink input-group-prepend"
@@ -86,7 +86,7 @@ exports[`Rendering default 1`] = `
           </div>
         </div>
         <div
-          class="input-group-append input-group-item"
+          class="input-group-item input-group-append"
         >
           <input
             aria-label="Color selection is FFF"

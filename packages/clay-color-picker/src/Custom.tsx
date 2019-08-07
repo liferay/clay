@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import ClayForm, {ClayInput} from '@clayui/form';
 import GradientSelector from './GradientSelector';
 import Hue from './Hue';
 import Icon from '@clayui/icon';
@@ -47,12 +48,12 @@ const RGBInput: React.FunctionComponent<IRGBInputProps> = ({
 	}, [value]);
 
 	return (
-		<div className="form-group">
-			<div className="input-group">
-				<div className="input-group-item">
-					<input
-						className="form-control input-group-inset input-group-inset-before"
+		<ClayForm.Group>
+			<ClayInput.Group>
+				<ClayInput.GroupItem>
+					<ClayInput
 						data-testid={`${name}Input`}
+						insetBefore
 						onChange={event => {
 							const newVal = Number(event.target.value);
 
@@ -64,12 +65,12 @@ const RGBInput: React.FunctionComponent<IRGBInputProps> = ({
 						type="text"
 						value={inputValue}
 					/>
-					<label className="input-group-inset-item input-group-inset-item-before">
+					<ClayInput.GroupInsetItem before tag="label">
 						{name.toUpperCase()}
-					</label>
-				</div>
-			</div>
-		</div>
+					</ClayInput.GroupInsetItem>
+				</ClayInput.GroupItem>
+			</ClayInput.Group>
+		</ClayForm.Group>
 	);
 };
 
@@ -238,12 +239,12 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 					/>
 
 					<div className="clay-color-footer">
-						<div className="form-group">
-							<div className="input-group">
-								<div className="input-group-item">
-									<input
-										className="form-control input-group-inset input-group-inset-before"
+						<ClayForm.Group>
+							<ClayInput.Group>
+								<ClayInput.GroupItem>
+									<ClayInput
 										data-testid="customHexInput"
+										insetBefore
 										onBlur={event => {
 											const newColor = tinycolor(
 												event.target.value
@@ -277,12 +278,15 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 											.substring(0, 6)}
 									/>
 
-									<label className="input-group-inset-item input-group-inset-item-before">
+									<ClayInput.GroupInsetItem
+										before
+										tag="label"
+									>
 										{'#'}
-									</label>
-								</div>
-							</div>
-						</div>
+									</ClayInput.GroupInsetItem>
+								</ClayInput.GroupItem>
+							</ClayInput.Group>
+						</ClayForm.Group>
 					</div>
 				</React.Fragment>
 			)}

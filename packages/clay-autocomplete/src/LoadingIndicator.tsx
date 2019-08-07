@@ -4,23 +4,17 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import classNames from 'classnames';
 import ClayLoadingIndicator from '@clayui/loading-indicator';
 import Context from './Context';
 import React, {useContext, useEffect} from 'react';
+import {ClayInput} from '@clayui/form';
 
 const LoadingIndicatorMarkup: React.FunctionComponent<
 	React.HTMLAttributes<HTMLDivElement>
-> = ({children, className, ...otherProps}) => (
-	<div
-		{...otherProps}
-		className={classNames(
-			'input-group-inset-item input-group-inset-item-after',
-			className
-		)}
-	>
+> = ({children, ...otherProps}) => (
+	<ClayInput.GroupInsetItem {...otherProps} after>
 		<span className="inline-item inline-item-middle">{children}</span>
-	</div>
+	</ClayInput.GroupInsetItem>
 );
 
 export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
