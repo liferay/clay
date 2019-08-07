@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import LRU from 'lru-cache';
 import stringify from 'fast-json-stable-stringify';
 import {
 	FetchPolicy,
@@ -14,6 +13,7 @@ import {
 	TSymbolData,
 	TVariables,
 } from './types';
+import {LRUCache} from './LRUCache';
 import {useRef} from 'react';
 
 type TCacheKey = string | null;
@@ -26,7 +26,7 @@ const useCache = (
 	variables: TVariables
 ) => {
 	if (!storage[SYMBOL_DATA_PROVIDER]) {
-		storage[SYMBOL_DATA_PROVIDER] = new LRU(storageMaxSize);
+		storage[SYMBOL_DATA_PROVIDER] = new LRUCache(storageMaxSize);
 	}
 
 	const cache = useRef<TSymbolData>(storage[
