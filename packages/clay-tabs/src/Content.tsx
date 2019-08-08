@@ -14,6 +14,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	activeTabKey: number;
 
 	/**
+	 * Children elements received from ClayTabs.Content component.
+	 */
+	children: Array<React.ReactElement>;
+
+	/**
 	 * Flag to indicate if `fade` classname that applies an fading animation should be applied.
 	 */
 	fade?: boolean;
@@ -29,10 +34,6 @@ const Content: React.FunctionComponent<IProps> = ({
 	return (
 		<div className={classNames('tab-content', className)} {...otherProps}>
 			{React.Children.map(children, (child, index) => {
-				if (!React.isValidElement(child)) {
-					return null;
-				}
-
 				return React.cloneElement(child, {
 					...child.props,
 					active: activeTabKey === child.props.tabKey,
