@@ -87,6 +87,7 @@ const TabHeader = React.forwardRef(
 							active,
 							disabled,
 						})}
+						data-testid={`${tabName.trim().toLowerCase()}TabItem`}
 						href={`#${tabName.trim().toLowerCase()}`}
 						id={`${tabName}Tab`}
 						onClick={() => onClick && onClick(tabkey)}
@@ -117,6 +118,7 @@ const TabHeader = React.forwardRef(
 						active,
 						disabled,
 					})}
+					data-testid={`${tabName.trim().toLowerCase()}TabItem`}
 					id={`${tabName}Tab`}
 					onClick={() => onClick && onClick(tabkey)}
 					ref={forwardRef}
@@ -170,8 +172,8 @@ const Item: React.FunctionComponent<IProps> = ({
 					itemElementProps={itemElementProps}
 					onClick={onClick}
 					spritemap={spritemap}
-					tabkey={tabkey}
 					tabName={tabName}
+					tabkey={tabkey}
 				/>
 			)}
 		</li>

@@ -90,8 +90,8 @@ storiesOf('ClayTabs', module).add('default', () => {
 							}
 							disabled={boolean('Disable first tab', false)}
 							onClick={onClickImpl}
-							tabkey={0}
 							tabName="Tab 1"
+							tabkey={0}
 						/>
 						<ClayTabs.Item
 							active={activeTabKeyValue == 1}
@@ -104,8 +104,8 @@ storiesOf('ClayTabs', module).add('default', () => {
 							}
 							disabled={boolean('Disable second tab', true)}
 							onClick={onClickImpl}
-							tabkey={1}
 							tabName="Tab 2"
+							tabkey={1}
 						/>
 						<ClayTabs.Item
 							active={activeTabKeyValue == 2}
@@ -118,8 +118,8 @@ storiesOf('ClayTabs', module).add('default', () => {
 							}
 							disabled={boolean('Disable third tab', false)}
 							onClick={onClickImpl}
-							tabkey={2}
 							tabName="Tab 3"
+							tabkey={2}
 						/>
 						<ClayTabs.Item
 							active={activeTabKeyValue == 3}
@@ -132,8 +132,8 @@ storiesOf('ClayTabs', module).add('default', () => {
 							}
 							disabled={boolean('Disable fourth tab', false)}
 							onClick={onClickImpl}
-							tabkey={3}
 							tabName="Tab 4"
+							tabkey={3}
 						/>
 
 						<DropDownWithState
@@ -155,8 +155,8 @@ storiesOf('ClayTabs', module).add('default', () => {
 									)}
 									dropdown
 									onClick={onClickImpl}
-									tabkey={4}
 									tabName="Tab 5"
+									tabkey={4}
 								/>
 							}
 						>
