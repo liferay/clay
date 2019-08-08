@@ -13,7 +13,7 @@ interface IProps extends Omit<React.HTMLAttributes<HTMLLIElement>, 'onClick'> {
 	/**
 	 * Flag to indicate if the component is active or not.
 	 */
-	active: boolean;
+	active?: boolean;
 
 	/**
 	 * Tab Item component to render. Can be an 'anchor' or a 'button'.
@@ -63,7 +63,7 @@ interface IProps extends Omit<React.HTMLAttributes<HTMLLIElement>, 'onClick'> {
 const TabHeader = React.forwardRef(
 	(
 		{
-			active,
+			active = false,
 			component = 'button',
 			disabled = false,
 			dropdown = false,
