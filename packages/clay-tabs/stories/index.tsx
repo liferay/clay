@@ -56,19 +56,19 @@ storiesOf('ClayTabs', module).add('default', () => {
 				disabled: true,
 				label: 'Tab 6',
 				onClick: onClickImpl,
-				tabKey: 5,
+				tabkey: 5,
 			},
 			{
 				active: activeTabKeyValue == 6,
 				label: 'Tab 7',
 				onClick: onClickImpl,
-				tabKey: 6,
+				tabkey: 6,
 			},
 			{
 				active: activeTabKeyValue == 7,
 				label: 'Tab 8',
 				onClick: onClickImpl,
-				tabKey: 7,
+				tabkey: 7,
 			},
 		];
 
@@ -90,7 +90,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 							}
 							disabled={boolean('Disable first tab', false)}
 							onClick={onClickImpl}
-							tabKey={0}
+							tabkey={0}
 							tabName="Tab 1"
 						/>
 						<ClayTabs.Item
@@ -104,7 +104,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 							}
 							disabled={boolean('Disable second tab', true)}
 							onClick={onClickImpl}
-							tabKey={1}
+							tabkey={1}
 							tabName="Tab 2"
 						/>
 						<ClayTabs.Item
@@ -118,7 +118,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 							}
 							disabled={boolean('Disable third tab', false)}
 							onClick={onClickImpl}
-							tabKey={2}
+							tabkey={2}
 							tabName="Tab 3"
 						/>
 						<ClayTabs.Item
@@ -132,7 +132,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 							}
 							disabled={boolean('Disable fourth tab', false)}
 							onClick={onClickImpl}
-							tabKey={3}
+							tabkey={3}
 							tabName="Tab 4"
 						/>
 
@@ -155,7 +155,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 									)}
 									dropdown
 									onClick={onClickImpl}
-									tabKey={4}
+									tabkey={4}
 									tabName="Tab 5"
 								/>
 							}
@@ -167,23 +167,23 @@ storiesOf('ClayTabs', module).add('default', () => {
 											disabled = false,
 											label,
 											onClick,
-											tabKey,
+											tabkey,
 										},
 										i
 									) => {
 										return (
 											<ClayDropDown.Item
 												active={
-													activeTabKeyValue === tabKey
+													activeTabKeyValue === tabkey
 												}
 												disabled={disabled}
 												key={i}
 												onClick={() => {
-													onClick(tabKey);
+													onClick(tabkey);
 												}}
 												spritemap={spritemap}
 												symbolRight={
-													activeTabKeyValue === tabKey
+													activeTabKeyValue === tabkey
 														? 'check'
 														: undefined
 												}
@@ -201,7 +201,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 					activeTabKey={activeTabKeyValue}
 					fade={boolean('Fade', true)}
 				>
-					<ClayTabs.TabPane tabKey={0}>
+					<ClayTabs.TabPane tabkey={0}>
 						{`1. Single origin, extra id beans, eu to go, skinny
 						americano ut aftertas te sugar. At americano, viennese
 						variety iced grounds, grinder froth and pumpkin spice
@@ -211,7 +211,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 						plunger pot. Single shot variety pumpkin spice seasonal
 						skinny barista carajillo robust cream.`}
 					</ClayTabs.TabPane>
-					<ClayTabs.TabPane tabKey={1}>
+					<ClayTabs.TabPane tabkey={1}>
 						{`2. Single origin, extra id beans, eu to go, skinny
 						americano ut aftertaste sugar. At americano, viennese
 						variety iced grounds, grinder froth and pumpkin spice
@@ -221,7 +221,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 						plunger pot. Single shot variety pumpkin spice seasonal
 						skinny barista carajillo robust cream.`}
 					</ClayTabs.TabPane>
-					<ClayTabs.TabPane tabKey={2}>
+					<ClayTabs.TabPane tabkey={2}>
 						{`3. Single origin, extra id beans, eu to go, skinny
 						americano ut aftertaste sugar. At americano, viennese
 						variety iced grounds, grinder froth and pumpkin spice
@@ -231,7 +231,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 						plunger pot. Single shot variety pumpkin spice seasonal
 						skinny barista carajillo robust cream.`}
 					</ClayTabs.TabPane>
-					<ClayTabs.TabPane tabKey={3}>
+					<ClayTabs.TabPane tabkey={3}>
 						{`4. Single origin, extra id beans, eu to go, skinny
 						americano ut aftertaste sugar. At americano, viennese
 						variety iced grounds, grinder froth and pumpkin spice
@@ -241,7 +241,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 						plunger pot. Single shot variety pumpkin spice seasonal
 						skinny barista carajillo robust cream.`}
 					</ClayTabs.TabPane>
-					<ClayTabs.TabPane tabKey={4}>
+					<ClayTabs.TabPane tabkey={4}>
 						{`4. Single origin, extra id beans, eu to go, skinny
 						americano ut aftertaste sugar. At americano, viennese
 						variety iced grounds, grinder froth and pumpkin spice
@@ -251,7 +251,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 						plunger pot. Single shot variety pumpkin spice seasonal
 						skinny barista carajillo robust cream.`}
 					</ClayTabs.TabPane>
-					<ClayTabs.TabPane tabKey={5}>
+					<ClayTabs.TabPane tabkey={5}>
 						{`6. Single origin, extra id beans, eu to go, skinny
 						americano ut aftertaste sugar. At americano, viennese
 						variety iced grounds, grinder froth and pumpkin spice
@@ -261,7 +261,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 						plunger pot. Single shot variety pumpkin spice seasonal
 						skinny barista carajillo robust cream.`}
 					</ClayTabs.TabPane>
-					<ClayTabs.TabPane tabKey={6}>
+					<ClayTabs.TabPane tabkey={6}>
 						{`7. Single origin, extra id beans, eu to go, skinny
 						americano ut aftertaste sugar. At americano, viennese
 						variety iced grounds, grinder froth and pumpkin spice
@@ -271,7 +271,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 						plunger pot. Single shot variety pumpkin spice seasonal
 						skinny barista carajillo robust cream.`}
 					</ClayTabs.TabPane>
-					<ClayTabs.TabPane tabKey={7}>
+					<ClayTabs.TabPane tabkey={7}>
 						{`8. Single origin, extra id beans, eu to go, skinny
 						americano ut aftertaste sugar. At americano, viennese
 						variety iced grounds, grinder froth and pumpkin spice

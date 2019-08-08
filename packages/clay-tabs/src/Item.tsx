@@ -40,9 +40,9 @@ interface IProps extends Omit<React.HTMLAttributes<HTMLLIElement>, 'onClick'> {
 	>;
 
 	/**
-	 * Registers the `tabKey` for the Tab Item.
+	 * Registers the `tabkey` for the Tab Item.
 	 */
-	tabKey: number;
+	tabkey: number;
 
 	/**
 	 * Callback to be used when clicking to a Tab Item.
@@ -69,7 +69,7 @@ const TabHeader = React.forwardRef(
 			dropdown = false,
 			forwardRef,
 			itemElementProps = {},
-			tabKey,
+			tabkey,
 			onClick,
 			spritemap,
 			tabName,
@@ -89,7 +89,7 @@ const TabHeader = React.forwardRef(
 						})}
 						href={`#${tabName.trim().toLowerCase()}`}
 						id={`${tabName}Tab`}
-						onClick={() => onClick && onClick(tabKey)}
+						onClick={() => onClick && onClick(tabkey)}
 						ref={forwardRef}
 						role="tab"
 						tabIndex={disabled ? -1 : undefined}
@@ -118,7 +118,7 @@ const TabHeader = React.forwardRef(
 						disabled,
 					})}
 					id={`${tabName}Tab`}
-					onClick={() => onClick && onClick(tabKey)}
+					onClick={() => onClick && onClick(tabkey)}
 					ref={forwardRef}
 					role="tab"
 					tabIndex={disabled ? -1 : undefined}
@@ -143,7 +143,7 @@ const Item: React.FunctionComponent<IProps> = ({
 	dropdown,
 	forwardRef,
 	itemElementProps,
-	tabKey,
+	tabkey,
 	onClick = () => {},
 	spritemap,
 	tabName,
@@ -170,7 +170,7 @@ const Item: React.FunctionComponent<IProps> = ({
 					itemElementProps={itemElementProps}
 					onClick={onClick}
 					spritemap={spritemap}
-					tabKey={tabKey}
+					tabkey={tabkey}
 					tabName={tabName}
 				/>
 			)}

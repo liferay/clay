@@ -21,7 +21,7 @@ interface ITabPaneProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * TabPane's key.
 	 */
-	tabKey: number;
+	tabkey: number;
 }
 
 const delay = (fn: Function) => {
