@@ -9,7 +9,7 @@ import React from 'react';
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
-	 * Receives a number that indicates the `tabKey` to be rendered.
+	 * Receives a number that indicates the `tabkey` to be rendered.
 	 */
 	activeTabKey: number;
 
@@ -36,7 +36,7 @@ const Content: React.FunctionComponent<IProps> = ({
 			{React.Children.map(children, (child, index) => {
 				return React.cloneElement(child, {
 					...child.props,
-					active: activeTabKey === child.props.tabKey,
+					active: activeTabKey === child.props.tabkey,
 					fade,
 					key: index,
 				});
