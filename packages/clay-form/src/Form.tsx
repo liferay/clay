@@ -88,14 +88,14 @@ const FeedbackIndicator = React.forwardRef<
 ));
 
 const ClayForm: React.FunctionComponent<
-	React.HTMLAttributes<HTMLDivElement>
+	React.HTMLAttributes<HTMLFormElement>
 > & {
 	FeedbackGroup: typeof FeedbackGroup;
 	FeedbackIndicator: typeof FeedbackIndicator;
 	FeedbackItem: typeof FeedbackItem;
 	Group: typeof Group;
 	Text: typeof Text;
-} = ({children}) => <>{children}</>;
+} = ({children, ...otherProps}) => <form {...otherProps}>{children}</form>;
 
 ClayForm.FeedbackGroup = FeedbackGroup;
 ClayForm.FeedbackIndicator = FeedbackIndicator;
