@@ -81,15 +81,11 @@ describe('ClayTabs', () => {
 				<ClayTabs>
 					<ClayTabs.Item
 						active
-						component="anchor"
+						component="a"
 						tabName="One"
 						tabkey={1}
 					/>
-					<ClayTabs.Item
-						component="anchor"
-						tabName="Two"
-						tabkey={2}
-					/>
+					<ClayTabs.Item component="a" tabName="Two" tabkey={2} />
 				</ClayTabs>
 				<ClayTabs.Content activeTabKey={1}>
 					<ClayTabs.TabPane tabkey={1}>
@@ -145,7 +141,7 @@ describe('ClayTabs', () => {
 						tabkey={1}
 					/>
 					<ClayTabs.Item
-						component="anchor"
+						component="a"
 						onClick={onClick}
 						tabName="Two"
 						tabkey={2}

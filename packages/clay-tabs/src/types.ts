@@ -4,4 +4,4 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-export type ElementType = 'anchor' | 'button' | 'component';
+export type ElementType = 'a' | 'button';

@@ -60,123 +60,69 @@ interface IProps extends Omit<React.HTMLAttributes<HTMLLIElement>, 'onClick'> {
 	tabName: string;
 }
 
-const TabHeader = React.forwardRef(
+const Item: React.FunctionComponent<IProps> = React.forwardRef(
 	(
 		{
 			active = false,
 			component = 'button',
+			className,
 			disabled = false,
 			dropdown = false,
 			forwardRef,
 			itemElementProps = {},
 			tabkey,
-			onClick,
+			onClick = () => {},
 			spritemap,
 			tabName,
+			...otherProps
 		}: IProps,
 		IProps
 	) => {
-		if (component === 'anchor') {
-			return (
-				<>
-					<a
-						aria-controls={tabName.toLowerCase()}
-						aria-disabled={!active}
-						aria-selected={!active}
-						className={classNames('nav-link', {
-							active,
-							disabled,
-						})}
-						data-testid={`${tabName.trim().toLowerCase()}TabItem`}
-						href={`#${tabName.trim().toLowerCase()}`}
-						id={`${tabName}Tab`}
-						onClick={() => onClick && onClick(tabkey)}
-						ref={forwardRef}
-						role="tab"
-						tabIndex={disabled ? -1 : undefined}
-						{...itemElementProps}
-					>
-						{tabName}
-						{dropdown && (
-							<ClayIcon
-								spritemap={spritemap}
-								symbol="caret-bottom"
-							/>
-						)}
-					</a>
-				</>
-			);
-		}
+		const ElementTag = component;
 
 		return (
-			<>
-				<button
+			<li
+				className={classNames(
+					'nav-item',
+					{
+						dropdown,
+					},
+					className
+				)}
+				{...otherProps}
+			>
+				<ElementTag
 					aria-controls={tabName.toLowerCase()}
 					aria-disabled={!active}
 					aria-selected={active}
-					className={classNames('btn btn-unstyled nav-link', {
+					className={classNames('nav-link', {
 						active,
+						'btn btn-unstyled': component === 'button',
 						disabled,
 					})}
 					data-testid={`${tabName.trim().toLowerCase()}TabItem`}
+					href={
+						component === 'a'
+							? `#${tabName.trim().toLowerCase()}`
+							: undefined
+					}
 					id={`${tabName}Tab`}
 					onClick={() => onClick && onClick(tabkey)}
 					ref={forwardRef}
 					role="tab"
 					tabIndex={disabled ? -1 : undefined}
-					type="button"
+					type={component === 'button' ? 'button' : undefined}
 					{...itemElementProps}
 				>
 					{tabName}
 					{dropdown && (
 						<ClayIcon spritemap={spritemap} symbol="caret-bottom" />
 					)}
-				</button>
-			</>
+				</ElementTag>
+			</li>
 		);
 	}
 );
-
-const Item: React.FunctionComponent<IProps> = ({
-	active = false,
-	component,
-	className,
-	disabled,
-	dropdown,
-	forwardRef,
-	itemElementProps,
-	tabkey,
-	onClick = () => {},
-	spritemap,
-	tabName,
-	...otherProps
-}: IProps) => {
-	return (
-		<li
-			className={classNames(
-				'nav-item',
-				{
-					dropdown,
-				},
-				className
-			)}
-			{...otherProps}
-		>
-			<TabHeader
-				active={active}
-				component={component}
-				disabled={disabled}
-				dropdown={dropdown}
-				forwardRef={forwardRef}
-				itemElementProps={itemElementProps}
-				onClick={onClick}
-				spritemap={spritemap}
-				tabName={tabName}
-				tabkey={tabkey}
-			/>
-		</li>
-	);
-};
 
 export default React.forwardRef((props: IProps, ref?) => (
 	<Item {...props} forwardRef={ref} />
