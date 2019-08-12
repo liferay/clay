@@ -1,0 +1,65 @@
+.clay-time {
+	.btn {
+		@include clay-button-variant($clay-time-btn);
+
+		.lexicon-icon {
+			margin-top: 0;
+		}
+	}
+
+	.form-control {
+		@include clay-form-control-variant($clay-time-form-control);
+	}
+
+	.form-control-inset {
+		@include clay-form-control-variant($clay-time-form-control-inset);
+	}
+
+	.input-group-text {
+		@include clay-container($clay-time-input-group-text);
+	}
+
+	.clay-time-ampm {
+		@include clay-form-control-variant($clay-time-ampm);
+	}
+}
+
+.clay-time-divider {
+	margin-left: $clay-time-divider-margin-left;
+	margin-right: $clay-time-divider-margin-right;
+}
+
+.clay-time-edit {
+	@include clay-container($clay-time-edit);
+
+	&:first-child {
+		margin-left: math-sign(map-get($clay-time-edit, padding-left));
+	}
+
+	&:last-child {
+		margin-right: math-sign(map-get($clay-time-edit, padding-left));
+	}
+}
+
+.clay-time-action-group {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -0.125rem;
+	margin-right: -0.125rem;
+}
+
+.clay-time-action-group-item {
+	align-items: center;
+	display: flex;
+	margin-left: 0.125rem;
+	margin-right: 0.125rem;
+}
+
+.clay-time-inner-spin {
+	@include clay-container($clay-time-inner-spin);
+
+	.btn {
+		@include clay-button-variant($clay-time-inner-spin-btn);
+	}
+}
