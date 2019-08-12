@@ -162,20 +162,18 @@ const Item: React.FunctionComponent<IProps> = ({
 			)}
 			{...otherProps}
 		>
-			{tabName && (
-				<TabHeader
-					active={active}
-					component={component}
-					disabled={disabled}
-					dropdown={dropdown}
-					forwardRef={forwardRef}
-					itemElementProps={itemElementProps}
-					onClick={onClick}
-					spritemap={spritemap}
-					tabName={tabName}
-					tabkey={tabkey}
-				/>
-			)}
+			<TabHeader
+				active={active}
+				component={component}
+				disabled={disabled}
+				dropdown={dropdown}
+				forwardRef={forwardRef}
+				itemElementProps={itemElementProps}
+				onClick={onClick}
+				spritemap={spritemap}
+				tabName={tabName}
+				tabkey={tabkey}
+			/>
 		</li>
 	);
 };
