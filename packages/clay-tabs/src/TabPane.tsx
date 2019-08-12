@@ -14,7 +14,7 @@ interface ITabPaneProps extends React.HTMLAttributes<HTMLDivElement> {
 	active?: boolean;
 
 	/**
-	 * Flag to indicate if `fade` classname that applies an fading animation should be applied.
+	 * Flag to indicate if `fade` classname that applies a fading animation should be applied.
 	 */
 	fade?: boolean;
 
