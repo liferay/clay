@@ -16,6 +16,8 @@ cache:
 install:
   - yarn
 
+dist: trusty
+
 jdk:
   - oraclejdk8
 
