@@ -60,21 +60,25 @@ describe('ClayTabs', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders justifying nav items', () => {
 		const {container} = render(<ClayTabs justified />);
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders with modern style', () => {
 		const {container} = render(<ClayTabs modern />);
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders with items', () => {
 		const {container} = render(<ClayTabsWithItems />);
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders nav items as anchors', () => {
 		const {container, getByTestId} = render(
 			<>
@@ -104,6 +108,7 @@ describe('ClayTabs', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders disabled nav items', () => {
 		const {container} = render(
 			<>
@@ -128,6 +133,7 @@ describe('ClayTabs', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('emits a number when clicking an item', () => {
 		const onClick = jest.fn();
 
