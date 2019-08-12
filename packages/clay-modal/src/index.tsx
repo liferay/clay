@@ -46,6 +46,7 @@ const ClayModal: FunctionComponent<IProps> & {
 }: IProps) => {
 	const [visibleClassShow, setVisibleClassShow] = useState<boolean>(false);
 
+	const modalBodyElementRef = useRef<HTMLDivElement | null>(null);
 	const modalDialogElementRef = useRef<HTMLDivElement | null>(null);
 
 	/**
@@ -79,7 +80,7 @@ const ClayModal: FunctionComponent<IProps> & {
 	}, []);
 
 	return (
-		<ClayPortal>
+		<ClayPortal subPortalRef={modalBodyElementRef}>
 			<div
 				className={classNames('modal-backdrop fade', {
 					show: visibleClassShow,
@@ -90,6 +91,7 @@ const ClayModal: FunctionComponent<IProps> & {
 				className={classNames('fade modal d-block', className, {
 					show: visibleClassShow,
 				})}
+				ref={modalBodyElementRef}
 			>
 				<div
 					className={classNames('modal-dialog', {
