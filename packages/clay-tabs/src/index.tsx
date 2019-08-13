@@ -53,9 +53,7 @@ export const ClayTabs: React.FunctionComponent<IProps> & {
 };
 
 ClayTabs.Content = Content;
-
 ClayTabs.TabPane = TabPane;
-
 ClayTabs.Item = Item;
 
 export default ClayTabs;
