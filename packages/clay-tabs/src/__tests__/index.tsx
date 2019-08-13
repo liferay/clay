@@ -171,7 +171,5 @@ describe('ClayTabs', () => {
 		fireEvent.click(getByTestId('twoTabItem'));
 		expect(onClick).toBeCalled();
 		expect(onClick).toBeCalledWith(2);
-
-		expect(container).toMatchSnapshot();
 	});
 });
