@@ -87,6 +87,20 @@ describe('ClayDataProvider', () => {
 		expect(container.innerHTML).toMatchSnapshot();
 	});
 
+	it('call clay.data with link being a function', async () => {
+		fetchMock.mockResponse(JSON.stringify({title: 'Foo'}));
+
+		render(
+			<DataProvider link={() => fetch('https://clay.data')}>
+				{({data}) => <h1>{data && data.title}</h1>}
+			</DataProvider>
+		);
+
+		await wait(() => expect(fetchMock.mock.calls.length).toEqual(1));
+
+		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data');
+	});
+
 	it('calls clay.data and return data from cache', async () => {
 		const data = {title: 'Foo'};
 		const cache = setupCache('https://clay.data:null', data);
@@ -264,6 +278,25 @@ describe('ClayDataProvider', () => {
 		);
 		expect(fetchMock.mock.calls[1][0]).toEqual(
 			'https://clay.data/?name=Baz'
+		);
+	});
+
+	it('call clay.data with search params and link being a function', async () => {
+		fetchMock.mockResponse(JSON.stringify({title: 'Foo'}));
+
+		render(
+			<DataProvider
+				link={variables => fetch(`https://clay.data/?${variables}`)}
+				variables={{name: 'Bar'}}
+			>
+				{({data}) => <h1>{data && data.title}</h1>}
+			</DataProvider>
+		);
+
+		await wait(() => expect(fetchMock.mock.calls.length).toEqual(1));
+
+		expect(fetchMock.mock.calls[0][0]).toEqual(
+			'https://clay.data/?name=Bar'
 		);
 	});
 
