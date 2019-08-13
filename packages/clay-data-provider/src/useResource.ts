@@ -155,6 +155,10 @@ const useResource = ({
 			return uri.toString();
 		}
 
+		warning(
+			uri.searchParams.toString() === '',
+			'DataProvider: We recommend that instead of passing parameters over the link, use the variables API. \n More details: https://next.clayui.com/docs/components/data-provider.html'
+		);
 
 		populateSearchParams(uri, variables);
 
