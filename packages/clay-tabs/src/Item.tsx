@@ -40,6 +40,11 @@ interface IProps extends Omit<React.HTMLAttributes<HTMLLIElement>, 'onClick'> {
 	>;
 
 	/**
+	 * This value is used to be the target of the link.
+	 */
+	href?: string;
+
+	/**
 	 * Registers the `tabkey` for the Tab Item.
 	 */
 	tabkey: number;
@@ -70,6 +75,7 @@ const Item: React.FunctionComponent<IProps> = React.forwardRef(
 			dropdown = false,
 			forwardRef,
 			itemElementProps = {},
+			href,
 			tabkey,
 			onClick = () => {},
 			spritemap,
@@ -101,12 +107,7 @@ const Item: React.FunctionComponent<IProps> = React.forwardRef(
 						disabled,
 					})}
 					data-testid={`${tabName.trim().toLowerCase()}TabItem`}
-					href={
-						component === 'a'
-							? `#${tabName.trim().toLowerCase()}`
-							: undefined
-					}
-					id={`${tabName}Tab`}
+					href={href}
 					onClick={() => onClick && onClick(tabkey)}
 					ref={forwardRef}
 					role="tab"

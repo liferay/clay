@@ -15,7 +15,6 @@ exports[`ClayTabs emits a number when clicking an item 1`] = `
         aria-selected="true"
         class="nav-link active btn btn-unstyled"
         data-testid="oneTabItem"
-        id="OneTab"
         role="tab"
         type="button"
       >
@@ -31,8 +30,6 @@ exports[`ClayTabs emits a number when clicking an item 1`] = `
         aria-selected="false"
         class="nav-link"
         data-testid="twoTabItem"
-        href="#two"
-        id="TwoTab"
         role="tab"
       >
         Two
@@ -84,7 +81,6 @@ exports[`ClayTabs renders disabled nav items 1`] = `
         aria-selected="true"
         class="nav-link active btn btn-unstyled"
         data-testid="oneTabItem"
-        id="OneTab"
         role="tab"
         type="button"
       >
@@ -100,7 +96,6 @@ exports[`ClayTabs renders disabled nav items 1`] = `
         aria-selected="false"
         class="nav-link btn btn-unstyled"
         data-testid="twoTabItem"
-        id="TwoTab"
         role="tab"
         type="button"
       >
@@ -116,7 +111,6 @@ exports[`ClayTabs renders disabled nav items 1`] = `
         aria-selected="false"
         class="nav-link btn btn-unstyled disabled"
         data-testid="threeTabItem"
-        id="ThreeTab"
         role="tab"
         tabindex="-1"
         type="button"
@@ -177,8 +171,6 @@ exports[`ClayTabs renders nav items as anchors 1`] = `
         aria-selected="true"
         class="nav-link active"
         data-testid="oneTabItem"
-        href="#one"
-        id="OneTab"
         role="tab"
       >
         One
@@ -193,8 +185,6 @@ exports[`ClayTabs renders nav items as anchors 1`] = `
         aria-selected="false"
         class="nav-link"
         data-testid="twoTabItem"
-        href="#two"
-        id="TwoTab"
         role="tab"
       >
         Two
@@ -237,7 +227,6 @@ exports[`ClayTabs renders with items 1`] = `
         aria-selected="true"
         class="nav-link active btn btn-unstyled"
         data-testid="dummy1TabItem"
-        id="Dummy1Tab"
         role="tab"
         type="button"
       >
@@ -254,7 +243,6 @@ exports[`ClayTabs renders with items 1`] = `
         aria-selected="false"
         class="nav-link btn btn-unstyled"
         data-testid="dummy2TabItem"
-        id="Dummy2Tab"
         role="tab"
         type="button"
       >
@@ -270,7 +258,6 @@ exports[`ClayTabs renders with items 1`] = `
         aria-selected="false"
         class="nav-link btn btn-unstyled"
         data-testid="dummy3TabItem"
-        id="Dummy3Tab"
         role="tab"
         type="button"
       >
