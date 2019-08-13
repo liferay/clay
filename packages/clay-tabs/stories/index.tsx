@@ -36,7 +36,7 @@ const DropDownWithState: React.FunctionComponent<any> = ({
 };
 
 const tabElements = {
-	anchor: 'anchor',
+	a: 'a',
 	button: 'button',
 };
 
@@ -54,18 +54,21 @@ storiesOf('ClayTabs', module).add('default', () => {
 			{
 				active: activeTabKeyValue == 5,
 				disabled: true,
+				href: '#6',
 				label: 'Tab 6',
 				onClick: onClickImpl,
 				tabkey: 5,
 			},
 			{
 				active: activeTabKeyValue == 6,
+				href: '#7',
 				label: 'Tab 7',
 				onClick: onClickImpl,
 				tabkey: 6,
 			},
 			{
 				active: activeTabKeyValue == 7,
+				href: '#8',
 				label: 'Tab 8',
 				onClick: onClickImpl,
 				tabkey: 7,
@@ -89,6 +92,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 								) as ElementType
 							}
 							disabled={boolean('Disable first tab', false)}
+							href="#1"
 							onClick={onClickImpl}
 							tabName="Tab 1"
 							tabkey={0}
@@ -103,6 +107,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 								) as ElementType
 							}
 							disabled={boolean('Disable second tab', true)}
+							href="#2"
 							onClick={onClickImpl}
 							tabName="Tab 2"
 							tabkey={1}
@@ -117,6 +122,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 								) as ElementType
 							}
 							disabled={boolean('Disable third tab', false)}
+							href="#3"
 							onClick={onClickImpl}
 							tabName="Tab 3"
 							tabkey={2}
@@ -131,6 +137,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 								) as ElementType
 							}
 							disabled={boolean('Disable fourth tab', false)}
+							href="#4"
 							onClick={onClickImpl}
 							tabName="Tab 4"
 							tabkey={3}
