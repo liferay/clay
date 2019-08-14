@@ -132,6 +132,18 @@ const useResource = ({
 		}
 	};
 
+	const populateSearchParams = (uri: URL, variables: TVariables) => {
+		if (!variables) {
+			return uri;
+		}
+
+		const keys = Object.keys(variables);
+
+		keys.forEach(key => uri.searchParams.set(key, variables[key]));
+
+		return uri;
+	};
+
 	const getUrlFormat = (
 		link: string,
 		variables: TVariables,
@@ -143,9 +155,12 @@ const useResource = ({
 			return uri.toString();
 		}
 
-		const keys = Object.keys(variables);
+		warning(
+			uri.searchParams.toString() === '',
+			'DataProvider: We recommend that instead of passing parameters over the link, use the variables API. \n More details: https://next.clayui.com/docs/components/data-provider.html'
+		);
 
-		keys.forEach(key => uri.searchParams.set(key, variables[key]));
+		populateSearchParams(uri, variables);
 
 		return uri.toString();
 	};
@@ -155,7 +170,15 @@ const useResource = ({
 
 		switch (typeof link) {
 			case 'function':
-				promise = link();
+				promise = link(
+					populateSearchParams(
+						// This is just a hack to be able to instantiate the URL and make
+						// `populateSearchParams` reusable in `getUrlFormat` and make
+						// things easier.
+						new URL('http://clay.data.provider'),
+						variables
+					).searchParams.toString()
+				);
 				break;
 			case 'string':
 				promise = fetch(

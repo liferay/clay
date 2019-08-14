@@ -36,13 +36,15 @@ export enum FetchPolicy {
 
 export type TSymbolData = LRUCache<string, {}>;
 
-export type TLink = Function | string;
-
 export interface IVariables {
 	[propName: string]: any;
 }
 
 export type TVariables = IVariables | null;
+
+export type TLinkFunction = (variables: string) => Promise<any>;
+
+export type TLink = TLinkFunction | string;
 
 export interface IStorage {
 	[SYMBOL_DATA_PROVIDER]?: TSymbolData;
