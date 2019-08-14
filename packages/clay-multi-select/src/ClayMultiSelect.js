@@ -3,6 +3,7 @@ import 'clay-button';
 import 'clay-label';
 import {Config} from 'metal-state';
 import {EventHandler} from 'metal-events';
+import {htmlEscape} from './htmlEscape';
 import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
@@ -75,7 +76,10 @@ class ClayMultiSelect extends ClayComponent {
 	_defaultAutocompleteItemSelected(event) {
 		const {label, value} = event.data.item;
 
-		const item = this._createItemObject(label, value);
+		const item = this._createItemObject(
+			htmlEscape(label),
+			htmlEscape(value)
+		);
 
 		this._addLabelItem(item);
 	}
@@ -106,7 +110,9 @@ class ClayMultiSelect extends ClayComponent {
 
 		if (char === ',' || words.length > 1) {
 			words.forEach(word => {
-				const added = this._addLabelItem(this._createItemObject(word));
+				const added = this._addLabelItem(
+					this._createItemObject(htmlEscape(word))
+				);
 
 				inputValue = inputValue.replace(word + ',', added ? '' : word);
 			});
@@ -255,7 +261,9 @@ class ClayMultiSelect extends ClayComponent {
 			if (element.value) {
 				let value = element.value;
 
-				this._addLabelItem(this._createItemObject(value));
+				this._addLabelItem(
+					this._createItemObject(htmlEscape(value))
+				);
 			}
 			break;
 		}
