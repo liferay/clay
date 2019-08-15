@@ -4,18 +4,44 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {useEffect, useRef} from 'react';
+import React, {createContext, useContext, useEffect, useRef} from 'react';
 import {createPortal} from 'react-dom';
 
+const ClayPortalContext = createContext<React.RefObject<Element | null> | null>(
+	null
+);
+
+ClayPortalContext.displayName = 'ClayPortalContext';
+
 export const ClayPortal: React.FunctionComponent<
-	React.HTMLAttributes<HTMLDivElement>
-> = ({children}) => {
+	React.HTMLAttributes<HTMLDivElement> & {
+		/**
+		 * Ref of element to render portal into.
+		 */
+		containerRef?: React.RefObject<Element>;
+
+		/**
+		 * Ref of element to render nested portals into.
+		 */
+		subPortalRef?: React.RefObject<Element>;
+	}
+> = ({children, containerRef, subPortalRef}) => {
+	const parentPortalRef = useContext(ClayPortalContext);
 	const portalRef = useRef(
-		typeof document !== 'undefined' && document.createElement('div')
+		typeof document !== 'undefined' ? document.createElement('div') : null
 	);
-	const elToMountTo = typeof document !== 'undefined' && document.body;
 
 	useEffect(() => {
+		const closestParent =
+			parentPortalRef && parentPortalRef.current
+				? parentPortalRef.current
+				: document.body;
+
+		const elToMountTo =
+			containerRef && containerRef.current
+				? containerRef.current
+				: closestParent;
+
 		if (elToMountTo && portalRef.current) {
 			elToMountTo.appendChild(portalRef.current);
 		}
@@ -24,11 +50,17 @@ export const ClayPortal: React.FunctionComponent<
 				elToMountTo.removeChild(portalRef.current);
 			}
 		};
-	}, [elToMountTo]);
+	}, [containerRef, parentPortalRef]);
 
-	if (portalRef.current) {
-		return createPortal(children, portalRef.current);
-	}
+	const content = (
+		<ClayPortalContext.Provider
+			value={subPortalRef ? subPortalRef : portalRef}
+		>
+			{children}
+		</ClayPortalContext.Provider>
+	);
 
-	return <>{children}</>;
+	return portalRef.current
+		? createPortal(content, portalRef.current)
+		: content;
 };
