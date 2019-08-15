@@ -5,7 +5,8 @@
  */
 
 import classNames from 'classnames';
-import React from 'react';
+import ClayLinkContext from './Context';
+import React, {useContext} from 'react';
 
 interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	/**
@@ -37,19 +38,25 @@ const ClayLink: React.FunctionComponent<IProps> = ({
 	monospaced,
 	outline,
 	...otherProps
-}: IProps) => (
-	<a
-		className={classNames(className, {
-			'link-monospaced': monospaced,
-			'link-outline': outline,
-			'link-outline-borderless': borderless,
-			[`link-${displayType}`]: displayType && !outline,
-			[`link-outline-${displayType}`]: displayType && outline,
-		})}
-		{...otherProps}
-	>
-		{children}
-	</a>
-);
+}: IProps) => {
+	const TagOrComponent = useContext(ClayLinkContext);
+
+	return (
+		<TagOrComponent
+			className={classNames(className, {
+				'link-monospaced': monospaced,
+				'link-outline': outline,
+				'link-outline-borderless': borderless,
+				[`link-${displayType}`]: displayType && !outline,
+				[`link-outline-${displayType}`]: displayType && outline,
+			})}
+			{...otherProps}
+		>
+			{children}
+		</TagOrComponent>
+	);
+};
+
+export {ClayLinkContext};
 
 export default ClayLink;

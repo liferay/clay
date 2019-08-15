@@ -6,7 +6,7 @@
 
 import '@clayui/css/lib/css/atlas.css';
 import ClayIcon from '@clayui/icon';
-import ClayLink from '../src';
+import ClayLink, {ClayLinkContext} from '../src';
 import React from 'react';
 import {storiesOf} from '@storybook/react';
 
@@ -74,4 +74,27 @@ storiesOf('ClayLink', module)
 				<ClayIcon spritemap={spritemap} symbol="picture" />
 			</ClayLink>
 		</>
-	));
+	))
+	.add('w/custom link component', () => {
+		const ConfirmLink: React.FunctionComponent<any> = ({
+			children,
+			...otherProps
+		}) => (
+			<a
+				{...otherProps}
+				onClick={e => {
+					if (!confirm('Proceed with navigation?')) {
+						e.preventDefault();
+					}
+				}}
+			>
+				<strong>{children}</strong>
+			</a>
+		);
+
+		return (
+			<ClayLinkContext.Provider value={ConfirmLink}>
+				<ClayLink href="#1">{'Click to Navigate'}</ClayLink>
+			</ClayLinkContext.Provider>
+		);
+	});

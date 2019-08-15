@@ -53,3 +53,14 @@ exports[`ClayLink renders with monospaced 1`] = `
   M
 </a>
 `;
+
+exports[`ClayLink uses custom link component via context 1`] = `
+<a
+  className="link-secondary"
+  href="#1"
+>
+  <strong>
+    I am Bold!
+  </strong>
+</a>
+`;
