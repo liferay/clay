@@ -14,6 +14,7 @@ import ClayTable from '../src';
 import React from 'react';
 import {boolean, select} from '@storybook/addon-knobs';
 import {ClayCheckbox} from '@clayui/form';
+import {ClayTableWithEditableRow} from '../src/ClayTableWithEditableRow';
 import {storiesOf} from '@storybook/react';
 
 function ClayCheckboxWithState(props: any) {
@@ -538,4 +539,67 @@ storiesOf('ClayTable', module)
 				</ClayTable.Body>
 			</ClayTable>
 		</form>
-	));
+	))
+	.add('using EditableRow', () => {
+		const [state, setState] = React.useState({
+			cells: [
+				{
+					value: 'White and Red',
+				},
+				{
+					editable: true,
+					value: 'South America',
+				},
+				{
+					editable: true,
+					value: 'Brazil',
+				},
+			],
+		});
+
+		const onRowUpdated = (cellsUpdated: any, oldCells: any) => {
+			const cells = [...state.cells];
+			cells[cells.indexOf(oldCells)] = cellsUpdated;
+			setState({...state, cells});
+		};
+
+		return (
+			<ClayTable responsive>
+				<ClayTable.Head>
+					<ClayTable.Row>
+						{['', 'Teams', 'Region', 'Country', ''].map(
+							(cell, index) => (
+								<ClayTable.Cell
+									columnTextAlignment={
+										['', 'Teams', 'Region', 'Country', '']
+											.length === index
+											? 'end'
+											: undefined
+									}
+									expanded={index > 0}
+									headingCell
+									key={index}
+								>
+									{cell}
+								</ClayTable.Cell>
+							)
+						)}
+					</ClayTable.Row>
+				</ClayTable.Head>
+				<ClayTable.Body>
+					<ClayTableWithEditableRow
+						cells={state.cells}
+						onRowUpdated={onRowUpdated}
+						selectable
+					/>
+					<ClayTable.Row>
+						<ClayTable.Cell />
+						<ClayTable.Cell>{'Purple and Yellow'}</ClayTable.Cell>
+						<ClayTable.Cell>{'North America'}</ClayTable.Cell>
+						<ClayTable.Cell>{'U.S.A'}</ClayTable.Cell>
+						<ClayTable.Cell />
+					</ClayTable.Row>
+				</ClayTable.Body>
+			</ClayTable>
+		);
+	});
