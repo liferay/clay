@@ -14,9 +14,9 @@ import {useResource} from '@clayui/data-provider';
 
 import '@clayui/css/lib/css/atlas.css';
 
-const TAB_KEY_CODE = 9;
-const ARROW_UP_KEY_CODE = 38;
 const ARROW_DOWN_KEY_CODE = 40;
+const ARROW_UP_KEY_CODE = 38;
+const TAB_KEY_CODE = 9;
 
 const LoadingWithDebounce = ({
 	loading,
