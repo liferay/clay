@@ -30,32 +30,38 @@ interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	outline?: boolean;
 }
 
-const ClayLink: React.FunctionComponent<IProps> = ({
-	borderless,
-	children,
-	className,
-	displayType,
-	monospaced,
-	outline,
-	...otherProps
-}: IProps) => {
-	const TagOrComponent = useContext(ClayLinkContext);
+const ClayLink = React.forwardRef<HTMLAnchorElement, IProps>(
+	(
+		{
+			borderless,
+			children,
+			className,
+			displayType,
+			monospaced,
+			outline,
+			...otherProps
+		},
+		ref
+	) => {
+		const TagOrComponent = useContext(ClayLinkContext);
 
-	return (
-		<TagOrComponent
-			className={classNames(className, {
-				'link-monospaced': monospaced,
-				'link-outline': outline,
-				'link-outline-borderless': borderless,
-				[`link-${displayType}`]: displayType && !outline,
-				[`link-outline-${displayType}`]: displayType && outline,
-			})}
-			{...otherProps}
-		>
-			{children}
-		</TagOrComponent>
-	);
-};
+		return (
+			<TagOrComponent
+				className={classNames(className, {
+					'link-monospaced': monospaced,
+					'link-outline': outline,
+					'link-outline-borderless': borderless,
+					[`link-${displayType}`]: displayType && !outline,
+					[`link-outline-${displayType}`]: displayType && outline,
+				})}
+				ref={ref}
+				{...otherProps}
+			>
+				{children}
+			</TagOrComponent>
+		);
+	}
+);
 
 export {ClayLinkContext};
 
