@@ -164,3 +164,14 @@ $input-group-addon-min-width-sm: 2rem !default; // 32px
 $input-group-secondary-addon-bg: $white !default;
 $input-group-secondary-addon-border-color: $secondary-l2 !default;
 $input-group-secondary-addon-color: $secondary !default;
+
+// Custom Range
+
+$custom-range-track-bg: $light !default;
+$custom-range-track-box-shadow: none !default;
+$custom-range-track-height: 0.25rem !default;
+
+$custom-range-thumb-bg: $component-active-color !default;
+$custom-range-thumb-box-shadow: 0 0.0625rem 0.25rem rgba($black, .2) !default;
+$custom-range-thumb-focus-box-shadow: 0 0 0 0.0625rem $body-bg, $input-focus-box-shadow !default;
+$custom-range-thumb-width: 1.5rem !default;
