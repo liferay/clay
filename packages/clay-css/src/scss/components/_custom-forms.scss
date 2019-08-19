@@ -197,10 +197,25 @@ label.custom-control-label {
 	-webkit-appearance: none;
 
 	&::-webkit-slider-thumb, &::-moz-range-thumb, &::-ms-thumb {
+		position: relative;
 		-moz-appearance: none;
 		-webkit-appearance: none;
+		z-index: 1;
 	}
 }
+
+.custom-range-progress {
+	position: relative;
+
+	.custom-range-progress-bar {
+		background-color: $blue;
+		border-radius: $custom-range-thumb-border-radius 0 0 $custom-range-thumb-border-radius;
+		height: $custom-range-track-height;
+		position: absolute;
+		top: calc(50% - #{$custom-range-track-height});
+	}
+}
+
 // Will need to be revisited once https://github.com/twbs/bootstrap/pull/25184 is merged
 
 .custom-control {

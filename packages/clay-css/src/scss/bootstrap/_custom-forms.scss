@@ -477,6 +477,27 @@
     @include border-radius($custom-range-track-border-radius);
   }
 
+  &::-webkit-slider-thumb {
+    position: relative;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    z-index: 1;
+  }
+
+  &::-moz-range-thumb {
+    position: relative;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    z-index: 1;
+  }
+
+  &::-ms-thumb {
+    position: relative;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    z-index: 1;
+  }
+
   &:disabled {
     &::-webkit-slider-thumb {
       background-color: $custom-range-thumb-disabled-bg;

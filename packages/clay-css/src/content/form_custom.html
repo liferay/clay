@@ -256,9 +256,27 @@ section: Components
 	<div class="col-md-12">
 		<h3>Custom Range</h3>
 
+		<div class="alert alert-warning">
+			This component needs the prefixes: <code>-webkit-appearance: none; -moz-appearance: none;</code>
+		</div>
+
 		<div class="sheet">
 			<label for="customRange">Custom range example</label>
 			<input class="custom-range" id="customRange" type="range" min="0" max="100"/>
+		</div>
+
+		<h3>Custom Range with blue progress</h3>
+
+		<div class="alert alert-warning">
+			According to the design, progress should be colored blue, to do this there is an <code>::after</code> without with, the idea is adding the width by js reading the position of marker
+		</div>
+
+		<div class="sheet">
+			<label for="customRange">Custom range example</label>
+			<div class="custom-range-progress">
+				<input class="custom-range" id="customRange" type="range" min="0" max="100"/>
+				<div class="custom-range-progress-bar"></div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -273,6 +291,16 @@ section: Components
 
 		$(input).val(name);
 	});
+
+	$('.custom-range-progress .custom-range').on('change', function(event) {
+		var slider = $(this)[0];
+		var sliderPos = slider.value / slider.max;
+		var pixelPostion = slider.clientWidth * sliderPos;
+
+		$('.custom-range-progress .custom-range-progress-bar').css('width', pixelPostion);
+	});
+
+	$('.custom-range-progress-bar').css('width', '50%');
 
 	$('.input-group-inset').on('focusin', function(event) {
 		$(this).closest('.input-group-item').addClass('focus');
