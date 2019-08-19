@@ -111,6 +111,18 @@
 	@return nth($breakpoint-names, 1);
 }
 
+/// A function that returns the largest of two numbers. This returns `null` if either number is `null`.
+/// @param {Number} $val1 - The first number.
+/// @param {Number} $val2 - The second number.
+
+@function clay-max($val1, $val2) {
+	@if ($val1 == null or $val2 == null) {
+		@return null;
+	}
+
+	@return max($val1, $val2);
+}
+
 /// A function to replace all instances of a specific character in a string.
 /// @param {String} $string - The string to operate on
 /// @param {String} $search - The character to replace
