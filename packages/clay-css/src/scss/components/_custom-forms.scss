@@ -190,6 +190,17 @@ label.custom-control-label {
 	}
 }
 
+// Custom Range
+
+.custom-range {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+
+	&::-webkit-slider-thumb, &::-moz-range-thumb, &::-ms-thumb {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+	}
+}
 // Will need to be revisited once https://github.com/twbs/bootstrap/pull/25184 is merged
 
 .custom-control {
