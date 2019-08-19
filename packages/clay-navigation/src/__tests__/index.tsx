@@ -4,11 +4,25 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayNavigation from '..';
+import ClayNavigation, {ClayBreadcrumbNav, ClayVerticalNav} from '..';
 import React from 'react';
 import {cleanup, fireEvent, render} from '@testing-library/react';
 
 describe('ClayNavigation', () => {
+	afterEach(() => cleanup());
+
+	it('renders', () => {
+		const {container} = render(
+			<ClayNavigation>
+				<div />
+			</ClayNavigation>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+});
+
+describe('ClayBreadcrumbNav', () => {
 	afterEach(() => cleanup());
 
 	const items = [
@@ -37,26 +51,13 @@ describe('ClayNavigation', () => {
 
 	it('renders', () => {
 		const {container} = render(
-			<ClayNavigation>
-				<div />
-			</ClayNavigation>
+			<ClayBreadcrumbNav items={items} spritemap="path/to/spritemap" />
 		);
 
 		expect(container).toMatchSnapshot();
 	});
 
-	it('renders a Breadcrumb', () => {
-		const {container} = render(
-			<ClayNavigation.Breadcrumb
-				items={items}
-				spritemap="path/to/spritemap"
-			/>
-		);
-
-		expect(container).toMatchSnapshot();
-	});
-
-	it('should throw a warning when not passing `active` to any `items` on Breadcrumb', () => {
+	it('throws a warning when not passing `active` to any `items`', () => {
 		const mockWarnings = jest
 			.spyOn(global.console, 'error')
 			.mockImplementation(() => null);
@@ -73,7 +74,7 @@ describe('ClayNavigation', () => {
 		];
 
 		const {container} = render(
-			<ClayNavigation.Breadcrumb
+			<ClayBreadcrumbNav
 				ellipsisBuffer={3}
 				items={items}
 				spritemap="path/to/spritemap"
@@ -82,16 +83,16 @@ describe('ClayNavigation', () => {
 
 		expect(mockWarnings).toBeCalled();
 		expect(mockWarnings.mock.calls[0][0]).toBe(
-			'Warning: ClayNavigation.Breadcrumb expects at least one `active` item on `items`.'
+			'Warning: ClayBreadcrumbNav expects at least one `active` item on `items`.'
 		);
 
 		expect(container).toMatchSnapshot();
 		jest.resetAllMocks();
 	});
 
-	it('renders a Breadcrumb with properties passed by `ellipsisProps`', () => {
+	it('renders with properties passed by `ellipsisProps`', () => {
 		const {container} = render(
-			<ClayNavigation.Breadcrumb
+			<ClayBreadcrumbNav
 				ellipsisBuffer={1}
 				ellipsisProps={{style: {fontSize: '15px'}}}
 				items={items}
@@ -102,7 +103,7 @@ describe('ClayNavigation', () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it('should emit an event when an item is clicked', () => {
+	it('calls callback when an item is clicked', () => {
 		const itemClickMock = jest.fn(event => {
 			event.persist();
 		});
@@ -132,7 +133,7 @@ describe('ClayNavigation', () => {
 		];
 
 		const {container, getByTestId} = render(
-			<ClayNavigation.Breadcrumb
+			<ClayBreadcrumbNav
 				ellipsisBuffer={1}
 				items={itemsWithoutHref}
 				spritemap="path/to/spritemap"
@@ -146,5 +147,54 @@ describe('ClayNavigation', () => {
 		expect(itemClickMock.mock.calls[0][0].type).toBe('click');
 
 		expect(container).toMatchSnapshot();
+	});
+});
+
+describe('ClayVerticalNav', () => {
+	afterEach(() => cleanup());
+
+	const items = [
+		{
+			initialExpanded: false,
+			items: [
+				{
+					href: '#nested1',
+					label: 'Nested1',
+				},
+			],
+			label: 'Home',
+		},
+	];
+
+	it('renders', () => {
+		const {container} = render(
+			<ClayVerticalNav
+				activeLabel="Home"
+				items={items}
+				spritemap="/path/to"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('expands items when clicked', () => {
+		const {container, getByText} = render(
+			<ClayVerticalNav
+				activeLabel="foo"
+				items={items}
+				spritemap="/path/to"
+			/>
+		);
+
+		expect(
+			container.querySelector('.collapsing.show .nav-item')
+		).toBeFalsy();
+
+		fireEvent.click(getByText('Home'));
+
+		expect(
+			container.querySelector('.collapsing.show .nav-item')
+		).toBeTruthy();
 	});
 });

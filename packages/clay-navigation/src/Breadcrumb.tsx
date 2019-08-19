@@ -40,7 +40,7 @@ const findActiveItems = (items: Array<IBreadcrumbItem>) => {
 	});
 };
 
-export const Breadcrumb: React.FunctionComponent<IProps> = ({
+export const ClayBreadcrumbNav: React.FunctionComponent<IProps> = ({
 	className,
 	ellipsisBuffer = 1,
 	ellipsisProps = {},
@@ -50,7 +50,7 @@ export const Breadcrumb: React.FunctionComponent<IProps> = ({
 }: IProps) => {
 	warning(
 		findActiveItems(items).length === 1,
-		'ClayNavigation.Breadcrumb expects at least one `active` item on `items`.'
+		'ClayBreadcrumbNav expects at least one `active` item on `items`.'
 	);
 
 	const activeItems = findActiveItems(items);
