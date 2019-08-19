@@ -436,3 +436,359 @@
 		cursor: $input-select-cursor;
 	}
 }
+
+/// A mixin to create Clay Range variants.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// color: {Color | String | Null},
+/// display: {String | Null},
+/// padding-bottom: {Number | String | Null},
+/// position: {String | Null},
+/// vertical-align: {String | Null},
+/// width: {Number | String | List | Null},
+/// thumb-appearance: {String | Null},
+/// thumb-bg: {Color | String | Null},
+/// thumb-bg-image: {String | List | Null},
+/// thumb-border-radius: {Number | String | List | Null},
+/// thumb-border-color: {Color | String | List | Null},
+/// thumb-border-style: {String | List | Null},
+/// thumb-border-width: {Number | String | List | Null},
+/// thumb-box-shadow: {String | List | Null},
+/// thumb-height: {Number | String | Null},
+/// thumb-width: {Number | String | Null},
+/// track-appearance: {String | Null},
+/// track-bg: {Color | String | Null},
+/// track-bg-image: {String | List | Null},
+/// track-border-color: {Color | String | List | Null},
+/// track-border-radius: {Number | String | List | Null},
+/// track-border-style: {String | List | Null},
+/// track-border-width: {Number | String | List | Null},
+/// track-height: {Number | String | Null},
+/// track-position: {String | Null},
+/// track-top: {Number | String | Null},
+/// track-width: {Number | String | Null},
+/// progress-bg: {Color | String | Null},
+/// progress-bg-image: {String | List | Null},
+/// progress-border-color: {Color | String | Null},
+/// progress-border-radius: {Number | String | List | Null},
+/// progress-border-style: {String | List | Null},
+/// progress-border-width: {Number | String | Null},
+/// progress-height: {Number | String | Null},
+/// progress-margin-top: {Number | String | Null},
+/// progress-position: {String | Null},
+/// progress-top: {Number | String | Null},
+/// progress-width: {Number | String | Null},
+/// form-control-appearance: {String | Null},
+/// form-control-bg: {Color | String | Null},
+/// form-control-color: {Color | String | Null},
+/// form-control-height: {Number | String | Null},
+/// form-control-position: {String | Null},
+/// form-control-z-index: {Number | String | Null},
+/// form-control-data-label-margin-bottom: {Number | String | Null},
+/// data-label-align-items: {String | Null},
+/// data-label-display: {String | Null},
+/// data-label-font-size: {Number | String | Null},
+/// data-label-font-weight: {Number | String | Null},
+/// data-label-height: {Number | String | Null},
+/// data-label-justify-content: {String | Null},
+/// data-label-line-height: {Number | String | Null},
+/// data-label-position: {String | Null},
+/// data-label-top: {Number | String | Null},
+/// data-label-width: {Number | String | Null},
+/// data-label-before-content: {Number | String | Null},
+/// data-label-before-left: {Number | String | Null},
+/// data-label-after-content: {Number | String | Null},
+/// data-label-after-right: {Number | String | Null},
+/// hover-cursor: {String | Null},
+/// hover-thumb-bg: {Color | String | Null},
+/// focus-outline: {Number | String | List | Null},
+/// focus-thumb-box-shadow: {String | List | Null},
+/// disabled-color: {Color | String | Null},
+/// disabled-cursor: {String | Null},
+/// disabled-thumb-bg: {Color | String | Null},
+/// disabled-thumb-box-shadow: {String | List | Null},
+/// disabled-progress-bg: {Color | String | Null},
+/// disabled-track-bg: {Color | String | Null},
+
+@mixin clay-range-input-variant($map) {
+	$color: map-get($map, color);
+	$display: map-get($map, display);
+	$padding-bottom: map-get($map, padding-bottom);
+	$position: map-get($map, position);
+	$vertical-align: map-get($map, vertical-align);
+	$width: map-get($map, width);
+
+	$thumb-appearance: map-get($map, thumb-appearance);
+	$thumb-bg: map-get($map, thumb-bg);
+	$thumb-bg-image: map-get($map, thumb-bg-image);
+	$thumb-border-radius: map-get($map, thumb-border-radius);
+	$thumb-border-color: map-get($map, thumb-border-color);
+	$thumb-border-style: map-get($map, thumb-border-style);
+	$thumb-border-width: map-get($map, thumb-border-width);
+	$thumb-box-shadow: map-get($map, thumb-box-shadow);
+	$thumb-height: map-get($map, thumb-height);
+	$thumb-width: map-get($map, thumb-width);
+
+	$track-appearance: map-get($map, track-appearance);
+	$track-bg: map-get($map, track-bg);
+	$track-bg-image: map-get($map, track-bg-image);
+	$track-border-color: map-get($map, track-border-color);
+	$track-border-radius: map-get($map, track-border-radius);
+	$track-border-style: map-get($map, track-border-style);
+	$track-border-width: map-get($map, track-border-width);
+	$track-height: map-get($map, track-height);
+	$track-position: map-get($map, track-position);
+	$track-top: map-get($map, track-top);
+
+	@if ($thumb-height and $track-height) {
+		$track-top: calc((#{$thumb-height} - #{$track-height}) / 2);
+	}
+
+	$track-width: map-get($map, track-width);
+
+	$progress-bg: map-get($map, progress-bg);
+	$progress-bg-image: map-get($map, progress-bg-image);
+	$progress-border-color: map-get($map, progress-border-color);
+	$progress-border-radius: map-get($map, progress-border-radius);
+	$progress-border-style: map-get($map, progress-border-style);
+	$progress-border-width: map-get($map, progress-border-width);
+	$progress-height: setter(map-get($map, progress-height), $track-height);
+	$progress-margin-top: map-get($map, progress-margin-top);
+	$progress-position: map-get($map, progress-position);
+	$progress-top: map-get($map, progress-top);
+
+	@if ($thumb-height and $track-height) {
+		$progress-top: calc((#{$thumb-height} - #{$track-height}) / 2);
+	}
+
+	$progress-width: map-get($map, progress-width);
+
+	$form-control-appearance: map-get($map, form-control-appearance);
+	$form-control-bg: map-get($map, form-control-bg);
+	$form-control-color: map-get($map, form-control-color);
+	$form-control-height: setter(map-get($map, form-control-height), clay-max($track-height, $thumb-height));
+	$form-control-position: map-get($map, form-control-position);
+	$form-control-z-index: map-get($map, form-control-z-index);
+	$form-control-data-label-margin-bottom: setter(map-get($map, form-control-data-label-margin-bottom), $form-control-height);
+
+	$data-label-align-items: map-get($map, data-label-align-items);
+	$data-label-display: map-get($map, data-label-display);
+	$data-label-font-size: map-get($map, data-label-font-size);
+	$data-label-font-weight: map-get($map, data-label-font-weight);
+	$data-label-height: map-get($map, data-label-height);
+	$data-label-justify-content: map-get($map, data-label-justify-content);
+	$data-label-line-height: map-get($map, data-label-line-height);
+	$data-label-position: map-get($map, data-label-position);
+	$data-label-top: setter(map-get($map, data-label-top), $form-control-height);
+	$data-label-width: map-get($map, data-label-width);
+
+	$data-label-before-content: map-get($map, data-label-before-content);
+	$data-label-before-left: map-get($map, data-label-before-left);
+
+	$data-label-after-content: map-get($map, data-label-after-content);
+	$data-label-after-right: map-get($map, data-label-after-right);
+
+	$hover-cursor: map-get($map, hover-cursor);
+	$hover-thumb-bg: map-get($map, hover-thumb-bg);
+
+	$focus-outline: map-get($map, focus-outline);
+	$focus-thumb-box-shadow: map-get($map, focus-thumb-box-shadow);
+
+	$disabled-color: map-get($map, disabled-color);
+	$disabled-cursor: map-get($map, disabled-cursor);
+	$disabled-thumb-bg: map-get($map, disabled-thumb-bg);
+	$disabled-thumb-box-shadow: map-get($map, disabled-thumb-box-shadow);
+	$disabled-progress-bg: map-get($map, disabled-progress-bg);
+	$disabled-track-bg: map-get($map, disabled-track-bg);
+
+	color: $color;
+	display: $display;
+	padding-bottom: $padding-bottom;
+	position: $position;
+	vertical-align: $vertical-align;
+	width: $width;
+
+	.clay-range-track {
+		background-color: $track-bg;
+		border-color: $track-border-color;
+		border-radius: $track-border-radius;
+		border-style: $track-border-style;
+		border-width: $track-border-width;
+		height: $track-height;
+		position: $track-position;
+		top: $track-top;
+		width: $track-width;
+	}
+
+	.clay-range-progress {
+		background-color: $progress-bg;
+		background-image: $progress-bg-image;
+		border-color: $progress-border-color;
+		border-radius: $progress-border-radius;
+		border-style: $progress-border-style;
+		border-width: $progress-border-width;
+		height: $progress-height;
+		margin-top: $progress-margin-top;
+		position: $progress-position;
+		top: $progress-top;
+		width: $progress-width;
+	}
+
+	.form-control-range {
+		content: '#{$thumb-width}';
+		-moz-appearance: $form-control-appearance;
+		-webkit-appearance: $form-control-appearance;
+		appearance: $form-control-appearance;
+		background-color: $form-control-bg;
+		color: $form-control-color;
+		height: $form-control-height;
+		position: $form-control-position;
+		z-index: $form-control-z-index;
+
+		&::-moz-range-thumb {
+			-moz-appearance: $thumb-appearance;
+			appearance: $thumb-appearance;
+			background-color: $thumb-bg;
+			background-image: $thumb-bg-image;
+			border-color: $thumb-border-color;
+			border-radius: $thumb-border-radius;
+			border-style: $thumb-border-style;
+			border-width: $thumb-border-width;
+			box-shadow: $thumb-box-shadow;
+			height: $thumb-height;
+			width: $thumb-width;
+		}
+
+		&::-ms-thumb {
+			appearance: $thumb-appearance;
+			background-color: $thumb-bg;
+			background-image: $thumb-bg-image;
+			border-color: $thumb-border-color;
+			border-radius: $thumb-border-radius;
+			border-style: $thumb-border-style;
+			border-width: $thumb-border-width;
+			box-shadow: $thumb-box-shadow;
+			height: $thumb-height;
+			width: $thumb-width;
+		}
+
+		&::-webkit-slider-thumb {
+			-webkit-appearance: $thumb-appearance;
+			appearance: $thumb-appearance;
+			background-color: $thumb-bg;
+			background-image: $thumb-bg-image;
+			border-color: $thumb-border-color;
+			border-radius: $thumb-border-radius;
+			border-style: $thumb-border-style;
+			border-width: $thumb-border-width;
+			box-shadow: $thumb-box-shadow;
+			height: $thumb-height;
+			width: $thumb-width;
+		}
+
+		&::-moz-focus-outer {
+			@if ($focus-outline == 0) {
+				border-width: 0;
+			}
+		}
+
+		&::-moz-range-track {
+			-moz-appearance: $track-appearance;
+			appearance: $track-appearance;
+		}
+
+		&::-webkit-slider-runnable-track {
+			-webkit-appearance: $track-appearance;
+			appearance: $track-appearance;
+		}
+
+		&:hover {
+			cursor: $hover-cursor;
+
+			&::-moz-range-thumb {
+				background-color: $hover-thumb-bg;
+			}
+
+			&::-ms-thumb {
+				background-color: $hover-thumb-bg;
+			}
+
+			&::-webkit-slider-thumb {
+				background-color: $hover-thumb-bg;
+			}
+		}
+
+		&:focus {
+			outline: $focus-outline;
+
+			&::-moz-range-thumb {
+				box-shadow: $focus-thumb-box-shadow;
+			}
+
+			&::-ms-thumb {
+				box-shadow: $focus-thumb-box-shadow;
+			}
+
+			&::-webkit-slider-thumb {
+				box-shadow: $focus-thumb-box-shadow;
+			}
+		}
+
+		&:disabled {
+			color: $disabled-color;
+			cursor: $disabled-cursor;
+
+			&::-moz-range-thumb {
+				background-color: $disabled-thumb-bg;
+				box-shadow: $disabled-thumb-box-shadow;
+			}
+
+			&::-ms-thumb {
+				background-color: $disabled-thumb-bg;
+				box-shadow: $disabled-thumb-box-shadow;
+			}
+
+			&::-webkit-slider-thumb {
+				background-color: $disabled-thumb-bg;
+				box-shadow: $disabled-thumb-box-shadow;
+			}
+
+			~ .clay-range-track {
+				background-color: $disabled-track-bg;
+			}
+
+			~ .clay-range-progress {
+				background-color: $disabled-progress-bg;
+			}
+		}
+
+		&[data-label-min],
+		&[data-label-max] {
+			margin-bottom: $form-control-data-label-margin-bottom;
+		}
+
+		&[data-label-min]::before {
+			content: $data-label-before-content;
+			left: $data-label-before-left;
+		}
+
+		&[data-label-max]::after {
+			content: $data-label-after-content;
+			right: $data-label-after-right;
+		}
+
+		&::after,
+		&::before {
+			align-items: $data-label-align-items;
+			display: $data-label-display;
+			font-size: $data-label-font-size;
+			font-weight: $data-label-font-weight;
+			height: $data-label-height;
+			justify-content: $data-label-justify-content;
+			line-height: $data-label-line-height;
+			position: $data-label-position;
+			top: $data-label-top;
+			width: $data-label-width;
+		}
+	}
+}
