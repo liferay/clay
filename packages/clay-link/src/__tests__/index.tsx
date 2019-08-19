@@ -5,7 +5,7 @@
  */
 
 import * as TestRenderer from 'react-test-renderer';
-import ClayLink, {ClayLinkContext} from '..';
+import ClayLink, {unstable_ClayLinkContext} from '..';
 import React from 'react';
 
 describe('ClayLink', () => {
@@ -83,11 +83,11 @@ describe('ClayLink', () => {
 			</a>
 		);
 		const testRenderer = TestRenderer.create(
-			<ClayLinkContext.Provider value={BoldLink}>
+			<unstable_ClayLinkContext.Provider value={BoldLink}>
 				<ClayLink displayType="secondary" href="#1">
 					{'I am Bold!'}
 				</ClayLink>
-			</ClayLinkContext.Provider>
+			</unstable_ClayLinkContext.Provider>
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
