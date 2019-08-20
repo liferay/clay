@@ -13,7 +13,7 @@ import {ClayCheckbox, ClayInput} from '@clayui/form';
 interface IEditableCell {
 	cellProps?: Object;
 	editable?: boolean;
-	value: string;
+	title: string;
 }
 
 interface IEditableRowProps extends IRowProps {
@@ -71,20 +71,20 @@ export const ClayTableWithEditableRow: React.FunctionComponent<IEditableRowProps
 					/>
 				</Cell>
 			)}
-			{cells.map(({cellProps, editable = false, value}, index) => (
+			{cells.map(({cellProps, editable = false, title}, index) => (
 				<Cell expanded key={index} {...cellProps}>
 					{editable && editing ? (
 						<ClayInput
 							className="form-control-sm"
-							defaultValue={value}
+							defaultValue={title}
 							onChange={event => {
-								cells[index].value = event.target.value;
+								cells[index].title = event.target.value;
 							}}
-							placeholder={value}
+							placeholder={title}
 							type="text"
 						/>
 					) : (
-						value
+						title
 					)}
 				</Cell>
 			))}
