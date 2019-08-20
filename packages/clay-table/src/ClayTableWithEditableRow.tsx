@@ -41,7 +41,9 @@ interface IEditableRowProps extends IRowProps {
 	selectable?: boolean;
 }
 
-export const ClayTableWithEditableRow: React.FunctionComponent<IEditableRowProps> = ({
+export const ClayTableWithEditableRow: React.FunctionComponent<
+	IEditableRowProps
+> = ({
 	cells,
 	onCheckboxChange = () => {},
 	onRowUpdated = () => {},
@@ -55,8 +57,6 @@ export const ClayTableWithEditableRow: React.FunctionComponent<IEditableRowProps
 		() => cells.map(cell => Object.assign(cell)),
 		[cells]
 	);
-
-	// Pular o foco para o Row inteiro quando o Edit mode for triggado!
 
 	return (
 		<Row active={check} {...otherProps}>
