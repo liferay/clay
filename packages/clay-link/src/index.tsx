@@ -5,7 +5,8 @@
  */
 
 import classNames from 'classnames';
-import React from 'react';
+import ClayLinkContext from './Context';
+import React, {useContext} from 'react';
 
 interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	/**
@@ -29,27 +30,39 @@ interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	outline?: boolean;
 }
 
-const ClayLink: React.FunctionComponent<IProps> = ({
-	borderless,
-	children,
-	className,
-	displayType,
-	monospaced,
-	outline,
-	...otherProps
-}: IProps) => (
-	<a
-		className={classNames(className, {
-			'link-monospaced': monospaced,
-			'link-outline': outline,
-			'link-outline-borderless': borderless,
-			[`link-${displayType}`]: displayType && !outline,
-			[`link-outline-${displayType}`]: displayType && outline,
-		})}
-		{...otherProps}
-	>
-		{children}
-	</a>
+const ClayLink = React.forwardRef<HTMLAnchorElement, IProps>(
+	(
+		{
+			borderless,
+			children,
+			className,
+			displayType,
+			monospaced,
+			outline,
+			...otherProps
+		},
+		ref
+	) => {
+		const TagOrComponent = useContext(ClayLinkContext);
+
+		return (
+			<TagOrComponent
+				className={classNames(className, {
+					'link-monospaced': monospaced,
+					'link-outline': outline,
+					'link-outline-borderless': borderless,
+					[`link-${displayType}`]: displayType && !outline,
+					[`link-outline-${displayType}`]: displayType && outline,
+				})}
+				ref={ref}
+				{...otherProps}
+			>
+				{children}
+			</TagOrComponent>
+		);
+	}
 );
+
+export {ClayLinkContext as unstable_ClayLinkContext};
 
 export default ClayLink;

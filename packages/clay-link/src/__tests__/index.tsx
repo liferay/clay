@@ -5,7 +5,7 @@
  */
 
 import * as TestRenderer from 'react-test-renderer';
-import ClayLink from '..';
+import ClayLink, {unstable_ClayLinkContext} from '..';
 import React from 'react';
 
 describe('ClayLink', () => {
@@ -68,6 +68,26 @@ describe('ClayLink', () => {
 			<ClayLink borderless href="#1">
 				{'Borderless'}
 			</ClayLink>
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('uses custom link component via context', () => {
+		const BoldLink: React.FunctionComponent<any> = ({
+			children,
+			...otherProps
+		}) => (
+			<a {...otherProps}>
+				<strong>{children}</strong>
+			</a>
+		);
+		const testRenderer = TestRenderer.create(
+			<unstable_ClayLinkContext.Provider value={BoldLink}>
+				<ClayLink displayType="secondary" href="#1">
+					{'I am Bold!'}
+				</ClayLink>
+			</unstable_ClayLinkContext.Provider>
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
