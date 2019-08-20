@@ -15,6 +15,7 @@ import React from 'react';
 import {boolean, select} from '@storybook/addon-knobs';
 import {ClayCheckbox} from '@clayui/form';
 import {ClayTableWithEditableRow} from '../src/ClayTableWithEditableRow';
+import {ClayTableWithQuickActions} from '../src/ClayTableWithQuickActions';
 import {storiesOf} from '@storybook/react';
 
 function ClayCheckboxWithState(props: any) {
@@ -601,5 +602,166 @@ storiesOf('ClayTable', module)
 					</ClayTable.Row>
 				</ClayTable.Body>
 			</ClayTable>
+		);
+	})
+	.add('using high-level', () => {
+		const columns = [
+			{
+				dataIndex: 'author',
+				title: 'Author',
+			},
+			{
+				cellProps: {
+					expanded: true,
+				},
+				dataIndex: 'description',
+				title: 'Description',
+			},
+			{
+				dataIndex: 'title',
+				title: 'Title',
+			},
+		];
+
+		const rows = [
+			{
+				author: 'Manuel Bandeira',
+				description: (
+					<div className="autofit-row">
+						<div className="autofit-col-expand">
+							{`Estrela da Manhã is the title of a poem that gives name to a book by the Brazilian poet Manuel Bandeira of 1936.`}
+						</div>
+						<div className="autofit-col">
+							<img
+								className="table-img"
+								src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Estrela_da_Manh%C3%A3_Manuel_Bandeira_1936.jpg"
+							/>
+						</div>
+					</div>
+				),
+				dropdownActions: [
+					{
+						label: 'Edit',
+						onClick: () =>
+							alert('Edit event from Estrela da Manhã'),
+					},
+					{
+						label: 'Share',
+						onClick: () =>
+							alert('Share event from Estrela da Manhã'),
+					},
+				],
+				quickActions: [
+					{
+						href: '#1',
+						symbol: 'trash',
+					},
+					{
+						href: '#2',
+						symbol: 'download',
+					},
+					{
+						href: '#3',
+						symbol: 'expand',
+					},
+				],
+				title: 'Estrela da Manhã',
+			},
+			{
+				author: 'Manuel Bandeira',
+				description: (
+					<div className="autofit-row">
+						<div className="autofit-col-expand">
+							{`Libertinagem is the fourth book of poetry by Brazilian writer Manuel Bandeira, published in 1930. It is composed of 38 poems, among which stand out Pneumothorax, Family Pension, Deeply and I'm Leaving for Pasargada.`}
+						</div>
+						<div className="autofit-col">
+							<img
+								className="table-img"
+								src="https://d3swacfcujrr1g.cloudfront.net/img/uploads/2000/01/002670084013.jpg"
+							/>
+						</div>
+					</div>
+				),
+				dropdownActions: [
+					{
+						label: 'Edit',
+						onClick: () => alert('Edit event from Libertinagem'),
+						symbolRight: 'edit',
+					},
+					{
+						label: 'Share',
+						onClick: () => alert('Share event from Libertinagem'),
+						symbolRight: 'edit',
+					},
+				],
+				quickActions: [
+					{
+						href: '#1',
+						symbol: 'trash',
+					},
+					{
+						href: '#2',
+						symbol: 'download',
+					},
+					{
+						href: '#3',
+						symbol: 'expand',
+					},
+				],
+				title: 'Libertinagem',
+			},
+			{
+				author: 'João Cabral de Melo Neto',
+				description: (
+					<div className="autofit-row">
+						<div className="autofit-col-expand">
+							{`Published in 1955 and written between 1954 and 1955, the play is divided into 18 sections and written in heptasyllabic meter, recalling the popular poetry of northeastern Brazil, where Melo Neto was born and lived for most of his life, the cordel.`}
+						</div>
+						<div className="autofit-col">
+							<img
+								className="table-img"
+								src="https://upload.wikimedia.org/wikipedia/pt/thumb/0/0d/Morte-e-vida-severina-joo-cabral-de-melo-neto.jpg/230px-Morte-e-vida-severina-joo-cabral-de-melo-neto.jpg"
+							/>
+						</div>
+					</div>
+				),
+				dropdownActions: [
+					{
+						label: 'Edit',
+						onClick: () =>
+							alert('Edit event from Morte e Vida Severina'),
+						symbolRight: 'edit',
+					},
+					{
+						label: 'Share',
+						onClick: () =>
+							alert('Share event from Morte e Vida Severina'),
+						symbolRight: 'edit',
+					},
+				],
+				quickActions: [
+					{
+						href: '#1',
+						symbol: 'trash',
+					},
+					{
+						href: '#2',
+						symbol: 'download',
+					},
+					{
+						href: '#3',
+						symbol: 'expand',
+					},
+				],
+				title: 'Morte e Vida Severina',
+			},
+		];
+
+		return (
+			<ClayTableWithQuickActions
+				columns={columns}
+				rows={rows}
+				spritemap={spritemap}
+			/>
 		);
 	});
