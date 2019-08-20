@@ -544,15 +544,15 @@ storiesOf('ClayTable', module)
 		const [state, setState] = React.useState({
 			cells: [
 				{
-					value: 'White and Red',
+					title: 'White and Red',
 				},
 				{
 					editable: true,
-					value: 'South America',
+					title: 'South America',
 				},
 				{
 					editable: true,
-					value: 'Brazil',
+					title: 'Brazil',
 				},
 			],
 		});
