@@ -118,6 +118,8 @@
 	$width: map-get($map, width);
 	$placeholder-color: map-get($map, placeholder-color);
 	$placeholder-opacity: map-get($map, placeholder-opacity);
+	$selection-bg: map-get($map, selection-bg);
+	$selection-color: map-get($map, selection-color);
 
 	$hover-bg: map-get($map, hover-bg);
 	$hover-border-color: map-get($map, hover-border-color);
@@ -190,6 +192,16 @@
 			opacity: $placeholder-opacity;
 		}
 
+		&::-moz-selection {
+			background-color: $selection-bg;
+			color: $selection-color;
+		}
+
+		&::selection {
+			background-color: $selection-bg;
+			color: $selection-color;
+		}
+
 		&:hover {
 			background-color: $hover-bg;
 			border-color: $hover-border-color;
@@ -201,7 +213,8 @@
 			}
 		}
 
-		&:focus {
+		&:focus,
+		&.focus {
 			background-color: $focus-bg;
 			background-image: $focus-bg-image;
 			border-color: $focus-border-color;
