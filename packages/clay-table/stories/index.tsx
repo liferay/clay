@@ -673,7 +673,7 @@ storiesOf('ClayTable', module)
 						<ClayTable.Cell className="bg-light" key={index}>
 							{value}
 						</ClayTable.Cell>
-					))
+					));
 				},
 				title: 'Estrela da Manhã',
 			},
@@ -768,7 +768,7 @@ storiesOf('ClayTable', module)
 						<ClayTable.Cell className="bg-light" key={index}>
 							{value}
 						</ClayTable.Cell>
-					))
+					));
 				},
 				title: 'Morte e Vida Severina',
 			},
