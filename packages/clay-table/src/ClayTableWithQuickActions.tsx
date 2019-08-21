@@ -12,20 +12,38 @@ import {ClayDropDownWithItems} from '@clayui/drop-down';
 interface IQuickActions {
 	href: string;
 
+	/**
+	 * Name of icon symbol
+	 */
 	symbol: string;
 }
 
 interface IColumnItem {
+	/**
+	 * Props to be added on each Cell for Heading Cells.
+	 */
 	cellProps?: Object;
 
+	/**
+	 * Unique key for a column. Used to describe a column specification.
+	 */
 	dataIndex: string;
 
-	render?: Function;
+	/**
+	 * Renderer of the table cell. The return value should be a ReactNode.
+	 */
+	render?: (title: string) => React.ReactNode;
 
+	/**
+	 * Title of the column.
+	 */
 	title: string;
 }
 
 interface IRowItem {
+	/**
+	 * Props to be added on each Cell for Row Cells.
+	 */
 	cellProps?: Object;
 
 	dropdownActions: React.ComponentProps<
@@ -34,8 +52,14 @@ interface IRowItem {
 
 	quickActions: Array<IQuickActions>;
 
+	/**
+	 * Renderer of the table cell. The return value should be a ReactNode.
+	 */
 	render?: Function;
 
+	/**
+	 * Title of the column.
+	 */
 	title: string;
 
 	[key: string]: any;
