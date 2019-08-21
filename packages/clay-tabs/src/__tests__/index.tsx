@@ -137,7 +137,7 @@ describe('ClayTabs', () => {
 	it('emits a number when clicking an item', () => {
 		const onClick = jest.fn();
 
-		const {container, getByTestId} = render(
+		const {getByTestId} = render(
 			<>
 				<ClayTabs>
 					<ClayTabs.Item
