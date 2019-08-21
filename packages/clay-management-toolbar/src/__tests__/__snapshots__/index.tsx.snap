@@ -1,1 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayManagementToolbar renders 1`] = `
+<div>
+  <nav
+    class="management-bar management-bar-light navbar navbar-expand-md management-bar-light"
+  >
+    <div
+      class="container-fluid container-fluid-max-xl"
+    >
+      <ul
+        class="navbar-nav"
+      />
+      <ul
+        class="navbar-nav"
+      />
+    </div>
+  </nav>
+</div>
+`;
