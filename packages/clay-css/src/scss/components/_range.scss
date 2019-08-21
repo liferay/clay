@@ -1,4 +1,6 @@
 .clay-range {
+	padding-bottom: 0.1px;
+
 	.input-group {
 		@include clay-container($clay-range-input-group);
 	}

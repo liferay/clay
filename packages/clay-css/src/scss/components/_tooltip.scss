@@ -2,6 +2,12 @@
 	@include box-shadow($tooltip-box-shadow);
 }
 
+.tooltip-arrow {
+	background-color: $tooltip-bg;
+	position: absolute;
+	transform: rotate(45deg);
+}
+
 // Tooltip Positions
 
 .clay-tooltip-bottom,
@@ -64,6 +70,13 @@
 			bottom: 0;
 		}
 	}
+
+	.tooltip-arrow {
+		border-bottom-color: transparent;
+		border-right-color: transparent;
+		left: 50%;
+		top: 0;
+	}
 }
 
 // Left
@@ -83,6 +96,13 @@
 			border-width: ($tooltip-arrow-width / 2) 0 ($tooltip-arrow-width / 2) $tooltip-arrow-height;
 			left: 0;
 		}
+	}
+
+	.tooltip-arrow {
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+		right: 0;
+		top: 50%;
 	}
 }
 
@@ -104,6 +124,13 @@
 			right: 0;
 		}
 	}
+
+	.tooltip-arrow {
+		border-right-color: transparent;
+		border-top-color: transparent;
+		left: 0;
+		top: 50%;
+	}
 }
 
 // Top
@@ -121,5 +148,12 @@
 			border-width: $tooltip-arrow-height ($tooltip-arrow-width / 2) 0;
 			top: 0;
 		}
+	}
+
+	.tooltip-arrow {
+		border-left-color: transparent;
+		border-top-color: transparent;
+		bottom: 0;
+		left: 50%;
 	}
 }
