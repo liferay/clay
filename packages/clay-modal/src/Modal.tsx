@@ -9,27 +9,25 @@ import classNames from 'classnames';
 import Context, {IContext} from './Context';
 import Footer from './Footer';
 import Header from './Header';
-import React, {FunctionComponent, useEffect, useRef, useState} from 'react';
+import React, {FunctionComponent, useEffect, useRef} from 'react';
 import {ClayPortal} from '@clayui/shared';
-import {Size} from './types';
+import {Observer, ObserverType, Size} from './types';
 import {useUserInteractions} from './Hook';
 
-interface IProps extends React.HTMLAttributes<HTMLDivElement>, IContext {
-	children?: (onClose: () => void) => React.ReactNode;
-
+interface IProps
+	extends React.HTMLAttributes<HTMLDivElement>,
+		Omit<IContext, 'onClose'> {
 	/**
 	 * The size of element modal.
 	 */
 	size?: Size;
+
+	/**
+	 * Observer is Modal's communication system with `useModal`
+	 * hook, adds observer from `useModal` hook here.
+	 */
+	observer: Observer;
 }
-
-const delay = (fn: Function) => {
-	return setTimeout(() => {
-		fn();
-	}, 100);
-};
-
-const modalOpenClassName = 'modal-open';
 
 const ClayModal: FunctionComponent<IProps> & {
 	Body: typeof Body;
@@ -38,58 +36,32 @@ const ClayModal: FunctionComponent<IProps> & {
 } = ({
 	children,
 	className,
-	onClose = () => {},
+	observer,
 	size,
 	spritemap,
 	status,
 	...otherProps
 }: IProps) => {
-	const [visibleClassShow, setVisibleClassShow] = useState<boolean>(false);
-
 	const modalBodyElementRef = useRef<HTMLDivElement | null>(null);
 	const modalDialogElementRef = useRef<HTMLDivElement | null>(null);
 
-	/**
-	 * Control the close of the modal to create the component's "unmount"
-	 * animation and call the onClose prop with delay.
-	 */
-	const handleCloseModal = () => {
-		document.body.classList.remove(modalOpenClassName);
-		setVisibleClassShow(false);
+	useUserInteractions(modalDialogElementRef, () =>
+		observer.dispatch(ObserverType.Close)
+	);
 
-		delay(onClose);
-	};
-
-	const context = {
-		onClose: handleCloseModal,
-		spritemap,
-		status,
-	};
-
-	useUserInteractions(modalDialogElementRef, handleCloseModal);
-
-	useEffect(() => {
-		document.body.classList.add(modalOpenClassName);
-		const timer = delay(() => {
-			setVisibleClassShow(true);
-		});
-
-		return () => {
-			clearTimeout(timer);
-		};
-	}, []);
+	useEffect(() => observer.dispatch(ObserverType.Open), []);
 
 	return (
 		<ClayPortal subPortalRef={modalBodyElementRef}>
 			<div
 				className={classNames('modal-backdrop fade', {
-					show: visibleClassShow,
+					show: observer.mutation,
 				})}
 			/>
 			<div
 				{...otherProps}
 				className={classNames('fade modal d-block', className, {
-					show: visibleClassShow,
+					show: observer.mutation,
 				})}
 				ref={modalBodyElementRef}
 			>
@@ -102,10 +74,15 @@ const ClayModal: FunctionComponent<IProps> & {
 					tabIndex={-1}
 				>
 					<div className="modal-content">
-						<Context.Provider value={context}>
-							{children && typeof children === 'function'
-								? children(handleCloseModal)
-								: children}
+						<Context.Provider
+							value={{
+								onClose: () =>
+									observer.dispatch(ObserverType.Close),
+								spritemap,
+								status,
+							}}
+						>
+							{children}
 						</Context.Provider>
 					</div>
 				</div>

@@ -6,8 +6,8 @@
  */
 
 import Button from '@clayui/button';
-import ClayModal from '..';
-import React, {useState} from 'react';
+import ClayModal, {ClayModalProvider, Context, useModal} from '..';
+import React, {useContext, useEffect, useState} from 'react';
 import ReactDOM from 'react-dom';
 import {cleanup, fireEvent, render} from '@testing-library/react';
 
@@ -24,15 +24,12 @@ const ModalWithState: React.FunctionComponent<IProps> = ({
 	...props
 }) => {
 	const [visible, setVisible] = useState(initialVisible);
+	const {observer} = useModal({onClose: () => setVisible(false)});
 
 	return (
 		<>
 			{visible && (
-				<ClayModal
-					onClose={() => setVisible(false)}
-					spritemap={spritemap}
-					{...props}
-				>
+				<ClayModal observer={observer} spritemap={spritemap} {...props}>
 					{children}
 				</ClayModal>
 			)}
@@ -160,9 +157,18 @@ describe('Modal -> IncrementalInteractions', () => {
 	});
 
 	it('close the modal when click on the button of Footer component', () => {
-		const {getByLabelText} = render(
-			<ModalWithState initialVisible>
-				{(onClose: any) => (
+		const ModalState = () => {
+			const [visible, setVisible] = useState(true);
+			const {observer, onClose} = useModal({
+				onClose: () => setVisible(false),
+			});
+
+			if (!visible) {
+				return null;
+			}
+
+			return (
+				<ClayModal observer={observer} spritemap={spritemap}>
 					<ClayModal.Footer
 						last={
 							<Button aria-label="buttonFooter" onClick={onClose}>
@@ -170,9 +176,10 @@ describe('Modal -> IncrementalInteractions', () => {
 							</Button>
 						}
 					/>
-				)}
-			</ModalWithState>
-		);
+				</ClayModal>
+			);
+		};
+		const {getByLabelText} = render(<ModalState />);
 
 		jest.runAllTimers();
 
