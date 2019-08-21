@@ -27,6 +27,8 @@ $clay-time-form-control-inset: map-merge((
 	margin-top: 0,
 	text-align: center,
 	width: 1.25rem,
+	selection-bg: transparent,
+	focus-bg: #B3D8FD,
 ), $clay-time-form-control-inset);
 
 $clay-time-ampm: () !default;
