@@ -5,8 +5,8 @@
  */
 
 import ClayDropDown, {Align} from './DropDown';
-import {ClayDropDownWithBasicItems} from './DropDownWithBasicItems';
+import {ClayDropDownWithItems} from './DropDownWithItems';
 
-export {Align, ClayDropDownWithBasicItems};
+export {Align, ClayDropDownWithItems};
 
 export default ClayDropDown;

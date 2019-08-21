@@ -9,7 +9,7 @@ import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
 import ClayPagination from './index';
 import React, {useState} from 'react';
-import {ClayDropDownWithBasicItems} from '@clayui/drop-down';
+import {ClayDropDownWithItems} from '@clayui/drop-down';
 import {noop, sub} from '@clayui/shared';
 
 const defaultDeltas = [
@@ -27,7 +27,7 @@ const defaultDeltas = [
 	},
 ];
 
-type Items = React.ComponentProps<typeof ClayDropDownWithBasicItems>['items'];
+type Items = React.ComponentProps<typeof ClayDropDownWithItems>['items'];
 
 interface IDelta {
 	/**
@@ -167,7 +167,7 @@ export const ClayPaginationWithBar: React.FunctionComponent<IProps> = ({
 			})}
 			{...otherProps}
 		>
-			<ClayDropDownWithBasicItems
+			<ClayDropDownWithItems
 				className="pagination-items-per-page"
 				items={items}
 				trigger={

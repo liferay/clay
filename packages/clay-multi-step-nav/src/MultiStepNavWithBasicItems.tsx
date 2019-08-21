@@ -6,7 +6,7 @@
 
 import ClayMultiStepNav from './MultiStepNav';
 import React from 'react';
-import {ClayDropDownWithBasicItems} from '@clayui/drop-down';
+import {ClayDropDownWithItems} from '@clayui/drop-down';
 
 interface ISteps {
 	/**
@@ -138,7 +138,7 @@ export const ClayMultiStepNavWithBasicItems: React.FunctionComponent<
 						</ClayMultiStepNav.Title>
 						<ClayMultiStepNav.Divider />
 
-						<ClayDropDownWithBasicItems
+						<ClayDropDownWithItems
 							items={dropdownItems}
 							spritemap={spritemap}
 							trigger={<IndicatorWithInnerRef />}

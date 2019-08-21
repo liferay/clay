@@ -10,13 +10,13 @@ import ClayLabel from '@clayui/label';
 import ClaySticker, {DisplayType as StickerDisplayType} from '@clayui/sticker';
 import React from 'react';
 import {ClayCheckbox} from '@clayui/form';
-import {ClayDropDownWithBasicItems} from '@clayui/drop-down';
+import {ClayDropDownWithItems} from '@clayui/drop-down';
 
 interface IProps {
 	/**
 	 * List of actions in the dropdown menu
 	 */
-	actions?: React.ComponentProps<typeof ClayDropDownWithBasicItems>['items'];
+	actions?: React.ComponentProps<typeof ClayDropDownWithItems>['items'];
 
 	/**
 	 * Value of the description of the user
@@ -137,7 +137,7 @@ export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 
 				{actions && (
 					<div className="autofit-col">
-						<ClayDropDownWithBasicItems
+						<ClayDropDownWithItems
 							items={actions}
 							spritemap={spritemap}
 							trigger={

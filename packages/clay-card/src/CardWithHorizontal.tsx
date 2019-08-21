@@ -9,10 +9,10 @@ import ClayIcon from '@clayui/icon';
 import ClaySticker from '@clayui/sticker';
 import React from 'react';
 import {ClayCheckbox} from '@clayui/form';
-import {ClayDropDownWithBasicItems} from '@clayui/drop-down';
+import {ClayDropDownWithItems} from '@clayui/drop-down';
 
 interface IProps {
-	actions?: React.ComponentProps<typeof ClayDropDownWithBasicItems>['items'];
+	actions?: React.ComponentProps<typeof ClayDropDownWithItems>['items'];
 	/**
 	 * Path or URL to item
 	 */
@@ -69,7 +69,7 @@ export const ClayCardWithHorizontal: React.FunctionComponent<IProps> = ({
 
 			{actions && (
 				<div className="autofit-col">
-					<ClayDropDownWithBasicItems
+					<ClayDropDownWithItems
 						items={actions}
 						spritemap={spritemap}
 						trigger={
