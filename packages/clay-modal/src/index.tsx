@@ -5,5 +5,8 @@
  */
 
 import ClayModal from './Modal';
+import ClayModalProvider, {Context} from './Provider';
+import {useModal} from './useModal';
 
+export {ClayModalProvider, useModal, Context};
 export default ClayModal;

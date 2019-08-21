@@ -1,4 +1,5 @@
 /*eslint no-console: 0 */
+/* eslint-disable no-sparse-arrays */
 /**
  * © 2019 Liferay, Inc. <https://liferay.com>
  *
@@ -198,5 +199,125 @@ describe('Modal -> IncrementalInteractions', () => {
 		expect(document.body.classList).not.toContain('modal-open');
 		expect(document.querySelector(backdropElSelector)).toBeNull();
 		expect(document.querySelector(modalElSelector)).toBeNull();
+	});
+});
+
+describe('ModalProvider -> IncrementalInteractions', () => {
+	afterEach(() => {
+		jest.clearAllTimers();
+
+		cleanup();
+	});
+
+	beforeAll(() => {
+		jest.useFakeTimers();
+
+		// @ts-ignore
+		ReactDOM.createPortal = jest.fn(element => {
+			return element;
+		});
+	});
+
+	afterAll(() => {
+		jest.useRealTimers();
+	});
+
+	it('renders a modal when dispatching Open by provider', () => {
+		const ModalWithProvider = () => {
+			const [state, dispatch] = useContext(Context);
+
+			return (
+				<Button
+					data-testid="button"
+					displayType="primary"
+					onClick={() =>
+						dispatch({
+							payload: {
+								body: <h1>{'Hello world!'}</h1>,
+								footer: [
+									,
+									,
+									<Button key={3} onClick={state.onClose}>
+										{'Primary'}
+									</Button>,
+								],
+								header: 'Title',
+								size: 'lg',
+							},
+							type: 1,
+						})
+					}
+				>
+					{'Open modal'}
+				</Button>
+			);
+		};
+
+		const {getByTestId} = render(
+			<ClayModalProvider spritemap={spritemap}>
+				<ModalWithProvider />
+			</ClayModalProvider>
+		);
+
+		const button = getByTestId('button');
+
+		fireEvent.click(button, {});
+
+		expect(document.body).toMatchSnapshot();
+	});
+
+	it('renders a modal closed when dispatching Close by provider', () => {
+		const ModalWithProvider = () => {
+			const [state, dispatch] = useContext(Context);
+
+			useEffect(() => {
+				dispatch({
+					payload: {
+						body: <h1>{'Hello world!'}</h1>,
+						footer: [
+							,
+							,
+							<Button key={3} onClick={state.onClose}>
+								{'Primary'}
+							</Button>,
+						],
+						header: 'Title',
+						size: 'lg',
+					},
+					type: 1,
+				});
+			}, []);
+
+			return (
+				<Button
+					data-testid="button"
+					displayType="primary"
+					onClick={() => dispatch({type: 0})}
+				>
+					{'Open modal'}
+				</Button>
+			);
+		};
+
+		const {getByTestId} = render(
+			<ClayModalProvider spritemap={spritemap}>
+				<ModalWithProvider />
+			</ClayModalProvider>
+		);
+
+		const button = getByTestId('button');
+
+		const backdropElSelector = '.modal-backdrop.fade.show';
+		const modalElSelector = '.fade.modal.d-block.show';
+
+		const backdropEl = document.querySelector(backdropElSelector);
+		const modalEl = document.querySelector(modalElSelector);
+
+		expect(backdropEl).toBeDefined();
+		expect(modalEl).toBeDefined();
+
+		fireEvent.click(button, {});
+
+		expect(document.body).toMatchSnapshot();
 	});
 });
