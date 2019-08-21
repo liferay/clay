@@ -26,7 +26,9 @@
 		"react"
 	],
 	"dependencies": {
-		"classnames": "^2.2.6"
+		"classnames": "^2.2.6",
+		"@clayui/button": "^3.0.0-milestone.2",
+		"@clayui/link": "^3.0.0-milestone.2"
 	},
 	"peerDependencies": {
 		"react": "^16.8.1",
