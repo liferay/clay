@@ -7,13 +7,7 @@
 import ClayIcon from '@clayui/icon';
 import ClayTable, {IProps} from './index';
 import React from 'react';
-import {ClayDropDownWithBasicItems} from '@clayui/drop-down';
-
-interface IDropdownItem {
-	label: string;
-
-	onClick?: (event: React.SyntheticEvent) => void;
-}
+import {ClayDropDownWithItems} from '@clayui/drop-down';
 
 interface IQuickActions {
 	href: string;
@@ -34,7 +28,9 @@ interface IColumnItem {
 interface IRowItem {
 	cellProps?: Object;
 
-	dropdownActions: Array<IDropdownItem>;
+	dropdownActions: React.ComponentProps<
+		typeof ClayDropDownWithItems
+	>['items'];
 
 	quickActions: Array<IQuickActions>;
 
@@ -115,7 +111,7 @@ export const ClayTableWithQuickActions: React.FunctionComponent<
 									</div>
 								)}
 								{row.dropdownActions && (
-									<ClayDropDownWithBasicItems
+									<ClayDropDownWithItems
 										items={row.dropdownActions}
 										spritemap={spritemap}
 										trigger={
