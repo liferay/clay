@@ -10,6 +10,8 @@ import React, {useEffect, useState} from 'react';
 import {FocusScope, useFocusManagement} from '@clayui/shared';
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
+	containerRenderer?: React.ForwardRefExoticComponent<any>;
+
 	/**
 	 * Flag to indicate is loading indicator should be shown.
 	 */
@@ -33,7 +35,7 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	/**
 	 * Callback for when input value changes
 	 */
-	onItemSelect: (val: string | Object) => string | Object;
+	onItemSelect: (val: string | Object) => void;
 
 	/**
 	 * Callback for when input value changes
@@ -49,6 +51,7 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 const ENTER_KEY_CODE = 13;
 
 export const ClayInputWithAutocomplete: React.FunctionComponent<IProps> = ({
+	containerRenderer,
 	items = [],
 	itemSelector = val => val as string,
 	loading,
@@ -77,7 +80,7 @@ export const ClayInputWithAutocomplete: React.FunctionComponent<IProps> = ({
 
 	return (
 		<FocusScope focusManager={focusManager}>
-			<ClayAutocomplete>
+			<ClayAutocomplete component={containerRenderer}>
 				<ClayAutocomplete.Input
 					{...otherProps}
 					onChange={e => onValueChange(e.target.value)}
