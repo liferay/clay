@@ -114,6 +114,15 @@
 	padding-top: $nav-form-padding-top;
 }
 
+// Nav Justified
+
+.nav-justified {
+	button.nav-link {
+		text-align: center;
+		width: 100%;
+	}
+}
+
 // Nav Stacked
 
 .nav-stacked {
