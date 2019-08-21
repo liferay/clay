@@ -1,0 +1,476 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayDropDownWithItems renders a DropDownWithItems 1`] = `
+<body>
+  <div>
+    <div
+      class="dropdown"
+    >
+      <button
+        class="dropdown-toggle btn btn-primary"
+        type="button"
+      >
+        Click Me
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      class="dropdown-menu"
+      style="top: 0px; left: 0px;"
+    >
+      <ul
+        class="list-unstyled"
+      >
+        <li
+          tabindex="-1"
+        >
+          <button
+            class="dropdown-item"
+            label="clickable"
+          >
+            clickable
+          </button>
+        </li>
+        <li
+          aria-hidden="true"
+          class="dropdown-divider"
+          role="presentation"
+        />
+        <li
+          tabindex="-1"
+        >
+          <a
+            class="dropdown-item"
+            href="#"
+            label="linkable"
+          >
+            linkable
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`ClayDropDownWithItems renders a DropDownWithItems with caption 1`] = `
+<body>
+  <div>
+    <div
+      class="dropdown"
+    >
+      <button
+        class="dropdown-toggle btn btn-primary"
+        type="button"
+      >
+        Click Me
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      class="dropdown-menu"
+      style="top: 0px; left: 0px;"
+    >
+      <ul
+        class="list-unstyled"
+      >
+        <li
+          tabindex="-1"
+        >
+          <a
+            class="dropdown-item"
+            href="#"
+            label="linkable"
+          >
+            linkable
+          </a>
+        </li>
+      </ul>
+      <div
+        class="dropdown-caption"
+      >
+        Showing 7 of 203 Structures
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`ClayDropDownWithItems renders a DropDownWithItems with checkbox 1`] = `
+<body>
+  <div>
+    <div
+      class="dropdown"
+    >
+      <button
+        class="dropdown-toggle btn btn-primary"
+        type="button"
+      >
+        Click Me
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      class="dropdown-menu"
+      style="top: 0px; left: 0px;"
+    >
+      <ul
+        class="list-unstyled"
+      >
+        <li
+          class="dropdown-subheader"
+          role="presentation"
+        >
+          checkbox
+        </li>
+        <ul
+          class="list-unstyled"
+        >
+          <li
+            tabindex="-1"
+          >
+            <span
+              class="dropdown-item"
+            >
+              <div
+                class="custom-control custom-checkbox"
+              >
+                <label>
+                  <input
+                    checked=""
+                    class="custom-control-input"
+                    spritemap="icons.svg"
+                    type="checkbox"
+                    value="true"
+                  />
+                  <span
+                    class="custom-control-label"
+                  >
+                    <span
+                      class="custom-control-label-text"
+                    >
+                      checkbox
+                    </span>
+                  </span>
+                </label>
+              </div>
+            </span>
+          </li>
+          <li
+            tabindex="-1"
+          >
+            <span
+              class="dropdown-item"
+            >
+              <div
+                class="custom-control custom-checkbox"
+              >
+                <label>
+                  <input
+                    class="custom-control-input"
+                    spritemap="icons.svg"
+                    type="checkbox"
+                    value="false"
+                  />
+                  <span
+                    class="custom-control-label"
+                  >
+                    <span
+                      class="custom-control-label-text"
+                    >
+                      checkbox 1
+                    </span>
+                  </span>
+                </label>
+              </div>
+            </span>
+          </li>
+        </ul>
+      </ul>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`ClayDropDownWithItems renders a DropDownWithItems with footer content 1`] = `
+<body>
+  <div>
+    <div
+      class="dropdown"
+    >
+      <button
+        class="dropdown-toggle btn btn-primary"
+        type="button"
+      >
+        Click Me
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      class="dropdown-menu"
+      style="top: 0px; left: 0px;"
+    >
+      <form>
+        <div
+          class="inline-scroller"
+        >
+          <ul
+            class="list-unstyled"
+          >
+            <li
+              tabindex="-1"
+            >
+              <a
+                class="dropdown-item"
+                href="#"
+                label="linkable"
+              >
+                linkable
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="dropdown-section"
+        >
+          <button
+            class="btn btn-primary"
+            type="button"
+          >
+            Done
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`ClayDropDownWithItems renders a DropDownWithItems with help text 1`] = `
+<body>
+  <div>
+    <div
+      class="dropdown"
+    >
+      <button
+        class="dropdown-toggle btn btn-primary"
+        type="button"
+      >
+        Click Me
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      class="dropdown-menu"
+      style="top: 0px; left: 0px;"
+    >
+      <div
+        class="alert alert-fluid alert-info"
+        role="alert"
+      >
+        Help Text
+      </div>
+      <ul
+        class="list-unstyled"
+      >
+        <li
+          tabindex="-1"
+        >
+          <a
+            class="dropdown-item"
+            href="#"
+            label="linkable"
+          >
+            linkable
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`ClayDropDownWithItems renders a DropDownWithItems with radio group 1`] = `
+<body>
+  <div>
+    <div
+      class="dropdown"
+    >
+      <button
+        class="dropdown-toggle btn btn-primary"
+        type="button"
+      >
+        Click Me
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      class="dropdown-menu"
+      style="top: 0px; left: 0px;"
+    >
+      <ul
+        class="list-unstyled"
+      >
+        <li
+          class="dropdown-subheader"
+          role="presentation"
+        >
+          radio
+        </li>
+        <li
+          aria-label="radio"
+          role="radiogroup"
+        >
+          <ul
+            class="list-unstyled"
+          >
+            <li
+              tabindex="-1"
+            >
+              <span
+                class="dropdown-item"
+              >
+                <div
+                  class="custom-control custom-radio custom-control-inline"
+                >
+                  <label>
+                    <input
+                      class="custom-control-input"
+                      name="radio"
+                      role="radio"
+                      spritemap="icons.svg"
+                      type="radio"
+                      value="one"
+                    />
+                    <span
+                      class="custom-control-label"
+                    >
+                      <span
+                        class="custom-control-label-text"
+                      >
+                        one
+                      </span>
+                    </span>
+                  </label>
+                </div>
+              </span>
+            </li>
+            <li
+              tabindex="-1"
+            >
+              <span
+                class="dropdown-item"
+              >
+                <div
+                  class="custom-control custom-radio custom-control-inline"
+                >
+                  <label>
+                    <input
+                      class="custom-control-input"
+                      name="radio"
+                      role="radio"
+                      spritemap="icons.svg"
+                      type="radio"
+                      value="two"
+                    />
+                    <span
+                      class="custom-control-label"
+                    >
+                      <span
+                        class="custom-control-label-text"
+                      >
+                        two
+                      </span>
+                    </span>
+                  </label>
+                </div>
+              </span>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`ClayDropDownWithItems renders a DropDownWithItems with search 1`] = `
+<body>
+  <div>
+    <div
+      class="dropdown"
+    >
+      <button
+        class="dropdown-toggle btn btn-primary"
+        type="button"
+      >
+        Click Me
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      class="dropdown-menu"
+      style="top: 0px; left: 0px;"
+    >
+      <form>
+        <div
+          class="dropdown-section"
+        >
+          <div
+            class="input-group input-group-sm"
+          >
+            <div
+              class="input-group-item"
+            >
+              <input
+                class="form-control input-group-inset input-group-inset-after"
+                type="text"
+                value="Search"
+              />
+              <span
+                class="input-group-inset-item input-group-inset-item-after"
+              >
+                <button
+                  class="btn btn-unstyled"
+                  type="button"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-search"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="icons.svg#search"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </form>
+      <ul
+        class="list-unstyled"
+      >
+        <li
+          tabindex="-1"
+        >
+          <a
+            class="dropdown-item"
+            href="#"
+            label="linkable"
+          >
+            linkable
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+`;

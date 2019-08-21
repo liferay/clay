@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayDropDown, {ClayDropDownWithBasicItems} from '..';
+import ClayDropDown, {ClayDropDownWithItems} from '..';
 import React, {useState} from 'react';
 import {cleanup, fireEvent, render} from '@testing-library/react';
 
@@ -239,7 +239,7 @@ describe('ClayDropDown', () => {
 		const onClickFn = jest.fn();
 
 		const {container} = render(
-			<ClayDropDownWithBasicItems
+			<ClayDropDownWithItems
 				items={[
 					{
 						label: 'clickable',

@@ -5,10 +5,10 @@
  */
 import '@clayui/css/lib/css/atlas.css';
 import ClayButton from '@clayui/button';
-import ClayDropDown, {Align, ClayDropDownWithBasicItems} from '../src';
+import ClayDropDown, {Align, ClayDropDownWithItems} from '../src';
 import React, {useState} from 'react';
+import {boolean, select} from '@storybook/addon-knobs';
 import {ClayCheckbox, ClayRadio} from '@clayui/form';
-import {select} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
@@ -156,42 +156,79 @@ storiesOf('ClayDropDown', module)
 			</ClayDropDown.ItemList>
 		</DropDownWithState>
 	))
-	.add('ClayDropDownWithBasicItems', () => (
-		<ClayDropDownWithBasicItems
-			items={[
-				{
-					label: 'clickable',
-					onClick: () => {
-						alert('you clicked!');
+	.add('w/ ClayDropDownWithItems', () => {
+		const [value, setValue] = useState();
+		const items = [
+			{
+				label: 'clickable',
+				onClick: () => {
+					alert('you clicked!');
+				},
+			},
+			{
+				type: 'divider' as const,
+			},
+			{
+				items: [
+					{
+						label: 'one',
+						type: 'radio' as const,
+						value: 'one',
 					},
-				},
-				{type: 'divider'},
-				{
-					href: '#',
-					label: 'linkable',
-				},
-			]}
-			trigger={<ClayButton>{'Click Me'}</ClayButton>}
-		/>
-	))
-	.add('ClayDropDownWithBasicItems w/ icons', () => (
-		<ClayDropDownWithBasicItems
-			items={[
-				{
-					label: 'clickable',
-					onClick: () => {
-						alert('you clicked!');
+					{
+						label: 'two',
+						type: 'radio' as const,
+						value: 'two',
 					},
-					symbolLeft: 'trash',
-				},
-				{type: 'divider'},
-				{
-					href: '#',
-					label: 'linkable',
-					symbolRight: 'pencil',
-				},
-			]}
-			spritemap={spritemap}
-			trigger={<ClayButton>{'Click Me'}</ClayButton>}
-		/>
-	));
+				],
+				label: 'radio',
+				name: 'radio',
+				onChange: (value: string) =>
+					alert(`New Radio checked ${value}`),
+				type: 'radiogroup' as const,
+			},
+			{
+				items: [
+					{
+						checked: true,
+						label: 'checkbox',
+						onChange: () => alert('checkbox changed'),
+						type: 'checkbox' as const,
+					},
+					{
+						checked: true,
+						label: 'checkbox 1',
+						onChange: () => alert('checkbox changed'),
+						type: 'checkbox' as const,
+					},
+				],
+				label: 'checkbox',
+				type: 'group' as const,
+			},
+			{
+				href: '#',
+				label: 'linkable',
+			},
+		];
+
+		return (
+			<ClayDropDownWithItems
+				caption="Showing 7 of 203 Structures"
+				footerContent={
+					<>
+						<ClayButton displayType="secondary">
+							{'Cancel'}
+						</ClayButton>
+						<ClayButton>{'Done'}</ClayButton>
+					</>
+				}
+				helpText="You can customize this menu or see all you have by pressing 'more'."
+				items={items}
+				onSearchValueChange={setValue}
+				searchValue={value}
+				searchable={boolean('Searchable', true)}
+				spritemap={spritemap}
+				trigger={<ClayButton>{'Click Me'}</ClayButton>}
+			/>
+		);
+	});

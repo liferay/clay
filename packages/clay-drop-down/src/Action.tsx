@@ -13,7 +13,9 @@ const ClayDropDownAction: React.FunctionComponent<
 > = ({children, className, ...otherProps}) => {
 	return (
 		<div className={classNames('dropdown-section', className)}>
-			<ClayButton {...otherProps}>{children}</ClayButton>
+			<ClayButton block {...otherProps}>
+				{children}
+			</ClayButton>
 		</div>
 	);
 };

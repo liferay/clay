@@ -13,7 +13,7 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	/**
 	 * Callback for when input value changes.
 	 */
-	onChange: (event: React.FormEvent<HTMLInputElement>) => void;
+	onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 
 	/**
 	 * Path to the location of the spritemap resource.
