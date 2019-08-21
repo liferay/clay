@@ -5,7 +5,7 @@
  */
 import ClayButton from '@clayui/button';
 import React from 'react';
-import {ClayDropDownWithBasicItems} from '@clayui/drop-down';
+import {ClayDropDownWithItems} from '@clayui/drop-down';
 
 export interface IPaginationEllipsisProps {
 	items?: Array<number>;
@@ -25,7 +25,7 @@ const ClayPaginationEllipsis: React.FunctionComponent<
 	}));
 
 	return (
-		<ClayDropDownWithBasicItems
+		<ClayDropDownWithItems
 			className="page-item"
 			containerElement="li"
 			items={pages}
