@@ -608,6 +608,9 @@ storiesOf('ClayTable', module)
 		const columns = [
 			{
 				dataIndex: 'author',
+				render: (title: string) => (
+					<p className="table-list-title">{title}</p>
+				),
 				title: 'Author',
 			},
 			{
@@ -665,6 +668,13 @@ storiesOf('ClayTable', module)
 						symbol: 'expand',
 					},
 				],
+				render: (values: any) => {
+					return values.map((value: any, index: number) => (
+						<ClayTable.Cell className="bg-light" key={index}>
+							{value}
+						</ClayTable.Cell>
+					))
+				},
 				title: 'Estrela da Manhã',
 			},
 			{
@@ -753,6 +763,13 @@ storiesOf('ClayTable', module)
 						symbol: 'expand',
 					},
 				],
+				render: (values: any) => {
+					return values.map((value: any, index: number) => (
+						<ClayTable.Cell className="bg-light" key={index}>
+							{value}
+						</ClayTable.Cell>
+					))
+				},
 				title: 'Morte e Vida Severina',
 			},
 		];
