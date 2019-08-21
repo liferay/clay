@@ -25,12 +25,20 @@ exports[`ClayTable renders a Cell delimited 1`] = `
           class=""
         >
           <th
-            class="table-cell-start"
+            class="table-cell-expand table-cell-start"
           >
-            Start
+            <span
+              class="text-truncate-inline"
+            >
+              <span
+                class="text-truncate"
+              >
+                Start
+              </span>
+            </span>
           </th>
           <th
-            class=""
+            class="table-cell-expand"
           >
             <button
               type="button"
@@ -39,7 +47,7 @@ exports[`ClayTable renders a Cell delimited 1`] = `
             </button>
           </th>
           <th
-            class=""
+            class="table-cell-expand"
           >
             <button
               type="button"
@@ -48,9 +56,17 @@ exports[`ClayTable renders a Cell delimited 1`] = `
             </button>
           </th>
           <th
-            class="table-cell-end"
+            class="table-cell-expand table-cell-end"
           >
-            End
+            <span
+              class="text-truncate-inline"
+            >
+              <span
+                class="text-truncate"
+              >
+                End
+              </span>
+            </span>
           </th>
         </tr>
       </thead>
@@ -72,7 +88,7 @@ exports[`ClayTable renders a Cell with text alignment set to center 1`] = `
           class=""
         >
           <th
-            class="text-center"
+            class="table-cell-expand text-center"
           >
             <a
               href="#1"
@@ -267,12 +283,20 @@ exports[`ClayTable renders a table with multiple Cells into Row 1`] = `
           class=""
         >
           <td
-            class=""
+            class="table-cell-expand"
           >
-            One
+            <span
+              class="text-truncate-inline"
+            >
+              <span
+                class="text-truncate"
+              >
+                One
+              </span>
+            </span>
           </td>
           <td
-            class=""
+            class="table-cell-expand"
           >
             <button
               type="button"
@@ -281,9 +305,17 @@ exports[`ClayTable renders a table with multiple Cells into Row 1`] = `
             </button>
           </td>
           <td
-            class=""
+            class="table-cell-expand"
           >
-            Three
+            <span
+              class="text-truncate-inline"
+            >
+              <span
+                class="text-truncate"
+              >
+                Three
+              </span>
+            </span>
           </td>
         </tr>
       </tbody>
@@ -353,10 +385,18 @@ exports[`ClayTable renders with a headingTitle 1`] = `
           class="table-divider"
         >
           <td
-            class=""
+            class="table-cell-expand"
             colspan="8"
           >
-            Recipes
+            <span
+              class="text-truncate-inline"
+            >
+              <span
+                class="text-truncate"
+              >
+                Recipes
+              </span>
+            </span>
           </td>
         </tr>
         <tr
@@ -372,17 +412,33 @@ exports[`ClayTable renders with a headingTitle 1`] = `
             </p>
           </td>
           <td
-            class=""
+            class="table-cell-expand"
           />
           <td
-            class=""
+            class="table-cell-expand"
           >
-            U.S.A
+            <span
+              class="text-truncate-inline"
+            >
+              <span
+                class="text-truncate"
+              >
+                U.S.A
+              </span>
+            </span>
           </td>
           <td
-            class="text-right"
+            class="table-cell-expand text-right"
           >
-            10 min.
+            <span
+              class="text-truncate-inline"
+            >
+              <span
+                class="text-truncate"
+              >
+                10 min.
+              </span>
+            </span>
           </td>
         </tr>
       </tbody>
