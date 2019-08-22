@@ -208,7 +208,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 					activeTabKey={activeTabKeyValue}
 					fade={boolean('Fade', true)}
 				>
-					<ClayTabs.TabPane tabkey={0}>
+					<ClayTabs.TabPane>
 						{`1. Single origin, extra id beans, eu to go, skinny
 						americano ut aftertas te sugar. At americano, viennese
 						variety iced grounds, grinder froth and pumpkin spice
@@ -218,7 +218,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 						plunger pot. Single shot variety pumpkin spice seasonal
 						skinny barista carajillo robust cream.`}
 					</ClayTabs.TabPane>
-					<ClayTabs.TabPane tabkey={1}>
+					<ClayTabs.TabPane>
 						{`2. Single origin, extra id beans, eu to go, skinny
 						americano ut aftertaste sugar. At americano, viennese
 						variety iced grounds, grinder froth and pumpkin spice
@@ -228,7 +228,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 						plunger pot. Single shot variety pumpkin spice seasonal
 						skinny barista carajillo robust cream.`}
 					</ClayTabs.TabPane>
-					<ClayTabs.TabPane tabkey={2}>
+					<ClayTabs.TabPane>
 						{`3. Single origin, extra id beans, eu to go, skinny
 						americano ut aftertaste sugar. At americano, viennese
 						variety iced grounds, grinder froth and pumpkin spice
@@ -238,7 +238,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 						plunger pot. Single shot variety pumpkin spice seasonal
 						skinny barista carajillo robust cream.`}
 					</ClayTabs.TabPane>
-					<ClayTabs.TabPane tabkey={3}>
+					<ClayTabs.TabPane>
 						{`4. Single origin, extra id beans, eu to go, skinny
 						americano ut aftertaste sugar. At americano, viennese
 						variety iced grounds, grinder froth and pumpkin spice
@@ -248,7 +248,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 						plunger pot. Single shot variety pumpkin spice seasonal
 						skinny barista carajillo robust cream.`}
 					</ClayTabs.TabPane>
-					<ClayTabs.TabPane tabkey={4}>
+					<ClayTabs.TabPane>
 						{`4. Single origin, extra id beans, eu to go, skinny
 						americano ut aftertaste sugar. At americano, viennese
 						variety iced grounds, grinder froth and pumpkin spice
@@ -258,7 +258,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 						plunger pot. Single shot variety pumpkin spice seasonal
 						skinny barista carajillo robust cream.`}
 					</ClayTabs.TabPane>
-					<ClayTabs.TabPane tabkey={5}>
+					<ClayTabs.TabPane>
 						{`6. Single origin, extra id beans, eu to go, skinny
 						americano ut aftertaste sugar. At americano, viennese
 						variety iced grounds, grinder froth and pumpkin spice
@@ -268,7 +268,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 						plunger pot. Single shot variety pumpkin spice seasonal
 						skinny barista carajillo robust cream.`}
 					</ClayTabs.TabPane>
-					<ClayTabs.TabPane tabkey={6}>
+					<ClayTabs.TabPane>
 						{`7. Single origin, extra id beans, eu to go, skinny
 						americano ut aftertaste sugar. At americano, viennese
 						variety iced grounds, grinder froth and pumpkin spice
@@ -278,7 +278,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 						plunger pot. Single shot variety pumpkin spice seasonal
 						skinny barista carajillo robust cream.`}
 					</ClayTabs.TabPane>
-					<ClayTabs.TabPane tabkey={7}>
+					<ClayTabs.TabPane>
 						{`8. Single origin, extra id beans, eu to go, skinny
 						americano ut aftertaste sugar. At americano, viennese
 						variety iced grounds, grinder froth and pumpkin spice

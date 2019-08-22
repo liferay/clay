@@ -36,7 +36,7 @@ const Content: React.FunctionComponent<IProps> = ({
 			{React.Children.map(children, (child, index) => {
 				return React.cloneElement(child, {
 					...child.props,
-					active: activeTabKey === child.props.tabkey,
+					active: activeTabKey === index,
 					fade,
 					key: index,
 				});
