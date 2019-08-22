@@ -30,7 +30,7 @@ export const ClayTabs: React.FunctionComponent<IProps> & {
 	children,
 	className,
 	justified,
-	modern = false,
+	modern = true,
 	...otherProps
 }: IProps) => {
 	return (
