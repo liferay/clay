@@ -5,7 +5,7 @@
  */
 
 import classNames from 'classnames';
-import React, {useLayoutEffect} from 'react';
+import React, {useLayoutEffect, useRef} from 'react';
 import {Align} from 'metal-position';
 import {ClayPortal} from '@clayui/shared';
 import {useDropdownCloseInteractions} from './hooks';
@@ -76,10 +76,9 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>((
 	// See https://github.com/microsoft/TypeScript/issues/30748#issuecomment-480197036
 	ref
 ) => {
-	useDropdownCloseInteractions(
-		[alignElementRef, ref as React.RefObject<HTMLDivElement>],
-		onSetActive
-	);
+	const subPortalRef = useRef<HTMLDivElement | null>(null);
+
+	useDropdownCloseInteractions([alignElementRef, subPortalRef], onSetActive);
 
 	useLayoutEffect(() => {
 		if (
@@ -96,17 +95,19 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>((
 	});
 
 	return (
-		<ClayPortal>
-			<div
-				{...otherProps}
-				className={classNames('dropdown-menu', className, {
-					'dropdown-menu-indicator-end': hasRightSymbols,
-					'dropdown-menu-indicator-start': hasLeftSymbols,
-					show: active,
-				})}
-				ref={ref}
-			>
-				{children}
+		<ClayPortal subPortalRef={subPortalRef}>
+			<div ref={subPortalRef}>
+				<div
+					{...otherProps}
+					className={classNames('dropdown-menu', className, {
+						'dropdown-menu-indicator-end': hasRightSymbols,
+						'dropdown-menu-indicator-start': hasLeftSymbols,
+						show: active,
+					})}
+					ref={ref}
+				>
+					{children}
+				</div>
 			</div>
 		</ClayPortal>
 	);
