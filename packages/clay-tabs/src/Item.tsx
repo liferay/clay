@@ -28,7 +28,6 @@ interface IProps extends Omit<React.HTMLAttributes<HTMLLIElement>, 'onClick'> {
 	/**
 	 * This value is used to be the target of the link.
 	 */
-	forwardRef?: React.Ref<any>;
 	href?: string;
 
 	/**
@@ -44,7 +43,7 @@ interface IProps extends Omit<React.HTMLAttributes<HTMLLIElement>, 'onClick'> {
 	onClick?: (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>) => void;
 }
 
-const Item: React.FunctionComponent<IProps> = React.forwardRef(
+const Item = React.forwardRef<any, IProps>(
 	(
 		{
 			active = false,
@@ -52,13 +51,12 @@ const Item: React.FunctionComponent<IProps> = React.forwardRef(
 			className,
 			component = 'button',
 			disabled = false,
-			forwardRef,
 			href,
 			innerProps = {},
 			onClick = () => {},
 			...otherProps
 		}: IProps,
-		IProps
+		ref
 	) => {
 		const ElementTag = component;
 
@@ -81,8 +79,8 @@ const Item: React.FunctionComponent<IProps> = React.forwardRef(
 					})}
 					data-testid="tabItem"
 					href={href}
-					ref={forwardRef}
 					onClick={onClick}
+					ref={ref}
 					role="tab"
 					tabIndex={disabled ? -1 : undefined}
 					type={component === 'button' ? 'button' : undefined}
@@ -94,6 +92,4 @@ const Item: React.FunctionComponent<IProps> = React.forwardRef(
 	}
 );
 
-export default React.forwardRef((props: IProps, ref?) => (
-	<Item {...props} forwardRef={ref} />
-));
+export default Item;
