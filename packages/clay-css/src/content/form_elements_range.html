@@ -14,7 +14,9 @@ section: Components
 					<div class="clay-range-input">
 						<input class="form-control-range" id="clayRange1" min="0" max="100" step="1" type="range">
 						<div class="clay-range-track"></div>
-						<div class="clay-range-progress"></div>
+						<div class="clay-range-progress">
+							<div class="clay-range-thumb"></div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -34,7 +36,9 @@ section: Components
 					<div class="clay-range-input">
 						<input class="form-control-range" disabled id="clayRangeDisabled1" min="0" max="30" step="1" type="range">
 						<div class="clay-range-track"></div>
-						<div class="clay-range-progress"></div>
+						<div class="clay-range-progress">
+							<div class="clay-range-thumb"></div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -47,7 +51,9 @@ section: Components
 							<div class="clay-range-input">
 								<input class="form-control-range" disabled id="clayRangeLabel0" min="0" max="100" step="1" type="range">
 								<div class="clay-range-track"></div>
-								<div class="clay-range-progress"></div>
+								<div class="clay-range-progress">
+									<div class="clay-range-thumb"></div>
+								</div>
 							</div>
 						</div>
 						<div class="input-group-item input-group-item-shrink">
@@ -75,7 +81,9 @@ section: Components
 					<div class="clay-range-input" data-label-min="25" data-label-max="35">
 						<input class="form-control-range" id="clayRangeReferences1" min="25" max="35" step="0.01" type="range">
 						<div class="clay-range-track"></div>
-						<div class="clay-range-progress"></div>
+						<div class="clay-range-progress">
+							<div class="clay-range-thumb"></div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -97,7 +105,9 @@ section: Components
 							<div class="clay-range-input">
 								<input class="form-control-range" id="clayRangeLabel1" min="0" max="100" step="1" type="range">
 								<div class="clay-range-track"></div>
-								<div class="clay-range-progress"></div>
+								<div class="clay-range-progress">
+									<div class="clay-range-thumb"></div>
+								</div>
 							</div>
 						</div>
 						<div class="input-group-item input-group-item-shrink">
@@ -118,7 +128,9 @@ section: Components
 							<div class="clay-range-input">
 								<input class="form-control-range" id="clayRangeLabel2" min="0" max="30" step="1" type="range">
 								<div class="clay-range-track"></div>
-								<div class="clay-range-progress"></div>
+								<div class="clay-range-progress">
+									<div class="clay-range-thumb"></div>
+								</div>
 							</div>
 						</div>
 						<div class="input-group-item input-group-item-shrink">
@@ -138,7 +150,9 @@ section: Components
 							<div class="clay-range-input" data-label-min="0" data-label-max="30">
 								<input class="form-control-range" id="clayRangeLabel3" min="0" max="30" step="1" type="range">
 								<div class="clay-range-track"></div>
-								<div class="clay-range-progress"></div>
+								<div class="clay-range-progress">
+									<div class="clay-range-thumb"></div>
+								</div>
 							</div>
 						</div>
 						<div class="input-group-item input-group-item-shrink">
@@ -161,7 +175,9 @@ section: Components
 							<div class="clay-range-input" data-label-min="0" data-label-max="30">
 								<input class="form-control-range" id="clayRangeLabel4" min="0" max="30" step="1" type="range">
 								<div class="clay-range-track"></div>
-								<div class="clay-range-progress"></div>
+								<div class="clay-range-progress">
+									<div class="clay-range-thumb"></div>
+								</div>
 							</div>
 						</div>
 						<div class="input-group-item input-group-item-shrink">
@@ -189,10 +205,12 @@ section: Components
 						<input class="form-control-range" id="clayRangeTooltipTop1" min="0" max="100" step="1" type="range">
 						<div class="clay-range-track"></div>
 						<div class="clay-range-progress">
-							<div class="tooltip clay-tooltip-top" role="tooltip">
-								<div class="tooltip-arrow"></div>
-								<div class="tooltip-inner">
-									<div class="clay-range-value"></div>
+							<div class="clay-range-thumb">
+								<div class="tooltip clay-tooltip-top" role="tooltip">
+									<div class="tooltip-arrow"></div>
+									<div class="tooltip-inner">
+										<div class="clay-range-value"></div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -207,10 +225,12 @@ section: Components
 						<input class="form-control-range" id="clayRangeTooltipBottom1" min="0" max="100" step="1" type="range">
 						<div class="clay-range-track"></div>
 						<div class="clay-range-progress">
-							<div class="tooltip clay-tooltip-bottom" role="tooltip">
-								<div class="tooltip-arrow"></div>
-								<div class="tooltip-inner">
-									<div class="clay-range-value"></div>
+							<div class="clay-range-thumb">
+								<div class="tooltip clay-tooltip-bottom" role="tooltip">
+									<div class="tooltip-arrow"></div>
+									<div class="tooltip-inner">
+										<div class="clay-range-value"></div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -228,8 +248,7 @@ function calcProgressWidth(el) {
 	var max = el.attr('max');
 	var step = el.attr('step');
 
-	var thumbWidth = 24;
-
+	var thumbWidth = parseInt(el.find('~ .clay-range-progress .clay-range-thumb').css('width'));
 	var rangeWidth = parseInt(el.css('width'));
 
 	var currentStep = (el.val() - min) / step;
