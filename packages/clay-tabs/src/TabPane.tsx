@@ -47,6 +47,7 @@ const TabPane: React.FunctionComponent<ITabPaneProps> = ({
 
 	return (
 		<div
+			{...otherProps}
 			className={classNames(
 				'tab-pane',
 				{
@@ -57,7 +58,6 @@ const TabPane: React.FunctionComponent<ITabPaneProps> = ({
 				className
 			)}
 			role="tabpanel"
-			{...otherProps}
 		>
 			{children}
 		</div>

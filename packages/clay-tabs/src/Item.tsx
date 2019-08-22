@@ -6,19 +6,13 @@
 
 import classNames from 'classnames';
 import React from 'react';
-
-export type ElementType = 'a' | 'button';
+import {LinkOrButton} from '@clayui/shared';
 
 interface IProps extends Omit<React.HTMLAttributes<HTMLLIElement>, 'onClick'> {
 	/**
 	 * Flag to indicate if the component is active or not.
 	 */
 	active?: boolean;
-
-	/**
-	 * Tab Item component to render. Can be an 'anchor' or a 'button'.
-	 */
-	component?: ElementType;
 
 	/**
 	 * Flag to indicate if the TabPane is disabled.
@@ -38,12 +32,7 @@ interface IProps extends Omit<React.HTMLAttributes<HTMLLIElement>, 'onClick'> {
 	/**
 	 * Callback to be used when clicking to a Tab Item.
 	 */
-	onClick?: (
-		event: React.MouseEvent<
-			HTMLButtonElement | HTMLAnchorElement,
-			MouseEvent
-		>
-	) => void;
+	onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
 const Item = React.forwardRef<any, IProps>(
@@ -52,41 +41,36 @@ const Item = React.forwardRef<any, IProps>(
 			active = false,
 			children,
 			className,
-			component = 'button',
 			disabled = false,
 			href,
 			innerProps = {},
-			onClick = () => {},
+			onClick,
 			...otherProps
 		}: IProps,
 		ref
-	) => {
-		const ElementTag = component;
-
-		return (
-			<li className={classNames('nav-item', className)} {...otherProps}>
-				<ElementTag
-					{...innerProps}
-					aria-disabled={!active}
-					aria-selected={active}
-					className={classNames('nav-link', {
-						active,
-						'btn btn-unstyled': component === 'button',
-						disabled,
-					})}
-					data-testid="tabItem"
-					href={href}
-					onClick={onClick}
-					ref={ref}
-					role="tab"
-					tabIndex={disabled ? -1 : undefined}
-					type={component === 'button' ? 'button' : undefined}
-				>
-					{children}
-				</ElementTag>
-			</li>
-		);
-	}
+	) => (
+		<li {...otherProps} className={classNames('nav-item', className)}>
+			<LinkOrButton
+				{...innerProps}
+				aria-disabled={!active}
+				aria-selected={active}
+				buttonDisplayType="unstyled"
+				buttonType="button"
+				className={classNames('nav-link', {
+					active,
+					disabled,
+				})}
+				data-testid="tabItem"
+				href={href}
+				onClick={onClick}
+				ref={ref}
+				role="tab"
+				tabIndex={disabled ? -1 : undefined}
+			>
+				{children}
+			</LinkOrButton>
+		</li>
+	)
 );
 
 export default Item;

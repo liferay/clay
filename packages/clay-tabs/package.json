@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/tabs",
-	"version": "3.0.0",
+	"version": "3.0.0-milestone.2",
 	"description": "ClayTabs component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-tabs",
@@ -20,7 +20,8 @@
 	},
 	"keywords": ["clay", "react"],
 	"dependencies": {
-		"classnames": "^2.2.6"
+		"classnames": "^2.2.6",
+		"@clayui/shared": "^3.0.0-milestone.2"
 	},
 	"devDependencies": {
 		"@clayui/css": "^3.0.0-milestone.2",

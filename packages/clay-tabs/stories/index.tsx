@@ -10,8 +10,7 @@ import ClayDropDown, {Align} from '@clayui/drop-down';
 import ClayIcon, {ClayIconSpriteContext} from '@clayui/icon';
 import ClayTabs from '../src';
 import React from 'react';
-import {boolean, select} from '@storybook/addon-knobs';
-import {ElementType} from '../src/Item';
+import {boolean} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
 const DropDownWithState: React.FunctionComponent<any> = ({
@@ -33,11 +32,6 @@ const DropDownWithState: React.FunctionComponent<any> = ({
 			{children}
 		</ClayDropDown>
 	);
-};
-
-const tabElements = {
-	a: 'a',
-	button: 'button',
 };
 
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
@@ -72,13 +66,6 @@ storiesOf('ClayTabs', module).add('default', () => {
 				>
 					<ClayTabs.Item
 						active={activeTabKeyValue == 0}
-						component={
-							select(
-								'Tab Item Component',
-								tabElements,
-								'button'
-							) as ElementType
-						}
 						disabled={boolean('Disable first tab', false)}
 						href="#1"
 						onClick={() => setActiveTabKeyValue(0)}
@@ -87,13 +74,6 @@ storiesOf('ClayTabs', module).add('default', () => {
 					</ClayTabs.Item>
 					<ClayTabs.Item
 						active={activeTabKeyValue == 1}
-						component={
-							select(
-								'Tab Item Component',
-								tabElements,
-								'button'
-							) as ElementType
-						}
 						disabled={boolean('Disable second tab', true)}
 						href="#2"
 						onClick={() => setActiveTabKeyValue(1)}
@@ -102,13 +82,6 @@ storiesOf('ClayTabs', module).add('default', () => {
 					</ClayTabs.Item>
 					<ClayTabs.Item
 						active={activeTabKeyValue == 2}
-						component={
-							select(
-								'Tab Item Component',
-								tabElements,
-								'button'
-							) as ElementType
-						}
 						disabled={boolean('Disable third tab', false)}
 						href="#3"
 						onClick={() => setActiveTabKeyValue(2)}
@@ -117,13 +90,6 @@ storiesOf('ClayTabs', module).add('default', () => {
 					</ClayTabs.Item>
 					<ClayTabs.Item
 						active={activeTabKeyValue == 3}
-						component={
-							select(
-								'Tab Item Component',
-								tabElements,
-								'button'
-							) as ElementType
-						}
 						disabled={boolean('Disable fourth tab', false)}
 						href="#4"
 						onClick={() => setActiveTabKeyValue(3)}
@@ -135,13 +101,6 @@ storiesOf('ClayTabs', module).add('default', () => {
 						trigger={
 							<ClayTabs.Item
 								active={[5, 6, 7].includes(activeTabKeyValue)}
-								component={
-									select(
-										'Tab Item Component',
-										tabElements,
-										'button'
-									) as ElementType
-								}
 								disabled={boolean('Disable fourth tab', false)}
 								onClick={() => setActiveTabKeyValue(4)}
 							>
