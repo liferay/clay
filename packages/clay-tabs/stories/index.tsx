@@ -10,7 +10,7 @@ import ClayDropDown, {Align} from '@clayui/drop-down';
 import ClayTabs from '../src';
 import React from 'react';
 import {boolean, select} from '@storybook/addon-knobs';
-import {ClayIconSpriteContext} from '@clayui/icon';
+import ClayIcon, {ClayIconSpriteContext} from '@clayui/icon';
 import {ElementType} from '../src/Item';
 import {storiesOf} from '@storybook/react';
 
@@ -48,161 +48,145 @@ storiesOf('ClayTabs', module).add('default', () => {
 			number
 		>(0);
 
-		const onClickImpl = (val: number) => setActiveTabKeyValue(val);
-
 		const dropdownTabsItems = [
 			{
-				active: activeTabKeyValue == 5,
 				disabled: true,
-				href: '#6',
 				label: 'Tab 6',
-				onClick: onClickImpl,
 				tabkey: 5,
 			},
 			{
-				active: activeTabKeyValue == 6,
-				href: '#7',
 				label: 'Tab 7',
-				onClick: onClickImpl,
 				tabkey: 6,
 			},
 			{
-				active: activeTabKeyValue == 7,
-				href: '#8',
 				label: 'Tab 8',
-				onClick: onClickImpl,
 				tabkey: 7,
 			},
 		];
 
 		return (
-			<>
+			<ClayIconSpriteContext.Provider value={spritemap}>
 				<ClayTabs
-					justified={boolean('Justified', false) as false}
-					modern={boolean('Modern', true) as true}
+					justified={boolean('Justified', false)}
+					modern={boolean('Modern', true)}
 				>
-					<ClayIconSpriteContext.Provider value={spritemap}>
-						<ClayTabs.Item
-							active={activeTabKeyValue == 0}
-							component={
-								select(
-									'Tab Item Component',
-									tabElements,
-									'button'
-								) as ElementType
-							}
-							disabled={boolean('Disable first tab', false)}
-							href="#1"
-							onClick={onClickImpl}
-							tabName="Tab 1"
-							tabkey={0}
-						/>
-						<ClayTabs.Item
-							active={activeTabKeyValue == 1}
-							component={
-								select(
-									'Tab Item Component',
-									tabElements,
-									'button'
-								) as ElementType
-							}
-							disabled={boolean('Disable second tab', true)}
-							href="#2"
-							onClick={onClickImpl}
-							tabName="Tab 2"
-							tabkey={1}
-						/>
-						<ClayTabs.Item
-							active={activeTabKeyValue == 2}
-							component={
-								select(
-									'Tab Item Component',
-									tabElements,
-									'button'
-								) as ElementType
-							}
-							disabled={boolean('Disable third tab', false)}
-							href="#3"
-							onClick={onClickImpl}
-							tabName="Tab 3"
-							tabkey={2}
-						/>
-						<ClayTabs.Item
-							active={activeTabKeyValue == 3}
-							component={
-								select(
-									'Tab Item Component',
-									tabElements,
-									'button'
-								) as ElementType
-							}
-							disabled={boolean('Disable fourth tab', false)}
-							href="#4"
-							onClick={onClickImpl}
-							tabName="Tab 4"
-							tabkey={3}
-						/>
+					<ClayTabs.Item
+						active={activeTabKeyValue == 0}
+						component={
+							select(
+								'Tab Item Component',
+								tabElements,
+								'button'
+							) as ElementType
+						}
+						disabled={boolean('Disable first tab', false)}
+						href="#1"
+						onClick={() => setActiveTabKeyValue(0)}
+					>
+						{'Tab 1'}
+					</ClayTabs.Item>
+					<ClayTabs.Item
+						active={activeTabKeyValue == 1}
+						component={
+							select(
+								'Tab Item Component',
+								tabElements,
+								'button'
+							) as ElementType
+						}
+						disabled={boolean('Disable second tab', true)}
+						href="#2"
+						onClick={() => setActiveTabKeyValue(1)}
+					>
+						{'Tab 2'}
+					</ClayTabs.Item>
+					<ClayTabs.Item
+						active={activeTabKeyValue == 2}
+						component={
+							select(
+								'Tab Item Component',
+								tabElements,
+								'button'
+							) as ElementType
+						}
+						disabled={boolean('Disable third tab', false)}
+						href="#3"
+						onClick={() => setActiveTabKeyValue(2)}
+					>
+						{'Tab 3'}
+					</ClayTabs.Item>
+					<ClayTabs.Item
+						active={activeTabKeyValue == 3}
+						component={
+							select(
+								'Tab Item Component',
+								tabElements,
+								'button'
+							) as ElementType
+						}
+						disabled={boolean('Disable fourth tab', false)}
+						href="#4"
+						onClick={() => setActiveTabKeyValue(3)}
+					>
+						{'Tab 4'}
+					</ClayTabs.Item>
 
-						<DropDownWithState
-							trigger={
-								<ClayTabs.Item
-									active={[5, 6, 7].includes(
-										activeTabKeyValue
-									)}
-									component={
-										select(
-											'Tab Item Component',
-											tabElements,
-											'button'
-										) as ElementType
-									}
-									disabled={boolean(
-										'Disable fourth tab',
-										false
-									)}
-									dropdown
-									onClick={onClickImpl}
-									tabName="Tab 5"
-									tabkey={4}
-								/>
-							}
-						>
-							<ClayDropDown.ItemList>
-								{dropdownTabsItems.map(
-									(
-										{
-											disabled = false,
-											label,
-											onClick,
-											tabkey,
-										},
-										i
-									) => {
-										return (
-											<ClayDropDown.Item
-												active={
-													activeTabKeyValue === tabkey
-												}
-												disabled={disabled}
-												key={i}
-												onClick={() => {
-													onClick(tabkey);
-												}}
-												spritemap={spritemap}
-												symbolRight={
-													activeTabKeyValue === tabkey
-														? 'check'
-														: undefined
-												}
-											>
-												{label}
-											</ClayDropDown.Item>
-										);
-									}
+					<DropDownWithState
+						trigger={
+							<ClayTabs.Item
+								active={[5, 6, 7].includes(
+									activeTabKeyValue
 								)}
-							</ClayDropDown.ItemList>
-						</DropDownWithState>
-					</ClayIconSpriteContext.Provider>
+								component={
+									select(
+										'Tab Item Component',
+										tabElements,
+										'button'
+									) as ElementType
+								}
+								disabled={boolean(
+									'Disable fourth tab',
+									false
+								)}
+								onClick={() => setActiveTabKeyValue(4)}
+							>
+								{'Tab 5'}
+								<ClayIcon symbol="caret-bottom" />
+							</ClayTabs.Item>
+						}
+					>
+						<ClayDropDown.ItemList>
+							{dropdownTabsItems.map(
+								(
+									{
+										disabled = false,
+										label,
+										tabkey,
+									},
+									i
+								) => {
+									return (
+										<ClayDropDown.Item
+											active={
+												activeTabKeyValue === tabkey
+											}
+											disabled={disabled}
+											key={i}
+											onClick={() => setActiveTabKeyValue(tabkey)}
+											spritemap={spritemap}
+											symbolRight={
+												activeTabKeyValue === tabkey
+													? 'check'
+													: undefined
+											}
+										>
+											{label}
+										</ClayDropDown.Item>
+									);
+								}
+							)}
+						</ClayDropDown.ItemList>
+					</DropDownWithState>
 				</ClayTabs>
 				<ClayTabs.Content
 					activeTabKey={activeTabKeyValue}
@@ -289,7 +273,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 						skinny barista carajillo robust cream.`}
 					</ClayTabs.TabPane>
 				</ClayTabs.Content>
-			</>
+			</ClayIconSpriteContext.Provider>
 		);
 	};
 

@@ -5,7 +5,6 @@
  */
 
 import classNames from 'classnames';
-import ClayIcon from '@clayui/icon';
 import React from 'react';
 
 export type ElementType = 'a' | 'button';
@@ -27,11 +26,10 @@ interface IProps extends Omit<React.HTMLAttributes<HTMLLIElement>, 'onClick'> {
 	disabled?: boolean;
 
 	/**
-	 * Flag to indicate if the Tab Item is a dropdown.
+	 * This value is used to be the target of the link.
 	 */
-	dropdown?: boolean;
-
 	forwardRef?: React.Ref<any>;
+	href?: string;
 
 	/**
 	 * Props to be added to the item element that can be an anchor or a button.
@@ -41,46 +39,23 @@ interface IProps extends Omit<React.HTMLAttributes<HTMLLIElement>, 'onClick'> {
 	>;
 
 	/**
-	 * This value is used to be the target of the link.
-	 */
-	href?: string;
-
-	/**
-	 * Registers the `tabkey` for the Tab Item.
-	 */
-	tabkey: number;
-
-	/**
 	 * Callback to be used when clicking to a Tab Item.
 	 */
-	onClick?: (val: number) => void;
-
-	/**
-	 * The path to the SVG spritemap file containing the icons.
-	 */
-	spritemap?: string;
-
-	/**
-	 * Name of the Tab
-	 */
-	tabName: string;
+	onClick?: (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>) => void;
 }
 
 const Item: React.FunctionComponent<IProps> = React.forwardRef(
 	(
 		{
 			active = false,
-			component = 'button',
+			children,
 			className,
+			component = 'button',
 			disabled = false,
-			dropdown = false,
 			forwardRef,
 			itemElementProps = {},
 			href,
-			tabkey,
 			onClick = () => {},
-			spritemap,
-			tabName,
 			...otherProps
 		}: IProps,
 		IProps
@@ -91,15 +66,11 @@ const Item: React.FunctionComponent<IProps> = React.forwardRef(
 			<li
 				className={classNames(
 					'nav-item',
-					{
-						dropdown,
-					},
 					className
 				)}
 				{...otherProps}
 			>
 				<ElementTag
-					aria-controls={tabName.toLowerCase()}
 					aria-disabled={!active}
 					aria-selected={active}
 					className={classNames('nav-link', {
@@ -109,17 +80,14 @@ const Item: React.FunctionComponent<IProps> = React.forwardRef(
 					})}
 					data-testid={`${tabName.trim().toLowerCase()}TabItem`}
 					href={href}
-					onClick={() => onClick && onClick(tabkey)}
 					ref={forwardRef}
+					onClick={onClick}
 					role="tab"
 					tabIndex={disabled ? -1 : undefined}
 					type={component === 'button' ? 'button' : undefined}
 					{...itemElementProps}
 				>
-					{tabName}
-					{dropdown && (
-						<ClayIcon spritemap={spritemap} symbol="caret-bottom" />
-					)}
+					{children}
 				</ElementTag>
 			</li>
 		);
