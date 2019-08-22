@@ -11,7 +11,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Receives a number that indicates the `tabkey` to be rendered.
 	 */
-	activeTabKey: number;
+	activeIndex: number;
 
 	/**
 	 * Children elements received from ClayTabs.Content component.
@@ -25,7 +25,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const Content: React.FunctionComponent<IProps> = ({
-	activeTabKey = 0,
+	activeIndex = 0,
 	children,
 	className,
 	fade = false,
@@ -36,7 +36,7 @@ const Content: React.FunctionComponent<IProps> = ({
 			{React.Children.map(children, (child, index) => {
 				return React.cloneElement(child, {
 					...child.props,
-					active: activeTabKey === index,
+					active: activeIndex === index,
 					fade,
 					key: index,
 				});

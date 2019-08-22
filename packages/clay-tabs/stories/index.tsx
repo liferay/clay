@@ -138,7 +138,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 					</DropDownWithState>
 				</ClayTabs>
 				<ClayTabs.Content
-					activeTabKey={activeTabKeyValue}
+					activeIndex={activeTabKeyValue}
 					fade={boolean('Fade', true)}
 				>
 					<ClayTabs.TabPane>
