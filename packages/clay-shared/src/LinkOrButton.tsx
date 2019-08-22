@@ -16,30 +16,37 @@ interface IProps {
 	[propName: string]: any;
 }
 
-export const LinkOrButton: React.FunctionComponent<IProps> = ({
-	buttonDisplayType,
-	buttonType,
-	href,
-	linkDisplayType,
-	onClick,
-	...otherProps
-}) => {
-	if (href) {
+export const LinkOrButton = React.forwardRef<any, IProps>(
+	(
+		{
+			buttonDisplayType,
+			buttonType,
+			href,
+			linkDisplayType,
+			onClick,
+			...otherProps
+		},
+		ref
+	) => {
+		if (href) {
+			return (
+				<ClayLink
+					{...otherProps}
+					displayType={linkDisplayType}
+					href={href}
+					ref={ref}
+				/>
+			);
+		}
+
 		return (
-			<ClayLink
-				displayType={linkDisplayType}
-				href={href}
+			<ClayButton
 				{...otherProps}
+				displayType={buttonDisplayType}
+				onClick={onClick}
+				ref={ref}
+				type={buttonType}
 			/>
 		);
 	}
-
-	return (
-		<ClayButton
-			displayType={buttonDisplayType}
-			onClick={onClick}
-			type={buttonType}
-			{...otherProps}
-		/>
-	);
-};
+);
