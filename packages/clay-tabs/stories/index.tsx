@@ -7,10 +7,10 @@
 import '@clayui/css/lib/css/atlas.css';
 
 import ClayDropDown, {Align} from '@clayui/drop-down';
+import ClayIcon, {ClayIconSpriteContext} from '@clayui/icon';
 import ClayTabs from '../src';
 import React from 'react';
 import {boolean, select} from '@storybook/addon-knobs';
-import ClayIcon, {ClayIconSpriteContext} from '@clayui/icon';
 import {ElementType} from '../src/Item';
 import {storiesOf} from '@storybook/react';
 
@@ -134,9 +134,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 					<DropDownWithState
 						trigger={
 							<ClayTabs.Item
-								active={[5, 6, 7].includes(
-									activeTabKeyValue
-								)}
+								active={[5, 6, 7].includes(activeTabKeyValue)}
 								component={
 									select(
 										'Tab Item Component',
@@ -144,10 +142,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 										'button'
 									) as ElementType
 								}
-								disabled={boolean(
-									'Disable fourth tab',
-									false
-								)}
+								disabled={boolean('Disable fourth tab', false)}
 								onClick={() => setActiveTabKeyValue(4)}
 							>
 								{'Tab 5'}
@@ -157,14 +152,7 @@ storiesOf('ClayTabs', module).add('default', () => {
 					>
 						<ClayDropDown.ItemList>
 							{dropdownTabsItems.map(
-								(
-									{
-										disabled = false,
-										label,
-										tabkey,
-									},
-									i
-								) => {
+								({disabled = false, label, tabkey}, i) => {
 									return (
 										<ClayDropDown.Item
 											active={
@@ -172,7 +160,9 @@ storiesOf('ClayTabs', module).add('default', () => {
 											}
 											disabled={disabled}
 											key={i}
-											onClick={() => setActiveTabKeyValue(tabkey)}
+											onClick={() =>
+												setActiveTabKeyValue(tabkey)
+											}
 											spritemap={spritemap}
 											symbolRight={
 												activeTabKeyValue === tabkey

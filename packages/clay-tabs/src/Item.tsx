@@ -33,14 +33,17 @@ interface IProps extends Omit<React.HTMLAttributes<HTMLLIElement>, 'onClick'> {
 	/**
 	 * Props to be added to the item element that can be an anchor or a button.
 	 */
-	innerProps?: React.HTMLAttributes<
-		HTMLAnchorElement | HTMLButtonElement
-	>;
+	innerProps?: React.HTMLAttributes<HTMLAnchorElement | HTMLButtonElement>;
 
 	/**
 	 * Callback to be used when clicking to a Tab Item.
 	 */
-	onClick?: (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>) => void;
+	onClick?: (
+		event: React.MouseEvent<
+			HTMLButtonElement | HTMLAnchorElement,
+			MouseEvent
+		>
+	) => void;
 }
 
 const Item = React.forwardRef<any, IProps>(
@@ -61,13 +64,7 @@ const Item = React.forwardRef<any, IProps>(
 		const ElementTag = component;
 
 		return (
-			<li
-				className={classNames(
-					'nav-item',
-					className
-				)}
-				{...otherProps}
-			>
+			<li className={classNames('nav-item', className)} {...otherProps}>
 				<ElementTag
 					{...innerProps}
 					aria-disabled={!active}
