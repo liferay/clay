@@ -12,41 +12,37 @@ import {cleanup, fireEvent, render} from '@testing-library/react';
 const ClayTabsWithItems = () => {
 	const [activeTabKeyValue, setActiveTabKeyValue] = React.useState<number>(0);
 
-	const onClick = (val: number) => setActiveTabKeyValue(val);
-
 	return (
 		<>
 			<ClayTabs>
 				<ClayTabs.Item
 					active={activeTabKeyValue == 0}
-					onClick={onClick}
-					tabName="Dummy1"
-					tabkey={0}
-				/>
+					onClick={() => setActiveTabKeyValue(0)}
+				>
+					{'Dummy1'}
+				</ClayTabs.Item>
 				<ClayTabs.Item
 					active={activeTabKeyValue == 1}
 					data-testid="tabItem2"
-					onClick={onClick}
-					tabName="Dummy2"
-					tabkey={1}
-				/>
+					onClick={() => setActiveTabKeyValue(1)}
+				>
+					{'Dummy2'}
+				</ClayTabs.Item>
 				<ClayTabs.Item
 					active={activeTabKeyValue == 2}
-					onClick={onClick}
-					tabName="Dummy3"
-					tabkey={2}
-				/>
+					onClick={() => setActiveTabKeyValue(2)}
+				>
+					{'Dummy3'}
+				</ClayTabs.Item>
 			</ClayTabs>
 			<ClayTabs.Content activeTabKey={activeTabKeyValue}>
-				<ClayTabs.TabPane data-testid="tabPane1" tabkey={0}>
+				<ClayTabs.TabPane data-testid="tabPane1">
 					{'Tab Content 1'}
 				</ClayTabs.TabPane>
-				<ClayTabs.TabPane data-testid="tabPane2" tabkey={1}>
+				<ClayTabs.TabPane data-testid="tabPane2">
 					{'Tab Content 2'}
 				</ClayTabs.TabPane>
-				<ClayTabs.TabPane tabkey={2}>
-					{'Tab Content 3'}
-				</ClayTabs.TabPane>
+				<ClayTabs.TabPane>{'Tab Content 3'}</ClayTabs.TabPane>
 			</ClayTabs.Content>
 		</>
 	);
@@ -80,31 +76,19 @@ describe('ClayTabs', () => {
 	});
 
 	it('renders nav items as anchors', () => {
-		const {container, getByTestId} = render(
+		const {container} = render(
 			<>
 				<ClayTabs>
-					<ClayTabs.Item
-						active
-						component="a"
-						tabName="One"
-						tabkey={1}
-					/>
-					<ClayTabs.Item component="a" tabName="Two" tabkey={2} />
+					<ClayTabs.Item active component="a" />
+					{'One'}
+					<ClayTabs.Item component="a">{'Two'}</ClayTabs.Item>
 				</ClayTabs>
 				<ClayTabs.Content activeTabKey={1}>
-					<ClayTabs.TabPane tabkey={1}>
-						{'Content One'}
-					</ClayTabs.TabPane>
-					<ClayTabs.TabPane tabkey={2}>
-						{'Content Two'}
-					</ClayTabs.TabPane>
+					<ClayTabs.TabPane>{'Content One'}</ClayTabs.TabPane>
+					<ClayTabs.TabPane>{'Content Two'}</ClayTabs.TabPane>
 				</ClayTabs.Content>
 			</>
 		);
-
-		const tabItem = getByTestId('oneTabItem');
-
-		expect(tabItem.nodeName).toBe('A');
 
 		expect(container).toMatchSnapshot();
 	});
@@ -113,20 +97,14 @@ describe('ClayTabs', () => {
 		const {container} = render(
 			<>
 				<ClayTabs>
-					<ClayTabs.Item active tabName="One" tabkey={1} />
-					<ClayTabs.Item tabName="Two" tabkey={2} />
-					<ClayTabs.Item disabled tabName="Three" tabkey={3} />
+					<ClayTabs.Item active>{'One'}</ClayTabs.Item>
+					<ClayTabs.Item>{'Two'}</ClayTabs.Item>
+					<ClayTabs.Item disabled>{'Three'}</ClayTabs.Item>
 				</ClayTabs>
 				<ClayTabs.Content activeTabKey={1}>
-					<ClayTabs.TabPane tabkey={1}>
-						{'Content One'}
-					</ClayTabs.TabPane>
-					<ClayTabs.TabPane tabkey={2}>
-						{'Content Two'}
-					</ClayTabs.TabPane>
-					<ClayTabs.TabPane tabkey={3}>
-						{'Content Three'}
-					</ClayTabs.TabPane>
+					<ClayTabs.TabPane>{'Content One'}</ClayTabs.TabPane>
+					<ClayTabs.TabPane>{'Content Two'}</ClayTabs.TabPane>
+					<ClayTabs.TabPane>{'Content Three'}</ClayTabs.TabPane>
 				</ClayTabs.Content>
 			</>
 		);
@@ -137,39 +115,29 @@ describe('ClayTabs', () => {
 	it('emits a number when clicking an item', () => {
 		const onClick = jest.fn();
 
-		const {getByTestId} = render(
+		const {getAllByTestId} = render(
 			<>
 				<ClayTabs>
-					<ClayTabs.Item
-						active
-						onClick={onClick}
-						tabName="One"
-						tabkey={1}
-					/>
-					<ClayTabs.Item
-						component="a"
-						onClick={onClick}
-						tabName="Two"
-						tabkey={2}
-					/>
+					<ClayTabs.Item active onClick={onClick}>
+						{'One'}
+					</ClayTabs.Item>
+					<ClayTabs.Item component="a" onClick={onClick}>
+						{'Two'}
+					</ClayTabs.Item>
 				</ClayTabs>
 				<ClayTabs.Content activeTabKey={1}>
-					<ClayTabs.TabPane tabkey={1}>
-						{'Content One'}
-					</ClayTabs.TabPane>
-					<ClayTabs.TabPane tabkey={2}>
-						{'Content Two'}
-					</ClayTabs.TabPane>
+					<ClayTabs.TabPane>{'Content One'}</ClayTabs.TabPane>
+					<ClayTabs.TabPane>{'Content Two'}</ClayTabs.TabPane>
 				</ClayTabs.Content>
 			</>
 		);
 
-		fireEvent.click(getByTestId('oneTabItem'));
-		expect(onClick).toBeCalled();
-		expect(onClick).toBeCalledWith(1);
+		const tabItems = getAllByTestId('tabItem');
 
-		fireEvent.click(getByTestId('twoTabItem'));
+		fireEvent.click(tabItems[0]);
 		expect(onClick).toBeCalled();
-		expect(onClick).toBeCalledWith(2);
+
+		fireEvent.click(tabItems[1]);
+		expect(onClick).toBeCalled();
 	});
 });
