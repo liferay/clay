@@ -34,7 +34,7 @@ interface IProps extends Omit<React.HTMLAttributes<HTMLLIElement>, 'onClick'> {
 	/**
 	 * Props to be added to the item element that can be an anchor or a button.
 	 */
-	itemElementProps?: React.HTMLAttributes<
+	innerProps?: React.HTMLAttributes<
 		HTMLAnchorElement | HTMLButtonElement
 	>;
 
@@ -53,8 +53,8 @@ const Item: React.FunctionComponent<IProps> = React.forwardRef(
 			component = 'button',
 			disabled = false,
 			forwardRef,
-			itemElementProps = {},
 			href,
+			innerProps = {},
 			onClick = () => {},
 			...otherProps
 		}: IProps,
@@ -71,6 +71,7 @@ const Item: React.FunctionComponent<IProps> = React.forwardRef(
 				{...otherProps}
 			>
 				<ElementTag
+					{...innerProps}
 					aria-disabled={!active}
 					aria-selected={active}
 					className={classNames('nav-link', {
@@ -78,14 +79,13 @@ const Item: React.FunctionComponent<IProps> = React.forwardRef(
 						'btn btn-unstyled': component === 'button',
 						disabled,
 					})}
-					data-testid={`${tabName.trim().toLowerCase()}TabItem`}
+					data-testid="tabItem"
 					href={href}
 					ref={forwardRef}
 					onClick={onClick}
 					role="tab"
 					tabIndex={disabled ? -1 : undefined}
 					type={component === 'button' ? 'button' : undefined}
-					{...itemElementProps}
 				>
 					{children}
 				</ElementTag>
