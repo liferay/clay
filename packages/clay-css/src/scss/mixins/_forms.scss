@@ -459,7 +459,6 @@
 /// position: {String | Null},
 /// vertical-align: {String | Null},
 /// width: {Number | String | List | Null},
-/// thumb-appearance: {String | Null},
 /// thumb-bg: {Color | String | Null},
 /// thumb-bg-image: {String | List | Null},
 /// thumb-border-radius: {Number | String | List | Null},
@@ -469,7 +468,6 @@
 /// thumb-box-shadow: {String | List | Null},
 /// thumb-height: {Number | String | Null},
 /// thumb-width: {Number | String | Null},
-/// track-appearance: {String | Null},
 /// track-bg: {Color | String | Null},
 /// track-bg-image: {String | List | Null},
 /// track-border-color: {Color | String | List | Null},
@@ -500,7 +498,8 @@
 /// tooltip-padding-left: {Number | String | Null},
 /// tooltip-padding-right: {Number | String | Null},
 /// tooltip-padding-top: {Number | String | Null},
-/// tooltip-right: {Number | String | Null},
+/// tooltip-spacer-x: {Number | String | Null},
+/// tooltip-spacer-y: {Number | String | Null},
 /// tooltip-transition: {String | List | Null},
 /// tooltip-visibility: {String | Null},
 /// tooltip-white-space: {String | Null},
@@ -509,10 +508,6 @@
 /// tooltip-arrow-border-width: {Number | String | List | Null},
 /// tooltip-arrow-offset: {Number | String | Null},
 /// tooltip-arrow-size: {Number | String | Null},
-/// tooltip-bottom-transform: {String | List | Null},
-/// tooltip-bottom-position-top: {Number | String | Null},
-/// tooltip-top-transform: {String | List | Null},
-/// $tooltip-top-position-top: {Number | String | Null},
 /// form-control-appearance: {String | Null},
 /// form-control-bg: {Color | String | Null},
 /// form-control-height: {Number | String | Null},
@@ -550,7 +545,6 @@
 	$vertical-align: map-get($map, vertical-align);
 	$width: map-get($map, width);
 
-	$thumb-appearance: map-get($map, thumb-appearance);
 	$thumb-bg: map-get($map, thumb-bg);
 	$thumb-bg-image: map-get($map, thumb-bg-image);
 	$thumb-border-radius: map-get($map, thumb-border-radius);
@@ -561,7 +555,6 @@
 	$thumb-height: map-get($map, thumb-height);
 	$thumb-width: map-get($map, thumb-width);
 
-	$track-appearance: map-get($map, track-appearance);
 	$track-bg: map-get($map, track-bg);
 	$track-bg-image: map-get($map, track-bg-image);
 	$track-border-color: map-get($map, track-border-color);
@@ -602,8 +595,8 @@
 	$tooltip-padding-left: map-get($map, tooltip-padding-left);
 	$tooltip-padding-right: map-get($map, tooltip-padding-right);
 	$tooltip-padding-top: map-get($map, tooltip-padding-top);
-	$tooltip-right: map-get($map, tooltip-right);
-
+	$tooltip-spacer-x: map-get($map, tooltip-spacer-x);
+	$tooltip-spacer-y: map-get($map, tooltip-spacer-y);
 	$tooltip-transition: map-get($map, tooltip-transition);
 	$tooltip-visibility: map-get($map, tooltip-visibility);
 	$tooltip-white-space: map-get($map, tooltip-white-space);
@@ -614,14 +607,12 @@
 	$tooltip-arrow-offset: map-get($map, tooltip-arrow-offset);
 	$tooltip-arrow-size: map-get($map, tooltip-arrow-size);
 
-	$tooltip-bottom-transform: map-get($map, tooltip-bottom-transform);
-	$tooltip-bottom-position-top: map-get($map, tooltip-bottom-position-top);
-
-	$tooltip-top-transform: map-get($map, tooltip-top-transform);
-	$tooltip-top-position-top: map-get($map, tooltip-top-position-top);
-
 	@if ($tooltip-arrow-size != null) {
 		$tooltip-arrow-offset: $tooltip-arrow-size / 2;
+	}
+
+	@if ($thumb-width and $tooltip-spacer-x == null) {
+		$tooltip-spacer-x: $thumb-width / 2;
 	}
 
 	$form-control-appearance: map-get($map, form-control-appearance);
@@ -668,7 +659,7 @@
 
 	.tooltip {
 		line-height: $tooltip-line-height;
-		right: $tooltip-right;
+		margin-left: $tooltip-spacer-x;
 		transition: $tooltip-transition;
 		visibility: $tooltip-visibility;
 		white-space: $tooltip-white-space;
@@ -694,9 +685,10 @@
 	}
 
 	.clay-tooltip-bottom {
+		margin-top: $tooltip-spacer-y;
 		padding-top: $tooltip-arrow-offset;
-		top: $tooltip-bottom-position-top;
-		transform: $tooltip-bottom-transform;
+		top: 100%;
+		transform: translateX(-50%);
 
 		.tooltip-arrow {
 			margin-left: math-sign($tooltip-arrow-offset);
@@ -704,9 +696,10 @@
 	}
 
 	.clay-tooltip-top {
+		bottom: 100%;
+		margin-bottom: $tooltip-spacer-y;
 		padding-bottom: $tooltip-arrow-offset;
-		top: $tooltip-top-position-top;
-		transform: $tooltip-top-transform;
+		transform: translateX(-50%);
 
 		.tooltip-arrow {
 			margin-left: math-sign($tooltip-arrow-offset);
@@ -740,6 +733,23 @@
 		width: $progress-width;
 	}
 
+	.clay-range-thumb {
+		background-color: $thumb-bg;
+		background-image: $thumb-bg-image;
+		border-color: $thumb-border-color;
+		border-radius: $thumb-border-radius;
+		border-style: $thumb-border-style;
+		border-width: $thumb-border-width;
+		box-shadow: $thumb-box-shadow;
+		height: $thumb-height;
+		width: $thumb-width;
+
+		position: absolute;
+		margin-top: math-sign($thumb-height / 2);
+		right: math-sign($thumb-width / 2);
+		top: 50%;
+	}
+
 	.form-control-range {
 		content: '#{$thumb-width}';
 		-moz-appearance: $form-control-appearance;
@@ -761,22 +771,17 @@
 		}
 
 		&::-moz-range-thumb {
-			-moz-appearance: $thumb-appearance;
-			appearance: $thumb-appearance;
-			background-color: $thumb-bg;
-			background-image: $thumb-bg-image;
-			border-color: $thumb-border-color;
-			border-radius: $thumb-border-radius;
-			border-style: $thumb-border-style;
-			border-width: $thumb-border-width;
-			box-shadow: $thumb-box-shadow;
-			height: $thumb-height;
-			width: $thumb-width;
+			-moz-appearance: none;
+			appearance: none;
+			border-width: 0;
+			height: 1px;
+			width: 1px;
 		}
 
 		&::-moz-range-track {
-			-moz-appearance: $track-appearance;
-			appearance: $track-appearance;
+			-moz-appearance: none;
+			appearance: none;
+			height: 100%;
 		}
 
 		// IE Edge
@@ -790,16 +795,11 @@
 		}
 
 		&::-ms-thumb {
-			appearance: $thumb-appearance;
-			background-color: $thumb-bg;
-			background-image: $thumb-bg-image;
-			border-color: $thumb-border-color;
-			border-radius: $thumb-border-radius;
-			border-style: $thumb-border-style;
-			border-width: $thumb-border-width;
-			box-shadow: $thumb-box-shadow;
-			height: $thumb-height;
-			width: $thumb-width;
+			appearance: none;
+			background-color: transparent;
+			border-width: 0;
+			height: 10px;
+			width: 10px;
 		}
 
 		&::-ms-tooltip {
@@ -812,69 +812,52 @@
 			border-style: solid;
 			border-width: 0;
 			color: transparent;
-			height: $form-control-height;
+			height: 100%;
 		}
 
 		// Webkit
 
 		&::-webkit-slider-runnable-track {
-			-webkit-appearance: $track-appearance;
-			appearance: $track-appearance;
+			-webkit-appearance: none;
+			appearance: none;
+			height: 100%;
 		}
 
 		&::-webkit-slider-thumb {
-			-webkit-appearance: $thumb-appearance;
-			appearance: $thumb-appearance;
-			background-color: $thumb-bg;
-			background-image: $thumb-bg-image;
-			border-color: $thumb-border-color;
-			border-radius: $thumb-border-radius;
-			border-style: $thumb-border-style;
-			border-width: $thumb-border-width;
-			box-shadow: $thumb-box-shadow;
-			height: $thumb-height;
-			width: $thumb-width;
+			-webkit-appearance: none;
+			appearance: none;
+			height: 1px;
+			width: 1px;
 		}
 
 		&:hover {
 			cursor: $hover-cursor;
 
-			&::-moz-range-thumb {
-				background-color: $hover-thumb-bg;
-			}
+			~ .clay-range-progress {
+				.clay-range-thumb {
+					background-color: $hover-thumb-bg;
+				}
 
-			&::-ms-thumb {
-				background-color: $hover-thumb-bg;
-			}
-
-			&::-webkit-slider-thumb {
-				background-color: $hover-thumb-bg;
-			}
-
-			~ .clay-range-progress .tooltip {
-				visibility: visible;
-				opacity: 1;
+				.tooltip {
+					visibility: visible;
+					opacity: 1;
+				}
 			}
 		}
 
-		&:focus {
+		&:focus,
+		&.focus {
 			outline: $focus-outline;
 
-			&::-moz-range-thumb {
-				box-shadow: $focus-thumb-box-shadow;
-			}
+			~ .clay-range-progress {
+				.clay-range-thumb {
+					box-shadow: $focus-thumb-box-shadow;
+				}
 
-			&::-ms-thumb {
-				box-shadow: $focus-thumb-box-shadow;
-			}
-
-			&::-webkit-slider-thumb {
-				box-shadow: $focus-thumb-box-shadow;
-			}
-
-			~ .clay-range-progress .tooltip {
-				visibility: visible;
-				opacity: 1;
+				.tooltip {
+					visibility: visible;
+					opacity: 1;
+				}
 			}
 		}
 
@@ -882,27 +865,17 @@
 			color: $disabled-color;
 			cursor: $disabled-cursor;
 
-			&::-moz-range-thumb {
-				background-color: $disabled-thumb-bg;
-				box-shadow: $disabled-thumb-box-shadow;
-			}
-
-			&::-ms-thumb {
-				background-color: $disabled-thumb-bg;
-				box-shadow: $disabled-thumb-box-shadow;
-			}
-
-			&::-webkit-slider-thumb {
-				background-color: $disabled-thumb-bg;
-				box-shadow: $disabled-thumb-box-shadow;
-			}
-
 			~ .clay-range-track {
 				background-color: $disabled-track-bg;
 			}
 
 			~ .clay-range-progress {
 				background-color: $disabled-progress-bg;
+
+				.clay-range-thumb {
+					background-color: $disabled-thumb-bg;
+					box-shadow: $disabled-thumb-box-shadow;
+				}
 			}
 		}
 	}
