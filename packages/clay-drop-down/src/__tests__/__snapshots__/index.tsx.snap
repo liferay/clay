@@ -14,44 +14,46 @@ exports[`ClayDropDown renders dropdown menu when clicked 1`] = `
     </div>
   </div>
   <div>
-    <div
-      class="dropdown-menu show"
-      style="top: 0px; left: 0px;"
-    >
-      <ul
-        class="list-unstyled"
+    <div>
+      <div
+        class="dropdown-menu show"
+        style="top: 0px; left: 0px;"
       >
-        <li
-          tabindex="-1"
+        <ul
+          class="list-unstyled"
         >
-          <a
-            class="dropdown-item"
-            href="#one"
+          <li
+            tabindex="-1"
           >
-            one
-          </a>
-        </li>
-        <li
-          tabindex="-1"
-        >
-          <a
-            class="dropdown-item"
-            href="#two"
+            <a
+              class="dropdown-item"
+              href="#one"
+            >
+              one
+            </a>
+          </li>
+          <li
+            tabindex="-1"
           >
-            two
-          </a>
-        </li>
-        <li
-          tabindex="-1"
-        >
-          <a
-            class="dropdown-item"
-            href="#three"
+            <a
+              class="dropdown-item"
+              href="#two"
+            >
+              two
+            </a>
+          </li>
+          <li
+            tabindex="-1"
           >
-            three
-          </a>
-        </li>
-      </ul>
+            <a
+              class="dropdown-item"
+              href="#three"
+            >
+              three
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </body>
@@ -71,86 +73,88 @@ exports[`ClayDropDown renders with groups 1`] = `
     </div>
   </div>
   <div>
-    <div
-      class="dropdown-menu show"
-      style="top: 0px; left: 0px;"
-    >
-      <ul
-        class="list-unstyled"
+    <div>
+      <div
+        class="dropdown-menu show"
+        style="top: 0px; left: 0px;"
       >
-        <li
-          class="dropdown-subheader"
-          role="presentation"
+        <ul
+          class="list-unstyled"
         >
-          Group #1
-        </li>
-        <li
-          tabindex="-1"
-        >
-          <a
-            class="dropdown-item"
-            href="#one"
+          <li
+            class="dropdown-subheader"
+            role="presentation"
           >
-            one
-          </a>
-        </li>
-        <li
-          tabindex="-1"
-        >
-          <a
-            class="dropdown-item"
-            href="#two"
+            Group #1
+          </li>
+          <li
+            tabindex="-1"
           >
-            two
-          </a>
-        </li>
-        <li
-          tabindex="-1"
-        >
-          <a
-            class="dropdown-item"
-            href="#three"
+            <a
+              class="dropdown-item"
+              href="#one"
+            >
+              one
+            </a>
+          </li>
+          <li
+            tabindex="-1"
           >
-            three
-          </a>
-        </li>
-        <li
-          class="dropdown-subheader"
-          role="presentation"
-        >
-          Group #2
-        </li>
-        <li
-          tabindex="-1"
-        >
-          <a
-            class="dropdown-item"
-            href="#one"
+            <a
+              class="dropdown-item"
+              href="#two"
+            >
+              two
+            </a>
+          </li>
+          <li
+            tabindex="-1"
           >
-            one
-          </a>
-        </li>
-        <li
-          tabindex="-1"
-        >
-          <a
-            class="dropdown-item"
-            href="#two"
+            <a
+              class="dropdown-item"
+              href="#three"
+            >
+              three
+            </a>
+          </li>
+          <li
+            class="dropdown-subheader"
+            role="presentation"
           >
-            two
-          </a>
-        </li>
-        <li
-          tabindex="-1"
-        >
-          <a
-            class="dropdown-item"
-            href="#three"
+            Group #2
+          </li>
+          <li
+            tabindex="-1"
           >
-            three
-          </a>
-        </li>
-      </ul>
+            <a
+              class="dropdown-item"
+              href="#one"
+            >
+              one
+            </a>
+          </li>
+          <li
+            tabindex="-1"
+          >
+            <a
+              class="dropdown-item"
+              href="#two"
+            >
+              two
+            </a>
+          </li>
+          <li
+            tabindex="-1"
+          >
+            <a
+              class="dropdown-item"
+              href="#three"
+            >
+              three
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </body>
@@ -170,89 +174,91 @@ exports[`ClayDropDown renders with icons 1`] = `
     </div>
   </div>
   <div>
-    <div
-      class="dropdown-menu dropdown-menu-indicator-end dropdown-menu-indicator-start show"
-      style="top: 0px; left: 0px;"
-    >
-      <ul
-        class="list-unstyled"
+    <div>
+      <div
+        class="dropdown-menu dropdown-menu-indicator-end dropdown-menu-indicator-start show"
+        style="top: 0px; left: 0px;"
       >
-        <li
-          tabindex="-1"
+        <ul
+          class="list-unstyled"
         >
-          <span
-            class="dropdown-item"
+          <li
+            tabindex="-1"
           >
             <span
-              class="dropdown-item-indicator-start"
+              class="dropdown-item"
             >
-              <svg
-                class="lexicon-icon lexicon-icon-trash"
-                role="presentation"
+              <span
+                class="dropdown-item-indicator-start"
               >
-                <use
-                  xlink:href="/foo/bar#trash"
-                />
-              </svg>
+                <svg
+                  class="lexicon-icon lexicon-icon-trash"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/foo/bar#trash"
+                  />
+                </svg>
+              </span>
+              Left
             </span>
-            Left
-          </span>
-        </li>
-        <li
-          tabindex="-1"
-        >
-          <span
-            class="dropdown-item"
-          >
-            Right
-            <span
-              class="dropdown-item-indicator-end"
-            >
-              <svg
-                class="lexicon-icon lexicon-icon-check"
-                role="presentation"
-              >
-                <use
-                  xlink:href="/foo/bar#check"
-                />
-              </svg>
-            </span>
-          </span>
-        </li>
-        <li
-          tabindex="-1"
-        >
-          <span
-            class="dropdown-item"
+          </li>
+          <li
+            tabindex="-1"
           >
             <span
-              class="dropdown-item-indicator-start"
+              class="dropdown-item"
             >
-              <svg
-                class="lexicon-icon lexicon-icon-trash"
-                role="presentation"
+              Right
+              <span
+                class="dropdown-item-indicator-end"
               >
-                <use
-                  xlink:href="/foo/bar#trash"
-                />
-              </svg>
+                <svg
+                  class="lexicon-icon lexicon-icon-check"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/foo/bar#check"
+                  />
+                </svg>
+              </span>
             </span>
-            Both
+          </li>
+          <li
+            tabindex="-1"
+          >
             <span
-              class="dropdown-item-indicator-end"
+              class="dropdown-item"
             >
-              <svg
-                class="lexicon-icon lexicon-icon-check"
-                role="presentation"
+              <span
+                class="dropdown-item-indicator-start"
               >
-                <use
-                  xlink:href="/foo/bar#check"
-                />
-              </svg>
+                <svg
+                  class="lexicon-icon lexicon-icon-trash"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/foo/bar#trash"
+                  />
+                </svg>
+              </span>
+              Both
+              <span
+                class="dropdown-item-indicator-end"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-check"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/foo/bar#check"
+                  />
+                </svg>
+              </span>
             </span>
-          </span>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </body>
@@ -272,80 +278,82 @@ exports[`ClayDropDown renders with search input 1`] = `
     </div>
   </div>
   <div>
-    <div
-      class="dropdown-menu show"
-      style="top: 0px; left: 0px;"
-    >
-      <form>
-        <div
-          class="dropdown-section"
-        >
+    <div>
+      <div
+        class="dropdown-menu show"
+        style="top: 0px; left: 0px;"
+      >
+        <form>
           <div
-            class="input-group input-group-sm"
+            class="dropdown-section"
           >
             <div
-              class="input-group-item"
+              class="input-group input-group-sm"
             >
-              <input
-                class="form-control input-group-inset input-group-inset-after"
-                type="text"
-                value="test"
-              />
-              <span
-                class="input-group-inset-item input-group-inset-item-after"
+              <div
+                class="input-group-item"
               >
-                <button
-                  class="btn btn-unstyled"
-                  type="button"
+                <input
+                  class="form-control input-group-inset input-group-inset-after"
+                  type="text"
+                  value="test"
+                />
+                <span
+                  class="input-group-inset-item input-group-inset-item-after"
                 >
-                  <svg
-                    class="lexicon-icon lexicon-icon-search"
-                    role="presentation"
+                  <button
+                    class="btn btn-unstyled"
+                    type="button"
                   >
-                    <use
-                      xlink:href="/foo/bar#search"
-                    />
-                  </svg>
-                </button>
-              </span>
+                    <svg
+                      class="lexicon-icon lexicon-icon-search"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="/foo/bar#search"
+                      />
+                    </svg>
+                  </button>
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-      </form>
-      <ul
-        class="list-unstyled"
-      >
-        <li
-          tabindex="-1"
+        </form>
+        <ul
+          class="list-unstyled"
         >
-          <a
-            class="dropdown-item"
-            href="#one"
+          <li
+            tabindex="-1"
           >
-            one
-          </a>
-        </li>
-        <li
-          tabindex="-1"
-        >
-          <a
-            class="dropdown-item"
-            href="#two"
+            <a
+              class="dropdown-item"
+              href="#one"
+            >
+              one
+            </a>
+          </li>
+          <li
+            tabindex="-1"
           >
-            two
-          </a>
-        </li>
-        <li
-          tabindex="-1"
-        >
-          <a
-            class="dropdown-item"
-            href="#three"
+            <a
+              class="dropdown-item"
+              href="#two"
+            >
+              two
+            </a>
+          </li>
+          <li
+            tabindex="-1"
           >
-            three
-          </a>
-        </li>
-      </ul>
+            <a
+              class="dropdown-item"
+              href="#three"
+            >
+              three
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </body>

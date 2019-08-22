@@ -104,291 +104,293 @@ exports[`Rendering default 1`] = `
     </div>
   </div>
   <div>
-    <div
-      class="dropdown-menu clay-color-dropdown-menu"
-      style="top: 0px; left: 0px;"
-    >
+    <div>
       <div
-        class="clay-color-header"
-      >
-        <span
-          class="component-title"
-        >
-          Default Colors
-        </span>
-      </div>
-      <div
-        class="clay-color-swatch"
+        class="dropdown-menu clay-color-dropdown-menu"
+        style="top: 0px; left: 0px;"
       >
         <div
-          class="clay-color-swatch-item"
+          class="clay-color-header"
         >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(0, 0, 0); height: 24px; width: 24px;"
-            title="000000"
-          />
+          <span
+            class="component-title"
+          >
+            Default Colors
+          </span>
         </div>
         <div
-          class="clay-color-swatch-item"
+          class="clay-color-swatch"
         >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(95, 95, 95); height: 24px; width: 24px;"
-            title="5F5F5F"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(154, 154, 154); height: 24px; width: 24px;"
-            title="9A9A9A"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(203, 203, 203); height: 24px; width: 24px;"
-            title="CBCBCB"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(225, 225, 225); height: 24px; width: 24px;"
-            title="E1E1E1"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
-            title="FFFFFF"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(255, 13, 13); height: 24px; width: 24px;"
-            title="FF0D0D"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(255, 138, 28); height: 24px; width: 24px;"
-            title="FF8A1C"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(43, 166, 118); height: 24px; width: 24px;"
-            title="2BA676"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(0, 110, 248); height: 24px; width: 24px;"
-            title="006EF8"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(127, 38, 255); height: 24px; width: 24px;"
-            title="7F26FF"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(255, 33, 160); height: 24px; width: 24px;"
-            title="FF21A0"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(255, 95, 95); height: 24px; width: 24px;"
-            title="FF5F5F"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(255, 180, 110); height: 24px; width: 24px;"
-            title="FFB46E"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(80, 210, 160); height: 24px; width: 24px;"
-            title="50D2A0"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(75, 155, 255); height: 24px; width: 24px;"
-            title="4B9BFF"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(175, 120, 255); height: 24px; width: 24px;"
-            title="AF78FF"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(255, 115, 195); height: 24px; width: 24px;"
-            title="FF73C3"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(255, 177, 177); height: 24px; width: 24px;"
-            title="FFB1B1"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(255, 222, 192); height: 24px; width: 24px;"
-            title="FFDEC0"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(145, 227, 195); height: 24px; width: 24px;"
-            title="91E3C3"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(157, 200, 255); height: 24px; width: 24px;"
-            title="9DC8FF"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(223, 202, 255); height: 24px; width: 24px;"
-            title="DFCAFF"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(255, 197, 230); height: 24px; width: 24px;"
-            title="FFC5E6"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(255, 217, 217); height: 24px; width: 24px;"
-            title="FFD9D9"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border: 1px solid #e7e7ed; background: rgb(255, 243, 232); height: 24px; width: 24px;"
-            title="FFF3E8"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(177, 235, 213); height: 24px; width: 24px;"
-            title="B1EBD5"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(197, 223, 255); height: 24px; width: 24px;"
-            title="C5DFFF"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border: 1px solid #e7e7ed; background: rgb(248, 242, 255); height: 24px; width: 24px;"
-            title="F8F2FF"
-          />
-        </div>
-        <div
-          class="clay-color-swatch-item"
-        >
-          <button
-            class="btn clay-color-btn "
-            style="border-width: 0px; background: rgb(255, 237, 247); height: 24px; width: 24px;"
-            title="FFEDF7"
-          />
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(0, 0, 0); height: 24px; width: 24px;"
+              title="000000"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(95, 95, 95); height: 24px; width: 24px;"
+              title="5F5F5F"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(154, 154, 154); height: 24px; width: 24px;"
+              title="9A9A9A"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(203, 203, 203); height: 24px; width: 24px;"
+              title="CBCBCB"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(225, 225, 225); height: 24px; width: 24px;"
+              title="E1E1E1"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
+              title="FFFFFF"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(255, 13, 13); height: 24px; width: 24px;"
+              title="FF0D0D"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(255, 138, 28); height: 24px; width: 24px;"
+              title="FF8A1C"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(43, 166, 118); height: 24px; width: 24px;"
+              title="2BA676"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(0, 110, 248); height: 24px; width: 24px;"
+              title="006EF8"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(127, 38, 255); height: 24px; width: 24px;"
+              title="7F26FF"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(255, 33, 160); height: 24px; width: 24px;"
+              title="FF21A0"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(255, 95, 95); height: 24px; width: 24px;"
+              title="FF5F5F"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(255, 180, 110); height: 24px; width: 24px;"
+              title="FFB46E"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(80, 210, 160); height: 24px; width: 24px;"
+              title="50D2A0"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(75, 155, 255); height: 24px; width: 24px;"
+              title="4B9BFF"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(175, 120, 255); height: 24px; width: 24px;"
+              title="AF78FF"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(255, 115, 195); height: 24px; width: 24px;"
+              title="FF73C3"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(255, 177, 177); height: 24px; width: 24px;"
+              title="FFB1B1"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(255, 222, 192); height: 24px; width: 24px;"
+              title="FFDEC0"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(145, 227, 195); height: 24px; width: 24px;"
+              title="91E3C3"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(157, 200, 255); height: 24px; width: 24px;"
+              title="9DC8FF"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(223, 202, 255); height: 24px; width: 24px;"
+              title="DFCAFF"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(255, 197, 230); height: 24px; width: 24px;"
+              title="FFC5E6"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(255, 217, 217); height: 24px; width: 24px;"
+              title="FFD9D9"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border: 1px solid #e7e7ed; background: rgb(255, 243, 232); height: 24px; width: 24px;"
+              title="FFF3E8"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(177, 235, 213); height: 24px; width: 24px;"
+              title="B1EBD5"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(197, 223, 255); height: 24px; width: 24px;"
+              title="C5DFFF"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border: 1px solid #e7e7ed; background: rgb(248, 242, 255); height: 24px; width: 24px;"
+              title="F8F2FF"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(255, 237, 247); height: 24px; width: 24px;"
+              title="FFEDF7"
+            />
+          </div>
         </div>
       </div>
     </div>
