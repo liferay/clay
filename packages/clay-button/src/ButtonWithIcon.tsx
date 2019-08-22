@@ -9,7 +9,14 @@ import ClayIcon from '@clayui/icon';
 import React from 'react';
 
 interface IProps extends React.ComponentProps<typeof ClayButton> {
+	/**
+	 * Path to the location of the spritemap resource.
+	 */
 	spritemap?: string;
+
+	/**
+	 * The id of the icon in the spritemap.
+	 */
 	symbol: string;
 }
 
