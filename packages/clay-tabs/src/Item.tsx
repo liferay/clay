@@ -7,7 +7,8 @@
 import classNames from 'classnames';
 import ClayIcon from '@clayui/icon';
 import React from 'react';
-import {ElementType} from './types';
+
+export type ElementType = 'a' | 'button';
 
 interface IProps extends Omit<React.HTMLAttributes<HTMLLIElement>, 'onClick'> {
 	/**

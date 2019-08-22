@@ -11,7 +11,7 @@ import ClayTabs from '../src';
 import React from 'react';
 import {boolean, select} from '@storybook/addon-knobs';
 import {ClayIconSpriteContext} from '@clayui/icon';
-import {ElementType} from '../src/types';
+import {ElementType} from '../src/Item';
 import {storiesOf} from '@storybook/react';
 
 const DropDownWithState: React.FunctionComponent<any> = ({
