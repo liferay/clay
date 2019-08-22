@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalProvider -> IncrementalInteractions renders a modal closed when dispatching Close by provider 1`] = `
+<body
+  class=""
+>
+  <div>
+    <button
+      class="btn btn-primary"
+      data-testid="button"
+      type="button"
+    >
+      Open modal
+    </button>
+  </div>
+</body>
+`;
+
+exports[`ModalProvider -> IncrementalInteractions renders a modal when dispatching Open by provider 1`] = `
+<body
+  class="modal-open"
+>
+  <div>
+    <div
+      class="modal-backdrop fade"
+    />
+    <div
+      class="fade modal d-block"
+    >
+      <div
+        class="modal-dialog modal-lg"
+        tabindex="-1"
+      >
+        <div
+          class="modal-content"
+        >
+          <div
+            class="modal-header"
+          >
+            <div
+              class="modal-title"
+            >
+              Title
+            </div>
+            <button
+              aria-label="close"
+              class="close btn btn-unstyled"
+              type="button"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-times"
+                role="presentation"
+              >
+                <use
+                  xlink:href="icons.svg#times"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="modal-body"
+          >
+            <h1>
+              Hello world!
+            </h1>
+          </div>
+          <div
+            class="modal-footer"
+          >
+            <div
+              class="modal-item-first"
+            />
+            <div
+              class="modal-item"
+            />
+            <div
+              class="modal-item-last"
+            >
+              <button
+                class="btn btn-primary"
+                type="button"
+              >
+                Primary
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      class="btn btn-primary"
+      data-testid="button"
+      type="button"
+    >
+      Open modal
+    </button>
+  </div>
+  <div />
+</body>
+`;

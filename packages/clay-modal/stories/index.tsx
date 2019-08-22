@@ -1,3 +1,4 @@
+/* eslint-disable no-sparse-arrays */
 /**
  * © 2019 Liferay, Inc. <https://liferay.com>
  *
@@ -6,43 +7,40 @@
 
 import '@clayui/css/lib/css/atlas.css';
 import ClayButton from '@clayui/button';
-import ClayModal from '../src';
-import React, {useState} from 'react';
+import ClayModal, {ClayModalProvider, Context, useModal} from '../src';
+import React, {useContext, useState} from 'react';
 import {select, text} from '@storybook/addon-knobs';
 import {Size, Status} from '../src/types';
 import {storiesOf} from '@storybook/react';
 
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
-interface IProps extends React.HTMLAttributes<HTMLDivElement> {
-	children?: (onClose: () => void) => React.ReactNode;
-	size?: Size;
-	status?: Status;
-}
-
-const ModalWithState: React.FunctionComponent<IProps> = ({
-	children,
-	size,
-	status,
-}) => {
-	const [visible, setVisible] = useState<boolean>(false);
+const MyApp: React.FunctionComponent<any> = () => {
+	const [state, dispatch] = useContext(Context);
 
 	return (
-		<>
-			{visible && (
-				<ClayModal
-					onClose={() => setVisible(false)}
-					size={size}
-					spritemap={spritemap}
-					status={status}
-				>
-					{children}
-				</ClayModal>
-			)}
-			<ClayButton displayType="primary" onClick={() => setVisible(true)}>
-				{'Open modal'}
-			</ClayButton>
-		</>
+		<ClayButton
+			displayType="primary"
+			onClick={() =>
+				dispatch({
+					payload: {
+						body: <h1>{'Hello world!'}</h1>,
+						footer: [
+							,
+							,
+							<ClayButton key={3} onClick={state.onClose}>
+								{'Primary'}
+							</ClayButton>,
+						],
+						header: 'Title',
+						size: 'lg',
+					},
+					type: 1,
+				})
+			}
+		>
+			{'Open modal'}
+		</ClayButton>
 	);
 };
 
@@ -61,33 +59,58 @@ const status = {
 	warning: 'warning',
 };
 
-storiesOf('ClayModal', module).add('default', () => (
-	<ModalWithState
-		size={select('Size', size, 'lg') as Size}
-		status={select('Status', status, null) as Status}
-	>
-		{onClose => (
+storiesOf('ClayModal', module)
+	.add('default', () => {
+		const [visibleModal, setVisibleModal] = useState<boolean>(false);
+		const {observer, onClose} = useModal({
+			onClose: () => setVisibleModal(false),
+		});
+
+		return (
 			<>
-				<ClayModal.Header>{text('Title', 'Title')}</ClayModal.Header>
-				<ClayModal.Body url={text('Url', null)}>
-					<h1>{'Hello world!'}</h1>
-				</ClayModal.Body>
-				<ClayModal.Footer
-					first={
-						<ClayButton.Group spaced>
-							<ClayButton displayType="secondary">
-								{'Secondary'}
-							</ClayButton>
-							<ClayButton displayType="secondary">
-								{'Secondary'}
-							</ClayButton>
-						</ClayButton.Group>
-					}
-					last={
-						<ClayButton onClick={onClose}>{'Primary'}</ClayButton>
-					}
-				/>
+				{visibleModal && (
+					<ClayModal
+						observer={observer}
+						size={select('Size', size, 'lg') as Size}
+						spritemap={spritemap}
+						status={select('Status', status, null) as Status}
+					>
+						<ClayModal.Header>
+							{text('Title', 'Title')}
+						</ClayModal.Header>
+						<ClayModal.Body url={text('Url', null)}>
+							<h1>{'Hello world!'}</h1>
+						</ClayModal.Body>
+						<ClayModal.Footer
+							first={
+								<ClayButton.Group spaced>
+									<ClayButton displayType="secondary">
+										{'Secondary'}
+									</ClayButton>
+									<ClayButton displayType="secondary">
+										{'Secondary'}
+									</ClayButton>
+								</ClayButton.Group>
+							}
+							last={
+								<ClayButton onClick={onClose}>
+									{'Primary'}
+								</ClayButton>
+							}
+						/>
+					</ClayModal>
+				)}
+				<ClayButton
+					displayType="primary"
+					onClick={() => setVisibleModal(true)}
+				>
+					{'Open modal'}
+				</ClayButton>
 			</>
-		)}
-	</ModalWithState>
-));
+		);
+	})
+	.add('w/ Provider', () => (
+		<ClayModalProvider spritemap={spritemap}>
+			<MyApp />
+		</ClayModalProvider>
+	));

@@ -7,3 +7,13 @@
 export type Status = 'danger' | 'info' | 'success' | 'warning';
 
 export type Size = 'full-screen' | 'lg' | 'sm';
+
+export enum ObserverType {
+	Close = 0,
+	Open = 1,
+}
+
+export type Observer = {
+	dispatch: (type: ObserverType) => void;
+	mutation: boolean;
+};

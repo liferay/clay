@@ -4,11 +4,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as TestRenderer from 'react-test-renderer';
 import Button from '@clayui/button';
-import ClayModal from '..';
+import ClayModal, {useModal} from '..';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {cleanup, render} from '@testing-library/react';
 
 const spritemap = 'icons.svg';
 
@@ -22,83 +22,111 @@ describe('ClayModal', () => {
 
 	afterEach(() => {
 		jest.restoreAllMocks();
+		cleanup();
 	});
 
 	it('renders', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayModal onClose={() => {}} spritemap={spritemap}>
-				{onClose => (
-					<>
-						<ClayModal.Header>{'Foo'}</ClayModal.Header>
-						<ClayModal.Body>
-							<h1>{'Hello world!'}</h1>
-						</ClayModal.Body>
-						<ClayModal.Footer
-							last={
-								<Button onClick={onClose}>{'Primary'}</Button>
-							}
-						/>
-					</>
-				)}
-			</ClayModal>
-		);
+		const ModalWithState = () => {
+			const {observer, onClose} = useModal({onClose: () => {}});
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+			return (
+				<ClayModal observer={observer} spritemap={spritemap}>
+					<ClayModal.Header>{'Foo'}</ClayModal.Header>
+					<ClayModal.Body>
+						<h1>{'Hello world!'}</h1>
+					</ClayModal.Body>
+					<ClayModal.Footer
+						last={<Button onClick={onClose}>{'Primary'}</Button>}
+					/>
+				</ClayModal>
+			);
+		};
+
+		render(<ModalWithState />);
+
+		expect(document.body).toMatchSnapshot();
 	});
 
 	it('renders with Header', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayModal onClose={() => {}} spritemap={spritemap}>
-				{() => <ClayModal.Header>{'Foo'}</ClayModal.Header>}
-			</ClayModal>
-		);
+		const ModalWithState = () => {
+			const {observer} = useModal({onClose: () => {}});
+			return (
+				<ClayModal observer={observer} spritemap={spritemap}>
+					<ClayModal.Header>{'Foo'}</ClayModal.Header>
+				</ClayModal>
+			);
+		};
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		render(<ModalWithState />);
+
+		expect(document.body).toMatchSnapshot();
 	});
 
 	it('renders with size', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayModal onClose={() => {}} size="lg" spritemap={spritemap} />
-		);
+		const ModalWithState = () => {
+			const {observer} = useModal({onClose: () => {}});
+			return (
+				<ClayModal
+					observer={observer}
+					size="lg"
+					spritemap={spritemap}
+				/>
+			);
+		};
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		render(<ModalWithState />);
+
+		expect(document.body).toMatchSnapshot();
 	});
 
 	it('renders with status', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayModal
-				onClose={() => {}}
-				spritemap={spritemap}
-				status="success"
-			/>
-		);
+		const ModalWithState = () => {
+			const {observer} = useModal({onClose: () => {}});
+			return (
+				<ClayModal
+					observer={observer}
+					spritemap={spritemap}
+					status="success"
+				/>
+			);
+		};
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		render(<ModalWithState />);
+
+		expect(document.body).toMatchSnapshot();
 	});
 
 	it('renders a body component with url', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayModal onClose={() => {}} spritemap={spritemap}>
-				{() => <ClayModal.Body url="http://localhost" />}
-			</ClayModal>
-		);
+		const ModalWithState = () => {
+			const {observer} = useModal({onClose: () => {}});
+			return (
+				<ClayModal observer={observer} spritemap={spritemap}>
+					<ClayModal.Body url="http://localhost" />
+				</ClayModal>
+			);
+		};
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		render(<ModalWithState />);
+
+		expect(document.body).toMatchSnapshot();
 	});
 
 	it('renders a footer component with buttons', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayModal onClose={() => {}} spritemap={spritemap}>
-				{onClose => (
+		const ModalWithState = () => {
+			const {observer, onClose} = useModal({onClose: () => {}});
+			return (
+				<ClayModal observer={observer} spritemap={spritemap}>
 					<ClayModal.Footer
 						first={<Button>{'Bar'}</Button>}
 						last={<Button onClick={onClose}>{'Foo'}</Button>}
 						middle={<Button>{'Baz'}</Button>}
 					/>
-				)}
-			</ClayModal>
-		);
+				</ClayModal>
+			);
+		};
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		render(<ModalWithState />);
+
+		expect(document.body).toMatchSnapshot();
 	});
 });

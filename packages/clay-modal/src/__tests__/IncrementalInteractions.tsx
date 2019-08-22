@@ -1,4 +1,5 @@
 /*eslint no-console: 0 */
+/* eslint-disable no-sparse-arrays */
 /**
  * © 2019 Liferay, Inc. <https://liferay.com>
  *
@@ -6,8 +7,8 @@
  */
 
 import Button from '@clayui/button';
-import ClayModal from '..';
-import React, {useState} from 'react';
+import ClayModal, {ClayModalProvider, Context, useModal} from '..';
+import React, {useContext, useEffect, useState} from 'react';
 import ReactDOM from 'react-dom';
 import {cleanup, fireEvent, render} from '@testing-library/react';
 
@@ -24,15 +25,12 @@ const ModalWithState: React.FunctionComponent<IProps> = ({
 	...props
 }) => {
 	const [visible, setVisible] = useState(initialVisible);
+	const {observer} = useModal({onClose: () => setVisible(false)});
 
 	return (
 		<>
 			{visible && (
-				<ClayModal
-					onClose={() => setVisible(false)}
-					spritemap={spritemap}
-					{...props}
-				>
+				<ClayModal observer={observer} spritemap={spritemap} {...props}>
 					{children}
 				</ClayModal>
 			)}
@@ -160,9 +158,18 @@ describe('Modal -> IncrementalInteractions', () => {
 	});
 
 	it('close the modal when click on the button of Footer component', () => {
-		const {getByLabelText} = render(
-			<ModalWithState initialVisible>
-				{(onClose: any) => (
+		const ModalState = () => {
+			const [visible, setVisible] = useState(true);
+			const {observer, onClose} = useModal({
+				onClose: () => setVisible(false),
+			});
+
+			if (!visible) {
+				return null;
+			}
+
+			return (
+				<ClayModal observer={observer} spritemap={spritemap}>
 					<ClayModal.Footer
 						last={
 							<Button aria-label="buttonFooter" onClick={onClose}>
@@ -170,9 +177,10 @@ describe('Modal -> IncrementalInteractions', () => {
 							</Button>
 						}
 					/>
-				)}
-			</ModalWithState>
-		);
+				</ClayModal>
+			);
+		};
+		const {getByLabelText} = render(<ModalState />);
 
 		jest.runAllTimers();
 
@@ -191,5 +199,125 @@ describe('Modal -> IncrementalInteractions', () => {
 		expect(document.body.classList).not.toContain('modal-open');
 		expect(document.querySelector(backdropElSelector)).toBeNull();
 		expect(document.querySelector(modalElSelector)).toBeNull();
+	});
+});
+
+describe('ModalProvider -> IncrementalInteractions', () => {
+	afterEach(() => {
+		jest.clearAllTimers();
+
+		cleanup();
+	});
+
+	beforeAll(() => {
+		jest.useFakeTimers();
+
+		// @ts-ignore
+		ReactDOM.createPortal = jest.fn(element => {
+			return element;
+		});
+	});
+
+	afterAll(() => {
+		jest.useRealTimers();
+	});
+
+	it('renders a modal when dispatching Open by provider', () => {
+		const ModalWithProvider = () => {
+			const [state, dispatch] = useContext(Context);
+
+			return (
+				<Button
+					data-testid="button"
+					displayType="primary"
+					onClick={() =>
+						dispatch({
+							payload: {
+								body: <h1>{'Hello world!'}</h1>,
+								footer: [
+									,
+									,
+									<Button key={3} onClick={state.onClose}>
+										{'Primary'}
+									</Button>,
+								],
+								header: 'Title',
+								size: 'lg',
+							},
+							type: 1,
+						})
+					}
+				>
+					{'Open modal'}
+				</Button>
+			);
+		};
+
+		const {getByTestId} = render(
+			<ClayModalProvider spritemap={spritemap}>
+				<ModalWithProvider />
+			</ClayModalProvider>
+		);
+
+		const button = getByTestId('button');
+
+		fireEvent.click(button, {});
+
+		expect(document.body).toMatchSnapshot();
+	});
+
+	it('renders a modal closed when dispatching Close by provider', () => {
+		const ModalWithProvider = () => {
+			const [state, dispatch] = useContext(Context);
+
+			useEffect(() => {
+				dispatch({
+					payload: {
+						body: <h1>{'Hello world!'}</h1>,
+						footer: [
+							,
+							,
+							<Button key={3} onClick={state.onClose}>
+								{'Primary'}
+							</Button>,
+						],
+						header: 'Title',
+						size: 'lg',
+					},
+					type: 1,
+				});
+			}, []);
+
+			return (
+				<Button
+					data-testid="button"
+					displayType="primary"
+					onClick={() => dispatch({type: 0})}
+				>
+					{'Open modal'}
+				</Button>
+			);
+		};
+
+		const {getByTestId} = render(
+			<ClayModalProvider spritemap={spritemap}>
+				<ModalWithProvider />
+			</ClayModalProvider>
+		);
+
+		const button = getByTestId('button');
+
+		const backdropElSelector = '.modal-backdrop.fade.show';
+		const modalElSelector = '.fade.modal.d-block.show';
+
+		const backdropEl = document.querySelector(backdropElSelector);
+		const modalEl = document.querySelector(modalElSelector);
+
+		expect(backdropEl).toBeDefined();
+		expect(modalEl).toBeDefined();
+
+		fireEvent.click(button, {});
+
+		expect(document.body).toMatchSnapshot();
 	});
 });
