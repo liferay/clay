@@ -35,7 +35,7 @@ const ClayTabsWithItems = () => {
 					{'Dummy3'}
 				</ClayTabs.Item>
 			</ClayTabs>
-			<ClayTabs.Content activeTabKey={activeTabKeyValue}>
+			<ClayTabs.Content activeIndex={activeTabKeyValue}>
 				<ClayTabs.TabPane data-testid="tabPane1">
 					{'Tab Content 1'}
 				</ClayTabs.TabPane>
@@ -60,13 +60,13 @@ describe('ClayTabs', () => {
 	it('renders justifying nav items', () => {
 		const {container} = render(<ClayTabs justified />);
 
-		expect(container).toMatchSnapshot();
+		expect(container.querySelector('.nav.nav-justified')).toBeTruthy();
 	});
 
 	it('renders with modern style', () => {
 		const {container} = render(<ClayTabs modern />);
 
-		expect(container).toMatchSnapshot();
+		expect(container.querySelector('.nav.nav-underline')).toBeTruthy();
 	});
 
 	it('renders with items', () => {
@@ -76,32 +76,37 @@ describe('ClayTabs', () => {
 	});
 
 	it('renders nav items as anchors', () => {
-		const {container} = render(
+		const {getAllByTestId} = render(
 			<>
 				<ClayTabs>
-					<ClayTabs.Item active component="a" />
+					<ClayTabs.Item active href="https://clay.dev/foo" />
 					{'One'}
-					<ClayTabs.Item component="a">{'Two'}</ClayTabs.Item>
+					<ClayTabs.Item href="https://clay.dev/bar">
+						{'Two'}
+					</ClayTabs.Item>
 				</ClayTabs>
-				<ClayTabs.Content activeTabKey={1}>
+				<ClayTabs.Content activeIndex={1}>
 					<ClayTabs.TabPane>{'Content One'}</ClayTabs.TabPane>
 					<ClayTabs.TabPane>{'Content Two'}</ClayTabs.TabPane>
 				</ClayTabs.Content>
 			</>
 		);
 
-		expect(container).toMatchSnapshot();
+		const tabItems = getAllByTestId('tabItem');
+
+		expect(tabItems[0].nodeName).toBe('A');
+		expect(tabItems[1].nodeName).toBe('A');
 	});
 
 	it('renders disabled nav items', () => {
-		const {container} = render(
+		const {getAllByTestId} = render(
 			<>
 				<ClayTabs>
 					<ClayTabs.Item active>{'One'}</ClayTabs.Item>
 					<ClayTabs.Item>{'Two'}</ClayTabs.Item>
 					<ClayTabs.Item disabled>{'Three'}</ClayTabs.Item>
 				</ClayTabs>
-				<ClayTabs.Content activeTabKey={1}>
+				<ClayTabs.Content activeIndex={1}>
 					<ClayTabs.TabPane>{'Content One'}</ClayTabs.TabPane>
 					<ClayTabs.TabPane>{'Content Two'}</ClayTabs.TabPane>
 					<ClayTabs.TabPane>{'Content Three'}</ClayTabs.TabPane>
@@ -109,7 +114,10 @@ describe('ClayTabs', () => {
 			</>
 		);
 
-		expect(container).toMatchSnapshot();
+		const tabItems = getAllByTestId('tabItem');
+
+		expect(tabItems[2].classList).toContain('disabled');
+		expect(tabItems[2].attributes.getNamedItem('disabled')).toBeTruthy();
 	});
 
 	it('emits a number when clicking an item', () => {
@@ -121,11 +129,9 @@ describe('ClayTabs', () => {
 					<ClayTabs.Item active onClick={onClick}>
 						{'One'}
 					</ClayTabs.Item>
-					<ClayTabs.Item component="a" onClick={onClick}>
-						{'Two'}
-					</ClayTabs.Item>
+					<ClayTabs.Item onClick={onClick}>{'Two'}</ClayTabs.Item>
 				</ClayTabs>
-				<ClayTabs.Content activeTabKey={1}>
+				<ClayTabs.Content activeIndex={1}>
 					<ClayTabs.TabPane>{'Content One'}</ClayTabs.TabPane>
 					<ClayTabs.TabPane>{'Content Two'}</ClayTabs.TabPane>
 				</ClayTabs.Content>

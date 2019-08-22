@@ -36,7 +36,7 @@ export const ClayTabs: React.FunctionComponent<IProps> & {
 	return (
 		<ul
 			className={classNames(
-				`nav`,
+				'nav',
 				{
 					'nav-justified': justified,
 					'nav-tabs': !modern,

@@ -61,6 +61,7 @@ const Item = React.forwardRef<any, IProps>(
 					disabled,
 				})}
 				data-testid="tabItem"
+				disabled={disabled}
 				href={href}
 				onClick={onClick}
 				ref={ref}
