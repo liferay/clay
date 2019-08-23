@@ -8,15 +8,22 @@ import classNames from 'classnames';
 import React from 'react';
 
 const ClayListItemTitle: React.FunctionComponent<
-	React.HTMLAttributes<HTMLHeadingElement>
-> = ({children, className, ...otherProps}) => {
-	return (
-		<p
-			{...otherProps}
-			className={classNames('list-group-title', className)}
-		>
+	React.BaseHTMLAttributes<HTMLAnchorElement>
+> = ({children, className, href, ...otherProps}) => {
+	const TagName = href ? 'div' : 'p';
+
+	const content = href ? (
+		<a href={href} {...otherProps}>
 			{children}
-		</p>
+		</a>
+	) : (
+		children
+	);
+
+	return (
+		<TagName className={classNames('list-group-title', className)}>
+			{content}
+		</TagName>
 	);
 };
 

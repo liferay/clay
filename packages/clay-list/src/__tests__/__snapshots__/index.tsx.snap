@@ -121,3 +121,115 @@ exports[`ClayList renders 1`] = `
   </li>
 </ul>
 `;
+
+exports[`ClayListWithItems renders with headers 1`] = `
+<div>
+  <div
+    class=""
+  >
+    <ul
+      class="list-group show-quick-actions-on-hover"
+    >
+      <li
+        class="list-group-header"
+      >
+        <p
+          class="list-group-header-title"
+        >
+          List of Files
+        </p>
+      </li>
+      <li
+        class="list-group-item list-group-item-flex"
+      >
+        <div
+          class="autofit-col"
+        >
+          <span
+            class="sticker sticker-rounded sticker-secondary"
+          >
+            <span
+              class="sticker-overlay"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-folder"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/foo/bar#folder"
+                />
+              </svg>
+            </span>
+          </span>
+        </div>
+        <div
+          class="autofit-col autofit-col-expand"
+        >
+          <div
+            class="list-group-title"
+          >
+            <a
+              href="#"
+            >
+              Account Example One
+            </a>
+          </div>
+          <p
+            class="list-group-text"
+          >
+            id is 1
+          </p>
+        </div>
+        <div
+          class="autofit-col"
+        />
+      </li>
+      <li
+        class="list-group-item list-group-item-flex"
+      >
+        <div
+          class="autofit-col"
+        >
+          <span
+            class="sticker sticker-rounded sticker-secondary"
+          >
+            <span
+              class="sticker-overlay"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-folder"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/foo/bar#folder"
+                />
+              </svg>
+            </span>
+          </span>
+        </div>
+        <div
+          class="autofit-col autofit-col-expand"
+        >
+          <div
+            class="list-group-title"
+          >
+            <a
+              href="#"
+            >
+              Account Example One
+            </a>
+          </div>
+          <p
+            class="list-group-text"
+          >
+            id is 2
+          </p>
+        </div>
+        <div
+          class="autofit-col"
+        />
+      </li>
+    </ul>
+  </div>
+</div>
+`;

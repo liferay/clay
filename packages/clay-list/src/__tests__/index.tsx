@@ -5,8 +5,9 @@
  */
 
 import * as TestRenderer from 'react-test-renderer';
-import ClayList from '..';
+import ClayList, {ClayListWithItems} from '..';
 import React from 'react';
+import {cleanup, fireEvent, render} from '@testing-library/react';
 
 describe('ClayList', () => {
 	it('renders', () => {
@@ -58,5 +59,96 @@ describe('ClayList', () => {
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+});
+
+describe('ClayListWithItems', () => {
+	afterEach(cleanup);
+
+	it('renders with headers', () => {
+		const items = [
+			{
+				header: 'List of Files',
+				items: [
+					{
+						description: 'id is 1',
+						href: '#',
+						id: '1',
+						title: 'Account Example One',
+					},
+					{
+						description: 'id is 2',
+						href: '#',
+						id: '2',
+						title: 'Account Example One',
+					},
+				],
+			},
+		];
+
+		const {container} = render(
+			<ClayListWithItems items={items} spritemap="/foo/bar" />
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('calls `onSelectedItemsChange` when items are selected', () => {
+		const items = [
+			{
+				description: 'id is 0',
+				href: '#',
+				id: '0',
+				title: 'Account Example One',
+			},
+		];
+
+		const callbackFn = jest.fn();
+
+		const {container} = render(
+			<ClayListWithItems
+				items={items}
+				onSelectedItemsChange={callbackFn}
+				selectedItemsMap={{}}
+				spritemap="/foo/bar"
+			/>
+		);
+
+		fireEvent.click(
+			container.querySelector('.custom-control-input') as HTMLElement,
+			{}
+		);
+
+		expect(callbackFn).toHaveBeenCalledTimes(1);
+	});
+
+	it('calls action when clicked', () => {
+		const callbackFn = jest.fn();
+
+		const items = [
+			{
+				description: 'id is 0',
+				href: '#',
+				id: '0',
+				quickActions: [
+					{
+						onClick: callbackFn,
+						symbol: 'trash',
+					},
+				],
+				title: 'Account Example One',
+			},
+		];
+
+		const {container} = render(
+			<ClayListWithItems items={items} spritemap="/foo/bar" />
+		);
+
+		fireEvent.click(
+			container.querySelector('.quick-action-item') as HTMLElement,
+			{}
+		);
+
+		expect(callbackFn).toHaveBeenCalledTimes(1);
 	});
 });

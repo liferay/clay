@@ -5,7 +5,7 @@
  */
 import '@clayui/css/lib/css/atlas.css';
 import ClayIcon from '@clayui/icon';
-import ClayList from '../src';
+import ClayList, {ClayListWithItems} from '../src';
 import ClaySticker from '@clayui/sticker';
 import React from 'react';
 import {ClayCheckbox} from '@clayui/form';
@@ -13,6 +13,78 @@ import {select} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+
+const dropdownActions = [
+	{
+		label: 'clickable',
+		onClick: () => {
+			alert('you clicked!');
+		},
+	},
+	{type: 'divider'},
+	{
+		href: '#',
+		label: 'linkable',
+	},
+];
+
+const items = [
+	{
+		classPK: '0',
+		description: 'classPK is 0',
+		dropdownActions,
+		href: '#',
+		title: 'Account Example One',
+	},
+	{
+		header: 'List of Files',
+		items: [
+			{
+				classPK: '1',
+				description: 'classPK is 1',
+				dropdownActions,
+				href: '#',
+				title: 'Account Example One',
+			},
+			{
+				classPK: '2',
+				description: 'classPK is 2',
+				dropdownActions,
+				href: '#',
+				title: 'Account Example One',
+			},
+		],
+	},
+	{
+		header: 'Additional Header',
+		items: [
+			{
+				classPK: '3',
+				description: 'classPK is 3',
+				dropdownActions,
+				href: '#',
+				labels: [
+					{
+						displayType: 'success',
+						value: 'Awesome',
+					},
+					{
+						displayType: 'danger',
+						value: 'Crazy',
+					},
+				],
+				quickActions: [
+					{
+						onClick: () => alert('Clicked the cog!'),
+						symbol: 'trash',
+					},
+				],
+				symbol: '',
+				title: 'Account Example Two',
+			},
+		],
+	},
+];
 
 storiesOf('ClayList', module)
 	.add('simple', () => (
@@ -126,5 +198,27 @@ storiesOf('ClayList', module)
 					</ClayList.Item>
 				))}
 			</ClayList>
+		);
+	})
+	.add('ClayListWithItems', () => {
+		return (
+			<ClayListWithItems
+				itemIdentifier="classPK"
+				items={items}
+				spritemap={spritemap}
+			/>
+		);
+	})
+	.add('ClayListWithItems  w/selectable', () => {
+		const [selectedMap, setSelectedMap] = React.useState({});
+
+		return (
+			<ClayListWithItems
+				itemIdentifier="classPK"
+				items={items}
+				onSelectedItemsChange={setSelectedMap}
+				selectedItemsMap={selectedMap}
+				spritemap={spritemap}
+			/>
 		);
 	});
