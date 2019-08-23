@@ -221,6 +221,7 @@ module.exports = function(gulp, plugins, _, config) {
 					toggleSwitch: 'Toggle Switch',
 					tooltip: 'Tooltip',
 					utilities: 'Utilities',
+					vendorPrefixes: 'Vendor Prefixes',
 				},
 			};
 
