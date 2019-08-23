@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/alert",
-	"version": "3.0.0-milestone.2",
+	"version": "3.0.0-milestone.3",
 	"description": "ClayAlert component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-alert",
@@ -26,11 +26,11 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/icon": "^3.0.0-milestone.2",
+		"@clayui/icon": "^3.0.0-milestone.3",
 		"classnames": "^2.2.6"
 	},
 	"devDependencies": {
-		"@clayui/css": "^3.0.0-milestone.2"
+		"@clayui/css": "^3.0.0-milestone.3"
 	},
 	"peerDependencies": {
 		"react": "^16.8.1",
