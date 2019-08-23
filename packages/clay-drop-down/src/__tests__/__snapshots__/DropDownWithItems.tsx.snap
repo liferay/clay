@@ -15,40 +15,42 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems 1`] = `
     </div>
   </div>
   <div>
-    <div
-      class="dropdown-menu"
-      style="top: 0px; left: 0px;"
-    >
-      <ul
-        class="list-unstyled"
+    <div>
+      <div
+        class="dropdown-menu"
+        style="top: 0px; left: 0px;"
       >
-        <li
-          tabindex="-1"
+        <ul
+          class="list-unstyled"
         >
-          <button
-            class="dropdown-item"
-            label="clickable"
+          <li
+            tabindex="-1"
           >
-            clickable
-          </button>
-        </li>
-        <li
-          aria-hidden="true"
-          class="dropdown-divider"
-          role="presentation"
-        />
-        <li
-          tabindex="-1"
-        >
-          <a
-            class="dropdown-item"
-            href="#"
-            label="linkable"
+            <button
+              class="dropdown-item"
+              label="clickable"
+            >
+              clickable
+            </button>
+          </li>
+          <li
+            aria-hidden="true"
+            class="dropdown-divider"
+            role="presentation"
+          />
+          <li
+            tabindex="-1"
           >
-            linkable
-          </a>
-        </li>
-      </ul>
+            <a
+              class="dropdown-item"
+              href="#"
+              label="linkable"
+            >
+              linkable
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </body>
@@ -69,29 +71,31 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with caption 1`] = `
     </div>
   </div>
   <div>
-    <div
-      class="dropdown-menu"
-      style="top: 0px; left: 0px;"
-    >
-      <ul
-        class="list-unstyled"
-      >
-        <li
-          tabindex="-1"
-        >
-          <a
-            class="dropdown-item"
-            href="#"
-            label="linkable"
-          >
-            linkable
-          </a>
-        </li>
-      </ul>
+    <div>
       <div
-        class="dropdown-caption"
+        class="dropdown-menu"
+        style="top: 0px; left: 0px;"
       >
-        Showing 7 of 203 Structures
+        <ul
+          class="list-unstyled"
+        >
+          <li
+            tabindex="-1"
+          >
+            <a
+              class="dropdown-item"
+              href="#"
+              label="linkable"
+            >
+              linkable
+            </a>
+          </li>
+        </ul>
+        <div
+          class="dropdown-caption"
+        >
+          Showing 7 of 203 Structures
+        </div>
       </div>
     </div>
   </div>
@@ -113,83 +117,85 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with checkbox 1`] = `
     </div>
   </div>
   <div>
-    <div
-      class="dropdown-menu"
-      style="top: 0px; left: 0px;"
-    >
-      <ul
-        class="list-unstyled"
+    <div>
+      <div
+        class="dropdown-menu"
+        style="top: 0px; left: 0px;"
       >
-        <li
-          class="dropdown-subheader"
-          role="presentation"
-        >
-          checkbox
-        </li>
         <ul
           class="list-unstyled"
         >
           <li
-            tabindex="-1"
+            class="dropdown-subheader"
+            role="presentation"
           >
-            <span
-              class="dropdown-item"
-            >
-              <div
-                class="custom-control custom-checkbox"
-              >
-                <label>
-                  <input
-                    checked=""
-                    class="custom-control-input"
-                    spritemap="icons.svg"
-                    type="checkbox"
-                    value="true"
-                  />
-                  <span
-                    class="custom-control-label"
-                  >
-                    <span
-                      class="custom-control-label-text"
-                    >
-                      checkbox
-                    </span>
-                  </span>
-                </label>
-              </div>
-            </span>
+            checkbox
           </li>
-          <li
-            tabindex="-1"
+          <ul
+            class="list-unstyled"
           >
-            <span
-              class="dropdown-item"
+            <li
+              tabindex="-1"
             >
-              <div
-                class="custom-control custom-checkbox"
+              <span
+                class="dropdown-item"
               >
-                <label>
-                  <input
-                    class="custom-control-input"
-                    spritemap="icons.svg"
-                    type="checkbox"
-                    value="false"
-                  />
-                  <span
-                    class="custom-control-label"
-                  >
+                <div
+                  class="custom-control custom-checkbox"
+                >
+                  <label>
+                    <input
+                      checked=""
+                      class="custom-control-input"
+                      spritemap="icons.svg"
+                      type="checkbox"
+                      value="true"
+                    />
                     <span
-                      class="custom-control-label-text"
+                      class="custom-control-label"
                     >
-                      checkbox 1
+                      <span
+                        class="custom-control-label-text"
+                      >
+                        checkbox
+                      </span>
                     </span>
-                  </span>
-                </label>
-              </div>
-            </span>
-          </li>
+                  </label>
+                </div>
+              </span>
+            </li>
+            <li
+              tabindex="-1"
+            >
+              <span
+                class="dropdown-item"
+              >
+                <div
+                  class="custom-control custom-checkbox"
+                >
+                  <label>
+                    <input
+                      class="custom-control-input"
+                      spritemap="icons.svg"
+                      type="checkbox"
+                      value="false"
+                    />
+                    <span
+                      class="custom-control-label"
+                    >
+                      <span
+                        class="custom-control-label-text"
+                      >
+                        checkbox 1
+                      </span>
+                    </span>
+                  </label>
+                </div>
+              </span>
+            </li>
+          </ul>
         </ul>
-      </ul>
+      </div>
     </div>
   </div>
 </body>
@@ -210,41 +216,43 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with footer content 1
     </div>
   </div>
   <div>
-    <div
-      class="dropdown-menu"
-      style="top: 0px; left: 0px;"
-    >
-      <form>
-        <div
-          class="inline-scroller"
-        >
-          <ul
-            class="list-unstyled"
+    <div>
+      <div
+        class="dropdown-menu"
+        style="top: 0px; left: 0px;"
+      >
+        <form>
+          <div
+            class="inline-scroller"
           >
-            <li
-              tabindex="-1"
+            <ul
+              class="list-unstyled"
             >
-              <a
-                class="dropdown-item"
-                href="#"
-                label="linkable"
+              <li
+                tabindex="-1"
               >
-                linkable
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div
-          class="dropdown-section"
-        >
-          <button
-            class="btn btn-primary"
-            type="button"
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  label="linkable"
+                >
+                  linkable
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="dropdown-section"
           >
-            Done
-          </button>
-        </div>
-      </form>
+            <button
+              class="btn btn-primary"
+              type="button"
+            >
+              Done
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </body>
@@ -265,31 +273,33 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with help text 1`] = 
     </div>
   </div>
   <div>
-    <div
-      class="dropdown-menu"
-      style="top: 0px; left: 0px;"
-    >
+    <div>
       <div
-        class="alert alert-fluid alert-info"
-        role="alert"
+        class="dropdown-menu"
+        style="top: 0px; left: 0px;"
       >
-        Help Text
-      </div>
-      <ul
-        class="list-unstyled"
-      >
-        <li
-          tabindex="-1"
+        <div
+          class="alert alert-fluid alert-info"
+          role="alert"
         >
-          <a
-            class="dropdown-item"
-            href="#"
-            label="linkable"
+          Help Text
+        </div>
+        <ul
+          class="list-unstyled"
+        >
+          <li
+            tabindex="-1"
           >
-            linkable
-          </a>
-        </li>
-      </ul>
+            <a
+              class="dropdown-item"
+              href="#"
+              label="linkable"
+            >
+              linkable
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </body>
@@ -310,91 +320,93 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with radio group 1`] 
     </div>
   </div>
   <div>
-    <div
-      class="dropdown-menu"
-      style="top: 0px; left: 0px;"
-    >
-      <ul
-        class="list-unstyled"
+    <div>
+      <div
+        class="dropdown-menu"
+        style="top: 0px; left: 0px;"
       >
-        <li
-          class="dropdown-subheader"
-          role="presentation"
+        <ul
+          class="list-unstyled"
         >
-          radio
-        </li>
-        <li
-          aria-label="radio"
-          role="radiogroup"
-        >
-          <ul
-            class="list-unstyled"
+          <li
+            class="dropdown-subheader"
+            role="presentation"
           >
-            <li
-              tabindex="-1"
+            radio
+          </li>
+          <li
+            aria-label="radio"
+            role="radiogroup"
+          >
+            <ul
+              class="list-unstyled"
             >
-              <span
-                class="dropdown-item"
+              <li
+                tabindex="-1"
               >
-                <div
-                  class="custom-control custom-radio custom-control-inline"
+                <span
+                  class="dropdown-item"
                 >
-                  <label>
-                    <input
-                      class="custom-control-input"
-                      name="radio"
-                      role="radio"
-                      spritemap="icons.svg"
-                      type="radio"
-                      value="one"
-                    />
-                    <span
-                      class="custom-control-label"
-                    >
+                  <div
+                    class="custom-control custom-radio custom-control-inline"
+                  >
+                    <label>
+                      <input
+                        class="custom-control-input"
+                        name="radio"
+                        role="radio"
+                        spritemap="icons.svg"
+                        type="radio"
+                        value="one"
+                      />
                       <span
-                        class="custom-control-label-text"
+                        class="custom-control-label"
                       >
-                        one
+                        <span
+                          class="custom-control-label-text"
+                        >
+                          one
+                        </span>
                       </span>
-                    </span>
-                  </label>
-                </div>
-              </span>
-            </li>
-            <li
-              tabindex="-1"
-            >
-              <span
-                class="dropdown-item"
+                    </label>
+                  </div>
+                </span>
+              </li>
+              <li
+                tabindex="-1"
               >
-                <div
-                  class="custom-control custom-radio custom-control-inline"
+                <span
+                  class="dropdown-item"
                 >
-                  <label>
-                    <input
-                      class="custom-control-input"
-                      name="radio"
-                      role="radio"
-                      spritemap="icons.svg"
-                      type="radio"
-                      value="two"
-                    />
-                    <span
-                      class="custom-control-label"
-                    >
+                  <div
+                    class="custom-control custom-radio custom-control-inline"
+                  >
+                    <label>
+                      <input
+                        class="custom-control-input"
+                        name="radio"
+                        role="radio"
+                        spritemap="icons.svg"
+                        type="radio"
+                        value="two"
+                      />
                       <span
-                        class="custom-control-label-text"
+                        class="custom-control-label"
                       >
-                        two
+                        <span
+                          class="custom-control-label-text"
+                        >
+                          two
+                        </span>
                       </span>
-                    </span>
-                  </label>
-                </div>
-              </span>
-            </li>
-          </ul>
-        </li>
-      </ul>
+                    </label>
+                  </div>
+                </span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </body>
@@ -415,61 +427,63 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with search 1`] = `
     </div>
   </div>
   <div>
-    <div
-      class="dropdown-menu"
-      style="top: 0px; left: 0px;"
-    >
-      <form>
-        <div
-          class="dropdown-section"
-        >
+    <div>
+      <div
+        class="dropdown-menu"
+        style="top: 0px; left: 0px;"
+      >
+        <form>
           <div
-            class="input-group input-group-sm"
+            class="dropdown-section"
           >
             <div
-              class="input-group-item"
+              class="input-group input-group-sm"
             >
-              <input
-                class="form-control input-group-inset input-group-inset-after"
-                type="text"
-                value="Search"
-              />
-              <span
-                class="input-group-inset-item input-group-inset-item-after"
+              <div
+                class="input-group-item"
               >
-                <button
-                  class="btn btn-unstyled"
-                  type="button"
+                <input
+                  class="form-control input-group-inset input-group-inset-after"
+                  type="text"
+                  value="Search"
+                />
+                <span
+                  class="input-group-inset-item input-group-inset-item-after"
                 >
-                  <svg
-                    class="lexicon-icon lexicon-icon-search"
-                    role="presentation"
+                  <button
+                    class="btn btn-unstyled"
+                    type="button"
                   >
-                    <use
-                      xlink:href="icons.svg#search"
-                    />
-                  </svg>
-                </button>
-              </span>
+                    <svg
+                      class="lexicon-icon lexicon-icon-search"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="icons.svg#search"
+                      />
+                    </svg>
+                  </button>
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-      </form>
-      <ul
-        class="list-unstyled"
-      >
-        <li
-          tabindex="-1"
+        </form>
+        <ul
+          class="list-unstyled"
         >
-          <a
-            class="dropdown-item"
-            href="#"
-            label="linkable"
+          <li
+            tabindex="-1"
           >
-            linkable
-          </a>
-        </li>
-      </ul>
+            <a
+              class="dropdown-item"
+              href="#"
+              label="linkable"
+            >
+              linkable
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </body>

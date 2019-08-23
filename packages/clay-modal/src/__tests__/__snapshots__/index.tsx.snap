@@ -12,60 +12,65 @@ exports[`ClayModal renders 1`] = `
       class="fade modal d-block"
     >
       <div
-        class="modal-dialog"
-        tabindex="-1"
+        class="modal-undefined"
+        style="margin: auto;"
       >
         <div
-          class="modal-content"
+          class="modal-dialog"
+          tabindex="-1"
         >
           <div
-            class="modal-header"
+            class="modal-content"
           >
             <div
-              class="modal-title"
+              class="modal-header"
             >
-              Foo
-            </div>
-            <button
-              aria-label="close"
-              class="close btn btn-unstyled"
-              type="button"
-            >
-              <svg
-                class="lexicon-icon lexicon-icon-times"
-                role="presentation"
+              <div
+                class="modal-title"
               >
-                <use
-                  xlink:href="icons.svg#times"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            class="modal-body"
-          >
-            <h1>
-              Hello world!
-            </h1>
-          </div>
-          <div
-            class="modal-footer"
-          >
-            <div
-              class="modal-item-first"
-            />
-            <div
-              class="modal-item"
-            />
-            <div
-              class="modal-item-last"
-            >
+                Foo
+              </div>
               <button
-                class="btn btn-primary"
+                aria-label="close"
+                class="close btn btn-unstyled"
                 type="button"
               >
-                Primary
+                <svg
+                  class="lexicon-icon lexicon-icon-times"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="icons.svg#times"
+                  />
+                </svg>
               </button>
+            </div>
+            <div
+              class="modal-body"
+            >
+              <h1>
+                Hello world!
+              </h1>
+            </div>
+            <div
+              class="modal-footer"
+            >
+              <div
+                class="modal-item-first"
+              />
+              <div
+                class="modal-item"
+              />
+              <div
+                class="modal-item-last"
+              >
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                >
+                  Primary
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -88,19 +93,24 @@ exports[`ClayModal renders a body component with url 1`] = `
       class="fade modal d-block"
     >
       <div
-        class="modal-dialog"
-        tabindex="-1"
+        class="modal-undefined"
+        style="margin: auto;"
       >
         <div
-          class="modal-content"
+          class="modal-dialog"
+          tabindex="-1"
         >
           <div
-            class="modal-body modal-body-iframe"
+            class="modal-content"
           >
-            <iframe
-              src="http://localhost"
-              title="http://localhost"
-            />
+            <div
+              class="modal-body modal-body-iframe"
+            >
+              <iframe
+                src="http://localhost"
+                title="http://localhost"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -122,44 +132,49 @@ exports[`ClayModal renders a footer component with buttons 1`] = `
       class="fade modal d-block"
     >
       <div
-        class="modal-dialog"
-        tabindex="-1"
+        class="modal-undefined"
+        style="margin: auto;"
       >
         <div
-          class="modal-content"
+          class="modal-dialog"
+          tabindex="-1"
         >
           <div
-            class="modal-footer"
+            class="modal-content"
           >
             <div
-              class="modal-item-first"
+              class="modal-footer"
             >
-              <button
-                class="btn btn-primary"
-                type="button"
+              <div
+                class="modal-item-first"
               >
-                Bar
-              </button>
-            </div>
-            <div
-              class="modal-item"
-            >
-              <button
-                class="btn btn-primary"
-                type="button"
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                >
+                  Bar
+                </button>
+              </div>
+              <div
+                class="modal-item"
               >
-                Baz
-              </button>
-            </div>
-            <div
-              class="modal-item-last"
-            >
-              <button
-                class="btn btn-primary"
-                type="button"
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                >
+                  Baz
+                </button>
+              </div>
+              <div
+                class="modal-item-last"
               >
-                Foo
-              </button>
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                >
+                  Foo
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -182,34 +197,39 @@ exports[`ClayModal renders with Header 1`] = `
       class="fade modal d-block"
     >
       <div
-        class="modal-dialog"
-        tabindex="-1"
+        class="modal-undefined"
+        style="margin: auto;"
       >
         <div
-          class="modal-content"
+          class="modal-dialog"
+          tabindex="-1"
         >
           <div
-            class="modal-header"
+            class="modal-content"
           >
             <div
-              class="modal-title"
+              class="modal-header"
             >
-              Foo
-            </div>
-            <button
-              aria-label="close"
-              class="close btn btn-unstyled"
-              type="button"
-            >
-              <svg
-                class="lexicon-icon lexicon-icon-times"
-                role="presentation"
+              <div
+                class="modal-title"
               >
-                <use
-                  xlink:href="icons.svg#times"
-                />
-              </svg>
-            </button>
+                Foo
+              </div>
+              <button
+                aria-label="close"
+                class="close btn btn-unstyled"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-times"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="icons.svg#times"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -231,12 +251,17 @@ exports[`ClayModal renders with size 1`] = `
       class="fade modal d-block"
     >
       <div
-        class="modal-dialog modal-lg"
-        tabindex="-1"
+        class="modal-lg"
+        style="margin: auto;"
       >
         <div
-          class="modal-content"
-        />
+          class="modal-dialog modal-lg"
+          tabindex="-1"
+        >
+          <div
+            class="modal-content"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -256,12 +281,17 @@ exports[`ClayModal renders with status 1`] = `
       class="fade modal d-block"
     >
       <div
-        class="modal-dialog modal-success"
-        tabindex="-1"
+        class="modal-undefined"
+        style="margin: auto;"
       >
         <div
-          class="modal-content"
-        />
+          class="modal-dialog modal-success"
+          tabindex="-1"
+        >
+          <div
+            class="modal-content"
+          />
+        </div>
       </div>
     </div>
   </div>

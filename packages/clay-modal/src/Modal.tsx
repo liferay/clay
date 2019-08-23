@@ -43,9 +43,8 @@ const ClayModal: FunctionComponent<IProps> & {
 	...otherProps
 }: IProps) => {
 	const modalBodyElementRef = useRef<HTMLDivElement | null>(null);
-	const modalDialogElementRef = useRef<HTMLDivElement | null>(null);
 
-	useUserInteractions(modalDialogElementRef, () =>
+	useUserInteractions(modalBodyElementRef, () =>
 		observer.dispatch(ObserverType.Close)
 	);
 
@@ -63,27 +62,31 @@ const ClayModal: FunctionComponent<IProps> & {
 				className={classNames('fade modal d-block', className, {
 					show: observer.mutation,
 				})}
-				ref={modalBodyElementRef}
 			>
 				<div
-					className={classNames('modal-dialog', {
-						[`modal-${size}`]: size,
-						[`modal-${status}`]: status,
-					})}
-					ref={modalDialogElementRef}
-					tabIndex={-1}
+					className={`modal-${size}`}
+					ref={modalBodyElementRef}
+					style={{margin: 'auto'}}
 				>
-					<div className="modal-content">
-						<Context.Provider
-							value={{
-								onClose: () =>
-									observer.dispatch(ObserverType.Close),
-								spritemap,
-								status,
-							}}
-						>
-							{children}
-						</Context.Provider>
+					<div
+						className={classNames('modal-dialog', {
+							[`modal-${size}`]: size,
+							[`modal-${status}`]: status,
+						})}
+						tabIndex={-1}
+					>
+						<div className="modal-content">
+							<Context.Provider
+								value={{
+									onClose: () =>
+										observer.dispatch(ObserverType.Close),
+									spritemap,
+									status,
+								}}
+							>
+								{children}
+							</Context.Provider>
+						</div>
 					</div>
 				</div>
 			</div>

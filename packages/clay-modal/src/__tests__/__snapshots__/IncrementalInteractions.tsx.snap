@@ -28,60 +28,65 @@ exports[`ModalProvider -> IncrementalInteractions renders a modal when dispatchi
       class="fade modal d-block"
     >
       <div
-        class="modal-dialog modal-lg"
-        tabindex="-1"
+        class="modal-lg"
+        style="margin: auto;"
       >
         <div
-          class="modal-content"
+          class="modal-dialog modal-lg"
+          tabindex="-1"
         >
           <div
-            class="modal-header"
+            class="modal-content"
           >
             <div
-              class="modal-title"
+              class="modal-header"
             >
-              Title
-            </div>
-            <button
-              aria-label="close"
-              class="close btn btn-unstyled"
-              type="button"
-            >
-              <svg
-                class="lexicon-icon lexicon-icon-times"
-                role="presentation"
+              <div
+                class="modal-title"
               >
-                <use
-                  xlink:href="icons.svg#times"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            class="modal-body"
-          >
-            <h1>
-              Hello world!
-            </h1>
-          </div>
-          <div
-            class="modal-footer"
-          >
-            <div
-              class="modal-item-first"
-            />
-            <div
-              class="modal-item"
-            />
-            <div
-              class="modal-item-last"
-            >
+                Title
+              </div>
               <button
-                class="btn btn-primary"
+                aria-label="close"
+                class="close btn btn-unstyled"
                 type="button"
               >
-                Primary
+                <svg
+                  class="lexicon-icon lexicon-icon-times"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="icons.svg#times"
+                  />
+                </svg>
               </button>
+            </div>
+            <div
+              class="modal-body"
+            >
+              <h1>
+                Hello world!
+              </h1>
+            </div>
+            <div
+              class="modal-footer"
+            >
+              <div
+                class="modal-item-first"
+              />
+              <div
+                class="modal-item"
+              />
+              <div
+                class="modal-item-last"
+              >
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                >
+                  Primary
+                </button>
+              </div>
             </div>
           </div>
         </div>
