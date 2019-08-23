@@ -145,7 +145,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 		configName: TimeType.hours,
 		focused: false,
 	};
-	const focusedRef = useRef<{
+	const [currentInputFocused, setCurrentInputFocused] = useState<{
 		configName: TimeType;
 		focused: boolean;
 	}>(defaultFocused);
@@ -232,7 +232,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 	};
 
 	const handleAction = (direction: number) => {
-		const {configName} = focusedRef.current;
+		const {configName} = currentInputFocused;
 		const config = useConfig[configName];
 		const prevValue = values[configName];
 		let value;
@@ -255,6 +255,10 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 			);
 		}
 
+		setCurrentInputFocused({
+			configName,
+			focused: true,
+		});
 		onInputChange({
 			...values,
 			// eslint-disable-next-line sort-keys
@@ -268,19 +272,19 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 			event.target !== null &&
 			!elementRef.current.contains(event.target as HTMLDivElement)
 		) {
-			focusedRef.current = defaultFocused;
 			setActionVisible(false);
+			setCurrentInputFocused(defaultFocused);
 			setIsFocused(false);
 		}
 	};
 
 	const handleInputFocus = (configName: TimeType) => {
-		focusedRef.current = {
+		setActionVisible(true);
+		setCurrentInputFocused({
 			configName,
 			focused: true,
-		};
+		});
 		setIsFocused(true);
-		setActionVisible(true);
 	};
 
 	useEffect(() => {
@@ -320,7 +324,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 							}
 						}}
 						onMouseLeave={() => {
-							if (!focusedRef.current.focused && !disabled) {
+							if (!currentInputFocused.focused && !disabled) {
 								setActionVisible(false);
 							}
 						}}
@@ -328,7 +332,15 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 					>
 						<div className="clay-time-edit">
 							<input
-								className="clay-time-hours form-control-inset"
+								className={classNames(
+									'clay-time-hours form-control-inset',
+									{
+										focus:
+											currentInputFocused.configName ===
+												TimeType.hours &&
+											currentInputFocused.focused,
+									}
+								)}
 								data-testid="hours"
 								disabled={disabled}
 								maxLength={2}
@@ -340,6 +352,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 										TimeType.hours
 									)
 								}
+								readOnly
 								ref={ref =>
 									focusManager.createScope(ref, 'hour')
 								}
@@ -348,7 +361,14 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 							/>
 							<span className="clay-time-divider">{':'}</span>
 							<input
-								className="clay-time-minutes form-control-inset"
+								className={classNames(
+									'clay-time-minutes form-control-inset',
+									{
+										focus:
+											currentInputFocused.configName ===
+											TimeType.minutes,
+									}
+								)}
 								data-testid="minutes"
 								disabled={disabled}
 								maxLength={2}
@@ -362,6 +382,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 										TimeType.minutes
 									)
 								}
+								readOnly
 								ref={ref =>
 									focusManager.createScope(ref, 'minutes')
 								}
@@ -370,7 +391,14 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 							/>
 							{use12Hours && (
 								<input
-									className="clay-time-ampm form-control-inset"
+									className={classNames(
+										'clay-time-ampm form-control-inset',
+										{
+											focus:
+												currentInputFocused.configName ===
+												TimeType.ampm,
+										}
+									)}
 									data-testid="ampm"
 									disabled={disabled}
 									max-length="2"
@@ -384,6 +412,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 											TimeType.ampm
 										)
 									}
+									readOnly
 									ref={ref =>
 										focusManager.createScope(ref, 'ampm')
 									}

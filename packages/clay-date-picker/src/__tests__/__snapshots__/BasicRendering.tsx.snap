@@ -1644,6 +1644,7 @@ exports[`BasicRendering renders date picker with time 1`] = `
                         class="clay-time-hours form-control-inset"
                         data-testid="hours"
                         maxlength="2"
+                        readonly=""
                         type="text"
                         value="0"
                       />
@@ -1656,6 +1657,7 @@ exports[`BasicRendering renders date picker with time 1`] = `
                         class="clay-time-minutes form-control-inset"
                         data-testid="minutes"
                         maxlength="2"
+                        readonly=""
                         type="text"
                         value="0"
                       />
