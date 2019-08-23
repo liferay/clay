@@ -21,7 +21,9 @@ const dropdownActions = [
 			alert('you clicked!');
 		},
 	},
-	{type: 'divider'},
+	{
+		type: 'divider' as const,
+	},
 	{
 		href: '#',
 		label: 'linkable',
