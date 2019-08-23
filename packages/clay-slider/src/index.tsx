@@ -49,10 +49,9 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	value: number;
 }
 
-const THUMB_WIDTH = 24;
-
 const calcProgressWidth = (
 	element: HTMLInputElement,
+	thumbWidth: number,
 	value: number,
 	min: number,
 	max: number,
@@ -63,14 +62,15 @@ const calcProgressWidth = (
 
 	const progressWidth = (currentStep / totalSteps) * 100;
 	const rangeWidth = element.clientWidth;
+
 	const ratio =
-		(((1 - progressWidth * 0.01) * (THUMB_WIDTH / 1.001)) / rangeWidth) *
+		(((1 - progressWidth * 0.01) * (thumbWidth / 1.001)) / rangeWidth) *
 		100;
 	let offsetWidth = progressWidth;
 
 	if (progressWidth !== 50) {
 		offsetWidth =
-			progressWidth - (THUMB_WIDTH / 2 / rangeWidth) * 100 + ratio;
+			progressWidth - (thumbWidth / 2 / rangeWidth) * 100 + ratio;
 	}
 
 	return offsetWidth;
@@ -90,18 +90,31 @@ const ClaySlider: React.FunctionComponent<IProps> = ({
 }) => {
 	const [offsetWidth, setOffsetWidth] = useState<number>(0);
 	const sliderRef = useRef<HTMLInputElement | null>(null);
+	const thumbRef = useRef<HTMLDivElement | null>(null);
 
 	const handleEvents = (event: React.ChangeEvent<HTMLInputElement>) => {
+		const thumbWidth = (thumbRef.current as HTMLDivElement).clientWidth;
 		const value = Number(event.target.value);
 
 		onValueChange(value);
-		setOffsetWidth(calcProgressWidth(event.target, value, min, max, step));
+		setOffsetWidth(
+			calcProgressWidth(event.target, thumbWidth, value, min, max, step)
+		);
 	};
 
 	useEffect(() => {
-		if (sliderRef.current) {
+		if (sliderRef.current && thumbRef.current) {
+			const thumbWidth = thumbRef.current.clientWidth;
+
 			setOffsetWidth(
-				calcProgressWidth(sliderRef.current, value, min, max, step)
+				calcProgressWidth(
+					sliderRef.current,
+					thumbWidth,
+					value,
+					min,
+					max,
+					step
+				)
 			);
 		}
 	}, []);
@@ -126,20 +139,24 @@ const ClaySlider: React.FunctionComponent<IProps> = ({
 					className="clay-range-progress"
 					style={{width: `${offsetWidth}%`}}
 				>
-					{showTooltip && (
-						<div
-							className={classNames(
-								'tooltip',
-								`clay-tooltip-${tooltipPosition}`
-							)}
-							role="tooltip"
-						>
-							<div className="tooltip-arrow" />
-							<div className="tooltip-inner">
-								<div className="clay-range-value">{value}</div>
+					<div className="clay-range-thumb" ref={thumbRef}>
+						{showTooltip && (
+							<div
+								className={classNames(
+									'tooltip',
+									`clay-tooltip-${tooltipPosition}`
+								)}
+								role="tooltip"
+							>
+								<div className="tooltip-arrow" />
+								<div className="tooltip-inner">
+									<div className="clay-range-value">
+										{value}
+									</div>
+								</div>
 							</div>
-						</div>
-					)}
+						)}
+					</div>
 				</div>
 			</div>
 		</div>

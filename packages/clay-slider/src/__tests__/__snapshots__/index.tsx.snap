@@ -24,19 +24,23 @@ exports[`ClaySlider renders 1`] = `
         style="width: 0%;"
       >
         <div
-          class="tooltip clay-tooltip-top"
-          role="tooltip"
+          class="clay-range-thumb"
         >
           <div
-            class="tooltip-arrow"
-          />
-          <div
-            class="tooltip-inner"
+            class="tooltip clay-tooltip-top"
+            role="tooltip"
           >
             <div
-              class="clay-range-value"
+              class="tooltip-arrow"
+            />
+            <div
+              class="tooltip-inner"
             >
-              10
+              <div
+                class="clay-range-value"
+              >
+                10
+              </div>
             </div>
           </div>
         </div>
