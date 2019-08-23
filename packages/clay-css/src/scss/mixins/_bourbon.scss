@@ -1,0 +1,31 @@
+@mixin overflow-wrap($value: break-word) {
+    overflow-wrap: $value;
+    word-wrap: $value;
+}
+
+@mixin user-select($value: none) {
+    -moz-user-select: $value;
+    -ms-user-select: $value;
+    -webkit-user-select: $value;
+    user-select: $value;
+}
+
+@mixin hyphens($value: none) {
+    -ms-hyphens: $value;
+    -webkit-hyphens: $value;
+    hyphens: $value;
+}
+
+@mixin placeholder {
+    ::-webkit-input-placeholder {
+        @content;
+    }
+
+    :-ms-input-placeholder {
+        @content;
+    }
+
+    ::placeholder {
+        @content;
+    }
+}
