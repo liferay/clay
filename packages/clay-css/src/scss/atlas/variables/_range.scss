@@ -1,0 +1,17 @@
+$clay-range-disabled-color: $gray-500 !default;
+
+$clay-range-input-group-text: () !default;
+$clay-range-input-group-text: map-merge((
+	color: $gray-500,
+), $clay-range-input-group-text);
+
+$clay-range-input: () !default;
+$clay-range-input: map-merge((
+	color: $gray-500,
+	thumb-box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.3),
+	track-bg: $gray-200,
+	tooltip-padding: 0.5rem 0.75rem,
+	hover-thumb-bg: $primary-l3,
+	focus-thumb-box-shadow: inset 0 0 0 0.125rem $primary-l1#{','} inset 0 0 0 0.25rem $white,
+	disabled-thumb-bg: $gray-100,
+), $clay-range-input);

@@ -1,0 +1,45 @@
+.clay-range {
+	padding-bottom: 0.1px;
+
+	.input-group {
+		@include clay-container($clay-range-input-group);
+	}
+
+	.input-group-item {
+		@include clay-container($clay-range-input-group-item);
+	}
+
+	.input-group-text {
+		@include clay-container($clay-range-input-group-text);
+	}
+
+	&.disabled {
+		.clay-range-title {
+			color: $clay-range-disabled-color;
+		}
+
+		.input-group-text {
+			color: $clay-range-disabled-color;
+		}
+	}
+}
+
+.clay-range-title {
+	@include clay-link($clay-range-title);
+}
+
+.clay-range-input {
+	@include clay-range-input-variant($clay-range-input);
+}
+
+.clay-range-align-items-start {
+	.input-group {
+		align-items: flex-start;
+	}
+}
+
+.clay-range-align-items-end {
+	.input-group {
+		align-items: flex-end;
+	}
+}
