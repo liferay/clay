@@ -13,10 +13,10 @@ exports[`ClayNavigationBar collapses the dropdown expanded when trigger element 
       class="navbar-nav"
     >
       <li
-        class="nav-item active"
+        class="nav-item"
       >
         <a
-          class="nav-link nav-link active link-secondary"
+          class="nav-link active link-secondary"
           href="#1"
         >
           <span
@@ -30,7 +30,7 @@ exports[`ClayNavigationBar collapses the dropdown expanded when trigger element 
         class="nav-item"
       >
         <button
-          class="nav-link nav-link btn btn-unstyled btn-block btn-sm"
+          class="nav-link btn btn-block btn-sm btn-unstyled"
           type="button"
         >
           <span
@@ -140,10 +140,10 @@ exports[`ClayNavigationBar renders a dropdown when clicking the collapsed elemen
       class="navbar-nav"
     >
       <li
-        class="nav-item active"
+        class="nav-item"
       >
         <a
-          class="nav-link nav-link active link-secondary"
+          class="nav-link active link-secondary"
           href="#1"
         >
           <span
@@ -157,7 +157,7 @@ exports[`ClayNavigationBar renders a dropdown when clicking the collapsed elemen
         class="nav-item"
       >
         <button
-          class="nav-link nav-link btn btn-unstyled btn-block btn-sm"
+          class="nav-link btn btn-block btn-sm btn-unstyled"
           type="button"
         >
           <span
