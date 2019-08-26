@@ -114,7 +114,11 @@ $input-select-icon-disabled: clay-icon(caret-double-l, $input-select-icon-disabl
 
 // Form Feedback
 
+$form-feedback-font-weight: $font-weight-semi-bold !default;
+
 $form-feedback-indicator-margin-x: 0 !default;
+
+$form-text-font-weight: $font-weight-semi-bold !default;
 
 // Textarea
 
