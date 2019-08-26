@@ -77,7 +77,7 @@ export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 	spritemap,
 	userDisplayType,
 	userImageSrc,
-}) => {
+}: IProps) => {
 	const content = (
 		<div className="aspect-ratio-item-center-middle card-type-asset-icon">
 			<ClaySticker

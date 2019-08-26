@@ -101,7 +101,7 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 	stickerProps,
 	symbol = 'documents-and-media',
 	title,
-}) => {
+}: IProps) => {
 	const headerContent = (
 		<ClayCard.AspectRatio className="card-item-first">
 			{!imgProps && (

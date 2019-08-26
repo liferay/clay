@@ -52,7 +52,7 @@ export const ClayCardWithHorizontal: React.FunctionComponent<IProps> = ({
 	spritemap,
 	symbol = 'folder',
 	title,
-}) => {
+}: IProps) => {
 	const content = (
 		<ClayCard.Body>
 			<div className="autofit-col">

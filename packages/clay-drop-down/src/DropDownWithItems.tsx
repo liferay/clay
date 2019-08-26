@@ -231,7 +231,7 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 	searchValue = '',
 	spritemap,
 	trigger,
-}) => {
+}: IProps) => {
 	const [active, setActive] = useState(false);
 
 	const hasRightSymbols = !!items.find(item => item.symbolRight);

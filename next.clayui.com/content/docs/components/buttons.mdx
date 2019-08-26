@@ -14,8 +14,9 @@ import {ButtonDisplayTypes, ButtonGroup} from '../../../src/components/clay/Butt
 - [Display Types](#display-types)
 - [Group](#group)
 - [API](#api)
-    - [Button](#button)
-    - [Button Group](#button-group)
+    - [ClayButton](#claybutton)
+    - [ClayButton.Group](#claybutton.group)
+    - [ClayButtonWithIcon](#claybuttonwithicon)
 
 </div>
 
@@ -27,7 +28,7 @@ import {ButtonDisplayTypes, ButtonGroup} from '../../../src/components/clay/Butt
 	Check the <a href="https://liferay.design/lexicon/">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/buttons/">Button Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
 </div>
 
-#### Display Types
+## Display Types
 
 You can determine how your button can be displayed using [`displayType`](#api-displayType) property:
 
@@ -37,7 +38,7 @@ If you want use the button as a link use [`link`](#api-link).
 
 <ButtonDisplayTypes />
 
-### Group
+## Group
 
 You can use the variant `ClayButton.Group` for creating button groups:
 
@@ -45,16 +46,22 @@ Use [`spaced`](#api-spaced) property to create spacing between buttons.
 
 <ButtonGroup />
 
-### API
+## API
 
-#### Button
+### ClayButton
 
 <div>
     [APITable "clay-button/src/index.tsx"]
 </div>
 
-#### Button Group
+### ClayButton.Group
 
 <div>
     [APITable "clay-button/src/Group.tsx"]
+</div>
+
+### ClayButtonWithIcon
+
+<div>
+    [APITable "clay-button/src/ButtonWithIcon.tsx"]
 </div>
