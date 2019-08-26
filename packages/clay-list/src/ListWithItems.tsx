@@ -192,7 +192,7 @@ export const ClayListWithItems: React.FunctionComponent<IProps> = ({
 	onSelectedItemsChange,
 	spritemap,
 	...otherProps
-}) => {
+}: IProps) => {
 	return (
 		<div {...otherProps} className={classNames(className)}>
 			<ClayList>

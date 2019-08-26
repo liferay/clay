@@ -21,7 +21,7 @@ interface IProps extends React.ComponentProps<typeof ClayButton> {
 }
 
 const ClayButtonWithIcon = React.forwardRef<HTMLButtonElement, IProps>(
-	({spritemap, symbol, ...otherProps}, ref) => (
+	({spritemap, symbol, ...otherProps}: IProps, ref) => (
 		<ClayButton {...otherProps} monospaced ref={ref}>
 			<ClayIcon spritemap={spritemap} symbol={symbol} />
 		</ClayButton>

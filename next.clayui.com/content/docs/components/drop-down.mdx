@@ -2,7 +2,7 @@
 title: "DropDown"
 description: "A dropdown menu displays a list of options for the element that triggers it."
 packageNpm: "@clayui/drop-down"
-packageVersion: "3.0.0-milestone.2"
+packageVersion: "3.0.0-milestone.3"
 packageStatus: "Beta"
 sibling: "docs/components/css-dropdown.html"
 ---
@@ -12,16 +12,17 @@ import {DropDown} from '../../../src/components/clay/DropDown';
 <div class="nav-toc">
 
 - [API](#api)
-  - [DropDown](#dropdown)
-  - [DropDown.Action](#dropdown.action)
-  - [DropDown.Caption](#dropdown.caption)
-  - [DropDown.Divider](#dropdown.divider)
-  - [DropDown.Group](#dropdown.group)
-  - [DropDown.Help](#dropdown.help)
-  - [DropDown.Item](#dropdown.item)
-  - [DropDown.ItemList](#dropdown.itemlist)
-  - [DropDown.Menu](#dropdown.menu)
-  - [DropDown.Search](#dropdown.search)
+  - [ClayDropDown](#claydropdown)
+  - [ClayDropDown.Action](#claydropdown.action)
+  - [ClayDropDown.Caption](#claydropdown.caption)
+  - [ClayDropDown.Divider](#claydropdown.divider)
+  - [ClayDropDown.Group](#claydropdown.group)
+  - [ClayDropDown.Help](#claydropdown.help)
+  - [ClayDropDown.Item](#claydropdown.item)
+  - [ClayDropDown.ItemList](#claydropdown.itemlist)
+  - [ClayDropDown.Menu](#claydropdown.menu)
+  - [ClayDropDown.Search](#claydropdown.search)
+  - [ClayDropDownWithItems](#claydropdownwithitems)
 
 </div>
 
@@ -45,52 +46,58 @@ You may want to use only the content of DropDown for other cases, such as mounti
 
 ## API
 
-### DropDown
+### ClayDropDown
 
 <div>
 	[APITable "clay-drop-down/src/index.tsx"]
 </div>
 
-### DropDown.Action
+### ClayDropDown.Action
 
 <code class="list-api-item-type">Extends from {`React.HTMLAttributes<HTMLButtonElement>`}</code>
 
-### DropDown.Caption
+### ClayDropDown.Caption
 
 <code class="list-api-item-type">Extends from {`React.HTMLAttributes<HTMLDivElement>`}</code>
 
-### DropDown.Divider
+### ClayDropDown.Divider
 
 <code class="list-api-item-type">Extends from {`React.HTMLAttributes<HTMLLIElement>`}</code>
 
-### DropDown.Group
+### ClayDropDown.Group
 
 <div>
 	[APITable "clay-drop-down/src/Group.tsx"]
 </div>
 
-### DropDown.Help
+### ClayDropDown.Help
 
 <code class="list-api-item-type">Extends from {`React.HTMLAttributes<HTMLDivElement>`}</code>
 
-### DropDown.Item
+### ClayDropDown.Item
 
 <div>
 	[APITable "clay-drop-down/src/Item.tsx"]
 </div>
 
-### DropDown.ItemList
+### ClayDropDown.ItemList
 
 <code class="list-api-item-type">Extends from {`React.HTMLAttributes<HTMLUListElement>`}</code>
 
-### DropDown.Menu
+### ClayDropDown.Menu
 
 <div>
 	[APITable "clay-drop-down/src/Menu.tsx"]
 </div>
 
-### DropDown.Search
+### ClayDropDown.Search
 
 <div>
 	[APITable "clay-drop-down/src/Search.tsx"]
+</div>
+
+### ClayDropDownWithItems
+
+<div>
+	[APITable "clay-drop-down/src/DropDownWithItems.tsx"]
 </div>

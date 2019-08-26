@@ -10,6 +10,8 @@ import ClaySticker from '@clayui/sticker';
 import React from 'react';
 
 interface IProps {
+	children?: React.ReactNode;
+
 	/**
 	 * Value displayed that describes the card
 	 */
@@ -55,7 +57,7 @@ export const ClayCardWithNavigation: React.FunctionComponent<IProps> = ({
 	onClick,
 	spritemap,
 	title,
-}) => {
+}: IProps) => {
 	return (
 		<ClayCard
 			horizontal={horizontal}

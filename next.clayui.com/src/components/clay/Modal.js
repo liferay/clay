@@ -5,7 +5,7 @@
  */
 
 import ClayButton from '@clayui/button';
-import ClayModal from '@clayui/modal';
+import ClayModal, {useModal} from '@clayui/modal';
 import Editor from './Editor';
 import React, {useState} from 'react';
 
@@ -13,39 +13,38 @@ const spritemap = '/images/icons/icons.svg';
 
 const modalCode = `const Component = () => {
 	const [visible, setVisible] = useState(false);
+	const {observer, onClose} = useModal({
+		onClose: () => setVisible(false),
+	});
 
 	return (
 		<>
 			{visible && (
 				<ClayModal
-					onClose={() => setVisible(false)}
+					observer={observer}
 					size="lg"
 					spritemap={spritemap}
 					status="info"
 				>
-					{onClose => (
-						<>
-							<ClayModal.Header>{'Title'}</ClayModal.Header>
-							<ClayModal.Body>
-								<h1>{'Hello world!'}</h1>
-							</ClayModal.Body>
-							<ClayModal.Footer
-								first={
-									<ClayButton.Group spaced>
-										<ClayButton displayType="secondary">
-											{'Secondary'}
-										</ClayButton>
-										<ClayButton displayType="secondary">
-											{'Secondary'}
-										</ClayButton>
-									</ClayButton.Group>
-								}
-								last={
-									<ClayButton onClick={onClose}>{'Primary'}</ClayButton>
-								}
-							/>
-						</>
-					)}
+					<ClayModal.Header>{'Title'}</ClayModal.Header>
+					<ClayModal.Body>
+						<h1>{'Hello world!'}</h1>
+					</ClayModal.Body>
+					<ClayModal.Footer
+						first={
+							<ClayButton.Group spaced>
+								<ClayButton displayType="secondary">
+									{'Secondary'}
+								</ClayButton>
+								<ClayButton displayType="secondary">
+									{'Secondary'}
+								</ClayButton>
+							</ClayButton.Group>
+						}
+						last={
+							<ClayButton onClick={onClose}>{'Primary'}</ClayButton>
+						}
+					/>
 				</ClayModal>
 			)}
 			<ClayButton displayType="primary" onClick={() => setVisible(true)}>
@@ -62,6 +61,7 @@ const Modal = () => {
 		ClayButton,
 		ClayModal,
 		spritemap,
+		useModal,
 		useState,
 	};
 	return <Editor code={modalCode} scope={scope} />;
