@@ -1,0 +1,47 @@
+////
+/// @group vendorPrefixes
+////
+
+/// A mixin that provides cross browser support for the CSS property `overflow-wrap`
+/// @param {String} $value[break-word] - `break-word` or `normal`
+
+@mixin overflow-wrap($value: break-word) {
+	overflow-wrap: $value;
+	word-wrap: $value;
+}
+
+/// A mixin that provides cross browser support for the CSS property `user-select`.
+/// @param {String} $value[none] - `all`, `auto`, `none`, or `text`
+
+@mixin user-select($value: none) {
+	-moz-user-select: $value;
+	-ms-user-select: $value;
+	-webkit-user-select: $value;
+	user-select: $value;
+}
+
+/// A mixin that provides cross browser support for the CSS property `hypens`.
+/// @param {String} $value[none] - `auto`, `manual`, or `none`
+
+@mixin hyphens($value: none) {
+	-ms-hyphens: $value;
+	-webkit-hyphens: $value;
+	hyphens: $value;
+}
+
+/// A mixin that provides cross browser support for the pseudo element/class `::placeholder`.
+/// @content [Placeholder CSS declarations]
+
+@mixin placeholder {
+	::-webkit-input-placeholder {
+		@content;
+	}
+
+	::-ms-input-placeholder {
+		@content;
+	}
+
+	::placeholder {
+		@content;
+	}
+}
