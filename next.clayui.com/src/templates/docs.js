@@ -20,11 +20,13 @@ export default props => {
 	const {
 		data,
 		location,
-		pageContext: {blacklist, markdownJsx},
+		pageContext: {blacklist = [], markdownJsx},
 	} = props;
-	const {allMarkdownRemark, allMdx, markdownRemark, mdx} = data;
+	const {allMarkdownRemark, allMdx, markdownRemark, mdx, tabs} = data;
 	const {code, excerpt, frontmatter, html, timeToRead} =
 		mdx || markdownRemark;
+
+	const hasTabs = tabs.edges.length > 0;
 
 	const title = `${frontmatter.title} - Clay`;
 
@@ -67,9 +69,9 @@ export default props => {
 							location={location}
 						/>
 						<div className="col-xl sidebar-offset">
-							<header>
+							<header className="mb-4">
 								<div className="clay-site-container container-fluid">
-									<div className="row border-bottom pb-5">
+									<div className="row">
 										<div className="col-12">
 											<h1>{frontmatter.title}</h1>
 											{frontmatter.version && (
@@ -89,83 +91,147 @@ export default props => {
 												</p>
 											)}
 										</div>
+										{hasTabs && (
+											<div className="col-12 mt-5">
+												<ul
+													className="nav nav-underline nav-justified border-bottom"
+													role="tablist"
+												>
+													<li className="nav-item">
+														<a
+															aria-controls="advanced"
+															aria-expanded="true"
+															className="active nav-link"
+															data-toggle="tab"
+															href="#advanced"
+															id="advancedTab"
+															role="tab"
+														>
+															{'React Component'}
+														</a>
+													</li>
+													<li className="nav-item">
+														<a
+															aria-controls="simple"
+															className="nav-link"
+															data-toggle="tab"
+															href="#simple"
+															id="simpleTab"
+															role="tab"
+														>
+															{'CSS / Markup'}
+														</a>
+													</li>
+												</ul>
+											</div>
+										)}
 									</div>
 								</div>
 							</header>
 
-							{frontmatter.packageStatus && (
-								<div className="clay-site-container container-fluid">
-									<Link
-										className="clay-site-label"
-										to="/docs/get-started/components-status.html"
-									>
-										<span
-											className={`label label-${
-												mapStatus[
-													frontmatter.packageStatus.toLowerCase()
-												]
-											}`}
-										>
-											<span className="label-item label-item-expand">
-												{frontmatter.packageStatus}
-											</span>
-										</span>
-										{frontmatter.packageVersion && (
-											<span className="label label-secondary">
-												<span className="label-item label-item-expand">
-													{frontmatter.packageVersion}
-												</span>
-											</span>
-										)}
-									</Link>
-								</div>
-							)}
-
 							<div className="clay-site-container container-fluid">
 								<div className="row">
-									<div className="col-md-12">
-										<article>
-											<CodeClipboard>
-												{markdownJsx ? (
-													<MDXProvider
-														components={{
-															h1: Typography.H1,
-															h2: Typography.H2,
-															h3: Typography.H3,
-															h4: Typography.H4,
-															p: Typography.P,
-															ul: props => (
-																<ul
-																	className={
-																		props.className
-																			? props.className
-																			: 'clay-ul'
-																	}
-																>
-																	{
-																		props.children
-																	}
-																</ul>
-															),
-														}}
+									<div className="col-12">
+										<div className="tab-content">
+											<div
+												aria-labelledby="advancedTab"
+												className="active fade show tab-pane"
+												id="advanced"
+												role="tabpanel"
+											>
+												{frontmatter.packageStatus && (
+													<Link
+														className="clay-site-label"
+														to="/docs/get-started/components-status.html"
 													>
-														<MDXRenderer>
-															{code.body}
-														</MDXRenderer>
-													</MDXProvider>
-												) : (
+														<span
+															className={`label label-${
+																mapStatus[
+																	frontmatter.packageStatus.toLowerCase()
+																]
+															}`}
+														>
+															<span className="label-item label-item-expand">
+																{
+																	frontmatter.packageStatus
+																}
+															</span>
+														</span>
+														{frontmatter.packageVersion && (
+															<span className="label label-secondary">
+																<span className="label-item label-item-expand">
+																	{
+																		frontmatter.packageVersion
+																	}
+																</span>
+															</span>
+														)}
+													</Link>
+												)}
+												<article>
+													<CodeClipboard>
+														{markdownJsx ? (
+															<MDXProvider
+																components={{
+																	h1:
+																		Typography.H1,
+																	h2:
+																		Typography.H2,
+																	h3:
+																		Typography.H3,
+																	h4:
+																		Typography.H4,
+																	p:
+																		Typography.P,
+																	ul: props => (
+																		<ul
+																			className={
+																				props.className
+																					? props.className
+																					: 'clay-ul'
+																			}
+																		>
+																			{
+																				props.children
+																			}
+																		</ul>
+																	),
+																}}
+															>
+																<MDXRenderer>
+																	{code.body}
+																</MDXRenderer>
+															</MDXProvider>
+														) : (
+															<div
+																dangerouslySetInnerHTML={{
+																	__html: html,
+																}}
+															/>
+														)}
+													</CodeClipboard>
+												</article>
+											</div>
+											<div
+												aria-labelledby="simpleTab"
+												className="fade tab-pane"
+												id="simple"
+												role="tabpanel"
+											>
+												{hasTabs && (
 													<div
 														dangerouslySetInnerHTML={{
-															__html: html,
+															__html:
+																tabs.edges[0]
+																	.node.html,
 														}}
 													/>
 												)}
-											</CodeClipboard>
-										</article>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
-
 							<footer className="clay-site-container container-fluid">
 								<div className="row border-top py-5">
 									<div className="col-6">
@@ -208,7 +274,7 @@ export default props => {
 };
 
 export const pageQuery = graphql`
-	query($blacklist: [String!], $slug: String!) {
+	query($blacklist: [String!], $slug: String!, $sibling: String!) {
 		mdx(fields: {slug: {eq: $slug}}) {
 			excerpt
 			timeToRead
@@ -261,6 +327,13 @@ export const pageQuery = graphql`
 						indexVisible
 						draft
 					}
+				}
+			}
+		}
+		tabs: allMarkdownRemark(filter: {fields: {slug: {eq: $sibling}}}) {
+			edges {
+				node {
+					html
 				}
 			}
 		}
