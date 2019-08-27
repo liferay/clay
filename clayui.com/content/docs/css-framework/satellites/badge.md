@@ -5,7 +5,7 @@ title: "Badges"
 ### Badge Sizes
 
 <div class="alert alert-warning">
-	Badge Sizes have been removed. Use the <a href="https://github.com/liferay/clay/blob/master/packages/clay-css/src/scss/mixins/_badges.scss#L1">clay-badge-size($sassMap) mixin</a> to create custom badge sizes for your app.
+	Badge Sizes have been removed. Use the <a href="https://github.com/liferay/clay/blob/2.x/packages/clay-css/src/scss/mixins/_badges.scss#L19">clay-badge-size($sassMap) mixin</a> to create custom badge sizes for your app.
 </div>
 
 ### Badge Pill

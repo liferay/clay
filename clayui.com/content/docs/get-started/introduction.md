@@ -236,7 +236,7 @@ If you look at the browser now, you can see our first Clay component rendered. I
 
 This demo is available on github. Feel free to tinker.
 
-> [Getting started with Clay](https://github.com/liferay/clay/tree/master/examples/getting-started-clay)
+> [Getting started with Clay](https://github.com/liferay/clay/tree/2.x/examples/getting-started-clay)
 
 ## Components
 
