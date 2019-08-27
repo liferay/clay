@@ -22,6 +22,6 @@ Clay is highly flexible, so you can use the components in different applications
 
 We have created some example use cases in applications for `React`, `Vue`, and `Angular` for you to follow:
 
-* [Angular](https://github.com/liferay/clay/tree/master/examples/angular-with-clay)
-* [React](https://github.com/liferay/clay/tree/master/examples/react-with-clay)
-* [Vue](https://github.com/liferay/clay/tree/master/examples/vue-with-clay)
+* [Angular](https://github.com/liferay/clay/tree/2.x/examples/angular-with-clay)
+* [React](https://github.com/liferay/clay/tree/2.x/examples/react-with-clay)
+* [Vue](https://github.com/liferay/clay/tree/2.x/examples/vue-with-clay)

@@ -23,7 +23,7 @@ $alert-dismissible-padding-right: 2.5rem !default; // 40px
 $alert-dismissible-padding-top: null !default;
 ```
 
-> [All **variables** available](https://github.com/liferay/clay/tree/master/packages/clay-css/src/scss/variables)
+> [All **variables** available](https://github.com/liferay/clay/tree/2.x/packages/clay-css/src/scss/variables)
 
 ## Mixins
 
@@ -39,17 +39,17 @@ $map: (
 	@include clay-button-variant($map);
 }
 ```
-[clay-button-variant#L1](https://github.com/liferay/clay/blob/master/packages/clay-css/src/scss/mixins/_buttons.scss#L1)
+[clay-button-variant#L199](https://github.com/liferay/clay/blob/2.x/packages/clay-css/src/scss/mixins/_buttons.scss#L199)
 
 You can find all mixins available by component if you want to create a component extension.
 
-> [All **mixins** available](https://github.com/liferay/clay/tree/master/packages/clay-css/src/scss/mixins)
+> [All **mixins** available](https://github.com/liferay/clay/tree/2.x/packages/clay-css/src/scss/mixins)
 
 ## Functions
 
 Clay CSS provides some **SCSS** functions that help you be more productive. To learn more about **functions** see [sass-lang.com](https://sass-lang.com/documentation/file.SASS_REFERENCE.html#function_directives).
 
-Sass ternary shorthand: `if($variable-name, true, false);`. See [setter#L5](https://github.com/liferay/clay/blob/master/packages/clay-css/src/scss/functions/_global-functions.scss#L5)
+Sass ternary shorthand: `if($variable-name, true, false);`. See [setter#L9](https://github.com/liferay/clay/blob/2.x/packages/clay-css/src/scss/functions/_global-functions.scss#L9)
 
 ```scss
 // @param $var - The variable name
@@ -58,7 +58,7 @@ Sass ternary shorthand: `if($variable-name, true, false);`. See [setter#L5](http
 setter($var, $val);
 ```
 
-Helper for displaying warning messages for required variables. See [required#L29](https://github.com/liferay/clay/blob/master/packages/clay-css/src/scss/functions/_global-functions.scss#29)
+Helper for displaying warning messages for required variables. See [required#L36](https://github.com/liferay/clay/blob/2.x/packages/clay-css/src/scss/functions/_global-functions.scss#L36)
 
 ```scss
 // @param $var - The variable to check
@@ -67,4 +67,4 @@ Helper for displaying warning messages for required variables. See [required#L29
 required($var, $msg);
 ```
 
-> [All **functions** available](https://github.com/liferay/clay/blob/master/packages/clay-css/src/scss/functions/_global-functions.scss)
+> [All **functions** available](https://github.com/liferay/clay/blob/2.x/packages/clay-css/src/scss/functions/_global-functions.scss)
