@@ -86,6 +86,7 @@ const ClayNavigationBar: React.FunctionComponent<IProps> & {
 							collapsed: !visible,
 						}
 					)}
+					data-testid="navbarToggler"
 					displayType="secondary"
 					onClick={handleClickToggler}
 				>
