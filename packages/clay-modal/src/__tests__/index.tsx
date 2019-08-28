@@ -1,3 +1,4 @@
+/*eslint no-console: 0 */
 /**
  * © 2019 Liferay, Inc. <https://liferay.com>
  *
