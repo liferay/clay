@@ -81,6 +81,7 @@ describe('BasicRendering', () => {
 		const {container} = render(
 			<ClayManagementToolbar
 				onSearchValueChange={() => {}}
+				onValueSubmit={() => {}}
 				searchValue=""
 				spritemap={spritemap}
 			/>
@@ -190,6 +191,7 @@ describe('BasicRendering', () => {
 				onCheckboxChange={() => {}}
 				onSearchValueChange={() => {}}
 				onSortingButtonClick={() => {}}
+				onValueSubmit={() => {}}
 				searchValue=""
 				sortingOrder="asc"
 				spritemap={spritemap}

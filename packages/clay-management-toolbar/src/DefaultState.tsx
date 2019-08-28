@@ -42,9 +42,23 @@ interface IProps extends IPropsBase {
 	onSortingButtonClick?: TClickEvent;
 
 	/**
+	 * Callback will always be called when the user clicks the search button
+	 * or press enter.
+	 */
+	onValueSubmit?: React.ComponentProps<typeof SearchInput>['onValueSubmit'];
+
+	/**
 	 * Set the value the user entered in search.
 	 */
 	searchValue?: string;
+
+	/**
+	 * Props to add to the form.
+	 */
+	searchFormProps?: Omit<
+		React.ComponentProps<typeof SearchForm>,
+		'onlySearch'
+	>;
 
 	/**
 	 * Set the link to the sorting order action, this will render a ClayLink
@@ -73,6 +87,8 @@ const DefaultState: React.FunctionComponent<IProps> = ({
 	onInfoButtonClick,
 	onSearchValueChange,
 	onSortingButtonClick,
+	onValueSubmit,
+	searchFormProps,
 	searchValue = '',
 	sortingOrder,
 	sortingURL,
@@ -174,18 +190,19 @@ const DefaultState: React.FunctionComponent<IProps> = ({
 				)}
 			</ItemList>
 
-			{onSearchValueChange && (
+			{onSearchValueChange && onValueSubmit && (
 				<div
 					className={classNames('navbar-form navbar-form-autofit', {
 						'navbar-overlay navbar-overlay-sm-down': !onlySearch,
 						show: searchMobile,
 					})}
 				>
-					<SearchForm onlySearch={onlySearch}>
+					<SearchForm {...searchFormProps} onlySearch={onlySearch}>
 						<SearchInput
 							disabled={disabled}
 							onCloseButtonClick={() => setSearchMobile(false)}
 							onValueChange={onSearchValueChange}
+							onValueSubmit={onValueSubmit}
 							onlySearch={onlySearch}
 							spritemap={spritemap}
 							value={searchValue}

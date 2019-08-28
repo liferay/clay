@@ -12,12 +12,11 @@ interface IProps extends React.FormHTMLAttributes<HTMLFormElement> {
 
 const SearchForm: React.FunctionComponent<IProps> = ({
 	children,
-	method = 'get',
 	onlySearch = false,
 	...otherProps
 }) => {
 	const content = (
-		<form {...otherProps} method={method} role="search">
+		<form {...otherProps} role="search">
 			{children}
 		</form>
 	);
