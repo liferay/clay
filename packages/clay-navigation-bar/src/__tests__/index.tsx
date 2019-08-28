@@ -4,16 +4,15 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as TestRenderer from 'react-test-renderer';
+import '@testing-library/jest-dom/extend-expect';
 import ClayButton from '@clayui/button';
 import ClayLink from '@clayui/link';
 import ClayNavigationBar from '..';
 import React from 'react';
 import {
 	act,
+	cleanup,
 	fireEvent,
-	getByTestId,
-	getByText,
 	render,
 	waitForElement,
 } from '@testing-library/react';
@@ -21,10 +20,12 @@ import {
 const spritemap = 'node_modules/clay-css/lib/images/icons/icons.svg';
 
 describe('ClayNavigationBar', () => {
+	afterEach(cleanup);
+
 	it('renders', () => {
 		const label = 'Item 1';
 
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayNavigationBar
 				inverted
 				spritemap={spritemap}
@@ -63,7 +64,7 @@ describe('ClayNavigationBar', () => {
 			</ClayNavigationBar>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('renders a dropdown when clicking the collapsed element from NavigationBar', async () => {
@@ -175,7 +176,7 @@ describe('ClayNavigationBar', () => {
 	it('renders when passing more than one active item', () => {
 		const label = 'Item 1';
 
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayNavigationBar
 				inverted
 				spritemap={spritemap}
@@ -214,7 +215,7 @@ describe('ClayNavigationBar', () => {
 			</ClayNavigationBar>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('should throw a warning when passing more than one active prop to child', () => {
@@ -224,7 +225,7 @@ describe('ClayNavigationBar', () => {
 
 		const label = 'Item 1';
 
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayNavigationBar
 				inverted
 				spritemap={spritemap}
@@ -257,7 +258,7 @@ describe('ClayNavigationBar', () => {
 		expect(mockWarnings.mock.calls[0][0]).toBe(
 			'Warning: ClayNavigationBar expects 0 or 1 active children, but received 2'
 		);
-		expect(testRenderer.toJSON).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 		jest.resetAllMocks();
 	});
 });
