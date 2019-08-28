@@ -13,6 +13,7 @@ import {MDXProvider} from '@mdx-js/react';
 
 import CodeClipboard from '../components/CodeClipboard';
 import getSection from '../utils/getSection';
+import LayoutNav from '../components/LayoutNav';
 import Sidebar from '../components/Sidebar';
 import Typography from '../components/Typography';
 
@@ -69,32 +70,31 @@ export default props => {
 							location={location}
 						/>
 						<div className="col-xl sidebar-offset">
-							<header className="mb-4">
+							<LayoutNav />
+							<header>
 								<div className="clay-site-container container-fluid">
 									<div className="row">
 										<div className="col-12">
-											<h1>{frontmatter.title}</h1>
-											{frontmatter.version && (
-												<p className="docs-title-version">
-													{frontmatter.version}
-												</p>
-											)}
+											<h1 className="docs-title">
+												{frontmatter.title}
+											</h1>
 											{frontmatter.packageNpm && (
 												<p className="docs-package-npm">
-													{'yarn add '}
-													{frontmatter.packageNpm}
-												</p>
-											)}
-											{frontmatter.description && (
-												<p className="docs-description">
-													{frontmatter.description}
+													{`yarn add ${
+														frontmatter.packageNpm
+													}`}
 												</p>
 											)}
 										</div>
+										{!hasTabs && (
+											<div className="col-12">
+												<hr className="clay-site-separator" />
+											</div>
+										)}
 										{hasTabs && (
-											<div className="col-12 mt-5">
+											<div className="col-12">
 												<ul
-													className="nav nav-underline nav-justified border-bottom"
+													className="nav nav-clay nav-underline border-bottom"
 													role="tablist"
 												>
 													<li className="nav-item">
@@ -129,7 +129,7 @@ export default props => {
 								</div>
 							</header>
 
-							<div className="clay-site-container container-fluid">
+							<div className="clay-docs-content clay-site-container container-fluid">
 								<div className="row">
 									<div className="col-12">
 										<div className="tab-content">
@@ -167,6 +167,13 @@ export default props => {
 															</span>
 														)}
 													</Link>
+												)}
+												{frontmatter.description && (
+													<p className="docs-description">
+														{
+															frontmatter.description
+														}
+													</p>
 												)}
 												<article>
 													<CodeClipboard>
@@ -218,6 +225,13 @@ export default props => {
 												id="simple"
 												role="tabpanel"
 											>
+												{frontmatter.description && (
+													<p className="docs-description">
+														{
+															frontmatter.description
+														}
+													</p>
+												)}
 												{hasTabs && (
 													<div
 														dangerouslySetInnerHTML={{
