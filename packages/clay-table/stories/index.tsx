@@ -85,6 +85,9 @@ storiesOf('ClayTable', module)
 					<ClayTable.Cell headingCell headingTitle>
 						{'Country'}
 					</ClayTable.Cell>
+					<ClayTable.Cell headingCell headingTitle>
+						{'Description'}
+					</ClayTable.Cell>
 				</ClayTable.Row>
 			</ClayTable.Head>
 			<ClayTable.Body>
@@ -94,6 +97,11 @@ storiesOf('ClayTable', module)
 					</ClayTable.Cell>
 					<ClayTable.Cell>{'South America'}</ClayTable.Cell>
 					<ClayTable.Cell>{'Brazil'}</ClayTable.Cell>
+					<ClayTable.Cell>
+						{
+							'Homero aeterno conclusionemque est in, scribentur mediocritatem mea ut. Ad voluptua vituperata constituam pro. Mel at constituto efficiantur, in eirmod lobortis mei. Eam vero probo efficiendi ne, molestie pericula nec in, dolore minimum duo et. Mundi epicuri patrioque in vis, virtute legimus oporteat cu eum.'
+						}
+					</ClayTable.Cell>
 				</ClayTable.Row>
 				<ClayTable.Row>
 					<ClayTable.Cell headingTitle>
@@ -101,6 +109,11 @@ storiesOf('ClayTable', module)
 					</ClayTable.Cell>
 					<ClayTable.Cell>{'Europe'}</ClayTable.Cell>
 					<ClayTable.Cell>{'Spain'}</ClayTable.Cell>
+					<ClayTable.Cell>
+						{
+							'Homero aeterno conclusionemque est in, scribentur mediocritatem mea ut. Ad voluptua vituperata constituam pro. Mel at constituto efficiantur, in eirmod lobortis mei. Eam vero probo efficiendi ne, molestie pericula nec in, dolore minimum duo et. Mundi epicuri patrioque in vis, virtute legimus oporteat cu eum.'
+						}
+					</ClayTable.Cell>
 				</ClayTable.Row>
 			</ClayTable.Body>
 		</ClayTable>
@@ -124,10 +137,10 @@ storiesOf('ClayTable', module)
 						<span className="text-truncate-inline">
 							<span
 								className="text-truncate"
-								title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds."
+								title="Homero aeterno conclusionemque est in, scribentur mediocritatem mea ut. Ad voluptua vituperata constituam pro. Mel at constituto efficiantur, in eirmod lobortis mei. Eam vero probo efficiendi ne, molestie pericula nec in, dolore minimum duo et. Mundi epicuri patrioque in vis, virtute legimus oporteat cu eum."
 							>
 								{
-									'Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.'
+									'Homero aeterno conclusionemque est in, scribentur mediocritatem mea ut. Ad voluptua vituperata constituam pro. Mel at constituto efficiantur, in eirmod lobortis mei. Eam vero probo efficiendi ne, molestie pericula nec in, dolore minimum duo et. Mundi epicuri patrioque in vis, virtute legimus oporteat cu eum.'
 								}
 							</span>
 						</span>
