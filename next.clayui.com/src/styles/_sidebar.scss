@@ -2,8 +2,11 @@
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	padding: 0 0 0 2rem;
 	width: 100%;
+
+	@media (min-width: $screen-lg) {
+		padding: 0 0 0 2rem;
+	}
 
 	.clay-site-container {
 		max-width: 700px;
@@ -18,6 +21,7 @@
 	position: sticky;
     top: 0;
 	width: 100%;
+	z-index: 11;
 
 	.sidenav-menu {
 		width: 100%;
