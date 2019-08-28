@@ -67,8 +67,8 @@ describe('ClayNavigationBar', () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it('renders a dropdown when clicking the collapsed element from NavigationBar', async () => {
-		const {container} = render(
+	it('renders a dropdown when clicking the trigger element from NavigationBar', async () => {
+		const {container, getByTestId, getByText} = render(
 			<ClayNavigationBar
 				inverted
 				spritemap={spritemap}
@@ -97,21 +97,14 @@ describe('ClayNavigationBar', () => {
 			</ClayNavigationBar>
 		);
 
-		fireEvent.click(getByText(container, 'Trigger Label'));
-		fireEvent.transitionEnd(
-			getByTestId(container, 'NavigationBarDropdown')
-		);
-
-		fireEvent.click(getByText(container, 'Trigger Label'));
-		fireEvent.transitionEnd(
-			getByTestId(container, 'NavigationBarDropdown')
-		);
+		fireEvent.click(getByText('Trigger Label'));
+		fireEvent.transitionEnd(getByTestId('NavigationBarDropdown'));
 
 		let navigationBarDropdown;
 
 		await act(async () => {
 			navigationBarDropdown = await waitForElement(() =>
-				getByTestId(container, 'NavigationBarDropdown')
+				container.querySelector('.navbar-collapse.collapse.show')
 			);
 		});
 
@@ -120,8 +113,8 @@ describe('ClayNavigationBar', () => {
 		expect(navigationBarDropdown).toMatchSnapshot();
 	});
 
-	it('collapses the dropdown expanded when trigger element is clicked', async () => {
-		const {container} = render(
+	it('collapses the previously expanded dropdown when trigger element is clicked', async () => {
+		const {container, getByTestId} = render(
 			<ClayNavigationBar
 				inverted
 				spritemap={spritemap}
@@ -150,25 +143,23 @@ describe('ClayNavigationBar', () => {
 			</ClayNavigationBar>
 		);
 
-		fireEvent.click(getByText(container, 'Trigger Label'));
-		fireEvent.transitionEnd(
-			getByTestId(container, 'NavigationBarDropdown')
-		);
+		fireEvent.click(getByTestId('navbarToggler'), 'Trigger Label');
+		fireEvent.transitionEnd(getByTestId('NavigationBarDropdown'));
 
-		fireEvent.click(getByText(container, 'Trigger Label'));
-		fireEvent.transitionEnd(
-			getByTestId(container, 'NavigationBarDropdown')
-		);
+		fireEvent.click(getByTestId('navbarToggler'), 'Trigger Label');
+		fireEvent.transitionEnd(getByTestId('NavigationBarDropdown'));
 
 		let navigationBarDropdown;
 
 		await act(async () => {
 			navigationBarDropdown = await waitForElement(() =>
-				getByTestId(container, 'NavigationBarDropdown')
+				container.querySelector('.navbar-collapse.collapse')
 			);
 		});
 
 		expect(navigationBarDropdown).toBeDefined();
+
+		expect(navigationBarDropdown).not.toHaveClass('show');
 
 		expect(navigationBarDropdown).toMatchSnapshot();
 	});
