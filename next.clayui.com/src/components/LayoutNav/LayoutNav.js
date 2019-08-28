@@ -5,7 +5,6 @@
  */
 
 import React from 'react';
-import {Link} from 'gatsby';
 
 import Search from './Search';
 
