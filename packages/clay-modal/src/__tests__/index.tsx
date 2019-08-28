@@ -13,14 +13,27 @@ import {cleanup, render} from '@testing-library/react';
 const spritemap = 'icons.svg';
 
 describe('ClayModal', () => {
+	const originalError = console.error;
 	beforeAll(() => {
+		console.error = (...args: any) => {
+			if (/Warning.*not wrapped in act/.test(args[0])) {
+				return;
+			}
+			originalError.call(console, ...args);
+		};
 		// @ts-ignore
 		ReactDOM.createPortal = jest.fn(element => {
 			return element;
 		});
+		jest.useFakeTimers();
+	});
+
+	afterAll(() => {
+		console.error = originalError;
 	});
 
 	afterEach(() => {
+		jest.clearAllTimers();
 		jest.restoreAllMocks();
 		cleanup();
 	});
@@ -44,6 +57,8 @@ describe('ClayModal', () => {
 
 		render(<ModalWithState />);
 
+		jest.runAllTimers();
+
 		expect(document.body).toMatchSnapshot();
 	});
 
@@ -58,6 +73,8 @@ describe('ClayModal', () => {
 		};
 
 		render(<ModalWithState />);
+
+		jest.runAllTimers();
 
 		expect(document.body).toMatchSnapshot();
 	});
@@ -76,6 +93,8 @@ describe('ClayModal', () => {
 
 		render(<ModalWithState />);
 
+		jest.runAllTimers();
+
 		expect(document.body).toMatchSnapshot();
 	});
 
@@ -93,6 +112,8 @@ describe('ClayModal', () => {
 
 		render(<ModalWithState />);
 
+		jest.runAllTimers();
+
 		expect(document.body).toMatchSnapshot();
 	});
 
@@ -107,6 +128,8 @@ describe('ClayModal', () => {
 		};
 
 		render(<ModalWithState />);
+
+		jest.runAllTimers();
 
 		expect(document.body).toMatchSnapshot();
 	});
@@ -126,6 +149,8 @@ describe('ClayModal', () => {
 		};
 
 		render(<ModalWithState />);
+
+		jest.runAllTimers();
 
 		expect(document.body).toMatchSnapshot();
 	});

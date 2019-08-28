@@ -209,7 +209,14 @@ describe('ModalProvider -> IncrementalInteractions', () => {
 		cleanup();
 	});
 
+	const originalError = console.error;
 	beforeAll(() => {
+		console.error = (...args: any) => {
+			if (/Warning.*not wrapped in act/.test(args[0])) {
+				return;
+			}
+			originalError.call(console, ...args);
+		};
 		jest.useFakeTimers();
 
 		// @ts-ignore
@@ -219,6 +226,7 @@ describe('ModalProvider -> IncrementalInteractions', () => {
 	});
 
 	afterAll(() => {
+		console.error = originalError;
 		jest.useRealTimers();
 	});
 
@@ -262,6 +270,8 @@ describe('ModalProvider -> IncrementalInteractions', () => {
 		const button = getByTestId('button');
 
 		fireEvent.click(button, {});
+
+		jest.runAllTimers();
 
 		expect(document.body).toMatchSnapshot();
 	});
