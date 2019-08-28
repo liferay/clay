@@ -3,6 +3,7 @@ title: "Labels"
 description: "Labels categorize information, providing quick recognition."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Colors](#colors)
@@ -14,6 +15,7 @@ description: "Labels categorize information, providing quick recognition."
 	- [Interactive](#interactive)
 	- [Anchor Tag](#anchor-tag)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

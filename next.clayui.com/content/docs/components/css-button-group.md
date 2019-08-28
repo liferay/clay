@@ -3,6 +3,7 @@ title: "Button Group"
 description: 'Button groups are used to switch between complementary views for example, but they must never be used for complementary actions, "Change and Cancel" actions, or "Save and Cancel" actions. In those cases, single buttons are the correct solution.'
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Examples](#examples)
@@ -11,6 +12,7 @@ description: 'Button groups are used to switch between complementary views for e
 - [Sizes](#sizes)
 - [Vertical variation](#vertical-variation)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

@@ -2,6 +2,7 @@
 title: "Autofit"
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Row](#row)
@@ -11,6 +12,7 @@ title: "Autofit"
 - [Float End](#float-end)
 - [Nesting Autofit Rows](#nesting-autofit-rows)
 
+</div>
 </div>
 
 ## Row

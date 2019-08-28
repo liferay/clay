@@ -3,6 +3,7 @@ title: "Cards"
 description: "Cards are a specific form of data visualization focused mainly on displaying images."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Example](#example)
@@ -24,6 +25,7 @@ description: "Cards are a specific form of data visualization focused mainly on 
     - [Empty](#empty)
 - [Helpers](#helpers)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

@@ -3,6 +3,7 @@ title: "Dropdown"
 description: "A dropdown menu displays a list of options for the element that triggers it."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Variations](#variations)
@@ -29,6 +30,7 @@ description: "A dropdown menu displays a list of options for the element that tr
     - [Left](#left)
     - [Center](#center)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

@@ -4,12 +4,14 @@ order: 2
 description: "Clay CSS Framework provides some utilities for you to work with SCSS(https://sass-lang.com) and reuse it in your classes."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Variables](#variables)
 - [Mixins](#mixins)
 - [Functions](#functions)
 
+</div>
 </div>
 
 ## Variables

@@ -2,6 +2,7 @@
 title: "Base Nav"
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Nav Stacked](#nav-stacked)
@@ -10,6 +11,7 @@ title: "Base Nav"
 - [Nav Unstyled](#nav-unstyled)
 - [Helpers](#helpers)
 
+</div>
 </div>
 
 <div class="alert alert-warning">This is a base component. Navigations share general markup and styles from the base .nav class, therefore the components Nav Pills, Nav Tabs, Nav Underline, Menubar, Navbar, Application Bar, Management Bar, and Navigation Bar all use <code class="gatsby-code-text">.nav</code> as its base.</div>

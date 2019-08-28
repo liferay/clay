@@ -2,6 +2,7 @@
 title: "Base Navbar"
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Use Cases](#use-cases)
@@ -12,6 +13,7 @@ title: "Base Navbar"
 - [Toggler](#toggler)
 - [Collapse](#collapse)
 
+</div>
 </div>
 
 <div class="alert alert-info">

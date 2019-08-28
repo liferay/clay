@@ -3,6 +3,7 @@ title: "Tables"
 description: "A table is a specific pattern for comparing datasets in a very direct and analytical way."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Variants](#variants)
@@ -23,6 +24,7 @@ description: "A table is a specific pattern for comparing datasets in a very dir
     - [Table No Wrap](#table-no-wrap)
     - [Image](#image)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

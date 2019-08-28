@@ -3,6 +3,7 @@ title: "Toggle Switch"
 description: "Toggle provide users with different selection and activation tools."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Example](#example)
@@ -15,6 +16,7 @@ description: "Toggle provide users with different selection and activation tools
 	- [With Icons](#with-icons)
 - [Extending Toggles](#extending-toggles)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">
