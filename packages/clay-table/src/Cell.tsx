@@ -75,7 +75,7 @@ const ClayTableCell: React.FunctionComponent<ICellProps> = ({
 		<TagName
 			{...otherProps}
 			className={classNames(className, {
-				'table-cell-expand': expanded,
+				'table-cell-expand': expanded || truncate,
 				[`table-cell-${cellDelimiter}`]: cellDelimiter,
 				[`table-column-text-${columnTextAlignment}`]: columnTextAlignment,
 				[`text-${align}`]: align,
@@ -87,7 +87,7 @@ const ClayTableCell: React.FunctionComponent<ICellProps> = ({
 						{child}
 					</p>
 				))
-			) : truncate ? (
+			) : truncate && typeof children === 'string' ? (
 				<span className="text-truncate-inline">
 					<span className="text-truncate">{children}</span>
 				</span>
