@@ -1,6 +1,6 @@
 .navbar-clay-site {
-	background-color: $brand-secondary;
-	padding: 7.5px 1.5rem;
+	background-color: $bg-color;
+	padding: 7.5px 0.5rem;
 	position: sticky;
 	top: 0;
 	z-index: 10;
@@ -27,7 +27,11 @@
 		}
 	}
 	.navbar-nav .nav-link {
-		font-weight: 700;
+		font-weight: 600;
+	}
+	.github-logo {
+		height: 21px;
+		width: 21px;
 	}
 	.logo {
 		max-height: 32px;

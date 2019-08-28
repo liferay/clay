@@ -1,5 +1,5 @@
 .sidebar-clay-site {
-	background-color: $brand-light;
+	border-right: 1px solid $brand-light;
 
 	a:focus {
 		border-radius: .25rem;
@@ -8,8 +8,6 @@
 	}
 
 	.sidebar-header {
-		background-color: $brand-light;
-
 		.sidebar-logo {
 			.sidebar-logo-image {
 				max-height: 32px;
@@ -30,7 +28,7 @@
 	}
 
 	.nav-nested-margins > li .nav > li {
-		margin-left: $base-size;
+		margin-left: 12px;
 	}
 
 	.nav-heading {
@@ -51,8 +49,8 @@
 		display: flex;
 		line-height: $base-size / 1.375;
 		margin-bottom: 2px;
-		min-height: $base-size * 1.675;
-		padding: 0.55rem 1rem;
+		padding: 0.45rem 1rem;
+		min-height: 35px;
 
 		&:hover {
 			background-color: $brand-dark-lighter;
@@ -78,7 +76,7 @@
 
 	.active {
 		&:not(.nav-heading) > .nav-link {
-			background-color: $brand-dark-lighter;
+			color: $brand-dark;
 			font-weight: 600;
 		}
 
