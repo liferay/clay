@@ -92,16 +92,6 @@ const ClaySlider: React.FunctionComponent<IProps> = ({
 	const sliderRef = useRef<HTMLInputElement | null>(null);
 	const thumbRef = useRef<HTMLDivElement | null>(null);
 
-	const handleEvents = (event: React.ChangeEvent<HTMLInputElement>) => {
-		const thumbWidth = (thumbRef.current as HTMLDivElement).clientWidth;
-		const value = Number(event.target.value);
-
-		onValueChange(value);
-		setOffsetWidth(
-			calcProgressWidth(event.target, thumbWidth, value, min, max, step)
-		);
-	};
-
 	useEffect(() => {
 		if (sliderRef.current && thumbRef.current) {
 			const thumbWidth = thumbRef.current.clientWidth;
@@ -117,7 +107,7 @@ const ClaySlider: React.FunctionComponent<IProps> = ({
 				)
 			);
 		}
-	}, []);
+	}, [value]);
 
 	return (
 		<div className={classNames('clay-range', className, {disabled})}>
@@ -128,7 +118,9 @@ const ClaySlider: React.FunctionComponent<IProps> = ({
 					disabled={disabled}
 					max={max}
 					min={min}
-					onChange={handleEvents}
+					onChange={event =>
+						onValueChange(Number(event.target.value))
+					}
 					ref={sliderRef}
 					step={step}
 					type="range"
