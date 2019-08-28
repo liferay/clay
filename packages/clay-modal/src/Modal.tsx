@@ -84,7 +84,7 @@ const ClayModal: FunctionComponent<IProps> & {
 									status,
 								}}
 							>
-								{children}
+								{observer.mutation && children}
 							</Context.Provider>
 						</div>
 					</div>
