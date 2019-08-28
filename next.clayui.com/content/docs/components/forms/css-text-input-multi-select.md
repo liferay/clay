@@ -3,6 +3,7 @@ title: "Multi Select"
 description: "Multi select is the field type that allows writing text to create “tags” that are represented in the shape of labels."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Example](#example)
@@ -10,6 +11,7 @@ description: "Multi select is the field type that allows writing text to create 
 - [Loading](#loading)
 - [Contenteditable Elements](#contenteditable-elements)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

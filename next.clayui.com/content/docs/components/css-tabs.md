@@ -3,6 +3,7 @@ title: "Tabs"
 description: "Tabs organize similar content together into individual sections in the same page."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Classic](#classic)
@@ -12,6 +13,7 @@ description: "Tabs organize similar content together into individual sections in
     - [Justified](#justified)
     - [Grid](#grid)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

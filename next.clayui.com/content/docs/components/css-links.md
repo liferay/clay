@@ -3,6 +3,7 @@ title: "Links"
 description: "Also known as a hyperlink, a link is a clickable (text or image) element used for navigation purposes."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Styles](#styles)
@@ -17,6 +18,7 @@ description: "Also known as a hyperlink, a link is a clickable (text or image) e
 - [Monospaced](#monospaced)
 - [Title Link](#title-link)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

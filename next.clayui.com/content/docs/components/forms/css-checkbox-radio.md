@@ -3,6 +3,7 @@ title: "Checkbox and Radio"
 description: "Checkboxes and radios provide users with different selection and activation tools."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Checkboxes and Radios](#checkboxes-and-radios)
@@ -15,6 +16,7 @@ description: "Checkboxes and radios provide users with different selection and a
 	- [Inline](#inline)
 	- [Disabled](#disabled)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

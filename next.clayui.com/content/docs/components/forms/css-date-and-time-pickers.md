@@ -3,6 +3,7 @@ title: "Date & Time Pickers"
 description: "Date and Time pickers let users select a date and time for a form."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Example](#example)
@@ -10,6 +11,7 @@ description: "Date and Time pickers let users select a date and time for a form.
 - [Date Picker](#date-picker)
 - [Time Picker](#time-picker)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

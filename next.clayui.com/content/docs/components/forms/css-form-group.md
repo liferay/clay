@@ -3,11 +3,13 @@ title: "Form Group"
 description: "Forms obtain user data and transmit it to the system to either store the data, produce an action, or both."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Autofit](#autofit)
 - [Horizontal](#horizontal)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-warning">

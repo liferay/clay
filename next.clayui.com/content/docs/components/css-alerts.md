@@ -3,6 +3,7 @@ title: "Alerts"
 description: "Alerts are used to capture the attention of the user in an intrusive way. They can be used just to say that something went right, or perhaps to say that something needs to be reviewed."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Colors](#colors)
@@ -19,6 +20,7 @@ description: "Alerts are used to capture the attention of the user in an intrusi
 	- [Alert Notifications Absolute](#alert-notifications-absolute)
 	- [Fixed Notifications](#fixed-notifications)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

@@ -3,6 +3,7 @@ title: "Modals"
 description: "A modal is a secondary window that communicates or provides an action inside the same process."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Sizes](#sizes)
@@ -29,6 +30,7 @@ description: "A modal is a secondary window that communicates or provides an act
     - [Remove Animation](#remove-animation)
     - [Inline Scroller](#inline-scroller)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

@@ -3,6 +3,7 @@ title: "Loading Indicator"
 description: "The loading indicator shows the user that an external process, like a connection, is being executed."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Sizes](#sizes)
@@ -13,6 +14,7 @@ description: "The loading indicator shows the user that an external process, lik
   - [Button](#button)
   - [Autocomplete](#autocomplete)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

@@ -3,11 +3,13 @@ title: "Text Input Localizable"
 description: "A text input variation used in fields that can be translated into multiple languages."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Example](#example)
 - [Textarea](#textarea)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

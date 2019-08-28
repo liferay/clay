@@ -3,6 +3,7 @@ title: "Badges"
 description: "Badges help highlight important information, such as notifications or new and unread messages. Badges have circular borders and are only used to specify a number."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Variations](#variations)
@@ -11,6 +12,7 @@ description: "Badges help highlight important information, such as notifications
 - [Links inside](#links-inside)
 - [Text truncate](#text-truncate)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

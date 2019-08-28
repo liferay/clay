@@ -3,6 +3,7 @@ title: "Text Input Group"
 description: "A text field with added elements that provide a more complex input structure."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Example](#example)
@@ -14,6 +15,7 @@ description: "A text field with added elements that provide a more complex input
 - [Mixed addons](#mixed-addons)
 - [Inset](#inset)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

@@ -3,12 +3,14 @@ title: "Sidebar"
 description: "A vertical panel that appears from the right or the left side of the screen, triggered by a button."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Structure](#structure)
 - [Variations](#variation)
     - [Light](#light)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

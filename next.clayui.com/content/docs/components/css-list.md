@@ -3,6 +3,7 @@ title: "List"
 description: "List is a visual representation of a dataset that provides more flexibility for arranging the data than a table and is less visually explicit than a card view."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Example](#example)
@@ -21,6 +22,7 @@ description: "List is a visual representation of a dataset that provides more fl
             - [Buttons](#buttons)
 	    - [Active](#active)
 
+</div>
 </div>
 
 <div class="alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/list/">List Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>

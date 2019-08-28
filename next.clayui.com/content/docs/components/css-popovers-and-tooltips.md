@@ -3,6 +3,7 @@ title: "Popovers and Tooltips"
 description: "Popovers and Tooltips are patterns used to show helpful information in two different ways."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Popover](#popover)
@@ -18,6 +19,7 @@ description: "Popovers and Tooltips are patterns used to show helpful informatio
         - [Bottom](#tooltip-bottom)
         - [Left](#tooltip-left)
 
+</div>
 </div>
 
 ## Popover

@@ -3,12 +3,14 @@ title: "Text Input Autocomplete"
 description: "An autocomplete text field is an input that offers the user text suggestions while they type."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Example](#example)
 - [Search Field](#search-field)
 - [Loading](#loading)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">
