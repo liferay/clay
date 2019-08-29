@@ -37,11 +37,11 @@ export default ({data, location}) => {
 				<meta content={`${timeToRead} min read`} name="twitter:data1" />
 			</Helmet>
 			<main className="content">
-				<LayoutNav />
 				<div className="container-fluid">
 					<div className="row flex-xl-nowrap">
 						<Sidebar data={list} location={location} />
 						<div className="col-xl-9 sidebar-offset">
+							<LayoutNav />
 							<header>
 								<div className="clay-site-container container-fluid">
 									<h1 className="blog-title">
