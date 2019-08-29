@@ -14,8 +14,8 @@ export type HeaderProps = HTMLAttributes<HTMLDivElement>;
 const ICON_MAP = {
 	danger: 'exclamation-full',
 	info: 'info-circle',
-	success: 'check-circle',
-	warning: 'question-circle-full',
+	success: 'check-circle-full',
+	warning: 'warning-full',
 };
 
 const ClayModalHeader: FunctionComponent<HeaderProps> = ({
