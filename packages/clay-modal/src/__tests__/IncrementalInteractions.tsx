@@ -10,7 +10,7 @@ import Button from '@clayui/button';
 import ClayModal, {ClayModalProvider, Context, useModal} from '..';
 import React, {useContext, useEffect, useState} from 'react';
 import ReactDOM from 'react-dom';
-import {cleanup, fireEvent, render} from '@testing-library/react';
+import {act, cleanup, fireEvent, render} from '@testing-library/react';
 
 const spritemap = 'icons.svg';
 
@@ -48,10 +48,6 @@ describe('Modal -> IncrementalInteractions', () => {
 		cleanup();
 	});
 
-	// this is just a little hack to silence a warning that we'll get until react
-	// fixes this: https://github.com/facebook/react/pull/14853
-	// https://github.com/testing-library/react/issues/281
-	const originalError = console.error;
 	beforeAll(() => {
 		jest.useFakeTimers();
 
@@ -59,18 +55,10 @@ describe('Modal -> IncrementalInteractions', () => {
 		ReactDOM.createPortal = jest.fn(element => {
 			return element;
 		});
-		console.error = (...args: any) => {
-			if (/Warning.*not wrapped in act/.test(args[0])) {
-				return;
-			}
-			originalError.call(console, ...args);
-		};
 	});
 
 	afterAll(() => {
 		jest.useRealTimers();
-
-		console.error = originalError;
 	});
 
 	it('open the modal', () => {
@@ -92,7 +80,9 @@ describe('Modal -> IncrementalInteractions', () => {
 	it('close the modal by clicking on the overlay', () => {
 		render(<ModalWithState initialVisible />);
 
-		jest.runAllTimers();
+		act(() => {
+			jest.runAllTimers();
+		});
 
 		const backdropElSelector = '.modal-backdrop.fade.show';
 		const modalElSelector = '.fade.modal.d-block.show';
@@ -113,7 +103,9 @@ describe('Modal -> IncrementalInteractions', () => {
 	it('close the modal when pressing ESC', () => {
 		const {container} = render(<ModalWithState initialVisible />);
 
-		jest.runAllTimers();
+		act(() => {
+			jest.runAllTimers();
+		});
 
 		const backdropElSelector = '.modal-backdrop.fade.show';
 		const modalElSelector = '.fade.modal.d-block.show';
@@ -138,7 +130,9 @@ describe('Modal -> IncrementalInteractions', () => {
 			</ModalWithState>
 		);
 
-		jest.runAllTimers();
+		act(() => {
+			jest.runAllTimers();
+		});
 
 		const backdropElSelector = '.modal-backdrop.fade.show';
 		const modalElSelector = '.fade.modal.d-block.show';
@@ -182,7 +176,9 @@ describe('Modal -> IncrementalInteractions', () => {
 		};
 		const {getByLabelText} = render(<ModalState />);
 
-		jest.runAllTimers();
+		act(() => {
+			jest.runAllTimers();
+		});
 
 		const backdropElSelector = '.modal-backdrop.fade.show';
 		const modalElSelector = '.fade.modal.d-block.show';
@@ -209,14 +205,7 @@ describe('ModalProvider -> IncrementalInteractions', () => {
 		cleanup();
 	});
 
-	const originalError = console.error;
 	beforeAll(() => {
-		console.error = (...args: any) => {
-			if (/Warning.*not wrapped in act/.test(args[0])) {
-				return;
-			}
-			originalError.call(console, ...args);
-		};
 		jest.useFakeTimers();
 
 		// @ts-ignore
@@ -226,7 +215,6 @@ describe('ModalProvider -> IncrementalInteractions', () => {
 	});
 
 	afterAll(() => {
-		console.error = originalError;
 		jest.useRealTimers();
 	});
 
@@ -271,7 +259,9 @@ describe('ModalProvider -> IncrementalInteractions', () => {
 
 		fireEvent.click(button, {});
 
-		jest.runAllTimers();
+		act(() => {
+			jest.runAllTimers();
+		});
 
 		expect(document.body).toMatchSnapshot();
 	});

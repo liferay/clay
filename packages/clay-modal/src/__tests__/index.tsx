@@ -9,19 +9,12 @@ import Button from '@clayui/button';
 import ClayModal, {useModal} from '..';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {cleanup, render} from '@testing-library/react';
+import {act, cleanup, render} from '@testing-library/react';
 
 const spritemap = 'icons.svg';
 
 describe('ClayModal', () => {
-	const originalError = console.error;
 	beforeAll(() => {
-		console.error = (...args: any) => {
-			if (/Warning.*not wrapped in act/.test(args[0])) {
-				return;
-			}
-			originalError.call(console, ...args);
-		};
 		// @ts-ignore
 		ReactDOM.createPortal = jest.fn(element => {
 			return element;
@@ -30,7 +23,7 @@ describe('ClayModal', () => {
 	});
 
 	afterAll(() => {
-		console.error = originalError;
+		jest.useRealTimers();
 	});
 
 	afterEach(() => {
@@ -58,7 +51,9 @@ describe('ClayModal', () => {
 
 		render(<ModalWithState />);
 
-		jest.runAllTimers();
+		act(() => {
+			jest.runAllTimers();
+		});
 
 		expect(document.body).toMatchSnapshot();
 	});
@@ -75,7 +70,9 @@ describe('ClayModal', () => {
 
 		render(<ModalWithState />);
 
-		jest.runAllTimers();
+		act(() => {
+			jest.runAllTimers();
+		});
 
 		expect(document.body).toMatchSnapshot();
 	});
@@ -94,7 +91,9 @@ describe('ClayModal', () => {
 
 		render(<ModalWithState />);
 
-		jest.runAllTimers();
+		act(() => {
+			jest.runAllTimers();
+		});
 
 		expect(document.body).toMatchSnapshot();
 	});
@@ -113,7 +112,9 @@ describe('ClayModal', () => {
 
 		render(<ModalWithState />);
 
-		jest.runAllTimers();
+		act(() => {
+			jest.runAllTimers();
+		});
 
 		expect(document.body).toMatchSnapshot();
 	});
@@ -130,7 +131,9 @@ describe('ClayModal', () => {
 
 		render(<ModalWithState />);
 
-		jest.runAllTimers();
+		act(() => {
+			jest.runAllTimers();
+		});
 
 		expect(document.body).toMatchSnapshot();
 	});
@@ -151,7 +154,9 @@ describe('ClayModal', () => {
 
 		render(<ModalWithState />);
 
-		jest.runAllTimers();
+		act(() => {
+			jest.runAllTimers();
+		});
 
 		expect(document.body).toMatchSnapshot();
 	});
