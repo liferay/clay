@@ -41,7 +41,7 @@ $panel-header-link: map-merge((
 	transition: border-color 0.1s ease#{','} border-radius 0.5s ease,
 	hover-color: inherit,
 	hover-text-decoration: $panel-header-link-hover-text-decoration,
-	focus-z-index: 1,
+	focus-z-index: $zindex-panel-header-link-focus,
 ), $panel-header-link);
 
 $panel-header-collapsed-link: () !default;

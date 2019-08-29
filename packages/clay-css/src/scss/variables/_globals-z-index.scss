@@ -1,0 +1,22 @@
+$zindex-dropdown: 1000 !default;
+$zindex-sticky: 1020 !default;
+$zindex-fixed: 1030 !default;
+$zindex-modal-backdrop: 1040 !default;
+$zindex-modal: 1050 !default;
+$zindex-popover: 1060 !default;
+$zindex-tooltip: 1070 !default;
+
+$zindex-alert-notifications: 5000 !default;
+$zindex-clay-range-input-form-control: 1 !default;
+$zindex-input-group-hover: 3 !default;
+$zindex-input-group-focus: $zindex-input-group-hover + 1 !default; // 4
+$zindex-navbar-collapse-absolute: 500 !default;
+$zindex-navbar-overlay: 450 !default;
+$zindex-navbar-toggler-focus: 525 !default;
+$zindex-menubar-vertical-expand-md-collapse-mobile: $zindex-navbar-collapse-absolute - 1 !default; // 499
+$zindex-menubar-vertical-expand-lg-collapse-mobile: $zindex-navbar-collapse-absolute - 1 !default; // 499
+$zindex-pagination-link-focus: 4 !default;
+$zindex-pagination-link-active: 3 !default;
+$zindex-pagination-link-disabled: 0 !default;
+$zindex-panel-header-link-focus: 1 !default;
+$zindex-sidenav: $zindex-fixed + 5 !default; // 1035
