@@ -19,7 +19,7 @@ export default () => (
 					<ul className="navbar-nav ml-auto">
 						<li className="nav-item">
 							<a
-								className="nav-link ml-3"
+								className="nav-link"
 								href="http://storybook.clayui.com"
 								rel="noopener noreferrer"
 								target="_blank"
@@ -34,7 +34,7 @@ export default () => (
 						</li> */}
 						<li className="nav-item">
 							<a
-								className="mx-3 mr-lg-0"
+								className="nav-link mx-3"
 								href="https://github.com/liferay/clay"
 								rel="noopener noreferrer"
 								target="_blank"

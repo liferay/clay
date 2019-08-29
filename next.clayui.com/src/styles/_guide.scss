@@ -147,6 +147,8 @@
 		padding: 15px 15px 15px 0;
 
 		a {
+			@include focus-a11y;
+
 			color: #30313F;
 			word-break: break-all;
 		}
