@@ -76,12 +76,12 @@
     margin-bottom: 32px;
     padding: 88px 0;
 
-    @media (max-width: $screen-md) {
-        text-align: center !important;
-    }
-
     @include media-breakpoint-up(sm) {
         padding: 203px 0 216px;
+    }
+
+    @include media-breakpoint-down(lg) {
+        text-align: center !important;
     }
 
     .brand {
@@ -92,7 +92,7 @@
             max-height: 84px;
             margin-right: 22px;
 
-            @media (max-width: $screen-md) {
+            @include media-breakpoint-down(lg) {
                 max-width: 60px;
             }
         }
@@ -102,7 +102,7 @@
             font-weight: 700;
             color: $brand-dark;
 
-            @media (max-width: $screen-md) {
+            @include media-breakpoint-down(lg) {
                 font-size: 60px;
             }
         }
@@ -150,12 +150,7 @@
         font-weight: 600;
         line-height: 57px;
 
-        @include media-breakpoint-up(lg) {
-            font-size: 48px;
-            margin-bottom: 73px;
-        }
-
-        @media (max-width: $screen-md) {
+        @include media-breakpoint-down(lg) {
             font-size: 31px;
             line-height: 43px;
             margin-bottom: 40px;
@@ -209,7 +204,7 @@
         margin-right: 28px;
     }
 
-    @media (max-width: $screen-md) {
+    @include media-breakpoint-down(lg) {
         font-size: 28px;
 
         svg {
@@ -232,7 +227,7 @@
     font-weight: 400;
     margin: 0;
 
-    @media (max-width: $screen-md) {
+    @include media-breakpoint-down(lg) {
         font-size: 18px;
     }
 }
@@ -313,7 +308,7 @@
 .css,
 .contribute {
     .container-fluid {
-        @media (max-width: $screen-md) {
+        @include media-breakpoint-down(lg) {
             text-align: center !important;
         }
     }

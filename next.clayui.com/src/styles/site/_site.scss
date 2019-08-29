@@ -24,7 +24,7 @@ body {
 }
 
 .flex-xl-nowrap {
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(lg) {
 		flex-wrap: nowrap;
 	}
 }

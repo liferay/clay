@@ -16,7 +16,7 @@
 			line-height: 1.25;
 			letter-spacing: 0.4px;
 
-			@media (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(lg) {
 				margin-bottom: $base-size;
 				margin-top: $base-size;
 			}
@@ -29,7 +29,7 @@
 
 	header {
 		.clay-site-container.container-fluid > h1 {
-			@media (max-width: $grid-float-breakpoint - 1) {
+			@include media-breakpoint-down(lg) {
 				font-size: 24px;
 			}
 		}
@@ -180,16 +180,16 @@
 			visibility: hidden;
 		}
 
-		li span {
-			margin-left: 4px;
-		}
-	}
+		li {
+			@include media-breakpoint-up(md) {
+				float: left;
+				padding: 5px;
+				width: 33%;
+			}
 
-	@media (min-width: $screen-xs) {
-		.lexicon-icon-list li {
-			float: left;
-			padding: 5px;
-			width: 33%;
+			span {
+				margin-left: 4px;
+			}
 		}
 	}
 

@@ -3,7 +3,7 @@
 	min-height: $base-size * 4;
 	padding: $base-size 0;
 
-	@media (min-width: $screen-md) {
+	@include media-breakpoint-up(lg) {
 		padding: 120px 0;
 	}
 

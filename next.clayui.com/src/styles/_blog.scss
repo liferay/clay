@@ -5,7 +5,7 @@
 		line-height: 1.2 !important;
 		font-weight: 700 !important;
 
-		@media (max-width: $grid-float-breakpoint - 1) {
+		@include media-breakpoint-down(lg) {
 			margin-top: 30px !important;
 		}
 	}

@@ -4,14 +4,14 @@
 	min-height: 100vh;
 	width: 100%;
 
-	@media (min-width: $screen-lg) {
+	@include media-breakpoint-up($screen-lg) {
 		padding: 0 0 0 2rem;
 	}
 
 	.clay-site-container {
 		max-width: 700px;
 
-		@media (min-width: $screen-lg) {
+		@include media-breakpoint-up($screen-lg) {
 			margin-right: 33%;
 		}
 	}
@@ -23,11 +23,21 @@
 	width: 100%;
 	z-index: 11;
 
+	@include media-breakpoint-up(lg) {
+		width: 320px;
+		height: 100vh;
+		flex-shrink: 0;
+	}
+
 	.sidenav-menu {
 		width: 100%;
 
 		.sidebar-header {
 			.sidebar-toggler {
+				@include media-breakpoint-up(lg) {
+					display: none;
+				}
+
 				.lexicon-icon {
 					display: none;
 
@@ -35,17 +45,13 @@
 						display: inline-block;
 					}
 				}
-
-				@media (min-width: $screen-md) {
-					display: none;
-				}
 			}
 		}
 
 		.sidebar-body {
 			display: none;
 
-			@media (min-width: $screen-md) {
+			@include media-breakpoint-up(lg) {
 				display: block;
 			}
 		}
@@ -73,11 +79,5 @@
 				display: block;
 			}
 		}
-	}
-
-	@media (min-width: $screen-md) {
-		width: 320px;
-		height: 100vh;
-		flex-shrink: 0;
 	}
 }

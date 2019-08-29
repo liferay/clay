@@ -9,18 +9,18 @@
 	}
 
 	.sidebar-header {
+		@include media-breakpoint-down(lg) {
+			display: none;
+		}
+
+		@include media-breakpoint-up(lg) {
+			padding: $base-size * 1.33 $base-size $base-size * 2.4 $base-size * 0.33;
+		}
+
 		.sidebar-logo {
 			.sidebar-logo-image {
 				max-height: 32px;
 			}
-		}
-
-		@media (min-width: $grid-float-breakpoint) {
-			padding: $base-size * 1.33 $base-size $base-size * 2.4 $base-size * 0.33;
-		}
-
-		@media (max-width: $grid-float-breakpoint - 1) {
-			display: none;
 		}
 	}
 

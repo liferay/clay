@@ -19,13 +19,13 @@
 	header {
 		padding: $base-size 0;
 
-		@media (min-width: $grid-float-breakpoint) {
-			padding: $base-size * 1.5 0;
-		}
-
-		@media (max-width: $screen-xs) {
+		@include media-breakpoint-down(md) {
 			padding-top: 25px;
 			padding-bottom: 25px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			padding: $base-size * 1.5 0;
 		}
 
 		.container-fluid {
@@ -127,13 +127,13 @@
 	}
 
 	.nav-toc-title {
-		@media (min-width: $screen-lg) {
+		@include media-breakpoint-up($screen-lg) {
 			display: none;
 		}
 	}
 
 	.nav-toc-absolute {
-		@media (min-width: $screen-lg) {
+		@include media-breakpoint-up($screen-lg) {
 			height: 100%;
 			position: absolute;
 			right: -50%;
@@ -161,7 +161,7 @@
 			margin: 0;
 		}
 
-		@media (min-width: $screen-lg) {
+		@include media-breakpoint-up($screen-lg) {
 			background-color: white;
 			margin-bottom: 0;
 			max-height: 100vh;
