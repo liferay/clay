@@ -2,10 +2,8 @@
 	background-color: $bg-color;
 	border-right: 1px solid $brand-light;
 
-	a:focus {
-		border-radius: .25rem;
-		box-shadow: 0 0 0 0.125rem #FFF, 0 0 0 0.25rem #80ACFF;
-		outline: 0;
+	a {
+		@include focus-a11y;
 	}
 
 	.sidebar-header {
