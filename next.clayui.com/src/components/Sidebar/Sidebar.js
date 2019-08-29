@@ -47,7 +47,7 @@ export default props => (
 			<SideNavScroll>
 				<div className="sidebar-header d-flex justify-content-between align-items-center p-0">
 					<Link
-						className="sidebar-logo text-reset text-decoration-none d-inline-block p-2 mb-1 ml-2"
+						className="sidebar-logo text-reset text-decoration-none d-inline-block p-2"
 						to="/"
 					>
 						<img

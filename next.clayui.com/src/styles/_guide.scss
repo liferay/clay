@@ -28,9 +28,11 @@
 			padding-bottom: 25px;
 		}
 
-		.container-fluid {
-			margin-right: 6%;
-			max-width: 92%;
+		@media (min-width: $screen-lg) {
+			.container-fluid {
+				margin-right: 3%;
+				max-width: 97%;
+			}
 		}
 
 		.docs-title {
