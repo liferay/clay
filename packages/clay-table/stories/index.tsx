@@ -604,12 +604,15 @@ storiesOf('ClayTable', module)
 			</ClayTable>
 		);
 	})
-	.add('using high-level', () => {
+	.add('using ClayTableWithQuickActions', () => {
 		const columns = [
 			{
+				cellProps: {
+					headingTitle: false,
+				},
 				dataIndex: 'author',
 				render: (title: string) => (
-					<p className="table-list-title">{title}</p>
+					<div className="bg-secondary text-white">{title}</div>
 				),
 				title: 'Author',
 			},
@@ -618,10 +621,16 @@ storiesOf('ClayTable', module)
 					expanded: true,
 				},
 				dataIndex: 'description',
+				render: (title: string) => (
+					<div className="bg-secondary text-white">{title}</div>
+				),
 				title: 'Description',
 			},
 			{
 				dataIndex: 'title',
+				render: (title: string) => (
+					<div className="bg-secondary text-white">{title}</div>
+				),
 				title: 'Title',
 			},
 		];
@@ -647,16 +656,21 @@ storiesOf('ClayTable', module)
 						label: 'Edit',
 						onClick: () =>
 							alert('Edit event from Estrela da Manhã'),
+						symbolRight: 'edit',
 					},
 					{
 						label: 'Share',
 						onClick: () =>
 							alert('Share event from Estrela da Manhã'),
+						symbolRight: 'edit',
 					},
 				],
 				quickActions: [
 					{
-						href: '#1',
+						onClick: () =>
+							alert(
+								'Event of trash action from Estrela da Manhã'
+							),
 						symbol: 'trash',
 					},
 					{
@@ -664,15 +678,16 @@ storiesOf('ClayTable', module)
 						symbol: 'download',
 					},
 					{
-						href: '#3',
+						onClick: () =>
+							alert(
+								'Event of expand action from Estrela da Manhã'
+							),
 						symbol: 'expand',
 					},
 				],
 				render: (values: any) => {
 					return values.map((value: any, index: number) => (
-						<ClayTable.Cell className="bg-light" key={index}>
-							{value}
-						</ClayTable.Cell>
+						<ClayTable.Cell key={index}>{value}</ClayTable.Cell>
 					));
 				},
 				title: 'Estrela da Manhã',
@@ -706,7 +721,8 @@ storiesOf('ClayTable', module)
 				],
 				quickActions: [
 					{
-						href: '#1',
+						onClick: () =>
+							alert('Event of trash action from Libertinagem'),
 						symbol: 'trash',
 					},
 					{
@@ -714,7 +730,8 @@ storiesOf('ClayTable', module)
 						symbol: 'download',
 					},
 					{
-						href: '#3',
+						onClick: () =>
+							alert('Event of expand action from Libertinagem'),
 						symbol: 'expand',
 					},
 				],
@@ -751,7 +768,10 @@ storiesOf('ClayTable', module)
 				],
 				quickActions: [
 					{
-						href: '#1',
+						onClick: () =>
+							alert(
+								'Event of trash action from Morte e Vida Severina'
+							),
 						symbol: 'trash',
 					},
 					{
@@ -759,15 +779,16 @@ storiesOf('ClayTable', module)
 						symbol: 'download',
 					},
 					{
-						href: '#3',
+						onClick: () =>
+							alert(
+								'Event of expand action from Morte e Vida Severina'
+							),
 						symbol: 'expand',
 					},
 				],
 				render: (values: any) => {
 					return values.map((value: any, index: number) => (
-						<ClayTable.Cell className="bg-light" key={index}>
-							{value}
-						</ClayTable.Cell>
+						<ClayTable.Cell key={index}>{value}</ClayTable.Cell>
 					));
 				},
 				title: 'Morte e Vida Severina',
