@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import ActionsMenu from './ActionsMenu';
 import Body from './Body';
 import Cell from './Cell';
 import classNames from 'classnames';
@@ -76,6 +77,7 @@ export interface IProps extends React.HTMLAttributes<HTMLTableElement> {
 }
 
 const ClayTable: React.FunctionComponent<IProps> & {
+	ActionsMenu: typeof ActionsMenu;
 	Body: typeof Body;
 	Cell: typeof Cell;
 	Head: typeof Head;
@@ -128,6 +130,7 @@ const ClayTable: React.FunctionComponent<IProps> & {
 	);
 };
 
+ClayTable.ActionsMenu = ActionsMenu;
 ClayTable.Body = Body;
 ClayTable.Cell = Cell;
 ClayTable.Head = Head;

@@ -4,19 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayIcon from '@clayui/icon';
+import ActionsMenu from '../src/ActionsMenu';
 import ClayTable, {IProps} from './index';
 import React from 'react';
 import {ClayDropDownWithItems} from '@clayui/drop-down';
-
-interface IQuickActions {
-	href: string;
-
-	/**
-	 * Name of icon symbol
-	 */
-	symbol: string;
-}
 
 interface IColumnItem {
 	/**
@@ -50,7 +41,7 @@ interface IRowItem {
 		typeof ClayDropDownWithItems
 	>['items'];
 
-	quickActions: Array<IQuickActions>;
+	quickActions: React.ComponentProps<typeof ActionsMenu>['actionItems'];
 
 	/**
 	 * Renderer of the table cell. The return value should be a ReactNode.
@@ -115,39 +106,11 @@ export const ClayTableWithQuickActions: React.FunctionComponent<
 										</ClayTable.Cell>
 								  ))}
 							<ClayTable.Cell {...row.cellProps} key={index}>
-								{row.quickActions && (
-									<div className="quick-action-menu">
-										{row.quickActions.map(
-											({href, symbol}, index) => (
-												<a
-													className="component-action quick-action-item"
-													href={href}
-													key={index}
-													role="button"
-												>
-													<ClayIcon
-														spritemap={spritemap}
-														symbol={symbol}
-													/>
-												</a>
-											)
-										)}
-									</div>
-								)}
-								{row.dropdownActions && (
-									<ClayDropDownWithItems
-										items={row.dropdownActions}
-										spritemap={spritemap}
-										trigger={
-											<button className="component-action">
-												<ClayIcon
-													spritemap={spritemap}
-													symbol="ellipsis-v"
-												/>
-											</button>
-										}
-									/>
-								)}
+								<ActionsMenu
+									actionItems={row.quickActions}
+									dropdownActions={row.dropdownActions}
+									spritemap={spritemap}
+								/>
 							</ClayTable.Cell>
 						</ClayTable.Row>
 					);
