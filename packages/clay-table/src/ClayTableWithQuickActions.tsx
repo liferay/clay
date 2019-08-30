@@ -83,7 +83,7 @@ export const ClayTableWithQuickActions: React.FunctionComponent<
 		<ClayTable hover {...otherProps}>
 			<ClayTable.Head>
 				<ClayTable.Row>
-					{columns.map(({cellProps, render, title}, index) => {
+					{columns.map(({cellProps = {}, render, title}, index) => {
 						return (
 							<ClayTable.Cell
 								headingCell
