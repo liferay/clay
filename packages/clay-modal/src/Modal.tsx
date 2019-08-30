@@ -10,6 +10,7 @@ import Context, {IContext} from './Context';
 import Footer from './Footer';
 import Header from './Header';
 import React, {FunctionComponent, useEffect, useRef} from 'react';
+import warning from 'warning';
 import {ClayPortal} from '@clayui/shared';
 import {Observer, ObserverType, Size} from './types';
 import {useUserInteractions} from './Hook';
@@ -29,6 +30,17 @@ interface IProps
 	observer: Observer;
 }
 
+const warningMessage = `You need to pass the 'observer' prop to ClayModal for everything to work fine, use the 'useModal' hook that exposes the observer.
+
+> const {observer} = useModal({...});
+>
+> return (
+> 	<ClayModal observer={observer}>
+> 		...
+> 	</ClayModal>
+> ); 
+`;
+
 const ClayModal: FunctionComponent<IProps> & {
 	Body: typeof Body;
 	Footer: typeof Footer;
@@ -43,6 +55,8 @@ const ClayModal: FunctionComponent<IProps> & {
 	...otherProps
 }: IProps) => {
 	const modalBodyElementRef = useRef<HTMLDivElement | null>(null);
+
+	warning(observer !== undefined, warningMessage);
 
 	useUserInteractions(modalBodyElementRef, () =>
 		observer.dispatch(ObserverType.Close)
