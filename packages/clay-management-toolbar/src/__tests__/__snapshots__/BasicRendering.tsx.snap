@@ -2035,7 +2035,6 @@ exports[`BasicRendering renders a ManagementToolbar with disabled all 1`] = `
           class="container-fluid container-fluid-max-xl"
         >
           <form
-            method="get"
             role="search"
           >
             <div
@@ -2273,7 +2272,6 @@ exports[`BasicRendering renders a ManagementToolbar with only search 1`] = `
           class="container-fluid container-fluid-max-xl"
         >
           <form
-            method="get"
             role="search"
           >
             <div

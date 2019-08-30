@@ -108,6 +108,10 @@ storiesOf('ClayManagementToolbar', module).add('default', () => {
 				boolean('Show select all button', true) ? () => {} : undefined
 			}
 			onSortingButtonClick={() => alert('Sorting button clicked')}
+			onValueSubmit={(value, event) => {
+				event.preventDefault();
+				alert(`Submit ${value}`);
+			}}
 			searchValue={value}
 			selectedItems={number('Selected items', 0)}
 			showResultsBar={boolean('Show ResultsBar', true)}

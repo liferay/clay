@@ -14,8 +14,14 @@ interface IProps {
 	onCloseButtonClick: (
 		event: React.MouseEvent<HTMLButtonElement, MouseEvent>
 	) => void;
-	onlySearch?: boolean;
 	onValueChange: (val: string) => void;
+	onValueSubmit: (
+		value: string,
+		event:
+			| React.MouseEvent<HTMLButtonElement, MouseEvent>
+			| React.KeyboardEvent<HTMLInputElement>
+	) => void;
+	onlySearch?: boolean;
 	spritemap?: string;
 	value: string;
 }
@@ -25,6 +31,7 @@ const SearchInput: React.FunctionComponent<IProps> = ({
 	disabled,
 	onCloseButtonClick,
 	onValueChange,
+	onValueSubmit,
 	onlySearch,
 	spritemap,
 	value,
@@ -36,6 +43,9 @@ const SearchInput: React.FunctionComponent<IProps> = ({
 				className="form-control input-group-inset input-group-inset-after"
 				disabled={disabled}
 				onChange={event => onValueChange(event.target.value)}
+				onKeyDown={event =>
+					event.key === 'Enter' && onValueSubmit(value, event)
+				}
 				type="text"
 				value={value}
 			/>
@@ -53,6 +63,7 @@ const SearchInput: React.FunctionComponent<IProps> = ({
 				<ClayButtonWithIcon
 					disabled={disabled}
 					displayType="unstyled"
+					onClick={event => onValueSubmit(value, event)}
 					spritemap={spritemap}
 					symbol="search"
 					type="submit"
