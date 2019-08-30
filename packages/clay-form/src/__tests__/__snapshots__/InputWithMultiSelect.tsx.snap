@@ -1,316 +1,499 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ClayInputWithMultiSelect renders 1`] = `
-<div
-  className="form-group"
->
-  <div
-    className="input-group input-group-stacked-sm-down"
-  >
+<body>
+  <div>
     <div
-      className="input-group-item"
+      class="form-group"
     >
       <div
-        className="form-control form-control-tag-group"
-        onKeyDown={[Function]}
-      >
-        <input
-          className="form-control-inset"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onPaste={[Function]}
-          type="text"
-          value=""
-        />
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ClayInputWithMultiSelect renders as not valid 1`] = `
-<div
-  className="form-group has-error"
->
-  <div
-    className="input-group input-group-stacked-sm-down"
-  >
-    <div
-      className="input-group-item"
-    >
-      <div
-        className="form-control form-control-tag-group"
-        onKeyDown={[Function]}
-      >
-        <span
-          className="label label-dismissible label-secondary"
-          onKeyDown={[Function]}
-          tabIndex={0}
-        >
-          <span
-            className="label-item label-item-expand"
-          >
-            foo
-          </span>
-          <span
-            className="label-item label-item-after"
-          >
-            <button
-              className="close"
-              onClick={[Function]}
-              type="button"
-            >
-              <svg
-                className="lexicon-icon lexicon-icon-times"
-                role="presentation"
-              >
-                <use
-                  xlinkHref="/foo/bar#times"
-                />
-              </svg>
-            </button>
-          </span>
-        </span>
-        <input
-          name=""
-          type="hidden"
-          value="foo"
-        />
-        <span
-          className="label label-dismissible label-secondary"
-          onKeyDown={[Function]}
-          tabIndex={0}
-        >
-          <span
-            className="label-item label-item-expand"
-          >
-            bar
-          </span>
-          <span
-            className="label-item label-item-after"
-          >
-            <button
-              className="close"
-              onClick={[Function]}
-              type="button"
-            >
-              <svg
-                className="lexicon-icon lexicon-icon-times"
-                role="presentation"
-              >
-                <use
-                  xlinkHref="/foo/bar#times"
-                />
-              </svg>
-            </button>
-          </span>
-        </span>
-        <input
-          name=""
-          type="hidden"
-          value="bar"
-        />
-        <span
-          className="label label-dismissible label-secondary"
-          onKeyDown={[Function]}
-          tabIndex={0}
-        >
-          <span
-            className="label-item label-item-expand"
-          >
-            baz
-          </span>
-          <span
-            className="label-item label-item-after"
-          >
-            <button
-              className="close"
-              onClick={[Function]}
-              type="button"
-            >
-              <svg
-                className="lexicon-icon lexicon-icon-times"
-                role="presentation"
-              >
-                <use
-                  xlinkHref="/foo/bar#times"
-                />
-              </svg>
-            </button>
-          </span>
-        </span>
-        <input
-          name=""
-          type="hidden"
-          value="baz"
-        />
-        <input
-          className="form-control-inset"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onPaste={[Function]}
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        className="form-feedback-group"
+        class="input-group input-group-stacked-sm-down"
       >
         <div
-          className="form-feedback-item"
+          class="input-group-item"
         >
-          <span
-            className="form-feedback-indicator"
+          <div
+            class="form-control form-control-tag-group input-group"
           >
-            <svg
-              className="lexicon-icon lexicon-icon-info-circle"
-              role="presentation"
+            <div
+              class="input-group-item"
             >
-              <use
-                xlinkHref="/foo/bar#info-circle"
+              <input
+                class="form-control-inset"
+                type="text"
+                value=""
               />
-            </svg>
-          </span>
-          WRONG
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</body>
 `;
 
-exports[`ClayInputWithMultiSelect renders with items 1`] = `
-<div
-  className="form-group"
->
-  <div
-    className="input-group input-group-stacked-sm-down"
-  >
+exports[`ClayInputWithMultiSelect renders as disabled 1`] = `
+<body>
+  <div>
     <div
-      className="input-group-item"
+      class="form-group has-error"
     >
       <div
-        className="form-control form-control-tag-group"
-        onKeyDown={[Function]}
+        class="input-group input-group-stacked-sm-down"
       >
-        <span
-          className="label label-dismissible label-secondary"
-          onKeyDown={[Function]}
-          tabIndex={0}
+        <div
+          class="input-group-item"
         >
-          <span
-            className="label-item label-item-expand"
+          <div
+            class="form-control form-control-tag-group input-group"
           >
-            foo
-          </span>
-          <span
-            className="label-item label-item-after"
-          >
-            <button
-              className="close"
-              onClick={[Function]}
-              type="button"
+            <div
+              class="input-group-item"
             >
-              <svg
-                className="lexicon-icon lexicon-icon-times"
-                role="presentation"
+              <span
+                class="label label-dismissible label-secondary"
+                tabindex="0"
               >
-                <use
-                  xlinkHref="/foo/bar#times"
-                />
-              </svg>
-            </button>
-          </span>
-        </span>
-        <input
-          name=""
-          type="hidden"
-          value="foo"
-        />
-        <span
-          className="label label-dismissible label-secondary"
-          onKeyDown={[Function]}
-          tabIndex={0}
-        >
-          <span
-            className="label-item label-item-expand"
+                <span
+                  class="label-item label-item-expand"
+                >
+                  foo
+                </span>
+                <span
+                  class="label-item label-item-after"
+                >
+                  <button
+                    class="close"
+                    disabled=""
+                    type="button"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-times"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="/foo/bar#times"
+                      />
+                    </svg>
+                  </button>
+                </span>
+              </span>
+              <input
+                name=""
+                type="hidden"
+                value="foo"
+              />
+              <span
+                class="label label-dismissible label-secondary"
+                tabindex="0"
+              >
+                <span
+                  class="label-item label-item-expand"
+                >
+                  bar
+                </span>
+                <span
+                  class="label-item label-item-after"
+                >
+                  <button
+                    class="close"
+                    disabled=""
+                    type="button"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-times"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="/foo/bar#times"
+                      />
+                    </svg>
+                  </button>
+                </span>
+              </span>
+              <input
+                name=""
+                type="hidden"
+                value="bar"
+              />
+              <span
+                class="label label-dismissible label-secondary"
+                tabindex="0"
+              >
+                <span
+                  class="label-item label-item-expand"
+                >
+                  baz
+                </span>
+                <span
+                  class="label-item label-item-after"
+                >
+                  <button
+                    class="close"
+                    disabled=""
+                    type="button"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-times"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="/foo/bar#times"
+                      />
+                    </svg>
+                  </button>
+                </span>
+              </span>
+              <input
+                name=""
+                type="hidden"
+                value="baz"
+              />
+              <input
+                class="form-control-inset"
+                disabled=""
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class="form-feedback-group"
           >
-            bar
-          </span>
-          <span
-            className="label-item label-item-after"
-          >
-            <button
-              className="close"
-              onClick={[Function]}
-              type="button"
+            <div
+              class="form-feedback-item"
             >
-              <svg
-                className="lexicon-icon lexicon-icon-times"
-                role="presentation"
+              <span
+                class="form-feedback-indicator"
               >
-                <use
-                  xlinkHref="/foo/bar#times"
-                />
-              </svg>
-            </button>
-          </span>
-        </span>
-        <input
-          name=""
-          type="hidden"
-          value="bar"
-        />
-        <span
-          className="label label-dismissible label-secondary"
-          onKeyDown={[Function]}
-          tabIndex={0}
-        >
-          <span
-            className="label-item label-item-expand"
-          >
-            baz
-          </span>
-          <span
-            className="label-item label-item-after"
-          >
-            <button
-              className="close"
-              onClick={[Function]}
-              type="button"
-            >
-              <svg
-                className="lexicon-icon lexicon-icon-times"
-                role="presentation"
-              >
-                <use
-                  xlinkHref="/foo/bar#times"
-                />
-              </svg>
-            </button>
-          </span>
-        </span>
-        <input
-          name=""
-          type="hidden"
-          value="baz"
-        />
-        <input
-          className="form-control-inset"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onPaste={[Function]}
-          type="text"
-          value=""
-        />
+                <svg
+                  class="lexicon-icon lexicon-icon-info-circle"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/foo/bar#info-circle"
+                  />
+                </svg>
+              </span>
+              WRONG
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</body>
+`;
+
+exports[`ClayInputWithMultiSelect renders as not valid 1`] = `
+<body>
+  <div>
+    <div
+      class="form-group has-error"
+    >
+      <div
+        class="input-group input-group-stacked-sm-down"
+      >
+        <div
+          class="input-group-item"
+        >
+          <div
+            class="form-control form-control-tag-group input-group"
+          >
+            <div
+              class="input-group-item"
+            >
+              <span
+                class="label label-dismissible label-secondary"
+                tabindex="0"
+              >
+                <span
+                  class="label-item label-item-expand"
+                >
+                  foo
+                </span>
+                <span
+                  class="label-item label-item-after"
+                >
+                  <button
+                    class="close"
+                    type="button"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-times"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="/foo/bar#times"
+                      />
+                    </svg>
+                  </button>
+                </span>
+              </span>
+              <input
+                name=""
+                type="hidden"
+                value="foo"
+              />
+              <span
+                class="label label-dismissible label-secondary"
+                tabindex="0"
+              >
+                <span
+                  class="label-item label-item-expand"
+                >
+                  bar
+                </span>
+                <span
+                  class="label-item label-item-after"
+                >
+                  <button
+                    class="close"
+                    type="button"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-times"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="/foo/bar#times"
+                      />
+                    </svg>
+                  </button>
+                </span>
+              </span>
+              <input
+                name=""
+                type="hidden"
+                value="bar"
+              />
+              <span
+                class="label label-dismissible label-secondary"
+                tabindex="0"
+              >
+                <span
+                  class="label-item label-item-expand"
+                >
+                  baz
+                </span>
+                <span
+                  class="label-item label-item-after"
+                >
+                  <button
+                    class="close"
+                    type="button"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-times"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="/foo/bar#times"
+                      />
+                    </svg>
+                  </button>
+                </span>
+              </span>
+              <input
+                name=""
+                type="hidden"
+                value="baz"
+              />
+              <input
+                class="form-control-inset"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              class="input-group-item input-group-item-shrink"
+            >
+              <button
+                class="component-action"
+                title="Clear All"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-times-circle"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/foo/bar#times-circle"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="form-feedback-group"
+          >
+            <div
+              class="form-feedback-item"
+            >
+              <span
+                class="form-feedback-indicator"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-info-circle"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/foo/bar#info-circle"
+                  />
+                </svg>
+              </span>
+              WRONG
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`ClayInputWithMultiSelect renders with items 1`] = `
+<body>
+  <div>
+    <div
+      class="form-group"
+    >
+      <div
+        class="input-group input-group-stacked-sm-down"
+      >
+        <div
+          class="input-group-item"
+        >
+          <div
+            class="form-control form-control-tag-group input-group"
+          >
+            <div
+              class="input-group-item"
+            >
+              <span
+                class="label label-dismissible label-secondary"
+                tabindex="0"
+              >
+                <span
+                  class="label-item label-item-expand"
+                >
+                  foo
+                </span>
+                <span
+                  class="label-item label-item-after"
+                >
+                  <button
+                    class="close"
+                    type="button"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-times"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="/foo/bar#times"
+                      />
+                    </svg>
+                  </button>
+                </span>
+              </span>
+              <input
+                name=""
+                type="hidden"
+                value="foo"
+              />
+              <span
+                class="label label-dismissible label-secondary"
+                tabindex="0"
+              >
+                <span
+                  class="label-item label-item-expand"
+                >
+                  bar
+                </span>
+                <span
+                  class="label-item label-item-after"
+                >
+                  <button
+                    class="close"
+                    type="button"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-times"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="/foo/bar#times"
+                      />
+                    </svg>
+                  </button>
+                </span>
+              </span>
+              <input
+                name=""
+                type="hidden"
+                value="bar"
+              />
+              <span
+                class="label label-dismissible label-secondary"
+                tabindex="0"
+              >
+                <span
+                  class="label-item label-item-expand"
+                >
+                  baz
+                </span>
+                <span
+                  class="label-item label-item-after"
+                >
+                  <button
+                    class="close"
+                    type="button"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-times"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="/foo/bar#times"
+                      />
+                    </svg>
+                  </button>
+                </span>
+              </span>
+              <input
+                name=""
+                type="hidden"
+                value="baz"
+              />
+              <input
+                class="form-control-inset"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              class="input-group-item input-group-item-shrink"
+            >
+              <button
+                class="component-action"
+                title="Clear All"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-times-circle"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/foo/bar#times-circle"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
 `;

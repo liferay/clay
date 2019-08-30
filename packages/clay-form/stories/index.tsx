@@ -94,6 +94,8 @@ storiesOf('ClayForm', module)
 	.add('default', () => <ClayForm />)
 	.add('InputWithMultiSelect', () => (
 		<ClayMultiSelectWithState
+			disabled={boolean('Disabled all', false)}
+			disabledClearAll={boolean('Disabled Clear All', false)}
 			errorMessage="you done goofed up"
 			helpText="You can use a comma to enter tags."
 			isValid={boolean('isValid', true)}

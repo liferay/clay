@@ -8,6 +8,7 @@ import classNames from 'classnames';
 import ClayAutocomplete from '@clayui/autocomplete';
 import ClayDropDown from '@clayui/drop-down';
 import ClayForm from './Form';
+import ClayIcon from '@clayui/icon';
 import ClayInput from './Input';
 import ClayLabel from '@clayui/label';
 import React, {useLayoutEffect, useRef, useState} from 'react';
@@ -20,6 +21,21 @@ const ENTER_KEY = 13;
 const DELIMITER_KEYS = [ENTER_KEY, COMMA_KEY];
 
 export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
+	/**
+	 * Title for the `Clear All` button.
+	 */
+	clearAllTitle?: string;
+
+	/**
+	 * Flag that indicates to disable all features of the component.
+	 */
+	disabled?: boolean;
+
+	/**
+	 * Flag to disabled Clear All functionality.
+	 */
+	disabledClearAll?: boolean;
+
 	/**
 	 * Message to display if isValid is false.
 	 */
@@ -82,6 +98,9 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 }
 
 const ClayMultiSelect: React.FunctionComponent<IProps> = ({
+	clearAllTitle = 'Clear All',
+	disabled,
+	disabledClearAll,
 	errorMessage,
 	forwardRef,
 	helpText,
@@ -162,7 +181,7 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 	return (
 		<ClayForm.Group
 			className={classNames({
-				['has-error']: !isValid,
+				'has-error': !isValid,
 			})}
 			ref={forwardRef}
 		>
@@ -173,84 +192,126 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 					<FocusScope arrowKeys={false} focusManager={focusManager}>
 						<div
 							className={classNames(
-								'form-control form-control-tag-group',
+								'form-control form-control-tag-group input-group',
 								{
 									focus: isFocused && isValid,
 								}
 							)}
 						>
-							{items.map((item, i) => {
-								const removeItem = () =>
-									onItemsChange([
-										...items.slice(0, i),
-										...items.slice(i + 1),
-									]);
+							<ClayInput.GroupItem>
+								{items.map((item, i) => {
+									const removeItem = () =>
+										onItemsChange([
+											...items.slice(0, i),
+											...items.slice(i + 1),
+										]);
 
-								return (
-									<React.Fragment key={i}>
-										<ClayLabel
-											closeButtonProps={{
-												onClick: removeItem,
-											}}
-											onKeyDown={({keyCode}) => {
-												if (keyCode !== BACKSPACE_KEY) {
-													return;
-												}
+									return (
+										<React.Fragment key={i}>
+											<ClayLabel
+												closeButtonProps={{
+													disabled,
+													onClick: removeItem,
+												}}
+												onKeyDown={({keyCode}) => {
+													if (
+														keyCode !==
+														BACKSPACE_KEY
+													) {
+														return;
+													}
+													if (inputRef.current) {
+														inputRef.current.focus();
+													}
+													removeItem();
+												}}
+												ref={(ref: HTMLSpanElement) => {
+													focusManager.createScope(
+														ref,
+														`label${i}`
+													);
+
+													if (
+														i ===
+														items.length - 1
+													) {
+														lastItemRef.current = ref;
+													}
+												}}
+												spritemap={spritemap}
+												tabIndex={0}
+											>
+												{item}
+											</ClayLabel>
+
+											<input
+												name={inputName}
+												type="hidden"
+												value={item}
+											/>
+										</React.Fragment>
+									);
+								})}
+
+								<input
+									{...otherProps}
+									className="form-control-inset"
+									disabled={disabled}
+									onBlur={e => {
+										onBlur(e);
+										setIsFocused(false);
+									}}
+									onChange={event =>
+										onInputChange(
+											event.target.value.replace(',', '')
+										)
+									}
+									onFocus={e => {
+										onFocus(e);
+										setIsFocused(true);
+									}}
+									onKeyDown={handleKeyDown}
+									onPaste={handlePaste}
+									ref={ref => {
+										inputRef.current = ref;
+										focusManager.createScope(ref, 'input');
+									}}
+									type="text"
+									value={inputValue}
+								/>
+							</ClayInput.GroupItem>
+
+							{!disabled &&
+								!disabledClearAll &&
+								(inputValue || items.length > 0) && (
+									<ClayInput.GroupItem shrink>
+										<button
+											className="component-action"
+											onClick={() => {
+												onItemsChange([]);
+
+												onInputChange('');
+
 												if (inputRef.current) {
 													inputRef.current.focus();
 												}
-												removeItem();
 											}}
-											ref={(ref: HTMLSpanElement) => {
+											ref={ref =>
 												focusManager.createScope(
 													ref,
-													`label${i}`
-												);
-
-												if (i === items.length - 1) {
-													lastItemRef.current = ref;
-												}
-											}}
-											spritemap={spritemap}
-											tabIndex={0}
+													'clearAllButton'
+												)
+											}
+											title={clearAllTitle}
+											type="button"
 										>
-											{item}
-										</ClayLabel>
-
-										<input
-											name={inputName}
-											type="hidden"
-											value={item}
-										/>
-									</React.Fragment>
-								);
-							})}
-
-							<input
-								{...otherProps}
-								className="form-control-inset"
-								onBlur={e => {
-									onBlur(e);
-									setIsFocused(false);
-								}}
-								onChange={event =>
-									onInputChange(
-										event.target.value.replace(',', '')
-									)
-								}
-								onFocus={e => {
-									onFocus(e);
-									setIsFocused(true);
-								}}
-								onKeyDown={handleKeyDown}
-								onPaste={handlePaste}
-								ref={ref => {
-									inputRef.current = ref;
-									focusManager.createScope(ref, 'input');
-								}}
-								type="text"
-								value={inputValue}
-							/>
+											<ClayIcon
+												spritemap={spritemap}
+												symbol="times-circle"
+											/>
+										</button>
+									</ClayInput.GroupItem>
+								)}
 
 							{sourceItems && (
 								<ClayAutocomplete.DropDown
@@ -283,6 +344,10 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 														]);
 
 														onInputChange('');
+
+														if (inputRef.current) {
+															inputRef.current.focus();
+														}
 													}}
 													value={item}
 												/>
