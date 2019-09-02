@@ -39,57 +39,70 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const ClayCheckbox: React.FunctionComponent<IProps> = ({
-	checked,
-	children,
-	className,
-	containerProps = {},
-	indeterminate = false,
-	inline,
-	label,
-	...otherProps
-}: IProps) => {
-	const inputRef = useRef<HTMLInputElement | null>(null);
+const ClayCheckbox = React.forwardRef<HTMLInputElement, IProps>(
+	(
+		{
+			checked,
+			children,
+			className,
+			containerProps = {},
+			indeterminate = false,
+			inline,
+			label,
+			...otherProps
+		}: IProps,
+		ref
+	) => {
+		const inputRef = useRef<HTMLInputElement | null>(null);
 
-	useEffect(() => {
-		if (inputRef.current) {
-			inputRef.current.indeterminate = indeterminate;
-		}
-	}, [indeterminate]);
+		useEffect(() => {
+			if (inputRef.current) {
+				inputRef.current.indeterminate = indeterminate;
+			}
+		}, [indeterminate]);
 
-	return (
-		<div
-			{...containerProps}
-			className={classNames(
-				'custom-control custom-checkbox',
-				containerProps.className,
-				{
-					'custom-control-inline': inline,
-				}
-			)}
-		>
-			<label>
-				<input
-					{...otherProps}
-					checked={checked}
-					className={classNames('custom-control-input', className)}
-					ref={inputRef}
-					type="checkbox"
-					value={checked ? 'true' : 'false'}
-				/>
+		return (
+			<div
+				{...containerProps}
+				className={classNames(
+					'custom-control custom-checkbox',
+					containerProps.className,
+					{
+						'custom-control-inline': inline,
+					}
+				)}
+			>
+				<label>
+					<input
+						{...otherProps}
+						checked={checked}
+						className={classNames(
+							'custom-control-input',
+							className
+						)}
+						ref={r => {
+							inputRef.current = r;
+							if (typeof ref === 'function') {
+								ref(r);
+							}
+						}}
+						type="checkbox"
+						value={checked ? 'true' : 'false'}
+					/>
 
-				<span className="custom-control-label">
-					{label && (
-						<span className="custom-control-label-text">
-							{label}
-						</span>
-					)}
-				</span>
+					<span className="custom-control-label">
+						{label && (
+							<span className="custom-control-label-text">
+								{label}
+							</span>
+						)}
+					</span>
 
-				{children}
-			</label>
-		</div>
-	);
-};
+					{children}
+				</label>
+			</div>
+		);
+	}
+);
 
 export default ClayCheckbox;
