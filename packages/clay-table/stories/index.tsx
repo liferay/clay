@@ -97,7 +97,7 @@ storiesOf('ClayTable', module)
 					</ClayTable.Cell>
 					<ClayTable.Cell>{'South America'}</ClayTable.Cell>
 					<ClayTable.Cell>{'Brazil'}</ClayTable.Cell>
-					<ClayTable.Cell>
+					<ClayTable.Cell truncate>
 						{
 							'Homero aeterno conclusionemque est in, scribentur mediocritatem mea ut. Ad voluptua vituperata constituam pro. Mel at constituto efficiantur, in eirmod lobortis mei. Eam vero probo efficiendi ne, molestie pericula nec in, dolore minimum duo et. Mundi epicuri patrioque in vis, virtute legimus oporteat cu eum.'
 						}
@@ -109,7 +109,7 @@ storiesOf('ClayTable', module)
 					</ClayTable.Cell>
 					<ClayTable.Cell>{'Europe'}</ClayTable.Cell>
 					<ClayTable.Cell>{'Spain'}</ClayTable.Cell>
-					<ClayTable.Cell>
+					<ClayTable.Cell truncate>
 						{
 							'Homero aeterno conclusionemque est in, scribentur mediocritatem mea ut. Ad voluptua vituperata constituam pro. Mel at constituto efficiantur, in eirmod lobortis mei. Eam vero probo efficiendi ne, molestie pericula nec in, dolore minimum duo et. Mundi epicuri patrioque in vis, virtute legimus oporteat cu eum.'
 						}
@@ -489,12 +489,10 @@ storiesOf('ClayTable', module)
 						<ClayTable.Cell>
 							<ClayCheckboxWithState />
 						</ClayTable.Cell>
-						<ClayTable.Cell expanded headingTitle>
-							<span className="text-truncate">
-								{
-									'Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.'
-								}
-							</span>
+						<ClayTable.Cell headingTitle truncate>
+							{
+								'Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.'
+							}
 						</ClayTable.Cell>
 						<ClayTable.Cell>
 							<a href="1">{'JPG'}</a>
@@ -510,12 +508,10 @@ storiesOf('ClayTable', module)
 						<ClayTable.Cell>
 							<ClayCheckboxWithState />
 						</ClayTable.Cell>
-						<ClayTable.Cell expanded headingTitle>
-							<span className="text-truncate">
-								{
-									'Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.'
-								}
-							</span>
+						<ClayTable.Cell headingTitle truncate>
+							{
+								'Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.'
+							}
 						</ClayTable.Cell>
 						<ClayTable.Cell>
 							<a href="2">{'GIF'}</a>
@@ -531,12 +527,10 @@ storiesOf('ClayTable', module)
 						<ClayTable.Cell>
 							<ClayCheckboxWithState />
 						</ClayTable.Cell>
-						<ClayTable.Cell expanded headingTitle>
-							<span className="text-truncate">
-								{
-									'Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.'
-								}
-							</span>
+						<ClayTable.Cell headingTitle truncate>
+							{
+								'Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.'
+							}
 						</ClayTable.Cell>
 						<ClayTable.Cell>
 							<a href="3">{'TIFF'}</a>
