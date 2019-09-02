@@ -66,7 +66,7 @@ const ClayTableCell: React.FunctionComponent<ICellProps> = ({
 	expanded,
 	headingCell = false,
 	headingTitle = false,
-	truncate = true,
+	truncate = false,
 	...otherProps
 }: ICellProps) => {
 	const TagName = headingCell ? 'th' : 'td';
