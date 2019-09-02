@@ -49,6 +49,12 @@ interface ICellProps extends TableCellBaseProps {
 	 * header cell element.
 	 */
 	headingTitle?: boolean;
+
+	/**
+	 * Truncates the text inside a Cell. Requires `expanded`
+	 * property value set to true.
+	 */
+	truncate?: boolean;
 }
 
 const ClayTableCell: React.FunctionComponent<ICellProps> = ({
@@ -60,6 +66,7 @@ const ClayTableCell: React.FunctionComponent<ICellProps> = ({
 	expanded,
 	headingCell = false,
 	headingTitle = false,
+	truncate = false,
 	...otherProps
 }: ICellProps) => {
 	const TagName = headingCell ? 'th' : 'td';
@@ -68,19 +75,25 @@ const ClayTableCell: React.FunctionComponent<ICellProps> = ({
 		<TagName
 			{...otherProps}
 			className={classNames(className, {
-				'table-cell-expand': expanded,
+				'table-cell-expand': expanded || truncate,
 				[`table-cell-${cellDelimiter}`]: cellDelimiter,
 				[`table-column-text-${columnTextAlignment}`]: columnTextAlignment,
 				[`text-${align}`]: align,
 			})}
 		>
-			{headingTitle
-				? React.Children.map(children, (child, i) => (
-						<p className="table-list-title" key={i}>
-							{child}
-						</p>
-				  ))
-				: children}
+			{headingTitle ? (
+				React.Children.map(children, (child, i) => (
+					<p className="table-list-title" key={i}>
+						{child}
+					</p>
+				))
+			) : truncate && typeof children === 'string' ? (
+				<span className="text-truncate-inline">
+					<span className="text-truncate">{children}</span>
+				</span>
+			) : (
+				children
+			)}
 		</TagName>
 	);
 };
