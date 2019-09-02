@@ -4,16 +4,15 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as TestRenderer from 'react-test-renderer';
+import '@testing-library/jest-dom/extend-expect';
 import ClayButton from '@clayui/button';
 import ClayLink from '@clayui/link';
 import ClayNavigationBar from '..';
 import React from 'react';
 import {
 	act,
+	cleanup,
 	fireEvent,
-	getByTestId,
-	getByText,
 	render,
 	waitForElement,
 } from '@testing-library/react';
@@ -21,10 +20,12 @@ import {
 const spritemap = 'node_modules/clay-css/lib/images/icons/icons.svg';
 
 describe('ClayNavigationBar', () => {
+	afterEach(cleanup);
+
 	it('renders', () => {
 		const label = 'Item 1';
 
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayNavigationBar
 				inverted
 				spritemap={spritemap}
@@ -63,11 +64,11 @@ describe('ClayNavigationBar', () => {
 			</ClayNavigationBar>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
-	it('renders a dropdown when clicking the collapsed element from NavigationBar', async () => {
-		const {container} = render(
+	it('renders a dropdown when clicking the trigger element from NavigationBar', async () => {
+		const {container, getByTestId, getByText} = render(
 			<ClayNavigationBar
 				inverted
 				spritemap={spritemap}
@@ -96,21 +97,14 @@ describe('ClayNavigationBar', () => {
 			</ClayNavigationBar>
 		);
 
-		fireEvent.click(getByText(container, 'Trigger Label'));
-		fireEvent.transitionEnd(
-			getByTestId(container, 'NavigationBarDropdown')
-		);
-
-		fireEvent.click(getByText(container, 'Trigger Label'));
-		fireEvent.transitionEnd(
-			getByTestId(container, 'NavigationBarDropdown')
-		);
+		fireEvent.click(getByText('Trigger Label'));
+		fireEvent.transitionEnd(getByTestId('NavigationBarDropdown'));
 
 		let navigationBarDropdown;
 
 		await act(async () => {
 			navigationBarDropdown = await waitForElement(() =>
-				getByTestId(container, 'NavigationBarDropdown')
+				container.querySelector('.navbar-collapse.collapse.show')
 			);
 		});
 
@@ -119,8 +113,8 @@ describe('ClayNavigationBar', () => {
 		expect(navigationBarDropdown).toMatchSnapshot();
 	});
 
-	it('collapses the dropdown expanded when trigger element is clicked', async () => {
-		const {container} = render(
+	it('collapses the previously expanded dropdown when trigger element is clicked', async () => {
+		const {container, getByTestId} = render(
 			<ClayNavigationBar
 				inverted
 				spritemap={spritemap}
@@ -149,25 +143,23 @@ describe('ClayNavigationBar', () => {
 			</ClayNavigationBar>
 		);
 
-		fireEvent.click(getByText(container, 'Trigger Label'));
-		fireEvent.transitionEnd(
-			getByTestId(container, 'NavigationBarDropdown')
-		);
+		fireEvent.click(getByTestId('navbarToggler'), 'Trigger Label');
+		fireEvent.transitionEnd(getByTestId('NavigationBarDropdown'));
 
-		fireEvent.click(getByText(container, 'Trigger Label'));
-		fireEvent.transitionEnd(
-			getByTestId(container, 'NavigationBarDropdown')
-		);
+		fireEvent.click(getByTestId('navbarToggler'), 'Trigger Label');
+		fireEvent.transitionEnd(getByTestId('NavigationBarDropdown'));
 
 		let navigationBarDropdown;
 
 		await act(async () => {
 			navigationBarDropdown = await waitForElement(() =>
-				getByTestId(container, 'NavigationBarDropdown')
+				container.querySelector('.navbar-collapse.collapse')
 			);
 		});
 
 		expect(navigationBarDropdown).toBeDefined();
+
+		expect(navigationBarDropdown).not.toHaveClass('show');
 
 		expect(navigationBarDropdown).toMatchSnapshot();
 	});
@@ -175,7 +167,7 @@ describe('ClayNavigationBar', () => {
 	it('renders when passing more than one active item', () => {
 		const label = 'Item 1';
 
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayNavigationBar
 				inverted
 				spritemap={spritemap}
@@ -214,7 +206,7 @@ describe('ClayNavigationBar', () => {
 			</ClayNavigationBar>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('should throw a warning when passing more than one active prop to child', () => {
@@ -224,7 +216,7 @@ describe('ClayNavigationBar', () => {
 
 		const label = 'Item 1';
 
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayNavigationBar
 				inverted
 				spritemap={spritemap}
@@ -257,7 +249,7 @@ describe('ClayNavigationBar', () => {
 		expect(mockWarnings.mock.calls[0][0]).toBe(
 			'Warning: ClayNavigationBar expects 0 or 1 active children, but received 2'
 		);
-		expect(testRenderer.toJSON).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 		jest.resetAllMocks();
 	});
 });
