@@ -250,7 +250,7 @@ describe('ClayCard', () => {
 	});
 	it('renders a ClayCard as template navigation card', () => {
 		const {container} = render(
-			<ClayCard interactive>
+			<ClayCard href="/some/path" interactive>
 				<ClayCard.AspectRatio>
 					<span className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
 						<img
@@ -274,7 +274,7 @@ describe('ClayCard', () => {
 	});
 	it('renders a ClayCard as a template navigation card truncating text on description', () => {
 		const {container} = render(
-			<ClayCard interactive>
+			<ClayCard href="/some/path" interactive>
 				<ClayCard.AspectRatio>
 					<span className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
 						<img
@@ -300,7 +300,7 @@ describe('ClayCard', () => {
 	});
 	it('renders a ClayCard as template navigation card with icon instead of image', () => {
 		const {container} = render(
-			<ClayCard interactive>
+			<ClayCard href="/some/path" interactive>
 				<ClayCard.AspectRatio>
 					<span className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
 						<ClayIcon
@@ -321,7 +321,7 @@ describe('ClayCard', () => {
 	});
 	it('renders a ClayCard as template navigation card as horizontal card', () => {
 		const {container} = render(
-			<ClayCard horizontal interactive>
+			<ClayCard horizontal href="/some/path" interactive>
 				<ClayCard.Body>
 					<span className="autofit-col">
 						<ClaySticker displayType="light" inline>
