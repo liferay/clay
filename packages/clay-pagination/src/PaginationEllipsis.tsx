@@ -19,7 +19,7 @@ const ClayPaginationEllipsis: React.FunctionComponent<
 > = ({disabledPages = [], hrefConstructor, items = [], onPageChange}) => {
 	const pages = items.map(page => ({
 		disabled: disabledPages.includes(page),
-		href: hrefConstructor ? hrefConstructor(page) : 'javascript:;',
+		href: hrefConstructor ? hrefConstructor(page) : undefined,
 		label: String(page),
 		onClick: () => onPageChange && onPageChange(page),
 	}));

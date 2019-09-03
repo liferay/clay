@@ -449,7 +449,7 @@ exports[`ClayCard renders a ClayCard as a template navigation card truncating te
 <div>
   <a
     class="card card-interactive card-interactive-primary card-type-template template-card"
-    href="javascript:;"
+    href="/some/path"
   >
     <span
       class="aspect-ratio"
@@ -590,7 +590,7 @@ exports[`ClayCard renders a ClayCard as template navigation card 1`] = `
 <div>
   <a
     class="card card-interactive card-interactive-primary card-type-template template-card"
-    href="javascript:;"
+    href="/some/path"
   >
     <span
       class="aspect-ratio"
@@ -644,7 +644,7 @@ exports[`ClayCard renders a ClayCard as template navigation card as horizontal c
 <div>
   <a
     class="card card-interactive card-interactive-primary card-type-template template-card-horizontal"
-    href="javascript:;"
+    href="/some/path"
   >
     <span
       class="card-body"
@@ -704,7 +704,7 @@ exports[`ClayCard renders a ClayCard as template navigation card with icon inste
 <div>
   <a
     class="card card-interactive card-interactive-primary card-type-template template-card"
-    href="javascript:;"
+    href="/some/path"
   >
     <span
       class="aspect-ratio"
