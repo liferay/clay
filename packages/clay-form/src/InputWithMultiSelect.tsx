@@ -11,7 +11,7 @@ import ClayForm from './Form';
 import ClayInput from './Input';
 import ClayLabel from '@clayui/label';
 import React, {useLayoutEffect, useRef, useState} from 'react';
-import {FocusScope, useFocusManagement} from '@clayui/shared';
+import {FocusScope, noop, useFocusManagement} from '@clayui/shared';
 
 const BACKSPACE_KEY = 8;
 const COMMA_KEY = 188;
@@ -84,8 +84,12 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 	isValid = true,
 	items = [],
 	label,
+	onBlur = noop,
+	onFocus = noop,
 	onInputChange,
 	onItemsChange,
+	onKeyDown = noop,
+	onPaste = noop,
 	sourceItems,
 	spritemap,
 	...otherProps
@@ -113,6 +117,8 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 	};
 
 	const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+		onKeyDown(event);
+
 		const {keyCode} = event;
 
 		if (inputValue && DELIMITER_KEYS.includes(keyCode)) {
@@ -131,6 +137,8 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 	};
 
 	const handlePaste = (event: React.ClipboardEvent<HTMLInputElement>) => {
+		onPaste(event);
+
 		const pastedText = event.clipboardData.getData('Text');
 
 		const pastedItems = pastedText
@@ -208,13 +216,19 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 							<input
 								{...otherProps}
 								className="form-control-inset"
-								onBlur={() => setIsFocused(false)}
+								onBlur={e => {
+									onBlur(e);
+									setIsFocused(false);
+								}}
 								onChange={event =>
 									onInputChange(
 										event.target.value.replace(',', '')
 									)
 								}
-								onFocus={() => setIsFocused(true)}
+								onFocus={e => {
+									onFocus(e);
+									setIsFocused(true);
+								}}
 								onKeyDown={handleKeyDown}
 								onPaste={handlePaste}
 								ref={ref => {
