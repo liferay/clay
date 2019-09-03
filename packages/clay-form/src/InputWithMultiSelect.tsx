@@ -19,7 +19,22 @@ const ENTER_KEY = 13;
 
 const DELIMITER_KEYS = [ENTER_KEY, COMMA_KEY];
 
+type TCompare = (
+	items: Array<string>,
+	newValues: Array<string>
+) => Array<string>;
+
 export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
+	/**
+	 * Function that compares the selected values with the new values that can be added,
+	 * must be returned an array of values that can be added. By default this function
+	 * only checks for dedupe and lowerCase values.
+	 *
+	 * Compare works like a compose, gets an array of functions which results will be
+	 * passed to the next functions, the functions are called from right to left.
+	 */
+	compare?: Array<TCompare>;
+
 	/**
 	 * Message to display if isValid is false.
 	 */
@@ -76,7 +91,19 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	isValid?: boolean;
 }
 
+const dedupe = (items: Array<string>, newValues: Array<string>) =>
+	newValues.filter(value => !items.includes(value));
+
+const lowerCase = (items: Array<string>, newValues: Array<string>) =>
+	newValues.map(value => value.toLowerCase());
+
+const compose = (...fns: Array<TCompare>) => (
+	x: Array<string>,
+	y: Array<string>
+) => fns.reduceRight((v, f) => f(x, v), y);
+
 const ClayMultiSelect: React.FunctionComponent<IProps> = ({
+	compare = [dedupe, lowerCase],
 	errorMessage,
 	forwardRef,
 	helpText,
@@ -106,19 +133,30 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 		}
 	}, [sourceItems, inputValue]);
 
-	const setNewValue = (newVal: string) => {
-		onItemsChange([...items, newVal]);
+	const setNewValue = (newVal: Array<string>) => {
+		onItemsChange([...items, ...newVal]);
 
 		onInputChange('');
 	};
 
+	const compareWithCompose = compose(...compare);
+
+	const handleDropDownClick = (newVal: string) => {
+		const result = compareWithCompose(items, [newVal]);
+
+		if (result.length) {
+			setNewValue(result);
+		}
+	};
+
 	const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
 		const {keyCode} = event;
+		const result = compareWithCompose(items, [inputValue]);
 
-		if (inputValue && DELIMITER_KEYS.includes(keyCode)) {
+		if (inputValue && result.length && DELIMITER_KEYS.includes(keyCode)) {
 			event.preventDefault();
 
-			setNewValue(inputValue);
+			setNewValue(result);
 		} else if (
 			!inputValue &&
 			keyCode === BACKSPACE_KEY &&
@@ -137,11 +175,12 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 			.split(',')
 			.map(item => item.trim())
 			.filter(Boolean);
+		const result = compareWithCompose(items, pastedItems);
 
-		if (pastedItems.length > 0) {
+		if (pastedItems.length > 0 && result.length) {
 			event.preventDefault();
 
-			onItemsChange([...items, ...pastedItems]);
+			onItemsChange([...items, ...result]);
 		}
 	};
 
@@ -249,14 +288,11 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 													}
 													key={item}
 													match={inputValue}
-													onClick={() => {
-														onItemsChange([
-															...items,
-															item,
-														]);
-
-														onInputChange('');
-													}}
+													onClick={() =>
+														handleDropDownClick(
+															item
+														)
+													}
 													value={item}
 												/>
 											))}
