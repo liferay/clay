@@ -6,6 +6,7 @@
 
 import classNames from 'classnames';
 import ClayAutocomplete from '@clayui/autocomplete';
+import ClayButton from '@clayui/button';
 import ClayDropDown from '@clayui/drop-down';
 import ClayForm from './Form';
 import ClayInput from './Input';
@@ -61,6 +62,19 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	onInputChange: (val: string) => void;
 
 	/**
+	 * Callback will always be called when the user clicks the select button,
+	 * passing a function will show the button.
+	 */
+	onSelectClick?: (
+		event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+	) => void;
+
+	/**
+	 * Label for the button from Select.
+	 */
+	selectLabel?: string;
+
+	/**
 	 * List of pre-populated items that will show up in a dropdown menu
 	 */
 	sourceItems?: Array<string>;
@@ -86,6 +100,8 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 	label,
 	onInputChange,
 	onItemsChange,
+	onSelectClick,
+	selectLabel = 'Select',
 	sourceItems,
 	spritemap,
 	...otherProps
@@ -285,6 +301,16 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 						</ClayForm.FeedbackGroup>
 					)}
 				</ClayInput.GroupItem>
+				{onSelectClick && (
+					<ClayInput.GroupItem shrink>
+						<ClayButton
+							displayType="secondary"
+							onClick={onSelectClick}
+						>
+							{selectLabel}
+						</ClayButton>
+					</ClayInput.GroupItem>
+				)}
 			</ClayInput.Group>
 		</ClayForm.Group>
 	);

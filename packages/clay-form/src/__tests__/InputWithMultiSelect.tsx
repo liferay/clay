@@ -26,6 +26,8 @@ const ClayInputWithMultiSelectWithState = (props: any) => {
 };
 
 describe('ClayInputWithMultiSelect', () => {
+	afterEach(cleanup);
+
 	it('renders', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayInputWithMultiSelectWithState
@@ -59,6 +61,18 @@ describe('ClayInputWithMultiSelect', () => {
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('renders with Select button', () => {
+		const {getByText} = render(
+			<ClayInputWithMultiSelectWithState
+				items={['foo', 'bar', 'baz']}
+				onSelectClick={() => {}}
+				spritemap="/foo/bar"
+			/>
+		);
+
+		expect(getByText('Select')).toBeDefined();
 	});
 });
 

@@ -96,6 +96,11 @@ storiesOf('ClayForm', module)
 			helpText="You can use a comma to enter tags."
 			isValid={boolean('isValid', true)}
 			label={text('Label', 'Multi-Select')}
+			onSelectClick={
+				boolean('Show Select button', true)
+					? () => alert('Select click')
+					: null
+			}
 		/>
 	))
 	.add('InputWithMultiSelect w/ sourceItems', () => (
