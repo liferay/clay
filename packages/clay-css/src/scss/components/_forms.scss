@@ -194,6 +194,10 @@ div {
 		@include clay-container($form-control-tag-group-autofit-col);
 	}
 
+	.input-group-item {
+		@include clay-container($form-control-tag-group-input-group-item);
+	}
+
 	.inline-item {
 		@include clay-container($form-control-tag-group-inline-item);
 	}
