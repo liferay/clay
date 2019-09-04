@@ -1,3 +1,4 @@
+/*eslint no-console: 0 */
 /**
  * © 2019 Liferay, Inc. <https://liferay.com>
  *
@@ -8,7 +9,7 @@ import Button from '@clayui/button';
 import ClayModal, {useModal} from '..';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {cleanup, render} from '@testing-library/react';
+import {act, cleanup, render} from '@testing-library/react';
 
 const spritemap = 'icons.svg';
 
@@ -18,9 +19,15 @@ describe('ClayModal', () => {
 		ReactDOM.createPortal = jest.fn(element => {
 			return element;
 		});
+		jest.useFakeTimers();
+	});
+
+	afterAll(() => {
+		jest.useRealTimers();
 	});
 
 	afterEach(() => {
+		jest.clearAllTimers();
 		jest.restoreAllMocks();
 		cleanup();
 	});
@@ -44,6 +51,10 @@ describe('ClayModal', () => {
 
 		render(<ModalWithState />);
 
+		act(() => {
+			jest.runAllTimers();
+		});
+
 		expect(document.body).toMatchSnapshot();
 	});
 
@@ -58,6 +69,10 @@ describe('ClayModal', () => {
 		};
 
 		render(<ModalWithState />);
+
+		act(() => {
+			jest.runAllTimers();
+		});
 
 		expect(document.body).toMatchSnapshot();
 	});
@@ -76,6 +91,10 @@ describe('ClayModal', () => {
 
 		render(<ModalWithState />);
 
+		act(() => {
+			jest.runAllTimers();
+		});
+
 		expect(document.body).toMatchSnapshot();
 	});
 
@@ -93,6 +112,10 @@ describe('ClayModal', () => {
 
 		render(<ModalWithState />);
 
+		act(() => {
+			jest.runAllTimers();
+		});
+
 		expect(document.body).toMatchSnapshot();
 	});
 
@@ -107,6 +130,10 @@ describe('ClayModal', () => {
 		};
 
 		render(<ModalWithState />);
+
+		act(() => {
+			jest.runAllTimers();
+		});
 
 		expect(document.body).toMatchSnapshot();
 	});
@@ -126,6 +153,10 @@ describe('ClayModal', () => {
 		};
 
 		render(<ModalWithState />);
+
+		act(() => {
+			jest.runAllTimers();
+		});
 
 		expect(document.body).toMatchSnapshot();
 	});

@@ -22,10 +22,10 @@ exports[`ModalProvider -> IncrementalInteractions renders a modal when dispatchi
 >
   <div>
     <div
-      class="modal-backdrop fade"
+      class="modal-backdrop fade show"
     />
     <div
-      class="fade modal d-block"
+      class="fade modal d-block show"
     >
       <div
         class="modal-lg"
