@@ -188,6 +188,21 @@ section.row {
 	vertical-align: baseline;
 }
 
+// Breakpoints
+
+.clay-site-breakpoint-min-xs { content: '#{map-get($grid-breakpoints, xs)}'; }
+.clay-site-breakpoint-min-sm { content: '#{map-get($grid-breakpoints, sm)}'; }
+.clay-site-breakpoint-min-md { content: '#{map-get($grid-breakpoints, md)}'; }
+.clay-site-breakpoint-min-lg { content: '#{map-get($grid-breakpoints, lg)}'; }
+.clay-site-breakpoint-min-xl { content: '#{map-get($grid-breakpoints, xl)}'; }
+
+.clay-site-breakpoint-max-xs { content: '#{map-get($grid-breakpoints, sm) - 1}'; }
+.clay-site-breakpoint-max-sm { content: '#{map-get($grid-breakpoints, md) - 1}'; }
+.clay-site-breakpoint-max-md { content: '#{map-get($grid-breakpoints, lg) - 1}'; }
+.clay-site-breakpoint-max-lg { content: '#{map-get($grid-breakpoints, xl) - 1}'; }
+
+.clay-site-inline-scroller-height { content: '#{$inline-scroller-max-height}'; }
+
 // Colors Page
 
 .clay-site-swatch {
@@ -1257,6 +1272,15 @@ section.row {
 	-webkit-overflow-scrolling: auto;
 }
 
+// Modals Page
+
+.clay-site-modal-size-sm { content: '#{$modal-sm}'; }
+.clay-site-modal-size-md { content: '#{$modal-md}'; }
+.clay-site-modal-size-lg { content: '#{$modal-lg}'; }
+.clay-site-modal-size-xl { content: '#{$modal-xl}'; }
+
+.clay-site-modal-full-screen-spacer-x { content: '#{$modal-full-screen-spacer-x}'; }
+
 // Navbars Page
 
 #navbarsPage ~ .row .navbar {
@@ -1436,29 +1460,14 @@ $site-lexicon-icon-color: #5AF;
 
 // Typography Page
 
-.clay-site-sans-serif {
-	font-family: $font-family-sans-serif;
+.clay-site-sans-serif { font-family: $font-family-sans-serif; }
+.clay-site-sans-serif::after { content: '#{$font-family-sans-serif}'; }
 
-	&:after {
-		content: '#{$font-family-sans-serif}';
-	}
-}
+.clay-site-serif { font-family: $font-family-serif; }
+.clay-site-serif::after { content: '#{$font-family-serif}'; }
 
-.clay-site-serif {
-	font-family: $font-family-serif;
-
-	&:after {
-		content: '#{$font-family-serif}';
-	}
-}
-
-.clay-site-monospace {
-	font-family: $font-family-monospace;
-
-	&:after {
-		content: '#{$font-family-monospace}';
-	}
-}
+.clay-site-monospace { font-family: $font-family-monospace; }
+.clay-site-monospace::after { content: '#{$font-family-monospace}'; }
 
 // Site Main Nav
 
@@ -1790,70 +1799,6 @@ body.sidenav-transition {
 	.sidenav-fixed.sidenav-menu-slider.sidenav-right {
 		left: 0;
 		right: auto;
-	}
-}
-
-// Switches Page
-
-.uxgl-switches {
-	@include clearfix;
-
-	.form-group {
-		float: left;
-		width: 50%;
-	}
-}
-
-@include media-breakpoint-up(md) { // min-width 768px
-	.uxgl-switches .form-group {
-		width: 115px;
-	}
-}
-
-// Assorted Examples Page
-
-.uxgl-assorted-section {
-	margin: 2em 0;
-}
-
-@include media-breakpoint-up(xl) { // min-width 992px
-	.uxgl-lg-newline-demo {
-		background-color: #FFFEDC;
-	}
-}
-
-@include media-breakpoint-only(lg) { // 992px - 1199px
-	.uxgl-md-newline-demo {
-		background-color: #FFFEDC;
-	}
-}
-
-@include media-breakpoint-only(md) { // 768px - 991px
-	.uxgl-sm-newline-demo {
-		background-color: #FFFEDC;
-	}
-}
-
-@include media-breakpoint-down(sm) { // max-width 767px
-	.uxgl-xs-newline-demo {
-		background-color: #FFFEDC;
-	}
-}
-
-.lx-site-test-assorted-modal {
-	margin-bottom: 20px;
-	min-height: 400px;
-	position: relative;
-
-	@include media-breakpoint-up(md) { // min-width 768
-		min-height: 100px;
-	}
-}
-
-.lx-site-test-assorted-sidebar {
-	.sidebar {
-		float: left;
-		width: 50%;
 	}
 }
 
