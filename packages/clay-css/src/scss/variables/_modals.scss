@@ -29,6 +29,11 @@ $modal-title-indicator-spacer-x: 0.5rem !default; // 8px
 
 $modal-close-spacer-x: 0.3125rem !default; // 5px
 
+// Modal Full Screen
+
+$modal-full-screen-spacer-x: 45px !default;
+$modal-full-screen-spacer-y: $modal-full-screen-spacer-x !default;
+
 // Modal Success
 
 $modal-success: () !default;
