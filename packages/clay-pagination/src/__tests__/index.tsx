@@ -129,7 +129,7 @@ describe('ClayPaginationWithBar', () => {
 
 		const {getByTestId} = render(
 			<ClayPaginationWithBar
-				initialActivePage={12}
+				activePage={12}
 				onPageChange={changeMock}
 				spritemap={spritemap}
 				totalItems={100}
@@ -142,7 +142,7 @@ describe('ClayPaginationWithBar', () => {
 
 		fireEvent.click(getByTestId('nextArrow'), {});
 
-		expect(changeMock).toHaveBeenLastCalledWith(12);
+		expect(changeMock).toHaveBeenLastCalledWith(13);
 	});
 
 	it('calls onDeltaChange when select is expanded', () => {
@@ -150,7 +150,7 @@ describe('ClayPaginationWithBar', () => {
 
 		const {getByTestId} = render(
 			<ClayPaginationWithBar
-				initialActivePage={12}
+				activePage={12}
 				onDeltaChange={deltaChangeMock}
 				spritemap={spritemap}
 				totalItems={100}
@@ -167,7 +167,7 @@ describe('ClayPaginationWithBar', () => {
 	it('shows dropdown when pagination dropdown is clicked', () => {
 		const {getByTestId} = render(
 			<ClayPaginationWithBar
-				initialActivePage={12}
+				activePage={12}
 				spritemap={spritemap}
 				totalItems={100}
 			/>

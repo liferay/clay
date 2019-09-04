@@ -8,9 +8,9 @@ import classNames from 'classnames';
 import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
 import ClayPagination from './Pagination';
-import React, {useState} from 'react';
+import React from 'react';
 import {ClayDropDownWithItems} from '@clayui/drop-down';
-import {noop, sub} from '@clayui/shared';
+import {sub} from '@clayui/shared';
 
 const defaultDeltas = [
 	{
@@ -42,6 +42,7 @@ interface IDelta {
 }
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+	activeDelta?: number;
 	/**
 	 * Possible values of items per page.
 	 */
@@ -79,18 +80,18 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * Callback for when the number of elements per page changes. This is only used if
 	 * an href is not provided.
 	 */
-	onDeltaChange?: (page?: number) => void;
+	onDeltaChange?: (page: number) => void;
 
 	/**
 	 * Callback for when the active page changes. This is only used if
 	 * an href is not provided.
 	 */
-	onPageChange?: (page?: number) => void;
+	onPageChange?: (page: number) => void;
 
 	/**
 	 * Initialize the page that is currently active. The first page is `1`.
 	 */
-	initialActivePage?: number;
+	activePage?: number;
 
 	/**
 	 * Initializes delta. Default is `10`.
@@ -120,24 +121,24 @@ const DEFAULT_LABELS = {
 };
 
 export const ClayPaginationWithBar: React.FunctionComponent<IProps> = ({
+	activeDelta,
+	activePage = 1,
 	deltas = defaultDeltas,
 	disabledPages,
 	ellipsisBuffer,
 	hrefConstructor,
 	labels = DEFAULT_LABELS,
-	onDeltaChange = noop,
-	onPageChange = noop,
-	initialSelectedDelta = deltas[0],
-	initialActivePage = 1,
+	onDeltaChange,
+	onPageChange,
 	size,
 	spritemap,
 	totalItems,
 	...otherProps
 }: IProps) => {
-	const [activePage, setActivePage] = useState<number>(initialActivePage);
-	const [perPage, setPerPage] = useState<number>(
-		initialSelectedDelta.label as number
-	);
+	if (!activeDelta) {
+		activeDelta = deltas[0].label;
+	}
+
 	const items: Items = deltas.map(({href, label}) => {
 		const item: {
 			href?: string;
@@ -150,7 +151,6 @@ export const ClayPaginationWithBar: React.FunctionComponent<IProps> = ({
 
 		if (!href) {
 			item.onClick = () => {
-				setPerPage(label as number);
 				if (onDeltaChange) {
 					onDeltaChange(label as number);
 				}
@@ -175,7 +175,8 @@ export const ClayPaginationWithBar: React.FunctionComponent<IProps> = ({
 						data-testid="selectPaginationBar"
 						displayType="unstyled"
 					>
-						{sub(labels.perPageItems, [perPage])}
+						{sub(labels.perPageItems, [activeDelta])}
+
 						<ClayIcon
 							spritemap={spritemap}
 							symbol="caret-double-l"
@@ -186,9 +187,9 @@ export const ClayPaginationWithBar: React.FunctionComponent<IProps> = ({
 
 			<div className="pagination-results">
 				{sub(labels.paginationResults, [
-					(activePage - 1) * perPage + 1,
-					activePage * perPage < totalItems
-						? activePage * perPage
+					(activePage - 1) * activeDelta + 1,
+					activePage * activeDelta < totalItems
+						? activePage * activeDelta
 						: totalItems,
 					totalItems,
 				])}
@@ -200,15 +201,12 @@ export const ClayPaginationWithBar: React.FunctionComponent<IProps> = ({
 				ellipsisBuffer={ellipsisBuffer}
 				hrefConstructor={hrefConstructor}
 				onPageChange={page => {
-					if (page) {
-						setActivePage(page);
-						if (onPageChange) {
-							onPageChange(page);
-						}
+					if (page && onPageChange) {
+						onPageChange(page);
 					}
 				}}
 				spritemap={spritemap}
-				totalPages={Math.ceil(totalItems / perPage)}
+				totalPages={Math.ceil(totalItems / activeDelta)}
 			/>
 		</div>
 	);

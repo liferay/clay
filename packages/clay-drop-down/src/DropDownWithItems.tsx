@@ -25,7 +25,7 @@ interface IItem {
 	label?: string;
 	name?: string;
 	onChange?: Function;
-	onClick?: () => void;
+	onClick?: (e: React.MouseEvent<HTMLElement, MouseEvent>) => void;
 	symbolLeft?: string;
 	symbolRight?: string;
 	type?: TType;
@@ -117,9 +117,29 @@ const Checkbox: React.FunctionComponent<IItem> = ({
 	);
 };
 
-const Item: React.FunctionComponent<Omit<IItem, 'onChange'>> = props => (
-	<ClayDropDown.Item {...props}>{props.label}</ClayDropDown.Item>
-);
+const ClayDropDownContext = React.createContext({close: () => {}});
+
+const Item: React.FunctionComponent<Omit<IItem, 'onChange'>> = ({
+	onClick,
+	...props
+}) => {
+	const {close} = React.useContext(ClayDropDownContext);
+
+	return (
+		<ClayDropDown.Item
+			onClick={e => {
+				if (onClick) {
+					onClick(e);
+				}
+
+				close();
+			}}
+			{...props}
+		>
+			{props.label}
+		</ClayDropDown.Item>
+	);
+};
 
 const Group: React.FunctionComponent<IItem & {spritemap?: string}> = ({
 	items,
@@ -249,32 +269,41 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 			onActiveChange={setActive}
 			trigger={trigger}
 		>
-			{helpText && <Help>{helpText}</Help>}
+			<ClayDropDownContext.Provider
+				value={{close: () => setActive(false)}}
+			>
+				{helpText && <Help>{helpText}</Help>}
 
-			{searchable && (
-				<Search
-					{...searchProps}
-					onChange={event => onSearchValueChange(event.target.value)}
-					spritemap={spritemap}
-					value={searchValue}
-				/>
-			)}
+				{searchable && (
+					<Search
+						{...searchProps}
+						onChange={event =>
+							onSearchValueChange(event.target.value)
+						}
+						spritemap={spritemap}
+						value={searchValue}
+					/>
+				)}
 
-			<Wrap>
-				{footerContent ? (
-					<div className="inline-scroller">
+				<Wrap>
+					{footerContent ? (
+						<div className="inline-scroller">
+							<DropDownContent
+								items={items}
+								spritemap={spritemap}
+							/>
+						</div>
+					) : (
 						<DropDownContent items={items} spritemap={spritemap} />
-					</div>
-				) : (
-					<DropDownContent items={items} spritemap={spritemap} />
-				)}
+					)}
 
-				{caption && <Caption>{caption}</Caption>}
+					{caption && <Caption>{caption}</Caption>}
 
-				{footerContent && (
-					<div className="dropdown-section">{footerContent}</div>
-				)}
-			</Wrap>
+					{footerContent && (
+						<div className="dropdown-section">{footerContent}</div>
+					)}
+				</Wrap>
+			</ClayDropDownContext.Provider>
 		</ClayDropDown>
 	);
 };
