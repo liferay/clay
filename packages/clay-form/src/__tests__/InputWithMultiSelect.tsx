@@ -128,7 +128,7 @@ describe('Interactions', () => {
 		expect(document.activeElement!.tagName).toEqual('BODY');
 
 		fireEvent.keyDown(
-			container.querySelector('input') as HTMLInputElement,
+			container.querySelector('input.form-control-inset') as HTMLInputElement,
 			{keyCode: 8}
 		);
 
@@ -159,7 +159,7 @@ describe('Interactions', () => {
 		expect(onItemsChangeFn).not.toHaveBeenCalled();
 
 		fireEvent.change(
-			document.querySelectorAll('input')[0] as HTMLInputElement,
+			document.querySelectorAll('input.form-control-inset')[0] as HTMLInputElement,
 			{target: {value: 'two'}}
 		);
 
