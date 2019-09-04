@@ -187,13 +187,17 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 										}}
 										key={i}
 										onKeyDown={({keyCode}) => {
-											if (keyCode !== BACKSPACE_KEY) {
-												return;
+											switch (keyCode) {
+												case ENTER_KEY:
+												case BACKSPACE_KEY:
+													if (inputRef.current) {
+														inputRef.current.focus();
+													}
+													removeItem();
+													break;
+												default:
+													break;
 											}
-											if (inputRef.current) {
-												inputRef.current.focus();
-											}
-											removeItem();
 										}}
 										ref={(ref: HTMLSpanElement) => {
 											focusManager.createScope(

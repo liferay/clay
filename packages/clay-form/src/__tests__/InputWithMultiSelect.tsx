@@ -142,6 +142,36 @@ describe('Interactions', () => {
 		expect(onItemsChangeFn).toHaveBeenCalled();
 	});
 
+	it('hitting enter on label with focus should call onItemsChange', () => {
+		const onItemsChangeFn = jest.fn();
+
+		const {container} = render(
+			<ClayInputWithMultiSelectWithState
+				items={['foo', 'bar']}
+				onItemsChange={onItemsChangeFn}
+				spritemap="/foo/bar"
+			/>
+		);
+
+		expect(container.querySelectorAll('.label').length).toEqual(2);
+
+		expect(document.activeElement!.tagName).toEqual('BODY');
+
+		fireEvent.keyDown(
+			container.querySelector('input') as HTMLInputElement,
+			{keyCode: 8}
+		);
+
+		expect(document.activeElement!.tagName).toEqual('SPAN');
+		expect(document.activeElement!.classList).toContain('label');
+
+		fireEvent.keyDown(document.activeElement as HTMLSpanElement, {
+			keyCode: 13,
+		});
+
+		expect(onItemsChangeFn).toHaveBeenCalled();
+	});
+
 	it('clicking on autocomplete item calls onItemsChange', () => {
 		const onItemsChangeFn = jest.fn();
 
