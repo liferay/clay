@@ -177,7 +177,8 @@ storiesOf('ClayTable', module)
 						{bottom: 'bottom', middle: 'middle', top: 'top'},
 						'middle'
 					)}
-					bordered={boolean('bordered', false)}
+					borderedColumns={boolean('borderedColumns', false)}
+					borderless={boolean('borderless', false)}
 					headVerticalAlignment={select(
 						'head vertical alignment',
 						{bottom: 'bottom', middle: 'middle', top: 'top'},
@@ -365,7 +366,8 @@ storiesOf('ClayTable', module)
 						{bottom: 'bottom', middle: 'middle', top: 'top'},
 						'middle'
 					)}
-					bordered={boolean('bordered', false)}
+					borderedColumns={boolean('bordered', false)}
+					borderless={boolean('borderless', false)}
 					headVerticalAlignment={select(
 						'head vertical alignment',
 						{bottom: 'bottom', middle: 'middle', top: 'top'},
@@ -444,7 +446,8 @@ storiesOf('ClayTable', module)
 					{bottom: 'bottom', middle: 'middle', top: 'top'},
 					'middle'
 				)}
-				bordered={boolean('bordered', false)}
+				borderedColumns={boolean('bordered columns', false)}
+				borderless={boolean('bordeless', false)}
 				headVerticalAlignment={select(
 					'head vertical alignment',
 					{bottom: 'bottom', middle: 'middle', top: 'top'},
