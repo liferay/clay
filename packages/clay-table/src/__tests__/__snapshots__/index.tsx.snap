@@ -148,21 +148,6 @@ exports[`ClayTable renders a responsive table 2`] = `
 </div>
 `;
 
-exports[`ClayTable renders a table bordered 1`] = `
-<div>
-  <div
-    class="table-responsive"
-  >
-    <table
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list"
-    >
-      <thead />
-      <tbody />
-    </table>
-  </div>
-</div>
-`;
-
 exports[`ClayTable renders a table hover 1`] = `
 <div>
   <div
@@ -249,6 +234,21 @@ exports[`ClayTable renders a table with an active row 1`] = `
           class="table-active"
         />
       </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`ClayTable renders a table with columns bordered 1`] = `
+<div>
+  <div
+    class="table-responsive"
+  >
+    <table
+      class="table table-autofit show-quick-actions-on-hover table-bordered table-hover table-list"
+    >
+      <thead />
+      <tbody />
     </table>
   </div>
 </div>
