@@ -31,7 +31,7 @@
 	$shrink-margin-top: map-get($map, shrink-margin-top);
 
 	@include media-breakpoint-down($breakpoint-down) {
-		.input-group-item {
+		> .input-group-item {
 			margin-bottom: $item-margin-bottom;
 			margin-left: $item-margin-left;
 			margin-right: $item-margin-right;
@@ -39,7 +39,7 @@
 			width: 100%;
 		}
 
-		.input-group-item-shrink {
+		> .input-group-item-shrink {
 			margin-bottom: $shrink-margin-bottom;
 			margin-left: $shrink-margin-left;
 			margin-right: $shrink-margin-right;
