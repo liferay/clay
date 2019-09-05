@@ -44,11 +44,6 @@ exports[`ClayInputWithMultiSelect renders as not valid 1`] = `
         className="form-control form-control-tag-group"
         onKeyDown={[Function]}
       >
-        <input
-          name=""
-          type="hidden"
-          value="foo"
-        />
         <span
           className="label label-dismissible label-secondary"
           onKeyDown={[Function]}
@@ -81,7 +76,7 @@ exports[`ClayInputWithMultiSelect renders as not valid 1`] = `
         <input
           name=""
           type="hidden"
-          value="bar"
+          value="foo"
         />
         <span
           className="label label-dismissible label-secondary"
@@ -115,7 +110,7 @@ exports[`ClayInputWithMultiSelect renders as not valid 1`] = `
         <input
           name=""
           type="hidden"
-          value="baz"
+          value="bar"
         />
         <span
           className="label label-dismissible label-secondary"
@@ -146,6 +141,11 @@ exports[`ClayInputWithMultiSelect renders as not valid 1`] = `
             </button>
           </span>
         </span>
+        <input
+          name=""
+          type="hidden"
+          value="baz"
+        />
         <input
           className="form-control-inset"
           onBlur={[Function]}
@@ -197,11 +197,6 @@ exports[`ClayInputWithMultiSelect renders with items 1`] = `
         className="form-control form-control-tag-group"
         onKeyDown={[Function]}
       >
-        <input
-          name=""
-          type="hidden"
-          value="foo"
-        />
         <span
           className="label label-dismissible label-secondary"
           onKeyDown={[Function]}
@@ -234,7 +229,7 @@ exports[`ClayInputWithMultiSelect renders with items 1`] = `
         <input
           name=""
           type="hidden"
-          value="bar"
+          value="foo"
         />
         <span
           className="label label-dismissible label-secondary"
@@ -268,7 +263,7 @@ exports[`ClayInputWithMultiSelect renders with items 1`] = `
         <input
           name=""
           type="hidden"
-          value="baz"
+          value="bar"
         />
         <span
           className="label label-dismissible label-secondary"
@@ -299,6 +294,11 @@ exports[`ClayInputWithMultiSelect renders with items 1`] = `
             </button>
           </span>
         </span>
+        <input
+          name=""
+          type="hidden"
+          value="baz"
+        />
         <input
           className="form-control-inset"
           onBlur={[Function]}

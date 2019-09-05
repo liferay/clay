@@ -36,6 +36,11 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	helpText?: string;
 
 	/**
+	 * Value used for each selected item's hidden input name attribute
+	 */
+	inputName: string;
+
+	/**
 	 * Value of input
 	 */
 	inputValue: string;
@@ -44,11 +49,6 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	 * Values that display as label items
 	 */
 	items: Array<string>;
-
-	/**
-	 * Value used for the hidden input's name attribute
-	 */
-	inputName: string;
 
 	/**
 	 * Description of the input
@@ -216,9 +216,11 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 										>
 											{item}
 										</ClayLabel>
+
 										<input name={inputName}
 											type="hidden"
-											value={item} />
+											value={item}
+										/>
 								</React.Fragment>);
 							})}
 
