@@ -5,13 +5,13 @@ section: Components
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3>Small Modal</h3>
+		<h3>Modal SM</h3>
 
 		<blockquote class="blockquote">
-			<p>300px wide modal window, expands full width of screen at 575px and below.</p>
+			<p><span class="clay-site-replace-value clay-site-modal-size-sm">300px</span> wide modal window, expands full width of screen at <span class="clay-site-replace-value clay-site-breakpoint-max-xs">575px</span> and below.</p>
 		</blockquote>
 
-<button class="btn btn-info" data-target="#claySmallModal" data-toggle="modal" type="button">Small Modal</button>
+<button class="btn btn-info" data-target="#claySmallModal" data-toggle="modal" type="button">Modal SM</button>
 <div aria-labelledby="claySmallModalLabel" class="fade modal" id="claySmallModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
@@ -47,13 +47,13 @@ section: Components
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3>Default Modal</h3>
+		<h3>Modal</h3>
 
 		<blockquote class="blockquote">
-			<p>500px wide modal window, expands full width of screen at 575px and below.</p>
+			<p><span class="clay-site-replace-value clay-site-modal-size-md">500px</span> wide modal window, expands full width of screen at <span class="clay-site-replace-value clay-site-breakpoint-max-xs">575px</span> and below.</p>
 		</blockquote>
 
-<button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal" type="button">Default Modal</button>
+<button class="btn btn-info" data-target="#clayDefaultModal" data-toggle="modal" type="button">Modal</button>
 <div aria-labelledby="clayDefaultModalLabel" class="fade modal" id="clayDefaultModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -89,15 +89,15 @@ section: Components
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3>Large Modal</h3>
+		<h3>Modal LG</h3>
 
 		<blockquote class="blockquote">
-			<p>800px wide modal in window sizes greater than 992px.</p>
-			<p>500px wide modal in window sizes between 576px and 991px</p>
-			<p>Full width of screen at 575px and below.</p>
+			<p><span class="clay-site-replace-value clay-site-modal-size-lg">800px</span> wide modal in window sizes greater than <span class="clay-site-replace-value clay-site-breakpoint-min-lg">992px</span>.</p>
+			<p><span class="clay-site-replace-value clay-site-modal-size-md">500px</span> wide modal in window sizes between <span class="clay-site-replace-value clay-site-breakpoint-min-sm">576px</span> and <span class="clay-site-replace-value clay-site-breakpoint-max-md">991px</span></p>
+			<p>Full width of screen at <span class="clay-site-replace-value clay-site-breakpoint-max-xs">575px</span> and below.</p>
 		</blockquote>
 
-<button class="btn btn-info" data-target="#clayLargeModal" data-toggle="modal" type="button">Large Modal</button>
+<button class="btn btn-info" data-target="#clayLargeModal" data-toggle="modal" type="button">Modal LG</button>
 <div aria-labelledby="clayLargeModalLabel" class="fade modal" id="clayLargeModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
@@ -133,10 +133,54 @@ section: Components
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
+		<h3>Modal XL</h3>
+
+		<blockquote class="blockquote">
+			<p><span class="clay-site-replace-value clay-site-modal-size-xl">1140px</span> wide modal in window sizes greater than <span class="clay-site-replace-value clay-site-breakpoint-min-lg">992px</span>.</p>
+			<p><span class="clay-site-replace-value clay-site-modal-size-lg">800px</span> wide modal in window sizes between <span class="clay-site-replace-value clay-site-breakpoint-min-sm">576px</span> and <span class="clay-site-replace-value clay-site-breakpoint-max-md">991px</span></p>
+			<p>Full width of screen at <span class="clay-site-replace-value clay-site-breakpoint-max-xs">575px</span> and below.</p>
+		</blockquote>
+
+<button class="btn btn-info" data-target="#clayExtraLargeModal" data-toggle="modal" type="button">Modal XL</button>
+<div aria-labelledby="clayLargeModalLabel" class="fade modal" id="clayExtraLargeModal" role="dialog" tabindex="-1">
+	<div class="modal-dialog modal-xl">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="modal-title" id="clayExtraLargeModalLabel">Modal Title</div>
+				<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+					</svg>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h4><a href="#1">Modal Body</a></h4>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-item-last">
+					<div class="btn-group">
+						<div class="btn-group-item">
+							<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+						</div>
+						<div class="btn-group-item">
+							<button class="btn btn-primary" type="button">Primary</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
 		<h3>Inline Scroller</h3>
 
 		<blockquote class="blockquote">
-			<p><code>inline-scroller</code> is a helper class that sizes modal-body to a fixed height and scrolls any overflowing content. Add it to modal-body when you want modal-body to be a fixed height. It defaults to height 125px.</p>
+			<p><code>inline-scroller</code> is a helper class that sizes modal-body to a fixed height and scrolls any overflowing content. Add it to modal-body when you want modal-body to be a fixed height. It defaults to height <span class="clay-site-replace-value clay-site-inline-scroller-height">125px</span>.</p>
 		</blockquote>
 
 <button class="btn btn-info" data-target="#claySmallModalInlineScroller" data-toggle="modal" type="button">Small Modal Inline Scroller</button>
@@ -198,7 +242,7 @@ section: Components
 		<h3>Full Screen Modal</h3>
 
 		<blockquote class="blockquote">
-			<p>A modal that stretches to fit the browser window with 45px spacing on every side, expands to fill the screen at screen sizes 767px and below.</p>
+			<p>A modal that stretches to fit the browser window with <span class="clay-site-replace-value clay-site-modal-full-screen-spacer-x">45px</span> spacing on every side, expands to fill the screen at screen sizes <span class="clay-site-replace-value clay-site-breakpoint-max-sm">767px</span> and below.</p>
 		</blockquote>
 
 <button class="btn btn-info" data-target="#clayFullScreenModal" data-toggle="modal" type="button">Full Screen Modal</button>
@@ -320,7 +364,7 @@ section: Components
 		<h3>Modal Full Screen Sm Down</h3>
 
 		<blockquote class="blockquote">
-			<p>Add <code>modal-full-screen-sm-down</code> to any <code>modal-dialog</code> to stretch to fit the browser window at screen widths 767px and below.</p>
+			<p>Add <code>modal-full-screen-sm-down</code> to any <code>modal-dialog</code> to stretch to fit the browser window at screen widths <span class="clay-site-replace-value clay-site-breakpoint-max-sm">767px</span> and below.</p>
 		</blockquote>
 
 <button class="btn btn-info" data-target="#clayModalFullScreenSmDown" data-toggle="modal" type="button">Modal Full Screen Sm Down</button>
@@ -596,3 +640,13 @@ section: Components
 		</blockquote>
 	</div>
 </div>
+
+<script>
+$(document).on('claySiteToggleTheme', function(event) {
+	$('.clay-site-replace-value').each(function() {
+		var cssContent = $(this).css('content').replace(/"/g, "");
+
+		$(this).text(cssContent);
+	});
+});
+</script>
