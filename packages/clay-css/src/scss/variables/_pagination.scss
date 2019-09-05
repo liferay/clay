@@ -89,7 +89,7 @@ $pagination-link-hover: map-merge((
 $pagination-link-focus: () !default;
 $pagination-link-focus: map-merge((
 	box-shadow: $pagination-focus-box-shadow,
-	z-index: 4,
+	z-index: $zindex-pagination-link-focus,
 ), $pagination-link-focus);
 
 $pagination-link-active: () !default;
@@ -98,7 +98,7 @@ $pagination-link-active: map-merge((
 	border-color: $pagination-active-border-color,
 	cursor: default,
 	color: $pagination-active-color,
-	z-index: 3,
+	z-index: $zindex-pagination-link-active,
 ), $pagination-link-active);
 
 $pagination-link-disabled: () !default;
@@ -110,7 +110,7 @@ $pagination-link-disabled: map-merge((
 	cursor: $pagination-disabled-cursor,
 	opacity: $pagination-disabled-opacity,
 	pointer-events: $pagination-disabled-pointer-events,
-	z-index: 0,
+	z-index: $zindex-pagination-link-disabled,
 ), $pagination-link-disabled);
 
 // Pagination Dropdown Menu
