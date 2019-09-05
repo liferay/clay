@@ -36,6 +36,11 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	helpText?: string;
 
 	/**
+	 * Value used for each selected item's hidden input name attribute
+	 */
+	inputName: string;
+
+	/**
 	 * Value of input
 	 */
 	inputValue: string;
@@ -80,6 +85,7 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 	errorMessage,
 	forwardRef,
 	helpText,
+	inputName = '',
 	inputValue = '',
 	isValid = true,
 	items = [],
@@ -181,35 +187,42 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 									]);
 
 								return (
-									<ClayLabel
-										closeButtonProps={{
-											onClick: removeItem,
-										}}
-										key={i}
-										onKeyDown={({keyCode}) => {
-											if (keyCode !== BACKSPACE_KEY) {
-												return;
-											}
-											if (inputRef.current) {
-												inputRef.current.focus();
-											}
-											removeItem();
-										}}
-										ref={(ref: HTMLSpanElement) => {
-											focusManager.createScope(
-												ref,
-												`label${i}`
-											);
+									<React.Fragment key={i}>
+										<ClayLabel
+											closeButtonProps={{
+												onClick: removeItem,
+											}}
+											onKeyDown={({keyCode}) => {
+												if (keyCode !== BACKSPACE_KEY) {
+													return;
+												}
+												if (inputRef.current) {
+													inputRef.current.focus();
+												}
+												removeItem();
+											}}
+											ref={(ref: HTMLSpanElement) => {
+												focusManager.createScope(
+													ref,
+													`label${i}`
+												);
 
-											if (i === items.length - 1) {
-												lastItemRef.current = ref;
-											}
-										}}
-										spritemap={spritemap}
-										tabIndex={0}
-									>
-										{item}
-									</ClayLabel>
+												if (i === items.length - 1) {
+													lastItemRef.current = ref;
+												}
+											}}
+											spritemap={spritemap}
+											tabIndex={0}
+										>
+											{item}
+										</ClayLabel>
+
+										<input
+											name={inputName}
+											type="hidden"
+											value={item}
+										/>
+									</React.Fragment>
 								);
 							})}
 

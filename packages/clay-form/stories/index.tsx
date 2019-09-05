@@ -26,6 +26,7 @@ const ClayMultiSelectWithState = (props: any) => {
 		<div className="sheet">
 			<ClayInputWithMultiSelect
 				{...props}
+				inputName="myInput"
 				inputValue={value}
 				items={items}
 				onInputChange={setValue}
@@ -45,6 +46,7 @@ const ClayMultiSelectWithAutocomplete = () => {
 	return (
 		<div className="sheet">
 			<ClayInputWithMultiSelect
+				inputName="myInput"
 				inputValue={value}
 				items={selectedItems}
 				onInputChange={setValue}
