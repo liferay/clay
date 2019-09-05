@@ -95,7 +95,7 @@ yarn build
 6. Start storybook server
 
 ```
-yarn workspace clay-css run build && yarn storybook
+yarn workspace @clayui/css run build && yarn storybook
 ```
 
 7. Run tests:
