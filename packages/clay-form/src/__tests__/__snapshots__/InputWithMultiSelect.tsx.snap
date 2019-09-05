@@ -52,7 +52,6 @@ exports[`ClayInputWithMultiSelect renders as disabled 1`] = `
             >
               <span
                 class="label label-dismissible label-secondary"
-                tabindex="0"
               >
                 <span
                   class="label-item label-item-expand"
@@ -63,6 +62,7 @@ exports[`ClayInputWithMultiSelect renders as disabled 1`] = `
                   class="label-item label-item-after"
                 >
                   <button
+                    aria-label="Remove foo"
                     class="close"
                     disabled=""
                     type="button"
@@ -85,7 +85,6 @@ exports[`ClayInputWithMultiSelect renders as disabled 1`] = `
               />
               <span
                 class="label label-dismissible label-secondary"
-                tabindex="0"
               >
                 <span
                   class="label-item label-item-expand"
@@ -96,6 +95,7 @@ exports[`ClayInputWithMultiSelect renders as disabled 1`] = `
                   class="label-item label-item-after"
                 >
                   <button
+                    aria-label="Remove bar"
                     class="close"
                     disabled=""
                     type="button"
@@ -118,7 +118,6 @@ exports[`ClayInputWithMultiSelect renders as disabled 1`] = `
               />
               <span
                 class="label label-dismissible label-secondary"
-                tabindex="0"
               >
                 <span
                   class="label-item label-item-expand"
@@ -129,6 +128,7 @@ exports[`ClayInputWithMultiSelect renders as disabled 1`] = `
                   class="label-item label-item-after"
                 >
                   <button
+                    aria-label="Remove baz"
                     class="close"
                     disabled=""
                     type="button"
@@ -205,7 +205,6 @@ exports[`ClayInputWithMultiSelect renders as not valid 1`] = `
             >
               <span
                 class="label label-dismissible label-secondary"
-                tabindex="0"
               >
                 <span
                   class="label-item label-item-expand"
@@ -216,6 +215,7 @@ exports[`ClayInputWithMultiSelect renders as not valid 1`] = `
                   class="label-item label-item-after"
                 >
                   <button
+                    aria-label="Remove foo"
                     class="close"
                     type="button"
                   >
@@ -237,7 +237,6 @@ exports[`ClayInputWithMultiSelect renders as not valid 1`] = `
               />
               <span
                 class="label label-dismissible label-secondary"
-                tabindex="0"
               >
                 <span
                   class="label-item label-item-expand"
@@ -248,6 +247,7 @@ exports[`ClayInputWithMultiSelect renders as not valid 1`] = `
                   class="label-item label-item-after"
                 >
                   <button
+                    aria-label="Remove bar"
                     class="close"
                     type="button"
                   >
@@ -269,7 +269,6 @@ exports[`ClayInputWithMultiSelect renders as not valid 1`] = `
               />
               <span
                 class="label label-dismissible label-secondary"
-                tabindex="0"
               >
                 <span
                   class="label-item label-item-expand"
@@ -280,6 +279,7 @@ exports[`ClayInputWithMultiSelect renders as not valid 1`] = `
                   class="label-item label-item-after"
                 >
                   <button
+                    aria-label="Remove baz"
                     class="close"
                     type="button"
                   >
@@ -372,7 +372,6 @@ exports[`ClayInputWithMultiSelect renders with items 1`] = `
             >
               <span
                 class="label label-dismissible label-secondary"
-                tabindex="0"
               >
                 <span
                   class="label-item label-item-expand"
@@ -383,6 +382,7 @@ exports[`ClayInputWithMultiSelect renders with items 1`] = `
                   class="label-item label-item-after"
                 >
                   <button
+                    aria-label="Remove foo"
                     class="close"
                     type="button"
                   >
@@ -404,7 +404,6 @@ exports[`ClayInputWithMultiSelect renders with items 1`] = `
               />
               <span
                 class="label label-dismissible label-secondary"
-                tabindex="0"
               >
                 <span
                   class="label-item label-item-expand"
@@ -415,6 +414,7 @@ exports[`ClayInputWithMultiSelect renders with items 1`] = `
                   class="label-item label-item-after"
                 >
                   <button
+                    aria-label="Remove bar"
                     class="close"
                     type="button"
                   >
@@ -436,7 +436,6 @@ exports[`ClayInputWithMultiSelect renders with items 1`] = `
               />
               <span
                 class="label label-dismissible label-secondary"
-                tabindex="0"
               >
                 <span
                   class="label-item label-item-expand"
@@ -447,6 +446,7 @@ exports[`ClayInputWithMultiSelect renders with items 1`] = `
                   class="label-item label-item-after"
                 >
                   <button
+                    aria-label="Remove baz"
                     class="close"
                     type="button"
                   >
