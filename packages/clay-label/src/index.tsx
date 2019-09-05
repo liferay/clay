@@ -86,6 +86,6 @@ const ClayLabel: React.FunctionComponent<IProps> = ({
 	);
 };
 
-export default React.forwardRef((props: IProps, ref?) => (
-	<ClayLabel {...props} forwardRef={ref} />
-));
+export default React.forwardRef<HTMLAnchorElement | HTMLSpanElement, IProps>(
+	(props: IProps, ref?) => <ClayLabel {...props} forwardRef={ref} />
+);

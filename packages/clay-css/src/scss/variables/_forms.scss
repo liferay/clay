@@ -87,7 +87,7 @@ $form-control-tag-group: map-merge((
 
 $form-control-tag-group-autofit-row: () !default;
 $form-control-tag-group-autofit-row: map-merge((
-		align-items: flex-end,
+		align-items: center,
 		flex-grow: 1,
 		margin-left: -0.5rem,
 		margin-right: -0.5rem,
@@ -99,6 +99,11 @@ $form-control-tag-group-autofit-col: map-merge((
 	padding-left: 0.5rem,
 	padding-right: 0.5rem,
 ), $form-control-tag-group-autofit-col);
+
+$form-control-tag-group-input-group-item: () !default;
+$form-control-tag-group-input-group-item: map-merge((
+	align-items: flex-start,
+), $form-control-tag-group-input-group-item);
 
 $form-control-tag-group-inline-item: () !default;
 $form-control-tag-group-inline-item: map-merge((

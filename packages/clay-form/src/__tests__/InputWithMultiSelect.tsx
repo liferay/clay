@@ -5,7 +5,6 @@
  */
 
 import * as React from 'react';
-import * as TestRenderer from 'react-test-renderer';
 import {ClayInputWithMultiSelect} from '../InputWithMultiSelect';
 import {cleanup, fireEvent, render} from '@testing-library/react';
 
@@ -26,30 +25,32 @@ const ClayInputWithMultiSelectWithState = (props: any) => {
 };
 
 describe('ClayInputWithMultiSelect', () => {
+	afterEach(cleanup);
+
 	it('renders', () => {
-		const testRenderer = TestRenderer.create(
+		render(
 			<ClayInputWithMultiSelectWithState
 				items={[]}
 				spritemap="/foo/bar"
 			/>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(document.body).toMatchSnapshot();
 	});
 
 	it('renders with items', () => {
-		const testRenderer = TestRenderer.create(
+		render(
 			<ClayInputWithMultiSelectWithState
 				items={['foo', 'bar', 'baz']}
 				spritemap="/foo/bar"
 			/>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(document.body).toMatchSnapshot();
 	});
 
 	it('renders as not valid', () => {
-		const testRenderer = TestRenderer.create(
+		render(
 			<ClayInputWithMultiSelectWithState
 				errorMessage="WRONG"
 				isValid={false}
@@ -58,7 +59,21 @@ describe('ClayInputWithMultiSelect', () => {
 			/>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(document.body).toMatchSnapshot();
+	});
+
+	it('renders as disabled', () => {
+		render(
+			<ClayInputWithMultiSelectWithState
+				disabled
+				errorMessage="WRONG"
+				isValid={false}
+				items={['foo', 'bar', 'baz']}
+				spritemap="/foo/bar"
+			/>
+		);
+
+		expect(document.body).toMatchSnapshot();
 	});
 });
 
@@ -173,5 +188,50 @@ describe('Interactions', () => {
 		);
 
 		expect(onItemsChangeFn).toHaveBeenCalled();
+	});
+
+	it('clicking the Clear All button removes items and text in the input', () => {
+		const onItemsChangeFn = jest.fn();
+		const onInputChangeFn = jest.fn();
+
+		const {getByTitle} = render(
+			<ClayInputWithMultiSelectWithState
+				inputValue="foo"
+				items={['foo']}
+				onInputChange={onInputChangeFn}
+				onItemsChange={onItemsChangeFn}
+				sourceItems={['one', 'two', 'three', 'four']}
+				spritemap="/foo/bar"
+			/>
+		);
+
+		const clearButton = getByTitle('Clear All');
+
+		fireEvent.click(clearButton, {});
+
+		expect(onItemsChangeFn).toHaveBeenCalledWith([]);
+		expect(onInputChangeFn).toHaveBeenCalledWith('');
+	});
+
+	it('clicking the Clear All button should move the focus to the input', () => {
+		const {container, getByTitle} = render(
+			<ClayInputWithMultiSelectWithState
+				inputValue="foo"
+				items={['foo']}
+				onInputChange={jest.fn()}
+				onItemsChange={jest.fn()}
+				sourceItems={['one', 'two', 'three', 'four']}
+				spritemap="/foo/bar"
+			/>
+		);
+
+		const clearButton = getByTitle('Clear All');
+		const input = container.querySelector('.form-control-inset');
+
+		expect(document.activeElement).not.toBe(input);
+
+		fireEvent.click(clearButton, {});
+
+		expect(document.activeElement).toBe(input);
 	});
 });
