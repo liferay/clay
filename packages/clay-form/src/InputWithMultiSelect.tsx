@@ -12,7 +12,7 @@ import ClayIcon from '@clayui/icon';
 import ClayInput from './Input';
 import ClayLabel from '@clayui/label';
 import React, {useLayoutEffect, useRef, useState} from 'react';
-import {FocusScope, noop, useFocusManagement} from '@clayui/shared';
+import {FocusScope, noop, sub, useFocusManagement} from '@clayui/shared';
 
 const BACKSPACE_KEY = 8;
 const COMMA_KEY = 188;
@@ -25,6 +25,11 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	 * Title for the `Clear All` button.
 	 */
 	clearAllTitle?: string;
+
+	/**
+	 * Aria label for the Close button of the labels.
+	 */
+	closeButtonAriaLabel?: string;
 
 	/**
 	 * Flag that indicates to disable all features of the component.
@@ -99,6 +104,7 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 
 const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 	clearAllTitle = 'Clear All',
+	closeButtonAriaLabel = 'Remove {0}',
 	disabled,
 	disabledClearAll,
 	errorMessage,
@@ -210,8 +216,30 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 										<React.Fragment key={i}>
 											<ClayLabel
 												closeButtonProps={{
+													'aria-label': sub(
+														closeButtonAriaLabel,
+														[item]
+													),
 													disabled,
-													onClick: removeItem,
+													onClick: () => {
+														if (inputRef.current) {
+															inputRef.current.focus();
+														}
+														removeItem();
+													},
+													ref: ref => {
+														focusManager.createScope(
+															ref,
+															`label${i}`
+														);
+
+														if (
+															i ===
+															items.length - 1
+														) {
+															lastItemRef.current = ref;
+														}
+													},
 												}}
 												onKeyDown={({keyCode}) => {
 													if (
@@ -225,21 +253,7 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 													}
 													removeItem();
 												}}
-												ref={(ref: HTMLSpanElement) => {
-													focusManager.createScope(
-														ref,
-														`label${i}`
-													);
-
-													if (
-														i ===
-														items.length - 1
-													) {
-														lastItemRef.current = ref;
-													}
-												}}
 												spritemap={spritemap}
-												tabIndex={0}
 											>
 												{item}
 											</ClayLabel>

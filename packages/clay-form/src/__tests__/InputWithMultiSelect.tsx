@@ -147,8 +147,8 @@ describe('Interactions', () => {
 			{keyCode: 8}
 		);
 
-		expect(document.activeElement!.tagName).toEqual('SPAN');
-		expect(document.activeElement!.classList).toContain('label');
+		expect(document.activeElement!.tagName).toEqual('BUTTON');
+		expect(document.activeElement!.classList).toContain('close');
 
 		fireEvent.keyDown(document.activeElement as HTMLSpanElement, {
 			keyCode: 8,

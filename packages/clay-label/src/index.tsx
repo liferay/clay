@@ -21,7 +21,9 @@ interface IProps
 	/**
 	 * HTML properties that are applied to the 'x' button.
 	 */
-	closeButtonProps?: React.ButtonHTMLAttributes<HTMLButtonElement>;
+	closeButtonProps?: React.ButtonHTMLAttributes<HTMLButtonElement> & {
+		ref?: (instance: HTMLButtonElement | null) => void;
+	};
 
 	/**
 	 * Determines the style of the label.
