@@ -69,7 +69,7 @@ $clay-range-input: map-merge((
 	form-control-bg: transparent,
 	form-control-height: $input-height,
 	form-control-position: relative,
-	form-control-z-index: 1,
+	form-control-z-index: $zindex-clay-range-input-form-control,
 	data-label-font-size: 0.875rem,
 	data-label-font-weight: $font-weight-semi-bold,
 	data-label-line-height: 1,
