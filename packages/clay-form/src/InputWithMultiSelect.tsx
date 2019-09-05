@@ -217,11 +217,13 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 											{item}
 										</ClayLabel>
 
-										<input name={inputName}
+										<input
+											name={inputName}
 											type="hidden"
 											value={item}
 										/>
-								</React.Fragment>);
+									</React.Fragment>
+								);
 							})}
 
 							<input

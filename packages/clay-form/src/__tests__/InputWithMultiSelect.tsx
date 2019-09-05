@@ -159,7 +159,9 @@ describe('Interactions', () => {
 		expect(onItemsChangeFn).not.toHaveBeenCalled();
 
 		fireEvent.change(
-			document.querySelectorAll('input[type=text]')[0] as HTMLInputElement,
+			document.querySelectorAll(
+				'input[type=text]'
+			)[0] as HTMLInputElement,
 			{target: {value: 'two'}}
 		);
 
