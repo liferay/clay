@@ -3,10 +3,13 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+
+import ClayButton from '@clayui/button';
 import ClayForm, {
 	ClayCheckbox,
+	ClayInput,
 	ClayInputWithAutocomplete,
-	ClayInputWithMultiSelect,
+	ClayMultiSelectInput,
 	ClayRadio,
 	ClayRadioGroup,
 } from '../src';
@@ -23,17 +26,15 @@ const ClayMultiSelectWithState = (props: any) => {
 	const [items, setItems] = React.useState(['one']);
 
 	return (
-		<div className="sheet">
-			<ClayInputWithMultiSelect
-				{...props}
-				inputName="myInput"
-				inputValue={value}
-				items={items}
-				onInputChange={setValue}
-				onItemsChange={setItems}
-				spritemap={spritemap}
-			/>
-		</div>
+		<ClayMultiSelectInput
+			{...props}
+			inputName="myInput"
+			inputValue={value}
+			items={items}
+			onInputChange={setValue}
+			onItemsChange={setItems}
+			spritemap={spritemap}
+		/>
 	);
 };
 
@@ -44,17 +45,15 @@ const ClayMultiSelectWithAutocomplete = () => {
 	const sourceItems = ['one', 'two', 'three', 'four'];
 
 	return (
-		<div className="sheet">
-			<ClayInputWithMultiSelect
-				inputName="myInput"
-				inputValue={value}
-				items={selectedItems}
-				onInputChange={setValue}
-				onItemsChange={setSelectedItems}
-				sourceItems={sourceItems}
-				spritemap={spritemap}
-			/>
-		</div>
+		<ClayMultiSelectInput
+			inputName="myInput"
+			inputValue={value}
+			items={selectedItems}
+			onInputChange={setValue}
+			onItemsChange={setSelectedItems}
+			sourceItems={sourceItems}
+			spritemap={spritemap}
+		/>
 	);
 };
 
@@ -96,15 +95,60 @@ storiesOf('ClayForm', module)
 		<ClayMultiSelectWithState
 			disabled={boolean('Disabled all', false)}
 			disabledClearAll={boolean('Disabled Clear All', false)}
-			errorMessage="you done goofed up"
-			helpText="You can use a comma to enter tags."
 			isValid={boolean('isValid', true)}
-			label={text('Label', 'Multi-Select')}
 		/>
 	))
 	.add('InputWithMultiSelect w/ sourceItems', () => (
 		<ClayMultiSelectWithAutocomplete />
 	))
+	.add('InputWithMultiSelect w/ group', () => {
+		const isValid = boolean('isValid', true);
+
+		return (
+			<div className="sheet">
+				<ClayForm.Group className={!isValid ? 'has-error' : ''}>
+					<label>{'Composed MultiSelect'}</label>
+
+					<ClayInput.Group>
+						<ClayInput.GroupItem>
+							<ClayMultiSelectWithState
+								isValid={isValid}
+								items={['one', 'two', 'three', 'four']}
+							/>
+
+							<ClayForm.FeedbackGroup>
+								<ClayForm.Text>
+									{'Simple help comment..'}
+								</ClayForm.Text>
+							</ClayForm.FeedbackGroup>
+
+							{!isValid && (
+								<ClayForm.FeedbackGroup>
+									<ClayForm.FeedbackItem>
+										<ClayForm.FeedbackIndicator
+											spritemap={spritemap}
+											symbol="info-circle"
+										/>
+
+										{'You made an error'}
+									</ClayForm.FeedbackItem>
+								</ClayForm.FeedbackGroup>
+							)}
+						</ClayInput.GroupItem>
+
+						<ClayInput.GroupItem shrink>
+							<ClayButton
+								displayType="secondary"
+								onClick={() => {}}
+							>
+								{'Select'}
+							</ClayButton>
+						</ClayInput.GroupItem>
+					</ClayInput.Group>
+				</ClayForm.Group>
+			</div>
+		);
+	})
 	.add('InputWithAutocomplete', () => (
 		<AutoCompleteWithState items={['one', 'two', 'three', 'four']} />
 	))
