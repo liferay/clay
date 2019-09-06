@@ -34,6 +34,30 @@ $modal-close-spacer-x: 0.3125rem !default; // 5px
 $modal-full-screen-spacer-x: 45px !default;
 $modal-full-screen-spacer-y: $modal-full-screen-spacer-x !default;
 
+// Modal Height
+
+$modal-height-sm: 250px !default;
+$modal-height-md: 450px !default;
+$modal-height-lg: 650px !default;
+$modal-height-xl: 800px !default;
+
+$modal-height-full-modal-content: () !default;
+$modal-height-full-modal-content: map-merge((
+	position: absolute,
+	bottom: $modal-dialog-margin,
+	left: $modal-dialog-margin,
+	right: $modal-dialog-margin,
+	top: $modal-dialog-margin,
+), $modal-height-full-modal-content);
+
+$modal-height-full-modal-content-sm-up: () !default;
+$modal-height-full-modal-content-sm-up: map-merge((
+	bottom: $modal-dialog-margin-y-sm-up,
+	left: auto,
+	right: auto,
+	top: $modal-dialog-margin-y-sm-up,
+), $modal-height-full-modal-content-sm-up);
+
 // Modal Success
 
 $modal-success: () !default;

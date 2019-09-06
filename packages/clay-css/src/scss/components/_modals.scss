@@ -201,6 +201,80 @@
 	}
 }
 
+// Modal Height
+
+.modal-height-sm {
+	.modal-content {
+		height: $modal-height-sm;
+	}
+}
+
+.modal-height-md {
+	.modal-content {
+		height: $modal-height-md;
+	}
+}
+
+.modal-height-lg {
+	.modal-content {
+		height: $modal-height-lg;
+	}
+}
+
+.modal-height-xl {
+	.modal-content {
+		height: $modal-height-xl;
+	}
+}
+
+.modal-height-full {
+	.modal-dialog {
+		height: 100%;
+		margin: 0;
+
+		@include media-breakpoint-up(sm) {
+			bottom: 0;
+			height: 100%;
+			left: 50%;
+			margin-bottom: 0;
+			margin-left: -$modal-md / 2;
+			margin-right: 0;
+			margin-top: 0;
+			top: 0;
+		}
+
+		&.modal-sm {
+			@include media-breakpoint-up(sm) {
+				margin-left: -$modal-sm / 2;
+			}
+		}
+
+		&.modal-lg {
+			@include media-breakpoint-up(lg) {
+				margin-left: -$modal-lg / 2;
+			}
+		}
+
+		&.modal-xl {
+			@include media-breakpoint-up(lg) {
+				margin-left: -$modal-lg / 2;
+			}
+
+			@include media-breakpoint-up(xl) {
+				margin-left: -$modal-xl / 2;
+			}
+		}
+	}
+
+	.modal-content {
+		@include clay-container($modal-height-full-modal-content);
+
+		@include media-breakpoint-up(sm) {
+			@include clay-container($modal-height-full-modal-content-sm-up);
+		}
+	}
+}
+
 // Modal Variants
 
 @each $color, $value in $modal-palette {

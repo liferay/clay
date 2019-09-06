@@ -64,6 +64,10 @@
 /// padding-right: {Number | String | Null},
 /// padding-top: {Number | String | Null},
 /// position: {String | Null},
+/// bottom: {Number | String | Null},
+/// left: {Number | String | Null},
+/// right: {Number | String | Null},
+/// top: {Number | String | Null},
 /// text-align: {String | Null},
 /// text-decoration: {String | Null},
 /// text-transform: {String | Null},
@@ -121,6 +125,12 @@
 	$padding-right: map-get($map, padding-right);
 	$padding-top: map-get($map, padding-top);
 	$position: map-get($map, position);
+
+	$bottom: map-get($map, bottom);
+	$left: map-get($map, left);
+	$right: map-get($map, right);
+	$top: map-get($map, top);
+
 	$text-align: map-get($map, text-align);
 	$text-decoration: map-get($map, text-decoration);
 	$text-transform: map-get($map, text-transform);
@@ -171,6 +181,12 @@
 	padding-right: $padding-right;
 	padding-top: $padding-top;
 	position: $position;
+
+	bottom: $bottom;
+	left: $left;
+	right: $right;
+	top: $top;
+
 	text-align: $text-align;
 	text-decoration: $text-decoration;
 	text-transform: $text-transform;
