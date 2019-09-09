@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/management-toolbar",
-	"version": "3.0.0-milestone.3",
+	"version": "3.0.0-alpha.1",
 	"description": "ClayManagementToolbar component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-management-toolbar",
@@ -11,30 +11,38 @@
 	"main": "lib/index.js",
 	"types": "lib/index.d.ts",
 	"ts:main": "src/index.tsx",
-	"files": ["lib", "src"],
+	"files": [
+		"lib",
+		"src"
+	],
 	"scripts": {
 		"build": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib --extensions .ts,.tsx",
 		"build:types": "cross-env NODE_ENV=production tsc --project ./tsconfig.declarations.json",
 		"prepublishOnly": "yarn build && yarn build:types",
 		"test": "jest --config ../../jest.config.js"
 	},
-	"keywords": ["clay", "react"],
+	"keywords": [
+		"clay",
+		"react"
+	],
 	"dependencies": {
 		"classnames": "^2.2.6",
-		"@clayui/label": "^3.0.0-milestone.3",
-		"@clayui/button": "^3.0.0-milestone.3",
-		"@clayui/icon": "^3.0.0-milestone.3",
-		"@clayui/link": "^3.0.0-milestone.3",
-		"@clayui/drop-down": "^3.0.0-milestone.3",
-		"@clayui/form": "^3.0.0-milestone.3",
-		"@clayui/shared": "^3.0.0-milestone.3"
+		"@clayui/label": "^3.0.0-alpha.1",
+		"@clayui/button": "^3.0.0-alpha.1",
+		"@clayui/icon": "^3.0.0-alpha.1",
+		"@clayui/link": "^3.0.0-alpha.1",
+		"@clayui/drop-down": "^3.0.0-alpha.1",
+		"@clayui/form": "^3.0.0-alpha.1",
+		"@clayui/shared": "^3.0.0-alpha.1"
 	},
 	"devDependencies": {
-		"@clayui/css": "^3.0.0-milestone.3"
+		"@clayui/css": "^3.0.0-alpha.1"
 	},
 	"peerDependencies": {
 		"react": "^16.8.1",
 		"react-dom": "^16.8.1"
 	},
-	"browserslist": ["extends browserslist-config-clay"]
+	"browserslist": [
+		"extends browserslist-config-clay"
+	]
 }
