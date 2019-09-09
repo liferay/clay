@@ -12,32 +12,32 @@ $card-inner-border-radius: if($card-border-width > 0, calc(#{$card-border-radius
 // Card Title
 
 $card-title: () !default;
-$card-title: map-merge((
+$card-title: map-deep-merge((
 	color: $gray-900,
 	font-size: 0.875rem // 14px
 ), $card-title);
 
 $card-title-link: () !default;
-$card-title-link: map-merge((
+$card-title-link: map-deep-merge((
 	hover-color: map-get($card-title, color)
 ), $card-title-link);
 
 // Card Subtitle
 
 $card-subtitle: () !default;
-$card-subtitle: map-merge((
+$card-subtitle: map-deep-merge((
 	font-weight: $font-weight-normal
 ), $card-subtitle);
 
 $card-subtitle-link: () !default;
-$card-subtitle-link: map-merge((
+$card-subtitle-link: map-deep-merge((
 	hover-color: $gray-600,
 ), $card-subtitle-link);
 
 // Card Link
 
 $card-link: () !default;
-$card-link: map-merge((
+$card-link: map-deep-merge((
 	color: $gray-600,
 	font-size: 0.875rem, // 14px
 	hover-color: $gray-600,
@@ -51,7 +51,7 @@ $form-check-card-checked-box-shadow: 0 0 0 2px lighten($component-active-bg, 22.
 // Card Interactive
 
 $card-interactive: () !default;
-$card-interactive: map-merge((
+$card-interactive: map-deep-merge((
 	hover-bg: #F7F8F9,
 	focus-border-color: null,
 	focus-box-shadow: 0 0 0 2px #FFF#{','} 0 0 0 4px #719AFF,
@@ -61,7 +61,7 @@ $card-interactive: map-merge((
 // Card Interactive Secondary
 
 $card-interactive-secondary: () !default;
-$card-interactive-secondary: map-merge((
+$card-interactive-secondary: map-deep-merge((
 	hover-border-color: transparent,
 	hover-box-shadow: 0 0 0 2px #719AFF,
 	focus-border-color: transparent,
@@ -71,42 +71,42 @@ $card-interactive-secondary: map-merge((
 // Card Type Asset
 
 $card-type-asset: () !default;
-$card-type-asset: map-merge((
+$card-type-asset: map-deep-merge((
 	aspect-ratio-border-color: $gray-300,
 	card-body-padding-top: 0.75rem
 ), $card-type-asset);
 
 $image-card: () !default;
-$image-card: map-merge((
+$image-card: map-deep-merge((
 	aspect-ratio-checkered-fg: $gray-300,
 ), $image-card);
 
 $file-card: () !default;
-$file-card: map-merge((
+$file-card: map-deep-merge((
 	asset-icon-color: $gray-400,
 ), $file-card);
 
 // Card Type Template
 
 $card-type-template-after-highlight: () !default;
-$card-type-template-after-highlight: map-merge((
+$card-type-template-after-highlight: map-deep-merge((
 	bottom: -1px,
 	left: -1px,
 	right: -1px,
 ), $card-type-template-after-highlight);
 
 $card-type-template-aspect-ratio: () !default;
-$card-type-template-aspect-ratio: map-merge((
+$card-type-template-aspect-ratio: map-deep-merge((
 	bg-image: none,
 ), $card-type-template-aspect-ratio);
 
 $card-type-template-aspect-ratio-item: () !default;
-$card-type-template-aspect-ratio-item: map-merge((
+$card-type-template-aspect-ratio-item: map-deep-merge((
 	color: $gray-600,
 ), $card-type-template-aspect-ratio-item);
 
 $card-type-template: () !default;
-$card-type-template: map-merge((
+$card-type-template: map-deep-merge((
 	border-width: 1px,
 	box-shadow: none,
 ), $card-type-template);

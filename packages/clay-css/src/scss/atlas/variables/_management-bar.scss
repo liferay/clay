@@ -1,5 +1,5 @@
 $management-bar-base: () !default;
-$management-bar-base: map-merge((
+$management-bar-base: map-deep-merge((
 	link-border-radius: $border-radius,
 	link-outline: 0,
 	link-transition: box-shadow 0.15s ease-in-out,
@@ -8,7 +8,7 @@ $management-bar-base: map-merge((
 ), $management-bar-base);
 
 $management-bar-light: () !default;
-$management-bar-light: map-merge((
+$management-bar-light: map-deep-merge((
 	bg: $white,
 	link-font-weight: $font-weight-semi-bold,
 	link-hover-color: $gray-900,
@@ -20,7 +20,7 @@ $management-bar-light: map-merge((
 ), $management-bar-light);
 
 $management-bar-primary: () !default;
-$management-bar-primary: map-merge((
+$management-bar-primary: map-deep-merge((
 	link-border-radius: $border-radius,
 	link-font-weight: $font-weight-semi-bold,
 	link-hover-color: $gray-900,

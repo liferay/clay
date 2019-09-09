@@ -6,7 +6,7 @@ $breadcrumb-link-color: $gray-600 !default;
 $breadcrumb-link-hover-color: $breadcrumb-link-color !default;
 
 $breadcrumb-link: () !default;
-$breadcrumb-link: map-merge((
+$breadcrumb-link: map-deep-merge((
 	border-radius: 1px,
 	transition: box-shadow 0.15s ease-in-out,
 	focus-box-shadow: $component-focus-box-shadow,

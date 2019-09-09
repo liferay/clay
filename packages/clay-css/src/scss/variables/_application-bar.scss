@@ -1,5 +1,5 @@
 $application-bar-size: () !default;
-$application-bar-size: map-merge((
+$application-bar-size: map-deep-merge((
 	scaling-navbar: true,
 	font-size: $navbar-font-size,
 	height: 3.5rem,
@@ -16,7 +16,7 @@ $application-bar-size: map-merge((
 $application-bar-base: () !default;
 
 $application-bar-dark: () !default;
-$application-bar-dark: map-merge((
+$application-bar-dark: map-deep-merge((
 	bg: $dark,
 	color: $navbar-dark-color,
 	link-color: $navbar-dark-color,

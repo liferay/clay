@@ -131,7 +131,7 @@ $dark-l1: lighten(saturate($dark, 0.18), 4.12) !default;
 $dark-l2: lighten(desaturate($dark, 0.36), 8.04) !default;
 
 $theme-colors: () !default;
-$theme-colors: map-merge((
+$theme-colors: map-deep-merge((
 	primary: $primary,
 	secondary: $secondary,
 	success: $success,
@@ -161,7 +161,7 @@ $component-focus-box-shadow: 0 0 0 0.125rem $white#{','} 0 0 0 0.25rem $primary-
 
 $spacer: 1rem !default;
 $spacers: () !default;
-$spacers: map-merge((
+$spacers: map-deep-merge((
 	0: 0,
 	1: ($spacer * .25),
 	2: ($spacer * .5),

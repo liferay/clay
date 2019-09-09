@@ -1,5 +1,5 @@
 $clay-time-btn: () !default;
-$clay-time-btn: map-merge((
+$clay-time-btn: map-deep-merge((
 	align-items: center,
 	display: inline-flex,
 	font-size: 0.75rem,
@@ -13,7 +13,7 @@ $clay-time-btn: map-merge((
 ), $clay-time-btn);
 
 $clay-time-form-control: () !default;
-$clay-time-form-control: map-merge((
+$clay-time-form-control: map-deep-merge((
 	align-items: center,
 	display: inline-flex,
 	flex-wrap: wrap,
@@ -22,7 +22,7 @@ $clay-time-form-control: map-merge((
 ), $clay-time-form-control);
 
 $clay-time-form-control-inset: () !default;
-$clay-time-form-control-inset: map-merge((
+$clay-time-form-control-inset: map-deep-merge((
 	margin-bottom: 0,
 	margin-top: 0,
 	text-align: center,
@@ -32,7 +32,7 @@ $clay-time-form-control-inset: map-merge((
 ), $clay-time-form-control-inset);
 
 $clay-time-ampm: () !default;
-$clay-time-ampm: map-merge((
+$clay-time-ampm: map-deep-merge((
 	font-weight: 500,
 	margin-left: 0.25rem,
 	text-transform: uppercase,
@@ -40,7 +40,7 @@ $clay-time-ampm: map-merge((
 ), $clay-time-ampm);
 
 $clay-time-input-group-text: () !default;
-$clay-time-input-group-text: map-merge((
+$clay-time-input-group-text: map-deep-merge((
 	bg: transparent,
 	border-color: transparent,
 	padding-bottom: 0,
@@ -53,14 +53,14 @@ $clay-time-divider-margin-left: -3px !default;
 $clay-time-divider-margin-right: -3px !default;
 
 $clay-time-edit: () !default;
-$clay-time-edit: map-merge((
+$clay-time-edit: map-deep-merge((
 	margin-right: auto,
 	padding-left: 0.5rem,
 	padding-right: 0.5rem,
 ), $clay-time-edit);
 
 $clay-time-inner-spin: () !default;
-$clay-time-inner-spin: map-merge((
+$clay-time-inner-spin: map-deep-merge((
 	border-color: $secondary-d1,
 	border-radius: 8px,
 	border-style: solid,
@@ -68,7 +68,7 @@ $clay-time-inner-spin: map-merge((
 ), $clay-time-inner-spin);
 
 $clay-time-inner-spin-btn: () !default;
-$clay-time-inner-spin-btn: map-merge((
+$clay-time-inner-spin-btn: map-deep-merge((
 	align-items: center,
 	border-radius: map-get($clay-time-inner-spin, border-radius),
 	border-width: 0,

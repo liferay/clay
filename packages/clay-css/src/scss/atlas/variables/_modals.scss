@@ -20,7 +20,7 @@ $modal-title-font-weight: $font-weight-bold !default;
 // Modal Success
 
 $modal-success: () !default;
-$modal-success: map-merge((
+$modal-success: map-deep-merge((
 	header-bg: $success-l2,
 	header-border-color: $success-l1,
 	header-color: $success,
@@ -35,7 +35,7 @@ $modal-success: map-merge((
 // Modal Info
 
 $modal-info: () !default;
-$modal-info: map-merge((
+$modal-info: map-deep-merge((
 	header-bg: $info-l2,
 	header-border-color: $info-l1,
 	header-color: $info,
@@ -50,7 +50,7 @@ $modal-info: map-merge((
 // Modal Warning
 
 $modal-warning: () !default;
-$modal-warning: map-merge((
+$modal-warning: map-deep-merge((
 	header-bg: $warning-l2,
 	header-border-color: $warning-l1,
 	header-color: $warning,
@@ -65,7 +65,7 @@ $modal-warning: map-merge((
 // Modal Danger
 
 $modal-danger: () !default;
-$modal-danger: map-merge((
+$modal-danger: map-deep-merge((
 	header-bg: $danger-l2,
 	header-border-color: $danger-l1,
 	header-color: $danger,

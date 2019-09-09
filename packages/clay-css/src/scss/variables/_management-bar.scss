@@ -1,7 +1,7 @@
 $management-bar-base: () !default;
 
 $management-bar-size: () !default;
-$management-bar-size: map-merge((
+$management-bar-size: map-deep-merge((
 	scaling-navbar: true,
 	font-size: $navbar-font-size,
 	height: 4rem,
@@ -22,7 +22,7 @@ $management-bar-size: map-merge((
 ), $management-bar-size);
 
 $management-bar-light: () !default;
-$management-bar-light: map-merge((
+$management-bar-light: map-deep-merge((
 	bg: $light,
 	link-color: $navbar-light-color,
 	link-hover-color: $navbar-light-hover-color,
@@ -32,7 +32,7 @@ $management-bar-light: map-merge((
 ), $management-bar-light);
 
 $management-bar-primary: () !default;
-$management-bar-primary: map-merge((
+$management-bar-primary: map-deep-merge((
 	bg: $primary-l3,
 	border-color: $primary,
 	color: $navbar-light-color,

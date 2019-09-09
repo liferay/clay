@@ -1,7 +1,7 @@
 // Date Picker Nav
 
 $date-picker-nav-btn: () !default;
-$date-picker-nav-btn: map-merge((
+$date-picker-nav-btn: map-deep-merge((
 	hover-color: $gray-900,
 	focus-bg: $gray-200,
 	focus-color: $gray-900,
@@ -11,7 +11,7 @@ $date-picker-nav-btn: map-merge((
 ), $date-picker-nav-btn);
 
 $date-picker-nav-select: () !default;
-$date-picker-nav-select: map-merge((
+$date-picker-nav-select: map-deep-merge((
 	bg: transparent,
 	border-color: transparent,
 	color: $secondary,
@@ -32,7 +32,7 @@ $date-picker-nav-select: map-merge((
 // Date Picker Calendar Item
 
 $date-picker-date: () !default;
-$date-picker-date: map-merge((
+$date-picker-date: map-deep-merge((
 	hover-color: $gray-900,
 	focus-bg: $gray-200,
 	focus-color: $gray-900,
@@ -41,7 +41,7 @@ $date-picker-date: map-merge((
 ), $date-picker-date);
 
 $date-picker-previous-month-date: () !default;
-$date-picker-previous-month-date: map-merge((
+$date-picker-previous-month-date: map-deep-merge((
 	color: $gray-500,
 	opacity: null,
 	focus-opacity: null,
@@ -49,7 +49,7 @@ $date-picker-previous-month-date: map-merge((
 ), $date-picker-previous-month-date);
 
 $date-picker-next-month-date: () !default;
-$date-picker-next-month-date: map-merge((
+$date-picker-next-month-date: map-deep-merge((
 	color: $gray-500,
 	opacity: null,
 	focus-opacity: null,
