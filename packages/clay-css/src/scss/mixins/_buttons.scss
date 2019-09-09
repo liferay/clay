@@ -82,8 +82,8 @@
 	width: $width;
 
 	@at-root {
-		a#{&},
-		button#{&} {
+		#{selector-unify(&, a)},
+		#{selector-unify(&, button)} {
 			cursor: $cursor;
 		}
 	}
@@ -318,8 +318,8 @@
 	word-wrap: $word-wrap;
 
 	@at-root {
-		a#{&},
-		button#{&} {
+		#{selector-unify(&, a)},
+		#{selector-unify(&, button)} {
 			cursor: $cursor;
 		}
 	}
