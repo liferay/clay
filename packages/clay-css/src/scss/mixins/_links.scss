@@ -216,7 +216,7 @@
 	}
 
 	@at-root {
-		button#{&} {
+		#{selector-unify(&, button)} {
 			&:focus {
 				box-shadow: $btn-focus-box-shadow;
 				outline: $btn-focus-outline;
