@@ -17,7 +17,7 @@ $enable-caret: false !default;
 
 $spacer: 1rem !default;
 $spacers: () !default;
-$spacers: map-merge((
+$spacers: map-deep-merge((
 	0: 0,
 	1: ($spacer * .25),
 	2: ($spacer * .5),

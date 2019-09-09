@@ -1,10 +1,10 @@
 $application-bar-size: () !default;
-$application-bar-size: map-merge((
+$application-bar-size: map-deep-merge((
 	title-font-size: 1.125rem // 18px
 ), $application-bar-size);
 
 $application-bar-base: () !default;
-$application-bar-base: map-merge((
+$application-bar-base: map-deep-merge((
 	link-border-radius: $border-radius,
 	link-outline: 0,
 	link-transition: box-shadow 0.15s ease-in-out,
@@ -13,7 +13,7 @@ $application-bar-base: map-merge((
 ), $application-bar-base);
 
 $application-bar-dark: () !default;
-$application-bar-dark: map-merge((
+$application-bar-dark: map-deep-merge((
 	bg: $dark-l1,
 	link-font-weight: $font-weight-semi-bold,
 	link-hover-bg: rgba(255, 255, 255, 0.03),

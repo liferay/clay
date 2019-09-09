@@ -11,7 +11,7 @@ $autofit-padded-col-padding-y: 0.25rem !default; // 4px
 // Close
 
 $close: () !default;
-$close: map-merge((
+$close: map-deep-merge((
 	color: $black,
 	opacity: 0.5,
 	hover-opacity: 0.75,

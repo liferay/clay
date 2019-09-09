@@ -1,5 +1,5 @@
 $navigation-bar-size: () !default;
-$navigation-bar-size: map-merge((
+$navigation-bar-size: map-deep-merge((
 	border-bottom-width: 0,
 	collapse-dropdown-item-padding-y-mobile: 0.8125rem,
 	link-height-mobile: 2rem,
@@ -10,14 +10,14 @@ $navigation-bar-size: map-merge((
 ), $navigation-bar-size);
 
 $navigation-bar-base: () !default;
-$navigation-bar-base: map-merge((
+$navigation-bar-base: map-deep-merge((
 	link-outline: 0,
 	link-focus-box-shadow: $btn-focus-box-shadow,
 	link-disabled-box-shadow: none,
 ), $navigation-bar-base);
 
 $navigation-bar-light: () !default;
-$navigation-bar-light: map-merge((
+$navigation-bar-light: map-deep-merge((
 	bg: $white,
 	link-font-weight: $font-weight-semi-bold,
 	link-hover-color: $gray-900,
@@ -28,7 +28,7 @@ $navigation-bar-light: map-merge((
 
 
 $navigation-bar-secondary: () !default;
-$navigation-bar-secondary: map-merge((
+$navigation-bar-secondary: map-deep-merge((
 	bg: $secondary-d1,
 	link-color: $secondary-l2,
 	link-font-weight: $font-weight-semi-bold,

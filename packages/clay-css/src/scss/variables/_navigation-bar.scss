@@ -1,5 +1,5 @@
 $navigation-bar-size: () !default;
-$navigation-bar-size: map-merge((
+$navigation-bar-size: map-deep-merge((
 	scaling-navbar: false,
 	border-bottom-width: 0.0625rem,
 	font-size: $navbar-font-size,
@@ -16,7 +16,7 @@ $navigation-bar-size: map-merge((
 $navigation-bar-base: () !default;
 
 $navigation-bar-light: () !default;
-$navigation-bar-light: map-merge((
+$navigation-bar-light: map-deep-merge((
 	bg: $light,
 	link-color: $navbar-light-color,
 	link-hover-color: $navbar-light-hover-color,
@@ -26,7 +26,7 @@ $navigation-bar-light: map-merge((
 ), $navigation-bar-light);
 
 $navigation-bar-secondary: () !default;
-$navigation-bar-secondary: map-merge((
+$navigation-bar-secondary: map-deep-merge((
 	bg: $secondary,
 	color: $white,
 	link-color: rgba(255, 255, 255, 0.65),

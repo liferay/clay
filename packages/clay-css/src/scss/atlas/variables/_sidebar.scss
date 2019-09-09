@@ -1,14 +1,14 @@
 // Sidebar Header Title
 
 $sidebar-header-component-title: () !default;
-$sidebar-header-component-title: map-merge((
+$sidebar-header-component-title: map-deep-merge((
 	font-size: 1.25rem // 20px,
 ), $sidebar-header-component-title);
 
 // Sidebar Header Subtitle
 
 $sidebar-header-component-subtitle: () !default;
-$sidebar-header-component-subtitle: map-merge((
+$sidebar-header-component-subtitle: map-deep-merge((
 	font-size: 0.75rem, // 12px
 	font-weight: $font-weight-normal
 ), $sidebar-header-component-subtitle);
@@ -16,14 +16,14 @@ $sidebar-header-component-subtitle: map-merge((
 // Sidebar DT
 
 $sidebar-dt: () !default;
-$sidebar-dt: map-merge((
+$sidebar-dt: map-deep-merge((
 	font-size: 0.75rem // 12px
 ), $sidebar-dt);
 
 // Sidebar DD
 
 $sidebar-dd: () !default;
-$sidebar-dd: map-merge((
+$sidebar-dd: map-deep-merge((
 	font-size: 0.875rem // 14px
 ), $sidebar-dd);
 
@@ -34,7 +34,7 @@ $sidebar-list-group-border-color: $secondary-l2 !default;
 // Sidebar Light
 
 $sidebar-light: () !default;
-$sidebar-light: map-merge((
+$sidebar-light: map-deep-merge((
 	bg: $white,
 	border-left-width: 0,
 	box-shadow: -0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
@@ -55,7 +55,7 @@ $sidebar-light: map-merge((
 ), $sidebar-light);
 
 $sidebar-light-navigation-bar: () !default;
-$sidebar-light-navigation-bar: map-merge((
+$sidebar-light-navigation-bar: map-deep-merge((
 	bg: $white,
 	border-color: $secondary-l2
 ), $sidebar-light-navigation-bar);
