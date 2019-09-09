@@ -22,6 +22,7 @@ Here's a set of guidelines to contribute to Clay and its packages. Use your comm
 -   [Documentation Style Guide](#documentation-style-guide)
 -   [Additional Notes](#additional-notes)
 -   [Issue Labels](#issue-labels)
+-   [Release process](#release-process)
 
 ## What Should I Know Before I Get Started?
 
@@ -199,3 +200,19 @@ You may want to use [Github search](https://help.github.com/articles/searching-i
 | Next Release    | [search](https://github.com/search?q=is%3Aopen+is%3Aissue+repo%3Aliferay%2Fclay+label%3A%22status%3A+next-release%22&type=Issues)  | Status     | Will be available in the next release                                                                                                                                                                                                                                               |
 | Duplicate       | [search](https://github.com/search?q=is%3Aopen+is%3Aissue+repo%3Aliferay%2Fclay+label%3A%22resolution%3A+duplicate%22&type=Issues) | Resolution | Duplicates an existing issue                                                                                                                                                                                                                                                        |
 | Wontfix         | [search](https://github.com/search?q=is%3Aopen+is%3Aissue+repo%3Aliferay%2Fclay+label%3A%22resolution%3A+wontfix%22&type=Issues)   | Resolution | Will no longer be worked on                                                                                                                                                                                                                                                         |
+
+## Release process
+
+To publish a new version to monorepo, follow these steps:
+
+1. `git checkout master`
+2. Run `lerna version` and choose the version to cut.
+3. Run `git push $REMOTE master` - no problem since the last commit was green.
+4. Create a draft PR (not intended to be merged) asking to merge "master" into "stable"; the sole purpose of this is to see CI green one last time before pushing the tag.
+5. Once CI is green, run `git checkout stable; git merge master`
+6. Run `git push $REMOTE stable --follow-tags`
+7. Run `lerna publish from-package` - This will push the packages to NPM.
+
+In the last step it may happen that some things break, be it build failure or something else, so be aware and make sure all packages are published correctly.
+
+> NOTE: Publishing new packages automatically with Lerna is sometimes a problem, if you have problems try to publish the package separately manually.
