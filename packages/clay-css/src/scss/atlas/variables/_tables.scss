@@ -12,7 +12,7 @@ $table-head-color: $gray-600 !default;
 $table-head-font-weight: $font-weight-semi-bold !default;
 
 $table-head-link: () !default;
-$table-head-link: map-merge((
+$table-head-link: map-deep-merge((
 	border-radius: 1px,
 	color: $gray-600,
 	transition: box-shadow 0.15s ease-in-out,
@@ -36,7 +36,7 @@ $table-quick-action-menu-hover-bg: $table-hover-bg !default;
 // Table Title
 
 $table-title-link: () !default;
-$table-title-link: map-merge((
+$table-title-link: map-deep-merge((
 	border-radius: 1px,
 	display: inline-block,
 	max-width: 100%,
@@ -46,7 +46,7 @@ $table-title-link: map-merge((
 ), $table-title-link);
 
 $table-title: () !default;
-$table-title: map-merge((
+$table-title: map-deep-merge((
 	color: $gray-900,
 	font-size: 0.875rem // 14px
 ), $table-title);
@@ -54,7 +54,7 @@ $table-title: map-merge((
 // Table Action Link
 
 $table-action-link: () !default;
-$table-action-link: map-merge((
+$table-action-link: map-deep-merge((
 	color: $gray-600,
 	font-size: 1rem, // 16px
 	transition: $btn-transition,
@@ -70,7 +70,7 @@ $table-action-link: map-merge((
 // Table Link
 
 $table-link: () !default;
-$table-link: map-merge((
+$table-link: map-deep-merge((
 	border-radius: 1px,
 	color: $gray-900,
 	display: inline-block,
@@ -101,14 +101,14 @@ $table-list-divider-padding-y: 0.4375rem !default; // 7px
 // Table List Title
 
 $table-list-title: () !default;
-$table-list-title: map-merge((
+$table-list-title: map-deep-merge((
 	color: $gray-900,
 	font-size: 0.875rem, // 14px
 	line-height: 1.45
 ), $table-list-title);
 
 $table-list-title-link: () !default;
-$table-list-title-link: map-merge((
+$table-list-title-link: map-deep-merge((
 	border-radius: 1px,
 	color: $gray-900,
 	display: inline-block,
@@ -122,7 +122,7 @@ $table-list-title-link: map-merge((
 // Table List Link
 
 $table-list-link: () !default;
-$table-list-link: map-merge((
+$table-list-link: map-deep-merge((
 	border-radius: 1px,
 	color: $gray-900,
 	display: inline-block,
@@ -136,7 +136,7 @@ $table-list-link: map-merge((
 // Table List Action Link
 
 $table-list-action-link: () !default;
-$table-list-action-link: map-merge((
+$table-list-action-link: map-deep-merge((
 	color: $gray-600,
 	font-size: 1rem, // 16px
 	transition: $btn-transition,

@@ -1,19 +1,19 @@
 $single-link-font-weight: $font-weight-semi-bold !default;
 
 $component-link: () !default;
-$component-link: map-merge((
+$component-link: map-deep-merge((
 	color: $gray-600,
 	hover-color: darken($gray-600, 15%)
 ), $component-link);
 
 $link-primary: () !default;
-$link-primary: map-merge((
+$link-primary: map-deep-merge((
 	color: $primary,
 	hover-color: darken($primary, 15%)
 ), $link-primary);
 
 $link-secondary: () !default;
-$link-secondary: map-merge((
+$link-secondary: map-deep-merge((
 	color: $secondary,
 	hover-color: darken($secondary, 15%)
 ), $link-secondary);
@@ -21,7 +21,7 @@ $link-secondary: map-merge((
 // Component Title
 
 $component-title: () !default;
-$component-title: map-merge((
+$component-title: map-deep-merge((
 	color: $gray-900,
 	font-size: 1.125rem,
 	font-weight: $headings-font-weight,
@@ -31,7 +31,7 @@ $component-title: map-merge((
 ), $component-title);
 
 $component-title-link: () !default;
-$component-title-link: map-merge((
+$component-title-link: map-deep-merge((
 	color: $gray-900,
 	hover-color: darken($gray-900, 15%)
 ), $component-title-link);
@@ -39,13 +39,13 @@ $component-title-link: map-merge((
 // Component Subtitle
 
 $component-subtitle: () !default;
-$component-subtitle: map-merge((
+$component-subtitle: map-deep-merge((
 	color: $gray-600,
 	margin-bottom: 0
 ), $component-subtitle);
 
 $component-subtitle-link: () !default;
-$component-subtitle-link: map-merge((
+$component-subtitle-link: map-deep-merge((
 	color: $gray-600,
 	hover-color: darken($gray-600, 15%)
 ), $component-subtitle-link);
@@ -53,7 +53,7 @@ $component-subtitle-link: map-merge((
 // Component Action
 
 $component-action: () !default;
-$component-action: map-merge((
+$component-action: map-deep-merge((
 	bg: transparent,
 	border-color: transparent,
 	border-radius: $border-radius,
@@ -83,7 +83,7 @@ $link-outline-padding-y: $btn-padding-y-sm !default;
 $link-outline-transition: $btn-transition !default;
 
 $link-outline-primary: () !default;
-$link-outline-primary: map-merge((
+$link-outline-primary: map-deep-merge((
 	border-color: $primary,
 	color: $primary,
 	hover-bg: $primary,
@@ -99,7 +99,7 @@ $link-outline-primary: map-merge((
 ), $link-outline-primary);
 
 $link-outline-secondary: () !default;
-$link-outline-secondary: map-merge((
+$link-outline-secondary: map-deep-merge((
 	border-color: $secondary,
 	color: $secondary,
 	hover-bg: $secondary,

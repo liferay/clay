@@ -19,14 +19,14 @@ $label-link-hover-text-decoration: underline !default;
 // Label Close
 
 $label-close: () !default;
-$label-close: map-merge((
+$label-close: map-deep-merge((
 	disabled-color: inherit
 ), $label-close);
 
 // Label Sizes
 
 $label-lg: () !default;
-$label-lg: map-merge((
+$label-lg: map-deep-merge((
 	font-size: 0.75rem, // 12px
 	height: 1.5rem, // 24px
 	padding-x: 0.5rem, // 8px
@@ -43,7 +43,7 @@ $label-lg: map-merge((
 // Label Variants
 
 $label-base: () !default;
-$label-base: map-merge((
+$label-base: map-deep-merge((
 	outline: 0,
 	transition: box-shadow 0.15s ease-in-out,
 	focus-box-shadow: $btn-focus-box-shadow,
@@ -68,7 +68,7 @@ $label-primary-border-color: $primary-l1 !default;
 $label-primary-hover-border-color: $label-primary-border-color !default;
 
 $label-primary: () !default;
-$label-primary: map-merge((
+$label-primary: map-deep-merge((
 	border-color: $label-primary-border-color,
 	color: $label-primary-color,
 	hover-border-color: $label-primary-hover-border-color,
@@ -92,7 +92,7 @@ $label-secondary-border-color: $secondary-l2 !default;
 $label-secondary-hover-border-color: $label-secondary-border-color !default;
 
 $label-secondary: () !default;
-$label-secondary: map-merge((
+$label-secondary: map-deep-merge((
 	border-color: $label-secondary-border-color,
 	color: $label-secondary-color,
 	hover-border-color: $label-secondary-hover-border-color,
@@ -116,7 +116,7 @@ $label-success-border-color: $success-l1 !default;
 $label-success-hover-border-color: $label-success-border-color !default;
 
 $label-success: () !default;
-$label-success: map-merge((
+$label-success: map-deep-merge((
 	border-color: $label-success-border-color,
 	color: $label-success-color,
 	hover-border-color: $label-success-hover-border-color,
@@ -140,7 +140,7 @@ $label-info-border-color: $info-l1 !default;
 $label-info-hover-border-color: $label-info-border-color !default;
 
 $label-info: () !default;
-$label-info: map-merge((
+$label-info: map-deep-merge((
 	border-color: $label-info-border-color,
 	color: $label-info-color,
 	hover-border-color: $label-info-hover-border-color,
@@ -164,7 +164,7 @@ $label-warning-border-color: $warning-l1 !default;
 $label-warning-hover-border-color: $label-warning-border-color !default;
 
 $label-warning: () !default;
-$label-warning: map-merge((
+$label-warning: map-deep-merge((
 	border-color: $label-warning-border-color,
 	color: $label-warning-color,
 	hover-border-color: $label-warning-hover-border-color,
@@ -188,7 +188,7 @@ $label-danger-border-color: $danger-l1 !default;
 $label-danger-hover-border-color: $label-danger-border-color !default;
 
 $label-danger: () !default;
-$label-danger: map-merge((
+$label-danger: map-deep-merge((
 	border-color: $label-danger-border-color,
 	color: $label-danger-color,
 	hover-border-color: $label-danger-hover-border-color,
@@ -216,7 +216,7 @@ $label-light-border-color: $light !default;
 $label-light-hover-border-color: $label-light-border-color !default;
 
 $label-light: () !default;
-$label-light: map-merge((
+$label-light: map-deep-merge((
 	bg: $label-light-bg,
 	border-color: $label-light-border-color,
 	color: $label-light-color,
@@ -241,7 +241,7 @@ $label-dark-border-color: $dark !default;
 $label-dark-hover-border-color: $label-dark-border-color !default;
 
 $label-dark: () !default;
-$label-dark: map-merge((
+$label-dark: map-deep-merge((
 	border-color: $label-dark-border-color,
 	color: $label-dark-color,
 	hover-border-color: $label-dark-hover-border-color,

@@ -19,7 +19,7 @@ $badge-link-text-decoration: underline !default;
 $badge-link-hover-text-decoration: none !default;
 
 $badge-close: () !default;
-$badge-close: map-merge((
+$badge-close: map-deep-merge((
 	color: inherit,
 	opacity: 1,
 	hover-color: inherit,
@@ -107,7 +107,7 @@ $badge-dark-link-color: null !default;
 $badge-dark-link-hover-color: null !default;
 
 $badge-palette: () !default;
-$badge-palette: map-merge((
+$badge-palette: map-deep-merge((
 	primary: (
 		bg: $badge-primary-bg,
 		hover-bg: $badge-primary-hover-bg,

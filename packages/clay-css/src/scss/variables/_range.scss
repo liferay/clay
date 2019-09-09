@@ -1,17 +1,17 @@
 $clay-range-disabled-color: $gray-600 !default;
 
 $clay-range-input-group: () !default;
-$clay-range-input-group: map-merge((
+$clay-range-input-group: map-deep-merge((
 	align-items: center,
 ), $clay-range-input-group);
 
 $clay-range-input-group-item: () !default;
-$clay-range-input-group-item: map-merge((
+$clay-range-input-group-item: map-deep-merge((
 	flex-direction: column,
 ), $clay-range-input-group-item);
 
 $clay-range-input-group-text: () !default;
-$clay-range-input-group-text: map-merge((
+$clay-range-input-group-text: map-deep-merge((
 	bg: transparent,
 	border-width: 0,
 	color: $body-color,
@@ -25,7 +25,7 @@ $clay-range-input-group-text: map-merge((
 ), $clay-range-input-group-text);
 
 $clay-range-title: () !default;
-$clay-range-title: map-merge((
+$clay-range-title: map-deep-merge((
 	display: block,
 	font-weight: $font-weight-semi-bold,
 	line-height: 1,
@@ -34,7 +34,7 @@ $clay-range-title: map-merge((
 ), $clay-range-title);
 
 $clay-range-input: () !default;
-$clay-range-input: map-merge((
+$clay-range-input: map-deep-merge((
 	display: block,
 	padding-bottom: 0.1px,
 	position: relative,

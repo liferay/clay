@@ -4,31 +4,31 @@ $tbar-item-padding-y: null !default;
 // Tbar Inline {xs|sm|md|lg|xl} Down
 
 $tbar-inline-xs-down: () !default;
-$tbar-inline-xs-down: map-merge((
+$tbar-inline-xs-down: map-deep-merge((
 	breakpoint-down: nth(map-keys($grid-breakpoints), 1),
 	item-padding-left: 0
 ), $tbar-inline-xs-down);
 
 $tbar-inline-sm-down: () !default;
-$tbar-inline-sm-down: map-merge((
+$tbar-inline-sm-down: map-deep-merge((
 	breakpoint-down: nth(map-keys($grid-breakpoints), 2),
 	item-padding-left: 0
 ), $tbar-inline-sm-down);
 
 $tbar-inline-md-down: () !default;
-$tbar-inline-md-down: map-merge((
+$tbar-inline-md-down: map-deep-merge((
 	breakpoint-down: nth(map-keys($grid-breakpoints), 3),
 	item-padding-left: 0
 ), $tbar-inline-md-down);
 
 $tbar-inline-lg-down: () !default;
-$tbar-inline-lg-down: map-merge((
+$tbar-inline-lg-down: map-deep-merge((
 	breakpoint-down: nth(map-keys($grid-breakpoints), 4),
 	item-padding-left: 0
 ), $tbar-inline-lg-down);
 
 $tbar-inline-xl-down: () !default;
-$tbar-inline-xl-down: map-merge((
+$tbar-inline-xl-down: map-deep-merge((
 	breakpoint-down: nth(map-keys($grid-breakpoints), 5),
 	item-padding-left: 0
 ), $tbar-inline-xl-down);
@@ -36,7 +36,7 @@ $tbar-inline-xl-down: map-merge((
 // Component Tbar
 
 $component-tbar: () !default;
-$component-tbar: map-merge((
+$component-tbar: map-deep-merge((
 	border-color: $gray-300,
 	border-style: solid,
 	border-width: 0 0 0.0625rem 0,
@@ -46,7 +46,7 @@ $component-tbar: map-merge((
 // Subnav Tbar
 
 $subnav-tbar-component-title: () !default;
-$subnav-tbar-component-title: map-merge((
+$subnav-tbar-component-title: map-deep-merge((
 	display: inline-block,
 	font-size: 0.875rem,
 	font-weight: $font-weight-semi-bold,
@@ -57,14 +57,14 @@ $subnav-tbar-component-title: map-merge((
 ), $subnav-tbar-component-title);
 
 $subnav-tbar-component-link: () !default;
-$subnav-tbar-component-link: map-merge((
+$subnav-tbar-component-link: map-deep-merge((
 	color: $link-color,
 	hover-color: $link-hover-color,
 	font-weight: $font-weight-semi-bold
 ), $subnav-tbar-component-link);
 
 $subnav-tbar-component-text: () !default;
-$subnav-tbar-component-text: map-merge((
+$subnav-tbar-component-text: map-deep-merge((
 	display: inline-block,
 	line-height: 1.45,
 	margin-bottom: 0.25rem,
@@ -73,7 +73,7 @@ $subnav-tbar-component-text: map-merge((
 ), $subnav-tbar-component-text);
 
 $subnav-tbar: () !default;
-$subnav-tbar: map-merge((
+$subnav-tbar: map-deep-merge((
 	font-size: 0.875rem,
 	section-text-align: left,
 	strong-font-weight: $font-weight-semi-bold,
@@ -97,7 +97,7 @@ $subnav-tbar: map-merge((
 // Subnav Tbar Variants
 
 $subnav-tbar-light: () !default;
-$subnav-tbar-light: map-merge((
+$subnav-tbar-light: map-deep-merge((
 	bg-color: $light,
 	color: $navbar-light-color,
 	padding-y: 0.125rem
@@ -106,7 +106,7 @@ $subnav-tbar-light: map-merge((
 // Subnav Tbar Primary
 
 $subnav-tbar-primary-component-link: () !default;
-$subnav-tbar-primary-component-link: map-merge((
+$subnav-tbar-primary-component-link: map-deep-merge((
 	color: $gray-900,
 	hover-color: $gray-900,
 	disabled-color: $gray-600,
@@ -116,19 +116,19 @@ $subnav-tbar-primary-component-link: map-merge((
 ), $subnav-tbar-primary-component-link);
 
 $subnav-tbar-primary-component-label-close: () !default;
-$subnav-tbar-primary-component-label-close: map-merge((
+$subnav-tbar-primary-component-label-close: map-deep-merge((
 	focus-color: inherit,
 	disabled-color: $gray-600,
 	disabled-opacity: $btn-disabled-opacity
 ), $subnav-tbar-primary-component-label-close);
 
 $subnav-tbar-primary-component-label: () !default;
-$subnav-tbar-primary-component-label: map-merge((
+$subnav-tbar-primary-component-label: map-deep-merge((
 	close: $subnav-tbar-primary-component-label-close
 ), $subnav-tbar-primary-component-label);
 
 $subnav-tbar-primary-tbar-label-size: () !default;
-$subnav-tbar-primary-tbar-label-size: map-merge((
+$subnav-tbar-primary-tbar-label-size: map-deep-merge((
 	font-size: 0.75rem,
 	margin-right: 0,
 	padding-x: 0.625rem,
@@ -137,7 +137,7 @@ $subnav-tbar-primary-tbar-label-size: map-merge((
 ), $subnav-tbar-primary-tbar-label-size);
 
 $subnav-tbar-primary: () !default;
-$subnav-tbar-primary: map-merge((
+$subnav-tbar-primary: map-deep-merge((
 	bg-color: $primary-l2,
 	padding-x: 0.25rem,
 	padding-y: 0.625rem,
@@ -155,12 +155,12 @@ $subnav-tbar-primary: map-merge((
 // Subnav Tbar Primary Disabled
 
 $subnav-tbar-primary-disabled-component-label: () !default;
-$subnav-tbar-primary-disabled-component-label: map-merge((
+$subnav-tbar-primary-disabled-component-label: map-deep-merge((
 	border-color: #6C757D
 ), $subnav-tbar-primary-disabled-component-label);
 
 $subnav-tbar-primary-disabled: () !default;
-$subnav-tbar-primary-disabled: map-merge((
+$subnav-tbar-primary-disabled: map-deep-merge((
 	bg-color: lighten(desaturate($primary, 27.03), 37.06),
 	color: #6C757D,
 	component-label: $subnav-tbar-primary-disabled-component-label

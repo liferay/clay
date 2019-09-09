@@ -46,7 +46,7 @@ $dropdown-item-indicator-size: 1rem !default;
 $dropdown-item-indicator-spacer-x: 1rem !default;
 
 $dropdown-item-base: () !default;
-$dropdown-item-base: map-merge((
+$dropdown-item-base: map-deep-merge((
 	border-radius: 0,
 	overflow: hidden,
 	padding-bottom: $dropdown-item-padding-y,
@@ -68,7 +68,7 @@ $dropdown-item-base: map-merge((
 // Autocomplete Dropdown Menu
 
 $autocomplete-dropdown-menu: () !default;
-$autocomplete-dropdown-menu: map-merge((
+$autocomplete-dropdown-menu: map-deep-merge((
 	max-height: calc(9rem + 2px),
 	max-width: none,
 	width: 100%,
