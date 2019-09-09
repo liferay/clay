@@ -2,6 +2,56 @@
 /// @group globals
 ////
 
+/// A function that returns an empty map of type `map`. In Sass, Empty maps and lists can be declared using `()` and Sass will assign its type as `list`. This function ensures its type will be `map`.
+
+@function map-new() {
+	@return map-remove((), 'key');
+}
+
+/// A function that returns a new map with all the keys and values including nested keys and values from both `$map1` and `$map2`. If both `$map1` and `$map2` have the same key, `$map2`’s value takes precedence.
+/// @param {Map, Null} $map1[()]
+/// @param {Map, Null} $map2[()]
+
+@function map-deep-merge($map1: (), $map2: ()) {
+	@if (type-of($map1) == 'list' and length($map1) == 0) or (type-of($map1) == 'null') {
+		$map1: map-new();
+	}
+
+	@if (type-of($map1) != map) {
+		@error('argument `$map1` of `map-deep-merge($map1, $map2)` must be a map');
+	}
+
+	@if (type-of($map2) == 'list' and length($map2) == 0) or (type-of($map2) == 'null') {
+		$map2: map-new();
+	}
+
+	@if (type-of($map2) != map) {
+		@error('argument `$map2` of `map-deep-merge($map1, $map2)` must be a map');
+	}
+
+	$newMap: $map1;
+
+	@each $key, $value in $map2 {
+		@if (type-of($value) == map) {
+			$newMap: map-merge(
+				$newMap,
+				($key: map-deep-merge(
+					map-get($newMap, $key),
+					$value
+				))
+			);
+		}
+		@else {
+			$newMap: map-merge(
+				$newMap,
+				($key: $value)
+			);
+		}
+	}
+
+	@return $newMap;
+}
+
 /// A helper function for setting default values in variables inside mixins if no value is declared. If the value of a variable is `clay-unset`, `setter` returns a value of `null` which prevents Sass from outputting the declaration. If the value of a variable is `null`, `setter` returns the default, `$val`.
 /// @param {Any} $var - The Sass variable
 /// @param {Any} $val - The default value to return if `$var` is `null`
