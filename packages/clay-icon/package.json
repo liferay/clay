@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/icon",
-	"version": "3.0.0-milestone.3",
+	"version": "3.0.0-alpha.1",
 	"description": "ClayIcon component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-icon",
@@ -37,7 +37,7 @@
 		"extends browserslist-config-clay"
 	],
 	"devDependencies": {
-		"@clayui/css": "^3.0.0-milestone.3",
+		"@clayui/css": "^3.0.0-alpha.1",
 		"@types/warning": "^3.0.0"
 	}
 }
