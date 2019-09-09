@@ -6,7 +6,7 @@ $sidebar-padding-top: 1rem !default; // 16px
 // Sidebar Header Title
 
 $sidebar-header-component-title: () !default;
-$sidebar-header-component-title: map-merge((
+$sidebar-header-component-title: map-deep-merge((
 	font-size: 1.5rem, // 24px,
 	font-weight: $font-weight-semi-bold,
 	clay-link: (
@@ -17,7 +17,7 @@ $sidebar-header-component-title: map-merge((
 // Sidebar Header Subtitle
 
 $sidebar-header-component-subtitle: () !default;
-$sidebar-header-component-subtitle: map-merge((
+$sidebar-header-component-subtitle: map-deep-merge((
 	font-size: 1.125rem, // 18px
 	font-weight: $font-weight-semi-bold,
 	margin-bottom: 0
@@ -26,7 +26,7 @@ $sidebar-header-component-subtitle: map-merge((
 // Sidebar DT
 
 $sidebar-dt: () !default;
-$sidebar-dt: map-merge((
+$sidebar-dt: map-deep-merge((
 	font-size: 0.875rem, // 14px
 	font-weight: $font-weight-semi-bold,
 	margin-bottom: 0.25rem, // 4px
@@ -36,7 +36,7 @@ $sidebar-dt: map-merge((
 // Sidebar DD
 
 $sidebar-dd: () !default;
-$sidebar-dd: map-merge((
+$sidebar-dd: map-deep-merge((
 	font-size: 0.875rem, // 14px
 	margin-bottom: 0.75rem // 12px
 ), $sidebar-dd);
@@ -58,12 +58,12 @@ $sidebar-list-group-autofit-col-padding-x: 0.5rem !default; // 8px
 $sidebar-list-group-autofit-col-padding-y: 1rem !default; // 16px
 
 $sidebar-list-group-sticker-size: () !default;
-$sidebar-list-group-sticker-size: map-merge($sticker-sm, $sidebar-list-group-sticker-size);
+$sidebar-list-group-sticker-size: map-deep-merge($sticker-sm, $sidebar-list-group-sticker-size);
 
 // Sidebar Light
 
 $sidebar-light: () !default;
-$sidebar-light: map-merge((
+$sidebar-light: map-deep-merge((
 	bg: $light,
 	border-color: $gray-300,
 	border-left-width: 1px,
@@ -83,7 +83,7 @@ $sidebar-light: map-merge((
 ), $sidebar-light);
 
 $sidebar-light-navigation-bar: () !default;
-$sidebar-light-navigation-bar: map-merge((
+$sidebar-light-navigation-bar: map-deep-merge((
 	bg: $light,
 	border-color: $gray-300,
 	link-color: $navbar-light-color,

@@ -53,7 +53,7 @@ $alert-close-position-top: 0.75rem !default; // 12px
 $alert-close-width: $alert-close-height !default;
 
 $alert-close: () !default;
-$alert-close: map-merge((
+$alert-close: map-deep-merge((
 	font-size: $alert-close-font-size,
 	height: $alert-close-height,
 	line-height: $alert-close-line-height,
@@ -200,7 +200,7 @@ $alert-dark-link-color: null !default;
 $alert-dark-link-hover-color: null !default;
 
 $alert-palette: () !default;
-$alert-palette: map-merge((
+$alert-palette: map-deep-merge((
 	primary: (
 		bg: $alert-primary-bg,
 		border-color: $alert-primary-border-color,

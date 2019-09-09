@@ -15,7 +15,7 @@ $breadcrumb-link-hover-color: $link-hover-color !default;
 $breadcrumb-link-hover-text-decoration: $link-hover-decoration !default;
 
 $breadcrumb-link: () !default;
-$breadcrumb-link: map-merge((
+$breadcrumb-link: map-deep-merge((
 	color: $breadcrumb-link-color,
 	display: block,
 	text-decoration: $breadcrumb-link-text-decoration,

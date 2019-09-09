@@ -36,7 +36,7 @@ $progress-bar-warning-bg: $warning !default;
 $progress-group-feedback-warning-color: $progress-bar-warning-bg !default;
 
 $progress-palette: () !default;
-$progress-palette: map-merge((
+$progress-palette: map-deep-merge((
 	success: (
 		bar-bg: $progress-bar-success-bg,
 		group-feedback-color: $progress-group-feedback-success-color

@@ -24,14 +24,14 @@ $alert-link-font-weight: $font-weight-semi-bold !default;
 $alert-indicator-font-size: inherit !default;
 
 $alert-title: () !default;
-$alert-title: map-merge((
+$alert-title: map-deep-merge((
 	font-size: 0.875rem,
 	margin-bottom: 0.25rem,
 	margin-top: 0
 ), $alert-title);
 
 $alert-subtitle: () !default;
-$alert-subtitle: map-merge((
+$alert-subtitle: map-deep-merge((
 	font-size: 0.75rem,
 	font-weight: $font-weight-normal
 ), $alert-subtitle);
