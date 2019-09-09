@@ -100,9 +100,9 @@ describe('ClayTable', () => {
 
 		expect(container).toMatchSnapshot();
 	});
-	it('renders a table bordered', () => {
+	it('renders a table with columns bordered', () => {
 		const {container} = render(
-			<ClayTable bordered>
+			<ClayTable borderedColumns>
 				<ClayTable.Head />
 				<ClayTable.Body />
 			</ClayTable>

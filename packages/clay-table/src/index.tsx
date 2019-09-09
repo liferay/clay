@@ -23,9 +23,14 @@ interface IProps extends React.HTMLAttributes<HTMLTableElement> {
 	bodyVerticalAlignment?: VerticalAlignmentType;
 
 	/**
-	 * Applies a Bordered style on Table.
+	 * Applies a Bordered style on Table's columns.
 	 */
-	bordered?: boolean;
+	borderedColumns?: boolean;
+
+	/**
+	 * Removes the default border and rounded corners from table.
+	 */
+	borderless?: boolean;
 
 	/**
 	 * This property keeps all the headings on one line.
@@ -77,7 +82,8 @@ const ClayTable: React.FunctionComponent<IProps> & {
 	Row: typeof Row;
 } = ({
 	bodyVerticalAlignment,
-	bordered,
+	borderedColumns,
+	borderless,
 	children,
 	className,
 	headVerticalAlignment,
@@ -99,12 +105,13 @@ const ClayTable: React.FunctionComponent<IProps> & {
 		>
 			<table
 				className={classNames(
-					'table table-autofit table-list',
+					'table table-autofit',
 					{
 						'show-quick-actions-on-hover': hover,
-						'table-bordered': bordered,
+						'table-bordered': borderedColumns,
 						'table-heading-nowrap': headingNoWrap,
 						'table-hover': hover,
+						'table-list': !borderless,
 						'table-nowrap': noWrap,
 						'table-striped': striped,
 						[`tbody-valign-${bodyVerticalAlignment}`]: bodyVerticalAlignment,
