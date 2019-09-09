@@ -37,7 +37,7 @@ $modal-full-screen-spacer-y: $modal-full-screen-spacer-x !default;
 // Modal Success
 
 $modal-success: () !default;
-$modal-success: map-merge((
+$modal-success: map-deep-merge((
 	header-bg: theme-color-level(success, -10),
 	header-border-color: theme-color-level(success, -9),
 	header-color: theme-color-level(success, 6),
@@ -52,7 +52,7 @@ $modal-success: map-merge((
 // Modal Info
 
 $modal-info: () !default;
-$modal-info: map-merge((
+$modal-info: map-deep-merge((
 	header-bg: theme-color-level(info, -10),
 	header-border-color: theme-color-level(info, -9),
 	header-color: theme-color-level(info, 6),
@@ -67,7 +67,7 @@ $modal-info: map-merge((
 // Modal Warning
 
 $modal-warning: () !default;
-$modal-warning: map-merge((
+$modal-warning: map-deep-merge((
 	header-bg: theme-color-level(warning, -10),
 	header-border-color: theme-color-level(warning, -9),
 	header-color: theme-color-level(warning, 6),
@@ -82,7 +82,7 @@ $modal-warning: map-merge((
 // Modal Danger
 
 $modal-danger: () !default;
-$modal-danger: map-merge((
+$modal-danger: map-deep-merge((
 	header-bg: theme-color-level(danger, -10),
 	header-border-color: theme-color-level(danger, -9),
 	header-color: theme-color-level(danger, 6),
@@ -95,7 +95,7 @@ $modal-danger: map-merge((
 ), $modal-danger);
 
 $modal-palette: () !default;
-$modal-palette: map-merge((
+$modal-palette: map-deep-merge((
 	success: $modal-success,
 	info: $modal-info,
 	warning: $modal-warning,

@@ -41,7 +41,7 @@ $sheet-footer-margin-right-mobile: null !default;
 $sheet-footer-margin-top-mobile: null !default;
 
 $sheet-footer-btn-block-sm-down: () !default;
-$sheet-footer-btn-block-sm-down: map-merge((
+$sheet-footer-btn-block-sm-down: map-deep-merge((
 	breakpoint-down: sm,
 	btn-margin-bottom-mobile: 1rem
 ), $sheet-footer-btn-block-sm-down);
@@ -89,7 +89,7 @@ $sheet-subtitle-link-hover-color: null !default;
 $sheet-subtitle-link-hover-text-decoration: none !default;
 
 $sheet-subtitle-link: () !default;
-$sheet-subtitle-link: map-merge((
+$sheet-subtitle-link: map-deep-merge((
 	color: $sheet-subtitle-link-color,
 	text-decoration: $sheet-subtitle-link-text-decoration,
 	hover-color: $sheet-subtitle-link-hover-color,

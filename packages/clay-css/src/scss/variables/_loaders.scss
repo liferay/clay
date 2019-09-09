@@ -5,13 +5,13 @@ $loading-icon-font-size-sm: 1.25rem !default; // 20px
 // Loading Icon Dotted
 
 $loading-animation: () !default;
-$loading-animation: map-merge((
+$loading-animation: map-deep-merge((
 	animation-name: loading-animation,
 	color: $gray-900,
 ), $loading-animation);
 
 $loading-animation-light: () !default;
-$loading-animation-light: map-merge((
+$loading-animation-light: map-deep-merge((
 	animation-name: loading-animation-light,
 	color: $white
 ), $loading-animation-light);

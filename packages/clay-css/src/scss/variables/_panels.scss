@@ -34,7 +34,7 @@ $panel-header-link-text-decoration: null !default;
 $panel-header-link-hover-text-decoration: null !default;
 
 $panel-header-link: () !default;
-$panel-header-link: map-merge((
+$panel-header-link: map-deep-merge((
 	color: inherit,
 	display: block,
 	text-decoration: $panel-header-link-text-decoration,
@@ -45,7 +45,7 @@ $panel-header-link: map-merge((
 ), $panel-header-link);
 
 $panel-header-collapsed-link: () !default;
-$panel-header-collapsed-link: map-merge((
+$panel-header-collapsed-link: map-deep-merge((
 	border-color: transparent,
 	transition: border-color 0.75s ease,
 ), $panel-header-collapsed-link);
@@ -80,7 +80,7 @@ $panel-group-panel-margin-bottom: -$panel-border-bottom-width !default;
 // Panel Group Sm
 
 $panel-group-sm: () !default;
-$panel-group-sm: map-merge((
+$panel-group-sm: map-deep-merge((
 	font-size: 0.875rem,
 	header-padding-bottom: 0.5rem,
 	header-padding-top: 0.5rem,
@@ -103,7 +103,7 @@ $panel-group-flush-collapse-icon-padding-right: 1.5rem !default;
 $panel-secondary-header-link: () !default;
 
 $panel-secondary: () !default;
-$panel-secondary: map-merge((
+$panel-secondary: map-deep-merge((
 	border-color: rgba($black, 0.125),
 	header-bg: $gray-100,
 	header-border-color: rgba($black, 0.125),
@@ -117,7 +117,7 @@ $panel-secondary: map-merge((
 $panel-unstyled-header-link: () !default;
 
 $panel-unstyled: () !default;
-$panel-unstyled: map-merge((
+$panel-unstyled: map-deep-merge((
 	bg: transparent,
 	border-radius: 0,
 	border-width: 0,

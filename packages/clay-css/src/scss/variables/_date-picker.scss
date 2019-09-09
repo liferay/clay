@@ -1,7 +1,7 @@
 // Date Picker Dropdown Menu
 
 $date-picker-dropdown-menu: () !default;
-$date-picker-dropdown-menu: map-merge((
+$date-picker-dropdown-menu: map-deep-merge((
 	max-height: none,
 	max-width: 370px,
 	padding-bottom: 0,
@@ -14,14 +14,14 @@ $date-picker-dropdown-menu: map-merge((
 // Date Picker Nav
 
 $date-picker-nav-row: () !default;
-$date-picker-nav-row: map-merge((
+$date-picker-nav-row: map-deep-merge((
 	display: flex,
 	margin-left: -0.25rem,
 	margin-right: -0.25rem,
 ), $date-picker-nav-row);
 
 $date-picker-nav-btn: () !default;
-$date-picker-nav-btn: map-merge((
+$date-picker-nav-btn: map-deep-merge((
 	color: $gray-600,
 	transition: $btn-transition,
 	hover-bg: $gray-200,
@@ -33,18 +33,18 @@ $date-picker-nav-btn: map-merge((
 ), $date-picker-nav-btn);
 
 $date-picker-nav-btn-monospaced: () !default;
-$date-picker-nav-btn-monospaced: map-merge((
+$date-picker-nav-btn-monospaced: map-deep-merge((
 	margin-bottom: 0,
 	margin-top: 0,
 ), $date-picker-nav-btn-monospaced);
 
 $date-picker-nav-select: () !default;
-$date-picker-nav-select: map-merge((), $date-picker-nav-select);
+$date-picker-nav-select: map-deep-merge((), $date-picker-nav-select);
 
 // Date Picker Row
 
 $date-picker-row: () !default;
-$date-picker-row: map-merge((
+$date-picker-row: map-deep-merge((
 	display: flex,
 	justify-content: space-between,
 	margin-bottom: 0.5rem,
@@ -52,7 +52,7 @@ $date-picker-row: map-merge((
 ), $date-picker-row);
 
 $date-picker-days-row: () !default;
-$date-picker-days-row: map-merge((
+$date-picker-days-row: map-deep-merge((
 	margin-bottom: 1rem,
 	margin-top: 0,
 ), $date-picker-days-row);
@@ -62,20 +62,20 @@ $date-picker-date-row: () !default;
 // Date Picker Day
 
 $date-picker-day: () !default;
-$date-picker-day: map-merge((
+$date-picker-day: map-deep-merge((
 	height: 1.3125rem,
 ), $date-picker-day);
 
 // Date Picker Calendar
 
 $date-picker-calendar-container: () !default;
-$date-picker-calendar-container: map-merge((
+$date-picker-calendar-container: map-deep-merge((
 	float: left,
 	min-width: 100%,
 ), $date-picker-calendar-container);
 
 $date-picker-calendar-header-container: () !default;
-$date-picker-calendar-header-container: map-merge((
+$date-picker-calendar-header-container: map-deep-merge((
 	padding-bottom: 1rem,
 	padding-left: 1rem,
 	padding-right: 1rem,
@@ -83,14 +83,14 @@ $date-picker-calendar-header-container: map-merge((
 ), $date-picker-calendar-header-container);
 
 $date-picker-calendar-body-container: () !default;
-$date-picker-calendar-body-container: map-merge((
+$date-picker-calendar-body-container: map-deep-merge((
 	padding-left: 1rem,
 	padding-right: 1rem,
 	padding-bottom: 0.5rem,
 ), $date-picker-calendar-body-container);
 
 $date-picker-calendar-footer-container: () !default;
-$date-picker-calendar-footer-container: map-merge((
+$date-picker-calendar-footer-container: map-deep-merge((
 	border-color: $gray-400,
 	border-style: solid,
 	border-width: 1px 0 0 0,
@@ -103,7 +103,7 @@ $date-picker-calendar-footer-container: map-merge((
 // Date Picker Calendar Item
 
 $date-picker-calendar-item: () !default;
-$date-picker-calendar-item: map-merge((
+$date-picker-calendar-item: map-deep-merge((
 	align-items: center,
 	bg: transparent,
 	border-width: 0,
@@ -129,7 +129,7 @@ $date-picker-calendar-item: map-merge((
 ), $date-picker-calendar-item);
 
 $date-picker-date: () !default;
-$date-picker-date: map-merge((
+$date-picker-date: map-deep-merge((
 	border-radius: 100px,
 	color: $gray-600,
 	hover-bg: $gray-200,
@@ -143,14 +143,14 @@ $date-picker-date: map-merge((
 ), $date-picker-date);
 
 $date-picker-previous-month-date: () !default;
-$date-picker-previous-month-date: map-merge((
+$date-picker-previous-month-date: map-deep-merge((
 	opacity: 0.65,
 	focus-opacity: 1,
 	active-opacity: 1,
 ), $date-picker-previous-month-date);
 
 $date-picker-next-month-date: () !default;
-$date-picker-next-month-date: map-merge((
+$date-picker-next-month-date: map-deep-merge((
 	opacity: 0.65,
 	focus-opacity: 1,
 	active-opacity: 1,
@@ -159,7 +159,7 @@ $date-picker-next-month-date: map-merge((
 // Date Picker Input Group
 
 $date-picker-input-group-text: () !default;
-$date-picker-input-group-text: map-merge((
+$date-picker-input-group-text: map-deep-merge((
 	bg: transparent,
 	border-color: transparent,
 	min-width: 2rem,

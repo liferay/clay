@@ -1,7 +1,7 @@
 // Menubar Vertical MD
 
 $menubar-vertical-transparent-md: () !default;
-$menubar-vertical-transparent-md: map-merge((
+$menubar-vertical-transparent-md: map-deep-merge((
 	bg-mobile: $white,
 	link-border-radius: 0.375rem,
 	link-border-radius-mobile: 0,
@@ -35,7 +35,7 @@ $menubar-vertical-transparent-md: map-merge((
 // Menubar Vertical LG
 
 $menubar-vertical-transparent-lg: () !default;
-$menubar-vertical-transparent-lg: map-merge((
+$menubar-vertical-transparent-lg: map-deep-merge((
 	bg-mobile: $white,
 	link-border-radius: 0.375rem,
 	link-border-radius-mobile: 0,

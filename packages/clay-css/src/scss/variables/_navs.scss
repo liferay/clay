@@ -37,7 +37,7 @@ $nav-tabs-link-padding-x: null !default;
 $nav-tabs-link-padding-y: null !default;
 
 $nav-tabs-link: () !default;
-$nav-tabs-link: map-merge((
+$nav-tabs-link: map-deep-merge((
 	border-radius: $nav-tabs-border-radius $nav-tabs-border-radius 0 0,
 	color: $nav-tabs-link-color,
 	padding-bottom: $nav-tabs-link-padding-y,
@@ -54,7 +54,7 @@ $nav-tabs-link-show-bg: null !default;
 $nav-tabs-link-show-border-color: null !default;
 
 $nav-tabs-link-show: () !default;
-$nav-tabs-link-show: map-merge((
+$nav-tabs-link-show: map-deep-merge((
 	bg: $nav-tabs-link-show-bg,
 	border-color: $nav-tabs-link-show-border-color,
 	color: $nav-tabs-link-show-color,
@@ -83,7 +83,7 @@ $nav-underline-link-active-color: null !default;
 $nav-underline-link-disabled-color: null !default;
 
 $nav-underline-link: () !default;
-$nav-underline-link: map-merge((
+$nav-underline-link: map-deep-merge((
 	color: $nav-underline-link-color,
 	padding-bottom: $nav-underline-link-padding-y,
 	padding-left: $nav-underline-link-padding-x,
@@ -96,7 +96,7 @@ $nav-underline-link: map-merge((
 ), $nav-underline-link);
 
 $nav-underline-link-show: () !default;
-$nav-underline-link-show: map-merge((
+$nav-underline-link-show: map-deep-merge((
 	color: $nav-underline-link-active-color,
 ), $nav-underline-link-show);
 
