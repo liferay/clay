@@ -181,8 +181,8 @@
 	transition: $transition;
 
 	@at-root {
-		#{selector-unify(&, a)},
-		#{selector-unify(&, button)} {
+		a#{&},
+		button#{&} {
 			&:hover {
 				background-color: $hover-bg;
 				border-color: $hover-border-color;
