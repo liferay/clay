@@ -40,7 +40,7 @@
 	width: 100%;
 
 	@at-root {
-		#{selector-unify(&, ul)} {
+		ul#{&} {
 			@include list-unstyled;
 		}
 	}
