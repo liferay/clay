@@ -1,0 +1,409 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayMultiSelectInput renders 1`] = `
+<body>
+  <div>
+    <div
+      class="form-control form-control-tag-group input-group"
+    >
+      <div
+        class="input-group-item"
+      >
+        <input
+          class="form-control-inset"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`ClayMultiSelectInput renders as disabled 1`] = `
+<body>
+  <div>
+    <div
+      class="form-control form-control-tag-group input-group"
+    >
+      <div
+        class="input-group-item"
+      >
+        <span
+          class="label label-dismissible label-secondary"
+        >
+          <span
+            class="label-item label-item-expand"
+          >
+            foo
+          </span>
+          <span
+            class="label-item label-item-after"
+          >
+            <button
+              aria-label="Remove foo"
+              class="close"
+              disabled=""
+              type="button"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-times"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/foo/bar#times"
+                />
+              </svg>
+            </button>
+          </span>
+        </span>
+        <input
+          name=""
+          type="hidden"
+          value="foo"
+        />
+        <span
+          class="label label-dismissible label-secondary"
+        >
+          <span
+            class="label-item label-item-expand"
+          >
+            bar
+          </span>
+          <span
+            class="label-item label-item-after"
+          >
+            <button
+              aria-label="Remove bar"
+              class="close"
+              disabled=""
+              type="button"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-times"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/foo/bar#times"
+                />
+              </svg>
+            </button>
+          </span>
+        </span>
+        <input
+          name=""
+          type="hidden"
+          value="bar"
+        />
+        <span
+          class="label label-dismissible label-secondary"
+        >
+          <span
+            class="label-item label-item-expand"
+          >
+            baz
+          </span>
+          <span
+            class="label-item label-item-after"
+          >
+            <button
+              aria-label="Remove baz"
+              class="close"
+              disabled=""
+              type="button"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-times"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/foo/bar#times"
+                />
+              </svg>
+            </button>
+          </span>
+        </span>
+        <input
+          name=""
+          type="hidden"
+          value="baz"
+        />
+        <input
+          class="form-control-inset"
+          disabled=""
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`ClayMultiSelectInput renders as not valid 1`] = `
+<body>
+  <div>
+    <div
+      class="form-control form-control-tag-group input-group"
+    >
+      <div
+        class="input-group-item"
+      >
+        <span
+          class="label label-dismissible label-secondary"
+        >
+          <span
+            class="label-item label-item-expand"
+          >
+            foo
+          </span>
+          <span
+            class="label-item label-item-after"
+          >
+            <button
+              aria-label="Remove foo"
+              class="close"
+              type="button"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-times"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/foo/bar#times"
+                />
+              </svg>
+            </button>
+          </span>
+        </span>
+        <input
+          name=""
+          type="hidden"
+          value="foo"
+        />
+        <span
+          class="label label-dismissible label-secondary"
+        >
+          <span
+            class="label-item label-item-expand"
+          >
+            bar
+          </span>
+          <span
+            class="label-item label-item-after"
+          >
+            <button
+              aria-label="Remove bar"
+              class="close"
+              type="button"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-times"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/foo/bar#times"
+                />
+              </svg>
+            </button>
+          </span>
+        </span>
+        <input
+          name=""
+          type="hidden"
+          value="bar"
+        />
+        <span
+          class="label label-dismissible label-secondary"
+        >
+          <span
+            class="label-item label-item-expand"
+          >
+            baz
+          </span>
+          <span
+            class="label-item label-item-after"
+          >
+            <button
+              aria-label="Remove baz"
+              class="close"
+              type="button"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-times"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/foo/bar#times"
+                />
+              </svg>
+            </button>
+          </span>
+        </span>
+        <input
+          name=""
+          type="hidden"
+          value="baz"
+        />
+        <input
+          class="form-control-inset"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="input-group-item input-group-item-shrink"
+      >
+        <button
+          class="component-action"
+          title="Clear All"
+          type="button"
+        >
+          <svg
+            class="lexicon-icon lexicon-icon-times-circle"
+            role="presentation"
+          >
+            <use
+              xlink:href="/foo/bar#times-circle"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`ClayMultiSelectInput renders with items 1`] = `
+<body>
+  <div>
+    <div
+      class="form-control form-control-tag-group input-group"
+    >
+      <div
+        class="input-group-item"
+      >
+        <span
+          class="label label-dismissible label-secondary"
+        >
+          <span
+            class="label-item label-item-expand"
+          >
+            foo
+          </span>
+          <span
+            class="label-item label-item-after"
+          >
+            <button
+              aria-label="Remove foo"
+              class="close"
+              type="button"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-times"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/foo/bar#times"
+                />
+              </svg>
+            </button>
+          </span>
+        </span>
+        <input
+          name=""
+          type="hidden"
+          value="foo"
+        />
+        <span
+          class="label label-dismissible label-secondary"
+        >
+          <span
+            class="label-item label-item-expand"
+          >
+            bar
+          </span>
+          <span
+            class="label-item label-item-after"
+          >
+            <button
+              aria-label="Remove bar"
+              class="close"
+              type="button"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-times"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/foo/bar#times"
+                />
+              </svg>
+            </button>
+          </span>
+        </span>
+        <input
+          name=""
+          type="hidden"
+          value="bar"
+        />
+        <span
+          class="label label-dismissible label-secondary"
+        >
+          <span
+            class="label-item label-item-expand"
+          >
+            baz
+          </span>
+          <span
+            class="label-item label-item-after"
+          >
+            <button
+              aria-label="Remove baz"
+              class="close"
+              type="button"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-times"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/foo/bar#times"
+                />
+              </svg>
+            </button>
+          </span>
+        </span>
+        <input
+          name=""
+          type="hidden"
+          value="baz"
+        />
+        <input
+          class="form-control-inset"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="input-group-item input-group-item-shrink"
+      >
+        <button
+          class="component-action"
+          title="Clear All"
+          type="button"
+        >
+          <svg
+            class="lexicon-icon lexicon-icon-times-circle"
+            role="presentation"
+          >
+            <use
+              xlink:href="/foo/bar#times-circle"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+`;

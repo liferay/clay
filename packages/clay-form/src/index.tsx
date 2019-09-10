@@ -10,11 +10,11 @@ import ClayInput from './Input';
 import ClayRadio from './Radio';
 import ClayRadioGroup from './RadioGroup';
 import {ClayInputWithAutocomplete} from './InputWithAutocomplete';
-import {ClayInputWithMultiSelect} from './InputWithMultiSelect';
+import {ClayMultiSelectInput} from './MultiSelectInput';
 
 export {
 	ClayInputWithAutocomplete,
-	ClayInputWithMultiSelect,
+	ClayMultiSelectInput,
 	ClayCheckbox,
 	ClayInput,
 	ClayRadio,
