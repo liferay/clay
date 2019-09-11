@@ -45,4 +45,6 @@ const ClayLabelWithState = () => {
 	) : null;
 };
 
-storiesOf('Components|ClayLabel', module).add('default', () => <ClayLabelWithState />);
+storiesOf('Components|ClayLabel', module).add('default', () => (
+	<ClayLabelWithState />
+));
