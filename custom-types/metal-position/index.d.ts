@@ -6,24 +6,31 @@
 // See https://github.com/metal/metal-plugins/blob/master/packages/metal-position/src/Align.js#L207
 
 declare module 'metal-position' {
-	interface IAlignType {
+	interface IAlignments {
+		Bottom: 4;
+		BottomCenter: 4;
+		BottomLeft: 5;
+		BottomRight: 3;
+		Left: 6;
+		LeftCenter: 6;
+		Right: 2;
+		RightCenter: 2;
+		Top: 0;
+		TopCenter: 0;
+		TopLeft: 7;
+		TopRight: 1;
+	}
+
+	interface IAlignType extends IAlignments {
 		align: (
 			element: HTMLElement,
 			alignElement: HTMLElement,
 			position?: number,
 			autoBestAlign?: boolean
-		) => string;
-		TopCenter: 0;
-		TopRight: 1;
-		RightCenter: 2;
-		BottomRight: 3;
-		BottomCenter: 4;
-		BottomLeft: 5;
-		LeftCenter: 6;
-		TopLeft: 7;
+		) => number;
 	}
 
 	const Align: IAlignType;
 
-	export {Align};
+	export { Align };
 }

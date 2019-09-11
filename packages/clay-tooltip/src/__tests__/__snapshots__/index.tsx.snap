@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayTooltip renders 1`] = `
+<div>
+  <div
+    class="tooltip clay-tooltip-bottom show"
+    role="tooltip"
+  >
+    <div
+      class="arrow"
+    />
+    <div
+      class="tooltip-inner"
+    >
+      Tooltip
+    </div>
+  </div>
+</div>
+`;

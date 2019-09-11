@@ -1,0 +1,43 @@
+{
+	"name": "@clayui/tooltip",
+	"version": "3.0.0",
+	"description": "ClayTooltip component",
+	"license": "BSD-3-Clause",
+	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-tooltip",
+	"engines": {
+		"node": ">=0.12.0",
+		"npm": ">=3.0.0"
+	},
+	"main": "lib/index.js",
+	"types": "lib/index.d.ts",
+	"ts:main": "src/index.tsx",
+	"files": [
+		"lib",
+		"src"
+	],
+	"scripts": {
+		"build": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib --extensions .ts,.tsx",
+		"build:types": "cross-env NODE_ENV=production tsc --project ./tsconfig.declarations.json",
+		"prepublishOnly": "yarn build && yarn build:types",
+		"test": "jest --config ../../jest.config.js"
+	},
+	"keywords": [
+		"clay",
+		"react"
+	],
+	"dependencies": {
+		"classnames": "^2.2.6",
+		"metal-position": "^2.1.2",
+		"warning": "^4.0.3"
+	},
+	"devDependencies": {
+		"@clayui/css": "^3.0.0-milestone.1"
+	},
+	"peerDependencies": {
+		"react": "^16.8.1",
+		"react-dom": "^16.8.1"
+	},
+	"browserslist": [
+		"extends browserslist-config-clay"
+	]
+}
