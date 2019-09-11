@@ -3,6 +3,7 @@ title: "Timelines"
 description: "Timelines represent an horizontal visualization of events along the time."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Default](#default)
@@ -15,6 +16,7 @@ description: "Timelines represent an horizontal visualization of events along th
     - [Timeline Right XS Only](#timeline-right-xs-only)
 - [Spacing](#spacing)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

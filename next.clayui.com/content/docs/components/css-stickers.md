@@ -3,6 +3,7 @@ title: "Stickers"
 description: "Stickers are a visual way to quickly identify content."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Colors](#colors)
@@ -13,6 +14,7 @@ description: "Stickers are a visual way to quickly identify content."
     - [Outside](#outside)
     - [User Icon](#user-icon)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

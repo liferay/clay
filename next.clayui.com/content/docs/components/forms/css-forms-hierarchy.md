@@ -3,12 +3,14 @@ title: "Forms Hierarchy"
 description: "The definition of the content hierarchy inside a form structure and the components used to identify the different content blocks. This page contemplates the visual definition of the hierarchy and the measurements and the definition of the components that establish that hierarchy."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Example](#example)
 - [One column](#one-column)
 - [Two columns](#two-columns)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

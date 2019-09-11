@@ -3,6 +3,7 @@ title: "Icons"
 description: "Icons are a visual representation of an idea and/or action."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Usage](#usage)
@@ -11,6 +12,7 @@ description: "Icons are a visual representation of an idea and/or action."
 - [Clay-SVG-url()](#clay-svg-url())
 - [Why do we use SVG?](#why-do-we-use-svg)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

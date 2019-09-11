@@ -6,7 +6,6 @@
 
 import Navigation from './Navigation';
 import React, {useLayoutEffect} from 'react';
-import Search from '../LayoutNav/Search';
 import {Link} from 'gatsby';
 
 const SidebarRef = React.createRef();
@@ -48,7 +47,7 @@ export default props => (
 			<SideNavScroll>
 				<div className="sidebar-header d-flex justify-content-between align-items-center p-0">
 					<Link
-						className="sidebar-logo text-reset text-decoration-none d-inline-block p-2 mb-1"
+						className="sidebar-logo text-reset text-decoration-none d-inline-block p-2"
 						to="/"
 					>
 						<img
@@ -62,32 +61,6 @@ export default props => (
 					</Link>
 
 					<div className="sidebar-icon-links d-flex align-items-center">
-						<a
-							className="p-1"
-							href="http://storybook.clayui.com"
-							rel="noopener noreferrer"
-							target="_blank"
-							title="Storybook"
-						>
-							<img
-								alt=""
-								src="/images/docs/clay_icon_storybook.svg"
-							/>
-						</a>
-
-						<a
-							className="ml-2 p-1"
-							href="https://github.com/liferay/clay"
-							rel="noopener noreferrer"
-							target="_blank"
-							title="GitHub"
-						>
-							<img
-								alt=""
-								src="/images/docs/clay_icon_github.svg"
-							/>
-						</a>
-
 						<button
 							aria-controls="navbarSupportedContent"
 							aria-expanded="false"
@@ -114,11 +87,7 @@ export default props => (
 					</div>
 				</div>
 				<div className="sidebar-body p-0">
-					<div className="mt-3 mb-4">
-						<Search placeholder="Search..." />
-					</div>
-
-					<div className="mt-3 border-top pt-3">
+					<div className="mt-3">
 						<Navigation
 							location={props.location}
 							sectionList={props.data}

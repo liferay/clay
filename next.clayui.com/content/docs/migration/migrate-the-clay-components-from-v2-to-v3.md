@@ -2,15 +2,11 @@
 title: 'Migrate the Clay components from v2 to v3'
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 -   [Why you should migrate](#why-you-should-migrate)
 -   [General changes](#general-changes)
-
-</div>
-
-<div class="nav-toc">
-
 -   [ClayAlert](#clayalert)
 -   [ClayButton](#claybutton)
 -   [ClayLink](#claylink)
@@ -30,6 +26,7 @@ title: 'Migrate the Clay components from v2 to v3'
 -   [ClaySelect](#clayselect)
 -   [ClayCharts](#claycharts)
 
+</div>
 </div>
 
 ference for upgrading your components from Clay v2 to Clay v3, this symbolizes that you are migrating your application from [Metal.js](https://metaljs.com) to [React.js](https://reactjs.org). Although there is a lot of coverage here, you probably do not have to do everything. We will do our best to keep things easy to follow, and as sequential as possible, so you can quickly get rocking in v3!

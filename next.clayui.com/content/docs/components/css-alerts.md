@@ -3,6 +3,7 @@ title: "Alerts"
 description: "Alerts are used to capture the attention of the user in an intrusive way. They can be used just to say that something went right, or perhaps to say that something needs to be reviewed."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Colors](#colors)
@@ -19,6 +20,7 @@ description: "Alerts are used to capture the attention of the user in an intrusi
 	- [Alert Notifications Absolute](#alert-notifications-absolute)
 	- [Fixed Notifications](#fixed-notifications)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">
@@ -96,7 +98,7 @@ This type of alert is specific for toast messages. These type of messages appear
 <div class="sheet-example">
 	<div id="claySiteAlertsNotificationsSpacer">
 		<div class="row">
-			<div class="col-6">
+			<div class="col-md-6">
 				<div class="alert-container container">
 					<div class="alert-notifications alert-notifications-absolute">
 						<div class="alert alert-dismissible alert-danger" role="alert">
@@ -115,7 +117,7 @@ This type of alert is specific for toast messages. These type of messages appear
 					</div>
 				</div>
 			</div>
-			<div class="col-6">
+			<div class="col-md-6">
 				<div class="alert-container container">
 					<div class="alert-notifications alert-notifications-absolute">
 						<div class="alert alert-dismissible alert-info" role="alert">
@@ -136,7 +138,7 @@ This type of alert is specific for toast messages. These type of messages appear
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-6">
+			<div class="col-md-6">
 				<div class="alert-container container">
 					<div class="alert-notifications alert-notifications-absolute">
 						<div class="alert alert-dismissible alert-success" role="alert">
@@ -155,7 +157,7 @@ This type of alert is specific for toast messages. These type of messages appear
 					</div>
 				</div>
 			</div>
-			<div class="col-6">
+			<div class="col-md-6">
 				<div class="alert-container container">
 					<div class="alert-notifications alert-notifications-absolute">
 						<div class="alert alert-dismissible alert-warning" role="alert">

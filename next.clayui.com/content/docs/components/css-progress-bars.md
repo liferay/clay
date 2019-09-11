@@ -3,6 +3,7 @@ title: "Progress Bars"
 description: "Progress bar indicates the percentage completed of a task."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Colors](#colors)
@@ -16,6 +17,7 @@ description: "Progress bar indicates the percentage completed of a task."
 - [Striped](#striped)
 - [Animated Stripes](#animated-stripes)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

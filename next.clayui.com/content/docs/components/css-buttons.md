@@ -3,6 +3,7 @@ title: "Buttons"
 description: "Buttons communicate an action to happen on user interaction."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Examples](#examples)
@@ -12,6 +13,7 @@ description: "Buttons communicate an action to happen on user interaction."
 - [Icons](#icons)
   - [With text button](#with-text-button)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

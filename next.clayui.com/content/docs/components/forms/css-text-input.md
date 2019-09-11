@@ -3,6 +3,7 @@ title: "Text Input"
 description: "This section demonstrates the different text input types, including usage and validation states."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Example](#example)
@@ -16,6 +17,7 @@ description: "This section demonstrates the different text input types, includin
 	- [Warning](#warning)
 	- [Error](#error)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

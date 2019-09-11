@@ -2,6 +2,7 @@
 title: "Inline Item"
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Link without Whitespace](#link-without-whitespace)
@@ -12,6 +13,7 @@ title: "Inline Item"
 	- [Anchor](#anchor)
 	- [Button](#button)
 
+</div>
 </div>
 
 Use the `inline-item inline-item-before`, `inline-item inline-item-middle`, and `inline-item inline-item-after` classes to provide consistent spacing between text and icons in elements such as links or buttons. This can also be used in other components that have inline content (e.g., `badge` and `label`).

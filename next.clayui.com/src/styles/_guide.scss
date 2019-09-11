@@ -1,4 +1,21 @@
 .docs {
+	.clay-docs-content {
+		color: #6B6C7E;
+	}
+
+	.nav-clay {
+		.nav-item .nav-link.active:after {
+			background-color: $brand-dark;
+			bottom: -1px;
+		}
+	}
+
+	.clay-site-separator {
+		border-color: #E7E7ED;
+		margin-bottom: 4px;
+		width: 100%;
+	}
+
 	header {
 		padding: $base-size 0;
 
@@ -11,17 +28,23 @@
 			padding-bottom: 25px;
 		}
 
-		.docs-title-version {
-			color: $brand-light-secondary-text;
-			font-size: 18px;
-			font-weight: 600;
-			margin: 13px 0;
+		@media (min-width: $screen-lg) {
+			.container-fluid {
+				margin-right: 3%;
+				max-width: 97%;
+			}
+		}
+
+		.docs-title {
+			font-weight: 500;
+			margin: 0;
 		}
 
 		.docs-package-npm {
-			font-size: 18px;
-			font-weight: 600;
-			margin: 17px 0;
+			color: #6B6C7E;
+			font-size: 22px;
+			font-weight: 400;
+			margin: 0 0 20px;
 		}
 
 		.docs-description {
@@ -32,12 +55,14 @@
 	.clay-h3 {
 		font-weight: 700 !important;
 		margin-bottom: $base-size * 1.2 !important;
+		word-break: break-all;
 	}
 
 	.clay-h4 {
 		font-weight: 600 !important;
 		margin-bottom: $base-size * 1.2 !important;
 		padding-top: $base-size * 1.1;
+		word-break: break-all;
 	}
 
 	.clay-p {
@@ -55,6 +80,7 @@
 	.clay-site-label {
 		display: flex;
 		text-decoration: none;
+		margin-bottom: 20px;
 
 		.label {
 			margin-top: 0;
@@ -110,12 +136,23 @@
 		}
 	}
 
+	.nav-toc-absolute {
+		@media (min-width: $screen-lg) {
+			height: 100%;
+			position: absolute;
+			right: -50%;
+			top: 0;
+		}
+	}
+
 	.nav-toc {
 		border-left: 5px solid $brand-light;
 		margin-bottom: 30px;
 		padding: 15px 15px 15px 0;
 
 		a {
+			@include focus-a11y;
+
 			color: #30313F;
 			word-break: break-all;
 		}
@@ -135,9 +172,8 @@
 			margin-bottom: 0;
 			max-height: 100vh;
 			overflow-y: auto;
-			position: fixed;
-			right: 0;
-			top: 0;
+			position: sticky;
+			top: 84px;
 			width: 280px;
 			z-index: 1;
 		}

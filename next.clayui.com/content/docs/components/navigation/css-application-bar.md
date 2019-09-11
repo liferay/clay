@@ -3,12 +3,14 @@ title: "Application Bar"
 description: "This component is used as the main navigation of Liferay DXP."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Light](#light)
 - [Secondary](#secondary)
 - [Using Buttons](#using-buttons)
 
+</div>
 </div>
 
 <div class="alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/satellite-components/navigation/overview/">Application Bar Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>

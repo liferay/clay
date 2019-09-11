@@ -3,6 +3,7 @@ title: "Multi Step Form"
 description: "A multi step form, also known as a wizard, is a determinate progress bar used in long processes that divides the main task into subtasks. The wizard lets the user quickly identify their current progress in completing the task and navigate forwards and backwards between steps if needed."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Example](#example)
@@ -11,6 +12,7 @@ description: "A multi step form, also known as a wizard, is a determinate progre
 - [Buttons](#buttons)
 - [Simplified](#simplified)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

@@ -3,6 +3,7 @@ title: "Pagination"
 description: "Preset pagination styles helps divide up large blocks of content on your site or app."
 ---
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Sizes](#sizes)
@@ -11,6 +12,7 @@ description: "Preset pagination styles helps divide up large blocks of content o
     - [Large](#large)
 - [Using Buttons](#using-buttons)
 
+</div>
 </div>
 
 <div class="clay-site-alert alert alert-info">

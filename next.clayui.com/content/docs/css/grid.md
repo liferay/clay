@@ -7,6 +7,7 @@ order: 4
 
 <div class="clay-site-alert alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/foundations/grid/">Grid Pattern</a> for a more in-depth look at the motivations and proper usage of this.</div>
 
+<div class="nav-toc-absolute">
 <div class="nav-toc">
 
 - [Container](#container)
@@ -14,6 +15,7 @@ order: 4
 - [Container Form Lg](#container-form-lg)
 - [Container View](#container-view)
 
+</div>
 </div>
 
 ## Container
