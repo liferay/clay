@@ -61,6 +61,11 @@ interface IProps extends IPropsBase {
 	>;
 
 	/**
+	 * Placeholder value for search input.
+	 */
+	searchPlaceholder?: string;
+
+	/**
 	 * Set the link to the sorting order action, this will render a ClayLink
 	 * and show the action only when the `sortingOrder` prop is also set.
 	 */
@@ -89,6 +94,7 @@ const DefaultState: React.FunctionComponent<IProps> = ({
 	onSortingButtonClick,
 	onValueSubmit,
 	searchFormProps,
+	searchPlaceholder,
 	searchValue = '',
 	sortingOrder,
 	sortingURL,
@@ -201,9 +207,10 @@ const DefaultState: React.FunctionComponent<IProps> = ({
 						<SearchInput
 							disabled={disabled}
 							onCloseButtonClick={() => setSearchMobile(false)}
+							onlySearch={onlySearch}
 							onValueChange={onSearchValueChange}
 							onValueSubmit={onValueSubmit}
-							onlySearch={onlySearch}
+							placeholder={searchPlaceholder}
 							spritemap={spritemap}
 							value={searchValue}
 						/>
