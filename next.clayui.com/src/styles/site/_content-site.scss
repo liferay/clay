@@ -38,15 +38,20 @@
 	// Alerts
 
 	#claySiteAlertsNotificationsSpacer {
-		height: 230px;
-		margin-top: -4.75rem;
+		position: relative;
 
 		.alert-container.container {
 			height: 56px;
+			margin-bottom: 20px;
 			padding: 36px 0;
 
-			.alert-notifications .alert {
-				width: 18rem;
+			.alert-notifications {
+				left: 0;
+				top: 0;
+
+				.alert {
+					width: 100%;
+				}
 			}
 		}
 	}

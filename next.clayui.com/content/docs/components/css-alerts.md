@@ -98,7 +98,7 @@ This type of alert is specific for toast messages. These type of messages appear
 <div class="sheet-example">
 	<div id="claySiteAlertsNotificationsSpacer">
 		<div class="row">
-			<div class="col-6">
+			<div class="col-md-6">
 				<div class="alert-container container">
 					<div class="alert-notifications alert-notifications-absolute">
 						<div class="alert alert-dismissible alert-danger" role="alert">
@@ -117,7 +117,7 @@ This type of alert is specific for toast messages. These type of messages appear
 					</div>
 				</div>
 			</div>
-			<div class="col-6">
+			<div class="col-md-6">
 				<div class="alert-container container">
 					<div class="alert-notifications alert-notifications-absolute">
 						<div class="alert alert-dismissible alert-info" role="alert">
@@ -138,7 +138,7 @@ This type of alert is specific for toast messages. These type of messages appear
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-6">
+			<div class="col-md-6">
 				<div class="alert-container container">
 					<div class="alert-notifications alert-notifications-absolute">
 						<div class="alert alert-dismissible alert-success" role="alert">
@@ -157,7 +157,7 @@ This type of alert is specific for toast messages. These type of messages appear
 					</div>
 				</div>
 			</div>
-			<div class="col-6">
+			<div class="col-md-6">
 				<div class="alert-container container">
 					<div class="alert-notifications alert-notifications-absolute">
 						<div class="alert alert-dismissible alert-warning" role="alert">
