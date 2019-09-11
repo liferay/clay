@@ -12,7 +12,7 @@ import {storiesOf} from '@storybook/react';
 
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
-storiesOf('ClayLink', module)
+storiesOf('Components|ClayLink', module)
 	.add('default', () => (
 		<div>
 			<ClayLink href="#link-styles">{'Default'}</ClayLink>

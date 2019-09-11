@@ -105,7 +105,7 @@ const ClayDataProviderWithVariablesAndStorage = () => {
 	);
 };
 
-storiesOf('ClayDataProvider', module)
+storiesOf('Components|ClayDataProvider', module)
 	.add('with polling', () => (
 		<ClayDataProvider
 			link="https://api-public.sandbox.pro.coinbase.com/products/BTC-USD/trades"

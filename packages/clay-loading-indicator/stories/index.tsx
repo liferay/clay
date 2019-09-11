@@ -10,7 +10,7 @@ import React from 'react';
 import {boolean} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
-storiesOf('ClayLoadingIndicator', module).add('default', () => (
+storiesOf('Components|ClayLoadingIndicator', module).add('default', () => (
 	<ClayLoadingIndicator
 		light={boolean('Light', false)}
 		small={boolean('Small', false)}

@@ -12,7 +12,7 @@ import {text} from '@storybook/addon-knobs';
 
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
-storiesOf('ClayIcon', module)
+storiesOf('Components|ClayIcon', module)
 	.add('default', () => (
 		<ClayIcon spritemap={spritemap} symbol={text('Symbol', 'add-cell')} />
 	))

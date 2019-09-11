@@ -9,7 +9,7 @@ import React from 'react';
 import {select, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
-storiesOf('ClayBadge', module).add('default', () => (
+storiesOf('Components|ClayBadge', module).add('default', () => (
 	<ClayBadge
 		displayType={
 			select(

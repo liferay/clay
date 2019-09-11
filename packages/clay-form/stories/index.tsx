@@ -89,7 +89,7 @@ const AutoCompleteWithState = ({items, ...otherProps}: any) => {
 	);
 };
 
-storiesOf('ClayForm', module)
+storiesOf('Components|ClayForm', module)
 	.add('default', () => <ClayForm />)
 	.add('InputWithMultiSelect', () => (
 		<ClayMultiSelectWithState
@@ -179,7 +179,7 @@ const ClayCheckboxWithState = () => {
 	);
 };
 
-storiesOf('ClayCheckbox', module)
+storiesOf('Components|ClayCheckbox', module)
 	.add('default', () => <ClayCheckboxWithState />)
 	.add('hidden label w/ aria-label', () => (
 		<ClayCheckbox
@@ -216,6 +216,6 @@ const RadioGroupWithState = ({inline}: {inline?: boolean}) => {
 	);
 };
 
-storiesOf('ClayRadioGroup', module)
+storiesOf('Components|ClayRadioGroup', module)
 	.add('default', () => <RadioGroupWithState />)
 	.add('inline', () => <RadioGroupWithState inline />);

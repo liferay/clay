@@ -188,7 +188,7 @@ const AutocompleteWithAsyncData = () => {
 	);
 };
 
-storiesOf('ClayAutocomplete', module)
+storiesOf('Components|ClayAutocomplete', module)
 	.add('basic', () => (
 		<div className="row">
 			<div className="col-md-5">

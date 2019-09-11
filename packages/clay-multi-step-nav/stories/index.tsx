@@ -12,7 +12,7 @@ import {storiesOf} from '@storybook/react';
 
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
-storiesOf('ClayMultiStepNav', module)
+storiesOf('Components|ClayMultiStepNav', module)
 	.add('low-level', () => {
 		const [value, setValue] = React.useState<number>(1);
 

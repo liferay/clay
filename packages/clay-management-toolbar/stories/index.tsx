@@ -12,7 +12,7 @@ import {storiesOf} from '@storybook/react';
 
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
-storiesOf('ClayManagementToolbar', module).add('default', () => {
+storiesOf('Components|ClayManagementToolbar', module).add('default', () => {
 	const [checked, setChecked] = useState<boolean>(false);
 	const [value, setValue] = useState<string>('Red');
 	const filterLabels = [

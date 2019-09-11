@@ -71,7 +71,7 @@ function ClayDropdownWithTrigger() {
 
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
-storiesOf('ClayTable', module)
+storiesOf('Components|ClayTable', module)
 	.add('default', () => (
 		<ClayTable>
 			<ClayTable.Head>

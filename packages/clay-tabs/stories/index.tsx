@@ -36,7 +36,7 @@ const DropDownWithState: React.FunctionComponent<any> = ({
 
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
-storiesOf('ClayTabs', module).add('default', () => {
+storiesOf('Components|ClayTabs', module).add('default', () => {
 	const ClayTabsWithState = () => {
 		const [activeTabKeyValue, setActiveTabKeyValue] = React.useState<
 			number

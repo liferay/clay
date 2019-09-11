@@ -38,7 +38,7 @@ const ClayCheckboxWithState = (props: any) => {
 	);
 };
 
-storiesOf('ClayCard', module)
+storiesOf('Components|ClayCard', module)
 	.add('ClayCardWithInfo', () => {
 		const [value, setValue] = React.useState<boolean>(false);
 

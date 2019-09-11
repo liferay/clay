@@ -52,7 +52,7 @@ const BreadcrumbWithState = () => {
 	);
 };
 
-storiesOf('ClayNavigation', module)
+storiesOf('Components|ClayNavigation', module)
 	.add('w/ breadcrumb', () => (
 		<ClayBreadcrumbNav
 			ellipsisBuffer={number('Ellipsis Buffer', 3)}

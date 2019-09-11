@@ -21,7 +21,7 @@ const options = [
 	},
 ];
 
-storiesOf('ClaySelect', module)
+storiesOf('Components|ClaySelect', module)
 	.add('with low-level APIs (composition)', () => (
 		<div className="sheet">
 			<div className="form-group">
