@@ -59,7 +59,7 @@ const status = {
 	warning: 'warning',
 };
 
-storiesOf('ClayModal', module)
+storiesOf('Components|ClayModal', module)
 	.add('default', () => {
 		const [visibleModal, setVisibleModal] = useState<boolean>(false);
 		const {observer, onClose} = useModal({

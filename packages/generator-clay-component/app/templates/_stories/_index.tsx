@@ -10,7 +10,7 @@ import {storiesOf} from '@storybook/react';
 import React from 'react';
 import <%= componentName %> from '../src';
 
-storiesOf('<%= componentName %>', module)
+storiesOf('Components|<%= componentName %>', module)
 	.add('default', () => (
 		<<%= componentName %> />
 	));

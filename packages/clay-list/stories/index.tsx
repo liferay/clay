@@ -88,7 +88,7 @@ const items = [
 	},
 ];
 
-storiesOf('ClayList', module)
+storiesOf('Components|ClayList', module)
 	.add('simple', () => (
 		<ClayList>
 			<ClayList.Header>{'This is a header'}</ClayList.Header>

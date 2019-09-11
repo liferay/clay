@@ -40,7 +40,7 @@ const ClayColorPickerWithCustomColors = (props: any) => {
 	);
 };
 
-storiesOf('ClayColorPicker', module)
+storiesOf('Components|ClayColorPicker', module)
 	.add('default', () => (
 		<ClayColorPickerWithState
 			label={text('Label', 'Default Colors')}

@@ -23,7 +23,7 @@ const TimePickerWithState = (props: any) => {
 	);
 };
 
-storiesOf('ClayTimePicker', module).add('default', () => (
+storiesOf('Components|ClayTimePicker', module).add('default', () => (
 	<div className="sheet">
 		<div className="form-group">
 			<label>{'Time Picker'}</label>

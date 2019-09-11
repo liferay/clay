@@ -45,7 +45,7 @@ const DropDownWithState: React.FunctionComponent<any> = ({
 	);
 };
 
-storiesOf('ClayDropDown', module)
+storiesOf('Components|ClayDropDown', module)
 	.add('default', () => (
 		<DropDownWithState>
 			<ClayDropDown.ItemList>
