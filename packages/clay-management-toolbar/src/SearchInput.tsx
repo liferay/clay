@@ -22,6 +22,7 @@ interface IProps {
 			| React.KeyboardEvent<HTMLInputElement>
 	) => void;
 	onlySearch?: boolean;
+	placeholder?: string;
 	spritemap?: string;
 	value: string;
 }
@@ -33,6 +34,7 @@ const SearchInput: React.FunctionComponent<IProps> = ({
 	onValueChange,
 	onValueSubmit,
 	onlySearch,
+	placeholder = 'Search',
 	spritemap,
 	value,
 }) => (
@@ -46,6 +48,7 @@ const SearchInput: React.FunctionComponent<IProps> = ({
 				onKeyDown={event =>
 					event.key === 'Enter' && onValueSubmit(value, event)
 				}
+				placeholder={placeholder}
 				type="text"
 				value={value}
 			/>

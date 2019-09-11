@@ -57,11 +57,6 @@ exports[`ClayMultiSelectInput renders as disabled 1`] = `
             </button>
           </span>
         </span>
-        <input
-          name=""
-          type="hidden"
-          value="foo"
-        />
         <span
           class="label label-dismissible label-secondary"
         >
@@ -90,11 +85,6 @@ exports[`ClayMultiSelectInput renders as disabled 1`] = `
             </button>
           </span>
         </span>
-        <input
-          name=""
-          type="hidden"
-          value="bar"
-        />
         <span
           class="label label-dismissible label-secondary"
         >
@@ -123,11 +113,6 @@ exports[`ClayMultiSelectInput renders as disabled 1`] = `
             </button>
           </span>
         </span>
-        <input
-          name=""
-          type="hidden"
-          value="baz"
-        />
         <input
           class="form-control-inset"
           disabled=""
@@ -176,11 +161,6 @@ exports[`ClayMultiSelectInput renders as not valid 1`] = `
             </button>
           </span>
         </span>
-        <input
-          name=""
-          type="hidden"
-          value="foo"
-        />
         <span
           class="label label-dismissible label-secondary"
         >
@@ -208,11 +188,6 @@ exports[`ClayMultiSelectInput renders as not valid 1`] = `
             </button>
           </span>
         </span>
-        <input
-          name=""
-          type="hidden"
-          value="bar"
-        />
         <span
           class="label label-dismissible label-secondary"
         >
@@ -240,11 +215,6 @@ exports[`ClayMultiSelectInput renders as not valid 1`] = `
             </button>
           </span>
         </span>
-        <input
-          name=""
-          type="hidden"
-          value="baz"
-        />
         <input
           class="form-control-inset"
           type="text"
@@ -310,11 +280,6 @@ exports[`ClayMultiSelectInput renders with items 1`] = `
             </button>
           </span>
         </span>
-        <input
-          name=""
-          type="hidden"
-          value="foo"
-        />
         <span
           class="label label-dismissible label-secondary"
         >
@@ -342,11 +307,6 @@ exports[`ClayMultiSelectInput renders with items 1`] = `
             </button>
           </span>
         </span>
-        <input
-          name=""
-          type="hidden"
-          value="bar"
-        />
         <span
           class="label label-dismissible label-secondary"
         >
@@ -374,11 +334,6 @@ exports[`ClayMultiSelectInput renders with items 1`] = `
             </button>
           </span>
         </span>
-        <input
-          name=""
-          type="hidden"
-          value="baz"
-        />
         <input
           class="form-control-inset"
           type="text"

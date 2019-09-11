@@ -2047,6 +2047,7 @@ exports[`BasicRendering renders a ManagementToolbar with disabled all 1`] = `
                   aria-label="Search"
                   class="form-control input-group-inset input-group-inset-after"
                   disabled=""
+                  placeholder="Search"
                   type="text"
                   value=""
                 />
@@ -2283,6 +2284,7 @@ exports[`BasicRendering renders a ManagementToolbar with only search 1`] = `
                 <input
                   aria-label="Search"
                   class="form-control input-group-inset input-group-inset-after"
+                  placeholder="Search"
                   type="text"
                   value=""
                 />
