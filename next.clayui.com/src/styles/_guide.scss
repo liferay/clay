@@ -55,12 +55,14 @@
 	.clay-h3 {
 		font-weight: 700 !important;
 		margin-bottom: $base-size * 1.2 !important;
+		word-break: break-all;
 	}
 
 	.clay-h4 {
 		font-weight: 600 !important;
 		margin-bottom: $base-size * 1.2 !important;
 		padding-top: $base-size * 1.1;
+		word-break: break-all;
 	}
 
 	.clay-p {
