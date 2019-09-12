@@ -8,15 +8,11 @@ import ClayAutocomplete from '../src';
 import ClayDropDown from '@clayui/drop-down';
 import React, {useEffect, useRef, useState} from 'react';
 import {FetchPolicy, NetworkStatus} from '@clayui/data-provider/src/types';
+import {FocusScope, useDebounce} from '@clayui/shared';
 import {storiesOf} from '@storybook/react';
-import {useDebounce, useFocusManagement} from '@clayui/shared';
 import {useResource} from '@clayui/data-provider';
 
 import '@clayui/css/lib/css/atlas.css';
-
-const TAB_KEY_CODE = 9;
-const ARROW_UP_KEY_CODE = 38;
-const ARROW_DOWN_KEY_CODE = 40;
 
 const LoadingWithDebounce = ({
 	loading,
@@ -72,61 +68,41 @@ const AutocompleteWithKeyboardFunctionality = () => {
 	const inputRef = useRef<HTMLInputElement | null>(null);
 	const [value, setValue] = useState('');
 	const [active, setActive] = useState(!!value);
-	const focusManager = useFocusManagement();
 
 	const filteredItems = ['one', 'two', 'three', 'four', 'five'].filter(item =>
 		item.match(value)
 	);
-
-	const onKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
-		const {keyCode, shiftKey} = event;
-
-		if (
-			keyCode === ARROW_DOWN_KEY_CODE ||
-			(keyCode === TAB_KEY_CODE && !shiftKey)
-		) {
-			event.preventDefault();
-			focusManager.focusNext();
-		} else if (
-			keyCode === ARROW_UP_KEY_CODE ||
-			(keyCode === TAB_KEY_CODE && shiftKey)
-		) {
-			event.preventDefault();
-			focusManager.focusPrevious();
-		}
-	};
 
 	useEffect(() => {
 		setActive(!!value);
 	}, [value]);
 
 	return (
-		<ClayAutocomplete onKeyDown={onKeyDown}>
-			<ClayAutocomplete.Input
-				onChange={(event: any) => setValue(event.target.value)}
-				ref={ref => {
-					focusManager.createScope(ref, 'input');
-					inputRef.current = ref;
-				}}
-				value={value}
-			/>
+		<FocusScope>
+			<ClayAutocomplete>
+				<ClayAutocomplete.Input
+					onChange={(event: any) => setValue(event.target.value)}
+					ref={inputRef}
+					value={value}
+				/>
 
-			<ClayAutocomplete.DropDown active={active} onSetActive={setActive}>
-				<ClayDropDown.ItemList>
-					{filteredItems.map((item, i) => (
-						<ClayAutocomplete.Item
-							innerRef={ref =>
-								focusManager.createScope(ref, `item${i}`, true)
-							}
-							key={item}
-							match={value}
-							onClick={() => setValue(item)}
-							value={item}
-						/>
-					))}
-				</ClayDropDown.ItemList>
-			</ClayAutocomplete.DropDown>
-		</ClayAutocomplete>
+				<ClayAutocomplete.DropDown
+					active={active}
+					onSetActive={setActive}
+				>
+					<ClayDropDown.ItemList>
+						{filteredItems.map(item => (
+							<ClayAutocomplete.Item
+								key={item}
+								match={value}
+								onClick={() => setValue(item)}
+								value={item}
+							/>
+						))}
+					</ClayDropDown.ItemList>
+				</ClayAutocomplete.DropDown>
+			</ClayAutocomplete>
+		</FocusScope>
 	);
 };
 
