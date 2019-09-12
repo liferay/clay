@@ -37,12 +37,7 @@ const ClayAutocompleteItem: React.FunctionComponent<IProps> = ({
 	const fuzzyMatch = fuzzy.match(match, value, optionsFuzzy);
 
 	return (
-		<ClayDropDown.Item
-			{...otherProps}
-			innerRef={innerRef}
-			ref={forwardRef}
-			tabIndex={-1}
-		>
+		<ClayDropDown.Item {...otherProps} innerRef={innerRef} ref={forwardRef}>
 			{match && fuzzyMatch ? (
 				<div
 					dangerouslySetInnerHTML={{
