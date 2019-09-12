@@ -65,7 +65,21 @@ $input-placeholder-disabled-color: $input-disabled-color !default;
 
 $input-label-disabled-color: $gray-500 !default;
 
-$input-readonly-bg: $input-border-color !default;
+// @deprecated after v2.18.0 use the Sass map `$input-readonly` instead
+
+$input-readonly-bg: $white !default;
+
+$input-readonly: () !default;
+$input-readonly: map-deep-merge((
+	bg: $input-readonly-bg,
+	focus-box-shadow: none,
+), $input-readonly);
+
+$input-plaintext-readonly: () !default;
+$input-plaintext-readonly: map-deep-merge((
+	focus-border-color: $input-focus-border-color,
+	focus-box-shadow: none,
+), $input-plaintext-readonly);
 
 $input-danger-bg: $danger-l2 !default;
 $input-danger-border-color: $danger-l1 !default;
