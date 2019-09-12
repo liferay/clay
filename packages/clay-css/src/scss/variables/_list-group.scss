@@ -31,6 +31,7 @@ $list-group-header-title: map-deep-merge((
 $list-group-title-link: () !default;
 $list-group-title-link: map-deep-merge((
 	color: $gray-900,
+	max-width: 100%,
 	hover-color: darken($gray-900, 15%)
 ), $list-group-title-link);
 
@@ -38,6 +39,7 @@ $list-group-title: () !default;
 $list-group-title: map-deep-merge((
 	font-size: 1.125rem, // 18px
 	font-weight: $font-weight-semi-bold,
+	line-height: $line-height-base,
 	margin-bottom: 0,
 	margin-top: $list-group-item-flex-list-group-title-offset-top,
 	clay-link: $list-group-title-link
@@ -130,3 +132,19 @@ $list-group-notification-item-primary: map-deep-merge((
 	border-top-left-radius: 0,
 	active-border-left-color: theme-color-level(primary, -9)
 ), $list-group-notification-item-primary);
+
+// List Group Sm
+
+$list-group-sm-item: () !default;
+$list-group-sm-item: map-deep-merge((
+	padding-bottom: 0.40625rem,
+	padding-top: 0.40625rem,
+), $list-group-sm-item);
+
+$list-group-sm-quick-action-menu: () !default;
+$list-group-sm-quick-action-menu: map-deep-merge((
+	margin-bottom: -0.40625rem,
+	margin-top: -0.40625rem,
+	padding-bottom: 0.40625rem,
+	padding-top: 0.40625rem,
+), $list-group-sm-quick-action-menu);
