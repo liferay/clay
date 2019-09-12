@@ -60,14 +60,14 @@
 /// focus-box-shadow: {String | List | Null},
 /// focus-color: {Color | String | Null},
 /// focus-placeholder-color: {Color | String | Null},
-/// readonly-bg: {Color | String | Null},
-/// readonly-bg-image: {String | List | Null},
-/// readonly-border-color: {Color | String | List | Null},
-/// readonly-box-shadow: {String | List | Null},
-/// readonly-color: {Color | String | Null},
-/// readonly-cursor: {String | Null},
-/// readonly-opacity: {Number | String | Null},
-/// readonly-placeholder-color: {Color | String | Null},
+/// readonly-bg: {Color | String | Null}, // deprecated after v2.18.0
+/// readonly-bg-image: {String | List | Null}, // deprecated after v2.18.0
+/// readonly-border-color: {Color | String | List | Null}, // deprecated after v2.18.0
+/// readonly-box-shadow: {String | List | Null}, // deprecated after v2.18.0
+/// readonly-color: {Color | String | Null}, // deprecated after v2.18.0
+/// readonly-cursor: {String | Null}, // deprecated after v2.18.0
+/// readonly-opacity: {Number | String | Null}, // deprecated after v2.18.0
+/// readonly-placeholder-color: {Color | String | Null}, // deprecated after v2.18.0
 /// disabled-bg: {Color | String | Null},
 /// disabled-bg-image: {String | List | Null},
 /// disabled-border-color: {Color | String | List | Null},
@@ -133,6 +133,8 @@
 	$focus-box-shadow: map-get($map, focus-box-shadow);
 	$focus-color: map-get($map, focus-color);
 	$focus-placeholder-color: map-get($map, focus-placeholder-color);
+
+	// deprecated after v2.18.0 [readonly] can have hover focus styles, declare a separate selector and use `clay-form-control-variant` mixin (e.g., `.form-control[readonly] { @include clay-form-control-variant($the-readonly-map); }`).
 
 	$readonly-bg: map-get($map, readonly-bg);
 	$readonly-bg-image: map-get($map, readonly-bg-image);
@@ -225,6 +227,8 @@
 				color: $focus-placeholder-color;
 			}
 		}
+
+		// @deprecated after v2.18.0 [readonly] can have hover focus styles, declare a separate selector and use `clay-form-control-variant` mixin (e.g., `.form-control[readonly] { @include clay-form-control-variant($the-readonly-map); }`).
 
 		&[readonly] {
 			background-color: $readonly-bg;

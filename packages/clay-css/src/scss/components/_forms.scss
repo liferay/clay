@@ -377,16 +377,11 @@ fieldset[disabled] label {
 // Readonly State
 
 .form-control[readonly] {
-	background-color: $input-readonly-bg;
-	border-color: $input-readonly-border-color;
-	color: $input-readonly-color;
-	cursor: $input-readonly-cursor;
+	@include clay-form-control-variant($input-readonly);
+}
 
-	&:focus {
-		background-color: $input-readonly-focus-bg;
-		border-color: $input-readonly-focus-border-color;
-		color: $input-readonly-focus-color;
-	}
+.form-control-plaintext[readonly] {
+	@include clay-form-control-variant($input-plaintext-readonly);
 }
 
 // Input Sizes
