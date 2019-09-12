@@ -7,7 +7,7 @@
 import ClayAutocomplete from '@clayui/autocomplete';
 import ClayDropDown from '@clayui/drop-down';
 import React, {useEffect, useState} from 'react';
-import {FocusScope, useFocusManagement} from '@clayui/shared';
+import {FocusScope} from '@clayui/shared';
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	containerRenderer?: React.ForwardRefExoticComponent<any>;
@@ -63,7 +63,6 @@ export const ClayInputWithAutocomplete: React.FunctionComponent<IProps> = ({
 	...otherProps
 }) => {
 	const [active, setActive] = useState(!!value);
-	const focusManager = useFocusManagement();
 
 	const handleKeyEnter = (
 		event: React.KeyboardEvent<HTMLSpanElement | HTMLAnchorElement>,
@@ -79,12 +78,11 @@ export const ClayInputWithAutocomplete: React.FunctionComponent<IProps> = ({
 	}, [value]);
 
 	return (
-		<FocusScope focusManager={focusManager}>
+		<FocusScope>
 			<ClayAutocomplete component={containerRenderer}>
 				<ClayAutocomplete.Input
 					{...otherProps}
 					onChange={e => onValueChange(e.target.value)}
-					ref={ref => focusManager.createScope(ref, 'input')}
 					value={value}
 				/>
 
@@ -95,15 +93,8 @@ export const ClayInputWithAutocomplete: React.FunctionComponent<IProps> = ({
 					>
 						<ClayDropDown.ItemList>
 							{!loading &&
-								items.map((item, i) => (
+								items.map(item => (
 									<ClayAutocomplete.Item
-										innerRef={ref =>
-											focusManager.createScope(
-												ref,
-												`item${i}`,
-												true
-											)
-										}
 										key={itemSelector(item)}
 										match={value.toString()}
 										onClick={() =>
