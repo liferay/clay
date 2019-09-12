@@ -36,10 +36,26 @@ interface IEditableRowProps extends IRowProps {
 	) => void;
 
 	/**
+	 * Labels for changing some texts inside the component.
+	 * Use this property for i18n.
+	 */
+	labels?: {
+		cancel: string;
+		edit: string;
+		save: string;
+	};
+
+	/**
 	 * Flag to indicate if the Row is selectable.
 	 */
 	selectable?: boolean;
 }
+
+const DEFAULT_LABELS = {
+	cancel: 'Cancel',
+	edit: 'Edit',
+	save: 'Save',
+};
 
 export const ClayTableWithEditableRow: React.FunctionComponent<
 	IEditableRowProps
@@ -47,6 +63,7 @@ export const ClayTableWithEditableRow: React.FunctionComponent<
 	cells,
 	onCheckboxChange = () => {},
 	onRowUpdated = () => {},
+	labels = DEFAULT_LABELS,
 	selectable = false,
 	...otherProps
 }: IEditableRowProps) => {
@@ -92,6 +109,7 @@ export const ClayTableWithEditableRow: React.FunctionComponent<
 				{editing ? (
 					<ClayButton.Group className="btn-group-nowrap" spaced>
 						<ClayButton
+							aria-label={labels.save}
 							displayType="primary"
 							onClick={() => {
 								onRowUpdated(cells, oldCells);
@@ -99,24 +117,26 @@ export const ClayTableWithEditableRow: React.FunctionComponent<
 							}}
 							small
 						>
-							{'Save'}
+							{labels.save}
 						</ClayButton>
 						<ClayButton
+							aria-label={labels.cancel}
 							displayType="secondary"
 							onClick={() => setEditing(val => !val)}
 							small
 						>
-							{'Cancel'}
+							{labels.cancel}
 						</ClayButton>
 					</ClayButton.Group>
 				) : (
 					<ClayButton.Group className="btn-group-nowrap">
 						<ClayButton
+							aria-label={labels.edit}
 							displayType="secondary"
 							onClick={() => setEditing(val => !val)}
 							small
 						>
-							{'Edit'}
+							{labels.edit}
 						</ClayButton>
 					</ClayButton.Group>
 				)}
