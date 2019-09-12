@@ -89,7 +89,7 @@ export const ClayTableWithEditableRow: React.FunctionComponent<
 				</Cell>
 			)}
 			{cells.map(({cellProps, editable = false, title}, index) => (
-				<Cell expanded key={index} {...cellProps}>
+				<Cell {...cellProps} expanded key={index}>
 					{editable && editing ? (
 						<ClayInput
 							className="form-control-sm"
