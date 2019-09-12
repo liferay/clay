@@ -9,7 +9,7 @@ import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
 import React, {useEffect, useRef, useState} from 'react';
 import {ClayInput} from '@clayui/form';
-import {useFocusManagement} from '@clayui/shared';
+import {FocusScope} from '@clayui/shared';
 
 type ConfigMaxMin = {
 	max: number;
@@ -87,8 +87,6 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const KEY_BACKSPACE = 8;
-const KEY_ARROWRIGHT = 39;
-const KEY_ARROWLEFT = 37;
 const KEY_ARROWUP = 38;
 const KEY_ARROWDOWN = 40;
 const DEFAULT_VALUE = '--';
@@ -140,7 +138,6 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 	const [actionVisible, setActionVisible] = useState(false);
 	const [isFocused, setIsFocused] = useState();
 	const elementRef = useRef<null | HTMLDivElement>(null);
-	const focusManager = useFocusManagement(true);
 	const defaultFocused = {
 		configName: TimeType.hours,
 		focused: false,
@@ -162,16 +159,6 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 		}
 
 		return newValue;
-	};
-
-	const handleFocusManagement = (event: React.KeyboardEvent<any>) => {
-		const {keyCode} = event;
-
-		if (keyCode === KEY_ARROWRIGHT) {
-			focusManager.focusNext();
-		} else if (keyCode === KEY_ARROWLEFT) {
-			focusManager.focusPrevious();
-		}
 	};
 
 	const handleKeyDown = (
@@ -311,192 +298,187 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 						</ClayInput.GroupText>
 					</ClayInput.GroupItem>
 				)}
-				<ClayInput.GroupItem onKeyDown={handleFocusManagement} shrink>
-					<div
-						className={classNames('form-control', {
-							disabled,
-							focus: isFocused,
-						})}
-						data-testid="formControl"
-						onMouseEnter={() => {
-							if (!disabled) {
-								setActionVisible(true);
-							}
-						}}
-						onMouseLeave={() => {
-							if (!currentInputFocused.focused && !disabled) {
-								setActionVisible(false);
-							}
-						}}
-						ref={elementRef}
-					>
-						<div className="clay-time-edit">
-							<input
-								className={classNames(
-									'clay-time-hours form-control-inset',
-									{
-										focus:
-											currentInputFocused.configName ===
-												TimeType.hours &&
-											currentInputFocused.focused,
-									}
-								)}
-								data-testid="hours"
-								disabled={disabled}
-								maxLength={2}
-								onFocus={() => handleInputFocus(TimeType.hours)}
-								onKeyDown={event =>
-									handleKeyDown(
-										event,
-										values.hours,
-										TimeType.hours
-									)
+				<FocusScope arrowKeys={false}>
+					<ClayInput.GroupItem shrink>
+						<div
+							className={classNames('form-control', {
+								disabled,
+								focus: isFocused,
+							})}
+							data-testid="formControl"
+							onMouseEnter={() => {
+								if (!disabled) {
+									setActionVisible(true);
 								}
-								readOnly
-								ref={ref =>
-									focusManager.createScope(ref, 'hour')
+							}}
+							onMouseLeave={() => {
+								if (!currentInputFocused.focused && !disabled) {
+									setActionVisible(false);
 								}
-								type="text"
-								value={values.hours}
-							/>
-							<span className="clay-time-divider">{':'}</span>
-							<input
-								className={classNames(
-									'clay-time-minutes form-control-inset',
-									{
-										focus:
-											currentInputFocused.configName ===
-											TimeType.minutes,
-									}
-								)}
-								data-testid="minutes"
-								disabled={disabled}
-								maxLength={2}
-								onFocus={() =>
-									handleInputFocus(TimeType.minutes)
-								}
-								onKeyDown={event =>
-									handleKeyDown(
-										event,
-										values.minutes,
-										TimeType.minutes
-									)
-								}
-								readOnly
-								ref={ref =>
-									focusManager.createScope(ref, 'minutes')
-								}
-								type="text"
-								value={values.minutes}
-							/>
-							{use12Hours && (
+							}}
+							ref={elementRef}
+						>
+							<div className="clay-time-edit">
 								<input
 									className={classNames(
-										'clay-time-ampm form-control-inset',
+										'clay-time-hours form-control-inset',
 										{
 											focus:
 												currentInputFocused.configName ===
-												TimeType.ampm,
+													TimeType.hours &&
+												currentInputFocused.focused,
 										}
 									)}
-									data-testid="ampm"
+									data-testid="hours"
 									disabled={disabled}
-									max-length="2"
+									maxLength={2}
 									onFocus={() =>
-										handleInputFocus(TimeType.ampm)
+										handleInputFocus(TimeType.hours)
 									}
 									onKeyDown={event =>
 										handleKeyDown(
 											event,
-											values.ampm as InputAmPm,
-											TimeType.ampm
+											values.hours,
+											TimeType.hours
 										)
 									}
 									readOnly
-									ref={ref =>
-										focusManager.createScope(ref, 'ampm')
-									}
 									type="text"
-									value={values.ampm || DEFAULT_VALUE}
+									value={values.hours}
 								/>
-							)}
-						</div>
-						<div className="clay-time-action-group">
-							<div
-								className="clay-time-action-group-item"
-								data-testid="containerReset"
-								style={{
-									opacity: visibleActionReset ? 1 : 0,
-									pointerEvents: visibleActionReset
-										? 'auto'
-										: 'none',
-								}}
-							>
-								<ClayButton
-									className="clay-time-clear-btn"
+								<span className="clay-time-divider">{':'}</span>
+								<input
+									className={classNames(
+										'clay-time-minutes form-control-inset',
+										{
+											focus:
+												currentInputFocused.configName ===
+												TimeType.minutes,
+										}
+									)}
+									data-testid="minutes"
 									disabled={disabled}
-									displayType="unstyled"
-									onClick={() =>
-										onInputChange(
-											use12Hours
-												? {
-														ampm: DEFAULT_VALUE,
-														hours: DEFAULT_VALUE,
-														minutes: DEFAULT_VALUE,
-												  }
-												: {
-														hours: DEFAULT_VALUE,
-														minutes: DEFAULT_VALUE,
-												  }
+									maxLength={2}
+									onFocus={() =>
+										handleInputFocus(TimeType.minutes)
+									}
+									onKeyDown={event =>
+										handleKeyDown(
+											event,
+											values.minutes,
+											TimeType.minutes
 										)
 									}
-								>
-									<ClayIcon
-										spritemap={spritemap}
-										symbol="times-circle"
+									readOnly
+									type="text"
+									value={values.minutes}
+								/>
+								{use12Hours && (
+									<input
+										className={classNames(
+											'clay-time-ampm form-control-inset',
+											{
+												focus:
+													currentInputFocused.configName ===
+													TimeType.ampm,
+											}
+										)}
+										data-testid="ampm"
+										disabled={disabled}
+										max-length="2"
+										onFocus={() =>
+											handleInputFocus(TimeType.ampm)
+										}
+										onKeyDown={event =>
+											handleKeyDown(
+												event,
+												values.ampm as InputAmPm,
+												TimeType.ampm
+											)
+										}
+										readOnly
+										type="text"
+										value={values.ampm || DEFAULT_VALUE}
 									/>
-								</ClayButton>
+								)}
 							</div>
-							<div
-								className="clay-time-action-group-item"
-								data-testid="containerSpin"
-								style={{
-									opacity: actionVisible ? 1 : 0,
-								}}
-							>
+							<div className="clay-time-action-group">
 								<div
-									className="btn-group-vertical clay-time-inner-spin"
-									role="group"
+									className="clay-time-action-group-item"
+									data-testid="containerReset"
+									style={{
+										opacity: visibleActionReset ? 1 : 0,
+										pointerEvents: visibleActionReset
+											? 'auto'
+											: 'none',
+									}}
 								>
 									<ClayButton
-										className="clay-time-inner-spin-btn clay-time-inner-spin-btn-inc"
-										data-testid="spinInc"
+										className="clay-time-clear-btn"
 										disabled={disabled}
-										displayType="secondary"
-										onClick={() => handleAction(1)}
+										displayType="unstyled"
+										onClick={() =>
+											onInputChange(
+												use12Hours
+													? {
+															ampm: DEFAULT_VALUE,
+															hours: DEFAULT_VALUE,
+															minutes: DEFAULT_VALUE,
+													  }
+													: {
+															hours: DEFAULT_VALUE,
+															minutes: DEFAULT_VALUE,
+													  }
+											)
+										}
 									>
 										<ClayIcon
 											spritemap={spritemap}
-											symbol="angle-up"
-										/>
-									</ClayButton>
-									<ClayButton
-										className="clay-time-inner-spin-btn clay-time-inner-spin-btn-dec"
-										data-testid="spinDec"
-										disabled={disabled}
-										displayType="secondary"
-										onClick={() => handleAction(-1)}
-									>
-										<ClayIcon
-											spritemap={spritemap}
-											symbol="angle-down"
+											symbol="times-circle"
 										/>
 									</ClayButton>
 								</div>
+								<div
+									className="clay-time-action-group-item"
+									data-testid="containerSpin"
+									style={{
+										opacity: actionVisible ? 1 : 0,
+									}}
+								>
+									<div
+										className="btn-group-vertical clay-time-inner-spin"
+										role="group"
+									>
+										<ClayButton
+											className="clay-time-inner-spin-btn clay-time-inner-spin-btn-inc"
+											data-testid="spinInc"
+											disabled={disabled}
+											displayType="secondary"
+											onClick={() => handleAction(1)}
+										>
+											<ClayIcon
+												spritemap={spritemap}
+												symbol="angle-up"
+											/>
+										</ClayButton>
+										<ClayButton
+											className="clay-time-inner-spin-btn clay-time-inner-spin-btn-dec"
+											data-testid="spinDec"
+											disabled={disabled}
+											displayType="secondary"
+											onClick={() => handleAction(-1)}
+										>
+											<ClayIcon
+												spritemap={spritemap}
+												symbol="angle-down"
+											/>
+										</ClayButton>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-				</ClayInput.GroupItem>
+					</ClayInput.GroupItem>
+				</FocusScope>
 				{timezone && (
 					<ClayInput.GroupItem shrink>
 						<ClayInput.GroupText>{`(${timezone})`}</ClayInput.GroupText>
