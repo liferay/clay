@@ -45,7 +45,7 @@ const ClayCard: React.FunctionComponent<IProps> & {
 	className,
 	displayType,
 	horizontal,
-	href = 'javascript:;',
+	href,
 	interactive,
 	onClick,
 	selectable = false,
@@ -63,7 +63,7 @@ const ClayCard: React.FunctionComponent<IProps> & {
 		user: displayType === 'user',
 	};
 
-	const TagHeaderName = interactive ? 'a' : 'div';
+	const TagHeaderName = href ? 'a' : 'div';
 
 	const TagName = interactive ? 'span' : 'div';
 

@@ -212,6 +212,7 @@ storiesOf('ClayCard', module)
 					description="Pick and choose your layout..."
 					horizontal
 					horizontalSymbol="page"
+					href="#"
 					spritemap={spritemap}
 					title="Layout Page"
 				/>
