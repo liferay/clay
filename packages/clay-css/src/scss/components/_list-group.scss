@@ -181,8 +181,16 @@
 		.list-group-title:only-child {
 			align-items: center;
 			display: flex;
-			height: 32px;
+			min-height: 32px;
 			margin-top: 0;
+
+			// IE11 flexbox min-height workaround
+
+			&::after {
+				content: '';
+				display: block;
+				min-height: inherit;
+			}
 		}
 
 		.dropdown-action {
@@ -337,5 +345,17 @@
 
 	.autofit-col .quick-action-item {
 		margin-top: $list-group-notification-item-border-top-width - $list-group-item-flex-offset-top;
+	}
+}
+
+// List Group Sm
+
+.list-group-sm {
+	.list-group-item {
+		@include clay-container($list-group-sm-item);
+	}
+
+	.quick-action-menu {
+		@include clay-container($list-group-sm-quick-action-menu);
 	}
 }

@@ -27,7 +27,6 @@ $list-group-title-link: () !default;
 $list-group-title-link: map-deep-merge((
 	border-radius: 1px,
 	display: inline-block,
-	max-width: 100%,
 	transition: box-shadow 0.15s ease-in-out,
 	hover-color: $gray-900,
 	focus-box-shadow: $component-focus-box-shadow,

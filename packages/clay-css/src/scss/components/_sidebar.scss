@@ -76,7 +76,7 @@
 		padding-top: $sidebar-list-group-autofit-col-padding-y;
 
 		.list-group-title:only-child {
-			height: map-get($sidebar-list-group-sticker-size, size);
+			min-height: map-get($sidebar-list-group-sticker-size, size);
 		}
 	}
 
