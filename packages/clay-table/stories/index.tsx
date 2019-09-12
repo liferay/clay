@@ -14,7 +14,6 @@ import ClayTable from '../src';
 import React from 'react';
 import {boolean, select} from '@storybook/addon-knobs';
 import {ClayCheckbox} from '@clayui/form';
-import {ClayTableWithEditableRow} from '../src/ClayTableWithEditableRow';
 import {storiesOf} from '@storybook/react';
 
 function ClayCheckboxWithState(props: any) {
@@ -601,7 +600,7 @@ storiesOf('Components|ClayTable', module)
 					</ClayTable.Row>
 				</ClayTable.Head>
 				<ClayTable.Body>
-					<ClayTableWithEditableRow
+					<ClayTable.EditableRow
 						cells={state.cells}
 						onRowUpdated={onRowUpdated}
 						selectable

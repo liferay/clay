@@ -56,9 +56,7 @@ const DEFAULT_LABELS = {
 	save: 'Save',
 };
 
-export const ClayTableWithEditableRow: React.FunctionComponent<
-	IEditableRowProps
-> = ({
+const EditableRow: React.FunctionComponent<IEditableRowProps> = ({
 	cells,
 	onCheckboxChange = () => {},
 	onRowUpdated = () => {},
@@ -138,3 +136,5 @@ export const ClayTableWithEditableRow: React.FunctionComponent<
 		</Row>
 	);
 };
+
+export default EditableRow;

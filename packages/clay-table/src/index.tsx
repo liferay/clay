@@ -7,6 +7,7 @@
 import Body from './Body';
 import Cell from './Cell';
 import classNames from 'classnames';
+import EditableRow from './EditableRow';
 import Head from './Head';
 import React from 'react';
 import Row from './Row';
@@ -78,6 +79,7 @@ interface IProps extends React.HTMLAttributes<HTMLTableElement> {
 const ClayTable: React.FunctionComponent<IProps> & {
 	Body: typeof Body;
 	Cell: typeof Cell;
+	EditableRow: typeof EditableRow;
 	Head: typeof Head;
 	Row: typeof Row;
 } = ({
@@ -130,6 +132,7 @@ const ClayTable: React.FunctionComponent<IProps> & {
 
 ClayTable.Body = Body;
 ClayTable.Cell = Cell;
+ClayTable.EditableRow = EditableRow;
 ClayTable.Head = Head;
 ClayTable.Row = Row;
 
