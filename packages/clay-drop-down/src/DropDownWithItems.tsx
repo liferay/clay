@@ -96,7 +96,11 @@ interface IProps extends IDropDownContentProps {
 	searchValue?: string;
 }
 
-const Checkbox: React.FunctionComponent<IItem> = ({
+interface IInternalItem {
+	spritemap?: string;
+}
+
+const Checkbox: React.FunctionComponent<IItem & IInternalItem> = ({
 	checked = false,
 	onChange = () => {},
 	...otherProps
@@ -119,10 +123,9 @@ const Checkbox: React.FunctionComponent<IItem> = ({
 
 const ClayDropDownContext = React.createContext({close: () => {}});
 
-const Item: React.FunctionComponent<Omit<IItem, 'onChange'>> = ({
-	onClick,
-	...props
-}) => {
+const Item: React.FunctionComponent<
+	Omit<IItem, 'onChange'> & IInternalItem
+> = ({label, onClick, ...props}) => {
 	const {close} = React.useContext(ClayDropDownContext);
 
 	return (
@@ -136,12 +139,12 @@ const Item: React.FunctionComponent<Omit<IItem, 'onChange'>> = ({
 			}}
 			{...props}
 		>
-			{props.label}
+			{label}
 		</ClayDropDown.Item>
 	);
 };
 
-const Group: React.FunctionComponent<IItem & {spritemap?: string}> = ({
+const Group: React.FunctionComponent<IItem & IInternalItem> = ({
 	items,
 	label,
 	spritemap,
@@ -160,7 +163,10 @@ interface IRadioContext {
 
 const RadioGroupContext = React.createContext({} as IRadioContext);
 
-const Radio: React.FunctionComponent<IItem> = ({value = '', ...otherProps}) => {
+const Radio: React.FunctionComponent<IItem & IInternalItem> = ({
+	value = '',
+	...otherProps
+}) => {
 	const {checked, name, onChange} = useContext(RadioGroupContext);
 
 	return (
@@ -177,7 +183,7 @@ const Radio: React.FunctionComponent<IItem> = ({value = '', ...otherProps}) => {
 	);
 };
 
-const RadioGroup: React.FunctionComponent<IItem & {spritemap?: string}> = ({
+const RadioGroup: React.FunctionComponent<IItem & IInternalItem> = ({
 	items,
 	label,
 	name,
@@ -253,7 +259,6 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 	trigger,
 }: IProps) => {
 	const [active, setActive] = useState(false);
-
 	const hasRightSymbols = !!items.find(item => item.symbolRight);
 	const hasLeftSymbols = !!items.find(item => item.symbolLeft);
 

@@ -15,6 +15,7 @@ import ItemList from './ItemList';
 import Menu, {Align} from './Menu';
 import React, {useRef} from 'react';
 import Search from './Search';
+import {FocusScope} from '@clayui/shared';
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	/**
@@ -89,39 +90,41 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 	};
 
 	return (
-		<ContainerElement
-			{...otherProps}
-			className={classNames('dropdown', className)}
-			onKeyUp={handleKeyUp}
-		>
-			{React.cloneElement(trigger, {
-				className: classNames(
-					'dropdown-toggle',
-					trigger.props.className
-				),
-				onClick: () => onActiveChange(!active),
-				ref: (node: HTMLButtonElement) => {
-					triggerElementRef.current = node;
-					// Call the original ref, if any.
-					const {ref} = trigger;
-					if (typeof ref === 'function') {
-						ref(node);
-					}
-				},
-			})}
-
-			<Menu
-				active={active}
-				alignElementRef={triggerElementRef}
-				alignmentPosition={alignmentPosition}
-				hasLeftSymbols={hasLeftSymbols}
-				hasRightSymbols={hasRightSymbols}
-				onSetActive={onActiveChange}
-				ref={menuElementRef}
+		<FocusScope>
+			<ContainerElement
+				{...otherProps}
+				className={classNames('dropdown', className)}
+				onKeyUp={handleKeyUp}
 			>
-				{children}
-			</Menu>
-		</ContainerElement>
+				{React.cloneElement(trigger, {
+					className: classNames(
+						'dropdown-toggle',
+						trigger.props.className
+					),
+					onClick: () => onActiveChange(!active),
+					ref: (node: HTMLButtonElement) => {
+						triggerElementRef.current = node;
+						// Call the original ref, if any.
+						const {ref} = trigger;
+						if (typeof ref === 'function') {
+							ref(node);
+						}
+					},
+				})}
+
+				<Menu
+					active={active}
+					alignElementRef={triggerElementRef}
+					alignmentPosition={alignmentPosition}
+					hasLeftSymbols={hasLeftSymbols}
+					hasRightSymbols={hasRightSymbols}
+					onSetActive={onActiveChange}
+					ref={menuElementRef}
+				>
+					{children}
+				</Menu>
+			</ContainerElement>
+		</FocusScope>
 	);
 };
 
