@@ -154,14 +154,14 @@ storiesOf('Components|ClayForm', module)
 	))
 	.add('InputWithAutocomplete w/ objects', () => (
 		<AutoCompleteWithState
-			itemSelector={(person: any) =>
-				`${person.firstName} ${person.lastName}`
-			}
 			items={[
 				{firstName: 'Joe', lastName: 'Bloggs'},
 				{firstName: 'Steve', lastName: 'Nash'},
 				{firstName: 'Abraham', lastName: 'Kuyper'},
 			]}
+			itemSelector={(person: any) =>
+				`${person.firstName} ${person.lastName}`
+			}
 		/>
 	));
 
