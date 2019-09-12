@@ -23,12 +23,9 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems 1`] = `
         <ul
           class="list-unstyled"
         >
-          <li
-            tabindex="-1"
-          >
+          <li>
             <button
               class="dropdown-item"
-              label="clickable"
             >
               clickable
             </button>
@@ -38,13 +35,10 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems 1`] = `
             class="dropdown-divider"
             role="presentation"
           />
-          <li
-            tabindex="-1"
-          >
+          <li>
             <a
               class="dropdown-item"
               href="#"
-              label="linkable"
             >
               linkable
             </a>
@@ -79,13 +73,10 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with caption 1`] = `
         <ul
           class="list-unstyled"
         >
-          <li
-            tabindex="-1"
-          >
+          <li>
             <a
               class="dropdown-item"
               href="#"
-              label="linkable"
             >
               linkable
             </a>
@@ -134,9 +125,7 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with checkbox 1`] = `
           <ul
             class="list-unstyled"
           >
-            <li
-              tabindex="-1"
-            >
+            <li>
               <span
                 class="dropdown-item"
               >
@@ -164,9 +153,7 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with checkbox 1`] = `
                 </div>
               </span>
             </li>
-            <li
-              tabindex="-1"
-            >
+            <li>
               <span
                 class="dropdown-item"
               >
@@ -228,13 +215,10 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with footer content 1
             <ul
               class="list-unstyled"
             >
-              <li
-                tabindex="-1"
-              >
+              <li>
                 <a
                   class="dropdown-item"
                   href="#"
-                  label="linkable"
                 >
                   linkable
                 </a>
@@ -287,13 +271,10 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with help text 1`] = 
         <ul
           class="list-unstyled"
         >
-          <li
-            tabindex="-1"
-          >
+          <li>
             <a
               class="dropdown-item"
               href="#"
-              label="linkable"
             >
               linkable
             </a>
@@ -341,9 +322,7 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with radio group 1`] 
             <ul
               class="list-unstyled"
             >
-              <li
-                tabindex="-1"
-              >
+              <li>
                 <span
                   class="dropdown-item"
                 >
@@ -372,9 +351,7 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with radio group 1`] 
                   </div>
                 </span>
               </li>
-              <li
-                tabindex="-1"
-              >
+              <li>
                 <span
                   class="dropdown-item"
                 >
@@ -471,13 +448,10 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with search 1`] = `
         <ul
           class="list-unstyled"
         >
-          <li
-            tabindex="-1"
-          >
+          <li>
             <a
               class="dropdown-item"
               href="#"
-              label="linkable"
             >
               linkable
             </a>
