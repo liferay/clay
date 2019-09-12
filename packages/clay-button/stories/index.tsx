@@ -11,7 +11,7 @@ import {storiesOf} from '@storybook/react';
 
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
-storiesOf('ClayButton', module)
+storiesOf('Components|ClayButton', module)
 	.add('default', () => (
 		<ClayButton
 			block={boolean('Block', false) as false}

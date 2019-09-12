@@ -12,7 +12,7 @@ import {storiesOf} from '@storybook/react';
 
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
-storiesOf('ClayProgressBar', module).add('default', () => (
+storiesOf('Components|ClayProgressBar', module).add('default', () => (
 	<div>
 		<ClayProgressBar
 			feedback={boolean('Feedback', false)}

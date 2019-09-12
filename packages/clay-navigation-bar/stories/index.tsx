@@ -14,7 +14,7 @@ import {storiesOf} from '@storybook/react';
 
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
-storiesOf('ClayNavigationBar', module).add('default', () => {
+storiesOf('Components|ClayNavigationBar', module).add('default', () => {
 	const [triggerName, setTriggerName] = React.useState<string>('Item 1');
 	return (
 		<ClayNavigationBar

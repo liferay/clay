@@ -90,7 +90,7 @@ const ChartWithRef = () => {
 	);
 };
 
-storiesOf('ClayCharts', module)
+storiesOf('Components|ClayCharts', module)
 	.add('bar', () => <ChartWithState />)
 	.add('bubble', () => (
 		<ClayChart

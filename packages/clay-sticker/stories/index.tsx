@@ -14,7 +14,7 @@ import {storiesOf} from '@storybook/react';
 
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
-storiesOf('ClaySticker', module)
+storiesOf('Components|ClaySticker', module)
 	.add('default', () => (
 		<div>
 			<ClaySticker>{text('Content', 'A')}</ClaySticker>

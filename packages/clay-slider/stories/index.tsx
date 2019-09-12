@@ -11,7 +11,7 @@ import React, {useState} from 'react';
 import {boolean, number, select} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
-storiesOf('ClaySlider', module)
+storiesOf('Components|ClaySlider', module)
 	.add('default', () => {
 		const [value, setValue] = useState<number>(10);
 

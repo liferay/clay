@@ -85,6 +85,7 @@ function Item({
 	items: subItems,
 	label,
 	level,
+	onClick,
 	spritemap,
 }: INavItemProps) {
 	const menuRef = React.useRef(null);
@@ -109,6 +110,10 @@ function Item({
 				href={href}
 				onClick={e => {
 					handleClickToggler(e);
+
+					if (onClick) {
+						onClick();
+					}
 				}}
 				role="button"
 				showIcon={!!subItems}

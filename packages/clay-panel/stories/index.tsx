@@ -12,7 +12,7 @@ import {storiesOf} from '@storybook/react';
 
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
-storiesOf('ClayPanel', module)
+storiesOf('Components|ClayPanel', module)
 	.add('default', () => (
 		<ClayPanel
 			displayTitle={text('Display Title', 'Title')}

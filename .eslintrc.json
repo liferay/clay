@@ -35,7 +35,12 @@
 			}
 		],
 		"react/jsx-no-literals": 2,
-		"react/jsx-sort-props": 2,
+		"react/jsx-sort-props": [
+			2,
+			{
+				"ignoreCase": true
+			}
+		],
 		"react/jsx-uses-react": "error",
 		"react/jsx-uses-vars": 2,
 		"require-jsdoc": 0,

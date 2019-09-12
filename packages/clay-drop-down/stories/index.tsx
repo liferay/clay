@@ -45,7 +45,7 @@ const DropDownWithState: React.FunctionComponent<any> = ({
 	);
 };
 
-storiesOf('ClayDropDown', module)
+storiesOf('Components|ClayDropDown', module)
 	.add('default', () => (
 		<DropDownWithState>
 			<ClayDropDown.ItemList>
@@ -225,8 +225,8 @@ storiesOf('ClayDropDown', module)
 				helpText="You can customize this menu or see all you have by pressing 'more'."
 				items={items}
 				onSearchValueChange={setValue}
-				searchValue={value}
 				searchable={boolean('Searchable', true)}
+				searchValue={value}
 				spritemap={spritemap}
 				trigger={<ClayButton>{'Click Me'}</ClayButton>}
 			/>

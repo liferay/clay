@@ -72,7 +72,7 @@ const ClayDismissibleDemo = () => {
 	);
 };
 
-storiesOf('ClayAlert', module)
+storiesOf('Components|ClayAlert', module)
 	.add('default', () => (
 		<ClayAlert
 			displayType={

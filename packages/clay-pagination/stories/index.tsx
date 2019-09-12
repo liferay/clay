@@ -29,7 +29,7 @@ const PaginationWithState = (props: any) => {
 	);
 };
 
-storiesOf('ClayPagination', module)
+storiesOf('Components|ClayPagination', module)
 	.add('links', () => {
 		const totalPages = number('Number of pages', 25);
 

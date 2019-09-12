@@ -71,7 +71,7 @@ function ClayDropdownWithTrigger() {
 
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
-storiesOf('ClayTable', module)
+storiesOf('Components|ClayTable', module)
 	.add('default', () => (
 		<ClayTable>
 			<ClayTable.Head>
@@ -179,12 +179,12 @@ storiesOf('ClayTable', module)
 					)}
 					borderedColumns={boolean('bordered columns', false)}
 					borderless={boolean('borderless', false)}
+					headingNoWrap={boolean('heading no wrap', false)}
 					headVerticalAlignment={select(
 						'head vertical alignment',
 						{bottom: 'bottom', middle: 'middle', top: 'top'},
 						'middle'
 					)}
-					headingNoWrap={boolean('heading no wrap', false)}
 					hover={boolean('hover', true)}
 					noWrap={boolean('no wrap', false)}
 					responsive={boolean('responsive', false)}
@@ -368,12 +368,12 @@ storiesOf('ClayTable', module)
 					)}
 					borderedColumns={boolean('bordered columns', false)}
 					borderless={boolean('borderless', false)}
+					headingNoWrap={boolean('heading no wrap', false)}
 					headVerticalAlignment={select(
 						'head vertical alignment',
 						{bottom: 'bottom', middle: 'middle', top: 'top'},
 						'middle'
 					)}
-					headingNoWrap={boolean('heading no wrap', false)}
 					hover={boolean('hover', true)}
 					noWrap={boolean('no wrap', true)}
 					responsive={boolean('responsive', false)}
@@ -448,12 +448,12 @@ storiesOf('ClayTable', module)
 				)}
 				borderedColumns={boolean('bordered columns', false)}
 				borderless={boolean('bordeless', false)}
+				headingNoWrap={boolean('heading no wrap', false)}
 				headVerticalAlignment={select(
 					'head vertical alignment',
 					{bottom: 'bottom', middle: 'middle', top: 'top'},
 					'middle'
 				)}
-				headingNoWrap={boolean('heading no wrap', false)}
 				hover={boolean('hover', true)}
 				noWrap={boolean('no wrap', false)}
 				responsive={boolean('responsive', false)}
