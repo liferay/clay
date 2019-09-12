@@ -46,11 +46,6 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	forwardRef: React.RefObject<HTMLDivElement>;
 
 	/**
-	 * Value used for each selected item's hidden input name attribute
-	 */
-	inputName: string;
-
-	/**
 	 * Value of input
 	 */
 	inputValue: string;
@@ -92,7 +87,6 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 	disabled,
 	disabledClearAll,
 	forwardRef,
-	inputName = '',
 	inputValue = '',
 	isValid = true,
 	items = [],
@@ -185,51 +179,43 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 							]);
 
 						return (
-							<React.Fragment key={i}>
-								<ClayLabel
-									closeButtonProps={{
-										'aria-label': sub(
-											closeButtonAriaLabel,
-											[item]
-										),
-										disabled,
-										onClick: () => {
-											if (inputRef.current) {
-												inputRef.current.focus();
-											}
-											removeItem();
-										},
-										ref: ref => {
-											focusManager.createScope(
-												ref,
-												`label${i}`
-											);
-
-											if (i === items.length - 1) {
-												lastItemRef.current = ref;
-											}
-										},
-									}}
-									onKeyDown={({keyCode}) => {
-										if (keyCode !== BACKSPACE_KEY) {
-											return;
-										}
+							<ClayLabel
+								closeButtonProps={{
+									'aria-label': sub(closeButtonAriaLabel, [
+										item,
+									]),
+									disabled,
+									onClick: () => {
 										if (inputRef.current) {
 											inputRef.current.focus();
 										}
 										removeItem();
-									}}
-									spritemap={spritemap}
-								>
-									{item}
-								</ClayLabel>
+									},
+									ref: ref => {
+										focusManager.createScope(
+											ref,
+											`label${i}`
+										);
 
-								<input
-									name={inputName}
-									type="hidden"
-									value={item}
-								/>
-							</React.Fragment>
+										if (i === items.length - 1) {
+											lastItemRef.current = ref;
+										}
+									},
+								}}
+								key={i}
+								onKeyDown={({keyCode}) => {
+									if (keyCode !== BACKSPACE_KEY) {
+										return;
+									}
+									if (inputRef.current) {
+										inputRef.current.focus();
+									}
+									removeItem();
+								}}
+								spritemap={spritemap}
+							>
+								{item}
+							</ClayLabel>
 						);
 					})}
 
