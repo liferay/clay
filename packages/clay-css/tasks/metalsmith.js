@@ -101,6 +101,8 @@ module.exports = function(gulp, plugins, _, config) {
 
 						var deprecatedIcons = [
 							'announcement',
+							'embed',
+							'import-export',
 							'sticky',
 							'urgent',
 						];
