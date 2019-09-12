@@ -30,27 +30,22 @@ const ClayDropDownSearch: React.FunctionComponent<IProps> = ({
 	className,
 	spritemap,
 	...otherProps
-}: IProps) => {
-	return (
-		<form className={className}>
-			<div className="dropdown-section">
-				<ClayInput.Group small>
-					<ClayInput.GroupItem>
-						<ClayInput {...otherProps} insetAfter type="text" />
+}: IProps) => (
+	<form className={className}>
+		<div className="dropdown-section">
+			<ClayInput.Group small>
+				<ClayInput.GroupItem>
+					<ClayInput {...otherProps} insetAfter type="text" />
 
-						<ClayInput.GroupInsetItem after tag="span">
-							<ClayButton displayType="unstyled" type="button">
-								<ClayIcon
-									spritemap={spritemap}
-									symbol="search"
-								/>
-							</ClayButton>
-						</ClayInput.GroupInsetItem>
-					</ClayInput.GroupItem>
-				</ClayInput.Group>
-			</div>
-		</form>
-	);
-};
+					<ClayInput.GroupInsetItem after tag="span">
+						<ClayButton displayType="unstyled" type="button">
+							<ClayIcon spritemap={spritemap} symbol="search" />
+						</ClayButton>
+					</ClayInput.GroupInsetItem>
+				</ClayInput.GroupItem>
+			</ClayInput.Group>
+		</div>
+	</form>
+);
 
 export default ClayDropDownSearch;
