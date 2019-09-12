@@ -567,9 +567,13 @@ storiesOf('Components|ClayTable', module)
 			],
 		});
 
-		const onRowUpdated = (cellsUpdated: any, oldCells: any) => {
+		const onRowUpdated = (cellsUpdated: any) => {
 			const cells = [...state.cells];
-			cells[cells.indexOf(oldCells)] = cellsUpdated;
+			cells.map((cell, index) => {
+				if (cell !== cellsUpdated[index]) {
+					cell = cellsUpdated[index];
+				}
+			});
 			setState({...state, cells});
 		};
 

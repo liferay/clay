@@ -32,10 +32,7 @@ interface IEditableRowProps extends IRowProps {
 	/**
 	 * Callback function for when the `Save` button is clicked.
 	 */
-	onRowUpdated?: (
-		newEntries: Array<IEditableCell>,
-		oldEntries: Array<IEditableCell>
-	) => void;
+	onRowUpdated?: (newEntries: Array<IEditableCell>) => void;
 
 	/**
 	 * Labels for changing some texts inside the component.
@@ -71,11 +68,6 @@ export const ClayTableWithEditableRow: React.FunctionComponent<
 }: IEditableRowProps) => {
 	const [check, setCheck] = React.useState<boolean>(false);
 	const [editing, setEditing] = React.useState<boolean>(false);
-
-	const oldCells = React.useMemo(
-		() => cells.map(cell => Object.assign(cell)),
-		[cells]
-	);
 
 	return (
 		<Row active={check} {...otherProps}>
@@ -114,7 +106,7 @@ export const ClayTableWithEditableRow: React.FunctionComponent<
 							aria-label={labels.save}
 							displayType="primary"
 							onClick={() => {
-								onRowUpdated(cells, oldCells);
+								onRowUpdated(cells);
 								setEditing(false);
 							}}
 							small
