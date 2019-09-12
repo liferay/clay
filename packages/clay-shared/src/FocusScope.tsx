@@ -15,12 +15,6 @@ interface IProps {
 	arrowKeys?: boolean;
 
 	children: React.ReactElement;
-
-	/**
-	 * Instance of `useFocusManagement` hook so FocusScope can control focus
-	 * via tab or arrow keys.
-	 */
-	focusManager: ReturnType<typeof useFocusManagement>;
 }
 
 const ARROW_DOWN_KEY_CODE = 40;
@@ -30,15 +24,14 @@ const TAB_KEY_CODE = 9;
 /**
  * FocusScope is a component only for controlling focus and listening
  * for children's key down events, since the component handles the `onKeyDown`
- * event, the component has assumed that you have scoped all focusable items
- * and should be controlled if only a part of your scope being added on
- * `createScope` there may be problems of focus experience.
+ * event.
  */
 export const FocusScope: React.FunctionComponent<IProps> = ({
 	arrowKeys = true,
 	children,
-	focusManager,
 }) => {
+	const focusManager = useFocusManagement(children);
+
 	const onKeyDown = (event: React.KeyboardEvent<any>) => {
 		const {keyCode, shiftKey} = event;
 
