@@ -45,13 +45,52 @@ $input-label-reference-mark-font-size: null !default;
 $input-label-reference-mark-spacer: null !default;
 $input-label-reference-mark-vertical-align: null !default;
 
+/// @deprecated after v2.18.0 use the Sass map `$input-readonly` instead
+
 $input-readonly-bg: null !default;
-$input-readonly-focus-bg: null !default;
+
+/// @deprecated after v2.18.0 use the Sass map `$input-readonly` instead
+
 $input-readonly-border-color: null !default;
-$input-readonly-focus-border-color: null !default;
+
+/// @deprecated after v2.18.0 use the Sass map `$input-readonly` instead
+
 $input-readonly-color: null !default;
-$input-readonly-focus-color: null !default;
+
+/// @deprecated after v2.18.0 use the Sass map `$input-readonly` instead
+
 $input-readonly-cursor: null !default;
+
+/// @deprecated after v2.18.0 use the Sass map `$input-readonly` instead
+
+$input-readonly-focus-bg: null !default;
+
+/// @deprecated after v2.18.0 use the Sass map `$input-readonly` instead
+
+$input-readonly-focus-border-color: null !default;
+
+/// @deprecated after v2.18.0 use the Sass map `$input-readonly` instead
+
+$input-readonly-focus-color: null !default;
+
+$input-readonly: () !default;
+$input-readonly: map-deep-merge((
+	bg: $input-readonly-bg,
+	border-color: $input-readonly-border-color,
+	color: $input-readonly-color,
+	cursor: $input-readonly-cursor,
+	focus-bg: $input-readonly-focus-bg,
+	focus-border-color: $input-readonly-focus-border-color,
+	focus-color: $input-readonly-focus-color,
+), $input-readonly);
+
+$input-plaintext-readonly: () !default;
+$input-plaintext-readonly: map-deep-merge((
+	border-radius: $input-border-radius,
+	outline: 0,
+	transition: $input-transition,
+	focus-box-shadow: $input-focus-box-shadow,
+), $input-plaintext-readonly);
 
 $input-textarea-height: 150px !default;
 $input-textarea-height-lg: 190px !default;
