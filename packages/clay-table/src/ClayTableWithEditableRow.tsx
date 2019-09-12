@@ -7,7 +7,7 @@
 import Cell from './Cell';
 import ClayButton from '@clayui/button';
 import React from 'react';
-import Row, {IRowProps} from './Row';
+import Row from './Row';
 import {ClayCheckbox, ClayInput} from '@clayui/form';
 
 interface IEditableCell {
@@ -15,6 +15,8 @@ interface IEditableCell {
 	editable?: boolean;
 	title: string;
 }
+
+type IRowProps = React.ComponentProps<typeof Row>;
 
 interface IEditableRowProps extends IRowProps {
 	/**
