@@ -11,7 +11,7 @@ import ClayIcon from '@clayui/icon';
 import ClayInput from './Input';
 import ClayLabel from '@clayui/label';
 import React, {useLayoutEffect, useRef, useState} from 'react';
-import {FocusScope, noop, sub, useFocusManagement} from '@clayui/shared';
+import {FocusScope, noop, sub} from '@clayui/shared';
 
 const BACKSPACE_KEY = 8;
 const COMMA_KEY = 188;
@@ -110,7 +110,6 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 	const lastItemRef = useRef<HTMLSpanElement | null>(null);
 	const [active, setActive] = useState(false);
 	const [isFocused, setIsFocused] = useState();
-	const focusManager = useFocusManagement();
 
 	useLayoutEffect(() => {
 		if (sourceItems) {
@@ -166,7 +165,7 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 	};
 
 	return (
-		<FocusScope arrowKeys={false} focusManager={focusManager}>
+		<FocusScope arrowKeys={false}>
 			<div
 				className={classNames(
 					'form-control form-control-tag-group input-group',
@@ -200,11 +199,6 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 											removeItem();
 										},
 										ref: ref => {
-											focusManager.createScope(
-												ref,
-												`label${i}`
-											);
-
 											if (i === items.length - 1) {
 												lastItemRef.current = ref;
 											}
@@ -252,10 +246,7 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 						}}
 						onKeyDown={handleKeyDown}
 						onPaste={handlePaste}
-						ref={ref => {
-							inputRef.current = ref;
-							focusManager.createScope(ref, 'input');
-						}}
+						ref={inputRef}
 						type="text"
 						value={inputValue}
 					/>
@@ -276,12 +267,6 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 										inputRef.current.focus();
 									}
 								}}
-								ref={ref =>
-									focusManager.createScope(
-										ref,
-										'clearAllButton'
-									)
-								}
 								title={clearAllTitle}
 								type="button"
 							>
@@ -306,13 +291,6 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 								)
 								.map(item => (
 									<ClayAutocomplete.Item
-										innerRef={ref =>
-											focusManager.createScope(
-												ref,
-												`item${item}`,
-												true
-											)
-										}
 										key={item}
 										match={inputValue}
 										onClick={() => {
