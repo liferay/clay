@@ -145,21 +145,17 @@ const useResource = ({
 		return uri;
 	};
 
-	const getUrlFormat = (
-		link: string,
-		variables: TVariables,
-		fetchOptions?: RequestInit
-	) => {
+	const getUrlFormat = (link: string, variables: TVariables) => {
 		const uri = new URL(link);
-
-		if ((fetchOptions && fetchOptions.method !== 'GET') || !variables) {
-			return uri.toString();
-		}
 
 		warning(
 			uri.searchParams.toString() === '',
 			'DataProvider: We recommend that instead of passing parameters over the link, use the variables API. \n More details: https://next.clayui.com/docs/components/data-provider.html'
 		);
+
+		if (!variables) {
+			return uri.toString();
+		}
 
 		populateSearchParams(uri, variables);
 
@@ -183,7 +179,7 @@ const useResource = ({
 				break;
 			case 'string':
 				promise = fetch(
-					getUrlFormat(link, variables, fetchOptions),
+					getUrlFormat(link, variables),
 					fetchOptions
 				).then(res => res.json());
 				break;
