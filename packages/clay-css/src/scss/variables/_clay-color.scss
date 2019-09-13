@@ -1,0 +1,238 @@
+// Clay Color Input Group Text (.clay-color > .input-group-item > .input-group-text)
+
+$clay-color-input-group-text: () !default;
+$clay-color-input-group-text: map-deep-merge((
+	bg: $white,
+	border-color: $input-border-color,
+	padding-left: 0,
+	padding-right: 0,
+), $clay-color-input-group-text);
+
+// Clay Color Input Group Input (.clay-color > .input-group-item > .form-control)
+
+$clay-color-input-group-input: () !default;
+
+// Clay Color Input Group Inset Item Before (.clay-color > .input-group-item > .input-group-inset-item-before)
+
+$clay-color-input-group-inset-item-before: () !default;
+$clay-color-input-group-inset-item-before: map-deep-merge((
+	color: $gray-600,
+	font-size: inherit,
+	padding-left: $input-padding-x,
+	padding-right: 0.5rem,
+), $clay-color-input-group-inset-item-before);
+
+// Dropdown Menu
+
+$clay-color-dropdown-menu: () !default;
+$clay-color-dropdown-menu: map-deep-merge((
+	max-height: 394px,
+	max-width: none,
+	padding-bottom: 0.5rem,
+	padding-left: 1.5rem,
+	padding-right: 1.5rem,
+	padding-top: 1rem,
+	width: 272px,
+), $clay-color-dropdown-menu);
+
+// Dropdown Menu Form Group
+
+$clay-color-dropdown-menu-form-group: () !default;
+$clay-color-dropdown-menu-form-group: map-deep-merge((
+	margin-bottom: 1rem,
+), $clay-color-dropdown-menu-form-group);
+
+// Dropdown Menu Input (.clay-color-dropdown-menu .form-control)
+
+$clay-color-dropdown-menu-input: () !default;
+$clay-color-dropdown-menu-input: map-deep-merge((
+	font-size: 0.875rem,
+	height: 2rem,
+	padding-bottom: 0.25rem,
+	padding-left: 0.75rem,
+	padding-right: 0.75rem,
+	padding-top: 0.25rem,
+), $clay-color-dropdown-menu-input);
+
+// Dropdown Menu Input Group Inset Item Before
+
+$clay-color-dropdown-menu-input-group-inset-item-before: () !default;
+$clay-color-dropdown-menu-input-group-inset-item-before: map-deep-merge((
+	color: $gray-600,
+	font-size: 0.875rem,
+	padding-left: $input-padding-x-sm,
+	padding-right: 0.5rem,
+), $clay-color-dropdown-menu-input-group-inset-item-before);
+
+// Dropdown Menu Close
+
+$clay-color-dropdown-menu-close: () !default;
+
+// Dropdown Menu Component Action
+
+$clay-color-dropdown-menu-component-action: () !default;
+$clay-color-dropdown-menu-component-action: map-deep-merge((
+	hover-bg: transparent,
+	hover-color: $black,
+	focus-box-shadow: $btn-focus-box-shadow,
+	focus-color: $black,
+), $clay-color-dropdown-menu-component-action);
+
+// Clay Color Swatch
+
+$clay-color-swatch: () !default;
+$clay-color-swatch: map-deep-merge((
+	display: flex,
+	flex-wrap: wrap,
+	margin-left: -0.5rem,
+	margin-right: -0.5rem,
+	margin-top: 0.5rem,
+), $clay-color-swatch);
+
+$clay-color-swatch-item: () !default;
+$clay-color-swatch-item: map-deep-merge((
+	display: flex,
+	flex-wrap: wrap,
+	justify-content: center,
+	padding-bottom: 1rem,
+	width: 16.66667%,
+), $clay-color-swatch-item);
+
+// Clay Color Btn
+
+$clay-color-btn: () !default;
+$clay-color-btn: map-deep-merge((
+	border-radius: 2px,
+	height: 1.5rem,
+	padding-bottom: 0,
+	padding-left: 0,
+	padding-right: 0,
+	padding-top: 0,
+	width: 1.5rem,
+), $clay-color-btn);
+
+$clay-color-btn-bordered: () !default;
+$clay-color-btn-bordered: map-deep-merge((
+	border-color: $gray-300,
+), $clay-color-btn-bordered);
+
+// Clay Color Pointer
+
+$clay-color-pointer: () !default;
+$clay-color-pointer: map-deep-merge((
+	bg: transparent,
+	border-radius: 100px,
+	border-color: $white,
+	border-style: solid,
+	border-width: 2px,
+	height: 0.875rem,
+	padding-bottom: 0,
+	padding-left: 0,
+	padding-right: 0,
+	padding-top: 0,
+	position: absolute,
+	transition: box-shadow 0.15s ease-in-out,
+	width: 0.875rem,
+	focus-box-shadow: $btn-focus-box-shadow,
+	focus-outline: 0,
+), $clay-color-pointer);
+
+// Clay Color Header
+
+$clay-color-header: () !default;
+$clay-color-header: map-deep-merge((
+	display: flex,
+	justify-content: space-between,
+	margin-bottom: 1rem,
+	margin-top: 0.5rem,
+	margin-right: -0.3125rem,
+), $clay-color-header);
+
+// Clay Color Header Component Title
+
+$clay-color-header-component-title: () !default;
+$clay-color-header-component-title: map-deep-merge((
+	color: $gray-600,
+	display: inline-block,
+	font-size: 0.875rem,
+	font-weight: $font-weight-semi-bold,
+	max-width: calc(100% - 2rem),
+), $clay-color-header-component-title);
+
+// Clay Color Footer
+
+$clay-color-footer: () !default;
+$clay-color-footer: map-deep-merge((
+	margin-bottom: 1rem,
+), $clay-color-footer);
+
+// Clay Color Map
+
+$clay-color-map-group: () !default;
+$clay-color-map-group: map-deep-merge((
+	display: flex,
+	margin-top: 0.5rem,
+), $clay-color-map-group);
+
+$clay-color-map: () !default;
+$clay-color-map: map-deep-merge((
+	flex-shrink: 0,
+	height: 128px,
+	margin-bottom: 1rem,
+	margin-right: 1rem,
+	position: relative,
+	width: 144px,
+), $clay-color-map);
+
+$clay-color-map-hsb: () !default;
+
+// Clay Color Map Pointer
+
+$clay-color-map-pointer: () !default;
+
+// Clay Color Map Values
+
+$clay-color-map-values: () !default;
+$clay-color-map-values: map-deep-merge((
+	flex-grow: 1,
+	flex-shrink: 1,
+	width: 1%,
+), $clay-color-map-values);
+
+$clay-color-map-values-form-group: () !default;
+
+// Clay Color Map Values (.clay-color-map-values .form-control)
+
+$clay-color-map-values-input: () !default;
+$clay-color-map-values-input: map-deep-merge((
+	padding-left: 0,
+	padding-right: 10%,
+	text-align: right,
+), $clay-color-map-values-input);
+
+// Clay Color Map Values Input Group Inset Item Before (.clay-color-map-values .input-group-inset-item-before)
+
+$clay-color-map-values-input-group-inset-item-before: () !default;
+$clay-color-map-values-input-group-inset-item-before: map-deep-merge((
+	font-weight: $font-weight-semi-bold,
+	padding-left: 10%,
+	padding-right: 0,
+	min-width: 1.125rem,
+), $clay-color-map-values-input-group-inset-item-before);
+
+// Clay Color Range
+
+$clay-color-range: () !default;
+$clay-color-range: map-deep-merge((
+	border-radius: 100px,
+	height: 0.5rem,
+	margin-bottom: 1.25rem,
+	margin-top: 0.25rem,
+	position: relative,
+), $clay-color-range);
+
+$clay-color-range-pointer: () !default;
+$clay-color-range-pointer: map-deep-merge((
+	margin-top: -7px,
+	top: 50%,
+), $clay-color-range-pointer);

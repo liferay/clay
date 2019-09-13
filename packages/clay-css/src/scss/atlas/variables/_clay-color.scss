@@ -1,0 +1,29 @@
+// Clay Color Dropdown Menu Close
+
+$clay-color-dropdown-menu-close: () !default;
+$clay-color-dropdown-menu-close: map-deep-merge((
+	color: $gray-600,
+	font-size: 0.875rem,
+	opacity: 1,
+	hover-bg: rgba($gray-900, 0.03),
+	focus-bg: rgba($gray-900, 0.03),
+	active-bg: rgba($gray-900, 0.06),
+	disabled-bg: transparent,
+), $clay-color-dropdown-menu-close);
+
+// Clay Color Dropdown Menu Component Action
+
+$clay-color-dropdown-menu-component-action: () !default;
+$clay-color-dropdown-menu-component-action: map-deep-merge((
+	hover-bg: null,
+	hover-color: null,
+	focus-box-shadow: null,
+	focus-color: null,
+), $clay-color-dropdown-menu-component-action);
+
+// Clay Color Pointer
+
+$clay-color-pointer: () !default;
+$clay-color-pointer: map-deep-merge((
+	focus-box-shadow: 0 0 0 0.125rem $primary-l1,
+), $clay-color-pointer);
