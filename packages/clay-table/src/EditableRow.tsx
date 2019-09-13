@@ -85,6 +85,7 @@ const EditableRow: React.FunctionComponent<IEditableRowProps> = ({
 					{editable && editing ? (
 						<ClayInput
 							className="form-control-sm"
+							data-testid={`input${index}`}
 							defaultValue={title}
 							onChange={event => {
 								cells[index].title = event.target.value;

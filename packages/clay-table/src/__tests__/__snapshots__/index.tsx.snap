@@ -1,5 +1,108 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ClayTable can edit a cell by clicking in Edit then filling an input and saving 1`] = `
+<div>
+  <div
+    class="table-responsive"
+  >
+    <table
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list"
+    >
+      <tbody>
+        <tr
+          class=""
+        >
+          <tr
+            class=""
+          >
+            <td
+              class="table-cell-expand"
+            >
+              White and Red
+            </td>
+            <td
+              class="table-cell-expand"
+            >
+              Africa
+            </td>
+            <td
+              class="table-cell-expand"
+            >
+              Brazil
+            </td>
+            <td
+              class="table-column-text-end"
+            >
+              <div
+                class="btn-group-nowrap btn-group"
+                role="group"
+              >
+                <button
+                  aria-label="Edit"
+                  class="btn btn-sm btn-secondary"
+                  type="button"
+                >
+                  Edit
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`ClayTable emits an event called onRowUpdated with modified values of the row 1`] = `
+<div>
+  <div
+    class="table-responsive"
+  >
+    <table
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list"
+    >
+      <tbody>
+        <tr
+          class=""
+        >
+          <tr
+            class=""
+          >
+            <td
+              class="table-cell-expand"
+            >
+              South America
+            </td>
+            <td
+              class="table-cell-expand"
+            >
+              Africa
+            </td>
+            <td
+              class="table-column-text-end"
+            >
+              <div
+                class="btn-group-nowrap btn-group"
+                role="group"
+              >
+                <button
+                  aria-label="Edit"
+                  class="btn btn-sm btn-secondary"
+                  type="button"
+                >
+                  Edit
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
 exports[`ClayTable renders 1`] = `
 <div>
   <div
@@ -335,6 +438,60 @@ exports[`ClayTable renders a table with multiple rows into Head 1`] = `
           class=""
         />
       </thead>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`ClayTable renders a table with one EditableRow 1`] = `
+<div>
+  <div
+    class="table-responsive"
+  >
+    <table
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list"
+    >
+      <tbody>
+        <tr
+          class=""
+        >
+          <tr
+            class=""
+          >
+            <td
+              class="table-cell-expand"
+            >
+              White and Red
+            </td>
+            <td
+              class="table-cell-expand"
+            >
+              South America
+            </td>
+            <td
+              class="table-cell-expand"
+            >
+              Brazil
+            </td>
+            <td
+              class="table-column-text-end"
+            >
+              <div
+                class="btn-group-nowrap btn-group"
+                role="group"
+              >
+                <button
+                  aria-label="Edit"
+                  class="btn btn-sm btn-secondary"
+                  type="button"
+                >
+                  Edit
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tr>
+      </tbody>
     </table>
   </div>
 </div>

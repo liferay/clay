@@ -6,7 +6,7 @@
 
 import React from 'react';
 
-import {cleanup, render} from '@testing-library/react';
+import {cleanup, fireEvent, render} from '@testing-library/react';
 
 import ClayTable from '..';
 
@@ -226,6 +226,117 @@ describe('ClayTable', () => {
 				</ClayTable.Body>
 			</ClayTable>
 		);
+		expect(container).toMatchSnapshot();
+	});
+	it('renders a table with one EditableRow', () => {
+		const cells = [
+			{
+				title: 'White and Red',
+			},
+			{
+				editable: true,
+				title: 'South America',
+			},
+			{
+				editable: true,
+				title: 'Brazil',
+			},
+		];
+
+		const {container} = render(
+			<ClayTable>
+				<ClayTable.Body>
+					<ClayTable.Row>
+						<ClayTable.EditableRow
+							cells={cells}
+							onRowUpdated={() => {}}
+						/>
+					</ClayTable.Row>
+				</ClayTable.Body>
+			</ClayTable>
+		);
+		expect(container).toMatchSnapshot();
+	});
+	it('can edit a cell by clicking in Edit then filling an input and saving', () => {
+		const cells = [
+			{
+				title: 'White and Red',
+			},
+			{
+				editable: true,
+				title: 'South America',
+			},
+			{
+				editable: true,
+				title: 'Brazil',
+			},
+		];
+
+		const {container, getByLabelText, getByTestId} = render(
+			<ClayTable>
+				<ClayTable.Body>
+					<ClayTable.Row>
+						<ClayTable.EditableRow
+							cells={cells}
+							onRowUpdated={() => {}}
+						/>
+					</ClayTable.Row>
+				</ClayTable.Body>
+			</ClayTable>
+		);
+
+		fireEvent.click(getByLabelText('Edit'));
+
+		const input = getByTestId('input1');
+
+		fireEvent.change(input, {target: {value: 'Africa'}});
+
+		fireEvent.click(getByLabelText('Save'));
+
+		expect(container).toMatchSnapshot();
+	});
+	it('emits an event called onRowUpdated with modified values of the row', () => {
+		const spyFn = jest.fn();
+
+		const cells = [
+			{
+				editable: true,
+				title: 'South America',
+			},
+			{
+				editable: true,
+				title: 'Brazil',
+			},
+		];
+
+		const {container, getByLabelText, getByTestId} = render(
+			<ClayTable>
+				<ClayTable.Body>
+					<ClayTable.Row>
+						<ClayTable.EditableRow
+							cells={cells}
+							onRowUpdated={spyFn}
+						/>
+					</ClayTable.Row>
+				</ClayTable.Body>
+			</ClayTable>
+		);
+
+		fireEvent.click(getByLabelText('Edit'));
+
+		const input = getByTestId('input1');
+
+		fireEvent.change(input, {target: {value: 'Africa'}});
+
+		fireEvent.click(getByLabelText('Save'));
+
+		expect(spyFn).toHaveBeenCalled();
+
+		expect(spyFn).toHaveBeenCalledWith([
+			{editable: true, title: 'South America'},
+			{editable: true, title: 'Africa'},
+		]);
+
 		expect(container).toMatchSnapshot();
 	});
 });
