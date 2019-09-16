@@ -19,6 +19,18 @@ const ENTER_KEY = 13;
 
 const DELIMITER_KEYS = [ENTER_KEY, COMMA_KEY];
 
+type Item = {
+	/**
+	 * Label to show.
+	 */
+	label: string;
+
+	/**
+	 * Hidden value of the item.
+	 */
+	value: string;
+};
+
 export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	/**
 	 * Title for the `Clear All` button.
@@ -63,22 +75,24 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	/**
 	 * Values that display as label items
 	 */
-	items: Array<string>;
+	items: Array<Item>;
 
-	/**
-	 * Callback for when items are added or removed
-	 */
-	onItemsChange: (val: Array<string>) => void;
+	onClearAllButtonClick: () => void;
 
 	/**
 	 * Callback for when the input value changes
 	 */
-	onInputChange: (val: string) => void;
+	onChange: (val: any) => void;
+
+	/**
+	 * Callback for when items are added or removed
+	 */
+	onItemsChange: (val: Array<Item>) => void;
 
 	/**
 	 * List of pre-populated items that will show up in a dropdown menu
 	 */
-	sourceItems?: Array<string>;
+	sourceItems?: Array<Item>;
 
 	/**
 	 * Path to spritemap for clay icons
@@ -97,12 +111,16 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 	isValid = true,
 	items = [],
 	onBlur = noop,
+	onClearAllButtonClick = () => {
+		onItemsChange([]);
+		onChange('');
+	},
 	onFocus = noop,
-	onInputChange,
-	onItemsChange,
+	onChange = noop,
+	onItemsChange = noop,
 	onKeyDown = noop,
 	onPaste = noop,
-	sourceItems,
+	sourceItems = [],
 	spritemap,
 	...otherProps
 }) => {
@@ -115,17 +133,21 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 	useLayoutEffect(() => {
 		if (sourceItems) {
 			const matchedItems = sourceItems.filter(
-				item => inputValue && item.match(inputValue)
+				item => inputValue && item.label.match(inputValue)
 			);
 
 			setActive(matchedItems.length !== 0);
 		}
 	}, [sourceItems, inputValue]);
 
-	const setNewValue = (newVal: string) => {
+	const setNewValue = (newVal: Item) => {
 		onItemsChange([...items, newVal]);
 
-		onInputChange('');
+		onChange('');
+	};
+
+	const getSourceItemByLabel = (label: string) => {
+		return sourceItems.find(item => item.label === label);
 	};
 
 	const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -136,7 +158,12 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 		if (inputValue && DELIMITER_KEYS.includes(keyCode)) {
 			event.preventDefault();
 
-			setNewValue(inputValue);
+			const newItem: Item = getSourceItemByLabel(inputValue) || {
+				label: inputValue,
+				value: inputValue,
+			};
+
+			setNewValue(newItem);
 		} else if (
 			!inputValue &&
 			keyCode === BACKSPACE_KEY &&
@@ -155,7 +182,16 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 
 		const pastedItems = pastedText
 			.split(',')
-			.map(item => item.trim())
+			.map(itemLabel => {
+				itemLabel = itemLabel.trim();
+
+				const newItem: Item = getSourceItemByLabel(itemLabel) || {
+					label: itemLabel,
+					value: itemLabel,
+				};
+
+				return newItem;
+			})
 			.filter(Boolean);
 
 		if (pastedItems.length > 0) {
@@ -190,7 +226,7 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 									closeButtonProps={{
 										'aria-label': sub(
 											closeButtonAriaLabel,
-											[item]
+											[item.label]
 										),
 										disabled,
 										onClick: () => {
@@ -221,14 +257,14 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 									}}
 									spritemap={spritemap}
 								>
-									{item}
+									{item.label}
 								</ClayLabel>
 
 								{inputName && (
 									<input
 										name={inputName}
 										type="hidden"
-										value={item}
+										value={item.value}
 									/>
 								)}
 							</React.Fragment>
@@ -244,7 +280,7 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 							setIsFocused(false);
 						}}
 						onChange={event =>
-							onInputChange(event.target.value.replace(',', ''))
+							onChange(event.target.value.replace(',', ''))
 						}
 						onFocus={e => {
 							onFocus(e);
@@ -268,9 +304,7 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 							<button
 								className="component-action"
 								onClick={() => {
-									onItemsChange([]);
-
-									onInputChange('');
+									onClearAllButtonClick();
 
 									if (inputRef.current) {
 										inputRef.current.focus();
@@ -293,7 +327,7 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 						</ClayInput.GroupItem>
 					)}
 
-				{sourceItems && (
+				{sourceItems.length > 0 && (
 					<ClayAutocomplete.DropDown
 						active={active}
 						alignElementRef={forwardRef}
@@ -302,29 +336,29 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 						<ClayDropDown.ItemList>
 							{sourceItems
 								.filter(
-									item => inputValue && item.match(inputValue)
+									item =>
+										inputValue &&
+										item.label.match(inputValue)
 								)
 								.map(item => (
 									<ClayAutocomplete.Item
 										innerRef={ref =>
 											focusManager.createScope(
 												ref,
-												`item${item}`,
+												`item${item.label}`,
 												true
 											)
 										}
-										key={item}
+										key={item.value}
 										match={inputValue}
 										onClick={() => {
-											onItemsChange([...items, item]);
-
-											onInputChange('');
+											setNewValue(item);
 
 											if (inputRef.current) {
 												inputRef.current.focus();
 											}
 										}}
-										value={item}
+										value={item.label}
 									/>
 								))}
 						</ClayDropDown.ItemList>
