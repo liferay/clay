@@ -20,7 +20,8 @@ type IRowProps = React.ComponentProps<typeof Row>;
 
 interface IEditableRowProps extends IRowProps {
 	/**
-	 * Defines the Cell.
+	 * Defines each Cell in a Row. A cell must have a `title`, can be
+	 * `editable` and can be overrided using `cellProps`.
 	 */
 	cells: Array<IEditableCell>;
 
