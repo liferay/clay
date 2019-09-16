@@ -25,7 +25,7 @@ const positions = [
 	'right-bottom',
 ] as const;
 
-storiesOf('ClayTooltip', module)
+storiesOf('Components|ClayTooltip', module)
 	.add('tooltip', () => (
 		<ClayTooltip
 			alignPosition={
