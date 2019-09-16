@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayLink from '@clayui/link';
+import ClayLink, {ClayLinkContext} from '@clayui/link';
 import Editor from './Editor';
 import React from 'react';
 
@@ -29,6 +29,37 @@ render(<Component />);`;
 export const Link = () => {
 	const scope = {ClayLink};
 	const code = LinkCode;
+
+	return <Editor code={code} scope={scope} />;
+};
+
+const LinkContextCode = `const Component = () => {
+	const ConfirmBeforeNavigate = ({children, href, ...otherProps}) => (
+		<a
+			{...otherProps}
+			href={href}
+			onClick={e =>
+				window.confirm('r u sure?') ? undefined : e.preventDefault()
+			}
+		>
+			{children}
+		</a>
+	);
+
+	return (
+		<ClayLinkContext.Provider value={ConfirmBeforeNavigate}>
+			<div>
+				<ClayLink href="#">Click me</ClayLink>
+			</div>
+		</ClayLinkContext.Provider>
+	);
+}
+
+render(<Component />);`;
+
+export const LinkContext = () => {
+	const scope = {ClayLink, ClayLinkContext};
+	const code = LinkContextCode;
 
 	return <Editor code={code} scope={scope} />;
 };

@@ -7,7 +7,7 @@ packageStatus: "Beta"
 sibling: "docs/components/css-links.html"
 ---
 
-import {Link} from '../../../src/components/clay/Link';
+import {Link, LinkContext} from '../../../src/components/clay/Link';
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
@@ -30,6 +30,10 @@ By default, when using ClayLink your component will be rendered as an anchor.
 You can style a link just passing [`displayType`](#api-displayType) property to value `secondary` or `primary`.
 
 <Link />
+
+Additionally, if you want to customize every Link component in your app, you are able to do so by using `<ClayLinkContext.Provider />`.
+
+<LinkContext />
 
 ## API
 
