@@ -25,7 +25,7 @@ const positions = [
 	'right-bottom',
 ] as const;
 
-storiesOf('ClayPopover', module).add('popover', () => (
+storiesOf('Components|ClayPopover', module).add('popover', () => (
 	<ClayPopover
 		alignPosition={
 			select('Align Position', positions, 'bottom') as 'bottom'
