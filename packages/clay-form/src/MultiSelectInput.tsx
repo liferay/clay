@@ -105,7 +105,7 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 	sourceItems,
 	spritemap,
 	...otherProps
-}) => {
+}: IProps) => {
 	const inputRef = useRef<HTMLInputElement | null>(null);
 	const lastItemRef = useRef<HTMLSpanElement | null>(null);
 	const [active, setActive] = useState(false);

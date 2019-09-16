@@ -19,11 +19,11 @@ description: "Multi select is the field type that allows writing text to create 
 </div>
 
 <div class="clay-site-alert alert alert-warning">
-	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/examples/grid/LayoutGrids.html">WAI-ARIA</a> accessibility pratices for grids when writting your markup.
+	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/examples/grid/LayoutGrids.html">WAI-ARIA</a> accessibility pratices for <b>grids</b> when writting your markup.
 </div>
 
 <div class="clay-site-alert alert alert-warning">
-	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#aria_lh_search">WAI-ARIA</a> accessibility pratices for search when writting your markup.
+	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#aria_lh_search">WAI-ARIA</a> accessibility pratices for <b>search</b> when writting your markup.
 </div>
 
 ## Example
