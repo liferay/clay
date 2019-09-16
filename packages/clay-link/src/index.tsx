@@ -63,6 +63,6 @@ const ClayLink = React.forwardRef<HTMLAnchorElement, IProps>(
 	}
 );
 
-export {ClayLinkContext as unstable_ClayLinkContext};
+export {ClayLinkContext};
 
 export default ClayLink;
