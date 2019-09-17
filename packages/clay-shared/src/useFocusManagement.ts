@@ -11,7 +11,7 @@ const TAB_KEY_CODE = 9;
 // https://github.com/facebook/react/blob/master/packages/shared/ReactWorkTags.js#L39
 const HostComponent = 5;
 
-export function useFocusManagement(scope: React.ReactElement) {
+export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 	const nextElementOutsideScopeRef = useRef<HTMLElement | null>(null);
 
 	// https://github.com/facebook/react/pull/15849#diff-39a673d38713257d5fe7d90aac2acb5aR107
@@ -82,9 +82,24 @@ export function useFocusManagement(scope: React.ReactElement) {
 		}
 	};
 
-	const getFocusableElementsInScope = (scope: any) => {
+	const getFiber = (scope: React.RefObject<HTMLElement | null>) => {
+		if (!scope.current) {
+			return null;
+		}
+
+		const internalKey = Object.keys(scope.current).find(
+			key => key.indexOf('__reactInternalInstance') === 0
+		);
+
+		if (internalKey) {
+			return (scope.current as any)[internalKey];
+		}
+
+		return null;
+	};
+
+	const getFocusableElementsInScope = (fiberNode: any) => {
 		const focusableElements: Array<any> = [];
-		const fiberNode = scope._owner;
 		const {child} = fiberNode;
 
 		if (child !== null) {
@@ -104,7 +119,7 @@ export function useFocusManagement(scope: React.ReactElement) {
 		}
 
 		if (event.keyCode === TAB_KEY_CODE && event.shiftKey) {
-			const elements = getFocusableElementsInScope(scope);
+			const elements = getFocusableElementsInScope(getFiber(scope));
 
 			if (elements.length === 0) {
 				if (event.currentTarget) {
@@ -191,7 +206,7 @@ export function useFocusManagement(scope: React.ReactElement) {
 			if (position === 0) {
 				// is out of scope, so we go back through the fiber to pick up the
 				// focusable elements from the scopes edge.
-				nextElement = getElementEdge(scope._owner, backwards);
+				nextElement = getElementEdge(scope, backwards);
 			} else {
 				nextElement = elements[position - 1];
 			}
@@ -199,10 +214,7 @@ export function useFocusManagement(scope: React.ReactElement) {
 			if (position === lastPosition) {
 				// is out of scope, so we go back through the fiber to pick up the
 				// focusable elements from the scopes edge.
-				nextElement = getElementEdge(
-					scope._owner,
-					backwards
-				) as HTMLElement;
+				nextElement = getElementEdge(scope, backwards) as HTMLElement;
 
 				// Control the tab + shift keydown of the element next to the scope to
 				// return the focus to the last scopo element, this is necessary for
@@ -237,7 +249,7 @@ export function useFocusManagement(scope: React.ReactElement) {
 	}, [scope]);
 
 	return {
-		focusNext: () => moveFocusInScope(scope),
-		focusPrevious: () => moveFocusInScope(scope, true),
+		focusNext: () => moveFocusInScope(getFiber(scope)),
+		focusPrevious: () => moveFocusInScope(getFiber(scope), true),
 	};
 }
