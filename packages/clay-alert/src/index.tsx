@@ -96,69 +96,81 @@ const ICON_MAP = {
 	warning: 'warning-full',
 };
 
-const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
+type Alert = React.ForwardRefExoticComponent<
+	IClayAlertProps & React.RefAttributes<HTMLDivElement>
+> & {
 	ToastContainer: typeof ToastContainer;
-} = ({
-	autoClose,
-	children,
-	className,
-	displayType = 'info',
-	onClose,
-	spritemap,
-	title,
-	variant,
-	...otherProps
-}: IClayAlertProps) => {
-	const {pauseAutoCloseTimer, startAutoCloseTimer} = useAutoClose(
-		autoClose,
-		onClose
-	);
+};
 
-	const ConditionalContainer: React.FunctionComponent<{}> = ({children}) =>
-		variant === 'stripe' ? (
-			<div className="container">{children}</div>
-		) : (
-			<>{children}</>
+const ClayAlert = React.forwardRef(
+	(
+		{
+			autoClose,
+			children,
+			className,
+			displayType = 'info',
+			onClose,
+			spritemap,
+			title,
+			variant,
+			...otherProps
+		}: IClayAlertProps,
+		ref
+	) => {
+		const {pauseAutoCloseTimer, startAutoCloseTimer} = useAutoClose(
+			autoClose,
+			onClose
 		);
 
-	return (
-		<div
-			{...otherProps}
-			className={classNames(className, 'alert', {
-				'alert-dismissible': onClose,
-				'alert-fluid': variant === 'stripe',
-				[`alert-${displayType}`]: displayType,
-			})}
-			onMouseOut={startAutoCloseTimer}
-			onMouseOver={pauseAutoCloseTimer}
-			role="alert"
-		>
-			<ConditionalContainer>
-				<span className="alert-indicator">
-					<Icon
-						spritemap={spritemap}
-						symbol={ICON_MAP[displayType]}
-					/>
-				</span>
+		const ConditionalContainer: React.FunctionComponent<{}> = ({
+			children,
+		}) =>
+			variant === 'stripe' ? (
+				<div className="container">{children}</div>
+			) : (
+				<>{children}</>
+			);
 
-				<strong className="lead">{title}</strong>
+		return (
+			<div
+				{...otherProps}
+				className={classNames(className, 'alert', {
+					'alert-dismissible': onClose,
+					'alert-fluid': variant === 'stripe',
+					[`alert-${displayType}`]: displayType,
+				})}
+				onMouseOut={startAutoCloseTimer}
+				onMouseOver={pauseAutoCloseTimer}
+				ref={ref}
+				role="alert"
+			>
+				<ConditionalContainer>
+					<span className="alert-indicator">
+						<Icon
+							spritemap={spritemap}
+							symbol={ICON_MAP[displayType]}
+						/>
+					</span>
 
-				{children}
+					<strong className="lead">{title}</strong>
 
-				{onClose && (
-					<button
-						aria-label="Close"
-						className="close"
-						onClick={onClose}
-						type="button"
-					>
-						<Icon spritemap={spritemap} symbol="times" />
-					</button>
-				)}
-			</ConditionalContainer>
-		</div>
-	);
-};
+					{children}
+
+					{onClose && (
+						<button
+							aria-label="Close"
+							className="close"
+							onClick={onClose}
+							type="button"
+						>
+							<Icon spritemap={spritemap} symbol="times" />
+						</button>
+					)}
+				</ConditionalContainer>
+			</div>
+		);
+	}
+) as Alert;
 
 ClayAlert.ToastContainer = ToastContainer;
 
