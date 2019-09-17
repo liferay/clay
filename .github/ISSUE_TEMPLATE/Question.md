@@ -1,7 +1,7 @@
 ---
 name: 🤔 Question
 about: Issues for asking questions about Clay
-labels: question
+labels: 'type: question'
 ---
 
 <!--
