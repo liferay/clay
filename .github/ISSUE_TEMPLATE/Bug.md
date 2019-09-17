@@ -1,12 +1,12 @@
 ---
 name: 🐛 Bug
 about: Issues for filing a Bug
-labels: bug
+labels: 'type: bug'
 ---
 
 <!--
 
-Before making a proposal, have you used the issue search functionality?
+Before making a bug, have you used the issue search functionality?
 
 -->
 
