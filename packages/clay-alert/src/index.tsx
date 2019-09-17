@@ -79,14 +79,14 @@ export interface IClayAlertProps extends React.HTMLAttributes<HTMLDivElement> {
 	spritemap?: string;
 
 	/**
+	 * Flag to indicate if the Alert should be rendered with stripe style.
+	 */
+	stripe?: boolean;
+
+	/**
 	 * The summary of the Alert, often is something like 'Error' or 'Info'.
 	 */
 	title: string;
-
-	/**
-	 * Determines the variant of the alert.
-	 */
-	variant?: 'stripe';
 }
 
 const ICON_MAP = {
@@ -105,8 +105,8 @@ const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
 	displayType = 'info',
 	onClose,
 	spritemap,
+	stripe = false,
 	title,
-	variant,
 	...otherProps
 }: IClayAlertProps) => {
 	const {pauseAutoCloseTimer, startAutoCloseTimer} = useAutoClose(
@@ -115,18 +115,14 @@ const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
 	);
 
 	const ConditionalContainer: React.FunctionComponent<{}> = ({children}) =>
-		variant === 'stripe' ? (
-			<div className="container">{children}</div>
-		) : (
-			<>{children}</>
-		);
+		stripe ? <div className="container">{children}</div> : <>{children}</>;
 
 	return (
 		<div
 			{...otherProps}
 			className={classNames(className, 'alert', {
 				'alert-dismissible': onClose,
-				'alert-fluid': variant === 'stripe',
+				'alert-fluid': stripe,
 				[`alert-${displayType}`]: displayType,
 			})}
 			onMouseOut={startAutoCloseTimer}

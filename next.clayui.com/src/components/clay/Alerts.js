@@ -17,7 +17,7 @@ const AlertCode = `const Component = () => {
 				This is a default alert
 			</ClayAlert>
 
-			<ClayAlert displayType="warning" spritemap={spritemap} title="Warning" variant="stripe">
+			<ClayAlert displayType="warning" spritemap={spritemap} stripe title="Warning">
                 This is a stripe alert
             </ClayAlert>
 		</>

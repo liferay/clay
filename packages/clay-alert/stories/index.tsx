@@ -88,8 +88,8 @@ storiesOf('Components|ClayAlert', module)
 				) as DisplayType
 			}
 			spritemap={spritemap}
+			stripe={boolean('Stripe Variant', false)}
 			title={text('Title', 'Info')}
-			variant={boolean('Stripe Variant', false) ? 'stripe' : undefined}
 		>
 			{text('Content', 'This is an alert!')}
 		</ClayAlert>
