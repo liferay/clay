@@ -23,19 +23,26 @@ interface IProps extends React.HTMLAttributes<HTMLOListElement> {
 	fixedWidth?: boolean;
 }
 
-const ClayMultiStepNav: React.FunctionComponent<IProps> & {
+type MultiStep = React.ForwardRefExoticComponent<
+	IProps & React.RefAttributes<HTMLOListElement>
+> & {
 	Divider: typeof ClayMultiStepNavDivider;
 	Indicator: typeof ClayMultiStepNavIndicator;
 	Item: typeof ClayMultiStepNavItem;
 	Title: typeof ClayMultiStepNavTitle;
-} = ({
-	autoCollapse = true,
-	children,
-	className,
-	fixedWidth,
-	...otherProps
-}: IProps) => {
-	return (
+};
+
+const ClayMultiStepNav = React.forwardRef(
+	(
+		{
+			autoCollapse = true,
+			children,
+			className,
+			fixedWidth,
+			...otherProps
+		}: IProps,
+		ref
+	) => (
 		<ol
 			className={classNames(
 				'multi-step-nav multi-step-indicator-label-bottom',
@@ -45,12 +52,13 @@ const ClayMultiStepNav: React.FunctionComponent<IProps> & {
 					['multi-step-nav-collapse-sm']: autoCollapse,
 				}
 			)}
+			ref={ref}
 			{...otherProps}
 		>
 			{children}
 		</ol>
-	);
-};
+	)
+) as MultiStep;
 
 ClayMultiStepNav.Divider = ClayMultiStepNavDivider;
 ClayMultiStepNav.Indicator = ClayMultiStepNavIndicator;
