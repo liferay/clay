@@ -4,7 +4,7 @@ description: "The status of each package is shown in the corresponding documenta
 order: 3
 ---
 
-Clay is constantly evolving and creating new components. The status of each package is shown in the corresponding documentation, The status of each package is shown in the corresponding documentation.
+Clay is constantly evolving and creating new components. The status of each package is shown in the corresponding documentation.
 
 <div class="table-responsive">
 	<table class="table table-autofit ">
