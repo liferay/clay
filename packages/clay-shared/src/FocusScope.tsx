@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React from 'react';
+import React, {useRef} from 'react';
 import {useFocusManagement} from './useFocusManagement';
 
 interface IProps {
@@ -30,7 +30,8 @@ export const FocusScope: React.FunctionComponent<IProps> = ({
 	arrowKeys = true,
 	children,
 }) => {
-	const focusManager = useFocusManagement(children);
+	const elRef = useRef<null | HTMLElement>(null);
+	const focusManager = useFocusManagement(elRef);
 
 	const onKeyDown = (event: React.KeyboardEvent<any>) => {
 		const {keyCode, shiftKey} = event;
@@ -60,5 +61,6 @@ export const FocusScope: React.FunctionComponent<IProps> = ({
 				children.props.onKeyDown(event);
 			}
 		},
+		ref: elRef,
 	});
 };
