@@ -11,8 +11,19 @@ import Row from './Row';
 import {ClayCheckbox, ClayInput} from '@clayui/form';
 
 interface IEditableCell {
+	/**
+	 * Passes props to the `ClayTable.Cell`.
+	 */
 	cellProps?: Object;
+
+	/**
+	 * Flag to indicate if the Cell can be editable or not.
+	 */
 	editable?: boolean;
+
+	/**
+	 * Title of the cell
+	 */
 	title: string;
 }
 
