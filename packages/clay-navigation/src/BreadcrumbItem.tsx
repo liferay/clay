@@ -63,6 +63,7 @@ export const BreadcrumbItem = ({
 			</ClayButton>
 		) : (
 			<span
+				aria-current="page"
 				className="breadcrumb-text-truncate"
 				data-testid={`testId${label}`}
 				title={label}

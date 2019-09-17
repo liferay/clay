@@ -69,21 +69,23 @@ export const ClayBreadcrumbNav: React.FunctionComponent<IProps> = ({
 		: items;
 
 	return (
-		<ol {...otherProps} className={classNames('breadcrumb', className)}>
-			{breadCrumbItems.map(
-				(item: IBreadcrumbItem | React.ReactNode, i: number) =>
-					React.isValidElement(item) ? (
-						React.cloneElement(item, {key: `ellipsis${i}`})
-					) : (
-						<BreadcrumbItem
-							active={(item as IBreadcrumbItem).active}
-							href={(item as IBreadcrumbItem).href}
-							key={`breadcrumbItem${i}`}
-							label={(item as IBreadcrumbItem).label}
-							onClick={(item as IBreadcrumbItem).onClick}
-						/>
-					)
-			)}
-		</ol>
+		<nav aria-label="Breadcrumb">
+			<ol {...otherProps} className={classNames('breadcrumb', className)}>
+				{breadCrumbItems.map(
+					(item: IBreadcrumbItem | React.ReactNode, i: number) =>
+						React.isValidElement(item) ? (
+							React.cloneElement(item, {key: `ellipsis${i}`})
+						) : (
+							<BreadcrumbItem
+								active={(item as IBreadcrumbItem).active}
+								href={(item as IBreadcrumbItem).href}
+								key={`breadcrumbItem${i}`}
+								label={(item as IBreadcrumbItem).label}
+								onClick={(item as IBreadcrumbItem).onClick}
+							/>
+						)
+				)}
+			</ol>
+		</nav>
 	);
 };

@@ -2,277 +2,296 @@
 
 exports[`ClayBreadcrumbNav calls callback when an item is clicked 1`] = `
 <div>
-  <ol
-    class="breadcrumb"
+  <nav
+    aria-label="Breadcrumb"
   >
-    <li
-      class="breadcrumb-item active"
+    <ol
+      class="breadcrumb"
     >
-      <span
-        class="breadcrumb-text-truncate"
-        data-testid="testId1"
-        title="1"
-      >
-        1
-      </span>
-    </li>
-    <li
-      class="breadcrumb-item"
-    >
-      <button
-        class="breadcrumb-link btn btn-unstyled"
-        data-testid="testId2"
-        title="2"
-        type="button"
+      <li
+        class="breadcrumb-item active"
       >
         <span
+          aria-current="page"
           class="breadcrumb-text-truncate"
+          data-testid="testId1"
+          title="1"
         >
-          2
+          1
         </span>
-      </button>
-    </li>
-    <li
-      class="dropdown breadcrumb-item"
-    >
-      <button
-        class="dropdown-toggle breadcrumb-link btn btn-unstyled"
-        data-testid="breadcrumbDropdownTrigger"
-        type="button"
+      </li>
+      <li
+        class="breadcrumb-item"
       >
-        <svg
-          class="lexicon-icon lexicon-icon-ellipsis-h"
-          role="presentation"
+        <button
+          class="breadcrumb-link btn btn-unstyled"
+          data-testid="testId2"
+          title="2"
+          type="button"
         >
-          <use
-            xlink:href="path/to/spritemap#ellipsis-h"
-          />
-        </svg>
-        <svg
-          class="lexicon-icon lexicon-icon-caret-bottom"
-          role="presentation"
-        >
-          <use
-            xlink:href="path/to/spritemap#caret-bottom"
-          />
-        </svg>
-      </button>
-    </li>
-    <li
-      class="breadcrumb-item"
-    >
-      <button
-        class="breadcrumb-link btn btn-unstyled"
-        data-testid="testId5"
-        title="5"
-        type="button"
+          <span
+            class="breadcrumb-text-truncate"
+          >
+            2
+          </span>
+        </button>
+      </li>
+      <li
+        class="dropdown breadcrumb-item"
       >
-        <span
-          class="breadcrumb-text-truncate"
+        <button
+          class="dropdown-toggle breadcrumb-link btn btn-unstyled"
+          data-testid="breadcrumbDropdownTrigger"
+          type="button"
         >
-          5
-        </span>
-      </button>
-    </li>
-  </ol>
+          <svg
+            class="lexicon-icon lexicon-icon-ellipsis-h"
+            role="presentation"
+          >
+            <use
+              xlink:href="path/to/spritemap#ellipsis-h"
+            />
+          </svg>
+          <svg
+            class="lexicon-icon lexicon-icon-caret-bottom"
+            role="presentation"
+          >
+            <use
+              xlink:href="path/to/spritemap#caret-bottom"
+            />
+          </svg>
+        </button>
+      </li>
+      <li
+        class="breadcrumb-item"
+      >
+        <button
+          class="breadcrumb-link btn btn-unstyled"
+          data-testid="testId5"
+          title="5"
+          type="button"
+        >
+          <span
+            class="breadcrumb-text-truncate"
+          >
+            5
+          </span>
+        </button>
+      </li>
+    </ol>
+  </nav>
 </div>
 `;
 
 exports[`ClayBreadcrumbNav renders 1`] = `
 <div>
-  <ol
-    class="breadcrumb"
+  <nav
+    aria-label="Breadcrumb"
   >
-    <li
-      class="breadcrumb-item active"
+    <ol
+      class="breadcrumb"
     >
-      <span
-        class="breadcrumb-text-truncate"
-        data-testid="testId1"
-        title="1"
-      >
-        1
-      </span>
-    </li>
-    <li
-      class="breadcrumb-item"
-    >
-      <a
-        class="breadcrumb-link"
-        data-testid="testId2"
-        href="#2"
-        role="button"
+      <li
+        class="breadcrumb-item active"
       >
         <span
+          aria-current="page"
           class="breadcrumb-text-truncate"
+          data-testid="testId1"
+          title="1"
         >
-          2
+          1
         </span>
-      </a>
-    </li>
-    <li
-      class="dropdown breadcrumb-item"
-    >
-      <button
-        class="dropdown-toggle breadcrumb-link btn btn-unstyled"
-        data-testid="breadcrumbDropdownTrigger"
-        type="button"
+      </li>
+      <li
+        class="breadcrumb-item"
       >
-        <svg
-          class="lexicon-icon lexicon-icon-ellipsis-h"
-          role="presentation"
+        <a
+          class="breadcrumb-link"
+          data-testid="testId2"
+          href="#2"
+          role="button"
         >
-          <use
-            xlink:href="path/to/spritemap#ellipsis-h"
-          />
-        </svg>
-        <svg
-          class="lexicon-icon lexicon-icon-caret-bottom"
-          role="presentation"
-        >
-          <use
-            xlink:href="path/to/spritemap#caret-bottom"
-          />
-        </svg>
-      </button>
-    </li>
-    <li
-      class="breadcrumb-item"
-    >
-      <a
-        class="breadcrumb-link"
-        data-testid="testId5"
-        href="#5"
-        role="button"
+          <span
+            class="breadcrumb-text-truncate"
+          >
+            2
+          </span>
+        </a>
+      </li>
+      <li
+        class="dropdown breadcrumb-item"
       >
-        <span
-          class="breadcrumb-text-truncate"
+        <button
+          class="dropdown-toggle breadcrumb-link btn btn-unstyled"
+          data-testid="breadcrumbDropdownTrigger"
+          type="button"
         >
-          5
-        </span>
-      </a>
-    </li>
-  </ol>
+          <svg
+            class="lexicon-icon lexicon-icon-ellipsis-h"
+            role="presentation"
+          >
+            <use
+              xlink:href="path/to/spritemap#ellipsis-h"
+            />
+          </svg>
+          <svg
+            class="lexicon-icon lexicon-icon-caret-bottom"
+            role="presentation"
+          >
+            <use
+              xlink:href="path/to/spritemap#caret-bottom"
+            />
+          </svg>
+        </button>
+      </li>
+      <li
+        class="breadcrumb-item"
+      >
+        <a
+          class="breadcrumb-link"
+          data-testid="testId5"
+          href="#5"
+          role="button"
+        >
+          <span
+            class="breadcrumb-text-truncate"
+          >
+            5
+          </span>
+        </a>
+      </li>
+    </ol>
+  </nav>
 </div>
 `;
 
 exports[`ClayBreadcrumbNav renders with properties passed by \`ellipsisProps\` 1`] = `
 <div>
-  <ol
-    class="breadcrumb"
+  <nav
+    aria-label="Breadcrumb"
   >
-    <li
-      class="breadcrumb-item active"
+    <ol
+      class="breadcrumb"
     >
-      <span
-        class="breadcrumb-text-truncate"
-        data-testid="testId1"
-        title="1"
-      >
-        1
-      </span>
-    </li>
-    <li
-      class="breadcrumb-item"
-    >
-      <a
-        class="breadcrumb-link"
-        data-testid="testId2"
-        href="#2"
-        role="button"
+      <li
+        class="breadcrumb-item active"
       >
         <span
+          aria-current="page"
           class="breadcrumb-text-truncate"
+          data-testid="testId1"
+          title="1"
         >
-          2
+          1
         </span>
-      </a>
-    </li>
-    <li
-      class="dropdown breadcrumb-item"
-      style="font-size: 15px;"
-    >
-      <button
-        class="dropdown-toggle breadcrumb-link btn btn-unstyled"
-        data-testid="breadcrumbDropdownTrigger"
-        type="button"
+      </li>
+      <li
+        class="breadcrumb-item"
       >
-        <svg
-          class="lexicon-icon lexicon-icon-ellipsis-h"
-          role="presentation"
+        <a
+          class="breadcrumb-link"
+          data-testid="testId2"
+          href="#2"
+          role="button"
         >
-          <use
-            xlink:href="path/to/spritemap#ellipsis-h"
-          />
-        </svg>
-        <svg
-          class="lexicon-icon lexicon-icon-caret-bottom"
-          role="presentation"
-        >
-          <use
-            xlink:href="path/to/spritemap#caret-bottom"
-          />
-        </svg>
-      </button>
-    </li>
-    <li
-      class="breadcrumb-item"
-    >
-      <a
-        class="breadcrumb-link"
-        data-testid="testId5"
-        href="#5"
-        role="button"
+          <span
+            class="breadcrumb-text-truncate"
+          >
+            2
+          </span>
+        </a>
+      </li>
+      <li
+        class="dropdown breadcrumb-item"
+        style="font-size: 15px;"
       >
-        <span
-          class="breadcrumb-text-truncate"
+        <button
+          class="dropdown-toggle breadcrumb-link btn btn-unstyled"
+          data-testid="breadcrumbDropdownTrigger"
+          type="button"
         >
-          5
-        </span>
-      </a>
-    </li>
-  </ol>
+          <svg
+            class="lexicon-icon lexicon-icon-ellipsis-h"
+            role="presentation"
+          >
+            <use
+              xlink:href="path/to/spritemap#ellipsis-h"
+            />
+          </svg>
+          <svg
+            class="lexicon-icon lexicon-icon-caret-bottom"
+            role="presentation"
+          >
+            <use
+              xlink:href="path/to/spritemap#caret-bottom"
+            />
+          </svg>
+        </button>
+      </li>
+      <li
+        class="breadcrumb-item"
+      >
+        <a
+          class="breadcrumb-link"
+          data-testid="testId5"
+          href="#5"
+          role="button"
+        >
+          <span
+            class="breadcrumb-text-truncate"
+          >
+            5
+          </span>
+        </a>
+      </li>
+    </ol>
+  </nav>
 </div>
 `;
 
 exports[`ClayBreadcrumbNav throws a warning when not passing \`active\` to any \`items\` 1`] = `
 <div>
-  <ol
-    class="breadcrumb"
+  <nav
+    aria-label="Breadcrumb"
   >
-    <li
-      class="breadcrumb-item"
+    <ol
+      class="breadcrumb"
     >
-      <a
-        class="breadcrumb-link"
-        data-testid="testId1"
-        href="#1"
-        role="button"
+      <li
+        class="breadcrumb-item"
       >
-        <span
-          class="breadcrumb-text-truncate"
+        <a
+          class="breadcrumb-link"
+          data-testid="testId1"
+          href="#1"
+          role="button"
         >
-          1
-        </span>
-      </a>
-    </li>
-    <li
-      class="breadcrumb-item"
-    >
-      <a
-        class="breadcrumb-link"
-        data-testid="testId2"
-        href="#2"
-        role="button"
+          <span
+            class="breadcrumb-text-truncate"
+          >
+            1
+          </span>
+        </a>
+      </li>
+      <li
+        class="breadcrumb-item"
       >
-        <span
-          class="breadcrumb-text-truncate"
+        <a
+          class="breadcrumb-link"
+          data-testid="testId2"
+          href="#2"
+          role="button"
         >
-          2
-        </span>
-      </a>
-    </li>
-  </ol>
+          <span
+            class="breadcrumb-text-truncate"
+          >
+            2
+          </span>
+        </a>
+      </li>
+    </ol>
+  </nav>
 </div>
 `;
 
