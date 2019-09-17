@@ -566,7 +566,7 @@ storiesOf('Components|ClayTable', module)
 			],
 		});
 
-		const onRowUpdated = (cellsUpdated: any) => {
+		const onRowChange = (cellsUpdated: any) => {
 			const cells = [...state.cells];
 			cells.map((cell, index) => {
 				if (cell !== cellsUpdated[index]) {
@@ -602,7 +602,7 @@ storiesOf('Components|ClayTable', module)
 				<ClayTable.Body>
 					<ClayTable.EditableRow
 						cells={state.cells}
-						onRowUpdated={onRowUpdated}
+						onRowChange={onRowChange}
 						selectable
 					/>
 					<ClayTable.Row>

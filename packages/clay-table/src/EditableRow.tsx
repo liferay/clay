@@ -44,7 +44,7 @@ interface IEditableRowProps extends IRowProps {
 	/**
 	 * Callback function for when the `Save` button is clicked.
 	 */
-	onRowUpdated?: (newEntries: Array<IEditableCell>) => void;
+	onRowChange?: (newEntries: Array<IEditableCell>) => void;
 
 	/**
 	 * Labels for changing some texts inside the component.
@@ -71,7 +71,7 @@ const DEFAULT_LABELS = {
 const EditableRow: React.FunctionComponent<IEditableRowProps> = ({
 	cells,
 	onCheckboxChange = () => {},
-	onRowUpdated = () => {},
+	onRowChange = () => {},
 	labels = DEFAULT_LABELS,
 	selectable = false,
 	...otherProps
@@ -118,7 +118,7 @@ const EditableRow: React.FunctionComponent<IEditableRowProps> = ({
 							aria-label={labels.save}
 							displayType="primary"
 							onClick={() => {
-								onRowUpdated(cellsCopy);
+								onRowChange(cellsCopy);
 								setEditing(false);
 							}}
 							small
