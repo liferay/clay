@@ -67,6 +67,7 @@ const EditableRow: React.FunctionComponent<IEditableRowProps> = ({
 }: IEditableRowProps) => {
 	const [check, setCheck] = React.useState<boolean>(false);
 	const [editing, setEditing] = React.useState<boolean>(false);
+	const cellsCopy = [...cells];
 
 	return (
 		<Row active={check} {...otherProps}>
@@ -89,7 +90,7 @@ const EditableRow: React.FunctionComponent<IEditableRowProps> = ({
 							data-testid={`input${index}`}
 							defaultValue={title}
 							onChange={event => {
-								cells[index].title = event.target.value;
+								cellsCopy[index].title = event.target.value;
 							}}
 							placeholder={title}
 							type="text"
@@ -106,7 +107,7 @@ const EditableRow: React.FunctionComponent<IEditableRowProps> = ({
 							aria-label={labels.save}
 							displayType="primary"
 							onClick={() => {
-								onRowUpdated(cells);
+								onRowUpdated(cellsCopy);
 								setEditing(false);
 							}}
 							small
