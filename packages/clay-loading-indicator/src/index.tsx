@@ -19,22 +19,20 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	small?: boolean;
 }
 
-const ClayLoadingIndicator: React.FunctionComponent<IProps> = ({
-	className,
-	light,
-	small,
-	...otherProps
-}: IProps) => {
-	return (
-		<span
-			aria-hidden="true"
-			{...otherProps}
-			className={classNames(className, 'loading-animation', {
-				'loading-animation-light': light,
-				'loading-animation-sm': small,
-			})}
-		/>
-	);
-};
+const ClayLoadingIndicator = React.forwardRef<HTMLSpanElement, IProps>(
+	({className, light, small, ...otherProps}: IProps, ref) => {
+		return (
+			<span
+				aria-hidden="true"
+				{...otherProps}
+				className={classNames(className, 'loading-animation', {
+					'loading-animation-light': light,
+					'loading-animation-sm': small,
+				})}
+				ref={ref}
+			/>
+		);
+	}
+);
 
 export default ClayLoadingIndicator;
