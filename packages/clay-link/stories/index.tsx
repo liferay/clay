@@ -6,7 +6,7 @@
 
 import '@clayui/css/lib/css/atlas.css';
 import ClayIcon from '@clayui/icon';
-import ClayLink, {unstable_ClayLinkContext} from '../src';
+import ClayLink, {ClayLinkContext} from '../src';
 import React from 'react';
 import {storiesOf} from '@storybook/react';
 
@@ -93,8 +93,8 @@ storiesOf('Components|ClayLink', module)
 		);
 
 		return (
-			<unstable_ClayLinkContext.Provider value={ConfirmLink}>
+			<ClayLinkContext.Provider value={ConfirmLink}>
 				<ClayLink href="#1">{'Click to Navigate'}</ClayLink>
-			</unstable_ClayLinkContext.Provider>
+			</ClayLinkContext.Provider>
 		);
 	});
