@@ -249,7 +249,7 @@ describe('ClayTable', () => {
 					<ClayTable.Row>
 						<ClayTable.EditableRow
 							cells={cells}
-							onRowUpdated={() => {}}
+							onRowChange={() => {}}
 						/>
 					</ClayTable.Row>
 				</ClayTable.Body>
@@ -278,7 +278,7 @@ describe('ClayTable', () => {
 					<ClayTable.Row>
 						<ClayTable.EditableRow
 							cells={cells}
-							onRowUpdated={() => {}}
+							onRowChange={() => {}}
 						/>
 					</ClayTable.Row>
 				</ClayTable.Body>
@@ -295,7 +295,7 @@ describe('ClayTable', () => {
 
 		expect(container).toMatchSnapshot();
 	});
-	it('emits an event called onRowUpdated with modified values of the row', () => {
+	it('emits an event called onRowChange with modified values of the row', () => {
 		const spyFn = jest.fn();
 
 		const cells = [
@@ -315,7 +315,7 @@ describe('ClayTable', () => {
 					<ClayTable.Row>
 						<ClayTable.EditableRow
 							cells={cells}
-							onRowUpdated={spyFn}
+							onRowChange={spyFn}
 						/>
 					</ClayTable.Row>
 				</ClayTable.Body>
