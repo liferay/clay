@@ -70,7 +70,7 @@ export const ClayMultiStepNavWithBasicItems: React.FunctionComponent<
 	spritemap,
 	steps,
 	...otherProps
-}) => {
+}: IProps) => {
 	let dropdownItems;
 	let showSteps = steps;
 	const indexEnd = steps.length - 1;

@@ -28,7 +28,13 @@ const ClayMultiStepNav: React.FunctionComponent<IProps> & {
 	Indicator: typeof ClayMultiStepNavIndicator;
 	Item: typeof ClayMultiStepNavItem;
 	Title: typeof ClayMultiStepNavTitle;
-} = ({autoCollapse = true, children, className, fixedWidth, ...otherProps}) => {
+} = ({
+	autoCollapse = true,
+	children,
+	className,
+	fixedWidth,
+	...otherProps
+}: IProps) => {
 	return (
 		<ol
 			className={classNames(
