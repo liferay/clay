@@ -108,7 +108,12 @@ storiesOf('Components|ClayList', module)
 			<ClayList.Item flex>
 				<ClayList.ItemField>{'Item 2'}</ClayList.ItemField>
 				<ClayList.ItemField expand>
-					{'Hover this item for action menu'}
+					<ClayList.ItemTitle>
+						{'Item Title and expanded'}
+					</ClayList.ItemTitle>
+					<ClayList.ItemText>
+						{'Hover this item for action menu'}
+					</ClayList.ItemText>
 				</ClayList.ItemField>
 				<ClayList.ItemField>
 					<ClayList.QuickActionMenu>
