@@ -10,7 +10,7 @@ import Nav from './Nav';
 import React from 'react';
 import {useTransitionHeight} from '@clayui/shared';
 
-interface IItem {
+interface IItem extends React.ComponentProps<typeof Nav.Item> {
 	/**
 	 * Flag to indicate if item is active.
 	 */
@@ -87,6 +87,7 @@ function Item({
 	level,
 	onClick,
 	spritemap,
+	...otherProps
 }: INavItemProps) {
 	const menuRef = React.useRef(null);
 	const [expanded, setExpaned] = React.useState(!initialExpanded);
@@ -103,7 +104,7 @@ function Item({
 	);
 
 	return (
-		<Nav.Item>
+		<Nav.Item {...otherProps}>
 			<Nav.Link
 				active={active}
 				collapsed={showIconCollapsed}
@@ -154,11 +155,13 @@ export const ClayVerticalNav: React.FunctionComponent<IProps> = ({
 	items,
 	large,
 	spritemap,
+	...otherProps
 }) => {
 	const [active, setActive] = React.useState(false);
 
 	return (
 		<nav
+			{...otherProps}
 			className={classNames('menubar menubar-transparent', {
 				['menubar-vertical-expand-lg']: large,
 				['menubar-vertical-expand-md']: !large,
