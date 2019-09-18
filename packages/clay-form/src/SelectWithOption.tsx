@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import Option from './Option';
 import React from 'react';
 import Select from './Select';
 
@@ -12,7 +11,7 @@ interface IProps extends React.ComponentProps<typeof Select> {
 	/**
 	 * Options of the select.
 	 */
-	options: Array<React.ComponentProps<typeof Option>>;
+	options: Array<React.ComponentProps<typeof Select.Option>>;
 }
 
 const ClaySelectWithOption: React.FunctionComponent<IProps> = ({
@@ -21,7 +20,7 @@ const ClaySelectWithOption: React.FunctionComponent<IProps> = ({
 }: IProps) => (
 	<Select {...otherProps}>
 		{options.map((option, index) => (
-			<Option {...option} key={index} />
+			<Select.Option {...option} key={index} />
 		))}
 	</Select>
 );
