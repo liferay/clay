@@ -26,6 +26,7 @@
 		"@clayui/css": "^3.0.0-milestone.1"
 	},
 	"peerDependencies": {
+		"@clayui/css": "3.x",
 		"react": "^16.8.1",
 		"react-dom": "^16.8.1"
 	},
