@@ -26,11 +26,7 @@ interface IProps extends React.HTMLAttributes<HTMLSpanElement> {
 	label?: string | number;
 }
 
-type Badge = React.ForwardRefExoticComponent<
-	IProps & React.RefAttributes<HTMLSpanElement>
->;
-
-const ClayBadge = React.forwardRef(
+const ClayBadge = React.forwardRef<HTMLSpanElement, IProps>(
 	(
 		{className, displayType = 'primary', label, ...otherProps}: IProps,
 		ref
@@ -43,6 +39,6 @@ const ClayBadge = React.forwardRef(
 			<span className="badge-item badge-item-expand">{label}</span>
 		</span>
 	)
-) as Badge;
+);
 
 export default ClayBadge;
