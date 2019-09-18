@@ -54,7 +54,7 @@ exports[`ClayTable can edit a cell by clicking in Edit then filling an input and
 </div>
 `;
 
-exports[`ClayTable emits an event called onRowUpdated with modified values of the row 1`] = `
+exports[`ClayTable emits an event called onRowChange with modified values of the row 1`] = `
 <div>
   <div
     class="table-responsive"
