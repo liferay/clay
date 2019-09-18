@@ -165,7 +165,7 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 	};
 
 	return (
-		<FocusScope arrowKeys={false}>
+		<FocusScope arrowKeysUpDown={false}>
 			<div
 				className={classNames(
 					'form-control form-control-tag-group input-group',
