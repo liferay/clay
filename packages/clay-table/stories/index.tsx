@@ -6,7 +6,6 @@
 
 import '@clayui/css/lib/css/atlas.css';
 import ClayButton from '@clayui/button';
-import ClayDropDown, {Align} from '@clayui/drop-down';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClayProgressBar from '@clayui/progress-bar';
@@ -14,6 +13,7 @@ import ClayTable from '../src';
 import React from 'react';
 import {boolean, select} from '@storybook/addon-knobs';
 import {ClayCheckbox} from '@clayui/form';
+import {ClayDropDownWithItems} from '@clayui/drop-down';
 import {storiesOf} from '@storybook/react';
 
 function ClayCheckboxWithState(props: any) {
@@ -31,41 +31,23 @@ function ClayCheckboxWithState(props: any) {
 	);
 }
 
-const DropDownWithState: React.FunctionComponent<any> = ({
-	children,
-	...others
-}) => {
-	const [active, setActive] = React.useState(false);
-	return (
-		<ClayDropDown
-			{...others}
-			active={active}
-			alignmentPosition={Align.BottomRight}
-			onActiveChange={newVal => setActive(newVal)}
-			trigger={<ClayIcon spritemap={spritemap} symbol="ellipsis-v" />}
-		>
-			{children}
-		</ClayDropDown>
-	);
-};
-
 const thumbnail = require('./static/thumbnail_coffee.jpg');
 
-function ClayDropdownWithTrigger() {
+function Dropdown() {
 	return (
-		<DropDownWithState>
-			<ClayDropDown.ItemList>
-				{[
-					{href: '#1', label: 'One'},
-					{href: '#2', label: 'Two'},
-					{href: '#3', label: 'Three'},
-				].map((item, i) => (
-					<ClayDropDown.Item href={item.href} key={i}>
-						{item.label}
-					</ClayDropDown.Item>
-				))}
-			</ClayDropDown.ItemList>
-		</DropDownWithState>
+		<ClayDropDownWithItems
+			items={[
+				{href: '#1', label: 'One'},
+				{href: '#2', label: 'Two'},
+				{href: '#3', label: 'Three'},
+			]}
+			spritemap={spritemap}
+			trigger={
+				<ClayButton className="component-action" monospaced>
+					<ClayIcon spritemap={spritemap} symbol="ellipsis-v" />
+				</ClayButton>
+			}
+		/>
 	);
 }
 
@@ -166,7 +148,7 @@ storiesOf('Components|ClayTable', module)
 			'',
 			<DownloadButton key={5} />,
 			<ClayProgressBar key={6} spritemap={spritemap} value={0} />,
-			<ClayDropdownWithTrigger key={7} />,
+			<Dropdown key={7} />,
 		];
 
 		return (
@@ -281,7 +263,7 @@ storiesOf('Components|ClayTable', module)
 								/>
 							</ClayTable.Cell>
 							<ClayTable.Cell>
-								<ClayDropdownWithTrigger />
+								<Dropdown />
 							</ClayTable.Cell>
 						</ClayTable.Row>
 
@@ -313,7 +295,7 @@ storiesOf('Components|ClayTable', module)
 								/>
 							</ClayTable.Cell>
 							<ClayTable.Cell>
-								<ClayDropdownWithTrigger />
+								<Dropdown />
 							</ClayTable.Cell>
 						</ClayTable.Row>
 
@@ -504,7 +486,7 @@ storiesOf('Components|ClayTable', module)
 							<a href="1">{'JPG'}</a>
 						</ClayTable.Cell>
 						<ClayTable.Cell>
-							<ClayDropdownWithTrigger />
+							<Dropdown />
 						</ClayTable.Cell>
 					</ClayTable.Row>
 					<ClayTable.Row>
@@ -523,7 +505,7 @@ storiesOf('Components|ClayTable', module)
 							<a href="2">{'GIF'}</a>
 						</ClayTable.Cell>
 						<ClayTable.Cell>
-							<ClayDropdownWithTrigger />
+							<Dropdown />
 						</ClayTable.Cell>
 					</ClayTable.Row>
 					<ClayTable.Row>
@@ -542,7 +524,7 @@ storiesOf('Components|ClayTable', module)
 							<a href="3">{'TIFF'}</a>
 						</ClayTable.Cell>
 						<ClayTable.Cell>
-							<ClayDropdownWithTrigger />
+							<Dropdown />
 						</ClayTable.Cell>
 					</ClayTable.Row>
 				</ClayTable.Body>
