@@ -38,6 +38,7 @@ const ClayLabelWithState = () => {
 				) as 'secondary'
 			}
 			href={text('Href', '')}
+			large={boolean('Large', false)}
 			spritemap={spritemap}
 		>
 			{text('Label', 'Label')}
