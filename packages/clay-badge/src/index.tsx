@@ -26,18 +26,19 @@ interface IProps extends React.HTMLAttributes<HTMLSpanElement> {
 	label?: string | number;
 }
 
-const ClayBadge: React.FunctionComponent<IProps> = ({
-	className,
-	displayType = 'primary',
-	label,
-	...otherProps
-}: IProps) => (
-	<span
-		{...otherProps}
-		className={classNames('badge', `badge-${displayType}`, className)}
-	>
-		<span className="badge-item badge-item-expand">{label}</span>
-	</span>
+const ClayBadge = React.forwardRef<HTMLSpanElement, IProps>(
+	(
+		{className, displayType = 'primary', label, ...otherProps}: IProps,
+		ref
+	) => (
+		<span
+			{...otherProps}
+			className={classNames('badge', `badge-${displayType}`, className)}
+			ref={ref}
+		>
+			<span className="badge-item badge-item-expand">{label}</span>
+		</span>
+	)
 );
 
 export default ClayBadge;
