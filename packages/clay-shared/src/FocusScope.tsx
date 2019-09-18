@@ -9,10 +9,16 @@ import {useFocusManagement} from './useFocusManagement';
 
 interface IProps {
 	/**
+	 * Flag indicates whether the focus will also be controlled with the right
+	 * and left arrow keys.
+	 */
+	arrowKeysLeftRight?: boolean;
+
+	/**
 	 * Flag that indicates if the focus will be controlled by the arrow keys.
 	 * Disabling means that it will still be controlled by tab and shift + tab.
 	 */
-	arrowKeys?: boolean;
+	arrowKeysUpDown?: boolean;
 
 	children: React.ReactElement & {
 		ref?: React.MutableRefObject<HTMLElement>;
@@ -21,6 +27,8 @@ interface IProps {
 
 const ARROW_DOWN_KEY_CODE = 40;
 const ARROW_UP_KEY_CODE = 38;
+const ARROW_RIGHT_KEY_CODE = 39;
+const ARROW_LEFT_KEY_CODE = 37;
 const TAB_KEY_CODE = 9;
 
 /**
@@ -29,7 +37,8 @@ const TAB_KEY_CODE = 9;
  * event.
  */
 export const FocusScope: React.FunctionComponent<IProps> = ({
-	arrowKeys = true,
+	arrowKeysLeftRight = false,
+	arrowKeysUpDown = true,
 	children,
 }) => {
 	const elRef = useRef<null | HTMLElement>(null);
@@ -39,13 +48,15 @@ export const FocusScope: React.FunctionComponent<IProps> = ({
 		const {keyCode, shiftKey} = event;
 
 		if (
-			(arrowKeys && keyCode === ARROW_DOWN_KEY_CODE) ||
+			(arrowKeysUpDown && keyCode === ARROW_DOWN_KEY_CODE) ||
+			(arrowKeysLeftRight && keyCode === ARROW_RIGHT_KEY_CODE) ||
 			(keyCode === TAB_KEY_CODE && !shiftKey)
 		) {
 			event.preventDefault();
 			focusManager.focusNext();
 		} else if (
-			(arrowKeys && keyCode === ARROW_UP_KEY_CODE) ||
+			(arrowKeysUpDown && keyCode === ARROW_UP_KEY_CODE) ||
+			(arrowKeysLeftRight && keyCode === ARROW_LEFT_KEY_CODE) ||
 			(keyCode === TAB_KEY_CODE && shiftKey)
 		) {
 			event.preventDefault();

@@ -298,7 +298,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 						</ClayInput.GroupText>
 					</ClayInput.GroupItem>
 				)}
-				<FocusScope arrowKeys={false}>
+				<FocusScope arrowKeysLeftRight arrowKeysUpDown={false}>
 					<ClayInput.GroupItem shrink>
 						<div
 							className={classNames('form-control', {
