@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClaySelect, {ClaySelectWithOption} from '..';
 import React from 'react';
+import {ClaySelect, ClaySelectWithOption} from '..';
 import {cleanup, render} from '@testing-library/react';
 
 const options = [
