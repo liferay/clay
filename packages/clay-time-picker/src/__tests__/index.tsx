@@ -64,6 +64,12 @@ describe('BasicRendering', () => {
 
 		expect(container.innerHTML).toMatchSnapshot();
 	});
+
+	it('renders time picker with a hidden input when the name attribute is provided', () => {
+		const {container} = render(<TimePickerWithState name="time-picker" />);
+
+		expect(container.innerHTML).toMatchSnapshot();
+	});
 });
 
 describe('IncrementalInteractions', () => {

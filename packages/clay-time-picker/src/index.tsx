@@ -66,6 +66,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	onInputChange: (values: Input) => void;
 
 	/**
+	 * Name attribute for the hidden input (used for form submission).
+	 */
+	name?: string;
+
+	/**
 	 * Sets the values for the hour, minute, or am/pm input.
 	 */
 	values: Input;
@@ -125,6 +130,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 	config = DEFAULT_CONFIG,
 	disabled = false,
 	icon = false,
+	name,
 	spritemap,
 	timezone,
 	use12Hours = false,
@@ -399,6 +405,13 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 										readOnly
 										type="text"
 										value={values.ampm || DEFAULT_VALUE}
+									/>
+								)}
+								{name && (
+									<input
+										name={name}
+										type="hidden"
+										value={`${values.hours}:${values.minutes}`}
 									/>
 								)}
 							</div>
