@@ -23,35 +23,33 @@ interface IProps extends React.SVGAttributes<SVGSVGElement> {
 	symbol: string;
 }
 
-const ClayIcon: React.FunctionComponent<IProps> = ({
-	className,
-	spritemap,
-	symbol,
-	...otherProps
-}: IProps) => {
-	let spriteMapVal = useContext(ClayIconSpriteContext);
+const ClayIcon = React.forwardRef<SVGSVGElement, IProps>(
+	({className, spritemap, symbol, ...otherProps}: IProps, ref) => {
+		let spriteMapVal = useContext(ClayIconSpriteContext);
 
-	if (spritemap) {
-		spriteMapVal = spritemap;
+		if (spritemap) {
+			spriteMapVal = spritemap;
+		}
+
+		warning(
+			spriteMapVal,
+			'ClayIcon requires a `spritemap` via prop or ClayIconSpriteContext'
+		);
+
+		return (
+			<svg
+				{...otherProps}
+				className={classNames(
+					`lexicon-icon lexicon-icon-${symbol}`,
+					className
+				)}
+				ref={ref}
+				role="presentation"
+			>
+				<use xlinkHref={`${spriteMapVal}#${symbol}`} />
+			</svg>
+		);
 	}
-
-	warning(
-		spriteMapVal,
-		'ClayIcon requires a `spritemap` via prop or ClayIconSpriteContext'
-	);
-
-	return (
-		<svg
-			{...otherProps}
-			className={classNames(
-				`lexicon-icon lexicon-icon-${symbol}`,
-				className
-			)}
-			role="presentation"
-		>
-			<use xlinkHref={`${spriteMapVal}#${symbol}`} />
-		</svg>
-	);
-};
+);
 
 export default ClayIcon;
