@@ -161,7 +161,7 @@ export const ClayVerticalNav: React.FunctionComponent<IProps> = ({
 	large,
 	spritemap,
 	...otherProps
-}) => {
+}: IProps) => {
 	const [active, setActive] = React.useState(false);
 
 	return (
