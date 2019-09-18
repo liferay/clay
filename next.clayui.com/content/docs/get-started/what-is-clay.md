@@ -23,7 +23,7 @@ It is composed by 3 different layers, each one easy to understand and designed t
 			</tr>
 			<tr>
 				<td class="font-weight-bold">Simple</td>
-				<td class="table-cell-expand">Composed by HTML and CSS this is the perfect layer for those who want to use Clay as a simple library for their projects</td>
+				<td class="table-cell-expand">Composed of HTML and CSS this is the perfect layer for those who want to use Clay as a simple library for their projects</td>
 			</tr>
         </tbody>
     </table>
