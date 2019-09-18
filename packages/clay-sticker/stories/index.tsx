@@ -102,6 +102,7 @@ storiesOf('Components|ClaySticker', module)
 				<div className="col-sm-1">
 					<div className="aspect-ratio">
 						<img
+							alt=""
 							className="aspect-ratio-item aspect-ratio-item-fluid"
 							src="https://via.placeholder.com/200"
 						/>
@@ -147,6 +148,7 @@ storiesOf('Components|ClaySticker', module)
 			<ClaySticker displayType="dark" size="xl">
 				<div className="sticker-overlay">
 					<img
+						alt=""
 						className="sticker-img"
 						src="https://via.placeholder.com/200"
 					/>
