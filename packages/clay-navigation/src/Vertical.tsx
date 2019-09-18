@@ -22,6 +22,11 @@ interface IItem {
 	onClick?: () => void;
 
 	/**
+	 * Object of props for an item.
+	 */
+	itemProps?: Object;
+
+	/**
 	 * Link href for item.
 	 */
 	href?: string;
@@ -82,6 +87,7 @@ function Item({
 	active,
 	href,
 	initialExpanded = false,
+	itemProps = {},
 	items: subItems,
 	label,
 	level,
@@ -103,7 +109,7 @@ function Item({
 	);
 
 	return (
-		<Nav.Item>
+		<Nav.Item {...itemProps}>
 			<Nav.Link
 				active={active}
 				collapsed={showIconCollapsed}
@@ -154,6 +160,7 @@ export const ClayVerticalNav: React.FunctionComponent<IProps> = ({
 	items,
 	large,
 	spritemap,
+	...otherProps
 }) => {
 	const [active, setActive] = React.useState(false);
 
@@ -163,6 +170,7 @@ export const ClayVerticalNav: React.FunctionComponent<IProps> = ({
 				['menubar-vertical-expand-lg']: large,
 				['menubar-vertical-expand-md']: !large,
 			})}
+			{...otherProps}
 		>
 			<button
 				className="menubar-toggler"
