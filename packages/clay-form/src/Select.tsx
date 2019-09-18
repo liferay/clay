@@ -5,10 +5,13 @@
  */
 
 import classNames from 'classnames';
-import Option from './Option';
-import React, {SelectHTMLAttributes} from 'react';
+import React, {OptionHTMLAttributes, SelectHTMLAttributes} from 'react';
 
-const ClaySelectSelect: React.FunctionComponent<
+const Option: React.FunctionComponent<
+	OptionHTMLAttributes<HTMLOptionElement>
+> = ({label, ...otherProps}) => <option {...otherProps}>{label}</option>;
+
+const ClaySelect: React.FunctionComponent<
 	SelectHTMLAttributes<HTMLSelectElement>
 > & {
 	Option: typeof Option;
@@ -18,6 +21,6 @@ const ClaySelectSelect: React.FunctionComponent<
 	</select>
 );
 
-ClaySelectSelect.Option = Option;
+ClaySelect.Option = Option;
 
-export default ClaySelectSelect;
+export default ClaySelect;
