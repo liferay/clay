@@ -58,7 +58,7 @@ interface IProps {
 	/**
 	 * Flag to indicate if `menubar-vertical-expand-lg` class is applied.
 	 */
-	large?: IItemWithItems;
+	large?: boolean;
 
 	/**
 	 * Path to the spritemap that Icon should use when referencing symbols.
