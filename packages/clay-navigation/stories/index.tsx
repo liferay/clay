@@ -6,8 +6,8 @@
 
 import '@clayui/css/lib/css/atlas.css';
 import React from 'react';
+import {boolean, number} from '@storybook/addon-knobs';
 import {ClayBreadcrumbNav, ClayVerticalNav} from '../src';
-import {number} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
@@ -207,6 +207,7 @@ storiesOf('Components|ClayNavigation', module)
 						label: 'Seven',
 					},
 				]}
+				large={boolean('large: ', false)}
 				spritemap={spritemap}
 			/>
 		);
