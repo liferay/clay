@@ -32,10 +32,8 @@
 		"classnames": "^2.2.6",
 		"warning": "^4.0.3"
 	},
-	"devDependencies": {
-		"@clayui/css": "^3.0.0-alpha.1"
-	},
 	"peerDependencies": {
+		"@clayui/css": "3.x",
 		"react": "^16.8.1",
 		"react-dom": "^16.8.1"
 	},

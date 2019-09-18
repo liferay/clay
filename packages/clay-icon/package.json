@@ -30,6 +30,7 @@
 		"warning": "^4.0.3"
 	},
 	"peerDependencies": {
+		"@clayui/css": "3.x",
 		"react": "^16.8.1",
 		"react-dom": "^16.8.1"
 	},
@@ -37,7 +38,6 @@
 		"extends browserslist-config-clay"
 	],
 	"devDependencies": {
-		"@clayui/css": "^3.0.0-alpha.1",
 		"@types/warning": "^3.0.0"
 	}
 }
