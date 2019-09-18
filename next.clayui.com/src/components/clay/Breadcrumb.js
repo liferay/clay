@@ -13,7 +13,7 @@ const spritemap = '/images/icons/icons.svg';
 const BreadcrumbCode = `const Component = () => {
 	return (
 		<ClayBreadcrumbNav
-			ellipsisBuffer={3}
+			ellipsisBuffer={1}
 			items={[
 				{
 					active: true,
@@ -35,31 +35,7 @@ const BreadcrumbCode = `const Component = () => {
 				{
 					href: '#5',
 					label: 'Five',
-				},
-				{
-					href: '#6',
-					label: 'Six',
-				},
-				{
-					href: '#7',
-					label: 'Seven',
-				},
-				{
-					href: '#8',
-					label: 'Eight',
-				},
-				{
-					href: '#9',
-					label: 'Nine',
-				},
-				{
-					href: '#10',
-					label: 'Ten',
-				},
-				{
-					href: '#11',
-					label: 'Eleven',
-				},
+				}
 			]}
 			spritemap={spritemap}
 		/>
