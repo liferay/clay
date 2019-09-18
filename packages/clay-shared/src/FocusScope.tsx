@@ -14,7 +14,9 @@ interface IProps {
 	 */
 	arrowKeys?: boolean;
 
-	children: React.ReactElement;
+	children: React.ReactElement & {
+		ref?: React.MutableRefObject<HTMLElement>;
+	};
 }
 
 const ARROW_DOWN_KEY_CODE = 40;
@@ -61,6 +63,14 @@ export const FocusScope: React.FunctionComponent<IProps> = ({
 				children.props.onKeyDown(event);
 			}
 		},
-		ref: elRef,
+		ref: (r: HTMLElement) => {
+			elRef.current = r;
+			const {ref} = children;
+			if (ref) {
+				if (typeof ref === 'object') {
+					ref.current = r;
+				}
+			}
+		},
 	});
 };
