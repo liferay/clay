@@ -52,10 +52,11 @@ storiesOf('Components|ClayDropDown', module)
 				{[
 					{href: '#one', label: 'one'},
 					{href: '#two', label: 'two'},
-					{href: '#three', label: 'three'},
-				].map((item, i) => (
-					<ClayDropDown.Item href={item.href} key={i}>
-						{item.label}
+					{disabled: true, href: '#three', label: 'three'},
+					{href: '#four', label: 'four'},
+				].map(({href, label, ...otherProps}, i) => (
+					<ClayDropDown.Item href={href} key={i} {...otherProps}>
+						{label}
 					</ClayDropDown.Item>
 				))}
 			</ClayDropDown.ItemList>
