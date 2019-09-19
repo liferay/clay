@@ -7,7 +7,7 @@
 import '@clayui/css/lib/css/atlas.css';
 import ClayPopover from '../src';
 import React from 'react';
-import {select} from '@storybook/addon-knobs';
+import {boolean, select} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 
 const positions = [
@@ -30,9 +30,16 @@ storiesOf('Components|ClayPopover', module).add('popover', () => (
 		alignPosition={
 			select('Align Position', positions, 'bottom') as 'bottom'
 		}
+		disableScroll={boolean('Disable Scroll', false)}
 		header="Popover"
 	>
 		{`Viennese flavour cup eu, percolator froth ristretto mazagran
+				caffeine. White roast seasonal, mocha trifecta, dripper caffeine
+				spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
+				caffeine. White roast seasonal, mocha trifecta, dripper caffeine
+				spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
+				caffeine. White roast seasonal, mocha trifecta, dripper caffeine
+				spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
 				caffeine. White roast seasonal, mocha trifecta, dripper caffeine
 				spoon acerbic to go macchiato strong.`}
 	</ClayPopover>

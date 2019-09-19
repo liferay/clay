@@ -25,6 +25,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	alignPosition?: typeof ALIGN_POSITIONS[number];
 
 	/**
+	 * Flag to indicate if container should not be scrollable
+	 */
+	disableScroll?: boolean;
+
+	/**
 	 * Flag to indicate if tooltip is displayed.
 	 */
 	show?: boolean;
@@ -41,6 +46,7 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 			alignPosition = 'bottom',
 			children,
 			className,
+			disableScroll = false,
 			header,
 			show,
 			...otherProps
@@ -60,7 +66,9 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 			>
 				<div className="arrow" />
 
-				<div className="inline-scroller">
+				<div
+					className={classNames({'inline-scroller': !disableScroll})}
+				>
 					{header && <div className="popover-header">{header}</div>}
 
 					<div className="popover-body">{children}</div>
