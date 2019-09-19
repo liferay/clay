@@ -42,6 +42,7 @@ describe('ClayCharts', () => {
 					columns: COLUMNS,
 					type: 'bar',
 				}}
+				elementProps={{className: 'foo-bar-baz'}}
 			/>
 		);
 
