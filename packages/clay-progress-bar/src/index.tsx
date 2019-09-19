@@ -11,6 +11,11 @@ import warning from 'warning';
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
+	 * Label to complement the value of the addon for Screen Readers.
+	 */
+	addonLabel?: string;
+
+	/**
 	 * Flag to indicate if `children` should be wrapped as `feedback`.
 	 */
 	feedback?: boolean;
@@ -32,6 +37,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const ClayProgressBar: React.FunctionComponent<IProps> = ({
+	addonLabel,
 	children,
 	className,
 	feedback = false,
@@ -85,7 +91,14 @@ const ClayProgressBar: React.FunctionComponent<IProps> = ({
 				/>
 			</div>
 
-			{addon && <div className="progress-group-addon">{addon}</div>}
+			{addon && (
+				<div className="progress-group-addon">
+					{addon}
+					{addonLabel && (
+						<span className="sr-only">{addonLabel}</span>
+					)}
+				</div>
+			)}
 		</div>
 	);
 };
