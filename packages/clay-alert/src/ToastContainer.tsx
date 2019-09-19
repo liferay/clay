@@ -9,7 +9,7 @@ import {IClayAlertProps} from './index';
 
 interface IToastContainerProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
-	 * Chilren of the ToastContainer must be a ClayAlert
+	 * Children of the ToastContainer must be a ClayAlert
 	 */
 	children?:
 		| React.ReactElement<IClayAlertProps>
