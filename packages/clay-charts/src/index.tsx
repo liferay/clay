@@ -32,6 +32,7 @@ interface IDataType extends Omit<Omit<Data, 'type'>, 'columns'> {
 
 export interface IProps {
 	data: IDataType;
+	elementProps?: React.HTMLAttributes<HTMLDivElement>;
 	forwardRef: React.MutableRefObject<any>;
 	grid?: Grid;
 	line?: LineOptions;
@@ -46,6 +47,7 @@ export interface IProps {
 const ClayChart: React.FunctionComponent<IProps> = ({
 	color,
 	data,
+	elementProps,
 	forwardRef,
 	grid,
 	line,
@@ -74,6 +76,7 @@ const ClayChart: React.FunctionComponent<IProps> = ({
 			{...otherProps}
 			color={Object.assign({pattern: DEFAULT_COLORS}, color)}
 			data={data as Data}
+			elementProps={elementProps}
 			grid={Object.assign(DEFAULT_GRID_OBJECT, grid)}
 			line={Object.assign({classes: DEFAULT_LINE_CLASSES}, line)}
 			point={Object.assign(
