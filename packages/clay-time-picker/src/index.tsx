@@ -411,7 +411,9 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 									<input
 										name={name}
 										type="hidden"
-										value={`${values.hours}:${values.minutes}`}
+										value={`${values.hours}:${
+											values.minutes
+										}`}
 									/>
 								)}
 							</div>
