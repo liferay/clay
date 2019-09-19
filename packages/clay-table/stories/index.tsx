@@ -25,6 +25,7 @@ function ClayCheckboxWithState(props: any) {
 			disabled={false}
 			indeterminate={false}
 			onChange={() => setValue(val => !val)}
+			{...props}
 		>
 			{props.children}
 		</ClayCheckbox>
@@ -331,7 +332,7 @@ storiesOf('Components|ClayTable', module)
 		];
 
 		const rowCellTitles = [
-			<ClayCheckboxWithState key={0} />,
+			<ClayCheckboxWithState aria-label="Select 21146" key={0} />,
 			'21146',
 			'Some regular text',
 			'--',
@@ -472,7 +473,7 @@ storiesOf('Components|ClayTable', module)
 				<ClayTable.Body>
 					<ClayTable.Row>
 						<ClayTable.Cell>
-							<ClayCheckboxWithState />
+							<ClayCheckboxWithState aria-label="Select first row" />
 						</ClayTable.Cell>
 						<ClayTable.Cell headingTitle truncate>
 							{
@@ -491,7 +492,7 @@ storiesOf('Components|ClayTable', module)
 					</ClayTable.Row>
 					<ClayTable.Row>
 						<ClayTable.Cell>
-							<ClayCheckboxWithState />
+							<ClayCheckboxWithState aria-label="Select second row" />
 						</ClayTable.Cell>
 						<ClayTable.Cell headingTitle truncate>
 							{
@@ -510,7 +511,7 @@ storiesOf('Components|ClayTable', module)
 					</ClayTable.Row>
 					<ClayTable.Row>
 						<ClayTable.Cell>
-							<ClayCheckboxWithState />
+							<ClayCheckboxWithState aria-label="Select third row" />
 						</ClayTable.Cell>
 						<ClayTable.Cell headingTitle truncate>
 							{
