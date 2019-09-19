@@ -20,11 +20,10 @@ storiesOf('Components|ClayProgressBar', module).add('default', () => (
 			value={number('Value', 50)}
 			warn={boolean('Warn', false)}
 		/>
-
 		<ClayProgressBar spritemap={spritemap} value={100} />
-		<ClayProgressBar
-			spritemap={spritemap}
-			value={50}
-		>{`50/100`}</ClayProgressBar>
+		<ClayProgressBar spritemap={spritemap} value={55}>
+			{`55 of 100`}
+			<span className="sr-only">{'items loaded'}</span>
+		</ClayProgressBar>
 	</div>
 ));
