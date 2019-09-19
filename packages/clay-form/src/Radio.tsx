@@ -30,47 +30,56 @@ export interface IRadioProps
 	value: React.ReactText;
 }
 
-const ClayRadio: React.FunctionComponent<IRadioProps> = ({
-	checked,
-	children,
-	className,
-	containerProps = {className: ''},
-	inline,
-	label,
-	...otherProps
-}: IRadioProps) => {
-	return (
-		<div
-			{...containerProps}
-			className={classNames(
-				'custom-control custom-radio',
-				containerProps.className,
-				{
-					'custom-control-inline': inline,
-				}
-			)}
-		>
-			<label>
-				<input
-					{...otherProps}
-					checked={checked}
-					className={classNames('custom-control-input', className)}
-					role="radio"
-					type="radio"
-				/>
+const ClayRadio = React.forwardRef<HTMLInputElement, IRadioProps>(
+	(
+		{
+			checked,
+			children,
+			className,
+			containerProps = {className: ''},
+			inline,
+			label,
+			...otherProps
+		}: IRadioProps,
+		ref
+	) => {
+		return (
+			<div
+				{...containerProps}
+				className={classNames(
+					'custom-control custom-radio',
+					containerProps.className,
+					{
+						'custom-control-inline': inline,
+					}
+				)}
+			>
+				<label>
+					<input
+						{...otherProps}
+						checked={checked}
+						className={classNames(
+							'custom-control-input',
+							className
+						)}
+						ref={ref}
+						role="radio"
+						type="radio"
+					/>
 
-				<span className="custom-control-label">
-					{label && (
-						<span className="custom-control-label-text">
-							{label}
-						</span>
-					)}
-				</span>
+					<span className="custom-control-label">
+						{label && (
+							<span className="custom-control-label-text">
+								{label}
+							</span>
+						)}
+					</span>
 
-				{children}
-			</label>
-		</div>
-	);
-};
+					{children}
+				</label>
+			</div>
+		);
+	}
+);
 
 export default ClayRadio;

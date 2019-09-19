@@ -22,9 +22,7 @@ exports[`ClayDropDown renders dropdown menu when clicked 1`] = `
         <ul
           class="list-unstyled"
         >
-          <li
-            tabindex="-1"
-          >
+          <li>
             <a
               class="dropdown-item"
               href="#one"
@@ -32,9 +30,7 @@ exports[`ClayDropDown renders dropdown menu when clicked 1`] = `
               one
             </a>
           </li>
-          <li
-            tabindex="-1"
-          >
+          <li>
             <a
               class="dropdown-item"
               href="#two"
@@ -42,9 +38,7 @@ exports[`ClayDropDown renders dropdown menu when clicked 1`] = `
               two
             </a>
           </li>
-          <li
-            tabindex="-1"
-          >
+          <li>
             <a
               class="dropdown-item"
               href="#three"
@@ -87,9 +81,7 @@ exports[`ClayDropDown renders with groups 1`] = `
           >
             Group #1
           </li>
-          <li
-            tabindex="-1"
-          >
+          <li>
             <a
               class="dropdown-item"
               href="#one"
@@ -97,9 +89,7 @@ exports[`ClayDropDown renders with groups 1`] = `
               one
             </a>
           </li>
-          <li
-            tabindex="-1"
-          >
+          <li>
             <a
               class="dropdown-item"
               href="#two"
@@ -107,9 +97,7 @@ exports[`ClayDropDown renders with groups 1`] = `
               two
             </a>
           </li>
-          <li
-            tabindex="-1"
-          >
+          <li>
             <a
               class="dropdown-item"
               href="#three"
@@ -123,9 +111,7 @@ exports[`ClayDropDown renders with groups 1`] = `
           >
             Group #2
           </li>
-          <li
-            tabindex="-1"
-          >
+          <li>
             <a
               class="dropdown-item"
               href="#one"
@@ -133,9 +119,7 @@ exports[`ClayDropDown renders with groups 1`] = `
               one
             </a>
           </li>
-          <li
-            tabindex="-1"
-          >
+          <li>
             <a
               class="dropdown-item"
               href="#two"
@@ -143,9 +127,7 @@ exports[`ClayDropDown renders with groups 1`] = `
               two
             </a>
           </li>
-          <li
-            tabindex="-1"
-          >
+          <li>
             <a
               class="dropdown-item"
               href="#three"
@@ -182,9 +164,7 @@ exports[`ClayDropDown renders with icons 1`] = `
         <ul
           class="list-unstyled"
         >
-          <li
-            tabindex="-1"
-          >
+          <li>
             <span
               class="dropdown-item"
             >
@@ -203,9 +183,7 @@ exports[`ClayDropDown renders with icons 1`] = `
               Left
             </span>
           </li>
-          <li
-            tabindex="-1"
-          >
+          <li>
             <span
               class="dropdown-item"
             >
@@ -224,9 +202,7 @@ exports[`ClayDropDown renders with icons 1`] = `
               </span>
             </span>
           </li>
-          <li
-            tabindex="-1"
-          >
+          <li>
             <span
               class="dropdown-item"
             >
@@ -322,9 +298,7 @@ exports[`ClayDropDown renders with search input 1`] = `
         <ul
           class="list-unstyled"
         >
-          <li
-            tabindex="-1"
-          >
+          <li>
             <a
               class="dropdown-item"
               href="#one"
@@ -332,9 +306,7 @@ exports[`ClayDropDown renders with search input 1`] = `
               one
             </a>
           </li>
-          <li
-            tabindex="-1"
-          >
+          <li>
             <a
               class="dropdown-item"
               href="#two"
@@ -342,9 +314,7 @@ exports[`ClayDropDown renders with search input 1`] = `
               two
             </a>
           </li>
-          <li
-            tabindex="-1"
-          >
+          <li>
             <a
               class="dropdown-item"
               href="#three"

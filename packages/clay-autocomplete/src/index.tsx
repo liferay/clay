@@ -28,38 +28,53 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	component?: React.ForwardRefExoticComponent<any>;
 }
 
-const ClayAutocomplete: React.FunctionComponent<IProps> & {
+type Autocomplete = React.ForwardRefExoticComponent<IProps> & {
 	DropDown: typeof DropDown;
 	Input: typeof Input;
 	Item: typeof Item;
 	LoadingIndicator: typeof LoadingIndicator;
-} = ({
-	children,
-	className,
-	component: Component = AutocompleteMarkup,
-	...otherProps
-}: IProps) => {
-	const containerElementRef = useRef<HTMLDivElement>(null);
-	const [loading, setLoading] = useState(false);
+};
 
-	return (
-		<Component
-			{...otherProps}
-			className={className}
-			ref={containerElementRef}
-		>
-			<Context.Provider
-				value={{
-					containerElementRef,
-					loading,
-					onLoadingChange: (loading: boolean) => setLoading(loading),
+const ClayAutocomplete = React.forwardRef(
+	(
+		{
+			children,
+			className,
+			component: Component = AutocompleteMarkup,
+			...otherProps
+		}: IProps,
+		ref
+	) => {
+		const containerElementRef = useRef<null | HTMLDivElement>(null);
+		const [loading, setLoading] = useState(false);
+
+		return (
+			<Component
+				{...otherProps}
+				className={className}
+				ref={(r: any) => {
+					containerElementRef.current = r;
+					if (typeof ref === 'function') {
+						ref(r);
+					} else if (ref !== null) {
+						(ref.current as React.MutableRefObject<any>) = r;
+					}
 				}}
 			>
-				{children}
-			</Context.Provider>
-		</Component>
-	);
-};
+				<Context.Provider
+					value={{
+						containerElementRef,
+						loading,
+						onLoadingChange: (loading: boolean) =>
+							setLoading(loading),
+					}}
+				>
+					{children}
+				</Context.Provider>
+			</Component>
+		);
+	}
+) as Autocomplete;
 
 ClayAutocomplete.DropDown = DropDown;
 ClayAutocomplete.Input = Input;

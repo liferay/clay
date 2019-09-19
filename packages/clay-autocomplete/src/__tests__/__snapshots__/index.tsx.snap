@@ -48,12 +48,9 @@ exports[`ClayAutocomplete renders Input with classNames when loading for true 1`
 
 exports[`ClayAutocomplete renders Item with matches values 1`] = `
 <div>
-  <li
-    tabindex="-1"
-  >
+  <li>
     <span
       class="dropdown-item"
-      tabindex="-1"
     >
       Bar
     </span>

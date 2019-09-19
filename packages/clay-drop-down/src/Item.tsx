@@ -66,7 +66,7 @@ const ClayDropDownItem: React.FunctionComponent<IProps> = ({
 	const ItemElement = href ? 'a' : clickableElement;
 
 	return (
-		<li aria-selected={active} ref={forwardRef} tabIndex={-1}>
+		<li aria-selected={active} ref={forwardRef}>
 			<ItemElement
 				{...otherProps}
 				className={classNames('dropdown-item', className, {
