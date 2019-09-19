@@ -22,10 +22,13 @@ function removeCollapseHeight(collapseElementRef: React.RefObject<any>) {
  */
 function setCollapseHeight(collapseElementRef: React.RefObject<any>) {
 	if (collapseElementRef && collapseElementRef.current) {
-		collapseElementRef.current.setAttribute(
-			'style',
-			`height: ${collapseElementRef.current.children[0].clientHeight}px`
+		// Cloned into a new array since `.reduce` is not a method on an HTMLCollection
+		const height = [...collapseElementRef.current.children].reduce(
+			(acc: number, child: HTMLElement) => acc + child.clientHeight,
+			0
 		);
+
+		collapseElementRef.current.setAttribute('style', `height: ${height}px`);
 	}
 }
 
