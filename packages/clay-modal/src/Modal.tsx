@@ -67,17 +67,20 @@ const ClayModal: FunctionComponent<IProps> & {
 	// Defines a default Modal size when size is not set.
 	const maxWidth = size ? {} : {maxWidth: '600px'};
 
+	const [show, content] =
+		observer && observer.mutation ? observer.mutation : [false, false];
+
 	return (
 		<ClayPortal subPortalRef={modalBodyElementRef}>
 			<div
 				className={classNames('modal-backdrop fade', {
-					show: observer.mutation,
+					show,
 				})}
 			/>
 			<div
 				{...otherProps}
 				className={classNames('fade modal d-block', className, {
-					show: observer.mutation,
+					show,
 				})}
 			>
 				<div
@@ -103,7 +106,7 @@ const ClayModal: FunctionComponent<IProps> & {
 									status,
 								}}
 							>
-								{observer.mutation && children}
+								{content && children}
 							</Context.Provider>
 						</div>
 					</div>

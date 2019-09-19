@@ -15,5 +15,5 @@ export enum ObserverType {
 
 export type Observer = {
 	dispatch: (type: ObserverType) => void;
-	mutation: boolean;
+	mutation: [boolean, boolean];
 };
