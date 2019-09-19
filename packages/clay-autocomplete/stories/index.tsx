@@ -43,6 +43,7 @@ const AutocompleteBasic = () => {
 	return (
 		<ClayAutocomplete>
 			<ClayAutocomplete.Input
+				aria-label="Numbers: Enter a number from One to Five"
 				onChange={(event: any) => setValue(event.target.value)}
 				value={value}
 			/>
@@ -82,6 +83,7 @@ const AutocompleteWithKeyboardFunctionality = () => {
 		<FocusScope>
 			<ClayAutocomplete>
 				<ClayAutocomplete.Input
+					aria-label="Numbers: Enter a number from One to Five"
 					onChange={(event: any) => setValue(event.target.value)}
 					ref={inputRef}
 					value={value}
@@ -126,6 +128,7 @@ const AutocompleteWithAsyncData = () => {
 	return (
 		<ClayAutocomplete>
 			<ClayAutocomplete.Input
+				aria-label="Enter a name:"
 				onChange={(event: any) => setValue(event.target.value)}
 				value={value}
 			/>
