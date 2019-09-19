@@ -5,8 +5,8 @@
  */
 
 import classNames from 'classnames';
+import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
-import ClayLink from '@clayui/link';
 import Item from './Item';
 import React, {useRef, useState} from 'react';
 import warning from 'warning';
@@ -77,7 +77,7 @@ const ClayNavigationBar: React.FunctionComponent<IProps> & {
 			)}
 		>
 			<div className="container-fluid container-fluid-max-xl">
-				<ClayLink
+				<ClayButton
 					aria-expanded={visible}
 					className={classNames(
 						'navbar-toggler',
@@ -87,13 +87,13 @@ const ClayNavigationBar: React.FunctionComponent<IProps> & {
 						}
 					)}
 					data-testid="navbarToggler"
-					displayType="secondary"
+					displayType="unstyled"
 					onClick={handleClickToggler}
 				>
-					{triggerLabel}
+					<span className="navbar-text-truncate">{triggerLabel}</span>
 
 					<ClayIcon spritemap={spritemap} symbol="caret-bottom" />
-				</ClayLink>
+				</ClayButton>
 
 				<div
 					className={classNames('navbar-collapse', {

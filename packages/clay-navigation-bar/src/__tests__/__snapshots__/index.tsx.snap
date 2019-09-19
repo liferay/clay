@@ -53,12 +53,17 @@ exports[`ClayNavigationBar renders 1`] = `
     <div
       class="container-fluid container-fluid-max-xl"
     >
-      <a
+      <button
         aria-expanded="false"
-        class="navbar-toggler navbar-toggler-link collapsed link-secondary"
+        class="navbar-toggler navbar-toggler-link collapsed btn btn-unstyled"
         data-testid="navbarToggler"
+        type="button"
       >
-        Item 1
+        <span
+          class="navbar-text-truncate"
+        >
+          Item 1
+        </span>
         <svg
           class="lexicon-icon lexicon-icon-caret-bottom"
           role="presentation"
@@ -67,7 +72,7 @@ exports[`ClayNavigationBar renders 1`] = `
             xlink:href="node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"
           />
         </svg>
-      </a>
+      </button>
       <div
         class="navbar-collapse collapse"
         data-testid="NavigationBarDropdown"
@@ -181,12 +186,17 @@ exports[`ClayNavigationBar renders when passing more than one active item 1`] = 
     <div
       class="container-fluid container-fluid-max-xl"
     >
-      <a
+      <button
         aria-expanded="false"
-        class="navbar-toggler navbar-toggler-link collapsed link-secondary"
+        class="navbar-toggler navbar-toggler-link collapsed btn btn-unstyled"
         data-testid="navbarToggler"
+        type="button"
       >
-        Item 1
+        <span
+          class="navbar-text-truncate"
+        >
+          Item 1
+        </span>
         <svg
           class="lexicon-icon lexicon-icon-caret-bottom"
           role="presentation"
@@ -195,7 +205,7 @@ exports[`ClayNavigationBar renders when passing more than one active item 1`] = 
             xlink:href="node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"
           />
         </svg>
-      </a>
+      </button>
       <div
         class="navbar-collapse collapse"
         data-testid="NavigationBarDropdown"
@@ -264,12 +274,17 @@ exports[`ClayNavigationBar should throw a warning when passing more than one act
     <div
       class="container-fluid container-fluid-max-xl"
     >
-      <a
+      <button
         aria-expanded="false"
-        class="navbar-toggler navbar-toggler-link collapsed link-secondary"
+        class="navbar-toggler navbar-toggler-link collapsed btn btn-unstyled"
         data-testid="navbarToggler"
+        type="button"
       >
-        Item 1
+        <span
+          class="navbar-text-truncate"
+        >
+          Item 1
+        </span>
         <svg
           class="lexicon-icon lexicon-icon-caret-bottom"
           role="presentation"
@@ -278,7 +293,7 @@ exports[`ClayNavigationBar should throw a warning when passing more than one act
             xlink:href="node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"
           />
         </svg>
-      </a>
+      </button>
       <div
         class="navbar-collapse collapse"
         data-testid="NavigationBarDropdown"
