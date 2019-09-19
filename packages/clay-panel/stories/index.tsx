@@ -49,7 +49,9 @@ storiesOf('Components|ClayPanel', module)
 			showCollapseIcon={boolean('Show Collapse Icon', true)}
 			spritemap={spritemap}
 		>
-			<ClayPanel.Body>{'Here is some content inside.'}</ClayPanel.Body>
+			<ClayPanel.Header>{'Header!'}</ClayPanel.Header>
+			<ClayPanel.Body>{'Body!'}</ClayPanel.Body>
+			<ClayPanel.Footer>{'Footer!'}</ClayPanel.Footer>
 		</ClayPanel>
 	))
 	.add('groups', () => (
