@@ -27,3 +27,31 @@ exports[`ClayPopover renders 1`] = `
   </div>
 </div>
 `;
+
+exports[`ClayPopover renders without scroll 1`] = `
+<div>
+  <div
+    class="popover clay-popover-bottom"
+  >
+    <div
+      class="arrow"
+    />
+    <div
+      class=""
+    >
+      <div
+        class="popover-header"
+      >
+        Popover
+      </div>
+      <div
+        class="popover-body"
+      >
+        Viennese flavour cup eu, percolator froth ristretto mazagran
+					caffeine. White roast seasonal, mocha trifecta, dripper caffeine
+					spoon acerbic to go macchiato strong.
+      </div>
+    </div>
+  </div>
+</div>
+`;

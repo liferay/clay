@@ -22,4 +22,16 @@ describe('ClayPopover', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
+	it('renders without scroll', () => {
+		const {container} = render(
+			<ClayPopover disableScroll header="Popover">
+				{`Viennese flavour cup eu, percolator froth ristretto mazagran
+					caffeine. White roast seasonal, mocha trifecta, dripper caffeine
+					spoon acerbic to go macchiato strong.`}
+			</ClayPopover>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
 });
