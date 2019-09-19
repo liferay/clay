@@ -23,7 +23,7 @@ const delay = (fn: Function) => {
 const modalOpenClassName = 'modal-open';
 
 export const useModal = ({onClose = () => {}}: IProps) => {
-	const [visible, setVisible] = useState<boolean>(false);
+	const [visible, setVisible] = useState<[boolean, boolean]>([false, false]);
 	const timerIdRef = useRef<NodeJS.Timeout | null>(null);
 
 	/**
@@ -32,13 +32,16 @@ export const useModal = ({onClose = () => {}}: IProps) => {
 	 */
 	const handleCloseModal = () => {
 		document.body.classList.remove(modalOpenClassName);
-		setVisible(false);
-		timerIdRef.current = delay(onClose);
+		setVisible([false, true]);
+		timerIdRef.current = delay(() => {
+			onClose();
+			setVisible([false, false]);
+		});
 	};
 
 	const handleOpenModal = () => {
 		document.body.classList.add(modalOpenClassName);
-		timerIdRef.current = delay(() => setVisible(true));
+		timerIdRef.current = delay(() => setVisible([true, true]));
 	};
 
 	const handleObserverDispatch = (type: ObserverType) => {
