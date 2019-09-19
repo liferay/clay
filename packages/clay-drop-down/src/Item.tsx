@@ -75,6 +75,7 @@ const ClayDropDownItem: React.FunctionComponent<IProps> = ({
 				href={href}
 				onClick={onClick}
 				ref={innerRef}
+				tabIndex={disabled ? -1 : otherProps.tabIndex}
 			>
 				{symbolLeft && (
 					<span className="dropdown-item-indicator-start">
