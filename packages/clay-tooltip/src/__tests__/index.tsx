@@ -17,7 +17,7 @@ describe('ClayTooltip', () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it('displays on mouseover', () => {
+	it('displays on mouseover and hides on mouse out', () => {
 		jest.useFakeTimers();
 
 		const {getByTestId} = render(
@@ -41,5 +41,13 @@ describe('ClayTooltip', () => {
 		});
 
 		expect(document.querySelector('.tooltip')).toBeTruthy();
+
+		fireEvent.mouseOut(getByTestId('button'));
+
+		act(() => {
+			jest.runAllTimers();
+		});
+
+		expect(document.querySelector('.tooltip')).toBeFalsy();
 	});
 });
