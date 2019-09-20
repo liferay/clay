@@ -26,10 +26,13 @@
 		"react"
 	],
 	"dependencies": {
+		"@clayui/button": "^3.0.0-alpha.1",
+		"@clayui/drop-down": "^3.0.0-alpha.1",
 		"@clayui/icon": "^3.0.0-alpha.1",
 		"@clayui/link": "^3.0.0-alpha.1",
 		"@clayui/shared": "^3.0.0-alpha.1",
-		"classnames": "^2.2.6"
+		"classnames": "^2.2.6",
+		"warning": "^4.0.3"
 	},
 	"peerDependencies": {
 		"@clayui/css": "3.x",

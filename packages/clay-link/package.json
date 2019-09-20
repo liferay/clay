@@ -28,6 +28,9 @@
 	"dependencies": {
 		"classnames": "^2.2.6"
 	},
+	"devDependencies": {
+		"@clayui/icon": "^3.0.0"
+	},
 	"peerDependencies": {
 		"@clayui/css": "3.x",
 		"react": "^16.8.1",
