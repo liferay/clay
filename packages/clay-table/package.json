@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/table",
-	"version": "3.0.0-alpha.1",
+	"version": "3.0.0",
 	"description": "ClayTable component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-table",
@@ -29,12 +29,12 @@
 		"classnames": "^2.2.6"
 	},
 	"devDependencies": {
-		"@clayui/button": "^3.0.0-alpha.1",
-		"@clayui/drop-down": "^3.0.0-alpha.1",
-		"@clayui/form": "^3.0.0-alpha.1",
-		"@clayui/icon": "^3.0.0-alpha.1",
-		"@clayui/label": "^3.0.0-alpha.1",
-		"@clayui/progress-bar": "^3.0.0-alpha.10"
+		"@clayui/button": "^3.0.0",
+		"@clayui/drop-down": "^3.0.0",
+		"@clayui/form": "^3.0.0",
+		"@clayui/icon": "^3.0.0",
+		"@clayui/label": "^3.0.0",
+		"@clayui/progress-bar": "^3.0.0"
 	},
 	"peerDependencies": {
 		"@clayui/css": "3.x",
