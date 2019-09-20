@@ -5,7 +5,8 @@
  */
 
 import ClayButton from '@clayui/button';
-import ClayForm, {ClayInput, ClayMultiSelectInput} from '@clayui/form';
+import ClayForm, {ClayInput} from '@clayui/form';
+import ClayMultiSelect from '@clayui/multi-select';
 import Editor from './Editor';
 import React, {useState} from 'react';
 
@@ -16,7 +17,7 @@ const multiSelectCode = `const Component = () => {
 	const [items, setItems] = React.useState(['one']);
 
 	return (
-		<ClayMultiSelectInput
+		<ClayMultiSelect
 			inputName="myInput"
 			inputValue={value}
 			items={items}
@@ -31,7 +32,7 @@ render(<Component />)`;
 
 const MultiSelectInput = () => {
 	const scope = {
-		ClayMultiSelectInput,
+		ClayMultiSelect,
 		spritemap,
 		useState,
 	};
@@ -45,7 +46,7 @@ const multiSelectWithAutocompleteCode = `const Component = () => {
 	const sourceItems = ['one', 'two', 'three', 'four'];
 
 	return (
-		<ClayMultiSelectInput
+		<ClayMultiSelect
 			inputName="myInput"
 			inputValue={value}
 			items={items}
@@ -61,7 +62,7 @@ render(<Component />)`;
 
 const MultiSelectInputWithAutocomplete = () => {
 	const scope = {
-		ClayMultiSelectInput,
+		ClayMultiSelect,
 		spritemap,
 		useState,
 	};
@@ -78,7 +79,7 @@ const multiSelectWithSelectButtonCode = `const Component = () => {
 		<ClayForm.Group>
 			<ClayInput.Group>
 				<ClayInput.GroupItem>
-					<ClayMultiSelectInput
+					<ClayMultiSelect
 						inputName="myInput"
 						inputValue={value}
 						items={items}
@@ -108,7 +109,7 @@ const MultiSelectInputWithSelectButton = () => {
 		ClayButton,
 		ClayForm,
 		ClayInput,
-		ClayMultiSelectInput,
+		ClayMultiSelect,
 		spritemap,
 		useState,
 	};
@@ -127,7 +128,7 @@ const multiSelectWithValidationCode = `const Component = () => {
 
 			<ClayInput.Group>
 				<ClayInput.GroupItem>
-					<ClayMultiSelectInput
+					<ClayMultiSelect
 						inputName="myInput"
 						inputValue={value}
 						items={items}
@@ -168,7 +169,7 @@ const MultiSelectInputWithValidation = () => {
 		ClayButton,
 		ClayForm,
 		ClayInput,
-		ClayMultiSelectInput,
+		ClayMultiSelect,
 		spritemap,
 		useState,
 	};

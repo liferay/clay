@@ -8,9 +8,9 @@ import classNames from 'classnames';
 import ClayAutocomplete from '@clayui/autocomplete';
 import ClayDropDown from '@clayui/drop-down';
 import ClayIcon from '@clayui/icon';
-import ClayInput from './Input';
 import ClayLabel from '@clayui/label';
 import React, {useLayoutEffect, useRef, useState} from 'react';
+import {ClayInput} from '@clayui/form';
 import {FocusScope, noop, sub} from '@clayui/shared';
 
 const BACKSPACE_KEY = 8;
@@ -313,7 +313,7 @@ const ClayMultiSelect: React.FunctionComponent<IProps> = ({
 	);
 };
 
-export const ClayMultiSelectInput = React.forwardRef<
+const ClayMultiSelectInput = React.forwardRef<
 	HTMLDivElement,
 	Omit<IProps, 'forwardRef'>
 >((props, ref?) => {
@@ -326,3 +326,5 @@ export const ClayMultiSelectInput = React.forwardRef<
 		/>
 	);
 });
+
+export default ClayMultiSelectInput;
