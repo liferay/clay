@@ -4,168 +4,18 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayButton from '@clayui/button';
-import ClayForm, {
+import React from 'react';
+import {
 	ClayCheckbox,
-	ClayInput,
-	ClayInputWithAutocomplete,
-	ClayMultiSelectInput,
 	ClayRadio,
 	ClayRadioGroup,
 	ClaySelect,
 	ClaySelectWithOption,
 } from '../src';
-import React from 'react';
 import {storiesOf} from '@storybook/react';
 
 import '@clayui/css/lib/css/atlas.css';
 import {boolean, text} from '@storybook/addon-knobs';
-
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
-
-const ClayMultiSelectWithState = (props: any) => {
-	const [value, setValue] = React.useState('');
-	const [items, setItems] = React.useState(['one']);
-
-	return (
-		<ClayMultiSelectInput
-			{...props}
-			inputName="myInput"
-			inputValue={value}
-			items={items}
-			onInputChange={setValue}
-			onItemsChange={setItems}
-			spritemap={spritemap}
-		/>
-	);
-};
-
-const ClayMultiSelectWithAutocomplete = () => {
-	const [value, setValue] = React.useState('');
-	const [selectedItems, setSelectedItems] = React.useState(['one']);
-
-	const sourceItems = ['one', 'two', 'three', 'four'];
-
-	return (
-		<ClayMultiSelectInput
-			inputName="myInput"
-			inputValue={value}
-			items={selectedItems}
-			onInputChange={setValue}
-			onItemsChange={setSelectedItems}
-			sourceItems={sourceItems}
-			spritemap={spritemap}
-		/>
-	);
-};
-
-const AutoCompleteWithState = ({items, ...otherProps}: any) => {
-	const [value, setValue] = React.useState('');
-
-	const filteredItems = items.filter((val: any) =>
-		(typeof val === 'string'
-			? val
-			: `${val.firstName} ${val.lastName}`
-		).match(new RegExp(value, 'gi'))
-	);
-
-	return (
-		<div className="sheet">
-			<div className="form-group">
-				<ClayInputWithAutocomplete
-					{...otherProps}
-					items={filteredItems}
-					loading={boolean('Loading', false)}
-					onItemSelect={(val: any) =>
-						setValue(
-							typeof val === 'string'
-								? val
-								: `${val.firstName} ${val.lastName}`
-						)
-					}
-					onValueChange={setValue}
-					value={value}
-				/>
-			</div>
-		</div>
-	);
-};
-
-storiesOf('Components|ClayForm', module)
-	.add('default', () => <ClayForm />)
-	.add('InputWithMultiSelect', () => (
-		<ClayMultiSelectWithState
-			disabled={boolean('Disabled all', false)}
-			disabledClearAll={boolean('Disabled Clear All', false)}
-			isValid={boolean('isValid', true)}
-		/>
-	))
-	.add('InputWithMultiSelect w/ sourceItems', () => (
-		<ClayMultiSelectWithAutocomplete />
-	))
-	.add('InputWithMultiSelect w/ group', () => {
-		const isValid = boolean('isValid', true);
-
-		return (
-			<div className="sheet">
-				<ClayForm.Group className={!isValid ? 'has-error' : ''}>
-					<label>{'Composed MultiSelect'}</label>
-
-					<ClayInput.Group>
-						<ClayInput.GroupItem>
-							<ClayMultiSelectWithState
-								isValid={isValid}
-								items={['one', 'two', 'three', 'four']}
-							/>
-
-							<ClayForm.FeedbackGroup>
-								<ClayForm.Text>
-									{'Simple help comment..'}
-								</ClayForm.Text>
-							</ClayForm.FeedbackGroup>
-
-							{!isValid && (
-								<ClayForm.FeedbackGroup>
-									<ClayForm.FeedbackItem>
-										<ClayForm.FeedbackIndicator
-											spritemap={spritemap}
-											symbol="info-circle"
-										/>
-
-										{'You made an error'}
-									</ClayForm.FeedbackItem>
-								</ClayForm.FeedbackGroup>
-							)}
-						</ClayInput.GroupItem>
-
-						<ClayInput.GroupItem shrink>
-							<ClayButton
-								displayType="secondary"
-								onClick={() => {}}
-							>
-								{'Select'}
-							</ClayButton>
-						</ClayInput.GroupItem>
-					</ClayInput.Group>
-				</ClayForm.Group>
-			</div>
-		);
-	})
-	.add('InputWithAutocomplete', () => (
-		<AutoCompleteWithState items={['one', 'two', 'three', 'four']} />
-	))
-	.add('InputWithAutocomplete w/ objects', () => (
-		<AutoCompleteWithState
-			items={[
-				{firstName: 'Joe', lastName: 'Bloggs'},
-				{firstName: 'Steve', lastName: 'Nash'},
-				{firstName: 'Abraham', lastName: 'Kuyper'},
-			]}
-			itemSelector={(person: any) =>
-				`${person.firstName} ${person.lastName}`
-			}
-		/>
-	));
 
 const ClayCheckboxWithState = () => {
 	const [value, setValue] = React.useState<boolean>(false);

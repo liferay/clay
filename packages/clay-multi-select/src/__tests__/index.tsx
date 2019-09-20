@@ -5,15 +5,15 @@
  */
 
 import * as React from 'react';
-import {ClayMultiSelectInput} from '../MultiSelectInput';
+import ClayMultiSelect from '..';
 import {cleanup, fireEvent, render} from '@testing-library/react';
 
-const ClayMultiSelectInputWithState = (props: any) => {
+const ClayMultiSelectWithState = (props: any) => {
 	const [items, setItems] = React.useState(props.items as [] | []);
 	const [value, setValue] = React.useState('');
 
 	return (
-		<ClayMultiSelectInput
+		<ClayMultiSelect
 			inputValue={value}
 			items={items}
 			onInputChange={setValue}
@@ -24,20 +24,18 @@ const ClayMultiSelectInputWithState = (props: any) => {
 	);
 };
 
-describe('ClayMultiSelectInput', () => {
+describe('ClayMultiSelect', () => {
 	afterEach(cleanup);
 
 	it('renders', () => {
-		render(
-			<ClayMultiSelectInputWithState items={[]} spritemap="/foo/bar" />
-		);
+		render(<ClayMultiSelectWithState items={[]} spritemap="/foo/bar" />);
 
 		expect(document.body).toMatchSnapshot();
 	});
 
 	it('renders with items', () => {
 		render(
-			<ClayMultiSelectInputWithState
+			<ClayMultiSelectWithState
 				items={['foo', 'bar', 'baz']}
 				spritemap="/foo/bar"
 			/>
@@ -48,7 +46,7 @@ describe('ClayMultiSelectInput', () => {
 
 	it('renders as not valid', () => {
 		render(
-			<ClayMultiSelectInputWithState
+			<ClayMultiSelectWithState
 				isValid={false}
 				items={['foo', 'bar', 'baz']}
 				spritemap="/foo/bar"
@@ -60,7 +58,7 @@ describe('ClayMultiSelectInput', () => {
 
 	it('renders as disabled', () => {
 		render(
-			<ClayMultiSelectInputWithState
+			<ClayMultiSelectWithState
 				disabled
 				isValid={false}
 				items={['foo', 'bar', 'baz']}
@@ -76,7 +74,7 @@ describe('Interactions', () => {
 	afterEach(cleanup);
 
 	it('adding text and hitting `,` should add a new items', () => {
-		const {container} = render(<ClayMultiSelectInputWithState />);
+		const {container} = render(<ClayMultiSelectWithState />);
 
 		const input = container.querySelector('input');
 
@@ -103,7 +101,7 @@ describe('Interactions', () => {
 		const onItemsChangeFn = jest.fn();
 
 		const {container} = render(
-			<ClayMultiSelectInputWithState
+			<ClayMultiSelectWithState
 				items={['foo']}
 				onItemsChange={onItemsChangeFn}
 				spritemap="/foo/bar"
@@ -126,7 +124,7 @@ describe('Interactions', () => {
 		const onItemsChangeFn = jest.fn();
 
 		const {container} = render(
-			<ClayMultiSelectInputWithState
+			<ClayMultiSelectWithState
 				items={['foo', 'bar']}
 				onItemsChange={onItemsChangeFn}
 				spritemap="/foo/bar"
@@ -156,7 +154,7 @@ describe('Interactions', () => {
 		const onItemsChangeFn = jest.fn();
 
 		render(
-			<ClayMultiSelectInputWithState
+			<ClayMultiSelectWithState
 				items={['foo']}
 				onItemsChange={onItemsChangeFn}
 				sourceItems={['one', 'two', 'three', 'four']}
@@ -190,7 +188,7 @@ describe('Interactions', () => {
 		const onInputChangeFn = jest.fn();
 
 		const {getByTitle} = render(
-			<ClayMultiSelectInputWithState
+			<ClayMultiSelectWithState
 				inputValue="foo"
 				items={['foo']}
 				onInputChange={onInputChangeFn}
@@ -210,7 +208,7 @@ describe('Interactions', () => {
 
 	it('clicking the Clear All button should move the focus to the input', () => {
 		const {container, getByTitle} = render(
-			<ClayMultiSelectInputWithState
+			<ClayMultiSelectWithState
 				inputValue="foo"
 				items={['foo']}
 				onInputChange={jest.fn()}

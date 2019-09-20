@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayMultiSelectInput renders 1`] = `
+exports[`ClayMultiSelect renders 1`] = `
 <body>
   <div>
     <div
@@ -20,7 +20,7 @@ exports[`ClayMultiSelectInput renders 1`] = `
 </body>
 `;
 
-exports[`ClayMultiSelectInput renders as disabled 1`] = `
+exports[`ClayMultiSelect renders as disabled 1`] = `
 <body>
   <div>
     <div
@@ -125,7 +125,7 @@ exports[`ClayMultiSelectInput renders as disabled 1`] = `
 </body>
 `;
 
-exports[`ClayMultiSelectInput renders as not valid 1`] = `
+exports[`ClayMultiSelect renders as not valid 1`] = `
 <body>
   <div>
     <div
@@ -244,7 +244,7 @@ exports[`ClayMultiSelectInput renders as not valid 1`] = `
 </body>
 `;
 
-exports[`ClayMultiSelectInput renders with items 1`] = `
+exports[`ClayMultiSelect renders with items 1`] = `
 <body>
   <div>
     <div
