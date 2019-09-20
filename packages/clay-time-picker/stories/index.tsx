@@ -30,6 +30,7 @@ storiesOf('Components|ClayTimePicker', module).add('default', () => (
 			<TimePickerWithState
 				disabled={boolean('Disabled', false)}
 				icon={boolean('Show icon', false)}
+				name={text('Name', 'time-picker')}
 				spritemap={spritemap}
 				timezone={text('Timezone', 'GMT+01:00')}
 				use12Hours={boolean('Use 12 hours', false)}
