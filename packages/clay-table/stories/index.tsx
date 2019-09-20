@@ -44,7 +44,11 @@ function Dropdown() {
 			]}
 			spritemap={spritemap}
 			trigger={
-				<ClayButton className="component-action" monospaced>
+				<ClayButton
+					className="component-action"
+					displayType="unstyled"
+					monospaced
+				>
 					<ClayIcon spritemap={spritemap} symbol="ellipsis-v" />
 				</ClayButton>
 			}
