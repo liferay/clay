@@ -5,7 +5,8 @@
  */
 
 import ClayButton from '@clayui/button';
-import ClayForm, {ClayInput, ClayMultiSelectInput} from '@clayui/form';
+import ClayForm, {ClayInput} from '@clayui/form';
+import ClayMultiSelect from '@clayui/multi-select';
 import ClayPanel from '@clayui/panel';
 import React, {useState} from 'react';
 import {ClayVerticalNav} from '@clayui/navigation';
@@ -126,7 +127,7 @@ export default () => {
 
 											<ClayInput.Group>
 												<ClayInput.GroupItem>
-													<ClayMultiSelectInput
+													<ClayMultiSelect
 														inputValue={value}
 														items={selectedItems}
 														onInputChange={setValue}

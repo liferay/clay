@@ -1,9 +1,10 @@
 {
-	"name": "@clayui/form",
+	"private": true,
+	"name": "@clayui/multi-select",
 	"version": "3.0.0-alpha.1",
-	"description": "ClayForm component",
+	"description": "ClayMultiSelect component",
 	"license": "BSD-3-Clause",
-	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-form",
+	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-multi-select",
 	"engines": {
 		"node": ">=0.12.0",
 		"npm": ">=3.0.0"
@@ -26,8 +27,16 @@
 		"react"
 	],
 	"dependencies": {
+		"@clayui/autocomplete": "^3.0.0-alpha.1",
+		"@clayui/drop-down": "^3.0.0-alpha.1",
+		"@clayui/form": "^3.0.0-alpha.1",
 		"@clayui/icon": "^3.0.0-alpha.1",
+		"@clayui/label": "^3.0.0-alpha.1",
+		"@clayui/shared": "^3.0.0-alpha.1",
 		"classnames": "^2.2.6"
+	},
+	"devDependencies": {
+		"@clayui/button": "^3.0.0-alpha.1"
 	},
 	"peerDependencies": {
 		"@clayui/css": "3.x",
