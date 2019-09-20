@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/tabs",
-	"version": "3.0.0-alpha.1",
+	"version": "3.0.0",
 	"description": "ClayTabs component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-tabs",
@@ -26,12 +26,12 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/shared": "^3.0.0-alpha.1",
+		"@clayui/shared": "^3.0.1",
 		"classnames": "^2.2.6"
 	},
 	"devDependencies": {
-		"@clayui/drop-down": "^3.0.0-alpha.1",
-		"@clayui/icon": "^3.0.0-alpha.1"
+		"@clayui/drop-down": "^3.0.0",
+		"@clayui/icon": "^3.0.0"
 	},
 	"peerDependencies": {
 		"@clayui/css": "3.x",
