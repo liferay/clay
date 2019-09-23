@@ -1,3 +1,5 @@
+/* eslint no-for-of-loops/no-for-of-loops: 0 */
+
 /**
  * © 2019 Liferay, Inc. <https://liferay.com>
  *
@@ -9,8 +11,6 @@ const {promisify} = require('util');
 const getPackageConfig = require('./getPackageConfig');
 
 const readdirAsync = promisify(fs.readdir);
-
-/* eslint-disable no-for-of-loops/no-for-of-loops */
 
 /**
  * Execute `callback` in the context of each package in the monorepo.
