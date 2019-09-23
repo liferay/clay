@@ -121,7 +121,7 @@ export default () => {
 
 	return (
 		<div>
-			<ClayManagementToolbar
+			<ClayManagementToolbarWithElements
 				actionItems={actionItems}
 				active={!!numOfSelected}
 				checkboxChecked={allSelected}

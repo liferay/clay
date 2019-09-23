@@ -29,7 +29,7 @@ export default () => {
 
 	return (
 		<div>
-			<ClayManagementToolbar
+			<ClayManagementToolbarWithElements
 				onSearchValueChange={setValue}
 				onValueSubmit={(value: string) => alert(`Submit ${value}`)}
 				searchPlaceholder="Search..."

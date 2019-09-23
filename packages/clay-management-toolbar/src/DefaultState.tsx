@@ -57,8 +57,11 @@ interface IProps extends IPropsBase {
 	 * Props to add to the form.
 	 */
 	searchFormProps?: Omit<
-		React.ComponentProps<typeof SearchForm>,
-		'onlySearch'
+		Omit<
+			React.ComponentProps<typeof ClayManagementToolbar.Search>,
+			'onlySearch'
+		>,
+		'showMobile'
 	>;
 
 	/**
@@ -120,9 +123,9 @@ const DefaultState: React.FunctionComponent<IProps> = ({
 
 	return (
 		<>
-			<ItemList>
+			<ClayManagementToolbar.ItemList>
 				{onCheckboxChange && (
-					<Item>
+					<ClayManagementToolbar.Item>
 						<ClayCheckbox
 							checked={checkboxChecked}
 							disabled={disabled}
@@ -135,7 +138,7 @@ const DefaultState: React.FunctionComponent<IProps> = ({
 							}
 							onChange={onCheckboxChange}
 						/>
-					</Item>
+					</ClayManagementToolbar.Item>
 				)}
 
 				{filterItems && (
@@ -171,7 +174,7 @@ const DefaultState: React.FunctionComponent<IProps> = ({
 				)}
 
 				{sortingOrder && (onSortingButtonClick || sortingURL) && (
-					<Item>
+					<ClayManagementToolbar.Item>
 						<LinkOrButton
 							buttonDisplayType="unstyled"
 							className={classNames(
@@ -193,16 +196,15 @@ const DefaultState: React.FunctionComponent<IProps> = ({
 								symbol="order-arrow"
 							/>
 						</LinkOrButton>
-					</Item>
+					</ClayManagementToolbar.Item>
 				)}
-			</ItemList>
+			</ClayManagementToolbar.ItemList>
 
 			{onSearchValueChange && onValueSubmit && (
-				<div
-					className={classNames('navbar-form navbar-form-autofit', {
-						'navbar-overlay navbar-overlay-sm-down': !onlySearch,
-						show: searchMobile,
-					})}
+				<ClayManagementToolbar.Search
+					{...searchFormProps}
+					onlySearch={onlySearch}
+					showMobile={searchMobile}
 				>
 					<SearchForm {...searchFormProps} onlySearch={onlySearch}>
 						<SearchInput
@@ -219,9 +221,9 @@ const DefaultState: React.FunctionComponent<IProps> = ({
 				</div>
 			)}
 
-			<ItemList>
+			<ClayManagementToolbar.ItemList>
 				{onSearchValueChange && !onlySearch && (
-					<Item className="navbar-breakpoint-d-none">
+					<ClayManagementToolbar.Item className="navbar-breakpoint-d-none">
 						<ClayButton
 							className="nav-link nav-link-monospaced"
 							disabled={disabled}
@@ -230,11 +232,11 @@ const DefaultState: React.FunctionComponent<IProps> = ({
 						>
 							<ClayIcon spritemap={spritemap} symbol="search" />
 						</ClayButton>
-					</Item>
+					</ClayManagementToolbar.Item>
 				)}
 
 				{onInfoButtonClick && (
-					<Item>
+					<ClayManagementToolbar.Item>
 						<ClayButton
 							className="nav-link nav-link-monospaced"
 							disabled={disabled}
@@ -247,11 +249,11 @@ const DefaultState: React.FunctionComponent<IProps> = ({
 								symbol="info-circle-open"
 							/>
 						</ClayButton>
-					</Item>
+					</ClayManagementToolbar.Item>
 				)}
 
 				{viewTypes && viewTypes.length > 0 && (
-					<Item>
+					<ClayManagementToolbar.Item>
 						<ClayDropDownWithItems
 							items={viewTypes}
 							spritemap={spritemap}
@@ -273,11 +275,11 @@ const DefaultState: React.FunctionComponent<IProps> = ({
 								</ClayButton>
 							}
 						/>
-					</Item>
+					</ClayManagementToolbar.Item>
 				)}
 
 				{(onCreationMenuClick || creationMenu) && (
-					<Item>
+					<ClayManagementToolbar.Item>
 						<CreationMenu
 							creationMenu={creationMenu}
 							disabled={disabled}
@@ -285,9 +287,9 @@ const DefaultState: React.FunctionComponent<IProps> = ({
 							spritemap={spritemap}
 							titlesLang={titlesLang}
 						/>
-					</Item>
+					</ClayManagementToolbar.Item>
 				)}
-			</ItemList>
+			</ClayManagementToolbar.ItemList>
 		</>
 	);
 };
