@@ -28,6 +28,7 @@ exports[`Interactions opens custom color picker drop down when clicked 1`] = `
             class="btn clay-color-btn dropdown-toggle"
             style="border-width: 0px; background: rgb(0, 128, 0); height: 28px; width: 28px;"
             title="008000"
+            type="button"
           />
         </div>
       </div>
@@ -82,6 +83,7 @@ exports[`Rendering default 1`] = `
               class="btn clay-color-btn dropdown-toggle"
               style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 28px; width: 28px;"
               title="FFF"
+              type="button"
             />
           </div>
         </div>
