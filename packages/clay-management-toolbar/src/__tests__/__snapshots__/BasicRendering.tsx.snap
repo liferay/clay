@@ -1843,7 +1843,7 @@ exports[`BasicRendering renders a ManagementToolbar with creation menu DropDown 
             class="dropdown"
           >
             <button
-              class="dropdown-toggle nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none btn btn-primary"
+              class="dropdown-toggle nav-btn nav-btn-monospaced btn btn-primary"
               type="button"
             >
               <svg
@@ -1881,7 +1881,7 @@ exports[`BasicRendering renders a ManagementToolbar with creation menu button 1`
           class="nav-item"
         >
           <button
-            class="nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none btn btn-monospaced btn-primary"
+            class="nav-btn nav-btn-monospaced btn btn-monospaced btn-primary"
             type="button"
           >
             <svg
@@ -2138,7 +2138,7 @@ exports[`BasicRendering renders a ManagementToolbar with disabled all 1`] = `
             class="dropdown"
           >
             <button
-              class="dropdown-toggle nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none btn btn-primary"
+              class="dropdown-toggle nav-btn nav-btn-monospaced btn btn-primary"
               disabled=""
               type="button"
             >

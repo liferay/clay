@@ -64,7 +64,7 @@ const CreationMenu: React.FunctionComponent<IProps> = ({
 				spritemap={spritemap}
 				trigger={
 					<ClayButton
-						className="nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none"
+						className="nav-btn nav-btn-monospaced"
 						disabled={disabled}
 						onClick={onCreationMenuClick}
 					>
@@ -90,7 +90,7 @@ const CreationMenu: React.FunctionComponent<IProps> = ({
 	if (creationMenu && typeof creationMenu === 'boolean') {
 		return (
 			<ClayButtonWithIcon
-				className="nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none"
+				className="nav-btn nav-btn-monospaced"
 				disabled={disabled}
 				onClick={onCreationMenuClick}
 				spritemap={spritemap}

@@ -71,7 +71,7 @@ describe('BasicRendering', () => {
 
 	it('renders', () => {
 		const {container} = render(
-			<ClayManagementToolbar spritemap={spritemap} />
+			<ClayManagementToolbarWithElements spritemap={spritemap} />
 		);
 
 		expect(container).toMatchSnapshot();
@@ -79,7 +79,7 @@ describe('BasicRendering', () => {
 
 	it('renders a ManagementToolbar with only search', () => {
 		const {container} = render(
-			<ClayManagementToolbar
+			<ClayManagementToolbarWithElements
 				onSearchValueChange={() => {}}
 				onValueSubmit={() => {}}
 				searchValue=""
@@ -92,7 +92,7 @@ describe('BasicRendering', () => {
 
 	it('renders a ManagementToolbar with selectable', () => {
 		const {container} = render(
-			<ClayManagementToolbar
+			<ClayManagementToolbarWithElements
 				checkboxChecked
 				onCheckboxChange={() => {}}
 				spritemap={spritemap}
@@ -104,7 +104,7 @@ describe('BasicRendering', () => {
 
 	it('renders a ManagementToolbar with sorting order', () => {
 		const {container} = render(
-			<ClayManagementToolbar
+			<ClayManagementToolbarWithElements
 				onSortingButtonClick={() => {}}
 				sortingOrder="asc"
 				spritemap={spritemap}
@@ -116,7 +116,7 @@ describe('BasicRendering', () => {
 
 	it('renders a ManagementToolbar with info button', () => {
 		const {container} = render(
-			<ClayManagementToolbar
+			<ClayManagementToolbarWithElements
 				onInfoButtonClick={() => {}}
 				spritemap={spritemap}
 			/>
@@ -127,7 +127,7 @@ describe('BasicRendering', () => {
 
 	it('renders a ManagementToolbar with filter and order', () => {
 		const {container} = render(
-			<ClayManagementToolbar
+			<ClayManagementToolbarWithElements
 				filterItems={filterItems}
 				spritemap={spritemap}
 			/>
@@ -138,7 +138,7 @@ describe('BasicRendering', () => {
 
 	it('renders a ManagementToolbar with creation menu button', () => {
 		const {container} = render(
-			<ClayManagementToolbar
+			<ClayManagementToolbarWithElements
 				creationMenu
 				onCreationMenuClick={() => {}}
 				spritemap={spritemap}
@@ -150,7 +150,7 @@ describe('BasicRendering', () => {
 
 	it('renders a ManagementToolbar with creation menu link', () => {
 		const {container} = render(
-			<ClayManagementToolbar
+			<ClayManagementToolbarWithElements
 				creationMenu="https://clay.dev"
 				spritemap={spritemap}
 			/>
@@ -161,7 +161,7 @@ describe('BasicRendering', () => {
 
 	it('renders a ManagementToolbar with creation menu DropDown', () => {
 		const {container} = render(
-			<ClayManagementToolbar
+			<ClayManagementToolbarWithElements
 				creationMenu={creationMenu}
 				spritemap={spritemap}
 			/>
@@ -172,7 +172,7 @@ describe('BasicRendering', () => {
 
 	it('renders a ManagementToolbar with view types', () => {
 		const {container} = render(
-			<ClayManagementToolbar
+			<ClayManagementToolbarWithElements
 				spritemap={spritemap}
 				viewTypes={viewTypes}
 			/>
@@ -183,7 +183,7 @@ describe('BasicRendering', () => {
 
 	it('renders a ManagementToolbar with disabled all', () => {
 		const {container} = render(
-			<ClayManagementToolbar
+			<ClayManagementToolbarWithElements
 				checkboxChecked
 				creationMenu={creationMenu}
 				disabled
@@ -205,7 +205,7 @@ describe('BasicRendering', () => {
 	describe('active state', () => {
 		it('renders a ManagementToolbar', () => {
 			const {container} = render(
-				<ClayManagementToolbar
+				<ClayManagementToolbarWithElements
 					active
 					checkboxChecked
 					onCheckboxChange={() => {}}
@@ -218,7 +218,7 @@ describe('BasicRendering', () => {
 
 		it('renders a ManagementToolbar with actions', () => {
 			const {container} = render(
-				<ClayManagementToolbar
+				<ClayManagementToolbarWithElements
 					actionItems={actionItems}
 					active
 					checkboxChecked
@@ -232,7 +232,7 @@ describe('BasicRendering', () => {
 
 		it('renders a ManagementToolbar with info button', () => {
 			const {container} = render(
-				<ClayManagementToolbar
+				<ClayManagementToolbarWithElements
 					actionItems={actionItems}
 					active
 					checkboxChecked
@@ -247,7 +247,7 @@ describe('BasicRendering', () => {
 
 		it('renders a ManagementToolbar with all selected', () => {
 			const {container} = render(
-				<ClayManagementToolbar
+				<ClayManagementToolbarWithElements
 					actionItems={actionItems}
 					active
 					checkboxChecked
@@ -264,7 +264,7 @@ describe('BasicRendering', () => {
 
 		it('renders a ManagementToolbar with selected', () => {
 			const {container} = render(
-				<ClayManagementToolbar
+				<ClayManagementToolbarWithElements
 					actionItems={actionItems}
 					active
 					checkboxChecked
@@ -281,7 +281,7 @@ describe('BasicRendering', () => {
 
 		it('renders a ManagementToolbar with selected', () => {
 			const {container} = render(
-				<ClayManagementToolbar
+				<ClayManagementToolbarWithElements
 					actionItems={actionItems}
 					active
 					checkboxChecked
@@ -298,7 +298,7 @@ describe('BasicRendering', () => {
 
 		it('renders a ManagementToolbar with bulk actions', () => {
 			const {container} = render(
-				<ClayManagementToolbar
+				<ClayManagementToolbarWithElements
 					actionItems={actionItems}
 					active
 					checkboxChecked
@@ -316,7 +316,7 @@ describe('BasicRendering', () => {
 
 		it('renders a ManagementToolbar with select all button', () => {
 			const {container} = render(
-				<ClayManagementToolbar
+				<ClayManagementToolbarWithElements
 					actionItems={actionItems}
 					active
 					checkboxChecked
@@ -335,7 +335,7 @@ describe('BasicRendering', () => {
 
 		it('renders a ManagementToolbar with active state disabled', () => {
 			const {container} = render(
-				<ClayManagementToolbar
+				<ClayManagementToolbarWithElements
 					actionItems={actionItems}
 					active
 					checkboxChecked
@@ -357,7 +357,7 @@ describe('BasicRendering', () => {
 	describe('ManagementToolbar with results bar', () => {
 		it('renders a ManagementToolbar with filterLabels', () => {
 			const {container} = render(
-				<ClayManagementToolbar
+				<ClayManagementToolbarWithElements
 					actionItems={actionItems}
 					active
 					checkboxChecked
@@ -374,7 +374,7 @@ describe('BasicRendering', () => {
 
 		it('renders a ManagementToolbar with results for `foo`', () => {
 			const {container} = render(
-				<ClayManagementToolbar
+				<ClayManagementToolbarWithElements
 					actionItems={actionItems}
 					active
 					checkboxChecked

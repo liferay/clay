@@ -103,18 +103,18 @@ const ActiveState: React.FunctionComponent<IProps> = ({
 }) => {
 	return (
 		<>
-			<ItemList expand>
+			<ClayManagementToolbar.ItemList expand>
 				{onCheckboxChange && (
-					<Item>
+					<ClayManagementToolbar.Item>
 						<ClayCheckbox
 							checked={checkboxChecked}
 							disabled={disabled}
 							onChange={onCheckboxChange}
 							title={labels.checkbox}
 						/>
-					</Item>
+					</ClayManagementToolbar.Item>
 				)}
-				<Item>
+				<ClayManagementToolbar.Item>
 					<span className="navbar-text">
 						{selectedItems === totalItems ? (
 							labels.allSelected
@@ -130,10 +130,10 @@ const ActiveState: React.FunctionComponent<IProps> = ({
 							</>
 						)}
 					</span>
-				</Item>
+				</ClayManagementToolbar.Item>
 
 				{(onClearSelectionClick || clearSelectionURL) && (
-					<Item className="nav-item-shrink">
+					<ClayManagementToolbar.Item className="nav-item-shrink">
 						<LinkOrButton
 							buttonDisplayType="unstyled"
 							buttonType="button"
@@ -148,11 +148,11 @@ const ActiveState: React.FunctionComponent<IProps> = ({
 								</span>
 							</span>
 						</LinkOrButton>
-					</Item>
+					</ClayManagementToolbar.Item>
 				)}
 
 				{(selectAllURL || onSelectAllClick) && (
-					<Item className="nav-item-shrink">
+					<ClayManagementToolbar.Item className="nav-item-shrink">
 						<LinkOrButton
 							buttonDisplayType="unstyled"
 							buttonType="button"
@@ -167,15 +167,15 @@ const ActiveState: React.FunctionComponent<IProps> = ({
 								</span>
 							</span>
 						</LinkOrButton>
-					</Item>
+					</ClayManagementToolbar.Item>
 				)}
-			</ItemList>
+			</ClayManagementToolbar.ItemList>
 
 			{(actionItems.length > 0 || onInfoButtonClick) && (
 				<>
-					<ItemList>
+					<ClayManagementToolbar.ItemList>
 						{onInfoButtonClick && (
-							<Item>
+							<ClayManagementToolbar.Item>
 								<ClayButton
 									className="nav-link nav-link-monospaced"
 									disabled={disabled}
@@ -188,9 +188,9 @@ const ActiveState: React.FunctionComponent<IProps> = ({
 										symbol="info-circle-open"
 									/>
 								</ClayButton>
-							</Item>
+							</ClayManagementToolbar.Item>
 						)}
-					</ItemList>
+					</ClayManagementToolbar.ItemList>
 
 					{actionItems.length > 0 && (
 						<>
@@ -198,7 +198,7 @@ const ActiveState: React.FunctionComponent<IProps> = ({
 								({quickAction, ...item}, index) =>
 									quickAction &&
 									item.symbolLeft && (
-										<Item
+										<ClayManagementToolbar.Item
 											className="navbar-breakpoint-down-d-none"
 											key={index}
 										>
@@ -226,11 +226,11 @@ const ActiveState: React.FunctionComponent<IProps> = ({
 													symbol={item.symbolLeft}
 												/>
 											</LinkOrButton>
-										</Item>
+										</ClayManagementToolbar.Item>
 									)
 							)}
 
-							<Item>
+							<ClayManagementToolbar.Item>
 								<ClayDropDownWithItems
 									items={actionItems.map(
 										// eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -250,7 +250,7 @@ const ActiveState: React.FunctionComponent<IProps> = ({
 										</ClayButton>
 									}
 								/>
-							</Item>
+							</ClayManagementToolbar.Item>
 						</>
 					)}
 				</>
