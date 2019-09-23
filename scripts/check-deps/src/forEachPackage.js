@@ -6,11 +6,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-const fs = require('fs');
+const {readdir} = require('fs');
 const {promisify} = require('util');
 const getPackageConfig = require('./getPackageConfig');
 
-const readdirAsync = promisify(fs.readdir);
+const readdirAsync = promisify(readdir);
 
 /**
  * Execute `callback` in the context of each package in the monorepo.

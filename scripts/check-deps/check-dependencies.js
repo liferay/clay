@@ -12,17 +12,17 @@
  * Reference: https://github.com/wincent/js
  */
 
-const fs = require('fs');
+const {readFile, readdir} = require('fs');
 const {basename, extname, join} = require('path');
 const {promisify} = require('util');
-const parser = require('@babel/parser');
+const {parse} = require('@babel/parser');
 const traverse = require('@babel/traverse').default;
 const forEachPackage = require('./src/forEachPackage');
 const main = require('./src/main');
 const print = require('./src/print');
 
-const readdirAsync = promisify(fs.readdir);
-const readFileAsync = promisify(fs.readFile);
+const readdirAsync = promisify(readdir);
+const readFileAsync = promisify(readFile);
 
 async function* walk(directory, predicate = () => true) {
 	const entries = await readdirAsync(directory, {withFileTypes: true});
@@ -46,7 +46,7 @@ function isSourceFile(entry) {
 
 async function forEachSourceFile(name, callback) {
 	const directory = join('packages', name, 'lib');
-  	await walk(directory, isSourceFile, callback);
+	await walk(directory, isSourceFile, callback);
 }
 
 /**
@@ -116,7 +116,7 @@ async function checkForMissingDependencies() {
 
 		await forEachSourceFile(name, async source => {
 			const contents = await readFileAsync(source);
-			const ast = parser.parse(contents.toString(), {
+			const ast = parse(contents.toString(), {
 				plugins: ['flow'],
 				sourceType: 'unambiguous',
 			});
