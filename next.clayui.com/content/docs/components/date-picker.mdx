@@ -33,6 +33,8 @@ import {DatePickerWithState, DatePickerWithTime, DatePickerCustomFooter, DatePic
 
 Date Picker is created following the principles of <a href="https://liferay.design/lexicon/core-components/forms/picker-date-time/">Lexicon</a>, Internationalization and Extension Points by default is integrated with Time Picker that offers the minimum of features to set a time.
 
+By default Date Picker does not handle input masking, letting you take control so you can take care of internationalization. Date Picker will update the Calendar only when the value entered in the input is a valid date, respecting the [`dateFormat`](#api-dateFormat) API.
+
 For mobile viewing mode, Lexicon encourages you to use the native Date Picker, they are many robust and more accessible in the mobile view, Clay offers the [`useNative`](#api-useNative) API to replace the Date Picker view mode with the native and continue to get the features of the component.
 
 <div class="clay-site-alert alert alert-warning">
