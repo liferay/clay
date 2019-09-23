@@ -1,3 +1,5 @@
+/* eslint no-for-of-loops/no-for-of-loops: 0 */
+
 /**
  * © 2019 Liferay, Inc. <https://liferay.com>
  *
