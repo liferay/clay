@@ -6,7 +6,7 @@
 
 import DropDown from '@clayui/drop-down';
 import {ClayInput} from '@clayui/form';
-import {sub} from '@clayui/shared';
+import {FocusScope, sub} from '@clayui/shared';
 import React, {useEffect, useRef, useState} from 'react';
 import tinycolor from 'tinycolor2';
 
@@ -132,6 +132,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 	const dropdownContainerRef = useRef<HTMLDivElement>(null);
 	const inputRef = useRef<HTMLInputElement>(null);
 	const valueInputRef = useRef<HTMLInputElement>(null);
+	const splotchRef = useRef<HTMLButtonElement>(null);
 
 	const [active, setActive] = useState(false);
 	const [hexInputValue, setHexInputValue] = useHexInput(value);
@@ -143,107 +144,128 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 	}, [value]);
 
 	return (
-		<div className="clay-color-picker">
-			{name && (
-				<input
-					name={name}
-					onChange={e =>
-						useNative ? onValueChange(e.target.value) : null
-					}
-					ref={valueInputRef}
-					style={{display: 'none'}}
-					type={useNative ? 'color' : 'text'}
-					value={value}
-				/>
-			)}
-
-			{title && <label>{title}</label>}
-
-			<ClayInput.Group className="clay-color" ref={triggerElementRef}>
-				<ClayInput.GroupItem prepend={showHex} shrink>
-					<ClayInput.GroupText>
-						<Splotch
-							aria-label={ariaLabels.selectColor}
-							className="dropdown-toggle"
-							onClick={() =>
-								useNative && valueInputRef.current
-									? valueInputRef.current.click()
-									: setActive((val: boolean) => !val)
-							}
-							size={28}
-							value={value}
-						/>
-					</ClayInput.GroupText>
-				</ClayInput.GroupItem>
-
-				{showHex && (
-					<ClayInput.GroupItem append>
-						<ClayInput
-							aria-label={sub(ariaLabels.selectionIs, [value])}
-							insetBefore
-							onBlur={event => {
-								const newColor = tinycolor(event.target.value);
-
-								const hexString = newColor.isValid()
-									? newColor.toHex()
-									: value;
-
-								onValueChange(hexString);
-								setHexInputValue(hexString);
-							}}
-							onChange={event => {
-								const newHexValue = event.target.value;
-
-								const newColor = tinycolor(newHexValue);
-
-								setHexInputValue(newHexValue);
-
-								if (newColor.isValid()) {
-									onValueChange(newColor.toHex());
-								}
-							}}
-							ref={inputRef}
-							type="text"
-							value={hexInputValue.toUpperCase().substring(0, 6)}
-						/>
-
-						<ClayInput.GroupInsetItem before tag="label">
-							{'#'}
-						</ClayInput.GroupInsetItem>
-					</ClayInput.GroupItem>
-				)}
-			</ClayInput.Group>
-
-			<DropDown.Menu
-				active={active}
-				alignElementRef={triggerElementRef}
-				className="clay-color-dropdown-menu"
-				onSetActive={setActive}
-				ref={dropdownContainerRef}
-			>
-				{!onColorsChange && (
-					<Basic
-						colors={colors || DEFAULT_COLORS}
-						label={label}
-						onChange={onValueChange}
-					/>
-				)}
-
-				{onColorsChange && (
-					<Custom
-						colors={
-							colors
-								? colors.concat(BLANK_COLORS).slice(0, 12)
-								: BLANK_COLORS
+		<FocusScope arrowKeysUpDown={false}>
+			<div className="clay-color-picker">
+				{name && (
+					<input
+						name={name}
+						onChange={e =>
+							useNative ? onValueChange(e.target.value) : null
 						}
-						label={label}
-						onChange={onValueChange}
-						onColorsChange={onColorsChange}
-						spritemap={spritemap}
+						ref={valueInputRef}
+						style={{display: 'none'}}
+						type={useNative ? 'color' : 'text'}
+						value={value}
 					/>
 				)}
-			</DropDown.Menu>
-		</div>
+
+				{title && <label>{title}</label>}
+
+				<ClayInput.Group className="clay-color" ref={triggerElementRef}>
+					<ClayInput.GroupItem prepend={showHex} shrink>
+						<ClayInput.GroupText>
+							<Splotch
+								aria-label={ariaLabels.selectColor}
+								className="dropdown-toggle"
+								onClick={() =>
+									useNative && valueInputRef.current
+										? valueInputRef.current.click()
+										: setActive((val: boolean) => !val)
+								}
+								ref={splotchRef}
+								size={28}
+								type="button"
+								value={value}
+							/>
+						</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+
+					<DropDown.Menu
+						active={active}
+						alignElementRef={triggerElementRef}
+						className="clay-color-dropdown-menu"
+						onSetActive={setActive}
+						ref={dropdownContainerRef}
+					>
+						{!onColorsChange && (
+							<Basic
+								colors={colors || DEFAULT_COLORS}
+								label={label}
+								onChange={value => {
+									onValueChange(value);
+									setActive((val: boolean) => !val);
+
+									if (splotchRef.current) {
+										splotchRef.current.focus();
+									}
+								}}
+							/>
+						)}
+
+						{onColorsChange && (
+							<Custom
+								colors={
+									colors
+										? colors
+												.concat(BLANK_COLORS)
+												.slice(0, 12)
+										: BLANK_COLORS
+								}
+								label={label}
+								onChange={value => {
+									onValueChange(value);
+								}}
+								onColorsChange={onColorsChange}
+								spritemap={spritemap}
+							/>
+						)}
+					</DropDown.Menu>
+
+					{showHex && (
+						<ClayInput.GroupItem append>
+							<ClayInput
+								aria-label={sub(ariaLabels.selectionIs, [
+									value,
+								])}
+								insetBefore
+								onBlur={event => {
+									const newColor = tinycolor(
+										event.target.value
+									);
+
+									const hexString = newColor.isValid()
+										? newColor.toHex()
+										: value;
+
+									onValueChange(hexString);
+									setHexInputValue(hexString);
+								}}
+								onChange={event => {
+									const newHexValue = event.target.value;
+
+									const newColor = tinycolor(newHexValue);
+
+									setHexInputValue(newHexValue);
+
+									if (newColor.isValid()) {
+										onValueChange(newColor.toHex());
+									}
+								}}
+								ref={inputRef}
+								type="text"
+								value={hexInputValue
+									.toUpperCase()
+									.substring(0, 6)}
+							/>
+
+							<ClayInput.GroupInsetItem before tag="label">
+								{'#'}
+							</ClayInput.GroupInsetItem>
+						</ClayInput.GroupItem>
+					)}
+				</ClayInput.Group>
+			</div>
+		</FocusScope>
 	);
 };
 
