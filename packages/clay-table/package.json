@@ -28,14 +28,6 @@
 	"dependencies": {
 		"classnames": "^2.2.6"
 	},
-	"devDependencies": {
-		"@clayui/button": "^3.0.3",
-		"@clayui/drop-down": "^3.1.2",
-		"@clayui/form": "^3.2.1",
-		"@clayui/icon": "^3.0.1",
-		"@clayui/label": "^3.0.1",
-		"@clayui/progress-bar": "^3.0.1"
-	},
 	"peerDependencies": {
 		"@clayui/css": "3.x",
 		"react": "^16.8.1",
