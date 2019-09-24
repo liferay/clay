@@ -227,8 +227,8 @@ storiesOf('Components|ClayDropDown', module)
 				helpText="You can customize this menu or see all you have by pressing 'more'."
 				items={items}
 				onSearchValueChange={setValue}
-				searchable={boolean('Searchable', true)}
 				searchValue={value}
+				searchable={boolean('Searchable', true)}
 				spritemap={spritemap}
 				trigger={<ClayButton>{'Click Me'}</ClayButton>}
 			/>

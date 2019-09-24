@@ -209,7 +209,7 @@ describe('ClayNavigationBar', () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it('should throw a warning when passing more than one active prop to child', () => {
+	it('throws a warning when passing more than one active prop to child', () => {
 		const mockWarnings = jest
 			.spyOn(global.console, 'error')
 			.mockImplementation(() => null);

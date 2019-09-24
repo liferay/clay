@@ -50,6 +50,7 @@ module.exports = ({markdownAST}) => {
 	return Promise.all(
 		markdownHtmlNodes.map(
 			node =>
+				// eslint-disable-next-line no-async-promise-executor
 				new Promise(async resolve => {
 					const pathFile = path.resolve(
 						'../packages/',
@@ -68,10 +69,12 @@ module.exports = ({markdownAST}) => {
 						});
 						const propsKeys = Object.keys(AST.props);
 
+						// eslint-disable-next-line require-atomic-updates
 						node.value = `<ul class="list-api">${propsKeys
 							.map(key => generateTr(AST.props[key], key))
 							.join('')}</ul>`;
 					} catch (error) {
+						// eslint-disable-next-line require-atomic-updates
 						node.value = `<ul class="list-api">
 							<li class="list-api-item">
 							<code class="list-api-item-type">{'${error.message}'}</code>

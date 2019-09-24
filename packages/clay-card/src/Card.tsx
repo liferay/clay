@@ -10,8 +10,7 @@ import React from 'react';
 import AspectRatio from './AspectRatio';
 import Body from './Body';
 import Caption from './Caption';
-import Context from './Context';
-import {IContext} from './Context';
+import Context, {IContext} from './Context';
 import Description from './Description';
 import Group from './Group';
 

@@ -27,6 +27,7 @@ class Navigation extends Component {
 		event.preventDefault();
 		event.stopPropagation();
 
+		// eslint-disable-next-line react/no-string-refs
 		const elementRef = this.refs[`navItem${index}${depth}`];
 
 		if (!elementRef.classList.contains('active') || !!section.items) {

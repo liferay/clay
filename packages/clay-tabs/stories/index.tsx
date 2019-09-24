@@ -12,6 +12,8 @@ import {boolean} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React from 'react';
 
+import ClayTabs from '../src';
+
 const DropDownWithState: React.FunctionComponent<any> = ({
 	children,
 	trigger,
@@ -32,8 +34,6 @@ const DropDownWithState: React.FunctionComponent<any> = ({
 		</ClayDropDown>
 	);
 };
-
-import ClayTabs from '../src';
 
 storiesOf('Components|ClayTabs', module).add('default', () => {
 	const ClayTabsWithState = () => {

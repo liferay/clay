@@ -6,16 +6,17 @@
 
 import {Grid, PointOptions} from 'billboard.js';
 import * as d3 from 'd3';
-import {
+import {FeatureCollection} from 'geojson';
+import React from 'react';
+
+const {
 	GeoPath,
 	GeoPermissibleObjects,
 	GeoProjection,
 	ScaleLinear,
 	Selection,
 	ValueFn,
-} from 'd3';
-import {FeatureCollection} from 'geojson';
-import React from 'react';
+} = d3;
 
 const DEFAULT_COLOR = {
 	range: {
