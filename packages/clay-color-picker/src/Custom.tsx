@@ -5,13 +5,12 @@
  */
 
 import ClayForm, {ClayInput} from '@clayui/form';
-import Icon from '@clayui/icon';
-import React, {useEffect, useRef, useState} from 'react';
-import tinycolor from 'tinycolor2';
-
 import GradientSelector from './GradientSelector';
 import Hue from './Hue';
+import Icon from '@clayui/icon';
+import React, {useEffect, useRef, useState} from 'react';
 import Splotch from './Splotch';
+import tinycolor from 'tinycolor2';
 import {useHexInput} from './hooks';
 
 interface IRGBInputProps {
@@ -146,10 +145,10 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 		if (inputRef.current !== document.activeElement) {
 			setHexInput(color.toHex());
 		}
-	}, [color, setHexInput]);
+	}, [color]);
 
 	return (
-		<>
+		<React.Fragment>
 			{label && (
 				<div className="clay-color-header">
 					<span className="component-title">{label}</span>
@@ -192,7 +191,7 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 			</div>
 
 			{editorActive && (
-				<>
+				<React.Fragment>
 					<div className="clay-color-map-group">
 						<GradientSelector
 							color={color}
@@ -289,9 +288,9 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 							</ClayInput.Group>
 						</ClayForm.Group>
 					</div>
-				</>
+				</React.Fragment>
 			)}
-		</>
+		</React.Fragment>
 	);
 };
 

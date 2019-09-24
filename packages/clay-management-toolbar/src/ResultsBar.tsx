@@ -5,11 +5,10 @@
  */
 
 import ClayLabel from '@clayui/label';
-import {LinkOrButton, sub} from '@clayui/shared';
 import React from 'react';
-
 import ResultsBarItem from './ResultsBarItem';
 import {ILabel} from './types';
+import {LinkOrButton, sub} from '@clayui/shared';
 
 interface IProps {
 	/**

@@ -4,10 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import ClayButton from './Button';
 import ClayIcon from '@clayui/icon';
 import React from 'react';
-
-import ClayButton from './Button';
 
 interface IProps extends React.ComponentProps<typeof ClayButton> {
 	/**

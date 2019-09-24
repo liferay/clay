@@ -3,14 +3,13 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-
 import '@clayui/css/lib/css/atlas.css';
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import ClayColorPicker from '../src';
+import React, {useState} from 'react';
 import {boolean, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import React, {useState} from 'react';
 
-import ClayColorPicker from '../src';
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
 const ClayColorPickerWithState = (props: any) => {
 	const [color, setColor] = useState('FFFFFF');

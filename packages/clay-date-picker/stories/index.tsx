@@ -3,13 +3,12 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-
 import '@clayui/css/lib/css/atlas.css';
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
-import {storiesOf} from '@storybook/react';
-import React, {useState} from 'react';
-
 import ClayDatePicker, {FirstDayOfWeek} from '../src';
+import React, {useState} from 'react';
+import {storiesOf} from '@storybook/react';
+
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
 const ClayDatePickerWithState = (props: {[key: string]: any}) => {
 	const [value, setValue] = useState<string | Date>('');

@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayList, {ClayListWithItems} from '..';
-import {cleanup, fireEvent, render} from '@testing-library/react';
 import * as TestRenderer from 'react-test-renderer';
+import ClayList, {ClayListWithItems} from '..';
 import React from 'react';
+import {cleanup, fireEvent, render} from '@testing-library/react';
 
 describe('ClayList', () => {
 	it('renders', () => {

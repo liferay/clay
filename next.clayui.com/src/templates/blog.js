@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {graphql} from 'gatsby';
 import Helmet from 'react-helmet';
 import React from 'react';
+import {graphql} from 'gatsby';
 
 import LayoutNav from '../components/LayoutNav';
 import Sidebar from '../components/Sidebar';

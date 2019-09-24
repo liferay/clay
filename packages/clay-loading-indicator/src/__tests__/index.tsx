@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayLoadingIndicator from '..';
 import * as TestRenderer from 'react-test-renderer';
+import ClayLoadingIndicator from '..';
 import React from 'react';
 
 describe('ClayLoadingIndicator', () => {

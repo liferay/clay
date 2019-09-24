@@ -5,8 +5,8 @@
  */
 
 import ClaySlider from '..';
-import {cleanup, render} from '@testing-library/react';
 import React from 'react';
+import {cleanup, render} from '@testing-library/react';
 
 describe('ClaySlider', () => {
 	afterEach(cleanup);

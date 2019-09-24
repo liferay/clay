@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {bb, ChartOptions} from 'billboard.js';
 import React, {HTMLAttributes, useCallback, useLayoutEffect} from 'react';
+import {bb, ChartOptions} from 'billboard.js';
 
 interface IProps extends ChartOptions {
 	forwardRef: React.MutableRefObject<any>;
@@ -19,32 +19,29 @@ const BillboardWrapper: React.FunctionComponent<IProps> = ({
 }) => {
 	const elementRef = React.useRef<HTMLDivElement>(null);
 
-	const updateChart = useCallback(
-		(args: any) => {
-			const {data, onafterinit, ...otherArgs} = args;
+	const updateChart = useCallback((args: any) => {
+		const {data, onafterinit, ...otherArgs} = args;
 
-			if (elementRef.current) {
-				if (!forwardRef.current) {
-					forwardRef.current = bb.generate({
-						bindto: elementRef.current,
-						data,
-						onafterinit() {
-							if (onafterinit) {
-								// Called async so that `forwardRef.current`
-								// will be set to the chart before calling
-								// `onafterinit`
-								setTimeout(() => onafterinit(), 0);
-							}
-						},
-						...otherArgs,
-					});
-				}
-
-				forwardRef.current.load(data);
+		if (elementRef.current) {
+			if (!forwardRef.current) {
+				forwardRef.current = bb.generate({
+					bindto: elementRef.current,
+					data,
+					onafterinit() {
+						if (onafterinit) {
+							// Called async so that `forwardRef.current`
+							// will be set to the chart before calling
+							// `onafterinit`
+							setTimeout(() => onafterinit(), 0);
+						}
+					},
+					...otherArgs,
+				});
 			}
-		},
-		[forwardRef]
-	);
+
+			forwardRef.current.load(data);
+		}
+	}, []);
 
 	useLayoutEffect(() => {
 		requestAnimationFrame(() => updateChart(otherProps));
@@ -61,11 +58,11 @@ const BillboardWrapper: React.FunctionComponent<IProps> = ({
 
 			forwardRef.current = null;
 		};
-	}, [forwardRef, otherProps, updateChart]);
+	}, []);
 
 	useLayoutEffect(() => {
 		updateChart(otherProps);
-	}, [otherProps, updateChart]);
+	}, [otherProps]);
 
 	return <div {...elementProps} ref={elementRef} />;
 };

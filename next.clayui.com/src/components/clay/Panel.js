@@ -5,9 +5,8 @@
  */
 
 import ClayPanel from '@clayui/panel';
-import React, {useState} from 'react';
-
 import Editor from './Editor';
+import React, {useState} from 'react';
 
 const spritemap = '/images/icons/icons.svg';
 

@@ -21,6 +21,7 @@
 		"@typescript-eslint/interface-name-prefix": ["error", "always"],
 		"no-unused-vars": "off",
 		"prefer-template": "error",
+		"react-hooks/exhaustive-deps": "off",
 		"react/jsx-boolean-value": "error",
 		"react/jsx-no-bind": [
 			"error",

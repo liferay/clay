@@ -7,7 +7,6 @@
 import classnames from 'classnames';
 import moment from 'moment';
 import React, {FunctionComponent} from 'react';
-
 import {IDay} from './Helpers';
 
 interface IProps {

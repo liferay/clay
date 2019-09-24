@@ -5,11 +5,10 @@
  */
 
 import ClayButton, {ClayButtonWithIcon} from '@clayui/button';
-import {ClayDropDownWithItems} from '@clayui/drop-down';
 import ClayIcon from '@clayui/icon';
 import ClayLink from '@clayui/link';
 import React from 'react';
-
+import {ClayDropDownWithItems} from '@clayui/drop-down';
 import {ITitles} from './types';
 
 type Items = React.ComponentProps<typeof ClayDropDownWithItems>['items'];

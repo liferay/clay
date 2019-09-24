@@ -5,10 +5,9 @@
  */
 
 import Button from '@clayui/button';
+import Context from './Context';
 import Icon from '@clayui/icon';
 import React, {FunctionComponent, HTMLAttributes, useContext} from 'react';
-
-import Context from './Context';
 
 export type HeaderProps = HTMLAttributes<HTMLDivElement>;
 

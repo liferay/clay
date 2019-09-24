@@ -4,14 +4,14 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import classNames from 'classnames';
 import ClayAutocomplete from '@clayui/autocomplete';
 import ClayDropDown from '@clayui/drop-down';
-import {ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
-import {FocusScope, noop, sub} from '@clayui/shared';
-import classNames from 'classnames';
 import React, {useLayoutEffect, useRef, useState} from 'react';
+import {ClayInput} from '@clayui/form';
+import {FocusScope, noop, sub} from '@clayui/shared';
 
 const BACKSPACE_KEY = 8;
 const COMMA_KEY = 188;

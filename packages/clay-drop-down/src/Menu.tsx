@@ -4,11 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayPortal} from '@clayui/shared';
 import classNames from 'classnames';
-import {Align} from 'metal-position';
 import React, {useEffect, useRef} from 'react';
-
+import {Align} from 'metal-position';
+import {ClayPortal} from '@clayui/shared';
 import {useDropdownCloseInteractions} from './hooks';
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {

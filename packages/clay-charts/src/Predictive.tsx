@@ -4,10 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {Data} from 'billboard.js';
-import React from 'react';
-
 import BillboardWrapper from './BillboardWrapper';
+import React from 'react';
+import {Data} from 'billboard.js';
 
 interface IProps {
 	data: Data;

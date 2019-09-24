@@ -4,10 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayRadio, ClayRadioGroup} from '@clayui/form';
-import React, {useState} from 'react';
-
 import Editor from './Editor';
+import React, {useState} from 'react';
+import {ClayRadio, ClayRadioGroup} from '@clayui/form';
 
 const radioGroupCode = `const Component = () => {
 	const [value, setValue] = useState('one');

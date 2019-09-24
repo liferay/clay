@@ -4,10 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayVerticalNav} from '@clayui/navigation';
-import React from 'react';
-
 import Editor from './Editor';
+import React from 'react';
+import {ClayVerticalNav} from '@clayui/navigation';
 
 const spritemap = '/images/icons/icons.svg';
 

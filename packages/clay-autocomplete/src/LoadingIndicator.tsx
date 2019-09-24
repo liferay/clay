@@ -4,11 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayInput} from '@clayui/form';
 import ClayLoadingIndicator from '@clayui/loading-indicator';
-import React, {useContext, useEffect} from 'react';
-
 import Context from './Context';
+import React, {useContext, useEffect} from 'react';
+import {ClayInput} from '@clayui/form';
 
 const LoadingIndicatorMarkup: React.FunctionComponent<
 	React.HTMLAttributes<HTMLDivElement>
@@ -38,7 +37,7 @@ const ClayAutocompleteLoadingIndicator: React.FunctionComponent<IProps> = ({
 		return () => {
 			onLoadingChange(false);
 		};
-	}, [onLoadingChange]);
+	}, []);
 
 	return (
 		<Component {...otherProps} className={className}>

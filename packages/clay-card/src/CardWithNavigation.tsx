@@ -4,11 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import ClayCard from './Card';
 import ClayIcon from '@clayui/icon';
 import ClaySticker from '@clayui/sticker';
 import React from 'react';
-
-import ClayCard from './Card';
 
 interface IProps {
 	children?: React.ReactNode;

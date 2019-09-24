@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayLabel from '..';
-import {cleanup, fireEvent, render} from '@testing-library/react';
 import * as TestRenderer from 'react-test-renderer';
+import ClayLabel from '..';
 import React from 'react';
+import {cleanup, fireEvent, render} from '@testing-library/react';
 
 const spritemap = 'path/to/spritemap';
 

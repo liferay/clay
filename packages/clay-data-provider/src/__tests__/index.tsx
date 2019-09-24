@@ -5,12 +5,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import DataProvider from '../';
+import React from 'react';
 import {cleanup, render, wait} from '@testing-library/react';
 import {FetchMock} from 'jest-fetch-mock'; // eslint-disable-line @typescript-eslint/no-unused-vars
-import React from 'react';
-
-import DataProvider from '../';
-import {LRUCache} from '../LRUCache';
 import {
 	FetchPolicy,
 	IStorage,
@@ -18,6 +16,7 @@ import {
 	SYMBOL_ORIGIN,
 	TSymbolData,
 } from '../types';
+import {LRUCache} from '../LRUCache';
 
 const setupCache = (key: string, data: Object): IStorage => {
 	const symbolDataProvider: TSymbolData = new LRUCache(10);

@@ -7,13 +7,13 @@
 
 import '@clayui/css/lib/css/atlas.css';
 import ClayButton from '@clayui/button';
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
-import {select, text} from '@storybook/addon-knobs';
-import {storiesOf} from '@storybook/react';
-import React, {useContext, useState} from 'react';
-
-import {Size, Status} from '../src/types';
 import ClayModal, {ClayModalProvider, Context, useModal} from '../src';
+import React, {useContext, useState} from 'react';
+import {select, text} from '@storybook/addon-knobs';
+import {Size, Status} from '../src/types';
+import {storiesOf} from '@storybook/react';
+
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
 const MyApp: React.FunctionComponent<any> = () => {
 	const [state, dispatch] = useContext(Context);

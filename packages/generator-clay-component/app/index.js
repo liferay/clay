@@ -6,8 +6,8 @@
 
 'use strict';
 
-const chalk = require('chalk');
 const _ = require('lodash');
+const chalk = require('chalk');
 const yeoman = require('yeoman-generator');
 const yosay = require('yosay');
 
@@ -63,19 +63,22 @@ module.exports = yeoman.generators.Base.extend({
 			},
 		];
 
-		this.prompt(prompts, props => {
-			const {componentName} = props;
+		this.prompt(
+			prompts,
+			function(props) {
+				const {componentName} = props;
 
-			this.camelCaseName = _.camelCase(componentName);
-			this.componentName = componentName;
-			this.capitalizeName = _.startCase(componentName);
-			this.kebabCaseName = _.kebabCase(componentName);
+				this.camelCaseName = _.camelCase(componentName);
+				this.componentName = componentName;
+				this.capitalizeName = _.startCase(componentName);
+				this.kebabCaseName = _.kebabCase(componentName);
 
-			this.repoName = this.kebabCaseName;
-			this.repoOwner = props.repoOwner;
-			this.repoDescription = props.repoDescription;
-			done();
-		});
+				this.repoName = this.kebabCaseName;
+				this.repoOwner = props.repoOwner;
+				this.repoDescription = props.repoDescription;
+				done();
+			}.bind(this)
+		);
 	},
 
 	writing() {

@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayIcon from '@clayui/icon';
 import classNames from 'classnames';
+import ClayIcon from '@clayui/icon';
 import React from 'react';
 
 interface IItemProps

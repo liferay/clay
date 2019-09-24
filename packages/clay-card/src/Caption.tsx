@@ -5,9 +5,8 @@
  */
 
 import classNames from 'classnames';
-import React from 'react';
-
 import Context from './Context';
+import React from 'react';
 
 const ClayCardCaption: React.FunctionComponent<
 	React.HTMLAttributes<HTMLDivElement | HTMLSpanElement>

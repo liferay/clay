@@ -6,8 +6,8 @@
 
 import '@testing-library/jest-dom/extend-expect';
 import ClayMultiStepNav, {ClayMultiStepNavWithBasicItems} from '..';
-import {cleanup, fireEvent, render} from '@testing-library/react';
 import React from 'react';
+import {cleanup, fireEvent, render} from '@testing-library/react';
 
 const spritemap = 'path/to/spritemap';
 

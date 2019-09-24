@@ -5,7 +5,6 @@
  */
 
 import React, {useState} from 'react';
-
 import {IDataProvider, NetworkStatus} from './types';
 import {useResource} from './useResource';
 

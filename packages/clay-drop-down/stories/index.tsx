@@ -3,16 +3,15 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-
 import '@clayui/css/lib/css/atlas.css';
 import ClayButton from '@clayui/button';
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
-import {ClayCheckbox, ClayRadio} from '@clayui/form';
-import {boolean, select} from '@storybook/addon-knobs';
-import {storiesOf} from '@storybook/react';
-import React, {useState} from 'react';
-
 import ClayDropDown, {Align, ClayDropDownWithItems} from '../src';
+import React, {useState} from 'react';
+import {boolean, select} from '@storybook/addon-knobs';
+import {ClayCheckbox, ClayRadio} from '@clayui/form';
+import {storiesOf} from '@storybook/react';
+
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
 const DropDownWithState: React.FunctionComponent<any> = ({
 	children,
@@ -227,8 +226,8 @@ storiesOf('Components|ClayDropDown', module)
 				helpText="You can customize this menu or see all you have by pressing 'more'."
 				items={items}
 				onSearchValueChange={setValue}
-				searchValue={value}
 				searchable={boolean('Searchable', true)}
+				searchValue={value}
 				spritemap={spritemap}
 				trigger={<ClayButton>{'Click Me'}</ClayButton>}
 			/>

@@ -4,14 +4,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayInput} from '@clayui/form';
-import React, {useRef, useState} from 'react';
-
 import Context from './Context';
 import DropDown from './DropDown';
 import Input from './Input';
 import Item from './Item';
 import LoadingIndicator from './LoadingIndicator';
+import React, {useRef, useState} from 'react';
+import {ClayInput} from '@clayui/form';
 
 const AutocompleteMarkup = React.forwardRef<
 	HTMLDivElement,

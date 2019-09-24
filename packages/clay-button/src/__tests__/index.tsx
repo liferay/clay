@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayButton, {ClayButtonWithIcon} from '..';
 import * as TestRenderer from 'react-test-renderer';
+import ClayButton, {ClayButtonWithIcon} from '..';
 import React from 'react';
 
 describe('ClayButton', () => {

@@ -6,13 +6,13 @@
 
 import '@clayui/css/lib/css/atlas.css';
 import ClayButton from '@clayui/button';
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import ClayForm, {ClayInput} from '@clayui/form';
+import ClayMultiSelect from '../src';
+import React from 'react';
 import {boolean} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import React from 'react';
 
-import ClayMultiSelect from '../src';
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
 const ClayMultiSelectWithState = (props: any) => {
 	const [value, setValue] = React.useState('');

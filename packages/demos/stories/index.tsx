@@ -5,12 +5,12 @@
  */
 
 import '@clayui/css/lib/css/atlas.css';
-import {storiesOf} from '@storybook/react';
-import React from 'react';
 
 import FilesPage from './FilesPage';
 import FormPage from './FormPage';
 import ListPage from './ListPage';
+import React from 'react';
+import {storiesOf} from '@storybook/react';
 
 storiesOf('Demos|Templates', module)
 	.add('List Page', () => <ListPage />)

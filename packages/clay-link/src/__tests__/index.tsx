@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayLink, {ClayLinkContext} from '..';
 import * as TestRenderer from 'react-test-renderer';
+import ClayLink, {ClayLinkContext} from '..';
 import React from 'react';
 
 describe('ClayLink', () => {

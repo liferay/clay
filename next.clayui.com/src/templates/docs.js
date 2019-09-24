@@ -4,17 +4,18 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {MDXProvider} from '@mdx-js/react';
-import MDXRenderer from 'gatsby-mdx/mdx-renderer';
-import {Link, graphql} from 'gatsby';
 import Helmet from 'react-helmet';
+import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import React, {useEffect} from 'react';
+import {graphql} from 'gatsby';
+import {Link} from 'gatsby';
+import {MDXProvider} from '@mdx-js/react';
 
 import CodeClipboard from '../components/CodeClipboard';
+import getSection from '../utils/getSection';
 import LayoutNav from '../components/LayoutNav';
 import Sidebar from '../components/Sidebar';
 import Typography from '../components/Typography';
-import getSection from '../utils/getSection';
 
 export default props => {
 	const {

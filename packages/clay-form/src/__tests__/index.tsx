@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayForm, {ClayInput} from '..';
-import * as TestRenderer from 'react-test-renderer';
 import * as React from 'react';
+import * as TestRenderer from 'react-test-renderer';
+import ClayForm, {ClayInput} from '..';
 
 describe('ClayForm', () => {
 	it('renders', () => {

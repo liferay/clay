@@ -4,10 +4,6 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import Button from '@clayui/button';
-import DropDown from '@clayui/drop-down';
-import {ClayInput} from '@clayui/form';
-import Icon from '@clayui/icon';
 import moment from 'moment';
 import React, {
 	ChangeEvent,
@@ -17,14 +13,19 @@ import React, {
 	useState,
 } from 'react';
 
+import {useCurrentTime, useWeeks} from './Hooks';
+
+import Button from '@clayui/button';
 import DateNavigation from './DateNavigation';
 import DayNumber from './DayNumber';
 import DaysTable from './DaysTable';
-import {useCurrentTime, useWeeks} from './Hooks';
+import DropDown from '@clayui/drop-down';
+import Icon from '@clayui/icon';
 import InputDate from './InputDate';
 import TimePicker from './TimePicker';
 import Weekday from './Weekday';
 import WeekdayHeader from './WeekdayHeader';
+import {ClayInput} from '@clayui/form';
 import {FirstDayOfWeek, IAriaLabels, IYears} from './types';
 
 export {FirstDayOfWeek, IAriaLabels, IYears};

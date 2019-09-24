@@ -4,10 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import ButtonGroup from './Group';
 import classNames from 'classnames';
 import React from 'react';
-
-import ButtonGroup from './Group';
 
 export type DisplayType = 'primary' | 'secondary' | 'link' | 'unstyled';
 
