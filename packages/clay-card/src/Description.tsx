@@ -19,6 +19,11 @@ interface ICardDescriptionProps
 	displayType: CardDescriptionDisplayType;
 
 	/**
+	 * Flag to indicate if href will be disabled.
+	 */
+	disabled?: boolean;
+
+	/**
 	 * Path or URL
 	 */
 	href?: string;
@@ -38,13 +43,14 @@ const CARD_TYPE_ELEMENTS = {
 const ClayCardDescription: React.FunctionComponent<ICardDescriptionProps> = ({
 	children,
 	className,
+	disabled,
 	displayType,
 	href,
 	truncate = true,
 	...otherProps
 }: ICardDescriptionProps) => {
 	const OuterTag = CARD_TYPE_ELEMENTS[displayType];
-	const InnerTag = href ? 'a' : 'span';
+	const InnerTag = href && !disabled ? 'a' : 'span';
 
 	return (
 		<OuterTag
