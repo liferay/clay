@@ -4,9 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import Editor from './Editor';
-import React from 'react';
 import {ClaySelect, ClaySelectWithOption} from '@clayui/form';
+import React from 'react';
+
+import Editor from './Editor';
 
 const SelectCode = `const Component = () => {
 	const options = [

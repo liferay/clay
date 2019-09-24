@@ -5,8 +5,9 @@
  */
 
 import ClayDropDown from '@clayui/drop-down';
-import Editor from './Editor';
 import React, {useState} from 'react';
+
+import Editor from './Editor';
 
 const dropDownCode = `const Component = () => {
 	const [active, setActive] = useState(false);

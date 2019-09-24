@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayButton from '@clayui/button';
-import React from 'react';
 import {ClayDropDownWithItems} from '..';
+import ClayButton from '@clayui/button';
 import {cleanup, render} from '@testing-library/react';
+import React from 'react';
 
 const spritemap = 'icons.svg';
 
@@ -163,8 +163,8 @@ describe('ClayDropDownWithItems', () => {
 					},
 				]}
 				onSearchValueChange={() => {}}
-				searchable
 				searchValue="Search"
+				searchable
 				spritemap={spritemap}
 				trigger={<ClayButton>{'Click Me'}</ClayButton>}
 			/>

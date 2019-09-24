@@ -4,7 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {useCallback, useDebounce} from '@clayui/shared';
+import {useEffect, useRef, useState} from 'react';
 import warning from 'warning';
+
 import {
 	FetchPolicy,
 	IDataProvider,
@@ -12,10 +15,8 @@ import {
 	SYMBOL_ORIGIN,
 	TVariables,
 } from './types';
-import {timeout} from './util';
 import {useCache} from './useCache';
-import {useDebounce} from '@clayui/shared';
-import {useEffect, useRef, useState} from 'react';
+import {timeout} from './util';
 
 interface IResource extends IDataProvider {
 	onNetworkStatusChange?: (status: NetworkStatus) => void;
@@ -66,11 +67,11 @@ const useResource = ({
 		dispatchNetworkStatus(NetworkStatus.Refetch);
 	};
 
-	const cleanRetry = () => {
+	const cleanRetry = useCallback(() => {
 		if (retryDelayIntervalId) {
 			clearInterval(retryDelayIntervalId);
 		}
-	};
+	});
 
 	const getRetryDelay = (retryAttempts: number) => {
 		const {delay = {}} = fetchRetry;
@@ -110,8 +111,9 @@ const useResource = ({
 		}
 	};
 
-	const cleanPoll = () =>
-		pollingIntervalId && clearInterval(pollingIntervalId);
+	const cleanPoll = useCallback(
+		() => pollingIntervalId && clearInterval(pollingIntervalId)
+	);
 
 	const fetchOnComplete = (result: any) => {
 		// Should clear retry interval if any of the
@@ -195,7 +197,7 @@ const useResource = ({
 			.catch(err => handleFetchRetry(err, retryAttempts));
 	};
 
-	const maybeFetch = (status: NetworkStatus) => {
+	const maybeFetch = useCallback((status: NetworkStatus) => {
 		const cacheData = cache.get();
 
 		if (cacheData) {
@@ -211,13 +213,13 @@ const useResource = ({
 
 		dispatchNetworkStatus(status);
 		doFetch();
-	};
+	});
 
 	useEffect(() => {
 		if (!firstRenderRef.current) {
 			maybeFetch(NetworkStatus.Refetch);
 		}
-	}, [debouncedVariablesChange]);
+	}, [debouncedVariablesChange, maybeFetch]);
 
 	useEffect(() => {
 		maybeFetch(NetworkStatus.Loading);
@@ -232,7 +234,7 @@ const useResource = ({
 			cleanPoll();
 			cleanRetry();
 		};
-	}, []);
+	}, [cache, cleanPoll, cleanRetry, maybeFetch, storage]);
 
 	return {refetch: handleRefetch, resource};
 };

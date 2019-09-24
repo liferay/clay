@@ -5,6 +5,7 @@
  */
 
 import React from 'react';
+
 import {useResource} from '../Hooks';
 
 const Tracking = ({query}) => {

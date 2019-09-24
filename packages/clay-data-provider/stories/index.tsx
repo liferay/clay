@@ -3,11 +3,13 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import ClayDataProvider from '../src';
-import React, {useContext, useState} from 'react';
-import {FetchPolicy} from '../src/types';
+
 import {number} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
+import React, {useContext, useState} from 'react';
+
+import {FetchPolicy} from '../src/types';
+import ClayDataProvider from '../src';
 
 import '@clayui/css/lib/css/atlas.css';
 

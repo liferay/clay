@@ -4,10 +4,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ActiveState from './ActiveState';
 import classNames from 'classnames';
-import DefaultState from './DefaultState';
 import React from 'react';
+
+import ActiveState from './ActiveState';
+import DefaultState from './DefaultState';
 import ResultsBar from './ResultsBar';
 
 interface IProps

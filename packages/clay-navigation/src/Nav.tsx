@@ -3,8 +3,10 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+
 import classNames from 'classnames';
 import React from 'react';
+
 import {NavItem} from './NavItem';
 import {NavLink} from './NavLink';
 

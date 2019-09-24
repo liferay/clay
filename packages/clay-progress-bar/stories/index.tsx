@@ -5,12 +5,12 @@
  */
 
 import '@clayui/css/lib/css/atlas.css';
-import ClayProgressBar from '../src';
-import React from 'react';
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {boolean, number} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
+import React from 'react';
 
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import ClayProgressBar from '../src';
 
 storiesOf('Components|ClayProgressBar', module).add('default', () => (
 	<div>

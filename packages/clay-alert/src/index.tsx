@@ -4,9 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import classNames from 'classnames';
 import Icon from '@clayui/icon';
+import classNames from 'classnames';
 import React, {useEffect, useRef} from 'react';
+
 import ToastContainer from './ToastContainer';
 
 const useAutoClose = (autoClose?: boolean | number, onClose = () => {}) => {
@@ -45,7 +46,7 @@ const useAutoClose = (autoClose?: boolean | number, onClose = () => {}) => {
 
 			return pauseTimer;
 		}
-	}, []);
+	}, [autoClose, onClose]);
 
 	return {
 		pauseAutoCloseTimer: pauseTimer,

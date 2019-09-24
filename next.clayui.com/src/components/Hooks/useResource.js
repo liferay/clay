@@ -25,7 +25,7 @@ function useResource(url, options) {
 		})
 			.then(res => res.data)
 			.then(setState);
-	}, []);
+	}, [options, url]);
 	return state;
 }
 

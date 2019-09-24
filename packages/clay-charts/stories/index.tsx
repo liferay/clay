@@ -5,15 +5,16 @@
  */
 
 import '../src/scss/main.scss';
+
 import '@clayui/css/lib/css/atlas.css';
-import ClayChart from '../src';
-import React from 'react';
 import {storiesOf} from '@storybook/react';
+import React from 'react';
+
+import ClayChart from '../src';
+const MAP_DATA = require('./static/map.json');
 
 const COLUMNS = [['data1', 100, 20, 30], ['data2', 20, 70, 100]];
 const COLUMNS_2 = [['data1', 10, 50, 60], ['data2', 70, 30, 10]];
-
-const MAP_DATA = require('./static/map.json');
 
 const ChartWithState = () => {
 	const [active, setActive] = React.useState(false);

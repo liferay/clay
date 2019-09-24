@@ -4,11 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React from 'react';
-
-import {cleanup, render} from '@testing-library/react';
-
 import ClayTable from '..';
+import {cleanup, render} from '@testing-library/react';
+import React from 'react';
 
 describe('ClayTable', () => {
 	afterEach(cleanup);
@@ -18,6 +16,7 @@ describe('ClayTable', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a table with a Body', () => {
 		const {container} = render(
 			<ClayTable>
@@ -27,6 +26,7 @@ describe('ClayTable', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a table with a Head', () => {
 		const {container} = render(
 			<ClayTable>
@@ -36,6 +36,7 @@ describe('ClayTable', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a table with a Head and Body', () => {
 		const {container} = render(
 			<ClayTable>
@@ -46,6 +47,7 @@ describe('ClayTable', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a table with multiple rows into Head', () => {
 		const {container} = render(
 			<ClayTable>
@@ -59,6 +61,7 @@ describe('ClayTable', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a table with multiple rows into Body', () => {
 		const {container} = render(
 			<ClayTable>
@@ -72,6 +75,7 @@ describe('ClayTable', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a table with multiple Cells into Row', () => {
 		const {container} = render(
 			<ClayTable>
@@ -89,6 +93,7 @@ describe('ClayTable', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a table with an active row', () => {
 		const {container} = render(
 			<ClayTable>
@@ -100,6 +105,7 @@ describe('ClayTable', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a table with columns bordered', () => {
 		const {container} = render(
 			<ClayTable borderedColumns>
@@ -110,6 +116,7 @@ describe('ClayTable', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a table hover', () => {
 		const {container} = render(
 			<ClayTable hover>
@@ -119,6 +126,7 @@ describe('ClayTable', () => {
 		);
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a no wrapped table', () => {
 		const {container} = render(
 			<ClayTable headingNoWrap noWrap>
@@ -128,6 +136,7 @@ describe('ClayTable', () => {
 		);
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a table striped', () => {
 		const {container} = render(
 			<ClayTable striped>
@@ -137,6 +146,7 @@ describe('ClayTable', () => {
 		);
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a responsive table', () => {
 		const {container} = render(
 			<ClayTable responsive responsiveSize="sm">
@@ -146,6 +156,7 @@ describe('ClayTable', () => {
 		);
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a responsive table', () => {
 		const {container} = render(
 			<ClayTable responsive responsiveSize="sm">
@@ -155,6 +166,7 @@ describe('ClayTable', () => {
 		);
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a full bottom vertical aligned table', () => {
 		const {container} = render(
 			<ClayTable
@@ -167,6 +179,7 @@ describe('ClayTable', () => {
 		);
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a Cell with text alignment set to center', () => {
 		const {container} = render(
 			<ClayTable striped>
@@ -182,6 +195,7 @@ describe('ClayTable', () => {
 		);
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a Cell delimited', () => {
 		const {container} = render(
 			<ClayTable striped>
@@ -205,6 +219,7 @@ describe('ClayTable', () => {
 		);
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders with a headingTitle', () => {
 		const {container} = render(
 			<ClayTable>

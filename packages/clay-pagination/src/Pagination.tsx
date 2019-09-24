@@ -3,12 +3,14 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import classNames from 'classnames';
+
 import ClayIcon from '@clayui/icon';
+import {getEllipsisItems} from '@clayui/shared';
+import classNames from 'classnames';
+import React from 'react';
+
 import PaginationEllipsis from './PaginationEllipsis';
 import PaginationItem from './PaginationItem';
-import React from 'react';
-import {getEllipsisItems} from '@clayui/shared';
 
 const ELLIPSIS_BUFFER = 2;
 

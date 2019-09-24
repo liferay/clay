@@ -3,9 +3,11 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import React, {useEffect, useRef} from 'react';
-import {hueToX, xToHue} from './util';
+
+import React, {useCallback, useEffect, useRef} from 'react';
+
 import {useMousePosition} from './hooks';
+import {hueToX, xToHue} from './util';
 
 interface IProps {
 	/**
@@ -31,26 +33,26 @@ const ClayColorPickerHue: React.FunctionComponent<IProps> = ({
 
 	const {onMouseMove, setXY, x, y} = useMousePosition(containerRef);
 
-	const removeListeners = () => {
+	const removeListeners = useCallback(() => {
 		selectorActive.current = false;
 
 		window.removeEventListener('mousemove', onMouseMove);
 		window.removeEventListener('mouseup', removeListeners);
-	};
+	});
 
 	useEffect(() => {
 		if (containerRef.current && selectorActive.current) {
 			onChange(xToHue(x, containerRef.current));
 		}
-	}, [x]);
+	}, [onChange, x]);
 
 	useEffect(() => {
 		if (containerRef.current) {
 			setXY({x: hueToX(value, containerRef.current), y});
 		}
-	}, [value]);
+	}, [setXY, value, y]);
 
-	useEffect(() => removeListeners, []);
+	useEffect(() => removeListeners, [removeListeners]);
 
 	return (
 		<div

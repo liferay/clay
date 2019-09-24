@@ -4,15 +4,15 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import classNames from 'classnames';
+import React from 'react';
+
 import AspectRatio from './AspectRatio';
 import Body from './Body';
 import Caption from './Caption';
-import classNames from 'classnames';
-import Context from './Context';
+import Context, {IContext} from './Context';
 import Description from './Description';
 import Group from './Group';
-import React from 'react';
-import {IContext} from './Context';
 
 type CardDisplayType = 'file' | 'image' | 'user';
 

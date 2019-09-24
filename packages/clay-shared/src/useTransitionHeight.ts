@@ -46,7 +46,7 @@ export function useTransitionHeight(
 				removeCollapseHeight(contentRef);
 			}
 		}
-	}, [transitioning]);
+	}, [contentRef, transitioning, visible]);
 
 	const handleTransitionEnd = (event: React.TransitionEvent) => {
 		if (event.target === contentRef.current && transitioning && !visible) {

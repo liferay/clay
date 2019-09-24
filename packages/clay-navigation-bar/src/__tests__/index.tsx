@@ -5,10 +5,9 @@
  */
 
 import '@testing-library/jest-dom/extend-expect';
+import ClayNavigationBar from '..';
 import ClayButton from '@clayui/button';
 import ClayLink from '@clayui/link';
-import ClayNavigationBar from '..';
-import React from 'react';
 import {
 	act,
 	cleanup,
@@ -16,6 +15,7 @@ import {
 	render,
 	waitForElement,
 } from '@testing-library/react';
+import React from 'react';
 
 const spritemap = 'node_modules/clay-css/lib/images/icons/icons.svg';
 
@@ -209,7 +209,7 @@ describe('ClayNavigationBar', () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it('should throw a warning when passing more than one active prop to child', () => {
+	it('throws a warning when passing more than one active prop to child', () => {
 		const mockWarnings = jest
 			.spyOn(global.console, 'error')
 			.mockImplementation(() => null);

@@ -5,13 +5,14 @@
  */
 
 import '@clayui/css/lib/css/atlas.css';
-
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import ClayDropDown, {Align} from '@clayui/drop-down';
 import ClayIcon, {ClayIconSpriteContext} from '@clayui/icon';
-import ClayTabs from '../src';
-import React from 'react';
 import {boolean} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
+import React from 'react';
+
+import ClayTabs from '../src';
 
 const DropDownWithState: React.FunctionComponent<any> = ({
 	children,
@@ -33,8 +34,6 @@ const DropDownWithState: React.FunctionComponent<any> = ({
 		</ClayDropDown>
 	);
 };
-
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
 storiesOf('Components|ClayTabs', module).add('default', () => {
 	const ClayTabsWithState = () => {

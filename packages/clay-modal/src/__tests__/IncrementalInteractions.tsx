@@ -6,11 +6,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import Button from '@clayui/button';
 import ClayModal, {ClayModalProvider, Context, useModal} from '..';
-import React, {useContext, useEffect, useState} from 'react';
-import ReactDOM from 'react-dom';
+import Button from '@clayui/button';
 import {act, cleanup, fireEvent, render} from '@testing-library/react';
+import ReactDOM from 'react-dom';
+import React, {useContext, useEffect, useState} from 'react';
 
 const spritemap = 'icons.svg';
 
@@ -286,7 +286,7 @@ describe('ModalProvider -> IncrementalInteractions', () => {
 					},
 					type: 1,
 				});
-			}, []);
+			}, [dispatch, state.onClose]);
 
 			return (
 				<Button

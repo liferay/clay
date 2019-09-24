@@ -4,13 +4,14 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import classNames from 'classnames';
 import ClayButton from '@clayui/button';
-import ClayIcon from '@clayui/icon';
-import ClayPagination from './Pagination';
-import React from 'react';
 import {ClayDropDownWithItems} from '@clayui/drop-down';
+import ClayIcon from '@clayui/icon';
 import {sub} from '@clayui/shared';
+import classNames from 'classnames';
+import React from 'react';
+
+import ClayPagination from './Pagination';
 
 const defaultDeltas = [
 	{
