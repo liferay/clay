@@ -5,12 +5,12 @@
  */
 
 import '@clayui/css/lib/css/atlas.css';
-import ClayLabel from '../src';
-import React, {useState} from 'react';
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {boolean, select, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
+import React, {useState} from 'react';
 
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import ClayLabel from '../src';
 
 const ClayLabelWithState = () => {
 	const [visible, setVisible] = useState<boolean>(true);

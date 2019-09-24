@@ -3,10 +3,12 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import React, {useEffect, useRef} from 'react';
+
+import React, {useCallback, useEffect, useRef} from 'react';
 import tinycolor from 'tinycolor2';
-import {colorToXY, xToSaturation, yToVisibility} from './util';
+
 import {useMousePosition} from './hooks';
+import {colorToXY, xToSaturation, yToVisibility} from './util';
 
 interface IProps {
 	/**
@@ -38,12 +40,12 @@ const ClayColorPickerGradientSelector: React.FunctionComponent<IProps> = ({
 
 	const {onMouseMove, setXY, x, y} = useMousePosition(containerRef);
 
-	const removeListeners = () => {
+	const removeListeners = useCallback(() => {
 		selectorActive.current = false;
 
 		window.removeEventListener('mousemove', onMouseMove);
 		window.removeEventListener('mouseup', removeListeners);
-	};
+	});
 
 	useEffect(() => {
 		const {current} = containerRef;
@@ -51,15 +53,15 @@ const ClayColorPickerGradientSelector: React.FunctionComponent<IProps> = ({
 		if (current && selectorActive.current) {
 			onChange(xToSaturation(x, current), yToVisibility(y, current));
 		}
-	}, [x, y]);
+	}, [onChange, x, y]);
 
 	useEffect(() => {
 		if (containerRef.current && !selectorActive.current) {
 			setXY(colorToXY(color, containerRef.current));
 		}
-	}, [color]);
+	}, [color, setXY]);
 
-	useEffect(() => removeListeners, []);
+	useEffect(() => removeListeners, [removeListeners]);
 
 	return (
 		<div

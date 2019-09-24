@@ -4,12 +4,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayManagementToolbar from '@clayui/management-toolbar';
-import React, {useState} from 'react';
-import {ClayListWithItems} from '@clayui/list';
-import {ClayPaginationWithBar} from '@clayui/pagination';
-
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import {ClayListWithItems} from '@clayui/list';
+import ClayManagementToolbar from '@clayui/management-toolbar';
+import {ClayPaginationWithBar} from '@clayui/pagination';
+import React, {useState} from 'react';
 
 export default () => {
 	const [selectedMap, setSelectedMap] = useState({});

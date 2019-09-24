@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {ClayButtonWithIcon} from '@clayui/button';
 import classNames from 'classnames';
 import React from 'react';
-import {ClayButtonWithIcon} from '@clayui/button';
 
 interface IProps {
 	className?: string;

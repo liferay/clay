@@ -5,12 +5,12 @@
  */
 
 import '@clayui/css/lib/css/atlas.css';
-import ClayManagementToolbar from '../src';
-import React, {useState} from 'react';
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {boolean, number, select, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
+import React, {useState} from 'react';
 
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import ClayManagementToolbar from '../src';
 
 storiesOf('Components|ClayManagementToolbar', module).add('default', () => {
 	const [checked, setChecked] = useState<boolean>(false);

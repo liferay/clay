@@ -6,6 +6,7 @@
 
 import classNames from 'classnames';
 import React from 'react';
+
 import {TDelimiter} from './types';
 
 type ColumnTextAlignmentType = 'center' | 'end' | 'start';

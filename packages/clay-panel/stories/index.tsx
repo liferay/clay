@@ -5,12 +5,12 @@
  */
 
 import '@clayui/css/lib/css/atlas.css';
-import ClayPanel from '../src';
-import React from 'react';
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {boolean, select, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
+import React from 'react';
 
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import ClayPanel from '../src';
 
 storiesOf('Components|ClayPanel', module)
 	.add('default', () => (

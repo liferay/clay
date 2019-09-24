@@ -4,13 +4,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as TestRenderer from 'react-test-renderer';
 import ClayChart from '..';
+import * as TestRenderer from 'react-test-renderer';
 import React from 'react';
 
-const COLUMNS = [['data1', 100, 20, 30], ['data2', 20, 70, 100]];
-
 const MAP_DATA = require('../../stories/static/map.json');
+
+const COLUMNS = [['data1', 100, 20, 30], ['data2', 20, 70, 100]];
 
 const ChartWithRef = () => {
 	const chartRef = React.useRef<any>(null);

@@ -8,8 +8,9 @@ import ClayCard from '@clayui/card';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClaySticker from '@clayui/sticker';
-import Editor from './Editor';
 import React, {useState} from 'react';
+
+import Editor from './Editor';
 
 const spritemap = '/images/icons/icons.svg';
 

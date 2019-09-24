@@ -5,10 +5,11 @@
  */
 
 import '@clayui/css/lib/css/atlas.css';
-import ClayLoadingIndicator from '../src';
-import React from 'react';
 import {boolean} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
+import React from 'react';
+
+import ClayLoadingIndicator from '../src';
 
 storiesOf('Components|ClayLoadingIndicator', module).add('default', () => (
 	<ClayLoadingIndicator

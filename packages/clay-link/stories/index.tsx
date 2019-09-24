@@ -5,12 +5,12 @@
  */
 
 import '@clayui/css/lib/css/atlas.css';
-import ClayIcon from '@clayui/icon';
-import ClayLink, {ClayLinkContext} from '../src';
-import React from 'react';
-import {storiesOf} from '@storybook/react';
-
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import ClayIcon from '@clayui/icon';
+import {storiesOf} from '@storybook/react';
+import React from 'react';
+
+import ClayLink, {ClayLinkContext} from '../src';
 
 storiesOf('Components|ClayLink', module)
 	.add('default', () => (

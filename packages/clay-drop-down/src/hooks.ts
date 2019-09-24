@@ -44,5 +44,5 @@ export function useDropdownCloseInteractions(
 			window.removeEventListener('mousedown', handleClick);
 			window.removeEventListener('keydown', handleEsc);
 		};
-	}, []);
+	}, [nodeRefs, setActive]);
 }

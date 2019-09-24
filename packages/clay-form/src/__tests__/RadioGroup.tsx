@@ -4,11 +4,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {cleanup, fireEvent, render} from '@testing-library/react';
 import * as TestRenderer from 'react-test-renderer';
+import React from 'react';
+
 import ClayRadio from '../Radio';
 import ClayRadioGroup from '../RadioGroup';
-import React from 'react';
-import {cleanup, fireEvent, render} from '@testing-library/react';
 
 describe('Rendering', () => {
 	it('default', () => {

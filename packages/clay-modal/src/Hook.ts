@@ -103,7 +103,7 @@ const useUserInteractions = (
 			document.removeEventListener('keydown', handleKeydown);
 			document.removeEventListener('click', handleDocumentClick);
 		};
-	}, []);
+	}, [handleDocumentClick, handleKeydown, handleKeyup]);
 };
 
 export {useUserInteractions};

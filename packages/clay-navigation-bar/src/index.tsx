@@ -4,13 +4,14 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import classNames from 'classnames';
 import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
-import Item from './Item';
+import {useTransitionHeight} from '@clayui/shared';
+import classNames from 'classnames';
 import React, {useRef, useState} from 'react';
 import warning from 'warning';
-import {useTransitionHeight} from '@clayui/shared';
+
+import Item from './Item';
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**

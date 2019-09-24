@@ -4,14 +4,15 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import classNames from 'classnames';
 import ClayIcon from '@clayui/icon';
+import {useTransitionHeight} from '@clayui/shared';
+import classNames from 'classnames';
+import React, {useRef, useState} from 'react';
+
 import ClayPanelBody from './Body';
 import ClayPanelFooter from './Footer';
 import ClayPanelGroup from './Group';
 import ClayPanelHeader from './Header';
-import React, {useRef, useState} from 'react';
-import {useTransitionHeight} from '@clayui/shared';
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	collapsable?: boolean;

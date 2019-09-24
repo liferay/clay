@@ -4,18 +4,19 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {Grid, PointOptions} from 'billboard.js';
 import * as d3 from 'd3';
-import React from 'react';
 import {FeatureCollection} from 'geojson';
-import {
+import React from 'react';
+
+const {
 	GeoPath,
 	GeoPermissibleObjects,
 	GeoProjection,
 	ScaleLinear,
 	Selection,
 	ValueFn,
-} from 'd3';
-import {Grid, PointOptions} from 'billboard.js';
+} = d3;
 
 const DEFAULT_COLOR = {
 	range: {
@@ -255,7 +256,7 @@ const Geomap: React.FunctionComponent<IProps> = ({
 		return () => {
 			forwardRef.current.disposed();
 		};
-	}, []);
+	}, [data, forwardRef, otherProps]);
 
 	const {height = '100%', width = '100%'} = forwardRef.current
 		? forwardRef.current.getSize()
