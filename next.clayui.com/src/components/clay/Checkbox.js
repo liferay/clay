@@ -4,9 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import Editor from './Editor';
-import React, {useState} from 'react';
 import {ClayCheckbox} from '@clayui/form';
+import React, {useState} from 'react';
+
+import Editor from './Editor';
 
 const spritemap = '/images/icons/icons.svg';
 

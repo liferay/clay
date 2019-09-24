@@ -3,9 +3,10 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import classNames from 'classnames';
+
 import ClayIcon from '@clayui/icon';
 import ClayLink from '@clayui/link';
+import classNames from 'classnames';
 import React from 'react';
 
 interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {

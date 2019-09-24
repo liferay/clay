@@ -4,19 +4,20 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import classNames from 'classnames';
 import ClayButton from '@clayui/button';
+import {ClayDropDownWithItems} from '@clayui/drop-down';
+import {ClayCheckbox} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
+import {LinkOrButton} from '@clayui/shared';
+import classNames from 'classnames';
+import React, {useState} from 'react';
+
 import CreationMenu from './CreationMenu';
 import Item from './Item';
 import ItemList from './ItemList';
-import React, {useState} from 'react';
 import SearchForm from './SearchForm';
 import SearchInput from './SearchInput';
-import {ClayCheckbox} from '@clayui/form';
-import {ClayDropDownWithItems} from '@clayui/drop-down';
 import {IPropsBase, TClickEvent} from './types';
-import {LinkOrButton} from '@clayui/shared';
 
 interface IProps extends IPropsBase {
 	/**

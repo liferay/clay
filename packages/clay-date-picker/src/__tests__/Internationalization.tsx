@@ -5,8 +5,9 @@
  */
 
 import ClayDatePicker from '..';
-import React, {useState} from 'react';
 import {cleanup, render} from '@testing-library/react';
+import React, {useState} from 'react';
+
 import {FirstDayOfWeek} from '../types';
 
 const spritemap = 'icons.svg';

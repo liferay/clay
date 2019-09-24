@@ -5,8 +5,9 @@
  */
 
 import * as TestRenderer from 'react-test-renderer';
-import ClayCheckbox from '../Checkbox';
 import React from 'react';
+
+import ClayCheckbox from '../Checkbox';
 
 describe('ClayCheckbox', () => {
 	it('renders', () => {

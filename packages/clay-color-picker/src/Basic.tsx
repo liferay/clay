@@ -3,7 +3,9 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+
 import React from 'react';
+
 import Splotch from './Splotch';
 
 interface IProps {
@@ -31,7 +33,7 @@ const ClayColorPickerBasic: React.FunctionComponent<IProps> = ({
 	label,
 	onChange,
 }) => (
-	<React.Fragment>
+	<>
 		{label && (
 			<div className="clay-color-header">
 				<span className="component-title">{label}</span>
@@ -45,7 +47,7 @@ const ClayColorPickerBasic: React.FunctionComponent<IProps> = ({
 				</div>
 			))}
 		</div>
-	</React.Fragment>
+	</>
 );
 
 export default ClayColorPickerBasic;

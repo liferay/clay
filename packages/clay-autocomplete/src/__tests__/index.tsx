@@ -5,9 +5,10 @@
  */
 
 import ClayAutocomplete from '..';
-import Context from '../Context';
-import React, {useRef} from 'react';
 import {cleanup, render} from '@testing-library/react';
+import React, {useRef} from 'react';
+
+import Context from '../Context';
 
 describe('ClayAutocomplete', () => {
 	afterEach(cleanup);

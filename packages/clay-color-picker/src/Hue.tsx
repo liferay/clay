@@ -3,9 +3,11 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+
 import React, {useEffect, useRef} from 'react';
-import {hueToX, xToHue} from './util';
+
 import {useMousePosition} from './hooks';
+import {hueToX, xToHue} from './util';
 
 interface IProps {
 	/**

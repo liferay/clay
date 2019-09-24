@@ -4,7 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {storiesOf} from '@storybook/react';
 import React from 'react';
+
 import {
 	ClayCheckbox,
 	ClayRadio,
@@ -12,7 +14,6 @@ import {
 	ClaySelect,
 	ClaySelectWithOption,
 } from '../src';
-import {storiesOf} from '@storybook/react';
 
 import '@clayui/css/lib/css/atlas.css';
 import {boolean, text} from '@storybook/addon-knobs';

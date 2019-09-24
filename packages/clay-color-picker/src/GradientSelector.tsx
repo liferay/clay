@@ -3,10 +3,12 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+
 import React, {useEffect, useRef} from 'react';
 import tinycolor from 'tinycolor2';
-import {colorToXY, xToSaturation, yToVisibility} from './util';
+
 import {useMousePosition} from './hooks';
+import {colorToXY, xToSaturation, yToVisibility} from './util';
 
 interface IProps {
 	/**

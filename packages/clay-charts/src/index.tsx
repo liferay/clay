@@ -4,10 +4,6 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import BillboardWrapper from './BillboardWrapper';
-import GeoMap, {IProps} from './GeoMap';
-import Predictive from './Predictive';
-import React from 'react';
 import {
 	bb,
 	ChartTypes,
@@ -16,6 +12,11 @@ import {
 	LineOptions,
 	PointOptions,
 } from 'billboard.js';
+import React from 'react';
+
+import BillboardWrapper from './BillboardWrapper';
+import GeoMap, {IProps} from './GeoMap';
+import Predictive from './Predictive';
 import {
 	DEFAULT_COLORS,
 	DEFAULT_GRID_OBJECT,
@@ -74,17 +75,15 @@ const ClayChart: React.FunctionComponent<IProps> = ({
 	return (
 		<ChartComponent
 			{...otherProps}
-			color={Object.assign({pattern: DEFAULT_COLORS}, color)}
+			color={({pattern: DEFAULT_COLORS, ...color})}
 			data={data as Data}
 			elementProps={elementProps}
 			grid={Object.assign(DEFAULT_GRID_OBJECT, grid)}
-			line={Object.assign({classes: DEFAULT_LINE_CLASSES}, line)}
-			point={Object.assign(
-				{
-					pattern: DEFAULT_POINT_PATTERNS,
-				},
-				point
-			)}
+			line={({classes: DEFAULT_LINE_CLASSES, ...line})}
+			point={({
+				pattern: DEFAULT_POINT_PATTERNS,
+				...point
+			})}
 			ref={forwardRef}
 		/>
 	);

@@ -3,9 +3,10 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+
 import ClayButton from '@clayui/button';
-import React from 'react';
 import {ClayDropDownWithItems} from '@clayui/drop-down';
+import React from 'react';
 
 export interface IPaginationEllipsisProps {
 	items?: Array<number>;

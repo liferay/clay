@@ -4,7 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {useDebounce} from '@clayui/shared';
+import {useEffect, useRef, useState} from 'react';
 import warning from 'warning';
+
 import {
 	FetchPolicy,
 	IDataProvider,
@@ -12,10 +15,8 @@ import {
 	SYMBOL_ORIGIN,
 	TVariables,
 } from './types';
-import {timeout} from './util';
 import {useCache} from './useCache';
-import {useDebounce} from '@clayui/shared';
-import {useEffect, useRef, useState} from 'react';
+import {timeout} from './util';
 
 interface IResource extends IDataProvider {
 	onNetworkStatusChange?: (status: NetworkStatus) => void;
