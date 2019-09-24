@@ -1323,6 +1323,81 @@ exports[`ClayCard renders a group of ClayCards 1`] = `
 </div>
 `;
 
+exports[`ClayCardWithHorizontal renders as disabled 1`] = `
+<div>
+  <div
+    class="card-type-directory form-check form-check-card form-check-middle-left"
+  >
+    <div
+      class="custom-control custom-checkbox"
+    >
+      <label>
+        <input
+          class="custom-control-input"
+          disabled=""
+          type="checkbox"
+          value="false"
+        />
+        <span
+          class="custom-control-label"
+        />
+        <div
+          class="card card-horizontal"
+        >
+          <div
+            class="card-body"
+          >
+            <div
+              class="card-row"
+            >
+              <div
+                class="autofit-col"
+              >
+                <span
+                  class="sticker sticker-rounded"
+                >
+                  <span
+                    class="sticker-overlay inline-item"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-folder"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="/path/to/some/resource.svg#folder"
+                      />
+                    </svg>
+                  </span>
+                </span>
+              </div>
+              <div
+                class="autofit-col autofit-col-expand autofit-col-gutters"
+              >
+                <h3
+                  class="card-title"
+                  title="Foo Bar"
+                >
+                  <span
+                    class="text-truncate-inline"
+                  >
+                    <span
+                      class="text-truncate"
+                      href="#"
+                    >
+                      Foo Bar
+                    </span>
+                  </span>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ClayCardWithHorizontal renders as not selectable 1`] = `
 <div>
   <div
@@ -1452,6 +1527,104 @@ exports[`ClayCardWithHorizontal renders as selectable 1`] = `
           </div>
         </div>
       </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardWithInfo renders as disabled 1`] = `
+<div>
+  <div
+    class="card-type-asset file-card form-check form-check-card form-check-top-left"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="custom-control custom-checkbox"
+      >
+        <label>
+          <input
+            class="custom-control-input"
+            disabled=""
+            type="checkbox"
+            value="false"
+          />
+          <span
+            class="custom-control-label"
+          />
+          <div
+            class="card-item-first aspect-ratio"
+          >
+            <div
+              class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-documents-and-media"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/path/to/some/resource.svg#documents-and-media"
+                />
+              </svg>
+            </div>
+            <span
+              class="sticker sticker-rounded sticker-primary sticker-bottom-left"
+            >
+              <span
+                class="sticker-overlay"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-document-text"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/path/to/some/resource.svg#document-text"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+        </label>
+      </div>
+      <div
+        class="card-body"
+      >
+        <div
+          class="card-row"
+        >
+          <div
+            class="autofit-col autofit-col-expand"
+          >
+            <h3
+              class="card-title"
+              title="Foo Bar"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                  href="#"
+                >
+                  Foo Bar
+                </span>
+              </span>
+            </h3>
+            <p
+              class="card-subtitle"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                />
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -1701,6 +1874,112 @@ exports[`ClayCardWithUser renders ClayCardWithNavigation with image 1`] = `
       </p>
     </span>
   </a>
+</div>
+`;
+
+exports[`ClayCardWithUser renders as disabled 1`] = `
+<div>
+  <div
+    class="card-type-asset form-check form-check-card form-check-top-left user-card"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="card-item-first aspect-ratio"
+      >
+        <div
+          class="custom-control custom-checkbox"
+        >
+          <label>
+            <input
+              class="custom-control-input"
+              disabled=""
+              type="checkbox"
+              value="false"
+            />
+            <span
+              class="custom-control-label"
+            />
+            <div
+              class="aspect-ratio-item-center-middle card-type-asset-icon"
+            >
+              <span
+                class="sticker sticker-user-icon sticker-circle"
+              >
+                <span
+                  class="sticker-overlay"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-user"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="/path/to/some/resource.svg#user"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div
+        class="card-body"
+      >
+        <div
+          class="card-row"
+        >
+          <div
+            class="autofit-col autofit-col-expand"
+          >
+            <h3
+              class="card-title"
+              title="Foo Bar"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                  href="#"
+                >
+                  Foo Bar
+                </span>
+              </span>
+            </h3>
+            <p
+              class="card-subtitle"
+              title="Test"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                >
+                  Test
+                </span>
+              </span>
+            </p>
+            <div
+              class="card-detail"
+            >
+              <span
+                class="label label-success"
+              >
+                <span
+                  class="label-item label-item-expand"
+                >
+                  Awesome
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 

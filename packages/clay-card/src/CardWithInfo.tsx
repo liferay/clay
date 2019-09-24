@@ -26,6 +26,11 @@ interface IProps {
 	description?: React.ReactText;
 
 	/**
+	 * Flag to indicate that all interactions on the card will be disabled.
+	 */
+	disabled?: boolean;
+
+	/**
 	 * Flag to indicate if `aspect-ratio-item-flush` class should be
 	 * applied to the image.
 	 */
@@ -91,6 +96,7 @@ interface IProps {
 export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 	actions,
 	description,
+	disabled,
 	flushHorizontal,
 	flushVertical,
 	href,
@@ -150,8 +156,7 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 			{onSelectChange && (
 				<ClayCheckbox
 					checked={selected}
-					disabled={false}
-					indeterminate={false}
+					disabled={disabled}
 					onChange={() => onSelectChange(!selected)}
 				>
 					{headerContent}
@@ -163,7 +168,11 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 			<ClayCard.Body>
 				<ClayCard.Row>
 					<div className="autofit-col autofit-col-expand">
-						<ClayCard.Description displayType="title" href={href}>
+						<ClayCard.Description
+							disabled={disabled}
+							displayType="title"
+							href={href}
+						>
 							{title}
 						</ClayCard.Description>
 
@@ -188,7 +197,10 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 								items={actions}
 								spritemap={spritemap}
 								trigger={
-									<button className="component-action">
+									<button
+										className="component-action"
+										disabled={disabled}
+									>
 										<ClayIcon
 											spritemap={spritemap}
 											symbol="ellipsis-v"

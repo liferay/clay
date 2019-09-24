@@ -25,7 +25,6 @@ const ClayCheckboxWithState = (props: any) => {
 		<ClayCheckbox
 			checked={value}
 			disabled={false}
-			indeterminate={false}
 			onChange={() => setValue(val => !val)}
 		>
 			{props.children}
@@ -640,6 +639,28 @@ describe('ClayCardWithUser', () => {
 		expect(onSelectChangeFn).toHaveBeenCalled();
 	});
 
+	it('renders as disabled', () => {
+		const {container} = render(
+			<ClayCardWithUser
+				description="Test"
+				disabled
+				href="#"
+				labels={[
+					{
+						displayType: 'success',
+						value: 'Awesome',
+					},
+				]}
+				name="Foo Bar"
+				onSelectChange={jest.fn()}
+				selected={false}
+				spritemap="/path/to/some/resource.svg"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
 	it('renders with icon', () => {
 		const {container} = render(
 			<ClayCardWithUser
@@ -748,6 +769,21 @@ describe('ClayCardWithHorizontal', () => {
 
 		expect(onSelectChangeFn).toHaveBeenCalled();
 	});
+
+	it('renders as disabled', () => {
+		const {container} = render(
+			<ClayCardWithHorizontal
+				disabled
+				href="#"
+				onSelectChange={jest.fn()}
+				selected={false}
+				spritemap="/path/to/some/resource.svg"
+				title="Foo Bar"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
 });
 
 describe('ClayCardWithInfo', () => {
@@ -790,6 +826,21 @@ describe('ClayCardWithInfo', () => {
 		fireEvent.click(container.querySelector('label') as HTMLElement, {});
 
 		expect(onSelectChangeFn).toHaveBeenCalledTimes(1);
+	});
+
+	it('renders as disabled', () => {
+		const {container} = render(
+			<ClayCardWithInfo
+				disabled
+				href="#"
+				onSelectChange={jest.fn()}
+				selected={false}
+				spritemap="/path/to/some/resource.svg"
+				title="Foo Bar"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
 	});
 
 	it('clicking dropdown item calls callback and not call onSelectChange', () => {

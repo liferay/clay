@@ -14,6 +14,12 @@ import ClayCard from './Card';
 
 interface IProps {
 	actions?: React.ComponentProps<typeof ClayDropDownWithItems>['items'];
+
+	/**
+	 * Flag to indicate that all interactions on the card will be disabled.
+	 */
+	disabled?: boolean;
+
 	/**
 	 * Path or URL to item
 	 */
@@ -47,6 +53,7 @@ interface IProps {
 
 export const ClayCardWithHorizontal: React.FunctionComponent<IProps> = ({
 	actions,
+	disabled,
 	href,
 	onSelectChange,
 	selected = false,
@@ -64,7 +71,11 @@ export const ClayCardWithHorizontal: React.FunctionComponent<IProps> = ({
 				</div>
 
 				<div className="autofit-col autofit-col-expand autofit-col-gutters">
-					<ClayCard.Description displayType="title" href={href}>
+					<ClayCard.Description
+						disabled={disabled}
+						displayType="title"
+						href={href}
+					>
 						{title}
 					</ClayCard.Description>
 				</div>
@@ -75,7 +86,10 @@ export const ClayCardWithHorizontal: React.FunctionComponent<IProps> = ({
 							items={actions}
 							spritemap={spritemap}
 							trigger={
-								<button className="component-action">
+								<button
+									className="component-action"
+									disabled={disabled}
+								>
 									<ClayIcon
 										spritemap={spritemap}
 										symbol="ellipsis-v"
@@ -94,8 +108,7 @@ export const ClayCardWithHorizontal: React.FunctionComponent<IProps> = ({
 			{onSelectChange && (
 				<ClayCheckbox
 					checked={selected}
-					disabled={false}
-					indeterminate={false}
+					disabled={disabled}
 					onChange={() => onSelectChange(!selected)}
 				>
 					{content}
