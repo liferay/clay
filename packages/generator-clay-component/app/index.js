@@ -63,22 +63,19 @@ module.exports = yeoman.generators.Base.extend({
 			},
 		];
 
-		this.prompt(
-			prompts,
-			(props) => {
-				const {componentName} = props;
+		this.prompt(prompts, props => {
+			const {componentName} = props;
 
-				this.camelCaseName = _.camelCase(componentName);
-				this.componentName = componentName;
-				this.capitalizeName = _.startCase(componentName);
-				this.kebabCaseName = _.kebabCase(componentName);
+			this.camelCaseName = _.camelCase(componentName);
+			this.componentName = componentName;
+			this.capitalizeName = _.startCase(componentName);
+			this.kebabCaseName = _.kebabCase(componentName);
 
-				this.repoName = this.kebabCaseName;
-				this.repoOwner = props.repoOwner;
-				this.repoDescription = props.repoDescription;
-				done();
-			}
-		);
+			this.repoName = this.kebabCaseName;
+			this.repoOwner = props.repoOwner;
+			this.repoDescription = props.repoDescription;
+			done();
+		});
 	},
 
 	writing() {
