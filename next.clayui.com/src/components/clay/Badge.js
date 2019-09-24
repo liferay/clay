@@ -5,8 +5,9 @@
  */
 
 import ClayBadge from '@clayui/badge';
-import Editor from './Editor';
 import React from 'react';
+
+import Editor from './Editor';
 
 const spritemap = '/images/icons/icons.svg';
 

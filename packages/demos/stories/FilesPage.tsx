@@ -5,10 +5,9 @@
  */
 
 import ClayCard, {ClayCardWithInfo} from '@clayui/card';
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import ClayManagementToolbar from '@clayui/management-toolbar';
 import React, {useState} from 'react';
-
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
 export default () => {
 	const [value, setValue] = useState('');

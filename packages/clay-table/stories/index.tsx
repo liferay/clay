@@ -6,15 +6,15 @@
 
 import '@clayui/css/lib/css/atlas.css';
 import ClayButton from '@clayui/button';
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import {ClayDropDownWithItems} from '@clayui/drop-down';
+import {ClayCheckbox} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClayProgressBar from '@clayui/progress-bar';
-import ClayTable from '../src';
-import React from 'react';
 import {boolean, select} from '@storybook/addon-knobs';
-import {ClayCheckbox} from '@clayui/form';
-import {ClayDropDownWithItems} from '@clayui/drop-down';
 import {storiesOf} from '@storybook/react';
+import React from 'react';
 
 function ClayCheckboxWithState(props: any) {
 	const [value, setValue] = React.useState<boolean>(false);
@@ -32,7 +32,7 @@ function ClayCheckboxWithState(props: any) {
 	);
 }
 
-const thumbnail = require('./static/thumbnail_coffee.jpg');
+import ClayTable from '../src';
 
 function Dropdown() {
 	return (
@@ -56,7 +56,7 @@ function Dropdown() {
 	);
 }
 
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+const thumbnail = require('./static/thumbnail_coffee.jpg');
 
 storiesOf('Components|ClayTable', module)
 	.add('default', () => (

@@ -4,11 +4,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayTooltip from './Tooltip';
+import {ClayPortal} from '@clayui/shared';
+import {Align} from 'metal-position';
 import React, {useEffect, useReducer, useRef} from 'react';
 import warning from 'warning';
-import {Align} from 'metal-position';
-import {ClayPortal} from '@clayui/shared';
+
+import ClayTooltip from './Tooltip';
 
 const ALIGNMENTS = [
 	'top',

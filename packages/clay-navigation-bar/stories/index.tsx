@@ -6,13 +6,13 @@
 
 import '@clayui/css/lib/css/atlas.css';
 import ClayButton from '@clayui/button';
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import ClayLink from '@clayui/link';
-import ClayNavigationBar from '../src/index';
-import React from 'react';
 import {boolean, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
+import React from 'react';
 
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import ClayNavigationBar from '../src/index';
 
 storiesOf('Components|ClayNavigationBar', module).add('default', () => {
 	const [triggerName, setTriggerName] = React.useState<string>('Item 1');

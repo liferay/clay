@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {Link} from 'gatsby';
 import Helmet from 'react-helmet';
 import React from 'react';
-import {Link} from 'gatsby';
 
 /**
  * @return {React.Component}

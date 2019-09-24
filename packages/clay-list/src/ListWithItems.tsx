@@ -3,14 +3,16 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import classNames from 'classnames';
+
+import {ClayDropDownWithItems} from '@clayui/drop-down';
+import {ClayCheckbox} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
-import ClayList from './List';
 import ClaySticker from '@clayui/sticker';
+import classNames from 'classnames';
 import React from 'react';
-import {ClayCheckbox} from '@clayui/form';
-import {ClayDropDownWithItems} from '@clayui/drop-down';
+
+import ClayList from './List';
 
 interface IListItem {
 	/**

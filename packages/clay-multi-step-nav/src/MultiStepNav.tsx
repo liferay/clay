@@ -5,11 +5,12 @@
  */
 
 import classNames from 'classnames';
+import React from 'react';
+
 import ClayMultiStepNavDivider from './Divider';
 import ClayMultiStepNavIndicator from './Indicator';
 import ClayMultiStepNavItem from './Item';
 import ClayMultiStepNavTitle from './Title';
-import React from 'react';
 
 interface IProps extends React.HTMLAttributes<HTMLOListElement> {
 	/**

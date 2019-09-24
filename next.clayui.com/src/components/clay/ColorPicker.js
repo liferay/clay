@@ -5,8 +5,9 @@
  */
 
 import ClayColorPicker from '@clayui/color-picker';
-import Editor from './Editor';
 import React, {useState} from 'react';
+
+import Editor from './Editor';
 
 const spritemap = '/images/icons/icons.svg';
 

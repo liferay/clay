@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {HTMLAttributes, useCallback, useLayoutEffect} from 'react';
 import {bb, ChartOptions} from 'billboard.js';
+import React, {HTMLAttributes, useCallback, useLayoutEffect} from 'react';
 
 interface IProps extends ChartOptions {
 	forwardRef: React.MutableRefObject<any>;

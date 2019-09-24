@@ -6,6 +6,7 @@
 
 import classNames from 'classnames';
 import React from 'react';
+
 import {IRadioProps} from './Radio';
 
 interface IGroupProps extends React.HTMLAttributes<HTMLDivElement> {

@@ -5,8 +5,9 @@
  */
 
 import classNames from 'classnames';
-import ClayLinkContext from './Context';
 import React, {useContext} from 'react';
+
+import ClayLinkContext from './Context';
 
 interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	/**

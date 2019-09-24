@@ -4,14 +4,15 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import Basic from './Basic';
-import Custom from './Custom';
 import DropDown from '@clayui/drop-down';
-import React, {useEffect, useRef, useState} from 'react';
-import Splotch from './Splotch';
-import tinycolor from 'tinycolor2';
 import {ClayInput} from '@clayui/form';
 import {sub} from '@clayui/shared';
+import React, {useEffect, useRef, useState} from 'react';
+import tinycolor from 'tinycolor2';
+
+import Basic from './Basic';
+import Custom from './Custom';
+import Splotch from './Splotch';
 import {useHexInput} from './hooks';
 
 const DEFAULT_COLORS = [

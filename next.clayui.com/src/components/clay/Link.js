@@ -5,8 +5,9 @@
  */
 
 import ClayLink, {ClayLinkContext} from '@clayui/link';
-import Editor from './Editor';
 import React from 'react';
+
+import Editor from './Editor';
 
 const LinkCode = `const Component = () => {
 	return (

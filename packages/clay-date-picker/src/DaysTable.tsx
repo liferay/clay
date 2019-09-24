@@ -5,6 +5,7 @@
  */
 
 import React, {FunctionComponent, ReactNode} from 'react';
+
 import {IDay, Month} from './Helpers';
 
 interface IChildrenFn {
@@ -22,7 +23,7 @@ const ClayDatePickerDaysTable: FunctionComponent<IProps> = ({
 	weeks,
 }) => {
 	return (
-		<React.Fragment>
+		<>
 			{weeks.map((days, index) => (
 				<div
 					className="date-picker-date-row date-picker-row"
@@ -33,7 +34,7 @@ const ClayDatePickerDaysTable: FunctionComponent<IProps> = ({
 					})}
 				</div>
 			))}
-		</React.Fragment>
+		</>
 	);
 };
 

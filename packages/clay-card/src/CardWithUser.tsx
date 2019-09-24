@@ -4,13 +4,14 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayCard from './Card';
+import {ClayDropDownWithItems} from '@clayui/drop-down';
+import {ClayCheckbox} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClaySticker, {DisplayType as StickerDisplayType} from '@clayui/sticker';
 import React from 'react';
-import {ClayCheckbox} from '@clayui/form';
-import {ClayDropDownWithItems} from '@clayui/drop-down';
+
+import ClayCard from './Card';
 
 interface IProps {
 	/**

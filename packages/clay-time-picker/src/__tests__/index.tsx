@@ -5,8 +5,8 @@
  */
 
 import ClayTimePicker from '..';
-import React, {useState} from 'react';
 import {cleanup, fireEvent, render} from '@testing-library/react';
+import React, {useState} from 'react';
 
 const KEY_BACKSPACE = 8;
 const KEY_ARROWRIGHT = 39;

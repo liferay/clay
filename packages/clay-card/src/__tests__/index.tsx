@@ -4,18 +4,19 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {ClayCheckbox} from '@clayui/form';
+import ClayIcon from '@clayui/icon';
+import ClayLabel from '@clayui/label';
+import ClaySticker from '@clayui/sticker';
+import {cleanup, fireEvent, render} from '@testing-library/react';
+import React from 'react';
+
 import ClayCard, {
 	ClayCardWithHorizontal,
 	ClayCardWithInfo,
 	ClayCardWithNavigation,
 	ClayCardWithUser,
 } from '../index';
-import ClayIcon from '@clayui/icon';
-import ClayLabel from '@clayui/label';
-import ClaySticker from '@clayui/sticker';
-import React from 'react';
-import {ClayCheckbox} from '@clayui/form';
-import {cleanup, fireEvent, render} from '@testing-library/react';
 
 const ClayCheckboxWithState = (props: any) => {
 	const [value, setValue] = React.useState<boolean>(false);
@@ -60,6 +61,7 @@ describe('ClayCard', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a ClayCard as a selectable folder', () => {
 		const {container} = render(
 			<ClayCard horizontal selectable>
@@ -85,6 +87,7 @@ describe('ClayCard', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a ClayCard as image card', () => {
 		const {container} = render(
 			<ClayCard displayType="image">
@@ -126,6 +129,7 @@ describe('ClayCard', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a ClayCard as a selectable image card', () => {
 		const {container} = render(
 			<ClayCard displayType="image" selectable>
@@ -171,6 +175,7 @@ describe('ClayCard', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a ClayCard as a file card', () => {
 		const {container} = render(
 			<ClayCard displayType="file">
@@ -207,6 +212,7 @@ describe('ClayCard', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a ClayCard as a selectable file card', () => {
 		const {container} = render(
 			<ClayCard displayType="file" selectable>
@@ -248,6 +254,7 @@ describe('ClayCard', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a ClayCard as template navigation card', () => {
 		const {container} = render(
 			<ClayCard href="/some/path" interactive>
@@ -272,6 +279,7 @@ describe('ClayCard', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a ClayCard as a template navigation card truncating text on description', () => {
 		const {container} = render(
 			<ClayCard href="/some/path" interactive>
@@ -298,6 +306,7 @@ describe('ClayCard', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a ClayCard as template navigation card with icon instead of image', () => {
 		const {container} = render(
 			<ClayCard href="/some/path" interactive>
@@ -319,6 +328,7 @@ describe('ClayCard', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a ClayCard as template navigation card as horizontal card', () => {
 		const {container} = render(
 			<ClayCard horizontal href="/some/path" interactive>
@@ -344,6 +354,7 @@ describe('ClayCard', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a ClayCard as user card', () => {
 		const {container} = render(
 			<ClayCard displayType="user">
@@ -382,6 +393,7 @@ describe('ClayCard', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a ClayCard as user selectable card', () => {
 		const {container} = render(
 			<ClayCard displayType="user" selectable>
@@ -424,6 +436,7 @@ describe('ClayCard', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
 	it('renders a group of ClayCards', () => {
 		const {container} = render(
 			<>

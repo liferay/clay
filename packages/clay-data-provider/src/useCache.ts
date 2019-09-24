@@ -5,6 +5,9 @@
  */
 
 import stringify from 'fast-json-stable-stringify';
+import {useRef} from 'react';
+
+import {LRUCache} from './LRUCache';
 import {
 	FetchPolicy,
 	IStorage,
@@ -13,8 +16,6 @@ import {
 	TSymbolData,
 	TVariables,
 } from './types';
-import {LRUCache} from './LRUCache';
-import {useRef} from 'react';
 
 type TCacheKey = string | null;
 

@@ -3,13 +3,14 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+
 import '@clayui/css/lib/css/atlas.css';
-import ClayAlert, {DisplayType} from '../src';
-import React, {useState} from 'react';
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {boolean, select, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
+import React, {useState} from 'react';
 
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import ClayAlert, {DisplayType} from '../src';
 
 const ClayToastDemo = () => {
 	const [toastItems, setToastItems] = useState<Array<number>>([]);
