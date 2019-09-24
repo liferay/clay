@@ -16,6 +16,9 @@ import {boolean, select} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React from 'react';
 
+import ClayTable from '../src';
+const thumbnail = require('./static/thumbnail_coffee.jpg');
+
 function ClayCheckboxWithState(props: any) {
 	const [value, setValue] = React.useState<boolean>(false);
 
@@ -31,8 +34,6 @@ function ClayCheckboxWithState(props: any) {
 		</ClayCheckbox>
 	);
 }
-
-import ClayTable from '../src';
 
 function Dropdown() {
 	return (
@@ -55,8 +56,6 @@ function Dropdown() {
 		/>
 	);
 }
-
-const thumbnail = require('./static/thumbnail_coffee.jpg');
 
 storiesOf('Components|ClayTable', module)
 	.add('default', () => (
@@ -166,12 +165,12 @@ storiesOf('Components|ClayTable', module)
 					)}
 					borderedColumns={boolean('bordered columns', false)}
 					borderless={boolean('borderless', false)}
-					headingNoWrap={boolean('heading no wrap', false)}
 					headVerticalAlignment={select(
 						'head vertical alignment',
 						{bottom: 'bottom', middle: 'middle', top: 'top'},
 						'middle'
 					)}
+					headingNoWrap={boolean('heading no wrap', false)}
 					hover={boolean('hover', true)}
 					noWrap={boolean('no wrap', false)}
 					responsive={boolean('responsive', false)}
@@ -355,12 +354,12 @@ storiesOf('Components|ClayTable', module)
 					)}
 					borderedColumns={boolean('bordered columns', false)}
 					borderless={boolean('borderless', false)}
-					headingNoWrap={boolean('heading no wrap', false)}
 					headVerticalAlignment={select(
 						'head vertical alignment',
 						{bottom: 'bottom', middle: 'middle', top: 'top'},
 						'middle'
 					)}
+					headingNoWrap={boolean('heading no wrap', false)}
 					hover={boolean('hover', true)}
 					noWrap={boolean('no wrap', true)}
 					responsive={boolean('responsive', false)}
@@ -435,12 +434,12 @@ storiesOf('Components|ClayTable', module)
 				)}
 				borderedColumns={boolean('bordered columns', false)}
 				borderless={boolean('bordeless', false)}
-				headingNoWrap={boolean('heading no wrap', false)}
 				headVerticalAlignment={select(
 					'head vertical alignment',
 					{bottom: 'bottom', middle: 'middle', top: 'top'},
 					'middle'
 				)}
+				headingNoWrap={boolean('heading no wrap', false)}
 				hover={boolean('hover', true)}
 				noWrap={boolean('no wrap', false)}
 				responsive={boolean('responsive', false)}

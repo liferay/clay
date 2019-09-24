@@ -208,9 +208,9 @@ const DefaultState: React.FunctionComponent<IProps> = ({
 						<SearchInput
 							disabled={disabled}
 							onCloseButtonClick={() => setSearchMobile(false)}
-							onlySearch={onlySearch}
 							onValueChange={onSearchValueChange}
 							onValueSubmit={onValueSubmit}
+							onlySearch={onlySearch}
 							placeholder={searchPlaceholder}
 							spritemap={spritemap}
 							value={searchValue}

@@ -38,7 +38,7 @@ const DatePickerWithState = ({
 describe('Internationalization', () => {
 	afterEach(cleanup);
 
-	it('should render the date picker in russian', () => {
+	it('renders the date picker in russian', () => {
 		render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}

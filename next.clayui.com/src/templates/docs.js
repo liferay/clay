@@ -6,8 +6,7 @@
 
 import {MDXProvider} from '@mdx-js/react';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
-import {Link} from 'gatsby';
-import {graphql} from 'gatsby';
+import {Link, graphql} from 'gatsby';
 import Helmet from 'react-helmet';
 import React, {useEffect} from 'react';
 

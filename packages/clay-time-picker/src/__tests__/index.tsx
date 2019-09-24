@@ -444,7 +444,7 @@ describe('IncrementalInteractions', () => {
 			expect(ampmEl.value).toBe('AM');
 		});
 
-		it('should only allow numbers to be entered in the input hour', () => {
+		it('only allows numbers to be entered in the input hour', () => {
 			const {getByTestId} = render(<TimePickerWithState />);
 			const hoursEl = getByTestId('hours') as HTMLInputElement;
 
@@ -455,7 +455,7 @@ describe('IncrementalInteractions', () => {
 			expect(hoursEl.value).toBe('9');
 		});
 
-		it('should only allow numbers to be entered in the input minutes', () => {
+		it('only allows numbers to be entered in the input minutes', () => {
 			const {getByTestId} = render(<TimePickerWithState />);
 			const minutesEl = getByTestId('minutes') as HTMLInputElement;
 
@@ -466,7 +466,7 @@ describe('IncrementalInteractions', () => {
 			expect(minutesEl.value).toBe('9');
 		});
 
-		it('should return to the maximum value when it reaches the minimum value when pressing in the arrow down', () => {
+		it('returns to the maximum value when it reaches the minimum value when pressing in the arrow down', () => {
 			const {getByTestId} = render(<TimePickerWithState />);
 			const hoursEl = getByTestId('hours') as HTMLInputElement;
 			const minutesEl = getByTestId('minutes') as HTMLInputElement;
@@ -484,7 +484,7 @@ describe('IncrementalInteractions', () => {
 			expect(minutesEl.value).toBe('59');
 		});
 
-		it('should return to the minimum value when it reaches the maximum value when pressing in the arrow up', () => {
+		it('returns to the minimum value when it reaches the maximum value when pressing in the arrow up', () => {
 			const {getByTestId} = render(<TimePickerWithState />);
 			const hoursEl = getByTestId('hours') as HTMLInputElement;
 			const minutesEl = getByTestId('minutes') as HTMLInputElement;
