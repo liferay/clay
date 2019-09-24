@@ -5,15 +5,14 @@
  */
 
 import ClayButton from '@clayui/button';
-import {ClayDropDownWithItems} from '@clayui/drop-down';
-import {ClayCheckbox} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
-import {LinkOrButton, sub} from '@clayui/shared';
-import React from 'react';
-
 import Item from './Item';
 import ItemList from './ItemList';
+import React from 'react';
+import {ClayCheckbox} from '@clayui/form';
+import {ClayDropDownWithItems} from '@clayui/drop-down';
 import {IPropsBase, TClickEvent} from './types';
+import {LinkOrButton, sub} from '@clayui/shared';
 
 type TItem = React.ComponentProps<
 	typeof ClayDropDownWithItems

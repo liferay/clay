@@ -5,10 +5,9 @@
  */
 
 import classNames from 'classnames';
-import React from 'react';
-
 import Content from './Content';
 import Item from './Item';
+import React from 'react';
 import TabPane from './TabPane';
 
 interface IProps extends React.HTMLAttributes<HTMLUListElement> {

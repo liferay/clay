@@ -4,17 +4,16 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayPortal} from '@clayui/shared';
-import classNames from 'classnames';
-import React, {FunctionComponent, useEffect, useRef} from 'react';
-import warning from 'warning';
-
 import Body from './Body';
+import classNames from 'classnames';
 import Context, {IContext} from './Context';
 import Footer from './Footer';
 import Header from './Header';
-import {useUserInteractions} from './Hook';
+import React, {FunctionComponent, useEffect, useRef} from 'react';
+import warning from 'warning';
+import {ClayPortal} from '@clayui/shared';
 import {Observer, ObserverType, Size} from './types';
+import {useUserInteractions} from './Hook';
 
 interface IProps
 	extends React.HTMLAttributes<HTMLDivElement>,
@@ -63,7 +62,7 @@ const ClayModal: FunctionComponent<IProps> & {
 		observer.dispatch(ObserverType.Close)
 	);
 
-	useEffect(() => observer.dispatch(ObserverType.Open), [observer]);
+	useEffect(() => observer.dispatch(ObserverType.Open), []);
 
 	// Defines a default Modal size when size is not set.
 	const maxWidth = size ? {} : {maxWidth: '600px'};

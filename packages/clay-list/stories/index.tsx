@@ -3,17 +3,16 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-
 import '@clayui/css/lib/css/atlas.css';
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
-import {ClayCheckbox} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
+import ClayList, {ClayListWithItems} from '../src';
 import ClaySticker from '@clayui/sticker';
+import React from 'react';
+import {ClayCheckbox} from '@clayui/form';
 import {select} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import React from 'react';
 
-import ClayList, {ClayListWithItems} from '../src';
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
 const dropdownActions = [
 	{

@@ -4,12 +4,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayPortal} from '@clayui/shared';
-import {Align} from 'metal-position';
+import ClayTooltip from './Tooltip';
 import React, {useEffect, useReducer, useRef} from 'react';
 import warning from 'warning';
-
-import ClayTooltip from './Tooltip';
+import {Align} from 'metal-position';
+import {ClayPortal} from '@clayui/shared';
 
 const ALIGNMENTS = [
 	'top',
@@ -136,7 +135,7 @@ const TooltipBase: React.FunctionComponent<{
 				dispatch({align: newAlignment, type: 'align'});
 			}
 		}
-	}, [align, autoAlign, show]);
+	}, [align, show]);
 
 	warning(
 		children.type !== React.Fragment,

@@ -3,14 +3,13 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-
 import '@clayui/css/lib/css/atlas.css';
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import ClayButton, {ClayButtonWithIcon} from '../src';
+import React from 'react';
 import {boolean, select, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import React from 'react';
 
-import ClayButton, {ClayButtonWithIcon} from '../src';
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
 storiesOf('Components|ClayButton', module)
 	.add('default', () => (

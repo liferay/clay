@@ -3,10 +3,8 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-
 import classNames from 'classnames';
 import React from 'react';
-
 import {IClayAlertProps} from './index';
 
 interface IToastContainerProps extends React.HTMLAttributes<HTMLDivElement> {

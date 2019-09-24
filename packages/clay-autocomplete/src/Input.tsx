@@ -4,10 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayInput} from '@clayui/form';
-import React, {useContext} from 'react';
-
 import Context from './Context';
+import React, {useContext} from 'react';
+import {ClayInput} from '@clayui/form';
 
 export interface IProps
 	extends React.InputHTMLAttributes<HTMLInputElement>,

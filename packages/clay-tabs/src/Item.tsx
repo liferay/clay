@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {LinkOrButton} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
+import {LinkOrButton} from '@clayui/shared';
 
 interface IProps extends Omit<React.HTMLAttributes<HTMLLIElement>, 'onClick'> {
 	/**

@@ -4,12 +4,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayIcon from '@clayui/icon';
-import {useTransitionHeight} from '@clayui/shared';
 import classNames from 'classnames';
-import React from 'react';
-
+import ClayIcon from '@clayui/icon';
 import Nav from './Nav';
+import React from 'react';
+import {useTransitionHeight} from '@clayui/shared';
 
 interface IItem extends React.ComponentProps<typeof Nav.Item> {
 	/**

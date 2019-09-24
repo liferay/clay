@@ -5,7 +5,6 @@
  */
 
 import {createContext} from 'react';
-
 import {Status} from './types';
 
 export interface IContext {

@@ -5,12 +5,13 @@
  */
 
 import ClayButton from '@clayui/button';
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import ClayForm, {ClayInput} from '@clayui/form';
 import ClayMultiSelect from '@clayui/multi-select';
-import {ClayVerticalNav} from '@clayui/navigation';
 import ClayPanel from '@clayui/panel';
 import React, {useState} from 'react';
+import {ClayVerticalNav} from '@clayui/navigation';
+
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
 export default () => {
 	const [formValues, setFormValues] = useState<any>({});

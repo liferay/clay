@@ -4,9 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {useEffect, useRef, useState} from 'react';
-
 import {ObserverType} from './types';
+import {useEffect, useRef, useState} from 'react';
 
 interface IProps {
 	/**

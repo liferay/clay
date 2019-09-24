@@ -7,9 +7,8 @@
 import ClayButton from '@clayui/button';
 import ClayForm, {ClayInput} from '@clayui/form';
 import ClayMultiSelect from '@clayui/multi-select';
-import React, {useState} from 'react';
-
 import Editor from './Editor';
+import React, {useState} from 'react';
 
 const spritemap = '/images/icons/icons.svg';
 

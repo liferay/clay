@@ -5,14 +5,13 @@
  */
 
 import classNames from 'classnames';
-import React from 'react';
-
 import Header from './Header';
 import Item from './Item';
 import ItemField from './ItemField';
 import ItemText from './ItemText';
 import ItemTitle from './ItemTitle';
 import QuickActionMenu from './QuickActionMenu';
+import React from 'react';
 
 interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	/**

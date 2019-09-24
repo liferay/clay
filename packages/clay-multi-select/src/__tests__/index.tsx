@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import * as React from 'react';
 import ClayMultiSelect from '..';
 import {cleanup, fireEvent, render} from '@testing-library/react';
-import * as React from 'react';
 
 const ClayMultiSelectWithState = (props: any) => {
 	const [items, setItems] = React.useState(props.items as [] | []);

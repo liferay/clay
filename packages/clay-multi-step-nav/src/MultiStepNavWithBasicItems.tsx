@@ -4,10 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayDropDownWithItems} from '@clayui/drop-down';
-import React from 'react';
-
 import ClayMultiStepNav from './MultiStepNav';
+import React from 'react';
+import {ClayDropDownWithItems} from '@clayui/drop-down';
 
 interface ISteps {
 	/**

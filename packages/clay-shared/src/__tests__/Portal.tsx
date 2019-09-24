@@ -5,9 +5,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import React from 'react';
 import {ClayPortal} from '..';
 import {cleanup, render} from '@testing-library/react';
-import React from 'react';
 
 describe('Portal', () => {
 	afterEach(() => {

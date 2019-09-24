@@ -5,8 +5,8 @@
  */
 
 import ClayPagination, {ClayPaginationWithBar} from '..';
-import {cleanup, fireEvent, getByText, render} from '@testing-library/react';
 import React from 'react';
+import {cleanup, fireEvent, getByText, render} from '@testing-library/react';
 
 const spritemap = 'path/to/spritemap';
 

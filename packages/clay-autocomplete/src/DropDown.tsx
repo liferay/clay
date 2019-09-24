@@ -5,9 +5,8 @@
  */
 
 import ClayDropDown from '@clayui/drop-down';
-import React, {useContext} from 'react';
-
 import Context from './Context';
+import React, {useContext} from 'react';
 
 export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**

@@ -5,9 +5,8 @@
  */
 
 import classNames from 'classnames';
-import React from 'react';
-
 import QuickActionMenuItem from './QuickActionMenuItem';
+import React from 'react';
 
 const ClayListQuickActionMenu: React.FunctionComponent<
 	React.HTMLAttributes<HTMLDivElement>

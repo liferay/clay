@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayProgressBar from '..';
 import * as TestRenderer from 'react-test-renderer';
+import ClayProgressBar from '..';
 import React from 'react';
 
 describe('ClayProgressBar', () => {

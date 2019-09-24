@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {useCallback, useEffect, useRef} from 'react';
+import {useEffect, useRef} from 'react';
 
 const TAB_KEY_CODE = 9;
 
@@ -109,35 +109,33 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 		return focusableElements;
 	};
 
-	const handleNextElementOutsideScope = useCallback(
-		(event: KeyboardEvent) => {
-			if (nextElementOutsideScopeRef.current !== event.currentTarget) {
-				(event.currentTarget as HTMLElement).removeEventListener(
-					'keydown',
-					handleNextElementOutsideScope
-				);
+	const handleNextElementOutsideScope = (event: KeyboardEvent) => {
+		if (nextElementOutsideScopeRef.current !== event.currentTarget) {
+			(event.currentTarget as HTMLElement).removeEventListener(
+				'keydown',
+				handleNextElementOutsideScope
+			);
+			return;
+		}
+
+		if (event.keyCode === TAB_KEY_CODE && event.shiftKey) {
+			const elements = getFocusableElementsInScope(getFiber(scope));
+
+			if (elements.length === 0) {
+				if (event.currentTarget) {
+					(event.currentTarget as HTMLElement).removeEventListener(
+						'keydown',
+						handleNextElementOutsideScope
+					);
+				}
 				return;
 			}
 
-			if (event.keyCode === TAB_KEY_CODE && event.shiftKey) {
-				const elements = getFocusableElementsInScope(getFiber(scope));
+			event.preventDefault();
 
-				if (elements.length === 0) {
-					if (event.currentTarget) {
-						(event.currentTarget as HTMLElement).removeEventListener(
-							'keydown',
-							handleNextElementOutsideScope
-						);
-					}
-					return;
-				}
-
-				event.preventDefault();
-
-				elements[elements.length - 1].focus();
-			}
+			elements[elements.length - 1].focus();
 		}
-	);
+	};
 
 	const setInteractionObserver = (element: HTMLElement) => {
 		if (nextElementOutsideScopeRef.current !== null) {
@@ -248,7 +246,7 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 			// memory leak cases.
 			nextElementOutsideScopeRef.current = null;
 		}
-	}, [handleNextElementOutsideScope, scope]);
+	}, [scope]);
 
 	return {
 		focusNext: () => moveFocusInScope(getFiber(scope)),

@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-const {ensureDir, exists, writeFile} = require('fs-extra');
 const path = require('path');
+const {ensureDir, exists, writeFile} = require('fs-extra');
 
 const getMetaRedirect = require('./getMetaRedirect');
 

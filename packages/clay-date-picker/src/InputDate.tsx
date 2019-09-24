@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayInput} from '@clayui/form';
 import moment from 'moment';
 import React, {ChangeEventHandler, FunctionComponent, useMemo} from 'react';
+import {ClayInput} from '@clayui/form';
 
 interface IProps {
 	ariaLabel?: string;
@@ -48,12 +48,12 @@ const ClayDatePickerInputDate: FunctionComponent<IProps> = ({
 	};
 
 	const memoizedValue = useMemo(() => isValidValue(value), [
-		isValidValue,
 		value,
+		currentTime,
 	]);
 
 	return (
-		<>
+		<React.Fragment>
 			<input name={inputName} type="hidden" value={memoizedValue} />
 			<ClayInput
 				aria-label={ariaLabel}
@@ -63,7 +63,7 @@ const ClayDatePickerInputDate: FunctionComponent<IProps> = ({
 				type={useNative ? 'date' : 'text'}
 				value={memoizedValue}
 			/>
-		</>
+		</React.Fragment>
 	);
 };
 

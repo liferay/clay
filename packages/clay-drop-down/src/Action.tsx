@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayButton from '@clayui/button';
 import classNames from 'classnames';
+import ClayButton from '@clayui/button';
 import React from 'react';
 
 const ClayDropDownAction: React.FunctionComponent<

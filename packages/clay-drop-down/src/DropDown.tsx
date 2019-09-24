@@ -4,19 +4,18 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {FocusScope} from '@clayui/shared';
-import classNames from 'classnames';
-import React, {useRef} from 'react';
-
 import Action from './Action';
 import Caption from './Caption';
+import classNames from 'classnames';
 import Divider from './Divider';
 import Group from './Group';
 import Help from './Help';
 import Item from './Item';
 import ItemList from './ItemList';
 import Menu, {Align} from './Menu';
+import React, {useRef} from 'react';
 import Search from './Search';
+import {FocusScope} from '@clayui/shared';
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	/**

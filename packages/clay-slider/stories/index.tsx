@@ -6,11 +6,10 @@
 
 import '@clayui/css/lib/css/atlas.css';
 import ClayButton from '@clayui/button';
+import ClaySlider from '../src';
+import React, {useState} from 'react';
 import {boolean, number, select} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import React, {useState} from 'react';
-
-import ClaySlider from '../src';
 
 storiesOf('Components|ClaySlider', module)
 	.add('default', () => {

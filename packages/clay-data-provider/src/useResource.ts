@@ -4,10 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {useCallback, useDebounce} from '@clayui/shared';
-import {useEffect, useRef, useState} from 'react';
 import warning from 'warning';
-
 import {
 	FetchPolicy,
 	IDataProvider,
@@ -15,8 +12,10 @@ import {
 	SYMBOL_ORIGIN,
 	TVariables,
 } from './types';
-import {useCache} from './useCache';
 import {timeout} from './util';
+import {useCache} from './useCache';
+import {useDebounce} from '@clayui/shared';
+import {useEffect, useRef, useState} from 'react';
 
 interface IResource extends IDataProvider {
 	onNetworkStatusChange?: (status: NetworkStatus) => void;
@@ -67,11 +66,11 @@ const useResource = ({
 		dispatchNetworkStatus(NetworkStatus.Refetch);
 	};
 
-	const cleanRetry = useCallback(() => {
+	const cleanRetry = () => {
 		if (retryDelayIntervalId) {
 			clearInterval(retryDelayIntervalId);
 		}
-	});
+	};
 
 	const getRetryDelay = (retryAttempts: number) => {
 		const {delay = {}} = fetchRetry;
@@ -111,9 +110,8 @@ const useResource = ({
 		}
 	};
 
-	const cleanPoll = useCallback(
-		() => pollingIntervalId && clearInterval(pollingIntervalId)
-	);
+	const cleanPoll = () =>
+		pollingIntervalId && clearInterval(pollingIntervalId);
 
 	const fetchOnComplete = (result: any) => {
 		// Should clear retry interval if any of the
@@ -197,7 +195,7 @@ const useResource = ({
 			.catch(err => handleFetchRetry(err, retryAttempts));
 	};
 
-	const maybeFetch = useCallback((status: NetworkStatus) => {
+	const maybeFetch = (status: NetworkStatus) => {
 		const cacheData = cache.get();
 
 		if (cacheData) {
@@ -213,13 +211,13 @@ const useResource = ({
 
 		dispatchNetworkStatus(status);
 		doFetch();
-	});
+	};
 
 	useEffect(() => {
 		if (!firstRenderRef.current) {
 			maybeFetch(NetworkStatus.Refetch);
 		}
-	}, [debouncedVariablesChange, maybeFetch]);
+	}, [debouncedVariablesChange]);
 
 	useEffect(() => {
 		maybeFetch(NetworkStatus.Loading);
@@ -234,7 +232,7 @@ const useResource = ({
 			cleanPoll();
 			cleanRetry();
 		};
-	}, [cache, cleanPoll, cleanRetry, maybeFetch, storage]);
+	}, []);
 
 	return {refetch: handleRefetch, resource};
 };

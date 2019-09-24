@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClaySticker from '..';
 import * as TestRenderer from 'react-test-renderer';
+import ClaySticker from '..';
 import React from 'react';
 
 describe('ClaySticker', () => {

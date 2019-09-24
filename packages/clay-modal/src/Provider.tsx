@@ -4,9 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {createContext, useReducer} from 'react';
-
 import ClayModal from './Modal';
+import React, {createContext, useReducer} from 'react';
 import {Size, Status} from './types';
 import {useModal} from './useModal';
 

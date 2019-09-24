@@ -4,11 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import moment from 'moment';
-import {useState} from 'react';
-
 import * as Helpers from './Helpers';
+import moment from 'moment';
 import {FirstDayOfWeek} from './types';
+import {useState} from 'react';
 
 /**
  * Generates the table of days of the month.

@@ -5,7 +5,6 @@
  */
 
 import React, {FunctionComponent, ReactNode} from 'react';
-
 import {FirstDayOfWeek} from './types';
 
 interface IChildrenProps {

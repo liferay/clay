@@ -5,7 +5,6 @@
  */
 
 import React, {useRef} from 'react';
-
 import {useFocusManagement} from './useFocusManagement';
 
 interface IProps {

@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayIcon, {ClayIconSpriteContext} from '..';
 import * as TestRenderer from 'react-test-renderer';
+import ClayIcon, {ClayIconSpriteContext} from '..';
 import React from 'react';
 
 describe('ClayIcon', () => {

@@ -4,9 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayIcon from '@clayui/icon';
-import classNames from 'classnames';
 import * as React from 'react';
+
+import classNames from 'classnames';
+import ClayIcon from '@clayui/icon';
 
 const Group = React.forwardRef<
 	HTMLDivElement,

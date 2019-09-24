@@ -5,7 +5,6 @@
  */
 
 import React from 'react';
-
 import Select from './Select';
 
 interface IProps extends React.ComponentProps<typeof Select> {

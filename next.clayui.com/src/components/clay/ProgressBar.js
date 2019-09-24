@@ -5,9 +5,8 @@
  */
 
 import ClayProgressBar from '@clayui/progress-bar';
-import React from 'react';
-
 import Editor from './Editor';
+import React from 'react';
 
 const spritemap = '/images/icons/icons.svg';
 

@@ -4,11 +4,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-const {countries} = require('countries-list');
+const visit = require('unist-util-visit');
+const {resolve} = require('path');
+const countries = require('countries-list').countries;
 const globby = require('globby');
 const langs = require('languages');
-const {resolve} = require('path');
-const visit = require('unist-util-visit');
 
 const alternateCodes = {
 	in: 'id',

@@ -107,7 +107,7 @@ const ClaySlider: React.FunctionComponent<IProps> = ({
 				)
 			);
 		}
-	}, [max, min, step, value]);
+	}, [value]);
 
 	return (
 		<div className={classNames('clay-range', className, {disabled})}>

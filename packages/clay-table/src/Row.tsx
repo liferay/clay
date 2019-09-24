@@ -6,7 +6,6 @@
 
 import classNames from 'classnames';
 import React from 'react';
-
 import {TDelimiter} from './types';
 
 interface IRowProps extends React.HTMLAttributes<HTMLTableRowElement> {

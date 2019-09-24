@@ -4,13 +4,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {getEllipsisItems} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
 import warning from 'warning';
-
 import {BreadcrumbEllipsis} from './BreadcrumbEllipsis';
 import {BreadcrumbItem, IBreadcrumbItem} from './BreadcrumbItem';
+import {getEllipsisItems} from '@clayui/shared';
 
 interface IProps extends React.HTMLAttributes<HTMLOListElement> {
 	/**

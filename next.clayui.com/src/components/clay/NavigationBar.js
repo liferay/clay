@@ -6,9 +6,8 @@
 
 import ClayLink from '@clayui/link';
 import ClayNavigationBar from '@clayui/navigation-bar';
-import React from 'react';
-
 import Editor from './Editor';
+import React from 'react';
 
 const spritemap = '/images/icons/icons.svg';
 

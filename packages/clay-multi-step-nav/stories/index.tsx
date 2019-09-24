@@ -5,12 +5,12 @@
  */
 
 import '@clayui/css/lib/css/atlas.css';
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import ClayMultiStepNav, {ClayMultiStepNavWithBasicItems} from '../src';
+import React, {useState} from 'react';
 import {number} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import React, {useState} from 'react';
 
-import ClayMultiStepNav, {ClayMultiStepNavWithBasicItems} from '../src';
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
 storiesOf('Components|ClayMultiStepNav', module)
 	.add('low-level', () => {

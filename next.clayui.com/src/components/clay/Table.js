@@ -5,9 +5,8 @@
  */
 
 import ClayTable from '@clayui/table';
-import React, {useState} from 'react';
-
 import Editor from './Editor';
+import React, {useState} from 'react';
 
 const tableCode = `const Component = () => {
 	const [value, setValue] = useState('one');

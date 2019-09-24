@@ -6,16 +6,12 @@
 
 'use strict';
 
-/* eslint-disable liferay/imports-first */
-
 require('dotenv').config({
 	path: `.env.${process.env.NODE_ENV}`,
 });
 
 const componentWithMDXScope = require('gatsby-mdx/component-with-mdx-scope');
 const path = require('path');
-
-/* eslint-enable liferay/imports-first */
 
 const {GATSBY_CLAY_NIGHTLY} = process.env;
 

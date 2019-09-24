@@ -4,16 +4,15 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayCheckbox, ClayRadio} from '@clayui/form';
-import React, {useContext, useState} from 'react';
-import warning from 'warning';
-
 import Caption from './Caption';
-import Divider from './Divider';
 import ClayDropDown from './DropDown';
 import ClayDropDownGroup from './Group';
+import Divider from './Divider';
 import Help from './Help';
+import React, {useContext, useState} from 'react';
 import Search from './Search';
+import warning from 'warning';
+import {ClayCheckbox, ClayRadio} from '@clayui/form';
 
 type TType = 'checkbox' | 'group' | 'item' | 'radio' | 'radiogroup' | 'divider';
 
