@@ -75,15 +75,15 @@ const ClayChart: React.FunctionComponent<IProps> = ({
 	return (
 		<ChartComponent
 			{...otherProps}
-			color={({pattern: DEFAULT_COLORS, ...color})}
+			color={{pattern: DEFAULT_COLORS, ...color}}
 			data={data as Data}
 			elementProps={elementProps}
 			grid={Object.assign(DEFAULT_GRID_OBJECT, grid)}
-			line={({classes: DEFAULT_LINE_CLASSES, ...line})}
-			point={({
+			line={{classes: DEFAULT_LINE_CLASSES, ...line}}
+			point={{
 				pattern: DEFAULT_POINT_PATTERNS,
-				...point
-			})}
+				...point,
+			}}
 			ref={forwardRef}
 		/>
 	);
