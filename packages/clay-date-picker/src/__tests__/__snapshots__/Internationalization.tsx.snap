@@ -4459,6 +4459,7 @@ exports[`Internationalization should render the date picker in russian 1`] = `
                         class="clay-time-edit"
                       >
                         <input
+                          aria-label="Enter the hour in 00:00 format"
                           class="clay-time-hours form-control-inset"
                           data-testid="hours"
                           maxlength="2"
@@ -4472,6 +4473,7 @@ exports[`Internationalization should render the date picker in russian 1`] = `
                           :
                         </span>
                         <input
+                          aria-label="Enter the minutes in 00:00 format"
                           class="clay-time-minutes form-control-inset"
                           data-testid="minutes"
                           maxlength="2"
@@ -4489,6 +4491,7 @@ exports[`Internationalization should render the date picker in russian 1`] = `
                           style="opacity: 0; pointer-events: none;"
                         >
                           <button
+                            aria-label="Delete the entered time"
                             class="clay-time-clear-btn btn btn-unstyled"
                             type="button"
                           >
