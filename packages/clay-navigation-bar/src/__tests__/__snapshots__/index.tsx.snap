@@ -266,7 +266,7 @@ exports[`ClayNavigationBar renders when passing more than one active item 1`] = 
 </div>
 `;
 
-exports[`ClayNavigationBar should throw a warning when passing more than one active prop to child 1`] = `
+exports[`ClayNavigationBar throws a warning when passing more than one active prop to child 1`] = `
 <div>
   <nav
     class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary"
