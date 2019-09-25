@@ -6,7 +6,7 @@
 		"compile": "lerna run compile",
 		"checkDeps": "node scripts/check-deps/check-dependencies.js",
 		"checkFormat": "npm run prettier -- --list-different",
-		"ci": "yarn lint && yarn format:check && yarn test",
+		"ci": "yarn checkDeps && yarn lint && yarn format:check && yarn test",
 		"coveralls": "node node_modules/coveralls/bin/coveralls.js < coverage/lcov.info",
 		"format:all": "yarn lint:fix && yarn format",
 		"lerna": "lerna bootstrap -- --no-optional --no-package-lock",
