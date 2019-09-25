@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import ClayButton from '@clayui/button';
 import React from 'react';
 
-export interface IBreadcrumbItem {
+export interface IBreadcrumbItem extends React.HTMLAttributes<HTMLLIElement> {
 	/**
 	 * Flag to indicate if the Breadcrumb item is active or not.
 	 */
