@@ -40,7 +40,7 @@
 			margin: 0;
 		}
 
-		.docs-package-npm {
+		.docs-subtitle {
 			color: #6B6C7E;
 			font-size: 22px;
 			font-weight: 400;
@@ -142,6 +142,10 @@
 			position: absolute;
 			right: -50%;
 			top: 0;
+
+			.nav-toc {
+				position: sticky;
+			}
 		}
 	}
 
@@ -172,7 +176,6 @@
 			margin-bottom: 0;
 			max-height: 100vh;
 			overflow-y: auto;
-			position: sticky;
 			top: 84px;
 			width: 280px;
 			z-index: 1;
