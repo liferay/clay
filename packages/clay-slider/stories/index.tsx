@@ -19,9 +19,10 @@ storiesOf('Components|ClaySlider', module)
 		return (
 			<div className="sheet">
 				<div className="form-group">
-					<label>{'With Tooltip'}</label>
+					<label htmlFor="slider">{'With Tooltip'}</label>
 					<ClaySlider
 						disabled={boolean('Disabled', false)}
+						id="slider"
 						max={number('Max', 100)}
 						min={number('Min', 0)}
 						onValueChange={setValue}
@@ -45,9 +46,12 @@ storiesOf('Components|ClaySlider', module)
 		return (
 			<div className="sheet">
 				<div className="form-group">
-					<label>{`Value: ${value}`}</label>
+					<label
+						htmlFor={`sliderOne${value}`}
+					>{`Value: ${value}`}</label>
 					<ClaySlider
 						disabled={boolean('Disabled', false)}
+						id={`sliderOne${value}`}
 						max={number('Max', 100)}
 						min={number('Min', 0)}
 						onValueChange={setValue}
@@ -63,9 +67,11 @@ storiesOf('Components|ClaySlider', module)
 					/>
 				</div>
 				<div className="form-group">
-					<label>{`Value: ${100 - value}`}</label>
+					<label htmlFor={`sliderTwo${100 - value}`}>{`Value: ${100 -
+						value}`}</label>
 					<ClaySlider
 						disabled={boolean('Disabled', false)}
+						id={`sliderTwo${value}`}
 						max={number('Max', 100)}
 						min={number('Min', 0)}
 						onValueChange={n => setValue(100 - n)}
