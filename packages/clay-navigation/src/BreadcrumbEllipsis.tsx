@@ -9,7 +9,8 @@ import ClayIcon from '@clayui/icon';
 import React, {useState} from 'react';
 import {IBreadcrumbItem} from './BreadcrumbItem';
 
-export interface IBreadcrumbEllipsisProps {
+export interface IBreadcrumbEllipsisProps
+	extends React.HTMLAttributes<HTMLLIElement> {
 	/**
 	 * Property to define BreadcrumbEllipsis's items.
 	 */
