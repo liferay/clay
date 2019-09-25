@@ -142,7 +142,7 @@ export default props => {
 												{frontmatter.packageStatus && (
 													<Link
 														className="clay-site-label"
-														to="/docs/get-started/components-status.html"
+														to="/docs/get-started/how-to-read-this-documentation.html"
 													>
 														<span
 															className={`label label-${
