@@ -17,6 +17,7 @@ const {basename, extname, join} = require('path');
 const {promisify} = require('util');
 const {parse} = require('@babel/parser');
 const traverse = require('@babel/traverse').default;
+const semver = require('semver');
 const forEachPackage = require('./src/forEachPackage');
 const main = require('./src/main');
 const print = require('./src/print');
@@ -281,17 +282,16 @@ async function checkForNonCurrentInternalDependencies() {
 		const outdated = [];
 		dependencies.forEach(([dependency, version]) => {
 			const name = extractDependencyName(dependency);
-			if (name) {
-				if (name.startsWith(internalPackagePrefix)) {
-					const suffix = name.slice(internalPackagePrefix.length);
-					const packageName = `clay-${suffix}`;
-					if (version !== packages[packageName].version) {
-						outdated.push([
-							packageName,
-							version,
-							packages[packageName].version,
-						]);
-					}
+			if (name && name.startsWith(internalPackagePrefix)) {
+				let suffix = name.slice(internalPackagePrefix.length);
+				if (!packages.hasOwnProperty(suffix)) {
+					suffix = `clay-${suffix}`;
+				}
+				if (
+					packages.hasOwnProperty(suffix) &&
+					!semver.satisfies(packages[suffix].version, version)
+				) {
+					outdated.push([suffix, version, packages[suffix].version]);
 				}
 			}
 		});
@@ -299,7 +299,7 @@ async function checkForNonCurrentInternalDependencies() {
 			success = false;
 			print.line.red('BAD');
 			for (const [dependency, actual, desired] of outdated) {
-				print.line(`    ${dependency}: ${actual} != ${desired}`);
+				print.line.red(`    ${dependency}: ${actual} != ${desired}`);
 			}
 		} else {
 			print.line.green('OK');
