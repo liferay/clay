@@ -4,8 +4,38 @@
 
 .tooltip-arrow {
 	background-color: $tooltip-bg;
+	height: 0.8rem;
+	left: 50%;
+	margin-left: 0.4rem;
 	position: absolute;
-	transform: rotate(45deg);
+	transform: rotate(45deg) translateX(-100%);
+	width: 0.8rem;
+}
+
+.tooltip-help .bottom, .tooltip .bottom{
+	.tooltip-arrow {
+		top: 2px;
+	}
+}
+
+.tooltip-help .left, .tooltip .left{
+	.tooltip-arrow {
+		right: -12%;
+		top: 50%;
+	}
+}
+
+.tooltip-help .right, .tooltip .right{
+	.tooltip-arrow {
+		left: 0;
+		top: 50%;
+	}
+}
+
+.tooltip-help .top, .tooltip .top{
+	.tooltip-arrow {
+		bottom: -15px;
+	}
 }
 
 // Tooltip Positions
