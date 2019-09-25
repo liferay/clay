@@ -4,8 +4,6 @@ description: "A Web Implementation of Lexicon Experience Language"
 order: 1
 ---
 
-## What is Clay?
-
 Clay is an extensive Component Library, where you'll find useful components—with extensive code examples—for your web application.
 
 It is composed by 3 different layers, each one easy to understand and designed to fit different needs, allowing the developer to choose what to use without limitations
@@ -29,18 +27,18 @@ It is composed by 3 different layers, each one easy to understand and designed t
     </table>
 </div>
 
-## Bootstrap
+#### Bootstrap
 
 Clay is based on [Bootstrap](https://getbootstrap.com). This means it has a very solid foundation and it is easy to use because you are already familiar with it and it follows the same general patterns.
 
-## Lexicon
+#### Lexicon
 
 Because Clay is modeled after [Lexicon](https://liferay.design/lexicon/)'s experience language, you can rest assured that your web application will have a consistent style and user experience.
 
-## Customizable 100%
+#### Customizable 100%
 
 Clay's powerful [SCSS foundation](https://next.clayui.com/docs/css/scss.html) allows you to create your own customizations easily.
 
-## React
+#### React
 
 Built with [React](https://reactjs.org) to reduce the learning curve and simplify the integration with your other React projects.

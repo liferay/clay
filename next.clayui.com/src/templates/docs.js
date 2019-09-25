@@ -38,6 +38,8 @@ export default props => {
 		stable: 'success',
 	};
 
+	const showDescTop = !frontmatter.packageNpm && frontmatter.description;
+
 	useEffect(() => {
 		document
 			.querySelectorAll('.clay-site-custom-checkbox-indeterminate')
@@ -78,10 +80,15 @@ export default props => {
 												{frontmatter.title}
 											</h1>
 											{frontmatter.packageNpm && (
-												<p className="docs-package-npm">
+												<p className="docs-subtitle">
 													{`yarn add ${
 														frontmatter.packageNpm
 													}`}
+												</p>
+											)}
+											{showDescTop && (
+												<p className="docs-subtitle">
+													{frontmatter.description}
 												</p>
 											)}
 										</div>
@@ -167,7 +174,7 @@ export default props => {
 														)}
 													</Link>
 												)}
-												{frontmatter.description && (
+												{!showDescTop && (
 													<p className="docs-description">
 														{
 															frontmatter.description
