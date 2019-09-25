@@ -73,6 +73,7 @@ const ClayDropDownItem: React.FunctionComponent<IProps> = ({
 					active,
 					disabled,
 				})}
+				disabled={disabled}
 				href={href}
 				onClick={onClick}
 				ref={innerRef}
