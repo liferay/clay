@@ -7,8 +7,8 @@
 'use strict';
 
 const path = require('path');
-const assert = require('yeoman-generator').assert;
-const helpers = require('yeoman-generator').test;
+const {assert} = require('yeoman-generator');
+const {test: helpers} = require('yeoman-generator');
 
 describe('clay-component-generator:app', () => {
 	beforeAll(done => {

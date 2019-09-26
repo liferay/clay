@@ -3,6 +3,7 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+
 import React from 'react';
 import tinycolor from 'tinycolor2';
 

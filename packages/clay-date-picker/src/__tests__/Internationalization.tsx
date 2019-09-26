@@ -5,8 +5,9 @@
  */
 
 import ClayDatePicker from '..';
-import React, {useState} from 'react';
 import {cleanup, render} from '@testing-library/react';
+import React, {useState} from 'react';
+
 import {FirstDayOfWeek} from '../types';
 
 const spritemap = 'icons.svg';
@@ -37,7 +38,7 @@ const DatePickerWithState = ({
 describe('Internationalization', () => {
 	afterEach(cleanup);
 
-	it('should render the date picker in russian', () => {
+	it('renders the date picker in russian', () => {
 		render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}

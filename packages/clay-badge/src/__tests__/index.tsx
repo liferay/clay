@@ -3,11 +3,12 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import * as TestRenderer from 'react-test-renderer';
+
 import ClayBadge from '..';
+import * as TestRenderer from 'react-test-renderer';
 import React from 'react';
 
-describe('ClayBadge', function() {
+describe('ClayBadge', () => {
 	it('renders', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayBadge displayType="primary" label="4" />

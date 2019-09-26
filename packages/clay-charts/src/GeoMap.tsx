@@ -4,9 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {Grid, PointOptions} from 'billboard.js';
 import * as d3 from 'd3';
-import React from 'react';
-import {FeatureCollection} from 'geojson';
+
+// eslint-disable-next-line liferay/no-duplicate-imports
 import {
 	GeoPath,
 	GeoPermissibleObjects,
@@ -15,7 +16,8 @@ import {
 	Selection,
 	ValueFn,
 } from 'd3';
-import {Grid, PointOptions} from 'billboard.js';
+import {FeatureCollection} from 'geojson';
+import React from 'react';
 
 const DEFAULT_COLOR = {
 	range: {

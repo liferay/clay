@@ -4,12 +4,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import classNames from 'classnames';
 import ClayButton from '@clayui/button';
-import ClayIcon from '@clayui/icon';
-import React, {useEffect, useRef, useState} from 'react';
 import {ClayInput} from '@clayui/form';
+import ClayIcon from '@clayui/icon';
 import {FocusScope} from '@clayui/shared';
+import classNames from 'classnames';
+import React, {useEffect, useRef, useState} from 'react';
 
 type ConfigMaxMin = {
 	max: number;

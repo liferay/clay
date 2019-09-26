@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as TestRenderer from 'react-test-renderer';
 import ClayAlert from '..';
+import * as TestRenderer from 'react-test-renderer';
 import React from 'react';
 
 describe('ClayAlert', () => {

@@ -4,16 +4,17 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import Body from './Body';
+import {ClayPortal} from '@clayui/shared';
 import classNames from 'classnames';
+import React, {FunctionComponent, useEffect, useRef} from 'react';
+import warning from 'warning';
+
+import Body from './Body';
 import Context, {IContext} from './Context';
 import Footer from './Footer';
 import Header from './Header';
-import React, {FunctionComponent, useEffect, useRef} from 'react';
-import warning from 'warning';
-import {ClayPortal} from '@clayui/shared';
-import {Observer, ObserverType, Size} from './types';
 import {useUserInteractions} from './Hook';
+import {Observer, ObserverType, Size} from './types';
 
 interface IProps
 	extends React.HTMLAttributes<HTMLDivElement>,

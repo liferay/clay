@@ -4,9 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import Navigation from './Navigation';
-import React, {useLayoutEffect} from 'react';
 import {Link} from 'gatsby';
+import React, {useLayoutEffect} from 'react';
+
+import Navigation from './Navigation';
 
 const SidebarRef = React.createRef();
 const SideNavRef = React.createRef();
@@ -38,7 +39,7 @@ const SideNavScroll = props => {
 };
 
 export default props => (
-	<React.Fragment>
+	<>
 		<nav
 			className="sidebar-toggler-content sidenav-sticky sidenav-menu-slider"
 			id="clay-sidebar"
@@ -96,5 +97,5 @@ export default props => (
 				</div>
 			</SideNavScroll>
 		</nav>
-	</React.Fragment>
+	</>
 );

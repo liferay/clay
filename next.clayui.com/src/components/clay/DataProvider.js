@@ -5,8 +5,9 @@
  */
 
 import ClayDataProvider, {useResource} from '@clayui/data-provider';
-import Editor from './Editor';
 import React from 'react';
+
+import Editor from './Editor';
 
 const dataProviderCode = `const Component = () => (
 	<ClayDataProvider

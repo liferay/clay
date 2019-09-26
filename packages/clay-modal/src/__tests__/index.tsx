@@ -5,11 +5,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import Button from '@clayui/button';
 import ClayModal, {useModal} from '..';
-import React from 'react';
-import ReactDOM from 'react-dom';
+import Button from '@clayui/button';
 import {act, cleanup, render} from '@testing-library/react';
+import ReactDOM from 'react-dom';
+import React from 'react';
 
 const spritemap = 'icons.svg';
 

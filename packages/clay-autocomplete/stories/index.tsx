@@ -4,13 +4,14 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayAutocomplete from '../src';
-import ClayDropDown from '@clayui/drop-down';
-import React, {useEffect, useRef, useState} from 'react';
 import {FetchPolicy, NetworkStatus} from '@clayui/data-provider/src/types';
+import {useResource} from '@clayui/data-provider';
+import ClayDropDown from '@clayui/drop-down';
 import {FocusScope, useDebounce} from '@clayui/shared';
 import {storiesOf} from '@storybook/react';
-import {useResource} from '@clayui/data-provider';
+import React, {useEffect, useRef, useState} from 'react';
+
+import ClayAutocomplete from '../src';
 
 import '@clayui/css/lib/css/atlas.css';
 

@@ -6,14 +6,14 @@
 
 import '@clayui/css/lib/css/atlas.css';
 import ClayButton from '@clayui/button';
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import ClayDropDown from '@clayui/drop-down';
 import ClayIcon from '@clayui/icon';
-import ClayPagination, {ClayPaginationWithBar} from '../src';
-import React, {useState} from 'react';
 import {number} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
+import React, {useState} from 'react';
 
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import ClayPagination, {ClayPaginationWithBar} from '../src';
 
 const PaginationWithState = (props: any) => {
 	const [active, setActive] = useState(8);

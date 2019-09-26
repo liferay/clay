@@ -5,23 +5,22 @@
  */
 
 import '@clayui/css/lib/css/atlas.css';
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import {ClayCheckbox} from '@clayui/form';
+import ClayIcon from '@clayui/icon';
+import ClayLabel from '@clayui/label';
+import ClaySticker from '@clayui/sticker';
+import {boolean} from '@storybook/addon-knobs';
+import {storiesOf} from '@storybook/react';
+import React from 'react';
+
 import ClayCard, {
 	ClayCardWithHorizontal,
 	ClayCardWithInfo,
 	ClayCardWithNavigation,
 	ClayCardWithUser,
 } from '../src';
-import ClayIcon from '@clayui/icon';
-import ClayLabel from '@clayui/label';
-import ClaySticker from '@clayui/sticker';
-import React from 'react';
-import {boolean} from '@storybook/addon-knobs';
-import {ClayCheckbox} from '@clayui/form';
-import {storiesOf} from '@storybook/react';
-
 const portletImage = require('./static/portlet.svg');
-
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
 const ClayCheckboxWithState = (props: any) => {
 	const [value, setValue] = React.useState<boolean>(false);

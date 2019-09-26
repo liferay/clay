@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import classNames from 'classnames';
 import Icon from '@clayui/icon';
+import classNames from 'classnames';
 import React from 'react';
 
 type DisplayType =

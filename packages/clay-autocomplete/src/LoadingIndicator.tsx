@@ -4,10 +4,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayLoadingIndicator from '@clayui/loading-indicator';
-import Context from './Context';
-import React, {useContext, useEffect} from 'react';
 import {ClayInput} from '@clayui/form';
+import ClayLoadingIndicator from '@clayui/loading-indicator';
+import React, {useContext, useEffect} from 'react';
+
+import Context from './Context';
 
 const LoadingIndicatorMarkup: React.FunctionComponent<
 	React.HTMLAttributes<HTMLDivElement>
