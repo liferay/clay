@@ -5,7 +5,7 @@
  */
 
 import classNames from 'classnames';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useLayoutEffect, useRef, useState} from 'react';
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	/**
@@ -92,7 +92,7 @@ const ClaySlider: React.FunctionComponent<IProps> = ({
 	const sliderRef = useRef<HTMLInputElement | null>(null);
 	const thumbRef = useRef<HTMLDivElement | null>(null);
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		if (sliderRef.current && thumbRef.current) {
 			const thumbWidth = thumbRef.current.clientWidth;
 
