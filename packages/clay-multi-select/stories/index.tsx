@@ -16,7 +16,14 @@ const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 
 const ClayMultiSelectWithState = (props: any) => {
 	const [value, setValue] = React.useState('');
-	const [items, setItems] = React.useState(['one']);
+	const [items, setItems] = React.useState(
+		props.items || [
+			{
+				label: 'one',
+				value: '1',
+			},
+		]
+	);
 
 	return (
 		<ClayMultiSelect
@@ -24,26 +31,51 @@ const ClayMultiSelectWithState = (props: any) => {
 			inputName="myInput"
 			inputValue={value}
 			items={items}
-			onInputChange={setValue}
+			onChange={setValue}
 			onItemsChange={setItems}
 			spritemap={spritemap}
 		/>
 	);
 };
 
-const ClayMultiSelectWithAutocomplete = () => {
+const ClayMultiSelectWithAutocomplete = (props: any) => {
 	const [value, setValue] = React.useState('');
-	const [selectedItems, setSelectedItems] = React.useState(['one']);
+	const [items, setItems] = React.useState(
+		props.items || [
+			{
+				label: 'one',
+				value: '1',
+			},
+		]
+	);
 
-	const sourceItems = ['one', 'two', 'three', 'four'];
+	const sourceItems = [
+		{
+			label: 'one',
+			value: '1',
+		},
+		{
+			label: 'two',
+			value: '2',
+		},
+		{
+			label: 'three',
+			value: '3',
+		},
+		{
+			label: 'four',
+			value: '4',
+		},
+	];
 
 	return (
 		<ClayMultiSelect
+			{...props}
 			inputName="myInput"
 			inputValue={value}
-			items={selectedItems}
-			onInputChange={setValue}
-			onItemsChange={setSelectedItems}
+			items={items}
+			onChange={setValue}
+			onItemsChange={setItems}
 			sourceItems={sourceItems}
 			spritemap={spritemap}
 		/>
@@ -71,9 +103,18 @@ storiesOf('Components|ClayMultiSelect', module)
 
 					<ClayInput.Group>
 						<ClayInput.GroupItem>
-							<ClayMultiSelectWithState
+							<ClayMultiSelectWithAutocomplete
 								isValid={isValid}
-								items={['one', 'two', 'three', 'four']}
+								items={[
+									{
+										label: 'one',
+										value: '1',
+									},
+									{
+										label: 'two',
+										value: '2',
+									},
+								]}
 							/>
 
 							<ClayForm.FeedbackGroup>

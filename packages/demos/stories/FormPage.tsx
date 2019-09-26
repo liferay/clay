@@ -130,7 +130,7 @@ export default () => {
 													<ClayMultiSelect
 														inputValue={value}
 														items={selectedItems}
-														onInputChange={setValue}
+														onChange={setValue}
 														onItemsChange={items => {
 															setFormValues({
 																...formValues,

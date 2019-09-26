@@ -14,14 +14,19 @@ const spritemap = '/images/icons/icons.svg';
 
 const multiSelectCode = `const Component = () => {
 	const [value, setValue] = React.useState('');
-	const [items, setItems] = React.useState(['one']);
+	const [items, setItems] = React.useState([
+		{
+			label: 'one',
+			value: '1',
+		}
+	]);
 
 	return (
 		<ClayMultiSelect
 			inputName="myInput"
 			inputValue={value}
 			items={items}
-			onInputChange={setValue}
+			onChange={setValue}
 			onItemsChange={setItems}
 			spritemap={spritemap}
 		/>
@@ -39,18 +44,41 @@ const MultiSelectInput = () => {
 	return <Editor code={multiSelectCode} scope={scope} />;
 };
 
-const multiSelectWithAutocompleteCode = `const Component = () => {
+const multiSelectWithAutocompleteCode = `const Component = (props) => {
 	const [value, setValue] = React.useState('');
-	const [items, setItems] = React.useState(['one']);
+	const [items, setItems] = React.useState([
+		{
+			label: 'one',
+			value: '1',
+		}
+	]);
 
-	const sourceItems = ['one', 'two', 'three', 'four'];
+	const sourceItems = [
+		{
+			label: 'one',
+			value: '1',
+		},
+		{
+			label: 'two',
+			value: '2',
+		},
+		{
+			label: 'three',
+			value: '3',
+		},
+		{
+			label: 'four',
+			value: '4',
+		},
+	];
 
 	return (
 		<ClayMultiSelect
+			{...props}
 			inputName="myInput"
 			inputValue={value}
 			items={items}
-			onInputChange={setValue}
+			onChange={setValue}
 			onItemsChange={setItems}
 			sourceItems={sourceItems}
 			spritemap={spritemap}
@@ -71,9 +99,31 @@ const MultiSelectInputWithAutocomplete = () => {
 
 const multiSelectWithSelectButtonCode = `const Component = () => {
 	const [value, setValue] = React.useState('');
-	const [items, setItems] = React.useState(['one']);
+	const [items, setItems] = React.useState([
+		{
+			label: 'one',
+			value: '1',
+		}
+	]);
 
-	const sourceItems = ['one', 'two', 'three', 'four'];
+	const sourceItems = [
+		{
+			label: 'one',
+			value: '1',
+		},
+		{
+			label: 'two',
+			value: '2',
+		},
+		{
+			label: 'three',
+			value: '3',
+		},
+		{
+			label: 'four',
+			value: '4',
+		},
+	];
 
 	return (
 		<ClayForm.Group>
@@ -83,7 +133,7 @@ const multiSelectWithSelectButtonCode = `const Component = () => {
 						inputName="myInput"
 						inputValue={value}
 						items={items}
-						onInputChange={setValue}
+						onChange={setValue}
 						onItemsChange={setItems}
 						sourceItems={sourceItems}
 						spritemap={spritemap}
@@ -118,9 +168,31 @@ const MultiSelectInputWithSelectButton = () => {
 
 const multiSelectWithValidationCode = `const Component = () => {
 	const [value, setValue] = React.useState('');
-	const [items, setItems] = React.useState(['one']);
+	const [items, setItems] = React.useState([
+		{
+			label: 'one',
+			value: '1',
+		}
+	]);
 
-	const sourceItems = ['one', 'two', 'three', 'four'];
+	const sourceItems = [
+		{
+			label: 'one',
+			value: '1',
+		},
+		{
+			label: 'two',
+			value: '2',
+		},
+		{
+			label: 'three',
+			value: '3',
+		},
+		{
+			label: 'four',
+			value: '4',
+		},
+	];
 
 	return (
 		<ClayForm.Group className="has-error">
@@ -132,7 +204,7 @@ const multiSelectWithValidationCode = `const Component = () => {
 						inputName="myInput"
 						inputValue={value}
 						items={items}
-						onInputChange={setValue}
+						onChange={setValue}
 						onItemsChange={setItems}
 						sourceItems={sourceItems}
 						spritemap={spritemap}

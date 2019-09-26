@@ -8,6 +8,21 @@ import * as React from 'react';
 import ClayMultiSelect from '..';
 import {cleanup, fireEvent, render} from '@testing-library/react';
 
+const items = [
+	{
+		label: 'foo',
+		value: '1',
+	},
+	{
+		label: 'bar',
+		value: '2',
+	},
+	{
+		label: 'baz',
+		value: '3',
+	},
+];
+
 const ClayMultiSelectWithState = (props: any) => {
 	const [items, setItems] = React.useState(props.items as [] | []);
 	const [value, setValue] = React.useState('');
@@ -16,7 +31,7 @@ const ClayMultiSelectWithState = (props: any) => {
 		<ClayMultiSelect
 			inputValue={value}
 			items={items}
-			onInputChange={setValue}
+			onChange={setValue}
 			onItemsChange={setItems}
 			spritemap="/foo/bar"
 			{...props}
@@ -34,12 +49,7 @@ describe('ClayMultiSelect', () => {
 	});
 
 	it('renders with items', () => {
-		render(
-			<ClayMultiSelectWithState
-				items={['foo', 'bar', 'baz']}
-				spritemap="/foo/bar"
-			/>
-		);
+		render(<ClayMultiSelectWithState items={items} spritemap="/foo/bar" />);
 
 		expect(document.body).toMatchSnapshot();
 	});
@@ -48,7 +58,7 @@ describe('ClayMultiSelect', () => {
 		render(
 			<ClayMultiSelectWithState
 				isValid={false}
-				items={['foo', 'bar', 'baz']}
+				items={items}
 				spritemap="/foo/bar"
 			/>
 		);
@@ -61,7 +71,7 @@ describe('ClayMultiSelect', () => {
 			<ClayMultiSelectWithState
 				disabled
 				isValid={false}
-				items={['foo', 'bar', 'baz']}
+				items={items}
 				spritemap="/foo/bar"
 			/>
 		);
@@ -102,7 +112,7 @@ describe('Interactions', () => {
 
 		const {container} = render(
 			<ClayMultiSelectWithState
-				items={['foo']}
+				items={[items[0]]}
 				onItemsChange={onItemsChangeFn}
 				spritemap="/foo/bar"
 			/>
@@ -125,7 +135,7 @@ describe('Interactions', () => {
 
 		const {container} = render(
 			<ClayMultiSelectWithState
-				items={['foo', 'bar']}
+				items={[items[0], items[1]]}
 				onItemsChange={onItemsChangeFn}
 				spritemap="/foo/bar"
 			/>
@@ -155,9 +165,9 @@ describe('Interactions', () => {
 
 		render(
 			<ClayMultiSelectWithState
-				items={['foo']}
+				items={[items[0]]}
 				onItemsChange={onItemsChangeFn}
-				sourceItems={['one', 'two', 'three', 'four']}
+				sourceItems={items}
 				spritemap="/foo/bar"
 			/>
 		);
@@ -170,7 +180,7 @@ describe('Interactions', () => {
 			document.querySelectorAll(
 				'input[type=text]'
 			)[0] as HTMLInputElement,
-			{target: {value: 'two'}}
+			{target: {value: 'bar'}}
 		);
 
 		expect(document.querySelectorAll('.dropdown-item').length).toEqual(1);
@@ -185,15 +195,15 @@ describe('Interactions', () => {
 
 	it('clicking the Clear All button removes items and text in the input', () => {
 		const onItemsChangeFn = jest.fn();
-		const onInputChangeFn = jest.fn();
+		const onChangeFn = jest.fn();
 
 		const {getByTitle} = render(
 			<ClayMultiSelectWithState
 				inputValue="foo"
-				items={['foo']}
-				onInputChange={onInputChangeFn}
+				items={[items[0]]}
+				onChange={onChangeFn}
 				onItemsChange={onItemsChangeFn}
-				sourceItems={['one', 'two', 'three', 'four']}
+				sourceItems={items}
 				spritemap="/foo/bar"
 			/>
 		);
@@ -203,17 +213,17 @@ describe('Interactions', () => {
 		fireEvent.click(clearButton, {});
 
 		expect(onItemsChangeFn).toHaveBeenCalledWith([]);
-		expect(onInputChangeFn).toHaveBeenCalledWith('');
+		expect(onChangeFn).toHaveBeenCalledWith('');
 	});
 
 	it('clicking the Clear All button should move the focus to the input', () => {
 		const {container, getByTitle} = render(
 			<ClayMultiSelectWithState
 				inputValue="foo"
-				items={['foo']}
-				onInputChange={jest.fn()}
+				items={[items[0]]}
+				onChange={jest.fn()}
 				onItemsChange={jest.fn()}
-				sourceItems={['one', 'two', 'three', 'four']}
+				sourceItems={items}
 				spritemap="/foo/bar"
 			/>
 		);
