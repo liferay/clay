@@ -11,8 +11,7 @@ import {Select, SelectWithOption} from '../../../src/components/clay/Select';
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Variants and Best Pratices](#variants-and-best-pratices)
-    - [SelectWithOption](#selectwithoption)
+- [SelectWithOption](#selectwithoption)
 - [API](#api)
 
 </div>
@@ -26,10 +25,6 @@ import {Select, SelectWithOption} from '../../../src/components/clay/Select';
 	Check the <a href="https://liferay.design/lexicon/">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/forms/selector/">Selectors Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
 </div>
 
-## Variants and Best Pratices
-
-### Default
-
 `ClaySelect` and `ClaySelect.Option` are `<select>` and `<option>` elements respectivetly that are styled using ClayCSS classes.
 
 `ClaySelect` represents a control that provides a menu of options (`ClaySelect.Option`). `ClaySelect.Option` defines an option in a select list.
@@ -38,7 +33,7 @@ Use `ClaySelect.Option` for wrapping an option item.
 
 <Select />
 
-### SelectWithOption
+## SelectWithOption
 
 If you use ClaySelect only for simple cases that do not need props for [`options`](#api-options), you can use `<ClaySelectWithOption />` which will have the same result as the previous version.
 
@@ -51,6 +46,6 @@ ClaySelect have the same React API of `<select>` element. Also, `ClaySelect.Opti
 ### SelectWithOption
 
 <div>
-    [APITable "clay-select/src/SelectWithOption.tsx"]
+    [APITable "clay-form/src/SelectWithOption.tsx"]
 </div>
 
