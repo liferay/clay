@@ -4,10 +4,16 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+const {readFile} = require('fs');
 const {join, resolve} = require('path');
+const {promisify} = require('util');
+
+const readFileAsync = promisify(readFile);
 
 function getPackageConfig(name) {
-	return require(resolve(join('packages', name, 'package.json')));
+	return readFileAsync(resolve(join('packages', name, 'package.json')), {
+		encoding: 'utf-8',
+	});
 }
 
 module.exports = getPackageConfig;

@@ -8,6 +8,7 @@
 
 const {readdir} = require('fs');
 const {promisify} = require('util');
+
 const getPackageConfig = require('./getPackageConfig');
 
 const readdirAsync = promisify(readdir);
@@ -23,8 +24,8 @@ async function forEachPackage(callback, whitelistSet = new Set([])) {
 	for (const pkg of packages) {
 		const name = pkg.name.toString();
 		if (pkg.isDirectory() && !whitelistSet.has(name)) {
-			const config = getPackageConfig(name);
-			await callback(name, config);
+			const config = await getPackageConfig(name);
+			callback(name, JSON.parse(config));
 		}
 	}
 }
