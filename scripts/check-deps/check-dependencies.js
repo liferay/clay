@@ -12,12 +12,13 @@
  * Reference: https://github.com/wincent/js
  */
 
+const {parse} = require('@babel/parser');
+const {default: traverse} = require('@babel/traverse');
 const {readFile, readdir} = require('fs');
 const {basename, extname, join} = require('path');
-const {promisify} = require('util');
-const {parse} = require('@babel/parser');
-const traverse = require('@babel/traverse').default;
 const semver = require('semver');
+const {promisify} = require('util');
+
 const forEachPackage = require('./src/forEachPackage');
 const main = require('./src/main');
 const print = require('./src/print');
