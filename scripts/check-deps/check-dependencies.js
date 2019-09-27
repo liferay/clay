@@ -221,7 +221,7 @@ async function checkForMismatchedDependencyVersions() {
 }
 
 /**
- * Can be used if
+ * List of DevDependencies to be ignored when checking for devDepenencies on each package.
  */
 const DEV_DEPENDENCY_WHITELIST = new Set([]);
 
