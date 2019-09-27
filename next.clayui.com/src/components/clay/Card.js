@@ -29,15 +29,17 @@ const cardCode = `const Component = () => {
 					</ClaySticker>
 				</ClayCard.AspectRatio>
 				<ClayCard.Body>
-					<div className="autofit-col autofit-col-expand">
-						<section className="autofit-section">
-							<ClayCard.Description displayType="title">{'deliverable.doc'}</ClayCard.Description>
-							<ClayCard.Description displayType="subtitle">{'Stevie Ray Vaughn'}</ClayCard.Description>
-							<ClayCard.Caption>
-								<ClayLabel displayType="success">{'Approved'}</ClayLabel>
-							</ClayCard.Caption>
-						</section>
-					</div>
+					<ClayCard.Row>
+						<div className="autofit-col autofit-col-expand">
+							<section className="autofit-section">
+								<ClayCard.Description displayType="title">{'deliverable.doc'}</ClayCard.Description>
+								<ClayCard.Description displayType="subtitle">{'Stevie Ray Vaughn'}</ClayCard.Description>
+								<ClayCard.Caption>
+									<ClayLabel displayType="success">{'Approved'}</ClayLabel>
+								</ClayCard.Caption>
+							</section>
+						</div>
+					</ClayCard.Row>
 				</ClayCard.Body>
 			</ClayCard>
 		</div>
