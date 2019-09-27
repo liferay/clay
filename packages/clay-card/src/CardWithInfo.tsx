@@ -161,42 +161,44 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 			{!onSelectChange && headerContent}
 
 			<ClayCard.Body>
-				<div className="autofit-col autofit-col-expand">
-					<ClayCard.Description displayType="title" href={href}>
-						{title}
-					</ClayCard.Description>
+				<ClayCard.Row>
+					<div className="autofit-col autofit-col-expand">
+						<ClayCard.Description displayType="title" href={href}>
+							{title}
+						</ClayCard.Description>
 
-					<ClayCard.Description displayType="subtitle">
-						{description}
-					</ClayCard.Description>
+						<ClayCard.Description displayType="subtitle">
+							{description}
+						</ClayCard.Description>
 
-					{labels && (
-						<ClayCard.Caption>
-							{labels.map(({value, ...others}, i: number) => (
-								<ClayLabel {...others} key={i}>
-									{value}
-								</ClayLabel>
-							))}
-						</ClayCard.Caption>
-					)}
-				</div>
-
-				{actions && (
-					<div className="autofit-col">
-						<ClayDropDownWithItems
-							items={actions}
-							spritemap={spritemap}
-							trigger={
-								<button className="component-action">
-									<ClayIcon
-										spritemap={spritemap}
-										symbol="ellipsis-v"
-									/>
-								</button>
-							}
-						/>
+						{labels && (
+							<ClayCard.Caption>
+								{labels.map(({value, ...others}, i: number) => (
+									<ClayLabel {...others} key={i}>
+										{value}
+									</ClayLabel>
+								))}
+							</ClayCard.Caption>
+						)}
 					</div>
-				)}
+
+					{actions && (
+						<div className="autofit-col">
+							<ClayDropDownWithItems
+								items={actions}
+								spritemap={spritemap}
+								trigger={
+									<button className="component-action">
+										<ClayIcon
+											spritemap={spritemap}
+											symbol="ellipsis-v"
+										/>
+									</button>
+								}
+							/>
+						</div>
+					)}
+				</ClayCard.Row>
 			</ClayCard.Body>
 		</ClayCard>
 	);

@@ -56,34 +56,36 @@ export const ClayCardWithHorizontal: React.FunctionComponent<IProps> = ({
 }: IProps) => {
 	const content = (
 		<ClayCard.Body>
-			<div className="autofit-col">
-				<ClaySticker inline>
-					<ClayIcon spritemap={spritemap} symbol={symbol} />
-				</ClaySticker>
-			</div>
-
-			<div className="autofit-col autofit-col-expand autofit-col-gutters">
-				<ClayCard.Description displayType="title" href={href}>
-					{title}
-				</ClayCard.Description>
-			</div>
-
-			{actions && (
+			<ClayCard.Row>
 				<div className="autofit-col">
-					<ClayDropDownWithItems
-						items={actions}
-						spritemap={spritemap}
-						trigger={
-							<button className="component-action">
-								<ClayIcon
-									spritemap={spritemap}
-									symbol="ellipsis-v"
-								/>
-							</button>
-						}
-					/>
+					<ClaySticker inline>
+						<ClayIcon spritemap={spritemap} symbol={symbol} />
+					</ClaySticker>
 				</div>
-			)}
+
+				<div className="autofit-col autofit-col-expand autofit-col-gutters">
+					<ClayCard.Description displayType="title" href={href}>
+						{title}
+					</ClayCard.Description>
+				</div>
+
+				{actions && (
+					<div className="autofit-col">
+						<ClayDropDownWithItems
+							items={actions}
+							spritemap={spritemap}
+							trigger={
+								<button className="component-action">
+									<ClayIcon
+										spritemap={spritemap}
+										symbol="ellipsis-v"
+									/>
+								</button>
+							}
+						/>
+					</div>
+				)}
+			</ClayCard.Row>
 		</ClayCard.Body>
 	);
 
