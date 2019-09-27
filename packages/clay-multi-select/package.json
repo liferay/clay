@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/multi-select",
-	"version": "3.0.0-alpha.1",
+	"version": "3.0.0",
 	"description": "ClayMultiSelect component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-multi-select",
@@ -31,7 +31,7 @@
 		"@clayui/form": "^3.0.0",
 		"@clayui/icon": "^3.0.0",
 		"@clayui/label": "^3.0.0",
-		"@clayui/shared": "^3.0.0",
+		"@clayui/shared": "^3.0.1",
 		"classnames": "^2.2.6"
 	},
 	"devDependencies": {
