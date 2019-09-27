@@ -285,11 +285,15 @@ async function checkForNonCurrentInternalDependencies() {
 			const name = extractDependencyName(dependency);
 			if (name && name.startsWith(internalPackagePrefix)) {
 				let suffix = name.slice(internalPackagePrefix.length);
-				if (!packages.hasOwnProperty(suffix)) {
+				const hasSuffix = Object.prototype.hasOwnProperty.call(
+					packages,
+					suffix
+				);
+				if (!hasSuffix) {
 					suffix = `clay-${suffix}`;
 				}
 				if (
-					packages.hasOwnProperty(suffix) &&
+					hasSuffix &&
 					!semver.satisfies(packages[suffix].version, version)
 				) {
 					outdated.push([suffix, version, packages[suffix].version]);
