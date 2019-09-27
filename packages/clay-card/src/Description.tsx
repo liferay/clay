@@ -30,8 +30,8 @@ interface ICardDescriptionProps
 }
 
 const CARD_TYPE_ELEMENTS = {
-	subtitle: 'span',
-	text: 'div',
+	subtitle: 'p',
+	text: 'p',
 	title: 'h3',
 } as const;
 
