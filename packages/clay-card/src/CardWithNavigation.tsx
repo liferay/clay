@@ -88,7 +88,7 @@ export const ClayCardWithNavigation: React.FunctionComponent<IProps> = ({
 				)}
 
 				{horizontal && (
-					<>
+					<ClayCard.Row>
 						<span className="autofit-col">
 							<ClaySticker inline>
 								<ClayIcon
@@ -107,7 +107,7 @@ export const ClayCardWithNavigation: React.FunctionComponent<IProps> = ({
 								</ClayCard.Description>
 							</span>
 						</span>
-					</>
+					</ClayCard.Row>
 				)}
 			</ClayCard.Body>
 		</ClayCard>

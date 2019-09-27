@@ -13,6 +13,7 @@ import Caption from './Caption';
 import Context, {IContext} from './Context';
 import Description from './Description';
 import Group from './Group';
+import Row from './Row';
 
 type CardDisplayType = 'file' | 'image' | 'user';
 
@@ -40,6 +41,7 @@ const ClayCard: React.FunctionComponent<IProps> & {
 	Caption: typeof Caption;
 	Description: typeof Description;
 	Group: typeof Group;
+	Row: typeof Row;
 } = ({
 	children,
 	className,
@@ -75,7 +77,7 @@ const ClayCard: React.FunctionComponent<IProps> & {
 				'card-interactive card-interactive-primary card-type-template':
 					(horizontal && interactive) || interactive,
 				'card-type-asset':
-					!horizontal && !interactive && !(horizontal && interactive),
+					isCardType.file || isCardType.image || isCardType.user,
 				'card-type-directory form-check form-check-card form-check-middle-left':
 					selectable && horizontal,
 				'file-card': isCardType.file,
@@ -110,5 +112,6 @@ ClayCard.Body = Body;
 ClayCard.Caption = Caption;
 ClayCard.Description = Description;
 ClayCard.Group = Group;
+ClayCard.Row = Row;
 
 export default ClayCard;

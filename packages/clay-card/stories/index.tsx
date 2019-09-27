@@ -297,21 +297,23 @@ storiesOf('Components|ClayCard', module)
 						</ClaySticker>
 					</ClayCard.AspectRatio>
 					<ClayCard.Body>
-						<div className="autofit-col autofit-col-expand">
-							<section className="autofit-section">
-								<ClayCard.Description displayType="title">
-									{'deliverable.doc'}
-								</ClayCard.Description>
-								<ClayCard.Description displayType="subtitle">
-									{'Stevie Ray Vaughn'}
-								</ClayCard.Description>
-								<ClayCard.Caption>
-									<ClayLabel displayType="success">
-										{'Approved'}
-									</ClayLabel>
-								</ClayCard.Caption>
-							</section>
-						</div>
+						<ClayCard.Row>
+							<div className="autofit-col autofit-col-expand">
+								<section className="autofit-section">
+									<ClayCard.Description displayType="title">
+										{'deliverable.doc'}
+									</ClayCard.Description>
+									<ClayCard.Description displayType="subtitle">
+										{'Stevie Ray Vaughn'}
+									</ClayCard.Description>
+									<ClayCard.Caption>
+										<ClayLabel displayType="success">
+											{'Approved'}
+										</ClayLabel>
+									</ClayCard.Caption>
+								</section>
+							</div>
+						</ClayCard.Row>
 					</ClayCard.Body>
 				</ClayCard>
 				<ClayCard displayType="file" selectable>
@@ -332,21 +334,23 @@ storiesOf('Components|ClayCard', module)
 						</ClayCheckboxWithState>
 					</ClayCard.AspectRatio>
 					<ClayCard.Body>
-						<div className="autofit-col autofit-col-expand">
-							<section className="autofit-section">
-								<ClayCard.Description displayType="title">
-									{'deliverable.doc'}
-								</ClayCard.Description>
-								<ClayCard.Description displayType="subtitle">
-									{'Stevie Ray Vaughn'}
-								</ClayCard.Description>
-								<ClayCard.Caption>
-									<ClayLabel displayType="success">
-										{'Approved'}
-									</ClayLabel>
-								</ClayCard.Caption>
-							</section>
-						</div>
+						<ClayCard.Row>
+							<div className="autofit-col autofit-col-expand">
+								<section className="autofit-section">
+									<ClayCard.Description displayType="title">
+										{'deliverable.doc'}
+									</ClayCard.Description>
+									<ClayCard.Description displayType="subtitle">
+										{'Stevie Ray Vaughn'}
+									</ClayCard.Description>
+									<ClayCard.Caption>
+										<ClayLabel displayType="success">
+											{'Approved'}
+										</ClayLabel>
+									</ClayCard.Caption>
+								</section>
+							</div>
+						</ClayCard.Row>
 					</ClayCard.Body>
 				</ClayCard>
 			</ClayCard.Group>
@@ -371,19 +375,21 @@ storiesOf('Components|ClayCard', module)
 					</ClayCard.AspectRatio>
 
 					<ClayCard.Body>
-						<div className="autofit-col autofit-col-expand">
-							<ClayCard.Description displayType="title">
-								{'thumbnail_coffee.jpg'}
-							</ClayCard.Description>
-							<ClayCard.Description displayType="subtitle">
-								{'Author Action'}
-							</ClayCard.Description>
-							<ClayCard.Caption>
-								<ClayLabel displayType="success">
-									{'Approved'}
-								</ClayLabel>
-							</ClayCard.Caption>
-						</div>
+						<ClayCard.Row>
+							<div className="autofit-col autofit-col-expand">
+								<ClayCard.Description displayType="title">
+									{'thumbnail_coffee.jpg'}
+								</ClayCard.Description>
+								<ClayCard.Description displayType="subtitle">
+									{'Author Action'}
+								</ClayCard.Description>
+								<ClayCard.Caption>
+									<ClayLabel displayType="success">
+										{'Approved'}
+									</ClayLabel>
+								</ClayCard.Caption>
+							</div>
+						</ClayCard.Row>
 					</ClayCard.Body>
 				</ClayCard>
 				<ClayCard displayType="image">
@@ -406,19 +412,21 @@ storiesOf('Components|ClayCard', module)
 					</ClayCard.AspectRatio>
 
 					<ClayCard.Body>
-						<div className="autofit-col autofit-col-expand">
-							<ClayCard.Description displayType="title">
-								{'thumbnail_coffee.jpg'}
-							</ClayCard.Description>
-							<ClayCard.Description displayType="subtitle">
-								{'Author Action'}
-							</ClayCard.Description>
-							<ClayCard.Caption>
-								<ClayLabel displayType="success">
-									{'Approved'}
-								</ClayLabel>
-							</ClayCard.Caption>
-						</div>
+						<ClayCard.Row>
+							<div className="autofit-col autofit-col-expand">
+								<ClayCard.Description displayType="title">
+									{'thumbnail_coffee.jpg'}
+								</ClayCard.Description>
+								<ClayCard.Description displayType="subtitle">
+									{'Author Action'}
+								</ClayCard.Description>
+								<ClayCard.Caption>
+									<ClayLabel displayType="success">
+										{'Approved'}
+									</ClayLabel>
+								</ClayCard.Caption>
+							</div>
+						</ClayCard.Row>
 					</ClayCard.Body>
 				</ClayCard>
 			</ClayCard.Group>
