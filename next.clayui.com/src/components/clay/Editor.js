@@ -9,7 +9,7 @@ import React from 'react';
 
 const theme = {
 	plain: {
-		backgroundColor: '#f6f8fa',
+		backgroundColor: '#f5f5f8',
 		color: '#393A34',
 	},
 	styles: [
@@ -82,7 +82,7 @@ const theme = {
 	],
 };
 
-const Editor = ({code, disabled = false, preview = true, scope}) => (
+const Editor = ({code, imports, disabled = false, preview = true, scope}) => (
 	<LiveProvider
 		code={code}
 		disabled={disabled}
@@ -97,7 +97,10 @@ const Editor = ({code, disabled = false, preview = true, scope}) => (
 			</div>
 		)}
 		<div className="gatsby-highlight">
-			<LiveEditor />
+			<div style={{padding: '10px'}}>
+				{imports && <LiveEditor disabled value={imports} />}
+				<LiveEditor />
+			</div>
 		</div>
 	</LiveProvider>
 );
