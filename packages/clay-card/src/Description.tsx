@@ -52,14 +52,15 @@ const ClayCardDescription: React.FunctionComponent<ICardDescriptionProps> = ({
 			title={children ? children.toString() : undefined}
 			{...otherProps}
 		>
-			<span className={truncate ? 'text-truncate-inline' : ''}>
-				<InnerTag
-					className={truncate ? 'text-truncate' : ''}
-					href={href}
-				>
-					{children}
-				</InnerTag>
-			</span>
+			{truncate ? (
+				<span className="text-truncate-inline">
+					<InnerTag className="text-truncate" href={href}>
+						{children}
+					</InnerTag>
+				</span>
+			) : (
+				children
+			)}
 		</OuterTag>
 	);
 };
