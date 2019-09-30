@@ -13,9 +13,12 @@ import Editor from './Editor';
 
 const spritemap = '/images/icons/icons.svg';
 
+const multiSelectImportsCode = `import ClayMultiSelect from '@clayui/multi-select';
+import React, {useState} from 'react';`;
+
 const multiSelectCode = `const Component = () => {
-	const [value, setValue] = React.useState('');
-	const [items, setItems] = React.useState([
+	const [value, setValue] = useState('');
+	const [items, setItems] = useState([
 		{
 			label: 'one',
 			value: '1',
@@ -42,12 +45,21 @@ const MultiSelectInput = () => {
 		spritemap,
 		useState,
 	};
-	return <Editor code={multiSelectCode} scope={scope} />;
+	return (
+		<Editor
+			code={multiSelectCode}
+			imports={multiSelectImportsCode}
+			scope={scope}
+		/>
+	);
 };
 
+const multiSelectWithAutocompleteImportsCode = `import ClayMultiSelect from '@clayui/multi-select';
+import React, {useState} from 'react';`;
+
 const multiSelectWithAutocompleteCode = `const Component = (props) => {
-	const [value, setValue] = React.useState('');
-	const [items, setItems] = React.useState([
+	const [value, setValue] = useState('');
+	const [items, setItems] = useState([
 		{
 			label: 'one',
 			value: '1',
@@ -95,12 +107,23 @@ const MultiSelectInputWithAutocomplete = () => {
 		spritemap,
 		useState,
 	};
-	return <Editor code={multiSelectWithAutocompleteCode} scope={scope} />;
+	return (
+		<Editor
+			code={multiSelectWithAutocompleteCode}
+			imports={multiSelectWithAutocompleteImportsCode}
+			scope={scope}
+		/>
+	);
 };
 
+const multiSelectWithSelectButtonImportsCode = `import ClayButton from '@clayui/button';
+import ClayForm, {ClayInput} from '@clayui/form';
+import ClayMultiSelect from '@clayui/multi-select';
+import React, {useState} from 'react';`;
+
 const multiSelectWithSelectButtonCode = `const Component = () => {
-	const [value, setValue] = React.useState('');
-	const [items, setItems] = React.useState([
+	const [value, setValue] = useState('');
+	const [items, setItems] = useState([
 		{
 			label: 'one',
 			value: '1',
@@ -164,12 +187,18 @@ const MultiSelectInputWithSelectButton = () => {
 		spritemap,
 		useState,
 	};
-	return <Editor code={multiSelectWithSelectButtonCode} scope={scope} />;
+	return (
+		<Editor
+			code={multiSelectWithSelectButtonCode}
+			imports={multiSelectWithSelectButtonImportsCode}
+			scope={scope}
+		/>
+	);
 };
 
 const multiSelectWithValidationCode = `const Component = () => {
-	const [value, setValue] = React.useState('');
-	const [items, setItems] = React.useState([
+	const [value, setValue] = useState('');
+	const [items, setItems] = useState([
 		{
 			label: 'one',
 			value: '1',
@@ -246,7 +275,13 @@ const MultiSelectInputWithValidation = () => {
 		spritemap,
 		useState,
 	};
-	return <Editor code={multiSelectWithValidationCode} scope={scope} />;
+	return (
+		<Editor
+			code={multiSelectWithValidationCode}
+			imports={multiSelectWithSelectButtonImportsCode}
+			scope={scope}
+		/>
+	);
 };
 
 export {

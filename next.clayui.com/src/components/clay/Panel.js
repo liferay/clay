@@ -11,6 +11,9 @@ import Editor from './Editor';
 
 const spritemap = '/images/icons/icons.svg';
 
+const panelImportsCode = `import ClayPanel from '@clayui/panel';
+import React from 'react';`;
+
 const panelCode = `const Component = () => (
 	<ClayPanel
 		collapsable
@@ -27,7 +30,7 @@ render(<Component />)`;
 
 const Panel = () => {
 	const scope = {ClayPanel, spritemap, useState};
-	return <Editor code={panelCode} scope={scope} />;
+	return <Editor code={panelCode} imports={panelImportsCode} scope={scope} />;
 };
 
 export {Panel};

@@ -11,6 +11,9 @@ import Editor from './Editor';
 
 const spritemap = '/images/icons/icons.svg';
 
+const paginationEllipsisBufferImportsCode = `import ClayPagination from '@clayui/pagination';
+import React, {useState} from 'react';`;
+
 const PaginationEllipsisBufferCode = `const Component = () => {
 	const initialActivePage = 1;
 	const [active, setActive] = useState(initialActivePage);
@@ -31,7 +34,13 @@ const PaginationEllipsisBuffer = () => {
 	const scope = {ClayPagination, spritemap, useState};
 	const code = PaginationEllipsisBufferCode;
 
-	return <Editor code={code} scope={scope} />;
+	return (
+		<Editor
+			code={code}
+			imports={paginationEllipsisBufferImportsCode}
+			scope={scope}
+		/>
+	);
 };
 
 export {PaginationEllipsisBuffer};

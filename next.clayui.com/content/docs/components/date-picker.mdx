@@ -12,10 +12,9 @@ import {DatePickerWithState, DatePickerWithTime, DatePickerCustomFooter, DatePic
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Variants and Best Pratices](#variants-and-best-pratices)
-  - [Time](#time)
-  - [Internationalization](#internationalization)
-  - [Custom Footer](#custom-footer)
+- [Time](#time)
+- [Internationalization](#internationalization)
+- [Custom Footer](#custom-footer)
 - [API](#api)
 
 </div>
@@ -28,8 +27,6 @@ import {DatePickerWithState, DatePickerWithTime, DatePickerCustomFooter, DatePic
 <div class="clay-site-alert alert alert-info">
 	Check the <a href="https://liferay.design/lexicon/">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/forms/picker-date-time/">Date & Time Pickers Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
 </div>
-
-## Variants and Best Pratices
 
 Date Picker is created following the principles of <a href="https://liferay.design/lexicon/core-components/forms/picker-date-time/">Lexicon</a>, Internationalization and Extension Points by default is integrated with Time Picker that offers the minimum of features to set a time.
 
@@ -51,13 +48,13 @@ The component is treated as controlled, use the [`onValueChange`](#api-onValueCh
 
 <DatePickerWithState />
 
-### Time
+## Time
 
 The ClayTimePicker by default is already implemented in the Date Picker, you can enable it using the [`time`](#api-time) API. To provide a context for the timezone user, use the `timezone` API for this.
 
 <DatePickerWithTime />
 
-### Internationalization
+## Internationalization
 
 To set internationalization of the component, you need to configure the props according to the language. Date Picker offers low level APIs to configure [`firstDayOfWeek`](#api-firstDayOfWeek), [`weekdaysShort`](#api-weekdaysShort), [`months`](#api-months), [`timeFormat`](#api-timeFormat), [`timezone`](#api-timezone) and [`dateFormat`](#api-dateFormat), you can follow the example below to set up a Date Picker for Russian.
 
@@ -73,7 +70,7 @@ To set internationalization of the component, you need to configure the props ac
 	It is not necessary to reverse or change the order of the values ​​of <code class="language-text">weekdaysShort</code> the definition of the API <code class="language-text">firstDayOfWeek</code> will take care of changing this, <b>keep the order from Sunday to Saturday</b>.
 </div>
 
-### Custom Footer
+## Custom Footer
 
 To customize the Date Picker content footer you can use the [`footerElement`](#api-footerElement) API, its type is a Function that should return an element ([Read more about renders props](https://reactjs.org/docs/render-props.html)), this personalization point is treated as an extension point in the <a href="https://liferay.design/lexicon/">Lexicon</a> language.
 

@@ -9,6 +9,9 @@ import React, {useState} from 'react';
 
 import Editor from './Editor';
 
+const tableImportsCode = `import ClayTable from '@clayui/table';
+import React, {useState} from 'react';`;
+
 const tableCode = `const Component = () => {
 	const [value, setValue] = useState('one');
 
@@ -51,7 +54,7 @@ render(<Component />)`;
 
 const Table = () => {
 	const scope = {ClayTable, useState};
-	return <Editor code={tableCode} scope={scope} />;
+	return <Editor code={tableCode} imports={tableImportsCode} scope={scope} />;
 };
 
 export {Table};

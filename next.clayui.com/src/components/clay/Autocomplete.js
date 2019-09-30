@@ -13,6 +13,9 @@ import Editor from './Editor';
 
 const spritemap = '/images/icons/icons.svg';
 
+const autocompleteWithLoadingImportsCode = `import React, {useState} from 'react';
+import ClayAutocomplete from '@clayui/autocomplete';`;
+
 const autocompleteWithLoadingStateCode = `const Component = () => {
 	const [loading] = useState(true);
 	const [value, setValue] = useState('');
@@ -32,8 +35,19 @@ render(<Component />)`;
 
 const AutocompleteWithLoadingState = () => {
 	const scope = {ClayAutocomplete, spritemap, useState};
-	return <Editor code={autocompleteWithLoadingStateCode} scope={scope} />;
+	return (
+		<Editor
+			code={autocompleteWithLoadingStateCode}
+			imports={autocompleteWithLoadingImportsCode}
+			scope={scope}
+		/>
+	);
 };
+
+const autocompleteWithDataProviderImportsCode = `import React, {useState} from 'react';
+import ClayAutocomplete from '@clayui/autocomplete';
+import {useResource} from '@clayui/data-provider';
+import ClayDropDown from '@clayui/drop-down';`;
 
 const autocompleteWithDataProviderCode = `const Component = () => {
 	const [value, setValue] = useState('');
@@ -93,7 +107,13 @@ const AutocompleteWithDataProvider = () => {
 		useResource,
 		useState,
 	};
-	return <Editor code={autocompleteWithDataProviderCode} scope={scope} />;
+	return (
+		<Editor
+			code={autocompleteWithDataProviderCode}
+			imports={autocompleteWithDataProviderImportsCode}
+			scope={scope}
+		/>
+	);
 };
 
 export {AutocompleteWithLoadingState, AutocompleteWithDataProvider};

@@ -12,6 +12,10 @@ import Editor from './Editor';
 
 const spritemap = '/images/icons/icons.svg';
 
+const modalImportsCode = `import ClayButton from '@clayui/button';
+import ClayModal, {useModal} from '@clayui/modal';
+import React, {useState} from 'react';`;
+
 const modalCode = `const Component = () => {
 	const [visible, setVisible] = useState(false);
 	const {observer, onClose} = useModal({
@@ -65,7 +69,7 @@ const Modal = () => {
 		useModal,
 		useState,
 	};
-	return <Editor code={modalCode} scope={scope} />;
+	return <Editor code={modalCode} imports={modalImportsCode} scope={scope} />;
 };
 
 export {Modal};
