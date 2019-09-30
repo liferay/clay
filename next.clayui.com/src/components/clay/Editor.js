@@ -82,7 +82,7 @@ const theme = {
 	],
 };
 
-const Editor = ({code, imports, disabled = false, preview = true, scope}) => (
+const Editor = ({code, disabled = false, imports, preview = true, scope}) => (
 	<LiveProvider
 		code={code}
 		disabled={disabled}

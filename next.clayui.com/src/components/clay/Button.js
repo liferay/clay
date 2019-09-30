@@ -11,6 +11,9 @@ import Editor from './Editor';
 
 const spritemap = '/images/icons/icons.svg';
 
+const buttonDisplayTypesImportsCode = `import ClayButton from '@clayui/button';
+import React from 'react';`;
+
 const ButtonDisplayTypesCode = `const Component = () => {
 	return (
 		<>
@@ -36,8 +39,17 @@ const ButtonDisplayTypes = () => {
 	const scope = {ClayButton, spritemap};
 	const code = ButtonDisplayTypesCode;
 
-	return <Editor code={code} scope={scope} />;
+	return (
+		<Editor
+			code={code}
+			imports={buttonDisplayTypesImportsCode}
+			scope={scope}
+		/>
+	);
 };
+
+const buttonGroupImportsCode = `import ClayButton from '@clayui/button';
+import React from 'react';`;
 
 const ButtonGroupCode = `const Component = () => {
 	return (
@@ -57,7 +69,9 @@ const ButtonGroup = () => {
 	const scope = {ClayButton, spritemap};
 	const code = ButtonGroupCode;
 
-	return <Editor code={code} scope={scope} />;
+	return (
+		<Editor code={code} imports={buttonGroupImportsCode} scope={scope} />
+	);
 };
 
 export {ButtonDisplayTypes, ButtonGroup};

@@ -9,6 +9,9 @@ import React from 'react';
 
 import Editor from './Editor';
 
+const loadingIndicatorImportsCode = `import ClayLoadingIndicator from '@clayui/loading-indicator';
+import React from 'react';`;
+
 const LoadingIndicatorCode = `const Component = () => {
 	return (
         <>
@@ -23,8 +26,17 @@ export const LoadingIndicator = () => {
 	const scope = {ClayLoadingIndicator};
 	const code = LoadingIndicatorCode;
 
-	return <Editor code={code} scope={scope} />;
+	return (
+		<Editor
+			code={code}
+			imports={loadingIndicatorImportsCode}
+			scope={scope}
+		/>
+	);
 };
+
+const loadingIndicatorLightImportsCode = `import ClayLoadingIndicator from '@clayui/loading-indicator';
+import React from 'react';`;
 
 const LoadingIndicatorLightCode = `const Component = () => {
 	return (
@@ -40,8 +52,17 @@ export const LoadingIndicatorLight = () => {
 	const scope = {ClayLoadingIndicator};
 	const code = LoadingIndicatorLightCode;
 
-	return <Editor code={code} scope={scope} />;
+	return (
+		<Editor
+			code={code}
+			imports={loadingIndicatorLightImportsCode}
+			scope={scope}
+		/>
+	);
 };
+
+const loadingIndicatorSmallImportsCode = `import ClayLoadingIndicator from '@clayui/loading-indicator';
+import React from 'react';`;
 
 const LoadingIndicatorSmallCode = `const Component = () => {
 	return (
@@ -55,5 +76,11 @@ export const LoadingIndicatorSmall = () => {
 	const scope = {ClayLoadingIndicator};
 	const code = LoadingIndicatorSmallCode;
 
-	return <Editor code={code} scope={scope} />;
+	return (
+		<Editor
+			code={code}
+			imports={loadingIndicatorSmallImportsCode}
+			scope={scope}
+		/>
+	);
 };

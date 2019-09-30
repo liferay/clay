@@ -11,6 +11,9 @@ import Editor from './Editor';
 
 const spritemap = '/images/icons/icons.svg';
 
+const datePickerWithStateImportsCode = `import ClayDatePicker from '@clayui/date-picker';
+import React, {useState} from 'react';`;
+
 const DatePickerWithState = () => {
 	const scope = {ClayDatePicker, spritemap, useState};
 	const code = `const Component = () => {
@@ -32,8 +35,17 @@ const DatePickerWithState = () => {
 
 render(<Component />)`;
 
-	return <Editor code={code} scope={scope} />;
+	return (
+		<Editor
+			code={code}
+			imports={datePickerWithStateImportsCode}
+			scope={scope}
+		/>
+	);
 };
+
+const datePickerLocaleImportsCode = `import ClayDatePicker from '@clayui/date-picker';
+import React, {useState} from 'react';`;
 
 const DatePickerLocale = () => {
 	const scope = {ClayDatePicker, spritemap, useState};
@@ -73,8 +85,18 @@ const DatePickerLocale = () => {
 
 render(<Component />)`;
 
-	return <Editor code={code} disabled scope={scope} />;
+	return (
+		<Editor
+			code={code}
+			disabled
+			imports={datePickerLocaleImportsCode}
+			scope={scope}
+		/>
+	);
 };
+
+const datePickerCustomFooterImportsCode = `import ClayDatePicker from '@clayui/date-picker';
+import React, {useState} from 'react';`;
 
 const DatePickerCustomFooter = () => {
 	const scope = {ClayDatePicker, spritemap, useState};
@@ -98,8 +120,18 @@ const DatePickerCustomFooter = () => {
 
 render(<Component />)`;
 
-	return <Editor code={code} disabled scope={scope} />;
+	return (
+		<Editor
+			code={code}
+			disabled
+			imports={datePickerCustomFooterImportsCode}
+			scope={scope}
+		/>
+	);
 };
+
+const DatePickerWithTimeCode = `import ClayDatePicker from '@clayui/date-picker';
+import React, {useState} from 'react';`;
 
 const DatePickerWithTime = () => {
 	const scope = {ClayDatePicker, spritemap, useState};
@@ -124,7 +156,14 @@ const DatePickerWithTime = () => {
 
 render(<Component />)`;
 
-	return <Editor code={code} disabled scope={scope} />;
+	return (
+		<Editor
+			code={code}
+			disabled
+			imports={DatePickerWithTimeCode}
+			scope={scope}
+		/>
+	);
 };
 
 export {

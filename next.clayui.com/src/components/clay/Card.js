@@ -238,8 +238,8 @@ render(<Component />)`;
 const CardWithNavigation = () => {
 	const scope = {
 		ClayCardWithNavigation,
-		spritemap,
 		ClayIcon,
+		spritemap,
 	};
 
 	return (
@@ -350,8 +350,8 @@ render(<Component />)`;
 const CardWithHorizontal = () => {
 	const scope = {
 		ClayCardWithHorizontal,
-		useState,
 		spritemap,
+		useState,
 	};
 
 	return (

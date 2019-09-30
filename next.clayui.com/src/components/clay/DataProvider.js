@@ -9,6 +9,9 @@ import React from 'react';
 
 import Editor from './Editor';
 
+const dataProviderImportsCode = `import ClayDataProvider from '@clayui/data-provider';
+import React from 'react';`;
+
 const dataProviderCode = `const Component = () => (
 	<ClayDataProvider
 		link="https://rickandmortyapi.com/api/character"
@@ -21,8 +24,18 @@ render(<Component />)`;
 
 const DataProvider = () => {
 	const scope = {ClayDataProvider};
-	return <Editor code={dataProviderCode} preview={false} scope={scope} />;
+	return (
+		<Editor
+			code={dataProviderCode}
+			imports={dataProviderImportsCode}
+			preview={false}
+			scope={scope}
+		/>
+	);
 };
+
+const dataProviderWithNetworkStatusImportsCode = `import ClayDataProvider from '@clayui/data-provider';
+import React from 'react';`;
 
 const dataProviderWithNetworkStatusCode = `const Component = () => (
 	<ClayDataProvider
@@ -40,11 +53,15 @@ const DataProviderWithNetworkStatus = () => {
 	return (
 		<Editor
 			code={dataProviderWithNetworkStatusCode}
+			imports={dataProviderWithNetworkStatusImportsCode}
 			preview={false}
 			scope={scope}
 		/>
 	);
 };
+
+const dataProviderWithCacheRootLevelImportsCode = `import ClayDataProvider from '@clayui/data-provider';
+import React, {useContext} from 'react';`;
 
 const dataProviderWithCacheRootLevelCode = `const Component = () => (
 	const storageContext = useContext(Store);
@@ -64,11 +81,15 @@ const DataProviderWithCacheRootLevel = () => {
 	return (
 		<Editor
 			code={dataProviderWithCacheRootLevelCode}
+			imports={dataProviderWithCacheRootLevelImportsCode}
 			preview={false}
 			scope={scope}
 		/>
 	);
 };
+
+const useResourceImportsCode = `import {useResource} from '@clayui/data-provider';
+import React from 'react';`;
 
 const useResourceCode = `const Component = () => {
 	const {resource} = useResource({
@@ -82,8 +103,18 @@ render(<Component />)`;
 
 const UseResource = () => {
 	const scope = {useResource};
-	return <Editor code={useResourceCode} preview={false} scope={scope} />;
+	return (
+		<Editor
+			code={useResourceCode}
+			imports={useResourceImportsCode}
+			preview={false}
+			scope={scope}
+		/>
+	);
 };
+
+const useResourceWithJitterImportsCode = `import {useResource} from '@clayui/data-provider';
+import React from 'react';`;
 
 const useResourceWithJitterCode = `const Component = () => {
 	const {resource} = useResource({
@@ -107,11 +138,15 @@ const UseResourceWithJitter = () => {
 	return (
 		<Editor
 			code={useResourceWithJitterCode}
+			imports={useResourceWithJitterImportsCode}
 			preview={false}
 			scope={scope}
 		/>
 	);
 };
+
+const useResourceWithNetworkStatusImportsCode = `import {useResource} from '@clayui/data-provider';
+import React, {useState} from 'react';`;
 
 const useResourceWithNetworkStatusCode = `const Component = () => {
 	const [state, setState] = useState(() => ({
@@ -138,11 +173,15 @@ const UseResourceWithNetworkStatus = () => {
 	return (
 		<Editor
 			code={useResourceWithNetworkStatusCode}
+			imports={useResourceWithNetworkStatusImportsCode}
 			preview={false}
 			scope={scope}
 		/>
 	);
 };
+
+const useResourceWithVariablesChangeImportsCode = `import {useResource} from '@clayui/data-provider';
+import React, {useState} from 'react';`;
 
 const useResourceWithVariablesChangeCode = `const Component = () => {
 	const [value, setValue] = useState('Rick');
@@ -162,6 +201,7 @@ const UseResourceWithVariablesChange = () => {
 	return (
 		<Editor
 			code={useResourceWithVariablesChangeCode}
+			imports={useResourceWithVariablesChangeImportsCode}
 			preview={false}
 			scope={scope}
 		/>

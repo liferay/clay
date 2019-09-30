@@ -9,6 +9,9 @@ import React, {useState} from 'react';
 
 import Editor from './Editor';
 
+const dropDownImportsCode = `import ClayDropDown from '@clayui/drop-down';
+import React, {useState} from 'react';`;
+
 const dropDownCode = `const Component = () => {
 	const [active, setActive] = useState(false);
 
@@ -41,7 +44,13 @@ render(<Component />)`;
 
 const DropDown = () => {
 	const scope = {ClayDropDown, useState};
-	return <Editor code={dropDownCode} scope={scope} />;
+	return (
+		<Editor
+			code={dropDownCode}
+			imports={dropDownImportsCode}
+			scope={scope}
+		/>
+	);
 };
 
 export {DropDown};

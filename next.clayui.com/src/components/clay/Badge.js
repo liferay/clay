@@ -11,6 +11,9 @@ import Editor from './Editor';
 
 const spritemap = '/images/icons/icons.svg';
 
+const badgeImportsCode = `import ClayBadge from '@clayui/badge';
+import React from 'react';`;
+
 const BadgeCode = `const Component = () => {
 	return (
         <>
@@ -30,5 +33,5 @@ export const Badge = () => {
 	const scope = {ClayBadge, spritemap};
 	const code = BadgeCode;
 
-	return <Editor code={code} scope={scope} />;
+	return <Editor code={code} imports={badgeImportsCode} scope={scope} />;
 };

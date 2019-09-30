@@ -11,6 +11,9 @@ import Editor from './Editor';
 
 const spritemap = '/images/icons/icons.svg';
 
+const progressBarImportsCode = `import ClayProgressBar from '@clayui/progress-bar';
+import React from 'react';`;
+
 const ProgressBarCode = `const Component = () => {
 	
 	return (
@@ -38,8 +41,13 @@ export const ProgressBar = () => {
 	const scope = {ClayProgressBar, spritemap};
 	const code = ProgressBarCode;
 
-	return <Editor code={code} scope={scope} />;
+	return (
+		<Editor code={code} imports={progressBarImportsCode} scope={scope} />
+	);
 };
+
+const progressBarFeedbackImportsCode = `import ClayProgressBar from '@clayui/progress-bar';
+import React from 'react';`;
 
 const ProgressBarFeedbackCode = `const Component = () => {
 	
@@ -77,8 +85,17 @@ export const ProgressBarFeedback = () => {
 	const scope = {ClayProgressBar, spritemap};
 	const code = ProgressBarFeedbackCode;
 
-	return <Editor code={code} scope={scope} />;
+	return (
+		<Editor
+			code={code}
+			imports={progressBarFeedbackImportsCode}
+			scope={scope}
+		/>
+	);
 };
+
+const progressBarStatusImportsCode = `import ClayProgressBar from '@clayui/progress-bar';
+import React from 'react';`;
 
 const ProgressBarStatusCode = `const Component = () => {
 	
@@ -120,5 +137,11 @@ export const ProgressBarStatus = () => {
 	const scope = {ClayProgressBar, spritemap};
 	const code = ProgressBarStatusCode;
 
-	return <Editor code={code} scope={scope} />;
+	return (
+		<Editor
+			code={code}
+			imports={progressBarStatusImportsCode}
+			scope={scope}
+		/>
+	);
 };

@@ -27,12 +27,18 @@ const AlertCode = `const Component = () => {
 
 render(<Component />);`;
 
+const alertImportsCode = `import React from 'react';
+import ClayAlert from '@clayui/alert';`;
+
 export const Alert = () => {
 	const scope = {ClayAlert, spritemap, useState};
 	const code = AlertCode;
 
-	return <Editor code={code} scope={scope} />;
+	return <Editor code={code} imports={alertImportsCode} scope={scope} />;
 };
+
+const alertToastContainerImportsCode = `import React, {useState} from 'react';
+import ClayAlert from '@clayui/alert';`;
 
 const AlertToastContainerCode = `const Component = () => {
 	const [toastItems, setToastItems] = useState([]);
@@ -73,5 +79,11 @@ export const AlertToastContainer = () => {
 	const scope = {ClayAlert, spritemap, useState};
 	const code = AlertToastContainerCode;
 
-	return <Editor code={code} scope={scope} />;
+	return (
+		<Editor
+			code={code}
+			imports={alertToastContainerImportsCode}
+			scope={scope}
+		/>
+	);
 };
