@@ -8,10 +8,11 @@ import {FetchPolicy, NetworkStatus} from '@clayui/data-provider/src/types';
 import {useResource} from '@clayui/data-provider';
 import ClayDropDown from '@clayui/drop-down';
 import {FocusScope, useDebounce} from '@clayui/shared';
+import {boolean} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React, {useEffect, useRef, useState} from 'react';
 
-import ClayAutocomplete from '../src';
+import ClayAutocomplete, {ClayInputWithAutocomplete} from '../src';
 
 import '@clayui/css/lib/css/atlas.css';
 
@@ -165,6 +166,38 @@ const AutocompleteWithAsyncData = () => {
 	);
 };
 
+const AutoCompleteWithState = ({items, ...otherProps}: any) => {
+	const [value, setValue] = React.useState('');
+
+	const filteredItems = items.filter((val: any) =>
+		(typeof val === 'string'
+			? val
+			: `${val.firstName} ${val.lastName}`
+		).match(new RegExp(value, 'gi'))
+	);
+
+	return (
+		<div className="sheet">
+			<div className="form-group">
+				<ClayInputWithAutocomplete
+					{...otherProps}
+					items={filteredItems}
+					loading={boolean('Loading', false)}
+					onItemSelect={(val: any) =>
+						setValue(
+							typeof val === 'string'
+								? val
+								: `${val.firstName} ${val.lastName}`
+						)
+					}
+					onValueChange={setValue}
+					value={value}
+				/>
+			</div>
+		</div>
+	);
+};
+
 storiesOf('Components|ClayAutocomplete', module)
 	.add('basic', () => (
 		<div className="row">
@@ -201,4 +234,19 @@ storiesOf('Components|ClayAutocomplete', module)
 				</div>
 			</div>
 		</div>
+	))
+	.add('InputWithAutocomplete', () => (
+		<AutoCompleteWithState items={['one', 'two', 'three', 'four']} />
+	))
+	.add('InputWithAutocomplete w/ objects', () => (
+		<AutoCompleteWithState
+			itemSelector={(person: any) =>
+				`${person.firstName} ${person.lastName}`
+			}
+			items={[
+				{firstName: 'Abraham', lastName: 'Kuyper'},
+				{firstName: 'Joe', lastName: 'Bloggs'},
+				{firstName: 'Steve', lastName: 'Nash'},
+			]}
+		/>
 	));
