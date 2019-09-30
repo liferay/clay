@@ -9,6 +9,9 @@ import React from 'react';
 
 import Editor from './Editor';
 
+const selectImportsCode = `import {ClaySelect} from '@clayui/form';
+import React from 'react';`;
+
 const SelectCode = `const Component = () => {
 	const options = [
 		{
@@ -42,8 +45,11 @@ export const Select = () => {
 	const scope = {ClaySelect};
 	const code = SelectCode;
 
-	return <Editor code={code} scope={scope} />;
+	return <Editor code={code} imports={selectImportsCode} scope={scope} />;
 };
+
+const selectWithOptionImportsCode = `import {ClaySelectWithOption} from '@clayui/form';
+import React from 'react';`;
 
 const SelectWithOptionCode = `const Component = () => {
 	const options = [
@@ -71,5 +77,11 @@ export const SelectWithOption = () => {
 	const scope = {ClaySelectWithOption};
 	const code = SelectWithOptionCode;
 
-	return <Editor code={code} scope={scope} />;
+	return (
+		<Editor
+			code={code}
+			imports={selectWithOptionImportsCode}
+			scope={scope}
+		/>
+	);
 };

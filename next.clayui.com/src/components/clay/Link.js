@@ -9,6 +9,9 @@ import React from 'react';
 
 import Editor from './Editor';
 
+const linkImportsCode = `import ClayLink from '@clayui/link';
+import React from 'react';`;
+
 const LinkCode = `const Component = () => {
 	return (
 		<div className="row">
@@ -31,8 +34,11 @@ export const Link = () => {
 	const scope = {ClayLink};
 	const code = LinkCode;
 
-	return <Editor code={code} scope={scope} />;
+	return <Editor code={code} imports={linkImportsCode} scope={scope} />;
 };
+
+const linkContextImportsCode = `import ClayLink, {ClayLinkContext} from '@clayui/link';
+import React from 'react';`;
 
 const LinkContextCode = `const Component = () => {
 	const ConfirmBeforeNavigate = ({children, href, ...otherProps}) => (
@@ -62,5 +68,7 @@ export const LinkContext = () => {
 	const scope = {ClayLink, ClayLinkContext};
 	const code = LinkContextCode;
 
-	return <Editor code={code} scope={scope} />;
+	return (
+		<Editor code={code} imports={linkContextImportsCode} scope={scope} />
+	);
 };

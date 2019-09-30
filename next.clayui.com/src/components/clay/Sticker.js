@@ -12,6 +12,9 @@ import Editor from './Editor';
 
 const spritemap = '/images/icons/icons.svg';
 
+const stickerImportsCode = `import ClaySticker from '@clayui/sticker';
+import React from 'react';`;
+
 const StickerCode = `const Component = () => {
 	return (
 		<ClaySticker displayType="dark">A</ClaySticker>
@@ -23,8 +26,12 @@ export const Sticker = () => {
 	const scope = {ClaySticker, spritemap};
 	const code = StickerCode;
 
-	return <Editor code={code} scope={scope} />;
+	return <Editor code={code} imports={stickerImportsCode} scope={scope} />;
 };
+
+const stickerColorsAndSizesImportsCode = `import ClayIcon from '@clayui/icon';
+import ClaySticker from '@clayui/sticker';
+import React from 'react';`;
 
 const StickerColorsAndSizesCode = `const Component = () => {
 	return (
@@ -69,8 +76,17 @@ export const StickerColorsAndSizes = () => {
 	const scope = {ClayIcon, ClaySticker, spritemap};
 	const code = StickerColorsAndSizesCode;
 
-	return <Editor code={code} scope={scope} />;
+	return (
+		<Editor
+			code={code}
+			imports={stickerColorsAndSizesImportsCode}
+			scope={scope}
+		/>
+	);
 };
+
+const stickerUserIconImportsCode = `import ClaySticker from '@clayui/sticker';
+import React from 'react';`;
 
 const StickerUserIconCode = `const Component = () => {
 	return (
@@ -93,5 +109,11 @@ export const StickerUserIcon = () => {
 
 	const code = StickerUserIconCode;
 
-	return <Editor code={code} scope={scope} />;
+	return (
+		<Editor
+			code={code}
+			imports={stickerUserIconImportsCode}
+			scope={scope}
+		/>
+	);
 };

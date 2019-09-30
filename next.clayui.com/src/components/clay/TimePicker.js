@@ -11,6 +11,9 @@ import Editor from './Editor';
 
 const spritemap = '/images/icons/icons.svg';
 
+const timePickerImportsCode = `import ClayTimePicker from '@clayui/time-picker';
+import React, {useState} from 'react';`;
+
 const timePickerCode = `const Component = () => {
 	const [state, setState] = useState({
 		hours: '--',
@@ -32,6 +35,12 @@ render(<Component />)`;
 
 const TimePickerWithState = () => {
 	const scope = {ClayTimePicker, spritemap, useState};
-	return <Editor code={timePickerCode} scope={scope} />;
+	return (
+		<Editor
+			code={timePickerCode}
+			imports={timePickerImportsCode}
+			scope={scope}
+		/>
+	);
 };
 export {TimePickerWithState};

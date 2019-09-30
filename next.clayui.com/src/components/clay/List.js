@@ -11,6 +11,9 @@ import Editor from './Editor';
 
 const spritemap = '/images/icons/icons.svg';
 
+const listImportsCode = `import ClayList from '@clayui/list';
+import React from 'react';`;
+
 const ListCode = `const Component = () => {
 	
 	return (
@@ -68,8 +71,11 @@ const List = () => {
 	const scope = {ClayList, spritemap};
 	const code = ListCode;
 
-	return <Editor code={code} scope={scope} />;
+	return <Editor code={code} imports={listImportsCode} scope={scope} />;
 };
+
+const listQuickActionsMenuImportsCode = `import ClayList from '@clayui/list';
+import React from 'react';`;
 
 const ListQuickActionsMenuCode = `const Component = () => {
 	
@@ -109,7 +115,13 @@ const ListQuickActionsMenu = () => {
 	const scope = {ClayList, spritemap};
 	const code = ListQuickActionsMenuCode;
 
-	return <Editor code={code} scope={scope} />;
+	return (
+		<Editor
+			code={code}
+			imports={listQuickActionsMenuImportsCode}
+			scope={scope}
+		/>
+	);
 };
 
 export {List, ListQuickActionsMenu};

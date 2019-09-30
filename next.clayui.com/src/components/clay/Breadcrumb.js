@@ -11,6 +11,9 @@ import Editor from './Editor';
 
 const spritemap = '/images/icons/icons.svg';
 
+const breadcrumbImportsCode = `import {ClayBreadcrumbNav} from '@clayui/navigation';
+import React from 'react';`;
+
 const BreadcrumbCode = `const Component = () => {
 	return (
 		<ClayBreadcrumbNav
@@ -49,7 +52,7 @@ const Breadcrumbs = () => {
 	const scope = {ClayBreadcrumbNav, spritemap};
 	const code = BreadcrumbCode;
 
-	return <Editor code={code} scope={scope} />;
+	return <Editor code={code} imports={breadcrumbImportsCode} scope={scope} />;
 };
 
 export {Breadcrumbs};

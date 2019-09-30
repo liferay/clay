@@ -11,6 +11,9 @@ import Editor from './Editor';
 
 const spritemap = '/images/icons/icons.svg';
 
+const checkboxImportsCode = `import {ClayCheckbox} from '@clayui/form';
+import React from 'react';`;
+
 export const Checkbox = () => {
 	const scope = {ClayCheckbox, spritemap};
 	const code = `const Component = () => {
@@ -26,8 +29,11 @@ export const Checkbox = () => {
 
 render(<Component />)`;
 
-	return <Editor code={code} scope={scope} />;
+	return <Editor code={code} imports={checkboxImportsCode} scope={scope} />;
 };
+
+const checkboxContainerPropsImportsCode = `import {ClayCheckbox} from '@clayui/form';
+import React, {useState} from 'react';`;
 
 export const CheckboxContainerProps = () => {
 	const scope = {ClayCheckbox, spritemap, useState};
@@ -50,8 +56,17 @@ export const CheckboxContainerProps = () => {
 
 render(<Component />)`;
 
-	return <Editor code={code} scope={scope} />;
+	return (
+		<Editor
+			code={code}
+			imports={checkboxContainerPropsImportsCode}
+			scope={scope}
+		/>
+	);
 };
+
+const checkboxIndeterminateImportsCode = `import {ClayCheckbox} from '@clayui/form';
+import React, {useState} from 'react';`;
 
 export const CheckboxIndeterminate = () => {
 	const scope = {ClayCheckbox, spritemap, useState};
@@ -70,8 +85,17 @@ export const CheckboxIndeterminate = () => {
 
 render(<Component />)`;
 
-	return <Editor code={code} scope={scope} />;
+	return (
+		<Editor
+			code={code}
+			imports={checkboxIndeterminateImportsCode}
+			scope={scope}
+		/>
+	);
 };
+
+const checkboxesInlineImportsCode = `import {ClayCheckbox} from '@clayui/form';
+import React, {useState} from 'react';`;
 
 export const CheckboxesInline = () => {
 	const scope = {ClayCheckbox, spritemap, useState};
@@ -107,8 +131,17 @@ export const CheckboxesInline = () => {
 
 render(<Component />)`;
 
-	return <Editor code={code} scope={scope} />;
+	return (
+		<Editor
+			code={code}
+			imports={checkboxesInlineImportsCode}
+			scope={scope}
+		/>
+	);
 };
+
+const checkboxLabelImportsCode = `import {ClayCheckbox} from '@clayui/form';
+import React, {useState} from 'react';`;
 
 export const CheckboxLabel = () => {
 	const scope = {ClayCheckbox, spritemap, useState};
@@ -127,8 +160,13 @@ export const CheckboxLabel = () => {
 
 render(<Component />)`;
 
-	return <Editor code={code} scope={scope} />;
+	return (
+		<Editor code={code} imports={checkboxLabelImportsCode} scope={scope} />
+	);
 };
+
+const checkboxWithCallbackImportsCode = `import {ClayCheckbox} from '@clayui/form';
+import React, {useState} from 'react';`;
 
 export const CheckboxWithCallback = () => {
 	const scope = {ClayCheckbox, spritemap, useState};
@@ -145,5 +183,11 @@ export const CheckboxWithCallback = () => {
 
 render(<Component />)`;
 
-	return <Editor code={code} scope={scope} />;
+	return (
+		<Editor
+			code={code}
+			imports={checkboxWithCallbackImportsCode}
+			scope={scope}
+		/>
+	);
 };

@@ -12,6 +12,10 @@ import Editor from './Editor';
 
 const spritemap = '/images/icons/icons.svg';
 
+const navigationBarImportsCode = `import ClayLink from '@clayui/link';
+import ClayNavigationBar from '@clayui/navigation-bar';
+import React from 'react';`;
+
 const NavigationBarCode = `const Component = () => {
 
 	return (
@@ -41,8 +45,13 @@ const NavigationBar = () => {
 	const scope = {ClayLink, ClayNavigationBar, spritemap};
 	const code = NavigationBarCode;
 
-	return <Editor code={code} scope={scope} />;
+	return (
+		<Editor code={code} imports={navigationBarImportsCode} scope={scope} />
+	);
 };
+
+const navigationBarWithStyledItemImportsCode = `import ClayNavigationBar from '@clayui/navigation-bar';
+import React from 'react';`;
 
 const NavigationBarWithStyledItemCode = `const Component = () => {
 
@@ -72,7 +81,13 @@ const NavigationBarWithStyledItem = () => {
 	const scope = {ClayNavigationBar, spritemap};
 	const code = NavigationBarWithStyledItemCode;
 
-	return <Editor code={code} scope={scope} />;
+	return (
+		<Editor
+			code={code}
+			imports={navigationBarWithStyledItemImportsCode}
+			scope={scope}
+		/>
+	);
 };
 
 export {NavigationBar, NavigationBarWithStyledItem};
