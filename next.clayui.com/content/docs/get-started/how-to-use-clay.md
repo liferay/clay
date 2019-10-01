@@ -27,7 +27,7 @@ Clay follows some fundamentals and we recommend that you read more about this be
 ### Install with NPM or Yarn
 
 
-Clay makes the components and CSS available in its own `@clayui` scope package, in some packages we have component aggregation, something like the `@clayui/form` package that aggregates components `Checkbox`, `Radio`, `Input`, `Select`...
+Clay makes the components and CSS available in its own `@clayui` scope, for example the card package is available through `@clayui/card` and the css is available through `@clayui/css`. In some packages we expose multiple components, for example the `@clayui/form` package contains components `Checkbox`, `Radio`, `Input`, `Select`...
 
 You can check out the full list of [packages available in NPM](https://www.npmjs.com/search?q=%40clayui).
 
