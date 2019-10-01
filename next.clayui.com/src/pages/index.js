@@ -50,7 +50,7 @@ export default () => {
 											<li className="nav-item">
 												<Link
 													className="nav-link-intro"
-													to="/docs/get-started/introduction.html"
+													to="/docs/get-started/what-is-clay.html"
 												>
 													{'Get Started'}
 												</Link>
@@ -58,7 +58,7 @@ export default () => {
 											<li className="nav-item">
 												<Link
 													className="nav-link-intro"
-													to="/docs/css"
+													to="/docs/css/scss.html"
 												>
 													{'Style Guide'}
 												</Link>
@@ -66,7 +66,7 @@ export default () => {
 											<li className="nav-item">
 												<Link
 													className="nav-link-intro"
-													to="/docs/components"
+													to="/docs/components/alerts.html"
 												>
 													{'Components Library'}
 												</Link>
@@ -130,8 +130,8 @@ export default () => {
 						<div className="row">
 							<div className="col-md-12">
 								<h1 className="title-section orange">
-									<svg className="lexicon-icon lexicon-icon-announcement">
-										<use xlinkHref="/images/icons/icons.svg#announcement" />
+									<svg className="lexicon-icon lexicon-icon-megaphone-full">
+										<use xlinkHref="/images/icons/icons.svg#megaphone-full" />
 									</svg>
 									{'Deprecation warnings'}
 								</h1>
@@ -174,9 +174,7 @@ export default () => {
 								<h1 className="title-section mb-2">
 									{'Clay Components'}
 								</h1>
-								<h2 className="version-section">
-									{'v3.0.0 Beta'}
-								</h2>
+								<h2 className="version-section">{'v3.0.0'}</h2>
 								<p className="subtitle-section">
 									{
 										'Lexicon follows the approach of Atomic Design and Clay follows '
@@ -192,7 +190,7 @@ export default () => {
 							<div className="col-md-12">
 								<Link
 									className="btn btn-warning-borderless btn-borderless mr-3"
-									to="/docs/components"
+									to="/docs/components/alerts.html"
 								>
 									{'Documentation'}
 								</Link>
@@ -247,7 +245,7 @@ export default () => {
 									<div className="col-md-12">
 										<Link
 											className="btn btn-warning-borderless btn-borderless mr-3"
-											to="/docs/css"
+											to="/docs/components/alerts.html"
 										>
 											{'Documentation'}
 										</Link>

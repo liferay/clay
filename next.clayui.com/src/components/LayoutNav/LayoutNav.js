@@ -5,6 +5,7 @@
  */
 
 import React from 'react';
+import {Link} from 'gatsby';
 
 import Search from './Search';
 
@@ -17,6 +18,19 @@ export default () => (
 			<div className="autofit-col">
 				<ul className="navbar-nav ml-auto">
 					<li className="nav-item">
+						<Link
+							className="nav-link ml-3"
+							to="/docs/get-started/what-is-clay.html"
+						>
+							{'Docs'}
+						</Link>
+					</li>
+					<li className="nav-item">
+						<Link className="nav-link" to="/blog">
+							{'Blog'}
+						</Link>
+					</li>
+					<li className="nav-item">
 						<a
 							className="nav-link"
 							href="http://storybook.clayui.com"
@@ -26,11 +40,6 @@ export default () => (
 							{'Storybook'}
 						</a>
 					</li>
-					{/* <li className="nav-item">
-						<Link className="nav-link ml-3" to="/blog">
-							{'Blog'}
-						</Link>
-					</li> */}
 					<li className="nav-item">
 						<a
 							className="nav-link ml-3"

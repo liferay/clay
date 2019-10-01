@@ -129,13 +129,6 @@ module.exports = async ({actions, graphql}) => {
 		toPath: '/',
 	});
 
-	// temporary redirect for the milestone version
-	actions.createRedirect({
-		fromPath: '/',
-		redirectInBrowser: true,
-		toPath: '/docs/get-started/what-is-clay.html',
-	});
-
 	return graphql(`
 		{
 			allMdx {
