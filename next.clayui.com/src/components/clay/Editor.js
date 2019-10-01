@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import parserBabylon from 'prettier/parser-babylon';
+import prettier from 'prettier/standalone';
 import {LiveEditor, LiveError, LivePreview, LiveProvider} from 'react-live';
 import React from 'react';
 
@@ -82,27 +84,39 @@ const theme = {
 	],
 };
 
-const Editor = ({code, disabled = false, imports, preview = true, scope}) => (
-	<LiveProvider
-		code={code}
-		disabled={disabled}
-		noInline
-		scope={scope}
-		theme={theme}
-	>
-		{preview && (
-			<div className="sheet-example">
-				<LivePreview />
-				<LiveError />
+const Editor = ({code, disabled = false, imports, preview = true, scope}) => {
+	try {
+		code = prettier.format(code, {
+			parser: 'babylon',
+			plugins: [parserBabylon],
+		});
+	} catch (e) {
+		// eslint-disable-next-line
+		console.log(e);
+	}
+
+	return (
+		<LiveProvider
+			code={code}
+			disabled={disabled}
+			noInline
+			scope={scope}
+			theme={theme}
+		>
+			{preview && (
+				<div className="sheet-example">
+					<LivePreview />
+					<LiveError />
+				</div>
+			)}
+			<div className="gatsby-highlight">
+				<div style={{padding: '10px'}}>
+					{imports && <LiveEditor disabled value={imports} />}
+					<LiveEditor />
+				</div>
 			</div>
-		)}
-		<div className="gatsby-highlight">
-			<div style={{padding: '10px'}}>
-				{imports && <LiveEditor disabled value={imports} />}
-				<LiveEditor />
-			</div>
-		</div>
-	</LiveProvider>
-);
+		</LiveProvider>
+	);
+};
 
 export default Editor;
