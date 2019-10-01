@@ -46,6 +46,7 @@ const ClayColorPickerSplotch = React.forwardRef<HTMLButtonElement, IProps>(
 					width: size,
 				}}
 				title={value}
+				type="button"
 			/>
 		);
 	}

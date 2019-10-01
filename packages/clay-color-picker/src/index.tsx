@@ -174,7 +174,6 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 								}
 								ref={splotchRef}
 								size={28}
-								type="button"
 								value={value}
 							/>
 						</ClayInput.GroupText>
