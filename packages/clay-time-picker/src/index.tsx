@@ -43,6 +43,18 @@ enum TimeType {
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
+	 * Add the labels for the input elements and the input clear button,
+	 * use this to provide accessibility and internationalization.
+	 * By default the text is in English.
+	 */
+	ariaLabels?: {
+		ampm: string;
+		hours: string;
+		minutes: string;
+		clearButton: string;
+	};
+
+	/**
 	 * Range settings for 12 or 24 hours.
 	 */
 	config?: {
@@ -127,6 +139,13 @@ const DEFAULT_CONFIG = {
 };
 
 const ClayTimePicker: React.FunctionComponent<IProps> = ({
+	ariaLabels = {
+		ampm:
+			'Select time of day (AM/PM) using up (PM) and down (AM) arrow keys',
+		clearButton: 'Delete the entered time',
+		hours: 'Enter the hour in 00:00 format',
+		minutes: 'Enter the minutes in 00:00 format',
+	},
 	config = DEFAULT_CONFIG,
 	disabled = false,
 	icon = false,
@@ -326,6 +345,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 						>
 							<div className="clay-time-edit">
 								<input
+									aria-label={ariaLabels.hours}
 									className={classNames(
 										'clay-time-hours form-control-inset',
 										{
@@ -354,6 +374,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 								/>
 								<span className="clay-time-divider">{':'}</span>
 								<input
+									aria-label={ariaLabels.minutes}
 									className={classNames(
 										'clay-time-minutes form-control-inset',
 										{
@@ -381,6 +402,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 								/>
 								{use12Hours && (
 									<input
+										aria-label={ariaLabels.ampm}
 										className={classNames(
 											'clay-time-ampm form-control-inset',
 											{
@@ -429,6 +451,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 									}}
 								>
 									<ClayButton
+										aria-label={ariaLabels.clearButton}
 										className="clay-time-clear-btn"
 										disabled={disabled}
 										displayType="unstyled"
