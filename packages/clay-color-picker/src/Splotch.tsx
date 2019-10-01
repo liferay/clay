@@ -7,7 +7,7 @@
 import React from 'react';
 import tinycolor from 'tinycolor2';
 
-interface IProps extends React.HTMLAttributes<HTMLButtonElement> {
+interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	/**
 	 * Flag that indicates whether the splotch is the active one selected
 	 */
@@ -27,31 +27,29 @@ interface IProps extends React.HTMLAttributes<HTMLButtonElement> {
 /**
  * Renders component that displays a color
  */
-const ClayColorPickerSplotch: React.FunctionComponent<IProps> = ({
-	active,
-	className,
-	size = 24,
-	value,
-	...otherProps
-}) => {
-	const requireBorder = tinycolor.readability('#FFF', value) < 1.1;
+const ClayColorPickerSplotch = React.forwardRef<HTMLButtonElement, IProps>(
+	({active, className, size = 24, value, ...otherProps}, ref) => {
+		const requireBorder = tinycolor.readability('#FFF', value) < 1.1;
 
-	return (
-		<button
-			{...otherProps}
-			className={`btn clay-color-btn ${className ? className : ''}`}
-			style={{
-				...(active ? {outline: 'auto 3px #55ADFF'} : {}),
-				...(requireBorder
-					? {border: '1px solid #E7E7ED'}
-					: {borderWidth: 0}),
-				background: `#${value}`,
-				height: size,
-				width: size,
-			}}
-			title={value}
-		/>
-	);
-};
+		return (
+			<button
+				{...otherProps}
+				className={`btn clay-color-btn ${className ? className : ''}`}
+				ref={ref}
+				style={{
+					...(active ? {outline: 'auto 3px #55ADFF'} : {}),
+					...(requireBorder
+						? {border: '1px solid #E7E7ED'}
+						: {borderWidth: 0}),
+					background: `#${value}`,
+					height: size,
+					width: size,
+				}}
+				title={value}
+				type="button"
+			/>
+		);
+	}
+);
 
 export default ClayColorPickerSplotch;
