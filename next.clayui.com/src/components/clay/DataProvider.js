@@ -63,16 +63,19 @@ const DataProviderWithNetworkStatus = () => {
 const dataProviderWithCacheRootLevelImportsCode = `import ClayDataProvider from '@clayui/data-provider';
 import React, {useContext} from 'react';`;
 
-const dataProviderWithCacheRootLevelCode = `const Component = () => (
+const dataProviderWithCacheRootLevelCode = `const Component = () => {
 	const storageContext = useContext(Store);
-	<ClayDataProvider
-		link="https://rickandmortyapi.com/api/character"
-		fetchPolicy="cache-first"
-		storage={storageContext}
-	>
-		{({data, error, loading, refetch}) => {}}
-	</ClayDataProvider>
-);
+
+	return (
+		<ClayDataProvider
+			link="https://rickandmortyapi.com/api/character"
+			fetchPolicy="cache-first"
+			storage={storageContext}
+		>
+			{({data, error, loading, refetch}) => {}}
+		</ClayDataProvider>
+	);
+};
 
 render(<Component />)`;
 
