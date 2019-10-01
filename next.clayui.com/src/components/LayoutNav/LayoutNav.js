@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React from 'react';
 import {Link} from 'gatsby';
+import React from 'react';
 
 import Search from './Search';
 
