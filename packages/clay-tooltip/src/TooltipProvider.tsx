@@ -76,7 +76,8 @@ const TooltipBase: React.FunctionComponent<{
 		initialState
 	);
 
-	const timeoutIdRef = useRef<number>();
+	// Using `any` type since TS incorrectly infers setTimeout to be from NodeJS
+	const timeoutIdRef = useRef<any>();
 	const targetRef = useRef<HTMLElement | null>(null);
 	const tooltipRef = useRef<HTMLElement | null>(null);
 
@@ -108,7 +109,7 @@ const TooltipBase: React.FunctionComponent<{
 			const customDelay = target.getAttribute('data-tooltip-delay');
 			const newAlign = target.getAttribute('data-tooltip-align');
 
-			timeoutIdRef.current = window.setTimeout(
+			timeoutIdRef.current = setTimeout(
 				() => {
 					dispatch({align: newAlign, message: title, type: 'show'});
 				},
