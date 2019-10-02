@@ -58,14 +58,14 @@ const ProgressBarFeedbackCode = `const Component = () => {
 				spritemap={spritemap}
 				value={99}
 			>
-				<div class="progress-group-addon">99% Completed</div>
+				<div className="progress-group-addon">99% Completed</div>
 			</ClayProgressBar>
 			<ClayProgressBar
 				feedback
 				spritemap={spritemap}
 				value={100}
 			>
-				<div class="progress-group-addon">100% Completed</div>
+				<div className="progress-group-addon">100% Completed</div>
 			</ClayProgressBar>
 			<ClayProgressBar
 				feedback
@@ -73,7 +73,7 @@ const ProgressBarFeedbackCode = `const Component = () => {
 				value={99}
 				warn
 			>
-				<div class="progress-group-addon">99% Completed</div>
+				<div className="progress-group-addon">99% Completed</div>
 			</ClayProgressBar>
 		</>
 	);
