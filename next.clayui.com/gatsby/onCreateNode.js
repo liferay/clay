@@ -6,6 +6,8 @@
 
 const path = require('path');
 
+const getPackageConfig = require('../src/utils/getPackageConfig');
+
 // eslint-disable-next-line no-useless-escape
 const BLOG_POST_FILENAME_REGEX = /([0-9]+)\-([0-9]+)\-([0-9]+)\-(.+)\.md$/;
 
@@ -37,6 +39,17 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 		const {relativePath, sourceInstanceName} = getNode(node.parent);
 
 		let slug = permalink;
+
+		let pkgConfig = null;
+
+		if (packageNpm) {
+			pkgConfig = getPackageConfig(packageNpm);
+			if (pkgConfig) {
+				pkgConfig = JSON.parse(pkgConfig);
+			}
+		}
+
+		const pkgVersion = pkgConfig ? pkgConfig.version : packageVersion;
 
 		if (!slug) {
 			if (relativePath.includes('docs')) {
@@ -99,7 +112,7 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 		createNodeField({
 			name: 'packageVersion',
 			node,
-			value: packageVersion || '',
+			value: pkgVersion || '',
 		});
 
 		createNodeField({
