@@ -20,7 +20,7 @@ export default props => {
 	const {
 		data,
 		location,
-		pageContext: {blacklist = [], markdownJsx},
+		pageContext: {blacklist = [], markdownJsx, slug},
 	} = props;
 	const {allMarkdownRemark, allMdx, markdownRemark, mdx, tabs} = data;
 	const {code, excerpt, frontmatter, html, timeToRead} =
@@ -39,6 +39,29 @@ export default props => {
 	};
 
 	const showDescTop = !frontmatter.packageNpm && frontmatter.description;
+
+	let packageVersion = frontmatter.packageVersion;
+
+	const allMdxFieldValue = allMdx.edges.find(
+		({node}) => node.fields.slug === slug
+	);
+
+	if (!packageVersion && allMdxFieldValue) {
+		packageVersion = allMdxFieldValue.node.fields.packageVersion;
+	}
+
+	let packageStatus = frontmatter.packageStatus;
+
+	if (!packageStatus && allMdxFieldValue) {
+		const isBeta = ['beta', 'alpha', 'milestone'].some(subs =>
+			packageVersion.includes(subs)
+		);
+		if (isBeta) {
+			packageStatus = 'Beta';
+		} else {
+			packageStatus = 'Stable';
+		}
+	}
 
 	useEffect(() => {
 		document
@@ -145,7 +168,7 @@ export default props => {
 												id="advanced"
 												role="tabpanel"
 											>
-												{frontmatter.packageStatus && (
+												{packageStatus && (
 													<Link
 														className="clay-site-label"
 														to="/docs/get-started/how-to-read-this-documentation.html"
@@ -153,21 +176,19 @@ export default props => {
 														<span
 															className={`label label-${
 																mapStatus[
-																	frontmatter.packageStatus.toLowerCase()
+																	packageStatus.toLowerCase()
 																]
 															}`}
 														>
 															<span className="label-item label-item-expand">
-																{
-																	frontmatter.packageStatus
-																}
+																{packageStatus}
 															</span>
 														</span>
-														{frontmatter.packageVersion && (
+														{packageVersion && (
 															<span className="label label-secondary">
 																<span className="label-item label-item-expand">
 																	{
-																		frontmatter.packageVersion
+																		packageVersion
 																	}
 																</span>
 															</span>
@@ -326,6 +347,8 @@ export const pageQuery = graphql`
 					fields {
 						alwaysActive
 						layout
+						packageVersion
+						packageStatus
 						slug
 						indexVisible
 						title
