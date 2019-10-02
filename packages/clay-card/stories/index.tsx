@@ -29,7 +29,6 @@ const ClayCheckboxWithState = (props: any) => {
 		<ClayCheckbox
 			checked={value}
 			disabled={false}
-			indeterminate={false}
 			onChange={() => setValue(val => !val)}
 		>
 			{props.children}
@@ -74,6 +73,7 @@ storiesOf('Components|ClayCard', module)
 							},
 						]}
 						description="A cool description"
+						disabled={boolean('Disabled', false)}
 						href="#"
 						labels={[
 							{
@@ -109,6 +109,7 @@ storiesOf('Components|ClayCard', module)
 				<div className="col-md-4">
 					<ClayCardWithInfo
 						description="Author Action"
+						disabled={boolean('Disabled', false)}
 						flushHorizontal={flushHorizontal}
 						flushVertical={flushVertical}
 						href="#"
@@ -174,6 +175,7 @@ storiesOf('Components|ClayCard', module)
 								label: 'linkable',
 							},
 						]}
+						disabled={boolean('Disabled', false)}
 						href="#"
 						onSelectChange={setValue}
 						selected={value}
@@ -239,6 +241,7 @@ storiesOf('Components|ClayCard', module)
 							},
 						]}
 						description="Assistant to the regional manager"
+						disabled={boolean('Disabled', false)}
 						href="#"
 						labels={[
 							{
@@ -258,6 +261,7 @@ storiesOf('Components|ClayCard', module)
 
 					<ClayCardWithUser
 						description="Assistant to the regional manager"
+						disabled={boolean('Disabled', false)}
 						labels={[
 							{
 								displayType: 'success',

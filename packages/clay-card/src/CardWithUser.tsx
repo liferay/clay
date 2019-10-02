@@ -25,6 +25,11 @@ interface IProps {
 	description: string;
 
 	/**
+	 * Flag to indicate that all interactions on the card will be disabled.
+	 */
+	disabled?: boolean;
+
+	/**
 	 * Path or URL to user
 	 */
 	href?: string;
@@ -70,6 +75,7 @@ interface IProps {
 export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 	actions,
 	description,
+	disabled,
 	href,
 	labels,
 	name,
@@ -106,8 +112,7 @@ export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 				{onSelectChange && (
 					<ClayCheckbox
 						checked={selected}
-						disabled={false}
-						indeterminate={false}
+						disabled={disabled}
 						onChange={() => onSelectChange(!selected)}
 					>
 						{content}
@@ -120,7 +125,11 @@ export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 			<ClayCard.Body>
 				<ClayCard.Row>
 					<div className="autofit-col autofit-col-expand">
-						<ClayCard.Description displayType="title" href={href}>
+						<ClayCard.Description
+							disabled={disabled}
+							displayType="title"
+							href={href}
+						>
 							{name}
 						</ClayCard.Description>
 						<ClayCard.Description displayType="subtitle">
@@ -143,7 +152,10 @@ export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 								items={actions}
 								spritemap={spritemap}
 								trigger={
-									<button className="component-action">
+									<button
+										className="component-action"
+										disabled={disabled}
+									>
 										<ClayIcon
 											spritemap={spritemap}
 											symbol="ellipsis-v"
