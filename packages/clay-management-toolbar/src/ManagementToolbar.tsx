@@ -5,9 +5,10 @@
  */
 
 import classNames from 'classnames';
+import React from 'react';
+
 import Item from './Item';
 import ItemList from './ItemList';
-import React from 'react';
 import Search from './Search';
 
 interface IProps extends React.HTMLAttributes<HTMLElement> {

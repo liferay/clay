@@ -8,8 +8,15 @@ import classNames from 'classnames';
 import React from 'react';
 
 interface IProps extends React.FormHTMLAttributes<HTMLFormElement> {
+	/**
+	 * Flag to indicate when there is only the search element within a
+	 * Management Toolbar.
+	 */
 	onlySearch?: boolean;
 
+	/**
+	 * Flag to control search visibility in mobile view.
+	 */
 	showMobile?: boolean;
 }
 
