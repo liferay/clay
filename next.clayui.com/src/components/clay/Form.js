@@ -22,11 +22,11 @@ const formCode = `const Component = () => {
             <h4 className="sheet-subtitle">Form Example</h4>
             <ClayForm>
                 <ClayForm.Group className="form-group-sm">
-                    <label for="basicInput">Name</label>
+                    <label htmlFor="basicInput">Name</label>
                     <ClayInput placeholder="Name" type="text"></ClayInput>
                 </ClayForm.Group>
                 <ClayForm.Group className="form-group-sm">
-                    <label for="basicInput">Description</label>
+                    <label htmlFor="basicInput">Description</label>
                     <textarea className="form-control" placeholder="Description"></textarea>
                 </ClayForm.Group>
             </ClayForm>
@@ -54,7 +54,7 @@ const formValidationCode = `const Component = () => {
             <h4 className="sheet-subtitle">Form Validation Example</h4>
             <ClayForm>
                 <ClayForm.Group className="has-success">
-                    <label for="basicInput">Name</label>
+                    <label htmlFor="basicInput">Name</label>
                     <ClayInput placeholder="Name" type="text"></ClayInput>
                     <ClayForm.FeedbackGroup>
                         <ClayForm.FeedbackItem>
@@ -67,7 +67,7 @@ const formValidationCode = `const Component = () => {
                     </ClayForm.FeedbackGroup>
                 </ClayForm.Group>
                 <ClayForm.Group className="has-warning">
-                    <label for="basicInput">Description</label>
+                    <label htmlFor="basicInput">Description</label>
                     <textarea className="form-control" placeholder="Description"></textarea>
                     <ClayForm.FeedbackGroup>
                         <ClayForm.FeedbackItem>
@@ -80,7 +80,7 @@ const formValidationCode = `const Component = () => {
                     </ClayForm.FeedbackGroup>
                 </ClayForm.Group>
                 <ClayForm.Group className="has-error">
-                    <label for="basicInput">Password</label>
+                    <label htmlFor="basicInput">Password</label>
                     <ClayInput placeholder="Name" type="password"></ClayInput>
                     <ClayForm.FeedbackGroup>
                         <ClayForm.FeedbackItem>
@@ -123,7 +123,7 @@ const formTextCode = `const Component = () => {
             <h4 className="sheet-subtitle">Form Validation Example</h4>
             <ClayForm>
                 <ClayForm.Group className="has-success">
-                    <label for="basicInput">Name</label>
+                    <label htmlFor="basicInput">Name</label>
                     <ClayInput placeholder="Name" type="text"></ClayInput>
                     <ClayForm.FeedbackGroup>
                         <ClayForm.FeedbackItem>
