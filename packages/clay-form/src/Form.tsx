@@ -8,18 +8,30 @@ import ClayIcon from '@clayui/icon';
 import classNames from 'classnames';
 import * as React from 'react';
 
-const Group = React.forwardRef<
-	HTMLDivElement,
-	React.HTMLAttributes<HTMLDivElement>
->(({children, className, ...otherProps}, ref) => (
-	<div
-		{...otherProps}
-		className={classNames('form-group', className)}
-		ref={ref}
-	>
-		{children}
-	</div>
-));
+interface IGroup extends React.HTMLAttributes<HTMLDivElement> {
+	/**
+	 * Indicates Form Group should be a small variant.
+	 */
+	small?: boolean;
+}
+
+const Group = React.forwardRef<HTMLDivElement, IGroup>(
+	({children, className, small, ...otherProps}, ref) => (
+		<div
+			{...otherProps}
+			className={classNames(
+				'form-group',
+				{
+					'form-group-sm': small,
+				},
+				className
+			)}
+			ref={ref}
+		>
+			{children}
+		</div>
+	)
+);
 
 const Text = React.forwardRef<
 	HTMLDivElement,
