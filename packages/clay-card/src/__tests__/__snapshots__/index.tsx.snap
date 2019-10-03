@@ -172,7 +172,6 @@ exports[`ClayCard renders a ClayCard as a selectable file card 1`] = `
             <input
               class="custom-control-input"
               type="checkbox"
-              value="false"
             />
             <span
               class="custom-control-label"
@@ -275,7 +274,6 @@ exports[`ClayCard renders a ClayCard as a selectable folder 1`] = `
         <input
           class="custom-control-input"
           type="checkbox"
-          value="false"
         />
         <span
           class="custom-control-label"
@@ -354,7 +352,6 @@ exports[`ClayCard renders a ClayCard as a selectable image card 1`] = `
             <input
               class="custom-control-input"
               type="checkbox"
-              value="false"
             />
             <span
               class="custom-control-label"
@@ -844,7 +841,6 @@ exports[`ClayCard renders a ClayCard as user selectable card 1`] = `
             <input
               class="custom-control-input"
               type="checkbox"
-              value="false"
             />
             <span
               class="custom-control-label"
@@ -1336,7 +1332,6 @@ exports[`ClayCardWithHorizontal renders as disabled 1`] = `
           class="custom-control-input"
           disabled=""
           type="checkbox"
-          value="false"
         />
         <span
           class="custom-control-label"
@@ -1470,7 +1465,6 @@ exports[`ClayCardWithHorizontal renders as selectable 1`] = `
         <input
           class="custom-control-input"
           type="checkbox"
-          value="false"
         />
         <span
           class="custom-control-label"
@@ -1548,7 +1542,6 @@ exports[`ClayCardWithInfo renders as disabled 1`] = `
             class="custom-control-input"
             disabled=""
             type="checkbox"
-            value="false"
           />
           <span
             class="custom-control-label"
@@ -1740,7 +1733,6 @@ exports[`ClayCardWithInfo renders as selectable 1`] = `
           <input
             class="custom-control-input"
             type="checkbox"
-            value="false"
           />
           <span
             class="custom-control-label"
@@ -1896,7 +1888,6 @@ exports[`ClayCardWithUser renders as disabled 1`] = `
               class="custom-control-input"
               disabled=""
               type="checkbox"
-              value="false"
             />
             <span
               class="custom-control-label"
@@ -2001,7 +1992,6 @@ exports[`ClayCardWithUser renders as selectable 1`] = `
             <input
               class="custom-control-input"
               type="checkbox"
-              value="false"
             />
             <span
               class="custom-control-label"

@@ -87,7 +87,6 @@ const ClayCheckbox = React.forwardRef<HTMLInputElement, IProps>(
 							}
 						}}
 						type="checkbox"
-						value={checked ? 'true' : 'false'}
 					/>
 
 					<span className="custom-control-label">

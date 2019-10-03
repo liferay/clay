@@ -10,7 +10,6 @@ exports[`ClayCheckbox renders 1`] = `
       className="custom-control-input"
       onChange={[Function]}
       type="checkbox"
-      value="false"
     />
     <span
       className="custom-control-label"
@@ -29,7 +28,6 @@ exports[`ClayCheckbox renders as checked 1`] = `
       className="custom-control-input"
       onChange={[Function]}
       type="checkbox"
-      value="true"
     />
     <span
       className="custom-control-label"
@@ -55,7 +53,6 @@ exports[`ClayCheckbox renders as checked and disabled 1`] = `
       disabled={true}
       onChange={[Function]}
       type="checkbox"
-      value="true"
     />
     <span
       className="custom-control-label"
@@ -81,7 +78,6 @@ exports[`ClayCheckbox renders as disabled 1`] = `
       disabled={true}
       onChange={[Function]}
       type="checkbox"
-      value="false"
     />
     <span
       className="custom-control-label"
@@ -106,7 +102,6 @@ exports[`ClayCheckbox renders with a label 1`] = `
       className="custom-control-input"
       onChange={[Function]}
       type="checkbox"
-      value="false"
     />
     <span
       className="custom-control-label"
@@ -131,7 +126,6 @@ exports[`ClayCheckbox renders with an indeterminate value 1`] = `
       className="custom-control-input"
       onChange={[Function]}
       type="checkbox"
-      value="true"
     />
     <span
       className="custom-control-label"
@@ -157,7 +151,6 @@ exports[`ClayCheckbox renders with an indeterminate value and disabled 1`] = `
       disabled={true}
       onChange={[Function]}
       type="checkbox"
-      value="true"
     />
     <span
       className="custom-control-label"
