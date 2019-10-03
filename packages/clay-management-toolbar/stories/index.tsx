@@ -6,20 +6,15 @@
 
 import '@clayui/css/lib/css/atlas.css';
 import ClayButton, {ClayButtonWithIcon} from '@clayui/button';
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import {ClayDropDownWithItems} from '@clayui/drop-down';
+import {ClayCheckbox, ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
-import ClayManagementToolbar, {
-	ClayManagementToolbarWithElements,
-	ClayResultsBar,
-} from '../src';
-import React, {useState} from 'react';
-import {boolean, number, select, text} from '@storybook/addon-knobs';
-import {ClayCheckbox, ClayInput} from '@clayui/form';
-import {ClayDropDownWithItems} from '@clayui/drop-down';
 import {storiesOf} from '@storybook/react';
 import React, {useState} from 'react';
 
-import ClayManagementToolbar from '../src';
+import ClayManagementToolbar, {ClayResultsBar} from '../src';
 
 const filterItems = [
 	{label: 'Filter Action 1', onClick: () => alert('Filter clicked')},
@@ -45,117 +40,9 @@ const viewTypes = [
 	},
 ];
 
-storiesOf('Components|ClayManagementToolbar', module)
-	.add('default', () => {
-		const [checked, setChecked] = useState<boolean>(false);
-		const [value, setValue] = useState<string>('Red');
-		const filterLabels = [
-			{closeButtonProps: {}, value: 'Filter 1'},
-			{closeButtonProps: {}, value: 'Gamer'},
-		];
-		const creationMenu = [
-			{label: 'Folder', onClick: () => alert('Folder clicked')},
-			{label: 'Shortcut', onClick: () => alert('Shortcut clicked')},
-		];
-		const actionItems = [
-			{
-				href: '#pageTitle',
-				label: 'Remove',
-				quickAction: true,
-				symbolLeft: 'trash',
-			},
-			{
-				disabled: true,
-				href: '#pageTitle',
-				label: 'Download',
-				quickAction: true,
-				symbolLeft: 'download',
-			},
-			{
-				disabled: true,
-				label: 'Change',
-				quickAction: true,
-				symbolLeft: 'change',
-			},
-			{
-				href: '#pageTitle',
-				label: 'Edit',
-				symbolLeft: 'edit',
-			},
-		];
-		const selectSortingOrder = select(
-			'Sorting order',
-			['asc', 'desc'],
-			'asc'
-		);
-
-		return (
-			<ClayManagementToolbarWithElements
-				actionItems={
-					boolean('Show actions', true) ? actionItems : undefined
-				}
-				active={boolean('Active', false)}
-				checkboxChecked={checked}
-				creationMenu={
-					boolean('Show creation menu', true)
-						? creationMenu
-						: undefined
-				}
-				disabled={boolean('Disabled', false)}
-				filterItems={
-					boolean('Show filter and order', true)
-						? filterItems
-						: undefined
-				}
-				filterLabels={
-					boolean('Show filter labels', true)
-						? filterLabels
-						: undefined
-				}
-				onCheckboxChange={
-					boolean('Selectable', true)
-						? () => setChecked(!checked)
-						: undefined
-				}
-				onClearSelectionClick={
-					boolean('Supports bulk actions', true)
-						? () => {}
-						: undefined
-				}
-				onInfoButtonClick={
-					boolean('Show info button', true) ? () => {} : undefined
-				}
-				onSearchValueChange={
-					boolean('Show search', true) ? setValue : undefined
-				}
-				onSelectAllClick={
-					boolean('Show select all button', true)
-						? () => {}
-						: undefined
-				}
-				onSortingButtonClick={() => alert('Sorting button clicked')}
-				onValueSubmit={(value, event) => {
-					event.preventDefault();
-					alert(`Submit ${value}`);
-				}}
-				searchValue={value}
-				selectedItems={number('Selected items', 0)}
-				showResultsBar={boolean('Show ResultsBar', true)}
-				sortingOrder={
-					boolean('Show sorting order', true)
-						? selectSortingOrder
-						: undefined
-				}
-				sortingURL={text('Sorting URL', null)}
-				spritemap={spritemap}
-				totalItems={number('Total items', 2)}
-				viewTypes={
-					boolean('Show View Types', true) ? viewTypes : undefined
-				}
-			/>
-		);
-	})
-	.add('w/ low-level', () => {
+storiesOf('Components|ClayManagementToolbar', module).add(
+	'w/ low-level',
+	() => {
 		const [searchMobile, setSearchMobile] = useState<boolean>(false);
 		const viewTypeActive = viewTypes.find(type => type.active);
 
@@ -327,4 +214,5 @@ storiesOf('Components|ClayManagementToolbar', module)
 				</ClayResultsBar>
 			</>
 		);
-	});
+	}
+);

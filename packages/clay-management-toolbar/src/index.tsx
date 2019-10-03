@@ -5,8 +5,7 @@
  */
 
 import ClayManagementToolbar from './ManagementToolbar';
-import ClayManagementToolbarWithElements from './ManagementToolbarWithElements';
 import ClayResultsBar from './ResultsBar';
 
-export {ClayManagementToolbarWithElements, ClayResultsBar};
+export {ClayResultsBar};
 export default ClayManagementToolbar;
