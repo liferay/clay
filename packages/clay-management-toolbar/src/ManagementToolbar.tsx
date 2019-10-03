@@ -25,7 +25,7 @@ const ClayManagementToolbar: React.FunctionComponent<IProps> & {
 	<nav
 		{...otherProps}
 		className={classNames(
-			'management-bar management-bar-light navbar navbar-expand-md',
+			'management-bar navbar navbar-expand-md',
 			className,
 			{
 				'management-bar-light': !active,
