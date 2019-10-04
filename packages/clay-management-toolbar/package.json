@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/management-toolbar",
-	"version": "3.0.0-alpha.1",
+	"version": "3.0.0",
 	"description": "ClayManagementToolbar component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-management-toolbar",
@@ -26,14 +26,14 @@
 		"react"
 	],
 	"dependencies": {
-		"classnames": "^2.2.6",
-		"@clayui/label": "^3.0.0-alpha.1",
-		"@clayui/button": "^3.0.0-alpha.1",
-		"@clayui/icon": "^3.0.0-alpha.1",
-		"@clayui/link": "^3.0.0-alpha.1",
-		"@clayui/drop-down": "^3.0.0-alpha.1",
-		"@clayui/form": "^3.0.0-alpha.1",
-		"@clayui/shared": "^3.0.0-alpha.1"
+		"classnames": "^2.2.6"
+	},
+	"devDependencies": {
+		"@clayui/button": "^3.0.0",
+		"@clayui/drop-down": "^3.0.0",
+		"@clayui/form": "^3.0.0",
+		"@clayui/icon": "^3.0.0",
+		"@clayui/label": "^3.0.0"
 	},
 	"peerDependencies": {
 		"@clayui/css": "3.x",
