@@ -7,7 +7,7 @@
 import {ClayPortal} from '@clayui/shared';
 import classNames from 'classnames';
 import {Align} from 'metal-position';
-import React, {useEffect, useRef} from 'react';
+import React, {useLayoutEffect, useRef} from 'react';
 
 import {useDropdownCloseInteractions} from './hooks';
 
@@ -81,7 +81,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>((
 
 	useDropdownCloseInteractions([alignElementRef, subPortalRef], onSetActive);
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		if (
 			alignElementRef.current &&
 			(ref as React.RefObject<HTMLDivElement>).current
