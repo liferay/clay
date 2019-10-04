@@ -385,7 +385,7 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 	Clay Input Group markup deviates from Bootstrap 4's Input Groups.
 </div>
 
-## Example
+### Example
 
 <div class="sheet-example">
 	<div class="form-group">
@@ -434,7 +434,7 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 </div>
 ```
 
-## Sizes
+### Sizes
 
 Add the relative form sizing classes to the `.input-group` itself and contents within will automatically resize—no need for repeating the form control size classes on each element.
 
@@ -524,7 +524,7 @@ Add the relative form sizing classes to the `.input-group` itself and contents w
 </div>
 ```
 
-## Checkboxes and radios
+### Checkboxes and radios
 
 Place any checkbox or radio option within an input group’s addon instead of text.
 
@@ -603,7 +603,7 @@ Place any checkbox or radio option within an input group’s addon instead of te
 </div>
 ```
 
-## Button addons
+### Button addons
 
 <div class="sheet-example">
 	<div class="form-group">
@@ -723,7 +723,7 @@ Place any checkbox or radio option within an input group’s addon instead of te
 </div>
 ```
 
-## Multiple addons
+### Multiple addons
 
 <div class="sheet-example">
 	<div class="form-group">
@@ -763,7 +763,7 @@ Place any checkbox or radio option within an input group’s addon instead of te
 </div>
 ```
 
-## Separated addons
+### Separated addons
 
 <div class="sheet-example">
 	<div class="form-group">
@@ -824,7 +824,7 @@ Place any checkbox or radio option within an input group’s addon instead of te
 </div>
 ```
 
-## Mixed addons
+### Mixed addons
 
 <div class="sheet-example">
 	<div class="form-group">
@@ -858,7 +858,7 @@ Place any checkbox or radio option within an input group’s addon instead of te
 </div>
 ```
 
-## Inset
+### Inset
 
 You can insert buttons and links into input group items with the following helper classes: `.input-group-inset`, `.input-group-inset-before`, `.input-group-inset-after`, `.input-group-inset-item`, `.input-group-inset-item-before`, and `.input-group-inset-item-after.` Use the -before classes to inset the button/link at the beginning of the input group, or use the -after classes to inset the button/link at the end of the input group.
 
@@ -1013,7 +1013,7 @@ You can insert buttons and links into input group items with the following helpe
 	</div>
 </div>
 ```
-## Password
+### Password
 
 A pattern for displaying the content inside a password input. Use `.input-text-label` inside `.input-group-inset-item` to display specific content for `.form-control[type="text"]` and `.input-password-label` for `.form-control[type="password"]`.
 
