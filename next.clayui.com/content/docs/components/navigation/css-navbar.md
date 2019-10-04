@@ -16,11 +16,11 @@ title: "Base Navbar"
 </div>
 </div>
 
-<div class="alert alert-info">
+<div class="clay-site-alert alert alert-info">
     Similar to Nav, Navbar is a base component used to create other horizontal navigation like bars (e.g., Navigation Bar, Management Bar, and Application Bar). Navbar on its own doesn't have any special color styling. Colors can be modified using a combination of Bootstrap 4's Navbar color utilities <code class="gatsby-code-text">.navbar-light</code>, <code class="gatsby-code-text">.navbar-dark</code> and background utilities. We don't recommend using color utilities as it's hard to keep track of the colors in large applications, rather we recommend scoping your color class to the component and using the <code class="gatsby-code-text">clay-navbar-variant($map)</code> mixin to customize colors that are not covered by any of the Navbar variants.
 </div>
 
-<div class="alert alert-warning">
+<div class="clay-site-alert alert alert-warning">
     Bootstrap 4 doesn't support Dropdown Menu's with Popper.js positioning inside Navbars. They align them manually via CSS classes. See <a href="https://next.clayui.com/docs/components/dropdown.html#alignment">Dropdown Alignment</a>.
 </div>
 
