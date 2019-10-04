@@ -128,8 +128,6 @@ const ClayInputGroupInsetItem = React.forwardRef<
 	)
 );
 
-type TSize = 'lg' | 'sm';
-
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	/**
 	 * Input component to render. Can either be a string like 'input' or a component.
@@ -149,7 +147,7 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	/**
 	 * Selects the height of the input.
 	 */
-	sizing?: TSize;
+	sizing?: 'lg' | 'sm';
 }
 
 type TClayInput = React.ForwardRefExoticComponent<
