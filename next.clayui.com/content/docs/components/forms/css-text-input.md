@@ -1013,3 +1013,134 @@ You can insert buttons and links into input group items with the following helpe
 	</div>
 </div>
 ```
+## Password
+
+A pattern for displaying the content inside a password input. Use `.input-text-label` inside `.input-group-inset-item` to display specific content for `.form-control[type="text"]` and `.input-password-label` for `.form-control[type="password"]`.
+
+<div class="clay-site-alert alert alert-info">
+	This requires custom Javascript to toggle the input type between text and password.
+</div>
+
+<div class="sheet">
+    <div class="form-group">
+        <label for="passwordFieldHidden">Password Field Hidden</label>
+        <div class="input-group input-group-password">
+            <div class="input-group-item">
+                <input aria-label="Password Hidden" class="form-control input-group-inset input-group-inset-after" id="passwordFieldHidden" type="password" value="my-seekret" />
+                <div class="input-group-inset-item input-group-inset-item-after">
+                    <button class="btn btn-unstyled" type="button">
+                        <span class="input-text-label">
+                            <svg class="lexicon-icon lexicon-icon-hidden" focusable="false" role="presentation">
+                                <use href="/images/icons/icons.svg#hidden" />
+                            </svg>
+						</span>
+                        <span class="input-password-label">
+                            <svg class="lexicon-icon lexicon-icon-view" focusable="false" role="presentation">
+                                <use href="/images/icons/icons.svg#view" />
+                            </svg>
+						</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="passwordFieldVisible">Password Field Visible</label>
+        <div class="input-group input-group-password">
+            <div class="input-group-item">
+                <input aria-label="Password Visible" class="form-control input-group-inset input-group-inset-after" id="passwordFieldVisible" type="text" value="my-seekret" />
+                <div class="input-group-inset-item input-group-inset-item-after">
+                    <button class="btn btn-secondary" type="button">
+                        <span class="input-password-label">Show</span>
+                        <span class="input-text-label">Hide</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="disabled" for="passwordFieldDisabled">Password Field Disabled</label>
+        <div class="input-group input-group-password">
+            <div class="input-group-item">
+                <input aria-label="Password Disabled" class="form-control input-group-inset input-group-inset-after" disabled="" id="passwordFieldDisabled" type="password" value="my-seekret" />
+                <div class="input-group-inset-item input-group-inset-item-after">
+                    <button class="btn btn-unstyled" disabled="" type="button">
+                        <span class="input-password-label">
+                            <svg class="lexicon-icon lexicon-icon-view" focusable="false" role="presentation">
+                                <use href="/images/icons/icons.svg#search" />
+                            </svg>
+						</span>
+                        <span class="input-text-label">
+                            <svg class="lexicon-icon lexicon-icon-view" focusable="false" role="presentation">
+                                <use href="/images/icons/icons.svg#search" />
+                            </svg>
+						</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+```html
+<div class="form-group">
+	<label for="passwordFieldHidden">Password Field Hidden</label>
+	<div class="input-group input-group-password">
+		<div class="input-group-item">
+			<input aria-label="Password Hidden" class="form-control input-group-inset input-group-inset-after" id="passwordFieldHidden" type="password" value="my-seekret">
+			<div class="input-group-inset-item input-group-inset-item-after">
+				<button class="btn btn-unstyled" type="button">
+					<span class="input-text-label">
+						<svg class="lexicon-icon lexicon-icon-hidden" focusable="false" role="presentation">
+							<use href="/images/icons/icons.svg#hidden" />
+						</svg>
+					</span>
+					<span class="input-password-label">
+						<svg class="lexicon-icon lexicon-icon-view" focusable="false" role="presentation">
+							<use href="/images/icons/icons.svg#view" />
+						</svg>
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="passwordFieldVisible">Password Field Visible</label>
+	<div class="input-group input-group-password">
+		<div class="input-group-item">
+			<input aria-label="Password Visible" class="form-control input-group-inset input-group-inset-after" id="passwordFieldVisible" type="text" value="my-seekret">
+			<div class="input-group-inset-item input-group-inset-item-after">
+				<button class="btn btn-secondary" type="button">
+					<span class="input-password-label">Show</span>
+					<span class="input-text-label">Hide</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="form-group">
+	<label class="disabled" for="passwordFieldDisabled">Password Field Disabled</label>
+	<div class="input-group input-group-password">
+		<div class="input-group-item">
+			<input aria-label="Password Disabled" class="form-control input-group-inset input-group-inset-after" disabled="" id="passwordFieldDisabled" type="password" value="my-seekret">
+			<div class="input-group-inset-item input-group-inset-item-after">
+				<button class="btn btn-unstyled" disabled="" type="button">
+					<span class="input-password-label">
+						<svg class="lexicon-icon lexicon-icon-view" focusable="false" role="presentation">
+							<use href="/images/icons/icons.svg#search" />
+						</svg>
+					</span>
+					<span class="input-text-label">
+						<svg class="lexicon-icon lexicon-icon-view" focusable="false" role="presentation">
+							<use href="/images/icons/icons.svg#search" />
+						</svg>
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+```
