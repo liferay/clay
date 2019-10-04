@@ -4,8 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {ClayButtonWithIcon} from '@clayui/button';
 import ClayCard, {ClayCardWithInfo} from '@clayui/card';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import {ClayInput} from '@clayui/form';
 import ClayManagementToolbar from '@clayui/management-toolbar';
 import React, {useState} from 'react';
 
@@ -29,13 +31,29 @@ export default () => {
 
 	return (
 		<div>
-			<ClayManagementToolbar
-				onSearchValueChange={setValue}
-				onValueSubmit={(value: string) => alert(`Submit ${value}`)}
-				searchPlaceholder="Search..."
-				searchValue={value}
-				spritemap={spritemap}
-			/>
+			<ClayManagementToolbar>
+				<ClayManagementToolbar.Search onlySearch>
+					<ClayInput.Group>
+						<ClayInput.GroupItem>
+							<ClayInput
+								aria-label="Search"
+								className="form-control input-group-inset input-group-inset-after"
+								onChange={event => setValue(event.target.value)}
+								type="text"
+								value={value}
+							/>
+							<ClayInput.GroupInsetItem after tag="span">
+								<ClayButtonWithIcon
+									displayType="unstyled"
+									spritemap={spritemap}
+									symbol="search"
+									type="submit"
+								/>
+							</ClayInput.GroupInsetItem>
+						</ClayInput.GroupItem>
+					</ClayInput.Group>
+				</ClayManagementToolbar.Search>
+			</ClayManagementToolbar>
 
 			<div className="container-fluid container-fluid-max-xl container-view">
 				<ClayCard.Group label="Good Boys">
