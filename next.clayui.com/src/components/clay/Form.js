@@ -11,7 +11,7 @@ import Editor from './Editor';
 
 const spritemap = '/images/icons/icons.svg';
 
-const formCodeImport = `import ClayCard from '@clayui/card';
+const formCodeImport = `import ClayForm, {ClayInput} from '@clayui/form';
 import React, {useState} from 'react';`;
 
 const formCode = `const Component = () => {
