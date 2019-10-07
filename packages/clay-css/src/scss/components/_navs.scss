@@ -2,18 +2,14 @@
 	font-size: $nav-font-size;
 }
 
-.nav-btn.btn-unstyled,
+// Nav Link
+
 .nav-link {
-	position: relative;
+	@include clay-link($nav-link);
+}
 
-	&:focus {
-		z-index: 1;
-	}
-
-	&.disabled {
-		color: $nav-link-disabled-color;
-		cursor: $nav-link-disabled-cursor;
-	}
+.nav-link.btn-unstyled {
+	@include clay-button-variant($nav-link-btn-unstyled);
 }
 
 // Nav Btn
@@ -30,8 +26,17 @@
 	padding-left: $nav-btn-padding-x;
 	padding-right: $nav-btn-padding-x;
 	padding-top: $nav-btn-padding-y;
+	position: relative;
 	text-align: center;
 	width: auto;
+
+	&:focus {
+		z-index: 1;
+	}
+
+	&.disabled {
+		opacity: 1;
+	}
 
 	&.btn-link {
 		margin-left: 0;
@@ -41,17 +46,6 @@
 	.lexicon-icon {
 		margin-top: 0;
 	}
-}
-
-.nav-btn,
-.nav-link {
-	&.disabled {
-		opacity: 1;
-	}
-}
-
-.nav-link.btn-unstyled {
-	padding: $nav-link-padding-y $nav-link-padding-x;
 }
 
 // Nav Item Monospaced
