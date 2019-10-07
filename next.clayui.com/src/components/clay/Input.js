@@ -72,38 +72,40 @@ const FormInputTextArea = () => {
 
 const formInputGroupSeparatedCode = `const Component = () => {
 	return (
-		<ClayForm.Group>
-			<ClayInput.Group>
-				<ClayInput.GroupItem shrink>
-					<ClayInput.GroupText>
-						{'@'}
-					</ClayInput.GroupText>
-				</ClayInput.GroupItem>
-				<ClayInput.GroupItem>
-					<ClayInput placeholder="Username" type="text" />
-				</ClayInput.GroupItem>
-			</ClayInput.Group>
-		</ClayForm.Group>
-		<ClayForm.Group>
-			<ClayInput.Group>
-				<ClayInput.GroupItem>
-					<ClayInput placeholder="Email" type="text" />
-				</ClayInput.GroupItem>
-				<ClayInput.GroupItem shrink>
-					<ClayInput.GroupText>
-						{'@'}
-					</ClayInput.GroupText>
-				</ClayInput.GroupItem>
-				<ClayInput.GroupItem>
-					<ClayInput placeholder="liferay" type="text" />
-				</ClayInput.GroupItem>
-				<ClayInput.GroupItem shrink>
-					<ClayInput.GroupText>
-						{'.com'}
-					</ClayInput.GroupText>
-				</ClayInput.GroupItem>
-			</ClayInput.Group>
-		</ClayForm.Group>
+		<>
+			<ClayForm.Group>
+				<ClayInput.Group>
+					<ClayInput.GroupItem shrink>
+						<ClayInput.GroupText>
+							{'@'}
+						</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem>
+						<ClayInput placeholder="Username" type="text" />
+					</ClayInput.GroupItem>
+				</ClayInput.Group>
+			</ClayForm.Group>
+			<ClayForm.Group>
+				<ClayInput.Group>
+					<ClayInput.GroupItem>
+						<ClayInput placeholder="Email" type="text" />
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem shrink>
+						<ClayInput.GroupText>
+							{'@'}
+						</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem>
+						<ClayInput placeholder="liferay" type="text" />
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem shrink>
+						<ClayInput.GroupText>
+							{'.com'}
+						</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+				</ClayInput.Group>
+			</ClayForm.Group>
+		</>
 	);
 }
 
@@ -128,38 +130,40 @@ const FormInputGroupSeparated = () => {
 
 const formInputGroupConnectedCode = `const Component = () => {
 	return (
-		<ClayForm.Group>
-			<ClayInput.Group>
-				<ClayInput.GroupItem shrink prepend>
-					<ClayInput.GroupText>
-						{'@'}
-					</ClayInput.GroupText>
-				</ClayInput.GroupItem>
-				<ClayInput.GroupItem append>
-					<ClayInput placeholder="Username" type="text" />
-				</ClayInput.GroupItem>
-			</ClayInput.Group>
-		</ClayForm.Group>
-		<ClayForm.Group>
-			<ClayInput.Group>
-				<ClayInput.GroupItem prepend>
-					<ClayInput placeholder="Email" type="text" />
-				</ClayInput.GroupItem>
-				<ClayInput.GroupItem shrink prepend>
-					<ClayInput.GroupText>
-						{'@'}
-					</ClayInput.GroupText>
-				</ClayInput.GroupItem>
-				<ClayInput.GroupItem prepend>
-					<ClayInput placeholder="liferay" type="text" />
-				</ClayInput.GroupItem>
-				<ClayInput.GroupItem append shrink>
-					<ClayInput.GroupText>
-						{'.com'}
-					</ClayInput.GroupText>
-				</ClayInput.GroupItem>
-			</ClayInput.Group>
-		</ClayForm.Group>
+		<>
+			<ClayForm.Group>
+				<ClayInput.Group>
+					<ClayInput.GroupItem shrink prepend>
+						<ClayInput.GroupText>
+							{'@'}
+						</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem append>
+						<ClayInput placeholder="Username" type="text" />
+					</ClayInput.GroupItem>
+				</ClayInput.Group>
+			</ClayForm.Group>
+			<ClayForm.Group>
+				<ClayInput.Group>
+					<ClayInput.GroupItem prepend>
+						<ClayInput placeholder="Email" type="text" />
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem shrink prepend>
+						<ClayInput.GroupText>
+							{'@'}
+						</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem prepend>
+						<ClayInput placeholder="liferay" type="text" />
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem append shrink>
+						<ClayInput.GroupText>
+							{'.com'}
+						</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+				</ClayInput.Group>
+			</ClayForm.Group>
+		</>
 	);
 }
 
