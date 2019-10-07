@@ -1,28 +1,19 @@
 ---
-title: "Popovers and Tooltips"
-description: "Popovers and Tooltips are patterns used to show helpful information in two different ways."
+title: "Popover"
+description: "Popovers are used together with the question mark icon to communicate to the user that there is useful information for them to read. Popovers contain helpful information such as an explanation of a context."
 ---
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Popover](#popover)
-    - [Position](#popover-position)
-        - [Top](#popover-top)
-        - [Right](#popover-right)
-        - [Bottom](#popover-bottom)
-        - [Left](#popover-left)
-- [Tooltip](#tooltip)
-    - [Position](#tooltip-position)
-        - [Top](#tooltip-top)
-        - [Right](#tooltip-right)
-        - [Bottom](#tooltip-bottom)
-        - [Left](#tooltip-left)
+- [Position](#popover-position)
+    - [Top](#popover-top)
+    - [Right](#popover-right)
+    - [Bottom](#popover-bottom)
+    - [Left](#popover-left)
 
 </div>
 </div>
-
-## Popover
 
 ### Position
 
@@ -278,194 +269,6 @@ description: "Popovers and Tooltips are patterns used to show helpful informatio
         <div class="popover-body">
             Viennese flavour cup eu, percolator froth ristretto mazagran caffeine. White roast seasonal, mocha trifecta, dripper caffeine spoon acerbic to go macchiato strong.
         </div>
-    </div>
-</div>
-```
-
-## Tooltip
-
-### Position
-
-#### Top
-
-<div class="sheet-example">
-    <div class="clay-site-tooltip-display">
-        <div class="fade tooltip clay-tooltip-top show" role="tooltip">
-            <div class="arrow"></div>
-            <div class="tooltip-inner">
-                <div>Tooltip on the top</div>
-            </div>
-        </div>
-        <div class="fade tooltip clay-tooltip-top-left show" role="tooltip">
-            <div class="arrow"></div>
-            <div class="tooltip-inner">
-                <div>Tooltip on the top left</div>
-            </div>
-        </div>
-        <div class="fade tooltip clay-tooltip-top-right show" role="tooltip">
-            <div class="arrow"></div>
-            <div class="tooltip-inner">
-                <div>Tooltip on the top right</div>
-            </div>
-        </div>
-    </div>
-</div>
-
-```html
-<div class="fade tooltip clay-tooltip-top show" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-        <div>Tooltip on the top</div>
-    </div>
-</div>
-<div class="fade tooltip clay-tooltip-top-left show" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-        <div>Tooltip on the top left</div>
-    </div>
-</div>
-<div class="fade tooltip clay-tooltip-top-right show" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-        <div>Tooltip on the top right</div>
-    </div>
-</div>
-```
-
-#### Right
-
-<div class="sheet-example">
-    <div class="clay-site-tooltip-display">
-        <div class="fade tooltip clay-tooltip-right show" role="tooltip">
-            <div class="arrow"></div>
-            <div class="tooltip-inner">
-                <div>Tooltip on the right</div>
-            </div>
-        </div>
-        <div class="fade tooltip clay-tooltip-right-top show" role="tooltip">
-            <div class="arrow"></div>
-            <div class="tooltip-inner">
-                <div>Tooltip on the right top</div>
-            </div>
-        </div>
-        <div class="fade tooltip clay-tooltip-right-bottom show" role="tooltip">
-            <div class="arrow"></div>
-            <div class="tooltip-inner">
-                <div>Tooltip on the right bottom</div>
-            </div>
-        </div>
-    </div>
-</div>
-
-```html
-<div class="fade tooltip clay-tooltip-right show" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-        <div>Tooltip on the right</div>
-    </div>
-</div>
-<div class="fade tooltip clay-tooltip-right-top show" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-        <div>Tooltip on the right top</div>
-    </div>
-</div>
-<div class="fade tooltip clay-tooltip-right-bottom show" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-        <div>Tooltip on the right bottom</div>
-    </div>
-</div>
-```
-
-#### Bottom
-
-<div class="sheet-example">
-    <div class="clay-site-tooltip-display">
-        <div class="fade tooltip clay-tooltip-bottom show" role="tooltip">
-            <div class="arrow"></div>
-            <div class="tooltip-inner">
-                <div>Tooltip on the bottom</div>
-            </div>
-        </div>
-        <div class="fade tooltip clay-tooltip-bottom-left show" role="tooltip">
-            <div class="arrow"></div>
-            <div class="tooltip-inner">
-                <div>Tooltip on the bottom left</div>
-            </div>
-        </div>
-        <div class="fade tooltip clay-tooltip-bottom-right show" role="tooltip">
-            <div class="arrow"></div>
-            <div class="tooltip-inner">
-                <div>Tooltip on the bottom right</div>
-            </div>
-        </div>
-    </div>
-</div>
-
-```html
-<div class="fade tooltip clay-tooltip-bottom show" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-        <div>Tooltip on the bottom</div>
-    </div>
-</div>
-<div class="fade tooltip clay-tooltip-bottom-left show" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-        <div>Tooltip on the bottom left</div>
-    </div>
-</div>
-<div class="fade tooltip clay-tooltip-bottom-right show" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-        <div>Tooltip on the bottom right</div>
-    </div>
-</div>
-```
-
-#### Left
-
-<div class="sheet-example">
-    <div class="clay-site-tooltip-display">
-        <div class="fade tooltip clay-tooltip-left show" role="tooltip">
-            <div class="arrow"></div>
-            <div class="tooltip-inner">
-                <div>Tooltip on the left</div>
-            </div>
-        </div>
-        <div class="fade tooltip clay-tooltip-left-top show" role="tooltip">
-            <div class="arrow"></div>
-            <div class="tooltip-inner">
-                <div>Tooltip on the left top</div>
-            </div>
-        </div>
-        <div class="fade tooltip clay-tooltip-left-bottom show" role="tooltip">
-            <div class="arrow"></div>
-            <div class="tooltip-inner">
-                <div>Tooltip on the left bottom</div>
-            </div>
-        </div>
-    </div>
-</div>
-
-```html
-<div class="fade tooltip clay-tooltip-left show" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-        <div>Tooltip on the left</div>
-    </div>
-</div>
-<div class="fade tooltip clay-tooltip-left-top show" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-        <div>Tooltip on the left top</div>
-    </div>
-</div>
-<div class="fade tooltip clay-tooltip-left-bottom show" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-        <div>Tooltip on the left bottom</div>
     </div>
 </div>
 ```

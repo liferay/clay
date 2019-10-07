@@ -1,34 +1,23 @@
 ---
-title: 'Popover and Tooltip'
-description: 'Popovers and Tooltips are patterns used to show helpful information in two different ways.'
-packageNpm: '@clayui/popover @clayui/tooltip'
+title: 'Tooltip'
+description: 'Tooltips are brief pieces of information that appear on hover state over an element to clarify its meaning or use for the user.'
+packageNpm: '@clayui/tooltip'
 packageVersion: '3.0.0'
 packageStatus: 'Stable'
-sibling: 'docs/components/css-popovers-and-tooltips.html'
+sibling: 'docs/components/css-tooltips.html'
 ---
 
-import {Popover} from '../../../src/components/clay/Popover';
 import {Tooltip, TooltipProvider} from '../../../src/components/clay/Tooltip';
-
-<div class="clay-site-alert alert alert-warning">
-	Starting in Clay v3, we have separated popover and tooltip into separate
-	packages, `@clayui/popover` and `@clayui/tooltip`.
-</div>
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Popover](#popover)
 -   [Tooltip](#tooltip)
 -   [TooltipProvider](#tooltipprovider)
 -   [API](#api)
 
 </div>
 </div>
-
-### Popover
-
-<Popover />
 
 ### Tooltip
 
@@ -45,10 +34,6 @@ By using the `<TooltipProvider>` it allows you to add the desired tooltip conten
 <TooltipProvider />
 
 ### API
-
-#### Popover
-
-<div>[APITable "clay-popover/src/index.tsx"]</div>
 
 #### Tooltip
 
