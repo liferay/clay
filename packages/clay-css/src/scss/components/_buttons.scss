@@ -168,22 +168,6 @@
 
 .btn-unstyled {
 	@extend %btn-unstyled;
-
-	&.btn-lg {
-		border-color: transparent;
-		border-width: $btn-border-width;
-		font-size: $btn-font-size-lg;
-		line-height: $btn-line-height-lg;
-		padding: $btn-padding-y-lg $btn-padding-x-lg;
-	}
-
-	&.btn-sm {
-		border-color: transparent;
-		border-width: $btn-border-width;
-		font-size: $btn-font-size-sm;
-		line-height: $btn-line-height-sm;
-		padding: $btn-padding-y-sm $btn-padding-x-sm;
-	}
 }
 
 // Button Monospaced
