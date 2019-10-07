@@ -18,7 +18,7 @@ section: Components
 		<ul class="nav">
 			<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
 			<li class="nav-item"><a class="nav-link" href="#1">Categorization</a></li>
-			<li class="nav-item"><a class="disabled nav-link" href="#1">Documents and Media</a></li>
+			<li class="nav-item"><a class="disabled nav-link" href="#1" tabindex="-1">Documents and Media</a></li>
 			<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
 		</ul>
 	</div>
@@ -33,10 +33,27 @@ section: Components
 		<ul class="nav nav-stacked">
 			<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
 			<li class="nav-item"><a class="nav-link" href="#1">Categorization</a></li>
-			<li class="nav-item"><a class="disabled nav-link" href="#1">Documents and Media</a></li>
+			<li class="nav-item"><a class="disabled nav-link" href="#1" tabindex="-1">Documents and Media</a></li>
 			<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
 			<li class="nav-item"><a class="nav-link" href="#1">Configuration</a></li>
 			<li class="nav-item"><a class="nav-link" href="#1">Identification</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Nav Stacked with Buttons</h3>
+	</div>
+
+	<div class="col-md-4">
+		<ul class="nav nav-stacked">
+			<li class="nav-item"><button class="active btn btn-unstyled nav-link" type="button">Details</button></li>
+			<li class="nav-item"><button class="btn btn-unstyled nav-link" type="button">Categorization</button></li>
+			<li class="nav-item"><button class="btn btn-unstyled nav-link" disabled type="button">Documents and Media</button></li>
+			<li class="nav-item"><button class="btn btn-unstyled nav-link" type="button">Site Template</button></li>
+			<li class="nav-item"><button class="btn btn-unstyled nav-link" type="button">Configuration</button></li>
+			<li class="nav-item"><button class="btn btn-unstyled nav-link" type="button">Identification</button></li>
 		</ul>
 	</div>
 </div>
@@ -133,6 +150,106 @@ section: Components
 					</span>
 				</a>
 				<div class="collapse" id="navCollapse04">
+					<ul class="nav nav-stacked">
+						<li class="nav-item"><a class="nav-link" href="#1">Default User Associations</a></li>
+						<li class="nav-item"><a class="nav-link" href="#1">Staging</a></li>
+						<li class="nav-item"><a class="nav-link" href="#1">Analytics</a></li>
+						<li class="nav-item"><a class="nav-link" href="#1">Maps</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Nav Nested with Buttons</h3>
+	</div>
+
+	<div class="col-md-6">
+		<ul class="nav nav-nested">
+			<li class="nav-item">
+				<button aria-controls="navCollapseButton01" aria-expanded="true" class="btn btn-unstyled collapse-icon nav-link" data-toggle="collapse" data-target="#navCollapseButton01" type="button">
+					Basic Information
+					<span class="collapse-icon-closed">
+						<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-right" />
+						</svg>
+					</span>
+					<span class="collapse-icon-open">
+						<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+						</svg>
+					</span>
+				</button>
+				<div class="collapse show" id="navCollapseButton01">
+					<ul class="nav nav-stacked">
+						<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
+						<li class="nav-item"><a class="nav-link" href="#1">Categorization</a></li>
+						<li class="nav-item">
+							<button aria-controls="navCollapseButton02" aria-expanded="false" class="btn btn-unstyled collapsed collapse-icon nav-link" data-toggle="collapse" data-target="#navCollapseButton02" type="button">
+								Documents and Media
+								<span class="collapse-icon-closed">
+									<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-right" />
+									</svg>
+								</span>
+								<span class="collapse-icon-open">
+									<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+									</svg>
+								</span>
+							</button>
+							<div class="collapse" id="navCollapseButton02">
+								<ul class="nav nav-stacked">
+									<li class="nav-item"><a class="nav-link" href="#1">Details</a></li>
+									<li class="nav-item"><a class="nav-link" href="#1">Categorization</a></li>
+									<li class="nav-item"><a class="nav-link" href="#1">Documents and Media</a></li>
+									<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="nav-item">
+				<button aria-controls="navCollapseButton03" aria-expanded="false" class="btn btn-unstyled collapsed collapse-icon nav-link" data-toggle="collapse" data-target="#navCollapseButton03" type="button">
+					SEO
+					<span class="collapse-icon-closed">
+						<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-right" />
+						</svg>
+					</span>
+					<span class="collapse-icon-open">
+						<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+						</svg>
+					</span>
+				</button>
+				<div class="collapse" id="navCollapseButton03">
+					<ul class="nav nav-stacked">
+						<li class="nav-item"><a class="nav-link" href="#1">Sitemap</a></li>
+						<li class="nav-item"><a class="nav-link" href="#1">Robots</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="nav-item">
+				<button aria-controls="navCollapseButton04" aria-expanded="false" class="btn btn-unstyled collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapseButton04" type="button">
+					Advanced
+					<span class="collapse-icon-closed">
+						<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-right" />
+						</svg>
+					</span>
+					<span class="collapse-icon-open">
+						<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+						</svg>
+					</span>
+				</button>
+				<div class="collapse" id="navCollapseButton04">
 					<ul class="nav nav-stacked">
 						<li class="nav-item"><a class="nav-link" href="#1">Default User Associations</a></li>
 						<li class="nav-item"><a class="nav-link" href="#1">Staging</a></li>
@@ -260,7 +377,7 @@ section: Components
 		<ul class="nav nav-unstyled">
 			<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
 			<li class="nav-item"><a class="nav-link" href="#1">Categorization</a></li>
-			<li class="nav-item"><a class="disabled nav-link" href="#1">Documents and Media</a></li>
+			<li class="nav-item"><a class="disabled nav-link" href="#1" tabindex="-1">Documents and Media</a></li>
 			<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
 		</ul>
 	</div>
@@ -296,7 +413,7 @@ section: Components
 			<li class="nav-item">
 				<button class="btn btn-primary nav-btn nav-btn-monospaced" type="button">De</button>
 			</li>
-			<li class="nav-item"><a class="disabled nav-link" href="#1">Categorization</a></li>
+			<li class="nav-item"><a class="disabled nav-link" href="#1" tabindex="-1">Categorization</a></li>
 			<li class="dropdown nav-item">
 				<button aria-expanded="false" aria-haspopup="true" class="btn btn-unstyled dropdown-toggle nav-link" data-toggle="dropdown" type="button">
 					More
