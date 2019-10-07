@@ -4,7 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayDropDown from '@clayui/drop-down';
+import ClayButton from '@clayui/button';
+import ClayDropDown, {ClayDropDownWithItems} from '@clayui/drop-down';
 import React, {useState} from 'react';
 
 import Editor from './Editor';
@@ -53,4 +54,97 @@ const DropDown = () => {
 	);
 };
 
-export {DropDown};
+const dropDownWithItemsImportsCode = `import ClayButton from '@clayui/button';
+import {ClayDropDownWithItems} from '@clayui/drop-down';
+import React, {useState} from 'react';`;
+
+const dropDownWithItemsCode = `const spritemap = '/images/icons/icons.svg';
+
+const Component = () => {
+	const [value, setValue] = useState();
+    const items = [
+      {
+        label: 'clickable',
+        onClick: () => {
+          alert('you clicked!');
+        },
+      },
+      {
+        type: 'divider',
+      },
+      {
+        items: [
+          {
+            label: 'one',
+            type: 'radio',
+            value: 'one',
+          },
+          {
+            label: 'two',
+            type: 'radio',
+            value: 'two',
+          },
+        ],
+        label: 'radio',
+        name: 'radio',
+        onChange: (value) => alert('New Radio checked'),
+        type: 'radiogroup',
+      },
+      {
+        items: [
+          {
+            checked: true,
+            label: 'checkbox',
+            onChange: () => alert('checkbox changed'),
+            type: 'checkbox',
+          },
+          {
+            checked: true,
+            label: 'checkbox 1',
+            onChange: () => alert('checkbox changed'),
+            type: 'checkbox',
+          },
+        ],
+        label: 'checkbox',
+        type: 'group',
+      },
+      {
+        href: '#',
+        label: 'linkable',
+      },
+    ];
+
+	return (
+		<ClayDropDownWithItems
+			caption="Showing 7 of 203 Structures"
+			footerContent={
+				<>
+					<ClayButton displayType="secondary">{'Cancel'}</ClayButton>
+					<ClayButton>{'Done'}</ClayButton>
+				</>
+			}
+			helpText="You can customize this menu or see all you have by pressing 'more'."
+			items={items}
+			onSearchValueChange={setValue}
+			searchValue={value}
+			searchable={true}
+			spritemap={spritemap}
+			trigger={<ClayButton>{'Click Me'}</ClayButton>}
+		/>
+    );
+}
+
+render(<Component />)`;
+
+const DropDownWithItems = () => {
+	const scope = {ClayButton, ClayDropDownWithItems, useState};
+	return (
+		<Editor
+			code={dropDownWithItemsCode}
+			imports={dropDownWithItemsImportsCode}
+			scope={scope}
+		/>
+	);
+};
+
+export {DropDown, DropDownWithItems};

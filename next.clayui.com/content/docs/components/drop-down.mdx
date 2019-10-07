@@ -7,11 +7,14 @@ packageStatus: "Stable"
 sibling: "docs/components/css-dropdown.html"
 ---
 
-import {DropDown} from '../../../src/components/clay/DropDown';
+import {DropDown, DropDownWithItems} from '../../../src/components/clay/DropDown';
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
+- [Composing](#composing)
+  - [Using dropdown without a trigger](#using-dropdown-without-a-trigger)
+- [DropDownWithItems](#dropdownwithitems)
 - [API](#api)
   - [ClayDropDown](#claydropdown)
   - [ClayDropDown.Action](#claydropdown.action)
@@ -36,15 +39,80 @@ import {DropDown} from '../../../src/components/clay/DropDown';
 	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/dropdowns/">Dropdown Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
 </div>
 
-DropDown is delivered for composition offering flexibility for customization.
+<div class="clay-site-alert alert alert-warning">
+	<strong class="lead">Warning</strong>
+	Before you get started with this doc, read about <a href="/docs/foundations/composing.html" target="_blank">Clay's fundamentals of composition</a> to move on. The information below is assuming you have read about <a href="/docs/foundations/composing.html" target="_blank">Clay's compositional philosophy</a> and learned about the terms.
+</div>
+
+DropDown's composition gives you the space to create more complex DropDowns, such as adding a form within DropDown, and creating simple DropDowns with the high-level `ClayDropDownWithItems` component that covers most basic Lexicon use cases.
 
 <DropDown />
+
+## Composing
 
 You may want to use only the content of DropDown for other cases, such as mounting an `Autocomplete`, so use `DropDown.Menu` instead of `DropDown` which gives you the flexibility to only control content without a trigger.
 
 <div class="clay-site-alert alert alert-warning">
 	<code class="language-text">DropDown</code> consists of a <code class="language-text">DropDown.Menu</code> that controls the trigger and uses it as the basis for aligning DropDown content.
 </div>
+
+#### Using dropdown without a trigger
+
+You may want to create a trigger that is not necessarily in the same tree as DropDown, due to HTML markup issues, for these cases you can use `<ClayDropDown.Menu />`.
+
+Using `<ClayDropDown.Menu />` allows you to better control the state of DropDown but you will have to deal with visibility, focus management, and other details.
+
+```jsx
+import ClayDropDown from '@clayui/drop-down';
+import React, {useState, useRef} from 'react';
+
+const Menu = ({
+    children,
+    hasLeftSymbols,
+    hasRightSymbols,
+}) => {
+    const triggerElementRef = useRef(null);
+    const [expand, setExpand] = useState(false);
+    const menuElementRef = useRef(null);
+
+    const handleExpand = event => {
+        // This is not ideal for allowing you to have more than
+        // one trigger for the same content but it simulates the
+        // advantages of controlling `DropDown.Menu`.
+        triggerElementRef.current = event.target;
+
+        setExpand(!expand);
+    };
+
+    return (
+        <div>
+            <div>
+                <button type="button" onClick={handleExpand}>Home</button>
+            </div>
+            <div>
+                <button type="button" onClick={handleExpand}>Product</button>
+            </div>
+
+            <ClayDropDown.Menu
+                active={expand}
+                alignElementRef={triggerElementRef}
+                hasLeftSymbols={hasLeftSymbols}
+                hasRightSymbols={hasRightSymbols}
+                onSetActive={() => setExpand(!expand)}
+                ref={menuElementRef}
+            >
+                {children}
+            </ClayDropDown.Menu>
+        </div>
+    );
+};
+```
+
+## DropDownWithItems
+
+Allows you to create a simple DropDown, through its API you are able to create a Menu with groups of checkboxes and radios, links, buttons, search, caption, etc.
+
+<DropDownWithItems />
 
 ## API
 
