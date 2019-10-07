@@ -15,12 +15,39 @@ import ClayPanelGroup from './Group';
 import ClayPanelHeader from './Header';
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+	/**
+	 * Flag to indicate that Panel is collapsable.
+	 */
 	collapsable?: boolean;
+
+	/**
+	 * Adds classes to the collapse element. Only when `collapsable` is true.
+	 */
 	collapseClassNames?: string;
+
+	/**
+	 * Flag to indicate the initial value of expanded.
+	 */
 	defaultExpanded?: boolean;
+
+	/**
+	 * Add text to display in Panel Title.
+	 */
 	displayTitle?: React.ReactText;
+
+	/**
+	 * Flag to indicate the visual variation of the Panel.
+	 */
 	displayType?: 'unstyled' | 'secondary';
+
+	/**
+	 * Flag to toggle collapse icon visibility when `collapsable` is true.
+	 */
 	showCollapseIcon?: boolean;
+
+	/**
+	 * Path to spritemap for clay icons
+	 */
 	spritemap?: string;
 }
 
