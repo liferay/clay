@@ -1,6 +1,6 @@
 ---
 title: "Popover"
-description: "Popovers are used together with the question mark icon to communicate to the user that there is useful information for them to read. Popovers contain helpful information such as an explanation of a context."
+description: "Popovers contain helpful information such as an explanation of a context."
 ---
 
 <div class="nav-toc-absolute">
