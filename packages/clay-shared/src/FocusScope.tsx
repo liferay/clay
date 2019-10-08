@@ -76,11 +76,13 @@ export const FocusScope: React.FunctionComponent<IProps> = ({
 			}
 		},
 		ref: (r: HTMLElement) => {
-			elRef.current = r;
-			const {ref} = children;
-			if (ref) {
-				if (typeof ref === 'object') {
-					ref.current = r;
+			if (r) {
+				elRef.current = r;
+				const {ref} = children;
+				if (ref) {
+					if (typeof ref === 'object') {
+						ref.current = r;
+					}
 				}
 			}
 		},

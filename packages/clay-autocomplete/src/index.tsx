@@ -54,11 +54,14 @@ const ClayAutocomplete = React.forwardRef(
 				{...otherProps}
 				className={className}
 				ref={(r: any) => {
-					containerElementRef.current = r;
-					if (typeof ref === 'function') {
-						ref(r);
-					} else if (ref !== null) {
-						(ref.current as React.MutableRefObject<any>) = r;
+					if (r) {
+						containerElementRef.current = r;
+
+						if (typeof ref === 'function') {
+							ref(r);
+						} else if (ref !== null) {
+							(ref.current as React.MutableRefObject<any>) = r;
+						}
 					}
 				}}
 			>
