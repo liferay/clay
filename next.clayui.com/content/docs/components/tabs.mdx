@@ -38,7 +38,7 @@ import {
 
 ## Composing
 
-`ClayTabs` is a [uncontrolled component](https://reactjs.org/docs/uncontrolled-components.html), we left this component uncontrolled because the user can use Dropdowns or another control to select a `TabPane` for render.
+`ClayTabs` is a controlled component, we left this component controlled because the user can use Dropdowns or another control to select a `TabPane` for render. Just creating states to manage it.
 
 For the modern variant of Tabs use the `modern` property. If you need to justify the text inside the `ClayTabs.Item`, use the `justified` property.
 
@@ -46,7 +46,7 @@ Use `ClayTabs.Item` for defining a TabPane's trigger. For using this trigger as 
 
 <Tabs />
 
-As an uncontrolled component, Tabs allows you to control the `active` TabPane. Thereby, we can select the active TabPane by a Dropdown menu. For example:
+As a controlled component, Tabs allows you to control the `active` TabPane. Thereby, we can select the active TabPane by a Dropdown menu. For example:
 
 <TabsDropdown />
 
