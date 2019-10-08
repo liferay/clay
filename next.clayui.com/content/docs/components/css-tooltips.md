@@ -1,6 +1,6 @@
 ---
 title: "Tooltips"
-description: "Popovers and Tooltips are patterns used to show helpful information in two different ways."
+description: "Tooltips are brief pieces of information that appear on hover state over an element to clarify its meaning or use for the user."
 ---
 
 <div class="nav-toc-absolute">
