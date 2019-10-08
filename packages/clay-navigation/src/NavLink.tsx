@@ -5,7 +5,7 @@
  */
 
 import ClayIcon from '@clayui/icon';
-import ClayLink from '@clayui/link';
+import {LinkOrButton} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -41,8 +41,10 @@ export const NavLink: React.FunctionComponent<IProps> = ({
 	...otherProps
 }) => {
 	return (
-		<ClayLink
+		<LinkOrButton
 			{...otherProps}
+			buttonDisplayType="unstyled"
+			buttonType="button"
 			className={classNames('nav-link', className, {
 				active,
 				['collapse-icon']: showIcon,
@@ -72,6 +74,6 @@ export const NavLink: React.FunctionComponent<IProps> = ({
 					</span>
 				</>
 			)}
-		</ClayLink>
+		</LinkOrButton>
 	);
 };
