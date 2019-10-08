@@ -108,10 +108,12 @@
 	$max-width: map-get($map, max-width);
 	$opacity: map-get($map, opacity);
 	$outline: map-get($map, outline);
+	$padding: map-get($map, padding);
 	$padding-bottom: map-get($map, padding-bottom);
 	$padding-left: map-get($map, padding-left);
 	$padding-right: map-get($map, padding-right);
 	$padding-top: map-get($map, padding-top);
+	$position: map-get($map, position);
 	$pointer-events: map-get($map, pointer-events);
 	$text-align: map-get($map, text-align);
 	$text-decoration: map-get($map, text-decoration);
@@ -159,6 +161,8 @@
 	$disabled-pointer-events: map-get($map, disabled-pointer-events);
 	$disabled-text-decoration: map-get($map, disabled-text-decoration);
 
+	$disabled-active-pointer-events: map-get($map, disabled-active-pointer-events);
+
 	$btn-focus-box-shadow: map-get($map, btn-focus-box-shadow);
 	$btn-focus-outline: map-get($map, btn-focus-outline);
 
@@ -193,11 +197,13 @@
 	max-width: $max-width;
 	opacity: $opacity;
 	outline: $outline;
+	padding: $padding;
 	padding-bottom: $padding-bottom;
 	padding-left: $padding-left;
 	padding-right: $padding-right;
 	padding-top: $padding-top;
 	pointer-events: $pointer-events;
+	position: $position;
 	text-align: $text-align;
 	text-decoration: $text-decoration;
 	text-transform: $text-transform;
@@ -263,6 +269,10 @@
 		opacity: $disabled-opacity;
 		pointer-events: $disabled-pointer-events;
 		text-decoration: $disabled-text-decoration;
+
+		&:active {
+			pointer-events: $disabled-active-pointer-events;
+		}
 	}
 
 	.lexicon-icon {
