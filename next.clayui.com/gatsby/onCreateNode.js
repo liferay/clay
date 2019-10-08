@@ -43,7 +43,7 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 		let pkgConfig = null;
 
 		if (packageNpm) {
-			pkgConfig = getPackageConfig(packageNpm);
+			pkgConfig = getPackageConfig(packageNpm, '@clayui/');
 			if (pkgConfig) {
 				pkgConfig = JSON.parse(pkgConfig);
 			}

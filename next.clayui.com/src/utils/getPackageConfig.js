@@ -7,10 +7,10 @@
 const {readFileSync} = require('fs');
 const {join, resolve} = require('path');
 
-function getPackageConfig(name) {
-	const internalPackagePrefix = '@clayui/';
+function getPackageConfig(name, internalPackagePrefix) {
 	if (name && name.startsWith(internalPackagePrefix)) {
 		const suffix = name.slice(internalPackagePrefix.length);
+
 		return readFileSync(
 			resolve(join('..', 'packages', `clay-${suffix}`, 'package.json')),
 			{
