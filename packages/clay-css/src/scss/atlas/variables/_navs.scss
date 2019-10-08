@@ -9,6 +9,16 @@ $nav-link-disabled-color: $gray-500 !default;
 $nav-link-padding-x: 1rem !default; // 16px
 $nav-link-padding-y: 0.625rem !default; // 10px
 
+$nav-link: () !default;
+$nav-link: map-deep-merge((
+	disabled-box-shadow: none,
+), $nav-link);
+
+$nav-link-btn-unstyled: () !default;
+$nav-link-btn-unstyled: map-deep-merge((
+	focus-box-shadow: inset 0 0 0 0.125rem $primary-l1#{','} inset 0 0 0 0.25rem $white,
+), $nav-link-btn-unstyled);
+
 /// @deprecated as of v2.11.0 with no replacement. This is left over from V1.
 
 $nav-collapse-icon-closed: "\f0da" !default;
