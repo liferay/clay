@@ -11,7 +11,7 @@ import {ClayCheckbox, ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import {ClayListWithItems} from '@clayui/list';
 import ClayManagementToolbar from '@clayui/management-toolbar';
-import {ClayPaginationWithBar} from '@clayui/pagination';
+import {ClayPaginationBarWithBasicItems} from '@clayui/pagination-bar';
 import {sub} from '@clayui/shared';
 import classNames from 'classnames';
 import React, {useState} from 'react';
@@ -311,7 +311,7 @@ export default () => {
 					spritemap={spritemap}
 				/>
 
-				<ClayPaginationWithBar
+				<ClayPaginationBarWithBasicItems
 					activeDelta={delta}
 					activePage={activePage}
 					onDeltaChange={setDelta}

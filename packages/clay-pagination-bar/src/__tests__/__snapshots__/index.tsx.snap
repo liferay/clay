@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayPaginationBar renders 1`] = `
+<div>
+  <div
+    class="pagination-bar"
+  >
+    <div
+      class="dropdown pagination-items-per-page"
+    >
+      <button
+        class="dropdown-toggle btn btn-unstyled"
+        data-testid="selectPaginationBar"
+        type="button"
+      >
+        10 items
+        <svg
+          class="lexicon-icon lexicon-icon-caret-double-l"
+          role="presentation"
+        >
+          <use
+            xlink:href="path/to/spritemap#caret-double-l"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="pagination-results"
+    >
+      Showing 1 to 10 of 100
+    </div>
+    <ul
+      class="pagination pagination-root"
+    >
+      <li
+        class="page-item disabled"
+      >
+        <button
+          class="page-link"
+          data-testid="prevArrow"
+          disabled=""
+        >
+          <svg
+            class="lexicon-icon lexicon-icon-angle-left"
+            role="presentation"
+          >
+            <use
+              xlink:href="path/to/spritemap#angle-left"
+            />
+          </svg>
+        </button>
+      </li>
+      <li
+        class="page-item active"
+      >
+        <button
+          class="page-link"
+        >
+          1
+        </button>
+      </li>
+      <li
+        class="page-item"
+      >
+        <button
+          class="page-link"
+        >
+          2
+        </button>
+      </li>
+      <li
+        class="page-item"
+      >
+        <button
+          class="page-link"
+        >
+          3
+        </button>
+      </li>
+      <li
+        class="dropdown page-item"
+      >
+        <button
+          class="dropdown-toggle page-link btn btn-unstyled"
+          type="button"
+        >
+          ...
+        </button>
+      </li>
+      <li
+        class="page-item"
+      >
+        <button
+          class="page-link"
+        >
+          10
+        </button>
+      </li>
+      <li
+        class="page-item"
+      >
+        <button
+          class="page-link"
+          data-testid="nextArrow"
+        >
+          <svg
+            class="lexicon-icon lexicon-icon-angle-right"
+            role="presentation"
+          >
+            <use
+              xlink:href="path/to/spritemap#angle-right"
+            />
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

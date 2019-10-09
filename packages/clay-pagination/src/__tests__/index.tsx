@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayPagination, {ClayPaginationWithBar} from '..';
+import {ClayPaginationWithBasicItems} from '..';
 import {cleanup, fireEvent, getByText, render} from '@testing-library/react';
 import React from 'react';
 
@@ -15,7 +15,7 @@ describe('ClayPagination', () => {
 
 	it('renders', () => {
 		const {container} = render(
-			<ClayPagination
+			<ClayPaginationWithBasicItems
 				activePage={12}
 				size="lg"
 				spritemap={spritemap}
@@ -28,7 +28,7 @@ describe('ClayPagination', () => {
 
 	it('renders with only one page', () => {
 		const {container} = render(
-			<ClayPagination
+			<ClayPaginationWithBasicItems
 				activePage={1}
 				ellipsisBuffer={1}
 				spritemap={spritemap}
@@ -43,7 +43,7 @@ describe('ClayPagination', () => {
 		const changeMock = jest.fn();
 
 		const {getByTestId} = render(
-			<ClayPagination
+			<ClayPaginationWithBasicItems
 				activePage={12}
 				onPageChange={changeMock}
 				spritemap={spritemap}
@@ -64,7 +64,7 @@ describe('ClayPagination', () => {
 		const changeMock = jest.fn();
 
 		const {getByText} = render(
-			<ClayPagination
+			<ClayPaginationWithBasicItems
 				activePage={12}
 				onPageChange={changeMock}
 				spritemap={spritemap}
@@ -79,7 +79,7 @@ describe('ClayPagination', () => {
 
 	it('shows dropdown when ellipsis is clicked', () => {
 		const {getAllByText} = render(
-			<ClayPagination
+			<ClayPaginationWithBasicItems
 				activePage={12}
 				spritemap={spritemap}
 				totalPages={25}
@@ -97,7 +97,7 @@ describe('ClayPagination', () => {
 		const changeMock = jest.fn();
 
 		const {getAllByText} = render(
-			<ClayPagination
+			<ClayPaginationWithBasicItems
 				activePage={12}
 				onPageChange={changeMock}
 				spritemap={spritemap}
@@ -110,73 +110,5 @@ describe('ClayPagination', () => {
 		fireEvent.click(getByText(document.body, '4') as HTMLAnchorElement, {});
 
 		expect(changeMock).toHaveBeenLastCalledWith(4);
-	});
-});
-
-describe('ClayPaginationWithBar', () => {
-	afterEach(cleanup);
-
-	it('renders', () => {
-		const {container} = render(
-			<ClayPaginationWithBar spritemap={spritemap} totalItems={100} />
-		);
-
-		expect(container).toMatchSnapshot();
-	});
-
-	it('calls onPageChange when arrow is clicked', () => {
-		const changeMock = jest.fn();
-
-		const {getByTestId} = render(
-			<ClayPaginationWithBar
-				activePage={12}
-				onPageChange={changeMock}
-				spritemap={spritemap}
-				totalItems={100}
-			/>
-		);
-
-		fireEvent.click(getByTestId('prevArrow'), {});
-
-		expect(changeMock).toHaveBeenLastCalledWith(11);
-
-		fireEvent.click(getByTestId('nextArrow'), {});
-
-		expect(changeMock).toHaveBeenLastCalledWith(13);
-	});
-
-	it('calls onDeltaChange when select is expanded', () => {
-		const deltaChangeMock = jest.fn();
-
-		const {getByTestId} = render(
-			<ClayPaginationWithBar
-				activePage={12}
-				onDeltaChange={deltaChangeMock}
-				spritemap={spritemap}
-				totalItems={100}
-			/>
-		);
-
-		fireEvent.click(getByTestId('selectPaginationBar'), {});
-
-		fireEvent.click(getByText(document.body, '20 items'), {});
-
-		expect(deltaChangeMock).toHaveBeenLastCalledWith(20);
-	});
-
-	it('shows dropdown when pagination dropdown is clicked', () => {
-		const {getByTestId} = render(
-			<ClayPaginationWithBar
-				activePage={12}
-				spritemap={spritemap}
-				totalItems={100}
-			/>
-		);
-
-		fireEvent.click(getByTestId('selectPaginationBar'), {});
-
-		expect(
-			document.body.querySelector('.dropdown-menu')!.classList
-		).toContain('show');
 	});
 });
