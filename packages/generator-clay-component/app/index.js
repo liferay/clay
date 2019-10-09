@@ -148,5 +148,10 @@ module.exports = yeoman.generators.Base.extend({
 			this.templatePath('_tsconfig.json'),
 			this.destinationPath('tsconfig.json')
 		);
+		this.fs.copyTpl(
+			this.templatePath('_.yarnrc'),
+			this.destinationPath('.yarnrc'),
+			{packageName: this.repoName.replace('clay-', '')}
+		);
 	},
 });

@@ -4,19 +4,19 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayBreadcrumbNav} from '@clayui/navigation';
+import ClayBreadcrumb from '@clayui/breadcrumb';
 import React from 'react';
 
 import Editor from './Editor';
 
 const spritemap = '/images/icons/icons.svg';
 
-const breadcrumbImportsCode = `import {ClayBreadcrumbNav} from '@clayui/navigation';
+const breadcrumbImportsCode = `import ClayBreadcrumb from '@clayui/breadcrumb';
 import React from 'react';`;
 
 const BreadcrumbCode = `const Component = () => {
 	return (
-		<ClayBreadcrumbNav
+		<ClayBreadcrumb
 			ellipsisBuffer={1}
 			items={[
 				{
@@ -49,7 +49,7 @@ const BreadcrumbCode = `const Component = () => {
 render(<Component />);`;
 
 const Breadcrumbs = () => {
-	const scope = {ClayBreadcrumbNav, spritemap};
+	const scope = {ClayBreadcrumb, spritemap};
 	const code = BreadcrumbCode;
 
 	return <Editor code={code} imports={breadcrumbImportsCode} scope={scope} />;
