@@ -5,9 +5,8 @@
  */
 
 import ClayPagination from './Pagination';
-import {ClayPaginationWithBar} from './PaginationWithBar';
 import {ClayPaginationWithBasicItems} from './PaginationWithBasicItems';
 
-export {ClayPaginationWithBar, ClayPaginationWithBasicItems};
+export {ClayPaginationWithBasicItems};
 
 export default ClayPagination;
