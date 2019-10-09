@@ -1,47 +1,64 @@
 ---
-title: "Pagination"
-description: "Pagination provides horizontal navigation between chunks(pages) of a dataset."
-packageNpm: "@clayui/pagination"
-sibling: "docs/components/css-pagination.html"
+title: 'Pagination'
+description: 'Pagination provides horizontal navigation between chunks(pages) of a dataset.'
+packageNpm: '@clayui/pagination'
+sibling: 'docs/components/css-pagination.html'
 ---
 
-import {PaginationEllipsisBuffer} from '../../../src/components/clay/Pagination';
+import {
+	Pagination,
+	PaginationWithBasicItems,
+} from '../../../src/components/clay/Pagination';
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Ellipsis Buffer](#ellipsis-buffer)
-- [API](#api)
+-   [ClayPagination Composition](#claypagination-composition)
+-   [ClayPaginationWithBasicItems](#claypaginationwithbasicitems)
+-   [API](#api)
 
 </div>
 </div>
 
 <div class="clay-site-alert alert alert-warning">
-    Take a look at our <a href="https://storybook-clayui.netlify.com/?path=/story/claypagination--links">Storybook</a> for more information about this component.
+	Take a look at our{' '}
+	<a href="https://storybook-clayui.netlify.com/?path=/story/claypagination--links">
+		Storybook
+	</a>{' '}
+	for more information about this component.
 </div>
 
 <div class="clay-site-alert alert alert-info">
-	Check the <a href="https://liferay.design/lexicon/">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/pagination/">Pagination Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
+	Check the <a href="https://liferay.design/lexicon/">Lexicon</a>{' '}
+	<a href="https://liferay.design/lexicon/core-components/pagination/">
+		Pagination Pattern
+	</a>{' '}
+	for a more in-depth look at the motivations and proper usage of this
+	component.
 </div>
 
-## Ellipsis Buffer
+## ClayPagination Composition
 
-Use [`Ellipsis Buffer`](#api-ellipsisBuffer) property to define the number of pages to show on each side of the active page before using an ellipsis dropdown.
+<Pagination />
 
-See the example below:
+## ClayPaginationWithBasicItems
 
-<PaginationEllipsisBuffer />
+<PaginationWithBasicItems />
 
 ## API
 
 ### ClayPagination
 
-<div>
-	[APITable "clay-pagination/src/Pagination.tsx"]
-</div>
+<div>[APITable "clay-pagination/src/Pagination.tsx"]</div>
 
-### ClayPaginationWithBar
+### ClayPagination.Ellipsis
 
-<div>
-	[APITable "clay-pagination/src/PaginationWithBar.tsx"]
-</div>
+<div>[APITable "clay-pagination/src/Ellipsis.tsx"]</div>
+
+### ClayPagination.Item
+
+<div>[APITable "clay-pagination/src/Item.tsx"]</div>
+
+### ClayPaginationWithBasicItems
+
+<div>[APITable "clay-pagination/src/PaginationWithBasicItems.tsx"]</div>
