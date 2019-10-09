@@ -5,13 +5,12 @@
  */
 
 import ClayButton from '@clayui/button';
-import {ClayDropDownWithItems} from '@clayui/drop-down';
 import ClayIcon from '@clayui/icon';
+import {ClayPaginationWithBasicItems} from '@clayui/pagination';
 import {sub} from '@clayui/shared';
-import classNames from 'classnames';
 import React from 'react';
 
-import {ClayPaginationWithBasicItems} from './PaginationWithBasicItems';
+import PaginationBar from './PaginationBar';
 
 const defaultDeltas = [
 	{
@@ -28,7 +27,7 @@ const defaultDeltas = [
 	},
 ];
 
-type Items = React.ComponentProps<typeof ClayDropDownWithItems>['items'];
+type Items = React.ComponentProps<typeof PaginationBar.DropDown>['items'];
 
 interface IDelta {
 	/**
@@ -42,7 +41,7 @@ interface IDelta {
 	label: number;
 }
 
-interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+interface IProps extends React.ComponentProps<typeof PaginationBar> {
 	activeDelta?: number;
 	/**
 	 * Possible values of items per page.
@@ -100,11 +99,6 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	initialSelectedDelta?: IDelta;
 
 	/**
-	 * The size of pagination element.
-	 */
-	size?: 'sm' | 'lg';
-
-	/**
 	 * Path to spritemap from clay-css.
 	 */
 	spritemap: string;
@@ -121,7 +115,9 @@ const DEFAULT_LABELS = {
 	selectPerPageItems: '{0} items',
 };
 
-export const ClayPaginationWithBar: React.FunctionComponent<IProps> = ({
+export const ClayPaginationBarWithBasicItems: React.FunctionComponent<
+	IProps
+> = ({
 	activeDelta,
 	activePage = 1,
 	deltas = defaultDeltas,
@@ -131,7 +127,6 @@ export const ClayPaginationWithBar: React.FunctionComponent<IProps> = ({
 	labels = DEFAULT_LABELS,
 	onDeltaChange,
 	onPageChange,
-	size,
 	spritemap,
 	totalItems,
 	...otherProps
@@ -162,14 +157,8 @@ export const ClayPaginationWithBar: React.FunctionComponent<IProps> = ({
 	});
 
 	return (
-		<div
-			className={classNames('pagination-bar', {
-				[`pagination-${size}`]: size,
-			})}
-			{...otherProps}
-		>
-			<ClayDropDownWithItems
-				className="pagination-items-per-page"
+		<PaginationBar {...otherProps}>
+			<PaginationBar.DropDown
 				items={items}
 				trigger={
 					<ClayButton
@@ -186,7 +175,7 @@ export const ClayPaginationWithBar: React.FunctionComponent<IProps> = ({
 				}
 			/>
 
-			<div className="pagination-results">
+			<PaginationBar.Results>
 				{sub(labels.paginationResults, [
 					(activePage - 1) * activeDelta + 1,
 					activePage * activeDelta < totalItems
@@ -194,7 +183,7 @@ export const ClayPaginationWithBar: React.FunctionComponent<IProps> = ({
 						: totalItems,
 					totalItems,
 				])}
-			</div>
+			</PaginationBar.Results>
 
 			<ClayPaginationWithBasicItems
 				activePage={activePage}
@@ -209,6 +198,6 @@ export const ClayPaginationWithBar: React.FunctionComponent<IProps> = ({
 				spritemap={spritemap}
 				totalPages={Math.ceil(totalItems / activeDelta)}
 			/>
-		</div>
+		</PaginationBar>
 	);
 };
