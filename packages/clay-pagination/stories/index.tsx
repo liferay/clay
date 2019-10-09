@@ -13,13 +13,16 @@ import {number} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React, {useState} from 'react';
 
-import ClayPagination, {ClayPaginationWithBar} from '../src';
+import ClayPagination, {
+	ClayPaginationWithBar,
+	ClayPaginationWithBasicItems,
+} from '../src';
 
 const PaginationWithState = (props: any) => {
 	const [active, setActive] = useState(8);
 
 	return (
-		<ClayPagination
+		<ClayPaginationWithBasicItems
 			{...props}
 			activePage={active}
 			ellipsisBuffer={number('Ellipsis Buffer', 2)}
@@ -30,11 +33,18 @@ const PaginationWithState = (props: any) => {
 };
 
 storiesOf('Components|ClayPagination', module)
-	.add('links', () => {
+	.add('default', () => (
+		<ClayPagination>
+			<ClayPagination.Item>{'1'}</ClayPagination.Item>
+			<ClayPagination.Ellipsis />
+			<ClayPagination.Item>{'End'}</ClayPagination.Item>
+		</ClayPagination>
+	))
+	.add('ClayPaginationWithBasicItems w/ links', () => {
 		const totalPages = number('Number of pages', 25);
 
 		return (
-			<ClayPagination
+			<ClayPaginationWithBasicItems
 				activePage={number('Active Page', 8)}
 				ellipsisBuffer={number('Ellipsis Buffer', 2)}
 				hrefConstructor={page => `/#${page}`}
@@ -43,17 +53,17 @@ storiesOf('Components|ClayPagination', module)
 			/>
 		);
 	})
-	.add('buttons', () => {
+	.add('ClayPaginationWithBasicItems w/ buttons', () => {
 		const totalPages = number('Number of pages', 25);
 
 		return <PaginationWithState totalPages={totalPages} />;
 	})
-	.add('sizes', () => {
+	.add('ClayPaginationWithBasicItems w/ sizes', () => {
 		const totalPages = number('Number of pages', 25);
 
 		return (
 			<>
-				<ClayPagination
+				<ClayPaginationWithBasicItems
 					activePage={number('Active Page', 8)}
 					ellipsisBuffer={number('Ellipsis Buffer', 2)}
 					hrefConstructor={page => `/#${page}`}
@@ -61,14 +71,14 @@ storiesOf('Components|ClayPagination', module)
 					spritemap={spritemap}
 					totalPages={totalPages}
 				/>
-				<ClayPagination
+				<ClayPaginationWithBasicItems
 					activePage={number('Active Page', 8)}
 					ellipsisBuffer={number('Ellipsis Buffer', 2)}
 					hrefConstructor={page => `/#${page}`}
 					spritemap={spritemap}
 					totalPages={totalPages}
 				/>
-				<ClayPagination
+				<ClayPaginationWithBasicItems
 					activePage={number('Active Page', 8)}
 					ellipsisBuffer={number('Ellipsis Buffer', 2)}
 					hrefConstructor={page => `/#${page}`}
@@ -79,7 +89,7 @@ storiesOf('Components|ClayPagination', module)
 			</>
 		);
 	})
-	.add('w/ disabled pages', () => {
+	.add('ClayPaginationWithBasicItems w/ disabled pages', () => {
 		const totalPages = number('Number of pages', 5);
 
 		return (
@@ -89,7 +99,7 @@ storiesOf('Components|ClayPagination', module)
 			/>
 		);
 	})
-	.add('w/ bar low-levels', () => {
+	.add('ClayPaginationWithBasicItems w/ bar low-levels', () => {
 		const PaginationBar = ({numberOfItems}: any) => {
 			const [active, setActive] = React.useState(false);
 			const [activePage, setActivePage] = React.useState(1);
@@ -152,7 +162,7 @@ storiesOf('Components|ClayPagination', module)
 						)} of ${numberOfItems}`}
 					</div>
 
-					<ClayPagination
+					<ClayPaginationWithBasicItems
 						activePage={activePage}
 						onPageChange={page => page && setActivePage(page)}
 						spritemap={spritemap}

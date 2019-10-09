@@ -11,7 +11,7 @@ import {sub} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
 
-import ClayPagination from './Pagination';
+import {ClayPaginationWithBasicItems} from './PaginationWithBasicItems';
 
 const defaultDeltas = [
 	{
@@ -196,7 +196,7 @@ export const ClayPaginationWithBar: React.FunctionComponent<IProps> = ({
 				])}
 			</div>
 
-			<ClayPagination
+			<ClayPaginationWithBasicItems
 				activePage={activePage}
 				disabledPages={disabledPages}
 				ellipsisBuffer={ellipsisBuffer}
