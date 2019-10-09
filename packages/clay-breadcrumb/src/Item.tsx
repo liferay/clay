@@ -8,7 +8,7 @@ import ClayButton from '@clayui/button';
 import classNames from 'classnames';
 import React from 'react';
 
-export interface IBreadcrumbItem extends React.HTMLAttributes<HTMLLIElement> {
+interface IItem extends React.HTMLAttributes<HTMLLIElement> {
 	/**
 	 * Flag to indicate if the Breadcrumb item is active or not.
 	 */
@@ -30,13 +30,7 @@ export interface IBreadcrumbItem extends React.HTMLAttributes<HTMLLIElement> {
 	onClick?: (event: React.SyntheticEvent) => void;
 }
 
-export const BreadcrumbItem = ({
-	active,
-	href,
-	label,
-	onClick,
-	...otherProps
-}: IBreadcrumbItem) => (
+const Item = ({active, href, label, onClick, ...otherProps}: IItem) => (
 	<li
 		className={classNames('breadcrumb-item', {
 			active,
@@ -73,3 +67,5 @@ export const BreadcrumbItem = ({
 		)}
 	</li>
 );
+
+export default Item;

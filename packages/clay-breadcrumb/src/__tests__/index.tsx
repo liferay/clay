@@ -4,25 +4,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayNavigation, {ClayBreadcrumbNav, ClayVerticalNav} from '..';
+import ClayBreadcrumb from '..';
 import {cleanup, fireEvent, render} from '@testing-library/react';
 import React from 'react';
 
-describe('ClayNavigation', () => {
-	afterEach(() => cleanup());
-
-	it('renders', () => {
-		const {container} = render(
-			<ClayNavigation>
-				<div />
-			</ClayNavigation>
-		);
-
-		expect(container).toMatchSnapshot();
-	});
-});
-
-describe('ClayBreadcrumbNav', () => {
+describe('ClayBreadcrumb', () => {
 	afterEach(() => cleanup());
 
 	const items = [
@@ -51,7 +37,7 @@ describe('ClayBreadcrumbNav', () => {
 
 	it('renders', () => {
 		const {container} = render(
-			<ClayBreadcrumbNav items={items} spritemap="path/to/spritemap" />
+			<ClayBreadcrumb items={items} spritemap="path/to/spritemap" />
 		);
 
 		expect(container).toMatchSnapshot();
@@ -74,7 +60,7 @@ describe('ClayBreadcrumbNav', () => {
 		];
 
 		const {container} = render(
-			<ClayBreadcrumbNav
+			<ClayBreadcrumb
 				ellipsisBuffer={3}
 				items={items}
 				spritemap="path/to/spritemap"
@@ -83,7 +69,7 @@ describe('ClayBreadcrumbNav', () => {
 
 		expect(mockWarnings).toBeCalled();
 		expect(mockWarnings.mock.calls[0][0]).toBe(
-			'Warning: ClayBreadcrumbNav expects at least one `active` item on `items`.'
+			'Warning: ClayBreadcrumb expects at least one `active` item on `items`.'
 		);
 
 		expect(container).toMatchSnapshot();
@@ -92,7 +78,7 @@ describe('ClayBreadcrumbNav', () => {
 
 	it('renders with properties passed by `ellipsisProps`', () => {
 		const {container} = render(
-			<ClayBreadcrumbNav
+			<ClayBreadcrumb
 				ellipsisBuffer={1}
 				ellipsisProps={{style: {fontSize: '15px'}}}
 				items={items}
@@ -133,7 +119,7 @@ describe('ClayBreadcrumbNav', () => {
 		];
 
 		const {container, getByTestId} = render(
-			<ClayBreadcrumbNav
+			<ClayBreadcrumb
 				ellipsisBuffer={1}
 				items={itemsWithoutHref}
 				spritemap="path/to/spritemap"
@@ -147,54 +133,5 @@ describe('ClayBreadcrumbNav', () => {
 		expect(itemClickMock.mock.calls[0][0].type).toBe('click');
 
 		expect(container).toMatchSnapshot();
-	});
-});
-
-describe('ClayVerticalNav', () => {
-	afterEach(() => cleanup());
-
-	const items = [
-		{
-			initialExpanded: false,
-			items: [
-				{
-					href: '#nested1',
-					label: 'Nested1',
-				},
-			],
-			label: 'Home',
-		},
-	];
-
-	it('renders', () => {
-		const {container} = render(
-			<ClayVerticalNav
-				activeLabel="Home"
-				items={items}
-				spritemap="/path/to"
-			/>
-		);
-
-		expect(container).toMatchSnapshot();
-	});
-
-	it('expands items when clicked', () => {
-		const {container, getByText} = render(
-			<ClayVerticalNav
-				activeLabel="foo"
-				items={items}
-				spritemap="/path/to"
-			/>
-		);
-
-		expect(
-			container.querySelector('.collapsing.show .nav-item')
-		).toBeFalsy();
-
-		fireEvent.click(getByText('Home'));
-
-		expect(
-			container.querySelector('.collapsing.show .nav-item')
-		).toBeTruthy();
 	});
 });

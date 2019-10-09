@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayNav renders 1`] = `
+<div>
+  <ul
+    class="nav"
+  >
+    <div />
+  </ul>
+</div>
+`;
+
+exports[`ClayVerticalNav renders 1`] = `
+<div>
+  <nav
+    class="menubar menubar-transparent menubar-vertical-expand-md"
+  >
+    <button
+      class="menubar-toggler"
+    >
+      Home
+      <svg
+        class="lexicon-icon lexicon-icon-caret-bottom"
+        focusable="false"
+        role="presentation"
+      >
+        <use
+          xlink:href="/path/to#caret-bottom"
+        />
+      </svg>
+    </button>
+    <div
+      class="collapse menubar-collapse"
+    >
+      <ul
+        class="nav nav-nested"
+      >
+        <li
+          class="nav-item"
+        >
+          <button
+            class="nav-link collapse-icon btn btn-unstyled"
+            role="button"
+            type="button"
+          >
+            Home
+            <span
+              class="collapse-icon-closed"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-caret-right"
+                focusable="false"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/path/to#caret-right"
+                />
+              </svg>
+            </span>
+            <span
+              class="collapse-icon-open"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-caret-bottom"
+                focusable="false"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/path/to#caret-bottom"
+                />
+              </svg>
+            </span>
+          </button>
+          <div
+            class="collapse show"
+          >
+            <ul
+              class="nav nav-stacked"
+            >
+              <li
+                class="nav-item"
+              >
+                <a
+                  class="nav-link"
+                  href="#nested1"
+                  role="button"
+                >
+                  Nested1
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;

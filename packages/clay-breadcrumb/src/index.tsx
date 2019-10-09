@@ -9,8 +9,11 @@ import classNames from 'classnames';
 import React from 'react';
 import warning from 'warning';
 
-import {BreadcrumbEllipsis} from './BreadcrumbEllipsis';
-import {BreadcrumbItem, IBreadcrumbItem} from './BreadcrumbItem';
+import Ellipsis from './Ellipsis';
+import Item from './Item';
+
+type TItem = React.ComponentProps<typeof Item>;
+type TItems = Array<TItem>;
 
 interface IProps extends React.HTMLAttributes<HTMLOListElement> {
 	/**
@@ -27,7 +30,7 @@ interface IProps extends React.HTMLAttributes<HTMLOListElement> {
 	/**
 	 * Property to define Breadcrumb's items.
 	 */
-	items: Array<IBreadcrumbItem>;
+	items: TItems;
 
 	/**
 	 * Path to the location of the spritemap resource.
@@ -35,13 +38,13 @@ interface IProps extends React.HTMLAttributes<HTMLOListElement> {
 	spritemap?: string;
 }
 
-const findActiveItems = (items: Array<IBreadcrumbItem>) => {
+const findActiveItems = (items: TItems) => {
 	return items.filter(item => {
 		return item.active;
 	});
 };
 
-export const ClayBreadcrumbNav: React.FunctionComponent<IProps> = ({
+const ClayBreadcrumb: React.FunctionComponent<IProps> = ({
 	className,
 	ellipsisBuffer = 1,
 	ellipsisProps = {},
@@ -51,7 +54,7 @@ export const ClayBreadcrumbNav: React.FunctionComponent<IProps> = ({
 }: IProps) => {
 	warning(
 		findActiveItems(items).length === 1,
-		'ClayBreadcrumbNav expects at least one `active` item on `items`.'
+		'ClayBreadcrumb expects at least one `active` item on `items`.'
 	);
 
 	const activeItems = findActiveItems(items);
@@ -59,7 +62,7 @@ export const ClayBreadcrumbNav: React.FunctionComponent<IProps> = ({
 	const breadCrumbItems = ellipsisBuffer
 		? getEllipsisItems(
 				{
-					EllipsisComponent: BreadcrumbEllipsis,
+					EllipsisComponent: Ellipsis,
 					ellipsisProps,
 					items,
 					spritemap,
@@ -71,20 +74,21 @@ export const ClayBreadcrumbNav: React.FunctionComponent<IProps> = ({
 
 	return (
 		<ol {...otherProps} className={classNames('breadcrumb', className)}>
-			{breadCrumbItems.map(
-				(item: IBreadcrumbItem | React.ReactNode, i: number) =>
-					React.isValidElement(item) ? (
-						React.cloneElement(item, {key: `ellipsis${i}`})
-					) : (
-						<BreadcrumbItem
-							active={(item as IBreadcrumbItem).active}
-							href={(item as IBreadcrumbItem).href}
-							key={`breadcrumbItem${i}`}
-							label={(item as IBreadcrumbItem).label}
-							onClick={(item as IBreadcrumbItem).onClick}
-						/>
-					)
+			{breadCrumbItems.map((item: TItem | React.ReactNode, i: number) =>
+				React.isValidElement(item) ? (
+					React.cloneElement(item, {key: `ellipsis${i}`})
+				) : (
+					<Item
+						active={(item as TItem).active}
+						href={(item as TItem).href}
+						key={`breadcrumbItem${i}`}
+						label={(item as TItem).label}
+						onClick={(item as TItem).onClick}
+					/>
+				)
 			)}
 		</ol>
 	);
 };
+
+export default ClayBreadcrumb;

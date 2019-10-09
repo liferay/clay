@@ -1,4 +1,4 @@
-# clay-navigation
+# clay-nav
 
 React component for Navigation from clay-css
 

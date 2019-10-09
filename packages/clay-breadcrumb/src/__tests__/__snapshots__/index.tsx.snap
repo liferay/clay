@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayBreadcrumbNav calls callback when an item is clicked 1`] = `
+exports[`ClayBreadcrumb calls callback when an item is clicked 1`] = `
 <div>
   <ol
     class="breadcrumb"
@@ -78,7 +78,7 @@ exports[`ClayBreadcrumbNav calls callback when an item is clicked 1`] = `
 </div>
 `;
 
-exports[`ClayBreadcrumbNav renders 1`] = `
+exports[`ClayBreadcrumb renders 1`] = `
 <div>
   <ol
     class="breadcrumb"
@@ -156,7 +156,7 @@ exports[`ClayBreadcrumbNav renders 1`] = `
 </div>
 `;
 
-exports[`ClayBreadcrumbNav renders with properties passed by \`ellipsisProps\` 1`] = `
+exports[`ClayBreadcrumb renders with properties passed by \`ellipsisProps\` 1`] = `
 <div>
   <ol
     class="breadcrumb"
@@ -235,7 +235,7 @@ exports[`ClayBreadcrumbNav renders with properties passed by \`ellipsisProps\` 1
 </div>
 `;
 
-exports[`ClayBreadcrumbNav throws a warning when not passing \`active\` to any \`items\` 1`] = `
+exports[`ClayBreadcrumb throws a warning when not passing \`active\` to any \`items\` 1`] = `
 <div>
   <ol
     class="breadcrumb"
@@ -273,102 +273,5 @@ exports[`ClayBreadcrumbNav throws a warning when not passing \`active\` to any \
       </a>
     </li>
   </ol>
-</div>
-`;
-
-exports[`ClayNavigation renders 1`] = `
-<div>
-  <ul
-    class="nav"
-  >
-    <div />
-  </ul>
-</div>
-`;
-
-exports[`ClayVerticalNav renders 1`] = `
-<div>
-  <nav
-    class="menubar menubar-transparent menubar-vertical-expand-md"
-  >
-    <button
-      class="menubar-toggler"
-    >
-      Home
-      <svg
-        class="lexicon-icon lexicon-icon-caret-bottom"
-        focusable="false"
-        role="presentation"
-      >
-        <use
-          xlink:href="/path/to#caret-bottom"
-        />
-      </svg>
-    </button>
-    <div
-      class="collapse menubar-collapse"
-    >
-      <ul
-        class="nav nav-nested"
-      >
-        <li
-          class="nav-item"
-        >
-          <button
-            class="nav-link collapse-icon btn btn-unstyled"
-            role="button"
-            type="button"
-          >
-            Home
-            <span
-              class="collapse-icon-closed"
-            >
-              <svg
-                class="lexicon-icon lexicon-icon-caret-right"
-                focusable="false"
-                role="presentation"
-              >
-                <use
-                  xlink:href="/path/to#caret-right"
-                />
-              </svg>
-            </span>
-            <span
-              class="collapse-icon-open"
-            >
-              <svg
-                class="lexicon-icon lexicon-icon-caret-bottom"
-                focusable="false"
-                role="presentation"
-              >
-                <use
-                  xlink:href="/path/to#caret-bottom"
-                />
-              </svg>
-            </span>
-          </button>
-          <div
-            class="collapse show"
-          >
-            <ul
-              class="nav nav-stacked"
-            >
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#nested1"
-                  role="button"
-                >
-                  Nested1
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
 </div>
 `;

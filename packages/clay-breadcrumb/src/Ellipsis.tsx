@@ -9,14 +9,13 @@ import ClayDropDown from '@clayui/drop-down';
 import ClayIcon from '@clayui/icon';
 import React, {useState} from 'react';
 
-import {IBreadcrumbItem} from './BreadcrumbItem';
+import Item from './Item';
 
-export interface IBreadcrumbEllipsisProps
-	extends React.HTMLAttributes<HTMLLIElement> {
+interface IEllipsisProps extends React.HTMLAttributes<HTMLLIElement> {
 	/**
 	 * Property to define BreadcrumbEllipsis's items.
 	 */
-	items: Array<IBreadcrumbItem>;
+	items: Array<React.ComponentProps<typeof Item>>;
 
 	/**
 	 * Path to the location of the spritemap resource.
@@ -24,9 +23,11 @@ export interface IBreadcrumbEllipsisProps
 	spritemap?: string;
 }
 
-export const BreadcrumbEllipsis: React.FunctionComponent<
-	IBreadcrumbEllipsisProps
-> = ({items, spritemap, ...otherProps}) => {
+const Ellipsis: React.FunctionComponent<IEllipsisProps> = ({
+	items,
+	spritemap,
+	...otherProps
+}) => {
 	const [active, setActive] = useState(false);
 
 	return (
@@ -62,3 +63,5 @@ export const BreadcrumbEllipsis: React.FunctionComponent<
 		</ClayDropDown>
 	);
 };
+
+export default Ellipsis;

@@ -6,11 +6,11 @@
 
 import '@clayui/css/lib/css/atlas.css';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
-import {boolean, number} from '@storybook/addon-knobs';
+import {number} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React from 'react';
 
-import {ClayBreadcrumbNav, ClayVerticalNav} from '../src';
+import ClayBreadcrumb from '../src';
 
 const BreadcrumbWithState = () => {
 	const [active, setActive] = React.useState<number>(0);
@@ -44,7 +44,7 @@ const BreadcrumbWithState = () => {
 	];
 
 	return (
-		<ClayBreadcrumbNav
+		<ClayBreadcrumb
 			ellipsisBuffer={1}
 			items={items}
 			spritemap={spritemap}
@@ -52,9 +52,9 @@ const BreadcrumbWithState = () => {
 	);
 };
 
-storiesOf('Components|ClayNavigation', module)
-	.add('w/ breadcrumb', () => (
-		<ClayBreadcrumbNav
+storiesOf('Components|ClayBreadcrumb', module)
+	.add('default', () => (
+		<ClayBreadcrumb
 			ellipsisBuffer={number('Ellipsis Buffer', 3)}
 			items={[
 				{
@@ -106,12 +106,12 @@ storiesOf('Components|ClayNavigation', module)
 			spritemap={spritemap}
 		/>
 	))
-	.add('w/ breadcrumb without anchors', () => {
+	.add('w/ buttons', () => {
 		const onItemClick = (event: any) =>
 			alert(event.target.parentElement.title);
 
 		return (
-			<ClayBreadcrumbNav
+			<ClayBreadcrumb
 				ellipsisBuffer={number('Ellipsis Buffer', 3)}
 				items={[
 					{
@@ -164,51 +164,4 @@ storiesOf('Components|ClayNavigation', module)
 			/>
 		);
 	})
-	.add('w/ breadcrumb using state', () => <BreadcrumbWithState />)
-	.add('w/ vertical', () => {
-		return (
-			<ClayVerticalNav
-				activeLabel="Five"
-				items={[
-					{
-						initialExpanded: true,
-						items: [
-							{
-								href: '#nested1',
-								label: 'Nested1',
-							},
-						],
-						label: 'Home',
-					},
-					{
-						href: '#2',
-						label: 'About',
-					},
-					{
-						href: '#3',
-						label: 'Contact',
-					},
-					{
-						items: [
-							{
-								active: true,
-								href: '#5',
-								label: 'Five',
-							},
-							{
-								href: '#6',
-								label: 'Six',
-							},
-						],
-						label: 'Projects',
-					},
-					{
-						href: '#7',
-						label: 'Seven',
-					},
-				]}
-				large={boolean('large: ', false)}
-				spritemap={spritemap}
-			/>
-		);
-	});
+	.add('w/ state', () => <BreadcrumbWithState />);
