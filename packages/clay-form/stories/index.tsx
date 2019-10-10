@@ -28,6 +28,7 @@ const ClayCheckboxWithState = () => {
 			indeterminate={boolean('Indeterminate', false)}
 			label={text('Label', 'Default')}
 			onChange={() => setValue(val => !val)}
+			value="default"
 		/>
 	);
 };
