@@ -22,7 +22,7 @@ const ClayManagementToolbar: React.FunctionComponent<IProps> & {
 	Item: typeof Item;
 	ItemList: typeof ItemList;
 	Search: typeof Search;
-} = ({active = false, children, className, ...otherProps}) => (
+} = ({active = false, children, className, ...otherProps}: IProps) => (
 	<nav
 		{...otherProps}
 		className={classNames(
