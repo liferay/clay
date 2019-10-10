@@ -7,15 +7,20 @@ description: 'List is a visual representation of a dataset that provides more fl
 <div class="nav-toc">
 
 -   [Example](#example)
--   [Variations](#variations) - [Bordered](#bordered)
+-   [Variations](#variations)
+    -   [Bordered](#bordered)
     -   [Default](#default)
     -   [Notification](#notification)
 -   [Group Elements](#group-elements)
-    -   [Header](#header) - [Items](#items)
+    -   [Header](#header)
+    -   [Items](#items)
         -   [Colors](#colors)
-        -   [Active Colors](#active-colors) - [Items as Links and Buttons](#items-as-links-and-buttons) - [Actions on Hover](#actions-on-hover) - [Anchors](#anchors)
+        -   [Active Colors](#active-colors)
+        -   [Items as Links and Buttons](#items-as-links-and-buttons)
+        -   [Actions on Hover](#actions-on-hover)
+            -   [Anchors](#anchors)
             -   [Buttons](#buttons)
-                -   [Active](#active)
+        -   [Active](#active)
 
 </div>
 </div>

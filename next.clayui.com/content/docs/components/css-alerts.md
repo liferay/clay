@@ -6,10 +6,19 @@ description: 'Alerts are used to capture the attention of the user in an intrusi
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Colors](#colors) - [Non-standard colors](#non-standard-colors)
--   [Examples](#examples) - [Toast](#toast) - [Embedded](#embedded) - [Stripe](#stripe)
--   [Non-standard examples](#non-standard-examples) - [Alert Lists](#alert-lists)
--   [Additional Options](#additional-options) - [Mixed HTML Content](#mixed-html-content) - [Dismissible Alerts](#dismissible-alerts) - [Alert Notifications Absolute](#alert-notifications-absolute) - [Fixed Notifications](#fixed-notifications)
+-   [Colors](#colors)
+    -   [Non-standard colors](#non-standard-colors)
+-   [Examples](#examples)
+    -   [Toast](#toast)
+    -   [Embedded](#embedded)
+    -   [Stripe](#stripe)
+-   [Non-standard examples](#non-standard-examples)
+    -   [Alert Lists](#alert-lists)
+-   [Additional Options](#additional-options)
+    -   [Mixed HTML Content](#mixed-html-content)
+    -   [Dismissible Alerts](#dismissible-alerts)
+    -   [Alert Notifications Absolute](#alert-notifications-absolute)
+    -   [Fixed Notifications](#fixed-notifications)
 
 </div>
 </div>

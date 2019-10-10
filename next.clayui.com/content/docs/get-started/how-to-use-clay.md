@@ -8,7 +8,8 @@ order: 2
 <div class="nav-toc">
 
 -   [Install with NPM or Yarn](#install-with-npm-or-yarn)
-    -   [NPM](#npm) - [Yarn](#yarn)
+    -   [NPM](#npm)
+    -   [Yarn](#yarn)
 -   [Install via Clay CSS CDN](#install-via-clay-css-cdn)
 -   [Quick start](#quick-start)
 

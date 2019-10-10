@@ -12,7 +12,10 @@ description: 'This section demonstrates the different text input types, includin
 -   [Sizes](#sizes)
 -   [Textarea](#textarea)
 -   [Select menu](#select-menu)
--   [Validations](#validations) - [Success](#success) - [Warning](#warning) - [Error](#error)
+-   [Validations](#validations)
+    -   [Success](#success)
+    -   [Warning](#warning)
+    -   [Error](#error)
 
 </div>
 </div>

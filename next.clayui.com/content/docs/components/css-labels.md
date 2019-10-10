@@ -8,7 +8,12 @@ description: 'Labels categorize information, providing quick recognition.'
 
 -   [Colors](#colors)
 -   [Sizes](#sizes)
--   [Variations](#variations) - [Simple](#label) - [Dismissible](#dismissible) - [Link](#link) - [Interactive](#interactive) - [Anchor Tag](#anchor-tag)
+-   [Variations](#variations)
+    -   [Simple](#label)
+    -   [Dismissible](#dismissible)
+    -   [Link](#link)
+    -   [Interactive](#interactive)
+    -   [Anchor Tag](#anchor-tag)
 
 </div>
 </div>
