@@ -8,6 +8,9 @@ import classNames from 'classnames';
 import React from 'react';
 
 interface IProps extends React.HTMLAttributes<HTMLLIElement> {
+	/**
+	 * Flag to indicate the Management Toolbar Results Bar Item should fit the width of the parent container.
+	 */
 	expand?: boolean;
 }
 
@@ -16,7 +19,7 @@ const ResultsBarItem: React.FunctionComponent<IProps> = ({
 	className,
 	expand = false,
 	...otherProps
-}) => (
+}: IProps) => (
 	<li
 		{...otherProps}
 		className={classNames('tbar-item', className, {
