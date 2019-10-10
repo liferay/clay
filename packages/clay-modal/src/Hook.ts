@@ -79,6 +79,10 @@ const useUserInteractions = (
 	};
 
 	const handleDocumentClick = (event: Event) => {
+		if (event.defaultPrevented) {
+			return;
+		}
+
 		if (
 			elementRef.current &&
 			event.target !== null &&
