@@ -13,7 +13,6 @@ import Editor from './Editor';
 const spritemap = '/images/icons/icons.svg';
 
 const formInputGroupImports = `import ClayForm, {ClayInput} from '@clayui/form';
-import ClayButton from '@clayui/button';
 import React from 'react';`;
 
 const formInputCode = `const Component = () => {
@@ -113,7 +112,6 @@ render(<Component />)`;
 
 const FormInputGroupSeparated = () => {
 	const scope = {
-		ClayButton,
 		ClayForm,
 		ClayInput,
 		spritemap,
@@ -171,7 +169,6 @@ render(<Component />)`;
 
 const FormInputGroupConnected = () => {
 	const scope = {
-		ClayButton,
 		ClayForm,
 		ClayInput,
 		spritemap,
@@ -185,6 +182,10 @@ const FormInputGroupConnected = () => {
 		/>
 	);
 };
+
+const formInputGroupMixedImports = `import ClayForm, {ClayInput} from '@clayui/form';
+import ClayButton from '@clayui/button';
+import React from 'react';`;
 
 const formInputGroupMixedCode = `const Component = () => {
 	return (
@@ -219,7 +220,7 @@ const FormInputGroupMixed = () => {
 	return (
 		<Editor
 			code={formInputGroupMixedCode}
-			imports={formInputGroupImports}
+			imports={formInputGroupMixedImports}
 			scope={scope}
 		/>
 	);
