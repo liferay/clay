@@ -104,7 +104,7 @@ describe('Modal -> IncrementalInteractions', () => {
 		const ModalWithEventPrevented = () => {
 			const handleDocumentClick = (event: Event) => {
 				event.preventDefault();
-			}
+			};
 
 			useEffect(() => {
 				document.addEventListener('click', handleDocumentClick);
@@ -114,9 +114,7 @@ describe('Modal -> IncrementalInteractions', () => {
 				};
 			}, []);
 
-			return (
-				<ModalWithState />
-			);
+			return <ModalWithState />;
 		};
 
 		const {getByLabelText} = render(<ModalWithEventPrevented />);
