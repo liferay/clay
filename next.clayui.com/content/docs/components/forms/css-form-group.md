@@ -1,13 +1,13 @@
 ---
-title: "Form Group"
-description: "Forms obtain user data and transmit it to the system to either store the data, produce an action, or both."
+title: 'Form Group'
+description: 'Forms obtain user data and transmit it to the system to either store the data, produce an action, or both.'
 ---
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Autofit](#autofit)
-- [Horizontal](#horizontal)
+-   [Autofit](#autofit)
+-   [Horizontal](#horizontal)
 
 </div>
 </div>
@@ -33,11 +33,21 @@ The `.form-group` class is the easiest way to add some structure to forms. It pr
 <form>
 	<div class="form-group">
 		<label for="firstNameInput">First Name</label>
-		<input class="form-control" id="firstNameInput" placeholder="First Name" type="text">
+		<input
+			class="form-control"
+			id="firstNameInput"
+			placeholder="First Name"
+			type="text"
+		/>
 	</div>
 	<div class="form-group">
 		<label for="lastNameInput">Last Name</label>
-		<input class="form-control" id="lastNameInput" placeholder="Last Name" type="text">
+		<input
+			class="form-control"
+			id="lastNameInput"
+			placeholder="Last Name"
+			type="text"
+		/>
 	</div>
 </form>
 ```
@@ -190,15 +200,23 @@ To make a `.form-group-item` shrink to the size of its content add `.form-group-
 		<div class="form-group-item">
 			<label for="formInlineAutofitTextInput1">
 				<span class="text-truncate-inline">
-					<span class="text-truncate" title="Form Inline Autofit">Form Inline Autofit</span>
+					<span class="text-truncate" title="Form Inline Autofit"
+						>Form Inline Autofit</span
+					>
 				</span>
 			</label>
-			<input class="form-control" id="formInlineAutofitTextInput1" type="text">
+			<input
+				class="form-control"
+				id="formInlineAutofitTextInput1"
+				type="text"
+			/>
 		</div>
 		<div class="form-group-item" style="max-width: 200px;">
 			<label for="formInlineAutofitSelectElement1">
 				<span class="text-truncate-inline">
-					<span class="text-truncate" title="Select Element">Select Element</span>
+					<span class="text-truncate" title="Select Element"
+						>Select Element</span
+					>
 				</span>
 			</label>
 			<select class="form-control" id="formInlineAutofitSelectElement1">
@@ -212,43 +230,72 @@ To make a `.form-group-item` shrink to the size of its content add `.form-group-
 		<div class="form-group-item">
 			<label for="formInlineAutofitFirstName">
 				<span class="text-truncate-inline">
-					<span class="text-truncate" title="First Name">First Name</span>
+					<span class="text-truncate" title="First Name"
+						>First Name</span
+					>
 				</span>
 			</label>
-			<input class="form-control" id="formInlineAutofitFirstName" placeholder="First Name" type="text">
+			<input
+				class="form-control"
+				id="formInlineAutofitFirstName"
+				placeholder="First Name"
+				type="text"
+			/>
 		</div>
 		<div class="form-group-item">
 			<label for="formInlineAutofitLastName">
 				<span class="text-truncate-inline">
-					<span class="text-truncate" title="Last Name">Last Name</span>
+					<span class="text-truncate" title="Last Name"
+						>Last Name</span
+					>
 				</span>
 			</label>
-			<input class="form-control" id="formInlineAutofitLastName" placeholder="Last Name" type="text">
+			<input
+				class="form-control"
+				id="formInlineAutofitLastName"
+				placeholder="Last Name"
+				type="text"
+			/>
 		</div>
 		<div class="form-group-item">
 			<label for="formInlineAutofitInputGroup">
 				<span class="text-truncate-inline">
-					<span class="text-truncate" title="Input Group">Input Group</span>
+					<span class="text-truncate" title="Input Group"
+						>Input Group</span
+					>
 				</span>
 			</label>
 			<div class="input-group">
-				<div class="input-group-item input-group-item-shrink input-group-prepend">
+				<div
+					class="input-group-item input-group-item-shrink input-group-prepend"
+				>
 					<span class="input-group-text">$</span>
 				</div>
 				<div class="input-group-item input-group-prepend">
-					<input class="form-control" id="formInlineAutofitInputGroup" placeholder="Amount">
+					<input
+						class="form-control"
+						id="formInlineAutofitInputGroup"
+						placeholder="Amount"
+					/>
 				</div>
-				<div class="input-group-append input-group-item input-group-item-shrink">
+				<div
+					class="input-group-append input-group-item input-group-item-shrink"
+				>
 					<span class="input-group-text">.00</span>
 				</div>
 			</div>
 			<div class="form-feedback-group">
-				<div class="form-text">Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino.</div>
+				<div class="form-text">
+					Plunger pot, extra siphon latte, as americano aromatic roast
+					cultivar cup cup frappuccino.
+				</div>
 			</div>
 		</div>
 	</div>
 	<div class="form-group-autofit">
-		<div class="form-group-item form-group-item-label form-group-item-label-spacer form-group-item-shrink">
+		<div
+			class="form-group-item form-group-item-label form-group-item-label-spacer form-group-item-shrink"
+		>
 			<label for="formInlineAutofitCity">
 				<span class="text-truncate-inline">
 					<span class="text-truncate" title="City">City</span>
@@ -256,12 +303,22 @@ To make a `.form-group-item` shrink to the size of its content add `.form-group-
 			</label>
 		</div>
 		<div class="form-group-item form-group-item-label-spacer">
-			<input class="form-control" id="formInlineAutofitCity" placeholder="City" type="text">
+			<input
+				class="form-control"
+				id="formInlineAutofitCity"
+				placeholder="City"
+				type="text"
+			/>
 		</div>
 		<div class="form-group-item">
 			<label for="formInlineAutofitState">
 				<span class="text-truncate-inline">
-					<span class="text-truncate" title="State ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">State ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+					<span
+						class="text-truncate"
+						title="State ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual"
+						>State
+						ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span
+					>
 				</span>
 			</label>
 			<select class="form-control" id="formInlineAutofitState">
@@ -279,9 +336,17 @@ To make a `.form-group-item` shrink to the size of its content add `.form-group-
 					<span class="text-truncate" title="Zip Code">Zip Code</span>
 				</span>
 			</label>
-			<input class="form-control" id="formInlineAutofitZip" placeholder="Zip" type="text">
+			<input
+				class="form-control"
+				id="formInlineAutofitZip"
+				placeholder="Zip"
+				type="text"
+			/>
 			<div class="form-feedback-group">
-				<div class="form-text">Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino.</div>
+				<div class="form-text">
+					Plunger pot, extra siphon latte, as americano aromatic roast
+					cultivar cup cup frappuccino.
+				</div>
 			</div>
 		</div>
 		<div class="form-group-item">
@@ -291,13 +356,21 @@ To make a `.form-group-item` shrink to the size of its content add `.form-group-
 				</span>
 			</label>
 			<div class="input-group">
-				<div class="input-group-item input-group-item-shrink input-group-prepend">
+				<div
+					class="input-group-item input-group-item-shrink input-group-prepend"
+				>
 					<span class="input-group-text">$</span>
 				</div>
 				<div class="input-group-item input-group-prepend">
-					<input class="form-control" id="formInlineAutofitDonation" placeholder="Amount">
+					<input
+						class="form-control"
+						id="formInlineAutofitDonation"
+						placeholder="Amount"
+					/>
 				</div>
-				<div class="input-group-append input-group-item input-group-item-shrink">
+				<div
+					class="input-group-append input-group-item input-group-item-shrink"
+				>
 					<span class="input-group-text">.00</span>
 				</div>
 			</div>
@@ -371,36 +444,67 @@ Create horizontal forms by placing each `input` inside `form-group-item` and `la
 ```html
 <form class="my-custom-form">
 	<div class="form-group-autofit">
-		<div class="form-group-item form-group-item-label form-group-item-shrink">
+		<div
+			class="form-group-item form-group-item-label form-group-item-shrink"
+		>
 			<label>Name</label>
 		</div>
 		<div class="form-group-item">
-			<input aria-label="First Name" class="form-control" placeholder="First" type="text">
+			<input
+				aria-label="First Name"
+				class="form-control"
+				placeholder="First"
+				type="text"
+			/>
 			<div class="form-feedback-group">
 				<div class="form-text">Your first name.</div>
 			</div>
 		</div>
 		<div class="form-group-item">
-			<input aria-label="Middle Name" class="form-control" placeholder="Middle" type="text">
+			<input
+				aria-label="Middle Name"
+				class="form-control"
+				placeholder="Middle"
+				type="text"
+			/>
 		</div>
 		<div class="form-group-item">
-			<input aria-label="Last Name" class="form-control" placeholder="Last" type="text">
+			<input
+				aria-label="Last Name"
+				class="form-control"
+				placeholder="Last"
+				type="text"
+			/>
 		</div>
 	</div>
 	<div class="form-group-autofit">
-		<div class="form-group-item form-group-item-label form-group-item-shrink">
+		<div
+			class="form-group-item form-group-item-label form-group-item-shrink"
+		>
 			<label for="formInlineAutofitCustomAddress1">Address 1</label>
 		</div>
 		<div class="form-group-item">
-			<input class="form-control" id="formInlineAutofitCustomAddress1" placeholder="Address 1" type="text">
+			<input
+				class="form-control"
+				id="formInlineAutofitCustomAddress1"
+				placeholder="Address 1"
+				type="text"
+			/>
 		</div>
 	</div>
 	<div class="form-group-autofit">
-		<div class="form-group-item form-group-item-label form-group-item-shrink">
+		<div
+			class="form-group-item form-group-item-label form-group-item-shrink"
+		>
 			<label for="formInlineAutofitCustomAddress2">Address 2</label>
 		</div>
 		<div class="form-group-item">
-			<input class="form-control" id="formInlineAutofitCustomAddress2" placeholder="Address 2" type="text">
+			<input
+				class="form-control"
+				id="formInlineAutofitCustomAddress2"
+				placeholder="Address 2"
+				type="text"
+			/>
 		</div>
 	</div>
 	<div class="form-group">

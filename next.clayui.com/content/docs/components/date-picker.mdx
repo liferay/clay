@@ -1,29 +1,43 @@
 ---
-title: "Date Picker"
-description: "Date and Time pickers let users select a date and time for a form."
-packageNpm: "@clayui/date-picker"
-sibling: "docs/components/forms/css-date-and-time-pickers.html"
+title: 'Date Picker'
+description: 'Date and Time pickers let users select a date and time for a form.'
+packageNpm: '@clayui/date-picker'
+sibling: 'docs/components/forms/css-date-and-time-pickers.html'
 ---
 
-import {DatePickerWithState, DatePickerWithTime, DatePickerCustomFooter, DatePickerLocale} from '../../../src/components/clay/DatePicker';
+import {
+	DatePickerWithState,
+	DatePickerWithTime,
+	DatePickerCustomFooter,
+	DatePickerLocale,
+} from '../../../src/components/clay/DatePicker';
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Time](#time)
-- [Internationalization](#internationalization)
-- [Custom Footer](#custom-footer)
-- [API](#api)
+-   [Time](#time)
+-   [Internationalization](#internationalization)
+-   [Custom Footer](#custom-footer)
+-   [API](#api)
 
 </div>
 </div>
 
 <div class="clay-site-alert alert alert-warning">
-   Take a look at our <a href="https://storybook-clayui.netlify.com/?path=/story/claydatepicker--default">Storybook</a> for more information about this component.
+	Take a look at our{' '}
+	<a href="https://storybook-clayui.netlify.com/?path=/story/claydatepicker--default">
+		Storybook
+	</a>{' '}
+	for more information about this component.
 </div>
 
 <div class="clay-site-alert alert alert-info">
-	Check the <a href="https://liferay.design/lexicon/">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/forms/picker-date-time/">Date & Time Pickers Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
+	Check the <a href="https://liferay.design/lexicon/">Lexicon</a>{' '}
+	<a href="https://liferay.design/lexicon/core-components/forms/picker-date-time/">
+		Date & Time Pickers Pattern
+	</a>{' '}
+	for a more in-depth look at the motivations and proper usage of this
+	component.
 </div>
 
 Date Picker is created following the principles of <a href="https://liferay.design/lexicon/core-components/forms/picker-date-time/">Lexicon</a>, Internationalization and Extension Points by default is integrated with Time Picker that offers the minimum of features to set a time.
@@ -34,14 +48,18 @@ For mobile viewing mode, Lexicon encourages you to use the native Date Picker, t
 
 <div class="clay-site-alert alert alert-warning">
 	<strong class="lead">Warning</strong>
-	These components are meant to cover desktop browser needs. The OS native component must be used on mobile devices.
+	These components are meant to cover desktop browser needs. The OS native component
+	must be used on mobile devices.
 </div>
 
 The component is treated as controlled, use the [`onValueChange`](#api-onValueChange) and [`value`](#api-value) APIs to control the flow of information.
 
 <div class="clay-site-alert alert alert-warning">
 	<strong class="lead">Warning</strong>
-	You can set a range of years using the API <code class="language-text">years</code>, which can be displayed in the Date Picker, if the user enters a year that is not within the range will be treated as an invalid date.
+	You can set a range of years using the API <code class="language-text">
+		years
+	</code>, which can be displayed in the Date Picker, if the user enters a year
+	that is not within the range will be treated as an invalid date.
 </div>
 
 <DatePickerWithState />
@@ -58,14 +76,20 @@ To set internationalization of the component, you need to configure the props ac
 
 <DatePickerLocale />
 
-- [`firstDayOfWeek`](#api-firstDayOfWeek) by default the value  by default the value is 0 (Sunday) and its values ​​are the days of the week, 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday).
-- [`dateFormat`](#api-dateFormat) and [`timeFormat`](#api-timeFormat) is defined according to the **formatting rules of [Moment.js](https://momentjs.com/docs/#/parsing/string-format/)**.
-- [`months`](#api-months) is an `Array<string>` with available months **starting January to December**.
-- [`weekdaysShort`](#api-weekdaysShort) is an `Array<string>` with the **names of the days of the week in short form**, starting from **Sunday to Saturday**.
+-   [`firstDayOfWeek`](#api-firstDayOfWeek) by default the value by default the value is 0 (Sunday) and its values ​​are the days of the week, 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday).
+-   [`dateFormat`](#api-dateFormat) and [`timeFormat`](#api-timeFormat) is defined according to the **formatting rules of [Moment.js](https://momentjs.com/docs/#/parsing/string-format/)**.
+-   [`months`](#api-months) is an `Array<string>` with available months **starting January to December**.
+-   [`weekdaysShort`](#api-weekdaysShort) is an `Array<string>` with the **names of the days of the week in short form**, starting from **Sunday to Saturday**.
 
 <div class="clay-site-alert alert alert-warning">
 	<strong class="lead">Warning</strong>
-	It is not necessary to reverse or change the order of the values ​​of <code class="language-text">weekdaysShort</code> the definition of the API <code class="language-text">firstDayOfWeek</code> will take care of changing this, <b>keep the order from Sunday to Saturday</b>.
+	It is not necessary to reverse or change the order of the values ​​of <code class="language-text">
+		weekdaysShort
+	</code> the definition of the API <code class="language-text">
+		firstDayOfWeek
+	</code> will take care of changing this, <b>
+		keep the order from Sunday to Saturday
+	</b>.
 </div>
 
 ## Custom Footer
@@ -76,6 +100,4 @@ To customize the Date Picker content footer you can use the [`footerElement`](#a
 
 ## API
 
-<div>
-	[APITable "clay-date-picker/src/index.tsx"]
-</div>
+<div>[APITable "clay-date-picker/src/index.tsx"]</div>

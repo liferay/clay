@@ -1,8 +1,8 @@
 ---
-title: "Modal"
-description: "A modal is a secondary window that communicates or provides an action inside the same process."
-packageNpm: "@clayui/modal"
-sibling: "docs/components/css-modals.html"
+title: 'Modal'
+description: 'A modal is a secondary window that communicates or provides an action inside the same process.'
+packageNpm: '@clayui/modal'
+sibling: 'docs/components/css-modals.html'
 ---
 
 import {Modal} from '../../../src/components/clay/Modal';
@@ -10,20 +10,24 @@ import {Modal} from '../../../src/components/clay/Modal';
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [useModal hook](#usemodal-hook)
-    - [Usage](#usage)
-- [Provider](#provider)
-- [API](#api)
-  - [ClayModal](#claymodal)
-  - [ClayModal.Body](#claymodal.body)
-  - [ClayModal.Footer](#claymodal.footer)
-  - [ClayModal.Header](#claymodal.header)
+-   [useModal hook](#usemodal-hook)
+    -   [Usage](#usage)
+-   [Provider](#provider)
+-   [API](#api)
+    -   [ClayModal](#claymodal)
+    -   [ClayModal.Body](#claymodal.body)
+    -   [ClayModal.Footer](#claymodal.footer)
+    -   [ClayModal.Header](#claymodal.header)
 
 </div>
 </div>
 
 <div class="clay-site-alert alert alert-warning">
-    Take a look at our <a href="https://storybook-clayui.netlify.com/?path=/story/claymodal--default">Storybook</a> for more information about this component.
+	Take a look at our{' '}
+	<a href="https://storybook-clayui.netlify.com/?path=/story/claymodal--default">
+		Storybook
+	</a>{' '}
+	for more information about this component.
 </div>
 
 You may want to compose your content and customize with your use cases or add your own components while still keeping the logic of a modal.
@@ -36,17 +40,18 @@ The `useModal` [hook](https://reactjs.org/docs/hooks-intro.html) is required to 
 
 `useModal` returns a signature with `observer` and `onClose`:
 
-- **observer** - Observer is the communication channel that connects ClayModal with `useModal`.
-- **onClose** - Callback is called after Modal's close animation.
+-   **observer** - Observer is the communication channel that connects ClayModal with `useModal`.
+-   **onClose** - Callback is called after Modal's close animation.
 
 ```jsx
-const { observer, onClose } = useModal({
-    onClose: () => setVisible(false)
+const {observer, onClose} = useModal({
+	onClose: () => setVisible(false),
 });
 ```
 
 <div class="clay-site-alert alert alert-warning">
-    To avoid future problems, do not use the information or change the values ​​of `observer`, it is considered a bad practice.
+	To avoid future problems, do not use the information or change the values
+	​​of `observer`, it is considered a bad practice.
 </div>
 
 To prevent Modal from closing before animation always use the `onClose` method returned by `useModal`.
@@ -62,7 +67,7 @@ To prevent Modal from closing before animation always use the `onClose` method r
 
 `useModal` is a hook so it implies that you cannot use ClayModal directly in a class component. If you'd like to use it in a class component, try the recommended strategy below.
 
-- Wrap ClayModal and `useModal` in a function component.
+-   Wrap ClayModal and `useModal` in a function component.
 
 ```jsx
 const ModalWithDialog = ({visible, onClose, title, body}) => {
@@ -115,7 +120,7 @@ Add in the project root:
 
 ```jsx
 <ClayModalProvider spritemap={spritemap}>
-    <MyApp />
+	<MyApp />
 </ClayModalProvider>
 ```
 
@@ -157,8 +162,8 @@ const MyApp = () => {
 
 Provider contains two different states that you can control:
 
-- **Close** - 0
-- **Open** - 1
+-   **Close** - 0
+-   **Open** - 1
 
 The context signature is similar to a [`useReducer`](https://reactjs.org/docs/hooks-reference.html#usereducer), contains `state` and `dispatch`.
 
@@ -174,22 +179,18 @@ dispatch({payload: {...}, type: 1});
 
 ### ClayModal
 
-<div>
-	[APITable "clay-modal/src/index.tsx"]
-</div>
+<div>[APITable "clay-modal/src/index.tsx"]</div>
 
 ### ClayModal.Body
 
-<div>
-	[APITable "clay-modal/src/Body.tsx"]
-</div>
+<div>[APITable "clay-modal/src/Body.tsx"]</div>
 
 ### ClayModal.Footer
 
-<div>
-	[APITable "clay-modal/src/Footer.tsx"]
-</div>
+<div>[APITable "clay-modal/src/Footer.tsx"]</div>
 
 ### ClayModal.Header
 
-<code class="list-api-item-type">Extends from {`React.HTMLAttributes<HTMLDivElement>`}</code>
+<code class="list-api-item-type">
+	Extends from {`React.HTMLAttributes<HTMLDivElement>`}
+</code>

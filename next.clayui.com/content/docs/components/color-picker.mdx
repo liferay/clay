@@ -1,8 +1,8 @@
 ---
-title: "Color Picker"
-description: "Color picker lets users select a color from a predefined palette, specify a color via its hexadecimal value, sample a color, and explore color values to create a custom color variation."
-packageNpm: "@clayui/color-picker"
-sibling: "docs/components/forms/css-color-picker.html"
+title: 'Color Picker'
+description: 'Color picker lets users select a color from a predefined palette, specify a color via its hexadecimal value, sample a color, and explore color values to create a custom color variation.'
+packageNpm: '@clayui/color-picker'
+sibling: 'docs/components/forms/css-color-picker.html'
 ---
 
 import {ColorPicker} from '../../../src/components/clay/ColorPicker';
@@ -10,20 +10,25 @@ import {ColorPicker} from '../../../src/components/clay/ColorPicker';
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [API](#api)
+-   [API](#api)
 
 </div>
 </div>
 
 <div class="clay-site-alert alert alert-info">
-	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/forms/picker-color/">Color Picker Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
+	Check the <a href="https://liferay.design/lexicon">Lexicon</a>{' '}
+	<a href="https://liferay.design/lexicon/core-components/forms/picker-color/">
+		Color Picker Pattern
+	</a>{' '}
+	for a more in-depth look at the motivations and proper usage of this
+	component.
 </div>
 
 Color Picker is delivered in 3 different states: default colors, custom colors and native.
 
-- **Default colors**: a predefined list of colors to the dropdown that is not allowed to change or manipulate.
-- **Custom colors**: using the [`colors`](#api-colors) API in conjunction with [`onColorsChange`](#api-onColorsChange) enables the user to modify colors and add new ones.
-- **Native**: use the [`useNative`](#api-useNative) API when the color picker is being used in a native environment, it changes to the browser default color picker.
+-   **Default colors**: a predefined list of colors to the dropdown that is not allowed to change or manipulate.
+-   **Custom colors**: using the [`colors`](#api-colors) API in conjunction with [`onColorsChange`](#api-onColorsChange) enables the user to modify colors and add new ones.
+-   **Native**: use the [`useNative`](#api-useNative) API when the color picker is being used in a native environment, it changes to the browser default color picker.
 
 <ColorPicker />
 
@@ -31,6 +36,4 @@ We recommend that you review the [use cases in the Storybook](https://storybook.
 
 ## API
 
-<div>
-	[APITable "clay-color-picker/src/index.tsx"]
-</div>
+<div>[APITable "clay-color-picker/src/index.tsx"]</div>

@@ -1,24 +1,15 @@
 ---
-title: "Alerts"
-description: "Alerts are used to capture the attention of the user in an intrusive way. They can be used just to say that something went right, or perhaps to say that something needs to be reviewed."
+title: 'Alerts'
+description: 'Alerts are used to capture the attention of the user in an intrusive way. They can be used just to say that something went right, or perhaps to say that something needs to be reviewed.'
 ---
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Colors](#colors)
-	- [Non-standard colors](#non-standard-colors)
-- [Examples](#examples)
-	- [Toast](#toast)
-	- [Embedded](#embedded)
-	- [Stripe](#stripe)
-- [Non-standard examples](#non-standard-examples)
-	- [Alert Lists](#alert-lists)
-- [Additional Options](#additional-options)
-	- [Mixed HTML Content](#mixed-html-content)
-	- [Dismissible Alerts](#dismissible-alerts)
-	- [Alert Notifications Absolute](#alert-notifications-absolute)
-	- [Fixed Notifications](#fixed-notifications)
+-   [Colors](#colors) - [Non-standard colors](#non-standard-colors)
+-   [Examples](#examples) - [Toast](#toast) - [Embedded](#embedded) - [Stripe](#stripe)
+-   [Non-standard examples](#non-standard-examples) - [Alert Lists](#alert-lists)
+-   [Additional Options](#additional-options) - [Mixed HTML Content](#mixed-html-content) - [Dismissible Alerts](#dismissible-alerts) - [Alert Notifications Absolute](#alert-notifications-absolute) - [Fixed Notifications](#fixed-notifications)
 
 </div>
 </div>
@@ -365,7 +356,12 @@ Stripe alerts are always placed below the last navigation element, either the he
 			...
 		</span>
 		<strong class="lead">Danger</strong> This is an error message
-		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+		<button
+			aria-label="Close"
+			class="close"
+			data-dismiss="alert"
+			type="button"
+		>
 			...
 		</button>
 	</div>
@@ -377,7 +373,12 @@ Stripe alerts are always placed below the last navigation element, either the he
 			...
 		</span>
 		<strong class="lead">Success</strong> This is a success message
-		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+		<button
+			aria-label="Close"
+			class="close"
+			data-dismiss="alert"
+			type="button"
+		>
 			...
 		</button>
 	</div>
@@ -389,7 +390,12 @@ Stripe alerts are always placed below the last navigation element, either the he
 			...
 		</span>
 		<strong class="lead">Info</strong> This is an info message
-		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+		<button
+			aria-label="Close"
+			class="close"
+			data-dismiss="alert"
+			type="button"
+		>
 			...
 		</button>
 	</div>
@@ -401,7 +407,12 @@ Stripe alerts are always placed below the last navigation element, either the he
 			...
 		</span>
 		<strong class="lead">Warning</strong> This is a warning message
-		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+		<button
+			aria-label="Close"
+			class="close"
+			data-dismiss="alert"
+			type="button"
+		>
 			...
 		</button>
 	</div>
@@ -537,7 +548,9 @@ These examples are not included in the Lexicon design system but they are built 
 <ul class="alert-list">
 	<li class="alert alert-danger alert-dismissible alert-fluid" role="alert">
 		<div class="container-fluid">
-			<div class="autofit-float autofit-padded autofit-row autofit-row-center">
+			<div
+				class="autofit-float autofit-padded autofit-row autofit-row-center"
+			>
 				<div class="autofit-col">
 					<div class="autofit-section">
 						<span class="alert-indicator">
@@ -557,14 +570,21 @@ These examples are not included in the Lexicon design system but they are built 
 					</div>
 				</div>
 			</div>
-			<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+			<button
+				aria-label="Close"
+				class="close"
+				data-dismiss="alert"
+				type="button"
+			>
 				...
 			</button>
 		</div>
 	</li>
 	<li class="alert alert-danger alert-dismissible alert-fluid" role="alert">
 		<div class="container-fluid">
-			<div class="autofit-float autofit-padded autofit-row autofit-row-center">
+			<div
+				class="autofit-float autofit-padded autofit-row autofit-row-center"
+			>
 				<div class="autofit-col">
 					<span class="sticker sticker-secondary">RTF</span>
 				</div>
@@ -588,14 +608,21 @@ These examples are not included in the Lexicon design system but they are built 
 					</button>
 				</div>
 			</div>
-			<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+			<button
+				aria-label="Close"
+				class="close"
+				data-dismiss="alert"
+				type="button"
+			>
 				...
 			</button>
 		</div>
 	</li>
 	<li class="alert alert-light alert-dismissible alert-fluid">
 		<div class="container-fluid">
-			<div class="autofit-float autofit-padded autofit-row autofit-row-center">
+			<div
+				class="autofit-float autofit-padded autofit-row autofit-row-center"
+			>
 				<div class="autofit-col">
 					<span class="sticker sticker-secondary">JPG</span>
 				</div>
@@ -606,14 +633,21 @@ These examples are not included in the Lexicon design system but they are built 
 					</div>
 				</div>
 			</div>
-			<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+			<button
+				aria-label="Close"
+				class="close"
+				data-dismiss="alert"
+				type="button"
+			>
 				...
 			</button>
 		</div>
 	</li>
 	<li class="alert alert-light alert-dismissible alert-fluid">
 		<div class="container-fluid">
-			<div class="autofit-float autofit-padded autofit-row autofit-row-center">
+			<div
+				class="autofit-float autofit-padded autofit-row autofit-row-center"
+			>
 				<div class="autofit-col">
 					<span class="sticker sticker-secondary">RTF</span>
 				</div>
@@ -622,11 +656,20 @@ These examples are not included in the Lexicon design system but they are built 
 						<h4 class="component-title">ABC-file.RTF</h4>
 						<div class="progress-group progress-group-stacked">
 							<div class="progress">
-								<div aria-valuenow="34" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 34%;"></div>
+								<div
+									aria-valuenow="34"
+									aria-valuemin="0"
+									aria-valuemax="100"
+									class="progress-bar"
+									role="progressbar"
+									style="width: 34%;"
+								></div>
 							</div>
 							<div class="autofit-row">
 								<div class="autofit-col autofit-col-expand">
-									<div class="component-subtitle">Size: 156.6 MB</div>
+									<div class="component-subtitle">
+										Size: 156.6 MB
+									</div>
 								</div>
 								<div class="autofit-col">
 									<div class="component-subtitle">34%</div>
@@ -636,7 +679,12 @@ These examples are not included in the Lexicon design system but they are built 
 					</div>
 				</div>
 			</div>
-			<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+			<button
+				aria-label="Close"
+				class="close"
+				data-dismiss="alert"
+				type="button"
+			>
 				...
 			</button>
 		</div>
@@ -649,8 +697,9 @@ These examples are not included in the Lexicon design system but they are built 
 ### Mixed HTML Content
 
 All alerts accept HTML as their content. You can use the following modifiers:
-- `.lead` inside of an alert to make the beginning of your message stand out
-- `.alert-link` to style a link inside your alert
+
+-   `.lead` inside of an alert to make the beginning of your message stand out
+-   `.alert-link` to style a link inside your alert
 
 <div class="sheet-example">
 	<div class="alert alert-warning" role="alert">
@@ -668,7 +717,8 @@ All alerts accept HTML as their content. You can use the following modifiers:
 	<span class="alert-indicator">
 		...
 	</span>
-	<strong class="lead">Warning:</strong> This alert is a <a href="#1" class="alert-link">warning message</a>.
+	<strong class="lead">Warning:</strong> This alert is a
+	<a href="#1" class="alert-link">warning message</a>.
 </div>
 ```
 
@@ -720,7 +770,10 @@ A fixed positioned container for placing alerts on the top right corner of the p
 
 ```html
 <div class="alert-notifications alert-notifications-fixed">
-	<div class="alert alert-dismissible alert-info alert-notification" role="alert">
+	<div
+		class="alert alert-dismissible alert-info alert-notification"
+		role="alert"
+	>
 		...
 	</div>
 </div>

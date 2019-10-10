@@ -1,5 +1,5 @@
 ---
-layout: "redirect"
-redirect: "/docs/components/navigation/breadcrumbs.html"
-title: "Navigation"
+layout: 'redirect'
+redirect: '/docs/components/navigation/breadcrumbs.html'
+title: 'Navigation'
 ---

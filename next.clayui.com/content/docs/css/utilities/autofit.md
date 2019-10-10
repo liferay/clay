@@ -1,16 +1,16 @@
 ---
-title: "Autofit"
+title: 'Autofit'
 ---
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Row](#row)
-- [Spacing](#spacing)
-- [Row Vertical Alignment](#row-vertical-alignment)
-- [Float](#float)
-- [Float End](#float-end)
-- [Nesting Autofit Rows](#nesting-autofit-rows)
+-   [Row](#row)
+-   [Spacing](#spacing)
+-   [Row Vertical Alignment](#row-vertical-alignment)
+-   [Float](#float)
+-   [Float End](#float-end)
+-   [Nesting Autofit Rows](#nesting-autofit-rows)
 
 </div>
 </div>
@@ -370,7 +370,9 @@ This pattern provides the benefit of aligning content via flexbox without losing
 ```html
 <div class="card">
 	<div class="card-body">
-		<div class="autofit-float-sm-down autofit-padded-no-gutters-x autofit-row">
+		<div
+			class="autofit-float-sm-down autofit-padded-no-gutters-x autofit-row"
+		>
 			<div class="autofit-col autofit-col-expand">
 				...
 			</div>
@@ -389,7 +391,9 @@ This pattern provides the benefit of aligning content via flexbox without losing
 				...
 			</div>
 		</div>
-		<div class="autofit-float autofit-padded-no-gutters-x autofit-row autofit-row-center">
+		<div
+			class="autofit-float autofit-padded-no-gutters-x autofit-row autofit-row-center"
+		>
 			<div class="autofit-col">
 				...
 			</div>
@@ -511,11 +515,12 @@ Aligning items to the left will require nesting `autofit-float autofit-row` insi
 	</div>
 </div>
 
-
 ```html
 <div class="card">
 	<div class="card-body">
-		<div class="autofit-float-end-sm-down autofit-padded-no-gutters-x autofit-row">
+		<div
+			class="autofit-float-end-sm-down autofit-padded-no-gutters-x autofit-row"
+		>
 			<div class="autofit-col autofit-col-expand">
 				...
 			</div>
@@ -534,9 +539,13 @@ Aligning items to the left will require nesting `autofit-float autofit-row` insi
 				...
 			</div>
 		</div>
-		<div class="autofit-float-end autofit-padded-no-gutters-x autofit-row autofit-row-center">
+		<div
+			class="autofit-float-end autofit-padded-no-gutters-x autofit-row autofit-row-center"
+		>
 			<div class="autofit-col autofit-col-expand">
-				<div class="autofit-float autofit-padded-no-gutters autofit-row">
+				<div
+					class="autofit-float autofit-padded-no-gutters autofit-row"
+				>
 					<div class="autofit-col">
 						...
 					</div>
@@ -745,7 +754,9 @@ Aligning items to the left will require nesting `autofit-float autofit-row` insi
 					</div>
 				</div>
 				...
-				<div class="autofit-float autofit-padded-no-gutters-x autofit-row autofit-row-center">
+				<div
+					class="autofit-float autofit-padded-no-gutters-x autofit-row autofit-row-center"
+				>
 					<div class="autofit-col">
 						...
 					</div>
@@ -770,7 +781,9 @@ Aligning items to the left will require nesting `autofit-float autofit-row` insi
 							</div>
 						</div>
 						...
-						<div class="autofit-float autofit-padded-no-gutters-x autofit-row autofit-row-center">
+						<div
+							class="autofit-float autofit-padded-no-gutters-x autofit-row autofit-row-center"
+						>
 							<div class="autofit-col">
 								...
 							</div>

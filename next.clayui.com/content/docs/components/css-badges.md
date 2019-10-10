@@ -1,16 +1,16 @@
 ---
-title: "Badges"
-description: "Badges help highlight important information, such as notifications or new and unread messages. Badges have circular borders and are only used to specify a number."
+title: 'Badges'
+description: 'Badges help highlight important information, such as notifications or new and unread messages. Badges have circular borders and are only used to specify a number.'
 ---
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Variations](#variations)
-- [Pill badges](#pill-badges)
-- [Anchor](#anchor)
-- [Links inside](#links-inside)
-- [Text truncate](#text-truncate)
+-   [Variations](#variations)
+-   [Pill badges](#pill-badges)
+-   [Anchor](#anchor)
+-   [Links inside](#links-inside)
+-   [Text truncate](#text-truncate)
 
 </div>
 </div>
@@ -195,7 +195,11 @@ Use the `.badge-pill` modifier class to make badges more rounded.
 <span class="badge badge-secondary badge-pill">
 	<span class="badge-item badge-item-before">
 		<a href="#1">
-			<svg class="lexicon-icon lexicon-icon-times-circle" focusable="false" role="presentation">
+			<svg
+				class="lexicon-icon lexicon-icon-times-circle"
+				focusable="false"
+				role="presentation"
+			>
 				<use href="/images/icons/icons.svg#times-circle"></use>
 			</svg>
 		</a>
@@ -205,7 +209,11 @@ Use the `.badge-pill` modifier class to make badges more rounded.
 	</span>
 	<span class="badge-item badge-item-after">
 		<button aria-label="Close" class="close" type="button">
-			<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+			<svg
+				class="lexicon-icon lexicon-icon-times"
+				focusable="false"
+				role="presentation"
+			>
 				<use href="/images/icons/icons.svg#times"></use>
 			</svg>
 		</button>
@@ -234,7 +242,8 @@ Wrap the text inside the `.text-truncate-inline` and `.text-truncate` modifier c
 	<span class="badge-item badge-item-expand">
 		<span class="text-truncate-inline">
 			<span class="text-truncate">
-				ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAre ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAre
+				ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAre
+				ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAre
 			</span>
 		</span>
 	</span>

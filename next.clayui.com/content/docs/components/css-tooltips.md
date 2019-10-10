@@ -1,16 +1,16 @@
 ---
-title: "Tooltips"
-description: "Tooltips are brief pieces of information that appear on hover state over an element to clarify its meaning or use for the user."
+title: 'Tooltips'
+description: 'Tooltips are brief pieces of information that appear on hover state over an element to clarify its meaning or use for the user.'
 ---
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Position](#tooltip-position)
-    - [Top](#tooltip-top)
-    - [Right](#tooltip-right)
-    - [Bottom](#tooltip-bottom)
-    - [Left](#tooltip-left)
+-   [Position](#tooltip-position)
+    -   [Top](#tooltip-top)
+    -   [Right](#tooltip-right)
+    -   [Bottom](#tooltip-bottom)
+    -   [Left](#tooltip-left)
 
 </div>
 </div>
@@ -44,22 +44,22 @@ description: "Tooltips are brief pieces of information that appear on hover stat
 
 ```html
 <div class="fade tooltip clay-tooltip-top show" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-        <div>Tooltip on the top</div>
-    </div>
+	<div class="arrow"></div>
+	<div class="tooltip-inner">
+		<div>Tooltip on the top</div>
+	</div>
 </div>
 <div class="fade tooltip clay-tooltip-top-left show" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-        <div>Tooltip on the top left</div>
-    </div>
+	<div class="arrow"></div>
+	<div class="tooltip-inner">
+		<div>Tooltip on the top left</div>
+	</div>
 </div>
 <div class="fade tooltip clay-tooltip-top-right show" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-        <div>Tooltip on the top right</div>
-    </div>
+	<div class="arrow"></div>
+	<div class="tooltip-inner">
+		<div>Tooltip on the top right</div>
+	</div>
 </div>
 ```
 
@@ -90,22 +90,22 @@ description: "Tooltips are brief pieces of information that appear on hover stat
 
 ```html
 <div class="fade tooltip clay-tooltip-right show" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-        <div>Tooltip on the right</div>
-    </div>
+	<div class="arrow"></div>
+	<div class="tooltip-inner">
+		<div>Tooltip on the right</div>
+	</div>
 </div>
 <div class="fade tooltip clay-tooltip-right-top show" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-        <div>Tooltip on the right top</div>
-    </div>
+	<div class="arrow"></div>
+	<div class="tooltip-inner">
+		<div>Tooltip on the right top</div>
+	</div>
 </div>
 <div class="fade tooltip clay-tooltip-right-bottom show" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-        <div>Tooltip on the right bottom</div>
-    </div>
+	<div class="arrow"></div>
+	<div class="tooltip-inner">
+		<div>Tooltip on the right bottom</div>
+	</div>
 </div>
 ```
 
@@ -136,22 +136,22 @@ description: "Tooltips are brief pieces of information that appear on hover stat
 
 ```html
 <div class="fade tooltip clay-tooltip-bottom show" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-        <div>Tooltip on the bottom</div>
-    </div>
+	<div class="arrow"></div>
+	<div class="tooltip-inner">
+		<div>Tooltip on the bottom</div>
+	</div>
 </div>
 <div class="fade tooltip clay-tooltip-bottom-left show" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-        <div>Tooltip on the bottom left</div>
-    </div>
+	<div class="arrow"></div>
+	<div class="tooltip-inner">
+		<div>Tooltip on the bottom left</div>
+	</div>
 </div>
 <div class="fade tooltip clay-tooltip-bottom-right show" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-        <div>Tooltip on the bottom right</div>
-    </div>
+	<div class="arrow"></div>
+	<div class="tooltip-inner">
+		<div>Tooltip on the bottom right</div>
+	</div>
 </div>
 ```
 
@@ -182,21 +182,21 @@ description: "Tooltips are brief pieces of information that appear on hover stat
 
 ```html
 <div class="fade tooltip clay-tooltip-left show" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-        <div>Tooltip on the left</div>
-    </div>
+	<div class="arrow"></div>
+	<div class="tooltip-inner">
+		<div>Tooltip on the left</div>
+	</div>
 </div>
 <div class="fade tooltip clay-tooltip-left-top show" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-        <div>Tooltip on the left top</div>
-    </div>
+	<div class="arrow"></div>
+	<div class="tooltip-inner">
+		<div>Tooltip on the left top</div>
+	</div>
 </div>
 <div class="fade tooltip clay-tooltip-left-bottom show" role="tooltip">
-    <div class="arrow"></div>
-    <div class="tooltip-inner">
-        <div>Tooltip on the left bottom</div>
-    </div>
+	<div class="arrow"></div>
+	<div class="tooltip-inner">
+		<div>Tooltip on the left bottom</div>
+	</div>
 </div>
 ```

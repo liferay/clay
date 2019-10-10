@@ -1,15 +1,15 @@
 ---
-title: "Date & Time Pickers"
-description: "Date and Time pickers let users select a date and time for a form."
+title: 'Date & Time Pickers'
+description: 'Date and Time pickers let users select a date and time for a form.'
 ---
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Example](#example)
-- [Field](#field)
-- [Date Picker](#date-picker)
-- [Time Picker](#time-picker)
+-   [Example](#example)
+-   [Field](#field)
+-   [Date Picker](#date-picker)
+-   [Time Picker](#time-picker)
 
 </div>
 </div>
@@ -188,11 +188,23 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
 <div class="date-picker">
 	<div class="input-group">
 		<div class="input-group-item">
-			<input name="datePicker" type="hidden" value="">
-			<input class="form-control input-group-inset input-group-inset-after" placeholder="YYYY-MM-DD" type="text" value="">
+			<input name="datePicker" type="hidden" value="" />
+			<input
+				class="form-control input-group-inset input-group-inset-after"
+				placeholder="YYYY-MM-DD"
+				type="text"
+				value=""
+			/>
 			<div class="input-group-inset-item input-group-inset-item-after">
-				<button class="btn btn-unstyled date-picker-dropdown-toggle" type="button">
-					<svg class="lexicon-icon lexicon-icon-calendar" focusable="false" role="presentation">
+				<button
+					class="btn btn-unstyled date-picker-dropdown-toggle"
+					type="button"
+				>
+					<svg
+						class="lexicon-icon lexicon-icon-calendar"
+						focusable="false"
+						role="presentation"
+					>
 						<use href="/images/icons/icons.svg#calendar" />
 					</svg>
 				</button>
@@ -226,20 +238,53 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
 							...
 						</select>
 					</div>
-					<div class="date-picker-nav-item date-picker-nav-item-expand date-picker-nav-controls">
-						<button aria-label="Select the previous month" class="btn nav-btn nav-btn-monospaced" disabled="" type="button">
-							<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
-								<use href="/images/icons/icons.svg#angle-left" />
+					<div
+						class="date-picker-nav-item date-picker-nav-item-expand date-picker-nav-controls"
+					>
+						<button
+							aria-label="Select the previous month"
+							class="btn nav-btn nav-btn-monospaced"
+							disabled=""
+							type="button"
+						>
+							<svg
+								class="lexicon-icon lexicon-icon-angle-left"
+								focusable="false"
+								role="presentation"
+							>
+								<use
+									href="/images/icons/icons.svg#angle-left"
+								/>
 							</svg>
 						</button>
-						<button aria-label="Select current date" class="btn nav-btn nav-btn-monospaced" type="button">
-							<svg class="lexicon-icon lexicon-icon-simple-circle" focusable="false" role="presentation">
-								<use href="/images/icons/icons.svg#simple-circle" />
+						<button
+							aria-label="Select current date"
+							class="btn nav-btn nav-btn-monospaced"
+							type="button"
+						>
+							<svg
+								class="lexicon-icon lexicon-icon-simple-circle"
+								focusable="false"
+								role="presentation"
+							>
+								<use
+									href="/images/icons/icons.svg#simple-circle"
+								/>
 							</svg>
 						</button>
-						<button aria-label="Select the next month" class="btn nav-btn nav-btn-monospaced" type="button">
-							<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
-								<use href="/images/icons/icons.svg#angle-right" />
+						<button
+							aria-label="Select the next month"
+							class="btn nav-btn nav-btn-monospaced"
+							type="button"
+						>
+							<svg
+								class="lexicon-icon lexicon-icon-angle-right"
+								focusable="false"
+								role="presentation"
+							>
+								<use
+									href="/images/icons/icons.svg#angle-right"
+								/>
 							</svg>
 						</button>
 					</div>
@@ -247,58 +292,286 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
 			</div>
 			<div class="date-picker-calendar-body">
 				<div class="date-picker-days-row date-picker-row">
-					<div class="date-picker-day date-picker-calendar-item"><abbr>S</abbr></div>
-					<div class="date-picker-day date-picker-calendar-item"><abbr>M</abbr></div>
-					<div class="date-picker-day date-picker-calendar-item"><abbr>T</abbr></div>
-					<div class="date-picker-day date-picker-calendar-item"><abbr>W</abbr></div>
-					<div class="date-picker-day date-picker-calendar-item"><abbr>T</abbr></div>
-					<div class="date-picker-day date-picker-calendar-item"><abbr>F</abbr></div>
-					<div class="date-picker-day date-picker-calendar-item"><abbr>S</abbr></div>
+					<div class="date-picker-day date-picker-calendar-item">
+						<abbr>S</abbr>
+					</div>
+					<div class="date-picker-day date-picker-calendar-item">
+						<abbr>M</abbr>
+					</div>
+					<div class="date-picker-day date-picker-calendar-item">
+						<abbr>T</abbr>
+					</div>
+					<div class="date-picker-day date-picker-calendar-item">
+						<abbr>W</abbr>
+					</div>
+					<div class="date-picker-day date-picker-calendar-item">
+						<abbr>T</abbr>
+					</div>
+					<div class="date-picker-day date-picker-calendar-item">
+						<abbr>F</abbr>
+					</div>
+					<div class="date-picker-day date-picker-calendar-item">
+						<abbr>S</abbr>
+					</div>
 				</div>
 				<div class="date-picker-date-row date-picker-row">
-					<button aria-label="2019 01 27" class="date-picker-date date-picker-calendar-item previous-month-date" disabled="" type="button">27</button>
-					<button aria-label="2019 01 28" class="date-picker-date date-picker-calendar-item previous-month-date" disabled="" type="button">28</button>
-					<button aria-label="2019 01 29" class="date-picker-date date-picker-calendar-item previous-month-date" disabled="" type="button">29</button>
-					<button aria-label="2019 01 30" class="active date-picker-date date-picker-calendar-item previous-month-date" type="button">30</button>
-					<button aria-label="2019 01 31" class="date-picker-date date-picker-calendar-item previous-month-date" type="button">31</button>
-					<button aria-label="2019 02 01" class="date-picker-date date-picker-calendar-item" type="button">1</button>
-					<button aria-label="2019 02 02" class="date-picker-date date-picker-calendar-item" type="button">2</button>
+					<button
+						aria-label="2019 01 27"
+						class="date-picker-date date-picker-calendar-item previous-month-date"
+						disabled=""
+						type="button"
+					>
+						27
+					</button>
+					<button
+						aria-label="2019 01 28"
+						class="date-picker-date date-picker-calendar-item previous-month-date"
+						disabled=""
+						type="button"
+					>
+						28
+					</button>
+					<button
+						aria-label="2019 01 29"
+						class="date-picker-date date-picker-calendar-item previous-month-date"
+						disabled=""
+						type="button"
+					>
+						29
+					</button>
+					<button
+						aria-label="2019 01 30"
+						class="active date-picker-date date-picker-calendar-item previous-month-date"
+						type="button"
+					>
+						30
+					</button>
+					<button
+						aria-label="2019 01 31"
+						class="date-picker-date date-picker-calendar-item previous-month-date"
+						type="button"
+					>
+						31
+					</button>
+					<button
+						aria-label="2019 02 01"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						1
+					</button>
+					<button
+						aria-label="2019 02 02"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						2
+					</button>
 				</div>
 				<div class="date-picker-date-row date-picker-row">
-					<button aria-label="2019 02 03" class="date-picker-date date-picker-calendar-item" type="button">3</button>
-					<button aria-label="2019 02 04" class="date-picker-date date-picker-calendar-item" type="button">4</button>
-					<button aria-label="2019 02 05" class="date-picker-date date-picker-calendar-item" type="button">5</button>
-					<button aria-label="2019 02 06" class="date-picker-date date-picker-calendar-item" type="button">6</button>
-					<button aria-label="2019 02 07" class="date-picker-date date-picker-calendar-item" type="button">7</button>
-					<button aria-label="2019 02 08" class="date-picker-date date-picker-calendar-item" type="button">8</button>
-					<button aria-label="2019 02 09" class="date-picker-date date-picker-calendar-item" type="button">9</button>
+					<button
+						aria-label="2019 02 03"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						3
+					</button>
+					<button
+						aria-label="2019 02 04"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						4
+					</button>
+					<button
+						aria-label="2019 02 05"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						5
+					</button>
+					<button
+						aria-label="2019 02 06"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						6
+					</button>
+					<button
+						aria-label="2019 02 07"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						7
+					</button>
+					<button
+						aria-label="2019 02 08"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						8
+					</button>
+					<button
+						aria-label="2019 02 09"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						9
+					</button>
 				</div>
 				<div class="date-picker-date-row date-picker-row">
-					<button aria-label="2019 02 10" class="date-picker-date date-picker-calendar-item" type="button">10</button>
-					<button aria-label="2019 02 11" class="date-picker-date date-picker-calendar-item" type="button">11</button>
-					<button aria-label="2019 02 12" class="date-picker-date date-picker-calendar-item" type="button">12</button>
-					<button aria-label="2019 02 13" class="date-picker-date date-picker-calendar-item active" tabindex="-1" type="button">13</button>
-					<button aria-label="2019 02 14" class="date-picker-date date-picker-calendar-item" type="button">14</button>
-					<button aria-label="2019 02 15" class="date-picker-date date-picker-calendar-item" type="button">15</button>
-					<button aria-label="2019 02 16" class="date-picker-date date-picker-calendar-item" type="button">16</button>
+					<button
+						aria-label="2019 02 10"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						10
+					</button>
+					<button
+						aria-label="2019 02 11"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						11
+					</button>
+					<button
+						aria-label="2019 02 12"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						12
+					</button>
+					<button
+						aria-label="2019 02 13"
+						class="date-picker-date date-picker-calendar-item active"
+						tabindex="-1"
+						type="button"
+					>
+						13
+					</button>
+					<button
+						aria-label="2019 02 14"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						14
+					</button>
+					<button
+						aria-label="2019 02 15"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						15
+					</button>
+					<button
+						aria-label="2019 02 16"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						16
+					</button>
 				</div>
 				<div class="date-picker-date-row date-picker-row">
-					<button aria-label="2019 02 17" class="date-picker-date date-picker-calendar-item" type="button">17</button>
-					<button aria-label="2019 02 18" class="date-picker-date date-picker-calendar-item" type="button">18</button>
-					<button aria-label="2019 02 19" class="date-picker-date date-picker-calendar-item" type="button">19</button>
-					<button aria-label="2019 02 20" class="date-picker-date date-picker-calendar-item" type="button">20</button>
-					<button aria-label="2019 02 21" class="date-picker-date date-picker-calendar-item" type="button">21</button>
-					<button aria-label="2019 02 22" class="date-picker-date date-picker-calendar-item" type="button">22</button>
-					<button aria-label="2019 02 23" class="date-picker-date date-picker-calendar-item" type="button">23</button>
+					<button
+						aria-label="2019 02 17"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						17
+					</button>
+					<button
+						aria-label="2019 02 18"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						18
+					</button>
+					<button
+						aria-label="2019 02 19"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						19
+					</button>
+					<button
+						aria-label="2019 02 20"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						20
+					</button>
+					<button
+						aria-label="2019 02 21"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						21
+					</button>
+					<button
+						aria-label="2019 02 22"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						22
+					</button>
+					<button
+						aria-label="2019 02 23"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						23
+					</button>
 				</div>
 				<div class="date-picker-date-row date-picker-row">
-					<button aria-label="2019 02 24" class="date-picker-date date-picker-calendar-item" type="button">24</button>
-					<button aria-label="2019 02 25" class="date-picker-date date-picker-calendar-item" type="button">25</button>
-					<button aria-label="2019 02 26" class="date-picker-date date-picker-calendar-item" type="button">26</button>
-					<button aria-label="2019 02 27" class="date-picker-date date-picker-calendar-item" type="button">27</button>
-					<button aria-label="2019 02 28" class="date-picker-date date-picker-calendar-item" type="button">28</button>
-					<button aria-label="2019 03 01" class="active date-picker-date date-picker-calendar-item next-month-date" type="button">1</button>
-					<button aria-label="2019 03 02" class="date-picker-date date-picker-calendar-item next-month-date" type="button">2</button>
+					<button
+						aria-label="2019 02 24"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						24
+					</button>
+					<button
+						aria-label="2019 02 25"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						25
+					</button>
+					<button
+						aria-label="2019 02 26"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						26
+					</button>
+					<button
+						aria-label="2019 02 27"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						27
+					</button>
+					<button
+						aria-label="2019 02 28"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						28
+					</button>
+					<button
+						aria-label="2019 03 01"
+						class="active date-picker-date date-picker-calendar-item next-month-date"
+						type="button"
+					>
+						1
+					</button>
+					<button
+						aria-label="2019 03 02"
+						class="date-picker-date date-picker-calendar-item next-month-date"
+						type="button"
+					>
+						2
+					</button>
 				</div>
 			</div>
 			<div class="date-picker-calendar-footer">
@@ -306,13 +579,22 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
 					<div class="input-group">
 						<div class="input-group-item input-group-item-shrink">
 							<span class="input-group-text">
-								<svg class="lexicon-icon lexicon-icon-time" focusable="false" role="presentation">
+								<svg
+									class="lexicon-icon lexicon-icon-time"
+									focusable="false"
+									role="presentation"
+								>
 									<use href="/images/icons/icons.svg#time" />
 								</svg>
 							</span>
 						</div>
 						<div class="input-group-item">
-							<input class="form-control" name="timer" type="time" value="00:00">
+							<input
+								class="form-control"
+								name="timer"
+								type="time"
+								value="00:00"
+							/>
 						</div>
 						<div class="input-group-item input-group-item-shrink">
 							<span class="input-group-text">(GMT+01:00)</span>
@@ -346,11 +628,23 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
 ```html
 <div class="input-group">
 	<div class="input-group-item">
-		<input name="datePicker" type="hidden" value="">
-		<input class="form-control input-group-inset input-group-inset-after" placeholder="YYYY-MM-DD" type="text" value="">
+		<input name="datePicker" type="hidden" value="" />
+		<input
+			class="form-control input-group-inset input-group-inset-after"
+			placeholder="YYYY-MM-DD"
+			type="text"
+			value=""
+		/>
 		<div class="input-group-inset-item input-group-inset-item-after">
-			<button class="btn btn-unstyled date-picker-dropdown-toggle" type="button">
-				<svg class="lexicon-icon lexicon-icon-calendar" focusable="false" role="presentation">
+			<button
+				class="btn btn-unstyled date-picker-dropdown-toggle"
+				type="button"
+			>
+				<svg
+					class="lexicon-icon lexicon-icon-calendar"
+					focusable="false"
+					role="presentation"
+				>
 					<use href="/images/icons/icons.svg#calendar" />
 				</svg>
 			</button>
@@ -498,11 +792,23 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
 <div class="date-picker">
 	<div class="input-group">
 		<div class="input-group-item">
-			<input name="datePicker" type="hidden" value="">
-			<input class="form-control input-group-inset input-group-inset-after" placeholder="YYYY-MM-DD" type="text" value="">
+			<input name="datePicker" type="hidden" value="" />
+			<input
+				class="form-control input-group-inset input-group-inset-after"
+				placeholder="YYYY-MM-DD"
+				type="text"
+				value=""
+			/>
 			<div class="input-group-inset-item input-group-inset-item-after">
-				<button class="btn btn-unstyled date-picker-dropdown-toggle" type="button">
-					<svg class="lexicon-icon lexicon-icon-calendar" focusable="false" role="presentation">
+				<button
+					class="btn btn-unstyled date-picker-dropdown-toggle"
+					type="button"
+				>
+					<svg
+						class="lexicon-icon lexicon-icon-calendar"
+						focusable="false"
+						role="presentation"
+					>
 						<use href="/images/icons/icons.svg#calendar" />
 					</svg>
 				</button>
@@ -536,20 +842,53 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
 							...
 						</select>
 					</div>
-					<div class="date-picker-nav-item date-picker-nav-item-expand date-picker-nav-controls">
-						<button aria-label="Select the previous month" class="btn nav-btn nav-btn-monospaced" disabled="" type="button">
-							<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
-								<use href="/images/icons/icons.svg#angle-left" />
+					<div
+						class="date-picker-nav-item date-picker-nav-item-expand date-picker-nav-controls"
+					>
+						<button
+							aria-label="Select the previous month"
+							class="btn nav-btn nav-btn-monospaced"
+							disabled=""
+							type="button"
+						>
+							<svg
+								class="lexicon-icon lexicon-icon-angle-left"
+								focusable="false"
+								role="presentation"
+							>
+								<use
+									href="/images/icons/icons.svg#angle-left"
+								/>
 							</svg>
 						</button>
-						<button aria-label="Select current date" class="btn nav-btn nav-btn-monospaced" type="button">
-							<svg class="lexicon-icon lexicon-icon-simple-circle" focusable="false" role="presentation">
-								<use href="/images/icons/icons.svg#simple-circle" />
+						<button
+							aria-label="Select current date"
+							class="btn nav-btn nav-btn-monospaced"
+							type="button"
+						>
+							<svg
+								class="lexicon-icon lexicon-icon-simple-circle"
+								focusable="false"
+								role="presentation"
+							>
+								<use
+									href="/images/icons/icons.svg#simple-circle"
+								/>
 							</svg>
 						</button>
-						<button aria-label="Select the next month" class="btn nav-btn nav-btn-monospaced" type="button">
-							<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
-								<use href="/images/icons/icons.svg#angle-right" />
+						<button
+							aria-label="Select the next month"
+							class="btn nav-btn nav-btn-monospaced"
+							type="button"
+						>
+							<svg
+								class="lexicon-icon lexicon-icon-angle-right"
+								focusable="false"
+								role="presentation"
+							>
+								<use
+									href="/images/icons/icons.svg#angle-right"
+								/>
 							</svg>
 						</button>
 					</div>
@@ -557,58 +896,286 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
 			</div>
 			<div class="date-picker-calendar-body">
 				<div class="date-picker-days-row date-picker-row">
-					<div class="date-picker-day date-picker-calendar-item"><abbr>S</abbr></div>
-					<div class="date-picker-day date-picker-calendar-item"><abbr>M</abbr></div>
-					<div class="date-picker-day date-picker-calendar-item"><abbr>T</abbr></div>
-					<div class="date-picker-day date-picker-calendar-item"><abbr>W</abbr></div>
-					<div class="date-picker-day date-picker-calendar-item"><abbr>T</abbr></div>
-					<div class="date-picker-day date-picker-calendar-item"><abbr>F</abbr></div>
-					<div class="date-picker-day date-picker-calendar-item"><abbr>S</abbr></div>
+					<div class="date-picker-day date-picker-calendar-item">
+						<abbr>S</abbr>
+					</div>
+					<div class="date-picker-day date-picker-calendar-item">
+						<abbr>M</abbr>
+					</div>
+					<div class="date-picker-day date-picker-calendar-item">
+						<abbr>T</abbr>
+					</div>
+					<div class="date-picker-day date-picker-calendar-item">
+						<abbr>W</abbr>
+					</div>
+					<div class="date-picker-day date-picker-calendar-item">
+						<abbr>T</abbr>
+					</div>
+					<div class="date-picker-day date-picker-calendar-item">
+						<abbr>F</abbr>
+					</div>
+					<div class="date-picker-day date-picker-calendar-item">
+						<abbr>S</abbr>
+					</div>
 				</div>
 				<div class="date-picker-date-row date-picker-row">
-					<button aria-label="2019 01 27" class="date-picker-date date-picker-calendar-item previous-month-date" disabled="" type="button">27</button>
-					<button aria-label="2019 01 28" class="date-picker-date date-picker-calendar-item previous-month-date" disabled="" type="button">28</button>
-					<button aria-label="2019 01 29" class="date-picker-date date-picker-calendar-item previous-month-date" disabled="" type="button">29</button>
-					<button aria-label="2019 01 30" class="active date-picker-date date-picker-calendar-item previous-month-date" type="button">30</button>
-					<button aria-label="2019 01 31" class="date-picker-date date-picker-calendar-item previous-month-date" type="button">31</button>
-					<button aria-label="2019 02 01" class="date-picker-date date-picker-calendar-item" type="button">1</button>
-					<button aria-label="2019 02 02" class="date-picker-date date-picker-calendar-item" type="button">2</button>
+					<button
+						aria-label="2019 01 27"
+						class="date-picker-date date-picker-calendar-item previous-month-date"
+						disabled=""
+						type="button"
+					>
+						27
+					</button>
+					<button
+						aria-label="2019 01 28"
+						class="date-picker-date date-picker-calendar-item previous-month-date"
+						disabled=""
+						type="button"
+					>
+						28
+					</button>
+					<button
+						aria-label="2019 01 29"
+						class="date-picker-date date-picker-calendar-item previous-month-date"
+						disabled=""
+						type="button"
+					>
+						29
+					</button>
+					<button
+						aria-label="2019 01 30"
+						class="active date-picker-date date-picker-calendar-item previous-month-date"
+						type="button"
+					>
+						30
+					</button>
+					<button
+						aria-label="2019 01 31"
+						class="date-picker-date date-picker-calendar-item previous-month-date"
+						type="button"
+					>
+						31
+					</button>
+					<button
+						aria-label="2019 02 01"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						1
+					</button>
+					<button
+						aria-label="2019 02 02"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						2
+					</button>
 				</div>
 				<div class="date-picker-date-row date-picker-row">
-					<button aria-label="2019 02 03" class="date-picker-date date-picker-calendar-item" type="button">3</button>
-					<button aria-label="2019 02 04" class="date-picker-date date-picker-calendar-item" type="button">4</button>
-					<button aria-label="2019 02 05" class="date-picker-date date-picker-calendar-item" type="button">5</button>
-					<button aria-label="2019 02 06" class="date-picker-date date-picker-calendar-item" type="button">6</button>
-					<button aria-label="2019 02 07" class="date-picker-date date-picker-calendar-item" type="button">7</button>
-					<button aria-label="2019 02 08" class="date-picker-date date-picker-calendar-item" type="button">8</button>
-					<button aria-label="2019 02 09" class="date-picker-date date-picker-calendar-item" type="button">9</button>
+					<button
+						aria-label="2019 02 03"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						3
+					</button>
+					<button
+						aria-label="2019 02 04"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						4
+					</button>
+					<button
+						aria-label="2019 02 05"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						5
+					</button>
+					<button
+						aria-label="2019 02 06"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						6
+					</button>
+					<button
+						aria-label="2019 02 07"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						7
+					</button>
+					<button
+						aria-label="2019 02 08"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						8
+					</button>
+					<button
+						aria-label="2019 02 09"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						9
+					</button>
 				</div>
 				<div class="date-picker-date-row date-picker-row">
-					<button aria-label="2019 02 10" class="date-picker-date date-picker-calendar-item" type="button">10</button>
-					<button aria-label="2019 02 11" class="date-picker-date date-picker-calendar-item" type="button">11</button>
-					<button aria-label="2019 02 12" class="date-picker-date date-picker-calendar-item" type="button">12</button>
-					<button aria-label="2019 02 13" class="date-picker-date date-picker-calendar-item active" tabindex="-1" type="button">13</button>
-					<button aria-label="2019 02 14" class="date-picker-date date-picker-calendar-item" type="button">14</button>
-					<button aria-label="2019 02 15" class="date-picker-date date-picker-calendar-item" type="button">15</button>
-					<button aria-label="2019 02 16" class="date-picker-date date-picker-calendar-item" type="button">16</button>
+					<button
+						aria-label="2019 02 10"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						10
+					</button>
+					<button
+						aria-label="2019 02 11"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						11
+					</button>
+					<button
+						aria-label="2019 02 12"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						12
+					</button>
+					<button
+						aria-label="2019 02 13"
+						class="date-picker-date date-picker-calendar-item active"
+						tabindex="-1"
+						type="button"
+					>
+						13
+					</button>
+					<button
+						aria-label="2019 02 14"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						14
+					</button>
+					<button
+						aria-label="2019 02 15"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						15
+					</button>
+					<button
+						aria-label="2019 02 16"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						16
+					</button>
 				</div>
 				<div class="date-picker-date-row date-picker-row">
-					<button aria-label="2019 02 17" class="date-picker-date date-picker-calendar-item" type="button">17</button>
-					<button aria-label="2019 02 18" class="date-picker-date date-picker-calendar-item" type="button">18</button>
-					<button aria-label="2019 02 19" class="date-picker-date date-picker-calendar-item" type="button">19</button>
-					<button aria-label="2019 02 20" class="date-picker-date date-picker-calendar-item" type="button">20</button>
-					<button aria-label="2019 02 21" class="date-picker-date date-picker-calendar-item" type="button">21</button>
-					<button aria-label="2019 02 22" class="date-picker-date date-picker-calendar-item" type="button">22</button>
-					<button aria-label="2019 02 23" class="date-picker-date date-picker-calendar-item" type="button">23</button>
+					<button
+						aria-label="2019 02 17"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						17
+					</button>
+					<button
+						aria-label="2019 02 18"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						18
+					</button>
+					<button
+						aria-label="2019 02 19"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						19
+					</button>
+					<button
+						aria-label="2019 02 20"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						20
+					</button>
+					<button
+						aria-label="2019 02 21"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						21
+					</button>
+					<button
+						aria-label="2019 02 22"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						22
+					</button>
+					<button
+						aria-label="2019 02 23"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						23
+					</button>
 				</div>
 				<div class="date-picker-date-row date-picker-row">
-					<button aria-label="2019 02 24" class="date-picker-date date-picker-calendar-item" type="button">24</button>
-					<button aria-label="2019 02 25" class="date-picker-date date-picker-calendar-item" type="button">25</button>
-					<button aria-label="2019 02 26" class="date-picker-date date-picker-calendar-item" type="button">26</button>
-					<button aria-label="2019 02 27" class="date-picker-date date-picker-calendar-item" type="button">27</button>
-					<button aria-label="2019 02 28" class="date-picker-date date-picker-calendar-item" type="button">28</button>
-					<button aria-label="2019 03 01" class="active date-picker-date date-picker-calendar-item next-month-date" type="button">1</button>
-					<button aria-label="2019 03 02" class="date-picker-date date-picker-calendar-item next-month-date" type="button">2</button>
+					<button
+						aria-label="2019 02 24"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						24
+					</button>
+					<button
+						aria-label="2019 02 25"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						25
+					</button>
+					<button
+						aria-label="2019 02 26"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						26
+					</button>
+					<button
+						aria-label="2019 02 27"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						27
+					</button>
+					<button
+						aria-label="2019 02 28"
+						class="date-picker-date date-picker-calendar-item"
+						type="button"
+					>
+						28
+					</button>
+					<button
+						aria-label="2019 03 01"
+						class="active date-picker-date date-picker-calendar-item next-month-date"
+						type="button"
+					>
+						1
+					</button>
+					<button
+						aria-label="2019 03 02"
+						class="date-picker-date date-picker-calendar-item next-month-date"
+						type="button"
+					>
+						2
+					</button>
 				</div>
 			</div>
 		</div>
@@ -634,7 +1201,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
 ```html
 <div class="input-group">
 	<div class="input-group-item">
-		<input class="form-control" name="timer" type="time" value="00:00">
+		<input class="form-control" name="timer" type="time" value="00:00" />
 	</div>
 	<div class="input-group-item input-group-item-shrink">
 		<span class="input-group-text">(GMT+01:00)</span>

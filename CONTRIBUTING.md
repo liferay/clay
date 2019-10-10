@@ -119,11 +119,11 @@ The header is mandatory and the scope of the header is optional.
 
 #### Type
 
-- **feat**: A new feature
-- **fix**: A bug fix
-- **docs**: Documentation-only changes
-- **refactor**: A code change that neither fixes a bug nor adds a feature
-- **chore**: Changes in the build process, auxiliary tools, libraries, tests or formatting
+-   **feat**: A new feature
+-   **fix**: A bug fix
+-   **docs**: Documentation-only changes
+-   **refactor**: A code change that neither fixes a bug nor adds a feature
+-   **chore**: Changes in the build process, auxiliary tools, libraries, tests or formatting
 
 #### Scope
 

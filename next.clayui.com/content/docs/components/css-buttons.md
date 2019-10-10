@@ -1,17 +1,17 @@
 ---
-title: "Buttons"
-description: "Buttons communicate an action to happen on user interaction."
+title: 'Buttons'
+description: 'Buttons communicate an action to happen on user interaction.'
 ---
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Examples](#examples)
-- [Sizes](#sizes)
-- [Active state](#active-state)
-- [Disabled State](#disabled-state)
-- [Icons](#icons)
-  - [With text button](#with-text-button)
+-   [Examples](#examples)
+-   [Sizes](#sizes)
+-   [Active state](#active-state)
+-   [Disabled State](#disabled-state)
+-   [Icons](#icons)
+    -   [With text button](#with-text-button)
 
 </div>
 </div>
@@ -66,8 +66,12 @@ Create block level buttons—those that span the full width of a parent—by add
 </div>
 
 ```html
-<button class="btn btn-block btn-secondary btn-sm" type="button">Small Block Level Button</button>
-<button class="btn btn-block btn-secondary" type="button">Normal Block Level Button</button>
+<button class="btn btn-block btn-secondary btn-sm" type="button">
+	Small Block Level Button
+</button>
+<button class="btn btn-block btn-secondary" type="button">
+	Normal Block Level Button
+</button>
 ```
 
 ## Active state
@@ -119,12 +123,20 @@ Try adding the modifier class `.btn-monospaced`.
 
 ```html
 <button class="btn btn-monospaced btn-primary" type="button">
-	<svg class="lexicon-icon lexicon-icon-blogs" focusable="false" role="presentation">
+	<svg
+		class="lexicon-icon lexicon-icon-blogs"
+		focusable="false"
+		role="presentation"
+	>
 		<use href="/images/icons/icons.svg#blogs"></use>
 	</svg>
 </button>
 <button class="btn btn-monospaced btn-secondary" type="button">
-	<svg class="lexicon-icon lexicon-icon-blogs" focusable="false" role="presentation">
+	<svg
+		class="lexicon-icon lexicon-icon-blogs"
+		focusable="false"
+		role="presentation"
+	>
 		<use href="/images/icons/icons.svg#blogs"></use>
 	</svg>
 </button>
@@ -150,7 +162,11 @@ Wrap the icon with the `<span />` tag and adding the [Inline Item](/docs/css/uti
 ```html
 <button class="btn btn-secondary" type="button">
 	<span class="inline-item inline-item-before">
-		<svg class="lexicon-icon lexicon-icon-blogs" focusable="false" role="presentation">
+		<svg
+			class="lexicon-icon lexicon-icon-blogs"
+			focusable="false"
+			role="presentation"
+		>
 			<use href="/images/icons/icons.svg#share"></use>
 		</svg>
 	</span>
