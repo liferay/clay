@@ -54,7 +54,7 @@ To prevent Modal from closing before animation always use the `onClose` method r
 ```diff
 <ClayModal.Footer
 -   last={<ClayButton onClick={() => setVisible(false)}>{"Primary"}</ClayButton>}
-+   last={<ClayButton onClick={onClick}>{"Primary"}</ClayButton>}
++   last={<ClayButton onClick={onClose}>{"Primary"}</ClayButton>}
 />
 ```
 
