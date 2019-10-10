@@ -7,9 +7,13 @@ description: 'Toggle provide users with different selection and activation tools
 <div class="nav-toc">
 
 -   [Example](#example)
--   [Behavioral](#behavioral) - [Checkbox](#checkbox) - [Radio](#radio)
+-   [Behavioral](#behavioral)
+    -   [Checkbox](#checkbox)
+    -   [Radio](#radio)
 -   [Disabled](#disabled)
--   [Composable](#composable) - [With Text](#with-text) - [With Icons](#with-icons)
+-   [Composable](#composable)
+    -   [With Text](#with-text)
+    -   [With Icons](#with-icons)
 -   [Extending Toggles](#extending-toggles)
 
 </div>

@@ -9,7 +9,9 @@ title: 'Inline Item'
 -   [Link with Whitespace](#link-with-whitespace)
 -   [Button without Whitespace](#button-without-whitespace)
 -   [Button with Whitespace](#button-with-whitespace)
--   [Close](#close) - [Anchor](#anchor) - [Button](#button)
+-   [Close](#close)
+    -   [Anchor](#anchor)
+    -   [Button](#button)
 
 </div>
 </div>

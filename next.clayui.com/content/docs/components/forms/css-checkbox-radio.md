@@ -6,8 +6,15 @@ description: 'Checkboxes and radios provide users with different selection and a
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Checkboxes and Radios](#checkboxes-and-radios) - [Default (stacked)](<#default-(stacked)>) - [Inline](#inline) - [Without labels](#without-labels)
--   [Custom Checkboxes and radios](#custom-checkboxes-and-radios) - [Checkboxes](#checkboxes) - [Radios](#radios) - [Inline](#inline) - [Disabled](#disabled)
+-   [Checkboxes and Radios](#checkboxes-and-radios)
+    -   [Default (stacked)](<#default-(stacked)>)
+    -   [Inline](#inline)
+    -   [Without labels](#without-labels)
+-   [Custom Checkboxes and radios](#custom-checkboxes-and-radios)
+    -   [Checkboxes](#checkboxes)
+    -   [Radios](#radios
+-   [Inline](#inline)
+    -   [Disabled](#disabled)
 
 </div>
 </div>
