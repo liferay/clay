@@ -25,7 +25,7 @@ const Search: React.FunctionComponent<IProps> = ({
 	onlySearch,
 	showMobile,
 	...otherProps
-}) => {
+}: IProps) => {
 	const content = (
 		<form {...otherProps} role="search">
 			{children}
