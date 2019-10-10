@@ -160,6 +160,37 @@ describe('Interactions', () => {
 		expect(onItemsChangeFn).toHaveBeenCalled();
 	});
 
+	it('autocomplete menu renders with left and top styles', () => {
+		const onItemsChangeFn = jest.fn();
+
+		render(
+			<ClayMultiSelectWithState
+				items={[items[0]]}
+				onItemsChange={onItemsChangeFn}
+				sourceItems={items}
+				spritemap="/foo/bar"
+			/>
+		);
+
+		expect(document.querySelectorAll('.dropdown-item').length).toEqual(0);
+
+		fireEvent.change(
+			document.querySelectorAll(
+				'input[type=text]'
+			)[0] as HTMLInputElement,
+			{target: {value: 'bar'}}
+		);
+
+		expect(document.querySelectorAll('.dropdown-item').length).toEqual(1);
+
+		const menuStyles = (document.querySelector(
+			'.autocomplete-dropdown-menu'
+		) as HTMLElement).style;
+
+		expect(menuStyles.left).not.toEqual('');
+		expect(menuStyles.top).not.toEqual('');
+	});
+
 	it('clicking on autocomplete item calls onItemsChange', () => {
 		const onItemsChangeFn = jest.fn();
 

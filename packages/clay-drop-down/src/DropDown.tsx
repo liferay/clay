@@ -104,11 +104,13 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 					),
 					onClick: () => onActiveChange(!active),
 					ref: (node: HTMLButtonElement) => {
-						triggerElementRef.current = node;
-						// Call the original ref, if any.
-						const {ref} = trigger;
-						if (typeof ref === 'function') {
-							ref(node);
+						if (node) {
+							triggerElementRef.current = node;
+							// Call the original ref, if any.
+							const {ref} = trigger;
+							if (typeof ref === 'function') {
+								ref(node);
+							}
 						}
 					},
 				})}
