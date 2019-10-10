@@ -100,6 +100,43 @@ describe('Modal -> IncrementalInteractions', () => {
 		expect(document.querySelector(modalElSelector)).toBeNull();
 	});
 
+	it('do not close modal when event is prevented by clicking on overlay', () => {
+		const ModalWithEventPrevented = () => {
+			const handleDocumentClick = (event: Event) => {
+				event.preventDefault();
+			};
+
+			useEffect(() => {
+				document.addEventListener('click', handleDocumentClick);
+
+				return () => {
+					document.removeEventListener('click', handleDocumentClick);
+				};
+			}, []);
+
+			return <ModalWithState />;
+		};
+
+		const {getByLabelText} = render(<ModalWithEventPrevented />);
+
+		fireEvent.click(getByLabelText('button'), {});
+
+		act(() => {
+			jest.runAllTimers();
+		});
+
+		const backdropElSelector = '.modal-backdrop.fade.show';
+		const modalElSelector = '.fade.modal.d-block.show';
+
+		const backdropEl = document.querySelector(backdropElSelector);
+
+		fireEvent.click(backdropEl!, {});
+
+		expect(document.body.classList).toContain('modal-open');
+		expect(document.querySelector(backdropElSelector)).toBeDefined();
+		expect(document.querySelector(modalElSelector)).toBeDefined();
+	});
+
 	it('close the modal when pressing ESC', () => {
 		const {container} = render(<ModalWithState initialVisible />);
 
