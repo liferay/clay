@@ -1,6 +1,6 @@
 ---
-title: "Breadcrumb"
-description: "Breadcrumb is a secondary navigation pattern that identifies the page position inside a hierarchy."
+title: 'Breadcrumb'
+description: 'Breadcrumb is a secondary navigation pattern that identifies the page position inside a hierarchy.'
 ---
 
 <div class="clay-site-alert alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/list/">List Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
@@ -52,34 +52,46 @@ Use `<span class="breadcrumb-text-truncate"></span>` inside breadcrumb links to 
 
 ```html
 <ol class="breadcrumb">
-    <li class="breadcrumb-item">
-        <a class="breadcrumb-link" href="#1" title="Home">
-            <span class="breadcrumb-text-truncate">Home</span>
-        </a>
-    </li>
-    <li class="breadcrumb-item">
-        <a class="breadcrumb-link" href="#1" title="Components">
-            <span class="breadcrumb-text-truncate">Components</span>
-        </a>
-    </li>
-    <li class="breadcrumb-item">
-        <a class="breadcrumb-link" href="#1" title="Breadcrumbs and Paginations">
-            <span class="breadcrumb-text-truncate">Breadcrumbs and Paginations</span>
-        </a>
-    </li>
-    <li class="breadcrumb-item">
-        <a class="breadcrumb-link" href="#1" title="Page">
-            <span class="breadcrumb-text-truncate">Page</span>
-        </a>
-    </li>
-    <li class="breadcrumb-item">
-        <a class="breadcrumb-link" href="#1" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">
-            <span class="breadcrumb-text-truncate">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
-        </a>
-    </li>
-    <li class="active breadcrumb-item">
-        <span class="breadcrumb-text-truncate" title="Active">Active</span>
-    </li>
+	<li class="breadcrumb-item">
+		<a class="breadcrumb-link" href="#1" title="Home">
+			<span class="breadcrumb-text-truncate">Home</span>
+		</a>
+	</li>
+	<li class="breadcrumb-item">
+		<a class="breadcrumb-link" href="#1" title="Components">
+			<span class="breadcrumb-text-truncate">Components</span>
+		</a>
+	</li>
+	<li class="breadcrumb-item">
+		<a
+			class="breadcrumb-link"
+			href="#1"
+			title="Breadcrumbs and Paginations"
+		>
+			<span class="breadcrumb-text-truncate"
+				>Breadcrumbs and Paginations</span
+			>
+		</a>
+	</li>
+	<li class="breadcrumb-item">
+		<a class="breadcrumb-link" href="#1" title="Page">
+			<span class="breadcrumb-text-truncate">Page</span>
+		</a>
+	</li>
+	<li class="breadcrumb-item">
+		<a
+			class="breadcrumb-link"
+			href="#1"
+			title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual"
+		>
+			<span class="breadcrumb-text-truncate"
+				>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span
+			>
+		</a>
+	</li>
+	<li class="active breadcrumb-item">
+		<span class="breadcrumb-text-truncate" title="Active">Active</span>
+	</li>
 </ol>
 ```
 
@@ -118,34 +130,60 @@ Use `<span class="breadcrumb-text-truncate"></span>` inside breadcrumb links to 
 
 ```html
 <ol class="breadcrumb">
-    <li class="breadcrumb-item dropdown">
-        <a aria-expanded="false" aria-haspopup="true" class="breadcrumb-link dropdown-toggle" data-toggle="dropdown" href="" id="breadcrumb2Dropdown1" role="button">
-            <svg class="lexicon-icon lexicon-icon-ellipsis-h" focusable="false" role="presentation">
-                <use href="/images/icons/icons.svg#ellipsis-h"></use>
-            </svg>
-            <svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
-                <use href="/images/icons/icons.svg#caret-bottom"></use>
-            </svg>
-        </a>
-        <ul aria-labelledby="breadcrumb2Dropdown1" class="dropdown-menu">
-            <li><a class="dropdown-item" href="#1">Home</a></li>
-            <li><a class="dropdown-item" href="#1">Components</a></li>
-            <li><a class="dropdown-item" href="#1">Breadcrumbs and Paginations</a></li>
-        </ul>
-    </li>
-    <li class="breadcrumb-item">
-        <a class="breadcrumb-link" href="#1" title="Page">
-            <span class="breadcrumb-text-truncate">Page</span>
-        </a>
-    </li>
-    <li class="breadcrumb-item">
-        <a class="breadcrumb-link" href="#1" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">
-            <span class="breadcrumb-text-truncate">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
-        </a>
-    </li>
-    <li class="active breadcrumb-item">
-        <span class="breadcrumb-text-truncate" title="Active">Active</span>
-    </li>
+	<li class="breadcrumb-item dropdown">
+		<a
+			aria-expanded="false"
+			aria-haspopup="true"
+			class="breadcrumb-link dropdown-toggle"
+			data-toggle="dropdown"
+			href=""
+			id="breadcrumb2Dropdown1"
+			role="button"
+		>
+			<svg
+				class="lexicon-icon lexicon-icon-ellipsis-h"
+				focusable="false"
+				role="presentation"
+			>
+				<use href="/images/icons/icons.svg#ellipsis-h"></use>
+			</svg>
+			<svg
+				class="lexicon-icon lexicon-icon-caret-bottom"
+				focusable="false"
+				role="presentation"
+			>
+				<use href="/images/icons/icons.svg#caret-bottom"></use>
+			</svg>
+		</a>
+		<ul aria-labelledby="breadcrumb2Dropdown1" class="dropdown-menu">
+			<li><a class="dropdown-item" href="#1">Home</a></li>
+			<li><a class="dropdown-item" href="#1">Components</a></li>
+			<li>
+				<a class="dropdown-item" href="#1"
+					>Breadcrumbs and Paginations</a
+				>
+			</li>
+		</ul>
+	</li>
+	<li class="breadcrumb-item">
+		<a class="breadcrumb-link" href="#1" title="Page">
+			<span class="breadcrumb-text-truncate">Page</span>
+		</a>
+	</li>
+	<li class="breadcrumb-item">
+		<a
+			class="breadcrumb-link"
+			href="#1"
+			title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual"
+		>
+			<span class="breadcrumb-text-truncate"
+				>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span
+			>
+		</a>
+	</li>
+	<li class="active breadcrumb-item">
+		<span class="breadcrumb-text-truncate" title="Active">Active</span>
+	</li>
 </ol>
 ```
 
@@ -209,60 +247,118 @@ Use `<span class="breadcrumb-text-truncate"></span>` inside breadcrumb links to 
 </div>
 
 ```html
- <ol class="breadcrumb">
-    <li class="breadcrumb-item dropdown">
-        <a aria-expanded="false" aria-haspopup="true" class="breadcrumb-link dropdown-toggle" data-toggle="dropdown" href="#1" id="breadcrumb3Dropdown1" role="button" title="Dropdown">
-            <span class="breadcrumb-text-truncate">Dropdown</span>
-            <svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
-                <use href="/images/icons/icons.svg#caret-bottom"></use>
-            </svg>
-        </a>
-        <ul aria-labelledby="breadcrumb3Dropdown1" class="dropdown-menu">
-            <li><a class="dropdown-item" href="#1">Home</a></li>
-            <li><a class="dropdown-item" href="#1">Components</a></li>
-            <li><a class="dropdown-item" href="#1">Breadcrumbs and Paginations</a></li>
-        </ul>
-    </li>
-    <li class="breadcrumb-item dropdown">
-        <button aria-expanded="false" aria-haspopup="true" class="breadcrumb-link btn btn-unstyled dropdown-toggle" data-toggle="dropdown" id="breadcrumb3Dropdown2" title="Dropdown" type="button">
-            <span class="breadcrumb-text-truncate">Dropdown</span>
-            <svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
-                <use href="/images/icons/icons.svg#caret-bottom"></use>
-            </svg>
-        </button>
-        <ul aria-labelledby="breadcrumb3Dropdown2" class="dropdown-menu">
-            <li><a class="dropdown-item" href="#1">Home</a></li>
-            <li><a class="dropdown-item" href="#1">Components</a></li>
-            <li><a class="dropdown-item" href="#1">Breadcrumbs and Paginations</a></li>
-        </ul>
-    </li>
-    <li class="breadcrumb-item dropdown">
-        <button aria-expanded="false" aria-haspopup="true" class="breadcrumb-link btn btn-unstyled dropdown-toggle" data-toggle="dropdown" id="breadcrumb2Dropdown2" type="button">
-            <svg class="lexicon-icon lexicon-icon-ellipsis-h" focusable="false" role="presentation">
-                <use href="/images/icons/icons.svg#ellipsis-h"></use>
-            </svg>
-            <svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
-                <use href="/images/icons/icons.svg#caret-bottom"></use>
-            </svg>
-        </button>
-        <ul aria-labelledby="breadcrumb2Dropdown2" class="dropdown-menu">
-            <li><a class="dropdown-item" href="#1">Home</a></li>
-            <li><a class="dropdown-item" href="#1">Components</a></li>
-            <li><a class="dropdown-item" href="#1">Breadcrumbs and Paginations</a></li>
-        </ul>
-    </li>
-    <li class="breadcrumb-item">
-        <a class="breadcrumb-link" href="#1" title="Page">
-            <span class="breadcrumb-text-truncate">Page</span>
-        </a>
-    </li>
-    <li class="breadcrumb-item">
-        <a class="breadcrumb-link" href="#1" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">
-            <span class="breadcrumb-text-truncate">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
-        </a>
-    </li>
-    <li class="active breadcrumb-item">
-        <span class="breadcrumb-text-truncate" title="Active">Active</span>
-    </li>
+<ol class="breadcrumb">
+	<li class="breadcrumb-item dropdown">
+		<a
+			aria-expanded="false"
+			aria-haspopup="true"
+			class="breadcrumb-link dropdown-toggle"
+			data-toggle="dropdown"
+			href="#1"
+			id="breadcrumb3Dropdown1"
+			role="button"
+			title="Dropdown"
+		>
+			<span class="breadcrumb-text-truncate">Dropdown</span>
+			<svg
+				class="lexicon-icon lexicon-icon-caret-bottom"
+				focusable="false"
+				role="presentation"
+			>
+				<use href="/images/icons/icons.svg#caret-bottom"></use>
+			</svg>
+		</a>
+		<ul aria-labelledby="breadcrumb3Dropdown1" class="dropdown-menu">
+			<li><a class="dropdown-item" href="#1">Home</a></li>
+			<li><a class="dropdown-item" href="#1">Components</a></li>
+			<li>
+				<a class="dropdown-item" href="#1"
+					>Breadcrumbs and Paginations</a
+				>
+			</li>
+		</ul>
+	</li>
+	<li class="breadcrumb-item dropdown">
+		<button
+			aria-expanded="false"
+			aria-haspopup="true"
+			class="breadcrumb-link btn btn-unstyled dropdown-toggle"
+			data-toggle="dropdown"
+			id="breadcrumb3Dropdown2"
+			title="Dropdown"
+			type="button"
+		>
+			<span class="breadcrumb-text-truncate">Dropdown</span>
+			<svg
+				class="lexicon-icon lexicon-icon-caret-bottom"
+				focusable="false"
+				role="presentation"
+			>
+				<use href="/images/icons/icons.svg#caret-bottom"></use>
+			</svg>
+		</button>
+		<ul aria-labelledby="breadcrumb3Dropdown2" class="dropdown-menu">
+			<li><a class="dropdown-item" href="#1">Home</a></li>
+			<li><a class="dropdown-item" href="#1">Components</a></li>
+			<li>
+				<a class="dropdown-item" href="#1"
+					>Breadcrumbs and Paginations</a
+				>
+			</li>
+		</ul>
+	</li>
+	<li class="breadcrumb-item dropdown">
+		<button
+			aria-expanded="false"
+			aria-haspopup="true"
+			class="breadcrumb-link btn btn-unstyled dropdown-toggle"
+			data-toggle="dropdown"
+			id="breadcrumb2Dropdown2"
+			type="button"
+		>
+			<svg
+				class="lexicon-icon lexicon-icon-ellipsis-h"
+				focusable="false"
+				role="presentation"
+			>
+				<use href="/images/icons/icons.svg#ellipsis-h"></use>
+			</svg>
+			<svg
+				class="lexicon-icon lexicon-icon-caret-bottom"
+				focusable="false"
+				role="presentation"
+			>
+				<use href="/images/icons/icons.svg#caret-bottom"></use>
+			</svg>
+		</button>
+		<ul aria-labelledby="breadcrumb2Dropdown2" class="dropdown-menu">
+			<li><a class="dropdown-item" href="#1">Home</a></li>
+			<li><a class="dropdown-item" href="#1">Components</a></li>
+			<li>
+				<a class="dropdown-item" href="#1"
+					>Breadcrumbs and Paginations</a
+				>
+			</li>
+		</ul>
+	</li>
+	<li class="breadcrumb-item">
+		<a class="breadcrumb-link" href="#1" title="Page">
+			<span class="breadcrumb-text-truncate">Page</span>
+		</a>
+	</li>
+	<li class="breadcrumb-item">
+		<a
+			class="breadcrumb-link"
+			href="#1"
+			title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual"
+		>
+			<span class="breadcrumb-text-truncate"
+				>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span
+			>
+		</a>
+	</li>
+	<li class="active breadcrumb-item">
+		<span class="breadcrumb-text-truncate" title="Active">Active</span>
+	</li>
 </ol>
 ```

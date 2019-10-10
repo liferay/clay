@@ -10,7 +10,7 @@ Before making a bug, have you used the issue search functionality?
 
 -->
 
-- [ ] I have searched the [issues](https://github.com/liferay/clay/issues) of this repository and believe that this is not a duplicate.
+-   [ ] I have searched the [issues](https://github.com/liferay/clay/issues) of this repository and believe that this is not a duplicate.
 
 ## Is there an example you can provide via codesandbox.com?
 
@@ -20,7 +20,7 @@ Before making a bug, have you used the issue search functionality?
 
 ## Environment
 
-| Tech    | Version |
-| ------- | ------- |
-| Clay    | v?.?.?  |
-| React   |         |
+| Tech  | Version |
+| ----- | ------- |
+| Clay  | v?.?.?  |
+| React |         |

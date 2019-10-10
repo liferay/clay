@@ -1,45 +1,67 @@
 ---
-title: "Drop Down"
-description: "A dropdown menu displays a list of options for the element that triggers it."
-packageNpm: "@clayui/drop-down"
-sibling: "docs/components/css-dropdown.html"
+title: 'Drop Down'
+description: 'A dropdown menu displays a list of options for the element that triggers it.'
+packageNpm: '@clayui/drop-down'
+sibling: 'docs/components/css-dropdown.html'
 ---
 
-import {DropDown, DropDownWithItems} from '../../../src/components/clay/DropDown';
+import {
+	DropDown,
+	DropDownWithItems,
+} from '../../../src/components/clay/DropDown';
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Composing](#composing)
-  - [Using dropdown without a trigger](#using-dropdown-without-a-trigger)
-- [DropDownWithItems](#dropdownwithitems)
-- [API](#api)
-  - [ClayDropDown](#claydropdown)
-  - [ClayDropDown.Action](#claydropdown.action)
-  - [ClayDropDown.Caption](#claydropdown.caption)
-  - [ClayDropDown.Divider](#claydropdown.divider)
-  - [ClayDropDown.Group](#claydropdown.group)
-  - [ClayDropDown.Help](#claydropdown.help)
-  - [ClayDropDown.Item](#claydropdown.item)
-  - [ClayDropDown.ItemList](#claydropdown.itemlist)
-  - [ClayDropDown.Menu](#claydropdown.menu)
-  - [ClayDropDown.Search](#claydropdown.search)
-  - [ClayDropDownWithItems](#claydropdownwithitems)
+-   [Composing](#composing)
+    -   [Using dropdown without a trigger](#using-dropdown-without-a-trigger)
+-   [DropDownWithItems](#dropdownwithitems)
+-   [API](#api)
+    -   [ClayDropDown](#claydropdown)
+    -   [ClayDropDown.Action](#claydropdown.action)
+    -   [ClayDropDown.Caption](#claydropdown.caption)
+    -   [ClayDropDown.Divider](#claydropdown.divider)
+    -   [ClayDropDown.Group](#claydropdown.group)
+    -   [ClayDropDown.Help](#claydropdown.help)
+    -   [ClayDropDown.Item](#claydropdown.item)
+    -   [ClayDropDown.ItemList](#claydropdown.itemlist)
+    -   [ClayDropDown.Menu](#claydropdown.menu)
+    -   [ClayDropDown.Search](#claydropdown.search)
+    -   [ClayDropDownWithItems](#claydropdownwithitems)
 
 </div>
 </div>
 
 <div class="clay-site-alert alert alert-warning">
-    Take a look at our <a href="https://storybook-clayui.netlify.com/?path=/story/claydropdown--default">Storybook</a> for more information about this component.
+	Take a look at our{' '}
+	<a href="https://storybook-clayui.netlify.com/?path=/story/claydropdown--default">
+		Storybook
+	</a>{' '}
+	for more information about this component.
 </div>
 
 <div class="clay-site-alert alert alert-info">
-	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/dropdowns/">Dropdown Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
+	Check the <a href="https://liferay.design/lexicon">Lexicon</a>{' '}
+	<a href="https://liferay.design/lexicon/core-components/dropdowns/">
+		Dropdown Pattern
+	</a>{' '}
+	for a more in-depth look at the motivations and proper usage of this
+	component.
 </div>
 
 <div class="clay-site-alert alert alert-warning">
 	<strong class="lead">Warning</strong>
-	Before you get started with this doc, read about <a href="/docs/foundations/composing.html" target="_blank">Clay's fundamentals of composition</a> to move on. The information below is assuming you have read about <a href="/docs/foundations/composing.html" target="_blank">Clay's compositional philosophy</a> and learned about the terms.
+	Before you get started with this doc, read about <a
+		href="/docs/foundations/composing.html"
+		target="_blank"
+	>
+		Clay's fundamentals of composition
+	</a> to move on. The information below is assuming you have read about <a
+		href="/docs/foundations/composing.html"
+		target="_blank"
+	>
+		Clay's compositional philosophy
+	</a> and learned about the terms.
 </div>
 
 DropDown's composition gives you the space to create more complex DropDowns, such as adding a form within DropDown, and creating simple DropDowns with the high-level `ClayDropDownWithItems` component that covers most basic Lexicon use cases.
@@ -51,7 +73,9 @@ DropDown's composition gives you the space to create more complex DropDowns, suc
 You may want to use only the content of DropDown for other cases, such as mounting an `Autocomplete`, so use `DropDown.Menu` instead of `DropDown` which gives you the flexibility to only control content without a trigger.
 
 <div class="clay-site-alert alert alert-warning">
-	<code class="language-text">DropDown</code> consists of a <code class="language-text">DropDown.Menu</code> that controls the trigger and uses it as the basis for aligning DropDown content.
+	<code class="language-text">DropDown</code> consists of a{' '}
+	<code class="language-text">DropDown.Menu</code> that controls the trigger
+	and uses it as the basis for aligning DropDown content.
 </div>
 
 #### Using dropdown without a trigger
@@ -64,45 +88,45 @@ Using `<ClayDropDown.Menu />` allows you to better control the state of DropDown
 import ClayDropDown from '@clayui/drop-down';
 import React, {useState, useRef} from 'react';
 
-const Menu = ({
-    children,
-    hasLeftSymbols,
-    hasRightSymbols,
-}) => {
-    const triggerElementRef = useRef(null);
-    const [expand, setExpand] = useState(false);
-    const menuElementRef = useRef(null);
+const Menu = ({children, hasLeftSymbols, hasRightSymbols}) => {
+	const triggerElementRef = useRef(null);
+	const [expand, setExpand] = useState(false);
+	const menuElementRef = useRef(null);
 
-    const handleExpand = event => {
-        // This is not ideal for allowing you to have more than
-        // one trigger for the same content but it simulates the
-        // advantages of controlling `DropDown.Menu`.
-        triggerElementRef.current = event.target;
+	const handleExpand = event => {
+		// This is not ideal for allowing you to have more than
+		// one trigger for the same content but it simulates the
+		// advantages of controlling `DropDown.Menu`.
+		triggerElementRef.current = event.target;
 
-        setExpand(!expand);
-    };
+		setExpand(!expand);
+	};
 
-    return (
-        <div>
-            <div>
-                <button type="button" onClick={handleExpand}>Home</button>
-            </div>
-            <div>
-                <button type="button" onClick={handleExpand}>Product</button>
-            </div>
+	return (
+		<div>
+			<div>
+				<button type="button" onClick={handleExpand}>
+					Home
+				</button>
+			</div>
+			<div>
+				<button type="button" onClick={handleExpand}>
+					Product
+				</button>
+			</div>
 
-            <ClayDropDown.Menu
-                active={expand}
-                alignElementRef={triggerElementRef}
-                hasLeftSymbols={hasLeftSymbols}
-                hasRightSymbols={hasRightSymbols}
-                onSetActive={() => setExpand(!expand)}
-                ref={menuElementRef}
-            >
-                {children}
-            </ClayDropDown.Menu>
-        </div>
-    );
+			<ClayDropDown.Menu
+				active={expand}
+				alignElementRef={triggerElementRef}
+				hasLeftSymbols={hasLeftSymbols}
+				hasRightSymbols={hasRightSymbols}
+				onSetActive={() => setExpand(!expand)}
+				ref={menuElementRef}
+			>
+				{children}
+			</ClayDropDown.Menu>
+		</div>
+	);
 };
 ```
 
@@ -116,56 +140,54 @@ Allows you to create a simple DropDown, through its API you are able to create a
 
 ### ClayDropDown
 
-<div>
-	[APITable "clay-drop-down/src/index.tsx"]
-</div>
+<div>[APITable "clay-drop-down/src/index.tsx"]</div>
 
 ### ClayDropDown.Action
 
-<code class="list-api-item-type">Extends from {`React.HTMLAttributes<HTMLButtonElement>`}</code>
+<code class="list-api-item-type">
+	Extends from {`React.HTMLAttributes<HTMLButtonElement>`}
+</code>
 
 ### ClayDropDown.Caption
 
-<code class="list-api-item-type">Extends from {`React.HTMLAttributes<HTMLDivElement>`}</code>
+<code class="list-api-item-type">
+	Extends from {`React.HTMLAttributes<HTMLDivElement>`}
+</code>
 
 ### ClayDropDown.Divider
 
-<code class="list-api-item-type">Extends from {`React.HTMLAttributes<HTMLLIElement>`}</code>
+<code class="list-api-item-type">
+	Extends from {`React.HTMLAttributes<HTMLLIElement>`}
+</code>
 
 ### ClayDropDown.Group
 
-<div>
-	[APITable "clay-drop-down/src/Group.tsx"]
-</div>
+<div>[APITable "clay-drop-down/src/Group.tsx"]</div>
 
 ### ClayDropDown.Help
 
-<code class="list-api-item-type">Extends from {`React.HTMLAttributes<HTMLDivElement>`}</code>
+<code class="list-api-item-type">
+	Extends from {`React.HTMLAttributes<HTMLDivElement>`}
+</code>
 
 ### ClayDropDown.Item
 
-<div>
-	[APITable "clay-drop-down/src/Item.tsx"]
-</div>
+<div>[APITable "clay-drop-down/src/Item.tsx"]</div>
 
 ### ClayDropDown.ItemList
 
-<code class="list-api-item-type">Extends from {`React.HTMLAttributes<HTMLUListElement>`}</code>
+<code class="list-api-item-type">
+	Extends from {`React.HTMLAttributes<HTMLUListElement>`}
+</code>
 
 ### ClayDropDown.Menu
 
-<div>
-	[APITable "clay-drop-down/src/Menu.tsx"]
-</div>
+<div>[APITable "clay-drop-down/src/Menu.tsx"]</div>
 
 ### ClayDropDown.Search
 
-<div>
-	[APITable "clay-drop-down/src/Search.tsx"]
-</div>
+<div>[APITable "clay-drop-down/src/Search.tsx"]</div>
 
 ### ClayDropDownWithItems
 
-<div>
-	[APITable "clay-drop-down/src/DropDownWithItems.tsx"]
-</div>
+<div>[APITable "clay-drop-down/src/DropDownWithItems.tsx"]</div>

@@ -1,5 +1,5 @@
 ---
-title: "Principles"
+title: 'Principles'
 draft: true
 ---
 

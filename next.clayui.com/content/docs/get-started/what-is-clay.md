@@ -1,6 +1,6 @@
 ---
-title: "What is Clay"
-description: "A Web Implementation of Lexicon Experience Language"
+title: 'What is Clay'
+description: 'A Web Implementation of Lexicon Experience Language'
 order: 1
 ---
 

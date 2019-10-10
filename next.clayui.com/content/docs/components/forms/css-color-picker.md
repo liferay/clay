@@ -1,13 +1,13 @@
 ---
-title: "Color Picker"
-description: "Color picker lets users select a color from a predefined palette, specify a color via its hexadecimal value, sample a color, and explore color values to create a custom color variation."
+title: 'Color Picker'
+description: 'Color picker lets users select a color from a predefined palette, specify a color via its hexadecimal value, sample a color, and explore color values to create a custom color variation.'
 ---
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Example](#example)
-- [Variations](#variations)
+-   [Example](#example)
+-   [Variations](#variations)
 
 </div>
 </div>
@@ -181,34 +181,75 @@ description: "Color picker lets users select a color from a predefined palette, 
 <div class="clay-color input-group">
 	<div class="input-group-item input-group-item-shrink input-group-prepend">
 		<div class="input-group-text">
-			<button aria-expanded="false" aria-haspopup="true" aria-label="Select a color" class="btn clay-color-btn dropdown-toggle" data-toggle="dropdown" id="clayColor1DropdownToggle" title="#B2EDFF" type="button" style="background-color:#B2EDFF;"></button>
-			<div aria-labelledby="clayColor1DropdownToggle" class="clay-color-dropdown-menu dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(8px, 32px, 0px);">
+			<button
+				aria-expanded="false"
+				aria-haspopup="true"
+				aria-label="Select a color"
+				class="btn clay-color-btn dropdown-toggle"
+				data-toggle="dropdown"
+				id="clayColor1DropdownToggle"
+				title="#B2EDFF"
+				type="button"
+				style="background-color:#B2EDFF;"
+			></button>
+			<div
+				aria-labelledby="clayColor1DropdownToggle"
+				class="clay-color-dropdown-menu dropdown-menu"
+				x-placement="bottom-start"
+				style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(8px, 32px, 0px);"
+			>
 				<div class="clay-color-swatch">
 					<div class="clay-color-swatch-item">
-						<button class="btn clay-color-btn" title="#000000" style="background-color:#000000;"></button>
+						<button
+							class="btn clay-color-btn"
+							title="#000000"
+							style="background-color:#000000;"
+						></button>
 					</div>
 				</div>
 				<div class="clay-color-header">
 					<span class="component-title">Custom Colors</span>
-					<button class="component-action" id="claySiteShowView2" type="button">
-						<svg class="lexicon-icon lexicon-icon-drop" focusable="false" role="presentation">
+					<button
+						class="component-action"
+						id="claySiteShowView2"
+						type="button"
+					>
+						<svg
+							class="lexicon-icon lexicon-icon-drop"
+							focusable="false"
+							role="presentation"
+						>
 							<use href="/images/icons/icons.svg#drop" />
 						</svg>
 					</button>
 				</div>
 				<div class="clay-color-swatch">
 					<div class="clay-color-swatch-item">
-						<button class="btn clay-color-btn focus" title="#B2EDFF" style="background-color:#B2EDFF;"></button>
+						<button
+							class="btn clay-color-btn focus"
+							title="#B2EDFF"
+							style="background-color:#B2EDFF;"
+						></button>
 					</div>
 					<div class="clay-color-swatch-item">
-						<button class="btn clay-color-btn clay-color-btn-bordered" title="#FFFFFF" style="background-color:#FFFFFF;"></button>
+						<button
+							class="btn clay-color-btn clay-color-btn-bordered"
+							title="#FFFFFF"
+							style="background-color:#FFFFFF;"
+						></button>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="input-group-append input-group-item">
-		<input aria-label="Color selection is #B2EDFF" class="form-control" id="clayColor1" type="text" value="#B2EDFF">
+		<input
+			aria-label="Color selection is #B2EDFF"
+			class="form-control"
+			id="clayColor1"
+			type="text"
+			value="#B2EDFF"
+		/>
 	</div>
 </div>
 ```
@@ -258,7 +299,11 @@ description: "Color picker lets users select a color from a predefined palette, 
 <div class="clay-color-dropdown-menu dropdown-menu show">
 	<div class="clay-color-swatch">
 		<div class="clay-color-swatch-item">
-			<button class="btn clay-color-btn" title="#FFB1B1" style="background-color:#FFB1B1;"></button>
+			<button
+				class="btn clay-color-btn"
+				title="#FFB1B1"
+				style="background-color:#FFB1B1;"
+			></button>
 		</div>
 		...
 	</div>
@@ -414,23 +459,39 @@ description: "Color picker lets users select a color from a predefined palette, 
 <div class="clay-color-dropdown-menu dropdown-menu show">
 	<div class="clay-color-swatch">
 		<div class="clay-color-swatch-item">
-			<button class="btn clay-color-btn" title="#000000" style="background-color:#000000;"></button>
+			<button
+				class="btn clay-color-btn"
+				title="#000000"
+				style="background-color:#000000;"
+			></button>
 		</div>
 	</div>
 	<div class="clay-color-header">
 		<span class="component-title">Custom Colors</span>
 		<button class="component-action" type="button">
-			<svg class="lexicon-icon lexicon-icon-drop" focusable="false" role="presentation">
+			<svg
+				class="lexicon-icon lexicon-icon-drop"
+				focusable="false"
+				role="presentation"
+			>
 				<use href="/images/icons/icons.svg#drop" />
 			</svg>
 		</button>
 	</div>
 	<div class="clay-color-swatch">
 		<div class="clay-color-swatch-item">
-			<button class="btn clay-color-btn focus" title="#B2EDFF" style="background-color:#B2EDFF;"></button>
+			<button
+				class="btn clay-color-btn focus"
+				title="#B2EDFF"
+				style="background-color:#B2EDFF;"
+			></button>
 		</div>
 		<div class="clay-color-swatch-item">
-			<button class="btn clay-color-btn clay-color-btn-bordered" title="#FFFFFF" style="background-color:#FFFFFF;"></button>
+			<button
+				class="btn clay-color-btn clay-color-btn-bordered"
+				title="#FFFFFF"
+				style="background-color:#FFFFFF;"
+			></button>
 		</div>
 	</div>
 </div>
@@ -549,29 +610,56 @@ description: "Color picker lets users select a color from a predefined palette, 
 	<div class="clay-color-header">
 		<span class="component-title">Custom Colors</span>
 		<button class="close" type="button">
-			<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+			<svg
+				class="lexicon-icon lexicon-icon-times"
+				focusable="false"
+				role="presentation"
+			>
 				<use href="/images/icons/icons.svg#times" />
 			</svg>
 		</button>
 	</div>
 	<div class="clay-color-swatch">
 		<div class="clay-color-swatch-item">
-			<button class="btn clay-color-btn focus" title="#B2EDFF" style="background-color:#B2EDFF;"></button>
+			<button
+				class="btn clay-color-btn focus"
+				title="#B2EDFF"
+				style="background-color:#B2EDFF;"
+			></button>
 		</div>
 		<div class="clay-color-swatch-item">
-			<button class="btn clay-color-btn" title="#45EDC5" style="background-color:#45EDC5;"></button>
+			<button
+				class="btn clay-color-btn"
+				title="#45EDC5"
+				style="background-color:#45EDC5;"
+			></button>
 		</div>
 	</div>
 	<div class="clay-color-map-group">
-		<div class="clay-color-map-hsb clay-color-map" style="background-color:rgb(180,237,254);">
-			<button class="clay-color-pointer clay-color-map-pointer" style="top: 0px; left: 130px;background-color: rgb(180, 237, 254);" type="button"></button>
+		<div
+			class="clay-color-map-hsb clay-color-map"
+			style="background-color:rgb(180,237,254);"
+		>
+			<button
+				class="clay-color-pointer clay-color-map-pointer"
+				style="top: 0px; left: 130px;background-color: rgb(180, 237, 254);"
+				type="button"
+			></button>
 		</div>
 		<div class="clay-color-map-values">
 			<div class="form-group">
 				<div class="input-group">
 					<div class="input-group-item">
-						<input class="form-control input-group-inset input-group-inset-before" id="clayColor3Red" type="text" value="180">
-						<label class="input-group-inset-item input-group-inset-item-before" for="clayColor3Red">
+						<input
+							class="form-control input-group-inset input-group-inset-before"
+							id="clayColor3Red"
+							type="text"
+							value="180"
+						/>
+						<label
+							class="input-group-inset-item input-group-inset-item-before"
+							for="clayColor3Red"
+						>
 							R
 						</label>
 					</div>
@@ -580,8 +668,16 @@ description: "Color picker lets users select a color from a predefined palette, 
 			<div class="form-group">
 				<div class="input-group">
 					<div class="input-group-item">
-						<input class="form-control input-group-inset input-group-inset-before" id="clayColor3Green" type="text" value="237">
-						<label class="input-group-inset-item input-group-inset-item-before" for="clayColor3Green">
+						<input
+							class="form-control input-group-inset input-group-inset-before"
+							id="clayColor3Green"
+							type="text"
+							value="237"
+						/>
+						<label
+							class="input-group-inset-item input-group-inset-item-before"
+							for="clayColor3Green"
+						>
 							G
 						</label>
 					</div>
@@ -590,8 +686,16 @@ description: "Color picker lets users select a color from a predefined palette, 
 			<div class="form-group">
 				<div class="input-group">
 					<div class="input-group-item">
-						<input class="form-control input-group-inset input-group-inset-before" id="clayColor3Blue" type="text" value="254">
-						<label class="input-group-inset-item input-group-inset-item-before" for="clayColor3Blue">
+						<input
+							class="form-control input-group-inset input-group-inset-before"
+							id="clayColor3Blue"
+							type="text"
+							value="254"
+						/>
+						<label
+							class="input-group-inset-item input-group-inset-item-before"
+							for="clayColor3Blue"
+						>
 							B
 						</label>
 					</div>
@@ -600,17 +704,29 @@ description: "Color picker lets users select a color from a predefined palette, 
 		</div>
 	</div>
 	<div class="clay-color-range clay-color-range-hue">
-		<button class="clay-color-pointer clay-color-range-pointer" type="button" style="left: 98px; background-color: rgb(180,237,254);"></button>
+		<button
+			class="clay-color-pointer clay-color-range-pointer"
+			type="button"
+			style="left: 98px; background-color: rgb(180,237,254);"
+		></button>
 	</div>
 	<div class="clay-color-footer">
 		<div class="form-group">
-			<input class="form-control" type="text" value="#B2EDFF">
+			<input class="form-control" type="text" value="#B2EDFF" />
 		</div>
 		<div class="form-group">
 			<div class="input-group">
 				<div class="input-group-item">
-					<input class="form-control input-group-inset input-group-inset-before" id="hexInput" type="text" value="B2EDFF">
-					<label class="input-group-inset-item input-group-inset-item-before" for="hexInput">
+					<input
+						class="form-control input-group-inset input-group-inset-before"
+						id="hexInput"
+						type="text"
+						value="B2EDFF"
+					/>
+					<label
+						class="input-group-inset-item input-group-inset-item-before"
+						for="hexInput"
+					>
 						#
 					</label>
 				</div>

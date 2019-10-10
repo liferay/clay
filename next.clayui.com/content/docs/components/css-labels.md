@@ -1,19 +1,14 @@
 ---
-title: "Labels"
-description: "Labels categorize information, providing quick recognition."
+title: 'Labels'
+description: 'Labels categorize information, providing quick recognition.'
 ---
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Colors](#colors)
-- [Sizes](#sizes)
-- [Variations](#variations)
-	- [Simple](#label)
-	- [Dismissible](#dismissible)
-	- [Link](#link)
-	- [Interactive](#interactive)
-	- [Anchor Tag](#anchor-tag)
+-   [Colors](#colors)
+-   [Sizes](#sizes)
+-   [Variations](#variations) - [Simple](#label) - [Dismissible](#dismissible) - [Link](#link) - [Interactive](#interactive) - [Anchor Tag](#anchor-tag)
 
 </div>
 </div>
@@ -40,14 +35,30 @@ description: "Labels categorize information, providing quick recognition."
 </div>
 
 ```html
-<span class="label label-primary"><span class="label-item label-item-expand">Primary</span></span>
-<span class="label label-secondary"><span class="label-item label-item-expand">Secondary</span></span>
-<span class="label label-info"><span class="label-item label-item-expand">Info</span></span>
-<span class="label label-warning"><span class="label-item label-item-expand">Warning</span></span>
-<span class="label label-danger"><span class="label-item label-item-expand">Danger</span></span>
-<span class="label label-success"><span class="label-item label-item-expand">Success</span></span>
-<span class="label label-light"><span class="label-item label-item-expand">Light</span></span>
-<span class="label label-dark"><span class="label-item label-item-expand">Dark</span></span>
+<span class="label label-primary"
+	><span class="label-item label-item-expand">Primary</span></span
+>
+<span class="label label-secondary"
+	><span class="label-item label-item-expand">Secondary</span></span
+>
+<span class="label label-info"
+	><span class="label-item label-item-expand">Info</span></span
+>
+<span class="label label-warning"
+	><span class="label-item label-item-expand">Warning</span></span
+>
+<span class="label label-danger"
+	><span class="label-item label-item-expand">Danger</span></span
+>
+<span class="label label-success"
+	><span class="label-item label-item-expand">Success</span></span
+>
+<span class="label label-light"
+	><span class="label-item label-item-expand">Light</span></span
+>
+<span class="label label-dark"
+	><span class="label-item label-item-expand">Dark</span></span
+>
 ```
 
 ## Sizes
@@ -253,20 +264,32 @@ Implementing Interactive Labels require custom javascript.
 	<span class="label-item label-item-before">
 		<span class="sticker">
 			<span class="sticker-overlay">
-				<img alt="thumbnail" class="sticker-img" src="/images/thumbnail_dock.jpg">
+				<img
+					alt="thumbnail"
+					class="sticker-img"
+					src="/images/thumbnail_dock.jpg"
+				/>
 			</span>
 		</span>
 	</span>
 	<span class="label-item label-item-before">
 		<button class="btn btn-unstyled" type="button" tabindex="-1">
-			<svg class="lexicon-icon lexicon-icon-times-circle" focusable="false" role="presentation">
+			<svg
+				class="lexicon-icon lexicon-icon-times-circle"
+				focusable="false"
+				role="presentation"
+			>
 				<use xlink:href="/images/icons/icons.svg#times-circle"></use>
 			</svg>
 		</button>
 	</span>
 	<span class="label-item label-item-before">
 		<a href="#1" role="button" tabindex="-1">
-			<svg class="lexicon-icon lexicon-icon-add-cell" focusable="false" role="presentation">
+			<svg
+				class="lexicon-icon lexicon-icon-add-cell"
+				focusable="false"
+				role="presentation"
+			>
 				<use xlink:href="/images/icons/icons.svg#add-cell"></use>
 			</svg>
 		</a>
@@ -276,7 +299,11 @@ Implementing Interactive Labels require custom javascript.
 	</span>
 	<span class="label-item label-item-after">
 		<button aria-label="Close" class="close" tabindex="-1" type="button">
-			<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+			<svg
+				class="lexicon-icon lexicon-icon-times"
+				focusable="false"
+				role="presentation"
+			>
 				<use xlink:href="/images/icons/icons.svg#times"></use>
 			</svg>
 		</button>

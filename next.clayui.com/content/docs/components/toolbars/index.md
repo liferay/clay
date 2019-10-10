@@ -1,5 +1,5 @@
 ---
-layout: "redirect"
-redirect: "/docs/components/toolbars/management-bar.html"
-title: "Toolbars"
+layout: 'redirect'
+redirect: '/docs/components/toolbars/management-bar.html'
+title: 'Toolbars'
 ---

@@ -1,8 +1,8 @@
 ---
-title: "Icon"
-description: "Icons are a visual representation of an idea and/or action."
-packageNpm: "@clayui/icon"
-sibling: "docs/components/css-icons.html"
+title: 'Icon'
+description: 'Icons are a visual representation of an idea and/or action.'
+packageNpm: '@clayui/icon'
+sibling: 'docs/components/css-icons.html'
 ---
 
 import {Icon, IconWithContext} from '../../../src/components/clay/Icon';
@@ -10,19 +10,28 @@ import {Icon, IconWithContext} from '../../../src/components/clay/Icon';
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Best Pratices](#variants-and-best-pratices)
-    - [Using Context](#using-context)
-- [API](#api)
+-   [Best Pratices](#variants-and-best-pratices)
+    -   [Using Context](#using-context)
+-   [API](#api)
 
 </div>
 </div>
 
 <div class="clay-site-alert alert alert-warning">
-    Take a look at our <a href="https://storybook-clayui.netlify.com/?path=/story/clayicon--default">Storybook</a> for more information about this component.
+	Take a look at our{' '}
+	<a href="https://storybook-clayui.netlify.com/?path=/story/clayicon--default">
+		Storybook
+	</a>{' '}
+	for more information about this component.
 </div>
 
 <div class="clay-site-alert alert alert-info">
-	Check the <a href="https://liferay.design/lexicon/">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/icons/">Icons Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
+	Check the <a href="https://liferay.design/lexicon/">Lexicon</a>{' '}
+	<a href="https://liferay.design/lexicon/core-components/icons/">
+		Icons Pattern
+	</a>{' '}
+	for a more in-depth look at the motivations and proper usage of this
+	component.
 </div>
 
 ## Best Pratices
@@ -30,14 +39,15 @@ import {Icon, IconWithContext} from '../../../src/components/clay/Icon';
 For Icons, we use SVG elements that link to an SVG sprite. So, it becomes necessary to pass a parameter that points to a path where this [`spritemap`](#api-spritemap) is located.
 If you are using the spritemap from `@clayui/css` you can download that svg [here](https://github.com/liferay/clay/blob/master/next.clayui.com/static/images/icons/icons.svg).
 
-- See the complete list of symbols and flags that are offered by Clay's spritemap [here](/docs/components/icons.html)
+-   See the complete list of symbols and flags that are offered by Clay's spritemap [here](/docs/components/icons.html)
 
 <Icon />
 
 ### Using Context
 
 <div class="clay-site-alert alert alert-info">
-    For V3, an API was added to utilize context for passing spritemap down instead of having to pass the prop everywhere.
+	For V3, an API was added to utilize context for passing spritemap down
+	instead of having to pass the prop everywhere.
 </div>
 
 Add `import { ClayIconSpriteContext } from "@clayui/icon"` use the context as a provider. `<ClayIconSpriteContext.Provider value="path/to/sprite.svg">`.
@@ -46,6 +56,4 @@ Add `import { ClayIconSpriteContext } from "@clayui/icon"` use the context as a 
 
 ## API
 
-<div>
-	[APITable "clay-icon/src/index.tsx"]
-</div>
+<div>[APITable "clay-icon/src/index.tsx"]</div>

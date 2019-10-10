@@ -1,8 +1,8 @@
 ---
-title: "Typography"
-description: "A basic reference for the definition of the visual identity and the organization of the content."
+title: 'Typography'
+description: 'A basic reference for the definition of the visual identity and the organization of the content.'
 order: 3
-redirectFrom: "/docs/layout/typography.html"
+redirectFrom: '/docs/layout/typography.html'
 ---
 
 <div class="clay-site-alert alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/foundations/typography/">Typography Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
@@ -10,20 +10,19 @@ redirectFrom: "/docs/layout/typography.html"
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Headings](#headings)
-- [Lead](#lead)
-- [Inline Text Elements](#inline-text-elements)
-- [Reference Mark](#reference-mark)
-- [Text Truncate](#text-truncate)
-    - [Text Truncate Inline](#text-truncate-inline)
-- [Contextual Texts](#contextual-texts)
-	- [Contextual Backgrounds](#contextual-backgrounds)
-- [Address](#address)
-- [Inline Code](#inline-code)
-- [User Input](#user-input)
-- [Variables](#variables)
-- [Sample Output](#sample-output)
-- [Blockquote](#blockquote)
+-   [Headings](#headings)
+-   [Lead](#lead)
+-   [Inline Text Elements](#inline-text-elements)
+-   [Reference Mark](#reference-mark)
+-   [Text Truncate](#text-truncate)
+    -   [Text Truncate Inline](#text-truncate-inline)
+-   [Contextual Texts](#contextual-texts) - [Contextual Backgrounds](#contextual-backgrounds)
+-   [Address](#address)
+-   [Inline Code](#inline-code)
+-   [User Input](#user-input)
+-   [Variables](#variables)
+-   [Sample Output](#sample-output)
+-   [Blockquote](#blockquote)
 
 </div>
 </div>
@@ -55,7 +54,10 @@ redirectFrom: "/docs/layout/typography.html"
 </div>
 
 ```html
-<p class="lead"> Lead Body Text: Milk filter lungo as galão roast that crema blue mountain shop turkish. </p>
+<p class="lead">
+	Lead Body Text: Milk filter lungo as galão roast that crema blue mountain
+	shop turkish.
+</p>
 ```
 
 ## Inline Text Elements
@@ -78,16 +80,66 @@ redirectFrom: "/docs/layout/typography.html"
 </div>
 
 ```html
-<p><a href="#1">Anchor Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</a></p>
-<p><span>Regular Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</span></p>
-<p><mark>Marked Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</mark></p>
-<p><del>Deleted Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</del></p>
-<p><s>Strikethrough Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</s></p>
-<p><ins>Inserted Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</ins></p>
-<p><u>Underlined Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</u></p>
-<p><small>Small Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</small></p>
-<p><strong>Bold Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</strong></p>
-<p><em>Italics: Milk filter lungo as galão roast that crema blue mountain shop turkish.</em></p>
+<p>
+	<a href="#1"
+		>Anchor Text: Milk filter lungo as galão roast that crema blue mountain
+		shop turkish.</a
+	>
+</p>
+<p>
+	<span
+		>Regular Text: Milk filter lungo as galão roast that crema blue mountain
+		shop turkish.</span
+	>
+</p>
+<p>
+	<mark
+		>Marked Text: Milk filter lungo as galão roast that crema blue mountain
+		shop turkish.</mark
+	>
+</p>
+<p>
+	<del
+		>Deleted Text: Milk filter lungo as galão roast that crema blue mountain
+		shop turkish.</del
+	>
+</p>
+<p>
+	<s
+		>Strikethrough Text: Milk filter lungo as galão roast that crema blue
+		mountain shop turkish.</s
+	>
+</p>
+<p>
+	<ins
+		>Inserted Text: Milk filter lungo as galão roast that crema blue
+		mountain shop turkish.</ins
+	>
+</p>
+<p>
+	<u
+		>Underlined Text: Milk filter lungo as galão roast that crema blue
+		mountain shop turkish.</u
+	>
+</p>
+<p>
+	<small
+		>Small Text: Milk filter lungo as galão roast that crema blue mountain
+		shop turkish.</small
+	>
+</p>
+<p>
+	<strong
+		>Bold Text: Milk filter lungo as galão roast that crema blue mountain
+		shop turkish.</strong
+	>
+</p>
+<p>
+	<em
+		>Italics: Milk filter lungo as galão roast that crema blue mountain shop
+		turkish.</em
+	>
+</p>
 <p>Abbreviation: <abbr title="attribute">attr</abbr></p>
 <p>LOWERCASED TEXT: <span class="text-lowercase">LOWERCASED TEXT</span></p>
 <p>uppercased text: <span class="text-uppercase">uppercased text</span></p>
@@ -107,11 +159,37 @@ Use `<span class="reference-mark"></span>` to add a reference mark next to some 
 </div>
 
 ```html
-<div>Reference Mark<span class="reference-mark" id="referenceMark1">[1]</span> with text.</div>
-<div>Reference Mark<span class="reference-mark" id="referenceMark4"><svg class="lexicon-icon lexicon-icon-asterisk" focusable="false" role="presentation"><use href="/images/icons/icons.svg#asterisk" /></svg></span> with lexicon-icon-asterisk.</div>
+<div>
+	Reference Mark<span class="reference-mark" id="referenceMark1">[1]</span>
+	with text.
+</div>
+<div>
+	Reference Mark<span class="reference-mark" id="referenceMark4"
+		><svg
+			class="lexicon-icon lexicon-icon-asterisk"
+			focusable="false"
+			role="presentation"
+		>
+			<use href="/images/icons/icons.svg#asterisk" /></svg
+	></span>
+	with lexicon-icon-asterisk.
+</div>
 <h4>Footnotes</h4>
-<div><a class="reference-mark" href="#referenceMark1">[1]</a> A reference to the text above, respectively.</div>
-<div><a class="reference-mark" href="#referenceMark4"><svg class="lexicon-icon lexicon-icon-asterisk" focusable="false" role="presentation"><use href="/images/icons/icons.svg#asterisk" /></svg></a> A reference to the text above, respectively.</div>
+<div>
+	<a class="reference-mark" href="#referenceMark1">[1]</a> A reference to the
+	text above, respectively.
+</div>
+<div>
+	<a class="reference-mark" href="#referenceMark4"
+		><svg
+			class="lexicon-icon lexicon-icon-asterisk"
+			focusable="false"
+			role="presentation"
+		>
+			<use href="/images/icons/icons.svg#asterisk" /></svg
+	></a>
+	A reference to the text above, respectively.
+</div>
 ```
 
 ## Text Truncate
@@ -123,7 +201,11 @@ Shorten long lines of text with the `text-truncate` class. This uses `display: b
 </div>
 
 ```html
-<p class="text-truncate">Milk filter lungo as galão roast that crema blue mountain shop turkish. Milk filter lungo as galão roast that crema blue mountain shop turkish. Milk filter lungo as galão roast that crema blue mountain shop turkish.</p>
+<p class="text-truncate">
+	Milk filter lungo as galão roast that crema blue mountain shop turkish. Milk
+	filter lungo as galão roast that crema blue mountain shop turkish. Milk
+	filter lungo as galão roast that crema blue mountain shop turkish.
+</p>
 ```
 
 ### Text Truncate Inline
@@ -139,7 +221,15 @@ You can also use the `text-truncate-inline` class to shorten long lines of text.
 </div>
 
 ```html
-<a class="text-truncate-inline" href="#1"><span class="text-truncate">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span></a> Milk filter lungo as galão roast that crema <a class="text-truncate-inline" href="#1"><span class="text-truncate">
+<a class="text-truncate-inline" href="#1"
+	><span class="text-truncate"
+		>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span
+	></a
+>
+Milk filter lungo as galão roast that crema
+<a class="text-truncate-inline" href="#1"
+	><span class="text-truncate"></span
+></a>
 ```
 
 ## Contextual Texts
@@ -169,13 +259,34 @@ You can also use the `text-truncate-inline` class to shorten long lines of text.
 </div>
 
 ```html
-<a href="#1" class="text-muted">text-muted: Milk filter lungo as galão roast that crema blue mountain shop turkish.</a>
-<a href="#1" class="text-primary">text-primary: Milk filter lungo as galão roast that crema blue mountain shop turkish.</a>
-<a href="#1" class="text-secondary">text-secondary: Milk filter lungo as galão roast that crema blue mountain shop turkish.</a>
-<a href="#1" class="text-info">text-info: Milk filter lungo as galão roast that crema blue mountain shop turkish.</a>
-<a href="#1" class="text-success">text-success: Milk filter lungo as galão roast that crema blue mountain shop turkish.</a>
-<a href="#1" class="text-warning">text-warning: Milk filter lungo as galão roast that crema blue mountain shop turkish.</a>
-<a href="#1" class="text-danger">text-danger: Milk filter lungo as galão roast that crema blue mountain shop turkish.</a>
+<a href="#1" class="text-muted"
+	>text-muted: Milk filter lungo as galão roast that crema blue mountain shop
+	turkish.</a
+>
+<a href="#1" class="text-primary"
+	>text-primary: Milk filter lungo as galão roast that crema blue mountain
+	shop turkish.</a
+>
+<a href="#1" class="text-secondary"
+	>text-secondary: Milk filter lungo as galão roast that crema blue mountain
+	shop turkish.</a
+>
+<a href="#1" class="text-info"
+	>text-info: Milk filter lungo as galão roast that crema blue mountain shop
+	turkish.</a
+>
+<a href="#1" class="text-success"
+	>text-success: Milk filter lungo as galão roast that crema blue mountain
+	shop turkish.</a
+>
+<a href="#1" class="text-warning"
+	>text-warning: Milk filter lungo as galão roast that crema blue mountain
+	shop turkish.</a
+>
+<a href="#1" class="text-danger"
+	>text-danger: Milk filter lungo as galão roast that crema blue mountain shop
+	turkish.</a
+>
 ```
 
 ### Contextual Backgrounds
@@ -202,12 +313,30 @@ You can also use the `text-truncate-inline` class to shorten long lines of text.
 </div>
 
 ```html
-<span class="bg-primary">bg-primary: Milk filter lungo as galão roast that crema blue mountain shop turkish.</span>
-<span class="bg-secondary">bg-secondary: Milk filter lungo as galão roast that crema blue mountain shop turkish.</span>
-<span class="bg-success">bg-success: Milk filter lungo as galão roast that crema blue mountain shop turkish.</span>
-<span class="bg-info">bg-info: Milk filter lungo as galão roast that crema blue mountain shop turkish.</span>
-<span class="bg-warning">bg-warning: Milk filter lungo as galão roast that crema blue mountain shop turkish.</span>
-<span class="bg-danger">bg-danger: Milk filter lungo as galão roast that crema blue mountain shop turkish.</span>
+<span class="bg-primary"
+	>bg-primary: Milk filter lungo as galão roast that crema blue mountain shop
+	turkish.</span
+>
+<span class="bg-secondary"
+	>bg-secondary: Milk filter lungo as galão roast that crema blue mountain
+	shop turkish.</span
+>
+<span class="bg-success"
+	>bg-success: Milk filter lungo as galão roast that crema blue mountain shop
+	turkish.</span
+>
+<span class="bg-info"
+	>bg-info: Milk filter lungo as galão roast that crema blue mountain shop
+	turkish.</span
+>
+<span class="bg-warning"
+	>bg-warning: Milk filter lungo as galão roast that crema blue mountain shop
+	turkish.</span
+>
+<span class="bg-danger"
+	>bg-danger: Milk filter lungo as galão roast that crema blue mountain shop
+	turkish.</span
+>
 ```
 
 ## Address
@@ -227,14 +356,15 @@ You can also use the `text-truncate-inline` class to shorten long lines of text.
 
 ```html
 <address>
-    <strong>Liferay, Inc.</strong><br/>
-    1400 Montefino Ave.<br/>
-    Diamond Bar, CA 91765<br/>
-    <abbr class="initialism" title="Phone">P:</abbr> +1-877-LIFERAY (1-877-543-3729)
+	<strong>Liferay, Inc.</strong><br />
+	1400 Montefino Ave.<br />
+	Diamond Bar, CA 91765<br />
+	<abbr class="initialism" title="Phone">P:</abbr> +1-877-LIFERAY
+	(1-877-543-3729)
 </address>
 <address>
-    <strong>Full Name</strong><br/>
-    <a href="mailto:#">joe.bloggs@liferay.com</a>
+	<strong>Full Name</strong><br />
+	<a href="mailto:#">joe.bloggs@liferay.com</a>
 </address>
 ```
 
@@ -255,7 +385,10 @@ You can also use the `text-truncate-inline` class to shorten long lines of text.
 </div>
 
 ```html
-<p>For example, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd> to edit settings.</p>
+<p>
+	For example, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd> to edit
+	settings.
+</p>
 ```
 
 ## Variables
@@ -275,7 +408,10 @@ You can also use the `text-truncate-inline` class to shorten long lines of text.
 </div>
 
 ```html
-<samp>This text is meant to be treated as sample output from a computer program.</samp>
+<samp
+	>This text is meant to be treated as sample output from a computer
+	program.</samp
+>
 ```
 
 ## Blockquote
@@ -292,10 +428,18 @@ You can also use the `text-truncate-inline` class to shorten long lines of text.
 
 ```html
 <blockquote class="blockquote">
-    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</div>
+	<div>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+		erat a ante.
+	</div>
 </blockquote>
 <blockquote class="blockquote">
-    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</div>
-    <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+	<div>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+		erat a ante.
+	</div>
+	<footer class="blockquote-footer">
+		Someone famous in <cite title="Source Title">Source Title</cite>
+	</footer>
 </blockquote>
 ```

@@ -12,9 +12,7 @@
 		}
 	},
 	"extends": "liferay/react",
-	"plugins": [
-		"@typescript-eslint"
-	],
+	"plugins": ["@typescript-eslint"],
 	"rules": {
 		"@typescript-eslint/array-type": ["error", "generic"],
 		"@typescript-eslint/no-unused-vars": "error",

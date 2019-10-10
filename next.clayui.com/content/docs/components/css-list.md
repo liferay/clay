@@ -1,26 +1,21 @@
 ---
-title: "List"
-description: "List is a visual representation of a dataset that provides more flexibility for arranging the data than a table and is less visually explicit than a card view."
+title: 'List'
+description: 'List is a visual representation of a dataset that provides more flexibility for arranging the data than a table and is less visually explicit than a card view.'
 ---
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Example](#example)
-- [Variations](#variations)
-	- [Bordered](#bordered)
-    - [Default](#default)
-    - [Notification](#notification)
-- [Group Elements](#group-elements)
-    - [Header](#header)
-	- [Items](#items)
-        - [Colors](#colors)
-        - [Active Colors](#active-colors)
-	    - [Items as Links and Buttons](#items-as-links-and-buttons)
-	    - [Actions on Hover](#actions-on-hover)
-	        - [Anchors](#anchors)
-            - [Buttons](#buttons)
-	    - [Active](#active)
+-   [Example](#example)
+-   [Variations](#variations) - [Bordered](#bordered)
+    -   [Default](#default)
+    -   [Notification](#notification)
+-   [Group Elements](#group-elements)
+    -   [Header](#header) - [Items](#items)
+        -   [Colors](#colors)
+        -   [Active Colors](#active-colors) - [Items as Links and Buttons](#items-as-links-and-buttons) - [Actions on Hover](#actions-on-hover) - [Anchors](#anchors)
+            -   [Buttons](#buttons)
+                -   [Active](#active)
 
 </div>
 </div>
@@ -186,7 +181,7 @@ Add the class `show-dropdown-action-on-active` to display `dropdown-menu`s when 
 		<div class="autofit-col">
 			<div class="custom-control custom-checkbox">
 				<label>
-					<input class="custom-control-input" type="checkbox"/>
+					<input class="custom-control-input" type="checkbox" />
 					<span class="custom-control-label"></span>
 				</label>
 			</div>
@@ -211,13 +206,25 @@ Add the class `show-dropdown-action-on-active` to display `dropdown-menu`s when 
 		</div>
 		<div class="autofit-col">
 			<div class="quick-action-menu">
-				<a class="component-action quick-action-item" href="#1" role="button">
+				<a
+					class="component-action quick-action-item"
+					href="#1"
+					role="button"
+				>
 					...
 				</a>
-				<a class="component-action quick-action-item" href="#1" role="button">
+				<a
+					class="component-action quick-action-item"
+					href="#1"
+					role="button"
+				>
 					...
 				</a>
-				<a class="component-action quick-action-item" href="#1" role="button">
+				<a
+					class="component-action quick-action-item"
+					href="#1"
+					role="button"
+				>
 					...
 				</a>
 			</div>
@@ -230,7 +237,11 @@ Add the class `show-dropdown-action-on-active` to display `dropdown-menu`s when 
 		<div class="autofit-col">
 			<div class="custom-control custom-checkbox">
 				<label>
-					<input checked class="custom-control-input" type="checkbox"/>
+					<input
+						checked
+						class="custom-control-input"
+						type="checkbox"
+					/>
 					<span class="custom-control-label"></span>
 				</label>
 			</div>
@@ -255,13 +266,25 @@ Add the class `show-dropdown-action-on-active` to display `dropdown-menu`s when 
 		</div>
 		<div class="autofit-col">
 			<div class="quick-action-menu">
-				<a class="component-action quick-action-item" href="#1" role="button">
+				<a
+					class="component-action quick-action-item"
+					href="#1"
+					role="button"
+				>
 					...
 				</a>
-				<a class="component-action quick-action-item" href="#1" role="button">
+				<a
+					class="component-action quick-action-item"
+					href="#1"
+					role="button"
+				>
 					...
 				</a>
-				<a class="component-action quick-action-item" href="#1" role="button">
+				<a
+					class="component-action quick-action-item"
+					href="#1"
+					role="button"
+				>
 					...
 				</a>
 			</div>
@@ -401,97 +424,120 @@ Use `.list-group-bordered` on `.list-group` to style `.list-group-item-flex` lik
 
 ```html
 <ul class="list-group list-group-bordered">
-    <li class="list-group-item list-group-item-flex">
-        <div class="autofit-col">
-            <div class="custom-control custom-checkbox">
-                <label>
-                    <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                </label>
-            </div>
-        </div>
-        <div class="autofit-col">
-            <div class="sticker sticker-secondary">
-                <span class="inline-item">
-                    ...
-                </span>
-            </div>
-        </div>
-        <div class="autofit-col autofit-col-expand">
-            <section class="autofit-section">
-                <div class="list-group-title">
-                    <span class="text-truncate-inline">
-                        <a class="text-truncate" href="#1">Text Truncate Example</a>
-                    </span>
-                </div>
-                <p class="list-group-subtitle">.list-group-subtitle</p>
-                <p class="list-group-subtitle"><a href="#1">.list-group-subtitle a</a></p>
-                <p class="list-group-text">This is an example of .list-group-text and a <a href="#1">link</a>.</p>
-                <p class="list-group-text">
-                    <a class="list-group-text-link" href="#1">a.list-group-text-link</a>
-                </p>
-                <p class="list-group-text">
-                    <span class="text-truncate-inline">
-                        <a class="list-group-text-link text-truncate" href="#1">Truncated a.list-group-text-link</a> and another <a href="#1">link</a>
-                    </span>
-                </p>
-                <p class="list-group-subtext">This is .list-group-subtext and a <a href="#1">link</a>.</p>
-                <p class="list-group-subtext">
-                    <a class="list-group-subtext-link" href="#1">Regular a.list-group-subtext-link</a>
-                </p>
-                <p class="list-group-subtext">
-                    <span class="text-truncate-inline">
-                        <a class="list-group-subtext-link text-truncate" href="#1">Truncated a.list-group-subtext-link</a> and another <a href="#1">link</a>
-                    </span>
-                </p>
-                <div class="list-group-detail">
-                    <span class="label label-warning">
-                        <span class="label-item label-item-expand">Pending</span>
-                    </span>
-                </div>
-            </section>
-        </div>
-        <div class="autofit-col">
-            <div class="dropdown dropdown-action">
-                ...
-            </div>
-        </div>
-    </li>
-    <li class="list-group-item list-group-item-flex">
-        <div class="autofit-col">
-            <div class="custom-control custom-checkbox">
-                <label>
-                    <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                </label>
-            </div>
-        </div>
-        <div class="autofit-col">
-            <div class="sticker sticker-secondary">
-                <span class="inline-item">
-                    ...
-                </span>
-            </div>
-        </div>
-        <div class="autofit-col autofit-col-expand">
-            <section class="autofit-section">
-                <div class="list-group-title">
-                    <a href="#1">Account Example Two</a>
-                </div>
-                <p class="list-group-subtext">List Group Subtext</p>
-                <div class="list-group-detail">
-                    <span class="label label-info">
-                        <span class="label-item label-item-expand">Info</span>
-                    </span>
-                </div>
-            </section>
-        </div>
-        <div class="autofit-col">
-            <div class="dropdown dropdown-action">
-               ...
-            </div>
-        </div>
-    </li>
+	<li class="list-group-item list-group-item-flex">
+		<div class="autofit-col">
+			<div class="custom-control custom-checkbox">
+				<label>
+					<input class="custom-control-input" type="checkbox" />
+					<span class="custom-control-label"></span>
+				</label>
+			</div>
+		</div>
+		<div class="autofit-col">
+			<div class="sticker sticker-secondary">
+				<span class="inline-item">
+					...
+				</span>
+			</div>
+		</div>
+		<div class="autofit-col autofit-col-expand">
+			<section class="autofit-section">
+				<div class="list-group-title">
+					<span class="text-truncate-inline">
+						<a class="text-truncate" href="#1"
+							>Text Truncate Example</a
+						>
+					</span>
+				</div>
+				<p class="list-group-subtitle">.list-group-subtitle</p>
+				<p class="list-group-subtitle">
+					<a href="#1">.list-group-subtitle a</a>
+				</p>
+				<p class="list-group-text">
+					This is an example of .list-group-text and a
+					<a href="#1">link</a>.
+				</p>
+				<p class="list-group-text">
+					<a class="list-group-text-link" href="#1"
+						>a.list-group-text-link</a
+					>
+				</p>
+				<p class="list-group-text">
+					<span class="text-truncate-inline">
+						<a class="list-group-text-link text-truncate" href="#1"
+							>Truncated a.list-group-text-link</a
+						>
+						and another <a href="#1">link</a>
+					</span>
+				</p>
+				<p class="list-group-subtext">
+					This is .list-group-subtext and a <a href="#1">link</a>.
+				</p>
+				<p class="list-group-subtext">
+					<a class="list-group-subtext-link" href="#1"
+						>Regular a.list-group-subtext-link</a
+					>
+				</p>
+				<p class="list-group-subtext">
+					<span class="text-truncate-inline">
+						<a
+							class="list-group-subtext-link text-truncate"
+							href="#1"
+							>Truncated a.list-group-subtext-link</a
+						>
+						and another <a href="#1">link</a>
+					</span>
+				</p>
+				<div class="list-group-detail">
+					<span class="label label-warning">
+						<span class="label-item label-item-expand"
+							>Pending</span
+						>
+					</span>
+				</div>
+			</section>
+		</div>
+		<div class="autofit-col">
+			<div class="dropdown dropdown-action">
+				...
+			</div>
+		</div>
+	</li>
+	<li class="list-group-item list-group-item-flex">
+		<div class="autofit-col">
+			<div class="custom-control custom-checkbox">
+				<label>
+					<input class="custom-control-input" type="checkbox" />
+					<span class="custom-control-label"></span>
+				</label>
+			</div>
+		</div>
+		<div class="autofit-col">
+			<div class="sticker sticker-secondary">
+				<span class="inline-item">
+					...
+				</span>
+			</div>
+		</div>
+		<div class="autofit-col autofit-col-expand">
+			<section class="autofit-section">
+				<div class="list-group-title">
+					<a href="#1">Account Example Two</a>
+				</div>
+				<p class="list-group-subtext">List Group Subtext</p>
+				<div class="list-group-detail">
+					<span class="label label-info">
+						<span class="label-item label-item-expand">Info</span>
+					</span>
+				</div>
+			</section>
+		</div>
+		<div class="autofit-col">
+			<div class="dropdown dropdown-action">
+				...
+			</div>
+		</div>
+	</li>
 </ul>
 ```
 
@@ -550,7 +596,7 @@ Use `.list-group-bordered` on `.list-group` to style `.list-group-item-flex` lik
 		<div class="autofit-col">
 			<div class="custom-control custom-checkbox">
 				<label>
-					<input class="custom-control-input" type="checkbox"/>
+					<input class="custom-control-input" type="checkbox" />
 					<span class="custom-control-indicator"></span>
 				</label>
 			</div>
@@ -666,63 +712,63 @@ Use `.list-group-bordered` on `.list-group` to style `.list-group-item-flex` lik
 
 ```html
 <ul class="list-group list-group-notification">
-    <li class="list-group-item list-group-item-flex list-group-item-primary">
-        <div class="autofit-col">
-            <div class="custom-control custom-checkbox">
-               ...
-            </div>
-        </div>
-        <div class="autofit-col">
-            <div class="sticker sticker-secondary">
-                <span class="inline-item">
-                   ...
-                </span>
-            </div>
-        </div>
-        <div class="autofit-col autofit-col-expand">
-            <section class="autofit-section">
-                <div class="list-group-title">
-                    <a href="#1">Account Example One</a>
-                </div>
-                <p class="list-group-subtext">List Group Subtext</p>
-            </section>
-        </div>
-        <div class="autofit-col">
-            <div class="dropdown dropdown-action">
-                ...
-            </div>
-        </div>
-    </li>
-    <li class="list-group-item list-group-item-flex">
-        <div class="autofit-col">
-            <div class="custom-control custom-checkbox">
-                <label>
-                    <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                </label>
-            </div>
-        </div>
-        <div class="autofit-col">
-            <div class="sticker sticker-secondary">
-                <span class="inline-item">
-                    ...
-                </span>
-            </div>
-        </div>
-        <div class="autofit-col autofit-col-expand">
-            <section class="autofit-section">
-                <div class="list-group-title">
-                    <a href="#1">Account Example Two</a>
-                </div>
-                <p class="list-group-subtext">List Group Subtext</p>
-            </section>
-        </div>
-        <div class="autofit-col">
-            <div class="dropdown dropdown-action">
-                ...
-            </div>
-        </div>
-    </li>
+	<li class="list-group-item list-group-item-flex list-group-item-primary">
+		<div class="autofit-col">
+			<div class="custom-control custom-checkbox">
+				...
+			</div>
+		</div>
+		<div class="autofit-col">
+			<div class="sticker sticker-secondary">
+				<span class="inline-item">
+					...
+				</span>
+			</div>
+		</div>
+		<div class="autofit-col autofit-col-expand">
+			<section class="autofit-section">
+				<div class="list-group-title">
+					<a href="#1">Account Example One</a>
+				</div>
+				<p class="list-group-subtext">List Group Subtext</p>
+			</section>
+		</div>
+		<div class="autofit-col">
+			<div class="dropdown dropdown-action">
+				...
+			</div>
+		</div>
+	</li>
+	<li class="list-group-item list-group-item-flex">
+		<div class="autofit-col">
+			<div class="custom-control custom-checkbox">
+				<label>
+					<input class="custom-control-input" type="checkbox" />
+					<span class="custom-control-label"></span>
+				</label>
+			</div>
+		</div>
+		<div class="autofit-col">
+			<div class="sticker sticker-secondary">
+				<span class="inline-item">
+					...
+				</span>
+			</div>
+		</div>
+		<div class="autofit-col autofit-col-expand">
+			<section class="autofit-section">
+				<div class="list-group-title">
+					<a href="#1">Account Example Two</a>
+				</div>
+				<p class="list-group-subtext">List Group Subtext</p>
+			</section>
+		</div>
+		<div class="autofit-col">
+			<div class="dropdown dropdown-action">
+				...
+			</div>
+		</div>
+	</li>
 </ul>
 ```
 
@@ -794,50 +840,54 @@ Use the `.list-group-header` and `.list-group-header-title` class.
 
 ```html
 <ul class="list-group">
-    <li class="list-group-header">
-        <h3 class="list-group-header-title">List Group Header</h3>
-    </li>
-    <li class="list-group-item list-group-item-flex">
-        <div class="autofit-col">
-            <div class="custom-control custom-checkbox">
-                <label>
-                    <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                </label>
-            </div>
-        </div>
-        <div class="autofit-col">
-            <div class="sticker sticker-secondary">
-                <span class="inline-item">
-                    ...
-                </span>
-            </div>
-        </div>
-        <div class="autofit-col autofit-col-expand">
-            <section class="autofit-section">
-                <div class="list-group-title">
-                    <span class="text-truncate-inline">
-                        <a class="text-truncate" href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
-                    </span>
-                </div>
-                <p class="list-group-subtext">
-                    <span class="text-truncate-inline">
-                        <span class="text-truncate">List Group Subtext</span>
-                    </span>
-                </p>
-                <div class="list-group-detail">
-                    <span class="label label-success">
-                        <span class="label-item label-item-expand">Approved</span>
-                    </span>
-                </div>
-            </section>
-        </div>
-        <div class="autofit-col">
-            <div class="dropdown dropdown-action">
-                ...
-            </div>
-        </div>
-    </li>
+	<li class="list-group-header">
+		<h3 class="list-group-header-title">List Group Header</h3>
+	</li>
+	<li class="list-group-item list-group-item-flex">
+		<div class="autofit-col">
+			<div class="custom-control custom-checkbox">
+				<label>
+					<input class="custom-control-input" type="checkbox" />
+					<span class="custom-control-label"></span>
+				</label>
+			</div>
+		</div>
+		<div class="autofit-col">
+			<div class="sticker sticker-secondary">
+				<span class="inline-item">
+					...
+				</span>
+			</div>
+		</div>
+		<div class="autofit-col autofit-col-expand">
+			<section class="autofit-section">
+				<div class="list-group-title">
+					<span class="text-truncate-inline">
+						<a class="text-truncate" href="#1"
+							>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a
+						>
+					</span>
+				</div>
+				<p class="list-group-subtext">
+					<span class="text-truncate-inline">
+						<span class="text-truncate">List Group Subtext</span>
+					</span>
+				</p>
+				<div class="list-group-detail">
+					<span class="label label-success">
+						<span class="label-item label-item-expand"
+							>Approved</span
+						>
+					</span>
+				</div>
+			</section>
+		</div>
+		<div class="autofit-col">
+			<div class="dropdown dropdown-action">
+				...
+			</div>
+		</div>
+	</li>
 </ul>
 ```
 
@@ -885,13 +935,39 @@ Use the `.list-group-header` and `.list-group-header-title` class.
 
 ```html
 <div class="list-group">
-    <a class="active list-group-item list-group-item-action" href="#1">List Item Action Normal Active</a>
-    <a class="active list-group-item list-group-item-action list-group-item-success" href="#1">List Item Action Success Active</a>
-    <a class="active list-group-item list-group-item-action list-group-item-info" href="#1">List Item Action Info Active</a>
-    <a class="active list-group-item list-group-item-action list-group-item-warning" href="#1">List Item Action Warning Active</a>
-    <a class="active list-group-item list-group-item-action list-group-item-danger" href="#1">List Item Action Danger Active</a>
-    <a class="active list-group-item list-group-item-action list-group-item-light" href="#1">List Item Action Light Active</a>
-    <a class="active list-group-item list-group-item-action list-group-item-dark" href="#1">List Item Action Dark Active</a>
+	<a class="active list-group-item list-group-item-action" href="#1"
+		>List Item Action Normal Active</a
+	>
+	<a
+		class="active list-group-item list-group-item-action list-group-item-success"
+		href="#1"
+		>List Item Action Success Active</a
+	>
+	<a
+		class="active list-group-item list-group-item-action list-group-item-info"
+		href="#1"
+		>List Item Action Info Active</a
+	>
+	<a
+		class="active list-group-item list-group-item-action list-group-item-warning"
+		href="#1"
+		>List Item Action Warning Active</a
+	>
+	<a
+		class="active list-group-item list-group-item-action list-group-item-danger"
+		href="#1"
+		>List Item Action Danger Active</a
+	>
+	<a
+		class="active list-group-item list-group-item-action list-group-item-light"
+		href="#1"
+		>List Item Action Light Active</a
+	>
+	<a
+		class="active list-group-item list-group-item-action list-group-item-dark"
+		href="#1"
+		>List Item Action Dark Active</a
+	>
 </div>
 ```
 
@@ -908,10 +984,12 @@ Use the `.list-group-header` and `.list-group-header-title` class.
 
 ```html
 <div class="list-group">
-    <a class="list-group-item list-group-item-action" href="#1">List Item 1</a>
-    <a class="list-group-item list-group-item-action" href="#1">List Item 2</a>
-    <button class="list-group-item list-group-item-action" type="button">List Item 3</button>
-    <a class="list-group-item list-group-item-action" href="#1">List Item 4</a>
+	<a class="list-group-item list-group-item-action" href="#1">List Item 1</a>
+	<a class="list-group-item list-group-item-action" href="#1">List Item 2</a>
+	<button class="list-group-item list-group-item-action" type="button">
+		List Item 3
+	</button>
+	<a class="list-group-item list-group-item-action" href="#1">List Item 4</a>
 </div>
 ```
 
@@ -983,53 +1061,88 @@ Use the `.list-group-header` and `.list-group-header-title` class.
 
 ```html
 <ul class="list-group show-quick-actions-on-hover">
-    <li class="list-group-item list-group-item-flex">
-        <div class="autofit-col">
-            <div class="custom-control custom-checkbox">
-                <label>
-                    <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                </label>
-            </div>
-        </div>
-        <div class="autofit-col">
-            <div class="sticker sticker-secondary">
-                <span class="inline-item">
-                    ...
-                </span>
-            </div>
-        </div>
-        <div class="autofit-col autofit-col-expand">
-            <section class="autofit-section">
-                <div class="list-group-title">
-                    <a href="#1">Anchors</a>
-                </div>
-            </section>
-        </div>
-        <div class="autofit-col">
-            <div class="quick-action-menu">
-                <a class="component-action quick-action-item" href="#1" role="button">
-                    ...
-                </a>
-                <a class="component-action quick-action-item" href="#1" role="button">
-                    ...
-                </a>
-                <a class="component-action quick-action-item" href="#1" role="button">
-                    ...
-                </a>
-            </div>
-            <div class="dropdown dropdown-action">
-                <a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-                    ...
-                </a>
-                <ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-                    <li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
-                    <li><a class="dropdown-item" href="#1" role="button">Download</a></li>
-                    <li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
-                </ul>
-            </div>
-        </div>
-    </li>
+	<li class="list-group-item list-group-item-flex">
+		<div class="autofit-col">
+			<div class="custom-control custom-checkbox">
+				<label>
+					<input class="custom-control-input" type="checkbox" />
+					<span class="custom-control-label"></span>
+				</label>
+			</div>
+		</div>
+		<div class="autofit-col">
+			<div class="sticker sticker-secondary">
+				<span class="inline-item">
+					...
+				</span>
+			</div>
+		</div>
+		<div class="autofit-col autofit-col-expand">
+			<section class="autofit-section">
+				<div class="list-group-title">
+					<a href="#1">Anchors</a>
+				</div>
+			</section>
+		</div>
+		<div class="autofit-col">
+			<div class="quick-action-menu">
+				<a
+					class="component-action quick-action-item"
+					href="#1"
+					role="button"
+				>
+					...
+				</a>
+				<a
+					class="component-action quick-action-item"
+					href="#1"
+					role="button"
+				>
+					...
+				</a>
+				<a
+					class="component-action quick-action-item"
+					href="#1"
+					role="button"
+				>
+					...
+				</a>
+			</div>
+			<div class="dropdown dropdown-action">
+				<a
+					aria-expanded="false"
+					aria-haspopup="true"
+					class="component-action dropdown-toggle"
+					data-toggle="dropdown"
+					href="#1"
+					id="dropdownAction1"
+					role="button"
+				>
+					...
+				</a>
+				<ul
+					aria-labelledby=""
+					class="dropdown-menu dropdown-menu-right"
+				>
+					<li>
+						<a class="dropdown-item" href="#1" role="button"
+							>Remove</a
+						>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#1" role="button"
+							>Download</a
+						>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#1" role="button"
+							>Checkout</a
+						>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</li>
 </ul>
 ```
 
@@ -1112,66 +1225,93 @@ Use the `.list-group-header` and `.list-group-header-title` class.
 
 ```html
 <ul class="list-group show-quick-actions-on-hover">
-    <li class="list-group-item list-group-item-flex">
-        <div class="autofit-col">
-            <div class="custom-control custom-checkbox">
-                <label>
-                    <input class="custom-control-input" type="checkbox">
-                    <span class="custom-control-label"></span>
-                </label>
-            </div>
-        </div>
-        <div class="autofit-col">
-            <div class="sticker sticker-secondary">
-                <span class="inline-item">
-                    ...
-                </span>
-            </div>
-        </div>
-        <div class="autofit-col autofit-col-expand">
-            <section class="autofit-section">
-                <div class="list-group-title">
-                    <span class="text-truncate-inline">
-                        <a class="text-truncate" href="#1">Account Example One</a>
-                    </span>
-                </div>
-                <p class="list-group-subtext">
-                    <span class="text-truncate-inline">
-                        <span class="text-truncate">List Group Subtext</span>
-                    </span>
-                </p>
-            </section>
-        </div>
-        <div class="autofit-col">
-            <div class="quick-action-menu">
-                <button class="component-action quick-action-item" type="button">
-                    ...
-                </button>
-                <button class="component-action quick-action-item" type="button">
-                    ...
-                </button>
-                <button class="component-action quick-action-item" type="button">
-                    ...
-                </button>
-            </div>
-            <div class="dropdown dropdown-action">
-                <button aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" id="dropdownAction1" type="button">
-                    ...
-                </button>
-                <ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-                    <li>
-                        <button class="dropdown-item" type="button">Remove</button>
-                    </li>
-                    <li>
-                        <button class="dropdown-item" type="button">Download</button>
-                    </li>
-                    <li>
-                        <button class="dropdown-item" type="button">Checkout</button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </li>
+	<li class="list-group-item list-group-item-flex">
+		<div class="autofit-col">
+			<div class="custom-control custom-checkbox">
+				<label>
+					<input class="custom-control-input" type="checkbox" />
+					<span class="custom-control-label"></span>
+				</label>
+			</div>
+		</div>
+		<div class="autofit-col">
+			<div class="sticker sticker-secondary">
+				<span class="inline-item">
+					...
+				</span>
+			</div>
+		</div>
+		<div class="autofit-col autofit-col-expand">
+			<section class="autofit-section">
+				<div class="list-group-title">
+					<span class="text-truncate-inline">
+						<a class="text-truncate" href="#1"
+							>Account Example One</a
+						>
+					</span>
+				</div>
+				<p class="list-group-subtext">
+					<span class="text-truncate-inline">
+						<span class="text-truncate">List Group Subtext</span>
+					</span>
+				</p>
+			</section>
+		</div>
+		<div class="autofit-col">
+			<div class="quick-action-menu">
+				<button
+					class="component-action quick-action-item"
+					type="button"
+				>
+					...
+				</button>
+				<button
+					class="component-action quick-action-item"
+					type="button"
+				>
+					...
+				</button>
+				<button
+					class="component-action quick-action-item"
+					type="button"
+				>
+					...
+				</button>
+			</div>
+			<div class="dropdown dropdown-action">
+				<button
+					aria-expanded="false"
+					aria-haspopup="true"
+					class="component-action dropdown-toggle"
+					data-toggle="dropdown"
+					id="dropdownAction1"
+					type="button"
+				>
+					...
+				</button>
+				<ul
+					aria-labelledby=""
+					class="dropdown-menu dropdown-menu-right"
+				>
+					<li>
+						<button class="dropdown-item" type="button">
+							Remove
+						</button>
+					</li>
+					<li>
+						<button class="dropdown-item" type="button">
+							Download
+						</button>
+					</li>
+					<li>
+						<button class="dropdown-item" type="button">
+							Checkout
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</li>
 </ul>
 ```
 
@@ -1232,7 +1372,11 @@ Use the `.active` class on the same element that you putted `.list-group-item`.
 		<div class="autofit-col">
 			<div class="custom-control custom-checkbox">
 				<label>
-					<input checked class="custom-control-input" type="checkbox"/>
+					<input
+						checked
+						class="custom-control-input"
+						type="checkbox"
+					/>
 					<span class="custom-control-label"></span>
 				</label>
 			</div>
