@@ -29,15 +29,13 @@ title: 'Migrate the Clay components from v2 to v3'
 </div>
 </div>
 
-ference for upgrading your components from Clay v2 to Clay v3, this symbolizes that you are migrating your application from [Metal.js](https://metaljs.com) to [React.js](https://reactjs.org). Although there is a lot of coverage here, you probably do not have to do everything. We will do our best to keep things easy to follow, and as sequential as possible, so you can quickly get rocking in v3!
+Reference for upgrading your components from Clay v2 to Clay v3, this symbolizes that you are migrating your application from [Metal.js](https://metaljs.com) to [React.js](https://reactjs.org). Although there is a lot of coverage here, you probably do not have to do everything. We will do our best to keep things easy to follow, and as sequential as possible, so you can quickly get rocking in v3!
 
 It is worth remembering that this documentation is a work in progress.
 
 ## Why you should migrate
 
-This documentation page covers how to migrate from v2 to v3. The reason is covered in some blog posts:
-
--   (**_Coming soon_**) Clay v3-beta: Introduction the new React Components
+This documentation page covers how to migrate from v2 to v3.
 
 ## General changes
 
@@ -48,9 +46,9 @@ These components are intended to be consumed via composition, this increases fle
 -   `<ClayDropDown.Item />`: renders basic markup.
 -   `<ClayDropDownWithPagination />`: renders a number of items and includes logic for functionality.
 
-To symbolize this change, Clay is distributing the new packages on the scope npm `@clayui`, so you will find the packages `clay-link`, `clay-button`... on `@clayui/link`, `@clayui/button`.
+To symbolize this change, Clay is distributing the new packages on the scope npm `@clayui`, so instead of using `clay-link`, `clay-button`... you should use `@clayui/link`, `@clayui/button`.
 
-> Clay v2 is still being distributed and maintained on the `clay-link`, `clay-button` packages...
+> Clay v2 components still being distributed and maintained on the `clay-link`, `clay-button` packages...
 
 ## ClayAlert
 
@@ -63,6 +61,7 @@ CLayAlert v3 combines Alert, Stripe Alert, and Toast Notifications all in one.
 -   `destroyOnHide` was removed
 -   `style` was renamed to `displayType`
 -   `message` was removed in favor of using `children`
+-	Use `stripe` value on `variant` property of `ClayAlert` to get the same result of `ClayStripe` component.
 
 ### Compositions
 
@@ -103,7 +102,7 @@ const [alerts, setAlerts] = useState([]);
 
 ## ClayButton
 
--   Removed icon dependency within button itself
+-   Removed icon dependency within `ClayButton` itself. However, was created a high-level component called `ButtonWithIcon` that receives a symbol and creates a button monospaced with a icon.
 
 ```diff
 <Button
@@ -120,7 +119,7 @@ const [alerts, setAlerts] = useState([]);
 
 ## ClayCard
 
-ClayCard v3 became a Low-Level API, decomposed to ClayCard.AspectRatio, ClayCard.Body,ClayCard.Description, ClayCard.Caption and ClayCard.Header.
+ClayCard v3 is offered in Low-Level API: decomposed to ClayCard.AspectRatio, ClayCard.Body,ClayCard.Description, ClayCard.Caption and ClayCard.Header;
 
 ```diff
 - <ClayUserCard name="User Name" spritemap={spritemap} selectable />
@@ -306,9 +305,107 @@ To get the behavior of having a ClayCardGrid with Cards, use the following compo
 + </ClayCard.Group>
 ```
 
+Also, Clay V3 offers you some high-levels cards:
+
+### Clay Card with User
+
+```diff
+- <ClayUserCard
+	spritemap={spritemap}
+-	userColor="danger"
+	name="User Name"
+-	actionItems={items}
+- 	subtitle={Latest Action}
+- />
++ <ClayCardWithUser
+ 	spritemap={spritemap}
++	userDisplayType="danger"
+ 	name="User Name"
++ 	actions={items}
++	description={Latest Action}
++ />
+```
+
+### Clay Card Horizontal
+
+```diff
+- <ClayHorizontalCard
+	spritemap={spritemap}
+	title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual"
+- />
++ <ClayCardWithHorizontal
+	spritemap={spritemap}
+	title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual"
++ />
+```
+
+### Clay File Card
+
+```diff
+- <ClayFileCard
+-	actionItems={items}
+-	stickerLabel="PDF"
+-	stickerStyle="danger"
+-	labels={[
+-		{
+-			label: 'Approved'
+-			style: 'success'
+-		}
+-	]}
+	spritemap={spritemap}
+	subtitle="Stevie Ray Vaughn"
+	title="deliverable.pdf"
+- />
++ <ClayCardWithInfo
++ 	actions={items}
++	stickerProps={{
++		content: 'PDF',
++		displayType: 'danger'
++	}}
++	labels={[
++		{
++			value: 'Approved',
++			displayType: 'success'
++		}
++	]}
+	description="Stevie Ray Vaughn"
+	spritemap={spritemap}
+	title="deliverable.pdf"
++ />
+```
+
+### Clay Card Image
+
+```diff
+- <ClayImageCard
+-	actionItems={items}
+	href="#image-card-block"
+-	imageAlt="thumbnail"
+-	imageSrc={image}
+	spritemap={spritemap}
+-	subtitle="Author Action"
+-	title="thumbnail_kyoto.jpg"
+- />
++ <ClayCardWithInfo
++	actions={items}
+	href="#image-card-block"
++	imgProps={{
++		alt="thumbnail"
++		src={image}
++	}}
+	spritemap={spritemap}
++	description="Author Action"
++	title="thumbnail_kyoto.jpg"
++ />
+```
+
 ## ClayCardGrid
 
 ClayCardGrid was deprecated due to ClayCard.Group.
+
+## ClayCheckbox
+
+ClayCheckbox is located on `@clayui/form` package.
 
 ## ClayLink
 
@@ -796,14 +893,16 @@ ClayDropDown also exports `<ClayDropDown.Menu>` which can be used independently 
 
 See `ClayDropDown` in our storybook for more compositions and examples of use.
 
+Also, it is offered as a High-Level component called [DropDownWithItems](/docs/components/drop-down.html#claydropdownwithitems).
+
 ## ClayPagination
 
-ClayPagination's API is very similar to v2.x with a few slight changes. See API changed below.
+ClayPaginationWithBasicItems's high-level API is very similar to v2.x with a few slight changes. See API changed below.
 
 Usage Example:
 
 ```jsx
-<ClayPagination
+<ClayPaginationWithBasicItems
 	activePage={5}
 	hrefConstructor={page => `/#${page}`}
 	spritemap={spritemap}
@@ -910,6 +1009,8 @@ For example purposes you can get to the same result you had in v2 using composit
 
 If you use ClaySelect only for simple cases that do not need props for `options`, you can use `<ClaySelectWithOption />` which will have the same result as the previous version.
 
+** NOTE: ** ClaySelect component is located in `@clayui/form` package.
+
 ```jsx
 <ClaySelectWithOption
 	aria-label="Select Label"
@@ -966,3 +1067,9 @@ With the new clay-charts, we removed the dependency of `react-billboardjs` and i
 
 -   removed named exports such as `BarChart` in favor of `type` prop in `data`.
 -   if a ref is provided, its value is the instance of the billboard.js chart.
+
+## ClayTooltip
+
+Before, the component was instantiable and will be rendered when `mouseover` an element with `data-title` attribute. Now, the component is a React component.
+
+##
