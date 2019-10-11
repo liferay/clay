@@ -22,6 +22,7 @@ Here's a set of guidelines to contribute to Clay and its packages. Use your comm
 -   [Documentation Style Guide](#documentation-style-guide)
 -   [Additional Notes](#additional-notes)
 -   [Issue Labels](#issue-labels)
+-   [Release process](#release-process)
 
 ## What Should I Know Before I Get Started?
 
@@ -199,3 +200,34 @@ You may want to use [Github search](https://help.github.com/articles/searching-i
 | Next Release    | [search](https://github.com/search?q=is%3Aopen+is%3Aissue+repo%3Aliferay%2Fclay+label%3A%22status%3A+next-release%22&type=Issues)  | Status     | Will be available in the next release                                                                                                                                                                                                                                               |
 | Duplicate       | [search](https://github.com/search?q=is%3Aopen+is%3Aissue+repo%3Aliferay%2Fclay+label%3A%22resolution%3A+duplicate%22&type=Issues) | Resolution | Duplicates an existing issue                                                                                                                                                                                                                                                        |
 | Wontfix         | [search](https://github.com/search?q=is%3Aopen+is%3Aissue+repo%3Aliferay%2Fclay+label%3A%22resolution%3A+wontfix%22&type=Issues)   | Resolution | Will no longer be worked on                                                                                                                                                                                                                                                         |
+
+## Release process
+
+To publish a new version for all packages that have updated, follow these steps:
+
+1.  `git checkout master`
+2.  Run `lerna version --conventional-commits` and verify each package's version change.
+
+    -   If you'd like to do a dry run first, you can also use the `--no-push` flag to see the commit and tags that lerna will apply. You can also use `lerna changed` to see an output of what packages will be updated
+    -   The `--conventional-commits` flag should automatically determine what version each package should be updated to. If this doesn't seem accurate, you can maually choose each version by just running `lerna version` without the flag.
+
+    > Note, if package A requires package B and package B receives a minor update, package A will also receive a minor update via lerna.
+
+3.  Create a draft PR (not intended to be merged) to the clay repo; the sole purpose of this is to see CI green one last time before pushing the tag.
+4.  Once CI is green, run `git push $REMOTE master --follow-tags`
+5.  Run `lerna publish from-package` - This will push the packages to NPM.
+
+In the last step it may happen that some things break, be it build failure or something else, so be aware and make sure all packages are published correctly.
+
+> NOTE: Publishing new packages automatically with Lerna is sometimes a problem, if you have problems try to publish the package separately manually.
+
+### Releasing individual packages
+
+In a rare case you may want to release only one specific package. To do so, follow these steps:
+
+1. `git checkout master`
+2. Navigate to specific package (`cd ./packages/$COMPONENT_DIR`)
+3. Run `yarn version` and choose what the new version will be.
+4. Create a draft PR (not intended to be merged) to the clay repo; the sole purpose of this is to see CI green one last time before pushing the tag.
+5. Once CI is green, run `git push $REMOTE master --follow-tags`
+6. Run `yarn publish` to publish module to the npm registry.
