@@ -1,11 +1,14 @@
 ---
-title: "Autocomplete"
-description: "An autocomplete text field is an input that offers the user text suggestions while they type."
-packageNpm: "@clayui/autocomplete"
-sibling: "docs/components/forms/css-text-input-autocomplete.html"
+title: 'Autocomplete'
+description: 'An autocomplete text field is an input that offers the user text suggestions while they type.'
+packageNpm: '@clayui/autocomplete'
+sibling: 'docs/components/forms/css-text-input-autocomplete.html'
 ---
 
-import {AutocompleteWithLoadingState, AutocompleteWithDataProvider} from '../../../src/components/clay/Autocomplete';
+import {
+	AutocompleteWithLoadingState,
+	AutocompleteWithDataProvider,
+} from '../../../src/components/clay/Autocomplete';
 
 <div class="nav-toc-title">
 
@@ -16,14 +19,14 @@ import {AutocompleteWithLoadingState, AutocompleteWithDataProvider} from '../../
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Loading state](#loading-state)
-- [Data from outside](#data-from-outside)
-- [API](#api)
-  - [Autocomplete](#autocomplete)
-  - [Autocomplete.DropDown](#autocomplete.dropdown)
-  - [Autocomplete.Input](#autocomplete.input)
-  - [Autocomplete.Item](#autocomplete.item)
-  - [Autocomplete.LoadingIndicator](#autocomplete.loadingindicator)
+-   [Loading state](#loading-state)
+-   [Data from outside](#data-from-outside)
+-   [API](#api)
+    -   [Autocomplete](#autocomplete)
+    -   [Autocomplete.DropDown](#autocomplete.dropdown)
+    -   [Autocomplete.Input](#autocomplete.input)
+    -   [Autocomplete.Item](#autocomplete.item)
+    -   [Autocomplete.LoadingIndicator](#autocomplete.loadingindicator)
 
 </div>
 </div>
@@ -31,11 +34,20 @@ import {AutocompleteWithLoadingState, AutocompleteWithDataProvider} from '../../
 ## Introduction
 
 <div class="clay-site-alert alert alert-warning">
-   Take a look at our <a href="https://storybook.clayui.com/?path=/story/clayautocomplete--with-low-level-apis-composition">Storybook</a> for more information about this component.
+	Take a look at our{' '}
+	<a href="https://storybook.clayui.com/?path=/story/clayautocomplete--with-low-level-apis-composition">
+		Storybook
+	</a>{' '}
+	for more information about this component.
 </div>
 
 <div class="clay-site-alert alert alert-info">
-	Check the <a href="https://liferay.design/lexicon/">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/forms/text-input-variations/">Autocomplete Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
+	Check the <a href="https://liferay.design/lexicon/">Lexicon</a>{' '}
+	<a href="https://liferay.design/lexicon/core-components/forms/text-input-variations/">
+		Autocomplete Pattern
+	</a>{' '}
+	for a more in-depth look at the motivations and proper usage of this
+	component.
 </div>
 
 Autocomplete provides the necessary components for you to compose with the other components, **by itself it does not do much**, you need to use the `<ClayDropDown />` along with `<Autocomplete.DropDown />` and `<Autocomplete.Item />` to create the suggestions.
@@ -43,10 +55,7 @@ Autocomplete provides the necessary components for you to compose with the other
 ```jsx
 <ClayAutocomplete.DropDown>
 	<ClayDropDown.ItemList>
-		<ClayAutocomplete.Item
-			match="cl"
-			value="clay"
-		/>
+		<ClayAutocomplete.Item match="cl" value="clay" />
 	</ClayDropDown.ItemList>
 </ClayAutocomplete.DropDown>
 ```
@@ -62,11 +71,7 @@ If you already have the raw data, it is becomes simpler to create an autocomplet
 	<ClayAutocomplete.DropDown active={showDropDown}>
 		<ClayDropDown.ItemList>
 			{resourceFiltered.map(item => (
-				<ClayAutocomplete.Item
-					key={item}
-					match={value}
-					value={item}
-				/>
+				<ClayAutocomplete.Item key={item} match={value} value={item} />
 			))}
 		</ClayDropDown.ItemList>
 	</ClayAutocomplete.DropDown>
@@ -94,15 +99,11 @@ For cases where you do not have all the data in the client and need to pass the 
 
 ### Autocomplete
 
-<div>
-	[APITable "clay-autocomplete/src/index.tsx"]
-</div>
+<div>[APITable "clay-autocomplete/src/index.tsx"]</div>
 
 ### Autocomplete.DropDown
 
-<div>
-	[APITable "clay-autocomplete/src/DropDown.tsx"]
-</div>
+<div>[APITable "clay-autocomplete/src/DropDown.tsx"]</div>
 
 ### Autocomplete.Input
 
@@ -112,12 +113,8 @@ For cases where you do not have all the data in the client and need to pass the 
 
 `ClayAutocomplete.Item` is a wrapper around `ClayDropDown.Item` but also underlines the bold characters that are matched. Feel free to create your own match rule using `ClayDropDown.Item`'s API.
 
-<div>
-	[APITable "clay-autocomplete/src/Item.tsx"]
-</div>
+<div>[APITable "clay-autocomplete/src/Item.tsx"]</div>
 
 ### Autocomplete.LoadingIndicator
 
-<div>
-	[APITable "clay-autocomplete/src/LoadingIndicator.tsx"]
-</div>
+<div>[APITable "clay-autocomplete/src/LoadingIndicator.tsx"]</div>

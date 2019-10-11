@@ -1,35 +1,49 @@
 ---
-title: "Navigation Bar"
-description: "A navigation bar, navbar, is a horizontal bar that provides several access points to different parts of a system."
-packageNpm: "@clayui/navigation-bar"
-sibling: "docs/components/navigation/css-navigation-bar.html"
+title: 'Navigation Bar'
+description: 'A navigation bar, navbar, is a horizontal bar that provides several access points to different parts of a system.'
+packageNpm: '@clayui/navigation-bar'
+sibling: 'docs/components/navigation/css-navigation-bar.html'
 ---
 
-import {NavigationBar, NavigationBarWithStyledItem} from '../../../src/components/clay/NavigationBar';
+import {
+	NavigationBar,
+	NavigationBarWithStyledItem,
+} from '../../../src/components/clay/NavigationBar';
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Item](#item)
-- [API](#api)
-  - [ClayNavigationBar](#claynavigationbar)
-  - [ClayNavigationBar.Item](#claynavigationbar.item)
+-   [Item](#item)
+-   [API](#api)
+    -   [ClayNavigationBar](#claynavigationbar)
+    -   [ClayNavigationBar.Item](#claynavigationbar.item)
 
 </div>
 </div>
 
 <div class="clay-site-alert alert alert-warning">
-    Take a look at our <a href="https://storybook-clayui.netlify.com/?path=/story/claynavigationbar--default">Storybook</a> for more information about this component.
+	Take a look at our{' '}
+	<a href="https://storybook-clayui.netlify.com/?path=/story/claynavigationbar--default">
+		Storybook
+	</a>{' '}
+	for more information about this component.
 </div>
 
 <div class="clay-site-alert alert alert-info">
-	Check the <a href="https://liferay.design/lexicon/">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/navigation/horizontal-nav/">Navigation Bar Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
+	Check the <a href="https://liferay.design/lexicon/">Lexicon</a>{' '}
+	<a href="https://liferay.design/lexicon/core-components/navigation/horizontal-nav/">
+		Navigation Bar Pattern
+	</a>{' '}
+	for a more in-depth look at the motivations and proper usage of this
+	component.
 </div>
 
 As described on Lexicon, a NavigationBar can be styled with an inverted theme. It displays navigation items in a dark background with light text. It is always placed right below the header. Use [`inverted`](#api-inverted) property for this.
 
 <div class="clay-site-alert alert alert-warning">
-	<code class="language-text">triggerLabel</code> property is mandatory because it specifies the name of the trigger of the dropdown that will be placed when the screen when on small screens.
+	<code class="language-text">triggerLabel</code> property is mandatory
+	because it specifies the name of the trigger of the dropdown that will be
+	placed when the screen when on small screens.
 </div>
 
 ## Item
@@ -48,12 +62,8 @@ Use the property [`active`](#api-active) to specify which element is currently a
 
 ### ClayNavigationBar
 
-<div>
-	[APITable "clay-navigation-bar/src/index.tsx"]
-</div>
+<div>[APITable "clay-navigation-bar/src/index.tsx"]</div>
 
 ### ClayNavigationBar.Item
 
-<div>
-	[APITable "clay-navigation-bar/src/Item.tsx"]
-</div>
+<div>[APITable "clay-navigation-bar/src/Item.tsx"]</div>

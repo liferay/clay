@@ -22,6 +22,4 @@ node_js:
   - '10'
 
 script:
-  - yarn run checkFormat
-  - yarn run lint
-  - yarn run test
+  - yarn ci

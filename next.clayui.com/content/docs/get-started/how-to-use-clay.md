@@ -1,17 +1,17 @@
 ---
-title: "How to use clay"
-description: "Practical guidelines to start using Clay, a quick guide on how to install components and css to get started."
+title: 'How to use clay'
+description: 'Practical guidelines to start using Clay, a quick guide on how to install components and css to get started.'
 order: 2
 ---
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Install with NPM or Yarn](#install-with-npm-or-yarn)
-    - [NPM](#npm)
-	- [Yarn](#yarn)
-- [Install via Clay CSS CDN](#install-via-clay-css-cdn)
-- [Quick start](#quick-start)
+-   [Install with NPM or Yarn](#install-with-npm-or-yarn)
+    -   [NPM](#npm)
+    -   [Yarn](#yarn)
+-   [Install via Clay CSS CDN](#install-via-clay-css-cdn)
+-   [Quick start](#quick-start)
 
 </div>
 </div>
@@ -20,12 +20,11 @@ Clay follows some fundamentals and we recommend that you read more about this be
 
 <div class="nav-toc">
 
-- [Composing](/docs/foundations/composing.html)
+-   [Composing](/docs/foundations/composing.html)
 
 </div>
 
 ### Install with NPM or Yarn
-
 
 Clay makes the components and CSS available in its own `@clayui` scope, for example the card package is available through `@clayui/card` and the css is available through `@clayui/css`. In some packages we expose multiple components, for example the `@clayui/form` package contains components `Checkbox`, `Radio`, `Input`, `Select`...
 
@@ -48,7 +47,10 @@ yarn add @clayui/css @clayui/*
 We provide Clay CSS via CDN, which is an option when you do not want to install the clay package via NPM or Yarn.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@clayui/css/lib/css/atlas.css">
+<link
+	rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/@clayui/css/lib/css/atlas.css"
+/>
 ```
 
 If you want a specific version of CSS, specify the desired version.
@@ -98,8 +100,7 @@ import ClayDropDown from '@clayui/drop-down';
 	These packages are installed in the sandbox environment, so feel free to fork the environment if you want to test with other Clay components.
 </div>
 
-
-As you learned from [Clay's compositional philosophy]((/docs/foundations/composing.html)), we are using a low-level DropDown component, as its essence is a controlled component and for that you need to control DropDown's expand state. Let's use React's [`useState`](https://reactjs.org/docs/hooks-reference.html#usestate) to control the state.
+As you learned from [Clay's compositional philosophy](<(/docs/foundations/composing.html)>), we are using a low-level DropDown component, as its essence is a controlled component and for that you need to control DropDown's expand state. Let's use React's [`useState`](https://reactjs.org/docs/hooks-reference.html#usestate) to control the state.
 
 ```js
 const [expand, setExpand] = useState(false);
@@ -138,15 +139,13 @@ Now we can compose with other Clay components and add a Checkbox and Radio to th
 	trigger={<ClayButton>{'Click Me'}</ClayButton>}
 >
 	<ClayDropDown.ItemList>
-		<ClayDropDown.Item href="#1">
-            Linkable
-		</ClayDropDown.Item>
+		<ClayDropDown.Item href="#1">Linkable</ClayDropDown.Item>
 		<ClayDropDown.Item>
 			<ClayCheckbox checked label="Checkbox" onChange={() => {}} />
 		</ClayDropDown.Item>
 		<ClayDropDown.Item>
 			<ClayRadio checked label="Radio" value="radio" />
-        </ClayDropDown.Item>
+		</ClayDropDown.Item>
 	</ClayDropDown.ItemList>
 </ClayDropDown>
 ```
@@ -175,7 +174,7 @@ import ClayDropDown, {ClayDropDownWithItems} from '@clayui/drop-down';
 			label: 'Radio',
 			type: 'radio',
 			value: 'radio',
-		}
+		},
 	]}
 	trigger={<ClayButton>{'Click Me'}</ClayButton>}
 />

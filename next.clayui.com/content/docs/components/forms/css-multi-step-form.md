@@ -1,16 +1,16 @@
 ---
-title: "Multi Step Form"
-description: "A multi step form, also known as a wizard, is a determinate progress bar used in long processes that divides the main task into subtasks. The wizard lets the user quickly identify their current progress in completing the task and navigate forwards and backwards between steps if needed."
+title: 'Multi Step Form'
+description: 'A multi step form, also known as a wizard, is a determinate progress bar used in long processes that divides the main task into subtasks. The wizard lets the user quickly identify their current progress in completing the task and navigate forwards and backwards between steps if needed.'
 ---
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Example](#example)
-- [Fixed width items](#fixed-width-items)
-- [Title](#title)
-- [Buttons](#buttons)
-- [Simplified](#simplified)
+-   [Example](#example)
+-   [Fixed width items](#fixed-width-items)
+-   [Title](#title)
+-   [Buttons](#buttons)
+-   [Simplified](#simplified)
 
 </div>
 </div>
@@ -114,7 +114,9 @@ description: "A multi step form, also known as a wizard, is a determinate progre
 </div>
 
 ```html
-<ol class="multi-step-nav multi-step-nav-collapse-sm multi-step-indicator-label-top">
+<ol
+	class="multi-step-nav multi-step-nav-collapse-sm multi-step-indicator-label-top"
+>
 	<li class="complete multi-step-item multi-step-item-expand">
 		<div class="multi-step-divider"></div>
 		<div class="multi-step-indicator">
@@ -147,8 +149,19 @@ description: "A multi step form, also known as a wizard, is a determinate progre
 		<div class="multi-step-divider"></div>
 		<div class="dropdown multi-step-indicator">
 			<div class="multi-step-indicator-label">Step 05</div>
-			<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle multi-step-icon" data-toggle="dropdown" href="#1" role="button">
-				<svg class="lexicon-icon lexicon-icon-ellipsis-h" focusable="false" role="presentation">
+			<a
+				aria-expanded="false"
+				aria-haspopup="true"
+				class="dropdown-toggle multi-step-icon"
+				data-toggle="dropdown"
+				href="#1"
+				role="button"
+			>
+				<svg
+					class="lexicon-icon lexicon-icon-ellipsis-h"
+					focusable="false"
+					role="presentation"
+				>
 					<use href="/images/icons/icons.svg#ellipsis-h"></use>
 				</svg>
 			</a>
@@ -156,7 +169,11 @@ description: "A multi step form, also known as a wizard, is a determinate progre
 				<a class="active complete dropdown-item" href="#1">
 					5. Step Five
 					<span aria-hidden="true" class="dropdown-item-indicator">
-						<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
+						<svg
+							class="lexicon-icon lexicon-icon-check"
+							focusable="false"
+							role="presentation"
+						>
 							<use href="/images/icons/icons.svg#check"></use>
 						</svg>
 					</span>
@@ -164,7 +181,11 @@ description: "A multi step form, also known as a wizard, is a determinate progre
 				<a class="complete dropdown-item" href="#1">
 					6. Step Six
 					<span aria-hidden="true" class="dropdown-item-indicator">
-						<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
+						<svg
+							class="lexicon-icon lexicon-icon-check"
+							focusable="false"
+							role="presentation"
+						>
 							<use href="/images/icons/icons.svg#check"></use>
 						</svg>
 					</span>
@@ -172,7 +193,11 @@ description: "A multi step form, also known as a wizard, is a determinate progre
 				<a class="complete dropdown-item" href="#1">
 					7. Step Seven
 					<span aria-hidden="true" class="dropdown-item-indicator">
-						<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
+						<svg
+							class="lexicon-icon lexicon-icon-check"
+							focusable="false"
+							role="presentation"
+						>
 							<use href="/images/icons/icons.svg#check"></use>
 						</svg>
 					</span>
@@ -180,7 +205,11 @@ description: "A multi step form, also known as a wizard, is a determinate progre
 				<a class="dropdown-item" href="#1">
 					8. Step Eight
 					<span aria-hidden="true" class="dropdown-item-indicator">
-						<svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
+						<svg
+							class="lexicon-icon lexicon-icon-check"
+							focusable="false"
+							role="presentation"
+						>
 							<use href="/images/icons/icons.svg#check"></use>
 						</svg>
 					</span>
@@ -198,7 +227,7 @@ description: "A multi step form, also known as a wizard, is a determinate progre
 	<li class="multi-step-item">
 		<div class="multi-step-divider"></div>
 		<div class="multi-step-indicator">
-			<div class="multi-step-indicator-label">Step 10</div>	
+			<div class="multi-step-indicator-label">Step 10</div>
 			<a class="multi-step-icon" data-multi-step-icon="10" href="#1"></a>
 		</div>
 	</li>
@@ -261,7 +290,9 @@ To set the fixed width between items so they are not dynamic by adding the `.mul
 </div>
 
 ```html
-<ol class="multi-step-nav multi-step-indicator-label-bottom multi-step-item-fixed-width">
+<ol
+	class="multi-step-nav multi-step-indicator-label-bottom multi-step-item-fixed-width"
+>
 	<li class="complete multi-step-item multi-step-item-expand">
 		<div class="multi-step-title">Ticket Buyer Information</div>
 		<div class="multi-step-divider"></div>
@@ -299,7 +330,12 @@ To set the fixed width between items so they are not dynamic by adding the `.mul
 		<div class="multi-step-divider"></div>
 		<div class="multi-step-indicator">
 			<div class="multi-step-indicator-label">05</div>
-			<a class="multi-step-icon" data-multi-step-icon="5" href="#1" tabindex="-1"></a>
+			<a
+				class="multi-step-icon"
+				data-multi-step-icon="5"
+				href="#1"
+				tabindex="-1"
+			></a>
 		</div>
 	</li>
 	<li class="multi-step-item">
@@ -430,62 +466,102 @@ You may want to control the click of the icon to do some manipulation so you can
 </div>
 
 ```html
-<ol class="multi-step-nav multi-step-nav-collapse-sm multi-step-indicator-label-top">
+<ol
+	class="multi-step-nav multi-step-nav-collapse-sm multi-step-indicator-label-top"
+>
 	<li class="complete multi-step-item multi-step-item-expand">
 		<div class="multi-step-divider"></div>
 		<div class="multi-step-indicator">
 			<div class="multi-step-indicator-label">Step 01</div>
-			<button class="btn btn-unstyled multi-step-icon" data-multi-step-icon="1" type="button"></button>
+			<button
+				class="btn btn-unstyled multi-step-icon"
+				data-multi-step-icon="1"
+				type="button"
+			></button>
 		</div>
 	</li>
 	<li class="complete multi-step-item multi-step-item-expand">
 		<div class="multi-step-divider"></div>
 		<div class="multi-step-indicator">
 			<div class="multi-step-indicator-label">Step 02</div>
-			<button class="btn btn-unstyled multi-step-icon" data-multi-step-icon="2" type="button"></button>
+			<button
+				class="btn btn-unstyled multi-step-icon"
+				data-multi-step-icon="2"
+				type="button"
+			></button>
 		</div>
 	</li>
 	<li class="complete multi-step-item multi-step-item-expand">
 		<div class="multi-step-divider"></div>
 		<div class="multi-step-indicator">
 			<div class="multi-step-indicator-label">Step 03</div>
-			<button class="btn btn-unstyled multi-step-icon" data-multi-step-icon="3" type="button"></button>
+			<button
+				class="btn btn-unstyled multi-step-icon"
+				data-multi-step-icon="3"
+				type="button"
+			></button>
 		</div>
 	</li>
 	<li class="complete multi-step-item multi-step-item-expand">
 		<div class="multi-step-divider"></div>
 		<div class="multi-step-indicator">
 			<div class="multi-step-indicator-label">Step 04</div>
-			<button class="btn btn-unstyled multi-step-icon" data-multi-step-icon="4" type="button"></button>
+			<button
+				class="btn btn-unstyled multi-step-icon"
+				data-multi-step-icon="4"
+				type="button"
+			></button>
 		</div>
 	</li>
 	<li class="active multi-step-item multi-step-item-expand">
 		<div class="multi-step-divider"></div>
 		<div class="dropdown multi-step-indicator">
 			<div class="multi-step-indicator-label">Step 05</div>
-			<button aria-expanded="false" aria-haspopup="true" class="btn btn-unstyled dropdown-toggle multi-step-icon" data-toggle="dropdown" type="button">
-				<svg class="lexicon-icon lexicon-icon-ellipsis-h" focusable="false" role="presentation">
+			<button
+				aria-expanded="false"
+				aria-haspopup="true"
+				class="btn btn-unstyled dropdown-toggle multi-step-icon"
+				data-toggle="dropdown"
+				type="button"
+			>
+				<svg
+					class="lexicon-icon lexicon-icon-ellipsis-h"
+					focusable="false"
+					role="presentation"
+				>
 					<use href="/images/icons/icons.svg#ellipsis-h"></use>
 				</svg>
 			</button>
 			<ul class="dropdown-menu dropdown-menu-indicator-end">
 				<li>
-					<button class="active btn btn-unstyled complete dropdown-item" type="button">
+					<button
+						class="active btn btn-unstyled complete dropdown-item"
+						type="button"
+					>
 						5. Step Five
 					</button>
 				</li>
 				<li>
-					<button class="complete btn btn-unstyled dropdown-item" type="button">
+					<button
+						class="complete btn btn-unstyled dropdown-item"
+						type="button"
+					>
 						6. Step Six
 					</button>
 				</li>
 				<li>
-					<button class="complete btn btn-unstyled dropdown-item" type="button">
+					<button
+						class="complete btn btn-unstyled dropdown-item"
+						type="button"
+					>
 						7. Step Seven
 					</button>
 				</li>
 				<li>
-					<button class="btn btn-unstyled dropdown-item" type="button">
+					<button
+						class="btn btn-unstyled dropdown-item"
+						type="button"
+					>
 						8. Step Eight
 					</button>
 				</li>
@@ -496,14 +572,23 @@ You may want to control the click of the icon to do some manipulation so you can
 		<div class="multi-step-divider"></div>
 		<div class="multi-step-indicator">
 			<div class="multi-step-indicator-label">Step 09</div>
-			<button class="btn btn-unstyled multi-step-icon" data-multi-step-icon="9" disabled="" type="button"></button>
+			<button
+				class="btn btn-unstyled multi-step-icon"
+				data-multi-step-icon="9"
+				disabled=""
+				type="button"
+			></button>
 		</div>
 	</li>
 	<li class="multi-step-item">
 		<div class="multi-step-divider"></div>
 		<div class="multi-step-indicator">
 			<div class="multi-step-indicator-label">Step 10</div>
-			<button class="btn btn-unstyled multi-step-icon" data-multi-step-icon="10" type="button"></button>
+			<button
+				class="btn btn-unstyled multi-step-icon"
+				data-multi-step-icon="10"
+				type="button"
+			></button>
 		</div>
 	</li>
 </ol>

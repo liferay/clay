@@ -1,15 +1,15 @@
 ---
-title: "Multi Select"
-description: "Multi select is the field type that allows writing text to create “tags” that are represented in the shape of labels."
+title: 'Multi Select'
+description: 'Multi select is the field type that allows writing text to create “tags” that are represented in the shape of labels.'
 ---
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Example](#example)
-- [Labels](#labels)
-- [Loading](#loading)
-- [Contenteditable Elements](#contenteditable-elements)
+-   [Example](#example)
+-   [Labels](#labels)
+-   [Loading](#loading)
+-   [Contenteditable Elements](#contenteditable-elements)
 
 </div>
 </div>
@@ -70,13 +70,26 @@ description: "Multi select is the field type that allows writing text to create 
 				<div class="form-control form-control-tag-group">
 					<span class="autofit-row">
 						<span class="autofit-col autofit-col-expand">
-							<input class="form-control-inset" id="tagsField1" type="text" value="some value">
+							<input
+								class="form-control-inset"
+								id="tagsField1"
+								type="text"
+								value="some value"
+							/>
 						</span>
 					</span>
 				</div>
 				<ul class="autocomplete-dropdown-menu dropdown-menu">
-					<li><a class="dropdown-item" href="#1"><strong>some value</strong></a></li>
-					<li><a class="dropdown-item" href="#1"><strong>some value</strong> meal</a></li>
+					<li>
+						<a class="dropdown-item" href="#1"
+							><strong>some value</strong></a
+						>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#1"
+							><strong>some value</strong> meal</a
+						>
+					</li>
 				</ul>
 			</div>
 			<div class="form-feedback-group">
@@ -199,72 +212,152 @@ description: "Multi select is the field type that allows writing text to create 
 		<div class="input-group-item">
 			<div class="dropdown">
 				<div class="form-control form-control-tag-group">
-					<span class="label label-dismissible label-secondary" tabindex="0">
+					<span
+						class="label label-dismissible label-secondary"
+						tabindex="0"
+					>
 						<span class="label-item label-item-before">
 							<span class="sticker">
 								<span class="sticker-overlay">
-									<img alt="thumbnail" class="sticker-img" src="/images/thumbnail_dock.jpg">
+									<img
+										alt="thumbnail"
+										class="sticker-img"
+										src="/images/thumbnail_dock.jpg"
+									/>
 								</span>
 							</span>
 						</span>
 						<span class="label-item label-item-expand">wall</span>
 						<span class="label-item label-item-after">
-							<button aria-label="Close" class="close" tabindex="-1" type="button">
-								<svg class="lexicon-icon lexicon-icon-times reference-mark" focusable="false" role="presentation">
+							<button
+								aria-label="Close"
+								class="close"
+								tabindex="-1"
+								type="button"
+							>
+								<svg
+									class="lexicon-icon lexicon-icon-times reference-mark"
+									focusable="false"
+									role="presentation"
+								>
 									<use href="/images/icons/icons.svg#times" />
 								</svg>
 							</button>
 						</span>
 					</span>
-					<span class="label label-dismissible label-secondary" tabindex="0">
+					<span
+						class="label label-dismissible label-secondary"
+						tabindex="0"
+					>
 						<span class="label-item label-item-before">
 							<span class="sticker">
 								<span class="sticker-overlay">
-									<img alt="thumbnail" class="sticker-img" src="/images/thumbnail_dock.jpg">
+									<img
+										alt="thumbnail"
+										class="sticker-img"
+										src="/images/thumbnail_dock.jpg"
+									/>
 								</span>
 							</span>
 						</span>
-						<span class="label-item label-item-expand">wallpaper</span>
+						<span class="label-item label-item-expand"
+							>wallpaper</span
+						>
 						<span class="label-item label-item-after">
-							<button aria-label="Close" class="close" tabindex="-1" type="button">
-								<svg class="lexicon-icon lexicon-icon-times reference-mark" focusable="false" role="presentation">
+							<button
+								aria-label="Close"
+								class="close"
+								tabindex="-1"
+								type="button"
+							>
+								<svg
+									class="lexicon-icon lexicon-icon-times reference-mark"
+									focusable="false"
+									role="presentation"
+								>
 									<use href="/images/icons/icons.svg#times" />
 								</svg>
 							</button>
 						</span>
 					</span>
-					<span class="label label-dismissible label-secondary" tabindex="0">
+					<span
+						class="label label-dismissible label-secondary"
+						tabindex="0"
+					>
 						<span class="label-item label-item-before">
 							<span class="sticker">
 								<span class="sticker-overlay">
-									<img alt="thumbnail" class="sticker-img" src="/images/thumbnail_dock.jpg">
+									<img
+										alt="thumbnail"
+										class="sticker-img"
+										src="/images/thumbnail_dock.jpg"
+									/>
 								</span>
 							</span>
 						</span>
-						<span class="label-item label-item-expand">wonderwall</span>
+						<span class="label-item label-item-expand"
+							>wonderwall</span
+						>
 						<span class="label-item label-item-after">
-							<button aria-label="Close" class="close" tabindex="-1" type="button">
-								<svg class="lexicon-icon lexicon-icon-times reference-mark" focusable="false" role="presentation">
+							<button
+								aria-label="Close"
+								class="close"
+								tabindex="-1"
+								type="button"
+							>
+								<svg
+									class="lexicon-icon lexicon-icon-times reference-mark"
+									focusable="false"
+									role="presentation"
+								>
 									<use href="/images/icons/icons.svg#times" />
 								</svg>
 							</button>
 						</span>
 					</span>
-					<span class="label label-dismissible label-secondary" tabindex="0">
-						<span class="label-item label-item-expand">winterfell</span>
+					<span
+						class="label label-dismissible label-secondary"
+						tabindex="0"
+					>
+						<span class="label-item label-item-expand"
+							>winterfell</span
+						>
 						<span class="label-item label-item-after">
-							<button aria-label="Close" class="close" tabindex="-1" type="button">
-								<svg class="lexicon-icon lexicon-icon-times reference-mark" focusable="false" role="presentation">
+							<button
+								aria-label="Close"
+								class="close"
+								tabindex="-1"
+								type="button"
+							>
+								<svg
+									class="lexicon-icon lexicon-icon-times reference-mark"
+									focusable="false"
+									role="presentation"
+								>
 									<use href="/images/icons/icons.svg#times" />
 								</svg>
 							</button>
 						</span>
 					</span>
-					<span class="label label-dismissible label-secondary" tabindex="0">
-						<span class="label-item label-item-expand">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAre</span>
+					<span
+						class="label label-dismissible label-secondary"
+						tabindex="0"
+					>
+						<span class="label-item label-item-expand"
+							>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAre</span
+						>
 						<span class="label-item label-item-after">
-							<button aria-label="Close" class="close" tabindex="-1" type="button">
-								<svg class="lexicon-icon lexicon-icon-times reference-mark" focusable="false" role="presentation">
+							<button
+								aria-label="Close"
+								class="close"
+								tabindex="-1"
+								type="button"
+							>
+								<svg
+									class="lexicon-icon lexicon-icon-times reference-mark"
+									focusable="false"
+									role="presentation"
+								>
 									<use href="/images/icons/icons.svg#times" />
 								</svg>
 							</button>
@@ -272,13 +365,26 @@ description: "Multi select is the field type that allows writing text to create 
 					</span>
 					<span class="autofit-row">
 						<span class="autofit-col autofit-col-expand">
-							<input class="form-control-inset" id="tagsField2" type="text" value="some value">
+							<input
+								class="form-control-inset"
+								id="tagsField2"
+								type="text"
+								value="some value"
+							/>
 						</span>
 					</span>
 				</div>
 				<ul class="autocomplete-dropdown-menu dropdown-menu">
-					<li><a class="dropdown-item" href="#1"><strong>some value</strong></a></li>
-					<li><a class="dropdown-item" href="#1"><strong>some value</strong> meal</a></li>
+					<li>
+						<a class="dropdown-item" href="#1"
+							><strong>some value</strong></a
+						>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#1"
+							><strong>some value</strong> meal</a
+						>
+					</li>
 				</ul>
 			</div>
 			<div class="form-feedback-group">
@@ -385,52 +491,104 @@ description: "Multi select is the field type that allows writing text to create 
 		<div class="input-group-item">
 			<div class="dropdown">
 				<div class="form-control form-control-tag-group">
-					<span class="label label-dismissible label-secondary" tabindex="0">
+					<span
+						class="label label-dismissible label-secondary"
+						tabindex="0"
+					>
 						<span class="label-item label-item-before">
 							<span class="sticker">
 								<span class="sticker-overlay">
-									<img alt="thumbnail" class="sticker-img" src="/images/thumbnail_dock.jpg">
+									<img
+										alt="thumbnail"
+										class="sticker-img"
+										src="/images/thumbnail_dock.jpg"
+									/>
 								</span>
 							</span>
 						</span>
 						<span class="label-item label-item-expand">wall</span>
 						<span class="label-item label-item-after">
-							<button aria-label="Close" class="close" tabindex="-1" type="button">
-								<svg class="lexicon-icon lexicon-icon-times reference-mark" focusable="false" role="presentation">
+							<button
+								aria-label="Close"
+								class="close"
+								tabindex="-1"
+								type="button"
+							>
+								<svg
+									class="lexicon-icon lexicon-icon-times reference-mark"
+									focusable="false"
+									role="presentation"
+								>
 									<use href="/images/icons/icons.svg#times" />
 								</svg>
 							</button>
 						</span>
 					</span>
-					<span class="label label-dismissible label-secondary" tabindex="0">
+					<span
+						class="label label-dismissible label-secondary"
+						tabindex="0"
+					>
 						<span class="label-item label-item-before">
 							<span class="sticker">
 								<span class="sticker-overlay">
-									<img alt="thumbnail" class="sticker-img" src="/images/thumbnail_dock.jpg">
+									<img
+										alt="thumbnail"
+										class="sticker-img"
+										src="/images/thumbnail_dock.jpg"
+									/>
 								</span>
 							</span>
 						</span>
-						<span class="label-item label-item-expand">wallpaper</span>
+						<span class="label-item label-item-expand"
+							>wallpaper</span
+						>
 						<span class="label-item label-item-after">
-							<button aria-label="Close" class="close" tabindex="-1" type="button">
-								<svg class="lexicon-icon lexicon-icon-times reference-mark" focusable="false" role="presentation">
+							<button
+								aria-label="Close"
+								class="close"
+								tabindex="-1"
+								type="button"
+							>
+								<svg
+									class="lexicon-icon lexicon-icon-times reference-mark"
+									focusable="false"
+									role="presentation"
+								>
 									<use href="/images/icons/icons.svg#times" />
 								</svg>
 							</button>
 						</span>
 					</span>
-					<span class="label label-dismissible label-secondary" tabindex="0">
+					<span
+						class="label label-dismissible label-secondary"
+						tabindex="0"
+					>
 						<span class="label-item label-item-before">
 							<span class="sticker">
 								<span class="sticker-overlay">
-									<img alt="thumbnail" class="sticker-img" src="/images/thumbnail_dock.jpg">
+									<img
+										alt="thumbnail"
+										class="sticker-img"
+										src="/images/thumbnail_dock.jpg"
+									/>
 								</span>
 							</span>
 						</span>
-						<span class="label-item label-item-expand">wonderwall</span>
+						<span class="label-item label-item-expand"
+							>wonderwall</span
+						>
 						<span class="label-item label-item-after">
-							<button aria-label="Close" class="close" tabindex="-1" type="button">
-								<svg class="lexicon-icon lexicon-icon-times reference-mark" focusable="false" role="presentation">
+							<button
+								aria-label="Close"
+								class="close"
+								tabindex="-1"
+								type="button"
+							>
+								<svg
+									class="lexicon-icon lexicon-icon-times reference-mark"
+									focusable="false"
+									role="presentation"
+								>
 									<use href="/images/icons/icons.svg#times" />
 								</svg>
 							</button>
@@ -438,17 +596,27 @@ description: "Multi select is the field type that allows writing text to create 
 					</span>
 					<span class="autofit-row">
 						<span class="autofit-col autofit-col-expand">
-							<input class="form-control-inset" id="tagsField2" type="text" value="some value">
+							<input
+								class="form-control-inset"
+								id="tagsField2"
+								type="text"
+								value="some value"
+							/>
 						</span>
 						<span class="autofit-col">
 							<span class="inline-item">
-								<span class="loading-animation" role="presentation"></span>
+								<span
+									class="loading-animation"
+									role="presentation"
+								></span>
 							</span>
 						</span>
 					</span>
 				</div>
 				<ul class="autocomplete-dropdown-menu dropdown-menu show">
-					<li><span class="disabled dropdown-item">Loading...</span></li>
+					<li>
+						<span class="disabled dropdown-item">Loading...</span>
+					</li>
 				</ul>
 			</div>
 			<div class="form-feedback-group">
@@ -503,14 +671,30 @@ description: "Multi select is the field type that allows writing text to create 
 				<div class="form-control form-control-tag-group">
 					<span class="autofit-row">
 						<span class="autofit-col autofit-col-expand">
-							<textarea aria-hidden="true" class="form-control-hidden" id="formControlContentEditable1" tabindex="-1"></textarea>
-							<div class="form-control-inset" contenteditable="true"></div>
+							<textarea
+								aria-hidden="true"
+								class="form-control-hidden"
+								id="formControlContentEditable1"
+								tabindex="-1"
+							></textarea>
+							<div
+								class="form-control-inset"
+								contenteditable="true"
+							></div>
 						</span>
 					</span>
 				</div>
 				<ul class="autocomplete-dropdown-menu dropdown-menu">
-					<li><a class="dropdown-item" href="#1"><strong>some value</strong></a></li>
-					<li><a class="dropdown-item" href="#1"><strong>some value</strong> meal</a></li>
+					<li>
+						<a class="dropdown-item" href="#1"
+							><strong>some value</strong></a
+						>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#1"
+							><strong>some value</strong> meal</a
+						>
+					</li>
 				</ul>
 			</div>
 			<div class="form-feedback-group">

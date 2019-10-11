@@ -1,22 +1,22 @@
 ---
-title: "Links"
-description: "Also known as a hyperlink, a link is a clickable (text or image) element used for navigation purposes."
+title: 'Links'
+description: 'Also known as a hyperlink, a link is a clickable (text or image) element used for navigation purposes.'
 ---
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Styles](#styles)
-- [Single Link](#single-link)
-- [Component Links](#component-links)
-- [Component Action](#component-action)
-	- [Anchor](#anchor)
-	- [Button](#button)
-- [Outline](#outline)
-- [Outline Borderless](#outline-borderless)
-- [External Link](#external-link)
-- [Monospaced](#monospaced)
-- [Title Link](#title-link)
+-   [Styles](#styles)
+-   [Single Link](#single-link)
+-   [Component Links](#component-links)
+-   [Component Action](#component-action)
+    -   [Anchor](#anchor)
+    -   [Button](#button)
+-   [Outline](#outline)
+-   [Outline Borderless](#outline-borderless)
+-   [External Link](#external-link)
+-   [Monospaced](#monospaced)
+-   [Title Link](#title-link)
 
 </div>
 </div>
@@ -106,12 +106,25 @@ Use these patterns for actions in components.
 
 ```html
 <a class="component-action" href="#1" role="button">
-	<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+	<svg
+		class="lexicon-icon lexicon-icon-times"
+		focusable="false"
+		role="presentation"
+	>
 		<use href="/images/icons/icons.svg#times" />
 	</svg>
 </a>
-<a class="component-action disabled" href="#disabled" role="button" tabindex="-1">
-	<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+<a
+	class="component-action disabled"
+	href="#disabled"
+	role="button"
+	tabindex="-1"
+>
+	<svg
+		class="lexicon-icon lexicon-icon-times"
+		focusable="false"
+		role="presentation"
+	>
 		<use href="/images/icons/icons.svg#times" />
 	</svg>
 </a>
@@ -134,12 +147,20 @@ Use these patterns for actions in components.
 
 ```html
 <button class="component-action" role="button">
-	<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+	<svg
+		class="lexicon-icon lexicon-icon-times"
+		focusable="false"
+		role="presentation"
+	>
 		<use href="/images/icons/icons.svg#times" />
 	</svg>
 </button>
 <button class="component-action" disabled type="button" tabindex="-1">
-	<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+	<svg
+		class="lexicon-icon lexicon-icon-times"
+		focusable="false"
+		role="presentation"
+	>
 		<use href="/images/icons/icons.svg#times" />
 	</svg>
 </button>
@@ -165,8 +186,12 @@ Use these patterns for actions in components.
 </div>
 
 ```html
-<a class="link-outline link-outline-borderless link-outline-primary" href="#1">Primary</a>
-<a class="link-outline link-outline-borderless link-outline-secondary" href="#1">Secondary</a>
+<a class="link-outline link-outline-borderless link-outline-primary" href="#1"
+	>Primary</a
+>
+<a class="link-outline link-outline-borderless link-outline-secondary" href="#1"
+	>Secondary</a
+>
 ```
 
 ## External Link
@@ -178,7 +203,12 @@ Use these patterns for actions in components.
 </div>
 
 ```html
-<a aria-label="External Link" class="link-secondary" href="#link-styles" title="External Link">
+<a
+	aria-label="External Link"
+	class="link-secondary"
+	href="#link-styles"
+	title="External Link"
+>
 	External Link
 </a>
 ```
@@ -219,15 +249,26 @@ Use these patterns for actions in components.
 ```html
 <a class="link-monospaced link-outline link-outline-primary" href="#1">
 	<span class="inline-item">
-		<svg class="lexicon-icon lexicon-icon-add-cell" focusable="false" role="presentation">
+		<svg
+			class="lexicon-icon lexicon-icon-add-cell"
+			focusable="false"
+			role="presentation"
+		>
 			<use href="/images/icons/icons.svg#add-cell" />
 		</svg>
 	</span>
 </a>
 
-<a class="link-monospaced link-outline link-outline-borderless link-outline-primary" href="#1">
+<a
+	class="link-monospaced link-outline link-outline-borderless link-outline-primary"
+	href="#1"
+>
 	<span class="inline-item">
-		<svg class="lexicon-icon lexicon-icon-add-cell" focusable="false" role="presentation">
+		<svg
+			class="lexicon-icon lexicon-icon-add-cell"
+			focusable="false"
+			role="presentation"
+		>
 			<use href="/images/icons/icons.svg#add-cell" />
 		</svg>
 	</span>
@@ -235,15 +276,26 @@ Use these patterns for actions in components.
 
 <a class="link-monospaced link-outline link-outline-secondary" href="#1">
 	<span class="inline-item">
-		<svg class="lexicon-icon lexicon-icon-picture" focusable="false" role="presentation">
+		<svg
+			class="lexicon-icon lexicon-icon-picture"
+			focusable="false"
+			role="presentation"
+		>
 			<use href="/images/icons/icons.svg#picture" />
 		</svg>
 	</span>
 </a>
 
-<a class="link-monospaced link-outline link-outline-borderless link-outline-secondary" href="#1">
+<a
+	class="link-monospaced link-outline link-outline-borderless link-outline-secondary"
+	href="#1"
+>
 	<span class="inline-item">
-		<svg class="lexicon-icon lexicon-icon-picture" focusable="false" role="presentation">
+		<svg
+			class="lexicon-icon lexicon-icon-picture"
+			focusable="false"
+			role="presentation"
+		>
 			<use href="/images/icons/icons.svg#picture" />
 		</svg>
 	</span>
@@ -259,7 +311,12 @@ Use these patterns for actions in components.
 </div>
 
 ```html
-<a aria-label="Title Link" class="component-title link-secondary" href="#title-link" title="Title">
+<a
+	aria-label="Title Link"
+	class="component-title link-secondary"
+	href="#title-link"
+	title="Title"
+>
 	Title Link
 </a>
 ```

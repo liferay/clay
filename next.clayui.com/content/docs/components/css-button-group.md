@@ -1,16 +1,16 @@
 ---
-title: "Button Group"
+title: 'Button Group'
 description: 'Button groups are used to switch between complementary views for example, but they must never be used for complementary actions, "Change and Cancel" actions, or "Save and Cancel" actions. In those cases, single buttons are the correct solution.'
 ---
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Examples](#examples)
-- [Split Button](#split-button)
-- [Button toolbar](#button-toolbar)
-- [Sizes](#sizes)
-- [Vertical variation](#vertical-variation)
+-   [Examples](#examples)
+-   [Split Button](#split-button)
+-   [Button toolbar](#button-toolbar)
+-   [Sizes](#sizes)
+-   [Vertical variation](#vertical-variation)
 
 </div>
 </div>
@@ -71,8 +71,18 @@ description: 'Button groups are used to switch between complementary views for e
 ```html
 <div class="btn-group dropdown" role="group">
 	<button class="btn btn-primary" type="button">Primary</button>
-	<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
-		<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
+	<button
+		aria-expanded="false"
+		aria-haspopup="true"
+		class="btn btn-primary btn-monospaced dropdown-toggle"
+		data-toggle="dropdown"
+		type="button"
+	>
+		<svg
+			class="lexicon-icon lexicon-icon-caret-bottom"
+			focusable="false"
+			role="presentation"
+		>
 			<use href="/images/icons/icons.svg#caret-bottom" />
 		</svg>
 	</button>
@@ -127,11 +137,19 @@ Combine sets of button groups into button toolbars for more complex components. 
 		<button type="button" class="btn btn-secondary">8</button>
 	</div>
 	<div class="input-group">
-		<div class="input-group-item input-group-item-shrink input-group-prepend">
+		<div
+			class="input-group-item input-group-item-shrink input-group-prepend"
+		>
 			<span class="input-group-text">@</span>
 		</div>
 		<div class="input-group-item input-group-append">
-			<input aria-label="Input group example" aria-describedby="btnGroupAddon" class="form-control" placeholder="Input group example" type="text"/>
+			<input
+				aria-label="Input group example"
+				aria-describedby="btnGroupAddon"
+				class="form-control"
+				placeholder="Input group example"
+				type="text"
+			/>
 		</div>
 	</div>
 </div>

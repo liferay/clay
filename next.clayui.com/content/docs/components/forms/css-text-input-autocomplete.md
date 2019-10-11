@@ -1,14 +1,14 @@
 ---
-title: "Text Input Autocomplete"
-description: "An autocomplete text field is an input that offers the user text suggestions while they type."
+title: 'Text Input Autocomplete'
+description: 'An autocomplete text field is an input that offers the user text suggestions while they type.'
 ---
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Example](#example)
-- [Search Field](#search-field)
-- [Loading](#loading)
+-   [Example](#example)
+-   [Search Field](#search-field)
+-   [Loading](#loading)
 
 </div>
 </div>
@@ -63,25 +63,41 @@ Add the class `.autocomplete-dropdown-menu` to `dropdown-menu` to size the Dropd
 	<div class="input-group">
 		<div class="input-group-item">
 			<div class="dropdown">
-				<input class="form-control" id="autocompleteName1" type="text" value="Rob">
+				<input
+					class="form-control"
+					id="autocompleteName1"
+					type="text"
+					value="Rob"
+				/>
 				<ul class="autocomplete-dropdown-menu dropdown-menu show">
 					<li>
-						<a class="dropdown-item" href="#1">Rob<strong>ert Downey Jr.</strong></a>
+						<a class="dropdown-item" href="#1"
+							>Rob<strong>ert Downey Jr.</strong></a
+						>
 					</li>
 					<li>
-						<a class="dropdown-item" href="#1">Rob<strong>ert Plant</strong></a>
+						<a class="dropdown-item" href="#1"
+							>Rob<strong>ert Plant</strong></a
+						>
 					</li>
 					<li>
-						<a class="dropdown-item" href="#1">Rob<strong>ert Baratheon</strong></a>
+						<a class="dropdown-item" href="#1"
+							>Rob<strong>ert Baratheon</strong></a
+						>
 					</li>
 					<li>
-						<a class="dropdown-item" href="#1">Rob<strong>ert De Niro</strong></a>
+						<a class="dropdown-item" href="#1"
+							>Rob<strong>ert De Niro</strong></a
+						>
 					</li>
 				</ul>
 			</div>
 			<div class="form-feedback-group">
-			<div class="form-text">You can use a comma to enter tags. ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.</div>
-		</div>
+				<div class="form-text">
+					You can use a comma to enter tags.
+					ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -134,31 +150,55 @@ Add the class `.autocomplete-dropdown-menu` to `dropdown-menu` to size the Dropd
 	<div class="input-group">
 		<div class="input-group-item">
 			<div class="dropdown">
-				<input class="form-control input-group-inset input-group-inset-after" id="autocompleteMarketplace1" placeholder="Search for..." type="text" value="ele">
-				<span class="input-group-inset-item input-group-inset-item-after">
+				<input
+					class="form-control input-group-inset input-group-inset-after"
+					id="autocompleteMarketplace1"
+					placeholder="Search for..."
+					type="text"
+					value="ele"
+				/>
+				<span
+					class="input-group-inset-item input-group-inset-item-after"
+				>
 					<button class="btn btn-unstyled" type="submit">
-						<svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
+						<svg
+							class="lexicon-icon lexicon-icon-search"
+							focusable="false"
+							role="presentation"
+						>
 							<use href="/images/icons/icons.svg#search" />
 						</svg>
 					</button>
 					<button class="btn btn-unstyled" type="button">
-						<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+						<svg
+							class="lexicon-icon lexicon-icon-times"
+							focusable="false"
+							role="presentation"
+						>
 							<use href="/images/icons/icons.svg#times" />
 						</svg>
 					</button>
 				</span>
 				<ul class="autocomplete-dropdown-menu dropdown-menu show">
 					<li>
-						<a class="dropdown-item" href="#1">ele<strong>ctric toothbrush</strong></a>
+						<a class="dropdown-item" href="#1"
+							>ele<strong>ctric toothbrush</strong></a
+						>
 					</li>
 					<li>
-						<a class="dropdown-item" href="#1">ele<strong>ctric kettle</strong></a>
+						<a class="dropdown-item" href="#1"
+							>ele<strong>ctric kettle</strong></a
+						>
 					</li>
 					<li>
-						<a class="dropdown-item" href="#1">ele<strong>ctric razor</strong></a>
+						<a class="dropdown-item" href="#1"
+							>ele<strong>ctric razor</strong></a
+						>
 					</li>
 					<li>
-						<a class="dropdown-item" href="#1">ele<strong>ctrodes for tents</strong></a>
+						<a class="dropdown-item" href="#1"
+							>ele<strong>ctrodes for tents</strong></a
+						>
 					</li>
 				</ul>
 			</div>
@@ -198,10 +238,20 @@ Add the class `.autocomplete-dropdown-menu` to `dropdown-menu` to size the Dropd
 	<div class="input-group">
 		<div class="input-group-item">
 			<div class="dropdown">
-				<input class="form-control input-group-inset input-group-inset-after" id="autocompleteMarketplace2" type="text" value="H">
-				<span class="input-group-inset-item input-group-inset-item-after">
+				<input
+					class="form-control input-group-inset input-group-inset-after"
+					id="autocompleteMarketplace2"
+					type="text"
+					value="H"
+				/>
+				<span
+					class="input-group-inset-item input-group-inset-item-after"
+				>
 					<span class="inline-item inline-item-middle">
-						<span class="loading-animation" role="presentation"></span>
+						<span
+							class="loading-animation"
+							role="presentation"
+						></span>
 					</span>
 				</span>
 				<ul class="autocomplete-dropdown-menu dropdown-menu show">

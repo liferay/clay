@@ -1,16 +1,16 @@
 ---
-title: "Icons"
-description: "Icons are a visual representation of an idea and/or action."
+title: 'Icons'
+description: 'Icons are a visual representation of an idea and/or action.'
 ---
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Usage](#usage)
-- [Language Flags](#language-flags)
-- [SVG Icons as Background Images](#svg-icons-as-background-images)
-- [Clay-SVG-url()](#clay-svg-url())
-- [Why do we use SVG?](#why-do-we-use-svg)
+-   [Usage](#usage)
+-   [Language Flags](#language-flags)
+-   [SVG Icons as Background Images](#svg-icons-as-background-images)
+-   [Clay-SVG-url()](<#clay-svg-url()>)
+-   [Why do we use SVG?](#why-do-we-use-svg)
 
 </div>
 </div>
@@ -28,8 +28,12 @@ description: "Icons are a visual representation of an idea and/or action."
 We use SVG elements that link to an SVG sprite, like so:
 
 ```html
-<svg class="lexicon-icon lexicon-icon-add-column" focusable="false" role="presentation">
-    <use xlink:href="path/to/icons.svg#add-column" />
+<svg
+	class="lexicon-icon lexicon-icon-add-column"
+	focusable="false"
+	role="presentation"
+>
+	<use xlink:href="path/to/icons.svg#add-column" />
 </svg>
 ```
 

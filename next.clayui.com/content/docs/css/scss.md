@@ -1,24 +1,25 @@
 ---
-title: "SCSS"
+title: 'SCSS'
 order: 2
-description: "Clay CSS Framework provides some utilities for you to work with SCSS(https://sass-lang.com) and reuse it in your classes."
+description: 'Clay CSS Framework provides some utilities for you to work with SCSS(https://sass-lang.com) and reuse it in your classes.'
 ---
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Variables](#variables)
-- [Mixins](#mixins)
-- [Functions](#functions)
+-   [Variables](#variables)
+-   [Mixins](#mixins)
+-   [Functions](#functions)
 
 </div>
 </div>
 
 ## Variables
 
-Think of variables as a way to store information that you want to reuse throughout your stylesheet. You can store things like colors, font stacks, or any CSS value you think you'll want to reuse. Sass uses the $ symbol to make something a variable. [SASS](https://sass-lang.com/guide)
+Think of variables as a way to store information that you want to reuse throughout your stylesheet. You can store things like colors, font stacks, or any CSS value you think you'll want to reuse. Sass uses the \$ symbol to make something a variable. [SASS](https://sass-lang.com/guide)
 
 Example:
+
 ```scss
 // Alert Dismissible
 
@@ -37,13 +38,13 @@ Some things in CSS are a bit tedious to write, especially with CSS3 and the many
 ```scss
 $map: (
 	bg: '#0B5FFF',
-	//...
 );
 
 .my-button {
 	@include clay-button-variant($map);
 }
 ```
+
 [clay-button-variant#L1](https://github.com/liferay/clay/blob/master/packages/clay-css/src/scss/mixins/_buttons.scss#L1)
 
 You can find all mixins available by component if you want to create a component extension.

@@ -45,8 +45,8 @@ Clay v3 is introducing the rewriting of components in React and new components, 
 
 These components are intended to be consumed via composition, this increases flexibility and more customization. We will also be delivering components with a higher level of logic as well, you can notice the nomenclature:
 
-- `<ClayDropDown.Item />`: renders basic markup.
-- `<ClayDropDownWithPagination />`: renders a number of items and includes logic for functionality.
+-   `<ClayDropDown.Item />`: renders basic markup.
+-   `<ClayDropDownWithPagination />`: renders a number of items and includes logic for functionality.
 
 To symbolize this change, Clay is distributing the new packages on the scope npm `@clayui`, so you will find the packages `clay-link`, `clay-button`... on `@clayui/link`, `@clayui/button`.
 

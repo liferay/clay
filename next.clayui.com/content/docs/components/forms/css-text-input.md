@@ -1,21 +1,21 @@
 ---
-title: "Text Input"
-description: "This section demonstrates the different text input types, including usage and validation states."
+title: 'Text Input'
+description: 'This section demonstrates the different text input types, including usage and validation states.'
 ---
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Example](#example)
-- [Disabled](#disabled)
-- [Read only](#read-only)
-- [Sizes](#sizes)
-- [Textarea](#textarea)
-- [Select menu](#select-menu)
-- [Validations](#validations)
-	- [Success](#success)
-	- [Warning](#warning)
-	- [Error](#error)
+-   [Example](#example)
+-   [Disabled](#disabled)
+-   [Read only](#read-only)
+-   [Sizes](#sizes)
+-   [Textarea](#textarea)
+-   [Select menu](#select-menu)
+-   [Validations](#validations)
+    -   [Success](#success)
+    -   [Warning](#warning)
+    -   [Error](#error)
 
 </div>
 </div>
@@ -36,7 +36,12 @@ description: "This section demonstrates the different text input types, includin
 ```html
 <div class="form-group">
 	<label for="basicInputTypeText">Name</label>
-	<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text"/>
+	<input
+		class="form-control"
+		id="basicInputTypeText"
+		placeholder="Placeholder"
+		type="text"
+	/>
 </div>
 ```
 
@@ -54,7 +59,13 @@ Add the `disabled` boolean attribute on an input to prevent user interactions an
 ```html
 <div class="form-group">
 	<label class="disabled" for="basicInputTypeTextDisabled">Name</label>
-	<input disabled class="form-control" id="basicInputTypeTextDisabled" placeholder="Placeholder" type="text"/>
+	<input
+		disabled
+		class="form-control"
+		id="basicInputTypeTextDisabled"
+		placeholder="Placeholder"
+		type="text"
+	/>
 </div>
 ```
 
@@ -72,7 +83,13 @@ Add the `readonly` boolean attribute on an input to prevent modification of the 
 ```html
 <div class="form-group">
 	<label for="basicInputTypeTextReadOnly">User ID</label>
-	<input readonly class="form-control" id="basicInputTypeTextReadOnly" type="text" value="59432"/>
+	<input
+		readonly
+		class="form-control"
+		id="basicInputTypeTextReadOnly"
+		type="text"
+		value="59432"
+	/>
 </div>
 ```
 
@@ -98,15 +115,30 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 ```html
 <div class="form-group">
 	<label for="smallTextInput">.form-control-sm</label>
-	<input class="form-control form-control-sm" id="smallTextInput" placeholder="Placeholder" type="text"/>
+	<input
+		class="form-control form-control-sm"
+		id="smallTextInput"
+		placeholder="Placeholder"
+		type="text"
+	/>
 </div>
 <div class="form-group">
 	<label for="normalTextInput">Default</label>
-	<input class="form-control" id="normalTextInput" placeholder="Placeholder" type="text"/>
+	<input
+		class="form-control"
+		id="normalTextInput"
+		placeholder="Placeholder"
+		type="text"
+	/>
 </div>
 <div class="form-group">
 	<label for="largeTextInput">.form-control-lg</label>
-	<input class="form-control form-control-lg" id="largeTextInput" placeholder="Placeholder" type="text"/>
+	<input
+		class="form-control form-control-lg"
+		id="largeTextInput"
+		placeholder="Placeholder"
+		type="text"
+	/>
 </div>
 ```
 
@@ -122,7 +154,11 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 ```html
 <div class="form-group">
 	<label for="basicInputTypeTextarea">Textarea</label>
-	<textarea class="form-control" id="basicInputTypeTextarea" placeholder="Placeholder"></textarea>
+	<textarea
+		class="form-control"
+		id="basicInputTypeTextarea"
+		placeholder="Placeholder"
+	></textarea>
 </div>
 ```
 
@@ -168,8 +204,14 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 
 ```html
 <div class="form-group">
-	<label for="multipleSelectOptionsSelectElement">Select Element with Multiple Select Options</label>
-	<select class="form-control" id="multipleSelectOptionsSelectElement" multiple>
+	<label for="multipleSelectOptionsSelectElement"
+		>Select Element with Multiple Select Options</label
+	>
+	<select
+		class="form-control"
+		id="multipleSelectOptionsSelectElement"
+		multiple
+	>
 		<option>Sample 1</option>
 		<option>Sample 2</option>
 		<option>Sample 3</option>
@@ -214,16 +256,24 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 <div class="form-group has-success">
 	<label for="inputSuccess1">
 		has-success
-		<svg class="lexicon-icon lexicon-icon-asterisk reference-mark" focusable="false" role="presentation">
+		<svg
+			class="lexicon-icon lexicon-icon-asterisk reference-mark"
+			focusable="false"
+			role="presentation"
+		>
 			<use href="/images/icons/icons.svg#asterisk" />
 		</svg>
 	</label>
-	<input class="form-control" id="inputSuccess1" type="text"/>
+	<input class="form-control" id="inputSuccess1" type="text" />
 	<div class="form-feedback-group">
 		<div class="form-feedback-item">This is a form-feedback-item.</div>
 		<div class="form-feedback-item">
 			<span class="form-feedback-indicator">
-				<svg class="lexicon-icon lexicon-icon-check-circle-full" focusable="false" role="presentation">
+				<svg
+					class="lexicon-icon lexicon-icon-check-circle-full"
+					focusable="false"
+					role="presentation"
+				>
 					<use href="/images/icons/icons.svg#check-circle-full" />
 				</svg>
 			</span>
@@ -264,16 +314,24 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 <div class="form-group has-warning">
 	<label for="inputWarning1">
 		has-warning
-		<svg class="lexicon-icon lexicon-icon-asterisk reference-mark" focusable="false" role="presentation">
+		<svg
+			class="lexicon-icon lexicon-icon-asterisk reference-mark"
+			focusable="false"
+			role="presentation"
+		>
 			<use href="/images/icons/icons.svg#asterisk" />
 		</svg>
 	</label>
-	<input class="form-control" id="inputWarning1" type="text"/>
+	<input class="form-control" id="inputWarning1" type="text" />
 	<div class="form-feedback-group">
 		<div class="form-feedback-item">This is a form-feedback-item.</div>
 		<div class="form-feedback-item">
 			<span class="form-feedback-indicator">
-				<svg class="lexicon-icon lexicon-icon-warning-full" focusable="false" role="presentation">
+				<svg
+					class="lexicon-icon lexicon-icon-warning-full"
+					focusable="false"
+					role="presentation"
+				>
 					<use href="/images/icons/icons.svg#warning-full" />
 				</svg>
 			</span>
