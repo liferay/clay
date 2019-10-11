@@ -38,6 +38,25 @@ const ClayMultiSelectWithState = (props: any) => {
 	);
 };
 
+const sourceItems = [
+	{
+		label: 'one',
+		value: '1',
+	},
+	{
+		label: 'two',
+		value: '2',
+	},
+	{
+		label: 'three',
+		value: '3',
+	},
+	{
+		label: 'four',
+		value: '4',
+	},
+];
+
 const ClayMultiSelectWithAutocomplete = (props: any) => {
 	const [value, setValue] = React.useState('');
 	const [items, setItems] = React.useState(
@@ -48,25 +67,6 @@ const ClayMultiSelectWithAutocomplete = (props: any) => {
 			},
 		]
 	);
-
-	const sourceItems = [
-		{
-			label: 'one',
-			value: '1',
-		},
-		{
-			label: 'two',
-			value: '2',
-		},
-		{
-			label: 'three',
-			value: '3',
-		},
-		{
-			label: 'four',
-			value: '4',
-		},
-	];
 
 	return (
 		<ClayMultiSelect
@@ -90,10 +90,44 @@ storiesOf('Components|ClayMultiSelect', module)
 			isValid={boolean('isValid', true)}
 		/>
 	))
-	.add('InputWithMultiSelect w/ sourceItems', () => (
-		<ClayMultiSelectWithAutocomplete />
-	))
-	.add('InputWithMultiSelect w/ group', () => {
+	.add('comparing items', () => {
+		const [value, setValue] = React.useState('');
+		const [items, setItems] = React.useState([
+			{
+				label: 'one',
+				value: '1',
+			},
+		]);
+
+		return (
+			<ClayMultiSelect
+				inputName="myInput"
+				inputValue={value}
+				items={items}
+				onChange={setValue}
+				onItemsChange={itemsChanged => {
+					const removedItems = items.filter(
+						value => !itemsChanged.includes(value)
+					);
+					const newItems = itemsChanged.filter(
+						value => !items.includes(value)
+					);
+
+					setItems(itemsChanged);
+
+					alert(
+						`Removed Items: ${JSON.stringify(
+							removedItems
+						)}\nNew Items: ${JSON.stringify(newItems)}\n`
+					);
+				}}
+				sourceItems={sourceItems}
+				spritemap={spritemap}
+			/>
+		);
+	})
+	.add('w/ sourceItems', () => <ClayMultiSelectWithAutocomplete />)
+	.add('w/ group', () => {
 		const isValid = boolean('isValid', true);
 
 		return (
