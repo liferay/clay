@@ -36,7 +36,7 @@ const ClayMultiStepNavItem: React.FunctionComponent<IProps> = ({
 	complete,
 	expand,
 	...otherProps
-}) => {
+}: IProps) => {
 	return (
 		<li
 			className={classNames('multi-step-item', {

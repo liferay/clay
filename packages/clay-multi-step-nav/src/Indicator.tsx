@@ -37,7 +37,10 @@ interface IProps {
 }
 
 const ClayMultiStepNavIndicator = React.forwardRef<HTMLDivElement, IProps>(
-	({complete, innerRef, label, onClick, spritemap, subTitle}, ref) => (
+	(
+		{complete, innerRef, label, onClick, spritemap, subTitle}: IProps,
+		ref
+	) => (
 		<div className="multi-step-indicator" ref={ref}>
 			{subTitle && (
 				<div className="multi-step-indicator-label">{subTitle}</div>
