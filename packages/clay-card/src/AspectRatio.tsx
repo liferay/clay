@@ -41,7 +41,7 @@ const ClayCardAspectRatio: React.FunctionComponent<ICardAspectRatioProps> = ({
 			className={classNames(className, 'aspect-ratio', {
 				[`aspect-ratio-${
 					containerAspectRatio
-						? containerAspectRatio.replace('/', '-')
+						? containerAspectRatio.replace('/', '-to-')
 						: null
 				}`]: containerAspectRatio,
 				[`aspect-ratio-bg-${backgroundImageAspectRatio}`]: backgroundImageAspectRatio,
