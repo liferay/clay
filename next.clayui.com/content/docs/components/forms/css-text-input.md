@@ -6,25 +6,14 @@ description: 'This section demonstrates the different text input types, includin
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Example](#example)
-- [Disabled](#disabled)
-- [Read only](#read-only)
-- [Sizes](#sizes)
-- [Textarea](#textarea)
-- [Select menu](#select-menu)
-- [Validations](#validations)
-	- [Success](#success)
-	- [Warning](#warning)
-	- [Error](#error)
-- [Groups](#groups)
-	- [Example](#example)
-	- [Sizes](#sizes)
-	- [Checkboxes and radios](#checkboxes-and-radios)
-	- [Button addons](#button-addons)
-	- [Multiple addons](#multiple-addons)
-	- [Separated addons](#separated-addons)
-	- [Mixed addons](#mixed-addons)
-	- [Inset](#inset)
+-   [Example](#example)
+-   [Disabled](#disabled)
+-   [Read only](#read-only)
+-   [Sizes](#sizes)
+-   [Textarea](#textarea)
+-   [Select menu](#select-menu)
+-   [Validations](#validations) - [Success](#success) - [Warning](#warning) - [Error](#error)
+-   [Groups](#groups) - [Example](#example) - [Sizes](#sizes) - [Checkboxes and radios](#checkboxes-and-radios) - [Button addons](#button-addons) - [Multiple addons](#multiple-addons) - [Separated addons](#separated-addons) - [Mixed addons](#mixed-addons) - [Inset](#inset)
 
 </div>
 </div>
@@ -413,11 +402,18 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 ```html
 <div class="form-group">
 	<div class="input-group">
-		<div class="input-group-item input-group-item-shrink input-group-prepend">
+		<div
+			class="input-group-item input-group-item-shrink input-group-prepend"
+		>
 			<button class="btn btn-secondary" type="button">Search</button>
 		</div>
 		<div class="input-group-append input-group-item">
-			<input aria-label="Search for" class="form-control" placeholder="Search for..." type="text"/>
+			<input
+				aria-label="Search for"
+				class="form-control"
+				placeholder="Search for..."
+				type="text"
+			/>
 		</div>
 	</div>
 </div>
@@ -425,9 +421,16 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 <div class="form-group">
 	<div class="input-group">
 		<div class="input-group-item input-group-prepend">
-			<input aria-label="Search for second one" class="form-control" value="email-example@liferay.com" type="email" />
+			<input
+				aria-label="Search for second one"
+				class="form-control"
+				value="email-example@liferay.com"
+				type="email"
+			/>
 		</div>
-		<span class="input-group-append input-group-item input-group-item-shrink">
+		<span
+			class="input-group-append input-group-item input-group-item-shrink"
+		>
 			<button class="btn btn-secondary" type="button">Submit</button>
 		</span>
 	</div>
@@ -485,24 +488,38 @@ Add the relative form sizing classes to the `.input-group` itself and contents w
 ```html
 <div class="form-group">
 	<div class="input-group input-group-lg">
-		<div class="input-group-item input-group-item-shrink input-group-prepend">
+		<div
+			class="input-group-item input-group-item-shrink input-group-prepend"
+		>
 			<span class="input-group-text">$</span>
 		</div>
 		<div class="input-group-prepend input-group-item">
-			<input aria-label="Amount (to the nearest dollar)" class="form-control" type="text"/>
+			<input
+				aria-label="Amount (to the nearest dollar)"
+				class="form-control"
+				type="text"
+			/>
 		</div>
-		<div class="input-group-append input-group-item input-group-item-shrink">
+		<div
+			class="input-group-append input-group-item input-group-item-shrink"
+		>
 			<span class="input-group-text">.00</span>
 		</div>
 	</div>
 </div>
 <div class="form-group">
 	<div class="input-group">
-		<div class="input-group-item input-group-item-shrink input-group-prepend">
+		<div
+			class="input-group-item input-group-item-shrink input-group-prepend"
+		>
 			<span class="input-group-text">$</span>
 		</div>
 		<div class="input-group-item input-group-prepend">
-			<input aria-label="Amount (to the nearest dollar)" class="form-control" type="text"/>
+			<input
+				aria-label="Amount (to the nearest dollar)"
+				class="form-control"
+				type="text"
+			/>
 		</div>
 		<div class="input-group-append input-group-item-shrink">
 			<span class="input-group-text">.00</span>
@@ -511,13 +528,21 @@ Add the relative form sizing classes to the `.input-group` itself and contents w
 </div>
 <div class="form-group">
 	<div class="input-group input-group-sm">
-		<div class="input-group-item input-group-item-shrink input-group-prepend">
+		<div
+			class="input-group-item input-group-item-shrink input-group-prepend"
+		>
 			<span class="input-group-text">$</span>
 		</div>
 		<div class="input-group-item input-group-prepend">
-			<input aria-label="Amount (to the neareset dollar)" class="form-control" type="text"/>
+			<input
+				aria-label="Amount (to the neareset dollar)"
+				class="form-control"
+				type="text"
+			/>
 		</div>
-		<div class="input-group-append input-group-item input-group-item-shrink">
+		<div
+			class="input-group-append input-group-item input-group-item-shrink"
+		>
 			<span class="input-group-text">.00</span>
 		</div>
 	</div>
@@ -568,36 +593,58 @@ Place any checkbox or radio option within an input group’s addon instead of te
 ```html
 <div class="form-group">
 	<div class="input-group">
-		<div class="input-group-item input-group-item-shrink input-group-prepend">
+		<div
+			class="input-group-item input-group-item-shrink input-group-prepend"
+		>
 			<span class="input-group-text input-group-text-secondary">
 				<div class="custom-control custom-checkbox">
 					<label>
-						<input aria-label="Checkbox for following text input" class="custom-control-input" type="checkbox"/>
+						<input
+							aria-label="Checkbox for following text input"
+							class="custom-control-input"
+							type="checkbox"
+						/>
 						<span class="custom-control-label"></span>
 					</label>
 				</div>
 			</span>
 		</div>
 		<div class="input-group-append input-group-item">
-			<input aria-label="Text input with checkbox" class="form-control" value="Select this option?" type="text"/>
+			<input
+				aria-label="Text input with checkbox"
+				class="form-control"
+				value="Select this option?"
+				type="text"
+			/>
 		</div>
 	</div>
 </div>
 
 <div class="form-group">
 	<div class="input-group">
-		<div class="input-group-item input-group-item-shrink input-group-prepend">
+		<div
+			class="input-group-item input-group-item-shrink input-group-prepend"
+		>
 			<span class="input-group-text input-group-text-secondary">
 				<div class="custom-control custom-radio">
 					<label>
-						<input aria-label="Radio button for following text input" class="custom-control-input" type="radio"/>
+						<input
+							aria-label="Radio button for following text input"
+							class="custom-control-input"
+							type="radio"
+						/>
 						<span class="custom-control-label"></span>
 					</label>
 				</div>
 			</span>
 		</div>
 		<div class="input-group-append input-group-item">
-			<input aria-label="Text input with radio button" class="form-control" type="text" value="Select this option?"/>
+			<input
+				aria-label="Text input with radio button"
+				class="form-control"
+				type="text"
+				value="Select this option?"
+			/>
 		</div>
 	</div>
 </div>
@@ -666,31 +713,59 @@ Place any checkbox or radio option within an input group’s addon instead of te
 ```html
 <div class="form-group">
 	<div class="input-group">
-		<div class="input-group-item input-group-item-shrink input-group-prepend">
+		<div
+			class="input-group-item input-group-item-shrink input-group-prepend"
+		>
 			<button class="btn btn-secondary" type="button">Search</button>
 		</div>
 		<div class="input-group-append input-group-item">
-			<input aria-label="Search for" class="form-control" placeholder="Search for..." type="text"/>
+			<input
+				aria-label="Search for"
+				class="form-control"
+				placeholder="Search for..."
+				type="text"
+			/>
 		</div>
 	</div>
 </div>
 
 <div class="form-group">
 	<div class="input-group">
-		<div class="input-group-item input-group-item-shrink input-group-prepend">
-			<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
-				Action<span class="inline-item inline-item-after"><svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation"><use href="/images/icons/icons.svg#caret-bottom" /></svg></span>
+		<div
+			class="input-group-item input-group-item-shrink input-group-prepend"
+		>
+			<button
+				aria-expanded="false"
+				aria-haspopup="true"
+				class="btn btn-secondary dropdown-toggle"
+				data-toggle="dropdown"
+				type="button"
+			>
+				Action<span class="inline-item inline-item-after"
+					><svg
+						class="lexicon-icon lexicon-icon-caret-bottom"
+						focusable="false"
+						role="presentation"
+					>
+						<use href="/images/icons/icons.svg#caret-bottom" /></svg
+				></span>
 			</button>
 			<ul class="dropdown-menu">
 				<li><a class="dropdown-item" href="#1">Action</a></li>
 				<li><a class="dropdown-item" href="#1">Another action</a></li>
-				<li><a class="dropdown-item" href="#1">Something else here</a></li>
+				<li>
+					<a class="dropdown-item" href="#1">Something else here</a>
+				</li>
 				<li class="dropdown-divider"></li>
 				<li><a class="dropdown-item" href="#1">Separated link</a></li>
 			</ul>
 		</div>
 		<div class="input-group-append input-group-item">
-			<input aria-label="Text input with dropdown button" class="form-control" type="text"/>
+			<input
+				aria-label="Text input with dropdown button"
+				class="form-control"
+				type="text"
+			/>
 		</div>
 	</div>
 </div>
@@ -698,15 +773,33 @@ Place any checkbox or radio option within an input group’s addon instead of te
 <div class="form-group">
 	<div class="input-group">
 		<div class="input-group-item input-group-prepend">
-			<input aria-label="Text input with segmented button dropdown" class="form-control" type="text"/>
+			<input
+				aria-label="Text input with segmented button dropdown"
+				class="form-control"
+				type="text"
+			/>
 		</div>
-		<div class="input-group-prepend input-group-item input-group-item-shrink">
+		<div
+			class="input-group-prepend input-group-item input-group-item-shrink"
+		>
 			<button class="btn btn-secondary" type="button">Action</button>
 		</div>
-		<div class="input-group-append input-group-item input-group-item-shrink">
-			<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
+		<div
+			class="input-group-append input-group-item input-group-item-shrink"
+		>
+			<button
+				aria-expanded="false"
+				aria-haspopup="true"
+				class="btn btn-secondary dropdown-toggle"
+				data-toggle="dropdown"
+				type="button"
+			>
 				<span class="inline-item">
-					<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
+					<svg
+						class="lexicon-icon lexicon-icon-caret-bottom"
+						focusable="false"
+						role="presentation"
+					>
 						<use href="/images/icons/icons.svg#caret-bottom" />
 					</svg>
 				</span>
@@ -714,7 +807,9 @@ Place any checkbox or radio option within an input group’s addon instead of te
 			<ul class="dropdown-menu dropdown-menu-right">
 				<li><a class="dropdown-item" href="#1">Action</a></li>
 				<li><a class="dropdown-item" href="#1">Another action</a></li>
-				<li><a class="dropdown-item" href="#1">Something else here</a></li>
+				<li>
+					<a class="dropdown-item" href="#1">Something else here</a>
+				</li>
 				<li class="dropdown-divider"></li>
 				<li><a class="dropdown-item" href="#1">Separated link</a></li>
 			</ul>
@@ -748,15 +843,23 @@ Place any checkbox or radio option within an input group’s addon instead of te
 <div class="form-group">
 	<div class="input-group">
 		<div class="input-group-item input-group-prepend">
-			<input class="form-control" placeholder="email-example" type="text"/>
+			<input
+				class="form-control"
+				placeholder="email-example"
+				type="text"
+			/>
 		</div>
-		<div class="input-group-item input-group-item-shrink input-group-prepend">
+		<div
+			class="input-group-item input-group-item-shrink input-group-prepend"
+		>
 			<span class="input-group-text">@</span>
 		</div>
 		<div class="input-group-item input-group-prepend">
-			<input class="form-control" placeholder="liferay" type="text"/>
+			<input class="form-control" placeholder="liferay" type="text" />
 		</div>
-		<div class="input-group-append input-group-item input-group-item-shrink">
+		<div
+			class="input-group-append input-group-item input-group-item-shrink"
+		>
 			<span class="input-group-text">.com</span>
 		</div>
 	</div>
@@ -801,7 +904,13 @@ Place any checkbox or radio option within an input group’s addon instead of te
 			<span class="input-group-text" id="basicAddon1">@</span>
 		</div>
 		<div class="input-group-item">
-			<input aria-describedby="basicAddon1" aria-label="Username" class="form-control" placeholder="Username" type="text"/>
+			<input
+				aria-describedby="basicAddon1"
+				aria-label="Username"
+				class="form-control"
+				placeholder="Username"
+				type="text"
+			/>
 		</div>
 	</div>
 </div>
@@ -809,13 +918,13 @@ Place any checkbox or radio option within an input group’s addon instead of te
 <div class="form-group">
 	<div class="input-group">
 		<div class="input-group-item">
-			<input class="form-control" placeholder="Email" type="text"/>
+			<input class="form-control" placeholder="Email" type="text" />
 		</div>
 		<div class="input-group-item input-group-item-shrink">
 			<span class="input-group-text">@</span>
 		</div>
 		<div class="input-group-item">
-			<input class="form-control" placeholder="liferay" type="text"/>
+			<input class="form-control" placeholder="liferay" type="text" />
 		</div>
 		<div class="input-group-item input-group-item-shrink">
 			<span class="input-group-text">.com</span>
@@ -849,9 +958,17 @@ Place any checkbox or radio option within an input group’s addon instead of te
 			<span class="input-group-text" id="basicAddon1">@</span>
 		</div>
 		<div class="input-group-item input-group-prepend">
-			<input aria-describedby="basicAddon1" aria-label="Username" class="form-control" placeholder="Username" type="text"/>
+			<input
+				aria-describedby="basicAddon1"
+				aria-label="Username"
+				class="form-control"
+				placeholder="Username"
+				type="text"
+			/>
 		</div>
-		<div class="input-group-append input-group-item input-group-item-shrink">
+		<div
+			class="input-group-append input-group-item input-group-item-shrink"
+		>
 			<button class="btn btn-secondary" type="submit">Submit</button>
 		</div>
 	</div>
@@ -948,15 +1065,31 @@ You can insert buttons and links into input group items with the following helpe
 ```html
 <div class="input-group">
 	<div class="input-group-item">
-		<input aria-label="Search for" class="form-control input-group-inset input-group-inset-after" placeholder="Search..." type="text"/>
+		<input
+			aria-label="Search for"
+			class="form-control input-group-inset input-group-inset-after"
+			placeholder="Search..."
+			type="text"
+		/>
 		<div class="input-group-inset-item input-group-inset-item-after">
 			<button class="btn btn-unstyled d-md-none" type="button">
-				<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+				<svg
+					class="lexicon-icon lexicon-icon-times"
+					focusable="false"
+					role="presentation"
+				>
 					<use href="/images/icons/icons.svg#times" />
 				</svg>
 			</button>
-			<button class="btn btn-unstyled d-none d-md-inline-block" type="button">
-				<svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
+			<button
+				class="btn btn-unstyled d-none d-md-inline-block"
+				type="button"
+			>
+				<svg
+					class="lexicon-icon lexicon-icon-search"
+					focusable="false"
+					role="presentation"
+				>
 					<use href="/images/icons/icons.svg#search" />
 				</svg>
 			</button>
@@ -966,15 +1099,28 @@ You can insert buttons and links into input group items with the following helpe
 
 <div class="input-group">
 	<div class="input-group-item">
-		<input aria-label="Search for" class="form-control input-group-inset input-group-inset-after" placeholder="Search..." type="text"/>
+		<input
+			aria-label="Search for"
+			class="form-control input-group-inset input-group-inset-after"
+			placeholder="Search..."
+			type="text"
+		/>
 		<div class="input-group-inset-item input-group-inset-item-after">
 			<button class="btn btn-unstyled" type="button">
-				<svg class="lexicon-icon lexicon-icon-times-circle" focusable="false" role="presentation">
+				<svg
+					class="lexicon-icon lexicon-icon-times-circle"
+					focusable="false"
+					role="presentation"
+				>
 					<use href="/images/icons/icons.svg#times-circle" />
 				</svg>
 			</button>
 			<button class="btn btn-unstyled" type="button">
-				<svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
+				<svg
+					class="lexicon-icon lexicon-icon-search"
+					focusable="false"
+					role="presentation"
+				>
 					<use href="/images/icons/icons.svg#search" />
 				</svg>
 			</button>
@@ -984,7 +1130,12 @@ You can insert buttons and links into input group items with the following helpe
 
 <div class="input-group">
 	<div class="input-group-item">
-		<input aria-label="Enter email" class="form-control input-group-inset input-group-inset-after" placeholder="Enter Email..." type="email"/>
+		<input
+			aria-label="Enter email"
+			class="form-control input-group-inset input-group-inset-after"
+			placeholder="Enter Email..."
+			type="email"
+		/>
 		<div class="input-group-inset-item input-group-inset-item-after">
 			<button class="btn btn-secondary" type="button">Submit</button>
 		</div>
@@ -993,10 +1144,19 @@ You can insert buttons and links into input group items with the following helpe
 
 <div class="input-group">
 	<div class="input-group-item">
-		<input aria-label="Search for" class="form-control input-group-inset input-group-inset-before" placeholder="Search..." type="text"/>
+		<input
+			aria-label="Search for"
+			class="form-control input-group-inset input-group-inset-before"
+			placeholder="Search..."
+			type="text"
+		/>
 		<div class="input-group-inset-item input-group-inset-item-before">
 			<button class="btn btn-unstyled" type="button">
-				<svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
+				<svg
+					class="lexicon-icon lexicon-icon-search"
+					focusable="false"
+					role="presentation"
+				>
 					<use href="/images/icons/icons.svg#search" />
 				</svg>
 			</button>
@@ -1006,13 +1166,19 @@ You can insert buttons and links into input group items with the following helpe
 
 <div class="input-group">
 	<div class="input-group-item">
-		<input aria-label="Enter email" class="form-control input-group-inset input-group-inset-before" placeholder="Enter Email..." type="email"/>
+		<input
+			aria-label="Enter email"
+			class="form-control input-group-inset input-group-inset-before"
+			placeholder="Enter Email..."
+			type="email"
+		/>
 		<div class="input-group-inset-item input-group-inset-item-before">
 			<button class="btn btn-secondary" type="button">Submit</button>
 		</div>
 	</div>
 </div>
 ```
+
 ### Password
 
 A pattern for displaying the content inside a password input. Use `.input-text-label` inside `.input-group-inset-item` to display specific content for `.form-control[type="text"]` and `.input-password-label` for `.form-control[type="password"]`.
@@ -1087,16 +1253,30 @@ A pattern for displaying the content inside a password input. Use `.input-text-l
 	<label for="passwordFieldHidden">Password Field Hidden</label>
 	<div class="input-group input-group-password">
 		<div class="input-group-item">
-			<input aria-label="Password Hidden" class="form-control input-group-inset input-group-inset-after" id="passwordFieldHidden" type="password" value="my-seekret">
+			<input
+				aria-label="Password Hidden"
+				class="form-control input-group-inset input-group-inset-after"
+				id="passwordFieldHidden"
+				type="password"
+				value="my-seekret"
+			/>
 			<div class="input-group-inset-item input-group-inset-item-after">
 				<button class="btn btn-unstyled" type="button">
 					<span class="input-text-label">
-						<svg class="lexicon-icon lexicon-icon-hidden" focusable="false" role="presentation">
+						<svg
+							class="lexicon-icon lexicon-icon-hidden"
+							focusable="false"
+							role="presentation"
+						>
 							<use href="/images/icons/icons.svg#hidden" />
 						</svg>
 					</span>
 					<span class="input-password-label">
-						<svg class="lexicon-icon lexicon-icon-view" focusable="false" role="presentation">
+						<svg
+							class="lexicon-icon lexicon-icon-view"
+							focusable="false"
+							role="presentation"
+						>
 							<use href="/images/icons/icons.svg#view" />
 						</svg>
 					</span>
@@ -1110,7 +1290,13 @@ A pattern for displaying the content inside a password input. Use `.input-text-l
 	<label for="passwordFieldVisible">Password Field Visible</label>
 	<div class="input-group input-group-password">
 		<div class="input-group-item">
-			<input aria-label="Password Visible" class="form-control input-group-inset input-group-inset-after" id="passwordFieldVisible" type="text" value="my-seekret">
+			<input
+				aria-label="Password Visible"
+				class="form-control input-group-inset input-group-inset-after"
+				id="passwordFieldVisible"
+				type="text"
+				value="my-seekret"
+			/>
 			<div class="input-group-inset-item input-group-inset-item-after">
 				<button class="btn btn-secondary" type="button">
 					<span class="input-password-label">Show</span>
@@ -1122,19 +1308,36 @@ A pattern for displaying the content inside a password input. Use `.input-text-l
 </div>
 
 <div class="form-group">
-	<label class="disabled" for="passwordFieldDisabled">Password Field Disabled</label>
+	<label class="disabled" for="passwordFieldDisabled"
+		>Password Field Disabled</label
+	>
 	<div class="input-group input-group-password">
 		<div class="input-group-item">
-			<input aria-label="Password Disabled" class="form-control input-group-inset input-group-inset-after" disabled="" id="passwordFieldDisabled" type="password" value="my-seekret">
+			<input
+				aria-label="Password Disabled"
+				class="form-control input-group-inset input-group-inset-after"
+				disabled=""
+				id="passwordFieldDisabled"
+				type="password"
+				value="my-seekret"
+			/>
 			<div class="input-group-inset-item input-group-inset-item-after">
 				<button class="btn btn-unstyled" disabled="" type="button">
 					<span class="input-password-label">
-						<svg class="lexicon-icon lexicon-icon-view" focusable="false" role="presentation">
+						<svg
+							class="lexicon-icon lexicon-icon-view"
+							focusable="false"
+							role="presentation"
+						>
 							<use href="/images/icons/icons.svg#search" />
 						</svg>
 					</span>
 					<span class="input-text-label">
-						<svg class="lexicon-icon lexicon-icon-view" focusable="false" role="presentation">
+						<svg
+							class="lexicon-icon lexicon-icon-view"
+							focusable="false"
+							role="presentation"
+						>
 							<use href="/images/icons/icons.svg#search" />
 						</svg>
 					</span>
