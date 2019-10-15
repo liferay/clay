@@ -61,7 +61,7 @@ CLayAlert v3 combines Alert, Stripe Alert, and Toast Notifications all in one.
 -   `destroyOnHide` was removed
 -   `style` was renamed to `displayType`
 -   `message` was removed in favor of using `children`
--	Use `stripe` value on `variant` property of `ClayAlert` to get the same result of `ClayStripe` component.
+-   Use `stripe` value on `variant` property of `ClayAlert` to get the same result of `ClayStripe` component.
 
 ### Compositions
 
