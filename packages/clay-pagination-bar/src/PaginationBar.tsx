@@ -25,13 +25,14 @@ type TPaginationBar = React.ForwardRefExoticComponent<
 };
 
 const ClayPaginationBar = React.forwardRef(
-	({children, className, size, ...otherProps}: IProps) => {
+	({children, className, size, ...otherProps}: IProps, ref) => {
 		return (
 			<div
 				className={classNames('pagination-bar', className, {
 					[`pagination-${size}`]: size,
 				})}
 				{...otherProps}
+				ref={ref}
 			>
 				{children}
 			</div>
