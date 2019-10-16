@@ -21,8 +21,7 @@ const spritemap = '/images/icons/icons.svg';
 const minimalManagementToolbarImportsCode = `import {ClayButtonWithIcon} from '@clayui/button';
 import {ClayInput} from '@clayui/form';
 import ClayManagementToolbar from '@clayui/management-toolbar';
-import React from 'react';
-`;
+import React from 'react';`;
 
 const MinimalManagementToolbarCode = `const Component = () => {
 	return (
@@ -103,8 +102,7 @@ const resultsBarImportsCode = `import ClayButton from '@clayui/button';
 import ClayManagementToolbar, {
 	ClayResultsBar,
 } from '@clayui/management-toolbar';
-import React from 'react';
-`;
+import React from 'react';`;
 
 const ResultsBarCode = `const Component = () => (
 		<ClayManagementToolbar>
@@ -337,7 +335,7 @@ const ManagementToolbarCode = `const Component = () => {
 			</ClayManagementToolbar>
 
 			<ClayResultsBar>
-				<ClayResultsBar.Item expand>
+				<ClayResultsBar.Item>
 					<span className="component-text text-truncate-inline">
 						<span className="text-truncate">
 							{'2 results for "'}
