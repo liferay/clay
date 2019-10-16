@@ -18,19 +18,16 @@ const formCode = `const Component = () => {
 	const [active, setActive] = useState(false);
 
 	return (
-        <div className="sheet">
-            <h4 className="sheet-subtitle">Form Example</h4>
-            <ClayForm>
-                <ClayForm.Group className="form-group-sm">
-                    <label htmlFor="basicInput">Name</label>
-                    <ClayInput placeholder="Name" type="text"></ClayInput>
-                </ClayForm.Group>
-                <ClayForm.Group className="form-group-sm">
-                    <label htmlFor="basicInput">Description</label>
-                    <textarea className="form-control" placeholder="Description"></textarea>
-                </ClayForm.Group>
-            </ClayForm>
-        </div>
+        <ClayForm>
+            <ClayForm.Group className="form-group-sm">
+                <label htmlFor="basicInput">Name</label>
+                <ClayInput placeholder="Name" type="text"></ClayInput>
+            </ClayForm.Group>
+            <ClayForm.Group className="form-group-sm">
+                <label htmlFor="basicInput">Description</label>
+                <textarea className="form-control" placeholder="Description"></textarea>
+            </ClayForm.Group>
+        </ClayForm>
 	);
 }
 
@@ -50,50 +47,47 @@ const formValidationCode = `const Component = () => {
 	const [active, setActive] = useState(false);
 
 	return (
-        <div className="sheet">
-            <h4 className="sheet-subtitle">Form Validation Example</h4>
-            <ClayForm>
-                <ClayForm.Group className="has-success">
-                    <label htmlFor="basicInput">Name</label>
-                    <ClayInput placeholder="Name" type="text"></ClayInput>
-                    <ClayForm.FeedbackGroup>
-                        <ClayForm.FeedbackItem>
-                            {'This is a form-feedback-item.'}
-                        </ClayForm.FeedbackItem>
-                        <ClayForm.FeedbackItem>
-                            <ClayForm.FeedbackIndicator spritemap={spritemap} symbol="check-circle-full"/>
-                            {'This is a form-feedback-item with a check feedback indicator.'}
-                        </ClayForm.FeedbackItem>
-                    </ClayForm.FeedbackGroup>
-                </ClayForm.Group>
-                <ClayForm.Group className="has-warning">
-                    <label htmlFor="basicInput">Description</label>
-                    <textarea className="form-control" placeholder="Description"></textarea>
-                    <ClayForm.FeedbackGroup>
-                        <ClayForm.FeedbackItem>
-                            {'This is a form-feedback-item.'}
-                        </ClayForm.FeedbackItem>
-                        <ClayForm.FeedbackItem>
-                            <ClayForm.FeedbackIndicator spritemap={spritemap} symbol="warning-full"/>
-                            {'This is a form-feedback-item with a warning feedback indicator.'}
-                        </ClayForm.FeedbackItem>
-                    </ClayForm.FeedbackGroup>
-                </ClayForm.Group>
-                <ClayForm.Group className="has-error">
-                    <label htmlFor="basicInput">Password</label>
-                    <ClayInput placeholder="Name" type="password"></ClayInput>
-                    <ClayForm.FeedbackGroup>
-                        <ClayForm.FeedbackItem>
-                            {'This is a form-feedback-item.'}
-                        </ClayForm.FeedbackItem>
-                        <ClayForm.FeedbackItem>
-                            <ClayForm.FeedbackIndicator spritemap={spritemap} symbol="exclamation-full"/>
-                            {'This is a form-feedback-item with a error feedback indicator.'}
-                        </ClayForm.FeedbackItem>
-                    </ClayForm.FeedbackGroup>
-                </ClayForm.Group>
-            </ClayForm>
-        </div>
+        <ClayForm>
+            <ClayForm.Group className="has-success">
+                <label htmlFor="basicInput">Name</label>
+                <ClayInput placeholder="Name" type="text"></ClayInput>
+                <ClayForm.FeedbackGroup>
+                    <ClayForm.FeedbackItem>
+                        {'This is a form-feedback-item.'}
+                    </ClayForm.FeedbackItem>
+                    <ClayForm.FeedbackItem>
+                        <ClayForm.FeedbackIndicator spritemap={spritemap} symbol="check-circle-full"/>
+                        {'This is a form-feedback-item with a check feedback indicator.'}
+                    </ClayForm.FeedbackItem>
+                </ClayForm.FeedbackGroup>
+            </ClayForm.Group>
+            <ClayForm.Group className="has-warning">
+                <label htmlFor="basicInput">Description</label>
+                <textarea className="form-control" placeholder="Description"></textarea>
+                <ClayForm.FeedbackGroup>
+                    <ClayForm.FeedbackItem>
+                        {'This is a form-feedback-item.'}
+                    </ClayForm.FeedbackItem>
+                    <ClayForm.FeedbackItem>
+                        <ClayForm.FeedbackIndicator spritemap={spritemap} symbol="warning-full"/>
+                        {'This is a form-feedback-item with a warning feedback indicator.'}
+                    </ClayForm.FeedbackItem>
+                </ClayForm.FeedbackGroup>
+            </ClayForm.Group>
+            <ClayForm.Group className="has-error">
+                <label htmlFor="basicInput">Password</label>
+                <ClayInput placeholder="Name" type="password"></ClayInput>
+                <ClayForm.FeedbackGroup>
+                    <ClayForm.FeedbackItem>
+                        {'This is a form-feedback-item.'}
+                    </ClayForm.FeedbackItem>
+                    <ClayForm.FeedbackItem>
+                        <ClayForm.FeedbackIndicator spritemap={spritemap} symbol="exclamation-full"/>
+                        {'This is a form-feedback-item with a error feedback indicator.'}
+                    </ClayForm.FeedbackItem>
+                </ClayForm.FeedbackGroup>
+            </ClayForm.Group>
+        </ClayForm>
 	);
 }
 
@@ -119,23 +113,20 @@ const formTextCode = `const Component = () => {
 	const [active, setActive] = useState(false);
 
 	return (
-        <div className="sheet">
-            <h4 className="sheet-subtitle">Form Validation Example</h4>
-            <ClayForm>
-                <ClayForm.Group className="has-success">
-                    <label htmlFor="basicInput">Name</label>
-                    <ClayInput placeholder="Name" type="text"></ClayInput>
-                    <ClayForm.FeedbackGroup>
-                        <ClayForm.FeedbackItem>
-                            {'This is a form-feedback-item.'}
-                        </ClayForm.FeedbackItem>
-                        <ClayForm.Text>
-                            {''}
-                        </ClayForm.Text>
-                    </ClayForm.FeedbackGroup>
-                </ClayForm.Group>
-            </ClayForm>
-        </div>
+        <ClayForm>
+            <ClayForm.Group className="has-success">
+                <label htmlFor="basicInput">Name</label>
+                <ClayInput placeholder="Name" type="text"></ClayInput>
+                <ClayForm.FeedbackGroup>
+                    <ClayForm.FeedbackItem>
+                        {'This is a form-feedback-item.'}
+                    </ClayForm.FeedbackItem>
+                    <ClayForm.Text>
+                        {''}
+                    </ClayForm.Text>
+                </ClayForm.FeedbackGroup>
+            </ClayForm.Group>
+        </ClayForm>
 	);
 }
 
