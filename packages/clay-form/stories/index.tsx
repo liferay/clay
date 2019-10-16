@@ -7,8 +7,10 @@
 import {storiesOf} from '@storybook/react';
 import React from 'react';
 
+import ClayForm from '../src/Form';
 import {
 	ClayCheckbox,
+	ClayInput,
 	ClayRadio,
 	ClayRadioGroup,
 	ClaySelect,
@@ -53,6 +55,22 @@ storiesOf('Components|ClayCheckbox', module)
 			</span>
 		</ClayCheckbox>
 	));
+
+storiesOf('Components|ClayForm', module).add('default', () => (
+	<div className="sheet">
+		<h4 className="sheet-subtitle">{'Form Example'}</h4>
+		<ClayForm>
+			<ClayForm.Group className="form-group-sm">
+				<label htmlFor="basicInput">{'Name'}</label>
+				<ClayInput placeholder="Name" type="text" />
+			</ClayForm.Group>
+			<ClayForm.Group className="form-group-sm">
+				<label htmlFor="basicInput">{'Description'}</label>
+				<textarea className="form-control" placeholder="Description" />
+			</ClayForm.Group>
+		</ClayForm>
+	</div>
+));
 
 const RadioGroupWithState = ({inline}: {inline?: boolean}) => {
 	const [value, setValue] = React.useState<string>('one');

@@ -76,15 +76,20 @@ interface IFeedbackIndicatorProps
 const FeedbackIndicator = React.forwardRef<
 	HTMLDivElement,
 	IFeedbackIndicatorProps
->(({className, spritemap, symbol, ...otherProps}, ref) => (
-	<span
-		{...otherProps}
-		className={classNames('form-feedback-indicator', className)}
-		ref={ref}
-	>
-		<ClayIcon spritemap={spritemap} symbol={symbol} />
-	</span>
-));
+>(
+	(
+		{className, spritemap, symbol, ...otherProps}: IFeedbackIndicatorProps,
+		ref
+	) => (
+		<span
+			{...otherProps}
+			className={classNames('form-feedback-indicator', className)}
+			ref={ref}
+		>
+			<ClayIcon spritemap={spritemap} symbol={symbol} />
+		</span>
+	)
+);
 
 const ClayForm: React.FunctionComponent<
 	React.HTMLAttributes<HTMLFormElement>

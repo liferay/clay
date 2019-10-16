@@ -1,0 +1,67 @@
+---
+title: 'Form'
+description: 'Forms obtain user data and transmit it to the system to either store the data, produce an action, or both.'
+packageNpm: '@clayui/form'
+packageVersion: '3.0.0'
+packageStatus: 'Stable'
+sibling: 'docs/components/forms/css-form-group.html'
+---
+
+import {
+	Form,
+	FormValidation,
+	FormText,
+} from '../../../../src/components/clay/Form';
+
+<div class="nav-toc-absolute">
+<div class="nav-toc">
+
+-   [Validation](#validation)
+-   [Group Caption](#group-caption)
+-   [API](#api)
+
+</div>
+</div>
+
+<div class="clay-site-alert alert alert-warning">
+	Take a look at our{' '}
+	<a href="https://storybook-clayui.netlify.com/?path=/story/components-clayform--default">
+		Storybook
+	</a>{' '}
+	for more information about this component.
+</div>
+
+<div class="clay-site-alert alert alert-info">
+	Check the <a href="https://liferay.design/lexicon/">Lexicon</a>{' '}
+	<a href="https://liferay.design/lexicon/core-components/forms/forms/">
+		Forms Pattern
+	</a>{' '}
+	for a more in-depth look at the motivations and proper usage of this
+	component.
+</div>
+
+Use `ClayForm` components for composing forms.
+
+For controlling groups inside forms, use `ClayForm.Group` components like the code below:
+
+<Form />
+
+## Validation
+
+`.has-error`, `.has-success` and `.has-warning` classes are used in `ClayForm.Group` to identifier validation state of the form group items.
+
+Use `ClayForm.FeedbackGroup` and `ClayForm.FeedbackItem` for creating custom feedback messages for Form Groups.
+
+`ClayForm.FeedbackIndicator` is used to apply an Icon on the feedback message, like the following example:
+
+<FormValidation />
+
+## Group Caption
+
+Use `ClayForm.Text` for creating a caption on Form Groups.
+
+<FormText />
+
+## API
+
+<div>[APITable "clay-form/src/Form.tsx"]</div>
