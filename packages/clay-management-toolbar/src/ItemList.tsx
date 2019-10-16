@@ -8,10 +8,16 @@ import classNames from 'classnames';
 import React from 'react';
 
 interface IProps extends React.HTMLAttributes<HTMLUListElement> {
+	/**
+	 * Flag to indicate the Management Toolbar Item List should fit the width of the parent container.
+	 */
 	expand?: boolean;
 }
 
-const ItemList: React.FunctionComponent<IProps> = ({children, expand}) => (
+const ItemList: React.FunctionComponent<IProps> = ({
+	children,
+	expand,
+}: IProps) => (
 	<ul
 		className={classNames('navbar-nav', {
 			'navbar-nav-expand': expand,
