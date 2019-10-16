@@ -23,7 +23,7 @@ interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	modern?: boolean;
 }
 
-export const ClayTabs: React.FunctionComponent<IProps> & {
+const ClayTabs: React.FunctionComponent<IProps> & {
 	Content: typeof Content;
 	TabPane: typeof TabPane;
 	Item: typeof Item;
