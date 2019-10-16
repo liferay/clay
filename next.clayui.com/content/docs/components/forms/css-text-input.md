@@ -12,8 +12,19 @@ description: 'This section demonstrates the different text input types, includin
 -   [Sizes](#sizes)
 -   [Textarea](#textarea)
 -   [Select menu](#select-menu)
--   [Validations](#validations) - [Success](#success) - [Warning](#warning) - [Error](#error)
--   [Groups](#groups) - [Example](#example) - [Sizes](#sizes) - [Checkboxes and radios](#checkboxes-and-radios) - [Button addons](#button-addons) - [Multiple addons](#multiple-addons) - [Separated addons](#separated-addons) - [Mixed addons](#mixed-addons) - [Inset](#inset)
+-   [Validations](#validations)
+    -   [Success](#success)
+    -   [Warning](#warning)
+    -   [Error](#error)
+-   [Groups](#groups)
+-   [Example](#example)
+-   [Sizes](#sizes)
+-   [Checkboxes and radios](#checkboxes-and-radios)
+-   [Button addons](#button-addons)
+-   [Multiple addons](#multiple-addons)
+-   [Separated addons](#separated-addons)
+-   [Mixed addons](#mixed-addons)
+-   [Inset](#inset)
 
 </div>
 </div>
