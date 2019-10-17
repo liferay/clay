@@ -55,7 +55,7 @@ const DEFAULT_ARIA_LABELS = {
 	selectionIs: 'Color selection is {0}',
 };
 
-interface IProps {
+interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	/**
 	 * Labels for the aria attributes
 	 */
@@ -126,6 +126,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 	disabled,
 	label,
 	name,
+	onBlur = () => {},
 	onColorsChange,
 	onValueChange = () => {},
 	showHex = true,
@@ -133,6 +134,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 	title,
 	useNative = false,
 	value = 'FFFFFF',
+	...otherProps
 }: IProps) => {
 	const triggerElementRef = useRef<HTMLDivElement>(null);
 	const dropdownContainerRef = useRef<HTMLDivElement>(null);
@@ -230,6 +232,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 					{showHex && (
 						<ClayInput.GroupItem append>
 							<ClayInput
+								{...otherProps}
 								aria-label={sub(ariaLabels.selectionIs, [
 									value,
 								])}
@@ -246,6 +249,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 
 									onValueChange(hexString);
 									setHexInputValue(hexString);
+									onBlur(event);
 								}}
 								onChange={event => {
 									const newHexValue = event.target.value;
