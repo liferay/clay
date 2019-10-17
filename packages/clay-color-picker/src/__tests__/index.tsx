@@ -40,6 +40,22 @@ describe('Rendering', () => {
 
 		expect(document.body).toMatchSnapshot();
 	});
+
+	it('disabled state', () => {
+		render(
+			<ClayColorPicker
+				disabled
+				label="Default Colors"
+				name="colorPicker1"
+				onValueChange={() => {}}
+				spritemap="/test/path"
+				title="Default"
+				value="FFF"
+			/>
+		);
+
+		expect(document.body).toMatchSnapshot();
+	});
 });
 
 describe('Interactions', () => {

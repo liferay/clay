@@ -44,6 +44,7 @@ const ClayColorPickerWithCustomColors = (props: any) => {
 storiesOf('Components|ClayColorPicker', module)
 	.add('default', () => (
 		<ClayColorPickerWithState
+			disabled={boolean('Disabled', false)}
 			label={text('Label', 'Default Colors')}
 			name="colorPicker1"
 			showHex={boolean('Show Hex', true)}
@@ -52,6 +53,7 @@ storiesOf('Components|ClayColorPicker', module)
 	))
 	.add('custom colors', () => (
 		<ClayColorPickerWithCustomColors
+			disabled={boolean('Disabled', false)}
 			label={text('Label', 'Custom Colors')}
 			name="colorPicker2"
 			showHex={boolean('Show Hex', true)}
@@ -60,6 +62,7 @@ storiesOf('Components|ClayColorPicker', module)
 	))
 	.add('native', () => (
 		<ClayColorPickerWithState
+			disabled={boolean('Disabled', false)}
 			label={text('Label', 'Default Colors')}
 			name="colorPicker3"
 			showHex={boolean('Show Hex', true)}

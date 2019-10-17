@@ -70,6 +70,11 @@ interface IProps {
 	colors?: Array<string>;
 
 	/**
+	 * Flag for adding ColorPicker in disabled state
+	 */
+	disabled?: boolean;
+
+	/**
 	 * The label describing the collection of colors in the menu
 	 */
 	label?: string;
@@ -118,6 +123,7 @@ interface IProps {
 const ClayColorPicker: React.FunctionComponent<IProps> = ({
 	ariaLabels = DEFAULT_ARIA_LABELS,
 	colors,
+	disabled,
 	label,
 	name,
 	onColorsChange,
@@ -167,6 +173,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 							<Splotch
 								aria-label={ariaLabels.selectColor}
 								className="dropdown-toggle"
+								disabled={disabled}
 								onClick={() =>
 									useNative && valueInputRef.current
 										? valueInputRef.current.click()
@@ -226,6 +233,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 								aria-label={sub(ariaLabels.selectionIs, [
 									value,
 								])}
+								disabled={disabled}
 								insetBefore
 								onBlur={event => {
 									const newColor = tinycolor(
