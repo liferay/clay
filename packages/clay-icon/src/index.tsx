@@ -43,6 +43,7 @@ const ClayIcon = React.forwardRef<SVGSVGElement, IProps>(
 					`lexicon-icon lexicon-icon-${symbol}`,
 					className
 				)}
+				key={symbol}
 				ref={ref}
 				role="presentation"
 			>
