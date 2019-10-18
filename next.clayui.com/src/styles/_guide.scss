@@ -18,20 +18,26 @@
 
 	.clay-ullist {
 		ul {
-			margin-left: 1.45rem;
+			margin-left: 1.25rem;
 			margin-right: 0;
 			margin-top: 0;
 			padding-bottom: 0;
 			padding-left: 0;
 			padding-right: 0;
 			padding-top: 0;
-			margin-bottom: 1.45rem;
+			margin-bottom: 1.25rem;
 			list-style-position: outside;
 			list-style-image: none;
 		}
 
 		li {
 			margin-bottom: calc(1.45rem / 2);
+		}
+
+		&.clay-ullist-margin-sm {
+			li {
+				margin-bottom: 0.15rem;
+			}
 		}
 	}
 
