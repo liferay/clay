@@ -29,16 +29,15 @@ interface ICardDescriptionProps
 	href?: string;
 
 	/**
+	 * Define the name of the container element.
+	 */
+	tag?: 'p' | 'span' | 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+
+	/**
 	 * Truncates the text inside a description.
 	 */
 	truncate?: boolean;
 }
-
-const CARD_TYPE_ELEMENTS = {
-	subtitle: 'p',
-	text: 'p',
-	title: 'h3',
-} as const;
 
 const ClayCardDescription: React.FunctionComponent<ICardDescriptionProps> = ({
 	children,
@@ -46,14 +45,14 @@ const ClayCardDescription: React.FunctionComponent<ICardDescriptionProps> = ({
 	disabled,
 	displayType,
 	href,
+	tag: Tag = 'p',
 	truncate = true,
 	...otherProps
 }: ICardDescriptionProps) => {
-	const OuterTag = CARD_TYPE_ELEMENTS[displayType];
 	const InnerTag = href && !disabled ? 'a' : 'span';
 
 	return (
-		<OuterTag
+		<Tag
 			className={classNames(className, `card-${displayType}`)}
 			title={children ? children.toString() : undefined}
 			{...otherProps}
@@ -67,7 +66,7 @@ const ClayCardDescription: React.FunctionComponent<ICardDescriptionProps> = ({
 			) : (
 				children
 			)}
-		</OuterTag>
+		</Tag>
 	);
 };
 
