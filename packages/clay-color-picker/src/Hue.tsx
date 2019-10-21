@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useLayoutEffect, useRef} from 'react';
 
 import {useMousePosition} from './hooks';
 import {hueToX, xToHue} from './util';
@@ -40,7 +40,7 @@ const ClayColorPickerHue: React.FunctionComponent<IProps> = ({
 		window.removeEventListener('mouseup', removeListeners);
 	};
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		if (containerRef.current && selectorActive.current) {
 			onChange(xToHue(x, containerRef.current));
 		}
