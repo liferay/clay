@@ -47,6 +47,11 @@ interface IDropDownContentProps {
 
 interface IProps extends IDropDownContentProps {
 	/**
+	 * Default position of menu element. Values come from `metal-position`.
+	 */
+	alignmentPosition?: number;
+
+	/**
 	 * Informational text that appears at the end or above the `footerContent` prop.
 	 */
 	caption?: string;
@@ -246,6 +251,7 @@ const DropDownContent: React.FunctionComponent<IDropDownContentProps> = ({
 );
 
 export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
+	alignmentPosition,
 	caption,
 	className,
 	containerElement,
@@ -268,6 +274,7 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 	return (
 		<ClayDropDown
 			active={active}
+			alignmentPosition={alignmentPosition}
 			className={className}
 			containerElement={containerElement}
 			hasLeftSymbols={hasLeftSymbols}
