@@ -12,7 +12,7 @@
 	{@param? _handleSearch: any}
 	{@param? _handleTriggerKeyDown: any}
 	{@param? button: ?}
-	{@param? caption: string}
+	{@param? caption: html|string}
 	{@param? contentRenderer: string}
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
@@ -186,7 +186,7 @@
 	{@param? _handleItemKeyDown: any}
 	{@param? _handleSearch: any}
 	{@param? button: ?}
-	{@param? caption: string}
+	{@param? caption: html|string}
 	{@param? contentRenderer: string}
 	{@param? expanded: bool}
 	{@param? helpText: string}
@@ -241,7 +241,7 @@
 			{/let}
 
 			{let $captionContent kind="html"}
-				{if $caption}
+				{if $caption and isNonnull($caption)}
 					<div class="dropdown-caption">{$caption}</div>
 				{/if}
 			{/let}
