@@ -21,7 +21,7 @@ title: 'Base Navbar'
 </div>
 
 <div class="clay-site-alert alert alert-warning">
-    Bootstrap 4 doesn't support Dropdown Menu's with Popper.js positioning inside Navbars. They align them manually via CSS classes. See <a href="https://next.clayui.com/docs/components/dropdown.html#alignment">Dropdown Alignment</a>.
+    Bootstrap 4 doesn't support Dropdown Menu's with Popper.js positioning inside Navbars. They align them manually via CSS classes. See <a href="/docs/components/dropdown.html#alignment">Dropdown Alignment</a>.
 </div>
 
 ## Use Cases

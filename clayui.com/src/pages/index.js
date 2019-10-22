@@ -149,7 +149,7 @@ export default () => {
 							<div className="col-md-12">
 								<a
 									className="btn btn-warning-borderless btn-borderless mr-3"
-									href="https://clayui.com"
+									href="https://v2.clayui.com"
 									rel="noopener noreferrer"
 									target="_blank"
 								>
@@ -251,7 +251,7 @@ export default () => {
 										</Link>
 										<a
 											className="btn btn-brand-color btn-link"
-											href="https://clayui.com"
+											href="https://v2.clayui.com"
 											rel="noopener noreferrer"
 											target="_blank"
 										>

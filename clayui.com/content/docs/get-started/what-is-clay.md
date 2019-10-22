@@ -37,7 +37,7 @@ Because Clay is modeled after [Lexicon](https://liferay.design/lexicon/)'s exper
 
 #### Customizable 100%
 
-Clay's powerful [SCSS foundation](https://next.clayui.com/docs/css/scss.html) allows you to create your own customizations easily.
+Clay's powerful [SCSS foundation](/docs/css/scss.html) allows you to create your own customizations easily.
 
 #### React
 
