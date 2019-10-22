@@ -2,7 +2,7 @@
 
 Clay is Liferay's web implementation of [Lexicon Experience Language](https://liferay.design/lexicon). Built with Bootstrap as a foundation, it's comprised of HTML, CSS, and JS.
 
-**🚨This Branch contains the Beta version of Clay v3, if you are looking for the components in Metal.js visit the [2.x branch](https://github.com/liferay/clay/tree/2.x)**
+**🚨This Branch contains the version of Clay v3, if you are looking for the components in Metal.js visit the [2.x branch](https://github.com/liferay/clay/tree/2.x)**
 
 ## Packages
 
@@ -16,9 +16,9 @@ The pillar to give colors and structure to Clay, where is the css and examples o
 
 All components that follow clay-css marking and Lexicon use cases, developed on [React.js](http://reactjs.org)
 
-### [Next.clayui.com](./next.clayui.com)
+### [Clayui.com](./clayui.com)
 
-Contains the source code and documentation powering [next.clayui.com](https://next.clayui.com/).
+Contains the source code and documentation powering [clayui.com](https://clayui.com/).
 
 ## Browser support
 
@@ -50,9 +50,9 @@ See the [Getting Started](https://next.clayui.com/docs/get-started/introduction.
 
 ## Migration Guides
 
-Do you already have the Clay v2 components implemented in your project? These handy guides will help you perform the migration from Clay v2 to v3.
+Do you already have the Clay v2 components implemented in your project? These handy guides will help you perform the migration from [Clay v2](https://v2.clayui.com) to [v3](https://clayui.com).
 
--   [Migrate the Clay components from v2 to v3](https://next.clayui.com/docs/migration/migrate-the-clay-components-from-v2-to-v3.html)
+-   [Migrate the Clay components from v2 to v3](https://clayui.com/docs/migration/migrate-the-clay-components-from-v2-to-v3.html)
 
 ## Contributing
 
@@ -104,14 +104,14 @@ yarn workspace @clayui/css run build && yarn storybook
 yarn test
 ```
 
-#### next.clayui.com
+#### clayui.com
 
 To contribute to the documentation and the site in general, you can try to run locally to test your changes:
 
 1. Move to the site folder
 
 ```
-cd next.clayui.com
+cd clayui.com
 ```
 
 2. Install dependencies:
