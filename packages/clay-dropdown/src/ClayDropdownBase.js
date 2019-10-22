@@ -521,9 +521,9 @@ ClayDropdownBase.STATE = {
 	 * @default undefined
 	 * @instance
 	 * @memberof ClayDropdownBase
-	 * @type {?(string|undefined)}
+	 * @type {?(html|string|undefined)}
 	 */
-	caption: Config.string(),
+	caption: Config.any(),
 
 	/**
 	 * Content Renderer name of items.

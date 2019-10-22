@@ -1122,6 +1122,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
         </span>Favorite 2</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -1183,6 +1184,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
       <a class=" dropdown-item" href="#2">Add Content 2</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -1300,6 +1302,7 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
       <a class=" dropdown-item" href="#fav2">Favorite 2</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 

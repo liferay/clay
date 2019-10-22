@@ -91,9 +91,9 @@ ClayActionsDropdown.STATE = {
 	 * @default undefined
 	 * @instance
 	 * @memberof ClayActionsDropdown
-	 * @type {?(string|undefined)}
+	 * @type {?(html|string|undefined)}
 	 */
-	caption: Config.string(),
+	caption: Config.any(),
 
 	/**
 	 * Data to add to the element.
