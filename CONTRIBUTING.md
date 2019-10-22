@@ -31,7 +31,7 @@ The Clay repository follows the monorepo approach; the pillars of Clay, all the 
 
 -   [clay-css](https://github.com/liferay/clay/blob/master/packages/clay-css) - Provides the colors and structure for Clay. It contains the CSS and example HTML markup for each component.
 -   [clay-components](https://github.com/liferay/clay/blob/master/packages) - The components that follow clay-css markup and Lexicon use cases. They are developed on React.js in version 3.x.
--   [next.clayui.com](https://github.com/liferay/clay/blob/master/next.clayui.com) - Contains the source code and documentation for next.clayui.com.
+-   [clayui.com](https://github.com/liferay/clay/blob/master/clayui.com) - Contains the source code and documentation for clayui.com.
 
 ## How Can I Contribute?
 
@@ -127,7 +127,7 @@ The header is mandatory and the scope of the header is optional.
 
 #### Scope
 
-The scope could be anything specifying place of the commit change. For example `feat(@clayui/dropdown)`, `feat(@clayui/css)`, `fix(next.clayui.com)`, `docs(Badge)`, `fix(useCache)`, etc...
+The scope could be anything specifying place of the commit change. For example `feat(@clayui/dropdown)`, `feat(@clayui/css)`, `fix(clayui.com)`, `docs(Badge)`, `fix(useCache)`, etc...
 
 ### JavaScript Style Guide
 
