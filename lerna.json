@@ -1,6 +1,13 @@
 {
 	"lerna": "3.4.0",
-	"version": "3.0.0-alpha.1",
+	"version": "independent",
 	"npmClient": "yarn",
-	"useWorkspaces": true
+	"useWorkspaces": true,
+	"command": {
+		"publish": {
+			"ignoreChanges": ["**/stories/*", "**/__tests__/**", "**/*.md"],
+			"message": "chore(release): publish updated packages"
+		}
+	},
+	"packages": ["packages/*"]
 }
