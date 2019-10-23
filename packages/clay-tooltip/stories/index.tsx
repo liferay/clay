@@ -64,6 +64,18 @@ storiesOf('Components|ClayTooltip', module)
 					>
 						{'Custom Delay'}
 					</button>
+
+					<div
+						data-tooltip-align="bottom"
+						style={{
+							backgroundColor: '#F6F8FA',
+							border: '1px solid #D1D5DA',
+							padding: 8,
+						}}
+						title="I'm on the parent element"
+					>
+						<button>{'nested'}</button>
+					</div>
 				</div>
 			</ClayTooltipProvider>
 		</div>
