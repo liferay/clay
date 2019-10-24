@@ -25,7 +25,7 @@ export default ({data, location}) => {
 	});
 
 	return (
-		<div className="blog">
+		<div className="docs blog">
 			<Helmet>
 				<title>{title}</title>
 				<meta content={excerpt} name="description" />
@@ -42,42 +42,44 @@ export default ({data, location}) => {
 						<Sidebar data={list} location={location} />
 						<div className="col-xl sidebar-offset">
 							<LayoutNav />
-							<header>
+							<div className="clay-blog-content">
+								<header>
+									<div className="clay-site-container container-fluid">
+										<h1 className="blog-title">
+											{frontmatter.title}
+										</h1>
+										<span className="blog-date">
+											{markdownRemark.fields.date}
+											{' by '}
+											{toCommaSeparatedList(
+												frontmatter.author,
+												author => (
+													<a
+														href={
+															author.frontmatter.url
+														}
+														key={
+															author.frontmatter.name
+														}
+													>
+														{author.frontmatter.name}
+													</a>
+												)
+											)}
+										</span>
+									</div>
+								</header>
 								<div className="clay-site-container container-fluid">
-									<h1 className="blog-title">
-										{frontmatter.title}
-									</h1>
-									<span className="blog-date">
-										{markdownRemark.fields.date}
-										{' by '}
-										{toCommaSeparatedList(
-											frontmatter.author,
-											author => (
-												<a
-													href={
-														author.frontmatter.url
-													}
-													key={
-														author.frontmatter.name
-													}
-												>
-													{author.frontmatter.name}
-												</a>
-											)
-										)}
-									</span>
-								</div>
-							</header>
-							<div className="clay-site-container container-fluid">
-								<div className="row">
-									<div className="col-md-12">
-										<article>
-											<div
-												dangerouslySetInnerHTML={{
-													__html: html,
-												}}
-											/>
-										</article>
+									<div className="row">
+										<div className="col-md-12">
+											<article>
+												<div
+													dangerouslySetInnerHTML={{
+														__html: html,
+													}}
+												/>
+											</article>
+										</div>
 									</div>
 								</div>
 							</div>
