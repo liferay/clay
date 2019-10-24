@@ -56,13 +56,18 @@ export default ({data, location}) => {
 												author => (
 													<a
 														href={
-															author.frontmatter.url
+															author.frontmatter
+																.url
 														}
 														key={
-															author.frontmatter.name
+															author.frontmatter
+																.name
 														}
 													>
-														{author.frontmatter.name}
+														{
+															author.frontmatter
+																.name
+														}
 													</a>
 												)
 											)}
