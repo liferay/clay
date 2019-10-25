@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {FetchPolicy, NetworkStatus} from '@clayui/data-provider/src/types';
 import {useResource} from '@clayui/data-provider';
+import {FetchPolicy, NetworkStatus} from '@clayui/data-provider/src/types';
 import ClayDropDown from '@clayui/drop-down';
 import {FocusScope, useDebounce} from '@clayui/shared';
 import {storiesOf} from '@storybook/react';

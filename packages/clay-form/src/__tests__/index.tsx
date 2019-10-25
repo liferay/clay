@@ -5,8 +5,8 @@
  */
 
 import ClayForm, {ClayInput} from '..';
-import * as TestRenderer from 'react-test-renderer';
 import * as React from 'react';
+import * as TestRenderer from 'react-test-renderer';
 
 describe('ClayForm', () => {
 	it('renders', () => {

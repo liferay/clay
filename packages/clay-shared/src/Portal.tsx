@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {createPortal} from 'react-dom';
 import React, {createContext, useContext, useEffect, useRef} from 'react';
+import {createPortal} from 'react-dom';
 
 const ClayPortalContext = createContext<React.RefObject<Element | null> | null>(
 	null

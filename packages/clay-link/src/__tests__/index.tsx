@@ -5,8 +5,8 @@
  */
 
 import ClayLink, {ClayLinkContext} from '..';
-import * as TestRenderer from 'react-test-renderer';
 import React from 'react';
+import * as TestRenderer from 'react-test-renderer';
 
 describe('ClayLink', () => {
 	it('renders', () => {

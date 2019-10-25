@@ -5,8 +5,8 @@
  */
 
 import ClayButton, {ClayButtonWithIcon} from '..';
-import * as TestRenderer from 'react-test-renderer';
 import React from 'react';
+import * as TestRenderer from 'react-test-renderer';
 
 describe('ClayButton', () => {
 	it('renders', () => {

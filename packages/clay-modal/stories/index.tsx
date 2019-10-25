@@ -12,8 +12,8 @@ import {select, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React, {useContext, useState} from 'react';
 
-import {Size, Status} from '../src/types';
 import ClayModal, {ClayModalProvider, Context, useModal} from '../src';
+import {Size, Status} from '../src/types';
 
 const MyApp: React.FunctionComponent<any> = () => {
 	const [state, dispatch] = useContext(Context);

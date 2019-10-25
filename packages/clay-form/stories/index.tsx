@@ -7,7 +7,6 @@
 import {storiesOf} from '@storybook/react';
 import React from 'react';
 
-import ClayForm from '../src/Form';
 import {
 	ClayCheckbox,
 	ClayInput,
@@ -16,6 +15,7 @@ import {
 	ClaySelect,
 	ClaySelectWithOption,
 } from '../src';
+import ClayForm from '../src/Form';
 
 import '@clayui/css/lib/css/atlas.css';
 import {boolean, text} from '@storybook/addon-knobs';
