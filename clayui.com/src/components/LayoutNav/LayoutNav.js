@@ -16,10 +16,10 @@ export default () => (
 				<Search placeholder="Search..." />
 			</div>
 			<div className="autofit-col">
-				<ul className="navbar-nav ml-auto">
+				<ul className="ml-auto navbar-nav">
 					<li className="nav-item">
 						<Link
-							className="nav-link ml-3"
+							className="ml-3 nav-link"
 							to="/docs/get-started/what-is-clay.html"
 						>
 							{'Docs'}
@@ -42,7 +42,7 @@ export default () => (
 					</li>
 					<li className="nav-item">
 						<a
-							className="nav-link ml-3"
+							className="ml-3 nav-link"
 							href="https://github.com/liferay/clay"
 							rel="noopener noreferrer"
 							target="_blank"

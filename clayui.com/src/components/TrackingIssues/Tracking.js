@@ -22,7 +22,7 @@ const Tracking = ({query}) => {
 				<thead>
 					<tr>
 						<th>{'ID'}</th>
-						<th className="table-cell-minw-300 table-cell-expand">
+						<th className="table-cell-expand table-cell-minw-300">
 							{'Title'}
 						</th>
 						<th className="table-cell-expand-small table-cell-ws-nowrap">
@@ -63,7 +63,7 @@ const TableItem = ({comments, date, id, title, url}) => {
 	return (
 		<tr>
 			<td>{id}</td>
-			<td className="table-cell-minw-300 table-cell-expand">
+			<td className="table-cell-expand table-cell-minw-300">
 				<div className="table-title">
 					<a
 						className="text-truncate-inline"

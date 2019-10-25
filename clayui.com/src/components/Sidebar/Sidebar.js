@@ -29,7 +29,7 @@ const SideNavScroll = props => {
 
 	return (
 		<div
-			className="sidebar sidebar-clay-site sidenav-menu d-flex flex-column p-3"
+			className="d-flex flex-column p-3 sidebar sidebar-clay-site sidenav-menu"
 			onScroll={onScroll}
 			ref={SideNavRef}
 		>
@@ -41,32 +41,32 @@ const SideNavScroll = props => {
 export default props => (
 	<>
 		<nav
-			className="sidebar-toggler-content sidenav-sticky sidenav-menu-slider"
+			className="sidebar-toggler-content sidenav-menu-slider sidenav-sticky"
 			id="clay-sidebar"
 			ref={SidebarRef}
 		>
 			<SideNavScroll>
-				<div className="sidebar-header d-flex justify-content-between align-items-center p-0">
+				<div className="align-items-center d-flex justify-content-between p-0 sidebar-header">
 					<Link
-						className="sidebar-logo text-reset text-decoration-none d-inline-block p-2"
+						className="d-inline-block p-2 sidebar-logo text-decoration-none text-reset"
 						to="/"
 					>
 						<img
 							alt="Clay"
-							className="sidebar-logo-image align-middle"
+							className="align-middle sidebar-logo-image"
 							src="/images/clay_logo_w.png"
 						/>
-						<span className="sidebar-logo-title align-middle h3 font-weight-700 ml-2">
+						<span className="align-middle font-weight-700 h3 ml-2 sidebar-logo-title">
 							{'Clay'}
 						</span>
 					</Link>
 
-					<div className="sidebar-icon-links d-flex align-items-center">
+					<div className="align-items-center d-flex sidebar-icon-links">
 						<button
 							aria-controls="navbarSupportedContent"
 							aria-expanded="false"
 							aria-label="Toggle navigation"
-							className="btn sidebar-toggler mx-2 px-2 py-1"
+							className="btn mx-2 px-2 py-1 sidebar-toggler"
 							data-target="#navbarSupportedContent"
 							data-toggle="collapse"
 							onClick={onClick}
@@ -87,7 +87,7 @@ export default props => (
 						</button>
 					</div>
 				</div>
-				<div className="sidebar-body p-0">
+				<div className="p-0 sidebar-body">
 					<div className="mt-3">
 						<Navigation
 							location={props.location}

@@ -5,8 +5,8 @@
  */
 
 import {Link} from 'gatsby';
-import Helmet from 'react-helmet';
 import React from 'react';
+import Helmet from 'react-helmet';
 
 /**
  * @return {React.Component}
@@ -17,6 +17,24 @@ export default () => {
 
 	return (
 		<div className="home">
+			<div
+				className="alert alert-dismissible alert-fluid alert-warning"
+				role="alert"
+			>
+				<div className="container">
+					{
+						'This site is for version 3.x. If you are looking for version 2.x documentation, it has been moved to '
+					}
+					<a
+						href="https://v2.clayui.com"
+						rel="noopener noreferrer"
+						target="_blank"
+					>
+						{'v2.clayui.com.'}
+					</a>
+				</div>
+			</div>
+
 			<Helmet>
 				<title>{'Clay'}</title>
 				<meta content={description} name="description" />
@@ -28,7 +46,7 @@ export default () => {
 				<header className="header">
 					<div className="container-fluid">
 						<div className="row">
-							<div className="intro text-left col">
+							<div className="col intro text-left">
 								<div className="container-fluid container-fluid-max-lg">
 									<Link className="brand" to="/">
 										<img
@@ -36,7 +54,7 @@ export default () => {
 											className="logo"
 											src="/images/home/clay_logo.svg"
 										/>
-										<span className="title align-middle">
+										<span className="align-middle title">
 											{'Clay'}
 										</span>
 									</Link>
@@ -46,7 +64,7 @@ export default () => {
 										}
 									</h2>
 									<div className="navbar-nav-scroll">
-										<ul className="navbar-nav ml-auto">
+										<ul className="ml-auto navbar-nav">
 											<li className="nav-item">
 												<Link
 													className="nav-link-intro"
@@ -125,11 +143,11 @@ export default () => {
 					</div>
 				</header>
 
-				<section className="warning hr" id="warning">
-					<div className="container-fluid container-fluid-max-lg text-center spacing">
+				<section className="hr warning" id="warning">
+					<div className="container-fluid container-fluid-max-lg spacing text-center">
 						<div className="row">
 							<div className="col-md-12">
-								<h1 className="title-section orange">
+								<h1 className="orange title-section">
 									<svg className="lexicon-icon lexicon-icon-megaphone-full">
 										<use xlinkHref="/images/icons/icons.svg#megaphone-full" />
 									</svg>
@@ -148,7 +166,7 @@ export default () => {
 						<div className="row">
 							<div className="col-md-12">
 								<a
-									className="btn btn-warning-borderless btn-borderless mr-3"
+									className="btn btn-borderless btn-warning-borderless mr-3"
 									href="https://v2.clayui.com"
 									rel="noopener noreferrer"
 									target="_blank"
@@ -167,11 +185,11 @@ export default () => {
 				</section>
 
 				<section className="components hr" id="components">
-					<div className="container-fluid container-fluid-max-lg text-center spacing">
+					<div className="container-fluid container-fluid-max-lg spacing text-center">
 						<div className="row">
 							<div className="col-md-12">
 								<img alt="" src="/images/react_logo.svg" />
-								<h1 className="title-section mb-2">
+								<h1 className="mb-2 title-section">
 									{'Clay Components'}
 								</h1>
 								<h2 className="version-section">{'v3.0.0'}</h2>
@@ -189,7 +207,7 @@ export default () => {
 						<div className="row">
 							<div className="col-md-12">
 								<Link
-									className="btn btn-warning-borderless btn-borderless mr-3"
+									className="btn btn-borderless btn-warning-borderless mr-3"
 									to="/docs/components/alerts.html"
 								>
 									{'Documentation'}
@@ -201,7 +219,7 @@ export default () => {
 									target="_blank"
 								>
 									{'Storybook'}
-									<span className="inline-item inline-item-after fs-12">
+									<span className="fs-12 inline-item inline-item-after">
 										<svg
 											className="lexicon-icon lexicon-icon-angle-right"
 											focusable="false"
@@ -217,7 +235,7 @@ export default () => {
 				</section>
 
 				<section className="css hr" id="css">
-					<div className="container-fluid container-fluid-max-lg text-left spacing">
+					<div className="container-fluid container-fluid-max-lg spacing text-left">
 						<div className="row">
 							<div className="col-md-5">
 								<img
@@ -244,7 +262,7 @@ export default () => {
 								<div className="row">
 									<div className="col-md-12">
 										<Link
-											className="btn btn-warning-borderless btn-borderless mr-3"
+											className="btn btn-borderless btn-warning-borderless mr-3"
 											to="/docs/components/alerts.html"
 										>
 											{'Documentation'}
@@ -256,7 +274,7 @@ export default () => {
 											target="_blank"
 										>
 											{'View Documentation v2'}
-											<span className="inline-item inline-item-after fs-12">
+											<span className="fs-12 inline-item inline-item-after">
 												<svg
 													className="lexicon-icon lexicon-icon-angle-right"
 													focusable="false"
@@ -299,11 +317,11 @@ export default () => {
 				<section className="link-blocks text-center">
 					<div className="container-fluid container-fluid-max-lg">
 						<div className="row">
-							<div className="body ml-auto col-md-9 mr-auto">
+							<div className="body col-md-9 ml-auto mr-auto">
 								<h2 className="title-section">
 									{'A web implementation of Lexicon'}
 								</h2>
-								<p className="subtitle-section pb-5">
+								<p className="pb-5 subtitle-section">
 									{`There's always been a distinction between Lexicon as a design system, and Lexicon as a web implementation. Naming them like this didn't help with the distinction, so `}
 									<b>
 										{
@@ -315,7 +333,7 @@ export default () => {
 							</div>
 						</div>
 						<div className="row">
-							<div className="col-md-5 ml-auto mb-4">
+							<div className="col-md-5 mb-4 ml-auto">
 								<div className="card h-100">
 									<div className="card-body mx-5">
 										<img
@@ -339,7 +357,7 @@ export default () => {
 									</div>
 								</div>
 							</div>
-							<div className="col-md-5 mr-auto mb-4">
+							<div className="col-md-5 mb-4 mr-auto">
 								<div className="card h-100">
 									<div className="card-body mx-5">
 										<img
@@ -370,7 +388,7 @@ export default () => {
 				<div className="footer">
 					<div className="container-fluid container-fluid-max-lg">
 						<div className="row">
-							<div className="col-lg text-center text-lg-left mb-4 mb-lg-0">
+							<div className="col-lg mb-4 mb-lg-0 text-center text-lg-left">
 								<a
 									className="font-weight-bold"
 									href="https://github.com/liferay/clay/graphs/contributors"
