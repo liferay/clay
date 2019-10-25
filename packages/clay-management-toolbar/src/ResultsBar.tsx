@@ -15,7 +15,7 @@ const ClayResultsBar: React.FunctionComponent<
 } = ({children, ...otherProps}) => (
 	<nav
 		{...otherProps}
-		className="tbar tbar-inline-xs-down subnav-tbar subnav-tbar-primary"
+		className="subnav-tbar subnav-tbar-primary tbar tbar-inline-xs-down"
 	>
 		<div className="container-fluid container-fluid-max-xl">
 			<ul className="tbar-nav tbar-nav-wrap">{children}</ul>

@@ -9,8 +9,8 @@
 import ClayModal, {ClayModalProvider, Context, useModal} from '..';
 import Button from '@clayui/button';
 import {act, cleanup, fireEvent, render} from '@testing-library/react';
-import ReactDOM from 'react-dom';
 import React, {useContext, useEffect, useState} from 'react';
+import ReactDOM from 'react-dom';
 
 const spritemap = 'icons.svg';
 

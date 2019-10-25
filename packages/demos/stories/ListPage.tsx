@@ -273,7 +273,7 @@ export default () => {
 									spritemap={spritemap}
 									trigger={
 										<ClayButton
-											className="nav-link-monospaced nav-link"
+											className="nav-link nav-link-monospaced"
 											displayType="unstyled"
 										>
 											<ClayIcon

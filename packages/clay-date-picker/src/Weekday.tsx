@@ -11,7 +11,7 @@ interface IProps {
 }
 
 const ClayDatePickerWeekday: FunctionComponent<IProps> = ({weekday}) => (
-	<div className="date-picker-day date-picker-calendar-item">
+	<div className="date-picker-calendar-item date-picker-day">
 		<abbr>{weekday}</abbr>
 	</div>
 );

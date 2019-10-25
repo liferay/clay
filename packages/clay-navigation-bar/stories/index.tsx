@@ -45,13 +45,13 @@ storiesOf('Components|ClayNavigationBar', module).add('default', () => {
 			</ClayNavigationBar.Item>
 
 			<ClayNavigationBar.Item active={boolean('Active 3: ', false)}>
-				<a className="nav-link link-secondary" href="#1">
+				<a className="link-secondary nav-link" href="#1">
 					<span className="navbar-text-truncate">{`Item 3`}</span>
 				</a>
 			</ClayNavigationBar.Item>
 			<ClayNavigationBar.Item active={boolean('Active 4: ', false)}>
 				<button
-					className="nav-link btn btn-unstyled btn-block btn-sm"
+					className="btn btn-block btn-sm btn-unstyled nav-link"
 					onClick={() => setTriggerName('Item 4')}
 					type="button"
 				>
