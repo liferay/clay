@@ -147,7 +147,7 @@ exports[`BasicRendering renders by default 1`] = `
                 </select>
               </div>
               <div
-                class="date-picker-nav-item date-picker-nav-item-expand date-picker-nav-controls"
+                class="date-picker-nav-controls date-picker-nav-item date-picker-nav-item-expand"
               >
                 <button
                   aria-label="Select the previous month"
@@ -201,49 +201,49 @@ exports[`BasicRendering renders by default 1`] = `
               class="date-picker-days-row date-picker-row"
             >
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   S
                 </abbr>
               </div>
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   M
                 </abbr>
               </div>
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   T
                 </abbr>
               </div>
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   W
                 </abbr>
               </div>
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   T
                 </abbr>
               </div>
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   F
                 </abbr>
               </div>
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   S
@@ -675,7 +675,7 @@ exports[`BasicRendering renders date picker with dropdown open 1`] = `
                 </select>
               </div>
               <div
-                class="date-picker-nav-item date-picker-nav-item-expand date-picker-nav-controls"
+                class="date-picker-nav-controls date-picker-nav-item date-picker-nav-item-expand"
               >
                 <button
                   aria-label="Select the previous month"
@@ -729,49 +729,49 @@ exports[`BasicRendering renders date picker with dropdown open 1`] = `
               class="date-picker-days-row date-picker-row"
             >
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   S
                 </abbr>
               </div>
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   M
                 </abbr>
               </div>
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   T
                 </abbr>
               </div>
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   W
                 </abbr>
               </div>
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   T
                 </abbr>
               </div>
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   F
                 </abbr>
               </div>
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   S
@@ -1233,7 +1233,7 @@ exports[`BasicRendering renders date picker with time 1`] = `
                 </select>
               </div>
               <div
-                class="date-picker-nav-item date-picker-nav-item-expand date-picker-nav-controls"
+                class="date-picker-nav-controls date-picker-nav-item date-picker-nav-item-expand"
               >
                 <button
                   aria-label="Select the previous month"
@@ -1287,49 +1287,49 @@ exports[`BasicRendering renders date picker with time 1`] = `
               class="date-picker-days-row date-picker-row"
             >
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   S
                 </abbr>
               </div>
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   M
                 </abbr>
               </div>
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   T
                 </abbr>
               </div>
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   W
                 </abbr>
               </div>
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   T
                 </abbr>
               </div>
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   F
                 </abbr>
               </div>
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   S
@@ -2036,7 +2036,7 @@ exports[`BasicRendering renders the date picker with years range 1`] = `
                 </select>
               </div>
               <div
-                class="date-picker-nav-item date-picker-nav-item-expand date-picker-nav-controls"
+                class="date-picker-nav-controls date-picker-nav-item date-picker-nav-item-expand"
               >
                 <button
                   aria-label="Select the previous month"
@@ -2090,49 +2090,49 @@ exports[`BasicRendering renders the date picker with years range 1`] = `
               class="date-picker-days-row date-picker-row"
             >
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   S
                 </abbr>
               </div>
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   M
                 </abbr>
               </div>
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   T
                 </abbr>
               </div>
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   W
                 </abbr>
               </div>
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   T
                 </abbr>
               </div>
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   F
                 </abbr>
               </div>
               <div
-                class="date-picker-day date-picker-calendar-item"
+                class="date-picker-calendar-item date-picker-day"
               >
                 <abbr>
                   S
