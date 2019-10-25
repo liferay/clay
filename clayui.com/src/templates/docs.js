@@ -5,10 +5,10 @@
  */
 
 import {MDXProvider} from '@mdx-js/react';
-import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import {Link, graphql} from 'gatsby';
-import Helmet from 'react-helmet';
+import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import React, {useEffect} from 'react';
+import Helmet from 'react-helmet';
 
 import CodeClipboard from '../components/CodeClipboard';
 import LayoutNav from '../components/LayoutNav';
@@ -85,7 +85,7 @@ export default props => {
 			</Helmet>
 			<main className="content">
 				<div className="container-fluid">
-					<div className="row flex-xl-nowrap">
+					<div className="flex-xl-nowrap row">
 						<Sidebar
 							data={getSection(
 								[...allMarkdownRemark.edges, ...allMdx.edges],
@@ -123,7 +123,7 @@ export default props => {
 										{hasTabs && (
 											<div className="col-12">
 												<ul
-													className="nav nav-clay nav-underline border-bottom"
+													className="border-bottom nav nav-clay nav-underline"
 													role="tablist"
 												>
 													<li className="nav-item">
@@ -274,7 +274,7 @@ export default props => {
 								</div>
 							</div>
 							<footer className="clay-site-container container-fluid">
-								<div className="row border-top py-5">
+								<div className="border-top py-5 row">
 									<div className="col-6">
 										<p className="legal">
 											{

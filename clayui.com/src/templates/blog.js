@@ -5,8 +5,8 @@
  */
 
 import {graphql} from 'gatsby';
-import Helmet from 'react-helmet';
 import React from 'react';
+import Helmet from 'react-helmet';
 
 import LayoutNav from '../components/LayoutNav';
 import Sidebar from '../components/Sidebar';
@@ -38,7 +38,7 @@ export default ({data, location}) => {
 			</Helmet>
 			<main className="content">
 				<div className="container-fluid">
-					<div className="row flex-xl-nowrap">
+					<div className="flex-xl-nowrap row">
 						<Sidebar data={list} location={location} />
 						<div className="col-xl sidebar-offset">
 							<LayoutNav />
