@@ -17,6 +17,24 @@ export default () => {
 
 	return (
 		<div className="home">
+			<div
+				className="alert alert-warning alert-dismissible alert-fluid"
+				role="alert"
+			>
+				<div className="container">
+					{
+						'This site is for version 3.x. If you are looking for version 2.x documentation, it has been moved to '
+					}
+					<a
+						href="https://v2.clayui.com"
+						rel="noopener noreferrer"
+						target="_blank"
+					>
+						{'v2.clayui.com.'}
+					</a>
+				</div>
+			</div>
+
 			<Helmet>
 				<title>{'Clay'}</title>
 				<meta content={description} name="description" />
