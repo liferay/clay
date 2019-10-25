@@ -124,7 +124,7 @@ const ClayDatePickerDateNavigation: FunctionComponent<IProps> = ({
 					/>
 				</div>
 
-				<div className="date-picker-nav-item date-picker-nav-item-expand date-picker-nav-controls">
+				<div className="date-picker-nav-controls date-picker-nav-item date-picker-nav-item-expand">
 					<Button
 						aria-label={ariaLabels.buttonPreviousMonth}
 						displayType="unstyled"

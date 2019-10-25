@@ -8,8 +8,8 @@ import {number} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React, {useContext, useState} from 'react';
 
-import {FetchPolicy} from '../src/types';
 import ClayDataProvider from '../src';
+import {FetchPolicy} from '../src/types';
 
 import '@clayui/css/lib/css/atlas.css';
 
@@ -33,7 +33,7 @@ const ClayDataProviderWithVariablesAndStorage = () => {
 				{({data, error, networkStatus, refetch}) => {
 					return (
 						<>
-							<div className="autofit-row autofit-padded-no-gutters-x">
+							<div className="autofit-padded-no-gutters-x autofit-row">
 								<div className="autofit-col">
 									<h3>
 										{'The Rick and Morty '}
@@ -70,12 +70,12 @@ const ClayDataProviderWithVariablesAndStorage = () => {
 								</div>
 								<ul className="list-group">
 									{networkStatus === 1 && (
-										<li className="list-group-item list-group-item-flex disabled">
+										<li className="disabled list-group-item list-group-item-flex">
 											{'Loading...'}
 										</li>
 									)}
 									{error && (
-										<li className="list-group-item list-group-item-flex disabled">
+										<li className="disabled list-group-item list-group-item-flex">
 											{'Result is not found'}
 										</li>
 									)}
@@ -117,7 +117,7 @@ storiesOf('Components|ClayDataProvider', module)
 		>
 			{props => (
 				<div className="container">
-					<div className="autofit-row autofit-padded-no-gutters-x">
+					<div className="autofit-padded-no-gutters-x autofit-row">
 						<div className="autofit-col">
 							<h3>
 								{'Coinbase Trades '}
@@ -172,12 +172,12 @@ storiesOf('Components|ClayDataProvider', module)
 							</div>
 						</li>
 						{props.networkStatus === 1 && (
-							<li className="list-group-item list-group-item-flex disabled">
+							<li className="disabled list-group-item list-group-item-flex">
 								{'Loading...'}
 							</li>
 						)}
 						{props.error && (
-							<li className="list-group-item list-group-item-flex disabled">
+							<li className="disabled list-group-item list-group-item-flex">
 								{'Error'}
 							</li>
 						)}

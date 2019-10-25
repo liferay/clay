@@ -5,8 +5,8 @@
  */
 
 import ClayBadge from '..';
-import * as TestRenderer from 'react-test-renderer';
 import React from 'react';
+import * as TestRenderer from 'react-test-renderer';
 
 describe('ClayBadge', () => {
 	it('renders', () => {
@@ -19,7 +19,7 @@ describe('ClayBadge', () => {
 
 	it('applies custom className', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayBadge className="foo bar" displayType="primary" label="4" />
+			<ClayBadge className="bar foo" displayType="primary" label="4" />
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();

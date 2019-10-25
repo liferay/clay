@@ -8462,10 +8462,10 @@ escodegen@^1.6.1, escodegen@^1.9.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-liferay@^11.0.1:
-  version "11.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-liferay/-/eslint-config-liferay-11.0.1.tgz#08973ef4c6461e961a13b12623e19faed78ae8b7"
-  integrity sha512-3kS4RjqcJE1QgOExSx/qmP9/n7+wYjvu/Ss8INjd+MxKEO7dvqvGlfaDc87QJgrISb3SyO12R9HFncLBBpRpdg==
+eslint-config-liferay@^13.0.0:
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-liferay/-/eslint-config-liferay-13.0.0.tgz#a46e1672559f2329dd4b209ddb43f39ec8dfd131"
+  integrity sha512-i1KwU5/1uTwqLWQck+lOSvkPrtEANPUCDek9C1ZP8jtOSt93gSYXGSJau/RXu9xG/gswycdAG9d2j5xx2hFC3A==
   dependencies:
     eslint-config-prettier "5.0.0"
     eslint-plugin-no-for-of-loops "^1.0.0"
@@ -8684,7 +8684,7 @@ eslint@^5.6.0:
     table "^5.2.3"
     text-table "^0.2.0"
 
-eslint@^6.4.0:
+eslint@^6.5.1:
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-6.5.1.tgz#828e4c469697d43bb586144be152198b91e96ed6"
   integrity sha512-32h99BoLYStT1iq1v2P9uwpyznQ4M2jRiFB6acitKz52Gqn+vPaMDUTB1bYi1WN4Nquj2w+t+bimYUG83DC55A==
