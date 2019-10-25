@@ -6,8 +6,8 @@
 
 import parserBabylon from 'prettier/parser-babylon';
 import prettier from 'prettier/standalone';
-import {LiveEditor, LiveError, LivePreview, LiveProvider} from 'react-live';
 import React from 'react';
+import {LiveEditor, LiveError, LivePreview, LiveProvider} from 'react-live';
 
 const theme = {
 	plain: {

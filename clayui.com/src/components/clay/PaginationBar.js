@@ -6,10 +6,10 @@
 
 import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
+import {ClayPaginationWithBasicItems} from '@clayui/pagination';
 import ClayPaginationBar, {
 	ClayPaginationBarWithBasicItems,
 } from '@clayui/pagination-bar';
-import {ClayPaginationWithBasicItems} from '@clayui/pagination';
 import React, {useState} from 'react';
 
 import Editor from './Editor';
