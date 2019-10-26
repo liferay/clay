@@ -25,7 +25,7 @@ export default ({data, location}) => {
 	});
 
 	return (
-		<div className="docs blog">
+		<div className="blog docs">
 			<Helmet>
 				<title>{title}</title>
 				<meta content={excerpt} name="description" />
