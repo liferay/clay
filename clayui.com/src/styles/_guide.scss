@@ -1,4 +1,5 @@
 .docs {
+	.clay-blog-content,
 	.clay-docs-content {
 		color: #6B6C7E;
 	}
@@ -183,7 +184,7 @@
 			@include focus-a11y;
 
 			color: #30313F;
-			word-break: break-all;
+			word-break: break-word;
 		}
 
 		ul {

@@ -175,7 +175,7 @@ export default () => {
 								</a>
 								<Link
 									className="btn btn-brand-color btn-link"
-									to="/blog"
+									to="/blog/2019/10/25/introducing-clay-v3.html"
 								>
 									{'Read more about warnings'}
 								</Link>
