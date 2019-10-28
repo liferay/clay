@@ -143,6 +143,11 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	 * Flag to indicate if `input-group-inset-before` class should be applied
 	 */
 	insetBefore?: boolean;
+
+	/**
+	 * Selects the height of the input.
+	 */
+	sizing?: 'lg' | 'sm';
 }
 
 type TClayInput = React.ForwardRefExoticComponent<
@@ -161,6 +166,7 @@ const ClayInput = React.forwardRef<HTMLInputElement, IProps>(
 			component: Component = 'input',
 			insetAfter,
 			insetBefore,
+			sizing,
 			...otherProps
 		},
 		ref
@@ -168,6 +174,7 @@ const ClayInput = React.forwardRef<HTMLInputElement, IProps>(
 		<Component
 			{...otherProps}
 			className={classNames('form-control', className, {
+				[`form-control-${sizing}`]: sizing,
 				['input-group-inset']: insetAfter || insetBefore,
 				['input-group-inset-after']: insetAfter,
 				['input-group-inset-before']: insetBefore,

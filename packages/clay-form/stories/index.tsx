@@ -18,7 +18,7 @@ import {
 import ClayForm from '../src/Form';
 
 import '@clayui/css/lib/css/atlas.css';
-import {boolean, text} from '@storybook/addon-knobs';
+import {boolean, text, select} from '@storybook/addon-knobs';
 
 const ClayCheckboxWithState = () => {
 	const [value, setValue] = React.useState<boolean>(false);
@@ -56,21 +56,108 @@ storiesOf('Components|ClayCheckbox', module)
 		</ClayCheckbox>
 	));
 
-storiesOf('Components|ClayForm', module).add('default', () => (
-	<div className="sheet">
-		<h4 className="sheet-subtitle">{'Form Example'}</h4>
-		<ClayForm>
-			<ClayForm.Group className="form-group-sm">
-				<label htmlFor="basicInput">{'Name'}</label>
-				<ClayInput placeholder="Name" type="text" />
+storiesOf('Components|ClayInput', module)
+	.add('default', () => (
+		<div className="sheet">
+			<ClayForm.Group>
+				<label htmlFor="basicInputText">{'Name'}</label>
+				<ClayInput
+					disabled={boolean('Disabled ', false)}
+					id="basicInputText"
+					placeholder="Insert your name here"
+					readOnly={boolean('Read Only ', false)}
+					sizing={select(
+						'Sizing',
+						{
+							lg: 'lg',
+							sm: 'sm',
+						},
+						undefined
+					)}
+					type="text"
+				/>
 			</ClayForm.Group>
-			<ClayForm.Group className="form-group-sm">
-				<label htmlFor="basicInput">{'Description'}</label>
-				<textarea className="form-control" placeholder="Description" />
+		</div>
+	))
+	.add('group separated', () => (
+		<div className="sheet">
+			<ClayForm.Group>
+				<ClayInput.Group>
+					<ClayInput.GroupItem shrink>
+						<ClayInput.GroupText>{'@'}</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem>
+						<ClayInput placeholder="Username" type="text" />
+					</ClayInput.GroupItem>
+				</ClayInput.Group>
 			</ClayForm.Group>
-		</ClayForm>
-	</div>
-));
+			<ClayForm.Group>
+				<ClayInput.Group>
+					<ClayInput.GroupItem>
+						<ClayInput placeholder="Email" type="text" />
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem shrink>
+						<ClayInput.GroupText>{'@'}</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem>
+						<ClayInput placeholder="liferay" type="text" />
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem shrink>
+						<ClayInput.GroupText>{'.com'}</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+				</ClayInput.Group>
+			</ClayForm.Group>
+		</div>
+	))
+	.add('group connected', () => (
+		<div className="sheet">
+			<ClayForm.Group>
+				<ClayInput.Group>
+					<ClayInput.GroupItem prepend shrink>
+						<ClayInput.GroupText>{'@'}</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem append>
+						<ClayInput placeholder="Username" type="text" />
+					</ClayInput.GroupItem>
+				</ClayInput.Group>
+			</ClayForm.Group>
+			<ClayForm.Group>
+				<ClayInput.Group>
+					<ClayInput.GroupItem prepend>
+						<ClayInput placeholder="Email" type="text" />
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem prepend shrink>
+						<ClayInput.GroupText>{'@'}</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem prepend>
+						<ClayInput placeholder="liferay" type="text" />
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem append shrink>
+						<ClayInput.GroupText>{'.com'}</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+				</ClayInput.Group>
+			</ClayForm.Group>
+		</div>
+	))
+	.add('group mixed', () => (
+		<div className="sheet">
+			<ClayForm.Group>
+				<ClayInput.Group>
+					<ClayInput.GroupItem shrink>
+						<ClayInput.GroupText>{'@'}</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem prepend>
+						<ClayInput placeholder="Username" type="text" />
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem append shrink>
+						<button className="btn btn-secondary" type="submit">
+							{'Submit'}
+						</button>
+					</ClayInput.GroupItem>
+				</ClayInput.Group>
+			</ClayForm.Group>
+		</div>
+	));
 
 const RadioGroupWithState = ({inline}: {inline?: boolean}) => {
 	const [value, setValue] = React.useState<string>('one');
