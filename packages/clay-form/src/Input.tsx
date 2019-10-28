@@ -174,7 +174,7 @@ const ClayInput = React.forwardRef<HTMLInputElement, IProps>(
 		<Component
 			{...otherProps}
 			className={classNames('form-control', className, {
-				[`form-control-{sizing}`]: sizing,
+				[`form-control-${sizing}`]: sizing,
 				['input-group-inset']: insetAfter || insetBefore,
 				['input-group-inset-after']: insetAfter,
 				['input-group-inset-before']: insetBefore,
