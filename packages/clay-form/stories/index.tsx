@@ -7,7 +7,6 @@
 import {storiesOf} from '@storybook/react';
 import React from 'react';
 
-import ClayForm from '../src/Form';
 import {
 	ClayCheckbox,
 	ClayInput,
