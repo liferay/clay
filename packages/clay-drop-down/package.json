@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/drop-down",
-	"version": "3.0.0",
+	"version": "3.0.1",
 	"description": "ClayDropDown component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-drop-down",
@@ -26,10 +26,10 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/button": "^3.0.0",
-		"@clayui/form": "^3.0.0",
-		"@clayui/icon": "^3.0.0",
-		"@clayui/shared": "^3.0.1",
+		"@clayui/button": "^3.0.1",
+		"@clayui/form": "^3.1.0",
+		"@clayui/icon": "^3.0.1",
+		"@clayui/shared": "^3.0.2",
 		"classnames": "^2.2.6",
 		"metal-position": "^2.1.2",
 		"warning": "^4.0.3"
