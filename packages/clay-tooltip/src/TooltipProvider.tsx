@@ -66,6 +66,25 @@ const reducer = (state: IState, {type, ...payload}: IAction): IState => {
 	}
 };
 
+function closestAncestor(node: HTMLElement, s: string) {
+	const el = node;
+	let ancestor: HTMLElement | null = node;
+
+	if (!document.documentElement.contains(el)) {
+		return null;
+	}
+
+	do {
+		if (ancestor.matches(s)) {
+			return ancestor;
+		}
+
+		ancestor = ancestor.parentElement;
+	} while (ancestor !== null);
+
+	return null;
+}
+
 const TooltipBase: React.FunctionComponent<{
 	autoAlign?: boolean;
 	children: React.ReactElement;
@@ -79,17 +98,23 @@ const TooltipBase: React.FunctionComponent<{
 	// Using `any` type since TS incorrectly infers setTimeout to be from NodeJS
 	const timeoutIdRef = useRef<any>();
 	const targetRef = useRef<HTMLElement | null>(null);
+	const titleNodeRef = useRef<HTMLElement | null>(null);
 	const tooltipRef = useRef<HTMLElement | null>(null);
 
 	const handleHide = ({target}: any) => {
-		const dataTitle = target && target.getAttribute('data-title');
+		if (!titleNodeRef.current) {
+			return;
+		}
+
+		const dataTitle = titleNodeRef.current.getAttribute('data-title');
 
 		if (dataTitle) {
-			targetRef.current = null;
-
 			target.removeEventListener('click', handleHide);
-			target.setAttribute('title', dataTitle);
-			target.removeAttribute('data-title');
+			titleNodeRef.current.setAttribute('title', dataTitle);
+			titleNodeRef.current.removeAttribute('data-title');
+
+			titleNodeRef.current = null;
+			targetRef.current = null;
 
 			dispatch({type: 'hide'});
 			clearTimeout(timeoutIdRef.current);
@@ -97,17 +122,24 @@ const TooltipBase: React.FunctionComponent<{
 	};
 
 	const handleShow = ({target}: any) => {
-		const title = target && target.getAttribute('title');
+		const hasTitle = target && target.hasAttribute('title');
+
+		const titleNode = hasTitle
+			? target
+			: closestAncestor(target, '[title]');
+
+		const title = titleNode && titleNode.getAttribute('title');
 
 		if (title) {
+			titleNodeRef.current = titleNode;
 			targetRef.current = target;
 
 			target.addEventListener('click', handleHide);
-			target.setAttribute('data-title', title);
-			target.removeAttribute('title');
+			titleNode.setAttribute('data-title', title);
+			titleNode.removeAttribute('title');
 
-			const customDelay = target.getAttribute('data-tooltip-delay');
-			const newAlign = target.getAttribute('data-tooltip-align');
+			const customDelay = titleNode.getAttribute('data-tooltip-delay');
+			const newAlign = titleNode.getAttribute('data-tooltip-align');
 
 			timeoutIdRef.current = setTimeout(
 				() => {
@@ -120,14 +152,14 @@ const TooltipBase: React.FunctionComponent<{
 
 	useEffect(() => {
 		if (
-			targetRef.current &&
+			titleNodeRef.current &&
 			(tooltipRef as React.RefObject<HTMLDivElement>).current
 		) {
 			const newAlignment =
 				ALIGNMENTS[
 					Align.align(
 						(tooltipRef as React.RefObject<HTMLElement>).current!,
-						targetRef.current,
+						titleNodeRef.current,
 						ALIGNMENTS_MAP[align || 'top'],
 						autoAlign
 					)
