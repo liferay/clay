@@ -85,7 +85,7 @@ function closestAncestor(node: HTMLElement, s: string) {
 	return null;
 }
 
-const TooltipBase: React.FunctionComponent<{
+const TooltipProvider: React.FunctionComponent<{
 	autoAlign?: boolean;
 	children: React.ReactElement;
 	delay?: number;
@@ -195,4 +195,4 @@ const TooltipBase: React.FunctionComponent<{
 	);
 };
 
-export default TooltipBase;
+export default TooltipProvider;
