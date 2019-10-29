@@ -87,7 +87,7 @@ const theme = {
 const Editor = ({code, disabled = false, imports, preview = true, scope}) => {
 	try {
 		code = prettier.format(code, {
-			parser: 'babylon',
+			parser: 'babel',
 			plugins: [parserBabylon],
 		});
 	} catch (e) {
