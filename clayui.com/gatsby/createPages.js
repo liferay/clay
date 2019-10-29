@@ -12,7 +12,6 @@ require('dotenv').config({
 	path: `.env.${process.env.NODE_ENV}`,
 });
 
-const componentWithMDXScope = require('gatsby-mdx/component-with-mdx-scope');
 const path = require('path');
 
 /* eslint-enable liferay/imports-first */
@@ -35,7 +34,6 @@ const createDocs = (actions, edges, mdx, blacklist = []) => {
 		.forEach(
 			({
 				node: {
-					code,
 					fields: {layout, redirect, redirectFrom, sibling, slug},
 				},
 			}) => {
@@ -91,10 +89,6 @@ const createDocs = (actions, edges, mdx, blacklist = []) => {
 					template = docsTemplate;
 				}
 
-				const component = mdx
-					? componentWithMDXScope(template, code.scope, __dirname)
-					: template;
-
 				if (
 					(slug.includes('docs/') || slug.includes('blog/')) &&
 					layout !== 'redirect'
@@ -108,7 +102,7 @@ const createDocs = (actions, edges, mdx, blacklist = []) => {
 					);
 
 					createPage({
-						component,
+						component: template,
 						context: {
 							blacklist: blacklistSlugs,
 							markdownJsx: mdx,
