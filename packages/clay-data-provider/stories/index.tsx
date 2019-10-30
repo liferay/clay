@@ -8,8 +8,8 @@ import {number} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React, {useContext, useState} from 'react';
 
-import ClayDataProvider from '../src';
-import {FetchPolicy} from '../src/types';
+import ClayDataProvider, {useResource} from '../src';
+import {FetchPolicy, NetworkStatus} from '../src/types';
 
 import '@clayui/css/lib/css/atlas.css';
 
@@ -209,4 +209,79 @@ storiesOf('Components|ClayDataProvider', module)
 	))
 	.add('with variables change and storage', () => (
 		<ClayDataProviderWithVariablesAndStorage />
-	));
+	))
+	.add('with lazy fetch', () => {
+		const [
+			networkStatus,
+			setNetworkStatus,
+		] = useState<NetworkStatus | null>(null);
+		const {get: getNames, resource} = useResource({
+			lazy: true,
+			link: 'https://rickandmortyapi.com/api/character',
+			onNetworkStatusChange: (status: NetworkStatus) =>
+				setNetworkStatus(status),
+			variables: {name: 'Rick'},
+		});
+
+		const error = networkStatus === 5;
+
+		return (
+			<>
+				<div className="autofit-padded-no-gutters-x autofit-row">
+					<div className="autofit-col">
+						<h3>
+							{'The Rick and Morty '}
+							<small>
+								{networkStatus === 1 && 'Loading'}
+								{networkStatus === 2 && 'Refetch'}
+								{networkStatus === 3 && 'Polling'}
+								{networkStatus === 4 && 'Ready'}
+								{networkStatus === 5 && 'Error'}
+							</small>
+						</h3>
+					</div>
+					<div className="autofit-col">
+						<button
+							className="btn"
+							onClick={() => getNames()}
+							type="button"
+						>
+							{'Fetch'}
+						</button>
+					</div>
+				</div>
+				<div className="sheet">
+					<ul className="list-group">
+						{networkStatus === 1 && (
+							<li className="disabled list-group-item list-group-item-flex">
+								{'Loading...'}
+							</li>
+						)}
+						{error && (
+							<li className="disabled list-group-item list-group-item-flex">
+								{'Result is not found'}
+							</li>
+						)}
+						{!error &&
+							resource &&
+							resource.results &&
+							resource.results.map((item: any) => (
+								<li
+									className="list-group-item list-group-item-flex"
+									key={item.id}
+								>
+									<div className="autofit-col autofit-col-expand">
+										<p className="list-group-title text-truncate">
+											{'Name'}
+										</p>
+										<p className="list-group-subtitle text-truncate">
+											{item.name}
+										</p>
+									</div>
+								</li>
+							))}
+					</ul>
+				</div>
+			</>
+		);
+	});

@@ -19,14 +19,28 @@ import {useCache} from './useCache';
 import {timeout} from './util';
 
 interface IResource extends IDataProvider {
+	/**
+	 * Flag that tells `useResource` not to make the first request as soon as the
+	 * component is mounted, you can do it manually by calling the `get()` method
+	 * returned by the hook.
+	 *
+	 * > const {get: getPosts} = useResource({lazy: true'});
+	 */
+	lazy?: boolean;
+
 	onNetworkStatusChange?: (status: NetworkStatus) => void;
 }
+
+const warningFirstFetchMessage = `DataProvider: The first fetch has already happened, if you want to make a new fetch, use the 'refetch()' method but if you want to make the first fetch enable the 'lazy' hook mode.
+
+> const {refetch, get} = useResource({lazy: true, link: 'https://...'});`;
 
 const useResource = ({
 	fetchDelay = 300,
 	fetchOptions,
 	fetchPolicy = FetchPolicy.NoCache,
 	fetchTimeout = 6000,
+	lazy,
 	link,
 	onNetworkStatusChange: dispatchNetworkStatus = () => {},
 	pollInterval = 0,
@@ -210,6 +224,17 @@ const useResource = ({
 		doFetch();
 	};
 
+	const doFirstFetch = () => {
+		warning(firstRenderRef.current, warningFirstFetchMessage);
+
+		if (!firstRenderRef.current) {
+			return;
+		}
+
+		maybeFetch(NetworkStatus.Loading);
+		firstRenderRef.current = false;
+	};
+
 	useEffect(() => {
 		if (!firstRenderRef.current) {
 			maybeFetch(NetworkStatus.Refetch);
@@ -217,8 +242,9 @@ const useResource = ({
 	}, [debouncedVariablesChange]);
 
 	useEffect(() => {
-		maybeFetch(NetworkStatus.Loading);
-		firstRenderRef.current = false;
+		if (!lazy) {
+			doFirstFetch();
+		}
 
 		return () => {
 			// Reset the cache only if the storage reference is
@@ -231,7 +257,7 @@ const useResource = ({
 		};
 	}, []);
 
-	return {refetch: handleRefetch, resource};
+	return {get: doFirstFetch, refetch: handleRefetch, resource};
 };
 
 export {useResource};

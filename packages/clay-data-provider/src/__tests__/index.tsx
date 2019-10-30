@@ -5,11 +5,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {cleanup, render, wait} from '@testing-library/react';
+import {cleanup, render, wait, fireEvent} from '@testing-library/react';
 import {FetchMock} from 'jest-fetch-mock'; // eslint-disable-line @typescript-eslint/no-unused-vars
 import React from 'react';
 
-import DataProvider from '../';
+import DataProvider, {useResource} from '../';
 import {LRUCache} from '../LRUCache';
 import {
 	FetchPolicy,
@@ -352,6 +352,34 @@ describe('ClayDataProvider', () => {
 
 		await wait(() => expect(fetchMock.mock.calls.length).toEqual(3));
 		expect(container.innerHTML).toMatchSnapshot();
+
+		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data/');
+	});
+
+	it('calls clay.data in lazy mode', async () => {
+		fetchMock.mockResponse(JSON.stringify({title: 'Foo'}));
+
+		const DataProviderWithHook = () => {
+			const {get: getData, resource} = useResource({
+				lazy: true,
+				link: 'https://clay.data',
+			});
+
+			return (
+				<>
+					<h1>{resource && resource.title}</h1>
+					<button onClick={() => getData()}>{'Click'}</button>
+				</>
+			);
+		};
+
+		const {getByText} = render(<DataProviderWithHook />);
+
+		const buttonEl = getByText('Click');
+
+		fireEvent.click(buttonEl, {});
+
+		await wait(() => expect(fetchMock.mock.calls.length).toEqual(1));
 
 		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data/');
 	});
