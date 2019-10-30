@@ -67,12 +67,12 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 	) => {
 		if (isFiberHostComponentFocusable(node)) {
 			focusableElements.push(node.stateNode);
-		} else {
-			const child = node.child;
+		}
 
-			if (child !== null) {
-				collectFocusableElements(child, focusableElements);
-			}
+		const child = node.child;
+
+		if (child !== null) {
+			collectFocusableElements(child, focusableElements);
 		}
 
 		const sibling = node.sibling;
@@ -110,6 +110,11 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 	};
 
 	const handleNextElementOutsideScope = (event: KeyboardEvent) => {
+		// Ignores the call for cases where the element's children have tabIndex.
+		if (nextElementOutsideScopeRef.current !== event.target) {
+			return;
+		}
+
 		if (nextElementOutsideScopeRef.current !== event.currentTarget) {
 			(event.currentTarget as HTMLElement).removeEventListener(
 				'keydown',
