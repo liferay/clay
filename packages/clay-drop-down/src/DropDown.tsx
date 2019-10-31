@@ -45,6 +45,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	hasLeftSymbols?: boolean;
 
 	/**
+	 * Prop to pass DOM element attributes to <DropDown.Menu />.
+	 */
+	menuElementAttrs?: React.HTMLAttributes<HTMLDivElement>;
+
+	/**
 	 * Callback for when the active state changes.
 	 */
 	onActiveChange: (val: boolean) => void;
@@ -77,6 +82,7 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 	containerElement: ContainerElement = 'div',
 	hasLeftSymbols,
 	hasRightSymbols,
+	menuElementAttrs,
 	onActiveChange,
 	trigger,
 	...otherProps
@@ -116,6 +122,7 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 				})}
 
 				<Menu
+					{...menuElementAttrs}
 					active={active}
 					alignElementRef={triggerElementRef}
 					alignmentPosition={alignmentPosition}
