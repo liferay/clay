@@ -82,6 +82,13 @@ interface IProps extends IDropDownContentProps {
 	helpText?: string;
 
 	/**
+	 * Prop to pass DOM element attributes to <DropDown.Menu />.
+	 */
+	menuElementAttrs?: React.ComponentProps<
+		typeof ClayDropDown
+	>['menuElementAttrs'];
+
+	/**
 	 * Callback will always be called when the user is interacting with search.
 	 */
 	onSearchValueChange?: (newValue: string) => void;
@@ -258,6 +265,7 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 	footerContent,
 	helpText,
 	items,
+	menuElementAttrs,
 	onSearchValueChange = () => {},
 	searchable,
 	searchProps,
@@ -279,6 +287,7 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 			containerElement={containerElement}
 			hasLeftSymbols={hasLeftSymbols}
 			hasRightSymbols={hasRightSymbols}
+			menuElementAttrs={menuElementAttrs}
 			onActiveChange={setActive}
 			trigger={trigger}
 		>
