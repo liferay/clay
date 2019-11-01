@@ -17,14 +17,7 @@ interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	size?: 'lg' | 'sm';
 }
 
-type TPagination = React.ForwardRefExoticComponent<
-	IProps & React.RefAttributes<HTMLUListElement>
-> & {
-	Ellipsis: typeof Ellipsis;
-	Item: typeof Item;
-};
-
-const ClayPagination = React.forwardRef(
+const ClayPagination = React.forwardRef<HTMLUListElement, IProps>(
 	({children, className, size, ...otherProps}: IProps, ref) => {
 		return (
 			<ul
@@ -38,9 +31,6 @@ const ClayPagination = React.forwardRef(
 			</ul>
 		);
 	}
-) as TPagination;
+);
 
-ClayPagination.Ellipsis = Ellipsis;
-ClayPagination.Item = Item;
-
-export default ClayPagination;
+export default Object.assign(ClayPagination, {Ellipsis, Item});

@@ -12,7 +12,7 @@ import {Alert, AlertToastContainer} from '../../../src/components/clay/Alerts';
 
 -   [API](#api)
     -   [ClayAlert](#clayalert)
-    -   [ClayAlert.ToastContainer](#clayalert)
+    -   [ClayAlert.ToastContainer](#clayalert.toastcontainer)
 
 </div>
 </div>
@@ -32,6 +32,12 @@ You can use alert with the following variants:
 
 We recommend that you review the use cases in the <a href="https://storybook-clayui.netlify.com/?path=/story/clayalert--default">Storybook</a>.
 
+## ToastContainer
+
+You can use alerts with a `ToastContainer` to render the alerts in a container with `position: fixed`.
+
+<AlertToastContainer />
+
 ## API
 
 ### ClayAlert
@@ -39,9 +45,5 @@ We recommend that you review the use cases in the <a href="https://storybook-cla
 <div>[APITable "clay-alert/src/index.tsx"]</div>
 
 ### ClayAlert.ToastContainer
-
-You can use alerts with a `ToastContainer` to render the alerts in a container with `position: fixed`.
-
-<AlertToastContainer />
 
 <div>[APITable "clay-alert/src/ToastContainer.tsx"]</div>

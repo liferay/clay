@@ -29,14 +29,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	component?: React.ForwardRefExoticComponent<any>;
 }
 
-type Autocomplete = React.ForwardRefExoticComponent<IProps> & {
-	DropDown: typeof DropDown;
-	Input: typeof Input;
-	Item: typeof Item;
-	LoadingIndicator: typeof LoadingIndicator;
-};
-
-const ClayAutocomplete = React.forwardRef(
+const ClayAutocomplete = React.forwardRef<HTMLDivElement, IProps>(
 	(
 		{
 			children,
@@ -60,7 +53,7 @@ const ClayAutocomplete = React.forwardRef(
 						if (typeof ref === 'function') {
 							ref(r);
 						} else if (ref !== null) {
-							(ref.current as React.MutableRefObject<any>) = r;
+							(ref as React.MutableRefObject<any>).current = r;
 						}
 					}
 				}}
@@ -78,11 +71,11 @@ const ClayAutocomplete = React.forwardRef(
 			</Component>
 		);
 	}
-) as Autocomplete;
+);
 
-ClayAutocomplete.DropDown = DropDown;
-ClayAutocomplete.Input = Input;
-ClayAutocomplete.Item = Item;
-ClayAutocomplete.LoadingIndicator = LoadingIndicator;
-
-export default ClayAutocomplete;
+export default Object.assign(ClayAutocomplete, {
+	DropDown,
+	Input,
+	Item,
+	LoadingIndicator,
+});
