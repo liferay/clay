@@ -5,7 +5,7 @@
  */
 
 import {ClayCheckbox, ClayRadio} from '@clayui/form';
-import React, {useContext, useState} from 'react';
+import React, {useMemo, useContext, useState} from 'react';
 import warning from 'warning';
 
 import Caption from './Caption';
@@ -257,6 +257,25 @@ const DropDownContent: React.FunctionComponent<IDropDownContentProps> = ({
 	</ClayDropDown.ItemList>
 );
 
+const findNested = <
+	T extends {items?: Array<T>; [key: string]: any},
+	K extends keyof T
+>(
+	items: Array<T>,
+	key: K
+): T | undefined =>
+	items.find(item => {
+		if (item[key]) {
+			return true;
+		}
+
+		if (item.items) {
+			return findNested(item.items, key);
+		}
+
+		return false;
+	});
+
 export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 	alignmentPosition,
 	caption,
@@ -274,8 +293,12 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 	trigger,
 }: IProps) => {
 	const [active, setActive] = useState(false);
-	const hasRightSymbols = !!items.find(item => item.symbolRight);
-	const hasLeftSymbols = !!items.find(item => item.symbolLeft);
+	const hasRightSymbols = useMemo(() => !!findNested(items, 'symbolRight'), [
+		items,
+	]);
+	const hasLeftSymbols = useMemo(() => !!findNested(items, 'symbolLeft'), [
+		items,
+	]);
 
 	const Wrap = footerContent ? 'form' : React.Fragment;
 
