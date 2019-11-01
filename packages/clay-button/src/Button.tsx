@@ -43,11 +43,11 @@ interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	small?: boolean;
 }
 
-type Button = React.ForwardRefExoticComponent<
+const ClayButton: React.ForwardRefExoticComponent<
 	IProps & React.RefAttributes<HTMLButtonElement>
-> & {Group: typeof ButtonGroup};
-
-const ClayButton = React.forwardRef(
+> & {
+	Group?: typeof ButtonGroup;
+} = React.forwardRef(
 	(
 		{
 			block,
@@ -80,7 +80,7 @@ const ClayButton = React.forwardRef(
 			{children}
 		</button>
 	)
-) as Button;
+);
 
 ClayButton.Group = ButtonGroup;
 

@@ -17,14 +17,12 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	size?: 'sm' | 'lg';
 }
 
-type TPaginationBar = React.ForwardRefExoticComponent<
+const ClayPaginationBar: React.ForwardRefExoticComponent<
 	IProps & React.RefAttributes<HTMLDivElement>
 > & {
-	DropDown: typeof DropDown;
-	Results: typeof Results;
-};
-
-const ClayPaginationBar = React.forwardRef(
+	DropDown?: typeof DropDown;
+	Results?: typeof Results;
+} = React.forwardRef(
 	({children, className, size, ...otherProps}: IProps, ref) => {
 		return (
 			<div
@@ -38,7 +36,7 @@ const ClayPaginationBar = React.forwardRef(
 			</div>
 		);
 	}
-) as TPaginationBar;
+);
 
 ClayPaginationBar.DropDown = DropDown;
 ClayPaginationBar.Results = Results;

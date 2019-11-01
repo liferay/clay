@@ -150,16 +150,14 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	sizing?: 'lg' | 'sm';
 }
 
-type TClayInput = React.ForwardRefExoticComponent<
+const ClayInput: React.ForwardRefExoticComponent<
 	IProps & React.RefAttributes<HTMLInputElement>
 > & {
-	Group: typeof ClayInputGroup;
-	GroupInsetItem: typeof ClayInputGroupInsetItem;
-	GroupItem: typeof ClayInputGroupItem;
-	GroupText: typeof ClayInputGroupText;
-};
-
-const ClayInput = React.forwardRef<HTMLInputElement, IProps>(
+	Group?: typeof ClayInputGroup;
+	GroupInsetItem?: typeof ClayInputGroupInsetItem;
+	GroupItem?: typeof ClayInputGroupItem;
+	GroupText?: typeof ClayInputGroupText;
+} = React.forwardRef(
 	(
 		{
 			className,
@@ -168,7 +166,7 @@ const ClayInput = React.forwardRef<HTMLInputElement, IProps>(
 			insetBefore,
 			sizing,
 			...otherProps
-		},
+		}: IProps,
 		ref
 	) => (
 		<Component
@@ -182,7 +180,7 @@ const ClayInput = React.forwardRef<HTMLInputElement, IProps>(
 			ref={ref}
 		/>
 	)
-) as TClayInput;
+);
 
 ClayInput.Group = ClayInputGroup;
 ClayInput.GroupInsetItem = ClayInputGroupInsetItem;

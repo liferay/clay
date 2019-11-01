@@ -9,8 +9,6 @@ const path = require('path');
 const reactDocs = require('react-docgen');
 const visit = require('unist-util-visit');
 
-let totalErrors = 0;
-
 const generateTr = (item, key) => `<tr>
 	<td>
 		<div class="table-title">
@@ -55,10 +53,12 @@ module.exports = ({markdownAST}) => {
 						const AST = await reactDocs.parse(content, null, null, {
 							filename: pathFile,
 						});
-						const propsKeys = Object.keys(AST.props);
+
+						const propsKeys = Object.keys(AST.props || {});
 
 						// eslint-disable-next-line require-atomic-updates
-						node.value = `
+						node.value = propsKeys.length
+							? `
 						<table class="table table-bordered table-striped">
 						<thead>
 							<tr>
@@ -72,7 +72,8 @@ module.exports = ({markdownAST}) => {
 						<tbody>
 						${propsKeys.map(key => generateTr(AST.props[key], key)).join('')}
 						</tbody>
-						</table>`;
+						</table>`
+							: 'None.';
 					} catch (error) {
 						// eslint-disable-next-line require-atomic-updates
 						node.value = `<ul class="list-api">
@@ -81,16 +82,11 @@ module.exports = ({markdownAST}) => {
 							</li>
 						</ul>`;
 						// eslint-disable-next-line no-console
-						console.error(error.message);
-
-						totalErrors = totalErrors + 1;
+						console.error(pathFile);
 					}
 
 					resolve(node);
 				})
 		)
-	).then(res => {
-		// console.log('TOTAL ERRORS: ', totalErrors);
-		return res;
-	});
+	);
 };
