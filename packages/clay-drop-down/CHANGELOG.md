@@ -5,19 +5,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [3.1.0](https://github.com/liferay/clay/tree/master/packages/clay-drop-down/compare/@clayui/drop-down@3.0.1...@clayui/drop-down@3.1.0) (2019-11-01)
 
-
 ### Bug Fixes
 
-* **@clayui/drop-down:** search for symbols in nested item structures ([1c32b57](https://github.com/liferay/clay/tree/master/packages/clay-drop-down/commit/1c32b57))
-
+-   **@clayui/drop-down:** search for symbols in nested item structures ([1c32b57](https://github.com/liferay/clay/tree/master/packages/clay-drop-down/commit/1c32b57))
 
 ### Features
 
-* **@clayui/drop-down:** add new prop to pass element attributes to DropDown.Menu ([2bc404f](https://github.com/liferay/clay/tree/master/packages/clay-drop-down/commit/2bc404f))
-
-
-
-
+-   **@clayui/drop-down:** add new prop to pass element attributes to DropDown.Menu ([2bc404f](https://github.com/liferay/clay/tree/master/packages/clay-drop-down/commit/2bc404f))
 
 ## [3.0.1](https://github.com/liferay/clay/tree/master/packages/clay-drop-down/compare/@clayui/drop-down@3.0.0...@clayui/drop-down@3.0.1) (2019-10-28)
 

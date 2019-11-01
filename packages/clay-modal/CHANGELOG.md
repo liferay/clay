@@ -7,10 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @clayui/modal
 
-
-
-
-
 # [3.1.0](https://github.com/liferay/clay/tree/master/packages/clay-modal/compare/@clayui/modal@3.0.0...@clayui/modal@3.1.0) (2019-10-28)
 
 ### Features
