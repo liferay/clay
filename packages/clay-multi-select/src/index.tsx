@@ -53,11 +53,6 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	disabledClearAll?: boolean;
 
 	/**
-	 * Ref added to container element
-	 */
-	forwardRef: React.RefObject<HTMLDivElement>;
-
-	/**
 	 * Value used for each selected item's hidden input name attribute
 	 */
 	inputName?: string;
@@ -103,265 +98,261 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	spritemap?: string;
 }
 
-const ClayMultiSelect: React.FunctionComponent<IProps> = ({
-	clearAllTitle = 'Clear All',
-	closeButtonAriaLabel = 'Remove {0}',
-	disabled,
-	disabledClearAll,
-	forwardRef,
-	inputName,
-	inputValue = '',
-	isValid = true,
-	items = [],
-	onBlur = noop,
-	onClearAllButtonClick = () => {
-		onItemsChange([]);
-		onChange('');
-	},
-	onFocus = noop,
-	onChange = noop,
-	onItemsChange = noop,
-	onKeyDown = noop,
-	onPaste = noop,
-	sourceItems = [],
-	spritemap,
-	...otherProps
-}: IProps) => {
-	const inputRef = useRef<HTMLInputElement | null>(null);
-	const lastItemRef = useRef<HTMLSpanElement | null>(null);
-	const [active, setActive] = useState(false);
-	const [isFocused, setIsFocused] = useState();
+const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
+	(
+		{
+			clearAllTitle = 'Clear All',
+			closeButtonAriaLabel = 'Remove {0}',
+			disabled,
+			disabledClearAll,
+			inputName,
+			inputValue = '',
+			isValid = true,
+			items = [],
+			onBlur = noop,
+			onClearAllButtonClick = () => {
+				onItemsChange([]);
+				onChange('');
+			},
+			onFocus = noop,
+			onChange = noop,
+			onItemsChange = noop,
+			onKeyDown = noop,
+			onPaste = noop,
+			sourceItems = [],
+			spritemap,
+			...otherProps
+		}: IProps,
+		ref
+	) => {
+		const defaultRef = useRef<HTMLDivElement>(null);
+		const inputRef = useRef<HTMLInputElement | null>(null);
+		const lastItemRef = useRef<HTMLSpanElement | null>(null);
+		const [active, setActive] = useState(false);
+		const [isFocused, setIsFocused] = useState();
 
-	useLayoutEffect(() => {
-		if (sourceItems) {
-			const matchedItems = sourceItems.filter(
-				item => inputValue && item.label.match(inputValue)
-			);
+		useLayoutEffect(() => {
+			if (sourceItems) {
+				const matchedItems = sourceItems.filter(
+					item => inputValue && item.label.match(inputValue)
+				);
 
-			setActive(matchedItems.length !== 0);
-		}
-	}, [sourceItems, inputValue]);
+				setActive(matchedItems.length !== 0);
+			}
+		}, [sourceItems, inputValue]);
 
-	const setNewValue = (newVal: Item) => {
-		onItemsChange([...items, newVal]);
+		const setNewValue = (newVal: Item) => {
+			onItemsChange([...items, newVal]);
 
-		onChange('');
-	};
+			onChange('');
+		};
 
-	const getSourceItemByLabel = (label: string) => {
-		return sourceItems.find(item => item.label === label);
-	};
+		const getSourceItemByLabel = (label: string) => {
+			return sourceItems.find(item => item.label === label);
+		};
 
-	const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-		onKeyDown(event);
+		const handleKeyDown = (
+			event: React.KeyboardEvent<HTMLInputElement>
+		) => {
+			onKeyDown(event);
 
-		const {keyCode} = event;
+			const {keyCode} = event;
 
-		if (inputValue && DELIMITER_KEYS.includes(keyCode)) {
-			event.preventDefault();
+			if (inputValue && DELIMITER_KEYS.includes(keyCode)) {
+				event.preventDefault();
 
-			const newItem: Item = getSourceItemByLabel(inputValue) || {
-				label: inputValue,
-				value: inputValue,
-			};
-
-			setNewValue(newItem);
-		} else if (
-			!inputValue &&
-			keyCode === BACKSPACE_KEY &&
-			inputRef.current &&
-			lastItemRef.current
-		) {
-			inputRef.current.blur();
-			lastItemRef.current.focus();
-		}
-	};
-
-	const handlePaste = (event: React.ClipboardEvent<HTMLInputElement>) => {
-		onPaste(event);
-
-		const pastedText = event.clipboardData.getData('Text');
-
-		const pastedItems = pastedText
-			.split(',')
-			.map(itemLabel => {
-				itemLabel = itemLabel.trim();
-
-				const newItem: Item = getSourceItemByLabel(itemLabel) || {
-					label: itemLabel,
-					value: itemLabel,
+				const newItem: Item = getSourceItemByLabel(inputValue) || {
+					label: inputValue,
+					value: inputValue,
 				};
 
-				return newItem;
-			})
-			.filter(Boolean);
+				setNewValue(newItem);
+			} else if (
+				!inputValue &&
+				keyCode === BACKSPACE_KEY &&
+				inputRef.current &&
+				lastItemRef.current
+			) {
+				inputRef.current.blur();
+				lastItemRef.current.focus();
+			}
+		};
 
-		if (pastedItems.length > 0) {
-			event.preventDefault();
+		const handlePaste = (event: React.ClipboardEvent<HTMLInputElement>) => {
+			onPaste(event);
 
-			onItemsChange([...items, ...pastedItems]);
-		}
-	};
+			const pastedText = event.clipboardData.getData('Text');
 
-	return (
-		<FocusScope arrowKeysUpDown={false}>
-			<div
-				className={classNames(
-					'form-control form-control-tag-group input-group',
-					{
-						focus: isFocused && isValid,
-					}
-				)}
-				ref={forwardRef}
-			>
-				<ClayInput.GroupItem>
-					{items.map((item, i) => {
-						const removeItem = () =>
-							onItemsChange([
-								...items.slice(0, i),
-								...items.slice(i + 1),
-							]);
+			const pastedItems = pastedText
+				.split(',')
+				.map(itemLabel => {
+					itemLabel = itemLabel.trim();
 
-						return (
-							<React.Fragment key={i}>
-								<ClayLabel
-									closeButtonProps={{
-										'aria-label': sub(
-											closeButtonAriaLabel,
-											[item.label]
-										),
-										disabled,
-										onClick: () => {
+					const newItem: Item = getSourceItemByLabel(itemLabel) || {
+						label: itemLabel,
+						value: itemLabel,
+					};
+
+					return newItem;
+				})
+				.filter(Boolean);
+
+			if (pastedItems.length > 0) {
+				event.preventDefault();
+
+				onItemsChange([...items, ...pastedItems]);
+			}
+		};
+
+		const containerRef =
+			(ref as React.RefObject<HTMLDivElement>) || defaultRef;
+
+		return (
+			<FocusScope arrowKeysUpDown={false}>
+				<div
+					className={classNames(
+						'form-control form-control-tag-group input-group',
+						{
+							focus: isFocused && isValid,
+						}
+					)}
+					ref={containerRef}
+				>
+					<ClayInput.GroupItem>
+						{items.map((item, i) => {
+							const removeItem = () =>
+								onItemsChange([
+									...items.slice(0, i),
+									...items.slice(i + 1),
+								]);
+
+							return (
+								<React.Fragment key={i}>
+									<ClayLabel
+										closeButtonProps={{
+											'aria-label': sub(
+												closeButtonAriaLabel,
+												[item.label]
+											),
+											disabled,
+											onClick: () => {
+												if (inputRef.current) {
+													inputRef.current.focus();
+												}
+												removeItem();
+											},
+											ref: ref => {
+												if (i === items.length - 1) {
+													lastItemRef.current = ref;
+												}
+											},
+										}}
+										onKeyDown={({keyCode}) => {
+											if (keyCode !== BACKSPACE_KEY) {
+												return;
+											}
 											if (inputRef.current) {
 												inputRef.current.focus();
 											}
 											removeItem();
-										},
-										ref: ref => {
-											if (i === items.length - 1) {
-												lastItemRef.current = ref;
-											}
-										},
-									}}
-									onKeyDown={({keyCode}) => {
-										if (keyCode !== BACKSPACE_KEY) {
-											return;
-										}
+										}}
+										spritemap={spritemap}
+									>
+										{item.label}
+									</ClayLabel>
+
+									{inputName && (
+										<input
+											name={inputName}
+											type="hidden"
+											value={item.value}
+										/>
+									)}
+								</React.Fragment>
+							);
+						})}
+
+						<input
+							{...otherProps}
+							className="form-control-inset"
+							disabled={disabled}
+							onBlur={e => {
+								onBlur(e);
+								setIsFocused(false);
+							}}
+							onChange={event =>
+								onChange(event.target.value.replace(',', ''))
+							}
+							onFocus={e => {
+								onFocus(e);
+								setIsFocused(true);
+							}}
+							onKeyDown={handleKeyDown}
+							onPaste={handlePaste}
+							ref={inputRef}
+							type="text"
+							value={inputValue}
+						/>
+					</ClayInput.GroupItem>
+
+					{!disabled &&
+						!disabledClearAll &&
+						(inputValue || items.length > 0) && (
+							<ClayInput.GroupItem shrink>
+								<button
+									className="component-action"
+									onClick={() => {
+										onClearAllButtonClick();
+
 										if (inputRef.current) {
 											inputRef.current.focus();
 										}
-										removeItem();
 									}}
-									spritemap={spritemap}
+									title={clearAllTitle}
+									type="button"
 								>
-									{item.label}
-								</ClayLabel>
-
-								{inputName && (
-									<input
-										name={inputName}
-										type="hidden"
-										value={item.value}
+									<ClayIcon
+										spritemap={spritemap}
+										symbol="times-circle"
 									/>
-								)}
-							</React.Fragment>
-						);
-					})}
+								</button>
+							</ClayInput.GroupItem>
+						)}
 
-					<input
-						{...otherProps}
-						className="form-control-inset"
-						disabled={disabled}
-						onBlur={e => {
-							onBlur(e);
-							setIsFocused(false);
-						}}
-						onChange={event =>
-							onChange(event.target.value.replace(',', ''))
-						}
-						onFocus={e => {
-							onFocus(e);
-							setIsFocused(true);
-						}}
-						onKeyDown={handleKeyDown}
-						onPaste={handlePaste}
-						ref={inputRef}
-						type="text"
-						value={inputValue}
-					/>
-				</ClayInput.GroupItem>
+					{sourceItems.length > 0 && (
+						<ClayAutocomplete.DropDown
+							active={active}
+							alignElementRef={containerRef}
+							onSetActive={setActive}
+						>
+							<ClayDropDown.ItemList>
+								{sourceItems
+									.filter(
+										item =>
+											inputValue &&
+											item.label.match(inputValue)
+									)
+									.map(item => (
+										<ClayAutocomplete.Item
+											key={item.value}
+											match={inputValue}
+											onClick={() => {
+												setNewValue(item);
 
-				{!disabled &&
-					!disabledClearAll &&
-					(inputValue || items.length > 0) && (
-						<ClayInput.GroupItem shrink>
-							<button
-								className="component-action"
-								onClick={() => {
-									onClearAllButtonClick();
-
-									if (inputRef.current) {
-										inputRef.current.focus();
-									}
-								}}
-								title={clearAllTitle}
-								type="button"
-							>
-								<ClayIcon
-									spritemap={spritemap}
-									symbol="times-circle"
-								/>
-							</button>
-						</ClayInput.GroupItem>
+												if (inputRef.current) {
+													inputRef.current.focus();
+												}
+											}}
+											value={item.label}
+										/>
+									))}
+							</ClayDropDown.ItemList>
+						</ClayAutocomplete.DropDown>
 					)}
+				</div>
+			</FocusScope>
+		);
+	}
+);
 
-				{sourceItems.length > 0 && (
-					<ClayAutocomplete.DropDown
-						active={active}
-						alignElementRef={forwardRef}
-						onSetActive={setActive}
-					>
-						<ClayDropDown.ItemList>
-							{sourceItems
-								.filter(
-									item =>
-										inputValue &&
-										item.label.match(inputValue)
-								)
-								.map(item => (
-									<ClayAutocomplete.Item
-										key={item.value}
-										match={inputValue}
-										onClick={() => {
-											setNewValue(item);
-
-											if (inputRef.current) {
-												inputRef.current.focus();
-											}
-										}}
-										value={item.label}
-									/>
-								))}
-						</ClayDropDown.ItemList>
-					</ClayAutocomplete.DropDown>
-				)}
-			</div>
-		</FocusScope>
-	);
-};
-
-const ClayMultiSelectInput = React.forwardRef<
-	HTMLDivElement,
-	Omit<IProps, 'forwardRef'>
->((props, ref?) => {
-	const defaultRef = useRef<HTMLDivElement>(null);
-
-	return (
-		<ClayMultiSelect
-			forwardRef={(ref as React.RefObject<HTMLDivElement>) || defaultRef}
-			{...props}
-		/>
-	);
-});
-
-export default ClayMultiSelectInput;
+export default ClayMultiSelect;
