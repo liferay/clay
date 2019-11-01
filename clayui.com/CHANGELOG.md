@@ -7,10 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package clayui.com
 
-
-
-
-
 # 3.0.0-alpha.2 (2019-10-28)
 
 ### Bug Fixes
