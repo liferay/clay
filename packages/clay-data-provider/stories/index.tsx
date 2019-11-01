@@ -6,9 +6,9 @@
 
 import {number} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import React, {useContext, useState} from 'react';
+import React, {useContext, useState, useRef} from 'react';
 
-import ClayDataProvider from '../src';
+import ClayDataProvider, {useResource} from '../src';
 import {FetchPolicy} from '../src/types';
 
 import '@clayui/css/lib/css/atlas.css';
@@ -209,4 +209,41 @@ storiesOf('Components|ClayDataProvider', module)
 	))
 	.add('with variables change and storage', () => (
 		<ClayDataProviderWithVariablesAndStorage />
-	));
+	))
+	.add('toggle poll', () => {
+		const [poll, setPoll] = useState(false);
+
+		const {resource} = useResource({
+			link:
+				'https://api-public.sandbox.pro.coinbase.com/products/BTC-USD/trades',
+			pollInterval: poll ? 1000 : 0,
+			variables: {limit: 10},
+		});
+
+		console.log(resource);
+
+		return (
+			<div className="sheet pb-4">
+				<h3>Polling {poll ? 'enable' : 'disable'}</h3>
+				<div className="row">
+					<div className="col-md-5">
+						<p>
+							{
+								'Open your console to see the data and see the network tab.'
+							}
+						</p>
+					</div>
+				</div>
+				<div className="row">
+					<div className="col-md-5">
+						<button
+							className="btn btn-primary"
+							onClick={() => setPoll(!poll)}
+						>
+							Toggle Poll
+						</button>
+					</div>
+				</div>
+			</div>
+		);
+	});
