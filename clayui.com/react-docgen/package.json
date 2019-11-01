@@ -1,0 +1,75 @@
+{
+  "name": "react-docgen",
+  "version": "5.0.0-beta.1",
+  "description": "A CLI and toolkit to extract information from React components for documentation generation.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reactjs/react-docgen.git"
+  },
+  "bugs": "https://github.com/reactjs/react-docgen/issues",
+  "bin": {
+    "react-docgen": "bin/react-docgen.js"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "engines": {
+    "node": ">=8.10.0"
+  },
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "rimraf dist/ && babel src/ --out-dir dist/ --ignore **/__tests__,**/__mocks__,**/src/types.js",
+    "prepare": "yarn build"
+  },
+  "keywords": [
+    "react",
+    "documentation-generation"
+  ],
+  "author": "Felix Kling",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/runtime": "^7.0.0",
+    "ast-types": "^0.12.4",
+    "async": "^2.1.4",
+    "commander": "^2.19.0",
+    "doctrine": "^3.0.0",
+    "node-dir": "^0.1.10",
+    "strip-indent": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-flow": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.1.0",
+    "benchmark": "^2.1.4",
+    "cli-table": "^0.3.1",
+    "cross-spawn": "^6.0.4",
+    "eslint": "^5.7.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "flow-bin": "^0.98.0",
+    "jest": "^24.1.0",
+    "jest-diff": "^24.0.0",
+    "jest-matcher-utils": "^24.0.0",
+    "prettier": "^1.14.3",
+    "rimraf": "^2.3.2",
+    "temp": "^0.9.0"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "./tests/NodePathSerializer.js"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/tests/setupTestFramework.js"
+    ],
+    "roots": [
+      "bin",
+      "src"
+    ],
+    "testRegex": "/__tests__/.*-test\\.js$"
+  }
+}
