@@ -5,6 +5,7 @@
  */
 
 import ClayMultiSelect from '..';
+import ClayDropDown from '@clayui/drop-down';
 import {cleanup, fireEvent, render} from '@testing-library/react';
 import * as React from 'react';
 
@@ -25,7 +26,7 @@ const items = [
 
 const ClayMultiSelectWithState = (props: any) => {
 	const [items, setItems] = React.useState(props.items as [] | []);
-	const [value, setValue] = React.useState('');
+	const [value, setValue] = React.useState(props.inputValue || '');
 
 	return (
 		<ClayMultiSelect
@@ -72,6 +73,55 @@ describe('ClayMultiSelect', () => {
 				disabled
 				isValid={false}
 				items={items}
+				spritemap="/foo/bar"
+			/>
+		);
+
+		expect(document.body).toMatchSnapshot();
+	});
+
+	it('renders a custom menu', () => {
+		const MenuCustom: React.ComponentProps<
+			typeof ClayMultiSelect
+		>['menuRenderer'] = ({
+			inputValue,
+			locator,
+			onItemClick = () => {},
+			sourceItems,
+		}) => (
+			<ClayDropDown.ItemList>
+				{sourceItems
+					.filter(
+						item =>
+							inputValue && item[locator.label].match(inputValue)
+					)
+					.map(item => (
+						<ClayDropDown.Item
+							key={item.value}
+							onClick={() => onItemClick(item)}
+						>
+							<strong>{item[locator.label]}</strong>
+							<p>{'Name'}</p>
+						</ClayDropDown.Item>
+					))}
+			</ClayDropDown.ItemList>
+		);
+
+		render(
+			<ClayMultiSelectWithState
+				inputValue="one"
+				items={items}
+				menuRenderer={MenuCustom}
+				sourceItems={[
+					{
+						label: 'one',
+						value: '1',
+					},
+					{
+						label: 'two',
+						value: '2',
+					},
+				]}
 				spritemap="/foo/bar"
 			/>
 		);
