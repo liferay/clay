@@ -126,6 +126,48 @@ describe('ClayDropDown', () => {
 		).not.toContain('show');
 	});
 
+	it('hides dropdown when tabbed out', () => {
+		const {container, getByTestId} = render(
+			<div>
+				<DropDownWithState>
+					<ClayDropDown.ItemList>
+						{[
+							{href: '#one', label: 'one'},
+							{href: '#two', label: 'two'},
+							{href: '#three', label: 'three'},
+						].map((item, i) => (
+							<ClayDropDown.Item
+								href={item.href}
+								key={i}
+								spritemap="/foo/bar"
+							>
+								{item.label}
+							</ClayDropDown.Item>
+						))}
+					</ClayDropDown.ItemList>
+				</DropDownWithState>
+
+				<button data-testid="BUTTON_OUTSIDE">{'outside item'}</button>
+			</div>
+		);
+
+		const toggleButton = container.querySelector('.dropdown-toggle');
+
+		fireEvent.click(toggleButton as HTMLButtonElement, {});
+
+		expect(
+			document.body.querySelector('.dropdown-menu')!.classList
+		).toContain('show');
+
+		const containerElement = getByTestId('BUTTON_OUTSIDE');
+
+		fireEvent.focus(containerElement as HTMLDivElement, {});
+
+		expect(
+			document.body.querySelector('.dropdown-menu')!.classList
+		).not.toContain('show');
+	});
+
 	it('renders with search input', () => {
 		const {container} = render(
 			<DropDownWithState>
