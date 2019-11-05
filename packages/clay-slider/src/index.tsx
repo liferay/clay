@@ -87,7 +87,7 @@ const ClaySlider: React.FunctionComponent<IProps> = ({
 	tooltipPosition = 'top',
 	value,
 	...otherProps
-}) => {
+}: IProps) => {
 	const [offsetWidth, setOffsetWidth] = useState<number>(0);
 	const sliderRef = useRef<HTMLInputElement | null>(null);
 	const thumbRef = useRef<HTMLDivElement | null>(null);
