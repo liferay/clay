@@ -20,10 +20,10 @@ export default props => {
 	const {
 		data,
 		location,
-		pageContext: {blacklist = [], markdownJsx, slug},
+		pageContext: {blacklist = [], markdownJsx},
 	} = props;
 	const {allMarkdownRemark, allMdx, markdownRemark, mdx, tabs} = data;
-	const {code, excerpt, frontmatter, html, timeToRead} =
+	const {code, excerpt, fields, frontmatter, html, timeToRead} =
 		mdx || markdownRemark;
 
 	const hasTabs = tabs.edges.length > 0;
@@ -39,29 +39,6 @@ export default props => {
 	};
 
 	const showDescTop = !frontmatter.packageNpm && frontmatter.description;
-
-	let packageVersion = frontmatter.packageVersion;
-
-	const allMdxFieldValue = allMdx.edges.find(
-		({node}) => node.fields.slug === slug
-	);
-
-	if (!packageVersion && allMdxFieldValue) {
-		packageVersion = allMdxFieldValue.node.fields.packageVersion;
-	}
-
-	let packageStatus = frontmatter.packageStatus;
-
-	if (!packageStatus && allMdxFieldValue) {
-		const isBeta = ['beta', 'alpha', 'milestone'].some(subs =>
-			packageVersion.includes(subs)
-		);
-		if (isBeta) {
-			packageStatus = 'Beta';
-		} else {
-			packageStatus = 'Stable';
-		}
-	}
 
 	useEffect(() => {
 		document
@@ -168,33 +145,36 @@ export default props => {
 												id="advanced"
 												role="tabpanel"
 											>
-												{packageStatus && (
-													<Link
-														className="clay-site-label"
-														to="/docs/get-started/how-to-read-this-documentation.html"
-													>
-														<span
-															className={`label label-${
-																mapStatus[
-																	packageStatus.toLowerCase()
-																]
-															}`}
+												{fields &&
+													fields.packageStatus && (
+														<Link
+															className="clay-site-label"
+															to="/docs/get-started/how-to-read-this-documentation.html"
 														>
-															<span className="label-item label-item-expand">
-																{packageStatus}
-															</span>
-														</span>
-														{packageVersion && (
-															<span className="label label-secondary">
+															<span
+																className={`label label-${
+																	mapStatus[
+																		fields.packageStatus.toLowerCase()
+																	]
+																}`}
+															>
 																<span className="label-item label-item-expand">
 																	{
-																		packageVersion
+																		fields.packageStatus
 																	}
 																</span>
 															</span>
-														)}
-													</Link>
-												)}
+															{fields.packageVersion && (
+																<span className="label label-secondary">
+																	<span className="label-item label-item-expand">
+																		{
+																			fields.packageVersion
+																		}
+																	</span>
+																</span>
+															)}
+														</Link>
+													)}
 												{!showDescTop && (
 													<p className="docs-description">
 														{
@@ -322,9 +302,11 @@ export const pageQuery = graphql`
 			frontmatter {
 				description
 				packageNpm
+				title
+			}
+			fields {
 				packageStatus
 				packageVersion
-				title
 			}
 			code {
 				body
