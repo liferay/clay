@@ -36,10 +36,6 @@ export const Slider = () => {
 	const scope = {ClaySlider, useState};
 
 	return (
-		<Editor
-			code={SliderCode}
-			imports={sliderImportsCode}
-			scope={scope}
-		/>
+		<Editor code={SliderCode} imports={sliderImportsCode} scope={scope} />
 	);
 };
