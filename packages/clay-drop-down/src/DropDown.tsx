@@ -6,7 +6,7 @@
 
 import {FocusScope} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useRef} from 'react';
+import React, {useRef, useEffect} from 'react';
 
 import Action from './Action';
 import Caption from './Caption';
@@ -95,6 +95,25 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 			onActiveChange(!active);
 		}
 	};
+
+	const handleFocus = (event: FocusEvent) => {
+		if (
+			menuElementRef.current &&
+			!menuElementRef.current.contains(event.target as Node) &&
+			triggerElementRef.current &&
+			!triggerElementRef.current.contains(event.target as Node)
+		) {
+			onActiveChange(false);
+		}
+	};
+
+	useEffect(() => {
+		document.addEventListener('focus', handleFocus, true);
+
+		return () => {
+			document.removeEventListener('focus', handleFocus, true);
+		};
+	}, [handleFocus]);
 
 	return (
 		<FocusScope>
