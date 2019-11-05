@@ -103,20 +103,19 @@ const FeedbackIndicator = React.forwardRef<
 	)
 );
 
-const ClayForm: React.FunctionComponent<
+const ClayForm = React.forwardRef<
+	HTMLFormElement,
 	React.HTMLAttributes<HTMLFormElement>
-> & {
-	FeedbackGroup: typeof FeedbackGroup;
-	FeedbackIndicator: typeof FeedbackIndicator;
-	FeedbackItem: typeof FeedbackItem;
-	Group: typeof Group;
-	Text: typeof Text;
-} = ({children, ...otherProps}) => <form {...otherProps}>{children}</form>;
+>(({children, ...otherProps}, ref) => (
+	<form {...otherProps} ref={ref}>
+		{children}
+	</form>
+));
 
-ClayForm.FeedbackGroup = FeedbackGroup;
-ClayForm.FeedbackIndicator = FeedbackIndicator;
-ClayForm.FeedbackItem = FeedbackItem;
-ClayForm.Group = Group;
-ClayForm.Text = Text;
-
-export default ClayForm;
+export default Object.assign(ClayForm, {
+	FeedbackGroup,
+	FeedbackIndicator,
+	FeedbackItem,
+	Group,
+	Text,
+});
