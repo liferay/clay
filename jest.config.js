@@ -18,7 +18,7 @@ module.exports = {
 		'browserslist-config-clay',
 		'fixtures',
 		'lib',
-		'next.clayui.com',
+		'clayui.com',
 	],
 	transform: {
 		'.(ts|tsx)': 'ts-jest',
