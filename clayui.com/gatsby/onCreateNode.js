@@ -51,6 +51,16 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 
 		const pkgVersion = pkgConfig ? pkgConfig.version : packageVersion;
 
+		let pkgStatus = packageStatus;
+
+		if (pkgVersion && packageNpm) {
+			const isBeta = ['beta', 'alpha', 'milestone'].some(subs =>
+				pkgVersion.includes(subs)
+			);
+
+			pkgStatus = isBeta ? 'Beta' : 'Stable';
+		}
+
 		if (!slug) {
 			if (relativePath.includes('docs')) {
 				if (relativePath.endsWith('.md')) {
@@ -106,7 +116,7 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 		createNodeField({
 			name: 'packageStatus',
 			node,
-			value: packageStatus || '',
+			value: pkgStatus || '',
 		});
 
 		createNodeField({
