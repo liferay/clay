@@ -34,7 +34,6 @@ interface IDataType extends Omit<Omit<Data, 'type'>, 'columns'> {
 export interface IProps {
 	data: IDataType;
 	elementProps?: React.HTMLAttributes<HTMLDivElement>;
-	forwardRef: React.MutableRefObject<any>;
 	grid?: Grid;
 	line?: LineOptions;
 	point?: PointOptions;
@@ -45,61 +44,48 @@ export interface IProps {
 /**
  * Chart component.
  */
-const ClayChart: React.FunctionComponent<IProps> = ({
-	color,
-	data,
-	elementProps,
-	forwardRef,
-	grid,
-	line,
-	point,
-	...otherProps
-}) => {
-	let ChartComponent;
-
-	switch (data.type as Types) {
-		case 'geo-map':
-			delete data.type;
-
-			ChartComponent = GeoMap;
-			break;
-		case 'predictive':
-			delete data.type;
-
-			ChartComponent = Predictive;
-			break;
-		default:
-			ChartComponent = BillboardWrapper;
-	}
-
-	return (
-		<ChartComponent
-			{...otherProps}
-			color={{pattern: DEFAULT_COLORS, ...color}}
-			data={data as Data}
-			elementProps={elementProps}
-			grid={Object.assign(DEFAULT_GRID_OBJECT, grid)}
-			line={{classes: DEFAULT_LINE_CLASSES, ...line}}
-			point={{
-				pattern: DEFAULT_POINT_PATTERNS,
-				...point,
-			}}
-			ref={forwardRef}
-		/>
-	);
-};
-
-export {bb};
-
-export default React.forwardRef<HTMLDivElement, Omit<IProps, 'forwardRef'>>(
-	(props, ref) => {
+const ClayChart = React.forwardRef<HTMLDivElement, IProps>(
+	(
+		{color, data, elementProps, grid, line, point, ...otherProps}: IProps,
+		ref
+	) => {
 		const defaultRef = React.useRef<any>();
 
+		let ChartComponent;
+
+		switch (data.type as Types) {
+			case 'geo-map':
+				delete data.type;
+
+				ChartComponent = GeoMap;
+				break;
+			case 'predictive':
+				delete data.type;
+
+				ChartComponent = Predictive;
+				break;
+			default:
+				ChartComponent = BillboardWrapper;
+		}
+
 		return (
-			<ClayChart
-				forwardRef={(ref as React.MutableRefObject<any>) || defaultRef}
-				{...props}
+			<ChartComponent
+				{...otherProps}
+				color={{pattern: DEFAULT_COLORS, ...color}}
+				data={data as Data}
+				elementProps={elementProps}
+				grid={Object.assign(DEFAULT_GRID_OBJECT, grid)}
+				line={{classes: DEFAULT_LINE_CLASSES, ...line}}
+				point={{
+					pattern: DEFAULT_POINT_PATTERNS,
+					...point,
+				}}
+				ref={(ref as React.MutableRefObject<any>) || defaultRef}
 			/>
 		);
 	}
 );
+
+export {bb};
+
+export default ClayChart;

@@ -22,8 +22,6 @@ interface IProps
 	 */
 	disabled?: boolean;
 
-	forwardRef?: React.Ref<HTMLLIElement>;
-
 	/**
 	 * Path for item to link to.
 	 */
@@ -47,58 +45,64 @@ interface IProps
 	symbolRight?: string;
 }
 
-const ClayDropDownItem: React.FunctionComponent<IProps> = ({
-	active,
-	children,
-	className,
-	disabled,
-	forwardRef,
-	href,
-	innerRef,
-	onClick,
-	spritemap,
-	symbolLeft,
-	symbolRight,
-	tabIndex,
-	...otherProps
-}: IProps) => {
-	const clickableElement = onClick ? 'button' : 'span';
-	const ItemElement = href ? 'a' : clickableElement;
+const ClayDropDownItem = React.forwardRef<HTMLLIElement, IProps>(
+	(
+		{
+			active,
+			children,
+			className,
+			disabled,
+			href,
+			innerRef,
+			onClick,
+			spritemap,
+			symbolLeft,
+			symbolRight,
+			tabIndex,
+			...otherProps
+		}: IProps,
+		ref
+	) => {
+		const clickableElement = onClick ? 'button' : 'span';
+		const ItemElement = href ? 'a' : clickableElement;
 
-	return (
-		<li aria-selected={active} ref={forwardRef}>
-			<ItemElement
-				{...otherProps}
-				className={classNames('dropdown-item', className, {
-					active,
-					disabled,
-				})}
-				disabled={disabled}
-				href={href}
-				onClick={onClick}
-				ref={innerRef}
-				tabIndex={disabled ? -1 : tabIndex}
-			>
-				{symbolLeft && (
-					<span className="dropdown-item-indicator-start">
-						<ClayIcon spritemap={spritemap} symbol={symbolLeft} />
-					</span>
-				)}
+		return (
+			<li aria-selected={active} ref={ref}>
+				<ItemElement
+					{...otherProps}
+					className={classNames('dropdown-item', className, {
+						active,
+						disabled,
+					})}
+					disabled={disabled}
+					href={href}
+					onClick={onClick}
+					ref={innerRef}
+					tabIndex={disabled ? -1 : tabIndex}
+				>
+					{symbolLeft && (
+						<span className="dropdown-item-indicator-start">
+							<ClayIcon
+								spritemap={spritemap}
+								symbol={symbolLeft}
+							/>
+						</span>
+					)}
 
-				{children}
+					{children}
 
-				{symbolRight && (
-					<span className="dropdown-item-indicator-end">
-						<ClayIcon spritemap={spritemap} symbol={symbolRight} />
-					</span>
-				)}
-			</ItemElement>
-		</li>
-	);
-};
-
-export default React.forwardRef(
-	(props: Omit<IProps, 'forwardRef'>, ref?: React.Ref<HTMLLIElement>) => (
-		<ClayDropDownItem {...props} forwardRef={ref} />
-	)
+					{symbolRight && (
+						<span className="dropdown-item-indicator-end">
+							<ClayIcon
+								spritemap={spritemap}
+								symbol={symbolRight}
+							/>
+						</span>
+					)}
+				</ItemElement>
+			</li>
+		);
+	}
 );
+
+export default ClayDropDownItem;
