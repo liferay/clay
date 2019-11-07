@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/liferay/clay/tree/master/packages/clay-drop-down/compare/@clayui/drop-down@3.1.0...@clayui/drop-down@3.1.1) (2019-11-07)
+
+
+### Bug Fixes
+
+* **@clayui/drop-down:** hide DropDown when focus shifts out of element ([cd247c5](https://github.com/liferay/clay/tree/master/packages/clay-drop-down/commit/cd247c5))
+
+
+
+
+
 # [3.1.0](https://github.com/liferay/clay/tree/master/packages/clay-drop-down/compare/@clayui/drop-down@3.0.1...@clayui/drop-down@3.1.0) (2019-11-01)
 
 ### Bug Fixes
