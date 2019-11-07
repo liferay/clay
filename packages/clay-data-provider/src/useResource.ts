@@ -44,9 +44,11 @@ const useResource = ({
 }: IResource) => {
 	const [resource, setResource] = useState<any>(null);
 
-	let pollingIntervalId = useRef<null | NodeJS.Timeout>(null).current;
+	let pollingTimeoutId = useRef<null | NodeJS.Timeout>(null).current;
 
-	let retryDelayIntervalId = useRef<null | NodeJS.Timeout>(null).current;
+	let retryDelayTimeoutId = useRef<null | NodeJS.Timeout>(null).current;
+
+	const pollIntervalRef = useRef(pollInterval);
 
 	// A flag to identify if the first rendering happened to avoid
 	// two requests.
@@ -68,8 +70,8 @@ const useResource = ({
 	};
 
 	const cleanRetry = () => {
-		if (retryDelayIntervalId) {
-			clearInterval(retryDelayIntervalId);
+		if (retryDelayTimeoutId) {
+			clearTimeout(retryDelayTimeoutId);
 		}
 	};
 
@@ -102,7 +104,7 @@ const useResource = ({
 					1} of ${attempts} will happen in ${delay}ms`
 			);
 
-			retryDelayIntervalId = setInterval(() => {
+			retryDelayTimeoutId = setTimeout(() => {
 				doFetch(retryAttempts + 1);
 			}, delay);
 		} else {
@@ -111,8 +113,15 @@ const useResource = ({
 		}
 	};
 
-	const cleanPoll = () =>
-		pollingIntervalId && clearInterval(pollingIntervalId);
+	const cleanPoll = () => pollingTimeoutId && clearTimeout(pollingTimeoutId);
+
+	const setPoll = () => {
+		cleanPoll();
+
+		pollingTimeoutId = setTimeout(() => {
+			maybeFetch(NetworkStatus.Polling);
+		}, pollIntervalRef.current);
+	};
 
 	const fetchOnComplete = (result: any) => {
 		// Should clear retry interval if any of the
@@ -124,12 +133,8 @@ const useResource = ({
 
 		cache.set(result);
 
-		if (pollInterval > 0) {
-			cleanPoll();
-
-			pollingIntervalId = setInterval(() => {
-				maybeFetch(NetworkStatus.Polling);
-			}, pollInterval);
+		if (pollIntervalRef.current > 0) {
+			setPoll();
 		}
 	};
 
@@ -215,6 +220,14 @@ const useResource = ({
 	};
 
 	useEffect(() => {
+		pollIntervalRef.current = pollInterval;
+
+		if (pollInterval > 0) {
+			setPoll();
+		}
+	}, [pollInterval]);
+
+	useEffect(() => {
 		if (!firstRenderRef.current) {
 			maybeFetch(NetworkStatus.Refetch);
 		}
@@ -230,6 +243,11 @@ const useResource = ({
 			if (storage[SYMBOL_ORIGIN]) {
 				cache.reset();
 			}
+
+			// Set to zero to prevent any unfinished requests
+			// from continuing polling after umount has occurred.
+			pollIntervalRef.current = 0;
+
 			cleanPoll();
 			cleanRetry();
 		};
