@@ -7,10 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @clayui/autocomplete
 
-
-
-
-
 ## [3.0.2](https://github.com/liferay/clay/tree/master/packages/clay-autocomplete/compare/@clayui/autocomplete@3.0.1...@clayui/autocomplete@3.0.2) (2019-11-01)
 
 **Note:** Version bump only for package @clayui/autocomplete

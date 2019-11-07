@@ -7,10 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package clayui.com
 
-
-
-
-
 # [3.0.0-alpha.3](https://github.com/matuzalemsteles/clay/compare/clayui.com@3.0.0-alpha.2...clayui.com@3.0.0-alpha.3) (2019-11-01)
 
 **Note:** Version bump only for package clayui.com
