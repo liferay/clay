@@ -20,16 +20,32 @@ const ENTER_KEY = 13;
 const DELIMITER_KEYS = [ENTER_KEY, COMMA_KEY];
 
 type Item = {
+	[propName: string]: any;
+
 	/**
 	 * Label to show.
 	 */
-	label: string;
+	label?: string;
 
 	/**
 	 * Hidden value of the item.
 	 */
+	value?: string;
+};
+
+type Locator = {
+	label: string;
 	value: string;
 };
+
+interface IMenuRendererProps {
+	inputValue: string;
+	locator: Locator;
+	onItemClick?: (item: Item) => void;
+	sourceItems: Array<Item>;
+}
+
+type MenuRenderer = React.FunctionComponent<IMenuRendererProps>;
 
 export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	/**
@@ -41,6 +57,12 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	 * Aria label for the Close button of the labels.
 	 */
 	closeButtonAriaLabel?: string;
+
+	/**
+	 * Adds a component to replace the default component that renders
+	 * the content of the `<ClayDropDown />` component.
+	 */
+	menuRenderer?: MenuRenderer;
 
 	/**
 	 * Flag that indicates to disable all features of the component.
@@ -73,6 +95,11 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	items: Array<Item>;
 
 	/**
+	 * Sets the name of the field to map the value/label of the item
+	 */
+	locator?: Locator;
+
+	/**
 	 * Callback for when the clear all button is clicked
 	 */
 	onClearAllButtonClick?: () => void;
@@ -98,6 +125,26 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	spritemap?: string;
 }
 
+const MultiSelectMenuRenderer: MenuRenderer = ({
+	inputValue,
+	locator,
+	onItemClick = () => {},
+	sourceItems,
+}) => (
+	<ClayDropDown.ItemList>
+		{sourceItems
+			.filter(item => inputValue && item[locator.label].match(inputValue))
+			.map(item => (
+				<ClayAutocomplete.Item
+					key={item[locator.value]}
+					match={inputValue}
+					onClick={() => onItemClick(item)}
+					value={item[locator.label]}
+				/>
+			))}
+	</ClayDropDown.ItemList>
+);
+
 const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 	(
 		{
@@ -109,13 +156,18 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 			inputValue = '',
 			isValid = true,
 			items = [],
+			locator = {
+				label: 'label',
+				value: 'value',
+			},
+			menuRenderer: MenuRenderer = MultiSelectMenuRenderer,
 			onBlur = noop,
 			onClearAllButtonClick = () => {
 				onItemsChange([]);
 				onChange('');
 			},
-			onFocus = noop,
 			onChange = noop,
+			onFocus = noop,
 			onItemsChange = noop,
 			onKeyDown = noop,
 			onPaste = noop,
@@ -134,7 +186,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 		useLayoutEffect(() => {
 			if (sourceItems) {
 				const matchedItems = sourceItems.filter(
-					item => inputValue && item.label.match(inputValue)
+					item => inputValue && item[locator.label].match(inputValue)
 				);
 
 				setActive(matchedItems.length !== 0);
@@ -148,7 +200,16 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 		};
 
 		const getSourceItemByLabel = (label: string) => {
-			return sourceItems.find(item => item.label === label);
+			return sourceItems.find(item => item[locator.label] === label);
+		};
+
+		const getNewItem = (value: string): Item => {
+			return (
+				getSourceItemByLabel(value) || {
+					[locator.label]: value,
+					[locator.value]: value,
+				}
+			);
 		};
 
 		const handleKeyDown = (
@@ -161,12 +222,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 			if (inputValue && DELIMITER_KEYS.includes(keyCode)) {
 				event.preventDefault();
 
-				const newItem: Item = getSourceItemByLabel(inputValue) || {
-					label: inputValue,
-					value: inputValue,
-				};
-
-				setNewValue(newItem);
+				setNewValue(getNewItem(inputValue));
 			} else if (
 				!inputValue &&
 				keyCode === BACKSPACE_KEY &&
@@ -185,16 +241,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 
 			const pastedItems = pastedText
 				.split(',')
-				.map(itemLabel => {
-					itemLabel = itemLabel.trim();
-
-					const newItem: Item = getSourceItemByLabel(itemLabel) || {
-						label: itemLabel,
-						value: itemLabel,
-					};
-
-					return newItem;
-				})
+				.map(itemLabel => getNewItem(itemLabel.trim()))
 				.filter(Boolean);
 
 			if (pastedItems.length > 0) {
@@ -232,7 +279,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 										closeButtonProps={{
 											'aria-label': sub(
 												closeButtonAriaLabel,
-												[item.label]
+												[item[locator.label]]
 											),
 											disabled,
 											onClick: () => {
@@ -258,14 +305,14 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 										}}
 										spritemap={spritemap}
 									>
-										{item.label}
+										{item[locator.label]}
 									</ClayLabel>
 
 									{inputName && (
 										<input
 											name={inputName}
 											type="hidden"
-											value={item.value}
+											value={item[locator.value]}
 										/>
 									)}
 								</React.Fragment>
@@ -325,28 +372,18 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 							alignElementRef={containerRef}
 							onSetActive={setActive}
 						>
-							<ClayDropDown.ItemList>
-								{sourceItems
-									.filter(
-										item =>
-											inputValue &&
-											item.label.match(inputValue)
-									)
-									.map(item => (
-										<ClayAutocomplete.Item
-											key={item.value}
-											match={inputValue}
-											onClick={() => {
-												setNewValue(item);
+							<MenuRenderer
+								inputValue={inputValue}
+								locator={locator}
+								onItemClick={item => {
+									setNewValue(item);
 
-												if (inputRef.current) {
-													inputRef.current.focus();
-												}
-											}}
-											value={item.label}
-										/>
-									))}
-							</ClayDropDown.ItemList>
+									if (inputRef.current) {
+										inputRef.current.focus();
+									}
+								}}
+								sourceItems={sourceItems}
+							/>
 						</ClayAutocomplete.DropDown>
 					)}
 				</div>

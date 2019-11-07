@@ -8,6 +8,7 @@ sibling: 'docs/components/forms/css-text-input-multi-select.html'
 import {
 	MultiSelectInput,
 	MultiSelectInputWithAutocomplete,
+	MultiSelectInputWithCustomAutocomplete,
 	MultiSelectInputWithSelectButton,
 	MultiSelectInputWithValidation,
 } from '../../../../src/components/clay/MultiSelect';
@@ -19,6 +20,7 @@ import {
     -   [Autocomplete](#autocomplete)
     -   [Select Button](#select-button)
     -   [Validation](#validation)
+-   [Custom Autocomplete](#custom-autocomplete)
 -   [API](#api)
 
 </div>
@@ -66,6 +68,12 @@ According to the Lexicon specification a `Select` button can be grouped with Mul
 An input needs validation so you can add some composition props with `<ClayInput />` and `<ClayForm />` to get the result.
 
 <MultiSelectInputWithValidation />
+
+## Custom Autocomplete
+
+To customize Autocomplete content to stylize to your needs and also have filter control, you can use the `menuRenderer` API.
+
+<MultiSelectInputWithCustomAutocomplete />
 
 ## API
 
