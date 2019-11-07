@@ -5,8 +5,11 @@
  */
 
 import ClayButton from '@clayui/button';
+import ClayDropDown from '@clayui/drop-down';
 import ClayForm, {ClayInput} from '@clayui/form';
+import ClayIcon from '@clayui/icon';
 import ClayMultiSelect from '@clayui/multi-select';
+import ClaySticker from '@clayui/sticker';
 import React, {useState} from 'react';
 
 import Editor from './Editor';
@@ -284,9 +287,101 @@ const MultiSelectInputWithValidation = () => {
 	);
 };
 
+const multiSelectWithCustomAutocompleteCode = `const MenuCustom = ({
+	inputValue,
+	locator,
+	onItemClick = () => {},
+	sourceItems,
+}) => (
+	<ClayDropDown.ItemList>
+		{sourceItems
+			.filter(item => inputValue && item[locator.label].match(inputValue))
+			.map(item => (
+				<ClayDropDown.Item
+					key={item[locator.value]}
+					onClick={() => onItemClick(item)}
+				>
+					<div className="autofit-row autofit-row-center">
+						<div className="autofit-col mr-3">
+							<ClaySticker
+								className="sticker-user-icon"
+								size="lg"
+							>
+								<ClayIcon spritemap={spritemap} symbol="user" />
+							</ClaySticker>
+						</div>
+						<div className="autofit-col">
+							<strong>{item[locator.label]}</strong>
+							<span>{item.email}</span>
+						</div>
+					</div>
+				</ClayDropDown.Item>
+			))}
+	</ClayDropDown.ItemList>
+);
+
+const Component = () => {
+	const [value, setValue] = useState('');
+	const [items, setItems] = useState([
+		{
+			email: 'one@example.com',
+			label: 'One',
+			value: '1',
+		},
+	]);
+
+	const sourceItems = [
+		{
+			email: 'one@example.com',
+			label: 'One',
+			value: '1',
+		},
+		{
+			email: 'two@example.com',
+			label: 'Two',
+			value: '2',
+		},
+	];
+
+	return (
+		<ClayMultiSelect
+			inputName="myInput"
+			inputValue={value}
+			items={items}
+			menuRenderer={MenuCustom}
+			onChange={setValue}
+			onItemsChange={setItems}
+			sourceItems={sourceItems}
+			spritemap={spritemap}
+		/>
+	);
+}
+
+render(<Component />)`;
+
+const MultiSelectInputWithCustomAutocomplete = () => {
+	const scope = {
+		ClayDropDown,
+		ClayIcon,
+		ClayMultiSelect,
+		ClaySticker,
+		spritemap,
+		useState,
+	};
+
+	return (
+		<Editor
+			code={multiSelectWithCustomAutocompleteCode}
+			imports={multiSelectImportsCode}
+			scope={scope}
+		/>
+	);
+};
+
 export {
 	MultiSelectInput,
 	MultiSelectInputWithAutocomplete,
+	MultiSelectInputWithCustomAutocomplete,
 	MultiSelectInputWithSelectButton,
 	MultiSelectInputWithValidation,
 };
