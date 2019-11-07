@@ -5,14 +5,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.0.3](https://github.com/liferay/clay/tree/master/packages/clay-data-provider/compare/@clayui/data-provider@3.0.2...@clayui/data-provider@3.0.3) (2019-11-07)
 
-
 ### Bug Fixes
 
-* **@clayui/data-provider:** replace setInterval in favor of setTimeout and polling engine improvements ([a028394](https://github.com/liferay/clay/tree/master/packages/clay-data-provider/commit/a028394))
-
-
-
-
+-   **@clayui/data-provider:** replace setInterval in favor of setTimeout and polling engine improvements ([a028394](https://github.com/liferay/clay/tree/master/packages/clay-data-provider/commit/a028394))
 
 ## [3.0.2](https://github.com/liferay/clay/tree/master/packages/clay-data-provider/compare/@clayui/data-provider@3.0.1...@clayui/data-provider@3.0.2) (2019-11-01)
 

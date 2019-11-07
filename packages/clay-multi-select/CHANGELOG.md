@@ -5,14 +5,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [3.1.0](https://github.com/liferay/clay/tree/master/packages/clay-multi-select/compare/@clayui/multi-select@3.0.2...@clayui/multi-select@3.1.0) (2019-11-07)
 
-
 ### Features
 
-* **@clayui/multi-select:** adds support for DropDown.Menu content customization ([95653be](https://github.com/liferay/clay/tree/master/packages/clay-multi-select/commit/95653be))
-
-
-
-
+-   **@clayui/multi-select:** adds support for DropDown.Menu content customization ([95653be](https://github.com/liferay/clay/tree/master/packages/clay-multi-select/commit/95653be))
 
 ## [3.0.2](https://github.com/liferay/clay/tree/master/packages/clay-multi-select/compare/@clayui/multi-select@3.0.1...@clayui/multi-select@3.0.2) (2019-11-01)
 
