@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/liferay/clay/tree/master/packages/clay-form/compare/@clayui/form@3.1.0...@clayui/form@3.2.0) (2019-11-07)
+
+
+### Features
+
+* **@clayui/form:** add `forwardRef` support for `<ClayForm />` ([f5f3e7c](https://github.com/liferay/clay/tree/master/packages/clay-form/commit/f5f3e7c))
+
+
+
+
+
 # [3.1.0](https://github.com/liferay/clay/tree/master/packages/clay-form/compare/@clayui/form@3.0.0...@clayui/form@3.1.0) (2019-10-28)
 
 ### Bug Fixes
