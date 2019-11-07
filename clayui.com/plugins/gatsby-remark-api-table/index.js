@@ -38,23 +38,45 @@ module.exports = ({markdownAST}) => {
 			node =>
 				// eslint-disable-next-line no-async-promise-executor
 				new Promise(async resolve => {
-					const pathFile = path.resolve(
-						'../packages/',
-						node.value.split('"')[1]
-					);
+					/**
+					 * `.split()` is used to extract the file path from
+					 * a string like `[APITable "clay-form/src/Form.tsx#Text"]`
+					 */
+					const APITablePath = node.value.split('"')[1];
 
-					if (!fs.existsSync(pathFile)) {
+					/**
+					 * `.split()` is used remove the named component specified
+					 * and the filepath..
+					 */
+					const [fileName, componentName] = APITablePath.split('#');
+
+					const filePath = path.resolve('../packages/', fileName);
+
+					if (!fs.existsSync(filePath)) {
 						resolve(node);
 						return;
 					}
 
 					try {
-						const content = fs.readFileSync(pathFile, 'utf8');
-						const AST = await reactDocs.parse(content, null, null, {
-							filename: pathFile,
-						});
+						const content = fs.readFileSync(filePath, 'utf8');
+						const AST = await reactDocs.parse(
+							content,
+							componentName
+								? reactDocs.resolver.findAllComponentDefinitions
+								: null,
+							null,
+							{
+								filename: filePath,
+							}
+						);
 
-						const propsKeys = Object.keys(AST.props || {});
+						const component = componentName
+							? AST.find(
+									comp => comp.displayName === componentName
+							  )
+							: AST;
+
+						const propsKeys = Object.keys(component.props || {});
 
 						// eslint-disable-next-line require-atomic-updates
 						node.value = propsKeys.length
@@ -70,7 +92,7 @@ module.exports = ({markdownAST}) => {
 							</tr>
 						</thead>
 						<tbody>
-						${propsKeys.map(key => generateTr(AST.props[key], key)).join('')}
+						${propsKeys.map(key => generateTr(component.props[key], key)).join('')}
 						</tbody>
 						</table>`
 							: 'None.';
