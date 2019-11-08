@@ -9,18 +9,14 @@ import React from 'react';
 
 import {TDelimiter} from './types';
 
-type ColumnTextAlignmentType = 'center' | 'end' | 'start';
-
 type TableCellBaseProps = React.ThHTMLAttributes<HTMLTableHeaderCellElement> &
 	React.TdHTMLAttributes<HTMLTableDataCellElement>;
-
-type TextCellAlignmentType = 'center' | 'left' | 'right';
 
 interface ICellProps extends TableCellBaseProps {
 	/**
 	 * Aligns the text inside the Cell.
 	 */
-	align?: TextCellAlignmentType;
+	align?: 'center' | 'left' | 'right';
 
 	/**
 	 * Sometimes we are unable to remove specific table columns from the DOM
@@ -32,7 +28,7 @@ interface ICellProps extends TableCellBaseProps {
 	/**
 	 * Aligns horizontally contents inside the Cell.
 	 */
-	columnTextAlignment?: ColumnTextAlignmentType;
+	columnTextAlignment?: 'center' | 'end' | 'start';
 
 	/**
 	 * Fills out the remaining space inside a Cell.

@@ -16,11 +16,11 @@ import {boolean, select} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React from 'react';
 
-import ClayTable from '../src';
+import ClayTable, {ClayDataTable} from '../src';
 const thumbnail = require('./static/thumbnail_coffee.jpg');
 
 function ClayCheckboxWithState(props: any) {
-	const [value, setValue] = React.useState<boolean>(false);
+	const [value, setValue] = React.useState<boolean>(props.checked || false);
 
 	return (
 		<ClayCheckbox
@@ -534,4 +534,71 @@ storiesOf('Components|ClayTable', module)
 				</ClayTable.Body>
 			</ClayTable>
 		</form>
-	));
+	))
+	.add('with data table', () => {
+		const headers = [
+			{
+				key: 'checked',
+				type: 'checkbox',
+			},
+			{
+				header: 'Image',
+				key: 'imageUrl',
+				type: 'image',
+			},
+			{
+				expanded: true,
+				header: 'Teams',
+				headingTitle: true,
+				key: 'teams',
+			},
+			{
+				header: 'Region',
+				key: 'region',
+			},
+		];
+		const rows = [
+			{
+				checked: false,
+				id: 'a',
+				imageUrl: thumbnail,
+				region: 'South America',
+				teams: 'White and Red',
+			},
+			{
+				checked: true,
+				id: 'b',
+				imageUrl: thumbnail,
+				region: 'Europe',
+				teams: 'White and Purple',
+			},
+		];
+
+		const Image: React.FunctionComponent<any> = ({value, ...props}) => (
+			<ClayTable.Cell {...props}>
+				<img alt="thumbnail" className="table-img" src={value} />
+			</ClayTable.Cell>
+		);
+
+		const Checkbox: React.FunctionComponent<any> = ({value, ...props}) => (
+			<ClayTable.Cell {...props}>
+				<ClayCheckboxWithState
+					aria-label="Select row"
+					checked={value}
+				/>
+			</ClayTable.Cell>
+		);
+
+		const cellRenderers = {
+			checkbox: Checkbox,
+			image: Image,
+		};
+
+		return (
+			<ClayDataTable
+				cellRenderers={cellRenderers}
+				headers={headers}
+				rows={rows}
+			/>
+		);
+	});

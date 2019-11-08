@@ -816,248 +816,267 @@ Add `.table-sm` to make tables more compact by cutting cell padding in half.
 ## Inline Edit Table
 
 <div class="sheet-example">
-    <table class="table table-autofit table-list table-nowrap table-responsive">
-        <thead>
-            <tr>
-                <th>
-                    <span class="text-truncate-inline">
-                        <span class="text-truncate" title=""></span>
-                    </span>
-                </th>
-                <th class="table-cell-expand">
-                    <span class="text-truncate-inline">
-                        <span class="text-truncate" title="Title">Title</span>
-                    </span>
-                </th>
-                <th class="table-cell-expand">
-                    <span class="text-truncate-inline">
-                        <span class="text-truncate" title="Modified Date">Modified Date</span>
-                    </span>
-                </th>
-                <th class="table-column-text-end"></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <div class="custom-control custom-checkbox">
-                        <label>
-                            <input class="custom-control-input" type="checkbox">
-                            <span class="custom-control-label"></span>
-                        </label>
-                    </div>
-                </td>
-                <td class="table-cell-expand">
-                    <div class="table-list-title">
-                        <a class="text-truncate-inline" href="#1">
-                            <span class="text-truncate" title="Web Content 342122-322-abcdefg">Web Content 342122-322-abcdefg</span>
-                        </a>
-                    </div>
-                </td>
-                <td class="table-cell-expand">
-                    <span class="text-truncate-inline">
-                        <span class="text-truncate" title="35 Seconds Ago">35 Seconds Ago</span>
-                    </span>
-                </td>
-                <td class="table-column-text-end">
-                    <div class="btn-group btn-group-nowrap">
-                        <div class="btn-group-item">
-                            <button class="btn btn-secondary btn-sm" type="button">Edit</button>
+    <div class="table-responsive">
+        <table class="table table-autofit table-list table-nowrap">
+            <thead>
+                <tr>
+                    <th>
+                        <span class="text-truncate-inline">
+                            <span class="text-truncate" title=""></span>
+                        </span>
+                    </th>
+                    <th class="table-cell-expand">
+                        <span class="text-truncate-inline">
+                            <span class="text-truncate" title="Title">Title</span>
+                        </span>
+                    </th>
+                    <th class="table-cell-expand">
+                        <span class="text-truncate-inline">
+                            <span class="text-truncate" title="Modified Date">Modified Date</span>
+                        </span>
+                    </th>
+                    <th class="table-column-text-end"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="custom-control custom-checkbox">
+                            <label>
+                                <input class="custom-control-input" type="checkbox">
+                                <span class="custom-control-label"></span>
+                            </label>
                         </div>
-                        <div class="btn-group-item">
-                            <div class="dropdown dropdown-action">
-                                <a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
-                                    <svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-                                        <use href="/images/icons/icons.svg#ellipsis-v"></use>
-                                    </svg>
-                                </a>
-                                <ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
-                                    <li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
-                                    <li><a class="dropdown-item" href="#1" role="button">Recycle Bin</a></li>
-                                </ul>
+                    </td>
+                    <td class="table-cell-expand">
+                        <div class="table-list-title">
+                            <a class="text-truncate-inline" href="#1">
+                                <span class="text-truncate" title="Web Content 342122-322-abcdefg">Web Content 342122-322-abcdefg</span>
+                            </a>
+                        </div>
+                    </td>
+                    <td class="table-cell-expand">
+                        <span class="text-truncate-inline">
+                            <span class="text-truncate" title="35 Seconds Ago">35 Seconds Ago</span>
+                        </span>
+                    </td>
+                    <td class="table-column-text-end">
+                        <div class="btn-group btn-group-nowrap">
+                            <div class="btn-group-item">
+                                <button class="btn btn-secondary btn-sm" type="button">Edit</button>
+                            </div>
+                            <div class="btn-group-item">
+                                <div class="dropdown dropdown-action">
+                                    <a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+                                        <svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+                                            <use href="/images/icons/icons.svg#ellipsis-v"></use>
+                                        </svg>
+                                    </a>
+                                    <ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+                                        <li><a class="dropdown-item" href="#1" role="button">Edit</a></li>
+                                        <li><a class="dropdown-item" href="#1" role="button">Recycle Bin</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="custom-control custom-checkbox">
-                        <label>
-                            <input class="custom-control-input" type="checkbox">
-                            <span class="custom-control-label"></span>
-                        </label>
-                    </div>
-                </td>
-                <td class="table-cell-expand">
-                    <input class="form-control form-control-sm" type="text" value="Web Content B">
-                </td>
-                <td class="table-cell-expand">
-                    <span class="text-truncate-inline">
-                        <span class="text-truncate" title="20 Minutes Ago">20 Minutes Ago</span>
-                    </span>
-                </td>
-                <td class="table-column-text-end">
-                    <div class="btn-group btn-group-nowrap">
-                        <div class="btn-group-item">
-                            <button class="btn btn-primary btn-sm" type="button">Save</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="custom-control custom-checkbox">
+                            <label>
+                                <input class="custom-control-input" type="checkbox">
+                                <span class="custom-control-label"></span>
+                            </label>
                         </div>
-                        <div class="btn-group-item">
-                            <button class="btn btn-secondary btn-sm" type="button">Cancel</button>
+                    </td>
+                    <td class="table-cell-expand">
+                        <input class="form-control form-control-sm" type="text" value="Web Content B">
+                    </td>
+                    <td class="table-cell-expand">
+                        <span class="text-truncate-inline">
+                            <span class="text-truncate" title="20 Minutes Ago">20 Minutes Ago</span>
+                        </span>
+                    </td>
+                    <td class="table-column-text-end">
+                        <div class="btn-group btn-group-nowrap">
+                            <div class="btn-group-item">
+                                <button class="btn btn-primary btn-sm" type="button">Save</button>
+                            </div>
+                            <div class="btn-group-item">
+                                <button class="btn btn-secondary btn-sm" type="button">Cancel</button>
+                            </div>
                         </div>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 ```html
-<table class="table table-autofit table-list table-nowrap table-responsive">
-	<thead>
-		<tr>
-			<th>
-				<span class="text-truncate-inline">
-					<span class="text-truncate" title=""></span>
-				</span>
-			</th>
-			<th class="table-cell-expand">
-				<span class="text-truncate-inline">
-					<span class="text-truncate" title="Title">Title</span>
-				</span>
-			</th>
-			<th class="table-cell-expand">
-				<span class="text-truncate-inline">
-					<span class="text-truncate" title="Modified Date"
-						>Modified Date</span
-					>
-				</span>
-			</th>
-			<th class="table-column-text-end"></th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>
-				<div class="custom-control custom-checkbox">
-					<label>
-						<input class="custom-control-input" type="checkbox" />
-						<span class="custom-control-label"></span>
-					</label>
-				</div>
-			</td>
-			<td class="table-cell-expand">
-				<div class="table-list-title">
-					<a class="text-truncate-inline" href="#1">
-						<span
-							class="text-truncate"
-							title="Web Content 342122-322-abcdefg"
-							>Web Content 342122-322-abcdefg</span
+<div class="table-responsive">
+	<table class="table table-autofit table-list table-nowrap table-responsive">
+		<thead>
+			<tr>
+				<th>
+					<span class="text-truncate-inline">
+						<span class="text-truncate" title=""></span>
+					</span>
+				</th>
+				<th class="table-cell-expand">
+					<span class="text-truncate-inline">
+						<span class="text-truncate" title="Title">Title</span>
+					</span>
+				</th>
+				<th class="table-cell-expand">
+					<span class="text-truncate-inline">
+						<span class="text-truncate" title="Modified Date"
+							>Modified Date</span
 						>
-					</a>
-				</div>
-			</td>
-			<td class="table-cell-expand">
-				<span class="text-truncate-inline">
-					<span class="text-truncate" title="35 Seconds Ago"
-						>35 Seconds Ago</span
-					>
-				</span>
-			</td>
-			<td class="table-column-text-end">
-				<div class="btn-group btn-group-nowrap">
-					<div class="btn-group-item">
-						<button class="btn btn-secondary btn-sm" type="button">
-							Edit
-						</button>
+					</span>
+				</th>
+				<th class="table-column-text-end"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<div class="custom-control custom-checkbox">
+						<label>
+							<input
+								class="custom-control-input"
+								type="checkbox"
+							/>
+							<span class="custom-control-label"></span>
+						</label>
 					</div>
-					<div class="btn-group-item">
-						<div class="dropdown dropdown-action">
-							<a
-								aria-expanded="false"
-								aria-haspopup="true"
-								class="component-action dropdown-toggle"
-								data-toggle="dropdown"
-								href="#1"
-								id="dropdownAction1"
-								role="button"
+				</td>
+				<td class="table-cell-expand">
+					<div class="table-list-title">
+						<a class="text-truncate-inline" href="#1">
+							<span
+								class="text-truncate"
+								title="Web Content 342122-322-abcdefg"
+								>Web Content 342122-322-abcdefg</span
 							>
-								<svg
-									class="lexicon-icon lexicon-icon-ellipsis-v"
-									focusable="false"
-									role="presentation"
+						</a>
+					</div>
+				</td>
+				<td class="table-cell-expand">
+					<span class="text-truncate-inline">
+						<span class="text-truncate" title="35 Seconds Ago"
+							>35 Seconds Ago</span
+						>
+					</span>
+				</td>
+				<td class="table-column-text-end">
+					<div class="btn-group btn-group-nowrap">
+						<div class="btn-group-item">
+							<button
+								class="btn btn-secondary btn-sm"
+								type="button"
+							>
+								Edit
+							</button>
+						</div>
+						<div class="btn-group-item">
+							<div class="dropdown dropdown-action">
+								<a
+									aria-expanded="false"
+									aria-haspopup="true"
+									class="component-action dropdown-toggle"
+									data-toggle="dropdown"
+									href="#1"
+									id="dropdownAction1"
+									role="button"
 								>
-									<use
-										href="/images/icons/icons.svg#ellipsis-v"
-									></use>
-								</svg>
-							</a>
-							<ul
-								aria-labelledby=""
-								class="dropdown-menu dropdown-menu-right"
-							>
-								<li>
-									<a
-										class="dropdown-item"
-										href="#1"
-										role="button"
-										>Edit</a
+									<svg
+										class="lexicon-icon lexicon-icon-ellipsis-v"
+										focusable="false"
+										role="presentation"
 									>
-								</li>
-								<li>
-									<a
-										class="dropdown-item"
-										href="#1"
-										role="button"
-										>Recycle Bin</a
-									>
-								</li>
-							</ul>
+										<use
+											href="/images/icons/icons.svg#ellipsis-v"
+										></use>
+									</svg>
+								</a>
+								<ul
+									aria-labelledby=""
+									class="dropdown-menu dropdown-menu-right"
+								>
+									<li>
+										<a
+											class="dropdown-item"
+											href="#1"
+											role="button"
+											>Edit</a
+										>
+									</li>
+									<li>
+										<a
+											class="dropdown-item"
+											href="#1"
+											role="button"
+											>Recycle Bin</a
+										>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<div class="custom-control custom-checkbox">
-					<label>
-						<input class="custom-control-input" type="checkbox" />
-						<span class="custom-control-label"></span>
-					</label>
-				</div>
-			</td>
-			<td class="table-cell-expand">
-				<input
-					class="form-control form-control-sm"
-					type="text"
-					value="Web Content B"
-				/>
-			</td>
-			<td class="table-cell-expand">
-				<span class="text-truncate-inline">
-					<span class="text-truncate" title="20 Minutes Ago"
-						>20 Minutes Ago</span
-					>
-				</span>
-			</td>
-			<td class="table-column-text-end">
-				<div class="btn-group btn-group-nowrap">
-					<div class="btn-group-item">
-						<button class="btn btn-primary btn-sm" type="button">
-							Save
-						</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="custom-control custom-checkbox">
+						<label>
+							<input
+								class="custom-control-input"
+								type="checkbox"
+							/>
+							<span class="custom-control-label"></span>
+						</label>
 					</div>
-					<div class="btn-group-item">
-						<button class="btn btn-secondary btn-sm" type="button">
-							Cancel
-						</button>
+				</td>
+				<td class="table-cell-expand">
+					<input
+						class="form-control form-control-sm"
+						type="text"
+						value="Web Content B"
+					/>
+				</td>
+				<td class="table-cell-expand">
+					<span class="text-truncate-inline">
+						<span class="text-truncate" title="20 Minutes Ago"
+							>20 Minutes Ago</span
+						>
+					</span>
+				</td>
+				<td class="table-column-text-end">
+					<div class="btn-group btn-group-nowrap">
+						<div class="btn-group-item">
+							<button
+								class="btn btn-primary btn-sm"
+								type="button"
+							>
+								Save
+							</button>
+						</div>
+						<div class="btn-group-item">
+							<button
+								class="btn btn-secondary btn-sm"
+								type="button"
+							>
+								Cancel
+							</button>
+						</div>
 					</div>
-				</div>
-			</td>
-		</tr>
-	</tbody>
-</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
 ```
 
 ## Responsiveness
