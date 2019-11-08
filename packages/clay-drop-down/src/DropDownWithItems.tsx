@@ -45,7 +45,7 @@ interface IDropDownContentProps {
 	items: Array<IItem>;
 }
 
-interface IProps extends IDropDownContentProps {
+export interface IProps extends IDropDownContentProps {
 	/**
 	 * Default position of menu element. Values come from `metal-position`.
 	 */
