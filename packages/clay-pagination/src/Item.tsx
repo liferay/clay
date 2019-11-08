@@ -7,7 +7,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-interface IPaginationItemProps
+export interface IPaginationItemProps
 	extends React.HTMLAttributes<HTMLAnchorElement | HTMLButtonElement> {
 	active?: boolean;
 	disabled?: boolean;
