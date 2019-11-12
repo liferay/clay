@@ -16,7 +16,7 @@ interface IGroup extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const Group = React.forwardRef<HTMLDivElement, IGroup>(
-	({children, className, small, ...otherProps}, ref) => (
+	({children, className, small, ...otherProps}: IGroup, ref) => (
 		<div
 			{...otherProps}
 			className={classNames(
@@ -33,6 +33,8 @@ const Group = React.forwardRef<HTMLDivElement, IGroup>(
 	)
 );
 
+Group.displayName = 'Group';
+
 const Text = React.forwardRef<
 	HTMLDivElement,
 	React.HTMLAttributes<HTMLDivElement>
@@ -45,6 +47,8 @@ const Text = React.forwardRef<
 		{children}
 	</div>
 ));
+
+Text.displayName = 'Text';
 
 const FeedbackGroup = React.forwardRef<
 	HTMLDivElement,
@@ -59,6 +63,8 @@ const FeedbackGroup = React.forwardRef<
 	</div>
 ));
 
+FeedbackGroup.displayName = 'FeedbackGroup';
+
 const FeedbackItem = React.forwardRef<
 	HTMLDivElement,
 	React.HTMLAttributes<HTMLDivElement>
@@ -71,6 +77,8 @@ const FeedbackItem = React.forwardRef<
 		{children}
 	</div>
 ));
+
+FeedbackItem.displayName = 'FeedbackItem';
 
 interface IFeedbackIndicatorProps
 	extends React.HTMLAttributes<HTMLSpanElement> {
@@ -103,6 +111,8 @@ const FeedbackIndicator = React.forwardRef<
 	)
 );
 
+FeedbackIndicator.displayName = 'FeedbackIndicator';
+
 const ClayForm = React.forwardRef<
 	HTMLFormElement,
 	React.HTMLAttributes<HTMLFormElement>
@@ -111,6 +121,8 @@ const ClayForm = React.forwardRef<
 		{children}
 	</form>
 ));
+
+ClayForm.displayName = 'ClayForm';
 
 export default Object.assign(ClayForm, {
 	FeedbackGroup,
