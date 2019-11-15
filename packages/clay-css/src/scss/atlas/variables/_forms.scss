@@ -72,6 +72,7 @@ $input-readonly-bg: $white !default;
 $input-readonly: () !default;
 $input-readonly: map-deep-merge((
 	bg: $input-readonly-bg,
+	border-color: $input-border-color,
 	focus-box-shadow: none,
 ), $input-readonly);
 
@@ -87,6 +88,14 @@ $input-danger-border-color: $danger-l1 !default;
 $input-danger-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
 $input-danger-focus-box-shadow: $input-focus-box-shadow !default;
 $input-danger-color: $input-color !default;
+
+$input-danger-readonly: () !default;
+$input-danger-readonly: map-deep-merge((
+	bg: map-get($input-readonly, bg),
+	border-color: map-get($input-readonly, border-color),
+	focus-border-color: $input-focus-border-color,
+), $input-danger-readonly);
+
 $input-danger-checkbox-label-color: $danger !default;
 $input-danger-select-icon-color: $input-danger-border-color !default;
 $input-danger-select-icon: clay-icon(caret-double-l, $input-danger-select-icon-color) !default;
@@ -97,6 +106,14 @@ $input-success-border-color: $success-l1 !default;
 $input-success-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
 $input-success-focus-box-shadow: $input-focus-box-shadow !default;
 $input-success-color: $input-color !default;
+
+$input-success-readonly: () !default;
+$input-success-readonly: map-deep-merge((
+	bg: map-get($input-readonly, bg),
+	border-color: map-get($input-readonly, border-color),
+	focus-border-color: $input-focus-border-color,
+), $input-success-readonly);
+
 $input-success-checkbox-label-color: $success !default;
 $input-success-select-icon-color: $input-success-border-color !default;
 $input-success-select-icon: clay-icon(caret-double-l, $input-success-select-icon-color) !default;
@@ -106,6 +123,14 @@ $input-warning-border-color: $warning-l1 !default;
 // Will need to be revisited if https://github.com/twbs/bootstrap/pull/24821 merge error is fixed
 $input-warning-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
 $input-warning-focus-box-shadow: $input-focus-box-shadow !default;
+
+$input-warning-readonly: () !default;
+$input-warning-readonly: map-deep-merge((
+	bg: map-get($input-readonly, bg),
+	border-color: map-get($input-readonly, border-color),
+	focus-border-color: $input-focus-border-color,
+), $input-warning-readonly);
+
 $input-warning-color: $input-color !default;
 $input-warning-checkbox-label-color: $warning !default;
 $input-warning-select-icon-color: $input-warning-border-color !default;
