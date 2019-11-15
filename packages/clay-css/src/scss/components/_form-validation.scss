@@ -92,6 +92,10 @@
 		}
 	}
 
+	.form-control[readonly] {
+		@include clay-button-variant($input-danger-readonly);
+	}
+
 	.form-feedback-item {
 		color: $form-feedback-invalid-color;
 	}
@@ -152,6 +156,10 @@
 		}
 	}
 
+	.form-control[readonly] {
+		@include clay-button-variant($input-warning-readonly);
+	}
+
 	.form-feedback-item {
 		color: $form-feedback-warning-color;
 	}
@@ -210,6 +218,10 @@
 			box-shadow: $input-success-focus-box-shadow;
 			color: $input-success-focus-color;
 		}
+	}
+
+	.form-control[readonly] {
+		@include clay-button-variant($input-success-readonly);
 	}
 
 	.form-feedback-item {
