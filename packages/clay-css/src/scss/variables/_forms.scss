@@ -215,6 +215,8 @@ $input-danger-focus-box-shadow: 0 0 0 $input-focus-width rgba($form-feedback-inv
 $input-danger-color: null !default;
 $input-danger-focus-color: null !default;
 
+$input-danger-readonly: () !default;
+
 $input-danger-checkbox-label-color: $form-feedback-invalid-color !default;
 $input-danger-label-color: null !default;
 $input-danger-select-icon-color: $input-danger-border-color !default;
@@ -229,6 +231,8 @@ $input-success-focus-box-shadow: 0 0 0 $input-focus-width rgba($form-feedback-va
 $input-success-color: null !default;
 $input-success-focus-color: null !default;
 
+$input-success-readonly: () !default;
+
 $input-success-checkbox-label-color: $form-feedback-valid-color !default;
 $input-success-label-color: null !default;
 $input-success-select-icon-color: $input-success-border-color !default;
@@ -242,6 +246,8 @@ $input-warning-box-shadow: null !default;
 $input-warning-focus-box-shadow: 0 0 0 $input-focus-width rgba($form-feedback-warning-color, 0.25) !default;
 $input-warning-color: null !default;
 $input-warning-focus-color: null !default;
+
+$input-warning-readonly: () !default;
 
 $input-warning-checkbox-label-color: $form-feedback-warning-color !default;
 $input-warning-label-color: null !default;
