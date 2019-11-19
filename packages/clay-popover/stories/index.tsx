@@ -33,6 +33,7 @@ storiesOf('Components|ClayPopover', module).add('popover', () => (
 		}
 		disableScroll={boolean('Disable Scroll', false)}
 		header="Popover"
+		show={boolean('Show', true)}
 	>
 		{`Viennese flavour cup eu, percolator froth ristretto mazagran
 				caffeine. White roast seasonal, mocha trifecta, dripper caffeine
