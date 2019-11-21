@@ -439,6 +439,28 @@ class ClayDropdownBase extends ClayComponent {
 	}
 
 	/**
+	 * Workaround for avoiding Closure Templates render an empty `.dropdown-caption` element.
+	 * This workaround was placed here because Soy isn't considering a `msg` as a `string`
+	 * making impossible the usage of `kind="html|string"`.
+	 *
+	 * When having a `html` inside `kind` Soy's attribute, this property is considered a function,
+	 * impeding us to know if there is content or not to render `caption`.
+	 * @private
+	 */
+	syncCaption() {
+		if (this.refs.portal && this.refs.portal.element) {
+			const dropdownCaption = this.refs.portal.element.querySelector(
+				'.dropdown-caption'
+			);
+			if (dropdownCaption && dropdownCaption.innerText === '') {
+				this._hideCaption = true;
+			} else {
+				this._hideCaption = false;
+			}
+		}
+	}
+
+	/**
 	 * @inheritDoc
 	 */
 	syncExpanded() {
@@ -500,6 +522,17 @@ ClayDropdownBase.STATE = {
 	 */
 	_alignElementSelector: Config.string()
 		.value('.dropdown-toggle')
+		.internal(),
+
+	/**
+	 * Flag to indicate if Dropdown's Caption can be shown.
+	 * @default false
+	 * @instance
+	 * @memberof ClayDropdownBase
+	 * @type {?Boolean}
+	 */
+	_hideCaption: Config.bool()
+		.value(false)
 		.internal(),
 
 	/**
