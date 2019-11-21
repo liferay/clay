@@ -159,6 +159,7 @@ exports[`ClayList should render a selectable ClayList with action menu 1`] = `
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -170,6 +171,7 @@ exports[`ClayList should render a selectable ClayList with action menu 1`] = `
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -1119,6 +1121,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -1130,6 +1133,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -1141,6 +1145,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -1152,6 +1157,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -1163,6 +1169,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
@@ -1174,6 +1181,7 @@ exports[`ClayList should render a selectable ClayList with quick action menu 1`]
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 

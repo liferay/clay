@@ -35,6 +35,7 @@ exports[`ClayFileCard should render a ClayFileCard with actionItems 1`] = `
       <a class=" dropdown-item" href="#1">Save</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -73,6 +74,7 @@ exports[`ClayFileCard should render a ClayFileCard with actionItems and actionAr
       <a class=" dropdown-item" href="#1">Save</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 

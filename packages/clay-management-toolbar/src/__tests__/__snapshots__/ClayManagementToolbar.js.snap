@@ -123,6 +123,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
         </li>
       </ul>
     </div>
+    <div class="dropdown-caption"></div>
     <div class="dropdown-section">
       <button class="btn btn-block btn-primary" type="button">done</button>
     </div>
@@ -155,6 +156,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
         </span>Card</button>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -281,6 +283,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
         </li>
       </ul>
     </div>
+    <div class="dropdown-caption"></div>
     <div class="dropdown-section">
       <button class="btn btn-block btn-primary" type="button">done</button>
     </div>
@@ -313,6 +316,7 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
         </span>Card</button>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -360,6 +364,7 @@ exports[`ClayManagementToolbar should render a management toolbar in active stat
       <a class=" dropdown-item" href="#deleteurl">Delete</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -407,6 +412,7 @@ exports[`ClayManagementToolbar should render a management toolbar in active stat
       <a class=" dropdown-item" href="#deleteurl">Delete</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -653,6 +659,7 @@ exports[`ClayManagementToolbar should render a management toolbar in active stat
       <a class=" dropdown-item disabled" href="javascript:;">Delete</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -907,6 +914,7 @@ exports[`ClayManagementToolbar should render a management toolbar with advanced 
 </div>
 <div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled"></ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -1527,6 +1535,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
       <a class=" dropdown-item" href="#myItem2">Item 2</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -1620,6 +1629,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
         </li>
       </ul>
     </div>
+    <div class="dropdown-caption"></div>
     <div class="dropdown-section">
       <button class="btn btn-block btn-primary" type="button">done</button>
     </div>
@@ -1703,6 +1713,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
         </li>
       </ul>
     </div>
+    <div class="dropdown-caption"></div>
     <div class="dropdown-section">
       <button class="btn btn-block btn-primary" type="button">done</button>
     </div>
@@ -1815,6 +1826,7 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
         </li>
       </ul>
     </div>
+    <div class="dropdown-caption"></div>
     <div class="dropdown-section">
       <button class="btn btn-block btn-primary" type="button">done</button>
     </div>
@@ -1982,6 +1994,7 @@ exports[`ClayManagementToolbar should render a management toolbar with links as 
         </span>Card</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -2663,6 +2676,7 @@ exports[`ClayManagementToolbar should render a management toolbar with view type
         </span>Card</button>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 

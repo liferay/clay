@@ -10,6 +10,7 @@ exports[`ClayDropdownBase should close dropdown 1`] = `
       <a class=" dropdown-item" href="item1url">Item 1</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -23,6 +24,7 @@ exports[`ClayDropdownBase should close dropdown on document click 1`] = `
       <a class=" dropdown-item" href="item1url">Item 1</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -36,6 +38,7 @@ exports[`ClayDropdownBase should open dropdown 1`] = `
       <a class=" dropdown-item" href="item1url">Item 1</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -52,6 +55,7 @@ exports[`ClayDropdownBase should render a disabled dropdown 1`] = `
       <a class=" dropdown-item" href="item2url">Item 2</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -82,6 +86,7 @@ exports[`ClayDropdownBase should render a dropdown with classes 1`] = `
       <a class=" dropdown-item" href="item2url">Item 2</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -106,6 +111,7 @@ exports[`ClayDropdownBase should render a dropdown with groups 1`] = `
       <a class=" dropdown-item disabled" href="javascript:;">Item 3</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -120,6 +126,7 @@ exports[`ClayDropdownBase should render a dropdown with help text 1`] = `
       <a class=" dropdown-item" href="item1url">Item 1</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -146,6 +153,7 @@ exports[`ClayDropdownBase should render a dropdown with icons on the left 1`] = 
         </span>Item 2</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -174,6 +182,7 @@ exports[`ClayDropdownBase should render a dropdown with icons on the right 1`] =
       </a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -190,6 +199,7 @@ exports[`ClayDropdownBase should render a dropdown with id 1`] = `
       <a class=" dropdown-item" href="item2url">Item 2</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -221,6 +231,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type checkbox 1
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -241,6 +252,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type checkbox a
       </div>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -261,6 +273,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type checkbox a
       </div>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -277,6 +290,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type item 1`] =
       <a class=" dropdown-item" href="item2url">Item 2</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -290,6 +304,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type item and a
       <a class=" dropdown-item active" href="item1url">Item 1</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -303,6 +318,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type item and d
       <a class=" dropdown-item disabled" href="javascript:;">Item 1</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -319,6 +335,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type item with 
       <a class=" dropdown-item" href="item2url" target="_blank" title="title2">Item 2</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -335,6 +352,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type item with 
       <a class=" dropdown-item" href="item2url" title="title2">Item 2</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -396,6 +414,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio 1`] 
       </ul>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -457,6 +476,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio and 
       </ul>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -518,6 +538,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio and 
       </ul>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -543,6 +564,7 @@ exports[`ClayDropdownBase should render a dropdown with items with separators 1`
       <a class=" dropdown-item" href="#4">Element 4</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -559,6 +581,7 @@ exports[`ClayDropdownBase should render a dropdown with primary button 1`] = `
         </li>
       </ul>
     </div>
+    <div class="dropdown-caption"></div>
     <div class="dropdown-section">
       <button class="btn btn-block btn-primary" type="button">Button</button>
     </div>
@@ -579,6 +602,7 @@ exports[`ClayDropdownBase should render a dropdown with secondary button 1`] = `
         </li>
       </ul>
     </div>
+    <div class="dropdown-caption"></div>
     <div class="dropdown-section">
       <button class="btn btn-block btn-secondary" type="button">Button</button>
     </div>
@@ -599,6 +623,7 @@ exports[`ClayDropdownBase should render a dropdown with trigger aria-label 1`] =
       <a class=" dropdown-item" href="item2url">Item 2</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -615,6 +640,7 @@ exports[`ClayDropdownBase should render a dropdown with trigger custom classes 1
       <a class=" dropdown-item" href="item2url">Item 2</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -631,6 +657,7 @@ exports[`ClayDropdownBase should render a dropdown with trigger size 1`] = `
       <a class=" dropdown-item" href="item2url">Item 2</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -663,6 +690,7 @@ exports[`ClayDropdownBase should render a dropdown with type list with items of 
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -695,6 +723,7 @@ exports[`ClayDropdownBase should render a searchable dropdown 1`] = `
       <a class=" dropdown-item" href="item2url">Item 2</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -725,5 +754,6 @@ exports[`ClayDropdownBase should render a searchable dropdown without form tag 1
       <a class=" dropdown-item" href="item2url">Item 2</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;

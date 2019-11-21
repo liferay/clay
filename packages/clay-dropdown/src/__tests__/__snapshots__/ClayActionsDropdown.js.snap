@@ -39,6 +39,7 @@ exports[`ClayActionsDropdown should keep the expanded updated with that of the d
       <a class=" dropdown-item" href="#1">Move to the Recycle Bin</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -81,6 +82,7 @@ exports[`ClayActionsDropdown should render a disabled dropdown 1`] = `
       <a class=" dropdown-item" href="#1">Move to the Recycle Bin</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -123,6 +125,7 @@ exports[`ClayActionsDropdown should render an actions dropdown with classes 1`] 
       <a class=" dropdown-item" href="#1">Move to the Recycle Bin</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -165,6 +168,7 @@ exports[`ClayActionsDropdown should render an actions dropdown with id 1`] = `
       <a class=" dropdown-item" href="#1">Move to the Recycle Bin</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -207,6 +211,7 @@ exports[`ClayActionsDropdown should render an actions dropdown with triggerClass
       <a class=" dropdown-item" href="#1">Move to the Recycle Bin</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -249,6 +254,7 @@ exports[`ClayActionsDropdown should render an expanded action dropdown 1`] = `
       <a class=" dropdown-item" href="#1">Move to the Recycle Bin</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -291,5 +297,6 @@ exports[`ClayActionsDropdown should render default markdown 1`] = `
       <a class=" dropdown-item" href="#1">Move to the Recycle Bin</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;

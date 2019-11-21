@@ -58,6 +58,7 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with actionItems 
       <a class=" dropdown-item" href="#1">Save</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -98,6 +99,7 @@ exports[`ClayHorizontalCard should render a ClayHorizontalCard with actionItems 
       <a class=" dropdown-item" href="#1">Save</a>
     </li>
   </ul>
+  <div class="dropdown-caption"></div>
 </div>
 `;
 
