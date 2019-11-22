@@ -452,10 +452,12 @@ class ClayDropdownBase extends ClayComponent {
 			const dropdownCaption = this.refs.portal.element.querySelector(
 				'.dropdown-caption'
 			);
-			if (dropdownCaption && dropdownCaption.innerText === '') {
-				this._hideCaption = true;
-			} else {
-				this._hideCaption = false;
+			if (dropdownCaption) {
+				if (dropdownCaption.innerHTML === '') {
+					this._showCaption = false;
+				} else {
+					this._showCaption = true;
+				}
 			}
 		}
 	}
@@ -531,8 +533,8 @@ ClayDropdownBase.STATE = {
 	 * @memberof ClayDropdownBase
 	 * @type {?Boolean}
 	 */
-	_hideCaption: Config.bool()
-		.value(false)
+	_showCaption: Config.bool()
+		.value(true)
 		.internal(),
 
 	/**

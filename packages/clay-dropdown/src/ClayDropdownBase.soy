@@ -11,7 +11,7 @@
 	{@param? _handleItemKeyDown: any}
 	{@param? _handleSearch: any}
 	{@param? _handleTriggerKeyDown: any}
-	{@param? _hideCaption: bool}
+	{@param? _showCaption: bool}
 	{@param? button: ?}
 	{@param? caption: html|string}
 	{@param? contentRenderer: string}
@@ -65,7 +65,7 @@
 			{param _handleItemClick: $_handleItemClick /}
 			{param _handleItemKeyDown: $_handleItemKeyDown /}
 			{param _handleSearch: $_handleSearch /}
-			{param _hideCaption: $_hideCaption ?: false /}
+			{param _showCaption: $_showCaption ?: true /}
 			{param button: $button /}
 			{param caption: $caption /}
 			{param contentRenderer: $contentRenderer ?: '' /}
@@ -187,7 +187,7 @@
 	{@param? _handleItemClick: any}
 	{@param? _handleItemKeyDown: any}
 	{@param? _handleSearch: any}
-	{@param? _hideCaption: bool}
+	{@param? _showCaption: bool}
 	{@param? button: ?}
 	{@param? caption: html|string}
 	{@param? contentRenderer: string}
@@ -244,7 +244,7 @@
 			{/let}
 
 			{let $captionContent kind="html"}
-				{if not $_hideCaption}
+				{if $_showCaption}
 					<div class="dropdown-caption">{$caption}</div>
 				{/if}
 			{/let}
