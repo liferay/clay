@@ -43,14 +43,14 @@ exports[`ClayCreationMenuDropdown should render a creation menu dropdown expande
 `;
 
 exports[`ClayCreationMenuDropdown should render a creation menu dropdown should keep the expanded updated with that of the dropdown base 1`] = `
-<div class="dropdown show">
-  <button aria-expanded="true" aria-haspopup="true" class="dropdown-toggle btn btn-primary" ref="triggerButton" title="new" type="button">
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-primary" ref="triggerButton" title="new" type="button">
     <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
       <use xlink:href="icons.svg#plus"></use>
     </svg>
   </button>
 </div>
-<div class="dropdown-menu show" ref="menu" style="top: 0px; left: 0px;">
+<div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
     <li tabindex="-1">
       <a class=" dropdown-item" href="#main1">main1</a>

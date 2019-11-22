@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ClayActionsDropdown should keep the expanded updated with that of the dropdown base 1`] = `
-<div class="dropdown dropdown-action show">
-  <button aria-expanded="true" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" title="actions" type="button">
+<div class="dropdown dropdown-action">
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" title="actions" type="button">
     <svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
       <use xlink:href="icons.svg#ellipsis-v"></use>
     </svg>
   </button>
 </div>
-<div class="dropdown-menu show" ref="menu" style="top: 0px; left: 0px;">
+<div class="dropdown-menu" ref="menu">
   <ul class="list-unstyled">
     <li tabindex="-1">
       <a class=" dropdown-item" href="#1">Edit</a>

@@ -10,7 +10,6 @@ exports[`ClayDropdownBase should close dropdown 1`] = `
       <a class=" dropdown-item" href="item1url">Item 1</a>
     </li>
   </ul>
-  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -24,7 +23,6 @@ exports[`ClayDropdownBase should close dropdown on document click 1`] = `
       <a class=" dropdown-item" href="item1url">Item 1</a>
     </li>
   </ul>
-  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -38,7 +36,6 @@ exports[`ClayDropdownBase should open dropdown 1`] = `
       <a class=" dropdown-item" href="item1url">Item 1</a>
     </li>
   </ul>
-  <div class="dropdown-caption"></div>
 </div>
 `;
 
