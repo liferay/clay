@@ -44,17 +44,29 @@ const ClayListItem: React.FunctionComponent<IProps> = ({
 	header = false,
 	...otherProps
 }: IProps) => {
+	const [focus, setFocus] = React.useState(false);
+
 	return (
 		<li
 			{...otherProps}
 			className={classNames(className, {
 				active,
+				focus,
 				'list-group-header': header,
 				'list-group-item': !header,
 				'list-group-item-action': action && !disabled,
 				'list-group-item-disabled': disabled,
 				'list-group-item-flex': flex,
 			})}
+			onBlur={({currentTarget, relatedTarget}) => {
+				if (
+					relatedTarget &&
+					!currentTarget.contains(relatedTarget as Node)
+				) {
+					setFocus(false);
+				}
+			}}
+			onFocus={() => setFocus(true)}
 		>
 			{children}
 		</li>
