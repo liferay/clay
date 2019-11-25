@@ -1,3 +1,7 @@
+////
+/// @group sheet
+////
+
 $sheet-bg: $body-bg !default;
 $sheet-border-color: $gray-300 !default;
 $sheet-border-style: solid !default;
@@ -47,6 +51,8 @@ $sheet-footer-btn-block-sm-down: map-deep-merge((
 ), $sheet-footer-btn-block-sm-down);
 
 // Sheet Sizes
+
+/// @deprecated as of 3.x.
 
 $sheet-lg-max-width: ceil(map-get($container-max-widths, lg) * 0.83333) !default; // 800px
 
