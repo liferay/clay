@@ -1,3 +1,7 @@
+////
+/// @group sheet
+////
+
 .sheet {
 	background-color: $sheet-bg;
 	border-color: $sheet-border-color;
@@ -111,6 +115,8 @@ fieldset {
 }
 
 // Sheet Sizes
+
+/// @deprecated as of v3.x use `.container .sheet` instead
 
 .sheet-lg {
 	margin-left: auto;
