@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ClayDropdown should keep the expanded updated with that of the dropdown base 1`] = `
-<div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger
+<div class="dropdown show">
+  <button aria-expanded="true" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" ref="triggerButton" type="button">Trigger
     <svg class="lexicon-icon lexicon-icon-caret-bottom inline-item inline-item-after" focusable="false" role="presentation">
       <use xlink:href="icons.svg#caret-bottom"></use>
     </svg>
   </button>
 </div>
-<div class="dropdown-menu" ref="menu">
+<div class="dropdown-menu show" ref="menu" style="top: 0px; left: 0px;">
   <ul class="list-unstyled">
     <li tabindex="-1">
       <a class=" dropdown-item" href="item1url">Item 1</a>
@@ -89,7 +89,6 @@ exports[`ClayDropdown should keep the expanded updated with that of the dropdown
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
-  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -182,7 +181,6 @@ exports[`ClayDropdown should render a disabled dropdown with items 1`] = `
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
-  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -274,7 +272,6 @@ exports[`ClayDropdown should render a dropdown with an icon and label trigger 1`
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
-  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -367,7 +364,6 @@ exports[`ClayDropdown should render a dropdown with an icon trigger 1`] = `
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
-  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -460,7 +456,6 @@ exports[`ClayDropdown should render a dropdown with classes 1`] = `
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
-  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -553,7 +548,6 @@ exports[`ClayDropdown should render a dropdown with id 1`] = `
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
-  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -646,7 +640,6 @@ exports[`ClayDropdown should render a dropdown with items 1`] = `
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
-  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -739,7 +732,6 @@ exports[`ClayDropdown should render a dropdown with the \`link\` style 1`] = `
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
-  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -832,7 +824,6 @@ exports[`ClayDropdown should render a dropdown with the \`primary\` style 1`] = 
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
-  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -925,7 +916,6 @@ exports[`ClayDropdown should render a dropdown with the \`secondary\` style 1`] 
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
-  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -1018,7 +1008,6 @@ exports[`ClayDropdown should render a dropdown with the \`unstyled\` style by de
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
-  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -1111,7 +1100,6 @@ exports[`ClayDropdown should render a dropdown with trigger custom classes 1`] =
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
-  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -1204,7 +1192,6 @@ exports[`ClayDropdown should render a dropdown with trigger size 1`] = `
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
-  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -1293,7 +1280,6 @@ exports[`ClayDropdown should render a dropdown without toggle icon 1`] = `
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
-  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -1402,7 +1388,6 @@ exports[`ClayDropdown should render a searchable dropdown 1`] = `
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
-  <div class="dropdown-caption"></div>
 </div>
 `;
 
@@ -1495,6 +1480,5 @@ exports[`ClayDropdown should render an expanded dropdown 1`] = `
     </li>
     <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
   </ul>
-  <div class="dropdown-caption"></div>
 </div>
 `;
