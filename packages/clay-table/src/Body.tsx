@@ -6,10 +6,15 @@
 
 import React from 'react';
 
-const ClayTableBody: React.FunctionComponent<
+const ClayTableBody = React.forwardRef<
+	HTMLTableSectionElement,
 	React.TableHTMLAttributes<HTMLTableSectionElement>
-> = ({children, ...otherProps}) => {
-	return <tbody {...otherProps}>{children}</tbody>;
-};
+>(({children, ...otherProps}, ref) => {
+	return (
+		<tbody {...otherProps} ref={ref}>
+			{children}
+		</tbody>
+	);
+});
 
 export default ClayTableBody;
