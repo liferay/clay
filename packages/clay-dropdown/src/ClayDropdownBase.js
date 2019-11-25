@@ -453,7 +453,7 @@ class ClayDropdownBase extends ClayComponent {
 				'.dropdown-caption'
 			);
 			if (dropdownCaption) {
-				if (dropdownCaption.innerHTML === '') {
+				if (dropdownCaption.innerText === '') {
 					this._showCaption = false;
 				} else {
 					this._showCaption = true;

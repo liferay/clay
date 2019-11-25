@@ -244,7 +244,7 @@
 			{/let}
 
 			{let $captionContent kind="html"}
-				{if $_showCaption}
+				{if $_showCaption and $caption and isNonnull($caption)}
 					<div class="dropdown-caption">{$caption}</div>
 				{/if}
 			{/let}
