@@ -9,6 +9,8 @@ $clay-unset-placeholder: clay-unset-placeholder !default;
 
 $atlas-theme: true !default;
 
+$enable-lexicon-flat-colors: true !default;
+
 $enable-scaling-components: true !default;
 $enable-shadows: true !default;
 
@@ -62,16 +64,16 @@ $gray-800: #393A4A !default;
 $gray-900: #272833 !default;
 $black: #000 !default;
 
-$blue: #0B5FFF !default;
-$indigo: #6610F2 !default;
-$purple: #6F42C1 !default;
-$pink: #E83E8C !default;
-$red: #DA1414 !default;
-$orange: #B95000 !default;
-$yellow: #FFC107 !default;
-$green: #287D3D !default;
-$teal: #20C997 !default;
-$cyan: #17A2B8 !default;
+$blue: if($enable-lexicon-flat-colors, #4B9FFF, #0B5FFF) !default;
+$indigo: if($enable-lexicon-flat-colors, #6610F2, #6610F2) !default;
+$purple: if($enable-lexicon-flat-colors, #AF78FF, #6F42C1) !default;
+$pink: if($enable-lexicon-flat-colors, #FF73C3, #E83E8C) !default;
+$red: if($enable-lexicon-flat-colors, #FF5F5F, #DA1414) !default;
+$orange: if($enable-lexicon-flat-colors, #FFB46E, #B95000) !default;
+$yellow: if($enable-lexicon-flat-colors, #FFD76E, #FFC107) !default;
+$green: if($enable-lexicon-flat-colors, #9BE169, #287D3D) !default;
+$teal: if($enable-lexicon-flat-colors, #50D2A0, #20C997) !default;
+$cyan: if($enable-lexicon-flat-colors, #5FC8FF, #17A2B8) !default;
 
 $primary: #0B5FFF !default;
 $primary-d1: darken($primary, 5.10) !default;
