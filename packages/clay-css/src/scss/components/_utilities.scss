@@ -299,3 +299,92 @@
 .page-header {
 	background-color: $page-header-bg;
 }
+
+// Clay Margin and Padding
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+	@include media-breakpoint-up($breakpoint) {
+		$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+		@each $prop, $abbrev in (margin: c-m, padding: c-p) {
+			@each $size, $length in $spacers {
+				.#{$abbrev}#{$infix}-#{$size} {
+					#{$prop}: $length;
+				}
+
+				.#{$abbrev}t#{$infix}-#{$size},
+				.#{$abbrev}y#{$infix}-#{$size} {
+					#{$prop}-top: $length;
+				}
+
+				.#{$abbrev}r#{$infix}-#{$size},
+				.#{$abbrev}x#{$infix}-#{$size} {
+					#{$prop}-right: $length;
+				}
+
+				.#{$abbrev}b#{$infix}-#{$size},
+				.#{$abbrev}y#{$infix}-#{$size} {
+					#{$prop}-bottom: $length;
+				}
+
+				.#{$abbrev}l#{$infix}-#{$size},
+				.#{$abbrev}x#{$infix}-#{$size} {
+					#{$prop}-left: $length;
+				}
+			}
+		}
+
+		// Negative margins (e.g., where `.c-mb-n1` is negative version of `.c-mb-1`)
+		@each $size, $length in $spacers {
+			@if $size != 0 {
+				.c-m#{$infix}-n#{$size} {
+					margin: -$length;
+				}
+
+				.c-mt#{$infix}-n#{$size},
+				.c-my#{$infix}-n#{$size} {
+					margin-top: -$length;
+				}
+
+				.c-mr#{$infix}-n#{$size},
+				.c-mx#{$infix}-n#{$size} {
+					margin-right: -$length;
+				}
+
+				.c-mb#{$infix}-n#{$size},
+				.c-my#{$infix}-n#{$size} {
+					margin-bottom: -$length;
+				}
+
+				.c-ml#{$infix}-n#{$size},
+				.c-mx#{$infix}-n#{$size} {
+					margin-left: -$length;
+				}
+			}
+		}
+
+		.c-m#{$infix}-auto {
+			margin: auto;
+		}
+
+		.c-mt#{$infix}-auto,
+		.c-my#{$infix}-auto {
+			margin-top: auto;
+		}
+
+		.c-mr#{$infix}-auto,
+		.c-mx#{$infix}-auto {
+			margin-right: auto;
+		}
+
+		.c-mb#{$infix}-auto,
+		.c-my#{$infix}-auto {
+			margin-bottom: auto;
+		}
+
+		.c-ml#{$infix}-auto,
+		.c-mx#{$infix}-auto {
+			margin-left: auto;
+		}
+	}
+}
