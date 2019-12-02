@@ -9,7 +9,7 @@ import React from 'react';
 
 import {TDelimiter} from './types';
 
-interface IRowProps extends React.HTMLAttributes<HTMLTableRowElement> {
+export interface IRowProps extends React.HTMLAttributes<HTMLTableRowElement> {
 	/**
 	 * Forces the active state inside the row.
 	 */
@@ -27,26 +27,32 @@ interface IRowProps extends React.HTMLAttributes<HTMLTableRowElement> {
 	rowDelimiter?: TDelimiter;
 }
 
-const ClayTableRow: React.FunctionComponent<IRowProps> = ({
-	active = false,
-	children,
-	className,
-	divider = false,
-	rowDelimiter,
-	...otherProps
-}: IRowProps) => {
-	return (
-		<tr
-			{...otherProps}
-			className={classNames(className, {
-				'table-active': active,
-				'table-divider': divider,
-				[`table-row-${rowDelimiter}`]: rowDelimiter,
-			})}
-		>
-			{children}
-		</tr>
-	);
-};
+const ClayTableRow = React.forwardRef<HTMLTableRowElement, IRowProps>(
+	(
+		{
+			active = false,
+			children,
+			className,
+			divider = false,
+			rowDelimiter,
+			...otherProps
+		}: IRowProps,
+		ref
+	) => {
+		return (
+			<tr
+				{...otherProps}
+				className={classNames(className, {
+					'table-active': active,
+					'table-divider': divider,
+					[`table-row-${rowDelimiter}`]: rowDelimiter,
+				})}
+				ref={ref}
+			>
+				{children}
+			</tr>
+		);
+	}
+);
 
 export default ClayTableRow;

@@ -76,62 +76,63 @@ interface IProps extends React.HTMLAttributes<HTMLTableElement> {
 	tableVerticalAlignment?: VerticalAlignmentType;
 }
 
-const ClayTable: React.FunctionComponent<IProps> & {
-	Body: typeof Body;
-	Cell: typeof Cell;
-	Head: typeof Head;
-	Row: typeof Row;
-} = ({
-	bodyVerticalAlignment,
-	borderedColumns,
-	borderless,
-	children,
-	className,
-	headVerticalAlignment,
-	headingNoWrap,
-	hover = true,
-	noWrap,
-	responsive = true,
-	responsiveSize,
-	striped,
-	tableVerticalAlignment,
-	...otherProps
-}: IProps) => {
-	return (
-		<div
-			className={classNames({
-				'table-responsive': responsive,
-				[`table-responsive-${responsiveSize}`]: responsiveSize,
-			})}
-		>
-			<table
-				className={classNames(
-					'table table-autofit',
-					{
-						'show-quick-actions-on-hover': hover,
-						'table-bordered': borderedColumns,
-						'table-heading-nowrap': headingNoWrap,
-						'table-hover': hover,
-						'table-list': !borderless,
-						'table-nowrap': noWrap,
-						'table-striped': striped,
-						[`tbody-valign-${bodyVerticalAlignment}`]: bodyVerticalAlignment,
-						[`thead-valign-${headVerticalAlignment}`]: headVerticalAlignment,
-						[`table-valign-${tableVerticalAlignment}`]: tableVerticalAlignment,
-					},
-					className
-				)}
-				{...otherProps}
+const ClayTable = React.forwardRef<HTMLDivElement, IProps>(
+	(
+		{
+			bodyVerticalAlignment,
+			borderedColumns,
+			borderless,
+			children,
+			className,
+			headVerticalAlignment,
+			headingNoWrap,
+			hover = true,
+			noWrap,
+			responsive = true,
+			responsiveSize,
+			striped,
+			tableVerticalAlignment,
+			...otherProps
+		}: IProps,
+		ref
+	) => {
+		return (
+			<div
+				className={classNames({
+					'table-responsive': responsive,
+					[`table-responsive-${responsiveSize}`]: responsiveSize,
+				})}
+				ref={ref}
 			>
-				{children}
-			</table>
-		</div>
-	);
-};
+				<table
+					className={classNames(
+						'table table-autofit',
+						{
+							'show-quick-actions-on-hover': hover,
+							'table-bordered': borderedColumns,
+							'table-heading-nowrap': headingNoWrap,
+							'table-hover': hover,
+							'table-list': !borderless,
+							'table-nowrap': noWrap,
+							'table-striped': striped,
+							[`tbody-valign-${bodyVerticalAlignment}`]: bodyVerticalAlignment,
+							[`thead-valign-${headVerticalAlignment}`]: headVerticalAlignment,
+							[`table-valign-${tableVerticalAlignment}`]: tableVerticalAlignment,
+						},
+						className
+					)}
+					{...otherProps}
+				>
+					{children}
+				</table>
+			</div>
+		);
+	}
+);
 
-ClayTable.Body = Body;
-ClayTable.Cell = Cell;
-ClayTable.Head = Head;
-ClayTable.Row = Row;
-
-export default ClayTable;
+export default Object.assign(ClayTable, {
+	Body,
+	Cell,
+	Head,
+	Row,
+});
