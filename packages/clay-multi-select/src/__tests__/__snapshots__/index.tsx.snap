@@ -25,6 +25,7 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
   <div>
     <div
       class="form-control form-control-tag-group input-group"
+      style=""
     >
       <div
         class="input-group-item"
@@ -140,7 +141,7 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
     <div>
       <div
         class="dropdown-menu autocomplete-dropdown-menu show"
-        style="max-width: none; width: 0px; top: 0px; left: 0px;"
+        style="max-width: none; width: 0px; left: -999px; top: -995px;"
       >
         <ul
           class="list-unstyled"
@@ -512,6 +513,7 @@ exports[`Interactions adding text doesn not filter the items with a custom funct
   <div>
     <div
       class="form-control form-control-tag-group input-group"
+      style=""
     >
       <div
         class="input-group-item"
@@ -546,7 +548,7 @@ exports[`Interactions adding text doesn not filter the items with a custom funct
     <div>
       <div
         class="dropdown-menu autocomplete-dropdown-menu show"
-        style="max-width: none; width: 0px; top: 0px; left: 0px;"
+        style="max-width: none; width: 0px; left: -999px; top: -995px;"
       >
         <ul
           class="list-unstyled"
@@ -594,6 +596,7 @@ exports[`Interactions adding text filters the items 1`] = `
   <div>
     <div
       class="form-control form-control-tag-group input-group"
+      style=""
     >
       <div
         class="input-group-item"
@@ -628,7 +631,7 @@ exports[`Interactions adding text filters the items 1`] = `
     <div>
       <div
         class="dropdown-menu autocomplete-dropdown-menu show"
-        style="max-width: none; width: 0px; top: 0px; left: 0px;"
+        style="max-width: none; width: 0px; left: -999px; top: -995px;"
       >
         <ul
           class="list-unstyled"
@@ -662,6 +665,7 @@ exports[`Interactions adding text filters the items with a custom function 1`] =
   <div>
     <div
       class="form-control form-control-tag-group input-group"
+      style=""
     >
       <div
         class="input-group-item"
@@ -696,7 +700,7 @@ exports[`Interactions adding text filters the items with a custom function 1`] =
     <div>
       <div
         class="dropdown-menu autocomplete-dropdown-menu show"
-        style="max-width: none; width: 0px; top: 0px; left: 0px;"
+        style="max-width: none; width: 0px; left: -999px; top: -995px;"
       >
         <ul
           class="list-unstyled"

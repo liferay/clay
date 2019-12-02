@@ -5,7 +5,7 @@
  */
 
 import {ClayPortal} from '@clayui/shared';
-import {Align} from 'metal-position';
+import domAlign from 'dom-align';
 import React, {useEffect, useReducer, useRef} from 'react';
 import warning from 'warning';
 
@@ -23,15 +23,26 @@ const ALIGNMENTS = [
 ] as const;
 
 const ALIGNMENTS_MAP = {
-	bottom: Align.Bottom,
-	'bottom-left': Align.BottomLeft,
-	'bottom-right': Align.BottomRight,
-	left: Align.Left,
-	right: Align.Right,
-	top: Align.Top,
-	'top-left': Align.TopLeft,
-	'top-right': Align.TopRight,
-};
+	bottom: ['tc', 'bc'],
+	'bottom-left': ['tl', 'bl'],
+	'bottom-right': ['tr', 'br'],
+	left: ['cr', 'cl'],
+	right: ['cl', 'cr'],
+	top: ['bc', 'tc'],
+	'top-left': ['bl', 'tl'],
+	'top-right': ['br', 'tr'],
+} as const;
+
+const ALIGNMENTS_INVERSE_MAP = {
+	bctc: 'top',
+	bltl: 'top-left',
+	brtr: 'top-right',
+	clcr: 'right',
+	crcl: 'left',
+	tcbc: 'bottom',
+	tlbl: 'bottom-left',
+	trbr: 'bottom-right',
+} as const;
 
 interface IState {
 	align?: typeof ALIGNMENTS[number];
@@ -143,7 +154,11 @@ const TooltipProvider: React.FunctionComponent<{
 
 			timeoutIdRef.current = setTimeout(
 				() => {
-					dispatch({align: newAlign, message: title, type: 'show'});
+					dispatch({
+						align: newAlign || align,
+						message: title,
+						type: 'show',
+					});
 				},
 				customDelay ? Number(customDelay) : delay
 			);
@@ -155,18 +170,27 @@ const TooltipProvider: React.FunctionComponent<{
 			titleNodeRef.current &&
 			(tooltipRef as React.RefObject<HTMLDivElement>).current
 		) {
-			const newAlignment =
-				ALIGNMENTS[
-					Align.align(
-						(tooltipRef as React.RefObject<HTMLElement>).current!,
-						titleNodeRef.current,
-						ALIGNMENTS_MAP[align || 'top'],
-						autoAlign
-					)
-				];
+			const points = ALIGNMENTS_MAP[align || 'top'] as [string, string];
 
-			if (newAlignment !== align) {
-				dispatch({align: newAlignment, type: 'align'});
+			const newAlignmentString = domAlign(
+				(tooltipRef as React.RefObject<HTMLElement>).current!,
+				titleNodeRef.current,
+				{
+					overflow: {
+						adjustX: autoAlign,
+						adjustY: autoAlign,
+					},
+					points,
+				}
+			).points.join('') as keyof typeof ALIGNMENTS_INVERSE_MAP;
+
+			const pointsString = points.join('');
+
+			if (pointsString !== newAlignmentString) {
+				dispatch({
+					align: ALIGNMENTS_INVERSE_MAP[newAlignmentString],
+					type: 'align',
+				});
 			}
 		}
 	}, [align, show]);

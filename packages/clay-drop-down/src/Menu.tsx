@@ -6,10 +6,75 @@
 
 import {ClayPortal} from '@clayui/shared';
 import classNames from 'classnames';
-import {Align} from 'metal-position';
+import domAlign from 'dom-align';
 import React, {useLayoutEffect, useRef} from 'react';
 
 import {useDropdownCloseInteractions} from './hooks';
+
+export const Align = {
+	BottomCenter: 4,
+	BottomLeft: 5,
+	BottomRight: 3,
+	LeftCenter: 6,
+	RightCenter: 2,
+	TopCenter: 0,
+	TopLeft: 7,
+	TopRight: 1,
+} as const;
+
+const ALIGN_INVERSE = {
+	0: 'TopCenter',
+	1: 'TopRight',
+	2: 'RightCenter',
+	3: 'BottomRight',
+	4: 'BottomCenter',
+	5: 'BottomLeft',
+	6: 'LeftCenter',
+	7: 'TopLeft',
+} as const;
+
+const ALIGN_MAP = {
+	BottomCenter: ['tc', 'bc'],
+	BottomLeft: ['tl', 'bl'],
+	BottomRight: ['tr', 'br'],
+	LeftCenter: ['cr', 'cl'],
+	RightCenter: ['cl', 'cr'],
+	TopCenter: ['bc', 'tc'],
+	TopLeft: ['bl', 'tl'],
+	TopRight: ['br', 'tr'],
+} as const;
+
+type TPointOptions = typeof ALIGN_MAP[keyof typeof ALIGN_MAP];
+
+/**
+ * For backwards compatability, we are creating a util here so that `metal-position`
+ * number values are used in the same manner and result in the same alignment direction.
+ */
+const getAlignPoints = (val: keyof typeof ALIGN_INVERSE) =>
+	ALIGN_MAP[ALIGN_INVERSE[val]];
+
+/**
+ * Utility for determining the overlay's offset based off its coordinates.
+ */
+const getOffset = (targetNode: string): [number, number] => {
+	const topBottom = targetNode[0];
+	const leftRight = targetNode[1];
+
+	switch (topBottom) {
+		case 't':
+			return [0, -4];
+		case 'b':
+			return [0, 4];
+		case 'c':
+			if (leftRight === 'l') {
+				return [-4, 0];
+			}
+
+			return [4, 0];
+		default:
+			return [0, 0];
+	}
+};
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
@@ -28,7 +93,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	autoBestAlign?: boolean;
 
 	/**
-	 * Default position of menu element. Values come from `metal-position`.
+	 * Default position of menu element. Values come from above.
 	 *
 	 * Align.TopCenter = 0;
 	 * Align.TopRight = 1;
@@ -40,8 +105,14 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * Align.TopLeft = 7;
 	 *
 	 * Defaults to BottomLeft
+	 *
+	 * You can also pass an array of strings, corresponding to the points
+	 * of the targetNode and sourceNode, `[sourceNode, targetNode]`.
+	 *
+	 * Points can be 't'(top), 'b'(bottom), 'c'(center), 'l'(left), 'r'(right).
+	 * For example: `['tl', 'bl']` corresponds to the bottom left alignment.
 	 */
-	alignmentPosition?: number;
+	alignmentPosition?: number | TPointOptions;
 
 	/**
 	 * Flag to indicate if menu is displaying a clay-icon on the left.
@@ -86,11 +157,23 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>((
 			alignElementRef.current &&
 			(ref as React.RefObject<HTMLDivElement>).current
 		) {
-			Align.align(
+			let points = alignmentPosition;
+
+			if (typeof points === 'number') {
+				points = getAlignPoints(points as keyof typeof ALIGN_INVERSE);
+			}
+
+			domAlign(
 				(ref as React.RefObject<HTMLElement>).current!,
 				alignElementRef.current,
-				alignmentPosition,
-				autoBestAlign
+				{
+					offset: getOffset(points[1]),
+					overflow: {
+						adjustX: autoBestAlign,
+						adjustY: autoBestAlign,
+					},
+					points,
+				}
 			);
 		}
 	});
@@ -113,7 +196,5 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>((
 		</ClayPortal>
 	);
 });
-
-export {Align};
 
 export default ClayDropDownMenu;
