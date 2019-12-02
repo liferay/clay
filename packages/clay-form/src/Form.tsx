@@ -103,7 +103,11 @@ const FeedbackIndicator = React.forwardRef<
 	) => (
 		<span
 			{...otherProps}
-			className={classNames('form-feedback-indicator', className)}
+			className={classNames(
+				'form-feedback-indicator',
+				'inline-item-before',
+				className
+			)}
 			ref={ref}
 		>
 			<ClayIcon spritemap={spritemap} symbol={symbol} />
