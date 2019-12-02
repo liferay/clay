@@ -7879,6 +7879,11 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
+dom-align@^1.10.2:
+  version "1.10.2"
+  resolved "https://registry.yarnpkg.com/dom-align/-/dom-align-1.10.2.tgz#540ea1c9e20462bd11b9fc28c561dc8351ece4c6"
+  integrity sha512-AYZUzLepy05E9bCY4ExoqHrrIlM49PEak9oF93JEFoibqKL0F7w5DLM70/rosLOawerWZ3MlepQcl+EmHskOyw==
+
 dom-converter@^0.2:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/dom-converter/-/dom-converter-0.2.0.tgz#6721a9daee2e293682955b6afe416771627bb768"
@@ -15046,7 +15051,7 @@ metal-keyboard-focus@^2.0.0:
     metal "^2.0.0"
     metal-events "^2.2.3"
 
-metal-position@^2.1.0, metal-position@^2.1.2:
+metal-position@^2.1.0:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/metal-position/-/metal-position-2.1.2.tgz#3643a7f83a6b5a39061841858b058935390bd13c"
   integrity sha512-XvE1AQoySYFGG0sc3unZWfK97UKOvHvg/asq2k1Oh+vs1NGD9PhhGBQKiD0/Rix85ICHEeLUVzS0WGQr5wdapQ==

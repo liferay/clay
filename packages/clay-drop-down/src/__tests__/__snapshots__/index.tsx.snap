@@ -8,6 +8,7 @@ exports[`ClayDropDown renders dropdown menu when clicked 1`] = `
     >
       <button
         class="dropdown-toggle"
+        style=""
       >
         Click Me
       </button>
@@ -17,7 +18,7 @@ exports[`ClayDropDown renders dropdown menu when clicked 1`] = `
     <div>
       <div
         class="dropdown-menu show"
-        style="top: 0px; left: 0px;"
+        style="left: -999px; top: -995px;"
       >
         <ul
           class="list-unstyled"
@@ -61,6 +62,7 @@ exports[`ClayDropDown renders with groups 1`] = `
     >
       <button
         class="dropdown-toggle"
+        style=""
       >
         Click Me
       </button>
@@ -70,7 +72,7 @@ exports[`ClayDropDown renders with groups 1`] = `
     <div>
       <div
         class="dropdown-menu show"
-        style="top: 0px; left: 0px;"
+        style="left: -999px; top: -995px;"
       >
         <ul
           class="list-unstyled"
@@ -150,6 +152,7 @@ exports[`ClayDropDown renders with icons 1`] = `
     >
       <button
         class="dropdown-toggle"
+        style=""
       >
         Click Me
       </button>
@@ -159,7 +162,7 @@ exports[`ClayDropDown renders with icons 1`] = `
     <div>
       <div
         class="dropdown-menu dropdown-menu-indicator-end dropdown-menu-indicator-start show"
-        style="top: 0px; left: 0px;"
+        style="left: -999px; top: -995px;"
       >
         <ul
           class="list-unstyled"
@@ -248,6 +251,7 @@ exports[`ClayDropDown renders with search input 1`] = `
     >
       <button
         class="dropdown-toggle"
+        style=""
       >
         Click Me
       </button>
@@ -257,7 +261,7 @@ exports[`ClayDropDown renders with search input 1`] = `
     <div>
       <div
         class="dropdown-menu show"
-        style="top: 0px; left: 0px;"
+        style="left: -999px; top: -995px;"
       >
         <form>
           <div

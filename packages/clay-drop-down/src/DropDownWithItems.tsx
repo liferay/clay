@@ -47,7 +47,7 @@ interface IDropDownContentProps {
 
 export interface IProps extends IDropDownContentProps {
 	/**
-	 * Default position of menu element. Values come from `metal-position`.
+	 * Default position of menu element. Values come from `./Menu`.
 	 */
 	alignmentPosition?: number;
 
