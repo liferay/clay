@@ -219,7 +219,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 
 			const {keyCode} = event;
 
-			if (keyCode === BACKSPACE_KEY && !sourceItems.length) {
+			if (keyCode === BACKSPACE_KEY && !inputValue) {
 				event.preventDefault();
 			}
 
