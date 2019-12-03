@@ -39,6 +39,7 @@ type Locator = {
 };
 
 interface IMenuRendererProps {
+	filter?: (item: Item, inputValue: string, locator: Locator) => boolean;
 	inputValue: string;
 	locator: Locator;
 	onItemClick?: (item: Item) => void;
@@ -73,6 +74,11 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	 * Flag to disabled Clear All functionality.
 	 */
 	disabledClearAll?: boolean;
+
+	/**
+	 * Callback to filter items based on the inputValue and locator
+	 */
+	filter?: (item: Item, inputValue: string, locator: Locator) => boolean;
 
 	/**
 	 * Value used for each selected item's hidden input name attribute
@@ -125,7 +131,11 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	spritemap?: string;
 }
 
+const defaultFilter = (item: Item, inputValue: string, locator: Locator) =>
+	inputValue && item[locator.label].match(inputValue);
+
 const MultiSelectMenuRenderer: MenuRenderer = ({
+	filter = defaultFilter,
 	inputValue,
 	locator,
 	onItemClick = () => {},
@@ -133,7 +143,7 @@ const MultiSelectMenuRenderer: MenuRenderer = ({
 }) => (
 	<ClayDropDown.ItemList>
 		{sourceItems
-			.filter(item => inputValue && item[locator.label].match(inputValue))
+			.filter(item => filter(item, inputValue, locator))
 			.map(item => (
 				<ClayAutocomplete.Item
 					key={item[locator.value]}
@@ -152,6 +162,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 			closeButtonAriaLabel = 'Remove {0}',
 			disabled,
 			disabledClearAll,
+			filter = defaultFilter,
 			inputName,
 			inputValue = '',
 			isValid = true,
@@ -185,8 +196,8 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 
 		useLayoutEffect(() => {
 			if (sourceItems) {
-				const matchedItems = sourceItems.filter(
-					item => inputValue && item[locator.label].match(inputValue)
+				const matchedItems = sourceItems.filter(item =>
+					filter(item, inputValue, locator)
 				);
 
 				setActive(matchedItems.length !== 0);
@@ -377,6 +388,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 							onSetActive={setActive}
 						>
 							<MenuRenderer
+								filter={filter}
 								inputValue={inputValue}
 								locator={locator}
 								onItemClick={item => {
