@@ -167,6 +167,16 @@ storiesOf('Components|ClayMultiSelect', module)
 		);
 	})
 	.add('w/ sourceItems', () => <ClayMultiSelectWithAutocomplete />)
+	.add('w/ no filter', () => (
+		<ClayMultiSelectWithAutocomplete filter={() => true} />
+	))
+	.add('w/ custom filter', () => (
+		<ClayMultiSelectWithAutocomplete
+			filter={(item: any, inputValue: any, locator: any) =>
+				item[locator.label].match('two')
+			}
+		/>
+	))
 	.add('w/ custom menu', () => (
 		<ClayMultiSelectWithAutocomplete
 			items={[
