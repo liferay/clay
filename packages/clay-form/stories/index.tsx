@@ -18,6 +18,7 @@ import {
 import ClayForm from '../src/Form';
 
 import '@clayui/css/lib/css/atlas.css';
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {boolean, text, select} from '@storybook/addon-knobs';
 
 const ClayCheckboxWithState = () => {
@@ -34,6 +35,27 @@ const ClayCheckboxWithState = () => {
 		/>
 	);
 };
+
+storiesOf('Components|ClayForm', module).add('Feedback', () => (
+	<div className="sheet">
+		<ClayForm>
+			<ClayForm.Group className="has-error">
+				<label>{'Name'}</label>
+				<ClayInput placeholder="Enter some text..." type="text" />
+
+				<ClayForm.FeedbackGroup>
+					<ClayForm.FeedbackItem>
+						<ClayForm.FeedbackIndicator
+							spritemap={spritemap}
+							symbol="exclamation-full"
+						/>
+						{'This is a description of the error!'}
+					</ClayForm.FeedbackItem>
+				</ClayForm.FeedbackGroup>
+			</ClayForm.Group>
+		</ClayForm>
+	</div>
+));
 
 storiesOf('Components|ClayCheckbox', module)
 	.add('default', () => <ClayCheckboxWithState />)
