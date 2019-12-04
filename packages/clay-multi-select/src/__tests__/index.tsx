@@ -318,4 +318,51 @@ describe('Interactions', () => {
 
 		expect(document.activeElement).toBe(input);
 	});
+
+	it('adding text filters the items', () => {
+		const {container} = render(
+			<ClayMultiSelectWithState sourceItems={items} />
+		);
+
+		const input = container.querySelector('input');
+
+		fireEvent.change(input as HTMLInputElement, {
+			target: {value: 'foo'},
+		});
+
+		expect(document.body).toMatchSnapshot();
+	});
+
+	it('adding text filters the items with a custom function', () => {
+		const {container} = render(
+			<ClayMultiSelectWithState
+				filter={(item: any, inputValue: any, locator: any) =>
+					item[locator.label].match(inputValue)
+				}
+				sourceItems={items}
+			/>
+		);
+
+		const input = container.querySelector('input');
+
+		fireEvent.change(input as HTMLInputElement, {
+			target: {value: 'bar'},
+		});
+
+		expect(document.body).toMatchSnapshot();
+	});
+
+	it('adding text doesn not filter the items with a custom function', () => {
+		const {container} = render(
+			<ClayMultiSelectWithState filter={() => true} sourceItems={items} />
+		);
+
+		const input = container.querySelector('input');
+
+		fireEvent.change(input as HTMLInputElement, {
+			target: {value: 'foo'},
+		});
+
+		expect(document.body).toMatchSnapshot();
+	});
 });

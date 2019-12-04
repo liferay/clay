@@ -506,3 +506,221 @@ exports[`ClayMultiSelect renders with items 1`] = `
   </div>
 </body>
 `;
+
+exports[`Interactions adding text doesn not filter the items with a custom function 1`] = `
+<body>
+  <div>
+    <div
+      class="form-control form-control-tag-group input-group"
+    >
+      <div
+        class="input-group-item"
+      >
+        <input
+          class="form-control-inset"
+          type="text"
+          value="foo"
+        />
+      </div>
+      <div
+        class="input-group-item input-group-item-shrink"
+      >
+        <button
+          class="component-action"
+          title="Clear All"
+          type="button"
+        >
+          <svg
+            class="lexicon-icon lexicon-icon-times-circle"
+            role="presentation"
+          >
+            <use
+              xlink:href="/foo/bar#times-circle"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div>
+      <div
+        class="dropdown-menu autocomplete-dropdown-menu show"
+        style="max-width: none; width: 0px; top: 0px; left: 0px;"
+      >
+        <ul
+          class="list-unstyled"
+        >
+          <li>
+            <button
+              class="dropdown-item"
+            >
+              <div>
+                <strong>
+                  f
+                </strong>
+                <strong>
+                  o
+                </strong>
+                <strong>
+                  o
+                </strong>
+              </div>
+            </button>
+          </li>
+          <li>
+            <button
+              class="dropdown-item"
+            >
+              bar
+            </button>
+          </li>
+          <li>
+            <button
+              class="dropdown-item"
+            >
+              baz
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Interactions adding text filters the items 1`] = `
+<body>
+  <div>
+    <div
+      class="form-control form-control-tag-group input-group"
+    >
+      <div
+        class="input-group-item"
+      >
+        <input
+          class="form-control-inset"
+          type="text"
+          value="foo"
+        />
+      </div>
+      <div
+        class="input-group-item input-group-item-shrink"
+      >
+        <button
+          class="component-action"
+          title="Clear All"
+          type="button"
+        >
+          <svg
+            class="lexicon-icon lexicon-icon-times-circle"
+            role="presentation"
+          >
+            <use
+              xlink:href="/foo/bar#times-circle"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div>
+      <div
+        class="dropdown-menu autocomplete-dropdown-menu show"
+        style="max-width: none; width: 0px; top: 0px; left: 0px;"
+      >
+        <ul
+          class="list-unstyled"
+        >
+          <li>
+            <button
+              class="dropdown-item"
+            >
+              <div>
+                <strong>
+                  f
+                </strong>
+                <strong>
+                  o
+                </strong>
+                <strong>
+                  o
+                </strong>
+              </div>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Interactions adding text filters the items with a custom function 1`] = `
+<body>
+  <div>
+    <div
+      class="form-control form-control-tag-group input-group"
+    >
+      <div
+        class="input-group-item"
+      >
+        <input
+          class="form-control-inset"
+          type="text"
+          value="bar"
+        />
+      </div>
+      <div
+        class="input-group-item input-group-item-shrink"
+      >
+        <button
+          class="component-action"
+          title="Clear All"
+          type="button"
+        >
+          <svg
+            class="lexicon-icon lexicon-icon-times-circle"
+            role="presentation"
+          >
+            <use
+              xlink:href="/foo/bar#times-circle"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div>
+      <div
+        class="dropdown-menu autocomplete-dropdown-menu show"
+        style="max-width: none; width: 0px; top: 0px; left: 0px;"
+      >
+        <ul
+          class="list-unstyled"
+        >
+          <li>
+            <button
+              class="dropdown-item"
+            >
+              <div>
+                <strong>
+                  b
+                </strong>
+                <strong>
+                  a
+                </strong>
+                <strong>
+                  r
+                </strong>
+              </div>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+`;
