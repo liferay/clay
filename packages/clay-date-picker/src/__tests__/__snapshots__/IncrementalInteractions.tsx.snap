@@ -8,6 +8,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
     >
       <div
         class="input-group"
+        style=""
       >
         <div
           class="input-group-item"
@@ -51,7 +52,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
       <div
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
-        style="top: 0px; left: 0px;"
+        style="left: -999px; top: -995px;"
       >
         <div
           class="date-picker-calendar"
@@ -536,6 +537,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
     >
       <div
         class="input-group"
+        style=""
       >
         <div
           class="input-group-item"
@@ -579,7 +581,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
       <div
         class="dropdown-menu date-picker-dropdown-menu"
         data-testid="dropdown"
-        style="top: 0px; left: 0px;"
+        style="left: -999px; top: -995px;"
       >
         <div
           class="date-picker-calendar"
@@ -1065,6 +1067,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
     >
       <div
         class="input-group"
+        style=""
       >
         <div
           class="input-group-item"
@@ -1108,7 +1111,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
       <div
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
-        style="top: 0px; left: 0px;"
+        style="left: -999px; top: -995px;"
       >
         <div
           class="date-picker-calendar"
@@ -1594,6 +1597,7 @@ exports[`IncrementalInteractions clicking on the dot button should select curren
     >
       <div
         class="input-group"
+        style=""
       >
         <div
           class="input-group-item"
@@ -1637,7 +1641,7 @@ exports[`IncrementalInteractions clicking on the dot button should select curren
       <div
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
-        style="top: 0px; left: 0px;"
+        style="left: -999px; top: -995px;"
       >
         <div
           class="date-picker-calendar"
@@ -2123,6 +2127,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
     >
       <div
         class="input-group"
+        style=""
       >
         <div
           class="input-group-item"
@@ -2166,7 +2171,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
       <div
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
-        style="top: 0px; left: 0px;"
+        style="left: -999px; top: -995px;"
       >
         <div
           class="date-picker-calendar"
@@ -2667,6 +2672,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
     >
       <div
         class="input-group"
+        style=""
       >
         <div
           class="input-group-item"
@@ -2715,7 +2721,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
       <div
         class="dropdown-menu date-picker-dropdown-menu"
         data-testid="dropdown"
-        style="top: 0px; left: 0px;"
+        style="left: -999px; top: -995px;"
       >
         <div
           class="date-picker-calendar"
@@ -3201,6 +3207,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
     >
       <div
         class="input-group"
+        style=""
       >
         <div
           class="input-group-item"
@@ -3244,7 +3251,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
       <div
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
-        style="top: 0px; left: 0px;"
+        style="left: -999px; top: -995px;"
       >
         <div
           class="date-picker-calendar"
