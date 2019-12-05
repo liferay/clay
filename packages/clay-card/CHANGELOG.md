@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.4](https://github.com/liferay/clay/tree/master/packages/clay-card/compare/@clayui/card@3.0.3...@clayui/card@3.0.4) (2019-12-05)
+
+**Note:** Version bump only for package @clayui/card
+
 ## [3.0.3](https://github.com/liferay/clay/tree/master/packages/clay-card/compare/@clayui/card@3.0.2...@clayui/card@3.0.3) (2019-11-07)
 
 **Note:** Version bump only for package @clayui/card
