@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.4](https://github.com/liferay/clay/tree/master/packages/clay-list/compare/@clayui/list@3.0.3...@clayui/list@3.0.4) (2019-12-05)
+
+
+### Bug Fixes
+
+* **list:** add keyboard access to quick actions ([e0bd55b](https://github.com/liferay/clay/tree/master/packages/clay-list/commit/e0bd55b))
+
+
+
+
+
 ## [3.0.3](https://github.com/liferay/clay/tree/master/packages/clay-list/compare/@clayui/list@3.0.2...@clayui/list@3.0.3) (2019-11-07)
 
 **Note:** Version bump only for package @clayui/list
