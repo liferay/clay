@@ -268,8 +268,8 @@ describe('ModalProvider -> IncrementalInteractions', () => {
 							payload: {
 								body: <h1>{'Hello world!'}</h1>,
 								footer: [
-									,
-									,
+									<></>,
+									<></>,
 									<Button key={3} onClick={state.onClose}>
 										{'Primary'}
 									</Button>,
@@ -312,8 +312,8 @@ describe('ModalProvider -> IncrementalInteractions', () => {
 					payload: {
 						body: <h1>{'Hello world!'}</h1>,
 						footer: [
-							,
-							,
+							<></>,
+							<></>,
 							<Button key={3} onClick={state.onClose}>
 								{'Primary'}
 							</Button>,

@@ -26,8 +26,8 @@ const MyApp: React.FunctionComponent<any> = () => {
 					payload: {
 						body: <h1>{'Hello world!'}</h1>,
 						footer: [
-							,
-							,
+							<></>,
+							<></>,
 							<ClayButton key={3} onClick={state.onClose}>
 								{'Primary'}
 							</ClayButton>,
