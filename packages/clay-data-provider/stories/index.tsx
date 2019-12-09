@@ -6,7 +6,7 @@
 
 import {number} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import React, {useContext, useState} from 'react';
+import React, {useContext, useState, Suspense} from 'react';
 
 import ClayDataProvider, {useResource} from '../src';
 import {FetchPolicy} from '../src/types';
@@ -105,6 +105,47 @@ const ClayDataProviderWithVariablesAndStorage = () => {
 			</ClayDataProvider>
 		</div>
 	);
+};
+
+class ErrorBoundary extends React.Component {
+	state = {
+		hasError: false,
+		errorMessage: null,
+	};
+
+	static getDerivedStateFromError(error: Error) {
+		return {hasError: true, errorMessage: error.message};
+	}
+
+	render() {
+		if (this.state.hasError) {
+			return (
+				<>
+					<h3>Something went wrong.</h3>
+					<p>{this.state.errorMessage}</p>
+				</>
+			);
+		}
+
+		return this.props.children;
+	}
+}
+
+const RickAndMortyList = () => {
+	const {resource} = useResource({
+		link: 'https://rickandmortyapi.com/api/character/',
+		suspense: true,
+		variables: {limit: 10},
+	});
+
+	return resource.results.map((item: any) => (
+		<li className="list-group-item list-group-item-flex" key={item.id}>
+			<div className="autofit-col autofit-col-expand">
+				<p className="list-group-title text-truncate">{'Name'}</p>
+				<p className="list-group-subtitle text-truncate">{item.name}</p>
+			</div>
+		</li>
+	));
 };
 
 storiesOf('Components|ClayDataProvider', module)
@@ -239,4 +280,11 @@ storiesOf('Components|ClayDataProvider', module)
 				</div>
 			</div>
 		);
-	});
+	})
+	.add('with Suspense', () => (
+		<ErrorBoundary>
+			<Suspense fallback={<h1>Loading...</h1>}>
+				<RickAndMortyList />
+			</Suspense>
+		</ErrorBoundary>
+	));

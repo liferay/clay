@@ -22,6 +22,8 @@ interface IResource extends IDataProvider {
 	onNetworkStatusChange?: (status: NetworkStatus) => void;
 }
 
+const PROMISES: {[propName: string]: Promise<any>} = {};
+
 const useResource = ({
 	fetchDelay = 300,
 	fetchOptions,
@@ -40,6 +42,7 @@ const useResource = ({
 	},
 	fetchRetry = {},
 	storageMaxSize = 20,
+	suspense = false,
 	variables = null,
 }: IResource) => {
 	const [resource, setResource] = useState<any>(null);
@@ -49,10 +52,6 @@ const useResource = ({
 	let retryDelayTimeoutId = useRef<null | NodeJS.Timeout>(null).current;
 
 	const pollIntervalRef = useRef(pollInterval);
-
-	// A flag to identify if the first rendering happened to avoid
-	// two requests.
-	const firstRenderRef = useRef<boolean>(true);
 
 	const cache = useCache(
 		fetchPolicy,
@@ -108,7 +107,15 @@ const useResource = ({
 				doFetch(retryAttempts + 1);
 			}, delay);
 		} else {
-			dispatchNetworkStatus(NetworkStatus.Error);
+			if (suspense) {
+				const cacheKey = cache.getCacheKey(link, variables);
+
+				if (cacheKey) {
+					PROMISES[cacheKey] = err;
+				}
+			} else {
+				dispatchNetworkStatus(NetworkStatus.Error);
+			}
 			warning(false, `DataProvider: Error making the requisition ${err}`);
 		}
 	};
@@ -136,6 +143,14 @@ const useResource = ({
 		if (pollIntervalRef.current > 0) {
 			setPoll();
 		}
+
+		const cacheKey = cache.getCacheKey(link, variables);
+
+		if (cacheKey) {
+			PROMISES[cacheKey] = result;
+		}
+
+		return result;
 	};
 
 	const populateSearchParams = (uri: URL, variables: TVariables) => {
@@ -196,7 +211,7 @@ const useResource = ({
 				return null;
 		}
 
-		timeout(fetchTimeout, promise)
+		return timeout(fetchTimeout, promise)
 			.then(fetchOnComplete)
 			.catch(err => handleFetchRetry(err, retryAttempts));
 	};
@@ -216,7 +231,7 @@ const useResource = ({
 		}
 
 		dispatchNetworkStatus(status);
-		doFetch();
+		return doFetch();
 	};
 
 	useEffect(() => {
@@ -228,15 +243,12 @@ const useResource = ({
 	}, [pollInterval]);
 
 	useEffect(() => {
-		if (!firstRenderRef.current) {
+		if (resource !== null) {
 			maybeFetch(NetworkStatus.Refetch);
 		}
 	}, [debouncedVariablesChange]);
 
 	useEffect(() => {
-		maybeFetch(NetworkStatus.Loading);
-		firstRenderRef.current = false;
-
 		return () => {
 			// Reset the cache only if the storage reference is
 			// local from useResource.
@@ -253,7 +265,36 @@ const useResource = ({
 		};
 	}, []);
 
-	return {refetch: handleRefetch, resource};
+	const cacheKey = <string>cache.getCacheKey(link, variables);
+
+	let latestData = resource;
+
+	if (!PROMISES[cacheKey]) {
+		const result = maybeFetch(NetworkStatus.Loading);
+
+		if (result) {
+			PROMISES[cacheKey] = result;
+		}
+	}
+
+	if (suspense) {
+		if (latestData === null) {
+			if (
+				PROMISES[cacheKey] &&
+				typeof PROMISES[cacheKey].then === 'function'
+			) {
+				throw PROMISES[cacheKey];
+			}
+
+			if (PROMISES[cacheKey] instanceof Error) {
+				throw PROMISES[cacheKey];
+			}
+
+			latestData = PROMISES[cacheKey];
+		}
+	}
+
+	return {refetch: handleRefetch, resource: latestData};
 };
 
 export {useResource};

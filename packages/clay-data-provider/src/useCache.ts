@@ -72,6 +72,7 @@ const useCache = (
 			shouldUseCache,
 			partial(readFromCache, getCacheKey(link, variables))
 		),
+		getCacheKey,
 		reset: cache.reset,
 		set: ifVal(
 			shouldUseCache,

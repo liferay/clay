@@ -169,6 +169,11 @@ export interface IDataProvider {
 	storageMaxSize?: number;
 
 	/**
+	 * Flag to enable `useResource` integration with suspense.
+	 */
+	suspense?: boolean;
+
+	/**
 	 * Variables are analyzed and converted to be passed as parameters
 	 * to the query of a GET request, for example.
 	 *
