@@ -15,6 +15,8 @@ import FilesPage from './FilesPage';
 import FormPage from './FormPage';
 import ListPage from './ListPage';
 
+import './Recharts';
+
 storiesOf('Demos|Templates', module)
 	.add('List Page', () => <ListPage />)
 	.add('Files Page', () => <FilesPage />)
