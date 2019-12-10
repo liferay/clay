@@ -26,18 +26,13 @@ const print = require('./src/print');
 const readdirAsync = promisify(readdir);
 const readFileAsync = promisify(readFile);
 
-async function* walk(directory, predicate = () => true) {
+async function walk(directory, predicate = () => true, callback) {
 	const entries = await readdirAsync(directory, {withFileTypes: true});
 	for (const entry of entries) {
 		if (entry.isDirectory()) {
-			for await (const nested of walk(
-				join(directory, entry.name.toString()),
-				predicate
-			)) {
-				yield nested;
-			}
+			await walk(join(directory, entry.name.toString()), predicate, callback);
 		} else if (predicate(entry)) {
-			yield join(directory, entry.name.toString());
+			await callback(join(directory, entry.name.toString()));
 		}
 	}
 }
