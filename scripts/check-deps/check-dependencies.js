@@ -30,7 +30,11 @@ async function walk(directory, predicate = () => true, callback) {
 	const entries = await readdirAsync(directory, {withFileTypes: true});
 	for (const entry of entries) {
 		if (entry.isDirectory()) {
-			await walk(join(directory, entry.name.toString()), predicate, callback);
+			await walk(
+				join(directory, entry.name.toString()),
+				predicate,
+				callback
+			);
 		} else if (predicate(entry)) {
 			await callback(join(directory, entry.name.toString()));
 		}
