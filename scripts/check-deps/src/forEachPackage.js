@@ -25,7 +25,7 @@ async function forEachPackage(callback, whitelistSet = new Set([])) {
 		const name = pkg.name.toString();
 		if (pkg.isDirectory() && !whitelistSet.has(name)) {
 			const config = await getPackageConfig(name);
-			callback(name, JSON.parse(config));
+			await callback(name, JSON.parse(config));
 		}
 	}
 }
