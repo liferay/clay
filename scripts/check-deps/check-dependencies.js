@@ -16,7 +16,6 @@ const {parse} = require('@babel/parser');
 const {default: traverse} = require('@babel/traverse');
 const {readFile, readdir} = require('fs');
 const {basename, extname, join} = require('path');
-const semver = require('semver');
 const {promisify} = require('util');
 
 const forEachPackage = require('./src/forEachPackage');
@@ -260,64 +259,9 @@ async function checkForDevelopmentDependencies() {
 	return success;
 }
 
-/**
- * Make sure internal dependencies always use the current (latest) versions.
- */
-async function checkForNonCurrentInternalDependencies() {
-	print.line.yellow('Checking for non-current internal dependencies:\n');
-	const packages = {};
-	await forEachPackage((name, config) => {
-		const dependencies = getDependencies(config);
-		packages[name] = {
-			dependencies,
-			version: config.version,
-		};
-	}, WORKSPACE_PACKAGES_WHITELIST);
-
-	const internalPackagePrefix = '@clayui/';
-	let success = true;
-
-	Object.entries(packages).forEach(([name, {dependencies}]) => {
-		print(`  ${name}: `);
-		const outdated = [];
-		dependencies.forEach(([dependency, version]) => {
-			const name = extractDependencyName(dependency);
-			if (name && name.startsWith(internalPackagePrefix)) {
-				let suffix = name.slice(internalPackagePrefix.length);
-				const hasSuffix = Object.prototype.hasOwnProperty.call(
-					packages,
-					suffix
-				);
-				if (!hasSuffix) {
-					suffix = `clay-${suffix}`;
-				}
-				if (
-					hasSuffix &&
-					!semver.satisfies(packages[suffix].version, version)
-				) {
-					outdated.push([suffix, version, packages[suffix].version]);
-				}
-			}
-		});
-		if (outdated.length) {
-			success = false;
-			print.line.red('BAD');
-			for (const [dependency, actual, desired] of outdated) {
-				print.line.red(`    ${dependency}: ${actual} != ${desired}`);
-			}
-		} else {
-			print.line.green('OK');
-		}
-	});
-
-	print();
-	return success;
-}
-
 main(async () => {
 	let success = await checkForMissingDependencies();
 	success &= await checkForMismatchedDependencyVersions();
 	success &= await checkForDevelopmentDependencies();
-	success &= await checkForNonCurrentInternalDependencies();
 	return !!success;
 });
