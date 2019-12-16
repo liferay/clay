@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {useEffect, useRef} from 'react';
-import tinycolor from 'tinycolor2';
+import * as React from 'react';
+import * as tinycolor from 'tinycolor2';
 
 import {useMousePosition} from './hooks';
 import {colorToXY, xToSaturation, yToVisibility} from './util';
@@ -35,8 +35,8 @@ const ClayColorPickerGradientSelector: React.FunctionComponent<IProps> = ({
 	onChange = () => {},
 	hue = 0,
 }) => {
-	const containerRef = useRef<HTMLDivElement>(null);
-	const selectorActive = useRef<boolean>(false);
+	const containerRef = React.useRef<HTMLDivElement>(null);
+	const selectorActive = React.useRef<boolean>(false);
 
 	const {onMouseMove, setXY, x, y} = useMousePosition(containerRef);
 
@@ -47,7 +47,7 @@ const ClayColorPickerGradientSelector: React.FunctionComponent<IProps> = ({
 		window.removeEventListener('mouseup', removeListeners);
 	};
 
-	useEffect(() => {
+	React.useEffect(() => {
 		const {current} = containerRef;
 
 		if (current && selectorActive.current) {
@@ -55,13 +55,13 @@ const ClayColorPickerGradientSelector: React.FunctionComponent<IProps> = ({
 		}
 	}, [x, y]);
 
-	useEffect(() => {
+	React.useEffect(() => {
 		if (containerRef.current && !selectorActive.current) {
 			setXY(colorToXY(color, containerRef.current));
 		}
 	}, [color]);
 
-	useEffect(() => removeListeners, []);
+	React.useEffect(() => removeListeners, []);
 
 	return (
 		<div

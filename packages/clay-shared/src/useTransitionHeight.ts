@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {useEffect, useState} from 'react';
+import * as React from 'react';
 
 /**
  * Removes the height style that triggers a transition when collapse
@@ -39,9 +39,9 @@ export function useTransitionHeight(
 	setVisible: any,
 	contentRef: React.RefObject<any>
 ) {
-	const [transitioning, setTransitioning] = useState<boolean>(false);
+	const [transitioning, setTransitioning] = React.useState<boolean>(false);
 
-	useEffect(() => {
+	React.useEffect(() => {
 		if (transitioning) {
 			setCollapseHeight(contentRef);
 			if (visible) {

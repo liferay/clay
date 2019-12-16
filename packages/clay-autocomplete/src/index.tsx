@@ -5,7 +5,7 @@
  */
 
 import {ClayInput} from '@clayui/form';
-import React, {useRef, useState} from 'react';
+import * as React from 'react';
 
 import Context from './Context';
 import DropDown from './DropDown';
@@ -39,8 +39,8 @@ const ClayAutocomplete = React.forwardRef<HTMLDivElement, IProps>(
 		}: IProps,
 		ref
 	) => {
-		const containerElementRef = useRef<null | HTMLDivElement>(null);
-		const [loading, setLoading] = useState(false);
+		const containerElementRef = React.useRef<null | HTMLDivElement>(null);
+		const [loading, setLoading] = React.useState(false);
 
 		return (
 			<Component

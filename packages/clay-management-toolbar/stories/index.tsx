@@ -12,7 +12,7 @@ import {ClayCheckbox, ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import {storiesOf} from '@storybook/react';
-import React, {useState} from 'react';
+import * as React from 'react';
 
 import ClayManagementToolbar, {ClayResultsBar} from '../src';
 
@@ -43,7 +43,7 @@ const viewTypes = [
 storiesOf('Components|ClayManagementToolbar', module).add(
 	'w/ low-level',
 	() => {
-		const [searchMobile, setSearchMobile] = useState<boolean>(false);
+		const [searchMobile, setSearchMobile] = React.useState<boolean>(false);
 		const viewTypeActive = viewTypes.find(type => type.active);
 
 		return (

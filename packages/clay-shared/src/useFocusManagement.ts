@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {useEffect, useRef} from 'react';
+import * as React from 'react';
 
 const TAB_KEY_CODE = 9;
 
@@ -12,7 +12,7 @@ const TAB_KEY_CODE = 9;
 const HostComponent = 5;
 
 export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
-	const nextElementOutsideScopeRef = useRef<HTMLElement | null>(null);
+	const nextElementOutsideScopeRef = React.useRef<HTMLElement | null>(null);
 
 	// https://github.com/facebook/react/pull/15849#diff-39a673d38713257d5fe7d90aac2acb5aR107
 	const isFiberHostComponentFocusable = (fiber: any): boolean => {
@@ -240,7 +240,7 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 		return null;
 	};
 
-	useEffect(() => {
+	React.useEffect(() => {
 		if (nextElementOutsideScopeRef.current) {
 			nextElementOutsideScopeRef.current.removeEventListener(
 				'keydown',

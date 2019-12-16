@@ -6,7 +6,7 @@
 
 import ClayDatePicker from '..';
 import {cleanup, render} from '@testing-library/react';
-import React, {useState} from 'react';
+import * as React from 'react';
 
 import {FirstDayOfWeek} from '../types';
 
@@ -23,7 +23,7 @@ const DatePickerWithState = ({
 	initialMonth = new Date(2019, 3, 18),
 	...props
 }: any) => {
-	const [value, setValue] = useState();
+	const [value, setValue] = React.useState();
 
 	return (
 		<ClayDatePicker

@@ -15,7 +15,7 @@ import {
 	render,
 	waitForElement,
 } from '@testing-library/react';
-import React from 'react';
+import * as React from 'react';
 
 const spritemap = 'node_modules/clay-css/lib/images/icons/icons.svg';
 

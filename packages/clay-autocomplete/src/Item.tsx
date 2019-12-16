@@ -5,8 +5,8 @@
  */
 
 import ClayDropDown from '@clayui/drop-down';
-import fuzzy from 'fuzzy';
-import React from 'react';
+import * as fuzzy from 'fuzzy';
+import * as React from 'react';
 
 export interface IProps extends React.ComponentProps<typeof ClayDropDown.Item> {
 	innerRef?: React.Ref<HTMLAnchorElement>;

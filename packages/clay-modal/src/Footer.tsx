@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {FunctionComponent} from 'react';
+import * as React from 'react';
 
 interface IFooterProps {
 	/**
@@ -26,7 +26,7 @@ interface IFooterProps {
 	middle?: React.ReactElement;
 }
 
-const ClayModalFooter: FunctionComponent<IFooterProps> = ({
+const ClayModalFooter: React.FunctionComponent<IFooterProps> = ({
 	first,
 	last,
 	middle,

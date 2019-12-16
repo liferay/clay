@@ -8,13 +8,13 @@ import '@clayui/css/lib/css/atlas.css';
 import ClayButton from '@clayui/button';
 import {boolean, number, select} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import React, {useState} from 'react';
+import * as React from 'react';
 
 import ClaySlider from '../src';
 
 storiesOf('Components|ClaySlider', module)
 	.add('default', () => {
-		const [value, setValue] = useState<number>(10);
+		const [value, setValue] = React.useState<number>(10);
 
 		return (
 			<div className="sheet">
@@ -41,7 +41,7 @@ storiesOf('Components|ClaySlider', module)
 		);
 	})
 	.add('/w multiple sliders', () => {
-		const [value, setValue] = useState<number>(10);
+		const [value, setValue] = React.useState<number>(10);
 
 		return (
 			<div className="sheet">

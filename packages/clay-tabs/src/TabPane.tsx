@@ -5,7 +5,7 @@
  */
 
 import classNames from 'classnames';
-import React, {useEffect, useState} from 'react';
+import * as React from 'react';
 
 interface ITabPaneProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
@@ -32,9 +32,11 @@ const TabPane: React.FunctionComponent<ITabPaneProps> = ({
 	fade,
 	...otherProps
 }: ITabPaneProps) => {
-	const [visibleClassShow, setVisibleClassShow] = useState<boolean>(false);
+	const [visibleClassShow, setVisibleClassShow] = React.useState<boolean>(
+		false
+	);
 
-	useEffect(() => {
+	React.useEffect(() => {
 		const timer = delay(() => {
 			setVisibleClassShow(true);
 		});

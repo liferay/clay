@@ -5,7 +5,7 @@
  */
 
 import classNames from 'classnames';
-import React from 'react';
+import * as React from 'react';
 
 import Header from './Header';
 import Item from './Item';

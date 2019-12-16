@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {useState} from 'react';
+import * as React from 'react';
 
 import {IDataProvider, NetworkStatus} from './types';
 import {useResource} from './useResource';
@@ -54,7 +54,7 @@ const ClayDataProvider: React.FunctionComponent<IProps> = ({
 	 * is enabled, this will inform of the fetch status and cause
 	 * a new rendering.
 	 */
-	const [state, setState] = useState<IState>(() => ({
+	const [state, setState] = React.useState<IState>(() => ({
 		error: false,
 		loading: false,
 	}));

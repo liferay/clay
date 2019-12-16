@@ -5,16 +5,16 @@
  */
 
 import classNames from 'classnames';
-import React, {FunctionComponent, HTMLAttributes} from 'react';
+import * as React from 'react';
 
-interface IBodyProps extends HTMLAttributes<HTMLDivElement> {
+interface IBodyProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Url to place an iframe in the body of the modal.
 	 */
 	url?: string;
 }
 
-const ClayModalBody: FunctionComponent<IBodyProps> = ({
+const ClayModalBody: React.FunctionComponent<IBodyProps> = ({
 	children,
 	url,
 }: IBodyProps) => (

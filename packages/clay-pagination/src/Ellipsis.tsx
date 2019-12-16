@@ -6,7 +6,7 @@
 
 import ClayButton from '@clayui/button';
 import {ClayDropDownWithItems} from '@clayui/drop-down';
-import React from 'react';
+import * as React from 'react';
 
 export interface IPaginationEllipsisProps {
 	items?: Array<number>;

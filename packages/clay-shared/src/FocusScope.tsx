@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {useRef} from 'react';
+import * as React from 'react';
 
 import {useFocusManagement} from './useFocusManagement';
 
@@ -42,7 +42,7 @@ export const FocusScope: React.FunctionComponent<IProps> = ({
 	arrowKeysUpDown = true,
 	children,
 }) => {
-	const elRef = useRef<null | HTMLElement>(null);
+	const elRef = React.useRef<null | HTMLElement>(null);
 	const focusManager = useFocusManagement(elRef);
 
 	const onKeyDown = (event: React.KeyboardEvent<any>) => {

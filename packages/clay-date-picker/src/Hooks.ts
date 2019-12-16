@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import moment from 'moment';
-import {useState} from 'react';
+import * as moment from 'moment';
+import * as React from 'react';
 
 import * as Helpers from './Helpers';
 import {FirstDayOfWeek} from './types';
@@ -14,7 +14,7 @@ import {FirstDayOfWeek} from './types';
  * Generates the table of days of the month.
  */
 const useWeeks = (currentMonth: Date, firstDayOfWeek: FirstDayOfWeek) => {
-	const [weeks, set] = useState<Helpers.Month>(() =>
+	const [weeks, set] = React.useState<Helpers.Month>(() =>
 		Helpers.getWeekArray(currentMonth, firstDayOfWeek)
 	);
 
@@ -29,7 +29,7 @@ const useWeeks = (currentMonth: Date, firstDayOfWeek: FirstDayOfWeek) => {
  * Sets the current time
  */
 const useCurrentTime = (format: string) => {
-	const [currentTime, set] = useState<string>(() =>
+	const [currentTime, set] = React.useState<string>(() =>
 		moment()
 			.set('h', 0)
 			.set('m', 0)

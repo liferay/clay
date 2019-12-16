@@ -7,7 +7,7 @@
 import ClayIcon from '@clayui/icon';
 import {useTransitionHeight} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useRef, useState} from 'react';
+import * as React from 'react';
 
 import ClayPanelBody from './Body';
 import ClayPanelFooter from './Footer';
@@ -68,8 +68,8 @@ const ClayPanel: React.FunctionComponent<IProps> & {
 	spritemap,
 	...otherProps
 }: IProps) => {
-	const panelRef = useRef<HTMLDivElement>(null);
-	const [expanded, setExpaned] = useState<boolean>(defaultExpanded);
+	const panelRef = React.useRef<HTMLDivElement>(null);
+	const [expanded, setExpaned] = React.useState<boolean>(defaultExpanded);
 
 	const [
 		transitioning,

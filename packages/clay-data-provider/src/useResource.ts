@@ -5,8 +5,8 @@
  */
 
 import {useDebounce} from '@clayui/shared';
-import {useEffect, useRef, useState} from 'react';
-import warning from 'warning';
+import * as React from 'react';
+import * as warning from 'warning';
 
 import {
 	FetchPolicy,
@@ -42,17 +42,17 @@ const useResource = ({
 	storageMaxSize = 20,
 	variables = null,
 }: IResource) => {
-	const [resource, setResource] = useState<any>(null);
+	const [resource, setResource] = React.useState<any>(null);
 
-	let pollingTimeoutId = useRef<null | NodeJS.Timeout>(null).current;
+	let pollingTimeoutId = React.useRef<null | NodeJS.Timeout>(null).current;
 
-	let retryDelayTimeoutId = useRef<null | NodeJS.Timeout>(null).current;
+	let retryDelayTimeoutId = React.useRef<null | NodeJS.Timeout>(null).current;
 
-	const pollIntervalRef = useRef(pollInterval);
+	const pollIntervalRef = React.useRef(pollInterval);
 
 	// A flag to identify if the first rendering happened to avoid
 	// two requests.
-	const firstRenderRef = useRef<boolean>(true);
+	const firstRenderRef = React.useRef<boolean>(true);
 
 	const cache = useCache(
 		fetchPolicy,
@@ -219,7 +219,7 @@ const useResource = ({
 		doFetch();
 	};
 
-	useEffect(() => {
+	React.useEffect(() => {
 		pollIntervalRef.current = pollInterval;
 
 		if (pollInterval > 0) {
@@ -227,13 +227,13 @@ const useResource = ({
 		}
 	}, [pollInterval]);
 
-	useEffect(() => {
+	React.useEffect(() => {
 		if (!firstRenderRef.current) {
 			maybeFetch(NetworkStatus.Refetch);
 		}
 	}, [debouncedVariablesChange]);
 
-	useEffect(() => {
+	React.useEffect(() => {
 		maybeFetch(NetworkStatus.Loading);
 		firstRenderRef.current = false;
 

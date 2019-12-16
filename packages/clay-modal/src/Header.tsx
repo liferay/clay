@@ -6,11 +6,11 @@
 
 import Button from '@clayui/button';
 import Icon from '@clayui/icon';
-import React, {FunctionComponent, HTMLAttributes, useContext} from 'react';
+import * as React from 'react';
 
 import Context from './Context';
 
-export type HeaderProps = HTMLAttributes<HTMLDivElement>;
+export type HeaderProps = React.HTMLAttributes<HTMLDivElement>;
 
 const ICON_MAP = {
 	danger: 'exclamation-full',
@@ -19,10 +19,10 @@ const ICON_MAP = {
 	warning: 'warning-full',
 };
 
-const ClayModalHeader: FunctionComponent<HeaderProps> = ({
+const ClayModalHeader: React.FunctionComponent<HeaderProps> = ({
 	children,
 }: HeaderProps) => {
-	const {onClose, spritemap, status} = useContext(Context);
+	const {onClose, spritemap, status} = React.useContext(Context);
 
 	return (
 		<div className="modal-header">

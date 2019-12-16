@@ -6,7 +6,7 @@
 
 import ClayDatePicker from '..';
 import {cleanup, fireEvent, render} from '@testing-library/react';
-import React, {useState} from 'react';
+import * as React from 'react';
 
 const spritemap = 'icons.svg';
 
@@ -21,7 +21,7 @@ const DatePickerWithState = ({
 	initialMonth = new Date(2019, 3, 18),
 	...props
 }: any) => {
-	const [value, setValue] = useState();
+	const [value, setValue] = React.useState();
 
 	return (
 		<ClayDatePicker

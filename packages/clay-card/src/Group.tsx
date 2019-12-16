@@ -5,7 +5,7 @@
  */
 
 import classNames from 'classnames';
-import React from 'react';
+import * as React from 'react';
 
 interface ICardGroupProps extends React.HTMLAttributes<HTMLUListElement> {
 	/**

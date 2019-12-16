@@ -6,7 +6,7 @@
 
 import ClayIcon from '@clayui/icon';
 import ClaySticker from '@clayui/sticker';
-import React from 'react';
+import * as React from 'react';
 
 import ClayCard from './Card';
 

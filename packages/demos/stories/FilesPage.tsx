@@ -9,10 +9,10 @@ import ClayCard, {ClayCardWithInfo} from '@clayui/card';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {ClayInput} from '@clayui/form';
 import ClayManagementToolbar from '@clayui/management-toolbar';
-import React, {useState} from 'react';
+import * as React from 'react';
 
 export default () => {
-	const [value, setValue] = useState('');
+	const [value, setValue] = React.useState('');
 
 	const dogNames: Array<[string, number]> = [
 		['Bailey', 1],

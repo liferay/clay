@@ -8,12 +8,12 @@ import '@clayui/css/lib/css/atlas.css';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {number} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import React, {useState} from 'react';
+import * as React from 'react';
 
 import ClayPagination, {ClayPaginationWithBasicItems} from '../src';
 
 const PaginationWithState = (props: any) => {
-	const [active, setActive] = useState(8);
+	const [active, setActive] = React.useState(8);
 
 	return (
 		<ClayPaginationWithBasicItems

@@ -10,7 +10,7 @@ const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import ClayLink from '@clayui/link';
 import {boolean, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import React from 'react';
+import * as React from 'react';
 
 import ClayNavigationBar from '../src/index';
 

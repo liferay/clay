@@ -6,7 +6,7 @@
 
 import ClayIcon from '@clayui/icon';
 import classNames from 'classnames';
-import React from 'react';
+import * as React from 'react';
 
 interface IItemProps
 	extends React.HTMLAttributes<HTMLAnchorElement | HTMLSpanElement> {

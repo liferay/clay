@@ -5,7 +5,7 @@
  */
 
 import {Data} from 'billboard.js';
-import React from 'react';
+import * as React from 'react';
 
 import BillboardWrapper from './BillboardWrapper';
 

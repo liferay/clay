@@ -6,7 +6,7 @@
 
 import ClayIcon from '@clayui/icon';
 import {getEllipsisItems} from '@clayui/shared';
-import React from 'react';
+import * as React from 'react';
 
 import Pagination from './Pagination';
 

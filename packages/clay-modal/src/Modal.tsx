@@ -6,8 +6,8 @@
 
 import {ClayPortal} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {FunctionComponent, useEffect, useRef} from 'react';
-import warning from 'warning';
+import * as React from 'react';
+import * as warning from 'warning';
 
 import Body from './Body';
 import Context, {IContext} from './Context';
@@ -42,7 +42,7 @@ const warningMessage = `You need to pass the 'observer' prop to ClayModal for ev
 > ); 
 `;
 
-const ClayModal: FunctionComponent<IProps> & {
+const ClayModal: React.FunctionComponent<IProps> & {
 	Body: typeof Body;
 	Footer: typeof Footer;
 	Header: typeof Header;
@@ -55,7 +55,7 @@ const ClayModal: FunctionComponent<IProps> & {
 	status,
 	...otherProps
 }: IProps) => {
-	const modalBodyElementRef = useRef<HTMLDivElement | null>(null);
+	const modalBodyElementRef = React.useRef<HTMLDivElement | null>(null);
 
 	warning(observer !== undefined, warningMessage);
 
@@ -63,7 +63,7 @@ const ClayModal: FunctionComponent<IProps> & {
 		observer.dispatch(ObserverType.Close)
 	);
 
-	useEffect(() => observer.dispatch(ObserverType.Open), []);
+	React.useEffect(() => observer.dispatch(ObserverType.Open), []);
 
 	// Defines a default Modal size when size is not set.
 	const maxWidth = size ? {} : {maxWidth: '600px'};

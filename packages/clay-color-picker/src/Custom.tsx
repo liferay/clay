@@ -6,8 +6,8 @@
 
 import ClayForm, {ClayInput} from '@clayui/form';
 import Icon from '@clayui/icon';
-import React, {useEffect, useRef, useState} from 'react';
-import tinycolor from 'tinycolor2';
+import * as React from 'react';
+import * as tinycolor from 'tinycolor2';
 
 import GradientSelector from './GradientSelector';
 import Hue from './Hue';
@@ -39,10 +39,10 @@ const RGBInput: React.FunctionComponent<IRGBInputProps> = ({
 	onChange,
 	value,
 }) => {
-	const inputRef = useRef(null);
-	const [inputValue, setInputValue] = useState(value);
+	const inputRef = React.useRef(null);
+	const [inputValue, setInputValue] = React.useState(value);
 
-	useEffect(() => {
+	React.useEffect(() => {
 		if (document.activeElement !== inputRef.current) {
 			setInputValue(value);
 		}
@@ -112,13 +112,13 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 	onColorsChange,
 	spritemap,
 }) => {
-	const inputRef = useRef(null);
-	const [activeSplotchIndex, setActiveSplotchIndex] = useState(0);
-	const [editorActive, setEditorActive] = useState(false);
+	const inputRef = React.useRef(null);
+	const [activeSplotchIndex, setActiveSplotchIndex] = React.useState(0);
+	const [editorActive, setEditorActive] = React.useState(false);
 
 	const color = tinycolor(colors[activeSplotchIndex]);
 
-	const [hue, setHue] = useState(color.toHsv().h);
+	const [hue, setHue] = React.useState(color.toHsv().h);
 	const [hexInputVal, setHexInput] = useHexInput(color.toHex());
 
 	const {b, g, r} = color.toRgb();
@@ -142,7 +142,7 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 		}
 	};
 
-	useEffect(() => {
+	React.useEffect(() => {
 		if (inputRef.current !== document.activeElement) {
 			setHexInput(color.toHex());
 		}

@@ -7,7 +7,7 @@
 import ClayButton from '@clayui/button';
 import ClayDropDown from '@clayui/drop-down';
 import ClayIcon from '@clayui/icon';
-import React, {useState} from 'react';
+import * as React from 'react';
 
 import Item from './Item';
 
@@ -28,7 +28,7 @@ const Ellipsis: React.FunctionComponent<IEllipsisProps> = ({
 	spritemap,
 	...otherProps
 }) => {
-	const [active, setActive] = useState(false);
+	const [active, setActive] = React.useState(false);
 
 	return (
 		<ClayDropDown

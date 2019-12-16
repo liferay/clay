@@ -9,7 +9,7 @@ import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClaySticker from '@clayui/sticker';
 import {cleanup, fireEvent, render} from '@testing-library/react';
-import React from 'react';
+import * as React from 'react';
 
 import ClayCard, {
 	ClayCardWithHorizontal,

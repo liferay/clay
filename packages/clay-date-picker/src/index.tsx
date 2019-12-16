@@ -8,14 +8,8 @@ import Button from '@clayui/button';
 import DropDown from '@clayui/drop-down';
 import {ClayInput} from '@clayui/form';
 import Icon from '@clayui/icon';
-import moment from 'moment';
-import React, {
-	ChangeEvent,
-	FunctionComponent,
-	ReactNode,
-	useRef,
-	useState,
-} from 'react';
+import * as moment from 'moment';
+import * as React from 'react';
 
 import DateNavigation from './DateNavigation';
 import DayNumber from './DayNumber';
@@ -51,7 +45,7 @@ interface IProps {
 	 * Function that should return the React element to
 	 * render on the datepicker footer.
 	 */
-	footerElement?: (object: {spritemap?: string}) => ReactNode;
+	footerElement?: (object: {spritemap?: string}) => React.ReactNode;
 
 	/**
 	 * Id to be applied to the element.
@@ -131,7 +125,7 @@ const TIME_FORMAT = 'H:m';
 /**
  * ClayDatePicker component.
  */
-const ClayDatePicker: FunctionComponent<IProps> = ({
+const ClayDatePicker: React.FunctionComponent<IProps> = ({
 	ariaLabels = {
 		buttonDot: 'Select current date',
 		buttonNextMonth: 'Select the next month',
@@ -187,7 +181,7 @@ const ClayDatePicker: FunctionComponent<IProps> = ({
 	/**
 	 * Indicates the current month rendered on the screen.
 	 */
-	const [currentMonth, setCurrentMonth] = useState<Date>(() =>
+	const [currentMonth, setCurrentMonth] = React.useState<Date>(() =>
 		normalizeDate(initialMonth)
 	);
 
@@ -199,7 +193,7 @@ const ClayDatePicker: FunctionComponent<IProps> = ({
 	/**
 	 * The day selected by the user.
 	 */
-	const [daySelected, setDaySelected] = useState<Date>(initialMonth);
+	const [daySelected, setDaySelected] = React.useState<Date>(initialMonth);
 
 	/**
 	 * An array of the weeks and days list for the current month
@@ -209,17 +203,17 @@ const ClayDatePicker: FunctionComponent<IProps> = ({
 	/**
 	 * Flag to indicate if date is expanded.
 	 */
-	const [expanded, setExpanded] = useState(initialExpanded);
+	const [expanded, setExpanded] = React.useState(initialExpanded);
 
 	/**
 	 * Create a ref to store the datepicker DOM element
 	 */
-	const dropdownContainerRef = useRef<HTMLDivElement | null>(null);
+	const dropdownContainerRef = React.useRef<HTMLDivElement | null>(null);
 
 	/**
 	 * Create a ref to store the datepicker DOM element
 	 */
-	const triggerElementRef = useRef<HTMLDivElement | null>(null);
+	const triggerElementRef = React.useRef<HTMLDivElement | null>(null);
 
 	/**
 	 * Handles the change of the current month of the Date Picker
@@ -250,7 +244,7 @@ const ClayDatePicker: FunctionComponent<IProps> = ({
 	 * of `onValueChange` but does not change what the user types,
 	 * if a date is valid the month of the Date Picker is changed.
 	 */
-	const inputChange = (event: ChangeEvent<HTMLInputElement>) => {
+	const inputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const {value} = event.target;
 		const format = time ? `${dateFormat} ${TIME_FORMAT}` : dateFormat;
 		const date = moment(value, format);

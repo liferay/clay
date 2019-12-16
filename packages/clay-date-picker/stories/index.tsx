@@ -7,12 +7,12 @@
 import '@clayui/css/lib/css/atlas.css';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {storiesOf} from '@storybook/react';
-import React, {useState} from 'react';
+import * as React from 'react';
 
 import ClayDatePicker, {FirstDayOfWeek} from '../src';
 
 const ClayDatePickerWithState = (props: {[key: string]: any}) => {
-	const [value, setValue] = useState<string | Date>('');
+	const [value, setValue] = React.useState<string | Date>('');
 
 	return (
 		<ClayDatePicker
