@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {FunctionComponent, ReactNode} from 'react';
+import * as React from 'react';
 
 import {IDay, Month} from './Helpers';
 
@@ -14,11 +14,11 @@ interface IChildrenFn {
 }
 
 interface IProps {
-	children: (object: IChildrenFn) => ReactNode;
+	children: (object: IChildrenFn) => React.ReactNode;
 	weeks: Month;
 }
 
-const ClayDatePickerDaysTable: FunctionComponent<IProps> = ({
+const ClayDatePickerDaysTable: React.FunctionComponent<IProps> = ({
 	children,
 	weeks,
 }) => {

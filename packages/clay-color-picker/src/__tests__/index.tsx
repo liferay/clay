@@ -6,7 +6,7 @@
 
 import ClayColorPicker from '..';
 import {cleanup, fireEvent, render} from '@testing-library/react';
-import React from 'react';
+import * as React from 'react';
 
 import getMouseEvent from '../../tests-util';
 

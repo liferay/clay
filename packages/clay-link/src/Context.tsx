@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {createContext} from 'react';
+import * as React from 'react';
 
-const context = createContext<React.ComponentType | 'a'>('a');
+const context = React.createContext<React.ComponentType | 'a'>('a');
 
 context.displayName = 'ClayLinkContext';
 

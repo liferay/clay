@@ -6,14 +6,14 @@
 
 import Button from '@clayui/button';
 import Icon from '@clayui/icon';
-import moment from 'moment';
-import React, {FunctionComponent, HTMLAttributes, useMemo, useRef} from 'react';
+import * as moment from 'moment';
+import * as React from 'react';
 
 import * as Helpers from './Helpers';
 import Select, {ISelectOption} from './Select';
 import {IAriaLabels, IYears} from './types';
 
-interface IProps extends HTMLAttributes<HTMLDivElement> {
+interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	ariaLabels: IAriaLabels;
 	currentMonth: Date;
 	months: Array<string>;
@@ -28,7 +28,7 @@ interface IProps extends HTMLAttributes<HTMLDivElement> {
 	years: IYears;
 }
 
-const ClayDatePickerDateNavigation: FunctionComponent<IProps> = ({
+const ClayDatePickerDateNavigation: React.FunctionComponent<IProps> = ({
 	ariaLabels,
 	currentMonth,
 	months,
@@ -37,7 +37,7 @@ const ClayDatePickerDateNavigation: FunctionComponent<IProps> = ({
 	spritemap,
 	years,
 }) => {
-	const memoizedYears: Array<ISelectOption> = useMemo(
+	const memoizedYears: Array<ISelectOption> = React.useMemo(
 		() =>
 			Helpers.range(years).map(elem => {
 				return {
@@ -48,7 +48,7 @@ const ClayDatePickerDateNavigation: FunctionComponent<IProps> = ({
 		[years]
 	);
 
-	const memoizedMonths: Array<ISelectOption> = useMemo(
+	const memoizedMonths: Array<ISelectOption> = React.useMemo(
 		() =>
 			months.map((month, index) => {
 				return {
@@ -59,9 +59,9 @@ const ClayDatePickerDateNavigation: FunctionComponent<IProps> = ({
 		[months]
 	);
 
-	const monthSelectorRef = useRef<HTMLSelectElement | null>(null);
+	const monthSelectorRef = React.useRef<HTMLSelectElement | null>(null);
 
-	const yearSelectorRef = useRef<HTMLSelectElement | null>(null);
+	const yearSelectorRef = React.useRef<HTMLSelectElement | null>(null);
 
 	/**
 	 * Handles the change of the month from the available

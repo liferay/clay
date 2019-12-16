@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {createContext} from 'react';
+import * as React from 'react';
 
 export interface IContext {
 	/**
@@ -22,7 +22,7 @@ export interface IContext {
 	interactive?: boolean;
 }
 
-const context = createContext({} as IContext);
+const context = React.createContext({} as IContext);
 
 context.displayName = 'ClayCardContext';
 

@@ -4,14 +4,14 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {useEffect, useState} from 'react';
+import * as React from 'react';
 
 // Credits to Gabe Ragland
 // (https://dev.to/gabe_ragland/debouncing-with-react-hooks-jci)
 export function useDebounce(value: any, delay: number) {
-	const [debouncedValue, setDebouncedValue] = useState(value);
+	const [debouncedValue, setDebouncedValue] = React.useState(value);
 
-	useEffect(
+	React.useEffect(
 		() => {
 			const handler = setTimeout(() => {
 				setDebouncedValue(value);
@@ -22,7 +22,7 @@ export function useDebounce(value: any, delay: number) {
 			};
 		},
 		// This is required when the `object` has lost the
-		// reference plus the values are the same, `useEffect`
+		// reference plus the values are the same, `React.useEffect`
 		// uses `Object.is` or equivalent under the covers.
 		// For some reason the reference is being lost.
 		typeof value === 'object' && value !== null

@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import stringify from 'fast-json-stable-stringify';
-import {useRef} from 'react';
+import * as stringify from 'fast-json-stable-stringify';
+import * as React from 'react';
 
 import {LRUCache} from './LRUCache';
 import {
@@ -30,7 +30,7 @@ const useCache = (
 		storage[SYMBOL_DATA_PROVIDER] = new LRUCache(storageMaxSize);
 	}
 
-	const cache = useRef<TSymbolData>(storage[
+	const cache = React.useRef<TSymbolData>(storage[
 		SYMBOL_DATA_PROVIDER
 	] as TSymbolData).current;
 

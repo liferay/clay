@@ -5,15 +5,15 @@
  */
 
 import {ClayInput} from '@clayui/form';
-import moment from 'moment';
-import React, {ChangeEventHandler, FunctionComponent, useMemo} from 'react';
+import * as moment from 'moment';
+import * as React from 'react';
 
 interface IProps {
 	ariaLabel?: string;
 	currentTime: string;
 	dateFormat: string;
 	inputName?: string;
-	onChange: ChangeEventHandler<HTMLInputElement>;
+	onChange: React.ChangeEventHandler<HTMLInputElement>;
 	placeholder?: string;
 	time: boolean;
 	timeFormat: string;
@@ -21,7 +21,7 @@ interface IProps {
 	value: string;
 }
 
-const ClayDatePickerInputDate: FunctionComponent<IProps> = ({
+const ClayDatePickerInputDate: React.FunctionComponent<IProps> = ({
 	ariaLabel,
 	currentTime,
 	dateFormat,
@@ -47,7 +47,7 @@ const ClayDatePickerInputDate: FunctionComponent<IProps> = ({
 		return value as string;
 	};
 
-	const memoizedValue = useMemo(() => isValidValue(value), [
+	const memoizedValue = React.useMemo(() => isValidValue(value), [
 		value,
 		currentTime,
 	]);

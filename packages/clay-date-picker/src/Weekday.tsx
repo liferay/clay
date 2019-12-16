@@ -4,13 +4,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {FunctionComponent} from 'react';
+import * as React from 'react';
 
 interface IProps {
 	weekday: string;
 }
 
-const ClayDatePickerWeekday: FunctionComponent<IProps> = ({weekday}) => (
+const ClayDatePickerWeekday: React.FunctionComponent<IProps> = ({weekday}) => (
 	<div className="date-picker-calendar-item date-picker-day">
 		<abbr>{weekday}</abbr>
 	</div>

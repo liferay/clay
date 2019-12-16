@@ -7,7 +7,7 @@
 import ClayIcon from '@clayui/icon';
 import {useTransitionHeight} from '@clayui/shared';
 import classNames from 'classnames';
-import React from 'react';
+import * as React from 'react';
 
 import Nav from './Nav';
 

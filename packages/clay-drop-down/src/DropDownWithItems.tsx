@@ -5,8 +5,8 @@
  */
 
 import {ClayCheckbox, ClayRadio} from '@clayui/form';
-import React, {useMemo, useContext, useState} from 'react';
-import warning from 'warning';
+import * as React from 'react';
+import * as warning from 'warning';
 
 import Caption from './Caption';
 import Divider from './Divider';
@@ -180,7 +180,7 @@ const Radio: React.FunctionComponent<IItem & IInternalItem> = ({
 	value = '',
 	...otherProps
 }) => {
-	const {checked, name, onChange} = useContext(RadioGroupContext);
+	const {checked, name, onChange} = React.useContext(RadioGroupContext);
 
 	return (
 		<ClayDropDown.Item>
@@ -203,7 +203,7 @@ const RadioGroup: React.FunctionComponent<IItem & IInternalItem> = ({
 	onChange = () => {},
 	spritemap,
 }) => {
-	const [value, setValue] = useState('');
+	const [value, setValue] = React.useState('');
 
 	const params = {
 		checked: value,
@@ -292,13 +292,15 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 	spritemap,
 	trigger,
 }: IProps) => {
-	const [active, setActive] = useState(false);
-	const hasRightSymbols = useMemo(() => !!findNested(items, 'symbolRight'), [
-		items,
-	]);
-	const hasLeftSymbols = useMemo(() => !!findNested(items, 'symbolLeft'), [
-		items,
-	]);
+	const [active, setActive] = React.useState(false);
+	const hasRightSymbols = React.useMemo(
+		() => !!findNested(items, 'symbolRight'),
+		[items]
+	);
+	const hasLeftSymbols = React.useMemo(
+		() => !!findNested(items, 'symbolLeft'),
+		[items]
+	);
 
 	const Wrap = footerContent ? 'form' : React.Fragment;
 

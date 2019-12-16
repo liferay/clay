@@ -6,8 +6,8 @@
 
 import {getEllipsisItems} from '@clayui/shared';
 import classNames from 'classnames';
-import React from 'react';
-import warning from 'warning';
+import * as React from 'react';
+import * as warning from 'warning';
 
 import Ellipsis from './Ellipsis';
 import Item from './Item';

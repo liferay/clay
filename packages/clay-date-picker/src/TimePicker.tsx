@@ -5,7 +5,7 @@
  */
 
 import ClayTimePicker, {Input} from '@clayui/time-picker';
-import React, {useEffect, useState} from 'react';
+import * as React from 'react';
 
 interface IProps {
 	currentTime: string;
@@ -27,7 +27,7 @@ const ClayDatePickerTimePicker: React.FunctionComponent<IProps> = ({
 	spritemap,
 	timezone,
 }) => {
-	const [values, setValues] = useState<Input>({
+	const [values, setValues] = React.useState<Input>({
 		ampm: DEFAULT_VALUE,
 		hours: DEFAULT_VALUE,
 		minutes: DEFAULT_VALUE,
@@ -50,7 +50,7 @@ const ClayDatePickerTimePicker: React.FunctionComponent<IProps> = ({
 		onTimeChange(hours, minutes);
 	};
 
-	useEffect(() => {
+	React.useEffect(() => {
 		const time = currentTime.split(':');
 
 		setValues(prevValues => ({

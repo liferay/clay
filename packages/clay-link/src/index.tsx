@@ -5,7 +5,7 @@
  */
 
 import classNames from 'classnames';
-import React, {useContext} from 'react';
+import * as React from 'react';
 
 import ClayLinkContext from './Context';
 
@@ -44,7 +44,7 @@ const ClayLink = React.forwardRef<HTMLAnchorElement, IProps>(
 		},
 		ref
 	) => {
-		const TagOrComponent = useContext(ClayLinkContext);
+		const TagOrComponent = React.useContext(ClayLinkContext);
 
 		return (
 			<TagOrComponent

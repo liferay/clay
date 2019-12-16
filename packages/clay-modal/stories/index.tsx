@@ -10,13 +10,13 @@ import ClayButton from '@clayui/button';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {select, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import React, {useContext, useState} from 'react';
+import * as React from 'react';
 
 import ClayModal, {ClayModalProvider, Context, useModal} from '../src';
 import {Size, Status} from '../src/types';
 
 const MyApp: React.FunctionComponent<any> = () => {
-	const [state, dispatch] = useContext(Context);
+	const [state, dispatch] = React.useContext(Context);
 
 	return (
 		<ClayButton
@@ -61,7 +61,7 @@ const status = {
 
 storiesOf('Components|ClayModal', module)
 	.add('default', () => {
-		const [visibleModal, setVisibleModal] = useState<boolean>(false);
+		const [visibleModal, setVisibleModal] = React.useState<boolean>(false);
 		const {observer, onClose} = useModal({
 			onClose: () => setVisibleModal(false),
 		});

@@ -6,7 +6,7 @@
 
 import ClayTable from '..';
 import {cleanup, render} from '@testing-library/react';
-import React from 'react';
+import * as React from 'react';
 
 describe('ClayTable', () => {
 	afterEach(cleanup);

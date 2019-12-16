@@ -5,8 +5,8 @@
  */
 
 import classnames from 'classnames';
-import moment from 'moment';
-import React, {FunctionComponent} from 'react';
+import * as moment from 'moment';
+import * as React from 'react';
 
 import {IDay} from './Helpers';
 
@@ -16,7 +16,7 @@ interface IProps {
 	onClick: (date: Date) => void;
 }
 
-const ClayDatePickerDayNumber: FunctionComponent<IProps> = ({
+const ClayDatePickerDayNumber: React.FunctionComponent<IProps> = ({
 	day,
 	daySelected,
 	onClick,

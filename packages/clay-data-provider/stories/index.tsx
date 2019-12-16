@@ -6,7 +6,7 @@
 
 import {number} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import React, {useContext, useState} from 'react';
+import * as React from 'react';
 
 import ClayDataProvider, {useResource} from '../src';
 import {FetchPolicy} from '../src/types';
@@ -18,8 +18,8 @@ const Store = React.createContext({});
 Store.displayName = 'StoreContext';
 
 const ClayDataProviderWithVariablesAndStorage = () => {
-	const [value, setValue] = useState<undefined | string>('');
-	const store = useContext(Store);
+	const [value, setValue] = React.useState<undefined | string>('');
+	const store = React.useContext(Store);
 
 	return (
 		<div className="col-md-4">
@@ -211,7 +211,7 @@ storiesOf('Components|ClayDataProvider', module)
 		<ClayDataProviderWithVariablesAndStorage />
 	))
 	.add('toggle poll', () => {
-		const [poll, setPoll] = useState(false);
+		const [poll, setPoll] = React.useState(false);
 
 		useResource({
 			link: 'https://rickandmortyapi.com/api/character',

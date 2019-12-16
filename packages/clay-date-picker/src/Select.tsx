@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {forwardRef, SelectHTMLAttributes} from 'react';
+import * as React from 'react';
 
 export interface ISelectOption {
 	label: string | number;
@@ -12,14 +12,14 @@ export interface ISelectOption {
 	value: string | number;
 }
 
-interface IProps extends SelectHTMLAttributes<HTMLSelectElement> {
+interface IProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
 	name: string;
 	options: Array<ISelectOption>;
 	testId: string;
 	value: string | number;
 }
 
-const ClayDatePickerSelect = forwardRef(
+const ClayDatePickerSelect = React.forwardRef(
 	(
 		{name, onChange, options, testId, value}: IProps,
 		ref: React.Ref<HTMLSelectElement>

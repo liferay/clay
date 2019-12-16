@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {createContext, useReducer} from 'react';
+import * as React from 'react';
 
 import ClayModal from './Modal';
 import {Size, Status} from './types';
@@ -82,13 +82,13 @@ const reducer = (
 	}
 };
 
-const Context = createContext<TProvider>([initialState, () => {}]);
+const Context = React.createContext<TProvider>([initialState, () => {}]);
 
 const ClayModalProvider: React.FunctionComponent<IProps> = ({
 	children,
 	spritemap,
 }) => {
-	const [{visible, ...otherState}, dispatch] = useReducer(
+	const [{visible, ...otherState}, dispatch] = React.useReducer(
 		reducer,
 		initialState
 	);

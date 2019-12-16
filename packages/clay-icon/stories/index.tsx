@@ -8,7 +8,7 @@ import '@clayui/css/lib/css/atlas.css';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import React from 'react';
+import * as React from 'react';
 
 import ClayIcon, {ClayIconSpriteContext} from '../src';
 

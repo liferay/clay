@@ -8,12 +8,12 @@ import '@clayui/css/lib/css/atlas.css';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {boolean, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import React, {useState} from 'react';
+import * as React from 'react';
 
 import ClayColorPicker from '../src';
 
 const ClayColorPickerWithState = (props: any) => {
-	const [color, setColor] = useState('FFFFFF');
+	const [color, setColor] = React.useState('FFFFFF');
 
 	return (
 		<ClayColorPicker
@@ -26,9 +26,13 @@ const ClayColorPickerWithState = (props: any) => {
 };
 
 const ClayColorPickerWithCustomColors = (props: any) => {
-	const [customColors, setCustoms] = useState(['008000', '00FFFF', '0000FF']);
+	const [customColors, setCustoms] = React.useState([
+		'008000',
+		'00FFFF',
+		'0000FF',
+	]);
 
-	const [color, setColor] = useState(customColors[0]);
+	const [color, setColor] = React.useState(customColors[0]);
 
 	return (
 		<ClayColorPickerWithState

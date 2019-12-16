@@ -5,7 +5,7 @@
  */
 
 import {ClayDropDownWithItems} from '@clayui/drop-down';
-import React from 'react';
+import * as React from 'react';
 
 import ClayMultiStepNav from './MultiStepNav';
 

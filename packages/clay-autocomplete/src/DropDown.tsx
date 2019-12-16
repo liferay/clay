@@ -5,7 +5,7 @@
  */
 
 import ClayDropDown from '@clayui/drop-down';
-import React, {useContext} from 'react';
+import * as React from 'react';
 
 import Context from './Context';
 
@@ -32,7 +32,7 @@ const ClayAutocompleteDropDown: React.FunctionComponent<IProps> = ({
 	children,
 	onSetActive = () => {},
 }: IProps) => {
-	const {containerElementRef} = useContext(Context);
+	const {containerElementRef} = React.useContext(Context);
 	const menuElementRef = React.useRef<HTMLDivElement>(null);
 
 	if (!alignElementRef) {

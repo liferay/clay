@@ -17,7 +17,7 @@ import {
 	ValueFn,
 } from 'd3';
 import {FeatureCollection} from 'geojson';
-import React from 'react';
+import * as React from 'react';
 
 const DEFAULT_COLOR = {
 	range: {

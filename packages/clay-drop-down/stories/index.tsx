@@ -10,7 +10,7 @@ const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {ClayCheckbox, ClayRadio} from '@clayui/form';
 import {boolean, select} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import React, {useState} from 'react';
+import * as React from 'react';
 
 import ClayDropDown, {Align, ClayDropDownWithItems} from '../src';
 
@@ -18,7 +18,7 @@ const DropDownWithState: React.FunctionComponent<any> = ({
 	children,
 	...others
 }) => {
-	const [active, setActive] = useState(false);
+	const [active, setActive] = React.useState(false);
 
 	return (
 		<ClayDropDown
@@ -159,7 +159,7 @@ storiesOf('Components|ClayDropDown', module)
 		</DropDownWithState>
 	))
 	.add('w/ ClayDropDownWithItems', () => {
-		const [value, setValue] = useState();
+		const [value, setValue] = React.useState();
 		const items = [
 			{
 				label: 'clickable',

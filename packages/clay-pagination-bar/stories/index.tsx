@@ -11,7 +11,7 @@ import ClayIcon from '@clayui/icon';
 import {ClayPaginationWithBasicItems} from '@clayui/pagination';
 import {number} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import React, {useState} from 'react';
+import * as React from 'react';
 
 import ClayPaginationBar, {ClayPaginationBarWithBasicItems} from '../src';
 
@@ -50,8 +50,8 @@ storiesOf('Components|ClayPaginationBar', module)
 		</ClayPaginationBar>
 	))
 	.add('ClayPaginationBarWithBasicItems', () => {
-		const [activePage, setActivePage] = useState<number>(1);
-		const [delta, setDelta] = useState<number>(5);
+		const [activePage, setActivePage] = React.useState<number>(1);
+		const [delta, setDelta] = React.useState<number>(5);
 
 		const deltas = [
 			{

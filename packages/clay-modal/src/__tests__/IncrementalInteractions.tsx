@@ -9,8 +9,8 @@
 import ClayModal, {ClayModalProvider, Context, useModal} from '..';
 import Button from '@clayui/button';
 import {act, cleanup, fireEvent, render} from '@testing-library/react';
-import React, {useContext, useEffect, useState} from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 
 const spritemap = 'icons.svg';
 
@@ -24,7 +24,7 @@ const ModalWithState: React.FunctionComponent<IProps> = ({
 	initialVisible = false,
 	...props
 }) => {
-	const [visible, setVisible] = useState(initialVisible);
+	const [visible, setVisible] = React.useState(initialVisible);
 	const {observer} = useModal({onClose: () => setVisible(false)});
 
 	return (
@@ -106,7 +106,7 @@ describe('Modal -> IncrementalInteractions', () => {
 				event.preventDefault();
 			};
 
-			useEffect(() => {
+			React.useEffect(() => {
 				document.addEventListener('click', handleDocumentClick);
 
 				return () => {
@@ -190,7 +190,7 @@ describe('Modal -> IncrementalInteractions', () => {
 
 	it('close the modal when click on the button of Footer component', () => {
 		const ModalState = () => {
-			const [visible, setVisible] = useState(true);
+			const [visible, setVisible] = React.useState(true);
 			const {observer, onClose} = useModal({
 				onClose: () => setVisible(false),
 			});
@@ -257,7 +257,7 @@ describe('ModalProvider -> IncrementalInteractions', () => {
 
 	it('renders a modal when dispatching Open by provider', () => {
 		const ModalWithProvider = () => {
-			const [state, dispatch] = useContext(Context);
+			const [state, dispatch] = React.useContext(Context);
 
 			return (
 				<Button
@@ -305,9 +305,9 @@ describe('ModalProvider -> IncrementalInteractions', () => {
 
 	it('renders a modal closed when dispatching Close by provider', () => {
 		const ModalWithProvider = () => {
-			const [state, dispatch] = useContext(Context);
+			const [state, dispatch] = React.useContext(Context);
 
-			useEffect(() => {
+			React.useEffect(() => {
 				dispatch({
 					payload: {
 						body: <h1>{'Hello world!'}</h1>,

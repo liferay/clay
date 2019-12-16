@@ -8,12 +8,12 @@ import '@clayui/css/lib/css/atlas.css';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {boolean, select, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import React, {useState} from 'react';
+import * as React from 'react';
 
 import ClayAlert, {DisplayType} from '../src';
 
 const ClayToastDemo = () => {
-	const [toastItems, setToastItems] = useState<Array<number>>([]);
+	const [toastItems, setToastItems] = React.useState<Array<number>>([]);
 	return (
 		<>
 			<div>
@@ -47,7 +47,7 @@ const ClayToastDemo = () => {
 };
 
 const ClayDismissibleDemo = () => {
-	const [showDismisible, setShowDismisible] = useState<boolean>(true);
+	const [showDismisible, setShowDismisible] = React.useState<boolean>(true);
 
 	return (
 		<>

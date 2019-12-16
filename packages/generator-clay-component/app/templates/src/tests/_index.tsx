@@ -5,7 +5,7 @@
  */
 
 import {cleanup, render} from '@testing-library/react';
-import React from 'react';
+import * as React from 'react';
 import <%= componentName %> from '..';
 
 describe('<%= componentName %>', () => {

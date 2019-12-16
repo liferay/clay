@@ -8,8 +8,8 @@ import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
 import {useTransitionHeight} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useRef, useState} from 'react';
-import warning from 'warning';
+import * as React from 'react';
+import * as warning from 'warning';
 
 import Item from './Item';
 
@@ -45,8 +45,8 @@ const ClayNavigationBar: React.FunctionComponent<IProps> & {
 	triggerLabel,
 	...otherProps
 }: IProps) => {
-	const [visible, setVisible] = useState(false);
-	const contentRef = useRef<HTMLDivElement>(null);
+	const [visible, setVisible] = React.useState(false);
+	const contentRef = React.useRef<HTMLDivElement>(null);
 	const [
 		transitioning,
 		handleTransitionEnd,

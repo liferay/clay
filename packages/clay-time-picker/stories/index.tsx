@@ -8,12 +8,12 @@ import '@clayui/css/lib/css/atlas.css';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {boolean, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import React, {useState} from 'react';
+import * as React from 'react';
 
 import ClayTimePicker from '../src';
 
 const TimePickerWithState = (props: any) => {
-	const [state, setState] = useState({
+	const [state, setState] = React.useState({
 		hours: '--',
 		minutes: '--',
 	});

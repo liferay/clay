@@ -7,8 +7,8 @@
 import DropDown from '@clayui/drop-down';
 import {ClayInput} from '@clayui/form';
 import {FocusScope, sub} from '@clayui/shared';
-import React, {useEffect, useRef, useState} from 'react';
-import tinycolor from 'tinycolor2';
+import * as React from 'react';
+import * as tinycolor from 'tinycolor2';
 
 import Basic from './Basic';
 import Custom from './Custom';
@@ -136,16 +136,16 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 	value = 'FFFFFF',
 	...otherProps
 }: IProps) => {
-	const triggerElementRef = useRef<HTMLDivElement>(null);
-	const dropdownContainerRef = useRef<HTMLDivElement>(null);
-	const inputRef = useRef<HTMLInputElement>(null);
-	const valueInputRef = useRef<HTMLInputElement>(null);
-	const splotchRef = useRef<HTMLButtonElement>(null);
+	const triggerElementRef = React.useRef<HTMLDivElement>(null);
+	const dropdownContainerRef = React.useRef<HTMLDivElement>(null);
+	const inputRef = React.useRef<HTMLInputElement>(null);
+	const valueInputRef = React.useRef<HTMLInputElement>(null);
+	const splotchRef = React.useRef<HTMLButtonElement>(null);
 
-	const [active, setActive] = useState(false);
+	const [active, setActive] = React.useState(false);
 	const [hexInputValue, setHexInputValue] = useHexInput(value);
 
-	useEffect(() => {
+	React.useEffect(() => {
 		if (document.activeElement !== inputRef.current) {
 			setHexInputValue(value);
 		}

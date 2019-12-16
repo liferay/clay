@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {addDecorator, configure} from '@storybook/react';
 import {withKnobs} from '@storybook/addon-knobs';
 import {withA11y} from '@storybook/addon-a11y';
