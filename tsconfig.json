@@ -1,23 +1,23 @@
 {
 	"compilerOptions": {
-		"noEmit": true,
-		"strict": true,
+		"allowJs": true,
+		"allowSyntheticDefaultImports": true,
+		"baseUrl": ".",
 		"jsx": "react",
-		"target": "esnext",
 		"module": "esnext",
 		"moduleResolution": "node",
-		"esModuleInterop": true,
-		"removeComments": true,
-		"allowJs": true,
-		"baseUrl": ".",
+		"noEmit": true,
 		"paths": {
 			"@clayui/*": ["node_modules/@clayui/*/src"],
 			"*": ["custom-types/*", "node_modules/*", "packages/*"]
-		}
+		},
+		"removeComments": true,
+		"strict": true,
+		"target": "esnext"
 	},
 	"awesomeTypescriptLoaderOptions": {
-		"useBabel": true,
-		"babelCore": "@babel/core"
+		"babelCore": "@babel/core",
+		"useBabel": true
 	},
 	"include": ["packages/*"],
 	"exclude": [
