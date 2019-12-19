@@ -6,7 +6,7 @@
 
 import ClayLabel from '..';
 import {cleanup, fireEvent, render} from '@testing-library/react';
-import React from 'react';
+import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
 
 const spritemap = 'path/to/spritemap';

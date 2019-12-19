@@ -6,7 +6,7 @@
 
 import ClayAutocomplete from '..';
 import {cleanup, render} from '@testing-library/react';
-import React, {useRef} from 'react';
+import * as React from 'react';
 
 import Context from '../Context';
 
@@ -128,7 +128,7 @@ describe('ClayAutocomplete', () => {
 
 	it('renders DropDown with alignment with container', () => {
 		const DropDownAndInputWithContext = () => {
-			const containerElementRef = useRef<HTMLDivElement>(null);
+			const containerElementRef = React.useRef<HTMLDivElement>(null);
 
 			return (
 				<Context.Provider

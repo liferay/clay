@@ -5,7 +5,7 @@
  */
 
 import ClayChart from '..';
-import React from 'react';
+import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
 
 const MAP_DATA = require('../../stories/static/map.json');

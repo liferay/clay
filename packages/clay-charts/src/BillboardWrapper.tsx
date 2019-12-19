@@ -5,11 +5,11 @@
  */
 
 import {bb, ChartOptions} from 'billboard.js';
-import React, {HTMLAttributes, useCallback, useLayoutEffect} from 'react';
+import * as React from 'react';
 
 interface IProps extends ChartOptions {
 	forwardRef: React.MutableRefObject<any>;
-	elementProps?: HTMLAttributes<HTMLDivElement>;
+	elementProps?: React.HTMLAttributes<HTMLDivElement>;
 }
 
 const BillboardWrapper: React.FunctionComponent<IProps> = ({
@@ -19,7 +19,7 @@ const BillboardWrapper: React.FunctionComponent<IProps> = ({
 }) => {
 	const elementRef = React.useRef<HTMLDivElement>(null);
 
-	const updateChart = useCallback((args: any) => {
+	const updateChart = React.useCallback((args: any) => {
 		const {data, onafterinit, ...otherArgs} = args;
 
 		if (elementRef.current) {
@@ -43,7 +43,7 @@ const BillboardWrapper: React.FunctionComponent<IProps> = ({
 		}
 	}, []);
 
-	useLayoutEffect(() => {
+	React.useLayoutEffect(() => {
 		requestAnimationFrame(() => updateChart(otherProps));
 
 		return () => {
@@ -60,7 +60,7 @@ const BillboardWrapper: React.FunctionComponent<IProps> = ({
 		};
 	}, []);
 
-	useLayoutEffect(() => {
+	React.useLayoutEffect(() => {
 		updateChart(otherProps);
 	}, [otherProps]);
 

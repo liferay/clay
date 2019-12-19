@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {createContext, useContext, useEffect, useRef} from 'react';
+import * as React from 'react';
 import {createPortal} from 'react-dom';
 
-const ClayPortalContext = createContext<React.RefObject<Element | null> | null>(
+const ClayPortalContext = React.createContext<React.RefObject<Element | null> | null>(
 	null
 );
 
@@ -26,12 +26,12 @@ export const ClayPortal: React.FunctionComponent<
 		subPortalRef?: React.RefObject<Element>;
 	}
 > = ({children, containerRef, subPortalRef}) => {
-	const parentPortalRef = useContext(ClayPortalContext);
-	const portalRef = useRef(
+	const parentPortalRef = React.useContext(ClayPortalContext);
+	const portalRef = React.useRef(
 		typeof document !== 'undefined' ? document.createElement('div') : null
 	);
 
-	useEffect(() => {
+	React.useEffect(() => {
 		const closestParent =
 			parentPortalRef && parentPortalRef.current
 				? parentPortalRef.current

@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {useEffect, useRef, useState} from 'react';
+import * as React from 'react';
 
 import {ObserverType} from './types';
 
@@ -24,8 +24,11 @@ const delay = (fn: Function) => {
 const modalOpenClassName = 'modal-open';
 
 export const useModal = ({onClose = () => {}}: IProps) => {
-	const [visible, setVisible] = useState<[boolean, boolean]>([false, false]);
-	const timerIdRef = useRef<NodeJS.Timeout | null>(null);
+	const [visible, setVisible] = React.useState<[boolean, boolean]>([
+		false,
+		false,
+	]);
+	const timerIdRef = React.useRef<NodeJS.Timeout | null>(null);
 
 	/**
 	 * Control the close of the modal to create the component's "unmount"
@@ -58,7 +61,7 @@ export const useModal = ({onClose = () => {}}: IProps) => {
 		}
 	};
 
-	useEffect(() => {
+	React.useEffect(() => {
 		return () => {
 			if (timerIdRef.current) {
 				clearTimeout(timerIdRef.current);

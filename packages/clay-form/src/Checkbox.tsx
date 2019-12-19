@@ -5,7 +5,7 @@
  */
 
 import classNames from 'classnames';
-import React, {useEffect, useRef} from 'react';
+import * as React from 'react';
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	/**
@@ -53,9 +53,9 @@ const ClayCheckbox = React.forwardRef<HTMLInputElement, IProps>(
 		}: IProps,
 		ref
 	) => {
-		const inputRef = useRef<HTMLInputElement | null>(null);
+		const inputRef = React.useRef<HTMLInputElement | null>(null);
 
-		useEffect(() => {
+		React.useEffect(() => {
 			if (inputRef.current) {
 				inputRef.current.indeterminate = indeterminate;
 			}

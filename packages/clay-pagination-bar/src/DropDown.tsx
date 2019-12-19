@@ -6,7 +6,7 @@
 
 import {ClayDropDownWithItems} from '@clayui/drop-down';
 import classNames from 'classnames';
-import React from 'react';
+import * as React from 'react';
 
 const ClayPaginationBarDropDown: React.FunctionComponent<
 	React.ComponentProps<typeof ClayDropDownWithItems>

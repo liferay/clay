@@ -6,7 +6,7 @@
 
 import {ClayInput} from '@clayui/form';
 import ClayLoadingIndicator from '@clayui/loading-indicator';
-import React, {useContext, useEffect} from 'react';
+import * as React from 'react';
 
 import Context from './Context';
 
@@ -30,9 +30,9 @@ const ClayAutocompleteLoadingIndicator: React.FunctionComponent<IProps> = ({
 	component: Component = LoadingIndicatorMarkup,
 	...otherProps
 }: IProps) => {
-	const {onLoadingChange} = useContext(Context);
+	const {onLoadingChange} = React.useContext(Context);
 
-	useEffect(() => {
+	React.useEffect(() => {
 		onLoadingChange(true);
 
 		return () => {

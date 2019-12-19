@@ -5,8 +5,8 @@
  */
 
 import classNames from 'classnames';
-import React, {useContext} from 'react';
-import warning from 'warning';
+import * as React from 'react';
+import * as warning from 'warning';
 
 export const ClayIconSpriteContext = React.createContext('');
 
@@ -25,7 +25,7 @@ interface IProps extends React.SVGAttributes<SVGSVGElement> {
 
 const ClayIcon = React.forwardRef<SVGSVGElement, IProps>(
 	({className, spritemap, symbol, ...otherProps}: IProps, ref) => {
-		let spriteMapVal = useContext(ClayIconSpriteContext);
+		let spriteMapVal = React.useContext(ClayIconSpriteContext);
 
 		if (spritemap) {
 			spriteMapVal = spritemap;

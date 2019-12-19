@@ -8,7 +8,7 @@ import '../src/scss/main.scss';
 
 import '@clayui/css/lib/css/atlas.css';
 import {storiesOf} from '@storybook/react';
-import React from 'react';
+import * as React from 'react';
 
 import ClayChart from '../src';
 const MAP_DATA = require('./static/map.json');

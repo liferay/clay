@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {FunctionComponent, ReactNode} from 'react';
+import * as React from 'react';
 
 import {FirstDayOfWeek} from './types';
 
@@ -14,12 +14,12 @@ interface IChildrenProps {
 }
 
 interface IProps {
-	children: (object: IChildrenProps) => ReactNode;
+	children: (object: IChildrenProps) => React.ReactNode;
 	firstDayOfWeek: FirstDayOfWeek;
 	weekdaysShort: Array<string>;
 }
 
-const ClayDatePickerWeekdayHeader: FunctionComponent<IProps> = ({
+const ClayDatePickerWeekdayHeader: React.FunctionComponent<IProps> = ({
 	children,
 	firstDayOfWeek = 0,
 	weekdaysShort,

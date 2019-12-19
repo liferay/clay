@@ -10,13 +10,13 @@ import ClayForm, {ClayInput} from '@clayui/form';
 import ClayMultiSelect from '@clayui/multi-select';
 import {ClayVerticalNav} from '@clayui/nav';
 import ClayPanel from '@clayui/panel';
-import React, {useState} from 'react';
+import * as React from 'react';
 
 export default () => {
-	const [formValues, setFormValues] = useState<any>({});
-	const [activePage, setActivePage] = useState(0);
-	const [value, setValue] = useState('');
-	const [selectedItems, setSelectedItems] = useState<any>([]);
+	const [formValues, setFormValues] = React.useState<any>({});
+	const [activePage, setActivePage] = React.useState(0);
+	const [value, setValue] = React.useState('');
+	const [selectedItems, setSelectedItems] = React.useState<any>([]);
 
 	return (
 		<div className="container-fluid">

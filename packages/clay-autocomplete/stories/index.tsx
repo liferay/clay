@@ -9,7 +9,7 @@ import {FetchPolicy, NetworkStatus} from '@clayui/data-provider/src/types';
 import ClayDropDown from '@clayui/drop-down';
 import {FocusScope, useDebounce} from '@clayui/shared';
 import {storiesOf} from '@storybook/react';
-import React, {useEffect, useRef, useState} from 'react';
+import * as React from 'react';
 
 import ClayAutocomplete from '../src';
 
@@ -38,7 +38,7 @@ const LoadingWithDebounce = ({
 };
 
 const AutocompleteBasic = () => {
-	const [value, setValue] = useState('');
+	const [value, setValue] = React.useState('');
 
 	return (
 		<ClayAutocomplete>
@@ -66,15 +66,15 @@ const AutocompleteBasic = () => {
 };
 
 const AutocompleteWithKeyboardFunctionality = () => {
-	const inputRef = useRef<HTMLInputElement | null>(null);
-	const [value, setValue] = useState('');
-	const [active, setActive] = useState(!!value);
+	const inputRef = React.useRef<HTMLInputElement | null>(null);
+	const [value, setValue] = React.useState('');
+	const [active, setActive] = React.useState(!!value);
 
 	const filteredItems = ['one', 'two', 'three', 'four', 'five'].filter(item =>
 		item.match(value)
 	);
 
-	useEffect(() => {
+	React.useEffect(() => {
 		setActive(!!value);
 	}, [value]);
 
@@ -108,8 +108,8 @@ const AutocompleteWithKeyboardFunctionality = () => {
 };
 
 const AutocompleteWithAsyncData = () => {
-	const [value, setValue] = useState('');
-	const [networkStatus, setNetworkStatus] = useState<NetworkStatus>(
+	const [value, setValue] = React.useState('');
+	const [networkStatus, setNetworkStatus] = React.useState<NetworkStatus>(
 		NetworkStatus.Unused
 	);
 	const {resource} = useResource({

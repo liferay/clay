@@ -14,16 +14,16 @@ import ClayManagementToolbar from '@clayui/management-toolbar';
 import {ClayPaginationBarWithBasicItems} from '@clayui/pagination-bar';
 import {sub} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useState} from 'react';
+import * as React from 'react';
 
 export default () => {
-	const [selectedMap, setSelectedMap] = useState({});
-	const [searchMobile, setSearchMobile] = useState<boolean>(false);
-	const [checked, setChecked] = useState<boolean>(false);
-	const [sortAsc, setSortAsc] = useState<boolean>(true);
-	const [value, setValue] = useState<string>('');
-	const [activePage, setActivePage] = useState<number>(1);
-	const [delta, setDelta] = useState<number>(10);
+	const [selectedMap, setSelectedMap] = React.useState({});
+	const [searchMobile, setSearchMobile] = React.useState<boolean>(false);
+	const [checked, setChecked] = React.useState<boolean>(false);
+	const [sortAsc, setSortAsc] = React.useState<boolean>(true);
+	const [value, setValue] = React.useState<string>('');
+	const [activePage, setActivePage] = React.useState<number>(1);
+	const [delta, setDelta] = React.useState<number>(10);
 
 	const filterItems = [
 		{label: 'Filter Action 1', onClick: () => alert('Filter clicked')},

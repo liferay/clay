@@ -9,7 +9,7 @@ import {ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import {FocusScope} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useEffect, useRef, useState} from 'react';
+import * as React from 'react';
 
 type ConfigMaxMin = {
 	max: number;
@@ -160,14 +160,14 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 	onInputChange = () => {},
 }: IProps) => {
 	const useConfig: Config = config[use12Hours ? 'use12Hours' : 'use24Hours'];
-	const [actionVisible, setActionVisible] = useState(false);
-	const [isFocused, setIsFocused] = useState();
-	const elementRef = useRef<null | HTMLDivElement>(null);
+	const [actionVisible, setActionVisible] = React.useState(false);
+	const [isFocused, setIsFocused] = React.useState();
+	const elementRef = React.useRef<null | HTMLDivElement>(null);
 	const defaultFocused = {
 		configName: TimeType.hours,
 		focused: false,
 	};
-	const [currentInputFocused, setCurrentInputFocused] = useState<{
+	const [currentInputFocused, setCurrentInputFocused] = React.useState<{
 		configName: TimeType;
 		focused: boolean;
 	}>(defaultFocused);
@@ -299,7 +299,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 		setIsFocused(true);
 	};
 
-	useEffect(() => {
+	React.useEffect(() => {
 		document.addEventListener('click', handleDocumentClick);
 
 		return () => {

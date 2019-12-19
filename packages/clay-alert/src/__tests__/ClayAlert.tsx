@@ -5,7 +5,7 @@
  */
 
 import ClayAlert from '..';
-import React from 'react';
+import * as React from 'react';
 import * as TestRenderer from 'react-test-renderer';
 
 describe('ClayAlert', () => {

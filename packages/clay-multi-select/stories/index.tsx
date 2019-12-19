@@ -13,7 +13,7 @@ import ClayIcon from '@clayui/icon';
 import ClaySticker from '@clayui/sticker';
 import {boolean} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import React from 'react';
+import * as React from 'react';
 
 import ClayMultiSelect from '../src';
 

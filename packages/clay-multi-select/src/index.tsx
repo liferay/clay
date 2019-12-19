@@ -11,7 +11,7 @@ import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import {FocusScope, noop, sub} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useLayoutEffect, useRef, useState} from 'react';
+import * as React from 'react';
 
 const BACKSPACE_KEY = 8;
 const COMMA_KEY = 188;
@@ -188,13 +188,13 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 		}: IProps,
 		ref
 	) => {
-		const defaultRef = useRef<HTMLDivElement>(null);
-		const inputRef = useRef<HTMLInputElement | null>(null);
-		const lastItemRef = useRef<HTMLSpanElement | null>(null);
-		const [active, setActive] = useState(false);
-		const [isFocused, setIsFocused] = useState();
+		const defaultRef = React.useRef<HTMLDivElement>(null);
+		const inputRef = React.useRef<HTMLInputElement | null>(null);
+		const lastItemRef = React.useRef<HTMLSpanElement | null>(null);
+		const [active, setActive] = React.useState(false);
+		const [isFocused, setIsFocused] = React.useState();
 
-		useLayoutEffect(() => {
+		React.useLayoutEffect(() => {
 			if (sourceItems) {
 				const matchedItems = sourceItems.filter(item =>
 					filter(item, inputValue, locator)

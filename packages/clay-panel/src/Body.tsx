@@ -5,7 +5,7 @@
  */
 
 import classNames from 'classnames';
-import React from 'react';
+import * as React from 'react';
 
 const ClayPanelBody: React.FunctionComponent<
 	React.HTMLAttributes<HTMLDivElement>

@@ -6,7 +6,7 @@
 
 import ClayTimePicker from '..';
 import {cleanup, fireEvent, render} from '@testing-library/react';
-import React, {useState} from 'react';
+import * as React from 'react';
 
 const KEY_BACKSPACE = 8;
 const KEY_ARROWRIGHT = 39;
@@ -16,7 +16,7 @@ const KEY_ARROWDOWN = 40;
 const spritemap = 'icons.svg';
 
 const TimePickerWithState = (props: any) => {
-	const [state, setState] = useState({
+	const [state, setState] = React.useState({
 		ampm: '--',
 		hours: '--',
 		minutes: '--',

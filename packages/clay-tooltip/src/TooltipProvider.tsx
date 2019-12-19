@@ -6,8 +6,8 @@
 
 import {ClayPortal} from '@clayui/shared';
 import domAlign from 'dom-align';
-import React, {useEffect, useReducer, useRef} from 'react';
-import warning from 'warning';
+import * as React from 'react';
+import * as warning from 'warning';
 
 import ClayTooltip from './Tooltip';
 
@@ -101,16 +101,16 @@ const TooltipProvider: React.FunctionComponent<{
 	children: React.ReactElement;
 	delay?: number;
 }> = ({autoAlign = true, children, delay = 600}) => {
-	const [{align, message, show}, dispatch] = useReducer(
+	const [{align, message, show}, dispatch] = React.useReducer(
 		reducer,
 		initialState
 	);
 
 	// Using `any` type since TS incorrectly infers setTimeout to be from NodeJS
-	const timeoutIdRef = useRef<any>();
-	const targetRef = useRef<HTMLElement | null>(null);
-	const titleNodeRef = useRef<HTMLElement | null>(null);
-	const tooltipRef = useRef<HTMLElement | null>(null);
+	const timeoutIdRef = React.useRef<any>();
+	const targetRef = React.useRef<HTMLElement | null>(null);
+	const titleNodeRef = React.useRef<HTMLElement | null>(null);
+	const tooltipRef = React.useRef<HTMLElement | null>(null);
 
 	const handleHide = ({target}: any) => {
 		if (!titleNodeRef.current) {
@@ -165,7 +165,7 @@ const TooltipProvider: React.FunctionComponent<{
 		}
 	};
 
-	useEffect(() => {
+	React.useEffect(() => {
 		if (
 			titleNodeRef.current &&
 			(tooltipRef as React.RefObject<HTMLDivElement>).current

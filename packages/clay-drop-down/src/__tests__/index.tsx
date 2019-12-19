@@ -6,13 +6,13 @@
 
 import ClayDropDown, {ClayDropDownWithItems} from '..';
 import {cleanup, fireEvent, render} from '@testing-library/react';
-import React, {useState} from 'react';
+import * as React from 'react';
 
 const DropDownWithState: React.FunctionComponent<any> = ({
 	children,
 	...others
 }) => {
-	const [active, setActive] = useState(false);
+	const [active, setActive] = React.useState(false);
 
 	return (
 		<ClayDropDown

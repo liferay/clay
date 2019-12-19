@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {MutableRefObject, useEffect} from 'react';
+import * as React from 'react';
 
 const KEY_CODE_ESC = 27;
 const KEY_CODE_TAB = 9;
@@ -28,7 +28,7 @@ const FOCUSABLE_ELEMENTS = [
  * modal by pressing the ESC key and control the focus within the Modal.
  */
 const useUserInteractions = (
-	elementRef: MutableRefObject<any>,
+	elementRef: React.MutableRefObject<any>,
 	onClick: () => void
 ) => {
 	const getFocusableNodes = () => {
@@ -97,7 +97,7 @@ const useUserInteractions = (
 	 * Just listen for keyup, keydown, and click when
 	 * changeAttachEvent is true.
 	 */
-	useEffect(() => {
+	React.useEffect(() => {
 		document.addEventListener('click', handleDocumentClick);
 		document.addEventListener('keyup', handleKeyup);
 		document.addEventListener('keydown', handleKeydown);

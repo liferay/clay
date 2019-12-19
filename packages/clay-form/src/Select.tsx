@@ -5,14 +5,14 @@
  */
 
 import classNames from 'classnames';
-import React, {OptionHTMLAttributes, SelectHTMLAttributes} from 'react';
+import * as React from 'react';
 
 const Option: React.FunctionComponent<
-	OptionHTMLAttributes<HTMLOptionElement>
+	React.OptionHTMLAttributes<HTMLOptionElement>
 > = ({label, ...otherProps}) => <option {...otherProps}>{label}</option>;
 
 const ClaySelect: React.FunctionComponent<
-	SelectHTMLAttributes<HTMLSelectElement>
+	React.SelectHTMLAttributes<HTMLSelectElement>
 > & {
 	Option: typeof Option;
 } = ({children, className, ...otherProps}) => (

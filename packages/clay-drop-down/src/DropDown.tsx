@@ -6,7 +6,7 @@
 
 import {FocusScope} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useRef, useEffect} from 'react';
+import * as React from 'react';
 
 import Action from './Action';
 import Caption from './Caption';
@@ -87,8 +87,8 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 	trigger,
 	...otherProps
 }: IProps) => {
-	const triggerElementRef = useRef<HTMLButtonElement | null>(null);
-	const menuElementRef = useRef<HTMLDivElement>(null);
+	const triggerElementRef = React.useRef<HTMLButtonElement | null>(null);
+	const menuElementRef = React.useRef<HTMLDivElement>(null);
 
 	const handleKeyUp = (event: React.KeyboardEvent<HTMLElement>) => {
 		if (event.keyCode === KEY_CODE_ESC) {
@@ -107,7 +107,7 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 		}
 	};
 
-	useEffect(() => {
+	React.useEffect(() => {
 		document.addEventListener('focus', handleFocus, true);
 
 		return () => {

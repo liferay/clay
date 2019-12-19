@@ -14,7 +14,7 @@ import ClayLabel from '@clayui/label';
 import ClayProgressBar from '@clayui/progress-bar';
 import {boolean, select} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import React from 'react';
+import * as React from 'react';
 
 import ClayTable from '../src';
 const thumbnail = require('./static/thumbnail_coffee.jpg');
