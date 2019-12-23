@@ -149,8 +149,21 @@
 
 .list-group-item-flex {
 	display: flex;
+	margin-bottom: -$list-group-border-width;
 	padding-left: $list-group-item-padding-x / 2;
 	padding-right: $list-group-item-padding-x / 2;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	+ .list-group-item-flex {
+		border-top-width: $list-group-border-width;
+
+		&.active {
+			margin-top: 0;
+		}
+	}
 
 	.autofit-col {
 		justify-content: $list-group-item-flex-align-items;
@@ -332,6 +345,12 @@
 		border-width: 0;
 
 		@include clay-list-group-notification-item-variant($list-group-notification-item);
+	}
+
+	.list-group-item-flex {
+		&.active {
+			border-top-width: 0;
+		}
 	}
 
 	.list-group-item-primary {
