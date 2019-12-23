@@ -76,3 +76,14 @@ This will generate all of the HTML/CSS/etc into the `build/` directory.
 `watch`: Because running a script after every change can get tedious, run `gulp watch` to rebuild the files automatically as you change files.
 
 `serve`: Starts a local server on port 3000 and also runs the watch task.
+
+### Updating Bootstrap Version and Dependencies
+Bootstrap can be updated or downgraded by using the command:
+
+`npm install --save-dev --save-exact bootstrap@the_version`
+
+Popper.js can be updated or downgraded by using:
+
+`npm install --save-dev --save-exact popper.js@the_version`
+
+Then run `gulp build` or `gulp-serve` to compile Clay CSS with the new version
