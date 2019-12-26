@@ -9,6 +9,14 @@
 	font-size: $alert-font-size;
 	word-wrap: break-word;
 
+	.alert-btn {
+		@include clay-button-variant($alert-btn);
+	}
+
+	.btn-group-item {
+		@include clay-container($alert-btn-group-item);
+	}
+
 	.close {
 		@include clay-close($alert-close);
 	}
@@ -26,6 +34,10 @@
 	.component-subtitle {
 		@include clay-text-typography($alert-subtitle);
 	}
+}
+
+.alert-footer {
+	@include clay-container($alert-footer);
 }
 
 .alert-link,
@@ -173,6 +185,12 @@
 	}
 }
 
+// Alert Autofit Row
+
+.alert-autofit-row {
+	@include clay-autofit-row($alert-autofit-row);
+}
+
 // Alert Variants
 
 @each $color, $value in $alert-palette {
@@ -180,6 +198,10 @@
 		background-color: map-get($value, bg);
 		border-color: map-get($value, border-color);
 		color: map-get($value, color);
+
+		.alert-btn {
+			@include clay-button-variant(map-get($value, alert-btn));
+		}
 
 		.close {
 			color: map-get($value, close-color);
