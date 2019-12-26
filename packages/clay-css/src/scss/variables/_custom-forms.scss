@@ -50,6 +50,7 @@ $custom-control-min-height: $custom-control-indicator-size + ($custom-control-in
 
 $custom-control-description-cursor: $form-check-label-cursor !default;
 $custom-control-description-font-size: 1rem !default; // 16px
+$custom-control-description-font-weight: null !default;
 $custom-control-description-line-height: $custom-control-min-height !default;
 $custom-control-description-padding-left: 0.5rem !default; // 8px
 $custom-control-description-disabled-cursor: $disabled-cursor !default;
