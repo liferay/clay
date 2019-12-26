@@ -1,3 +1,7 @@
+////
+/// @group utilities
+////
+
 @mixin clay-autofit-float {
 	flex-wrap: wrap;
 
@@ -13,6 +17,53 @@
 
 		+ .autofit-col-end {
 			margin-left: 0;
+		}
+	}
+}
+
+/// A mixin to create custom spacing for the `autofit-row` component.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// enabled: {Bool},  // Set to false to prevent mixin styles from being output. Default: true
+/// margin: {Number | String | List | Null},
+/// margin-bottom: {Number | String | Null},
+/// margin-left: {Number | String | Null},
+/// margin-right: {Number | String | Null},
+/// margin-top: {Number | String | Null},
+/// autofit-col-padding: {Number | String | List | Null},
+/// autofit-col-padding-bottom: {Number | String | Null},
+/// autofit-col-padding-left: {Number | String | Null},
+/// autofit-col-padding-right: {Number | String | Null},
+/// autofit-col-padding-top: {Number | String | Null},
+
+@mixin clay-autofit-row($map) {
+	$enabled: setter(map-get($map, enabled), true);
+
+	$margin: map-get($map, margin);
+	$margin-bottom: map-get($map, margin-bottom);
+	$margin-left: map-get($map, margin-left);
+	$margin-right: map-get($map, margin-right);
+	$margin-top: map-get($map, margin-top);
+
+	$autofit-col-padding: map-get($map, autofit-col-padding);
+	$autofit-col-padding-bottom: map-get($map, autofit-col-padding-bottom);
+	$autofit-col-padding-left: map-get($map, autofit-col-padding-left);
+	$autofit-col-padding-right: map-get($map, autofit-col-padding-right);
+	$autofit-col-padding-top: map-get($map, autofit-col-padding-top);
+
+	@if ($enabled) {
+		margin: $margin;
+		margin-bottom: $margin-bottom;
+		margin-left: $margin-left;
+		margin-right: $margin-right;
+		margin-top: $margin-top;
+
+		> .autofit-col {
+			padding: $autofit-col-padding;
+			padding-bottom: $autofit-col-padding-bottom;
+			padding-left: $autofit-col-padding-left;
+			padding-right: $autofit-col-padding-right;
+			padding-top: $autofit-col-padding-top;
 		}
 	}
 }
