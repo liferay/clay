@@ -36,6 +36,7 @@
 /// border-style: {String | List | Null},
 /// border-width: {Number | String | List | Null},
 /// color: {Color | String | Null},
+/// cursor: {String | Null},
 /// display: {String | Null},
 /// flex-basis: {Number | String | Null},
 /// flex-direction: {String | Null},
@@ -97,6 +98,7 @@
 	$border-style: map-get($map, border-style);
 	$border-width: map-get($map, border-width);
 	$color: map-get($map, color);
+	$cursor: map-get($map, cursor);
 	$display: map-get($map, display);
 	$flex-basis: map-get($map, flex-basis);
 	$flex-direction: map-get($map, flex-direction);
@@ -153,6 +155,7 @@
 	border-style: $border-style;
 	border-width: $border-width;
 	color: $color;
+	cursor: $cursor;
 	display: $display;
 	font-family: $font-family;
 	font-size: $font-size;
