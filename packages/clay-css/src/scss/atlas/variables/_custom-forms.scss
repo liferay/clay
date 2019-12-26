@@ -53,11 +53,32 @@ $custom-control-margin-bottom: 0.5rem !default;
 
 // Custom Control Description
 
+// @deprecated as of v2.19.0 use the Sass map `$custom-control-label` instead
+
 $custom-control-description-font-size: $input-label-font-size !default; // 13px
+
+// @deprecated as of v2.19.0 use the Sass map `$custom-control-label` instead
+
 $custom-control-description-font-weight: $font-weight-normal !default;
+
+/// @deprecated as of v2.19.0 use the Sass map `$custom-control-label-disabled` instead. This variable is not used in Clay CSS.
+
 $custom-control-description-disabled-color: $input-label-disabled-color !default;
 
+// @deprecated as of v2.19.0 use the Sass map `$custom-control-label-text-small` instead
+
 $custom-control-description-small-font-size: 100% !default;
+
+$custom-control-label: () !default;
+$custom-control-label: map-deep-merge((
+	font-size: $custom-control-description-font-size,
+	font-weight: $custom-control-description-font-weight,
+), $custom-control-label);
+
+$custom-control-label-text-small: () !default;
+$custom-control-label-text-small: map-deep-merge((
+	font-size: $custom-control-description-small-font-size,
+), $custom-control-label-text-small);
 
 // Custom Checkbox
 
