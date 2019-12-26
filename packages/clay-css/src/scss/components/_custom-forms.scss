@@ -68,28 +68,25 @@
 	min-height: $custom-control-min-height;
 
 	label {
-		cursor: $custom-control-description-cursor;
+		cursor: map-get($custom-control-label, cursor);
 		font-size: $font-size-base;
 	}
 }
 
 .custom-control-label {
-	font-size: $custom-control-description-font-size;
-	font-weight: $custom-control-description-font-weight;
-	line-height: $custom-control-description-line-height;
-	position: static;
+	@include clay-container($custom-control-label);
 }
 
 label.custom-control-label {
-	font-size: $custom-control-description-font-size;
+	font-size: map-get($custom-control-label, font-size);
 }
 
 .custom-control-label-text {
-	padding-left: $custom-control-description-padding-left;
+	@include clay-container($custom-control-label-text);
 
 	small,
 	.small {
-		font-size: $custom-control-description-small-font-size;
+		@include clay-container($custom-control-label-text-small);
 	}
 }
 
@@ -135,7 +132,7 @@ label.custom-control-label {
 		}
 
 		~ .custom-control-label {
-			cursor: $custom-control-description-disabled-cursor;
+			@include clay-container($custom-control-label-disabled);
 		}
 	}
 
