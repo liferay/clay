@@ -48,14 +48,57 @@ $custom-control-min-height: $custom-control-indicator-size + ($custom-control-in
 
 // Custom Description
 
+/// @deprecated as of v2.19.0 use the Sass map `$custom-control-label` instead
+
 $custom-control-description-cursor: $form-check-label-cursor !default;
+
+/// @deprecated as of v2.19.0 use the Sass map `$custom-control-label` instead
+
 $custom-control-description-font-size: 1rem !default; // 16px
+
+/// @deprecated as of v2.19.0 use the Sass map `$custom-control-label` instead
+
 $custom-control-description-font-weight: null !default;
+
+/// @deprecated as of v2.19.0 use the Sass map `$custom-control-label` instead
+
 $custom-control-description-line-height: $custom-control-min-height !default;
+
+/// @deprecated as of v2.19.0 use the Sass map `$custom-control-label-text` instead
+
 $custom-control-description-padding-left: 0.5rem !default; // 8px
+
+/// @deprecated as of v2.19.0 use the Sass map `$custom-control-label-disabled` instead
+
 $custom-control-description-disabled-cursor: $disabled-cursor !default;
 
+/// @deprecated as of v2.19.0 use the Sass map `$custom-control-label-text-small` instead
+
 $custom-control-description-small-font-size: null !default;
+
+$custom-control-label: () !default;
+$custom-control-label: map-deep-merge((
+	cursor: $custom-control-description-cursor,
+	font-size: $custom-control-description-font-size,
+	font-weight: $custom-control-description-font-weight,
+	line-height: $custom-control-description-line-height,
+	position: static,
+), $custom-control-label);
+
+$custom-control-label-disabled: () !default;
+$custom-control-label-disabled: map-deep-merge((
+	cursor: $custom-control-description-disabled-cursor,
+), $custom-control-label-disabled);
+
+$custom-control-label-text: () !default;
+$custom-control-label-text: map-deep-merge((
+	padding-left: $custom-control-description-padding-left,
+), $custom-control-label-text);
+
+$custom-control-label-text-small: () !default;
+$custom-control-label-text-small: map-deep-merge((
+	font-size: $custom-control-description-small-font-size,
+), $custom-control-label-text-small);
 
 // Custom Checkbox
 
