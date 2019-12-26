@@ -100,6 +100,13 @@ $custom-control-label-text-small: map-deep-merge((
 	font-size: $custom-control-description-small-font-size,
 ), $custom-control-label-text-small);
 
+// Custom Control Primary
+
+$custom-control-primary-label-text: () !default;
+$custom-control-primary-label-text: map-deep-merge((
+	font-weight: $font-weight-semi-bold,
+), $custom-control-primary-label-text);
+
 // Custom Checkbox
 
 $custom-checkbox-indicator-icon-checked-bg-size: null !default;

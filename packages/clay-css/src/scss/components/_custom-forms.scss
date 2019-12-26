@@ -90,6 +90,14 @@ label.custom-control-label {
 	}
 }
 
+// Custom Control Primary
+
+.custom-control-primary {
+	.custom-control-label-text {
+		@include clay-container($custom-control-primary-label-text);
+	}
+}
+
 // Custom Control Indicator
 
 .custom-control-label::before {
