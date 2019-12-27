@@ -49,6 +49,7 @@
 /// height: {Number | String | Null},
 /// justify-content: {String | Null},
 /// line-height: {Number | String | Null},
+/// margin: {Number | List | Null},
 /// margin-bottom: {Number | String | Null},
 /// margin-left: {Number | String | Null},
 /// margin-right: {Number | String | Null},
@@ -59,6 +60,7 @@
 /// min-width: {Number | String | Null},
 /// opacity: {Number | String | Null},
 /// order: {Number | String | Null},
+/// padding: {Number | List | Null},
 /// padding-bottom: {Number | String | Null},
 /// padding-left: {Number | String | Null},
 /// padding-right: {Number | String | Null},
@@ -110,6 +112,7 @@
 	$height: map-get($map, height);
 	$justify-content: map-get($map, justify-content);
 	$line-height: map-get($map, line-height);
+	$margin: map-get($map, margin);
 	$margin-bottom: map-get($map, margin-bottom);
 	$margin-left: map-get($map, margin-left);
 	$margin-right: map-get($map, margin-right);
@@ -120,6 +123,7 @@
 	$min-width: map-get($map, min-width);
 	$opacity: map-get($map, opacity);
 	$order: map-get($map, order);
+	$padding: map-get($map, padding);
 	$padding-bottom: map-get($map, padding-bottom);
 	$padding-left: map-get($map, padding-left);
 	$padding-right: map-get($map, padding-right);
@@ -166,6 +170,7 @@
 	justify-content: $justify-content;
 	height: $height;
 	line-height: $line-height;
+	margin: $margin;
 	margin-bottom: $margin-bottom;
 	margin-left: $margin-left;
 	margin-right: $margin-right;
@@ -176,6 +181,7 @@
 	min-width: $min-width;
 	opacity: $opacity;
 	order: $order;
+	padding: $padding;
 	padding-bottom: $padding-bottom;
 	padding-left: $padding-left;
 	padding-right: $padding-right;
