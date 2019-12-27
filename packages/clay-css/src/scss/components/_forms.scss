@@ -60,6 +60,21 @@ label {
 	}
 }
 
+// Label without for attribute
+
+.form-control-label {
+	display: inline;
+	margin-bottom: 0;
+}
+
+.form-control-label-text {
+	cursor: $input-label-for-cursor;
+	display: inline-block;
+	margin-bottom: $input-label-margin-bottom;
+	max-width: 100%;
+	word-wrap: break-word;
+}
+
 // Inputs
 
 .form-control {

@@ -33,7 +33,7 @@ $input-label-focus-color: null !default;
 $input-label-font-size: null !default;
 $input-label-font-size-mobile: null !default;
 $input-label-font-weight: null !default;
-$input-label-margin-bottom: null !default;
+$input-label-margin-bottom: $label-margin-bottom !default;
 
 $input-label-for-cursor: $link-cursor !default;
 
