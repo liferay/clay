@@ -18,41 +18,68 @@ section: Components
 				</svg>
 			</span>
 		</label>
-		<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text">
+		<input class="form-control" id="basicInputTypeText" name="basicInputTypeText" placeholder="Placeholder" type="text">
 	</div>
 	<div class="form-group">
 		<label for="basicInputTypePassword">Password</label>
-		<input class="form-control" id="basicInputTypePassword" placeholder="Enter password" type="password">
+		<input class="form-control" id="basicInputTypePassword" name="basicInputTypePassword" placeholder="Enter password" type="password">
 	</div>
 	<div class="form-group">
 		<label for="basicInputTypeTextarea">Textarea</label>
-		<textarea class="form-control" id="basicInputTypeTextarea" placeholder="Placeholder"></textarea>
+		<textarea class="form-control" id="basicInputTypeTextarea" name="basicInputTypeTextarea" placeholder="Placeholder"></textarea>
 	</div>
 	<div class="form-group">
 		<label for="basicInputTypeUrl">Url</label>
-		<input class="form-control" id="basicInputTypeUrl" type="url">
+		<input class="form-control" id="basicInputTypeUrl" name="basicInputTypeUrl" type="url">
 	</div>
 	<div class="form-group">
 		<label for="basicInputTypeTel">Tel</label>
-		<input class="form-control" id="basicInputTypeTel" type="tel">
+		<input class="form-control" id="basicInputTypeTel" name="basicInputTypeTel" type="tel">
 	</div>
 	<div class="form-group">
 		<label for="basicInputTypeEmail">Email</label>
-		<input class="form-control" id="basicInputTypeEmail" type="email">
+		<input class="form-control" id="basicInputTypeEmail" name="basicInputTypeEmail" type="email">
 	</div>
 	<div class="form-group">
 		<label for="basicInputTypeSearch">Search</label>
-		<input class="form-control" id="basicInputTypeSearch" type="search">
+		<input class="form-control" id="basicInputTypeSearch" name="basicInputTypeSearch" type="search">
 	</div>
 	<div class="form-group">
 		<label for="basicInputTypeNumber">Number</label>
-		<input class="form-control" id="basicInputTypeNumber" type="number">
+		<input class="form-control" id="basicInputTypeNumber" name="basicInputTypeNumber" type="number">
 	</div>
 	<div class="form-group">
 		<label for="basicInputTypeRange">Range</label>
-		<input class="form-control" id="basicInputTypeRange" type="range">
+		<input class="form-control" id="basicInputTypeRange" name="basicInputTypeRange" type="range">
 	</div>
 </div>
+
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Label without For Attribute</h3>
+
+		<blockquote class="blockquote">
+			<p></p>
+		</blockquote>
+
+		<div class="sheet">
+			<div class="form-group">
+				<label class="form-control-label">
+					<span class="form-control-label-text">
+						Text
+						<span class="reference-mark">
+							<svg class="lexicon-icon lexicon-icon-asterisk" focusable="false" role="presentation">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
+							</svg>
+						</span>
+					</span>
+					<input class="form-control" name="labelWithoutForBasicInputTypeText" placeholder="Placeholder" type="text">
+				</label>
+			</div>
+		</div>
 
 	</div>
 </div>
