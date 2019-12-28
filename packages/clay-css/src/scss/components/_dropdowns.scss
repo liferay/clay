@@ -106,7 +106,8 @@
 		font-size: $dropdown-font-size-mobile;
 	}
 
-	.alert {
+	.dropdown-item-alert,
+	li.alert {
 		font-size: $dropdown-alert-font-size;
 		line-height: $dropdown-alert-line-height;
 		margin: $dropdown-alert-margin;
@@ -121,7 +122,8 @@
 		}
 	}
 
-	.alert-fluid {
+	.dropdown-item-alert.alert-fluid,
+	li.alert-fluid {
 		margin-left: 0;
 		margin-right: 0;
 
