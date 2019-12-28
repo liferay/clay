@@ -35,6 +35,7 @@
 /// border-radius: {Number | String | List | Null},
 /// border-style: {String | List | Null},
 /// border-width: {Number | String | List | Null},
+/// box-shadow: {String | List | Null},
 /// color: {Color | String | Null},
 /// display: {String | Null},
 /// flex-basis: {Number | String | Null},
@@ -98,6 +99,7 @@
 	$border-radius: map-get($map, border-radius);
 	$border-style: map-get($map, border-style);
 	$border-width: map-get($map, border-width);
+	$box-shadow: map-get($map, box-shadow);
 	$color: map-get($map, color);
 	$display: map-get($map, display);
 	$flex-basis: map-get($map, flex-basis);
@@ -156,6 +158,7 @@
 	border-radius: $border-radius;
 	border-style: $border-style;
 	border-width: $border-width;
+	box-shadow: $box-shadow;
 	color: $color;
 	display: $display;
 	font-family: $font-family;
