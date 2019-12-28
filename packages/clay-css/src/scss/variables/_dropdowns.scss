@@ -1,6 +1,14 @@
+////
+/// @group dropdowns
+////
+
 $dropdown-border-style: null !default;
 
+/// @deprecated as of v3.2.0 and v2.19.0 use `$dropdown-fluid` or `$dropdown-menu-fluid` instead
+
 $dropdown-full-wide-header-spacer-y: 20px !default;
+
+/// @deprecated as of v3.2.0 and v2.19.0 use `$dropdown-fluid` or `$dropdown-menu-fluid` instead
 
 $dropdown-wide-width: 500px !default;
 
@@ -90,3 +98,85 @@ $dropdown-alert-line-height: normal !default;
 $dropdown-alert-margin: ($spacer / 2) !default;
 $dropdown-alert-padding-x: $dropdown-header-padding-x !default;
 $dropdown-alert-padding-y: $dropdown-header-padding-y !default;
+
+// Sheet inside Dropdowns
+
+$dropdown-menu-sheet: () !default;
+$dropdown-menu-sheet: map-deep-merge((
+	border-radius: 0,
+	border-width: 0,
+	box-shadow: none,
+), $dropdown-menu-sheet);
+
+// Dropdown Fluid
+
+$dropdown-fluid: () !default;
+$dropdown-fluid: map-deep-merge((
+	position: static,
+), $dropdown-fluid);
+
+$dropdown-fluid-dropdown-menu: () !default;
+$dropdown-fluid-dropdown-menu: map-deep-merge((
+	max-height: none,
+	max-width: 100%,
+	width: 100%,
+), $dropdown-fluid-dropdown-menu);
+
+$dropdown-fluid-xs-dropdown-menu: () !default;
+$dropdown-fluid-xs-dropdown-menu: map-deep-merge((
+	max-width: 240px,
+), $dropdown-fluid-xs-dropdown-menu);
+
+$dropdown-fluid-sm-dropdown-menu: () !default;
+$dropdown-fluid-sm-dropdown-menu: map-deep-merge((
+	max-width: map-get($container-max-widths, sm),
+), $dropdown-fluid-sm-dropdown-menu);
+
+$dropdown-fluid-md-dropdown-menu: () !default;
+$dropdown-fluid-md-dropdown-menu: map-deep-merge((
+	max-width: map-get($container-max-widths, md),
+), $dropdown-fluid-md-dropdown-menu);
+
+$dropdown-fluid-lg-dropdown-menu: () !default;
+$dropdown-fluid-lg-dropdown-menu: map-deep-merge((
+	max-width: map-get($container-max-widths, lg),
+), $dropdown-fluid-lg-dropdown-menu);
+
+$dropdown-fluid-xl-dropdown-menu: () !default;
+$dropdown-fluid-xl-dropdown-menu: map-deep-merge((
+	max-width: map-get($container-max-widths, xl),
+), $dropdown-fluid-xl-dropdown-menu);
+
+// Dropdown Menu Fluid
+
+$dropdown-menu-fluid: () !default;
+$dropdown-menu-fluid: map-deep-merge((
+	max-height: none,
+	max-width: 100%,
+	width: calc(100% - 2rem),
+), $dropdown-menu-fluid);
+
+$dropdown-menu-fluid-xs: () !default;
+$dropdown-menu-fluid-xs: map-deep-merge((
+	max-width: calc(240px - 2rem),
+), $dropdown-menu-fluid-xs);
+
+$dropdown-menu-fluid-sm: () !default;
+$dropdown-menu-fluid-sm: map-deep-merge((
+	max-width: calc(#{map-get($container-max-widths, sm)} - 2rem),
+), $dropdown-menu-fluid-sm);
+
+$dropdown-menu-fluid-md: () !default;
+$dropdown-menu-fluid-md: map-deep-merge((
+	max-width: calc(#{map-get($container-max-widths, md)} - 2rem),
+), $dropdown-menu-fluid-md);
+
+$dropdown-menu-fluid-lg: () !default;
+$dropdown-menu-fluid-lg: map-deep-merge((
+	max-width: calc(#{map-get($container-max-widths, lg)} - 2rem),
+), $dropdown-menu-fluid-lg);
+
+$dropdown-menu-fluid-xl: () !default;
+$dropdown-menu-fluid-xl: map-deep-merge((
+	max-width: calc(#{map-get($container-max-widths, xl)} - 2rem),
+), $dropdown-menu-fluid-xl);

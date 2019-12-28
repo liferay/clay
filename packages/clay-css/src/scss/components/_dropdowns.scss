@@ -1,3 +1,7 @@
+////
+/// @group dropdowns
+////
+
 .dropdown-header {
 	font-size: $dropdown-header-font-size;
 	margin-bottom: $dropdown-header-margin-bottom;
@@ -144,6 +148,10 @@
 
 	> .list-unstyled {
 		margin-bottom: 0;
+	}
+
+	.sheet {
+		@include clay-container($dropdown-menu-sheet);
 	}
 }
 
@@ -348,6 +356,8 @@
 
 // Dropdown wide / full
 
+/// @deprecated as of v3.2.0 and v2.19.0 use `.dropdown-fluid` or `.dropdown-menu-fluid` instead
+
 %dropdown-full-wide-dropdown-menu {
 	max-width: none;
 	width: 100%;
@@ -357,6 +367,8 @@
 		width: 100%;
 	}
 }
+
+/// @deprecated as of v3.2.0 and v2.19.0 use `.dropdown-fluid` or `.dropdown-menu-fluid` instead
 
 .dropdown-full,
 .dropdown-wide {
@@ -375,6 +387,8 @@
 	}
 }
 
+/// @deprecated as of v3.2.0 and v2.19.0 use `.dropdown-fluid` or `.dropdown-menu-fluid` instead
+
 .dropdown-wide .dropdown-menu {
 	@include media-breakpoint-up(lg) { // min-width 992px
 		min-width: $dropdown-wide-width;
@@ -382,6 +396,8 @@
 }
 
 // Dropdown Menu Autocomplete
+
+/// @deprecated as of v3.2.0 and v2.19.0 use `.dropdown-fluid` or `.dropdown-menu-fluid` instead
 
 .dropdown-full .autocomplete-dropdown-menu,
 .dropdown-full .dropdown-menu-autocomplete {
@@ -397,11 +413,71 @@
 	@include clay-dropdown-menu-variant($autocomplete-dropdown-menu);
 }
 
+// Dropdown Fluid
+
+.dropdown-fluid {
+	@include clay-container($dropdown-fluid);
+}
+
+.dropdown-fluid .dropdown-menu {
+	@include clay-container($dropdown-fluid-dropdown-menu);
+}
+
+.dropdown-fluid-xs .dropdown-menu {
+	@include clay-container($dropdown-fluid-xs-dropdown-menu);
+}
+
+.dropdown-fluid-sm .dropdown-menu {
+	@include clay-container($dropdown-fluid-sm-dropdown-menu);
+}
+
+.dropdown-fluid-md .dropdown-menu {
+	@include clay-container($dropdown-fluid-md-dropdown-menu);
+}
+
+.dropdown-fluid-lg .dropdown-menu {
+	@include clay-container($dropdown-fluid-lg-dropdown-menu);
+}
+
+.dropdown-fluid-xl .dropdown-menu {
+	@include clay-container($dropdown-fluid-xl-dropdown-menu);
+}
+
+// Dropdown Menu Fluid
+
+.dropdown-menu-fluid {
+	@include clay-container($dropdown-menu-fluid);
+}
+
+.dropdown-menu-fluid-xs {
+	@include clay-container($dropdown-menu-fluid-xs);
+}
+
+.dropdown-menu-fluid-sm {
+	@include clay-container($dropdown-menu-fluid-sm);
+}
+
+.dropdown-menu-fluid-md {
+	@include clay-container($dropdown-menu-fluid-md);
+}
+
+.dropdown-menu-fluid-lg {
+	@include clay-container($dropdown-menu-fluid-lg);
+}
+
+.dropdown-menu-fluid-xl {
+	@include clay-container($dropdown-menu-fluid-xl);
+}
+
 // Navbar Component Dropdowns
+
+/// @deprecated as of v3.2.0 and v2.19.0 use `.dropdown-fluid` or `.dropdown-menu-fluid` instead
 
 .nav-item.dropdown-full {
 	position: static;
 }
+
+/// @deprecated as of v3.2.0 and v2.19.0 use `.dropdown-fluid` or `.dropdown-menu-fluid` instead
 
 .nav-item.dropdown-wide {
 	@include media-breakpoint-down(md) { // max-width 991px
