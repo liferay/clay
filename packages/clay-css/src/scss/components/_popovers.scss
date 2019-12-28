@@ -43,6 +43,16 @@
 	@include border-bottom-radius($popover-offset-border-width);
 }
 
+// Popover Fluid
+
+.popover-fluid {
+	@include clay-container($popover-fluid);
+
+	> .dropdown-menu {
+		@include clay-container($popover-fluid-dropdown-menu);
+	}
+}
+
 // Top
 
 .clay-popover-top,

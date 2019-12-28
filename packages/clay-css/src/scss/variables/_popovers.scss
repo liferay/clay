@@ -22,3 +22,21 @@ $popover-header-margin-x: null !default;
 $popover-header-margin-y: null !default;
 
 $popover-offset-border-width: calc(#{$popover-border-radius} - #{$popover-border-width}) !default;
+
+$popover-fluid: () !default;
+$popover-fluid: map-deep-merge((
+	align-items: center,
+	bg: transparent,
+	border-width: 0,
+	box-shadow: none,
+	display: flex,
+	flex-direction: column,
+	margin-top: 0,
+	max-width: calc(100% - 2rem),
+), $popover-fluid);
+
+$popover-fluid-dropdown-menu: () !default;
+$popover-fluid-dropdown-menu: map-deep-merge((
+	display: block,
+	position: static,
+), $popover-fluid-dropdown-menu);
