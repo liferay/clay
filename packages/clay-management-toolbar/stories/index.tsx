@@ -60,7 +60,7 @@ storiesOf('Components|ClayManagementToolbar', module).add(
 							trigger={
 								<ClayButton
 									className="nav-link"
-									displayType="unstyled"
+									displayType="link"
 								>
 									<span className="navbar-breakpoint-down-d-none">
 										<span className="navbar-text-truncate">
@@ -86,7 +86,7 @@ storiesOf('Components|ClayManagementToolbar', module).add(
 						<ClayManagementToolbar.Item>
 							<ClayButton
 								className="nav-link nav-link-monospaced order-arrow-down-active"
-								displayType="unstyled"
+								displayType="link"
 								onClick={() => {}}
 							>
 								<ClayIcon
@@ -142,7 +142,7 @@ storiesOf('Components|ClayManagementToolbar', module).add(
 						<ClayManagementToolbar.Item>
 							<ClayButton
 								className="nav-link nav-link-monospaced"
-								displayType="unstyled"
+								displayType="link"
 								onClick={() => {}}
 							>
 								<ClayIcon
@@ -159,7 +159,7 @@ storiesOf('Components|ClayManagementToolbar', module).add(
 							trigger={
 								<ClayButton
 									className="nav-link nav-link-monospaced"
-									displayType="unstyled"
+									displayType="link"
 								>
 									<ClayIcon
 										spritemap={spritemap}
@@ -205,7 +205,7 @@ storiesOf('Components|ClayManagementToolbar', module).add(
 					<ClayResultsBar.Item>
 						<ClayButton
 							className="component-link tbar-link"
-							displayType="unstyled"
+							displayType="link"
 						>
 							{'Clear'}
 						</ClayButton>
