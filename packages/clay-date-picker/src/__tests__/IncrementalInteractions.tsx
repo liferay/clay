@@ -19,6 +19,7 @@ const ariaLabels = {
 
 const DatePickerWithState = ({
 	initialMonth = new Date(2019, 3, 18),
+	years = {end: 2019, start: 2019},
 	...props
 }: any) => {
 	const [value, setValue] = React.useState();
@@ -29,6 +30,7 @@ const DatePickerWithState = ({
 			initialMonth={initialMonth}
 			onValueChange={setValue}
 			value={value}
+			years={years}
 		/>
 	);
 };
