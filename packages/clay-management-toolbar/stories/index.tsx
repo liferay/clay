@@ -152,27 +152,26 @@ storiesOf('Components|ClayManagementToolbar', module).add(
 							</ClayButton>
 						</ClayManagementToolbar.Item>
 
-						<ClayManagementToolbar.Item>
-							<ClayDropDownWithItems
-								items={viewTypes}
-								spritemap={spritemap}
-								trigger={
-									<ClayButton
-										className="nav-link nav-link-monospaced"
-										displayType="unstyled"
-									>
-										<ClayIcon
-											spritemap={spritemap}
-											symbol={
-												viewTypeActive
-													? (viewTypeActive.symbolLeft as string)
-													: ''
-											}
-										/>
-									</ClayButton>
-								}
-							/>
-						</ClayManagementToolbar.Item>
+						<ClayDropDownWithItems
+							containerElement={ClayManagementToolbar.Item}
+							items={viewTypes}
+							spritemap={spritemap}
+							trigger={
+								<ClayButton
+									className="nav-link nav-link-monospaced"
+									displayType="unstyled"
+								>
+									<ClayIcon
+										spritemap={spritemap}
+										symbol={
+											viewTypeActive
+												? (viewTypeActive.symbolLeft as string)
+												: ''
+										}
+									/>
+								</ClayButton>
+							}
+						/>
 
 						<ClayManagementToolbar.Item>
 							<ClayButtonWithIcon
