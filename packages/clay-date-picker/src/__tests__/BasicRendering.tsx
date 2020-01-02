@@ -21,6 +21,7 @@ describe('BasicRendering', () => {
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
 				value={''}
+				years={{end: 2019, start: 2019}}
 			/>
 		);
 
@@ -36,6 +37,7 @@ describe('BasicRendering', () => {
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
 				value={''}
+				years={{end: 2019, start: 2019}}
 			/>
 		);
 
@@ -53,6 +55,7 @@ describe('BasicRendering', () => {
 				time
 				timezone="GMT+01:00"
 				value={''}
+				years={{end: 2019, start: 2019}}
 			/>
 		);
 
@@ -69,6 +72,7 @@ describe('BasicRendering', () => {
 				spritemap={spritemap}
 				useNative
 				value={''}
+				years={{end: 2019, start: 2019}}
 			/>
 		);
 
