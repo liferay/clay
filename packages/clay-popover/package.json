@@ -26,7 +26,9 @@
 		"react"
 	],
 	"dependencies": {
-		"classnames": "^2.2.6"
+		"@clayui/shared": "^3.0.5",
+		"classnames": "^2.2.6",
+		"dom-align": "^1.10.2"
 	},
 	"peerDependencies": {
 		"@clayui/css": "3.x",

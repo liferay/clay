@@ -5,36 +5,24 @@
  */
 
 import '@clayui/css/lib/css/atlas.css';
+import {ClayButtonWithIcon} from '@clayui/button';
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {boolean, select} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React from 'react';
 
-import ClayPopover from '../src';
+import ClayPopover, {ALIGN_POSITIONS} from '../src';
 
-const positions = [
-	'top',
-	'top-left',
-	'top-right',
-	'bottom',
-	'bottom-left',
-	'bottom-right',
-	'left',
-	'left-top',
-	'left-bottom',
-	'right',
-	'right-top',
-	'right-bottom',
-] as const;
-
-storiesOf('Components|ClayPopover', module).add('popover', () => (
-	<ClayPopover
-		alignPosition={
-			select('Align Position', positions, 'bottom') as 'bottom'
-		}
-		disableScroll={boolean('Disable Scroll', false)}
-		header="Popover"
-	>
-		{`Viennese flavour cup eu, percolator froth ristretto mazagran
+storiesOf('Components|ClayPopover', module)
+	.add('popover', () => (
+		<ClayPopover
+			alignPosition={
+				select('Align Position', ALIGN_POSITIONS, 'bottom') as 'bottom'
+			}
+			disableScroll={boolean('Disable Scroll', false)}
+			header="Popover"
+		>
+			{`Viennese flavour cup eu, percolator froth ristretto mazagran
 				caffeine. White roast seasonal, mocha trifecta, dripper caffeine
 				spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
 				caffeine. White roast seasonal, mocha trifecta, dripper caffeine
@@ -43,5 +31,38 @@ storiesOf('Components|ClayPopover', module).add('popover', () => (
 				spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
 				caffeine. White roast seasonal, mocha trifecta, dripper caffeine
 				spoon acerbic to go macchiato strong.`}
-	</ClayPopover>
-));
+		</ClayPopover>
+	))
+	.add('popover w/ trigger', () => {
+		return (
+			<div>
+				<ClayPopover
+					alignPosition={
+						select(
+							'Align Position',
+							ALIGN_POSITIONS,
+							'right'
+						) as 'right'
+					}
+					disableScroll={boolean('Disable Scroll', false)}
+					header="Popover"
+					trigger={
+						<ClayButtonWithIcon
+							spritemap={spritemap}
+							symbol="info-circle-open"
+						/>
+					}
+				>
+					{`Viennese flavour cup eu, percolator froth ristretto mazagran
+				caffeine. White roast seasonal, mocha trifecta, dripper caffeine
+				spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
+				caffeine. White roast seasonal, mocha trifecta, dripper caffeine
+				spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
+				caffeine. White roast seasonal, mocha trifecta, dripper caffeine
+				spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
+				caffeine. White roast seasonal, mocha trifecta, dripper caffeine
+				spoon acerbic to go macchiato strong.`}
+				</ClayPopover>
+			</div>
+		);
+	});
