@@ -1,5 +1,7 @@
 .tooltip-inner {
 	@include box-shadow($tooltip-box-shadow);
+
+	white-space: pre-line;
 }
 
 .tooltip-arrow {
