@@ -32,7 +32,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	/**
 	 * HTML element tag that the container should render.
 	 */
-	containerElement?: 'div' | 'li';
+	containerElement?: React.JSXElementConstructor<any> | 'div' | 'li';
 
 	/**
 	 * Flag to indicate if menu contains icon symbols on the right side.
