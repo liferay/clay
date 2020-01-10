@@ -7,6 +7,12 @@
 import classNames from 'classnames';
 import * as React from 'react';
 
+const OptGroup: React.FunctionComponent<
+	React.OptgroupHTMLAttributes<HTMLOptGroupElement>
+> = ({children, ...otherProps}) => (
+	<optgroup {...otherProps}>{children}</optgroup>
+);
+
 const Option: React.FunctionComponent<
 	React.OptionHTMLAttributes<HTMLOptionElement>
 > = ({label, ...otherProps}) => <option {...otherProps}>{label}</option>;
@@ -14,6 +20,7 @@ const Option: React.FunctionComponent<
 const ClaySelect: React.FunctionComponent<
 	React.SelectHTMLAttributes<HTMLSelectElement>
 > & {
+	OptGroup: typeof OptGroup;
 	Option: typeof Option;
 } = ({children, className, ...otherProps}) => (
 	<select {...otherProps} className={classNames('form-control', className)}>
@@ -21,6 +28,7 @@ const ClaySelect: React.FunctionComponent<
 	</select>
 );
 
+ClaySelect.OptGroup = OptGroup;
 ClaySelect.Option = Option;
 
 export default ClaySelect;
