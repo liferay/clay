@@ -5,7 +5,7 @@
  */
 
 import classnames from 'classnames';
-import * as React from 'react';
+import React from 'react';
 
 const ClayDropDownHelp: React.FunctionComponent<
 	React.HTMLAttributes<HTMLDivElement>

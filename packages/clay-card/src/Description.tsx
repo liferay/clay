@@ -5,7 +5,7 @@
  */
 
 import classNames from 'classnames';
-import * as React from 'react';
+import React from 'react';
 
 type CardDescriptionDisplayType = 'text' | 'title' | 'subtitle';
 

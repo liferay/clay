@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
+import React from 'react';
 
 // Credits to Gabe Ragland
 // (https://dev.to/gabe_ragland/debouncing-with-react-hooks-jci)

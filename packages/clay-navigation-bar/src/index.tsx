@@ -8,8 +8,8 @@ import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
 import {useTransitionHeight} from '@clayui/shared';
 import classNames from 'classnames';
-import * as React from 'react';
-import * as warning from 'warning';
+import React from 'react';
+import warning from 'warning';
 
 import Item from './Item';
 

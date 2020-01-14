@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as stringify from 'fast-json-stable-stringify';
-import * as React from 'react';
+import stringify from 'fast-json-stable-stringify';
+import React from 'react';
 
 import {LRUCache} from './LRUCache';
 import {

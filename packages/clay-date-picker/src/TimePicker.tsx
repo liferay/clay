@@ -5,7 +5,7 @@
  */
 
 import ClayTimePicker, {Input} from '@clayui/time-picker';
-import * as React from 'react';
+import React from 'react';
 
 interface IProps {
 	currentTime: string;

@@ -6,7 +6,7 @@
 
 import ClayTimePicker from '..';
 import {cleanup, fireEvent, render} from '@testing-library/react';
-import * as React from 'react';
+import React from 'react';
 
 const KEY_BACKSPACE = 8;
 const KEY_ARROWRIGHT = 39;

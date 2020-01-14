@@ -9,7 +9,7 @@ import {ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import {FocusScope} from '@clayui/shared';
 import classNames from 'classnames';
-import * as React from 'react';
+import React from 'react';
 
 type ConfigMaxMin = {
 	max: number;

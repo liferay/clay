@@ -5,7 +5,7 @@
  */
 
 import classnames from 'classnames';
-import * as React from 'react';
+import React from 'react';
 
 const ClayDropDownItemList: React.FunctionComponent<
 	React.HTMLAttributes<HTMLUListElement>

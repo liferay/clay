@@ -11,7 +11,7 @@ import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import {FocusScope, noop, sub} from '@clayui/shared';
 import classNames from 'classnames';
-import * as React from 'react';
+import React from 'react';
 
 const BACKSPACE_KEY = 8;
 const COMMA_KEY = 188;

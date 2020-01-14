@@ -7,7 +7,7 @@
 import ClayButton from '@clayui/button';
 import ClayDropDown from '@clayui/drop-down';
 import ClayIcon from '@clayui/icon';
-import * as React from 'react';
+import React from 'react';
 
 import Item from './Item';
 

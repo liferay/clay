@@ -11,7 +11,7 @@ import ClayIcon from '@clayui/icon';
 import {ClayPaginationWithBasicItems} from '@clayui/pagination';
 import {number} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import * as React from 'react';
+import React from 'react';
 
 import ClayPaginationBar, {ClayPaginationBarWithBasicItems} from '../src';
 

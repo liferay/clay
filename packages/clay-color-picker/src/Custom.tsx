@@ -6,8 +6,8 @@
 
 import ClayForm, {ClayInput} from '@clayui/form';
 import Icon from '@clayui/icon';
-import * as React from 'react';
-import * as tinycolor from 'tinycolor2';
+import React from 'react';
+import tinycolor from 'tinycolor2';
 
 import GradientSelector from './GradientSelector';
 import Hue from './Hue';

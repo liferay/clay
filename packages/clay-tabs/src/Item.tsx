@@ -6,7 +6,7 @@
 
 import {LinkOrButton} from '@clayui/shared';
 import classNames from 'classnames';
-import * as React from 'react';
+import React from 'react';
 
 interface IProps extends Omit<React.HTMLAttributes<HTMLLIElement>, 'onClick'> {
 	/**

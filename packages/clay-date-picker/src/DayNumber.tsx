@@ -5,8 +5,8 @@
  */
 
 import classnames from 'classnames';
-import * as moment from 'moment';
-import * as React from 'react';
+import moment from 'moment';
+import React from 'react';
 
 import {IDay} from './Helpers';
 

@@ -6,7 +6,7 @@
 
 import ClayTooltip, {ClayTooltipProvider} from '..';
 import {act, cleanup, fireEvent, render} from '@testing-library/react';
-import * as React from 'react';
+import React from 'react';
 
 describe('ClayTooltip', () => {
 	afterEach(cleanup);
