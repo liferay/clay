@@ -90,15 +90,15 @@ $secondary-l2: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06) !defau
 $secondary-l3: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
 
 $info: #2E5AAC !default;
-$info-d1: darken($info, 5.10) !default;
+$info-d1: darken($info, 5) !default;
 $info-d2: darken($info, 10) !default;
 $info-l1: lighten(saturate($info, 0.59), 28.04) !default;
 $info-l2: lighten(desaturate($info, 3.25), 52.94) !default;
 
-$success: #287D3D !default;
-$success-d1: darken($success, 5.10) !default;
+$success: #287D3C !default;
+$success-d1: darken($success, 5) !default;
 $success-d2: darken($success, 10) !default;
-$success-l1: lighten(desaturate($success, 0.14), 24.90) !default;
+$success-l1: lighten(desaturate($success, 0.14), 24.95) !default;
 $success-l2: lighten(desaturate($success, 1.52), 62.94) !default;
 
 $warning: #B95000 !default;
@@ -108,7 +108,7 @@ $warning-l1: lighten($warning, 24.90) !default;
 $warning-l2: lighten($warning, 60) !default;
 
 $danger: #DA1414 !default;
-$danger-d1: darken($danger, 5.10) !default;
+$danger-d1: darken($danger, 5) !default;
 $danger-d2: darken($danger, 10) !default;
 $danger-l1: lighten(desaturate($danger, 0.25), 28.04) !default;
 $danger-l2: lighten(saturate($danger, 5.04), 50) !default;
