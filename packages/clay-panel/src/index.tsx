@@ -7,7 +7,7 @@
 import ClayIcon from '@clayui/icon';
 import {useTransitionHeight} from '@clayui/shared';
 import classNames from 'classnames';
-import * as React from 'react';
+import React from 'react';
 
 import ClayPanelBody from './Body';
 import ClayPanelFooter from './Footer';

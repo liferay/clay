@@ -5,7 +5,7 @@
  */
 
 import classNames from 'classnames';
-import * as React from 'react';
+import React from 'react';
 
 const Option: React.FunctionComponent<
 	React.OptionHTMLAttributes<HTMLOptionElement>

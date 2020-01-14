@@ -5,8 +5,8 @@
  */
 
 import classNames from 'classnames';
-import * as React from 'react';
-import * as warning from 'warning';
+import React from 'react';
+import warning from 'warning';
 
 export const ClayIconSpriteContext = React.createContext('');
 

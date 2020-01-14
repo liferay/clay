@@ -7,7 +7,7 @@
 import '@testing-library/jest-dom/extend-expect';
 import ClayTabs from '..';
 import {cleanup, fireEvent, render} from '@testing-library/react';
-import * as React from 'react';
+import React from 'react';
 
 const ClayTabsWithItems = () => {
 	const [activeTabKeyValue, setActiveTabKeyValue] = React.useState<number>(0);

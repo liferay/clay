@@ -7,7 +7,7 @@
 import '@clayui/css/lib/css/atlas.css';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {storiesOf} from '@storybook/react';
-import * as React from 'react';
+import React from 'react';
 
 import ClayDatePicker, {FirstDayOfWeek} from '../src';
 

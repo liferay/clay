@@ -7,7 +7,7 @@
 
 import {cleanup, render, wait} from '@testing-library/react';
 import {FetchMock} from 'jest-fetch-mock'; // eslint-disable-line @typescript-eslint/no-unused-vars
-import * as React from 'react';
+import React from 'react';
 
 import DataProvider from '../';
 import {LRUCache} from '../LRUCache';

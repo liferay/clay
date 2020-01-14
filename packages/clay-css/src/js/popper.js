@@ -1235,7 +1235,7 @@ function applyStyleOnLoad(reference, popper, options, modifierOptions, state) {
  * Discussion here: https://github.com/FezVrasta/popper.js/pull/715
  *
  * Low DPI screens cause a popper to be blurry if not using full pixels (Safari
- * as well on High DPI screens).
+ well on High DPI screens).
  *
  * Firefox prefers no rounding for positioning and does not have blurriness on
  * high DPI screens.
@@ -2080,7 +2080,7 @@ var modifiers = {
    * `width`. In case of `left` or `right`, it will be the `height`.
    *
    * You can provide a single value (as `Number` or `String`), or a pair of values
-   * as `String` divided by a comma or one (or more) white spaces.<br />
+   `String` divided by a comma or one (or more) white spaces.<br />
    * The latter is a deprecated method because it leads to confusion and will be
    * removed in v2.<br />
    * Additionally, it accepts additions and subtractions between different units.

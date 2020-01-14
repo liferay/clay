@@ -6,7 +6,7 @@
 
 import Button from '@clayui/button';
 import Icon from '@clayui/icon';
-import * as React from 'react';
+import React from 'react';
 
 import Context from './Context';
 

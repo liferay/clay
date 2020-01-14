@@ -7,8 +7,8 @@
 import DropDown from '@clayui/drop-down';
 import {ClayInput} from '@clayui/form';
 import {FocusScope, sub} from '@clayui/shared';
-import * as React from 'react';
-import * as tinycolor from 'tinycolor2';
+import React from 'react';
+import tinycolor from 'tinycolor2';
 
 import Basic from './Basic';
 import Custom from './Custom';

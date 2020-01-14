@@ -10,7 +10,7 @@ import ClayButton from '@clayui/button';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {select, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import * as React from 'react';
+import React from 'react';
 
 import ClayModal, {ClayModalProvider, Context, useModal} from '../src';
 import {Size, Status} from '../src/types';

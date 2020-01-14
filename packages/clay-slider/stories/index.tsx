@@ -8,7 +8,7 @@ import '@clayui/css/lib/css/atlas.css';
 import ClayButton from '@clayui/button';
 import {boolean, number, select} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import * as React from 'react';
+import React from 'react';
 
 import ClaySlider from '../src';
 

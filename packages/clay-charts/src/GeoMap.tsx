@@ -5,7 +5,7 @@
  */
 
 import {Grid, PointOptions} from 'billboard.js';
-import * as d3 from 'd3';
+import d3 from 'd3';
 
 // eslint-disable-next-line liferay/no-duplicate-imports
 import {
@@ -17,7 +17,7 @@ import {
 	ValueFn,
 } from 'd3';
 import {FeatureCollection} from 'geojson';
-import * as React from 'react';
+import React from 'react';
 
 const DEFAULT_COLOR = {
 	range: {

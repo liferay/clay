@@ -5,8 +5,8 @@
  */
 
 import {useDebounce} from '@clayui/shared';
-import * as React from 'react';
-import * as warning from 'warning';
+import React from 'react';
+import warning from 'warning';
 
 import {
 	FetchPolicy,

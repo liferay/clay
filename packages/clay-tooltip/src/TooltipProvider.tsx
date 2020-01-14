@@ -6,8 +6,8 @@
 
 import {ClayPortal} from '@clayui/shared';
 import domAlign from 'dom-align';
-import * as React from 'react';
-import * as warning from 'warning';
+import React from 'react';
+import warning from 'warning';
 
 import ClayTooltip from './Tooltip';
 

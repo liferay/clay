@@ -5,7 +5,7 @@
  */
 
 import {ClayInput} from '@clayui/form';
-import * as React from 'react';
+import React from 'react';
 
 import Context from './Context';
 import DropDown from './DropDown';

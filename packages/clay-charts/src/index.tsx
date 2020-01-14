@@ -12,7 +12,7 @@ import {
 	LineOptions,
 	PointOptions,
 } from 'billboard.js';
-import * as React from 'react';
+import React from 'react';
 
 import BillboardWrapper from './BillboardWrapper';
 import GeoMap, {IProps} from './GeoMap';

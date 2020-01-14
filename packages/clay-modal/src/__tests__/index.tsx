@@ -8,8 +8,8 @@
 import ClayModal, {useModal} from '..';
 import Button from '@clayui/button';
 import {act, cleanup, render} from '@testing-library/react';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 const spritemap = 'icons.svg';
 

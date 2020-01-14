@@ -6,8 +6,8 @@
 
 import Button from '@clayui/button';
 import Icon from '@clayui/icon';
-import * as moment from 'moment';
-import * as React from 'react';
+import moment from 'moment';
+import React from 'react';
 
 import * as Helpers from './Helpers';
 import Select, {ISelectOption} from './Select';

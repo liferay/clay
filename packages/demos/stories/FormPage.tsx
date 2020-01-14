@@ -10,7 +10,7 @@ import ClayForm, {ClayInput} from '@clayui/form';
 import ClayMultiSelect from '@clayui/multi-select';
 import {ClayVerticalNav} from '@clayui/nav';
 import ClayPanel from '@clayui/panel';
-import * as React from 'react';
+import React from 'react';
 
 export default () => {
 	const [formValues, setFormValues] = React.useState<any>({});

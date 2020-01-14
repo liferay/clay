@@ -9,7 +9,7 @@ import {FetchPolicy, NetworkStatus} from '@clayui/data-provider/src/types';
 import ClayDropDown from '@clayui/drop-down';
 import {FocusScope, useDebounce} from '@clayui/shared';
 import {storiesOf} from '@storybook/react';
-import * as React from 'react';
+import React from 'react';
 
 import ClayAutocomplete from '../src';
 

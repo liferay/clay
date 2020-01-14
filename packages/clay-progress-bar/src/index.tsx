@@ -6,8 +6,8 @@
 
 import Icon from '@clayui/icon';
 import classNames from 'classnames';
-import * as React from 'react';
-import * as warning from 'warning';
+import React from 'react';
+import warning from 'warning';
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**

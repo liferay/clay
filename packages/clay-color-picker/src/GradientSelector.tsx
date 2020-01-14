@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
-import * as tinycolor from 'tinycolor2';
+import React from 'react';
+import tinycolor from 'tinycolor2';
 
 import {useMousePosition} from './hooks';
 import {colorToXY, xToSaturation, yToVisibility} from './util';
