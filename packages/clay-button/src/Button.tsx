@@ -13,6 +13,11 @@ export type DisplayType = 'primary' | 'secondary' | 'link' | 'unstyled';
 
 interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	/**
+	 * Flag to indicate if button is used within an alert component.
+	 */
+	alert?: boolean;
+
+	/**
 	 * Flag to indicate if link should be borderless.
 	 */
 	borderless?: boolean;
@@ -46,6 +51,7 @@ interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 const ClayButton = React.forwardRef<HTMLButtonElement, IProps>(
 	(
 		{
+			alert,
 			block,
 			borderless,
 			children,
@@ -61,6 +67,7 @@ const ClayButton = React.forwardRef<HTMLButtonElement, IProps>(
 	) => (
 		<button
 			className={classNames(className, 'btn', {
+				'alert-btn': alert,
 				'btn-block': block,
 				'btn-monospaced': monospaced,
 				'btn-outline-borderless': borderless,
