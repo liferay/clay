@@ -5,8 +5,8 @@
  */
 
 import {ClayCheckbox, ClayRadio} from '@clayui/form';
-import * as React from 'react';
-import * as warning from 'warning';
+import React from 'react';
+import warning from 'warning';
 
 import Caption from './Caption';
 import Divider from './Divider';

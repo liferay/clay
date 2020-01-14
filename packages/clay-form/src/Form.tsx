@@ -6,7 +6,7 @@
 
 import ClayIcon from '@clayui/icon';
 import classNames from 'classnames';
-import * as React from 'react';
+import React from 'react';
 
 interface IGroup extends React.HTMLAttributes<HTMLDivElement> {
 	/**

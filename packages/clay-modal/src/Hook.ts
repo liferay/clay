@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
+import React from 'react';
 
 const KEY_CODE_ESC = 27;
 const KEY_CODE_TAB = 9;

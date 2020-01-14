@@ -6,7 +6,7 @@
 
 import ClayButton from '@clayui/button';
 import ClayLink from '@clayui/link';
-import * as React from 'react';
+import React from 'react';
 
 interface IProps {
 	buttonDisplayType?: React.ComponentProps<typeof ClayButton>['displayType'];

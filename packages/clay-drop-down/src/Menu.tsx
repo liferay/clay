@@ -7,7 +7,7 @@
 import {ClayPortal} from '@clayui/shared';
 import classNames from 'classnames';
 import domAlign from 'dom-align';
-import * as React from 'react';
+import React from 'react';
 
 import {useDropdownCloseInteractions} from './hooks';
 

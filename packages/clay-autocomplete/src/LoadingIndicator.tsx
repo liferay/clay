@@ -6,7 +6,7 @@
 
 import {ClayInput} from '@clayui/form';
 import ClayLoadingIndicator from '@clayui/loading-indicator';
-import * as React from 'react';
+import React from 'react';
 
 import Context from './Context';
 

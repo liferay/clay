@@ -9,7 +9,7 @@ import ClayCard, {ClayCardWithInfo} from '@clayui/card';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {ClayInput} from '@clayui/form';
 import ClayManagementToolbar from '@clayui/management-toolbar';
-import * as React from 'react';
+import React from 'react';
 
 export default () => {
 	const [value, setValue] = React.useState('');

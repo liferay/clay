@@ -6,8 +6,8 @@
 
 import {ClayPortal} from '@clayui/shared';
 import classNames from 'classnames';
-import * as React from 'react';
-import * as warning from 'warning';
+import React from 'react';
+import warning from 'warning';
 
 import Body from './Body';
 import Context, {IContext} from './Context';

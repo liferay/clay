@@ -5,7 +5,7 @@
  */
 
 import {bb, ChartOptions} from 'billboard.js';
-import * as React from 'react';
+import React from 'react';
 
 interface IProps extends ChartOptions {
 	forwardRef: React.MutableRefObject<any>;

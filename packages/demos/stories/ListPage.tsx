@@ -14,7 +14,7 @@ import ClayManagementToolbar from '@clayui/management-toolbar';
 import {ClayPaginationBarWithBasicItems} from '@clayui/pagination-bar';
 import {sub} from '@clayui/shared';
 import classNames from 'classnames';
-import * as React from 'react';
+import React from 'react';
 
 export default () => {
 	const [selectedMap, setSelectedMap] = React.useState({});

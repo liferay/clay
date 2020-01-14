@@ -7,7 +7,7 @@
 import ClayButton from '@clayui/button';
 import {ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
-import * as React from 'react';
+import React from 'react';
 
 interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	/**

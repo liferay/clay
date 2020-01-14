@@ -6,7 +6,7 @@
 
 import {ClayPaginationWithBasicItems} from '..';
 import {cleanup, fireEvent, getByText, render} from '@testing-library/react';
-import * as React from 'react';
+import React from 'react';
 
 const spritemap = 'path/to/spritemap';
 

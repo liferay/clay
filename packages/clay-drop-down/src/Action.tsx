@@ -6,7 +6,7 @@
 
 import ClayButton from '@clayui/button';
 import classNames from 'classnames';
-import * as React from 'react';
+import React from 'react';
 
 const ClayDropDownAction: React.FunctionComponent<
 	React.HTMLAttributes<HTMLButtonElement>

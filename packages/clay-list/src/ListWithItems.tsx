@@ -10,7 +10,7 @@ import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClaySticker from '@clayui/sticker';
 import classNames from 'classnames';
-import * as React from 'react';
+import React from 'react';
 
 import ClayList from './List';
 

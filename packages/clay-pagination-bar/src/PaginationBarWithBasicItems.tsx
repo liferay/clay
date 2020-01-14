@@ -8,7 +8,7 @@ import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
 import {ClayPaginationWithBasicItems} from '@clayui/pagination';
 import {sub} from '@clayui/shared';
-import * as React from 'react';
+import React from 'react';
 
 import PaginationBar from './PaginationBar';
 

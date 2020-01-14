@@ -6,7 +6,7 @@
 
 import Icon from '@clayui/icon';
 import classNames from 'classnames';
-import * as React from 'react';
+import React from 'react';
 
 type DisplayType =
 	| 'secondary'

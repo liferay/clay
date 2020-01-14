@@ -7,7 +7,7 @@
 import ClayMultiSelect from '..';
 import ClayDropDown from '@clayui/drop-down';
 import {cleanup, fireEvent, render} from '@testing-library/react';
-import * as React from 'react';
+import React from 'react';
 
 const items = [
 	{

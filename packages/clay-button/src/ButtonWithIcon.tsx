@@ -5,7 +5,7 @@
  */
 
 import ClayIcon from '@clayui/icon';
-import * as React from 'react';
+import React from 'react';
 
 import ClayButton from './Button';
 

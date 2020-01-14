@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
+import React from 'react';
 import classNames from 'classnames';
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {}
