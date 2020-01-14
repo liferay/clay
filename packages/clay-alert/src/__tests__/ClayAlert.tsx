@@ -5,6 +5,7 @@
  */
 
 import ClayAlert from '..';
+import ClayButton from '@clayui/button';
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
 
@@ -49,6 +50,22 @@ describe('ClayAlert', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayAlert spritemap="/foo/bar" title="Hello!">
 				<span>{'test'}</span>
+			</ClayAlert>
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('renders with a footer and button', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayAlert spritemap="/foo/bar" title="Hello!">
+				<span>{'test'}</span>
+
+				<ClayAlert.Footer>
+					<ClayButton.Group>
+						<ClayButton alert>{'View'}</ClayButton>
+					</ClayButton.Group>
+				</ClayAlert.Footer>
 			</ClayAlert>
 		);
 
