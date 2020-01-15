@@ -1,7 +1,7 @@
 $dark: #f5f5f8; // 282a36
-$white: #30313F; // ffffff
+$white: #30313f; // ffffff
 
-$char: #D8DEE9;
+$char: #d8dee9;
 $comment: #999;
 $keyword: #2f6f9f;
 $attribute: #4f9fcf;
@@ -10,11 +10,11 @@ $primitive: #5a9bcf;
 $string: #c23c20;
 $variable: #999;
 $boolean: #ff8b50;
-$punctuation: #30313F;
-$tag: #30313F;
+$punctuation: #30313f;
+$tag: #30313f;
 $function: #79b6f2;
 $className: #2f6f9f;
-$method: #6699CC;
+$method: #6699cc;
 $operator: #2f6f9f;
 $deleted: #b31d28;
 $deletedBack: #ffeef0;
@@ -22,130 +22,132 @@ $inserted: #22863a;
 $insertedBack: #f0fff4;
 
 .gatsby-highlight {
-    background: $dark;
-    color: $white;
-    border-radius: 4px;
-    overflow: auto;
-    tab-size: 1.5em;
+	background: $dark;
+	color: $white;
+	border-radius: 4px;
+	min-height: 42px;
+	overflow: auto;
+	position: relative;
+	tab-size: 1.5em;
 }
 
-.gatsby-highlight pre[class*="gatsby-code-"],
+.gatsby-highlight pre[class*='gatsby-code-'],
 .gatsby-highlight pre.prism-code {
-    height: auto !important;
-    margin: 1rem;
-    color: $white;
-    font-size: 13px;
-    line-height: 20px;
-    white-space: pre-wrap;
-    word-break: break-word;
+	height: auto !important;
+	margin: 1rem;
+	color: $white;
+	font-size: 13px;
+	line-height: 20px;
+	white-space: pre-wrap;
+	word-break: break-word;
 }
-  
+
 .gatsby-highlight + .gatsby-highlight {
-    margin-top: 20;
+	margin-top: 20;
 }
 
 .gatsby-highlight-code-line {
-    background-color: $lineHighlight;
-    display: block;
-    margin: -0.125rem calc(-1rem - 15px);
-    padding: 0.125rem calc(1rem + 15px);
+	background-color: $lineHighlight;
+	display: block;
+	margin: -0.125rem calc(-1rem - 15px);
+	padding: 0.125rem calc(1rem + 15px);
 }
-  
+
 .token.attr-name {
-    color: $attribute,
+	color: $attribute;
 }
-  
+
 .token.comment,
 .token.block-comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: $comment;
+	color: $comment;
 }
-  
+
 .token.property,
 .token.number,
 .token.function-name,
 .token.constant,
 .token.symbol {
-    color: $primitive;
+	color: $primitive;
 }
 
 .token.deleted {
-    background-color: $deletedBack;
-    color: $deleted;
+	background-color: $deletedBack;
+	color: $deleted;
 }
-  
+
 .token.boolean {
-    color: $boolean;
+	color: $boolean;
 }
-  
+
 .token.tag {
-    color: $tag;
+	color: $tag;
 }
-  
+
 .token.string {
-color: $string;
+	color: $string;
 }
-  
+
 .token.punctuation {
-    color: $punctuation;
+	color: $punctuation;
 }
-  
+
 .token.selector,
 .token.char,
 .token.builtin {
-    color: $char;
+	color: $char;
 }
 
 .token.inserted {
-    color: $inserted;
-    background-color: $insertedBack;
+	color: $inserted;
+	background-color: $insertedBack;
 }
-  
+
 .token.function {
-    color: $function;
+	color: $function;
 }
 
 .token.operator {
-    color: $operator;
+	color: $operator;
 }
 
 .token.entity,
 .token.url,
 .token.variable {
-    color: $variable;
+	color: $variable;
 }
-  
+
 .token.attr-value {
-    color: $string;
+	color: $string;
 }
-  
+
 .token.keyword {
-    color: $keyword;
+	color: $keyword;
 }
-  
+
 .token.atrule,
 .token.class-name {
-    color: $className;
+	color: $className;
 }
-  
+
 .token.important {
-    font-weight: 400;
+	font-weight: 400;
 }
-  
+
 .token.bold {
-    font-weight: 700;
+	font-weight: 700;
 }
 
 .token.italic {
-    font-style: italic;
+	font-style: italic;
 }
-  
+
 .token.entity {
-    cursor: help;
+	cursor: help;
 }
-  
+
 .namespace {
-    opacity: 0.7;
+	opacity: 0.7;
 }
