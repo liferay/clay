@@ -43,6 +43,7 @@ export default props => {
 					id="___gatsby"
 				/>
 				{props.postBodyComponents}
+				<script src="/js/code-collapse.js" />
 				<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" />
 			</body>
 		</html>
