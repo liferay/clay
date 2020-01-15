@@ -11,34 +11,50 @@
 	white-space: pre;
 }
 
-.code-container .btn-copy {
+.code-container .btn-copy,
+.code-container .btn-collapse,
+.gatsby-highlight .btn-copy,
+.gatsby-highlight .btn-collapse {
 	@include transition(background 0.3s ease-in-out);
 
 	animation: fadeIn 0.5s cubic-bezier(0.3, 0, 0.3, 1) 0s 1 forwards;
 	background: rgba(255, 255, 255, 0.6);
+	box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.3);
 	cursor: pointer;
-	height: 24px;
-	line-height: 20px;
+	height: 32px;
 	padding: 0;
 	position: absolute;
-	right: 5px;
 	top: 5px;
-	width: 24px;
+	width: 32px;
 	z-index: 9;
 
-	&:focus {
-		box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+	&:hover {
+		background: rgba(255, 255, 255, 0.8);
+	}
+
+	.lexicon-icon {
+		vertical-align: baseline;
 	}
 }
 
-.code-container .btn-copy .lexicon-icon {
-	height: 12px;
-	vertical-align: baseline;
-	width: 12px;
+.code-container .btn-copy {
+	right: 46px;
 }
 
-.code-container.btn-copy:hover {
-	background: rgba(255, 255, 255, 0.8);
+.code-container .btn-collapse {
+	right: 8px;
+}
+
+.gatsby-highlight .btn-copy {
+	right: 46px;
+}
+
+.gatsby-highlight .btn-collapse {
+	right: 8px;
+}
+
+.code-container .btn-collapse.hide {
+	display: none;
 }
 
 .tooltip.bottom {
