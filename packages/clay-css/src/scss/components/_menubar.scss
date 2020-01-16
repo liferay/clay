@@ -16,6 +16,26 @@
 	&.menubar-transparent {
 		@include clay-menubar-vertical-variant($menubar-vertical-transparent-md);
 	}
+
+	&.menubar-decorated {
+		@include media-breakpoint-up(md) {
+			.nav {
+				@include clay-css($menubar-vertical-decorated-md-nav);
+
+				> .nav-item .nav {
+					@include clay-css($menubar-vertical-decorated-md-nav-item-nav);
+				}
+			}
+
+			.nav-link {
+				@include clay-css($menubar-vertical-decorated-md-nav-link);
+
+				&.active::after {
+					@include clay-css($menubar-vertical-decorated-md-nav-link-after-active);
+				}
+			}
+		}
+	}
 }
 
 // Menubar Vertical LG
@@ -25,5 +45,25 @@
 
 	&.menubar-transparent {
 		@include clay-menubar-vertical-variant($menubar-vertical-transparent-lg);
+	}
+
+	&.menubar-decorated {
+		@include media-breakpoint-up(lg) {
+			.nav {
+				@include clay-css($menubar-vertical-decorated-lg-nav);
+
+				> .nav-item .nav {
+					@include clay-css($menubar-vertical-decorated-lg-nav-item-nav);
+				}
+			}
+
+			.nav-link {
+				@include clay-css($menubar-vertical-decorated-lg-nav-link);
+
+				&.active::after {
+					@include clay-css($menubar-vertical-decorated-lg-nav-link-after-active);
+				}
+			}
+		}
 	}
 }
