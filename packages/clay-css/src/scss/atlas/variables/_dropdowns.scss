@@ -41,6 +41,21 @@ $dropdown-item-base: map-deep-merge((
 	disabled-box-shadow: none,
 ), $dropdown-item-base);
 
+$dropdown-section-custom-control-label: () !default;
+$dropdown-section-custom-control-label: map-deep-merge((
+	color: $secondary,
+), $dropdown-section-custom-control-label);
+
+$dropdown-section-active-custom-control-label: () !default;
+$dropdown-section-active-custom-control-label: map-deep-merge((
+	color: $gray-900,
+), $dropdown-section-active-custom-control-label);
+
+$dropdown-section-custom-control-label-text: () !default;
+$dropdown-section-custom-control-label-text: map-deep-merge((
+	padding-left: 1rem,
+), $dropdown-section-custom-control-label-text);
+
 $dropdown-divider-bg: $dropdown-border-color !default;
 
 // Autocomplete Dropdown Menu
