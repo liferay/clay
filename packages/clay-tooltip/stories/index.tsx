@@ -37,6 +37,9 @@ storiesOf('Components|ClayTooltip', module)
 			{'Tooltip'}
 		</ClayTooltip>
 	))
+	.add('tooltip w/ newline', () => (
+		<ClayTooltip show>{'Tooltip\nwith\nnew\n\nlines'}</ClayTooltip>
+	))
 	.add('ClayTooltipProvider', () => (
 		<div style={{padding: 50}}>
 			<button title="Default">{'No Tooltip'}</button>
@@ -44,6 +47,11 @@ storiesOf('Components|ClayTooltip', module)
 			<ClayTooltipProvider>
 				<div>
 					<button title="Default">{'Default'}</button>
+
+					{/* Note that the newline has to be a string within braces. */}
+					<button title={'Line1\nLine2'}>
+						{'With a line Break'}
+					</button>
 
 					<button data-tooltip-align="left" title="Left">
 						{'Left'}
