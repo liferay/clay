@@ -180,8 +180,10 @@
 /// disabled-color: {Color | String | Null},
 /// disabled-cursor: {String | Null},
 /// disabled-opacity: {Number | String | Null},
+/// disabled-outline: {Number | String | Null},
 /// disabled-pointer-events: {String | Null},
 /// disabled-text-decoration: {String | Null},
+/// disabled-active-pointer-events: {String | Null},
 /// @todo
 /// - Add @example
 /// - Add @link to documentation
@@ -241,8 +243,11 @@
 	$disabled-color: map-get($map, disabled-color);
 	$disabled-cursor: map-get($map, disabled-cursor);
 	$disabled-opacity: map-get($map, disabled-opacity);
+	$disabled-outline: map-get($map, disabled-outline);
 	$disabled-pointer-events: map-get($map, disabled-pointer-events);
 	$disabled-text-decoration: map-get($map, disabled-text-decoration);
+
+	$disabled-active-pointer-events: map-get($map, disabled-active-pointer-events);
 
 	@if ($enabled) {
 		background-color: $bg; // For `<button>`s set to `transparent` in Bootstrap
@@ -347,12 +352,17 @@
 			color: $disabled-color;
 			cursor: $disabled-cursor;
 			opacity: $disabled-opacity;
+			outline: $disabled-outline;
 			pointer-events: $disabled-pointer-events;
 			text-decoration: $disabled-text-decoration;
 
 			label,
 			.form-check-label {
 				color: $disabled-color;
+			}
+
+			&:active {
+				pointer-events: $disabled-active-pointer-events;
 			}
 		}
 

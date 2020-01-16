@@ -63,6 +63,9 @@ $dropdown-item-base: map-deep-merge((
 	disabled-color: $dropdown-link-disabled-color,
 	disabled-cursor: $dropdown-item-disabled-cursor,
 	disabled-opacity: 1,
+	disabled-outline: 0,
+	disabled-pointer-events: auto,
+	disabled-active-pointer-events: none,
 ), $dropdown-item-base);
 
 // Autocomplete Dropdown Menu
