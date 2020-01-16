@@ -119,7 +119,9 @@
 				{/if}
 			{/if}
 
-			{$label}
+			{call ClayDropdownLabel.render}
+				{param label: $label /}
+			{/call}
 
 			{if $icons and $icons.right and $spritemap}
 				<span class="dropdown-item-indicator-end">

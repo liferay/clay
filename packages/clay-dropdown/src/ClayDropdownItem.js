@@ -1,3 +1,4 @@
+import './ClayDropdownLabel.soy.js';
 import 'clay-button';
 import 'clay-checkbox';
 import 'clay-icon';
