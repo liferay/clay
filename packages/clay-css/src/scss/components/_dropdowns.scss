@@ -73,6 +73,24 @@
 	.form-group + .form-group {
 		margin-top: $dropdown-item-padding-y * 2;
 	}
+
+	.custom-control {
+		@include clay-css($dropdown-section-custom-control);
+	}
+
+	.custom-control-label {
+		@include clay-css($dropdown-section-custom-control-label);
+	}
+
+	.custom-control-label-text {
+		@include clay-css($dropdown-section-custom-control-label-text);
+	}
+
+	&.active {
+		.custom-control-label {
+			@include clay-css($dropdown-section-active-custom-control-label);
+		}
+	}
 }
 
 .dropdown-menu {

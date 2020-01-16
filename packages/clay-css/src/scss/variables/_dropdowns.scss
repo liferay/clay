@@ -68,6 +68,17 @@ $dropdown-item-base: map-deep-merge((
 	disabled-active-pointer-events: none,
 ), $dropdown-item-base);
 
+$dropdown-section-custom-control: () !default;
+$dropdown-section-custom-control: map-deep-merge((
+	margin-bottom: 0,
+), $dropdown-section-custom-control);
+
+$dropdown-section-custom-control-label: () !default;
+
+$dropdown-section-custom-control-label-text: () !default;
+
+$dropdown-section-active-custom-control-label: () !default;
+
 // Autocomplete Dropdown Menu
 
 $autocomplete-dropdown-menu: () !default;
