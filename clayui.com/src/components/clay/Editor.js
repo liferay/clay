@@ -4,10 +4,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {ClayButtonWithIcon} from '@clayui/button/src';
 import parserBabylon from 'prettier/parser-babylon';
 import prettier from 'prettier/standalone';
-import React from 'react';
+import React, {useState} from 'react';
 import {LiveEditor, LiveError, LivePreview, LiveProvider} from 'react-live';
+
+const spritemap = '/images/icons/icons.svg';
 
 const theme = {
 	plain: {
@@ -95,6 +98,8 @@ const Editor = ({code, disabled = false, imports, preview = true, scope}) => {
 		console.log(e);
 	}
 
+	const [collapseCode, setCollapseCode] = useState(false);
+
 	return (
 		<LiveProvider
 			code={code}
@@ -106,13 +111,39 @@ const Editor = ({code, disabled = false, imports, preview = true, scope}) => {
 			{preview && (
 				<div className="sheet-example">
 					<LivePreview />
+
 					<LiveError />
 				</div>
 			)}
+
 			<div className="gatsby-highlight">
 				<div style={{padding: '10px'}}>
-					{imports && <LiveEditor disabled value={imports} />}
-					<LiveEditor />
+					<ClayButtonWithIcon
+						className="btn-copy"
+						displayType="unstyled"
+						small
+						spritemap={spritemap}
+						symbol={'paste'}
+						title={'Copy'}
+					/>
+
+					<ClayButtonWithIcon
+						className="btn-collapse"
+						displayType="unstyled"
+						onClick={() => setCollapseCode(!collapseCode)}
+						small
+						spritemap={spritemap}
+						symbol={collapseCode ? 'angle-right' : 'angle-down'}
+						title={collapseCode ? 'Expand' : 'Collapse'}
+					/>
+
+					{!collapseCode && (
+						<>
+							{imports && <LiveEditor disabled value={imports} />}
+
+							<LiveEditor />
+						</>
+					)}
 				</div>
 			</div>
 		</LiveProvider>
