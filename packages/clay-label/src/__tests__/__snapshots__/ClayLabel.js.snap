@@ -68,6 +68,12 @@ exports[`ClayLabel should render a label with tabIndex 1`] = `
 </span>
 `;
 
+exports[`ClayLabel should render a label with truncate 1`] = `
+<span class="label label-secondary text-truncate-inline">
+  <span class="label-item label-item-expand text-truncate">Truncate</span>
+</span>
+`;
+
 exports[`ClayLabel should render a large label 1`] = `
 <span class="label label-secondary label-lg">
   <span class="label-item label-item-expand"></span>

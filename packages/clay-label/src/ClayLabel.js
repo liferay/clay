@@ -134,6 +134,15 @@ ClayLabel.STATE = {
 	 * @type {?(string|undefined)}
 	 */
 	tabIndex: Config.string(),
+
+	/**
+	 * Flag to truncate the label.
+	 * @default false
+	 * @instance
+	 * @memberof ClayLabel
+	 * @type {?bool}
+	 */
+	truncate: Config.bool().value(false),
 };
 
 defineWebComponent('clay-label', ClayLabel);
