@@ -403,7 +403,17 @@ section: Components
 			</li>
 			<li class="dropdown-subheader">Filter by</li>
 			<li>
-				<div class="active dropdown-item">
+				<div class="dropdown-section">
+					<div class="custom-control custom-checkbox">
+						<label>
+							<input class="custom-control-input" type="checkbox">
+							<span class="custom-control-label"></span>
+						</label>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="active dropdown-section">
 					<div class="custom-control custom-checkbox">
 						<label>
 							<input checked class="custom-control-input" type="checkbox">
@@ -415,7 +425,7 @@ section: Components
 				</div>
 			</li>
 			<li>
-				<div class="dropdown-item">
+				<div class="dropdown-section">
 					<div class="custom-control custom-checkbox">
 						<label>
 							<input class="custom-control-input" type="checkbox">
@@ -427,7 +437,7 @@ section: Components
 				</div>
 			</li>
 			<li>
-				<div class="disabled dropdown-item">
+				<div class="disabled dropdown-section">
 					<div class="custom-control custom-checkbox">
 						<label>
 							<input disabled class="custom-control-input" type="checkbox">
@@ -447,7 +457,7 @@ section: Components
 		<ul aria-labelledby="theDropdownToggleId" class="dropdown-menu">
 			<li class="dropdown-subheader">Order by</li>
 			<li>
-				<div class="active dropdown-item">
+				<div class="active dropdown-section">
 					<div class="custom-control custom-radio">
 						<label>
 							<input checked class="custom-control-input" id="dropdownRadio1" name="dropdownRadio" type="radio">
@@ -459,7 +469,7 @@ section: Components
 				</div>
 			</li>
 			<li>
-				<div class="dropdown-item">
+				<div class="dropdown-section">
 					<div class="custom-control custom-radio">
 						<label>
 							<input class="custom-control-input" id="dropdownRadio2" name="dropdownRadio" type="radio">
@@ -471,7 +481,7 @@ section: Components
 				</div>
 			</li>
 			<li>
-				<div class="disabled dropdown-item">
+				<div class="disabled dropdown-section">
 					<div class="custom-control custom-radio">
 						<label>
 							<input disabled class="custom-control-input" id="dropdownRadio3" name="dropdownRadio" type="radio">
@@ -1061,7 +1071,7 @@ section: Components
 									<input type="email" class="form-control form-control-sm" id="exampleInputEmail3" placeholder="Email">
 								</li>
 								<li>
-									<div class="dropdown-item">
+									<div class="dropdown-section">
 										<div class="custom-control custom-checkbox">
 											<label>
 												<input class="custom-control-input" type="checkbox">
@@ -1073,7 +1083,7 @@ section: Components
 									</div>
 								</li>
 								<li>
-									<div class="dropdown-item">
+									<div class="dropdown-section">
 										<div class="custom-control custom-checkbox">
 											<label>
 												<input class="custom-control-input" type="checkbox">
@@ -1085,7 +1095,7 @@ section: Components
 									</div>
 								</li>
 								<li>
-									<div class="dropdown-item">
+									<div class="dropdown-section">
 										<div class="custom-control custom-checkbox">
 											<label>
 												<input class="custom-control-input" type="checkbox">
@@ -1097,7 +1107,7 @@ section: Components
 									</div>
 								</li>
 								<li>
-									<div class="dropdown-item">
+									<div class="dropdown-section">
 										<div class="custom-control custom-checkbox">
 											<label>
 												<input class="custom-control-input" type="checkbox">
@@ -1109,7 +1119,7 @@ section: Components
 									</div>
 								</li>
 								<li>
-									<div class="dropdown-item">
+									<div class="dropdown-section">
 										<div class="custom-control custom-checkbox">
 											<label>
 												<input class="custom-control-input" type="checkbox">
@@ -1121,7 +1131,7 @@ section: Components
 									</div>
 								</li>
 								<li>
-									<div class="dropdown-item">
+									<div class="dropdown-section">
 										<div class="custom-control custom-checkbox">
 											<label>
 												<input class="custom-control-input" type="checkbox">
@@ -1283,12 +1293,15 @@ section: Components
 	$('input[type="checkbox"]').change(
 		function(event) {
 			$(this).closest('.dropdown-item').toggleClass('active', this.checked);
+			$(this).closest('.dropdown-section').toggleClass('active', this.checked);
 		}
 	);
 
 	$('input[type="radio"]').change(function(event) {
 		$(this).closest('.dropdown-menu').find('.dropdown-item').removeClass('active');
 		$(this).closest('.dropdown-item').toggleClass('active', this.checked);
+		$(this).closest('.dropdown-menu').find('.dropdown-section').removeClass('active');
+		$(this).closest('.dropdown-section').toggleClass('active', this.checked);
 	});
 
 	$('.input-group-inset').on('focusin', function(event) {
