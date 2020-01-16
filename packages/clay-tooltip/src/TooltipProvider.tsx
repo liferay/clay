@@ -96,12 +96,23 @@ function closestAncestor(node: HTMLElement, s: string) {
 	return null;
 }
 
+type TContentRenderer = (props: {
+	targetNode?: HTMLElement | null;
+	title: string;
+}) => React.ReactElement | React.ReactNode;
+
 const TooltipProvider: React.FunctionComponent<{
 	autoAlign?: boolean;
 	children: React.ReactElement;
+	contentRenderer?: TContentRenderer;
 	delay?: number;
-}> = ({autoAlign = true, children, delay = 600}) => {
-	const [{align, message, show}, dispatch] = React.useReducer(
+}> = ({
+	autoAlign = true,
+	children,
+	contentRenderer = props => props.title,
+	delay = 600,
+}) => {
+	const [{align, message = '', show}, dispatch] = React.useReducer(
 		reducer,
 		initialState
 	);
@@ -205,7 +216,10 @@ const TooltipProvider: React.FunctionComponent<{
 			{show && (
 				<ClayPortal>
 					<ClayTooltip alignPosition={align} ref={tooltipRef} show>
-						{message}
+						{contentRenderer({
+							targetNode: targetRef.current,
+							title: message,
+						})}
 					</ClayTooltip>
 				</ClayPortal>
 			)}
