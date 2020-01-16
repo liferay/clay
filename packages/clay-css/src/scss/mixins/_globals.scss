@@ -1,0 +1,233 @@
+////
+/// @group globals
+////
+
+/// A mixin that outputs a CSS property based on the `key: value` pair passed to
+/// the mixin. Outputs nothing if no `key: value` pairs are passed. Prevent a
+/// Clay CSS Sass map from outputting properties with
+/// `$the-variable: (enabled: false);`
+/// @param {Map} $map - A map of `key: value` pairs.
+
+@mixin clay-css($map) {
+	$enabled: setter(map-get($map, enabled), true);
+
+	@if ($enabled) {
+		align-content: map-get($map, align-content);
+		align-items: map-get($map, align-items);
+		align-self: map-get($map, align-self);
+		animation: map-get($map, animation);
+
+		animation-delay: map-get($map, animation-delay);
+		animation-direction: map-get($map, animation-direction);
+		animation-duration: map-get($map, animation-duration);
+		animation-fill-mode: map-get($map, animation-fill-mode);
+		animation-iteration-count: map-get($map, animation-iteration-count);
+		animation-name: map-get($map, animation-name);
+		animation-play-state: map-get($map, animation-play-state);
+		animation-timing-function: map-get($map, animation-timing-function);
+		backface-visibility: map-get($map, backface-visibility);
+		background: map-get($map, background);
+
+		background-attachment: map-get($map, background-attachment);
+		background-blend-mode: map-get($map, background-blend-mode);
+		background-clip: map-get($map, background-clip);
+		background-color: map-get($map, background-color);
+		background-image: map-get($map, background-image);
+		background-origin: map-get($map, background-origin);
+		background-position: map-get($map, background-position);
+		background-repeat: map-get($map, background-repeat);
+		background-size: map-get($map, background-size);
+		border: map-get($map, border);
+
+		border-bottom: map-get($map, border-bottom);
+
+		border-bottom-color: map-get($map, border-bottom-color);
+		border-bottom-left-radius: map-get($map, border-bottom-left-radius);
+		border-bottom-right-radius: map-get($map, border-bottom-right-radius);
+		border-bottom-style: map-get($map, border-bottom-style);
+		border-bottom-width: map-get($map, border-bottom-width);
+		border-collapse: map-get($map, border-collapse);
+		border-color: map-get($map, border-color);
+		border-image: map-get($map, border-image);
+
+		border-image-outset: map-get($map, border-image-outset);
+		border-image-repeat: map-get($map, border-image-repeat);
+		border-image-slice: map-get($map, border-image-slice);
+		border-image-source: map-get($map, border-image-source);
+		border-image-width: map-get($map, border-image-width);
+		border-left: map-get($map, border-left);
+
+		border-left-color: map-get($map, border-left-color);
+		border-left-style: map-get($map, border-left-style);
+		border-left-width: map-get($map, border-left-width);
+		border-radius: map-get($map, border-radius);
+		border-right: map-get($map, border-right);
+
+		border-right-color: map-get($map, border-right-color);
+		border-right-style: map-get($map, border-right-style);
+		border-right-width: map-get($map, border-right-width);
+		border-spacing: map-get($map, border-spacing);
+		border-style: map-get($map, border-style);
+		border-top: map-get($map, border-top);
+
+		border-top-color: map-get($map, border-top-color);
+		border-top-left-radius: map-get($map, border-top-left-radius);
+		border-top-right-radius: map-get($map, border-top-right-radius);
+		border-top-style: map-get($map, border-top-style);
+		border-top-width: map-get($map, border-top-width);
+		border-width: map-get($map, border-width);
+		bottom: map-get($map, bottom);
+		box-shadow: map-get($map, box-shadow);
+		box-sizing: map-get($map, box-sizing);
+		caption-side: map-get($map, caption-side);
+		clear: map-get($map, clear);
+		clip: map-get($map, clip);
+		color: map-get($map, color);
+		column-count: map-get($map, column-count);
+		column-fill: map-get($map, column-fill);
+		column-gap: map-get($map, column-gap);
+		column-rule: map-get($map, column-rule);
+		column-rule-color: map-get($map, column-rule-color);
+		column-rule-style: map-get($map, column-rule-style);
+		column-rule-width: map-get($map, column-rule-width);
+		column-span: map-get($map, column-span);
+		column-width: map-get($map, column-width);
+		columns: map-get($map, columns);
+		content: map-get($map, content);
+		counter-increment: map-get($map, counter-increment);
+		counter-reset: map-get($map, counter-reset);
+		cursor: map-get($map, cursor);
+		direction: map-get($map, direction);
+		display: map-get($map, display);
+		empty-cells: map-get($map, empty-cells);
+		filter: map-get($map, filter);
+		flex: map-get($map, flex);
+
+		flex-basis: map-get($map, flex-basis);
+		flex-direction: map-get($map, flex-direction);
+		flex-flow: map-get($map, flex-flow);
+		flex-grow: map-get($map, flex-grow);
+		flex-shrink: map-get($map, flex-shrink);
+		flex-wrap: map-get($map, flex-wrap);
+		float: map-get($map, float);
+		font: map-get($map, font);
+
+		font-family: map-get($map, font-family);
+		font-kerning: map-get($map, font-kerning);
+		font-size: map-get($map, font-size);
+		font-stretch: map-get($map, font-stretch);
+		font-style: map-get($map, font-style);
+		font-variant: map-get($map, font-variant);
+		font-weight: map-get($map, font-weight);
+		grid: map-get($map, grid);
+
+		grid-area: map-get($map, grid-area);
+		grid-auto-columns: map-get($map, grid-auto-columns);
+		grid-auto-flow: map-get($map, grid-auto-flow);
+		grid-auto-rows: map-get($map, grid-auto-rows);
+		grid-column: map-get($map, grid-column);
+
+		grid-column-end: map-get($map, grid-column-end);
+		grid-column-gap: map-get($map, grid-column-gap);
+		grid-column-start: map-get($map, grid-column-start);
+		grid-gap: map-get($map, grid-gap);
+		grid-row: map-get($map, grid-row);
+
+		grid-row-end: map-get($map, grid-row-end);
+		grid-row-gap: map-get($map, grid-row-gap);
+		grid-row-start: map-get($map, grid-row-start);
+		grid-template: map-get($map, grid-template);
+
+		grid-template-areas: map-get($map, grid-template-areas);
+		grid-template-columns: map-get($map, grid-template-columns);
+		grid-template-rows: map-get($map, grid-template-rows);
+		height: map-get($map, height);
+		justify-content: map-get($map, justify-content);
+		left: map-get($map, left);
+		letter-spacing: map-get($map, letter-spacing);
+		line-height: map-get($map, line-height);
+		list-style: map-get($map, list-style);
+
+		list-style-image: map-get($map, list-style-image);
+		list-style-position: map-get($map, list-style-position);
+		list-style-type: map-get($map, list-style-type);
+		margin: map-get($map, margin);
+
+		margin-bottom: map-get($map, margin-bottom);
+		margin-left: map-get($map, margin-left);
+		margin-right: map-get($map, margin-right);
+		margin-top: map-get($map, margin-top);
+		max-height: map-get($map, max-height);
+		max-width: map-get($map, max-width);
+		min-height: map-get($map, min-height);
+		min-width: map-get($map, min-width);
+		object-fit: map-get($map, object-fit);
+		object-position: map-get($map, object-position);
+		opacity: map-get($map, opacity);
+		order: map-get($map, order);
+		outline: map-get($map, outline);
+
+		outline-color: map-get($map, outline-color);
+		outline-offset: map-get($map, outline-offset);
+		outline-style: map-get($map, outline-style);
+		outline-width: map-get($map, outline-width);
+		overflow: map-get($map, overflow);
+
+		overflow-wrap: map-get($map, overflow-wrap);
+
+		word-wrap: map-get($map, overflow-wrap);
+
+		overflow-x: map-get($map, overflow-x);
+		overflow-y: map-get($map, overflow-y);
+		padding: map-get($map, padding);
+		padding-bottom: map-get($map, padding-bottom);
+		padding-left: map-get($map, padding-left);
+		padding-right: map-get($map, padding-right);
+		padding-top: map-get($map, padding-top);
+		page-break-after: map-get($map, page-break-after);
+		page-break-before: map-get($map, page-break-before);
+		page-break-inside: map-get($map, page-break-inside);
+		perspective: map-get($map, perspective);
+		perspective-origin: map-get($map, perspective-origin);
+		pointer-events: map-get($map, pointer-events);
+		position: map-get($map, position);
+		resize: map-get($map, resize);
+		right: map-get($map, right);
+		scroll-behavior: map-get($map, scroll-behavior);
+		table-layout: map-get($map, table-layout);
+		text-align: map-get($map, text-align);
+		text-decoration: map-get($map, text-decoration);
+		text-indent: map-get($map, text-indent);
+		text-justify: map-get($map, text-justify);
+		text-overflow: map-get($map, text-overflow);
+		text-shadow: map-get($map, text-shadow);
+		text-transform: map-get($map, text-transform);
+		top: map-get($map, top);
+		transform: map-get($map, transform);
+		transform-origin: map-get($map, transform-origin);
+		transform-style: map-get($map, transform-style);
+		transition: map-get($map, transition);
+		transition-delay: map-get($map, transition-delay);
+		transition-duration: map-get($map, transition-duration);
+		transition-property: map-get($map, transition-property);
+		transition-timing-function: map-get($map, transition-timing-function);
+
+		-ms-user-select: map-get($map, user-select);
+		-moz-user-select: map-get($map, user-select);
+		-webkit-user-select: map-get($map, user-select);
+
+		user-select: map-get($map, user-select);
+		vertical-align: map-get($map, vertical-align);
+		visibility: map-get($map, visibility);
+		white-space: map-get($map, white-space);
+		width: map-get($map, width);
+		word-break: map-get($map, word-break);
+		word-spacing: map-get($map, word-spacing);
+
+		overflow-wrap: map-get($map, word-wrap);
+
+		word-wrap: map-get($map, word-wrap);
+		writing-mode: map-get($map, writing-mode);
+		z-index: map-get($map, z-index);
+	}
+}
