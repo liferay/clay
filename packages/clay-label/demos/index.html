@@ -52,6 +52,13 @@
 		</div>
 	</div>
 
+	<div class="row row-spacing">
+		<div class="col">
+			<h2>Label with truncate</h2>
+			<div id="truncate-block" style="width: 200px;"></div>
+		</div>
+	</div>
+
 	<script type="text/javascript">
 		const spritemap = '../../../node_modules/clay-css/lib/images/icons/icons.svg';
 
@@ -157,6 +164,14 @@
 				href: '#link-block'
 			},
 			'#link-block'
+		);
+
+		new metal.ClayLabel(
+			{
+				label: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.',
+				truncate: true
+			},
+			'#truncate-block'
 		);
 
 		function handleClick(event) {

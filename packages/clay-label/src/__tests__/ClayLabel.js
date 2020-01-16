@@ -124,6 +124,15 @@ describe('ClayLabel', function() {
 		expect(label).toMatchSnapshot();
 	});
 
+	it('should render a label with truncate', function() {
+		label = new ClayLabel({
+			label: 'Truncate',
+			truncate: true,
+		});
+
+		expect(label).toMatchSnapshot();
+	});
+
 	it('should render a closeable label and emit an event on close button click', () => {
 		label = new ClayLabel({
 			label: 'Foo',

@@ -14,6 +14,7 @@
 	{@param? spritemap: string}
 	{@param? style: bool|string}
 	{@param? tabIndex: string}
+	{@param? truncate: bool}
 
 	{let $attributes kind="attributes"}
 		class="label
@@ -34,6 +35,10 @@
 			{if $size}
 				{sp}label-{$size}
 			{/if}
+
+			{if $truncate}
+				{sp}text-truncate-inline
+			{/if}
 		"
 
 		{if $id}
@@ -53,6 +58,7 @@
 			{param label: $label /}
 			{param spritemap: $spritemap /}
 			{param tabIndex: $tabIndex /}
+			{param truncate: $truncate /}
 		{/call}
 	</span>
 {/template}
@@ -67,9 +73,17 @@
 	{@param? label: html|string}
 	{@param? spritemap: string}
 	{@param? tabIndex: string}
+	{@param? truncate: bool}
 
 	{let $labelContent kind="html"}
-		<span class="label-item label-item-expand">
+		{let $labelContentClass kind="text"}
+			label-item label-item-expand
+			{if $truncate}
+				{sp}text-truncate
+			{/if}
+		{/let}
+
+		<span class="{$labelContentClass}">
 			{if $href}
 				{call ClayLink.render}
 					{param href: $href /}
