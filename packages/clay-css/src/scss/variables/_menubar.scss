@@ -16,6 +16,39 @@ $menubar-vertical-transparent-md: map-deep-merge((
 	bg-mobile: $gray-100,
 ), $menubar-vertical-transparent-md);
 
+$menubar-vertical-decorated-md-nav: () !default;
+$menubar-vertical-decorated-md-nav: map-deep-merge((
+	border-left-color: $gray-300,
+	border-left-style: solid,
+	border-left-width: 0.125rem,
+	display: block,
+	padding-left: 0.5rem,
+), $menubar-vertical-decorated-md-nav);
+
+$menubar-vertical-decorated-md-nav-item-nav: () !default;
+$menubar-vertical-decorated-md-nav-item-nav: map-deep-merge((
+	margin-bottom: 0.25rem,
+	margin-left: 1rem,
+	margin-top: 0.25rem,
+), $menubar-vertical-decorated-md-nav-item-nav);
+
+$menubar-vertical-decorated-md-nav-link: () !default;
+$menubar-vertical-decorated-md-nav-link: map-deep-merge((
+	padding-left: 1rem !important,
+), $menubar-vertical-decorated-md-nav-link);
+
+$menubar-vertical-decorated-md-nav-link-after-active: () !default;
+$menubar-vertical-decorated-md-nav-link-after-active: map-deep-merge((
+	background-color: $primary-l2,
+	bottom: 0,
+	content: '',
+	display: block,
+	left: math-sign(map-get($menubar-vertical-decorated-md-nav, padding-left)) - map-get($menubar-vertical-decorated-md-nav, border-left-width),
+	position: absolute,
+	top: 0,
+	width: map-get($menubar-vertical-decorated-md-nav, border-left-width),
+), $menubar-vertical-decorated-md-nav-link-after-active);
+
 // Menubar Vertical LG
 
 $menubar-vertical-expand-lg: () !default;
@@ -35,3 +68,15 @@ $menubar-vertical-transparent-lg: map-deep-merge((
 	link-active-color: $gray-900,
 	bg-mobile: $gray-100,
 ), $menubar-vertical-transparent-lg);
+
+$menubar-vertical-decorated-lg-nav: () !default;
+$menubar-vertical-decorated-lg-nav: map-deep-merge($menubar-vertical-decorated-md-nav, $menubar-vertical-decorated-lg-nav);
+
+$menubar-vertical-decorated-lg-nav-item-nav: () !default;
+$menubar-vertical-decorated-lg-nav-item-nav: map-deep-merge($menubar-vertical-decorated-md-nav-item-nav, $menubar-vertical-decorated-lg-nav-item-nav);
+
+$menubar-vertical-decorated-lg-nav-link: () !default;
+$menubar-vertical-decorated-lg-nav-link: map-deep-merge($menubar-vertical-decorated-md-nav-link, $menubar-vertical-decorated-lg-nav-link);
+
+$menubar-vertical-decorated-lg-nav-link-after-active: () !default;
+$menubar-vertical-decorated-lg-nav-link-after-active: map-deep-merge($menubar-vertical-decorated-md-nav-link-after-active, $menubar-vertical-decorated-lg-nav-link-after-active);
