@@ -4,7 +4,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {ClayPortal} from '@clayui/shared';
 import classNames from 'classnames';
+import domAlign from 'dom-align';
 import React from 'react';
 
 export const ALIGN_POSITIONS = [
@@ -15,8 +17,27 @@ export const ALIGN_POSITIONS = [
 	'bottom-left',
 	'bottom-right',
 	'left',
+	'left-top',
+	'left-bottom',
 	'right',
+	'right-top',
+	'right-bottom',
 ] as const;
+
+const ALIGNMENTS_MAP = {
+	bottom: ['tc', 'bc'],
+	'bottom-left': ['tl', 'bl'],
+	'bottom-right': ['tr', 'br'],
+	left: ['cr', 'cl'],
+	'left-bottom': ['br', 'bl'],
+	'left-top': ['tr', 'tl'],
+	right: ['cl', 'cr'],
+	'right-bottom': ['bl', 'br'],
+	'right-top': ['tl', 'tr'],
+	top: ['bc', 'tc'],
+	'top-left': ['bl', 'tl'],
+	'top-right': ['br', 'tr'],
+} as const;
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
@@ -35,6 +56,13 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	show?: boolean;
 
 	/**
+	 * React element that the popover will align to when clicked.
+	 */
+	trigger?: React.ReactElement & {
+		ref?: (node: HTMLButtonElement | null) => void;
+	};
+
+	/**
 	 * Content to display in the header of the popover.
 	 */
 	header?: React.ReactNode;
@@ -48,12 +76,44 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 			className,
 			disableScroll = false,
 			header,
-			show,
+			trigger,
 			...otherProps
 		}: IProps,
 		ref
 	) => {
-		return (
+		const [show, setShow] = React.useState(false);
+
+		const triggerRef = React.useRef<HTMLElement | null>(null);
+		const popoverRef = React.useRef<HTMLElement | null>(null);
+
+		if (!ref) {
+			ref = popoverRef as React.Ref<HTMLDivElement>;
+		}
+
+		React.useEffect(() => {
+			if (
+				trigger &&
+				ref &&
+				(ref as React.RefObject<HTMLElement>).current &&
+				triggerRef &&
+				triggerRef.current
+			) {
+				const points = ALIGNMENTS_MAP[alignPosition] as [
+					string,
+					string
+				];
+
+				domAlign(
+					(ref as React.RefObject<HTMLElement>).current!,
+					triggerRef.current as HTMLElement,
+					{
+						points,
+					}
+				);
+			}
+		}, [show]);
+
+		let content = (
 			<div
 				className={classNames(
 					className,
@@ -61,8 +121,8 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 					`clay-popover-${alignPosition}`,
 					{show}
 				)}
-				{...otherProps}
 				ref={ref as React.RefObject<HTMLDivElement>}
+				{...otherProps}
 			>
 				<div className="arrow" />
 
@@ -75,6 +135,36 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 				</div>
 			</div>
 		);
+
+		if (trigger) {
+			content = (
+				<>
+					{React.cloneElement(trigger, {
+						onClick: (e: any) => {
+							if (trigger.props.onClick) {
+								trigger.props.onClick(e);
+							}
+
+							setShow(!show);
+						},
+						ref: (node: HTMLButtonElement) => {
+							if (node) {
+								triggerRef.current = node;
+								// Call the original ref, if any.
+								const {ref} = trigger;
+								if (typeof ref === 'function') {
+									ref(node);
+								}
+							}
+						},
+					})}
+
+					{show && <ClayPortal>{content}</ClayPortal>}
+				</>
+			);
+		}
+
+		return content;
 	}
 );
 
