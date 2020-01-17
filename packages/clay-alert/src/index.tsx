@@ -8,6 +8,7 @@ import Icon from '@clayui/icon';
 import classNames from 'classnames';
 import React from 'react';
 
+import Footer from './Footer';
 import ToastContainer from './ToastContainer';
 
 const useAutoClose = (autoClose?: boolean | number, onClose = () => {}) => {
@@ -98,6 +99,7 @@ const ICON_MAP = {
 };
 
 const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
+	Footer: typeof Footer;
 	ToastContainer: typeof ToastContainer;
 } = ({
 	autoClose,
@@ -135,16 +137,26 @@ const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
 			role="alert"
 		>
 			<ConditionalContainer>
-				<span className="alert-indicator">
-					<Icon
-						spritemap={spritemap}
-						symbol={ICON_MAP[displayType]}
-					/>
-				</span>
+				<div className="alert-autofit-row autofit-row">
+					<div className="autofit-col">
+						<div className="autofit-section">
+							<span className="alert-indicator">
+								<Icon
+									spritemap={spritemap}
+									symbol={ICON_MAP[displayType]}
+								/>
+							</span>
+						</div>
+					</div>
 
-				<strong className="lead">{title}</strong>
+					<div className="autofit-col autofit-col-expand">
+						<div className="autofit-section">
+							<strong className="lead">{title}</strong>
 
-				{children}
+							{children}
+						</div>
+					</div>
+				</div>
 
 				{onClose && (
 					<button
@@ -161,6 +173,7 @@ const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
 	);
 };
 
+ClayAlert.Footer = Footer;
 ClayAlert.ToastContainer = ToastContainer;
 
 export default ClayAlert;

@@ -5,6 +5,7 @@
  */
 
 import '@clayui/css/lib/css/atlas.css';
+import ClayButton from '@clayui/button';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {boolean, select, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
@@ -93,6 +94,22 @@ storiesOf('Components|ClayAlert', module)
 			variant={boolean('Stripe Variant', false) ? 'stripe' : undefined}
 		>
 			{text('Content', 'This is an alert!')}
+		</ClayAlert>
+	))
+	.add('w/ a button', () => (
+		<ClayAlert
+			displayType="info"
+			spritemap={spritemap}
+			title="With a Button"
+			variant={boolean('Stripe Variant', false) ? 'stripe' : undefined}
+		>
+			{'This is an alert with a button!'}
+
+			<ClayAlert.Footer>
+				<ClayButton.Group>
+					<ClayButton alert>{'View'}</ClayButton>
+				</ClayButton.Group>
+			</ClayAlert.Footer>
 		</ClayAlert>
 	))
 	.add('Toast', () => <ClayToastDemo />)
