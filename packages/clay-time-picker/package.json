@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/time-picker",
-	"version": "3.0.4",
+	"version": "3.0.5",
 	"description": "ClayTimePicker component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-time-picker",
@@ -22,10 +22,10 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/button": "^3.0.3",
-		"@clayui/form": "^3.2.1",
-		"@clayui/icon": "^3.0.1",
-		"@clayui/shared": "^3.0.5",
+		"@clayui/button": "^3.1.0",
+		"@clayui/form": "^3.3.0",
+		"@clayui/icon": "^3.0.2",
+		"@clayui/shared": "^3.0.6",
 		"classnames": "^2.2.6"
 	},
 	"peerDependencies": {
