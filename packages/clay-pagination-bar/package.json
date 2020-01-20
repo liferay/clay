@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/pagination-bar",
-	"version": "3.0.4",
+	"version": "3.0.5",
 	"description": "ClayPaginationBar component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-pagination-bar",
@@ -26,11 +26,11 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/button": "^3.0.3",
-		"@clayui/drop-down": "^3.1.2",
-		"@clayui/icon": "^3.0.1",
-		"@clayui/pagination": "^3.0.4",
-		"@clayui/shared": "^3.0.5",
+		"@clayui/button": "^3.1.0",
+		"@clayui/drop-down": "^3.1.3",
+		"@clayui/icon": "^3.0.2",
+		"@clayui/pagination": "^3.0.5",
+		"@clayui/shared": "^3.0.6",
 		"classnames": "^2.2.6"
 	},
 	"peerDependencies": {
