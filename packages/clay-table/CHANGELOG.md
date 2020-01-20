@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.5](https://github.com/liferay/clay/tree/master/packages/clay-table/compare/@clayui/table@3.0.3...@clayui/table@3.0.5) (2020-01-20)
+
+
+### Bug Fixes
+
+* **table:** add forwardRef to table components ([189a3dc](https://github.com/liferay/clay/tree/master/packages/clay-table/commit/189a3dc))
+
+
+
+
+
 ## [3.0.4](https://github.com/liferay/clay/tree/master/packages/clay-table/compare/@clayui/table@3.0.3...@clayui/table@3.0.4) (2019-12-05)
 
 ### Bug Fixes
