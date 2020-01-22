@@ -71,10 +71,7 @@ class ClayDropdownBase extends ClayComponent {
 	 * @inheritDoc
 	 */
 	willReceiveState(changes) {
-		if (
-			changes.items &&
-			changes.items.newVal !== changes.items.prevVal
-		) {
+		if (changes.items && changes.items.newVal !== changes.items.prevVal) {
 			this._filteredItems = this.items;
 
 			// Checks if there is any search in progress when the new item
