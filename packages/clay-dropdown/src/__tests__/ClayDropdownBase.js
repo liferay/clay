@@ -807,7 +807,7 @@ describe('ClayDropdownBase', function() {
 			delegateTarget: input,
 		});
 
-		expect(clayDropdownBase.items).toEqual([item1]);
+		expect(clayDropdownBase._filteredItems).toEqual([item1]);
 
 		input.value = 'Item 2';
 
@@ -821,7 +821,7 @@ describe('ClayDropdownBase', function() {
 			delegateTarget: input,
 		});
 
-		expect(clayDropdownBase.items).toEqual([item3]);
+		expect(clayDropdownBase._filteredItems).toEqual([item3]);
 
 		input.value = '';
 
@@ -829,7 +829,7 @@ describe('ClayDropdownBase', function() {
 			delegateTarget: input,
 		});
 
-		expect(clayDropdownBase.items).toEqual([item1, item2, item3]);
+		expect(clayDropdownBase._filteredItems).toEqual([item1, item2, item3]);
 	});
 
 	it('should render a dropdown and emit an event on button click', () => {

@@ -6,6 +6,7 @@
 {template .render}
 	{@param items: list<?>}
 	{@param label: html|string}
+	{@param? _filteredItems: list<?>}
 	{@param? _handleButtonClick: any}
 	{@param? _handleItemClick: any}
 	{@param? _handleItemKeyDown: any}
@@ -71,7 +72,7 @@
 			{param contentRenderer: $contentRenderer ?: '' /}
 			{param expanded: $expanded /}
 			{param helpText: $helpText /}
-			{param items: $items /}
+			{param items: $_filteredItems ?: $items /}
 			{param itemsIconAlignment: $itemsIconAlignment /}
 			{param portalElementId: $portalElementId /}
 			{param searchable: $searchable /}

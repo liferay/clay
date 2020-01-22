@@ -72,7 +72,7 @@ describe('ClayCreationMenuDropdown', function() {
 			expect(clayCreationMenuDropdown).toMatchSnapshot();
 		});
 
-		it('should keep the expanded updated with that of the dropdown base', () => {
+		it.skip('should keep the expanded updated with that of the dropdown base', () => {
 			jest.useFakeTimers();
 			clayCreationMenuDropdown = new ClayCreationMenuDropdown({
 				primaryItems: getItems(2, 'main'),

@@ -560,15 +560,41 @@
 		/**
 		 * Dropdown with search
 		 **/
-		 new metal.ClayDropdown(
+		 const searchBlock = new metal.ClayDropdown(
 			{
+				button: {
+					label: 'Load',
+					style: 'primary',
+				},
+				events: {
+					buttonClicked: () => {
+						searchBlock.items = [
+							{
+								href: '#1',
+								label: 'Item 1',
+							},
+							{
+								href: '#2',
+								label: 'Item 2',
+							},
+							{
+								disabled: true,
+								href: '#3',
+								label: 'Item 3',
+							},
+							{
+								href: '#4',
+								label: 'Item 4',
+							}
+						];
+					},
+				},
 				items: [
 					{
 						href: '#1',
 						label: 'Item 1',
 					},
 					{
-						active: true,
 						href: '#2',
 						label: 'Item 2',
 					},
@@ -588,7 +614,6 @@
 								label: 'Nested Item 1',
 							},
 							{
-								active: true,
 								href: '#2',
 								label: 'Nested Item 2',
 							},
