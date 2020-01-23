@@ -109,8 +109,8 @@ export default props => {
 															aria-expanded="true"
 															className="active nav-link"
 															data-toggle="tab"
-															href="#advanced"
-															id="advancedTab"
+															href="#advancedTab"
+															id="advancedTabs"
 															role="tab"
 														>
 															{'React Component'}
@@ -140,9 +140,9 @@ export default props => {
 									<div className="col-12">
 										<div className="tab-content">
 											<div
-												aria-labelledby="advancedTab"
+												aria-labelledby="advancedTabs"
 												className="active fade show tab-pane"
-												id="advanced"
+												id="advancedTab"
 												role="tabpanel"
 											>
 												{fields &&
