@@ -72,6 +72,13 @@ describe('ClayCreationMenuDropdown', function() {
 			expect(clayCreationMenuDropdown).toMatchSnapshot();
 		});
 
+		/**
+		 * ClayDropdownBase contains the internal state `_filteredItems` which is the source of the truth to
+		 * perform operations so that the public state `items` is not changed, so as soon as the component is
+		 * created `_filteredItems` is filled with `items` this will cause a new rendering, in the tests this
+		 * behavior causes the Jest to be lost making this testing Flask. Metal probably needs an `act`
+		 * equivalent to that of React so that it can control these renderings in tests.
+		 */
 		it.skip('should keep the expanded updated with that of the dropdown base', () => {
 			jest.useFakeTimers();
 			clayCreationMenuDropdown = new ClayCreationMenuDropdown({
