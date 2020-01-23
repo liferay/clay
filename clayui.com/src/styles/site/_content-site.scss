@@ -20,6 +20,16 @@
 				margin-bottom: $base-size;
 				margin-top: $base-size;
 			}
+
+			&[id] {
+				margin-top: calc(-81px + #{$base-size});
+				padding-top: 81px;
+
+				@media (min-width: $grid-float-breakpoint) {
+					margin-top: calc(-66px + #{$base-size});
+					padding-top: 66px;
+				}
+			}
 		}
 	}
 
