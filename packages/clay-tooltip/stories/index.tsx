@@ -87,4 +87,55 @@ storiesOf('Components|ClayTooltip', module)
 				</div>
 			</ClayTooltipProvider>
 		</div>
-	));
+	))
+	.add('ClayTooltipProvider w/ custom JSX', () => {
+		const ItalicsComponent = (props: any) => <i>{props.title}</i>;
+
+		return (
+			<div style={{padding: 50}}>
+				<ClayTooltipProvider
+					contentRenderer={props => props.title.split('').join('-')}
+				>
+					<div>
+						<button title="Hello World">{'Formatted'}</button>
+					</div>
+				</ClayTooltipProvider>
+
+				<ClayTooltipProvider contentRenderer={ItalicsComponent}>
+					<div>
+						<button title="Hello World">{'Italics'}</button>
+					</div>
+				</ClayTooltipProvider>
+
+				<ClayTooltipProvider
+					contentRenderer={props => {
+						let capitalize;
+
+						if (props.targetNode) {
+							capitalize = props.targetNode.getAttribute(
+								'data-tooltip-capitalize'
+							);
+						}
+
+						return (
+							<span
+								style={{
+									textTransform: capitalize
+										? 'uppercase'
+										: 'none',
+								}}
+							>
+								{props.title}
+							</span>
+						);
+					}}
+				>
+					<div>
+						<button data-tooltip-capitalize title="Hello World">
+							{'Custom data attrs'}
+						</button>
+					</div>
+				</ClayTooltipProvider>
+			</div>
+		);
+	});
