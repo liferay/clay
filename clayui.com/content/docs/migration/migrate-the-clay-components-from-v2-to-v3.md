@@ -14,14 +14,14 @@ title: 'Migrate the Clay components from v2 to v3'
 -   [ClayLink](#claylink)
 -   [ClayNavigationBar](#claynavigationbar)
 -   [ClaySticker](#claysticker)
--   [ClayTable](#Claytable)
+-   [ClayTable](#claytable)
 -   [ClayIcon](#clayicon)
 -   [ClayModal](#claymodal)
 -   [ClayRadioGroup, ClayRadio](#clayradiogroup,-clayradio)
 -   [ClayLabel](#claylabel)
 -   [ClayProgressBar](#clayprogressbar)
 -   [ClayList](#claylist)
--   [ClayCollapse -> ClayPanel](#claycollapse-->-claypanel)
+-   [ClayCollapse to ClayPanel](#claycollapse-to-claypanel)
 -   [ClayDropDown](#claydropdown)
 -   [ClayPagination](#claypagination)
 -   [ClayDataProvider](#claydataprovider)
@@ -944,7 +944,7 @@ import ClayList from '@clayui/list';
 
 </div>
 
-## ClayCollapse -> ClayPanel
+## ClayCollapse to ClayPanel
 
 ClayCollapse has been renamed to ClayPanel due to collapse being just a part of the panel functionality. ClayPanel is now simpler as it now manages its own expanded state internally. ClayPanel also is now created via composition with `<ClayPanel.Body>`, `<ClayPanel.Footer>`, `<ClayPanel.Header>` and `<ClayPanel.Group>`.
 

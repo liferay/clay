@@ -15,13 +15,26 @@ module.exports = ({markdownAST}) => {
 			node.depth === 4 ||
 			node.depth === 5
 		) {
+
+			let id = node.children[0].value
+				.toLowerCase()
+				.split(' ')
+				.join('-');
+
+			let title = node.children[0].value;
+
+			if (node.children[0].value.match(/\(#/)) {
+				title = node.children[0].value.match(/(.*?)\(#/)[1];
+
+				id = node.children[0].value.match(/\(#(.*?)\)$/)[1];
+			}
+
+			node.children[0].value = title;
+
 			node.data = {
 				hProperties: {
 					class: `clay-h${node.depth}`,
-					id: node.children[0].value
-						.toLowerCase()
-						.split(' ')
-						.join('-'),
+					id: id,
 				},
 			};
 		}

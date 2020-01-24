@@ -25,9 +25,9 @@ description: 'A dropdown menu displays a list of options for the element that tr
     -   [Buttons](#buttons)
     -   [Anchors](#anchors)
 -   [Alignment](#alignment)
-    -   [Default](#alignment-default)
-    -   [Right](#right)
-    -   [Left](#left)
+    -   [Corners](#corners)
+    -   [Sides](#sides)
+    -   [Middle](#middle)
     -   [Center](#center)
 
 </div>
@@ -1325,7 +1325,7 @@ A monospaced `dropdown-toggle` for a dropdown containing several actions, add `d
 
 ## Alignment
 
-### Default
+### Corners
 
 Align a dropdown menu on the top or bottom side with classes `dropdown-menu`, `dropdown-menu-right`, `dropdown-menu-top`, or `dropdown-menu-top-right`.
 
@@ -1497,7 +1497,7 @@ Align a dropdown menu on the top or bottom side with classes `dropdown-menu`, `d
 </div>
 ```
 
-### Right
+### Sides
 
 Add the `dropdown-menu-right-side`, `dropdown-menu-left-side`, `dropdown-menu-right-side-bottom`, or `dropdown-menu-left-side-bottom` class to a dropdown menu to align it with the right side, left side, bottom-right side, or bottom-left side of the dropdown menu trigger, respectively:
 
@@ -1699,7 +1699,7 @@ Add the `dropdown-menu-right-side`, `dropdown-menu-left-side`, `dropdown-menu-ri
 </div>
 ```
 
-### Left
+### Middle
 
 You can also center the dropdown menu to its trigger with these four helper classes: `dropdown-menu-center`, `dropdown-menu-top-center`, `dropdown-menu-left-side-middle`, or `dropdown-menu-right-side-middle`.
 

@@ -12,7 +12,7 @@ description: 'Checkboxes and radios provide users with different selection and a
     -   [Without labels](#without-labels)
 -   [Custom Checkboxes and radios](#custom-checkboxes-and-radios)
     -   [Checkboxes](#checkboxes)
-    -   [Radios](#radios
+    -   [Radios](#radios)
 -   [Inline](#inline)
     -   [Disabled](#disabled)
 
