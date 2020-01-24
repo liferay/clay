@@ -6,11 +6,11 @@ description: 'Popovers contain helpful information such as an explanation of a c
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Position](#popover-position)
-    -   [Top](#popover-top)
-    -   [Right](#popover-right)
-    -   [Bottom](#popover-bottom)
-    -   [Left](#popover-left)
+-   [Position](#position)
+    -   [Top](#top)
+    -   [Right](#right)
+    -   [Bottom](#bottom)
+    -   [Left](#left)
 
 </div>
 </div>
