@@ -6,11 +6,11 @@ description: 'Tooltips are brief pieces of information that appear on hover stat
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Position](#tooltip-position)
-    -   [Top](#tooltip-top)
-    -   [Right](#tooltip-right)
-    -   [Bottom](#tooltip-bottom)
-    -   [Left](#tooltip-left)
+-   [Position](#position)
+    -   [Top](#top)
+    -   [Right](#right)
+    -   [Bottom](#bottom)
+    -   [Left](#left)
 
 </div>
 </div>
