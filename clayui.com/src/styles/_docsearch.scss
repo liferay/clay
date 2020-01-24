@@ -130,3 +130,8 @@
 .algolia-autocomplete .ds-suggestion.ds-cursor .algolia-docsearch-suggestion--content {
     background-color: rgba(179, 71, 45, 0.15) !important;
 }
+
+.algolia-docsearch-suggestion--content,
+.algolia-docsearch-suggestion--title {
+    display: block !important;
+}
