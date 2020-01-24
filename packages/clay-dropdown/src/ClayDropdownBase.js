@@ -50,6 +50,7 @@ class ClayDropdownBase extends ClayComponent {
 	 */
 	created() {
 		this._eventHandler = new EventHandler();
+		this._filteredItems = this.items;
 	}
 
 	/**
@@ -67,6 +68,29 @@ class ClayDropdownBase extends ClayComponent {
 	}
 
 	/**
+	 * @inheritDoc
+	 */
+	willReceiveState(changes) {
+		if (changes.items && changes.items.newVal !== changes.items.prevVal) {
+			this._filteredItems = this.items;
+
+			// Checks if there is any search in progress when the new item
+			// values change to search the new values.
+			if (
+				this.refs.portal &&
+				this.refs.portal.refs.searchInput &&
+				this.refs.portal.refs.searchInput.value !== ''
+			) {
+				this._handleSearch({
+					delegateTarget: {
+						value: this.refs.portal.refs.searchInput.value,
+					},
+				});
+			}
+		}
+	}
+
+	/**
 	 * Reassembles flattened items into the correct items structure.
 	 * This method is used in conjunction with `flatten(..., true)`
 	 * @param {Array} flattenedItems
@@ -74,7 +98,7 @@ class ClayDropdownBase extends ClayComponent {
 	 * @return {Array}
 	 */
 	_assembleFromFlattenedGroups(flattenedItems) {
-		return this.items.map((item, i) => {
+		return this._filteredItems.map((item, i) => {
 			if (item.items) {
 				item.items = flattenedItems[i];
 			} else {
@@ -182,7 +206,7 @@ class ClayDropdownBase extends ClayComponent {
 	_handleItemClick(event) {
 		const element = event.delegateTarget;
 		const elementIndex = this._getDropdownItemIndex(element);
-		const flatenItems = flatten(this.items);
+		const flatenItems = flatten(this._filteredItems);
 		const item = flatenItems[elementIndex];
 
 		return !this.emit({
@@ -264,11 +288,9 @@ class ClayDropdownBase extends ClayComponent {
 	_handleSearch(event) {
 		let searchValue = event.delegateTarget.value.toLowerCase();
 
-		if (!this._originalItems) {
-			this._originalItems = this.items;
-		}
+		this._filteredItems = this.items;
 
-		this.items = this._originalItems.filter(item => {
+		this._filteredItems = this._filteredItems.filter(item => {
 			if (item.items) {
 				if (!item._originalItems) {
 					item._originalItems = item.items;
@@ -299,8 +321,8 @@ class ClayDropdownBase extends ClayComponent {
 
 		return !this.emit({
 			data: {
-				filteredItems: this.items,
-				originalItems: this._originalItems,
+				filteredItems: this._filteredItems,
+				originalItems: this.items,
 			},
 			name: 'itemsFiltered',
 			originalEvent: event,
@@ -380,7 +402,7 @@ class ClayDropdownBase extends ClayComponent {
 	 * @private
 	 */
 	_setNextActive(reverse) {
-		const items = flatten(this.items, true);
+		const items = flatten(this._filteredItems, true);
 		let activeSubIndex = -1;
 
 		const activeIndex = items.findIndex(item => {
@@ -406,7 +428,7 @@ class ClayDropdownBase extends ClayComponent {
 
 		items[active][subActive].active = true;
 
-		this.items = this._assembleFromFlattenedGroups(items);
+		this._filteredItems = this._assembleFromFlattenedGroups(items);
 	}
 
 	/**
@@ -525,6 +547,15 @@ ClayDropdownBase.STATE = {
 	_alignElementSelector: Config.string()
 		.value('.dropdown-toggle')
 		.internal(),
+
+	/**
+	 * List of menu items filtered
+	 * @default this.items
+	 * @instance
+	 * @memberof ClayDropdownBase
+	 * @type {!array}
+	 */
+	_filteredItems: itemsValidator.internal(),
 
 	/**
 	 * Flag to indicate if Dropdown's Caption can be shown.
