@@ -9,7 +9,7 @@ description: 'Labels categorize information, providing quick recognition.'
 -   [Colors](#colors)
 -   [Sizes](#sizes)
 -   [Variations](#variations)
-    -   [Simple](#label)
+    -   [Simple](#simple)
     -   [Dismissible](#dismissible)
     -   [Link](#link)
     -   [Interactive](#interactive)

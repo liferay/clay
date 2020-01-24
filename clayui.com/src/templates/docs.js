@@ -118,10 +118,10 @@ export default props => {
 													</li>
 													<li className="nav-item">
 														<a
-															aria-controls="simple"
+															aria-controls="simpleTabs"
 															className="nav-link"
 															data-toggle="tab"
-															href="#simple"
+															href="#simpleTabs"
 															id="simpleTab"
 															role="tab"
 														>
@@ -229,7 +229,7 @@ export default props => {
 											<div
 												aria-labelledby="simpleTab"
 												className="fade tab-pane"
-												id="simple"
+												id="simpleTabs"
 												role="tabpanel"
 											>
 												{frontmatter.description && (
