@@ -12,7 +12,8 @@ module.exports = ({markdownAST}) => {
 			node.depth === 1 ||
 			node.depth === 2 ||
 			node.depth === 3 ||
-			node.depth === 4
+			node.depth === 4 ||
+			node.depth === 5
 		) {
 			node.data = {
 				hProperties: {
