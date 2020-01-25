@@ -19,6 +19,12 @@ body {
 
 // temporal hide
 
+.clay-overflow-hidden-md-down {
+	@media (max-width: $screen-md - 1) {
+		overflow: hidden;
+	}
+}
+
 .style-toggler {
 	display: none;
 }
