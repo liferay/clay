@@ -14,6 +14,8 @@ const SideNavRef = React.createRef();
 
 const onClick = () => {
 	SidebarRef.current.classList.toggle('toggler-expanded');
+
+	document.querySelector('body').classList.toggle('clay-overflow-hidden-md-down');
 };
 
 let scrollTop = 0;
