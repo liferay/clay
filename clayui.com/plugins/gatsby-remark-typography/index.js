@@ -33,7 +33,7 @@ module.exports = ({markdownAST}) => {
 			node.data = {
 				hProperties: {
 					class: `clay-h${node.depth}`,
-					id
+					id,
 				},
 			};
 		}
