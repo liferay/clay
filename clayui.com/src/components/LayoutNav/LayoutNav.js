@@ -11,7 +11,7 @@ import Search from './Search';
 
 export default () => (
 	<nav className="navbar navbar-clay-site navbar-expand-lg navbar-light">
-		<div className="autofit-padded autofit-row">
+		<div className="autofit-float-sm-down autofit-padded autofit-row">
 			<div className="autofit-col autofit-col-expand">
 				<Search placeholder="Search..." />
 			</div>
@@ -19,7 +19,7 @@ export default () => (
 				<ul className="ml-auto navbar-nav">
 					<li className="nav-item">
 						<Link
-							className="ml-3 nav-link"
+							className="nav-link"
 							to="/docs/get-started/what-is-clay.html"
 						>
 							{'Docs'}
