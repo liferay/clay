@@ -92,7 +92,11 @@
 					{/if}
 				{/let}
 
-				<span class="{$spanLabelClasses}">{$label}</span>
+				<span class="{$spanLabelClasses}">
+					{call ClayRadioLabel.render}
+						{param label: $label /}
+					{/call}
+				</span>
 			{/if}
 		</span>
 

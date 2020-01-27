@@ -1,0 +1,11 @@
+{namespace ClayRadioLabel}
+
+/**
+ * Just a hack to force the label to be treated as HTML so
+ * it can escape special characters.
+ */
+{template .render}
+	{@param label: string|html}
+
+	{$label}
+{/template}
