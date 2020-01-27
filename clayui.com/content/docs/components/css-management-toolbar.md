@@ -13,7 +13,7 @@ description: 'Management toolbar is an extension of Toolbar. It is a combination
 -   [Only Search](#only-search)
     -   [Always Open](#always-open)
     -   [Collapses in Mobile](#collapses-in-mobile)
--   [Search](#search)
+-   [Search](#css-markup-search)
     -   [Summary](#summary)
     -   [Results](#results)
     -   [Results with Filter](#results-with-filter)
@@ -1326,12 +1326,7 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 </nav>
 ```
 
--   [Search](#search)
-    -   [Summary](#summary)
-    -   [Results](#results)
-    -   [Results with Filter](#results-with-filter)
-
-## Search
+## Search(#css-markup-search)
 
 ### Summary
 

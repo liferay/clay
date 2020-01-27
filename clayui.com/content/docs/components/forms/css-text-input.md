@@ -16,7 +16,7 @@ description: 'This section demonstrates the different text input types, includin
     -   [Success](#success)
     -   [Warning](#warning)
     -   [Error](#error)
--   [Groups](#groups)
+-   [Groups](#css-markup-groups)
 -   [Example](#example)
 -   [Sizes](#sizes)
 -   [Checkboxes and radios](#checkboxes-and-radios)
@@ -379,7 +379,7 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 	</div>
 </div>
 
-## Groups
+## Groups(#css-markup-groups)
 
 <div class="clay-site-alert alert alert-warning">
 	Clay Input Group markup deviates from Bootstrap 4's Input Groups.
