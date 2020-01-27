@@ -15,7 +15,6 @@ module.exports = ({markdownAST}) => {
 			node.depth === 4 ||
 			node.depth === 5
 		) {
-
 			let id = node.children[0].value
 				.toLowerCase()
 				.split(' ')
@@ -34,7 +33,7 @@ module.exports = ({markdownAST}) => {
 			node.data = {
 				hProperties: {
 					class: `clay-h${node.depth}`,
-					id: id,
+					id
 				},
 			};
 		}
