@@ -1,3 +1,4 @@
+import './ClayCheckboxLabel.soy.js';
 import ClayComponent from 'clay-component';
 import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';

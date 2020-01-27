@@ -99,7 +99,11 @@
 					{/if}
 				{/let}
 
-				<span class="{$spanLabelClasses}">{$label}</span>
+				<span class="{$spanLabelClasses}">
+					{call ClayCheckboxLabel.render}
+						{param label: $label /}
+					{/call}
+				</span>
 			{/if}
 		</span>
 
