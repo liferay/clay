@@ -15,13 +15,13 @@ const generateTr = (item, key) => `<tr>
 			${key}
 		</div>
 	</td>
-	<td>{${item.tsType &&
+	<td class="table-cell-expand table-cell-minw-150">{${item.tsType &&
 		JSON.stringify(
 			item.tsType.raw ? item.tsType.raw : item.tsType.name
 		)}}</td>
 	<td>${item.required ? 'true' : ''}</td>
-	<td>{${item.defaultValue && JSON.stringify(item.defaultValue.value)}}</td>
-	<td>{${JSON.stringify(item.description)}}</td>
+	<td class="table-cell-expand table-cell-minw-150">{${item.defaultValue && JSON.stringify(item.defaultValue.value)}}</td>
+	<td class="table-cell-expand table-cell-minw-250">{${JSON.stringify(item.description)}}</td>
 	</tr>`;
 
 module.exports = ({markdownAST}) => {
@@ -81,20 +81,22 @@ module.exports = ({markdownAST}) => {
 						// eslint-disable-next-line require-atomic-updates
 						node.value = propsKeys.length
 							? `
-						<table class="table table-bordered table-striped">
+						<div class="table-responsive">
+						<table class="table table-autofit table-bordered table-striped">
 						<thead>
 							<tr>
 								<th>Property</th>
-								<th>Type</th>
+								<th class="table-cell-expand table-cell-minw-150">Type</th>
 								<th>Required</th>
-								<th>Default</th>
-								<th>Description</th>
+								<th class="table-cell-expand table-cell-minw-150">Default</th>
+								<th class="table-cell-expand table-cell-minw-250">Description</th>
 							</tr>
 						</thead>
 						<tbody>
 						${propsKeys.map(key => generateTr(component.props[key], key)).join('')}
 						</tbody>
-						</table>`
+						</table>
+						</div>`
 							: 'None.';
 					} catch (error) {
 						// eslint-disable-next-line require-atomic-updates

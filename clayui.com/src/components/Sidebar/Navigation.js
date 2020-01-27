@@ -15,6 +15,7 @@ class Navigation extends Component {
 		super(props);
 
 		this.handleOnClick = this.handleOnClick.bind(this);
+		this.handleOnNavigation = this.handleOnNavigation.bind(this);
 	}
 
 	/**
@@ -33,6 +34,16 @@ class Navigation extends Component {
 		if (!elementRef.classList.contains('active') || !!section.items) {
 			elementRef.classList.toggle('active');
 		}
+	}
+
+	/**
+	 * @param {!number} index
+	 * @param {!number} depth
+	 * @param {!object} section
+	 * @param {!event} event
+	 */
+	handleOnNavigation(index, depth, section, event) {
+		document.querySelector('body').classList.remove('clay-overflow-hidden-md-down');
 	}
 
 	/**
@@ -79,6 +90,9 @@ class Navigation extends Component {
 						onclick={event =>
 							this.handleOnClick(index, depth, section, event)
 						}
+						onnavigation={event =>
+							this.handleOnNavigation(index, depth, section, event)
+						}
 						page={section}
 					/>
 
@@ -86,6 +100,9 @@ class Navigation extends Component {
 						<Navigation
 							depth={depth + 1}
 							location={location}
+							onnavigation={event =>
+								this.handleOnNavigation(index, depth + 1, section, event)
+							}
 							sectionList={section.items}
 						/>
 					)}
@@ -106,7 +123,7 @@ class Navigation extends Component {
 	}
 }
 
-const Anchor = ({location, onclick, page}) => {
+const Anchor = ({location, onclick, onnavigation, page}) => {
 	const link = `${page.link}.html`;
 	const TagName =
 		location.pathname === link || (page.items && !page.indexVisible)
@@ -115,7 +132,7 @@ const Anchor = ({location, onclick, page}) => {
 	const props =
 		location.pathname === link || (page.items && !page.indexVisible)
 			? {href: '#openNav', onClick: onclick}
-			: {to: link};
+			: {onClick: onnavigation, to: link};
 
 	return (
 		<TagName className="nav-link" {...props}>
