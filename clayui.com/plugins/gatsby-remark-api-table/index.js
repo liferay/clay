@@ -20,8 +20,11 @@ const generateTr = (item, key) => `<tr>
 			item.tsType.raw ? item.tsType.raw : item.tsType.name
 		)}}</td>
 	<td>${item.required ? 'true' : ''}</td>
-	<td class="table-cell-expand table-cell-minw-150">{${item.defaultValue && JSON.stringify(item.defaultValue.value)}}</td>
-	<td class="table-cell-expand table-cell-minw-250">{${JSON.stringify(item.description)}}</td>
+	<td class="table-cell-expand table-cell-minw-150">{${item.defaultValue &&
+		JSON.stringify(item.defaultValue.value)}}</td>
+	<td class="table-cell-expand table-cell-minw-250">{${JSON.stringify(
+		item.description
+	)}}</td>
 	</tr>`;
 
 module.exports = ({markdownAST}) => {

@@ -36,14 +36,10 @@ class Navigation extends Component {
 		}
 	}
 
-	/**
-	 * @param {!number} index
-	 * @param {!number} depth
-	 * @param {!object} section
-	 * @param {!event} event
-	 */
-	handleOnNavigation(index, depth, section, event) {
-		document.querySelector('body').classList.remove('clay-overflow-hidden-md-down');
+	handleOnNavigation() {
+		document
+			.querySelector('body')
+			.classList.remove('clay-overflow-hidden-md-down');
 	}
 
 	/**
@@ -90,9 +86,7 @@ class Navigation extends Component {
 						onclick={event =>
 							this.handleOnClick(index, depth, section, event)
 						}
-						onnavigation={event =>
-							this.handleOnNavigation(index, depth, section, event)
-						}
+						onnavigation={() => this.handleOnNavigation()}
 						page={section}
 					/>
 
@@ -100,9 +94,7 @@ class Navigation extends Component {
 						<Navigation
 							depth={depth + 1}
 							location={location}
-							onnavigation={event =>
-								this.handleOnNavigation(index, depth + 1, section, event)
-							}
+							onnavigation={() => this.handleOnNavigation()}
 							sectionList={section.items}
 						/>
 					)}
