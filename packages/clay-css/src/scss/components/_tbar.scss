@@ -34,7 +34,7 @@
 }
 
 .tbar-item {
-	@extend %autofit-col;
+	@extend %autofit-col !optional;
 
 	max-width: 100%;
 	padding-bottom: $tbar-item-padding-y;
@@ -52,13 +52,13 @@
 }
 
 .tbar-item-expand {
-	@extend %autofit-col-expand;
+	@extend %autofit-col-expand !optional;
 
 	text-align: center;
 }
 
 .tbar-section {
-	@extend %autofit-section;
+	@extend %autofit-section !optional;
 }
 
 .tbar-link {
