@@ -3,7 +3,7 @@
 }
 
 .menubar-toggler {
-	@extend %btn-unstyled;
+	@extend %btn-unstyled !optional;
 
 	display: none;
 }
