@@ -46,6 +46,7 @@
 	flex-shrink: 0;
 	flex-wrap: wrap;
 	height: $modal-footer-height;
+	justify-content: flex-start;
 	padding-bottom: $modal-footer-padding-y;
 	padding-left: $modal-footer-padding-x;
 	padding-right: $modal-footer-padding-x;
@@ -67,8 +68,8 @@
 	padding-top: $modal-item-padding-y;
 }
 
-.modal-item-first {
-	margin-right: auto;
+.modal-item-last {
+	margin-left: auto;
 }
 
 .modal-item {
@@ -76,8 +77,8 @@
 }
 
 .modal-footer {
-	> .modal-item-first {
-		margin-right: auto;
+	> .modal-item-last {
+		margin-left: auto;
 	}
 }
 
