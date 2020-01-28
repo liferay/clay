@@ -42,8 +42,8 @@
 }
 
 .sticker-img {
-	@extend %aspect-ratio-item-center-middle;
-	@extend %aspect-ratio-item-fluid;
+	@extend %aspect-ratio-item-center-middle !optional;
+	@extend %aspect-ratio-item-fluid !optional;
 }
 
 .sticker-overlay {

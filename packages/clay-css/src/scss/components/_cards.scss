@@ -419,7 +419,7 @@
 // Card Page
 
 .card-page {
-	@extend %clay-custom-grid-wrapper;
+	@extend %clay-custom-grid-wrapper !optional;
 
 	&.card-page-equal-height {
 		.card-page-item,

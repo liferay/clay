@@ -589,7 +589,7 @@ textarea.form-control-sm,
 	}
 
 	.btn {
-		@extend %clay-btn-sm;
+		@extend %clay-btn-sm !optional;
 	}
 
 	.form-control,

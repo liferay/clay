@@ -45,7 +45,7 @@
 
 .btn-group-lg {
 	.btn-group > .btn {
-		@extend .btn-lg;
+		@extend .btn-lg !optional;
 	}
 
 	.btn-monospaced {
@@ -55,7 +55,7 @@
 
 .btn-group-sm {
 	.btn-group > .btn {
-		@extend .btn-sm;
+		@extend .btn-sm !optional;
 	}
 
 	.btn-monospaced {
