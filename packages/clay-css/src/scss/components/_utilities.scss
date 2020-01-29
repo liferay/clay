@@ -229,6 +229,14 @@
 	@extend %autofit-float-end-md-down;
 }
 
+// C Inner 
+
+@if ($enable-c-inner) {
+	.c-inner {
+		outline: 0;
+	}
+}
+
 // Headings (h1-6)
 
 .heading-start {
