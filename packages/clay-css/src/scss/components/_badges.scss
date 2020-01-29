@@ -85,7 +85,7 @@
 	}
 
 	.close {
-		@include clay-link($badge-close);
+		@include clay-close($badge-close);
 	}
 
 	.lexicon-icon {
@@ -114,6 +114,20 @@
 	margin-left: $badge-item-spacer-x;
 }
 
+// Badge C Inner
+
+@if ($enable-c-inner) {
+	.badge > .c-inner {
+		margin: -#{$badge-padding-y} -#{$badge-padding-x};
+		padding: $badge-padding-y $badge-padding-x;
+	}
+
+	.badge-item .c-inner {
+		.lexicon-icon {
+			display: block;
+		}
+	}
+}
 
 // Badge Variants
 
