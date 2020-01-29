@@ -366,6 +366,20 @@
 			}
 		}
 
+		@if ($enable-c-inner) {
+			.c-inner {
+				display: $display;
+				margin-bottom: math-sign($padding-bottom);
+				margin-left: math-sign($padding-left);
+				margin-right: math-sign($padding-right);
+				margin-top: math-sign($padding-top);
+				padding-bottom: $padding-bottom;
+				padding-left: $padding-left;
+				padding-right: $padding-right;
+				padding-top: $padding-top;
+			}
+		}
+
 		.form-check-label {
 			font-weight: $font-weight;
 		}
