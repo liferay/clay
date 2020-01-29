@@ -21,6 +21,12 @@
 			}
 		}
 	}
+
+	@if ($enable-c-inner) {
+		> .c-inner {
+			display: block;
+		}
+	}
 }
 
 .card-body {
