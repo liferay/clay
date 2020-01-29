@@ -34,42 +34,49 @@ interface IProps extends React.HTMLAttributes<HTMLLIElement> {
 	header?: boolean;
 }
 
-const ClayListItem: React.FunctionComponent<IProps> = ({
-	action = false,
-	active = false,
-	children,
-	className,
-	disabled = false,
-	flex = false,
-	header = false,
-	...otherProps
-}: IProps) => {
-	const [focus, setFocus] = React.useState(false);
+const ClayListItem = React.forwardRef<HTMLLIElement, IProps>(
+	(
+		{
+			action = false,
+			active = false,
+			children,
+			className,
+			disabled = false,
+			flex = false,
+			header = false,
+			...otherProps
+		},
+		ref
+	) => {
+		const [focus, setFocus] = React.useState(false);
 
-	return (
-		<li
-			{...otherProps}
-			className={classNames(className, {
-				active,
-				focus,
-				'list-group-header': header,
-				'list-group-item': !header,
-				'list-group-item-action': action && !disabled,
-				'list-group-item-disabled': disabled,
-				'list-group-item-flex': flex,
-			})}
-			onBlur={({currentTarget, relatedTarget}) => {
-				if (
-					relatedTarget &&
-					!currentTarget.contains(relatedTarget as Node)
-				) {
-					setFocus(false);
-				}
-			}}
-			onFocus={() => setFocus(true)}
-		>
-			{children}
-		</li>
-	);
-};
+		return (
+			<li
+				{...otherProps}
+				className={classNames(className, {
+					active,
+					focus,
+					'list-group-header': header,
+					'list-group-item': !header,
+					'list-group-item-action': action && !disabled,
+					'list-group-item-disabled': disabled,
+					'list-group-item-flex': flex,
+				})}
+				onBlur={({currentTarget, relatedTarget}) => {
+					if (
+						relatedTarget &&
+						!currentTarget.contains(relatedTarget as Node)
+					) {
+						setFocus(false);
+					}
+				}}
+				onFocus={() => setFocus(true)}
+				ref={ref}
+			>
+				{children}
+			</li>
+		);
+	}
+);
+
 export default ClayListItem;
