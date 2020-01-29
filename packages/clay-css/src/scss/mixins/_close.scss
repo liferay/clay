@@ -226,6 +226,24 @@
 		text-decoration: $disabled-text-decoration;
 	}
 
+	@if ($enable-c-inner) {
+		.c-inner {
+			align-items: $align-items;
+			display: $display;
+			height: $height;
+			justify-content: $justify-content;
+			margin-bottom: math-sign($padding-bottom);
+			margin-left: math-sign($padding-left);
+			margin-right: math-sign($padding-right);
+			margin-top: math-sign($padding-top);
+			padding-bottom: $padding-bottom;
+			padding-left: $padding-left;
+			padding-right: $padding-right;
+			padding-top: $padding-top;
+			width: $width;
+		}
+	}
+
 	.lexicon-icon {
 		margin-bottom: $lexicon-icon-margin-bottom;
 		margin-right: $lexicon-icon-margin-right;
