@@ -115,6 +115,19 @@
 	.sticker-overlay {
 		border-radius: $sticker-border-radius;
 	}
+
+	@if ($enable-c-inner) {
+		> .c-inner {
+			margin-bottom: math-sign($padding-y);
+			margin-left: math-sign($padding-x);
+			margin-right: math-sign($padding-x);
+			margin-top: math-sign($padding-y);
+			padding-bottom: $padding-y;
+			padding-left: $padding-x;
+			padding-right: $padding-x;
+			padding-top: $padding-y;
+		}
+	}
 }
 
 /// A mixin for creating `.label` color variants.
