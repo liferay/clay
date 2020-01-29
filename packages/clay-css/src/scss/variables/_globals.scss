@@ -50,6 +50,7 @@ $dark-l1: lighten($dark, 22.94) !default;
 $dark-l2: lighten($dark, 32.94) !default;
 
 $enable-scaling-components: false !default;
+$enable-c-inner: false !default;
 $scaling-breakpoint-down: sm !default;
 
 $rounded-border-radius: $border-radius !default;
