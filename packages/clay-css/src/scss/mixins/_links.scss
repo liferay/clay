@@ -28,6 +28,7 @@
 /// max-width: {Number | String | Null},
 /// opacity: {Number | String | Null},
 /// outline: {Number | String | Null},
+/// overflow: {String | Null},
 /// padding-bottom: {Number | String | Null},
 /// padding-left: {Number | String | Null},
 /// padding-right: {Number | String | Null},
@@ -108,6 +109,7 @@
 	$max-width: map-get($map, max-width);
 	$opacity: map-get($map, opacity);
 	$outline: map-get($map, outline);
+	$overflow: map-get($map, overflow);
 	$padding: map-get($map, padding);
 	$padding-bottom: map-get($map, padding-bottom);
 	$padding-left: map-get($map, padding-left);
@@ -197,6 +199,7 @@
 	max-width: $max-width;
 	opacity: $opacity;
 	outline: $outline;
+	overflow: $overflow;
 	padding: $padding;
 	padding-bottom: $padding-bottom;
 	padding-left: $padding-left;
@@ -277,7 +280,10 @@
 
 	@if ($enable-c-inner) {
 		> .c-inner {
+			align-items: $align-items;
 			display: $display;
+			height: $height;
+			justify-content: $justify-content;
 			margin-bottom: math-sign($padding-bottom);
 			margin-left: math-sign($padding-left);
 			margin-right: math-sign($padding-right);
@@ -286,6 +292,7 @@
 			padding-left: $padding-left;
 			padding-right: $padding-right;
 			padding-top: $padding-top;
+			width: $width;
 		}
 	}
 

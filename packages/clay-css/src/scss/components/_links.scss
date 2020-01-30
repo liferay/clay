@@ -103,6 +103,4 @@ button.link-outline {
 
 .component-action {
 	@include clay-link($component-action);
-
-	@extend %link-monospaced;
 }
