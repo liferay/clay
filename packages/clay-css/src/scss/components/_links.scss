@@ -21,34 +21,7 @@ button.link-outline {
 }
 
 .link-outline {
-	align-items: center;
-	background-color: transparent;
-	border-color: transparent;
-
-	@include border-radius($link-outline-border-radius);
-
-	border-style: solid;
-	border-width: $link-outline-border-width;
-	display: inline-flex;
-	font-size: $link-outline-font-size;
-	font-weight: $link-outline-font-weight;
-	justify-content: center;
-	line-height: $link-outline-line-height;
-	padding-bottom: $link-outline-padding-y;
-	padding-left: $link-outline-padding-x;
-	padding-right: $link-outline-padding-x;
-	padding-top: $link-outline-padding-y;
-	transition: $link-outline-transition;
-	vertical-align: middle;
-
-	&:hover {
-		text-decoration: none;
-	}
-
-	.inline-item .lexicon-icon,
-	.lexicon-icon {
-		margin-top: 0;
-	}
+	@include clay-link($link-outline);
 }
 
 .link-outline-primary {
