@@ -46,6 +46,12 @@
 	$section-font-weight: map-get($map, section-font-weight);
 	$section-line-height: map-get($map, section-line-height);
 
+	$lexicon-icon-font-size: map-get($map, lexicon-icon-font-size);
+	$lexicon-icon-margin-bottom: map-get($map, lexicon-icon-margin-bottom);
+	$lexicon-icon-margin-right: map-get($map, lexicon-icon-margin-right);
+	$lexicon-icon-margin-left: map-get($map, lexicon-icon-margin-left);
+	$lexicon-icon-margin-top: map-get($map, lexicon-icon-margin-top);
+
 	$font-size-mobile: map-get($map, font-size-mobile);
 	$height-mobile: map-get($map, height-mobile);
 	$padding-bottom-mobile: map-get($map, padding-bottom-mobile);
@@ -105,6 +111,24 @@
 		cursor: $disabled-cursor;
 	}
 
+	@if ($enable-c-inner) {
+		.c-inner {
+			align-items: $align-items;
+			display: $display;
+			height: $height;
+			justify-content: $justify-content;
+			margin-bottom: math-sign($padding-bottom);
+			margin-left: math-sign($padding-left);
+			margin-right: math-sign($padding-right);
+			margin-top: math-sign($padding-top);
+			padding-bottom: $padding-bottom;
+			padding-left: $padding-left;
+			padding-right: $padding-right;
+			padding-top: $padding-top;
+			width: $width;
+		}
+	}
+
 	.inline-item {
 		font-size: $inline-item-font-size;
 	}
@@ -113,6 +137,14 @@
 		font-size: $section-font-size;
 		font-weight: $section-font-weight;
 		line-height: $section-line-height;
+	}
+
+	.lexicon-icon {
+		font-size: $lexicon-icon-font-size;
+		margin-bottom: $lexicon-icon-margin-bottom;
+		margin-right: $lexicon-icon-margin-right;
+		margin-left: $lexicon-icon-margin-left;
+		margin-top: $lexicon-icon-margin-top;
 	}
 }
 
@@ -180,6 +212,11 @@
 /// active-color: {Color | String | Null},
 /// active-opacity: {Number | String | Null},
 /// active-focus-box-shadow: {String | List}, // Default: $focus-box-shadow
+/// lexicon-icon-font-size: {Number | String | Null},
+/// lexicon-icon-margin-bottom: {Number | String | Null},
+/// lexicon-icon-margin-right: {Number | String | Null},
+/// lexicon-icon-margin-left: {Number | String | Null},
+/// lexicon-icon-margin-top: {Number | String | Null},
 /// inline-item-font-size: {Number | String | Null},
 /// section-font-size: {Number | String | Null},
 /// section-font-weight: {Number | String | Null},
@@ -263,6 +300,12 @@
 	$active-color: map-get($map, active-color);
 	$active-opacity: map-get($map, active-opacity);
 	$active-focus-box-shadow: setter(map-get($map, active-focus-box-shadow), $focus-box-shadow);
+
+	$lexicon-icon-font-size: map-get($map, lexicon-icon-font-size);
+	$lexicon-icon-margin-bottom: map-get($map, lexicon-icon-margin-bottom);
+	$lexicon-icon-margin-right: map-get($map, lexicon-icon-margin-right);
+	$lexicon-icon-margin-left: map-get($map, lexicon-icon-margin-left);
+	$lexicon-icon-margin-top: map-get($map, lexicon-icon-margin-top);
 
 	$inline-item-font-size: map-get($map, inline-item-font-size);
 
@@ -376,6 +419,32 @@
 		&:focus {
 			box-shadow: $active-focus-box-shadow;
 		}
+	}
+
+	@if ($enable-c-inner) {
+		.c-inner {
+			align-items: $align-items;
+			display: $display;
+			height: $height;
+			justify-content: $justify-content;
+			margin-bottom: math-sign($padding-bottom);
+			margin-left: math-sign($padding-left);
+			margin-right: math-sign($padding-right);
+			margin-top: math-sign($padding-top);
+			padding-bottom: $padding-bottom;
+			padding-left: $padding-left;
+			padding-right: $padding-right;
+			padding-top: $padding-top;
+			width: $width;
+		}
+	}
+
+	.lexicon-icon {
+		font-size: $lexicon-icon-font-size;
+		margin-bottom: $lexicon-icon-margin-bottom;
+		margin-right: $lexicon-icon-margin-right;
+		margin-left: $lexicon-icon-margin-left;
+		margin-top: $lexicon-icon-margin-top;
 	}
 
 	.inline-item {
