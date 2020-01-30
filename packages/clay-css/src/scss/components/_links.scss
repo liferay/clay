@@ -37,19 +37,7 @@ button.link-outline {
 }
 
 %link-monospaced {
-	align-items: center;
-	display: inline-flex;
-	height: $link-monospaced-size;
-	justify-content: center;
-	overflow: hidden;
-	padding: 0;
-	vertical-align: middle;
-	width: $link-monospaced-size;
-
-	.inline-item .lexicon-icon,
-	.lexicon-icon {
-		margin-top: 0;
-	}
+	@include clay-link($link-monospaced);
 }
 
 .link-monospaced {

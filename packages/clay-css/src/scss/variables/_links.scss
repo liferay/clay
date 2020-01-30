@@ -113,7 +113,25 @@ $link-outline-secondary: map-deep-merge((
 
 // Link Monospaced
 
+/// @deprecated as of v3.4.0 use the Sass map `$link-monospaced` instead
+
 $link-monospaced-size: $btn-monospaced-size-sm !default;
+
+$link-monospaced: () !default;
+$link-monospaced: map-deep-merge((
+	align-items: center,
+	display: inline-flex,
+	height: $link-monospaced-size,
+	justify-content: center,
+	overflow: hidden,
+	padding-bottom: 0,
+	padding-left: 0,
+	padding-right: 0,
+	padding-top: 0,
+	vertical-align: middle,
+	width: $link-monospaced-size,
+	lexicon-icon-margin-top: 0,
+), $link-monospaced);
 
 // Component Title
 
@@ -158,12 +176,12 @@ $component-action: map-deep-merge((
 	border-width: 0,
 	color: $secondary,
 	display: inline-flex,
-	height: $link-monospaced-size,
+	height: map-get($link-monospaced, height),
 	justify-content: center,
 	overflow: hidden,
 	padding: 0,
 	vertical-align: middle,
-	width: $link-monospaced-size,
+	width: map-get($link-monospaced, width),
 	hover-bg: $secondary,
 	hover-color: $white,
 	btn-focus-box-shadow: 0 0 0 $btn-focus-width rgba($secondary, 0.5),
