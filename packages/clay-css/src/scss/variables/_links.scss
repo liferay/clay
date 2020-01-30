@@ -1,3 +1,7 @@
+////
+/// @group Links
+////
+
 $single-link-font-weight: $font-weight-semi-bold !default;
 
 $component-link: () !default;
@@ -20,14 +24,60 @@ $link-secondary: map-deep-merge((
 
 // Link Outline
 
+/// @deprecated as of v3.4.0 use the Sass map `$link-outline` instead
+
 $link-outline-border-radius: $btn-border-radius !default;
+
+/// @deprecated as of v3.4.0 use the Sass map `$link-outline` instead
+
 $link-outline-border-width: $btn-border-width !default;
+
+/// @deprecated as of v3.4.0 use the Sass map `$link-outline` instead
+
 $link-outline-font-size: $btn-font-size-sm !default;
+
+/// @deprecated as of v3.4.0 use the Sass map `$link-outline` instead
+
 $link-outline-font-weight: $font-weight-semi-bold !default;
+
+/// @deprecated as of v3.4.0 use the Sass map `$link-outline` instead
+
 $link-outline-line-height: $btn-line-height-sm !default;
+
+/// @deprecated as of v3.4.0 use the Sass map `$link-outline` instead
+
 $link-outline-padding-x: $btn-padding-x-sm !default;
+
+/// @deprecated as of v3.4.0 use the Sass map `$link-outline` instead
+
 $link-outline-padding-y: $btn-padding-y-sm !default;
+
+/// @deprecated as of v3.4.0 use the Sass map `$link-outline` instead
+
 $link-outline-transition: $btn-transition !default;
+
+$link-outline: () !default;
+$link-outline: map-deep-merge((
+	align-items: center,
+	bg: transparent,
+	border-color: transparent,
+	border-radius: $link-outline-border-radius,
+	border-style: solid,
+	border-width: $link-outline-border-width,
+	display: inline-flex,
+	font-size: $link-outline-font-size,
+	font-weight: $link-outline-font-weight,
+	justify-content: center,
+	line-height: $link-outline-line-height,
+	padding-bottom: $link-outline-padding-y,
+	padding-left: $link-outline-padding-x,
+	padding-right: $link-outline-padding-x,
+	padding-top: $link-outline-padding-y,
+	transition: $link-outline-transition,
+	vertical-align: middle,
+	hover-text-decoration: none,
+	lexicon-icon-margin-top: 0,
+), $link-outline);
 
 $link-outline-primary: () !default;
 $link-outline-primary: map-deep-merge((
