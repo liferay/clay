@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/liferay/clay/tree/master/packages/clay-tooltip/compare/@clayui/tooltip@3.0.4...@clayui/tooltip@3.1.0) (2020-01-31)
+
+### Bug Fixes
+
+-   **css:** allow newline characters to display properly for tooltips ([2265d10](https://github.com/liferay/clay/tree/master/packages/clay-tooltip/commit/2265d10))
+-   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/tree/master/packages/clay-tooltip/commit/335ff38))
+
+### Features
+
+-   **tooltip:** allow custom renderer for TooltipProvider content ([bf64914](https://github.com/liferay/clay/tree/master/packages/clay-tooltip/commit/bf64914))
+
 ## [3.0.6](https://github.com/liferay/clay/tree/master/packages/clay-tooltip/compare/@clayui/tooltip@3.0.4...@clayui/tooltip@3.0.6) (2020-01-20)
 
 ### Bug Fixes

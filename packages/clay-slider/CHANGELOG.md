@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.5](https://github.com/liferay/clay/tree/master/packages/clay-slider/compare/@clayui/slider@3.0.2...@clayui/slider@3.0.5) (2020-01-31)
+
+**Note:** Version bump only for package @clayui/slider
+
 ## [3.0.4](https://github.com/liferay/clay/tree/master/packages/clay-slider/compare/@clayui/slider@3.0.2...@clayui/slider@3.0.4) (2020-01-20)
 
 **Note:** Version bump only for package @clayui/slider

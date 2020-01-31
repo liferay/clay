@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.5](https://github.com/liferay/clay/tree/master/packages/clay-color-picker/compare/@clayui/color-picker@3.1.2...@clayui/color-picker@3.1.5) (2020-01-31)
+
+### Bug Fixes
+
+-   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/tree/master/packages/clay-color-picker/commit/335ff38))
+
 ## [3.1.4](https://github.com/liferay/clay/tree/master/packages/clay-color-picker/compare/@clayui/color-picker@3.1.2...@clayui/color-picker@3.1.4) (2020-01-20)
 
 ### Bug Fixes
