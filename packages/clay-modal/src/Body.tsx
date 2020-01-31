@@ -9,6 +9,11 @@ import React from 'react';
 
 interface IBodyProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
+	 * Flag to indicate if body should be a fixed height with a scrollable overflow.
+	 */
+	scrollable?: boolean;
+
+	/**
 	 * Url to place an iframe in the body of the modal.
 	 */
 	url?: string;
@@ -16,10 +21,12 @@ interface IBodyProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const ClayModalBody: React.FunctionComponent<IBodyProps> = ({
 	children,
+	scrollable,
 	url,
 }: IBodyProps) => (
 	<div
 		className={classNames('modal-body', {
+			'inline-scroller': scrollable,
 			'modal-body-iframe': url,
 		})}
 	>

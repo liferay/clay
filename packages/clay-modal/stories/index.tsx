@@ -8,7 +8,7 @@
 import '@clayui/css/lib/css/atlas.css';
 import ClayButton from '@clayui/button';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
-import {select, text} from '@storybook/addon-knobs';
+import {boolean, select, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React from 'react';
 
@@ -78,8 +78,16 @@ storiesOf('Components|ClayModal', module)
 						<ClayModal.Header>
 							{text('Title', 'Title')}
 						</ClayModal.Header>
-						<ClayModal.Body url={text('Url', null)}>
+						<ClayModal.Body
+							scrollable={boolean('scrollable', false)}
+							url={text('Url', null)}
+						>
 							<h1>{'Hello world!'}</h1>
+							<div>
+								{
+									'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim eu ante eget lobortis. Praesent a mattis diam, nec auctor nisi. Nam porta lobortis massa hendrerit sagittis. Integer sit amet risus accumsan nunc pretium convallis eget eu tellus. Mauris id massa nec nunc mollis sagittis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla sit amet turpis dui. Aliquam et urna id nisl posuere condimentum. Nullam arcu lacus, fermentum sit amet quam sed, consequat semper nisi. Vivamus varius ligula et viverra placerat. Sed eget quam magna. Ut posuere enim porttitor, mollis justo eget, molestie mauris. Duis lobortis purus quis risus sodales dictum ut eu velit.'
+								}
+							</div>
 						</ClayModal.Body>
 						<ClayModal.Footer
 							first={

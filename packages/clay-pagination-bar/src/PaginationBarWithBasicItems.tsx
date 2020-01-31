@@ -42,7 +42,16 @@ interface IDelta {
 }
 
 interface IProps extends React.ComponentProps<typeof PaginationBar> {
+	/**
+	 * The value of delta that is currently selected
+	 */
 	activeDelta?: number;
+
+	/**
+	 * Initialize the page that is currently active. The first page is `1`.
+	 */
+	activePage?: number;
+
 	/**
 	 * Possible values of items per page.
 	 */
@@ -87,16 +96,6 @@ interface IProps extends React.ComponentProps<typeof PaginationBar> {
 	 * an href is not provided.
 	 */
 	onPageChange?: (page: number) => void;
-
-	/**
-	 * Initialize the page that is currently active. The first page is `1`.
-	 */
-	activePage?: number;
-
-	/**
-	 * Initializes delta. Default is `10`.
-	 */
-	initialSelectedDelta?: IDelta;
 
 	/**
 	 * Path to spritemap from clay-css.
