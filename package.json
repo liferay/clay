@@ -18,7 +18,8 @@
 		"test": "jest",
 		"site": "cd next.clayui.com && yarn build && yarn serve",
 		"storybook": "start-storybook -p 8888",
-		"storybook:build": "build-storybook -c .storybook -o .storybook-static"
+		"storybook:build": "build-storybook -c .storybook -o .storybook-static",
+		"version": "yarn run format:all"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.0.0",
