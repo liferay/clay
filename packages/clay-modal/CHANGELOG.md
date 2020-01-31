@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/liferay/clay/tree/master/packages/clay-modal/compare/@clayui/modal@3.1.2...@clayui/modal@3.2.0) (2020-01-31)
+
+### Features
+
+-   **modal:** add prop for scrollable body ([77a2640](https://github.com/liferay/clay/tree/master/packages/clay-modal/commit/77a2640))
+
 ## [3.1.4](https://github.com/liferay/clay/tree/master/packages/clay-modal/compare/@clayui/modal@3.1.2...@clayui/modal@3.1.4) (2020-01-20)
 
 **Note:** Version bump only for package @clayui/modal

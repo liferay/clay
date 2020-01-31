@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.6](https://github.com/liferay/clay/tree/master/packages/clay-date-picker/compare/@clayui/date-picker@3.0.3...@clayui/date-picker@3.0.6) (2020-01-31)
+
+### Bug Fixes
+
+-   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/tree/master/packages/clay-date-picker/commit/335ff38))
+
 ## [3.0.5](https://github.com/liferay/clay/tree/master/packages/clay-date-picker/compare/@clayui/date-picker@3.0.3...@clayui/date-picker@3.0.5) (2020-01-20)
 
 ### Bug Fixes

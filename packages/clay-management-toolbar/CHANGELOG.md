@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.6](https://github.com/liferay/clay/tree/master/packages/clay-management-toolbar/compare/@clayui/management-toolbar@3.0.3...@clayui/management-toolbar@3.0.6) (2020-01-31)
+
+### Bug Fixes
+
+-   **drop-down:** allow containerElement to accept a react component ([dc7f77a](https://github.com/liferay/clay/tree/master/packages/clay-management-toolbar/commit/dc7f77a))
+-   adjust button displayType ([26a9f12](https://github.com/liferay/clay/tree/master/packages/clay-management-toolbar/commit/26a9f12))
+
 ## [3.0.5](https://github.com/liferay/clay/tree/master/packages/clay-management-toolbar/compare/@clayui/management-toolbar@3.0.3...@clayui/management-toolbar@3.0.5) (2020-01-20)
 
 ### Bug Fixes

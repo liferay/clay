@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/card",
-	"version": "3.0.5",
+	"version": "3.0.6",
 	"description": "ClayCard component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-card",
@@ -26,11 +26,11 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/drop-down": "^3.1.3",
-		"@clayui/form": "^3.3.0",
-		"@clayui/icon": "^3.0.2",
-		"@clayui/label": "^3.0.2",
-		"@clayui/sticker": "^3.0.4",
+		"@clayui/drop-down": "^3.1.4",
+		"@clayui/form": "^3.4.0",
+		"@clayui/icon": "^3.0.3",
+		"@clayui/label": "^3.0.3",
+		"@clayui/sticker": "^3.0.5",
 		"classnames": "^2.2.6"
 	},
 	"peerDependencies": {
