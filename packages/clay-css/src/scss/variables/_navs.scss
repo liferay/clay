@@ -4,7 +4,11 @@ $nav-link-disabled-cursor: $disabled-cursor !default;
 
 $nav-link: () !default;
 $nav-link: map-deep-merge((
-	padding: $nav-link-padding-y $nav-link-padding-x,
+	display: block,
+	padding-bottom: $nav-link-padding-y,
+	padding-left: $nav-link-padding-x,
+	padding-right: $nav-link-padding-x,
+	padding-top: $nav-link-padding-y,
 	position: relative,
 	focus-z-index: 1,
 	disabled-color: $nav-link-disabled-color,
@@ -17,6 +21,9 @@ $nav-link-btn-unstyled: () !default;
 $nav-link-btn-unstyled: map-deep-merge((
 	width: 100%,
 	disabled-opacity: 1,
+	c-inner: (
+		width: auto,
+	),
 ), $nav-link-btn-unstyled);
 
 $nav-item-monospaced-size: 2rem !default; // 32px
