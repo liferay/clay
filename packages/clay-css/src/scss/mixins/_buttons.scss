@@ -60,6 +60,23 @@
 	$padding-top-mobile: map-get($map, padding-top-mobile);
 	$width-mobile: map-get($map, width-mobile);
 
+	$c-inner: setter(map-get($map, c-inner), ());
+	$c-inner: map-deep-merge((
+		align-items: $align-items,
+		display: $display,
+		height: $height,
+		justify-content: $justify-content,
+		margin-bottom: math-sign($padding-bottom),
+		margin-left: math-sign($padding-left),
+		margin-right: math-sign($padding-right),
+		margin-top: math-sign($padding-top),
+		padding-bottom: $padding-bottom,
+		padding-left: $padding-left,
+		padding-right: $padding-right,
+		padding-top: $padding-top,
+		width: $width,
+	), $c-inner);
+
 	align-items: $align-items;
 	border-color: $border-color;
 	border-radius: $border-radius;
@@ -113,19 +130,7 @@
 
 	@if ($enable-c-inner) {
 		.c-inner {
-			align-items: $align-items;
-			display: $display;
-			height: $height;
-			justify-content: $justify-content;
-			margin-bottom: math-sign($padding-bottom);
-			margin-left: math-sign($padding-left);
-			margin-right: math-sign($padding-right);
-			margin-top: math-sign($padding-top);
-			padding-bottom: $padding-bottom;
-			padding-left: $padding-left;
-			padding-right: $padding-right;
-			padding-top: $padding-top;
-			width: $width;
+			@include clay-css($c-inner);
 		}
 	}
 
@@ -229,6 +234,7 @@
 /// padding-top-mobile: {Number | String | Null},
 /// width-mobile: {Number | String | Null},
 /// loading-animation: {String | Null}, // The placeholder name 'loading-animation' or 'loading-animation-light'
+/// c-inner: {Map | Null}, // Pass parameters to `clay-css` mixin
 /// @todo
 /// - Add @example
 /// - Add @link to documentation
@@ -322,6 +328,23 @@
 	$width-mobile: map-get($map, width-mobile);
 
 	$loading-animation: setter(map-get($map, loading-animation), $clay-unset-placeholder);
+
+	$c-inner: setter(map-get($map, c-inner), ());
+	$c-inner: map-deep-merge((
+		align-items: $align-items,
+		display: $display,
+		height: $height,
+		justify-content: $justify-content,
+		margin-bottom: math-sign($padding-bottom),
+		margin-left: math-sign($padding-left),
+		margin-right: math-sign($padding-right),
+		margin-top: math-sign($padding-top),
+		padding-bottom: $padding-bottom,
+		padding-left: $padding-left,
+		padding-right: $padding-right,
+		padding-top: $padding-top,
+		width: $width,
+	), $c-inner);
 
 	align-items: $align-items;
 	background-color: $bg;
@@ -423,19 +446,7 @@
 
 	@if ($enable-c-inner) {
 		.c-inner {
-			align-items: $align-items;
-			display: $display;
-			height: $height;
-			justify-content: $justify-content;
-			margin-bottom: math-sign($padding-bottom);
-			margin-left: math-sign($padding-left);
-			margin-right: math-sign($padding-right);
-			margin-top: math-sign($padding-top);
-			padding-bottom: $padding-bottom;
-			padding-left: $padding-left;
-			padding-right: $padding-right;
-			padding-top: $padding-top;
-			width: $width;
+			@include clay-css($c-inner);
 		}
 	}
 

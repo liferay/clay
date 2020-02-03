@@ -246,11 +246,6 @@
 
 		@if ($enable-c-inner) {
 			.c-inner {
-				align-items: center;
-				display: flex;
-				height: 100%;
-				justify-content: center;
-
 				.lexicon-icon {
 					margin-top: 0;
 				}

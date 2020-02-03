@@ -25,6 +25,7 @@
 /// sticker-border-radius: {Number | String | List | Null},
 /// sticker-size: {Number | String | Null},
 /// close: {Map | Null}, // Pass parameters to `clay-close` mixin
+/// c-inner: {Map | Null}, // Pass parameters to `clay-css` mixin
 
 @mixin clay-label-size($map) {
 	$border-width: setter(map-get($map, border-width), $label-border-width);
@@ -50,6 +51,18 @@
 	$sticker-size: map-get($map, sticker-size);
 
 	$close: setter(map-get($map, close), ());
+
+	$c-inner: setter(map-get($map, c-inner), ());
+	$c-inner: map-deep-merge((
+		margin-bottom: math-sign($padding-y),
+		margin-left: math-sign($padding-x),
+		margin-right: math-sign($padding-x),
+		margin-top: math-sign($padding-y),
+		padding-bottom: $padding-y,
+		padding-left: $padding-x,
+		padding-right: $padding-x,
+		padding-top: $padding-y,
+	), $c-inner);
 
 	border-width: $border-width;
 	font-size: $font-size;
@@ -118,14 +131,7 @@
 
 	@if ($enable-c-inner) {
 		> .c-inner {
-			margin-bottom: math-sign($padding-y);
-			margin-left: math-sign($padding-x);
-			margin-right: math-sign($padding-x);
-			margin-top: math-sign($padding-y);
-			padding-bottom: $padding-y;
-			padding-left: $padding-x;
-			padding-right: $padding-x;
-			padding-top: $padding-y;
+			@include clay-css($c-inner);
 		}
 	}
 }

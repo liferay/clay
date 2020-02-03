@@ -64,6 +64,7 @@
 /// lexicon-icon-margin-left: {Number | String | Null},
 /// lexicon-icon-margin-right: {Number | String | Null},
 /// lexicon-icon-margin-top: {Number | String | Null},
+/// c-inner: {Map | Null}, // Pass parameters to `clay-css` mixin
 /// @todo
 /// - Add @example
 /// - Add @link to documentation
@@ -136,6 +137,23 @@
 	$lexicon-icon-margin-left: map-get($map, lexicon-icon-margin-left);
 	$lexicon-icon-margin-right: map-get($map, lexicon-icon-margin-right);
 	$lexicon-icon-margin-top: map-get($map, lexicon-icon-margin-top);
+
+	$c-inner: setter(map-get($map, c-inner), ());
+	$c-inner: map-deep-merge((
+			align-items: $align-items,
+			display: $display,
+			height: $height,
+			justify-content: $justify-content,
+			margin-bottom: math-sign($padding-bottom),
+			margin-left: math-sign($padding-left),
+			margin-right: math-sign($padding-right),
+			margin-top: math-sign($padding-top),
+			padding-bottom: $padding-bottom,
+			padding-left: $padding-left,
+			padding-right: $padding-right,
+			padding-top: $padding-top,
+			width: $width,
+	), $c-inner);
 
 	align-items: $align-items;
 	background-color: $bg;
@@ -228,19 +246,7 @@
 
 	@if ($enable-c-inner) {
 		.c-inner {
-			align-items: $align-items;
-			display: $display;
-			height: $height;
-			justify-content: $justify-content;
-			margin-bottom: math-sign($padding-bottom);
-			margin-left: math-sign($padding-left);
-			margin-right: math-sign($padding-right);
-			margin-top: math-sign($padding-top);
-			padding-bottom: $padding-bottom;
-			padding-left: $padding-left;
-			padding-right: $padding-right;
-			padding-top: $padding-top;
-			width: $width;
+			@include clay-css($c-inner);
 		}
 	}
 
