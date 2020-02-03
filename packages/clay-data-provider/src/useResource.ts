@@ -157,7 +157,12 @@ const useResource = ({
 	) => {
 		const uri = new URL(link);
 
-		if ((fetchOptions && fetchOptions.method !== 'GET') || !variables) {
+		if (
+			(fetchOptions &&
+				fetchOptions.method &&
+				fetchOptions.method !== 'GET') ||
+			!variables
+		) {
 			return uri.toString();
 		}
 
