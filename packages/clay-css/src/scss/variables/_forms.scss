@@ -319,6 +319,7 @@ $input-group-inset-item-padding-right: 5px !default;
 
 $input-group-inset-item-btn: () !default;
 $input-group-inset-item-btn: map-deep-merge((
+	display: block,
 	height: 75%,
 	line-height: 1,
 	margin-left: 0.125rem,
