@@ -328,6 +328,12 @@ $input-group-inset-item-btn: map-deep-merge((
 	padding-left: 0.5rem,
 	padding-right: 0.5rem,
 	padding-top: 0,
+	c-inner: (
+		align-items: center,
+		display: flex,
+		height: 100%,
+		justify-content: center,
+	),
 ), $input-group-inset-item-btn);
 
 $input-group-inset-form-file-btn: () !default;

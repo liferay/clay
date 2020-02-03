@@ -184,6 +184,7 @@
 /// disabled-pointer-events: {String | Null},
 /// disabled-text-decoration: {String | Null},
 /// disabled-active-pointer-events: {String | Null},
+/// c-inner: {Map | Null}, // Pass parameters to `clay-css` mixin
 /// @todo
 /// - Add @example
 /// - Add @link to documentation
@@ -248,6 +249,19 @@
 	$disabled-text-decoration: map-get($map, disabled-text-decoration);
 
 	$disabled-active-pointer-events: map-get($map, disabled-active-pointer-events);
+
+	$c-inner: setter(map-get($map, c-inner), ());
+	$c-inner: map-deep-merge((
+		display: $display,
+		margin-bottom: math-sign($padding-bottom),
+		margin-left: math-sign($padding-left),
+		margin-right: math-sign($padding-right),
+		margin-top: math-sign($padding-top),
+		padding-bottom: $padding-bottom,
+		padding-left: $padding-left,
+		padding-right: $padding-right,
+		padding-top: $padding-top,
+	), $c-inner);
 
 	@if ($enabled) {
 		background-color: $bg; // For `<button>`s set to `transparent` in Bootstrap
@@ -368,15 +382,7 @@
 
 		@if ($enable-c-inner) {
 			.c-inner {
-				display: $display;
-				margin-bottom: math-sign($padding-bottom);
-				margin-left: math-sign($padding-left);
-				margin-right: math-sign($padding-right);
-				margin-top: math-sign($padding-top);
-				padding-bottom: $padding-bottom;
-				padding-left: $padding-left;
-				padding-right: $padding-right;
-				padding-top: $padding-top;
+				@include clay-css($c-inner);
 			}
 		}
 
