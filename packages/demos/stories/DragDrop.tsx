@@ -113,14 +113,7 @@ const DraggableListItem: React.FunctionComponent<IDraggableListItemProps> = ({
 	};
 
 	return (
-		<ClayList.Item
-			className="m-2"
-			flex
-			id={`listItem${id}`}
-			key={id}
-			ref={ref}
-			style={style}
-		>
+		<ClayList.Item flex id={`listItem${id}`} ref={ref} style={style}>
 			<ClayList.ItemField>{`Item ${id}`}</ClayList.ItemField>
 
 			<ClayList.ItemField expand>
@@ -178,7 +171,7 @@ const DraggableList: React.FunctionComponent = () => {
 	);
 
 	return (
-		<ClayList className="col-4 m-2">
+		<ClayList className="col-4">
 			{listItems.map((listItem, index) => (
 				<DraggableListItem
 					id={listItem.id}
