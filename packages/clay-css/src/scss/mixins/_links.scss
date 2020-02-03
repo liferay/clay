@@ -288,6 +288,7 @@
 			margin-left: math-sign($padding-left);
 			margin-right: math-sign($padding-right);
 			margin-top: math-sign($padding-top);
+			max-width: $max-width;
 			padding-bottom: $padding-bottom;
 			padding-left: $padding-left;
 			padding-right: $padding-right;
