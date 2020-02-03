@@ -33,9 +33,19 @@
 
 // Collapse Icon
 
-a.collapse-icon {
+a.collapse-icon,
+button.collapse-icon {
 	padding-left: $collapse-icon-padding-left;
 	padding-right: $collapse-icon-padding-right;
+
+	@if ($enable-c-inner) {
+		.c-inner {
+			margin-left: math-sign($collapse-icon-padding-left);
+			margin-right: math-sign($collapse-icon-padding-right);
+			padding-left: $collapse-icon-padding-left;
+			padding-right: $collapse-icon-padding-right;
+		}
+	}
 }
 
 .collapse-icon-closed,
