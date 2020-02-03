@@ -216,6 +216,16 @@
 	}
 }
 
+.list-group-item-action {
+	@if ($enable-c-inner){
+		.c-inner {
+			display: block;
+			margin: #{math-sign($list-group-item-padding-y)} #{math-sign($list-group-item-padding-x)};
+			padding: $list-group-item-padding-y $list-group-item-padding-x;
+		}
+	}
+}
+
 .list-group-item-action:focus {
 	z-index: 1;
 }
