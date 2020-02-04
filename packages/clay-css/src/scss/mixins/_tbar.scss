@@ -161,6 +161,20 @@
 		padding-left: $btn-padding-x;
 		padding-right: $btn-padding-x;
 		padding-top: $btn-padding-y;
+
+		@if ($enable-c-inner) {
+			.c-inner {
+				height: $btn-height;
+				margin-bottom: #{math-sign($btn-padding-y)};
+				margin-left: #{math-sign($btn-padding-x)};
+				margin-right: #{math-sign($btn-padding-x)};
+				margin-top: #{math-sign($btn-padding-y)};
+				padding-bottom: $btn-padding-y;
+				padding-left: $btn-padding-x;
+				padding-right: $btn-padding-x;
+				padding-top: $btn-padding-y;
+			}
+		}
 	}
 
 	.tbar-link {
@@ -172,6 +186,19 @@
 		padding-left: $link-padding-x;
 		padding-right: $link-padding-x;
 		padding-top: $link-padding-y;
+
+		@if ($enable-c-inner) {
+			.c-inner {
+				margin-bottom: #{math-sign($link-padding-y)};
+				margin-left: #{math-sign($link-padding-x)};
+				margin-right: #{math-sign($link-padding-x)};
+				margin-top: #{math-sign($link-padding-y)};
+				padding-bottom: $link-padding-y;
+				padding-left: $link-padding-x;
+				padding-right: $link-padding-x;
+				padding-top: $link-padding-y;
+			}
+		}
 	}
 
 	.tbar-btn-monospaced {
@@ -185,6 +212,15 @@
 		margin-top: $btn-monospaced-margin-y;
 		padding: $btn-monospaced-padding;
 		width: $btn-monospaced-size;
+
+		@if ($enable-c-inner) {
+			.c-inner {
+				height: $btn-monospaced-size;
+				margin: #{math-sign($btn-monospaced-padding)};
+				padding: $btn-monospaced-padding;
+				width: $btn-monospaced-size;
+			}
+		}
 
 		.inline-item {
 			font-size: $btn-monospaced-font-size;
@@ -202,6 +238,15 @@
 		margin-top: $link-monospaced-margin-y;
 		padding: $link-monospaced-padding;
 		width: $link-monospaced-size;
+
+		@if ($enable-c-inner) {
+			.c-inner {
+				height: $link-monospaced-size;
+				margin: #{math-sign($link-monospaced-padding)};
+				padding: $link-monospaced-padding;
+				width: $link-monospaced-size;
+			}
+		}
 
 		.inline-item {
 			font-size: $link-monospaced-font-size;
