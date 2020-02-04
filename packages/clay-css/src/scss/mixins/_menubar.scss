@@ -38,6 +38,7 @@
 /// toggler-height-mobile: {Number | String}, // Default: 2rem
 /// toggler-padding-x-mobile: {Number | String}, // Default: 0.5rem
 /// toggler-padding-y-mobile: {Number | String | Null},
+/// toggler-c-inner: {Map | Null}, // Pass parameters to `clay-css` mixin
 /// @todo
 /// - Add @example
 /// - Add @link to documentation
@@ -86,6 +87,21 @@
 	$toggler-height-mobile: setter(map-get($map, toggler-height-mobile), 2rem); // 32px
 	$toggler-padding-x-mobile: setter(map-get($map, toggler-padding-x-mobile), 0.5rem); // 8px
 	$toggler-padding-y-mobile: map-get($map, toggler-padding-y-mobile);
+
+	$toggler-c-inner: setter(map-get($map, toggler-c-inner), ());
+	$toggler-c-inner: map-deep-merge((
+		align-items: center,
+		display: flex,
+		height: $toggler-height-mobile,
+		margin-bottom: math-sign($toggler-padding-y-mobile),
+		margin-left: math-sign($toggler-padding-x-mobile),
+		margin-right: math-sign($toggler-padding-x-mobile),
+		margin-top: math-sign($toggler-padding-y-mobile),
+		padding-bottom: $toggler-padding-y-mobile,
+		padding-left: $toggler-padding-x-mobile,
+		padding-right: $toggler-padding-x-mobile,
+		padding-top: $toggler-padding-y-mobile,
+	), $toggler-c-inner);
 
 	@if ($enabled) {
 		border-color: $border-color;
@@ -153,6 +169,12 @@
 				padding-left: $toggler-padding-x-mobile;
 				padding-right: $toggler-padding-x-mobile;
 				padding-top: $toggler-padding-y-mobile;
+
+				@if ($enable-c-inner) {
+					.c-inner {
+						@include clay-css($toggler-c-inner);
+					}
+				}
 
 				.lexicon-icon {
 					margin-top: 0;
