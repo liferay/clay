@@ -16,19 +16,21 @@ section: Visual Tests
 		</ul>
 		<div class="navbar-title navbar-text-truncate">My Application Name</div>
 		<ul class="navbar-nav">
-			<li class="dropdown nav-item">
-				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
-					<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-						<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-					</svg>
-				</a>
-				<ul aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
-					<li><a class="dropdown-item" href="#1">Action</a></li>
-					<li><a class="dropdown-item" href="#1">Another action</a></li>
-					<li><a class="dropdown-item" href="#1">Something else here</a></li>
-					<li class="dropdown-divider"></li>
-					<li><a class="dropdown-item" href="#1">Separated link</a></li>
-				</ul>
+			<li class="nav-item">
+				<div class="dropdown">
+					<button aria-expanded="false" aria-haspopup="true" class="btn btn-unstyled dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" type="button">
+						<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</button>
+					<ul aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
+						<li><a class="dropdown-item" href="#1">Action</a></li>
+						<li><a class="dropdown-item" href="#1">Another action</a></li>
+						<li><a class="dropdown-item" href="#1">Something else here</a></li>
+						<li class="dropdown-divider"></li>
+						<li><a class="dropdown-item" href="#1">Separated link</a></li>
+					</ul>
+				</div>
 			</li>
 		</ul>
 	</div>
@@ -60,19 +62,21 @@ section: Visual Tests
 							<span class="navbar-text-truncate">App Section 3</span>
 						</a>
 					</li>
-					<li class="dropdown nav-item show-dropdown-on-collapse">
-						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
-							<span class="navbar-text-truncate">More</span>
-							<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
-							</svg>
-						</a>
-						<ul aria-labelledby="" class="dropdown-menu">
-							<li><a class="dropdown-item" href="#1">App Section 4</a></li>
-							<li><a class="dropdown-item" href="#1">App Section 5</a></li>
-							<li><a class="dropdown-item" href="#1">App Section 6</a></li>
-							<li><a class="dropdown-item" href="#1">App Section 7</a></li>
-						</ul>
+					<li class="nav-item show-dropdown-on-collapse">
+						<div class="dropdown">
+							<button aria-expanded="false" aria-haspopup="true" class="btn btn-unstyled dropdown-toggle nav-link" data-toggle="dropdown" type="button">
+								<span class="navbar-text-truncate">More</span>
+								<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+								</svg>
+							</button>
+							<ul aria-labelledby="" class="dropdown-menu">
+								<li><a class="dropdown-item" href="#1">App Section 4</a></li>
+								<li><a class="dropdown-item" href="#1">App Section 5</a></li>
+								<li><a class="dropdown-item" href="#1">App Section 6</a></li>
+								<li><a class="dropdown-item" href="#1">App Section 7</a></li>
+							</ul>
+						</div>
 					</li>
 				</ul>
 			</div>
@@ -91,23 +95,25 @@ section: Visual Tests
 					</label>
 				</div>
 			</li>
-			<li class="dropdown nav-item">
-				<a aria-expanded="false" class="dropdown-toggle nav-link navbar-breakpoint-down-d-none" data-toggle="dropdown" href="#1" role="button">
-					<span class="navbar-text-truncate">Filter and Order</span>
-					<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
-						<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
-					</svg>
-				</a>
-				<a aria-expanded="false" class="nav-link nav-link-monospaced dropdown-toggle navbar-breakpoint-d-none" data-toggle="dropdown" href="#1" role="button">
-					<svg class="lexicon-icon lexicon-icon-filter" focusable="false" role="presentation">
-						<use xlink:href="{{rootPath}}/images/icons/icons.svg#filter" />
-					</svg>
-				</a>
-				<ul class="dropdown-menu" role="menu">
-					<li><a class="dropdown-item" href="#1">Filter Action 1</a></li>
-					<li><a class="dropdown-item" href="#1">Filter Action 2</a></li>
-					<li><a class="dropdown-item" href="#1">Filter Action 3</a></li>
-				</ul>
+			<li class="nav-item">
+				<div class="dropdown">
+					<button aria-expanded="false" class="btn btn-unstyled dropdown-toggle nav-link navbar-breakpoint-down-d-none" data-toggle="dropdown" type="button">
+						<span class="navbar-text-truncate">Filter and Order</span>
+						<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+						</svg>
+					</button>
+					<button aria-expanded="false" class="btn btn-unstyled nav-link nav-link-monospaced dropdown-toggle navbar-breakpoint-d-none" data-toggle="dropdown" type="button">
+						<svg class="lexicon-icon lexicon-icon-filter" focusable="false" role="presentation">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#filter" />
+						</svg>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li><a class="dropdown-item" href="#1">Filter Action 1</a></li>
+						<li><a class="dropdown-item" href="#1">Filter Action 2</a></li>
+						<li><a class="dropdown-item" href="#1">Filter Action 3</a></li>
+					</ul>
+				</div>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link nav-link-monospaced order-arrow-up-active" href="#1">
@@ -155,44 +161,46 @@ section: Visual Tests
 					</svg>
 				</a>
 			</li>
-			<li class="dropdown nav-item">
-				<a aria-expanded="false" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
-					<svg class="lexicon-icon lexicon-icon-cards2" focusable="false" role="presentation">
-						<use xlink:href="{{rootPath}}/images/icons/icons.svg#cards2" />
-					</svg>
-				</a>
-				<ul class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start" role="menu">
-					<li>
-						<a class="dropdown-item" href="#1">
-							<span class="dropdown-item-indicator-start">
-								<svg class="lexicon-icon lexicon-icon-list" focusable="false" role="presentation">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#list" />
-								</svg>
-							</span>
-							List View
-						</a>
-					</li>
-					<li>
-						<a class="dropdown-item" href="#1">
-							<span class="dropdown-item-indicator-start">
-								<svg class="lexicon-icon lexicon-icon-table" focusable="false" role="presentation">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#table" />
-								</svg>
-							</span>
-							Table View
-						</a>
-					</li>
-					<li>
-						<a class="active dropdown-item" href="#1">
-							<span class="dropdown-item-indicator-start">
-								<svg class="lexicon-icon lexicon-icon-cards2" focusable="false" role="presentation">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#cards2" />
-								</svg>
-							</span>
-							Card View
-						</a>
-					</li>
-				</ul>
+			<li class="nav-item">
+				<div class="dropdown">
+					<button aria-expanded="false" class="btn btn-unstyled dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" type="button">
+						<svg class="lexicon-icon lexicon-icon-cards2" focusable="false" role="presentation">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#cards2" />
+						</svg>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start" role="menu">
+						<li>
+							<a class="dropdown-item" href="#1">
+								<span class="dropdown-item-indicator-start">
+									<svg class="lexicon-icon lexicon-icon-list" focusable="false" role="presentation">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#list" />
+									</svg>
+								</span>
+								List View
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#1">
+								<span class="dropdown-item-indicator-start">
+									<svg class="lexicon-icon lexicon-icon-table" focusable="false" role="presentation">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#table" />
+									</svg>
+								</span>
+								Table View
+							</a>
+						</li>
+						<li>
+							<a class="active dropdown-item" href="#1">
+								<span class="dropdown-item-indicator-start">
+									<svg class="lexicon-icon lexicon-icon-cards2" focusable="false" role="presentation">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#cards2" />
+									</svg>
+								</span>
+								Card View
+							</a>
+						</li>
+					</ul>
+				</div>
 			</li>
 			<li class="nav-item">
 				<a class="btn btn-primary nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none" href="#1">
