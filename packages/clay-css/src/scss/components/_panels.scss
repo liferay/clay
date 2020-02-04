@@ -24,6 +24,13 @@
 	position: relative;
 	width: 100%;
 
+	@if ($enable-c-inner) {
+		.c-inner {
+			margin: #{math-sign($panel-header-padding-y)} #{math-sign($panel-header-padding-x)};
+			padding: $panel-header-padding-y $panel-header-padding-x;
+		}
+	}
+
 	&.collapsed {
 		@if not ($panel-header-offset-border-radius == 0) {
 			@include border-bottom-radius($panel-header-offset-border-radius);
@@ -33,6 +40,15 @@
 	&.collapse-icon {
 		padding-left: $panel-header-collapse-icon-padding-left;
 		padding-right: $panel-header-collapse-icon-padding-right;
+
+		@if ($enable-c-inner) {
+			.c-inner {
+				margin-left: #{math-sign($panel-header-collapse-icon-padding-left)};
+				margin-right: #{math-sign($panel-header-collapse-icon-padding-right)};
+				padding-left: $panel-header-collapse-icon-padding-left;
+				padding-right: $panel-header-collapse-icon-padding-right;
+			}
+		}
 	}
 
 	.collapse-icon-closed,
@@ -241,6 +257,15 @@
 	.panel-header-link {
 		padding-left: 0;
 		padding-right: 0;
+
+		@if ($enable-c-inner) {
+			.c-inner {
+				margin-left: 0;
+				margin-right: 0;
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
 	}
 
 	.panel-body {
@@ -251,6 +276,15 @@
 	.collapse-icon {
 		padding-left: $panel-group-flush-collapse-icon-padding-left;
 		padding-right: $panel-group-flush-collapse-icon-padding-right;
+
+		@if ($enable-c-inner) {
+			.c-inner {
+				margin-left: #{math-sign($panel-group-flush-collapse-icon-padding-left)};
+				margin-right: #{math-sign($panel-group-flush-collapse-icon-padding-right)};
+				padding-left: $panel-group-flush-collapse-icon-padding-left;
+				padding-right: $panel-group-flush-collapse-icon-padding-right;
+			}
+		}
 	}
 
 	.collapse-icon-closed,
