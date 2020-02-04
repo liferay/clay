@@ -175,11 +175,17 @@
 /// justify-content: {String | Null},
 /// left: {Number | String | Null},
 /// line-height: {Number | String | Null},
+/// margin: {Number | String | List | Null},
 /// margin-bottom: {Number | String | Null},
 /// margin-left: {Number | String | Null},
 /// margin-right: {Number | String | Null},
 /// margin-top: {Number | String | Null},
+/// max-height: {Number | String | Null},
+/// max-width: {Number | String | Null},
+/// min-height: {Number | String | Null},
+/// min-width: {Number | String | Null},
 /// opacity: {Number | String | Null},
+/// padding: {Number | String | List | Null},
 /// padding-bottom: {Number | String | Null},
 /// padding-left: {Number | String | Null},
 /// padding-right: {Number | String | Null},
@@ -194,28 +200,33 @@
 /// white-space: {String | Null},
 /// width: {Number | String | Null},
 /// word-wrap: {String | Null},
+/// z-index: {Number | String | Null},
 /// hover-bg: {Color | String | Null},
 /// hover-border-color: {Color | String | List | Null},
 /// hover-color: {Color | String | Null},
 /// hover-opacity: {Number | String | Null},
 /// hover-text-decoration: {String | Null},
+/// hover-z-index: {Number | String | Null},
 /// focus-bg: {Color | String | Null},
 /// focus-border-color: {Color | String | List | Null},
 /// focus-box-shadow: {String | List | Null}
 /// focus-color: {Color | String | Null},
 /// focus-opacity: {Number | String | Null},
 /// focus-outline: {Number | String | Null},
+/// focus-z-index: {Number | String | Null},
 /// disabled-bg: {Color | String | Null},
 /// disabled-border-color: {Color | String | List | Null},
 /// disabled-box-shadow: {String | List | Null},
 /// disabled-color: {Color | String | Null},
 /// disabled-cursor: {String | Null},
 /// disabled-opacity: {Number | String | Null},
+/// disabled-z-index: {Number | String | Null},
 /// active-bg: {Color | String | Null},
 /// active-border-color: {Color | String | List | Null},
 /// active-box-shadow: {String | List | Null},
 /// active-color: {Color | String | Null},
 /// active-opacity: {Number | String | Null},
+/// active-z-index: {Number | String | Null},
 /// active-focus-box-shadow: {String | List}, // Default: $focus-box-shadow
 /// lexicon-icon-font-size: {Number | String | Null},
 /// lexicon-icon-margin-bottom: {Number | String | Null},
@@ -260,11 +271,17 @@
 	$justify-content: map-get($map, justify-content);
 	$left: map-get($map, left);
 	$line-height: map-get($map, line-height);
+	$margin: map-get($map, margin);
 	$margin-bottom: map-get($map, margin-bottom);
 	$margin-left: map-get($map, margin-left);
 	$margin-right: map-get($map, margin-right);
 	$margin-top: map-get($map, margin-top);
+	$max-height: map-get($map, max-height);
+	$max-width: map-get($map, max-width);
+	$min-height: map-get($map, min-height);
+	$min-width: map-get($map, min-width);
 	$opacity: map-get($map, opacity);
+	$padding: map-get($map, padding);
 	$padding-bottom: map-get($map, padding-bottom);
 	$padding-left: map-get($map, padding-left);
 	$padding-right: map-get($map, padding-right);
@@ -279,12 +296,14 @@
 	$white-space: map-get($map, white-space);
 	$width: map-get($map, width);
 	$word-wrap: map-get($map, word-wrap);
+	$z-index: map-get($map, z-index);
 
 	$hover-bg: map-get($map, hover-bg);
 	$hover-border-color: map-get($map, hover-border-color);
 	$hover-color: map-get($map, hover-color);
 	$hover-opacity: map-get($map, hover-opacity);
 	$hover-text-decoration: map-get($map, hover-text-decoration);
+	$hover-z-index: map-get($map, hover-z-index);
 
 	$focus-bg: map-get($map, focus-bg);
 	$focus-border-color: map-get($map, focus-border-color);
@@ -292,6 +311,7 @@
 	$focus-color: map-get($map, focus-color);
 	$focus-opacity: map-get($map, focus-opacity);
 	$focus-outline: map-get($map, focus-outline);
+	$focus-z-index: map-get($map, focus-z-index);
 
 	$disabled-bg: map-get($map, disabled-bg);
 	$disabled-border-color: map-get($map, disabled-border-color);
@@ -299,12 +319,14 @@
 	$disabled-color: map-get($map, disabled-color);
 	$disabled-cursor: map-get($map, disabled-cursor);
 	$disabled-opacity: map-get($map, disabled-opacity);
+	$disabled-z-index: map-get($map, disabled-z-index);
 
 	$active-bg: map-get($map, active-bg);
 	$active-border-color: map-get($map, active-border-color);
 	$active-box-shadow: map-get($map, active-box-shadow);
 	$active-color: map-get($map, active-color);
 	$active-opacity: map-get($map, active-opacity);
+	$active-z-index: map-get($map, active-z-index);
 	$active-focus-box-shadow: setter(map-get($map, active-focus-box-shadow), $focus-box-shadow);
 
 	$lexicon-icon-font-size: map-get($map, lexicon-icon-font-size);
@@ -339,6 +361,8 @@
 		margin-left: math-sign($padding-left),
 		margin-right: math-sign($padding-right),
 		margin-top: math-sign($padding-top),
+		min-height: $min-height,
+		min-width: $min-width,
 		padding-bottom: $padding-bottom,
 		padding-left: $padding-left,
 		padding-right: $padding-right,
@@ -363,11 +387,17 @@
 	justify-content: $justify-content;
 	left: $left;
 	line-height: $line-height;
+	margin: $margin;
 	margin-bottom: $margin-bottom;
 	margin-left: $margin-left;
 	margin-right: $margin-right;
 	margin-top: $margin-top;
+	max-height: $max-height;
+	max-width: $max-width;
+	min-height: $min-height;
+	min-width: $min-width;
 	opacity: $opacity;
+	padding: $padding;
 	padding-bottom: $padding-bottom;
 	padding-left: $padding-left;
 	padding-right: $padding-right;
@@ -382,6 +412,7 @@
 	white-space: $white-space;
 	width: $width;
 	word-wrap: $word-wrap;
+	z-index: $z-index;
 
 	@at-root {
 		a#{&},
@@ -408,6 +439,7 @@
 		color: $hover-color;
 		opacity: $hover-opacity;
 		text-decoration: $hover-text-decoration;
+		z-index: $hover-z-index;
 	}
 
 	&:focus,
@@ -418,6 +450,7 @@
 		color: $focus-color;
 		opacity: $focus-opacity;
 		outline: $focus-outline;
+		z-index: $focus-z-index;
 	}
 
 	&:disabled,
@@ -428,6 +461,7 @@
 		color: $disabled-color;
 		cursor: $disabled-cursor;
 		opacity: $disabled-opacity;
+		z-index: $disabled-z-index;
 	}
 
 	&:not([disabled]):not(.disabled):active,
@@ -438,6 +472,7 @@
 		box-shadow: $active-box-shadow;
 		color: $active-color;
 		opacity: $active-opacity;
+		z-index: $active-z-index;
 
 		&:focus {
 			box-shadow: $active-focus-box-shadow;
