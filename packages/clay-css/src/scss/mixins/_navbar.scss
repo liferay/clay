@@ -112,11 +112,25 @@
 			padding-left: $toggler-padding-x;
 			padding-right: $toggler-padding-x;
 			padding-top: $toggler-padding-y;
+
+			@if ($enable-c-inner) {
+				.c-inner {
+					height: $toggler-height;
+					margin-bottom: math-sign($toggler-padding-y);
+					margin-left: math-sign($toggler-padding-x);
+					margin-right: math-sign($toggler-padding-x);
+					margin-top: math-sign($toggler-padding-y);
+					padding-bottom: $toggler-padding-y;
+					padding-left: $toggler-padding-x;
+					padding-right: $toggler-padding-x;
+					padding-top: $toggler-padding-y;
+				}
+			}
 		}
 
 		.navbar-toggler-link {
-			height: $toggler-link-height;
 			font-size: $toggler-link-font-size;
+			height: $toggler-link-height;
 			line-height: $toggler-link-line-height;
 			margin-bottom: $toggler-link-margin-y;
 			margin-left: $toggler-link-margin-x;
@@ -126,6 +140,20 @@
 			padding-left: $toggler-link-padding-x;
 			padding-right: $toggler-link-padding-x;
 			padding-top: $toggler-link-padding-y;
+
+			@if ($enable-c-inner) {
+				.c-inner {
+					height: $toggler-link-height;
+					margin-bottom: math-sign($toggler-link-padding-y);
+					margin-left: math-sign($toggler-link-padding-x);
+					margin-right: math-sign($toggler-link-padding-x);
+					margin-top: math-sign($toggler-link-padding-y);
+					padding-bottom: $toggler-link-padding-y;
+					padding-left: $toggler-link-padding-x;
+					padding-right: $toggler-link-padding-x;
+					padding-top: $toggler-link-padding-y;
+				}
+			}
 		}
 
 		.navbar-brand {
@@ -136,6 +164,20 @@
 			padding-left: $brand-padding-x-mobile;
 			padding-right: $brand-padding-x-mobile;
 			padding-top: $brand-padding-y-mobile;
+
+			@if ($enable-c-inner) {
+				.c-inner {
+					margin-bottom: math-sign($brand-padding-y-mobile);
+					margin-left: math-sign($brand-padding-x-mobile);
+					margin-right: math-sign($brand-padding-x-mobile);
+					margin-top: math-sign($brand-padding-y-mobile);
+					max-width: $brand-max-width;
+					padding-bottom: $brand-padding-y-mobile;
+					padding-left: $brand-padding-x-mobile;
+					padding-right: $brand-padding-x-mobile;
+					padding-top: $brand-padding-y-mobile;
+				}
+			}
 		}
 
 		.navbar-title {
@@ -158,11 +200,33 @@
 				padding-right: $btn-padding-x-mobile;
 				padding-top: $btn-padding-y-mobile;
 				min-width: $btn-monospaced-size-mobile;
+
+				@if ($enable-c-inner) {
+					.c-inner {
+						height: $btn-monospaced-size-mobile;
+						margin-bottom: math-sign($btn-padding-y-mobile);
+						margin-left: math-sign($btn-padding-x-mobile);
+						margin-right: math-sign($btn-padding-x-mobile);
+						margin-top: math-sign($btn-padding-y-mobile);
+						padding-bottom: $btn-padding-y-mobile;
+						padding-left: $btn-padding-x-mobile;
+						padding-right: $btn-padding-x-mobile;
+						padding-top: $btn-padding-y-mobile;
+						min-width: $btn-monospaced-size-mobile;
+					}
+				}
 			}
 
 			.nav-btn-monospaced {
 				font-size: $btn-monospaced-font-size-mobile;
 				padding: 0;
+
+				@if ($enable-c-inner) {
+					.c-inner {
+						margin: 0;
+						padding: 0;
+					}
+				}
 			}
 
 			.nav-item {
@@ -183,6 +247,19 @@
 				padding-left: $link-padding-x-mobile;
 				padding-right: $link-padding-x-mobile;
 				padding-top: $link-padding-y-mobile;
+
+				@if ($enable-c-inner) {
+					.c-inner {
+						margin-bottom: math-sign($link-padding-y-mobile);
+						margin-left: math-sign($link-padding-x-mobile);
+						margin-right: math-sign($link-padding-x-mobile);
+						margin-top: math-sign($link-padding-y-mobile);
+						padding-bottom: $link-padding-y-mobile;
+						padding-left: $link-padding-x-mobile;
+						padding-right: $link-padding-x-mobile;
+						padding-top: $link-padding-y-mobile;
+					}
+				}
 			}
 
 			.nav-link-monospaced {
@@ -192,6 +269,13 @@
 				margin-right: $btn-margin-x-mobile;
 				margin-top: $btn-margin-y-mobile;
 				padding: 0;
+
+				@if ($enable-c-inner) {
+					.c-inner {
+						margin: 0;
+						padding: 0;
+					}
+				}
 			}
 		}
 
@@ -276,6 +360,19 @@
 								padding-left: $brand-padding-x;
 								padding-right: $brand-padding-x;
 								padding-top: $brand-padding-y;
+
+								@if ($enable-c-inner) {
+									.c-inner {
+										margin-bottom: math-sign($brand-padding-y);
+										margin-left: math-sign($brand-padding-x);
+										margin-right: math-sign($brand-padding-x);
+										margin-top: math-sign($brand-padding-y);
+										padding-bottom: $brand-padding-y;
+										padding-left: $brand-padding-x;
+										padding-right: $brand-padding-x;
+										padding-top: $brand-padding-y;
+									}
+								}
 							}
 						}
 
@@ -310,6 +407,21 @@
 								padding-right: $btn-padding-x;
 								padding-top: $btn-padding-y;
 								min-width: $btn-monospaced-size;
+
+								@if ($enable-c-inner) {
+									.c-inner {
+										height: $btn-monospaced-size;
+										margin-bottom: math-sign($btn-padding-y);
+										margin-left: math-sign($btn-padding-x);
+										margin-right: math-sign($btn-padding-x);
+										margin-top: math-sign($btn-padding-y);
+										padding-bottom: $btn-padding-y;
+										padding-left: $btn-padding-x;
+										padding-right: $btn-padding-x;
+										padding-top: $btn-padding-y;
+										min-width: $btn-monospaced-size;
+									}
+								}
 							}
 						}
 
@@ -317,6 +429,13 @@
 							@if ($scaling-navbar) {
 								font-size: $btn-monospaced-font-size;
 								padding: 0;
+
+								@if ($enable-c-inner) {
+									.c-inner {
+										margin: 0;
+										padding: 0;
+									}
+								}
 							}
 						}
 
@@ -341,6 +460,19 @@
 								padding-left: $link-padding-x;
 								padding-right: $link-padding-x;
 								padding-top: $link-padding-y;
+
+								@if ($enable-c-inner) {
+									.c-inner {
+										margin-bottom: math-sign($link-padding-y);
+										margin-left: math-sign($link-padding-x);
+										margin-right: math-sign($link-padding-x);
+										margin-top: math-sign($link-padding-y);
+										padding-bottom: $link-padding-y;
+										padding-left: $link-padding-x;
+										padding-right: $link-padding-x;
+										padding-top: $link-padding-y;
+									}
+								}
 							}
 						}
 
@@ -352,6 +484,13 @@
 								margin-right: $btn-margin-x;
 								margin-top: $btn-margin-y;
 								padding: 0;
+
+								@if ($enable-c-inner) {
+									.c-inner {
+										margin: 0;
+										padding: 0;
+									}
+								}
 							}
 						}
 					}
