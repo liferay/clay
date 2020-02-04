@@ -163,6 +163,14 @@
 		height: $pagination-item-height-sm;
 		line-height: $pagination-line-height-sm;
 		padding: $pagination-padding-y-sm $pagination-padding-x;
+
+		@if ($enable-c-inner) {
+			.c-inner {
+				height: $pagination-item-height-sm;
+				margin: #{math-sign($pagination-padding-y-sm)} #{math-sign($pagination-padding-x)};
+				padding: $pagination-padding-y-sm $pagination-padding-x;
+			}
+		}
 	}
 
 	.pagination-results {
@@ -175,6 +183,14 @@
 		font-size: $pagination-font-size-sm;
 		height: $pagination-item-height-sm;
 		line-height: $pagination-line-height-sm;
+
+		@if ($enable-c-inner) {
+			.c-inner {
+				height: $pagination-item-height-sm;
+				margin: #{math-sign($pagination-padding-y-sm)} #{math-sign($pagination-padding-x-sm)};
+				padding: $pagination-padding-y-sm $pagination-padding-x-sm;
+			}
+		}
 
 		&.btn-unstyled {
 			padding: $pagination-padding-y-sm $pagination-padding-x-sm;
@@ -198,6 +214,14 @@
 		height: $pagination-item-height-lg;
 		line-height: $pagination-line-height-lg;
 		padding: $pagination-padding-y-lg $pagination-padding-x;
+
+		@if ($enable-c-inner) {
+			.c-inner {
+				height: $pagination-item-height-lg;
+				margin: #{math-sign($pagination-padding-y-lg)} #{math-sign($pagination-padding-x)};
+				padding: $pagination-padding-y-lg $pagination-padding-x;
+			}
+		}
 	}
 
 	.pagination-results {
@@ -210,6 +234,14 @@
 		font-size: $pagination-font-size-lg;
 		height: $pagination-item-height-lg;
 		line-height: $pagination-line-height-lg;
+
+		@if ($enable-c-inner) {
+			.c-inner {
+				height: $pagination-item-height-lg;
+				margin: #{math-sign($pagination-padding-y-lg)} #{math-sign($pagination-padding-x-lg)};
+				padding: $pagination-padding-y-lg $pagination-padding-x-lg;
+			}
+		}
 
 		&.btn-unstyled {
 			padding: $pagination-padding-y-lg $pagination-padding-x-lg;
