@@ -11,6 +11,7 @@ $navigation-bar-size: map-deep-merge((
 
 $navigation-bar-base: () !default;
 $navigation-bar-base: map-deep-merge((
+	link-border-radius: 0,
 	link-outline: 0,
 	link-focus-box-shadow: $btn-focus-box-shadow,
 	link-disabled-box-shadow: none,
