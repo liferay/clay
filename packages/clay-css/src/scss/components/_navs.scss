@@ -15,57 +15,22 @@
 // Nav Btn
 
 .nav-btn {
-	align-items: center;
-	display: flex;
-	height: $nav-item-monospaced-size;
-	justify-content: center;
-	line-height: $line-height-base;
-	margin: $nav-btn-margin-y $nav-btn-margin-x;
-	min-width: $nav-item-monospaced-size;
-	padding-bottom: $nav-btn-padding-y;
-	padding-left: $nav-btn-padding-x;
-	padding-right: $nav-btn-padding-x;
-	padding-top: $nav-btn-padding-y;
-	position: relative;
-	text-align: center;
-	width: auto;
-
-	&:focus {
-		z-index: 1;
-	}
-
-	&.disabled {
-		opacity: 1;
-	}
+	@include clay-button-variant($nav-btn);
 
 	&.btn-link {
 		margin-left: 0;
 		margin-right: 0;
-	}
-
-	.lexicon-icon {
-		margin-top: 0;
 	}
 }
 
 // Nav Item Monospaced
 
 .nav-btn-monospaced {
-	padding: 0;
+	@include clay-button-variant($nav-btn-monospaced);
 }
 
 .nav-link-monospaced {
-	align-items: center;
-	display: flex;
-	height: $nav-item-monospaced-size;
-	justify-content: center;
-	margin: $nav-btn-margin-y $nav-btn-margin-x;
-	min-width: $nav-item-monospaced-size;
-	padding: 0;
-
-	.lexicon-icon {
-		margin-top: 0;
-	}
+	@include clay-link($nav-link-monospaced);
 }
 
 // Nav Item

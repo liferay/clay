@@ -28,10 +28,72 @@ $nav-link-btn-unstyled: map-deep-merge((
 
 $nav-item-monospaced-size: 2rem !default; // 32px
 
+/// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
+
 $nav-btn-margin-x: 0.25rem !default; // 4px
+
+/// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
+
 $nav-btn-margin-y: (($line-height-base * $font-size-base) + ($nav-link-padding-y * 2) - $nav-item-monospaced-size) / 2 !default;
+
+/// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
+
 $nav-btn-padding-x: $btn-padding-x-sm !default;
+
+/// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
+
 $nav-btn-padding-y: 0 !default;
+
+$nav-btn: () !default;
+$nav-btn: map-deep-merge((
+	align-items: center,
+	display: flex,
+	height: $nav-item-monospaced-size,
+	justify-content: center,
+	line-height: $line-height-base,
+	margin: $nav-btn-margin-y $nav-btn-margin-x,
+	min-width: $nav-item-monospaced-size,
+	padding: $nav-btn-padding-y $nav-btn-padding-x,
+	position: relative,
+	text-align: center,
+	width: auto,
+	focus-z-index: 1,
+	disabled-opacity: 1,
+	c-inner: (
+		margin-bottom: 0,
+		margin-left: math-sign($nav-btn-padding-x),
+		margin-right: math-sign($nav-btn-padding-x),
+		margin-top: math-sign($btn-border-width),
+		padding: $nav-btn-padding-y $nav-btn-padding-x,
+	),
+	lexicon-icon-margin-top: 0,
+), $nav-btn);
+
+$nav-btn-monospaced: () !default;
+$nav-btn-monospaced: map-deep-merge((
+	padding: 0,
+	c-inner: (
+		margin-left: math-sign($btn-border-width),
+		margin-right: math-sign($btn-border-width),
+		padding-left: 0,
+		padding-right: 0,
+	),
+), $nav-btn-monospaced);
+
+$nav-link-monospaced: () !default;
+$nav-link-monospaced: map-deep-merge((
+	align-items: center,
+	display: flex,
+	height: $nav-item-monospaced-size,
+	justify-content: center,
+	margin: $nav-btn-margin-y $nav-btn-margin-x,
+	min-width: $nav-item-monospaced-size,
+	padding: 0,
+	lexicon-icon-margin-top: 0,
+	c-inner: (
+		padding: 0,
+	),
+), $nav-link-monospaced);
 
 $nav-form-padding-bottom: 0 !default;
 $nav-form-padding-left: $nav-link-padding-x !default;
