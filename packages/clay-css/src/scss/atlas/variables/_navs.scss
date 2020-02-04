@@ -12,7 +12,7 @@ $nav-link: map-deep-merge((
 
 $nav-link-btn-unstyled: () !default;
 $nav-link-btn-unstyled: map-deep-merge((
-	focus-box-shadow: inset 0 0 0 0.125rem $primary-l1#{','} inset 0 0 0 0.25rem $white,
+	focus-box-shadow: 0 0 0 0.125rem $white#{','} 0 0 0 0.25rem $primary-l1,
 ), $nav-link-btn-unstyled);
 
 // Nav Nested
