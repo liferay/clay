@@ -201,7 +201,8 @@
 		&#{$infix} { // .navbar-expand, sm, md, lg, xl
 			justify-content: space-between;
 
-			.nav-item {
+			.nav-item,
+			.nav-item .dropdown {
 				align-items: center;
 				display: flex;
 			}
@@ -261,7 +262,8 @@
 							padding-right: 0;
 						}
 
-						.nav-item {
+						.nav-item,
+						.nav-item .dropdown {
 							display: block;
 						}
 
