@@ -246,6 +246,25 @@
 		width: $multi-step-icon-size;
 	}
 
+	@if ($enable-c-inner) {
+		.c-inner {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			height: $multi-step-icon-size;
+			margin-bottom: #{math-sign($multi-step-icon-padding-bottom)};
+			margin-left: #{math-sign($multi-step-icon-padding-left)};
+			margin-right: #{math-sign($multi-step-icon-padding-right)};
+			margin-top: #{math-sign($multi-step-icon-padding-top)};
+			padding-bottom: $multi-step-icon-padding-bottom;
+			padding-left: $multi-step-icon-padding-left;
+			padding-right: $multi-step-icon-padding-right;
+			padding-top: $multi-step-icon-padding-top;
+			position: absolute;
+			width: $multi-step-icon-size;
+		}
+	}
+
 	.btn-link {
 		vertical-align: baseline;
 	}
