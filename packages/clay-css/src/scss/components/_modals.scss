@@ -59,6 +59,33 @@
 
 // Modal Item
 
+.modal-item-group {
+	@include clay-css($modal-item-group);
+
+	&:first-child,
+	&.modal-item-group-first {
+		@include clay-css($modal-item-group-first-child);
+	}
+
+	&:last-child,
+	&.modal-item-group-last {
+		@include clay-css($modal-item-group-last-child);
+	}
+
+	&:only-child,
+	&.modal-item-group-only {
+		@include clay-css($modal-item-group-only-child);
+	}
+}
+
+.modal-item {
+	@include clay-css($modal-item);
+}
+
+.modal-item-shrink {
+	@include clay-css($modal-item-shrink);
+}
+
 .modal-item-first,
 .modal-item,
 .modal-item-last {
@@ -72,10 +99,6 @@
 	margin-left: auto;
 }
 
-.modal-item {
-	flex-grow: 1;
-}
-
 .modal-footer {
 	> .modal-item-last {
 		margin-left: auto;
@@ -85,12 +108,13 @@
 // Modal Title
 
 .modal-title {
+	flex-grow: 1;
 	font-size: $modal-title-font-size;
 	font-weight: $modal-title-font-weight;
-	flex-grow: 1;
+	overflow: hidden;
 	text-align: $modal-title-text-align;
-
-	@include text-truncate;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 
 	@include clay-scale-component {
 		font-size: $modal-title-font-size-mobile;
@@ -103,6 +127,20 @@
 	margin-right: $modal-title-indicator-spacer-x;
 	margin-top: -0.2em;
 	vertical-align: middle;
+}
+
+// Modal Subtitle
+
+.modal-subtitle {
+	@include clay-css($modal-subtitle);
+
+	strong {
+		@include clay-css($modal-subtitle-strong);
+	}
+}
+
+.modal-subtitle-divider {
+	@include clay-css($modal-subtitle-divider);
 }
 
 // Modal Close
