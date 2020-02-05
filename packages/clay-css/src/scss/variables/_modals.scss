@@ -17,6 +17,54 @@ $modal-footer-height-mobile: null !default;
 $modal-item-padding-x: null !default;
 $modal-item-padding-y: null !default;
 
+$modal-item-group: () !default;
+$modal-item-group: map-deep-merge((
+	align-items: center,
+	display: flex,
+	flex-wrap: wrap,
+	min-width: 3rem,
+	padding-left: 0.5rem,
+	padding-right: 0.5rem,
+	width: 100%,
+), $modal-item-group);
+
+$modal-item-group-first-child: () !default;
+$modal-item-group-first-child: map-deep-merge((
+	padding-left: 0,
+), $modal-item-group-first-child);
+
+$modal-item-group-last-child: () !default;
+$modal-item-group-last-child: map-deep-merge((
+	padding-right: 0,
+), $modal-item-group-last-child);
+
+$modal-item-group-only-child: () !default;
+$modal-item-group-only-child: map-deep-merge((
+	padding-left: 0,
+	padding-right: 0,
+), $modal-item-group-only-child);
+
+$modal-item: () !default;
+$modal-item: map-deep-merge((
+	display: flex,
+	flex-direction: column,
+	flex-grow: 1,
+	flex-shrink: 1,
+	max-width: 100%,
+	min-height: 0,
+	min-width: 3.125rem,
+	padding: 0,
+	position: relative,
+	word-wrap: break-word,
+), $modal-item);
+
+$modal-item-shrink: () !default;
+$modal-item-shrink: map-deep-merge((
+	flex-grow: 0,
+), $modal-item-shrink);
+
+// Modal Title
+
 $modal-title-font-size: 1.25rem !default; // 20px
 $modal-title-font-weight: $font-weight-semi-bold !default;
 $modal-title-text-align: null !default;
@@ -24,6 +72,22 @@ $modal-title-font-size-mobile: null !default;
 
 $modal-title-indicator-font-size: 0.875rem !default; // 14px
 $modal-title-indicator-spacer-x: 0.5rem !default; // 8px
+
+// Modal Subtitle
+
+$modal-subtitle: () !default;
+$modal-subtitle: map-deep-merge((
+	display: inline-block,
+), $modal-subtitle);
+
+$modal-subtitle-divider: () !default;
+$modal-subtitle-divider: map-deep-merge((
+	display: inline-block,
+	margin-left: 0.25rem,
+	margin-right: 0.25rem,
+), $modal-subtitle-divider);
+
+$modal-subtitle-strong: () !default;
 
 // Modal Close
 
