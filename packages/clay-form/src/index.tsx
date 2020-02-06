@@ -11,6 +11,7 @@ import ClayRadio from './Radio';
 import ClayRadioGroup from './RadioGroup';
 import ClaySelect from './Select';
 import ClaySelectWithOption from './SelectWithOption';
+import ClayToggle from './Toggle';
 
 export {
 	ClayCheckbox,
@@ -19,6 +20,7 @@ export {
 	ClayRadioGroup,
 	ClaySelect,
 	ClaySelectWithOption,
+	ClayToggle,
 };
 
 export default ClayForm;
