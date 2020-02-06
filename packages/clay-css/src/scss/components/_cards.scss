@@ -21,6 +21,40 @@
 			}
 		}
 	}
+
+	.aspect-ratio {
+		.label {
+			@include clay-css($card-aspect-ratio-label);
+		}
+	}
+
+	.aspect-ratio-item-top-left {
+		@include clay-css($card-aspect-ratio-item-top-left);
+	}
+
+	.aspect-ratio-item-top-center {
+		@include clay-css($card-aspect-ratio-item-top-center);
+	}
+
+	.aspect-ratio-item-top-right {
+		@include clay-css($card-aspect-ratio-item-top-right);
+	}
+
+	.aspect-ratio-item-right-middle {
+		@include clay-css($card-aspect-ratio-item-right-middle);
+	}
+
+	.aspect-ratio-item-bottom-right {
+		@include clay-css($card-aspect-ratio-item-bottom-right);
+	}
+
+	.aspect-ratio-item-bottom-center {
+		@include clay-css($card-aspect-ratio-item-bottom-center);
+	}
+
+	.aspect-ratio-item-bottom-left {
+		@include clay-css($card-aspect-ratio-item-bottom-left);
+	}
 }
 
 .card-body {
