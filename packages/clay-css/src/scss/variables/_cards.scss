@@ -15,6 +15,56 @@ $card-section-header-margin-bottom: 1.5rem !default;
 $card-section-header-padding: 0 ($grid-gutter-width / 2) !default;
 $card-section-header-text-transform: uppercase !default;
 
+// Card Aspect Ratio
+
+$card-aspect-ratio-label: () !default;
+$card-aspect-ratio-label: map-deep-merge((
+	display: block,
+	margin-bottom: 0.5rem,
+	margin-left: 0,
+	margin-right: 0,
+	margin-top: 0.5rem,
+), $card-aspect-ratio-label);
+
+$card-aspect-ratio-item-top-left: () !default;
+$card-aspect-ratio-item-top-left: map-deep-merge((
+	left: 1rem,
+	top: 1rem,
+), $card-aspect-ratio-item-top-left);
+
+$card-aspect-ratio-item-top-center: () !default;
+$card-aspect-ratio-item-top-center: map-deep-merge((
+	top: 1rem,
+), $card-aspect-ratio-item-top-center);
+
+$card-aspect-ratio-item-top-right: () !default;
+$card-aspect-ratio-item-top-right: map-deep-merge((
+	right: 1rem,
+	top: 1rem,
+), $card-aspect-ratio-item-top-right);
+
+$card-aspect-ratio-item-right-middle: () !default;
+$card-aspect-ratio-item-right-middle: map-deep-merge((
+	right: 1rem,
+), $card-aspect-ratio-item-right-middle);
+
+$card-aspect-ratio-item-bottom-right: () !default;
+$card-aspect-ratio-item-bottom-right: map-deep-merge((
+	bottom: 1rem,
+	right: 1rem,
+), $card-aspect-ratio-item-bottom-right);
+
+$card-aspect-ratio-item-bottom-center: () !default;
+$card-aspect-ratio-item-bottom-center: map-deep-merge((
+	bottom: 1rem,
+), $card-aspect-ratio-item-bottom-center);
+
+$card-aspect-ratio-item-bottom-left: () !default;
+$card-aspect-ratio-item-bottom-left: map-deep-merge((
+	bottom: 1rem,
+	left: 1rem,
+), $card-aspect-ratio-item-bottom-left);
+
 // Card Title
 
 $card-title: () !default;
