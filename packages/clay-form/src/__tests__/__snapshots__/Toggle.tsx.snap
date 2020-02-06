@@ -1,0 +1,315 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rendering default 1`] = `
+<span
+  className="toggle-switch"
+>
+  <span
+    className="toggle-switch-check-bar"
+  >
+    <input
+      checked={false}
+      className="toggle-switch-check"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      aria-hidden="true"
+      className="toggle-switch-bar"
+    >
+      <span
+        className="toggle-switch-handle"
+      />
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Rendering inside radiogroup 1`] = `
+<div
+  className=""
+>
+  <span
+    className="toggle-switch"
+  >
+    <label
+      className="toggle-switch-label"
+    >
+      Foo
+    </label>
+    <span
+      className="toggle-switch-check-bar"
+    >
+      <input
+        checked={true}
+        className="toggle-switch-check"
+        onChange={[Function]}
+        type="radio"
+        value="foo"
+      />
+      <span
+        aria-hidden="true"
+        className="toggle-switch-bar"
+      >
+        <span
+          className="toggle-switch-handle"
+        />
+      </span>
+    </span>
+  </span>
+  <span
+    className="toggle-switch"
+  >
+    <label
+      className="toggle-switch-label"
+    >
+      Bar
+    </label>
+    <span
+      className="toggle-switch-check-bar"
+    >
+      <input
+        checked={false}
+        className="toggle-switch-check"
+        onChange={[Function]}
+        type="radio"
+        value="bar"
+      />
+      <span
+        aria-hidden="true"
+        className="toggle-switch-bar"
+      >
+        <span
+          className="toggle-switch-handle"
+        />
+      </span>
+    </span>
+  </span>
+  <span
+    className="toggle-switch"
+  >
+    <label
+      className="toggle-switch-label"
+    >
+      Baz
+    </label>
+    <span
+      className="toggle-switch-check-bar"
+    >
+      <input
+        checked={false}
+        className="toggle-switch-check"
+        onChange={[Function]}
+        type="radio"
+        value="baz"
+      />
+      <span
+        aria-hidden="true"
+        className="toggle-switch-bar"
+      >
+        <span
+          className="toggle-switch-handle"
+        />
+      </span>
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Rendering w/ dataLabel 1`] = `
+<span
+  className="toggle-switch"
+>
+  <span
+    className="toggle-switch-check-bar"
+  >
+    <input
+      checked={false}
+      className="toggle-switch-check"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      aria-hidden="true"
+      className="toggle-switch-bar"
+    >
+      <span
+        className="toggle-switch-handle"
+        data-label-off="Off"
+        data-label-on="On"
+      />
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Rendering w/ disabled 1`] = `
+<span
+  className="toggle-switch disabled"
+>
+  <span
+    className="toggle-switch-check-bar"
+  >
+    <input
+      checked={false}
+      className="toggle-switch-check"
+      disabled={true}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      aria-hidden="true"
+      className="toggle-switch-bar"
+    >
+      <span
+        className="toggle-switch-handle"
+      />
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Rendering w/ helpText 1`] = `
+<span
+  className="toggle-switch"
+>
+  <span
+    className="toggle-switch-text"
+  >
+    Top Help Text
+  </span>
+  <span
+    className="toggle-switch-text toggle-switch-text-left"
+  >
+    Left Help Text
+  </span>
+  <span
+    className="toggle-switch-check-bar"
+  >
+    <input
+      checked={false}
+      className="toggle-switch-check"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      aria-hidden="true"
+      className="toggle-switch-bar"
+    >
+      <span
+        className="toggle-switch-handle"
+      />
+    </span>
+  </span>
+  <span
+    className="toggle-switch-text toggle-switch-text-right"
+  >
+    Right Help Text
+  </span>
+  <span
+    className="toggle-switch-text"
+  >
+    Bottom Help Text
+  </span>
+</span>
+`;
+
+exports[`Rendering w/ symbol 1`] = `
+<span
+  className="toggle-switch"
+>
+  <span
+    className="toggle-switch-check-bar"
+  >
+    <input
+      checked={false}
+      className="toggle-switch-check"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      aria-hidden="true"
+      className="toggle-switch-bar"
+    >
+      <span
+        className="toggle-switch-handle"
+      >
+        <span
+          className="toggle-switch-icon button-icon button-icon-on"
+        >
+          <svg
+            className="lexicon-icon lexicon-icon-check"
+            role="presentation"
+          >
+            <use
+              xlinkHref="/foo.svg#check"
+            />
+          </svg>
+        </span>
+        <span
+          className="toggle-switch-icon button-icon button-icon-off"
+        >
+          <svg
+            className="lexicon-icon lexicon-icon-times"
+            role="presentation"
+          >
+            <use
+              xlinkHref="/foo.svg#times"
+            />
+          </svg>
+        </span>
+      </span>
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Rendering w/ symbol inverse 1`] = `
+<span
+  className="toggle-switch"
+>
+  <span
+    className="toggle-switch-check-bar"
+  >
+    <input
+      checked={false}
+      className="toggle-switch-check"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      aria-hidden="true"
+      className="toggle-switch-bar"
+    >
+      <span
+        className="toggle-switch-handle"
+      >
+        <span
+          className="toggle-switch-icon toggle-switch-icon-on"
+        >
+          <svg
+            className="lexicon-icon lexicon-icon-check"
+            role="presentation"
+          >
+            <use
+              xlinkHref="/foo.svg#check"
+            />
+          </svg>
+        </span>
+        <span
+          className="toggle-switch-icon toggle-switch-icon-off"
+        >
+          <svg
+            className="lexicon-icon lexicon-icon-times"
+            role="presentation"
+          >
+            <use
+              xlinkHref="/foo.svg#times"
+            />
+          </svg>
+        </span>
+      </span>
+    </span>
+  </span>
+</span>
+`;
