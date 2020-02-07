@@ -80,7 +80,7 @@ storiesOf('Components|ClayModal', module)
 						</ClayModal.Header>
 						<ClayModal.Body
 							scrollable={boolean('scrollable', false)}
-							url={text('Url', null)}
+							url={text('Url', '')}
 						>
 							<h1>{'Hello world!'}</h1>
 							<div>
