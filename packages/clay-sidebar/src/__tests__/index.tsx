@@ -13,9 +13,7 @@ describe('ClaySidebar', () => {
 	afterEach(cleanup);
 
 	it('renders', () => {
-		const {container} = render(
-			<ClaySidebar />
-		);
+		const {container} = render(<ClaySidebar />);
 
 		expect(container).toMatchSnapshot();
 	});

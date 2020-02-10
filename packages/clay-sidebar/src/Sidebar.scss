@@ -1,0 +1,278 @@
+@import "@clayui/css/src/scss/atlas.scss";
+
+// Variables
+
+$cmWidth: 3rem;
+$cmBorderRight: 17rem;
+
+// CM
+.cm {
+  color: $secondary-l1;
+  width: $cmWidth;
+  border-right: 0rem solid $dark;
+  box-sizing: content-box;
+  transition: border-right 300ms ease-in-out, width 300ms ease-in-out;
+  will-change: border-right, width;
+
+  &.cm-active {
+    border-right-width: $cmBorderRight;
+  }
+
+  &.cm-deactive {
+    width: 0rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    position: absolute;
+  }
+}
+
+.cm-bar {
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  width: $cmWidth;
+  height: 100vh;
+  padding-bottom: $cmWidth;
+  flex-direction: column;
+  // transform: translateX(-100%);
+  transition: transform 300ms ease-in-out;
+  will-change: transform;
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    // height: 100%;
+    left: 0;
+    background-color: $dark-d1;
+  }
+
+  .cm-deactive & {
+    // transition-delay: 300ms;
+    transform: translateX(-100%);
+  }
+
+  &.cm-open {
+    // transform: translateX(0%);
+  }
+}
+
+.cm-submenu,
+.cm-menu {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+  overflow-y: auto;
+}
+
+.cm-submenu {
+  // display: none;
+  overflow-y: hidden;
+  transition: max-height 300ms ease-in-out;
+  will-change: max-height;
+  max-height: 0px;
+
+  &.cm-open {
+    // display: block;
+    max-height: 1000px;
+  }
+}
+
+.cm-menu-button {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 300ms ease-in-out, border-color 300ms ease-in-out,
+    background-color 300ms ease-in-out;
+  will-change: color, border-color, background-color;
+  border-radius: 0;
+  border-top: none;
+  border-right: 4px solid transparent;
+  border-bottom: none;
+  border-left: 4px solid transparent;
+
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+
+  &.cm-active {
+    color: $white;
+    border-left-color: $primary-l1;
+    background-color: $dark;
+  }
+}
+
+.cm-toggle {
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+  left: 0;
+  // background-color: $dark;
+  background-color: $dark-d1;
+
+  .lexicon-icon {
+    transition: transform 300ms ease-in-out;
+    will-change: transform;
+    .cm-deactive & {
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+.cm-panel {
+  position: absolute;
+  background-color: $dark;
+  padding: 1rem;
+  top: 0;
+  left: 100%;
+  bottom: 0;
+  overflow-y: auto;
+  width: $cmBorderRight;
+  transition: transform 300ms ease-in-out;
+  will-change: transform;
+  transform: translateX(-100%);
+
+  .cm-active & {
+    transition-delay: 300ms;
+  }
+
+  &.cm-active {
+    transition-delay: 0ms;
+    transform: translateX(0%);
+    z-index: 1;
+  }
+}
+
+// Panel Components
+
+.cm-panel-close {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  z-index: 2;
+
+  &:focus,
+  &:hover {
+    color: inherit;
+  }
+}
+
+.cm-panel-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+// Panel Content
+
+.cm-panel-search {
+  .form-control,
+  .btn {
+    background-color: $dark-l2;
+    border-color: $dark-l1;
+  }
+
+  .form-control {
+    border-right: none;
+    color: inherit;
+
+    &::placeholder {
+      color: $secondary-l1;
+    }
+
+    // :not(:placeholder-shown) ~ .btn {
+    //   color: $white;
+    // }
+  }
+
+  .btn {
+    border-left: none;
+    color: $secondary-l1;
+  }
+}
+
+.cm-panel-subtitle {
+  color: $secondary-l1;
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 1.25rem;
+  line-height: 1.5;
+}
+
+.cm-panel-list {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.cm-panel-button {
+  text-align: left;
+  padding: 0.3215rem 0.75rem;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: $secondary-l2;
+
+  img {
+    padding-top: 0.4375rem;
+    padding-bottom: 0.4375rem;
+  }
+
+  .autofit-col:nth-child(2) {
+    margin-left: 0.5rem;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+
+  &.cm-active {
+    color: $white;
+    background-color: $dark-l1;
+  }
+}
+
+$white: #ffffff;
+$secondary-d2: #30313f;
+
+// Clay Overwrites
+.btn {
+  color: inherit;
+
+  // &:hover,
+  // &:focus,
+  // &.focus {
+  //   color: inherit;
+  // }
+}
+
+.autofit-row-center {
+  align-items: center;
+}
+
+// Portal structure
+.portal {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.left {
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  flex-grow: 1;
+  height: 1000px;
+}
