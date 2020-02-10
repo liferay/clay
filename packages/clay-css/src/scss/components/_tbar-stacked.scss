@@ -1,0 +1,272 @@
+// @import "@clayui/css/src/scss/atlas.scss";
+
+// Variables
+
+$cmWidth: 3rem;
+$cmBorderRight: 17rem;
+$cmAnimationTime: 300ms;
+
+// TEMP CLAY WEBSITE
+
+.clay-site-row-spacer {
+	overflow-x: hidden;
+	.cm {
+		position: relative;
+		height: 100vh;
+	}
+}
+
+// CM
+.cm {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	// width: 0;
+	// height: 100vh;
+	// background-color: $dark-d1;
+	// overflow-x: hidden;
+	// border-right: 0rem solid $dark;
+	// box-sizing: content-box;
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: space-between;
+	// transition: border-right 300ms ease-in-out, width 300ms ease-in-out;
+	// will-change: border-right, width;
+
+	&.cm-active {
+		// border-right-width: $cmBorderRight;
+		// width: $cmWidth;
+	}
+
+	&.cm-deactive {
+		// width: 0rem;
+	}
+
+	@include media-breakpoint-down(sm) {
+		// position: absolute;
+	}
+}
+
+.cm-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	// width: $cmWidth;
+	// background-color: $dark-d1;
+	flex-direction: column;
+	display: none;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: $dark-d1;
+	}
+
+	&.cm-bar-transition {
+		display: flex;
+		transition: transform $cmAnimationTime ease-in-out;
+		will-change: transform;
+		transform: translateX(-100%);
+	}
+
+	&.cm-bar-active {
+		display: flex;
+		transform: translateX(0%);
+	}
+}
+
+.cm-menu {
+	overflow-y: auto;
+}
+
+.cm-submenu {
+	overflow-y: hidden;
+	display: none;
+
+	&.cm-submenu-transition {
+		display: block;
+		transition: max-height $cmAnimationTime ease-in-out;
+		will-change: max-height;
+		max-height: 0rem;
+	}
+
+	&.cm-submenu-active {
+		display: block;
+		max-height: 50rem;
+	}
+}
+
+.cm-button {
+	position: relative;
+	z-index: 1;
+	color: $secondary-l1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0;
+	border: none;
+	transition: color 300ms ease-in-out;
+	will-change: color;
+
+	&:hover,
+	&:focus {
+		color: $white;
+	}
+}
+
+.cm-button-submenu {
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+	transition: color 300ms ease-in-out, border-color 300ms ease-in-out,
+		background-color 300ms ease-in-out;
+	will-change: color, border-color, background-color;
+
+	&.cm-button-active {
+		color: $white;
+		border-left-color: $primary-l1;
+		background-color: $dark;
+	}
+}
+
+.cm-button-toggle {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: $dark-d1;
+
+	.lexicon-icon {
+		transition: transform 300ms ease-in-out;
+		will-change: transform;
+	}
+
+	&.cm-button-active {
+		.lexicon-icon {
+			transform: rotateY(180deg);
+		}
+	}
+}
+
+.cm-panel {
+	position: absolute;
+	top: 0;
+	left: 100%;
+	bottom: 0;
+	width: $cmBorderRight;
+	padding: 1rem;
+	overflow-y: auto;
+	color: $white;
+	background-color: $dark;
+	display: none;
+
+	&.cm-panel-transition {
+		display: block;
+		transition: transform 300ms ease-in-out;
+		will-change: transform;
+		transform: translateX(-100%);
+		// transition-delay: 300ms;
+	}
+
+	&.cm-panel-active {
+		.cm-submenu-active & {
+			.cm-bar-active & {
+				display: block;
+				transform: translateX(0%);
+				// transition-delay: 300ms;
+			}
+		}
+	}
+}
+
+// Panel Components
+
+.cm-panel-close {
+	position: absolute;
+	// z-index: 2;
+	right: 0.5rem;
+	top: 0.5rem;
+	color: inherit;
+
+	&:focus,
+	&:hover {
+		color: inherit;
+	}
+}
+
+.cm-panel-title {
+	font-size: 1rem;
+	font-weight: 600;
+	margin-bottom: 1.5rem;
+	line-height: 1.5;
+}
+
+// Panel Content
+
+.cm-panel-search {
+	.form-control,
+	.btn {
+		background-color: $dark-l2;
+		border-color: $dark-l1;
+	}
+
+	.form-control {
+		border-right: none;
+		color: inherit;
+
+		&::placeholder {
+			color: $secondary-l1;
+		}
+
+		// :not(:placeholder-shown) ~ .btn {
+		//   color: $white;
+		// }
+	}
+
+	.btn {
+		border-left: none;
+		color: $secondary-l1;
+	}
+}
+
+.cm-panel-subtitle {
+	color: $secondary-l1;
+	font-size: 0.75rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin-top: 1.25rem;
+	line-height: 1.5;
+}
+
+.cm-panel-button {
+	padding: 0.3215rem 0.75rem;
+	margin-top: 0.5rem;
+	color: $secondary-l2;
+	text-align: left;
+	font-size: 0.875rem;
+
+	img {
+		padding-top: 0.4375rem;
+		padding-bottom: 0.4375rem;
+	}
+
+	.autofit-col:nth-child(2) {
+		margin-left: 0.5rem;
+	}
+
+	&:hover,
+	&:focus {
+		color: $white;
+	}
+
+	&.cm-button-active {
+		color: $white;
+		background-color: $dark-l1;
+	}
+}
+
