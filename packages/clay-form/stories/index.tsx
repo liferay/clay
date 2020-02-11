@@ -14,6 +14,7 @@ import {
 	ClayRadioGroup,
 	ClaySelect,
 	ClaySelectWithOption,
+	ClayToggle,
 } from '../src';
 import ClayForm from '../src/Form';
 
@@ -288,3 +289,58 @@ storiesOf('Components|ClaySelect', module)
 			</div>
 		</div>
 	));
+
+storiesOf('Components|ClayToggle', module)
+	.add('checkbox', () => {
+		const [toggled, setToggle] = React.useState<boolean>(false);
+
+		return (
+			<>
+				<ClayToggle
+					label={text('label', 'Checkbox')}
+					onToggle={setToggle}
+					toggled={toggled}
+				/>
+
+				<br />
+				<br />
+
+				<ClayToggle
+					label="with symbol"
+					onToggle={setToggle}
+					spritemap={spritemap}
+					symbol={{
+						off: 'times',
+						on: 'check',
+					}}
+					toggled={toggled}
+				/>
+
+				<br />
+				<br />
+
+				<ClayToggle
+					disabled
+					label={text('label', 'Disabled')}
+					onToggle={setToggle}
+					toggled={toggled}
+				/>
+			</>
+		);
+	})
+	.add('radio group', () => {
+		const [value, setValue] = React.useState<string>('foo');
+
+		return (
+			<ClayRadioGroup
+				onSelectedValueChange={val => setValue(val as string)}
+				selectedValue={value}
+			>
+				<ClayToggle label="Foo" value="foo" />
+
+				<ClayToggle label="Bar" value="bar" />
+
+				<ClayToggle label="Baz" value="baz" />
+			</ClayRadioGroup>
+		);
+	});

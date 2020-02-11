@@ -8,9 +8,15 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {IRadioProps} from './Radio';
+import {IToggleProps} from './Toggle';
 
 interface IGroupProps extends React.HTMLAttributes<HTMLDivElement> {
-	children: Array<React.ReactElement<IRadioProps>>;
+	/**
+	 * Takes either Radio or Toggle as a child.
+	 */
+	children: Array<
+		React.ReactElement<IRadioProps> | React.ReactElement<IToggleProps>
+	>;
 
 	/**
 	 * Flag to indicate if radio elements should display inline.
@@ -47,7 +53,7 @@ const ClayRadioGroup: React.FunctionComponent<IGroupProps> = ({
 		<div {...otherProps} className={classNames(className)}>
 			{React.Children.map(
 				children,
-				(child: React.ReactElement<IRadioProps>, i) => {
+				(child: React.ReactElement<IToggleProps | IRadioProps>, i) => {
 					return React.cloneElement(child, {
 						...child.props,
 						checked: selectedValue === child.props.value,
@@ -55,7 +61,8 @@ const ClayRadioGroup: React.FunctionComponent<IGroupProps> = ({
 						key: i,
 						name,
 						onChange: () =>
-							onSelectedValueChange(child.props.value),
+							onSelectedValueChange(child.props.value!),
+						type: 'radio',
 					});
 				}
 			)}
