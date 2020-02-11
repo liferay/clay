@@ -63,9 +63,11 @@
 // Custom Checkbox and Radio
 
 .custom-control {
-	margin-bottom: $custom-control-margin-bottom;
-	margin-top: $custom-control-margin-top;
-	min-height: $custom-control-min-height;
+	@include clay-css($custom-control);
+
+	&:only-child {
+		margin-bottom: 0;
+	}
 
 	label {
 		cursor: map-get($custom-control-label, cursor);
