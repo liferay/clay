@@ -202,6 +202,29 @@ $file-card: map-deep-merge((
 	asset-icon-color: $gray-600
 ), $file-card);
 
+// Product Card
+
+$product-card: () !default;
+$product-card: map-deep-merge((
+	aspect-ratio: (
+		bg: $white,
+		bg-image: linear-gradient(0deg, #EBEBEB, #EBEBEB),
+	),
+	card-body: (
+		text-align: center,
+	),
+	card-title: (
+		font-size: 1rem,
+	),
+	card-subtitle: (
+		font-size: 0.75rem,
+	),
+	card-text: (
+		font-size: 1.125rem,
+		font-weight: $font-weight-semi-bold,
+	),
+), $product-card);
+
 // User Card
 
 $user-card: () !default;
