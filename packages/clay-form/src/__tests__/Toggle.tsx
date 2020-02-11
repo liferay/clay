@@ -20,18 +20,6 @@ describe('Rendering', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('w/ dataLabel', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayToggle
-				dataLabel={{off: 'Off', on: 'On'}}
-				onToggle={() => {}}
-				toggled={false}
-			/>
-		);
-
-		expect(testRenderer.toJSON()).toMatchSnapshot();
-	});
-
 	it('w/ symbol', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayToggle
@@ -41,40 +29,6 @@ describe('Rendering', () => {
 					off: 'times',
 					on: 'check',
 				}}
-				toggled={false}
-			/>
-		);
-
-		expect(testRenderer.toJSON()).toMatchSnapshot();
-	});
-
-	it('w/ symbol inverse', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayToggle
-				onToggle={() => {}}
-				spritemap="/foo.svg"
-				symbol={{
-					inverse: true,
-					off: 'times',
-					on: 'check',
-				}}
-				toggled={false}
-			/>
-		);
-
-		expect(testRenderer.toJSON()).toMatchSnapshot();
-	});
-
-	it('w/ helpText', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayToggle
-				helpText={{
-					bottom: 'Bottom Help Text',
-					left: 'Left Help Text',
-					right: 'Right Help Text',
-					top: 'Top Help Text',
-				}}
-				onToggle={() => {}}
 				toggled={false}
 			/>
 		);
@@ -114,16 +68,16 @@ describe('Interactions', () => {
 	it('toggles on/off', () => {
 		const handleToggleChange = jest.fn();
 
-		const {getByLabelText} = render(
+		const {getByTestId} = render(
 			<ClayToggle
-				id="toggle"
+				data-testid="toggler"
 				label="Toggle"
 				onToggle={handleToggleChange}
 				toggled={false}
 			/>
 		);
 
-		fireEvent.click(getByLabelText('Toggle') as HTMLButtonElement, {});
+		fireEvent.click(getByTestId('toggler') as HTMLButtonElement, {});
 
 		expect(handleToggleChange).toHaveBeenCalledTimes(1);
 		expect(handleToggleChange).toHaveBeenCalledWith(true);
@@ -132,20 +86,20 @@ describe('Interactions', () => {
 	it('selecting toggle inside of radiogroup', () => {
 		const handleSelectedChange = jest.fn();
 
-		const {getByLabelText} = render(
+		const {getByTestId} = render(
 			<ClayRadioGroup
 				onSelectedValueChange={handleSelectedChange}
 				selectedValue={'foo'}
 			>
-				<ClayToggle id="foo" label="Foo" value="foo" />
+				<ClayToggle label="Foo" value="foo" />
 
-				<ClayToggle id="bar" label="Bar" value="bar" />
+				<ClayToggle data-testid="toggler" label="Bar" value="bar" />
 
-				<ClayToggle id="baz" label="Baz" value="baz" />
+				<ClayToggle label="Baz" value="baz" />
 			</ClayRadioGroup>
 		);
 
-		const toggleBar = getByLabelText('Bar');
+		const toggleBar = getByTestId('toggler');
 
 		fireEvent.click(toggleBar as HTMLButtonElement, {});
 
