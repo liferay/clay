@@ -2,7 +2,7 @@
 
 exports[`Rendering default 1`] = `
 <span
-  className="toggle-switch"
+  className="toggle-switch simple-toggle-switch"
 >
   <span
     className="toggle-switch-check-bar"
@@ -30,13 +30,8 @@ exports[`Rendering inside radiogroup 1`] = `
   className=""
 >
   <span
-    className="toggle-switch"
+    className="toggle-switch simple-toggle-switch"
   >
-    <label
-      className="toggle-switch-label"
-    >
-      Foo
-    </label>
     <span
       className="toggle-switch-check-bar"
     >
@@ -56,15 +51,15 @@ exports[`Rendering inside radiogroup 1`] = `
         />
       </span>
     </span>
-  </span>
-  <span
-    className="toggle-switch"
-  >
-    <label
+    <span
       className="toggle-switch-label"
     >
-      Bar
-    </label>
+      Foo
+    </span>
+  </span>
+  <span
+    className="toggle-switch simple-toggle-switch"
+  >
     <span
       className="toggle-switch-check-bar"
     >
@@ -84,15 +79,15 @@ exports[`Rendering inside radiogroup 1`] = `
         />
       </span>
     </span>
-  </span>
-  <span
-    className="toggle-switch"
-  >
-    <label
+    <span
       className="toggle-switch-label"
     >
-      Baz
-    </label>
+      Bar
+    </span>
+  </span>
+  <span
+    className="toggle-switch simple-toggle-switch"
+  >
     <span
       className="toggle-switch-check-bar"
     >
@@ -112,40 +107,18 @@ exports[`Rendering inside radiogroup 1`] = `
         />
       </span>
     </span>
+    <span
+      className="toggle-switch-label"
+    >
+      Baz
+    </span>
   </span>
 </div>
 `;
 
-exports[`Rendering w/ dataLabel 1`] = `
-<span
-  className="toggle-switch"
->
-  <span
-    className="toggle-switch-check-bar"
-  >
-    <input
-      checked={false}
-      className="toggle-switch-check"
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <span
-      aria-hidden="true"
-      className="toggle-switch-bar"
-    >
-      <span
-        className="toggle-switch-handle"
-        data-label-off="Off"
-        data-label-on="On"
-      />
-    </span>
-  </span>
-</span>
-`;
-
 exports[`Rendering w/ disabled 1`] = `
 <span
-  className="toggle-switch disabled"
+  className="toggle-switch simple-toggle-switch disabled"
 >
   <span
     className="toggle-switch-check-bar"
@@ -169,54 +142,9 @@ exports[`Rendering w/ disabled 1`] = `
 </span>
 `;
 
-exports[`Rendering w/ helpText 1`] = `
-<span
-  className="toggle-switch"
->
-  <span
-    className="toggle-switch-text"
-  >
-    Top Help Text
-  </span>
-  <span
-    className="toggle-switch-text toggle-switch-text-left"
-  >
-    Left Help Text
-  </span>
-  <span
-    className="toggle-switch-check-bar"
-  >
-    <input
-      checked={false}
-      className="toggle-switch-check"
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <span
-      aria-hidden="true"
-      className="toggle-switch-bar"
-    >
-      <span
-        className="toggle-switch-handle"
-      />
-    </span>
-  </span>
-  <span
-    className="toggle-switch-text toggle-switch-text-right"
-  >
-    Right Help Text
-  </span>
-  <span
-    className="toggle-switch-text"
-  >
-    Bottom Help Text
-  </span>
-</span>
-`;
-
 exports[`Rendering w/ symbol 1`] = `
 <span
-  className="toggle-switch"
+  className="toggle-switch simple-toggle-switch"
 >
   <span
     className="toggle-switch-check-bar"
@@ -235,7 +163,7 @@ exports[`Rendering w/ symbol 1`] = `
         className="toggle-switch-handle"
       >
         <span
-          className="toggle-switch-icon button-icon button-icon-on"
+          className="button-icon button-icon-on toggle-switch-icon"
         >
           <svg
             className="lexicon-icon lexicon-icon-check"
@@ -247,57 +175,7 @@ exports[`Rendering w/ symbol 1`] = `
           </svg>
         </span>
         <span
-          className="toggle-switch-icon button-icon button-icon-off"
-        >
-          <svg
-            className="lexicon-icon lexicon-icon-times"
-            role="presentation"
-          >
-            <use
-              xlinkHref="/foo.svg#times"
-            />
-          </svg>
-        </span>
-      </span>
-    </span>
-  </span>
-</span>
-`;
-
-exports[`Rendering w/ symbol inverse 1`] = `
-<span
-  className="toggle-switch"
->
-  <span
-    className="toggle-switch-check-bar"
-  >
-    <input
-      checked={false}
-      className="toggle-switch-check"
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <span
-      aria-hidden="true"
-      className="toggle-switch-bar"
-    >
-      <span
-        className="toggle-switch-handle"
-      >
-        <span
-          className="toggle-switch-icon toggle-switch-icon-on"
-        >
-          <svg
-            className="lexicon-icon lexicon-icon-check"
-            role="presentation"
-          >
-            <use
-              xlinkHref="/foo.svg#check"
-            />
-          </svg>
-        </span>
-        <span
-          className="toggle-switch-icon toggle-switch-icon-off"
+          className="button-icon button-icon-off toggle-switch-icon"
         >
           <svg
             className="lexicon-icon lexicon-icon-times"

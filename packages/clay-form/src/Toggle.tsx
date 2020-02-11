@@ -11,14 +11,12 @@ import React from 'react';
 export interface IToggleProps
 	extends React.InputHTMLAttributes<HTMLInputElement> {
 	containerProps?: React.HTMLAttributes<HTMLSpanElement>;
-	dataLabel?: {on: string; off: string};
 	disabled?: boolean;
-	helpText?: {bottom?: string; left?: string; right?: string; top?: string};
 	id?: string;
 	label?: React.ReactText;
 	onToggle?: (val: boolean) => void;
 	spritemap?: string;
-	symbol?: {on: string; off: string; inverse?: boolean};
+	symbol?: {on: string; off: string};
 	toggled?: boolean;
 	type?: 'checkbox' | 'radio';
 	value?: string;
@@ -29,9 +27,7 @@ const ClayToggle = React.forwardRef<HTMLLabelElement, IToggleProps>(
 		{
 			checked,
 			containerProps = {},
-			dataLabel,
 			disabled,
-			helpText = {bottom: '', left: '', right: '', top: ''},
 			id,
 			label,
 			onChange,
@@ -45,33 +41,6 @@ const ClayToggle = React.forwardRef<HTMLLabelElement, IToggleProps>(
 		}: IToggleProps,
 		ref
 	) => {
-		const dataLabelAttrs = dataLabel
-			? {
-					'data-label-off': dataLabel.off,
-					'data-label-on': dataLabel.on,
-			  }
-			: {};
-
-		const HelpTextNode = ({
-			left,
-			right,
-			text,
-		}: {
-			left?: boolean;
-			right?: boolean;
-			text?: string;
-		}) =>
-			text ? (
-				<span
-					className={classNames('toggle-switch-text', {
-						'toggle-switch-text-left': left,
-						'toggle-switch-text-right': right,
-					})}
-				>
-					{text}
-				</span>
-			) : null;
-
 		if (type === 'radio') {
 			toggled = checked;
 		}
@@ -80,22 +49,13 @@ const ClayToggle = React.forwardRef<HTMLLabelElement, IToggleProps>(
 			<span
 				className={classNames(
 					'toggle-switch',
+					'simple-toggle-switch',
 					containerProps.className,
 					{disabled}
 				)}
 				ref={ref}
 				{...containerProps}
 			>
-				{label && (
-					<label className="toggle-switch-label" htmlFor={id}>
-						{label}
-					</label>
-				)}
-
-				<HelpTextNode text={helpText.top} />
-
-				<HelpTextNode left text={helpText.left} />
-
 				<span className="toggle-switch-check-bar">
 					<input
 						{...otherProps}
@@ -117,21 +77,14 @@ const ClayToggle = React.forwardRef<HTMLLabelElement, IToggleProps>(
 					/>
 
 					<span aria-hidden="true" className="toggle-switch-bar">
-						<span
-							className="toggle-switch-handle"
-							{...dataLabelAttrs}
-						>
+						<span className="toggle-switch-handle">
 							{symbol && (
 								<>
 									<span
 										className={classNames(
-											'toggle-switch-icon',
-											{
-												'button-icon': !symbol.inverse,
-												'button-icon-on': !symbol.inverse,
-												'toggle-switch-icon-on':
-													symbol.inverse,
-											}
+											'button-icon',
+											'button-icon-on',
+											'toggle-switch-icon'
 										)}
 									>
 										<ClayIcon
@@ -142,13 +95,9 @@ const ClayToggle = React.forwardRef<HTMLLabelElement, IToggleProps>(
 
 									<span
 										className={classNames(
-											'toggle-switch-icon',
-											{
-												'button-icon': !symbol.inverse,
-												'button-icon-off': !symbol.inverse,
-												'toggle-switch-icon-off':
-													symbol.inverse,
-											}
+											'button-icon',
+											'button-icon-off',
+											'toggle-switch-icon'
 										)}
 									>
 										<ClayIcon
@@ -162,9 +111,7 @@ const ClayToggle = React.forwardRef<HTMLLabelElement, IToggleProps>(
 					</span>
 				</span>
 
-				<HelpTextNode right text={helpText.right} />
-
-				<HelpTextNode text={helpText.bottom} />
+				{label && <span className="toggle-switch-label">{label}</span>}
 			</span>
 		);
 	}

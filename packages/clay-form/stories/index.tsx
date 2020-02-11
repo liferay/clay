@@ -306,16 +306,6 @@ storiesOf('Components|ClayToggle', module)
 				<br />
 
 				<ClayToggle
-					dataLabel={{off: 'Off', on: 'On'}}
-					label={text('label', 'With DataLabel')}
-					onToggle={setToggle}
-					toggled={toggled}
-				/>
-
-				<br />
-				<br />
-
-				<ClayToggle
 					label="with symbol"
 					onToggle={setToggle}
 					spritemap={spritemap}
@@ -323,36 +313,6 @@ storiesOf('Components|ClayToggle', module)
 						off: 'times',
 						on: 'check',
 					}}
-					toggled={toggled}
-				/>
-
-				<br />
-				<br />
-
-				<ClayToggle
-					label="With Symbol Inverse"
-					onToggle={setToggle}
-					spritemap={spritemap}
-					symbol={{
-						inverse: true,
-						off: 'times',
-						on: 'check',
-					}}
-					toggled={toggled}
-				/>
-
-				<br />
-				<br />
-
-				<ClayToggle
-					helpText={{
-						bottom: text('helpText-bottom', 'Bottom Help Text'),
-						left: text('helpText-left', 'Left Help Text'),
-						right: text('helpText-right', 'Right Help Text'),
-						top: text('helpText-top', 'Top Help Text'),
-					}}
-					label={text('label', 'With HelpText')}
-					onToggle={setToggle}
 					toggled={toggled}
 				/>
 
