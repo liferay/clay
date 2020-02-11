@@ -49,6 +49,8 @@ $custom-control-indicator-indeterminate-border-color: $custom-control-indicator-
 
 // Custom Control
 
+// @deprecated after of v3.5.0 use the Sass map `$custom-control` instead
+
 $custom-control-margin-bottom: 0.5rem !default;
 
 // Custom Control Description
