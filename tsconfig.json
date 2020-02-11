@@ -15,11 +15,7 @@
 			"*": ["custom-types/*", "node_modules/*", "packages/*"]
 		}
 	},
-	"awesomeTypescriptLoaderOptions": {
-		"useBabel": true,
-		"babelCore": "@babel/core"
-	},
-	"include": ["packages/*"],
+	"include": ["packages/**/*"],
 	"exclude": [
 		"node_modules",
 		"packages/**/lib",
