@@ -525,6 +525,10 @@
 	@include clay-card-type-asset-variant($file-card);
 }
 
+.product-card {
+	@include clay-card-variant($product-card);
+}
+
 .user-card {
 	@include clay-card-type-asset-variant($user-card);
 }
