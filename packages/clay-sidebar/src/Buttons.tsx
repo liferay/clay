@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 /**
  * © 2019 Liferay, Inc. <https://liferay.com>
  *
@@ -6,43 +5,104 @@
  */
 
 import {ClayButtonWithIcon} from '@clayui/button';
-import React, {useContext} from 'react';
+import classNames from 'classnames';
+import React, {useContext, useState} from 'react';
 
 import SidebarContext from './Context';
 import {ISidebarItem} from './types';
 
-interface IButtonsProps extends React.HTMLAttributes<HTMLButtonElement> {
+interface IButtonsProps extends React.HTMLAttributes<HTMLUListElement> {
 	items: Array<ISidebarItem>;
+	onPanelSelected?: (panelKey: string) => void;
+	spritemap: string;
 }
 
-export const Buttons: React.FunctionComponent<IButtonsProps> = ({items}) => {
-	const {displayType, position} = useContext(SidebarContext);
+interface IIconProps extends React.HTMLAttributes<HTMLButtonElement> {
+	icon: string;
+	items?: Array<ISidebarItem>;
+	label: string;
+	onPanelSelected?: (panelKey: string) => void;
+	panelKey?: string;
+	renderIcon?: Function;
+	spritemap: string;
+}
 
-	console.log('info do contexto: ', {displayType, position});
+const Icon: React.FunctionComponent<IIconProps> = ({
+	icon,
+	label,
+	onPanelSelected,
+	panelKey,
+	renderIcon,
+	spritemap,
+	...otherProps
+}) => {
+	const {children, selectedPanelId} = useContext(SidebarContext);
 
-    return (
-        <>
-            {items.map(
-            ({icon, items, label, renderIcon, ...itemOtherProps}, key) => {
-                if (items) {
-                    return <Buttons items={items} key={key} />;
-                }
-    
-                if (renderIcon && typeof renderIcon === 'function') {
-                    return renderIcon({icon, label, ...itemOtherProps});
-                }
-    
-                return (
-                    <ClayButtonWithIcon
-                        aria-label={label}
-                        className="btn-lg cm-menu-button"
-                        key={`key-${icon}`}
-                        monospaced
-                        symbol={icon}
-                        {...itemOtherProps}
-                    />
-                );
-            })}
-        </>
-    )
+	if (renderIcon && typeof renderIcon === 'function') {
+		return renderIcon({icon, label, onPanelSelected});
+	}
+
+	return (
+		<>
+			<ClayButtonWithIcon
+				aria-label={label}
+				className="btn-lg cm-menu-button"
+				displayType="unstyled"
+				onClick={() => {
+					if (onPanelSelected && panelKey) {
+						onPanelSelected(panelKey);
+					}
+
+					if (onPanelSelected && selectedPanelId === panelKey) {
+						onPanelSelected('');
+					}
+				}}
+				spritemap={spritemap}
+				symbol={icon}
+				title={label}
+				{...otherProps}
+			/>
+			{React.Children.map(children, child => {
+				if (
+					React.isValidElement(child) &&
+					child.props.panelKey === selectedPanelId
+				) {
+					return child;
+				}
+			})}
+		</>
+	);
 };
+
+export const Buttons: React.FunctionComponent<IButtonsProps> = React.forwardRef<
+	HTMLUListElement,
+	IButtonsProps
+>(({items, onPanelSelected, spritemap, ...otherProps}, ref) => {
+	const [expanded, setExpanded] = useState<boolean>(false);
+
+	return (
+		<ul {...otherProps} className="cm-menu" ref={ref}>
+			{items.map(({items, panelKey, ...otherProps}, key) => (
+				<li key={key} onClick={() => setExpanded(!expanded)}>
+					<Icon
+						{...otherProps}
+						onPanelSelected={onPanelSelected}
+						panelKey={panelKey}
+						spritemap={spritemap}
+					/>
+
+					{items && (
+						<Buttons
+							className={classNames('cm-submenu', {
+								'cm-open': expanded,
+							})}
+							items={items}
+							onPanelSelected={onPanelSelected}
+							spritemap={spritemap}
+						/>
+					)}
+				</li>
+			))}
+		</ul>
+	);
+});

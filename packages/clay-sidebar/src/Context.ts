@@ -6,14 +6,16 @@
 
 import React from 'react';
 
-import {ISidebarItem, TDisplay, TSidebarPosition} from './types';
+import {TDisplay, TSidebarPosition} from './types';
 
 export interface IContext {
+	children: React.ReactChildren | React.ReactNode;
+
 	displayType: TDisplay;
 
-	items: Array<ISidebarItem>;
-
 	position: TSidebarPosition;
+
+	selectedPanelId: string;
 }
 
 const context = React.createContext({} as IContext);

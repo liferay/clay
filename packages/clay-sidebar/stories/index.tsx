@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /**
  * © 2019 Liferay, Inc. <https://liferay.com>
  *
@@ -8,86 +9,96 @@ import '@clayui/css/lib/css/atlas.css';
 
 import '../src/Sidebar.scss';
 
+import {ClayButtonWithIcon} from '@clayui/button';
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import ClayForm from '@clayui/form';
 import {storiesOf} from '@storybook/react';
-import React from 'react';
+import classNames from 'classnames';
+import React, {useContext} from 'react';
 
 import ClaySidebar from '../src';
+import SidebarContext from '../src/Context';
+
+// const renderIcon = (props: any) => {
+// 	console.log('props from renderIcon: ', props);
+// 	// return (
+// 	// 	<div className="bg-success" onClick={openCallback}>
+// 	// 		{children}
+// 	// 	</div>
+// 	// );
+// };
 
 const items = [
 	{
-		icon: 'dxp',
+		icon: 'analytics',
 		items: [
 			{
 				icon: 'square',
-				id: 'widgets',
 				label: 'Widgets',
-				renderIcon: (
-					children: React.ReactChildren,
-					openCallback: (e: React.MouseEvent) => void
-				) => (
-					<div className="bg-success" onClick={openCallback}>
-						{' '}
-						{children}{' '}
-					</div>
-				),
+				panelKey: 'widgets',
 			},
 			{
-				icon: 'app',
-				id: 'apps',
+				icon: 'change',
 				label: 'Applications',
-				renderIcon: (
-					children: React.ReactChildren,
-					openCallback: (e: React.MouseEvent) => void
-				) => (
-					<div className="bg-success" onClick={openCallback}>
-						{' '}
-						{children}{' '}
-					</div>
-				),
+				panelKey: 'apps',
 			},
 		],
 		label: 'dxp',
 	},
+
 	{
-		href: 'https://gatsby.com/',
-		icon: 'gatsby',
-		label: 'gatsby',
+		icon: 'anonymize',
+		label: 'walter white',
 	},
+
 	{
-		children: [
+		icon: 'bolt',
+		items: [
 			{
-				icon: 'square',
-				id: 'widgets',
-				renderIcon: (
-					children: React.ReactChildren,
-					openCallback: (e: React.MouseEvent) => void
-				) => (
-					<div className="bg-success" onClick={openCallback}>
-						{' '}
-						{children}{' '}
-					</div>
-				),
+				icon: 'times',
+				label: 'Times',
+				panelKey: 'times',
 			},
 			{
-				icon: 'app',
-				id: 'apps',
-				label: 'Applications',
-				renderIcon: (
-					children: React.ReactChildren,
-					openCallback: (e: React.MouseEvent) => void
-				) => (
-					<div className="bg-success" onClick={openCallback}>
-						{' '}
-						{children}{' '}
-					</div>
-				),
+				icon: 'adjust',
+				label: 'Adjust',
+				panelKey: 'adjust',
 			},
 		],
-		icon: 'music',
 		label: 'musicxmatch',
 	},
 ];
 
+function Panel({...props}) {
+	const {selectedPanelId} = useContext(SidebarContext);
+
+	return (
+		<div
+			className={classNames('cm-panel', {
+				'cm-active': selectedPanelId !== '',
+			})}
+			{...props}
+		>
+			<ClayButtonWithIcon
+				className="btn-link cm-panel-close"
+				displayType="link"
+				spritemap={spritemap}
+				symbol="times"
+			/>
+			<h1 className="cm-panel-title">{'Your sites'}</h1>
+			<h2 className="cm-panel-title">
+				<span>{'Soundhub Global'}</span>
+			</h2>
+			<ClayForm.Group className="cm-panel-search">
+				<h3 className="cm-panel-subtitle">{'Recent'}</h3>
+			</ClayForm.Group>
+			{props.children}
+		</div>
+	);
+}
+
 storiesOf('Components|ClaySidebar', module).add('default', () => (
-	<ClaySidebar displayType="dark" items={items} position="left" />
+	<ClaySidebar items={items} spritemap={spritemap}>
+		<Panel panelKey="widgets" />
+	</ClaySidebar>
 ));

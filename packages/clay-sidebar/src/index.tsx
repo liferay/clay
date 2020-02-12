@@ -1,24 +1,25 @@
-/* eslint-disable no-console */
-
 /**
  * © 2019 Liferay, Inc. <https://liferay.com>
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {ClayButtonWithIcon} from '@clayui/button';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useState} from 'react';
 
 import {Buttons} from './Buttons';
 import SidebarContext from './Context';
 import {TDisplay, ISidebarItem, TSidebarPosition} from './types';
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
-	displayType: TDisplay;
+	displayType?: TDisplay;
 
 	items: Array<ISidebarItem>;
 
-	position: TSidebarPosition;
+	position?: TSidebarPosition;
+
+	spritemap: string;
 }
 
 const ClaySidebar: React.FunctionComponent<IProps> = ({
@@ -26,21 +27,44 @@ const ClaySidebar: React.FunctionComponent<IProps> = ({
 	className,
 	displayType = 'light',
 	items,
-	position,
+	position = 'left',
+	spritemap,
 	...otherProps
 }) => {
-	console.log({children, displayType, position});
+	const [selectedPanelId, setSelectedPanelId] = useState<string>('');
 
 	return (
-		<div {...otherProps} className={classNames('cm', className)}>
-			<SidebarContext.Provider value={{displayType, items, position}}>
+		<div
+			{...otherProps}
+			className={classNames('cm', className, {
+				'cm-active': selectedPanelId !== '',
+			})}
+		>
+			<SidebarContext.Provider
+				value={{
+					children,
+					displayType,
+					position,
+					selectedPanelId,
+				}}
+			>
 				<div className="cm-bar">
-					<ul className="cm-menu">
-						<li>
-							<Buttons items={items} />
-						</li>
-					</ul>
+					<Buttons
+						items={items}
+						onPanelSelected={panelKey =>
+							setSelectedPanelId(panelKey)
+						}
+						spritemap={spritemap}
+					/>
 				</div>
+
+				<ClayButtonWithIcon
+					className="btn-lg cm-menu-button cm-toggle"
+					displayType="unstyled"
+					onClick={() => setSelectedPanelId('')}
+					spritemap={spritemap}
+					symbol="angle-left"
+				/>
 			</SidebarContext.Provider>
 		</div>
 	);

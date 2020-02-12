@@ -10,6 +10,7 @@ export type TSidebarPosition = 'left' | 'right';
 export interface ISidebarItem {
 	label: string;
 	icon: string;
+	panelKey?: string;
 	items?: Array<ISidebarItem>;
 	href?: string;
 	renderIcon?: Function;

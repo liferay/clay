@@ -127,6 +127,7 @@ $cmBorderRight: 17rem;
 }
 
 .cm-panel {
+  display: block;
   position: absolute;
   background-color: $dark;
   padding: 1rem;
