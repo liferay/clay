@@ -27,7 +27,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	/**
 	 * Default position of menu element. Values come from `./Menu`.
 	 */
-	alignmentPosition?: number;
+	alignmentPosition?: React.ComponentProps<typeof Menu>['alignmentPosition'];
 
 	/**
 	 * HTML element tag that the container should render.

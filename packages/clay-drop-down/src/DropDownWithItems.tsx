@@ -13,6 +13,7 @@ import Divider from './Divider';
 import ClayDropDown from './DropDown';
 import ClayDropDownGroup from './Group';
 import Help from './Help';
+import ClayMenu from './Menu';
 import Search from './Search';
 
 type TType = 'checkbox' | 'group' | 'item' | 'radio' | 'radiogroup' | 'divider';
@@ -49,7 +50,9 @@ export interface IProps extends IDropDownContentProps {
 	/**
 	 * Default position of menu element. Values come from `./Menu`.
 	 */
-	alignmentPosition?: number;
+	alignmentPosition?: React.ComponentProps<
+		typeof ClayMenu
+	>['alignmentPosition'];
 
 	/**
 	 * Informational text that appears at the end or above the `footerContent` prop.

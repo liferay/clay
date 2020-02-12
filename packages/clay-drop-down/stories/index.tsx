@@ -26,16 +26,7 @@ const DropDownWithState: React.FunctionComponent<any> = ({
 			active={active}
 			alignmentPosition={select(
 				'Alignment Position',
-				{
-					BottomCenter: Align.BottomCenter,
-					BottomLeft: Align.BottomLeft,
-					BottomRight: Align.BottomRight,
-					LeftCenter: Align.LeftCenter,
-					RightCenter: Align.RightCenter,
-					TopCenter: Align.TopCenter,
-					TopLeft: Align.TopLeft,
-					TopRight: Align.TopRight,
-				},
+				Align,
 				Align.BottomLeft
 			)}
 			onActiveChange={newVal => setActive(newVal)}
@@ -274,4 +265,27 @@ storiesOf('Components|ClayDropDown', module)
 				trigger={<ClayButton>{'Click Me'}</ClayButton>}
 			/>
 		);
-	});
+	})
+	.add('alignment positions', () => (
+		<div style={{margin: '200px 300px'}}>
+			{Object.keys(Align).map(alignPosition => (
+				<>
+					<ClayDropDownWithItems
+						alignmentPosition={
+							Align[alignPosition as keyof typeof Align]
+						}
+						items={[
+							{href: '#one', label: 'one'},
+							{href: '#two', label: 'two'},
+							{disabled: true, href: '#three', label: 'three'},
+							{href: '#four', label: 'four'},
+						]}
+						key={alignPosition}
+						spritemap={spritemap}
+						trigger={<ClayButton>{alignPosition}</ClayButton>}
+					/>
+					<br />
+				</>
+			))}
+		</div>
+	));
