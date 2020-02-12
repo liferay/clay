@@ -140,19 +140,10 @@
 
 	$c-inner: setter(map-get($map, c-inner), ());
 	$c-inner: map-deep-merge((
-			align-items: $align-items,
-			display: $display,
-			height: $height,
-			justify-content: $justify-content,
-			margin-bottom: math-sign($padding-bottom),
-			margin-left: math-sign($padding-left),
-			margin-right: math-sign($padding-right),
-			margin-top: math-sign($padding-top),
-			padding-bottom: $padding-bottom,
-			padding-left: $padding-left,
-			padding-right: $padding-right,
-			padding-top: $padding-top,
-			width: $width,
+		margin-bottom: math-sign($padding-bottom),
+		margin-left: math-sign($padding-left),
+		margin-right: math-sign($padding-right),
+		margin-top: math-sign($padding-top),
 	), $c-inner);
 
 	align-items: $align-items;

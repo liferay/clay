@@ -58,10 +58,6 @@
 		margin-left: math-sign($padding-x),
 		margin-right: math-sign($padding-x),
 		margin-top: math-sign($padding-y),
-		padding-bottom: $padding-y,
-		padding-left: $padding-x,
-		padding-right: $padding-x,
-		padding-top: $padding-y,
 	), $c-inner);
 
 	border-width: $border-width;
