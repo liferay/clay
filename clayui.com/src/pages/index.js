@@ -15,6 +15,8 @@ export default () => {
 	const description =
 		'This is Clay. A web implementation of the Lexicon Experience Language; built by Liferay.';
 
+	const CopyrightYear = new Date().getFullYear()
+
 	return (
 		<div className="home">
 			<div
@@ -401,7 +403,7 @@ export default () => {
 
 							<div className="col-lg text-center text-lg-right">
 								<div>
-									{'Copyright © 2019 '}
+									{'Copyright © ' + `${CopyrightYear} `}
 									<a
 										className="font-weight-bold"
 										href="https://www.liferay.com/"
