@@ -252,15 +252,11 @@
 
 	$c-inner: setter(map-get($map, c-inner), ());
 	$c-inner: map-deep-merge((
-		display: $display,
 		margin-bottom: math-sign($padding-bottom),
 		margin-left: math-sign($padding-left),
 		margin-right: math-sign($padding-right),
 		margin-top: math-sign($padding-top),
-		padding-bottom: $padding-bottom,
-		padding-left: $padding-left,
-		padding-right: $padding-right,
-		padding-top: $padding-top,
+		width: auto,
 	), $c-inner);
 
 	@if ($enabled) {
