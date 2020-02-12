@@ -55,6 +55,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	onActiveChange: (val: boolean) => void;
 
 	/**
+	 * Function for setting the offset of the menu from the trigger.
+	 */
+	offsetFn?: React.ComponentProps<typeof Menu>['offsetFn'];
+
+	/**
 	 * Element that is used as the trigger which will activate the dropdown on click.
 	 */
 	trigger: React.ReactElement & {
@@ -83,6 +88,7 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 	hasLeftSymbols,
 	hasRightSymbols,
 	menuElementAttrs,
+	offsetFn,
 	onActiveChange,
 	trigger,
 	...otherProps
@@ -147,6 +153,7 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 					alignmentPosition={alignmentPosition}
 					hasLeftSymbols={hasLeftSymbols}
 					hasRightSymbols={hasRightSymbols}
+					offsetFn={offsetFn}
 					onSetActive={onActiveChange}
 					ref={menuElementRef}
 				>
