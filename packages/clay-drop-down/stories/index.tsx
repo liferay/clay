@@ -105,6 +105,39 @@ storiesOf('Components|ClayDropDown', module)
 			</ClayDropDown.ItemList>
 		</DropDownWithState>
 	))
+	.add('search', () => {
+		const [query, setQuery] = React.useState('');
+
+		return (
+			<DropDownWithState>
+				<ClayDropDown.Search
+					formProps={{onSubmit: e => e.preventDefault()}}
+					onChange={event => setQuery(event.target.value)}
+					spritemap={spritemap}
+					value={query}
+				/>
+
+				<ClayDropDown.ItemList>
+					{[
+						{href: '#one', label: 'one'},
+						{href: '#two', label: 'two'},
+						{disabled: true, href: '#three', label: 'three'},
+						{href: '#four', label: 'four'},
+					]
+						.filter(({label}) => label.match(query))
+						.map(({href, label, ...otherProps}, i) => (
+							<ClayDropDown.Item
+								href={href}
+								key={i}
+								{...otherProps}
+							>
+								{label}
+							</ClayDropDown.Item>
+						))}
+				</ClayDropDown.ItemList>
+			</DropDownWithState>
+		);
+	})
 	.add('radio', () => (
 		<DropDownWithState>
 			<ClayDropDown.ItemList>
@@ -227,6 +260,14 @@ storiesOf('Components|ClayDropDown', module)
 				helpText="You can customize this menu or see all you have by pressing 'more'."
 				items={items}
 				onSearchValueChange={setValue}
+				searchProps={{
+					formProps: {
+						onSubmit: e => {
+							e.preventDefault();
+							alert('Submitted!');
+						},
+					},
+				}}
 				searchValue={value}
 				searchable={boolean('Searchable', true)}
 				spritemap={spritemap}

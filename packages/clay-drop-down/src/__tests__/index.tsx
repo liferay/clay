@@ -303,4 +303,29 @@ describe('ClayDropDown', () => {
 
 		expect(onClickFn).toHaveBeenCalled();
 	});
+
+	it('prevents form submission', () => {
+		const onSubmitFn = jest.fn();
+
+		const {container} = render(
+			<DropDownWithState>
+				<ClayDropDown.Search
+					formProps={{onSubmit: onSubmitFn}}
+					onChange={() => {}}
+					spritemap="/foo/bar"
+					value="test"
+				/>
+			</DropDownWithState>
+		);
+
+		const toggleButton = container.querySelector('.dropdown-toggle');
+
+		fireEvent.click(toggleButton as HTMLButtonElement, {});
+
+		const input = document.querySelector('input');
+
+		fireEvent.submit(input as HTMLInputElement, {});
+
+		expect(onSubmitFn).toHaveBeenCalled();
+	});
 });
