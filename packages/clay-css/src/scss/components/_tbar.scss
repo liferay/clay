@@ -63,12 +63,6 @@
 
 .tbar-link {
 	display: inline-block;
-
-	@if ($enable-c-inner) {
-		.c-inner {
-			display: inline-block;
-		}
-	}
 }
 
 .tbar-btn-monospaced,
@@ -80,15 +74,6 @@
 	overflow: hidden;
 	padding: 0;
 	text-align: center;
-
-	@if ($enable-c-inner) {
-		.c-inner {
-			align-items: center;
-			display: inline-flex;
-			flex-direction: column;
-			justify-content: center;
-		}
-	}
 
 	.inline-item .lexicon-icon,
 	.lexicon-icon {

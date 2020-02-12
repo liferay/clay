@@ -236,7 +236,6 @@
 		.dropdown-item {
 			.c-inner {
 				margin-left: math-sign($dropdown-item-padding-x + $dropdown-item-indicator-size + $dropdown-item-indicator-spacer-x);
-				padding-left: $dropdown-item-padding-x + $dropdown-item-indicator-size + $dropdown-item-indicator-spacer-x;
 			}
 		}
 	}
@@ -264,7 +263,6 @@
 		@if ($enable-c-inner) {
 			.c-inner {
 				margin-right: math-sign($dropdown-item-padding-x + $dropdown-item-indicator-size + $dropdown-item-indicator-spacer-x);
-				padding-right: $dropdown-item-padding-x + $dropdown-item-indicator-size + $dropdown-item-indicator-spacer-x;
 			}
 		}
 	}

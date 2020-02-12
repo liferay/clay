@@ -166,9 +166,7 @@
 
 		@if ($enable-c-inner) {
 			.c-inner {
-				height: $pagination-item-height-sm;
 				margin: #{math-sign($pagination-padding-y-sm)} #{math-sign($pagination-padding-x)};
-				padding: $pagination-padding-y-sm $pagination-padding-x;
 			}
 		}
 	}
@@ -186,9 +184,7 @@
 
 		@if ($enable-c-inner) {
 			.c-inner {
-				height: $pagination-item-height-sm;
 				margin: #{math-sign($pagination-padding-y-sm)} #{math-sign($pagination-padding-x-sm)};
-				padding: $pagination-padding-y-sm $pagination-padding-x-sm;
 			}
 		}
 
@@ -217,9 +213,7 @@
 
 		@if ($enable-c-inner) {
 			.c-inner {
-				height: $pagination-item-height-lg;
 				margin: #{math-sign($pagination-padding-y-lg)} #{math-sign($pagination-padding-x)};
-				padding: $pagination-padding-y-lg $pagination-padding-x;
 			}
 		}
 	}
@@ -237,9 +231,7 @@
 
 		@if ($enable-c-inner) {
 			.c-inner {
-				height: $pagination-item-height-lg;
 				margin: #{math-sign($pagination-padding-y-lg)} #{math-sign($pagination-padding-x-lg)};
-				padding: $pagination-padding-y-lg $pagination-padding-x-lg;
 			}
 		}
 

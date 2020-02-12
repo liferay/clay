@@ -227,19 +227,16 @@
 
 @if ($enable-c-inner) {
 	.btn .c-inner {
-		display: block;
 		margin: #{math-sign($btn-padding-y)} #{math-sign($btn-padding-x)};
-		padding: $btn-padding-y $btn-padding-x;
 
 		@include clay-scale-component {
 			margin: #{math-sign($btn-padding-y-mobile)} #{math-sign($btn-padding-x-mobile)};
-			padding: $btn-padding-y-mobile $btn-padding-x-mobile;
 		}
 	}
 
 	.btn-unstyled .c-inner {
 		margin: 0;
-		padding: 0;
+		max-width: none;
 	}
 
 	.btn-monospaced .c-inner {
@@ -250,41 +247,36 @@
 		justify-content: center;
 		margin: #{math-sign($btn-monospaced-padding-y)} 0;
 		padding: 0;
+		width: 100%;
 	}
 
 	.btn-sm {
 		.c-inner {
 			margin: #{math-sign($btn-padding-y-sm)} #{math-sign($btn-padding-x-sm)};
-			padding: $btn-padding-y-sm $btn-padding-x-sm;
 
 			@include clay-scale-component {
 				margin: #{math-sign($btn-padding-y-sm-mobile)} #{math-sign($btn-padding-x-sm-mobile)};
-				padding: $btn-padding-y-sm-mobile $btn-padding-x-sm-mobile;
 			}
 		}
 
 		&.btn-monospaced .c-inner {
 			height: calc(100% + #{$btn-monospaced-padding-y-sm * 2});
 			margin: #{math-sign($btn-monospaced-padding-y-sm)} 0;
-			padding: 0;
 		}
 	}
 
 	.btn-lg {
 		.c-inner {
 			margin: #{math-sign($btn-padding-y-lg)} #{math-sign($btn-padding-x-lg)};
-			padding: $btn-padding-y-lg $btn-padding-x-lg;
 
 			@include clay-scale-component {
 				margin: #{math-sign($btn-padding-y-lg-mobile)} #{math-sign($btn-padding-x-lg-mobile)};
-				padding: $btn-padding-y-lg-mobile $btn-padding-x-lg-mobile;
 			}
 		}
 
 		&.btn-monospaced .c-inner {
 			height: calc(100% + #{$btn-monospaced-padding-y-lg * 2});
 			margin: #{math-sign($btn-monospaced-padding-y-lg)} 0;
-			padding: 0;
 		}
 	}
 }
