@@ -134,6 +134,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	hasRightSymbols?: boolean;
 
 	/**
+	 * Function for setting the offset of the menu from the trigger.
+	 */
+	offsetFn?: (points: TPointOptions) => [number, number];
+
+	/**
 	 * Callback function for when active state changes.
 	 */
 	onSetActive: (val: boolean) => void;
@@ -149,6 +154,11 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>((
 		className,
 		hasLeftSymbols,
 		hasRightSymbols,
+		offsetFn = points =>
+			OFFSET_MAP[points.join('') as keyof typeof OFFSET_MAP] as [
+				number,
+				number
+			],
 		onSetActive,
 		...otherProps
 	}: IProps,
@@ -176,8 +186,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>((
 				(ref as React.RefObject<HTMLElement>).current!,
 				alignElementRef.current,
 				{
-					offset:
-						OFFSET_MAP[points.join('') as keyof typeof OFFSET_MAP],
+					offset: offsetFn(points),
 					overflow: {
 						adjustX: autoBestAlign,
 						adjustY: autoBestAlign,

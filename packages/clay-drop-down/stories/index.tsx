@@ -266,6 +266,22 @@ storiesOf('Components|ClayDropDown', module)
 			/>
 		);
 	})
+	.add('w/ custom offset', () => (
+		<DropDownWithState offsetFn={() => [20, 20]}>
+			<ClayDropDown.ItemList>
+				{[
+					{href: '#one', label: 'one'},
+					{href: '#two', label: 'two'},
+					{disabled: true, href: '#three', label: 'three'},
+					{href: '#four', label: 'four'},
+				].map(({href, label, ...otherProps}, i) => (
+					<ClayDropDown.Item href={href} key={i} {...otherProps}>
+						{label}
+					</ClayDropDown.Item>
+				))}
+			</ClayDropDown.ItemList>
+		</DropDownWithState>
+	))
 	.add('alignment positions', () => (
 		<div style={{margin: '200px 300px'}}>
 			{Object.keys(Align).map(alignPosition => (
