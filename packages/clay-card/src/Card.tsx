@@ -53,12 +53,6 @@ const ClayCard: React.FunctionComponent<IProps> & {
 	selectable = false,
 	...otherProps
 }: IProps) => {
-	const Content: React.FunctionComponent<IProps> = ({children}) => (
-		<Context.Provider value={{horizontal, interactive}}>
-			{children}
-		</Context.Provider>
-	);
-
 	const isCardType = {
 		file: displayType === 'file',
 		image: displayType === 'image',
@@ -70,40 +64,40 @@ const ClayCard: React.FunctionComponent<IProps> & {
 	const TagName = interactive ? 'span' : 'div';
 
 	return (
-		<TagHeaderName
-			{...otherProps}
-			className={classNames(className, {
-				card: !selectable,
-				'card-interactive card-interactive-primary card-type-template':
-					(horizontal && interactive) || interactive,
-				'card-type-asset':
-					isCardType.file || isCardType.image || isCardType.user,
-				'card-type-directory form-check form-check-card form-check-middle-left':
-					selectable && horizontal,
-				'file-card': isCardType.file,
-				'form-check form-check-card form-check-top-left':
-					(selectable && isCardType.file) ||
-					isCardType.image ||
-					isCardType.user,
-				'image-card': isCardType.image,
-				'template-card': interactive && !horizontal,
-				'template-card-horizontal': horizontal && interactive,
-				'user-card': isCardType.user,
-			})}
-			href={interactive ? href : undefined}
-			onClick={onClick}
-			role={onClick ? 'button' : undefined}
-		>
-			{(selectable && !horizontal) ||
-			(selectable && isCardType.image) ||
-			isCardType.user ? (
-				<TagName className="card">
-					<Content>{children}</Content>
-				</TagName>
-			) : (
-				<Content>{children}</Content>
-			)}
-		</TagHeaderName>
+		<Context.Provider value={{horizontal, interactive}}>
+			<TagHeaderName
+				{...otherProps}
+				className={classNames(className, {
+					card: !selectable,
+					'card-interactive card-interactive-primary card-type-template':
+						(horizontal && interactive) || interactive,
+					'card-type-asset':
+						isCardType.file || isCardType.image || isCardType.user,
+					'card-type-directory form-check form-check-card form-check-middle-left':
+						selectable && horizontal,
+					'file-card': isCardType.file,
+					'form-check form-check-card form-check-top-left':
+						(selectable && isCardType.file) ||
+						isCardType.image ||
+						isCardType.user,
+					'image-card': isCardType.image,
+					'template-card': interactive && !horizontal,
+					'template-card-horizontal': horizontal && interactive,
+					'user-card': isCardType.user,
+				})}
+				href={interactive ? href : undefined}
+				onClick={onClick}
+				role={onClick ? 'button' : undefined}
+			>
+				{(selectable && !horizontal) ||
+				(selectable && isCardType.image) ||
+				isCardType.user ? (
+					<TagName className="card">{children}</TagName>
+				) : (
+					<>{children}</>
+				)}
+			</TagHeaderName>
+		</Context.Provider>
 	);
 };
 
