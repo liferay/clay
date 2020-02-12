@@ -7,9 +7,15 @@
 import ClayButton from '@clayui/button';
 import {ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
+import classNames from 'classnames';
 import React from 'react';
 
 interface IProps extends React.HTMLAttributes<HTMLInputElement> {
+	/**
+	 * Props to add to form element
+	 */
+	formProps?: React.HTMLAttributes<HTMLFormElement>;
+
 	/**
 	 * Callback for when input value changes.
 	 */
@@ -28,24 +34,35 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 
 const ClayDropDownSearch: React.FunctionComponent<IProps> = ({
 	className,
+	formProps = {},
 	spritemap,
 	...otherProps
-}: IProps) => (
-	<form className={className}>
-		<div className="dropdown-section">
-			<ClayInput.Group small>
-				<ClayInput.GroupItem>
-					<ClayInput {...otherProps} insetAfter type="text" />
+}: IProps) => {
+	const {className: formClassName, ...otherFormProps} = formProps;
 
-					<ClayInput.GroupInsetItem after tag="span">
-						<ClayButton displayType="unstyled" type="button">
-							<ClayIcon spritemap={spritemap} symbol="search" />
-						</ClayButton>
-					</ClayInput.GroupInsetItem>
-				</ClayInput.GroupItem>
-			</ClayInput.Group>
-		</div>
-	</form>
-);
+	return (
+		<form
+			className={classNames(className, formClassName)}
+			{...otherFormProps}
+		>
+			<div className="dropdown-section">
+				<ClayInput.Group small>
+					<ClayInput.GroupItem>
+						<ClayInput {...otherProps} insetAfter type="text" />
+
+						<ClayInput.GroupInsetItem after tag="span">
+							<ClayButton displayType="unstyled" type="button">
+								<ClayIcon
+									spritemap={spritemap}
+									symbol="search"
+								/>
+							</ClayButton>
+						</ClayInput.GroupInsetItem>
+					</ClayInput.GroupItem>
+				</ClayInput.Group>
+			</div>
+		</form>
+	);
+};
 
 export default ClayDropDownSearch;
