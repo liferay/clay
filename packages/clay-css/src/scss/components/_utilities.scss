@@ -233,7 +233,7 @@
 
 @if ($enable-c-inner) {
 	.c-inner {
-		outline: 0;
+		@include clay-css($c-inner);
 	}
 }
 
