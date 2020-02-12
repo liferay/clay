@@ -90,17 +90,10 @@
 
 	$toggler-c-inner: setter(map-get($map, toggler-c-inner), ());
 	$toggler-c-inner: map-deep-merge((
-		align-items: center,
-		display: flex,
-		height: $toggler-height-mobile,
 		margin-bottom: math-sign($toggler-padding-y-mobile),
 		margin-left: math-sign($toggler-padding-x-mobile),
 		margin-right: math-sign($toggler-padding-x-mobile),
 		margin-top: math-sign($toggler-padding-y-mobile),
-		padding-bottom: $toggler-padding-y-mobile,
-		padding-left: $toggler-padding-x-mobile,
-		padding-right: $toggler-padding-x-mobile,
-		padding-top: $toggler-padding-y-mobile,
 	), $toggler-c-inner);
 
 	@if ($enabled) {
