@@ -99,9 +99,12 @@ export interface IProps extends IDropDownContentProps {
 	searchable?: boolean;
 
 	/**
-	 * Pass the props to ClayInput.
+	 * Pass the props to the Search component.
 	 */
-	searchProps?: React.ComponentProps<typeof Search>;
+	searchProps?: Omit<
+		React.ComponentProps<typeof Search>,
+		'onChange' | 'spritemap' | 'value'
+	>;
 
 	/**
 	 * The value that will be passed to the search input element.

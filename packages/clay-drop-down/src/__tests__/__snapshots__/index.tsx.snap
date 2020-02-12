@@ -263,7 +263,9 @@ exports[`ClayDropDown renders with search input 1`] = `
         class="dropdown-menu show"
         style="left: -999px; top: -995px;"
       >
-        <form>
+        <form
+          class=""
+        >
           <div
             class="dropdown-section"
           >
