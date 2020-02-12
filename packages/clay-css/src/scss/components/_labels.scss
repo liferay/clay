@@ -39,15 +39,11 @@
 
 	@if ($enable-c-inner) {
 		> .c-inner {
-			display: inline-flex;
 			margin-bottom: math-sign($label-padding-y);
 			margin-left: math-sign($label-padding-x);
 			margin-right: math-sign($label-padding-x);
 			margin-top: math-sign($label-padding-y);
-			padding-bottom: $label-padding-y;
-			padding-left: $label-padding-x;
-			padding-right: $label-padding-x;
-			padding-top: $label-padding-y;
+			max-width: none;
 		}
 	}
 
@@ -138,14 +134,6 @@ button.label {
 	.btn-unstyled {
 		color: inherit;
 		display: inline-flex;
-	}
-
-	@if ($enable-c-inner) {
-		.c-inner {
-			.lexicon-icon {
-				display: block;
-			}
-		}
 	}
 
 	.close {

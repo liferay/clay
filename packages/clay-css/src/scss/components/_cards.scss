@@ -55,12 +55,6 @@
 	.aspect-ratio-item-bottom-left {
 		@include clay-css($card-aspect-ratio-item-bottom-left);
 	}
-
-	@if ($enable-c-inner) {
-		> .c-inner {
-			display: block;
-		}
-	}
 }
 
 .card-body {

@@ -168,15 +168,10 @@ fieldset {
 
 	@if ($enable-c-inner) {
 		.c-inner {
-			display: block;
 			margin-bottom: #{math-sign($sheet-subtitle-padding-y)};
 			margin-left: #{math-sign($sheet-subtitle-padding-x)};
 			margin-right: #{math-sign($sheet-subtitle-padding-x)};
 			margin-top: #{math-sign($sheet-subtitle-padding-y)};
-			padding-bottom: $sheet-subtitle-padding-y;
-			padding-left: $sheet-subtitle-padding-x;
-			padding-right: $sheet-subtitle-padding-x;
-			padding-top: $sheet-subtitle-padding-y;
 		}
 	}
 
@@ -196,8 +191,6 @@ fieldset {
 			.c-inner {
 				margin-left: #{math-sign($sheet-subtitle-collapse-icon-padding-left)};
 				margin-right: #{math-sign($sheet-subtitle-collapse-icon-padding-right)};
-				padding-left: $sheet-subtitle-collapse-icon-padding-left;
-				padding-right: $sheet-subtitle-collapse-icon-padding-right;
 			}
 		}
 	}

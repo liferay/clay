@@ -64,7 +64,6 @@ $nav-btn: map-deep-merge((
 		margin-left: math-sign($nav-btn-padding-x),
 		margin-right: math-sign($nav-btn-padding-x),
 		margin-top: math-sign($btn-border-width),
-		padding: $nav-btn-padding-y $nav-btn-padding-x,
 	),
 	lexicon-icon-margin-top: 0,
 ), $nav-btn);
@@ -75,8 +74,6 @@ $nav-btn-monospaced: map-deep-merge((
 	c-inner: (
 		margin-left: math-sign($btn-border-width),
 		margin-right: math-sign($btn-border-width),
-		padding-left: 0,
-		padding-right: 0,
 	),
 ), $nav-btn-monospaced);
 
@@ -90,9 +87,6 @@ $nav-link-monospaced: map-deep-merge((
 	min-width: $nav-item-monospaced-size,
 	padding: 0,
 	lexicon-icon-margin-top: 0,
-	c-inner: (
-		padding: 0,
-	),
 ), $nav-link-monospaced);
 
 $nav-form-padding-bottom: 0 !default;
