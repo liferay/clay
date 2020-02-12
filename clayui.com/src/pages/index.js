@@ -403,7 +403,7 @@ export default () => {
 
 							<div className="col-lg text-center text-lg-right">
 								<div>
-									{'Copyright © ' + `${year} `}
+									{`Copyright © ${year} `}
 									<a
 										className="font-weight-bold"
 										href="https://www.liferay.com/"
