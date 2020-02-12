@@ -14,7 +14,7 @@ module.exports = ({actions, stage}) => {
 			rules: [
 				{
 					loader: 'null-loader',
-					test: /clay-tooltip|metal-clipboard/,
+					test: /@clayui\/tooltip|clipboard/,
 				},
 			],
 		};

@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import axios from 'axios';
 import {useEffect, useState} from 'react';
 
 /**
@@ -14,16 +13,16 @@ import {useEffect, useState} from 'react';
  */
 function useResource(url, options) {
 	const [state, setState] = useState([]);
+
 	useEffect(() => {
-		axios({
+		fetch(url, {
 			headers: {
 				Accept: 'application/json',
 				'Content-Type': 'application/json',
 			},
-			url,
 			...options,
 		})
-			.then(res => res.data)
+			.then(res => res.json())
 			.then(setState);
 	}, []);
 	return state;

@@ -9,12 +9,10 @@ import React from 'react';
 import {useResource} from '../Hooks';
 
 const Tracking = ({query}) => {
-	const issues = useResource('https://api.github.com/search/issues', {
-		method: 'GET',
-		params: {
-			q: query,
-		},
-	});
+	const issues = useResource(
+		`https://api.github.com/search/issues?q=${query}`,
+		{method: 'GET'}
+	);
 
 	return (
 		<div className="table-responsive">

@@ -9,7 +9,6 @@
 		"copy:clay-css-icons": "cpx '../node_modules/clay-css/lib/images/icons/*.svg' static/images/icons",
 		"copy:clay-css-js": "cpx '../node_modules/clay-css/lib/js/*.{js,js.map}' static/js",
 		"copy:clay-css-site-images": "cpx '../node_modules/clay-css/src/content/site-images/*.svg' static/images",
-		"deploy": "gatsby build && gh-pages -d public -b wedeploy",
 		"develop": "yarn copy:clay-css && gatsby develop",
 		"build": "yarn copy:clay-css && gatsby build",
 		"serve": "gatsby serve"
@@ -45,11 +44,8 @@
 		"@mdx-js/mdx": "^1.0.20",
 		"@mdx-js/react": "^1.0.20",
 		"@mdx-js/tag": "^0.20.3",
-		"axios": "^0.18.0",
-		"browser-monads": "^1.0.0",
 		"classnames": "^2.2.6",
-		"clay-component": "^2.7.0",
-		"clay-tooltip": "^2.6.0",
+		"clipboard": "^2.0.4",
 		"countries-list": "^2.3.2",
 		"dotenv": "^6.0.0",
 		"gatsby": "^2.3.25",
@@ -62,11 +58,7 @@
 		"gatsby-remark-prismjs": "^3.2.8",
 		"gatsby-source-filesystem": "^2.0.20",
 		"gatsby-transformer-remark": "^2.2.4",
-		"js-yaml": "^3.12.1",
 		"languages": "^0.1.3",
-		"metal-clipboard": "^2.0.0",
-		"metal-dom": "^2.16.5",
-		"metal-tabs": "^2.3.1",
 		"node-sass": "^4.11.0",
 		"prettier": "^1.16.4",
 		"prismjs": "^1.15.0",
@@ -78,7 +70,6 @@
 	},
 	"devDependencies": {
 		"cpx": "^1.5.0",
-		"gh-pages": "^1.2.0",
 		"globby": "^8.0.1"
 	}
 }
