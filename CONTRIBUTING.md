@@ -136,7 +136,7 @@ All JavaScript must adhere to the [Liferay JavaScript style guide](https://www.n
 
 ### CSS Guidelines
 
-See guidelines for [contribution with CSS](https://github.com/liferay/clay/blob/develop/packages/clay-css/CONTRIBUTING.md).
+See guidelines for [contribution with CSS](https://github.com/liferay/clay/blob/master/packages/clay-css/CONTRIBUTING.md).
 
 ### Documentation Style Guide
 
