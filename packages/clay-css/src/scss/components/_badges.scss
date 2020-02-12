@@ -119,13 +119,7 @@
 @if ($enable-c-inner) {
 	.badge > .c-inner {
 		margin: -#{$badge-padding-y} -#{$badge-padding-x};
-		padding: $badge-padding-y $badge-padding-x;
-	}
-
-	.badge-item .c-inner {
-		.lexicon-icon {
-			display: block;
-		}
+		max-width: none;
 	}
 }
 
