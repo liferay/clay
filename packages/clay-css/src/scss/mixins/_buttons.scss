@@ -62,19 +62,10 @@
 
 	$c-inner: setter(map-get($map, c-inner), ());
 	$c-inner: map-deep-merge((
-		align-items: $align-items,
-		display: $display,
-		height: $height,
-		justify-content: $justify-content,
 		margin-bottom: math-sign($padding-bottom),
 		margin-left: math-sign($padding-left),
 		margin-right: math-sign($padding-right),
 		margin-top: math-sign($padding-top),
-		padding-bottom: $padding-bottom,
-		padding-left: $padding-left,
-		padding-right: $padding-right,
-		padding-top: $padding-top,
-		width: $width,
 	), $c-inner);
 
 	align-items: $align-items;
@@ -353,21 +344,10 @@
 
 	$c-inner: setter(map-get($map, c-inner), ());
 	$c-inner: map-deep-merge((
-		align-items: $align-items,
-		display: $display,
-		height: $height,
-		justify-content: $justify-content,
 		margin-bottom: math-sign($padding-bottom),
 		margin-left: math-sign($padding-left),
 		margin-right: math-sign($padding-right),
 		margin-top: math-sign($padding-top),
-		min-height: $min-height,
-		min-width: $min-width,
-		padding-bottom: $padding-bottom,
-		padding-left: $padding-left,
-		padding-right: $padding-right,
-		padding-top: $padding-top,
-		width: $width,
 	), $c-inner);
 
 	align-items: $align-items;
