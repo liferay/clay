@@ -4,19 +4,15 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-const {readFileSync} = require('fs');
-const {safeLoad} = require('js-yaml');
 const {resolve} = require('path');
 
-// This is a copy of https://github.com/reactjs/reactjs.org/tree/master/plugins/gatsby-transformer-authors-yaml
+// This is a inspired by https://github.com/reactjs/reactjs.org/tree/master/plugins/gatsby-transformer-authors-yaml
 exports.sourceNodes = ({actions}) => {
 	const {createNode} = actions;
 
-	const path = resolve(__dirname, '../../content/authors.yml');
-	const file = readFileSync(path, 'utf8');
-	const authors = safeLoad(file);
+	// eslint-disable-next-line liferay/no-dynamic-require
+	const authors = require(resolve(__dirname, '../../content/authors.json'));
 
-	// authors.yml structure is {[username: string]: {name: string, url: string}}
 	Object.keys(authors).forEach(username => {
 		const author = authors[username];
 

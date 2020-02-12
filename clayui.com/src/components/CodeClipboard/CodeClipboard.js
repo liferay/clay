@@ -4,23 +4,15 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayTooltip from 'clay-tooltip';
-import Clipboard from 'metal-clipboard';
+import Clipboard from 'clipboard';
 import {useEffect} from 'react';
-
-/**
- */
-class SingletonEnforcer {}
 
 export default props => {
 	const selector = '.tab-pane .btn-copy';
-	let clayTooltip;
 	let clayClipboard;
 
 	useEffect(() => {
-		clayTooltip = new ClayTooltip(new SingletonEnforcer());
-		clayClipboard = new Clipboard({
-			selector,
+		clayClipboard = new Clipboard(selector, {
 			text: delegateTarget => {
 				const codeContentParentNode = delegateTarget.parentNode;
 				let codeContent;
@@ -50,8 +42,7 @@ export default props => {
 		});
 
 		return () => {
-			clayTooltip.dispose();
-			clayClipboard.dispose();
+			clayClipboard.destroy();
 		};
 	}, []);
 
