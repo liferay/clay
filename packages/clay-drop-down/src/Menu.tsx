@@ -15,8 +15,12 @@ export const Align = {
 	BottomCenter: 4,
 	BottomLeft: 5,
 	BottomRight: 3,
+	LeftBottom: 11,
 	LeftCenter: 6,
+	LeftTop: 10,
+	RightBottom: 9,
 	RightCenter: 2,
+	RightTop: 8,
 	TopCenter: 0,
 	TopLeft: 7,
 	TopRight: 1,
@@ -31,14 +35,22 @@ const ALIGN_INVERSE = {
 	5: 'BottomLeft',
 	6: 'LeftCenter',
 	7: 'TopLeft',
+	8: 'RightTop',
+	9: 'RightBottom',
+	10: 'LeftTop',
+	11: 'LeftBottom',
 } as const;
 
 const ALIGN_MAP = {
 	BottomCenter: ['tc', 'bc'],
 	BottomLeft: ['tl', 'bl'],
 	BottomRight: ['tr', 'br'],
+	LeftBottom: ['br', 'bl'],
 	LeftCenter: ['cr', 'cl'],
+	LeftTop: ['tr', 'tl'],
+	RightBottom: ['bl', 'br'],
 	RightCenter: ['cl', 'cr'],
+	RightTop: ['tl', 'tr'],
 	TopCenter: ['bc', 'tc'],
 	TopLeft: ['bl', 'tl'],
 	TopRight: ['br', 'tr'],
@@ -53,27 +65,24 @@ type TPointOptions = typeof ALIGN_MAP[keyof typeof ALIGN_MAP];
 const getAlignPoints = (val: keyof typeof ALIGN_INVERSE) =>
 	ALIGN_MAP[ALIGN_INVERSE[val]];
 
-/**
- * Utility for determining the overlay's offset based off its coordinates.
- */
-const getOffset = (targetNode: string): [number, number] => {
-	const topBottom = targetNode[0];
-	const leftRight = targetNode[1];
+const BOTTOM_OFFSET = [0, 4] as const;
+const LEFT_OFFSET = [-4, 0] as const;
+const RIGHT_OFFSET = [4, 0] as const;
+const TOP_OFFSET = [0, -4] as const;
 
-	switch (topBottom) {
-		case 't':
-			return [0, -4];
-		case 'b':
-			return [0, 4];
-		case 'c':
-			if (leftRight === 'l') {
-				return [-4, 0];
-			}
-
-			return [4, 0];
-		default:
-			return [0, 0];
-	}
+const OFFSET_MAP = {
+	bctc: TOP_OFFSET,
+	blbr: RIGHT_OFFSET,
+	bltl: TOP_OFFSET,
+	brbl: LEFT_OFFSET,
+	brtr: TOP_OFFSET,
+	clcr: RIGHT_OFFSET,
+	crcl: LEFT_OFFSET,
+	tcbc: BOTTOM_OFFSET,
+	tlbl: BOTTOM_OFFSET,
+	tltr: RIGHT_OFFSET,
+	trbr: BOTTOM_OFFSET,
+	trtl: LEFT_OFFSET,
 };
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -167,7 +176,8 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>((
 				(ref as React.RefObject<HTMLElement>).current!,
 				alignElementRef.current,
 				{
-					offset: getOffset(points[1]),
+					offset:
+						OFFSET_MAP[points.join('') as keyof typeof OFFSET_MAP],
 					overflow: {
 						adjustX: autoBestAlign,
 						adjustY: autoBestAlign,
