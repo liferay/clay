@@ -397,7 +397,7 @@ export default () => {
 									rel="noopener noreferrer"
 									target="_blank"
 								>
-									{'Clay Team'}
+									{'Clay Contributors'}
 								</a>
 							</div>
 
