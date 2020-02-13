@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-alpha.8](https://github.com/bryceosterhaus/clay/compare/clayui.com@3.0.0-alpha.7...clayui.com@3.0.0-alpha.8) (2020-02-13)
+
+### Bug Fixes
+
+-   **clayui.com:** keep it phresh w/a dynamic copyright year ([004e4a3](https://github.com/bryceosterhaus/clay/commit/004e4a3))
+-   **clayui.com:** lexicon urls fix due to small Lexicon site restructure ([02a7a23](https://github.com/bryceosterhaus/clay/commit/02a7a23))
+-   **clayui.com:** make the footer more accurate --> "Clay Team" to "Clay Contributors" ([344091a](https://github.com/bryceosterhaus/clay/commit/344091a))
+-   **clayui.com:** write template strings like a semi-professional ([a624d3c](https://github.com/bryceosterhaus/clay/commit/a624d3c))
+
 # [3.0.0-alpha.7](https://github.com/bryceosterhaus/clay/compare/clayui.com@3.0.0-alpha.4...clayui.com@3.0.0-alpha.7) (2020-01-31)
 
 ### Bug Fixes
