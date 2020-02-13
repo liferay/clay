@@ -1,0 +1,84 @@
+/**
+ * © 2020 Liferay, Inc. <https://liferay.com>
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
+import ClayForm, {ClayInput} from '@clayui/form';
+import ClayIcon from '@clayui/icon';
+import React, {useMemo, useState} from 'react';
+
+const spritemap = '/images/icons/icons.svg';
+
+/**
+ * Component that allows searching through icons
+ * @param {string} label - Label of the search input field.
+ * @param {string} placeholder - Placeholder of the search input field.
+ * @param {Array[Object]} source - Path to the source JSON. Needs to follow pattern of [{name: String, aliases: Array<String>}]
+ * @param {string} type - Type of icons being provided, supports "icons" and "flags"
+ */
+const IconSearch = ({
+	label = 'Search Icons',
+	placeholder = 'Search Icons...',
+	source,
+	type = 'icons',
+}) => {
+	const [searchQuery, setSearchQuery] = useState('');
+	let list = [];
+
+	const filteredIcons = useMemo(() => {
+		const query = searchQuery.toLowerCase();
+
+		return source.filter(
+			({aliases, name}) =>
+				name.toLowerCase().includes(query) ||
+				aliases.some(alias => alias.toLowerCase().includes(query))
+		);
+	}, [searchQuery]);
+
+	if (filteredIcons.length) {
+		list = filteredIcons;
+	} else {
+		list = searchQuery ? [] : source;
+	}
+
+	return (
+		<>
+			<ClayForm.Group>
+				<label style={{width: '100%'}}>
+					{label}
+
+					<ClayInput
+						onChange={event => setSearchQuery(event.target.value)}
+						placeholder={placeholder}
+						type="text"
+						value={searchQuery}
+					/>
+				</label>
+
+				<ul className="lexicon-icon-list list-unstyled">
+					{list.map(icon => (
+						<li key={icon.name}>
+							<ClayIcon
+								spritemap={spritemap}
+								symbol={icon.name}
+							/>
+
+							<span>
+								{type === 'flags'
+									? icon.aliases.join(' - ')
+									: icon.name}
+							</span>
+						</li>
+					))}
+				</ul>
+
+				{!list.length && (
+					<span>{`No results found for ${searchQuery}`}</span>
+				)}
+			</ClayForm.Group>
+		</>
+	);
+};
+
+export default IconSearch;
