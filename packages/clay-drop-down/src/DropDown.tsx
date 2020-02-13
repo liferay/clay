@@ -27,7 +27,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	/**
 	 * Default position of menu element. Values come from `./Menu`.
 	 */
-	alignmentPosition?: number;
+	alignmentPosition?: React.ComponentProps<typeof Menu>['alignmentPosition'];
 
 	/**
 	 * HTML element tag that the container should render.
@@ -53,6 +53,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	 * Callback for when the active state changes.
 	 */
 	onActiveChange: (val: boolean) => void;
+
+	/**
+	 * Function for setting the offset of the menu from the trigger.
+	 */
+	offsetFn?: React.ComponentProps<typeof Menu>['offsetFn'];
 
 	/**
 	 * Element that is used as the trigger which will activate the dropdown on click.
@@ -83,6 +88,7 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 	hasLeftSymbols,
 	hasRightSymbols,
 	menuElementAttrs,
+	offsetFn,
 	onActiveChange,
 	trigger,
 	...otherProps
@@ -147,6 +153,7 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 					alignmentPosition={alignmentPosition}
 					hasLeftSymbols={hasLeftSymbols}
 					hasRightSymbols={hasRightSymbols}
+					offsetFn={offsetFn}
 					onSetActive={onActiveChange}
 					ref={menuElementRef}
 				>

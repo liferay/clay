@@ -13,6 +13,7 @@ import Divider from './Divider';
 import ClayDropDown from './DropDown';
 import ClayDropDownGroup from './Group';
 import Help from './Help';
+import ClayMenu from './Menu';
 import Search from './Search';
 
 type TType = 'checkbox' | 'group' | 'item' | 'radio' | 'radiogroup' | 'divider';
@@ -49,7 +50,9 @@ export interface IProps extends IDropDownContentProps {
 	/**
 	 * Default position of menu element. Values come from `./Menu`.
 	 */
-	alignmentPosition?: number;
+	alignmentPosition?: React.ComponentProps<
+		typeof ClayMenu
+	>['alignmentPosition'];
 
 	/**
 	 * Informational text that appears at the end or above the `footerContent` prop.
@@ -87,6 +90,11 @@ export interface IProps extends IDropDownContentProps {
 	menuElementAttrs?: React.ComponentProps<
 		typeof ClayDropDown
 	>['menuElementAttrs'];
+
+	/**
+	 * Function for setting the offset of the menu from the trigger.
+	 */
+	offsetFn?: React.ComponentProps<typeof ClayDropDown>['offsetFn'];
 
 	/**
 	 * Callback will always be called when the user is interacting with search.
@@ -288,6 +296,7 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 	helpText,
 	items,
 	menuElementAttrs,
+	offsetFn,
 	onSearchValueChange = () => {},
 	searchable,
 	searchProps,
@@ -316,6 +325,7 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 			hasLeftSymbols={hasLeftSymbols}
 			hasRightSymbols={hasRightSymbols}
 			menuElementAttrs={menuElementAttrs}
+			offsetFn={offsetFn}
 			onActiveChange={setActive}
 			trigger={trigger}
 		>
