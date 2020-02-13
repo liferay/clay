@@ -3,10 +3,15 @@ title: 'Icons'
 description: 'Icons are a visual representation of an idea and/or action.'
 ---
 
+import IconSearch from '../../../src/components/IconSearch';
+import icons from '../../../static/js/icons.json';
+import flags from '../../../static/js/flags.json';
+
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
 -   [Usage](#usage)
+-   [Icon List](#icon-list)
 -   [Language Flags](#language-flags)
 -   [SVG Icons as Background Images](#svg-icons-as-background-images)
 -   [Clay-SVG-url()](<#clay-svg-url()>)
@@ -16,11 +21,22 @@ description: 'Icons are a visual representation of an idea and/or action.'
 </div>
 
 <div class="clay-site-alert alert alert-info">
-	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/icons/">Icons Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
+	Check the <a href="https://liferay.design/lexicon">Lexicon</a>{' '}
+	<a href="https://liferay.design/lexicon/core-components/icons/">
+		Icons Pattern
+	</a>{' '}
+	for a more in-depth look at the motivations and proper usage of this
+	component.
 </div>
 
 <div class="clay-site-alert alert alert-warning">
-	See the implementation of the <a href="/docs/components/icons.html">Icons component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/icons/">Icons Pattern</a>.
+	See the implementation of the{' '}
+	<a href="/docs/components/icons.html">Icons component in React</a> following
+	the Lexicon{' '}
+	<a href="https://liferay.design/lexicon/core-components/icons/">
+		Icons Pattern
+	</a>
+	.
 </div>
 
 ## Usage
@@ -39,9 +55,9 @@ We use SVG elements that link to an SVG sprite, like so:
 
 Note that the ID after the # symbol is the ID of the icon to use, so if you wanted to use plus icon, you would do change the href to `path/to/icons.svg#plus`.
 
-<ul class="lexicon-icon-list list-unstyled">
-	[foreach Icons]
-</ul>
+## Icon List
+
+<IconSearch source={icons} />
 
 ## Language Flags
 
@@ -53,9 +69,12 @@ Or, to paraphrase Winston Churchill, "Using flags is the worst system for indica
 
 To use the flags below, follow the same process as you would for a standard icon, and use the locale and country code indicated in parenthesis for the icon's name (e.g. to use the Japanese icon, you would use `ja-jp`)
 
-<ul class="lexicon-icon-list list-unstyled">
-	[foreach Flags]
-</ul>
+<IconSearch
+	label="Search Flags"
+	placeholder="Search Flags..."
+	source={flags}
+	type="flags"
+/>
 
 ### SVG Icons as Background Images
 
@@ -75,7 +94,8 @@ We have created a Sass function to turn Lexicon SVG icon's into data uri schemes
 You can turn your custom SVG into a data uri using the Sass function `clay-svg-url($svg)`, where `$svg` is the code for your inline SVG. The function returns `url(your_svg_as_data_uri)`.
 
 <div class="alert alert-info">
-	When using `clay-svg-url()`, wrap your inline SVG code with single quotes if your SVG's attributes are delimited with double quotes.
+	When using `clay-svg-url()`, wrap your inline SVG code with single quotes if
+	your SVG's attributes are delimited with double quotes.
 </div>
 
 <span class="clay-site-linux-tux clay-site-svg-bg">Linux Tux</span>
@@ -83,9 +103,11 @@ You can turn your custom SVG into a data uri using the Sass function `clay-svg-u
 ## Why do we use SVG
 
 <p id="lexicon-icon-explanation">
-  Font icons, while fairly simple, suffer drawbacks, such as sub-pixel aliasing. This results in a lower quality than we would like.
-	SVG gives us and you a greater amount of freedom in styling the icons, as well as a higher level of fidelity and clarity in the icons.
-	Also, SVG supports multi-color icons, as shown below:
+	Font icons, while fairly simple, suffer drawbacks, such as sub-pixel
+	aliasing. This results in a lower quality than we would like. SVG gives us
+	and you a greater amount of freedom in styling the icons, as well as a
+	higher level of fidelity and clarity in the icons. Also, SVG supports
+	multi-color icons, as shown below:
 </p>
 
 <div class="lexicon-icon-examples">

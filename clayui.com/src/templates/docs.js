@@ -23,11 +23,18 @@ export default props => {
 		location,
 		pageContext: {blacklist = [], markdownJsx},
 	} = props;
-	const {allMarkdownRemark, allMdx, markdownRemark, mdx, tabs} = data;
+	const {
+		allMarkdownRemark,
+		allMdx,
+		markdownRemark,
+		mdTab,
+		mdx,
+		mdxTab,
+	} = data;
 	const {code, excerpt, fields, frontmatter, html, timeToRead} =
 		mdx || markdownRemark;
 
-	const hasTabs = tabs.edges.length > 0;
+	const tab = mdTab || mdxTab;
 
 	const title = `${frontmatter.title} - Clay`;
 
@@ -99,13 +106,8 @@ export default props => {
 													</p>
 												)}
 											</div>
-											{!hasTabs && (
-												<div className="col-12">
-													<hr className="clay-site-separator" />
-												</div>
-											)}
-											{hasTabs && (
-												<div className="col-12">
+											<div className="col-12">
+												{tab ? (
 													<ul
 														className="border-bottom nav nav-clay nav-underline"
 														role="tablist"
@@ -138,8 +140,10 @@ export default props => {
 															</a>
 														</li>
 													</ul>
-												</div>
-											)}
+												) : (
+													<hr className="clay-site-separator" />
+												)}
+											</div>
 										</div>
 									</div>
 								</header>
@@ -250,16 +254,54 @@ export default props => {
 															}
 														</p>
 													)}
-													{hasTabs && (
+													{tab.html && (
 														<div
 															dangerouslySetInnerHTML={{
 																__html:
-																	tabs
-																		.edges[0]
-																		.node
-																		.html,
+																	mdTab.html,
 															}}
 														/>
+													)}
+													{tab.code && (
+														<article>
+															<CodeClipboard>
+																<MDXProvider
+																	components={{
+																		h1:
+																			Typography.H1,
+																		h2:
+																			Typography.H2,
+																		h3:
+																			Typography.H3,
+																		h4:
+																			Typography.H4,
+																		p:
+																			Typography.P,
+																		ul: props => (
+																			<ul
+																				className={
+																					props.className
+																						? props.className
+																						: 'clay-ul'
+																				}
+																			>
+																				{
+																					props.children
+																				}
+																			</ul>
+																		),
+																	}}
+																>
+																	<MDXRenderer>
+																		{
+																			mdxTab
+																				.code
+																				.body
+																		}
+																	</MDXRenderer>
+																</MDXProvider>
+															</CodeClipboard>
+														</article>
 													)}
 												</div>
 											</div>
@@ -369,11 +411,12 @@ export const pageQuery = graphql`
 				}
 			}
 		}
-		tabs: allMarkdownRemark(filter: {fields: {slug: {eq: $sibling}}}) {
-			edges {
-				node {
-					html
-				}
+		mdTab: markdownRemark(fields: {slug: {eq: $sibling}}) {
+			html
+		}
+		mdxTab: mdx(fields: {slug: {eq: $sibling}}) {
+			code {
+				body
 			}
 		}
 	}
