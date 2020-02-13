@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/liferay/clay/tree/master/packages/clay-list/compare/@clayui/list@3.0.6...@clayui/list@3.1.0) (2020-02-13)
+
+### Features
+
+-   **@clayui/demos:** Drag & Drop Example ([362f976](https://github.com/liferay/clay/tree/master/packages/clay-list/commit/362f976))
+
 ## [3.0.6](https://github.com/liferay/clay/tree/master/packages/clay-list/compare/@clayui/list@3.0.3...@clayui/list@3.0.6) (2020-01-31)
 
 ### Bug Fixes

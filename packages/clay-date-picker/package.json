@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/date-picker",
-	"version": "3.0.6",
+	"version": "3.0.7",
 	"description": "ClayDatePicker component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-date-picker",
@@ -23,10 +23,10 @@
 	],
 	"dependencies": {
 		"@clayui/button": "^3.2.0",
-		"@clayui/drop-down": "^3.1.4",
-		"@clayui/form": "^3.4.0",
+		"@clayui/drop-down": "^3.2.0",
+		"@clayui/form": "^3.5.0",
 		"@clayui/icon": "^3.0.3",
-		"@clayui/time-picker": "^3.0.6",
+		"@clayui/time-picker": "^3.0.7",
 		"classnames": "^2.2.6",
 		"moment": "^2.22.2"
 	},

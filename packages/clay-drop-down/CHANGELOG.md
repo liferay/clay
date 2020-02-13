@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/liferay/clay/tree/master/packages/clay-drop-down/compare/@clayui/drop-down@3.1.4...@clayui/drop-down@3.2.0) (2020-02-13)
+
+### Features
+
+-   **@clayui/drop-down:** add ability to add attributes to form element ([06661e9](https://github.com/liferay/clay/tree/master/packages/clay-drop-down/commit/06661e9))
+-   **@clayui/drop-down:** add more options for alignment ([d37762a](https://github.com/liferay/clay/tree/master/packages/clay-drop-down/commit/d37762a))
+-   **@clayui/drop-down:** add prop for setting custom offset. ([848cc8f](https://github.com/liferay/clay/tree/master/packages/clay-drop-down/commit/848cc8f))
+
 ## [3.1.4](https://github.com/liferay/clay/tree/master/packages/clay-drop-down/compare/@clayui/drop-down@3.1.1...@clayui/drop-down@3.1.4) (2020-01-31)
 
 ### Bug Fixes

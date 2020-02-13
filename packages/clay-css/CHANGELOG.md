@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.6.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.5.0...@clayui/css@3.6.0) (2020-02-13)
+
+
+### Bug Fixes
+
+* **clay-css:** Navigation Bar and Management Bar focus styles should match across each component ([5d0ecf9](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/5d0ecf9)), closes [#2900](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2900)
+
+
+### Features
+
+* **clay-css:** Aspect Ratio adds `.aspect-ratio-item-top-left` ([6981a23](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/6981a23)), closes [#2843](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2843)
+* **clay-css:** Card adds `.card-type-asset.product-card` ([c6be980](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/c6be980)), closes [#2843](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2843)
+* **clay-css:** Card adds support for `.card` `.aspect-ratio-item-top-left`, `.aspect-ratio-item-top-center`, `.aspect-ratio-item-top-right`, `.aspect-ratio-item-right-middle`, `.aspect-ratio-item-bottom-right`, `.aspect-ratio-item-bottom-center`, `.aspect-ratio-item-bottom-left` ([930ee92](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/930ee92)), closes [#2843](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2843)
+* **clay-css:** Custom Forms `.custom-control` should have `text-align: left` so text is next to input if parent container has `text-align: center` ([4615041](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/4615041)), closes [#2843](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2843)
+* **clay-css:** Modals add `.modal-item-group`, `.modal-item-group-first`, `.modal-item-group-last`, `.modal-item-group-only`, `.modal-item-shrink`, and modify `.modal-item` to accommodate more use cases like truncating long text ([72d9083](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/72d9083)), closes [#2844](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2844)
+* **clay-css:** Navbar add support for `.nav-item .dropdown` so `.dropdown-toggle` is sized and positioned properly ([124ee8b](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/124ee8b)), closes [#2900](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2900)
+* **clay-css:** SVG Icons add `books.svg` ([5fb502d](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/5fb502d)), closes [#2905](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2905)
+
+
+
+
+
 # [3.5.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.2.0...@clayui/css@3.5.0) (2020-01-31)
 
 

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.7](https://github.com/liferay/clay/tree/master/packages/clay-card/compare/@clayui/card@3.0.6...@clayui/card@3.0.7) (2020-02-13)
+
+### Bug Fixes
+
+-   **card:** prevent unwanted DOM thrash in ClayCard ([#2916](https://github.com/liferay/clay/tree/master/packages/clay-card/issues/2916)) ([05bcbe6](https://github.com/liferay/clay/tree/master/packages/clay-card/commit/05bcbe6))
+
 ## [3.0.6](https://github.com/liferay/clay/tree/master/packages/clay-card/compare/@clayui/card@3.0.3...@clayui/card@3.0.6) (2020-01-31)
 
 **Note:** Version bump only for package @clayui/card
