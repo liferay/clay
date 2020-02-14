@@ -21,7 +21,7 @@ const IconSearch = ({
 	label = 'Search Icons',
 	placeholder = 'Search Icons...',
 	source,
-	type = 'icons',
+	iconLabelFormatter = icon => icon.name,
 }) => {
 	const [searchQuery, setSearchQuery] = useState('');
 	let list = [];
@@ -34,7 +34,7 @@ const IconSearch = ({
 				name.toLowerCase().includes(query) ||
 				aliases.some(alias => alias.toLowerCase().includes(query))
 		);
-	}, [searchQuery]);
+	}, [searchQuery, source]);
 
 	if (filteredIcons.length) {
 		list = filteredIcons;
@@ -64,11 +64,7 @@ const IconSearch = ({
 								symbol={icon.name}
 							/>
 
-							<span>
-								{type === 'flags'
-									? icon.aliases.join(' - ')
-									: icon.name}
-							</span>
+							<span>{iconLabelFormatter(icon)}</span>
 						</li>
 					))}
 				</ul>

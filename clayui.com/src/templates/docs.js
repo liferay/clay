@@ -254,15 +254,15 @@ export default props => {
 															}
 														</p>
 													)}
-													{tab.html && (
+													{tab && tab.html && (
 														<div
 															dangerouslySetInnerHTML={{
 																__html:
-																	mdTab.html,
+																	tab.html,
 															}}
 														/>
 													)}
-													{tab.code && (
+													{tab && tab.code && (
 														<article>
 															<CodeClipboard>
 																<MDXProvider
@@ -294,7 +294,7 @@ export default props => {
 																>
 																	<MDXRenderer>
 																		{
-																			mdxTab
+																			tab
 																				.code
 																				.body
 																		}
