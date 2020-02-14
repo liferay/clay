@@ -56,6 +56,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	show?: boolean;
 
 	/**
+	 * Callback for when the `show` prop changes.
+	 */
+	onShowChange?: (val: boolean) => void;
+
+	/**
 	 * React element that the popover will align to when clicked.
 	 */
 	trigger?: React.ReactElement & {
@@ -76,12 +81,14 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 			className,
 			disableScroll = false,
 			header,
+			onShowChange,
+			show: externalShow = false,
 			trigger,
 			...otherProps
 		}: IProps,
 		ref
 	) => {
-		const [show, setShow] = React.useState(false);
+		const [internalShow, internalSetShow] = React.useState(externalShow);
 
 		const triggerRef = React.useRef<HTMLElement | null>(null);
 		const popoverRef = React.useRef<HTMLElement | null>(null);
@@ -89,6 +96,9 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 		if (!ref) {
 			ref = popoverRef as React.Ref<HTMLDivElement>;
 		}
+
+		const show = externalShow ? externalShow : internalShow;
+		const setShow = onShowChange ? onShowChange : internalSetShow;
 
 		React.useEffect(() => {
 			if (
