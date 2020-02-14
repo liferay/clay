@@ -158,43 +158,101 @@ export default props => {
 													id="advancedTab"
 													role="tabpanel"
 												>
-													{fields &&
-														fields.packageStatus && (
-															<Link
-																className="clay-site-label"
-																to="/docs/get-started/how-to-read-this-documentation.html"
+													<p className="clay-site-label">
+														{fields &&
+															fields.packageStatus && (
+																<>
+																	<Link to="/docs/get-started/how-to-read-this-documentation.html">
+																		<span
+																			className={`label label-${
+																				mapStatus[
+																					fields.packageStatus.toLowerCase()
+																				]
+																			}`}
+																		>
+																			<span className="label-item label-item-expand">
+																				{
+																					fields.packageStatus
+																				}
+																			</span>
+																		</span>
+																	</Link>
+
+																	{fields.packageVersion && (
+																		<a
+																			href={`https://www.npmjs.com/package/${
+																				frontmatter.packageNpm
+																			}`}
+																			rel="noopener noreferrer"
+																			target="_blank"
+																		>
+																			<span className="label label-secondary">
+																				<span className="label-item label-item-expand">
+																					{
+																						fields.packageVersion
+																					}
+																				</span>
+																			</span>
+																		</a>
+																	)}
+																</>
+															)}
+
+														{frontmatter.packageNpm && (
+															<a
+																href={`https://github.com/liferay/clay/blob/master/packages/${frontmatter.packageNpm.replace(
+																	'@clayui/',
+																	'clay-'
+																)}/CHANGELOG.md`}
+																rel="noopener noreferrer"
+																target="_blank"
 															>
-																<span
-																	className={`label label-${
-																		mapStatus[
-																			fields.packageStatus.toLowerCase()
-																		]
-																	}`}
-																>
+																<span className="label label-secondary">
 																	<span className="label-item label-item-expand">
 																		{
-																			fields.packageStatus
+																			'CHANGELOG'
 																		}
 																	</span>
 																</span>
-																{fields.packageVersion && (
-																	<span className="label label-secondary">
-																		<span className="label-item label-item-expand">
-																			{
-																				fields.packageVersion
-																			}
-																		</span>
-																	</span>
-																)}
-															</Link>
+															</a>
 														)}
+													</p>
+
 													{!showDescTop && (
 														<p className="docs-description">
 															{
 																frontmatter.description
 															}
+															{'See the'}{' '}
+															<a
+																href={
+																	frontmatter.lexiconDefinition
+																}
+																rel="noopener noreferrer"
+																target="_blank"
+															>
+																{
+																	'Lexicon definition'
+																}
+															</a>{' '}
+															{`for a more in-depth look at the motivations behind ${
+																frontmatter.title
+															}.`}
 														</p>
 													)}
+
+													<h2>{'Examples'}</h2>
+													<a
+														href={`https://github.com/liferay/clay/blob/master/packages/${frontmatter.packageNpm.replace(
+															'@clayui/',
+															'clay-'
+														)}/CHANGELOG.md`}
+														rel="noopener noreferrer"
+														target="_blank"
+													>
+														{'Storybook'}
+													</a>
+
 													<article>
 														<CodeClipboard>
 															{markdownJsx ? (
@@ -357,6 +415,7 @@ export const pageQuery = graphql`
 			timeToRead
 			frontmatter {
 				description
+				lexiconDefinition
 				packageNpm
 				title
 			}

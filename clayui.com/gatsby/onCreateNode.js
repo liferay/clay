@@ -24,6 +24,7 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 			draft,
 			indexVisible,
 			layout,
+			lexiconDefinition = '',
 			nightly,
 			order,
 			packageNpm,
@@ -105,6 +106,12 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 			name: 'alwaysActive',
 			node,
 			value: alwaysActive || false,
+		});
+
+		createNodeField({
+			name: 'lexiconDefinition',
+			node,
+			value: lexiconDefinition,
 		});
 
 		createNodeField({
