@@ -464,3 +464,112 @@ exports[`ClayAlert renders with an icon for closing 1`] = `
   </button>
 </div>
 `;
+
+exports[`ClayAlert renders with an icon for closing with autoClose 1`] = `
+<div
+  className="alert alert-dismissible alert-info"
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+  role="alert"
+>
+  <div
+    className="alert-autofit-row autofit-row"
+  >
+    <div
+      className="autofit-col"
+    >
+      <div
+        className="autofit-section"
+      >
+        <span
+          className="alert-indicator"
+        >
+          <svg
+            className="lexicon-icon lexicon-icon-info-circle"
+            role="presentation"
+          >
+            <use
+              xlinkHref="/foo/bar#info-circle"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+    <div
+      className="autofit-col autofit-col-expand"
+    >
+      <div
+        className="autofit-section"
+      >
+        <strong
+          className="lead"
+        >
+          Hello!
+        </strong>
+      </div>
+    </div>
+  </div>
+  <button
+    aria-label="Close"
+    className="close"
+    onClick={[Function]}
+    type="button"
+  >
+    <svg
+      className="lexicon-icon lexicon-icon-times"
+      role="presentation"
+    >
+      <use
+        xlinkHref="/foo/bar#times"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`ClayAlert renders with autoClose and without icon 1`] = `
+<div
+  className="alert alert-info"
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+  role="alert"
+>
+  <div
+    className="alert-autofit-row autofit-row"
+  >
+    <div
+      className="autofit-col"
+    >
+      <div
+        className="autofit-section"
+      >
+        <span
+          className="alert-indicator"
+        >
+          <svg
+            className="lexicon-icon lexicon-icon-info-circle"
+            role="presentation"
+          >
+            <use
+              xlinkHref="/foo/bar#info-circle"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+    <div
+      className="autofit-col autofit-col-expand"
+    >
+      <div
+        className="autofit-section"
+      >
+        <strong
+          className="lead"
+        >
+          Hello!
+        </strong>
+      </div>
+    </div>
+  </div>
+</div>
+`;

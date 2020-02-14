@@ -96,6 +96,25 @@ storiesOf('Components|ClayAlert', module)
 			{text('Content', 'This is an alert!')}
 		</ClayAlert>
 	))
+	.add('w/ autoclose and no icon', () => {
+		const [show, setShow] = React.useState(true);
+
+		return (
+			<>
+				{show && (
+					<ClayAlert
+						autoClose={2000}
+						hideCloseIcon
+						onClose={() => setShow(!show)}
+						spritemap={spritemap}
+						title={text('Title', 'Info')}
+					>
+						{text('Content', 'Wait 2000ms for me to disappear!')}
+					</ClayAlert>
+				)}
+			</>
+		);
+	})
 	.add('w/ a button', () => (
 		<ClayAlert
 			displayType="info"
