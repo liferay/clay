@@ -24,7 +24,6 @@ const IconSearch = ({
 	iconLabelFormatter = icon => icon.name,
 }) => {
 	const [searchQuery, setSearchQuery] = useState('');
-	let list = [];
 
 	const filteredIcons = useMemo(() => {
 		const query = searchQuery.toLowerCase();
@@ -36,11 +35,7 @@ const IconSearch = ({
 		);
 	}, [searchQuery, source]);
 
-	if (filteredIcons.length) {
-		list = filteredIcons;
-	} else {
-		list = searchQuery ? [] : source;
-	}
+	const list = searchQuery ? filteredIcons : source;
 
 	return (
 		<>
