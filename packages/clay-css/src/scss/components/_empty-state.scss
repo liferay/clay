@@ -1,0 +1,15 @@
+.empty-state-root {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.empty-state-root--no-image {
+    align-items: flex-start;
+    margin-top: 48px;
+}
+
+.empty-state-action .btn {
+    margin-top: 16px;
+}
