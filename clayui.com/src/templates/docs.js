@@ -164,7 +164,7 @@ export default props => {
 																<>
 																	<Link to="/docs/get-started/how-to-read-this-documentation.html">
 																		<span
-																			className={`label label-${
+																			className={`label label-lg label-${
 																				mapStatus[
 																					fields.packageStatus.toLowerCase()
 																				]
@@ -186,7 +186,7 @@ export default props => {
 																			rel="noopener noreferrer"
 																			target="_blank"
 																		>
-																			<span className="label label-secondary">
+																			<span className="label label-lg label-secondary">
 																				<span className="label-item label-item-expand">
 																					{
 																						fields.packageVersion
@@ -207,7 +207,7 @@ export default props => {
 																rel="noopener noreferrer"
 																target="_blank"
 															>
-																<span className="label label-secondary">
+																<span className="label label-lg label-secondary">
 																	<span className="label-item label-item-expand">
 																		{
 																			'CHANGELOG'
@@ -216,13 +216,31 @@ export default props => {
 																</span>
 															</a>
 														)}
+
+														{frontmatter.packageNpm && (
+															<a
+																href={`https://storybook.clayui.com/?path=/story/components-${frontmatter.packageNpm
+																	.replace(
+																		'@clayui/',
+																		'clay'
+																	)
+																	.replace(
+																		'-',
+																		''
+																	)}`}
+																rel="noopener noreferrer"
+																target="_blank"
+															>
+																<img src="/images/storybook_badge.svg" />
+															</a>
+														)}
 													</p>
 
 													{!showDescTop && (
 														<p className="docs-description">
 															{
 																frontmatter.description
-															}
+															}{' '}
 															{'See the'}{' '}
 															<a
 																href={
@@ -240,18 +258,6 @@ export default props => {
 															}.`}
 														</p>
 													)}
-
-													<h2>{'Examples'}</h2>
-													<a
-														href={`https://github.com/liferay/clay/blob/master/packages/${frontmatter.packageNpm.replace(
-															'@clayui/',
-															'clay-'
-														)}/CHANGELOG.md`}
-														rel="noopener noreferrer"
-														target="_blank"
-													>
-														{'Storybook'}
-													</a>
 
 													<article>
 														<CodeClipboard>
