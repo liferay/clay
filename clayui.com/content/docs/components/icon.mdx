@@ -6,6 +6,8 @@ sibling: 'docs/components/css-icons.html'
 ---
 
 import {Icon, IconWithContext} from '../../../src/components/clay/Icon';
+import IconSearch from '../../../src/components/IconSearch';
+import icons from '../../../static/js/icons.json';
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
@@ -16,6 +18,8 @@ import {Icon, IconWithContext} from '../../../src/components/clay/Icon';
 
 </div>
 </div>
+
+<IconSearch source={icons} />
 
 <div class="clay-site-alert alert alert-warning">
 	Take a look at our{' '}
