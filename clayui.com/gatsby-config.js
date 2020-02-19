@@ -36,12 +36,6 @@ module.exports = {
 				extensions: ['.mdx'],
 				gatsbyRemarkPlugins: [
 					{
-						resolve: path.resolve(
-							__dirname,
-							'./plugins/gatsby-remark-foreach-icons'
-						),
-					},
-					{
 						options: {
 							classPrefix: 'gatsby-code-',
 						},
@@ -66,9 +60,6 @@ module.exports = {
 		{
 			options: {
 				plugins: [
-					{
-						resolve: 'gatsby-remark-foreach-icons',
-					},
 					{
 						options: {
 							classPrefix: 'gatsby-code-',
