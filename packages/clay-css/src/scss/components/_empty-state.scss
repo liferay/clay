@@ -3,6 +3,10 @@
     display: flex;
     flex-direction: column;
     margin-top: 80px;
+
+    img {
+        margin-bottom: 40px;
+    }
 }
 
 .empty-state-root--no-image {

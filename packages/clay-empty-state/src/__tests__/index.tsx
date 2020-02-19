@@ -11,8 +11,24 @@ import React from 'react';
 describe('ClayEmptyState', () => {
 	afterEach(cleanup);
 
-	it('renders', () => {
+	it('renders with default values', () => {
 		const {container} = render(<ClayEmptyState />);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders with an image provided', () => {
+		const {container} = render(
+			<ClayEmptyState imageSrc="https://via.placeholder.com/256" />
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders with a children content', () => {
+		const {container} = render(
+			<ClayEmptyState>{'My Empty State'}</ClayEmptyState>
+		);
 
 		expect(container).toMatchSnapshot();
 	});
