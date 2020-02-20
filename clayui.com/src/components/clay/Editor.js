@@ -4,7 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayButtonWithIcon} from '@clayui/button/src';
+import ClayAlert from '@clayui/alert';
+import {ClayButtonWithIcon} from '@clayui/button';
 import parserBabylon from 'prettier/parser-babylon';
 import prettier from 'prettier/standalone';
 import React, {useState} from 'react';
@@ -117,6 +118,14 @@ const Editor = ({code, disabled = false, imports, preview = true, scope}) => {
 			)}
 
 			<div className="gatsby-highlight">
+				<ClayAlert
+					className="copied-alert d-none"
+					displayType="info"
+					spritemap={spritemap}
+					title="Copied!"
+					variant="stripe"
+				/>
+
 				<div style={{padding: '10px'}}>
 					<ClayButtonWithIcon
 						className="btn-copy"
