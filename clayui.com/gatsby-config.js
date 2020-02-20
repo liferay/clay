@@ -44,12 +44,6 @@ module.exports = {
 					{
 						resolve: path.resolve(
 							__dirname,
-							'./plugins/gatsby-remark-use-clipboard'
-						),
-					},
-					{
-						resolve: path.resolve(
-							__dirname,
 							'./plugins/gatsby-remark-api-table'
 						),
 					},
