@@ -9,10 +9,10 @@ import ClayButton from '@clayui/button';
 import {storiesOf} from '@storybook/react';
 import React from 'react';
 
-const emptyImage = require('../images/empty_state.gif');
-const searchImage = require('../images/search_state.gif');
-const successImage = require('../images/success_state.gif');
 import ClayEmptyState from '../src';
+const emptyImage = require('./images/empty_state.gif');
+const searchImage = require('./images/search_state.gif');
+const successImage = require('./images/success_state.gif');
 
 storiesOf('Components|ClayEmptyState', module)
 	.add('default', () => <ClayEmptyState />)
