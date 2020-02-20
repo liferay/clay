@@ -138,7 +138,7 @@ const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
 		>
 			<ConditionalContainer>
 				<div className="alert-autofit-row autofit-row">
-					<div className="autofit-col">
+					<div className="autofit-col inline-item-before">
 						<div className="autofit-section">
 							<span className="alert-indicator">
 								<Icon
