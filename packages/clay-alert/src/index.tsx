@@ -76,6 +76,12 @@ export interface IClayAlertProps extends React.HTMLAttributes<HTMLDivElement> {
 	displayType?: DisplayType;
 
 	/**
+	 * Flag to indicate if close icon should be show. This prop is used in
+	 * conjunction with the `onClose`prop;
+	 */
+	hideCloseIcon?: boolean;
+
+	/**
 	 * Path to the spritemap that Icon should use when referencing symbols.
 	 */
 	spritemap?: string;
@@ -106,6 +112,7 @@ const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
 	children,
 	className,
 	displayType = 'info',
+	hideCloseIcon = false,
 	onClose,
 	spritemap,
 	title,
@@ -124,11 +131,13 @@ const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
 			<>{children}</>
 		);
 
+	const showDismissible = onClose && !hideCloseIcon;
+
 	return (
 		<div
 			{...otherProps}
 			className={classNames(className, 'alert', {
-				'alert-dismissible': onClose,
+				'alert-dismissible': showDismissible,
 				'alert-fluid': variant === 'stripe',
 				[`alert-${displayType}`]: displayType,
 			})}
@@ -158,7 +167,7 @@ const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
 					</div>
 				</div>
 
-				{onClose && (
+				{showDismissible && (
 					<button
 						aria-label="Close"
 						className="close"

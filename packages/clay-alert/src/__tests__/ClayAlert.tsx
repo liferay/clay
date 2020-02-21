@@ -83,4 +83,31 @@ describe('ClayAlert', () => {
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
+
+	it('renders with an icon for closing with autoClose', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayAlert
+				autoClose
+				onClose={() => {}}
+				spritemap="/foo/bar"
+				title="Hello!"
+			/>
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('renders with autoClose and without icon', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayAlert
+				autoClose
+				hideCloseIcon
+				onClose={() => {}}
+				spritemap="/foo/bar"
+				title="Hello!"
+			/>
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
 });
