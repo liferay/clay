@@ -11,6 +11,7 @@ exports[`ClayPagination renders 1`] = `
       <button
         class="page-link"
         data-testid="prevArrow"
+        type="button"
       >
         <svg
           class="lexicon-icon lexicon-icon-angle-left"
@@ -27,6 +28,7 @@ exports[`ClayPagination renders 1`] = `
     >
       <button
         class="page-link"
+        type="button"
       >
         1
       </button>
@@ -47,6 +49,7 @@ exports[`ClayPagination renders 1`] = `
     >
       <button
         class="page-link"
+        type="button"
       >
         10
       </button>
@@ -56,6 +59,7 @@ exports[`ClayPagination renders 1`] = `
     >
       <button
         class="page-link"
+        type="button"
       >
         11
       </button>
@@ -65,6 +69,7 @@ exports[`ClayPagination renders 1`] = `
     >
       <button
         class="page-link"
+        type="button"
       >
         12
       </button>
@@ -74,6 +79,7 @@ exports[`ClayPagination renders 1`] = `
     >
       <button
         class="page-link"
+        type="button"
       >
         13
       </button>
@@ -83,6 +89,7 @@ exports[`ClayPagination renders 1`] = `
     >
       <button
         class="page-link"
+        type="button"
       >
         14
       </button>
@@ -103,6 +110,7 @@ exports[`ClayPagination renders 1`] = `
     >
       <button
         class="page-link"
+        type="button"
       >
         25
       </button>
@@ -113,6 +121,7 @@ exports[`ClayPagination renders 1`] = `
       <button
         class="page-link"
         data-testid="nextArrow"
+        type="button"
       >
         <svg
           class="lexicon-icon lexicon-icon-angle-right"
@@ -140,6 +149,7 @@ exports[`ClayPagination renders with only one page 1`] = `
         class="page-link"
         data-testid="prevArrow"
         disabled=""
+        type="button"
       >
         <svg
           class="lexicon-icon lexicon-icon-angle-left"
@@ -156,6 +166,7 @@ exports[`ClayPagination renders with only one page 1`] = `
     >
       <button
         class="page-link"
+        type="button"
       >
         1
       </button>
@@ -167,6 +178,7 @@ exports[`ClayPagination renders with only one page 1`] = `
         class="page-link"
         data-testid="nextArrow"
         disabled=""
+        type="button"
       >
         <svg
           class="lexicon-icon lexicon-icon-angle-right"

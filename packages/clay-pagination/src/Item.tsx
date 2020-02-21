@@ -27,6 +27,7 @@ const ClayPaginationItem: React.FunctionComponent<IPaginationItemProps> = ({
 	return (
 		<li className={classes}>
 			<ElementTag
+				type={!href ? 'button' : undefined}
 				{...otherProps}
 				className="page-link"
 				disabled={disabled}
