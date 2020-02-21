@@ -18,11 +18,10 @@ interface ITabPaneProps extends React.HTMLAttributes<HTMLDivElement> {
 	fade?: boolean;
 }
 
-const delay = (fn: Function) => {
-	return setTimeout(() => {
+const delay = (fn: Function, val: number = 150) =>
+	setTimeout(() => {
 		fn();
-	}, 100);
-};
+	}, val);
 
 const TabPane: React.FunctionComponent<ITabPaneProps> = ({
 	active = false,
@@ -31,18 +30,28 @@ const TabPane: React.FunctionComponent<ITabPaneProps> = ({
 	fade,
 	...otherProps
 }: ITabPaneProps) => {
-	const [visibleClassShow, setVisibleClassShow] = React.useState<boolean>(
-		false
-	);
+	const [internalActive, setInternalActive] = React.useState(active);
+	const [internalShow, setInternalShow] = React.useState(active);
 
 	React.useEffect(() => {
-		const timer = delay(() => {
-			setVisibleClassShow(true);
-		});
+		let delayFn = () => {
+			setInternalActive(true);
+
+			delay(() => setInternalShow(true), 50);
+		};
+
+		if (!active) {
+			setInternalShow(false);
+
+			delayFn = () => setInternalActive(false);
+		}
+
+		const timer = delay(delayFn);
 
 		return () => {
 			clearTimeout(timer);
-			setVisibleClassShow(false);
+
+			setInternalShow(false);
 		};
 	}, [active]);
 
@@ -52,9 +61,9 @@ const TabPane: React.FunctionComponent<ITabPaneProps> = ({
 			className={classNames(
 				'tab-pane',
 				{
-					active,
+					active: internalActive,
 					fade,
-					show: active && visibleClassShow,
+					show: internalShow,
 				},
 				className
 			)}
