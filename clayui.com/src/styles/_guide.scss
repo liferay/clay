@@ -1,9 +1,8 @@
 .docs {
 	.docs-description,
 	.clay-p {
-		color: #6B6C7E;
+		color: #6b6c7e;
 	}
-
 
 	.nav-clay {
 		.nav-item .nav-link.active:after {
@@ -13,7 +12,7 @@
 	}
 
 	.clay-site-separator {
-		border-color: #E7E7ED;
+		border-color: #e7e7ed;
 		margin-bottom: 4px;
 		width: 100%;
 	}
@@ -68,7 +67,7 @@
 		}
 
 		.docs-subtitle {
-			color: #6B6C7E;
+			color: #6b6c7e;
 			font-size: 22px;
 			font-weight: 400;
 			margin: 0 0 20px;
@@ -106,8 +105,10 @@
 
 	.clay-site-label {
 		display: flex;
-		text-decoration: none;
-		margin-bottom: 20px;
+
+		a:hover {
+			text-decoration: none;
+		}
 
 		.label {
 			margin-top: 0;
@@ -142,12 +143,12 @@
 		margin: 2rem -15px 0;
 		margin-right: 0;
 		margin-left: 0;
-		border-width: .2rem;
+		border-width: 0.2rem;
 		border: solid #f5f5f8;
 		border-top-left-radius: 4px;
 		border-top-right-radius: 4px;
 
-		&~ .code-container {
+		& ~ .code-container {
 			margin-top: 0;
 
 			.gatsby-highlight {
@@ -167,7 +168,7 @@
 		@media (min-width: $screen-lg) {
 			height: 100%;
 			position: absolute;
-			right: -50%;
+			right: -295px;
 			top: 0;
 
 			.nav-toc {
@@ -184,7 +185,7 @@
 		a {
 			@include focus-a11y;
 
-			color: #30313F;
+			color: #30313f;
 			word-break: break-word;
 		}
 
@@ -217,7 +218,7 @@
 
 .about.about-inverted {
 	background-color: rgba(0, 0, 0, 0.8);
-	color: #FFF;
+	color: #fff;
 }
 
 .clay-site-alert {
@@ -252,7 +253,7 @@
 .list-api {
 	list-style-type: none;
 	margin: 0;
-    padding: 0
+	padding: 0;
 }
 
 .list-api-item {
@@ -267,19 +268,19 @@
 
 .list-api-item-name {
 	color: #b3472c;
-    display: inline-block;
-    margin-right: 0.8em;
-    background: #ffd6cc;
-    border-radius: 3px;
-    padding: 0px 0.2em;
+	display: inline-block;
+	margin-right: 0.8em;
+	background: #ffd6cc;
+	border-radius: 3px;
+	padding: 0px 0.2em;
 }
 
 .list-api-item-type {
 	color: #5e6c84;
-    display: inline-block;
-    background: #f4f5f7;
-    border-radius: 3px;
-    padding: 0px 0.2em;
+	display: inline-block;
+	background: #f4f5f7;
+	border-radius: 3px;
+	padding: 0px 0.2em;
 }
 
 .list-api-item-default {
@@ -288,7 +289,7 @@
 }
 
 .list-api-item-required {
-	color: #DA1414;
+	color: #da1414;
 	margin-left: 8px;
 }
 

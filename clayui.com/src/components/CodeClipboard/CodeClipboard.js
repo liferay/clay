@@ -15,12 +15,30 @@ export default props => {
 		clayClipboard = new Clipboard(selector, {
 			text: delegateTarget => {
 				const codeContentParentNode = delegateTarget.parentNode;
+				const gatsbyHighlightContainer =
+					codeContentParentNode.parentNode;
 				let codeContent;
+				const buttonContent = delegateTarget.innerHTML;
+
+				delegateTarget.innerHTML = delegateTarget.innerHTML.replace(
+					/paste/g,
+					'check'
+				);
 
 				delegateTarget.setAttribute('title', 'Copied');
 
+				gatsbyHighlightContainer
+					.querySelector('.copied-alert')
+					.classList.toggle('d-none');
+
 				setTimeout(() => {
 					delegateTarget.setAttribute('title', 'Copy');
+
+					delegateTarget.innerHTML = buttonContent;
+
+					gatsbyHighlightContainer
+						.querySelector('.copied-alert')
+						.classList.toggle('d-none');
 				}, 2000);
 
 				if (codeContentParentNode.querySelector('pre code')) {

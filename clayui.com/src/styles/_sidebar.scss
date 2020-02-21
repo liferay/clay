@@ -14,8 +14,8 @@
 		max-width: 100%;
 
 		@media (min-width: $screen-lg) {
-			margin-right: 36%;
-			max-width: 64%;
+			max-width: calc(100% - 295px);
+			margin: 0;
 		}
 	}
 }

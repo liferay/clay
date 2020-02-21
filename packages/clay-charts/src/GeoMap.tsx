@@ -5,17 +5,7 @@
  */
 
 import {Grid, PointOptions} from 'billboard.js';
-import d3 from 'd3';
-
-// eslint-disable-next-line liferay/no-duplicate-imports
-import {
-	GeoPath,
-	GeoPermissibleObjects,
-	GeoProjection,
-	ScaleLinear,
-	Selection,
-	ValueFn,
-} from 'd3';
+import * as d3 from 'd3';
 import {FeatureCollection} from 'geojson';
 import React from 'react';
 
@@ -37,20 +27,20 @@ class GeomapBase {
 	_domainMax?: number;
 	_domainMin?: number;
 	_element?: any;
-	_handleClickHandler?: ValueFn<any, unknown, void>;
+	_handleClickHandler?: d3.ValueFn<any, unknown, void>;
 	_height?: number | string;
 	_internalPollingInterval?: any;
 	_pollingInterval?: number;
 	_selected?: any;
 	_width?: number | string;
-	colorScale?: ScaleLinear<number, number>;
-	mapLayer?: Selection<SVGGElement, unknown, null, undefined>;
-	path?: GeoPath<any, GeoPermissibleObjects>;
+	colorScale?: d3.ScaleLinear<number, number>;
+	mapLayer?: d3.Selection<SVGGElement, unknown, null, undefined>;
+	path?: d3.GeoPath<any, d3.GeoPermissibleObjects>;
 	pollingInterval?: number;
-	projection?: GeoProjection;
-	rect?: Selection<SVGRectElement, unknown, null, undefined>;
-	svg?: Selection<SVGSVGElement, unknown, null, undefined>;
-	svgGroup?: Selection<SVGGElement, unknown, null, undefined>;
+	projection?: d3.GeoProjection;
+	rect?: d3.Selection<SVGRectElement, unknown, null, undefined>;
+	svg?: d3.Selection<SVGSVGElement, unknown, null, undefined>;
+	svgGroup?: d3.Selection<SVGGElement, unknown, null, undefined>;
 
 	constructor(config: any) {
 		this._data = config.data;
@@ -209,12 +199,12 @@ class GeomapBase {
 			.attr('vector-effect', 'non-scaling-stroke')
 			.attr('fill', this._fillFn.bind(this))
 			.on('click', this._handleClickHandler!)
-			.on('mouseout', this._handleMouseOut.bind(this) as ValueFn<
+			.on('mouseout', this._handleMouseOut.bind(this) as d3.ValueFn<
 				SVGPathElement,
 				unknown,
 				void
 			>)
-			.on('mouseover', this._handleMouseOver.bind(this) as ValueFn<
+			.on('mouseover', this._handleMouseOver.bind(this) as d3.ValueFn<
 				SVGPathElement,
 				unknown,
 				void
