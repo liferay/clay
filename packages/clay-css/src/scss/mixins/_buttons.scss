@@ -176,6 +176,7 @@
 /// min-height: {Number | String | Null},
 /// min-width: {Number | String | Null},
 /// opacity: {Number | String | Null},
+/// overflow: {String | Null},
 /// padding: {Number | String | List | Null},
 /// padding-bottom: {Number | String | Null},
 /// padding-left: {Number | String | Null},
@@ -272,7 +273,9 @@
 	$min-height: map-get($map, min-height);
 	$min-width: map-get($map, min-width);
 	$opacity: map-get($map, opacity);
+	$overflow: map-get($map, overflow);
 	$padding: map-get($map, padding);
+
 	$padding-bottom: map-get($map, padding-bottom);
 	$padding-left: map-get($map, padding-left);
 	$padding-right: map-get($map, padding-right);
@@ -289,36 +292,106 @@
 	$word-wrap: map-get($map, word-wrap);
 	$z-index: map-get($map, z-index);
 
+	// `$hover-bg` is deprecated use `$hover` instead
 	$hover-bg: map-get($map, hover-bg);
+	// `$hover-border-color` is deprecated use `$hover` instead
 	$hover-border-color: map-get($map, hover-border-color);
+	// `$hover-color` is deprecated use `$hover` instead
 	$hover-color: map-get($map, hover-color);
+	// `$hover-opacity` is deprecated use `$hover` instead
 	$hover-opacity: map-get($map, hover-opacity);
+	// `$hover-text-decoration` is deprecated use `$hover` instead
 	$hover-text-decoration: map-get($map, hover-text-decoration);
 	$hover-z-index: map-get($map, hover-z-index);
 
+	$hover: setter(map-get($map, hover), ());
+	$hover: map-deep-merge((
+		background-color: $hover-bg,
+		border-color: $hover-border-color,
+		color: $hover-color,
+		opacity: $hover-opacity,
+		text-decoration: $hover-text-decoration,
+	), $hover);
+
+	// `$focus-bg` is deprecated use `$focus` instead
 	$focus-bg: map-get($map, focus-bg);
+	// `$focus-border-color` is deprecated use `$focus` instead
 	$focus-border-color: map-get($map, focus-border-color);
+	// `$focus-box-shadow` is deprecated use `$focus` instead
 	$focus-box-shadow: map-get($map, focus-box-shadow);
+	// `$focus-color` is deprecated use `$focus` instead
 	$focus-color: map-get($map, focus-color);
+	// `$focus-opacity` is deprecated use `$focus` instead
 	$focus-opacity: map-get($map, focus-opacity);
+	// `$focus-outline` is deprecated use `$focus` instead
 	$focus-outline: map-get($map, focus-outline);
 	$focus-z-index: map-get($map, focus-z-index);
 
+	$focus: setter(map-get($map, focus), ());
+	$focus: map-deep-merge((
+		background-color: $focus-bg,
+		border-color: $focus-border-color,
+		box-shadow: $focus-box-shadow,
+		color: $focus-color,
+		opacity: $focus-opacity,
+		outline: $focus-outline,
+	), $focus);
+
+	// `$disabled-bg` is deprecated use `$disabled` instead
 	$disabled-bg: map-get($map, disabled-bg);
+	// `$disabled-border-color` is deprecated use `$disabled` instead
 	$disabled-border-color: map-get($map, disabled-border-color);
+	// `$disabled-box-shadow` is deprecated use `$disabled` instead
 	$disabled-box-shadow: map-get($map, disabled-box-shadow);
+	// `$disabled-color` is deprecated use `$disabled` instead
 	$disabled-color: map-get($map, disabled-color);
+	// `$disabled-cursor` is deprecated use `$disabled` instead
 	$disabled-cursor: map-get($map, disabled-cursor);
+	// `$disabled-opacity` is deprecated use `$disabled` instead
 	$disabled-opacity: map-get($map, disabled-opacity);
 	$disabled-z-index: map-get($map, disabled-z-index);
 
+	$disabled: setter(map-get($map, disabled), ());
+	$disabled: map-deep-merge((
+		background-color: $disabled-bg,
+		border-color: $disabled-border-color,
+		box-shadow: $disabled-box-shadow,
+		color: $disabled-color,
+		cursor: $disabled-cursor,
+		opacity: $disabled-opacity,
+	), $disabled);
+
+	// `$active-bg` is deprecated use `$active` instead
 	$active-bg: map-get($map, active-bg);
+	// `$active-border-color` is deprecated use `$active` instead
 	$active-border-color: map-get($map, active-border-color);
+	// `$active-box-shadow` is deprecated use `$active` instead
 	$active-box-shadow: map-get($map, active-box-shadow);
+	// `$active-color` is deprecated use `$active` instead
 	$active-color: map-get($map, active-color);
+	// `$active-opacity` is deprecated use `$active` instead
 	$active-opacity: map-get($map, active-opacity);
 	$active-z-index: map-get($map, active-z-index);
+
+	$active: setter(map-get($map, active), ());
+	$active: map-deep-merge((
+		background-color: $active-bg,
+		border-color: $active-border-color,
+		box-shadow: $active-box-shadow,
+		color: $active-color,
+		opacity: $active-opacity,
+		z-index: $active-z-index,
+	), $active);
+
+	$active-class-after: setter(map-get($map, active-class-after), ());
+
+	// `$active-focus-box-shadow` is deprecated use `$active-focus` instead
 	$active-focus-box-shadow: setter(map-get($map, active-focus-box-shadow), $focus-box-shadow);
+
+	$active-focus: setter(map-get($map, active-focus), ());
+	$active-focus: map-deep-merge((
+		box-shadow: $active-focus-box-shadow,
+	), $active-focus);
 
 	$lexicon-icon-font-size: map-get($map, lexicon-icon-font-size);
 	$lexicon-icon-margin-bottom: map-get($map, lexicon-icon-margin-bottom);
@@ -377,7 +450,9 @@
 	min-height: $min-height;
 	min-width: $min-width;
 	opacity: $opacity;
+	overflow: $overflow;
 	padding: $padding;
+
 	padding-bottom: $padding-bottom;
 	padding-left: $padding-left;
 	padding-right: $padding-right;
@@ -414,48 +489,32 @@
 	}
 
 	&:hover {
-		background-color: $hover-bg;
-		border-color: $hover-border-color;
-		color: $hover-color;
-		opacity: $hover-opacity;
-		text-decoration: $hover-text-decoration;
-		z-index: $hover-z-index;
+		@include clay-css($hover);
 	}
 
 	&:focus,
 	&.focus {
-		background-color: $focus-bg;
-		border-color: $focus-border-color;
-		box-shadow: $focus-box-shadow;
-		color: $focus-color;
-		opacity: $focus-opacity;
-		outline: $focus-outline;
-		z-index: $focus-z-index;
+		@include clay-css($focus);
 	}
 
 	&:disabled,
 	&.disabled {
-		background-color: $disabled-bg;
-		border-color: $disabled-border-color;
-		box-shadow: $disabled-box-shadow;
-		color: $disabled-color;
-		cursor: $disabled-cursor;
-		opacity: $disabled-opacity;
-		z-index: $disabled-z-index;
+		@include clay-css($disabled);
 	}
 
 	&:not([disabled]):not(.disabled):active,
 	&:not([disabled]):not(.disabled).active,
 	.show > &.dropdown-toggle {
-		background-color: $active-bg;
-		border-color: $active-border-color;
-		box-shadow: $active-box-shadow;
-		color: $active-color;
-		opacity: $active-opacity;
-		z-index: $active-z-index;
+		@include clay-css($active);
 
 		&:focus {
-			box-shadow: $active-focus-box-shadow;
+			@include clay-css($active-focus);
+		}
+	}
+
+	&.active {
+		&::after {
+			@include clay-css($active-class-after);
 		}
 	}
 
