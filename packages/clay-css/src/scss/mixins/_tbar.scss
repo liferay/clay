@@ -56,53 +56,186 @@
 /// - Add @link to documentation
 
 @mixin clay-tbar-variant($map) {
+	// `$border-color` is deprecated use `$map` instead
 	$border-color: map-get($map, border-color);
+	// `$border-style` is deprecated use `$map` instead
 	$border-style: map-get($map, border-style);
+	// `$border-width` is deprecated use `$map` instead
 	$border-width: map-get($map, border-width);
+	// `$bg-color` is deprecated use `$map` instead
 	$bg-color: map-get($map, bg-color);
+	// `$color` is deprecated use `$map` instead
 	$color: map-get($map, color);
+	// `$font-size` is deprecated use `$map` instead
 	$font-size: map-get($map, font-size);
+	// `$height` is deprecated use `$map` instead
 	$height: map-get($map, height);
+	// `$padding-x` is deprecated use `$map` instead
 	$padding-x: map-get($map, padding-x);
+	// `$padding-y` is deprecated use `$map` instead
 	$padding-y: map-get($map, padding-y);
 
+	$tbar: map-merge((
+		border-color: $border-color,
+		border-style: $border-style,
+		border-width: $border-width,
+		background-color: setter($bg-color, map-get($map, background-color)),
+		color: $color,
+		font-size: $font-size,
+		height: $height,
+		padding-bottom: $padding-y,
+		padding-left: $padding-x,
+		padding-right: $padding-x,
+		padding-top: $padding-y,
+	), $map);
+
+	// `$strong-font-weight` is deprecated use `$strong` instead
 	$strong-font-weight: map-get($map, strong-font-weight);
 
+	$strong: map-deep-merge((
+		font-weight: $strong-font-weight,
+	), map-get($map, strong));
+
+	$nav: setter(map-get($map, nav), ());
+
+	// `$item-justify-content` is deprecated use `$item` instead
 	$item-justify-content: map-get($map, item-justify-content);
+	// `$item-padding-x` is deprecated use `$item` instead
 	$item-padding-x: map-get($map, item-padding-x);
+	// `$item-padding-y` is deprecated use `$item` instead
 	$item-padding-y: map-get($map, item-padding-y);
 
+	$item: map-deep-merge((
+		justify-content: $item-justify-content,
+		padding-bottom: $item-padding-y,
+		padding-left: $item-padding-x,
+		padding-right: $item-padding-x,
+		padding-top: $item-padding-y,
+	), map-get($map, item));
+
+	$item-expand: setter(map-get($map, item-expand), ());
+
+	$divider-before: setter(map-get($map, divider-before), ());
+
+	$divider-after: setter(map-get($map, divider-after), ());
+
+	// `$btn-height` is deprecated use `$btn` instead
 	$btn-height: map-get($map, btn-height);
+	// `$btn-font-size` is deprecated use `$btn` instead
 	$btn-font-size: setter(map-get($map, btn-font-size), $font-size);
+	// `$btn-font-weight` is deprecated use `$btn` instead
 	$btn-font-weight: map-get($map, btn-font-weight);
+	// `$btn-line-height` is deprecated use `$btn` instead
 	$btn-line-height: map-get($map, btn-line-height);
+	// `$btn-margin-x` is deprecated use `$btn` instead
 	$btn-margin-x: map-get($map, btn-margin-x);
+	// `$btn-margin-y` is deprecated use `$btn` instead
 	$btn-margin-y: map-get($map, btn-margin-y);
+	// `$btn-padding-x` is deprecated use `$btn` instead
 	$btn-padding-x: map-get($map, btn-padding-x);
+	// `$btn-padding-y` is deprecated use `$btn` instead
 	$btn-padding-y: map-get($map, btn-padding-y);
 
+	$btn: map-deep-merge((
+		height: $btn-height,
+		font-size: $btn-font-size,
+		font-weight: $btn-font-weight,
+		line-height: $btn-line-height,
+		margin-bottom: $btn-margin-y,
+		margin-left: $btn-margin-x,
+		margin-right: $btn-margin-x,
+		margin-top: $btn-margin-y,
+		padding-bottom: $btn-padding-y,
+		padding-left: $btn-padding-x,
+		padding-right: $btn-padding-x,
+		padding-top: $btn-padding-y,
+	), map-get($map, btn));
+
+	// `$btn-monospaced-border-radius` is deprecated use `$btn-monospaced` instead
 	$btn-monospaced-border-radius: map-get($map, btn-monospaced-border-radius);
+	// `$btn-monospaced-border-width` is deprecated use `$btn-monospaced` instead
 	$btn-monospaced-border-width: map-get($map, btn-monospaced-border-width);
+	// `$btn-monospaced-font-size` is deprecated use `$btn-monospaced` instead
 	$btn-monospaced-font-size: map-get($map, btn-monospaced-font-size);
+	// `$btn-monospaced-margin-x` is deprecated use `$btn-monospaced` instead
 	$btn-monospaced-margin-x: map-get($map, btn-monospaced-margin-x);
+	// `$btn-monospaced-margin-y` is deprecated use `$btn-monospaced` instead
 	$btn-monospaced-margin-y: map-get($map, btn-monospaced-margin-y);
+	// `$btn-monospaced-padding` is deprecated use `$btn-monospaced` instead
 	$btn-monospaced-padding: map-get($map, btn-monospaced-padding);
+	// `$btn-monospaced-size` is deprecated use `$btn-monospaced` instead
 	$btn-monospaced-size: setter(map-get($map, btn-monospaced-size), $btn-height);
 
+	$btn-monospaced: map-deep-merge((
+		border-radius: $btn-monospaced-border-radius,
+		border-width: $btn-monospaced-border-width,
+		font-size: $btn-monospaced-font-size,
+		height: $btn-monospaced-size,
+		margin-bottom: $btn-monospaced-margin-y,
+		margin-left: $btn-monospaced-margin-x,
+		margin-right: $btn-monospaced-margin-x,
+		margin-top: $btn-monospaced-margin-y,
+		padding-bottom: $btn-monospaced-padding-y,
+		padding-left: $btn-monospaced-padding-x,
+		padding-right: $btn-monospaced-padding-x,
+		padding-top: $btn-monospaced-padding-y,
+		width: $btn-monospaced-size,
+	), map-get($map, btn-monospaced));
+
+	// `$link-margin-x` is deprecated use `$link` instead
 	$link-margin-x: map-get($map, link-margin-x);
+	// `$link-margin-y` is deprecated use `$link` instead
 	$link-margin-y: map-get($map, link-margin-y);
+	// `$link-padding-x` is deprecated use `$link` instead
 	$link-padding-x: map-get($map, link-padding-x);
+	// `$link-padding-y` is deprecated use `$link` instead
 	$link-padding-y: map-get($map, link-padding-y);
 
+	$link: map-deep-merge((
+		margin-bottom: $link-margin-y,
+		margin-left: $link-margin-x,
+		margin-right: $link-margin-x,
+		margin-top: $link-margin-y,
+		padding-bottom: $link-padding-y,
+		padding-left: $link-padding-x,
+		padding-right: $link-padding-x,
+		padding-top: $link-padding-y,
+	), map-get($map, link));
+
+	// `$link-monospaced-border-radius` is deprecated use `$link-monospaced` instead
 	$link-monospaced-border-radius: map-get($map, link-monospaced-border-radius);
+	// `$link-monospaced-border-width` is deprecated use `$link-monospaced` instead
 	$link-monospaced-border-width: map-get($map, link-monospaced-border-width);
+	// `$link-monospaced-font-size` is deprecated use `$link-monospaced` instead
 	$link-monospaced-font-size: map-get($map, link-monospaced-font-size);
+	// `$link-monospaced-margin-x` is deprecated use `$link-monospaced` instead
 	$link-monospaced-margin-x: map-get($map, link-monospaced-margin-x);
+	// `$link-monospaced-margin-y` is deprecated use `$link-monospaced` instead
 	$link-monospaced-margin-y: map-get($map, link-monospaced-margin-y);
+	// `$link-monospaced-padding` is deprecated use `$link-monospaced` instead
 	$link-monospaced-padding: map-get($map, link-monospaced-padding);
+	// `$link-monospaced-size` is deprecated use `$link-monospaced` instead
 	$link-monospaced-size: map-get($map, link-monospaced-size);
 
+	$link-monospaced: map-deep-merge((
+		border-radius: $link-monospaced-border-radius,
+		border-width: $link-monospaced-border-width,
+		font-size: $link-monospaced-font-size,
+		height: $link-monospaced-size,
+		margin-bottom: $link-monospaced-margin-y,
+		margin-left: $link-monospaced-margin-x,
+		margin-right: $link-monospaced-margin-x,
+		margin-top: $link-monospaced-margin-y,
+		padding: $link-monospaced-padding,
+		width: $link-monospaced-size,
+	), map-get($map, link-monospaced));
+
+	// `$section-text-align` is deprecated use `$section` instead
 	$section-text-align: map-get($map, section-text-align);
+
+	$section: map-deep-merge((
+		text-align: $section-text-align,
+	), map-get($map, section));
 
 	$component-action: setter(map-get($map, component-action), ());
 
@@ -116,20 +249,10 @@
 
 	$tbar-label-size: setter(map-get($map, tbar-label-size), ());
 
-	background-color: $bg-color;
-	border-color: $border-color;
-	border-style: $border-style;
-	border-width: $border-width;
-	color: $color;
-	font-size: $font-size;
-	height: $height;
-	padding-bottom: $padding-y;
-	padding-left: $padding-x;
-	padding-right: $padding-x;
-	padding-top: $padding-y;
+	@include clay-css($tbar);
 
 	strong {
-		font-weight: $strong-font-weight;
+		@include clay-css($strong);
 	}
 
 	.component-action {
@@ -140,27 +263,28 @@
 		@include clay-link($component-link);
 	}
 
+	.tbar-nav {
+		@include clay-css($nav);
+	}
+
 	.tbar-item {
-		justify-content: $item-justify-content;
-		padding-bottom: $item-padding-y;
-		padding-left: $item-padding-x;
-		padding-right: $item-padding-x;
-		padding-top: $item-padding-y;
+		@include clay-css($item);
+	}
+
+	.tbar-divider-before::before {
+		@include clay-css($divider-before);
+	}
+
+	.tbar-divider-after::after {
+		@include clay-css($divider-after);
+	}
+
+	.tbar-item-expand {
+		@include clay-css($item-expand);
 	}
 
 	.tbar-btn {
-		font-size: $btn-font-size;
-		font-weight: $btn-font-weight;
-		height: $btn-height;
-		line-height: $btn-line-height;
-		margin-bottom: $btn-margin-y;
-		margin-left: $btn-margin-x;
-		margin-right: $btn-margin-x;
-		margin-top: $btn-margin-y;
-		padding-bottom: $btn-padding-y;
-		padding-left: $btn-padding-x;
-		padding-right: $btn-padding-x;
-		padding-top: $btn-padding-y;
+		@include clay-button-variant($btn);
 
 		@if ($enable-c-inner) {
 			.c-inner {
@@ -173,14 +297,7 @@
 	}
 
 	.tbar-link {
-		margin-bottom: $link-margin-y;
-		margin-left: $link-margin-x;
-		margin-right: $link-margin-x;
-		margin-top: $link-margin-y;
-		padding-bottom: $link-padding-y;
-		padding-left: $link-padding-x;
-		padding-right: $link-padding-x;
-		padding-top: $link-padding-y;
+		@include clay-link($link);
 
 		@if ($enable-c-inner) {
 			.c-inner {
@@ -193,16 +310,7 @@
 	}
 
 	.tbar-btn-monospaced {
-		border-radius: $btn-monospaced-border-radius;
-		border-width: $btn-monospaced-border-width;
-		font-size: $btn-monospaced-font-size;
-		height: $btn-monospaced-size;
-		margin-bottom: $btn-monospaced-margin-y;
-		margin-left: $btn-monospaced-margin-x;
-		margin-right: $btn-monospaced-margin-x;
-		margin-top: $btn-monospaced-margin-y;
-		padding: $btn-monospaced-padding;
-		width: $btn-monospaced-size;
+		@include clay-button-variant($btn-monospaced);
 
 		@if ($enable-c-inner) {
 			.c-inner {
@@ -211,21 +319,12 @@
 		}
 
 		.inline-item {
-			font-size: $btn-monospaced-font-size;
+			font-size: map-get($btn-monospaced, font-size);
 		}
 	}
 
 	.tbar-link-monospaced {
-		border-radius: $link-monospaced-border-radius;
-		border-width: $link-monospaced-border-width;
-		font-size: $link-monospaced-font-size;
-		height: $link-monospaced-size;
-		margin-bottom: $link-monospaced-margin-y;
-		margin-left: $link-monospaced-margin-x;
-		margin-right: $link-monospaced-margin-x;
-		margin-top: $link-monospaced-margin-y;
-		padding: $link-monospaced-padding;
-		width: $link-monospaced-size;
+		@include clay-link($link-monospaced);
 
 		@if ($enable-c-inner) {
 			.c-inner {
@@ -234,12 +333,12 @@
 		}
 
 		.inline-item {
-			font-size: $link-monospaced-font-size;
+			font-size: map-get($link-monospaced, font-size);
 		}
 	}
 
 	.tbar-section {
-		text-align: $section-text-align;
+		@include clay-css($section);
 	}
 
 	.component-title {
