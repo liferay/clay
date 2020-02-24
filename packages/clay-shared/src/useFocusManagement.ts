@@ -119,6 +119,7 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 				'keydown',
 				handleNextElementOutsideScope
 			);
+
 			return;
 		}
 
@@ -132,6 +133,7 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 						handleNextElementOutsideScope
 					);
 				}
+
 				return;
 			}
 
@@ -233,6 +235,7 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 
 		if (nextElement) {
 			nextElement.focus();
+
 			return nextElement;
 		}
 

@@ -39,6 +39,7 @@ const Form = () => {
 		spritemap,
 		useState,
 	};
+
 	return <Editor code={formCode} imports={formCodeImport} scope={scope} />;
 };
 
@@ -99,6 +100,7 @@ const FormValidation = () => {
 		spritemap,
 		useState,
 	};
+
 	return (
 		<Editor
 			code={formValidationCode}
@@ -138,6 +140,7 @@ const FormText = () => {
 		spritemap,
 		useState,
 	};
+
 	return (
 		<Editor code={formTextCode} imports={formCodeImport} scope={scope} />
 	);

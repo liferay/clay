@@ -14,6 +14,7 @@ import ClayAlert, {DisplayType} from '../src';
 
 const ClayToastDemo = () => {
 	const [toastItems, setToastItems] = React.useState<Array<number>>([]);
+
 	return (
 		<>
 			<div>

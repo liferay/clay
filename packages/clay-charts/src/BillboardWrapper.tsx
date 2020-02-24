@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {bb, ChartOptions} from 'billboard.js';
+import {ChartOptions, bb} from 'billboard.js';
 import React from 'react';
 
 interface IProps extends ChartOptions {

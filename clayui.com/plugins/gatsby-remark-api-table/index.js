@@ -56,6 +56,7 @@ module.exports = ({markdownAST}) => {
 
 					if (!fs.existsSync(filePath)) {
 						resolve(node);
+
 						return;
 					}
 

@@ -20,6 +20,7 @@ export default ({data, location}) => {
 			fields: {slug},
 			frontmatter: {title},
 		} = node;
+
 		return {link: slug.replace('.html', ''), title};
 	});
 

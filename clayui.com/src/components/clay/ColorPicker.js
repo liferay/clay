@@ -36,6 +36,7 @@ render(<Component />)`;
 
 const ColorPicker = () => {
 	const scope = {ClayColorPicker, spritemap, useState};
+
 	return (
 		<Editor
 			code={colorPickerCode}

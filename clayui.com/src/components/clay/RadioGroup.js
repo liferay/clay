@@ -31,6 +31,7 @@ render(<Component />)`;
 
 const RadioGroup = () => {
 	const scope = {ClayRadio, ClayRadioGroup, useState};
+
 	return (
 		<Editor
 			code={radioGroupCode}

@@ -10,13 +10,17 @@ const getMetaRedirect = require('./getMetaRedirect');
 
 // Adapted from https://github.com/getchalk/gatsby-plugin-meta-redirect
 const writeRedirectsFile = async (redirects, folder, pathPrefix) => {
-	if (!redirects.length) return;
+	if (!redirects.length) {
+		return;
+	}
 
 	// eslint-disable-next-line
 	for (const redirect of redirects) {
 		const {fromPath, toPath} = redirect;
 
-		if (fromPath.endsWith('index.html')) continue;
+		if (fromPath.endsWith('index.html')) {
+			continue;
+		}
 
 		const FILE_PATH = path.join(
 			folder,
@@ -53,5 +57,6 @@ exports.onPostBuild = ({store}) => {
 	}
 
 	const folder = path.join(program.directory, 'public');
+
 	return writeRedirectsFile(redirects, folder, pathPrefix);
 };
