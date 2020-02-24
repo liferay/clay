@@ -1,10 +1,9 @@
-/* eslint no-for-of-loops/no-for-of-loops: 0 */
-
 /**
- * © 2019 Liferay, Inc. <https://liferay.com>
- *
+ * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
  * SPDX-License-Identifier: BSD-3-Clause
  */
+
+/* eslint no-for-of-loops/no-for-of-loops: 0 */
 
 /**
  * Checks built packages prior to publishing to make sure their dependencies are
