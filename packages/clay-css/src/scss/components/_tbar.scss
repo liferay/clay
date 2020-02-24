@@ -138,3 +138,23 @@
 .subnav-tbar-light {
 	@include clay-tbar-variant($subnav-tbar-light);
 }
+
+// Tbar Stacked
+
+.tbar-stacked {
+	@include clay-tbar-variant($tbar-stacked);
+}
+
+// Tbar Variants
+
+.tbar-light {
+	@include clay-tbar-variant($tbar-light);
+}
+
+.tbar-dark-l2 {
+	@include clay-tbar-variant($tbar-dark-l2);
+}
+
+.tbar-dark-d1 {
+	@include clay-tbar-variant($tbar-dark-d1);
+}
