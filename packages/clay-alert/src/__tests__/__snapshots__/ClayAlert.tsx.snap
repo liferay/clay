@@ -476,7 +476,7 @@ exports[`ClayAlert renders with an icon for closing with autoClose 1`] = `
     className="alert-autofit-row autofit-row"
   >
     <div
-      className="autofit-col"
+      className="autofit-col inline-item-before"
     >
       <div
         className="autofit-section"
@@ -538,7 +538,7 @@ exports[`ClayAlert renders with autoClose and without icon 1`] = `
     className="alert-autofit-row autofit-row"
   >
     <div
-      className="autofit-col"
+      className="autofit-col inline-item-before"
     >
       <div
         className="autofit-section"
