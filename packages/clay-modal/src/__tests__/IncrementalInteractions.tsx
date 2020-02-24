@@ -1,10 +1,9 @@
-/*eslint no-console: 0 */
-/* eslint-disable no-sparse-arrays */
 /**
- * © 2019 Liferay, Inc. <https://liferay.com>
- *
+ * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
  * SPDX-License-Identifier: BSD-3-Clause
  */
+
+/* eslint-disable no-sparse-arrays */
 
 import ClayModal, {ClayModalProvider, Context, useModal} from '..';
 import Button from '@clayui/button';
