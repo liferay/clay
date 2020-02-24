@@ -34,6 +34,7 @@ render(<Component />)`;
 
 const TimePickerWithState = () => {
 	const scope = {ClayTimePicker, spritemap, useState};
+
 	return (
 		<Editor
 			code={timePickerCode}

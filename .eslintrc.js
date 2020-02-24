@@ -8,20 +8,14 @@ const path = require('path');
 module.exports = {
 	env: {
 		browser: true,
-		es6: true,
 		jest: true,
 		node: true,
 	},
 	extends: 'liferay/react',
 	parser: '@typescript-eslint/parser',
-	parserOptions: {
-		ecmaFeatures: {
-			jsx: true,
-		},
-	},
 	plugins: ['@typescript-eslint'],
 	rules: {
-		'@typescript-eslint/array-type': ['error', 'generic'],
+		'@typescript-eslint/array-type': ['error', {default: 'generic'}],
 		'@typescript-eslint/interface-name-prefix': ['error', 'always'],
 		'@typescript-eslint/no-unused-vars': 'error',
 		'no-unused-vars': 'off',

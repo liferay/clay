@@ -35,6 +35,7 @@ const useUserInteractions = (
 			const nodes = elementRef.current.querySelectorAll(
 				FOCUSABLE_ELEMENTS
 			);
+
 			return Object.keys(nodes).map(key => nodes[key]);
 		}
 

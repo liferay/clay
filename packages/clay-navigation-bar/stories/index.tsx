@@ -15,6 +15,7 @@ import ClayNavigationBar from '../src/index';
 
 storiesOf('Components|ClayNavigationBar', module).add('default', () => {
 	const [triggerName, setTriggerName] = React.useState<string>('Item 1');
+
 	return (
 		<ClayNavigationBar
 			inverted={boolean('Inverted: ', false)}

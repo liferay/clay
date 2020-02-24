@@ -53,6 +53,7 @@ render(<Component />)`;
 
 const Table = () => {
 	const scope = {ClayTable, useState};
+
 	return <Editor code={tableCode} imports={tableImportsCode} scope={scope} />;
 };
 

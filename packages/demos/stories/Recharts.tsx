@@ -4,35 +4,35 @@
  */
 
 import '@clayui/css/lib/css/atlas.css';
-import {ClayRadioGroup, ClayRadio} from '@clayui/form';
+import {ClayRadio, ClayRadioGroup} from '@clayui/form';
 import {storiesOf} from '@storybook/react';
 import moment from 'moment';
 import * as React from 'react';
 import {
-	BarChart,
+	Area,
+	AreaChart,
 	Bar,
-	ReferenceArea as ReferenceAreaTest,
+	BarChart,
 	CartesianGrid,
+	Cell,
 	ComposedChart,
 	Legend,
 	Line,
 	LineChart,
-	XAxis,
-	YAxis,
-	Tooltip,
-	Cell,
-	RadialBarChart,
-	RadialBar,
-	PieChart,
 	Pie,
+	PieChart,
 	PolarAngleAxis as PolarAngleAxisTest,
+	RadialBar,
+	RadialBarChart,
+	ReferenceArea as ReferenceAreaTest,
 	Scatter,
 	ScatterChart,
-	Area,
-	AreaChart,
+	Tooltip,
+	XAxis,
+	YAxis,
 } from 'recharts';
 
-import {ClayRechartsTooltip, COLORS} from '../src/recharts';
+import {COLORS, ClayRechartsTooltip} from '../src/recharts';
 
 // Temporary hack until Recharts gets proper types exported
 const PolarAngleAxis = PolarAngleAxisTest as any;

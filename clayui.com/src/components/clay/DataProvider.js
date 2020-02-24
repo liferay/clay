@@ -23,6 +23,7 @@ render(<Component />)`;
 
 const DataProvider = () => {
 	const scope = {ClayDataProvider};
+
 	return (
 		<Editor
 			code={dataProviderCode}
@@ -49,6 +50,7 @@ render(<Component />)`;
 
 const DataProviderWithNetworkStatus = () => {
 	const scope = {ClayDataProvider};
+
 	return (
 		<Editor
 			code={dataProviderWithNetworkStatusCode}
@@ -80,6 +82,7 @@ render(<Component />)`;
 
 const DataProviderWithCacheRootLevel = () => {
 	const scope = {ClayDataProvider};
+
 	return (
 		<Editor
 			code={dataProviderWithCacheRootLevelCode}
@@ -105,6 +108,7 @@ render(<Component />)`;
 
 const UseResource = () => {
 	const scope = {useResource};
+
 	return (
 		<Editor
 			code={useResourceCode}
@@ -137,6 +141,7 @@ render(<Component />)`;
 
 const UseResourceWithJitter = () => {
 	const scope = {useResource};
+
 	return (
 		<Editor
 			code={useResourceWithJitterCode}
@@ -172,6 +177,7 @@ render(<Component />)`;
 
 const UseResourceWithNetworkStatus = () => {
 	const scope = {useResource};
+
 	return (
 		<Editor
 			code={useResourceWithNetworkStatusCode}
@@ -200,6 +206,7 @@ render(<Component />)`;
 
 const UseResourceWithVariablesChange = () => {
 	const scope = {useResource};
+
 	return (
 		<Editor
 			code={useResourceWithVariablesChangeCode}

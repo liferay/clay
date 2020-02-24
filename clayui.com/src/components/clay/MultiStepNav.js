@@ -88,6 +88,7 @@ const MultiStepNav = () => {
 		spritemap,
 		useState,
 	};
+
 	return (
 		<Editor
 			code={multiStepNavCode}
@@ -141,6 +142,7 @@ const MultiStepNavWithBasicItems = () => {
 		spritemap,
 		useState,
 	};
+
 	return (
 		<Editor
 			code={multiStepNavWithBasicItemsCode}

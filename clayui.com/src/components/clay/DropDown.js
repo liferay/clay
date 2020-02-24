@@ -44,6 +44,7 @@ render(<Component />)`;
 
 const DropDown = () => {
 	const scope = {ClayDropDown, useState};
+
 	return (
 		<Editor
 			code={dropDownCode}
@@ -137,6 +138,7 @@ render(<Component />)`;
 
 const DropDownWithItems = () => {
 	const scope = {ClayButton, ClayDropDownWithItems, useState};
+
 	return (
 		<Editor
 			code={dropDownWithItemsCode}

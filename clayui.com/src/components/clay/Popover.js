@@ -29,6 +29,7 @@ render(<Component />)`;
 
 const Popover = () => {
 	const scope = {ClayPopover};
+
 	return (
 		<Editor code={popoverCode} imports={popoverImportsCode} scope={scope} />
 	);

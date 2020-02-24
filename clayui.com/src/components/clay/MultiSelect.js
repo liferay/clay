@@ -47,6 +47,7 @@ const MultiSelectInput = () => {
 		spritemap,
 		useState,
 	};
+
 	return (
 		<Editor
 			code={multiSelectCode}
@@ -109,6 +110,7 @@ const MultiSelectInputWithAutocomplete = () => {
 		spritemap,
 		useState,
 	};
+
 	return (
 		<Editor
 			code={multiSelectWithAutocompleteCode}
@@ -189,6 +191,7 @@ const MultiSelectInputWithSelectButton = () => {
 		spritemap,
 		useState,
 	};
+
 	return (
 		<Editor
 			code={multiSelectWithSelectButtonCode}
@@ -277,6 +280,7 @@ const MultiSelectInputWithValidation = () => {
 		spritemap,
 		useState,
 	};
+
 	return (
 		<Editor
 			code={multiSelectWithValidationCode}

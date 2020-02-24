@@ -44,6 +44,7 @@ export const ClayPortal: React.FunctionComponent<
 		if (elToMountTo && portalRef.current) {
 			elToMountTo.appendChild(portalRef.current);
 		}
+
 		return () => {
 			if (elToMountTo && portalRef.current) {
 				elToMountTo.removeChild(portalRef.current);

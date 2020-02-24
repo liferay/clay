@@ -68,6 +68,7 @@ const Modal = () => {
 		useModal,
 		useState,
 	};
+
 	return <Editor code={modalCode} imports={modalImportsCode} scope={scope} />;
 };
 

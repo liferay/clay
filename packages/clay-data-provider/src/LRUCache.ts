@@ -20,6 +20,7 @@ export class LRUCache<K, V> {
 
 	reset() {
 		this._storage = new Map();
+
 		return this._storage;
 	}
 

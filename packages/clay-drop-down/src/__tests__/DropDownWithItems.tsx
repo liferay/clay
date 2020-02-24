@@ -162,8 +162,8 @@ describe('ClayDropDownWithItems', () => {
 					},
 				]}
 				onSearchValueChange={() => {}}
-				searchValue="Search"
 				searchable
+				searchValue="Search"
 				spritemap={spritemap}
 				trigger={<ClayButton>{'Click Me'}</ClayButton>}
 			/>

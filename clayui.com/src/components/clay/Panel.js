@@ -29,6 +29,7 @@ render(<Component />)`;
 
 const Panel = () => {
 	const scope = {ClayPanel, spritemap, useState};
+
 	return <Editor code={panelCode} imports={panelImportsCode} scope={scope} />;
 };
 
