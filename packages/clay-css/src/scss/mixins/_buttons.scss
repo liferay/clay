@@ -302,6 +302,7 @@
 	$hover-opacity: map-get($map, hover-opacity);
 	// `$hover-text-decoration` is deprecated use `$hover` instead
 	$hover-text-decoration: map-get($map, hover-text-decoration);
+	// `$hover-z-index` is deprecated use `$hover` instead
 	$hover-z-index: map-get($map, hover-z-index);
 
 	$hover: setter(map-get($map, hover), ());
@@ -311,6 +312,7 @@
 		color: $hover-color,
 		opacity: $hover-opacity,
 		text-decoration: $hover-text-decoration,
+		z-index: $hover-z-index,
 	), $hover);
 
 	// `$focus-bg` is deprecated use `$focus` instead
@@ -325,6 +327,7 @@
 	$focus-opacity: map-get($map, focus-opacity);
 	// `$focus-outline` is deprecated use `$focus` instead
 	$focus-outline: map-get($map, focus-outline);
+	// `$focus-z-index` is deprecated use `$focus` instead
 	$focus-z-index: map-get($map, focus-z-index);
 
 	$focus: setter(map-get($map, focus), ());
@@ -335,6 +338,7 @@
 		color: $focus-color,
 		opacity: $focus-opacity,
 		outline: $focus-outline,
+		z-index: $focus-z-index,
 	), $focus);
 
 	// `$disabled-bg` is deprecated use `$disabled` instead
@@ -349,6 +353,7 @@
 	$disabled-cursor: map-get($map, disabled-cursor);
 	// `$disabled-opacity` is deprecated use `$disabled` instead
 	$disabled-opacity: map-get($map, disabled-opacity);
+	// `$disabled-z-index` is deprecated use `$disabled` instead
 	$disabled-z-index: map-get($map, disabled-z-index);
 
 	$disabled: setter(map-get($map, disabled), ());
@@ -359,6 +364,7 @@
 		color: $disabled-color,
 		cursor: $disabled-cursor,
 		opacity: $disabled-opacity,
+		z-index: $disabled-z-index,
 	), $disabled);
 
 	// `$active-bg` is deprecated use `$active` instead
@@ -371,6 +377,7 @@
 	$active-color: map-get($map, active-color);
 	// `$active-opacity` is deprecated use `$active` instead
 	$active-opacity: map-get($map, active-opacity);
+	// `$active-z-index` is deprecated use `$active` instead
 	$active-z-index: map-get($map, active-z-index);
 
 	$active: setter(map-get($map, active), ());
