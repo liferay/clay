@@ -117,3 +117,7 @@
 .sidebar-light .component-navigation-bar {
 	@include clay-navbar-variant($sidebar-light-navigation-bar);
 }
+
+.sidebar-dark {
+	@include clay-sidebar-variant($sidebar-dark);
+}

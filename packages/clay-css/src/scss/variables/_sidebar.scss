@@ -91,3 +91,40 @@ $sidebar-light-navigation-bar: map-deep-merge((
 	link-active-color: $navbar-light-active-color,
 	link-disabled-color: $navbar-light-disabled-color
 ), $sidebar-light-navigation-bar);
+
+// Sidebar Dark
+
+$sidebar-dark: () !default;
+$sidebar-dark: map-deep-merge((
+	bg: $dark,
+	color: $white,
+	component-header-title: (
+		color: inherit,
+		clay-link: (
+			color: inherit,
+		),
+	),
+	component-header-subtitle: (
+		color: inherit,
+		clay-link: (
+			color: inherit,
+		),
+	),
+	close: (
+		color: $secondary-l1,
+		hover-color: $white,
+	),
+	nav-nested-link: (
+		border-radius: $border-radius,
+		color: $secondary-l1,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $white,
+		focus-box-shadow: $component-focus-box-shadow,
+		focus-outline: 0,
+		active-color: $white,
+		disabled-box-shadow: none,
+		disabled-color: $secondary-l1,
+		disabled-opacity: 0.65,
+		disabled-active-pointer-events: none,
+	),
+), $sidebar-dark);
