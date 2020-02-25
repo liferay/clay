@@ -1,5 +1,5 @@
 /**
- * © <%= YEAR %> Liferay, Inc. <https://liferay.com>
- *
+ * SPDX-FileCopyrightText: © <%= YEAR %> Liferay, Inc. <https://liferay.com>
  * SPDX-License-Identifier: BSD-3-Clause
  */
+
