@@ -20,6 +20,7 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 		const {
 			alwaysActive,
 			description,
+			disableTOC,
 			draft,
 			indexVisible,
 			layout,
@@ -135,6 +136,12 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 			name: 'description',
 			node,
 			value: description || '',
+		});
+
+		createNodeField({
+			name: 'disableTOC',
+			node,
+			value: disableTOC || false,
 		});
 
 		createNodeField({
