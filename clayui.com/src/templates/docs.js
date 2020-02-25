@@ -147,7 +147,13 @@ export default props => {
 									</div>
 								</header>
 
-								<div className="clay-docs-content clay-site-container container-fluid">
+								<div
+									className={`clay-docs-content container-fluid ${
+										frontmatter.disableTOC
+											? ''
+											: 'clay-site-container'
+									}`}
+								>
 									<div className="row">
 										<div className="col-12">
 											<div className="tab-content">
@@ -157,25 +163,28 @@ export default props => {
 													id="advancedTab"
 													role="tabpanel"
 												>
-													<p className="clay-site-label">
-														{fields &&
-															fields.packageStatus && (
+													{(frontmatter.packageNpm ||
+														fields) && (
+														<p className="clay-site-label">
+															{fields && (
 																<>
-																	<Link to="/docs/get-started/how-to-read-this-documentation.html">
-																		<span
-																			className={`label label-lg label-${
-																				mapStatus[
-																					fields.packageStatus.toLowerCase()
-																				]
-																			}`}
-																		>
-																			<span className="label-item label-item-expand">
-																				{
-																					fields.packageStatus
-																				}
+																	{fields.packageStatus && (
+																		<Link to="/docs/get-started/how-to-read-this-documentation.html">
+																			<span
+																				className={`label label-lg label-${
+																					mapStatus[
+																						fields.packageStatus.toLowerCase()
+																					]
+																				}`}
+																			>
+																				<span className="label-item label-item-expand">
+																					{
+																						fields.packageStatus
+																					}
+																				</span>
 																			</span>
-																		</span>
-																	</Link>
+																		</Link>
+																	)}
 
 																	{fields.packageVersion && (
 																		<a
@@ -197,64 +206,45 @@ export default props => {
 																</>
 															)}
 
-														{frontmatter.packageNpm && (
-															<a
-																href={`https://github.com/liferay/clay/blob/master/packages/${frontmatter.packageNpm.replace(
-																	'@clayui/',
-																	'clay-'
-																)}/CHANGELOG.md`}
-																rel="noopener noreferrer"
-																target="_blank"
-															>
-																<span className="label label-lg label-secondary">
-																	<span className="label-item label-item-expand">
-																		{
-																			'CHANGELOG'
-																		}
-																	</span>
-																</span>
-															</a>
-														)}
+															{frontmatter.packageNpm && (
+																<>
+																	<a
+																		href={`https://github.com/liferay/clay/blob/master/packages/${frontmatter.packageNpm.replace(
+																			'@clayui/',
+																			'clay-'
+																		)}/CHANGELOG.md`}
+																		rel="noopener noreferrer"
+																		target="_blank"
+																	>
+																		<span className="label label-lg label-secondary">
+																			<span className="label-item label-item-expand">
+																				{
+																					'CHANGELOG'
+																				}
+																			</span>
+																		</span>
+																	</a>
 
-														{frontmatter.packageNpm && (
-															<a
-																href={`https://storybook.clayui.com/?path=/story/components-${frontmatter.packageNpm
-																	.replace(
-																		'@clayui/',
-																		'clay'
-																	)
-																	.replace(
-																		'-',
-																		''
-																	)}`}
-																rel="noopener noreferrer"
-																target="_blank"
-															>
-																<img src="/images/storybook_badge.svg" />
-															</a>
-														)}
-													</p>
-
-													{!showDescTop && (
-														<p className="docs-description">
-															{
-																frontmatter.description
-															}{' '}
-															{'See the'}{' '}
-															<a
-																href={
-																	frontmatter.lexiconDefinition
-																}
-																rel="noopener noreferrer"
-																target="_blank"
-															>
-																{
-																	'Lexicon definition'
-																}
-															</a>{' '}
-															{`for a more in-depth look at the motivations behind ${
-																frontmatter.title
-															}.`}
+																	<a
+																		href={`https://storybook.clayui.com/?path=/story/components-${frontmatter.packageNpm
+																			.replace(
+																				'@clayui/',
+																				'clay'
+																			)
+																			.replace(
+																				'-',
+																				''
+																			)}`}
+																		rel="noopener noreferrer"
+																		target="_blank"
+																	>
+																		<img
+																			alt="storybook demos"
+																			src="/images/storybook_badge.svg"
+																		/>
+																	</a>
+																</>
+															)}
 														</p>
 													)}
 
@@ -371,7 +361,13 @@ export default props => {
 										</div>
 									</div>
 								</div>
-								<footer className="clay-site-container container-fluid">
+								<footer
+									className={`container-fluid ${
+										frontmatter.disableTOC
+											? ''
+											: 'clay-site-container'
+									}`}
+								>
 									<div className="border-top py-5 row">
 										<div className="col-6">
 											<p className="legal">
@@ -420,6 +416,7 @@ export const pageQuery = graphql`
 			timeToRead
 			frontmatter {
 				description
+				disableTOC
 				lexiconDefinition
 				packageNpm
 				title
