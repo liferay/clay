@@ -1,0 +1,109 @@
+////
+/// @group slideout
+////
+
+/// A mixin to create `.c-slideout` variants.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// enabled: {Bool},  // Set to false to prevent mixin styles from being output. Default: true
+/// c-slideout-shown: {Map | Null}, // Pass parameters to `clay-css` mixin
+/// c-slideout-tbar-shown: {Map | Null}, // Pass parameters to `clay-css` mixin
+/// c-slideout-tbar-shown-sidebar: {Map | Null}, // Pass parameters to `clay-css` mixin
+/// sidebar: {Map | Null}, // Pass parameters to `clay-css` mixin
+/// sidebar-c-slideout-show: {Map | Null}, // Pass parameters to `clay-css` mixin
+/// sidebar-c-slideout-transition: {Map | Null}, // Pass parameters to `clay-css` mixin
+/// tbar-stacked: {Map | Null}, // Pass parameters to `clay-css` mixin
+/// tbar-stacked-c-slideout-show: {Map | Null}, // Pass parameters to `clay-css` mixin
+/// tbar-stacked-c-slideout-transition: {Map | Null}, // Pass parameters to `clay-css` mixin
+
+@mixin clay-slideout-variant($map) {
+	@if (setter(map-get($map, enabled), true)) {
+		@include clay-css(
+			setter(
+				$map,
+				()
+			)
+		);
+
+		&.c-slideout-shown {
+			@include clay-css(
+				setter(
+					map-get($map, c-slideout-shown),
+					()
+				)
+			);
+		}
+
+		&.c-slideout-tbar-shown {
+			@include clay-css(
+				setter(
+					map-get($map, c-slideout-tbar-shown),
+					()
+				)
+			);
+		}
+
+		&.c-slideout-tbar-shown .sidebar {
+			@include clay-css(
+				setter(
+					map-get($map, c-slideout-tbar-shown-sidebar),
+					()
+				)
+			);
+		}
+
+		.sidebar {
+			@include clay-css(
+				setter(
+					map-get($map, sidebar),
+					()
+				)
+			);
+		}
+
+		.sidebar.c-slideout-show {
+			@include clay-css(
+				setter(
+					map-get($map, sidebar-c-slideout-show),
+					()
+				)
+			);
+		}
+
+		.sidebar.c-slideout-transition {
+			@include clay-css(
+				setter(
+					map-get($map, sidebar-c-slideout-transition),
+					()
+				)
+			);
+		}
+
+		.tbar-stacked {
+			@include clay-css(
+				setter(
+					map-get($map, tbar-stacked),
+					()
+				)
+			);
+		}
+
+		.tbar-stacked.c-slideout-show {
+			@include clay-css(
+				setter(
+					map-get($map, tbar-stacked-c-slideout-show),
+					()
+				)
+			);
+		}
+
+		.tbar-stacked.c-slideout-transition {
+			@include clay-css(
+				setter(
+					map-get($map, tbar-stacked-c-slideout-transition),
+					()
+				)
+			);
+		}
+	}
+}
