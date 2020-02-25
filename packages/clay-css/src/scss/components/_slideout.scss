@@ -1,0 +1,39 @@
+.c-slideout-transition-in {
+	@include clay-css($c-slideout-transition-in);
+}
+
+.c-slideout-transition-out {
+	@include clay-css($c-slideout-transition-out);
+}
+
+.c-slideout-fixed {
+	@include clay-css($c-slideout-fixed);
+}
+
+.c-slideout-absolute {
+	@include clay-css($c-slideout-absolute);
+}
+
+.c-slideout {
+	@include clay-slideout-variant($c-slideout);
+
+	@include media-breakpoint-down(sm) {
+		@include clay-slideout-variant($c-slideout-sm-down);
+	}
+}
+
+.c-slideout-start {
+	@include clay-slideout-variant($c-slideout-start);
+
+	@include media-breakpoint-down(sm) {
+		@include clay-slideout-variant($c-slideout-start-sm-down);
+	}
+}
+
+.c-slideout-end {
+	@include clay-slideout-variant($c-slideout-end);
+
+	@include media-breakpoint-down(sm) {
+		@include clay-slideout-variant($c-slideout-end-sm-down);
+	}
+}
