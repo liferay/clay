@@ -59,6 +59,7 @@ describe('ClayModal', () => {
 	it('renders with Header', () => {
 		const ModalWithState = () => {
 			const {observer} = useModal({onClose: () => {}});
+
 			return (
 				<ClayModal observer={observer} spritemap={spritemap}>
 					<ClayModal.Header>{'Foo'}</ClayModal.Header>
@@ -78,6 +79,7 @@ describe('ClayModal', () => {
 	it('renders with size', () => {
 		const ModalWithState = () => {
 			const {observer} = useModal({onClose: () => {}});
+
 			return (
 				<ClayModal
 					observer={observer}
@@ -99,6 +101,7 @@ describe('ClayModal', () => {
 	it('renders with status', () => {
 		const ModalWithState = () => {
 			const {observer} = useModal({onClose: () => {}});
+
 			return (
 				<ClayModal
 					observer={observer}
@@ -120,6 +123,7 @@ describe('ClayModal', () => {
 	it('renders a body component with url', () => {
 		const ModalWithState = () => {
 			const {observer} = useModal({onClose: () => {}});
+
 			return (
 				<ClayModal observer={observer} spritemap={spritemap}>
 					<ClayModal.Body url="http://localhost" />
@@ -139,6 +143,7 @@ describe('ClayModal', () => {
 	it('renders a footer component with buttons', () => {
 		const ModalWithState = () => {
 			const {observer, onClose} = useModal({onClose: () => {}});
+
 			return (
 				<ClayModal observer={observer} spritemap={spritemap}>
 					<ClayModal.Footer

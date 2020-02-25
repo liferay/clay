@@ -19,7 +19,7 @@ import ClayForm from '../src/Form';
 
 import '@clayui/css/lib/css/atlas.css';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
-import {boolean, text, select} from '@storybook/addon-knobs';
+import {boolean, select, text} from '@storybook/addon-knobs';
 
 const ClayCheckboxWithState = () => {
 	const [value, setValue] = React.useState<boolean>(false);

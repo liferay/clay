@@ -24,6 +24,7 @@ function useResource(url, options) {
 			.then(res => res.json())
 			.then(setState);
 	}, []);
+
 	return state;
 }
 

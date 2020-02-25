@@ -67,6 +67,7 @@ const Card = () => {
 		spritemap,
 		useState,
 	};
+
 	return <Editor code={cardCode} imports={cardCodeImports} scope={scope} />;
 };
 

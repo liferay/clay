@@ -5,8 +5,8 @@
 
 import ClayList from '@clayui/list';
 import {XYCoord} from 'dnd-core';
-import React, {useState, useCallback, useRef} from 'react';
-import {useDrag, useDrop, DropTargetMonitor} from 'react-dnd';
+import React, {useCallback, useRef, useState} from 'react';
+import {DropTargetMonitor, useDrag, useDrop} from 'react-dnd';
 
 interface IDraggableListItemProps {
 	/**

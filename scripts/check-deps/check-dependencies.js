@@ -70,6 +70,7 @@ async function forEachSourceFile(name, callback) {
  */
 function extractDependencyName(moduleName) {
 	const match = moduleName.match(/^(@[^/]+\/[^/]+|[^.][^/]*)/);
+
 	return match ? match[0] : null;
 }
 
@@ -175,6 +176,7 @@ async function checkForMissingDependencies() {
 		});
 		print();
 	}
+
 	return success;
 }
 
@@ -215,6 +217,7 @@ async function checkForMismatchedDependencyVersions() {
 	}
 
 	print();
+
 	return success;
 }
 
@@ -262,5 +265,6 @@ main(async () => {
 	let success = await checkForMissingDependencies();
 	success &= await checkForMismatchedDependencyVersions();
 	success &= await checkForDevelopmentDependencies();
+
 	return !!success;
 });

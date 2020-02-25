@@ -31,6 +31,7 @@ render(<Component />);`;
 
 const Tooltip = () => {
 	const scope = {ClayTooltip};
+
 	return (
 		<Editor code={tooltipCode} imports={tooltipImportsCode} scope={scope} />
 	);
@@ -53,6 +54,7 @@ render(<Component />);`;
 
 const TooltipProvider = () => {
 	const scope = {ClayTooltipProvider};
+
 	return (
 		<Editor
 			code={tooltipProviderCode}

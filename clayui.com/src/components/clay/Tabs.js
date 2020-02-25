@@ -68,6 +68,7 @@ render(<Component />)`;
 
 const Tabs = () => {
 	const scope = {ClayTabs, spritemap, useState};
+
 	return <Editor code={tabsCode} imports={tabsImportsCode} scope={scope} />;
 };
 
@@ -247,6 +248,7 @@ const TabsDropdown = () => {
 		spritemap,
 		useState,
 	};
+
 	return (
 		<Editor
 			code={tabsDropdownCode}

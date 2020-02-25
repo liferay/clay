@@ -8,10 +8,16 @@ const sortByOrderAndTitle = (a, b) => {
 	const titleA = a.title.toUpperCase().replace(regexSpace, '');
 	const titleB = b.title.toUpperCase().replace(regexSpace, '');
 
-	if (a.order && b.order) return a.order - b.order;
+	if (a.order && b.order) {
+		return a.order - b.order;
+	}
 
-	if (titleA > titleB) return 1;
-	if (titleA < titleB) return -1;
+	if (titleA > titleB) {
+		return 1;
+	}
+	if (titleA < titleB) {
+		return -1;
+	}
 };
 
 const toSectionElements = (

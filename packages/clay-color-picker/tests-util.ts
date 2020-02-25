@@ -58,5 +58,6 @@ export default function getMouseEvent(
 		cancelable: true,
 		...values,
 	};
+
 	return new FakeMouseEvent(type, values);
 }

@@ -4,12 +4,12 @@
  */
 
 import {
-	bb,
 	ChartTypes,
 	Data,
 	Grid,
 	LineOptions,
 	PointOptions,
+	bb,
 } from 'billboard.js';
 import React from 'react';
 

@@ -164,12 +164,12 @@ storiesOf('Components|ClayTable', module)
 					)}
 					borderedColumns={boolean('bordered columns', false)}
 					borderless={boolean('borderless', false)}
+					headingNoWrap={boolean('heading no wrap', false)}
 					headVerticalAlignment={select(
 						'head vertical alignment',
 						{bottom: 'bottom', middle: 'middle', top: 'top'},
 						'middle'
 					)}
-					headingNoWrap={boolean('heading no wrap', false)}
 					hover={boolean('hover', true)}
 					noWrap={boolean('no wrap', false)}
 					responsive={boolean('responsive', false)}
@@ -353,12 +353,12 @@ storiesOf('Components|ClayTable', module)
 					)}
 					borderedColumns={boolean('bordered columns', false)}
 					borderless={boolean('borderless', false)}
+					headingNoWrap={boolean('heading no wrap', false)}
 					headVerticalAlignment={select(
 						'head vertical alignment',
 						{bottom: 'bottom', middle: 'middle', top: 'top'},
 						'middle'
 					)}
-					headingNoWrap={boolean('heading no wrap', false)}
 					hover={boolean('hover', true)}
 					noWrap={boolean('no wrap', true)}
 					responsive={boolean('responsive', false)}
@@ -433,12 +433,12 @@ storiesOf('Components|ClayTable', module)
 				)}
 				borderedColumns={boolean('bordered columns', false)}
 				borderless={boolean('bordeless', false)}
+				headingNoWrap={boolean('heading no wrap', false)}
 				headVerticalAlignment={select(
 					'head vertical alignment',
 					{bottom: 'bottom', middle: 'middle', top: 'top'},
 					'middle'
 				)}
-				headingNoWrap={boolean('heading no wrap', false)}
 				hover={boolean('hover', true)}
 				noWrap={boolean('no wrap', false)}
 				responsive={boolean('responsive', false)}

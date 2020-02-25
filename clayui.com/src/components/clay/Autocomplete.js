@@ -34,6 +34,7 @@ render(<Component />)`;
 
 const AutocompleteWithLoadingState = () => {
 	const scope = {ClayAutocomplete, spritemap, useState};
+
 	return (
 		<Editor
 			code={autocompleteWithLoadingStateCode}
@@ -106,6 +107,7 @@ const AutocompleteWithDataProvider = () => {
 		useResource,
 		useState,
 	};
+
 	return (
 		<Editor
 			code={autocompleteWithDataProviderCode}
