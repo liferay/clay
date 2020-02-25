@@ -224,6 +224,7 @@ module.exports = function(gulp, plugins, _, config) {
 					quickAction: 'Quick Action',
 					sheet: 'Sheet',
 					sidebar: 'Sidebar',
+					slideout: 'Slideout',
 					sideNavigation: 'Side Navigation',
 					stickers: 'Stickers',
 					tbar: 'Tbar',

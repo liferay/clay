@@ -39,7 +39,9 @@ section: Components
 			<p>Add classes <code>sidebar-light</code> to <code>sidebar</code> to apply a light theme.</p>
 		</blockquote>
 	</div>
+</div>
 
+<div class="row">
 	<div class="col-md-6">
 		<div class="sidebar sidebar-light">
 			<nav class="component-tbar tbar">
@@ -79,11 +81,11 @@ section: Components
 			<div class="sidebar-header">
 				<div class="autofit-row sidebar-section">
 					<div class="autofit-col autofit-col-expand">
-						<h4 class="component-title">
+						<div class="component-title">
 							<span class="text-truncate-inline">
 								<a class="text-truncate" href="#1">Image1.jpg</a>
 							</span>
-						</h4>
+						</div>
 						<p class="component-subtitle">Basic Document</p>
 					</div>
 					<div class="autofit-col">
@@ -341,6 +343,199 @@ section: Components
 						</ul>
 					</div>
 				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="sidebar sidebar-light">
+			<div class="sidebar-header">
+				<div class="autofit-row sidebar-section">
+					<div class="autofit-col autofit-col-expand">
+						<div class="component-title">
+							<span class="text-truncate-inline">
+								<a class="text-truncate" href="#1">Builder</a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sidebar-body">
+				<div class="form-group form-group-sm">
+					<div class="input-group">
+						<div class="input-group-item">
+							<input aria-label="Search for" class="form-control input-group-inset input-group-inset-after" placeholder="Search..." type="text">
+							<div class="input-group-inset-item input-group-inset-item-after">
+								<button class="btn btn-unstyled d-md-none" type="button">
+									<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
+									</svg>
+								</button>
+								<button class="btn btn-unstyled d-none d-md-inline-block" type="button">
+									<svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#search"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<nav class="component-navigation-bar navbar navigation-bar navbar-collapse-absolute navbar-expand-md navbar-underline">
+					<a aria-controls="sidebarLightCollapse00" aria-expanded="false" aria-label="Toggle Navigation" class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#sidebarLightCollapse00" role="button">
+						<span class="navbar-text-truncate">Fields</span>
+						<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+						</svg>
+					</a>
+					<div class="collapse navbar-collapse" id="sidebarLightCollapse00">
+						<ul class="nav navbar-nav" role="tablist">
+							<li class="nav-item">
+								<a aria-controls="_0s8m4jws3" class="active nav-link" data-toggle="tab" href="#_0s8m4jws3" id="_ox1e8zux2" role="tab">
+									<span class="navbar-text-truncate">Fields</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a aria-controls="_4wdljab4m" class="nav-link" data-toggle="tab" href="#_4wdljab4m" id="_2jths9m33" role="tab">
+									<span class="navbar-text-truncate">Interface</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a aria-controls="_v6guc3g9e" class="nav-link" data-toggle="tab" href="#_v6guc3g9e" id="_msfbj8ppk" role="tab">
+									<span class="navbar-text-truncate">Fieldsets</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div class="tab-content">
+					<div aria-labelledby="_ox1e8zux2" class="active fade show tab-pane" id="_0s8m4jws3" role="tabpanel">
+						<ul class="list-group sidebar-list-group">
+							<li class="list-group-item list-group-item-flex">
+								<div class="autofit-col">
+									<button class="component-action" type="button">
+										<span class="inline-item">
+											<svg class="lexicon-icon lexicon-icon-drag" focusable="false" role="presentation">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#drag" />
+											</svg>
+										</span>
+									</button>
+								</div>
+								<div class="autofit-col">
+									<div class="sticker">
+										<span class="inline-item">
+											<svg class="lexicon-icon lexicon-icon-text" focusable="false" role="presentation">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#text" />
+											</svg>
+										</span>
+									</div>
+								</div>
+								<div class="autofit-col autofit-col-expand">
+									<div class="list-group-title">Text</div>
+									<div class="list-group-subtitle">Single line or multiline text area</div>
+								</div>
+							</li>
+							<li class="list-group-item list-group-item-flex">
+								<div class="autofit-col">
+									<button class="component-action" type="button">
+										<span class="inline-item">
+											<svg class="lexicon-icon lexicon-icon-drag" focusable="false" role="presentation">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#drag" />
+											</svg>
+										</span>
+									</button>
+								</div>
+								<div class="autofit-col">
+									<div class="sticker">
+										<span class="inline-item">
+											<svg class="lexicon-icon lexicon-icon-list" focusable="false" role="presentation">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#list" />
+											</svg>
+										</span>
+									</div>
+								</div>
+								<div class="autofit-col autofit-col-expand">
+									<div class="list-group-title">Select from List</div>
+									<div class="list-group-subtitle">Select options from a list</div>
+								</div>
+							</li>
+							<li class="list-group-item list-group-item-flex">
+								<div class="autofit-col">
+									<button class="component-action" type="button">
+										<span class="inline-item">
+											<svg class="lexicon-icon lexicon-icon-drag" focusable="false" role="presentation">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#drag" />
+											</svg>
+										</span>
+									</button>
+								</div>
+								<div class="autofit-col">
+									<div class="sticker">
+										<span class="inline-item">
+											<svg class="lexicon-icon lexicon-icon-radio-button" focusable="false" role="presentation">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#radio-button" />
+											</svg>
+										</span>
+									</div>
+								</div>
+								<div class="autofit-col autofit-col-expand">
+									<div class="list-group-title">Single Selection</div>
+									<div class="list-group-subtitle">Select only one option</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div aria-labelledby="_2jths9m33" class="fade tab-pane" id="_4wdljab4m" role="tabpanel">
+						Interface
+					</div>
+					<div aria-labelledby="_msfbj8ppk" class="fade tab-pane" id="_v6guc3g9e" role="tabpanel">
+						Fieldsets
+					</div>
+				</div>
+			</div>
+			<div class="sidebar-footer"></div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Sidebar Dark</h3>
+
+		<blockquote class="blockquote">
+			<p>Add class <code>sidebar-dark</code> to <code>sidebar</code> to apply a dark theme.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-6">
+		<div class="sidebar sidebar-dark">
+			<div class="sidebar-header">
+				<div class="autofit-row sidebar-section">
+					<div class="autofit-col autofit-col-expand">
+						<div class="component-title">
+							<span class="text-truncate-inline">
+								<a class="text-truncate" href="#1">Site Configuration</a>
+							</span>
+						</div>
+					</div>
+					<div class="autofit-col">
+						<button aria-label="Close" class="close" type="button">
+							<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="sidebar-body">
+				<ul class="nav nav-nested">
+					<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
+					<li class="nav-item"><a class="nav-link" href="#1">Categorization</a></li>
+					<li class="nav-item"><a class="disabled nav-link" href="#1" tabindex="-1">Documents and Media</a></li>
+					<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
+					<li class="nav-item"><a class="nav-link" href="#1">Configuration</a></li>
+					<li class="nav-item"><a class="nav-link" href="#1">Identification</a></li>
+				</ul>
 			</div>
 		</div>
 	</div>
