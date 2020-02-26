@@ -83,6 +83,70 @@ mark,
 	@include clay-highlight-text($mark-bg, $mark-color);
 }
 
+// Kbd
+
+.c-kbd-group {
+	@include clay-css($c-kbd-group);
+}
+
+.c-kbd {
+	@include clay-css($c-kbd);
+}
+
+.c-kbd-monospaced {
+	@include clay-css($c-kbd-monospaced);
+}
+
+.c-kbd-inline {
+	@include clay-css($c-kbd-inline);
+}
+
+// Kbd Sizes
+
+.c-kbd-group-sm {
+	@include clay-css($c-kbd-group-sm);
+
+	.c-kbd {
+		font-size: inherit;
+	}
+}
+
+.c-kbd-group-lg {
+	@include clay-css($c-kbd-group-lg);
+
+	.c-kbd {
+		font-size: inherit;
+	}
+}
+
+.c-kbd.c-kbd-sm {
+	@include clay-css($c-kbd-sm);
+}
+
+.c-kbd.c-kbd-lg {
+	@include clay-css($c-kbd-lg);
+}
+
+// Kbd Light
+
+.c-kbd-group-light {
+	@include clay-css($c-kbd-group-light);
+}
+
+.c-kbd-light {
+	@include clay-css($c-kbd-light);
+}
+
+// Kbd Dark
+
+.c-kbd-group-dark {
+	@include clay-css($c-kbd-group-dark);
+}
+
+.c-kbd-dark {
+	@include clay-css($c-kbd-dark);
+}
+
 // Text Truncate
 
 .text-truncate {
