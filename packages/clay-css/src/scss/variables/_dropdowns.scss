@@ -67,6 +67,12 @@ $dropdown-item-base: map-deep-merge((
 	disabled-outline: 0,
 	disabled-pointer-events: auto,
 	disabled-active-pointer-events: none,
+	disabled-c-kbd-inline: (
+		color: $dropdown-link-disabled-color,
+	),
+	c-kbd-inline: (
+		line-height: $dropdown-font-size * $line-height-base,
+	),
 ), $dropdown-item-base);
 
 $dropdown-section-custom-control: () !default;
