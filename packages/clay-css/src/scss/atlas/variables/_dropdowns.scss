@@ -38,7 +38,13 @@ $dropdown-item-base: map-deep-merge((
 	focus-box-shadow: inset 0 0 0 0.125rem $primary-l1#{','} inset 0 0 0 0.25rem $white,
 	focus-outline: 0,
 	focus-text-decoration: none,
+	active-class-c-kbd-inline: (
+		color: $dropdown-link-active-color,
+	),
 	disabled-box-shadow: none,
+	c-kbd-inline: (
+		color: $gray-500,
+	),
 ), $dropdown-item-base);
 
 $dropdown-section-custom-control-label: () !default;
