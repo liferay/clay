@@ -218,6 +218,8 @@
 	$hover-opacity: map-get($map, hover-opacity);
 	$hover-text-decoration: map-get($map, hover-text-decoration);
 
+	$hover-c-kbd-inline: map-deep-merge((), map-get($map, hover-c-kbd-inline));
+
 	$focus-bg: map-get($map, focus-bg);
 	$focus-border-radius: map-get($map, focus-border-radius);
 	$focus-box-shadow: map-get($map, focus-box-shadow);
@@ -226,17 +228,23 @@
 	$focus-outline: map-get($map, focus-outline);
 	$focus-text-decoration: map-get($map, focus-text-decoration);
 
+	$focus-c-kbd-inline: map-deep-merge((), map-get($map, focus-c-kbd-inline));
+
 	$active-bg: map-get($map, active-bg);
 	$active-border-color: map-get($map, active-border-color);
 	$active-color: map-get($map, active-color);
 	$active-font-weight: map-get($map, active-font-weight);
 	$active-text-decoration: map-get($map, active-text-decoration);
 
+	$active-c-kbd-inline: map-deep-merge((), map-get($map, active-c-kbd-inline));
+
 	$active-class-bg: map-get($map, active-class-bg);
 	$active-class-border-color: map-get($map, active-class-border-color);
 	$active-class-color: map-get($map, active-class-color);
 	$active-class-font-weight: map-get($map, active-class-font-weight);
 	$active-class-text-decoration: map-get($map, active-class-text-decoration);
+
+	$active-class-c-kbd-inline: map-deep-merge((), map-get($map, active-class-c-kbd-inline));
 
 	$disabled-bg: map-get($map, disabled-bg);
 	$disabled-border-color: map-get($map, disabled-border-color);
@@ -248,10 +256,17 @@
 	$disabled-pointer-events: map-get($map, disabled-pointer-events);
 	$disabled-text-decoration: map-get($map, disabled-text-decoration);
 
+	$disabled-c-kbd-inline: map-deep-merge((), map-get($map, disabled-c-kbd-inline));
+
 	$disabled-active-pointer-events: map-get($map, disabled-active-pointer-events);
+
+	$autofit-row: map-deep-merge((), map-get($map, autofit-row));
+
+	$c-kbd-inline: map-deep-merge((), map-get($map, c-kbd-inline));
 
 	$c-inner: setter(map-get($map, c-inner), ());
 	$c-inner: map-deep-merge((
+		flex-grow: 1,
 		margin-bottom: math-sign($padding-bottom),
 		margin-left: math-sign($padding-left),
 		margin-right: math-sign($padding-right),
@@ -288,6 +303,10 @@
 			color: $hover-color;
 			opacity: $hover-opacity;
 			text-decoration: $hover-text-decoration;
+
+			.c-kbd-inline {
+				@include clay-css($hover-c-kbd-inline);
+			}
 		}
 
 		&:focus {
@@ -300,6 +319,10 @@
 			opacity: $focus-opacity;
 			outline: $focus-outline;
 			text-decoration: $focus-text-decoration;
+
+			.c-kbd-inline {
+				@include clay-css($focus-c-kbd-inline);
+			}
 		}
 
 		&:active {
@@ -321,6 +344,10 @@
 			.custom-control-label {
 				font-weight: $active-font-weight;
 			}
+
+			.c-kbd-inline {
+				@include clay-css($active-c-kbd-inline);
+			}
 		}
 
 		&.active {
@@ -341,6 +368,10 @@
 
 			.custom-control-label {
 				font-weight: $active-class-font-weight;
+			}
+
+			.c-kbd-inline {
+				@include clay-css($active-class-c-kbd-inline);
 			}
 		}
 
@@ -371,6 +402,10 @@
 				color: $disabled-color;
 			}
 
+			.c-kbd-inline {
+				@include clay-css($disabled-c-kbd-inline);
+			}
+
 			&:active {
 				pointer-events: $disabled-active-pointer-events;
 			}
@@ -380,6 +415,15 @@
 			.c-inner {
 				@include clay-css($c-inner);
 			}
+		}
+
+		&.autofit-row,
+		.autofit-row {
+			@include clay-css($autofit-row);
+		}
+
+		.c-kbd-inline {
+			@include clay-css($c-kbd-inline);
 		}
 
 		.form-check-label {
