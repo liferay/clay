@@ -110,4 +110,25 @@ describe('ClayPagination', () => {
 
 		expect(changeMock).toHaveBeenLastCalledWith(4);
 	});
+
+	it("does not call a wrapping form's onSubmit", () => {
+		const changeMock = jest.fn();
+		const onSubmitFn = jest.fn();
+
+		const {getByText} = render(
+			<form onSubmit={onSubmitFn}>
+				<ClayPaginationWithBasicItems
+					activePage={1}
+					onPageChange={changeMock}
+					spritemap={spritemap}
+					totalPages={5}
+				/>
+			</form>
+		);
+
+		fireEvent.click(getByText('2'), {});
+
+		expect(changeMock).toHaveBeenLastCalledWith(2);
+		expect(onSubmitFn).not.toHaveBeenCalled();
+	});
 });
