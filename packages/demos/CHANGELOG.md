@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/bryceosterhaus/clay/compare/demos@0.1.0...demos@0.1.1) (2020-02-27)
+
+**Note:** Version bump only for package demos
+
 # 0.1.0 (2020-02-13)
 
 ### Bug Fixes

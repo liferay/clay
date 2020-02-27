@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.1](https://github.com/liferay/clay/tree/master/packages/clay-button/compare/@clayui/button@3.2.0...@clayui/button@3.2.1) (2020-02-27)
+
+**Note:** Version bump only for package @clayui/button
+
 # [3.2.0](https://github.com/liferay/clay/tree/master/packages/clay-button/compare/@clayui/button@3.0.2...@clayui/button@3.2.0) (2020-01-31)
 
 ### Bug Fixes

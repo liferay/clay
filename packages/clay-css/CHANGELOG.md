@@ -3,6 +3,58 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.7.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.6.0...@clayui/css@3.7.0) (2020-02-27)
+
+
+### Bug Fixes
+
+* **clay-css:** Add border-spacing, border-collapse not working in IE ([9d12922](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/9d12922))
+* **clay-css:** Badges `.badge > .c-inner` only set margins and overwrite inherited max-width property ([52ee10f](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/52ee10f)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Buttons use `math-sign` function for calculating negative margins on `.btn .c-inner` to prevent invalid CSS output like `margin: - -;` ([1ca34e4](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/1ca34e4)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Mixins `clay-button-size`, `clay-button-variant`, `clay-close`, `clay-label-size`, `clay-link`, `clay-menubar-vertical-expand`, `clay-navbar-size`, `clay-panel-variant`, `clay-tbar-variant` should only set margins for `c-inner` ([61ac029](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/61ac029)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Mixins `clay-dropdown-item-variant` only set margins and overwrite inherited width property for `c-inner` ([be5d06c](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/be5d06c)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+
+
+### Features
+
+* **clay-css:** Badge adds `.c-inner` pattern for `.badge`, `.badge-item`, and `.badge .close` ([01b7aee](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/01b7aee)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Buttons adds `.c-inner` pattern for `.btn`, `.btn-unstyled`, `.btn-monospaced`, `.btn-sm`, `.btn-lg` ([d810b02](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/d810b02)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Card add support for `.c-inner` ([5303bdf](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/5303bdf)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Dropdown add `.c-inner` pattern for `.dropdown-item`, `.dropdown-menu-indicator-start`, and `.dropdown-menu-indicator-end` ([d9c40e6](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/d9c40e6)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Dropdown add styles for `.dropdown-item .c-kbd` ([8668050](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/8668050)), closes [#2906](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2906)
+* **clay-css:** enable-c-inner: true by default ([81ea040](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/81ea040))
+* **clay-css:** Icons add support for `.c-inner` in `.collapse-icon` ([679fcea](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/679fcea)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Input Group adds support for `.c-inner` to `.input-group-inset-item .btn` ([60fc69b](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/60fc69b)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Label adds `.c-inner` pattern for `.label`, `.label-lg`, and `.label-item` ([bbde2ec](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/bbde2ec)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Links `component-action` add support for `.c-inner`, declare properties from `%link-monospaced` in Sass map `$component-action` and remove `[@extend](https://github.com/extend) %link-monospaced` ([2f84f48](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/2f84f48)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Links `link-monospaced` should use `clay-link` mixin, add Sass map `$link-monospaced`, add support for `.c-inner` ([c9b3da3](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/c9b3da3)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Links `link-outline` should use `clay-link` mixin, add Sass map `$link-outline`, add support for `.c-inner` ([37e6598](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/37e6598)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** List Group `.list-group-item-action` should support `.c-inner` ([6add193](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/6add193)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Mixin `clay-navbar-size` add `.c-inner` support for `.navbar-toggler`, `.navbar-toggler-link`, `.navbar-brand`, `.nav-btn`, `.nav-btn-monospaced`, `.nav-link`, `.nav-link-monospaced` ([95c8e1c](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/95c8e1c)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Mixins `clay-button-size`, `clay-button-variant` add support for `.c-inner` and `.lexicon-icon` ([f37f31d](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/f37f31d)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Mixins `clay-button-size`, `clay-button-variant`, `clay-close`, `clay-dropdown-item-variant`, `clay-label-size`, `clay-link` adds option to pass `$c-inner` through Sass map ([66d3827](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/66d3827)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Mixins `clay-button-variant` adds configs `z-index`, `hover-z-index`, `focus-z-index`, `disabled-z-index` and `active-z-index` ([9f729d5](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/9f729d5)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Mixins `clay-close` add `.c-inner` pattern ([8d355c8](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/8d355c8)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Mixins `clay-dropdown-item-variant` adds options to configure `autofit-row`, `c-kbd-inline`, `hover-c-kbd-inline`, `focus-c-kbd-inline`, `active-c-kbd-inline`, `active-class-c-kbd-inline`, `disabled-c-kbd-inline` ([b2e743d](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/b2e743d)), closes [#2906](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2906)
+* **clay-css:** Mixins `clay-link` `.c-inner` should use parent's `max-width` ([0fe271d](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/0fe271d)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Mixins `clay-link` add `.c-inner` pattern ([09c5628](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/09c5628)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Mixins `clay-link` adds config `margin`, `max-height`, `min-height`, `min-width` ([516c9e8](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/516c9e8)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Mixins `clay-menubar-vertical-expand` adds support for `.menubar-toggler .c-inner` through Sass map `toggler-c-inner` ([cd81488](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/cd81488)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Multi Step Nav add `.c-inner` support for `.multi-step-icon` ([81c4924](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/81c4924)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Nav add `.c-inner` support for `.nav-btn`, `.nav-btn-monospaced`, and `.nav-link-monospaced` ([e2ca2ea](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/e2ca2ea)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Nav add support for `.c-inner` in `.nav-link` ([f3d19f0](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/f3d19f0)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Pagination add `.c-inner` support for `.pagination-sm` and `.pagination-lg` ([7464fe3](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/7464fe3)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Panel add `.c-inner` support for `.panel-header`, `.panel-header.collapse-icon`, `.panel-group-flush .panel-header`, `.panel-group-flush .collapse-icon` ([507dfee](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/507dfee)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Sheet add `.c-inner` support for `.sheet-subtitle`, `.sheet-subtitle.collapse-icon` ([9aafb11](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/9aafb11)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Tbar add `.c-inner` support for `.tbar-link`, `.tbar-link-monospaced`, `.tbar-btn`, `.tbar-btn-monospaced` ([9560bef](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/9560bef)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Type adds `.c-kbd` to style `kbd` element with light/dark theme and sizes sm/lg ([26db8b6](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/26db8b6)), closes [#2906](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2906)
+* **clay-css:** Utilities `.c-inner` should inherit sizing styles from parent ([7dd8f58](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/7dd8f58)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+* **clay-css:** Utilities adds `.c-inner` wrapper for use inside interactive elements to have better control over focus styles on click ([9616e49](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/9616e49)), closes [#2763](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2763)
+
+
+
+
+
 # [3.6.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.5.0...@clayui/css@3.6.0) (2020-02-13)
 
 

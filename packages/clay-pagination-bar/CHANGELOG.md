@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.8](https://github.com/liferay/clay/tree/master/packages/clay-pagination-bar/compare/@clayui/pagination-bar@3.0.7...@clayui/pagination-bar@3.0.8) (2020-02-27)
+
+### Bug Fixes
+
+-   **@clayui/pagination:** add button type for pagination ([84e8628](https://github.com/liferay/clay/tree/master/packages/clay-pagination-bar/commit/84e8628))
+
 ## [3.0.7](https://github.com/liferay/clay/tree/master/packages/clay-pagination-bar/compare/@clayui/pagination-bar@3.0.6...@clayui/pagination-bar@3.0.7) (2020-02-13)
 
 **Note:** Version bump only for package @clayui/pagination-bar

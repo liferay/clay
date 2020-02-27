@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-alpha.9](https://github.com/bryceosterhaus/clay/compare/clayui.com@3.0.0-alpha.8...clayui.com@3.0.0-alpha.9) (2020-02-27)
+
+### Bug Fixes
+
+-   **clayui.com:** miscellaneous bugs ([1680408](https://github.com/bryceosterhaus/clay/commit/1680408))
+-   **clayui.com:** Namespace $dark and $white variables in \_prismjs.scss so it doesn't overwrite Bootstrap variables ([876c6b7](https://github.com/bryceosterhaus/clay/commit/876c6b7)), closes [#2953](https://github.com/bryceosterhaus/clay/issues/2953)
+-   **clayui.com:** widen main container and shorten TOC sidebar ([3f9647e](https://github.com/bryceosterhaus/clay/commit/3f9647e))
+
+### Features
+
+-   **@clayui.com:** icon filtering ([cfec748](https://github.com/bryceosterhaus/clay/commit/cfec748))
+-   **@clayui.com:** icon filtering, make label formatting more generic, fix whitespace and fix CI errors caused by tab being undefined ([47a50fe](https://github.com/bryceosterhaus/clay/commit/47a50fe))
+-   **@clayui.com:** icon filtering, simplify ([0d8f815](https://github.com/bryceosterhaus/clay/commit/0d8f815))
+-   **clayui.com:** add feedback for when code content is copied ([a443210](https://github.com/bryceosterhaus/clay/commit/a443210))
+-   **clayui.com:** update docs template ([c48e07f](https://github.com/bryceosterhaus/clay/commit/c48e07f))
+
 # [3.0.0-alpha.8](https://github.com/bryceosterhaus/clay/compare/clayui.com@3.0.0-alpha.7...clayui.com@3.0.0-alpha.8) (2020-02-13)
 
 ### Bug Fixes

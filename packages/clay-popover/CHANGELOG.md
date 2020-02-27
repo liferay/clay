@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.1](https://github.com/liferay/clay/tree/master/packages/clay-popover/compare/@clayui/popover@3.2.0...@clayui/popover@3.2.1) (2020-02-27)
+
+### Bug Fixes
+
+-   **@clayui/popover:** make 'show' prop actually usable ([9d700c0](https://github.com/liferay/clay/tree/master/packages/clay-popover/commit/9d700c0))
+
 # 3.2.0 (2020-01-31)
 
 ### Bug Fixes

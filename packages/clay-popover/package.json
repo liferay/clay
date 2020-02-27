@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/popover",
-	"version": "3.2.0",
+	"version": "3.2.1",
 	"description": "ClayPopover component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-popover",
@@ -26,7 +26,7 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/shared": "^3.0.7",
+		"@clayui/shared": "^3.0.8",
 		"classnames": "^2.2.6",
 		"dom-align": "^1.10.2"
 	},

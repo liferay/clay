@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.5](https://github.com/bryceosterhaus/clay/compare/@clayui/charts@3.0.4...@clayui/charts@3.0.5) (2020-02-27)
+
+### Bug Fixes
+
+-   **@clayui/charts:** fix broken charts build ([acc6c74](https://github.com/bryceosterhaus/clay/commit/acc6c74))
+
 ## [3.0.4](https://github.com/bryceosterhaus/clay/compare/@clayui/charts@3.0.2...@clayui/charts@3.0.4) (2020-01-31)
 
 **Note:** Version bump only for package @clayui/charts

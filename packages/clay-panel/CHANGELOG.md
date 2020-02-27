@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.8](https://github.com/liferay/clay/tree/master/packages/clay-panel/compare/@clayui/panel@3.0.7...@clayui/panel@3.0.8) (2020-02-27)
+
+**Note:** Version bump only for package @clayui/panel
+
 ## [3.0.7](https://github.com/liferay/clay/tree/master/packages/clay-panel/compare/@clayui/panel@3.0.4...@clayui/panel@3.0.7) (2020-01-31)
 
 **Note:** Version bump only for package @clayui/panel
