@@ -22,7 +22,7 @@ th {
 }
 
 .table {
-	border-collapse: collapse;
+	border-spacing: 0;
 	font-size: $table-font-size;
 	margin-bottom: $table-margin-bottom;
 
@@ -833,19 +833,6 @@ th {
 .table-list .table-active {
 	.quick-action-menu {
 		background-color: $table-list-quick-action-menu-active-bg;
-	}
-}
-
-// Table Responsive
-
-.table-responsive {
-	@each $breakpoint in map-keys($grid-breakpoints) {
-		$next: breakpoint-next($breakpoint, $grid-breakpoints);
-		$infix: breakpoint-infix($next, $grid-breakpoints);
-
-		&#{$infix} {
-			margin-bottom: $table-responsive-margin-bottom;
-		}
 	}
 }
 
