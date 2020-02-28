@@ -31,6 +31,15 @@ $close: map-deep-merge((
 	lexicon-icon-margin-top: 0
 ), $close);
 
+// C Focus Inset
+
+$c-focus-inset-focus: () !default;
+$c-focus-inset-focus: map-deep-merge((
+	box-shadow: $component-focus-inset-box-shadow,
+	border-color: $input-btn-focus-color,
+	outline: 0,
+), $c-focus-inset-focus);
+
 // C Inner
 
 $c-inner: () !default;
