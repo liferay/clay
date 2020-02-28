@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/panel",
-	"version": "3.0.7",
+	"version": "3.1.0",
 	"description": "ClayPanel component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-panel",
@@ -26,8 +26,8 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/icon": "^3.0.3",
-		"@clayui/shared": "^3.0.7",
+		"@clayui/icon": "^3.0.4",
+		"@clayui/shared": "^3.1.0",
 		"classnames": "^2.2.6"
 	},
 	"peerDependencies": {

@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.3.0 (2020-02-28)
+
+### Bug Fixes
+
+-   normalize names of components ([3a0abea](https://github.com/liferay/clay/tree/master/packages/clay-button/commit/3a0abea))
+-   update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/tree/master/packages/clay-button/commit/9e24b59))
+-   **@clayui/button:** fix error when using private name when generating declaration files ([e8d8027](https://github.com/liferay/clay/tree/master/packages/clay-button/commit/e8d8027)), closes [/github.com/Microsoft/TypeScript/issues/6307#issuecomment-360182089](https://github.com/liferay/clay/tree/master/packages/clay-button/issues/issuecomment-360182089)
+-   **button:** Fix logic when using `borderless` property ([b30d39a](https://github.com/liferay/clay/tree/master/packages/clay-button/commit/b30d39a))
+
+### Features
+
+-   **@clayui/button:** add forwardRef ([13a8885](https://github.com/liferay/clay/tree/master/packages/clay-button/commit/13a8885))
+-   **@clayui/button:** add forwardRef to ClayButtonWithIcon ([b3ef1a0](https://github.com/liferay/clay/tree/master/packages/clay-button/commit/b3ef1a0))
+-   **alert:** add ability to put a button within an alert ([09f20e0](https://github.com/liferay/clay/tree/master/packages/clay-button/commit/09f20e0))
+-   **button:** Adds borderless and outline properties ([f04b6b5](https://github.com/liferay/clay/tree/master/packages/clay-button/commit/f04b6b5))
+-   **clay-button:** create ClayButtonWithIcon component ([c0a2096](https://github.com/liferay/clay/tree/master/packages/clay-button/commit/c0a2096))
+
 # [3.2.0](https://github.com/liferay/clay/tree/master/packages/clay-button/compare/@clayui/button@3.0.2...@clayui/button@3.2.0) (2020-01-31)
 
 ### Bug Fixes

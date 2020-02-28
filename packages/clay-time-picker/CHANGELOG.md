@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.1.0 (2020-02-28)
+
+### Bug Fixes
+
+-   update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/tree/master/packages/clay-time-picker/commit/9e24b59))
+-   **@clayui/shared:** add focus control by left and right arrow keys ([e314419](https://github.com/liferay/clay/tree/master/packages/clay-time-picker/commit/e314419))
+-   **@clayui/time-picker:** add focus to input marked as focused for change ([6c64aaf](https://github.com/liferay/clay/tree/master/packages/clay-time-picker/commit/6c64aaf))
+-   **@clayui/time-picker:** add support for name property ([dc8af07](https://github.com/liferay/clay/tree/master/packages/clay-time-picker/commit/dc8af07))
+-   **@clayui/time-picker:** format ([ae0f9d6](https://github.com/liferay/clay/tree/master/packages/clay-time-picker/commit/ae0f9d6))
+-   **@clayui/time-picker:** use FocusScope component ([2a36f27](https://github.com/liferay/clay/tree/master/packages/clay-time-picker/commit/2a36f27))
+
+### Features
+
+-   **@clayui/time-picker:** add the ariaLabels API to label inputs and buttons ([da0544f](https://github.com/liferay/clay/tree/master/packages/clay-time-picker/commit/da0544f))
+-   **form:** add helper components for markup ([3ce63d4](https://github.com/liferay/clay/tree/master/packages/clay-time-picker/commit/3ce63d4))
+
 ## [3.0.7](https://github.com/liferay/clay/tree/master/packages/clay-time-picker/compare/@clayui/time-picker@3.0.6...@clayui/time-picker@3.0.7) (2020-02-13)
 
 **Note:** Version bump only for package @clayui/time-picker

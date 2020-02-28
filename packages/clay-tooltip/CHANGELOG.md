@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.2.0 (2020-02-28)
+
+### Bug Fixes
+
+-   **css:** allow newline characters to display properly for tooltips ([2265d10](https://github.com/liferay/clay/tree/master/packages/clay-tooltip/commit/2265d10))
+-   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/tree/master/packages/clay-tooltip/commit/335ff38))
+-   **tooltip:** add missing dependency ([7203e50](https://github.com/liferay/clay/tree/master/packages/clay-tooltip/commit/7203e50))
+-   **tooltip:** find closest node with title attribute ([7dc7fb0](https://github.com/liferay/clay/tree/master/packages/clay-tooltip/commit/7dc7fb0))
+-   **tooltip+popover:** stories should be nested under Components ([f9799f9](https://github.com/liferay/clay/tree/master/packages/clay-tooltip/commit/f9799f9))
+
+### Features
+
+-   **tooltip:** allow custom renderer for TooltipProvider content ([bf64914](https://github.com/liferay/clay/tree/master/packages/clay-tooltip/commit/bf64914))
+-   **tooltip:** create Tooltip component ([cb41eef](https://github.com/liferay/clay/tree/master/packages/clay-tooltip/commit/cb41eef))
+
 # [3.1.0](https://github.com/liferay/clay/tree/master/packages/clay-tooltip/compare/@clayui/tooltip@3.0.4...@clayui/tooltip@3.1.0) (2020-01-31)
 
 ### Bug Fixes

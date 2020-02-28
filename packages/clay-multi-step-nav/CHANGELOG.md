@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.1.0 (2020-02-28)
+
+### Bug Fixes
+
+-   **@clayui/multi-step-nav:** Adds missing types for making APIDocs work ([f5cf8b5](https://github.com/liferay/clay/tree/master/packages/clay-multi-step-nav/commit/f5cf8b5))
+-   **@clayui/multi-step-nav:** fixes wrong import of MultiStepNav that breaks this package ([9d96087](https://github.com/liferay/clay/tree/master/packages/clay-multi-step-nav/commit/9d96087))
+-   **@clayui/multi-step-nav:** update Indicator trigger for reference to be button ([9e14062](https://github.com/liferay/clay/tree/master/packages/clay-multi-step-nav/commit/9e14062))
+
+### Features
+
+-   **multi-step-nav:** create high-level MultiStepNavWithBasicItems component ([ab341b5](https://github.com/liferay/clay/tree/master/packages/clay-multi-step-nav/commit/ab341b5))
+-   **multi-step-nav:** create multi-step-nav component ([63a3677](https://github.com/liferay/clay/tree/master/packages/clay-multi-step-nav/commit/63a3677))
+
 ## [3.0.7](https://github.com/liferay/clay/tree/master/packages/clay-multi-step-nav/compare/@clayui/multi-step-nav@3.0.6...@clayui/multi-step-nav@3.0.7) (2020-02-13)
 
 **Note:** Version bump only for package @clayui/multi-step-nav

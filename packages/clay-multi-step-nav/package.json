@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/multi-step-nav",
-	"version": "3.0.7",
+	"version": "3.1.0",
 	"description": "ClayMultiStepNav component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay/tree/master/packages/clay-multi-step-nav",
@@ -26,8 +26,8 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/drop-down": "^3.2.0",
-		"@clayui/icon": "^3.0.3",
+		"@clayui/drop-down": "^3.3.0",
+		"@clayui/icon": "^3.0.4",
 		"classnames": "^2.2.6"
 	},
 	"peerDependencies": {
