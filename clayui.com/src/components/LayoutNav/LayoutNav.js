@@ -41,6 +41,16 @@ export default () => (
 					</li>
 					<li className="nav-item">
 						<a
+							className="nav-link"
+							href="https://codesandbox.io/s/liferay-clay-449ve"
+							rel="noopener noreferrer"
+							target="_blank"
+						>
+							{'Codesandbox'}
+						</a>
+					</li>
+					<li className="nav-item">
+						<a
 							className="ml-3 nav-link"
 							href="https://github.com/liferay/clay"
 							rel="noopener noreferrer"
