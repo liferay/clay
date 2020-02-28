@@ -32,6 +32,15 @@
 	}
 }
 
+// C Focus Inset
+
+.c-focus-inset {
+	&:focus:not(:disabled):not(.disabled):not([disabled]),
+	&.focus:not(:disabled):not(.disabled):not([disabled]) {
+		@include clay-css($c-focus-inset-focus);
+	}
+}
+
 // Autofit Row
 
 %autofit-row {
