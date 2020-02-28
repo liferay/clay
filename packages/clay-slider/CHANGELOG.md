@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.1.0 (2020-02-28)
+
+### Bug Fixes
+
+-   replace npm in favor of yarn in new packages ([e366fbb](https://github.com/liferay/clay/tree/master/packages/clay-slider/commit/e366fbb))
+-   **@clayui/slider:** avoid async rendering to render synchronous changes before repaint ([9069169](https://github.com/liferay/clay/tree/master/packages/clay-slider/commit/9069169))
+-   **@clayui/slider:** updates width of range progress after value change ([24d75c0](https://github.com/liferay/clay/tree/master/packages/clay-slider/commit/24d75c0))
+
+### Features
+
+-   **@clayui/slider:** add ClaySlider component ([e9d35ab](https://github.com/liferay/clay/tree/master/packages/clay-slider/commit/e9d35ab))
+
 ## [3.0.5](https://github.com/liferay/clay/tree/master/packages/clay-slider/compare/@clayui/slider@3.0.2...@clayui/slider@3.0.5) (2020-01-31)
 
 **Note:** Version bump only for package @clayui/slider

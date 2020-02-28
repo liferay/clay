@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.1.0 (2020-02-28)
+
+### Features
+
+-   **nav:** rename navigation to just nav ([b58ed3e](https://github.com/liferay/clay/tree/master/packages/clay-nav/commit/b58ed3e))
+
 ## [3.0.6](https://github.com/liferay/clay/tree/master/packages/clay-nav/compare/@clayui/nav@3.0.3...@clayui/nav@3.0.6) (2020-01-31)
 
 **Note:** Version bump only for package @clayui/nav
