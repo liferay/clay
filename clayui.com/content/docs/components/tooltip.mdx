@@ -6,7 +6,11 @@ packageNpm: '@clayui/tooltip'
 sibling: 'docs/components/css-tooltips.html'
 ---
 
-import {Tooltip, TooltipProvider} from '../../../src/components/clay/Tooltip';
+import {
+	Tooltip,
+	TooltipProvider,
+	TooltipProviderRenderer,
+} from '../../../src/components/clay/Tooltip';
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
@@ -31,6 +35,10 @@ By using the `<TooltipProvider>` it allows you to add the desired tooltip conten
 -   `data-tooltip-delay` is for the delay(ms) before showing the tooltip.
 
 <TooltipProvider />
+
+#### Using contentRenderer
+
+<TooltipProviderRenderer />
 
 ### API
 

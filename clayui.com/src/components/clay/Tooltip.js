@@ -64,4 +64,31 @@ const TooltipProvider = () => {
 	);
 };
 
-export {Tooltip, TooltipProvider};
+const tooltipProviderRendererImportsCode = `import {ClayTooltipProvider} from '@clayui/tooltip';
+import React from 'react';`;
+
+const tooltipProviderRendererCode = `const Component = () => (
+	<ClayTooltipProvider
+		contentRenderer={props => props.title.toLowerCase().split(' ').join('-')}
+	>
+		<div>
+			<button title="Hello World">{'kebabCase'}</button>
+		</div>
+	</ClayTooltipProvider>
+);
+
+render(<Component />);`;
+
+const TooltipProviderRenderer = () => {
+	const scope = {ClayTooltipProvider};
+
+	return (
+		<Editor
+			code={tooltipProviderRendererCode}
+			imports={tooltipProviderRendererImportsCode}
+			scope={scope}
+		/>
+	);
+};
+
+export {Tooltip, TooltipProvider, TooltipProviderRenderer};
