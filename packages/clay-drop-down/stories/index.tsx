@@ -85,13 +85,13 @@ storiesOf('Components|ClayDropDown', module)
 	.add('checkbox', () => (
 		<DropDownWithState>
 			<ClayDropDown.ItemList>
-				<ClayDropDown.Item>
+				<ClayDropDown.Section>
 					<ClayCheckbox
 						checked
 						label="I'm a checkbox!"
 						onChange={() => {}}
 					/>
-				</ClayDropDown.Item>
+				</ClayDropDown.Section>
 			</ClayDropDown.ItemList>
 		</DropDownWithState>
 	))
@@ -132,12 +132,12 @@ storiesOf('Components|ClayDropDown', module)
 		<DropDownWithState>
 			<ClayDropDown.ItemList>
 				<ClayDropDown.Group header="Order">
-					<ClayDropDown.Item>
+					<ClayDropDown.Section>
 						<ClayRadio checked label="Ascending" value="asc" />
-					</ClayDropDown.Item>
-					<ClayDropDown.Item>
+					</ClayDropDown.Section>
+					<ClayDropDown.Section>
 						<ClayRadio label="Descending" value="desc" />
-					</ClayDropDown.Item>
+					</ClayDropDown.Section>
 				</ClayDropDown.Group>
 			</ClayDropDown.ItemList>
 		</DropDownWithState>
