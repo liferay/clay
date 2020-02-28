@@ -131,7 +131,7 @@ const Checkbox: React.FunctionComponent<IItem & IInternalItem> = ({
 	const [value, setValue] = React.useState<boolean>(checked);
 
 	return (
-		<ClayDropDown.Item>
+		<ClayDropDown.Section>
 			<ClayCheckbox
 				{...otherProps}
 				checked={value}
@@ -140,7 +140,7 @@ const Checkbox: React.FunctionComponent<IItem & IInternalItem> = ({
 					onChange(!value);
 				}}
 			/>
-		</ClayDropDown.Item>
+		</ClayDropDown.Section>
 	);
 };
 
@@ -193,7 +193,7 @@ const Radio: React.FunctionComponent<IItem & IInternalItem> = ({
 	const {checked, name, onChange} = React.useContext(RadioGroupContext);
 
 	return (
-		<ClayDropDown.Item>
+		<ClayDropDown.Section>
 			<ClayRadio
 				{...otherProps}
 				checked={checked === value}
@@ -202,7 +202,7 @@ const Radio: React.FunctionComponent<IItem & IInternalItem> = ({
 				onChange={() => onChange(value as string)}
 				value={value as string}
 			/>
-		</ClayDropDown.Item>
+		</ClayDropDown.Section>
 	);
 };
 

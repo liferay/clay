@@ -12,6 +12,7 @@ import Caption from './Caption';
 import Divider from './Divider';
 import Group from './Group';
 import Help from './Help';
+import Section from './Section';
 import Item from './Item';
 import ItemList from './ItemList';
 import Menu, {Align} from './Menu';
@@ -78,6 +79,7 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 	ItemList: typeof ItemList;
 	Menu: typeof Menu;
 	Search: typeof Search;
+	Section: typeof Section;
 } = ({
 	active = false,
 	alignmentPosition,
@@ -172,6 +174,7 @@ ClayDropDown.Menu = Menu;
 ClayDropDown.Item = Item;
 ClayDropDown.ItemList = ItemList;
 ClayDropDown.Search = Search;
+ClayDropDown.Section = Section;
 
 export {Align};
 
