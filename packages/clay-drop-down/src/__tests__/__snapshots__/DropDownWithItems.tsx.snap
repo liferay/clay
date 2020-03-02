@@ -129,8 +129,8 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with checkbox 1`] = `
             class="list-unstyled"
           >
             <li>
-              <span
-                class="dropdown-item"
+              <div
+                class="dropdown-section"
               >
                 <div
                   class="custom-control custom-checkbox"
@@ -153,11 +153,11 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with checkbox 1`] = `
                     </span>
                   </label>
                 </div>
-              </span>
+              </div>
             </li>
             <li>
-              <span
-                class="dropdown-item"
+              <div
+                class="dropdown-section"
               >
                 <div
                   class="custom-control custom-checkbox"
@@ -179,7 +179,7 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with checkbox 1`] = `
                     </span>
                   </label>
                 </div>
-              </span>
+              </div>
             </li>
           </ul>
         </ul>
@@ -327,8 +327,8 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with radio group 1`] 
               class="list-unstyled"
             >
               <li>
-                <span
-                  class="dropdown-item"
+                <div
+                  class="dropdown-section"
                 >
                   <div
                     class="custom-control custom-radio custom-control-inline"
@@ -353,11 +353,11 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with radio group 1`] 
                       </span>
                     </label>
                   </div>
-                </span>
+                </div>
               </li>
               <li>
-                <span
-                  class="dropdown-item"
+                <div
+                  class="dropdown-section"
                 >
                   <div
                     class="custom-control custom-radio custom-control-inline"
@@ -382,7 +382,7 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with radio group 1`] 
                       </span>
                     </label>
                   </div>
-                </span>
+                </div>
               </li>
             </ul>
           </li>

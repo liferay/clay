@@ -16,6 +16,7 @@ import Item from './Item';
 import ItemList from './ItemList';
 import Menu, {Align} from './Menu';
 import Search from './Search';
+import Section from './Section';
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	/**
@@ -78,6 +79,7 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 	ItemList: typeof ItemList;
 	Menu: typeof Menu;
 	Search: typeof Search;
+	Section: typeof Section;
 } = ({
 	active = false,
 	alignmentPosition,
@@ -172,6 +174,7 @@ ClayDropDown.Menu = Menu;
 ClayDropDown.Item = Item;
 ClayDropDown.ItemList = ItemList;
 ClayDropDown.Search = Search;
+ClayDropDown.Section = Section;
 
 export {Align};
 
