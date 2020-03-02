@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayUpperToolbar renders 1`] = `
+<div>
+  <nav
+    class="component-tbar subnav-tbar-light tbar"
+  >
+    <div
+      class="container-fluid container-fluid-max-xl"
+    >
+      <ul
+        class="tbar-nav"
+      >
+        <li
+          class="text-left tbar-item tbar-item-expand"
+        >
+          <div
+            class="tbar-section"
+          >
+            <label
+              class="component-title"
+            >
+              Foo Bar
+            </label>
+            <svg
+              class="lexicon-icon lexicon-icon-lock"
+              role="presentation"
+            >
+              <use
+                xlink:href="/test.svg#lock"
+              />
+            </svg>
+          </div>
+        </li>
+        <li
+          class="tbar-item tbar-item-expand"
+        >
+          <div
+            class="tbar-section"
+          >
+            <div
+              class="input-group"
+            >
+              <div
+                class="input-group-item"
+              >
+                <input
+                  class="form-control form-control-inline"
+                  placeholder="Search..."
+                  type="text"
+                />
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="tbar-item"
+        >
+          <div
+            class="tbar-section"
+          >
+            <div
+              class="btn-group"
+              role="group"
+            >
+              <button
+                class="btn btn-monospaced btn-sm btn-secondary"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-angle-left"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/test.svg#angle-left"
+                  />
+                </svg>
+              </button>
+              <button
+                class="btn btn-monospaced btn-sm btn-secondary"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-angle-right"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/test.svg#angle-right"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li
+          class="tbar-item"
+        >
+          <div
+            class="tbar-section"
+          >
+            <button
+              class="btn btn-secondary"
+              type="button"
+            >
+              Delete
+            </button>
+            <button
+              class="inline-item-after btn btn-primary"
+              type="button"
+            >
+              Edit
+            </button>
+          </div>
+        </li>
+        <li
+          class="tbar-item"
+        >
+          <div
+            class="tbar-section"
+          >
+            <div
+              class="dropdown"
+            >
+              <button
+                class="dropdown-toggle btn btn-monospaced btn-sm btn-unstyled"
+                style=""
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-ellipsis-v"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/test.svg#ellipsis-v"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
