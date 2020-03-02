@@ -12,11 +12,11 @@ import Caption from './Caption';
 import Divider from './Divider';
 import Group from './Group';
 import Help from './Help';
-import Section from './Section';
 import Item from './Item';
 import ItemList from './ItemList';
 import Menu, {Align} from './Menu';
 import Search from './Search';
+import Section from './Section';
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	/**
