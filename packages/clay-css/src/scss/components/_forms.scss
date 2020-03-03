@@ -266,7 +266,7 @@ select.form-control {
 }
 
 // Will need to be revisted if action is taken on https://github.com/twbs/bootstrap/issues/23058
-select.form-control:not([multiple]):not([size]),
+select.form-control,
 .form-control-select {
 	-moz-appearance: none;
 	-webkit-appearance: none;
@@ -428,12 +428,11 @@ fieldset[disabled] label {
 }
 
 %clay-select-form-control-lg {
-	&:not([size]):not([multiple]) {
-		height: $input-height-lg;
 
-		@include clay-scale-component {
-			height: $input-height-lg-mobile;
-		}
+	height: $input-height-lg;
+
+	@include clay-scale-component {
+		height: $input-height-lg-mobile;
 	}
 }
 
@@ -473,12 +472,10 @@ textarea.form-control-lg,
 }
 
 %clay-select-form-control-sm {
-	&:not([size]):not([multiple]) {
-		height: $input-height-sm;
+	height: $input-height-sm;
 
-		@include clay-scale-component {
-			height: $input-height-sm-mobile;
-		}
+	@include clay-scale-component {
+		height: $input-height-sm-mobile;
 	}
 }
 

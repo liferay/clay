@@ -100,7 +100,7 @@
 		color: $form-feedback-invalid-color;
 	}
 
-	select.form-control:not([multiple]):not([size]) {
+	select.form-control {
 		background-image: $input-danger-select-icon;
 	}
 
@@ -164,7 +164,7 @@
 		color: $form-feedback-warning-color;
 	}
 
-	select.form-control:not([multiple]):not([size]) {
+	select.form-control {
 		background-image: $input-warning-select-icon;
 	}
 
@@ -228,7 +228,7 @@
 		color: $form-feedback-valid-color;
 	}
 
-	select.form-control:not([multiple]):not([size]) {
+	select.form-control {
 		background-image: $input-success-select-icon;
 	}
 

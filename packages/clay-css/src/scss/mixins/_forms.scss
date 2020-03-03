@@ -272,7 +272,21 @@
 	$disabled-cursor: map-get($map, disabled-cursor);
 	$disabled-opacity: map-get($map, disabled-opacity);
 
+	-moz-appearance: $appearance;
+	-webkit-appearance: $appearance;
+
+	@if ($appearance) {
+		&::-ms-expand {
+			display: none;
+		}
+	}
+
 	background-clip: $bg-clip;
+	background-color: $bg;
+	background-image: $bg-image;
+	background-position: $bg-position;
+	background-repeat: $bg-repeat;
+	background-size: $bg-size;
 	border-color: $border-color;
 	border-radius: $border-radius;
 	border-style: $border-style;
@@ -283,55 +297,27 @@
 	display: $display;
 	font-size: $font-size;
 	font-weight: $font-weight;
+	height: $height;
 	line-height: $line-height;
 	min-width: $min-width;
 	outline: $outline;
+	padding-bottom: $padding-bottom;
+	padding-left: $padding-left;
+	padding-right: $padding-right;
+	padding-top: $padding-top;
 	transition: $transition;
 	width: $width;
 
-	&:not([multiple]):not([size]) {
-		-moz-appearance: $appearance;
-		-webkit-appearance: $appearance;
-
-		@if ($appearance) {
-			&::-ms-expand {
-				display: none;
-			}
-		}
-
-		background-color: $bg;
-		background-image: $bg-image;
-		background-position: $bg-position;
-		background-repeat: $bg-repeat;
-		background-size: $bg-size;
-		height: $height;
-		padding-bottom: $padding-bottom;
-		padding-left: $padding-left;
-		padding-right: $padding-right;
-		padding-top: $padding-top;
-
-		&:hover {
-			background-color: $hover-bg;
-		}
-
-		&:focus {
-			background-color: $focus-bg;
-			background-image: $focus-bg-image;
-		}
-
-		&:disabled {
-			background-color: $disabled-bg;
-			background-image: $disabled-bg-image;
-		}
-	}
-
 	&:hover {
+		background-color: $hover-bg;
 		border-color: $hover-border-color;
 		box-shadow: $hover-box-shadow;
 		color: $hover-color;
 	}
 
 	&:focus {
+		background-color: $focus-bg;
+		background-image: $focus-bg-image;
 		border-color: $focus-border-color;
 		box-shadow: $focus-box-shadow;
 		color: $focus-color;
@@ -349,6 +335,8 @@
 	}
 
 	&:disabled {
+		background-color: $disabled-bg;
+		background-image: $disabled-bg-image;
 		border-color: $disabled-border-color;
 		box-shadow: $disabled-box-shadow;
 		color: $disabled-color;
