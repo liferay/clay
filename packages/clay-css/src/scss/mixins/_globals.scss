@@ -25,18 +25,28 @@
 		animation-name: map-get($map, animation-name);
 		animation-play-state: map-get($map, animation-play-state);
 		animation-timing-function: map-get($map, animation-timing-function);
+
+		-moz-appearance: map-get($map, appearance);
+		-webkit-appearance: map-get($map, appearance);
+
+		&::-ms-expand {
+			display: map-get($map, appearance);
+		}
+
+		appearance: map-get($map, appearance);
+
 		backface-visibility: map-get($map, backface-visibility);
 		background: map-get($map, background);
 
 		background-attachment: map-get($map, background-attachment);
 		background-blend-mode: map-get($map, background-blend-mode);
 		background-clip: map-get($map, background-clip);
-		background-color: map-get($map, background-color);
-		background-image: map-get($map, background-image);
+		background-color: setter(map-get($map, bg), map-get($map, background-color));
+		background-image: setter(map-get($map, bg-image), map-get($map, background-image));
 		background-origin: map-get($map, background-origin);
-		background-position: map-get($map, background-position);
-		background-repeat: map-get($map, background-repeat);
-		background-size: map-get($map, background-size);
+		background-position: setter(map-get($map, bg-position), map-get($map, background-position));
+		background-repeat: setter(map-get($map, bg-repeat), map-get($map, background-repeat));
+		background-size: setter(map-get($map, bg-size), map-get($map, background-size));
 		border: map-get($map, border);
 
 		border-bottom: map-get($map, border-bottom);
