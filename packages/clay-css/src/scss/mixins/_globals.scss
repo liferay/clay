@@ -38,12 +38,12 @@
 		backface-visibility: map-get($map, backface-visibility);
 		background: map-get($map, background);
 
-		background-attachment: map-get($map, background-attachment);
-		background-blend-mode: map-get($map, background-blend-mode);
-		background-clip: map-get($map, background-clip);
+		background-attachment: setter(map-get($map, bg-attachment), map-get($map, background-attachment));
+		background-blend-mode: setter(map-get($map, bg-blend-mode), map-get($map, background-blend-mode));
+		background-clip: setter(map-get($map, bg-clip), map-get($map, background-clip));
 		background-color: setter(map-get($map, bg), map-get($map, background-color));
 		background-image: setter(map-get($map, bg-image), map-get($map, background-image));
-		background-origin: map-get($map, background-origin);
+		background-origin: setter(map-get($map, bg-origin), map-get($map, background-origin));
 		background-position: setter(map-get($map, bg-position), map-get($map, background-position));
 		background-repeat: setter(map-get($map, bg-repeat), map-get($map, background-repeat));
 		background-size: setter(map-get($map, bg-size), map-get($map, background-size));
