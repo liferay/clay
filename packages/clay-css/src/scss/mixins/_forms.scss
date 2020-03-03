@@ -13,53 +13,28 @@
 /// A mixin to create Form Control variants. You can base your variant off Bootstrap's `.form-control` class or create your own base class (e.g., `<input class="form-control my-custom-form-control" type="text" />` or `<input class="my-custom-form-control" type="text" />`).
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
+/// See Mixin `clay-css` for available keys to pass into the base selector
 /// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
-/// align-items: {String | Null},
-/// bg: {Color | String | Null},
-/// bg-clip: {String | Null},
-/// bg-image: {String | List | Null},
-/// bg-position: {String | List | Null},
-/// bg-repeat: {String | List | Null},
-/// bg-size: {Number | String | List | Null},
-/// border-color: {Color | String | List | Null},
-/// border-radius: {Number | String | List | Null},
-/// border-style: {String | List | Null},
-/// border-width: {Number | String | List | Null},
-/// box-shadow: {String | List | Null},
-/// color: {Color | String | Null},
-/// cursor: {String | Null},
-/// display: {String | Null},
-/// flex-wrap: {String | Null},
-/// font-size: {Number | String | Null},
-/// font-weight: {Number | String | Null},
-/// height: {Number | String | Null},
-/// justify-content: {String | Null},
-/// line-height: {Number | String | Null},
-/// max-width: {Number | String | Null},
-/// min-height: {Number | String | Null},
-/// min-width: {Number | String | Null},
-/// outline: {Number | String | Null},
-/// padding-bottom: {Number | String | Null},
-/// padding-left: {Number | String | Null},
-/// padding-right: {Number | String | Null},
-/// padding-top: {Number | String | Null},
-/// text-align: {String | Null},
-/// text-transform: {String | Null},
-/// transition: {String | List | Null},
-/// width: {Number | String | Null},
-/// placeholder-color: {Color | String | Null},
-/// placeholder-opacity: {Number | String | Null},
-/// hover-bg: {Color | String | Null},
-/// hover-border-color: {Color | String | List | Null},
-/// hover-box-shadow: {String | List | Null},
-/// hover-color: {Color | String | Null},
-/// hover-placeholder-color: {Color | String | Null},
-/// focus-bg: {Color | String | Null},
-/// focus-bg-image: {String | List | Null},
-/// focus-border-color: {Color | String | List | Null},
-/// focus-box-shadow: {String | List | Null},
-/// focus-color: {Color | String | Null},
-/// focus-placeholder-color: {Color | String | Null},
+/// placeholder-color: {Color | String | Null}, // deprecated after 3.7.0
+/// placeholder-opacity: {Number | String | Null}, // deprecated after 3.7.0
+/// placeholder: {Map | Null}, // See Mixin `clay-css` for available keys
+/// selection-bg: {Color | String | Null}, // deprecated after 3.7.0
+/// selection-color: {Color | String | Null}, // deprecated after 3.7.0
+/// selection: {Map | Null}, // See Mixin `clay-css` for available keys
+/// hover-bg: {Color | String | Null}, // deprecated after 3.7.0
+/// hover-border-color: {Color | String | List | Null}, // deprecated after 3.7.0
+/// hover-box-shadow: {String | List | Null}, // deprecated after 3.7.0
+/// hover-color: {Color | String | Null}, // deprecated after 3.7.0
+/// hover-placeholder-color: {Color | String | Null}, // deprecated after 3.7.0
+/// hover: {Map | Null}, // See Mixin `clay-css` for available keys
+/// focus-bg: {Color | String | Null}, // deprecated after 3.7.0
+/// focus-bg-image: {String | List | Null}, // deprecated after 3.7.0
+/// focus-border-color: {Color | String | List | Null}, // deprecated after 3.7.0
+/// focus-box-shadow: {String | List | Null}, // deprecated after 3.7.0
+/// focus-color: {Color | String | Null}, // deprecated after 3.7.0
+/// focus: {Map | Null}, // See Mixin `clay-css` for available keys
+/// focus-placeholder-color: {Color | String | Null}, // deprecated after 3.7.0
+/// focus-placeholder: {Map | Null}, // See Mixin `clay-css` for available keys
 /// readonly-bg: {Color | String | Null}, // deprecated after v2.18.0
 /// readonly-bg-image: {String | List | Null}, // deprecated after v2.18.0
 /// readonly-border-color: {Color | String | List | Null}, // deprecated after v2.18.0
@@ -68,14 +43,16 @@
 /// readonly-cursor: {String | Null}, // deprecated after v2.18.0
 /// readonly-opacity: {Number | String | Null}, // deprecated after v2.18.0
 /// readonly-placeholder-color: {Color | String | Null}, // deprecated after v2.18.0
-/// disabled-bg: {Color | String | Null},
-/// disabled-bg-image: {String | List | Null},
-/// disabled-border-color: {Color | String | List | Null},
-/// disabled-box-shadow: {String | List | Null},
-/// disabled-color: {Color | String | Null},
-/// disabled-cursor: {String | Null},
-/// disabled-opacity: {Number | String | Null},
-/// disabled-placeholder-color: {Color | String | Null},
+/// disabled-bg: {Color | String | Null}, // deprecated after 3.7.0
+/// disabled-bg-image: {String | List | Null}, // deprecated after 3.7.0
+/// disabled-border-color: {Color | String | List | Null}, // deprecated after 3.7.0
+/// disabled-box-shadow: {String | List | Null}, // deprecated after 3.7.0
+/// disabled-color: {Color | String | Null}, // deprecated after 3.7.0
+/// disabled-cursor: {String | Null}, // deprecated after 3.7.0
+/// disabled-opacity: {Number | String | Null}, // deprecated after 3.7.0
+/// disabled: {Map | Null}, // See Mixin `clay-css` for available keys
+/// disabled-placeholder-color: {Color | String | Null}, // deprecated after 3.7.0
+/// disabled-placeholder: {Map | Null}, // See Mixin `clay-css` for available keys
 /// @todo
 /// - Add @example
 /// - Add @link to documentation
@@ -83,56 +60,38 @@
 @mixin clay-form-control-variant($map) {
 	$enabled: setter(map-get($map, enabled), true);
 
-	$align-items: map-get($map, align-items);
-	$bg: map-get($map, bg);
-	$bg-clip: map-get($map, bg-clip);
-	$bg-image: map-get($map, bg-image);
-	$bg-position: map-get($map, bg-position);
-	$bg-repeat: map-get($map, bg-repeat);
-	$bg-size: map-get($map, bg-size);
-	$border-color: map-get($map, border-color);
-	$border-radius: map-get($map, border-radius);
-	$border-style: map-get($map, border-style);
-	$border-width: map-get($map, border-width);
-	$box-shadow: map-get($map, box-shadow);
-	$color: map-get($map, color);
-	$cursor: map-get($map, cursor);
-	$display: map-get($map, display);
-	$flex-wrap: map-get($map, flex-wrap);
-	$font-size: map-get($map, font-size);
-	$font-weight: map-get($map, font-weight);
-	$height: map-get($map, height);
-	$justify-content: map-get($map, justify-content);
-	$line-height: map-get($map, line-height);
-	$max-width: map-get($map, max-width);
-	$min-height: map-get($map, min-height);
-	$min-width: map-get($map, min-width);
-	$outline: map-get($map, outline);
-	$padding-bottom: map-get($map, padding-bottom);
-	$padding-left: map-get($map, padding-left);
-	$padding-right: map-get($map, padding-right);
-	$padding-top: map-get($map, padding-top);
-	$text-align: map-get($map, text-align);
-	$text-transform: map-get($map, text-transform);
-	$transition: map-get($map, transition);
-	$width: map-get($map, width);
-	$placeholder-color: map-get($map, placeholder-color);
-	$placeholder-opacity: map-get($map, placeholder-opacity);
-	$selection-bg: map-get($map, selection-bg);
-	$selection-color: map-get($map, selection-color);
+	$placeholder: map-deep-merge((
+		color: map-get($map, placeholder-color),
+		opacity: map-get($map, placeholder-opacity),
+	), map-get($map, placeholder));
 
-	$hover-bg: map-get($map, hover-bg);
-	$hover-border-color: map-get($map, hover-border-color);
-	$hover-box-shadow: map-get($map, hover-box-shadow);
-	$hover-color: map-get($map, hover-color);
-	$hover-placeholder-color: map-get($map, hover-placeholder-color);
+	$selection: map-deep-merge((
+		background-color: map-get($map, selection-bg),
+		color: map-get($map, selection-color),
+	), map-get($map, selection));
 
-	$focus-bg: map-get($map, focus-bg);
-	$focus-bg-image: map-get($map, focus-bg-image);
-	$focus-border-color: map-get($map, focus-border-color);
-	$focus-box-shadow: map-get($map, focus-box-shadow);
-	$focus-color: map-get($map, focus-color);
-	$focus-placeholder-color: map-get($map, focus-placeholder-color);
+	$hover: map-deep-merge((
+		background-color: map-get($map, hover-bg),
+		border-color: map-get($map, hover-border-color),
+		box-shadow: map-get($map, hover-box-shadow),
+		color: map-get($map, hover-color),
+	), map-get($map, hover));
+
+	$hover-placeholder: map-deep-merge((
+		color: map-get($map, hover-placeholder-color),
+	), map-get($map, hover-placeholder));
+
+	$focus: map-deep-merge((
+		background-color: map-get($map, focus-bg),
+		background-image: map-get($map, focus-bg-image),
+		border-color: map-get($map, focus-border-color),
+		box-shadow: map-get($map, focus-box-shadow),
+		color: map-get($map, focus-color),
+	), map-get($map, focus));
+
+	$focus-placeholder: map-deep-merge((
+		color: map-get($map, focus-placeholder-color),
+	), map-get($map, focus-placeholder));
 
 	// deprecated after v2.18.0 [readonly] can have hover focus styles, declare a separate selector and use `clay-form-control-variant` mixin (e.g., `.form-control[readonly] { @include clay-form-control-variant($the-readonly-map); }`).
 
@@ -145,86 +104,46 @@
 	$readonly-opacity: map-get($map, readonly-opacity);
 	$readonly-placeholder-color: map-get($map, readonly-placeholder-color);
 
-	$disabled-bg: map-get($map, disabled-bg);
-	$disabled-bg-image: map-get($map, disabled-bg-image);
-	$disabled-border-color: map-get($map, disabled-border-color);
-	$disabled-box-shadow: map-get($map, disabled-box-shadow);
-	$disabled-color: map-get($map, disabled-color);
-	$disabled-cursor: map-get($map, disabled-cursor);
-	$disabled-opacity: map-get($map, disabled-opacity);
-	$disabled-placeholder-color: map-get($map, disabled-placeholder-color);
+	$disabled: map-deep-merge((
+		background-color: map-get($map, disabled-bg),
+		background-image: map-get($map, disabled-bg-image),
+		border-color: map-get($map, disabled-border-color),
+		box-shadow: map-get($map, disabled-box-shadow),
+		color: map-get($map, disabled-color),
+		cursor: map-get($map, disabled-cursor),
+		opacity: map-get($map, disabled-opacity),
+	), map-get($map, disabled));
+
+	$disabled-placeholder: map-deep-merge((
+		color: map-get($map, disabled-placeholder-color),
+	), map-get($map, disabled-placeholder));
 
 	@if ($enabled) {
-		align-items: $align-items;
-		background-color: $bg;
-		background-clip: $bg-clip;
-		background-image: $bg-image;
-		background-position: $bg-position;
-		background-repeat: $bg-repeat;
-		background-size: $bg-size;
-		border-color: $border-color;
-		border-radius: $border-radius;
-		border-style: $border-style;
-		border-width: $border-width;
-		box-shadow: $box-shadow;
-		color: $color;
-		cursor: $cursor;
-		display: $display;
-		flex-wrap: $flex-wrap;
-		font-size: $font-size;
-		font-weight: $font-weight;
-		height: $height;
-		justify-content: $justify-content;
-		line-height: $line-height;
-		max-width: $max-width;
-		min-height: $min-height;
-		min-width: $min-width;
-		outline: $outline;
-		padding-bottom: $padding-bottom;
-		padding-left: $padding-left;
-		padding-right: $padding-right;
-		padding-top: $padding-top;
-		text-align: $text-align;
-		text-transform: $text-transform;
-		transition: $transition;
-		width: $width;
+		@include clay-css($map);
 
 		&::placeholder {
-			color: $placeholder-color;
-			opacity: $placeholder-opacity;
+			@include clay-css($placeholder);
 		}
 
-		&::-moz-selection {
-			background-color: $selection-bg;
-			color: $selection-color;
-		}
-
+		&::-moz-selection,
 		&::selection {
-			background-color: $selection-bg;
-			color: $selection-color;
+			@include clay-css($selection);
 		}
 
 		&:hover {
-			background-color: $hover-bg;
-			border-color: $hover-border-color;
-			box-shadow: $hover-box-shadow;
-			color: $hover-color;
+			@include clay-css($hover);
 
 			&::placeholder {
-				color: $hover-placeholder-color;
+				@include clay-css($hover-placeholder);
 			}
 		}
 
 		&:focus,
 		&.focus {
-			background-color: $focus-bg;
-			background-image: $focus-bg-image;
-			border-color: $focus-border-color;
-			box-shadow: $focus-box-shadow;
-			color: $focus-color;
+			@include clay-css($focus);
 
 			&::placeholder {
-				color: $focus-placeholder-color;
+				@include clay-css($focus-placeholder);
 			}
 		}
 
@@ -246,16 +165,10 @@
 
 		&:disabled,
 		&.disabled {
-			background-color: $disabled-bg;
-			background-image: $disabled-bg-image;
-			border-color: $disabled-border-color;
-			box-shadow: $disabled-box-shadow;
-			color: $disabled-color;
-			cursor: $disabled-cursor;
-			opacity: $disabled-opacity;
+			@include clay-css($disabled);
 
 			&::placeholder {
-				color: $disabled-placeholder-color;
+				@include clay-css($disabled-placeholder);
 			}
 		}
 	}
