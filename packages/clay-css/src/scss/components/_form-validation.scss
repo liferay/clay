@@ -102,6 +102,14 @@
 
 	select.form-control {
 		background-image: $input-danger-select-icon;
+
+		&[size] {
+			@include clay-select-variant($input-danger-select-size);
+		}
+
+		&[multiple] {
+			@include clay-select-variant($input-danger-select-multiple);
+		}
 	}
 
 	.input-group-item {
@@ -166,6 +174,14 @@
 
 	select.form-control {
 		background-image: $input-warning-select-icon;
+
+		&[size] {
+			@include clay-select-variant($input-warning-select-size);
+		}
+
+		&[multiple] {
+			@include clay-select-variant($input-warning-select-multiple);
+		}
 	}
 
 	.input-group-item {
@@ -230,6 +246,14 @@
 
 	select.form-control {
 		background-image: $input-success-select-icon;
+
+		&[size] {
+			@include clay-select-variant($input-success-select-size);
+		}
+
+		&[multiple] {
+			@include clay-select-variant($input-success-select-multiple);
+		}
 	}
 
 	.input-group-item {
