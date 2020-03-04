@@ -27,6 +27,18 @@ describe('Rendering', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
+	it('with truncated text', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayLabel truncated>
+				{
+					'LaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLa'
+				}
+			</ClayLabel>
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
 	it('as a link ', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayLabel href="#/foo/bar">{'Label w/ link'}</ClayLabel>

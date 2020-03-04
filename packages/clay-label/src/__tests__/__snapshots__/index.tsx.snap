@@ -97,3 +97,15 @@ exports[`Rendering with a different displayType  1`] = `
   </span>
 </span>
 `;
+
+exports[`Rendering with truncated text 1`] = `
+<span
+  className="label label-secondary"
+>
+  <span
+    className="label-item label-item-expand text-truncate"
+  >
+    LaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLaLa
+  </span>
+</span>
+`;
