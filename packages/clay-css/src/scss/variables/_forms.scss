@@ -222,6 +222,14 @@ $input-danger-label-color: null !default;
 $input-danger-select-icon-color: $input-danger-border-color !default;
 $input-danger-select-icon: clay-str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-danger-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
 
+$input-danger-select-size: () !default;
+$input-danger-select-size: map-deep-merge((
+	background-image: none,
+), $input-danger-select-size);
+
+$input-danger-select-multiple: () !default;
+$input-danger-select-multiple: map-deep-merge($input-danger-select-size, $input-danger-select-multiple);
+
 $input-success-bg: null !default;
 $input-success-focus-bg: null !default;
 $input-success-border-color: $form-feedback-valid-color !default;
@@ -238,6 +246,14 @@ $input-success-label-color: null !default;
 $input-success-select-icon-color: $input-success-border-color !default;
 $input-success-select-icon: clay-str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-success-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
 
+$input-success-select-size: () !default;
+$input-success-select-size: map-deep-merge((
+	background-image: none,
+), $input-success-select-size);
+
+$input-success-select-multiple: () !default;
+$input-success-select-multiple: map-deep-merge($input-success-select-size, $input-success-select-multiple);
+
 $input-warning-bg: null !default;
 $input-warning-focus-bg: null !default;
 $input-warning-border-color: $form-feedback-warning-color !default;
@@ -253,6 +269,14 @@ $input-warning-checkbox-label-color: $form-feedback-warning-color !default;
 $input-warning-label-color: null !default;
 $input-warning-select-icon-color: $input-warning-border-color !default;
 $input-warning-select-icon: clay-str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-warning-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$input-warning-select-size: () !default;
+$input-warning-select-size: map-deep-merge((
+	background-image: none,
+), $input-warning-select-size);
+
+$input-warning-select-multiple: () !default;
+$input-warning-select-multiple: map-deep-merge($input-warning-select-size, $input-warning-select-multiple);
 
 // Select Element
 
@@ -275,6 +299,68 @@ $input-select-icon-focus: null !default;
 
 $input-select-icon-disabled-color: null !default;
 $input-select-icon-disabled: null !default;
+
+$input-select: () !default;
+$input-select: map-deep-merge((
+	appearance: none,
+	background-color: $input-select-bg,
+	background-image: $input-select-icon,
+	background-position: $input-select-bg-position,
+	background-repeat: no-repeat,
+	background-size: $input-select-bg-size,
+	cursor: $input-select-cursor,
+	padding-bottom: $input-select-padding-bottom,
+	padding-left: $input-select-padding-left,
+	padding-right: $input-select-padding-right,
+	padding-top: $input-select-padding-top,
+	focus: (
+		background-color: $input-select-focus-bg,
+		background-image: $input-select-icon-focus,
+	),
+	disabled: (
+		background-image: $input-select-icon-disabled,
+	),
+	disabled-option: (
+		cursor: $disabled-cursor,
+	),
+	option: (
+		cursor: $input-select-cursor,
+	),
+), $input-select);
+
+// Form Control Select for Divs Styled Like Select
+
+$form-control-select: () !default;
+$form-control-select: map-deep-merge((
+	map-deep-merge(
+		$input-select,
+		(
+			appearance: null,
+			cursor: null,
+		)
+	)
+), $form-control-select);
+
+// Select Size
+
+$input-select-size: () !default;
+$input-select-size: map-deep-merge((
+	background-image: none,
+	overflow: auto,
+	padding-left: 0.5rem,
+	padding-right: 0.5rem,
+	focus: (
+		background-image: none,
+	),
+	option: (
+		padding: 0.25rem,
+	),
+), $input-select-size);
+
+// Select Multiple
+
+$input-select-multiple: () !default;
+$input-select-multiple: map-deep-merge($input-select-size, $input-select-multiple);
 
 // Form Feedback
 

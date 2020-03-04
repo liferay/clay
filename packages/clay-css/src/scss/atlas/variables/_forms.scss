@@ -151,6 +151,13 @@ $input-select-icon-focus: clay-icon(caret-double-l, $input-select-icon-focus-col
 $input-select-icon-disabled-color: $gray-500 !default;
 $input-select-icon-disabled: clay-icon(caret-double-l, $input-select-icon-disabled-color) !default;
 
+$input-select-size: () !default;
+$input-select-size: map-deep-merge((
+	option: (
+		padding: 0.25rem 0.5rem,
+	),
+), $input-select-size);
+
 // Form Feedback
 
 $form-feedback-font-weight: $font-weight-semi-bold !default;
