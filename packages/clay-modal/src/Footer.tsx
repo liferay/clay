@@ -5,7 +5,7 @@
 
 import React from 'react';
 
-interface IFooterProps {
+export interface IFooterProps {
 	/**
 	 * Sets the elements that are positioned `first following
 	 * the LTR direction on the footer.

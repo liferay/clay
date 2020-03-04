@@ -11,7 +11,15 @@ import warning from 'warning';
 import Body from './Body';
 import Context, {IContext} from './Context';
 import Footer from './Footer';
-import Header from './Header';
+import Header, {
+	Item,
+	ItemGroup,
+	Subtitle,
+	SubtitleSection,
+	Title,
+	TitleIndicator,
+	TitleSection,
+} from './Header';
 import {useUserInteractions} from './Hook';
 import {Observer, ObserverType, Size} from './types';
 
@@ -41,11 +49,7 @@ const warningMessage = `You need to pass the 'observer' prop to ClayModal for ev
 > ); 
 `;
 
-const ClayModal: React.FunctionComponent<IProps> & {
-	Body: typeof Body;
-	Footer: typeof Footer;
-	Header: typeof Header;
-} = ({
+const ClayModal: React.FunctionComponent<IProps> = ({
 	children,
 	className,
 	observer,
@@ -116,8 +120,15 @@ const ClayModal: React.FunctionComponent<IProps> & {
 	);
 };
 
-ClayModal.Body = Body;
-ClayModal.Footer = Footer;
-ClayModal.Header = Header;
-
-export default ClayModal;
+export default Object.assign(ClayModal, {
+	Body,
+	Footer,
+	Header,
+	Item,
+	ItemGroup,
+	Subtitle,
+	SubtitleSection,
+	Title,
+	TitleIndicator,
+	TitleSection,
+});

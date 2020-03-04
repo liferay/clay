@@ -3,13 +3,87 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import Button from '@clayui/button';
-import Icon from '@clayui/icon';
+import ClayButton from '@clayui/button';
+import ClayIcon from '@clayui/icon';
+import classNames from 'classnames';
 import React from 'react';
 
-import Context from './Context';
+import Context, {IContext} from './Context';
 
-export type HeaderProps = React.HTMLAttributes<HTMLDivElement>;
+export const ItemGroup: React.FunctionComponent<
+	React.HTMLAttributes<HTMLDivElement>
+> = ({children, className, ...otherProps}) => (
+	<div className={classNames('modal-item-group', className)} {...otherProps}>
+		{children}
+	</div>
+);
+
+export const Item: React.FunctionComponent<
+	React.HTMLAttributes<HTMLDivElement> & {
+		/**
+		 * Flag for indicating if item should autofitting the width
+		 */
+		shrink?: boolean;
+	}
+> = ({children, className, shrink, ...otherProps}) => (
+	<div
+		className={classNames('modal-item', className, {
+			'modal-item-shrink': shrink,
+		})}
+		{...otherProps}
+	>
+		{children}
+	</div>
+);
+
+export const TitleSection: React.FunctionComponent<
+	React.HTMLAttributes<HTMLDivElement>
+> = ({children, className, ...otherProps}) => (
+	<div
+		className={classNames('modal-title-section', className)}
+		{...otherProps}
+	>
+		{children}
+	</div>
+);
+
+export const Title: React.FunctionComponent<
+	React.HTMLAttributes<HTMLDivElement>
+> = ({children, className, ...otherProps}) => (
+	<div className={classNames('modal-title', className)} {...otherProps}>
+		{children}
+	</div>
+);
+
+export const TitleIndicator: React.FunctionComponent<
+	React.HTMLAttributes<HTMLDivElement>
+> = ({children, className, ...otherProps}) => (
+	<div
+		className={classNames('modal-title-indicator', className)}
+		{...otherProps}
+	>
+		{children}
+	</div>
+);
+
+export const SubtitleSection: React.FunctionComponent<
+	React.HTMLAttributes<HTMLDivElement>
+> = ({children, className, ...otherProps}) => (
+	<div
+		className={classNames('modal-subtitle-section', className)}
+		{...otherProps}
+	>
+		{children}
+	</div>
+);
+
+export const Subtitle: React.FunctionComponent<
+	React.HTMLAttributes<HTMLDivElement>
+> = ({children, className, ...otherProps}) => (
+	<div className={classNames('modal-subtitle', className)} {...otherProps}>
+		{children}
+	</div>
+);
 
 const ICON_MAP = {
 	danger: 'exclamation-full',
@@ -18,29 +92,71 @@ const ICON_MAP = {
 	warning: 'warning-full',
 };
 
-const ClayModalHeader: React.FunctionComponent<HeaderProps> = ({
+const HighLevel: React.FunctionComponent<IContext> = ({
 	children,
-}: HeaderProps) => {
+	onClose,
+	spritemap,
+	status,
+}) => (
+	<>
+		<Title>
+			{status && (
+				<TitleIndicator>
+					<ClayIcon spritemap={spritemap} symbol={ICON_MAP[status]} />
+				</TitleIndicator>
+			)}
+			{children}
+		</Title>
+
+		<ClayButton
+			aria-label="close"
+			className="close"
+			displayType="unstyled"
+			onClick={onClose}
+		>
+			<ClayIcon spritemap={spritemap} symbol="times" />
+		</ClayButton>
+	</>
+);
+
+const ClayModalHeader: React.FunctionComponent<
+	React.HTMLAttributes<HTMLDivElement>
+> = ({children, className, ...otherProps}) => (
+	<div className={classNames('modal-header', className)} {...otherProps}>
+		{children}
+	</div>
+);
+
+export interface IHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
+	/**
+	 * Flag for indicating if you want to use the Header its children being the title.
+	 * Set to `false` if you want to use this as a low-level component.
+	 */
+	withTitle?: boolean;
+}
+
+const ClayModalHeaderHybrid: React.FunctionComponent<IHeaderProps> = ({
+	children,
+	withTitle = true,
+	...otherProps
+}: IHeaderProps) => {
 	const {onClose, spritemap, status} = React.useContext(Context);
 
 	return (
-		<div className="modal-header">
-			{status && (
-				<div className="modal-title-indicator">
-					<Icon spritemap={spritemap} symbol={ICON_MAP[status]} />
-				</div>
+		<ClayModalHeader {...otherProps}>
+			{withTitle && (
+				<HighLevel
+					onClose={onClose}
+					spritemap={spritemap}
+					status={status}
+				>
+					{children}
+				</HighLevel>
 			)}
-			<div className="modal-title">{children}</div>
-			<Button
-				aria-label="close"
-				className="close"
-				displayType="unstyled"
-				onClick={onClose}
-			>
-				<Icon spritemap={spritemap} symbol="times" />
-			</Button>
-		</div>
+
+			{!withTitle && children}
+		</ClayModalHeader>
 	);
 };
 
-export default ClayModalHeader;
+export default ClayModalHeaderHybrid;

@@ -6,7 +6,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-interface IBodyProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface IBodyProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Flag to indicate if body should be a fixed height with a scrollable overflow.
 	 */

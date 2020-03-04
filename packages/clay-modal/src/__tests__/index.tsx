@@ -76,6 +76,43 @@ describe('ClayModal', () => {
 		expect(document.body).toMatchSnapshot();
 	});
 
+	it('renders Header w/ low-level API', () => {
+		const ModalWithState = () => {
+			const {observer} = useModal({onClose: () => {}});
+
+			return (
+				<ClayModal observer={observer} spritemap={spritemap}>
+					<ClayModal.Header withTitle={false}>
+						<ClayModal.ItemGroup>
+							<ClayModal.Item>
+								<ClayModal.TitleSection>
+									<ClayModal.Title>
+										{'Modal Title'}
+									</ClayModal.Title>
+								</ClayModal.TitleSection>
+							</ClayModal.Item>
+							<ClayModal.Item shrink>
+								<ClayModal.SubtitleSection>
+									<ClayModal.Subtitle>
+										{'Modal Subtitle'}
+									</ClayModal.Subtitle>
+								</ClayModal.SubtitleSection>
+							</ClayModal.Item>
+						</ClayModal.ItemGroup>
+					</ClayModal.Header>
+				</ClayModal>
+			);
+		};
+
+		render(<ModalWithState />);
+
+		act(() => {
+			jest.runAllTimers();
+		});
+
+		expect(document.body).toMatchSnapshot();
+	});
+
 	it('renders with size', () => {
 		const ModalWithState = () => {
 			const {observer} = useModal({onClose: () => {}});
