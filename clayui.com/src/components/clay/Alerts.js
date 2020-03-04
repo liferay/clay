@@ -4,6 +4,7 @@
  */
 
 import ClayAlert from '@clayui/alert';
+import ClayButton from '@clayui/button';
 import React, {useState} from 'react';
 
 import Editor from './Editor';
@@ -34,6 +35,43 @@ export const Alert = () => {
 	const code = AlertCode;
 
 	return <Editor code={code} imports={alertImportsCode} scope={scope} />;
+};
+
+const AlertWithButtonCode = `const Component = () => {
+	return (
+		<ClayAlert
+			displayType="info"
+			spritemap={spritemap}
+			title="With a Button"
+		>
+			{'This is an alert with a button!'}
+
+			<ClayAlert.Footer>
+				<ClayButton.Group>
+					<ClayButton alert>{'View'}</ClayButton>
+				</ClayButton.Group>
+			</ClayAlert.Footer>
+		</ClayAlert>
+	);
+}
+
+render(<Component />);`;
+
+const alertWithButtonImportsCode = `import React from 'react';
+import ClayAlert from '@clayui/alert';
+import ClayButton from '@clayui/button';`;
+
+export const AlertWithButton = () => {
+	const scope = {ClayAlert, ClayButton, spritemap, useState};
+	const code = AlertWithButtonCode;
+
+	return (
+		<Editor
+			code={code}
+			imports={alertWithButtonImportsCode}
+			scope={scope}
+		/>
+	);
 };
 
 const alertToastContainerImportsCode = `import React, {useState} from 'react';
