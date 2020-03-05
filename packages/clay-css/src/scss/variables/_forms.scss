@@ -348,6 +348,8 @@ $input-select-size: map-deep-merge((
 	background-image: none,
 	padding-left: 0.5rem,
 	padding-right: 0.5rem,
+	// Future proof: if https://github.com/w3c/csswg-drafts/issues/1958 ever gets added
+	scrollbar-width: thin,
 	focus: (
 		background-image: none,
 	),
