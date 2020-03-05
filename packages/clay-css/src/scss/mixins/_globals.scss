@@ -204,6 +204,7 @@
 		resize: map-get($map, resize);
 		right: map-get($map, right);
 		scroll-behavior: map-get($map, scroll-behavior);
+		scrollbar-width: map-get($map, scrollbar-width);
 		table-layout: map-get($map, table-layout);
 		text-align: map-get($map, text-align);
 		text-decoration: map-get($map, text-decoration);
