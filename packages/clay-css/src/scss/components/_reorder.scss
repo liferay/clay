@@ -1,0 +1,45 @@
+.clay-reorder {
+	@include clay-css($clay-reorder);
+
+	.form-control-inset {
+		@include clay-form-control-variant($clay-reorder-input-inset);
+
+		&:focus,
+		&.focus {
+			+ .clay-reorder-underlay {
+				@include clay-css($clay-reorder-underlay-focus);
+			}
+		}
+
+		+ .clay-reorder-underlay {
+			@include clay-css($clay-reorder-underlay);
+		}
+	}
+}
+
+.clay-reorder-footer {
+	@include clay-css($clay-reorder-footer);
+}
+
+.clay-reorder-footer-invisible {
+	&.clay-reorder-footer,
+	.clay-reorder-footer {
+		* {
+			@include clay-css($clay-reorder-footer-invisible);
+		}
+	}
+}
+
+.clay-reorder-footer-center {
+	&.clay-reorder-footer,
+	.clay-reorder-footer {
+		@include clay-css($clay-reorder-footer-center);
+	}
+}
+
+.clay-reorder-footer-end {
+	&.clay-reorder-footer,
+	.clay-reorder-footer {
+		@include clay-css($clay-reorder-footer-end);
+	}
+}
