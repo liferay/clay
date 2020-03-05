@@ -1,0 +1,23 @@
+name: Comment Build Stats
+
+on:
+    pull_request:
+        branches: [master]
+
+jobs:
+    build_and_comment:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v1
+              with:
+                  node-version: '10.x'
+            - run: npm install -g yarn
+            - run: yarn install
+            - run: yarn checkSize
+            - name: Comment on PR
+              uses: machine-learning-apps/pr-comment@master
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              with:
+                  path: .parcel-ci-build.txt
