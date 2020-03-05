@@ -18,14 +18,19 @@ export const ItemGroup: React.FunctionComponent<
 	</div>
 );
 
-export const Item: React.FunctionComponent<
-	React.HTMLAttributes<HTMLDivElement> & {
-		/**
-		 * Flag for indicating if item should autofitting the width
-		 */
-		shrink?: boolean;
-	}
-> = ({children, className, shrink, ...otherProps}) => (
+export interface IItemProps extends React.HTMLAttributes<HTMLDivElement> {
+	/**
+	 * Flag for indicating if item should autofitting the width
+	 */
+	shrink?: boolean;
+}
+
+export const Item: React.FunctionComponent<IItemProps> = ({
+	children,
+	className,
+	shrink,
+	...otherProps
+}: IItemProps) => (
 	<div
 		className={classNames('modal-item', className, {
 			'modal-item-shrink': shrink,
