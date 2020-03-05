@@ -4,6 +4,7 @@
  */
 
 import ClayButton from '@clayui/button';
+import ClayIcon from '@clayui/icon';
 import ClayModal, {useModal} from '@clayui/modal';
 import React, {useState} from 'react';
 
@@ -60,7 +61,7 @@ const modalCode = `const Component = () => {
 
 render(<Component />)`;
 
-const Modal = () => {
+export const Modal = () => {
 	const scope = {
 		ClayButton,
 		ClayModal,
@@ -72,4 +73,77 @@ const Modal = () => {
 	return <Editor code={modalCode} imports={modalImportsCode} scope={scope} />;
 };
 
-export {Modal};
+const modalHeaderImportsCode = `import ClayIcon from '@clayui/icon';
+import ClayButton from '@clayui/button';
+import ClayModal, {useModal} from '@clayui/modal';
+import React, {useState} from 'react';`;
+
+const modalHeaderCode = `const Component = () => {
+	return (
+		<>
+			<ClayModal.Header>
+				{'Modal Title'}
+			</ClayModal.Header>
+
+			<br />
+
+			<ClayModal.Header withTitle={false}>
+				<ClayModal.ItemGroup>
+					<ClayModal.Item>
+						<ClayModal.TitleSection>
+							<ClayModal.Title>
+								<ClayModal.TitleIndicator>
+									<ClayIcon
+										spritemap={spritemap}
+										symbol="info-circle"
+									/>
+								</ClayModal.TitleIndicator>
+								{'Modal Title'}
+							</ClayModal.Title>
+						</ClayModal.TitleSection>
+					</ClayModal.Item>
+					<ClayModal.Item shrink>
+						<ClayModal.SubtitleSection>
+							<ClayModal.Subtitle>
+								{'Modal Subtitle'}
+							</ClayModal.Subtitle>
+						</ClayModal.SubtitleSection>
+					</ClayModal.Item>
+				</ClayModal.ItemGroup>
+
+				<ClayButton
+					aria-label="close"
+					className="close"
+					displayType="unstyled"
+					onClick={() => {}}
+				>
+					<ClayIcon
+						spritemap={spritemap}
+						symbol="times"
+					/>
+				</ClayButton>
+			</ClayModal.Header>
+		</>
+	);
+}
+
+render(<Component />)`;
+
+export const ClayModalHeaderExamples = () => {
+	const scope = {
+		ClayButton,
+		ClayIcon,
+		ClayModal,
+		spritemap,
+		useModal,
+		useState,
+	};
+
+	return (
+		<Editor
+			code={modalHeaderCode}
+			imports={modalHeaderImportsCode}
+			scope={scope}
+		/>
+	);
+};
