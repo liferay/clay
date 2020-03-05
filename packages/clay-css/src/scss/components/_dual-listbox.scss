@@ -1,0 +1,31 @@
+.clay-dual-listbox {
+	@include clay-css($clay-dual-listbox);
+
+	.clay-reorder {
+		@include clay-css($clay-dual-listbox-clay-reorder);
+	}
+
+	label {
+		@include clay-css($clay-dual-listbox-label);
+	}
+}
+
+.clay-dual-listbox-item {
+	@include clay-css($clay-dual-listbox-item);
+
+	@include media-breakpoint-up(sm) {
+		@include clay-css($clay-dual-listbox-item-sm-up);
+	}
+
+	&:last-child {
+		@include clay-css($clay-dual-listbox-item-last-child);
+	}
+}
+
+.clay-dual-listbox-item-expand {
+	@include clay-css($clay-dual-listbox-item-expand);
+}
+
+.clay-dual-listbox-actions {
+	@include clay-css($clay-dual-listbox-actions);
+}

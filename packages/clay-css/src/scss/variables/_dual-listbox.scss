@@ -1,0 +1,47 @@
+$clay-dual-listbox: () !default;
+$clay-dual-listbox: map-deep-merge((
+	display: flex,
+	flex-direction: row,
+), $clay-dual-listbox);
+
+$clay-dual-listbox-label: () !default;
+$clay-dual-listbox-label: map-deep-merge((
+	margin-bottom: 1rem,
+), $clay-dual-listbox-label);
+
+$clay-dual-listbox-clay-reorder: () !default;
+$clay-dual-listbox-clay-reorder: map-deep-merge((
+	display: flex,
+	flex-direction: column,
+	flex-grow: 1,
+), $clay-dual-listbox-clay-reorder);
+
+$clay-dual-listbox-item: () !default;
+$clay-dual-listbox-item: map-deep-merge((
+	display: flex,
+	flex-direction: column,
+	margin-right: 0.25rem,
+), $clay-dual-listbox-item);
+
+$clay-dual-listbox-item-sm-up: () !default;
+$clay-dual-listbox-item-sm-up: map-deep-merge((
+	margin-right: 1.5rem,
+), $clay-dual-listbox-item-sm-up);
+
+$clay-dual-listbox-item-last-child: () !default;
+$clay-dual-listbox-item-last-child: map-deep-merge((
+	margin-right: 0,
+), $clay-dual-listbox-item-last-child);
+
+$clay-dual-listbox-item-expand: () !default;
+$clay-dual-listbox-item-expand: map-deep-merge((
+	flex-grow: 1,
+	width: 3rem,
+	word-wrap: break-word,
+), $clay-dual-listbox-item-expand);
+
+$clay-dual-listbox-actions: () !default;
+$clay-dual-listbox-actions: map-deep-merge((
+	align-self: center,
+	margin-top: calc(21px + 1rem),
+), $clay-dual-listbox-actions);
