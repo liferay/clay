@@ -1,6 +1,5 @@
 /**
- * © 2020 Liferay, Inc. <https://liferay.com>
- *
+ * SPDX-FileCopyrightText: © 2020 Liferay, Inc. <https://liferay.com>
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
@@ -29,27 +28,42 @@ interface IProps {
 }
 
 const ClayEmptyState: React.FunctionComponent<IProps> = ({
-	containerProps = {},
 	children,
+	containerProps = {},
 	description = 'Sorry, there are no results found',
 	imageSrc,
 	title = 'No results found',
 }) => {
 	const {className, ...otherContainerProps} = containerProps;
+
 	return (
 		<div
-			className={classNames(className, 'empty-state-root', {
-				'empty-state-root--no-image': !imageSrc,
+			className={classNames(className, 'c-empty-state', {
+				'c-empty-state-animation': imageSrc,
 			})}
 			{...otherContainerProps}
 		>
-			{imageSrc && <img alt="empty-state-image" src={imageSrc} />}
+			{imageSrc && (
+				<div className="c-empty-state-image">
+					<div className="c-empty-state-aspect-ratio">
+						<img
+							alt="empty-state-image"
+							className="aspect-ratio-item aspect-ratio-item-fluid"
+							src={imageSrc}
+						/>
+					</div>
+				</div>
+			)}
 
-			<h2>{title}</h2>
+			<div className="c-empty-state-title">
+				<span className="text-truncate-inline">
+					<span className="text-truncate">{title}</span>
+				</span>
+			</div>
 
-			<div>{description}</div>
+			<div className="c-empty-state-text">{description}</div>
 
-			{children && <div className="empty-state-action">{children}</div>}
+			{children && <div className="c-empty-state-footer">{children}</div>}
 		</div>
 	);
 };

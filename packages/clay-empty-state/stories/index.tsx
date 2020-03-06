@@ -1,30 +1,35 @@
 /**
- * © 2019 Liferay, Inc. <https://liferay.com>
- *
+ * SPDX-FileCopyrightText: © 2020 Liferay, Inc. <https://liferay.com>
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
 import '@clayui/css/lib/css/atlas.css';
 import ClayButton from '@clayui/button';
+const emptyImage = require('@clayui/css/src/images/images/empty_state.gif');
+const searchImage = require('@clayui/css/src/images/images/search_state.gif');
+const successImage = require('@clayui/css/src/images/images/success_state.gif');
 import {storiesOf} from '@storybook/react';
 import React from 'react';
 
 import ClayEmptyState from '../src';
-const emptyImage = require('./images/empty_state.gif');
-const searchImage = require('./images/search_state.gif');
-const successImage = require('./images/success_state.gif');
 
 storiesOf('Components|ClayEmptyState', module)
-	.add('default', () => <ClayEmptyState />)
-	.add('empty state', () => <ClayEmptyState imageSrc={emptyImage} />)
+	.add('default', () => (
+		<ClayEmptyState>
+			<ClayButton displayType="primary">{'Button'}</ClayButton>
+		</ClayEmptyState>
+	))
+	.add('empty state', () => (
+		<ClayEmptyState imageSrc={emptyImage}>
+			<ClayButton displayType="secondary">{'Button'}</ClayButton>
+		</ClayEmptyState>
+	))
 	.add('search state', () => (
 		<ClayEmptyState
 			description="This is a description of what the button will allow you to do"
 			imageSrc={searchImage}
 			title="No content yet"
-		>
-			<ClayButton displayType="secondary">{'Button'}</ClayButton>
-		</ClayEmptyState>
+		/>
 	))
 	.add('success state', () => (
 		<ClayEmptyState
