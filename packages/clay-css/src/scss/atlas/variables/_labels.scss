@@ -247,3 +247,133 @@ $label-dark: map-deep-merge((
 	hover-border-color: $label-dark-hover-border-color,
 	hover-color: $label-dark-hover-color,
 ), $label-dark);
+
+// Label Inverse Variants
+
+$label-inverse-primary: () !default;
+$label-inverse-primary: map-deep-merge((
+	color: $white,
+	hover: (
+		background-color: null,
+		border-color: null,
+		color: $white,
+	),
+	link-hover: (
+		color: null,
+	),
+	close: (
+		hover-color: null,
+	),
+), $label-inverse-primary);
+
+$label-inverse-secondary: () !default;
+$label-inverse-secondary: map-deep-merge((
+	color: $white,
+	hover: (
+		background-color: null,
+		border-color: null,
+		color: $white,
+	),
+	link-hover: (
+		color: null,
+	),
+	close: (
+		hover-color: null,
+	),
+), $label-inverse-secondary);
+
+$label-inverse-success: () !default;
+$label-inverse-success: map-deep-merge((
+	color: $white,
+	hover: (
+		background-color: null,
+		border-color: null,
+		color: $white,
+	),
+	link-hover: (
+		color: null,
+	),
+	close: (
+		hover-color: null,
+	),
+), $label-inverse-success);
+
+$label-inverse-info: () !default;
+$label-inverse-info: map-deep-merge((
+	color: $white,
+	hover: (
+		background-color: null,
+		border-color: null,
+		color: $white,
+	),
+	link-hover: (
+		color: null,
+	),
+	close: (
+		hover-color: null,
+	),
+), $label-inverse-info);
+
+$label-inverse-warning: () !default;
+$label-inverse-warning: map-deep-merge((
+	color: $white,
+	hover: (
+		background-color: null,
+		border-color: null,
+		color: $white,
+	),
+	link-hover: (
+		color: null,
+	),
+	close: (
+		hover-color: null,
+	),
+), $label-inverse-warning);
+
+$label-inverse-danger: () !default;
+$label-inverse-danger: map-deep-merge((
+	color: $white,
+	hover: (
+		background-color: null,
+		border-color: null,
+		color: $white,
+	),
+	link-hover: (
+		color: null,
+	),
+	close: (
+		hover-color: null,
+	),
+), $label-inverse-danger);
+
+$label-inverse-light: () !default;
+$label-inverse-light: map-deep-merge((
+	color: $dark,
+	hover: (
+		background-color: null,
+		border-color: null,
+		color: $dark,
+	),
+	link-hover: (
+		color: null,
+	),
+	close: (
+		hover-color: null,
+	),
+), $label-inverse-light);
+
+$label-inverse-dark: () !default;
+$label-inverse-dark: map-deep-merge((
+	color: $white,
+	hover: (
+		background-color: null,
+		border-color: null,
+		color: $white,
+	),
+	link-hover: (
+		color: null,
+	),
+	close: (
+		hover-color: null,
+	),
+), $label-inverse-dark);
