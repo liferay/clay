@@ -1,0 +1,48 @@
+name: Comment Build Stats
+
+on:
+    pull_request:
+        branches: [master]
+
+jobs:
+    build_and_comment:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/setup-node@v1
+            - name: Setup yarn
+              run: |
+                  npm install -g yarn
+            - uses: actions/checkout@v2
+              with:
+                  ref: ${{ github.event.pull_request.base.sha }}
+            - name: Get stats at base
+              run: |
+                  yarn install
+                  yarn checkSize
+            - name: Upload stats as artifact
+              uses: actions/upload-artifact@v1
+              with:
+                  name: base-stats
+                  path: .parcel-ci-build.json
+            - uses: actions/checkout@v2
+              with:
+                  ref: ${{ github.event.pull_request.head.sha }}
+            - name: Download stats artifact
+              uses: actions/download-artifact@v1
+              with:
+                  name: base-stats
+            - name: Get stats at HEAD
+              run: |
+                  yarn install
+                  yarn checkSize:compare
+            - name: Post comment on PR
+              env:
+                  URL: ${{ github.event.pull_request.comments_url }}
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |
+                  curl \
+                      -X POST \
+                      $URL \
+                      -H "Content-Type: application/json" \
+                      -H "Authorization: token $GITHUB_TOKEN" \
+                      --data @.parcel-ci-build.json
