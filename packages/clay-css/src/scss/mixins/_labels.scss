@@ -135,122 +135,120 @@
 /// A mixin for creating `.label` color variants.
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
-/// bg: {Color | String | Null},
-/// border-color: {Color | String | List | Null},
-/// color: {Color | String | Null},
-/// outline: {Number | String | Null},
-/// text-decoration: {String | Null},
-/// transition: {String | List | Null},
-/// hover-bg: {Color | String | Null},
-/// hover-border-color: {Color | String | List | Null},
-/// hover-color: {Color | String | Null},
-/// hover-text-decoration: {String | Null},
-/// focus-bg: {Color | String | Null},
-/// focus-border-color: {Color | String | List | Null},
-/// focus-box-shadow: {String | List | Null},
-/// focus-color: {Color | String | Null},
-/// focus-outline: {Number | String | Null},
-/// focus-text-decoration: {String | Null},
-/// disabled-bg: {Color | String | Null},
-/// disabled-border-color: {Color | String | List | Null},
-/// disabled-box-shadow: {String | List | Null},
-/// disabled-color: {Color | String | Null},
-/// link-color: {Color | String | Null},
-/// link-text-decoration: {String | Null},
-/// link-hover-color: {Color | String | Null},
-/// link-hover-text-decoration: {String | Null},
+/// See Mixin `clay-css` for available keys to pass into the base selector
+/// bg: {Color | String | Null}, // deprecated after 3.7.0
+/// border-color: {Color | String | List | Null}, // deprecated after 3.7.0
+/// color: {Color | String | Null}, // deprecated after 3.7.0
+/// outline: {Number | String | Null}, // deprecated after 3.7.0
+/// text-decoration: {String | Null}, // deprecated after 3.7.0
+/// transition: {String | List | Null}, // deprecated after 3.7.0
+/// hover-bg: {Color | String | Null}, // deprecated after 3.7.0
+/// hover-border-color: {Color | String | List | Null}, // deprecated after 3.7.0
+/// hover-color: {Color | String | Null}, // deprecated after 3.7.0
+/// hover-text-decoration: {String | Null}, // deprecated after 3.7.0
+/// hover: {Map | Null}, // See Mixin `clay-css` for available keys
+/// focus-bg: {Color | String | Null}, // deprecated after 3.7.0
+/// focus-border-color: {Color | String | List | Null}, // deprecated after 3.7.0
+/// focus-box-shadow: {String | List | Null}, // deprecated after 3.7.0
+/// focus-color: {Color | String | Null}, // deprecated after 3.7.0
+/// focus-outline: {Number | String | Null}, // deprecated after 3.7.0
+/// focus-text-decoration: {String | Null}, // deprecated after 3.7.0
+/// focus: {Map | Null}, // See Mixin `clay-css` for available keys
+/// disabled-bg: {Color | String | Null}, // deprecated after 3.7.0
+/// disabled-border-color: {Color | String | List | Null}, // deprecated after 3.7.0
+/// disabled-box-shadow: {String | List | Null}, // deprecated after 3.7.0
+/// disabled-color: {Color | String | Null}, // deprecated after 3.7.0
+/// disabled: {Map | Null}, // See Mixin `clay-css` for available keys
+/// link-color: {Color | String | Null}, // deprecated after 3.7.0
+/// link-text-decoration: {String | Null}, // deprecated after 3.7.0
+/// link: {Map | Null}, // See Mixin `clay-css` for available keys
+/// link-hover-color: {Color | String | Null}, // deprecated after 3.7.0
+/// link-hover-text-decoration: {String | Null}, // deprecated after 3.7.0
+/// link-hover: {Map | Null}, // See Mixin `clay-css` for available keys
 /// close: {Map | Null}, // Pass parameters to `clay-close` mixin
 
 @mixin clay-label-variant($map) {
-	$bg: map-get($map, bg);
-	$border-color: map-get($map, border-color);
-	$color: map-get($map, color);
-	$outline: map-get($map, outline);
-	$text-decoration: map-get($map, text-decoration);
-	$transition: map-get($map, transition);
-	$hover-bg: map-get($map, hover-bg);
-	$hover-border-color: map-get($map, hover-border-color);
-	$hover-color: map-get($map, hover-color);
-	$hover-text-decoration: map-get($map, hover-text-decoration);
-	$focus-bg: map-get($map, focus-bg);
-	$focus-border-color: map-get($map, focus-border-color);
-	$focus-box-shadow: map-get($map, focus-box-shadow);
-	$focus-color: map-get($map, focus-color);
-	$focus-outline: map-get($map, focus-outline);
-	$focus-text-decoration: map-get($map, focus-text-decoration);
-	$disabled-bg: map-get($map, disabled-bg);
-	$disabled-border-color: map-get($map, disabled-border-color);
-	$disabled-box-shadow: map-get($map, disabled-box-shadow);
-	$disabled-color: map-get($map, disabled-color);
-	$link-color: map-get($map, link-color);
-	$link-text-decoration: map-get($map, link-text-decoration);
-	$link-hover-color: map-get($map, link-hover-color);
-	$link-hover-text-decoration: map-get($map, link-hover-text-decoration);
+	$map: map-merge((
+		background-color: map-get($map, bg),
+		border-color: map-get($map, border-color),
+		color: map-get($map, color),
+		outline: map-get($map, outline),
+		text-decoration: map-get($map, text-decoration),
+		transition: map-get($map, transition),
+	), $map);
+
+	$hover: map-deep-merge((
+		background-color: map-get($map, hover-bg),
+		border-color: map-get($map, hover-border-color),
+		color: map-get($map, hover-color),
+		text-decoration: map-get($map, hover-text-decoration),
+	), map-get($map, hover));
+
+	$focus: map-deep-merge((
+		background-color:  map-get($map, focus-bg),
+		border-color:  map-get($map, focus-border-color),
+		box-shadow:  map-get($map, focus-box-shadow),
+		color:  map-get($map, focus-color),
+		outline:  map-get($map, focus-outline),
+		text-decoration:  map-get($map, focus-text-decoration),
+	), map-get($map, focus));
+
+	$disabled: map-deep-merge((
+		background-color: map-get($map, disabled-bg),
+		border-color: map-get($map, disabled-border-color),
+		box-shadow: map-get($map, disabled-box-shadow),
+		color: map-get($map, disabled-color),
+	), map-get($map, disabled));
+
+	$link: map-deep-merge((
+		color: map-get($map, link-color),
+		text-decoration: map-get($map, link-text-decoration),
+	), map-get($map, link));
+
+	$link-hover: map-deep-merge((
+		color: map-get($map, link-hover-color),
+		text-decoration: map-get($map, link-hover-text-decoration),
+	), map-get($map, link-hover));
+
 	$close: setter(map-get($map, close), ());
 
-	background-color: $bg;
-	border-color: $border-color;
-	color: $color;
-	outline: $outline;
-	text-decoration: $text-decoration;
-	transition: $transition;
+	@include clay-css($map);
 
 	@at-root {
 		a#{&},
 		button#{&} {
 			&:hover {
-				background-color: $hover-bg;
-				border-color: $hover-border-color;
-				color: $hover-color;
-				text-decoration: $hover-text-decoration;
+				@include clay-css($hover);
 			}
 
 			&:focus {
-				background-color: $focus-bg;
-				border-color: $focus-border-color;
-				box-shadow: $focus-box-shadow;
-				color: $focus-color;
-				outline: $focus-outline;
-				text-decoration: $focus-text-decoration;
+				@include clay-css($focus);
 			}
 		}
 	}
 
 	&[tabindex] {
 		&:hover {
-			background-color: $hover-bg;
-			border-color: $hover-border-color;
-			color: $hover-color;
-			text-decoration: $hover-text-decoration;
+			@include clay-css($hover);
 		}
 
 		&:focus {
-			background-color: $focus-bg;
-			border-color: $focus-border-color;
-			box-shadow: $focus-box-shadow;
-			color: $focus-color;
-			outline: $focus-outline;
-			text-decoration: $focus-text-decoration;
+			@include clay-css($focus);
 		}
 	}
 
 	&:disabled,
 	&.disabled {
-		background-color: $disabled-bg;
-		border-color: $disabled-border-color;
-		box-shadow: $disabled-box-shadow;
-		color: $disabled-color;
+		@include clay-css($disabled);
 	}
 
 	a,
 	.btn-unstyled {
-		color: $link-color;
-		text-decoration: $link-text-decoration;
+		@include clay-css($link);
 
 		&:hover,
 		&:focus {
-			color: $link-hover-color;
-			text-decoration: $link-hover-text-decoration;
+			@include clay-css($link-hover);
 		}
 	}
 
