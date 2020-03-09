@@ -6,11 +6,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-interface IProps {
-	/**
-	 * Props to add to the outer most container.
-	 */
-	containerProps?: React.HTMLAttributes<HTMLDivElement>;
+interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Message the user will see describing what they can do when on this screen
 	 */
@@ -29,19 +25,18 @@ interface IProps {
 
 const ClayEmptyState: React.FunctionComponent<IProps> = ({
 	children,
-	containerProps = {},
+	className,
 	description = 'Sorry, there are no results found',
 	imageSrc,
 	title = 'No results found',
+	...otherProps
 }) => {
-	const {className, ...otherContainerProps} = containerProps;
-
 	return (
 		<div
 			className={classNames(className, 'c-empty-state', {
 				'c-empty-state-animation': imageSrc,
 			})}
-			{...otherContainerProps}
+			{...otherProps}
 		>
 			{imageSrc && (
 				<div className="c-empty-state-image">
