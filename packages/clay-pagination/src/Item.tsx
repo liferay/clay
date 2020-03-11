@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import ClayLink from '@clayui/link';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -22,7 +23,7 @@ const ClayPaginationItem: React.FunctionComponent<IPaginationItemProps> = ({
 }) => {
 	const classes = classNames('page-item', {active, disabled});
 
-	const ElementTag = href ? 'a' : 'button';
+	const ElementTag = href ? ClayLink : 'button';
 
 	return (
 		<li className={classes}>
