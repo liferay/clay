@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayLocalizedInput renders 1`] = `
+<div>
+  <div
+    class="form-group"
+  >
+    <label
+      for="locale1"
+    >
+      Check for translations
+    </label>
+    <div
+      class="input-group"
+    >
+      <div
+        class="input-group-item"
+      >
+        <input
+          class="form-control"
+          id="locale1"
+          placeholder="Text to translate..."
+          value="Apple"
+        />
+      </div>
+      <div
+        class="input-group-item input-group-item-shrink"
+      >
+        <div
+          class="dropdown"
+        >
+          <button
+            class="dropdown-toggle btn btn-monospaced btn-unstyled"
+            style=""
+            title="Open Localizations"
+            type="button"
+          >
+            <svg
+              class="lexicon-icon lexicon-icon-en-us"
+              role="presentation"
+            >
+              <use
+                xlink:href="/path/to/svg#en-us"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="form-text"
+    >
+      Apple
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayLocalizedInput renders with prepend content and result formatter 1`] = `
+<div>
+  <div
+    class="form-group"
+  >
+    <label
+      for="locale1"
+    >
+      Check for translations
+    </label>
+    <div
+      class="input-group"
+    >
+      <div
+        class="input-group-item input-group-item-shrink input-group-prepend"
+      >
+        <div
+          class="input-group-text"
+        >
+          /home/
+        </div>
+      </div>
+      <div
+        class="input-group-item"
+      >
+        <input
+          class="form-control"
+          id="locale1"
+          placeholder="Text to translate..."
+          value="Apple"
+        />
+      </div>
+      <div
+        class="input-group-item input-group-item-shrink"
+      >
+        <div
+          class="dropdown"
+        >
+          <button
+            class="dropdown-toggle btn btn-monospaced btn-unstyled"
+            style=""
+            title="Open Localizations"
+            type="button"
+          >
+            <svg
+              class="lexicon-icon lexicon-icon-en-us"
+              role="presentation"
+            >
+              <use
+                xlink:href="/path/to/svg#en-us"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="form-text"
+    >
+      https://liferay.com/home/Apple
+    </div>
+  </div>
+</div>
+`;
