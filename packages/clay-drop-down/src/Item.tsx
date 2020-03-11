@@ -4,6 +4,7 @@
  */
 
 import ClayIcon from '@clayui/icon';
+import ClayLink from '@clayui/link';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -63,7 +64,7 @@ const ClayDropDownItem = React.forwardRef<HTMLLIElement, IProps>(
 		ref
 	) => {
 		const clickableElement = onClick ? 'button' : 'span';
-		const ItemElement = href ? 'a' : clickableElement;
+		const ItemElement = href ? ClayLink : clickableElement;
 
 		return (
 			<li aria-selected={active} ref={ref}>
