@@ -4,6 +4,7 @@
  */
 
 import ClayButton from '@clayui/button';
+import ClayLink from '@clayui/link';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -37,14 +38,14 @@ const Item = ({active, href, label, onClick, ...otherProps}: IItem) => (
 		{...otherProps}
 	>
 		{!active && href ? (
-			<a
+			<ClayLink
 				className="breadcrumb-link"
 				data-testid={`testId${label}`}
 				href={href}
 				role="button"
 			>
 				<span className="breadcrumb-text-truncate">{label}</span>
-			</a>
+			</ClayLink>
 		) : !active && onClick ? (
 			<ClayButton
 				className="breadcrumb-link"
