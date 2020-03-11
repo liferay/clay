@@ -21,6 +21,8 @@ import '@clayui/css/lib/css/atlas.css';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {boolean, select, text} from '@storybook/addon-knobs';
 
+import ClayLocalizedInput from '../src/LocalizedInput';
+
 const ClayCheckboxWithState = () => {
 	const [value, setValue] = React.useState<boolean>(false);
 
@@ -77,6 +79,101 @@ storiesOf('Components|ClayCheckbox', module)
 			</span>
 		</ClayCheckbox>
 	));
+
+storiesOf('Components|ClayLocalizedInput', module).add('default', () => {
+	const locales = [
+		{
+			label: 'en-US',
+			symbol: 'en-us',
+			value: '',
+		},
+		{
+			label: 'es-ES',
+			symbol: 'es-es',
+			value: '',
+		},
+		{
+			label: 'hr-HR',
+			symbol: 'hr-hr',
+			value: '',
+		},
+	];
+
+	function updateLanguages(
+		inputValue: string,
+		languages: Array<{
+			label: string;
+			symbol: string;
+			value: string;
+		}>,
+		language: {
+			label: string;
+			symbol: string;
+			value: string;
+		}
+	) {
+		const updatedLanguages = [...languages];
+		const languageIndex = updatedLanguages.indexOf(language);
+
+		language.value = inputValue;
+		updatedLanguages.splice(languageIndex, 1, language);
+
+		return updatedLanguages;
+	}
+
+	const [languages, setLanguages] = React.useState(locales);
+	const [selectedLanguage, setSelectedLanguage] = React.useState<{
+		label: string;
+		symbol: string;
+		value: string;
+	}>(languages[0]);
+	const [inputValue, setInputValue] = React.useState<string>(
+		selectedLanguage.value
+	);
+
+	const inputName = 'localizedInput';
+
+	return (
+		<div>
+			<ClayLocalizedInput
+				defaultLanguage={languages[0]}
+				languages={languages}
+				onInputValueChange={(inputValue: string) =>
+					setInputValue(inputValue)
+				}
+				onLanguageChange={(language: {
+					label: string;
+					symbol: string;
+					value: string;
+				}) => {
+					if (inputValue) {
+						const updatedLanguages = updateLanguages(
+							inputValue,
+							languages,
+							selectedLanguage
+						);
+
+						setLanguages(updatedLanguages);
+						setInputValue(language.value);
+					}
+
+					setSelectedLanguage(language);
+				}}
+				selectedLanguage={selectedLanguage}
+				value={inputValue}
+			/>
+
+			{languages.map(language => (
+				<input
+					key={language.label}
+					name={`${inputName}_${language}`}
+					type="hidden"
+					value={language.value}
+				/>
+			))}
+		</div>
+	);
+});
 
 storiesOf('Components|ClayInput', module)
 	.add('default', () => (
