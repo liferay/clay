@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import ClayLink from '@clayui/link';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -12,9 +13,9 @@ const ClayListItemTitle: React.FunctionComponent<
 	const TagName = href ? 'div' : 'p';
 
 	const content = href ? (
-		<a href={href} {...otherProps}>
+		<ClayLink href={href} {...otherProps}>
 			{children}
-		</a>
+		</ClayLink>
 	) : (
 		children
 	);
