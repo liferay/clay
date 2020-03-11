@@ -8,6 +8,7 @@
 import '@clayui/css/lib/css/atlas.css';
 import ClayButton from '@clayui/button';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import ClayIcon from '@clayui/icon';
 import {boolean, select, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React from 'react';
@@ -108,6 +109,70 @@ storiesOf('Components|ClayModal', module)
 						/>
 					</ClayModal>
 				)}
+				<ClayButton
+					displayType="primary"
+					onClick={() => setVisibleModal(true)}
+				>
+					{'Open modal'}
+				</ClayButton>
+			</>
+		);
+	})
+	.add('w/ low-level header', () => {
+		const [visibleModal, setVisibleModal] = React.useState<boolean>(false);
+		const {observer, onClose} = useModal({
+			onClose: () => setVisibleModal(false),
+		});
+
+		return (
+			<>
+				{visibleModal && (
+					<ClayModal
+						observer={observer}
+						size={select('Size', size, 'lg') as Size}
+						spritemap={spritemap}
+						status={select('Status', status, null) as Status}
+					>
+						<ClayModal.Header withTitle={false}>
+							<ClayModal.ItemGroup>
+								<ClayModal.Item>
+									<ClayModal.TitleSection>
+										<ClayModal.Title>
+											<ClayModal.TitleIndicator>
+												<ClayIcon
+													spritemap={spritemap}
+													symbol="info-circle"
+												/>
+											</ClayModal.TitleIndicator>
+											{'Modal Title'}
+										</ClayModal.Title>
+									</ClayModal.TitleSection>
+								</ClayModal.Item>
+								<ClayModal.Item shrink>
+									<ClayModal.SubtitleSection>
+										<ClayModal.Subtitle>
+											{'Modal Subtitle'}
+										</ClayModal.Subtitle>
+									</ClayModal.SubtitleSection>
+								</ClayModal.Item>
+							</ClayModal.ItemGroup>
+
+							<ClayButton
+								aria-label="close"
+								className="close"
+								displayType="unstyled"
+								onClick={onClose}
+							>
+								<ClayIcon
+									spritemap={spritemap}
+									symbol="times"
+								/>
+							</ClayButton>
+						</ClayModal.Header>
+						<ClayModal.Body />
+					</ClayModal>
+				)}
+
 				<ClayButton
 					displayType="primary"
 					onClick={() => setVisibleModal(true)}

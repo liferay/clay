@@ -81,6 +81,71 @@ exports[`ClayModal renders 1`] = `
 </body>
 `;
 
+exports[`ClayModal renders Header w/ low-level API 1`] = `
+<body
+  class="modal-open"
+>
+  <div>
+    <div
+      class="modal-backdrop fade show"
+    />
+    <div
+      class="fade modal d-block show"
+    >
+      <div
+        class=""
+        style="margin: auto; max-width: 600px;"
+      >
+        <div
+          class="modal-dialog"
+          tabindex="-1"
+        >
+          <div
+            class="modal-content"
+          >
+            <div
+              class="modal-header"
+            >
+              <div
+                class="modal-item-group"
+              >
+                <div
+                  class="modal-item"
+                >
+                  <div
+                    class="modal-title-section"
+                  >
+                    <div
+                      class="modal-title"
+                    >
+                      Modal Title
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="modal-item modal-item-shrink"
+                >
+                  <div
+                    class="modal-subtitle-section"
+                  >
+                    <div
+                      class="modal-subtitle"
+                    >
+                      Modal Subtitle
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div />
+</body>
+`;
+
 exports[`ClayModal renders a body component with url 1`] = `
 <body
   class="modal-open"
