@@ -4,6 +4,7 @@
  */
 
 import Icon from '@clayui/icon';
+import ClayLink from '@clayui/link';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -54,7 +55,7 @@ const ClayLabel = React.forwardRef<HTMLAnchorElement | HTMLSpanElement, IProps>(
 		}: IProps,
 		ref
 	) => {
-		const TagName = href ? 'a' : 'span';
+		const TagName = href ? ClayLink : 'span';
 
 		return (
 			<span
