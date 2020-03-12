@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-const sizes = ['B', 'KB', 'MB', 'GB', 'TB'];
+const SIZES = ['B', 'KB', 'MB', 'GB', 'TB'];
 
 const convertBytes = function(bytes) {
 	if (bytes === 0) {
@@ -15,10 +15,10 @@ const convertBytes = function(bytes) {
 	const i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)), 10);
 
 	if (i === 0) {
-		return `${bytes} ${sizes[i]}`;
+		return `${bytes} ${SIZES[i]}`;
 	}
 
-	return `${(bytes / Math.pow(1024, i)).toFixed(1)} ${sizes[i]}`;
+	return `${(bytes / Math.pow(1024, i)).toFixed(1)} ${SIZES[i]}`;
 };
 
 module.exports = convertBytes;
