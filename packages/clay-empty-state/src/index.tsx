@@ -13,9 +13,14 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	description?: string;
 
 	/**
+	 *
+	 */
+	imgProps?: React.ImgHTMLAttributes<HTMLImageElement>;
+
+	/**
 	 * Source of the image to signify the state
 	 */
-	imageSrc?: string;
+	imgSrc?: string;
 
 	/**
 	 * Title of the message highlighting the description
@@ -27,24 +32,31 @@ const ClayEmptyState: React.FunctionComponent<IProps> = ({
 	children,
 	className,
 	description = 'Sorry, there are no results found',
-	imageSrc,
+	imgProps,
+	imgSrc,
 	title = 'No results found',
 	...otherProps
 }) => {
+	const hasImg = imgSrc || imgProps;
+
 	return (
 		<div
 			className={classNames(className, 'c-empty-state', {
-				'c-empty-state-animation': imageSrc,
+				'c-empty-state-animation': hasImg,
 			})}
 			{...otherProps}
 		>
-			{imageSrc && (
+			{hasImg && (
 				<div className="c-empty-state-image">
 					<div className="c-empty-state-aspect-ratio">
 						<img
 							alt="empty-state-image"
-							className="aspect-ratio-item aspect-ratio-item-fluid"
-							src={imageSrc}
+							className={classNames(
+								'aspect-ratio-item aspect-ratio-item-fluid',
+								imgProps && imgProps.className
+							)}
+							src={imgSrc}
+							{...imgProps}
 						/>
 					</div>
 				</div>
