@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.8.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.7.0...@clayui/css@3.8.0) (2020-03-12)
+
+
+### Bug Fixes
+
+* **@clayui/css:** SVG Icons update the flag of Slovakia ([91d5cd0](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/91d5cd0)), closes [#2996](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2996)
+* **clay-css:** Aspect Ratio `.aspect-ratio-item` should be aligned to the left when parent container has `text-align: center` ([bf2f992](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/bf2f992)), closes [#833](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/833)
+* **clay-css:** Clay Base Form Select Element icon should display. Bootstrap changed the way they handle svg's as background-images at https://github.com/twbs/bootstrap/commit/c26e68427c06477cacdc4a75d92e5bd22476b4bb ([27241af](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/27241af)), closes [#2896](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2896)
+* **clay-css:** Mixins `clay-button-variant` deprecate `hover-z-index`, `focus-z-index`, `disabled-z-index`, `active-z-index` and use the Sass maps instead ([96b650b](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/96b650b)), closes [#2903](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2903)
+* **clay-css:** Mixins `clay-css` background-attachment should accept key `bg-attachment` or `background-attachment` ([b07e570](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/b07e570)), closes [#2896](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2896)
+* **clay-css:** Mixins `clay-css` background-color should accept key `bg` or `background-color` ([b55e7bc](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/b55e7bc)), closes [#2896](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2896)
+* **clay-css:** Removes Bootstrap 4's gnarly `select.form-control:not([multiple]):not([size])` selector overwrite. This selector was removed in Bootstrap 4.1.3. See https://github.com/twbs/bootstrap/commit/f426a67394010b5cc0235c845b744e2711f81e59 ([a209ac6](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/a209ac6)), closes [#2896](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2896)
+* **clay-css:** SVG Icons modify `tablet-landscape` and `tablet-portrait` they were off by a couple pixels ([9c3e266](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/9c3e266)), closes [#2970](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2970)
+
+
+### Features
+
+* **@clayui/css:** Labels adds `label-inverse-*` to invert label colors ([340ce27](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/340ce27)), closes [#2975](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2975)
+* **@clayui/css:** Mixins `clay-label-variant` use `clay-css` mixin in each selector instead of individually declaring properties ([d456db6](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/d456db6)), closes [#2975](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2975)
+* **clay-css:** Adds Clay Dual Listbox (Old Input Move Boxes) component ([18b3905](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/18b3905)), closes [#2896](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2896)
+* **clay-css:** Adds Clay Reorder component. A `select[multiple]` element with buttons that rearrange `option`s inside `select[multiple]` ([7ba7584](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/7ba7584)), closes [#2896](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2896)
+* **clay-css:** Adds Empty State component ([a159135](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/a159135)), closes [#833](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/833)
+* **clay-css:** Adds images for Empty State in `src/images/images` ([df33ac1](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/df33ac1)), closes [#833](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/833)
+* **clay-css:** Form Select Element use `clay-select-variant` mixin to generate styles and consolidate repeated selectors ([4a381a0](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/4a381a0)), closes [#2896](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2896)
+* **clay-css:** Global Variables add `$component-focus-inset-box-shadow` for reusable focus inset box-shadows across components ([5008674](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/5008674)), closes [#2954](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2954)
+* **clay-css:** Mixins `clay-button-variant` use `clay-css` mixin for applying `hover`, `focus`, `disabled`, `active`, `active-class-after`, `active-focus`. ([22a6be1](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/22a6be1)), closes [#2903](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2903)
+* **clay-css:** Mixins `clay-css` adds option to pass in `scrollbar-width` for future proofing this property. It's available in Firefox 64+ ([4fbe1df](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/4fbe1df)), closes [#2896](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2896)
+* **clay-css:** Mixins `clay-form-control-variant` use `clay-css` mixin in each selector instead of individually declaring properties ([f4ce3e1](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/f4ce3e1)), closes [#2896](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2896)
+* **clay-css:** Mixins `clay-select-variant` use `clay-css` mixin in each selector instead of individually declaring properties ([485afb4](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/485afb4)), closes [#2896](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2896)
+* **clay-css:** Mixins `clay-sidebar-variant` add option to configure `.sidebar`, `.sidebar-panel`, `.sidebar-header`, `.sidebar-body`, `.sidebar-footer`, `.nav-nested`, `.sidebar-list-group .list-group-item`, `.sidebar-list-group .sticker`, `.sidebar-list-group .sticker-secondary` via Sass maps and `clay-css` mixin ([994c7bd](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/994c7bd)), closes [#2903](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2903)
+* **clay-css:** Mixins `clay-tbar-variant` use `clay-css` mixin for applying base `tbar`, `strong`, `.tbar-item`, `.tbar-section` styles ([a25959b](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/a25959b)), closes [#2903](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2903)
+* **clay-css:** Mixins adds `clay-slideout-variant` with options to configure `c-slideout-shown`, `c-slideout-tbar-shown`, `c-slideout-tbar-shown-sidebar`, `sidebar`, `sidebar-c-slideout-show`, `sidebar-c-slideout-transition`, `tbar-stacked`, `tbar-stacked-c-slideout-show`, `tbar-stacked-c-slideout-transition` ([95ae58e](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/95ae58e)), closes [#2903](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2903)
+* **clay-css:** Sidebar adds `.sidebar-dark` variant and Sass map `$sidebar-dark` which uses `clay-sidebar-variant` mixin ([df14c79](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/df14c79)), closes [#2903](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2903)
+* **clay-css:** Slideout adds new component `.c-slideout`, `.c-slideout-transition-in`, `.c-slideout-transition-out`, `.c-slideout-fixed`, `.c-slideout-absolute`, `.c-slideout-start`, `.c-slideout-end` ([50491e2](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/50491e2)), closes [#2903](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2903)
+* **clay-css:** Tbar adds `.tbar-stacked` for Lexicon's Vertical Bar Pattern and variants `.tbar-light`, `.tbar-dark-l2`, .tbar-dark-d1` ([7bd2ac6](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/7bd2ac6)), closes [#2903](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2903)
+* **clay-css:** Utilities adds `.c-focus-inset` for inner focus styles ([33ca179](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/33ca179)), closes [#2954](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2954)
+
+
+
+
+
 # 3.7.0 (2020-02-28)
 
 

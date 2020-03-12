@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-alpha.10](https://github.com/bryceosterhaus/clay/compare/clayui.com@3.0.0-alpha.9...clayui.com@3.0.0-alpha.10) (2020-03-12)
+
+### Bug Fixes
+
+-   **clayui.com:** White text in gatsyby-highlight html ([503bec0](https://github.com/bryceosterhaus/clay/commit/503bec0))
+
+### Features
+
+-   **@clayui/upper-toolbar:** Create basic component and docs ([e89f81e](https://github.com/bryceosterhaus/clay/commit/e89f81e))
+-   **clayui.com:** add playground for css and link to codesandbox ([f36246c](https://github.com/bryceosterhaus/clay/commit/f36246c))
+-   **clayui.com:** use @clayui/css instead of clay-css ([625aa7b](https://github.com/bryceosterhaus/clay/commit/625aa7b))
+
 # 3.0.0-alpha.9 (2020-02-28)
 
 ### Bug Fixes

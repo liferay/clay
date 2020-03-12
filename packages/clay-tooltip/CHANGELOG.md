@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.1](https://github.com/liferay/clay/tree/master/packages/clay-tooltip/compare/@clayui/tooltip@3.2.0...@clayui/tooltip@3.2.1) (2020-03-12)
+
+### Bug Fixes
+
+-   **@clayui/tooltip:** add polyfill for element.matches ([a16ff00](https://github.com/liferay/clay/tree/master/packages/clay-tooltip/commit/a16ff00))
+
 # 3.2.0 (2020-02-28)
 
 ### Bug Fixes

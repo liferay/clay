@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.1](https://github.com/liferay/clay/tree/master/packages/clay-list/compare/@clayui/list@3.2.0...@clayui/list@3.2.1) (2020-03-12)
+
+### Bug Fixes
+
+-   **@clayui/list:** use ClayLink over anchor tag ([4393714](https://github.com/liferay/clay/tree/master/packages/clay-list/commit/4393714))
+
 # 3.2.0 (2020-02-28)
 
 ### Bug Fixes

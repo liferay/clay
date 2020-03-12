@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.4.0](https://github.com/liferay/clay/tree/master/packages/clay-modal/compare/@clayui/modal@3.3.0...@clayui/modal@3.4.0) (2020-03-12)
+
+### Features
+
+-   **@clayui/modal:** add low-level componenets for header ([7b0074f](https://github.com/liferay/clay/tree/master/packages/clay-modal/commit/7b0074f))
+
 # 3.3.0 (2020-02-28)
 
 ### Bug Fixes
