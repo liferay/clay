@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/liferay/clay/tree/master/packages/clay-card/compare/@clayui/card@3.1.0...@clayui/card@3.1.1) (2020-03-12)
+
+### Bug Fixes
+
+-   **@clayui/card:** use ClayLink over anchor tag ([02a8dd1](https://github.com/liferay/clay/tree/master/packages/clay-card/commit/02a8dd1))
+
 # 3.1.0 (2020-02-28)
 
 ### Bug Fixes
