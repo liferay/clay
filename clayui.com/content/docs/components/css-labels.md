@@ -40,30 +40,68 @@ description: 'Labels categorize information, providing quick recognition.'
 </div>
 
 ```html
-<span class="label label-primary"
-	><span class="label-item label-item-expand">Primary</span></span
->
-<span class="label label-secondary"
-	><span class="label-item label-item-expand">Secondary</span></span
->
-<span class="label label-info"
-	><span class="label-item label-item-expand">Info</span></span
->
-<span class="label label-warning"
-	><span class="label-item label-item-expand">Warning</span></span
->
-<span class="label label-danger"
-	><span class="label-item label-item-expand">Danger</span></span
->
-<span class="label label-success"
-	><span class="label-item label-item-expand">Success</span></span
->
-<span class="label label-light"
-	><span class="label-item label-item-expand">Light</span></span
->
-<span class="label label-dark"
-	><span class="label-item label-item-expand">Dark</span></span
->
+<span class="label label-primary">
+	<span class="label-item label-item-expand">Primary</span>
+</span>
+<span class="label label-secondary">
+	<span class="label-item label-item-expand">Secondary</span>
+</span>
+<span class="label label-info">
+	<span class="label-item label-item-expand">Info</span>
+</span>
+<span class="label label-warning">
+	<span class="label-item label-item-expand">Warning</span>
+</span>
+<span class="label label-danger">
+	<span class="label-item label-item-expand">Danger</span>
+</span>
+<span class="label label-success">
+	<span class="label-item label-item-expand">Success</span>
+</span>
+<span class="label label-light">
+	<span class="label-item label-item-expand">Light</span>
+</span>
+<span class="label label-dark">
+	<span class="label-item label-item-expand">Dark</span>
+</span>
+```
+
+<div class="sheet-example">
+	<span class="label label-inverse-primary"><span class="label-item label-item-expand">Primary</span></span>
+	<span class="label label-inverse-secondary"><span class="label-item label-item-expand">Secondary</span></span>
+	<span class="label label-inverse-info"><span class="label-item label-item-expand">Info</span></span>
+	<span class="label label-inverse-warning"><span class="label-item label-item-expand">Warning</span></span>
+	<span class="label label-inverse-danger"><span class="label-item label-item-expand">Danger</span></span>
+	<span class="label label-inverse-success"><span class="label-item label-item-expand">Success</span></span>
+	<span class="label label-inverse-light"><span class="label-item label-item-expand">Light</span></span>
+	<span class="label label-inverse-dark"><span class="label-item label-item-expand">Dark</span></span>
+</div>
+
+```html
+<span class="label label-inverse-primary">
+	<span class="label-item label-item-expand">Primary</span>
+</span>
+<span class="label label-inverse-secondary">
+	<span class="label-item label-item-expand">Secondary</span>
+</span>
+<span class="label label-inverse-info">
+	<span class="label-item label-item-expand">Info</span>
+</span>
+<span class="label label-inverse-warning">
+	<span class="label-item label-item-expand">Warning</span>
+</span>
+<span class="label label-inverse-danger">
+	<span class="label-item label-item-expand">Danger</span>
+</span>
+<span class="label label-inverse-success">
+	<span class="label-item label-item-expand">Success</span>
+</span>
+<span class="label label-inverse-light">
+	<span class="label-item label-item-expand">Light</span>
+</span>
+<span class="label label-inverse-dark">
+	<span class="label-item label-item-expand">Dark</span>
+</span>
 ```
 
 ## Sizes
