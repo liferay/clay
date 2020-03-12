@@ -20,21 +20,29 @@ storiesOf('Components|ClayEmptyState', module)
 		</ClayEmptyState>
 	))
 	.add('empty state', () => (
-		<ClayEmptyState imageSrc={emptyImage}>
+		<ClayEmptyState imgSrc={emptyImage}>
 			<ClayButton displayType="secondary">{'Button'}</ClayButton>
 		</ClayEmptyState>
 	))
 	.add('search state', () => (
 		<ClayEmptyState
 			description="This is a description of what the button will allow you to do"
-			imageSrc={searchImage}
+			imgSrc={searchImage}
 			title="No content yet"
 		/>
 	))
 	.add('success state', () => (
 		<ClayEmptyState
 			description="You don't have more notifications to review"
-			imageSrc={successImage}
+			imgSrc={successImage}
+			title="Hurray"
+		/>
+	))
+	.add('w/ imgProps', () => (
+		<ClayEmptyState
+			description="You don't have more notifications to review"
+			imgProps={{alt: 'test test', title: 'hello world'}}
+			imgSrc={successImage}
 			title="Hurray"
 		/>
 	));
