@@ -76,6 +76,15 @@ const reducer = (state: IState, {type, ...payload}: IAction): IState => {
 	}
 };
 
+// Polyfill to account for any browsers that might not support `element.matches`.
+// Need to make sure window exists first since this can be run server side.
+if (typeof window !== 'undefined' && !Element.prototype.matches) {
+	Element.prototype.matches =
+		// @ts-ignore
+		Element.prototype.msMatchesSelector ||
+		Element.prototype.webkitMatchesSelector;
+}
+
 function closestAncestor(node: HTMLElement, s: string) {
 	const el = node;
 	let ancestor: HTMLElement | null = node;
