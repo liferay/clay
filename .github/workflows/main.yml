@@ -41,6 +41,7 @@ jobs:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
                   curl \
+                      -v
                       -X POST \
                       $URL \
                       -H "Content-Type: application/json" \
