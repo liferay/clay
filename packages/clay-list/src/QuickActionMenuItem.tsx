@@ -4,6 +4,7 @@
  */
 
 import ClayIcon from '@clayui/icon';
+import ClayLink from '@clayui/link';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -32,7 +33,7 @@ const ClayListQuickActionMenuItem: React.FunctionComponent<IItemProps> = ({
 	symbol,
 	...otherProps
 }: IItemProps) => {
-	const ElementTag = href ? 'a' : 'button';
+	const ElementTag = href ? ClayLink : 'button';
 
 	return (
 		<ElementTag

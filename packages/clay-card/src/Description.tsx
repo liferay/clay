@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import ClayLink from '@clayui/link';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -48,7 +49,7 @@ const ClayCardDescription: React.FunctionComponent<ICardDescriptionProps> = ({
 	truncate = true,
 	...otherProps
 }: ICardDescriptionProps) => {
-	const InnerTag = href && !disabled ? 'a' : 'span';
+	const InnerTag = href && !disabled ? ClayLink : 'span';
 
 	return (
 		<Tag
