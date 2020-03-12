@@ -516,7 +516,7 @@
 **Closed issues:**
 
 -   Wrong language key for info in management toolbar [\#997](https://github.com/liferay/clay/issues/997)
--   Tooltip doesn't render in the correct position, should dissapear on click and should be possible to select tooltip text [\#995](https://github.com/liferay/clay/issues/995)
+-   Tooltip doesn't render in the correct position, should disappear on click and should be possible to select tooltip text [\#995](https://github.com/liferay/clay/issues/995)
 -   Clay CSS `.autofit-padded-no-gutters-y` should only offset top and bottom padding [\#993](https://github.com/liferay/clay/issues/993)
 -   Clay CSS `.sheet-subtitle` with anchor tag styled like button shouldn't capitalize text [\#991](https://github.com/liferay/clay/issues/991)
 -   Some icons don't have the proper viewport 0 0 512 512 [\#979](https://github.com/liferay/clay/issues/979)
