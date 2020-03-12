@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayEmptyState renders with a children content 1`] = `
+<div>
+  <div
+    class="c-empty-state"
+  >
+    <div
+      class="c-empty-state-title"
+    >
+      <span
+        class="text-truncate-inline"
+      >
+        <span
+          class="text-truncate"
+        >
+          No results found
+        </span>
+      </span>
+    </div>
+    <div
+      class="c-empty-state-text"
+    >
+      Sorry, there are no results found
+    </div>
+    <div
+      class="c-empty-state-footer"
+    >
+      My Empty State
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayEmptyState renders with an image provided 1`] = `
+<div>
+  <div
+    class="c-empty-state c-empty-state-animation"
+  >
+    <div
+      class="c-empty-state-image"
+    >
+      <div
+        class="c-empty-state-aspect-ratio"
+      >
+        <img
+          alt="empty-state-image"
+          class="aspect-ratio-item aspect-ratio-item-fluid"
+          src="https://via.placeholder.com/256"
+        />
+      </div>
+    </div>
+    <div
+      class="c-empty-state-title"
+    >
+      <span
+        class="text-truncate-inline"
+      >
+        <span
+          class="text-truncate"
+        >
+          No results found
+        </span>
+      </span>
+    </div>
+    <div
+      class="c-empty-state-text"
+    >
+      Sorry, there are no results found
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayEmptyState renders with default values 1`] = `
+<div>
+  <div
+    class="c-empty-state"
+  >
+    <div
+      class="c-empty-state-title"
+    >
+      <span
+        class="text-truncate-inline"
+      >
+        <span
+          class="text-truncate"
+        >
+          No results found
+        </span>
+      </span>
+    </div>
+    <div
+      class="c-empty-state-text"
+    >
+      Sorry, there are no results found
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayEmptyState renders with different image props 1`] = `
+<div>
+  <div
+    class="c-empty-state c-empty-state-animation"
+  >
+    <div
+      class="c-empty-state-image"
+    >
+      <div
+        class="c-empty-state-aspect-ratio"
+      >
+        <img
+          alt="hello world"
+          class="aspect-ratio-item aspect-ratio-item-fluid"
+          src="https://via.placeholder.com/256"
+        />
+      </div>
+    </div>
+    <div
+      class="c-empty-state-title"
+    >
+      <span
+        class="text-truncate-inline"
+      >
+        <span
+          class="text-truncate"
+        >
+          No results found
+        </span>
+      </span>
+    </div>
+    <div
+      class="c-empty-state-text"
+    >
+      Sorry, there are no results found
+    </div>
+    <div
+      class="c-empty-state-footer"
+    >
+      My Empty State
+    </div>
+  </div>
+</div>
+`;
