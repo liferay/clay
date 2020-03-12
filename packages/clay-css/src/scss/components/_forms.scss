@@ -129,6 +129,16 @@ label {
 	&[type="range"] {
 		background-color: transparent;
 		border-color: transparent;
+		padding: 0;
+
+		&:focus {
+			box-shadow: none;
+		}
+
+		&::-webkit-slider-thumb {
+			// Chrome hack for https://github.com/liferay/clay/issues/1179
+			outline: $primary-l2 auto 5px;
+		}
 	}
 
 	&:not([type="range"]) {
