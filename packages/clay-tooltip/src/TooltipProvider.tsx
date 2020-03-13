@@ -76,13 +76,21 @@ const reducer = (state: IState, {type, ...payload}: IAction): IState => {
 	}
 };
 
-// Polyfill to account for any browsers that might not support `element.matches`.
-// Need to make sure window exists first since this can be run server side.
-if (typeof window !== 'undefined' && !Element.prototype.matches) {
-	Element.prototype.matches =
-		// @ts-ignore
-		Element.prototype.msMatchesSelector ||
-		Element.prototype.webkitMatchesSelector;
+function matches(
+	element: HTMLElement & {
+		msMatchesSelector?: HTMLElement['matches'];
+	},
+	selectorString: string
+) {
+	if (element.matches) {
+		return element.matches(selectorString);
+	} else if (element.msMatchesSelector) {
+		return element.msMatchesSelector(selectorString);
+	} else if (element.webkitMatchesSelector) {
+		return element.webkitMatchesSelector(selectorString);
+	} else {
+		return false;
+	}
 }
 
 function closestAncestor(node: HTMLElement, s: string) {
@@ -94,7 +102,7 @@ function closestAncestor(node: HTMLElement, s: string) {
 	}
 
 	do {
-		if (ancestor.matches(s)) {
+		if (matches(ancestor, s)) {
 			return ancestor;
 		}
 
