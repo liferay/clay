@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.2](https://github.com/liferay/clay/tree/master/packages/clay-tooltip/compare/@clayui/tooltip@3.2.1...@clayui/tooltip@3.2.2) (2020-03-13)
+
+### Bug Fixes
+
+-   **@clayui/tooltip:** remove polyfill in favor of ponyfill(ponyfill.com) ([3a149e0](https://github.com/liferay/clay/tree/master/packages/clay-tooltip/commit/3a149e0))
+
 ## [3.2.1](https://github.com/liferay/clay/tree/master/packages/clay-tooltip/compare/@clayui/tooltip@3.2.0...@clayui/tooltip@3.2.1) (2020-03-12)
 
 ### Bug Fixes

@@ -1,7 +1,7 @@
 {
 	"private": true,
 	"name": "clayui.com",
-	"version": "3.0.0-alpha.10",
+	"version": "3.0.0-alpha.11",
 	"license": "MIT",
 	"scripts": {
 		"copy:clay-css": "yarn copy:clay-css-css && yarn copy:clay-css-icons && yarn copy:clay-css-js && yarn copy:clay-css-site-images",
@@ -40,7 +40,7 @@
 		"@clayui/popover": "^3.3.0",
 		"@clayui/sticker": "^3.1.0",
 		"@clayui/time-picker": "^3.1.0",
-		"@clayui/tooltip": "^3.2.1",
+		"@clayui/tooltip": "^3.2.2",
 		"@clayui/upper-toolbar": "^3.0.0",
 		"@mdx-js/mdx": "^1.0.20",
 		"@mdx-js/react": "^1.0.20",
