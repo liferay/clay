@@ -191,6 +191,8 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>((
 						adjustY: autoBestAlign,
 					},
 					points,
+					// @ts-ignore
+					useCssTransform: !!window.TransitionEvent,
 				}
 			);
 		}
