@@ -7,29 +7,29 @@ order: 4
 <div class="nav-toc">
 
 -   [Base](#base)
-    -    [Kbd](#c-kbd)
-    -    [Monospaced](#c-kbd-monospaced)
-    -    [Inline](#c-kbd-inline)
-    -    [Group](#c-kbd-group)
+    -   [Kbd](#c-kbd)
+    -   [Monospaced](#c-kbd-monospaced)
+    -   [Inline](#c-kbd-inline)
+    -   [Group](#c-kbd-group)
 -   [Color Variants](#color-variants)
-    -    [Light](#c-kbd-light)
-    -    [Dark](#c-kbd-dark)
-    -    [Group Light](#c-kbd-group-light)
-    -    [Group Dark](#c-kbd-group-dark)
+    -   [Light](#c-kbd-light)
+    -   [Dark](#c-kbd-dark)
+    -   [Group Light](#c-kbd-group-light)
+    -   [Group Dark](#c-kbd-group-dark)
 -   [Size Variants](#size-variants)
     -   [Small](#c-kbd-sm)
     -   [Large](#c-kbd-lg)
 -   [Unicode Character List](#unicode-character-list)
-    -    [Standard](#standard-0-255-(utf-8)-character-set)
-    -    [General Punctuation](#general-punctuation-(u+2000-to-u+206f))
-    -    [Superscripts and Subscripts](#superscripts-and-subscripts-(u+2070-to-u+209f))
-    -    [Currency Symbols](#currency-symbols-(u+20a0-to-u+20cf))
-    -    [Letterlike Symbols](#letterlike-symbols-(u+2100-to-u+214f))
-    -    [Greek Characters](#greek-characters-(u+0391-to-u+03c9))
-    -    [Number Forms](#number-forms-(u+2150-to-u+218f))
-    -    [Supplemental Arrows - A](#supplemental-arrows---a-(u+27f0-to-u+27ff))
-    -    [Supplemental Arrows - B](#supplemental-arrows---b-(u+2900-to-u+297f))
-    -    [Mathematical Operators](#mathematical-operators-(u+2200-to-u+22ff))
+    -   [Standard](<#standard-0-255-(utf-8)-character-set>)
+    -   [General Punctuation](<#general-punctuation-(u+2000-to-u+206f)>)
+    -   [Superscripts and Subscripts](<#superscripts-and-subscripts-(u+2070-to-u+209f)>)
+    -   [Currency Symbols](<#currency-symbols-(u+20a0-to-u+20cf)>)
+    -   [Letterlike Symbols](<#letterlike-symbols-(u+2100-to-u+214f)>)
+    -   [Greek Characters](<#greek-characters-(u+0391-to-u+03c9)>)
+    -   [Number Forms](<#number-forms-(u+2150-to-u+218f)>)
+    -   [Supplemental Arrows - A](<#supplemental-arrows---a-(u+27f0-to-u+27ff)>)
+    -   [Supplemental Arrows - B](<#supplemental-arrows---b-(u+2900-to-u+297f)>)
+    -   [Mathematical Operators](<#mathematical-operators-(u+2200-to-u+22ff)>)
 
 </div>
 </div>
@@ -115,9 +115,9 @@ A container element for grouping text with several <code>kbd</code> elements tog
 
 ```html
 <span class="c-kbd-group">
-    Press <kbd class="c-kbd">Esc</kbd>
-    +
-    <kbd class="c-kbd c-kbd-monospaced">N</kbd> to see an amazing effect.
+	Press <kbd class="c-kbd">Esc</kbd>
+	+
+	<kbd class="c-kbd c-kbd-monospaced">N</kbd> to see an amazing effect.
 </span>
 ```
 
@@ -151,7 +151,7 @@ The color variants are modifier classes added to any of the base components list
 
 ### C Kbd Group Light
 
-A color modifier on <code>c-kbd-group</code> that sets the text color to <code>$secondary</code>. This can be used with <code>c-kbd-light</code> and <code>c-kbd-dark</code>.
+A color modifier on <code>c-kbd-group</code> that sets the text color to <code>\$secondary</code>. This can be used with <code>c-kbd-light</code> and <code>c-kbd-dark</code>.
 
 <div class="sheet-example">
     <div class="c-mb-2">
@@ -164,18 +164,20 @@ A color modifier on <code>c-kbd-group</code> that sets the text color to <code>$
 
 ```html
 <span class="c-kbd-group c-kbd-group-light">
-    Press <kbd class="c-kbd c-kbd-light">Esc</kbd> +
-    <kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd> to see an amazing effect.
+	Press <kbd class="c-kbd c-kbd-light">Esc</kbd> +
+	<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd> to see an amazing
+	effect.
 </span>
 <span class="c-kbd-group c-kbd-group-light">
-    Press <kbd class="c-kbd c-kbd-dark">Esc</kbd> +
-    <kbd class="c-kbd c-kbd-monospaced c-kbd-dark">N</kbd> to see an amazing effect.
+	Press <kbd class="c-kbd c-kbd-dark">Esc</kbd> +
+	<kbd class="c-kbd c-kbd-monospaced c-kbd-dark">N</kbd> to see an amazing
+	effect.
 </span>
 ```
 
 ### C Kbd Group Dark
 
-A color modifier on <code>c-kbd-group</code> that sets the text color to <code>$white</code>. This can be used with <code>c-kbd-light</code> and <code>c-kbd-dark</code>.
+A color modifier on <code>c-kbd-group</code> that sets the text color to <code>\$white</code>. This can be used with <code>c-kbd-light</code> and <code>c-kbd-dark</code>.
 
 <div class="sheet-example">
     <div class="c-mb-2" style="background-color:#1C1C24;padding: 10px;">
@@ -188,12 +190,14 @@ A color modifier on <code>c-kbd-group</code> that sets the text color to <code>$
 
 ```html
 <span class="c-kbd-group c-kbd-group-dark">
-    Press <kbd class="c-kbd c-kbd-light">Esc</kbd> +
-    <kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd> to see an amazing effect.
+	Press <kbd class="c-kbd c-kbd-light">Esc</kbd> +
+	<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd> to see an amazing
+	effect.
 </span>
 <span class="c-kbd-group c-kbd-group-dark">
-    Press <kbd class="c-kbd c-kbd-dark">Esc</kbd> +
-    <kbd class="c-kbd c-kbd-monospaced c-kbd-dark">N</kbd> to see an amazing effect.
+	Press <kbd class="c-kbd c-kbd-dark">Esc</kbd> +
+	<kbd class="c-kbd c-kbd-monospaced c-kbd-dark">N</kbd> to see an amazing
+	effect.
 </span>
 ```
 
@@ -218,10 +222,12 @@ Size variants are modifier classes added to the base component to change the fon
 </div>
 
 ```html
-<kbd class="c-kbd c-kbd-sm c-kbd-light">Esc</kbd> + <kbd class="c-kbd c-kbd-sm c-kbd-monospaced c-kbd-light">N</kbd>
+<kbd class="c-kbd c-kbd-sm c-kbd-light">Esc</kbd> +
+<kbd class="c-kbd c-kbd-sm c-kbd-monospaced c-kbd-light">N</kbd>
 <span class="c-kbd-group c-kbd-group-sm c-kbd-group-light">
-    Press <kbd class="c-kbd c-kbd-light">Esc</kbd> +
-    <kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd> to see an amazing effect.
+	Press <kbd class="c-kbd c-kbd-light">Esc</kbd> +
+	<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd> to see an amazing
+	effect.
 </span>
 ```
 
@@ -242,12 +248,12 @@ Size variants are modifier classes added to the base component to change the fon
 </div>
 
 ```html
-<kbd class="c-kbd c-kbd-lg c-kbd-light">
-    Esc</kbd> + <kbd class="c-kbd c-kbd-lg c-kbd-monospaced c-kbd-light">N
-</kbd>
+<kbd class="c-kbd c-kbd-lg c-kbd-light"> Esc</kbd> +
+<kbd class="c-kbd c-kbd-lg c-kbd-monospaced c-kbd-light">N </kbd>
 <span class="c-kbd-group c-kbd-group-lg c-kbd-group-light">
-    Press <kbd class="c-kbd c-kbd-light">Esc</kbd> +
-    <kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd> to see an amazing effect.
+	Press <kbd class="c-kbd c-kbd-light">Esc</kbd> +
+	<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd> to see an amazing
+	effect.
 </span>
 ```
 
@@ -258,13 +264,13 @@ Size variants are modifier classes added to the base component to change the fon
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0033;">&#0033;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0034;">&#0034;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0035;">&#0035;</kbd>
-<kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0036;">&#0036;</kbd>
+<kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0036;">\$</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0037;">&#0037;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0038;">&#0038;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0039;">&#0039;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0040;">&#0040;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0041;">&#0041;</kbd>
-<kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0042;">&#0042;</kbd>
+<kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0042;">\*</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0043;">&#0043;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0044;">&#0044;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0045;">&#0045;</kbd>
@@ -317,7 +323,7 @@ Size variants are modifier classes added to the base component to change the fon
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0092;">&#0092;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0093;">&#0093;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0094;">&#0094;</kbd>
-<kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0095;">&#0095;</kbd>
+<kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0095;">\_</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0096;">&#0096;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0097;">&#0097;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0098;">&#0098;</kbd>
