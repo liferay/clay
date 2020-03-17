@@ -72,5 +72,11 @@ A bailout utility to set the focus border inside the element, just add the class
 </div>
 
 ```html
-<input class="c-focus-inset form-control" id="basicInputTypeText" name="basicInputTypeText" placeholder="Placeholder" type="text" />
+<input
+	class="c-focus-inset form-control"
+	id="basicInputTypeText"
+	name="basicInputTypeText"
+	placeholder="Placeholder"
+	type="text"
+/>
 ```
