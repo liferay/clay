@@ -22,6 +22,7 @@ const IconSearch = ({
 	source,
 	iconLabelFormatter = icon => icon.name,
 }) => {
+
 	const [searchQuery, setSearchQuery] = useState('');
 
 	const filteredIcons = useMemo(() => {
@@ -39,8 +40,8 @@ const IconSearch = ({
 	return (
 		<>
 			<ClayForm.Group>
-				<label style={{width: '100%'}}>
-					{label}
+				<label className="form-control-label">
+					<span className="form-control-label-text">{label}</span>
 
 					<ClayInput
 						onChange={event => setSearchQuery(event.target.value)}
@@ -49,24 +50,24 @@ const IconSearch = ({
 						value={searchQuery}
 					/>
 				</label>
-
-				<ul className="lexicon-icon-list list-unstyled">
-					{list.map(icon => (
-						<li key={icon.name}>
-							<ClayIcon
-								spritemap={spritemap}
-								symbol={icon.name}
-							/>
-
-							<span>{iconLabelFormatter(icon)}</span>
-						</li>
-					))}
-				</ul>
-
-				{!list.length && (
-					<span>{`No results found for ${searchQuery}`}</span>
-				)}
 			</ClayForm.Group>
+
+			<ul className="d-flex flex-wrap lexicon-icon-list list-unstyled">
+				{list.map(icon => (
+					<li key={icon.name}>
+						<ClayIcon
+							spritemap={spritemap}
+							symbol={icon.name}
+						/>
+
+						<span>{iconLabelFormatter(icon)}</span>
+					</li>
+				))}
+			</ul>
+
+			{!list.length && (
+				<span>{`No results found for ${searchQuery}`}</span>
+			)}
 		</>
 	);
 };
