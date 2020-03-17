@@ -1,0 +1,1230 @@
+[
+    {
+        "name": "add-cell",
+        "aliases": ["center", "excel", "grid", "squares", "table"]
+    },
+    {
+        "name": "add-column",
+        "aliases": ["cell", "center", "excel", "grid", "squares", "table", "vertical"]
+    },
+    {
+        "name": "add-role",
+        "aliases": [""]
+    },
+    {
+        "name": "add-row",
+        "aliases": ["cell", "squares", "grid", "table", "center", "horizontal", "excel"]
+    },
+    {
+        "name": "adjust",
+        "aliases": ["circle", "half", "effects", "contrast", "settings", "editor"]
+    },
+    {
+        "name": "align-center",
+        "aliases": ["texts", "lines", "editor"]
+    },
+    {
+        "name": "align-image-center",
+        "aliases": [""]
+    },
+    {
+        "name": "align-image-left",
+        "aliases": [""]
+    },
+    {
+        "name": "align-image-right",
+        "aliases": [""]
+    },
+    {
+        "name": "align-justify",
+        "aliases": ["texts", "lines", "editor"]
+    },
+    {
+        "name": "align-left",
+        "aliases": ["texts", "lines", "editor"]
+    },
+    {
+        "name": "align-right",
+        "aliases": ["texts", "lines", "editor"]
+    },
+    {
+        "name": "analytics",
+        "aliases": ["grow", "arrow", "increase", "bar", "data", "expand"]
+    },
+    {
+        "name": "angle-down",
+        "aliases": ["arrow", "bottom", "chevron"]
+    },
+    {
+        "name": "angle-left",
+        "aliases": ["arrow", "chevron"]
+    },
+    {
+        "name": "angle-right",
+        "aliases": ["arrow", "chevron"]
+    },
+    {
+        "name": "angle-up",
+        "aliases": ["arrow", "top", "chevron"]
+    },
+    {
+        "name": "announcement",
+        "aliases": ["deprecated"]
+    },
+    {
+        "name": "anonymize",
+        "aliases": [""]
+    },
+    {
+        "name": "api-lock",
+        "aliases": ["security", "access", "login"]
+    },
+    {
+        "name": "api-web",
+        "aliases": ["world", "globe"]
+    },
+    {
+        "name": "archive",
+        "aliases": ["box", "stock"]
+    },
+    {
+        "name": "arrow-end",
+        "aliases": ["right", "stop", "workflow"]
+    },
+    {
+        "name": "arrow-join",
+        "aliases": ["branch", "combine", "down", "incorporate", "merge", "workflow"]
+    },
+    {
+        "name": "arrow-split",
+        "aliases": ["down", "fork", "workflow"]
+    },
+    {
+        "name": "arrow-start",
+        "aliases": ["right", "workflow"]
+    },
+    {
+        "name": "arrow-up-full",
+        "aliases": ["circle", "upload", "workflow"]
+    },
+    {
+        "name": "arrow-xor",
+        "aliases": ["down", "join", "workflow"]
+    },
+    {
+        "name": "asterisk",
+        "aliases": ["*", "mandatory", "required"]
+    },
+    {
+        "name": "audio",
+        "aliases": ["sound", "music", "note"]
+    },
+    {
+        "name": "autosize",
+        "aliases": ["arrows", "box", "expand", "fullscreen", "resize"]
+    },
+    {
+        "name": "bars",
+        "aliases": ["menu", "lines", "horizontal", "more"]
+    },
+    {
+        "name": "bell-full",
+        "aliases": ["alert", "audio", "music", "notification", "sound"]
+    },
+    {
+        "name": "bell-off",
+        "aliases": ["alert", "audio", "music", "notification", "sound"]
+    },
+    {
+        "name": "bell-on",
+        "aliases": ["alert", "audio", "music", "notification", "sound"]
+    },
+    {
+        "name": "blogs",
+        "aliases": ["journal"]
+    },
+    {
+        "name": "bold",
+        "aliases": ["editor", "style", "texts"]
+    },
+    {
+        "name": "bolt",
+        "aliases": ["bind", "mapping", "thunder", "trigger"]
+    },
+    {
+        "name": "bookmarks",
+        "aliases": ["clip", "holder", "marker", "tag"]
+    },
+    {
+        "name": "books",
+        "aliases": [""]
+    },
+    {
+        "name": "box-container",
+        "aliases": ["chest", "collection", "package"]
+    },
+    {
+        "name": "breadcrumb",
+        "aliases": ["navigation", "path", "sequence", "steps"]
+    },
+    {
+        "name": "briefcase",
+        "aliases": [""]
+    },
+    {
+        "name": "calendar",
+        "aliases": ["agenda", "date", "days", "picker", "time"]
+    },
+    {
+        "name": "camera",
+        "aliases": ["image", "photo", "picture"]
+    },
+    {
+        "name": "cards-full",
+        "aliases": ["box", "grid", "rectangle", "squares"]
+    },
+    {
+        "name": "cards",
+        "aliases": ["box", "grid", "rectangle", "squares"]
+    },
+    {
+        "name": "cards2",
+        "aliases": ["box", "squares", "grid", "rectangle"]
+    },
+    {
+        "name": "caret-bottom-l",
+        "aliases": ["arrow", "down"]
+    },
+    {
+        "name": "caret-bottom",
+        "aliases": ["arrow", "down"]
+    },
+    {
+        "name": "caret-double-l",
+        "aliases": ["arrow", "bottom", "double", "down", "select", "top", "up"]
+    },
+    {
+        "name": "caret-double",
+        "aliases": ["arrow", "bottom", "double", "down", "select", "top", "up"]
+    },
+    {
+        "name": "caret-left-l",
+        "aliases": ["arrow"]
+    },
+    {
+        "name": "caret-left",
+        "aliases": ["arrow"]
+    },
+    {
+        "name": "caret-right-l",
+        "aliases": ["arrow"]
+    },
+    {
+        "name": "caret-right",
+        "aliases": ["arrow"]
+    },
+    {
+        "name": "caret-top-l",
+        "aliases": ["arrow", "up"]
+    },
+    {
+        "name": "caret-top",
+        "aliases": ["arrow", "up"]
+    },
+    {
+        "name": "catalog",
+        "aliases": [""]
+    },
+    {
+        "name": "categories",
+        "aliases": ["product", "tag"]
+    },
+    {
+        "name": "chain-broken",
+        "aliases": ["link"]
+    },
+    {
+        "name": "change-list-disabled",
+        "aliases": [""]
+    },
+    {
+        "name": "change-list",
+        "aliases": ["arrows", "box", "move", "update"]
+    },
+    {
+        "name": "change",
+        "aliases": ["arrows", "reload", "repeat", "update"]
+    },
+    {
+        "name": "check-circle-full",
+        "aliases": ["active", "approve", "boolean", "done", "select", "success"]
+    },
+    {
+        "name": "check-circle",
+        "aliases": ["active", "approve", "boolean", "done", "select", "success"]
+    },
+    {
+        "name": "check-square",
+        "aliases": [""]
+    },
+    {
+        "name": "check",
+        "aliases": ["active", "approve", "boolean", "done", "select", "success"]
+    },
+    {
+        "name": "chip",
+        "aliases": ["infrastructure", "processor", "technology"]
+    },
+    {
+        "name": "circle",
+        "aliases": ["event", "workflow"]
+    },
+    {
+        "name": "cloud",
+        "aliases": [""]
+    },
+    {
+        "name": "code",
+        "aliases": ["editor", "script", "text"]
+    },
+    {
+        "name": "cog",
+        "aliases": ["change", "settings"]
+    },
+    {
+        "name": "color-picker",
+        "aliases": ["bucket", "can", "drop", "hue", "paint"]
+    },
+    {
+        "name": "columns",
+        "aliases": ["grid", "table"]
+    },
+    {
+        "name": "comments",
+        "aliases": [""]
+    },
+    {
+        "name": "community",
+        "aliases": ["people", "user"]
+    },
+    {
+        "name": "compress",
+        "aliases": ["arrows", "decrease", "reduce", "resize", "small"]
+    },
+    {
+        "name": "control-panel",
+        "aliases": ["change", "effects", "settings"]
+    },
+    {
+        "name": "credit-card",
+        "aliases": [""]
+    },
+    {
+        "name": "custom-field",
+        "aliases": [""]
+    },
+    {
+        "name": "custom-size",
+        "aliases": ["arrows", "box", "increase", "sides"]
+    },
+    {
+        "name": "cut",
+        "aliases": ["copy", "editor", "paste", "scissors", "text"]
+    },
+    {
+        "name": "date",
+        "aliases": ["agenda", "calendar", "day", "picker", "time"]
+    },
+    {
+        "name": "decimal",
+        "aliases": ["0", "number", "zero"]
+    },
+    {
+        "name": "desktop",
+        "aliases": ["computer", "display", "screen"]
+    },
+    {
+        "name": "device-check",
+        "aliases": [""]
+    },
+    {
+        "name": "devices",
+        "aliases": [""]
+    },
+    {
+        "name": "diagram",
+        "aliases": ["map", "schema", "structure"]
+    },
+    {
+        "name": "diamond",
+        "aliases": ["condition", "if", "gateway", "gem", "workflow"]
+    },
+    {
+        "name": "diary",
+        "aliases": ["agenda", "book", "library"]
+    },
+    {
+        "name": "document-code",
+        "aliases": ["file", "script"]
+    },
+    {
+        "name": "document-compressed",
+        "aliases": ["file", "rar", "zip"]
+    },
+    {
+        "name": "document-default",
+        "aliases": ["file"]
+    },
+    {
+        "name": "document-image",
+        "aliases": ["file", "photo", "picture"]
+    },
+    {
+        "name": "document-multimedia",
+        "aliases": ["audio", "file", "music", "play", "video"]
+    },
+    {
+        "name": "document-pdf",
+        "aliases": ["file", "text"]
+    },
+    {
+        "name": "document-pending",
+        "aliases": [""]
+    },
+    {
+        "name": "document-presentation",
+        "aliases": ["file", "keynote", "powerpoint", "slide"]
+    },
+    {
+        "name": "document-table",
+        "aliases": ["excel", "file", "spreadsheet"]
+    },
+    {
+        "name": "document-text",
+        "aliases": ["file", "write"]
+    },
+    {
+        "name": "document-vector",
+        "aliases": [""]
+    },
+    {
+        "name": "document",
+        "aliases": ["file", "text"]
+    },
+    {
+        "name": "documents-and-media",
+        "aliases": ["audio", "file", "music", "video"]
+    },
+    {
+        "name": "download",
+        "aliases": ["arrow", "down"]
+    },
+    {
+        "name": "drag",
+        "aliases": [""]
+    },
+    {
+        "name": "drop",
+        "aliases": ["color", "hue", "paint", "picker"]
+    },
+    {
+        "name": "dynamic-data-list",
+        "aliases": ["action", "active", "change", "grid", "reload", "thunder", "update"]
+    },
+    {
+        "name": "dynamic-data-mapping",
+        "aliases": [""]
+    },
+    {
+        "name": "edit-layout",
+        "aliases": ["grid", "structure"]
+    },
+    {
+        "name": "effects",
+        "aliases": ["dots", "settings"]
+    },
+    {
+        "name": "ellipsis-h",
+        "aliases": ["dots", "horizontal", "menu", "more"]
+    },
+    {
+        "name": "ellipsis-v",
+        "aliases": ["dots", "menu", "more", "vertical"]
+    },
+    {
+        "name": "embed",
+        "aliases": ["deprecated"]
+    },
+    {
+        "name": "envelope-closed",
+        "aliases": [""]
+    },
+    {
+        "name": "envelope-open",
+        "aliases": ["email", "message", "postal"]
+    },
+    {
+        "name": "environment-connected",
+        "aliases": [""]
+    },
+    {
+        "name": "environment-disconnected",
+        "aliases": [""]
+    },
+    {
+        "name": "environment",
+        "aliases": [""]
+    },
+    {
+        "name": "exclamation-circle",
+        "aliases": ["alert", "attention", "error", "validation"]
+    },
+    {
+        "name": "exclamation-full",
+        "aliases": ["alert", "attention", "error", "validation"]
+    },
+    {
+        "name": "expand",
+        "aliases": ["fullscreen", "increase"]
+    },
+    {
+        "name": "file-script",
+        "aliases": ["code", "document"]
+    },
+    {
+        "name": "file-template",
+        "aliases": ["document", "layout", "page", "structure"]
+    },
+    {
+        "name": "file-xsl",
+        "aliases": ["document"]
+    },
+    {
+        "name": "filter",
+        "aliases": ["order", "sort"]
+    },
+    {
+        "name": "flag-empty",
+        "aliases": ["banner", "report"]
+    },
+    {
+        "name": "flag-full",
+        "aliases": ["banner", "report"]
+    },
+    {
+        "name": "folder",
+        "aliases": ["box", "container", "file"]
+    },
+    {
+        "name": "format",
+        "aliases": ["editor", "paint", "style", "text"]
+    },
+    {
+        "name": "forms",
+        "aliases": ["inputs", "layout", "list", "structure"]
+    },
+    {
+        "name": "full-size",
+        "aliases": ["expand", "fullscreen", "increase"]
+    },
+    {
+        "name": "geolocation",
+        "aliases": ["pin", "place"]
+    },
+    {
+        "name": "globe",
+        "aliases": ["earth", "location", "web", "world"]
+    },
+    {
+        "name": "google",
+        "aliases": [""]
+    },
+    {
+        "name": "grid",
+        "aliases": ["apps", "layout", "rectangle", "squares", "structure"]
+    },
+    {
+        "name": "h1",
+        "aliases": ["editor", "heading", "text", "title"]
+    },
+    {
+        "name": "h2",
+        "aliases": ["editor", "heading", "text", "title"]
+    },
+    {
+        "name": "hashtag",
+        "aliases": ["mark", "number"]
+    },
+    {
+        "name": "hdd",
+        "aliases": [""]
+    },
+    {
+        "name": "heart-full",
+        "aliases": [""]
+    },
+    {
+        "name": "heart",
+        "aliases": ["emotion", "like", "love"]
+    },
+    {
+        "name": "hidden",
+        "aliases": ["eye", "hide", "see", "show", "view"]
+    },
+    {
+        "name": "home",
+        "aliases": ["house"]
+    },
+    {
+        "name": "horizontal-scroll",
+        "aliases": ["arrows", "expand"]
+    },
+    {
+        "name": "hr",
+        "aliases": ["line", "minus", "rectangle"]
+    },
+    {
+        "name": "import-export",
+        "aliases": ["deprecated"]
+    },
+    {
+        "name": "import-list",
+        "aliases": [""]
+    },
+    {
+        "name": "import",
+        "aliases": [""]
+    },
+    {
+        "name": "indent-less",
+        "aliases": ["align", "arrow", "editor", "right", "text"]
+    },
+    {
+        "name": "indent-more",
+        "aliases": ["align", "arrow", "editor", "left", "text"]
+    },
+    {
+        "name": "info-book",
+        "aliases": ["help", "library"]
+    },
+    {
+        "name": "info-circle-open",
+        "aliases": ["help", "validation"]
+    },
+    {
+        "name": "info-circle",
+        "aliases": [""]
+    },
+    {
+        "name": "info-panel-closed",
+        "aliases": [""]
+    },
+    {
+        "name": "info-panel-open",
+        "aliases": [""]
+    },
+    {
+        "name": "information-live",
+        "aliases": ["help", "instruction"]
+    },
+    {
+        "name": "integer",
+        "aliases": ["10", "number"]
+    },
+    {
+        "name": "italic",
+        "aliases": ["editor", "text"]
+    },
+    {
+        "name": "liferay-ac",
+        "aliases": [""]
+    },
+    {
+        "name": "link",
+        "aliases": ["chain", "connection"]
+    },
+    {
+        "name": "list-ol",
+        "aliases": ["number", "order", "sequence"]
+    },
+    {
+        "name": "list-ul",
+        "aliases": ["dots", "order", "sequence"]
+    },
+    {
+        "name": "list",
+        "aliases": ["order", "sequence"]
+    },
+    {
+        "name": "live",
+        "aliases": ["circle"]
+    },
+    {
+        "name": "lock-dots",
+        "aliases": ["access", "close", "multiple", "security"]
+    },
+    {
+        "name": "lock",
+        "aliases": ["access", "close", "security"]
+    },
+    {
+        "name": "logout",
+        "aliases": ["log out", "off", "on", "sign", "sign out", "turn"]
+    },
+    {
+        "name": "magic",
+        "aliases": ["effects", "select", "wand"]
+    },
+    {
+        "name": "mark-as-answer",
+        "aliases": ["lines", "list", "question"]
+    },
+    {
+        "name": "mark-as-question",
+        "aliases": ["lines", "list"]
+    },
+    {
+        "name": "megaphone-full",
+        "aliases": [""]
+    },
+    {
+        "name": "merge",
+        "aliases": ["branch", "combine", "incorporate"]
+    },
+    {
+        "name": "message-boards",
+        "aliases": ["chat", "discussion", "text", "word"]
+    },
+    {
+        "name": "message",
+        "aliases": ["chat", "discussion", "text", "word"]
+    },
+    {
+        "name": "minus-circle",
+        "aliases": [""]
+    },
+    {
+        "name": "mobile-device-rules",
+        "aliases": [""]
+    },
+    {
+        "name": "mobile-landscape",
+        "aliases": ["smartphone", "technology"]
+    },
+    {
+        "name": "mobile-portrait",
+        "aliases": ["smartphone", "technology"]
+    },
+    {
+        "name": "moon",
+        "aliases": ["light", "night"]
+    },
+    {
+        "name": "move-folder",
+        "aliases": ["change", "file", "location"]
+    },
+    {
+        "name": "move",
+        "aliases": ["arrows", "change", "position"]
+    },
+    {
+        "name": "myspace",
+        "aliases": ["social"]
+    },
+    {
+        "name": "number",
+        "aliases": ["counter", "order", "sequence"]
+    },
+    {
+        "name": "oauth",
+        "aliases": [""]
+    },
+    {
+        "name": "open-id",
+        "aliases": [""]
+    },
+    {
+        "name": "order-arrow-down",
+        "aliases": ["bottom"]
+    },
+    {
+        "name": "order-arrow-left",
+        "aliases": [""]
+    },
+    {
+        "name": "order-arrow-right",
+        "aliases": [""]
+    },
+    {
+        "name": "order-arrow-up",
+        "aliases": ["top"]
+    },
+    {
+        "name": "order-arrow",
+        "aliases": [""]
+    },
+    {
+        "name": "organizations",
+        "aliases": ["connection", "multiple", "structure"]
+    },
+    {
+        "name": "page-template",
+        "aliases": ["layout", "paper"]
+    },
+    {
+        "name": "page",
+        "aliases": ["paper"]
+    },
+    {
+        "name": "pages-tree",
+        "aliases": [""]
+    },
+    {
+        "name": "paperclip",
+        "aliases": ["attachment", "editor", "file"]
+    },
+    {
+        "name": "paragraph",
+        "aliases": ["text", "editor"]
+    },
+    {
+        "name": "password-policies",
+        "aliases": ["access", "login", "log in", "security", "user"]
+    },
+    {
+        "name": "paste",
+        "aliases": ["copy", "duplicate"]
+    },
+    {
+        "name": "pause",
+        "aliases": ["control", "multimedia", "play"]
+    },
+    {
+        "name": "pencil",
+        "aliases": ["draft", "edit", "write"]
+    },
+    {
+        "name": "phone",
+        "aliases": ["call", "contact"]
+    },
+    {
+        "name": "picture",
+        "aliases": ["image", "photo"]
+    },
+    {
+        "name": "pin-full",
+        "aliases": [""]
+    },
+    {
+        "name": "pin",
+        "aliases": ["fix"]
+    },
+    {
+        "name": "play",
+        "aliases": ["control", "multimedia"]
+    },
+    {
+        "name": "plug",
+        "aliases": ["connect", "electricity"]
+    },
+    {
+        "name": "plus-squares",
+        "aliases": ["add", "create", "multiple", "new"]
+    },
+    {
+        "name": "plus",
+        "aliases": ["add", "create", "new"]
+    },
+    {
+        "name": "polls",
+        "aliases": ["bars", "results", "statistics"]
+    },
+    {
+        "name": "print",
+        "aliases": ["paper"]
+    },
+    {
+        "name": "product-menu-closed",
+        "aliases": ["list", "navigation", "sidebar"]
+    },
+    {
+        "name": "product-menu-open",
+        "aliases": ["list", "navigation", "sidebar"]
+    },
+    {
+        "name": "product-menu",
+        "aliases": ["list", "navigation", "sidebar"]
+    },
+    {
+        "name": "propagation",
+        "aliases": ["arrows", "circle", "multiplication", "publish"]
+    },
+    {
+        "name": "question-circle-full",
+        "aliases": ["help", "mark"]
+    },
+    {
+        "name": "question-circle",
+        "aliases": ["help", "mark"]
+    },
+    {
+        "name": "quote-left",
+        "aliases": ["\"", "commas"]
+    },
+    {
+        "name": "quote-right",
+        "aliases": ["\"", "commas"]
+    },
+    {
+        "name": "radio-button",
+        "aliases": ["check", "circle", "off", "on"]
+    },
+    {
+        "name": "redo",
+        "aliases": ["action", "arrow", "control", "editor", "right"]
+    },
+    {
+        "name": "reload",
+        "aliases": ["change", "circle", "update"]
+    },
+    {
+        "name": "remove-role",
+        "aliases": [""]
+    },
+    {
+        "name": "remove-style",
+        "aliases": ["editor", "text"]
+    },
+    {
+        "name": "reply",
+        "aliases": ["answer", "arrow", "left", "respond"]
+    },
+    {
+        "name": "repository",
+        "aliases": ["connection", "folder"]
+    },
+    {
+        "name": "reset",
+        "aliases": [""]
+    },
+    {
+        "name": "restore",
+        "aliases": ["back", "history", "time"]
+    },
+    {
+        "name": "rss-full",
+        "aliases": [""]
+    },
+    {
+        "name": "rss",
+        "aliases": ["notification", "updates"]
+    },
+    {
+        "name": "rules",
+        "aliases": ["condition"]
+    },
+    {
+        "name": "search",
+        "aliases": ["inspect", "lens", "zoom"]
+    },
+    {
+        "name": "select-from-list",
+        "aliases": ["input", "multiple", "options"]
+    },
+    {
+        "name": "select",
+        "aliases": ["input", "multiple", "options"]
+    },
+    {
+        "name": "separator",
+        "aliases": ["divider", "group", "line"]
+    },
+    {
+        "name": "share-alt",
+        "aliases": [""]
+    },
+    {
+        "name": "share",
+        "aliases": ["social"]
+    },
+    {
+        "name": "sheets",
+        "aliases": ["assets", "layers"]
+    },
+    {
+        "name": "shopping-cart",
+        "aliases": ["buy", "commerce"]
+    },
+    {
+        "name": "shortcut",
+        "aliases": ["external", "window"]
+    },
+    {
+        "name": "sign-in",
+        "aliases": [""]
+    },
+    {
+        "name": "simple-circle",
+        "aliases": ["dot", "point"]
+    },
+    {
+        "name": "simulation-menu-closed",
+        "aliases": ["target"]
+    },
+    {
+        "name": "simulation-menu-open",
+        "aliases": ["target"]
+    },
+    {
+        "name": "simulation-menu",
+        "aliases": ["target"]
+    },
+    {
+        "name": "site-template",
+        "aliases": ["compass", "navigation"]
+    },
+    {
+        "name": "sites",
+        "aliases": ["compass", "navigation"]
+    },
+    {
+        "name": "social-facebook",
+        "aliases": ["share"]
+    },
+    {
+        "name": "social-instagram",
+        "aliases": [""]
+    },
+    {
+        "name": "social-linkedin",
+        "aliases": ["share"]
+    },
+    {
+        "name": "social-twitter",
+        "aliases": ["share"]
+    },
+    {
+        "name": "social-vimeo",
+        "aliases": [""]
+    },
+    {
+        "name": "spacer",
+        "aliases": ["margin", "padding"]
+    },
+    {
+        "name": "square-hole",
+        "aliases": [""]
+    },
+    {
+        "name": "square",
+        "aliases": ["task", "workflow"]
+    },
+    {
+        "name": "staging",
+        "aliases": ["changes", "circle", "loading"]
+    },
+    {
+        "name": "star-half",
+        "aliases": ["favorite", "rating"]
+    },
+    {
+        "name": "star-o",
+        "aliases": ["favorite", "rating"]
+    },
+    {
+        "name": "star",
+        "aliases": ["favorite", "rating"]
+    },
+    {
+        "name": "sticky",
+        "aliases": ["deprecated"]
+    },
+    {
+        "name": "strikethrough",
+        "aliases": ["editor", "style", "text"]
+    },
+    {
+        "name": "subscript",
+        "aliases": ["editor", "style", "text"]
+    },
+    {
+        "name": "suitcase",
+        "aliases": ["business"]
+    },
+    {
+        "name": "sun",
+        "aliases": ["day", "light"]
+    },
+    {
+        "name": "superscript",
+        "aliases": ["editor", "style", "text"]
+    },
+    {
+        "name": "table",
+        "aliases": ["column", "grid", "row"]
+    },
+    {
+        "name": "table2",
+        "aliases": ["column", "grid", "row"]
+    },
+    {
+        "name": "tablet-landscape",
+        "aliases": ["device", "mobile"]
+    },
+    {
+        "name": "tablet-portrait",
+        "aliases": ["device", "mobile"]
+    },
+    {
+        "name": "tag",
+        "aliases": ["category", "product"]
+    },
+    {
+        "name": "test",
+        "aliases": ["experiment", "lab"]
+    },
+    {
+        "name": "text-editor",
+        "aliases": ["style"]
+    },
+    {
+        "name": "text",
+        "aliases": ["a", "editor"]
+    },
+    {
+        "name": "textbox",
+        "aliases": [""]
+    },
+    {
+        "name": "third-party",
+        "aliases": [""]
+    },
+    {
+        "name": "thumbs-down",
+        "aliases": ["dislike", "social"]
+    },
+    {
+        "name": "thumbs-up-arrow",
+        "aliases": [""]
+    },
+    {
+        "name": "thumbs-up",
+        "aliases": ["like", "social"]
+    },
+    {
+        "name": "time",
+        "aliases": ["clock", "day", "hour"]
+    },
+    {
+        "name": "times-circle-full",
+        "aliases": [""]
+    },
+    {
+        "name": "times-circle",
+        "aliases": ["remove", "x"]
+    },
+    {
+        "name": "times-small",
+        "aliases": [""]
+    },
+    {
+        "name": "times",
+        "aliases": ["cancel", "close", "x"]
+    },
+    {
+        "name": "transform",
+        "aliases": ["editor", "image"]
+    },
+    {
+        "name": "trash",
+        "aliases": ["bin", "recycle"]
+    },
+    {
+        "name": "truck",
+        "aliases": [""]
+    },
+    {
+        "name": "twitter",
+        "aliases": ["deprecated"]
+    },
+    {
+        "name": "underline",
+        "aliases": ["editor", "style", "text"]
+    },
+    {
+        "name": "undo",
+        "aliases": ["arrow", "back", "cancel", "control"]
+    },
+    {
+        "name": "unlock",
+        "aliases": ["access", "login", "open", "security"]
+    },
+    {
+        "name": "unpin",
+        "aliases": ["fix", "move"]
+    },
+    {
+        "name": "upload-multiple",
+        "aliases": ["arrow", "top", "up"]
+    },
+    {
+        "name": "upload",
+        "aliases": ["arrow", "top", "up"]
+    },
+    {
+        "name": "urgent",
+        "aliases": ["deprecated"]
+    },
+    {
+        "name": "user-plus",
+        "aliases": ["add", "client", "create", "people"]
+    },
+    {
+        "name": "user",
+        "aliases": ["client", "contact"]
+    },
+    {
+        "name": "users",
+        "aliases": ["client", "contacts", "people"]
+    },
+    {
+        "name": "vertical-scroll",
+        "aliases": ["arrows", "expand"]
+    },
+    {
+        "name": "video",
+        "aliases": ["multimedia", "play"]
+    },
+    {
+        "name": "view",
+        "aliases": ["eye", "see", "show"]
+    },
+    {
+        "name": "vocabulary",
+        "aliases": ["abc", "editor", "order", "text"]
+    },
+    {
+        "name": "warning-full",
+        "aliases": ["alert", "attention", "exclamation", "validation"]
+    },
+    {
+        "name": "warning",
+        "aliases": ["alert", "attention", "exclamation", "validation"]
+    },
+    {
+        "name": "web-content",
+        "aliases": ["assets"]
+    },
+    {
+        "name": "wiki-page",
+        "aliases": ["knowledge"]
+    },
+    {
+        "name": "wiki",
+        "aliases": ["knowledge"]
+    },
+    {
+        "name": "workflow",
+        "aliases": ["function", "progress"]
+    }
+]
