@@ -87,6 +87,11 @@ interface IProps {
 	spritemap?: string;
 
 	/**
+	 *
+	 */
+	timeFormat?: string;
+
+	/**
 	 * Flag to enable datetime selection.
 	 */
 	time?: boolean;
@@ -122,9 +127,9 @@ const DateNow = new Date();
 const TIME_FORMAT = 'H:m';
 
 /**
- * ClayDatePicker component.
+ * ClayDatePickerBase component.
  */
-const ClayDatePicker: React.FunctionComponent<IProps> = ({
+const ClayDatePickerBase: React.FunctionComponent<IProps> = ({
 	ariaLabels = {
 		buttonDot: 'Select current date',
 		buttonNextMonth: 'Select the next month',
@@ -155,6 +160,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = ({
 	placeholder,
 	spritemap,
 	time = false,
+	timeFormat = TIME_FORMAT,
 	timezone,
 	useNative = false,
 	value,
@@ -164,6 +170,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = ({
 		start: DateNow.getFullYear(),
 	},
 }: IProps) => {
+	moment.locale('fr');
 	/**
 	 * Normalize date for always set noon to avoid time zone issues
 	 */
@@ -187,7 +194,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = ({
 	/**
 	 * Indicates the time selected by the user.
 	 */
-	const [currentTime, setCurrentTime] = useCurrentTime(TIME_FORMAT);
+	const [currentTime, setCurrentTime] = useCurrentTime(timeFormat);
 
 	/**
 	 * The day selected by the user.
@@ -245,7 +252,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = ({
 	 */
 	const inputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const {value} = event.target;
-		const format = time ? `${dateFormat} ${TIME_FORMAT}` : dateFormat;
+		const format = time ? `${dateFormat} ${timeFormat}` : dateFormat;
 		const date = moment(value, format);
 		const year = date.year();
 
@@ -274,7 +281,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = ({
 		hours: number | string,
 		minutes: number | string
 	) => {
-		const format = time ? `${dateFormat} ${TIME_FORMAT}` : dateFormat;
+		const format = time ? `${dateFormat} ${timeFormat}` : dateFormat;
 
 		// Hack to force InputDate to add `currentTime` to the value of
 		// the input when the value was edited by the user.
@@ -302,7 +309,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = ({
 						onChange={inputChange}
 						placeholder={placeholder}
 						time={time}
-						timeFormat={TIME_FORMAT}
+						timeFormat={timeFormat}
 						useNative={useNative}
 						value={value}
 					/>
@@ -384,4 +391,25 @@ const ClayDatePicker: React.FunctionComponent<IProps> = ({
 	);
 };
 
-export default ClayDatePicker;
+const DatePicker: React.FunctionComponent<IProps & {locale?: string}> = ({
+	locale,
+	...otherProps
+}) => {
+	let localeProps = {};
+
+	if (locale) {
+		const localeData = moment.localeData(locale);
+
+		localeProps = {
+			dateFormat: localeData.longDateFormat('L'),
+			firstDayOfWeek: localeData.firstDayOfWeek(),
+			months: localeData.months(),
+			timeFormat: localeData.longDateFormat('LT'),
+			weekdaysShort: localeData.weekdaysShort(),
+		};
+	}
+
+	return <ClayDatePickerBase {...localeProps} {...otherProps} />;
+};
+
+export default DatePicker;

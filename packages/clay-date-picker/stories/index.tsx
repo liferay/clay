@@ -55,6 +55,19 @@ storiesOf('Components|ClayDatePicker', module)
 	))
 	.add('locale', () => (
 		<ClayDatePickerWithState
+			locale="ru"
+			placeholder="DD.MM.YYYY HH:mm"
+			spritemap={spritemap}
+			time
+			timezone="GMT+03:00"
+			years={{
+				end: 2024,
+				start: 1997,
+			}}
+		/>
+	))
+	.add('w/ custom locale', () => (
+		<ClayDatePickerWithState
 			dateFormat="DD.MM.YYYY"
 			firstDayOfWeek={FirstDayOfWeek.Monday}
 			months={[
