@@ -125,7 +125,7 @@ A utility to help manage focus styles in an interactive component. Wrap the cont
 
 ```html
 <button class="btn btn-primary" type="button">
-    <span class="c-inner" tabindex="-1">Primary</span>
+	<span class="c-inner" tabindex="-1">Primary</span>
 </button>
 ```
 
@@ -182,7 +182,7 @@ A utility to help manage focus styles in an interactive component. Wrap the cont
 
 ```html
 <a href="/">
-    <span class="c-inner" tabindex="-1">Regular Anchor Tag</span>
+	<span class="c-inner" tabindex="-1">Regular Anchor Tag</span>
 </a>
 ```
 
@@ -239,18 +239,26 @@ A utility to help manage focus styles in an interactive component. Wrap the cont
 
 ```html
 <button aria-label="Close" class="close" type="button">
-    <span class="c-inner" tabindex="-1">
-        <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-            <use xlink:href="/images/icons/icons.svg#times" />
-        </svg>
-    </span>
+	<span class="c-inner" tabindex="-1">
+		<svg
+			class="lexicon-icon lexicon-icon-times"
+			focusable="false"
+			role="presentation"
+		>
+			<use xlink:href="/images/icons/icons.svg#times" />
+		</svg>
+	</span>
 </button>
 <a aria-label="Close" class="close" href="javascript:;" role="button">
-    <span class="c-inner" tabindex="-1">
-        <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-            <use xlink:href="/images/icons/icons.svg#times" />
-        </svg>
-    </span>
+	<span class="c-inner" tabindex="-1">
+		<svg
+			class="lexicon-icon lexicon-icon-times"
+			focusable="false"
+			role="presentation"
+		>
+			<use xlink:href="/images/icons/icons.svg#times" />
+		</svg>
+	</span>
 </a>
 ```
 
@@ -303,9 +311,9 @@ A utility to help manage focus styles in an interactive component. Wrap the cont
 
 ```html
 <a class="badge badge-primary" href="javascript:;">
-    <span class="c-inner" tabindex="-1">
-        <span class="badge-item badge-item-expand">Primary</span>
-    </span>
+	<span class="c-inner" tabindex="-1">
+		<span class="badge-item badge-item-expand">Primary</span>
+	</span>
 </a>
 ```
 
@@ -480,9 +488,9 @@ A utility to help manage focus styles in an interactive component. Wrap the cont
 
 ```html
 <a class="label label-primary" href="javascript:;">
-    <span class="c-inner" tabindex="-1">
-        <span class="label-item label-item-expand">Primary</span>
-    </span>
+	<span class="c-inner" tabindex="-1">
+		<span class="label-item label-item-expand">Primary</span>
+	</span>
 </a>
 ```
 
@@ -611,21 +619,58 @@ A utility to help manage focus styles in an interactive component. Wrap the cont
 
 ```html
 <div class="dropdown">
-    <button aria-expanded="false" aria-haspopup="true" class="link-outline link-outline-primary dropdown-toggle" data-toggle="dropdown" id="dropdownSites1" type="button">
-        <span class="c-inner" tabindex="-1">
-            Dropdown
-            <svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
-                <use xlink:href="/images/icons/icons.svg#caret-bottom" />
-            </svg>
-        </span>
-    </button>
-    <ul aria-labelledby="dropdownSites1" class="dropdown-menu">
-        <li><a class="dropdown-item" href="javascript:;"><span class="c-inner" tabindex="-1">Download</span></a></li>
-        <li><a class="dropdown-item" href="javascript:;"><span class="c-inner" tabindex="-1">Edit</span></a></li>
-        <li><a class="dropdown-item" href="javascript:;"><span class="c-inner" tabindex="-1">Move</span></a></li>
-        <li><a class="dropdown-item" href="javascript:;"><span class="c-inner" tabindex="-1">Checkout</span></a></li>
-        <li><a class="dropdown-item" href="javascript:;"><span class="c-inner" tabindex="-1">Permissions</span></a></li>
-        <li><a class="dropdown-item" href="javascript:;"><span class="c-inner" tabindex="-1">Move to Recycle Bin</span></a></li>
-    </ul>
+	<button
+		aria-expanded="false"
+		aria-haspopup="true"
+		class="link-outline link-outline-primary dropdown-toggle"
+		data-toggle="dropdown"
+		id="dropdownSites1"
+		type="button"
+	>
+		<span class="c-inner" tabindex="-1">
+			Dropdown
+			<svg
+				class="lexicon-icon lexicon-icon-caret-bottom"
+				focusable="false"
+				role="presentation"
+			>
+				<use xlink:href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</span>
+	</button>
+	<ul aria-labelledby="dropdownSites1" class="dropdown-menu">
+		<li>
+			<a class="dropdown-item" href="javascript:;"
+				><span class="c-inner" tabindex="-1">Download</span></a
+			>
+		</li>
+		<li>
+			<a class="dropdown-item" href="javascript:;"
+				><span class="c-inner" tabindex="-1">Edit</span></a
+			>
+		</li>
+		<li>
+			<a class="dropdown-item" href="javascript:;"
+				><span class="c-inner" tabindex="-1">Move</span></a
+			>
+		</li>
+		<li>
+			<a class="dropdown-item" href="javascript:;"
+				><span class="c-inner" tabindex="-1">Checkout</span></a
+			>
+		</li>
+		<li>
+			<a class="dropdown-item" href="javascript:;"
+				><span class="c-inner" tabindex="-1">Permissions</span></a
+			>
+		</li>
+		<li>
+			<a class="dropdown-item" href="javascript:;"
+				><span class="c-inner" tabindex="-1"
+					>Move to Recycle Bin</span
+				></a
+			>
+		</li>
+	</ul>
 </div>
 ```
