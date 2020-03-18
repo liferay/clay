@@ -22,7 +22,6 @@ const IconSearch = ({
 	source,
 	iconLabelFormatter = icon => icon.name,
 }) => {
-
 	const [searchQuery, setSearchQuery] = useState('');
 
 	const filteredIcons = useMemo(() => {
@@ -55,10 +54,7 @@ const IconSearch = ({
 			<ul className="d-flex flex-wrap lexicon-icon-list list-unstyled">
 				{list.map(icon => (
 					<li key={icon.name}>
-						<ClayIcon
-							spritemap={spritemap}
-							symbol={icon.name}
-						/>
+						<ClayIcon spritemap={spritemap} symbol={icon.name} />
 
 						<span>{iconLabelFormatter(icon)}</span>
 					</li>

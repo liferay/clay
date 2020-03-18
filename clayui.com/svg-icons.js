@@ -1,3 +1,13 @@
+/**
+ * SPDX-FileCopyrightText: © 2020 Liferay, Inc. <https://liferay.com>
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+/* eslint-disable */
+// prettier-ignore
 const flagsData = {
 	"af-za":						'"af-za", "Afrikaans", "South Africa"',
 	"ar":							'"ar", "Arabic"',
@@ -472,6 +482,7 @@ const flagsData = {
 	"zu-za":						'"zu-za", "Zulu", "South Africa"'
 };
 
+// prettier-ignore
 const iconsData = {
 	"add-cell":					'"center", "excel", "grid", "squares", "table"',
 	"add-column":				'"cell", "center", "excel", "grid", "squares", "table", "vertical"',
@@ -724,9 +735,7 @@ const iconsData = {
 	"wiki-page":				'"knowledge"',
 	"workflow":					'"function", "progress"'
 };
-
-const fs = require('fs');
-const path = require('path');
+/* eslint-enable */
 
 const iconsPath = path.join('static', 'images', 'icons', 'icons.svg');
 
@@ -747,19 +756,18 @@ function buildJson(arr, aliasesMap) {
 		let aliases = aliasesMap[arr[i]];
 
 		json += '    {\n';
-		json += '        "name": "' + arr[i] + '",\n';
-		json += '        "aliases": ['
+		json += `        "name": "${arr[i]}",\n`;
+		json += '        "aliases": [';
 
 		if (!aliases) {
 			aliases = '""';
 		}
 
-		json += aliases + ']\n';
+		json += `${aliases}]\n`;
 
 		if (i === arr.length - 1) {
 			json += '    }\n';
-		}
-		else {
+		} else {
 			json += '    },\n';
 		}
 	}
@@ -769,16 +777,15 @@ function buildJson(arr, aliasesMap) {
 	return json;
 }
 
-let flagsArr = [];
-let newIconsArr = [];
+const flagsArr = [];
+const newIconsArr = [];
 
 for (let i = 0; i < symbolsArr.length; i++) {
 	const symbol = getId(symbolsArr[i]);
 
 	if (flagsData[symbol]) {
 		flagsArr.push(symbol);
-	}
-	else {
+	} else {
 		newIconsArr.push(symbol);
 	}
 }
