@@ -4,7 +4,7 @@
  */
 
 import ClayCheckbox from './Checkbox';
-import ClayDualListbox from './DualListbox';
+import ClayDualListBox from './DualListBox';
 import ClayForm from './Form';
 import ClayInput from './Input';
 import ClayRadio from './Radio';
@@ -17,7 +17,7 @@ import ClayToggle from './Toggle';
 export {
 	ClayCheckbox,
 	ClayInput,
-	ClayDualListbox,
+	ClayDualListBox,
 	ClayRadio,
 	ClayRadioGroup,
 	ClaySelect,

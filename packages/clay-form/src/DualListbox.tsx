@@ -78,7 +78,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	spritemap?: string;
 }
 
-const ClayDualListbox: React.FunctionComponent<IProps> = ({
+const ClayDualListBox: React.FunctionComponent<IProps> = ({
 	className,
 	items,
 	left = {},
@@ -179,4 +179,4 @@ const ClayDualListbox: React.FunctionComponent<IProps> = ({
 	);
 };
 
-export default ClayDualListbox;
+export default ClayDualListBox;
