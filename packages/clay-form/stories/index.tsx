@@ -8,7 +8,7 @@ import React from 'react';
 
 import {
 	ClayCheckbox,
-	ClayDualListbox,
+	ClayDualListBox,
 	ClayInput,
 	ClayRadio,
 	ClayRadioGroup,
@@ -73,13 +73,13 @@ const moveBoxesOptions = [
 	],
 ];
 
-storiesOf('Components|ClayDualListbox', module).add('default', () => {
+storiesOf('Components|ClayDualListBox', module).add('default', () => {
 	const [items, setItems] = React.useState(moveBoxesOptions);
 	const [leftSelected, setLeftSelected] = React.useState<Array<string>>([]);
 	const [rightSelected, setRightSelected] = React.useState<Array<string>>([]);
 
 	return (
-		<ClayDualListbox
+		<ClayDualListBox
 			items={items}
 			left={{
 				label: 'In Use',

@@ -6,7 +6,7 @@
 import {cleanup, fireEvent, render} from '@testing-library/react';
 import React from 'react';
 
-import ClayDualListbox from '../DualListbox';
+import ClayDualListBox from '../DualListBox';
 
 const options = [
 	[
@@ -38,9 +38,9 @@ const options = [
 describe('Rendering', () => {
 	afterEach(cleanup);
 
-	it('renders ClayDualListbox', () => {
+	it('renders ClayDualListBox', () => {
 		const {container} = render(
-			<ClayDualListbox
+			<ClayDualListBox
 				items={options}
 				left={{
 					label: 'In Use',
@@ -69,7 +69,7 @@ describe('Interactions', () => {
 		const handleChange = jest.fn();
 
 		const {getByTestId} = render(
-			<ClayDualListbox
+			<ClayDualListBox
 				items={options}
 				left={{
 					label: 'In Use',
