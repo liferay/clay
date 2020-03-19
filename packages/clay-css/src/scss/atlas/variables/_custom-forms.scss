@@ -2,12 +2,12 @@
 /// @group customForms
 ////
 
-$custom-control-indicator-size: 1.0625rem !default; // 17px
 $custom-control-indicator-bg: $white !default;
 $custom-control-indicator-border-color: $gray-400 !default;
 $custom-control-indicator-border-style: solid !default;
 $custom-control-indicator-border-width: 0.0625rem !default; // 1px
 $custom-control-indicator-box-shadow: none !default;
+$custom-control-indicator-position-top: 0.125rem !default;
 
 $custom-control-indicator-focus-border-color: $custom-control-indicator-border-color !default;
 $custom-control-indicator-focus-box-shadow: $component-focus-box-shadow !default;
@@ -51,7 +51,12 @@ $custom-control-indicator-indeterminate-border-color: $custom-control-indicator-
 
 // @deprecated after of v3.5.0 use the Sass map `$custom-control` instead
 
-$custom-control-margin-bottom: 0.5rem !default;
+$custom-control-margin-bottom: 1rem !default;
+
+$custom-control: () !default;
+$custom-control: map-deep-merge((
+	line-height: 1,
+), $custom-control);
 
 // Custom Control Description
 
@@ -86,15 +91,15 @@ $custom-control-label-text-small: map-deep-merge((
 // Custom Checkbox
 
 $custom-checkbox-indicator-icon-checked: clay-icon(check, $white) !default;
-$custom-checkbox-indicator-icon-checked-bg-size: 60% !default;
-$custom-checkbox-indicator-icon-indeterminate-bg-size: 53% !default;
+$custom-checkbox-indicator-icon-checked-bg-size: 62% !default;
+$custom-checkbox-indicator-icon-indeterminate-bg-size: 51% !default;
 
 $custom-checkbox-indicator-indeterminate-bg: $component-active-bg !default;
 $custom-checkbox-indicator-border-radius: 0.125rem !default; // 2px
 
 // Custom Radio
 
-$custom-radio-indicator-icon-checked-bg-size: 65% !default;
+$custom-radio-indicator-icon-checked-bg-size: 63% !default;
 
 $custom-radio-indicator-disabled-border-color: $custom-control-indicator-disabled-bg !default;
 
