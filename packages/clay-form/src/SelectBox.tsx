@@ -7,11 +7,13 @@ import ClayButton, {ClayButtonWithIcon} from '@clayui/button';
 import classNames from 'classnames';
 import React from 'react';
 
+export type TItem = {
+	label: string;
+	value: string;
+};
+
 function arrayMove(
-	arrayToMove: Array<{
-		label: string;
-		value: string;
-	}>,
+	arrayToMove: Array<TItem>,
 	oldIndex: number,
 	newIndex: number
 ) {
@@ -20,13 +22,7 @@ function arrayMove(
 	return arrayToMove;
 }
 
-function reorderUp(
-	array: Array<{
-		label: string;
-		value: string;
-	}>,
-	selectedIndexes: Array<number>
-) {
+function reorderUp(array: Array<TItem>, selectedIndexes: Array<number>) {
 	let clonedArray = [...array];
 
 	for (let i = 0; i < selectedIndexes.length; i++) {
@@ -42,13 +38,7 @@ function reorderUp(
 	return clonedArray;
 }
 
-function reorderDown(
-	array: Array<{
-		label: string;
-		value: string;
-	}>,
-	selectedIndexes: Array<number>
-) {
+function reorderDown(array: Array<TItem>, selectedIndexes: Array<number>) {
 	let clonedArray = [...array];
 
 	for (let i = 0; i < selectedIndexes.length; i++) {
@@ -73,10 +63,7 @@ interface IProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
 	/**
 	 * Items to be displayed in the Select Box.
 	 */
-	items: Array<{
-		label: string;
-		value: string;
-	}>;
+	items: Array<TItem>;
 
 	/**
 	 * Label to be displayed above the Select Box.
@@ -91,12 +78,7 @@ interface IProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
 	/**
 	 * Handler that triggers when the content of the items prop are changed caused by reordering of items.
 	 */
-	onItemsChange?: (
-		items: Array<{
-			label: string;
-			value: string;
-		}>
-	) => void;
+	onItemsChange?: (items: Array<TItem>) => void;
 
 	/**
 	 * Handler that triggers when a new item is selected.
@@ -129,6 +111,18 @@ interface IProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
 	spritemap?: string;
 }
 
+export const getSelectedIndexes = (
+	items: Array<TItem>,
+	selectedValues: Array<number | string>
+) =>
+	items.reduce((acc: Array<number>, item: TItem, index) => {
+		if (selectedValues.includes(item.value)) {
+			return [...acc, index];
+		}
+
+		return acc;
+	}, []);
+
 const ClaySelectBox: React.FunctionComponent<IProps> = ({
 	buttonAlignment = 'right',
 	className,
@@ -142,15 +136,9 @@ const ClaySelectBox: React.FunctionComponent<IProps> = ({
 	spritemap,
 	value,
 }) => {
-	const selectedIndexes = items.reduce(
-		(acc: any, item: any, index: number) => {
-			if (value.includes(item.value)) {
-				return [...acc, index];
-			}
-
-			return acc;
-		},
-		[]
+	const selectedIndexes = getSelectedIndexes(
+		items,
+		Array.isArray(value) ? value : [value]
 	);
 
 	return (
@@ -158,7 +146,9 @@ const ClaySelectBox: React.FunctionComponent<IProps> = ({
 			{label && <label className="reorder-label">{label}</label>}
 
 			<div
-				className={`clay-reorder clay-reorder-footer-${buttonAlignment}`}
+				className={classNames('clay-reorder', {
+					[`clay-reorder-footer-${buttonAlignment}`]: buttonAlignment,
+				})}
 			>
 				<select
 					className="form-control form-control-inset"
@@ -173,7 +163,7 @@ const ClaySelectBox: React.FunctionComponent<IProps> = ({
 					size={size}
 					value={value}
 				>
-					{items.map((option: {label: string; value: string}) => (
+					{items.map(option => (
 						<option
 							className="reorder-option"
 							key={option.value}
@@ -191,7 +181,7 @@ const ClaySelectBox: React.FunctionComponent<IProps> = ({
 						<ClayButton.Group className="reorder-order-buttons">
 							<ClayButtonWithIcon
 								className="reorder-button reorder-button-up"
-								disabled={value.length ? false : true}
+								disabled={!value.length}
 								displayType="secondary"
 								onClick={() =>
 									onItemsChange(
@@ -204,7 +194,7 @@ const ClaySelectBox: React.FunctionComponent<IProps> = ({
 
 							<ClayButtonWithIcon
 								className="reorder-button reorder-button-down"
-								disabled={value.length ? false : true}
+								disabled={!value.length}
 								displayType="secondary"
 								onClick={() =>
 									onItemsChange(

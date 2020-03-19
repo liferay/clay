@@ -74,14 +74,7 @@ const moveBoxesOptions = [
 ];
 
 storiesOf('Components|ClayDualListbox', module).add('default', () => {
-	const [items, setItems] = React.useState<
-		Array<
-			Array<{
-				label: string;
-				value: string;
-			}>
-		>
-	>(moveBoxesOptions);
+	const [items, setItems] = React.useState(moveBoxesOptions);
 	const [leftSelected, setLeftSelected] = React.useState<Array<string>>([]);
 	const [rightSelected, setRightSelected] = React.useState<Array<string>>([]);
 
@@ -90,15 +83,13 @@ storiesOf('Components|ClayDualListbox', module).add('default', () => {
 			items={items}
 			left={{
 				label: 'In Use',
-				onSelectChange: (leftSelected: Array<string>) =>
-					setLeftSelected(leftSelected),
+				onSelectChange: setLeftSelected,
 				selected: leftSelected,
 			}}
 			onItemsChange={setItems}
 			right={{
 				label: 'Available',
-				onSelectChange: (rightSelected: Array<string>) =>
-					setRightSelected(rightSelected),
+				onSelectChange: setRightSelected,
 				selected: rightSelected,
 			}}
 			size={8}
@@ -108,7 +99,7 @@ storiesOf('Components|ClayDualListbox', module).add('default', () => {
 });
 
 storiesOf('Components|ClaySelectBox', module).add('default', () => {
-	const [items, setItems] = React.useState<Array<any>>(moveBoxesOptions[0]);
+	const [items, setItems] = React.useState(moveBoxesOptions[0]);
 	const [value, setValue] = React.useState<Array<string>>([]);
 
 	return (
