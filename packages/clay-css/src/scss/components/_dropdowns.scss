@@ -93,11 +93,6 @@
 	}
 }
 
-html[dir="rtl"] .dropdown-menu {
-	left: auto;
-	right: 0;
-}
-
 .dropdown-menu {
 	border-style: $dropdown-border-style;
 	font-size: $dropdown-font-size;
