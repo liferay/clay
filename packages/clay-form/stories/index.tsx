@@ -8,10 +8,12 @@ import React from 'react';
 
 import {
 	ClayCheckbox,
+	ClayDualListbox,
 	ClayInput,
 	ClayRadio,
 	ClayRadioGroup,
 	ClaySelect,
+	ClaySelectBox,
 	ClaySelectWithOption,
 	ClayToggle,
 } from '../src';
@@ -35,6 +37,94 @@ const ClayCheckboxWithState = () => {
 		/>
 	);
 };
+
+const moveBoxesOptions = [
+	[
+		{
+			label: 'Discord',
+			value: 'discord',
+		},
+		{
+			label: 'Evernote',
+			value: 'evernote',
+		},
+		{
+			label: 'Facebook',
+			value: 'facebook',
+		},
+		{
+			label: 'LinkedIn',
+			value: 'linkedin',
+		},
+	],
+	[
+		{
+			label: 'Reddit',
+			value: 'reddit',
+		},
+		{
+			label: 'Slack',
+			value: 'slack',
+		},
+		{
+			label: 'Twitter',
+			value: 'twitter',
+		},
+	],
+];
+
+storiesOf('Components|ClayDualListbox', module).add('default', () => {
+	const [items, setItems] = React.useState<
+		Array<
+			Array<{
+				label: string;
+				value: string;
+			}>
+		>
+	>(moveBoxesOptions);
+	const [leftSelected, setLeftSelected] = React.useState<Array<string>>([]);
+	const [rightSelected, setRightSelected] = React.useState<Array<string>>([]);
+
+	return (
+		<ClayDualListbox
+			items={items}
+			left={{
+				label: 'In Use',
+				onSelectChange: (leftSelected: Array<string>) =>
+					setLeftSelected(leftSelected),
+				selected: leftSelected,
+			}}
+			onItemsChange={setItems}
+			right={{
+				label: 'Available',
+				onSelectChange: (rightSelected: Array<string>) =>
+					setRightSelected(rightSelected),
+				selected: rightSelected,
+			}}
+			size={8}
+			spritemap={spritemap}
+		/>
+	);
+});
+
+storiesOf('Components|ClaySelectBox', module).add('default', () => {
+	const [items, setItems] = React.useState<Array<any>>(moveBoxesOptions[0]);
+	const [value, setValue] = React.useState<Array<string>>([]);
+
+	return (
+		<ClaySelectBox
+			items={items}
+			label="In Use"
+			multiple
+			onItemsChange={setItems}
+			onSelectChange={setValue}
+			showArrows
+			size={8}
+			spritemap={spritemap}
+			value={value}
+		/>
+	);
+});
 
 storiesOf('Components|ClayForm', module).add('Feedback', () => (
 	<div className="sheet">

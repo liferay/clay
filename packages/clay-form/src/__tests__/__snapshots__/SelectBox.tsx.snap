@@ -1,0 +1,152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rendering renders ClaySelectBox 1`] = `
+<div>
+  <div
+    class="form-group"
+  >
+    <div
+      class="clay-reorder clay-reorder-footer-right"
+    >
+      <select
+        class="form-control form-control-inset"
+      >
+        <option
+          class="reorder-option"
+          value="1"
+        >
+          Option 1
+        </option>
+        <option
+          class="reorder-option"
+          value="2"
+        >
+          Option 2
+        </option>
+        <option
+          class="reorder-option"
+          value="3"
+        >
+          Option 3
+        </option>
+      </select>
+      <div
+        class="clay-reorder-underlay form-control"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Rendering renders ClaySelectBox with buttons to reorder options 1`] = `
+<div>
+  <div
+    class="form-group"
+  >
+    <div
+      class="clay-reorder clay-reorder-footer-right"
+    >
+      <select
+        class="form-control form-control-inset"
+        multiple=""
+      >
+        <option
+          class="reorder-option"
+          value="1"
+        >
+          Option 1
+        </option>
+        <option
+          class="reorder-option"
+          value="2"
+        >
+          Option 2
+        </option>
+        <option
+          class="reorder-option"
+          value="3"
+        >
+          Option 3
+        </option>
+      </select>
+      <div
+        class="clay-reorder-underlay form-control"
+      />
+      <div
+        class="clay-reorder-footer"
+      >
+        <div
+          class="reorder-order-buttons btn-group"
+          role="group"
+        >
+          <button
+            class="reorder-button reorder-button-up btn btn-monospaced btn-secondary"
+            type="button"
+          >
+            <svg
+              class="lexicon-icon lexicon-icon-caret-top"
+              role="presentation"
+            >
+              <use
+                xlink:href="/path/to/some/resource.svg#caret-top"
+              />
+            </svg>
+          </button>
+          <button
+            class="reorder-button reorder-button-down btn btn-monospaced btn-secondary"
+            type="button"
+          >
+            <svg
+              class="lexicon-icon lexicon-icon-caret-bottom"
+              role="presentation"
+            >
+              <use
+                xlink:href="/path/to/some/resource.svg#caret-bottom"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Rendering renders ClaySelectBox with multiple options selected 1`] = `
+<div>
+  <div
+    class="form-group"
+  >
+    <div
+      class="clay-reorder clay-reorder-footer-right"
+    >
+      <select
+        class="form-control form-control-inset"
+        multiple=""
+      >
+        <option
+          class="reorder-option"
+          value="1"
+        >
+          Option 1
+        </option>
+        <option
+          class="reorder-option"
+          value="2"
+        >
+          Option 2
+        </option>
+        <option
+          class="reorder-option"
+          value="3"
+        >
+          Option 3
+        </option>
+      </select>
+      <div
+        class="clay-reorder-underlay form-control"
+      />
+    </div>
+  </div>
+</div>
+`;
