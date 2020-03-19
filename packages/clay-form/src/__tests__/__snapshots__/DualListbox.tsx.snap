@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rendering renders ClayDualListbox 1`] = `
+<div>
+  <div
+    class="form-group"
+  >
+    <div
+      class="clay-dual-listbox"
+    >
+      <div
+        class="clay-dual-listbox-item clay-dual-listbox-item-expand listbox-left form-group"
+      >
+        <label
+          class="reorder-label"
+        >
+          In Use
+        </label>
+        <div
+          class="clay-reorder clay-reorder-footer-right"
+        >
+          <select
+            class="form-control form-control-inset"
+            multiple=""
+            size="8"
+          >
+            <option
+              class="reorder-option"
+              value="1"
+            >
+              Option 1
+            </option>
+            <option
+              class="reorder-option"
+              value="2"
+            >
+              Option 2
+            </option>
+            <option
+              class="reorder-option"
+              value="3"
+            >
+              Option 3
+            </option>
+          </select>
+          <div
+            class="clay-reorder-underlay form-control"
+          />
+          <div
+            class="clay-reorder-footer"
+          >
+            <div
+              class="reorder-order-buttons btn-group"
+              role="group"
+            >
+              <button
+                class="reorder-button reorder-button-up btn btn-monospaced btn-secondary"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-caret-top"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/path/to/some/resource.svg#caret-top"
+                  />
+                </svg>
+              </button>
+              <button
+                class="reorder-button reorder-button-down btn btn-monospaced btn-secondary"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-caret-bottom"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/path/to/some/resource.svg#caret-bottom"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="clay-dual-listbox-actions clay-dual-listbox-item btn-group"
+        role="group"
+      >
+        <button
+          class="transfer-button-ltr btn btn-monospaced btn-secondary"
+          data-testid="ltr"
+          type="button"
+        >
+          <svg
+            class="lexicon-icon lexicon-icon-caret-right"
+            role="presentation"
+          >
+            <use
+              xlink:href="/path/to/some/resource.svg#caret-right"
+            />
+          </svg>
+        </button>
+        <button
+          class="transfer-button-rtl btn btn-monospaced btn-secondary"
+          data-testid="rtl"
+          type="button"
+        >
+          <svg
+            class="lexicon-icon lexicon-icon-caret-left"
+            role="presentation"
+          >
+            <use
+              xlink:href="/path/to/some/resource.svg#caret-left"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="clay-dual-listbox-item clay-dual-listbox-item-expand listbox-right form-group"
+      >
+        <label
+          class="reorder-label"
+        >
+          Available
+        </label>
+        <div
+          class="clay-reorder clay-reorder-footer-right"
+        >
+          <select
+            class="form-control form-control-inset"
+            multiple=""
+            size="8"
+          >
+            <option
+              class="reorder-option"
+              value="4"
+            >
+              Option 4
+            </option>
+            <option
+              class="reorder-option"
+              value="5"
+            >
+              Option 5
+            </option>
+          </select>
+          <div
+            class="clay-reorder-underlay form-control"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
