@@ -1,0 +1,23 @@
+.input-move-boxes {
+    display: flex;
+    max-width: 768px;
+    width: 100%;
+
+    .select-box {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+    }
+}
+
+.transfer-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 24px;
+
+    .btn {
+        flex: 0 1 auto;
+    }
+}
