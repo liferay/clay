@@ -188,3 +188,24 @@ You may want to use [Github search](https://help.github.com/articles/searching-i
 | Next Release | [search](https://github.com/search?q=is%3Aopen+is%3Aissue+repo%3Aliferay%2Fclay+label%3A%22status%3A+next-release%22&type=Issues) | Status | Will be available in the next release |
 | Duplicate | [search](https://github.com/search?q=is%3Aopen+is%3Aissue+repo%3Aliferay%2Fclay+label%3A%22resolution%3A+duplicate%22&type=Issues) | Resolution | Duplicates an existing issue |
 | Wontfix | [search](https://github.com/search?q=is%3Aopen+is%3Aissue+repo%3Aliferay%2Fclay+label%3A%22resolution%3A+wontfix%22&type=Issues) | Resolution | Will no longer be worked on |
+
+
+## Release process
+
+To publish a new version
+
+1.  `git checkout 2.x`
+2.  Make sure you have all of the tags from upstream. `git fetch $REMOTE --tags`
+3.  Run `lerna version --conventional-commits --no-push` and the new version change.
+
+    -   You can also use `lerna changed` to see an output of what packages will be updated before running `lerna version`.
+    -   The `--conventional-commits` flag should automatically detect which version(minor/patch) the packages should be updated to.
+
+4.  Create a draft PR against `2.x-stable` (not intended to be merged) on the clay repo; the sole purpose of this is to see CI green one last time before pushing the tag.
+5.  Once CI is green, run `git push $REMOTE 2.x-stable --follow-tags`
+5.  Once CI is green, run `git push $REMOTE 2.x`
+6.  Run `lerna publish from-package` - This will push the packages to NPM.
+
+In the last step it may happen that some things break, be it build failure or something else, so be aware and make sure all packages are published correctly.
+
+> NOTE: Publishing new packages automatically with Lerna is sometimes a problem, if you have problems try to publish the package separately manually.
