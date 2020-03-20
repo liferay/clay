@@ -1,5 +1,28 @@
 # Change Log
 
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [2.21.0](https://github.com/bryceosterhaus/clay/compare/v2.20.2...v2.21.0) (2020-03-20)
+
+
+### Bug Fixes
+
+* **clay-css:** Add border-spacing, border-collapse not working in IE ([cb1c2e2](https://github.com/bryceosterhaus/clay/commit/cb1c2e2))
+* **clay-css:** SVG Icons update the flag of Slovakia ([5b9b6a7](https://github.com/bryceosterhaus/clay/commit/5b9b6a7)), closes [#2996](https://github.com/bryceosterhaus/clay/issues/2996)
+
+
+### Features
+
+* **clay-css:** Atlas change `$indigo` to [#7785](https://github.com/bryceosterhaus/clay/issues/7785)FF if `$enable-lexicon-flat-colors` is set to `true` ([1abce83](https://github.com/bryceosterhaus/clay/commit/1abce83)), closes [#2960](https://github.com/bryceosterhaus/clay/issues/2960)
+* **clay-css:** SVG Icons adds Malaysian flag ([1169636](https://github.com/bryceosterhaus/clay/commit/1169636)), closes [#3017](https://github.com/bryceosterhaus/clay/issues/3017)
+
+
+
+
+
+# Change Log
+
 ## [v2.8.0](https://github.com/liferay/clay/tree/v2.8.0) (2019-02-08)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.7.0...v2.8.0)
 
