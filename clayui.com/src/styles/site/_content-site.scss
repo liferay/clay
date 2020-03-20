@@ -364,24 +364,28 @@
 		overflow: hidden;
 		width: 100%;
 
-		@media (min-width: 600px) {
+		@media (min-width: 480px) {
 			width: calc(50% - 24px);
 		}
 
-		@media (min-width: 1600px) {
+		@media (min-width: 600px) {
 			width: calc(33.33333% - 24px);
 		}
 
+		@media (min-width: 900px) {
+			width: calc(50% - 24px);
+		}
+
+		@media (min-width: 1024px) {
+			width: calc(33.33333% - 24px);
+		}
+
+		@media (min-width: 1600px) {
+			width: calc(25% - 24px);
+		}
+
 		.clay-site-swatch-color {
-			padding-bottom: 30%;
-
-			@media (min-width: $grid-float-breakpoint) {
-				padding-bottom: 40%;
-			}
-
-			@media (min-width: 1600px) {
-				padding-bottom: 50%;
-			}
+			padding-bottom: 50%;
 		}
 
 		.clay-site-swatch-title {
@@ -409,6 +413,10 @@
 			}
 		}
 
+		.clay-site-hex {
+			text-transform: lowercase;
+		}
+
 		.clay-site-swatch-value {
 			color: #000;
 			cursor: pointer;
@@ -428,7 +436,7 @@
 		'gray-300':			$gray-300,
 		'gray-200':			$gray-200,
 		'gray-100':			$gray-100,
-		'white':			#FFF,
+		'white':			$white,
 		'blue':				$blue,
 		'indigo':			$indigo,
 		'purple':			$purple,
@@ -486,6 +494,7 @@
 	@each $swatch, $value in $swatches {
 		.clay-site-swatch-#{$swatch} {
 			background-color: $value;
+			content: '#{$value}';
 		}
 	}
 }
