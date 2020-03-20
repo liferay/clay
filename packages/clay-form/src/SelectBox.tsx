@@ -12,6 +12,9 @@ export type TItem = {
 	value: string;
 };
 
+const KEY_ARROWDOWN = 40;
+const KEY_ARROWUP = 38;
+
 function arrayMove(
 	arrayToMove: Array<TItem>,
 	oldIndex: number,
@@ -124,7 +127,7 @@ export const getSelectedIndexes = (
 	}, []);
 
 const ClaySelectBox: React.FunctionComponent<IProps> = ({
-	buttonAlignment = 'right',
+	buttonAlignment = 'end',
 	className,
 	items,
 	label,
@@ -160,6 +163,17 @@ const ClaySelectBox: React.FunctionComponent<IProps> = ({
 
 						onSelectChange(selectedItems);
 					}}
+					onKeyDown={event =>
+						selectedIndexes.forEach(index => {
+							if (
+								(event.keyCode === KEY_ARROWDOWN &&
+									index === items.length - 1) ||
+								(event.keyCode === KEY_ARROWUP && index === 0)
+							) {
+								event.preventDefault();
+							}
+						})
+					}
 					size={size}
 					value={value}
 				>
@@ -188,6 +202,7 @@ const ClaySelectBox: React.FunctionComponent<IProps> = ({
 										reorderUp(items, selectedIndexes)
 									)
 								}
+								small
 								spritemap={spritemap}
 								symbol="caret-top"
 							/>
@@ -201,6 +216,7 @@ const ClaySelectBox: React.FunctionComponent<IProps> = ({
 										reorderDown(items, selectedIndexes)
 									)
 								}
+								small
 								spritemap={spritemap}
 								symbol="caret-bottom"
 							/>
