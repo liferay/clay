@@ -8,10 +8,12 @@ import React from 'react';
 
 import {
 	ClayCheckbox,
+	ClayDualListBox,
 	ClayInput,
 	ClayRadio,
 	ClayRadioGroup,
 	ClaySelect,
+	ClaySelectBox,
 	ClaySelectWithOption,
 	ClayToggle,
 } from '../src';
@@ -35,6 +37,85 @@ const ClayCheckboxWithState = () => {
 		/>
 	);
 };
+
+const moveBoxesOptions = [
+	[
+		{
+			label: 'Discord',
+			value: 'discord',
+		},
+		{
+			label: 'Evernote',
+			value: 'evernote',
+		},
+		{
+			label: 'Facebook',
+			value: 'facebook',
+		},
+		{
+			label: 'LinkedIn',
+			value: 'linkedin',
+		},
+	],
+	[
+		{
+			label: 'Reddit',
+			value: 'reddit',
+		},
+		{
+			label: 'Slack',
+			value: 'slack',
+		},
+		{
+			label: 'Twitter',
+			value: 'twitter',
+		},
+	],
+];
+
+storiesOf('Components|ClayDualListBox', module).add('default', () => {
+	const [items, setItems] = React.useState(moveBoxesOptions);
+	const [leftSelected, setLeftSelected] = React.useState<Array<string>>([]);
+	const [rightSelected, setRightSelected] = React.useState<Array<string>>([]);
+
+	return (
+		<ClayDualListBox
+			items={items}
+			left={{
+				label: 'In Use',
+				onSelectChange: setLeftSelected,
+				selected: leftSelected,
+			}}
+			onItemsChange={setItems}
+			right={{
+				label: 'Available',
+				onSelectChange: setRightSelected,
+				selected: rightSelected,
+			}}
+			size={8}
+			spritemap={spritemap}
+		/>
+	);
+});
+
+storiesOf('Components|ClaySelectBox', module).add('default', () => {
+	const [items, setItems] = React.useState(moveBoxesOptions[0]);
+	const [value, setValue] = React.useState<Array<string>>([]);
+
+	return (
+		<ClaySelectBox
+			items={items}
+			label="In Use"
+			multiple
+			onItemsChange={setItems}
+			onSelectChange={setValue}
+			showArrows
+			size={8}
+			spritemap={spritemap}
+			value={value}
+		/>
+	);
+});
 
 storiesOf('Components|ClayForm', module).add('Feedback', () => (
 	<div className="sheet">
