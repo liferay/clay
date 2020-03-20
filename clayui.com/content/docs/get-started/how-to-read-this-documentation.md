@@ -1,5 +1,5 @@
 ---
-title: 'How to read this documentation'
+title: 'How to Read This Documentation'
 description: 'The status of each package is shown in the corresponding documentation'
 order: 3
 ---
