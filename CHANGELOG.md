@@ -1,5 +1,117 @@
 # Change Log
 
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# 2.21.0 (2020-03-20)
+
+
+### Bug Fixes
+
+* **clay css:** Adds `clay-time` component (Time Picker) ([880e665](https://github.com/bryceosterhaus/clay/commit/880e665)), closes [#1424](https://github.com/bryceosterhaus/clay/issues/1424)
+* **clay css:** Forms add `.disabled` to `.form-control` to style elements that use `div` ([3843296](https://github.com/bryceosterhaus/clay/commit/3843296))
+* **clay css:** Management Bar `.navbar-text` should break to new line when there is not enough space ([1a49dc5](https://github.com/bryceosterhaus/clay/commit/1a49dc5)), closes [#2085](https://github.com/bryceosterhaus/clay/issues/2085)
+* **clay css:** Mixin `clay-form-control-variant` add `align-items`, `flex-wrap`, `justify-content`, `max-width`, `min-height`, `text-transform` ([cede23a](https://github.com/bryceosterhaus/clay/commit/cede23a))
+* **clay-autocomplete:** Remove 'click' event on document when disposing ClayAutocomplete component ([cfff64a](https://github.com/bryceosterhaus/clay/commit/cfff64a))
+* **clay-autocomplete:** When `itemSelected` event is triggered, expand the dropdown ([bba7d4d](https://github.com/bryceosterhaus/clay/commit/bba7d4d))
+* **clay-checkbox:** escape special characters in label ([b95dc75](https://github.com/bryceosterhaus/clay/commit/b95dc75))
+* **clay-css:** Add border-spacing, border-collapse not working in IE ([cb1c2e2](https://github.com/bryceosterhaus/clay/commit/cb1c2e2))
+* **clay-css:** Adds `!optional` flag to `[@extend](https://github.com/extend)` for components that are extending selectors/placeholders outside of their respective component file ([101bc5d](https://github.com/bryceosterhaus/clay/commit/101bc5d)), closes [#2881](https://github.com/bryceosterhaus/clay/issues/2881)
+* **clay-css:** Atlas Dropdown change `.dropdown-header` and `.dropdown-subheader` color to [#272833](https://github.com/bryceosterhaus/clay/issues/272833) ([e072951](https://github.com/bryceosterhaus/clay/commit/e072951)), closes [#2812](https://github.com/bryceosterhaus/clay/issues/2812)
+* **clay-css:** Atlas Form Validation `.form-feedback-item` and `.form-text` should be semi-bold ([501a44c](https://github.com/bryceosterhaus/clay/commit/501a44c)), closes [#2328](https://github.com/bryceosterhaus/clay/issues/2328)
+* **clay-css:** Atlas Nav Tabs and Nav Underline should use `$font-weight-semi-bold`. Nav Underline should be 32px tall and underline color should be `$primary-l1` ([618fd44](https://github.com/bryceosterhaus/clay/commit/618fd44)), closes [#2388](https://github.com/bryceosterhaus/clay/issues/2388)
+* **clay-css:** Button `.btn-unstyled` should reset sizes for `.btn-sm` and `.btn-lg` ([b71b96f](https://github.com/bryceosterhaus/clay/commit/b71b96f)), closes [#2475](https://github.com/bryceosterhaus/clay/issues/2475)
+* **clay-css:** Custom Control add Sass maps `$custom-control-label`, `$custom-control-label-disabled`, `$custom-control-label-text` and map deprecated `$custom-control-description-*` to them so our namespace matches Bootstrap's. It was renamed toward end of Bootstrap beta in 6a54b4a ([76dca56](https://github.com/bryceosterhaus/clay/commit/76dca56)), closes [#2813](https://github.com/bryceosterhaus/clay/issues/2813)
+* **clay-css:** Deprecate `.sheet-lg` and `$sheet-lg-max-width` in favor of `.container .sheet` pattern ([c5c7fa3](https://github.com/bryceosterhaus/clay/commit/c5c7fa3)), closes [#2655](https://github.com/bryceosterhaus/clay/issues/2655)
+* **clay-css:** Form Validation Feedback space between icon and text should be 4px ([f69c392](https://github.com/bryceosterhaus/clay/commit/f69c392)), closes [#2075](https://github.com/bryceosterhaus/clay/issues/2075)
+* **clay-css:** Globals added `_globals-z-index.scss` to list z-index variables used in Bootstrap/ClayCSS ([c840496](https://github.com/bryceosterhaus/clay/commit/c840496)), closes [#2339](https://github.com/bryceosterhaus/clay/issues/2339)
+* **clay-css:** List Group double borders in `list-group-item-flex` caused by Bootstrap 4.4.1 22f6b37 ([ef466df](https://github.com/bryceosterhaus/clay/commit/ef466df)), closes [#2785](https://github.com/bryceosterhaus/clay/issues/2785)
+* **clay-css:** Mixin `clay-input-group-stacked` should use child combinator styles only apply direct descendants ([c2ae794](https://github.com/bryceosterhaus/clay/commit/c2ae794)), closes [#2384](https://github.com/bryceosterhaus/clay/issues/2384)
+* **clay-css:** Modal Footer use `justify-content: flex-start` instead of Bootstrap's `flex-end` to work around IE11 rendering issues with `modal-item`'s ([50e1420](https://github.com/bryceosterhaus/clay/commit/50e1420)), closes [#2873](https://github.com/bryceosterhaus/clay/issues/2873)
+* **clay-css:** Modals Atlas change widths of `.modal-sm`, `modal`, and `modal-lg` to `320px`, `600px`, `896px` respectively ([e58cbbf](https://github.com/bryceosterhaus/clay/commit/e58cbbf)), closes [#2367](https://github.com/bryceosterhaus/clay/issues/2367)
+* **clay-css:** Nav `.nav-justified` should work with `button` ([04fe884](https://github.com/bryceosterhaus/clay/commit/04fe884)), closes [#2237](https://github.com/bryceosterhaus/clay/issues/2237)
+* **clay-css:** New SVG Icon reset ([d5cda0f](https://github.com/bryceosterhaus/clay/commit/d5cda0f)), closes [#2146](https://github.com/bryceosterhaus/clay/issues/2146)
+* **clay-css:** SVG Icons added `megaphone-full`, `pin-full`, and `bell-full` ([c451b98](https://github.com/bryceosterhaus/clay/commit/c451b98)), closes [#2119](https://github.com/bryceosterhaus/clay/issues/2119)
+* **clay-css:** SVG Icons deprecate `announcement`, `sticky`, and `urgent` renaming to `megaphone-full`, `pin-full`, and `bell-full` respectively ([93f732e](https://github.com/bryceosterhaus/clay/commit/93f732e))
+* **clay-css:** SVG Icons deprecate `import-export` and `embed` in favor of `order-arrow` and `code` respectively ([b35633e](https://github.com/bryceosterhaus/clay/commit/b35633e)), closes [#2419](https://github.com/bryceosterhaus/clay/issues/2419)
+* **clay-css:** SVG Icons reduce the size by remove inessential attributes and comments ([e7a737e](https://github.com/bryceosterhaus/clay/commit/e7a737e)), closes [#2309](https://github.com/bryceosterhaus/clay/issues/2309)
+* **clay-css:** SVG Icons update the flag of Slovakia ([5b9b6a7](https://github.com/bryceosterhaus/clay/commit/5b9b6a7)), closes [#2996](https://github.com/bryceosterhaus/clay/issues/2996)
+* **clay-css:** Table Header (th) should be aligned left by default in Safari ([509f09d](https://github.com/bryceosterhaus/clay/commit/509f09d)), closes [#2219](https://github.com/bryceosterhaus/clay/issues/2219)
+* **clay-css:** Use `selector-unify` to combine parent selectors with nested element selectors in mixins and components ([f5bf8ef](https://github.com/bryceosterhaus/clay/commit/f5bf8ef)), closes [#2392](https://github.com/bryceosterhaus/clay/issues/2392)
+* **clay-dropdown:** Adds a workaround for avoid wrong render of `caption` ([6c27dee](https://github.com/bryceosterhaus/clay/commit/6c27dee))
+* **clay-dropdown:** allows caption to accept html and string ([592e94c](https://github.com/bryceosterhaus/clay/commit/592e94c))
+* **clay-dropdown:** changes param to kind html to make sure {msg} calls are expanded and placeholders replaced by actual values ([2ef4718](https://github.com/bryceosterhaus/clay/commit/2ef4718))
+* **clay-dropdown:** Changes the name of the new property from `_hideCaption` to `_showCaption` in benefit of readability and makes sure that a `dropdownCaption` exists before forcing `_showCaption` state to a value ([7c27015](https://github.com/bryceosterhaus/clay/commit/7c27015))
+* **clay-dropdown:** escape special characters in label ([46e10d4](https://github.com/bryceosterhaus/clay/commit/46e10d4))
+* **clay-dropdown:** renders new items values ​​when they change ([a3fbe21](https://github.com/bryceosterhaus/clay/commit/a3fbe21))
+* **clay-dropdown:** trims whitespace ([066ed74](https://github.com/bryceosterhaus/clay/commit/066ed74))
+* **clay-multi-select:** HTML escape to prevent XSS attack for multiselect ([3fc69b8](https://github.com/bryceosterhaus/clay/commit/3fc69b8))
+* **clay-radio:** escape special characters in label ([e695209](https://github.com/bryceosterhaus/clay/commit/e695209))
+* **clayui.com:** fix broken links pointing to github ([3d98b5f](https://github.com/bryceosterhaus/clay/commit/3d98b5f))
+* **clayui.com:** stop refresh loop when accessing documentation ([9e30bbd](https://github.com/bryceosterhaus/clay/commit/9e30bbd))
+
+
+### Features
+
+* **clay-autocomplete:** Adds navigation via ArrowUp and ArrowDown for accessibility ([b0c6843](https://github.com/bryceosterhaus/clay/commit/b0c6843))
+* **clay-css:** add new change-list-disabled SVG icon ([a617e81](https://github.com/bryceosterhaus/clay/commit/a617e81))
+* **clay-css:** add new SVG icons `arrow-end`, `arrow-join`, `arrow-split`, `arrow-start`, `arrow-xor`, `circle`, `diamond` and `square` ([380e0ab](https://github.com/bryceosterhaus/clay/commit/380e0ab))
+* **clay-css:** Add usable mixins from bourbon under `_vendor-prefixes.scss` ([132e1fc](https://github.com/bryceosterhaus/clay/commit/132e1fc))
+* **clay-css:** Atlas change `$indigo` to [#7785](https://github.com/bryceosterhaus/clay/issues/7785)FF if `$enable-lexicon-flat-colors` is set to `true` ([1abce83](https://github.com/bryceosterhaus/clay/commit/1abce83)), closes [#2960](https://github.com/bryceosterhaus/clay/issues/2960)
+* **clay-css:** Atlas Form Validation add styles for readonly input success, error, and warning states ([ce43c4e](https://github.com/bryceosterhaus/clay/commit/ce43c4e)), closes [#2715](https://github.com/bryceosterhaus/clay/issues/2715)
+* **clay-css:** Atlas Forms input readonly should have white background and no focus box shadow ([a46a2ba](https://github.com/bryceosterhaus/clay/commit/a46a2ba)), closes [#2425](https://github.com/bryceosterhaus/clay/issues/2425)
+* **clay-css:** Atlas Globals adds `$enable-lexicon-flat-colors: false !default` to change base colors to match Lexicon Flat Color palette, set to `true` to enable colors ([d6600e6](https://github.com/bryceosterhaus/clay/commit/d6600e6)), closes [#E83E8](https://github.com/bryceosterhaus/clay/issues/E83E8) [#2726](https://github.com/bryceosterhaus/clay/issues/2726)
+* **clay-css:** Clay Color backport color picker from 3.x ([9327654](https://github.com/bryceosterhaus/clay/commit/9327654)), closes [#2426](https://github.com/bryceosterhaus/clay/issues/2426)
+* **clay-css:** Clay Range add `clay-range-thumb` slider head overlay to make it easier to grab via js and position tooltip inside of it ([4e9a71c](https://github.com/bryceosterhaus/clay/commit/4e9a71c))
+* **clay-css:** Clay Time added focus styles for `.clay-time .form-control-inset` ([df9ab2f](https://github.com/bryceosterhaus/clay/commit/df9ab2f)), closes [#2299](https://github.com/bryceosterhaus/clay/issues/2299)
+* **clay-css:** Custom Control adds `$custom-control-description-font-weight` ([35353b6](https://github.com/bryceosterhaus/clay/commit/35353b6)), closes [#2813](https://github.com/bryceosterhaus/clay/issues/2813)
+* **clay-css:** Forms Clay Multiselect `.form-control-tag-group` should have Clear All button and be aligned in the middle ([653f500](https://github.com/bryceosterhaus/clay/commit/653f500)), closes [#2335](https://github.com/bryceosterhaus/clay/issues/2335)
+* **clay-css:** Forms support `label` element without `for` attribute. `label` needs the class `.form-control-label` and text must be wrapped in an element with class `.form-control-label-text` ([3f19f76](https://github.com/bryceosterhaus/clay/commit/3f19f76)), closes [#2242](https://github.com/bryceosterhaus/clay/issues/2242)
+* **clay-css:** Global Functions added `clay-max` to return the maximum between two values and also accepts null values ([6b3face](https://github.com/bryceosterhaus/clay/commit/6b3face))
+* **clay-css:** Global Functions added `map-deep-merge()` that merges keys and values from deeply nested Sass maps ([0e4f918](https://github.com/bryceosterhaus/clay/commit/0e4f918)), closes [#2403](https://github.com/bryceosterhaus/clay/issues/2403)
+* **clay-css:** List Group add `.list-group-sm` modifier to make `.list-group-item` shorter ([4326fba](https://github.com/bryceosterhaus/clay/commit/4326fba)), closes [#2423](https://github.com/bryceosterhaus/clay/issues/2423)
+* **clay-css:** Mixins `clay-form-control-variant` add options to configure `$selection-bg`, `$selection-color`, and should also output `.focus` styles ([bd0ea3a](https://github.com/bryceosterhaus/clay/commit/bd0ea3a)), closes [#2299](https://github.com/bryceosterhaus/clay/issues/2299)
+* **clay-css:** Mixins `clay-link` added position, padding, and disabled-active-pointer-events ([e4b7610](https://github.com/bryceosterhaus/clay/commit/e4b7610)), closes [#2540](https://github.com/bryceosterhaus/clay/issues/2540)
+* **clay-css:** Mixins added `clay-line-clamp` for truncating text based on number of lines ([9008eac](https://github.com/bryceosterhaus/clay/commit/9008eac)), closes [#2058](https://github.com/bryceosterhaus/clay/issues/2058)
+* **clay-css:** Mixins added `clay-range-input-variant` for creating `.clay-range-input` variants ([ef1df71](https://github.com/bryceosterhaus/clay/commit/ef1df71))
+* **clay-css:** Mixins clay-container adds option to configure cursor ([e6612d3](https://github.com/bryceosterhaus/clay/commit/e6612d3))
+* **clay-css:** Modals added fixed height modals `.modal-height-sm`, `.modal-height-md`, `.modal-height-lg`, `.modal-height-xl` that sets heights `250px`, `450px`, `650px`, `800px` respectively ([8f53351](https://github.com/bryceosterhaus/clay/commit/8f53351)), closes [#2395](https://github.com/bryceosterhaus/clay/issues/2395)
+* **clay-css:** Nav add support for `.nav-link.btn-unstyled` ([00cc42e](https://github.com/bryceosterhaus/clay/commit/00cc42e)), closes [#2540](https://github.com/bryceosterhaus/clay/issues/2540)
+* **clay-css:** new SVG Icon test ([a88eb7a](https://github.com/bryceosterhaus/clay/commit/a88eb7a))
+* **clay-css:** Range added `clay-range` component ([8eae09f](https://github.com/bryceosterhaus/clay/commit/8eae09f)), closes [#2157](https://github.com/bryceosterhaus/clay/issues/2157)
+* **clay-css:** Range added tooltip and fix styles in IE11 ([2cabeb9](https://github.com/bryceosterhaus/clay/commit/2cabeb9))
+* **clay-css:** SVG Icon added `device-check` ([e627b93](https://github.com/bryceosterhaus/clay/commit/e627b93)), closes [#2757](https://github.com/bryceosterhaus/clay/issues/2757)
+* **clay-css:** SVG Icon source format `change-list-disabled` ([1091525](https://github.com/bryceosterhaus/clay/commit/1091525))
+* **clay-css:** SVG Icons add `social-instagram` and `social-vimeo` ([efabe59](https://github.com/bryceosterhaus/clay/commit/efabe59)), closes [#2695](https://github.com/bryceosterhaus/clay/issues/2695)
+* **clay-css:** SVG Icons add briefcase ([6c3db8f](https://github.com/bryceosterhaus/clay/commit/6c3db8f))
+* **clay-css:** SVG Icons add Google ([df0122e](https://github.com/bryceosterhaus/clay/commit/df0122e)), closes [#2581](https://github.com/bryceosterhaus/clay/issues/2581)
+* **clay-css:** SVG Icons add hdd.svg ([d76589f](https://github.com/bryceosterhaus/clay/commit/d76589f)), closes [#2582](https://github.com/bryceosterhaus/clay/issues/2582)
+* **clay-css:** SVG Icons add sign-in ([7280c7e](https://github.com/bryceosterhaus/clay/commit/7280c7e)), closes [#2580](https://github.com/bryceosterhaus/clay/issues/2580)
+* **clay-css:** SVG Icons added `credit-card` and `catalog` ([54e38ea](https://github.com/bryceosterhaus/clay/commit/54e38ea)), closes [#2739](https://github.com/bryceosterhaus/clay/issues/2739)
+* **clay-css:** SVG Icons added `heart-full` ([aaca7e6](https://github.com/bryceosterhaus/clay/commit/aaca7e6)), closes [#2690](https://github.com/bryceosterhaus/clay/issues/2690)
+* **clay-css:** SVG Icons added `import` and `import-list` ([f2dc7a1](https://github.com/bryceosterhaus/clay/commit/f2dc7a1)), closes [#2683](https://github.com/bryceosterhaus/clay/issues/2683)
+* **clay-css:** SVG Icons added `liferay-ac` ([a119483](https://github.com/bryceosterhaus/clay/commit/a119483)), closes [#2727](https://github.com/bryceosterhaus/clay/issues/2727)
+* **clay-css:** SVG Icons added `order-arrow-left` and `order-arrow-right` ([c8e70b4](https://github.com/bryceosterhaus/clay/commit/c8e70b4)), closes [#2688](https://github.com/bryceosterhaus/clay/issues/2688)
+* **clay-css:** SVG Icons added `times-circle-full` and `times-small` ([bbebb2b](https://github.com/bryceosterhaus/clay/commit/bbebb2b)), closes [#2691](https://github.com/bryceosterhaus/clay/issues/2691)
+* **clay-css:** SVG Icons added `truck` ([0a6d035](https://github.com/bryceosterhaus/clay/commit/0a6d035)), closes [#2689](https://github.com/bryceosterhaus/clay/issues/2689)
+* **clay-css:** SVG Icons added cloud ([d09561b](https://github.com/bryceosterhaus/clay/commit/d09561b)), closes [#2742](https://github.com/bryceosterhaus/clay/issues/2742)
+* **clay-css:** SVG Icons adds `document-pending` ([9fe3ba2](https://github.com/bryceosterhaus/clay/commit/9fe3ba2)), closes [#2724](https://github.com/bryceosterhaus/clay/issues/2724)
+* **clay-css:** SVG Icons adds Malaysian flag ([1169636](https://github.com/bryceosterhaus/clay/commit/1169636)), closes [#3017](https://github.com/bryceosterhaus/clay/issues/3017)
+* add semantic PR bot ([903ed65](https://github.com/bryceosterhaus/clay/commit/903ed65))
+* **clay-css:** SVG Icons deprecate `twitter` and add `social-twitter` ([5772bf5](https://github.com/bryceosterhaus/clay/commit/5772bf5)), closes [#2697](https://github.com/bryceosterhaus/clay/issues/2697)
+* **clay-css:** SVG Icons update `times` to be thicker ([ffbb198](https://github.com/bryceosterhaus/clay/commit/ffbb198))
+* **clay-css:** Update Bootstrap CSS to 4.4.1, Bootstrap JS 4.4.0, Popper.js 1.16.0 ([1dabef0](https://github.com/bryceosterhaus/clay/commit/1dabef0)), closes [#2785](https://github.com/bryceosterhaus/clay/issues/2785)
+* **clay-css:** Use `map-deep-merge` to merge Sass maps in Clay CSS ([e69a516](https://github.com/bryceosterhaus/clay/commit/e69a516)), closes [#2403](https://github.com/bryceosterhaus/clay/issues/2403)
+* **clay-css:** Utilities add duplicate of Bootstrap's spacing utilities prefixed with `c-` and without the `!important` flag ([cc2b134](https://github.com/bryceosterhaus/clay/commit/cc2b134)), closes [#2725](https://github.com/bryceosterhaus/clay/issues/2725)
+* **clay-dropdown:** add the API `useSearchableWithForm` to ClayDropdownBase ([91ffdef](https://github.com/bryceosterhaus/clay/commit/91ffdef))
+* **clay-label:** Add support for truncating the label ([4625e62](https://github.com/bryceosterhaus/clay/commit/4625e62))
+
+
+
+
+
+# Change Log
+
 ## [v2.8.0](https://github.com/liferay/clay/tree/v2.8.0) (2019-02-08)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.7.0...v2.8.0)
 

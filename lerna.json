@@ -1,8 +1,8 @@
 {
-  "lerna": "3.4.0",
-  "version": "2.20.2",
-  "npmClient": "yarn",
-  "useWorkspaces": true,
+	"lerna": "3.4.0",
+	"version": "2.21.0",
+	"npmClient": "yarn",
+	"useWorkspaces": true,
 	"command": {
 		"publish": {
 			"message": "chore(release): publish %s"
