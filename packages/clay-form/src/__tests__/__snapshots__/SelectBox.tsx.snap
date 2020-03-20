@@ -6,7 +6,7 @@ exports[`Rendering renders ClaySelectBox 1`] = `
     class="form-group"
   >
     <div
-      class="clay-reorder clay-reorder-footer-right"
+      class="clay-reorder clay-reorder-footer-end"
     >
       <select
         class="form-control form-control-inset"
@@ -44,7 +44,7 @@ exports[`Rendering renders ClaySelectBox with buttons to reorder options 1`] = `
     class="form-group"
   >
     <div
-      class="clay-reorder clay-reorder-footer-right"
+      class="clay-reorder clay-reorder-footer-end"
     >
       <select
         class="form-control form-control-inset"
@@ -80,7 +80,7 @@ exports[`Rendering renders ClaySelectBox with buttons to reorder options 1`] = `
           role="group"
         >
           <button
-            class="reorder-button reorder-button-up btn btn-monospaced btn-secondary"
+            class="reorder-button reorder-button-up btn btn-monospaced btn-sm btn-secondary"
             type="button"
           >
             <svg
@@ -93,7 +93,7 @@ exports[`Rendering renders ClaySelectBox with buttons to reorder options 1`] = `
             </svg>
           </button>
           <button
-            class="reorder-button reorder-button-down btn btn-monospaced btn-secondary"
+            class="reorder-button reorder-button-down btn btn-monospaced btn-sm btn-secondary"
             type="button"
           >
             <svg
@@ -118,7 +118,7 @@ exports[`Rendering renders ClaySelectBox with multiple options selected 1`] = `
     class="form-group"
   >
     <div
-      class="clay-reorder clay-reorder-footer-right"
+      class="clay-reorder clay-reorder-footer-end"
     >
       <select
         class="form-control form-control-inset"

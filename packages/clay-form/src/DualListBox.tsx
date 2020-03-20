@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayButton, {ClayButtonWithIcon} from '@clayui/button';
+import {ClayButtonWithIcon} from '@clayui/button';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -126,7 +126,7 @@ const ClayDualListBox: React.FunctionComponent<IProps> = ({
 					value={leftSelected}
 				/>
 
-				<ClayButton.Group className="clay-dual-listbox-actions clay-dual-listbox-item">
+				<div className="btn-group-vertical clay-dual-listbox-actions clay-dual-listbox-item">
 					<ClayButtonWithIcon
 						className="transfer-button-ltr"
 						data-testid="ltr"
@@ -160,7 +160,7 @@ const ClayDualListBox: React.FunctionComponent<IProps> = ({
 						spritemap={spritemap}
 						symbol="caret-left"
 					/>
-				</ClayButton.Group>
+				</div>
 
 				<ClaySelectBox
 					className="clay-dual-listbox-item clay-dual-listbox-item-expand listbox-right"
