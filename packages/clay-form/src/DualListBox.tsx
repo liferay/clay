@@ -140,6 +140,7 @@ const ClayDualListBox: React.FunctionComponent<IProps> = ({
 
 							onItemsChange([arrayLeft, arrayRight]);
 						}}
+						small
 						spritemap={spritemap}
 						symbol="caret-right"
 					/>
@@ -157,6 +158,7 @@ const ClayDualListBox: React.FunctionComponent<IProps> = ({
 
 							onItemsChange([arrayLeft, arrayRight]);
 						}}
+						small
 						spritemap={spritemap}
 						symbol="caret-left"
 					/>
