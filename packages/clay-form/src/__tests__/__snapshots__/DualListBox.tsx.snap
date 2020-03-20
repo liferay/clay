@@ -17,7 +17,7 @@ exports[`Rendering renders ClayDualListBox 1`] = `
           In Use
         </label>
         <div
-          class="clay-reorder clay-reorder-footer-right"
+          class="clay-reorder clay-reorder-footer-end"
         >
           <select
             class="form-control form-control-inset"
@@ -54,7 +54,7 @@ exports[`Rendering renders ClayDualListBox 1`] = `
               role="group"
             >
               <button
-                class="reorder-button reorder-button-up btn btn-monospaced btn-secondary"
+                class="reorder-button reorder-button-up btn btn-monospaced btn-sm btn-secondary"
                 type="button"
               >
                 <svg
@@ -67,7 +67,7 @@ exports[`Rendering renders ClayDualListBox 1`] = `
                 </svg>
               </button>
               <button
-                class="reorder-button reorder-button-down btn btn-monospaced btn-secondary"
+                class="reorder-button reorder-button-down btn btn-monospaced btn-sm btn-secondary"
                 type="button"
               >
                 <svg
@@ -84,11 +84,10 @@ exports[`Rendering renders ClayDualListBox 1`] = `
         </div>
       </div>
       <div
-        class="clay-dual-listbox-actions clay-dual-listbox-item btn-group"
-        role="group"
+        class="btn-group-vertical clay-dual-listbox-actions clay-dual-listbox-item"
       >
         <button
-          class="transfer-button-ltr btn btn-monospaced btn-secondary"
+          class="transfer-button-ltr btn btn-monospaced btn-sm btn-secondary"
           data-testid="ltr"
           type="button"
         >
@@ -102,7 +101,7 @@ exports[`Rendering renders ClayDualListBox 1`] = `
           </svg>
         </button>
         <button
-          class="transfer-button-rtl btn btn-monospaced btn-secondary"
+          class="transfer-button-rtl btn btn-monospaced btn-sm btn-secondary"
           data-testid="rtl"
           type="button"
         >
@@ -125,7 +124,7 @@ exports[`Rendering renders ClayDualListBox 1`] = `
           Available
         </label>
         <div
-          class="clay-reorder clay-reorder-footer-right"
+          class="clay-reorder clay-reorder-footer-end"
         >
           <select
             class="form-control form-control-inset"
