@@ -13,6 +13,7 @@ import React from 'react';
 import DateNavigation from './DateNavigation';
 import DayNumber from './DayNumber';
 import DaysTable from './DaysTable';
+import {getLocaleProps} from './Helpers';
 import {useCurrentTime, useWeeks} from './Hooks';
 import InputDate from './InputDate';
 import TimePicker from './TimePicker';
@@ -20,7 +21,7 @@ import Weekday from './Weekday';
 import WeekdayHeader from './WeekdayHeader';
 import {FirstDayOfWeek, IAriaLabels, IYears} from './types';
 
-export {FirstDayOfWeek, IAriaLabels, IYears};
+export {FirstDayOfWeek, getLocaleProps, IAriaLabels, IYears};
 
 interface IProps {
 	/**
