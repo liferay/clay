@@ -3,6 +3,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import moment from 'moment';
+
 export interface IDay {
 	date: Date;
 	outside?: boolean;
@@ -99,4 +101,19 @@ export function range({end, start}: {end: number; start: number}) {
 		},
 		(v, k) => k + start
 	);
+}
+
+/**
+ * Helper function for getting certain props from `moment`.
+ * This allows users to not have to import and use `moment` themselves.
+ */
+export function getLocaleProps(locale: string) {
+	const localeData = moment.localeData(locale);
+
+	return {
+		dateFormat: localeData.longDateFormat('L'),
+		firstDayOfWeek: localeData.firstDayOfWeek(),
+		months: localeData.months(),
+		weekdaysShort: localeData.weekdaysShort(),
+	};
 }
