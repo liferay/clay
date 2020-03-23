@@ -20,48 +20,54 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	value: string;
 }
 
-const ClayDatePickerInputDate: React.FunctionComponent<IProps> = ({
-	ariaLabel,
-	currentTime,
-	dateFormat,
-	inputName = 'datePicker',
-	time = false,
-	timeFormat,
-	useNative = false,
-	value = '',
-	...otherProps
-}) => {
-	const isValidValue = (value: string | Date): string => {
-		const format = time ? `${dateFormat} ${timeFormat}` : dateFormat;
+const ClayDatePickerInputDate = React.forwardRef<HTMLInputElement, IProps>(
+	(
+		{
+			ariaLabel,
+			currentTime,
+			dateFormat,
+			inputName = 'datePicker',
+			time = false,
+			timeFormat,
+			useNative = false,
+			value = '',
+			...otherProps
+		},
+		ref
+	) => {
+		const isValidValue = (value: string | Date): string => {
+			const format = time ? `${dateFormat} ${timeFormat}` : dateFormat;
 
-		if (moment(value, format).isValid() && value instanceof Date) {
-			const date = moment(value)
-				.clone()
-				.format(dateFormat);
+			if (moment(value, format).isValid() && value instanceof Date) {
+				const date = moment(value)
+					.clone()
+					.format(dateFormat);
 
-			return time ? `${date} ${currentTime}` : date;
-		}
+				return time ? `${date} ${currentTime}` : date;
+			}
 
-		return value as string;
-	};
+			return value as string;
+		};
 
-	const memoizedValue = React.useMemo(() => isValidValue(value), [
-		value,
-		currentTime,
-	]);
+		const memoizedValue = React.useMemo(() => isValidValue(value), [
+			value,
+			currentTime,
+		]);
 
-	return (
-		<>
-			<input name={inputName} type="hidden" value={memoizedValue} />
-			<ClayInput
-				{...otherProps}
-				aria-label={ariaLabel}
-				insetAfter={!useNative}
-				type={useNative ? 'date' : 'text'}
-				value={memoizedValue}
-			/>
-		</>
-	);
-};
+		return (
+			<>
+				<input name={inputName} type="hidden" value={memoizedValue} />
+				<ClayInput
+					{...otherProps}
+					aria-label={ariaLabel}
+					insetAfter={!useNative}
+					ref={ref}
+					type={useNative ? 'date' : 'text'}
+					value={memoizedValue}
+				/>
+			</>
+		);
+	}
+);
 
 export default ClayDatePickerInputDate;
