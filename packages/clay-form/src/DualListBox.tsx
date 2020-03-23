@@ -87,7 +87,7 @@ const ClayDualListBox: React.FunctionComponent<IProps> = ({
 	size,
 	spritemap,
 	...otherProps
-}) => {
+}: IProps) => {
 	const [internalLeftSelected, setInternalLeftSelected] = React.useState(
 		left.selected || []
 	);
