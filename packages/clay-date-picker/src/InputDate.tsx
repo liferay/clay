@@ -13,7 +13,6 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	dateFormat: string;
 	disabled?: boolean;
 	inputName?: string;
-	onChange: React.ChangeEventHandler<HTMLInputElement>;
 	placeholder?: string;
 	time: boolean;
 	timeFormat: string;
@@ -25,10 +24,7 @@ const ClayDatePickerInputDate: React.FunctionComponent<IProps> = ({
 	ariaLabel,
 	currentTime,
 	dateFormat,
-	disabled,
 	inputName = 'datePicker',
-	onChange,
-	placeholder,
 	time = false,
 	timeFormat,
 	useNative = false,
@@ -60,10 +56,7 @@ const ClayDatePickerInputDate: React.FunctionComponent<IProps> = ({
 			<ClayInput
 				{...otherProps}
 				aria-label={ariaLabel}
-				disabled={disabled}
 				insetAfter={!useNative}
-				onChange={onChange}
-				placeholder={placeholder}
 				type={useNative ? 'date' : 'text'}
 				value={memoizedValue}
 			/>
