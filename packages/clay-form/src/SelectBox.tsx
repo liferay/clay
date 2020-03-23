@@ -138,7 +138,7 @@ const ClaySelectBox: React.FunctionComponent<IProps> = ({
 	size,
 	spritemap,
 	value,
-}) => {
+}: IProps) => {
 	const selectedIndexes = getSelectedIndexes(
 		items,
 		Array.isArray(value) ? value : [value]
