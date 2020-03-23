@@ -78,6 +78,12 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	months?: Array<string>;
 
 	/**
+	 * Called when the user is browsing the date picker, changing the
+	 * month, year and navigating with arrows.
+	 */
+	onNavigation?: (data: Date) => void;
+
+	/**
 	 * Called when the input change.
 	 */
 	onValueChange: (value: Date | string) => void;
@@ -163,6 +169,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 				'November',
 				'December',
 			],
+			onNavigation = () => {},
 			onValueChange = () => {},
 			placeholder,
 			spritemap,
@@ -239,6 +246,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			const dateNormalized = normalizeDate(date);
 
 			setCurrentMonth(dateNormalized);
+			onNavigation(dateNormalized);
 
 			// It is not necessary to update the weeks when the native
 			// date is enabled. Unnecessary rendering and processing.
