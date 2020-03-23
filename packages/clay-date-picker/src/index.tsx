@@ -23,7 +23,7 @@ import {FirstDayOfWeek, IAriaLabels, IYears} from './types';
 
 export {FirstDayOfWeek, getLocaleProps, IAriaLabels, IYears};
 
-interface IProps {
+interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	/**
 	 * Labels for the aria attributes
 	 */
@@ -170,6 +170,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = ({
 		end: DateNow.getFullYear(),
 		start: DateNow.getFullYear(),
 	},
+	...otherProps
 }: IProps) => {
 	/**
 	 * Normalize date for always set noon to avoid time zone issues
@@ -302,6 +303,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = ({
 			<ClayInput.Group id={id} ref={triggerElementRef}>
 				<ClayInput.GroupItem>
 					<InputDate
+						{...otherProps}
 						ariaLabel={ariaLabels.input}
 						currentTime={currentTime}
 						dateFormat={dateFormat}
