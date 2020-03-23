@@ -210,6 +210,8 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 				setValue(DEFAULT_VALUE);
 				break;
 			case KEY_ARROWUP:
+				event.preventDefault();
+
 				if (configName === TimeType.ampm) {
 					setValue((config as ConfigAmpm).pm);
 				} else {
@@ -221,6 +223,8 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 				}
 				break;
 			case KEY_ARROWDOWN:
+				event.preventDefault();
+
 				if (configName === TimeType.ampm) {
 					setValue((config as ConfigAmpm).am);
 				} else {
