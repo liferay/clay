@@ -20,10 +20,11 @@ interface IProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
 
 const ClayDatePickerSelect = React.forwardRef(
 	(
-		{name, onChange, options, testId, value}: IProps,
+		{name, onChange, options, testId, value, ...otherProps}: IProps,
 		ref: React.Ref<HTMLSelectElement>
 	) => (
 		<select
+			{...otherProps}
 			className="form-control form-control-sm"
 			data-testid={testId}
 			name={name}

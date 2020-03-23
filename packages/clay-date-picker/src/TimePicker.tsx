@@ -8,6 +8,7 @@ import React from 'react';
 
 interface IProps {
 	currentTime: string;
+	disabled?: boolean;
 	onTimeChange: (hours: number | string, minutes: number | string) => void;
 
 	/**
@@ -22,6 +23,7 @@ const DEFAULT_VALUE = '--';
 
 const ClayDatePickerTimePicker: React.FunctionComponent<IProps> = ({
 	currentTime,
+	disabled,
 	onTimeChange,
 	spritemap,
 	timezone,
@@ -62,6 +64,7 @@ const ClayDatePickerTimePicker: React.FunctionComponent<IProps> = ({
 	return (
 		<div className="time-picker">
 			<ClayTimePicker
+				disabled={disabled}
 				icon
 				onInputChange={handleOnChange}
 				spritemap={spritemap}

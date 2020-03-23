@@ -35,6 +35,11 @@ interface IProps {
 	dateFormat?: string;
 
 	/**
+	 * Flag to disable the component, buttons, open the datepicker, etc...
+	 */
+	disabled?: boolean;
+
+	/**
 	 * Set the first day of the week, starting from
 	 * 0 (Sunday) to 6 (Saturday).
 	 */
@@ -131,6 +136,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = ({
 		buttonPreviousMonth: 'Select the previous month',
 	},
 	dateFormat = 'YYYY-MM-DD',
+	disabled,
 	firstDayOfWeek = 0,
 	footerElement,
 	id,
@@ -298,6 +304,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = ({
 						ariaLabel={ariaLabels.input}
 						currentTime={currentTime}
 						dateFormat={dateFormat}
+						disabled={disabled}
 						inputName={inputName}
 						onChange={inputChange}
 						placeholder={placeholder}
@@ -311,6 +318,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = ({
 							<Button
 								className="date-picker-dropdown-toggle"
 								data-testid="date-button"
+								disabled={disabled}
 								displayType="unstyled"
 								onClick={handleCalendarButtonClicked}
 							>
@@ -334,6 +342,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = ({
 						<DateNavigation
 							ariaLabels={ariaLabels}
 							currentMonth={currentMonth}
+							disabled={disabled}
 							months={months}
 							onDotClicked={handleDotClicked}
 							onMonthChange={changeMonth}
@@ -354,6 +363,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = ({
 									<DayNumber
 										day={day}
 										daySelected={daySelected}
+										disabled={disabled}
 										key={key}
 										onClick={handleDayClicked}
 									/>
@@ -365,6 +375,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = ({
 								{time && (
 									<TimePicker
 										currentTime={currentTime}
+										disabled={disabled}
 										onTimeChange={handleTimeChange}
 										spritemap={spritemap}
 										timezone={timezone}
