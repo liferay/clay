@@ -12,12 +12,14 @@ import {IDay} from './Helpers';
 interface IProps {
 	day: IDay;
 	daySelected: Date;
+	disabled?: boolean;
 	onClick: (date: Date) => void;
 }
 
 const ClayDatePickerDayNumber: React.FunctionComponent<IProps> = ({
 	day,
 	daySelected,
+	disabled,
 	onClick,
 }) => {
 	const classNames = classnames(
@@ -26,7 +28,7 @@ const ClayDatePickerDayNumber: React.FunctionComponent<IProps> = ({
 			active:
 				moment(day.date).format('YYYY-MM-DD') ===
 				moment(daySelected).format('YYYY-MM-DD'),
-			disabled: day.outside,
+			disabled: day.outside || disabled,
 		}
 	);
 

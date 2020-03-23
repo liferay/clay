@@ -5,6 +5,7 @@
 
 import '@clayui/css/lib/css/atlas.css';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import {boolean} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React from 'react';
 
@@ -33,6 +34,17 @@ storiesOf('Components|ClayDatePicker', module)
 	))
 	.add('default', () => (
 		<ClayDatePickerWithState
+			placeholder="YYYY-MM-DD"
+			spritemap={spritemap}
+			years={{
+				end: 2024,
+				start: 1997,
+			}}
+		/>
+	))
+	.add('disabled', () => (
+		<ClayDatePickerWithState
+			disabled={boolean('Disabled', true)}
 			placeholder="YYYY-MM-DD"
 			spritemap={spritemap}
 			years={{
