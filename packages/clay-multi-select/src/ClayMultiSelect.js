@@ -355,7 +355,7 @@ class ClayMultiSelect extends ClayComponent {
 		const filteredItem = this.filteredItems
 			.filter(filteredItem => {
 				return (
-					filteredItem.data.label.toLowerCase() ===
+					htmlEscape(filteredItem.data.label.toLowerCase()) ===
 					label.toLowerCase()
 				);
 			})
