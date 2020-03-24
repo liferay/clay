@@ -33,12 +33,12 @@ Contains the source code and documentation powering [clayui.com](https://clayui.
 
 ## Documentation
 
-You can find the Clay documentation on the [site](https://next.clayui.com/docs).
+You can find the Clay documentation on the [site](https://clayui.com/docs).
 
--   [Getting Started](https://next.clayui.com/docs/get-started/introduction.html)
--   [CSS](https://next.clayui.com/docs/css/index.html)
--   [React Components](https://next.clayui.com/docs/components/index.html)
--   [Blog](https://next.clayui.com/blog/2019/02/07/clay-v3-beta.html)
+-   [Getting Started](https://clayui.com/docs/get-started/what-is-clay.html)
+-   [Components](https://clayui.com/docs/components/alerts.html)
+-   [CSS Framework](https://clayui.com/docs/css/scss.html)
+-   [Blog](https://clayui.com/blog/2019/10/25/introducing-clay-v3.html)
 
 You can improve by sending pull requests to this repository.
 
@@ -46,7 +46,7 @@ You can improve by sending pull requests to this repository.
 
 Clay is available as the `clay` package in npm for components and for css like `clay-css`. It is also available on a [CDN](https://cdn.jsdelivr.net/npm/clay/lib/js/clay.js) for components and for css, [check](https://cdn.jsdelivr.net/npm/clay/lib/css/atlas.css). But if you just want the separate components, it's also available in the npm as [clay-](https://www.npmjs.com/search?q=clay-).
 
-See the [Getting Started](https://next.clayui.com/docs/get-started/introduction.html) guide for more information.
+See the [Getting Started](https://clayui.com/docs/get-started/what-is-clay.html) guide for more information.
 
 ## Migration Guides
 
