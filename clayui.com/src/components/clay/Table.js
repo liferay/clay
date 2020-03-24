@@ -18,13 +18,13 @@ const tableCode = `const Component = () => {
 		<ClayTable>
 			<ClayTable.Head>
 				<ClayTable.Row>
-					<ClayTable.Cell expanded headingCell headingTitle>
+					<ClayTable.Cell expanded headingCell>
 						{'Teams'}
 					</ClayTable.Cell>
-					<ClayTable.Cell headingCell headingTitle>
+					<ClayTable.Cell headingCell>
 						{'Region'}
 					</ClayTable.Cell>
-					<ClayTable.Cell headingCell headingTitle>
+					<ClayTable.Cell headingCell>
 						{'Country'}
 					</ClayTable.Cell>
 				</ClayTable.Row>
