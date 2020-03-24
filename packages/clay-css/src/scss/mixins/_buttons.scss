@@ -192,6 +192,7 @@
 /// padding-top-mobile: {Number | String | Null},
 /// width-mobile: {Number | String | Null},
 /// loading-animation: {String | Null}, // The placeholder name 'loading-animation' or 'loading-animation-light'
+/// rtl: {Map | Null}, // Pass parameters to `clay-css` mixin
 /// @todo
 /// - Add @example
 /// - Add @link to documentation
@@ -280,6 +281,8 @@
 
 	$loading-animation: setter(map-get($map, loading-animation), $clay-unset-placeholder);
 
+	$rtl: setter(map-get($map, rtl), ());
+
 	align-items: $align-items;
 	background-color: $bg;
 	border-color: $border-color;
@@ -318,6 +321,10 @@
 	word-wrap: $word-wrap;
 
 	@at-root {
+		[dir="rtl"] & {
+			@include clay-css($rtl);
+		}
+
 		a#{&},
 		button#{&} {
 			cursor: $cursor;
