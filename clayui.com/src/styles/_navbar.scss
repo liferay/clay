@@ -38,6 +38,11 @@
 
 	.navbar-nav .nav-link {
 		font-weight: 600;
+
+		.c-inner {
+			margin-left: -0.5rem;
+			margin-right: -0.5rem;
+		}
 	}
 
 	.github-logo {

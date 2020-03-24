@@ -54,13 +54,15 @@ export default props => (
 						className="d-inline-block p-2 sidebar-logo text-decoration-none text-reset"
 						to="/"
 					>
-						<img
-							alt="Clay"
-							className="align-middle sidebar-logo-image"
-							src="/images/clay_logo_w.png"
-						/>
-						<span className="align-middle font-weight-700 h3 ml-2 sidebar-logo-title">
-							{'Clay'}
+						<span className="c-inner" tabIndex="-1">
+							<img
+								alt="Clay"
+								className="align-middle sidebar-logo-image"
+								src="/images/clay_logo_w.png"
+							/>
+							<span className="align-middle font-weight-700 h3 ml-2 sidebar-logo-title">
+								{'Clay'}
+							</span>
 						</span>
 					</Link>
 
@@ -75,18 +77,20 @@ export default props => (
 							onClick={onClick}
 							type="button"
 						>
-							<svg
-								aria-hidden="true"
-								className="lexicon-icon lexicon-icon-bars"
-							>
-								<use xlinkHref="/images/icons/icons.svg#bars" />
-							</svg>
-							<svg
-								aria-hidden="true"
-								className="lexicon-icon lexicon-icon-times"
-							>
-								<use xlinkHref="/images/icons/icons.svg#times" />
-							</svg>
+							<span className="c-inner" tabIndex="-1">
+								<svg
+									aria-hidden="true"
+									className="lexicon-icon lexicon-icon-bars"
+								>
+									<use xlinkHref="/images/icons/icons.svg#bars" />
+								</svg>
+								<svg
+									aria-hidden="true"
+									className="lexicon-icon lexicon-icon-times"
+								>
+									<use xlinkHref="/images/icons/icons.svg#times" />
+								</svg>
+							</span>
 						</button>
 					</div>
 				</div>

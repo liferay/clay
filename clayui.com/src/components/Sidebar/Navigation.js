@@ -127,18 +127,20 @@ const Anchor = ({location, onclick, onnavigation, page}) => {
 
 	return (
 		<TagName className="nav-link" {...props}>
-			<span>{page.title}</span>
-			{page.items && (
-				<svg
-					className="collapse-toggle"
-					focusable="false"
-					name="keyboardArrowRight"
-					role="presentation"
-				>
-					<path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
-					<path d="M0 0h24v24H0V0z" fill="none" />
-				</svg>
-			)}
+			<span className="c-inner" tabIndex="-1">
+				{page.title}
+				{page.items && (
+					<svg
+						className="collapse-toggle"
+						focusable="false"
+						name="keyboardArrowRight"
+						role="presentation"
+					>
+						<path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+						<path d="M0 0h24v24H0V0z" fill="none" />
+					</svg>
+				)}
+			</span>
 		</TagName>
 	);
 };
