@@ -36,6 +36,13 @@ interface IProps
 	large?: boolean;
 
 	/**
+	 * Attributes to apply to the inner label element
+	 */
+	innerElementProps?: React.HTMLAttributes<
+		HTMLAnchorElement | HTMLSpanElement
+	>;
+
+	/**
 	 * Path to the location of the spritemap resource used for Icon.
 	 */
 	spritemap?: string;
@@ -49,6 +56,7 @@ const ClayLabel = React.forwardRef<HTMLAnchorElement | HTMLSpanElement, IProps>(
 			closeButtonProps,
 			displayType = 'secondary',
 			href,
+			innerElementProps = {},
 			large = false,
 			spritemap,
 			...otherProps
@@ -67,7 +75,14 @@ const ClayLabel = React.forwardRef<HTMLAnchorElement | HTMLSpanElement, IProps>(
 				})}
 				ref={ref}
 			>
-				<TagName className="label-item label-item-expand" href={href}>
+				<TagName
+					{...innerElementProps}
+					className={classNames(
+						'label-item label-item-expand',
+						innerElementProps.className
+					)}
+					href={href}
+				>
 					{children}
 				</TagName>
 
