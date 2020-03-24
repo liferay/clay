@@ -8,7 +8,7 @@ const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {storiesOf} from '@storybook/react';
 import React from 'react';
 
-import ClayDatePicker, {FirstDayOfWeek} from '../src';
+import ClayDatePicker, {FirstDayOfWeek, getLocaleProps} from '../src';
 
 const ClayDatePickerWithState = (props: {[key: string]: any}) => {
 	const [value, setValue] = React.useState<string | Date>('');
@@ -53,7 +53,7 @@ storiesOf('Components|ClayDatePicker', module)
 			}}
 		/>
 	))
-	.add('locale', () => (
+	.add('w/ locale', () => (
 		<ClayDatePickerWithState
 			dateFormat="DD.MM.YYYY"
 			firstDayOfWeek={FirstDayOfWeek.Monday}
@@ -76,6 +76,17 @@ storiesOf('Components|ClayDatePicker', module)
 			time
 			timezone="GMT+03:00"
 			weekdaysShort={['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']}
+			years={{
+				end: 2024,
+				start: 1997,
+			}}
+		/>
+	))
+	.add('w/ getLocaleProps', () => (
+		<ClayDatePickerWithState
+			{...getLocaleProps('ru')}
+			placeholder="DD.MM.YYYY"
+			spritemap={spritemap}
 			years={{
 				end: 2024,
 				start: 1997,
