@@ -36,6 +36,9 @@ $date-picker-nav-btn-monospaced: () !default;
 $date-picker-nav-btn-monospaced: map-deep-merge((
 	margin-bottom: 0,
 	margin-top: 0,
+	rtl: (
+		transform: rotate(180deg),
+	),
 ), $date-picker-nav-btn-monospaced);
 
 $date-picker-nav-select: () !default;
