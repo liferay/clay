@@ -1,5 +1,5 @@
 ---
-title: 'Migrate the Clay components from v2 to v3'
+title: 'Migrate the Clay Components From v2 to v3'
 ---
 
 <div class="nav-toc-absolute">

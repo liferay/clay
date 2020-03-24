@@ -21,12 +21,16 @@ export default () => (
 							className="nav-link"
 							to="/docs/get-started/what-is-clay.html"
 						>
-							{'Docs'}
+							<span className="c-inner" tabIndex="-1">
+								{'Docs'}
+							</span>
 						</Link>
 					</li>
 					<li className="nav-item">
 						<Link className="nav-link" to="/blog">
-							{'Blog'}
+							<span className="c-inner" tabIndex="-1">
+								{'Blog'}
+							</span>
 						</Link>
 					</li>
 					<li className="nav-item">
@@ -36,7 +40,9 @@ export default () => (
 							rel="noopener noreferrer"
 							target="_blank"
 						>
-							{'Storybook'}
+							<span className="c-inner" tabIndex="-1">
+								{'Storybook'}
+							</span>
 						</a>
 					</li>
 					<li className="nav-item">
@@ -46,7 +52,9 @@ export default () => (
 							rel="noopener noreferrer"
 							target="_blank"
 						>
-							{'Codesandbox'}
+							<span className="c-inner" tabIndex="-1">
+								{'Codesandbox'}
+							</span>
 						</a>
 					</li>
 					<li className="nav-item">
@@ -56,11 +64,13 @@ export default () => (
 							rel="noopener noreferrer"
 							target="_blank"
 						>
-							<img
-								alt="Github"
-								className="github-logo"
-								src="/images/home/github-logo.svg"
-							/>
+							<span className="c-inner" tabIndex="-1">
+								<img
+									alt="Github"
+									className="github-logo"
+									src="/images/home/github-logo.svg"
+								/>
+							</span>
 						</a>
 					</li>
 				</ul>

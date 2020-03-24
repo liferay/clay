@@ -11,6 +11,10 @@
 			.sidebar-logo-image {
 				max-height: 32px;
 			}
+
+			.c-inner {
+				margin: -0.5rem;
+			}
 		}
 
 		@media (min-width: $grid-float-breakpoint) {
@@ -19,6 +23,12 @@
 
 		@media (max-width: $grid-float-breakpoint - 1) {
 			display: none;
+		}
+	}
+
+	.sidebar-toggler {
+		.c-inner {
+			margin: -0.3125rem -0.5625rem;
 		}
 	}
 
@@ -37,25 +47,25 @@
 
 		> .nav-link {
 			font-weight: 600;
-			padding-right: 32px;
+			padding-right: 2rem;
+
+			> .c-inner {
+				margin-right: -2rem;
+			}
 		}
 	}
 
 	.nav-link {
-		align-items: center;
 		border-radius: 6px;
 		color: $brand-secondary;
-		display: flex;
-		line-height: $base-size / 1.375;
+		line-height: 1;
 		margin-bottom: 2px;
-		padding: 0.45rem 1rem;
-		min-height: 35px;
 
 		&:hover {
 			background-color: $brand-dark-lighter;
 		}
 
-		> .collapse-toggle {
+		.collapse-toggle {
 			display: inline-block;
 			height: 24px;
 			margin-top: -12px;

@@ -1,5 +1,5 @@
 ---
-title: 'How to use clay'
+title: 'How to Use Clay'
 description: 'Practical guidelines to start using Clay, a quick guide on how to install components and css to get started.'
 order: 2
 ---
