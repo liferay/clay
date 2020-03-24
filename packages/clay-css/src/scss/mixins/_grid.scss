@@ -13,7 +13,7 @@
 		margin-right: 0;
 
 		> .col,
-		> [class*="col-"] {
+		> [class*='col-'] {
 			padding-right: 0;
 			padding-left: 0;
 		}
@@ -197,7 +197,7 @@
 	vertical-align: $vertical-align;
 	width: $width;
 
-	@if($breakpoint-down) {
+	@if ($breakpoint-down) {
 		@include media-breakpoint-down($breakpoint-down) {
 			padding-bottom: $padding-bottom-mobile;
 			padding-left: $padding-left-mobile;
@@ -240,9 +240,12 @@
 }
 
 @mixin clay-custom-grid-columns($map) {
-	$custom-grid-props: map-merge((
-		enabled: $enable-grid-classes
-	), $map);
+	$custom-grid-props: map-merge(
+		(
+			enabled: $enable-grid-classes,
+		),
+		$map
+	);
 
 	$enabled: map-get($custom-grid-props, enabled);
 
@@ -253,7 +256,10 @@
 		max-width: map-get(map-get($custom-grid-props, base), max-width);
 		min-width: map-get(map-get($custom-grid-props, base), min-width);
 		padding-left: map-get(map-get($custom-grid-props, base), padding-left);
-		padding-right: map-get(map-get($custom-grid-props, base), padding-right);
+		padding-right: map-get(
+			map-get($custom-grid-props, base),
+			padding-right
+		);
 		position: relative;
 		width: 100%;
 
@@ -262,11 +268,26 @@
 
 			@if ($next) {
 				@media (min-width: map-get(map-get($custom-grid-props, $next), breakpoint)) {
-					flex-basis: map-get(map-get($custom-grid-props, $next), flex-basis);
-					max-width: map-get(map-get($custom-grid-props, $next), max-width);
-					min-width: map-get(map-get($custom-grid-props, $next), min-width);
-					padding-left: map-get(map-get($custom-grid-props, $next), padding-left);
-					padding-right: map-get(map-get($custom-grid-props, $next), padding-right);
+					flex-basis: map-get(
+						map-get($custom-grid-props, $next),
+						flex-basis
+					);
+					max-width: map-get(
+						map-get($custom-grid-props, $next),
+						max-width
+					);
+					min-width: map-get(
+						map-get($custom-grid-props, $next),
+						min-width
+					);
+					padding-left: map-get(
+						map-get($custom-grid-props, $next),
+						padding-left
+					);
+					padding-right: map-get(
+						map-get($custom-grid-props, $next),
+						padding-right
+					);
 				}
 			}
 		}

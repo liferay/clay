@@ -14,7 +14,9 @@
 	@include clay-menubar-vertical-expand($menubar-vertical-expand-md);
 
 	&.menubar-transparent {
-		@include clay-menubar-vertical-variant($menubar-vertical-transparent-md);
+		@include clay-menubar-vertical-variant(
+			$menubar-vertical-transparent-md
+		);
 	}
 
 	&.menubar-decorated {
@@ -23,7 +25,9 @@
 				@include clay-css($menubar-vertical-decorated-md-nav);
 
 				> .nav-item .nav {
-					@include clay-css($menubar-vertical-decorated-md-nav-item-nav);
+					@include clay-css(
+						$menubar-vertical-decorated-md-nav-item-nav
+					);
 				}
 			}
 
@@ -31,7 +35,9 @@
 				@include clay-css($menubar-vertical-decorated-md-nav-link);
 
 				&.active::after {
-					@include clay-css($menubar-vertical-decorated-md-nav-link-after-active);
+					@include clay-css(
+						$menubar-vertical-decorated-md-nav-link-after-active
+					);
 				}
 			}
 		}
@@ -44,7 +50,9 @@
 	@include clay-menubar-vertical-expand($menubar-vertical-expand-lg);
 
 	&.menubar-transparent {
-		@include clay-menubar-vertical-variant($menubar-vertical-transparent-lg);
+		@include clay-menubar-vertical-variant(
+			$menubar-vertical-transparent-lg
+		);
 	}
 
 	&.menubar-decorated {
@@ -53,7 +61,9 @@
 				@include clay-css($menubar-vertical-decorated-lg-nav);
 
 				> .nav-item .nav {
-					@include clay-css($menubar-vertical-decorated-lg-nav-item-nav);
+					@include clay-css(
+						$menubar-vertical-decorated-lg-nav-item-nav
+					);
 				}
 			}
 
@@ -61,7 +71,9 @@
 				@include clay-css($menubar-vertical-decorated-lg-nav-link);
 
 				&.active::after {
-					@include clay-css($menubar-vertical-decorated-lg-nav-link-after-active);
+					@include clay-css(
+						$menubar-vertical-decorated-lg-nav-link-after-active
+					);
 				}
 			}
 		}

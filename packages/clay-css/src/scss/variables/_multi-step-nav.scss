@@ -31,9 +31,11 @@ $multi-step-icon-focus-text-decoration: $multi-step-icon-hover-text-decoration !
 $multi-step-divider-bg: $gray-200 !default;
 $multi-step-divider-height: 0.25rem !default;
 $multi-step-divider-spacer-x: 0 !default;
-$multi-step-divider-top: ($multi-step-divider-height / 2) + ($multi-step-icon-size / 2) !default;
+$multi-step-divider-top: ($multi-step-divider-height / 2) +
+	($multi-step-icon-size / 2) !default;
 
-$multi-step-indicator-width: $multi-step-icon-size + ($multi-step-divider-spacer-x * 2) !default;
+$multi-step-indicator-width: $multi-step-icon-size +
+	($multi-step-divider-spacer-x * 2) !default;
 
 $multi-step-indicator-label-color: null !default;
 $multi-step-indicator-label-font-size: $font-size-base !default;
@@ -52,11 +54,17 @@ $multi-step-item-fixed-width: 150px !default;
 
 $multi-step-icon-complete-color: $white !default;
 $multi-step-icon-complete-bg: $gray-600 !default;
-$multi-step-icon-complete-bg-image: clay-icon(check, $multi-step-icon-complete-color) !default;
+$multi-step-icon-complete-bg-image: clay-icon(
+	check,
+	$multi-step-icon-complete-color
+) !default;
 $multi-step-icon-complete-bg-position: center !default;
 $multi-step-icon-complete-bg-size: $multi-step-icon-font-size !default;
 $multi-step-divider-complete-bg: $multi-step-icon-complete-bg !default;
-$multi-step-dropdown-indicator-complete-icon: clay-icon(check, $dropdown-link-active-color) !default;
+$multi-step-dropdown-indicator-complete-icon: clay-icon(
+	check,
+	$dropdown-link-active-color
+) !default;
 $multi-step-dropdown-indicator-complete-width: 0.875rem !default;
 
 $multi-step-icon-active-color: $component-active-color !default;

@@ -16,7 +16,8 @@
 			$next: breakpoint-next($breakpoint, $grid-breakpoints);
 			$infix: breakpoint-infix($next, $grid-breakpoints);
 
-			@if not ($infix == '') { // .container-no-gutters-sm-down, md-down, lg-down, xl-down
+			@if not($infix == '') {
+				// .container-no-gutters-sm-down, md-down, lg-down, xl-down
 				&#{$infix}-down {
 					@include media-breakpoint-down($breakpoint) {
 						@include clay-container-no-gutters;
@@ -44,7 +45,9 @@
 		@include clay-container($container-form-lg);
 
 		.menubar-vertical-expand-lg {
-			$container-form-lg-breakpoint-down: clay-breakpoint-prev(map-get($container-form-lg, breakpoint-up));
+			$container-form-lg-breakpoint-down: clay-breakpoint-prev(
+				map-get($container-form-lg, breakpoint-up)
+			);
 
 			@include media-breakpoint-down($container-form-lg-breakpoint-down) {
 				margin-top: -(map-get($container-form-lg, padding-top-mobile));

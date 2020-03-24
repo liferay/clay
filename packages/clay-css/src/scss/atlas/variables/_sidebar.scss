@@ -1,31 +1,44 @@
 // Sidebar Header Title
 
 $sidebar-header-component-title: () !default;
-$sidebar-header-component-title: map-deep-merge((
-	font-size: 1.25rem // 20px,
-), $sidebar-header-component-title);
+$sidebar-header-component-title: map-deep-merge(
+	(
+		font-size: 1.25rem // 20px,,
+	),
+	$sidebar-header-component-title
+);
 
 // Sidebar Header Subtitle
 
 $sidebar-header-component-subtitle: () !default;
-$sidebar-header-component-subtitle: map-deep-merge((
-	font-size: 0.75rem, // 12px
-	font-weight: $font-weight-normal
-), $sidebar-header-component-subtitle);
+$sidebar-header-component-subtitle: map-deep-merge(
+	(
+		font-size: 0.75rem,
+		// 12px
+			font-weight: $font-weight-normal,
+	),
+	$sidebar-header-component-subtitle
+);
 
 // Sidebar DT
 
 $sidebar-dt: () !default;
-$sidebar-dt: map-deep-merge((
-	font-size: 0.75rem // 12px
-), $sidebar-dt);
+$sidebar-dt: map-deep-merge(
+	(
+		font-size: 0.75rem // 12px,
+	),
+	$sidebar-dt
+);
 
 // Sidebar DD
 
 $sidebar-dd: () !default;
-$sidebar-dd: map-deep-merge((
-	font-size: 0.875rem // 14px
-), $sidebar-dd);
+$sidebar-dd: map-deep-merge(
+	(
+		font-size: 0.875rem // 14px,
+	),
+	$sidebar-dd
+);
 
 // Sidebar List Group
 
@@ -34,28 +47,34 @@ $sidebar-list-group-border-color: $secondary-l2 !default;
 // Sidebar Light
 
 $sidebar-light: () !default;
-$sidebar-light: map-deep-merge((
-	bg: $white,
-	border-left-width: 0,
-	box-shadow: -0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
-	panel-bg: $gray-200,
-	dt: (
-		color: $gray-600
-	),
-	dd: (
-		clay-link: (
-			color: $gray-900
-		)
-	),
-	panel-unstyled: (
-		header-link: (
-			focus-box-shadow: 0 0 0 0.25rem $white#{','} 0 0 0 0.375rem $primary-l1,
+$sidebar-light: map-deep-merge(
+	(
+		bg: $white,
+		border-left-width: 0,
+		box-shadow: -0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
+		panel-bg: $gray-200,
+		dt: (
+			color: $gray-600,
+		),
+		dd: (
+			clay-link: (
+				color: $gray-900,
+			),
+		),
+		panel-unstyled: (
+			header-link: (
+				focus-box-shadow: 0 0 0 0.25rem $white#{','} 0 0 0 0.375rem $primary-l1,
+			),
 		),
 	),
-), $sidebar-light);
+	$sidebar-light
+);
 
 $sidebar-light-navigation-bar: () !default;
-$sidebar-light-navigation-bar: map-deep-merge((
-	bg: $white,
-	border-color: $secondary-l2
-), $sidebar-light-navigation-bar);
+$sidebar-light-navigation-bar: map-deep-merge(
+	(
+		bg: $white,
+		border-color: $secondary-l2,
+	),
+	$sidebar-light-navigation-bar
+);

@@ -40,22 +40,28 @@
 	$box-shadow: map-get($map, box-shadow);
 	$color: map-get($map, color);
 
-	$sidebar: map-merge((
-		background-color: $bg,
-		border-color: $border-color,
-		border-bottom-width: $border-bottom-width,
-		border-left-width: $border-left-width,
-		border-right-width: $border-right-width,
-		border-top-width: $border-top-width,
-		box-shadow: $box-shadow,
-		color: $color,
-	), $map);
+	$sidebar: map-merge(
+		(
+			background-color: $bg,
+			border-color: $border-color,
+			border-bottom-width: $border-bottom-width,
+			border-left-width: $border-left-width,
+			border-right-width: $border-right-width,
+			border-top-width: $border-top-width,
+			box-shadow: $box-shadow,
+			color: $color,
+		),
+		$map
+	);
 
 	$panel-bg: map-get($map, panel-bg);
 
-	$panel: map-deep-merge((
-		background-color: $panel-bg,
-	), map-get($map, panel));
+	$panel: map-deep-merge(
+		(
+			background-color: $panel-bg,
+		),
+		map-get($map, panel)
+	);
 
 	$header: map-deep-merge((), map-get($map, header));
 
@@ -64,7 +70,10 @@
 	$footer: map-deep-merge((), map-get($map, footer));
 
 	$component-header-title: setter(map-get($map, component-header-title), ());
-	$component-header-subtitle: setter(map-get($map, component-header-subtitle), ());
+	$component-header-subtitle: setter(
+		map-get($map, component-header-subtitle),
+		()
+	);
 	$component-link: setter(map-get($map, component-link), ());
 
 	$close: map-deep-merge((), map-get($map, close));
@@ -77,21 +86,45 @@
 	$dd: setter(map-get($map, dd), ());
 
 	$sidebar-list-group-item-bg: map-get($map, sidebar-list-group-item-bg);
-	$sidebar-list-group-item-border-color: map-get($map, sidebar-list-group-item-border-color);
+	$sidebar-list-group-item-border-color: map-get(
+		$map,
+		sidebar-list-group-item-border-color
+	);
 
-	$sidebar-list-group-item: map-deep-merge((
-		background-color: $sidebar-list-group-item-bg,
-		border-color: $sidebar-list-group-item-border-color,
-	), map-get($map, sidebar-list-group-item));
+	$sidebar-list-group-item: map-deep-merge(
+		(
+			background-color: $sidebar-list-group-item-bg,
+			border-color: $sidebar-list-group-item-border-color,
+		),
+		map-get($map, sidebar-list-group-item)
+	);
 
-	$sidebar-list-group-title: setter(map-get($map, sidebar-list-group-title), ());
-	$sidebar-list-group-subtitle: setter(map-get($map, sidebar-list-group-subtitle), ());
-	$sidebar-list-group-text: setter(map-get($map, sidebar-list-group-text), ());
-	$sidebar-list-group-subtext: setter(map-get($map, sidebar-list-group-subtext), ());
+	$sidebar-list-group-title: setter(
+		map-get($map, sidebar-list-group-title),
+		()
+	);
+	$sidebar-list-group-subtitle: setter(
+		map-get($map, sidebar-list-group-subtitle),
+		()
+	);
+	$sidebar-list-group-text: setter(
+		map-get($map, sidebar-list-group-text),
+		()
+	);
+	$sidebar-list-group-subtext: setter(
+		map-get($map, sidebar-list-group-subtext),
+		()
+	);
 
-	$sidebar-list-group-sticker: map-deep-merge((), map-get($map, sidebar-list-group-sticker));
+	$sidebar-list-group-sticker: map-deep-merge(
+		(),
+		map-get($map, sidebar-list-group-sticker)
+	);
 
-	$sidebar-list-group-sticker-secondary: map-deep-merge((), map-get($map, sidebar-list-group-sticker-secondary));
+	$sidebar-list-group-sticker-secondary: map-deep-merge(
+		(),
+		map-get($map, sidebar-list-group-sticker-secondary)
+	);
 
 	$panel-unstyled: setter(map-get($map, panel-unstyled), ());
 

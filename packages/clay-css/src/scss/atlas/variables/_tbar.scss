@@ -1,37 +1,55 @@
 $component-tbar: () !default;
-$component-tbar: map-deep-merge((
-	border-color: $gray-300,
-	color: $gray-600,
-), $component-tbar);
+$component-tbar: map-deep-merge(
+	(
+		border-color: $gray-300,
+		color: $gray-600,
+	),
+	$component-tbar
+);
 
 // Subnav Tbar Primary
 
 $subnav-tbar-primary-component-link: () !default;
-$subnav-tbar-primary-component-link: map-deep-merge((
-	disabled-opacity: 0.65
-), $subnav-tbar-primary-component-link);
+$subnav-tbar-primary-component-link: map-deep-merge(
+	(
+		disabled-opacity: 0.65,
+	),
+	$subnav-tbar-primary-component-link
+);
 
 $subnav-tbar-primary-component-label-close: () !default;
-$subnav-tbar-primary-component-label-close: map-deep-merge((
-	disabled-opacity: 0.65
-), $subnav-tbar-primary-component-label-close);
+$subnav-tbar-primary-component-label-close: map-deep-merge(
+	(
+		disabled-opacity: 0.65,
+	),
+	$subnav-tbar-primary-component-label-close
+);
 
 // Subnav Tbar Primary Disabled
 
 $subnav-tbar-primary-disabled-component-label: () !default;
-$subnav-tbar-primary-disabled-component-label: map-deep-merge((
-	border-color: #8E94AA
-), $subnav-tbar-primary-disabled-component-label);
+$subnav-tbar-primary-disabled-component-label: map-deep-merge(
+	(
+		border-color: #8e94aa,
+	),
+	$subnav-tbar-primary-disabled-component-label
+);
 
 $subnav-tbar-primary-disabled: () !default;
-$subnav-tbar-primary-disabled: map-deep-merge((
-	color: #8E94AA
-), $subnav-tbar-primary-disabled);
+$subnav-tbar-primary-disabled: map-deep-merge(
+	(
+		color: #8e94aa,
+	),
+	$subnav-tbar-primary-disabled
+);
 
 // Subnav Tbar Light
 
 $subnav-tbar-light: () !default;
-$subnav-tbar-light: map-deep-merge((
-	bg-color: $light-l2,
-	color: $gray-600,
-), $subnav-tbar-light);
+$subnav-tbar-light: map-deep-merge(
+	(
+		bg-color: $light-l2,
+		color: $gray-600,
+	),
+	$subnav-tbar-light
+);

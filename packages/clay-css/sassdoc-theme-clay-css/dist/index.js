@@ -1,7 +1,7 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
+Object.defineProperty(exports, '__esModule', {
+	value: true,
 });
 
 var _default = require('../default');
@@ -36,7 +36,9 @@ var _nunjucks = require('./nunjucks');
 
 var _nunjucks2 = _interopRequireDefault(_nunjucks);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+	return obj && obj.__esModule ? obj : {default: obj};
+}
 
 var denodeify = (0, _es6Denodeify2.default)(_es6Promise.Promise);
 
@@ -45,34 +47,61 @@ var renderFile = denodeify(_nunjucks2.default.render);
 var writeFile = denodeify(_fsExtra2.default.writeFile);
 
 var applyDefaults = function applyDefaults(ctx) {
-  return (0, _extend2.default)({}, _default2.default, ctx, {
-    groups: (0, _extend2.default)(_default2.default.groups, ctx.groups),
-    display: (0, _extend2.default)(_default2.default.display, ctx.display)
-  });
+	return (0, _extend2.default)({}, _default2.default, ctx, {
+		groups: (0, _extend2.default)(_default2.default.groups, ctx.groups),
+		display: (0, _extend2.default)(_default2.default.display, ctx.display),
+	});
 };
 
 var shortcutIcon = function shortcutIcon(dest, ctx) {
-  if (!ctx.shortcutIcon) {
-    ctx.shortcutIcon = { type: 'internal', url: 'assets/images/favicon.png' };
-  } else if (ctx.shortcutIcon.type === 'internal') {
-    ctx.shortcutIcon.url = 'assets/images/' + ctx.shortcutIcon.url;
+	if (!ctx.shortcutIcon) {
+		ctx.shortcutIcon = {type: 'internal', url: 'assets/images/favicon.png'};
+	} else if (ctx.shortcutIcon.type === 'internal') {
+		ctx.shortcutIcon.url = 'assets/images/' + ctx.shortcutIcon.url;
 
-    return function () {
-      return copy(ctx.shortcutIcon.path, _path2.default.resolve(dest, ctx.shortcutIcon.url));
-    };
-  }
+		return function() {
+			return copy(
+				ctx.shortcutIcon.path,
+				_path2.default.resolve(dest, ctx.shortcutIcon.url)
+			);
+		};
+	}
 };
 
-exports.default = function (dest, ctx) {
-  ctx = applyDefaults(ctx);
-  (0, _sassdocExtras2.default)(ctx, 'description', 'markdown', 'display', 'groupName', 'shortcutIcon', 'sort', 'resolveVariables');
-  ctx.data.byGroupAndType = _sassdocExtras2.default.byGroupAndType(ctx.data);
+exports.default = function(dest, ctx) {
+	ctx = applyDefaults(ctx);
+	(0, _sassdocExtras2.default)(
+		ctx,
+		'description',
+		'markdown',
+		'display',
+		'groupName',
+		'shortcutIcon',
+		'sort',
+		'resolveVariables'
+	);
+	ctx.data.byGroupAndType = _sassdocExtras2.default.byGroupAndType(ctx.data);
 
-  var index = _path2.default.resolve(__dirname, '../views/documentation/index.html.njk');
+	var index = _path2.default.resolve(
+		__dirname,
+		'../views/documentation/index.html.njk'
+	);
 
-  return _es6Promise.Promise.all([copy(_path2.default.resolve(__dirname, '../assets'), _path2.default.resolve(dest, 'assets')).then(shortcutIcon(dest, ctx)), renderFile(index, ctx).then(function (html) {
-    return (0, _htmlMinifier.minify)(html, { collapseWhitespace: true });
-  }).then(function (html) {
-    return writeFile(_path2.default.resolve(dest, 'index.html'), html);
-  })]);
+	return _es6Promise.Promise.all([
+		copy(
+			_path2.default.resolve(__dirname, '../assets'),
+			_path2.default.resolve(dest, 'assets')
+		).then(shortcutIcon(dest, ctx)),
+		renderFile(index, ctx)
+			.then(function(html) {
+				return (0,
+				_htmlMinifier.minify)(html, {collapseWhitespace: true});
+			})
+			.then(function(html) {
+				return writeFile(
+					_path2.default.resolve(dest, 'index.html'),
+					html
+				);
+			}),
+	]);
 };

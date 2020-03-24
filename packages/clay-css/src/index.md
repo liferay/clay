@@ -13,8 +13,9 @@ This is Clay, the web implementation of Liferay's Experience Language. This is a
 
 We are moving away from [Bootstrap 4's Utility System](http://getbootstrap.com/docs/4.0/utilities) because it assumes you have complete access to the markup. As theme developers, we know that is not always the case. There are many situations where we don't have access or know what the markup will be, therefore we prefer to take colors and spacing on a per component basis. This helps us scope the CSS properties to a specific component so we don't have to worry much about breaking colors or spacing in unrelated components.
 
-- [https://github.com/liferay/clay/issues/377](https://github.com/liferay/clay/issues/377)
-- [https://github.com/liferay/clay/issues/381](https://github.com/liferay/clay/issues/381)
+-   [https://github.com/liferay/clay/issues/377](https://github.com/liferay/clay/issues/377)
+-   [https://github.com/liferay/clay/issues/381](https://github.com/liferay/clay/issues/381)
 
 ### Contributing
+
 If you would like to contribute to the project, view the source or file an issue, please visit the [GitHub repo](https://github.com/liferay/clay).

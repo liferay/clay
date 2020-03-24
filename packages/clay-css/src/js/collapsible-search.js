@@ -1,4 +1,4 @@
-+function($) {
++(function($) {
 	var CollapsibleSearch = function(element) {
 		var instance = this;
 
@@ -7,10 +7,22 @@
 		instance.$input = instance.$element.find('input[type="text"]');
 		instance.$submit = instance.$element.find('[type="submit"]');
 
-		instance.$close.on('click.lexicon.close.collapsible-search', $.proxy(instance.close, instance));
-		instance.$input.on('blur.lexicon.collapsible-search', $.proxy(instance.blur, instance));
-		instance.$input.on('focus.lexicon.collapsible-search', $.proxy(instance.focus, instance));
-		instance.$submit.on('click.lexicon.submit.collapsible-search', $.proxy(instance.submit, instance));
+		instance.$close.on(
+			'click.lexicon.close.collapsible-search',
+			$.proxy(instance.close, instance)
+		);
+		instance.$input.on(
+			'blur.lexicon.collapsible-search',
+			$.proxy(instance.blur, instance)
+		);
+		instance.$input.on(
+			'focus.lexicon.collapsible-search',
+			$.proxy(instance.focus, instance)
+		);
+		instance.$submit.on(
+			'click.lexicon.submit.collapsible-search',
+			$.proxy(instance.submit, instance)
+		);
 	};
 
 	CollapsibleSearch.BREAKPOINT = 768;
@@ -40,16 +52,18 @@
 			var supportsTransition = bootstrap.Util.supportsTransitionEnd();
 
 			if (supportsTransition) {
-				basicSearchSlider.one('bsTransitionEnd', $.proxy(complete, instance))
-					.emulateTransitionEnd(CollapsibleSearch.TRANSITION_DURATION);
+				basicSearchSlider
+					.one('bsTransitionEnd', $.proxy(complete, instance))
+					.emulateTransitionEnd(
+						CollapsibleSearch.TRANSITION_DURATION
+					);
 			}
 
 			basicSearch.addClass('basic-search-transition').removeClass('open');
 
 			if (!supportsTransition) {
 				complete.call(instance);
-			}
-			else {
+			} else {
 				basicSearchSubmit.focus();
 			}
 		},
@@ -64,17 +78,23 @@
 		},
 
 		focus: function(event) {
-			$(event.currentTarget).closest('.basic-search').addClass('focus');
+			$(event.currentTarget)
+				.closest('.basic-search')
+				.addClass('focus');
 		},
 
 		submit: function(event) {
 			var instance = this;
 
 			if (window.innerWidth < CollapsibleSearch.BREAKPOINT) {
-				var basicSearch = $(event.currentTarget).parents('.basic-search');
+				var basicSearch = $(event.currentTarget).parents(
+					'.basic-search'
+				);
 
 				var basicSearchInput = basicSearch.find('input[type="text"]');
-				var basicSearchSlider = basicSearch.find('.basic-search-slider');
+				var basicSearchSlider = basicSearch.find(
+					'.basic-search-slider'
+				);
 
 				var complete = function() {
 					basicSearch.removeClass('basic-search-transition');
@@ -89,38 +109,41 @@
 					var supportsTransition = bootstrap.Util.supportsTransitionEnd();
 
 					if (supportsTransition) {
-						basicSearchSlider.one('bsTransitionEnd', $.proxy(complete, instance))
-							.emulateTransitionEnd(CollapsibleSearch.TRANSITION_DURATION);
+						basicSearchSlider
+							.one('bsTransitionEnd', $.proxy(complete, instance))
+							.emulateTransitionEnd(
+								CollapsibleSearch.TRANSITION_DURATION
+							);
 					}
 
-					basicSearch.addClass('basic-search-transition').addClass('open');
+					basicSearch
+						.addClass('basic-search-transition')
+						.addClass('open');
 
 					if (!supportsTransition) {
 						complete.call(instance);
 					}
 				}
 			}
-		}
+		},
 	};
 
 	var Plugin = function(option) {
-		return this.each(
-			function() {
-				var $this = $(this);
+		return this.each(function() {
+			var $this = $(this);
 
-				var data = $this.data('lexicon.collapsible-search');
+			var data = $this.data('lexicon.collapsible-search');
 
-				if (!data) {
-					data = new CollapsibleSearch(this);
+			if (!data) {
+				data = new CollapsibleSearch(this);
 
-					$this.data('lexicon.collapsible-search', data);
-				}
-
-				if (typeof option == 'string') {
-					data[option]();
-				}
+				$this.data('lexicon.collapsible-search', data);
 			}
-		);
+
+			if (typeof option == 'string') {
+				data[option]();
+			}
+		});
 	};
 
 	var old = $.fn.collapsibleSearch;
@@ -139,8 +162,24 @@
 	var submit = '[data-toggle="collapsible-search"] [type="submit"]';
 
 	$(document)
-		.on('blur.lexicon.collapsible-search.data-api', input, $.proxy(CollapsibleSearch.prototype.blur, CollapsibleSearch))
-		.on('click.lexicon.close.collapsible-search.data-api', close, $.proxy(CollapsibleSearch.prototype.close, CollapsibleSearch))
-		.on('click.lexicon.submit.collapsible-search.data-api', submit, $.proxy(CollapsibleSearch.prototype.submit, CollapsibleSearch))
-		.on('focus.lexicon.collapsible-search.data-api', input, $.proxy(CollapsibleSearch.prototype.focus, CollapsibleSearch));
-}(jQuery);
+		.on(
+			'blur.lexicon.collapsible-search.data-api',
+			input,
+			$.proxy(CollapsibleSearch.prototype.blur, CollapsibleSearch)
+		)
+		.on(
+			'click.lexicon.close.collapsible-search.data-api',
+			close,
+			$.proxy(CollapsibleSearch.prototype.close, CollapsibleSearch)
+		)
+		.on(
+			'click.lexicon.submit.collapsible-search.data-api',
+			submit,
+			$.proxy(CollapsibleSearch.prototype.submit, CollapsibleSearch)
+		)
+		.on(
+			'focus.lexicon.collapsible-search.data-api',
+			input,
+			$.proxy(CollapsibleSearch.prototype.focus, CollapsibleSearch)
+		);
+})(jQuery);

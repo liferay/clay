@@ -6,24 +6,24 @@
  */
 
 html {
-  box-sizing: border-box;
-  -ms-overflow-style: scrollbar;
+	box-sizing: border-box;
+	-ms-overflow-style: scrollbar;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
-@import "functions";
-@import "variables";
+@import 'functions';
+@import 'variables';
 
-@import "mixins/breakpoints";
-@import "mixins/grid-framework";
-@import "mixins/grid";
+@import 'mixins/breakpoints';
+@import 'mixins/grid-framework';
+@import 'mixins/grid';
 
-@import "grid";
-@import "utilities/display";
-@import "utilities/flex";
-@import "utilities/spacing";
+@import 'grid';
+@import 'utilities/display';
+@import 'utilities/flex';
+@import 'utilities/spacing';

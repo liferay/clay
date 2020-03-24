@@ -8,7 +8,7 @@
 src/scss/functions/_global-functions.scss
 ```
 
-## Clay CSS Bootstrap 4 Variable Overwrites 
+## Clay CSS Bootstrap 4 Variable Overwrites
 
 > We use this file for the most destructive Bootstrap 4 variables. We use SVG icons for our dropdown carets, therefore prefer to have settings like `$enable-caret: false !default;` instead of true.
 

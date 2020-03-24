@@ -6,7 +6,7 @@ module.exports = {
 		version: JSON.parse(
 			fs.readFileSync(path.join(__dirname, '../package.json'))
 		).version,
-		year: (new Date()).getFullYear()
+		year: new Date().getFullYear(),
 	},
 	tpl: [
 		'/**',
@@ -16,6 +16,6 @@ module.exports = {
 		'* All rights reserved.',
 		'* MIT license',
 		'*/',
-		''
-	].join('\n')
+		'',
+	].join('\n'),
 };

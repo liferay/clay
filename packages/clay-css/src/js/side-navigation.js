@@ -1,4 +1,4 @@
-+function($) {
++(function($) {
 	var doc = $(document);
 
 	var listenerAdded = false;
@@ -10,12 +10,9 @@
 		if (!listenerAdded) {
 			$(window).on(
 				'resize',
-				debounce(
-					function(event) {
-						doc.trigger('screenChange.lexicon.sidenav');
-					},
-					150
-				)
+				debounce(function(event) {
+					doc.trigger('screenChange.lexicon.sidenav');
+				}, 150)
 			);
 
 			listenerAdded = true;
@@ -53,17 +50,13 @@
 
 		if (windowWidth >= screenLg) {
 			region = 'lg';
-		}
-		else if (windowWidth >= screenMd) {
+		} else if (windowWidth >= screenMd) {
 			region = 'md';
-		}
-		else if (windowWidth >= screenSm) {
+		} else if (windowWidth >= screenSm) {
 			region = 'sm';
-		}
-		else if (windowWidth >= screenXs) {
+		} else if (windowWidth >= screenXs) {
 			region = 'xs';
-		}
-		else {
+		} else {
 			region = 'xxs';
 		}
 
@@ -77,14 +70,14 @@
 			var strId = toggler.attr('id');
 
 			if (!strId) {
-				strId = (ns + counter++);
+				strId = ns + counter++;
 
 				toggler.attr('id', strId);
 			}
 
 			return strId;
 		};
-	}());
+	})();
 
 	var toInt = function(str) {
 		return parseInt(str, 10) || 0;
@@ -105,9 +98,14 @@
 			options = $.extend({}, $.fn.sideNavigation.defaults, options);
 
 			options.breakpoint = toInt(options.breakpoint);
-			options.container = options.container || toggler.data('target') || toggler.attr('href');
+			options.container =
+				options.container ||
+				toggler.data('target') ||
+				toggler.attr('href');
 			options.gutter = toInt(options.gutter);
-			options.heightType = options.heightType || (options.equalHeight ? 'equalHeight' : false);
+			options.heightType =
+				options.heightType ||
+				(options.equalHeight ? 'equalHeight' : false);
 			options.rtl = doc.attr('dir') === 'rtl';
 			options.width = toInt(options.width);
 			options.widthOriginal = options.width;
@@ -118,7 +116,9 @@
 				options.closedClass = toggler.data('closed-class') || 'closed';
 				options.content = toggler.data('content');
 				options.equalHeight = false; // equalHeight option is deprecated
-				options.loadingIndicatorTPL = toggler.data('loading-indicator-tpl') || options.loadingIndicatorTPL;
+				options.loadingIndicatorTPL =
+					toggler.data('loading-indicator-tpl') ||
+					options.loadingIndicatorTPL;
 				options.openClass = toggler.data('open-class') || 'open';
 				options.toggler = toggler;
 				options.type = toggler.data('type');
@@ -157,8 +157,7 @@
 				for (var i = 0; i < attribute.length; i++) {
 					els.css(attribute[i], '');
 				}
-			}
-			else {
+			} else {
 				els.css(attribute, '');
 			}
 		},
@@ -172,7 +171,10 @@
 
 			// Detach sidenav close
 
-			doc.off('click.close.lexicon.sidenav', instance.closeButtonSelector);
+			doc.off(
+				'click.close.lexicon.sidenav',
+				instance.closeButtonSelector
+			);
 			doc.data(instance.dataCloseButtonSelector, null);
 
 			// Detach toggler
@@ -180,8 +182,7 @@
 			if (options.useDelegate) {
 				doc.off('click.lexicon.sidenav', instance.togglerSelector);
 				doc.data(instance.dataTogglerSelector, null);
-			}
-			else {
+			} else {
 				container.off('click.lexicon.sidenav');
 			}
 
@@ -195,8 +196,7 @@
 
 			if (instance.useDataAttribute) {
 				instance.hideSimpleSidenav();
-			}
-			else {
+			} else {
 				instance.toggleNavigation(false);
 			}
 		},
@@ -245,11 +245,12 @@
 
 				var toggler = instance.toggler;
 
-				var target = toggler.attr('href') || toggler.attr('data-target');
+				var target =
+					toggler.attr('href') || toggler.attr('data-target');
 
 				sidenav.trigger({
 					toggler: $(instance.togglerSelector),
-					type: 'closedStart.lexicon.sidenav'
+					type: 'closedStart.lexicon.sidenav',
 				});
 
 				instance._onSidenavTransitionEnd(content, function() {
@@ -258,12 +259,15 @@
 
 					sidenav.trigger({
 						toggler: $(instance.togglerSelector),
-						type: 'closed.lexicon.sidenav'
+						type: 'closed.lexicon.sidenav',
 					});
 				});
 
 				if (content.hasClass(openClass)) {
-					content.addClass('sidenav-transition').addClass(closedClass).removeClass(openClass);
+					content
+						.addClass('sidenav-transition')
+						.addClass(closedClass)
+						.removeClass(openClass);
 				}
 
 				sidenav.addClass('sidenav-transition');
@@ -271,8 +275,12 @@
 
 				sidenav.addClass(closedClass).removeClass(openClass);
 
-				$('[data-target="' + target + '"]').removeClass(openClass).removeClass('active');
-				$('[href="' + target + '"]').removeClass(openClass).removeClass('active');
+				$('[data-target="' + target + '"]')
+					.removeClass(openClass)
+					.removeClass('active');
+				$('[href="' + target + '"]')
+					.removeClass(openClass)
+					.removeClass('active');
 			}
 		},
 
@@ -292,18 +300,21 @@
 				var navNode = container.find(navigation).first();
 				var sideNavMenuNode = container.find('.sidenav-menu').first();
 
-				var tallest = Math.max(contentNode.outerHeight(), navNode.outerHeight());
+				var tallest = Math.max(
+					contentNode.outerHeight(),
+					navNode.outerHeight()
+				);
 
 				contentNode.css('min-height', tallest);
 
 				navNode.css({
 					'min-height': tallest,
-					'height': '100%'
+					height: '100%',
 				});
 
 				sideNavMenuNode.css({
 					'min-height': tallest,
-					'height': '100%'
+					height: '100%',
 				});
 			}
 		},
@@ -324,18 +335,21 @@
 
 				var minHeight = doc.innerHeight() - navNode.offset().top;
 
-				if (sidenavMenuNode.innerHeight() + navNode.offset().top > doc.innerHeight()) {
+				if (
+					sidenavMenuNode.innerHeight() + navNode.offset().top >
+					doc.innerHeight()
+				) {
 					minHeight = sidenavMenuNode.innerHeight();
 				}
 
 				navNode.css({
 					'min-height': minHeight,
-					'height': '100%'
+					height: '100%',
 				});
 
 				sidenavMenuNode.css({
 					'min-height': minHeight,
-					'height': '100%'
+					height: '100%',
 				});
 			}
 		},
@@ -347,8 +361,7 @@
 
 			if (options.heightType === 'equalHeight') {
 				instance.setEqualHeight();
-			}
-			else if (options.heightType === 'fullHeight') {
+			} else if (options.heightType === 'fullHeight') {
 				instance.setFullHeight();
 			}
 		},
@@ -358,8 +371,7 @@
 
 			if (instance.useDataAttribute) {
 				instance.showSimpleSidenav();
-			}
-			else {
+			} else {
 				instance.toggleNavigation(true);
 			}
 		},
@@ -382,12 +394,9 @@
 			var url = options.url;
 
 			if (url) {
-				container.one(
-					'urlLoaded.lexicon.sidenav',
-					function(event) {
-						instance.setHeight();
-					}
-				);
+				container.one('urlLoaded.lexicon.sidenav', function(event) {
+					instance.setHeight();
+				});
 
 				instance._loadUrl(menu, url, container);
 			}
@@ -403,27 +412,37 @@
 
 			var paddingDirection = 'padding-' + positionDirection;
 
-			var pushContentCssProperty = mobile ? positionDirection : paddingDirection;
+			var pushContentCssProperty = mobile
+				? positionDirection
+				: paddingDirection;
 			var type = mobile ? options.typeMobile : options.type;
 
 			if (type !== 'fixed') {
-				var navigationStartX = container.hasClass('open') ? navigation.offset().left - options.gutter : navigation.offset().left - offset;
+				var navigationStartX = container.hasClass('open')
+					? navigation.offset().left - options.gutter
+					: navigation.offset().left - offset;
 
 				var contentStartX = content.offset().left;
 				var contentWidth = content.innerWidth();
 
 				var padding = '';
 
-				if ((options.rtl && sidenavRight) || (!options.rtl && options.position === 'left')) {
+				if (
+					(options.rtl && sidenavRight) ||
+					(!options.rtl && options.position === 'left')
+				) {
 					navigationStartX = navigation.offset().left + offset;
 
 					if (navigationStartX > contentStartX) {
 						padding = navigationStartX - contentStartX;
 					}
-				}
-				else if ((options.rtl && options.position === 'left') || (!options.rtl && sidenavRight)) {
+				} else if (
+					(options.rtl && options.position === 'left') ||
+					(!options.rtl && sidenavRight)
+				) {
 					if (navigationStartX < contentStartX + contentWidth) {
-						padding = (contentStartX + contentWidth) - navigationStartX;
+						padding =
+							contentStartX + contentWidth - navigationStartX;
 
 						if (padding >= offset) {
 							padding = offset;
@@ -459,7 +478,7 @@
 
 				sidenav.trigger({
 					toggler: $(instance.togglerSelector),
-					type: 'openStart.lexicon.sidenav'
+					type: 'openStart.lexicon.sidenav',
 				});
 
 				instance._onSidenavTransitionEnd(content, function() {
@@ -468,11 +487,14 @@
 
 					sidenav.trigger({
 						toggler: $(instance.togglerSelector),
-						type: 'open.lexicon.sidenav'
+						type: 'open.lexicon.sidenav',
 					});
 				});
 
-				content.addClass('sidenav-transition').addClass(openClass).removeClass(closedClass);
+				content
+					.addClass('sidenav-transition')
+					.addClass(openClass)
+					.removeClass(closedClass);
 				sidenav.addClass('sidenav-transition');
 				toggler.addClass('sidenav-transition');
 
@@ -486,8 +508,7 @@
 
 			if (instance.useDataAttribute) {
 				instance.toggleSimpleSidenav();
-			}
-			else {
+			} else {
 				instance.toggleNavigation();
 			}
 		},
@@ -502,7 +523,10 @@
 
 			var width = options.width;
 
-			var closed = $.type(force) === 'boolean' ? force : container.hasClass('closed');
+			var closed =
+				$.type(force) === 'boolean'
+					? force
+					: container.hasClass('closed');
 			var sidenavRight = instance._isSidenavRight();
 
 			var widthMethod = closed ? 'showSidenav' : 'hideSidenav';
@@ -510,13 +534,12 @@
 			if (closed) {
 				container.trigger({
 					toggler: toggler,
-					type: 'openStart.lexicon.sidenav'
+					type: 'openStart.lexicon.sidenav',
 				});
-			}
-			else {
+			} else {
 				container.trigger({
 					toggler: toggler,
-					type: 'closedStart.lexicon.sidenav'
+					type: 'closedStart.lexicon.sidenav',
 				});
 			}
 
@@ -526,19 +549,20 @@
 				if (container.hasClass('closed')) {
 					instance.clearStyle(['min-height', 'height']);
 
-					toggler.removeClass('open').removeClass('sidenav-transition');
+					toggler
+						.removeClass('open')
+						.removeClass('sidenav-transition');
 
 					container.trigger({
 						toggler: toggler,
-						type: 'closed.lexicon.sidenav'
+						type: 'closed.lexicon.sidenav',
 					});
-				}
-				else {
+				} else {
 					toggler.addClass('open').removeClass('sidenav-transition');
 
 					container.trigger({
 						toggler: toggler,
-						type: 'open.lexicon.sidenav'
+						type: 'open.lexicon.sidenav',
 					});
 				}
 
@@ -564,7 +588,9 @@
 
 			instance[widthMethod](container);
 
-			container.toggleClass('closed', !closed).toggleClass('open', closed);
+			container
+				.toggleClass('closed', !closed)
+				.toggleClass('open', closed);
 			toggler.toggleClass('active', closed).toggleClass('open', closed);
 		},
 
@@ -575,8 +601,7 @@
 
 			if (simpleSidenavClosed) {
 				instance.showSimpleSidenav();
-			}
-			else {
+			} else {
 				instance.hideSimpleSidenav();
 			}
 		},
@@ -588,11 +613,12 @@
 
 			if (instance.useDataAttribute) {
 				closed = instance._isSimpleSidenavClosed();
-			}
-			else {
+			} else {
 				var container = $(instance.options.container);
 
-				closed = container.hasClass('sidenav-transition') ? !container.hasClass('closed') : container.hasClass('closed');
+				closed = container.hasClass('sidenav-transition')
+					? !container.hasClass('closed')
+					: container.hasClass('closed');
 			}
 
 			return !closed;
@@ -608,8 +634,7 @@
 
 			if (instance.options.useDelegate) {
 				instance._onDelegateClickTrigger();
-			}
-			else {
+			} else {
 				instance._onClickTrigger();
 			}
 
@@ -617,7 +642,6 @@
 		},
 
 		_focusElement: function(el) {
-
 			// ios 8 fixed element disappears when trying to scroll
 
 			el.focus();
@@ -649,10 +673,9 @@
 			var type = options.type;
 			var typeMobile = options.typeMobile;
 
-			if (desktop && (type === 'fixed-push')) {
+			if (desktop && type === 'fixed-push') {
 				return 'desktop-fixed-push';
-			}
-			else if (!desktop && (typeMobile === 'fixed-push')) {
+			} else if (!desktop && typeMobile === 'fixed-push') {
 				return 'mobile-fixed-push';
 			}
 
@@ -695,18 +718,24 @@
 
 			var sidebarBody = sidenav.find('.sidebar-body').first();
 
-			if (!readyState && sidebarBody.length && (typeof url === 'string' || $.isPlainObject(url))) {
-				sidebarBody.append('<div class="sidenav-loading">' + instance.options.loadingIndicatorTPL + '</div>');
-
-				urlLoaded = $.ajax(url).done(
-					function(response) {
-						sidebarBody.append(response);
-
-						eventTarget.trigger('urlLoaded.lexicon.sidenav');
-
-						sidebarBody.find('.sidenav-loading').remove();
-					}
+			if (
+				!readyState &&
+				sidebarBody.length &&
+				(typeof url === 'string' || $.isPlainObject(url))
+			) {
+				sidebarBody.append(
+					'<div class="sidenav-loading">' +
+						instance.options.loadingIndicatorTPL +
+						'</div>'
 				);
+
+				urlLoaded = $.ajax(url).done(function(response) {
+					sidebarBody.append(response);
+
+					eventTarget.trigger('urlLoaded.lexicon.sidenav');
+
+					sidebarBody.find('.sidenav-loading').remove();
+				});
 
 				sidenav.data('url-loaded', urlLoaded);
 			}
@@ -722,18 +751,25 @@
 			var container = $(options.container);
 			var containerSelector = options.container;
 
-			var closeButton = $(containerSelector).find('.sidenav-close').first();
-			var closeButtonSelector = '#' + guid(closeButton, 'generatedLexiconSidenavCloseId');
+			var closeButton = $(containerSelector)
+				.find('.sidenav-close')
+				.first();
+			var closeButtonSelector =
+				'#' + guid(closeButton, 'generatedLexiconSidenavCloseId');
 			var dataCloseButtonSelector = 'lexicon.' + closeButtonSelector;
 
 			if (!doc.data(dataCloseButtonSelector)) {
 				doc.data(dataCloseButtonSelector, 'true');
 
-				doc.on('click.close.lexicon.sidenav', closeButtonSelector, function(event) {
-					event.preventDefault();
+				doc.on(
+					'click.close.lexicon.sidenav',
+					closeButtonSelector,
+					function(event) {
+						event.preventDefault();
 
-					instance.toggle();
-				});
+						instance.toggle();
+					}
+				);
 			}
 
 			instance.closeButtonSelector = closeButtonSelector;
@@ -745,12 +781,9 @@
 
 			var el = instance.toggler;
 
-			el.on(
-				'click.lexicon.sidenav',
-				function(event) {
-					instance.toggle();
-				}
-			);
+			el.on('click.lexicon.sidenav', function(event) {
+				instance.toggle();
+			});
 		},
 
 		_onDelegateClickTrigger: function() {
@@ -758,22 +791,21 @@
 
 			var toggler = instance.toggler;
 
-			var togglerSelector = '#' + guid(toggler, 'generatedLexiconSidenavTogglerId');
+			var togglerSelector =
+				'#' + guid(toggler, 'generatedLexiconSidenavTogglerId');
 
 			var dataTogglerSelector = 'lexicon.' + togglerSelector;
 
 			if (!doc.data(dataTogglerSelector)) {
 				doc.data(dataTogglerSelector, 'true');
 
-				doc.on(
-					'click.lexicon.sidenav',
-					togglerSelector,
-					function(event) {
-						instance.toggle();
+				doc.on('click.lexicon.sidenav', togglerSelector, function(
+					event
+				) {
+					instance.toggle();
 
-						event.preventDefault();
-					}
-				);
+					event.preventDefault();
+				});
 			}
 
 			instance.togglerSelector = togglerSelector;
@@ -807,10 +839,13 @@
 
 				container.toggleClass('sidenav-fixed', fixedMenu);
 
-				if ((!desktop && screenStartDesktop) || (desktop && !screenStartDesktop)) {
+				if (
+					(!desktop && screenStartDesktop) ||
+					(desktop && !screenStartDesktop)
+				) {
 					instance.hideSidenav();
 
-					instance.clearStyle([ 'min-height', 'height' ]);
+					instance.clearStyle(['min-height', 'height']);
 
 					container.addClass('closed').removeClass('open');
 					toggler.removeClass('active').removeClass('open');
@@ -819,7 +854,10 @@
 
 					if (desktop) {
 						if (sidenavRight) {
-							menu.css(positionDirection, originalMenuWidth).css('width', originalMenuWidth);
+							menu.css(positionDirection, originalMenuWidth).css(
+								'width',
+								originalMenuWidth
+							);
 						}
 
 						screenStartDesktop = true;
@@ -847,7 +885,7 @@
 				}
 
 				if (!closed) {
-					instance.clearStyle([ 'min-height', 'height' ]);
+					instance.clearStyle(['min-height', 'height']);
 
 					instance.showSidenav();
 					instance.setHeight();
@@ -870,12 +908,10 @@
 
 			if (!bootstrap.Util.supportsTransitionEnd()) {
 				complete.call(instance);
-			}
-			else {
+			} else {
 				el.one(transitionEnd, function(event) {
 					complete();
-				})
-				.emulateTransitionEnd(SideNavigation.TRANSITION_DURATION);
+				}).emulateTransitionEnd(SideNavigation.TRANSITION_DURATION);
 			}
 		},
 
@@ -899,8 +935,7 @@
 
 					menu.css(positionDirection, width);
 				}
-			}
-			else {
+			} else {
 				instance.showSidenav();
 				instance.setHeight();
 			}
@@ -943,13 +978,16 @@
 
 			var screenSize = getBreakpointRegion();
 
-			var desktop = screenSize === 'sm' || screenSize === 'md' || screenSize === 'lg';
+			var desktop =
+				screenSize === 'sm' ||
+				screenSize === 'md' ||
+				screenSize === 'lg';
 
 			instance.mobile = !desktop;
 			instance.desktop = desktop;
 
 			return desktop;
-		}
+		},
 	};
 
 	var old = $.fn.sideNavigation;
@@ -983,50 +1021,46 @@
 		var args = $.makeArray(arguments).slice(1);
 
 		if (methodCall) {
-			this.each(
-				function() {
-					var $this = $(this);
+			this.each(function() {
+				var $this = $(this);
 
-					var data = $this.data('lexicon.sidenav');
+				var data = $this.data('lexicon.sidenav');
 
-					if (data) {
-						if (returnInstance) {
-							retVal = data;
-
-							return false;
-						}
-
-						var methodRetVal;
-
-						if ($.isFunction(data[options]) && options.indexOf('_') !== 0) {
-							methodRetVal = data[options].apply(data, args);
-						}
-
-						if (methodRetVal !== data && methodRetVal !== undefined) {
-							if (methodRetVal.jquery) {
-								retVal = retVal.pushStack(methodRetVal.get());
-							}
-							else {
-								retVal = methodRetVal;
-							}
-
-							return false;
-						}
-					}
-					else if (returnInstance) {
-						retVal = null;
+				if (data) {
+					if (returnInstance) {
+						retVal = data;
 
 						return false;
 					}
+
+					var methodRetVal;
+
+					if (
+						$.isFunction(data[options]) &&
+						options.indexOf('_') !== 0
+					) {
+						methodRetVal = data[options].apply(data, args);
+					}
+
+					if (methodRetVal !== data && methodRetVal !== undefined) {
+						if (methodRetVal.jquery) {
+							retVal = retVal.pushStack(methodRetVal.get());
+						} else {
+							retVal = methodRetVal;
+						}
+
+						return false;
+					}
+				} else if (returnInstance) {
+					retVal = null;
+
+					return false;
 				}
-			);
-		}
-		else {
-			this.each(
-				function() {
-					initialize($(this), options, selector);
-				}
-			);
+			});
+		} else {
+			this.each(function() {
+				initialize($(this), options, selector);
+			});
 		}
 
 		return retVal;
@@ -1061,14 +1095,15 @@
 		equalHeight: true, // equalHeight option is deprecated, use heightType instead
 		gutter: '15px',
 		heightType: null,
-		loadingIndicatorTPL: '<div class="loading-animation loading-animation-md"></div>',
+		loadingIndicatorTPL:
+			'<div class="loading-animation loading-animation-md"></div>',
 		navigation: '.sidenav-menu-slider',
 		position: 'left',
 		type: 'relative',
 		typeMobile: 'relative',
 		url: null,
 		useDelegate: true,
-		width: '225px'
+		width: '225px',
 	};
 
 	Plugin.Constructor = SideNavigation;
@@ -1080,4 +1115,4 @@
 
 		Plugin.call(sidenav);
 	});
-}(jQuery);
+})(jQuery);

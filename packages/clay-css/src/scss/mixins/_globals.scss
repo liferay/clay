@@ -200,7 +200,7 @@
 		'word-break',
 		'word-spacing',
 		'writing-mode',
-		'z-index',
+		'z-index'
 	);
 
 	$enabled: setter(map-get($map, enabled), true);
@@ -216,22 +216,18 @@
 				}
 
 				appearance: map-get($map, appearance);
-			}
-			@else if ($key == 'word-wrap') {
+			} @else if ($key == 'word-wrap') {
 				overflow-wrap: map-get($map, word-wrap);
 				word-wrap: map-get($map, word-wrap);
-			}
-			@else if ($key == 'overflow-wrap') {
+			} @else if ($key == 'overflow-wrap') {
 				overflow-wrap: map-get($map, overflow-wrap);
 				word-wrap: map-get($map, overflow-wrap);
-			}
-			@else if ($key == 'user-select') {
+			} @else if ($key == 'user-select') {
 				-ms-user-select: map-get($map, user-select);
 				-moz-user-select: map-get($map, user-select);
 				-webkit-user-select: map-get($map, user-select);
 				user-select: map-get($map, user-select);
-			}
-			@else if (index($properties, $key)) {
+			} @else if (index($properties, $key)) {
 				#{$key}: #{$value};
 			}
 		}

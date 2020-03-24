@@ -6,8 +6,8 @@ module.exports = function(gulp) {
 			notify: true,
 			open: false,
 			server: {
-				baseDir: 'build'
-			}
+				baseDir: 'build',
+			},
 		});
 
 		gulp.on('build:finished', browserSync.reload);

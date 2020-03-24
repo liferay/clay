@@ -159,10 +159,22 @@
 	$active-z-index: map-get($map, active-z-index);
 
 	$active-class-bg: setter(map-get($map, active-class-bg), $active-bg);
-	$active-class-border-color: setter(map-get($map, active-class-border-color), $active-border-color);
-	$active-class-color: setter(map-get($map, active-class-color), $active-color);
-	$active-class-font-weight: setter(map-get($map, active-class-font-weight), $active-font-weight);
-	$active-class-z-index: setter(map-get($map, active-class-z-index), $active-z-index);
+	$active-class-border-color: setter(
+		map-get($map, active-class-border-color),
+		$active-border-color
+	);
+	$active-class-color: setter(
+		map-get($map, active-class-color),
+		$active-color
+	);
+	$active-class-font-weight: setter(
+		map-get($map, active-class-font-weight),
+		$active-font-weight
+	);
+	$active-class-z-index: setter(
+		map-get($map, active-class-z-index),
+		$active-z-index
+	);
 
 	$disabled-bg: map-get($map, disabled-bg);
 	$disabled-border-color: map-get($map, disabled-border-color);
@@ -173,7 +185,10 @@
 	$disabled-pointer-events: map-get($map, disabled-pointer-events);
 	$disabled-text-decoration: map-get($map, disabled-text-decoration);
 
-	$disabled-active-pointer-events: map-get($map, disabled-active-pointer-events);
+	$disabled-active-pointer-events: map-get(
+		$map,
+		disabled-active-pointer-events
+	);
 
 	$btn-focus-box-shadow: map-get($map, btn-focus-box-shadow);
 	$btn-focus-outline: map-get($map, btn-focus-outline);
@@ -184,13 +199,16 @@
 	$lexicon-icon-margin-right: map-get($map, lexicon-icon-margin-right);
 	$lexicon-icon-margin-top: map-get($map, lexicon-icon-margin-top);
 
-	$c-inner: setter(map-get($map, c-inner),());
-	$c-inner: map-deep-merge((
-		margin-bottom: math-sign($padding-bottom),
-		margin-left: math-sign($padding-left),
-		margin-right: math-sign($padding-right),
-		margin-top: math-sign($padding-top),
-	), $c-inner);
+	$c-inner: setter(map-get($map, c-inner), ());
+	$c-inner: map-deep-merge(
+		(
+			margin-bottom: math-sign($padding-bottom),
+			margin-left: math-sign($padding-left),
+			margin-right: math-sign($padding-right),
+			margin-top: math-sign($padding-top),
+		),
+		$c-inner
+	);
 
 	align-items: $align-items;
 	background-color: $bg;

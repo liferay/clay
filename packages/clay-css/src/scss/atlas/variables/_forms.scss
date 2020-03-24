@@ -54,7 +54,7 @@ $input-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
 $input-placeholder-color: $gray-600 !default;
 $input-label-color: $gray-900 !default;
 
-$input-focus-bg: lighten($component-active-bg, 44.90) !default;
+$input-focus-bg: lighten($component-active-bg, 44.9) !default;
 $input-focus-border-color: lighten($component-active-bg, 22.94) !default;
 $input-focus-box-shadow: $component-focus-box-shadow !default;
 
@@ -70,17 +70,23 @@ $input-label-disabled-color: $gray-500 !default;
 $input-readonly-bg: $white !default;
 
 $input-readonly: () !default;
-$input-readonly: map-deep-merge((
-	bg: $input-readonly-bg,
-	border-color: $input-border-color,
-	focus-box-shadow: none,
-), $input-readonly);
+$input-readonly: map-deep-merge(
+	(
+		bg: $input-readonly-bg,
+		border-color: $input-border-color,
+		focus-box-shadow: none,
+	),
+	$input-readonly
+);
 
 $input-plaintext-readonly: () !default;
-$input-plaintext-readonly: map-deep-merge((
-	focus-border-color: $input-focus-border-color,
-	focus-box-shadow: none,
-), $input-plaintext-readonly);
+$input-plaintext-readonly: map-deep-merge(
+	(
+		focus-border-color: $input-focus-border-color,
+		focus-box-shadow: none,
+	),
+	$input-plaintext-readonly
+);
 
 $input-danger-bg: $danger-l2 !default;
 $input-danger-border-color: $danger-l1 !default;
@@ -90,15 +96,21 @@ $input-danger-focus-box-shadow: $input-focus-box-shadow !default;
 $input-danger-color: $input-color !default;
 
 $input-danger-readonly: () !default;
-$input-danger-readonly: map-deep-merge((
-	bg: map-get($input-readonly, bg),
-	border-color: map-get($input-readonly, border-color),
-	focus-border-color: $input-focus-border-color,
-), $input-danger-readonly);
+$input-danger-readonly: map-deep-merge(
+	(
+		bg: map-get($input-readonly, bg),
+		border-color: map-get($input-readonly, border-color),
+		focus-border-color: $input-focus-border-color,
+	),
+	$input-danger-readonly
+);
 
 $input-danger-checkbox-label-color: $danger !default;
 $input-danger-select-icon-color: $input-danger-border-color !default;
-$input-danger-select-icon: clay-icon(caret-double-l, $input-danger-select-icon-color) !default;
+$input-danger-select-icon: clay-icon(
+	caret-double-l,
+	$input-danger-select-icon-color
+) !default;
 
 $input-success-bg: $success-l2 !default;
 $input-success-border-color: $success-l1 !default;
@@ -108,15 +120,21 @@ $input-success-focus-box-shadow: $input-focus-box-shadow !default;
 $input-success-color: $input-color !default;
 
 $input-success-readonly: () !default;
-$input-success-readonly: map-deep-merge((
-	bg: map-get($input-readonly, bg),
-	border-color: map-get($input-readonly, border-color),
-	focus-border-color: $input-focus-border-color,
-), $input-success-readonly);
+$input-success-readonly: map-deep-merge(
+	(
+		bg: map-get($input-readonly, bg),
+		border-color: map-get($input-readonly, border-color),
+		focus-border-color: $input-focus-border-color,
+	),
+	$input-success-readonly
+);
 
 $input-success-checkbox-label-color: $success !default;
 $input-success-select-icon-color: $input-success-border-color !default;
-$input-success-select-icon: clay-icon(caret-double-l, $input-success-select-icon-color) !default;
+$input-success-select-icon: clay-icon(
+	caret-double-l,
+	$input-success-select-icon-color
+) !default;
 
 $input-warning-bg: $warning-l2 !default;
 $input-warning-border-color: $warning-l1 !default;
@@ -125,16 +143,22 @@ $input-warning-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
 $input-warning-focus-box-shadow: $input-focus-box-shadow !default;
 
 $input-warning-readonly: () !default;
-$input-warning-readonly: map-deep-merge((
-	bg: map-get($input-readonly, bg),
-	border-color: map-get($input-readonly, border-color),
-	focus-border-color: $input-focus-border-color,
-), $input-warning-readonly);
+$input-warning-readonly: map-deep-merge(
+	(
+		bg: map-get($input-readonly, bg),
+		border-color: map-get($input-readonly, border-color),
+		focus-border-color: $input-focus-border-color,
+	),
+	$input-warning-readonly
+);
 
 $input-warning-color: $input-color !default;
 $input-warning-checkbox-label-color: $warning !default;
 $input-warning-select-icon-color: $input-warning-border-color !default;
-$input-warning-select-icon: clay-icon(caret-double-l, $input-warning-select-icon-color) !default;
+$input-warning-select-icon: clay-icon(
+	caret-double-l,
+	$input-warning-select-icon-color
+) !default;
 
 // Select Element
 
@@ -143,20 +167,32 @@ $input-select-bg-size: 1.5em auto !default;
 $input-select-padding-right: 2em !default;
 
 $input-select-icon-color: $gray-600 !default;
-$input-select-icon: clay-icon(caret-double-l, $input-select-icon-color) !default;
+$input-select-icon: clay-icon(
+	caret-double-l,
+	$input-select-icon-color
+) !default;
 
 $input-select-icon-focus-color: $input-select-icon-color !default;
-$input-select-icon-focus: clay-icon(caret-double-l, $input-select-icon-focus-color) !default;
+$input-select-icon-focus: clay-icon(
+	caret-double-l,
+	$input-select-icon-focus-color
+) !default;
 
 $input-select-icon-disabled-color: $gray-500 !default;
-$input-select-icon-disabled: clay-icon(caret-double-l, $input-select-icon-disabled-color) !default;
+$input-select-icon-disabled: clay-icon(
+	caret-double-l,
+	$input-select-icon-disabled-color
+) !default;
 
 $input-select-size: () !default;
-$input-select-size: map-deep-merge((
-	option: (
-		padding: 0.25rem 0.5rem,
+$input-select-size: map-deep-merge(
+	(
+		option: (
+			padding: 0.25rem 0.5rem,
+		),
 	),
-), $input-select-size);
+	$input-select-size
+);
 
 // Form Feedback
 
@@ -175,26 +211,39 @@ $input-textarea-height-sm: 80px !default;
 // Form Control Label (Labels inside Form Control Tag Group)
 
 $form-control-label-size: () !default;
-$form-control-label-size: map-deep-merge((
-	border-width: 0.0625rem, // 1px
-	font-size: map-get($label-lg, font-size),
-	height: 1.5rem, // 24px
-	margin-bottom: 0.3125rem, // 5px
-	margin-right: 0.625rem, // 10px
-	margin-top: 0.3125rem, // 5px
-	padding-x: map-get($label-lg, padding-x),
-	padding-y: map-get($label-lg, padding-y),
-	text-transform: none,
-	item-spacer-y: map-get($label-lg, item-spacer-y), // -2px
-	lexicon-icon-height: map-get($label-lg, lexicon-icon-height), // 16px
-	lexicon-icon-width: map-get($label-lg, lexicon-icon-width), // 16px
-	sticker-size: map-get($label-lg, sticker-size), // 16px
-	close: map-get($label-lg, close)
-), $form-control-label-size);
+$form-control-label-size: map-deep-merge(
+	(
+		border-width: 0.0625rem,
+		// 1px
+			font-size: map-get($label-lg, font-size),
+		height: 1.5rem,
+		// 24px
+			margin-bottom: 0.3125rem,
+		// 5px
+			margin-right: 0.625rem,
+		// 10px
+			margin-top: 0.3125rem,
+		// 5px
+			padding-x: map-get($label-lg, padding-x),
+		padding-y: map-get($label-lg, padding-y),
+		text-transform: none,
+		item-spacer-y: map-get($label-lg, item-spacer-y),
+		// -2px
+			lexicon-icon-height: map-get($label-lg, lexicon-icon-height),
+		// 16px
+			lexicon-icon-width: map-get($label-lg, lexicon-icon-width),
+		// 16px
+			sticker-size: map-get($label-lg, sticker-size),
+		// 16px
+			close: map-get($label-lg, close),
+	),
+	$form-control-label-size
+);
 
 // Form Group
 
-$form-group-item-label-spacer: ($input-label-font-size * $line-height-base) + $input-label-margin-bottom !default;
+$form-group-item-label-spacer: ($input-label-font-size * $line-height-base) +
+	$input-label-margin-bottom !default;
 
 // Input Groups
 

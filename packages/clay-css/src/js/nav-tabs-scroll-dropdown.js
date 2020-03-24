@@ -1,4 +1,4 @@
-+function($) {
++(function($) {
 	var NavTabsScrollDropdown = function(element, options) {
 		this.init(element, options);
 	};
@@ -13,7 +13,9 @@
 			element.on('show.bs.dropdown', '.dropdown', function(event) {
 				var dropdownToggle = $(this).find('[data-toggle="dropdown"]');
 
-				$(dropdownToggle.data('nav-tabs-scroll-target')).addClass('open');
+				$(dropdownToggle.data('nav-tabs-scroll-target')).addClass(
+					'open'
+				);
 			});
 		},
 
@@ -21,29 +23,32 @@
 			element.on('hide.bs.dropdown', '.dropdown', function(event) {
 				var dropdownToggle = $(this).find('[data-toggle="dropdown"]');
 
-				$(dropdownToggle.data('nav-tabs-scroll-target')).removeClass('open');
+				$(dropdownToggle.data('nav-tabs-scroll-target')).removeClass(
+					'open'
+				);
 			});
-		}
+		},
 	};
 
 	var Plugin = function(options) {
-		return this.each(
-			function() {
-				var $this = $(this);
+		return this.each(function() {
+			var $this = $(this);
 
-				var data = $this.data('lexicon.nav-tabs-scroll-dropdown');
+			var data = $this.data('lexicon.nav-tabs-scroll-dropdown');
 
-				if (!data) {
-					data = new NavTabsScrollDropdown($this, typeof options === 'object' ? options : null);
+			if (!data) {
+				data = new NavTabsScrollDropdown(
+					$this,
+					typeof options === 'object' ? options : null
+				);
 
-					$this.data('lexicon.nav-tabs-scroll-dropdown', data);
-				}
-
-				if (typeof options === 'string') {
-					data[options].call($this);
-				}
+				$this.data('lexicon.nav-tabs-scroll-dropdown', data);
 			}
-		);
+
+			if (typeof options === 'string') {
+				data[options].call($this);
+			}
+		});
 	};
 
 	var old = $.fn.navTabsScrollDropdown;
@@ -54,10 +59,9 @@
 		return this;
 	};
 
-	Plugin.defaults = {
-	};
+	Plugin.defaults = {};
 
 	Plugin.Constructor = NavTabsScrollDropdown;
 
 	$.fn.navTabsScrollDropdown = Plugin;
-}(jQuery);
+})(jQuery);

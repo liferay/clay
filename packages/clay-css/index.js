@@ -6,5 +6,5 @@ module.exports = {
 	buildDir: path.join(__dirname, 'lib'),
 	includePaths: [path.join(srcDir, 'scss')],
 	libDir: path.join(__dirname, 'lib'),
-	srcDir: srcDir
+	srcDir: srcDir,
 };

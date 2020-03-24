@@ -132,7 +132,11 @@ th {
 	thead {
 		td,
 		th {
-			@if ($table-head-border-top-width == 0 and $table-head-border-top-width) {
+			@if (
+				$table-head-border-top-width ==
+					0 and
+					$table-head-border-top-width
+			) {
 				border-top-width: $table-border-width;
 			}
 		}
@@ -321,31 +325,41 @@ th {
 
 	th,
 	td {
-		box-shadow: inset 0 #{$table-list-border-y-width} $table-list-border-color, // top
-					0 #{$table-list-border-y-width} $table-list-border-color; // bottom
+		box-shadow: inset 0 #{$table-list-border-y-width} $table-list-border-color,
+			// top
+				0 #{$table-list-border-y-width} $table-list-border-color; // bottom
 		padding-top: $table-list-border-y-width + $table-cell-padding;
 
 		&:first-child {
-			box-shadow: inset 0 #{$table-list-border-y-width} $table-list-border-color, // top
-						0 #{$table-list-border-y-width} $table-list-border-color, // bottom
-						inset #{$table-list-border-x-width} 0 $table-list-border-color; // left
+			box-shadow: inset 0 #{$table-list-border-y-width} $table-list-border-color,
+				// top
+					0 #{$table-list-border-y-width} $table-list-border-color,
+				// bottom
+					inset #{$table-list-border-x-width} 0 $table-list-border-color; // left
 			padding-left: $table-list-border-x-width + $table-cell-padding;
 			padding-top: $table-list-border-y-width + $table-cell-padding;
 		}
 
 		&:last-child {
-			box-shadow: inset 0 #{$table-list-border-y-width} $table-list-border-color, // top
-						inset #{-$table-list-border-x-width} 0 $table-list-border-color, // right
-						0 #{$table-list-border-y-width} $table-list-border-color; // bottom
+			box-shadow: inset 0 #{$table-list-border-y-width} $table-list-border-color,
+				// top
+					inset #{-$table-list-border-x-width} 0
+					$table-list-border-color,
+				// right
+					0 #{$table-list-border-y-width} $table-list-border-color; // bottom
 			padding-right: $table-list-border-x-width + $table-cell-padding;
 			padding-top: $table-list-border-y-width + $table-cell-padding;
 		}
 
 		&:only-child {
-			box-shadow: inset 0 #{$table-list-border-y-width} $table-list-border-color, // top
-						inset #{-$table-list-border-x-width} 0 $table-list-border-color, // right
-						0 #{$table-list-border-y-width} $table-list-border-color, // bottom
-						inset #{$table-list-border-x-width} 0 $table-list-border-color; // left
+			box-shadow: inset 0 #{$table-list-border-y-width} $table-list-border-color,
+				// top
+					inset #{-$table-list-border-x-width} 0
+					$table-list-border-color,
+				// right
+					0 #{$table-list-border-y-width} $table-list-border-color,
+				// bottom
+					inset #{$table-list-border-x-width} 0 $table-list-border-color; // left
 			padding-left: $table-list-border-x-width + $table-cell-padding;
 			padding-right: $table-list-border-x-width + $table-cell-padding;
 			padding-top: $table-list-border-y-width + $table-cell-padding;
@@ -353,17 +367,21 @@ th {
 	}
 
 	.table-cell-start {
-		box-shadow: inset 0 #{$table-list-border-y-width} $table-list-border-color, // top
-					0 #{$table-list-border-y-width} $table-list-border-color, // bottom
-					inset #{$table-list-border-x-width} 0 $table-list-border-color; // left
+		box-shadow: inset 0 #{$table-list-border-y-width} $table-list-border-color,
+			// top
+				0 #{$table-list-border-y-width} $table-list-border-color,
+			// bottom
+				inset #{$table-list-border-x-width} 0 $table-list-border-color; // left
 		padding-left: $table-list-border-x-width + $table-cell-padding;
 		padding-top: $table-list-border-y-width + $table-cell-padding;
 	}
 
 	.table-cell-end {
-		box-shadow: inset 0 #{$table-list-border-y-width} $table-list-border-color, // top
-					inset #{-$table-list-border-x-width} 0 $table-list-border-color, // right
-					0 #{$table-list-border-y-width} $table-list-border-color; // bottom
+		box-shadow: inset 0 #{$table-list-border-y-width} $table-list-border-color,
+			// top
+				inset #{-$table-list-border-x-width} 0 $table-list-border-color,
+			// right
+				0 #{$table-list-border-y-width} $table-list-border-color; // bottom
 		padding-right: $table-list-border-x-width + $table-cell-padding;
 		padding-top: $table-list-border-y-width + $table-cell-padding;
 	}
@@ -402,17 +420,22 @@ th {
 
 	th,
 	td {
-		box-shadow: inset 0 #{$table-list-border-y-width} #{$table-list-border-color}, // top
-					inset #{-$table-list-border-x-width} 0 #{$table-list-border-color}, // right
-					0 #{$table-list-border-y-width} #{$table-list-border-color}; // bottom
+		box-shadow: inset 0 #{$table-list-border-y-width} #{$table-list-border-color},
+			// top
+				inset #{-$table-list-border-x-width} 0 #{$table-list-border-color},
+			// right
+				0 #{$table-list-border-y-width} #{$table-list-border-color}; // bottom
 		padding-right: $table-list-border-x-width + $table-cell-padding;
 		padding-top: $table-list-border-y-width + $table-cell-padding;
 
 		&:first-child {
-			box-shadow: inset 0 #{$table-list-border-y-width} #{$table-list-border-color}, // top
-						inset #{-$table-list-border-x-width} 0 #{$table-list-border-color}, // right
-						0 #{$table-list-border-y-width} #{$table-list-border-color}, // bottom
-						inset #{$table-list-border-x-width} 0 #{$table-list-border-color}; // left
+			box-shadow: inset 0 #{$table-list-border-y-width} #{$table-list-border-color},
+				// top
+					inset #{-$table-list-border-x-width} 0 #{$table-list-border-color},
+				// right
+					0 #{$table-list-border-y-width} #{$table-list-border-color},
+				// bottom
+					inset #{$table-list-border-x-width} 0 #{$table-list-border-color}; // left
 			padding-left: $table-list-border-x-width + $table-cell-padding;
 			padding-right: $table-list-border-x-width + $table-cell-padding;
 			padding-top: $table-list-border-y-width + $table-cell-padding;
@@ -589,7 +612,8 @@ th {
 	th {
 		padding-bottom: $table-list-divider-padding-y;
 		padding-left: $table-list-border-x-width + $table-list-divider-padding-x;
-		padding-right: $table-list-border-x-width + $table-list-divider-padding-x;
+		padding-right: $table-list-border-x-width +
+			$table-list-divider-padding-x;
 		padding-top: $table-list-border-y-width + $table-list-divider-padding-y;
 	}
 }
