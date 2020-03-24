@@ -60,7 +60,7 @@ Feel free to open up problems or send pull requests. We will always be looking a
 
 > Before opening a issue make sure it exists.
 
-See the [contribution guided](/CONTRIBUTING.md) for more details.
+See the [contribution guide](/CONTRIBUTING.md) for more details.
 
 ### Setup
 

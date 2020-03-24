@@ -33,7 +33,7 @@ description: 'Cards are a specific form of data visualization focused mainly on 
 </div>
 
 <div class="clay-site-alert alert alert-warning">
-	See the implementation of the <a href="/docs/components/cards.html">Cards component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/cards/">Cards Pattern</a>.
+	See the implementation of the <a href="/docs/components/card.html">Cards component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/cards/">Cards Pattern</a>.
 </div>
 
 # Example
