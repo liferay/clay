@@ -25,11 +25,16 @@
 	padding: 0;
 	position: absolute;
 	top: 5px;
+	transition: $btn-transition;
 	width: 32px;
 	z-index: 9;
 
 	&:hover {
 		background: rgba(255, 255, 255, 0.8);
+	}
+
+	&:focus {
+		box-shadow: $component-focus-box-shadow;
 	}
 
 	.lexicon-icon {

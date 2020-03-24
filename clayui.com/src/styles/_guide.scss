@@ -104,8 +104,6 @@
 	}
 
 	.clay-site-label {
-		display: flex;
-
 		a:hover {
 			text-decoration: none;
 		}
@@ -183,8 +181,6 @@
 		padding: 15px 15px 15px 0;
 
 		a {
-			@include focus-a11y;
-
 			color: #30313f;
 			word-break: break-word;
 		}
