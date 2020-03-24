@@ -20,7 +20,7 @@ description: 'Badges help highlight important information, such as notifications
 </div>
 
 <div class="clay-site-alert alert alert-warning">
-	Badge Sizes have been removed. Use the <a href="https://github.com/liferay/clay/blob/master/packages/clay/src/scss/mixins/_badges.scss#L1">clay-badge-size($sassMap) mixin</a> to create custom badge sizes for your app.
+	Badge Sizes have been removed. Use the <a href="https://github.com/liferay/clay/blob/master/packages/clay-css/src/scss/mixins/_badges.scss#L19">clay-badge-size($map) mixin</a> to create custom badge sizes for your app.
 </div>
 
 ## Variations
