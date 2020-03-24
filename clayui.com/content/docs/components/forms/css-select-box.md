@@ -3,7 +3,6 @@ title: 'Select Box'
 description: 'This section demonstrates the different text input types, including usage and validation states.'
 ---
 
-<h1>Select Box CSS</h1>
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
@@ -13,56 +12,184 @@ description: 'This section demonstrates the different text input types, includin
 </div>
 </div>
 
-### Clay Select Box
+### Clay Reorder Utilities
 
-<div class="sheet-example">
-    <div class="form-group">
-        <label for="clayReorderNoActionsDemo1">Clay Select Box</label>
-        <div class="clay-reorder">
-            <select class="form-control form-control-inset" id="clayReorderNoActionsDemo1" multiple>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-            <div class="clay-reorder-underlay form-control"></div>
-        </div>
-    </div>
+<div class="clay-site-alert alert alert-info">
+    Add the class <code>clay-reorder-footer-end</code> or <code>clay-reorder-footer-center</code> on <code>clay-reorder</code> to align footer content to the right or center, respectively.
 </div>
 
-#### With Reorder Buttons
+#### Clay Reorder with Footer End
 
 <div class="sheet-example">
-    <div class="form-group">
-        <label for="claySelectBoxWithActionsDemo1">Clay Select Box</label>
-        <div class="clay-reorder">
-            <select class="form-control form-control-inset" id="claySelectBoxWithActionsDemo1" multiple>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-            <div class="clay-reorder-underlay form-control"></div>
-            <div class="clay-reorder-footer">
-                <div class="btn-group" role="group">
-                    <button class="btn btn-monospaced btn-secondary btn-sm" type="button">
-                        <span class="inline-item">
-                            <svg class="lexicon-icon lexicon-icon-caret-top" focusable="false" role="presentation">
-                                <use xlink:href="/images/icons/icons.svg#caret-top" />
-                            </svg>
-                        </span>
-                    </button>
-                    <button class="btn btn-monospaced btn-secondary btn-sm" type="button">
-                        <span class="inline-item">
-                            <svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
-                                <use xlink:href="/images/icons/icons.svg#caret-bottom" />
-                            </svg>
-                        </span>
-                    </button>
-                </div>
+    <div class="clay-reorder clay-reorder-footer-end">
+        <select class="form-control form-control-inset" id="_asyupi06i" multiple>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        <div class="clay-reorder-underlay form-control"></div>
+        <div class="clay-reorder-footer">
+            <div class="btn-group" role="group">
+                <button class="btn btn-monospaced btn-secondary btn-sm" type="button">
+                    <span class="inline-item">
+                        <svg class="lexicon-icon lexicon-icon-caret-top" focusable="false" role="presentation">
+                            <use xlink:href="/images/icons/icons.svg#caret-top" />
+                        </svg>
+                    </span>
+                </button>
+                <button class="btn btn-monospaced btn-secondary btn-sm" type="button">
+                    <span class="inline-item">
+                        <svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
+                            <use xlink:href="/images/icons/icons.svg#caret-bottom" />
+                        </svg>
+                    </span>
+                </button>
             </div>
         </div>
     </div>
 </div>
+
+```html
+<div class="clay-reorder clay-reorder-footer-end">
+	<select class="form-control form-control-inset" id="_asyupi06i" multiple>
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+	</select>
+	<div class="clay-reorder-underlay form-control"></div>
+	<div class="clay-reorder-footer">
+		<div class="btn-group" role="group">
+			<button
+				class="btn btn-monospaced btn-secondary btn-sm"
+				type="button"
+			>
+				<span class="inline-item">
+					<svg
+						class="lexicon-icon lexicon-icon-caret-top"
+						focusable="false"
+						role="presentation"
+					>
+						<use xlink:href="/images/icons/icons.svg#caret-top" />
+					</svg>
+				</span>
+			</button>
+			<button
+				class="btn btn-monospaced btn-secondary btn-sm"
+				type="button"
+			>
+				<span class="inline-item">
+					<svg
+						class="lexicon-icon lexicon-icon-caret-bottom"
+						focusable="false"
+						role="presentation"
+					>
+						<use
+							xlink:href="/images/icons/icons.svg#caret-bottom"
+						/>
+					</svg>
+				</span>
+			</button>
+		</div>
+	</div>
+</div>
+```
+
+#### Clay Reorder with Footer Center
+
+<div class="sheet-example">
+    <div class="clay-reorder clay-reorder-footer-center">
+        <select class="form-control form-control-inset" id="_k7bny0crp" multiple>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        <div class="clay-reorder-underlay form-control"></div>
+        <div class="clay-reorder-footer">
+            <div class="btn-group" role="group">
+                <button
+                    class="btn btn-monospaced btn-secondary btn-sm"
+                    type="button"
+                >
+                    <span class="inline-item">
+                        <svg
+                            class="lexicon-icon lexicon-icon-caret-top"
+                            focusable="false"
+                            role="presentation"
+                        >
+                            <use xlink:href="/images/icons/icons.svg#caret-top" />
+                        </svg>
+                    </span>
+                </button>
+                <button
+                    class="btn btn-monospaced btn-secondary btn-sm"
+                    type="button"
+                >
+                    <span class="inline-item">
+                        <svg
+                            class="lexicon-icon lexicon-icon-caret-bottom"
+                            focusable="false"
+                            role="presentation"
+                        >
+                            <use
+                                xlink:href="/images/icons/icons.svg#caret-bottom"
+                            />
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+```html
+<div class="clay-reorder clay-reorder-footer-center">
+	<select class="form-control form-control-inset" id="_k7bny0crp" multiple>
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+	</select>
+	<div class="clay-reorder-underlay form-control"></div>
+	<div class="clay-reorder-footer">
+		<div class="btn-group" role="group">
+			<button
+				class="btn btn-monospaced btn-secondary btn-sm"
+				type="button"
+			>
+				<span class="inline-item">
+					<svg
+						class="lexicon-icon lexicon-icon-caret-top"
+						focusable="false"
+						role="presentation"
+					>
+						<use xlink:href="/images/icons/icons.svg#caret-top" />
+					</svg>
+				</span>
+			</button>
+			<button
+				class="btn btn-monospaced btn-secondary btn-sm"
+				type="button"
+			>
+				<span class="inline-item">
+					<svg
+						class="lexicon-icon lexicon-icon-caret-bottom"
+						focusable="false"
+						role="presentation"
+					>
+						<use
+							xlink:href="/images/icons/icons.svg#caret-bottom"
+						/>
+					</svg>
+				</span>
+			</button>
+		</div>
+	</div>
+</div>
+```
