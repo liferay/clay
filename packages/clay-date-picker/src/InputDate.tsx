@@ -7,12 +7,12 @@ import {ClayInput} from '@clayui/form';
 import moment from 'moment';
 import React from 'react';
 
-interface IProps {
+interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	ariaLabel?: string;
 	currentTime: string;
 	dateFormat: string;
+	disabled?: boolean;
 	inputName?: string;
-	onChange: React.ChangeEventHandler<HTMLInputElement>;
 	placeholder?: string;
 	time: boolean;
 	timeFormat: string;
@@ -25,12 +25,11 @@ const ClayDatePickerInputDate: React.FunctionComponent<IProps> = ({
 	currentTime,
 	dateFormat,
 	inputName = 'datePicker',
-	onChange,
-	placeholder,
 	time = false,
 	timeFormat,
 	useNative = false,
 	value = '',
+	...otherProps
 }) => {
 	const isValidValue = (value: string | Date): string => {
 		const format = time ? `${dateFormat} ${timeFormat}` : dateFormat;
@@ -55,10 +54,9 @@ const ClayDatePickerInputDate: React.FunctionComponent<IProps> = ({
 		<>
 			<input name={inputName} type="hidden" value={memoizedValue} />
 			<ClayInput
+				{...otherProps}
 				aria-label={ariaLabel}
 				insetAfter={!useNative}
-				onChange={onChange}
-				placeholder={placeholder}
 				type={useNative ? 'date' : 'text'}
 				value={memoizedValue}
 			/>

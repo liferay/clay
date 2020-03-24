@@ -12,7 +12,6 @@ export interface ISelectOption {
 }
 
 interface IProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
-	name: string;
 	options: Array<ISelectOption>;
 	testId: string;
 	value: string | number;
@@ -20,16 +19,14 @@ interface IProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
 
 const ClayDatePickerSelect = React.forwardRef(
 	(
-		{name, onChange, options, testId, value}: IProps,
+		{options, testId, ...otherProps}: IProps,
 		ref: React.Ref<HTMLSelectElement>
 	) => (
 		<select
+			{...otherProps}
 			className="form-control form-control-sm"
 			data-testid={testId}
-			name={name}
-			onChange={onChange}
 			ref={ref}
-			value={value}
 		>
 			{options.map((option, index) => (
 				<option

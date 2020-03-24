@@ -15,6 +15,7 @@ import {IAriaLabels, IYears} from './types';
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	ariaLabels: IAriaLabels;
 	currentMonth: Date;
+	disabled?: boolean;
 	months: Array<string>;
 	onDotClicked: () => void;
 	onMonthChange: (date: Date) => void;
@@ -30,6 +31,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 const ClayDatePickerDateNavigation: React.FunctionComponent<IProps> = ({
 	ariaLabels,
 	currentMonth,
+	disabled,
 	months,
 	onDotClicked,
 	onMonthChange,
@@ -104,6 +106,7 @@ const ClayDatePickerDateNavigation: React.FunctionComponent<IProps> = ({
 			<div className="date-picker-nav">
 				<div className="date-picker-nav-item input-date-picker-month">
 					<Select
+						disabled={disabled}
 						name="month"
 						onChange={handleFormChange}
 						options={memoizedMonths}
@@ -114,6 +117,7 @@ const ClayDatePickerDateNavigation: React.FunctionComponent<IProps> = ({
 				</div>
 				<div className="date-picker-nav-item input-date-picker-year">
 					<Select
+						disabled={disabled}
 						name="year"
 						onChange={handleFormChange}
 						options={memoizedYears}
@@ -126,6 +130,7 @@ const ClayDatePickerDateNavigation: React.FunctionComponent<IProps> = ({
 				<div className="date-picker-nav-controls date-picker-nav-item date-picker-nav-item-expand">
 					<Button
 						aria-label={ariaLabels.buttonPreviousMonth}
+						disabled={disabled}
 						displayType="unstyled"
 						monospaced
 						onClick={handlePreviousMonthClicked}
@@ -135,6 +140,7 @@ const ClayDatePickerDateNavigation: React.FunctionComponent<IProps> = ({
 					</Button>
 					<Button
 						aria-label={ariaLabels.buttonDot}
+						disabled={disabled}
 						displayType="unstyled"
 						monospaced
 						onClick={onDotClicked}
@@ -144,6 +150,7 @@ const ClayDatePickerDateNavigation: React.FunctionComponent<IProps> = ({
 					</Button>
 					<Button
 						aria-label={ariaLabels.buttonNextMonth}
+						disabled={disabled}
 						displayType="unstyled"
 						monospaced
 						onClick={handleNextMonthClicked}
