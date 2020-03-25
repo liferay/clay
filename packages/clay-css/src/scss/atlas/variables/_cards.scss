@@ -14,7 +14,7 @@ $card-inner-border-radius: if($card-border-width > 0, calc(#{$card-border-radius
 $card-title: () !default;
 $card-title: map-deep-merge((
 	color: $gray-900,
-	font-size: 0.875rem // 14px
+	font-size: 0.875rem,
 ), $card-title);
 
 $card-title-link: () !default;
@@ -39,7 +39,7 @@ $card-subtitle-link: map-deep-merge((
 $card-link: () !default;
 $card-link: map-deep-merge((
 	color: $gray-600,
-	font-size: 0.875rem, // 14px
+	font-size: 0.875rem,
 	hover-color: $gray-600,
 	hover-text-decoration: underline
 ), $card-link);

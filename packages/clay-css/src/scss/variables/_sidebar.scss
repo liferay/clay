@@ -7,7 +7,7 @@ $sidebar-padding-top: 1rem !default; // 16px
 
 $sidebar-header-component-title: () !default;
 $sidebar-header-component-title: map-deep-merge((
-	font-size: 1.5rem, // 24px,
+	font-size: 1.5rem,
 	font-weight: $font-weight-semi-bold,
 	clay-link: (
 		color: $gray-900
@@ -18,7 +18,7 @@ $sidebar-header-component-title: map-deep-merge((
 
 $sidebar-header-component-subtitle: () !default;
 $sidebar-header-component-subtitle: map-deep-merge((
-	font-size: 1.125rem, // 18px
+	font-size: 1.125rem,
 	font-weight: $font-weight-semi-bold,
 	margin-bottom: 0
 ), $sidebar-header-component-subtitle);
@@ -27,9 +27,9 @@ $sidebar-header-component-subtitle: map-deep-merge((
 
 $sidebar-dt: () !default;
 $sidebar-dt: map-deep-merge((
-	font-size: 0.875rem, // 14px
+	font-size: 0.875rem,
 	font-weight: $font-weight-semi-bold,
-	margin-bottom: 0.25rem, // 4px
+	margin-bottom: 0.25rem,
 	text-transform: uppercase
 ), $sidebar-dt);
 
@@ -37,8 +37,8 @@ $sidebar-dt: map-deep-merge((
 
 $sidebar-dd: () !default;
 $sidebar-dd: map-deep-merge((
-	font-size: 0.875rem, // 14px
-	margin-bottom: 0.75rem // 12px
+	font-size: 0.875rem,
+	margin-bottom: 0.75rem,
 ), $sidebar-dd);
 
 // Sidebar Panel

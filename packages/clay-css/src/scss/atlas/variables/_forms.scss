@@ -178,19 +178,19 @@ $input-textarea-height-sm: 80px !default;
 
 $form-control-label-size: () !default;
 $form-control-label-size: map-deep-merge((
-	border-width: 0.0625rem, // 1px
+	border-width: 0.0625rem,
 	font-size: map-get($label-lg, font-size),
-	height: 1.5rem, // 24px
-	margin-bottom: 0.3125rem, // 5px
-	margin-right: 0.625rem, // 10px
-	margin-top: 0.3125rem, // 5px
+	height: 1.5rem,
+	margin-bottom: 0.3125rem,
+	margin-right: 0.625rem,
+	margin-top: 0.3125rem,
 	padding-x: map-get($label-lg, padding-x),
 	padding-y: map-get($label-lg, padding-y),
 	text-transform: none,
-	item-spacer-y: map-get($label-lg, item-spacer-y), // -2px
-	lexicon-icon-height: map-get($label-lg, lexicon-icon-height), // 16px
-	lexicon-icon-width: map-get($label-lg, lexicon-icon-width), // 16px
-	sticker-size: map-get($label-lg, sticker-size), // 16px
+	item-spacer-y: map-get($label-lg, item-spacer-y),
+	lexicon-icon-height: map-get($label-lg, lexicon-icon-height),
+	lexicon-icon-width: map-get($label-lg, lexicon-icon-width),
+	sticker-size: map-get($label-lg, sticker-size),
 	close: map-get($label-lg, close)
 ), $form-control-label-size);
 

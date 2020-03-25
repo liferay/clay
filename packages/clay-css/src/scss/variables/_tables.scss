@@ -65,7 +65,7 @@ $table-bordered-border-width: $table-border-width !default;
 
 $table-title: () !default;
 $table-title: map-deep-merge((
-	font-size: $font-size-base, // 16px
+	font-size: $font-size-base,
 	font-weight: $font-weight-semi-bold,
 	line-height: $line-height-base,
 	margin-bottom: 0
@@ -151,7 +151,7 @@ $table-list-quick-action-menu-hover-bg: $table-list-hover-bg !default;
 
 $table-list-title: () !default;
 $table-list-title: map-deep-merge((
-	font-size: $font-size-base, // 16px
+	font-size: $font-size-base,
 	font-weight: $font-weight-semi-bold,
 	line-height: $headings-line-height,
 	margin-bottom: 0

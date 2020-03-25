@@ -85,7 +85,7 @@ $card-title-link: map-deep-merge((
 $card-subtitle: () !default;
 $card-subtitle: map-deep-merge((
 	color: $gray-600,
-	font-size: 0.875rem, // 14px
+	font-size: 0.875rem,
 	font-weight: $font-weight-semi-bold,
 	margin-bottom: 0,
 	margin-top: 0
@@ -238,26 +238,29 @@ $user-card: map-deep-merge((
 
 // Card Page Item Asset
 
+// base: min-width 0, sm min-width: 576px, md: min-width: 768px,
+// lg: min-width: 992px
+
 $card-page-item-asset: () !default;
 $card-page-item-asset: map-deep-merge((
 	base: (
-		breakpoint: 0, // min-width: 0
+		breakpoint: 0,
 		min-width: 200px,
 		padding-left: $grid-gutter-width / 2,
 		padding-right: $grid-gutter-width / 2,
 	),
 	sm: (
-		breakpoint: map-get($grid-breakpoints, sm), // min-width: 576px
+		breakpoint: map-get($grid-breakpoints, sm),
 		flex-basis: 50%,
 		max-width: 50%,
 	),
 	md: (
-		breakpoint: map-get($grid-breakpoints, md), // min-width: 768px
+		breakpoint: map-get($grid-breakpoints, md),
 		flex-basis: 33.3333%,
 		max-width: 33.3333%,
 	),
 	lg: (
-		breakpoint: map-get($grid-breakpoints, lg), // min-width: 992px
+		breakpoint: map-get($grid-breakpoints, lg),
 		flex-basis: 25%,
 		max-width: 25%,
 	)
@@ -265,23 +268,25 @@ $card-page-item-asset: map-deep-merge((
 
 // Card Page Item User
 
+// base: min-width 0, sm min-width: 576px, lg: min-width: 992px
+
 $card-page-item-user: () !default;
 $card-page-item-user: map-deep-merge((
 	base: (
-		breakpoint: 0, // min-width: 0
+		breakpoint: 0,
 		flex-basis: 50%,
 		max-width: 50%,
 		padding-left: $grid-gutter-width / 2,
 		padding-right: $grid-gutter-width / 2,
 	),
 	sm: (
-		breakpoint: map-get($grid-breakpoints, sm), // min-width: 576px
+		breakpoint: map-get($grid-breakpoints, sm),
 		flex-basis: 33.33333%,
 		max-width: 33.33333%,
 		min-width: 200px,
 	),
 	lg: (
-		breakpoint: map-get($grid-breakpoints, lg), // min-width: 992px
+		breakpoint: map-get($grid-breakpoints, lg),
 		flex-basis: 20%,
 		max-width: 20%,
 	),
@@ -291,7 +296,7 @@ $card-page-item-user: map-deep-merge((
 
 $card-type-directory: () !default;
 $card-type-directory: map-deep-merge((
-	sticker-font-size: 1.125rem // 18px
+	sticker-font-size: 1.125rem,
 ), $card-type-directory);
 
 // Card Page Item Directory

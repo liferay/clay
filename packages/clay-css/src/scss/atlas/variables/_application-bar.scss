@@ -1,6 +1,6 @@
 $application-bar-size: () !default;
 $application-bar-size: map-deep-merge((
-	title-font-size: 1.125rem // 18px
+	title-font-size: 1.125rem,
 ), $application-bar-size);
 
 $application-bar-base: () !default;

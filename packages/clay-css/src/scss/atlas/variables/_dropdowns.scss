@@ -31,10 +31,11 @@ $dropdown-link-disabled-color: $gray-500 !default;
 $dropdown-item-padding-x: 1.25rem !default; // 20px
 $dropdown-item-padding-y: 0.5rem !default; // 8px
 
+// Weird box-shadow inset with border-radius render in IE https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/12515080/
+
 $dropdown-item-base: () !default;
 $dropdown-item-base: map-deep-merge((
 	font-size: inherit,
-	// Weird box-shadow inset with border-radius render in IE https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/12515080/
 	focus-box-shadow: $component-focus-inset-box-shadow,
 	focus-outline: 0,
 	focus-text-decoration: none,
@@ -68,7 +69,7 @@ $dropdown-divider-bg: $dropdown-border-color !default;
 
 $autocomplete-dropdown-menu: () !default;
 $autocomplete-dropdown-menu: map-deep-merge((
-	max-height: 10rem, // 160px
+	max-height: 10rem,
 ), $autocomplete-dropdown-menu);
 
 // Dropdown Action

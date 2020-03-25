@@ -100,11 +100,11 @@ $input-textarea-height-sm: 120px !default;
 
 $form-control-label-size: () !default;
 $form-control-label-size: map-deep-merge((
-	border-width: 0.0625rem, // 1px
-	height: 1.25rem, // 20px
-	margin-bottom: 0.25rem, // 4px
-	margin-right: 0.5rem, // 8px
-	margin-top: 0.25rem, // 4px
+	border-width: 0.0625rem,
+	height: 1.25rem,
+	margin-bottom: 0.25rem,
+	margin-right: 0.5rem,
+	margin-top: 0.25rem,
 ), $form-control-label-size);
 
 // Form Control Tag Group
@@ -343,12 +343,14 @@ $form-control-select: map-deep-merge((
 
 // Select Size
 
+// scrollbar-width: Future proof https://github.com/w3c/csswg-drafts/issues/1958
+// if/when it gets added
+
 $input-select-size: () !default;
 $input-select-size: map-deep-merge((
 	background-image: none,
 	padding-left: 0.5rem,
 	padding-right: 0.5rem,
-	// Future proof: if https://github.com/w3c/csswg-drafts/issues/1958 ever gets added
 	scrollbar-width: thin,
 	focus: (
 		background-image: none,

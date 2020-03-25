@@ -37,7 +37,8 @@ $list-group-title-link: map-deep-merge((
 
 $list-group-title: () !default;
 $list-group-title: map-deep-merge((
-	font-size: 1.125rem, // 18px
+	// 18px
+	font-size: 1.125rem,
 	font-weight: $font-weight-semi-bold,
 	line-height: $line-height-base,
 	margin-bottom: 0,
