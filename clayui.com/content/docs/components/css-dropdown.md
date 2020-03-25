@@ -38,7 +38,7 @@ description: 'A dropdown menu displays a list of options for the element that tr
 </div>
 
 <div class="clay-site-alert alert alert-warning">
-	See the implementation of the <a href="/docs/components/dropdown.html">Dropdown component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/dropdowns/">Dropdown Pattern</a>.
+	See the implementation of the <a href="/docs/components/drop-down.html">Dropdown component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/dropdowns/">Dropdown Pattern</a>.
 </div>
 
 ## Variations

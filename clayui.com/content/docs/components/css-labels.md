@@ -23,7 +23,7 @@ description: 'Labels categorize information, providing quick recognition.'
 </div>
 
 <div class="clay-site-alert alert alert-warning">
-	See the implementation of the <a href="/docs/components/labels.html">Labels component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/labels/">Labels Pattern</a>.
+	See the implementation of the <a href="/docs/components/label.html">Labels component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/labels/">Labels Pattern</a>.
 </div>
 
 ## Colors

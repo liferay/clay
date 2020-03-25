@@ -26,7 +26,7 @@ description: 'Also known as a hyperlink, a link is a clickable (text or image) e
 </div>
 
 <div class="clay-site-alert alert alert-warning">
-	See the implementation of the <a href="/docs/components/links.html">Links component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/link/">Links Pattern</a>.
+	See the implementation of the <a href="/docs/components/link.html">Links component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/link/">Links Pattern</a>.
 </div>
 
 <div class="clay-site-alert alert alert-warning">

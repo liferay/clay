@@ -22,7 +22,7 @@ description: 'Stickers are a visual way to quickly identify content.'
 </div>
 
 <div class="clay-site-alert alert alert-warning">
-    See the implementation of the <a href="/docs/components/stickers.html">Stickers component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/stickers/">Stickers Pattern</a>.
+    See the implementation of the <a href="/docs/components/sticker.html">Stickers component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/stickers/">Stickers Pattern</a>.
 </div>
 
 ## Colors
@@ -374,7 +374,7 @@ Add class `sticker-outside` in conjunction with sticker positions to position th
         </span>
         <span class="sticker sticker-user-icon">
             <span class="sticker-overlay">
-                <img alt="thumbnail" class="sticker-img" src="/images/thumbnail_coyote.jpg">
+                <img alt="thumbnail" class="sticker-img" src="/images/thumbnail_coffee.jpg">
             </span>
         </span>
         <span class="sticker sticker-lg sticker-user-icon">
@@ -419,7 +419,7 @@ Add class `sticker-outside` in conjunction with sticker positions to position th
 		<img
 			alt="thumbnail"
 			class="sticker-img"
-			src="/images/thumbnail_coyote.jpg"
+			src="/images/thumbnail_coffee.jpg"
 		/>
 	</span>
 </span>

@@ -100,7 +100,7 @@ import ClayDropDown from '@clayui/drop-down';
 	These packages are installed in the sandbox environment, so feel free to fork the environment if you want to test with other Clay components.
 </div>
 
-As you learned from [Clay's compositional philosophy](<(/docs/foundations/composing.html)>), we are using a low-level DropDown component, as its essence is a controlled component and for that you need to control DropDown's expand state. Let's use React's [`useState`](https://reactjs.org/docs/hooks-reference.html#usestate) to control the state.
+As you learned from [Clay's compositional philosophy](/docs/foundations/composing.html), we are using a low-level DropDown component, as its essence is a controlled component and for that you need to control DropDown's expand state. Let's use React's [`useState`](https://reactjs.org/docs/hooks-reference.html#usestate) to control the state.
 
 ```js
 const [expand, setExpand] = useState(false);

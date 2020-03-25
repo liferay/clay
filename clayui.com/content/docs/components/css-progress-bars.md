@@ -25,7 +25,7 @@ description: 'Progress bar indicates the percentage completed of a task.'
 </div>
 
 <div class="clay-site-alert alert alert-warning">
-	See the implementation of the <a href="/docs/components/progress-bars.html">Progress Bars component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/progress-bars/">Progress Bars Pattern</a>.
+	See the implementation of the <a href="/docs/components/progress-bar.html">Progress Bars component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/progress-bars/">Progress Bars Pattern</a>.
 </div>
 
 ## Colors
