@@ -1,6 +1,10 @@
 *.d.ts
 bower_components
 build
+packages/clay-css/src/scss/bootstrap/**/**/**/*.scss
+packages/clay-css/**/**/**/**/**/*.js
+packages/clay-css/**/**/**/**/**/*.md
+packages/clay-css/**/**/**/**/**/*.json
 copyright.js
 coverage
 lib
