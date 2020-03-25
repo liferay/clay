@@ -39,6 +39,11 @@ interface IProps
 	 * Path to the location of the spritemap resource used for Icon.
 	 */
 	spritemap?: string;
+
+	/**
+	 * Truncates the text inside the label.
+	 */
+	truncate?: boolean;
 }
 
 const ClayLabel = React.forwardRef<HTMLAnchorElement | HTMLSpanElement, IProps>(
@@ -51,6 +56,7 @@ const ClayLabel = React.forwardRef<HTMLAnchorElement | HTMLSpanElement, IProps>(
 			href,
 			large = false,
 			spritemap,
+			truncate,
 			...otherProps
 		}: IProps,
 		ref
@@ -64,10 +70,16 @@ const ClayLabel = React.forwardRef<HTMLAnchorElement | HTMLSpanElement, IProps>(
 					'label-dismissible': closeButtonProps,
 					'label-lg': large,
 					[`label-${displayType}`]: displayType,
+					'text-truncate-inline': truncate,
 				})}
 				ref={ref}
 			>
-				<TagName className="label-item label-item-expand" href={href}>
+				<TagName
+					className={classNames('label-item label-item-expand', {
+						'text-truncate': truncate,
+					})}
+					href={href}
+				>
 					{children}
 				</TagName>
 
