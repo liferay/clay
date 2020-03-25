@@ -67,7 +67,7 @@ $component-subtitle-link: map-deep-merge((
 
 $component-action: () !default;
 $component-action: map-deep-merge((
-	font-size: 1rem, // 16px
+	font-size: 1rem,
 	hover-bg: rgba($gray-900, 0.03),
 	hover-color: $gray-900,
 	focus-bg: rgba($gray-900, 0.03),

@@ -408,7 +408,9 @@
 }
 
 .dropdown-wide .dropdown-menu {
-	@include media-breakpoint-up(lg) { // min-width 992px
+	// min-width 992px
+
+	@include media-breakpoint-up(lg) {
 		min-width: $dropdown-wide-width;
 	}
 }
@@ -436,13 +438,17 @@
 }
 
 .nav-item.dropdown-wide {
-	@include media-breakpoint-down(md) { // max-width 991px
+	// max-width 991px
+
+	@include media-breakpoint-down(md) {
 		position: static;
 	}
 }
 
 .navbar-nav .dropdown-menu-center {
-	@include media-breakpoint-down(sm) { // max-width 767px
+	// max-width 767px
+
+	@include media-breakpoint-down(sm) {
 		-ms-transform: none;
 		transform: none;
 	}

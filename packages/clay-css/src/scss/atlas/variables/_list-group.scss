@@ -17,7 +17,7 @@ $list-group-header-padding-y: 0.5rem !default; // 8px
 $list-group-header-title: () !default;
 $list-group-header-title: map-deep-merge((
 	color: $gray-600,
-	font-size: 0.75rem, // 12px
+	font-size: 0.75rem,
 	text-transform: uppercase
 ), $list-group-header-title);
 
@@ -36,7 +36,7 @@ $list-group-title-link: map-deep-merge((
 $list-group-title: () !default;
 $list-group-title: map-deep-merge((
 	color: $gray-900,
-	font-size: 0.875rem, // 14px
+	font-size: 0.875rem,
 	line-height: 1.45
 ), $list-group-title);
 

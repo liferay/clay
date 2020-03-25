@@ -2,14 +2,15 @@
 
 $sidebar-header-component-title: () !default;
 $sidebar-header-component-title: map-deep-merge((
-	font-size: 1.25rem // 20px,
+	// 20px
+	font-size: 1.25rem,
 ), $sidebar-header-component-title);
 
 // Sidebar Header Subtitle
 
 $sidebar-header-component-subtitle: () !default;
 $sidebar-header-component-subtitle: map-deep-merge((
-	font-size: 0.75rem, // 12px
+	font-size: 0.75rem,
 	font-weight: $font-weight-normal
 ), $sidebar-header-component-subtitle);
 
@@ -17,14 +18,14 @@ $sidebar-header-component-subtitle: map-deep-merge((
 
 $sidebar-dt: () !default;
 $sidebar-dt: map-deep-merge((
-	font-size: 0.75rem // 12px
+	font-size: 0.75rem,
 ), $sidebar-dt);
 
 // Sidebar DD
 
 $sidebar-dd: () !default;
 $sidebar-dd: map-deep-merge((
-	font-size: 0.875rem // 14px
+	font-size: 0.875rem,
 ), $sidebar-dd);
 
 // Sidebar List Group

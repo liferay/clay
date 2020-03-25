@@ -27,16 +27,16 @@ $label-close: map-deep-merge((
 
 $label-lg: () !default;
 $label-lg: map-deep-merge((
-	font-size: 0.75rem, // 12px
-	height: 1.5rem, // 24px
-	padding-x: 0.5rem, // 8px
-	padding-y: 0.3125rem, // 5px
-	item-spacer-y: -0.0625rem, // -1px
-	lexicon-icon-height: 1em, // 12px
-	lexicon-icon-width: 1em, // 12px
-	sticker-size: 0.875rem, // 14px
+	font-size: 0.75rem,
+	height: 1.5rem,
+	padding-x: 0.5rem,
+	padding-y: 0.3125rem,
+	item-spacer-y: -0.0625rem,
+	lexicon-icon-height: 1em,
+	lexicon-icon-width: 1em,
+	sticker-size: 0.875rem,
 	close: (
-		font-size: 0.625rem, // 10px
+		font-size: 0.625rem,
 	),
 ), $label-lg);
 

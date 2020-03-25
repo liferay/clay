@@ -100,6 +100,7 @@
 				}
 
 				// BS4 resets background-image in buttons https://github.com/twbs/bootstrap/issues/23353
+
 				&:active {
 					background-image: $multi-step-icon-complete-bg-image;
 				}

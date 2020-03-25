@@ -16,7 +16,9 @@
 			$next: breakpoint-next($breakpoint, $grid-breakpoints);
 			$infix: breakpoint-infix($next, $grid-breakpoints);
 
-			@if not ($infix == '') { // .container-no-gutters-sm-down, md-down, lg-down, xl-down
+			// .container-no-gutters-sm-down, md-down, lg-down, xl-down
+
+			@if not ($infix == '') {
 				&#{$infix}-down {
 					@include media-breakpoint-down($breakpoint) {
 						@include clay-container-no-gutters;

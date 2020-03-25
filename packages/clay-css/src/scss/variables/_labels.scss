@@ -61,9 +61,12 @@ $label-close: map-deep-merge((
 
 $label-lg: () !default;
 $label-lg: map-deep-merge((
-	font-size: 0.875rem, // 14px
-	padding-x: 1rem, // 16px
-	padding-y: 0.375rem, // 6px
+	// 14px
+	font-size: 0.875rem,
+	// 16px
+	padding-x: 1rem,
+	// 6px
+	padding-y: 0.375rem,
 	text-transform: none
 ), $label-lg);
 
