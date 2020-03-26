@@ -31,6 +31,11 @@ function swapArrayItems(arrays: TItems, selectedIndexes: Array<number>) {
 
 interface IBoxProps {
 	/**
+	 * Id of the selectbox to be used with the label
+	 */
+	id?: string;
+
+	/**
 	 * Label of the left Select Box.
 	 */
 	label?: string;
@@ -47,6 +52,14 @@ interface IBoxProps {
 }
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+	/**
+	 * Labels for the aria attributes
+	 */
+	ariaLabels?: {
+		transferLTR: string;
+		transferRTL: string;
+	};
+
 	/**
 	 * Items spread across two arrays that will be displayed in the two Select Boxes.
 	 */
@@ -79,6 +92,10 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const ClayDualListBox: React.FunctionComponent<IProps> = ({
+	ariaLabels = {
+		transferLTR: 'Transfer Item Left to Right',
+		transferRTL: 'Transfer Item Right to Left',
+	},
 	className,
 	items,
 	left = {},
@@ -113,6 +130,7 @@ const ClayDualListBox: React.FunctionComponent<IProps> = ({
 			<div className="clay-dual-listbox">
 				<ClaySelectBox
 					className="clay-dual-listbox-item clay-dual-listbox-item-expand listbox-left"
+					id={left.id}
 					items={leftItems}
 					label={left.label}
 					multiple
@@ -128,6 +146,7 @@ const ClayDualListBox: React.FunctionComponent<IProps> = ({
 
 				<div className="btn-group-vertical clay-dual-listbox-actions clay-dual-listbox-item">
 					<ClayButtonWithIcon
+						aria-label={ariaLabels.transferLTR}
 						className="transfer-button-ltr"
 						data-testid="ltr"
 						disabled={!leftSelected.length}
@@ -146,6 +165,7 @@ const ClayDualListBox: React.FunctionComponent<IProps> = ({
 					/>
 
 					<ClayButtonWithIcon
+						aria-label={ariaLabels.transferRTL}
 						className="transfer-button-rtl"
 						data-testid="rtl"
 						disabled={!rightSelected.length}
@@ -166,6 +186,7 @@ const ClayDualListBox: React.FunctionComponent<IProps> = ({
 
 				<ClaySelectBox
 					className="clay-dual-listbox-item clay-dual-listbox-item-expand listbox-right"
+					id={right.id}
 					items={rightItems}
 					label={right.label}
 					multiple

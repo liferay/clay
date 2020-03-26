@@ -18,6 +18,14 @@ interface IProps extends React.ComponentProps<typeof Pagination> {
 	activePage: number;
 
 	/**
+	 * Labels for the aria attributes
+	 */
+	ariaLabels?: {
+		previous: string;
+		next: string;
+	};
+
+	/**
 	 * The number of pages to show on each side of the active page before
 	 * using an ellipsis dropdown.
 	 */
@@ -57,6 +65,10 @@ export const ClayPaginationWithBasicItems = React.forwardRef<
 	(
 		{
 			activePage,
+			ariaLabels = {
+				next: 'Next',
+				previous: 'Previous',
+			},
 			disabledPages = [],
 			ellipsisBuffer = ELLIPSIS_BUFFER,
 			hrefConstructor,
@@ -80,6 +92,7 @@ export const ClayPaginationWithBasicItems = React.forwardRef<
 		return (
 			<Pagination {...otherProps} ref={ref}>
 				<Pagination.Item
+					aria-label={ariaLabels.previous}
 					data-testid="prevArrow"
 					disabled={activePage === 1}
 					href={previousHref}
@@ -125,6 +138,7 @@ export const ClayPaginationWithBasicItems = React.forwardRef<
 				)}
 
 				<Pagination.Item
+					aria-label={ariaLabels.next}
 					data-testid="nextArrow"
 					disabled={activePage === totalPages}
 					href={nextHref}

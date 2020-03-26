@@ -50,7 +50,9 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 		ampm: string;
 		hours: string;
 		minutes: string;
-		clearButton: string;
+		clear: string;
+		timeDown: string;
+		timeUp: string;
 	};
 
 	/**
@@ -141,9 +143,11 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 	ariaLabels = {
 		ampm:
 			'Select time of day (AM/PM) using up (PM) and down (AM) arrow keys',
-		clearButton: 'Delete the entered time',
+		clear: 'Delete the entered time',
 		hours: 'Enter the hour in 00:00 format',
 		minutes: 'Enter the minutes in 00:00 format',
+		timeDown: 'Time down',
+		timeUp: 'Time up',
 	},
 	config = DEFAULT_CONFIG,
 	disabled = false,
@@ -454,7 +458,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 									}}
 								>
 									<ClayButton
-										aria-label={ariaLabels.clearButton}
+										aria-label={ariaLabels.clear}
 										className="clay-time-clear-btn"
 										disabled={disabled}
 										displayType="unstyled"
@@ -491,6 +495,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 										role="group"
 									>
 										<ClayButton
+											aria-label={ariaLabels.timeUp}
 											className="clay-time-inner-spin-btn clay-time-inner-spin-btn-inc"
 											data-testid="spinInc"
 											disabled={disabled}
@@ -503,6 +508,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 											/>
 										</ClayButton>
 										<ClayButton
+											aria-label={ariaLabels.timeDown}
 											className="clay-time-inner-spin-btn clay-time-inner-spin-btn-dec"
 											data-testid="spinDec"
 											disabled={disabled}

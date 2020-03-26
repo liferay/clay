@@ -57,8 +57,12 @@ const ClayDataProviderWithVariablesAndStorage = () => {
 							</div>
 							<div className="sheet">
 								<div className="form-group">
+									<label htmlFor="searchCharacterInput">
+										{'Search Character'}
+									</label>
 									<input
 										className="form-control"
+										id="searchCharacterInput"
 										onChange={(event: any) =>
 											setValue(event.target.value)
 										}

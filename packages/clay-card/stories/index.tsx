@@ -112,7 +112,10 @@ storiesOf('Components|ClayCard', module)
 						flushHorizontal={flushHorizontal}
 						flushVertical={flushVertical}
 						href="#"
-						imgProps={{src: 'https://via.placeholder.com/150x250'}}
+						imgProps={{
+							alt: 'Placeholder Image',
+							src: 'https://via.placeholder.com/150x250',
+						}}
 						labels={[
 							{
 								displayType: 'success',
@@ -132,7 +135,10 @@ storiesOf('Components|ClayCard', module)
 						flushHorizontal={flushHorizontal}
 						flushVertical={flushVertical}
 						href="#"
-						imgProps="https://via.placeholder.com/350x150"
+						imgProps={{
+							alt: 'Placeholder Image',
+							src: 'https://via.placeholder.com/350x150',
+						}}
 						labels={[
 							{
 								displayType: 'success',

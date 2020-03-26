@@ -23,11 +23,7 @@ storiesOf('Components|ClayNavigationBar', module).add('default', () => {
 			triggerLabel={text('triggerLabel: ', triggerName)}
 		>
 			<ClayNavigationBar.Item active={boolean('Active 1: ', true)}>
-				<ClayLink
-					className="nav-link"
-					displayType="secondary"
-					href="#1"
-				>
+				<ClayLink className="nav-link" displayType="secondary" href="#">
 					<span className="navbar-text-truncate">{`Item 1`}</span>
 				</ClayLink>
 			</ClayNavigationBar.Item>
@@ -45,10 +41,11 @@ storiesOf('Components|ClayNavigationBar', module).add('default', () => {
 			</ClayNavigationBar.Item>
 
 			<ClayNavigationBar.Item active={boolean('Active 3: ', false)}>
-				<a className="link-secondary nav-link" href="#1">
+				<a className="link-secondary nav-link" href="#">
 					<span className="navbar-text-truncate">{`Item 3`}</span>
 				</a>
 			</ClayNavigationBar.Item>
+
 			<ClayNavigationBar.Item active={boolean('Active 4: ', false)}>
 				<button
 					className="btn btn-block btn-sm btn-unstyled nav-link"

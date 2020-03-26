@@ -4523,6 +4523,7 @@ exports[`Internationalization renders the date picker in russian 1`] = `
                             role="group"
                           >
                             <button
+                              aria-label="Time up"
                               class="clay-time-inner-spin-btn clay-time-inner-spin-btn-inc btn btn-secondary"
                               data-testid="spinInc"
                               type="button"
@@ -4537,6 +4538,7 @@ exports[`Internationalization renders the date picker in russian 1`] = `
                               </svg>
                             </button>
                             <button
+                              aria-label="Time down"
                               class="clay-time-inner-spin-btn clay-time-inner-spin-btn-dec btn btn-secondary"
                               data-testid="spinDec"
                               type="button"

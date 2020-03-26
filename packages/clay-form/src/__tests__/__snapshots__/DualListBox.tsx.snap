@@ -54,6 +54,7 @@ exports[`Rendering renders ClayDualListBox 1`] = `
               role="group"
             >
               <button
+                aria-label="Reorder Up"
                 class="reorder-button reorder-button-up btn btn-monospaced btn-sm btn-secondary"
                 type="button"
               >
@@ -67,6 +68,7 @@ exports[`Rendering renders ClayDualListBox 1`] = `
                 </svg>
               </button>
               <button
+                aria-label="Reorder Down"
                 class="reorder-button reorder-button-down btn btn-monospaced btn-sm btn-secondary"
                 type="button"
               >
@@ -87,6 +89,7 @@ exports[`Rendering renders ClayDualListBox 1`] = `
         class="btn-group-vertical clay-dual-listbox-actions clay-dual-listbox-item"
       >
         <button
+          aria-label="Transfer Item Left to Right"
           class="transfer-button-ltr btn btn-monospaced btn-sm btn-secondary"
           data-testid="ltr"
           type="button"
@@ -101,6 +104,7 @@ exports[`Rendering renders ClayDualListBox 1`] = `
           </svg>
         </button>
         <button
+          aria-label="Transfer Item Right to Left"
           class="transfer-button-rtl btn btn-monospaced btn-sm btn-secondary"
           data-testid="rtl"
           type="button"

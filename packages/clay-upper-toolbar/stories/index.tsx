@@ -21,11 +21,12 @@ storiesOf('Components|ClayUpperToolbar', module).add('default', () => (
 			<ClayIcon spritemap={spritemap} symbol="lock" />
 		</ClayUpperToolbar.Item>
 
-		<ClayUpperToolbar.Input placeholder="Search..." />
+		<ClayUpperToolbar.Input aria-label="Search" placeholder="Search..." />
 
 		<ClayUpperToolbar.Item>
 			<ClayButton.Group>
 				<ClayButtonWithIcon
+					aria-label="Left"
 					displayType="secondary"
 					onClick={() => {}}
 					small
@@ -34,6 +35,7 @@ storiesOf('Components|ClayUpperToolbar', module).add('default', () => (
 				/>
 
 				<ClayButtonWithIcon
+					aria-label="Right"
 					displayType="secondary"
 					onClick={() => {}}
 					small
@@ -64,6 +66,7 @@ storiesOf('Components|ClayUpperToolbar', module).add('default', () => (
 				spritemap={spritemap}
 				trigger={
 					<ClayButtonWithIcon
+						aria-label="Open dropdown"
 						displayType="unstyled"
 						small
 						spritemap={spritemap}

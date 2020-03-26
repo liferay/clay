@@ -19,6 +19,11 @@ interface IProps {
 	actions?: React.ComponentProps<typeof ClayDropDownWithItems>['items'];
 
 	/**
+	 * Props to add to the dropdown trigger element
+	 */
+	checkboxProps?: React.HTMLAttributes<HTMLInputElement>;
+
+	/**
 	 * Value of the description of the user
 	 */
 	description: string;
@@ -27,6 +32,11 @@ interface IProps {
 	 * Flag to indicate that all interactions on the card will be disabled.
 	 */
 	disabled?: boolean;
+
+	/**
+	 * Props to add to the dropdown trigger element
+	 */
+	dropDownTriggerProps?: React.HTMLAttributes<HTMLButtonElement>;
 
 	/**
 	 * Path or URL to user
@@ -73,8 +83,10 @@ interface IProps {
 
 export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 	actions,
+	checkboxProps = {},
 	description,
 	disabled,
+	dropDownTriggerProps = {},
 	href,
 	labels,
 	name,
@@ -110,6 +122,7 @@ export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 			<ClayCard.AspectRatio className="card-item-first">
 				{onSelectChange && (
 					<ClayCheckbox
+						{...checkboxProps}
 						checked={selected}
 						disabled={disabled}
 						onChange={() => onSelectChange(!selected)}
@@ -152,6 +165,7 @@ export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 								spritemap={spritemap}
 								trigger={
 									<button
+										{...dropDownTriggerProps}
 										className="component-action"
 										disabled={disabled}
 									>

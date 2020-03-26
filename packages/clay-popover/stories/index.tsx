@@ -47,6 +47,7 @@ storiesOf('Components|ClayPopover', module)
 					header="Popover"
 					trigger={
 						<ClayButtonWithIcon
+							aria-label="Information button"
 							spritemap={spritemap}
 							symbol="info-circle-open"
 						/>
@@ -83,6 +84,7 @@ storiesOf('Components|ClayPopover', module)
 					show={show}
 					trigger={
 						<ClayButtonWithIcon
+							aria-label="Information button"
 							spritemap={spritemap}
 							symbol="info-circle-open"
 						/>

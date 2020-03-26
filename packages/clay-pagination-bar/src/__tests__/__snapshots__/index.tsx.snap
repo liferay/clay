@@ -37,6 +37,7 @@ exports[`ClayPaginationBar renders 1`] = `
         class="page-item disabled"
       >
         <button
+          aria-label="Previous"
           class="page-link"
           data-testid="prevArrow"
           disabled=""
@@ -107,6 +108,7 @@ exports[`ClayPaginationBar renders 1`] = `
         class="page-item"
       >
         <button
+          aria-label="Next"
           class="page-link"
           data-testid="nextArrow"
           type="button"

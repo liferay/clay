@@ -47,43 +47,47 @@ storiesOf('Components|ClayManagementToolbar', module).add(
 
 		return (
 			<>
-				<ClayManagementToolbar>
+				<ClayManagementToolbar aria-label="Management toolbar">
 					<ClayManagementToolbar.ItemList>
 						<ClayManagementToolbar.Item>
 							<ClayCheckbox checked={false} onChange={() => {}} />
 						</ClayManagementToolbar.Item>
 
-						<ClayDropDownWithItems
-							items={filterItems}
-							spritemap={spritemap}
-							trigger={
-								<ClayButton
-									className="nav-link"
-									displayType="link"
-								>
-									<span className="navbar-breakpoint-down-d-none">
-										<span className="navbar-text-truncate">
-											{'Filter and Order'}
-										</span>
+						<ClayManagementToolbar.Item>
+							<ClayDropDownWithItems
+								items={filterItems}
+								spritemap={spritemap}
+								trigger={
+									<ClayButton
+										aria-label="Filter items"
+										className="nav-link"
+										displayType="link"
+									>
+										<span className="navbar-breakpoint-down-d-none">
+											<span className="navbar-text-truncate">
+												{'Filter and Order'}
+											</span>
 
-										<ClayIcon
-											className="inline-item inline-item-after"
-											spritemap={spritemap}
-											symbol="caret-bottom"
-										/>
-									</span>
-									<span className="navbar-breakpoint-d-none">
-										<ClayIcon
-											spritemap={spritemap}
-											symbol="filter"
-										/>
-									</span>
-								</ClayButton>
-							}
-						/>
+											<ClayIcon
+												className="inline-item inline-item-after"
+												spritemap={spritemap}
+												symbol="caret-bottom"
+											/>
+										</span>
+										<span className="navbar-breakpoint-d-none">
+											<ClayIcon
+												spritemap={spritemap}
+												symbol="filter"
+											/>
+										</span>
+									</ClayButton>
+								}
+							/>
+						</ClayManagementToolbar.Item>
 
 						<ClayManagementToolbar.Item>
 							<ClayButton
+								aria-label="Order items"
 								className="nav-link nav-link-monospaced order-arrow-down-active"
 								displayType="link"
 								onClick={() => {}}
@@ -107,6 +111,7 @@ storiesOf('Components|ClayManagementToolbar', module).add(
 								/>
 								<ClayInput.GroupInsetItem after tag="span">
 									<ClayButtonWithIcon
+										aria-label="Clear search button"
 										className="navbar-breakpoint-d-none"
 										displayType="unstyled"
 										onClick={() => setSearchMobile(false)}
@@ -114,6 +119,7 @@ storiesOf('Components|ClayManagementToolbar', module).add(
 										symbol="times"
 									/>
 									<ClayButtonWithIcon
+										aria-label="Search button"
 										displayType="unstyled"
 										spritemap={spritemap}
 										symbol="search"
@@ -127,6 +133,7 @@ storiesOf('Components|ClayManagementToolbar', module).add(
 					<ClayManagementToolbar.ItemList>
 						<ClayManagementToolbar.Item className="navbar-breakpoint-d-none">
 							<ClayButton
+								aria-label="Search button mobile"
 								className="nav-link nav-link-monospaced"
 								displayType="unstyled"
 								onClick={() => setSearchMobile(true)}
@@ -140,6 +147,7 @@ storiesOf('Components|ClayManagementToolbar', module).add(
 
 						<ClayManagementToolbar.Item>
 							<ClayButton
+								aria-label="Information"
 								className="nav-link nav-link-monospaced"
 								displayType="link"
 								onClick={() => {}}
@@ -157,6 +165,7 @@ storiesOf('Components|ClayManagementToolbar', module).add(
 							spritemap={spritemap}
 							trigger={
 								<ClayButton
+									aria-label="Display type"
 									className="nav-link nav-link-monospaced"
 									displayType="link"
 								>
@@ -174,6 +183,7 @@ storiesOf('Components|ClayManagementToolbar', module).add(
 
 						<ClayManagementToolbar.Item>
 							<ClayButtonWithIcon
+								aria-label="Add new"
 								className="nav-btn nav-btn-monospaced"
 								spritemap={spritemap}
 								symbol="plus"

@@ -213,6 +213,7 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with footer content 1
         <form>
           <div
             class="inline-scroller"
+            tabindex="0"
           >
             <ul
               class="list-unstyled"

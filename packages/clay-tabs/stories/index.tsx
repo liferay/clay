@@ -64,9 +64,9 @@ storiesOf('Components|ClayTabs', module)
 						<ClayTabs.Item
 							active={activeIndex == 0}
 							disabled={boolean('Disable first tab', false)}
-							href="#1"
+							href="#"
 							innerProps={{
-								'aria-controls': 'tabpanel-1',
+								'aria-controls': 'tabpanel1',
 							}}
 							onClick={() => setActiveIndex(0)}
 						>
@@ -75,9 +75,9 @@ storiesOf('Components|ClayTabs', module)
 						<ClayTabs.Item
 							active={activeIndex == 1}
 							disabled={boolean('Disable second tab', true)}
-							href="#2"
+							href="#"
 							innerProps={{
-								'aria-controls': 'tabpanel-2',
+								'aria-controls': 'tabpanel2',
 							}}
 							onClick={() => setActiveIndex(1)}
 						>
@@ -86,9 +86,9 @@ storiesOf('Components|ClayTabs', module)
 						<ClayTabs.Item
 							active={activeIndex == 2}
 							disabled={boolean('Disable third tab', false)}
-							href="#3"
+							href="#"
 							innerProps={{
-								'aria-controls': 'tabpanel-3',
+								'aria-controls': 'tabpanel3',
 							}}
 							onClick={() => setActiveIndex(2)}
 						>
@@ -97,9 +97,9 @@ storiesOf('Components|ClayTabs', module)
 						<ClayTabs.Item
 							active={activeIndex == 3}
 							disabled={boolean('Disable fourth tab', false)}
-							href="#4"
+							href="#"
 							innerProps={{
-								'aria-controls': 'tabpanel-4',
+								'aria-controls': 'tabpanel4',
 							}}
 							onClick={() => setActiveIndex(3)}
 						>
@@ -115,7 +115,7 @@ storiesOf('Components|ClayTabs', module)
 										false
 									)}
 									innerProps={{
-										'aria-controls': 'tabpanel-5',
+										'aria-controls': 'tabpanel5',
 									}}
 									onClick={() => setActiveIndex(4)}
 								>
@@ -130,7 +130,7 @@ storiesOf('Components|ClayTabs', module)
 										return (
 											<ClayDropDown.Item
 												active={activeIndex === tabkey}
-												aria-controls={`tabpanel-${tabkey}`}
+												aria-controls={`tabpanel${tabkey}`}
 												aria-selected={
 													activeIndex === tabkey
 												}
@@ -159,7 +159,7 @@ storiesOf('Components|ClayTabs', module)
 						activeIndex={activeIndex}
 						fade={boolean('Fade', true)}
 					>
-						<ClayTabs.TabPane aria-labelledby="tab-1">
+						<ClayTabs.TabPane id="tabpanel1" role="tabpanel">
 							{`1. Single origin, extra id beans, eu to go, skinny
 						americano ut aftertas te sugar. At americano, viennese
 						variety iced grounds, grinder froth and pumpkin spice
@@ -169,7 +169,7 @@ storiesOf('Components|ClayTabs', module)
 						plunger pot. Single shot variety pumpkin spice seasonal
 						skinny barista carajillo robust cream.`}
 						</ClayTabs.TabPane>
-						<ClayTabs.TabPane aria-labelledby="tab-2">
+						<ClayTabs.TabPane id="tabpanel2" role="tabpanel">
 							{`2. Single origin, extra id beans, eu to go, skinny
 						americano ut aftertaste sugar. At americano, viennese
 						variety iced grounds, grinder froth and pumpkin spice
@@ -179,7 +179,7 @@ storiesOf('Components|ClayTabs', module)
 						plunger pot. Single shot variety pumpkin spice seasonal
 						skinny barista carajillo robust cream.`}
 						</ClayTabs.TabPane>
-						<ClayTabs.TabPane aria-labelledby="tab-3">
+						<ClayTabs.TabPane id="tabpanel3" role="tabpanel">
 							{`3. Single origin, extra id beans, eu to go, skinny
 						americano ut aftertaste sugar. At americano, viennese
 						variety iced grounds, grinder froth and pumpkin spice
@@ -189,7 +189,7 @@ storiesOf('Components|ClayTabs', module)
 						plunger pot. Single shot variety pumpkin spice seasonal
 						skinny barista carajillo robust cream.`}
 						</ClayTabs.TabPane>
-						<ClayTabs.TabPane aria-labelledby="tab-4">
+						<ClayTabs.TabPane id="tabpanel4" role="tabpanel">
 							{`4. Single origin, extra id beans, eu to go, skinny
 						americano ut aftertaste sugar. At americano, viennese
 						variety iced grounds, grinder froth and pumpkin spice
@@ -199,7 +199,7 @@ storiesOf('Components|ClayTabs', module)
 						plunger pot. Single shot variety pumpkin spice seasonal
 						skinny barista carajillo robust cream.`}
 						</ClayTabs.TabPane>
-						<ClayTabs.TabPane aria-labelledby="tab-5">
+						<ClayTabs.TabPane id="tabpanel5" role="tabpanel">
 							{`4. Single origin, extra id beans, eu to go, skinny
 						americano ut aftertaste sugar. At americano, viennese
 						variety iced grounds, grinder froth and pumpkin spice
@@ -209,7 +209,7 @@ storiesOf('Components|ClayTabs', module)
 						plunger pot. Single shot variety pumpkin spice seasonal
 						skinny barista carajillo robust cream.`}
 						</ClayTabs.TabPane>
-						<ClayTabs.TabPane aria-labelledby="tab-6">
+						<ClayTabs.TabPane id="tabpanel6" role="tabpanel">
 							{`6. Single origin, extra id beans, eu to go, skinny
 						americano ut aftertaste sugar. At americano, viennese
 						variety iced grounds, grinder froth and pumpkin spice
@@ -219,7 +219,7 @@ storiesOf('Components|ClayTabs', module)
 						plunger pot. Single shot variety pumpkin spice seasonal
 						skinny barista carajillo robust cream.`}
 						</ClayTabs.TabPane>
-						<ClayTabs.TabPane aria-labelledby="tab-7">
+						<ClayTabs.TabPane id="tabpanel7" role="tabpanel">
 							{`7. Single origin, extra id beans, eu to go, skinny
 						americano ut aftertaste sugar. At americano, viennese
 						variety iced grounds, grinder froth and pumpkin spice
@@ -229,7 +229,7 @@ storiesOf('Components|ClayTabs', module)
 						plunger pot. Single shot variety pumpkin spice seasonal
 						skinny barista carajillo robust cream.`}
 						</ClayTabs.TabPane>
-						<ClayTabs.TabPane aria-labelledby="tab-8">
+						<ClayTabs.TabPane id="tabpanel8" role="tabpanel">
 							{`8. Single origin, extra id beans, eu to go, skinny
 						americano ut aftertaste sugar. At americano, viennese
 						variety iced grounds, grinder froth and pumpkin spice
