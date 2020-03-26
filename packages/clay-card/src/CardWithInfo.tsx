@@ -30,6 +30,11 @@ interface IProps {
 	disabled?: boolean;
 
 	/**
+	 * Props to add to the dropdown trigger element
+	 */
+	dropDownTriggerProps?: React.HTMLAttributes<HTMLButtonElement>;
+
+	/**
 	 * Flag to indicate if `aspect-ratio-item-flush` class should be
 	 * applied to the image.
 	 */
@@ -96,6 +101,7 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 	actions,
 	description,
 	disabled,
+	dropDownTriggerProps = {},
 	flushHorizontal,
 	flushVertical,
 	href,
@@ -197,6 +203,7 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 								spritemap={spritemap}
 								trigger={
 									<button
+										{...dropDownTriggerProps}
 										className="component-action"
 										disabled={disabled}
 									>

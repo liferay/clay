@@ -9,6 +9,7 @@ exports[`Rendering renders ClaySelectBox 1`] = `
       class="clay-reorder clay-reorder-footer-end"
     >
       <select
+        aria-label="Select Box Label"
         class="form-control form-control-inset"
       >
         <option
@@ -47,6 +48,7 @@ exports[`Rendering renders ClaySelectBox with buttons to reorder options 1`] = `
       class="clay-reorder clay-reorder-footer-end"
     >
       <select
+        aria-label="Select Box Label"
         class="form-control form-control-inset"
         multiple=""
       >
@@ -80,6 +82,7 @@ exports[`Rendering renders ClaySelectBox with buttons to reorder options 1`] = `
           role="group"
         >
           <button
+            aria-label="Reorder Up"
             class="reorder-button reorder-button-up btn btn-monospaced btn-sm btn-secondary"
             type="button"
           >
@@ -93,6 +96,7 @@ exports[`Rendering renders ClaySelectBox with buttons to reorder options 1`] = `
             </svg>
           </button>
           <button
+            aria-label="Reorder Down"
             class="reorder-button reorder-button-down btn btn-monospaced btn-sm btn-secondary"
             type="button"
           >
@@ -121,6 +125,7 @@ exports[`Rendering renders ClaySelectBox with multiple options selected 1`] = `
       class="clay-reorder clay-reorder-footer-end"
     >
       <select
+        aria-label="Select Box Label"
         class="form-control form-control-inset"
         multiple=""
       >

@@ -1705,6 +1705,7 @@ exports[`BasicRendering renders date picker with time 1`] = `
                             role="group"
                           >
                             <button
+                              aria-label="Time up"
                               class="clay-time-inner-spin-btn clay-time-inner-spin-btn-inc btn btn-secondary"
                               data-testid="spinInc"
                               type="button"
@@ -1719,6 +1720,7 @@ exports[`BasicRendering renders date picker with time 1`] = `
                               </svg>
                             </button>
                             <button
+                              aria-label="Time down"
                               class="clay-time-inner-spin-btn clay-time-inner-spin-btn-dec btn btn-secondary"
                               data-testid="spinDec"
                               type="button"

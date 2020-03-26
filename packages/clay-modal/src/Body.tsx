@@ -28,6 +28,7 @@ const ClayModalBody: React.FunctionComponent<IBodyProps> = ({
 			'inline-scroller': scrollable,
 			'modal-body-iframe': url,
 		})}
+		tabIndex={scrollable ? 0 : undefined}
 	>
 		{url ? <iframe src={url} title={url} /> : children}
 	</div>
