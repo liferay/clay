@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/liferay/clay/tree/master/packages/clay-label/compare/@clayui/label@3.1.1...@clayui/label@3.2.0) (2020-03-26)
+
+### Features
+
+-   **@clayui/label:** add prop for inner element attributes ([2d1f489](https://github.com/liferay/clay/tree/master/packages/clay-label/commit/2d1f489))
+
 ## [3.1.1](https://github.com/liferay/clay/tree/master/packages/clay-label/compare/@clayui/label@3.1.0...@clayui/label@3.1.1) (2020-03-12)
 
 ### Bug Fixes

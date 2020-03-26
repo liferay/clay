@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.7.0](https://github.com/liferay/clay/tree/master/packages/clay-form/compare/@clayui/form@3.6.0...@clayui/form@3.7.0) (2020-03-26)
+
+### Features
+
+-   **@clayui/form:** DualListbox & Selectbox ([0ad5de4](https://github.com/liferay/clay/tree/master/packages/clay-form/commit/0ad5de4))
+
 # 3.6.0 (2020-02-28)
 
 ### Bug Fixes

@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.9.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.8.0...@clayui/css@3.9.0) (2020-03-26)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Atlas Custom Checkbox and Radio should be 16px x 16px ([7a16efa](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/7a16efa)), closes [#3026](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3026)
+* **@clayui/css:** Forms `input[type="range"]` focus border artifact in Chrome and remove padding ([37c86d9](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/37c86d9)), closes [#1179](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/1179)
+* **@clayui/css:** Mixins `clay-css` only loop through properties that are passed via Sass map instead of listing everything ([b2f5496](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/b2f5496)), closes [#2990](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2990)
+* **@clayui/css:** override specific styles for rtl support ([dce5d81](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/dce5d81))
+
+
+### Features
+
+* **@clayui/css:** SVG Icons add Malaysian flag ([37e26c6](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/37e26c6)), closes [#3017](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3017)
+
+
+### Reverts
+
+* **@clayui/css:** override specific styles for rtl support ([5125a62](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/5125a62))
+
+
+
+
+
 # [3.8.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.7.0...@clayui/css@3.8.0) (2020-03-12)
 
 

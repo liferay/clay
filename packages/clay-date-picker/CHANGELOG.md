@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/liferay/clay/tree/master/packages/clay-date-picker/compare/@clayui/date-picker@3.1.1...@clayui/date-picker@3.2.0) (2020-03-26)
+
+### Bug Fixes
+
+-   **@clayui/date-picker:** adds the API to disable date picker features ([cb6c254](https://github.com/liferay/clay/tree/master/packages/clay-date-picker/commit/cb6c254))
+
+### Features
+
+-   **@clayui/date-picker:** Add forwardRef support to Input ([e07b189](https://github.com/liferay/clay/tree/master/packages/clay-date-picker/commit/e07b189))
+-   **@clayui/date-picker:** add helper for easily getting locale info from moment ([4536b97](https://github.com/liferay/clay/tree/master/packages/clay-date-picker/commit/4536b97))
+-   **@clayui/date-picker:** Adds a new API to be called in the user's navigation in the date picker ([199e5b7](https://github.com/liferay/clay/tree/master/packages/clay-date-picker/commit/199e5b7))
+-   **@clayui/date-picker:** forwards all other props to the InputDate ([9fed37a](https://github.com/liferay/clay/tree/master/packages/clay-date-picker/commit/9fed37a))
+
 ## [3.1.1](https://github.com/liferay/clay/tree/master/packages/clay-date-picker/compare/@clayui/date-picker@3.1.0...@clayui/date-picker@3.1.1) (2020-03-12)
 
 **Note:** Version bump only for package @clayui/date-picker
