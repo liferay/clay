@@ -23,12 +23,18 @@ storiesOf('Components|ClayLink', module)
 			<ClayLink aria-label="My Link" href="#link-styles">
 				{'With Aria Label'}
 			</ClayLink>
+
+			<div id="link-styles" />
 		</div>
 	))
 	.add('borderless', () => (
-		<ClayLink borderless href="#1">
-			{'Borderless'}
-		</ClayLink>
+		<>
+			<ClayLink borderless href="#1">
+				{'Borderless'}
+			</ClayLink>
+
+			<div id="1" />
+		</>
 	))
 	.add('outline', () => (
 		<>
@@ -44,14 +50,23 @@ storiesOf('Components|ClayLink', module)
 			<ClayLink borderless displayType="secondary" href="#1" outline>
 				{'Outline Borderless Secondary'}
 			</ClayLink>
+
+			<div id="1" />
 		</>
 	))
 	.add('monospaced', () => (
 		<>
-			<ClayLink displayType="primary" href="#1" monospaced outline>
+			<ClayLink
+				aria-label="Monospaced link with icon"
+				displayType="primary"
+				href="#1"
+				monospaced
+				outline
+			>
 				<ClayIcon spritemap={spritemap} symbol="add-cell" />
 			</ClayLink>
 			<ClayLink
+				aria-label="Monospaced link with icon borderless"
 				borderless
 				displayType="primary"
 				href="#1"
@@ -60,10 +75,17 @@ storiesOf('Components|ClayLink', module)
 			>
 				<ClayIcon spritemap={spritemap} symbol="add-cell" />
 			</ClayLink>
-			<ClayLink displayType="secondary" href="#1" monospaced outline>
+			<ClayLink
+				aria-label="Monospaced link with icon secondary"
+				displayType="secondary"
+				href="#1"
+				monospaced
+				outline
+			>
 				<ClayIcon spritemap={spritemap} symbol="picture" />
 			</ClayLink>
 			<ClayLink
+				aria-label="Monospaced link with icon secondary borderless"
 				borderless
 				displayType="secondary"
 				href="#1"
@@ -72,6 +94,8 @@ storiesOf('Components|ClayLink', module)
 			>
 				<ClayIcon spritemap={spritemap} symbol="picture" />
 			</ClayLink>
+
+			<div id="1" />
 		</>
 	))
 	.add('w/custom link component', () => {
@@ -94,6 +118,8 @@ storiesOf('Components|ClayLink', module)
 		return (
 			<ClayLinkContext.Provider value={ConfirmLink}>
 				<ClayLink href="#1">{'Click to Navigate'}</ClayLink>
+
+				<div id="1" />
 			</ClayLinkContext.Provider>
 		);
 	});

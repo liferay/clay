@@ -47,18 +47,25 @@ storiesOf('Components|ClayButton', module)
 	))
 	.add('ButtonWithIcon', () => (
 		<>
-			<ClayButtonWithIcon spritemap={spritemap} symbol="trash" />
 			<ClayButtonWithIcon
+				aria-label="Trash"
+				spritemap={spritemap}
+				symbol="trash"
+			/>
+			<ClayButtonWithIcon
+				aria-label="Cog"
 				displayType="secondary"
 				spritemap={spritemap}
 				symbol="cog"
 			/>
 			<ClayButtonWithIcon
+				aria-label="Cut"
 				displayType="link"
 				spritemap={spritemap}
 				symbol="cut"
 			/>
 			<ClayButtonWithIcon
+				aria-label="Desktop"
 				displayType="unstyled"
 				spritemap={spritemap}
 				symbol="desktop"

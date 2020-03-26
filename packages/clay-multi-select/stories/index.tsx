@@ -121,11 +121,16 @@ const MenuCustom: React.ComponentProps<
 
 storiesOf('Components|ClayMultiSelect', module)
 	.add('default', () => (
-		<ClayMultiSelectWithState
-			disabled={boolean('Disabled all', false)}
-			disabledClearAll={boolean('Disabled Clear All', false)}
-			isValid={boolean('isValid', true)}
-		/>
+		<>
+			<label htmlFor="multiSelect">{'Multi Select'}</label>
+
+			<ClayMultiSelectWithState
+				disabled={boolean('Disabled all', false)}
+				disabledClearAll={boolean('Disabled Clear All', false)}
+				id="multiSelect"
+				isValid={boolean('isValid', true)}
+			/>
+		</>
 	))
 	.add('comparing items', () => {
 		const [value, setValue] = React.useState('');
@@ -139,66 +144,94 @@ storiesOf('Components|ClayMultiSelect', module)
 		]);
 
 		return (
-			<ClayMultiSelect
-				inputName="myInput"
-				inputValue={value}
-				items={items}
-				onChange={setValue}
-				onItemsChange={itemsChanged => {
-					const removedItems = items.filter(
-						value => !itemsChanged.includes(value)
-					);
-					const newItems = itemsChanged.filter(
-						value => !items.includes(value)
-					);
+			<>
+				<label htmlFor="multiSelect">{'Multi Select'}</label>
 
-					setItems(itemsChanged);
+				<ClayMultiSelect
+					id="multiSelect"
+					inputName="myInput"
+					inputValue={value}
+					items={items}
+					onChange={setValue}
+					onItemsChange={itemsChanged => {
+						const removedItems = items.filter(
+							value => !itemsChanged.includes(value)
+						);
+						const newItems = itemsChanged.filter(
+							value => !items.includes(value)
+						);
 
-					alert(
-						`Removed Items: ${JSON.stringify(
-							removedItems
-						)}\nNew Items: ${JSON.stringify(newItems)}\n`
-					);
-				}}
-				sourceItems={sourceItems}
-				spritemap={spritemap}
-			/>
+						setItems(itemsChanged);
+
+						alert(
+							`Removed Items: ${JSON.stringify(
+								removedItems
+							)}\nNew Items: ${JSON.stringify(newItems)}\n`
+						);
+					}}
+					sourceItems={sourceItems}
+					spritemap={spritemap}
+				/>
+			</>
 		);
 	})
-	.add('w/ sourceItems', () => <ClayMultiSelectWithAutocomplete />)
+	.add('w/ sourceItems', () => (
+		<>
+			<label htmlFor="multiSelect">{'Multi Select'}</label>
+
+			<ClayMultiSelectWithAutocomplete id="multiSelect" />
+		</>
+	))
 	.add('w/ no filter', () => (
-		<ClayMultiSelectWithAutocomplete filter={() => true} />
+		<>
+			<label htmlFor="multiSelect">{'Multi Select'}</label>
+
+			<ClayMultiSelectWithAutocomplete
+				filter={() => true}
+				id="multiSelect"
+			/>
+		</>
 	))
 	.add('w/ custom filter', () => (
-		<ClayMultiSelectWithAutocomplete
-			filter={(item: any, inputValue: any, locator: any) =>
-				item[locator.label].match('two')
-			}
-		/>
+		<>
+			<label htmlFor="multiSelect">{'Multi Select'}</label>
+
+			<ClayMultiSelectWithAutocomplete
+				filter={(item: any, inputValue: any, locator: any) =>
+					item[locator.label].match('two')
+				}
+				id="multiSelect"
+			/>
+		</>
 	))
 	.add('w/ custom menu', () => (
-		<ClayMultiSelectWithAutocomplete
-			items={[
-				{
-					email: 'one@example.com',
-					label: 'One',
-					value: '1',
-				},
-			]}
-			menuRenderer={MenuCustom}
-			sourceItems={[
-				{
-					email: 'one@example.com',
-					label: 'One',
-					value: '1',
-				},
-				{
-					email: 'two@example.com',
-					label: 'Two',
-					value: '2',
-				},
-			]}
-		/>
+		<>
+			<label htmlFor="multiSelect">{'Multi Select'}</label>
+
+			<ClayMultiSelectWithAutocomplete
+				id="multiSelect"
+				items={[
+					{
+						email: 'one@example.com',
+						label: 'One',
+						value: '1',
+					},
+				]}
+				menuRenderer={MenuCustom}
+				sourceItems={[
+					{
+						email: 'one@example.com',
+						label: 'One',
+						value: '1',
+					},
+					{
+						email: 'two@example.com',
+						label: 'Two',
+						value: '2',
+					},
+				]}
+			/>
+		</>
 	))
 	.add('w/ group', () => {
 		const isValid = boolean('isValid', true);
@@ -206,11 +239,14 @@ storiesOf('Components|ClayMultiSelect', module)
 		return (
 			<div className="sheet">
 				<ClayForm.Group className={!isValid ? 'has-error' : ''}>
-					<label>{'Composed MultiSelect'}</label>
+					<label htmlFor="multiSelect">
+						{'Composed MultiSelect'}
+					</label>
 
 					<ClayInput.Group>
 						<ClayInput.GroupItem>
 							<ClayMultiSelectWithAutocomplete
+								id="multiSelect"
 								isValid={isValid}
 								items={[
 									{

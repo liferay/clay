@@ -121,8 +121,12 @@ storiesOf('Components|ClayForm', module).add('Feedback', () => (
 	<div className="sheet">
 		<ClayForm>
 			<ClayForm.Group className="has-error">
-				<label>{'Name'}</label>
-				<ClayInput placeholder="Enter some text..." type="text" />
+				<label htmlFor="Feedback Input">{'Name'}</label>
+				<ClayInput
+					id="Feedback Input"
+					placeholder="Enter some text..."
+					type="text"
+				/>
 
 				<ClayForm.FeedbackGroup>
 					<ClayForm.FeedbackItem>
@@ -190,20 +194,32 @@ storiesOf('Components|ClayInput', module)
 						<ClayInput.GroupText>{'@'}</ClayInput.GroupText>
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem>
-						<ClayInput placeholder="Username" type="text" />
+						<ClayInput
+							aria-label="Username"
+							placeholder="Username"
+							type="text"
+						/>
 					</ClayInput.GroupItem>
 				</ClayInput.Group>
 			</ClayForm.Group>
 			<ClayForm.Group>
 				<ClayInput.Group>
 					<ClayInput.GroupItem>
-						<ClayInput placeholder="Email" type="text" />
+						<ClayInput
+							aria-label="Email"
+							placeholder="Email"
+							type="text"
+						/>
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem shrink>
 						<ClayInput.GroupText>{'@'}</ClayInput.GroupText>
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem>
-						<ClayInput placeholder="liferay" type="text" />
+						<ClayInput
+							aria-label="Email Host"
+							placeholder="liferay"
+							type="text"
+						/>
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem shrink>
 						<ClayInput.GroupText>{'.com'}</ClayInput.GroupText>
@@ -220,20 +236,32 @@ storiesOf('Components|ClayInput', module)
 						<ClayInput.GroupText>{'@'}</ClayInput.GroupText>
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem append>
-						<ClayInput placeholder="Username" type="text" />
+						<ClayInput
+							aria-label="Username"
+							placeholder="Username"
+							type="text"
+						/>
 					</ClayInput.GroupItem>
 				</ClayInput.Group>
 			</ClayForm.Group>
 			<ClayForm.Group>
 				<ClayInput.Group>
 					<ClayInput.GroupItem prepend>
-						<ClayInput placeholder="Email" type="text" />
+						<ClayInput
+							aria-label="Email"
+							placeholder="Email"
+							type="text"
+						/>
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem prepend shrink>
 						<ClayInput.GroupText>{'@'}</ClayInput.GroupText>
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem prepend>
-						<ClayInput placeholder="liferay" type="text" />
+						<ClayInput
+							aria-label="Email Host"
+							placeholder="liferay"
+							type="text"
+						/>
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem append shrink>
 						<ClayInput.GroupText>{'.com'}</ClayInput.GroupText>
@@ -250,7 +278,11 @@ storiesOf('Components|ClayInput', module)
 						<ClayInput.GroupText>{'@'}</ClayInput.GroupText>
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem prepend>
-						<ClayInput placeholder="Username" type="text" />
+						<ClayInput
+							aria-label="Username"
+							placeholder="Username"
+							type="text"
+						/>
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem append shrink>
 						<button className="btn btn-secondary" type="submit">
@@ -377,6 +409,7 @@ storiesOf('Components|ClayToggle', module)
 		return (
 			<>
 				<ClayToggle
+					aria-label="Toggle checkbox"
 					label={text('label', 'Checkbox')}
 					onToggle={setToggle}
 					toggled={toggled}
@@ -386,6 +419,7 @@ storiesOf('Components|ClayToggle', module)
 				<br />
 
 				<ClayToggle
+					aria-label="Toggle checkbox with symbol"
 					label="with symbol"
 					onToggle={setToggle}
 					spritemap={spritemap}
@@ -400,6 +434,7 @@ storiesOf('Components|ClayToggle', module)
 				<br />
 
 				<ClayToggle
+					aria-label="Toggle checkbox disabled"
 					disabled
 					label={text('label', 'Disabled')}
 					onToggle={setToggle}
@@ -416,11 +451,11 @@ storiesOf('Components|ClayToggle', module)
 				onSelectedValueChange={val => setValue(val as string)}
 				selectedValue={value}
 			>
-				<ClayToggle label="Foo" value="foo" />
+				<ClayToggle aria-label="Radio Foo" label="Foo" value="foo" />
 
-				<ClayToggle label="Bar" value="bar" />
+				<ClayToggle aria-label="Radio Bar" label="Bar" value="bar" />
 
-				<ClayToggle label="Baz" value="baz" />
+				<ClayToggle aria-label="Radio Baz" label="Baz" value="baz" />
 			</ClayRadioGroup>
 		);
 	});

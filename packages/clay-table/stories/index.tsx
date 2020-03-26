@@ -45,6 +45,7 @@ function Dropdown() {
 			spritemap={spritemap}
 			trigger={
 				<ClayButton
+					aria-label="Open Dropdown"
 					className="component-action"
 					displayType="unstyled"
 					monospaced
