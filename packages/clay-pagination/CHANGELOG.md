@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.2](https://github.com/liferay/clay/tree/master/packages/clay-pagination/compare/@clayui/pagination@3.1.1...@clayui/pagination@3.1.2) (2020-03-26)
+
+**Note:** Version bump only for package @clayui/pagination
+
 ## [3.1.1](https://github.com/liferay/clay/tree/master/packages/clay-pagination/compare/@clayui/pagination@3.1.0...@clayui/pagination@3.1.1) (2020-03-12)
 
 ### Bug Fixes

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-alpha.12](https://github.com/bryceosterhaus/clay/compare/clayui.com@3.0.0-alpha.11...clayui.com@3.0.0-alpha.12) (2020-03-26)
+
+### Bug Fixes
+
+-   **@clayui.com:** Fix broken links ([6997666](https://github.com/bryceosterhaus/clay/commit/6997666))
+-   **@clayui.com:** Remove links to localhost ([dbedd1a](https://github.com/bryceosterhaus/clay/commit/dbedd1a))
+-   **clayui.com:** formatting errors ([7b9701c](https://github.com/bryceosterhaus/clay/commit/7b9701c))
+
 # [3.0.0-alpha.11](https://github.com/bryceosterhaus/clay/compare/clayui.com@3.0.0-alpha.10...clayui.com@3.0.0-alpha.11) (2020-03-13)
 
 **Note:** Version bump only for package clayui.com

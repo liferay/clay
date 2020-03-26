@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/liferay/clay/tree/master/packages/clay-time-picker/compare/@clayui/time-picker@3.1.0...@clayui/time-picker@3.1.1) (2020-03-26)
+
+### Bug Fixes
+
+-   **@clayui/time-picker:** prevent scroll when using arrow keys to cycle numbers ([7e4db38](https://github.com/liferay/clay/tree/master/packages/clay-time-picker/commit/7e4db38))
+
 # 3.1.0 (2020-02-28)
 
 ### Bug Fixes
