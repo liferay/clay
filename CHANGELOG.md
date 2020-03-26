@@ -1,5 +1,21 @@
 # Change Log
 
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [2.21.1](https://github.com/bryceosterhaus/clay/compare/v2.21.0...v2.21.1) (2020-03-26)
+
+
+### Bug Fixes
+
+* **@clay-multi-select:** Consistant HTMLescape in _addLabelItem ([b104b49](https://github.com/bryceosterhaus/clay/commit/b104b49))
+
+
+
+
+
+# Change Log
+
 ## [v2.8.0](https://github.com/liferay/clay/tree/v2.8.0) (2019-02-08)
 [Full Changelog](https://github.com/liferay/clay/compare/v2.7.0...v2.8.0)
 
