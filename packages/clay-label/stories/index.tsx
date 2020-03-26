@@ -11,11 +11,12 @@ import React from 'react';
 
 import ClayLabel from '../src';
 
-const ClayLabelWithState = () => {
+const ClayLabelWithState = (props: any) => {
 	const [visible, setVisible] = React.useState<boolean>(true);
 
 	return visible ? (
 		<ClayLabel
+			{...props}
 			closeButtonProps={
 				boolean('Closeable', false)
 					? {
@@ -40,11 +41,19 @@ const ClayLabelWithState = () => {
 			large={boolean('Large', false)}
 			spritemap={spritemap}
 		>
-			{text('Label', 'Label')}
+			{text('Label', props.children || 'Label')}
 		</ClayLabel>
 	) : null;
 };
 
-storiesOf('Components|ClayLabel', module).add('default', () => (
-	<ClayLabelWithState />
-));
+storiesOf('Components|ClayLabel', module)
+	.add('default', () => <ClayLabelWithState />)
+	.add('w/ truncation', () => (
+		<div style={{width: 150}}>
+			<ClayLabelWithState
+				innerElementProps={{className: 'text-truncate'}}
+			>
+				{'this is a very long bit of text, can you see the end of it?'}
+			</ClayLabelWithState>
+		</div>
+	));
