@@ -50,7 +50,7 @@ describe('Rendering', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders as a link and closable ', () => {
+	it('renders as a link and closable', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayLabel
 				closeButtonProps={{
@@ -61,6 +61,14 @@ describe('Rendering', () => {
 			>
 				{'Label Closable'}
 			</ClayLabel>
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('renders with contentBefore prop', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayLabel contentBefore="Content before">{'Label'}</ClayLabel>
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();

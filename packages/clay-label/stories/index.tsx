@@ -5,6 +5,7 @@
 
 import '@clayui/css/lib/css/atlas.css';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import ClayIcon from '@clayui/icon';
 import {boolean, select, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React from 'react';
@@ -56,4 +57,40 @@ storiesOf('Components|ClayLabel', module)
 				{'this is a very long bit of text, can you see the end of it?'}
 			</ClayLabelWithState>
 		</div>
+	))
+	.add('w/ content before', () => (
+		<ClayLabel
+			contentBefore={
+				<ClayIcon spritemap={spritemap} symbol={'repository'} />
+			}
+			displayType={'secondary'}
+			spritemap={spritemap}
+		>
+			{text('Label', 'Label')}
+		</ClayLabel>
+	))
+	.add('w/ content before', () => (
+		<ClayLabel
+			contentBefore={
+				<ClayIcon spritemap={spritemap} symbol="repository" />
+			}
+			displayType={'secondary'}
+			spritemap={spritemap}
+		>
+			{text('Label', 'Label')}
+		</ClayLabel>
+	))
+	.add('w/ multiple contents before', () => (
+		<ClayLabel
+			contentBefore={
+				<>
+					<ClayIcon spritemap={spritemap} symbol="repository" />
+					<ClayIcon spritemap={spritemap} symbol="repository" />
+				</>
+			}
+			displayType={'secondary'}
+			spritemap={spritemap}
+		>
+			{text('Label', 'Label')}
+		</ClayLabel>
 	));
