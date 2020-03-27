@@ -86,7 +86,24 @@ exports[`Rendering renders as closable 1`] = `
 </span>
 `;
 
-exports[`Rendering renders with an icon before content 1`] = `
+exports[`Rendering renders with ItemAfter 1`] = `
+<span
+  className="label label-secondary"
+>
+  <span
+    className="label-item label-item-expand"
+  >
+    Label
+  </span>
+  <span
+    className="label-item label-item-after"
+  >
+    Content after
+  </span>
+</span>
+`;
+
+exports[`Rendering renders with ItemBefore 1`] = `
 <span
   className="label label-secondary"
 >
