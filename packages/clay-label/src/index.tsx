@@ -8,6 +8,25 @@ import ClayLink from '@clayui/link';
 import classNames from 'classnames';
 import React from 'react';
 
+const ClayLabelItemBefore: React.FunctionComponent<
+	React.HTMLAttributes<HTMLDivElement>
+> = ({children}) => (
+	<>
+		<div className="label-item label-item-before">
+			{React.Children.map(children, (child, i) =>
+				React.cloneElement(
+					<span className="label-item label-item-before">
+						{child}
+					</span>,
+					{
+						key: i,
+					}
+				)
+			)}
+		</div>
+	</>
+);
+
 type DisplayType =
 	| 'secondary'
 	| 'info'
@@ -24,6 +43,11 @@ interface IProps
 	closeButtonProps?: React.ButtonHTMLAttributes<HTMLButtonElement> & {
 		ref?: (instance: HTMLButtonElement | null) => void;
 	};
+
+	/**
+	 * Any content that you would like to have render inside the label before the children content
+	 */
+	contentBefore?: React.ReactFragment | typeof ClayLabelItemBefore;
 
 	/**
 	 * Determines the style of the label.
@@ -54,6 +78,7 @@ const ClayLabel = React.forwardRef<HTMLAnchorElement | HTMLSpanElement, IProps>(
 			children,
 			className,
 			closeButtonProps,
+			contentBefore,
 			displayType = 'secondary',
 			href,
 			innerElementProps = {},
@@ -75,6 +100,10 @@ const ClayLabel = React.forwardRef<HTMLAnchorElement | HTMLSpanElement, IProps>(
 				})}
 				ref={ref}
 			>
+				{contentBefore && (
+					<ClayLabelItemBefore>{contentBefore}</ClayLabelItemBefore>
+				)}
+
 				<TagName
 					{...innerElementProps}
 					className={classNames(
