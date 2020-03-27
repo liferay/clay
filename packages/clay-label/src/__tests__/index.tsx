@@ -66,9 +66,23 @@ describe('Rendering', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders with contentBefore prop', () => {
+	it('renders with ItemBefore', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayLabel contentBefore="Content before">{'Label'}</ClayLabel>
+			<ClayLabel withClose={false}>
+				<ClayLabel.ItemBefore>{'Content before'}</ClayLabel.ItemBefore>
+				<ClayLabel.ItemExpand>{'Label'}</ClayLabel.ItemExpand>
+			</ClayLabel>
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('renders with ItemAfter', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayLabel withClose={false}>
+				<ClayLabel.ItemExpand>{'Label'}</ClayLabel.ItemExpand>
+				<ClayLabel.ItemAfter>{'Content after'}</ClayLabel.ItemAfter>
+			</ClayLabel>
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();

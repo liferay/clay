@@ -59,38 +59,10 @@ storiesOf('Components|ClayLabel', module)
 		</div>
 	))
 	.add('w/ content before', () => (
-		<ClayLabel
-			contentBefore={
-				<ClayIcon spritemap={spritemap} symbol={'repository'} />
-			}
-			displayType={'secondary'}
-			spritemap={spritemap}
-		>
-			{text('Label', 'Label')}
-		</ClayLabel>
-	))
-	.add('w/ content before', () => (
-		<ClayLabel
-			contentBefore={
-				<ClayIcon spritemap={spritemap} symbol="repository" />
-			}
-			displayType={'secondary'}
-			spritemap={spritemap}
-		>
-			{text('Label', 'Label')}
-		</ClayLabel>
-	))
-	.add('w/ multiple contents before', () => (
-		<ClayLabel
-			contentBefore={
-				<>
-					<ClayIcon spritemap={spritemap} symbol="repository" />
-					<ClayIcon spritemap={spritemap} symbol="repository" />
-				</>
-			}
-			displayType={'secondary'}
-			spritemap={spritemap}
-		>
-			{text('Label', 'Label')}
+		<ClayLabel displayType="secondary" withClose={false}>
+			<ClayLabel.ItemBefore>
+				<ClayIcon spritemap={spritemap} symbol="check" />
+			</ClayLabel.ItemBefore>
+			<ClayLabel.ItemExpand>{'Label'}</ClayLabel.ItemExpand>
 		</ClayLabel>
 	));
