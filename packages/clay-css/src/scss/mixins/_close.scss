@@ -5,246 +5,163 @@
 // A mixin for styling `.close` overwrites Bootstrap 4.1.2's `&:not(:disabled):not(.disabled)` selector
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
-/// align-items: {String | Null},
-/// bg: {Color | String | Null},
-/// border-color: {Color | String | List | Null},
-/// border-radius: {Number | String | List | Null},
-/// color: {Color | String | Null},
-/// display: {String | Null},
-/// font-family: {String | List | Null},
-/// font-size: {Number | String | Null},
-/// font-weight: {Number | String | Null},
-/// height: {Number | String | Null},
-/// justify-content: {String | Null},
-/// line-height: {Number | String | Null},
-/// margin-bottom: {Number | String | Null},
-/// margin-left: {Number | String | Null},
-/// margin-right: {Number | String | Null},
-/// margin-top: {Number | String | Null},
-/// opacity: {Number | String | Null},
-/// padding-bottom: {Number | String | Null},
-/// padding-left: {Number | String | Null},
-/// padding-right: {Number | String | Null},
-/// padding-top: {Number | String | Null},
-/// position: {String | Null},
-/// bottom: {Number | String | Null},
-/// left: {Number | String | Null},
-/// right: {Number | String | Null},
-/// top: {Number | String | Null},
-/// text-align: {String | Null},
-/// text-decoration: {String | Null},
-/// text-transform: {String | List | Null},
-/// transition: {String | List | Null},
-/// vertical-align: {String | Null},
-/// width: {Number | String | Null},
-/// hover-bg: {Color | String | Null},
-/// hover-color: {Color | String | Null},
-/// hover-opacity: {Number | String | Null},
-/// hover-text-decoration: {String | Null},
-/// focus-bg: {Color | String | Null},
-/// focus-box-shadow: {String | List | Null},
-/// focus-color: {Color | String | Null},
-/// focus-opacity: {Number | String | Null},
-/// focus-outline: {Number | String | Null},
-/// focus-text-decoration: {String | Null},
-/// active-bg: {Color | String | Null},
-/// active-border-color: {Color | String | List | Null},
-/// active-color: {Color | String | Null},
-/// disabled-bg: {Color | String | Null},
-/// disabled-border-color: {Color | String | List | Null},
-/// disabled-box-shadow: {String | List | Null},
-/// disabled-color: {Color | String | Null},
-/// disabled-cursor: {String | Null},
-/// disabled-opacity: {Number | String | Null},
-/// disabled-pointer-events: {String | Null},
-/// disabled-text-decoration: {String | Null},
-/// btn-focus-box-shadow: {String | List | Null},
-/// btn-focus-outline: {Number | String | Null},
-/// lexicon-icon-margin-bottom: {Number | String | Null},
-/// lexicon-icon-margin-left: {Number | String | Null},
-/// lexicon-icon-margin-right: {Number | String | Null},
-/// lexicon-icon-margin-top: {Number | String | Null},
+/// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// See Mixin `clay-css` for available keys to pass into the base selector
+/// hover: {Map | Null}, // See Mixin `clay-css` for available keys
+/// focus: {Map | Null}, // See Mixin `clay-css` for available keys
+/// disabled: {Map | Null}, // See Mixin `clay-css` for available keys
+/// active: {Map | Null}, // See Mixin `clay-css` for available keys
+/// btn-focus: {Map | Null}, // See Mixin `clay-css` for available keys
+/// lexicon-icon: {Map | Null}, // See Mixin `clay-css` for available keys
 /// c-inner: {Map | Null}, // Pass parameters to `clay-css` mixin
+/// -=-=-=-=-=- Deprecated -=-=-=-=-=-
+/// bg: {Color | String | Null}, // deprecated after 3.9.0
+/// hover-bg: {Color | String | Null}, // deprecated after 3.9.0
+/// hover-color: {Color | String | Null}, // deprecated after 3.9.0
+/// hover-opacity: {Number | String | Null}, // deprecated after 3.9.0
+/// hover-text-decoration: {String | Null}, // deprecated after 3.9.0
+/// focus-bg: {Color | String | Null}, // deprecated after 3.9.0
+/// focus-box-shadow: {String | List | Null}, // deprecated after 3.9.0
+/// focus-color: {Color | String | Null}, // deprecated after 3.9.0
+/// focus-opacity: {Number | String | Null}, // deprecated after 3.9.0
+/// focus-outline: {Number | String | Null}, // deprecated after 3.9.0
+/// focus-text-decoration: {String | Null}, // deprecated after 3.9.0
+/// active-bg: {Color | String | Null}, // deprecated after 3.9.0
+/// active-border-color: {Color | String | List | Null}, // deprecated after 3.9.0
+/// active-color: {Color | String | Null}, // deprecated after 3.9.0
+/// disabled-bg: {Color | String | Null}, // deprecated after 3.9.0
+/// disabled-border-color: {Color | String | List | Null}, // deprecated after 3.9.0
+/// disabled-box-shadow: {String | List | Null}, // deprecated after 3.9.0
+/// disabled-color: {Color | String | Null}, // deprecated after 3.9.0
+/// disabled-cursor: {String | Null}, // deprecated after 3.9.0
+/// disabled-opacity: {Number | String | Null}, // deprecated after 3.9.0
+/// disabled-pointer-events: {String | Null}, // deprecated after 3.9.0
+/// disabled-text-decoration: {String | Null}, // deprecated after 3.9.0
+/// btn-focus-box-shadow: {String | List | Null}, // deprecated after 3.9.0
+/// btn-focus-outline: {Number | String | Null}, // deprecated after 3.9.0
+/// lexicon-icon-margin-bottom: {Number | String | Null}, // deprecated after 3.9.0
+/// lexicon-icon-margin-left: {Number | String | Null}, // deprecated after 3.9.0
+/// lexicon-icon-margin-right: {Number | String | Null}, // deprecated after 3.9.0
+/// lexicon-icon-margin-top: {Number | String | Null}, // deprecated after 3.9.0
 /// @todo
 /// - Add @example
 /// - Add @link to documentation
 
 @mixin clay-close($map) {
-	$align-items: map-get($map, align-items);
-	$bg: map-get($map, bg);
-	$border-color: map-get($map, border-color);
-	$border-radius: map-get($map, border-radius);
-	$color: map-get($map, color);
-	$display: map-get($map, display);
-	$font-family: map-get($map, font-family);
-	$font-size: map-get($map, font-size);
-	$font-weight: map-get($map, font-weight);
-	$height: map-get($map, height);
-	$justify-content: map-get($map, justify-content);
-	$line-height: map-get($map, line-height);
-	$margin-bottom: map-get($map, margin-bottom);
-	$margin-left: map-get($map, margin-left);
-	$margin-right: map-get($map, margin-right);
-	$margin-top: map-get($map, margin-top);
-	$opacity: map-get($map, opacity);
-	$padding-bottom: map-get($map, padding-bottom);
-	$padding-left: map-get($map, padding-left);
-	$padding-right: map-get($map, padding-right);
-	$padding-top: map-get($map, padding-top);
-	$position: map-get($map, position);
+	$enabled: setter(map-get($map, enabled), true);
 
-	$bottom: map-get($map, bottom);
-	$left: map-get($map, left);
-	$right: map-get($map, right);
-	$top: map-get($map, top);
+	$base: map-merge((
+		background-color: map-get($map, bg),
+	), $map);
 
-	$text-align: map-get($map, text-align);
-	$text-decoration: map-get($map, text-decoration);
-	$text-transform: map-get($map, text-transform);
-	$transition: map-get($map, transition);
-	$vertical-align: map-get($map, vertical-align);
-	$width: map-get($map, width);
+	$hover: setter(map-get($map, hover), ());
+	$hover: map-merge((
+		background-color: map-get($map, hover-bg),
+		color: map-get($map, hover-color),
+		opacity: map-get($map, hover-opacity),
+		text-decoration: map-get($map, hover-text-decoration),
+	), $hover);
 
-	$hover-bg: map-get($map, hover-bg);
-	$hover-color: map-get($map, hover-color);
-	$hover-opacity: map-get($map, hover-opacity);
-	$hover-text-decoration: map-get($map, hover-text-decoration);
+	$focus: setter(map-get($map, focus), ());
+	$focus: map-merge((
+		background-color: map-get($map, focus-bg),
+		box-shadow: map-get($map, focus-box-shadow),
+		color: map-get($map, focus-color),
+		opacity: map-get($map, focus-opacity),
+		outline: map-get($map, focus-outline),
+		text-decoration: map-get($map, focus-text-decoration),
+	), $focus);
 
-	$focus-bg: map-get($map, focus-bg);
-	$focus-box-shadow: map-get($map, focus-box-shadow);
-	$focus-color: map-get($map, focus-color);
-	$focus-opacity: map-get($map, focus-opacity);
-	$focus-outline: map-get($map, focus-outline);
-	$focus-text-decoration: map-get($map, focus-text-decoration);
+	$disabled: setter(map-get($map, disabled), ());
+	$disabled: map-merge((
+		background-color: map-get($map, disabled-bg),
+		border-color: map-get($map, disabled-border-color),
+		box-shadow: map-get($map, disabled-box-shadow),
+		color: map-get($map, disabled-color),
+		cursor: map-get($map, disabled-cursor),
+		opacity: map-get($map, disabled-opacity),
+		pointer-events: map-get($map, disabled-pointer-events),
+		text-decoration: map-get($map, disabled-text-decoration),
+	), $disabled);
 
-	$active-bg: map-get($map, active-bg);
-	$active-border-color: map-get($map, active-border-color);
-	$active-color: map-get($map, active-color);
+	$active: setter(map-get($map, active), ());
+	$active: map-merge((
+		background-color: map-get($map, active-bg),
+		border-color: map-get($map, active-border-color),
+		color: map-get($map, active-color),
+	), $active);
 
-	$disabled-bg: map-get($map, disabled-bg);
-	$disabled-border-color: map-get($map, disabled-border-color);
-	$disabled-box-shadow: map-get($map, disabled-box-shadow);
-	$disabled-color: map-get($map, disabled-color);
-	$disabled-cursor: map-get($map, disabled-cursor);
-	$disabled-opacity: map-get($map, disabled-opacity);
-	$disabled-pointer-events: map-get($map, disabled-pointer-events);
-	$disabled-text-decoration: map-get($map, disabled-text-decoration);
+	$btn-focus: setter(map-get($map, btn-focus), ());
+	$btn-focus: map-merge((
+		box-shadow: map-get($map, btn-focus-box-shadow),
+		outline: map-get($map, btn-focus-outline),
+	), $btn-focus);
 
-	$btn-focus-box-shadow: map-get($map, btn-focus-box-shadow);
-	$btn-focus-outline: map-get($map, btn-focus-outline);
-
-	$lexicon-icon-margin-bottom: map-get($map, lexicon-icon-margin-bottom);
-	$lexicon-icon-margin-left: map-get($map, lexicon-icon-margin-left);
-	$lexicon-icon-margin-right: map-get($map, lexicon-icon-margin-right);
-	$lexicon-icon-margin-top: map-get($map, lexicon-icon-margin-top);
+	$lexicon-icon: setter(map-get($map, lexicon-icon), ());
+	$lexicon-icon: map-merge((
+		margin-bottom: map-get($map, lexicon-icon-margin-bottom),
+		margin-left: map-get($map, lexicon-icon-margin-left),
+		margin-right: map-get($map, lexicon-icon-margin-right),
+		margin-top: map-get($map, lexicon-icon-margin-top),
+	), $lexicon-icon);
 
 	$c-inner: setter(map-get($map, c-inner), ());
-	$c-inner: map-deep-merge((
-		margin-bottom: math-sign($padding-bottom),
-		margin-left: math-sign($padding-left),
-		margin-right: math-sign($padding-right),
-		margin-top: math-sign($padding-top),
+	$c-inner: map-merge((
+		margin-bottom: math-sign(map-get($map, padding-bottom)),
+		margin-left: math-sign(map-get($map, padding-left)),
+		margin-right: math-sign(map-get($map, padding-right)),
+		margin-top: math-sign(map-get($map, padding-top)),
 	), $c-inner);
 
-	align-items: $align-items;
-	background-color: $bg;
-	border-color: $border-color;
+	@if ($enabled) {
+		@include clay-css($base);
 
-	@include border-radius($border-radius);
-
-	bottom: $bottom;
-	color: $color;
-	display: $display;
-	font-family: $font-family;
-	font-size: $font-size;
-	font-weight: $font-weight;
-	height: $height;
-	justify-content: $justify-content;
-	left: $left;
-	line-height: $line-height;
-	margin-bottom: $margin-bottom;
-	margin-left: $margin-left;
-	margin-right: $margin-right;
-	margin-top: $margin-top;
-	opacity: $opacity;
-	padding-bottom: $padding-bottom;
-	padding-left: $padding-left;
-	padding-right: $padding-right;
-	padding-top: $padding-top;
-	position: $position;
-	right: $right;
-	text-align: $text-align;
-	text-decoration: $text-decoration;
-	text-transform: $text-transform;
-	top: $top;
-	transition: $transition;
-	vertical-align: $vertical-align;
-	width: $width;
-
-	&:hover {
-		background-color: $hover-bg;
-		color: $hover-color;
-		text-decoration: $hover-text-decoration;
-	}
-
-	@at-root {
-		button#{&} {
-			&:focus {
-				box-shadow: $btn-focus-box-shadow;
-				outline: $btn-focus-outline;
-			}
-		}
-	}
-
-	&:focus {
-		background-color: $focus-bg;
-		box-shadow: $focus-box-shadow;
-		color: $focus-color;
-		outline: $focus-outline;
-		text-decoration: $focus-text-decoration;
-	}
-
-	// Bootstrap 4.1.2 Selector overwrite
-
-	&:not(:disabled):not(.disabled) {
 		&:hover {
-			opacity: $hover-opacity;
+			@include clay-css($hover);
+		}
+
+		@at-root {
+			button#{&} {
+				&:focus {
+					@include clay-css($btn-focus);
+				}
+			}
 		}
 
 		&:focus {
-			opacity: $focus-opacity;
+			@include clay-css($focus);
 		}
-	}
 
-	&:active,
-	&.active {
-		background-color: $active-bg;
-		border-color: $active-border-color;
-		color: $active-color;
-	}
+		// Bootstrap 4.1.2 Selector overwrite
 
-	&:disabled,
-	&.disabled {
-		background-color: $disabled-bg;
-		border-color: $disabled-border-color;
-		box-shadow: $disabled-box-shadow;
-		color: $disabled-color;
-		cursor: $disabled-cursor;
-		opacity: $disabled-opacity;
-		pointer-events: $disabled-pointer-events;
-		text-decoration: $disabled-text-decoration;
-	}
+		&:not(:disabled):not(.disabled) {
+			&:hover {
+				opacity: map-get($hover, opacity);
+			}
 
-	@if ($enable-c-inner) {
-		.c-inner {
-			@include clay-css($c-inner);
+			&:focus {
+				opacity: map-get($focus, opacity);
+			}
 		}
-	}
 
-	.lexicon-icon {
-		margin-bottom: $lexicon-icon-margin-bottom;
-		margin-right: $lexicon-icon-margin-right;
-		margin-left: $lexicon-icon-margin-left;
-		margin-top: $lexicon-icon-margin-top;
+		&:active,
+		&.active {
+			@include clay-css($active);
+		}
+
+		&:disabled,
+		&.disabled {
+			@include clay-css($disabled);
+		}
+
+		@if ($enable-c-inner) {
+			.c-inner {
+				@include clay-css($c-inner);
+			}
+		}
+
+		.lexicon-icon {
+			@include clay-css($lexicon-icon);
+		}
 	}
 }
