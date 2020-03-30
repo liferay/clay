@@ -136,7 +136,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
 						<button aria-label="2019 02 10" class="date-picker-date date-picker-calendar-item" type="button">10</button>
 						<button aria-label="2019 02 11" class="date-picker-date date-picker-calendar-item" type="button">11</button>
 						<button aria-label="2019 02 12" class="date-picker-date date-picker-calendar-item" type="button">12</button>
-						<button aria-label="2019 02 13" class="date-picker-date date-picker-calendar-item active" tabindex="-1" type="button">13</button>
+						<button aria-label="2019 02 13" class="date-picker-date date-picker-calendar-item" tabindex="-1" type="button">13</button>
 						<button aria-label="2019 02 14" class="date-picker-date date-picker-calendar-item" type="button">14</button>
 						<button aria-label="2019 02 15" class="date-picker-date date-picker-calendar-item" type="button">15</button>
 						<button aria-label="2019 02 16" class="date-picker-date date-picker-calendar-item" type="button">16</button>
@@ -156,7 +156,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
 						<button aria-label="2019 02 26" class="date-picker-date date-picker-calendar-item" type="button">26</button>
 						<button aria-label="2019 02 27" class="date-picker-date date-picker-calendar-item" type="button">27</button>
 						<button aria-label="2019 02 28" class="date-picker-date date-picker-calendar-item" type="button">28</button>
-						<button aria-label="2019 03 01" class="active date-picker-date date-picker-calendar-item next-month-date" type="button">1</button>
+						<button aria-label="2019 03 01" class="date-picker-date date-picker-calendar-item next-month-date" type="button">1</button>
 						<button aria-label="2019 03 02" class="date-picker-date date-picker-calendar-item next-month-date" type="button">2</button>
 					</div>
 				</div>
@@ -341,7 +341,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
 					</button>
 					<button
 						aria-label="2019 01 30"
-						class="active date-picker-date date-picker-calendar-item previous-month-date"
+						class="date-picker-date date-picker-calendar-item previous-month-date"
 						type="button"
 					>
 						30
@@ -443,7 +443,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
 					</button>
 					<button
 						aria-label="2019 02 13"
-						class="date-picker-date date-picker-calendar-item active"
+						class="date-picker-date date-picker-calendar-item"
 						tabindex="-1"
 						type="button"
 					>
@@ -560,7 +560,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
 					</button>
 					<button
 						aria-label="2019 03 01"
-						class="active date-picker-date date-picker-calendar-item next-month-date"
+						class="date-picker-date date-picker-calendar-item next-month-date"
 						type="button"
 					>
 						1
@@ -759,7 +759,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
 						<button aria-label="2019 02 10" class="date-picker-date date-picker-calendar-item" type="button">10</button>
 						<button aria-label="2019 02 11" class="date-picker-date date-picker-calendar-item" type="button">11</button>
 						<button aria-label="2019 02 12" class="date-picker-date date-picker-calendar-item" type="button">12</button>
-						<button aria-label="2019 02 13" class="date-picker-date date-picker-calendar-item active" tabindex="-1" type="button">13</button>
+						<button aria-label="2019 02 13" class="date-picker-date date-picker-calendar-item" tabindex="-1" type="button">13</button>
 						<button aria-label="2019 02 14" class="date-picker-date date-picker-calendar-item" type="button">14</button>
 						<button aria-label="2019 02 15" class="date-picker-date date-picker-calendar-item" type="button">15</button>
 						<button aria-label="2019 02 16" class="date-picker-date date-picker-calendar-item" type="button">16</button>
@@ -779,7 +779,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
 						<button aria-label="2019 02 26" class="date-picker-date date-picker-calendar-item" type="button">26</button>
 						<button aria-label="2019 02 27" class="date-picker-date date-picker-calendar-item" type="button">27</button>
 						<button aria-label="2019 02 28" class="date-picker-date date-picker-calendar-item" type="button">28</button>
-						<button aria-label="2019 03 01" class="active date-picker-date date-picker-calendar-item next-month-date" type="button">1</button>
+						<button aria-label="2019 03 01" class="date-picker-date date-picker-calendar-item next-month-date" type="button">1</button>
 						<button aria-label="2019 03 02" class="date-picker-date date-picker-calendar-item next-month-date" type="button">2</button>
 					</div>
 				</div>
@@ -1047,7 +1047,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
 					</button>
 					<button
 						aria-label="2019 02 13"
-						class="date-picker-date date-picker-calendar-item active"
+						class="date-picker-date date-picker-calendar-item"
 						tabindex="-1"
 						type="button"
 					>
@@ -1164,7 +1164,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
 					</button>
 					<button
 						aria-label="2019 03 01"
-						class="active date-picker-date date-picker-calendar-item next-month-date"
+						class="date-picker-date date-picker-calendar-item next-month-date"
 						type="button"
 					>
 						1
