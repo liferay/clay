@@ -9,6 +9,7 @@ exports[`ClayPagination renders 1`] = `
       class="page-item"
     >
       <button
+        aria-label="Previous"
         class="page-link"
         data-testid="prevArrow"
         type="button"
@@ -119,6 +120,7 @@ exports[`ClayPagination renders 1`] = `
       class="page-item"
     >
       <button
+        aria-label="Previous"
         class="page-link"
         data-testid="nextArrow"
         type="button"
@@ -146,6 +148,7 @@ exports[`ClayPagination renders with only one page 1`] = `
       class="page-item disabled"
     >
       <button
+        aria-label="Previous"
         class="page-link"
         data-testid="prevArrow"
         disabled=""
@@ -175,6 +178,7 @@ exports[`ClayPagination renders with only one page 1`] = `
       class="page-item disabled"
     >
       <button
+        aria-label="Previous"
         class="page-link"
         data-testid="nextArrow"
         disabled=""

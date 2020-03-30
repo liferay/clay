@@ -18,6 +18,7 @@ exports[`ClayPopover renders 1`] = `
       </div>
       <div
         class="popover-body"
+        tabindex="0"
       >
         Viennese flavour cup eu, percolator froth ristretto mazagran
 					caffeine. White roast seasonal, mocha trifecta, dripper caffeine
@@ -46,6 +47,7 @@ exports[`ClayPopover renders with \`show\` 1`] = `
       </div>
       <div
         class="popover-body"
+        tabindex="0"
       >
         Viennese flavour cup eu, percolator froth ristretto mazagran
 					caffeine. White roast seasonal, mocha trifecta, dripper caffeine
@@ -74,6 +76,7 @@ exports[`ClayPopover renders without scroll 1`] = `
       </div>
       <div
         class="popover-body"
+        tabindex="0"
       >
         Viennese flavour cup eu, percolator froth ristretto mazagran
 					caffeine. White roast seasonal, mocha trifecta, dripper caffeine

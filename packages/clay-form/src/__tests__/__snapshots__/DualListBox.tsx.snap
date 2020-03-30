@@ -13,6 +13,7 @@ exports[`Rendering renders ClayDualListBox 1`] = `
       >
         <label
           class="reorder-label"
+          for="selectBox"
         >
           In Use
         </label>
@@ -21,6 +22,7 @@ exports[`Rendering renders ClayDualListBox 1`] = `
         >
           <select
             class="form-control form-control-inset"
+            id="selectBox"
             multiple=""
             size="8"
           >
@@ -54,6 +56,7 @@ exports[`Rendering renders ClayDualListBox 1`] = `
               role="group"
             >
               <button
+                aria-label="Reorder Button Up"
                 class="reorder-button reorder-button-up btn btn-monospaced btn-sm btn-secondary"
                 type="button"
               >
@@ -67,6 +70,7 @@ exports[`Rendering renders ClayDualListBox 1`] = `
                 </svg>
               </button>
               <button
+                aria-label="Reorder Button Down"
                 class="reorder-button reorder-button-down btn btn-monospaced btn-sm btn-secondary"
                 type="button"
               >
@@ -87,6 +91,7 @@ exports[`Rendering renders ClayDualListBox 1`] = `
         class="btn-group-vertical clay-dual-listbox-actions clay-dual-listbox-item"
       >
         <button
+          aria-label="Transfer Button Left to Right"
           class="transfer-button-ltr btn btn-monospaced btn-sm btn-secondary"
           data-testid="ltr"
           type="button"
@@ -101,6 +106,7 @@ exports[`Rendering renders ClayDualListBox 1`] = `
           </svg>
         </button>
         <button
+          aria-label="Transfer Button Right to Left"
           class="transfer-button-rtl btn btn-monospaced btn-sm btn-secondary"
           data-testid="rtl"
           type="button"
@@ -120,6 +126,7 @@ exports[`Rendering renders ClayDualListBox 1`] = `
       >
         <label
           class="reorder-label"
+          for="selectBox"
         >
           Available
         </label>
@@ -128,6 +135,7 @@ exports[`Rendering renders ClayDualListBox 1`] = `
         >
           <select
             class="form-control form-control-inset"
+            id="selectBox"
             multiple=""
             size="8"
           >

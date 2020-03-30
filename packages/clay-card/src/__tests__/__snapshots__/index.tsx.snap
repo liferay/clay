@@ -1885,6 +1885,7 @@ exports[`ClayCardWithUser renders as disabled 1`] = `
         >
           <label>
             <input
+              aria-label="Card Checkbox"
               class="custom-control-input"
               disabled=""
               type="checkbox"
@@ -1990,6 +1991,7 @@ exports[`ClayCardWithUser renders as selectable 1`] = `
         >
           <label>
             <input
+              aria-label="Card Checkbox"
               class="custom-control-input"
               type="checkbox"
             />
