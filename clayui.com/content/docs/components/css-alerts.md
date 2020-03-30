@@ -224,7 +224,7 @@ This type of alert is specific for toast messages. These type of messages appear
 
 ### Embedded
 
-Embedded alerts are meant for use in forms. Usually you will only need to use the information one. Its width depends on the width of the container it is placed in, always respecting the container margins to the content. The close action is not required for embedded alerts.
+Embedded alerts are meant for use in forms. Usually you will only need to use the information once. Its width depends on the width of the container it is placed in, always respecting the container margins to the content. The close action is not required for embedded alerts.
 
 <div class="sheet-example">
 	<div class="alert alert-danger" role="alert">
