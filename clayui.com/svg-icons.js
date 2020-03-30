@@ -555,6 +555,7 @@ const iconsData = {
 	"change-list":				'"arrows", "box", "move", "update"',
 	"date":						'"agenda", "calendar", "day", "picker", "time"',
 	"diamond":					'"condition", "if", "gateway", "gem", "workflow"',
+	"disk":						'"floppy disk", "save"',
 	"decimal":					'"0", "number", "zero"',
 	"desktop":					'"computer", "display", "screen"',
 	"diagram":					'"map", "schema", "structure"',
