@@ -20,6 +20,13 @@ interface IProps {
 	actions?: React.ComponentProps<typeof ClayDropDownWithItems>['items'];
 
 	/**
+	 * Labels for the aria attributes
+	 */
+	ariaLabels?: {
+		dropDownTrigger: string;
+	};
+
+	/**
 	 * Description of the file
 	 */
 	description?: React.ReactText;
@@ -94,6 +101,9 @@ interface IProps {
 
 export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 	actions,
+	ariaLabels = {
+		dropDownTrigger: 'Open Dropdown',
+	},
 	description,
 	disabled,
 	flushHorizontal,
@@ -197,6 +207,7 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 								spritemap={spritemap}
 								trigger={
 									<button
+										aria-label={ariaLabels.dropDownTrigger}
 										className="component-action"
 										disabled={disabled}
 									>

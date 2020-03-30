@@ -19,6 +19,14 @@ interface IProps {
 	actions?: React.ComponentProps<typeof ClayDropDownWithItems>['items'];
 
 	/**
+	 * Labels for the aria attributes
+	 */
+	ariaLabels?: {
+		cardCheckbox: string;
+		dropDownTrigger: string;
+	};
+
+	/**
 	 * Value of the description of the user
 	 */
 	description: string;
@@ -73,6 +81,10 @@ interface IProps {
 
 export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 	actions,
+	ariaLabels = {
+		cardCheckbox: 'Card Checkbox',
+		dropDownTrigger: 'Open Dropdown',
+	},
 	description,
 	disabled,
 	href,
@@ -110,6 +122,7 @@ export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 			<ClayCard.AspectRatio className="card-item-first">
 				{onSelectChange && (
 					<ClayCheckbox
+						aria-label={ariaLabels.cardCheckbox}
 						checked={selected}
 						disabled={disabled}
 						onChange={() => onSelectChange(!selected)}
@@ -152,6 +165,7 @@ export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 								spritemap={spritemap}
 								trigger={
 									<button
+										aria-label={ariaLabels.dropDownTrigger}
 										className="component-action"
 										disabled={disabled}
 									>

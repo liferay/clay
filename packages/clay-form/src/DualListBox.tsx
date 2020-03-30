@@ -31,6 +31,11 @@ function swapArrayItems(arrays: TItems, selectedIndexes: Array<number>) {
 
 interface IBoxProps {
 	/**
+	 * Id of the selectbox to be used with the label
+	 */
+	id?: string;
+
+	/**
 	 * Label of the left Select Box.
 	 */
 	label?: string;
@@ -47,6 +52,14 @@ interface IBoxProps {
 }
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+	/**
+	 * Labels for the aria attributes
+	 */
+	ariaLabels?: {
+		transferButtonLTR: string;
+		transferButtonRTL: string;
+	};
+
 	/**
 	 * Items spread across two arrays that will be displayed in the two Select Boxes.
 	 */
@@ -79,6 +92,10 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const ClayDualListBox: React.FunctionComponent<IProps> = ({
+	ariaLabels = {
+		transferButtonLTR: 'Transfer Button Left to Right',
+		transferButtonRTL: 'Transfer Button Right to Left',
+	},
 	className,
 	items,
 	left = {},
@@ -120,6 +137,7 @@ const ClayDualListBox: React.FunctionComponent<IProps> = ({
 						onItemsChange([newLeftItems, rightItems])
 					}
 					onSelectChange={handleLeftSelectedChange}
+					selectBoxId={left.id}
 					showArrows
 					size={size}
 					spritemap={spritemap}
@@ -128,6 +146,7 @@ const ClayDualListBox: React.FunctionComponent<IProps> = ({
 
 				<div className="btn-group-vertical clay-dual-listbox-actions clay-dual-listbox-item">
 					<ClayButtonWithIcon
+						aria-label={ariaLabels.transferButtonLTR}
 						className="transfer-button-ltr"
 						data-testid="ltr"
 						disabled={!leftSelected.length}
@@ -146,6 +165,7 @@ const ClayDualListBox: React.FunctionComponent<IProps> = ({
 					/>
 
 					<ClayButtonWithIcon
+						aria-label={ariaLabels.transferButtonRTL}
 						className="transfer-button-rtl"
 						data-testid="rtl"
 						disabled={!rightSelected.length}
@@ -173,6 +193,7 @@ const ClayDualListBox: React.FunctionComponent<IProps> = ({
 						onItemsChange([leftItems, newRightItems])
 					}
 					onSelectChange={handleRightSelectedChange}
+					selectBoxId={right.id}
 					size={size}
 					value={rightSelected}
 				/>

@@ -82,12 +82,14 @@ storiesOf('Components|ClayDualListBox', module).add('default', () => {
 		<ClayDualListBox
 			items={items}
 			left={{
+				id: 'leftSelectBox',
 				label: 'In Use',
 				onSelectChange: setLeftSelected,
 				selected: leftSelected,
 			}}
 			onItemsChange={setItems}
 			right={{
+				id: 'rightSelectBox',
 				label: 'Available',
 				onSelectChange: setRightSelected,
 				selected: rightSelected,

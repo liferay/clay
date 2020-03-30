@@ -51,6 +51,8 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 		hours: string;
 		minutes: string;
 		clearButton: string;
+		timeDownButton: string;
+		timeUpButton: string;
 	};
 
 	/**
@@ -144,6 +146,8 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 		clearButton: 'Delete the entered time',
 		hours: 'Enter the hour in 00:00 format',
 		minutes: 'Enter the minutes in 00:00 format',
+		timeDownButton: 'Time down',
+		timeUpButton: 'Time up',
 	},
 	config = DEFAULT_CONFIG,
 	disabled = false,
@@ -491,6 +495,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 										role="group"
 									>
 										<ClayButton
+											aria-label={ariaLabels.timeUpButton}
 											className="clay-time-inner-spin-btn clay-time-inner-spin-btn-inc"
 											data-testid="spinInc"
 											disabled={disabled}
@@ -503,6 +508,9 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 											/>
 										</ClayButton>
 										<ClayButton
+											aria-label={
+												ariaLabels.timeDownButton
+											}
 											className="clay-time-inner-spin-btn clay-time-inner-spin-btn-dec"
 											data-testid="spinDec"
 											disabled={disabled}

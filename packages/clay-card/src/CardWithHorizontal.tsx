@@ -15,6 +15,13 @@ interface IProps {
 	actions?: React.ComponentProps<typeof ClayDropDownWithItems>['items'];
 
 	/**
+	 * Labels for the aria attributes
+	 */
+	ariaLabels?: {
+		dropDownTrigger: string;
+	};
+
+	/**
 	 * Flag to indicate that all interactions on the card will be disabled.
 	 */
 	disabled?: boolean;
@@ -52,6 +59,9 @@ interface IProps {
 
 export const ClayCardWithHorizontal: React.FunctionComponent<IProps> = ({
 	actions,
+	ariaLabels = {
+		dropDownTrigger: 'Open Dropdown',
+	},
 	disabled,
 	href,
 	onSelectChange,
@@ -86,6 +96,7 @@ export const ClayCardWithHorizontal: React.FunctionComponent<IProps> = ({
 							spritemap={spritemap}
 							trigger={
 								<button
+									aria-label={ariaLabels.dropDownTrigger}
 									className="component-action"
 									disabled={disabled}
 								>

@@ -140,7 +140,9 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 				>
 					{header && <div className="popover-header">{header}</div>}
 
-					<div className="popover-body">{children}</div>
+					<div className="popover-body" tabIndex={0}>
+						{children}
+					</div>
 				</div>
 			</div>
 		);

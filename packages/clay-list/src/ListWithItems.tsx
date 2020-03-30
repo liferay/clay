@@ -15,6 +15,13 @@ import ClayList from './List';
 
 interface IListItem {
 	/**
+	 * Labels for the aria attributes
+	 */
+	ariaLabels?: {
+		dropDownTrigger: string;
+	};
+
+	/**
 	 * Description of item.
 	 */
 	description?: string;
@@ -106,6 +113,9 @@ const ListItem: React.FunctionComponent<
 		spritemap?: string;
 	}
 > = ({
+	ariaLabels = {
+		dropDownTrigger: 'Open Dropdown',
+	},
 	description,
 	dropdownActions,
 	href,
@@ -171,7 +181,10 @@ const ListItem: React.FunctionComponent<
 						items={dropdownActions}
 						spritemap={spritemap}
 						trigger={
-							<button className="component-action">
+							<button
+								aria-label={ariaLabels.dropDownTrigger}
+								className="component-action"
+							>
 								<ClayIcon
 									spritemap={spritemap}
 									symbol="ellipsis-v"

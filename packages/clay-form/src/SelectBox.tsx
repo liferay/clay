@@ -57,7 +57,15 @@ function reorderDown(array: Array<TItem>, selectedIndexes: Array<number>) {
 	return clonedArray;
 }
 
-interface IProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
+interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+	/**
+	 * Labels for aria attributes
+	 */
+	ariaLabels?: {
+		reorderButtonUp: string;
+		reorderButtonDown: string;
+	};
+
 	/**
 	 * Aligns the buttons used to reorder items relative to the Select Box.
 	 */
@@ -87,6 +95,11 @@ interface IProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
 	 * Handler that triggers when a new item is selected.
 	 */
 	onSelectChange: (val: Array<string>) => void;
+
+	/**
+	 * Id of the selectbox to poperly link it to the label
+	 */
+	selectBoxId?: string;
 
 	/**
 	 *  Selected indexes, most commonly used in combination with the  Dual Listbox component
@@ -127,6 +140,10 @@ export const getSelectedIndexes = (
 	}, []);
 
 const ClaySelectBox: React.FunctionComponent<IProps> = ({
+	ariaLabels = {
+		reorderButtonDown: 'Reorder Button Down',
+		reorderButtonUp: 'Reorder Button Up',
+	},
 	buttonAlignment = 'end',
 	className,
 	items,
@@ -134,10 +151,12 @@ const ClaySelectBox: React.FunctionComponent<IProps> = ({
 	multiple,
 	onItemsChange,
 	onSelectChange,
+	selectBoxId = 'selectBox',
 	showArrows,
 	size,
 	spritemap,
 	value,
+	...otherProps
 }: IProps) => {
 	const selectedIndexes = getSelectedIndexes(
 		items,
@@ -145,8 +164,12 @@ const ClaySelectBox: React.FunctionComponent<IProps> = ({
 	);
 
 	return (
-		<div className={classNames(className, 'form-group')}>
-			{label && <label className="reorder-label">{label}</label>}
+		<div {...otherProps} className={classNames(className, 'form-group')}>
+			{label && (
+				<label className="reorder-label" htmlFor={selectBoxId}>
+					{label}
+				</label>
+			)}
 
 			<div
 				className={classNames('clay-reorder', {
@@ -155,6 +178,7 @@ const ClaySelectBox: React.FunctionComponent<IProps> = ({
 			>
 				<select
 					className="form-control form-control-inset"
+					id={selectBoxId}
 					multiple={multiple}
 					onChange={event => {
 						const selectedItems = [...event.target.options]
@@ -194,6 +218,7 @@ const ClaySelectBox: React.FunctionComponent<IProps> = ({
 					<div className="clay-reorder-footer">
 						<ClayButton.Group className="reorder-order-buttons">
 							<ClayButtonWithIcon
+								aria-label={ariaLabels.reorderButtonUp}
 								className="reorder-button reorder-button-up"
 								disabled={!value.length}
 								displayType="secondary"
@@ -208,6 +233,7 @@ const ClaySelectBox: React.FunctionComponent<IProps> = ({
 							/>
 
 							<ClayButtonWithIcon
+								aria-label={ariaLabels.reorderButtonDown}
 								className="reorder-button reorder-button-down"
 								disabled={!value.length}
 								displayType="secondary"
