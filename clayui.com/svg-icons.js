@@ -671,6 +671,7 @@ const iconsData = {
 	"rss":						'"notification", "updates"',
 	"rules":					'"condition"',
 	"search":					'"inspect", "lens", "zoom"',
+	"search-plus":				'"inspect", "lens", "zoom"',
 	"select":					'"input", "multiple", "options"',
 	"select-from-list":			'"input", "multiple", "options"',
 	"separator":				'"divider", "group", "line"',
