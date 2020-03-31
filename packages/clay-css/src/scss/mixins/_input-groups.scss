@@ -5,46 +5,57 @@
 /// A mixin that stacks an `.input-group` that uses an `.input-group-item` at a specific `max-width` breakpoint. This sets the `.input-group-item` width to 100% and `.input-group-item-shrink` width to auto at the `max-width` breakpoint.
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
+/// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
 /// breakpoint: {String | Null}, // This uses Bootstrap 4's breakpoint up to calculate breakpoint down. Use `breakpoint-down` instead. // Default: md
+/// See Mixin `clay-css` for available keys to pass into the base selector
+/// item: {Map | Null}, // See Mixin `clay-css` for available keys
+/// item-shrink: {Map | Null}, // See Mixin `clay-css` for available keys
+/// -=-=-=-=-=- Deprecated -=-=-=-=-=-
 /// breakpoint-down: {String, Null}, // The Bootstrap 4 Breakpoint {xs | sm | md | lg | xl}
-/// item-margin-bottom: {Number | String | Null}, // `.input-group-item`
-/// item-margin-left: {Number | String | Null}, // `.input-group-item`
-/// item-margin-right: {Number | String | Null}, // `.input-group-item`
-/// item-margin-top: {Number | String | Null}, // `.input-group-item`
-/// shrink-margin-bottom: {Number | String | Null}, // `.input-group-item-shrink`
-/// shrink-margin-left: {Number | String | Null}, // `.input-group-item-shrink`
-/// shrink-margin-right: {Number | String | Null}, // `.input-group-item-shrink`
-/// shrink-margin-top: {Number | String | Null}, // `.input-group-item-shrink`
+/// item-margin-bottom: {Number | String | Null}, // deprecated after 3.9.0
+/// item-margin-left: {Number | String | Null}, // deprecated after 3.9.0
+/// item-margin-right: {Number | String | Null}, // deprecated after 3.9.0
+/// item-margin-top: {Number | String | Null}, // deprecated after 3.9.0
+/// shrink-margin-bottom: {Number | String | Null}, // deprecated after 3.9.0
+/// shrink-margin-left: {Number | String | Null}, // deprecated after 3.9.0
+/// shrink-margin-right: {Number | String | Null}, // deprecated after 3.9.0
+/// shrink-margin-top: {Number | String | Null}, // deprecated after 3.9.0
 
 @mixin clay-input-group-stacked($map) {
+	$enabled: setter(map-get($map, enabled), true);
+
 	$breakpoint: setter(map-get($map, breakpoint), md);
 	$breakpoint-down: clay-breakpoint-prev($breakpoint);
 
-	$item-margin-bottom: map-get($map, item-margin-bottom);
-	$item-margin-left: map-get($map, item-margin-left);
-	$item-margin-right: map-get($map, item-margin-right);
-	$item-margin-top: map-get($map, item-margin-top);
+	$item: setter(map-get($map, item), ());
+	$item: map-merge((
+		margin-bottom: map-get($map, item-margin-bottom),
+		margin-left: map-get($map, item-margin-left),
+		margin-right: map-get($map, item-margin-right),
+		margin-top: map-get($map, item-margin-top),
+		width: setter(map-get($map, width), 100%),
+	), $item);
 
-	$shrink-margin-bottom: map-get($map, shrink-margin-bottom);
-	$shrink-margin-left: map-get($map, shrink-margin-left);
-	$shrink-margin-right: map-get($map, shrink-margin-right);
-	$shrink-margin-top: map-get($map, shrink-margin-top);
+	$item-shrink: setter(map-get($map, item-shrink), ());
+	$item-shrink: map-merge((
+		margin-bottom: map-get($map, shrink-margin-bottom),
+		margin-left: map-get($map, shrink-margin-left),
+		margin-right: map-get($map, shrink-margin-right),
+		margin-top: map-get($map, shrink-margin-top),
+		width: setter(map-get($map, width), auto),
+	), $item-shrink);
 
-	@include media-breakpoint-down($breakpoint-down) {
-		> .input-group-item {
-			margin-bottom: $item-margin-bottom;
-			margin-left: $item-margin-left;
-			margin-right: $item-margin-right;
-			margin-top: $item-margin-top;
-			width: 100%;
-		}
+	@if ($enabled) {
+		@include media-breakpoint-down($breakpoint-down) {
+			@include clay-css($map);
 
-		> .input-group-item-shrink {
-			margin-bottom: $shrink-margin-bottom;
-			margin-left: $shrink-margin-left;
-			margin-right: $shrink-margin-right;
-			margin-top: $shrink-margin-top;
-			width: auto;
+			> .input-group-item {
+				@include clay-css($item);
+			}
+
+			> .input-group-item-shrink {
+				@include clay-css($item-shrink);
+			}
 		}
 	}
 }
@@ -53,67 +64,14 @@
 /// @deprecated use `clay-container` instead
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
-/// align-items: {String | Null},
-/// bg: {Color | String | Null},
-/// border-color: {Color | String | List | Null},
-/// border-radius: {Number | String | List | Null},
-/// border-style: {String | List | Null},
-/// border-width: {Number | String | List | Null},
-/// color: {Color | String | Null},
-/// display: {String | Null},
-/// font-size: {Number | String | Null},
-/// font-weight: {Number | String | Null},
-/// height: {Number | String | Null},
-/// justify-content: {String | Null},
-/// line-height: {Number | String | Null},
-/// min-width: {Number | String | Null},
-/// padding-bottom: {Number | String | Null},
-/// padding-left: {Number | String | Null},
-/// padding-right: {Number | String | Null},
-/// padding-top: {Number | String | Null},
-/// text-align: {String | Null},
-/// white-space: {String | Null},
+/// See Mixin `clay-css` for available keys to pass into the base selector
+/// -=-=-=-=-=- Deprecated -=-=-=-=-=-
+/// bg: {Color | String | Null}, // deprecated after 3.9.0
 
 @mixin clay-input-group-text-variant($map) {
-	$align-items: map-get($map, align-items);
-	$bg: map-get($map, bg);
-	$border-color: map-get($map, border-color);
-	$border-radius: map-get($map, border-radius);
-	$border-style: map-get($map, border-style);
-	$border-width: map-get($map, border-width);
-	$color: map-get($map, color);
-	$display: map-get($map, display);
-	$font-size: map-get($map, font-size);
-	$font-weight: map-get($map, font-weight);
-	$height: map-get($map, height);
-	$justify-content: map-get($map, justify-content);
-	$line-height: map-get($map, line-height);
-	$min-width: map-get($map, min-width);
-	$padding-bottom: map-get($map, padding-bottom);
-	$padding-left: map-get($map, padding-left);
-	$padding-right: map-get($map, padding-right);
-	$padding-top: map-get($map, padding-top);
-	$text-align: map-get($map, text-align);
-	$white-space: map-get($map, white-space);
+	$base: map-merge((
+		background-color: map-get($map, bg),
+	), $map);
 
-	align-items: $align-items;
-	background-color: $bg;
-	border-color: $border-color;
-	border-style: $border-style;
-	border-radius: $border-radius;
-	border-width: $border-width;
-	color: $color;
-	display: $display;
-	font-size: $font-size;
-	font-weight: $font-weight;
-	height: $height;
-	justify-content: $justify-content;
-	line-height: $line-height;
-	min-width: $min-width;
-	padding-bottom: $padding-bottom;
-	padding-left: $padding-left;
-	padding-right: $padding-right;
-	padding-top: $padding-top;
-	text-align: $text-align;
-	white-space: $white-space;
+	@include clay-css($base);
 }
