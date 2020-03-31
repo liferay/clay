@@ -12,25 +12,25 @@ title: 'C Spacing Utilities'
 </div>
 </div>
 
-Utility classes for the spacing in your pages (without the `!important` attribute)
+Utility classes for the spacing in your pages. (without the `!important` attribute)
 
 ## How to read the class
 
-Example: `c-mt-sm-3`
+Example: `c-mt-sm-3`.
 
-Meaning: `{prefix}-{type}{direction}-{breakpoint}-{value}`
+Meaning: `{prefix}-{type}{direction}-{breakpoint}-{value}`.
 
-SCSS: `@include media-breakpoint-up(sm) { margin-top: 1rem; }`
+SCSS: `@include media-breakpoint-up(sm) { margin-top: 1rem; }`.
 
-CSS: `@media(min-width: 576px) { margin-top: 1rem; }` _(576px can change depending on the site's configuration)_
+CSS: `@media(min-width: 576px) { margin-top: 1rem; }`. _(576px can change depending on the site's configuration)_
 
 ## How to understand the class
 
-`c` is the **prefix** and it stands fro **Clay**. All the new classes have this prefix to avoid conflicts with other frameworks
+`c` is the **prefix** and it stands for **Clay**. All the new classes have this prefix to avoid conflicts with other frameworks.
 
-`m` is the **type** of spacing you need in this case it stands for **margin** but you probably will find **p** for **padding** (example: `c-pt-sm-3` means `@media(min-width: 576px) { padding-top: 1rem; }`)
+`m` is the **type** of spacing you need. In this case it stands for **margin** but you probably will find **p** for **padding**. (example: `c-pt-sm-3` means `@media(min-width: 576px) { padding-top: 1rem; }`)
 
-`t` is the direction in this case it stands for **top** but you probably will find
+`t` is the direction in this case it stands for **top** but you probably will find:
 
 -   `r` - **right**
 -   `b` - **bottom**
@@ -39,7 +39,7 @@ CSS: `@media(min-width: 576px) { margin-top: 1rem; }` _(576px can change dependi
 -   `x` - **right** and **left** (horizontal axis)
 -   _`empty`_ - when this value is not present it means you are applying this spacing to **all the directions** (example: `c-m-sm-3` means `@media(min-width: 576px) { margin: 1rem; }` )
 
-`sm` is the breakpoint where this rule start to work, in this case **started from sm** (see [Grid Documentation](../grid.html))
+`sm` is the breakpoint where this rule starts to work, in this case **started from sm**, but we can also have: (see [Grid Documentation](../grid.html))
 
 -   `sm` - started from sm - _started from 576px_
 -   `md` - started from md - _started from 768px_
@@ -57,7 +57,7 @@ CSS: `@media(min-width: 576px) { margin-top: 1rem; }` _(576px can change dependi
 -   `7` - **6rem** - _96px_
 -   `8` - **7.5rem** - _120px_
 
-These spaces can be negative spaces if we use `n` before the value
+These spaces can be negative spaces if we use `n` before the value, that means:
 
 -   `n1` | **-0.25rem** | _-4px_
 -   `n2` | **-0.5rem** | _-8px_
@@ -74,9 +74,9 @@ The best usage of these classes take place in a responsive scenario:
 
 <img src="/images/spacing-example.png" class="img-fluid" />
 
-Let's focus on the buttons **Publish** and **Cancel**
+Let's focus on the buttons **Publish** and **Cancel**.
 
-We are leaving the style of these buttons to the classes `btn-one` and `btn-two` and taking care of the spacing using `c-mt-3 c-mt-sm-0 c-ml-sm-3`
+We are leaving the style of these buttons to the classes `btn-one` and `btn-two` and taking care of the spacing using `c-mt-3 c-mt-sm-0 c-ml-sm-3`.
 
 ```html
 <div>
@@ -85,7 +85,7 @@ We are leaving the style of these buttons to the classes `btn-one` and `btn-two`
 </div>
 ```
 
-If we translated these classes into CSS, this would be the result
+If we translated these classes into CSS, this would be the result:
 
 ```scss
 .btn-two {
