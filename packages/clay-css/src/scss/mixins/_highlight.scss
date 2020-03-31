@@ -6,27 +6,18 @@
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
 /// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
-/// bg: {Color | String | Null},
-/// border-radius: {Number | String | List | Null},
-/// bottom: {Number | String | Null},
-/// content: {String | Null},
-/// display: {String | Null},
-/// height: {Number | String | Null},
-/// left: {Number | String | Null},
-/// opacity: {Number | String | Null},
-/// position: {String | Null},
-/// right: {Number | String | Null},
-/// transition: {String | List | Null},
-/// top: {Number | String | Null},
-/// hover-bg: {Color | String | Null},
-/// hover-height: {Number | String | Null},
-/// hover-opacity: {Number | String | Null},
-/// focus-bg: {Color | String | Null},
-/// focus-height: {Number | String | Null},
-/// focus-opacity: {Number | String | Null},
-/// active-bg: {Color | String | Null},
-/// active-height: {Number | String | Null},
-/// active-opacity: {Number | String | Null},
+/// See Mixin `clay-css` for available keys to pass into the base selector
+/// -=-=-=-=-=- Deprecated -=-=-=-=-=-
+/// bg: {Color | String | Null}, // deprecated after 3.9.0
+/// hover-bg: {Color | String | Null}, // deprecated after 3.9.0
+/// hover-height: {Number | String | Null}, // deprecated after 3.9.0
+/// hover-opacity: {Number | String | Null}, // deprecated after 3.9.0
+/// focus-bg: {Color | String | Null}, // deprecated after 3.9.0
+/// focus-height: {Number | String | Null}, // deprecated after 3.9.0
+/// focus-opacity: {Number | String | Null}, // deprecated after 3.9.0
+/// active-bg: {Color | String | Null}, // deprecated after 3.9.0
+/// active-height: {Number | String | Null}, // deprecated after 3.9.0
+/// active-opacity: {Number | String | Null}, // deprecated after 3.9.0
 /// @todo
 /// - Add @example
 /// - Add @link to documentation
@@ -34,71 +25,54 @@
 @mixin clay-after-highlight-variant($map) {
 	$enabled: setter(map-get($map, enabled), true);
 
-	$bg: map-get($map, bg);
-	$border-radius: map-get($map, border-radius);
-	$bottom: map-get($map, bottom);
-	$content: map-get($map, content);
-	$display: map-get($map, display);
-	$height: map-get($map, height);
-	$left: map-get($map, left);
-	$opacity: map-get($map, opacity);
-	$position: map-get($map, position);
-	$right: map-get($map, right);
-	$transition: map-get($map, transition);
-	$top: map-get($map, top);
+	$base: map-merge((
+		background-color: map-get($map, bg),
+	), $map);
 
-	$hover-bg: map-get($map, hover-bg);
-	$hover-height: map-get($map, hover-height);
-	$hover-opacity: map-get($map, hover-opacity);
+	$hover: setter(map-get($map, hover), ());
+	$hover: map-merge((
+		background-color: map-get($map, hover-bg),
+		height: map-get($map, hover-height),
+		opacity: map-get($map, hover-opacity),
+	), $hover);
 
-	$focus-bg: map-get($map, focus-bg);
-	$focus-height: map-get($map, focus-height);
-	$focus-opacity: map-get($map, focus-opacity);
+	$focus: setter(map-get($map, focus), ());
+	$focus: map-merge((
+		bg: map-get($map, focus-bg),
+		height: map-get($map, focus-height),
+		opacity: map-get($map, focus-opacity),
+	), $focus);
 
-	$active-bg: map-get($map, active-bg);
-	$active-height: map-get($map, active-height);
-	$active-opacity: map-get($map, active-opacity);
+	$active: setter(map-get($map, active), ());
+	$active: map-merge((
+		background-color: map-get($map, active-bg),
+		height: map-get($map, active-height),
+		opacity: map-get($map, active-opacity),
+	), $active);
 
 	@if ($enabled) {
 		&::after {
-			background-color: $bg;
-			border-radius: $border-radius;
-			bottom: $bottom;
-			content: $content;
-			display: $display;
-			height: $height;
-			left: $left;
-			opacity: $opacity;
-			position: $position;
-			right: $right;
-			transition: $transition;
-			top: $top;
+			@include clay-css($base);
 		}
 
 		&:hover,
 		&.hover {
 			&::after {
-				background-color: $hover-bg;
-				height: $hover-height;
-				opacity: $hover-opacity;
+				@include clay-css($hover);
 			}
 		}
 
 		&:focus,
 		&.focus {
 			&::after {
-				background-color: $focus-bg;
-				height: $focus-height;
-				opacity: $focus-opacity;
+				@include clay-css($focus);
 			}
 		}
 
 		&:active,
 		&.active {
 			&::after {
-				background-color: $active-bg;
-				height: $active-height;
-				opacity: $active-opacity;
+				@include clay-css($active);
 			}
 		}
 	}
