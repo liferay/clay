@@ -50,7 +50,7 @@ describe('Rendering', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	it('renders as a link and closable ', () => {
+	it('renders as a link and closable', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayLabel
 				closeButtonProps={{
@@ -60,6 +60,28 @@ describe('Rendering', () => {
 				spritemap={spritemap}
 			>
 				{'Label Closable'}
+			</ClayLabel>
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('renders with ItemBefore', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayLabel withClose={false}>
+				<ClayLabel.ItemBefore>{'Content before'}</ClayLabel.ItemBefore>
+				<ClayLabel.ItemExpand>{'Label'}</ClayLabel.ItemExpand>
+			</ClayLabel>
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('renders with ItemAfter', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayLabel withClose={false}>
+				<ClayLabel.ItemExpand>{'Label'}</ClayLabel.ItemExpand>
+				<ClayLabel.ItemAfter>{'Content after'}</ClayLabel.ItemAfter>
 			</ClayLabel>
 		);
 
