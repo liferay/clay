@@ -27,6 +27,11 @@ interface IListItem {
 	>['items'];
 
 	/**
+	 * Props to add to the dropdown trigger element
+	 */
+	dropDownTriggerProps?: React.HTMLAttributes<HTMLButtonElement>;
+
+	/**
 	 * Value to display if item is a header.
 	 */
 	header?: string;
@@ -107,6 +112,7 @@ const ListItem: React.FunctionComponent<
 	}
 > = ({
 	description,
+	dropDownTriggerProps,
 	dropdownActions,
 	href,
 	labels,
@@ -171,7 +177,10 @@ const ListItem: React.FunctionComponent<
 						items={dropdownActions}
 						spritemap={spritemap}
 						trigger={
-							<button className="component-action">
+							<button
+								{...dropDownTriggerProps}
+								className="component-action"
+							>
 								<ClayIcon
 									spritemap={spritemap}
 									symbol="ellipsis-v"

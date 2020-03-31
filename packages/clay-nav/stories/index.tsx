@@ -36,36 +36,36 @@ storiesOf('Components|ClayNav', module)
 						initialExpanded: true,
 						items: [
 							{
-								href: '#nested1',
+								href: '#',
 								label: 'Nested1',
 							},
 						],
 						label: 'Home',
 					},
 					{
-						href: '#2',
+						href: '#',
 						label: 'About',
 					},
 					{
-						href: '#3',
+						href: '#',
 						label: 'Contact',
 					},
 					{
 						items: [
 							{
 								active: true,
-								href: '#5',
+								href: '#',
 								label: 'Five',
 							},
 							{
-								href: '#6',
+								href: '#',
 								label: 'Six',
 							},
 						],
 						label: 'Projects',
 					},
 					{
-						href: '#7',
+						href: '#',
 						label: 'Seven',
 					},
 				]}

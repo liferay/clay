@@ -66,7 +66,7 @@ storiesOf('Components|ClaySlider', module)
 					/>
 				</div>
 				<div className="form-group">
-					<label htmlFor={`sliderTwo${100 - value}`}>{`Value: ${100 -
+					<label htmlFor={`sliderTwo${value}`}>{`Value: ${100 -
 						value}`}</label>
 					<ClaySlider
 						disabled={boolean('Disabled', false)}

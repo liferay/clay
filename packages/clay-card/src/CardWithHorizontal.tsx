@@ -20,6 +20,11 @@ interface IProps {
 	disabled?: boolean;
 
 	/**
+	 * Props to add to the dropdown trigger element
+	 */
+	dropDownTriggerProps?: React.HTMLAttributes<HTMLButtonElement>;
+
+	/**
 	 * Path or URL to item
 	 */
 	href?: string;
@@ -53,6 +58,7 @@ interface IProps {
 export const ClayCardWithHorizontal: React.FunctionComponent<IProps> = ({
 	actions,
 	disabled,
+	dropDownTriggerProps = {},
 	href,
 	onSelectChange,
 	selected = false,
@@ -86,6 +92,7 @@ export const ClayCardWithHorizontal: React.FunctionComponent<IProps> = ({
 							spritemap={spritemap}
 							trigger={
 								<button
+									{...dropDownTriggerProps}
 									className="component-action"
 									disabled={disabled}
 								>
