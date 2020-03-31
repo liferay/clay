@@ -75,33 +75,13 @@
 /// A general mixin to create custom `.row` elements. `.row`'s in Bootstrap have negative `margin-left` and `margin-right` values to offset the padding inside the columns so content will be positioned flush, vertically, with the rest of the page's content.
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
-/// display: {String | Null},
-/// flex-wrap: {String | Null},
-/// justify-content: {String | Null},
-/// margin-bottom: {Number | String | Null},
-/// margin-left: {Number | String | Null},
-/// margin-right: {Number | String | Null},
-/// margin-top: {Number | String | Null},
+/// See Mixin `clay-css` for available keys to pass into the base selector
 /// @todo
 /// - Add @example
 /// - Add @link to documentation
 
 @mixin clay-row($map) {
-	$display: map-get($map, display);
-	$flex-wrap: map-get($map, flex-wrap);
-	$justify-content: map-get($map, justify-content);
-	$margin-bottom: map-get($map, margin-bottom);
-	$margin-left: map-get($map, margin-left);
-	$margin-right: map-get($map, margin-right);
-	$margin-top: map-get($map, margin-top);
-
-	display: $display;
-	flex-wrap: $flex-wrap;
-	justify-content: $justify-content;
-	margin-bottom: $margin-bottom;
-	margin-left: $margin-left;
-	margin-right: $margin-right;
-	margin-top: $margin-top;
+	@include clay-css($map);
 }
 
 @mixin clay-custom-grid-columns($map) {
