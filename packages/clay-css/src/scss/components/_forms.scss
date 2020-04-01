@@ -402,12 +402,7 @@ fieldset[disabled] label {
 }
 
 .form-control-lg {
-	font-size: $input-font-size-lg;
-	height: $input-height-lg;
-
-	@include clay-scale-component {
-		height: $input-height-lg-mobile;
-	}
+	@extend %clay-form-control-lg;
 }
 
 %clay-select-form-control-lg {
@@ -446,12 +441,7 @@ textarea.form-control-lg,
 }
 
 .form-control-sm {
-	font-size: $input-font-size-sm;
-	height: $input-height-sm;
-
-	@include clay-scale-component {
-		height: $input-height-sm-mobile;
-	}
+	@extend %clay-form-control-sm;
 }
 
 %clay-select-form-control-sm {
