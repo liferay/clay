@@ -896,3 +896,63 @@ th {
 		width: auto;
 	}
 }
+
+// Table Draggable
+
+.table-drag {
+	th,
+	td {
+		@include clay-css(
+			map-get($table-drag, cell)
+		);
+	}
+
+	.c-drag {
+		@include clay-css(
+			map-get($table-drag, c-drag)
+		);
+	}
+
+	.c-dragging {
+		&::after {
+			@include clay-css(
+				map-get($table-drag, c-dragging-after)
+			);
+		}
+	}
+}
+
+.table-dragging {
+	@include clay-css($table-dragging);
+
+	.c-droppable {
+		&::before {
+			@include clay-css(
+				map-get($table-dragging, c-droppable-before)
+			);
+		}
+	}
+}
+
+.table-clone {
+	@include clay-css($table-clone);
+
+	&::before {
+		@include clay-css(
+			map-get($table-clone, before)
+		);
+	}
+
+	&::after {
+		@include clay-css(
+			map-get($table-clone, after)
+		);
+	}
+
+	thead th,
+	tbody td {
+		@include clay-css(
+			map-get($table-clone, cell)
+		);
+	}
+}
