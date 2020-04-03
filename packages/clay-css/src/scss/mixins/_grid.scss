@@ -26,59 +26,17 @@
 /// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
 /// breakpoint-up: {String | Null}, // This uses Bootstrap 4's breakpoint up to calculate breakpoint down. Use `breakpoint-down` instead
 /// breakpoint-down: {String, Null}, // The Bootstrap 4 Breakpoint {xs | sm | md | lg | xl}
-/// align-items: {String | Null},
-/// bg: {Color | String | Null},
-/// bg-image: {String | List | Null},
-/// bg-position: {String | List | Null},
-/// bg-size: {Number | String | List | Null},
-/// border-color: {Color | String | List | Null},
-/// border-radius: {Number | String | List | Null},
-/// border-style: {String | List | Null},
-/// border-width: {Number | String | List | Null},
-/// color: {Color | String | Null},
-/// cursor: {String | Null},
-/// display: {String | Null},
-/// flex-basis: {Number | String | Null},
-/// flex-direction: {String | Null},
-/// flex-grow: {Number | String | Null},
-/// flex-shrink: {Number | String | Null},
-/// flex-wrap: {String | Null},
-/// float: {String | Null},
-/// font-family: {Number | String | Null},
-/// font-size: {Number | String | Null},
-/// font-weight: {Number | String | Null},
-/// height: {Number | String | Null},
-/// justify-content: {String | Null},
-/// line-height: {Number | String | Null},
-/// margin-bottom: {Number | String | Null},
-/// margin-left: {Number | String | Null},
-/// margin-right: {Number | String | Null},
-/// margin-top: {Number | String | Null},
-/// max-height: {Number | String | Null},
-/// max-width: {Number | String | Null},
-/// min-height: {Number | String | Null},
-/// min-width: {Number | String | Null},
-/// opacity: {Number | String | Null},
-/// order: {Number | String | Null},
-/// padding-bottom: {Number | String | Null},
-/// padding-left: {Number | String | Null},
-/// padding-right: {Number | String | Null},
-/// padding-top: {Number | String | Null},
-/// position: {String | Null},
-/// bottom: {Number | String | Null},
-/// left: {Number | String | Null},
-/// right: {Number | String | Null},
-/// top: {Number | String | Null},
-/// text-align: {String | Null},
-/// text-decoration: {String | Null},
-/// text-transform: {String | Null},
-/// transition: {String | List | Null},
-/// vertical-align: {String | Null},
-/// width: {Number | String | Null},
-/// padding-bottom-mobile: {Number | String | Null},
-/// padding-left-mobile: {Number | String | Null},
-/// padding-right-mobile: {Number | String | Null},
-/// padding-top-mobile: {Number | String | Null},
+/// See Mixin `clay-css` for available keys to pass into the base selector
+/// mobile: {Map | Null},  // See Mixin `clay-css` for available keys
+/// -=-=-=-=-=- Deprecated -=-=-=-=-=-
+/// bg: {Color | String | Null}, // deprecated after 3.9.0
+/// bg-image: {String | List | Null}, // deprecated after 3.9.0
+/// bg-position: {String | List | Null}, // deprecated after 3.9.0
+/// bg-size: {Number | String | List | Null}, // deprecated after 3.9.0
+/// padding-bottom-mobile: {Number | String | Null}, // deprecated after 3.9.0
+/// padding-left-mobile: {Number | String | Null}, // deprecated after 3.9.0
+/// padding-right-mobile: {Number | String | Null}, // deprecated after 3.9.0
+/// padding-top-mobile: {Number | String | Null}, // deprecated after 3.9.0
 /// @todo
 /// - Add @example
 /// - Add @link to documentation
@@ -88,121 +46,28 @@
 	$breakpoint-up: map-get($map, breakpoint-up);
 	$breakpoint-down: setter(clay-breakpoint-prev($breakpoint-up), null);
 
-	$align-items: map-get($map, align-items);
-	$bg: map-get($map, bg);
-	$bg-image: map-get($map, bg-image);
-	$bg-position: map-get($map, bg-position);
-	$bg-size: map-get($map, bg-size);
-	$border-color: map-get($map, border-color);
-	$border-radius: map-get($map, border-radius);
-	$border-style: map-get($map, border-style);
-	$border-width: map-get($map, border-width);
-	$color: map-get($map, color);
-	$cursor: map-get($map, cursor);
-	$display: map-get($map, display);
-	$flex-basis: map-get($map, flex-basis);
-	$flex-direction: map-get($map, flex-direction);
-	$flex-grow: map-get($map, flex-grow);
-	$flex-shrink: map-get($map, flex-shrink);
-	$flex-wrap: map-get($map, flex-wrap);
-	$float: map-get($map, float);
-	$font-family: map-get($map, font-family);
-	$font-size: map-get($map, font-size);
-	$font-weight: map-get($map, font-weight);
-	$height: map-get($map, height);
-	$justify-content: map-get($map, justify-content);
-	$line-height: map-get($map, line-height);
-	$margin-bottom: map-get($map, margin-bottom);
-	$margin-left: map-get($map, margin-left);
-	$margin-right: map-get($map, margin-right);
-	$margin-top: map-get($map, margin-top);
-	$max-height: map-get($map, max-height);
-	$max-width: map-get($map, max-width);
-	$min-height: map-get($map, min-height);
-	$min-width: map-get($map, min-width);
-	$opacity: map-get($map, opacity);
-	$order: map-get($map, order);
-	$padding-bottom: map-get($map, padding-bottom);
-	$padding-left: map-get($map, padding-left);
-	$padding-right: map-get($map, padding-right);
-	$padding-top: map-get($map, padding-top);
-	$position: map-get($map, position);
+	$base: map-merge((
+		background-color: map-get($map, bg),
+		background-image: map-get($map, bg-image),
+		background-position: map-get($map, bg-position),
+		background-size: map-get($map, bg-size),
+	), $map);
 
-	$bottom: map-get($map, bottom);
-	$left: map-get($map, left);
-	$right: map-get($map, right);
-	$top: map-get($map, top);
+	$mobile: setter(map-get($map, mobile), ());
+	$mobile: map-merge((
+		padding-bottom: map-get($map, padding-bottom-mobile),
+		padding-left: map-get($map, padding-left-mobile),
+		padding-right: map-get($map, padding-right-mobile),
+		padding-top: map-get($map, padding-top-mobile),
+	), $mobile);
 
-	$text-align: map-get($map, text-align);
-	$text-decoration: map-get($map, text-decoration);
-	$text-transform: map-get($map, text-transform);
-	$transition: map-get($map, transition);
-	$vertical-align: map-get($map, vertical-align);
-	$width: map-get($map, width);
+	@if ($enabled) {
+		@include clay-css($base);
 
-	$padding-bottom-mobile: map-get($map, padding-bottom-mobile);
-	$padding-left-mobile: map-get($map, padding-left-mobile);
-	$padding-right-mobile: map-get($map, padding-right-mobile);
-	$padding-top-mobile: map-get($map, padding-top-mobile);
-
-	align-items: $align-items;
-	background-color: $bg;
-	background-image: $bg-image;
-	background-position: $bg-position;
-	background-size: $bg-size;
-	border-color: $border-color;
-	border-radius: $border-radius;
-	border-style: $border-style;
-	border-width: $border-width;
-	color: $color;
-	cursor: $cursor;
-	display: $display;
-	font-family: $font-family;
-	font-size: $font-size;
-	font-weight: $font-weight;
-	flex-basis: $flex-basis;
-	flex-direction: $flex-direction;
-	flex-grow: $flex-grow;
-	flex-shrink: $flex-shrink;
-	flex-wrap: $flex-wrap;
-	float: $float;
-	justify-content: $justify-content;
-	height: $height;
-	line-height: $line-height;
-	margin-bottom: $margin-bottom;
-	margin-left: $margin-left;
-	margin-right: $margin-right;
-	margin-top: $margin-top;
-	max-height: $max-height;
-	max-width: $max-width;
-	min-height: $min-height;
-	min-width: $min-width;
-	opacity: $opacity;
-	order: $order;
-	padding-bottom: $padding-bottom;
-	padding-left: $padding-left;
-	padding-right: $padding-right;
-	padding-top: $padding-top;
-	position: $position;
-
-	bottom: $bottom;
-	left: $left;
-	right: $right;
-	top: $top;
-
-	text-align: $text-align;
-	text-decoration: $text-decoration;
-	text-transform: $text-transform;
-	transition: $transition;
-	vertical-align: $vertical-align;
-	width: $width;
-
-	@if($breakpoint-down) {
-		@include media-breakpoint-down($breakpoint-down) {
-			padding-bottom: $padding-bottom-mobile;
-			padding-left: $padding-left-mobile;
-			padding-right: $padding-right-mobile;
-			padding-top: $padding-top-mobile;
+		@if($breakpoint-down) {
+			@include media-breakpoint-down($breakpoint-down) {
+				@include clay-css($mobile);
+			}
 		}
 	}
 }
@@ -210,33 +75,13 @@
 /// A general mixin to create custom `.row` elements. `.row`'s in Bootstrap have negative `margin-left` and `margin-right` values to offset the padding inside the columns so content will be positioned flush, vertically, with the rest of the page's content.
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
-/// display: {String | Null},
-/// flex-wrap: {String | Null},
-/// justify-content: {String | Null},
-/// margin-bottom: {Number | String | Null},
-/// margin-left: {Number | String | Null},
-/// margin-right: {Number | String | Null},
-/// margin-top: {Number | String | Null},
+/// See Mixin `clay-css` for available keys to pass into the base selector
 /// @todo
 /// - Add @example
 /// - Add @link to documentation
 
 @mixin clay-row($map) {
-	$display: map-get($map, display);
-	$flex-wrap: map-get($map, flex-wrap);
-	$justify-content: map-get($map, justify-content);
-	$margin-bottom: map-get($map, margin-bottom);
-	$margin-left: map-get($map, margin-left);
-	$margin-right: map-get($map, margin-right);
-	$margin-top: map-get($map, margin-top);
-
-	display: $display;
-	flex-wrap: $flex-wrap;
-	justify-content: $justify-content;
-	margin-bottom: $margin-bottom;
-	margin-left: $margin-left;
-	margin-right: $margin-right;
-	margin-top: $margin-top;
+	@include clay-css($map);
 }
 
 @mixin clay-custom-grid-columns($map) {
