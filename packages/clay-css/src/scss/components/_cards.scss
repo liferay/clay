@@ -179,7 +179,9 @@
 }
 
 .autofit-col:first-child .card-item-first {
-	@include border-radius($card-inner-border-radius 0 0 $card-inner-border-radius);
+	@include border-radius(
+		$card-inner-border-radius 0 0 $card-inner-border-radius
+	);
 }
 
 .card-item-last {
@@ -189,7 +191,9 @@
 }
 
 .autofit-col:last-child .card-item-last {
-	@include border-radius(0 $card-inner-border-radius $card-inner-border-radius 0);
+	@include border-radius(
+		0 $card-inner-border-radius $card-inner-border-radius 0
+	);
 }
 
 .rounded {
@@ -210,16 +214,18 @@
 		border-top-left-radius: $card-rounded-inner-border-radius;
 
 		.card-item-first {
-			border-radius: $card-rounded-inner-border-radius 0 0 $card-rounded-inner-border-radius;
+			border-radius: $card-rounded-inner-border-radius 0 0
+				$card-rounded-inner-border-radius;
 		}
 	}
 
-	.autofit-col:last-child{
+	.autofit-col:last-child {
 		border-bottom-right-radius: $card-rounded-inner-border-radius;
 		border-top-right-radius: $card-rounded-inner-border-radius;
 
 		.card-item-last {
-			border-radius: 0 $card-rounded-inner-border-radius $card-rounded-inner-border-radius 0;
+			border-radius: 0 $card-rounded-inner-border-radius
+				$card-rounded-inner-border-radius 0;
 		}
 	}
 }
@@ -242,7 +248,8 @@
 		border-top-left-radius: $card-rounded-0-inner-border-radius;
 
 		.card-item-first {
-			border-radius: $card-rounded-0-inner-border-radius 0 0 $card-rounded-0-inner-border-radius;
+			border-radius: $card-rounded-0-inner-border-radius 0 0
+				$card-rounded-0-inner-border-radius;
 		}
 	}
 
@@ -251,7 +258,8 @@
 		border-top-right-radius: $card-rounded-0-inner-border-radius;
 
 		.card-item-last {
-			border-radius: 0 $card-rounded-0-inner-border-radius $card-rounded-0-inner-border-radius 0;
+			border-radius: 0 $card-rounded-0-inner-border-radius
+				$card-rounded-0-inner-border-radius 0;
 		}
 	}
 }
@@ -274,7 +282,8 @@
 		border-top-left-radius: $card-rounded-circle-inner-border-radius;
 
 		.card-item-first {
-			border-radius: $card-rounded-circle-inner-border-radius 0 0 $card-rounded-circle-inner-border-radius;
+			border-radius: $card-rounded-circle-inner-border-radius 0 0
+				$card-rounded-circle-inner-border-radius;
 		}
 	}
 
@@ -283,7 +292,8 @@
 		border-top-right-radius: $card-rounded-circle-inner-border-radius;
 
 		.card-item-last {
-			border-radius: 0 $card-rounded-circle-inner-border-radius $card-rounded-circle-inner-border-radius 0;
+			border-radius: 0 $card-rounded-circle-inner-border-radius
+				$card-rounded-circle-inner-border-radius 0;
 		}
 	}
 }

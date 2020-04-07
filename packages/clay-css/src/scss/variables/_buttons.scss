@@ -58,52 +58,73 @@ $btn-toolbar-spacer-y: 0.125rem !default; // 2px
 // Button Variants
 
 $btn-primary: () !default;
-$btn-primary: map-deep-merge((
-	loading-animation: 'loading-animation-light'
-), $btn-primary);
+$btn-primary: map-deep-merge(
+	(
+		loading-animation: 'loading-animation-light',
+	),
+	$btn-primary
+);
 
 $btn-secondary: () !default;
-$btn-secondary: map-deep-merge((
-	loading-animation: 'loading-animation-light'
-), $btn-secondary);
+$btn-secondary: map-deep-merge(
+	(
+		loading-animation: 'loading-animation-light',
+	),
+	$btn-secondary
+);
 
 $btn-success: () !default;
-$btn-success: map-deep-merge((
-	loading-animation: 'loading-animation-light'
-), $btn-success);
+$btn-success: map-deep-merge(
+	(
+		loading-animation: 'loading-animation-light',
+	),
+	$btn-success
+);
 
 $btn-info: () !default;
-$btn-info: map-deep-merge((
-	loading-animation: 'loading-animation-light'
-), $btn-info);
+$btn-info: map-deep-merge(
+	(
+		loading-animation: 'loading-animation-light',
+	),
+	$btn-info
+);
 
 $btn-warning: () !default;
 $btn-warning: map-deep-merge((), $btn-warning);
 
 $btn-danger: () !default;
-$btn-danger: map-deep-merge((
-	loading-animation: 'loading-animation-light'
-), $btn-danger);
+$btn-danger: map-deep-merge(
+	(
+		loading-animation: 'loading-animation-light',
+	),
+	$btn-danger
+);
 
 $btn-light: () !default;
 $btn-light: map-deep-merge((), $btn-light);
 
 $btn-dark: () !default;
-$btn-dark: map-deep-merge((
-	loading-animation: 'loading-animation-light'
-), $btn-dark);
+$btn-dark: map-deep-merge(
+	(
+		loading-animation: 'loading-animation-light',
+	),
+	$btn-dark
+);
 
 $btn-palette: () !default;
-$btn-palette: map-deep-merge((
-	primary: $btn-primary,
-	secondary: $btn-secondary,
-	success: $btn-success,
-	info: $btn-info,
-	warning: $btn-warning,
-	danger: $btn-danger,
-	light: $btn-light,
-	dark: $btn-dark
-), $btn-palette);
+$btn-palette: map-deep-merge(
+	(
+		primary: $btn-primary,
+		secondary: $btn-secondary,
+		success: $btn-success,
+		info: $btn-info,
+		warning: $btn-warning,
+		danger: $btn-danger,
+		light: $btn-light,
+		dark: $btn-dark,
+	),
+	$btn-palette
+);
 
 // Button Outline Variants
 
@@ -117,13 +138,16 @@ $btn-outline-light: () !default;
 $btn-outline-dark: () !default;
 
 $btn-outline-palette: () !default;
-$btn-outline-palette: map-deep-merge((
-	primary: $btn-outline-primary,
-	secondary: $btn-outline-secondary,
-	success: $btn-outline-success,
-	info: $btn-outline-info,
-	warning: $btn-outline-warning,
-	danger: $btn-outline-danger,
-	light: $btn-outline-light,
-	dark: $btn-outline-dark
-), $btn-outline-palette);
+$btn-outline-palette: map-deep-merge(
+	(
+		primary: $btn-outline-primary,
+		secondary: $btn-outline-secondary,
+		success: $btn-outline-success,
+		info: $btn-outline-info,
+		warning: $btn-outline-warning,
+		danger: $btn-outline-danger,
+		light: $btn-outline-light,
+		dark: $btn-outline-dark,
+	),
+	$btn-outline-palette
+);

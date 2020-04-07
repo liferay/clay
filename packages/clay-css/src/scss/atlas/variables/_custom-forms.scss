@@ -35,7 +35,10 @@ $custom-control-indicator-checked-border-color: $custom-control-indicator-checke
 
 // @deprecated as of v2.2.1 use `$custom-control-indicator-checked-disabled-bg` instead
 
-$custom-control-indicator-disabled-checked-bg: lighten($component-active-bg, 32.94) !default;
+$custom-control-indicator-disabled-checked-bg: lighten(
+	$component-active-bg,
+	32.94
+) !default;
 $custom-control-indicator-checked-disabled-bg: $custom-control-indicator-disabled-checked-bg !default;
 
 // @deprecated as of v2.2.1 use `$custom-control-indicator-checked-disabled-border-color` instead
@@ -54,9 +57,12 @@ $custom-control-indicator-indeterminate-border-color: $custom-control-indicator-
 $custom-control-margin-bottom: 1rem !default;
 
 $custom-control: () !default;
-$custom-control: map-deep-merge((
-	line-height: 1,
-), $custom-control);
+$custom-control: map-deep-merge(
+	(
+		line-height: 1,
+	),
+	$custom-control
+);
 
 // Custom Control Description
 
@@ -78,15 +84,21 @@ $custom-control-label-disabled-color: $custom-control-description-disabled-color
 $custom-control-description-small-font-size: 100% !default;
 
 $custom-control-label: () !default;
-$custom-control-label: map-deep-merge((
-	font-size: $custom-control-description-font-size,
-	font-weight: $custom-control-description-font-weight,
-), $custom-control-label);
+$custom-control-label: map-deep-merge(
+	(
+		font-size: $custom-control-description-font-size,
+		font-weight: $custom-control-description-font-weight,
+	),
+	$custom-control-label
+);
 
 $custom-control-label-text-small: () !default;
-$custom-control-label-text-small: map-deep-merge((
-	font-size: $custom-control-description-small-font-size,
-), $custom-control-label-text-small);
+$custom-control-label-text-small: map-deep-merge(
+	(
+		font-size: $custom-control-description-small-font-size,
+	),
+	$custom-control-label-text-small
+);
 
 // Custom Checkbox
 

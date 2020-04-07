@@ -75,7 +75,10 @@
 	$header-padding-top: map-get($map, header-padding-top);
 	$header-transition: map-get($map, header-transition);
 
-	$header-collapsed-border-color: map-get($map, header-collapsed-border-color);
+	$header-collapsed-border-color: map-get(
+		$map,
+		header-collapsed-border-color
+	);
 
 	$header-link: setter(map-get($map, header-link), ());
 
@@ -189,7 +192,8 @@
 	@at-root {
 		.panel-group.panel-group-flush & {
 			.panel-header-link {
-				&, &.collapsed {
+				&,
+				&.collapsed {
 					border-radius: map-get($header-link, border-radius);
 				}
 			}

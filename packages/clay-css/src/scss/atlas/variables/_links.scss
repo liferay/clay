@@ -1,115 +1,146 @@
 $component-link: () !default;
-$component-link: map-deep-merge((
-	border-radius: 1px,
-	transition: box-shadow 0.15s ease-in-out,
-	focus-color: darken($gray-600, 15%),
-	focus-box-shadow: $component-focus-box-shadow,
-	focus-outline: 0,
-), $component-link);
+$component-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		transition: box-shadow 0.15s ease-in-out,
+		focus-color: darken($gray-600, 15%),
+		focus-box-shadow: $component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$component-link
+);
 
 $link-primary: () !default;
-$link-primary: map-deep-merge((
-	border-radius: 1px,
-	transition: box-shadow 0.15s ease-in-out,
-	focus-color: darken($primary, 15%),
-	focus-box-shadow: $component-focus-box-shadow,
-	focus-outline: 0,
-), $link-primary);
+$link-primary: map-deep-merge(
+	(
+		border-radius: 1px,
+		transition: box-shadow 0.15s ease-in-out,
+		focus-color: darken($primary, 15%),
+		focus-box-shadow: $component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$link-primary
+);
 
 $link-secondary: () !default;
-$link-secondary: map-deep-merge((
-	border-radius: 1px,
-	transition: box-shadow 0.15s ease-in-out,
-	hover-color: $gray-900,
-	focus-color: $gray-900,
-	focus-box-shadow: $component-focus-box-shadow,
-	focus-outline: 0,
-), $link-secondary);
+$link-secondary: map-deep-merge(
+	(
+		border-radius: 1px,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $gray-900,
+		focus-color: $gray-900,
+		focus-box-shadow: $component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$link-secondary
+);
 
 // Component Title
 
 $component-title: () !default;
-$component-title: map-deep-merge((
-	font-size: 1rem,
-	line-height: 1.25,
-	margin-bottom: calc((#{$dropdown-action-toggle-size} - (1em * 1.25)) / 2),
-	margin-top: calc((#{$dropdown-action-toggle-size} - (1em * 1.25)) / 2)
-), $component-title);
+$component-title: map-deep-merge(
+	(
+		font-size: 1rem,
+		line-height: 1.25,
+		margin-bottom:
+			calc((#{$dropdown-action-toggle-size} - (1em * 1.25)) / 2),
+		margin-top: calc((#{$dropdown-action-toggle-size} - (1em * 1.25)) / 2),
+	),
+	$component-title
+);
 
 $component-title-link: () !default;
-$component-title-link: map-deep-merge((
-	border-radius: 1px,
-	transition: box-shadow 0.15s ease-in-out,
-	focus-color: darken($gray-900, 15%),
-	focus-box-shadow: $component-focus-box-shadow,
-	focus-outline: 0,
-), $component-title-link);
+$component-title-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		transition: box-shadow 0.15s ease-in-out,
+		focus-color: darken($gray-900, 15%),
+		focus-box-shadow: $component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$component-title-link
+);
 
 // Component Subtitle
 
 $component-subtitle: () !default;
-$component-subtitle: map-deep-merge((
-	font-weight: $font-weight-semi-bold,
-	line-height: 1.45
-), $component-subtitle);
+$component-subtitle: map-deep-merge(
+	(
+		font-weight: $font-weight-semi-bold,
+		line-height: 1.45,
+	),
+	$component-subtitle
+);
 
 $component-subtitle-link: () !default;
-$component-subtitle-link: map-deep-merge((
-	border-radius: 1px,
-	transition: box-shadow 0.15s ease-in-out,
-	hover-color: $gray-900,
-	focus-color: $gray-900,
-	focus-box-shadow: $component-focus-box-shadow,
-	focus-outline: 0,
-), $component-subtitle-link);
+$component-subtitle-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $gray-900,
+		focus-color: $gray-900,
+		focus-box-shadow: $component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$component-subtitle-link
+);
 
 // Component Action
 
 $component-action: () !default;
-$component-action: map-deep-merge((
-	font-size: 1rem,
-	hover-bg: rgba($gray-900, 0.03),
-	hover-color: $gray-900,
-	focus-bg: rgba($gray-900, 0.03),
-	focus-box-shadow: map-get($btn-secondary, focus-box-shadow),
-	focus-color: $gray-900,
-	focus-outline: 0,
-	active-bg: rgba($gray-900, 0.06),
-	active-color: $gray-900,
-	btn-focus-box-shadow: map-get($btn-secondary, focus-box-shadow),
-	disabled-bg: transparent,
-	disabled-box-shadow: none,
-), $component-action);
+$component-action: map-deep-merge(
+	(
+		font-size: 1rem,
+		hover-bg: rgba($gray-900, 0.03),
+		hover-color: $gray-900,
+		focus-bg: rgba($gray-900, 0.03),
+		focus-box-shadow: map-get($btn-secondary, focus-box-shadow),
+		focus-color: $gray-900,
+		focus-outline: 0,
+		active-bg: rgba($gray-900, 0.06),
+		active-color: $gray-900,
+		btn-focus-box-shadow: map-get($btn-secondary, focus-box-shadow),
+		disabled-bg: transparent,
+		disabled-box-shadow: none,
+	),
+	$component-action
+);
 
 // Link Outline
 
 $link-outline-primary: () !default;
-$link-outline-primary: map-deep-merge((
-	hover-bg: $primary-l3,
-	hover-color: $primary,
-	focus-bg: $primary-l3,
-	focus-box-shadow: map-get($btn-outline-primary, focus-box-shadow),
-	focus-color: $primary,
-	focus-outline: 0,
-	btn-focus-box-shadow: map-get($btn-outline-primary, focus-box-shadow),
-	btn-focus-outline: 0,
-	active-bg: lighten(desaturate($primary, 42.05), 41.76),
-	active-color: $primary,
-	disabled-box-shadow: none,
-), $link-outline-primary);
+$link-outline-primary: map-deep-merge(
+	(
+		hover-bg: $primary-l3,
+		hover-color: $primary,
+		focus-bg: $primary-l3,
+		focus-box-shadow: map-get($btn-outline-primary, focus-box-shadow),
+		focus-color: $primary,
+		focus-outline: 0,
+		btn-focus-box-shadow: map-get($btn-outline-primary, focus-box-shadow),
+		btn-focus-outline: 0,
+		active-bg: lighten(desaturate($primary, 42.05), 41.76),
+		active-color: $primary,
+		disabled-box-shadow: none,
+	),
+	$link-outline-primary
+);
 
 $link-outline-secondary: () !default;
-$link-outline-secondary: map-deep-merge((
-	border-color: $secondary-l2,
-	hover-bg: rgba($gray-900, 0.03),
-	hover-color: $gray-900,
-	focus-bg: rgba($gray-900, 0.03),
-	focus-box-shadow: map-get($btn-outline-secondary, focus-box-shadow),
-	focus-color: $gray-900,
-	focus-outline: 0,
-	btn-focus-box-shadow: map-get($btn-outline-secondary, focus-box-shadow),
-	btn-focus-outline: 0,
-	active-bg: rgba($gray-900, 0.06),
-	active-color: $gray-900,
-	disabled-box-shadow: none,
-), $link-outline-secondary);
+$link-outline-secondary: map-deep-merge(
+	(
+		border-color: $secondary-l2,
+		hover-bg: rgba($gray-900, 0.03),
+		hover-color: $gray-900,
+		focus-bg: rgba($gray-900, 0.03),
+		focus-box-shadow: map-get($btn-outline-secondary, focus-box-shadow),
+		focus-color: $gray-900,
+		focus-outline: 0,
+		btn-focus-box-shadow: map-get($btn-outline-secondary, focus-box-shadow),
+		btn-focus-outline: 0,
+		active-bg: rgba($gray-900, 0.06),
+		active-color: $gray-900,
+		disabled-box-shadow: none,
+	),
+	$link-outline-secondary
+);

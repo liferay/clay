@@ -82,7 +82,9 @@
 		.container-fluid {
 			padding-bottom: $alert-dismissible-padding-bottom;
 			padding-left: $alert-dismissible-padding-left;
-			padding-right: calc(#{$alert-dismissible-padding-right} + #{$grid-gutter-width / 2});
+			padding-right: calc(
+				#{$alert-dismissible-padding-right} + #{$grid-gutter-width / 2}
+			);
 			padding-top: $alert-dismissible-padding-top;
 			position: relative;
 		}

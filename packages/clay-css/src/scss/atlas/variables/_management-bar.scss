@@ -1,32 +1,41 @@
 $management-bar-base: () !default;
-$management-bar-base: map-deep-merge((
-	link-border-radius: $border-radius,
-	link-outline: 0,
-	link-transition: box-shadow 0.15s ease-in-out,
-	link-focus-box-shadow: $btn-focus-box-shadow,
-	link-disabled-box-shadow: none,
-), $management-bar-base);
+$management-bar-base: map-deep-merge(
+	(
+		link-border-radius: $border-radius,
+		link-outline: 0,
+		link-transition: box-shadow 0.15s ease-in-out,
+		link-focus-box-shadow: $btn-focus-box-shadow,
+		link-disabled-box-shadow: none,
+	),
+	$management-bar-base
+);
 
 $management-bar-light: () !default;
-$management-bar-light: map-deep-merge((
-	bg: $white,
-	link-font-weight: $font-weight-semi-bold,
-	link-hover-color: $gray-900,
-	link-hover-bg: rgba($gray-900, 0.03),
-	link-focus-color: $gray-900,
-	link-focus-bg: rgba($gray-900, 0.03),
-	link-active-bg: rgba($gray-900, 0.06),
-	link-disabled-bg: transparent,
-), $management-bar-light);
+$management-bar-light: map-deep-merge(
+	(
+		bg: $white,
+		link-font-weight: $font-weight-semi-bold,
+		link-hover-color: $gray-900,
+		link-hover-bg: rgba($gray-900, 0.03),
+		link-focus-color: $gray-900,
+		link-focus-bg: rgba($gray-900, 0.03),
+		link-active-bg: rgba($gray-900, 0.06),
+		link-disabled-bg: transparent,
+	),
+	$management-bar-light
+);
 
 $management-bar-primary: () !default;
-$management-bar-primary: map-deep-merge((
-	link-border-radius: $border-radius,
-	link-font-weight: $font-weight-semi-bold,
-	link-hover-color: $gray-900,
-	link-hover-bg: rgba($gray-900, 0.03),
-	link-focus-color: $gray-900,
-	link-focus-bg: rgba($gray-900, 0.03),
-	link-active-bg: rgba($gray-900, 0.06),
-	link-disabled-bg: transparent,
-), $management-bar-primary);
+$management-bar-primary: map-deep-merge(
+	(
+		link-border-radius: $border-radius,
+		link-font-weight: $font-weight-semi-bold,
+		link-hover-color: $gray-900,
+		link-hover-bg: rgba($gray-900, 0.03),
+		link-focus-color: $gray-900,
+		link-focus-bg: rgba($gray-900, 0.03),
+		link-active-bg: rgba($gray-900, 0.06),
+		link-disabled-bg: transparent,
+	),
+	$management-bar-primary
+);

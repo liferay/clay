@@ -166,7 +166,8 @@
 
 		@if ($enable-c-inner) {
 			.c-inner {
-				margin: #{math-sign($pagination-padding-y-sm)} #{math-sign($pagination-padding-x)};
+				margin: #{math-sign($pagination-padding-y-sm)}
+					#{math-sign($pagination-padding-x)};
 			}
 		}
 	}
@@ -184,7 +185,8 @@
 
 		@if ($enable-c-inner) {
 			.c-inner {
-				margin: #{math-sign($pagination-padding-y-sm)} #{math-sign($pagination-padding-x-sm)};
+				margin: #{math-sign($pagination-padding-y-sm)}
+					#{math-sign($pagination-padding-x-sm)};
 			}
 		}
 
@@ -213,7 +215,8 @@
 
 		@if ($enable-c-inner) {
 			.c-inner {
-				margin: #{math-sign($pagination-padding-y-lg)} #{math-sign($pagination-padding-x)};
+				margin: #{math-sign($pagination-padding-y-lg)}
+					#{math-sign($pagination-padding-x)};
 			}
 		}
 	}
@@ -231,7 +234,8 @@
 
 		@if ($enable-c-inner) {
 			.c-inner {
-				margin: #{math-sign($pagination-padding-y-lg)} #{math-sign($pagination-padding-x-lg)};
+				margin: #{math-sign($pagination-padding-y-lg)}
+					#{math-sign($pagination-padding-x-lg)};
 			}
 		}
 

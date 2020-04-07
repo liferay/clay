@@ -3,7 +3,8 @@ $btn-box-shadow: 0 0 rgba(#000, 0) !default;
 $btn-font-weight: $font-weight-semi-bold !default;
 $btn-padding-x: 0.9375rem !default; // 15px
 $btn-padding-y: 0.4375rem !default; // 7px
-$btn-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+	border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
 
 $btn-focus-box-shadow: $component-focus-box-shadow !default;
 
@@ -47,247 +48,296 @@ $btn-group-item-margin-right: 1rem !default;
 // Button Variants
 
 $btn-primary: () !default;
-$btn-primary: map-deep-merge((
-	hover-bg: $primary-d1,
-	hover-border-color: transparent,
-	focus-bg: $primary-d1,
-	focus-box-shadow: $btn-focus-box-shadow,
-	disabled-bg: $primary,
-	active-bg: $primary-d2,
-	active-border-color: transparent,
-	active-box-shadow: none,
-	active-focus-box-shadow: $btn-focus-box-shadow,
-), $btn-primary);
+$btn-primary: map-deep-merge(
+	(
+		hover-bg: $primary-d1,
+		hover-border-color: transparent,
+		focus-bg: $primary-d1,
+		focus-box-shadow: $btn-focus-box-shadow,
+		disabled-bg: $primary,
+		active-bg: $primary-d2,
+		active-border-color: transparent,
+		active-box-shadow: none,
+		active-focus-box-shadow: $btn-focus-box-shadow,
+	),
+	$btn-primary
+);
 
 $btn-secondary: () !default;
-$btn-secondary: map-deep-merge((
-	bg: $white,
-	border-color: $secondary-l2,
-	color: $secondary,
-	hover-bg: $gray-100,
-	hover-border-color: $secondary-l2,
-	hover-color: $gray-900,
-	focus-bg: $gray-100,
-	focus-border-color: $secondary-l2,
-	focus-box-shadow: $btn-focus-box-shadow,
-	focus-color: $gray-900,
-	disabled-bg: $white,
-	disabled-border-color: $secondary-l2,
-	disabled-color: $secondary,
-	active-border-color: $secondary-l2,
-	active-color: $gray-900,
-	active-bg: $gray-200,
-	active-box-shadow: none,
-	active-focus-box-shadow: $btn-focus-box-shadow,
-	loading-animation: null,
-), $btn-secondary);
+$btn-secondary: map-deep-merge(
+	(
+		bg: $white,
+		border-color: $secondary-l2,
+		color: $secondary,
+		hover-bg: $gray-100,
+		hover-border-color: $secondary-l2,
+		hover-color: $gray-900,
+		focus-bg: $gray-100,
+		focus-border-color: $secondary-l2,
+		focus-box-shadow: $btn-focus-box-shadow,
+		focus-color: $gray-900,
+		disabled-bg: $white,
+		disabled-border-color: $secondary-l2,
+		disabled-color: $secondary,
+		active-border-color: $secondary-l2,
+		active-color: $gray-900,
+		active-bg: $gray-200,
+		active-box-shadow: none,
+		active-focus-box-shadow: $btn-focus-box-shadow,
+		loading-animation: null,
+	),
+	$btn-secondary
+);
 
 $btn-success: () !default;
-$btn-success: map-deep-merge((
-	hover-bg: $success-d1,
-	hover-border-color: transparent,
-	focus-bg: $success-d1,
-	focus-border-color: transparent,
-	focus-box-shadow: $btn-focus-box-shadow,
-	disabled-bg: $success,
-	active-bg: $success-d2,
-	active-border-color: transparent,
-	active-box-shadow: none,
-	active-focus-box-shadow: $btn-focus-box-shadow,
-), $btn-success);
+$btn-success: map-deep-merge(
+	(
+		hover-bg: $success-d1,
+		hover-border-color: transparent,
+		focus-bg: $success-d1,
+		focus-border-color: transparent,
+		focus-box-shadow: $btn-focus-box-shadow,
+		disabled-bg: $success,
+		active-bg: $success-d2,
+		active-border-color: transparent,
+		active-box-shadow: none,
+		active-focus-box-shadow: $btn-focus-box-shadow,
+	),
+	$btn-success
+);
 
 $btn-info: () !default;
-$btn-info: map-deep-merge((
-	hover-bg: $info-d1,
-	hover-border-color: transparent,
-	focus-bg: $info-d1,
-	focus-border-color: transparent,
-	focus-box-shadow: $btn-focus-box-shadow,
-	disabled-bg: $info,
-	active-bg: $info-d2,
-	active-border-color: transparent,
-	active-box-shadow: none,
-	active-focus-box-shadow: $btn-focus-box-shadow,
-), $btn-info);
+$btn-info: map-deep-merge(
+	(
+		hover-bg: $info-d1,
+		hover-border-color: transparent,
+		focus-bg: $info-d1,
+		focus-border-color: transparent,
+		focus-box-shadow: $btn-focus-box-shadow,
+		disabled-bg: $info,
+		active-bg: $info-d2,
+		active-border-color: transparent,
+		active-box-shadow: none,
+		active-focus-box-shadow: $btn-focus-box-shadow,
+	),
+	$btn-info
+);
 
 $btn-warning: () !default;
-$btn-warning: map-deep-merge((
-	hover-bg: $warning-d1,
-	hover-border-color: transparent,
-	focus-bg: $warning-d1,
-	focus-border-color: transparent,
-	focus-box-shadow: $btn-focus-box-shadow,
-	disabled-bg: $warning,
-	active-bg: $warning-d2,
-	active-border-color: transparent,
-	active-box-shadow: none,
-	active-focus-box-shadow: $btn-focus-box-shadow,
-	loading-animation: 'loading-animation-light',
-), $btn-warning);
+$btn-warning: map-deep-merge(
+	(
+		hover-bg: $warning-d1,
+		hover-border-color: transparent,
+		focus-bg: $warning-d1,
+		focus-border-color: transparent,
+		focus-box-shadow: $btn-focus-box-shadow,
+		disabled-bg: $warning,
+		active-bg: $warning-d2,
+		active-border-color: transparent,
+		active-box-shadow: none,
+		active-focus-box-shadow: $btn-focus-box-shadow,
+		loading-animation: 'loading-animation-light',
+	),
+	$btn-warning
+);
 
 $btn-danger: () !default;
-$btn-danger: map-deep-merge((
-	hover-bg: $danger-d1,
-	hover-border-color: transparent,
-	focus-bg: $danger-d1,
-	focus-border-color: transparent,
-	focus-box-shadow: $btn-focus-box-shadow,
-	disabled-bg: $danger,
-	active-bg: $danger-d2,
-	active-border-color: transparent,
-	active-box-shadow: none,
-	active-focus-box-shadow: $btn-focus-box-shadow,
-), $btn-danger);
+$btn-danger: map-deep-merge(
+	(
+		hover-bg: $danger-d1,
+		hover-border-color: transparent,
+		focus-bg: $danger-d1,
+		focus-border-color: transparent,
+		focus-box-shadow: $btn-focus-box-shadow,
+		disabled-bg: $danger,
+		active-bg: $danger-d2,
+		active-border-color: transparent,
+		active-box-shadow: none,
+		active-focus-box-shadow: $btn-focus-box-shadow,
+	),
+	$btn-danger
+);
 
 $btn-light: () !default;
-$btn-light: map-deep-merge((
-	color: $gray-900,
-	hover-bg: $light-d1,
-	hover-border-color: transparent,
-	focus-bg: $light-d1,
-	focus-border-color: transparent,
-	focus-box-shadow: $btn-focus-box-shadow,
-	disabled-bg: $light,
-	active-bg: $light-d2,
-	active-border-color: transparent,
-	active-box-shadow: none,
-	active-focus-box-shadow: $btn-focus-box-shadow,
-), $btn-light);
+$btn-light: map-deep-merge(
+	(
+		color: $gray-900,
+		hover-bg: $light-d1,
+		hover-border-color: transparent,
+		focus-bg: $light-d1,
+		focus-border-color: transparent,
+		focus-box-shadow: $btn-focus-box-shadow,
+		disabled-bg: $light,
+		active-bg: $light-d2,
+		active-border-color: transparent,
+		active-box-shadow: none,
+		active-focus-box-shadow: $btn-focus-box-shadow,
+	),
+	$btn-light
+);
 
 $btn-dark: () !default;
-$btn-dark: map-deep-merge((
-	hover-bg: $dark-d1,
-	hover-border-color: transparent,
-	focus-bg: $dark-d1,
-	focus-border-color: transparent,
-	focus-box-shadow: $btn-focus-box-shadow,
-	disabled-bg: $dark,
-	active-bg: $dark-d2,
-	active-border-color: transparent,
-	active-box-shadow: none,
-	active-focus-box-shadow: $btn-focus-box-shadow,
-), $btn-dark);
+$btn-dark: map-deep-merge(
+	(
+		hover-bg: $dark-d1,
+		hover-border-color: transparent,
+		focus-bg: $dark-d1,
+		focus-border-color: transparent,
+		focus-box-shadow: $btn-focus-box-shadow,
+		disabled-bg: $dark,
+		active-bg: $dark-d2,
+		active-border-color: transparent,
+		active-box-shadow: none,
+		active-focus-box-shadow: $btn-focus-box-shadow,
+	),
+	$btn-dark
+);
 
 // Button Outline Variant
 
 $btn-outline-primary: () !default;
-$btn-outline-primary: map-deep-merge((
-	hover-bg: $primary-l3,
-	hover-color: $primary,
-	focus-bg: $primary-l3,
-	focus-box-shadow: map-get($btn-primary, focus-box-shadow),
-	focus-color: $primary,
-	disabled-bg: transparent,
-	disabled-border-color: map-get($btn-primary, bg),
-	disabled-color: map-get($btn-primary, bg),
-	active-bg: lighten(desaturate($primary, 42.05), 41.76),
-	active-color: $primary,
-	active-box-shadow: map-get($btn-primary, active-box-shadow),
-	active-focus-box-shadow: map-get($btn-primary, active-focus-box-shadow),
-), $btn-outline-primary);
+$btn-outline-primary: map-deep-merge(
+	(
+		hover-bg: $primary-l3,
+		hover-color: $primary,
+		focus-bg: $primary-l3,
+		focus-box-shadow: map-get($btn-primary, focus-box-shadow),
+		focus-color: $primary,
+		disabled-bg: transparent,
+		disabled-border-color: map-get($btn-primary, bg),
+		disabled-color: map-get($btn-primary, bg),
+		active-bg: lighten(desaturate($primary, 42.05), 41.76),
+		active-color: $primary,
+		active-box-shadow: map-get($btn-primary, active-box-shadow),
+		active-focus-box-shadow: map-get($btn-primary, active-focus-box-shadow),
+	),
+	$btn-outline-primary
+);
 
 $btn-outline-secondary: () !default;
-$btn-outline-secondary: map-deep-merge((
-	bg: null,
-	border-color: $secondary-l2,
-	color: null,
-	hover-bg: rgba($gray-900, 0.03),
-	hover-border-color: transparent,
-	hover-color: map-get($btn-secondary, hover-color),
-	focus-bg: rgba($gray-900, 0.03),
-	focus-border-color: transparent,
-	focus-box-shadow: map-get($btn-secondary, focus-box-shadow),
-	focus-color: map-get($btn-secondary, focus-color),
-	disabled-bg: transparent,
-	disabled-border-color: $secondary,
-	disabled-color: $secondary,
-	active-bg: rgba($gray-900, 0.06),
-	active-border-color: transparent,
-	active-box-shadow: map-get($btn-secondary, active-box-shadow),
-	active-color: map-get($btn-secondary, active-color),
-	active-focus-box-shadow: map-get($btn-secondary, active-focus-box-shadow),
-), $btn-outline-secondary);
+$btn-outline-secondary: map-deep-merge(
+	(
+		bg: null,
+		border-color: $secondary-l2,
+		color: null,
+		hover-bg: rgba($gray-900, 0.03),
+		hover-border-color: transparent,
+		hover-color: map-get($btn-secondary, hover-color),
+		focus-bg: rgba($gray-900, 0.03),
+		focus-border-color: transparent,
+		focus-box-shadow: map-get($btn-secondary, focus-box-shadow),
+		focus-color: map-get($btn-secondary, focus-color),
+		disabled-bg: transparent,
+		disabled-border-color: $secondary,
+		disabled-color: $secondary,
+		active-bg: rgba($gray-900, 0.06),
+		active-border-color: transparent,
+		active-box-shadow: map-get($btn-secondary, active-box-shadow),
+		active-color: map-get($btn-secondary, active-color),
+		active-focus-box-shadow:
+			map-get($btn-secondary, active-focus-box-shadow),
+	),
+	$btn-outline-secondary
+);
 
 $btn-outline-info: () !default;
-$btn-outline-info: map-deep-merge((
-	hover-bg: map-get($btn-info, hover-bg),
-	focus-bg: map-get($btn-info, hover-bg),
-	focus-box-shadow: map-get($btn-info, focus-box-shadow),
-	focus-color: $white,
-	disabled-bg: transparent,
-	disabled-border-color: map-get($btn-info, bg),
-	disabled-color: map-get($btn-info, bg),
-	active-bg: map-get($btn-info, active-bg),
-	active-box-shadow: map-get($btn-info, active-box-shadow),
-	active-focus-box-shadow: map-get($btn-info, active-focus-box-shadow),
-), $btn-outline-info);
+$btn-outline-info: map-deep-merge(
+	(
+		hover-bg: map-get($btn-info, hover-bg),
+		focus-bg: map-get($btn-info, hover-bg),
+		focus-box-shadow: map-get($btn-info, focus-box-shadow),
+		focus-color: $white,
+		disabled-bg: transparent,
+		disabled-border-color: map-get($btn-info, bg),
+		disabled-color: map-get($btn-info, bg),
+		active-bg: map-get($btn-info, active-bg),
+		active-box-shadow: map-get($btn-info, active-box-shadow),
+		active-focus-box-shadow: map-get($btn-info, active-focus-box-shadow),
+	),
+	$btn-outline-info
+);
 
 $btn-outline-success: () !default;
-$btn-outline-success: map-deep-merge((
-	hover-bg: map-get($btn-success, hover-bg),
-	focus-bg: map-get($btn-success, hover-bg),
-	focus-box-shadow: map-get($btn-success, focus-box-shadow),
-	focus-color: $white,
-	disabled-bg: transparent,
-	disabled-border-color: map-get($btn-success, bg),
-	disabled-color: map-get($btn-success, bg),
-	active-bg: map-get($btn-success, active-bg),
-	active-box-shadow: map-get($btn-success, active-box-shadow),
-	active-focus-box-shadow: map-get($btn-success, active-focus-box-shadow),
-), $btn-outline-success);
+$btn-outline-success: map-deep-merge(
+	(
+		hover-bg: map-get($btn-success, hover-bg),
+		focus-bg: map-get($btn-success, hover-bg),
+		focus-box-shadow: map-get($btn-success, focus-box-shadow),
+		focus-color: $white,
+		disabled-bg: transparent,
+		disabled-border-color: map-get($btn-success, bg),
+		disabled-color: map-get($btn-success, bg),
+		active-bg: map-get($btn-success, active-bg),
+		active-box-shadow: map-get($btn-success, active-box-shadow),
+		active-focus-box-shadow: map-get($btn-success, active-focus-box-shadow),
+	),
+	$btn-outline-success
+);
 
 $btn-outline-warning: () !default;
-$btn-outline-warning: map-deep-merge((
-	hover-bg: map-get($btn-warning, hover-bg),
-	focus-bg: map-get($btn-warning, hover-bg),
-	focus-box-shadow: map-get($btn-warning, focus-box-shadow),
-	focus-color: $white,
-	disabled-bg: transparent,
-	disabled-border-color: map-get($btn-warning, bg),
-	disabled-color: map-get($btn-warning, bg),
-	active-bg: map-get($btn-warning, active-bg),
-	active-box-shadow: map-get($btn-warning, active-box-shadow),
-	active-focus-box-shadow: map-get($btn-warning, active-focus-box-shadow),
-), $btn-outline-warning);
+$btn-outline-warning: map-deep-merge(
+	(
+		hover-bg: map-get($btn-warning, hover-bg),
+		focus-bg: map-get($btn-warning, hover-bg),
+		focus-box-shadow: map-get($btn-warning, focus-box-shadow),
+		focus-color: $white,
+		disabled-bg: transparent,
+		disabled-border-color: map-get($btn-warning, bg),
+		disabled-color: map-get($btn-warning, bg),
+		active-bg: map-get($btn-warning, active-bg),
+		active-box-shadow: map-get($btn-warning, active-box-shadow),
+		active-focus-box-shadow: map-get($btn-warning, active-focus-box-shadow),
+	),
+	$btn-outline-warning
+);
 
 $btn-outline-danger: () !default;
-$btn-outline-danger: map-deep-merge((
-	hover-bg: map-get($btn-danger, hover-bg),
-	focus-bg: map-get($btn-danger, hover-bg),
-	focus-box-shadow: map-get($btn-danger, focus-box-shadow),
-	focus-color: $white,
-	disabled-bg: transparent,
-	disabled-border-color: map-get($btn-danger, bg),
-	disabled-color: map-get($btn-danger, bg),
-	active-bg: map-get($btn-danger, active-bg),
-	active-box-shadow: map-get($btn-danger, active-box-shadow),
-	active-focus-box-shadow: map-get($btn-danger, active-focus-box-shadow),
-), $btn-outline-danger);
+$btn-outline-danger: map-deep-merge(
+	(
+		hover-bg: map-get($btn-danger, hover-bg),
+		focus-bg: map-get($btn-danger, hover-bg),
+		focus-box-shadow: map-get($btn-danger, focus-box-shadow),
+		focus-color: $white,
+		disabled-bg: transparent,
+		disabled-border-color: map-get($btn-danger, bg),
+		disabled-color: map-get($btn-danger, bg),
+		active-bg: map-get($btn-danger, active-bg),
+		active-box-shadow: map-get($btn-danger, active-box-shadow),
+		active-focus-box-shadow: map-get($btn-danger, active-focus-box-shadow),
+	),
+	$btn-outline-danger
+);
 
 $btn-outline-light: () !default;
-$btn-outline-light: map-deep-merge((
-	hover-bg: map-get($btn-light, hover-bg),
-	focus-bg: map-get($btn-light, hover-bg),
-	focus-box-shadow: map-get($btn-light, focus-box-shadow),
-	focus-color: $gray-900,
-	disabled-bg: transparent,
-	disabled-border-color: map-get($btn-light, bg),
-	disabled-color: map-get($btn-light, bg),
-	active-bg: map-get($btn-light, active-bg),
-	active-box-shadow: map-get($btn-light, active-box-shadow),
-	active-focus-box-shadow: map-get($btn-light, active-focus-box-shadow),
-), $btn-outline-light);
+$btn-outline-light: map-deep-merge(
+	(
+		hover-bg: map-get($btn-light, hover-bg),
+		focus-bg: map-get($btn-light, hover-bg),
+		focus-box-shadow: map-get($btn-light, focus-box-shadow),
+		focus-color: $gray-900,
+		disabled-bg: transparent,
+		disabled-border-color: map-get($btn-light, bg),
+		disabled-color: map-get($btn-light, bg),
+		active-bg: map-get($btn-light, active-bg),
+		active-box-shadow: map-get($btn-light, active-box-shadow),
+		active-focus-box-shadow: map-get($btn-light, active-focus-box-shadow),
+	),
+	$btn-outline-light
+);
 
 $btn-outline-dark: () !default;
-$btn-outline-dark: map-deep-merge((
-	hover-bg: map-get($btn-dark, hover-bg),
-	focus-bg: map-get($btn-dark, hover-bg),
-	focus-box-shadow: map-get($btn-dark, focus-box-shadow),
-	focus-color: $white,
-	disabled-bg: transparent,
-	disabled-border-color: map-get($btn-dark, bg),
-	disabled-color: map-get($btn-dark, bg),
-	active-bg: map-get($btn-dark, active-bg),
-	active-box-shadow: map-get($btn-dark, active-box-shadow),
-	active-focus-box-shadow: map-get($btn-dark, active-focus-box-shadow),
-), $btn-outline-dark);
+$btn-outline-dark: map-deep-merge(
+	(
+		hover-bg: map-get($btn-dark, hover-bg),
+		focus-bg: map-get($btn-dark, hover-bg),
+		focus-box-shadow: map-get($btn-dark, focus-box-shadow),
+		focus-color: $white,
+		disabled-bg: transparent,
+		disabled-border-color: map-get($btn-dark, bg),
+		disabled-color: map-get($btn-dark, bg),
+		active-bg: map-get($btn-dark, active-bg),
+		active-box-shadow: map-get($btn-dark, active-box-shadow),
+		active-focus-box-shadow: map-get($btn-dark, active-focus-box-shadow),
+	),
+	$btn-outline-dark
+);

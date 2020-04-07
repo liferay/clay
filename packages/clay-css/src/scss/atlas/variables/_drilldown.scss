@@ -1,5 +1,8 @@
 $drilldown-item-header: () !default;
-$drilldown-item-header: map-deep-merge((
-	font-weight: $font-weight-semi-bold,
-	text-transform: uppercase,
-), $drilldown-item-header);
+$drilldown-item-header: map-deep-merge(
+	(
+		font-weight: $font-weight-semi-bold,
+		text-transform: uppercase,
+	),
+	$drilldown-item-header
+);

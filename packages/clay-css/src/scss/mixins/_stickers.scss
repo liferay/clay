@@ -16,7 +16,10 @@
 @mixin clay-sticker-size($map) {
 	$font-size: map-get($map, font-size);
 	$inline-item-font-size: map-get($map, inline-item-font-size);
-	$outside-offset: setter(map-get($map, outside-offset), -(map-get($map, size) / 2));
+	$outside-offset: setter(
+		map-get($map, outside-offset),
+		-(map-get($map, size) / 2)
+	);
 	$size: map-get($map, size);
 
 	font-size: $font-size;

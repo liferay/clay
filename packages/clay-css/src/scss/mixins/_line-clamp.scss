@@ -7,14 +7,18 @@
 /// @param {Number} $line-height[$line-height-base] - The element's `line-height`
 /// @param {Number} $font-size[1em] - The `font-size` of the element
 
-@mixin clay-line-clamp($lines: 3, $line-height: $line-height-base, $font-size: 1em) {
+@mixin clay-line-clamp(
+	$lines: 3,
+	$line-height: $line-height-base,
+	$font-size: 1em
+) {
 	display: block;
 	height: calc(#{$font-size} * #{$line-height} * #{$lines});
 	position: relative;
 	overflow: hidden;
 
 	@supports (-webkit-line-clamp: #{$lines}) {
-		-webkit-box-orient: vertical;  
+		-webkit-box-orient: vertical;
 		display: -webkit-box;
 		height: auto;
 		-webkit-line-clamp: $lines;

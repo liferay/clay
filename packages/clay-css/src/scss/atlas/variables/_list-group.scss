@@ -1,6 +1,6 @@
 $list-group-border-color: $gray-300 !default;
 $list-group-color: $gray-600 !default;
-$list-group-hover-bg: lighten($component-active-bg, 44.90) !default;
+$list-group-hover-bg: lighten($component-active-bg, 44.9) !default;
 $list-group-active-bg: $list-group-hover-bg !default;
 $list-group-active-border-color: $list-group-border-color !default;
 $list-group-active-color: $gray-900 !default;
@@ -15,79 +15,103 @@ $list-group-header-bg: $gray-100 !default;
 $list-group-header-padding-y: 0.5rem !default; // 8px
 
 $list-group-header-title: () !default;
-$list-group-header-title: map-deep-merge((
-	color: $gray-600,
-	font-size: 0.75rem,
-	text-transform: uppercase
-), $list-group-header-title);
+$list-group-header-title: map-deep-merge(
+	(
+		color: $gray-600,
+		font-size: 0.75rem,
+		text-transform: uppercase,
+	),
+	$list-group-header-title
+);
 
 // List Group Title
 
 $list-group-title-link: () !default;
-$list-group-title-link: map-deep-merge((
-	border-radius: 1px,
-	display: inline-block,
-	transition: box-shadow 0.15s ease-in-out,
-	hover-color: $gray-900,
-	focus-box-shadow: $component-focus-box-shadow,
-	focus-outline: 0,
-), $list-group-title-link);
+$list-group-title-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		display: inline-block,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $gray-900,
+		focus-box-shadow: $component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$list-group-title-link
+);
 
 $list-group-title: () !default;
-$list-group-title: map-deep-merge((
-	color: $gray-900,
-	font-size: 0.875rem,
-	line-height: 1.45
-), $list-group-title);
+$list-group-title: map-deep-merge(
+	(
+		color: $gray-900,
+		font-size: 0.875rem,
+		line-height: 1.45,
+	),
+	$list-group-title
+);
 
 // List Group Subtitle
 
 $list-group-subtitle-link: () !default;
-$list-group-subtitle-link: map-deep-merge((
-	border-radius: 1px,
-	display: inline-block,
-	max-width: 100%,
-	transition: box-shadow 0.15s ease-in-out,
-	hover-color: $gray-900,
-	focus-box-shadow: $component-focus-box-shadow,
-	focus-outline: 0,
-), $list-group-subtitle-link);
+$list-group-subtitle-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		display: inline-block,
+		max-width: 100%,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $gray-900,
+		focus-box-shadow: $component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$list-group-subtitle-link
+);
 
 // List Group Text
 
 $list-group-text-link: () !default;
-$list-group-text-link: map-deep-merge((
-	border-radius: 1px,
-	display: inline-block,
-	max-width: 100%,
-	transition: box-shadow 0.15s ease-in-out,
-	hover-color: $gray-900,
-	focus-box-shadow: $component-focus-box-shadow,
-	focus-outline: 0,
-), $list-group-text-link);
+$list-group-text-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		display: inline-block,
+		max-width: 100%,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $gray-900,
+		focus-box-shadow: $component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$list-group-text-link
+);
 
 $list-group-text: () !default;
-$list-group-text: map-deep-merge((
-	line-height: 1.45
-), $list-group-text);
+$list-group-text: map-deep-merge(
+	(
+		line-height: 1.45,
+	),
+	$list-group-text
+);
 
 // List Group Subtext
 
 $list-group-subtext-link: () !default;
-$list-group-subtext-link: map-deep-merge((
-	border-radius: 1px,
-	display: inline-block,
-	max-width: 100%,
-	transition: box-shadow 0.15s ease-in-out,
-	hover-color: $gray-900,
-	focus-box-shadow: $component-focus-box-shadow,
-	focus-outline: 0,
-), $list-group-subtext-link);
+$list-group-subtext-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		display: inline-block,
+		max-width: 100%,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $gray-900,
+		focus-box-shadow: $component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$list-group-subtext-link
+);
 
 $list-group-subtext: () !default;
-$list-group-subtext: map-deep-merge((
-	line-height: 1.45
-), $list-group-subtext);
+$list-group-subtext: map-deep-merge(
+	(
+		line-height: 1.45,
+	),
+	$list-group-subtext
+);
 
 $list-group-subtext-active-color: $gray-600 !default;
 
@@ -100,7 +124,10 @@ $list-group-link-active-color: $list-group-link-color !default;
 // List Group Notification
 
 $list-group-notification-item-primary: () !default;
-$list-group-notification-item-primary: map-deep-merge((
-	border-left-color: lighten($component-active-bg, 22.94),
-	active-border-left-color: lighten($component-active-bg, 22.94)
-), $list-group-notification-item-primary);
+$list-group-notification-item-primary: map-deep-merge(
+	(
+		border-left-color: lighten($component-active-bg, 22.94),
+		active-border-left-color: lighten($component-active-bg, 22.94),
+	),
+	$list-group-notification-item-primary
+);

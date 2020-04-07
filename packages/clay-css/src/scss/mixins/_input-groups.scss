@@ -28,22 +28,28 @@
 	$breakpoint-down: clay-breakpoint-prev($breakpoint);
 
 	$item: setter(map-get($map, item), ());
-	$item: map-merge((
-		margin-bottom: map-get($map, item-margin-bottom),
-		margin-left: map-get($map, item-margin-left),
-		margin-right: map-get($map, item-margin-right),
-		margin-top: map-get($map, item-margin-top),
-		width: setter(map-get($map, width), 100%),
-	), $item);
+	$item: map-merge(
+		(
+			margin-bottom: map-get($map, item-margin-bottom),
+			margin-left: map-get($map, item-margin-left),
+			margin-right: map-get($map, item-margin-right),
+			margin-top: map-get($map, item-margin-top),
+			width: setter(map-get($map, width), 100%),
+		),
+		$item
+	);
 
 	$item-shrink: setter(map-get($map, item-shrink), ());
-	$item-shrink: map-merge((
-		margin-bottom: map-get($map, shrink-margin-bottom),
-		margin-left: map-get($map, shrink-margin-left),
-		margin-right: map-get($map, shrink-margin-right),
-		margin-top: map-get($map, shrink-margin-top),
-		width: setter(map-get($map, width), auto),
-	), $item-shrink);
+	$item-shrink: map-merge(
+		(
+			margin-bottom: map-get($map, shrink-margin-bottom),
+			margin-left: map-get($map, shrink-margin-left),
+			margin-right: map-get($map, shrink-margin-right),
+			margin-top: map-get($map, shrink-margin-top),
+			width: setter(map-get($map, width), auto),
+		),
+		$item-shrink
+	);
 
 	@if ($enabled) {
 		@include media-breakpoint-down($breakpoint-down) {
@@ -69,9 +75,12 @@
 /// bg: {Color | String | Null}, // deprecated after 3.9.0
 
 @mixin clay-input-group-text-variant($map) {
-	$base: map-merge((
-		background-color: map-get($map, bg),
-	), $map);
+	$base: map-merge(
+		(
+			background-color: map-get($map, bg),
+		),
+		$map
+	);
 
 	@include clay-css($base);
 }

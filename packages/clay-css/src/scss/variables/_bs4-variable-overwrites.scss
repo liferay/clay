@@ -3,32 +3,50 @@
 
 // More semantic variable name: maps Clay CSS `$component-focus-box-shadow` to Bootstrap's `$input-btn-focus-box-shadow` for global focus styles
 
-$white: #FFF !default;
-$blue: #007BFF !default;
+$white: #fff !default;
+$blue: #007bff !default;
 $primary: $blue !default;
 $component-active-color: $white !default;
 $component-active-bg: $primary !default;
-$input-btn-focus-width: .2rem !default;
-$input-btn-focus-color: rgba($component-active-bg, .25) !default;
+$input-btn-focus-width: 0.2rem !default;
+$input-btn-focus-color: rgba($component-active-bg, 0.25) !default;
 $component-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
-$component-focus-inset-box-shadow: inset 0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
+$component-focus-inset-box-shadow: inset 0 0 0 $input-btn-focus-width
+	$input-btn-focus-color !default;
 $input-btn-focus-box-shadow: $component-focus-box-shadow !default;
 
 $enable-caret: false !default;
 
 $spacer: 1rem !default;
 $spacers: () !default;
-$spacers: map-deep-merge((
-	0: 0,
-	1: ($spacer * .25),
-	2: ($spacer * .5),
-	3: $spacer,
-	4: ($spacer * 1.5),
-	5: ($spacer * 3),
-	6: ($spacer * 4.5),
-	7: ($spacer * 6),
-	8: ($spacer * 7.5),
-), $spacers);
+$spacers: map-deep-merge(
+	(
+		0: 0,
+		1: (
+			$spacer * 0.25,
+		),
+		2: (
+			$spacer * 0.5,
+		),
+		3: $spacer,
+		4: (
+			$spacer * 1.5,
+		),
+		5: (
+			$spacer * 3,
+		),
+		6: (
+			$spacer * 4.5,
+		),
+		7: (
+			$spacer * 6,
+		),
+		8: (
+			$spacer * 7.5,
+		),
+	),
+	$spacers
+);
 
 $input-border-width: 0.0625rem !default; // 1px
 $input-height: 2.375rem !default; // 38px
@@ -39,7 +57,7 @@ $form-check-input-gutter: 0 !default;
 $form-check-input-margin-y: 0 !default;
 $form-check-inline-input-margin-x: auto !default;
 
-$table-accent-bg: #F2F2F2 !default;
-$table-hover-bg: #ECECEC !default;
+$table-accent-bg: #f2f2f2 !default;
+$table-hover-bg: #ececec !default;
 
-$table-head-bg: #FFF !default;
+$table-head-bg: #fff !default;

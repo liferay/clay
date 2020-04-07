@@ -230,7 +230,9 @@
 		margin: #{math-sign($btn-padding-y)} #{math-sign($btn-padding-x)};
 
 		@include clay-scale-component {
-			margin: #{math-sign($btn-padding-y-mobile)} #{math-sign($btn-padding-x-mobile)};
+			margin: #{math-sign($btn-padding-y-mobile)} #{math-sign(
+					$btn-padding-x-mobile
+				)};
 		}
 	}
 
@@ -252,10 +254,13 @@
 
 	.btn-sm {
 		.c-inner {
-			margin: #{math-sign($btn-padding-y-sm)} #{math-sign($btn-padding-x-sm)};
+			margin: #{math-sign($btn-padding-y-sm)}
+				#{math-sign($btn-padding-x-sm)};
 
 			@include clay-scale-component {
-				margin: #{math-sign($btn-padding-y-sm-mobile)} #{math-sign($btn-padding-x-sm-mobile)};
+				margin: #{math-sign($btn-padding-y-sm-mobile)} #{math-sign(
+						$btn-padding-x-sm-mobile
+					)};
 			}
 		}
 
@@ -267,10 +272,13 @@
 
 	.btn-lg {
 		.c-inner {
-			margin: #{math-sign($btn-padding-y-lg)} #{math-sign($btn-padding-x-lg)};
+			margin: #{math-sign($btn-padding-y-lg)}
+				#{math-sign($btn-padding-x-lg)};
 
 			@include clay-scale-component {
-				margin: #{math-sign($btn-padding-y-lg-mobile)} #{math-sign($btn-padding-x-lg-mobile)};
+				margin: #{math-sign($btn-padding-y-lg-mobile)} #{math-sign(
+						$btn-padding-x-lg-mobile
+					)};
 			}
 		}
 

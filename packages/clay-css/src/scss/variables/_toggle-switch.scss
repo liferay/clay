@@ -1,6 +1,8 @@
 $toggle-switch-cursor: $link-cursor !default;
 $toggle-switch-font-weight: $input-label-font-weight !default;
-$toggle-switch-transition: background-color 100ms ease-in, border-color 100ms ease-in, box-shadow 150ms ease-in-out, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in !default;
+$toggle-switch-transition: background-color 100ms ease-in,
+	border-color 100ms ease-in, box-shadow 150ms ease-in-out,
+	color 100ms ease-in, left 100ms ease-in, right 100ms ease-in !default;
 
 // must all be same units--start
 $toggle-switch-bar-padding: 0 !default; // space between button and bar, can be negative value
@@ -8,7 +10,8 @@ $toggle-switch-bar-padding-mobile: $toggle-switch-bar-padding !default;
 $toggle-switch-button-width: 25px !default;
 $toggle-switch-button-width-mobile: $toggle-switch-button-width !default;
 
-$toggle-switch-bar-height: ($toggle-switch-bar-padding * 2) + $toggle-switch-button-width !default;
+$toggle-switch-bar-height: ($toggle-switch-bar-padding * 2) +
+	$toggle-switch-button-width !default;
 $toggle-switch-bar-height-mobile: $toggle-switch-bar-height !default;
 $toggle-switch-bar-width: 50px !default; // width of switch bar
 $toggle-switch-bar-width-mobile: $toggle-switch-bar-width !default;

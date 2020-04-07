@@ -19,14 +19,14 @@ $grid-breakpoints: (
 	sm: 576px,
 	md: 768px,
 	lg: 992px,
-	xl: 1280px
+	xl: 1280px,
 ) !default;
 
 $container-max-widths: (
 	sm: 540px,
 	md: 720px,
 	lg: 960px,
-	xl: 1248px
+	xl: 1248px,
 ) !default;
 
 $grid-gutter-width: 24px !default;
@@ -46,7 +46,9 @@ $font-weight-bolder: 900 !default;
 
 $line-height-base: 1.5 !default;
 
-$font-family-sans-serif: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-sans-serif: system-ui, -apple-system, BlinkMacSystemFont,
+	'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Arial,
+	sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
 
 $headings-font-weight: $font-weight-bold !default;
 
@@ -59,90 +61,102 @@ $h6-font-size: 0.8125rem !default; // 13px
 
 // Theme Base Colors
 
-$white: #FFF !default;
-$gray-100: #F7F8F9 !default;
-$gray-200: #F1F2F5 !default;
-$gray-300: #E7E7ED !default;
-$gray-400: #CDCED9 !default;
-$gray-500: #A7A9BC !default;
-$gray-600: #6B6C7E !default;
+$white: #fff !default;
+$gray-100: #f7f8f9 !default;
+$gray-200: #f1f2f5 !default;
+$gray-300: #e7e7ed !default;
+$gray-400: #cdced9 !default;
+$gray-500: #a7a9bc !default;
+$gray-600: #6b6c7e !default;
 $gray-700: #495057 !default;
-$gray-800: #393A4A !default;
+$gray-800: #393a4a !default;
 $gray-900: #272833 !default;
 $black: #000 !default;
 
-$blue: if($enable-lexicon-flat-colors, #4B9FFF, #0B5FFF) !default;
-$indigo: if($enable-lexicon-flat-colors, #7785FF, #6610F2) !default;
-$purple: if($enable-lexicon-flat-colors, #AF78FF, #6F42C1) !default;
-$pink: if($enable-lexicon-flat-colors, #FF73C3, #E83E8C) !default;
-$red: if($enable-lexicon-flat-colors, #FF5F5F, #DA1414) !default;
-$orange: if($enable-lexicon-flat-colors, #FFB46E, #B95000) !default;
-$yellow: if($enable-lexicon-flat-colors, #FFD76E, #FFC107) !default;
-$green: if($enable-lexicon-flat-colors, #9BE169, #287D3D) !default;
-$teal: if($enable-lexicon-flat-colors, #50D2A0, #20C997) !default;
-$cyan: if($enable-lexicon-flat-colors, #5FC8FF, #17A2B8) !default;
+$blue: if($enable-lexicon-flat-colors, #4b9fff, #0b5fff) !default;
+$indigo: if($enable-lexicon-flat-colors, #7785ff, #6610f2) !default;
+$purple: if($enable-lexicon-flat-colors, #af78ff, #6f42c1) !default;
+$pink: if($enable-lexicon-flat-colors, #ff73c3, #e83e8c) !default;
+$red: if($enable-lexicon-flat-colors, #ff5f5f, #da1414) !default;
+$orange: if($enable-lexicon-flat-colors, #ffb46e, #b95000) !default;
+$yellow: if($enable-lexicon-flat-colors, #ffd76e, #ffc107) !default;
+$green: if($enable-lexicon-flat-colors, #9be169, #287d3d) !default;
+$teal: if($enable-lexicon-flat-colors, #50d2a0, #20c997) !default;
+$cyan: if($enable-lexicon-flat-colors, #5fc8ff, #17a2b8) !default;
 
-$primary: #0B5FFF !default;
-$primary-d1: darken($primary, 5.10) !default;
+$primary: #0b5fff !default;
+$primary-d1: darken($primary, 5.1) !default;
 $primary-d2: darken($primary, 10) !default;
 $primary-l1: lighten($primary, 22.94) !default;
 $primary-l2: lighten($primary, 32.94) !default;
-$primary-l3: lighten($primary, 44.90) !default;
+$primary-l3: lighten($primary, 44.9) !default;
 
-$secondary: #6B6C7E !default;
+$secondary: #6b6c7e !default;
 $secondary-d1: darken(saturate($secondary, 4.82), 20) !default;
 $secondary-d2: darken(saturate($secondary, 5.36), 23.92) !default;
-$secondary-l1: lighten(saturate(adjust-hue($secondary, -3), 5.39), 23.92) !default;
-$secondary-l2: lighten(saturate(adjust-hue($secondary, -2), 5.48), 37.06) !default;
-$secondary-l3: lighten(saturate(adjust-hue($secondary, 3), 6.13), 46.08) !default;
+$secondary-l1: lighten(
+	saturate(adjust-hue($secondary, -3), 5.39),
+	23.92
+) !default;
+$secondary-l2: lighten(
+	saturate(adjust-hue($secondary, -2), 5.48),
+	37.06
+) !default;
+$secondary-l3: lighten(
+	saturate(adjust-hue($secondary, 3), 6.13),
+	46.08
+) !default;
 
-$info: #2E5AAC !default;
+$info: #2e5aac !default;
 $info-d1: darken($info, 5) !default;
 $info-d2: darken($info, 10) !default;
 $info-l1: lighten(saturate($info, 0.59), 28.04) !default;
 $info-l2: lighten(desaturate($info, 3.25), 52.94) !default;
 
-$success: #287D3C !default;
+$success: #287d3c !default;
 $success-d1: darken($success, 5) !default;
 $success-d2: darken($success, 10) !default;
 $success-l1: lighten(desaturate($success, 0.14), 24.95) !default;
 $success-l2: lighten(desaturate($success, 1.52), 62.94) !default;
 
-$warning: #B95000 !default;
-$warning-d1: darken($warning, 5.10) !default;
+$warning: #b95000 !default;
+$warning-d1: darken($warning, 5.1) !default;
 $warning-d2: darken($warning, 10) !default;
-$warning-l1: lighten($warning, 24.90) !default;
+$warning-l1: lighten($warning, 24.9) !default;
 $warning-l2: lighten($warning, 60) !default;
 
-$danger: #DA1414 !default;
+$danger: #da1414 !default;
 $danger-d1: darken($danger, 5) !default;
 $danger-d2: darken($danger, 10) !default;
 $danger-l1: lighten(desaturate($danger, 0.25), 28.04) !default;
 $danger-l2: lighten(saturate($danger, 5.04), 50) !default;
 
-$light: #F1F2F5 !default;
-$light-d1: darken($light, 5.10) !default;
+$light: #f1f2f5 !default;
+$light-d1: darken($light, 5.1) !default;
 $light-d2: darken($light, 10) !default;
 $light-l1: lighten(desaturate(adjust-hue($light, -15), 2.38), 1.96) !default;
 $light-l2: lighten(desaturate(adjust-hue($light, -225), 16.67), 4.71) !default;
 
 $dark: #272833 !default;
-$dark-d1: darken($dark, 5.10) !default;
+$dark-d1: darken($dark, 5.1) !default;
 $dark-d2: darken($dark, 10) !default;
 $dark-l1: lighten(saturate($dark, 0.18), 4.12) !default;
 $dark-l2: lighten(desaturate($dark, 0.36), 8.04) !default;
 
 $theme-colors: () !default;
-$theme-colors: map-deep-merge((
-	primary: $primary,
-	secondary: $secondary,
-	success: $success,
-	info: $info,
-	warning: $warning,
-	danger: $danger,
-	light: $light,
-	dark: $dark
-), $theme-colors);
+$theme-colors: map-deep-merge(
+	(
+		primary: $primary,
+		secondary: $secondary,
+		success: $success,
+		info: $info,
+		warning: $warning,
+		danger: $danger,
+		light: $light,
+		dark: $dark,
+	),
+	$theme-colors
+);
 
 $yiq-text-dark: $gray-900 !default;
 $yiq-text-light: $white !default;
@@ -154,27 +168,47 @@ $text-muted: $gray-500 !default;
 $link-color: $primary !default;
 $link-hover-color: $primary-d2 !default;
 
-$component-active-bg: #0B5FFF !default;
-$component-active-color: #FFF !default;
+$component-active-bg: #0b5fff !default;
+$component-active-color: #fff !default;
 
 $component-focus-box-shadow: 0 0 0 0.125rem $white#{','} 0 0 0 0.25rem $primary-l1 !default;
-$component-focus-inset-box-shadow: inset 0 0 0 0.125rem $primary-l1#{','} inset 0 0 0 0.25rem $white !default;
+$component-focus-inset-box-shadow: inset 0 0 0 0.125rem $primary-l1#{','} inset 0
+	0 0 0.25rem $white !default;
 
 // Spacing
 
 $spacer: 1rem !default;
 $spacers: () !default;
-$spacers: map-deep-merge((
-	0: 0,
-	1: ($spacer * .25),
-	2: ($spacer * .5),
-	3: ($spacer * 1),
-	4: ($spacer * 1.5),
-	5: ($spacer * 3),
-	6: ($spacer * 4.5),
-	7: ($spacer * 6),
-	8: ($spacer * 7.5),
-), $spacers);
+$spacers: map-deep-merge(
+	(
+		0: 0,
+		1: (
+			$spacer * 0.25,
+		),
+		2: (
+			$spacer * 0.5,
+		),
+		3: (
+			$spacer * 1,
+		),
+		4: (
+			$spacer * 1.5,
+		),
+		5: (
+			$spacer * 3,
+		),
+		6: (
+			$spacer * 4.5,
+		),
+		7: (
+			$spacer * 6,
+		),
+		8: (
+			$spacer * 7.5,
+		),
+	),
+	$spacers
+);
 
 $border-radius: 0.25rem !default; // 4px
 $border-radius-lg: 0.375rem !default; // 6px

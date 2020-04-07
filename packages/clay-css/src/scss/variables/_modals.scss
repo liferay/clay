@@ -18,50 +18,68 @@ $modal-item-padding-x: null !default;
 $modal-item-padding-y: null !default;
 
 $modal-item-group: () !default;
-$modal-item-group: map-deep-merge((
-	align-items: center,
-	display: flex,
-	flex-wrap: wrap,
-	min-width: 3rem,
-	padding-left: 0.5rem,
-	padding-right: 0.5rem,
-	width: 100%,
-), $modal-item-group);
+$modal-item-group: map-deep-merge(
+	(
+		align-items: center,
+		display: flex,
+		flex-wrap: wrap,
+		min-width: 3rem,
+		padding-left: 0.5rem,
+		padding-right: 0.5rem,
+		width: 100%,
+	),
+	$modal-item-group
+);
 
 $modal-item-group-first-child: () !default;
-$modal-item-group-first-child: map-deep-merge((
-	padding-left: 0,
-), $modal-item-group-first-child);
+$modal-item-group-first-child: map-deep-merge(
+	(
+		padding-left: 0,
+	),
+	$modal-item-group-first-child
+);
 
 $modal-item-group-last-child: () !default;
-$modal-item-group-last-child: map-deep-merge((
-	padding-right: 0,
-), $modal-item-group-last-child);
+$modal-item-group-last-child: map-deep-merge(
+	(
+		padding-right: 0,
+	),
+	$modal-item-group-last-child
+);
 
 $modal-item-group-only-child: () !default;
-$modal-item-group-only-child: map-deep-merge((
-	padding-left: 0,
-	padding-right: 0,
-), $modal-item-group-only-child);
+$modal-item-group-only-child: map-deep-merge(
+	(
+		padding-left: 0,
+		padding-right: 0,
+	),
+	$modal-item-group-only-child
+);
 
 $modal-item: () !default;
-$modal-item: map-deep-merge((
-	display: flex,
-	flex-direction: column,
-	flex-grow: 1,
-	flex-shrink: 1,
-	max-width: 100%,
-	min-height: 0,
-	min-width: 3.125rem,
-	padding: 0,
-	position: relative,
-	word-wrap: break-word,
-), $modal-item);
+$modal-item: map-deep-merge(
+	(
+		display: flex,
+		flex-direction: column,
+		flex-grow: 1,
+		flex-shrink: 1,
+		max-width: 100%,
+		min-height: 0,
+		min-width: 3.125rem,
+		padding: 0,
+		position: relative,
+		word-wrap: break-word,
+	),
+	$modal-item
+);
 
 $modal-item-shrink: () !default;
-$modal-item-shrink: map-deep-merge((
-	flex-grow: 0,
-), $modal-item-shrink);
+$modal-item-shrink: map-deep-merge(
+	(
+		flex-grow: 0,
+	),
+	$modal-item-shrink
+);
 
 // Modal Title
 
@@ -76,16 +94,22 @@ $modal-title-indicator-spacer-x: 0.5rem !default; // 8px
 // Modal Subtitle
 
 $modal-subtitle: () !default;
-$modal-subtitle: map-deep-merge((
-	display: inline-block,
-), $modal-subtitle);
+$modal-subtitle: map-deep-merge(
+	(
+		display: inline-block,
+	),
+	$modal-subtitle
+);
 
 $modal-subtitle-divider: () !default;
-$modal-subtitle-divider: map-deep-merge((
-	display: inline-block,
-	margin-left: 0.25rem,
-	margin-right: 0.25rem,
-), $modal-subtitle-divider);
+$modal-subtitle-divider: map-deep-merge(
+	(
+		display: inline-block,
+		margin-left: 0.25rem,
+		margin-right: 0.25rem,
+	),
+	$modal-subtitle-divider
+);
 
 $modal-subtitle-strong: () !default;
 
@@ -106,86 +130,107 @@ $modal-height-lg: 650px !default;
 $modal-height-xl: 800px !default;
 
 $modal-height-full-modal-content: () !default;
-$modal-height-full-modal-content: map-merge((
-	position: absolute,
-	bottom: $modal-dialog-margin,
-	left: $modal-dialog-margin,
-	right: $modal-dialog-margin,
-	top: $modal-dialog-margin,
-), $modal-height-full-modal-content);
+$modal-height-full-modal-content: map-merge(
+	(
+		position: absolute,
+		bottom: $modal-dialog-margin,
+		left: $modal-dialog-margin,
+		right: $modal-dialog-margin,
+		top: $modal-dialog-margin,
+	),
+	$modal-height-full-modal-content
+);
 
 $modal-height-full-modal-content-sm-up: () !default;
-$modal-height-full-modal-content-sm-up: map-merge((
-	bottom: $modal-dialog-margin-y-sm-up,
-	left: auto,
-	right: auto,
-	top: $modal-dialog-margin-y-sm-up,
-), $modal-height-full-modal-content-sm-up);
+$modal-height-full-modal-content-sm-up: map-merge(
+	(
+		bottom: $modal-dialog-margin-y-sm-up,
+		left: auto,
+		right: auto,
+		top: $modal-dialog-margin-y-sm-up,
+	),
+	$modal-height-full-modal-content-sm-up
+);
 
 // Modal Success
 
 $modal-success: () !default;
-$modal-success: map-deep-merge((
-	header-bg: theme-color-level(success, -10),
-	header-border-color: theme-color-level(success, -9),
-	header-color: theme-color-level(success, 6),
-	header-close: (
-		color: theme-color-level(success, 6),
-		hover-color: inherit,
-		focus-color: inherit,
-		disabled-color: inherit
-	)
-), $modal-success);
+$modal-success: map-deep-merge(
+	(
+		header-bg: theme-color-level(success, -10),
+		header-border-color: theme-color-level(success, -9),
+		header-color: theme-color-level(success, 6),
+		header-close: (
+			color: theme-color-level(success, 6),
+			hover-color: inherit,
+			focus-color: inherit,
+			disabled-color: inherit,
+		),
+	),
+	$modal-success
+);
 
 // Modal Info
 
 $modal-info: () !default;
-$modal-info: map-deep-merge((
-	header-bg: theme-color-level(info, -10),
-	header-border-color: theme-color-level(info, -9),
-	header-color: theme-color-level(info, 6),
-	header-close: (
-		color: theme-color-level(info, 6),
-		hover-color: inherit,
-		focus-color: inherit,
-		disabled-color: inherit
-	)
-), $modal-info);
+$modal-info: map-deep-merge(
+	(
+		header-bg: theme-color-level(info, -10),
+		header-border-color: theme-color-level(info, -9),
+		header-color: theme-color-level(info, 6),
+		header-close: (
+			color: theme-color-level(info, 6),
+			hover-color: inherit,
+			focus-color: inherit,
+			disabled-color: inherit,
+		),
+	),
+	$modal-info
+);
 
 // Modal Warning
 
 $modal-warning: () !default;
-$modal-warning: map-deep-merge((
-	header-bg: theme-color-level(warning, -10),
-	header-border-color: theme-color-level(warning, -9),
-	header-color: theme-color-level(warning, 6),
-	header-close: (
-		color: theme-color-level(warning, 6),
-		hover-color: inherit,
-		focus-color: inherit,
-		disabled-color: inherit
-	)
-), $modal-warning);
+$modal-warning: map-deep-merge(
+	(
+		header-bg: theme-color-level(warning, -10),
+		header-border-color: theme-color-level(warning, -9),
+		header-color: theme-color-level(warning, 6),
+		header-close: (
+			color: theme-color-level(warning, 6),
+			hover-color: inherit,
+			focus-color: inherit,
+			disabled-color: inherit,
+		),
+	),
+	$modal-warning
+);
 
 // Modal Danger
 
 $modal-danger: () !default;
-$modal-danger: map-deep-merge((
-	header-bg: theme-color-level(danger, -10),
-	header-border-color: theme-color-level(danger, -9),
-	header-color: theme-color-level(danger, 6),
-	header-close: (
-		color: theme-color-level(danger, 6),
-		hover-color: inherit,
-		focus-color: inherit,
-		disabled-color: inherit
-	)
-), $modal-danger);
+$modal-danger: map-deep-merge(
+	(
+		header-bg: theme-color-level(danger, -10),
+		header-border-color: theme-color-level(danger, -9),
+		header-color: theme-color-level(danger, 6),
+		header-close: (
+			color: theme-color-level(danger, 6),
+			hover-color: inherit,
+			focus-color: inherit,
+			disabled-color: inherit,
+		),
+	),
+	$modal-danger
+);
 
 $modal-palette: () !default;
-$modal-palette: map-deep-merge((
-	success: $modal-success,
-	info: $modal-info,
-	warning: $modal-warning,
-	danger: $modal-danger
-), $modal-palette);
+$modal-palette: map-deep-merge(
+	(
+		success: $modal-success,
+		info: $modal-info,
+		warning: $modal-warning,
+		danger: $modal-danger,
+	),
+	$modal-palette
+);
