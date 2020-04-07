@@ -5,8 +5,10 @@ $breadcrumb-text-transform: null !default;
 $breadcrumb-active-font-weight: null !default;
 
 $breadcrumb-text-truncate-icon-spacer-x: 0.875rem !default; // 14px
-$breadcrumb-text-truncate-max-width: 18.75rem - $breadcrumb-text-truncate-icon-spacer-x !default; // 300px
-$breadcrumb-text-truncate-max-width-mobile: 9.375rem - $breadcrumb-text-truncate-icon-spacer-x !default; // 150px
+$breadcrumb-text-truncate-max-width: 18.75rem -
+	$breadcrumb-text-truncate-icon-spacer-x !default; // 300px
+$breadcrumb-text-truncate-max-width-mobile: 9.375rem -
+	$breadcrumb-text-truncate-icon-spacer-x !default; // 150px
 
 $breadcrumb-link-color: $link-color !default;
 $breadcrumb-link-text-decoration: $link-decoration !default;
@@ -15,21 +17,27 @@ $breadcrumb-link-hover-color: $link-hover-color !default;
 $breadcrumb-link-hover-text-decoration: $link-hover-decoration !default;
 
 $breadcrumb-link: () !default;
-$breadcrumb-link: map-deep-merge((
-	color: $breadcrumb-link-color,
-	display: block,
-	text-decoration: $breadcrumb-link-text-decoration,
-	text-transform: $breadcrumb-text-transform,
-	hover-color: $breadcrumb-link-hover-color,
-	hover-text-decoration: $breadcrumb-link-hover-text-decoration,
-	focus-color: $breadcrumb-link-hover-color,
-	focus-text-decoration: $breadcrumb-link-hover-text-decoration,
-), $breadcrumb-link);
+$breadcrumb-link: map-deep-merge(
+	(
+		color: $breadcrumb-link-color,
+		display: block,
+		text-decoration: $breadcrumb-link-text-decoration,
+		text-transform: $breadcrumb-text-transform,
+		hover-color: $breadcrumb-link-hover-color,
+		hover-text-decoration: $breadcrumb-link-hover-text-decoration,
+		focus-color: $breadcrumb-link-hover-color,
+		focus-text-decoration: $breadcrumb-link-hover-text-decoration,
+	),
+	$breadcrumb-link
+);
 
 $breadcrumb-divider-color: $breadcrumb-active-color !default;
 $breadcrumb-divider-font-family: null !default;
 $breadcrumb-divider-font-weight: null !default;
 
-$breadcrumb-divider-svg-icon: clay-icon(angle-right, $breadcrumb-divider-color) !default;
+$breadcrumb-divider-svg-icon: clay-icon(
+	angle-right,
+	$breadcrumb-divider-color
+) !default;
 $breadcrumb-divider-svg-icon-height: 0.75em !default;
 $breadcrumb-divider-svg-icon-width: $breadcrumb-divider-svg-icon-height !default;

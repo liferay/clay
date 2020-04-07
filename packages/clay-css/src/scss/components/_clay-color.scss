@@ -26,7 +26,9 @@
 	}
 
 	.component-action {
-		@include clay-button-variant($clay-color-dropdown-menu-component-action);
+		@include clay-button-variant(
+			$clay-color-dropdown-menu-component-action
+		);
 	}
 
 	.form-control {
@@ -38,7 +40,9 @@
 	}
 
 	.input-group-inset-item-before {
-		@include clay-container($clay-color-dropdown-menu-input-group-inset-item-before);
+		@include clay-container(
+			$clay-color-dropdown-menu-input-group-inset-item-before
+		);
 	}
 }
 
@@ -99,7 +103,8 @@
 }
 
 .clay-color-map-hsb {
-	background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0)), linear-gradient(to right, #FFF, rgba(255, 255, 255, 0));
+	background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0)),
+		linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
 
 	@include clay-container($clay-color-map-hsb);
 }
@@ -118,7 +123,9 @@
 	}
 
 	.input-group-inset-item-before {
-		@include clay-container($clay-color-map-values-input-group-inset-item-before);
+		@include clay-container(
+			$clay-color-map-values-input-group-inset-item-before
+		);
 	}
 
 	.form-group {
@@ -133,7 +140,16 @@
 }
 
 .clay-color-range-hue {
-	background-image: linear-gradient(270deg, #FC0D1B 0%, #FC22D6 18.23%, #1824FB 34.25%, #2BF6FD 50.28%, #2BFD2E 67.58%, #FCFD37 81.22%, #FC121B 100%);
+	background-image: linear-gradient(
+		270deg,
+		#fc0d1b 0%,
+		#fc22d6 18.23%,
+		#1824fb 34.25%,
+		#2bf6fd 50.28%,
+		#2bfd2e 67.58%,
+		#fcfd37 81.22%,
+		#fc121b 100%
+	);
 }
 
 .clay-color-range-pointer {

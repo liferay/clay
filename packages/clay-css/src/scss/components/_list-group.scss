@@ -217,9 +217,10 @@
 }
 
 .list-group-item-action {
-	@if ($enable-c-inner){
+	@if ($enable-c-inner) {
 		.c-inner {
-			margin: #{math-sign($list-group-item-padding-y)} #{math-sign($list-group-item-padding-x)};
+			margin: #{math-sign($list-group-item-padding-y)}
+				#{math-sign($list-group-item-padding-x)};
 			width: auto;
 		}
 	}
@@ -353,7 +354,9 @@
 	.list-group-item {
 		border-width: 0;
 
-		@include clay-list-group-notification-item-variant($list-group-notification-item);
+		@include clay-list-group-notification-item-variant(
+			$list-group-notification-item
+		);
 	}
 
 	.list-group-item-flex {
@@ -363,16 +366,21 @@
 	}
 
 	.list-group-item-primary {
-		@include clay-list-group-notification-item-variant($list-group-notification-item-primary);
+		@include clay-list-group-notification-item-variant(
+			$list-group-notification-item-primary
+		);
 	}
 
 	.quick-action-menu {
-		margin-bottom: -$list-group-item-padding-y + $list-group-notification-item-border-bottom-width;
-		margin-top: -$list-group-item-padding-y + $list-group-notification-item-border-top-width;
+		margin-bottom: -$list-group-item-padding-y +
+			$list-group-notification-item-border-bottom-width;
+		margin-top: -$list-group-item-padding-y +
+			$list-group-notification-item-border-top-width;
 	}
 
 	.autofit-col .quick-action-item {
-		margin-top: $list-group-notification-item-border-top-width - $list-group-item-flex-offset-top;
+		margin-top: $list-group-notification-item-border-top-width -
+			$list-group-item-flex-offset-top;
 	}
 }
 

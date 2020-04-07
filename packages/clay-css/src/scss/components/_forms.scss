@@ -1,4 +1,4 @@
-[type="checkbox"] {
+[type='checkbox'] {
 	cursor: $form-check-input-cursor;
 	height: 14px;
 	width: 14px;
@@ -8,7 +8,7 @@
 	}
 }
 
-[type="radio"] {
+[type='radio'] {
 	cursor: $form-check-input-cursor;
 	height: 15px;
 	width: 14px;
@@ -21,7 +21,9 @@
 fieldset {
 	word-wrap: break-word;
 
-	@-moz-document url-prefix() { // FF Fieldset workaround
+	// FF Fieldset workaround
+
+	@-moz-document url-prefix() {
 		display: table-cell;
 	}
 }
@@ -86,19 +88,19 @@ label {
 	border-right-width: $input-border-right-width;
 	border-top-width: $input-border-top-width;
 
-	@if not ($input-font-size == $font-size-base) {
+	@if not($input-font-size == $font-size-base) {
 		font-size: $input-font-size;
 	}
 
 	height: $input-height;
 	min-width: 0;
 
-	@if not ($input-padding-y == $btn-padding-y) {
+	@if not($input-padding-y == $btn-padding-y) {
 		padding-bottom: $input-padding-y;
 		padding-top: $input-padding-y;
 	}
 
-	@if not ($input-padding-x == $btn-padding-x) {
+	@if not($input-padding-x == $btn-padding-x) {
 		padding-left: $input-padding-x;
 		padding-right: $input-padding-x;
 	}
@@ -126,7 +128,7 @@ label {
 		opacity: $input-disabled-opacity;
 	}
 
-	&[type="range"] {
+	&[type='range'] {
 		background-color: transparent;
 		border-color: transparent;
 		padding: 0;
@@ -137,11 +139,12 @@ label {
 
 		&::-webkit-slider-thumb {
 			// Chrome hack for https://github.com/liferay/clay/issues/1179
+
 			outline: $primary-l2 auto 5px;
 		}
 	}
 
-	&:not([type="range"]) {
+	&:not([type='range']) {
 		@media screen and (-webkit-min-device-pixel-ratio: 0) {
 			-webkit-appearance: none;
 		}
@@ -166,14 +169,14 @@ label {
 	border-right-width: $input-border-right-width;
 	border-top-width: $input-border-top-width;
 
-	@if not ($input-font-size == $font-size-base) {
+	@if not($input-font-size == $font-size-base) {
 		font-size: $input-font-size;
 	}
 
 	height: $input-height;
 	min-width: 0;
 
-	@if not ($input-padding-y == $btn-padding-y) {
+	@if not($input-padding-y == $btn-padding-y) {
 		padding-bottom: $input-padding-y;
 		padding-top: $input-padding-y;
 	}
@@ -353,13 +356,15 @@ fieldset[disabled] label {
 }
 
 .form-control[disabled] > option {
-	@media (-webkit-min-device-pixel-ratio: 0) { // Webkit only
+	// Webkit only
+
+	@media (-webkit-min-device-pixel-ratio: 0) {
 		color: $input-disabled-color;
 	}
 }
 
 .form-check.disabled .form-check-label {
-	@if not ($input-label-disabled-color == $text-muted) {
+	@if not($input-label-disabled-color == $text-muted) {
 		color: $input-label-disabled-color;
 	}
 }
@@ -406,7 +411,6 @@ fieldset[disabled] label {
 }
 
 %clay-select-form-control-lg {
-
 	height: $input-height-lg;
 
 	@include clay-scale-component {

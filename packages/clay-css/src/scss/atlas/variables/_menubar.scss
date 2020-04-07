@@ -1,67 +1,75 @@
 // Menubar Vertical MD
 
 $menubar-vertical-transparent-md: () !default;
-$menubar-vertical-transparent-md: map-deep-merge((
-	bg-mobile: $white,
-	link-border-radius: 0.375rem,
-	link-border-radius-mobile: 0,
-	link-hover-bg: rgba($gray-900, 0.03),
-	link-hover-color: $gray-900,
-	link-active-font-weight: $font-weight-semi-bold,
-	link: (
-		transition: $btn-transition,
-		focus-bg: rgba($gray-900, 0.03),
-		focus-color: $gray-900,
-		focus-box-shadow: map-get($dropdown-item-base, focus-box-shadow),
-		focus-outline: map-get($dropdown-item-base, focus-outline),
-		disabled-box-shadow: none,
+$menubar-vertical-transparent-md: map-deep-merge(
+	(
+		bg-mobile: $white,
+		link-border-radius: 0.375rem,
+		link-border-radius-mobile: 0,
+		link-hover-bg: rgba($gray-900, 0.03),
+		link-hover-color: $gray-900,
+		link-active-font-weight: $font-weight-semi-bold,
+		link: (
+			transition: $btn-transition,
+			focus-bg: rgba($gray-900, 0.03),
+			focus-color: $gray-900,
+			focus-box-shadow: map-get($dropdown-item-base, focus-box-shadow),
+			focus-outline: map-get($dropdown-item-base, focus-outline),
+			disabled-box-shadow: none,
+		),
+		link-mobile: (
+			transition: none,
+			focus-bg: $dropdown-link-hover-bg,
+			focus-border-radius:
+				map-get($dropdown-item-base, focus-border-radius),
+		),
+		toggler-font-size-mobile: 0.875rem,
+		toggler-font-weight-mobile: $font-weight-semi-bold,
+		toggler-mobile: (
+			border-radius: 0.375rem,
+			transition: box-shadow 0.15s ease-in-out,
+			focus-box-shadow: $component-focus-box-shadow,
+			focus-outline: 0,
+			disabled-box-shadow: none,
+		),
 	),
-	link-mobile: (
-		transition: none,
-		focus-bg: $dropdown-link-hover-bg,
-		focus-border-radius: map-get($dropdown-item-base, focus-border-radius),
-	),
-	toggler-font-size-mobile: 0.875rem,
-	toggler-font-weight-mobile: $font-weight-semi-bold,
-	toggler-mobile: (
-		border-radius: 0.375rem,
-		transition: box-shadow 0.15s ease-in-out,
-		focus-box-shadow: $component-focus-box-shadow,
-		focus-outline: 0,
-		disabled-box-shadow: none,
-	),
-), $menubar-vertical-transparent-md);
+	$menubar-vertical-transparent-md
+);
 
 // Menubar Vertical LG
 
 $menubar-vertical-transparent-lg: () !default;
-$menubar-vertical-transparent-lg: map-deep-merge((
-	bg-mobile: $white,
-	link-border-radius: 0.375rem,
-	link-border-radius-mobile: 0,
-	link-hover-bg: rgba($gray-900, 0.03),
-	link-hover-color: $gray-900,
-	link-active-font-weight: $font-weight-semi-bold,
-	link: (
-		transition: $btn-transition,
-		focus-bg: rgba($gray-900, 0.03),
-		focus-color: $gray-900,
-		focus-box-shadow: map-get($dropdown-item-base, focus-box-shadow),
-		focus-outline: map-get($dropdown-item-base, focus-outline),
-		disabled-box-shadow: none,
+$menubar-vertical-transparent-lg: map-deep-merge(
+	(
+		bg-mobile: $white,
+		link-border-radius: 0.375rem,
+		link-border-radius-mobile: 0,
+		link-hover-bg: rgba($gray-900, 0.03),
+		link-hover-color: $gray-900,
+		link-active-font-weight: $font-weight-semi-bold,
+		link: (
+			transition: $btn-transition,
+			focus-bg: rgba($gray-900, 0.03),
+			focus-color: $gray-900,
+			focus-box-shadow: map-get($dropdown-item-base, focus-box-shadow),
+			focus-outline: map-get($dropdown-item-base, focus-outline),
+			disabled-box-shadow: none,
+		),
+		link-mobile: (
+			transition: none,
+			focus-bg: $dropdown-link-hover-bg,
+			focus-border-radius:
+				map-get($dropdown-item-base, focus-border-radius),
+		),
+		toggler-font-size-mobile: 0.875rem,
+		toggler-font-weight-mobile: $font-weight-semi-bold,
+		toggler-mobile: (
+			border-radius: 0.375rem,
+			transition: box-shadow 0.15s ease-in-out,
+			focus-box-shadow: $component-focus-box-shadow,
+			focus-outline: 0,
+			disabled-box-shadow: none,
+		),
 	),
-	link-mobile: (
-		transition: none,
-		focus-bg: $dropdown-link-hover-bg,
-		focus-border-radius: map-get($dropdown-item-base, focus-border-radius),
-	),
-	toggler-font-size-mobile: 0.875rem,
-	toggler-font-weight-mobile: $font-weight-semi-bold,
-	toggler-mobile: (
-		border-radius: 0.375rem,
-		transition: box-shadow 0.15s ease-in-out,
-		focus-box-shadow: $component-focus-box-shadow,
-		focus-outline: 0,
-		disabled-box-shadow: none,
-	),
-), $menubar-vertical-transparent-lg);
+	$menubar-vertical-transparent-lg
+);

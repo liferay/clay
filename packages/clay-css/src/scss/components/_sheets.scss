@@ -11,14 +11,14 @@
 	@include border-radius($sheet-border-radius);
 
 	padding-bottom: $sheet-padding-bottom;
-	padding-left:  $sheet-padding-left;
-	padding-right:  $sheet-padding-right;
+	padding-left: $sheet-padding-left;
+	padding-right: $sheet-padding-right;
 	padding-top: $sheet-padding-top;
 
 	@include clay-scale-component {
 		padding-bottom: $sheet-padding-bottom-mobile;
-		padding-left:  $sheet-padding-left-mobile;
-		padding-right:  $sheet-padding-right-mobile;
+		padding-left: $sheet-padding-left-mobile;
+		padding-right: $sheet-padding-right-mobile;
 		padding-top: $sheet-padding-top-mobile;
 	}
 
@@ -189,8 +189,12 @@ fieldset {
 
 		@if ($enable-c-inner) {
 			.c-inner {
-				margin-left: #{math-sign($sheet-subtitle-collapse-icon-padding-left)};
-				margin-right: #{math-sign($sheet-subtitle-collapse-icon-padding-right)};
+				margin-left: #{math-sign(
+						$sheet-subtitle-collapse-icon-padding-left
+					)};
+				margin-right: #{math-sign(
+						$sheet-subtitle-collapse-icon-padding-right
+					)};
 			}
 		}
 	}

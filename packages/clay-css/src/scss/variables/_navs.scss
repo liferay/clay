@@ -3,28 +3,34 @@ $nav-font-size: null !default;
 $nav-link-disabled-cursor: $disabled-cursor !default;
 
 $nav-link: () !default;
-$nav-link: map-deep-merge((
-	display: block,
-	padding-bottom: $nav-link-padding-y,
-	padding-left: $nav-link-padding-x,
-	padding-right: $nav-link-padding-x,
-	padding-top: $nav-link-padding-y,
-	position: relative,
-	focus-z-index: 1,
-	disabled-color: $nav-link-disabled-color,
-	disabled-cursor: $nav-link-disabled-cursor,
-	disabled-pointer-events: auto,
-	disabled-active-pointer-events: none,
-), $nav-link);
+$nav-link: map-deep-merge(
+	(
+		display: block,
+		padding-bottom: $nav-link-padding-y,
+		padding-left: $nav-link-padding-x,
+		padding-right: $nav-link-padding-x,
+		padding-top: $nav-link-padding-y,
+		position: relative,
+		focus-z-index: 1,
+		disabled-color: $nav-link-disabled-color,
+		disabled-cursor: $nav-link-disabled-cursor,
+		disabled-pointer-events: auto,
+		disabled-active-pointer-events: none,
+	),
+	$nav-link
+);
 
 $nav-link-btn-unstyled: () !default;
-$nav-link-btn-unstyled: map-deep-merge((
-	width: 100%,
-	disabled-opacity: 1,
-	c-inner: (
-		width: auto,
+$nav-link-btn-unstyled: map-deep-merge(
+	(
+		width: 100%,
+		disabled-opacity: 1,
+		c-inner: (
+			width: auto,
+		),
 	),
-), $nav-link-btn-unstyled);
+	$nav-link-btn-unstyled
+);
 
 $nav-item-monospaced-size: 2rem !default; // 32px
 
@@ -34,7 +40,10 @@ $nav-btn-margin-x: 0.25rem !default; // 4px
 
 /// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
 
-$nav-btn-margin-y: (($line-height-base * $font-size-base) + ($nav-link-padding-y * 2) - $nav-item-monospaced-size) / 2 !default;
+$nav-btn-margin-y: (
+		($line-height-base * $font-size-base) + ($nav-link-padding-y * 2) -
+			$nav-item-monospaced-size
+	) / 2 !default;
 
 /// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
 
@@ -45,49 +54,58 @@ $nav-btn-padding-x: $btn-padding-x-sm !default;
 $nav-btn-padding-y: 0 !default;
 
 $nav-btn: () !default;
-$nav-btn: map-deep-merge((
-	align-items: center,
-	display: flex,
-	height: $nav-item-monospaced-size,
-	justify-content: center,
-	line-height: $line-height-base,
-	margin: $nav-btn-margin-y $nav-btn-margin-x,
-	min-width: $nav-item-monospaced-size,
-	padding: $nav-btn-padding-y $nav-btn-padding-x,
-	position: relative,
-	text-align: center,
-	width: auto,
-	focus-z-index: 1,
-	disabled-opacity: 1,
-	c-inner: (
-		margin-bottom: 0,
-		margin-left: math-sign($nav-btn-padding-x),
-		margin-right: math-sign($nav-btn-padding-x),
-		margin-top: math-sign($btn-border-width),
+$nav-btn: map-deep-merge(
+	(
+		align-items: center,
+		display: flex,
+		height: $nav-item-monospaced-size,
+		justify-content: center,
+		line-height: $line-height-base,
+		margin: $nav-btn-margin-y $nav-btn-margin-x,
+		min-width: $nav-item-monospaced-size,
+		padding: $nav-btn-padding-y $nav-btn-padding-x,
+		position: relative,
+		text-align: center,
+		width: auto,
+		focus-z-index: 1,
+		disabled-opacity: 1,
+		c-inner: (
+			margin-bottom: 0,
+			margin-left: math-sign($nav-btn-padding-x),
+			margin-right: math-sign($nav-btn-padding-x),
+			margin-top: math-sign($btn-border-width),
+		),
+		lexicon-icon-margin-top: 0,
 	),
-	lexicon-icon-margin-top: 0,
-), $nav-btn);
+	$nav-btn
+);
 
 $nav-btn-monospaced: () !default;
-$nav-btn-monospaced: map-deep-merge((
-	padding: 0,
-	c-inner: (
-		margin-left: math-sign($btn-border-width),
-		margin-right: math-sign($btn-border-width),
+$nav-btn-monospaced: map-deep-merge(
+	(
+		padding: 0,
+		c-inner: (
+			margin-left: math-sign($btn-border-width),
+			margin-right: math-sign($btn-border-width),
+		),
 	),
-), $nav-btn-monospaced);
+	$nav-btn-monospaced
+);
 
 $nav-link-monospaced: () !default;
-$nav-link-monospaced: map-deep-merge((
-	align-items: center,
-	display: flex,
-	height: $nav-item-monospaced-size,
-	justify-content: center,
-	margin: $nav-btn-margin-y $nav-btn-margin-x,
-	min-width: $nav-item-monospaced-size,
-	padding: 0,
-	lexicon-icon-margin-top: 0,
-), $nav-link-monospaced);
+$nav-link-monospaced: map-deep-merge(
+	(
+		align-items: center,
+		display: flex,
+		height: $nav-item-monospaced-size,
+		justify-content: center,
+		margin: $nav-btn-margin-y $nav-btn-margin-x,
+		min-width: $nav-item-monospaced-size,
+		padding: 0,
+		lexicon-icon-margin-top: 0,
+	),
+	$nav-link-monospaced
+);
 
 $nav-form-padding-bottom: 0 !default;
 $nav-form-padding-left: $nav-link-padding-x !default;
@@ -117,15 +135,18 @@ $nav-tabs-link-padding-x: null !default;
 $nav-tabs-link-padding-y: null !default;
 
 $nav-tabs-link: () !default;
-$nav-tabs-link: map-deep-merge((
-	border-radius: $nav-tabs-border-radius $nav-tabs-border-radius 0 0,
-	color: $nav-tabs-link-color,
-	padding-bottom: $nav-tabs-link-padding-y,
-	padding-left: $nav-tabs-link-padding-x,
-	padding-right: $nav-tabs-link-padding-x,
-	padding-top: $nav-tabs-link-padding-y,
-	white-space: nowrap,
-), $nav-tabs-link);
+$nav-tabs-link: map-deep-merge(
+	(
+		border-radius: $nav-tabs-border-radius $nav-tabs-border-radius 0 0,
+		color: $nav-tabs-link-color,
+		padding-bottom: $nav-tabs-link-padding-y,
+		padding-left: $nav-tabs-link-padding-x,
+		padding-right: $nav-tabs-link-padding-x,
+		padding-top: $nav-tabs-link-padding-y,
+		white-space: nowrap,
+	),
+	$nav-tabs-link
+);
 
 // Nav Tabs Link Show
 
@@ -134,11 +155,14 @@ $nav-tabs-link-show-bg: null !default;
 $nav-tabs-link-show-border-color: null !default;
 
 $nav-tabs-link-show: () !default;
-$nav-tabs-link-show: map-deep-merge((
-	bg: $nav-tabs-link-show-bg,
-	border-color: $nav-tabs-link-show-border-color,
-	color: $nav-tabs-link-show-color,
-), $nav-tabs-link-show);
+$nav-tabs-link-show: map-deep-merge(
+	(
+		bg: $nav-tabs-link-show-bg,
+		border-color: $nav-tabs-link-show-border-color,
+		color: $nav-tabs-link-show-color,
+	),
+	$nav-tabs-link-show
+);
 
 // Nav Tabs Tab Pane
 
@@ -163,22 +187,28 @@ $nav-underline-link-active-color: null !default;
 $nav-underline-link-disabled-color: null !default;
 
 $nav-underline-link: () !default;
-$nav-underline-link: map-deep-merge((
-	color: $nav-underline-link-color,
-	padding-bottom: $nav-underline-link-padding-y,
-	padding-left: $nav-underline-link-padding-x,
-	padding-right: $nav-underline-link-padding-x,
-	padding-top: $nav-underline-link-padding-y,
-	hover-color: $nav-underline-link-hover-color,
-	focus-color: $nav-underline-link-hover-color,
-	active-class-color: $nav-underline-link-active-color,
-	disabled-color: $nav-underline-link-disabled-color,
-), $nav-underline-link);
+$nav-underline-link: map-deep-merge(
+	(
+		color: $nav-underline-link-color,
+		padding-bottom: $nav-underline-link-padding-y,
+		padding-left: $nav-underline-link-padding-x,
+		padding-right: $nav-underline-link-padding-x,
+		padding-top: $nav-underline-link-padding-y,
+		hover-color: $nav-underline-link-hover-color,
+		focus-color: $nav-underline-link-hover-color,
+		active-class-color: $nav-underline-link-active-color,
+		disabled-color: $nav-underline-link-disabled-color,
+	),
+	$nav-underline-link
+);
 
 $nav-underline-link-show: () !default;
-$nav-underline-link-show: map-deep-merge((
-	color: $nav-underline-link-active-color,
-), $nav-underline-link-show);
+$nav-underline-link-show: map-deep-merge(
+	(
+		color: $nav-underline-link-active-color,
+	),
+	$nav-underline-link-show
+);
 
 // Nav Underline Link Highlight
 

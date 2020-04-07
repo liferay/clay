@@ -11,13 +11,13 @@ $primary-d1: darken($primary, 7.5) !default;
 $primary-d2: darken($primary, 10) !default;
 $primary-l1: lighten($primary, 22.94) !default;
 $primary-l2: lighten($primary, 32.94) !default;
-$primary-l3: lighten($primary, 44.90) !default;
+$primary-l3: lighten($primary, 44.9) !default;
 
 $secondary-d1: darken($secondary, 7.5) !default;
 $secondary-d2: darken($secondary, 10) !default;
 $secondary-l1: lighten($secondary, 22.94) !default;
 $secondary-l2: lighten($secondary, 32.94) !default;
-$secondary-l3: lighten($secondary, 44.90) !default;
+$secondary-l3: lighten($secondary, 44.9) !default;
 
 $info-d1: darken($info, 7.5) !default;
 $info-d2: darken($info, 10) !default;
@@ -65,19 +65,25 @@ $disabled-cursor: not-allowed !default;
 // Containers
 
 $container-form-lg: () !default;
-$container-form-lg: map-deep-merge((
-	breakpoint-up: lg,
-	padding-bottom: 3rem,
-	padding-top: 3rem,
-	padding-bottom-mobile: 1rem,
-	padding-top-mobile: 1rem
-), $container-form-lg);
+$container-form-lg: map-deep-merge(
+	(
+		breakpoint-up: lg,
+		padding-bottom: 3rem,
+		padding-top: 3rem,
+		padding-bottom-mobile: 1rem,
+		padding-top-mobile: 1rem,
+	),
+	$container-form-lg
+);
 
 $container-view: () !default;
-$container-view: map-deep-merge((
-	padding-bottom: 1.5rem,
-	padding-top: 1.5rem
-), $container-view);
+$container-view: map-deep-merge(
+	(
+		padding-bottom: 1.5rem,
+		padding-top: 1.5rem,
+	),
+	$container-view
+);
 
 // Fonts
 
@@ -86,7 +92,7 @@ $webkit-font-smoothing: null !default;
 
 $font-import-url: null !default;
 
-$font-family-serif: Georgia, "Times New Roman", Times, serif !default;
+$font-family-serif: Georgia, 'Times New Roman', Times, serif !default;
 
 $font-size-base-mobile: $font-size-base !default;
 $font-size-lg-mobile: $font-size-lg !default;

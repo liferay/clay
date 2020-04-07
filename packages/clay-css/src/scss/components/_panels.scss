@@ -13,7 +13,7 @@
 .panel-header {
 	border-bottom: $panel-header-border-bottom-width solid transparent;
 
-	@if not ($panel-header-offset-border-radius == 0) {
+	@if not($panel-header-offset-border-radius == 0) {
 		@include border-top-radius($panel-header-offset-border-radius);
 	}
 
@@ -26,13 +26,14 @@
 
 	@if ($enable-c-inner) {
 		.c-inner {
-			margin: #{math-sign($panel-header-padding-y)} #{math-sign($panel-header-padding-x)};
+			margin: #{math-sign($panel-header-padding-y)}
+				#{math-sign($panel-header-padding-x)};
 			width: auto;
 		}
 	}
 
 	&.collapsed {
-		@if not ($panel-header-offset-border-radius == 0) {
+		@if not($panel-header-offset-border-radius == 0) {
 			@include border-bottom-radius($panel-header-offset-border-radius);
 		}
 	}
@@ -43,8 +44,12 @@
 
 		@if ($enable-c-inner) {
 			.c-inner {
-				margin-left: #{math-sign($panel-header-collapse-icon-padding-left)};
-				margin-right: #{math-sign($panel-header-collapse-icon-padding-right)};
+				margin-left: #{math-sign(
+						$panel-header-collapse-icon-padding-left
+					)};
+				margin-right: #{math-sign(
+						$panel-header-collapse-icon-padding-right
+					)};
 			}
 		}
 	}
@@ -77,7 +82,7 @@
 }
 
 .panel-footer {
-	@if not ($panel-footer-offset-border-radius == 0) {
+	@if not($panel-footer-offset-border-radius == 0) {
 		@include border-bottom-radius($panel-footer-offset-border-radius);
 	}
 
@@ -126,8 +131,10 @@
 			@include border-bottom-radius($panel-border-radius);
 
 			.panel-header.collapsed {
-				@if not ($panel-header-offset-border-radius == 0) {
-					@include border-bottom-radius($panel-header-offset-border-radius);
+				@if not($panel-header-offset-border-radius == 0) {
+					@include border-bottom-radius(
+						$panel-header-offset-border-radius
+					);
 				}
 			}
 		}
@@ -162,7 +169,8 @@
 			}
 
 			.panel-header {
-				&, &.collapsed {
+				&,
+				&.collapsed {
 					border-radius: 0;
 				}
 			}
@@ -275,8 +283,12 @@
 
 		@if ($enable-c-inner) {
 			.c-inner {
-				margin-left: #{math-sign($panel-group-flush-collapse-icon-padding-left)};
-				margin-right: #{math-sign($panel-group-flush-collapse-icon-padding-right)};
+				margin-left: #{math-sign(
+						$panel-group-flush-collapse-icon-padding-left
+					)};
+				margin-right: #{math-sign(
+						$panel-group-flush-collapse-icon-padding-right
+					)};
 			}
 		}
 	}

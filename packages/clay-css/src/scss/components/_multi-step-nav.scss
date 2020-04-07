@@ -10,7 +10,8 @@
 
 .multi-step-indicator-label-bottom {
 	.multi-step-item {
-		padding-bottom: $multi-step-indicator-label-font-size * $line-height-base;
+		padding-bottom: $multi-step-indicator-label-font-size *
+			$line-height-base;
 	}
 
 	.multi-step-indicator-label {
@@ -78,7 +79,8 @@
 
 	&.complete {
 		.dropdown .multi-step-icon {
-			&, &:active {
+			&,
+			&:active {
 				background-image: none;
 			}
 		}
@@ -100,6 +102,7 @@
 				}
 
 				// BS4 resets background-image in buttons https://github.com/twbs/bootstrap/issues/23353
+
 				&:active {
 					background-image: $multi-step-icon-complete-bg-image;
 				}
@@ -334,7 +337,9 @@
 		.multi-step-item {
 			margin-bottom: 0;
 			min-width: $multi-step-icon-size;
-			padding-top: $multi-step-title-font-size + $multi-step-title-margin-bottom + ($multi-step-divider-height / 2);
+			padding-top: $multi-step-title-font-size +
+				$multi-step-title-margin-bottom +
+				($multi-step-divider-height / 2);
 		}
 
 		.multi-step-title {

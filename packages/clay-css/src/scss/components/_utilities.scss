@@ -238,7 +238,7 @@
 	@extend %autofit-float-end-md-down;
 }
 
-// C Inner 
+// C Inner
 
 @if ($enable-c-inner) {
 	.c-inner {
@@ -352,6 +352,7 @@
 		}
 
 		// Negative margins (e.g., where `.c-mb-n1` is negative version of `.c-mb-1`)
+
 		@each $size, $length in $spacers {
 			@if $size != 0 {
 				.c-m#{$infix}-n#{$size} {

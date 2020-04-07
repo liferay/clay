@@ -74,23 +74,29 @@ $input-readonly-focus-border-color: null !default;
 $input-readonly-focus-color: null !default;
 
 $input-readonly: () !default;
-$input-readonly: map-deep-merge((
-	bg: $input-readonly-bg,
-	border-color: $input-readonly-border-color,
-	color: $input-readonly-color,
-	cursor: $input-readonly-cursor,
-	focus-bg: $input-readonly-focus-bg,
-	focus-border-color: $input-readonly-focus-border-color,
-	focus-color: $input-readonly-focus-color,
-), $input-readonly);
+$input-readonly: map-deep-merge(
+	(
+		bg: $input-readonly-bg,
+		border-color: $input-readonly-border-color,
+		color: $input-readonly-color,
+		cursor: $input-readonly-cursor,
+		focus-bg: $input-readonly-focus-bg,
+		focus-border-color: $input-readonly-focus-border-color,
+		focus-color: $input-readonly-focus-color,
+	),
+	$input-readonly
+);
 
 $input-plaintext-readonly: () !default;
-$input-plaintext-readonly: map-deep-merge((
-	border-radius: $input-border-radius,
-	outline: 0,
-	transition: $input-transition,
-	focus-box-shadow: $input-focus-box-shadow,
-), $input-plaintext-readonly);
+$input-plaintext-readonly: map-deep-merge(
+	(
+		border-radius: $input-border-radius,
+		outline: 0,
+		transition: $input-transition,
+		focus-box-shadow: $input-focus-box-shadow,
+	),
+	$input-plaintext-readonly
+);
 
 $input-textarea-height: 150px !default;
 $input-textarea-height-lg: 190px !default;
@@ -99,80 +105,113 @@ $input-textarea-height-sm: 120px !default;
 // Form Control Label (Labels inside Form Control Tag Group)
 
 $form-control-label-size: () !default;
-$form-control-label-size: map-deep-merge((
-	border-width: 0.0625rem, // 1px
-	height: 1.25rem, // 20px
-	margin-bottom: 0.25rem, // 4px
-	margin-right: 0.5rem, // 8px
-	margin-top: 0.25rem, // 4px
-), $form-control-label-size);
+$form-control-label-size: map-deep-merge(
+	(
+		border-width: 0.0625rem,
+		height: 1.25rem,
+		margin-bottom: 0.25rem,
+		margin-right: 0.5rem,
+		margin-top: 0.25rem,
+	),
+	$form-control-label-size
+);
 
 // Form Control Tag Group
 
-$form-control-tag-group-padding-y: ($input-height - $input-border-bottom-width - $input-border-top-width - map-get($form-control-label-size, height) - (map-get($form-control-label-size, margin-bottom)) - (map-get($form-control-label-size, margin-top))) / 2 !default;
+$form-control-tag-group-padding-y: (
+		$input-height - $input-border-bottom-width - $input-border-top-width -
+			map-get($form-control-label-size, height) -
+			(map-get($form-control-label-size, margin-bottom)) -
+			(map-get($form-control-label-size, margin-top))
+	) / 2 !default;
 
 $form-control-inset-min-height: $input-font-size * $input-line-height !default;
-$form-control-inset-margin-y: ($input-height - $input-border-bottom-width - $input-border-top-width - ($form-control-tag-group-padding-y * 2) - $form-control-inset-min-height) / 2 !default;
+$form-control-inset-margin-y: (
+		$input-height - $input-border-bottom-width - $input-border-top-width -
+			($form-control-tag-group-padding-y * 2) -
+			$form-control-inset-min-height
+	) / 2 !default;
 
 $form-control-tag-group: () !default;
-$form-control-tag-group: map-deep-merge((
-	align-items: center,
-	display: flex,
-	flex-wrap: wrap,
-	height: auto,
-	padding-bottom: $form-control-tag-group-padding-y,
-	padding-top: $form-control-tag-group-padding-y,
-), $form-control-tag-group);
+$form-control-tag-group: map-deep-merge(
+	(
+		align-items: center,
+		display: flex,
+		flex-wrap: wrap,
+		height: auto,
+		padding-bottom: $form-control-tag-group-padding-y,
+		padding-top: $form-control-tag-group-padding-y,
+	),
+	$form-control-tag-group
+);
 
 $form-control-tag-group-autofit-row: () !default;
-$form-control-tag-group-autofit-row: map-deep-merge((
+$form-control-tag-group-autofit-row: map-deep-merge(
+	(
 		align-items: center,
 		flex-grow: 1,
 		margin-left: -0.5rem,
 		margin-right: -0.5rem,
 		width: auto,
-), $form-control-tag-group-autofit-row);
+	),
+	$form-control-tag-group-autofit-row
+);
 
 $form-control-tag-group-autofit-col: () !default;
-$form-control-tag-group-autofit-col: map-deep-merge((
-	padding-left: 0.5rem,
-	padding-right: 0.5rem,
-), $form-control-tag-group-autofit-col);
+$form-control-tag-group-autofit-col: map-deep-merge(
+	(
+		padding-left: 0.5rem,
+		padding-right: 0.5rem,
+	),
+	$form-control-tag-group-autofit-col
+);
 
 $form-control-tag-group-input-group-item: () !default;
-$form-control-tag-group-input-group-item: map-deep-merge((
-	align-items: flex-start,
-), $form-control-tag-group-input-group-item);
+$form-control-tag-group-input-group-item: map-deep-merge(
+	(
+		align-items: flex-start,
+	),
+	$form-control-tag-group-input-group-item
+);
 
 $form-control-tag-group-inline-item: () !default;
-$form-control-tag-group-inline-item: map-deep-merge((
-	height: $form-control-inset-min-height,
-	margin-bottom: $form-control-inset-margin-y,
-	margin-top: $form-control-inset-margin-y,
-), $form-control-tag-group-inline-item);
+$form-control-tag-group-inline-item: map-deep-merge(
+	(
+		height: $form-control-inset-min-height,
+		margin-bottom: $form-control-inset-margin-y,
+		margin-top: $form-control-inset-margin-y,
+	),
+	$form-control-tag-group-inline-item
+);
 
 $form-control-tag-group-btn: () !default;
-$form-control-tag-group-btn: map-deep-merge((
-	height: $form-control-inset-min-height,
-	line-height: 1,
-	margin-bottom: $form-control-inset-margin-y,
-	margin-top: $form-control-inset-margin-y,
-	padding-bottom: 0,
-	padding-left: $btn-padding-x-sm,
-	padding-right: $btn-padding-x-sm,
-	padding-top: 0,
-), $form-control-tag-group-btn);
+$form-control-tag-group-btn: map-deep-merge(
+	(
+		height: $form-control-inset-min-height,
+		line-height: 1,
+		margin-bottom: $form-control-inset-margin-y,
+		margin-top: $form-control-inset-margin-y,
+		padding-bottom: 0,
+		padding-left: $btn-padding-x-sm,
+		padding-right: $btn-padding-x-sm,
+		padding-top: 0,
+	),
+	$form-control-tag-group-btn
+);
 
 $form-control-tag-group-btn-monospaced: () !default;
-$form-control-tag-group-btn-monospaced: map-deep-merge((
-	height: $form-control-inset-min-height,
-	line-height: 1,
-	margin-bottom: $form-control-inset-margin-y,
-	margin-top: $form-control-inset-margin-y,
-	padding-left: 0,
-	padding-right: 0,
-	width: $form-control-inset-min-height,
-), $form-control-tag-group-btn-monospaced);
+$form-control-tag-group-btn-monospaced: map-deep-merge(
+	(
+		height: $form-control-inset-min-height,
+		line-height: 1,
+		margin-bottom: $form-control-inset-margin-y,
+		margin-top: $form-control-inset-margin-y,
+		padding-left: 0,
+		padding-right: 0,
+		width: $form-control-inset-min-height,
+	),
+	$form-control-tag-group-btn-monospaced
+);
 
 // Form Group
 
@@ -211,7 +250,8 @@ $input-danger-focus-bg: null !default;
 $input-danger-border-color: $form-feedback-invalid-color !default;
 $input-danger-focus-border-color: null !default;
 $input-danger-box-shadow: null !default;
-$input-danger-focus-box-shadow: 0 0 0 $input-focus-width rgba($form-feedback-invalid-color, 0.25) !default;
+$input-danger-focus-box-shadow: 0 0 0 $input-focus-width
+	rgba($form-feedback-invalid-color, 0.25) !default;
 $input-danger-color: null !default;
 $input-danger-focus-color: null !default;
 
@@ -220,22 +260,33 @@ $input-danger-readonly: () !default;
 $input-danger-checkbox-label-color: $form-feedback-invalid-color !default;
 $input-danger-label-color: null !default;
 $input-danger-select-icon-color: $input-danger-border-color !default;
-$input-danger-select-icon: clay-str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-danger-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
+$input-danger-select-icon: clay-str-replace(
+	url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-danger-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"),
+	'#',
+	'%23'
+) !default;
 
 $input-danger-select-size: () !default;
-$input-danger-select-size: map-deep-merge((
-	background-image: none,
-), $input-danger-select-size);
+$input-danger-select-size: map-deep-merge(
+	(
+		background-image: none,
+	),
+	$input-danger-select-size
+);
 
 $input-danger-select-multiple: () !default;
-$input-danger-select-multiple: map-deep-merge($input-danger-select-size, $input-danger-select-multiple);
+$input-danger-select-multiple: map-deep-merge(
+	$input-danger-select-size,
+	$input-danger-select-multiple
+);
 
 $input-success-bg: null !default;
 $input-success-focus-bg: null !default;
 $input-success-border-color: $form-feedback-valid-color !default;
 $input-success-focus-border-color: null !default;
 $input-success-box-shadow: null !default;
-$input-success-focus-box-shadow: 0 0 0 $input-focus-width rgba($form-feedback-valid-color, 0.25) !default;
+$input-success-focus-box-shadow: 0 0 0 $input-focus-width
+	rgba($form-feedback-valid-color, 0.25) !default;
 $input-success-color: null !default;
 $input-success-focus-color: null !default;
 
@@ -244,22 +295,33 @@ $input-success-readonly: () !default;
 $input-success-checkbox-label-color: $form-feedback-valid-color !default;
 $input-success-label-color: null !default;
 $input-success-select-icon-color: $input-success-border-color !default;
-$input-success-select-icon: clay-str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-success-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
+$input-success-select-icon: clay-str-replace(
+	url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-success-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"),
+	'#',
+	'%23'
+) !default;
 
 $input-success-select-size: () !default;
-$input-success-select-size: map-deep-merge((
-	background-image: none,
-), $input-success-select-size);
+$input-success-select-size: map-deep-merge(
+	(
+		background-image: none,
+	),
+	$input-success-select-size
+);
 
 $input-success-select-multiple: () !default;
-$input-success-select-multiple: map-deep-merge($input-success-select-size, $input-success-select-multiple);
+$input-success-select-multiple: map-deep-merge(
+	$input-success-select-size,
+	$input-success-select-multiple
+);
 
 $input-warning-bg: null !default;
 $input-warning-focus-bg: null !default;
 $input-warning-border-color: $form-feedback-warning-color !default;
 $input-warning-focus-border-color: null !default;
 $input-warning-box-shadow: null !default;
-$input-warning-focus-box-shadow: 0 0 0 $input-focus-width rgba($form-feedback-warning-color, 0.25) !default;
+$input-warning-focus-box-shadow: 0 0 0 $input-focus-width
+	rgba($form-feedback-warning-color, 0.25) !default;
 $input-warning-color: null !default;
 $input-warning-focus-color: null !default;
 
@@ -268,15 +330,25 @@ $input-warning-readonly: () !default;
 $input-warning-checkbox-label-color: $form-feedback-warning-color !default;
 $input-warning-label-color: null !default;
 $input-warning-select-icon-color: $input-warning-border-color !default;
-$input-warning-select-icon: clay-str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-warning-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
+$input-warning-select-icon: clay-str-replace(
+	url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-warning-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"),
+	'#',
+	'%23'
+) !default;
 
 $input-warning-select-size: () !default;
-$input-warning-select-size: map-deep-merge((
-	background-image: none,
-), $input-warning-select-size);
+$input-warning-select-size: map-deep-merge(
+	(
+		background-image: none,
+	),
+	$input-warning-select-size
+);
 
 $input-warning-select-multiple: () !default;
-$input-warning-select-multiple: map-deep-merge($input-warning-select-size, $input-warning-select-multiple);
+$input-warning-select-multiple: map-deep-merge(
+	$input-warning-select-size,
+	$input-warning-select-multiple
+);
 
 // Select Element
 
@@ -288,11 +360,16 @@ $input-select-bg-size: $custom-select-bg-size !default;
 $input-select-cursor: $link-cursor !default;
 $input-select-padding-bottom: null !default;
 $input-select-padding-left: null !default;
-$input-select-padding-right: $custom-select-indicator-padding + $input-btn-padding-x !default;
+$input-select-padding-right: $custom-select-indicator-padding +
+	$input-btn-padding-x !default;
 $input-select-padding-top: null !default;
 
 $input-select-icon-color: $input-color !default;
-$input-select-icon: clay-str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
+$input-select-icon: clay-str-replace(
+	url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"),
+	'#',
+	'%23'
+) !default;
 
 $input-select-icon-focus-color: null !default;
 $input-select-icon-focus: null !default;
@@ -301,67 +378,81 @@ $input-select-icon-disabled-color: null !default;
 $input-select-icon-disabled: null !default;
 
 $input-select: () !default;
-$input-select: map-deep-merge((
-	appearance: none,
-	background-color: $input-select-bg,
-	background-image: $input-select-icon,
-	background-position: $input-select-bg-position,
-	background-repeat: no-repeat,
-	background-size: $input-select-bg-size,
-	cursor: $input-select-cursor,
-	padding-bottom: $input-select-padding-bottom,
-	padding-left: $input-select-padding-left,
-	padding-right: $input-select-padding-right,
-	padding-top: $input-select-padding-top,
-	focus: (
-		background-color: $input-select-focus-bg,
-		background-image: $input-select-icon-focus,
-	),
-	disabled: (
-		background-image: $input-select-icon-disabled,
-	),
-	disabled-option: (
-		cursor: $disabled-cursor,
-	),
-	option: (
+$input-select: map-deep-merge(
+	(
+		appearance: none,
+		background-color: $input-select-bg,
+		background-image: $input-select-icon,
+		background-position: $input-select-bg-position,
+		background-repeat: no-repeat,
+		background-size: $input-select-bg-size,
 		cursor: $input-select-cursor,
+		padding-bottom: $input-select-padding-bottom,
+		padding-left: $input-select-padding-left,
+		padding-right: $input-select-padding-right,
+		padding-top: $input-select-padding-top,
+		focus: (
+			background-color: $input-select-focus-bg,
+			background-image: $input-select-icon-focus,
+		),
+		disabled: (
+			background-image: $input-select-icon-disabled,
+		),
+		disabled-option: (
+			cursor: $disabled-cursor,
+		),
+		option: (
+			cursor: $input-select-cursor,
+		),
 	),
-), $input-select);
+	$input-select
+);
 
 // Form Control Select for Divs Styled Like Select
 
 $form-control-select: () !default;
-$form-control-select: map-deep-merge((
-	map-deep-merge(
-		$input-select,
-		(
-			appearance: null,
-			cursor: null,
+$form-control-select: map-deep-merge(
+	(
+		map-deep-merge(
+			$input-select,
+			(
+				appearance: null,
+				cursor: null,
+			)
 		)
-	)
-), $form-control-select);
+	),
+	$form-control-select
+);
 
 // Select Size
 
+// scrollbar-width: Future proof https://github.com/w3c/csswg-drafts/issues/1958
+// if/when it gets added
+
 $input-select-size: () !default;
-$input-select-size: map-deep-merge((
-	background-image: none,
-	padding-left: 0.5rem,
-	padding-right: 0.5rem,
-	// Future proof: if https://github.com/w3c/csswg-drafts/issues/1958 ever gets added
-	scrollbar-width: thin,
-	focus: (
+$input-select-size: map-deep-merge(
+	(
 		background-image: none,
+		padding-left: 0.5rem,
+		padding-right: 0.5rem,
+		scrollbar-width: thin,
+		focus: (
+			background-image: none,
+		),
+		option: (
+			padding: 0.25rem,
+		),
 	),
-	option: (
-		padding: 0.25rem,
-	),
-), $input-select-size);
+	$input-select-size
+);
 
 // Select Multiple
 
 $input-select-multiple: () !default;
-$input-select-multiple: map-deep-merge($input-select-size, $input-select-multiple);
+$input-select-multiple: map-deep-merge(
+	$input-select-size,
+	$input-select-multiple
+);
 
 // Form Feedback
 
@@ -405,28 +496,34 @@ $input-group-inset-item-padding-left: 5px !default;
 $input-group-inset-item-padding-right: 5px !default;
 
 $input-group-inset-item-btn: () !default;
-$input-group-inset-item-btn: map-deep-merge((
-	display: block,
-	height: 75%,
-	line-height: 1,
-	margin-left: 0.125rem,
-	margin-right: 0.125rem,
-	padding-bottom: 0,
-	padding-left: 0.5rem,
-	padding-right: 0.5rem,
-	padding-top: 0,
-	c-inner: (
-		align-items: center,
-		display: flex,
-		height: 100%,
-		justify-content: center,
+$input-group-inset-item-btn: map-deep-merge(
+	(
+		display: block,
+		height: 75%,
+		line-height: 1,
+		margin-left: 0.125rem,
+		margin-right: 0.125rem,
+		padding-bottom: 0,
+		padding-left: 0.5rem,
+		padding-right: 0.5rem,
+		padding-top: 0,
+		c-inner: (
+			align-items: center,
+			display: flex,
+			height: 100%,
+			justify-content: center,
+		),
 	),
-), $input-group-inset-item-btn);
+	$input-group-inset-item-btn
+);
 
 $input-group-inset-form-file-btn: () !default;
-$input-group-inset-form-file-btn: map-deep-merge((
-	height: 100%,
-), $input-group-inset-form-file-btn);
+$input-group-inset-form-file-btn: map-deep-merge(
+	(
+		height: 100%,
+	),
+	$input-group-inset-form-file-btn
+);
 
 // Input Group Lg
 
@@ -435,44 +532,53 @@ $input-group-addon-padding-x-lg: $input-padding-x-lg !default;
 $input-group-addon-padding-y-lg: null !default;
 
 $input-group-lg-item-btn: () !default; // .input-group-lg .input-group-item
-$input-group-lg-item-btn: map-deep-merge((
-	breakpoint-down: null,
-	font-size: $btn-font-size-lg,
-	inline-item-font-size: $btn-inline-item-font-size-lg,
-	section-font-size: $btn-section-font-size-lg,
-	font-size-mobile: $btn-font-size-lg-mobile,
-	padding-bottom-mobile: $btn-padding-y-lg-mobile,
-	padding-left-mobile: $btn-padding-x-lg-mobile,
-	padding-right-mobile: $btn-padding-x-lg-mobile,
-	padding-top-mobile: $btn-padding-y-lg-mobile,
-), $input-group-lg-item-btn);
+$input-group-lg-item-btn: map-deep-merge(
+	(
+		breakpoint-down: null,
+		font-size: $btn-font-size-lg,
+		inline-item-font-size: $btn-inline-item-font-size-lg,
+		section-font-size: $btn-section-font-size-lg,
+		font-size-mobile: $btn-font-size-lg-mobile,
+		padding-bottom-mobile: $btn-padding-y-lg-mobile,
+		padding-left-mobile: $btn-padding-x-lg-mobile,
+		padding-right-mobile: $btn-padding-x-lg-mobile,
+		padding-top-mobile: $btn-padding-y-lg-mobile,
+	),
+	$input-group-lg-item-btn
+);
 
 $input-group-lg-item-btn-monospaced: () !default;
-$input-group-lg-item-btn-monospaced: map-deep-merge((
-	breakpoint-down: null,
-	height: $btn-monospaced-size-lg,
-	line-height: 1,
-	padding-bottom: $btn-monospaced-padding-y-lg,
-	padding-left: $btn-monospaced-padding-x-lg,
-	padding-right: $btn-monospaced-padding-x-lg,
-	padding-top: $btn-monospaced-padding-y-lg,
-	width: $btn-monospaced-size-lg,
-	height-mobile: $btn-monospaced-size-lg-mobile,
-	width-mobile: $btn-monospaced-size-lg-mobile,
-), $input-group-lg-item-btn-monospaced);
+$input-group-lg-item-btn-monospaced: map-deep-merge(
+	(
+		breakpoint-down: null,
+		height: $btn-monospaced-size-lg,
+		line-height: 1,
+		padding-bottom: $btn-monospaced-padding-y-lg,
+		padding-left: $btn-monospaced-padding-x-lg,
+		padding-right: $btn-monospaced-padding-x-lg,
+		padding-top: $btn-monospaced-padding-y-lg,
+		width: $btn-monospaced-size-lg,
+		height-mobile: $btn-monospaced-size-lg-mobile,
+		width-mobile: $btn-monospaced-size-lg-mobile,
+	),
+	$input-group-lg-item-btn-monospaced
+);
 
 $input-group-lg-inset-item-btn: () !default;
 
 $input-group-lg-inset-item-form-file-btn: () !default;
-$input-group-lg-inset-item-form-file-btn: map-deep-merge((
-	breakpoint-down: null,
-	height: 100%,
-	line-height: 1,
-	padding-bottom: 0,
-	padding-left: 0.75rem,
-	padding-right: 0.75rem,
-	padding-top: 0,
-), $input-group-lg-inset-item-form-file-btn);
+$input-group-lg-inset-item-form-file-btn: map-deep-merge(
+	(
+		breakpoint-down: null,
+		height: 100%,
+		line-height: 1,
+		padding-bottom: 0,
+		padding-left: 0.75rem,
+		padding-right: 0.75rem,
+		padding-top: 0,
+	),
+	$input-group-lg-inset-item-form-file-btn
+);
 
 // Input Group Sm
 
@@ -481,55 +587,70 @@ $input-group-addon-padding-x-sm: $input-padding-x-sm !default;
 $input-group-addon-padding-y-sm: null !default;
 
 $input-group-sm-item-btn: () !default;
-$input-group-sm-item-btn: map-deep-merge((
-	font-size: $btn-font-size-sm,
-	inline-item-font-size: $btn-inline-item-font-size-sm,
-	section-font-size: $btn-section-font-size-sm,
-	font-size-mobile: $btn-font-size-sm-mobile,
-	padding-bottom-mobile: $btn-padding-y-sm-mobile,
-	padding-left-mobile: $btn-padding-x-sm-mobile,
-	padding-right-mobile: $btn-padding-x-sm-mobile,
-	padding-top-mobile: $btn-padding-y-sm-mobile,
-), $input-group-sm-item-btn);
+$input-group-sm-item-btn: map-deep-merge(
+	(
+		font-size: $btn-font-size-sm,
+		inline-item-font-size: $btn-inline-item-font-size-sm,
+		section-font-size: $btn-section-font-size-sm,
+		font-size-mobile: $btn-font-size-sm-mobile,
+		padding-bottom-mobile: $btn-padding-y-sm-mobile,
+		padding-left-mobile: $btn-padding-x-sm-mobile,
+		padding-right-mobile: $btn-padding-x-sm-mobile,
+		padding-top-mobile: $btn-padding-y-sm-mobile,
+	),
+	$input-group-sm-item-btn
+);
 
 $input-group-sm-item-btn-monospaced: () !default;
-$input-group-sm-item-btn-monospaced: map-deep-merge((
-	height: $btn-monospaced-size-sm,
-	line-height: 1,
-	padding-bottom: $btn-monospaced-padding-y-sm,
-	padding-left: $btn-monospaced-padding-x-sm,
-	padding-right: $btn-monospaced-padding-x-sm,
-	padding-top: $btn-monospaced-padding-y-sm,
-	width: $btn-monospaced-size-sm,
-	height-mobile: $btn-monospaced-size-sm-mobile,
-	width-mobile: $btn-monospaced-size-sm-mobile,
-), $input-group-sm-item-btn-monospaced);
+$input-group-sm-item-btn-monospaced: map-deep-merge(
+	(
+		height: $btn-monospaced-size-sm,
+		line-height: 1,
+		padding-bottom: $btn-monospaced-padding-y-sm,
+		padding-left: $btn-monospaced-padding-x-sm,
+		padding-right: $btn-monospaced-padding-x-sm,
+		padding-top: $btn-monospaced-padding-y-sm,
+		width: $btn-monospaced-size-sm,
+		height-mobile: $btn-monospaced-size-sm-mobile,
+		width-mobile: $btn-monospaced-size-sm-mobile,
+	),
+	$input-group-sm-item-btn-monospaced
+);
 
 $input-group-sm-inset-item-btn: () !default;
-$input-group-sm-inset-item-btn: map-deep-merge((
-	line-height: 1,
-	padding-bottom: 0,
-	padding-left: 0.5rem,
-	padding-right: 0.5rem,
-	padding-top: 0,
-), $input-group-sm-inset-item-btn);
+$input-group-sm-inset-item-btn: map-deep-merge(
+	(
+		line-height: 1,
+		padding-bottom: 0,
+		padding-left: 0.5rem,
+		padding-right: 0.5rem,
+		padding-top: 0,
+	),
+	$input-group-sm-inset-item-btn
+);
 
 $input-group-sm-inset-item-form-file-btn: () !default;
-$input-group-sm-inset-item-form-file-btn: map-deep-merge((
-	height: 100%,
-	line-height: 1,
-	padding-bottom: 0,
-	padding-left: 0.5rem,
-	padding-right: 0.5rem,
-	padding-top: 0,
-), $input-group-sm-inset-item-form-file-btn);
+$input-group-sm-inset-item-form-file-btn: map-deep-merge(
+	(
+		height: 100%,
+		line-height: 1,
+		padding-bottom: 0,
+		padding-left: 0.5rem,
+		padding-right: 0.5rem,
+		padding-top: 0,
+	),
+	$input-group-sm-inset-item-form-file-btn
+);
 
 // Input Group Stacked
 
 $input-group-stacked-sm-down: () !default;
-$input-group-stacked-sm-down: map-deep-merge((
-	breakpoint: sm,
-	item-margin-bottom: 0.5rem,
-	item-margin-left: 0,
-	shrink-margin-right: 0.5rem
-), $input-group-stacked-sm-down);
+$input-group-stacked-sm-down: map-deep-merge(
+	(
+		breakpoint: sm,
+		item-margin-bottom: 0.5rem,
+		item-margin-left: 0,
+		shrink-margin-right: 0.5rem,
+	),
+	$input-group-stacked-sm-down
+);

@@ -51,8 +51,9 @@
 	.list-group .list-group-item {
 		border-width: 0;
 
-		&:hover, &.active {
-			background-color: #F5F9FF;
+		&:hover,
+		&.active {
+			background-color: #f5f9ff;
 		}
 
 		&:first-child {

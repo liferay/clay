@@ -23,7 +23,10 @@
 	$padding-x: map-get($map, padding-x);
 	$padding-y: setter(map-get($map, padding-y), 0);
 
-	$lexicon-icon-height: setter(map-get($map, lexicon-icon-height), map-get($map, lexicon-icon-width));
+	$lexicon-icon-height: setter(
+		map-get($map, lexicon-icon-height),
+		map-get($map, lexicon-icon-width)
+	);
 	$lexicon-icon-margin-top: map-get($map, lexicon-icon-margin-top);
 	$lexicon-icon-width: map-get($map, lexicon-icon-width);
 

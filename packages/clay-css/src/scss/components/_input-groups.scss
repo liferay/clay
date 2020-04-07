@@ -99,13 +99,19 @@
 
 .input-group > .input-group-prepend > .form-file .btn,
 .input-group > .input-group-append:not(:last-child) > .form-file .btn,
-.input-group > .input-group-append:last-child > .form-file:not(:last-child) .btn {
+.input-group
+	> .input-group-append:last-child
+	> .form-file:not(:last-child)
+	.btn {
 	@include border-right-radius(0);
 }
 
 .input-group > .input-group-append > .form-file .btn,
 .input-group > .input-group-prepend:not(:first-child) > .form-file .btn,
-.input-group > .input-group-prepend:first-child > .form-file:not(:first-child) .btn {
+.input-group
+	> .input-group-prepend:first-child
+	> .form-file:not(:first-child)
+	.btn {
 	@include border-left-radius(0);
 }
 
@@ -236,7 +242,8 @@
 	border-style: solid;
 	border-top-width: $input-border-top-width;
 	display: flex;
-	margin-bottom: 0; // undo margin-bottom on `<label>`
+	// undo margin-bottom on `<label>`
+	margin-bottom: 0;
 	padding-left: $input-group-inset-item-padding-left;
 	padding-right: $input-group-inset-item-padding-right;
 	transition: $input-transition;
@@ -368,7 +375,9 @@
 			height: 75%;
 
 			.btn {
-				@include clay-button-size($input-group-lg-inset-item-form-file-btn);
+				@include clay-button-size(
+					$input-group-lg-inset-item-form-file-btn
+				);
 			}
 		}
 	}
@@ -435,7 +444,9 @@
 			height: 75%;
 
 			.btn {
-				@include clay-button-size($input-group-sm-inset-item-form-file-btn);
+				@include clay-button-size(
+					$input-group-sm-inset-item-form-file-btn
+				);
 			}
 		}
 	}
@@ -448,13 +459,13 @@
 // Input Group Password
 
 .input-group-password {
-	.form-control[type="text"] ~ .input-group-inset-item {
+	.form-control[type='text'] ~ .input-group-inset-item {
 		.input-password-label {
 			display: none;
 		}
 	}
 
-	.form-control[type="password"] ~ .input-group-inset-item {
+	.form-control[type='password'] ~ .input-group-inset-item {
 		.input-text-label {
 			display: none;
 		}

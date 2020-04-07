@@ -1,4 +1,7 @@
 $clay-reorder-underlay-focus: () !default;
-$clay-reorder-underlay-focus: map-deep-merge((
-	box-shadow: null,
-), $clay-reorder-underlay-focus);
+$clay-reorder-underlay-focus: map-deep-merge(
+	(
+		box-shadow: null,
+	),
+	$clay-reorder-underlay-focus
+);

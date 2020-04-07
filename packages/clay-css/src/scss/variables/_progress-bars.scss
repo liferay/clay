@@ -36,21 +36,24 @@ $progress-bar-warning-bg: $warning !default;
 $progress-group-feedback-warning-color: $progress-bar-warning-bg !default;
 
 $progress-palette: () !default;
-$progress-palette: map-deep-merge((
-	success: (
-		bar-bg: $progress-bar-success-bg,
-		group-feedback-color: $progress-group-feedback-success-color
+$progress-palette: map-deep-merge(
+	(
+		success: (
+			bar-bg: $progress-bar-success-bg,
+			group-feedback-color: $progress-group-feedback-success-color,
+		),
+		info: (
+			bar-bg: $progress-bar-info-bg,
+			group-feedback-color: $progress-group-feedback-info-color,
+		),
+		warning: (
+			bar-bg: $progress-bar-warning-bg,
+			group-feedback-color: $progress-group-feedback-warning-color,
+		),
+		danger: (
+			bar-bg: $progress-bar-danger-bg,
+			group-feedback-color: $progress-group-feedback-danger-color,
+		),
 	),
-	info: (
-		bar-bg: $progress-bar-info-bg,
-		group-feedback-color: $progress-group-feedback-info-color
-	),
-	warning: (
-		bar-bg: $progress-bar-warning-bg,
-		group-feedback-color: $progress-group-feedback-warning-color
-	),
-	danger: (
-		bar-bg: $progress-bar-danger-bg,
-		group-feedback-color: $progress-group-feedback-danger-color
-	)
-), $progress-palette);
+	$progress-palette
+);

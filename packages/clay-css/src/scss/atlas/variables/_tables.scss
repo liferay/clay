@@ -1,6 +1,6 @@
 $table-bg: $white !default;
 $table-accent-bg: $gray-100 !default;
-$table-hover-bg: lighten($component-active-bg, 44.90) !default;
+$table-hover-bg: lighten($component-active-bg, 44.9) !default;
 $table-border-color: $gray-300 !default;
 $table-font-size: 0.875rem !default;
 
@@ -12,14 +12,17 @@ $table-head-color: $gray-600 !default;
 $table-head-font-weight: $font-weight-semi-bold !default;
 
 $table-head-link: () !default;
-$table-head-link: map-deep-merge((
-	border-radius: 1px,
-	color: $gray-600,
-	transition: box-shadow 0.15s ease-in-out,
-	hover-color: $gray-900,
-	focus-box-shadow: $component-focus-box-shadow,
-	focus-outline: 0,
-), $table-head-link);
+$table-head-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: $gray-600,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $gray-900,
+		focus-box-shadow: $component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$table-head-link
+);
 
 $table-divider-bg: $gray-100 !default;
 $table-divider-color: $gray-600 !default;
@@ -36,50 +39,62 @@ $table-quick-action-menu-hover-bg: $table-hover-bg !default;
 // Table Title
 
 $table-title-link: () !default;
-$table-title-link: map-deep-merge((
-	border-radius: 1px,
-	display: inline-block,
-	max-width: 100%,
-	transition: box-shadow 0.15s ease-in-out,
-	focus-box-shadow: $component-focus-box-shadow,
-	focus-outline: 0,
-), $table-title-link);
+$table-title-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		display: inline-block,
+		max-width: 100%,
+		transition: box-shadow 0.15s ease-in-out,
+		focus-box-shadow: $component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$table-title-link
+);
 
 $table-title: () !default;
-$table-title: map-deep-merge((
-	color: $gray-900,
-	font-size: 0.875rem // 14px
-), $table-title);
+$table-title: map-deep-merge(
+	(
+		color: $gray-900,
+		font-size: 0.875rem,
+	),
+	$table-title
+);
 
 // Table Action Link
 
 $table-action-link: () !default;
-$table-action-link: map-deep-merge((
-	color: $gray-600,
-	font-size: 1rem, // 16px
-	transition: $btn-transition,
-	hover-bg: rgba(0, 0, 0, 0.02),
-	hover-color: $gray-900,
-	focus-bg: rgba(0, 0, 0, 0.02),
-	focus-color: $gray-900,
-	focus-box-shadow: $component-focus-box-shadow,
-	focus-outline: 0,
-	active-bg: rgba(0, 0, 0, 0.04),
-), $table-action-link);
+$table-action-link: map-deep-merge(
+	(
+		color: $gray-600,
+		font-size: 1rem,
+		transition: $btn-transition,
+		hover-bg: rgba(0, 0, 0, 0.02),
+		hover-color: $gray-900,
+		focus-bg: rgba(0, 0, 0, 0.02),
+		focus-color: $gray-900,
+		focus-box-shadow: $component-focus-box-shadow,
+		focus-outline: 0,
+		active-bg: rgba(0, 0, 0, 0.04),
+	),
+	$table-action-link
+);
 
 // Table Link
 
 $table-link: () !default;
-$table-link: map-deep-merge((
-	border-radius: 1px,
-	color: $gray-900,
-	display: inline-block,
-	max-width: 100%,
-	transition: box-shadow 0.15s ease-in-out,
-	hover-color: $gray-900,
-	focus-box-shadow: $component-focus-box-shadow,
-	focus-outline: 0,
-), $table-link);
+$table-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: $gray-900,
+		display: inline-block,
+		max-width: 100%,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $gray-900,
+		focus-box-shadow: $component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$table-link
+);
 
 // Table List
 
@@ -101,50 +116,62 @@ $table-list-divider-padding-y: 0.4375rem !default; // 7px
 // Table List Title
 
 $table-list-title: () !default;
-$table-list-title: map-deep-merge((
-	color: $gray-900,
-	font-size: 0.875rem, // 14px
-	line-height: 1.45
-), $table-list-title);
+$table-list-title: map-deep-merge(
+	(
+		color: $gray-900,
+		font-size: 0.875rem,
+		line-height: 1.45,
+	),
+	$table-list-title
+);
 
 $table-list-title-link: () !default;
-$table-list-title-link: map-deep-merge((
-	border-radius: 1px,
-	color: $gray-900,
-	display: inline-block,
-	max-width: 100%,
-	transition: box-shadow 0.15s ease-in-out,
-	hover-color: $gray-900,
-	focus-box-shadow: $component-focus-box-shadow,
-	focus-outline: 0,
-), $table-list-title-link);
+$table-list-title-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: $gray-900,
+		display: inline-block,
+		max-width: 100%,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $gray-900,
+		focus-box-shadow: $component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$table-list-title-link
+);
 
 // Table List Link
 
 $table-list-link: () !default;
-$table-list-link: map-deep-merge((
-	border-radius: 1px,
-	color: $gray-900,
-	display: inline-block,
-	max-width: 100%,
-	transition: box-shadow 0.15s ease-in-out,
-	hover-color: $gray-900,
-	focus-box-shadow: $component-focus-box-shadow,
-	focus-outline: 0,
-), $table-list-link);
+$table-list-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: $gray-900,
+		display: inline-block,
+		max-width: 100%,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $gray-900,
+		focus-box-shadow: $component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$table-list-link
+);
 
 // Table List Action Link
 
 $table-list-action-link: () !default;
-$table-list-action-link: map-deep-merge((
-	color: $gray-600,
-	font-size: 1rem, // 16px
-	transition: $btn-transition,
-	hover-bg: rgba(0, 0, 0, 0.02),
-	hover-color: $gray-900,
-	focus-bg: rgba(0, 0, 0, 0.02),
-	focus-color: $gray-900,
-	focus-box-shadow: $component-focus-box-shadow,
-	focus-outline: 0,
-	active-bg: rgba(0, 0, 0, 0.04),
-), $table-list-action-link);
+$table-list-action-link: map-deep-merge(
+	(
+		color: $gray-600,
+		font-size: 1rem,
+		transition: $btn-transition,
+		hover-bg: rgba(0, 0, 0, 0.02),
+		hover-color: $gray-900,
+		focus-bg: rgba(0, 0, 0, 0.02),
+		focus-color: $gray-900,
+		focus-box-shadow: $component-focus-box-shadow,
+		focus-outline: 0,
+		active-bg: rgba(0, 0, 0, 0.04),
+	),
+	$table-list-action-link
+);

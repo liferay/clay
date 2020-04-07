@@ -22,7 +22,7 @@ $dropdown-caption-color: $gray-600 !default;
 $dropdown-link-color: $gray-600 !default;
 $dropdown-link-font-weight: $font-weight-normal !default;
 $dropdown-link-hover-color: $gray-900 !default;
-$dropdown-link-hover-bg: lighten($component-active-bg, 44.90) !default;
+$dropdown-link-hover-bg: lighten($component-active-bg, 44.9) !default;
 $dropdown-link-active-color: $dropdown-link-hover-color !default;
 $dropdown-link-active-bg: $dropdown-link-hover-bg !default;
 $dropdown-link-active-font-weight: $font-weight-semi-bold !default;
@@ -31,45 +31,61 @@ $dropdown-link-disabled-color: $gray-500 !default;
 $dropdown-item-padding-x: 1.25rem !default; // 20px
 $dropdown-item-padding-y: 0.5rem !default; // 8px
 
+// Weird box-shadow inset with border-radius render in IE https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/12515080/
+
 $dropdown-item-base: () !default;
-$dropdown-item-base: map-deep-merge((
-	font-size: inherit,
-	// Weird box-shadow inset with border-radius render in IE https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/12515080/
-	focus-box-shadow: $component-focus-inset-box-shadow,
-	focus-outline: 0,
-	focus-text-decoration: none,
-	active-class-c-kbd-inline: (
-		color: $dropdown-link-active-color,
+$dropdown-item-base: map-deep-merge(
+	(
+		font-size: inherit,
+		focus-box-shadow: $component-focus-inset-box-shadow,
+		focus-outline: 0,
+		focus-text-decoration: none,
+		active-class-c-kbd-inline: (
+			color: $dropdown-link-active-color,
+		),
+		disabled-box-shadow: none,
+		c-kbd-inline: (
+			color: $gray-500,
+		),
 	),
-	disabled-box-shadow: none,
-	c-kbd-inline: (
-		color: $gray-500,
-	),
-), $dropdown-item-base);
+	$dropdown-item-base
+);
 
 $dropdown-section-custom-control-label: () !default;
-$dropdown-section-custom-control-label: map-deep-merge((
-	color: $secondary,
-), $dropdown-section-custom-control-label);
+$dropdown-section-custom-control-label: map-deep-merge(
+	(
+		color: $secondary,
+	),
+	$dropdown-section-custom-control-label
+);
 
 $dropdown-section-active-custom-control-label: () !default;
-$dropdown-section-active-custom-control-label: map-deep-merge((
-	color: $gray-900,
-), $dropdown-section-active-custom-control-label);
+$dropdown-section-active-custom-control-label: map-deep-merge(
+	(
+		color: $gray-900,
+	),
+	$dropdown-section-active-custom-control-label
+);
 
 $dropdown-section-custom-control-label-text: () !default;
-$dropdown-section-custom-control-label-text: map-deep-merge((
-	padding-left: 1rem,
-), $dropdown-section-custom-control-label-text);
+$dropdown-section-custom-control-label-text: map-deep-merge(
+	(
+		padding-left: 1rem,
+	),
+	$dropdown-section-custom-control-label-text
+);
 
 $dropdown-divider-bg: $dropdown-border-color !default;
 
 // Autocomplete Dropdown Menu
 
 $autocomplete-dropdown-menu: () !default;
-$autocomplete-dropdown-menu: map-deep-merge((
-	max-height: 10rem, // 160px
-), $autocomplete-dropdown-menu);
+$autocomplete-dropdown-menu: map-deep-merge(
+	(
+		max-height: 10rem,
+	),
+	$autocomplete-dropdown-menu
+);
 
 // Dropdown Action
 

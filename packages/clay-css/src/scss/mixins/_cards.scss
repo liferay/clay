@@ -407,33 +407,63 @@
 @mixin clay-card-type-asset($map) {
 	$enabled: setter(map-get($map, enabled), true);
 
-	$aspect-ratio-border-color: setter(map-get($map, aspect-ratio-border-color), $card-border-color);
-	$aspect-ratio-border-style: setter(map-get($map, aspect-ratio-border-style), solid);
+	$aspect-ratio-border-color: setter(
+		map-get($map, aspect-ratio-border-color),
+		$card-border-color
+	);
+	$aspect-ratio-border-style: setter(
+		map-get($map, aspect-ratio-border-style),
+		solid
+	);
 
 	// The Sass map key name `aspect-ratio-border-bottom-width` is deprecated as of v2.5.1 use `aspect-ratio-border-width` instead
-	$aspect-ratio-border-bottom-width: setter(map-get($map, aspect-ratio-border-bottom-width), 0 0 0.0625rem 0); // 0 0 1px 0
+	$aspect-ratio-border-bottom-width: setter(
+		map-get($map, aspect-ratio-border-bottom-width),
+		0 0 0.0625rem 0
+	); // 0 0 1px 0
 
 	$aspect-ratio-border-width: map-get($map, aspect-ratio-border-width);
-	$aspect-ratio-horizontal: setter(map-get($map, aspect-ratio-horizontal), 16);
+	$aspect-ratio-horizontal: setter(
+		map-get($map, aspect-ratio-horizontal),
+		16
+	);
 	$aspect-ratio-vertical: setter(map-get($map, aspect-ratio-vertical), 9);
 
 	$card-body-padding-bottom: map-get($map, card-body-padding-bottom);
 	$card-body-padding-left: map-get($map, card-body-padding-left);
 	$card-body-padding-right: map-get($map, card-body-padding-right);
 	$card-body-padding-top: map-get($map, card-body-padding-top);
-	$card-row-align-items: setter(map-get($map, card-row-align-items), flex-start);
+	$card-row-align-items: setter(
+		map-get($map, card-row-align-items),
+		flex-start
+	);
 
 	$checkbox-cursor: setter(map-get($map, checkbox-cursor), $link-cursor);
 
 	$asset-icon-color: map-get($map, asset-icon-color);
 	$asset-icon-width: setter(map-get($map, asset-icon-width), 22.225%);
-	$asset-icon-sticker-border-radius: setter(map-get($map, asset-icon-sticker-border-radius), 50%);
-	$asset-icon-sticker-font-size: setter(map-get($map, asset-icon-sticker-font-size), 2vw);
+	$asset-icon-sticker-border-radius: setter(
+		map-get($map, asset-icon-sticker-border-radius),
+		50%
+	);
+	$asset-icon-sticker-font-size: setter(
+		map-get($map, asset-icon-sticker-font-size),
+		2vw
+	);
 
-	$dropdown-action-offset-bottom: map-get($map, dropdown-action-offset-bottom);
+	$dropdown-action-offset-bottom: map-get(
+		$map,
+		dropdown-action-offset-bottom
+	);
 	$dropdown-action-offset-left: map-get($map, dropdown-action-offset-left);
-	$dropdown-action-offset-right: setter(map-get($map, dropdown-action-offset-right), -0.5rem); // -8px
-	$dropdown-action-offset-top: setter(map-get($map, dropdown-action-offset-top), -0.1875rem); // -3px
+	$dropdown-action-offset-right: setter(
+		map-get($map, dropdown-action-offset-right),
+		-0.5rem
+	); // -8px
+	$dropdown-action-offset-top: setter(
+		map-get($map, dropdown-action-offset-top),
+		-0.1875rem
+	); // -3px
 
 	@if ($enabled) {
 		.aspect-ratio {
@@ -446,7 +476,10 @@
 				border-width: $aspect-ratio-border-bottom-width;
 			}
 
-			@include clay-aspect-ratio($aspect-ratio-horizontal, $aspect-ratio-vertical);
+			@include clay-aspect-ratio(
+				$aspect-ratio-horizontal,
+				$aspect-ratio-vertical
+			);
 
 			.custom-control label,
 			.form-check-label {
@@ -515,7 +548,7 @@
 /// @example
 /// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
 /// aspect-ratio-bg: {Color | String | Null},
-/// aspect-ratio-checkered-fg: {Color | Null}, // Pass parameter to `clay-bg-checkered` mixin 
+/// aspect-ratio-checkered-fg: {Color | Null}, // Pass parameter to `clay-bg-checkered` mixin
 /// aspect-ratio-checkered-bg: {Color},
 /// asset-icon-color: {Color | String | Null},
 /// asset-icon-max-width: {Number | String | Null},
@@ -539,8 +572,14 @@
 	$asset-icon-min-width: map-get($map, asset-icon-min-width);
 	$asset-icon-width: map-get($map, asset-icon-width);
 
-	$asset-icon-lexicon-icon-height: map-get($map, asset-icon-lexicon-icon-height);
-	$asset-icon-lexicon-icon-width: map-get($map, asset-icon-lexicon-icon-width);
+	$asset-icon-lexicon-icon-height: map-get(
+		$map,
+		asset-icon-lexicon-icon-height
+	);
+	$asset-icon-lexicon-icon-width: map-get(
+		$map,
+		asset-icon-lexicon-icon-width
+	);
 
 	@if ($enabled) {
 		.aspect-ratio {
@@ -596,9 +635,15 @@
 	$sticker-line-height: map-get($map, sticker-line-height);
 	$sticker-size: map-get($map, sticker-size);
 
-	$dropdown-action-offset-bottom: map-get($map, dropdown-action-offset-bottom);
+	$dropdown-action-offset-bottom: map-get(
+		$map,
+		dropdown-action-offset-bottom
+	);
 	$dropdown-action-offset-left: map-get($map, dropdown-action-offset-left);
-	$dropdown-action-offset-right: setter(map-get($map, dropdown-action-offset-right), -0.5rem); // -8px
+	$dropdown-action-offset-right: setter(
+		map-get($map, dropdown-action-offset-right),
+		-0.5rem
+	); // -8px
 	$dropdown-action-offset-top: map-get($map, dropdown-action-offset-top);
 
 	@if ($enabled) {
@@ -619,7 +664,11 @@
 		.sticker {
 			font-size: $sticker-font-size;
 			height: $sticker-size;
-			line-height: if($sticker-line-height, $sticker-line-height, $sticker-size);
+			line-height: if(
+				$sticker-line-height,
+				$sticker-line-height,
+				$sticker-size
+			);
 			width: $sticker-size;
 		}
 	}

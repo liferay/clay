@@ -114,12 +114,21 @@
 
 	.input-group-item {
 		&.focus {
-			box-shadow: setter($input-danger-focus-box-shadow, $input-danger-box-shadow);
+			box-shadow: setter(
+				$input-danger-focus-box-shadow,
+				$input-danger-box-shadow
+			);
 
 			.form-control,
 			.input-group-inset-item {
-				background-color: setter($input-danger-focus-bg, $input-danger-bg);
-				border-color: setter($input-danger-focus-border-color, $input-danger-border-color);
+				background-color: setter(
+					$input-danger-focus-bg,
+					$input-danger-bg
+				);
+				border-color: setter(
+					$input-danger-focus-border-color,
+					$input-danger-border-color
+				);
 			}
 		}
 
@@ -127,8 +136,14 @@
 			box-shadow: none;
 
 			~ .input-group-inset-item {
-				background-color: setter($input-danger-focus-bg, $input-danger-bg);
-				border-color: setter($input-danger-focus-border-color, $input-danger-border-color);
+				background-color: setter(
+					$input-danger-focus-bg,
+					$input-danger-bg
+				);
+				border-color: setter(
+					$input-danger-focus-border-color,
+					$input-danger-border-color
+				);
 			}
 		}
 	}
@@ -186,12 +201,21 @@
 
 	.input-group-item {
 		&.focus {
-			box-shadow: setter($input-warning-focus-box-shadow, $input-warning-box-shadow);
+			box-shadow: setter(
+				$input-warning-focus-box-shadow,
+				$input-warning-box-shadow
+			);
 
 			.form-control,
 			.input-group-inset-item {
-				background-color: setter($input-warning-focus-bg, $input-warning-bg);
-				border-color: setter($input-warning-focus-border-color, $input-warning-border-color);
+				background-color: setter(
+					$input-warning-focus-bg,
+					$input-warning-bg
+				);
+				border-color: setter(
+					$input-warning-focus-border-color,
+					$input-warning-border-color
+				);
 			}
 		}
 
@@ -199,8 +223,14 @@
 			box-shadow: none;
 
 			~ .input-group-inset-item {
-				background-color: setter($input-warning-focus-bg, $input-warning-bg);
-				border-color: setter($input-warning-focus-border-color, $input-warning-border-color);
+				background-color: setter(
+					$input-warning-focus-bg,
+					$input-warning-bg
+				);
+				border-color: setter(
+					$input-warning-focus-border-color,
+					$input-warning-border-color
+				);
 			}
 		}
 	}
@@ -258,12 +288,21 @@
 
 	.input-group-item {
 		&.focus {
-			box-shadow: setter($input-success-focus-box-shadow, $input-success-box-shadow);
+			box-shadow: setter(
+				$input-success-focus-box-shadow,
+				$input-success-box-shadow
+			);
 
 			.form-control,
 			.input-group-inset-item {
-				background-color: setter($input-success-focus-bg, $input-success-bg);
-				border-color: setter($input-success-focus-border-color, $input-success-border-color);
+				background-color: setter(
+					$input-success-focus-bg,
+					$input-success-bg
+				);
+				border-color: setter(
+					$input-success-focus-border-color,
+					$input-success-border-color
+				);
 			}
 		}
 
@@ -271,8 +310,14 @@
 			box-shadow: none;
 
 			~ .input-group-inset-item {
-				background-color: setter($input-success-focus-bg, $input-success-bg);
-				border-color: setter($input-success-focus-border-color, $input-success-border-color);
+				background-color: setter(
+					$input-success-focus-bg,
+					$input-success-bg
+				);
+				border-color: setter(
+					$input-success-focus-border-color,
+					$input-success-border-color
+				);
 			}
 		}
 	}

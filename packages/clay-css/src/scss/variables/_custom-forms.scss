@@ -52,15 +52,19 @@ $custom-control-margin-top: null !default;
 
 /// @deprecated after of v3.5.0 use the Sass map `$custom-control` instead
 
-$custom-control-min-height: $custom-control-indicator-size + ($custom-control-indicator-position-top * 2) !default;
+$custom-control-min-height: $custom-control-indicator-size +
+	($custom-control-indicator-position-top * 2) !default;
 
 $custom-control: () !default;
-$custom-control: map-deep-merge((
-	margin-bottom: $custom-control-margin-bottom,
-	margin-top: $custom-control-margin-top,
-	min-height: $custom-control-min-height,
-	text-align: left,
-), $custom-control);
+$custom-control: map-deep-merge(
+	(
+		margin-bottom: $custom-control-margin-bottom,
+		margin-top: $custom-control-margin-top,
+		min-height: $custom-control-min-height,
+		text-align: left,
+	),
+	$custom-control
+);
 
 // Custom Description
 
@@ -93,35 +97,50 @@ $custom-control-description-disabled-cursor: $disabled-cursor !default;
 $custom-control-description-small-font-size: null !default;
 
 $custom-control-label: () !default;
-$custom-control-label: map-deep-merge((
-	cursor: $custom-control-description-cursor,
-	font-size: $custom-control-description-font-size,
-	font-weight: $custom-control-description-font-weight,
-	line-height: $custom-control-description-line-height,
-	position: static,
-), $custom-control-label);
+$custom-control-label: map-deep-merge(
+	(
+		cursor: $custom-control-description-cursor,
+		font-size: $custom-control-description-font-size,
+		font-weight: $custom-control-description-font-weight,
+		line-height: $custom-control-description-line-height,
+		position: static,
+	),
+	$custom-control-label
+);
 
 $custom-control-label-disabled: () !default;
-$custom-control-label-disabled: map-deep-merge((
-	cursor: $custom-control-description-disabled-cursor,
-), $custom-control-label-disabled);
+$custom-control-label-disabled: map-deep-merge(
+	(
+		cursor: $custom-control-description-disabled-cursor,
+	),
+	$custom-control-label-disabled
+);
 
 $custom-control-label-text: () !default;
-$custom-control-label-text: map-deep-merge((
-	padding-left: $custom-control-description-padding-left,
-), $custom-control-label-text);
+$custom-control-label-text: map-deep-merge(
+	(
+		padding-left: $custom-control-description-padding-left,
+	),
+	$custom-control-label-text
+);
 
 $custom-control-label-text-small: () !default;
-$custom-control-label-text-small: map-deep-merge((
-	font-size: $custom-control-description-small-font-size,
-), $custom-control-label-text-small);
+$custom-control-label-text-small: map-deep-merge(
+	(
+		font-size: $custom-control-description-small-font-size,
+	),
+	$custom-control-label-text-small
+);
 
 // Custom Control Primary
 
 $custom-control-primary-label-text: () !default;
-$custom-control-primary-label-text: map-deep-merge((
-	font-weight: $font-weight-semi-bold,
-), $custom-control-primary-label-text);
+$custom-control-primary-label-text: map-deep-merge(
+	(
+		font-weight: $font-weight-semi-bold,
+	),
+	$custom-control-primary-label-text
+);
 
 // Custom Checkbox
 

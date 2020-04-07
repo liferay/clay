@@ -4,19 +4,28 @@ $sticker-font-weight: $font-weight-bold !default;
 // Sticker Sizes
 
 $sticker-sm: () !default;
-$sticker-sm: map-deep-merge((
-	font-size: 0.75rem, // 12px
-), $sticker-sm);
+$sticker-sm: map-deep-merge(
+	(
+		font-size: 0.75rem,
+	),
+	$sticker-sm
+);
 
 $sticker-lg: () !default;
-$sticker-lg: map-deep-merge((
-	font-size: 1.25rem, // 20px
-), $sticker-lg);
+$sticker-lg: map-deep-merge(
+	(
+		font-size: 1.25rem,
+	),
+	$sticker-lg
+);
 
 $sticker-xl: () !default;
-$sticker-xl: map-deep-merge((
-	font-size: 1.5rem, // 25px
-), $sticker-xl);
+$sticker-xl: map-deep-merge(
+	(
+		font-size: 1.5rem,
+	),
+	$sticker-xl
+);
 
 // Sticker Positions
 
@@ -25,9 +34,12 @@ $sticker-inside-offset: 1rem !default; // 16px
 // Sticker User Icon
 
 $sticker-user-icon: () !default;
-$sticker-user-icon: map-deep-merge((
-	box-shadow: 0 0 0 1px $gray-300,
-), $sticker-user-icon);
+$sticker-user-icon: map-deep-merge(
+	(
+		box-shadow: 0 0 0 1px $gray-300,
+	),
+	$sticker-user-icon
+);
 
 // Sticker Variants
 

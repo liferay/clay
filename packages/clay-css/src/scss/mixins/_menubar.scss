@@ -55,9 +55,15 @@
 	$border-width: map-get($map, border-width);
 	$max-width: setter(map-get($map, max-width), 15.625rem); // 250px
 
-	$border-color-mobile: setter(map-get($map, border-color-mobile), transparent);
+	$border-color-mobile: setter(
+		map-get($map, border-color-mobile),
+		transparent
+	);
 	$border-style-mobile: setter(map-get($map, border-style-mobile), solid);
-	$border-width-mobile: setter(map-get($map, border-width-mobile), 0.0625rem); // 1px
+	$border-width-mobile: setter(
+		map-get($map, border-width-mobile),
+		0.0625rem
+	); // 1px
 	$margin-bottom-mobile: map-get($map, margin-bottom-mobile);
 	$margin-left-mobile: map-get($map, margin-left-mobile);
 	$margin-right-mobile: map-get($map, margin-right-mobile);
@@ -69,32 +75,68 @@
 
 	// .menubar-collapse
 
-	$collapse-border-color-mobile: setter(map-get($map, collapse-border-color-mobile), transparent);
-	$collapse-border-style-mobile: setter(map-get($map, collapse-border-style-mobile), solid);
-	$collapse-border-width-mobile: setter(map-get($map, collapse-border-width-mobile), 0.0625rem); // 1px
-	$collapse-inner-spacer-y-mobile: setter(map-get($map, collapse-inner-spacer-y-mobile), 0.5rem); // 8px
+	$collapse-border-color-mobile: setter(
+		map-get($map, collapse-border-color-mobile),
+		transparent
+	);
+	$collapse-border-style-mobile: setter(
+		map-get($map, collapse-border-style-mobile),
+		solid
+	);
+	$collapse-border-width-mobile: setter(
+		map-get($map, collapse-border-width-mobile),
+		0.0625rem
+	); // 1px
+	$collapse-inner-spacer-y-mobile: setter(
+		map-get($map, collapse-inner-spacer-y-mobile),
+		0.5rem
+	); // 8px
 	$collapse-margin-top-mobile: map-get($map, collapse-margin-top-mobile);
 	$collapse-max-width-mobile: map-get($map, collapse-max-width-mobile);
-	$collapse-left-mobile: setter(map-get($map, collapse-left-mobile), -0.0625rem); // -1px
-	$collapse-right-mobile: setter(map-get($map, collapse-right-mobile), -0.0625rem); // -1px
+	$collapse-left-mobile: setter(
+		map-get($map, collapse-left-mobile),
+		-0.0625rem
+	); // -1px
+	$collapse-right-mobile: setter(
+		map-get($map, collapse-right-mobile),
+		-0.0625rem
+	); // -1px
 	$collapse-z-index-mobile: map-get($map, collapse-z-index-mobile);
 
 	// .menubar-toggler
 
-	$toggler-border-color-mobile: setter(map-get($map, toggler-border-color-mobile), transparent);
-	$toggler-border-style-mobile: setter(map-get($map, toggler-border-style-mobile), solid);
-	$toggler-border-width-mobile: setter(map-get($map, toggler-border-width-mobile), 0.0625rem); // 1px
-	$toggler-height-mobile: setter(map-get($map, toggler-height-mobile), 2rem); // 32px
-	$toggler-padding-x-mobile: setter(map-get($map, toggler-padding-x-mobile), 0.5rem); // 8px
+	$toggler-border-color-mobile: setter(
+		map-get($map, toggler-border-color-mobile),
+		transparent
+	);
+	$toggler-border-style-mobile: setter(
+		map-get($map, toggler-border-style-mobile),
+		solid
+	);
+	$toggler-border-width-mobile: setter(
+		map-get($map, toggler-border-width-mobile),
+		0.0625rem
+	); // 1px
+	$toggler-height-mobile: setter(
+		map-get($map, toggler-height-mobile),
+		2rem
+	); // 32px
+	$toggler-padding-x-mobile: setter(
+		map-get($map, toggler-padding-x-mobile),
+		0.5rem
+	); // 8px
 	$toggler-padding-y-mobile: map-get($map, toggler-padding-y-mobile);
 
 	$toggler-c-inner: setter(map-get($map, toggler-c-inner), ());
-	$toggler-c-inner: map-deep-merge((
-		margin-bottom: math-sign($toggler-padding-y-mobile),
-		margin-left: math-sign($toggler-padding-x-mobile),
-		margin-right: math-sign($toggler-padding-x-mobile),
-		margin-top: math-sign($toggler-padding-y-mobile),
-	), $toggler-c-inner);
+	$toggler-c-inner: map-deep-merge(
+		(
+			margin-bottom: math-sign($toggler-padding-y-mobile),
+			margin-left: math-sign($toggler-padding-x-mobile),
+			margin-right: math-sign($toggler-padding-x-mobile),
+			margin-top: math-sign($toggler-padding-y-mobile),
+		),
+		$toggler-c-inner
+	);
 
 	@if ($enabled) {
 		border-color: $border-color;
@@ -174,8 +216,7 @@
 				}
 			}
 		}
-	}
-	@else {
+	} @else {
 		.menubar-collapse {
 			display: block;
 		}
@@ -280,74 +321,125 @@
 	// `$link-hover-bg` is deprecated use `$link` instead
 	$link-hover-bg: map-get($map, link-hover-bg);
 	// `$link-hover-color` is deprecated use `$link` instead
-	$link-hover-color: setter(map-get($map, link-hover-color), $navbar-light-hover-color);
+	$link-hover-color: setter(
+		map-get($map, link-hover-color),
+		$navbar-light-hover-color
+	);
 	// `$link-active-bg` is deprecated use `$link` instead
 	$link-active-bg: map-get($map, link-active-bg);
 	// `$link-active-color` is deprecated use `$link` instead
-	$link-active-color: setter(map-get($map, link-active-color), $navbar-light-active-color);
+	$link-active-color: setter(
+		map-get($map, link-active-color),
+		$navbar-light-active-color
+	);
 	// `$link-active-font-weight` is deprecated use `$link` instead
 	$link-active-font-weight: map-get($map, link-active-font-weight);
 	// `$link-disabled-bg` is deprecated use `$link` instead
 	$link-disabled-bg: map-get($map, link-disabled-bg);
 	// `$link-disabled-color` is deprecated use `$link` instead
-	$link-disabled-color: setter(map-get($map, link-disabled-color), $navbar-light-disabled-color);
+	$link-disabled-color: setter(
+		map-get($map, link-disabled-color),
+		$navbar-light-disabled-color
+	);
 
 	$link: setter(map-get($map, link), ());
-	$link: map-merge((
-		bg: $link-bg,
-		border-radius: $link-border-radius,
-		color: $link-color,
-		hover-bg: $link-hover-bg,
-		hover-color: $link-hover-color,
-		active-bg: $link-active-bg,
-		active-color: $link-active-color,
-		active-class-font-weight: $link-active-font-weight,
-		disabled-bg: $link-disabled-bg,
-		disabled-color: $link-disabled-color,
-	), $link);
+	$link: map-merge(
+		(
+			bg: $link-bg,
+			border-radius: $link-border-radius,
+			color: $link-color,
+			hover-bg: $link-hover-bg,
+			hover-color: $link-hover-color,
+			active-bg: $link-active-bg,
+			active-color: $link-active-color,
+			active-class-font-weight: $link-active-font-weight,
+			disabled-bg: $link-disabled-bg,
+			disabled-color: $link-disabled-color,
+		),
+		$link
+	);
 
 	// `$link-border-radius-mobile` is deprecated use `$link-mobile` instead
 	$link-border-radius-mobile: map-get($map, link-border-radius-mobile);
 	// `$link-color-mobile` is deprecated use `$link-mobile` instead
-	$link-color-mobile: setter(map-get($map, link-color-mobile), $dropdown-link-color);
+	$link-color-mobile: setter(
+		map-get($map, link-color-mobile),
+		$dropdown-link-color
+	);
 
 	// `$link-hover-bg-mobile` is deprecated use `$link-mobile` instead
-	$link-hover-bg-mobile: setter(map-get($map, link-hover-bg-mobile), $dropdown-link-hover-bg);
+	$link-hover-bg-mobile: setter(
+		map-get($map, link-hover-bg-mobile),
+		$dropdown-link-hover-bg
+	);
 	// `$link-hover-color-mobile` is deprecated use `$link-mobile` instead
-	$link-hover-color-mobile: setter(map-get($map, link-hover-color-mobile), $dropdown-link-hover-color);
+	$link-hover-color-mobile: setter(
+		map-get($map, link-hover-color-mobile),
+		$dropdown-link-hover-color
+	);
 
 	// `$link-active-bg-mobile` is deprecated use `$link-mobile` instead
-	$link-active-bg-mobile: setter(map-get($map, link-active-bg-mobile), $dropdown-link-active-bg);
+	$link-active-bg-mobile: setter(
+		map-get($map, link-active-bg-mobile),
+		$dropdown-link-active-bg
+	);
 	// `$link-active-font-weight-mobile` is deprecated use `$link-mobile` instead
-	$link-active-font-weight-mobile: setter(map-get($map, link-active-font-weight-mobile), $dropdown-link-active-font-weight);
+	$link-active-font-weight-mobile: setter(
+		map-get($map, link-active-font-weight-mobile),
+		$dropdown-link-active-font-weight
+	);
 	// `$link-active-color-mobile` is deprecated use `$link-mobile` instead
-	$link-active-color-mobile: setter(map-get($map, link-active-color-mobile), $dropdown-link-active-color);
+	$link-active-color-mobile: setter(
+		map-get($map, link-active-color-mobile),
+		$dropdown-link-active-color
+	);
 
 	// `$link-disabled-bg-mobile` is deprecated use `$link-mobile` instead
-	$link-disabled-bg-mobile: setter(map-get($map, link-disabled-bg-mobile), transparent);
+	$link-disabled-bg-mobile: setter(
+		map-get($map, link-disabled-bg-mobile),
+		transparent
+	);
 	// `$link-disabled-color-mobile` is deprecated use `$link-mobile` instead
-	$link-disabled-color-mobile: setter(map-get($map, link-disabled-color-mobile), $dropdown-link-disabled-color);
+	$link-disabled-color-mobile: setter(
+		map-get($map, link-disabled-color-mobile),
+		$dropdown-link-disabled-color
+	);
 
 	$link-mobile: setter(map-get($map, link-mobile), ());
-	$link-mobile: map-merge((
-		border-radius: $link-border-radius-mobile,
-		color: $link-color-mobile,
-		hover-bg: $link-hover-bg-mobile,
-		hover-color: $link-hover-color-mobile,
-		active-bg: $link-active-bg-mobile,
-		active-color: $link-active-color-mobile,
-		active-class-font-weight: $link-active-font-weight-mobile,
-		disabled-bg: $link-disabled-bg-mobile,
-		disabled-color: $link-disabled-color-mobile,
-	), $link-mobile);
+	$link-mobile: map-merge(
+		(
+			border-radius: $link-border-radius-mobile,
+			color: $link-color-mobile,
+			hover-bg: $link-hover-bg-mobile,
+			hover-color: $link-hover-color-mobile,
+			active-bg: $link-active-bg-mobile,
+			active-color: $link-active-color-mobile,
+			active-class-font-weight: $link-active-font-weight-mobile,
+			disabled-bg: $link-disabled-bg-mobile,
+			disabled-color: $link-disabled-color-mobile,
+		),
+		$link-mobile
+	);
 
 	// .menubar-collapse
 
-	$collapse-bg-mobile: setter(map-get($map, collapse-bg-mobile), $dropdown-bg);
-	$collapse-border-color-mobile: setter(map-get($map, collapse-border-color-mobile), $dropdown-border-color);
-	$collapse-border-radius-mobile: setter(map-get($map, collapse-border-radius-mobile), $border-radius);
+	$collapse-bg-mobile: setter(
+		map-get($map, collapse-bg-mobile),
+		$dropdown-bg
+	);
+	$collapse-border-color-mobile: setter(
+		map-get($map, collapse-border-color-mobile),
+		$dropdown-border-color
+	);
+	$collapse-border-radius-mobile: setter(
+		map-get($map, collapse-border-radius-mobile),
+		$border-radius
+	);
 	$collapse-border-style-mobile: map-get($map, collapse-border-style-mobile);
-	$collapse-box-shadow-mobile: setter(map-get($map, collapse-box-shadow-mobile), $dropdown-box-shadow);
+	$collapse-box-shadow-mobile: setter(
+		map-get($map, collapse-box-shadow-mobile),
+		$dropdown-box-shadow
+	);
 
 	// .menubar-toggler
 
@@ -356,20 +448,26 @@
 	// `$toggler-border-style-mobile` is deprecated use `$toggler-mobile` instead
 	$toggler-border-style-mobile: map-get($map, toggler-border-style-mobile);
 	// `$toggler-color-mobile` is deprecated use `$toggler-mobile` instead
-	$toggler-color-mobile: setter(map-get($map, toggler-color-mobile), $link-active-color);
+	$toggler-color-mobile: setter(
+		map-get($map, toggler-color-mobile),
+		$link-active-color
+	);
 	// `$toggler-font-size-mobile` is deprecated use `$toggler-mobile` instead
 	$toggler-font-size-mobile: map-get($map, toggler-font-size-mobile);
 	// `$toggler-font-weight-mobile` is deprecated use `$toggler-mobile` instead
 	$toggler-font-weight-mobile: map-get($map, toggler-font-weight-mobile);
 
 	$toggler-mobile: setter(map-get($map, toggler-mobile), ());
-	$toggler-mobile: map-merge((
-		border-color: $toggler-border-color-mobile,
-		border-style: $toggler-border-style-mobile,
-		color: $toggler-color-mobile,
-		font-size: $toggler-font-size-mobile,
-		font-weight: $toggler-font-weight-mobile,
-	), $toggler-mobile);
+	$toggler-mobile: map-merge(
+		(
+			border-color: $toggler-border-color-mobile,
+			border-style: $toggler-border-style-mobile,
+			color: $toggler-color-mobile,
+			font-size: $toggler-font-size-mobile,
+			font-weight: $toggler-font-weight-mobile,
+		),
+		$toggler-mobile
+	);
 
 	background-color: $bg;
 	border-color: $border-color;

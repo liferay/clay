@@ -49,8 +49,7 @@
 				position: absolute;
 				top: 50%;
 				width: $breadcrumb-divider-svg-icon-width;
-			}
-			@else {
+			} @else {
 				font-family: $breadcrumb-divider-font-family;
 				font-weight: $breadcrumb-divider-font-weight;
 				padding-left: 0.4em;

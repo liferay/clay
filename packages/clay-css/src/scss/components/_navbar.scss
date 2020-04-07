@@ -198,7 +198,9 @@
 		$next: breakpoint-next($breakpoint, $grid-breakpoints);
 		$infix: breakpoint-infix($next, $grid-breakpoints);
 
-		&#{$infix} { // .navbar-expand, sm, md, lg, xl
+		// .navbar-expand, sm, md, lg, xl
+
+		&#{$infix} {
 			justify-content: space-between;
 
 			.nav-item,
@@ -228,7 +230,9 @@
 				}
 			}
 
-			@if not ($infix == '') { // .navbar-expand-sm, md, lg, xl
+			// .navbar-expand-sm, md, lg, xl
+
+			@if not($infix == '') {
 				@include media-breakpoint-down($breakpoint) {
 					&.navbar-collapse-absolute {
 						.navbar-collapse {
@@ -273,7 +277,9 @@
 
 						.navbar-nav {
 							.dropdown-toggle .navbar-text-truncate {
-								max-width: calc(100% - #{$navbar-text-truncate-spacer-right});
+								max-width: calc(
+									100% - #{$navbar-text-truncate-spacer-right}
+								);
 							}
 
 							.dropdown-divider {
@@ -309,7 +315,8 @@
 					.show-dropdown-on-collapse {
 						.dropdown-header,
 						.dropdown-item {
-							padding: $nav-link-padding-y $navbar-nav-link-padding-x;
+							padding: $nav-link-padding-y
+								$navbar-nav-link-padding-x;
 						}
 
 						.dropdown-menu {
@@ -339,8 +346,10 @@
 				}
 			}
 
+			// .navbar-expand-sm, md, lg, xl
+
 			@include media-breakpoint-up($next) {
-				@if not ($infix == '') { // .navbar-expand-sm, md, lg, xl
+				@if not($infix == '') {
 					.navbar-brand .navbar-text-truncate {
 						max-width: $navbar-text-truncate-max-width;
 					}
@@ -356,7 +365,8 @@
 						}
 
 						.dropdown-toggle .navbar-text-truncate {
-							max-width: $navbar-text-truncate-max-width - $navbar-text-truncate-spacer-right;
+							max-width: $navbar-text-truncate-max-width -
+								$navbar-text-truncate-spacer-right;
 						}
 					}
 
@@ -443,7 +453,9 @@
 		$next: breakpoint-next($breakpoint, $grid-breakpoints);
 		$infix: breakpoint-infix($next, $grid-breakpoints);
 
-		&#{$infix} { // .navbar-expand, sm, md, lg, xl
+		// .navbar-expand, sm, md, lg, xl
+
+		&#{$infix} {
 			@include media-breakpoint-up($next) {
 				.navbar-nav .nav-link {
 					&.active:after {

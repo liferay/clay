@@ -11,7 +11,12 @@
 /// - Add @example
 /// - Add @link to documentation
 
-@mixin clay-nav-nested($indent: 15px, $nest-level: 15, $nav-class: ".nav", $i: 1) {
+@mixin clay-nav-nested(
+	$indent: 15px,
+	$nest-level: 15,
+	$nav-class: '.nav',
+	$i: 1
+) {
 	@for $i from (1) through $nest-level {
 		#{$nav-class} > li {
 			> a {
@@ -23,6 +28,6 @@
 			}
 		}
 
-		$nav-class: "#{$nav-class} .nav";
+		$nav-class: '#{$nav-class} .nav';
 	}
 }

@@ -3,26 +3,32 @@ $bg-checkered-fg: $gray-300 !default;
 // C Focus Inset
 
 $c-focus-inset-focus: () !default;
-$c-focus-inset-focus: map-deep-merge((
-	box-shadow: $component-focus-inset-box-shadow,
-	border-color: $primary-l1,
-	outline: 0,
-), $c-focus-inset-focus);
+$c-focus-inset-focus: map-deep-merge(
+	(
+		box-shadow: $component-focus-inset-box-shadow,
+		border-color: $primary-l1,
+		outline: 0,
+	),
+	$c-focus-inset-focus
+);
 
 // Close
 
 $close: () !default;
-$close: map-deep-merge((
-	color: $gray-900,
-	opacity: 1,
-	hover-color: $gray-900,
-	hover-opacity: 1,
-	focus-box-shadow: $btn-focus-box-shadow,
-	focus-opacity: 1,
-	focus-outline: 0,
-	disabled-color: $gray-600,
-	disabled-opacity: $btn-disabled-opacity,
-	btn-focus-box-shadow: $btn-focus-box-shadow,
-), $close);
+$close: map-deep-merge(
+	(
+		color: $gray-900,
+		opacity: 1,
+		hover-color: $gray-900,
+		hover-opacity: 1,
+		focus-box-shadow: $btn-focus-box-shadow,
+		focus-opacity: 1,
+		focus-outline: 0,
+		disabled-color: $gray-600,
+		disabled-opacity: $btn-disabled-opacity,
+		btn-focus-box-shadow: $btn-focus-box-shadow,
+	),
+	$close
+);
 
 $page-header-bg: $white !default;
