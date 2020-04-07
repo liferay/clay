@@ -1,10 +1,16 @@
 $clay-time-btn: () !default;
-$clay-time-btn: map-deep-merge((
-	color: $secondary,
-	focus-box-shadow: 0 0 0 1px #80ACFF,
-), $clay-time-btn);
+$clay-time-btn: map-deep-merge(
+	(
+		color: $secondary,
+		focus-box-shadow: 0 0 0 1px #80acff,
+	),
+	$clay-time-btn
+);
 
 $clay-time-inner-spin: () !default;
-$clay-time-inner-spin: map-deep-merge((
-	border-color: $secondary-l2,
-), $clay-time-inner-spin);
+$clay-time-inner-spin: map-deep-merge(
+	(
+		border-color: $secondary-l2,
+	),
+	$clay-time-inner-spin
+);

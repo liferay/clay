@@ -2,7 +2,10 @@
 // @param $bg-color - Color of the highlight
 // @param $color - Colors the text
 
-@mixin clay-highlight-text($bg-color: theme-color-level(warning, -10), $color: $body-color) {
+@mixin clay-highlight-text(
+	$bg-color: theme-color-level(warning, -10),
+	$color: $body-color
+) {
 	background-color: $bg-color;
 	box-decoration-break: clone;
 	box-shadow: -0.25em 0 0 $bg-color;

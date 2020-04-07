@@ -10,10 +10,13 @@ $progress-border-radius-lg: 100px !default;
 // Progress Group
 
 $progress-group-subtitle: () !default;
-$progress-group-subtitle: map-deep-merge((
-	font-size: 0.75rem,
-	font-weight: $font-weight-normal
-), $progress-group-subtitle);
+$progress-group-subtitle: map-deep-merge(
+	(
+		font-size: 0.75rem,
+		font-weight: $font-weight-normal,
+	),
+	$progress-group-subtitle
+);
 
 $progress-group-addon-font-size: 0.875rem !default;
 $progress-group-addon-font-weight: $font-weight-semi-bold !default;

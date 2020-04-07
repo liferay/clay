@@ -6,12 +6,12 @@
 	white-space: normal;
 	word-wrap: break-word;
 
-	@if not ($dropdown-header-padding-y == $dropdown-padding-y) {
+	@if not($dropdown-header-padding-y == $dropdown-padding-y) {
 		padding-bottom: $dropdown-header-padding-y;
 		padding-top: $dropdown-header-padding-y;
 	}
 
-	@if not ($dropdown-header-padding-x == $dropdown-item-padding-x) {
+	@if not($dropdown-header-padding-x == $dropdown-item-padding-x) {
 		padding-left: $dropdown-header-padding-x;
 		padding-right: $dropdown-header-padding-x;
 	}
@@ -229,13 +229,18 @@
 	.dropdown-subheader,
 	.dropdown-caption,
 	.dropdown-item {
-		padding-left: $dropdown-item-padding-x + $dropdown-item-indicator-size + $dropdown-item-indicator-spacer-x;
+		padding-left: $dropdown-item-padding-x + $dropdown-item-indicator-size +
+			$dropdown-item-indicator-spacer-x;
 	}
 
 	@if ($enable-c-inner) {
 		.dropdown-item {
 			.c-inner {
-				margin-left: math-sign($dropdown-item-padding-x + $dropdown-item-indicator-size + $dropdown-item-indicator-spacer-x);
+				margin-left: math-sign(
+					$dropdown-item-padding-x +
+						$dropdown-item-indicator-size +
+						$dropdown-item-indicator-spacer-x
+				);
 			}
 		}
 	}
@@ -258,11 +263,16 @@
 	}
 
 	.dropdown-item {
-		padding-right: $dropdown-item-padding-x + $dropdown-item-indicator-size + $dropdown-item-indicator-spacer-x;
+		padding-right: $dropdown-item-padding-x + $dropdown-item-indicator-size +
+			$dropdown-item-indicator-spacer-x;
 
 		@if ($enable-c-inner) {
 			.c-inner {
-				margin-right: math-sign($dropdown-item-padding-x + $dropdown-item-indicator-size + $dropdown-item-indicator-spacer-x);
+				margin-right: math-sign(
+					$dropdown-item-padding-x +
+						$dropdown-item-indicator-size +
+						$dropdown-item-indicator-spacer-x
+				);
 			}
 		}
 	}
@@ -341,7 +351,7 @@
 	margin-top: 0;
 	right: 100% !important;
 	top: 50% !important;
-	transform: translate(0 , -50%) !important;
+	transform: translate(0, -50%) !important;
 	will-change: auto !important;
 }
 
@@ -374,7 +384,7 @@
 	margin-top: 0;
 	right: auto !important;
 	top: 50% !important;
-	transform: translate(0 , -50%) !important;
+	transform: translate(0, -50%) !important;
 	will-change: auto !important;
 }
 

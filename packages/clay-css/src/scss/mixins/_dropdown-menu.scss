@@ -236,7 +236,10 @@
 	$active-font-weight: map-get($map, active-font-weight);
 	$active-text-decoration: map-get($map, active-text-decoration);
 
-	$active-c-kbd-inline: map-deep-merge((), map-get($map, active-c-kbd-inline));
+	$active-c-kbd-inline: map-deep-merge(
+		(),
+		map-get($map, active-c-kbd-inline)
+	);
 
 	$active-class-bg: map-get($map, active-class-bg);
 	$active-class-border-color: map-get($map, active-class-border-color);
@@ -244,7 +247,10 @@
 	$active-class-font-weight: map-get($map, active-class-font-weight);
 	$active-class-text-decoration: map-get($map, active-class-text-decoration);
 
-	$active-class-c-kbd-inline: map-deep-merge((), map-get($map, active-class-c-kbd-inline));
+	$active-class-c-kbd-inline: map-deep-merge(
+		(),
+		map-get($map, active-class-c-kbd-inline)
+	);
 
 	$disabled-bg: map-get($map, disabled-bg);
 	$disabled-border-color: map-get($map, disabled-border-color);
@@ -256,23 +262,32 @@
 	$disabled-pointer-events: map-get($map, disabled-pointer-events);
 	$disabled-text-decoration: map-get($map, disabled-text-decoration);
 
-	$disabled-c-kbd-inline: map-deep-merge((), map-get($map, disabled-c-kbd-inline));
+	$disabled-c-kbd-inline: map-deep-merge(
+		(),
+		map-get($map, disabled-c-kbd-inline)
+	);
 
-	$disabled-active-pointer-events: map-get($map, disabled-active-pointer-events);
+	$disabled-active-pointer-events: map-get(
+		$map,
+		disabled-active-pointer-events
+	);
 
 	$autofit-row: map-deep-merge((), map-get($map, autofit-row));
 
 	$c-kbd-inline: map-deep-merge((), map-get($map, c-kbd-inline));
 
 	$c-inner: setter(map-get($map, c-inner), ());
-	$c-inner: map-deep-merge((
-		flex-grow: 1,
-		margin-bottom: math-sign($padding-bottom),
-		margin-left: math-sign($padding-left),
-		margin-right: math-sign($padding-right),
-		margin-top: math-sign($padding-top),
-		width: auto,
-	), $c-inner);
+	$c-inner: map-deep-merge(
+		(
+			flex-grow: 1,
+			margin-bottom: math-sign($padding-bottom),
+			margin-left: math-sign($padding-left),
+			margin-right: math-sign($padding-right),
+			margin-top: math-sign($padding-top),
+			width: auto,
+		),
+		$c-inner
+	);
 
 	@if ($enabled) {
 		background-color: $bg; // For `<button>`s set to `transparent` in Bootstrap

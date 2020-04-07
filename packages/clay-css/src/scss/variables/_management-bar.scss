@@ -1,44 +1,53 @@
 $management-bar-base: () !default;
 
 $management-bar-size: () !default;
-$management-bar-size: map-deep-merge((
-	scaling-navbar: true,
-	font-size: $navbar-font-size,
-	height: 4rem,
-	height-mobile: 3rem,
-	border-bottom-width: 0.0625rem,
-	padding-x: 0,
-	padding-y: 0,
-	btn-monospaced-font-size: 1rem,
-	link-height: 2rem,
-	link-height-mobile: 2rem,
-	link-margin-x: 0.5rem,
-	link-margin-x-mobile: 0.25rem,
-	link-padding-x-mobile: 0.25rem,
-	form-control-height-mobile: 2rem,
-	toggler-margin-x: 0.875rem,
-	active-border-bottom-width: 0.25rem,
-	nav-item-dropdown-margin-top: 0
-), $management-bar-size);
+$management-bar-size: map-deep-merge(
+	(
+		scaling-navbar: true,
+		font-size: $navbar-font-size,
+		height: 4rem,
+		height-mobile: 3rem,
+		border-bottom-width: 0.0625rem,
+		padding-x: 0,
+		padding-y: 0,
+		btn-monospaced-font-size: 1rem,
+		link-height: 2rem,
+		link-height-mobile: 2rem,
+		link-margin-x: 0.5rem,
+		link-margin-x-mobile: 0.25rem,
+		link-padding-x-mobile: 0.25rem,
+		form-control-height-mobile: 2rem,
+		toggler-margin-x: 0.875rem,
+		active-border-bottom-width: 0.25rem,
+		nav-item-dropdown-margin-top: 0,
+	),
+	$management-bar-size
+);
 
 $management-bar-light: () !default;
-$management-bar-light: map-deep-merge((
-	bg: $light,
-	link-color: $navbar-light-color,
-	link-hover-color: $navbar-light-hover-color,
-	link-active-color: $navbar-light-active-color,
-	link-disabled-color: $navbar-light-disabled-color,
-	link-disabled-opacity: 1
-), $management-bar-light);
+$management-bar-light: map-deep-merge(
+	(
+		bg: $light,
+		link-color: $navbar-light-color,
+		link-hover-color: $navbar-light-hover-color,
+		link-active-color: $navbar-light-active-color,
+		link-disabled-color: $navbar-light-disabled-color,
+		link-disabled-opacity: 1,
+	),
+	$management-bar-light
+);
 
 $management-bar-primary: () !default;
-$management-bar-primary: map-deep-merge((
-	bg: $primary-l3,
-	border-color: $primary,
-	color: $navbar-light-color,
-	link-color: $navbar-light-color,
-	link-hover-color: $navbar-light-hover-color,
-	link-active-color: $navbar-light-active-color,
-	link-disabled-color: $navbar-light-disabled-color,
-	link-disabled-opacity: 1
-), $management-bar-primary);
+$management-bar-primary: map-deep-merge(
+	(
+		bg: $primary-l3,
+		border-color: $primary,
+		color: $navbar-light-color,
+		link-color: $navbar-light-color,
+		link-hover-color: $navbar-light-hover-color,
+		link-active-color: $navbar-light-active-color,
+		link-disabled-color: $navbar-light-disabled-color,
+		link-disabled-opacity: 1,
+	),
+	$management-bar-primary
+);

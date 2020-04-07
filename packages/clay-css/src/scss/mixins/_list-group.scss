@@ -2,7 +2,7 @@
 /// @group listGroup
 ////
 
-/// A mixin for creating `.list-group-notification .list-group-item` variants. 
+/// A mixin for creating `.list-group-notification .list-group-item` variants.
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
 /// bg: {Color | String | Null}, // Default: $list-group-bg
@@ -30,15 +30,39 @@
 
 @mixin clay-list-group-notification-item-variant($map) {
 	$bg: setter(map-get($map, bg), $list-group-bg);
-	$border-bottom-color: setter(map-get($map, border-bottom-color), $list-group-notification-item-border-bottom-color);
-	$border-left-color: setter(map-get($map, border-left-color), $list-group-notification-item-border-left-color);
-	$border-right-color: setter(map-get($map, border-right-color), $list-group-notification-item-border-right-color);
-	$border-top-color: setter(map-get($map, border-top-color), $list-group-notification-item-border-top-color);
+	$border-bottom-color: setter(
+		map-get($map, border-bottom-color),
+		$list-group-notification-item-border-bottom-color
+	);
+	$border-left-color: setter(
+		map-get($map, border-left-color),
+		$list-group-notification-item-border-left-color
+	);
+	$border-right-color: setter(
+		map-get($map, border-right-color),
+		$list-group-notification-item-border-right-color
+	);
+	$border-top-color: setter(
+		map-get($map, border-top-color),
+		$list-group-notification-item-border-top-color
+	);
 
-	$border-bottom-width: setter(map-get($map, border-bottom-width), $list-group-notification-item-border-bottom-width);
-	$border-left-width: setter(map-get($map, border-left-width), $list-group-notification-item-border-left-width);
-	$border-right-width: setter(map-get($map, border-right-width), $list-group-notification-item-border-right-width);
-	$border-top-width: setter(map-get($map, border-top-width), $list-group-notification-item-border-top-width);
+	$border-bottom-width: setter(
+		map-get($map, border-bottom-width),
+		$list-group-notification-item-border-bottom-width
+	);
+	$border-left-width: setter(
+		map-get($map, border-left-width),
+		$list-group-notification-item-border-left-width
+	);
+	$border-right-width: setter(
+		map-get($map, border-right-width),
+		$list-group-notification-item-border-right-width
+	);
+	$border-top-width: setter(
+		map-get($map, border-top-width),
+		$list-group-notification-item-border-top-width
+	);
 
 	$border-bottom-left-radius: map-get($map, border-bottom-left-radius);
 	$border-bottom-right-radius: map-get($map, border-bottom-right-radius);
@@ -48,10 +72,22 @@
 	$color: map-get($map, color);
 
 	$active-bg: setter(map-get($map, active-bg), $list-group-active-bg);
-	$active-border-bottom-color: setter(map-get($map, active-border-bottom-color), $list-group-notification-item-active-border-bottom-color);
-	$active-border-left-color: setter(map-get($map, active-border-left-color), $list-group-notification-item-active-border-left-color);
-	$active-border-right-color: setter(map-get($map, active-border-right-color), $list-group-notification-item-active-border-right-color);
-	$active-border-top-color: setter(map-get($map, active-border-top-color), $list-group-notification-item-active-border-top-color);
+	$active-border-bottom-color: setter(
+		map-get($map, active-border-bottom-color),
+		$list-group-notification-item-active-border-bottom-color
+	);
+	$active-border-left-color: setter(
+		map-get($map, active-border-left-color),
+		$list-group-notification-item-active-border-left-color
+	);
+	$active-border-right-color: setter(
+		map-get($map, active-border-right-color),
+		$list-group-notification-item-active-border-right-color
+	);
+	$active-border-top-color: setter(
+		map-get($map, active-border-top-color),
+		$list-group-notification-item-active-border-top-color
+	);
 
 	// Box shadows are used for borders, determined by border variables above
 
@@ -74,11 +110,13 @@
 		border-top-right-radius: $border-top-right-radius;
 	}
 
-	box-shadow: $box-shadow-left, $box-shadow-right, $box-shadow-top, $box-shadow-bottom;
+	box-shadow: $box-shadow-left, $box-shadow-right, $box-shadow-top,
+		$box-shadow-bottom;
 	color: $color;
 
 	&.active {
 		background-color: $active-bg;
-		box-shadow: $active-box-shadow-left, $active-box-shadow-right, $active-box-shadow-top, $active-box-shadow-bottom;
+		box-shadow: $active-box-shadow-left, $active-box-shadow-right,
+			$active-box-shadow-top, $active-box-shadow-bottom;
 	}
 }

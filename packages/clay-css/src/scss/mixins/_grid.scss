@@ -13,7 +13,7 @@
 		margin-right: 0;
 
 		> .col,
-		> [class*="col-"] {
+		> [class*='col-'] {
 			padding-right: 0;
 			padding-left: 0;
 		}
@@ -46,25 +46,31 @@
 	$breakpoint-up: map-get($map, breakpoint-up);
 	$breakpoint-down: setter(clay-breakpoint-prev($breakpoint-up), null);
 
-	$base: map-merge((
-		background-color: map-get($map, bg),
-		background-image: map-get($map, bg-image),
-		background-position: map-get($map, bg-position),
-		background-size: map-get($map, bg-size),
-	), $map);
+	$base: map-merge(
+		(
+			background-color: map-get($map, bg),
+			background-image: map-get($map, bg-image),
+			background-position: map-get($map, bg-position),
+			background-size: map-get($map, bg-size),
+		),
+		$map
+	);
 
 	$mobile: setter(map-get($map, mobile), ());
-	$mobile: map-merge((
-		padding-bottom: map-get($map, padding-bottom-mobile),
-		padding-left: map-get($map, padding-left-mobile),
-		padding-right: map-get($map, padding-right-mobile),
-		padding-top: map-get($map, padding-top-mobile),
-	), $mobile);
+	$mobile: map-merge(
+		(
+			padding-bottom: map-get($map, padding-bottom-mobile),
+			padding-left: map-get($map, padding-left-mobile),
+			padding-right: map-get($map, padding-right-mobile),
+			padding-top: map-get($map, padding-top-mobile),
+		),
+		$mobile
+	);
 
 	@if ($enabled) {
 		@include clay-css($base);
 
-		@if($breakpoint-down) {
+		@if ($breakpoint-down) {
 			@include media-breakpoint-down($breakpoint-down) {
 				@include clay-css($mobile);
 			}
@@ -85,9 +91,12 @@
 }
 
 @mixin clay-custom-grid-columns($map) {
-	$custom-grid-props: map-merge((
-		enabled: $enable-grid-classes
-	), $map);
+	$custom-grid-props: map-merge(
+		(
+			enabled: $enable-grid-classes,
+		),
+		$map
+	);
 
 	$enabled: map-get($custom-grid-props, enabled);
 
@@ -98,7 +107,10 @@
 		max-width: map-get(map-get($custom-grid-props, base), max-width);
 		min-width: map-get(map-get($custom-grid-props, base), min-width);
 		padding-left: map-get(map-get($custom-grid-props, base), padding-left);
-		padding-right: map-get(map-get($custom-grid-props, base), padding-right);
+		padding-right: map-get(
+			map-get($custom-grid-props, base),
+			padding-right
+		);
 		position: relative;
 		width: 100%;
 
@@ -107,11 +119,26 @@
 
 			@if ($next) {
 				@media (min-width: map-get(map-get($custom-grid-props, $next), breakpoint)) {
-					flex-basis: map-get(map-get($custom-grid-props, $next), flex-basis);
-					max-width: map-get(map-get($custom-grid-props, $next), max-width);
-					min-width: map-get(map-get($custom-grid-props, $next), min-width);
-					padding-left: map-get(map-get($custom-grid-props, $next), padding-left);
-					padding-right: map-get(map-get($custom-grid-props, $next), padding-right);
+					flex-basis: map-get(
+						map-get($custom-grid-props, $next),
+						flex-basis
+					);
+					max-width: map-get(
+						map-get($custom-grid-props, $next),
+						max-width
+					);
+					min-width: map-get(
+						map-get($custom-grid-props, $next),
+						min-width
+					);
+					padding-left: map-get(
+						map-get($custom-grid-props, $next),
+						padding-left
+					);
+					padding-right: map-get(
+						map-get($custom-grid-props, $next),
+						padding-right
+					);
 				}
 			}
 		}

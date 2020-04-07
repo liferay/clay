@@ -45,16 +45,21 @@ $sheet-footer-margin-right-mobile: null !default;
 $sheet-footer-margin-top-mobile: null !default;
 
 $sheet-footer-btn-block-sm-down: () !default;
-$sheet-footer-btn-block-sm-down: map-deep-merge((
-	breakpoint-down: sm,
-	btn-margin-bottom-mobile: 1rem
-), $sheet-footer-btn-block-sm-down);
+$sheet-footer-btn-block-sm-down: map-deep-merge(
+	(
+		breakpoint-down: sm,
+		btn-margin-bottom-mobile: 1rem,
+	),
+	$sheet-footer-btn-block-sm-down
+);
 
 // Sheet Sizes
 
 /// @deprecated as of 3.x.
 
-$sheet-lg-max-width: ceil(map-get($container-max-widths, lg) * 0.83333) !default; // 800px
+$sheet-lg-max-width: ceil(
+	map-get($container-max-widths, lg) * 0.83333
+) !default; // 800px
 
 // Sheet Title
 
@@ -95,18 +100,26 @@ $sheet-subtitle-link-hover-color: null !default;
 $sheet-subtitle-link-hover-text-decoration: none !default;
 
 $sheet-subtitle-link: () !default;
-$sheet-subtitle-link: map-deep-merge((
-	color: $sheet-subtitle-link-color,
-	text-decoration: $sheet-subtitle-link-text-decoration,
-	hover-color: $sheet-subtitle-link-hover-color,
-	hover-text-decoration: $sheet-subtitle-link-hover-text-decoration,
-), $sheet-subtitle-link);
+$sheet-subtitle-link: map-deep-merge(
+	(
+		color: $sheet-subtitle-link-color,
+		text-decoration: $sheet-subtitle-link-text-decoration,
+		hover-color: $sheet-subtitle-link-hover-color,
+		hover-text-decoration: $sheet-subtitle-link-hover-text-decoration,
+	),
+	$sheet-subtitle-link
+);
 
 $sheet-subtitle-collapse-icon-font-size: null !default;
 $sheet-subtitle-collapse-icon-bottom: null !default;
 $sheet-subtitle-collapse-icon-left: null !default;
 $sheet-subtitle-collapse-icon-right: null !default;
-$sheet-subtitle-collapse-icon-top: clay-collapse-icon-align($sheet-subtitle-padding-y, 0, 1em, $sheet-subtitle-line-height) !default;
+$sheet-subtitle-collapse-icon-top: clay-collapse-icon-align(
+	$sheet-subtitle-padding-y,
+	0,
+	1em,
+	$sheet-subtitle-line-height
+) !default;
 
 $sheet-subtitle-collapse-icon-padding-left: null !default;
 $sheet-subtitle-collapse-icon-padding-right: null !default;

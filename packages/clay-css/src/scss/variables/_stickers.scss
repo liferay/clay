@@ -12,22 +12,31 @@ $sticker-inline-item-font-size: null !default;
 // Sticker Sizes
 
 $sticker-sm: () !default;
-$sticker-sm: map-deep-merge((
-	font-size: 0.75rem,
-	size: 1.5rem
-), $sticker-sm);
+$sticker-sm: map-deep-merge(
+	(
+		font-size: 0.75rem,
+		size: 1.5rem,
+	),
+	$sticker-sm
+);
 
 $sticker-lg: () !default;
-$sticker-lg: map-deep-merge((
-	font-size: 1.125rem,
-	size: 2.5rem
-), $sticker-lg);
+$sticker-lg: map-deep-merge(
+	(
+		font-size: 1.125rem,
+		size: 2.5rem,
+	),
+	$sticker-lg
+);
 
 $sticker-xl: () !default;
-$sticker-xl: map-deep-merge((
-	font-size: 1.25rem,
-	size: 3rem
-), $sticker-xl);
+$sticker-xl: map-deep-merge(
+	(
+		font-size: 1.25rem,
+		size: 3rem,
+	),
+	$sticker-xl
+);
 
 // Sticker Positions
 
@@ -41,11 +50,14 @@ $sticker-circle-border-radius: $rounded-circle-border-radius !default;
 // Sticker User Icon
 
 $sticker-user-icon: () !default;
-$sticker-user-icon: map-deep-merge((
-	bg: $white,
-	border-radius: $rounded-circle-border-radius,
-	box-shadow: 0 0 0 1px rgba($black, 0.125),
-), $sticker-user-icon);
+$sticker-user-icon: map-deep-merge(
+	(
+		bg: $white,
+		border-radius: $rounded-circle-border-radius,
+		box-shadow: 0 0 0 1px rgba($black, 0.125),
+	),
+	$sticker-user-icon
+);
 
 // Sticker Variants
 
@@ -82,45 +94,48 @@ $sticker-dark-border-color: null !default;
 $sticker-dark-color: color-yiq($sticker-dark-bg) !default;
 
 $sticker-palette: () !default;
-$sticker-palette: map-deep-merge((
-	primary: (
-		bg: $sticker-primary-bg,
-		border-color: $sticker-primary-border-color,
-		color: $sticker-primary-color
+$sticker-palette: map-deep-merge(
+	(
+		primary: (
+			bg: $sticker-primary-bg,
+			border-color: $sticker-primary-border-color,
+			color: $sticker-primary-color,
+		),
+		secondary: (
+			bg: $sticker-secondary-bg,
+			border-color: $sticker-secondary-border-color,
+			color: $sticker-secondary-color,
+		),
+		success: (
+			bg: $sticker-success-bg,
+			border-color: $sticker-success-border-color,
+			color: $sticker-success-color,
+		),
+		info: (
+			bg: $sticker-info-bg,
+			border-color: $sticker-info-border-color,
+			color: $sticker-info-color,
+		),
+		warning: (
+			bg: $sticker-warning-bg,
+			border-color: $sticker-warning-border-color,
+			color: $sticker-warning-color,
+		),
+		danger: (
+			bg: $sticker-danger-bg,
+			border-color: $sticker-danger-border-color,
+			color: $sticker-danger-color,
+		),
+		light: (
+			bg: $sticker-light-bg,
+			border-color: $sticker-light-border-color,
+			color: $sticker-light-color,
+		),
+		dark: (
+			bg: $sticker-dark-bg,
+			border-color: $sticker-dark-border-color,
+			color: $sticker-dark-color,
+		),
 	),
-	secondary: (
-		bg: $sticker-secondary-bg,
-		border-color: $sticker-secondary-border-color,
-		color: $sticker-secondary-color
-	),
-	success: (
-		bg: $sticker-success-bg,
-		border-color: $sticker-success-border-color,
-		color: $sticker-success-color
-	),
-	info: (
-		bg: $sticker-info-bg,
-		border-color: $sticker-info-border-color,
-		color: $sticker-info-color
-	),
-	warning: (
-		bg: $sticker-warning-bg,
-		border-color: $sticker-warning-border-color,
-		color: $sticker-warning-color
-	),
-	danger: (
-		bg: $sticker-danger-bg,
-		border-color: $sticker-danger-border-color,
-		color: $sticker-danger-color
-	),
-	light: (
-		bg: $sticker-light-bg,
-		border-color: $sticker-light-border-color,
-		color: $sticker-light-color
-	),
-	dark: (
-		bg: $sticker-dark-bg,
-		border-color: $sticker-dark-border-color,
-		color: $sticker-dark-color
-	)
-), $sticker-palette);
+	$sticker-palette
+);

@@ -1,14 +1,14 @@
 // INSERT CUSTOM BASE VARS
 
-@import "functions/_global-functions";
+@import 'functions/_global-functions';
 
-@import "variables/_bs4-variable-overwrites";
+@import 'variables/_bs4-variable-overwrites';
 
-@import "bootstrap/_functions";
-@import "bootstrap/_variables";
-@import "bootstrap/_mixins";
+@import 'bootstrap/_functions';
+@import 'bootstrap/_variables';
+@import 'bootstrap/_mixins';
 
-@import "_variables";
-@import "_mixins";
+@import '_variables';
+@import '_mixins';
 
 // INSERT CUSTOM VARS

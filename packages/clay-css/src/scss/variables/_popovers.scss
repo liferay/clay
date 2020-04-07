@@ -21,4 +21,6 @@ $popover-header-font-weight: $font-weight-semi-bold !default;
 $popover-header-margin-x: null !default;
 $popover-header-margin-y: null !default;
 
-$popover-offset-border-width: calc(#{$popover-border-radius} - #{$popover-border-width}) !default;
+$popover-offset-border-width: calc(
+	#{$popover-border-radius} - #{$popover-border-width}
+) !default;

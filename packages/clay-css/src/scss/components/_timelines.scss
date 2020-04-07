@@ -150,7 +150,11 @@
 }
 
 .timeline-spacing-xl {
-	@include clay-timeline-spacing($timeline-outer-spacing-xl, $timeline-inner-spacing-xl, $timeline-item-padding-y-xl);
+	@include clay-timeline-spacing(
+		$timeline-outer-spacing-xl,
+		$timeline-inner-spacing-xl,
+		$timeline-item-padding-y-xl
+	);
 
 	.timeline-increment-text {
 		max-width: $timeline-inner-spacing-xl + $timeline-outer-spacing-xl;

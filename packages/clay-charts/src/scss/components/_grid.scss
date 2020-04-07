@@ -1,16 +1,17 @@
 .bb-grid {
-  line {
-    stroke: rgb(229, 229, 235);
-    stroke-width: 0.5px;
-  }
+	line {
+		stroke: rgb(229, 229, 235);
+		stroke-width: 0.5px;
+	}
 
-  text {
-    fill: #aaa;
-  }
+	text {
+		fill: #aaa;
+	}
 }
 
-.bb-xgrid, .bb-ygrid {
-
+.bb-xgrid,
+.bb-ygrid {
 }
 
-.bb-xgrid-focus {}
+.bb-xgrid-focus {
+}

@@ -1,56 +1,80 @@
 $clay-reorder: () !default;
-$clay-reorder: map-deep-merge((
-	padding: 2px,
-	position: relative,
-	z-index: 0,
-), $clay-reorder);
+$clay-reorder: map-deep-merge(
+	(
+		padding: 2px,
+		position: relative,
+		z-index: 0,
+	),
+	$clay-reorder
+);
 
 $clay-reorder-input-inset: () !default;
-$clay-reorder-input-inset: map-deep-merge((
-	margin-bottom: 0,
-	margin-top: 0,
-	overflow: auto,
-	padding-bottom: $input-padding-y,
-	padding-top: $input-padding-y,
-	focus: (
-		background-color: transparent,
-		box-shadow: none,
+$clay-reorder-input-inset: map-deep-merge(
+	(
+		margin-bottom: 0,
+		margin-top: 0,
+		overflow: auto,
+		padding-bottom: $input-padding-y,
+		padding-top: $input-padding-y,
+		focus: (
+			background-color: transparent,
+			box-shadow: none,
+		),
 	),
-), $clay-reorder-input-inset);
+	$clay-reorder-input-inset
+);
 
 $clay-reorder-underlay: () !default;
-$clay-reorder-underlay: map-deep-merge((
-	bottom: 0,
-	left: 0,
-	position: absolute,
-	right: 0,
-	top: 0,
-	z-index: -1,
-), $clay-reorder-underlay);
+$clay-reorder-underlay: map-deep-merge(
+	(
+		bottom: 0,
+		left: 0,
+		position: absolute,
+		right: 0,
+		top: 0,
+		z-index: -1,
+	),
+	$clay-reorder-underlay
+);
 
 $clay-reorder-underlay-focus: () !default;
-$clay-reorder-underlay-focus: map-deep-merge((
-	background-color: $input-focus-bg,
-	border-color: $input-focus-border-color,
-	box-shadow: $input-focus-box-shadow,
-), $clay-reorder-underlay-focus);
+$clay-reorder-underlay-focus: map-deep-merge(
+	(
+		background-color: $input-focus-bg,
+		border-color: $input-focus-border-color,
+		box-shadow: $input-focus-box-shadow,
+	),
+	$clay-reorder-underlay-focus
+);
 
 $clay-reorder-footer: () !default;
-$clay-reorder-footer: map-deep-merge((
-	padding: 0.5rem,
-), $clay-reorder-footer);
+$clay-reorder-footer: map-deep-merge(
+	(
+		padding: 0.5rem,
+	),
+	$clay-reorder-footer
+);
 
 $clay-reorder-footer-invisible: () !default;
-$clay-reorder-footer-invisible: map-deep-merge((
-	visibility: hidden,
-), $clay-reorder-footer-invisible);
+$clay-reorder-footer-invisible: map-deep-merge(
+	(
+		visibility: hidden,
+	),
+	$clay-reorder-footer-invisible
+);
 
 $clay-reorder-footer-center: () !default;
-$clay-reorder-footer-center: map-deep-merge((
-	text-align: center,
-), $clay-reorder-footer-center);
+$clay-reorder-footer-center: map-deep-merge(
+	(
+		text-align: center,
+	),
+	$clay-reorder-footer-center
+);
 
 $clay-reorder-footer-end: () !default;
-$clay-reorder-footer-end: map-deep-merge((
-	text-align: right,
-), $clay-reorder-footer-end);
+$clay-reorder-footer-end: map-deep-merge(
+	(
+		text-align: right,
+	),
+	$clay-reorder-footer-end
+);

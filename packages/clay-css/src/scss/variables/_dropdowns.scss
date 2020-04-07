@@ -46,39 +46,45 @@ $dropdown-item-indicator-size: 1rem !default;
 $dropdown-item-indicator-spacer-x: 1rem !default;
 
 $dropdown-item-base: () !default;
-$dropdown-item-base: map-deep-merge((
-	border-radius: 0,
-	display: block,
-	overflow: hidden,
-	padding-bottom: $dropdown-item-padding-y,
-	padding-left: $dropdown-item-padding-x,
-	padding-right: $dropdown-item-padding-x,
-	padding-top: $dropdown-item-padding-y,
-	position: relative,
-	transition: none,
-	white-space: normal,
-	word-wrap: break-word,
-	hover-text-decoration: none,
-	active-color: $dropdown-link-active-color,
-	active-class-font-weight: $dropdown-link-active-font-weight,
-	disabled-color: $dropdown-link-disabled-color,
-	disabled-cursor: $dropdown-item-disabled-cursor,
-	disabled-opacity: 1,
-	disabled-outline: 0,
-	disabled-pointer-events: auto,
-	disabled-active-pointer-events: none,
-	disabled-c-kbd-inline: (
-		color: $dropdown-link-disabled-color,
+$dropdown-item-base: map-deep-merge(
+	(
+		border-radius: 0,
+		display: block,
+		overflow: hidden,
+		padding-bottom: $dropdown-item-padding-y,
+		padding-left: $dropdown-item-padding-x,
+		padding-right: $dropdown-item-padding-x,
+		padding-top: $dropdown-item-padding-y,
+		position: relative,
+		transition: none,
+		white-space: normal,
+		word-wrap: break-word,
+		hover-text-decoration: none,
+		active-color: $dropdown-link-active-color,
+		active-class-font-weight: $dropdown-link-active-font-weight,
+		disabled-color: $dropdown-link-disabled-color,
+		disabled-cursor: $dropdown-item-disabled-cursor,
+		disabled-opacity: 1,
+		disabled-outline: 0,
+		disabled-pointer-events: auto,
+		disabled-active-pointer-events: none,
+		disabled-c-kbd-inline: (
+			color: $dropdown-link-disabled-color,
+		),
+		c-kbd-inline: (
+			line-height: $dropdown-font-size * $line-height-base,
+		),
 	),
-	c-kbd-inline: (
-		line-height: $dropdown-font-size * $line-height-base,
-	),
-), $dropdown-item-base);
+	$dropdown-item-base
+);
 
 $dropdown-section-custom-control: () !default;
-$dropdown-section-custom-control: map-deep-merge((
-	margin-bottom: 0,
-), $dropdown-section-custom-control);
+$dropdown-section-custom-control: map-deep-merge(
+	(
+		margin-bottom: 0,
+	),
+	$dropdown-section-custom-control
+);
 
 $dropdown-section-custom-control-label: () !default;
 
@@ -89,11 +95,14 @@ $dropdown-section-active-custom-control-label: () !default;
 // Autocomplete Dropdown Menu
 
 $autocomplete-dropdown-menu: () !default;
-$autocomplete-dropdown-menu: map-deep-merge((
-	max-height: calc(9rem + 2px),
-	max-width: none,
-	width: 100%,
-), $autocomplete-dropdown-menu);
+$autocomplete-dropdown-menu: map-deep-merge(
+	(
+		max-height: calc(9rem + 2px),
+		max-width: none,
+		width: 100%,
+	),
+	$autocomplete-dropdown-menu
+);
 
 // Dropdown Action
 

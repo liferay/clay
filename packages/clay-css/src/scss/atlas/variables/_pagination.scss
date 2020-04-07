@@ -50,11 +50,14 @@ $pagination-disabled-color: $gray-600 !default;
 $pagination-disabled-opacity: 0.5 !default;
 
 $pagination-link-focus: () !default;
-$pagination-link-focus: map-deep-merge((
-	bg: $pagination-hover-bg,
-	border-color: $pagination-hover-border-color,
-	color: $pagination-hover-color,
-), $pagination-link-focus);
+$pagination-link-focus: map-deep-merge(
+	(
+		bg: $pagination-hover-bg,
+		border-color: $pagination-hover-border-color,
+		color: $pagination-hover-color,
+	),
+	$pagination-link-focus
+);
 
 // Pagination Dropdown Menu
 
@@ -63,11 +66,14 @@ $pagination-dropdown-menu-spacer-y: 0.625rem !default; // 10px
 // Pagination Items Per Page Link
 
 $pagination-items-per-page-link-focus: () !default;
-$pagination-items-per-page-link-focus: map-deep-merge((
-	bg: map-get($pagination-link-focus, bg),
-	border-color: map-get($pagination-link-focus, border-color),
-	color: map-get($pagination-link-focus, color),
-), $pagination-items-per-page-link-focus);
+$pagination-items-per-page-link-focus: map-deep-merge(
+	(
+		bg: map-get($pagination-link-focus, bg),
+		border-color: map-get($pagination-link-focus, border-color),
+		color: map-get($pagination-link-focus, color),
+	),
+	$pagination-items-per-page-link-focus
+);
 
 // Pagination Results
 
