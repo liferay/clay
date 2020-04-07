@@ -1,5 +1,5 @@
 ---
-title: 'Text Input Autocomplete'
+title: 'Input Autocomplete'
 description: 'An autocomplete text field is an input that offers the user text suggestions while they type.'
 ---
 
