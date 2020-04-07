@@ -1,5 +1,5 @@
 ---
-title: 'Base Navbar'
+title: 'Navbar'
 ---
 
 <div class="nav-toc-absolute">

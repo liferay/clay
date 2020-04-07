@@ -23,6 +23,7 @@ module.exports = ({actions, stage}) => {
 		module,
 		resolve: {
 			alias: {
+				'$clayui.com': path.resolve(__dirname, '..'),
 				$components: path.resolve(__dirname, '../src/components'),
 			},
 			mainFields: ['ts:main', 'module', 'main'],
