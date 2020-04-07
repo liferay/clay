@@ -1,5 +1,5 @@
 ---
-title: 'Text Input'
+title: 'Input'
 description: 'This section demonstrates the different text input types, including usage and validation states.'
 ---
 

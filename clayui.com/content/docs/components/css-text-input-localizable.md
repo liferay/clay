@@ -1,5 +1,5 @@
 ---
-title: 'Text Input Localizable'
+title: 'Input Localizable'
 description: 'A text input variation used in fields that can be translated into multiple languages.'
 ---
 
