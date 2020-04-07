@@ -11,16 +11,14 @@ import ClayLabel from '@clayui/label';
 import ClayManagementToolbar, {
 	ClayResultsBar,
 } from '@clayui/management-toolbar';
-import React, {useState} from 'react';
+import React from 'react';
 
 import Editor from '../Editor';
-
-const spritemap = '/images/icons/icons.svg';
 
 const minimalManagementToolbarImportsCode = `import {ClayButtonWithIcon} from '@clayui/button';
 import {ClayInput} from '@clayui/form';
 import ClayManagementToolbar from '@clayui/management-toolbar';
-import React from 'react';`;
+`;
 
 const MinimalManagementToolbarCode = `const Component = () => {
 	return (
@@ -85,7 +83,6 @@ export const MinimalManagementToolbar = () => {
 		ClayIcon,
 		ClayInput,
 		ClayManagementToolbar,
-		spritemap,
 	};
 
 	return (
@@ -101,7 +98,7 @@ const resultsBarImportsCode = `import ClayButton from '@clayui/button';
 import ClayManagementToolbar, {
 	ClayResultsBar,
 } from '@clayui/management-toolbar';
-import React from 'react';`;
+`;
 
 const ResultsBarCode = `const Component = () => (
 		<ClayManagementToolbar>
@@ -144,7 +141,6 @@ export const ResultsBar = () => {
 		ClayLabel,
 		ClayManagementToolbar,
 		ClayResultsBar,
-		spritemap,
 	};
 
 	return (
@@ -164,7 +160,7 @@ import ClayLabel from '@clayui/label';
 import ClayManagementToolbar, {
 	ClayResultsBar,
 } from '@clayui/management-toolbar';
-import React, {useState} from 'react';`;
+`;
 
 const ManagementToolbarCode = `const Component = () => {
 	const filterItems = [
@@ -191,7 +187,7 @@ const ManagementToolbarCode = `const Component = () => {
 		},
 	];
 
-	const [searchMobile, setSearchMobile] = useState(false);
+	const [searchMobile, setSearchMobile] = React.useState(false);
 
 	const viewTypeActive = viewTypes.find(type => type.active);
 
@@ -378,8 +374,6 @@ export const ManagementToolbar = () => {
 		ClayLabel,
 		ClayManagementToolbar,
 		ClayResultsBar,
-		spritemap,
-		useState,
 	};
 
 	return (

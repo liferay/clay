@@ -8,10 +8,8 @@ import React from 'react';
 
 import Editor from '../Editor';
 
-const spritemap = '/images/icons/icons.svg';
-
 const iconImportsCode = `import ClayIcon from '@clayui/icon';
-import React from 'react';`;
+`;
 
 const IconCode = `const Component = () => {
 	return (
@@ -22,14 +20,14 @@ const IconCode = `const Component = () => {
 render(<Component />)`;
 
 export const Icon = () => {
-	const scope = {ClayIcon, spritemap};
+	const scope = {ClayIcon};
 	const code = IconCode;
 
 	return <Editor code={code} imports={iconImportsCode} scope={scope} />;
 };
 
 const iconWithContextImportsCode = `import ClayIcon, {ClayIconSpriteContext} from '@clayui/icon';
-import React from 'react';`;
+`;
 
 const IconWithContextCode = `const Component = () => {
 	return (
@@ -42,7 +40,7 @@ const IconWithContextCode = `const Component = () => {
 render(<Component />)`;
 
 export const IconWithContext = () => {
-	const scope = {ClayIcon, ClayIconSpriteContext, spritemap};
+	const scope = {ClayIcon, ClayIconSpriteContext};
 	const code = IconWithContextCode;
 
 	return (

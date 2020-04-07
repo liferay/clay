@@ -4,17 +4,15 @@
  */
 
 import ClayLabel from '@clayui/label';
-import React, {useState} from 'react';
+import React from 'react';
 
 import Editor from '../Editor';
 
-const spritemap = '/images/icons/icons.svg';
-
 const labelImportsCode = `import ClayLabel from '@clayui/label';
-import React, {useState} from 'react';`;
+`;
 
 const LabelCode = `const Component = () => {
-	const [visible, setVisible] = useState(true);
+	const [visible, setVisible] = React.useState(true);
 
 	return visible ? (
 		<ClayLabel
@@ -33,14 +31,14 @@ const LabelCode = `const Component = () => {
 render(<Component />)`;
 
 const Label = () => {
-	const scope = {ClayLabel, spritemap, useState};
+	const scope = {ClayLabel};
 	const code = LabelCode;
 
 	return <Editor code={code} imports={labelImportsCode} scope={scope} />;
 };
 
 const labelClosingActionsImportsCode = `import ClayLabel from '@clayui/label';
-import React from 'react';`;
+`;
 
 const LabelClosingActionsCode = `const Component = () => (
 	<ClayLabel
@@ -58,7 +56,7 @@ const LabelClosingActionsCode = `const Component = () => (
 render(<Component />)`;
 
 const LabelClosingActions = () => {
-	const scope = {ClayLabel, spritemap};
+	const scope = {ClayLabel};
 	const code = LabelClosingActionsCode;
 
 	return (
@@ -71,7 +69,7 @@ const LabelClosingActions = () => {
 };
 
 const labelDisplayTypesImportsCode = `import ClayLabel from '@clayui/label';
-import React from 'react';`;
+`;
 
 const LabelDisplayTypesCode = `const Component = () => {
 	return (
@@ -112,7 +110,7 @@ const LabelDisplayTypesCode = `const Component = () => {
 render(<Component />)`;
 
 const LabelDisplayTypes = () => {
-	const scope = {ClayLabel, spritemap};
+	const scope = {ClayLabel};
 	const code = LabelDisplayTypesCode;
 
 	return (

@@ -9,7 +9,7 @@ import React from 'react';
 import Editor from '../Editor';
 
 const linkImportsCode = `import ClayLink from '@clayui/link';
-import React from 'react';`;
+`;
 
 const LinkCode = `const Component = () => {
 	return (
@@ -37,7 +37,7 @@ export const Link = () => {
 };
 
 const linkContextImportsCode = `import ClayLink, {ClayLinkContext} from '@clayui/link';
-import React from 'react';`;
+`;
 
 const LinkContextCode = `const Component = () => {
 	const ConfirmBeforeNavigate = ({children, href, ...otherProps}) => (

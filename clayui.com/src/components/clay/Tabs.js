@@ -6,17 +6,15 @@
 import ClayDropDown, {Align} from '@clayui/drop-down';
 import ClayIcon, {ClayIconSpriteContext} from '@clayui/icon';
 import ClayTabs from '@clayui/tabs';
-import React, {useState} from 'react';
+import React from 'react';
 
 import Editor from '../Editor';
 
-const spritemap = '/images/icons/icons.svg';
-
 const tabsImportsCode = `import ClayTabs from '@clayui/tabs';
-import React, {useState} from 'react';`;
+`;
 
 const tabsCode = `const Component = () => {
-    const [activeTabKeyValue, setActiveTabKeyValue] = useState(0);
+    const [activeTabKeyValue, setActiveTabKeyValue] = React.useState(0);
 
     return (
         <>
@@ -67,7 +65,7 @@ const tabsCode = `const Component = () => {
 render(<Component />)`;
 
 const Tabs = () => {
-	const scope = {ClayTabs, spritemap, useState};
+	const scope = {ClayTabs};
 
 	return <Editor code={tabsCode} imports={tabsImportsCode} scope={scope} />;
 };
@@ -75,7 +73,7 @@ const Tabs = () => {
 const tabsDropdownImportsCode = `import ClayDropdown, {Align} from '@clayui/drop-down';
 import ClayIcon, {ClayIconSpriteContext} from '@clayui/icon';
 import ClayTabs from '@clayui/tabs';
-import React, {useState} from 'react';`;
+`;
 
 const tabsDropdownCode = `const Component = () => {
     const DropDownWithState = ({
@@ -83,7 +81,7 @@ const tabsDropdownCode = `const Component = () => {
         trigger,
         ...others
     }) => {
-        const [active, setActive] = React.useState(false);
+        const [active, setActive] = React.React.useState(false);
     
         return (
             <ClayDropDown
@@ -99,7 +97,7 @@ const tabsDropdownCode = `const Component = () => {
         );
     };
 
-    const [activeTabKeyValue, setActiveTabKeyValue] = React.useState(0);
+    const [activeTabKeyValue, setActiveTabKeyValue] = React.React.useState(0);
 
     const dropdownTabsItems = [
         {
@@ -245,8 +243,6 @@ const TabsDropdown = () => {
 		ClayIcon,
 		ClayIconSpriteContext,
 		ClayTabs,
-		spritemap,
-		useState,
 	};
 
 	return (

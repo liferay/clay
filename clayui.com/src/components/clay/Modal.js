@@ -6,18 +6,16 @@
 import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
 import ClayModal, {useModal} from '@clayui/modal';
-import React, {useState} from 'react';
+import React from 'react';
 
 import Editor from '../Editor';
 
-const spritemap = '/images/icons/icons.svg';
-
 const modalImportsCode = `import ClayButton from '@clayui/button';
 import ClayModal, {useModal} from '@clayui/modal';
-import React, {useState} from 'react';`;
+`;
 
 const modalCode = `const Component = () => {
-	const [visible, setVisible] = useState(false);
+	const [visible, setVisible] = React.useState(false);
 	const {observer, onClose} = useModal({
 		onClose: () => setVisible(false),
 	});
@@ -65,9 +63,8 @@ export const Modal = () => {
 	const scope = {
 		ClayButton,
 		ClayModal,
-		spritemap,
+
 		useModal,
-		useState,
 	};
 
 	return <Editor code={modalCode} imports={modalImportsCode} scope={scope} />;
@@ -76,7 +73,7 @@ export const Modal = () => {
 const modalHeaderImportsCode = `import ClayIcon from '@clayui/icon';
 import ClayButton from '@clayui/button';
 import ClayModal, {useModal} from '@clayui/modal';
-import React, {useState} from 'react';`;
+`;
 
 const modalHeaderCode = `const Component = () => {
 	return (
@@ -134,9 +131,8 @@ export const ClayModalHeaderExamples = () => {
 		ClayButton,
 		ClayIcon,
 		ClayModal,
-		spritemap,
+
 		useModal,
-		useState,
 	};
 
 	return (

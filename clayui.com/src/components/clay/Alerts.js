@@ -5,11 +5,9 @@
 
 import ClayAlert from '@clayui/alert';
 import ClayButton from '@clayui/button';
-import React, {useState} from 'react';
+import React from 'react';
 
 import Editor from '../Editor';
-
-const spritemap = '/images/icons/icons.svg';
 
 const AlertCode = `const Component = () => {
 	return (
@@ -31,7 +29,7 @@ const alertImportsCode = `import React from 'react';
 import ClayAlert from '@clayui/alert';`;
 
 export const Alert = () => {
-	const scope = {ClayAlert, spritemap, useState};
+	const scope = {ClayAlert};
 	const code = AlertCode;
 
 	return <Editor code={code} imports={alertImportsCode} scope={scope} />;
@@ -62,7 +60,7 @@ import ClayAlert from '@clayui/alert';
 import ClayButton from '@clayui/button';`;
 
 export const AlertWithButton = () => {
-	const scope = {ClayAlert, ClayButton, spritemap, useState};
+	const scope = {ClayAlert, ClayButton};
 	const code = AlertWithButtonCode;
 
 	return (
@@ -74,11 +72,11 @@ export const AlertWithButton = () => {
 	);
 };
 
-const alertToastContainerImportsCode = `import React, {useState} from 'react';
+const alertToastContainerImportsCode = `
 import ClayAlert from '@clayui/alert';`;
 
 const AlertToastContainerCode = `const Component = () => {
-	const [toastItems, setToastItems] = useState([]);
+	const [toastItems, setToastItems] = React.useState([]);
 	return (
 		<>
 			<div>
@@ -113,7 +111,7 @@ const AlertToastContainerCode = `const Component = () => {
 render(<Component />);`;
 
 export const AlertToastContainer = () => {
-	const scope = {ClayAlert, spritemap, useState};
+	const scope = {ClayAlert};
 	const code = AlertToastContainerCode;
 
 	return (

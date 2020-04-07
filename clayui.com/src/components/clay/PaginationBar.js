@@ -9,16 +9,14 @@ import {ClayPaginationWithBasicItems} from '@clayui/pagination';
 import ClayPaginationBar, {
 	ClayPaginationBarWithBasicItems,
 } from '@clayui/pagination-bar';
-import React, {useState} from 'react';
+import React from 'react';
 
 import Editor from '../Editor';
-
-const spritemap = '/images/icons/icons.svg';
 
 const paginationImportsCode = `import ClayPaginationBar from '@clayui/pagination-bar';
 import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
-import React from 'react';`;
+`;
 
 const PaginationBarCode = `const Component = () => {
 	return (
@@ -63,7 +61,6 @@ const PaginationBar = () => {
 		ClayIcon,
 		ClayPaginationBar,
 		ClayPaginationWithBasicItems,
-		spritemap,
 	};
 	const code = PaginationBarCode;
 
@@ -71,11 +68,11 @@ const PaginationBar = () => {
 };
 
 const paginationWithBasicItemsImportsCode = `import {ClayPaginationBarWithBasicItems} from '@clayui/pagination-bar';
-import React from 'react';`;
+`;
 
 const PaginationBarWithBasicItemsCode = `const Component = () => {
-	const [activePage, setActivePage] = useState(1);
-	const [delta, setDelta] = useState(5);
+	const [activePage, setActivePage] = React.useState(1);
+	const [delta, setDelta] = React.useState(5);
 
 	const deltas = [
 		{
@@ -110,7 +107,7 @@ const PaginationBarWithBasicItemsCode = `const Component = () => {
 render(<Component />)`;
 
 const PaginationBarWithBasicItems = () => {
-	const scope = {ClayPaginationBarWithBasicItems, spritemap, useState};
+	const scope = {ClayPaginationBarWithBasicItems};
 	const code = PaginationBarWithBasicItemsCode;
 
 	return (

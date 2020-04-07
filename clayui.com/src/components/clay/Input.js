@@ -9,10 +9,8 @@ import React from 'react';
 
 import Editor from '../Editor';
 
-const spritemap = '/images/icons/icons.svg';
-
 const formInputGroupImports = `import ClayForm, {ClayInput} from '@clayui/form';
-import React from 'react';`;
+`;
 
 const formInputCode = `const Component = () => {
 	return (
@@ -29,7 +27,6 @@ const FormInput = () => {
 	const scope = {
 		ClayForm,
 		ClayInput,
-		spritemap,
 	};
 
 	return (
@@ -56,7 +53,6 @@ const FormInputTextArea = () => {
 	const scope = {
 		ClayForm,
 		ClayInput,
-		spritemap,
 	};
 
 	return (
@@ -113,7 +109,6 @@ const FormInputGroupSeparated = () => {
 	const scope = {
 		ClayForm,
 		ClayInput,
-		spritemap,
 	};
 
 	return (
@@ -170,7 +165,6 @@ const FormInputGroupConnected = () => {
 	const scope = {
 		ClayForm,
 		ClayInput,
-		spritemap,
 	};
 
 	return (
@@ -184,7 +178,7 @@ const FormInputGroupConnected = () => {
 
 const formInputGroupMixedImports = `import ClayForm, {ClayInput} from '@clayui/form';
 import ClayButton from '@clayui/button';
-import React from 'react';`;
+`;
 
 const formInputGroupMixedCode = `const Component = () => {
 	return (
@@ -213,7 +207,6 @@ const FormInputGroupMixed = () => {
 		ClayButton,
 		ClayForm,
 		ClayInput,
-		spritemap,
 	};
 
 	return (

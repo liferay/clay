@@ -6,18 +6,15 @@
 import ClayAutocomplete from '@clayui/autocomplete';
 import ClayDataProvider, {useResource} from '@clayui/data-provider';
 import ClayDropDown from '@clayui/drop-down';
-import React, {useState} from 'react';
+import React from 'react';
 
 import Editor from '../Editor';
 
-const spritemap = '/images/icons/icons.svg';
-
-const autocompleteWithLoadingImportsCode = `import React, {useState} from 'react';
-import ClayAutocomplete from '@clayui/autocomplete';`;
+const autocompleteWithLoadingImportsCode = `import ClayAutocomplete from '@clayui/autocomplete';`;
 
 const autocompleteWithLoadingStateCode = `const Component = () => {
-	const [loading] = useState(true);
-	const [value, setValue] = useState('');
+	const [loading] = React.useState(true);
+	const [value, setValue] = React.useState('');
 
 	return (
 		<ClayAutocomplete>
@@ -33,7 +30,7 @@ const autocompleteWithLoadingStateCode = `const Component = () => {
 render(<Component />)`;
 
 const AutocompleteWithLoadingState = () => {
-	const scope = {ClayAutocomplete, spritemap, useState};
+	const scope = {ClayAutocomplete};
 
 	return (
 		<Editor
@@ -44,14 +41,14 @@ const AutocompleteWithLoadingState = () => {
 	);
 };
 
-const autocompleteWithDataProviderImportsCode = `import React, {useState} from 'react';
+const autocompleteWithDataProviderImportsCode = `
 import ClayAutocomplete from '@clayui/autocomplete';
 import {useResource} from '@clayui/data-provider';
 import ClayDropDown from '@clayui/drop-down';`;
 
 const autocompleteWithDataProviderCode = `const Component = () => {
-	const [value, setValue] = useState('');
-	const [networkStatus, setNetworkStatus] = useState(4);
+	const [value, setValue] = React.useState('');
+	const [networkStatus, setNetworkStatus] = React.useState(4);
 	const {resource} = useResource({
 		fetchPolicy: 'cache-first',
 		link: 'https://rickandmortyapi.com/api/character/',
@@ -103,9 +100,8 @@ const AutocompleteWithDataProvider = () => {
 		ClayAutocomplete,
 		ClayDataProvider,
 		ClayDropDown,
-		spritemap,
+
 		useResource,
-		useState,
 	};
 
 	return (

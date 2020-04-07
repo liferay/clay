@@ -14,7 +14,13 @@ import theme from '../../utils/react-live-theme';
 
 const spritemap = '/images/icons/icons.svg';
 
-const Editor = ({code, disabled = false, imports, preview = true, scope}) => {
+const Editor = ({
+	code,
+	disabled = false,
+	imports,
+	preview = true,
+	scope = {},
+}) => {
 	try {
 		code = prettier.format(code, {
 			parser: 'babel',
@@ -32,7 +38,7 @@ const Editor = ({code, disabled = false, imports, preview = true, scope}) => {
 			code={code}
 			disabled={disabled}
 			noInline
-			scope={scope}
+			scope={{React, spritemap, useState, ...scope}}
 			theme={theme}
 		>
 			{preview && (

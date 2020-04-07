@@ -11,13 +11,11 @@ import React from 'react';
 
 import Editor from '../Editor';
 
-const spritemap = '/images/icons/icons.svg';
-
 const upperToolbarImportsCode = `import ClayButton, {ClayButtonWithIcon} from '@clayui/button';
 import ClayIcon from '@clayui/icon';
 import {ClayDropDownWithItems} from '@clayui/drop-down';
 import ClayUpperToolbar from '@clayui/upper-toolbar';
-import React from 'react';`;
+`;
 
 const UpperToolbarCode = `const Component = () => {
 	return (
@@ -92,7 +90,6 @@ export const UpperToolbarExample = () => {
 		ClayDropDownWithItems,
 		ClayIcon,
 		ClayUpperToolbar,
-		spritemap,
 	};
 
 	return (

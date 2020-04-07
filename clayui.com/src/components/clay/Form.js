@@ -4,17 +4,15 @@
  */
 
 import ClayForm, {ClayInput} from '@clayui/form';
-import React, {useState} from 'react';
+import React from 'react';
 
 import Editor from '../Editor';
 
-const spritemap = '/images/icons/icons.svg';
-
 const formCodeImport = `import ClayForm, {ClayInput} from '@clayui/form';
-import React, {useState} from 'react';`;
+`;
 
 const formCode = `const Component = () => {
-	const [active, setActive] = useState(false);
+	const [active, setActive] = React.useState(false);
 
 	return (
         <ClayForm>
@@ -36,15 +34,13 @@ const Form = () => {
 	const scope = {
 		ClayForm,
 		ClayInput,
-		spritemap,
-		useState,
 	};
 
 	return <Editor code={formCode} imports={formCodeImport} scope={scope} />;
 };
 
 const formValidationCode = `const Component = () => {
-	const [active, setActive] = useState(false);
+	const [active, setActive] = React.useState(false);
 
 	return (
         <ClayForm>
@@ -97,8 +93,6 @@ const FormValidation = () => {
 	const scope = {
 		ClayForm,
 		ClayInput,
-		spritemap,
-		useState,
 	};
 
 	return (
@@ -111,7 +105,7 @@ const FormValidation = () => {
 };
 
 const formTextCode = `const Component = () => {
-	const [active, setActive] = useState(false);
+	const [active, setActive] = React.useState(false);
 
 	return (
         <ClayForm>
@@ -137,8 +131,6 @@ const FormText = () => {
 	const scope = {
 		ClayForm,
 		ClayInput,
-		spritemap,
-		useState,
 	};
 
 	return (

@@ -9,18 +9,16 @@ import ClayForm, {ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayMultiSelect from '@clayui/multi-select';
 import ClaySticker from '@clayui/sticker';
-import React, {useState} from 'react';
+import React from 'react';
 
 import Editor from '../Editor';
 
-const spritemap = '/images/icons/icons.svg';
-
 const multiSelectImportsCode = `import ClayMultiSelect from '@clayui/multi-select';
-import React, {useState} from 'react';`;
+`;
 
 const multiSelectCode = `const Component = () => {
-	const [value, setValue] = useState('');
-	const [items, setItems] = useState([
+	const [value, setValue] = React.useState('');
+	const [items, setItems] = React.useState([
 		{
 			label: 'one',
 			value: '1',
@@ -44,8 +42,6 @@ render(<Component />)`;
 const MultiSelectInput = () => {
 	const scope = {
 		ClayMultiSelect,
-		spritemap,
-		useState,
 	};
 
 	return (
@@ -58,11 +54,11 @@ const MultiSelectInput = () => {
 };
 
 const multiSelectWithAutocompleteImportsCode = `import ClayMultiSelect from '@clayui/multi-select';
-import React, {useState} from 'react';`;
+`;
 
 const multiSelectWithAutocompleteCode = `const Component = (props) => {
-	const [value, setValue] = useState('');
-	const [items, setItems] = useState([
+	const [value, setValue] = React.useState('');
+	const [items, setItems] = React.useState([
 		{
 			label: 'one',
 			value: '1',
@@ -107,8 +103,6 @@ render(<Component />)`;
 const MultiSelectInputWithAutocomplete = () => {
 	const scope = {
 		ClayMultiSelect,
-		spritemap,
-		useState,
 	};
 
 	return (
@@ -123,11 +117,11 @@ const MultiSelectInputWithAutocomplete = () => {
 const multiSelectWithSelectButtonImportsCode = `import ClayButton from '@clayui/button';
 import ClayForm, {ClayInput} from '@clayui/form';
 import ClayMultiSelect from '@clayui/multi-select';
-import React, {useState} from 'react';`;
+`;
 
 const multiSelectWithSelectButtonCode = `const Component = () => {
-	const [value, setValue] = useState('');
-	const [items, setItems] = useState([
+	const [value, setValue] = React.useState('');
+	const [items, setItems] = React.useState([
 		{
 			label: 'one',
 			value: '1',
@@ -188,8 +182,6 @@ const MultiSelectInputWithSelectButton = () => {
 		ClayForm,
 		ClayInput,
 		ClayMultiSelect,
-		spritemap,
-		useState,
 	};
 
 	return (
@@ -202,8 +194,8 @@ const MultiSelectInputWithSelectButton = () => {
 };
 
 const multiSelectWithValidationCode = `const Component = () => {
-	const [value, setValue] = useState('');
-	const [items, setItems] = useState([
+	const [value, setValue] = React.useState('');
+	const [items, setItems] = React.useState([
 		{
 			label: 'one',
 			value: '1',
@@ -277,8 +269,6 @@ const MultiSelectInputWithValidation = () => {
 		ClayForm,
 		ClayInput,
 		ClayMultiSelect,
-		spritemap,
-		useState,
 	};
 
 	return (
@@ -324,8 +314,8 @@ const multiSelectWithCustomAutocompleteCode = `const MenuCustom = ({
 );
 
 const Component = () => {
-	const [value, setValue] = useState('');
-	const [items, setItems] = useState([
+	const [value, setValue] = React.useState('');
+	const [items, setItems] = React.useState([
 		{
 			email: 'one@example.com',
 			label: 'One',
@@ -368,8 +358,6 @@ const MultiSelectInputWithCustomAutocomplete = () => {
 		ClayIcon,
 		ClayMultiSelect,
 		ClaySticker,
-		spritemap,
-		useState,
 	};
 
 	return (

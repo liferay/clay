@@ -4,15 +4,15 @@
  */
 
 import {ClayRadio, ClayRadioGroup} from '@clayui/form';
-import React, {useState} from 'react';
+import React from 'react';
 
 import Editor from '../Editor';
 
 const radioGroupImportsCode = `import {ClayRadio, ClayRadioGroup} from '@clayui/form';
-import React, {useState} from 'react';`;
+`;
 
 const radioGroupCode = `const Component = () => {
-	const [value, setValue] = useState('one');
+	const [value, setValue] = React.useState('one');
 
 	return (
 		<ClayRadioGroup
@@ -30,7 +30,7 @@ const radioGroupCode = `const Component = () => {
 render(<Component />)`;
 
 const RadioGroup = () => {
-	const scope = {ClayRadio, ClayRadioGroup, useState};
+	const scope = {ClayRadio, ClayRadioGroup};
 
 	return (
 		<Editor
