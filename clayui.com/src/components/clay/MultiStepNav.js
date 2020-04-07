@@ -8,7 +8,7 @@ import ClayMultiStepNav, {
 } from '@clayui/multi-step-nav';
 import React, {useState} from 'react';
 
-import Editor from './Editor';
+import Editor from '../Editor';
 
 const spritemap = '/images/icons/icons.svg';
 

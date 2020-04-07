@@ -6,7 +6,7 @@
 import ClayLink, {ClayLinkContext} from '@clayui/link';
 import React from 'react';
 
-import Editor from './Editor';
+import Editor from '../Editor';
 
 const linkImportsCode = `import ClayLink from '@clayui/link';
 import React from 'react';`;

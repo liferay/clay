@@ -6,7 +6,7 @@
 import ClayPagination, {ClayPaginationWithBasicItems} from '@clayui/pagination';
 import React, {useState} from 'react';
 
-import Editor from './Editor';
+import Editor from '../Editor';
 
 const paginationImportsCode = `import ClayPagination from '@clayui/pagination';
 import React from 'react';`;

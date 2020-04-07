@@ -5,7 +5,7 @@
 
 import React from 'react';
 
-import Editor from './Editor';
+import Editor from '../Editor';
 
 // Workaround for building gatsby's SSR with Tooltip
 const {ClayTooltipProvider, default: ClayTooltip} =

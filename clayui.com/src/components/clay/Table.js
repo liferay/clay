@@ -6,7 +6,7 @@
 import ClayTable from '@clayui/table';
 import React, {useState} from 'react';
 
-import Editor from './Editor';
+import Editor from '../Editor';
 
 const tableImportsCode = `import ClayTable from '@clayui/table';
 import React, {useState} from 'react';`;

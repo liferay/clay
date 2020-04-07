@@ -6,7 +6,7 @@
 import {ClayRadio, ClayRadioGroup} from '@clayui/form';
 import React, {useState} from 'react';
 
-import Editor from './Editor';
+import Editor from '../Editor';
 
 const radioGroupImportsCode = `import {ClayRadio, ClayRadioGroup} from '@clayui/form';
 import React, {useState} from 'react';`;

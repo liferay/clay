@@ -6,7 +6,7 @@
 import ClayDatePicker from '@clayui/date-picker';
 import React, {useState} from 'react';
 
-import Editor from './Editor';
+import Editor from '../Editor';
 
 const spritemap = '/images/icons/icons.svg';
 

@@ -6,7 +6,7 @@
 import ClayPopover from '@clayui/popover';
 import React from 'react';
 
-import Editor from './Editor';
+import Editor from '../Editor';
 
 const popoverImportsCode = `import ClayPopover from '@clayui/popover';
 import React from 'react';`;
