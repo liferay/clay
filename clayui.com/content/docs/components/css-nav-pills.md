@@ -1,5 +1,5 @@
 ---
-title: 'Base Nav Pills'
+title: 'Nav Pills'
 ---
 
 <div class="nav-toc-absolute">
@@ -17,7 +17,7 @@ title: 'Base Nav Pills'
 </div>
 </div>
 
-<div class="clay-site-alert alert alert-warning">This is a base component. Navigations share general markup and styles from the base .nav class, therefore the components Nav Pills, Nav Tabs, Nav Underline, Menubar, Navbar, Application Bar, Management Bar, and Navigation Bar all use <code class="gatsby-code-text">.nav</code> as its base.</div>
+<div class="clay-site-alert alert alert-warning">This is a component. Navigations share general markup and styles from the .nav class, therefore the components Nav Pills, Nav Tabs, Nav Underline, Menubar, Navbar, Application Bar, Management Bar, and Navigation Bar all use <code class="gatsby-code-text">.nav</code> as its base.</div>
 
 ## Default
 
