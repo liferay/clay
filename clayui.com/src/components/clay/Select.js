@@ -6,7 +6,7 @@
 import {ClaySelect, ClaySelectWithOption} from '@clayui/form';
 import React from 'react';
 
-import Editor from './Editor';
+import Editor from '../Editor';
 
 const selectImportsCode = `import {ClaySelect} from '@clayui/form';
 import React from 'react';`;

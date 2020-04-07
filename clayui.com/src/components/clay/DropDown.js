@@ -7,7 +7,7 @@ import ClayButton from '@clayui/button';
 import ClayDropDown, {ClayDropDownWithItems} from '@clayui/drop-down';
 import React, {useState} from 'react';
 
-import Editor from './Editor';
+import Editor from '../Editor';
 
 const dropDownImportsCode = `import ClayDropDown from '@clayui/drop-down';
 import React, {useState} from 'react';`;

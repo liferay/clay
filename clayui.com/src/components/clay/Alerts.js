@@ -7,7 +7,7 @@ import ClayAlert from '@clayui/alert';
 import ClayButton from '@clayui/button';
 import React, {useState} from 'react';
 
-import Editor from './Editor';
+import Editor from '../Editor';
 
 const spritemap = '/images/icons/icons.svg';
 

@@ -6,7 +6,7 @@
 import ClayLoadingIndicator from '@clayui/loading-indicator';
 import React from 'react';
 
-import Editor from './Editor';
+import Editor from '../Editor';
 
 const loadingIndicatorImportsCode = `import ClayLoadingIndicator from '@clayui/loading-indicator';
 import React from 'react';`;

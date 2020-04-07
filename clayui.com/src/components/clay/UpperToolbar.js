@@ -9,7 +9,7 @@ import ClayIcon from '@clayui/icon';
 import ClayUpperToolbar from '@clayui/upper-toolbar';
 import React from 'react';
 
-import Editor from './Editor';
+import Editor from '../Editor';
 
 const spritemap = '/images/icons/icons.svg';
 

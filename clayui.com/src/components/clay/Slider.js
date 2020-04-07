@@ -6,7 +6,7 @@
 import ClaySlider from '@clayui/slider';
 import React, {useState} from 'react';
 
-import Editor from './Editor';
+import Editor from '../Editor';
 
 const sliderImportsCode = `import ClaySlider from '@clayui/slider';
 import React, {useState} from 'react';`;

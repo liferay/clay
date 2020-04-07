@@ -6,7 +6,7 @@
 import React from 'react';
 
 import mapData from '../../../static/map.json';
-import Editor from './Editor';
+import Editor from '../Editor';
 
 // Workaround for building gatsby's SSR with since Billboard.js references `window`
 const ClayChart =

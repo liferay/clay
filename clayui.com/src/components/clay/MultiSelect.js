@@ -11,7 +11,7 @@ import ClayMultiSelect from '@clayui/multi-select';
 import ClaySticker from '@clayui/sticker';
 import React, {useState} from 'react';
 
-import Editor from './Editor';
+import Editor from '../Editor';
 
 const spritemap = '/images/icons/icons.svg';
 

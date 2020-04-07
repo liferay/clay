@@ -8,7 +8,7 @@ import ClayDataProvider, {useResource} from '@clayui/data-provider';
 import ClayDropDown from '@clayui/drop-down';
 import React, {useState} from 'react';
 
-import Editor from './Editor';
+import Editor from '../Editor';
 
 const spritemap = '/images/icons/icons.svg';
 

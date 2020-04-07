@@ -6,7 +6,7 @@
 import {ClayVerticalNav} from '@clayui/nav';
 import React from 'react';
 
-import Editor from './Editor';
+import Editor from '../Editor';
 
 const spritemap = '/images/icons/icons.svg';
 
