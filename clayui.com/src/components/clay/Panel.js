@@ -4,14 +4,12 @@
  */
 
 import ClayPanel from '@clayui/panel';
-import React, {useState} from 'react';
+import React from 'react';
 
 import Editor from '../Editor';
 
-const spritemap = '/images/icons/icons.svg';
-
 const panelImportsCode = `import ClayPanel from '@clayui/panel';
-import React from 'react';`;
+`;
 
 const panelCode = `const Component = () => (
 	<ClayPanel
@@ -28,7 +26,7 @@ const panelCode = `const Component = () => (
 render(<Component />)`;
 
 const Panel = () => {
-	const scope = {ClayPanel, spritemap, useState};
+	const scope = {ClayPanel};
 
 	return <Editor code={panelCode} imports={panelImportsCode} scope={scope} />;
 };

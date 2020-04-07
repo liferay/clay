@@ -13,19 +13,17 @@ import ClayCard, {
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClaySticker from '@clayui/sticker';
-import React, {useState} from 'react';
+import React from 'react';
 
 import Editor from '../Editor';
-
-const spritemap = '/images/icons/icons.svg';
 
 const cardCodeImports = `import ClayCard from '@clayui/card';
 import ClayIcon from '@clayui/icon';
 import ClaySticker from '@clayui/sticker';
-import React, {useState} from 'react';`;
+`;
 
 const cardCode = `const Component = () => {
-	const [active, setActive] = useState(false);
+	const [active, setActive] = React.useState(false);
 
 	return (
 		<div className="col-md-4">
@@ -64,8 +62,6 @@ const Card = () => {
 		ClayIcon,
 		ClayLabel,
 		ClaySticker,
-		spritemap,
-		useState,
 	};
 
 	return <Editor code={cardCode} imports={cardCodeImports} scope={scope} />;
@@ -73,7 +69,7 @@ const Card = () => {
 
 const cardBasicImports = `import ClayButton from '@clayui/button';
 import ClayCard from '@clayui/card';
-import React from 'react';`;
+`;
 
 const cardWithBasicCode = `const Component = () => {
 	return (
@@ -95,7 +91,6 @@ const CardBasic = () => {
 	const scope = {
 		ClayButton,
 		ClayCard,
-		spritemap,
 	};
 
 	return (
@@ -108,7 +103,7 @@ const CardBasic = () => {
 };
 
 const cardHorizontalImportsCode = `import ClayCard from '@clayui/card';
-import React from 'react';`;
+`;
 
 const cardHorizontalCode = `const Component = () => {
 	return (
@@ -133,7 +128,6 @@ render(<Component />)`;
 const CardBasicHorizontal = () => {
 	const scope = {
 		ClayCard,
-		spritemap,
 	};
 
 	return (
@@ -146,10 +140,10 @@ const CardBasicHorizontal = () => {
 };
 
 const cardWithInfoImportsCode = `import {ClayCardWithInfo} from '@clayui/card';
-import React, {useState} from 'react';`;
+`;
 
 const cardWithInfoCode = `const Component = () => {
-	const [value, setValue] = useState(false);
+	const [value, setValue] = React.useState(false);
 
 	return (
 		<div className="row">
@@ -199,8 +193,6 @@ render(<Component />)`;
 const CardWithInfo = () => {
 	const scope = {
 		ClayCardWithInfo,
-		spritemap,
-		useState,
 	};
 
 	return (
@@ -214,7 +206,7 @@ const CardWithInfo = () => {
 
 const cardWithNavigationImportsCode = `import {ClayCardWithInfo} from '@clayui/card';
 import ClayIcon from '@clayui/icon';
-import React from 'react';`;
+`;
 
 const cardWithNavigationCode = `const Component = () => {
 	return (
@@ -239,7 +231,6 @@ const CardWithNavigation = () => {
 	const scope = {
 		ClayCardWithNavigation,
 		ClayIcon,
-		spritemap,
 	};
 
 	return (
@@ -252,7 +243,7 @@ const CardWithNavigation = () => {
 };
 
 const cardWithUserImportsCode = `import {ClayCardWithInfo} from '@clayui/card';
-import React from 'react';`;
+`;
 
 const cardWithUserCode = `const Component = () => {
 	return (
@@ -299,7 +290,6 @@ render(<Component />)`;
 const CardWithUser = () => {
 	const scope = {
 		ClayCardWithUser,
-		spritemap,
 	};
 
 	return (
@@ -312,10 +302,10 @@ const CardWithUser = () => {
 };
 
 const cardWithHorizontalImportsCode = `import {ClayCardWithInfo} from '@clayui/card';
-import React, {useState} from 'react';`;
+`;
 
 const cardWithHorizontalCode = `const Component = () => {
-	const [value, setValue] = useState(false);
+	const [value, setValue] = React.useState(false);
 
 	return (
 		<div className="row">
@@ -350,8 +340,6 @@ render(<Component />)`;
 const CardWithHorizontal = () => {
 	const scope = {
 		ClayCardWithHorizontal,
-		spritemap,
-		useState,
 	};
 
 	return (

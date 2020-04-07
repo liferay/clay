@@ -8,10 +8,8 @@ import React from 'react';
 
 import Editor from '../Editor';
 
-const spritemap = '/images/icons/icons.svg';
-
 const breadcrumbImportsCode = `import ClayBreadcrumb from '@clayui/breadcrumb';
-import React from 'react';`;
+`;
 
 const BreadcrumbCode = `const Component = () => {
 	return (
@@ -48,7 +46,7 @@ const BreadcrumbCode = `const Component = () => {
 render(<Component />);`;
 
 const Breadcrumbs = () => {
-	const scope = {ClayBreadcrumb, spritemap};
+	const scope = {ClayBreadcrumb};
 	const code = BreadcrumbCode;
 
 	return <Editor code={code} imports={breadcrumbImportsCode} scope={scope} />;

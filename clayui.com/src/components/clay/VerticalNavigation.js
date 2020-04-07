@@ -8,10 +8,8 @@ import React from 'react';
 
 import Editor from '../Editor';
 
-const spritemap = '/images/icons/icons.svg';
-
 const verticalNavigationImportsCode = `import {ClayVerticalNav} from '@clayui/nav';
-import React from 'react';`;
+`;
 
 const VerticalNavigationCode = `const Component = () => {
 	return (
@@ -64,7 +62,7 @@ const VerticalNavigationCode = `const Component = () => {
 render(<Component />);`;
 
 const VerticalNavigation = () => {
-	const scope = {ClayVerticalNav, spritemap};
+	const scope = {ClayVerticalNav};
 	const code = VerticalNavigationCode;
 
 	return (

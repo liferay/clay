@@ -4,14 +4,12 @@
  */
 
 import {ClayRadioGroup, ClayToggle} from '@clayui/form';
-import React, {useState} from 'react';
+import React from 'react';
 
 import Editor from '../Editor';
 
-const spritemap = '/images/icons/icons.svg';
-
 const ToggleWithRadioGroup = `const Component = () => {
-	const [value, setValue] = useState('foo');
+	const [value, setValue] = React.useState('foo');
 
 	return (
 		<ClayRadioGroup
@@ -34,14 +32,14 @@ const radioToggleImports = `import React from 'react';
 import {ClayRadioGroup, ClayToggle} from '@clayui/form';;`;
 
 export const RadioToggle = () => {
-	const scope = {ClayRadioGroup, ClayToggle, spritemap, useState};
+	const scope = {ClayRadioGroup, ClayToggle};
 	const code = ToggleWithRadioGroup;
 
 	return <Editor code={code} imports={radioToggleImports} scope={scope} />;
 };
 
 const ToggleCode = `const Component = () => {
-	const [toggled, setToggle] = useState(false);
+	const [toggled, setToggle] = React.useState(false);
 
 	return (
 		<div style={{display: 'flex', justifyContent: 'space-around'}}>
@@ -78,7 +76,7 @@ const toggleImports = `import React from 'react';
 import {ClayToggle} from '@clayui/form';;`;
 
 export const Toggle = () => {
-	const scope = {ClayToggle, spritemap, useState};
+	const scope = {ClayToggle};
 	const code = ToggleCode;
 
 	return <Editor code={code} imports={toggleImports} scope={scope} />;

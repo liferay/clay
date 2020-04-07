@@ -8,10 +8,8 @@ import React from 'react';
 
 import Editor from '../Editor';
 
-const spritemap = '/images/icons/icons.svg';
-
 const buttonDisplayTypesImportsCode = `import ClayButton from '@clayui/button';
-import React from 'react';`;
+`;
 
 const ButtonDisplayTypesCode = `const Component = () => {
 	return (
@@ -35,7 +33,7 @@ const ButtonDisplayTypesCode = `const Component = () => {
 render(<Component />);`;
 
 const ButtonDisplayTypes = () => {
-	const scope = {ClayButton, spritemap};
+	const scope = {ClayButton};
 	const code = ButtonDisplayTypesCode;
 
 	return (
@@ -48,7 +46,7 @@ const ButtonDisplayTypes = () => {
 };
 
 const buttonGroupImportsCode = `import ClayButton from '@clayui/button';
-import React from 'react';`;
+`;
 
 const ButtonGroupCode = `const Component = () => {
 	return (
@@ -65,7 +63,7 @@ const ButtonGroupCode = `const Component = () => {
 render(<Component />);`;
 
 const ButtonGroup = () => {
-	const scope = {ClayButton, spritemap};
+	const scope = {ClayButton};
 	const code = ButtonGroupCode;
 
 	return (

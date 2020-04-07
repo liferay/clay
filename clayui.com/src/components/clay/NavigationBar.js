@@ -9,11 +9,9 @@ import React from 'react';
 
 import Editor from '../Editor';
 
-const spritemap = '/images/icons/icons.svg';
-
 const navigationBarImportsCode = `import ClayLink from '@clayui/link';
 import ClayNavigationBar from '@clayui/navigation-bar';
-import React from 'react';`;
+`;
 
 const NavigationBarCode = `const Component = () => {
 
@@ -41,7 +39,7 @@ const NavigationBarCode = `const Component = () => {
 render(<Component />);`;
 
 const NavigationBar = () => {
-	const scope = {ClayLink, ClayNavigationBar, spritemap};
+	const scope = {ClayLink, ClayNavigationBar};
 	const code = NavigationBarCode;
 
 	return (
@@ -50,7 +48,7 @@ const NavigationBar = () => {
 };
 
 const navigationBarWithStyledItemImportsCode = `import ClayNavigationBar from '@clayui/navigation-bar';
-import React from 'react';`;
+`;
 
 const NavigationBarWithStyledItemCode = `const Component = () => {
 
@@ -77,7 +75,7 @@ const NavigationBarWithStyledItemCode = `const Component = () => {
 render(<Component />);`;
 
 const NavigationBarWithStyledItem = () => {
-	const scope = {ClayNavigationBar, spritemap};
+	const scope = {ClayNavigationBar};
 	const code = NavigationBarWithStyledItemCode;
 
 	return (

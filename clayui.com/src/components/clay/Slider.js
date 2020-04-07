@@ -4,15 +4,15 @@
  */
 
 import ClaySlider from '@clayui/slider';
-import React, {useState} from 'react';
+import React from 'react';
 
 import Editor from '../Editor';
 
 const sliderImportsCode = `import ClaySlider from '@clayui/slider';
-import React, {useState} from 'react';`;
+`;
 
 const SliderCode = `const Component = () => {
-	const [value, setValue] = useState(10);
+	const [value, setValue] = React.useState(10);
 
 	return (
 		<div className="form-group">
@@ -32,7 +32,7 @@ const SliderCode = `const Component = () => {
 render(<Component />)`;
 
 export const Slider = () => {
-	const scope = {ClaySlider, useState};
+	const scope = {ClaySlider};
 
 	return (
 		<Editor code={SliderCode} imports={sliderImportsCode} scope={scope} />

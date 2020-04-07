@@ -9,7 +9,7 @@ import React from 'react';
 import Editor from '../Editor';
 
 const popoverImportsCode = `import ClayPopover from '@clayui/popover';
-import React from 'react';`;
+`;
 
 const popoverCode = `const Component = () => (
 	<div style={{height: 250}}>

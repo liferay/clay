@@ -4,19 +4,17 @@
  */
 
 import ClayDatePicker from '@clayui/date-picker';
-import React, {useState} from 'react';
+import React from 'react';
 
 import Editor from '../Editor';
 
-const spritemap = '/images/icons/icons.svg';
-
 const datePickerWithStateImportsCode = `import ClayDatePicker from '@clayui/date-picker';
-import React, {useState} from 'react';`;
+`;
 
 const DatePickerWithState = () => {
-	const scope = {ClayDatePicker, spritemap, useState};
+	const scope = {ClayDatePicker};
 	const code = `const Component = () => {
-	const [value, setValue] = useState(null);
+	const [value, setValue] = React.useState(null);
 
 	return (
 		<ClayDatePicker
@@ -44,12 +42,12 @@ render(<Component />)`;
 };
 
 const datePickerLocaleImportsCode = `import ClayDatePicker from '@clayui/date-picker';
-import React, {useState} from 'react';`;
+`;
 
 const DatePickerLocale = () => {
-	const scope = {ClayDatePicker, spritemap, useState};
+	const scope = {ClayDatePicker};
 	const code = `const Component = () => {
-	const [value, setValue] = useState(null);
+	const [value, setValue] = React.useState(null);
 
 	return (
 		<ClayDatePicker
@@ -95,12 +93,12 @@ render(<Component />)`;
 };
 
 const datePickerCustomFooterImportsCode = `import ClayDatePicker from '@clayui/date-picker';
-import React, {useState} from 'react';`;
+`;
 
 const DatePickerCustomFooter = () => {
-	const scope = {ClayDatePicker, spritemap, useState};
+	const scope = {ClayDatePicker};
 	const code = `const Component = () => {
-	const [value, setValue] = useState(null);
+	const [value, setValue] = React.useState(null);
 
 	return (
 		<ClayDatePicker
@@ -108,7 +106,7 @@ const DatePickerCustomFooter = () => {
 			placeholder="YYYY-MM-DD"
 			spritemap={spritemap}
 			value={value}
-			footerElement={({ spritemap }) => <span>Footer Content</span>}
+			footerElement={() => <span>Footer Content</span>}
 			years={{
 				end: 2024,
 				start: 2008,
@@ -130,12 +128,12 @@ render(<Component />)`;
 };
 
 const DatePickerWithTimeCode = `import ClayDatePicker from '@clayui/date-picker';
-import React, {useState} from 'react';`;
+`;
 
 const DatePickerWithTime = () => {
-	const scope = {ClayDatePicker, spritemap, useState};
+	const scope = {ClayDatePicker};
 	const code = `const Component = () => {
-	const [value, setValue] = useState(null);
+	const [value, setValue] = React.useState(null);
 
 	return (
 		<ClayDatePicker

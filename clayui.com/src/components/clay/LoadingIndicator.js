@@ -9,7 +9,7 @@ import React from 'react';
 import Editor from '../Editor';
 
 const loadingIndicatorImportsCode = `import ClayLoadingIndicator from '@clayui/loading-indicator';
-import React from 'react';`;
+`;
 
 const LoadingIndicatorCode = `const Component = () => {
 	return (
@@ -35,7 +35,7 @@ export const LoadingIndicator = () => {
 };
 
 const loadingIndicatorLightImportsCode = `import ClayLoadingIndicator from '@clayui/loading-indicator';
-import React from 'react';`;
+`;
 
 const LoadingIndicatorLightCode = `const Component = () => {
 	return (
@@ -61,7 +61,7 @@ export const LoadingIndicatorLight = () => {
 };
 
 const loadingIndicatorSmallImportsCode = `import ClayLoadingIndicator from '@clayui/loading-indicator';
-import React from 'react';`;
+`;
 
 const LoadingIndicatorSmallCode = `const Component = () => {
 	return (

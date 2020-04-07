@@ -4,12 +4,12 @@
  */
 
 import ClayPagination, {ClayPaginationWithBasicItems} from '@clayui/pagination';
-import React, {useState} from 'react';
+import React from 'react';
 
 import Editor from '../Editor';
 
 const paginationImportsCode = `import ClayPagination from '@clayui/pagination';
-import React from 'react';`;
+`;
 
 const PaginationCode = `const Component = () => {
 	return (
@@ -23,17 +23,17 @@ const PaginationCode = `const Component = () => {
 render(<Component />)`;
 
 const Pagination = () => {
-	const scope = {ClayPagination, useState};
+	const scope = {ClayPagination};
 	const code = PaginationCode;
 
 	return <Editor code={code} imports={paginationImportsCode} scope={scope} />;
 };
 
 const paginationWithBasicItemsImportsCode = `import {ClayPaginationWithBasicItems} from '@clayui/pagination';
-import React from 'react';`;
+`;
 
 const PaginationWithBasicItemsCode = `const Component = () => {
-	const [active, setActive] = useState(8);
+	const [active, setActive] = React.useState(8);
 
 	return (
 		<ClayPaginationWithBasicItems
@@ -47,10 +47,8 @@ const PaginationWithBasicItemsCode = `const Component = () => {
 }
 render(<Component />)`;
 
-const spritemap = '/images/icons/icons.svg';
-
 const PaginationWithBasicItems = () => {
-	const scope = {ClayPaginationWithBasicItems, spritemap, useState};
+	const scope = {ClayPaginationWithBasicItems};
 	const code = PaginationWithBasicItemsCode;
 
 	return (

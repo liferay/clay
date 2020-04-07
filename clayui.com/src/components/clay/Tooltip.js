@@ -14,7 +14,7 @@ const {ClayTooltipProvider, default: ClayTooltip} =
 		: {ClayTooltipProvider: () => <div />, default: () => <div />};
 
 const tooltipImportsCode = `import ClayTooltip from '@clayui/tooltip';
-import React from 'react';`;
+`;
 
 const tooltipCode = `const Component = () => (
 	<div style={{height: 50}}>
@@ -38,7 +38,7 @@ const Tooltip = () => {
 };
 
 const tooltipProviderImportsCode = `import {ClayTooltipProvider} from '@clayui/tooltip';
-import React from 'react';`;
+`;
 
 const tooltipProviderCode = `const Component = () => (
 	<ClayTooltipProvider>
@@ -65,7 +65,7 @@ const TooltipProvider = () => {
 };
 
 const tooltipProviderRendererImportsCode = `import {ClayTooltipProvider} from '@clayui/tooltip';
-import React from 'react';`;
+`;
 
 const tooltipProviderRendererCode = `const Component = () => (
 	<ClayTooltipProvider

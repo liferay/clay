@@ -8,10 +8,8 @@ import React from 'react';
 
 import Editor from '../Editor';
 
-const spritemap = '/images/icons/icons.svg';
-
 const badgeImportsCode = `import ClayBadge from '@clayui/badge';
-import React from 'react';`;
+`;
 
 const BadgeCode = `const Component = () => {
 	return (
@@ -29,7 +27,7 @@ const BadgeCode = `const Component = () => {
 render(<Component />);`;
 
 export const Badge = () => {
-	const scope = {ClayBadge, spritemap};
+	const scope = {ClayBadge};
 	const code = BadgeCode;
 
 	return <Editor code={code} imports={badgeImportsCode} scope={scope} />;
