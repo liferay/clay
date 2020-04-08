@@ -9,7 +9,7 @@ import React from 'react';
 import Editor from '../Editor';
 
 const ToggleWithRadioGroup = `const Component = () => {
-	const [value, setValue] = React.useState('foo');
+	const [value, setValue] = useState('foo');
 
 	return (
 		<ClayRadioGroup
@@ -39,7 +39,7 @@ export const RadioToggle = () => {
 };
 
 const ToggleCode = `const Component = () => {
-	const [toggled, setToggle] = React.useState(false);
+	const [toggled, setToggle] = useState(false);
 
 	return (
 		<div style={{display: 'flex', justifyContent: 'space-around'}}>

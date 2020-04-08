@@ -7,7 +7,7 @@ import ClayAlert from '@clayui/alert';
 import {ClayButtonWithIcon} from '@clayui/button';
 import parserBabylon from 'prettier/parser-babylon';
 import prettier from 'prettier/standalone';
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {LiveEditor, LiveError, LivePreview, LiveProvider} from 'react-live';
 
 import theme from '../../utils/react-live-theme';
@@ -38,7 +38,7 @@ const Editor = ({
 			code={code}
 			disabled={disabled}
 			noInline
-			scope={{React, spritemap, useState, ...scope}}
+			scope={{spritemap, useContext, useState, ...scope}}
 			theme={theme}
 		>
 			{preview && (

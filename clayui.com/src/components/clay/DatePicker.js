@@ -14,7 +14,7 @@ const datePickerWithStateImportsCode = `import ClayDatePicker from '@clayui/date
 const DatePickerWithState = () => {
 	const scope = {ClayDatePicker};
 	const code = `const Component = () => {
-	const [value, setValue] = React.useState(null);
+	const [value, setValue] = useState(null);
 
 	return (
 		<ClayDatePicker
@@ -47,7 +47,7 @@ const datePickerLocaleImportsCode = `import ClayDatePicker from '@clayui/date-pi
 const DatePickerLocale = () => {
 	const scope = {ClayDatePicker};
 	const code = `const Component = () => {
-	const [value, setValue] = React.useState(null);
+	const [value, setValue] = useState(null);
 
 	return (
 		<ClayDatePicker
@@ -98,7 +98,7 @@ const datePickerCustomFooterImportsCode = `import ClayDatePicker from '@clayui/d
 const DatePickerCustomFooter = () => {
 	const scope = {ClayDatePicker};
 	const code = `const Component = () => {
-	const [value, setValue] = React.useState(null);
+	const [value, setValue] = useState(null);
 
 	return (
 		<ClayDatePicker
@@ -133,7 +133,7 @@ const DatePickerWithTimeCode = `import ClayDatePicker from '@clayui/date-picker'
 const DatePickerWithTime = () => {
 	const scope = {ClayDatePicker};
 	const code = `const Component = () => {
-	const [value, setValue] = React.useState(null);
+	const [value, setValue] = useState(null);
 
 	return (
 		<ClayDatePicker

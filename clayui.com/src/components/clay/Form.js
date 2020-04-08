@@ -12,7 +12,7 @@ const formCodeImport = `import ClayForm, {ClayInput} from '@clayui/form';
 `;
 
 const formCode = `const Component = () => {
-	const [active, setActive] = React.useState(false);
+	const [active, setActive] = useState(false);
 
 	return (
         <ClayForm>
@@ -40,7 +40,7 @@ const Form = () => {
 };
 
 const formValidationCode = `const Component = () => {
-	const [active, setActive] = React.useState(false);
+	const [active, setActive] = useState(false);
 
 	return (
         <ClayForm>
@@ -105,7 +105,7 @@ const FormValidation = () => {
 };
 
 const formTextCode = `const Component = () => {
-	const [active, setActive] = React.useState(false);
+	const [active, setActive] = useState(false);
 
 	return (
         <ClayForm>

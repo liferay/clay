@@ -61,8 +61,7 @@ const DataProviderWithNetworkStatus = () => {
 	);
 };
 
-const dataProviderWithCacheRootLevelImportsCode = `import ClayDataProvider from '@clayui/data-provider';
-import React, {useContext} from 'react';`;
+const dataProviderWithCacheRootLevelImportsCode = `import ClayDataProvider from '@clayui/data-provider';`;
 
 const dataProviderWithCacheRootLevelCode = `const Component = () => {
 	const storageContext = useContext(Store);
@@ -156,7 +155,7 @@ const useResourceWithNetworkStatusImportsCode = `import {useResource} from '@cla
 `;
 
 const useResourceWithNetworkStatusCode = `const Component = () => {
-	const [state, setState] = React.useState(() => ({
+	const [state, setState] = useState(() => ({
 		error: false,
 		loading: false,
 		networkStatus: 4,
@@ -192,7 +191,7 @@ const useResourceWithVariablesChangeImportsCode = `import {useResource} from '@c
 `;
 
 const useResourceWithVariablesChangeCode = `const Component = () => {
-	const [value, setValue] = React.useState('Rick');
+	const [value, setValue] = useState('Rick');
 	const {resource} = useResource({
 		link: 'https://rickandmortyapi.com/api/character/',
 		fetchDelay: 300,

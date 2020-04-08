@@ -12,7 +12,7 @@ const radioGroupImportsCode = `import {ClayRadio, ClayRadioGroup} from '@clayui/
 `;
 
 const radioGroupCode = `const Component = () => {
-	const [value, setValue] = React.useState('one');
+	const [value, setValue] = useState('one');
 
 	return (
 		<ClayRadioGroup

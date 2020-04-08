@@ -14,7 +14,7 @@ const tabsImportsCode = `import ClayTabs from '@clayui/tabs';
 `;
 
 const tabsCode = `const Component = () => {
-    const [activeTabKeyValue, setActiveTabKeyValue] = React.useState(0);
+    const [activeTabKeyValue, setActiveTabKeyValue] = useState(0);
 
     return (
         <>
@@ -81,7 +81,7 @@ const tabsDropdownCode = `const Component = () => {
         trigger,
         ...others
     }) => {
-        const [active, setActive] = React.React.useState(false);
+        const [active, setActive] = useState(false);
     
         return (
             <ClayDropDown
@@ -97,7 +97,7 @@ const tabsDropdownCode = `const Component = () => {
         );
     };
 
-    const [activeTabKeyValue, setActiveTabKeyValue] = React.React.useState(0);
+    const [activeTabKeyValue, setActiveTabKeyValue] = useState(0);
 
     const dropdownTabsItems = [
         {

@@ -13,7 +13,7 @@ const dropDownImportsCode = `import ClayDropDown from '@clayui/drop-down';
 `;
 
 const dropDownCode = `const Component = () => {
-	const [active, setActive] = React.useState(false);
+	const [active, setActive] = useState(false);
 
 	return (
 		<ClayDropDown
@@ -61,7 +61,7 @@ import {ClayDropDownWithItems} from '@clayui/drop-down';
 const dropDownWithItemsCode = `
 
 const Component = () => {
-	const [value, setValue] = React.useState();
+	const [value, setValue] = useState();
     const items = [
       {
         label: 'clickable',

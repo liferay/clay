@@ -76,7 +76,7 @@ const alertToastContainerImportsCode = `
 import ClayAlert from '@clayui/alert';`;
 
 const AlertToastContainerCode = `const Component = () => {
-	const [toastItems, setToastItems] = React.useState([]);
+	const [toastItems, setToastItems] = useState([]);
 	return (
 		<>
 			<div>

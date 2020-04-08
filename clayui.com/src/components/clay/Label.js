@@ -12,7 +12,7 @@ const labelImportsCode = `import ClayLabel from '@clayui/label';
 `;
 
 const LabelCode = `const Component = () => {
-	const [visible, setVisible] = React.useState(true);
+	const [visible, setVisible] = useState(true);
 
 	return visible ? (
 		<ClayLabel

@@ -14,7 +14,7 @@ const multiStepNavImportsCode = `import ClayMultiStepNav from '@clayui/multi-ste
 `;
 
 const multiStepNavCode = `const Component = () => {
-	const [value, setValue] = React.useState(1);
+	const [value, setValue] = useState(1);
 
 	const steps = [
 		{
@@ -98,7 +98,7 @@ const multiStepNavWithBasicItemsImportsCode = `import {ClayMultiStepNavWithBasic
 `;
 
 const multiStepNavWithBasicItemsCode = `const Component = (props) => {
-	const [active, setActive] = React.useState(0);
+	const [active, setActive] = useState(0);
 
 	const steps = [
 		{

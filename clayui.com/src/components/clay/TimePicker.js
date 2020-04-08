@@ -12,7 +12,7 @@ const timePickerImportsCode = `import ClayTimePicker from '@clayui/time-picker';
 `;
 
 const timePickerCode = `const Component = () => {
-	const [state, setState] = React.useState({
+	const [state, setState] = useState({
 		hours: '--',
 		minutes: '--',
 	});

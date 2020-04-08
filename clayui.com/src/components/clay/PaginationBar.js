@@ -71,8 +71,8 @@ const paginationWithBasicItemsImportsCode = `import {ClayPaginationBarWithBasicI
 `;
 
 const PaginationBarWithBasicItemsCode = `const Component = () => {
-	const [activePage, setActivePage] = React.useState(1);
-	const [delta, setDelta] = React.useState(5);
+	const [activePage, setActivePage] = useState(1);
+	const [delta, setDelta] = useState(5);
 
 	const deltas = [
 		{

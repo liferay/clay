@@ -35,7 +35,7 @@ const checkboxContainerPropsImportsCode = `import {ClayCheckbox} from '@clayui/f
 export const CheckboxContainerProps = () => {
 	const scope = {ClayCheckbox};
 	const code = `const Component = () => {
-	const [value, setValue] = React.useState(false);
+	const [value, setValue] = useState(false);
 
 	const data = {
 		id: 'test'
@@ -68,7 +68,7 @@ const checkboxIndeterminateImportsCode = `import {ClayCheckbox} from '@clayui/fo
 export const CheckboxIndeterminate = () => {
 	const scope = {ClayCheckbox};
 	const code = `const Component = () => {
-	const [value, setValue] = React.useState(false);
+	const [value, setValue] = useState(false);
 
 	return (
 		<ClayCheckbox
@@ -97,7 +97,7 @@ const checkboxesInlineImportsCode = `import {ClayCheckbox} from '@clayui/form';
 export const CheckboxesInline = () => {
 	const scope = {ClayCheckbox};
 	const code = `const Component = () => {
-	const [value, setValue] = React.useState(false);
+	const [value, setValue] = useState(false);
 
 	return (
 		<>
@@ -143,7 +143,7 @@ const checkboxLabelImportsCode = `import {ClayCheckbox} from '@clayui/form';
 export const CheckboxLabel = () => {
 	const scope = {ClayCheckbox};
 	const code = `const Component = () => {
-	const [value, setValue] = React.useState(false);
+	const [value, setValue] = useState(false);
 
 	return (
 		<ClayCheckbox
@@ -168,7 +168,7 @@ const checkboxWithCallbackImportsCode = `import {ClayCheckbox} from '@clayui/for
 export const CheckboxWithCallback = () => {
 	const scope = {ClayCheckbox};
 	const code = `const Component = () => {
-	const [value, setValue] = React.useState(false);
+	const [value, setValue] = useState(false);
 
 	return (
 		<ClayCheckbox

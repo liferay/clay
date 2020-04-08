@@ -187,7 +187,7 @@ const ManagementToolbarCode = `const Component = () => {
 		},
 	];
 
-	const [searchMobile, setSearchMobile] = React.useState(false);
+	const [searchMobile, setSearchMobile] = useState(false);
 
 	const viewTypeActive = viewTypes.find(type => type.active);
 

@@ -13,8 +13,8 @@ import Editor from '../Editor';
 const autocompleteWithLoadingImportsCode = `import ClayAutocomplete from '@clayui/autocomplete';`;
 
 const autocompleteWithLoadingStateCode = `const Component = () => {
-	const [loading] = React.useState(true);
-	const [value, setValue] = React.useState('');
+	const [loading] = useState(true);
+	const [value, setValue] = useState('');
 
 	return (
 		<ClayAutocomplete>
@@ -47,8 +47,8 @@ import {useResource} from '@clayui/data-provider';
 import ClayDropDown from '@clayui/drop-down';`;
 
 const autocompleteWithDataProviderCode = `const Component = () => {
-	const [value, setValue] = React.useState('');
-	const [networkStatus, setNetworkStatus] = React.useState(4);
+	const [value, setValue] = useState('');
+	const [networkStatus, setNetworkStatus] = useState(4);
 	const {resource} = useResource({
 		fetchPolicy: 'cache-first',
 		link: 'https://rickandmortyapi.com/api/character/',
