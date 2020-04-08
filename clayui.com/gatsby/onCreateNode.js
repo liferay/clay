@@ -37,6 +37,7 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 			title,
 			version,
 		} = node.frontmatter;
+
 		const {relativePath, sourceInstanceName} = getNode(node.parent);
 
 		let slug = permalink;
@@ -63,6 +64,21 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 		}
 
 		if (!slug) {
+			if (sourceInstanceName === 'packages' && title) {
+				const fileName = path.basename(relativePath).split('.')[0];
+
+				if (relativePath.includes('README')) {
+					slug = `docs/components/${packageNpm.replace(
+						'@clayui/',
+						''
+					)}.html`;
+				} else {
+					slug = `docs/components/${fileName
+						.replace('_', '-')
+						.toLowerCase()}.html`;
+				}
+			}
+
 			if (relativePath.includes('docs')) {
 				if (relativePath.endsWith('.md')) {
 					slug = relativePath.replace('.md', '.html');
@@ -171,7 +187,7 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 		createNodeField({
 			name: 'slug',
 			node,
-			value: slug,
+			value: slug || '',
 		});
 
 		createNodeField({

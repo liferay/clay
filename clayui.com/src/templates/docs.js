@@ -110,7 +110,7 @@ export default props => {
 													)}
 												</div>
 												<div className="col-12">
-													{tab ? (
+													{tab && tab.html ? (
 														<ul
 															className="border-bottom nav nav-clay nav-underline"
 															role="tablist"
@@ -511,10 +511,10 @@ export const pageQuery = graphql`
 				}
 			}
 		}
-		mdTab: markdownRemark(fields: {slug: {eq: $sibling}}) {
+		mdTab: markdownRemark(fields: {slug: {ne: "", eq: $sibling}}) {
 			html
 		}
-		mdxTab: mdx(fields: {slug: {eq: $sibling}}) {
+		mdxTab: mdx(fields: {slug: {ne: "", eq: $sibling}}) {
 			code {
 				body
 			}

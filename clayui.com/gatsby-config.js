@@ -25,8 +25,15 @@ module.exports = {
 		},
 		{
 			options: {
-				name: 'packages',
+				name: 'content',
 				path: `${__dirname}/content`,
+			},
+			resolve: 'gatsby-source-filesystem',
+		},
+		{
+			options: {
+				name: 'packages',
+				path: path.join(__dirname, '../packages'),
 			},
 			resolve: 'gatsby-source-filesystem',
 		},
