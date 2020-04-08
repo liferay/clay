@@ -28,7 +28,7 @@ description: 'Alerts are used to capture the attention of the user in an intrusi
 </div>
 
 <div class="clay-site-alert alert alert-warning">
-	See the implementation of the <a href="/docs/components/alerts.html">Alerts component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/alerts/">Alerts Pattern</a>.
+	See the implementation of the <a href="/docs/components/alert.html">Alerts component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/alerts/">Alerts Pattern</a>.
 </div>
 
 <div class="clay-site-alert alert alert-warning">

@@ -85,7 +85,7 @@ export default () => {
 											<li className="nav-item">
 												<Link
 													className="nav-link-intro"
-													to="/docs/components/alerts.html"
+													to="/docs/components/alert.html"
 												>
 													{'Components Library'}
 												</Link>
@@ -209,7 +209,7 @@ export default () => {
 							<div className="col-md-12">
 								<Link
 									className="btn btn-borderless btn-warning-borderless mr-3"
-									to="/docs/components/alerts.html"
+									to="/docs/components/alert.html"
 								>
 									{'Documentation'}
 								</Link>
@@ -264,7 +264,7 @@ export default () => {
 									<div className="col-md-12">
 										<Link
 											className="btn btn-borderless btn-warning-borderless mr-3"
-											to="/docs/components/alerts.html"
+											to="/docs/components/alert.html"
 										>
 											{'Documentation'}
 										</Link>
