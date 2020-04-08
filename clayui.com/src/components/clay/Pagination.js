@@ -33,7 +33,7 @@ const paginationWithBasicItemsImportsCode = `import {ClayPaginationWithBasicItem
 `;
 
 const PaginationWithBasicItemsCode = `const Component = () => {
-	const [active, setActive] = React.useState(8);
+	const [active, setActive] = useState(8);
 
 	return (
 		<ClayPaginationWithBasicItems

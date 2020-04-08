@@ -48,9 +48,9 @@ const dualListBoxCode = `const Component = () => {
         ],
     ];
 
-	const [items, setItems] = React.useState(moveBoxesOptions);
-	const [leftSelected, setLeftSelected] = React.useState([]);
-	const [rightSelected, setRightSelected] = React.useState([]);
+	const [items, setItems] = useState(moveBoxesOptions);
+	const [leftSelected, setLeftSelected] = useState([]);
+	const [rightSelected, setRightSelected] = useState([]);
 
 	return (
 		<ClayDualListBox

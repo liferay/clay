@@ -12,7 +12,7 @@ const tableImportsCode = `import ClayTable from '@clayui/table';
 `;
 
 const tableCode = `const Component = () => {
-	const [value, setValue] = React.useState('one');
+	const [value, setValue] = useState('one');
 
 	return (
 		<ClayTable>

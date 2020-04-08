@@ -12,8 +12,8 @@ const colorPickerImportsCode = `import ClayColorPicker from '@clayui/color-picke
 `;
 
 const colorPickerCode = `const Component = () => {
-	const [customColors, setCustoms] = React.useState(['008000', '00FFFF', '0000FF']);
-	const [color, setColor] = React.useState(customColors[0]);
+	const [customColors, setCustoms] = useState(['008000', '00FFFF', '0000FF']);
+	const [color, setColor] = useState(customColors[0]);
 
 	return (
 		<ClayColorPicker

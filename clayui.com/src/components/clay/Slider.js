@@ -12,7 +12,7 @@ const sliderImportsCode = `import ClaySlider from '@clayui/slider';
 `;
 
 const SliderCode = `const Component = () => {
-	const [value, setValue] = React.useState(10);
+	const [value, setValue] = useState(10);
 
 	return (
 		<div className="form-group">

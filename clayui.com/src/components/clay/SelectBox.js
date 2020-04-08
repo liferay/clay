@@ -28,8 +28,8 @@ const selectBoxCode = `const Component = () => {
 		},
 	];
 
-	const [items, setItems] = React.useState(selectBoxItems);
-	const [value, setValue] = React.useState([]);
+	const [items, setItems] = useState(selectBoxItems);
+	const [value, setValue] = useState([]);
 
 	return (
 		<ClaySelectBox

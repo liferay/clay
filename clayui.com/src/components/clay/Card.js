@@ -23,7 +23,7 @@ import ClaySticker from '@clayui/sticker';
 `;
 
 const cardCode = `const Component = () => {
-	const [active, setActive] = React.useState(false);
+	const [active, setActive] = useState(false);
 
 	return (
 		<div className="col-md-4">
@@ -143,7 +143,7 @@ const cardWithInfoImportsCode = `import {ClayCardWithInfo} from '@clayui/card';
 `;
 
 const cardWithInfoCode = `const Component = () => {
-	const [value, setValue] = React.useState(false);
+	const [value, setValue] = useState(false);
 
 	return (
 		<div className="row">
@@ -305,7 +305,7 @@ const cardWithHorizontalImportsCode = `import {ClayCardWithInfo} from '@clayui/c
 `;
 
 const cardWithHorizontalCode = `const Component = () => {
-	const [value, setValue] = React.useState(false);
+	const [value, setValue] = useState(false);
 
 	return (
 		<div className="row">

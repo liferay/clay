@@ -17,8 +17,8 @@ const multiSelectImportsCode = `import ClayMultiSelect from '@clayui/multi-selec
 `;
 
 const multiSelectCode = `const Component = () => {
-	const [value, setValue] = React.useState('');
-	const [items, setItems] = React.useState([
+	const [value, setValue] = useState('');
+	const [items, setItems] = useState([
 		{
 			label: 'one',
 			value: '1',
@@ -57,8 +57,8 @@ const multiSelectWithAutocompleteImportsCode = `import ClayMultiSelect from '@cl
 `;
 
 const multiSelectWithAutocompleteCode = `const Component = (props) => {
-	const [value, setValue] = React.useState('');
-	const [items, setItems] = React.useState([
+	const [value, setValue] = useState('');
+	const [items, setItems] = useState([
 		{
 			label: 'one',
 			value: '1',
@@ -120,8 +120,8 @@ import ClayMultiSelect from '@clayui/multi-select';
 `;
 
 const multiSelectWithSelectButtonCode = `const Component = () => {
-	const [value, setValue] = React.useState('');
-	const [items, setItems] = React.useState([
+	const [value, setValue] = useState('');
+	const [items, setItems] = useState([
 		{
 			label: 'one',
 			value: '1',
@@ -194,8 +194,8 @@ const MultiSelectInputWithSelectButton = () => {
 };
 
 const multiSelectWithValidationCode = `const Component = () => {
-	const [value, setValue] = React.useState('');
-	const [items, setItems] = React.useState([
+	const [value, setValue] = useState('');
+	const [items, setItems] = useState([
 		{
 			label: 'one',
 			value: '1',
@@ -314,8 +314,8 @@ const multiSelectWithCustomAutocompleteCode = `const MenuCustom = ({
 );
 
 const Component = () => {
-	const [value, setValue] = React.useState('');
-	const [items, setItems] = React.useState([
+	const [value, setValue] = useState('');
+	const [items, setItems] = useState([
 		{
 			email: 'one@example.com',
 			label: 'One',

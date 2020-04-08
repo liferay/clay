@@ -15,7 +15,7 @@ import ClayModal, {useModal} from '@clayui/modal';
 `;
 
 const modalCode = `const Component = () => {
-	const [visible, setVisible] = React.useState(false);
+	const [visible, setVisible] = useState(false);
 	const {observer, onClose} = useModal({
 		onClose: () => setVisible(false),
 	});
