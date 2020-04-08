@@ -364,6 +364,10 @@
         "aliases": ["agenda", "book", "library"]
     },
     {
+        "name": "disk",
+        "aliases": ["floppy disk", "save"]
+    },
+    {
         "name": "document-code",
         "aliases": ["file", "script"]
     },
@@ -922,6 +926,10 @@
     {
         "name": "rules",
         "aliases": ["condition"]
+    },
+    {
+        "name": "search-plus",
+        "aliases": ["inspect", "lens", "zoom"]
     },
     {
         "name": "search",
