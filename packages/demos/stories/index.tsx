@@ -13,6 +13,8 @@ import DragDrop from './DragDrop';
 import FilesPage from './FilesPage';
 import FormPage from './FormPage';
 import ListPage from './ListPage';
+import ClayTableWithDraggableColumns from './TableColumnsDragDrop';
+import ClayTableWithDraggableRows from './TableRowsDragDrop';
 
 import './Recharts';
 
@@ -20,6 +22,16 @@ storiesOf('Demos|Templates', module)
 	.add('List Page', () => <ListPage />)
 	.add('Files Page', () => <FilesPage />)
 	.add('Form Page', () => <FormPage />)
+	.add('Table Rows Drag & Drop', () => (
+		<DndProvider backend={Backend}>
+			<ClayTableWithDraggableRows />
+		</DndProvider>
+	))
+	.add('Table Columns Drag & Drop', () => (
+		<DndProvider backend={Backend}>
+			<ClayTableWithDraggableColumns />
+		</DndProvider>
+	))
 	.add('Drag & Drop', () => (
 		<DndProvider backend={Backend}>
 			<DragDrop />
