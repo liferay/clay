@@ -20,22 +20,64 @@ interface ITranslations {
 }
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
+	/**
+	 * Labels for the aria attributes
+	 */
 	ariaLabels?: {
 		default: string;
 		openLocalizations: string;
 		translated: string;
 		untranslated: string;
 	};
+
+	/**
+	 * Add informational text at the top of Localized Input.
+	 */
 	helpText?: React.ReactText;
+
+	/**
+	 * Label of the input
+	 */
 	label?: React.ReactText;
+
+	/**
+	 * Content to be prepended in case you want to localize a URL.
+	 */
 	prependContent?: React.ReactText;
+
+	/**
+	 * List of locales to allow localization for
+	 */
 	locales: Array<IItem>;
+
+	/**
+	 * Callback that gets called when a selected locale gets changed
+	 */
 	onSelectedLocaleChange: (val: IItem) => void;
+
+	/**
+	 * Callback that gets called when a translation of the selected locale gets changed
+	 */
 	onTranslationsChange: (val: ITranslations) => void;
+
+	/**
+	 * Allows specifying custom formatter, for example for formatting URLs, to be output after translating
+	 */
 	resultFormatter?: (val: string) => React.ReactNode;
+
+	/**
+	 * Exposes the currently selected locale
+	 */
 	selectedLocale: IItem;
+
+	/**
+	 * Path to the location of the spritemap resource.
+	 */
 	spritemap?: string;
-	textarea?: boolean;
+
+	/**
+	 * Translations provided to the component to be used and modified by it
+	 */
 	translations: ITranslations;
 }
 
@@ -61,7 +103,7 @@ const ClayLocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 			spritemap,
 			translations,
 			...otherProps
-		},
+		}: IProps,
 		ref
 	) => {
 		const [active, setActive] = React.useState(false);
