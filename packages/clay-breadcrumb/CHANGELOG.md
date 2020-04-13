@@ -11,18 +11,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/breadcrumb:** use ClayLink over anchor tag ([047c3be](https://github.com/liferay/clay/tree/master/packages/clay-breadcrumb/commit/047c3be))
+-   **@clayui/breadcrumb:** use ClayLink over anchor tag ([047c3be](https://github.com/liferay/clay/commit/047c3be))
 
 # 3.1.0 (2020-02-28)
 
 ### Bug Fixes
 
--   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/tree/master/packages/clay-breadcrumb/commit/335ff38))
--   add missing dependency declarations ([c591e2f](https://github.com/liferay/clay/tree/master/packages/clay-breadcrumb/commit/c591e2f))
+-   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
+-   add missing dependency declarations ([c591e2f](https://github.com/liferay/clay/commit/c591e2f))
 
 ### Features
 
--   **breadcrumb:** move breadcrumb to its own package ([0994158](https://github.com/liferay/clay/tree/master/packages/clay-breadcrumb/commit/0994158))
+-   **breadcrumb:** move breadcrumb to its own package ([0994158](https://github.com/liferay/clay/commit/0994158))
 
 ## [3.0.7](https://github.com/liferay/clay/tree/master/packages/clay-breadcrumb/compare/@clayui/breadcrumb@3.0.6...@clayui/breadcrumb@3.0.7) (2020-02-13)
 
@@ -32,21 +32,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/tree/master/packages/clay-breadcrumb/commit/335ff38))
--   add missing dependency declarations ([c591e2f](https://github.com/liferay/clay/tree/master/packages/clay-breadcrumb/commit/c591e2f))
+-   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
+-   add missing dependency declarations ([c591e2f](https://github.com/liferay/clay/commit/c591e2f))
 
 ## [3.0.5](https://github.com/liferay/clay/tree/master/packages/clay-breadcrumb/compare/@clayui/breadcrumb@3.0.3...@clayui/breadcrumb@3.0.5) (2020-01-20)
 
 ### Bug Fixes
 
--   add missing dependency declarations ([c591e2f](https://github.com/liferay/clay/tree/master/packages/clay-breadcrumb/commit/c591e2f))
--   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/tree/master/packages/clay-breadcrumb/commit/335ff38))
+-   add missing dependency declarations ([c591e2f](https://github.com/liferay/clay/commit/c591e2f))
+-   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
 
 ## [3.0.4](https://github.com/liferay/clay/tree/master/packages/clay-breadcrumb/compare/@clayui/breadcrumb@3.0.3...@clayui/breadcrumb@3.0.4) (2019-12-05)
 
 ### Bug Fixes
 
--   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/tree/master/packages/clay-breadcrumb/commit/335ff38))
+-   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
 
 ## [3.0.3](https://github.com/liferay/clay/tree/master/packages/clay-breadcrumb/compare/@clayui/breadcrumb@3.0.2...@clayui/breadcrumb@3.0.3) (2019-11-07)
 
