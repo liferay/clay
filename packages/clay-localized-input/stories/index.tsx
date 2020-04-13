@@ -10,6 +10,7 @@
  */
 
 import '@clayui/css/lib/css/atlas.css';
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {storiesOf} from '@storybook/react';
 import React from 'react';
 
@@ -51,6 +52,7 @@ storiesOf('Components|ClayLocalizedInput', module).add('default', () => {
 				onSelectedLocaleChange={setSelectedLocale}
 				onTranslationsChange={setTranslations}
 				selectedLocale={selectedLocale}
+				spritemap={spritemap}
 				translations={translations}
 			/>
 			<br />
@@ -64,6 +66,7 @@ storiesOf('Components|ClayLocalizedInput', module).add('default', () => {
 				prependContent={prepend}
 				resultFormatter={val => `https://liferay.com${prepend}${val}`}
 				selectedLocale={selectedLocale}
+				spritemap={spritemap}
 				translations={translations}
 			/>
 		</div>
