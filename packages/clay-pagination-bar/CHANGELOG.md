@@ -15,14 +15,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **@clayui/pagination:** add button type for pagination ([84e8628](https://github.com/liferay/clay/tree/master/packages/clay-pagination-bar/commit/84e8628))
--   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/tree/master/packages/clay-pagination-bar/commit/335ff38))
--   **pagination-bar:** remove unused interface items ([3686e40](https://github.com/liferay/clay/tree/master/packages/clay-pagination-bar/commit/3686e40))
--   **pagination-bar:** we forgot to add the ref argument ([50a61c8](https://github.com/liferay/clay/tree/master/packages/clay-pagination-bar/commit/50a61c8))
+-   **@clayui/pagination:** add button type for pagination ([84e8628](https://github.com/liferay/clay/commit/84e8628))
+-   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
+-   **pagination-bar:** remove unused interface items ([3686e40](https://github.com/liferay/clay/commit/3686e40))
+-   **pagination-bar:** we forgot to add the ref argument ([50a61c8](https://github.com/liferay/clay/commit/50a61c8))
 
 ### Features
 
--   **pagination-bar:** move Paginationbar to its own package for consistency ([7592e84](https://github.com/liferay/clay/tree/master/packages/clay-pagination-bar/commit/7592e84))
+-   **pagination-bar:** move Paginationbar to its own package for consistency ([7592e84](https://github.com/liferay/clay/commit/7592e84))
 
 ## [3.0.7](https://github.com/liferay/clay/tree/master/packages/clay-pagination-bar/compare/@clayui/pagination-bar@3.0.6...@clayui/pagination-bar@3.0.7) (2020-02-13)
 
@@ -32,20 +32,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/tree/master/packages/clay-pagination-bar/commit/335ff38))
--   **pagination-bar:** remove unused interface items ([3686e40](https://github.com/liferay/clay/tree/master/packages/clay-pagination-bar/commit/3686e40))
+-   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
+-   **pagination-bar:** remove unused interface items ([3686e40](https://github.com/liferay/clay/commit/3686e40))
 
 ## [3.0.5](https://github.com/liferay/clay/tree/master/packages/clay-pagination-bar/compare/@clayui/pagination-bar@3.0.3...@clayui/pagination-bar@3.0.5) (2020-01-20)
 
 ### Bug Fixes
 
--   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/tree/master/packages/clay-pagination-bar/commit/335ff38))
+-   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
 
 ## [3.0.4](https://github.com/liferay/clay/tree/master/packages/clay-pagination-bar/compare/@clayui/pagination-bar@3.0.3...@clayui/pagination-bar@3.0.4) (2019-12-05)
 
 ### Bug Fixes
 
--   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/tree/master/packages/clay-pagination-bar/commit/335ff38))
+-   **drop-down:** use dom-align instead of metal-position ([335ff38](https://github.com/liferay/clay/commit/335ff38))
 
 ## [3.0.3](https://github.com/liferay/clay/tree/master/packages/clay-pagination-bar/compare/@clayui/pagination-bar@3.0.2...@clayui/pagination-bar@3.0.3) (2019-11-07)
 
@@ -59,4 +59,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **pagination-bar:** we forgot to add the ref argument ([50a61c8](https://github.com/liferay/clay/tree/master/packages/clay-pagination-bar/commit/50a61c8))
+-   **pagination-bar:** we forgot to add the ref argument ([50a61c8](https://github.com/liferay/clay/commit/50a61c8))

@@ -7,11 +7,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/tree/master/packages/clay-sticker/commit/9e24b59))
+-   update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/commit/9e24b59))
 
 ### Features
 
--   **card:** create high-level CardWithUser component ([8d06aa0](https://github.com/liferay/clay/tree/master/packages/clay-sticker/commit/8d06aa0))
+-   **card:** create high-level CardWithUser component ([8d06aa0](https://github.com/liferay/clay/commit/8d06aa0))
 
 ## [3.0.5](https://github.com/liferay/clay/tree/master/packages/clay-sticker/compare/@clayui/sticker@3.0.2...@clayui/sticker@3.0.5) (2020-01-31)
 

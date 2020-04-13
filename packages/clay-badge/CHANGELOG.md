@@ -7,6 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/tree/master/packages/clay-badge/commit/9e24b59))
--   **@clayui/badge:** Forward ClayBadge refs ([98576ab](https://github.com/liferay/clay/tree/master/packages/clay-badge/commit/98576ab))
--   **@clayui/badge:** improve types ([683d776](https://github.com/liferay/clay/tree/master/packages/clay-badge/commit/683d776))
+-   update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/commit/9e24b59))
+-   **@clayui/badge:** Forward ClayBadge refs ([98576ab](https://github.com/liferay/clay/commit/98576ab))
+-   **@clayui/badge:** improve types ([683d776](https://github.com/liferay/clay/commit/683d776))

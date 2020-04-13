@@ -7,5 +7,5 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/tree/master/packages/clay-loading-indicator/commit/9e24b59))
--   **loading-indicator:** add forwardRef ([0b25003](https://github.com/liferay/clay/tree/master/packages/clay-loading-indicator/commit/0b25003))
+-   update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/commit/9e24b59))
+-   **loading-indicator:** add forwardRef ([0b25003](https://github.com/liferay/clay/commit/0b25003))

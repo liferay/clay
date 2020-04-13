@@ -7,7 +7,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/tree/master/packages/clay-progress-bar/commit/9e24b59))
+-   update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/commit/9e24b59))
 
 ## [3.0.3](https://github.com/liferay/clay/tree/master/packages/clay-progress-bar/compare/@clayui/progress-bar@3.0.1...@clayui/progress-bar@3.0.3) (2020-01-31)
 
