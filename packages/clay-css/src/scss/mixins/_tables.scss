@@ -1,0 +1,88 @@
+////
+/// @group Tables
+////
+
+/// A mixin to help create table-drag variants.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// See Mixin `clay-css` for available keys to pass into the base selector
+/// c-dragging-before: {Map | Null}, // See Mixin `clay-css` for available keys. This is an extra pseudo element if you need.
+/// c-dragging-after: {Map | Null}, // See Mixin `clay-css` for available keys. This styles the overlay on the original column when dragging.
+/// c-droppable-before: {Map | Null}, // See Mixin `clay-css` for available keys. This styles the left border (background-image) on `c-droppable` columns when dragging
+/// c-droppable-after: {Map | Null}, // See Mixin `clay-css` for available keys. This is an extra pseudo element if you need.
+
+@mixin clay-table-drag-variant($map) {
+	$cell: setter(map-get($map, cell), ());
+
+	$c-drag: setter(map-get($map, c-drag), ());
+
+	$c-dragging-before: setter(map-get($map, c-dragging-before), ());
+
+	$c-dragging-after: setter(map-get($map, c-dragging-after), ());
+
+	$c-droppable-before: setter(map-get($map, c-droppable-before), ());
+
+	$c-droppable-after: setter(map-get($map, c-droppable-after), ());
+
+	@include clay-css($map);
+
+	th,
+	td {
+		@include clay-css($cell);
+	}
+
+	.c-drag {
+		@include clay-css($c-drag);
+	}
+
+	.c-dragging {
+		&::before {
+			@include clay-css($c-dragging-before);
+		}
+
+		&::after {
+			@include clay-css($c-dragging-after);
+		}
+	}
+
+	.c-droppable {
+		&::before {
+			@include clay-css($c-droppable-before);
+		}
+
+		&::after {
+			@include clay-css($c-droppable-after);
+		}
+	}
+}
+
+/// A mixin to help create table-clone variants.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// See Mixin `clay-css` for available keys to pass into the base selector
+/// before: {Map | Null}, // See Mixin `clay-css` for available keys. This styles the left border on the `table-clone` variant.
+/// after: {Map | Null}, // See Mixin `clay-css` for available keys. This styles the right border on the `table-clone` variant.
+/// cell: {Map | Null}, // See Mixin `clay-css` for available keys. This styles the table cell (th and td) in the `table-clone` variant.
+
+@mixin clay-table-clone-variant($map) {
+	$before: setter(map-get($map, before), ());
+
+	$after: setter(map-get($map, after), ());
+
+	$cell: setter(map-get($map, cell), ());
+
+	@include clay-css($map);
+
+	&::before {
+		@include clay-css($before);
+	}
+
+	&::after {
+		@include clay-css($after);
+	}
+
+	thead th,
+	tbody td {
+		@include clay-css($cell);
+	}
+}
