@@ -13,6 +13,7 @@ import {
 	useDragLayer,
 	useDrop,
 } from 'react-dnd';
+import {getEmptyImage} from 'react-dnd-html5-backend';
 
 const TABLE_COLUMN_DND_TYPE = 'tableColumn';
 
@@ -141,7 +142,7 @@ const ColumnDragPreview: React.FunctionComponent<IColumnDragPreviewProps> = ({
 	return (
 		<div style={dragLayerStyles}>
 			<div style={dragItemStyles}>
-				<ClayTable>
+				<ClayTable className="table-clone">
 					<ClayTable.Head>
 						<ClayTable.Row>
 							<ClayTable.Cell headingCell headingTitle>
@@ -229,12 +230,16 @@ const DraggableTableHeaderCell: React.FunctionComponent<
 		},
 	});
 
-	const [{itemBeingDragged}, drag] = useDrag({
+	const [{itemBeingDragged}, drag, preview] = useDrag({
 		collect: (monitor: any) => ({
 			itemBeingDragged: monitor.getItem() || {id: 0},
 		}),
 		item: {id, index, type: TABLE_COLUMN_DND_TYPE},
 	});
+
+	React.useEffect(() => {
+		preview(getEmptyImage(), {captureDraggingState: true});
+	}, [preview]);
 
 	drag(drop(ref));
 
@@ -273,12 +278,35 @@ const ClayTableWithDraggableColumns: React.FunctionComponent = () => {
 	const tableRows = new Array(tableColumns[0].data.length)
 		.fill(null)
 		.map((_item, index: number) =>
-			tableColumns.map((column: TColumn) => column.data[index])
+			tableColumns.map((column: TColumn) => ({
+				data: column.data[index],
+				id: column.id,
+			}))
 		);
+
+	const [{itemBeingDragged}] = useDrag({
+		collect: (monitor: any) => ({
+			itemBeingDragged: monitor.getItem(),
+		}),
+		item: {type: TABLE_COLUMN_DND_TYPE},
+	});
+
+	const [{canDrop}] = useDrop({
+		accept: TABLE_COLUMN_DND_TYPE,
+		collect: (monitor: DropTargetMonitor) => ({
+			canDrop: monitor.canDrop(),
+		}),
+	});
+
+	const isDragging = itemBeingDragged ? true : false;
 
 	return (
 		<>
-			<ClayTable className="table-drag">
+			<ClayTable
+				className={classNames('table-drag', {
+					'table-dragging': isDragging,
+				})}
+			>
 				<ClayTable.Head>
 					<ClayTable.Row>
 						{tableColumns.map((column: TColumn, index: number) => (
@@ -294,18 +322,26 @@ const ClayTableWithDraggableColumns: React.FunctionComponent = () => {
 				</ClayTable.Head>
 
 				<ClayTable.Body>
-					{tableRows.map((row, index) => (
-						<ClayTable.Row key={`${row[index]}_${index}`}>
+					{tableRows.map((row, index: number) => (
+						<ClayTable.Row
+							key={`${row[index].id}_${row[index].data}`}
+						>
 							{row.map(cell => (
 								<ClayTable.Cell
-									key={`${cell}_${Math.random().toString()}`}
+									className={classNames({
+										'c-dragging':
+											itemBeingDragged &&
+											itemBeingDragged.id === cell.id,
+										'c-droppable': canDrop,
+									})}
+									key={`${cell.id}_${cell.data}`}
 									ref={node =>
 										node &&
 										setDragPreviewWidth(node.offsetWidth)
 									}
 									truncate
 								>
-									{cell}
+									{cell.data}
 								</ClayTable.Cell>
 							))}
 						</ClayTable.Row>
