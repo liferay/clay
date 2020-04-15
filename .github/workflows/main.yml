@@ -1,12 +1,11 @@
-name: Comment Build Stats
-
+name: Main
 on:
     pull_request:
-        branches-ignore:
-            - '**'
+        branches: ['master']
 
 jobs:
-    build_and_comment:
+    generate_stats:
+        name: Generate Build Stats
         runs-on: ubuntu-latest
         steps:
             - uses: actions/setup-node@v1
@@ -36,15 +35,3 @@ jobs:
               run: |
                   yarn install
                   yarn checkSize:compare
-            - name: Post comment on PR
-              env:
-                  URL: ${{ github.event.pull_request.comments_url }}
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              run: |
-                  curl \
-                      -v \
-                      -X POST \
-                      $URL \
-                      -H "Content-Type: application/json" \
-                      -H "Authorization: token $GITHUB_TOKEN" \
-                      --data @.parcel-ci-build.json
