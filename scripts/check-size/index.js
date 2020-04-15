@@ -12,13 +12,16 @@ const generateTable = require('./generateTable');
 
 const CLI_ARGS = process.argv.slice(2);
 
-const THRESHHOLD = 5;
+const TOTAL_THRESHHOLD_PERCENT = 5;
 
 const WORKSPACE_PACKAGES_WHITELIST = [
 	'browserslist-config-clay',
 	'demos',
 	'generator-clay-component',
 ];
+
+const getGzipSize = relPath =>
+	zlib.gzipSync(fs.readFileSync(path.join(__dirname, relPath))).length;
 
 function main() {
 	const packages = fs.readdirSync('packages', {withFileTypes: true});
@@ -30,7 +33,7 @@ function main() {
 				__dirname,
 				'../../packages/',
 				name,
-				'lib/(index.js)'
+				'lib/index.js'
 			);
 		});
 
@@ -42,24 +45,26 @@ function main() {
 	});
 
 	bundler.on('bundled', () => {
-		const bundles = fs.readdirSync('.parcel-ci-builds', {
+		const jsBundles = fs.readdirSync('.parcel-ci-builds', {
 			withFileTypes: true,
 		});
 
-		const bundleData = {};
+		const cssData = {
+			'@clayui/css:atlas': getGzipSize(
+				'../../packages/clay-css/lib/css/atlas.css'
+			),
+			'@clayui/css:base': getGzipSize(
+				'../../packages/clay-css/lib/css/base.css'
+			),
+		};
 
-		bundles.map(({name}) => {
-			bundleData[name] = zlib.gzipSync(
-				fs.readFileSync(
-					path.join(
-						__dirname,
-						'../../.parcel-ci-builds/',
-						name,
-						'lib/index.js'
-					)
-				)
-			).length;
-		});
+		const packageStats = jsBundles.reduce((acc, {name}) => {
+			acc[name] = getGzipSize(
+				`../../.parcel-ci-builds/${name}/lib/index.js`
+			);
+
+			return acc;
+		}, cssData);
 
 		if (CLI_ARGS.includes('--compare')) {
 			// eslint-disable-next-line liferay/no-dynamic-require
@@ -69,20 +74,18 @@ function main() {
 				'../../base-stats/.parcel-ci-build.json'
 			));
 
-			const newStats = bundleData;
-
-			const [table, totalDiff] = generateTable(prevStats, newStats);
+			const [table, totalDiff] = generateTable(prevStats, packageStats);
 
 			// eslint-disable-next-line
 			console.log(table);
 
-			if (Math.abs(totalDiff) > THRESHHOLD) {
+			if (Math.abs(totalDiff) > TOTAL_THRESHHOLD_PERCENT) {
 				process.exit(1);
 			}
 		} else {
 			fs.writeFileSync(
 				path.join(__dirname, '../../.parcel-ci-build.json'),
-				JSON.stringify(bundleData)
+				JSON.stringify(packageStats)
 			);
 		}
 	});
