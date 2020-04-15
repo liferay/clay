@@ -1,5 +1,6 @@
 {
 	"private": true,
+	"repository": "https://github.com/liferay/clay",
 	"scripts": {
 		"build": "lerna run build && lerna run build:types",
 		"build:csb": "lerna run --no-bail --ignore \"clayui.com\" build && lerna run --no-bail --ignore \"clayui.com\" build:types",

@@ -7,7 +7,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   **nav:** rename navigation to just nav ([b58ed3e](https://github.com/liferay/clay/tree/master/packages/clay-nav/commit/b58ed3e))
+-   **nav:** rename navigation to just nav ([b58ed3e](https://github.com/liferay/clay/commit/b58ed3e))
 
 ## [3.0.6](https://github.com/liferay/clay/tree/master/packages/clay-nav/compare/@clayui/nav@3.0.3...@clayui/nav@3.0.6) (2020-01-31)
 

@@ -7,14 +7,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   normalize names of components ([3a0abea](https://github.com/liferay/clay/tree/master/packages/clay-navigation-bar/commit/3a0abea))
--   update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/tree/master/packages/clay-navigation-bar/commit/9e24b59))
--   **@clayui/navigation-bar:** replace ClayLink with ClayButton and add truncated text ([00536a0](https://github.com/liferay/clay/tree/master/packages/clay-navigation-bar/commit/00536a0))
--   **clay-navigation-bar:** fix warnings in tests ([ef2a2b5](https://github.com/liferay/clay/tree/master/packages/clay-navigation-bar/commit/ef2a2b5))
+-   normalize names of components ([3a0abea](https://github.com/liferay/clay/commit/3a0abea))
+-   update components to include 'types' and 'ts:main' package keys ([9e24b59](https://github.com/liferay/clay/commit/9e24b59))
+-   **@clayui/navigation-bar:** replace ClayLink with ClayButton and add truncated text ([00536a0](https://github.com/liferay/clay/commit/00536a0))
+-   **clay-navigation-bar:** fix warnings in tests ([ef2a2b5](https://github.com/liferay/clay/commit/ef2a2b5))
 
 ### Features
 
--   update react-testing-library to be @testing-library/react ([bd78145](https://github.com/liferay/clay/tree/master/packages/clay-navigation-bar/commit/bd78145))
+-   update react-testing-library to be @testing-library/react ([bd78145](https://github.com/liferay/clay/commit/bd78145))
 
 ## [3.0.6](https://github.com/liferay/clay/tree/master/packages/clay-navigation-bar/compare/@clayui/navigation-bar@3.0.3...@clayui/navigation-bar@3.0.6) (2020-01-31)
 
