@@ -58,7 +58,7 @@ A table is styled like a list. The active state can be invoked by adding class `
                             </svg>
                         </a>
                     </span><a class="inline-item text-truncate-inline" href="#1">
-                        <span class="text-truncate" title="ID">ID</span><span class="inline-item inline-item-after">
+                        <span class="text-truncate">ID</span><span class="inline-item inline-item-after">
                             <svg class="lexicon-icon lexicon-icon-arrow-down" focusable="false" role="presentation">
                                 <use href="/images/icons/icons.svg#arrow-down"></use>
                             </svg>
@@ -66,18 +66,16 @@ A table is styled like a list. The active state can be invoked by adding class `
                     </a>
                 </th>
                 <th class="table-cell-expand table-head-title">
+                    <span class="text-truncate">Title</span>
+                </th>
+                <th class="table-head-title">
                     <a class="inline-item text-truncate-inline" href="#1">
-                        <span class="text-truncate" title="Title">Title</span>
+                        <span class="text-truncate">Modified Date</span>
                     </a>
                 </th>
                 <th class="table-head-title">
                     <a class="inline-item text-truncate-inline" href="#1">
-                        <span class="text-truncate" title="Modified Date">Modified Date</span>
-                    </a>
-                </th>
-                <th class="table-head-title">
-                    <a class="inline-item text-truncate-inline" href="#1">
-                        <span class="text-truncate" title="Author">Author</span>
+                        <span class="text-truncate">Author</span>
                     </a>
                 </th>
                 <th><span class="inline-item">Type</span></th>
@@ -211,7 +209,7 @@ A table is styled like a list. The active state can be invoked by adding class `
 						</svg>
 					</a> </span
 				><a class="inline-item text-truncate-inline" href="#1">
-					<span class="text-truncate" title="ID">ID</span
+					<span class="text-truncate">ID</span
 					><span class="inline-item inline-item-after">
 						<svg
 							class="lexicon-icon lexicon-icon-arrow-down"
@@ -227,21 +225,19 @@ A table is styled like a list. The active state can be invoked by adding class `
 			</th>
 			<th class="table-cell-expand table-head-title">
 				<a class="inline-item text-truncate-inline" href="#1">
-					<span class="text-truncate" title="Title">Title</span>
+					<span class="text-truncate">Title</span>
 				</a>
 			</th>
 			<th><span class="inline-item">Status</span></th>
 			<th class="table-head-title">
 				<a class="inline-item text-truncate-inline" href="#1">
-					<span class="text-truncate" title="Modified Date"
-						>Modified Date</span
-					>
+					<span class="text-truncate">Modified Date</span>
 				</a>
 			</th>
 			<th><span class="inline-item">Display Date</span></th>
 			<th class="table-head-title">
 				<a class="inline-item text-truncate-inline" href="#1">
-					<span class="text-truncate" title="Author">Author</span>
+					<span class="text-truncate">Author</span>
 				</a>
 			</th>
 			<th><span class="inline-item">Type</span></th>
@@ -821,17 +817,17 @@ Add `.table-sm` to make tables more compact by cutting cell padding in half.
             <tr>
                 <th>
                     <span class="text-truncate-inline">
-                        <span class="text-truncate" title=""></span>
+                        <span class="text-truncate"></span>
                     </span>
                 </th>
                 <th class="table-cell-expand">
                     <span class="text-truncate-inline">
-                        <span class="text-truncate" title="Title">Title</span>
+                        <span class="text-truncate">Title</span>
                     </span>
                 </th>
                 <th class="table-cell-expand">
                     <span class="text-truncate-inline">
-                        <span class="text-truncate" title="Modified Date">Modified Date</span>
+                        <span class="text-truncate">Modified Date</span>
                     </span>
                 </th>
                 <th class="table-column-text-end"></th>
@@ -850,13 +846,13 @@ Add `.table-sm` to make tables more compact by cutting cell padding in half.
                 <td class="table-cell-expand">
                     <div class="table-list-title">
                         <a class="text-truncate-inline" href="#1">
-                            <span class="text-truncate" title="Web Content 342122-322-abcdefg">Web Content 342122-322-abcdefg</span>
+                            <span class="text-truncate">Web Content 342122-322-abcdefg</span>
                         </a>
                     </div>
                 </td>
                 <td class="table-cell-expand">
                     <span class="text-truncate-inline">
-                        <span class="text-truncate" title="35 Seconds Ago">35 Seconds Ago</span>
+                        <span class="text-truncate">35 Seconds Ago</span>
                     </span>
                 </td>
                 <td class="table-column-text-end">
@@ -894,7 +890,7 @@ Add `.table-sm` to make tables more compact by cutting cell padding in half.
                 </td>
                 <td class="table-cell-expand">
                     <span class="text-truncate-inline">
-                        <span class="text-truncate" title="20 Minutes Ago">20 Minutes Ago</span>
+                        <span class="text-truncate">20 Minutes Ago</span>
                     </span>
                 </td>
                 <td class="table-column-text-end">
@@ -918,19 +914,17 @@ Add `.table-sm` to make tables more compact by cutting cell padding in half.
 		<tr>
 			<th>
 				<span class="text-truncate-inline">
-					<span class="text-truncate" title=""></span>
+					<span class="text-truncate"></span>
 				</span>
 			</th>
 			<th class="table-cell-expand">
 				<span class="text-truncate-inline">
-					<span class="text-truncate" title="Title">Title</span>
+					<span class="text-truncate">Title</span>
 				</span>
 			</th>
 			<th class="table-cell-expand">
 				<span class="text-truncate-inline">
-					<span class="text-truncate" title="Modified Date"
-						>Modified Date</span
-					>
+					<span class="text-truncate">Modified Date</span>
 				</span>
 			</th>
 			<th class="table-column-text-end"></th>
@@ -949,9 +943,7 @@ Add `.table-sm` to make tables more compact by cutting cell padding in half.
 			<td class="table-cell-expand">
 				<div class="table-list-title">
 					<a class="text-truncate-inline" href="#1">
-						<span
-							class="text-truncate"
-							title="Web Content 342122-322-abcdefg"
+						<span class="text-truncate"
 							>Web Content 342122-322-abcdefg</span
 						>
 					</a>
@@ -959,9 +951,7 @@ Add `.table-sm` to make tables more compact by cutting cell padding in half.
 			</td>
 			<td class="table-cell-expand">
 				<span class="text-truncate-inline">
-					<span class="text-truncate" title="35 Seconds Ago"
-						>35 Seconds Ago</span
-					>
+					<span class="text-truncate">35 Seconds Ago</span>
 				</span>
 			</td>
 			<td class="table-column-text-end">
@@ -1036,9 +1026,7 @@ Add `.table-sm` to make tables more compact by cutting cell padding in half.
 			</td>
 			<td class="table-cell-expand">
 				<span class="text-truncate-inline">
-					<span class="text-truncate" title="20 Minutes Ago"
-						>20 Minutes Ago</span
-					>
+					<span class="text-truncate">20 Minutes Ago</span>
 				</span>
 			</td>
 			<td class="table-column-text-end">
@@ -1350,7 +1338,7 @@ The helpers `table-cell-ws-normal` and `table-cell-ws-nowrap` sets `white-space`
                 <th>ID</th>
                 <th class="table-cell-minw-300 table-cell-expand">
                     <a class="inline-item text-truncate-inline" href="#1">
-                        <span class="text-truncate" title="Description">Title</span>
+                        <span class="text-truncate">Title</span>
                     </a>
                 </th>
                 <th class="table-cell-expand-small table-cell-ws-nowrap">Modified Date</th>
@@ -1394,7 +1382,7 @@ The helpers `table-cell-ws-normal` and `table-cell-ws-nowrap` sets `white-space`
 			<th>ID</th>
 			<th class="table-cell-minw-300 table-cell-expand">
 				<a class="inline-item text-truncate-inline" href="#1">
-					<span class="text-truncate" title="Description">Title</span>
+					<span class="text-truncate">Title</span>
 				</a>
 			</th>
 			<th class="table-cell-expand-small table-cell-ws-nowrap">
@@ -1455,7 +1443,7 @@ The helpers `table-cell-ws-normal` and `table-cell-ws-nowrap` sets `white-space`
                 <th>ID</th>
                 <th class="table-cell-expand">
                     <span class="text-truncate-inline">
-                        <span class="text-truncate" title="Description">Title</span>
+                        <span class="text-truncate">Title</span>
                     </span>
                 </th>
                 <th>Status</th>
@@ -1501,7 +1489,7 @@ The helpers `table-cell-ws-normal` and `table-cell-ws-nowrap` sets `white-space`
 			<th>ID</th>
 			<th class="table-cell-expand">
 				<span class="text-truncate-inline">
-					<span class="text-truncate" title="Description">Title</span>
+					<span class="text-truncate">Title</span>
 				</span>
 			</th>
 			<th>Status</th>
@@ -1556,7 +1544,7 @@ The helpers `table-cell-ws-normal` and `table-cell-ws-nowrap` sets `white-space`
                 <th>ID</th>
                 <th class="table-cell-expand">
                     <span class="text-truncate-inline">
-                        <span class="text-truncate" title="Description">Title</span>
+                        <span class="text-truncate">Title</span>
                     </span>
                 </th>
                 <th>Status</th>
@@ -1606,7 +1594,7 @@ The helpers `table-cell-ws-normal` and `table-cell-ws-nowrap` sets `white-space`
                 <th>ID</th>
                 <th class="table-cell-expand">
                     <span class="text-truncate-inline">
-                        <span class="text-truncate" title="Description">Title</span>
+                        <span class="text-truncate">Title</span>
                     </span>
                 </th>
                 <th>Status</th>
@@ -1659,7 +1647,7 @@ The helpers `table-cell-ws-normal` and `table-cell-ws-nowrap` sets `white-space`
 			<th>ID</th>
 			<th class="table-cell-expand">
 				<span class="text-truncate-inline">
-					<span class="text-truncate" title="Description">Title</span>
+					<span class="text-truncate">Title</span>
 				</span>
 			</th>
 			<th>Status</th>
