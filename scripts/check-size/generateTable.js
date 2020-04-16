@@ -33,13 +33,6 @@ const setChangedData = function(prevSize, newSize) {
 	return `${icon} ${convertBytes(bytesDiff)} (${diffPercent})`;
 };
 
-const padValue = (val, length) => {
-	const trailingSpaces = Math.max(length - 1 - val.length, 1);
-
-	return SPACE + val + SPACE.repeat(trailingSpaces);
-};
-
-const SPACE = ' ';
 const BORDER =
 	'+----------------------------+--------------+--------------+------------------------+';
 const TABLE_HEADER = `
@@ -69,21 +62,21 @@ const getStatsArray = (prevStats, newStats) => {
 	];
 };
 
-function processMarkdownTable(prevStats, newStats) {
+function generateTable(prevStats, newStats) {
 	const [statsArray, totalDiffPercent] = getStatsArray(prevStats, newStats);
 
 	const table = statsArray.sort(sortDiffSize).reduce((acc, item) => {
 		const row = [
-			padValue(item.packageName, 28),
-			padValue(convertBytes(item.prevSize), 14),
-			padValue(convertBytes(item.newSize), 14),
-			padValue(setChangedData(item.prevSize, item.newSize), 24),
+			item.packageName.padEnd(27),
+			convertBytes(item.prevSize).padEnd(13),
+			convertBytes(item.newSize).padEnd(13),
+			setChangedData(item.prevSize, item.newSize).padEnd(23),
 		];
 
-		return `${acc}\n|${row.join('|')}|`;
+		return `${acc}\n| ${row.join('| ')}|`;
 	}, TABLE_HEADER);
 
 	return [`${table}\nTotal Diff: ${totalDiffPercent}%`, totalDiffPercent];
 }
 
-module.exports = processMarkdownTable;
+module.exports = generateTable;
