@@ -5,33 +5,27 @@ on:
 
 jobs:
     generate_stats:
-        name: Generate Build Stats
+        name: Bundle Size
         runs-on: ubuntu-latest
         steps:
             - uses: actions/setup-node@v1
-            - name: Setup yarn
+            - name: Install yarn
               run: |
                   npm install -g yarn
-            - uses: actions/checkout@v2
+            - name: Checkout BASE
+              uses: actions/checkout@v2
               with:
                   ref: ${{ github.event.pull_request.base.sha }}
-            - name: Get stats at base
+            - name: Generate Build Info
               run: |
                   yarn install
                   yarn checkSize
-            - name: Upload stats as artifact
-              uses: actions/upload-artifact@v1
-              with:
-                  name: base-stats
-                  path: .parcel-ci-build.json
-            - uses: actions/checkout@v2
+            - name: Checkout HEAD
+              uses: actions/checkout@v2
               with:
                   ref: ${{ github.event.pull_request.head.sha }}
-            - name: Download stats artifact
-              uses: actions/download-artifact@v1
-              with:
-                  name: base-stats
-            - name: Get stats at HEAD
+                  clean: false
+            - name: Generate Bundle Size Table
               run: |
                   yarn install
                   yarn checkSize:compare

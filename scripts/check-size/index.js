@@ -70,8 +70,7 @@ function main() {
 			// eslint-disable-next-line liferay/no-dynamic-require
 			const prevStats = require(path.join(
 				__dirname,
-				// Path comes from GH action artifact download
-				'../../base-stats/.parcel-ci-build.json'
+				'../../.parcel-ci-build.json'
 			));
 
 			const [table, totalDiff] = generateTable(prevStats, packageStats);
