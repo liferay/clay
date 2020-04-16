@@ -82,6 +82,10 @@ function main() {
 			console.log(table);
 
 			if (Math.abs(totalDiff) > TOTAL_THRESHHOLD_PERCENT) {
+				console.warn(
+					`WARNING: Total size change was greater than +/- ${TOTAL_THRESHHOLD_PERCENT}%`
+				);
+
 				process.exit(1);
 			}
 		} else {
