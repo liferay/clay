@@ -5,6 +5,7 @@
 
 import '@clayui/css/lib/css/atlas.css';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import ClayLabel from '@clayui/label';
 import {boolean, select, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React from 'react';
@@ -89,4 +90,37 @@ storiesOf('Components|ClayPanel', module)
 				))}
 			</ClayPanel.Group>
 		</div>
+	))
+	.add('collapsable w/ ClayPanelTitle', () => (
+		<ClayPanel
+			collapsable
+			displayTitle={
+				<ClayPanel.Title>
+					<h3>{'Rule Name'}</h3>
+					<span>{'If field '}</span>
+					<ClayLabel displayType="success">{'Country'}</ClayLabel>
+					<ClayLabel>{'Is Equal To'}</ClayLabel>
+					<span>{'value '}</span>
+					<ClayLabel displayType="info">{'Brazil'}</ClayLabel>
+					<span>{'enable '}</span>
+					<ClayLabel displayType="success">{'State'}</ClayLabel>
+				</ClayPanel.Title>
+			}
+			displayType={
+				select(
+					'Display Type',
+					{
+						secondary: 'secondary',
+						unstyled: 'unstyled',
+					},
+					undefined
+				) as undefined
+			}
+			showCollapseIcon={boolean('Show Collapse Icon', true)}
+			spritemap={spritemap}
+		>
+			<ClayPanel.Header>{'Header!'}</ClayPanel.Header>
+			<ClayPanel.Body>{'Body!'}</ClayPanel.Body>
+			<ClayPanel.Footer>{'Footer!'}</ClayPanel.Footer>
+		</ClayPanel>
 	));

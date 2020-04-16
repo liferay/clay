@@ -12,6 +12,7 @@ import ClayPanelBody from './Body';
 import ClayPanelFooter from './Footer';
 import ClayPanelGroup from './Group';
 import ClayPanelHeader from './Header';
+import ClayPanelTitle from './Title';
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
@@ -30,9 +31,9 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	defaultExpanded?: boolean;
 
 	/**
-	 * Add text to display in Panel Title.
+	 * Content to display in Panel Title.
 	 */
-	displayTitle?: React.ReactText;
+	displayTitle?: any;
 
 	/**
 	 * Flag to indicate the visual variation of the Panel.
@@ -55,6 +56,7 @@ const ClayPanel: React.FunctionComponent<IProps> & {
 	Footer: typeof ClayPanelFooter;
 	Group: typeof ClayPanelGroup;
 	Header: typeof ClayPanelHeader;
+	Title: typeof ClayPanelTitle;
 } = ({
 	children,
 	className,
@@ -91,10 +93,13 @@ const ClayPanel: React.FunctionComponent<IProps> & {
 		>
 			{!collapsable && (
 				<>
-					{displayTitle && (
+					{typeof displayTitle === 'string' ||
+					typeof displayTitle === 'number' ? (
 						<ClayPanelHeader>
 							<span className="panel-title">{displayTitle}</span>
 						</ClayPanelHeader>
+					) : (
+						displayTitle
 					)}
 
 					{children}
@@ -116,7 +121,12 @@ const ClayPanel: React.FunctionComponent<IProps> & {
 						onClick={handleClickToggler}
 						role="tab"
 					>
-						<span className="panel-title">{displayTitle}</span>
+						{typeof displayTitle === 'string' ||
+						typeof displayTitle === 'number' ? (
+							<span className="panel-title">{displayTitle}</span>
+						) : (
+							displayTitle
+						)}
 
 						{showCollapseIcon && (
 							<>
@@ -162,5 +172,6 @@ ClayPanel.Body = ClayPanelBody;
 ClayPanel.Group = ClayPanelGroup;
 ClayPanel.Footer = ClayPanelFooter;
 ClayPanel.Header = ClayPanelHeader;
+ClayPanel.Title = ClayPanelTitle;
 
 export default ClayPanel;
