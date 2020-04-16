@@ -20,10 +20,15 @@ jobs:
               run: |
                   yarn install
                   yarn checkSize
+            - name: Clean directory
+              run: |
+                  git clean -ffdx --exclude /tmp
+                  git reset --hard HEAD
             - name: Checkout HEAD
               uses: actions/checkout@v2
               with:
                   ref: ${{ github.event.pull_request.head.sha }}
+                  clean: false
             - name: Generate Bundle Size Table
               run: |
                   yarn install
