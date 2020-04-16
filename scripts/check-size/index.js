@@ -4,6 +4,7 @@
  */
 
 const fs = require('fs');
+const os = require('os');
 const Bundler = require('parcel-bundler');
 const path = require('path');
 const zlib = require('zlib');
@@ -19,6 +20,8 @@ const WORKSPACE_PACKAGES_WHITELIST = [
 	'demos',
 	'generator-clay-component',
 ];
+
+const TEMP_DIR = os.tmpdir();
 
 const getGzipSize = relPath =>
 	zlib.gzipSync(fs.readFileSync(path.join(__dirname, relPath))).length;
@@ -69,8 +72,8 @@ function main() {
 		if (CLI_ARGS.includes('--compare')) {
 			// eslint-disable-next-line liferay/no-dynamic-require
 			const prevStats = require(path.join(
-				__dirname,
-				'../../.parcel-ci-build.json'
+				TEMP_DIR,
+				'/.parcel-ci-build.json'
 			));
 
 			const [table, totalDiff] = generateTable(prevStats, packageStats);
@@ -83,7 +86,7 @@ function main() {
 			}
 		} else {
 			fs.writeFileSync(
-				path.join(__dirname, '../../.parcel-ci-build.json'),
+				path.join(TEMP_DIR, '/.parcel-ci-build.json'),
 				JSON.stringify(packageStats)
 			);
 		}
