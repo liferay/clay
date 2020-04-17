@@ -28,7 +28,7 @@ const setChangedData = function(prevSize, newSize) {
 
 	const diffPercent = `${((bytesDiff / prevSize) * 100).toFixed(2)}%`;
 
-	const icon = bytesDiff > 0 ? '⬆️' : '⬇';
+	const icon = bytesDiff > 0 ? '⭡' : '⭣';
 
 	return `${icon} ${convertBytes(bytesDiff)} (${diffPercent})`;
 };
