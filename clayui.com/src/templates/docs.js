@@ -58,8 +58,6 @@ export default props => {
 			});
 	}, []);
 
-	console.log(frontmatter, fields);
-
 	return (
 		<div className="docs">
 			<Helmet>
