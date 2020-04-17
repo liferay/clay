@@ -5,24 +5,35 @@ packageNpm: '@clayui/panel'
 sibling: 'docs/components/css-panel.html'
 ---
 
-import {Panel} from '../../../src/components/clay/Panel';
+import {Panel, PanelWithCustomTitle} from '../../../src/components/clay/Panel';
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
+-   [Basic Usage](#basic-usage)
+-   [Usage with a custom Title](#usage-with-a-custom-title)
 -   [API](#api)
     -   [ClayPanel](#claypanel)
     -   [ClayPanel.Body](#claypanel.body)
     -   [ClayPanel.Footer](#claypanel.footer)
     -   [ClayPanel.Group](#claypanel.group)
     -   [ClayPanel.Header](#claypanel.header)
+    -   [ClayPanel.Title](#claypanel.title)
 
 </div>
 </div>
 
 The Panel is a replacement for the old ClayCollapse in version 2.x, has the same effect but written in React using composition, try it. We recommend that you review the [use cases in the Storybook](https://storybook.clayui.com/?path=/story/claypanel--default).
 
+## Basic Usage
+
 <Panel />
+
+## Usage with a custom Title
+
+`ClayPanel.Title` allows you to add custom content to the title of the panel as seen in this example using `ClayLabels`.
+
+<PanelWithCustomTitle />
 
 ## API
 
@@ -47,6 +58,12 @@ The Panel is a replacement for the old ClayCollapse in version 2.x, has the same
 <div>[APITable "clay-panel/src/Group.tsx"]</div>
 
 ### ClayPanel.Header
+
+<code class="list-api-item-type">
+	Extends from {`React.HTMLAttributes<HTMLDivElement>`}
+</code>
+
+### ClayPanel.Title
 
 <code class="list-api-item-type">
 	Extends from {`React.HTMLAttributes<HTMLDivElement>`}
