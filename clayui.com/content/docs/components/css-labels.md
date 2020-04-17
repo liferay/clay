@@ -19,8 +19,6 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/labels/'
 </div>
 </div>
 
-
-
 ## Colors
 
 <div class="sheet-example">
