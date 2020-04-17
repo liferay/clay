@@ -76,7 +76,10 @@ function generateTable(prevStats, newStats) {
 		return `${acc}\n| ${row.join('| ')}|`;
 	}, TABLE_HEADER);
 
-	return [`${table}\nTotal Diff: ${totalDiffPercent}%`, totalDiffPercent];
+	return [
+		`${table}\n${BORDER}\nTotal Diff: ${totalDiffPercent}%`,
+		totalDiffPercent,
+	];
 }
 
 module.exports = generateTable;
