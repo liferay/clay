@@ -24,7 +24,7 @@ const ClayDataProviderWithVariablesAndStorage = () => {
 		<div className="col-md-4">
 			<ClayDataProvider
 				fetchPolicy={FetchPolicy.CacheFirst}
-				link="https://rickandmortyapi.com/api/character"
+				link="https://rickandmortyapi.com/api/character/"
 				notifyOnNetworkStatusChange
 				storage={store}
 				variables={{name: value}}
@@ -217,7 +217,7 @@ storiesOf('Components|ClayDataProvider', module)
 		const [poll, setPoll] = React.useState(false);
 
 		useResource({
-			link: 'https://rickandmortyapi.com/api/character',
+			link: 'https://rickandmortyapi.com/api/character/',
 			pollInterval: poll ? 1000 : 0,
 			variables: {limit: 10},
 		});
@@ -238,6 +238,57 @@ storiesOf('Components|ClayDataProvider', module)
 						>
 							{'Toggle Poll'}
 						</button>
+					</div>
+				</div>
+			</div>
+		);
+	})
+	.add('with dedupe concurrent requests', () => {
+		const List = () => {
+			const {resource} = useResource({
+				fetchPolicy: FetchPolicy.CacheFirst,
+				link: 'https://rickandmortyapi.com/api/character/1,2,3',
+			});
+
+			if (!resource) {
+				return null;
+			}
+
+			return resource.map((item: any) => (
+				<li
+					className="list-group-item list-group-item-flex"
+					key={item.id}
+				>
+					<div className="autofit-col autofit-col-expand">
+						<p className="list-group-title text-truncate">
+							{'Name'}
+						</p>
+						<p className="list-group-subtitle text-truncate">
+							{item.name}
+						</p>
+					</div>
+				</li>
+			));
+		};
+
+		return (
+			<div className="pb-4 sheet">
+				<h3>{`Concurrent requests`}</h3>
+				<div className="row">
+					<div className="col-md-5">
+						<p>
+							{
+								'This screen has the duplicate component that makes the request for the same endpoint but only one request is made. Open your console to see the network tab.'
+							}
+						</p>
+					</div>
+				</div>
+				<div className="row">
+					<div className="col-md-5">
+						<List />
+					</div>
+					<div className="col-md-5">
+						<List />
 					</div>
 				</div>
 			</div>

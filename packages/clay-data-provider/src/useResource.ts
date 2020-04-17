@@ -21,6 +21,12 @@ interface IResource extends IDataProvider {
 	onNetworkStatusChange?: (status: NetworkStatus) => void;
 }
 
+interface IPromisesList {
+	[propName: string]: Promise<any>;
+}
+
+const CONCURRENT_PROMISES: IPromisesList = {};
+
 const useResource = ({
 	fetchDelay = 300,
 	fetchOptions,
@@ -181,12 +187,27 @@ const useResource = ({
 					).searchParams.toString()
 				);
 				break;
-			case 'string':
-				promise = fetch(
-					getUrlFormat(link, variables),
-					fetchOptions
-				).then(res => res.json());
+			case 'string': {
+				const url = getUrlFormat(link, variables);
+
+				if (CONCURRENT_PROMISES[url]) {
+					promise = CONCURRENT_PROMISES[url];
+					break;
+				}
+
+				promise = CONCURRENT_PROMISES[url] = fetch(url, fetchOptions)
+					.then(res => {
+						delete CONCURRENT_PROMISES[url];
+
+						return res.json();
+					})
+					.catch(error => {
+						delete CONCURRENT_PROMISES[url];
+
+						throw error;
+					});
 				break;
+			}
 			default:
 				return null;
 		}
