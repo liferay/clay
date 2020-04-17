@@ -33,7 +33,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Content to display in Panel Title.
 	 */
-	displayTitle?: any;
+	displayTitle?: React.ReactNode;
 
 	/**
 	 * Flag to indicate the visual variation of the Panel.
@@ -93,13 +93,12 @@ const ClayPanel: React.FunctionComponent<IProps> & {
 		>
 			{!collapsable && (
 				<>
-					{typeof displayTitle === 'string' ||
-					typeof displayTitle === 'number' ? (
+					{React.isValidElement(displayTitle) ? (
+						displayTitle
+					) : (
 						<ClayPanelHeader>
 							<span className="panel-title">{displayTitle}</span>
 						</ClayPanelHeader>
-					) : (
-						displayTitle
 					)}
 
 					{children}
@@ -121,11 +120,10 @@ const ClayPanel: React.FunctionComponent<IProps> & {
 						onClick={handleClickToggler}
 						role="tab"
 					>
-						{typeof displayTitle === 'string' ||
-						typeof displayTitle === 'number' ? (
-							<span className="panel-title">{displayTitle}</span>
-						) : (
+						{React.isValidElement(displayTitle) ? (
 							displayTitle
+						) : (
+							<span className="panel-title">{displayTitle}</span>
 						)}
 
 						{showCollapseIcon && (
