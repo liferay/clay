@@ -9,6 +9,14 @@
 			polyfill: true
 		});
 
+		(function () {
+			if (!localStorage.getItem('nate.lexiconHref')) {
+				var version = window.location.href.match(/\/v(.*)\/c/)[1];
+
+				localStorage.setItem('nate.lexiconHref', window.location.origin + '/clay3-test-site/v' + version + '/css/site/site-atlas-font-awesome.css');
+			}
+		})();
+
 		$(function() {
 			var body = $('body');
 			var headerTopBar = $('#headerTopBar');

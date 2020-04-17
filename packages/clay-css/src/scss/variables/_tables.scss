@@ -220,3 +220,89 @@ $table-list-action-link: map-deep-merge(
 $table-valign-top-body-cell-padding-top: 1rem !default;
 
 $table-valign-bottom-body-cell-padding-bottom: 1rem !default;
+
+// Table Draggable
+
+$table-drag: () !default;
+$table-drag: map-deep-merge(
+	(
+		cell: (
+			position: relative,
+		),
+		c-drag: (
+			cursor: move,
+		),
+		c-dragging-after: (
+			background-color: $gray-400,
+			bottom: 0,
+			content: #{"''"},
+			display: block,
+			left: 1px,
+			position: absolute,
+			right: 0,
+			top: 0,
+		),
+		c-droppable-before: (
+			background-image:
+				linear-gradient($orange 50%, rgba(255, 255, 255, 0) 0%),
+			background-position: right,
+			background-repeat: repeat-y,
+			background-size: 5px 6px,
+			bottom: 0,
+			content: #{"''"},
+			display: block,
+			left: 0,
+			position: absolute,
+			top: 0,
+			width: 1px,
+			z-index: 1,
+		),
+	),
+	$table-drag
+);
+
+$table-dragging: () !default;
+$table-dragging: map-merge(
+	(
+		cursor: move,
+		user-select: none,
+	),
+	$table-dragging
+);
+
+$table-clone: () !default;
+$table-clone: map-deep-merge(
+	(
+		background-color: rgba($primary-l3, 0.9),
+		cursor: move,
+		position: absolute,
+		top: 0,
+		z-index: 1050,
+		after: (
+			background-color: $primary,
+			bottom: 0,
+			content: #{"''"},
+			display: block,
+			position: absolute,
+			right: 0,
+			top: 1px,
+			width: 2px,
+			z-index: 1,
+		),
+		before: (
+			background-color: $primary,
+			bottom: 0,
+			content: #{"''"},
+			display: block,
+			left: 0,
+			position: absolute,
+			top: 1px,
+			width: 2px,
+			z-index: 1,
+		),
+		cell: (
+			background-color: transparent,
+		),
+	),
+	$table-clone
+);
