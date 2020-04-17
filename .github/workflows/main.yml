@@ -1,50 +1,35 @@
-name: Comment Build Stats
-
+name: Main
 on:
     pull_request:
-        branches-ignore:
-            - '**'
+        branches: ['master']
 
 jobs:
-    build_and_comment:
+    generate_stats:
+        name: Bundle Size
         runs-on: ubuntu-latest
         steps:
             - uses: actions/setup-node@v1
-            - name: Setup yarn
+            - name: Install yarn
               run: |
                   npm install -g yarn
-            - uses: actions/checkout@v2
+            - name: Checkout BASE
+              uses: actions/checkout@v2
               with:
                   ref: ${{ github.event.pull_request.base.sha }}
-            - name: Get stats at base
+            - name: Generate Build Info
               run: |
                   yarn install
                   yarn checkSize
-            - name: Upload stats as artifact
-              uses: actions/upload-artifact@v1
-              with:
-                  name: base-stats
-                  path: .parcel-ci-build.json
-            - uses: actions/checkout@v2
+            - name: Clean directory
+              run: |
+                  git clean -ffdx --exclude /tmp
+                  git reset --hard HEAD
+            - name: Checkout HEAD
+              uses: actions/checkout@v2
               with:
                   ref: ${{ github.event.pull_request.head.sha }}
-            - name: Download stats artifact
-              uses: actions/download-artifact@v1
-              with:
-                  name: base-stats
-            - name: Get stats at HEAD
+                  clean: false
+            - name: Generate Bundle Size Table
               run: |
                   yarn install
                   yarn checkSize:compare
-            - name: Post comment on PR
-              env:
-                  URL: ${{ github.event.pull_request.comments_url }}
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              run: |
-                  curl \
-                      -v \
-                      -X POST \
-                      $URL \
-                      -H "Content-Type: application/json" \
-                      -H "Authorization: token $GITHUB_TOKEN" \
-                      --data @.parcel-ci-build.json
