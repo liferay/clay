@@ -182,7 +182,10 @@
 		$active-class
 	);
 
-	$active-class-c-kbd-inline: setter(map-get($map, active-class-c-kbd-inline), ());
+	$active-class-c-kbd-inline: setter(
+		map-get($map, active-class-c-kbd-inline),
+		()
+	);
 
 	$disabled: setter(map-get($map, disabled), ());
 	$disabled: map-merge(
