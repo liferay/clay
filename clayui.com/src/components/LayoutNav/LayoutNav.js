@@ -18,8 +18,10 @@ export default () => (
 				<ul className="ml-auto navbar-nav">
 					<li className="nav-item">
 						<Link
+							activeStyle={{color: '#b3472d'}}
 							className="nav-link"
-							to="/docs/get-started/what-is-clay.html"
+							partiallyActive
+							to="/docs/"
 						>
 							<span className="c-inner" tabIndex="-1">
 								{'Docs'}
@@ -27,7 +29,12 @@ export default () => (
 						</Link>
 					</li>
 					<li className="nav-item">
-						<Link className="nav-link" to="/blog">
+						<Link
+							activeStyle={{color: '#b3472d'}}
+							className="nav-link"
+							partiallyActive
+							to="/blog"
+						>
 							<span className="c-inner" tabIndex="-1">
 								{'Blog'}
 							</span>
