@@ -5,126 +5,58 @@
 /// A mixin to create Dropdown Menu variants. You can base your variant off Bootstrap's `.dropdown-menu` class or create your own base class (e.g., `<div class="dropdown-menu my-custom-dropdown-menu"></div>` or `<div class="my-custom-dropdown-menu"></div>`).
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
+/// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
 /// breakpoint-down: {String, Null}, // The Bootstrap 4 Breakpoint {xs | sm | md | lg | xl}
-/// bg: {Color | String | Null},
-/// bg-clip: {String | Null},
-/// border-color: {Color | String | List | Null},
-/// border-radius: {Number | String | List | Null},
-/// border-style: {String | List | Null},
-/// border-width: {Number | String | List | Null},
-/// box-shadow: {String | List | Null},
-/// color: {Color | String | Null},
-/// display: {String | Null},
-/// float: {String | Null},
-/// font-size: {Number | String | Null},
-/// left: {Number | String | Null},
-/// list-style: {String | Null},
-/// margin-bottom: {Number | String | Null},
-/// margin-left: {Number | String | Null},
-/// margin-right: {Number | String | Null},
-/// margin-top: {Number | String | Null},
-/// max-height: {Number | String | Null},
-/// max-width: {Number | String | Null},
-/// min-height: {Number | String | Null},
-/// min-width: {Number | String | Null},
-/// overflow: {String | Null},
-/// padding-bottom: {Number | String | Null},
-/// padding-left: {Number | String | Null},
-/// padding-right: {Number | String | Null},
-/// padding-top: {Number | String | Null},
-/// position: {String | Null},
-/// text-align: {String | Null},
-/// top: {Number | String | Null},
-/// width: {Number | String | Null},
-/// z-index: {Number | String | Null},
-/// font-size-mobile: {Number | String | Null},
-/// max-height-mobile: {Number | String | Null},
-/// max-width-mobile: {Number | String | Null},
+/// See Mixin `clay-css` for available keys to pass into the base selector
+/// mobile: {Map | Null}, // See Mixin `clay-css` for available keys
+/// -=-=-=-=-=- Deprecated -=-=-=-=-=-
+/// bg: {Color | String | Null}, // deprecated after 3.9.0
+/// bg-clip: {String | Null}, // deprecated after 3.9.0
+/// font-size-mobile: {Number | String | Null}, // deprecated after 3.9.0
+/// max-height-mobile: {Number | String | Null}, // deprecated after 3.9.0
+/// max-width-mobile: {Number | String | Null}, // deprecated after 3.9.0
 /// @todo
 /// - Add @example
 /// - Add @link to documentation
 
 @mixin clay-dropdown-menu-variant($map) {
+	$enabled: setter(map-get($map, enabled), true);
+
 	$breakpoint-down: map-get($map, breakpoint-down);
 
-	$bg: map-get($map, bg);
-	$bg-clip: map-get($map, bg-clip);
-	$border-color: map-get($map, border-color);
-	$border-radius: map-get($map, border-radius);
-	$border-style: map-get($map, border-style);
-	$border-width: map-get($map, border-width);
-	$box-shadow: map-get($map, box-shadow);
-	$color: map-get($map, color);
-	$display: map-get($map, display);
-	$float: map-get($map, float);
-	$font-size: map-get($map, font-size);
-	$left: map-get($map, left);
-	$list-style: map-get($map, list-style);
-	$margin-bottom: map-get($map, margin-bottom);
-	$margin-left: map-get($map, margin-left);
-	$margin-right: map-get($map, margin-right);
-	$margin-top: map-get($map, margin-top);
-	$max-height: map-get($map, max-height);
-	$max-width: map-get($map, max-width);
-	$min-height: map-get($map, min-height);
-	$min-width: map-get($map, min-width);
-	$overflow: map-get($map, overflow);
-	$padding-bottom: map-get($map, padding-bottom);
-	$padding-left: map-get($map, padding-left);
-	$padding-right: map-get($map, padding-right);
-	$padding-top: map-get($map, padding-top);
-	$position: map-get($map, position);
-	$text-align: map-get($map, text-align);
-	$top: map-get($map, top);
-	$width: map-get($map, width);
-	$z-index: map-get($map, z-index);
+	$base: map-merge(
+		(
+			background-color: map-get($map, bg),
+			background-clip: map-get($map, bg-clip),
+		),
+		$map
+	);
 
-	$font-size-mobile: map-get($map, font-size-mobile);
-	$max-height-mobile: map-get($map, max-height-mobile);
-	$max-width-mobile: map-get($map, max-width-mobile);
+	$mobile: setter(map-get($map, mobile), ());
+	$mobile: map-merge(
+		(
+			font-size: map-get($map, font-size-mobile),
+			max-height: map-get($map, max-height-mobile),
+			max-width: map-get($map, max-width-mobile),
+		),
+		$mobile
+	);
 
-	background-clip: $bg-clip;
-	background-color: $bg;
-	border-color: $border-color;
-	border-radius: $border-radius;
-	border-style: $border-style;
-	border-width: $border-width;
-	box-shadow: $box-shadow;
-	color: $color;
-	display: $display;
-	float: $float;
-	font-size: $font-size;
-	left: $left;
-	list-style: $list-style;
-	margin-bottom: $margin-bottom;
-	margin-left: $margin-left;
-	margin-right: $margin-right;
-	margin-top: $margin-top;
-	max-height: $max-height;
-	max-width: $max-width;
-	min-height: $min-height;
-	min-width: $min-width;
-	overflow: $overflow;
-	padding-left: $padding-left;
-	padding-right: $padding-right;
-	padding-top: $padding-top;
-	position: $position;
-	text-align: $text-align;
-	top: $top;
-	width: $width;
-	z-index: $z-index;
+	@if ($enabled) {
+		@include clay-css($base);
 
-	// Firefox clips overflowing content and doesn't respect `padding-bottom` on `.dropdown-menu`
+		// Firefox clips overflowing content and doesn't respect `padding-bottom` on `.dropdown-menu`
 
-	&::after {
-		padding-top: $padding-bottom;
-	}
+		padding-bottom: 0;
 
-	@if ($breakpoint-down) {
-		@include media-breakpoint-down($breakpoint-down) {
-			font-size: $font-size-mobile;
-			max-height: $max-height-mobile;
-			max-width: $max-width-mobile;
+		&::after {
+			padding-top: map-get($base, padding-bottom);
+		}
+
+		@if ($breakpoint-down) {
+			@include media-breakpoint-down($breakpoint-down) {
+				@include clay-css($mobile);
+			}
 		}
 	}
 }
