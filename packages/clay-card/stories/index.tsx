@@ -4,8 +4,10 @@
  */
 
 import '@clayui/css/lib/css/atlas.css';
+import ClayButton from '@clayui/button';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
-import {ClayCheckbox} from '@clayui/form';
+import ClayDropDown from '@clayui/drop-down';
+import ClayForm, {ClayCheckbox, ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClaySticker from '@clayui/sticker';
@@ -28,10 +30,26 @@ const ClayCheckboxWithState = (props: any) => {
 		<ClayCheckbox
 			checked={value}
 			disabled={false}
+			label={props.label}
 			onChange={() => setValue(val => !val)}
 		>
 			{props.children}
 		</ClayCheckbox>
+	);
+};
+
+const DropDownWithState = (props: any) => {
+	const [active, setActive] = React.useState(false);
+
+	return (
+		<ClayDropDown
+			active={active}
+			alignmentPosition={5}
+			onActiveChange={newVal => setActive(newVal)}
+			trigger={props.trigger}
+		>
+			{props.children}
+		</ClayDropDown>
 	);
 };
 
@@ -440,4 +458,159 @@ storiesOf('Components|ClayCard', module)
 				</ClayCard>
 			</ClayCard.Group>
 		</>
+	))
+	.add('ProductCard', () => (
+		<div className="row">
+			<div className="col-md-4">
+				<ClayCard className="product-card" displayType="file">
+					<ClayCard.AspectRatio className="card-item-first">
+						<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+							<ClayIcon
+								spritemap={spritemap}
+								symbol="documents-and-media"
+							/>
+						</div>
+
+						<div className="aspect-ratio-item-bottom-left">
+							<ClayLabel displayType="success">
+								{'Available'}
+							</ClayLabel>
+						</div>
+					</ClayCard.AspectRatio>
+
+					<ClayCard.Body>
+						<div className="c-mb-3">
+							<div className="card-subtitle" title="AR385672">
+								<span className="text-truncate-inline">
+									<span className="text-truncate">
+										{'AR385672'}
+									</span>
+								</span>
+							</div>
+
+							<div
+								className="card-title"
+								title="thumbnail_coffee.jpg"
+							>
+								<span className="text-truncate-inline">
+									<a className="text-truncate" href="#1">
+										{
+											'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual'
+										}
+									</a>
+								</span>
+							</div>
+
+							<div className="card-text">
+								<s>{'$99.00'}</s>
+								<span>{'$70.00'}</span>
+							</div>
+						</div>
+
+						<ClayForm.Group>
+							<ClayInput.Group>
+								<ClayInput.GroupItem prepend shrink>
+									<ClayButton
+										disabled
+										displayType="secondary"
+									>
+										{'-'}
+									</ClayButton>
+								</ClayInput.GroupItem>
+
+								<ClayInput.GroupItem prepend>
+									<ClayInput
+										aria-label="Search for"
+										className="form-control"
+										value="1"
+									/>
+								</ClayInput.GroupItem>
+
+								<ClayInput.GroupItem append shrink>
+									<ClayButton displayType="secondary">
+										{'+'}
+									</ClayButton>
+								</ClayInput.GroupItem>
+							</ClayInput.Group>
+						</ClayForm.Group>
+
+						<ClayButton
+							block
+							className="c-mb-2"
+							displayType="primary"
+						>
+							{'Add to Order'}
+
+							<span className="inline-item inline-item-after">
+								<ClayIcon
+									spritemap={spritemap}
+									symbol="shopping-cart"
+								/>
+							</span>
+						</ClayButton>
+
+						<div className="autofit-float autofit-row autofit-row-center">
+							<div className="autofit-col autofit-col-expand">
+								<div className="autofit-section">
+									<div className="custom-checkbox custom-control custom-control-primary">
+										<ClayCheckboxWithState label="Compare" />
+									</div>
+								</div>
+							</div>
+							<div className="autofit-col">
+								<div className="autofit-section">
+									<DropDownWithState
+										trigger={
+											<ClayButton
+												borderless
+												displayType="secondary"
+												small
+											>
+												{'Order by: newest'}
+											</ClayButton>
+										}
+									>
+										<ClayDropDown.ItemList>
+											{[
+												{href: '#1', label: 'Download'},
+												{href: '#1', label: 'Edit'},
+												{href: '#1', label: 'Edit'},
+												{href: '#1', label: 'Move'},
+												{href: '#1', label: 'Checkout'},
+												{
+													href: '#1',
+													label: 'Permissions',
+												},
+												{
+													href: '#1',
+													label:
+														'Move to Recycle Bin',
+												},
+											].map(
+												(
+													{
+														href,
+														label,
+														...otherProps
+													},
+													i
+												) => (
+													<ClayDropDown.Item
+														href={href}
+														key={i}
+														{...otherProps}
+													>
+														{label}
+													</ClayDropDown.Item>
+												)
+											)}
+										</ClayDropDown.ItemList>
+									</DropDownWithState>
+								</div>
+							</div>
+						</div>
+					</ClayCard.Body>
+				</ClayCard>
+			</div>
+		</div>
 	));
