@@ -3,6 +3,7 @@
 ////
 
 /// A mixin that helps create custom Sticker sizes.
+/// @deprecated  after 3.9.0 use `clay-sticker-variant` instead
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
 /// font-size: {Number | String | Null},
