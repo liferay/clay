@@ -8,6 +8,11 @@ import React from 'react';
 
 export interface IBodyProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
+	 * Props to add to the iframe element
+	 */
+	iFrameProps?: React.HTMLAttributes<HTMLIFrameElement>;
+
+	/**
 	 * Flag to indicate if body should be a fixed height with a scrollable overflow.
 	 */
 	scrollable?: boolean;
@@ -20,6 +25,7 @@ export interface IBodyProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const ClayModalBody: React.FunctionComponent<IBodyProps> = ({
 	children,
+	iFrameProps = {},
 	scrollable,
 	url,
 }: IBodyProps) => (
@@ -30,7 +36,7 @@ const ClayModalBody: React.FunctionComponent<IBodyProps> = ({
 		})}
 		tabIndex={scrollable ? 0 : undefined}
 	>
-		{url ? <iframe src={url} title={url} /> : children}
+		{url ? <iframe {...iFrameProps} src={url} title={url} /> : children}
 	</div>
 );
 

@@ -80,6 +80,9 @@ storiesOf('Components|ClayModal', module)
 							{text('Title', 'Title')}
 						</ClayModal.Header>
 						<ClayModal.Body
+							iFrameProps={{
+								'aria-label': 'Hello World',
+							}}
 							scrollable={boolean('scrollable', false)}
 							url={text('Url', '')}
 						>
