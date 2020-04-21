@@ -227,3 +227,63 @@ exports[`ClayPanel renders with multiple panels 1`] = `
   </div>
 </div>
 `;
+
+exports[`ClayPanel renders without displayTitle 1`] = `
+<div
+  className="panel panel-secondary"
+  role="tablist"
+>
+  <button
+    aria-expanded={false}
+    className="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
+    onClick={[Function]}
+    role="tab"
+  >
+    <span
+      className="collapse-icon-closed"
+    >
+      <svg
+        className="lexicon-icon lexicon-icon-angle-right"
+        role="presentation"
+      >
+        <use
+          xlinkHref="/foo/bar#angle-right"
+        />
+      </svg>
+    </span>
+    <span
+      className="collapse-icon-open"
+    >
+      <svg
+        className="lexicon-icon lexicon-icon-angle-down"
+        role="presentation"
+      >
+        <use
+          xlinkHref="/foo/bar#angle-down"
+        />
+      </svg>
+    </span>
+  </button>
+  <div
+    className="panel-collapse collapse"
+    onTransitionEnd={[Function]}
+    role="tabpanel"
+  >
+    <div
+      className="panel-header"
+    >
+      Header!
+    </div>
+    <div
+      className="panel-body"
+    >
+      Body!
+    </div>
+    <div
+      className="panel-footer"
+    >
+      Footer!
+    </div>
+  </div>
+</div>
+`;

@@ -82,6 +82,23 @@ describe('ClayPanel', () => {
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
+
+	it('renders without displayTitle', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayPanel
+				collapsable
+				displayType="secondary"
+				showCollapseIcon
+				spritemap="/foo/bar"
+			>
+				<ClayPanel.Header>{'Header!'}</ClayPanel.Header>
+				<ClayPanel.Body>{'Body!'}</ClayPanel.Body>
+				<ClayPanel.Footer>{'Footer!'}</ClayPanel.Footer>
+			</ClayPanel>
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
 });
 
 describe('ClayPanel Interactions', () => {
