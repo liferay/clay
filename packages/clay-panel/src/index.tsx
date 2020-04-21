@@ -93,13 +93,16 @@ const ClayPanel: React.FunctionComponent<IProps> & {
 		>
 			{!collapsable && (
 				<>
-					{displayTitle && React.isValidElement(displayTitle) ? (
-						displayTitle
-					) : (
-						<ClayPanelHeader>
-							<span className="panel-title">{displayTitle}</span>
-						</ClayPanelHeader>
-					)}
+					{displayTitle &&
+						(React.isValidElement(displayTitle) ? (
+							displayTitle
+						) : (
+							<ClayPanelHeader>
+								<span className="panel-title">
+									{displayTitle}
+								</span>
+							</ClayPanelHeader>
+						))}
 
 					{children}
 				</>
@@ -120,11 +123,14 @@ const ClayPanel: React.FunctionComponent<IProps> & {
 						onClick={handleClickToggler}
 						role="tab"
 					>
-						{displayTitle && React.isValidElement(displayTitle) ? (
-							displayTitle
-						) : (
-							<span className="panel-title">{displayTitle}</span>
-						)}
+						{displayTitle &&
+							(React.isValidElement(displayTitle) ? (
+								displayTitle
+							) : (
+								<span className="panel-title">
+									{displayTitle}
+								</span>
+							))}
 
 						{showCollapseIcon && (
 							<>
