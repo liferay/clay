@@ -56,70 +56,81 @@
 /// A mixin to create sticker variants. You can base your variant off `.sticker` or create your own base class (e.g., `<span class="sticker my-custom-sticker-variant"></span>` or `<span class="my-custom-sticker"></span>`).
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
-/// align-items: {String | Null},
-/// background-color: {Color | String | Null}, // An alias for bg
-/// bg: {Color | String | Null}, // Default: $background-color
-/// border-color: {Color | String | List | Null},
-/// border-radius: {Number | String | List | Null},
-/// border-style: {String | List | Null},
-/// border-width: {Number | String | List | Null},
-/// box-shadow: {String | List | Null},
-/// color: {Color | String | Null},
-/// display: {String | Null},
-/// font-size: {Number | String | Null},
-/// font-weight: {Number | String | Null},
-/// height: {Number | String | Null},
-/// justify-content: {String | Null},
-/// line-height: {Number | String | Null},
-/// position: {String | Null},
-/// text-align: {String | Null},
-/// vertical-align: {String | Null},
-/// width: {Number | String | Null},
+/// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// See Mixin `clay-css` for available keys to pass into the base selector
+/// sticker-overlay: {Map | Null}, // See Mixin `clay-css` for available keys
+/// -=-=-=-=-=- Deprecated -=-=-=-=-=-
+/// bg: {Color | String | Null}, // deprecated after 3.9.0
 /// @todo
 /// - Add @example
 /// - Add @link to documentation
 
 @mixin clay-sticker-variant($map) {
-	$align-items: map-get($map, align-items);
-	$background-color: map-get($map, background-color);
-	$bg: setter(map-get($map, bg), $background-color);
-	$border-color: map-get($map, border-color);
-	$border-radius: map-get($map, border-radius);
-	$border-style: map-get($map, border-style);
-	$border-width: map-get($map, border-width);
-	$box-shadow: map-get($map, box-shadow);
-	$color: map-get($map, color);
-	$display: map-get($map, display);
-	$font-size: map-get($map, font-size);
-	$font-weight: map-get($map, font-weight);
-	$height: map-get($map, height);
-	$justify-content: map-get($map, justify-content);
-	$line-height: map-get($map, line-height);
-	$position: map-get($map, position);
-	$text-align: map-get($map, text-align);
-	$vertical-align: map-get($map, vertical-align);
-	$width: map-get($map, width);
+	$enabled: setter(map-get($map, enabled), true);
 
-	align-items: $align-items;
-	background-color: $bg;
-	border-color: $border-color;
-	border-radius: $border-radius;
-	border-style: $border-style;
-	border-width: $border-width;
-	box-shadow: $box-shadow;
-	color: $color;
-	display: $display;
-	height: $height;
-	line-height: $line-height;
-	font-size: $font-size;
-	font-weight: $font-weight;
-	justify-content: $justify-content;
-	position: $position;
-	text-align: $text-align;
-	vertical-align: $vertical-align;
-	width: $width;
+	$base: map-merge(
+		(
+			background-color: map-get($map, bg),
+		),
+		$map
+	);
 
-	.sticker-overlay {
-		border-radius: $border-radius;
+	$inline-item: setter(map-get($map, inline-item), ());
+
+	$sticker-overlay: setter(map-get($map, sticker-overlay), ());
+	$sticker-overlay: map-merge(
+		(
+			border-radius:
+				setter(
+					map-get($sticker-overlay, border-radius),
+					map-get($base, border-radius)
+				),
+		),
+		$sticker-overlay
+	);
+
+	$sticker-outside: setter(map-get($map, sticker-outside), ());
+
+	$sticker-outside-bottom-left: setter(
+		map-get($map, sticker-outside-bottom-left),
+		()
+	);
+
+	$sticker-outside-bottom-right: setter(
+		map-get($map, sticker-outside-bottom-right),
+		()
+	);
+
+	$sticker-outside-top-right: setter(
+		map-get($map, sticker-outside-top-right),
+		()
+	);
+
+	@if ($enabled) {
+		@include clay-css($base);
+
+		> .inline-item {
+			@include clay-css($inline-item);
+		}
+
+		.sticker-overlay {
+			@include clay-css($sticker-overlay);
+		}
+
+		&.sticker-outside {
+			@include clay-css($sticker-outside);
+
+			&.sticker-bottom-left {
+				@include clay-css($sticker-outside-bottom-left);
+			}
+
+			&.sticker-bottom-right {
+				@include clay-css($sticker-outside-bottom-right);
+			}
+
+			&.sticker-top-right {
+				@include clay-css($sticker-outside-top-right);
+			}
+		}
 	}
 }
