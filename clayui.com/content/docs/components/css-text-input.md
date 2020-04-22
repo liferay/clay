@@ -1,6 +1,7 @@
 ---
 title: 'Input'
 description: 'This section demonstrates the different text input types, including usage and validation states.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/text-input/'
 ---
 
 <div class="nav-toc-absolute">

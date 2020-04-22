@@ -1,6 +1,7 @@
 ---
 title: 'Sidebar'
 description: 'A vertical panel that appears from the right or the left side of the screen, triggered by a button.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/sidebar/'
 ---
 
 <div class="nav-toc-absolute">

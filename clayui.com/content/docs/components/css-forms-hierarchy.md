@@ -1,6 +1,7 @@
 ---
 title: 'Forms Hierarchy'
 description: 'The definition of the content hierarchy inside a form structure and the components used to identify the different content blocks. This page contemplates the visual definition of the hierarchy and the measurements and the definition of the components that establish that hierarchy.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/'
 ---
 
 <div class="nav-toc-absolute">
