@@ -29,10 +29,6 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/cards/'
 </div>
 </div>
 
-<div class="clay-site-alert alert alert-warning">
-	See the implementation of the <a href="/docs/components/card.html">Cards component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/cards/">Cards Pattern</a>.
-</div>
-
 # Example
 
 <div class="sheet-example">

@@ -21,10 +21,6 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/progress-bars
 </div>
 </div>
 
-<div class="clay-site-alert alert alert-warning">
-	See the implementation of the <a href="/docs/components/progress-bar.html">Progress Bars component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/progress-bars/">Progress Bars Pattern</a>.
-</div>
-
 ## Colors
 
 Add `progress-danger`, `progress-info`, `progress-success`, or `progress-warning` to `progress-group` or `progress` to provide visual feedback for different progress states. Color a block of text or icon by wrapping it with progress-group-feedback.

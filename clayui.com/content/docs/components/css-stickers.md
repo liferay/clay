@@ -18,10 +18,6 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/stickers/'
 </div>
 </div>
 
-<div class="clay-site-alert alert alert-warning">
-    See the implementation of the <a href="/docs/components/sticker.html">Stickers component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/stickers/">Stickers Pattern</a>.
-</div>
-
 ## Colors
 
 Lexicon adopts in its design system the following colors below:
