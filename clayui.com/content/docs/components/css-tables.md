@@ -29,10 +29,6 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/table/'
 </div>
 
 <div class="clay-site-alert alert alert-warning">
-	See the implementation of the <a href="/docs/components/table.html">Tables component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/table">Tables Pattern</a>.
-</div>
-
-<div class="clay-site-alert alert alert-warning">
 	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#table">WAI-ARIA</a> accessibility pratices for tables when writting your markup.
 </div>
 

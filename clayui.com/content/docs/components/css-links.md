@@ -23,10 +23,6 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/link/'
 </div>
 
 <div class="clay-site-alert alert alert-warning">
-	See the implementation of the <a href="/docs/components/link.html">Links component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/link/">Links Pattern</a>.
-</div>
-
-<div class="clay-site-alert alert alert-warning">
 	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#link">WAI-ARIA</a> accessibility pratices for links when writting your markup.
 </div>
 

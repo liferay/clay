@@ -34,10 +34,6 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/modals/'
 </div>
 </div>
 
-<div class="clay-site-alert alert alert-warning">
-	See the implementation of the <a href="/docs/components/modal.html">Modals component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/modals/">Modals Pattern</a>.
-</div>
-
 ## Sizes
 
 ### Small

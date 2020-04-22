@@ -18,10 +18,6 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/loading-indic
 </div>
 </div>
 
-<div class="clay-site-alert alert alert-warning">
-	See the implementation of the <a href="/docs/components/loading-indicator.html">Loading Indicator component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/loading-indicator/">Loading Indicator Pattern</a>.
-</div>
-
 <div class="clay-site-alert alert alert-info">
 	These animations are made using only CSS.
 </div>

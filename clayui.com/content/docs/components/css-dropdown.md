@@ -34,10 +34,6 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/dropdowns/'
 </div>
 </div>
 
-<div class="clay-site-alert alert alert-warning">
-	See the implementation of the <a href="/docs/components/drop-down.html">Dropdown component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/dropdowns/">Dropdown Pattern</a>.
-</div>
-
 ## Variations
 
 ### Default
