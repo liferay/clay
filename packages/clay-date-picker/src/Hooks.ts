@@ -29,10 +29,7 @@ const useWeeks = (currentMonth: Date, firstDayOfWeek: FirstDayOfWeek) => {
  */
 const useCurrentTime = (format: string) => {
 	const [currentTime, set] = React.useState<string>(() =>
-		moment()
-			.set('h', 0)
-			.set('m', 0)
-			.format(format)
+		moment().set('h', 0).set('m', 0).format(format)
 	);
 
 	function setCurrentTime(
@@ -40,15 +37,11 @@ const useCurrentTime = (format: string) => {
 		minutes: number | string
 	): void {
 		if (typeof hours !== 'string') {
-			hours = moment()
-				.set('h', hours)
-				.format('H');
+			hours = moment().set('h', hours).format('H');
 		}
 
 		if (typeof minutes !== 'string') {
-			minutes = moment()
-				.set('m', minutes)
-				.format('m');
+			minutes = moment().set('m', minutes).format('m');
 		}
 
 		set(`${hours}:${minutes}`);

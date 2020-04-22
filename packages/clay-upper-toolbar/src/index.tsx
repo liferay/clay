@@ -55,9 +55,9 @@ const Item: React.FunctionComponent<IItemProps> = ({
 
 Item.displayName = 'Item';
 
-const ClayUpperToolbar: React.FunctionComponent<
-	React.HTMLAttributes<HTMLElement>
-> = ({children, className, ...otherProps}) => {
+const ClayUpperToolbar: React.FunctionComponent<React.HTMLAttributes<
+	HTMLElement
+>> = ({children, className, ...otherProps}) => {
 	return (
 		<nav
 			className={classNames(

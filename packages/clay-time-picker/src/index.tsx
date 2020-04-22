@@ -368,7 +368,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 									onFocus={() =>
 										handleInputFocus(TimeType.hours)
 									}
-									onKeyDown={event =>
+									onKeyDown={(event) =>
 										handleKeyDown(
 											event,
 											values.hours,
@@ -396,7 +396,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 									onFocus={() =>
 										handleInputFocus(TimeType.minutes)
 									}
-									onKeyDown={event =>
+									onKeyDown={(event) =>
 										handleKeyDown(
 											event,
 											values.minutes,
@@ -424,7 +424,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 										onFocus={() =>
 											handleInputFocus(TimeType.ampm)
 										}
-										onKeyDown={event =>
+										onKeyDown={(event) =>
 											handleKeyDown(
 												event,
 												values.ampm as InputAmPm,
@@ -440,9 +440,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 									<input
 										name={name}
 										type="hidden"
-										value={`${values.hours}:${
-											values.minutes
-										}`}
+										value={`${values.hours}:${values.minutes}`}
 									/>
 								)}
 							</div>

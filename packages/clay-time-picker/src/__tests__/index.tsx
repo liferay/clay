@@ -447,7 +447,7 @@ describe('IncrementalInteractions', () => {
 			const {getByTestId} = render(<TimePickerWithState />);
 			const hoursEl = getByTestId('hours') as HTMLInputElement;
 
-			['A', '!', '@', '(', '^', '9', 'p'].forEach(value => {
+			['A', '!', '@', '(', '^', '9', 'p'].forEach((value) => {
 				fireEvent.keyDown(hoursEl, {key: value});
 			});
 
@@ -458,7 +458,7 @@ describe('IncrementalInteractions', () => {
 			const {getByTestId} = render(<TimePickerWithState />);
 			const minutesEl = getByTestId('minutes') as HTMLInputElement;
 
-			['A', '!', '@', '(', '^', '9', 'p'].forEach(value => {
+			['A', '!', '@', '(', '^', '9', 'p'].forEach((value) => {
 				fireEvent.keyDown(minutesEl, {key: value});
 			});
 

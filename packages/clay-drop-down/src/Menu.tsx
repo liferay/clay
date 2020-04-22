@@ -143,76 +143,83 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	onSetActive: (val: boolean) => void;
 }
 
-const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>((
-	{
-		active,
-		alignElementRef,
-		alignmentPosition = Align.BottomLeft,
-		autoBestAlign = true,
-		children,
-		className,
-		hasLeftSymbols,
-		hasRightSymbols,
-		offsetFn = points =>
-			OFFSET_MAP[points.join('') as keyof typeof OFFSET_MAP] as [
-				number,
-				number
-			],
-		onSetActive,
-		...otherProps
-	}: IProps,
-	// TS + refs don't always play nicely together, which is why it is casted
-	// in so many places below.
-	// See https://github.com/microsoft/TypeScript/issues/30748#issuecomment-480197036
-	ref
-) => {
-	const subPortalRef = React.useRef<HTMLDivElement | null>(null);
+const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
+	(
+		{
+			active,
+			alignElementRef,
+			alignmentPosition = Align.BottomLeft,
+			autoBestAlign = true,
+			children,
+			className,
+			hasLeftSymbols,
+			hasRightSymbols,
+			offsetFn = (points) =>
+				OFFSET_MAP[points.join('') as keyof typeof OFFSET_MAP] as [
+					number,
+					number
+				],
+			onSetActive,
+			...otherProps
+		}: IProps,
+		// TS + refs don't always play nicely together, which is why it is casted
+		// in so many places below.
+		// See https://github.com/microsoft/TypeScript/issues/30748#issuecomment-480197036
+		ref
+	) => {
+		const subPortalRef = React.useRef<HTMLDivElement | null>(null);
 
-	useDropdownCloseInteractions([alignElementRef, subPortalRef], onSetActive);
+		useDropdownCloseInteractions(
+			[alignElementRef, subPortalRef],
+			onSetActive
+		);
 
-	React.useLayoutEffect(() => {
-		if (
-			alignElementRef.current &&
-			(ref as React.RefObject<HTMLDivElement>).current
-		) {
-			let points = alignmentPosition;
+		React.useLayoutEffect(() => {
+			if (
+				alignElementRef.current &&
+				(ref as React.RefObject<HTMLDivElement>).current
+			) {
+				let points = alignmentPosition;
 
-			if (typeof points === 'number') {
-				points = getAlignPoints(points as keyof typeof ALIGN_INVERSE);
-			}
-
-			domAlign(
-				(ref as React.RefObject<HTMLElement>).current!,
-				alignElementRef.current,
-				{
-					offset: offsetFn(points),
-					overflow: {
-						adjustX: autoBestAlign,
-						adjustY: autoBestAlign,
-					},
-					points,
+				if (typeof points === 'number') {
+					points = getAlignPoints(
+						points as keyof typeof ALIGN_INVERSE
+					);
 				}
-			);
-		}
-	});
 
-	return (
-		<ClayPortal subPortalRef={subPortalRef}>
-			<div ref={subPortalRef}>
-				<div
-					{...otherProps}
-					className={classNames('dropdown-menu', className, {
-						'dropdown-menu-indicator-end': hasRightSymbols,
-						'dropdown-menu-indicator-start': hasLeftSymbols,
-						show: active,
-					})}
-					ref={ref}
-				>
-					{children}
+				domAlign(
+					(ref as React.RefObject<HTMLElement>).current!,
+					alignElementRef.current,
+					{
+						offset: offsetFn(points),
+						overflow: {
+							adjustX: autoBestAlign,
+							adjustY: autoBestAlign,
+						},
+						points,
+					}
+				);
+			}
+		});
+
+		return (
+			<ClayPortal subPortalRef={subPortalRef}>
+				<div ref={subPortalRef}>
+					<div
+						{...otherProps}
+						className={classNames('dropdown-menu', className, {
+							'dropdown-menu-indicator-end': hasRightSymbols,
+							'dropdown-menu-indicator-start': hasLeftSymbols,
+							show: active,
+						})}
+						ref={ref}
+					>
+						{children}
+					</div>
 				</div>
-			</div>
-		</ClayPortal>
-	);
-});
+			</ClayPortal>
+		);
+	}
+);
 
 export default ClayDropDownMenu;

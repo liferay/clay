@@ -31,7 +31,7 @@ const ClayCheckboxWithState = (props: any) => {
 			checked={value}
 			disabled={false}
 			label={props.label}
-			onChange={() => setValue(val => !val)}
+			onChange={() => setValue((val) => !val)}
 		>
 			{props.children}
 		</ClayCheckbox>
@@ -87,7 +87,7 @@ storiesOf('Components|ClayCard', module)
 								value: 'Crazy',
 							},
 						]}
-						onSelectChange={newVal => setValue(newVal)}
+						onSelectChange={(newVal) => setValue(newVal)}
 						selected={value}
 						spritemap={spritemap}
 						stickerProps={{
@@ -547,7 +547,7 @@ storiesOf('Components|ClayCard', module)
 										<ClayDropDown
 											active={dropdownActive}
 											alignmentPosition={5}
-											onActiveChange={newVal =>
+											onActiveChange={(newVal) =>
 												setDropdownActive(newVal)
 											}
 											trigger={

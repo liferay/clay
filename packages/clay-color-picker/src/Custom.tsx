@@ -54,7 +54,7 @@ const RGBInput: React.FunctionComponent<IRGBInputProps> = ({
 					<ClayInput
 						data-testid={`${name}Input`}
 						insetBefore
-						onChange={event => {
+						onChange={(event) => {
 							const newVal = Number(event.target.value);
 
 							setInputValue(newVal);
@@ -123,7 +123,11 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 	const {b, g, r} = color.toRgb();
 	const {s, v} = color.toHsv();
 
-	const rgbArr: Array<[number, string]> = [[r, 'r'], [g, 'g'], [b, 'b']];
+	const rgbArr: Array<[number, string]> = [
+		[r, 'r'],
+		[g, 'g'],
+		[b, 'b'],
+	];
 
 	const setNewColor = (colorValue: tinycolor.Instance, setInput = true) => {
 		const hexString = colorValue.toHex();
@@ -212,7 +216,7 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 								<RGBInput
 									key={key}
 									name={key}
-									onChange={newVal => {
+									onChange={(newVal) => {
 										const newColor = tinycolor({
 											b,
 											g,
@@ -230,7 +234,7 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 					</div>
 
 					<Hue
-						onChange={hue => {
+						onChange={(hue) => {
 							setHue(hue);
 
 							setNewColor(tinycolor({h: hue, s, v}));
@@ -245,7 +249,7 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 									<ClayInput
 										data-testid="customHexInput"
 										insetBefore
-										onBlur={event => {
+										onBlur={(event) => {
 											const newColor = tinycolor(
 												event.target.value
 											);
@@ -256,7 +260,7 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 												setHexInput(color.toHex());
 											}
 										}}
-										onChange={event => {
+										onChange={(event) => {
 											const newHexValue =
 												event.target.value;
 

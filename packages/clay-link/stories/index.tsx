@@ -105,7 +105,7 @@ storiesOf('Components|ClayLink', module)
 		}) => (
 			<a
 				{...otherProps}
-				onClick={e => {
+				onClick={(e) => {
 					if (!confirm('Proceed with navigation?')) {
 						e.preventDefault();
 					}

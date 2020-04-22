@@ -6,9 +6,9 @@
 import classNames from 'classnames';
 import React from 'react';
 
-const ClayPanelBody: React.FunctionComponent<
-	React.HTMLAttributes<HTMLDivElement>
-> = ({children, className, ...otherProps}) => {
+const ClayPanelBody: React.FunctionComponent<React.HTMLAttributes<
+	HTMLDivElement
+>> = ({children, className, ...otherProps}) => {
 	return (
 		<div {...otherProps} className={classNames('panel-body', className)}>
 			{children}

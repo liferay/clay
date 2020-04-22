@@ -28,7 +28,7 @@ const DropDownWithState: React.FunctionComponent<any> = ({
 				Align,
 				Align.BottomLeft
 			)}
-			onActiveChange={newVal => setActive(newVal)}
+			onActiveChange={(newVal) => setActive(newVal)}
 			trigger={<ClayButton>{'Click Me'}</ClayButton>}
 		>
 			{children}
@@ -101,8 +101,8 @@ storiesOf('Components|ClayDropDown', module)
 		return (
 			<DropDownWithState>
 				<ClayDropDown.Search
-					formProps={{onSubmit: e => e.preventDefault()}}
-					onChange={event => setQuery(event.target.value)}
+					formProps={{onSubmit: (e) => e.preventDefault()}}
+					onChange={(event) => setQuery(event.target.value)}
 					spritemap={spritemap}
 					value={query}
 				/>
@@ -253,7 +253,7 @@ storiesOf('Components|ClayDropDown', module)
 				searchable={boolean('Searchable', true)}
 				searchProps={{
 					formProps: {
-						onSubmit: e => {
+						onSubmit: (e) => {
 							e.preventDefault();
 							alert('Submitted!');
 						},
@@ -283,7 +283,7 @@ storiesOf('Components|ClayDropDown', module)
 	))
 	.add('alignment positions', () => (
 		<div style={{margin: '200px 300px'}}>
-			{Object.keys(Align).map(alignPosition => (
+			{Object.keys(Align).map((alignPosition) => (
 				<>
 					<ClayDropDownWithItems
 						alignmentPosition={

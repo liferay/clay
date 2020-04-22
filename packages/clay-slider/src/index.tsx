@@ -117,7 +117,7 @@ const ClaySlider: React.FunctionComponent<IProps> = ({
 					disabled={disabled}
 					max={max}
 					min={min}
-					onChange={event =>
+					onChange={(event) =>
 						onValueChange(Number(event.target.value))
 					}
 					ref={sliderRef}

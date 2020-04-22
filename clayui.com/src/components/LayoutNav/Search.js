@@ -5,7 +5,7 @@
 
 import React, {useEffect} from 'react';
 
-export default props => {
+export default (props) => {
 	useEffect(() => {
 		if (window.docsearch) {
 			window.docsearch({

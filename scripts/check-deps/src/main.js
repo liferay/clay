@@ -5,7 +5,7 @@
 
 const print = require('./print');
 
-process.on('unhandledRejection', error => {
+process.on('unhandledRejection', (error) => {
 	print.line(`\nerror: ${error.message}`);
 	process.exit(1);
 });

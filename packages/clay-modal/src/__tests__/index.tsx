@@ -14,7 +14,7 @@ const spritemap = 'icons.svg';
 describe('ClayModal', () => {
 	beforeAll(() => {
 		// @ts-ignore
-		ReactDOM.createPortal = jest.fn(element => {
+		ReactDOM.createPortal = jest.fn((element) => {
 			return element;
 		});
 		jest.useFakeTimers();

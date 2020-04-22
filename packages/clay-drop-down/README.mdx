@@ -62,7 +62,7 @@ const Menu = ({children, hasLeftSymbols, hasRightSymbols}) => {
 	const [expand, setExpand] = useState(false);
 	const menuElementRef = useRef(null);
 
-	const handleExpand = event => {
+	const handleExpand = (event) => {
 		// This is not ideal for allowing you to have more than
 		// one trigger for the same content but it simulates the
 		// advantages of controlling `DropDown.Menu`.

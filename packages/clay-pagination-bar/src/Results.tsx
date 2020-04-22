@@ -6,9 +6,9 @@
 import classNames from 'classnames';
 import React from 'react';
 
-const ClayPaginationBarResults: React.FunctionComponent<
-	React.HTMLAttributes<HTMLDivElement>
-> = ({children, className, ...otherProps}) => {
+const ClayPaginationBarResults: React.FunctionComponent<React.HTMLAttributes<
+	HTMLDivElement
+>> = ({children, className, ...otherProps}) => {
 	return (
 		<div
 			{...otherProps}

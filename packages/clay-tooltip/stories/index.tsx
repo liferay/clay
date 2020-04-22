@@ -93,7 +93,7 @@ storiesOf('Components|ClayTooltip', module)
 		return (
 			<div style={{padding: 50}}>
 				<ClayTooltipProvider
-					contentRenderer={props => props.title.split('').join('-')}
+					contentRenderer={(props) => props.title.split('').join('-')}
 				>
 					<div>
 						<button title="Hello World">{'Formatted'}</button>
@@ -107,7 +107,7 @@ storiesOf('Components|ClayTooltip', module)
 				</ClayTooltipProvider>
 
 				<ClayTooltipProvider
-					contentRenderer={props => {
+					contentRenderer={(props) => {
 						let capitalize;
 
 						if (props.targetNode) {

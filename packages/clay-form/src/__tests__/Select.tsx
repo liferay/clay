@@ -36,7 +36,7 @@ describe('Rendering', () => {
 	it('renders ClaySelect.Option', () => {
 		const {container} = render(
 			<>
-				{options.map(item => (
+				{options.map((item) => (
 					<ClaySelect.Option {...item} key={item.label} />
 				))}
 			</>
@@ -48,7 +48,7 @@ describe('Rendering', () => {
 	it('renders ClaySelect with Option', () => {
 		const {container} = render(
 			<ClaySelect aria-label="Select Label" id="mySelectId">
-				{options.map(item => (
+				{options.map((item) => (
 					<ClaySelect.Option {...item} key={item.label} />
 				))}
 			</ClaySelect>

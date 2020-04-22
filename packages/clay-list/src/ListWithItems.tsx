@@ -212,7 +212,7 @@ export const ClayListWithItems: React.FunctionComponent<IProps> = ({
 							<React.Fragment key={`headerGroup${i}`}>
 								<ClayList.Header>{item.header}</ClayList.Header>
 
-								{item.items.map(subItem => {
+								{item.items.map((subItem) => {
 									const key = subItem[itemIdentifier];
 
 									return (

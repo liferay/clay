@@ -6,7 +6,7 @@
 const visit = require('unist-util-visit');
 
 module.exports = ({markdownAST}) => {
-	visit(markdownAST, 'html', node => {
+	visit(markdownAST, 'html', (node) => {
 		if (typeof node.lang === 'undefined') {
 			return;
 		}

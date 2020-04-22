@@ -61,9 +61,7 @@ const IndicatorWithInnerRef = React.forwardRef<HTMLButtonElement, any>(
 	)
 );
 
-export const ClayMultiStepNavWithBasicItems: React.FunctionComponent<
-	IProps
-> = ({
+export const ClayMultiStepNavWithBasicItems: React.FunctionComponent<IProps> = ({
 	activeIndex,
 	maxStepsShown = MAX_STEPS_SHOWN,
 	onIndexChange,

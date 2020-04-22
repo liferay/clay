@@ -32,7 +32,7 @@ const ClayCheckboxWithState = () => {
 			disabled={boolean('Disabled', false)}
 			indeterminate={boolean('Indeterminate', false)}
 			label={text('Label', 'Default')}
-			onChange={() => setValue(val => !val)}
+			onChange={() => setValue((val) => !val)}
 			value="default"
 		/>
 	);
@@ -302,7 +302,7 @@ const RadioGroupWithState = ({inline}: {inline?: boolean}) => {
 	return (
 		<ClayRadioGroup
 			inline={inline}
-			onSelectedValueChange={val => setValue(val as string)}
+			onSelectedValueChange={(val) => setValue(val as string)}
 			selectedValue={value}
 		>
 			<ClayRadio label="One" value="one" />
@@ -338,7 +338,7 @@ storiesOf('Components|ClaySelect', module)
 					id="mySelectId"
 					multiple={boolean('Multiple', false)}
 				>
-					{options.map(item => (
+					{options.map((item) => (
 						<ClaySelect.Option
 							key={item.value}
 							label={item.label}
@@ -450,7 +450,7 @@ storiesOf('Components|ClayToggle', module)
 
 		return (
 			<ClayRadioGroup
-				onSelectedValueChange={val => setValue(val as string)}
+				onSelectedValueChange={(val) => setValue(val as string)}
 				selectedValue={value}
 			>
 				<ClayToggle aria-label="Radio Foo" label="Foo" value="foo" />

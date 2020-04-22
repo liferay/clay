@@ -7,9 +7,9 @@
 
 const resolve = require('resolve');
 
-module.exports = function(file, data) {
+module.exports = function (file, data) {
 	if (file.indexOf('clay-') === 0 || file.indexOf('@clayui') === 0) {
-		data.packageFilter = function(pkg) {
+		data.packageFilter = function (pkg) {
 			return {main: pkg['ts:main']};
 		};
 	}

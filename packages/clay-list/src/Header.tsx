@@ -6,9 +6,9 @@
 import classNames from 'classnames';
 import React from 'react';
 
-const ClayListHeader: React.FunctionComponent<
-	React.HTMLAttributes<HTMLLIElement>
-> = ({children, className, ...otherProps}) => {
+const ClayListHeader: React.FunctionComponent<React.HTMLAttributes<
+	HTMLLIElement
+>> = ({children, className, ...otherProps}) => {
 	return (
 		<li
 			{...otherProps}

@@ -65,7 +65,7 @@ const ClayColorPickerGradientSelector: React.FunctionComponent<IProps> = ({
 	return (
 		<div
 			className="clay-color-map clay-color-map-hsb"
-			onMouseDown={event => {
+			onMouseDown={(event) => {
 				selectorActive.current = true;
 				onMouseMove(event);
 

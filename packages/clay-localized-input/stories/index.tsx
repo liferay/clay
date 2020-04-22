@@ -64,7 +64,7 @@ storiesOf('Components|ClayLocalizedInput', module).add('default', () => {
 				onSelectedLocaleChange={setSelectedLocale}
 				onTranslationsChange={setTranslations}
 				prependContent={prepend}
-				resultFormatter={val => `https://liferay.com${prepend}${val}`}
+				resultFormatter={(val) => `https://liferay.com${prepend}${val}`}
 				selectedLocale={selectedLocale}
 				spritemap={spritemap}
 				translations={translations}

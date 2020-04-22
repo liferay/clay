@@ -21,7 +21,7 @@ function useResource(url, options) {
 			},
 			...options,
 		})
-			.then(res => res.json())
+			.then((res) => res.json())
 			.then(setState);
 	}, []);
 

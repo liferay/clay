@@ -43,7 +43,7 @@ storiesOf('Components|ClayManagementToolbar', module).add(
 	'w/ low-level',
 	() => {
 		const [searchMobile, setSearchMobile] = React.useState<boolean>(false);
-		const viewTypeActive = viewTypes.find(type => type.active);
+		const viewTypeActive = viewTypes.find((type) => type.active);
 
 		return (
 			<>

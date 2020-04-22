@@ -12,15 +12,21 @@ import React from 'react';
 import ClayChart from '../src';
 const MAP_DATA = require('./static/map.json');
 
-const COLUMNS = [['data1', 100, 20, 30], ['data2', 20, 70, 100]];
-const COLUMNS_2 = [['data1', 10, 50, 60], ['data2', 70, 30, 10]];
+const COLUMNS = [
+	['data1', 100, 20, 30],
+	['data2', 20, 70, 100],
+];
+const COLUMNS_2 = [
+	['data1', 10, 50, 60],
+	['data2', 70, 30, 10],
+];
 
 const ChartWithState = () => {
 	const [active, setActive] = React.useState(false);
 
 	return (
 		<div>
-			<button onClick={() => setActive(val => !val)}>
+			<button onClick={() => setActive((val) => !val)}>
 				{'Change Data'}
 			</button>
 
@@ -123,7 +129,10 @@ storiesOf('Components|ClayCharts', module)
 	.add('donut', () => (
 		<ClayChart
 			data={{
-				columns: [['data1', 30], ['data2', 70]],
+				columns: [
+					['data1', 30],
+					['data2', 70],
+				],
 				type: 'donut',
 			}}
 		/>
@@ -165,7 +174,10 @@ storiesOf('Components|ClayCharts', module)
 	.add('pie', () => (
 		<ClayChart
 			data={{
-				columns: [['data1', 30], ['data2', 70]],
+				columns: [
+					['data1', 30],
+					['data2', 70],
+				],
 				type: 'pie',
 			}}
 		/>

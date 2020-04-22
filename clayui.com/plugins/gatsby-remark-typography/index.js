@@ -6,7 +6,7 @@
 const visit = require('unist-util-visit');
 
 module.exports = ({markdownAST}) => {
-	visit(markdownAST, 'heading', node => {
+	visit(markdownAST, 'heading', (node) => {
 		if (
 			node.depth === 1 ||
 			node.depth === 2 ||
@@ -14,10 +14,7 @@ module.exports = ({markdownAST}) => {
 			node.depth === 4 ||
 			node.depth === 5
 		) {
-			let id = node.children[0].value
-				.toLowerCase()
-				.split(' ')
-				.join('-');
+			let id = node.children[0].value.toLowerCase().split(' ').join('-');
 
 			let title = node.children[0].value;
 
@@ -38,7 +35,7 @@ module.exports = ({markdownAST}) => {
 		}
 	});
 
-	visit(markdownAST, 'paragraph', node => {
+	visit(markdownAST, 'paragraph', (node) => {
 		node.data = {
 			hProperties: {
 				class: 'clay-p',

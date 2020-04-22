@@ -52,7 +52,7 @@ const ClayNavigationBar: React.FunctionComponent<IProps> & {
 		handleClickToggler,
 	] = useTransitionHeight(visible, setVisible, contentRef);
 
-	const activeElementsCount = children.filter(child => child.props.active)
+	const activeElementsCount = children.filter((child) => child.props.active)
 		.length;
 
 	warning(

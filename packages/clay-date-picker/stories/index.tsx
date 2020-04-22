@@ -25,7 +25,7 @@ const ClayDatePickerWithState = (props: {[key: string]: any}) => {
 };
 
 storiesOf('Components|ClayDatePicker', module)
-	.addDecorator(storyFn => (
+	.addDecorator((storyFn) => (
 		<div className="sheet">
 			<div className="form-group" style={{maxWidth: 520}}>
 				{storyFn()}

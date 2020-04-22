@@ -52,7 +52,7 @@ Or, to paraphrase Winston Churchill, "Using flags is the worst system for indica
 To use the flags below, follow the same process as you would for a standard icon, and use the locale and country code indicated in parenthesis for the icon's name (e.g. to use the Japanese icon, you would use `ja-jp`)
 
 <IconSearch
-	iconLabelFormatter={icon => icon.aliases.join(' - ')}
+	iconLabelFormatter={(icon) => icon.aliases.join(' - ')}
 	label="Search Flags"
 	placeholder="Search Flags..."
 	source={flags}

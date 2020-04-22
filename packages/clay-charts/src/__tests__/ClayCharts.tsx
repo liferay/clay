@@ -9,7 +9,10 @@ import TestRenderer from 'react-test-renderer';
 
 const MAP_DATA = require('../../stories/static/map.json');
 
-const COLUMNS = [['data1', 100, 20, 30], ['data2', 20, 70, 100]];
+const COLUMNS = [
+	['data1', 100, 20, 30],
+	['data2', 20, 70, 100],
+];
 
 const ChartWithRef = () => {
 	const chartRef = React.useRef<any>(null);

@@ -50,8 +50,8 @@ const AutocompleteBasic = () => {
 			<ClayAutocomplete.DropDown active={!!value}>
 				<ClayDropDown.ItemList>
 					{['one', 'two', 'three', 'four', 'five']
-						.filter(item => item.match(value))
-						.map(item => (
+						.filter((item) => item.match(value))
+						.map((item) => (
 							<ClayAutocomplete.Item
 								key={item}
 								match={value}
@@ -70,9 +70,13 @@ const AutocompleteWithKeyboardFunctionality = () => {
 	const [value, setValue] = React.useState('');
 	const [active, setActive] = React.useState(!!value);
 
-	const filteredItems = ['one', 'two', 'three', 'four', 'five'].filter(item =>
-		item.match(value)
-	);
+	const filteredItems = [
+		'one',
+		'two',
+		'three',
+		'four',
+		'five',
+	].filter((item) => item.match(value));
 
 	React.useEffect(() => {
 		setActive(!!value);
@@ -93,7 +97,7 @@ const AutocompleteWithKeyboardFunctionality = () => {
 					onSetActive={setActive}
 				>
 					<ClayDropDown.ItemList>
-						{filteredItems.map(item => (
+						{filteredItems.map((item) => (
 							<ClayAutocomplete.Item
 								key={item}
 								match={value}

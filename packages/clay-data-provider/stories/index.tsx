@@ -118,7 +118,7 @@ storiesOf('Components|ClayDataProvider', module)
 			pollInterval={number('Polling Interval', 5000)}
 			variables={{limit: 10}}
 		>
-			{props => (
+			{(props) => (
 				<div className="container">
 					<div className="autofit-padded-no-gutters-x autofit-row">
 						<div className="autofit-col">

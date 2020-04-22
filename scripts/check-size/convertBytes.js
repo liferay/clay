@@ -5,7 +5,7 @@
 
 const SIZES = ['B', 'KB', 'MB', 'GB', 'TB'];
 
-const convertBytes = function(bytes) {
+const convertBytes = function (bytes) {
 	if (bytes === 0) {
 		return '--';
 	}

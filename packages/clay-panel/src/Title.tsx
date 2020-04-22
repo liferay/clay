@@ -5,9 +5,9 @@
 
 import React from 'react';
 
-const ClayPanelTitle: React.FunctionComponent<
-	React.HTMLAttributes<HTMLDivElement>
-> = ({children, className, ...otherProps}) => {
+const ClayPanelTitle: React.FunctionComponent<React.HTMLAttributes<
+	HTMLDivElement
+>> = ({children, className, ...otherProps}) => {
 	return (
 		<div {...otherProps} className={className}>
 			{children}

@@ -8,9 +8,9 @@ import React from 'react';
 
 import Context from './Context';
 
-const ClayCardBody: React.FunctionComponent<
-	React.HTMLAttributes<HTMLDivElement>
-> = ({children, className, ...otherProps}) => {
+const ClayCardBody: React.FunctionComponent<React.HTMLAttributes<
+	HTMLDivElement
+>> = ({children, className, ...otherProps}) => {
 	const {horizontal, interactive} = React.useContext(Context);
 
 	const TagName = interactive ? 'span' : 'div';

@@ -125,7 +125,7 @@ const TooltipProvider: React.FunctionComponent<{
 }> = ({
 	autoAlign = true,
 	children,
-	contentRenderer = props => props.title,
+	contentRenderer = (props) => props.title,
 	delay = 600,
 }) => {
 	const [{align, message = '', show}, dispatch] = React.useReducer(

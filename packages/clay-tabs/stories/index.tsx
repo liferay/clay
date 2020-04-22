@@ -25,7 +25,7 @@ const DropDownWithState: React.FunctionComponent<any> = ({
 			active={active}
 			alignmentPosition={Align.BottomLeft}
 			hasRightSymbols
-			onActiveChange={newVal => setActive(newVal)}
+			onActiveChange={(newVal) => setActive(newVal)}
 			trigger={trigger}
 			{...others}
 		>

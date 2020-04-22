@@ -174,15 +174,15 @@ const ClaySelectBox: React.FunctionComponent<IProps> = ({
 					className="form-control form-control-inset"
 					id={id}
 					multiple={multiple}
-					onChange={event => {
+					onChange={(event) => {
 						const selectedItems = [...event.target.options]
 							.filter(({selected}) => selected)
-							.map(item => item.value);
+							.map((item) => item.value);
 
 						onSelectChange(selectedItems);
 					}}
-					onKeyDown={event =>
-						selectedIndexes.forEach(index => {
+					onKeyDown={(event) =>
+						selectedIndexes.forEach((index) => {
 							if (
 								(event.keyCode === KEY_ARROWDOWN &&
 									index === items.length - 1) ||
@@ -195,7 +195,7 @@ const ClaySelectBox: React.FunctionComponent<IProps> = ({
 					size={size}
 					value={value}
 				>
-					{items.map(option => (
+					{items.map((option) => (
 						<option
 							className="reorder-option"
 							key={option.value}

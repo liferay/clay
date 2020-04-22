@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-module.exports = api => {
+module.exports = (api) => {
 	api.cache(true);
 
 	return {

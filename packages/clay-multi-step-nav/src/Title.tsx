@@ -5,8 +5,8 @@
 
 import React from 'react';
 
-const ClayMultiStepNavTitle: React.FunctionComponent<
-	React.HTMLAttributes<HTMLDivElement>
-> = ({children}) => <div className="multi-step-title">{children}</div>;
+const ClayMultiStepNavTitle: React.FunctionComponent<React.HTMLAttributes<
+	HTMLDivElement
+>> = ({children}) => <div className="multi-step-title">{children}</div>;
 
 export default ClayMultiStepNavTitle;

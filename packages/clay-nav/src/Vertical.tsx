@@ -109,7 +109,7 @@ function Item({
 				active={active}
 				collapsed={showIconCollapsed}
 				href={href}
-				onClick={e => {
+				onClick={(e) => {
 					handleClickToggler(e);
 
 					if (onClick) {

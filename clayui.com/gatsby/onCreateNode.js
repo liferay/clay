@@ -56,7 +56,7 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 		let pkgStatus = packageStatus;
 
 		if (pkgVersion && packageNpm) {
-			const isBeta = ['beta', 'alpha', 'milestone'].some(subs =>
+			const isBeta = ['beta', 'alpha', 'milestone'].some((subs) =>
 				pkgVersion.includes(subs)
 			);
 

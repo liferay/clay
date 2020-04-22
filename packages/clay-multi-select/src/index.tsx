@@ -142,8 +142,8 @@ const MultiSelectMenuRenderer: MenuRenderer = ({
 }) => (
 	<ClayDropDown.ItemList>
 		{sourceItems
-			.filter(item => filter(item, inputValue, locator))
-			.map(item => (
+			.filter((item) => filter(item, inputValue, locator))
+			.map((item) => (
 				<ClayAutocomplete.Item
 					key={item[locator.value]}
 					match={inputValue}
@@ -195,7 +195,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 
 		React.useLayoutEffect(() => {
 			if (sourceItems) {
-				const matchedItems = sourceItems.filter(item =>
+				const matchedItems = sourceItems.filter((item) =>
 					filter(item, inputValue, locator)
 				);
 
@@ -210,7 +210,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 		};
 
 		const getSourceItemByLabel = (label: string) => {
-			return sourceItems.find(item => item[locator.label] === label);
+			return sourceItems.find((item) => item[locator.label] === label);
 		};
 
 		const getNewItem = (value: string): Item => {
@@ -255,7 +255,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 
 			const pastedItems = pastedText
 				.split(',')
-				.map(itemLabel => getNewItem(itemLabel.trim()))
+				.map((itemLabel) => getNewItem(itemLabel.trim()))
 				.filter(Boolean);
 
 			if (pastedItems.length > 0) {
@@ -302,7 +302,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 												}
 												removeItem();
 											},
-											ref: ref => {
+											ref: (ref) => {
 												if (i === items.length - 1) {
 													lastItemRef.current = ref;
 												}
@@ -337,14 +337,14 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 							{...otherProps}
 							className="form-control-inset"
 							disabled={disabled}
-							onBlur={e => {
+							onBlur={(e) => {
 								onBlur(e);
 								setIsFocused(false);
 							}}
-							onChange={event =>
+							onChange={(event) =>
 								onChange(event.target.value.replace(',', ''))
 							}
-							onFocus={e => {
+							onFocus={(e) => {
 								onFocus(e);
 								setIsFocused(true);
 							}}
@@ -390,7 +390,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 								filter={filter}
 								inputValue={inputValue}
 								locator={locator}
-								onItemClick={item => {
+								onItemClick={(item) => {
 									setNewValue(item);
 
 									if (inputRef.current) {

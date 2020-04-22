@@ -21,7 +21,7 @@ const ClayLabelWithState = (props: any) => {
 			closeButtonProps={
 				boolean('Closeable', false)
 					? {
-							onClick: () => setVisible(val => !val),
+							onClick: () => setVisible((val) => !val),
 					  }
 					: undefined
 			}

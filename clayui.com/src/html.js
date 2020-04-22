@@ -5,7 +5,7 @@
 
 import React from 'react';
 
-export default props => {
+export default (props) => {
 	return (
 		<html lang="en">
 			<head>

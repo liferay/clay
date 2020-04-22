@@ -17,7 +17,7 @@ const path = require('path');
 
 const {GATSBY_CLAY_NIGHTLY} = process.env;
 
-const slugWithBar = path => {
+const slugWithBar = (path) => {
 	return path.startsWith('/') ? path : `/${path}`;
 };
 
@@ -202,7 +202,7 @@ module.exports = async ({actions, graphql}) => {
 			newestBlogEntry.data.allMarkdownRemark.edges[0].node;
 
 		// Blog landing page should always show the most recent blog entry.
-		['/blog/', '/blog'].map(slug => {
+		['/blog/', '/blog'].map((slug) => {
 			actions.createRedirect({
 				fromPath: slug,
 				redirectInBrowser: true,

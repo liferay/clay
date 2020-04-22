@@ -99,8 +99,9 @@ const useResource = ({
 
 			// eslint-disable-next-line no-console
 			console.warn(
-				`DataProvider: Trying ${retryAttempts +
-					1} of ${attempts} will happen in ${delay}ms`
+				`DataProvider: Trying ${
+					retryAttempts + 1
+				} of ${attempts} will happen in ${delay}ms`
 			);
 
 			retryDelayTimeoutId = setTimeout(() => {
@@ -144,7 +145,7 @@ const useResource = ({
 
 		const keys = Object.keys(variables);
 
-		keys.forEach(key => uri.searchParams.set(key, variables[key]));
+		keys.forEach((key) => uri.searchParams.set(key, variables[key]));
 
 		return uri;
 	};
@@ -185,7 +186,7 @@ const useResource = ({
 				promise = fetch(
 					getUrlFormat(link, variables),
 					fetchOptions
-				).then(res => res.json());
+				).then((res) => res.json());
 				break;
 			default:
 				return null;
@@ -193,7 +194,7 @@ const useResource = ({
 
 		timeout(fetchTimeout, promise)
 			.then(fetchOnComplete)
-			.catch(err => handleFetchRetry(err, retryAttempts));
+			.catch((err) => handleFetchRetry(err, retryAttempts));
 	};
 
 	const maybeFetch = (status: NetworkStatus) => {

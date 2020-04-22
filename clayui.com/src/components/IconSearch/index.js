@@ -20,7 +20,7 @@ const IconSearch = ({
 	label = 'Search Icons',
 	placeholder = 'Search Icons...',
 	source,
-	iconLabelFormatter = icon => icon.name,
+	iconLabelFormatter = (icon) => icon.name,
 }) => {
 	const [searchQuery, setSearchQuery] = useState('');
 
@@ -30,7 +30,7 @@ const IconSearch = ({
 		return source.filter(
 			({aliases, name}) =>
 				name.toLowerCase().includes(query) ||
-				aliases.some(alias => alias.toLowerCase().includes(query))
+				aliases.some((alias) => alias.toLowerCase().includes(query))
 		);
 	}, [searchQuery, source]);
 
@@ -43,7 +43,7 @@ const IconSearch = ({
 					<span className="form-control-label-text">{label}</span>
 
 					<ClayInput
-						onChange={event => setSearchQuery(event.target.value)}
+						onChange={(event) => setSearchQuery(event.target.value)}
 						placeholder={placeholder}
 						type="text"
 						value={searchQuery}
@@ -52,7 +52,7 @@ const IconSearch = ({
 			</ClayForm.Group>
 
 			<ul className="d-flex flex-wrap lexicon-icon-list list-unstyled">
-				{list.map(icon => (
+				{list.map((icon) => (
 					<li key={icon.name}>
 						<ClayIcon spritemap={spritemap} symbol={icon.name} />
 

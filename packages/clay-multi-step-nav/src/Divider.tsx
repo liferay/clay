@@ -5,8 +5,8 @@
 
 import React from 'react';
 
-const ClayMultiStepNavDivider: React.FunctionComponent<
-	React.HTMLAttributes<HTMLDivElement>
-> = () => <div className="multi-step-divider" />;
+const ClayMultiStepNavDivider: React.FunctionComponent<React.HTMLAttributes<
+	HTMLDivElement
+>> = () => <div className="multi-step-divider" />;
 
 export default ClayMultiStepNavDivider;

@@ -14,10 +14,13 @@ export interface IPaginationEllipsisProps {
 	onPageChange?: (page?: number) => void;
 }
 
-const ClayPaginationEllipsis: React.FunctionComponent<
-	IPaginationEllipsisProps
-> = ({disabledPages = [], hrefConstructor, items = [], onPageChange}) => {
-	const pages = items.map(page => ({
+const ClayPaginationEllipsis: React.FunctionComponent<IPaginationEllipsisProps> = ({
+	disabledPages = [],
+	hrefConstructor,
+	items = [],
+	onPageChange,
+}) => {
+	const pages = items.map((page) => ({
 		disabled: disabledPages.includes(page),
 		href: hrefConstructor ? hrefConstructor(page) : undefined,
 		label: String(page),

@@ -26,7 +26,7 @@ function ClayCheckboxWithState(props: any) {
 			checked={value}
 			disabled={false}
 			indeterminate={false}
-			onChange={() => setValue(val => !val)}
+			onChange={() => setValue((val) => !val)}
 			{...props}
 		>
 			{props.children}

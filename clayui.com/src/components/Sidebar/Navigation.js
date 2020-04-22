@@ -82,7 +82,7 @@ class Navigation extends Component {
 				>
 					<Anchor
 						location={location}
-						onclick={event =>
+						onclick={(event) =>
 							this.handleOnClick(index, depth, section, event)
 						}
 						onnavigation={() => this.handleOnNavigation()}

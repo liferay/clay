@@ -14,6 +14,6 @@ addDecorator(withKnobs);
 addDecorator(withA11y);
 
 // allows for use of hooks within story itself
-addDecorator(Story => <Story />);
+addDecorator((Story) => <Story />);
 
 configure(loadStories, module);

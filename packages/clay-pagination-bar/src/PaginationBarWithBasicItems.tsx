@@ -113,9 +113,7 @@ const DEFAULT_LABELS = {
 	selectPerPageItems: '{0} items',
 };
 
-export const ClayPaginationBarWithBasicItems: React.FunctionComponent<
-	IProps
-> = ({
+export const ClayPaginationBarWithBasicItems: React.FunctionComponent<IProps> = ({
 	activeDelta,
 	activePage = 1,
 	deltas = defaultDeltas,
@@ -188,7 +186,7 @@ export const ClayPaginationBarWithBasicItems: React.FunctionComponent<
 				disabledPages={disabledPages}
 				ellipsisBuffer={ellipsisBuffer}
 				hrefConstructor={hrefConstructor}
-				onPageChange={page => {
+				onPageChange={(page) => {
 					if (page && onPageChange) {
 						onPageChange(page);
 					}

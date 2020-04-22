@@ -7,9 +7,9 @@ import ClayLink from '@clayui/link';
 import classNames from 'classnames';
 import React from 'react';
 
-const ClayListItemTitle: React.FunctionComponent<
-	React.BaseHTMLAttributes<HTMLAnchorElement>
-> = ({children, className, href, ...otherProps}) => {
+const ClayListItemTitle: React.FunctionComponent<React.BaseHTMLAttributes<
+	HTMLAnchorElement
+>> = ({children, className, href, ...otherProps}) => {
 	const TagName = href ? 'div' : 'p';
 
 	const content = href ? (

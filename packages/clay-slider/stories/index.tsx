@@ -66,14 +66,15 @@ storiesOf('Components|ClaySlider', module)
 					/>
 				</div>
 				<div className="form-group">
-					<label htmlFor={`sliderTwo${value}`}>{`Value: ${100 -
-						value}`}</label>
+					<label htmlFor={`sliderTwo${value}`}>{`Value: ${
+						100 - value
+					}`}</label>
 					<ClaySlider
 						disabled={boolean('Disabled', false)}
 						id={`sliderTwo${value}`}
 						max={number('Max', 100)}
 						min={number('Min', 0)}
-						onValueChange={n => setValue(100 - n)}
+						onValueChange={(n) => setValue(100 - n)}
 						step={number('Step', 1)}
 						tooltipPosition={
 							select(

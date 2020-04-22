@@ -25,7 +25,7 @@ module.exports = yeoman.generators.Base.extend({
 
 			ps.on(
 				'close',
-				code => console.log(`yarn install exited with ${code}`) // eslint-disable-line no-console
+				(code) => console.log(`yarn install exited with ${code}`) // eslint-disable-line no-console
 			);
 		}
 	},
@@ -39,7 +39,7 @@ module.exports = yeoman.generators.Base.extend({
 				message: 'How do you want to name your component?',
 				name: 'componentName',
 				type: 'input',
-				validate: input => {
+				validate: (input) => {
 					if (!input) {
 						return 'You must provide a component name.';
 					}
@@ -62,7 +62,7 @@ module.exports = yeoman.generators.Base.extend({
 			},
 		];
 
-		this.prompt(prompts, props => {
+		this.prompt(prompts, (props) => {
 			const {componentName} = props;
 
 			this.camelCaseName = _.camelCase(componentName);

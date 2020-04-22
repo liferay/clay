@@ -22,12 +22,12 @@ export function useDropdownCloseInteractions(
 				? nodeRefs
 				: [nodeRefs]
 			)
-				.filter(ref => ref.current)
-				.map(ref => ref.current!);
+				.filter((ref) => ref.current)
+				.map((ref) => ref.current!);
 
 			if (
 				event.target instanceof Node &&
-				!nodes.find(element => element.contains(event.target as Node))
+				!nodes.find((element) => element.contains(event.target as Node))
 			) {
 				setActive(false);
 			}

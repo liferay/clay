@@ -79,7 +79,7 @@ const ClayCheckbox = React.forwardRef<HTMLInputElement, IProps>(
 							'custom-control-input',
 							className
 						)}
-						ref={r => {
+						ref={(r) => {
 							inputRef.current = r;
 							if (typeof ref === 'function') {
 								ref(r);

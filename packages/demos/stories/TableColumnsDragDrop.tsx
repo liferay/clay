@@ -67,7 +67,7 @@ const CustomDragLayer: React.FunctionComponent<ICustomDragLayerProps> = ({
 	width,
 }) => {
 	const {currentOffset, initialOffset, isDragging, item} = useDragLayer(
-		monitor => ({
+		(monitor) => ({
 			currentOffset: monitor.getSourceClientOffset(),
 			initialOffset: monitor.getInitialSourceClientOffset(),
 			isDragging: monitor.isDragging(),
@@ -205,9 +205,12 @@ interface IDragItem {
 	type: string;
 }
 
-const DraggableTableHeaderCell: React.FunctionComponent<
-	IDraggableTableHeadingProps
-> = ({id, index, onMove, title}) => {
+const DraggableTableHeaderCell: React.FunctionComponent<IDraggableTableHeadingProps> = ({
+	id,
+	index,
+	onMove,
+	title,
+}) => {
 	const ref = React.useRef<HTMLTableHeaderCellElement>(null);
 
 	const [{canDrop}, drop] = useDrop({
@@ -326,7 +329,7 @@ const ClayTableWithDraggableColumns: React.FunctionComponent = () => {
 						<ClayTable.Row
 							key={`${row[index].id}_${row[index].data}`}
 						>
-							{row.map(cell => (
+							{row.map((cell) => (
 								<ClayTable.Cell
 									className={classNames({
 										'c-dragging':
@@ -335,7 +338,7 @@ const ClayTableWithDraggableColumns: React.FunctionComponent = () => {
 										'c-droppable': canDrop,
 									})}
 									key={`${cell.id}_${cell.data}`}
-									ref={node =>
+									ref={(node) =>
 										node &&
 										setDragPreviewWidth(node.offsetWidth)
 									}

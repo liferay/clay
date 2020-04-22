@@ -63,9 +63,9 @@ describe('ClayAutocomplete', () => {
 	});
 
 	it('renders LoadingIndicator with other markup component', () => {
-		const MyMarkup: React.FunctionComponent<
-			React.HTMLAttributes<HTMLSpanElement>
-		> = ({children}) => (
+		const MyMarkup: React.FunctionComponent<React.HTMLAttributes<
+			HTMLSpanElement
+		>> = ({children}) => (
 			<span className="autofit-col">
 				<span className="inline-item">{children}</span>
 			</span>
