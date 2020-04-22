@@ -161,7 +161,10 @@ module.exports = async ({actions, graphql}) => {
 			return Promise.reject(errors);
 		}
 
-		const blacklist = data.allMdx.edges.filter(
+		const blacklist = [
+			...data.allMdx.edges,
+			...data.allMarkdownRemark.edges,
+		].filter(
 			({
 				node: {
 					fields: {sibling},

@@ -1,0 +1,55 @@
+---
+title: 'Label'
+description: 'Labels are a visual pattern used to categorize information providing quick and easy recognition.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/labels/'
+packageNpm: '@clayui/label'
+sibling: 'docs/components/css-labels.html'
+---
+
+import {
+	Label,
+	LabelClosingActions,
+	LabelDisplayTypes,
+} from '$clayui.com/src/components/clay/Label';
+
+<div class="nav-toc-absolute">
+<div class="nav-toc">
+
+-   [Display Types](#display-types)
+-   [Closing Actions](#closing-actions)
+-   [API](#api)
+
+</div>
+</div>
+
+## Overview
+
+`ClayLabel` offers two different APIs for use by toggling the prop `withClose`. By default(`withClose={true}`), `ClayLabel` behaves like a high-level component. If you want to use the lower-level components and compose multiple parts to your label, all you need to do is set `withClose={false}`.
+
+Check out [this storybook example](storybook.clayui.com/?path=/story/components-claylabel--w-content-before) for a demo.
+
+## Display Types
+
+Using [`displayType`](#api-displayType) property you can use these color variations on Label component:
+
+<LabelDisplayTypes />
+
+## Closing Actions
+
+<div class="clay-site-alert alert alert-warning">
+	This property is mandatory if you want make your label dismissible.
+</div>
+
+Use [`closeButtonProps`](#api-closeButtonProps) property for applying custom properties to the button that wraps the closing icon.
+
+In this example, an Id was settled for the closing element:
+
+<LabelClosingActions />
+
+You can also set a state for the visibility of the ClayLabel for example, handling `onClick` property on the closing element.
+
+<Label />
+
+## API
+
+<div>[APITable "clay-label/src/index.tsx"]</div>

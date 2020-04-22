@@ -1,0 +1,246 @@
+---
+title: 'Modal'
+description: 'A modal is a secondary window that communicates or provides an action inside the same process.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/modals/'
+packageNpm: '@clayui/modal'
+sibling: 'docs/components/css-modals.html'
+---
+
+import {
+	ClayModalHeaderExamples,
+	Modal,
+} from '$clayui.com/src/components/clay/Modal';
+
+<div class="nav-toc-absolute">
+<div class="nav-toc">
+
+-   [useModal hook](#usemodal-hook)
+    -   [Usage](#usage)
+-   [Header](#header)
+-   [Provider](#provider)
+-   [API](#api)
+    -   [ClayModal](#claymodal)
+    -   [ClayModal.Body](#claymodal.body)
+    -   [ClayModal.Footer](#claymodal.footer)
+    -   [ClayModal.Header](#claymodal.header)
+    -   [ClayModal.Item](#claymodal.item)
+    -   [ClayModal.ItemGroup](#claymodal.itemgroup)
+    -   [ClayModal.Subtitle](#claymodal.subtitle)
+    -   [ClayModal.SubtitleSection](#claymodal.subtitlesection)
+    -   [ClayModal.Title](#claymodal.title)
+    -   [ClayModal.TitleSection](#claymodal.titlesection)
+    -   [ClayModal.TitleIndicator](#claymodal.titleindicator)
+
+</div>
+</div>
+
+You may want to compose your content and customize with your use cases or add your own components while still keeping the logic of a modal.
+
+<Modal />
+
+### useModal hook
+
+The `useModal` [hook](https://reactjs.org/docs/hooks-intro.html) is required to create a Modal component in Clay, it is responsible for communicating with ClayModal and controlling states to make animations, this is necessary because Modal needs animation when opening and closing so we need to delay calls of the `onClose` so you can safely control Modal's visibility or do other things.
+
+`useModal` returns a signature with `observer` and `onClose`:
+
+-   **observer** - Observer is the communication channel that connects ClayModal with `useModal`.
+-   **onClose** - Callback is called after Modal's close animation.
+
+```jsx
+const {observer, onClose} = useModal({
+	onClose: () => setVisible(false),
+});
+```
+
+<div class="clay-site-alert alert alert-warning">
+	To avoid future problems, do not use the information or change the values
+	​​of `observer`, it is considered a bad practice.
+</div>
+
+To prevent Modal from closing before animation always use the `onClose` method returned by `useModal`.
+
+```diff
+<ClayModal.Footer
+-   last={<ClayButton onClick={() => setVisible(false)}>{"Primary"}</ClayButton>}
++   last={<ClayButton onClick={onClose}>{"Primary"}</ClayButton>}
+/>
+```
+
+#### Usage
+
+`useModal` is a hook so it implies that you cannot use ClayModal directly in a class component. If you'd like to use it in a class component, try the recommended strategy below.
+
+-   Wrap ClayModal and `useModal` in a function component.
+
+```jsx
+const ModalWithDialog = ({visible, onClose, title, body}) => {
+    const { observer, onClose: close } = useModal({
+        onClose: onVisible,
+    });
+
+    if (!visible) {
+        return;
+    }
+
+    return (
+        <ClayModal
+            observer={observer}
+            spritemap={spritemap}
+        >
+            <ClayModal.Header>{title}</ClayModal.Header>
+            <ClayModal.Body>
+                {body}
+            </ClayModal.Body>
+            <ClayModal.Footer
+                last={<ClayButton onClick={close}>{"Close"}</ClayButton>}
+            />
+        </ClayModal>
+    );
+};
+
+// This is pseudocode
+class Page extends Component {
+    render() {
+        return (
+            <>
+                <ModalWithDialog visible={this.state.visible} onClose={() => this.setVisible(false)} title={...} body={...} />
+                <ClayButton displayType="primary" onClick={() => this.setVisible(true)}>
+                    {"Open modal"}
+                </ClayButton>
+            <>
+        );
+    }
+}
+```
+
+`useModal` may be lost if you raise the visible condition above the hook, if Modal happens to be unmounted at the same time as the component. Ideally the hook is not unmounted every time Modal is opened and closed.
+
+### Header
+
+`ClayModal.Header` offers two different APIs for use by toggling the prop `withTitle`. By default(`withTitle={true}`), `ClayModal.Header` behaves like a high-level component. If you want to use the lower-level components in Header, all you need to do is set `withTitle={false}`.
+
+Here is an example of both APIs:
+
+<ClayModalHeaderExamples />
+
+### Provider
+
+When your application uses a lot of modals, you can use `<ClayModalProvider />` to have only one open Modal on the screen and the component centered on your application, you can invoke the modal from the context through the API. It is not recommended to have multiple modals open at the same time.
+
+Add in the project root:
+
+```jsx
+<ClayModalProvider spritemap={spritemap}>
+	<MyApp />
+</ClayModalProvider>
+```
+
+In any part of your application you can invoke modal.
+
+```jsx
+import {Context} from '@clayui/modal';
+import ClayButton from '@clayui/button';
+
+const MyApp = () => {
+	const [state, dispatch] = useContext(Context);
+
+	return (
+		<ClayButton
+			displayType="primary"
+			onClick={() =>
+				dispatch({
+					payload: {
+						body: <h1>{'Hello world!'}</h1>,
+						footer: [
+							,
+							,
+							<ClayButton key={3} onClick={state.onClose}>
+								{'Primary'}
+							</ClayButton>,
+						],
+						header: 'Title',
+						size: 'lg',
+					},
+					type: 1,
+				})
+			}
+		>
+			{'Open modal'}
+		</ClayButton>
+	);
+};
+```
+
+Provider contains two different states that you can control:
+
+-   **Close** - 0
+-   **Open** - 1
+
+The context signature is similar to a [`useReducer`](https://reactjs.org/docs/hooks-reference.html#usereducer), contains `state` and `dispatch`.
+
+```js
+const [state, dispatch] = useContext(Context);
+
+dispatch({payload: {...}, type: 1});
+```
+
+`state` returns all values that are passed to dispatch payload and you can pass `body`, `footer`, `header`, `size`, `status` and `url` to payload.
+
+## API
+
+### ClayModal
+
+<div>[APITable "clay-modal/src/Modal.tsx"]</div>
+
+### ClayModal.Body
+
+<div>[APITable "clay-modal/src/Body.tsx"]</div>
+
+### ClayModal.Footer
+
+<div>[APITable "clay-modal/src/Footer.tsx"]</div>
+
+### ClayModal.Header
+
+<div>[APITable "clay-modal/src/Header.tsx#ClayModalHeaderHybrid"]</div>
+
+### ClayModal.Item
+
+<div>[APITable "clay-modal/src/Header.tsx#Item"]</div>
+
+### ClayModal.ItemGroup
+
+<code class="list-api-item-type">
+	Extends from {`React.HTMLAttributes<HTMLDivElement>`}
+</code>
+
+### ClayModal.Subtitle
+
+<code class="list-api-item-type">
+	Extends from {`React.HTMLAttributes<HTMLDivElement>`}
+</code>
+
+### ClayModal.SubtitleSection
+
+<code class="list-api-item-type">
+	Extends from {`React.HTMLAttributes<HTMLDivElement>`}
+</code>
+
+### ClayModal.Title
+
+<code class="list-api-item-type">
+	Extends from {`React.HTMLAttributes<HTMLDivElement>`}
+</code>
+
+### ClayModal.TitleSection
+
+<code class="list-api-item-type">
+	Extends from {`React.HTMLAttributes<HTMLDivElement>`}
+</code>
+
+### ClayModal.TitleIndicator
+
+<code class="list-api-item-type">
+	Extends from {`React.HTMLAttributes<HTMLDivElement>`}
+</code>

@@ -6,14 +6,12 @@
 import ClayMultiStepNav, {
 	ClayMultiStepNavWithBasicItems,
 } from '@clayui/multi-step-nav';
-import React, {useState} from 'react';
+import React from 'react';
 
-import Editor from './Editor';
-
-const spritemap = '/images/icons/icons.svg';
+import Editor from '../Editor';
 
 const multiStepNavImportsCode = `import ClayMultiStepNav from '@clayui/multi-step-nav';
-import React, {useState} from 'react';`;
+`;
 
 const multiStepNavCode = `const Component = () => {
 	const [value, setValue] = useState(1);
@@ -85,8 +83,6 @@ render(<Component />)`;
 const MultiStepNav = () => {
 	const scope = {
 		ClayMultiStepNav,
-		spritemap,
-		useState,
 	};
 
 	return (
@@ -99,7 +95,7 @@ const MultiStepNav = () => {
 };
 
 const multiStepNavWithBasicItemsImportsCode = `import {ClayMultiStepNavWithBasicItems} from '@clayui/multi-step-nav';
-import React, {useState} from 'react';`;
+`;
 
 const multiStepNavWithBasicItemsCode = `const Component = (props) => {
 	const [active, setActive] = useState(0);
@@ -139,8 +135,6 @@ render(<Component />)`;
 const MultiStepNavWithBasicItems = () => {
 	const scope = {
 		ClayMultiStepNavWithBasicItems,
-		spritemap,
-		useState,
 	};
 
 	return (

@@ -1,0 +1,64 @@
+---
+title: 'Multi Select'
+description: 'Multi select is the field type that allows writing text to create “tags” that are represented in the shape of labels.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/selector/'
+packageNpm: '@clayui/multi-select'
+sibling: 'docs/components/css-text-input-multi-select.html'
+---
+
+import {
+	MultiSelectInput,
+	MultiSelectInputWithAutocomplete,
+	MultiSelectInputWithCustomAutocomplete,
+	MultiSelectInputWithSelectButton,
+	MultiSelectInputWithValidation,
+} from '$clayui.com/src/components/clay/MultiSelect';
+
+<div class="nav-toc-absolute">
+<div class="nav-toc">
+
+-   [Composing](#composing)
+    -   [Autocomplete](#autocomplete)
+    -   [Select Button](#select-button)
+    -   [Validation](#validation)
+-   [Custom Autocomplete](#custom-autocomplete)
+-   [API](#api)
+
+</div>
+</div>
+
+Multi Select is an aggregate component of the `@clayui/form` package, consisting of a high-level written above a `<ClayInput />` that provides the ability to create tags.
+
+<MultiSelectInput />
+
+## Composing
+
+`<ClayMultiSelect />` enables you to make compositions to achieve your expected results, as this component is distributed only in a low level component, this increases flexibility and you can create many possibilities but it comes with a price tag... you may want to get close to the Lexicon specifications and will have to compose with some of the other components to get there, let's detail it further below.
+
+#### Autocomplete
+
+Usually a MultiSelect has an autocomplete to help the user choose existing tags. You can use the `sourceItems` API to achieve this result.
+
+<MultiSelectInputWithAutocomplete />
+
+#### Select Button
+
+According to the Lexicon specification a `Select` button can be grouped with MultiSelect to allow tag data to come from elsewhere. You can achieve this result by composing with `<ClayForm.Group />`, `<ClayInput.GroupItem />` and `<ClayButton />` .
+
+<MultiSelectInputWithSelectButton />
+
+#### Validation
+
+An input needs validation so you can add some composition props with `<ClayInput />` and `<ClayForm />` to get the result.
+
+<MultiSelectInputWithValidation />
+
+## Custom Autocomplete
+
+To customize Autocomplete content to stylize to your needs and also have filter control, you can use the `menuRenderer` API.
+
+<MultiSelectInputWithCustomAutocomplete />
+
+## API
+
+<div>[APITable "clay-multi-select/src/index.tsx"]</div>

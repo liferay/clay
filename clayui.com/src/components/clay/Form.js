@@ -4,14 +4,12 @@
  */
 
 import ClayForm, {ClayInput} from '@clayui/form';
-import React, {useState} from 'react';
+import React from 'react';
 
-import Editor from './Editor';
-
-const spritemap = '/images/icons/icons.svg';
+import Editor from '../Editor';
 
 const formCodeImport = `import ClayForm, {ClayInput} from '@clayui/form';
-import React, {useState} from 'react';`;
+`;
 
 const formCode = `const Component = () => {
 	const [active, setActive] = useState(false);
@@ -36,8 +34,6 @@ const Form = () => {
 	const scope = {
 		ClayForm,
 		ClayInput,
-		spritemap,
-		useState,
 	};
 
 	return <Editor code={formCode} imports={formCodeImport} scope={scope} />;
@@ -97,8 +93,6 @@ const FormValidation = () => {
 	const scope = {
 		ClayForm,
 		ClayInput,
-		spritemap,
-		useState,
 	};
 
 	return (
@@ -137,8 +131,6 @@ const FormText = () => {
 	const scope = {
 		ClayForm,
 		ClayInput,
-		spritemap,
-		useState,
 	};
 
 	return (

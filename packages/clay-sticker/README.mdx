@@ -1,0 +1,43 @@
+---
+title: 'Sticker'
+description: 'Stickers are a visual way to quickly identify content in a different way than badges and labels.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/stickers/'
+packageNpm: '@clayui/sticker'
+sibling: 'docs/components/css-stickers.html'
+---
+
+import {
+	StickerColorsAndSizes,
+	StickerUserIcon,
+} from '$clayui.com/src/components/clay/Sticker';
+
+<div class="nav-toc-absolute">
+<div class="nav-toc">
+
+-   [User Icon](#user-icon)
+-   [API](#api)
+
+</div>
+</div>
+
+## Introduction
+
+Stickers can be any color. Set sticker's color using [`displayType`](#api-displayType) property.
+
+Also, you can use the following sizes on your Sticker just setting up [`size`](#api-size):
+
+<StickerColorsAndSizes />
+
+You can set a desired alignment of sticker according to a parent element, just setting up the [`position`](#api-position) property. If you want to set the position of the sticker on the outside corners, use [`outside`](#api-outside) property in conjunction with [`position`](#api-position) property.
+
+Overlay content over stickers by nesting `sticker-overlay` elements as children of ClaySticker. Check our example on [Storybook](https://storybook-clayui.netlify.com/?path=/story/claysticker--overlay)
+
+### User Icon
+
+Use a ClaySticker as User Icon just adding `sticker-user-icon` on className of the `ClaySticker` component like the example below:
+
+<StickerUserIcon />
+
+## API
+
+<div>[APITable "clay-sticker/src/index.tsx"]</div>

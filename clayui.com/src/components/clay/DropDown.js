@@ -5,12 +5,12 @@
 
 import ClayButton from '@clayui/button';
 import ClayDropDown, {ClayDropDownWithItems} from '@clayui/drop-down';
-import React, {useState} from 'react';
+import React from 'react';
 
-import Editor from './Editor';
+import Editor from '../Editor';
 
 const dropDownImportsCode = `import ClayDropDown from '@clayui/drop-down';
-import React, {useState} from 'react';`;
+`;
 
 const dropDownCode = `const Component = () => {
 	const [active, setActive] = useState(false);
@@ -43,7 +43,7 @@ const dropDownCode = `const Component = () => {
 render(<Component />)`;
 
 const DropDown = () => {
-	const scope = {ClayDropDown, useState};
+	const scope = {ClayDropDown};
 
 	return (
 		<Editor
@@ -56,9 +56,9 @@ const DropDown = () => {
 
 const dropDownWithItemsImportsCode = `import ClayButton from '@clayui/button';
 import {ClayDropDownWithItems} from '@clayui/drop-down';
-import React, {useState} from 'react';`;
+`;
 
-const dropDownWithItemsCode = `const spritemap = '/images/icons/icons.svg';
+const dropDownWithItemsCode = `
 
 const Component = () => {
 	const [value, setValue] = useState();
@@ -137,7 +137,7 @@ const Component = () => {
 render(<Component />)`;
 
 const DropDownWithItems = () => {
-	const scope = {ClayButton, ClayDropDownWithItems, useState};
+	const scope = {ClayButton, ClayDropDownWithItems};
 
 	return (
 		<Editor

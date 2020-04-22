@@ -1,5 +1,5 @@
 /**
-* Clay 3.7.0
+* Clay 3.9.0
 *
 * Copyright 2020, Liferay, Inc.
 * All rights reserved.

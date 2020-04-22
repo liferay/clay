@@ -1,0 +1,57 @@
+---
+title: 'Buttons'
+description: 'Buttons communicate an action to happen on user interaction.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/buttons/'
+packageNpm: '@clayui/button'
+sibling: 'docs/components/css-buttons.html'
+---
+
+import {
+	ButtonDisplayTypes,
+	ButtonGroup,
+} from '$clayui.com/src/components/clay/Button';
+
+<div class="nav-toc-absolute">
+<div class="nav-toc">
+
+-   [Display Types](#display-types)
+-   [Group](#group)
+-   [API](#api)
+    -   [ClayButton](#claybutton)
+    -   [ClayButton.Group](#claybutton.group)
+    -   [ClayButtonWithIcon](#claybuttonwithicon)
+
+</div>
+</div>
+
+## Display Types
+
+You can determine how your button can be displayed using [`displayType`](#api-displayType) property:
+
+Use [`unstyled`](#api-unstyled) to reset all the stylings from Bootstrap 4.
+
+If you want use the button as a link use [`link`](#api-link).
+
+<ButtonDisplayTypes />
+
+## Group
+
+You can use the variant `ClayButton.Group` for creating button groups:
+
+Use [`spaced`](#api-spaced) property to create spacing between buttons.
+
+<ButtonGroup />
+
+## API
+
+### ClayButton
+
+<div>[APITable "clay-button/src/Button.tsx"]</div>
+
+### ClayButton.Group
+
+<div>[APITable "clay-button/src/Group.tsx"]</div>
+
+### ClayButtonWithIcon
+
+<div>[APITable "clay-button/src/ButtonWithIcon.tsx"]</div>

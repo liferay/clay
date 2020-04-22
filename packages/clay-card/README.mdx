@@ -1,0 +1,148 @@
+---
+title: 'Card'
+description: 'Cards are a specific form of data visualization focused mainly on displaying images.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/cards/'
+packageNpm: '@clayui/card'
+sibling: 'docs/components/css-cards.html'
+---
+
+import {
+	CardBasic,
+	CardBasicHorizontal,
+	CardWithInfo,
+	CardWithNavigation,
+	CardWithUser,
+	CardWithHorizontal,
+	Card,
+} from '$clayui.com/src/components/clay/Card';
+
+<div class="nav-toc-absolute">
+<div class="nav-toc">
+
+-   [Composing](#composing)
+    -   [Horizontal composing](#horizontal-composing)
+    -   [Lexicon specs](#lexicon-specs)
+-   [High-level Components](#high-level-components)
+    -   [CardWithInfo](#cardwithinfo)
+    -   [CardWithNavigation](#cardwithnavigation)
+    -   [CardWithUser](#cardwithuser)
+    -   [CardWithHorizontal](#cardwithhorizontal)
+-   [API](#api)
+    -   [ClayCard](#claycard)
+    -   [ClayCard.AspectRatio](#claycard.aspectratio)
+    -   [ClayCard.Body](#claycard.body)
+    -   [ClayCard.Caption](#claycard.caption)
+    -   [ClayCard.Description](#claycard.description)
+    -   [ClayCard.Group](#claycard.group)
+    -   [ClayCard.Row](#claycard.row)
+    -   [ClayCardWithHorizontal](#claycardwithhorizontal)
+    -   [ClayCardWithInfo](#claycardwithinfo)
+    -   [ClayCardWithNavigation](#claycardwithnavigation)
+    -   [ClayCardWithUser](#claycardwithuser)
+
+</div>
+</div>
+
+## Composing
+
+Card follows the Clay component compositional philosophy, you can compose with ClayCard's low-level components to get Clay results and adapt to your use cases, but if you just follow the specification you can use the high-level ClayCard.
+
+This documentation focuses on how you can use ClayCard low-level components to reach unspecified use cases and how to use ClayCard high-level components.
+
+You can only leverage the body of `Card` and `Card.Body` to create the white card and add more elements.
+
+<CardBasic />
+
+#### Horizontal composing
+
+You can use the Card in horizontal format and use the `autofit` utilities to create more possibilities.
+
+<CardBasicHorizontal />
+
+#### Lexicon specs
+
+The low-level components for ClayCard have been built thinking about how you can use the components in the composition to get close to Lexicon specifications.
+
+For some low-level components it is necessary to pass some modifier classes in order for the component to reach the Lexicon result, this was necessary since we did not want to attach the component just for this case and the low-level components could be used more flexibly and allow you to create new possibilities.
+
+<Card />
+
+## High-level Components
+
+ClayCard's high-level components predict the major cases of the Lexicon specification:
+
+-   Cards with Images
+-   Card for user listing
+-   Card for docs listing
+-   Card for folder
+-   Card for navigation
+
+#### CardWithInfo
+
+`ClayCardWithInfo` you can use to create cards with images and documents.
+
+<CardWithInfo />
+
+#### CardWithNavigation
+
+<CardWithNavigation />
+
+#### CardWithUser
+
+<CardWithUser />
+
+#### CardWithHorizontal
+
+<CardWithHorizontal />
+
+## API
+
+### ClayCard
+
+<div>[APITable "clay-card/src/Card.tsx"]</div>
+
+### ClayCard.AspectRatio
+
+<div>[APITable "clay-card/src/AspectRatio.tsx"]</div>
+
+### ClayCard.Body
+
+<code class="list-api-item-type">
+	Extends from {`React.HTMLAttributes<HTMLDivElement>`}
+</code>
+
+### ClayCard.Caption
+
+<code class="list-api-item-type">
+	Extends from {`React.HTMLAttributes<HTMLDivElement | HTMLSpanElement>`}
+</code>
+
+### ClayCard.Description
+
+<div>[APITable "clay-card/src/Description.tsx"]</div>
+
+### ClayCard.Group
+
+<div>[APITable "clay-card/src/Group.tsx"]</div>
+
+### ClayCard.Row
+
+<code class="list-api-item-type">
+	Extends from {`React.HTMLAttributes<HTMLDivElement>`}
+</code>
+
+### ClayCardWithHorizontal
+
+<div>[APITable "clay-card/src/CardWithHorizontal.tsx"]</div>
+
+### ClayCardWithInfo
+
+<div>[APITable "clay-card/src/CardWithInfo.tsx"]</div>
+
+### ClayCardWithNavigation
+
+<div>[APITable "clay-card/src/CardWithNavigation.tsx"]</div>
+
+### ClayCardWithUser
+
+<div>[APITable "clay-card/src/CardWithUser.tsx"]</div>

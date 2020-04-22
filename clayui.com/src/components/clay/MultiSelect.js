@@ -9,14 +9,12 @@ import ClayForm, {ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayMultiSelect from '@clayui/multi-select';
 import ClaySticker from '@clayui/sticker';
-import React, {useState} from 'react';
+import React from 'react';
 
-import Editor from './Editor';
-
-const spritemap = '/images/icons/icons.svg';
+import Editor from '../Editor';
 
 const multiSelectImportsCode = `import ClayMultiSelect from '@clayui/multi-select';
-import React, {useState} from 'react';`;
+`;
 
 const multiSelectCode = `const Component = () => {
 	const [value, setValue] = useState('');
@@ -44,8 +42,6 @@ render(<Component />)`;
 const MultiSelectInput = () => {
 	const scope = {
 		ClayMultiSelect,
-		spritemap,
-		useState,
 	};
 
 	return (
@@ -58,7 +54,7 @@ const MultiSelectInput = () => {
 };
 
 const multiSelectWithAutocompleteImportsCode = `import ClayMultiSelect from '@clayui/multi-select';
-import React, {useState} from 'react';`;
+`;
 
 const multiSelectWithAutocompleteCode = `const Component = (props) => {
 	const [value, setValue] = useState('');
@@ -107,8 +103,6 @@ render(<Component />)`;
 const MultiSelectInputWithAutocomplete = () => {
 	const scope = {
 		ClayMultiSelect,
-		spritemap,
-		useState,
 	};
 
 	return (
@@ -123,7 +117,7 @@ const MultiSelectInputWithAutocomplete = () => {
 const multiSelectWithSelectButtonImportsCode = `import ClayButton from '@clayui/button';
 import ClayForm, {ClayInput} from '@clayui/form';
 import ClayMultiSelect from '@clayui/multi-select';
-import React, {useState} from 'react';`;
+`;
 
 const multiSelectWithSelectButtonCode = `const Component = () => {
 	const [value, setValue] = useState('');
@@ -188,8 +182,6 @@ const MultiSelectInputWithSelectButton = () => {
 		ClayForm,
 		ClayInput,
 		ClayMultiSelect,
-		spritemap,
-		useState,
 	};
 
 	return (
@@ -277,8 +269,6 @@ const MultiSelectInputWithValidation = () => {
 		ClayForm,
 		ClayInput,
 		ClayMultiSelect,
-		spritemap,
-		useState,
 	};
 
 	return (
@@ -368,8 +358,6 @@ const MultiSelectInputWithCustomAutocomplete = () => {
 		ClayIcon,
 		ClayMultiSelect,
 		ClaySticker,
-		spritemap,
-		useState,
 	};
 
 	return (

@@ -1,0 +1,52 @@
+---
+title: 'Alerts'
+description: 'Alerts are used to capture the attention of the user in an intrusive way.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/alerts/'
+packageNpm: '@clayui/alert'
+sibling: 'docs/components/css-alerts.html'
+---
+
+import {
+	Alert,
+	AlertWithButton,
+	AlertToastContainer,
+} from '$clayui.com/src/components/clay/Alerts';
+
+<div class="nav-toc-absolute">
+<div class="nav-toc">
+
+-   [Variants](#variants)
+-   [API](#api)
+    -   [ClayAlert](#clayalert)
+    -   [ClayAlert.ToastContainer](#clayalert.toastcontainer)
+
+</div>
+</div>
+
+## Variants
+
+You can use alert with the following variants:
+
+<Alert />
+
+We recommend that you review the use cases in the <a href="https://storybook-clayui.netlify.com/?path=/story/clayalert--default">Storybook</a>.
+
+## Using with ClayButton
+
+<AlertWithButton />
+
+## ToastContainer
+
+You can use alerts with a `ToastContainer` to render the alerts in a container with `position: fixed`.
+
+<AlertToastContainer />
+
+## API
+
+### ClayAlert
+
+<div>[APITable "clay-alert/src/index.tsx"]</div>
+
+### ClayAlert.ToastContainer
+
+<div>[APITable "clay-alert/src/ToastContainer.tsx"]</div>

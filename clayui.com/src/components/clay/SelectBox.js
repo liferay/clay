@@ -4,15 +4,13 @@
  */
 
 import {ClaySelectBox} from '@clayui/form';
-import React, {useState} from 'react';
+import React from 'react';
 
-import Editor from './Editor';
-
-const spritemap = '/images/icons/icons.svg';
+import Editor from '../Editor';
 
 const selectBoxImports = `import ClayButton, {ClayButtonWithIcon} from '@clayui/button';
 import classNames from 'classnames';
-import React, {useState} from 'react';`;
+`;
 
 const selectBoxCode = `const Component = () => {
 	const selectBoxItems = [
@@ -51,8 +49,6 @@ render(<Component />)`;
 export const SelectBox = () => {
 	const scope = {
 		ClaySelectBox,
-		spritemap,
-		useState,
 	};
 
 	return (

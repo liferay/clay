@@ -1,0 +1,51 @@
+---
+title: 'Tooltip'
+description: 'Tooltips are brief pieces of information that appear on hover state over an element to clarify its meaning or use for the user.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/popovers-tooltips/'
+packageNpm: '@clayui/tooltip'
+sibling: 'docs/components/css-tooltips.html'
+---
+
+import {
+	Tooltip,
+	TooltipProvider,
+	TooltipProviderRenderer,
+} from '$clayui.com/src/components/clay/Tooltip';
+
+<div class="nav-toc-absolute">
+<div class="nav-toc">
+
+-   [Tooltip](#tooltip)
+-   [TooltipProvider](#tooltipprovider)
+-   [API](#api)
+
+</div>
+</div>
+
+### Tooltip
+
+<Tooltip />
+
+### TooltipProvider
+
+By using the `<TooltipProvider>` it allows you to add the desired tooltip content on each element as a data attribute.
+
+-   `title` is for the tooltip content.
+-   `data-tooltip-align` is for alignment direction.
+-   `data-tooltip-delay` is for the delay(ms) before showing the tooltip.
+
+<TooltipProvider />
+
+#### Using contentRenderer
+
+<TooltipProviderRenderer />
+
+### API
+
+#### Tooltip
+
+<div>[APITable "clay-tooltip/src/Tooltip.tsx"]</div>
+
+#### TooltipProvider
+
+<div>[APITable "clay-tooltip/src/TooltipProvider.tsx"]</div>

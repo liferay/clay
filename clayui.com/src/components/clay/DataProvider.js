@@ -6,10 +6,10 @@
 import ClayDataProvider, {useResource} from '@clayui/data-provider';
 import React from 'react';
 
-import Editor from './Editor';
+import Editor from '../Editor';
 
 const dataProviderImportsCode = `import ClayDataProvider from '@clayui/data-provider';
-import React from 'react';`;
+`;
 
 const dataProviderCode = `const Component = () => (
 	<ClayDataProvider
@@ -35,7 +35,7 @@ const DataProvider = () => {
 };
 
 const dataProviderWithNetworkStatusImportsCode = `import ClayDataProvider from '@clayui/data-provider';
-import React from 'react';`;
+`;
 
 const dataProviderWithNetworkStatusCode = `const Component = () => (
 	<ClayDataProvider
@@ -61,8 +61,7 @@ const DataProviderWithNetworkStatus = () => {
 	);
 };
 
-const dataProviderWithCacheRootLevelImportsCode = `import ClayDataProvider from '@clayui/data-provider';
-import React, {useContext} from 'react';`;
+const dataProviderWithCacheRootLevelImportsCode = `import ClayDataProvider from '@clayui/data-provider';`;
 
 const dataProviderWithCacheRootLevelCode = `const Component = () => {
 	const storageContext = useContext(Store);
@@ -94,7 +93,7 @@ const DataProviderWithCacheRootLevel = () => {
 };
 
 const useResourceImportsCode = `import {useResource} from '@clayui/data-provider';
-import React from 'react';`;
+`;
 
 const useResourceCode = `const Component = () => {
 	const {resource} = useResource({
@@ -120,7 +119,7 @@ const UseResource = () => {
 };
 
 const useResourceWithJitterImportsCode = `import {useResource} from '@clayui/data-provider';
-import React from 'react';`;
+`;
 
 const useResourceWithJitterCode = `const Component = () => {
 	const {resource} = useResource({
@@ -153,7 +152,7 @@ const UseResourceWithJitter = () => {
 };
 
 const useResourceWithNetworkStatusImportsCode = `import {useResource} from '@clayui/data-provider';
-import React, {useState} from 'react';`;
+`;
 
 const useResourceWithNetworkStatusCode = `const Component = () => {
 	const [state, setState] = useState(() => ({
@@ -189,7 +188,7 @@ const UseResourceWithNetworkStatus = () => {
 };
 
 const useResourceWithVariablesChangeImportsCode = `import {useResource} from '@clayui/data-provider';
-import React, {useState} from 'react';`;
+`;
 
 const useResourceWithVariablesChangeCode = `const Component = () => {
 	const [value, setValue] = useState('Rick');

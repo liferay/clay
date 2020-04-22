@@ -4,15 +4,13 @@
  */
 
 import {ClayDualListBox} from '@clayui/form';
-import React, {useState} from 'react';
+import React from 'react';
 
-import Editor from './Editor';
-
-const spritemap = '/images/icons/icons.svg';
+import Editor from '../Editor';
 
 const dualListBoxImports = `import ClayButton, {ClayButtonWithIcon} from '@clayui/button';
 import classNames from 'classnames';
-import React, {useState} from 'react';`;
+`;
 
 const dualListBoxCode = `const Component = () => {
     const moveBoxesOptions = [
@@ -79,8 +77,6 @@ render(<Component />)`;
 export const DualListBox = () => {
 	const scope = {
 		ClayDualListBox,
-		spritemap,
-		useState,
 	};
 
 	return (

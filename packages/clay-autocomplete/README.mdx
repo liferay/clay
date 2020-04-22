@@ -1,0 +1,104 @@
+---
+title: 'Autocomplete'
+description: 'An autocomplete text field is an input that offers the user text suggestions while they type.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/text-input-variations/'
+packageNpm: '@clayui/autocomplete'
+sibling: 'docs/components/css-text-input-autocomplete.html'
+---
+
+import {
+	AutocompleteWithLoadingState,
+	AutocompleteWithDataProvider,
+} from '$clayui.com/src/components/clay/Autocomplete';
+
+<div class="nav-toc-title">
+
+## Table of contents
+
+</div>
+
+<div class="nav-toc-absolute">
+<div class="nav-toc">
+
+-   [Loading state](#loading-state)
+-   [Data from outside](#data-from-outside)
+-   [API](#api)
+    -   [Autocomplete](#autocomplete)
+    -   [Autocomplete.DropDown](#autocomplete.dropdown)
+    -   [Autocomplete.Input](#autocomplete.input)
+    -   [Autocomplete.Item](#autocomplete.item)
+    -   [Autocomplete.LoadingIndicator](#autocomplete.loadingindicator)
+
+</div>
+</div>
+
+## Composing
+
+Autocomplete provides the necessary components for you to compose with the other components, **by itself it does not do much**, you need to use the `<ClayDropDown />` along with `<Autocomplete.DropDown />` and `<Autocomplete.Item />` to create the suggestions.
+
+```jsx
+<ClayAutocomplete.DropDown>
+	<ClayDropDown.ItemList>
+		<ClayAutocomplete.Item match="cl" value="clay" />
+	</ClayDropDown.ItemList>
+</ClayAutocomplete.DropDown>
+```
+
+If you already have the raw data, it is becomes simpler to create an autocomplete but it is important that you **create a filter for your data** according to the value entered in the input element.
+
+```jsx
+<ClayAutocomplete>
+	<ClayAutocomplete.Input
+		onChange={event => setValue(event.target.value)}
+		value={value}
+	/>
+	<ClayAutocomplete.DropDown active={showDropDown}>
+		<ClayDropDown.ItemList>
+			{resourceFiltered.map(item => (
+				<ClayAutocomplete.Item key={item} match={value} value={item} />
+			))}
+		</ClayDropDown.ItemList>
+	</ClayAutocomplete.DropDown>
+</ClayAutocomplete>
+```
+
+## Loading state
+
+`<ClayAutocomplete.LoadingIndicator />` is used for providing feedback that data is loading in the suggestion box, it communicates with `<ClayAutocomplete.Input />` so that the markup can adjust.
+
+<div class="clay-site-alert alert alert-warning">
+	<strong class="lead">Warning</strong>
+	Add this when your suggestion data is coming from a data provider.
+</div>
+
+<AutocompleteWithLoadingState />
+
+## Data from outside
+
+For cases where you do not have all the data in the client and need to pass the value for the filter to the backend, use the `<ClayDataProvider />` component or `useResource` hook for this.
+
+<AutocompleteWithDataProvider />
+
+## API
+
+### Autocomplete
+
+<div>[APITable "clay-autocomplete/src/index.tsx"]</div>
+
+### Autocomplete.DropDown
+
+<div>[APITable "clay-autocomplete/src/DropDown.tsx"]</div>
+
+### Autocomplete.Input
+
+<code class="list-api-item-type">Extends from `ClayForm.Input`</code>
+
+### Autocomplete.Item
+
+`ClayAutocomplete.Item` is a wrapper around `ClayDropDown.Item` but also underlines the bold characters that are matched. Feel free to create your own match rule using `ClayDropDown.Item`'s API.
+
+<div>[APITable "clay-autocomplete/src/Item.tsx"]</div>
+
+### Autocomplete.LoadingIndicator
+
+<div>[APITable "clay-autocomplete/src/LoadingIndicator.tsx"]</div>

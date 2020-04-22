@@ -4,14 +4,12 @@
  */
 
 import ClayColorPicker from '@clayui/color-picker';
-import React, {useState} from 'react';
+import React from 'react';
 
-import Editor from './Editor';
-
-const spritemap = '/images/icons/icons.svg';
+import Editor from '../Editor';
 
 const colorPickerImportsCode = `import ClayColorPicker from '@clayui/color-picker';
-import React, {useState} from 'react';`;
+`;
 
 const colorPickerCode = `const Component = () => {
 	const [customColors, setCustoms] = useState(['008000', '00FFFF', '0000FF']);
@@ -35,7 +33,7 @@ const colorPickerCode = `const Component = () => {
 render(<Component />)`;
 
 const ColorPicker = () => {
-	const scope = {ClayColorPicker, spritemap, useState};
+	const scope = {ClayColorPicker};
 
 	return (
 		<Editor

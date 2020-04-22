@@ -1,0 +1,38 @@
+---
+title: 'Loading Indicator'
+description: 'The loading indicator shows the user that an external process, like a connection, is being executed.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/loading-indicator/'
+packageNpm: '@clayui/loading-indicator'
+sibling: 'docs/components/css-loading-indicator.html'
+---
+
+import {
+	LoadingIndicator,
+	LoadingIndicatorLight,
+	LoadingIndicatorSmall,
+} from '$clayui.com/src/components/clay/LoadingIndicator';
+
+<div class="nav-toc-absolute">
+<div class="nav-toc">
+
+-   [Sizes](#sizes)
+-   [API](#api)
+
+</div>
+</div>
+
+<LoadingIndicator />
+
+Use [`light`](#api-light) property for setting the loading indicator to be more accessible in some cases.
+
+<LoadingIndicatorLight />
+
+### Sizes
+
+By default, the loading indicator is sized 16px but if you want a smaller version, you can try using the [`small`](#api-small) property.
+
+<LoadingIndicatorSmall />
+
+## API
+
+<div>[APITable "clay-loading-indicator/src/index.tsx"]</div>

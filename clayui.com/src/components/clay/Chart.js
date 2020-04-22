@@ -6,7 +6,7 @@
 import React from 'react';
 
 import mapData from '../../../static/map.json';
-import Editor from './Editor';
+import Editor from '../Editor';
 
 // Workaround for building gatsby's SSR with since Billboard.js references `window`
 const ClayChart =
@@ -14,11 +14,10 @@ const ClayChart =
 		? require('@clayui/charts').default
 		: () => <div />;
 
-const chartImportsCode = `import ClayChart from '@clayui/charts';
-import React from 'react';`;
+const chartImportsCode = `import ClayChart from '@clayui/charts';`;
 
 const chartCode = `const Component = () => {
-	const [active, setActive] = React.useState(false);
+	const [active, setActive] = useState(false);
 
 	const COLUMNS = [['data1', 100, 20, 30], ['data2', 20, 70, 100]];
 	const COLUMNS_2 = [['data1', 10, 50, 60], ['data2', 70, 30, 10]];
@@ -79,7 +78,7 @@ export const GeoMap = () => {
 };
 
 const predictiveImportsCode = `import ClayChart from '@clayui/charts';
-import React from 'react';`;
+`;
 
 const predictiveCode = `const Component = () => (
 	<ClayChart
