@@ -1,6 +1,7 @@
 ---
 title: 'Date & Time Pickers'
 description: 'Date and Time pickers let users select a date and time for a form.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/picker-date-time/'
 ---
 
 <div class="nav-toc-absolute">

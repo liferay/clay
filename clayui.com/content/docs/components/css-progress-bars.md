@@ -1,6 +1,7 @@
 ---
 title: 'Progress Bars'
 description: 'Progress bar indicates the percentage completed of a task.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/progress-bars/'
 ---
 
 <div class="nav-toc-absolute">

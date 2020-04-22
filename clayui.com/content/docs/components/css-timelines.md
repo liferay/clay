@@ -1,6 +1,7 @@
 ---
 title: 'Timelines'
 description: 'Timelines represent an horizontal visualization of events along the time.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/timelines/'
 ---
 
 <div class="nav-toc-absolute">

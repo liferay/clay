@@ -1,6 +1,7 @@
 ---
 title: 'Tabs'
 description: 'Tabs organize similar content together into individual sections in the same page.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/tabs/'
 ---
 
 <div class="nav-toc-absolute">

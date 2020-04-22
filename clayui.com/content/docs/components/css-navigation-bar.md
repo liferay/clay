@@ -1,6 +1,7 @@
 ---
 title: 'Navigation Bar'
 description: 'A navigation bar, is a horizontal bar that provides several access points to different parts of a system.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/navigation/horizontal-nav/'
 ---
 
 <div class="nav-toc-absolute">

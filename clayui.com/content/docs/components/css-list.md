@@ -1,6 +1,7 @@
 ---
 title: 'List'
 description: 'List is a visual representation of a dataset that provides more flexibility for arranging the data than a table and is less visually explicit than a card view.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/list/'
 ---
 
 <div class="nav-toc-absolute">

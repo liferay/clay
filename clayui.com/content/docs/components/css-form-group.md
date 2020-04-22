@@ -1,6 +1,7 @@
 ---
 title: 'Form Group'
 description: 'Forms obtain user data and transmit it to the system to either store the data, produce an action, or both.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/'
 ---
 
 <div class="nav-toc-absolute">

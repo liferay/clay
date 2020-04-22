@@ -58,6 +58,8 @@ export default props => {
 			});
 	}, []);
 
+	console.log(frontmatter, fields);
+
 	return (
 		<div className="docs">
 			<Helmet>
@@ -173,13 +175,8 @@ export default props => {
 										<div className="row">
 											<div className="col-12">
 												<div className="tab-content">
-													<div
-														aria-labelledby="advancedTabs"
-														className="active fade show tab-pane"
-														id="advancedTab"
-														role="tabpanel"
-													>
-														{(frontmatter.packageNpm ||
+													<div>
+														{(frontmatter ||
 															fields) && (
 															<p className="clay-site-label">
 																{fields && (
@@ -224,6 +221,26 @@ export default props => {
 																			</a>
 																		)}
 																	</>
+																)}
+
+																{frontmatter.lexiconDefinition && (
+																	<a
+																		className="label label-lg label-secondary"
+																		href={
+																			frontmatter.lexiconDefinition
+																		}
+																		rel="noopener noreferrer"
+																		target="_blank"
+																	>
+																		<span
+																			className="c-inner"
+																			tabIndex="-1"
+																		>
+																			{
+																				'View in Lexicon'
+																			}
+																		</span>
+																	</a>
 																)}
 
 																{frontmatter.packageNpm && (
@@ -276,7 +293,14 @@ export default props => {
 																)}
 															</p>
 														)}
+													</div>
 
+													<div
+														aria-labelledby="advancedTabs"
+														className="active fade show tab-pane"
+														id="advancedTab"
+														role="tabpanel"
+													>
 														<article>
 															<CodeClipboard>
 																{markdownJsx ? (
@@ -475,6 +499,7 @@ export const pageQuery = graphql`
 			htmlAst
 			frontmatter {
 				description
+				lexiconDefinition
 				title
 				version
 			}
