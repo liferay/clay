@@ -8314,7 +8314,7 @@ a.text-dark:hover, a.text-dark:focus {
     padding-left: 1em; }
     .breadcrumb-item + .breadcrumb-item::before {
       float: left;
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20512%20512'%3E%3Cpath%20class='lexicon-icon-outline'%20d='M396.394%20255.607a28.207%2028.207%200%200%200-8.272-19.111L160.901%209.275c-11.026-11.059-28.94-11.059-39.999%200-11.058%2011.026-11.058%2028.941%200%2039.999l206.333%20206.333L120.902%20461.94c-11.058%2011.058-11.058%2028.973%200%2039.999%2011.059%2011.059%2028.972%2011.059%2039.999%200l227.221-227.221a28.196%2028.196%200%200%200%208.272-19.111z'%20fill='%236c757d'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20512%20512'%3E%3Cpath%20class='lexicon-icon-outline'%20d='M375.2%20239.2L173.3%2037c-23.6-23-59.9%2011.9-36%2035.1l183%20183.9-182.9%20183.8c-24%2023.5%2012.5%2058.2%2036.1%2035.2l201.7-202.1c10.2-10.1%209.3-24.4%200-33.7z'%20fill='%236c757d'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-size: 100%;
       content: '';
@@ -17694,6 +17694,74 @@ th {
   max-height: 100px;
   max-width: none;
   width: auto; }
+
+.table-drag th,
+.table-drag td {
+  position: relative; }
+
+.table-drag .c-drag {
+  cursor: move; }
+
+.table-drag .c-dragging::after {
+  background-color: #ced4da;
+  bottom: 0;
+  content: '';
+  display: block;
+  left: 1px;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.table-drag .c-droppable::before {
+  background-image: linear-gradient(#fd7e14 50%, rgba(255, 255, 255, 0) 0%);
+  background-position: right;
+  background-repeat: repeat-y;
+  background-size: 5px 6px;
+  bottom: 0;
+  content: '';
+  display: block;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1px;
+  z-index: 1; }
+
+.table-dragging {
+  cursor: move;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none; }
+
+.table-clone {
+  background-color: rgba(229, 242, 255, 0.9);
+  cursor: move;
+  position: absolute;
+  top: 0;
+  z-index: 1050; }
+  .table-clone::before {
+    background-color: #007bff;
+    bottom: 0;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 1px;
+    width: 2px;
+    z-index: 1; }
+  .table-clone::after {
+    background-color: #007bff;
+    bottom: 0;
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 1px;
+    width: 2px;
+    z-index: 1; }
+  .table-clone thead th,
+  .table-clone tbody td {
+    background-color: transparent; }
 
 .tbar {
   display: flex; }
