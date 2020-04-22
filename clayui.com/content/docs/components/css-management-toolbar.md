@@ -23,8 +23,6 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/toolbars/mana
 </div>
 </div>
 
-<div class="clay-site-alert alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/toolbars/management-bar/">Management Toolbar Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
-
 <div class="clay-site-alert alert alert-warning">
     Collapsing the Search Input in mobile requires additional javascript to add and remove the show class on <code class="gatsby-code-text">navbar-overlay-sm-down</code>.
 </div>

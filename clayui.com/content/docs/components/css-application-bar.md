@@ -1,6 +1,7 @@
 ---
 title: 'Application Bar'
 description: 'This component is used as the main navigation of Liferay DXP.'
+lexiconDefinition: 'https://liferay.design/lexicon/satellite-components/navigation/'
 ---
 
 <div class="nav-toc-absolute">
@@ -12,8 +13,6 @@ description: 'This component is used as the main navigation of Liferay DXP.'
 
 </div>
 </div>
-
-<div class="clay-site-alert alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/satellite-components/navigation/">Application Bar Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 <div class="clay-site-alert alert alert-warning">
     Bootstrap 4 doesn't support Dropdown Menu's with Popper.js positioning inside Navbars. They align them manually via CSS classes. See <a href="/docs/components/drop-down.html#alignment">Dropdown Alignment</a>.

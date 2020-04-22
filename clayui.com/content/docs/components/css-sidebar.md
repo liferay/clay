@@ -14,10 +14,6 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/sidebar/'
 </div>
 </div>
 
-<div class="clay-site-alert alert alert-info">
-	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/sidebar/">Sidebar Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
-</div>
-
 ## Structure
 
 Sidebar is an opinionated container to display related content.

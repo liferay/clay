@@ -17,10 +17,6 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/slider/'
 </div>
 </div>
 
-<div class="clay-site-alert alert alert-info">
-	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/slider/">Slider Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
-</div>
-
 ## Input
 
 <div class="sheet-example">

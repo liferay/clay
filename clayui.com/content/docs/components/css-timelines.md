@@ -20,10 +20,6 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/timelines/'
 </div>
 </div>
 
-<div class="clay-site-alert alert alert-info">
-	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/timelines/">Timelines Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
-</div>
-
 Place `.timeline-increment` inside whatever element you want it to be aligned to. The element must be positioned relative. For the example below, we place it inside the `panel-heading` element. This vertically centers the icon and label relative to the panel-heading.
 
 The icon can be any size as long as it is wrapped inside `timeline-increment`. For larger icons, the spacing between the content and increment ([Timeline Spacing](#spacing)) must be adjusted to accomodate it.

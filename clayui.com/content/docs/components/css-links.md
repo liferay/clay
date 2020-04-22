@@ -22,10 +22,6 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/link/'
 </div>
 </div>
 
-<div class="clay-site-alert alert alert-info">
-	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/link/">Links Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
-</div>
-
 <div class="clay-site-alert alert alert-warning">
 	See the implementation of the <a href="/docs/components/link.html">Links component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/link/">Links Pattern</a>.
 </div>
