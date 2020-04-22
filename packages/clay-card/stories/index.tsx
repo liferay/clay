@@ -38,21 +38,6 @@ const ClayCheckboxWithState = (props: any) => {
 	);
 };
 
-const DropDownWithState = (props: any) => {
-	const [active, setActive] = React.useState(false);
-
-	return (
-		<ClayDropDown
-			active={active}
-			alignmentPosition={5}
-			onActiveChange={newVal => setActive(newVal)}
-			trigger={props.trigger}
-		>
-			{props.children}
-		</ClayDropDown>
-	);
-};
-
 storiesOf('Components|ClayCard', module)
 	.add('ClayCardWithInfo', () => {
 		const [value, setValue] = React.useState<boolean>(false);
@@ -459,158 +444,175 @@ storiesOf('Components|ClayCard', module)
 			</ClayCard.Group>
 		</>
 	))
-	.add('ProductCard', () => (
-		<div className="row">
-			<div className="col-md-4">
-				<ClayCard className="product-card" displayType="file">
-					<ClayCard.AspectRatio className="card-item-first">
-						<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-							<ClayIcon
-								spritemap={spritemap}
-								symbol="documents-and-media"
-							/>
-						</div>
+	.add('ProductCard', () => {
+		const [dropdownActive, setDropdownActive] = React.useState(false);
 
-						<div className="aspect-ratio-item-bottom-left">
-							<ClayLabel displayType="success">
-								{'Available'}
-							</ClayLabel>
-						</div>
-					</ClayCard.AspectRatio>
-
-					<ClayCard.Body>
-						<div className="c-mb-3">
-							<div className="card-subtitle" title="AR385672">
-								<span className="text-truncate-inline">
-									<span className="text-truncate">
-										{'AR385672'}
-									</span>
-								</span>
-							</div>
-
-							<div
-								className="card-title"
-								title="thumbnail_coffee.jpg"
-							>
-								<span className="text-truncate-inline">
-									<a className="text-truncate" href="#1">
-										{
-											'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual'
-										}
-									</a>
-								</span>
-							</div>
-
-							<div className="card-text">
-								<s>{'$99.00'}</s>
-								<span>{'$70.00'}</span>
-							</div>
-						</div>
-
-						<ClayForm.Group>
-							<ClayInput.Group>
-								<ClayInput.GroupItem prepend shrink>
-									<ClayButton
-										disabled
-										displayType="secondary"
-									>
-										{'-'}
-									</ClayButton>
-								</ClayInput.GroupItem>
-
-								<ClayInput.GroupItem prepend>
-									<ClayInput
-										aria-label="Search for"
-										className="form-control"
-										value="1"
-									/>
-								</ClayInput.GroupItem>
-
-								<ClayInput.GroupItem append shrink>
-									<ClayButton displayType="secondary">
-										{'+'}
-									</ClayButton>
-								</ClayInput.GroupItem>
-							</ClayInput.Group>
-						</ClayForm.Group>
-
-						<ClayButton
-							block
-							className="c-mb-2"
-							displayType="primary"
-						>
-							{'Add to Order'}
-
-							<span className="inline-item inline-item-after">
+		return (
+			<div className="row">
+				<div className="col-md-4">
+					<ClayCard className="product-card" displayType="file">
+						<ClayCard.AspectRatio className="card-item-first">
+							<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 								<ClayIcon
 									spritemap={spritemap}
-									symbol="shopping-cart"
+									symbol="documents-and-media"
 								/>
-							</span>
-						</ClayButton>
+							</div>
 
-						<div className="autofit-float autofit-row autofit-row-center">
-							<div className="autofit-col autofit-col-expand">
-								<div className="autofit-section">
-									<div className="custom-checkbox custom-control custom-control-primary">
-										<ClayCheckboxWithState label="Compare" />
+							<div className="aspect-ratio-item-bottom-left">
+								<ClayLabel displayType="success">
+									{'Available'}
+								</ClayLabel>
+							</div>
+						</ClayCard.AspectRatio>
+
+						<ClayCard.Body>
+							<div className="c-mb-3">
+								<ClayCard.Description
+									displayType="subtitle"
+									title="AR385672"
+									truncate
+								>
+									{'AR385672'}
+								</ClayCard.Description>
+
+								<ClayCard.Description
+									displayType="title"
+									title="thumbnail_coffee.jpg"
+									truncate
+								>
+									{
+										'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual'
+									}
+								</ClayCard.Description>
+
+								<ClayCard.Description displayType="text">
+									<s>{'$99.00'}</s>
+									<span>{'$70.00'}</span>
+								</ClayCard.Description>
+							</div>
+
+							<ClayForm.Group>
+								<ClayInput.Group>
+									<ClayInput.GroupItem prepend shrink>
+										<ClayButton
+											disabled
+											displayType="secondary"
+										>
+											{'-'}
+										</ClayButton>
+									</ClayInput.GroupItem>
+
+									<ClayInput.GroupItem prepend>
+										<ClayInput
+											aria-label="Search for"
+											className="form-control"
+											value="1"
+										/>
+									</ClayInput.GroupItem>
+
+									<ClayInput.GroupItem append shrink>
+										<ClayButton displayType="secondary">
+											{'+'}
+										</ClayButton>
+									</ClayInput.GroupItem>
+								</ClayInput.Group>
+							</ClayForm.Group>
+
+							<ClayButton
+								block
+								className="c-mb-2"
+								displayType="primary"
+							>
+								{'Add to Order'}
+
+								<span className="inline-item inline-item-after">
+									<ClayIcon
+										spritemap={spritemap}
+										symbol="shopping-cart"
+									/>
+								</span>
+							</ClayButton>
+
+							<div className="autofit-float autofit-row autofit-row-center">
+								<div className="autofit-col autofit-col-expand">
+									<div className="autofit-section">
+										<div className="custom-checkbox custom-control custom-control-primary">
+											<ClayCheckboxWithState label="Compare" />
+										</div>
+									</div>
+								</div>
+								<div className="autofit-col">
+									<div className="autofit-section">
+										<ClayDropDown
+											active={dropdownActive}
+											alignmentPosition={5}
+											onActiveChange={newVal =>
+												setDropdownActive(newVal)
+											}
+											trigger={
+												<ClayButton
+													borderless
+													displayType="secondary"
+													small
+												>
+													{'Order by: newest'}
+
+													<ClayIcon
+														spritemap={spritemap}
+														symbol={'caret-bottom'}
+													/>
+												</ClayButton>
+											}
+										>
+											<ClayDropDown.ItemList>
+												{[
+													{
+														href: '#1',
+														label: 'Download',
+													},
+													{href: '#1', label: 'Edit'},
+													{href: '#1', label: 'Edit'},
+													{href: '#1', label: 'Move'},
+													{
+														href: '#1',
+														label: 'Checkout',
+													},
+													{
+														href: '#1',
+														label: 'Permissions',
+													},
+													{
+														href: '#1',
+														label:
+															'Move to Recycle Bin',
+													},
+												].map(
+													(
+														{
+															href,
+															label,
+															...otherProps
+														},
+														i
+													) => (
+														<ClayDropDown.Item
+															href={href}
+															key={i}
+															{...otherProps}
+														>
+															{label}
+														</ClayDropDown.Item>
+													)
+												)}
+											</ClayDropDown.ItemList>
+										</ClayDropDown>
 									</div>
 								</div>
 							</div>
-							<div className="autofit-col">
-								<div className="autofit-section">
-									<DropDownWithState
-										trigger={
-											<ClayButton
-												borderless
-												displayType="secondary"
-												small
-											>
-												{'Order by: newest'}
-											</ClayButton>
-										}
-									>
-										<ClayDropDown.ItemList>
-											{[
-												{href: '#1', label: 'Download'},
-												{href: '#1', label: 'Edit'},
-												{href: '#1', label: 'Edit'},
-												{href: '#1', label: 'Move'},
-												{href: '#1', label: 'Checkout'},
-												{
-													href: '#1',
-													label: 'Permissions',
-												},
-												{
-													href: '#1',
-													label:
-														'Move to Recycle Bin',
-												},
-											].map(
-												(
-													{
-														href,
-														label,
-														...otherProps
-													},
-													i
-												) => (
-													<ClayDropDown.Item
-														href={href}
-														key={i}
-														{...otherProps}
-													>
-														{label}
-													</ClayDropDown.Item>
-												)
-											)}
-										</ClayDropDown.ItemList>
-									</DropDownWithState>
-								</div>
-							</div>
-						</div>
-					</ClayCard.Body>
-				</ClayCard>
+						</ClayCard.Body>
+					</ClayCard>
+				</div>
 			</div>
-		</div>
-	));
+		);
+	});
