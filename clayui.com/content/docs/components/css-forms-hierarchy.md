@@ -14,10 +14,6 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/'
 </div>
 </div>
 
-<div class="clay-site-alert alert alert-info">
-	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/forms/forms-hierarchy/">Forms Hierarchy Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
-</div>
-
 <div class="clay-site-alert alert alert-warning">
 	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#accordion">WAI-ARIA</a> accessibility pratices for Forms Hierarchy when writting your markup.
 </div>

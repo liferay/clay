@@ -17,10 +17,6 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/buttons/'
 </div>
 </div>
 
-<div class="clay-site-alert alert alert-info">
-	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/buttons/">Buttons Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
-</div>
-
 <div class="clay-site-alert alert alert-warning">
 	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#button">WAI-ARIA</a> accessibility pratices for buttons when writting your markup.
 </div>

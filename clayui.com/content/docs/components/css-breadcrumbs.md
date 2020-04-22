@@ -4,8 +4,6 @@ description: 'Breadcrumb is a secondary navigation pattern that identifies the p
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/navigation/breadcrumb/'
 ---
 
-<div class="clay-site-alert alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/list/">List Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
-
 A navigation aid for your site, provide a quick way to jump back to previously viewed pages or sections.
 
 Use `<span class="breadcrumb-text-truncate"></span>` inside breadcrumb links to truncate text based on a max-width.

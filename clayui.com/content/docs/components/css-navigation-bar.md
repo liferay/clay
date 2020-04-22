@@ -14,8 +14,6 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/navigation/ho
 </div>
 </div>
 
-<div class="clay-site-alert alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/navigation/horizontal-nav/">Navigation Bar Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
-
 <div class="clay-site-alert alert alert-warning">
     You will need to adjust the z-index of <code class="gatsby-code-text">.navbar-collapse</code> in the collapsed state if there are multiple <code class="gatsby-code-text">.navbar-collapse-absolute</code>'s near each other.
 </div>

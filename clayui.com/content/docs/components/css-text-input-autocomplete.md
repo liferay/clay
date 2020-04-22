@@ -14,10 +14,6 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/text-in
 </div>
 </div>
 
-<div class="clay-site-alert alert alert-info">
-	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/forms/text-input-variations/">Autocomplete and Search Field Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
-</div>
-
 ## Example
 
 Add the class `.autocomplete-dropdown-menu` to `dropdown-menu` to size the Dropdown Menu according to Lexicon Design specifications.

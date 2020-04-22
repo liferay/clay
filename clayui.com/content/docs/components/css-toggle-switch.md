@@ -20,10 +20,6 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/radio-c
 </div>
 </div>
 
-<div class="clay-site-alert alert alert-info">
-	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/forms/radio-check-toggle/">Toggle Switch Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
-</div>
-
 ## Example
 
 <div class="sheet-example">

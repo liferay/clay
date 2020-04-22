@@ -16,10 +16,6 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/badges/'
 </div>
 </div>
 
-<div class="clay-site-alert alert alert-info">
-	Check the <a href="https://liferay.design/lexicon/">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/badges/">Badges Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
-</div>
-
 <div class="clay-site-alert alert alert-warning">
 	Badge Sizes have been removed. Use the <a href="https://github.com/liferay/clay/blob/master/packages/clay-css/src/scss/mixins/_badges.scss#L19">clay-badge-size($map) mixin</a> to create custom badge sizes for your app.
 </div>
