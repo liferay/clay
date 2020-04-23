@@ -39,14 +39,34 @@
 
 	$autofit-col: setter(map-get($map, autofit-col), ());
 	$autofit-col: map-merge(
+		$autofit-col,
 		(
-			padding: map-get($map, autofit-col-padding),
-			padding-bottom: map-get($map, autofit-col-padding-bottom),
-			padding-left: map-get($map, autofit-col-padding-left),
-			padding-right: map-get($map, autofit-col-padding-right),
-			padding-top: map-get($map, autofit-col-padding-top),
-		),
-		$autofit-col
+			padding:
+				setter(
+					map-get($map, autofit-col-padding),
+					map-get($autofit-col, padding)
+				),
+			padding-bottom:
+				setter(
+					map-get($map, autofit-col-padding-bottom),
+					map-get($autofit-col, padding-bottom)
+				),
+			padding-left:
+				setter(
+					map-get($map, autofit-col-padding-left),
+					map-get($autofit-col, padding-left)
+				),
+			padding-right:
+				setter(
+					map-get($map, autofit-col-padding-right),
+					map-get($autofit-col, padding-right)
+				),
+			padding-top:
+				setter(
+					map-get($map, autofit-col-padding-top),
+					map-get($autofit-col, padding-top)
+				),
+		)
 	);
 
 	@if ($enabled) {
