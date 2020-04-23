@@ -25,38 +25,76 @@
 
 	$header: setter(map-get($map, header), ());
 	$header: map-merge(
+		$header,
 		(
-			background-color: map-get($map, header-bg),
-			border-color: map-get($map, header-border-color),
-			color: map-get($map, header-color),
-		),
-		$header
+			background-color:
+				setter(
+					map-get($map, header-bg),
+					map-get($header, background-color)
+				),
+			border-color:
+				setter(
+					map-get($map, header-border-color),
+					map-get($header, border-color)
+				),
+			color: setter(map-get($map, header-color), map-get($header, color)),
+		)
 	);
 
 	$header-close: setter(map-get($map, header-close), ());
 	$header-close: map-merge(
+		$header-close,
 		(
-			color: map-get($map, header-close-color),
-		),
-		$header-close
+			color:
+				setter(
+					map-get($map, header-close-color),
+					map-get($header-close, color)
+				),
+		)
+	);
+
+	$header-close-btn-focus: setter(map-get($header-close, btn-focus), ());
+	$header-close-btn-focus: map-merge(
+		$header-close-btn-focus,
+		(
+			box-shadow:
+				setter(
+					map-get($header-close, btn-focus-box-shadow),
+					map-get($header-close-btn-focus, box-shadow)
+				),
+			outline:
+				setter(
+					map-get($header-close, btn-focus-outline),
+					map-get($header-close-btn-focus, outline)
+				),
+		)
 	);
 
 	$body: setter(map-get($map, body), ());
 	$body: map-merge(
+		$body,
 		(
-			background-color: map-get($map, body-bg),
-			color: map-get($map, body-color),
-		),
-		$body
+			background-color:
+				setter(map-get($map, body-bg), map-get($body, background-color)),
+			color: setter(map-get($map, body-color), map-get($body, color)),
+		)
 	);
 
 	$footer: setter(map-get($map, footer), ());
 	$footer: map-merge(
+		$footer,
 		(
-			background-color: map-get($map, footer-bg),
-			border-color: map-get($map, footer-border-color),
-		),
-		$footer
+			background-color:
+				setter(
+					map-get($map, footer-bg),
+					map-get($footer, background-color)
+				),
+			border-color:
+				setter(
+					map-get($map, footer-border-color),
+					map-get($footer, border-color)
+				),
+		)
 	);
 
 	@if ($enabled) {
@@ -74,8 +112,8 @@
 
 		button.close {
 			&:focus {
-				box-shadow: map-get($header-close, btn-focus-box-shadow);
-				outline: map-get($header-close, btn-focus-outline);
+				box-shadow: map-get($header-close-btn-focus, box-shadow);
+				outline: map-get($header-close-btn-focus, outline);
 			}
 		}
 
