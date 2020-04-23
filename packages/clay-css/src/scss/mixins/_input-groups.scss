@@ -29,26 +29,58 @@
 
 	$item: setter(map-get($map, item), ());
 	$item: map-merge(
+		$item,
 		(
-			margin-bottom: map-get($map, item-margin-bottom),
-			margin-left: map-get($map, item-margin-left),
-			margin-right: map-get($map, item-margin-right),
-			margin-top: map-get($map, item-margin-top),
-			width: setter(map-get($map, width), 100%),
-		),
-		$item
+			margin-bottom:
+				setter(
+					map-get($map, item-margin-bottom),
+					map-get($item, margin-bottom)
+				),
+			margin-left:
+				setter(
+					map-get($map, item-margin-left),
+					map-get($item, margin-left)
+				),
+			margin-right:
+				setter(
+					map-get($map, item-margin-right),
+					map-get($item, margin-right)
+				),
+			margin-top:
+				setter(
+					map-get($map, item-margin-top),
+					map-get($item, margin-top)
+				),
+			width: setter(map-get($item, width), 100%),
+		)
 	);
 
 	$item-shrink: setter(map-get($map, item-shrink), ());
 	$item-shrink: map-merge(
+		$item-shrink,
 		(
-			margin-bottom: map-get($map, shrink-margin-bottom),
-			margin-left: map-get($map, shrink-margin-left),
-			margin-right: map-get($map, shrink-margin-right),
-			margin-top: map-get($map, shrink-margin-top),
-			width: setter(map-get($map, width), auto),
-		),
-		$item-shrink
+			margin-bottom:
+				setter(
+					map-get($map, shrink-margin-bottom),
+					map-get($item-shrink, margin-bottom)
+				),
+			margin-left:
+				setter(
+					map-get($map, shrink-margin-left),
+					map-get($item-shrink, margin-left)
+				),
+			margin-right:
+				setter(
+					map-get($map, shrink-margin-right),
+					map-get($item-shrink, margin-right)
+				),
+			margin-top:
+				setter(
+					map-get($map, shrink-margin-top),
+					map-get($item-shrink, margin-top)
+				),
+			width: setter(map-get($item-shrink, width), auto),
+		)
 	);
 
 	@if ($enabled) {
@@ -76,10 +108,11 @@
 
 @mixin clay-input-group-text-variant($map) {
 	$base: map-merge(
+		$map,
 		(
-			background-color: map-get($map, bg),
-		),
-		$map
+			background-color:
+				setter(map-get($map, bg), map-get($map, background-color)),
+		)
 	);
 
 	@include clay-css($base);
