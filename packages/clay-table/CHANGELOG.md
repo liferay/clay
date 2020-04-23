@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/liferay/clay/compare/@clayui/table@4.0.0...@clayui/table@3.1.0) (2020-04-23)
+
+### Bug Fixes
+
+-   Fix accessibility issues ([5e09db0](https://github.com/liferay/clay/commit/5e09db0))
+
+### Features
+
+-   **@clayui/table:** revert version back to 3.0.6 ([8434c34](https://github.com/liferay/clay/commit/8434c34))
+
 # 4.0.0 (2020-02-28)
 
 ### Bug Fixes

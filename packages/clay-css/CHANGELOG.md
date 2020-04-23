@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.10.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.9.0...@clayui/css@3.10.0) (2020-04-23)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Button Group Vertical `.btn-monospaced` shouldn't shrink inside `autofit-col` ([5fcc7b5](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/5fcc7b5)), closes [#3063](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3063)
+* **@clayui/css:** Forms `.form-control-sm` and `.form-control-lg` should have correct left and right padding ([21688d6](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/21688d6)), closes [#3110](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3110)
+* **@clayui/css:** Forms small form elements should have 4px border-radius ([686c662](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/686c662)), closes [#3105](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3105)
+* **@clayui/css:** SVG Icons update cog.svg to new style for better contrast ([adc6580](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/adc6580)), closes [#3085](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3085)
+* **@clayui/css:** SVG Icons updates `angle-down`, `angle-left`, `angle-right`, and `angle-up` by reducing anchor points in the SVG ([b040734](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/b040734)), closes [#3131](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3131)
+
+
+### Features
+
+* **@clayui/css:** Mixin `clay-after-highlight-variant` use `clay-css` mixin to generate properties ([480b85b](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/480b85b)), closes [#3075](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3075)
+* **@clayui/css:** Mixin `clay-input-group-text-variant` use `clay-css` mixin to generate properties ([08c0dd8](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/08c0dd8)), closes [#3075](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3075)
+* **@clayui/css:** Mixins `clay-button-variant` use `clay-css` mixin to generate properties ([3fcabd5](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/3fcabd5)), closes [#3075](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3075)
+* **@clayui/css:** Mixins `clay-close` use `clay-css` mixin to generate properties ([83ea47a](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/83ea47a)), closes [#3075](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3075)
+* **@clayui/css:** Mixins `clay-container` use `clay-css` mixin to generate properties ([31b82d8](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/31b82d8)), closes [#3075](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3075)
+* **@clayui/css:** Mixins `clay-link` use `clay-css` mixin to generate properties ([32b2299](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/32b2299)), closes [#3075](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3075)
+* **@clayui/css:** Mixins `clay-row` should use `clay-css` mixin because it provides more options ([b15a98a](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/b15a98a)), closes [#3075](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3075)
+* **@clayui/css:** Mixins `clay-text-typography` use `clay-css` mixin to generate properties ([cdd429c](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/cdd429c)), closes [#3075](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3075)
+* **@clayui/css:** Mixins adds `clay-table-drag-variant` with options `cell`, `c-drag`, `c-dragging-before`, `c-dragging-after`, `c-droppable-before`, `c-droppable-after` ([81622df](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/81622df)), closes [#2934](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2934)
+* **@clayui/css:** Mixins map deprecated `clay-button-size` to `clay-button-variant` ([a98b49b](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/a98b49b)), closes [#3075](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3075)
+* **@clayui/css:** SVG Icons adds disk ([dbd2c5d](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/dbd2c5d)), closes [#3080](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3080)
+* **@clayui/css:** SVG Icons adds search-plus ([5859d71](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/5859d71)), closes [#3091](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3091)
+* **@clayui/css:** SVG Icons update `disk`. we will change the corners to straight so that it matches the rest of the icons ([11e614d](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/11e614d)), closes [#3080](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3080)
+* **@clayui/css:** Tables adds `.table-drag`, `.table-dragging`, `.table-clone` base styles for drag and drop table columns ([fff748a](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/fff748a)), closes [#2934](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/2934)
+* **clayui.com:** source md/mdx files from package directories ([fc6e798](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/fc6e798))
+
+
+
+
+
 # [3.9.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.8.0...@clayui/css@3.9.0) (2020-03-26)
 
 

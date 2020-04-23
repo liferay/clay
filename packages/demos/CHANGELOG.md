@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/bryceosterhaus/clay/compare/demos@0.2.2...demos@0.3.0) (2020-04-23)
+
+### Features
+
+-   **@clayui/demos:** Add table-dragging and other classes to get it matching Lexicon, also fix double heading on drag preview ([9ba1219](https://github.com/bryceosterhaus/clay/commit/9ba1219))
+-   **@clayui/demos:** Drag and drop demo for table columns ([56d50c6](https://github.com/bryceosterhaus/clay/commit/56d50c6))
+-   **@clayui/demos:** Drag and drop demo for table rows ([5969418](https://github.com/bryceosterhaus/clay/commit/5969418))
+-   **@clayui/demos:** Import drag and drop table demos ([db75f23](https://github.com/bryceosterhaus/clay/commit/db75f23))
+
 ## [0.2.2](https://github.com/liferay/clay/compare/demos@0.2.1...demos@0.2.2) (2020-03-26)
 
 **Note:** Version bump only for package demos

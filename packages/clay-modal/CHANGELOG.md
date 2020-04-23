@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.5.0](https://github.com/liferay/clay/compare/@clayui/modal@3.4.0...@clayui/modal@3.5.0) (2020-04-23)
+
+### Bug Fixes
+
+-   Fix accessibility issues ([5e09db0](https://github.com/liferay/clay/commit/5e09db0))
+
+### Features
+
+-   **@clayui/modal:** Add iFrameProps to ModalBody ([727837e](https://github.com/liferay/clay/commit/727837e))
+
 # [3.4.0](https://github.com/liferay/clay/tree/master/packages/clay-modal/compare/@clayui/modal@3.3.0...@clayui/modal@3.4.0) (2020-03-12)
 
 ### Features

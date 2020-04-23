@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/liferay/clay/compare/@clayui/shared@3.1.0...@clayui/shared@3.1.1) (2020-04-23)
+
+**Note:** Version bump only for package @clayui/shared
+
 # 3.1.0 (2020-02-28)
 
 ### Bug Fixes
