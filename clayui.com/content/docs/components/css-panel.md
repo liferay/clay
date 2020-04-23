@@ -10,6 +10,7 @@ description: 'Panel provides an expandable details-summary view.'
 -   [Collapsable](#collapsable)
 -   [Groups](#groups)
 -   [With Sheets](#with-sheets)
+-   [With a custom Title](#with-a-custom-title)
 
 </div>
 </div>
@@ -492,6 +493,103 @@ Sometimes you might want to place a panel inside of a card or a sheet, in that c
 				</div>
 			</div>
 		</div>
+	</div>
+</div>
+```
+
+## With a custom Title
+
+Sometimes you want to have some custom content that's not a string or a number in your title, that's where `ClayPanel.Title` comes in handy. It allows you to add custom content to the title of the panel as seen in this example using `ClayLabels`.
+
+<div class="sheet-example">
+	<div class="panel panel-secondary" role="tablist">
+		<button aria-controls="panelWithCustomTitle" aria-expanded="false" class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed" data-target="#collapsePanelWithCustomTitle" data-toggle="collapse" role="tab">
+			<div>
+				<h3>Title</h3>
+				<span>If field </span>
+				<span class="label label-success">
+					<span class="label-item label-item-expand">Country</span>
+				</span>
+				<span class="label label-secondary">
+					<span class="label-item label-item-expand">Is Equal To</span>
+				</span>
+				<span>value </span>
+				<span class="label label-info">
+					<span class="label-item label-item-expand">Brazil</span>
+				</span>
+				<span>enable </span>
+				<span class="label label-success">
+					<span class="label-item label-item-expand">State</span>
+				</span>
+			</div>
+			<span class="collapse-icon-closed">
+				<svg class="lexicon-icon lexicon-icon-angle-right" role="presentation">
+					<use xlink:href="/images/icons/icons.svg#angle-right"></use>
+				</svg>
+			</span>
+			<span class="collapse-icon-open">
+				<svg class="lexicon-icon lexicon-icon-angle-down" role="presentation">
+					<use xlink:href="/images/icons/icons.svg#angle-down"></use>
+				</svg>
+			</span>
+		</button>
+		<div class="panel-collapse collapse" id="collapsePanelWithCustomTitle" role="tabpanel">
+			<div class="panel-body">Body!</div>
+		</div>
+	</div>
+</div>
+
+```html
+<div class="panel panel-secondary" role="tablist">
+	<button
+		aria-controls="panelWithCustomTitle"
+		aria-expanded="false"
+		class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
+		data-target="#collapsePanelWithCustomTitle"
+		data-toggle="collapse"
+		role="tab"
+	>
+		<div>
+			<h3>Title</h3>
+			<span>If field </span>
+			<span class="label label-success">
+				<span class="label-item label-item-expand">Country</span>
+			</span>
+			<span class="label label-secondary">
+				<span class="label-item label-item-expand">Is Equal To</span>
+			</span>
+			<span>value </span>
+			<span class="label label-info">
+				<span class="label-item label-item-expand">Brazil</span>
+			</span>
+			<span>enable </span>
+			<span class="label label-success">
+				<span class="label-item label-item-expand">State</span>
+			</span>
+		</div>
+		<span class="collapse-icon-closed">
+			<svg
+				class="lexicon-icon lexicon-icon-angle-right"
+				role="presentation"
+			>
+				<use xlink:href="/images/icons/icons.svg#angle-right"></use>
+			</svg>
+		</span>
+		<span class="collapse-icon-open">
+			<svg
+				class="lexicon-icon lexicon-icon-angle-down"
+				role="presentation"
+			>
+				<use xlink:href="/images/icons/icons.svg#angle-down"></use>
+			</svg>
+		</span>
+	</button>
+	<div
+		class="panel-collapse collapse"
+		id="collapsePanelWithCustomTitle"
+		role="tabpanel"
+	>
+		<div class="panel-body">Body!</div>
 	</div>
 </div>
 ```
