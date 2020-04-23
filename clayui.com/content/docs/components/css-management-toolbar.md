@@ -1,6 +1,7 @@
 ---
 title: 'Management Toolbar'
 description: 'Management toolbar is an extension of Toolbar. It is a combination of different components, including filters, orders, search, visualization select, and other actions that let users manage a dataset.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/toolbars/management-bar/'
 ---
 
 <div class="nav-toc-absolute">
@@ -21,8 +22,6 @@ description: 'Management toolbar is an extension of Toolbar. It is a combination
 
 </div>
 </div>
-
-<div class="clay-site-alert alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/toolbars/management-bar/">Management Toolbar Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 <div class="clay-site-alert alert alert-warning">
     Collapsing the Search Input in mobile requires additional javascript to add and remove the show class on <code class="gatsby-code-text">navbar-overlay-sm-down</code>.

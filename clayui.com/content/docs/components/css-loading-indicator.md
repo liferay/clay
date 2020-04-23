@@ -1,6 +1,7 @@
 ---
 title: 'Loading Indicator'
 description: 'The loading indicator shows the user that an external process, like a connection, is being executed.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/loading-indicator/'
 ---
 
 <div class="nav-toc-absolute">
@@ -15,14 +16,6 @@ description: 'The loading indicator shows the user that an external process, lik
     -   [Autocomplete](#autocomplete)
 
 </div>
-</div>
-
-<div class="clay-site-alert alert alert-info">
-	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/loading-indicator/">Loading Indicator Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
-</div>
-
-<div class="clay-site-alert alert alert-warning">
-	See the implementation of the <a href="/docs/components/loading-indicator.html">Loading Indicator component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/loading-indicator/">Loading Indicator Pattern</a>.
 </div>
 
 <div class="clay-site-alert alert alert-info">

@@ -1,6 +1,7 @@
 ---
 title: 'Toggle Switch'
 description: 'Toggle provide users with different selection and activation tools.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/radio-check-toggle/#toggle'
 ---
 
 <div class="nav-toc-absolute">
@@ -17,10 +18,6 @@ description: 'Toggle provide users with different selection and activation tools
 -   [Extending Toggles](#extending-toggles)
 
 </div>
-</div>
-
-<div class="clay-site-alert alert alert-info">
-	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/forms/radio-check-toggle/">Toggle Switch Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
 </div>
 
 ## Example

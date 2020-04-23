@@ -1,6 +1,7 @@
 ---
 title: 'Progress Bars'
 description: 'Progress bar indicates the percentage completed of a task.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/progress-bars/'
 ---
 
 <div class="nav-toc-absolute">
@@ -18,14 +19,6 @@ description: 'Progress bar indicates the percentage completed of a task.'
 -   [Animated Stripes](#animated-stripes)
 
 </div>
-</div>
-
-<div class="clay-site-alert alert alert-info">
-    Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/progress-bars/">Progress Bars Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
-</div>
-
-<div class="clay-site-alert alert alert-warning">
-	See the implementation of the <a href="/docs/components/progress-bar.html">Progress Bars component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/progress-bars/">Progress Bars Pattern</a>.
 </div>
 
 ## Colors

@@ -1,6 +1,7 @@
 ---
 title: 'Input Localizable'
 description: 'A text input variation used in fields that can be translated into multiple languages.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/text-input-localizable/'
 ---
 
 <div class="nav-toc-absolute">
@@ -10,10 +11,6 @@ description: 'A text input variation used in fields that can be translated into 
 -   [Textarea](#textarea)
 
 </div>
-</div>
-
-<div class="clay-site-alert alert alert-info">
-	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/forms/text-input-localizable/">Text Input Localizable Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
 </div>
 
 ## Example

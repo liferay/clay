@@ -1,6 +1,7 @@
 ---
 title: 'Button Group'
 description: 'Button groups are used to switch between complementary views for example, but they must never be used for complementary actions, "Change and Cancel" actions, or "Save and Cancel" actions. In those cases, single buttons are the correct solution.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/buttons/'
 ---
 
 <div class="nav-toc-absolute">
@@ -13,10 +14,6 @@ description: 'Button groups are used to switch between complementary views for e
 -   [Vertical variation](#vertical-variation)
 
 </div>
-</div>
-
-<div class="clay-site-alert alert alert-info">
-	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/buttons/">Buttons Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
 </div>
 
 ## Examples

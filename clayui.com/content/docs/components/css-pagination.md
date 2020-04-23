@@ -1,6 +1,7 @@
 ---
 title: 'Pagination'
 description: 'Preset pagination styles helps divide up large blocks of content on your site or app.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/pagination/'
 ---
 
 <div class="nav-toc-absolute">
@@ -13,10 +14,6 @@ description: 'Preset pagination styles helps divide up large blocks of content o
 -   [Using Buttons](#using-buttons)
 
 </div>
-</div>
-
-<div class="clay-site-alert alert alert-info">
-	Check the <a href="https://liferay.design/lexicon/">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/badges/">Badges Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
 </div>
 
 Use `pagination-bar`'s preset styles to give your users more control over the content being displayed on the page.

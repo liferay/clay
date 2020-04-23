@@ -1,6 +1,7 @@
 ---
 title: 'Multi Select'
 description: 'Multi select is the field type that allows writing text to create “tags” that are represented in the shape of labels.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/selector/'
 ---
 
 <div class="nav-toc-absolute">
@@ -12,10 +13,6 @@ description: 'Multi select is the field type that allows writing text to create 
 -   [Contenteditable Elements](#contenteditable-elements)
 
 </div>
-</div>
-
-<div class="clay-site-alert alert alert-info">
-	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/forms/selector/">Multi Select Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
 </div>
 
 <div class="clay-site-alert alert alert-warning">

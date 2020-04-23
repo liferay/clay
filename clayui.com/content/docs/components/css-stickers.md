@@ -1,6 +1,7 @@
 ---
 title: 'Stickers'
 description: 'Stickers are a visual way to quickly identify content.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/stickers/'
 ---
 
 <div class="nav-toc-absolute">
@@ -15,14 +16,6 @@ description: 'Stickers are a visual way to quickly identify content.'
     -   [User Icon](#user-icon)
 
 </div>
-</div>
-
-<div class="clay-site-alert alert alert-info">
-    Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/stickers/">Stickers Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
-</div>
-
-<div class="clay-site-alert alert alert-warning">
-    See the implementation of the <a href="/docs/components/sticker.html">Stickers component in React</a> following the Lexicon <a href="https://liferay.design/lexicon/core-components/stickers/">Stickers Pattern</a>.
 </div>
 
 ## Colors

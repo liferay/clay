@@ -1,6 +1,7 @@
 ---
 title: 'Tabs'
 description: 'Tabs organize similar content together into individual sections in the same page.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/tabs/'
 ---
 
 <div class="nav-toc-absolute">
@@ -14,10 +15,6 @@ description: 'Tabs organize similar content together into individual sections in
     -   [Grid](#grid)
 
 </div>
-</div>
-
-<div class="clay-site-alert alert alert-info">
-    Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/alerts/">Alerts Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
 </div>
 
 <div class="clay-site-alert alert alert-warning">

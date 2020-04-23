@@ -1,6 +1,7 @@
 ---
 title: 'Multi Step Form'
 description: 'A multi step form, also known as a wizard, is a determinate progress bar used in long processes that divides the main task into subtasks. The wizard lets the user quickly identify their current progress in completing the task and navigate forwards and backwards between steps if needed.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/multi-step-form/'
 ---
 
 <div class="nav-toc-absolute">
@@ -13,10 +14,6 @@ description: 'A multi step form, also known as a wizard, is a determinate progre
 -   [Simplified](#simplified)
 
 </div>
-</div>
-
-<div class="clay-site-alert alert alert-info">
-	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/forms/multi-step-form/">Multi Step Form Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
 </div>
 
 ## Example
@@ -597,11 +594,6 @@ You may want to control the click of the icon to do some manipulation so you can
 ## Simplified
 
 Multi step form simplified is a more lightweight version of the multi step form. Rather than provide a complete interactive wizard display as the multi step form does, multi step form simplified simply displays text that indicates the users progress in completing the main task, guiding the user through a task divided in several steps in a light way.
-
-<div class="clay-site-alert alert alert-info">
-	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/forms/multi-step-form-simplified/">Multi Step Form Simplified
- Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
-</div>
 
 <div class="sheet-example">
 	<div class="tbar subnav-tbar subnav-tbar-light">

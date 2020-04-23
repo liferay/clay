@@ -1,6 +1,7 @@
 ---
 title: 'Tooltips'
 description: 'Tooltips are brief pieces of information that appear on hover state over an element to clarify its meaning or use for the user.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/popovers-tooltips/'
 ---
 
 <div class="nav-toc-absolute">
