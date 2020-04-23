@@ -59,64 +59,105 @@
 	$enabled: setter(map-get($map, enabled), true);
 
 	$base: map-merge(
+		$map,
 		(
-			background-color: map-get($map, bg),
-		),
-		$map
+			background-color:
+				setter(map-get($map, bg), map-get($map, background-color)),
+		)
 	);
 
 	$header: setter(map-get($map, header), ());
 	$header: map-merge(
+		$header,
 		(
-			background-color: map-get($map, header-bg),
-			border-color: map-get($map, header-border-color),
-			border-style: map-get($map, header-border-style),
-			border-width: map-get($map, header-border-width),
-			color: map-get($map, header-color),
-			margin-bottom: map-get($map, header-margin-bottom),
-			margin-left: map-get($map, header-margin-left),
-			margin-right: map-get($map, header-margin-right),
-			margin-top: map-get($map, header-margin-top),
-			padding-bottom: map-get($map, header-padding-bottom),
-			padding-left: map-get($map, header-padding-left),
-			padding-right: map-get($map, header-padding-right),
-			padding-top: map-get($map, header-padding-top),
-			transition: map-get($map, header-transition),
-		),
-		$header
+			background-color:
+				setter(
+					map-get($map, header-bg),
+					map-get($header, background-color)
+				),
+			border-color:
+				setter(
+					map-get($map, header-border-color),
+					map-get($header, border-color)
+				),
+			border-style:
+				setter(
+					map-get($map, header-border-style),
+					map-get($header, border-style)
+				),
+			border-width:
+				setter(
+					map-get($map, header-border-width),
+					map-get($header, border-width)
+				),
+			color: setter(map-get($map, header-color), map-get($header, color)),
+			margin-bottom:
+				setter(
+					map-get($map, header-margin-bottom),
+					map-get($header, margin-bottom)
+				),
+			margin-left:
+				setter(
+					map-get($map, header-margin-left),
+					map-get($header, margin-left)
+				),
+			margin-right:
+				setter(
+					map-get($map, header-margin-right),
+					map-get($header, margin-right)
+				),
+			margin-top:
+				setter(
+					map-get($map, header-margin-top),
+					map-get($header, margin-top)
+				),
+			padding-bottom:
+				setter(
+					map-get($map, header-padding-bottom),
+					map-get($header, padding-bottom)
+				),
+			padding-left:
+				setter(
+					map-get($map, header-padding-left),
+					map-get($header, padding-left)
+				),
+			padding-right:
+				setter(
+					map-get($map, header-padding-right),
+					map-get($header, padding-right)
+				),
+			padding-top:
+				setter(
+					map-get($map, header-padding-top),
+					map-get($header, padding-top)
+				),
+			transition:
+				setter(
+					map-get($map, header-transition),
+					map-get($header, transition)
+				),
+		)
 	);
 
 	$header-collapsed: setter(map-get($map, header-collapsed), ());
 	$header-collapsed: map-merge(
+		$header-collapsed,
 		(
-			border-color: map-get($map, header-collapsed-border-color),
-		),
-		$header-collapsed
+			border-color:
+				setter(
+					map-get($map, header-collapsed-border-color),
+					map-get($header-collapsed, border-color)
+				),
+		)
 	);
 
 	$header-c-inner: setter(map-get($map, header-c-inner), ());
 	$header-c-inner: map-merge(
 		(
-			margin-bottom:
-				setter(
-					map-get($header-c-inner, margin-bottom),
-					math-sign(map-get($header, padding-bottom))
-				),
-			margin-left:
-				setter(
-					map-get($header-c-inner, margin-left),
-					math-sign(map-get($header, padding-left))
-				),
-			margin-right:
-				setter(
-					map-get($header-c-inner, margin-right),
-					math-sign(map-get($header, padding-right))
-				),
-			margin-top:
-				setter(
-					map-get($header-c-inner, margin-top),
-					math-sign(map-get($header, padding-top))
-				),
+			margin-bottom: math-sign(map-get($header, padding-bottom)),
+			margin-left: math-sign(map-get($header, padding-left)),
+			margin-right: math-sign(map-get($header, padding-right)),
+			margin-top: math-sign(map-get($header, padding-top)),
 		),
 		$header-c-inner
 	);
@@ -125,49 +166,121 @@
 
 	$title: setter(map-get($map, title), ());
 	$title: map-merge(
+		$title,
 		(
-			font-size: map-get($map, title-font-size),
-			font-weight: map-get($map, title-font-weight),
-			text-transform: map-get($map, title-text-transform),
-		),
-		$title
+			font-size:
+				setter(
+					map-get($map, title-font-size),
+					map-get($title, font-size)
+				),
+			font-weight:
+				setter(
+					map-get($map, title-font-weight),
+					map-get($title, font-weight)
+				),
+			text-transform:
+				setter(
+					map-get($map, title-text-transform),
+					map-get($title, text-transform)
+				),
+		)
 	);
 
 	$collapse-icon: setter(map-get($map, collapse-icon), ());
 	$collapse-icon: map-merge(
+		$collapse-icon,
 		(
-			bottom: map-get($map, collapse-icon-bottom),
-			font-size: map-get($map, collapse-icon-font-size),
-			left: map-get($map, collapse-icon-left),
-			right: map-get($map, collapse-icon-right),
-			top: map-get($map, collapse-icon-top),
-		),
-		$collapse-icon
+			bottom:
+				setter(
+					map-get($map, collapse-icon-bottom),
+					map-get($collapse-icon, bottom)
+				),
+			font-size:
+				setter(
+					map-get($map, collapse-icon-font-size),
+					map-get($collapse-icon, font-size)
+				),
+			left:
+				setter(
+					map-get($map, collapse-icon-left),
+					map-get($collapse-icon, left)
+				),
+			right:
+				setter(
+					map-get($map, collapse-icon-right),
+					map-get($collapse-icon, right)
+				),
+			top:
+				setter(
+					map-get($map, collapse-icon-top),
+					map-get($collapse-icon, top)
+				),
+		)
 	);
 
 	$body: setter(map-get($map, body), ());
 	$body: map-merge(
+		$body,
 		(
-			margin-bottom: map-get($map, body-margin-bottom),
-			margin-left: map-get($map, body-margin-left),
-			margin-right: map-get($map, body-margin-right),
-			margin-top: map-get($map, body-margin-top),
-			padding-bottom: map-get($map, body-padding-bottom),
-			padding-left: map-get($map, body-padding-left),
-			padding-right: map-get($map, body-padding-right),
-			padding-top: map-get($map, body-padding-top),
-		),
-		$body
+			margin-bottom:
+				setter(
+					map-get($map, body-margin-bottom),
+					map-get($body, margin-bottom)
+				),
+			margin-left:
+				setter(
+					map-get($map, body-margin-left),
+					map-get($body, margin-left)
+				),
+			margin-right:
+				setter(
+					map-get($map, body-margin-right),
+					map-get($body, margin-right)
+				),
+			margin-top:
+				setter(
+					map-get($map, body-margin-top),
+					map-get($body, margin-top)
+				),
+			padding-bottom:
+				setter(
+					map-get($map, body-padding-bottom),
+					map-get($body, padding-bottom)
+				),
+			padding-left:
+				setter(
+					map-get($map, body-padding-left),
+					map-get($body, padding-left)
+				),
+			padding-right:
+				setter(
+					map-get($map, body-padding-right),
+					map-get($body, padding-right)
+				),
+			padding-top:
+				setter(
+					map-get($map, body-padding-top),
+					map-get($body, padding-top)
+				),
+		)
 	);
 
 	$footer: setter(map-get($map, footer), ());
 	$footer: map-merge(
+		$footer,
 		(
-			background-color: map-get($map, footer-bg),
-			border-color: map-get($map, footer-border-color),
-			color: map-get($map, footer-color),
-		),
-		$footer
+			background-color:
+				setter(
+					map-get($map, footer-bg),
+					map-get($footer, background-color)
+				),
+			border-color:
+				setter(
+					map-get($map, footer-border-color),
+					map-get($footer, border-color)
+				),
+			color: setter(map-get($map, footer-color), map-get($footer, color)),
+		)
 	);
 
 	@if ($enabled) {
