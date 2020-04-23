@@ -68,36 +68,71 @@
 
 @mixin clay-tbar-variant($map) {
 	$base: map-merge(
+		$map,
 		(
-			background-color: setter(map-get($map, bg), map-get($map, bg-color)),
-			padding-bottom: map-get($map, padding-y),
-			padding-left: map-get($map, padding-x),
-			padding-right: map-get($map, padding-x),
-			padding-top: map-get($map, padding-y),
-		),
-		$map
+			background-color:
+				setter(
+					map-get($map, bg),
+					setter(
+						map-get($map, bg-color),
+						map-get($map, background-color)
+					)
+				),
+			padding-bottom:
+				setter(map-get($map, padding-y), map-get($map, padding-bottom)),
+			padding-left:
+				setter(map-get($map, padding-x), map-get($map, padding-left)),
+			padding-right:
+				setter(map-get($map, padding-x), map-get($map, padding-right)),
+			padding-top:
+				setter(map-get($map, padding-y), map-get($map, padding-top)),
+		)
 	);
 
 	$strong: setter(map-get($map, strong), ());
 	$strong: map-merge(
+		$strong,
 		(
-			font-weight: map-get($map, strong-font-weight),
-		),
-		$strong
+			font-weight:
+				setter(
+					map-get($map, strong-font-weight),
+					map-get($strong, font-weight)
+				),
+		)
 	);
 
 	$nav: setter(map-get($map, nav), ());
 
 	$item: setter(map-get($map, item), ());
 	$item: map-merge(
+		$item,
 		(
-			justify-content: map-get($map, item-justify-content),
-			padding-bottom: map-get($map, item-padding-y),
-			padding-left: map-get($map, item-padding-x),
-			padding-right: map-get($map, item-padding-x),
-			padding-top: map-get($map, item-padding-y),
-		),
-		$item
+			justify-content:
+				setter(
+					map-get($map, item-justify-content),
+					map-get($item, justify-content)
+				),
+			padding-bottom:
+				setter(
+					map-get($map, item-padding-y),
+					map-get($item, padding-bottom)
+				),
+			padding-left:
+				setter(
+					map-get($map, item-padding-x),
+					map-get($item, padding-left)
+				),
+			padding-right:
+				setter(
+					map-get($map, item-padding-x),
+					map-get($item, padding-right)
+				),
+			padding-top:
+				setter(
+					map-get($map, item-padding-y),
+					map-get($item, padding-top)
+				),
+		)
 	);
 
 	$item-expand: setter(map-get($map, item-expand), ());
@@ -108,21 +143,50 @@
 
 	$btn: setter(map-get($map, btn), ());
 	$btn: map-merge(
+		$btn,
 		(
-			height: map-get($map, btn-height),
-			font-size: map-get($map, btn-font-size),
-			font-weight: map-get($map, btn-font-weight),
-			line-height: map-get($map, btn-line-height),
-			margin-bottom: map-get($map, btn-margin-y),
-			margin-left: map-get($map, btn-margin-x),
-			margin-right: map-get($map, btn-margin-x),
-			margin-top: map-get($map, btn-margin-y),
-			padding-bottom: map-get($map, btn-padding-y),
-			padding-left: map-get($map, btn-padding-x),
-			padding-right: map-get($map, btn-padding-x),
-			padding-top: map-get($map, btn-padding-y),
-		),
-		$btn
+			height: setter(map-get($map, btn-height), map-get($btn, height)),
+			font-size:
+				setter(map-get($map, btn-font-size), map-get($btn, font-size)),
+			font-weight:
+				setter(
+					map-get($map, btn-font-weight),
+					map-get($btn, font-weight)
+				),
+			line-height:
+				setter(
+					map-get($map, btn-line-height),
+					map-get($btn, line-height)
+				),
+			margin-bottom:
+				setter(
+					map-get($map, btn-margin-y),
+					map-get($btn, margin-bottom)
+				),
+			margin-left:
+				setter(map-get($map, btn-margin-x), map-get($btn, margin-left)),
+			margin-right:
+				setter(map-get($map, btn-margin-x), map-get($btn, margin-right)),
+			margin-top:
+				setter(map-get($map, btn-margin-y), map-get($btn, margin-top)),
+			padding-bottom:
+				setter(
+					map-get($map, btn-padding-y),
+					map-get($btn, padding-bottom)
+				),
+			padding-left:
+				setter(
+					map-get($map, btn-padding-x),
+					map-get($btn, padding-left)
+				),
+			padding-right:
+				setter(
+					map-get($map, btn-padding-x),
+					map-get($btn, padding-right)
+				),
+			padding-top:
+				setter(map-get($map, btn-padding-y), map-get($btn, padding-top)),
+		)
 	);
 
 	$btn-c-inner: setter(map-get($map, btn-c-inner), ());
@@ -138,27 +202,65 @@
 
 	$btn-monospaced: setter(map-get($map, btn-monospaced), ());
 	$btn-monospaced: map-merge(
+		$btn-monospaced,
 		(
-			border-radius: map-get($map, btn-monospaced-border-radius),
-			border-width: map-get($map, btn-monospaced-border-width),
-			font-size: map-get($map, btn-monospaced-font-size),
+			border-radius:
+				setter(
+					map-get($map, btn-monospaced-border-radius),
+					map-get($btn-monospaced, border-radius)
+				),
+			border-width:
+				setter(
+					map-get($map, btn-monospaced-border-width),
+					map-get($btn-monospaced, border-width)
+				),
+			font-size:
+				setter(
+					map-get($map, btn-monospaced-font-size),
+					map-get($btn-monospaced, font-size)
+				),
 			height:
 				setter(
 					map-get($map, btn-monospaced-size),
-					map-get($btn, height)
+					setter(
+						map-get($btn-monospaced, height),
+						map-get($btn, height)
+					)
 				),
-			margin-bottom: map-get($map, btn-monospaced-margin-y),
-			margin-left: map-get($map, btn-monospaced-margin-x),
-			margin-right: map-get($map, btn-monospaced-margin-x),
-			margin-top: map-get($map, btn-monospaced-margin-y),
-			padding: map-get($map, btn-monospaced-padding),
+			margin-bottom:
+				setter(
+					map-get($map, btn-monospaced-margin-y),
+					map-get($btn-monospaced, margin-bottom)
+				),
+			margin-left:
+				setter(
+					map-get($map, btn-monospaced-margin-x),
+					map-get($btn-monospaced, margin-left)
+				),
+			margin-right:
+				setter(
+					map-get($map, btn-monospaced-margin-x),
+					map-get($btn-monospaced, margin-right)
+				),
+			margin-top:
+				setter(
+					map-get($map, btn-monospaced-margin-y),
+					map-get($btn-monospaced, margin-top)
+				),
+			padding:
+				setter(
+					map-get($map, btn-monospaced-padding),
+					map-get($btn-monospaced, padding)
+				),
 			width:
 				setter(
 					map-get($map, btn-monospaced-size),
-					map-get($btn, height)
+					setter(
+						map-get($btn-monospaced, width),
+						map-get($btn, height)
+					)
 				),
-		),
-		$btn-monospaced
+		)
 	);
 
 	$btn-monospaced-c-inner: setter(map-get($map, btn-monospaced-c-inner), ());
@@ -171,17 +273,46 @@
 
 	$link: setter(map-get($map, link), ());
 	$link: map-merge(
+		$link,
 		(
-			margin-bottom: map-get($map, link-margin-y),
-			margin-left: map-get($map, link-margin-x),
-			margin-right: map-get($map, link-margin-x),
-			margin-top: map-get($map, link-margin-y),
-			padding-bottom: map-get($map, link-padding-y),
-			padding-left: map-get($map, link-padding-x),
-			padding-right: map-get($map, link-padding-x),
-			padding-top: map-get($map, link-padding-y),
-		),
-		$link
+			margin-bottom:
+				setter(
+					map-get($map, link-margin-y),
+					map-get($link, margin-bottom)
+				),
+			margin-left:
+				setter(
+					map-get($map, link-margin-x),
+					map-get($link, margin-left)
+				),
+			margin-right:
+				setter(
+					map-get($map, link-margin-x),
+					map-get($link, margin-right)
+				),
+			margin-top:
+				setter(map-get($map, link-margin-y), map-get($link, margin-top)),
+			padding-bottom:
+				setter(
+					map-get($map, link-padding-y),
+					map-get($link, padding-bottom)
+				),
+			padding-left:
+				setter(
+					map-get($map, link-padding-x),
+					map-get($link, padding-left)
+				),
+			padding-right:
+				setter(
+					map-get($map, link-padding-x),
+					map-get($link, padding-right)
+				),
+			padding-top:
+				setter(
+					map-get($map, link-padding-y),
+					map-get($link, padding-top)
+				),
+		)
 	);
 
 	$link-c-inner: setter(map-get($map, link-c-inner), ());
@@ -198,16 +329,56 @@
 	$link-monospaced: setter(map-get($map, link-monospaced), ());
 	$link-monospaced: map-merge(
 		(
-			border-radius: map-get($map, link-monospaced-border-radius),
-			border-width: map-get($map, link-monospaced-border-width),
-			font-size: map-get($map, link-monospaced-font-size),
-			height: map-get($map, link-monospaced-size),
-			margin-bottom: map-get($map, link-monospaced-margin-y),
-			margin-left: map-get($map, link-monospaced-margin-x),
-			margin-right: map-get($map, link-monospaced-margin-x),
-			margin-top: map-get($map, link-monospaced-margin-y),
-			padding: map-get($map, link-monospaced-padding),
-			width: map-get($map, link-monospaced-size),
+			border-radius:
+				setter(
+					map-get($map, link-monospaced-border-radius),
+					map-get($link-monospaced, border-radius)
+				),
+			border-width:
+				setter(
+					map-get($map, link-monospaced-border-width),
+					map-get($link-monospaced, border-width)
+				),
+			font-size:
+				setter(
+					map-get($map, link-monospaced-font-size),
+					map-get($link-monospaced, font-size)
+				),
+			height:
+				setter(
+					map-get($map, link-monospaced-size),
+					map-get($link-monospaced, height)
+				),
+			margin-bottom:
+				setter(
+					map-get($map, link-monospaced-margin-y),
+					map-get($link-monospaced, margin-bottom)
+				),
+			margin-left:
+				setter(
+					map-get($map, link-monospaced-margin-x),
+					map-get($link-monospaced, margin-left)
+				),
+			margin-right:
+				setter(
+					map-get($map, link-monospaced-margin-x),
+					map-get($link-monospaced, margin-right)
+				),
+			margin-top:
+				setter(
+					map-get($map, link-monospaced-margin-y),
+					map-get($link-monospaced, margin-top)
+				),
+			padding:
+				setter(
+					map-get($map, link-monospaced-padding),
+					map-get($link-monospaced, padding)
+				),
+			width:
+				setter(
+					map-get($map, link-monospaced-size),
+					map-get($link-monospaced, width)
+				),
 		),
 		$link-monospaced
 	);
@@ -225,10 +396,14 @@
 
 	$section: setter(map-get($map, section), ());
 	$section: map-merge(
+		$section,
 		(
-			text-align: map-get($map, section-text-align),
-		),
-		$section
+			text-align:
+				setter(
+					map-get($map, section-text-align),
+					map-get($section, text-align)
+				),
+		)
 	);
 
 	$component-action: setter(map-get($map, component-action), ());
