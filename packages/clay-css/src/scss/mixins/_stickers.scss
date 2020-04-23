@@ -70,10 +70,11 @@
 	$enabled: setter(map-get($map, enabled), true);
 
 	$base: map-merge(
+		$map,
 		(
-			background-color: map-get($map, bg),
-		),
-		$map
+			background-color:
+				setter(map-get($map, bg), map-get($map, background-color)),
+		)
 	);
 
 	$inline-item: setter(map-get($map, inline-item), ());
