@@ -1,3 +1,21 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [2.21.2](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v2.21.1...v2.21.2) (2020-04-23)
+
+
+### Bug Fixes
+
+* **clay-css:** Forms `.form-control-sm` and `.form-control-lg` should have correct left and right padding ([22358cb](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/22358cb)), closes [#3110](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3110)
+* **clay-css:** Forms Base Theme Select element has no icon ([95f034f](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/95f034f)), closes [#3116](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3116)
+* **clay-css:** Forms small form elements should have 4px border-radius ([f2044e7](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/f2044e7)), closes [#3105](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3105)
+
+
+
+
+
 ### v2.16.2 July 4, 2019
 
 * fix(clay-css): [#2119](https://github.com/liferay/clay/issues/2119) SVG Icons added `megaphone-full`, `pin-full`, and `bell-full`
