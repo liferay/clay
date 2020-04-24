@@ -47,24 +47,47 @@
 	$breakpoint-down: setter(clay-breakpoint-prev($breakpoint-up), null);
 
 	$base: map-merge(
+		$map,
 		(
-			background-color: map-get($map, bg),
-			background-image: map-get($map, bg-image),
-			background-position: map-get($map, bg-position),
-			background-size: map-get($map, bg-size),
-		),
-		$map
+			background-color:
+				setter(map-get($map, bg), map-get($map, background-color)),
+			background-image:
+				setter(map-get($map, bg-image), map-get($map, background-image)),
+			background-position:
+				setter(
+					map-get($map, bg-position),
+					map-get($map, background-position)
+				),
+			background-size:
+				setter(map-get($map, bg-size), map-get($map, background-size)),
+		)
 	);
 
 	$mobile: setter(map-get($map, mobile), ());
 	$mobile: map-merge(
+		$mobile,
 		(
-			padding-bottom: map-get($map, padding-bottom-mobile),
-			padding-left: map-get($map, padding-left-mobile),
-			padding-right: map-get($map, padding-right-mobile),
-			padding-top: map-get($map, padding-top-mobile),
-		),
-		$mobile
+			padding-bottom:
+				setter(
+					map-get($map, padding-bottom-mobile),
+					map-get($mobile, padding-bottom)
+				),
+			padding-left:
+				setter(
+					map-get($map, padding-left-mobile),
+					map-get($mobile, padding-left)
+				),
+			padding-right:
+				setter(
+					map-get($map, padding-right-mobile),
+					map-get($mobile, padding-right)
+				),
+			padding-top:
+				setter(
+					map-get($map, padding-top-mobile),
+					map-get($mobile, padding-top)
+				),
+		)
 	);
 
 	@if ($enabled) {
