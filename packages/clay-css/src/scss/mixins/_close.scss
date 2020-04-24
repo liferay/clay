@@ -83,10 +83,11 @@
 					map-get($map, hover-bg),
 					map-get($hover, background-color)
 				),
-			border-color: setter(
-				map-get($map, hover-border-color),
-				map-get($hover, border-color)
-			),
+			border-color:
+				setter(
+					map-get($map, hover-border-color),
+					map-get($hover, border-color)
+				),
 			color: setter(map-get($map, hover-color), map-get($hover, color)),
 			opacity:
 				setter(map-get($map, hover-opacity), map-get($hover, opacity)),
@@ -107,14 +108,16 @@
 					map-get($map, focus-bg),
 					map-get($focus, background-color)
 				),
-			border-color: setter(
-				map-get($map, focus-border-color),
-				map-get($focus, border-color)
-			),
-			border-radius: setter(
-				map-get($map, focus-border-radius),
-				map-get($focus, border-radius)
-			),
+			border-color:
+				setter(
+					map-get($map, focus-border-color),
+					map-get($focus, border-color)
+				),
+			border-radius:
+				setter(
+					map-get($map, focus-border-radius),
+					map-get($focus, border-radius)
+				),
 			box-shadow:
 				setter(
 					map-get($map, focus-box-shadow),
@@ -130,10 +133,8 @@
 					map-get($map, focus-text-decoration),
 					map-get($focus, text-decoration)
 				),
-			z-index: setter(
-				map-get($map, focus-z-index),
-				map-get($focus, z-index)
-			),
+			z-index:
+				setter(map-get($map, focus-z-index), map-get($focus, z-index)),
 		)
 	);
 
@@ -152,14 +153,13 @@
 					map-get($active, border-color)
 				),
 			color: setter(map-get($map, active-color), map-get($active, color)),
-			font-weight: setter(
-				map-get($map, active-font-weight),
-				map-get($active, font-weight)
-			),
-			z-index: setter(
-				map-get($map, active-z-index),
-				map-get($active, z-index)
-			),
+			font-weight:
+				setter(
+					map-get($map, active-font-weight),
+					map-get($active, font-weight)
+				),
+			z-index:
+				setter(map-get($map, active-z-index), map-get($active, z-index)),
 		)
 	);
 
@@ -283,10 +283,11 @@
 	$lexicon-icon: map-merge(
 		$lexicon-icon,
 		(
-			font-size: setter(
-				map-get($map, lexicon-icon-font-size),
-				map-get($lexicon-icon, font-size)
-			),
+			font-size:
+				setter(
+					map-get($map, lexicon-icon-font-size),
+					map-get($lexicon-icon, font-size)
+				),
 			margin-bottom:
 				setter(
 					map-get($map, lexicon-icon-margin-bottom),
