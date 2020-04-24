@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.7.1](https://github.com/liferay/clay/compare/@clayui/form@3.7.0...@clayui/form@3.7.1) (2020-04-24)
+
+### Bug Fixes
+
+-   **@clayui/form:** Add prop type to bypass generator bug ([94d4680](https://github.com/liferay/clay/commit/94d4680))
+-   Fix accessibility issues ([5e09db0](https://github.com/liferay/clay/commit/5e09db0))
+
 # [3.7.0](https://github.com/liferay/clay/tree/master/packages/clay-form/compare/@clayui/form@3.6.0...@clayui/form@3.7.0) (2020-03-26)
 
 ### Features

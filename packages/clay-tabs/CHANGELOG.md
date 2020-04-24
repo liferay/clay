@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/liferay/clay/compare/@clayui/tabs@3.1.0...@clayui/tabs@3.1.1) (2020-04-24)
+
+### Bug Fixes
+
+-   Fix accessibility issues ([5e09db0](https://github.com/liferay/clay/commit/5e09db0))
+
 # 3.1.0 (2020-02-28)
 
 ### Bug Fixes
