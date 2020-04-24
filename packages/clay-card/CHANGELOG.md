@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/liferay/clay/compare/@clayui/card@3.1.2...@clayui/card@3.2.0) (2020-04-24)
+
+### Bug Fixes
+
+-   Fix accessibility issues ([5e09db0](https://github.com/liferay/clay/commit/5e09db0))
+
+### Features
+
+-   **@clayui/card:** Add Product Card story to ClayCard ([9ce6ed3](https://github.com/liferay/clay/commit/9ce6ed3))
+-   **@clayui/card:** Use Clay components instead of plain HTML, undeclare a variable and move it to local scope ([37621cd](https://github.com/liferay/clay/commit/37621cd))
+
 ## [3.1.2](https://github.com/liferay/clay/tree/master/packages/clay-card/compare/@clayui/card@3.1.1...@clayui/card@3.1.2) (2020-03-26)
 
 **Note:** Version bump only for package @clayui/card

@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/bryceosterhaus/clay/compare/clayui.com@3.0.0-alpha.12...clayui.com@3.0.0) (2020-04-24)
+
+### Bug Fixes
+
+-   **clayui.com:** fix breaking build ([ca9ecad](https://github.com/bryceosterhaus/clay/commit/ca9ecad))
+-   **clayui.com:** fix multiple dates being active ([31a7253](https://github.com/bryceosterhaus/clay/commit/31a7253))
+-   **clayui.com:** fix path ([0c9ad66](https://github.com/bryceosterhaus/clay/commit/0c9ad66))
+-   **clayui.com:** remove alerts referencing the react component ([8bdfd23](https://github.com/bryceosterhaus/clay/commit/8bdfd23))
+-   **clayui.com:** remove alerts referring back to lexicon ([bdc7bb2](https://github.com/bryceosterhaus/clay/commit/bdc7bb2))
+-   **clayui.com:** rename from localizable to localized ([9c8ebf0](https://github.com/bryceosterhaus/clay/commit/9c8ebf0))
+-   **clayui.com:** rename to just Input ([bb61219](https://github.com/bryceosterhaus/clay/commit/bb61219))
+-   **clayui.com:** update url ([5d08466](https://github.com/bryceosterhaus/clay/commit/5d08466))
+
+### Features
+
+-   **clayui.com:** Add active state to navigation links ([c454452](https://github.com/bryceosterhaus/clay/commit/c454452))
+-   **clayui.com:** Add CSS/Markup docs for Clay Panel ([b7e7e1a](https://github.com/bryceosterhaus/clay/commit/b7e7e1a))
+-   move localized input docs to its respective package ([ab24cb8](https://github.com/bryceosterhaus/clay/commit/ab24cb8))
+-   **clayui.com:** add link back to lexicon definition ([d34d86a](https://github.com/bryceosterhaus/clay/commit/d34d86a))
+-   **clayui.com:** Add Localized Input Documentation ([fef5339](https://github.com/bryceosterhaus/clay/commit/fef5339))
+-   **clayui.com:** source md/mdx files from package directories ([fc6e798](https://github.com/bryceosterhaus/clay/commit/fc6e798))
+-   **clayui.com:** update @clayui/css in clayui.com ([bbf7f42](https://github.com/bryceosterhaus/clay/commit/bbf7f42))
+
 # [3.0.0-alpha.12](https://github.com/liferay/clay/compare/clayui.com@3.0.0-alpha.11...clayui.com@3.0.0-alpha.12) (2020-03-26)
 
 ### Bug Fixes
