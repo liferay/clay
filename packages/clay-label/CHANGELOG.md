@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/liferay/clay/compare/@clayui/label@3.2.0...@clayui/label@3.3.0) (2020-04-24)
+
+### Features
+
+-   **@clayui/label:** Attempt at ClayLabel contentBefore prop ([cd634e2](https://github.com/liferay/clay/commit/cd634e2))
+-   **@clayui/label:** use a hybrid API appraoch to expose low-level components ([deffd0e](https://github.com/liferay/clay/commit/deffd0e))
+
 # [3.2.0](https://github.com/liferay/clay/tree/master/packages/clay-label/compare/@clayui/label@3.1.1...@clayui/label@3.2.0) (2020-03-26)
 
 ### Features
