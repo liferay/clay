@@ -5,126 +5,72 @@
 /// A mixin to create Dropdown Menu variants. You can base your variant off Bootstrap's `.dropdown-menu` class or create your own base class (e.g., `<div class="dropdown-menu my-custom-dropdown-menu"></div>` or `<div class="my-custom-dropdown-menu"></div>`).
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
+/// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
 /// breakpoint-down: {String, Null}, // The Bootstrap 4 Breakpoint {xs | sm | md | lg | xl}
-/// bg: {Color | String | Null},
-/// bg-clip: {String | Null},
-/// border-color: {Color | String | List | Null},
-/// border-radius: {Number | String | List | Null},
-/// border-style: {String | List | Null},
-/// border-width: {Number | String | List | Null},
-/// box-shadow: {String | List | Null},
-/// color: {Color | String | Null},
-/// display: {String | Null},
-/// float: {String | Null},
-/// font-size: {Number | String | Null},
-/// left: {Number | String | Null},
-/// list-style: {String | Null},
-/// margin-bottom: {Number | String | Null},
-/// margin-left: {Number | String | Null},
-/// margin-right: {Number | String | Null},
-/// margin-top: {Number | String | Null},
-/// max-height: {Number | String | Null},
-/// max-width: {Number | String | Null},
-/// min-height: {Number | String | Null},
-/// min-width: {Number | String | Null},
-/// overflow: {String | Null},
-/// padding-bottom: {Number | String | Null},
-/// padding-left: {Number | String | Null},
-/// padding-right: {Number | String | Null},
-/// padding-top: {Number | String | Null},
-/// position: {String | Null},
-/// text-align: {String | Null},
-/// top: {Number | String | Null},
-/// width: {Number | String | Null},
-/// z-index: {Number | String | Null},
-/// font-size-mobile: {Number | String | Null},
-/// max-height-mobile: {Number | String | Null},
-/// max-width-mobile: {Number | String | Null},
+/// See Mixin `clay-css` for available keys to pass into the base selector
+/// mobile: {Map | Null}, // See Mixin `clay-css` for available keys
+/// -=-=-=-=-=- Deprecated -=-=-=-=-=-
+/// bg: {Color | String | Null}, // deprecated after 3.9.0
+/// bg-clip: {String | Null}, // deprecated after 3.9.0
+/// font-size-mobile: {Number | String | Null}, // deprecated after 3.9.0
+/// max-height-mobile: {Number | String | Null}, // deprecated after 3.9.0
+/// max-width-mobile: {Number | String | Null}, // deprecated after 3.9.0
 /// @todo
 /// - Add @example
 /// - Add @link to documentation
 
 @mixin clay-dropdown-menu-variant($map) {
+	$enabled: setter(map-get($map, enabled), true);
+
 	$breakpoint-down: map-get($map, breakpoint-down);
 
-	$bg: map-get($map, bg);
-	$bg-clip: map-get($map, bg-clip);
-	$border-color: map-get($map, border-color);
-	$border-radius: map-get($map, border-radius);
-	$border-style: map-get($map, border-style);
-	$border-width: map-get($map, border-width);
-	$box-shadow: map-get($map, box-shadow);
-	$color: map-get($map, color);
-	$display: map-get($map, display);
-	$float: map-get($map, float);
-	$font-size: map-get($map, font-size);
-	$left: map-get($map, left);
-	$list-style: map-get($map, list-style);
-	$margin-bottom: map-get($map, margin-bottom);
-	$margin-left: map-get($map, margin-left);
-	$margin-right: map-get($map, margin-right);
-	$margin-top: map-get($map, margin-top);
-	$max-height: map-get($map, max-height);
-	$max-width: map-get($map, max-width);
-	$min-height: map-get($map, min-height);
-	$min-width: map-get($map, min-width);
-	$overflow: map-get($map, overflow);
-	$padding-bottom: map-get($map, padding-bottom);
-	$padding-left: map-get($map, padding-left);
-	$padding-right: map-get($map, padding-right);
-	$padding-top: map-get($map, padding-top);
-	$position: map-get($map, position);
-	$text-align: map-get($map, text-align);
-	$top: map-get($map, top);
-	$width: map-get($map, width);
-	$z-index: map-get($map, z-index);
+	$base: map-merge(
+		$map,
+		(
+			background-color:
+				setter(map-get($map, bg), map-get($map, background-color)),
+			background-clip:
+				setter(map-get($map, bg-clip), map-get($map, background-clip)),
+		)
+	);
 
-	$font-size-mobile: map-get($map, font-size-mobile);
-	$max-height-mobile: map-get($map, max-height-mobile);
-	$max-width-mobile: map-get($map, max-width-mobile);
+	$mobile: setter(map-get($map, mobile), ());
+	$mobile: map-merge(
+		$mobile,
+		(
+			font-size:
+				setter(
+					map-get($map, font-size-mobile),
+					map-get($mobile, font-size)
+				),
+			max-height:
+				setter(
+					map-get($map, max-height-mobile),
+					map-get($mobile, max-height)
+				),
+			max-width:
+				setter(
+					map-get($map, max-width-mobile),
+					map-get($mobile, max-width)
+				),
+		)
+	);
 
-	background-clip: $bg-clip;
-	background-color: $bg;
-	border-color: $border-color;
-	border-radius: $border-radius;
-	border-style: $border-style;
-	border-width: $border-width;
-	box-shadow: $box-shadow;
-	color: $color;
-	display: $display;
-	float: $float;
-	font-size: $font-size;
-	left: $left;
-	list-style: $list-style;
-	margin-bottom: $margin-bottom;
-	margin-left: $margin-left;
-	margin-right: $margin-right;
-	margin-top: $margin-top;
-	max-height: $max-height;
-	max-width: $max-width;
-	min-height: $min-height;
-	min-width: $min-width;
-	overflow: $overflow;
-	padding-left: $padding-left;
-	padding-right: $padding-right;
-	padding-top: $padding-top;
-	position: $position;
-	text-align: $text-align;
-	top: $top;
-	width: $width;
-	z-index: $z-index;
+	@if ($enabled) {
+		@include clay-css($base);
 
-	// Firefox clips overflowing content and doesn't respect `padding-bottom` on `.dropdown-menu`
+		// Firefox clips overflowing content and doesn't respect `padding-bottom` on `.dropdown-menu`
 
-	&::after {
-		padding-top: $padding-bottom;
-	}
+		padding-bottom: 0;
 
-	@if ($breakpoint-down) {
-		@include media-breakpoint-down($breakpoint-down) {
-			font-size: $font-size-mobile;
-			max-height: $max-height-mobile;
-			max-width: $max-width-mobile;
+		&::after {
+			padding-top: map-get($base, padding-bottom);
+		}
+
+		@if ($breakpoint-down) {
+			@include media-breakpoint-down($breakpoint-down) {
+				@include clay-css($mobile);
+			}
 		}
 	}
 }
@@ -133,58 +79,54 @@
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
 /// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
-/// bg: {Color | String | Null},
-/// border-radius: {Number | String | List | Null},
-/// border-width: {Number | String | List | Null},
-/// clear: {String | Null},
-/// color: {Color | String | Null},
-/// display: {String | Null},
-/// font-size: {Number | String | Null},
-/// font-weight: {Number | String | Null},
-/// outline: {Number | String | Null},
-/// overflow: {String | Null},
-/// padding-bottom: {Number | String | Null},
-/// padding-left: {Number | String | Null},
-/// padding-right: {Number | String | Null},
-/// padding-top: {Number | String | Null},
-/// position: {String | Null},
-/// text-align: {String | Null},
-/// transition: {String | List | Null},
-/// white-space: {String | Null},
-/// width: {Number | String | Null},
-/// word-wrap: {String | Null},
-/// hover-bg: {Color | String | Null},
-/// hover-color: {Color | String | Null},
-/// hover-opacity: {Number | String | Null},
-/// hover-text-decoration: {String | Null},
-/// focus-bg: {Color | String | Null},
-/// focus-border-radius: {Number | String | List | Null},
-/// focus-box-shadow: {String | List | Null},
-/// focus-color: {Color | String | Null},
-/// focus-opacity: {Number | String | Null},
-/// focus-outline: {Number | String | Null},
-/// focus-text-decoration: {String | Null},
-/// active-bg: {Color | String | Null},
-/// active-border-color: {String | List | Null},
-/// active-color: {Color | String | Null},
-/// active-font-weight: {Number | String | Null},
-/// active-text-decoration: {String | Null},
-/// active-class-bg: {Color | String | Null},
-/// active-class-border-color: {Color | String | List | Null},
-/// active-class-color: {Color | String | Null},
-/// active-class-font-weight: {Number | String | Null},
-/// active-class-text-decoration: {String | Null},
-/// disabled-bg: {Color | String | Null},
-/// disabled-border-color: {Color | String | List | Null},
-/// disabled-box-shadow: {String | List | Null},
-/// disabled-color: {Color | String | Null},
-/// disabled-cursor: {String | Null},
-/// disabled-opacity: {Number | String | Null},
-/// disabled-outline: {Number | String | Null},
-/// disabled-pointer-events: {String | Null},
-/// disabled-text-decoration: {String | Null},
-/// disabled-active-pointer-events: {String | Null},
+/// See Mixin `clay-css` for available keys to pass into the base selector
+/// hover: {Map | Null}, // See Mixin `clay-css` for available keys
+/// hover-c-kbd-inline: {Map | Null}, // See Mixin `clay-css` for available keys
+/// focus: {Map | Null}, // See Mixin `clay-css` for available keys
+/// focus-c-kbd-inline: {Map | Null}, // See Mixin `clay-css` for available keys
+/// active: {Map | Null}, // See Mixin `clay-css` for available keys
+/// active-c-kbd-inline: {Map | Null}, // See Mixin `clay-css` for available keys
+/// active-class: {Map | Null}, // See Mixin `clay-css` for available keys
+/// active-class-c-kbd-inline: {Map | Null}, // See Mixin `clay-css` for available keys
+/// disabled: {Map | Null}, // See Mixin `clay-css` for available keys
+/// disabled-c-kbd-inline: {Map | Null}, // See Mixin `clay-css` for available keys
+/// disabled-active: {Map | Null}, // See Mixin `clay-css` for available keys
+/// autofit-row: {Map | Null}, // See Mixin `clay-css` for available keys
+/// c-kbd-inline: {Map | Null}, // See Mixin `clay-css` for available keys
 /// c-inner: {Map | Null}, // Pass parameters to `clay-css` mixin
+/// -=-=-=-=-=- Deprecated -=-=-=-=-=-
+/// bg: {Color | String | Null}, // deprecated after 3.9.0
+/// hover-bg: {Color | String | Null}, // deprecated after 3.9.0
+/// hover-color: {Color | String | Null}, // deprecated after 3.9.0
+/// hover-opacity: {Number | String | Null}, // deprecated after 3.9.0
+/// hover-text-decoration: {String | Null}, // deprecated after 3.9.0
+/// focus-bg: {Color | String | Null}, // deprecated after 3.9.0
+/// focus-border-radius: {Number | String | List | Null}, // deprecated after 3.9.0
+/// focus-box-shadow: {String | List | Null}, // deprecated after 3.9.0
+/// focus-color: {Color | String | Null}, // deprecated after 3.9.0
+/// focus-opacity: {Number | String | Null}, // deprecated after 3.9.0
+/// focus-outline: {Number | String | Null}, // deprecated after 3.9.0
+/// focus-text-decoration: {String | Null}, // deprecated after 3.9.0
+/// active-bg: {Color | String | Null}, // deprecated after 3.9.0
+/// active-border-color: {String | List | Null}, // deprecated after 3.9.0
+/// active-color: {Color | String | Null}, // deprecated after 3.9.0
+/// active-font-weight: {Number | String | Null}, // deprecated after 3.9.0
+/// active-text-decoration: {String | Null}, // deprecated after 3.9.0
+/// active-class-bg: {Color | String | Null}, // deprecated after 3.9.0
+/// active-class-border-color: {Color | String | List | Null}, // deprecated after 3.9.0
+/// active-class-color: {Color | String | Null}, // deprecated after 3.9.0
+/// active-class-font-weight: {Number | String | Null}, // deprecated after 3.9.0
+/// active-class-text-decoration: {String | Null}, // deprecated after 3.9.0
+/// disabled-bg: {Color | String | Null}, // deprecated after 3.9.0
+/// disabled-border-color: {Color | String | List | Null}, // deprecated after 3.9.0
+/// disabled-box-shadow: {String | List | Null}, // deprecated after 3.9.0
+/// disabled-color: {Color | String | Null}, // deprecated after 3.9.0
+/// disabled-cursor: {String | Null}, // deprecated after 3.9.0
+/// disabled-opacity: {Number | String | Null}, // deprecated after 3.9.0
+/// disabled-outline: {Number | String | Null}, // deprecated after 3.9.0
+/// disabled-pointer-events: {String | Null}, // deprecated after 3.9.0
+/// disabled-text-decoration: {String | Null}, // deprecated after 3.9.0
+/// disabled-active-pointer-events: {String | Null}, // deprecated after 3.9.0
 /// @todo
 /// - Add @example
 /// - Add @link to documentation
@@ -192,132 +134,222 @@
 @mixin clay-dropdown-item-variant($map) {
 	$enabled: setter(map-get($map, enabled), true);
 
-	$bg: map-get($map, bg);
-	$border-radius: map-get($map, border-radius);
-	$border-width: map-get($map, border-width);
-	$clear: map-get($map, clear);
-	$color: map-get($map, color);
-	$display: map-get($map, display);
-	$font-size: map-get($map, font-size);
-	$font-weight: map-get($map, font-weight);
-	$outline: map-get($map, outline);
-	$overflow: map-get($map, overflow);
-	$padding-bottom: map-get($map, padding-bottom);
-	$padding-left: map-get($map, padding-left);
-	$padding-right: map-get($map, padding-right);
-	$padding-top: map-get($map, padding-top);
-	$position: map-get($map, position);
-	$text-align: map-get($map, text-align);
-	$transition: map-get($map, transition);
-	$white-space: map-get($map, white-space);
-	$width: map-get($map, width);
-	$word-wrap: map-get($map, word-wrap);
-
-	$hover-bg: map-get($map, hover-bg);
-	$hover-color: map-get($map, hover-color);
-	$hover-opacity: map-get($map, hover-opacity);
-	$hover-text-decoration: map-get($map, hover-text-decoration);
-
-	$hover-c-kbd-inline: map-deep-merge((), map-get($map, hover-c-kbd-inline));
-
-	$focus-bg: map-get($map, focus-bg);
-	$focus-border-radius: map-get($map, focus-border-radius);
-	$focus-box-shadow: map-get($map, focus-box-shadow);
-	$focus-color: map-get($map, focus-color);
-	$focus-opacity: map-get($map, focus-opacity);
-	$focus-outline: map-get($map, focus-outline);
-	$focus-text-decoration: map-get($map, focus-text-decoration);
-
-	$focus-c-kbd-inline: map-deep-merge((), map-get($map, focus-c-kbd-inline));
-
-	$active-bg: map-get($map, active-bg);
-	$active-border-color: map-get($map, active-border-color);
-	$active-color: map-get($map, active-color);
-	$active-font-weight: map-get($map, active-font-weight);
-	$active-text-decoration: map-get($map, active-text-decoration);
-
-	$active-c-kbd-inline: map-deep-merge(
-		(),
-		map-get($map, active-c-kbd-inline)
-	);
-
-	$active-class-bg: map-get($map, active-class-bg);
-	$active-class-border-color: map-get($map, active-class-border-color);
-	$active-class-color: map-get($map, active-class-color);
-	$active-class-font-weight: map-get($map, active-class-font-weight);
-	$active-class-text-decoration: map-get($map, active-class-text-decoration);
-
-	$active-class-c-kbd-inline: map-deep-merge(
-		(),
-		map-get($map, active-class-c-kbd-inline)
-	);
-
-	$disabled-bg: map-get($map, disabled-bg);
-	$disabled-border-color: map-get($map, disabled-border-color);
-	$disabled-box-shadow: map-get($map, disabled-box-shadow);
-	$disabled-color: map-get($map, disabled-color);
-	$disabled-cursor: map-get($map, disabled-cursor);
-	$disabled-opacity: map-get($map, disabled-opacity);
-	$disabled-outline: map-get($map, disabled-outline);
-	$disabled-pointer-events: map-get($map, disabled-pointer-events);
-	$disabled-text-decoration: map-get($map, disabled-text-decoration);
-
-	$disabled-c-kbd-inline: map-deep-merge(
-		(),
-		map-get($map, disabled-c-kbd-inline)
-	);
-
-	$disabled-active-pointer-events: map-get(
+	$base: map-merge(
 		$map,
-		disabled-active-pointer-events
+		(
+			background-color:
+				setter(map-get($map, bg), map-get($map, background-color)),
+		)
 	);
 
-	$autofit-row: map-deep-merge((), map-get($map, autofit-row));
+	$hover: setter(map-get($map, hover), ());
+	$hover: map-merge(
+		$hover,
+		(
+			background-color:
+				setter(
+					map-get($map, hover-bg),
+					map-get($hover, background-color)
+				),
+			color: setter(map-get($map, hover-color), map-get($hover, color)),
+			opacity:
+				setter(map-get($map, hover-opacity), map-get($hover, opacity)),
+			text-decoration:
+				setter(
+					map-get($map, hover-text-decoration),
+					map-get($hover, text-decoration)
+				),
+		)
+	);
 
-	$c-kbd-inline: map-deep-merge((), map-get($map, c-kbd-inline));
+	$hover-c-kbd-inline: setter(map-get($map, hover-c-kbd-inline), ());
+
+	$focus: setter(map-get($map, focus), ());
+	$focus: map-merge(
+		$focus,
+		(
+			background-color:
+				setter(
+					map-get($map, focus-bg),
+					map-get($focus, background-color)
+				),
+			border-radius:
+				setter(
+					map-get($map, focus-border-radius),
+					map-get($focus, border-radius)
+				),
+			box-shadow:
+				setter(
+					map-get($map, focus-box-shadow),
+					map-get($focus, box-shadow)
+				),
+			color: setter(map-get($map, focus-color), map-get($focus, color)),
+			opacity:
+				setter(map-get($map, focus-opacity), map-get($focus, opacity)),
+			outline:
+				setter(map-get($map, focus-outline), map-get($focus, outline)),
+			text-decoration:
+				setter(
+					map-get($map, focus-text-decoration),
+					map-get($focus, text-decoration)
+				),
+		)
+	);
+
+	$focus-c-kbd-inline: setter(map-get($map, focus-c-kbd-inline), ());
+
+	$active: setter(map-get($map, active), ());
+	$active: map-merge(
+		$active,
+		(
+			background-color:
+				setter(
+					map-get($map, active-bg),
+					map-get($active, background-color)
+				),
+			border-color:
+				setter(
+					map-get($map, active-border-color),
+					map-get($active, border-color)
+				),
+			color: setter(map-get($map, active-color), map-get($active, color)),
+			font-weight:
+				setter(
+					map-get($map, active-font-weight),
+					map-get($active, font-weight)
+				),
+			text-decoration:
+				setter(
+					map-get($map, active-text-decoration),
+					map-get($active, text-decoration)
+				),
+		)
+	);
+
+	$active-c-kbd-inline: setter(map-get($map, active-c-kbd-inline), ());
+
+	$active-class: setter(map-get($map, active-class), ());
+	$active-class: map-merge(
+		$active-class,
+		(
+			background-color:
+				setter(
+					map-get($map, active-class-bg),
+					map-get($active-class, background-color)
+				),
+			border-color:
+				setter(
+					map-get($map, active-class-border-color),
+					map-get($active-class, border-color)
+				),
+			color:
+				setter(
+					map-get($map, active-class-color),
+					map-get($active-class, color)
+				),
+			font-weight:
+				setter(
+					map-get($map, active-class-font-weight),
+					map-get($active-class, font-weight)
+				),
+			text-decoration:
+				setter(
+					map-get($map, active-class-text-decoration),
+					map-get($active-class, text-decoration)
+				),
+		)
+	);
+
+	$active-class-c-kbd-inline: setter(
+		map-get($map, active-class-c-kbd-inline),
+		()
+	);
+
+	$disabled: setter(map-get($map, disabled), ());
+	$disabled: map-merge(
+		$disabled,
+		(
+			background-color:
+				setter(
+					map-get($map, disabled-bg),
+					map-get($disabled, background-color)
+				),
+			border-color:
+				setter(
+					map-get($map, disabled-border-color),
+					map-get($disabled, border-color)
+				),
+			box-shadow:
+				setter(
+					map-get($map, disabled-box-shadow),
+					map-get($disabled, box-shadow)
+				),
+			color:
+				setter(map-get($map, disabled-color), map-get($disabled, color)),
+			cursor:
+				setter(
+					map-get($map, disabled-cursor),
+					map-get($disabled, cursor)
+				),
+			opacity:
+				setter(
+					map-get($map, disabled-opacity),
+					map-get($disabled, opacity)
+				),
+			outline:
+				setter(
+					map-get($map, disabled-outline),
+					map-get($disabled, outline)
+				),
+			pointer-events:
+				setter(
+					map-get($map, disabled-pointer-events),
+					map-get($disabled, pointer-events)
+				),
+			text-decoration:
+				setter(
+					map-get($map, disabled-text-decoration),
+					map-get($disabled, text-decoration)
+				),
+		)
+	);
+
+	$disabled-c-kbd-inline: setter(map-get($map, disabled-c-kbd-inline), ());
+
+	$disabled-active: setter(map-get($map, disabled-active), ());
+	$disabled-active: map-merge(
+		$disabled-active,
+		(
+			pointer-events:
+				setter(
+					map-get($map, disabled-active-pointer-events),
+					map-get($disabled-active, pointer-events)
+				),
+		)
+	);
+
+	$autofit-row: setter(map-get($map, autofit-row), ());
+
+	$c-kbd-inline: setter(map-get($map, c-kbd-inline), ());
 
 	$c-inner: setter(map-get($map, c-inner), ());
-	$c-inner: map-deep-merge(
+	$c-inner: map-merge(
 		(
 			flex-grow: 1,
-			margin-bottom: math-sign($padding-bottom),
-			margin-left: math-sign($padding-left),
-			margin-right: math-sign($padding-right),
-			margin-top: math-sign($padding-top),
+			margin-bottom: math-sign(map-get($map, padding-bottom)),
+			margin-left: math-sign(map-get($map, padding-left)),
+			margin-right: math-sign(map-get($map, padding-right)),
+			margin-top: math-sign(map-get($map, padding-top)),
 			width: auto,
 		),
 		$c-inner
 	);
 
 	@if ($enabled) {
-		background-color: $bg; // For `<button>`s set to `transparent` in Bootstrap
-
-		@include border-radius($border-radius);
-
-		border-width: $border-width; // For `<button>`s set to `0` in Bootstrap
-		clear: $clear;
-		color: $color;
-		display: $display;
-		font-size: $font-size;
-		font-weight: $font-weight;
-		outline: $outline;
-		overflow: $overflow;
-		padding-bottom: $padding-bottom;
-		padding-left: $padding-left;
-		padding-right: $padding-right;
-		padding-top: $padding-top;
-		position: $position;
-		text-align: $text-align; // For `<button>`s set to `left` in Bootstrap
-		transition: $transition;
-		white-space: $white-space;
-		width: $width; // For `<button>`s set to `100%` in Bootstrap
-		word-wrap: $word-wrap;
+		@include clay-css($base);
 
 		&:hover {
-			background-color: $hover-bg;
-			color: $hover-color;
-			opacity: $hover-opacity;
-			text-decoration: $hover-text-decoration;
+			@include clay-css($hover);
 
 			.c-kbd-inline {
 				@include clay-css($hover-c-kbd-inline);
@@ -325,15 +357,7 @@
 		}
 
 		&:focus {
-			background-color: $focus-bg;
-
-			@include border-radius($focus-border-radius);
-
-			box-shadow: $focus-box-shadow;
-			color: $focus-color;
-			opacity: $focus-opacity;
-			outline: $focus-outline;
-			text-decoration: $focus-text-decoration;
+			@include clay-css($focus);
 
 			.c-kbd-inline {
 				@include clay-css($focus-c-kbd-inline);
@@ -341,23 +365,19 @@
 		}
 
 		&:active {
-			background-color: $active-bg;
-			border-color: $active-border-color;
-			color: $active-color;
-			font-weight: $active-font-weight;
-			text-decoration: $active-text-decoration;
+			@include clay-css($active);
 
 			label {
-				color: $active-color;
+				color: map-get($active, color);
 			}
 
 			.form-check-label {
-				color: $active-color;
-				font-weight: $active-font-weight;
+				color: map-get($active, color);
+				font-weight: map-get($active, font-weight);
 			}
 
 			.custom-control-label {
-				font-weight: $active-font-weight;
+				font-weight: map-get($active, font-weight);
 			}
 
 			.c-kbd-inline {
@@ -366,23 +386,19 @@
 		}
 
 		&.active {
-			background-color: $active-class-bg;
-			border-color: $active-class-border-color;
-			color: $active-class-color;
-			font-weight: $active-class-font-weight;
-			text-decoration: $active-class-text-decoration;
+			@include clay-css($active-class);
 
 			label {
-				color: $active-class-color;
+				color: map-get($active-class, color);
 			}
 
 			.form-check-label {
-				color: $active-class-color;
-				font-weight: $active-class-font-weight;
+				color: map-get($active-class, color);
+				font-weight: map-get($active-class, font-weight);
 			}
 
 			.custom-control-label {
-				font-weight: $active-class-font-weight;
+				font-weight: map-get($active-class, font-weight);
 			}
 
 			.c-kbd-inline {
@@ -396,25 +412,17 @@
 		&.btn:not([disabled]):not(.disabled):active,
 		&.btn:not([disabled]):not(.disabled).active {
 			&:focus {
-				box-shadow: $focus-box-shadow;
+				box-shadow: map-get($focus, box-shadow);
 			}
 		}
 
 		&:disabled,
 		&.disabled {
-			background-color: $disabled-bg;
-			border-color: $disabled-border-color;
-			box-shadow: $disabled-box-shadow;
-			color: $disabled-color;
-			cursor: $disabled-cursor;
-			opacity: $disabled-opacity;
-			outline: $disabled-outline;
-			pointer-events: $disabled-pointer-events;
-			text-decoration: $disabled-text-decoration;
+			@include clay-css($disabled);
 
 			label,
 			.form-check-label {
-				color: $disabled-color;
+				color: map-get($disabled, color);
 			}
 
 			.c-kbd-inline {
@@ -422,7 +430,7 @@
 			}
 
 			&:active {
-				pointer-events: $disabled-active-pointer-events;
+				@include clay-css($disabled-active);
 			}
 		}
 
@@ -442,11 +450,11 @@
 		}
 
 		.form-check-label {
-			font-weight: $font-weight;
+			font-weight: map-get($map, font-weight);
 		}
 
 		.custom-control-label {
-			font-weight: $font-weight;
+			font-weight: map-get($map, font-weight);
 		}
 	}
 }
