@@ -145,45 +145,6 @@
 		)
 	);
 
-	$disabled: setter(map-get($map, disabled), ());
-	$disabled: map-merge(
-		$disabled,
-		(
-			background-color:
-				setter(
-					map-get($map, disabled-bg),
-					map-get($disabled, background-color)
-				),
-			border-color:
-				setter(
-					map-get($map, disabled-border-color),
-					map-get($disabled, border-color)
-				),
-			box-shadow:
-				setter(
-					map-get($map, disabled-box-shadow),
-					map-get($disabled, box-shadow)
-				),
-			color:
-				setter(map-get($map, disabled-color), map-get($disabled, color)),
-			cursor:
-				setter(
-					map-get($map, disabled-cursor),
-					map-get($disabled, cursor)
-				),
-			opacity:
-				setter(
-					map-get($map, disabled-opacity),
-					map-get($disabled, opacity)
-				),
-			z-index:
-				setter(
-					map-get($map, disabled-z-index),
-					map-get($disabled, z-index)
-				),
-		)
-	);
-
 	$active: setter(map-get($map, active), ());
 	$active: map-merge(
 		$active,
@@ -227,6 +188,47 @@
 				),
 		)
 	);
+
+	$disabled: setter(map-get($map, disabled), ());
+	$disabled: map-merge(
+		$disabled,
+		(
+			background-color:
+				setter(
+					map-get($map, disabled-bg),
+					map-get($disabled, background-color)
+				),
+			border-color:
+				setter(
+					map-get($map, disabled-border-color),
+					map-get($disabled, border-color)
+				),
+			box-shadow:
+				setter(
+					map-get($map, disabled-box-shadow),
+					map-get($disabled, box-shadow)
+				),
+			color:
+				setter(map-get($map, disabled-color), map-get($disabled, color)),
+			cursor:
+				setter(
+					map-get($map, disabled-cursor),
+					map-get($disabled, cursor)
+				),
+			opacity:
+				setter(
+					map-get($map, disabled-opacity),
+					map-get($disabled, opacity)
+				),
+			z-index:
+				setter(
+					map-get($map, disabled-z-index),
+					map-get($disabled, z-index)
+				),
+		)
+	);
+
+	$disabled-active: setter(map-get($map, disabled-active), ());
 
 	$lexicon-icon: setter(map-get($map, lexicon-icon), ());
 	$lexicon-icon: map-merge(
@@ -370,11 +372,6 @@
 			@include clay-css($focus);
 		}
 
-		&:disabled,
-		&.disabled {
-			@include clay-css($disabled);
-		}
-
 		&:not([disabled]):not(.disabled):active,
 		&:not([disabled]):not(.disabled).active,
 		.show > &.dropdown-toggle {
@@ -388,6 +385,15 @@
 		&.active {
 			&::after {
 				@include clay-css($active-class-after);
+			}
+		}
+
+		&:disabled,
+		&.disabled {
+			@include clay-css($disabled);
+
+			&:active {
+				@include clay-css($disabled-active);
 			}
 		}
 

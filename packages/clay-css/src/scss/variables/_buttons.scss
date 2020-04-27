@@ -60,6 +60,9 @@ $btn-toolbar-spacer-y: 0.125rem !default; // 2px
 $btn-primary: () !default;
 $btn-primary: map-deep-merge(
 	(
+		disabled: (
+			box-shadow: none,
+		),
 		loading-animation: 'loading-animation-light',
 	),
 	$btn-primary
@@ -68,6 +71,9 @@ $btn-primary: map-deep-merge(
 $btn-secondary: () !default;
 $btn-secondary: map-deep-merge(
 	(
+		disabled: (
+			box-shadow: none,
+		),
 		loading-animation: 'loading-animation-light',
 	),
 	$btn-secondary
@@ -76,6 +82,9 @@ $btn-secondary: map-deep-merge(
 $btn-success: () !default;
 $btn-success: map-deep-merge(
 	(
+		disabled: (
+			box-shadow: none,
+		),
 		loading-animation: 'loading-animation-light',
 	),
 	$btn-success
@@ -84,31 +93,73 @@ $btn-success: map-deep-merge(
 $btn-info: () !default;
 $btn-info: map-deep-merge(
 	(
+		disabled: (
+			box-shadow: none,
+		),
 		loading-animation: 'loading-animation-light',
 	),
 	$btn-info
 );
 
 $btn-warning: () !default;
-$btn-warning: map-deep-merge((), $btn-warning);
+$btn-warning: map-deep-merge(
+	(
+		disabled: (
+			box-shadow: none,
+		),
+	),
+	$btn-warning
+);
 
 $btn-danger: () !default;
 $btn-danger: map-deep-merge(
 	(
+		disabled: (
+			box-shadow: none,
+		),
 		loading-animation: 'loading-animation-light',
 	),
 	$btn-danger
 );
 
 $btn-light: () !default;
-$btn-light: map-deep-merge((), $btn-light);
+$btn-light: map-deep-merge(
+	(
+		disabled: (
+			box-shadow: none,
+		),
+	),
+	$btn-light
+);
 
 $btn-dark: () !default;
 $btn-dark: map-deep-merge(
 	(
+		disabled: (
+			box-shadow: none,
+		),
 		loading-animation: 'loading-animation-light',
 	),
 	$btn-dark
+);
+
+$btn-link: () !default;
+$btn-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		hover: (
+			text-decoration: $link-hover-decoration,
+		),
+		focus: (
+			box-shadow: $btn-focus-box-shadow,
+			text-decoration: $link-decoration,
+		),
+		disabled: (
+			box-shadow: none,
+			text-decoration: none,
+		),
+	),
+	$btn-link
 );
 
 $btn-palette: () !default;
@@ -122,6 +173,7 @@ $btn-palette: map-deep-merge(
 		danger: $btn-danger,
 		light: $btn-light,
 		dark: $btn-dark,
+		link: $btn-link,
 	),
 	$btn-palette
 );
@@ -129,13 +181,84 @@ $btn-palette: map-deep-merge(
 // Button Outline Variants
 
 $btn-outline-primary: () !default;
+$btn-outline-primary: map-deep-merge(
+	(
+		disabled: (
+			box-shadow: none,
+		),
+	),
+	$btn-outline-primary
+);
+
 $btn-outline-secondary: () !default;
+$btn-outline-secondary: map-deep-merge(
+	(
+		disabled: (
+			box-shadow: none,
+		),
+	),
+	$btn-outline-secondary
+);
+
 $btn-outline-success: () !default;
+$btn-outline-success: map-deep-merge(
+	(
+		disabled: (
+			box-shadow: none,
+		),
+	),
+	$btn-outline-success
+);
+
 $btn-outline-info: () !default;
+$btn-outline-info: map-deep-merge(
+	(
+		disabled: (
+			box-shadow: none,
+		),
+	),
+	$btn-outline-info
+);
+
 $btn-outline-warning: () !default;
+$btn-outline-warning: map-deep-merge(
+	(
+		disabled: (
+			box-shadow: none,
+		),
+	),
+	$btn-outline-warning
+);
+
 $btn-outline-danger: () !default;
+$btn-outline-danger: map-deep-merge(
+	(
+		disabled: (
+			box-shadow: none,
+		),
+	),
+	$btn-outline-danger
+);
+
 $btn-outline-light: () !default;
+$btn-outline-light: map-deep-merge(
+	(
+		disabled: (
+			box-shadow: none,
+		),
+	),
+	$btn-outline-light
+);
+
 $btn-outline-dark: () !default;
+$btn-outline-dark: map-deep-merge(
+	(
+		disabled: (
+			box-shadow: none,
+		),
+	),
+	$btn-outline-dark
+);
 
 $btn-outline-palette: () !default;
 $btn-outline-palette: map-deep-merge(
