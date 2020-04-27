@@ -90,6 +90,9 @@ $alert-close: map-deep-merge(
 		right: $alert-close-position-right,
 		top: $alert-close-position-top,
 		width: $alert-close-width,
+		hover: (
+			color: inherit,
+		),
 	),
 	$alert-close
 );

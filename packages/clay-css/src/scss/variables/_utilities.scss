@@ -14,10 +14,6 @@ $close: () !default;
 $close: map-deep-merge(
 	(
 		color: $black,
-		opacity: 0.5,
-		hover-opacity: 0.75,
-		focus-opacity: 0.75,
-		disabled-opacity: 0.25,
 		btn-focus-box-shadow: $input-btn-focus-box-shadow,
 		btn-focus-outline: 0,
 		align-items: center,
@@ -29,6 +25,14 @@ $close: map-deep-merge(
 		text-align: center,
 		width: 2rem,
 		transition: $btn-transition,
+		disabled: (
+			box-shadow: none,
+			opacity: 0.25,
+			outline: 0,
+		),
+		disabled-active: (
+			pointer-events: none,
+		),
 		lexicon-icon-margin-top: 0,
 	),
 	$close

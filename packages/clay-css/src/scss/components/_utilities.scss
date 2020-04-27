@@ -20,6 +20,10 @@
 
 // Close
 
+a.close.disabled {
+	pointer-events: all;
+}
+
 .close {
 	cursor: $link-cursor;
 	float: none;
