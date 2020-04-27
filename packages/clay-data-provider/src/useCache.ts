@@ -29,9 +29,9 @@ const useCache = (
 		storage[SYMBOL_DATA_PROVIDER] = new LRUCache(storageMaxSize);
 	}
 
-	const cache = React.useRef<TSymbolData>(storage[
-		SYMBOL_DATA_PROVIDER
-	] as TSymbolData).current;
+	const cache = React.useRef<TSymbolData>(
+		storage[SYMBOL_DATA_PROVIDER] as TSymbolData
+	).current;
 
 	const shouldUseCache =
 		fetchPolicy === FetchPolicy.CacheFirst ||

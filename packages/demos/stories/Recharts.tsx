@@ -125,7 +125,10 @@ storiesOf('Demos|Recharts', module)
 		</ComposedChart>
 	))
 	.add('pie', () => {
-		const data = [{name: 'A', value: 30}, {name: 'B', value: 70}];
+		const data = [
+			{name: 'A', value: 30},
+			{name: 'B', value: 70},
+		];
 
 		const customLabel = ({percent}: any) =>
 			`${(percent * 100).toFixed(0)}%`;
@@ -148,7 +151,10 @@ storiesOf('Demos|Recharts', module)
 		);
 	})
 	.add('donut', () => {
-		const data = [{name: 'A', value: 30}, {name: 'B', value: 70}];
+		const data = [
+			{name: 'A', value: 30},
+			{name: 'B', value: 70},
+		];
 
 		const customLabel = ({percent}: any) =>
 			`${(percent * 100).toFixed(0)}%`;
@@ -325,7 +331,7 @@ storiesOf('Demos|Recharts', module)
 		>
 			<Tooltip />
 			<YAxis label={{angle: -90, value: 'Y-Axis'}} tick={false} />
-			<XAxis tickFormatter={val => moment(val).year()} />
+			<XAxis tickFormatter={(val) => moment(val).year()} />
 
 			<Line dataKey="val" stroke={COLORS[0]} />
 		</LineChart>
@@ -434,7 +440,7 @@ storiesOf('Demos|Recharts', module)
 		];
 
 		const ticksACData = [
-			...AC_DATA.map(item => item.values[0]),
+			...AC_DATA.map((item) => item.values[0]),
 			AC_DATA[AC_DATA.length - 1].values[1],
 		];
 
@@ -477,7 +483,7 @@ storiesOf('Demos|Recharts', module)
 						label={{angle: -90, value: 'Sales Total'}}
 						padding={{bottom: 10, top: 10}}
 						scale="linear"
-						tickFormatter={val => `$${val}M`}
+						tickFormatter={(val) => `$${val}M`}
 						ticks={ticksACData}
 						type="number"
 						width={150}
@@ -515,12 +521,12 @@ storiesOf('Demos|Recharts', module)
 
 						<ClayRadioGroup
 							inline
-							onSelectedValueChange={val =>
+							onSelectedValueChange={(val) =>
 								setDataPoints(Number(val))
 							}
 							selectedValue={dataPoints}
 						>
-							{[5, 10, 25, 50].map(item => (
+							{[5, 10, 25, 50].map((item) => (
 								<ClayRadio
 									key={item}
 									label={item}

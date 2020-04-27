@@ -64,7 +64,7 @@ describe('ClayLocalizedInput', () => {
 				onSelectedLocaleChange={() => {}}
 				onTranslationsChange={() => {}}
 				prependContent={prepend}
-				resultFormatter={val => `https://liferay.com${prepend}${val}`}
+				resultFormatter={(val) => `https://liferay.com${prepend}${val}`}
 				selectedLocale={locales[0]}
 				spritemap="/path/to/svg"
 				translations={{

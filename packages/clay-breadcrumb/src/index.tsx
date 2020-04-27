@@ -38,7 +38,7 @@ interface IProps extends React.HTMLAttributes<HTMLOListElement> {
 }
 
 const findActiveItems = (items: TItems) => {
-	return items.filter(item => {
+	return items.filter((item) => {
 		return item.active;
 	});
 };

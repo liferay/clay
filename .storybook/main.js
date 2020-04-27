@@ -17,7 +17,7 @@ module.exports = {
 		'@storybook/addon-a11y/register',
 		'@storybook/addon-knobs/register',
 	],
-	webpackFinal: config => {
+	webpackFinal: (config) => {
 		config.module.rules.push({
 			test: /\.(ts|tsx)$/,
 			loader: require.resolve('babel-loader'),

@@ -12,7 +12,7 @@ exports.sourceNodes = ({actions}) => {
 	// eslint-disable-next-line liferay/no-dynamic-require
 	const authors = require(resolve(__dirname, '../../content/authors.json'));
 
-	Object.keys(authors).forEach(username => {
+	Object.keys(authors).forEach((username) => {
 		const author = authors[username];
 
 		createNode({

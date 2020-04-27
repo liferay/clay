@@ -21,8 +21,8 @@ const onClick = () => {
 
 let scrollTop = 0;
 
-const SideNavScroll = props => {
-	const onScroll = event => {
+const SideNavScroll = (props) => {
+	const onScroll = (event) => {
 		scrollTop = event.currentTarget.scrollTop;
 	};
 
@@ -41,7 +41,7 @@ const SideNavScroll = props => {
 	);
 };
 
-export default props => (
+export default (props) => (
 	<>
 		<nav
 			className="sidebar-toggler-content sidenav-menu-slider sidenav-sticky"

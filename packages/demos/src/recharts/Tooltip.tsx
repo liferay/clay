@@ -37,7 +37,7 @@ const ClayRechartsTooltip: React.FunctionComponent<IProps> = ({
 	active,
 	label,
 	payload,
-	labelRenderer = val => val,
+	labelRenderer = (val) => val,
 	itemRenderer = defaultRenderer,
 }) => {
 	if (active) {

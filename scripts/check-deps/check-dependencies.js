@@ -114,7 +114,7 @@ async function checkForMissingDependencies() {
 
 		print(basename(`  ${name}: `));
 
-		await forEachSourceFile(name, async source => {
+		await forEachSourceFile(name, async (source) => {
 			const contents = await readFileAsync(source);
 			const ast = parse(contents.toString(), {
 				plugins: ['flow'],
@@ -157,7 +157,7 @@ async function checkForMissingDependencies() {
 
 		if (missing[name] && missing[name].length) {
 			print.line.red('MISSING');
-			missing[name].forEach(dependency =>
+			missing[name].forEach((dependency) =>
 				print.line(`    ${dependency}`)
 			);
 		} else {
@@ -238,11 +238,11 @@ async function checkForDevelopmentDependencies() {
 		print(`  ${name}: `);
 		const devDependencies = Object.keys(
 			config.devDependencies || {}
-		).filter(dependency => !DEV_DEPENDENCY_WHITELIST.has(dependency));
+		).filter((dependency) => !DEV_DEPENDENCY_WHITELIST.has(dependency));
 		if (devDependencies.length) {
 			success = false;
 			print.line.red('BAD');
-			devDependencies.forEach(dependency => {
+			devDependencies.forEach((dependency) => {
 				print.line(`    ${dependency}`);
 			});
 		} else {

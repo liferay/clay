@@ -91,10 +91,10 @@ describe('ClayMultiSelect', () => {
 			<ClayDropDown.ItemList>
 				{sourceItems
 					.filter(
-						item =>
+						(item) =>
 							inputValue && item[locator.label].match(inputValue)
 					)
-					.map(item => (
+					.map((item) => (
 						<ClayDropDown.Item
 							key={item.value}
 							onClick={() => onItemClick(item)}

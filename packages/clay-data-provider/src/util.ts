@@ -14,11 +14,11 @@ export const timeout = (ms: number, promise: Promise<any>) => {
 		}, ms);
 
 		promise
-			.then(res => {
+			.then((res) => {
 				clearTimeout(timeoutId);
 				resolve(res);
 			})
-			.catch(err => {
+			.catch((err) => {
 				clearTimeout(timeoutId);
 				reject(err);
 			});

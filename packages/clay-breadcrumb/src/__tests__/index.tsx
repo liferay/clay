@@ -89,7 +89,7 @@ describe('ClayBreadcrumb', () => {
 	});
 
 	it('calls callback when an item is clicked', () => {
-		const itemClickMock = jest.fn(event => {
+		const itemClickMock = jest.fn((event) => {
 			event.persist();
 		});
 

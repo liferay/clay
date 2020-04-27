@@ -40,7 +40,7 @@ storiesOf('Components|ClayPagination', module)
 			<ClayPaginationWithBasicItems
 				activePage={number('Active Page', 8)}
 				ellipsisBuffer={number('Ellipsis Buffer', 2)}
-				hrefConstructor={page => `/#${page}`}
+				hrefConstructor={(page) => `/#${page}`}
 				spritemap={spritemap}
 				totalPages={totalPages}
 			/>
@@ -59,7 +59,7 @@ storiesOf('Components|ClayPagination', module)
 				<ClayPaginationWithBasicItems
 					activePage={number('Active Page', 8)}
 					ellipsisBuffer={number('Ellipsis Buffer', 2)}
-					hrefConstructor={page => `/#${page}`}
+					hrefConstructor={(page) => `/#${page}`}
 					size="sm"
 					spritemap={spritemap}
 					totalPages={totalPages}
@@ -67,14 +67,14 @@ storiesOf('Components|ClayPagination', module)
 				<ClayPaginationWithBasicItems
 					activePage={number('Active Page', 8)}
 					ellipsisBuffer={number('Ellipsis Buffer', 2)}
-					hrefConstructor={page => `/#${page}`}
+					hrefConstructor={(page) => `/#${page}`}
 					spritemap={spritemap}
 					totalPages={totalPages}
 				/>
 				<ClayPaginationWithBasicItems
 					activePage={number('Active Page', 8)}
 					ellipsisBuffer={number('Ellipsis Buffer', 2)}
-					hrefConstructor={page => `/#${page}`}
+					hrefConstructor={(page) => `/#${page}`}
 					size="lg"
 					spritemap={spritemap}
 					totalPages={totalPages}

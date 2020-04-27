@@ -154,7 +154,7 @@ storiesOf('Components|ClayList', module)
 
 		return (
 			<ClayList>
-				{[1, 2, 3, 4].map(item => (
+				{[1, 2, 3, 4].map((item) => (
 					<ClayList.Item
 						active={item === activeIndex}
 						flex

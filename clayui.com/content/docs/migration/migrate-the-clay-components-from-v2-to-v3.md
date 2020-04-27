@@ -1009,7 +1009,7 @@ ClayDropDown also exports `<ClayDropDown.Menu>` which can be used independently 
 ```jsx
 <ClayDropDown
 	active={active}
-	onActiveChange={newVal => setActive(newVal)}
+	onActiveChange={(newVal) => setActive(newVal)}
 	trigger={<ClayButton>{'Click Me'}</ClayButton>}
 >
 	<ClayDropDown.ItemList>
@@ -1037,7 +1037,7 @@ import {ClayPaginationWithBasicItems} from '@clayui/pagination';
 
 <ClayPaginationWithBasicItems
 	activePage={5}
-	hrefConstructor={page => `/#${page}`}
+	hrefConstructor={(page) => `/#${page}`}
 	spritemap={spritemap}
 	totalPages={25}
 />;

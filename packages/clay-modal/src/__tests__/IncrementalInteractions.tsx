@@ -51,7 +51,7 @@ describe('Modal -> IncrementalInteractions', () => {
 		jest.useFakeTimers();
 
 		// @ts-ignore
-		ReactDOM.createPortal = jest.fn(element => {
+		ReactDOM.createPortal = jest.fn((element) => {
 			return element;
 		});
 	});
@@ -245,7 +245,7 @@ describe('ModalProvider -> IncrementalInteractions', () => {
 		jest.useFakeTimers();
 
 		// @ts-ignore
-		ReactDOM.createPortal = jest.fn(element => {
+		ReactDOM.createPortal = jest.fn((element) => {
 			return element;
 		});
 	});

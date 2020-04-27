@@ -98,7 +98,7 @@ const ClayLocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 			onTranslationsChange,
 			placeholder = 'Text to translate...',
 			prependContent,
-			resultFormatter = val => val,
+			resultFormatter = (val) => val,
 			selectedLocale,
 			spritemap,
 			translations,
@@ -129,7 +129,7 @@ const ClayLocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 						<ClayInput
 							{...otherProps}
 							id={id}
-							onChange={e => {
+							onChange={(e) => {
 								onTranslationsChange({
 									...translations,
 									[selectedLocale.label]: e.target.value,
@@ -157,7 +157,7 @@ const ClayLocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 							}
 						>
 							<ClayDropDown.ItemList>
-								{locales.map(locale => {
+								{locales.map((locale) => {
 									const value = translations[locale.label];
 
 									return (

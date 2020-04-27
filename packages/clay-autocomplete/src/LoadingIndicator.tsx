@@ -9,9 +9,9 @@ import React from 'react';
 
 import Context from './Context';
 
-const LoadingIndicatorMarkup: React.FunctionComponent<
-	React.HTMLAttributes<HTMLDivElement>
-> = ({children, ...otherProps}) => (
+const LoadingIndicatorMarkup: React.FunctionComponent<React.HTMLAttributes<
+	HTMLDivElement
+>> = ({children, ...otherProps}) => (
 	<ClayInput.GroupInsetItem {...otherProps} after>
 		<span className="inline-item inline-item-middle">{children}</span>
 	</ClayInput.GroupInsetItem>

@@ -34,7 +34,7 @@ const Ellipsis: React.FunctionComponent<IEllipsisProps> = ({
 			active={active}
 			className="breadcrumb-item"
 			containerElement="li"
-			onActiveChange={newVal => setActive(newVal)}
+			onActiveChange={(newVal) => setActive(newVal)}
 			trigger={
 				<ClayButton
 					className="breadcrumb-link"

@@ -37,7 +37,9 @@ export default () => {
 							<ClayInput
 								aria-label="Search"
 								className="form-control input-group-inset input-group-inset-after"
-								onChange={event => setValue(event.target.value)}
+								onChange={(event) =>
+									setValue(event.target.value)
+								}
 								type="text"
 								value={value}
 							/>

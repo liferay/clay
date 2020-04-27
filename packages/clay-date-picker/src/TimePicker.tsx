@@ -54,7 +54,7 @@ const ClayDatePickerTimePicker: React.FunctionComponent<IProps> = ({
 	React.useEffect(() => {
 		const time = currentTime.split(':');
 
-		setValues(prevValues => ({
+		setValues((prevValues) => ({
 			...prevValues,
 			hours: String(time[0]),
 			minutes: String(time[1]),

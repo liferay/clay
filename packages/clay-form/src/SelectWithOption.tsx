@@ -14,7 +14,8 @@ interface IProps extends React.ComponentProps<typeof Select> {
 	options: Array<
 		(
 			| React.ComponentProps<typeof Select.Option>
-			| React.ComponentProps<typeof Select.OptGroup>) & {
+			| React.ComponentProps<typeof Select.OptGroup>
+		) & {
 			options?: Array<React.ComponentProps<typeof Select.Option>>;
 			type?: 'group';
 		}

@@ -36,7 +36,7 @@ const useUserInteractions = (
 				FOCUSABLE_ELEMENTS
 			);
 
-			return Object.keys(nodes).map(key => nodes[key]);
+			return Object.keys(nodes).map((key) => nodes[key]);
 		}
 
 		return [];

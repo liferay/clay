@@ -136,7 +136,7 @@ const Checkbox: React.FunctionComponent<IItem & IInternalItem> = ({
 				{...otherProps}
 				checked={value}
 				onChange={() => {
-					setValue(val => !val);
+					setValue((val) => !val);
 					onChange(!value);
 				}}
 			/>
@@ -153,7 +153,7 @@ const Item: React.FunctionComponent<
 
 	return (
 		<ClayDropDown.Item
-			onClick={e => {
+			onClick={(e) => {
 				if (onClick) {
 					onClick(e);
 				}
@@ -225,7 +225,7 @@ const RadioGroup: React.FunctionComponent<IItem & IInternalItem> = ({
 	};
 
 	warning(
-		items && items.filter(item => item.type !== 'radio').length === 0,
+		items && items.filter((item) => item.type !== 'radio').length === 0,
 		'ClayDropDownWithItems -> Items of type `radiogroup` should be used `radio` if you need to use others, it is recommended to use type `group`.'
 	);
 
@@ -274,7 +274,7 @@ const findNested = <
 	items: Array<T>,
 	key: K
 ): T | undefined =>
-	items.find(item => {
+	items.find((item) => {
 		if (item[key]) {
 			return true;
 		}
@@ -336,7 +336,7 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 				{searchable && (
 					<Search
 						{...searchProps}
-						onChange={event =>
+						onChange={(event) =>
 							onSearchValueChange(event.target.value)
 						}
 						spritemap={spritemap}

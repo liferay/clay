@@ -6,9 +6,9 @@
 import classNames from 'classnames';
 import React from 'react';
 
-export const NavItem: React.FunctionComponent<
-	React.HTMLAttributes<HTMLLIElement>
-> = ({children, className, ...otherProps}) => {
+export const NavItem: React.FunctionComponent<React.HTMLAttributes<
+	HTMLLIElement
+>> = ({children, className, ...otherProps}) => {
 	return (
 		<li {...otherProps} className={classNames('nav-item', className)}>
 			{children}

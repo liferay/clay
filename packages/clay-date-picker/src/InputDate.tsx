@@ -39,9 +39,7 @@ const ClayDatePickerInputDate = React.forwardRef<HTMLInputElement, IProps>(
 			const format = time ? `${dateFormat} ${timeFormat}` : dateFormat;
 
 			if (moment(value, format).isValid() && value instanceof Date) {
-				const date = moment(value)
-					.clone()
-					.format(dateFormat);
+				const date = moment(value).clone().format(dateFormat);
 
 				return time ? `${date} ${currentTime}` : date;
 			}

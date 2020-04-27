@@ -29,13 +29,13 @@ const ClayToastDemo = () => {
 			</div>
 
 			<ClayAlert.ToastContainer>
-				{toastItems.map(value => (
+				{toastItems.map((value) => (
 					<ClayAlert
 						autoClose={5000}
 						key={value}
 						onClose={() => {
-							setToastItems(prevItems =>
-								prevItems.filter(item => item !== value)
+							setToastItems((prevItems) =>
+								prevItems.filter((item) => item !== value)
 							);
 						}}
 						spritemap={spritemap}

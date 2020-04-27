@@ -212,7 +212,7 @@ export default () => {
 										aria-label="Search"
 										className="form-control input-group-inset input-group-inset-after"
 										defaultValue="Red"
-										onChange={event =>
+										onChange={(event) =>
 											setValue(event.target.value)
 										}
 										type="text"

@@ -53,7 +53,7 @@ export default ({data, location}) => {
 											{' by '}
 											{toCommaSeparatedList(
 												frontmatter.author,
-												author => (
+												(author) => (
 													<a
 														href={
 															author.frontmatter

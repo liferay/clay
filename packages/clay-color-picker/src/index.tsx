@@ -156,7 +156,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 				{name && (
 					<input
 						name={name}
-						onChange={e =>
+						onChange={(e) =>
 							useNative ? onValueChange(e.target.value) : null
 						}
 						ref={valueInputRef}
@@ -198,7 +198,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 							<Basic
 								colors={colors || DEFAULT_COLORS}
 								label={label}
-								onChange={value => {
+								onChange={(value) => {
 									onValueChange(value);
 									setActive((val: boolean) => !val);
 
@@ -219,7 +219,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 										: BLANK_COLORS
 								}
 								label={label}
-								onChange={value => {
+								onChange={(value) => {
 									onValueChange(value);
 								}}
 								onColorsChange={onColorsChange}
@@ -237,7 +237,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 								])}
 								disabled={disabled}
 								insetBefore
-								onBlur={event => {
+								onBlur={(event) => {
 									const newColor = tinycolor(
 										event.target.value
 									);
@@ -250,7 +250,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 									setHexInputValue(hexString);
 									onBlur(event);
 								}}
-								onChange={event => {
+								onChange={(event) => {
 									const newHexValue = event.target.value;
 
 									const newColor = tinycolor(newHexValue);

@@ -134,7 +134,7 @@ const ClayDualListBox: React.FunctionComponent<IProps> = ({
 					items={leftItems}
 					label={left.label}
 					multiple
-					onItemsChange={newLeftItems =>
+					onItemsChange={(newLeftItems) =>
 						onItemsChange([newLeftItems, rightItems])
 					}
 					onSelectChange={handleLeftSelectedChange}
@@ -190,7 +190,7 @@ const ClayDualListBox: React.FunctionComponent<IProps> = ({
 					items={rightItems}
 					label={right.label}
 					multiple
-					onItemsChange={newRightItems =>
+					onItemsChange={(newRightItems) =>
 						onItemsChange([leftItems, newRightItems])
 					}
 					onSelectChange={handleRightSelectedChange}

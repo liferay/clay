@@ -59,7 +59,7 @@ export default () => {
 										<ClayForm.Group>
 											<label>{'Name'}</label>
 											<ClayInput
-												onChange={e =>
+												onChange={(e) =>
 													setFormValues({
 														...formValues,
 														name: e.target.value,
@@ -71,7 +71,7 @@ export default () => {
 										<ClayForm.Group>
 											<label>{'Country'}</label>
 											<ClayInput
-												onChange={e =>
+												onChange={(e) =>
 													setFormValues({
 														...formValues,
 														country: e.target.value,
@@ -85,7 +85,7 @@ export default () => {
 											<label>{'State'}</label>
 											<select
 												className="form-control"
-												onChange={e =>
+												onChange={(e) =>
 													setFormValues({
 														...formValues,
 														state: e.target.value,
@@ -129,7 +129,9 @@ export default () => {
 														inputValue={value}
 														items={selectedItems}
 														onChange={setValue}
-														onItemsChange={items => {
+														onItemsChange={(
+															items
+														) => {
 															setFormValues({
 																...formValues,
 																tags: items,

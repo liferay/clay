@@ -87,7 +87,7 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 		}
 
 		const internalKey = Object.keys(scope.current).find(
-			key => key.indexOf('__reactInternalInstance') === 0
+			(key) => key.indexOf('__reactInternalInstance') === 0
 		);
 
 		if (internalKey) {
@@ -174,7 +174,7 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 		}
 
 		const nodePosition = focusableElementsEdge.findIndex(
-			el => document.activeElement === el
+			(el) => document.activeElement === el
 		);
 		let nextElement = null;
 

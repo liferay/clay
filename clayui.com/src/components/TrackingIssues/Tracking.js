@@ -30,7 +30,7 @@ const Tracking = ({query}) => {
 				</thead>
 				<tbody>
 					{issues.items &&
-						issues.items.map(issue => {
+						issues.items.map((issue) => {
 							const {
 								comments,
 								created_at,

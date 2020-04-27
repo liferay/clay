@@ -6,13 +6,13 @@
 import Clipboard from 'clipboard';
 import {useEffect} from 'react';
 
-export default props => {
+export default (props) => {
 	const selector = '.tab-pane .btn-copy';
 	let clayClipboard;
 
 	useEffect(() => {
 		clayClipboard = new Clipboard(selector, {
-			text: delegateTarget => {
+			text: (delegateTarget) => {
 				const codeContentParentNode = delegateTarget.parentNode;
 				const gatsbyHighlightContainer =
 					codeContentParentNode.parentNode;
@@ -50,7 +50,7 @@ export default props => {
 					);
 
 					codeContent = codeElements
-						.map(code => code.value)
+						.map((code) => code.value)
 						.join('\n');
 				}
 

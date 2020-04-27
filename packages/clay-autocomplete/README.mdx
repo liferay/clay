@@ -49,12 +49,12 @@ If you already have the raw data, it is becomes simpler to create an autocomplet
 ```jsx
 <ClayAutocomplete>
 	<ClayAutocomplete.Input
-		onChange={event => setValue(event.target.value)}
+		onChange={(event) => setValue(event.target.value)}
 		value={value}
 	/>
 	<ClayAutocomplete.DropDown active={showDropDown}>
 		<ClayDropDown.ItemList>
-			{resourceFiltered.map(item => (
+			{resourceFiltered.map((item) => (
 				<ClayAutocomplete.Item key={item} match={value} value={item} />
 			))}
 		</ClayDropDown.ItemList>

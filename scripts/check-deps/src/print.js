@@ -8,7 +8,7 @@ const RED = '\x1b[31m';
 const RESET = '\x1b[0m';
 const YELLOW = '\x1b[33m';
 const line = Object.assign(
-	output => {
+	(output) => {
 		if (output != null) {
 			print(`${output}\n`);
 		} else {
@@ -37,7 +37,7 @@ const line = Object.assign(
  * print.line.yellow('message');
  */
 const print = Object.assign(
-	output => {
+	(output) => {
 		process.stdout.write(output != null ? output : '\n');
 	},
 	{

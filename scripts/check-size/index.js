@@ -23,7 +23,7 @@ const WORKSPACE_PACKAGES_WHITELIST = [
 
 const TEMP_DIR = os.tmpdir();
 
-const getGzipSize = relPath =>
+const getGzipSize = (relPath) =>
 	zlib.gzipSync(fs.readFileSync(path.join(__dirname, relPath))).length;
 
 function main() {

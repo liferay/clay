@@ -35,9 +35,7 @@ class Swatch extends Component {
 		return (
 			<div className="clay-site-swatch">
 				<div
-					className={`clay-site-swatch-color clay-site-swatch-${
-						this.state.swatchClassName
-					}`}
+					className={`clay-site-swatch-color clay-site-swatch-${this.state.swatchClassName}`}
 					ref={this.swatchColor}
 				/>
 				<div className="clay-site-swatch-body">

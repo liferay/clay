@@ -198,16 +198,22 @@ class GeomapBase {
 			.attr('vector-effect', 'non-scaling-stroke')
 			.attr('fill', this._fillFn.bind(this))
 			.on('click', this._handleClickHandler!)
-			.on('mouseout', this._handleMouseOut.bind(this) as d3.ValueFn<
-				SVGPathElement,
-				unknown,
-				void
-			>)
-			.on('mouseover', this._handleMouseOver.bind(this) as d3.ValueFn<
-				SVGPathElement,
-				unknown,
-				void
-			>);
+			.on(
+				'mouseout',
+				this._handleMouseOut.bind(this) as d3.ValueFn<
+					SVGPathElement,
+					unknown,
+					void
+				>
+			)
+			.on(
+				'mouseover',
+				this._handleMouseOver.bind(this) as d3.ValueFn<
+					SVGPathElement,
+					unknown,
+					void
+				>
+			);
 	}
 }
 

@@ -56,7 +56,7 @@ const ClayColorPickerHue: React.FunctionComponent<IProps> = ({
 	return (
 		<div
 			className="clay-color-range clay-color-range-hue"
-			onMouseDown={event => {
+			onMouseDown={(event) => {
 				selectorActive.current = true;
 				onMouseMove(event);
 

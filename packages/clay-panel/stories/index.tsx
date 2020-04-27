@@ -56,7 +56,7 @@ storiesOf('Components|ClayPanel', module)
 	))
 	.add('groups', () => (
 		<ClayPanel.Group>
-			{['One', 'Two', 'Three'].map(item => (
+			{['One', 'Two', 'Three'].map((item) => (
 				<ClayPanel
 					collapsable
 					displayTitle={item}
@@ -74,7 +74,7 @@ storiesOf('Components|ClayPanel', module)
 	.add('w/ sheet', () => (
 		<div className="sheet">
 			<ClayPanel.Group fluid={boolean('Toggle fluid', true)}>
-				{['One', 'Two', 'Three'].map(item => (
+				{['One', 'Two', 'Three'].map((item) => (
 					<ClayPanel
 						collapsable
 						displayTitle={item}

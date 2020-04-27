@@ -173,9 +173,9 @@ describe('ClayMultiStepNavWithBasicItems', () => {
 
 		expect(document.querySelector('.dropdown-menu')).toHaveClass('show');
 
-		fireEvent.click(document.querySelector(
-			'.dropdown-item'
-		) as HTMLElement);
+		fireEvent.click(
+			document.querySelector('.dropdown-item') as HTMLElement
+		);
 
 		expect(document.querySelector('.dropdown-item')).toHaveClass('active');
 	});

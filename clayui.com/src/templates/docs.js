@@ -19,7 +19,7 @@ import getSection from '../utils/getSection';
 
 const spritemap = '/images/icons/icons.svg';
 
-export default props => {
+export default (props) => {
 	const {
 		data,
 		location,
@@ -53,7 +53,7 @@ export default props => {
 	useEffect(() => {
 		document
 			.querySelectorAll('.clay-site-custom-checkbox-indeterminate')
-			.forEach(item => {
+			.forEach((item) => {
 				item.indeterminate = true;
 			});
 	}, []);
@@ -96,9 +96,7 @@ export default props => {
 													</h1>
 													{frontmatter.packageNpm && (
 														<p className="docs-subtitle">
-															{`yarn add ${
-																frontmatter.packageNpm
-															}`}
+															{`yarn add ${frontmatter.packageNpm}`}
 														</p>
 													)}
 													{showDescTop && (
@@ -202,9 +200,7 @@ export default props => {
 																		{fields.packageVersion && (
 																			<a
 																				className="label label-lg label-secondary"
-																				href={`https://www.npmjs.com/package/${
-																					frontmatter.packageNpm
-																				}`}
+																				href={`https://www.npmjs.com/package/${frontmatter.packageNpm}`}
 																				rel="noopener noreferrer"
 																				target="_blank"
 																			>
@@ -316,7 +312,9 @@ export default props => {
 																				Typography.H4,
 																			p:
 																				Typography.P,
-																			ul: props => (
+																			ul: (
+																				props
+																			) => (
 																				<ul
 																					className={
 																						props.className
@@ -385,7 +383,9 @@ export default props => {
 																				Typography.H4,
 																			p:
 																				Typography.P,
-																			ul: props => (
+																			ul: (
+																				props
+																			) => (
 																				<ul
 																					className={
 																						props.className

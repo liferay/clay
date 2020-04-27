@@ -14,13 +14,14 @@ const generateTr = (item, key) => `<tr>
 			${key}
 		</div>
 	</td>
-	<td class="table-cell-expand table-cell-minw-150">{${item.tsType &&
-		JSON.stringify(
-			item.tsType.raw ? item.tsType.raw : item.tsType.name
-		)}}</td>
+	<td class="table-cell-expand table-cell-minw-150">{${
+		item.tsType &&
+		JSON.stringify(item.tsType.raw ? item.tsType.raw : item.tsType.name)
+	}}</td>
 	<td>${item.required ? 'true' : ''}</td>
-	<td class="table-cell-expand table-cell-minw-150">{${item.defaultValue &&
-		JSON.stringify(item.defaultValue.value)}}</td>
+	<td class="table-cell-expand table-cell-minw-150">{${
+		item.defaultValue && JSON.stringify(item.defaultValue.value)
+	}}</td>
 	<td class="table-cell-expand table-cell-minw-250">{${JSON.stringify(
 		item.description
 	)}}</td>
@@ -29,7 +30,7 @@ const generateTr = (item, key) => `<tr>
 module.exports = ({markdownAST}) => {
 	const markdownHtmlNodes = [];
 
-	visit(markdownAST, 'jsx', node => {
+	visit(markdownAST, 'jsx', (node) => {
 		if (node.value.includes('[APITable')) {
 			markdownHtmlNodes.push(node);
 		}
@@ -37,9 +38,9 @@ module.exports = ({markdownAST}) => {
 
 	return Promise.all(
 		markdownHtmlNodes.map(
-			node =>
+			(node) =>
 				// eslint-disable-next-line no-async-promise-executor
-				new Promise(async resolve => {
+				new Promise(async (resolve) => {
 					/**
 					 * `.split()` is used to extract the file path from
 					 * a string like `[APITable "clay-form/src/Form.tsx#Text"]`
@@ -75,7 +76,7 @@ module.exports = ({markdownAST}) => {
 
 						const component = componentName
 							? AST.find(
-									comp => comp.displayName === componentName
+									(comp) => comp.displayName === componentName
 							  )
 							: AST;
 
@@ -96,7 +97,7 @@ module.exports = ({markdownAST}) => {
 							</tr>
 						</thead>
 						<tbody>
-						${propsKeys.map(key => generateTr(component.props[key], key)).join('')}
+						${propsKeys.map((key) => generateTr(component.props[key], key)).join('')}
 						</tbody>
 						</table>
 						</div>`

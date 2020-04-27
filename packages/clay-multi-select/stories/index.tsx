@@ -94,8 +94,10 @@ const MenuCustom: React.ComponentProps<
 }) => (
 	<ClayDropDown.ItemList>
 		{sourceItems
-			.filter(item => inputValue && item[locator.label].match(inputValue))
-			.map(item => (
+			.filter(
+				(item) => inputValue && item[locator.label].match(inputValue)
+			)
+			.map((item) => (
 				<ClayDropDown.Item
 					key={item[locator.value]}
 					onClick={() => onItemClick(item)}
@@ -153,12 +155,12 @@ storiesOf('Components|ClayMultiSelect', module)
 					inputValue={value}
 					items={items}
 					onChange={setValue}
-					onItemsChange={itemsChanged => {
+					onItemsChange={(itemsChanged) => {
 						const removedItems = items.filter(
-							value => !itemsChanged.includes(value)
+							(value) => !itemsChanged.includes(value)
 						);
 						const newItems = itemsChanged.filter(
-							value => !items.includes(value)
+							(value) => !items.includes(value)
 						);
 
 						setItems(itemsChanged);

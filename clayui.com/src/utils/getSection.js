@@ -56,13 +56,13 @@ const toSectionElements = (
 const toSectionItem = (item, paths) => {
 	if (item.isFolder) {
 		item.items = paths
-			.filter(path => path.link !== item.link)
+			.filter((path) => path.link !== item.link)
 			.filter(
-				path =>
+				(path) =>
 					path.link ===
 					item.parentLink + path.id + (path.isFolder ? '/index' : '')
 			)
-			.map(path => toSectionItem(path, paths))
+			.map((path) => toSectionItem(path, paths))
 			.sort(sortByOrderAndTitle);
 	}
 
@@ -89,10 +89,10 @@ const getSection = (data, blacklist = []) => {
 		);
 	});
 
-	const rootElements = elements.filter(path => path.isRoot);
+	const rootElements = elements.filter((path) => path.isRoot);
 
 	return rootElements
-		.map(path => toSectionItem(path, elements))
+		.map((path) => toSectionItem(path, elements))
 		.sort(sortByOrderAndTitle);
 };
 

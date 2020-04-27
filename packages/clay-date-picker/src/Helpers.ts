@@ -64,7 +64,7 @@ export function getWeekArray(d: Date, firstDayOfWeek = 0): Month {
 		dayArray.push({date: genDay});
 	}
 
-	dayArray.forEach(day => {
+	dayArray.forEach((day) => {
 		if (week.length > 0 && day.date.getDay() === firstDayOfWeek) {
 			weekArray.push(week);
 			week = [];

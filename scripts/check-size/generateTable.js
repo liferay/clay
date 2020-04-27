@@ -19,7 +19,7 @@ const sortDiffSize = (a, b) => {
 	}
 };
 
-const setChangedData = function(prevSize, newSize) {
+const setChangedData = function (prevSize, newSize) {
 	const bytesDiff = newSize - prevSize;
 
 	if (bytesDiff === 0) {
@@ -49,7 +49,7 @@ const getStatsArray = (prevStats, newStats) => {
 	);
 	const newTotal = packageNames.reduce((tot, key) => tot + newStats[key], 0);
 
-	const packageStats = packageNames.map(dirName => ({
+	const packageStats = packageNames.map((dirName) => ({
 		diffSize: newStats[dirName] - prevStats[dirName],
 		newSize: newStats[dirName],
 		packageName: dirName.replace('clay-', '@clayui/'),

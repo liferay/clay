@@ -151,7 +151,7 @@ describe('ClayDataProvider', () => {
 	it('calls clay.data and returns the timeout error', async () => {
 		fetchMock.mockResponseOnce(
 			() =>
-				new Promise(resolve =>
+				new Promise((resolve) =>
 					setTimeout(() => resolve({body: 'ok'}), 200)
 				)
 		);
@@ -287,7 +287,7 @@ describe('ClayDataProvider', () => {
 
 		render(
 			<DataProvider
-				link={variables => fetch(`https://clay.data/?${variables}`)}
+				link={(variables) => fetch(`https://clay.data/?${variables}`)}
 				variables={{name: 'Bar'}}
 			>
 				{({data}) => <h1>{data && data.title}</h1>}
