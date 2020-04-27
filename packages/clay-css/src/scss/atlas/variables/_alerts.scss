@@ -13,12 +13,15 @@ $alert-border-width: 0.0625rem !default;
 $alert-close-opacity: 1 !default;
 
 $alert-close: () !default;
-$alert-close: map-deep-merge((
-	opacity: $alert-close-opacity,
-	disabled: (
-		color: inherit,
+$alert-close: map-deep-merge(
+	(
+		opacity: $alert-close-opacity,
+		disabled: (
+			color: inherit,
+		),
 	),
-), $alert-close);
+	$alert-close
+);
 
 $alert-font-size: 0.875rem !default; // 14px
 
