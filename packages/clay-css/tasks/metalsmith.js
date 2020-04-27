@@ -1,3 +1,4 @@
+var fs = require('fs');
 var path = require('path');
 var gulpsmith = require('gulpsmith');
 var gulpFrontMatter = require('gulp-front-matter');
@@ -239,6 +240,24 @@ module.exports = function(gulp, plugins, _, config) {
 
 			return gulp.src(['./src/scss/**/**/*', '!./src/scss/bootstrap/**/*'])
 				.pipe(sassdoc(options));
+		}
+	);
+
+	gulp.task(
+		'get:file-size',
+		function() {
+			var atlasPath = path.resolve(path.join('build', 'css', 'atlas.css'));
+			var atlasStats = fs.statSync(atlasPath);
+			var atlasBytes = atlasStats["size"];
+			var atlasKb = Math.round(atlasBytes / 1000.0) + 'kb';
+
+			var basePath = path.resolve(path.join('build', 'css', 'base.css'));
+			var baseStats = fs.statSync(basePath);
+			var baseBytes = baseStats["size"];
+			var baseKb = Math.round(baseBytes / 1000.0) + 'kb';
+
+			console.log('Atlas:', atlasKb);
+			console.log('Base:', baseKb);
 		}
 	);
 };
