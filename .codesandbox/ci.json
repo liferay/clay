@@ -13,12 +13,14 @@
 		"packages/clay-data-provider",
 		"packages/clay-date-picker",
 		"packages/clay-drop-down",
+		"packages/clay-empty-state",
 		"packages/clay-form",
 		"packages/clay-icon",
 		"packages/clay-label",
 		"packages/clay-link",
 		"packages/clay-list",
 		"packages/clay-loading-indicator",
+		"packages/clay-localized-input",
 		"packages/clay-management-toolbar",
 		"packages/clay-modal",
 		"packages/clay-multi-select",
@@ -36,7 +38,8 @@
 		"packages/clay-table",
 		"packages/clay-tabs",
 		"packages/clay-time-picker",
-		"packages/clay-tooltip"
+		"packages/clay-tooltip",
+		"packages/clay-upper-toolbar"
 	],
 	"publishDirectory": {
 		"@clayui/alert": "packages/clay-alert",
@@ -51,12 +54,14 @@
 		"@clayui/data-provider": "packages/clay-data-provider",
 		"@clayui/date-picker": "packages/clay-date-picker",
 		"@clayui/drop-down": "packages/clay-drop-down",
+		"@clayui/empty-state": "packages/clay-empty-state",
 		"@clayui/form": "packages/clay-form",
 		"@clayui/icon": "packages/clay-icon",
 		"@clayui/label": "packages/clay-label",
 		"@clayui/link": "packages/clay-link",
 		"@clayui/list": "packages/clay-list",
 		"@clayui/loading-indicator": "packages/clay-loading-indicator",
+		"@clayui/localized-input": "packages/clay-localized-input",
 		"@clayui/management-toolbar": "packages/clay-management-toolbar",
 		"@clayui/modal": "packages/clay-modal",
 		"@clayui/multi-select": "packages/clay-multi-select",
@@ -74,7 +79,8 @@
 		"@clayui/table": "packages/clay-table",
 		"@clayui/tabs": "packages/clay-tabs",
 		"@clayui/time-picker": "packages/clay-time-picker",
-		"@clayui/tooltip": "packages/clay-tooltip"
+		"@clayui/tooltip": "packages/clay-tooltip",
+		"@clayui/upper-toolbar": "packages/clay-upper-toolbar"
 	},
 	"sandboxes": ["/.codesandbox/react", "/.codesandbox/react-ts"]
 }
