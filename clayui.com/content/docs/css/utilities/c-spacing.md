@@ -48,6 +48,7 @@ CSS: `@media(min-width: 576px) { margin-top: 1rem; }`. _(576px can change depend
 
 `3` is the value of the spacing you want to assign, by default the spacing are:
 
+-   `0` - **0rem** - _0px_
 -   `1` - **0.25rem** - _4px_
 -   `2` - **0.5rem** - _8px_
 -   `3` - **1rem** - _16px_
@@ -56,6 +57,7 @@ CSS: `@media(min-width: 576px) { margin-top: 1rem; }`. _(576px can change depend
 -   `6` - **4.5rem** - _72px_
 -   `7` - **6rem** - _96px_
 -   `8` - **7.5rem** - _120px_
+-   `auto` - will set the value to **auto**
 
 These spaces can be negative spaces if we use `n` before the value, that means:
 
