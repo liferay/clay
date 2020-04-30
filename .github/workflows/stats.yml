@@ -1,11 +1,11 @@
-name: Main
+name: Stats
 on:
     pull_request:
         branches: ['master']
 
 jobs:
-    generate_stats:
-        name: Bundle Size
+    run:
+        name: Packages
         runs-on: ubuntu-latest
         steps:
             - uses: actions/setup-node@v1
