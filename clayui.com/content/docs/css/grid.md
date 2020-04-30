@@ -1,6 +1,5 @@
 ---
 title: 'Grid'
-redirectFrom: '/docs/foundations/grid.html'
 description: 'The aim of the Lexicon layout framework is to provide a common structural reference that contributes to streamlining the component construction and page composition processes, as well as favoring visual consistency between the different elements of the interface.'
 order: 4
 ---

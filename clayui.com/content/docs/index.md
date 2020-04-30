@@ -1,5 +1,5 @@
 ---
 layout: 'redirect'
-redirect: '/docs/get-started/what-is-clay.html'
+redirect: '/docs/get-started/index.html'
 title: 'Docs'
 ---

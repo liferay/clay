@@ -69,7 +69,7 @@ export default () => {
 											<li className="nav-item">
 												<Link
 													className="nav-link-intro"
-													to="/docs/get-started/what-is-clay.html"
+													to="/docs/get-started/index.html"
 												>
 													{'Get Started'}
 												</Link>
@@ -77,7 +77,7 @@ export default () => {
 											<li className="nav-item">
 												<Link
 													className="nav-link-intro"
-													to="/docs/css/scss.html"
+													to="/docs/css/index.html"
 												>
 													{'Style Guide'}
 												</Link>
@@ -85,7 +85,7 @@ export default () => {
 											<li className="nav-item">
 												<Link
 													className="nav-link-intro"
-													to="/docs/components/alert.html"
+													to="/docs/components/index.html"
 												>
 													{'Components Library'}
 												</Link>
