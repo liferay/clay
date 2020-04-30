@@ -1,3 +1,7 @@
+a.btn.disabled {
+	pointer-events: all;
+}
+
 .btn {
 	font-size: $btn-font-size;
 
@@ -16,6 +20,10 @@
 	&.disabled,
 	&:disabled {
 		cursor: $btn-disabled-cursor;
+
+		&:active {
+			pointer-events: none;
+		}
 	}
 }
 
@@ -123,30 +131,6 @@
 
 	.btn-section {
 		font-size: $btn-section-font-size-sm;
-	}
-}
-
-// Button Link
-
-.btn-link {
-	@include border-radius(1px);
-
-	&:focus {
-		box-shadow: $btn-focus-box-shadow;
-		text-decoration: $link-decoration;
-	}
-
-	&.disabled,
-	&:disabled {
-		text-decoration: none;
-
-		&:hover {
-			text-decoration: none;
-		}
-	}
-
-	&:hover {
-		text-decoration: $link-hover-decoration;
 	}
 }
 
