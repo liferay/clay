@@ -1,0 +1,55 @@
+$img: () !default;
+$img: map-merge((
+	// Remove the border on images inside links in IE 10-.
+
+	border-style: none,
+
+	vertical-align: middle,
+), $img);
+
+$img-fluid: () !default;
+$img-fluid: map-merge((
+	height: auto,
+	max-width: 100%,
+), $img-fluid);
+
+$img-thumbnail: () !default;
+$img-thumbnail: map-merge((
+	background-color: $thumbnail-bg,
+	border-color: $thumbnail-border-color,
+	border-radius: clay-enable-rounded($thumbnail-border-radius),
+	border-style: solid,
+	border-width: $thumbnail-border-width,
+	box-shadow: clay-enable-shadows($thumbnail-box-shadow),
+	height: auto,
+	max-width: 100%,
+	padding: $thumbnail-padding,
+), $img-thumbnail);
+
+$svg: () !default;
+$svg: map-merge((
+	// Workaround for the SVG overflow bug in IE10/11 is still required.
+	// See https://github.com/twbs/bootstrap/issues/26878
+
+	overflow: hidden,
+
+	vertical-align: middle,
+), $svg);
+
+$figure: () !default;
+$figure: map-merge((
+	display: inline-block,
+	margin: 0 0 1rem,
+), $figure);
+
+$figure-img: () !default;
+$figure-img: map-merge((
+	line-height: 1,
+	margin-bottom: $spacer / 2,
+), $figure-img);
+
+$figure-caption: () !default;
+$figure-caption: map-merge((
+	color: $figure-caption-color,
+	font-size: $figure-caption-font-size,
+), $figure-caption);

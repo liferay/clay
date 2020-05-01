@@ -1,25 +1,28 @@
-//
-// Figures
-//
-
-figure {
-	// Apply a consistent margin strategy (matches our type styles).
-	margin: 0 0 1rem;
+img {
+	@include clay-css($img);
 }
 
+.img-fluid {
+	@include clay-css($img-fluid);
+}
 
-//
-// Images and content
-//
-
-img {
-	vertical-align: middle;
-	border-style: none; // Remove the border on images inside links in IE 10-.
+.img-thumbnail {
+	@include clay-css($img-thumbnail);
 }
 
 svg {
-	// Workaround for the SVG overflow bug in IE10/11 is still required.
-	// See https://github.com/twbs/bootstrap/issues/26878
-	overflow: hidden;
-	vertical-align: middle;
+	@include clay-css($svg);
+}
+
+figure,
+.figure {
+	@include clay-css($figure);
+}
+
+.figure-img {
+	@include clay-css($figure-img);
+}
+
+.figure-caption {
+	@include clay-css($figure-caption);
 }
