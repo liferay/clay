@@ -41,6 +41,13 @@ $body-mobile: map-merge((
 
 $hr: () !default;
 $hr: map-merge((
+	border-color: $hr-border-color,
+	border-style: solid,
+	border-width: $hr-border-width 0 0 0,
+
+	margin-bottom: $hr-margin-y,
+	margin-top: $hr-margin-y,
+
 	// Show the overflow in Edge and IE.
 
 	overflow: visible,
@@ -129,6 +136,14 @@ $paragraph: map-merge((
 	margin-top: 0,
 ), $paragraph);
 
+// Builds on `abbr`
+
+$initialism: () !default;
+$initialism: map-merge((
+	font-size: 90%,
+	text-transform: uppercase,
+), $initialism);
+
 $address: () !default;
 $address: map-merge((
 	font-style: normal,
@@ -165,10 +180,46 @@ $dd: map-merge((
 	margin-left: 0,
 ), $dd);
 
+$list-unstyled: () !default;
+$list-unstyled: map-merge((
+	list-style: none,
+	padding-left: 0,
+), $list-unstyled);
+
+$list-inline: () !default;
+$list-inline: map-merge((
+	list-style: none,
+	padding-left: 0,
+), $list-inline);
+
+$list-inline-item: () !default;
+$list-inline-item: map-merge((
+	display: inline-block,
+	margin-right: $list-inline-padding,
+), $list-inline-item);
+
+$list-inline-item-last: () !default;
+$list-inline-item-last: map-merge((
+	margin-right: 0,
+), $list-inline-item-last);
+
 $blockquote: () !default;
 $blockquote: map-merge((
-	margin: 0 0 1rem,
+	font-size: $blockquote-font-size,
+	margin: 0 0 $spacer,
 ), $blockquote);
+
+$blockquote-footer: () !default;
+$blockquote-footer: map-merge((
+	color: $blockquote-small-color,
+	display: block,
+	font-size: $blockquote-small-font-size,
+), $blockquote-footer);
+
+$blockquote-footer-before: () !default;
+$blockquote-footer-before: map-merge((
+	content: '\2014\00A0',
+), $blockquote-footer-before);
 
 $b-font-weight: null !default;
 
@@ -186,7 +237,8 @@ $strong: map-merge((
 
 $small: () !default;
 $small: map-merge((
-	font-size: 80%,
+	font-size: $small-font-size,
+	font-weight: $font-weight-normal,
 ), $small);
 
 $sub: () !default;
@@ -222,10 +274,109 @@ $link: map-merge((
 	),
 ), $link);
 
+$code: () !default;
+$code: map-merge((
+	color: $code-color,
+	font-family: $font-family-monospace,
+	font-size: $code-font-size,
+	word-wrap: break-word,
+), $code);
+
+$kbd: () !default;
+$kbd: map-merge((
+	background-color: $kbd-bg,
+	border-radius: clay-enable-rounded($border-radius-sm),
+	box-shadow: clay-enable-shadows($kbd-box-shadow),
+	color: $kbd-color,
+	font-family: $font-family-monospace,
+	font-size: $kbd-font-size,
+	padding-bottom: $kbd-padding-y,
+	padding-left: $kbd-padding-x,
+	padding-right: $kbd-padding-x,
+	padding-top: $kbd-padding-y,
+), $kbd);
+
+$kbd-kbd: () !default;
+$kbd-kbd: map-merge((
+	box-shadow: clay-enable-shadows(none),
+	font-size: 100%,
+	font-weight: $nested-kbd-font-weight,
+	padding: 0,
+), $kbd-kbd);
+
+$samp: () !default;
+$samp: map-merge((
+	font-family: $font-family-monospace,
+	font-size: 1em,
+), $samp);
+
+$pre: () !default;
+$pre: map-merge((
+	color: $pre-color,
+	display: block,
+	font-family: $font-family-monospace,
+	font-size: $code-font-size,
+	margin-bottom: 1rem,
+	margin-top: 0,
+	overflow: auto,
+), $pre);
+
+$pre-code: () !default;
+$pre-code: map-merge((
+	font-size: inherit,
+	color: inherit,
+	word-break: normal,
+), $pre-code);
+
+$pre-scrollable: () !default;
+$pre-scrollable: map-merge((
+	max-height: $pre-scrollable-max-height,
+	overflow-y: scroll,
+), $pre-scrollable);
+
+$lead: () !default;
+$lead: map-merge((
+	font-size: $lead-font-size,
+	font-weight: $lead-font-weight,
+), $lead);
+
+$display-1: () !default;
+$display-1: map-merge((
+	font-size: $display1-size,
+	font-weight: $display1-weight,
+	line-height: $display-line-height,
+), $display-1);
+
+$display-2: () !default;
+$display-2: map-merge((
+	font-size: $display2-size,
+	font-weight: $display2-weight,
+	line-height: $display-line-height,
+), $display-2);
+
+$display-3: () !default;
+$display-3: map-merge((
+	font-size: $display3-size,
+	font-weight: $display3-weight,
+	line-height: $display-line-height,
+), $display-3);
+
+$display-4: () !default;
+$display-4: map-merge((
+	font-size: $display4-size,
+	font-weight: $display4-weight,
+	line-height: $display-line-height,
+), $display-4);
+
 $reference-mark-font-size: 0.75rem !default;
 $reference-mark-vertical-align: super !default;
 
 $mark-color: null !default;
+
+$mark: () !default;
+$mark: map-merge((
+	padding: $mark-padding,
+), $mark);
 
 $c-kbd-group: () !default;
 $c-kbd-group: map-deep-merge(

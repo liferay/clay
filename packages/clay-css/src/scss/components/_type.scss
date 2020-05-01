@@ -123,6 +123,12 @@ abbr[data-original-title] { // 1
 	text-decoration-skip-ink: none; // 5
 }
 
+// Builds on `abbr`
+
+.initialism {
+	@include clay-css($initialism);
+}
+
 address {
 	@include clay-css($address)
 }
@@ -154,8 +160,34 @@ dd {
 	@include clay-css($dd);
 }
 
-blockquote {
+.list-unstyled {
+	@include clay-css($list-unstyled);
+}
+
+.list-inline {
+	@include clay-css($list-inline);
+}
+
+.list-inline-item {
+	@include clay-css($list-inline-item);
+}
+
+.list-inline-item:last-child,
+.list-inline-item-last {
+	@include clay-css($list-inline-item-last);
+}
+
+blockquote,
+.blockquote {
 	@include clay-css($blockquote);
+}
+
+.blockquote-footer {
+	@include clay-css($blockquote-footer);
+
+	&::before {
+		@include clay-css($blockquote-footer-before);
+	}
 }
 
 b {
@@ -166,7 +198,8 @@ strong {
 	@include clay-css($strong);
 }
 
-small {
+small,
+.small {
 	@include clay-css($small);
 }
 
@@ -186,38 +219,75 @@ sup {
 // Code
 //
 
-code,
-kbd,
+code {
+	@include clay-css($code);
+}
+
+a > code {
+	color: inherit;
+}
+
+kbd {
+	@include clay-css($kbd);
+
+	kbd {
+		@include clay-css($kbd-kbd);
+	}
+}
+
 samp {
-	font-family: $font-family-monospace;
-	@include font-size(1em); // Correct the odd `em` font sizing in all browsers.
+	@include clay-css($samp);
 }
 
 pre {
-	font-family: $font-family-monospace;
-	font-size: 1em;
-	// Remove browser default top margin
-	margin-top: 0;
-	// Reset browser default of `1em` to use `rem`s
-	margin-bottom: 1rem;
-	// Don't allow content to break outside
-	overflow: auto;
+	@include clay-css($pre);
+
+	code {
+		@include clay-css($pre-code);
+	}
+}
+
+.pre-scrollable {
+	@include clay-css($pre-scrollable);
 }
 
 summary {
-	display: list-item; // Add the correct display in all browsers
+	// Add the correct display in all browsers
+
+	display: list-item;
 	cursor: pointer;
 }
 
 template {
-	display: none; // Add the correct display in IE
+	// Add the correct display in IE
+
+	display: none;
 }
 
-// Always hide an element with the `hidden` HTML attribute (from PureCSS).
-// Needed for proper display in IE 10-.
-[hidden] {
-	display: none !important;
+// Lead
+
+.lead {
+	@include clay-css($lead);
 }
+
+// Display
+
+.display-1 {
+	@include clay-css($display-1);
+}
+
+.display-2 {
+	@include clay-css($display-2);
+}
+
+.display-3 {
+	@include clay-css($display-3);
+}
+
+.display-4 {
+	@include clay-css($display-4);
+}
+
 
 // Reference Mark
 
@@ -232,6 +302,8 @@ template {
 
 mark,
 .mark {
+	@include clay-css($mark);
+
 	@include clay-highlight-text($mark-bg, $mark-color);
 }
 
