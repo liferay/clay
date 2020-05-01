@@ -1,26 +1,33 @@
 name: CI
+
 on:
     pull_request:
+        branches: ['master']
+    push:
         branches: ['master']
 
 jobs:
     run:
         runs-on: ubuntu-latest
         steps:
+            - uses: actions/checkout@v2
             - uses: actions/setup-node@v1
-            - name: Install yarn
-              run: npm install -g yarn
-            - name: Checkout BASE
-              uses: actions/checkout@v2
-              with:
-                  ref: ${{ github.event.pull_request.base.sha }}
-            - name: Install Dependencies
-              run: yarn install
-            - name: Run Jest
-              run: yarn test
+            - name: Install yarn & Dependencies
+              run: |
+                  npm install -g yarn
+                  yarn install
             - name: Check Formatting
               run: |
                   yarn lint
                   yarn format:check
             - name: Verify Dependencies
               run: yarn checkDeps
+            - name: Run Jest
+              env:
+                  CI: true
+              run: yarn test --coverage
+            - name: Push to Coveralls
+              uses: coverallsapp/github-action@v1.1.1
+              with:
+                  path-to-lcov: ./coverage/lcov.info
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
