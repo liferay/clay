@@ -1,0 +1,25 @@
+//
+// Figures
+//
+
+figure {
+	// Apply a consistent margin strategy (matches our type styles).
+	margin: 0 0 1rem;
+}
+
+
+//
+// Images and content
+//
+
+img {
+	vertical-align: middle;
+	border-style: none; // Remove the border on images inside links in IE 10-.
+}
+
+svg {
+	// Workaround for the SVG overflow bug in IE10/11 is still required.
+	// See https://github.com/twbs/bootstrap/issues/26878
+	overflow: hidden;
+	vertical-align: middle;
+}

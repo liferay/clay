@@ -1,3 +1,7 @@
+progress {
+	vertical-align: baseline; // Add the correct vertical alignment in Chrome, Firefox, and Opera.
+}
+
 .progress {
 	flex-grow: 1;
 	min-width: $progress-min-width;

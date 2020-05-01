@@ -1,3 +1,224 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	@include clay-css($html);
+}
+
+// Shim for "new" HTML5 structural elements to display correctly (IE10, older browsers)
+// TODO: remove in v5
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+	display: block;
+}
+
+body {
+	@include clay-css($body);
+
+	@include clay-scale-component {
+		@include clay-css($body-mobile);
+	}
+}
+
+// Future-proof rule: in browsers that support :focus-visible, suppress the focus outline
+// on elements that programmatically receive focus but wouldn't normally show a visible
+// focus outline. In general, this would mean that the outline is only applied if the
+// interaction that led to the element receiving programmatic focus was a keyboard interaction,
+// or the browser has somehow determined that the user is primarily a keyboard user and/or
+// wants focus outlines to always be presented.
+//
+// See https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible
+// and https://developer.paciellogroup.com/blog/2018/03/focus-visible-and-backwards-compatibility/
+
+[tabindex="-1"]:focus:not(:focus-visible) {
+	outline: 0 !important;
+}
+
+hr {
+	@include clay-css($hr);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	@include clay-css($headings);
+}
+
+// Headings
+
+h1,
+.h1 {
+	@include clay-css($h1);
+
+	@include clay-scale-component {
+		@include clay-css($h1-mobile);
+	}
+}
+
+h2,
+.h2 {
+	@include clay-css($h2);
+
+	@include clay-scale-component {
+		@include clay-css($h2-mobile);
+	}
+}
+
+h3,
+.h3 {
+	@include clay-css($h3);
+
+	@include clay-scale-component {
+		@include clay-css($h3-mobile);
+	}
+}
+
+h4,
+.h4 {
+	@include clay-css($h4);
+
+	@include clay-scale-component {
+		@include clay-css($h4-mobile);
+	}
+}
+
+h5,
+.h5 {
+	@include clay-css($h5);
+
+	@include clay-scale-component {
+		@include clay-css($h5-mobile);
+	}
+}
+
+h6,
+.h6 {
+	@include clay-css($h6);
+
+	@include clay-scale-component {
+		@include clay-css($h6-mobile);
+	}
+}
+
+p {
+	@include clay-css($paragraph);
+}
+
+// Abbreviations
+//
+// 1. Duplicate behavior to the data-* attribute for our tooltip plugin
+// 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+// 3. Add explicit cursor to indicate changed behavior.
+// 4. Remove the bottom border in Firefox 39-.
+// 5. Prevent the text-decoration to be skipped.
+
+abbr[title],
+abbr[data-original-title] { // 1
+	text-decoration: underline; // 2
+	text-decoration: underline dotted; // 2
+	cursor: help; // 3
+	border-bottom: 0; // 4
+	text-decoration-skip-ink: none; // 5
+}
+
+address {
+	@include clay-css($address)
+}
+
+ol {
+	@include clay-css($ol);
+}
+
+ul {
+	@include clay-css($ul);
+}
+
+dl {
+	@include clay-css($dl);
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+	margin-bottom: 0;
+}
+
+dt {
+	@include clay-css($dt);
+}
+
+dd {
+	@include clay-css($dd);
+}
+
+blockquote {
+	@include clay-css($blockquote);
+}
+
+b {
+	@include clay-css($b);
+}
+
+strong {
+	@include clay-css($strong);
+}
+
+small {
+	@include clay-css($small);
+}
+
+sub {
+	@include clay-css($sub);
+}
+
+sup {
+	@include clay-css($sup);
+}
+
+[href] {
+	@include clay-link($link);
+}
+
+//
+// Code
+//
+
+code,
+kbd,
+samp {
+	font-family: $font-family-monospace;
+	@include font-size(1em); // Correct the odd `em` font sizing in all browsers.
+}
+
+pre {
+	font-family: $font-family-monospace;
+	font-size: 1em;
+	// Remove browser default top margin
+	margin-top: 0;
+	// Reset browser default of `1em` to use `rem`s
+	margin-bottom: 1rem;
+	// Don't allow content to break outside
+	overflow: auto;
+}
+
+summary {
+	display: list-item; // Add the correct display in all browsers
+	cursor: pointer;
+}
+
+template {
+	display: none; // Add the correct display in IE
+}
+
+// Always hide an element with the `hidden` HTML attribute (from PureCSS).
+// Needed for proper display in IE 10-.
+[hidden] {
+	display: none !important;
+}
+
 // Reference Mark
 
 .reference-mark {

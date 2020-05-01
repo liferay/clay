@@ -1,3 +1,227 @@
+$html: () !default;
+$html: map-merge((
+	// Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.
+
+	-webkit-text-size-adjust: 100%,
+
+	// Change the default tap highlight to be completely transparent in iOS.
+
+	-webkit-tap-highlight-color: rgba($black, 0),
+), $html);
+
+$body-moz-osx-font-smoothing: $moz-osx-font-smoothing !default;
+$body-webkit-font-smoothing: $webkit-font-smoothing !default;
+$body-text-align: inherit !default;
+
+$body: () !default;
+$body: map-merge((
+	background-color: $body-bg,
+	color: $body-color,
+	font-family: $font-family-base,
+	font-size: $font-size-base,
+
+	-moz-osx-font-smoothing: $body-moz-osx-font-smoothing,
+	-webkit-font-smoothing: $body-webkit-font-smoothing,
+
+	font-weight: $font-weight-base,
+	line-height: $line-height-base,
+	margin: 0,
+
+	// Display traditional scrollbar in IE
+
+	-ms-overflow-style: scrollbar,
+
+	text-align: $body-text-align,
+), $body);
+
+$body-mobile: () !default;
+$body-mobile: map-merge((
+	font-size: $font-size-base-mobile,
+), $body-mobile);
+
+$hr: () !default;
+$hr: map-merge((
+	// Show the overflow in Edge and IE.
+
+	overflow: visible,
+), $hr);
+
+$headings: () !default;
+$headings: map-merge((
+	color: $headings-color,
+	font-family: $headings-font-family,
+	font-weight: $headings-font-weight,
+	line-height: $headings-line-height,
+	margin-bottom: $headings-margin-bottom,
+	margin-top: 0,
+), $headings);
+
+$h1-font-size-mobile: null !default;
+$h2-font-size-mobile: null !default;
+$h3-font-size-mobile: null !default;
+$h4-font-size-mobile: null !default;
+$h5-font-size-mobile: null !default;
+$h6-font-size-mobile: null !default;
+
+$h1: () !default;
+$h1: map-merge((
+	font-size: $h1-font-size,
+), $h1);
+
+$h2: () !default;
+$h2: map-merge((
+	font-size: $h2-font-size,
+), $h2);
+
+$h3: () !default;
+$h3: map-merge((
+	font-size: $h3-font-size,
+), $h3);
+
+$h4: () !default;
+$h4: map-merge((
+	font-size: $h4-font-size,
+), $h4);
+
+$h5: () !default;
+$h5: map-merge((
+	font-size: $h5-font-size,
+), $h5);
+
+$h6: () !default;
+$h6: map-merge((
+	font-size: $h6-font-size,
+), $h6);
+
+$h1-mobile: () !default;
+$h1-mobile: map-merge((
+	font-size: $h1-font-size-mobile,
+), $h1-mobile);
+
+$h2-mobile: () !default;
+$h2-mobile: map-merge((
+	font-size: $h2-font-size-mobile,
+), $h2-mobile);
+
+$h3-mobile: () !default;
+$h3-mobile: map-merge((
+	font-size: $h3-font-size-mobile,
+), $h3-mobile);
+
+$h4-mobile: () !default;
+$h4-mobile: map-merge((
+	font-size: $h4-font-size-mobile,
+), $h4-mobile);
+
+$h5-mobile: () !default;
+$h5-mobile: map-merge((
+	font-size: $h5-font-size-mobile,
+), $h5-mobile);
+
+$h6-mobile: () !default;
+$h6-mobile: map-merge((
+	font-size: $h6-font-size-mobile,
+), $h6-mobile);
+
+$paragraph: () !default;
+$paragraph: map-merge((
+	margin-bottom: $paragraph-margin-bottom,
+	margin-top: 0,
+), $paragraph);
+
+$address: () !default;
+$address: map-merge((
+	font-style: normal,
+	line-height: inherit,
+	margin-bottom: 1rem,
+), $address);
+
+$ol: () !default;
+$ol: map-merge((
+	margin-bottom: 1rem,
+	margin-top: 0,
+), $ol);
+
+$ul: () !default;
+$ul: map-merge((
+	margin-bottom: 1rem,
+	margin-top: 0,
+), $ul);
+
+$dl: () !default;
+$dl: map-merge((
+	margin-bottom: 1rem,
+	margin-top: 0,
+), $dl);
+
+$dt: () !default;
+$dt: map-merge((
+	font-weight: $dt-font-weight,
+), $dt);
+
+$dd: () !default;
+$dd: map-merge((
+	margin-bottom: 0.5rem,
+	margin-left: 0,
+), $dd);
+
+$blockquote: () !default;
+$blockquote: map-merge((
+	margin: 0 0 1rem,
+), $blockquote);
+
+$b-font-weight: null !default;
+
+$b: () !default;
+$b: map-merge((
+	font-weight: $b-font-weight,
+), $b);
+
+$strong-font-weight: null !default;
+
+$strong: () !default;
+$strong: map-merge((
+	font-weight: $strong-font-weight,
+), $strong);
+
+$small: () !default;
+$small: map-merge((
+	font-size: 80%,
+), $small);
+
+$sub: () !default;
+$sub: map-merge((
+	bottom: -0.25em,
+	font-size: 75%,
+	line-height: 0,
+	position: relative,
+	vertical-align: baseline,
+), $sub);
+
+$sup: () !default;
+$sup: map-merge((
+	font-size: 75%,
+	line-height: 0,
+	position: relative,
+	top: -0.5em,
+	vertical-align: baseline,
+), $sup);
+
+$link: () !default;
+$link: map-merge((
+	// Remove the gray background on active links in IE 10.
+
+	background-color: transparent,
+
+	color: $link-color,
+	cursor: $link-cursor,
+	text-decoration: $link-decoration,
+	hover: (
+		color: $link-hover-color,
+		text-decoration: $link-hover-decoration,
+	),
+), $link);
+
 $reference-mark-font-size: 0.75rem !default;
 $reference-mark-vertical-align: super !default;
 

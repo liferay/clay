@@ -1,3 +1,32 @@
+// Remove the default `border-radius` that macOS Chrome adds.
+//
+// Details at https://github.com/twbs/bootstrap/issues/24093
+button {
+	border-radius: 0;
+	margin: 0; // Remove the margin in Firefox and Safari
+	font-family: inherit;
+	@include font-size(inherit);
+	line-height: inherit;
+	overflow: visible; // Show the overflow in Edge
+	text-transform: none; // Remove the inheritance of text transform in Firefox
+	-webkit-appearance: button;
+}
+
+// Work around a Firefox/IE bug where the transparent `button` background
+// results in a loss of the default `button` focus styles.
+//
+// Credit: https://github.com/suitcss/base/
+button:focus {
+	outline: 1px dotted;
+	outline: 5px auto -webkit-focus-ring-color;
+}
+
+// Remove inner border and padding from Firefox, but don't restore the outline like Normalize.
+button::-moz-focus-inner {
+	padding: 0;
+	border-style: none;
+}
+
 a.btn.disabled {
 	pointer-events: all;
 }
