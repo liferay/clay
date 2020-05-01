@@ -1,10 +1,14 @@
 @import 'variables/_globals';
 @import 'variables/_globals-z-index';
 
+@import 'variables/_icons';
+@import 'variables/_type';
+
+@import 'variables/_buttons';
+
 @import 'variables/_alerts';
 @import 'variables/_badges';
 @import 'variables/_breadcrumbs';
-@import 'variables/_buttons';
 @import 'variables/_empty-state';
 @import 'variables/_labels';
 @import 'variables/_stickers';
@@ -31,8 +35,6 @@
 @import 'variables/_multi-step-nav';
 @import 'variables/_navs';
 
-@import 'variables/_icons';
-
 @import 'variables/_menubar';
 @import 'variables/_navbar';
 
@@ -53,6 +55,5 @@
 @import 'variables/_timelines';
 @import 'variables/_toggle-switch';
 @import 'variables/_tooltip';
-@import 'variables/_type';
 
 @import 'variables/_utilities';
