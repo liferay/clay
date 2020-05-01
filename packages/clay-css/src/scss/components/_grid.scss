@@ -1,3 +1,167 @@
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+@if $enable-grid-classes {
+	// Single container class with breakpoint max-widths
+	.container {
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: $grid-gutter-width / 2;
+		padding-right: $grid-gutter-width / 2;
+		width: 100%;
+
+		@each $breakpoint, $container-max-width in $container-max-widths {
+			@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+				max-width: $container-max-width;
+			}
+		}
+	}
+
+	// 100% wide container at all breakpoints
+	%container-fluid {
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: $grid-gutter-width / 2;
+		padding-right: $grid-gutter-width / 2;
+		width: 100%;
+	}
+
+	.container-fluid {
+		@extend %container-fluid !optional;
+	}
+
+	// Responsive containers that are 100% wide until a breakpoint
+	@each $breakpoint, $container-max-width in $container-max-widths {
+		.container-#{$breakpoint} {
+			@extend %container-fluid !optional;
+		}
+
+		@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+			%responsive-container-#{$breakpoint} {
+				max-width: $container-max-width;
+			}
+
+			@each $name, $width in $grid-breakpoints {
+				@if ($container-max-width > $width or $breakpoint == $name) {
+					.container#{breakpoint-infix($name, $grid-breakpoints)} {
+						@extend %responsive-container-#{$breakpoint} !optional;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// Row
+//
+// Rows contain your columns.
+
+@if $enable-grid-classes {
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -$grid-gutter-width / 2;
+		margin-right: -$grid-gutter-width / 2;
+	}
+
+	// Remove the negative margin from default .row, then the horizontal padding
+	// from all immediate children columns (to prevent runaway style inheritance).
+	.no-gutters {
+		margin-right: 0;
+		margin-left: 0;
+
+		> .col,
+		> [class*="col-"] {
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+}
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@if $enable-grid-classes {
+	// Common properties for all breakpoints
+	%grid-column {
+		position: relative;
+		width: 100%;
+		padding-right: $grid-gutter-width / 2;
+		padding-left: $grid-gutter-width / 2;
+	}
+
+	@each $breakpoint in map-keys($grid-breakpoints) {
+		$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+		// Allow columns to stretch full width below their breakpoints
+		@for $i from 1 through $grid-columns {
+			.col#{$infix}-#{$i} {
+				@extend %grid-column;
+			}
+		}
+		.col#{$infix},
+		.col#{$infix}-auto {
+			@extend %grid-column;
+		}
+
+		@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+			// Provide basic `.col-{bp}` classes for equal-width flexbox columns
+			.col#{$infix} {
+				flex-basis: 0;
+				flex-grow: 1;
+				max-width: 100%;
+			}
+
+			@for $i from 1 through $grid-row-columns {
+				.row-cols#{$infix}-#{$i} {
+					& > * {
+						flex: 0 0 100% / $i;
+						max-width: 100% / $i;
+					}
+				}
+			}
+
+			.col#{$infix}-auto {
+				flex: 0 0 auto;
+				max-width: 100%; // Reset earlier grid tiers
+				width: auto;
+			}
+
+			@for $i from 1 through $grid-columns {
+				.col#{$infix}-#{$i} {
+					flex: 0 0 percentage($i / $grid-columns);
+					// Add a `max-width` to ensure content within each column does not blow out
+					// the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
+					// do not appear to require this.
+					max-width: percentage($i / $grid-columns);
+				}
+			}
+
+			.order#{$infix}-first { order: -1; }
+
+			.order#{$infix}-last { order: $grid-columns + 1; }
+
+			@for $i from 0 through $grid-columns {
+				.order#{$infix}-#{$i} { order: $i; }
+			}
+
+			// `$grid-columns - 1` because offsetting by the width of an entire row isn't possible
+			@for $i from 0 through ($grid-columns - 1) {
+				@if not ($infix == "" and $i == 0) { // Avoid emitting useless .offset-0
+					.offset#{$infix}-#{$i} {
+						$num: $i / $grid-columns;
+						margin-left: if($num == 0, 0, percentage($num));
+					}
+				}
+			}
+		}
+	}
+}
+
+
 @if ($enable-grid-classes) {
 	.container-fluid-max {
 		@each $breakpoint, $max-width in $container-max-widths {
