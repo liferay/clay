@@ -53,6 +53,30 @@ $enable-scaling-components: false !default;
 $enable-c-inner: true !default;
 $scaling-breakpoint-down: sm !default;
 
+@function clay-enable-rounded($radius) {
+	@if ($enable-rounded) {
+		@return $radius;
+	}
+
+	@return null;
+}
+
+@function clay-enable-shadows($shadow...) {
+	@if ($enable-shadows) {
+		@return $shadow;
+	}
+
+	@return null;
+}
+
+@function clay-enable-transitions($transition...) {
+	@if ($enable-transitions) {
+		@return $transition;
+	}
+
+	@return null;
+}
+
 $rounded-border-radius: $border-radius !default;
 $rounded-circle-border-radius: 5000px !default;
 $rounded-0-border-radius: 0 !default;
