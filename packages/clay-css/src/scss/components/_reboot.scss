@@ -52,6 +52,17 @@ body {
 	background-color: $body-bg; // 2
 }
 
+body {
+	-moz-osx-font-smoothing: $body-moz-osx-font-smoothing;
+	-ms-overflow-style: scrollbar;
+	-webkit-font-smoothing: $body-webkit-font-smoothing;
+	text-align: $body-text-align;
+
+	@include clay-scale-component {
+		font-size: $font-size-base-mobile;
+	}
+}
+
 // Future-proof rule: in browsers that support :focus-visible, suppress the focus outline
 // on elements that programmatically receive focus but wouldn't normally show a visible
 // focus outline. In general, this would mean that the outline is only applied if the
@@ -90,6 +101,50 @@ hr {
 h1, h2, h3, h4, h5, h6 {
 	margin-top: 0;
 	margin-bottom: $headings-margin-bottom;
+}
+
+// Headings
+
+h1,
+.h1 {
+	@include clay-scale-component {
+		font-size: $h1-font-size-mobile;
+	}
+}
+
+h2,
+.h2 {
+	@include clay-scale-component {
+		font-size: $h2-font-size-mobile;
+	}
+}
+
+h3,
+.h3 {
+	@include clay-scale-component {
+		font-size: $h3-font-size-mobile;
+	}
+}
+
+h4,
+.h4 {
+	@include clay-scale-component {
+		font-size: $h4-font-size-mobile;
+	}
+}
+
+h5,
+.h5 {
+	@include clay-scale-component {
+		font-size: $h5-font-size-mobile;
+	}
+}
+
+h6,
+.h6 {
+	@include clay-scale-component {
+		font-size: $h6-font-size-mobile;
+	}
 }
 
 // Reset margins on paragraphs
@@ -156,6 +211,14 @@ strong {
 	font-weight: $font-weight-bolder; // Add the correct font weight in Chrome, Edge, and Safari
 }
 
+b {
+	font-weight: $b-font-weight;
+}
+
+strong {
+	font-weight: $strong-font-weight;
+}
+
 small {
 	@include font-size(80%); // Add the correct font size in all browsers
 }
@@ -189,6 +252,12 @@ a {
 	@include hover() {
 	color: $link-hover-color;
 	text-decoration: $link-hover-decoration;
+	}
+}
+
+a {
+	@if ($link-cursor != pointer) {
+		cursor: $link-cursor;
 	}
 }
 
