@@ -172,6 +172,19 @@
 		)
 	);
 
+	$active-class: setter(map-get($map, active-class), ());
+	$active-class: map-merge(
+		(
+			background-color: map-get($active, background-color),
+			border-color: map-get($active, border-color),
+			box-shadow: map-get($active, box-shadow),
+			color: map-get($active, color),
+			opacity: map-get($active, opacity),
+			z-index: map-get($active, z-index),
+		),
+		$active-class
+	);
+
 	$active-class-after: setter(map-get($map, active-class-after), ());
 
 	$active-focus: setter(map-get($map, active-focus), ());
@@ -347,6 +360,14 @@
 		$c-inner
 	);
 
+	$c-inner-mobile: setter(map-get($map, c-inner-mobile), ());
+	$c-inner-mobile: map-merge((
+		margin-bottom: math-sign(map-get($mobile, padding-bottom)),
+		margin-left: math-sign(map-get($mobile, padding-left)),
+		margin-right: math-sign(map-get($mobile, padding-right)),
+		margin-top: math-sign(map-get($mobile, padding-top)),
+	), $c-inner-mobile);
+
 	@if ($enabled) {
 		@include clay-css($base);
 
@@ -360,6 +381,12 @@
 		@if ($breakpoint-down) {
 			@include media-breakpoint-down($breakpoint-down) {
 				@include clay-css($mobile);
+
+				@if ($enable-c-inner) {
+					.c-inner {
+						@include clay-css($c-inner-mobile);
+					}
+				}
 			}
 		}
 
@@ -372,8 +399,7 @@
 			@include clay-css($focus);
 		}
 
-		&:not([disabled]):not(.disabled):active,
-		&:not([disabled]):not(.disabled).active,
+		&:active,
 		.show > &.dropdown-toggle {
 			@include clay-css($active);
 
@@ -383,6 +409,8 @@
 		}
 
 		&.active {
+			@include clay-css($active-class);
+
 			&::after {
 				@include clay-css($active-class-after);
 			}
