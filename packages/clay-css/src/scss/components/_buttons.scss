@@ -1,73 +1,33 @@
-// Remove the default `border-radius` that macOS Chrome adds.
-//
-// Details at https://github.com/twbs/bootstrap/issues/24093
 button {
-	border-radius: 0;
-	margin: 0; // Remove the margin in Firefox and Safari
-	font-family: inherit;
-	@include font-size(inherit);
-	line-height: inherit;
-	overflow: visible; // Show the overflow in Edge
-	text-transform: none; // Remove the inheritance of text transform in Firefox
 	-webkit-appearance: button;
-}
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
 
-// Work around a Firefox/IE bug where the transparent `button` background
-// results in a loss of the default `button` focus styles.
-//
-// Credit: https://github.com/suitcss/base/
-button:focus {
-	outline: 1px dotted;
-	outline: 5px auto -webkit-focus-ring-color;
-}
+	// Remove the margin in Safari
 
-// Remove inner border and padding from Firefox, but don't restore the outline like Normalize.
-button::-moz-focus-inner {
-	padding: 0;
-	border-style: none;
-}
+	margin: 0;
 
-a.btn.disabled {
-	pointer-events: all;
+	// Show the overflow in Edge
+
+	overflow: visible;
 }
 
 .btn {
-	font-size: $btn-font-size;
-
-	@include clay-scale-component {
-		font-size: $btn-font-size-mobile;
-		padding-bottom: $btn-padding-y-mobile;
-		padding-left: $btn-padding-x-mobile;
-		padding-right: $btn-padding-x-mobile;
-		padding-top: $btn-padding-y-mobile;
-	}
-
-	&:not(:disabled):not(.disabled) {
-		cursor: $btn-cursor;
-	}
-
-	&.disabled,
-	&:disabled {
-		cursor: $btn-disabled-cursor;
-
-		&:active {
-			pointer-events: none;
-		}
-	}
+	@include clay-button-variant($c-btn);
 }
 
 .btn .inline-item {
-	font-size: $btn-inline-item-font-size;
+	@include clay-css($c-btn-c-inline-item);
 }
 
 .btn-section {
-	display: block;
-	font-size: $btn-section-font-size;
-	font-weight: $btn-section-font-weight;
-	line-height: $btn-section-line-height;
+	@include clay-css($c-btn-section);
 }
 
 // Button Sizes
+
+// Placeholder `%clay-btn-lg` is deprecated
 
 %clay-btn-lg {
 	@include border-radius($btn-border-radius-lg);
@@ -96,25 +56,15 @@ a.btn.disabled {
 	}
 }
 
-.btn-lg {
-	font-size: $btn-font-size-lg;
-
-	@include clay-scale-component {
-		font-size: $btn-font-size-lg-mobile;
-		padding-bottom: $btn-padding-y-lg-mobile;
-		padding-left: $btn-padding-x-lg-mobile;
-		padding-right: $btn-padding-x-lg-mobile;
-		padding-top: $btn-padding-y-lg-mobile;
-	}
-
-	.inline-item {
-		font-size: $btn-inline-item-font-size-lg;
-	}
-
-	.btn-section {
-		font-size: $btn-section-font-size-lg;
-	}
+%c-btn-lg {
+	@include clay-button-variant($c-btn-lg);
 }
+
+.btn-lg {
+	@extend %c-btn-lg !optional;
+}
+
+// Placeholder `%clay-btn-sm` is deprecated
 
 %clay-btn-sm {
 	@include border-radius($btn-border-radius-sm);
@@ -143,27 +93,17 @@ a.btn.disabled {
 	}
 }
 
+%c-btn-sm {
+	@include clay-button-variant($c-btn-sm);
+}
+
 .btn-sm {
-	font-size: $btn-font-size-sm;
-
-	@include clay-scale-component {
-		font-size: $btn-font-size-sm-mobile;
-		padding-bottom: $btn-padding-y-sm-mobile;
-		padding-left: $btn-padding-x-sm-mobile;
-		padding-right: $btn-padding-x-sm-mobile;
-		padding-top: $btn-padding-y-sm-mobile;
-	}
-
-	.inline-item {
-		font-size: $btn-inline-item-font-size-sm;
-	}
-
-	.btn-section {
-		font-size: $btn-section-font-size-sm;
-	}
+	@extend %c-btn-sm !optional;
 }
 
 // Button Unstyled
+
+// Placeholder `%btn-unstyled` is deprecated
 
 %btn-unstyled {
 	background-color: rgba(0, 0, 0, 0.001);
@@ -179,126 +119,35 @@ a.btn.disabled {
 	vertical-align: baseline;
 }
 
+%c-btn-unstyled {
+	@include clay-button-variant($c-btn-unstyled);
+}
+
 .btn-unstyled {
-	@extend %btn-unstyled;
+	@extend %c-btn-unstyled !optional;
 }
 
 // Button Monospaced
 
 .btn-monospaced {
-	height: $btn-monospaced-size;
-	line-height: 1;
-	overflow: hidden;
-	padding-bottom: $btn-monospaced-padding-y;
-	padding-left: $btn-monospaced-padding-x;
-	padding-right: $btn-monospaced-padding-x;
-	padding-top: $btn-monospaced-padding-y;
-	text-align: center;
-	white-space: normal;
-	width: $btn-monospaced-size;
-	word-wrap: break-word;
-
-	@include clay-scale-component {
-		height: $btn-monospaced-size-mobile;
-		width: $btn-monospaced-size-mobile;
-	}
-
-	&.btn-lg {
-		height: $btn-monospaced-size-lg;
-		padding-bottom: $btn-monospaced-padding-y-lg;
-		padding-left: $btn-monospaced-padding-x-lg;
-		padding-right: $btn-monospaced-padding-x-lg;
-		padding-top: $btn-monospaced-padding-y-lg;
-		width: $btn-monospaced-size-lg;
-
-		@include clay-scale-component {
-			height: $btn-monospaced-size-lg-mobile;
-			width: $btn-monospaced-size-lg-mobile;
-		}
-	}
-
-	&.btn-sm {
-		height: $btn-monospaced-size-sm;
-		padding-bottom: $btn-monospaced-padding-y-sm;
-		padding-left: $btn-monospaced-padding-x-sm;
-		padding-right: $btn-monospaced-padding-x-sm;
-		padding-top: $btn-monospaced-padding-y-sm;
-		width: $btn-monospaced-size-sm;
-
-		@include clay-scale-component {
-			height: $btn-monospaced-size-sm-mobile;
-			width: $btn-monospaced-size-sm-mobile;
-		}
-	}
-
-	&.btn .lexicon-icon {
-		margin-top: 0;
-	}
+	@include clay-button-variant($c-btn-monospaced);
 }
 
-// Button C Inner
+.btn-monospaced.btn-lg {
+	@include clay-button-variant($c-btn-monospaced-lg);
+}
 
-@if ($enable-c-inner) {
-	.btn .c-inner {
-		margin: #{math-sign($btn-padding-y)} #{math-sign($btn-padding-x)};
+.btn-monospaced.btn-sm {
+	@include clay-button-variant($c-btn-monospaced-sm);
+}
 
-		@include clay-scale-component {
-			margin: #{math-sign($btn-padding-y-mobile)} #{math-sign(
-					$btn-padding-x-mobile
-				)};
-		}
-	}
+// Button Block
 
-	.btn-unstyled .c-inner {
-		margin: 0;
-		max-width: none;
-	}
+.btn-block {
+	@include clay-css($c-btn-block);
 
-	.btn-monospaced .c-inner {
-		align-items: center;
-		display: flex;
-		flex-direction: column;
-		height: calc(100% + #{$btn-monospaced-padding-y * 2});
-		justify-content: center;
-		margin: #{math-sign($btn-monospaced-padding-y)} 0;
-		padding: 0;
-		width: 100%;
-	}
-
-	.btn-sm {
-		.c-inner {
-			margin: #{math-sign($btn-padding-y-sm)}
-				#{math-sign($btn-padding-x-sm)};
-
-			@include clay-scale-component {
-				margin: #{math-sign($btn-padding-y-sm-mobile)} #{math-sign(
-						$btn-padding-x-sm-mobile
-					)};
-			}
-		}
-
-		&.btn-monospaced .c-inner {
-			height: calc(100% + #{$btn-monospaced-padding-y-sm * 2});
-			margin: #{math-sign($btn-monospaced-padding-y-sm)} 0;
-		}
-	}
-
-	.btn-lg {
-		.c-inner {
-			margin: #{math-sign($btn-padding-y-lg)}
-				#{math-sign($btn-padding-x-lg)};
-
-			@include clay-scale-component {
-				margin: #{math-sign($btn-padding-y-lg-mobile)} #{math-sign(
-						$btn-padding-x-lg-mobile
-					)};
-			}
-		}
-
-		&.btn-monospaced .c-inner {
-			height: calc(100% + #{$btn-monospaced-padding-y-lg * 2});
-			margin: #{math-sign($btn-monospaced-padding-y-lg)} 0;
-		}
+	+ .btn-block {
+		@include clay-css($c-btn-block-c-btn-block);
 	}
 }
 
@@ -333,25 +182,7 @@ a.btn.disabled {
 }
 
 .btn-outline-borderless {
-	border-color: transparent;
-
-	&:hover,
-	&:focus {
-		border-color: transparent;
-	}
-
-	&:disabled,
-	&.disabled {
-		border-color: transparent;
-	}
-}
-
-.btn-outline-borderless:not(:disabled):not(.disabled):active {
-	border-color: transparent;
-}
-
-.show > .btn-outline-borderless.dropdown-toggle {
-	border-color: transparent;
+	@include clay-button-variant($c-btn-outline-borderless);
 }
 
 // Loading Icons with Buttons
