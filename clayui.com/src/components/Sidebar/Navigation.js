@@ -68,6 +68,9 @@ class Navigation extends Component {
 				active: this.isActive(section) === true,
 				draft: section.draft,
 				'nav-heading': section.items,
+				'parent-page-active':
+					section.items &&
+					location.pathname.includes(`${section.link}.html`),
 			});
 
 			return (

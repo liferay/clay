@@ -94,4 +94,8 @@
 			transform: rotate(90deg);
 		}
 	}
+
+	.parent-page-active > .nav-link {
+		color: $brand-dark;
+	}
 }
