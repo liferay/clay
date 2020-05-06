@@ -13,7 +13,7 @@ class Navigation extends Component {
 	constructor(props) {
 		super(props);
 
-		this.handleOnClick = this.handleOnClick.bind(this);
+		this.handleToggleCollapse = this.handleToggleCollapse.bind(this);
 		this.handleOnNavigation = this.handleOnNavigation.bind(this);
 	}
 
@@ -21,12 +21,8 @@ class Navigation extends Component {
 	 * @param {!number} index
 	 * @param {!number} depth
 	 * @param {!object} section
-	 * @param {!event} event
 	 */
-	handleOnClick(index, depth, section, event) {
-		event.preventDefault();
-		event.stopPropagation();
-
+	handleToggleCollapse(index, depth, section) {
 		// eslint-disable-next-line react/no-string-refs
 		const elementRef = this.refs[`navItem${index}${depth}`];
 
@@ -72,6 +68,9 @@ class Navigation extends Component {
 				active: this.isActive(section) === true,
 				draft: section.draft,
 				'nav-heading': section.items,
+				'parent-page-active':
+					section.items &&
+					location.pathname.includes(`${section.link}.html`),
 			});
 
 			return (
@@ -82,10 +81,10 @@ class Navigation extends Component {
 				>
 					<Anchor
 						location={location}
-						onclick={(event) =>
-							this.handleOnClick(index, depth, section, event)
+						onNavigation={() => this.handleOnNavigation()}
+						onToggleCollapse={() =>
+							this.handleToggleCollapse(index, depth, section)
 						}
-						onnavigation={() => this.handleOnNavigation()}
 						page={section}
 					/>
 
@@ -93,7 +92,7 @@ class Navigation extends Component {
 						<Navigation
 							depth={depth + 1}
 							location={location}
-							onnavigation={() => this.handleOnNavigation()}
+							onNavigation={() => this.handleOnNavigation()}
 							sectionList={section.items}
 						/>
 					)}
@@ -114,26 +113,30 @@ class Navigation extends Component {
 	}
 }
 
-const Anchor = ({location, onclick, onnavigation, page}) => {
+const Anchor = ({location, onNavigation, onToggleCollapse, page}) => {
 	const link = `${page.link}.html`;
-	const TagName =
-		location.pathname === link || (page.items && !page.indexVisible)
-			? 'a'
-			: Link;
-	const props =
-		location.pathname === link || (page.items && !page.indexVisible)
-			? {href: '#openNav', onClick: onclick}
-			: {onClick: onnavigation, to: link};
+
+	const onClick =
+		location.pathname === link || (page.items && !page.isRoot)
+			? onToggleCollapse
+			: onNavigation;
 
 	return (
-		<TagName className="nav-link" {...props}>
+		<Link className="nav-link" onClick={onClick} to={link}>
 			<span className="c-inner" tabIndex="-1">
 				{page.title}
+
 				{page.items && (
 					<svg
 						className="collapse-toggle"
-						focusable="false"
+						focusable
 						name="keyboardArrowRight"
+						onClick={(event) => {
+							event.preventDefault();
+							event.stopPropagation();
+
+							onToggleCollapse();
+						}}
 						role="presentation"
 					>
 						<path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
@@ -141,7 +144,7 @@ const Anchor = ({location, onclick, onnavigation, page}) => {
 					</svg>
 				)}
 			</span>
-		</TagName>
+		</Link>
 	);
 };
 

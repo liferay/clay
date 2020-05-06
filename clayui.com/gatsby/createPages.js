@@ -117,9 +117,23 @@ const createDocs = (actions, edges, mdx, blacklist = []) => {
 
 module.exports = async ({actions, graphql}) => {
 	actions.createRedirect({
-		fromPath: '/index.html',
+		fromPath: '/docs/css/utilities/index.html',
+		isPermanent: true,
 		redirectInBrowser: true,
-		toPath: '/',
+		toPath: '/docs/css/utilities/autofit.html',
+	});
+	actions.createRedirect({
+		fromPath: '/docs/css/content/index.html',
+		isPermanent: true,
+		redirectInBrowser: true,
+		toPath: '/docs/css/content/typography.html',
+	});
+	actions.createRedirect({
+		fromPath: '/docs/migration/index.html',
+		isPermanent: true,
+		redirectInBrowser: true,
+		toPath:
+			'/docs/migration/migrate-the-clay-components-from-v2-to-v3.html',
 	});
 
 	return graphql(`
