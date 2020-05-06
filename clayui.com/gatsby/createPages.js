@@ -52,7 +52,7 @@ const createDocs = (actions, edges, mdx, blacklist = []) => {
 					const slugBar = slugWithBar(slug);
 					const fromPath = slugBar.endsWith('index.html')
 						? slugBar.replace('index.html', '')
-						: slugBar;
+						: slugBar.replace('.html', '');
 
 					createRedirect({
 						fromPath,
@@ -127,13 +127,6 @@ module.exports = async ({actions, graphql}) => {
 		isPermanent: true,
 		redirectInBrowser: true,
 		toPath: '/docs/css/content/typography.html',
-	});
-	actions.createRedirect({
-		fromPath: '/docs/migration/index.html',
-		isPermanent: true,
-		redirectInBrowser: true,
-		toPath:
-			'/docs/migration/migrate-the-clay-components-from-v2-to-v3.html',
 	});
 
 	return graphql(`

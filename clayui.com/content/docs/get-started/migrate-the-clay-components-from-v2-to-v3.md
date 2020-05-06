@@ -1,5 +1,6 @@
 ---
-title: 'Migrate the Clay Components From v2 to v3'
+title: 'Migrating From v2.x'
+order: 5
 ---
 
 <div class="nav-toc-absolute">
@@ -44,7 +45,7 @@ These components are intended to be consumed via composition, this increases fle
 -   `<ClayDropDown.Item />`: renders basic markup.
 -   `<ClayDropDownWithPagination />`: renders a number of items and includes logic for functionality.
 
-To understand more about the composition applied in Clay v3, read more about [Clay's compositional philosophy](/docs/foundations/composing.html).
+To understand more about the composition applied in Clay v3, read more about [Clay's compositional philosophy](/docs/get-started/composing.html).
 
 To symbolize this change, Clay is distributing the new packages on the scope npm `@clayui`, so instead of using `clay-link`, `clay-button`... you should use `@clayui/link`, `@clayui/button`.
 

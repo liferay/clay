@@ -1,6 +1,7 @@
 ---
-title: 'Composing'
+title: 'Composition Philosophy'
 description: 'Component composition philosophy'
+order: 3
 ---
 
 <div class="nav-toc-absolute">
