@@ -19,7 +19,8 @@ jobs:
             - name: Generate Build Info
               run: |
                   yarn install
-                  yarn checkSize
+                  node ./node_modules/.bin/lerna run --ignore \"clayui.com\" build
+                  yarn genBuildSize
             - name: Clean directory
               run: |
                   git clean -ffdx --exclude /tmp
@@ -32,4 +33,9 @@ jobs:
             - name: Generate Bundle Size Table
               run: |
                   yarn install
-                  yarn checkSize:compare
+                  node ./node_modules/.bin/lerna run --ignore \"clayui.com\" build
+                  yarn genBuildSize:compare
+            - name: Generate Total Size
+              run: |
+                  yarn run bundle
+                  yarn run sizeLimit
