@@ -1,0 +1,66 @@
+.clay-404-page-container {
+	background-image: url('../../static/images/home/bg_white.svg');
+
+	header {
+		background-color: #fff;
+
+		img {
+			width: 32px;
+		}
+	}
+
+	.navbar {
+		width: 100%;
+	}
+
+	.list-inline {
+		a {
+			background-color: $brand-primary;
+			color: #fff;
+			transition: all 0.3s ease-in-out;
+
+			.githubImage {
+				width: 16px;
+				height: 16px;
+				background-size: cover;
+				background-image: url('../../static/images/home/GitHub-Mark-64px.svg');
+			}
+
+			&:hover {
+				background-color: $brand-dark;
+				color: $brand-light;
+				box-shadow: 0 0 0 !important;
+
+				svg {
+					color: $brand-light;
+				}
+			}
+		}
+	}
+
+	.main-content {
+		transform: translateY(-66px);
+
+		@media (max-width: $screen-md) {
+			flex-direction: column;
+			margin: auto 48px !important;
+		}
+
+		@media (max-width: $screen-sm) {
+			margin: auto 24px !important;
+			transform: translateY(0);
+		}
+
+		h1 {
+			color: $brand-primary;
+
+			@media (max-width: $screen-md) {
+				font-size: 4em;
+			}
+
+			@media (max-width: $screen-sm) {
+				font-size: 2.5em;
+			}
+		}
+	}
+}
