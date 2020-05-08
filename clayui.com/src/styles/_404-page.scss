@@ -2,8 +2,6 @@
 	background-image: url('../../static/images/home/bg_white.svg');
 
 	header {
-		background-color: #fff;
-
 		img {
 			width: 32px;
 		}
@@ -29,36 +27,28 @@
 			&:hover {
 				background-color: $brand-dark;
 				color: $brand-light;
-				box-shadow: 0 0 0 !important;
-
-				svg {
-					color: $brand-light;
-				}
+				box-shadow: none !important;
 			}
 		}
 	}
 
 	.main-content {
-		transform: translateY(-66px);
-
-		@media (max-width: $screen-md) {
-			flex-direction: column;
-			margin: auto 48px !important;
+		@media (min-width: $screen-lg + 1) {
+			transform: translateY(-66px);
 		}
 
 		@media (max-width: $screen-sm) {
-			margin: auto 24px !important;
-			transform: translateY(0);
+			padding: 0 24px;
 		}
 
-		h1 {
+		.display-3 {
 			color: $brand-primary;
 
 			@media (max-width: $screen-md) {
 				font-size: 4em;
 			}
 
-			@media (max-width: $screen-sm) {
+			@media (max-width: $screen-xs) {
 				font-size: 2.5em;
 			}
 		}
