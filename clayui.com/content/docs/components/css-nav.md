@@ -9,12 +9,14 @@ title: 'Nav'
 -   [Nav Nested](#nav-nested)
 -   [Nav Nested Margins](#nav-nested-margins)
 -   [Nav Unstyled](#nav-unstyled)
+-   [Nav Pills](#nav-pills)
+-   [Nav Justified](#nav-justified)
 -   [Helpers](#helpers)
 
 </div>
 </div>
 
-<div class="clay-site-alert alert alert-warning">This is a component. Navigations share general markup and styles from the .nav class, therefore the components Nav Pills, Nav Tabs, Nav Underline, Menubar, Navbar, Application Bar, Management Bar, and Navigation Bar all use <code class="gatsby-code-text">.nav</code> as its base.</div>
+<div class="clay-site-alert alert alert-warning">This is a component. Navigations share general markup and styles from the .nav class, therefore the components Nav Tabs, Nav Underline, Menubar, Navbar, Application Bar, Management Bar, and Navigation Bar all use <code class="gatsby-code-text">.nav</code> as its base.</div>
 
 `.nav-link` and `.active.nav-link` in the Nav doesn't have any special styling to make it easier to overwrite via color modifiers used in Clay's components above. If you would like to use a custom color scheme for the Nav, create a custom color modifier class and use the `clay-nav-variant($map)` mixin.
 
@@ -368,6 +370,70 @@ Add `nav-unstyled` to your nav to remove spacing around `nav-link` and `nav-btn`
         <li class="nav-item"><a class="nav-link" href="#1">Categorization</a></li>
         <li class="nav-item"><a class="disabled nav-link" href="#1">Documents and Media</a></li>
         <li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
+    </ul>
+</div>
+
+```html
+<ul class="nav nav-unstyled">
+	<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
+	<li class="nav-item"><a class="nav-link" href="#1">Categorization</a></li>
+	<li class="nav-item">
+		<a class="disabled nav-link" href="#1">Documents and Media</a>
+	</li>
+	<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
+</ul>
+```
+
+### Nav Pills
+
+Add `.nav-pills` to `.nav` to add background colors and border styles.
+
+<div class="sheet-example">
+    <ul class="nav nav-pills">
+        <li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
+        <li class="nav-item"><a class="nav-link" href="#1">Categorization</a></li>
+        <li class="nav-item"><a class="disabled nav-link" href="#1">Documents and Media</a></li>
+        <li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
+    </ul>
+</div>
+
+```html
+<ul class="nav nav-unstyled">
+	<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
+	<li class="nav-item"><a class="nav-link" href="#1">Categorization</a></li>
+	<li class="nav-item">
+		<a class="disabled nav-link" href="#1">Documents and Media</a>
+	</li>
+	<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
+</ul>
+```
+
+### Nav Justified
+
+Add `.nav-justified` to `.nav` to make navigation items equal width relative to its parent container.
+
+<div class="sheet-example">
+    <ul class="nav nav-justified">
+        <li class="nav-item"><a class="active nav-link" href="#1">Fields</a></li>
+        <li class="nav-item"><a class="nav-link" href="#1">Settings</a></li>
+        <li class="nav-item"><a class="disabled nav-link" href="#1">Documents</a></li>
+        <li class="dropdown nav-item">
+            <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1"
+                role="button">
+                Configuration
+                <svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
+                    <use href="/images/icons/icons.svg#caret-bottom"></use>
+                </svg>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#1">Setup</a></li>
+                <li><a class="dropdown-item" href="#1">Supported Clients</a></li>
+                <li><a class="dropdown-item" href="#1">Permissions</a></li>
+                <li><a class="dropdown-item" href="#1">Sharing</a></li>
+                <li class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#1">Scope</a></li>
+            </ul>
+        </li>
     </ul>
 </div>
 

@@ -20,6 +20,11 @@ interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	collapsed?: boolean;
 
 	/**
+	 * Flag to indicate if `disabled` class should be applied.
+	 */
+	disabled?: boolean;
+
+	/**
 	 * Flag to indicate if icon should be shown.
 	 */
 	showIcon?: boolean;
@@ -35,10 +40,11 @@ export const NavLink: React.FunctionComponent<IProps> = ({
 	children,
 	className,
 	collapsed,
+	disabled,
 	showIcon,
 	spritemap,
 	...otherProps
-}) => {
+}: IProps) => {
 	return (
 		<LinkOrButton
 			{...otherProps}
@@ -48,6 +54,7 @@ export const NavLink: React.FunctionComponent<IProps> = ({
 				active,
 				['collapse-icon']: showIcon,
 				collapsed,
+				disabled,
 			})}
 		>
 			{children}
