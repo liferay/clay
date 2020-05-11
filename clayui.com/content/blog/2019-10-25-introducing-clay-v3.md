@@ -56,7 +56,7 @@ In addition to the existing components we had in v2, we introduced some new comp
 
 #### Principles
 
-With the framework change that impacts the way we use and think about the use of components, we developed these new components following React's [composition](https://reactjs.org/docs/composition-vs-inheritance.html) approach, you can read more about [Clay's fundamentals of composition in our documentation](/docs/foundations/composing.html) if you want to dig deeper.
+With the framework change that impacts the way we use and think about the use of components, we developed these new components following React's [composition](https://reactjs.org/docs/composition-vs-inheritance.html) approach, you can read more about [Clay's fundamentals of composition in our documentation](/docs/get-started/composing.html) if you want to dig deeper.
 
 ### Deprecation warning for Clay v2
 
@@ -82,7 +82,7 @@ We have prepared a migration guide from v2 to v3. We hope this can ease the pain
 
 <div class="clay-ullist clay-ullist-margin-sm">
 
--   [Migrate the Clay components from v2 to v3](/docs/migration/migrate-the-clay-components-from-v2-to-v3.html)
+-   [Migrate the Clay components from v2 to v3](/docs/get-started/migrate-the-clay-components-from-v2-to-v3.html)
 
 </div>
 

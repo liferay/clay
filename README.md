@@ -52,7 +52,7 @@ See the [Getting Started](https://clayui.com/docs/get-started/index.html) guide 
 
 Do you already have the Clay v2 components implemented in your project? These handy guides will help you perform the migration from [Clay v2](https://v2.clayui.com) to [v3](https://clayui.com).
 
--   [Migrate the Clay components from v2 to v3](https://clayui.com/docs/migration/migrate-the-clay-components-from-v2-to-v3.html)
+-   [Migrate the Clay components from v2 to v3](https://clayui.com/docs/get-started/migrate-the-clay-components-from-v2-to-v3.html)
 
 ## Contributing
 
