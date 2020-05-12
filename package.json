@@ -3,14 +3,17 @@
 	"repository": "https://github.com/liferay/clay",
 	"size-limit": [
 		{
-			"path": "lib/all.js",
-			"limit": "150 kb"
+			"path": "all.js",
+			"limit": "140 kb",
+			"ignore": [
+				"react",
+				"react-dom"
+			]
 		}
 	],
 	"scripts": {
 		"build:csb": "lerna run --no-bail --ignore \"clayui.com\" build && lerna run --no-bail --ignore \"clayui.com\" build:types",
 		"build": "lerna run build && lerna run build:types",
-		"bundle": "NODE_ENV=production parcel build all.js --target browser --detailed-report --no-cache --no-source-maps --out-dir lib",
 		"checkDeps": "lerna run --ignore \"clayui.com\" build && node scripts/check-deps/check-dependencies.js",
 		"ci": "yarn lint && yarn format:check && yarn test && yarn checkDeps",
 		"coverage": "jest --coverage",
