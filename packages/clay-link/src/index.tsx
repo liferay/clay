@@ -40,7 +40,7 @@ const ClayLink = React.forwardRef<HTMLAnchorElement, IProps>(
 			monospaced,
 			outline,
 			...otherProps
-		},
+		}: IProps,
 		ref
 	) => {
 		const TagOrComponent = React.useContext(ClayLinkContext);
@@ -62,6 +62,8 @@ const ClayLink = React.forwardRef<HTMLAnchorElement, IProps>(
 		);
 	}
 );
+
+ClayLink.displayName = 'ClayLink';
 
 export {ClayLinkContext};
 

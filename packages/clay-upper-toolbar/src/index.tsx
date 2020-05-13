@@ -26,7 +26,7 @@ const Input: React.FunctionComponent<IInputProps> = ({
 	</Item>
 );
 
-Input.displayName = 'Input';
+Input.displayName = 'ClayUpperToolbarInput';
 
 interface IItemProps extends React.HTMLAttributes<HTMLLIElement> {
 	/**
@@ -53,7 +53,7 @@ const Item: React.FunctionComponent<IItemProps> = ({
 	);
 };
 
-Item.displayName = 'Item';
+Item.displayName = 'ClayUpperToolbarItem';
 
 const ClayUpperToolbar: React.FunctionComponent<React.HTMLAttributes<
 	HTMLElement
