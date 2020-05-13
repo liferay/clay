@@ -63,7 +63,7 @@ const ClayLink = React.forwardRef<HTMLAnchorElement, IProps>(
 	}
 );
 
-ClayLink.displayName = 'Link';
+ClayLink.displayName = 'ClayLink';
 
 export {ClayLinkContext};
 

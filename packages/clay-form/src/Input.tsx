@@ -52,7 +52,7 @@ const ClayInputGroupItem = React.forwardRef<HTMLDivElement, IGroupItemProps>(
 	)
 );
 
-ClayInputGroupItem.displayName = 'GroupItem';
+ClayInputGroupItem.displayName = 'ClayInputGroupItem';
 
 interface IGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
@@ -86,7 +86,7 @@ const ClayInputGroup = React.forwardRef<HTMLDivElement, IGroupProps>(
 	)
 );
 
-ClayInputGroup.displayName = 'Group';
+ClayInputGroup.displayName = 'ClayInputGroup';
 
 const ClayInputGroupText = React.forwardRef<
 	HTMLDivElement,
@@ -101,7 +101,7 @@ const ClayInputGroupText = React.forwardRef<
 	</div>
 ));
 
-ClayInputGroupText.displayName = 'GroupText';
+ClayInputGroupText.displayName = 'ClayInputGroupText';
 
 interface IGroupInsetProps
 	extends React.HTMLAttributes<
@@ -153,7 +153,7 @@ const ClayInputGroupInsetItem = React.forwardRef<
 	)
 );
 
-ClayInputGroupInsetItem.displayName = 'GroupInsetItem';
+ClayInputGroupInsetItem.displayName = 'ClayInputGroupInsetItem';
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	/**
