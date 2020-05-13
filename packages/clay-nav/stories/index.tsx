@@ -31,25 +31,6 @@ storiesOf('Components|ClayNav', module)
 			</ClayNav>
 		);
 	})
-	.add('w/ NavPills', () => {
-		return (
-			<ClayNav navPills>
-				<ClayNav.Item>
-					<ClayNav.Link active href="#">
-						{'Active'}
-					</ClayNav.Link>
-				</ClayNav.Item>
-				<ClayNav.Item>
-					<ClayNav.Link href="#">{'Normal'}</ClayNav.Link>
-				</ClayNav.Item>
-				<ClayNav.Item>
-					<ClayNav.Link disabled href="#">
-						{'Disabled'}
-					</ClayNav.Link>
-				</ClayNav.Item>
-			</ClayNav>
-		);
-	})
 	.add('ClayVerticalNav', () => {
 		return (
 			<ClayVerticalNav
