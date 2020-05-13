@@ -11,12 +11,12 @@ import {NavLink} from './NavLink';
 
 interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	/**
-	 * Flag to indicate if `nav-nested` class should be applied.
+	 * Flag to indicate if `nav-nested` class should be applied. Adds padding to indent each nested navigation.
 	 */
 	nested?: boolean;
 
 	/**
-	 * Flag to indicate if `nav-nested-margins` class should be applied.
+	 * Flag to indicate if `nav-nested-margins` class should be applied. Adds margin to indent each nested navigation.
 	 */
 	nestMargins?: boolean;
 
@@ -29,7 +29,14 @@ interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 const Nav: React.FunctionComponent<IProps> & {
 	Item: typeof NavItem;
 	Link: typeof NavLink;
-} = ({children, className, nestMargins, nested, stacked, ...otherProps}) => {
+} = ({
+	children,
+	className,
+	nestMargins,
+	nested,
+	stacked,
+	...otherProps
+}: IProps) => {
 	return (
 		<ul
 			{...otherProps}

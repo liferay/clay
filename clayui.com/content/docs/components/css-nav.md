@@ -14,7 +14,7 @@ title: 'Nav'
 </div>
 </div>
 
-<div class="clay-site-alert alert alert-warning">This is a component. Navigations share general markup and styles from the .nav class, therefore the components Nav Pills, Nav Tabs, Nav Underline, Menubar, Navbar, Application Bar, Management Bar, and Navigation Bar all use <code class="gatsby-code-text">.nav</code> as its base.</div>
+<div class="clay-site-alert alert alert-warning">This is a component. Navigations share general markup and styles from the .nav class, therefore the components Nav Tabs, Nav Underline, Menubar, Navbar, Application Bar, Management Bar, and Navigation Bar all use <code class="gatsby-code-text">.nav</code> as its base.</div>
 
 `.nav-link` and `.active.nav-link` in the Nav doesn't have any special styling to make it easier to overwrite via color modifiers used in Clay's components above. If you would like to use a custom color scheme for the Nav, create a custom color modifier class and use the `clay-nav-variant($map)` mixin.
 
