@@ -27,7 +27,17 @@ interface IGroupItemProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const ClayInputGroupItem = React.forwardRef<HTMLDivElement, IGroupItemProps>(
-	({append, children, className, prepend, shrink, ...otherProps}, ref) => (
+	(
+		{
+			append,
+			children,
+			className,
+			prepend,
+			shrink,
+			...otherProps
+		}: IGroupItemProps,
+		ref
+	) => (
 		<div
 			{...otherProps}
 			className={classNames('input-group-item', className, {
@@ -41,6 +51,8 @@ const ClayInputGroupItem = React.forwardRef<HTMLDivElement, IGroupItemProps>(
 		</div>
 	)
 );
+
+ClayInputGroupItem.displayName = 'ClayInputGroupItem';
 
 interface IGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
@@ -57,7 +69,10 @@ interface IGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const ClayInputGroup = React.forwardRef<HTMLDivElement, IGroupProps>(
-	({children, className, small, stacked, ...otherProps}, ref) => (
+	(
+		{children, className, small, stacked, ...otherProps}: IGroupProps,
+		ref
+	) => (
 		<div
 			{...otherProps}
 			className={classNames('input-group', className, {
@@ -71,6 +86,8 @@ const ClayInputGroup = React.forwardRef<HTMLDivElement, IGroupProps>(
 	)
 );
 
+ClayInputGroup.displayName = 'ClayInputGroup';
+
 const ClayInputGroupText = React.forwardRef<
 	HTMLDivElement,
 	React.HTMLAttributes<HTMLDivElement>
@@ -83,6 +100,8 @@ const ClayInputGroupText = React.forwardRef<
 		{children}
 	</div>
 ));
+
+ClayInputGroupText.displayName = 'ClayInputGroupText';
 
 interface IGroupInsetProps
 	extends React.HTMLAttributes<
@@ -111,7 +130,14 @@ const ClayInputGroupInsetItem = React.forwardRef<
 	IGroupInsetProps
 >(
 	(
-		{after, before, children, className, tag: Tag = 'div', ...otherProps},
+		{
+			after,
+			before,
+			children,
+			className,
+			tag: Tag = 'div',
+			...otherProps
+		}: IGroupInsetProps,
 		ref
 	) => (
 		<Tag
@@ -126,6 +152,8 @@ const ClayInputGroupInsetItem = React.forwardRef<
 		</Tag>
 	)
 );
+
+ClayInputGroupInsetItem.displayName = 'ClayInputGroupInsetItem';
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	/**
@@ -158,7 +186,7 @@ const ClayInput = React.forwardRef<HTMLInputElement, IProps>(
 			insetBefore,
 			sizing,
 			...otherProps
-		},
+		}: IProps,
 		ref
 	) => (
 		<Component

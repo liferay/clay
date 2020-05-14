@@ -16,13 +16,17 @@ storiesOf('Components|ClayNav', module)
 		return (
 			<ClayNav>
 				<ClayNav.Item>
-					<ClayNav.Link href="#">{'One'}</ClayNav.Link>
+					<ClayNav.Link active href="#">
+						{'Active'}
+					</ClayNav.Link>
 				</ClayNav.Item>
 				<ClayNav.Item>
-					<ClayNav.Link href="#">{'Two'}</ClayNav.Link>
+					<ClayNav.Link href="#">{'Normal'}</ClayNav.Link>
 				</ClayNav.Item>
 				<ClayNav.Item>
-					<ClayNav.Link href="#">{'Three'}</ClayNav.Link>
+					<ClayNav.Link disabled href="#">
+						{'Disabled'}
+					</ClayNav.Link>
 				</ClayNav.Item>
 			</ClayNav>
 		);

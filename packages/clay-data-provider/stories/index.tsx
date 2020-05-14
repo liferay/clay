@@ -14,7 +14,7 @@ import '@clayui/css/lib/css/atlas.css';
 
 const Store = React.createContext({});
 
-Store.displayName = 'StoreContext';
+Store.displayName = 'ClayStoreContext';
 
 const ClayDataProviderWithVariablesAndStorage = () => {
 	const [value, setValue] = React.useState<undefined | string>('');

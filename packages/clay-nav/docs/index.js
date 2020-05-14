@@ -4,8 +4,42 @@
  */
 
 import Editor from '$clayui.com/src/components/Editor';
-import {ClayVerticalNav} from '@clayui/nav';
+import ClayNav, {ClayVerticalNav} from '@clayui/nav';
 import React from 'react';
+
+const navigationImports = `import {ClayNav} from '@clayui/nav';`;
+
+const navigationCode = `const Component = () => (
+	<ClayNav>
+		<ClayNav.Item>
+			<ClayNav.Link active href="#">
+				{'Active'}
+			</ClayNav.Link>
+		</ClayNav.Item>
+		<ClayNav.Item>
+			<ClayNav.Link href="#">{'Normal'}</ClayNav.Link>
+		</ClayNav.Item>
+		<ClayNav.Item>
+			<ClayNav.Link disabled href="#">
+				{'Disabled'}
+			</ClayNav.Link>
+		</ClayNav.Item>
+	</ClayNav>
+);
+
+render(<Component />)`;
+
+const Navigation = () => {
+	const scope = {ClayNav};
+
+	return (
+		<Editor
+			code={navigationCode}
+			imports={navigationImports}
+			scope={scope}
+		/>
+	);
+};
 
 const verticalNavigationImportsCode = `import {ClayVerticalNav} from '@clayui/nav';
 `;
@@ -13,48 +47,48 @@ const verticalNavigationImportsCode = `import {ClayVerticalNav} from '@clayui/na
 const VerticalNavigationCode = `const Component = () => {
 	return (
 		<ClayVerticalNav
-            activeLabel="Five"
-            items={[
-            {
-                initialExpanded: true,
-                items: [
-                {
-                    href: '#nested1',
-                    label: 'Nested1',
-                },
-                ],
-                label: 'Home',
-            },
-            {
-                href: '#2',
-                label: 'About',
-            },
-            {
-                href: '#3',
-                label: 'Contact',
-            },
-            {
-                items: [
-                {
-                    active: true,
-                    href: '#5',
-                    label: 'Five',
-                },
-                {
-                    href: '#6',
-                    label: 'Six',
-                },
-                ],
-                label: 'Projects',
-            },
-            {
-                href: '#7',
-                label: 'Seven',
-            },
-        ]}
-        large={false}
-        spritemap={spritemap}
-      />
+			activeLabel="Five"
+			items={[
+			{
+				initialExpanded: true,
+				items: [
+				{
+					href: '#nested1',
+					label: 'Nested1',
+				},
+				],
+				label: 'Home',
+			},
+			{
+				href: '#2',
+				label: 'About',
+			},
+			{
+				href: '#3',
+				label: 'Contact',
+			},
+			{
+				items: [
+				{
+					active: true,
+					href: '#5',
+					label: 'Five',
+				},
+				{
+					href: '#6',
+					label: 'Six',
+				},
+				],
+				label: 'Projects',
+			},
+			{
+				href: '#7',
+				label: 'Seven',
+			},
+		]}
+		large={false}
+		spritemap={spritemap}
+	  />
 	);
 }
 
@@ -62,15 +96,14 @@ render(<Component />);`;
 
 const VerticalNavigation = () => {
 	const scope = {ClayVerticalNav};
-	const code = VerticalNavigationCode;
 
 	return (
 		<Editor
-			code={code}
+			code={VerticalNavigationCode}
 			imports={verticalNavigationImportsCode}
 			scope={scope}
 		/>
 	);
 };
 
-export {VerticalNavigation};
+export {Navigation, VerticalNavigation};

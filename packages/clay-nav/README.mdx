@@ -1,17 +1,53 @@
-# clay-nav
+---
+title: 'Nav'
+description: 'Clay Nav provides a clear and semantic navigation for your site'
+packageNpm: '@clayui/nav'
+sibling: 'docs/components/css-nav.html'
+---
 
-React component for Navigation from clay-css
+import {
+	Navigation,
+	VerticalNavigation,
+	NavLink,
+} from '$packages/clay-nav/docs/index';
 
-## Setup
+<div class="nav-toc-absolute">
+<div class="nav-toc">
 
-1. Install `yarn`
+-   [Basic Usage](#basic-usage)
+-   [Vertical Navigation](#vertical)
+-   [API](#api)
+    -   [ClayNav](#claynav)
+    -   [ClayNav.Item](#claynav.item)
+    -   [ClayNav.Link](#claynav.link)
 
-2. Install local dependencies:
+</div>
+</div>
 
-```
-yarn
-```
+## Basic Usage
 
-## Contribute
+<Navigation />
 
-We'd love to get contributions from you! Please, check our [Contributing Guidelines](https://github.com/liferay/clay/blob/master/CONTRIBUTING.md) to see how you can help us improve.
+## Vertical Navigation
+
+<VerticalNavigation />
+
+## API
+
+### ClayNav
+
+<div>[APITable "clay-nav/src/Nav.tsx"]</div>
+
+### ClayNav.Item
+
+<code class="list-api-item-type">
+	Extends from {`React.HTMLAttributes<HTMLLIElement>`}
+</code>
+
+### ClayNav.Link
+
+<div>[APITable "clay-nav/src/NavLink.tsx"]</div>
+
+### ClayVerticalNav
+
+<div>[APITable "clay-nav/src/Vertical.tsx"]</div>
