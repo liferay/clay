@@ -7,15 +7,11 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/radio-c
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Checkboxes and Radios](#checkboxes-and-radios)
-    -   [Default (stacked)](<#default-(stacked)>)
-    -   [Inline](#inline)
-    -   [Without labels](#without-labels)
--   [Custom Checkboxes and radios](#custom-checkboxes-and-radios)
-    -   [Checkboxes](#checkboxes)
-    -   [Radios](#radios)
--   [Inline](#inline)
-    -   [Disabled](#disabled)
+-   [Default](#default)
+-   [Inline](#css-inline)
+-   [Disabled](#disabled)
+-   [Without labels](#without-labels)
+-   [Custom](#custom)
 
 </div>
 </div>
@@ -24,14 +20,14 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/radio-c
 	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#checkbox">WAI-ARIA</a> accessibility pratices for checkboxes when writting your markup.
 </div>
 
-## Checkboxes and Radios
-
 Default checkboxes and radios are improved upon with the help of `.form-check`, **a single class for both input types that improves the layout and behavior of their HTML elements**. Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.
 By [Bootstrap](https://getbootstrap.com/docs/4.1/components/forms/#checkboxes-and-radios)
 
-### Default (stacked)
+# Default
 
 By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with `.form-check`.
+
+## Default Checkboxes
 
 <div class="sheet-example">
 	<div class="form-check">
@@ -73,6 +69,8 @@ By default, any number of checkboxes and radios that are immediate sibling will 
 	</label>
 </div>
 ```
+
+## Default Radios
 
 <div class="sheet-example">
 	<div class="form-check">
@@ -136,9 +134,11 @@ By default, any number of checkboxes and radios that are immediate sibling will 
 </div>
 ```
 
-### Inline
+# Inline(#css-inline)
 
 Group checkboxes or radios on the same horizontal row by adding `.form-check-inline` to any `.form-check`.
+
+## Checkbox
 
 <div class="sheet-example">
 	<div class="form-check form-check-inline">
@@ -180,6 +180,8 @@ Group checkboxes or radios on the same horizontal row by adding `.form-check-inl
 	</label>
 </div>
 ```
+
+## Radio
 
 <div class="sheet-example">
 	<div class="form-check form-check-inline">
@@ -224,228 +226,9 @@ Group checkboxes or radios on the same horizontal row by adding `.form-check-inl
 </div>
 ```
 
-### Without labels
+# Disabled
 
-Remember to still provide some form of label for assistive technologies (for instance, using `aria-label`).
-
-<div class="sheet-example">
-	<div class="form-check">
-		<label class="form-check-label">
-			<input class="form-check-input" type="checkbox" id="withoutLabelCheckbox" value="">
-		</label>
-	</div>
-	<div class="form-check">
-		<label class="form-check-label">
-			<input class="form-check-input" type="checkbox" id="withoutLabelCheckbox1" value="">
-		</label>
-	</div>
-</div>
-
-```html
-<div class="form-check">
-	<label class="form-check-label">
-		<input
-			class="form-check-input"
-			type="checkbox"
-			id="withoutLabelCheckbox"
-			value=""
-		/>
-	</label>
-</div>
-<div class="form-check">
-	<label class="form-check-label">
-		<input
-			class="form-check-input"
-			type="checkbox"
-			id="withoutLabelCheckbox1"
-			value=""
-		/>
-	</label>
-</div>
-```
-
-## Custom Checkboxes and radios
-
-The two ways for you to structure the marking of a Checkbox and Radio:
-
-It is packaged in a classless `<label>` and `<label class="custom-control-label"/>` is replaced by `<span>`:
-
-```html
-<div class="custom-control custom-checkbox">
-	<label>
-		<input class="custom-control-input" type="checkbox" id="customCheck1" />
-		<span class="custom-control-label">
-			<span class="custom-control-label-text"
-				>Check this custom checkbox</span
-			>
-		</span>
-	</label>
-</div>
-```
-
-Using the `id` binding engine with `<label />`and `<input />`.
-
-```html
-<div class="custom-control custom-checkbox">
-	<input class="custom-control-input" type="checkbox" id="customCheck2" />
-	<label class="custom-control-label" for="customCheck2">
-		<span class="custom-control-label-text"
-			>Check this custom checkbox</span
-		>
-	</label>
-</div>
-```
-
-### Checkboxes
-
-<div class="sheet-example">
-	<div class="custom-control custom-checkbox">
-		<label>
-			<input class="custom-control-input" type="checkbox" id="customCheck1"/>
-			<span class="custom-control-label">
-				<span class="custom-control-label-text">Check this custom checkbox</span>
-			</span>
-		</label>
-	</div>
-</div>
-
-```html
-<div class="custom-control custom-checkbox">
-	<label>
-		<input class="custom-control-input" type="checkbox" id="customCheck1" />
-		<span class="custom-control-label">
-			<span class="custom-control-label-text"
-				>Check this custom checkbox</span
-			>
-		</span>
-	</label>
-</div>
-```
-
-Custom checkboxes can also utilize the `:indeterminate` pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it).
-
-<div class="sheet-example">
-	<div class="custom-control custom-checkbox">
-		<label>
-			<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox">
-			<span class="custom-control-label">
-				<span class="custom-control-label-text">Indeterminate</span>
-			</span>
-		</label>
-	</div>
-</div>
-
-### Radios
-
-<div class="sheet-example">
-	<div class="custom-control custom-radio">
-		<label>
-			<input checked="" class="custom-control-input" id="radio1" name="customRadio" type="radio">
-			<span class="custom-control-label">
-				<span class="custom-control-label-text">Toggle this custom radio</span>
-			</span>
-		</label>
-	</div>
-	<div class="custom-control custom-radio">
-		<label>
-			<input class="custom-control-input" id="radio1" name="customRadio" type="radio">
-			<span class="custom-control-label">
-				<span class="custom-control-label-text">Or toggle this other custom radio</span>
-			</span>
-		</label>
-	</div>
-</div>
-
-```html
-<div class="custom-control custom-radio">
-	<label>
-		<input
-			checked=""
-			class="custom-control-input"
-			id="radio1"
-			name="customRadio"
-			type="radio"
-		/>
-		<span class="custom-control-label">
-			<span class="custom-control-label-text"
-				>Toggle this custom radio</span
-			>
-		</span>
-	</label>
-</div>
-<div class="custom-control custom-radio">
-	<label>
-		<input
-			class="custom-control-input"
-			id="radio1"
-			name="customRadio"
-			type="radio"
-		/>
-		<span class="custom-control-label">
-			<span class="custom-control-label-text"
-				>Or toggle this other custom radio</span
-			>
-		</span>
-	</label>
-</div>
-```
-
-### Inline
-
-<div class="sheet-example">
-	<div class="custom-control custom-radio custom-control-inline">
-		<label>
-			<input checked="" class="custom-control-input" id="radio1" name="customInlineRadio" type="radio">
-			<span class="custom-control-label">
-				<span class="custom-control-label-text">Toggle this custom radio</span>
-			</span>
-		</label>
-	</div>
-	<div class="custom-control custom-radio custom-control-inline">
-		<label>
-			<input class="custom-control-input" id="radio1" name="customInlineRadio" type="radio">
-			<span class="custom-control-label">
-				<span class="custom-control-label-text">Or toggle this other custom radio</span>
-			</span>
-		</label>
-	</div>
-</div>
-
-```html
-<div class="custom-control custom-radio custom-control-inline">
-	<label>
-		<input
-			checked=""
-			class="custom-control-input"
-			id="radio1"
-			name="customInlineRadio"
-			type="radio"
-		/>
-		<span class="custom-control-label">
-			<span class="custom-control-label-text"
-				>Toggle this custom radio</span
-			>
-		</span>
-	</label>
-</div>
-<div class="custom-control custom-radio custom-control-inline">
-	<label>
-		<input
-			class="custom-control-input"
-			id="radio1"
-			name="customInlineRadio"
-			type="radio"
-		/>
-		<span class="custom-control-label">
-			<span class="custom-control-label-text"
-				>Or toggle this other custom radio</span
-			>
-		</span>
-	</label>
-</div>
-```
-
-### Disabled
+Disable checkboxes or radios by adding a `disabled` prop.
 
 <div class="sheet-example">
 	<div class="custom-control custom-radio">
@@ -494,6 +277,172 @@ Custom checkboxes can also utilize the `:indeterminate` pseudo class when manual
 		<span class="custom-control-label">
 			<span class="custom-control-label-text"
 				>Check this custom checkbox</span
+			>
+		</span>
+	</label>
+</div>
+```
+
+# Without labels
+
+Remember to still provide some form of label for assistive technologies (for instance, using `aria-label`).
+
+<div class="sheet-example">
+	<div class="form-check">
+		<label class="form-check-label">
+			<input class="form-check-input" type="checkbox" id="withoutLabelCheckbox" value="">
+		</label>
+	</div>
+	<div class="form-check">
+		<label class="form-check-label">
+			<input class="form-check-input" type="checkbox" id="withoutLabelCheckbox1" value="">
+		</label>
+	</div>
+</div>
+
+```html
+<div class="form-check">
+	<label class="form-check-label">
+		<input
+			class="form-check-input"
+			type="checkbox"
+			id="withoutLabelCheckbox"
+			value=""
+		/>
+	</label>
+</div>
+<div class="form-check">
+	<label class="form-check-label">
+		<input
+			class="form-check-input"
+			type="checkbox"
+			id="withoutLabelCheckbox1"
+			value=""
+		/>
+	</label>
+</div>
+```
+
+# Custom
+
+The two ways for you to structure the marking of a Checkbox and Radio:
+
+It is packaged in a classless `<label>` and `<label class="custom-control-label"/>` is replaced by `<span>`:
+
+```html
+<div class="custom-control custom-checkbox">
+	<label>
+		<input class="custom-control-input" type="checkbox" id="customCheck1" />
+		<span class="custom-control-label">
+			<span class="custom-control-label-text"
+				>Check this custom checkbox</span
+			>
+		</span>
+	</label>
+</div>
+```
+
+Using the `id` binding engine with `<label />`and `<input />`.
+
+```html
+<div class="custom-control custom-checkbox">
+	<input class="custom-control-input" type="checkbox" id="customCheck2" />
+	<label class="custom-control-label" for="customCheck2">
+		<span class="custom-control-label-text"
+			>Check this custom checkbox</span
+		>
+	</label>
+</div>
+```
+
+## Custom Checkboxes
+
+<div class="sheet-example">
+	<div class="custom-control custom-checkbox">
+		<label>
+			<input class="custom-control-input" type="checkbox" id="customCheck1"/>
+			<span class="custom-control-label">
+				<span class="custom-control-label-text">Check this custom checkbox</span>
+			</span>
+		</label>
+	</div>
+</div>
+
+```html
+<div class="custom-control custom-checkbox">
+	<label>
+		<input class="custom-control-input" type="checkbox" id="customCheck1" />
+		<span class="custom-control-label">
+			<span class="custom-control-label-text"
+				>Check this custom checkbox</span
+			>
+		</span>
+	</label>
+</div>
+```
+
+Custom checkboxes can also utilize the `:indeterminate` pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it).
+
+<div class="sheet-example">
+	<div class="custom-control custom-checkbox">
+		<label>
+			<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox">
+			<span class="custom-control-label">
+				<span class="custom-control-label-text">Indeterminate</span>
+			</span>
+		</label>
+	</div>
+</div>
+
+## Custom Radios
+
+<div class="sheet-example">
+	<div class="custom-control custom-radio">
+		<label>
+			<input checked="" class="custom-control-input" id="radio1" name="customRadio" type="radio">
+			<span class="custom-control-label">
+				<span class="custom-control-label-text">Toggle this custom radio</span>
+			</span>
+		</label>
+	</div>
+	<div class="custom-control custom-radio">
+		<label>
+			<input class="custom-control-input" id="radio1" name="customRadio" type="radio">
+			<span class="custom-control-label">
+				<span class="custom-control-label-text">Or toggle this other custom radio</span>
+			</span>
+		</label>
+	</div>
+</div>
+
+```html
+<div class="custom-control custom-radio">
+	<label>
+		<input
+			checked=""
+			class="custom-control-input"
+			id="radio1"
+			name="customRadio"
+			type="radio"
+		/>
+		<span class="custom-control-label">
+			<span class="custom-control-label-text"
+				>Toggle this custom radio</span
+			>
+		</span>
+	</label>
+</div>
+<div class="custom-control custom-radio">
+	<label>
+		<input
+			class="custom-control-input"
+			id="radio1"
+			name="customRadio"
+			type="radio"
+		/>
+		<span class="custom-control-label">
+			<span class="custom-control-label-text"
+				>Or toggle this other custom radio</span
 			>
 		</span>
 	</label>

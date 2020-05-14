@@ -48,13 +48,13 @@ const tabsCode = `const Component = () => {
             </ClayTabs>
             <ClayTabs.Content activeIndex={activeTabKeyValue} fade>
                 <ClayTabs.TabPane aria-labelledby="tab-1">
-                    {\`1. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu. Proin pulvinar facilisis purus vitae ornare. Donec ut sodales sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec id volutpat ligula. Sed sodales pellentesque aliquam. Donec interdum a mi ac auctor. Etiam auctor lacus nec posuere feugiat. Maecenas pulvinar ante nisl, auctor fringilla quam molestie eu. Sed non ultrices est. Ut congue leo in placerat pharetra.\`}
+                    {\`1. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.\`}
                 </ClayTabs.TabPane>
                 <ClayTabs.TabPane aria-labelledby="tab-2">
-                    {\`2. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu. Proin pulvinar facilisis purus vitae ornare. Donec ut sodales sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec id volutpat ligula. Sed sodales pellentesque aliquam. Donec interdum a mi ac auctor. Etiam auctor lacus nec posuere feugiat. Maecenas pulvinar ante nisl, auctor fringilla quam molestie eu. Sed non ultrices est. Ut congue leo in placerat pharetra.\`}
+                    {\`2. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.\`}
                 </ClayTabs.TabPane>
                 <ClayTabs.TabPane aria-labelledby="tab-3">
-                    {\`3. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu. Proin pulvinar facilisis purus vitae ornare. Donec ut sodales sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec id volutpat ligula. Sed sodales pellentesque aliquam. Donec interdum a mi ac auctor. Etiam auctor lacus nec posuere feugiat. Maecenas pulvinar ante nisl, auctor fringilla quam molestie eu. Sed non ultrices est. Ut congue leo in placerat pharetra.\`}
+                    {\`3. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.\`}
                 </ClayTabs.TabPane>
             </ClayTabs.Content>
         </>
@@ -205,28 +205,28 @@ const tabsDropdownCode = `const Component = () => {
                 fade
             >
                 <ClayTabs.TabPane aria-labelledby="tab-1">
-                    {\`1. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu. Proin pulvinar facilisis purus vitae ornare. Donec ut sodales sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec id volutpat ligula. Sed sodales pellentesque aliquam. Donec interdum a mi ac auctor. Etiam auctor lacus nec posuere feugiat. Maecenas pulvinar ante nisl, auctor fringilla quam molestie eu. Sed non ultrices est. Ut congue leo in placerat pharetra.\`}
+                    {\`1. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.\`}
                 </ClayTabs.TabPane>
                 <ClayTabs.TabPane aria-labelledby="tab-2">
-                    {\`2. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu. Proin pulvinar facilisis purus vitae ornare. Donec ut sodales sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec id volutpat ligula. Sed sodales pellentesque aliquam. Donec interdum a mi ac auctor. Etiam auctor lacus nec posuere feugiat. Maecenas pulvinar ante nisl, auctor fringilla quam molestie eu. Sed non ultrices est. Ut congue leo in placerat pharetra.\`}
+                    {\`2. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.\`}
                 </ClayTabs.TabPane>
                 <ClayTabs.TabPane aria-labelledby="tab-3">
-                    {\`3. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu. Proin pulvinar facilisis purus vitae ornare. Donec ut sodales sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec id volutpat ligula. Sed sodales pellentesque aliquam. Donec interdum a mi ac auctor. Etiam auctor lacus nec posuere feugiat. Maecenas pulvinar ante nisl, auctor fringilla quam molestie eu. Sed non ultrices est. Ut congue leo in placerat pharetra.\`}
+                    {\`3. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.\`}
                 </ClayTabs.TabPane>
                 <ClayTabs.TabPane aria-labelledby="tab-4">
-                    {\`4. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu. Proin pulvinar facilisis purus vitae ornare. Donec ut sodales sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec id volutpat ligula. Sed sodales pellentesque aliquam. Donec interdum a mi ac auctor. Etiam auctor lacus nec posuere feugiat. Maecenas pulvinar ante nisl, auctor fringilla quam molestie eu. Sed non ultrices est. Ut congue leo in placerat pharetra.\`}
+                    {\`4. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.\`}
                 </ClayTabs.TabPane>
                 <ClayTabs.TabPane aria-labelledby="tab-5">
-                    {\`5. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu. Proin pulvinar facilisis purus vitae ornare. Donec ut sodales sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec id volutpat ligula. Sed sodales pellentesque aliquam. Donec interdum a mi ac auctor. Etiam auctor lacus nec posuere feugiat. Maecenas pulvinar ante nisl, auctor fringilla quam molestie eu. Sed non ultrices est. Ut congue leo in placerat pharetra.\`}
+                    {\`5. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.\`}
                 </ClayTabs.TabPane>
                 <ClayTabs.TabPane aria-labelledby="tab-6">
-                    {\`6. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu. Proin pulvinar facilisis purus vitae ornare. Donec ut sodales sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec id volutpat ligula. Sed sodales pellentesque aliquam. Donec interdum a mi ac auctor. Etiam auctor lacus nec posuere feugiat. Maecenas pulvinar ante nisl, auctor fringilla quam molestie eu. Sed non ultrices est. Ut congue leo in placerat pharetra.\`}
+                    {\`6. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.\`}
                 </ClayTabs.TabPane>
                 <ClayTabs.TabPane aria-labelledby="tab-7">
-                    {\`7. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu. Proin pulvinar facilisis purus vitae ornare. Donec ut sodales sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec id volutpat ligula. Sed sodales pellentesque aliquam. Donec interdum a mi ac auctor. Etiam auctor lacus nec posuere feugiat. Maecenas pulvinar ante nisl, auctor fringilla quam molestie eu. Sed non ultrices est. Ut congue leo in placerat pharetra.\`}
+                    {\`7. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.\`}
                 </ClayTabs.TabPane>
                 <ClayTabs.TabPane aria-labelledby="tab-8">
-                    {\`8. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu. Proin pulvinar facilisis purus vitae ornare. Donec ut sodales sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec id volutpat ligula. Sed sodales pellentesque aliquam. Donec interdum a mi ac auctor. Etiam auctor lacus nec posuere feugiat. Maecenas pulvinar ante nisl, auctor fringilla quam molestie eu. Sed non ultrices est. Ut congue leo in placerat pharetra.\`}
+                    {\`8. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.\`}
                 </ClayTabs.TabPane>
             </ClayTabs.Content>
         </ClayIconSpriteContext.Provider>

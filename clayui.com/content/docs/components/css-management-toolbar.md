@@ -31,7 +31,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/toolbars/mana
     Bootstrap 4 doesn't support Dropdown Menu's with Popper.js positioning inside Navbars. They align them manually via CSS classes. See <a href="/docs/components/drop-down.html#alignment">Dropdown Alignment</a>.
 </div>
 
-## Light
+# Light
 
 <div class="sheet-example">
     <nav class="management-bar management-bar-light navbar navbar-expand-md">
@@ -187,7 +187,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/toolbars/mana
 </nav>
 ```
 
-## Primary
+# Primary
 
 <div class="sheet-example">
     <nav class="management-bar management-bar-primary navbar navbar-expand-md">
@@ -343,7 +343,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/toolbars/mana
 </nav>
 ```
 
-## Overlay
+# Overlay
 
 Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to create an overlay on top of the navbar with alternate content, useful for expanding search bars or an alternate navbar that depends on some state in your application. Toggle the `navbar-overlay`'s visibility by adding or removing the class `show` to `navbar-overlay`.
 
@@ -740,7 +740,7 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 </nav>
 ```
 
-### Breakpoints
+## Breakpoints
 
 `navbar-overlay-up` overlays the navbar at all screen widths.
 `navbar-overlay-lg-down`: 1199px and below
@@ -1135,9 +1135,9 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 </nav>
 ```
 
-## Only Search
+# Only Search
 
-### Always Open
+## Always Open
 
 <div class="sheet-example">
     <nav class="management-bar management-bar-light navbar navbar-expand-md">
@@ -1217,7 +1217,7 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 </nav>
 ```
 
-### Collapses in Mobile
+## Collapses in Mobile
 
 <div class="sheet-example">
     <nav class="management-bar management-bar-light navbar navbar-expand-md">
@@ -1325,9 +1325,9 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 </nav>
 ```
 
-## Search(#css-markup-search)
+# Search(#css-markup-search)
 
-### Summary
+## Summary
 
 <div class="sheet-example">
     <nav class="tbar subnav-tbar subnav-tbar-primary">
@@ -1363,7 +1363,7 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 </nav>
 ```
 
-### Results
+## Results
 
 <div class="sheet-example">
     <nav class="tbar subnav-tbar subnav-tbar-primary">
@@ -1414,7 +1414,7 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 </nav>
 ```
 
-### Results with Filter
+## Results with Filter
 
 <div class="sheet-example">
     <nav class="tbar tbar-inline-md-down subnav-tbar subnav-tbar-primary">
@@ -1572,7 +1572,7 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 </nav>
 ```
 
-## Using Buttons
+# Using Buttons
 
 <div class="sheet-example">
     <nav class="management-bar management-bar-primary navbar navbar-expand-md">

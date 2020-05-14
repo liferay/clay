@@ -15,6 +15,7 @@ import {
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
+-   [Composing](#composing)
 -   [API](#api)
     -   [ManagementToolbar](#managementtoolbar)
     -   [ItemList](#itemlist)
@@ -26,46 +27,54 @@ import {
 </div>
 </div>
 
-## Overview
+# Composing
 
 With ClayManagementToolbar you can create a variety of [Management Toolbar variations](https://liferay.design/lexicon/core-components/toolbars/management-bar/#layout-variations), use `ClayManagementToolbar` component as the outside container, `ClayManagementToolbar.ItemList` for creating groups of items and `ClayManagementToolbar.Item` for create items inside groups. Use `expand` property on `ClayManagementToolbar.ItemList` for expanding the item list.
+
+We recommend that you review the use cases in the <a href="https://storybook.clayui.com/?path=/story/components-claymanagementtoolbar--w-low-level">Storybook</a>. Also, check our <a href="https://storybook.clayui.com/?path=/story/demos-templates--list-page">List Page Template</a> on Storybook.
 
 Use `ClayManagementToolbar.Search` for creating a Search input inside the management toolbar.
 
 <MinimalManagementToolbar />
 
+<br />
+
+Aggregating `ClayManagementToolbar.ItemList` and `ClayManagementToolbar.ResultsBar` you can reach this result:
+
+<ManagementToolbar />
+
+# Results Bar
+
 Use `ClayManagementToolbar.ResultsBar` for creating a results bar and `ClayManagementToolbar.ResultsBarItem` for defining items inside Results Bar.
 
 <ResultsBar />
 
-Aggregating ClayManagementToolbar item lists and results bar you can reach this result:
+# API
 
-<ManagementToolbar />
-
-We recommend that you review the use cases in the <a href="https://storybook.clayui.com/?path=/story/components-claymanagementtoolbar--w-low-level">Storybook</a>. Also, check our <a href="https://storybook.clayui.com/?path=/story/demos-templates--list-page">List Page Template</a> on Storybook.
-
-## API
-
-### ManagementToolbar
+## ManagementToolbar
 
 <div>[APITable "clay-management-toolbar/src/ManagementToolbar.tsx"]</div>
 
-### ItemList
+## ItemList
 
 <div>[APITable "clay-management-toolbar/src/ItemList.tsx"]</div>
 
-### Item
+## Item
 
-<div>[APITable "clay-management-toolbar/src/Item.tsx"]</div>
+<code class="list-api-item-type">
+	Extends from {`React.HTMLAttributes<HTMLLIElement>`}
+</code>
 
-### ResultsBar
+## ResultsBar
 
-<div>[APITable "clay-management-toolbar/src/ResultsBar.tsx"]</div>
+<code class="list-api-item-type">
+	Extends from {`React.HTMLAttributes<HTMLElement>`}
+</code>
 
-#### ResultsBar.Item
+### ResultsBar.Item
 
 <div>[APITable "clay-management-toolbar/src/ResultsBarItem.tsx"]</div>
 
-### Search
+## Search
 
 <div>[APITable "clay-management-toolbar/src/Search.tsx"]</div>
