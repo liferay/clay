@@ -207,12 +207,7 @@ storiesOf('Components|ClayCard', module)
 				</ClayCardWithNavigation>
 			</div>
 			<div className="col-md-4">
-				<ClayCardWithNavigation
-					description="Pick and choose your layout..."
-					href="#"
-					spritemap={spritemap}
-					title="href Card with img"
-				>
+				<ClayCardWithNavigation href="#" spritemap={spritemap}>
 					<img alt="portlet image" src={portletImage} />
 				</ClayCardWithNavigation>
 			</div>
