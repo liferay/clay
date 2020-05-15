@@ -7,15 +7,11 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/radio-c
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Checkboxes and Radios](#checkboxes-and-radios)
-    -   [Default (stacked)](<#default-(stacked)>)
-    -   [Inline](#inline)
-    -   [Without labels](#without-labels)
--   [Custom Checkboxes and radios](#custom-checkboxes-and-radios)
-    -   [Checkboxes](#checkboxes)
-    -   [Radios](#radios)
--   [Inline](#inline)
-    -   [Disabled](#disabled)
+-   [Default](#default)
+-   [Inline](#css-inline)
+-   [Disabled](#disabled)
+-   [Without labels](#without-labels)
+-   [Custom](#custom)
 
 </div>
 </div>
@@ -24,14 +20,14 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/radio-c
 	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#checkbox">WAI-ARIA</a> accessibility pratices for checkboxes when writting your markup.
 </div>
 
-## Checkboxes and Radios
-
 Default checkboxes and radios are improved upon with the help of `.form-check`, **a single class for both input types that improves the layout and behavior of their HTML elements**. Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.
 By [Bootstrap](https://getbootstrap.com/docs/4.1/components/forms/#checkboxes-and-radios)
 
-### Default (stacked)
+## Default
 
 By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with `.form-check`.
+
+### Checkboxes
 
 <div class="sheet-example">
 	<div class="form-check">
@@ -73,6 +69,8 @@ By default, any number of checkboxes and radios that are immediate sibling will 
 	</label>
 </div>
 ```
+
+### Radios
 
 <div class="sheet-example">
 	<div class="form-check">
@@ -136,9 +134,11 @@ By default, any number of checkboxes and radios that are immediate sibling will 
 </div>
 ```
 
-### Inline
+## Inline(#css-inline)
 
 Group checkboxes or radios on the same horizontal row by adding `.form-check-inline` to any `.form-check`.
+
+### Checkbox
 
 <div class="sheet-example">
 	<div class="form-check form-check-inline">
@@ -180,6 +180,8 @@ Group checkboxes or radios on the same horizontal row by adding `.form-check-inl
 	</label>
 </div>
 ```
+
+### Radio
 
 <div class="sheet-example">
 	<div class="form-check form-check-inline">
@@ -224,7 +226,64 @@ Group checkboxes or radios on the same horizontal row by adding `.form-check-inl
 </div>
 ```
 
-### Without labels
+## Disabled
+
+Disable checkboxes or radios by adding a `disabled` prop.
+
+<div class="sheet-example">
+	<div class="custom-control custom-radio">
+		<label>
+			<input disabled="" class="custom-control-input" id="radio1" name="customDisabledRadio" type="radio">
+			<span class="custom-control-label">
+				<span class="custom-control-label-text">Toggle this custom radio</span>
+			</span>
+		</label>
+	</div>
+	<div class="custom-control custom-checkbox">
+		<label>
+			<input disabled="" class="custom-control-input" type="checkbox" id="customDisabledCheck1"/>
+			<span class="custom-control-label">
+				<span class="custom-control-label-text">Check this custom checkbox</span>
+			</span>
+		</label>
+	</div>
+</div>
+
+```html
+<div class="custom-control custom-radio">
+	<label>
+		<input
+			disabled=""
+			class="custom-control-input"
+			id="radio1"
+			name="customDisabledRadio"
+			type="radio"
+		/>
+		<span class="custom-control-label">
+			<span class="custom-control-label-text"
+				>Toggle this custom radio</span
+			>
+		</span>
+	</label>
+</div>
+<div class="custom-control custom-checkbox">
+	<label>
+		<input
+			disabled=""
+			class="custom-control-input"
+			type="checkbox"
+			id="customDisabledCheck1"
+		/>
+		<span class="custom-control-label">
+			<span class="custom-control-label-text"
+				>Check this custom checkbox</span
+			>
+		</span>
+	</label>
+</div>
+```
+
+## Without labels
 
 Remember to still provide some form of label for assistive technologies (for instance, using `aria-label`).
 
@@ -264,7 +323,7 @@ Remember to still provide some form of label for assistive technologies (for ins
 </div>
 ```
 
-## Custom Checkboxes and radios
+## Custom
 
 The two ways for you to structure the marking of a Checkbox and Radio:
 
@@ -384,116 +443,6 @@ Custom checkboxes can also utilize the `:indeterminate` pseudo class when manual
 		<span class="custom-control-label">
 			<span class="custom-control-label-text"
 				>Or toggle this other custom radio</span
-			>
-		</span>
-	</label>
-</div>
-```
-
-### Inline
-
-<div class="sheet-example">
-	<div class="custom-control custom-radio custom-control-inline">
-		<label>
-			<input checked="" class="custom-control-input" id="radio1" name="customInlineRadio" type="radio">
-			<span class="custom-control-label">
-				<span class="custom-control-label-text">Toggle this custom radio</span>
-			</span>
-		</label>
-	</div>
-	<div class="custom-control custom-radio custom-control-inline">
-		<label>
-			<input class="custom-control-input" id="radio1" name="customInlineRadio" type="radio">
-			<span class="custom-control-label">
-				<span class="custom-control-label-text">Or toggle this other custom radio</span>
-			</span>
-		</label>
-	</div>
-</div>
-
-```html
-<div class="custom-control custom-radio custom-control-inline">
-	<label>
-		<input
-			checked=""
-			class="custom-control-input"
-			id="radio1"
-			name="customInlineRadio"
-			type="radio"
-		/>
-		<span class="custom-control-label">
-			<span class="custom-control-label-text"
-				>Toggle this custom radio</span
-			>
-		</span>
-	</label>
-</div>
-<div class="custom-control custom-radio custom-control-inline">
-	<label>
-		<input
-			class="custom-control-input"
-			id="radio1"
-			name="customInlineRadio"
-			type="radio"
-		/>
-		<span class="custom-control-label">
-			<span class="custom-control-label-text"
-				>Or toggle this other custom radio</span
-			>
-		</span>
-	</label>
-</div>
-```
-
-### Disabled
-
-<div class="sheet-example">
-	<div class="custom-control custom-radio">
-		<label>
-			<input disabled="" class="custom-control-input" id="radio1" name="customDisabledRadio" type="radio">
-			<span class="custom-control-label">
-				<span class="custom-control-label-text">Toggle this custom radio</span>
-			</span>
-		</label>
-	</div>
-	<div class="custom-control custom-checkbox">
-		<label>
-			<input disabled="" class="custom-control-input" type="checkbox" id="customDisabledCheck1"/>
-			<span class="custom-control-label">
-				<span class="custom-control-label-text">Check this custom checkbox</span>
-			</span>
-		</label>
-	</div>
-</div>
-
-```html
-<div class="custom-control custom-radio">
-	<label>
-		<input
-			disabled=""
-			class="custom-control-input"
-			id="radio1"
-			name="customDisabledRadio"
-			type="radio"
-		/>
-		<span class="custom-control-label">
-			<span class="custom-control-label-text"
-				>Toggle this custom radio</span
-			>
-		</span>
-	</label>
-</div>
-<div class="custom-control custom-checkbox">
-	<label>
-		<input
-			disabled=""
-			class="custom-control-input"
-			type="checkbox"
-			id="customDisabledCheck1"
-		/>
-		<span class="custom-control-label">
-			<span class="custom-control-label-text"
-				>Check this custom checkbox</span
 			>
 		</span>
 	</label>

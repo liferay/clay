@@ -1303,6 +1303,8 @@ Use `.table-responsive{-sm|-md|-lg|-xl}` as needed to create responsive tables u
 
 ### Alignment
 
+You can align table items either vertically or horizontally following the rules below.
+
 #### Vertical
 
 We have added some classes to help vertically align contents inside a table. The classes `table-valign-bottom`, `table-valign-middle`, and `table-valign-top` on `<table>` will vertically align table cell contents on the bottom, middle, and top, respectively.

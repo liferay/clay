@@ -18,6 +18,11 @@ import {
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
+-   [Read Only](#read-only)
+-   [Container Props](#container-props)
+-   [Label](#label)
+-   [Inline](#inline)
+-   [Indeterminate](#indeterminate)
 -   [API](#api)
 
 </div>
@@ -25,32 +30,43 @@ import {
 
 Use [`checked`](#api-checked) property to check or not the checkbox.
 
-<div class="clay-site-alert alert-warning">
-	If you want a checkbox without actions on change(or just not use onChange
-	property), use <code class="gatsby-code-text">readOnly</code> property.
-</div>
-
-<Checkbox />
-
-Use [`indeterminate`](#api-indeterminate) property for making the checkbox indeterminate.
-
-<CheckboxIndeterminate />
-
 To set a callback function when the value of the checkbox is changed, use [`onChange`](#api-onChange) property. See the following example:
 
 <CheckboxWithCallback />
+
+<br />
+
+Here you can see some options or ideas on how to extend our Checkbox component to fit your use:
+
+## Read Only
+
+If you want a checkbox without actions on change(or just not use onChange property), use <code class="gatsby-code-text">readOnly</code> property.
+
+<Checkbox />
+
+## Container Props
 
 If you want to modify the container that wraps the checkbox, use [`containerProps`](#api-containerProps):
 
 <CheckboxContainerProps />
 
+## Label
+
 Use [`label`](#api-label) property to describe what the checkbox is for.
 
 <CheckboxLabel />
 
+## Inline
+
 Group checkboxes on the same horizontal row by using [`inline`](#api-inline) property.
 
 <CheckboxesInline />
+
+## Indeterminate
+
+Use [`indeterminate`](#api-indeterminate) property for making the checkbox indeterminate.
+
+<CheckboxIndeterminate />
 
 ## API
 

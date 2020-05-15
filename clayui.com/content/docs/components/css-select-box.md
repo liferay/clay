@@ -7,19 +7,20 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/dual-listbox/
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Basic Usage](#basic-usage)
-    -   [With Reorder Buttons](#with-reorder-buttons)
+-   [Utilities](#utilities)
+    -   [Buttons on the right](#buttons-on-the-right)
+    -   [Buttons in the center](#buttons-in-the-center)
 
 </div>
 </div>
 
-### Clay Reorder Utilities
+## Utilities
 
 <div class="clay-site-alert alert alert-info">
     Add the class <code>clay-reorder-footer-end</code> or <code>clay-reorder-footer-center</code> on <code>clay-reorder</code> to align footer content to the right or center, respectively.
 </div>
 
-#### Clay Reorder with Footer End
+### Buttons on the right
 
 <div class="sheet-example">
     <div class="clay-reorder clay-reorder-footer-end">
@@ -99,7 +100,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/dual-listbox/
 </div>
 ```
 
-#### Clay Reorder with Footer Center
+### Buttons in the center
 
 <div class="sheet-example">
     <div class="clay-reorder clay-reorder-footer-center">
