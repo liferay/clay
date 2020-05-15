@@ -23,11 +23,11 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/radio-c
 Default checkboxes and radios are improved upon with the help of `.form-check`, **a single class for both input types that improves the layout and behavior of their HTML elements**. Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.
 By [Bootstrap](https://getbootstrap.com/docs/4.1/components/forms/#checkboxes-and-radios)
 
-# Default
+## Default
 
 By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with `.form-check`.
 
-## Default Checkboxes
+### Checkboxes
 
 <div class="sheet-example">
 	<div class="form-check">
@@ -70,7 +70,7 @@ By default, any number of checkboxes and radios that are immediate sibling will 
 </div>
 ```
 
-## Default Radios
+### Radios
 
 <div class="sheet-example">
 	<div class="form-check">
@@ -134,11 +134,11 @@ By default, any number of checkboxes and radios that are immediate sibling will 
 </div>
 ```
 
-# Inline(#css-inline)
+## Inline(#css-inline)
 
 Group checkboxes or radios on the same horizontal row by adding `.form-check-inline` to any `.form-check`.
 
-## Checkbox
+### Checkbox
 
 <div class="sheet-example">
 	<div class="form-check form-check-inline">
@@ -181,7 +181,7 @@ Group checkboxes or radios on the same horizontal row by adding `.form-check-inl
 </div>
 ```
 
-## Radio
+### Radio
 
 <div class="sheet-example">
 	<div class="form-check form-check-inline">
@@ -226,7 +226,7 @@ Group checkboxes or radios on the same horizontal row by adding `.form-check-inl
 </div>
 ```
 
-# Disabled
+## Disabled
 
 Disable checkboxes or radios by adding a `disabled` prop.
 
@@ -283,7 +283,7 @@ Disable checkboxes or radios by adding a `disabled` prop.
 </div>
 ```
 
-# Without labels
+## Without labels
 
 Remember to still provide some form of label for assistive technologies (for instance, using `aria-label`).
 
@@ -323,7 +323,7 @@ Remember to still provide some form of label for assistive technologies (for ins
 </div>
 ```
 
-# Custom
+## Custom
 
 The two ways for you to structure the marking of a Checkbox and Radio:
 
@@ -355,7 +355,7 @@ Using the `id` binding engine with `<label />`and `<input />`.
 </div>
 ```
 
-## Custom Checkboxes
+### Checkboxes
 
 <div class="sheet-example">
 	<div class="custom-control custom-checkbox">
@@ -394,7 +394,7 @@ Custom checkboxes can also utilize the `:indeterminate` pseudo class when manual
 	</div>
 </div>
 
-## Custom Radios
+### Radios
 
 <div class="sheet-example">
 	<div class="custom-control custom-radio">

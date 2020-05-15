@@ -18,7 +18,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/stickers/'
 </div>
 </div>
 
-# Colors
+## Colors
 
 Lexicon adopts in its design system the following colors below:
 
@@ -40,7 +40,7 @@ Lexicon adopts in its design system the following colors below:
 <span class="sticker sticker-danger">133</span>
 ```
 
-# Position
+## Position
 
 Place them anywhere relative to your container using positional sticker classes `sticker-top-left`, `sticker-bottom-left`, `sticker-top-right`, and `sticker-bottom-right`.
 
@@ -124,7 +124,7 @@ Place them anywhere relative to your container using positional sticker classes 
 </div>
 ```
 
-# Sizes
+## Sizes
 
 Stickers come in 4 sizes `sm`, default, `lg`, and `xl`. Create your own custom size with the `sticker-size` mixin.
 
@@ -214,9 +214,9 @@ Stickers come in 4 sizes `sm`, default, `lg`, and `xl`. Create your own custom s
 </span>
 ```
 
-# Variations
+## Variations
 
-## Overlay
+### Overlay
 
 Overlay content over stickers by nesting `sticker-overlay` inside `sticker`.
 
@@ -292,7 +292,7 @@ Overlay content over stickers by nesting `sticker-overlay` inside `sticker`.
 </span>
 ```
 
-## Outside
+### Outside
 
 Add class `sticker-outside` in conjunction with sticker positions to position the sticker on the outside corners.
 
@@ -356,7 +356,7 @@ Add class `sticker-outside` in conjunction with sticker positions to position th
 </button>
 ```
 
-## User Icon
+### User Icon
 
 <div class="sheet-example">
     <div class="col-md-12">

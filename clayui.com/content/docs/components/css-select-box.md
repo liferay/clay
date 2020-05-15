@@ -14,13 +14,13 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/dual-listbox/
 </div>
 </div>
 
-# Utilities
+## Utilities
 
 <div class="clay-site-alert alert alert-info">
     Add the class <code>clay-reorder-footer-end</code> or <code>clay-reorder-footer-center</code> on <code>clay-reorder</code> to align footer content to the right or center, respectively.
 </div>
 
-## Buttons on the right
+### Buttons on the right
 
 <div class="sheet-example">
     <div class="clay-reorder clay-reorder-footer-end">
@@ -100,7 +100,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/dual-listbox/
 </div>
 ```
 
-## Buttons in the center
+### Buttons in the center
 
 <div class="sheet-example">
     <div class="clay-reorder clay-reorder-footer-center">
