@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayLayout renders 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="row justify-content-start"
+    >
+      <div
+        class="col-xs-4"
+      >
+        One of two columns
+      </div>
+      <div
+        class="col-xs-4"
+      >
+        One of two columns
+      </div>
+    </div>
+    <div
+      class="row justify-content-center"
+    >
+      <div
+        class="col-xs-4"
+      >
+        One of two columns
+      </div>
+      <div
+        class="col-xs-4"
+      >
+        One of two columns
+      </div>
+    </div>
+    <div
+      class="row justify-content-end"
+    >
+      <div
+        class="col-xs-4"
+      >
+        One of two columns
+      </div>
+      <div
+        class="col-xs-4"
+      >
+        One of two columns
+      </div>
+    </div>
+    <div
+      class="row justify-content-around"
+    >
+      <div
+        class="col-xs-4"
+      >
+        One of two columns
+      </div>
+      <div
+        class="col-xs-4"
+      >
+        One of two columns
+      </div>
+    </div>
+    <div
+      class="row justify-content-between"
+    >
+      <div
+        class="col-xs-4"
+      >
+        One of two columns
+      </div>
+      <div
+        class="col-xs-4"
+      >
+        One of two columns
+      </div>
+    </div>
+  </div>
+  <div
+    class="row"
+  >
+    <div
+      class="col-md-8 col-xs-12"
+    >
+      .col-12 .col-md-8
+    </div>
+    <div
+      class="col-md-4 col-xs-6"
+    >
+      .col-6 .col-md-4
+    </div>
+  </div>
+  <div
+    class="row"
+  >
+    <div
+      class="col-md-4 col-xs-6"
+    >
+      .col-6 .col-md-4
+    </div>
+    <div
+      class="col-md-4 col-xs-6"
+    >
+      .col-6 .col-md-4
+    </div>
+    <div
+      class="col-md-4 col-xs-6"
+    >
+      .col-6 .col-md-4
+    </div>
+  </div>
+  <div
+    class="row"
+  >
+    <div
+      class="col-xs-6"
+    >
+      .col-6
+    </div>
+    <div
+      class="col-xs-6"
+    >
+      .col-6
+    </div>
+  </div>
+  <div
+    class="row"
+  >
+    <div
+      class="col"
+    >
+      First, but unordered
+    </div>
+    <div
+      class="order-12 col"
+    >
+      Second, but last
+    </div>
+    <div
+      class="order-1 col"
+    >
+      Third, but first
+    </div>
+  </div>
+</div>
+`;
