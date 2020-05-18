@@ -45,7 +45,7 @@ interface IProps {
 	/**
 	 * Value displayed for the card's title
 	 */
-	title: React.ReactText;
+	title?: React.ReactText;
 }
 
 export const ClayCardWithNavigation: React.FunctionComponent<IProps> = ({
@@ -74,41 +74,56 @@ export const ClayCardWithNavigation: React.FunctionComponent<IProps> = ({
 				</ClayCard.AspectRatio>
 			)}
 
-			<ClayCard.Body>
-				{!horizontal && (
-					<>
-						<ClayCard.Description displayType="title" truncate>
-							{title}
-						</ClayCard.Description>
-						<ClayCard.Description displayType="text" truncate>
-							{description}
-						</ClayCard.Description>
-					</>
-				)}
-
-				{horizontal && (
-					<ClayCard.Row>
-						<span className="autofit-col">
-							<ClaySticker inline>
-								<ClayIcon
-									spritemap={spritemap}
-									symbol={horizontalSymbol}
-								/>
-							</ClaySticker>
-						</span>
-						<span className="autofit-col autofit-col-expand">
-							<span className="autofit-section">
+			{(horizontal || title || description) && (
+				<ClayCard.Body>
+					{!horizontal && (
+						<>
+							{title && (
 								<ClayCard.Description
 									displayType="title"
 									truncate
 								>
 									{title}
 								</ClayCard.Description>
+							)}
+
+							{description && (
+								<ClayCard.Description
+									displayType="text"
+									truncate
+								>
+									{description}
+								</ClayCard.Description>
+							)}
+						</>
+					)}
+
+					{horizontal && (
+						<ClayCard.Row>
+							<span className="autofit-col">
+								<ClaySticker inline>
+									<ClayIcon
+										spritemap={spritemap}
+										symbol={horizontalSymbol}
+									/>
+								</ClaySticker>
 							</span>
-						</span>
-					</ClayCard.Row>
-				)}
-			</ClayCard.Body>
+							{title && (
+								<span className="autofit-col autofit-col-expand">
+									<span className="autofit-section">
+										<ClayCard.Description
+											displayType="title"
+											truncate
+										>
+											{title}
+										</ClayCard.Description>
+									</span>
+								</span>
+							)}
+						</ClayCard.Row>
+					)}
+				</ClayCard.Body>
+			)}
 		</ClayCard>
 	);
 };
