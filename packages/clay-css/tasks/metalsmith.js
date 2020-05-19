@@ -1,3 +1,5 @@
+var execSync = require('child_process').execSync;
+var fs = require('fs');
 var path = require('path');
 var gulpsmith = require('gulpsmith');
 var gulpFrontMatter = require('gulp-front-matter');
@@ -239,6 +241,37 @@ module.exports = function(gulp, plugins, _, config) {
 
 			return gulp.src(['./src/scss/**/**/*', '!./src/scss/bootstrap/**/*'])
 				.pipe(sassdoc(options));
+		}
+	);
+
+	gulp.task(
+		'get:file-size',
+		function() {
+			function getKb(path) {
+				var stats = fs.statSync(path);
+				var bytes = stats['size'];
+				var kb = Math.round(bytes / 1000.0) + 'kb';
+
+				return kb;
+			}
+
+			var cssPath = path.resolve(path.join('build', 'css'));
+			var atlas = path.resolve(path.join(cssPath, 'atlas.css'));
+			var base = path.resolve(path.join(cssPath, 'base.css'));
+			var bootstrap = path.resolve(path.join(cssPath, 'bootstrap', 'bootstrap.css'));
+			var svgIcons = path.resolve(path.join('build', 'images', 'icons', 'icons.svg'));
+
+			execSync('gzip -kf ' + atlas);
+			execSync('gzip -kf ' + base);
+			execSync('gzip -kf ' + bootstrap);
+
+			console.log('atlas.css:', getKb(atlas));
+			console.log('atlas.css.gz:', getKb(path.join(cssPath, 'atlas.css.gz')));
+			console.log('base.css:', getKb(base));
+			console.log('base.css.gz:', getKb(path.join(cssPath, 'base.css.gz')));
+			console.log('bootstrap.css:', getKb(bootstrap));
+			console.log('bootstrap.css.gz:', getKb(path.join(cssPath, 'bootstrap', 'bootstrap.css.gz')));
+			console.log('SVG Icons:', getKb(svgIcons));
 		}
 	);
 };
