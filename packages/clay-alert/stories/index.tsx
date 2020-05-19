@@ -93,7 +93,7 @@ storiesOf('Components|ClayAlert', module)
 			title={text('Title', 'Info')}
 			variant={boolean('Stripe Variant', false) ? 'stripe' : undefined}
 		>
-			{text('Content', 'This is an alert!')}
+			{text('Content', 'This is an alert! test')}
 		</ClayAlert>
 	))
 	.add('w/o title', () => (
