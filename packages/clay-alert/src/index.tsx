@@ -88,7 +88,7 @@ export interface IClayAlertProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * The summary of the Alert, often is something like 'Error' or 'Info'.
 	 */
-	title: string;
+	title?: string;
 
 	/**
 	 * Determines the variant of the alert.
@@ -146,7 +146,7 @@ const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
 		>
 			<ConditionalContainer>
 				<div className="alert-autofit-row autofit-row">
-					<div className="autofit-col inline-item-before">
+					<div className="autofit-col">
 						<div className="autofit-section">
 							<span className="alert-indicator">
 								<Icon
@@ -159,7 +159,7 @@ const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
 
 					<div className="autofit-col autofit-col-expand">
 						<div className="autofit-section">
-							<strong className="lead">{title}</strong>
+							{title && <strong className="lead">{title}</strong>}
 
 							{children}
 						</div>

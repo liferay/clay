@@ -96,6 +96,26 @@ storiesOf('Components|ClayAlert', module)
 			{text('Content', 'This is an alert!')}
 		</ClayAlert>
 	))
+	.add('w/o title', () => (
+		<ClayAlert
+			displayType={
+				select(
+					'Display Type',
+					{
+						danger: 'danger',
+						info: 'info',
+						success: 'success',
+						warning: 'warning',
+					},
+					'info'
+				) as DisplayType
+			}
+			spritemap={spritemap}
+			variant={boolean('Stripe Variant', false) ? 'stripe' : undefined}
+		>
+			{text('Content', 'This is an alert!')}
+		</ClayAlert>
+	))
 	.add('w/ autoclose and no icon', () => {
 		const [show, setShow] = React.useState(true);
 

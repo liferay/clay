@@ -11,7 +11,7 @@ exports[`ClayAlert renders 1`] = `
     className="alert-autofit-row autofit-row"
   >
     <div
-      className="autofit-col inline-item-before"
+      className="autofit-col"
     >
       <div
         className="autofit-section"
@@ -61,7 +61,7 @@ exports[`ClayAlert renders as \`stripe\` variant 1`] = `
       className="alert-autofit-row autofit-row"
     >
       <div
-        className="autofit-col inline-item-before"
+        className="autofit-col"
       >
         <div
           className="autofit-section"
@@ -109,7 +109,7 @@ exports[`ClayAlert renders as a different type 1`] = `
     className="alert-autofit-row autofit-row"
   >
     <div
-      className="autofit-col inline-item-before"
+      className="autofit-col"
     >
       <div
         className="autofit-section"
@@ -162,7 +162,7 @@ exports[`ClayAlert renders with ToastContainer as a wrapper  1`] = `
         className="alert-autofit-row autofit-row"
       >
         <div
-          className="autofit-col inline-item-before"
+          className="autofit-col"
         >
           <div
             className="autofit-section"
@@ -206,7 +206,7 @@ exports[`ClayAlert renders with ToastContainer as a wrapper  1`] = `
         className="alert-autofit-row autofit-row"
       >
         <div
-          className="autofit-col inline-item-before"
+          className="autofit-col"
         >
           <div
             className="autofit-section"
@@ -250,7 +250,7 @@ exports[`ClayAlert renders with ToastContainer as a wrapper  1`] = `
         className="alert-autofit-row autofit-row"
       >
         <div
-          className="autofit-col inline-item-before"
+          className="autofit-col"
         >
           <div
             className="autofit-section"
@@ -299,7 +299,7 @@ exports[`ClayAlert renders with a footer and button 1`] = `
     className="alert-autofit-row autofit-row"
   >
     <div
-      className="autofit-col inline-item-before"
+      className="autofit-col"
     >
       <div
         className="autofit-section"
@@ -364,7 +364,7 @@ exports[`ClayAlert renders with a title and a message with markup 1`] = `
     className="alert-autofit-row autofit-row"
   >
     <div
-      className="autofit-col inline-item-before"
+      className="autofit-col"
     >
       <div
         className="autofit-section"
@@ -414,7 +414,7 @@ exports[`ClayAlert renders with an icon for closing 1`] = `
     className="alert-autofit-row autofit-row"
   >
     <div
-      className="autofit-col inline-item-before"
+      className="autofit-col"
     >
       <div
         className="autofit-section"
@@ -476,7 +476,7 @@ exports[`ClayAlert renders with an icon for closing with autoClose 1`] = `
     className="alert-autofit-row autofit-row"
   >
     <div
-      className="autofit-col inline-item-before"
+      className="autofit-col"
     >
       <div
         className="autofit-section"
@@ -538,7 +538,7 @@ exports[`ClayAlert renders with autoClose and without icon 1`] = `
     className="alert-autofit-row autofit-row"
   >
     <div
-      className="autofit-col inline-item-before"
+      className="autofit-col"
     >
       <div
         className="autofit-section"
