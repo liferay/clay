@@ -235,7 +235,7 @@ $table-drag: map-deep-merge(
 		c-dragging-after: (
 			background-color: $gray-400,
 			bottom: 0,
-			content: #{"''"},
+			content: '',
 			display: block,
 			left: 1px,
 			position: absolute,
@@ -249,7 +249,7 @@ $table-drag: map-deep-merge(
 			background-repeat: repeat-y,
 			background-size: 5px 6px,
 			bottom: 0,
-			content: #{"''"},
+			content: '',
 			display: block,
 			left: 0,
 			position: absolute,
@@ -281,7 +281,7 @@ $table-clone: map-deep-merge(
 		after: (
 			background-color: $primary,
 			bottom: 0,
-			content: #{"''"},
+			content: '',
 			display: block,
 			position: absolute,
 			right: 0,
@@ -292,7 +292,7 @@ $table-clone: map-deep-merge(
 		before: (
 			background-color: $primary,
 			bottom: 0,
-			content: #{"''"},
+			content: '',
 			display: block,
 			left: 0,
 			position: absolute,

@@ -216,6 +216,8 @@
 				}
 
 				appearance: map-get($map, appearance);
+			} @else if ($key == 'content') {
+				content: map-get($map, content);
 			} @else if ($key == 'word-wrap') {
 				overflow-wrap: map-get($map, word-wrap);
 				word-wrap: map-get($map, word-wrap);
