@@ -20,9 +20,6 @@ interface IProps extends React.HTMLAttributes<HTMLSpanElement> {
 	 */
 	displayType?: DisplayType;
 
-	/**
-	 * Info that is shown inside of the badge itself.
-	 */
 	label?: string | number;
 }
 
