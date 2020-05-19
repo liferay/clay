@@ -14,19 +14,19 @@ import {
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Usages](#usages)
-    -   [Basic Usage](#basic-usage)
-    -   [Localizable URL](#localizable-url)
+-   [Localized URL](#localized-url)
 -   [API](#api)
 
 </div>
 </div>
 
-## Basic usage
+Use it when you want to enable the users to define values like post titles, headings in multiple languages not having to rely on automatic translations.
 
 <LocalizableInput />
 
-## Localizable URL
+## Localized URL
+
+You might want to allow your users to localize URLs, in that case here's an example of how to compose Localized Input to get the desired result. The main parts are the `prependContent` and `resultFormatter` props.
 
 <LocalizableInputWithURL />
 

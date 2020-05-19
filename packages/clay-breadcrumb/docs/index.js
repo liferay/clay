@@ -44,11 +44,11 @@ const BreadcrumbCode = `const Component = () => {
 
 render(<Component />);`;
 
-const Breadcrumbs = () => {
+const Breadcrumb = () => {
 	const scope = {ClayBreadcrumb};
 	const code = BreadcrumbCode;
 
 	return <Editor code={code} imports={breadcrumbImportsCode} scope={scope} />;
 };
 
-export {Breadcrumbs};
+export {Breadcrumb};
