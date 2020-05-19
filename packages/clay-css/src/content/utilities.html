@@ -334,7 +334,7 @@ section: Components
 
 			<p>The component <code>.autofit-float-end</code> or <code>.autofit-float-end-{sm|md}-down</code> simulates the behavior of "right floated" elements on <code>.autofit-row</code>. Items that break to a new line will be aligned right.</p>
 
-			<p>Aligning items to the left will require nesting <code>autofit-float autofit-row</code> inside an <code>autofit-col autofit-col-expand</code> with the use of helper classes.</p>
+			<p><code>autofit-float-end</code> uses <code>justify-content: flex-end;</code> to force right alignment. Any column that doesn't expand the full width of <code>autofit-row</code> will be aligned right when it breaks to new line. Aligning items to the left will require nesting <code>autofit-float autofit-row</code> inside an <code>autofit-col autofit-col-expand</code> with the use of helper classes.</p>
 		</blockquote>
 
 		<div class="card">
@@ -420,6 +420,87 @@ section: Components
 					</div>
 
 					<div class="autofit-col">
+						<button class="btn btn-secondary" type="button">
+							<span class="inline-item inline-item-before">
+								<svg class="lexicon-icon lexicon-icon-share" focusable="false" role="presentation">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#share" />
+								</svg>
+							</span>Share
+						</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Autofit Float with Autofit Col End</h3>
+
+		<blockquote class="blockquote">
+			<p>Another way to mimic "right floated" elements without using <code>autofit-float-end</code> and <code>autofit-col-expand</code>. This pattern can duplicate floated layouts without the need for a clearfix.</p>
+		</blockquote>
+
+		<div class="card">
+			<div class="card-body">
+				<div class="autofit-float autofit-row autofit-row-center autofit-padded-no-gutters-x">
+					<div class="autofit-col">
+						<div class="autofit-section">
+							<button class="btn btn-sm btn-primary" type="button">Save</button>
+						</div>
+					</div>
+					<div class="autofit-col">
+						<div class="autofit-section">
+							<button class="btn btn-sm btn-secondary" type="button">Cancel</button>
+						</div>
+					</div>
+					<div class="autofit-col autofit-col-end">
+						<div class="autofit-row autofit-padded-no-gutters">
+							<div class="autofit-col autofit-col-expand">
+								<div class="autofit-section">
+									<input class="form-control" type="text" value="ReallySuperInsanely" />
+								</div>
+							</div>
+							<div class="autofit-col autofit-col-expand">
+								<div class="autofit-section">
+									<input class="form-control" type="text" value="JustIncrediblyLongAndTotally" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="autofit-float autofit-padded-no-gutters-x autofit-row autofit-row-center">
+					<div class="autofit-col">
+						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+							<span class="inline-item inline-item-before">
+								<svg class="lexicon-icon lexicon-icon-shortcut" focusable="false" role="presentation">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#shortcut" />
+								</svg>
+							</span>View in context
+						</button>
+					</div>
+					<div class="autofit-col">
+						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+							<span class="inline-item inline-item-before">
+								<svg class="lexicon-icon lexicon-icon-thumbs-up" focusable="false" role="presentation">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#thumbs-up" />
+								</svg>
+							</span>Like (25)
+						</button>
+					</div>
+					<div class="autofit-col">
+						<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+							<span class="inline-item inline-item-before">
+								<svg class="lexicon-icon lexicon-icon-flag-empty" focusable="false" role="presentation">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#flag-empty" />
+								</svg>
+							</span>Flag
+						</button>
+					</div>
+					<div class="autofit-col autofit-col-end">
 						<button class="btn btn-secondary" type="button">
 							<span class="inline-item inline-item-before">
 								<svg class="lexicon-icon lexicon-icon-share" focusable="false" role="presentation">
