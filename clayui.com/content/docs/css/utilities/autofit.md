@@ -646,7 +646,9 @@ Another way to mimic "right floated" elements without using `autofit-float-end` 
 ```html
 <div class="card">
 	<div class="card-body">
-		<div class="autofit-float autofit-row autofit-row-center autofit-padded-no-gutters-x">
+		<div
+			class="autofit-float autofit-row autofit-row-center autofit-padded-no-gutters-x"
+		>
 			<div class="autofit-col">
 				<div class="autofit-section">
 					...
@@ -672,7 +674,9 @@ Another way to mimic "right floated" elements without using `autofit-float-end` 
 				</div>
 			</div>
 		</div>
-		<div class="autofit-float autofit-padded-no-gutters-x autofit-row autofit-row-center">
+		<div
+			class="autofit-float autofit-padded-no-gutters-x autofit-row autofit-row-center"
+		>
 			<div class="autofit-col">
 				...
 			</div>
