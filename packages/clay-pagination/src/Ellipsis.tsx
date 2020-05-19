@@ -19,7 +19,7 @@ const ClayPaginationEllipsis: React.FunctionComponent<IPaginationEllipsisProps> 
 	hrefConstructor,
 	items = [],
 	onPageChange,
-}) => {
+}: IPaginationEllipsisProps) => {
 	const pages = items.map((page) => ({
 		disabled: disabledPages.includes(page),
 		href: hrefConstructor ? hrefConstructor(page) : undefined,

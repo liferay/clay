@@ -11,23 +11,31 @@ import {RadioToggle, Toggle} from '$packages/clay-form/docs/toggle';
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Example](#example)
--   [With ClayRadioGroup](#usage-with-clayradiogroup)
+-   [Composing](#composing)
+    -   [Inside ClayRadioGroup](#inside-clayradiogroup)
 -   [API](#api)
 
 </div>
 </div>
 
-## Example
+## Composing
+
+In order to create a controlled `Toggle` you need to provide the `toggled` and `onToggle` props.
+
+You can also have custom icons that further signal the current state of the Toggle by providing a `symbol` prop.
 
 <Toggle />
 
-## Usage with ClayRadioGroup
+### Inside ClayRadioGroup
 
-You may want the Toggle to behave as a radio element and in a group.
+If you want the Toggle to behave as a radio element (toggling one on will toggle others off) wrap your multiple `Toggles` with a [ClayRadioGroup](/docs/components/radio-group.html) component.
 
 <RadioToggle />
 
 ## API
 
 <div>[APITable "clay-form/src/Toggle.tsx"]</div>
+
+### ClayRadioGroup
+
+<div>[APITable "clay-form/src/RadioGroup.tsx"]</div>

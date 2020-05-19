@@ -6,17 +6,26 @@ packageNpm: '@clayui/slider'
 sibling: 'docs/components/css-slider.html'
 ---
 
-import {Slider} from '$packages/clay-slider/docs/index';
+import {DecadeSlider, Slider} from '$packages/clay-slider/docs/index';
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
+-   [Customization](#customization)
 -   [API](#api)
 
 </div>
 </div>
 
+You can use Slider with just 2 props for it's basic usage, `value` and `onValueChange` which is used to set the value of the Slider.
+
 <Slider />
+
+## Customization
+
+For a more specific usage you can specify other props, like `min` and `max` to determine the range, and `step` to specify how much the value changes.
+
+<DecadeSlider />
 
 ## API
 
