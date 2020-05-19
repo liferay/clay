@@ -15,9 +15,6 @@ type DisplayType =
 	| 'warning';
 
 interface IProps extends React.HTMLAttributes<HTMLSpanElement> {
-	/**
-	 * Determines the color of the badge.
-	 */
 	displayType?: DisplayType;
 
 	label?: string | number;
