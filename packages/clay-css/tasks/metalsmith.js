@@ -1,3 +1,4 @@
+var execSync = require('child_process').execSync;
 var fs = require('fs');
 var path = require('path');
 var gulpsmith = require('gulpsmith');
@@ -246,18 +247,31 @@ module.exports = function(gulp, plugins, _, config) {
 	gulp.task(
 		'get:file-size',
 		function() {
-			var atlasPath = path.resolve(path.join('build', 'css', 'atlas.css'));
-			var atlasStats = fs.statSync(atlasPath);
-			var atlasBytes = atlasStats["size"];
-			var atlasKb = Math.round(atlasBytes / 1000.0) + 'kb';
+			function getKb(path) {
+				var stats = fs.statSync(path);
+				var bytes = stats['size'];
+				var kb = Math.round(bytes / 1000.0) + 'kb';
 
-			var basePath = path.resolve(path.join('build', 'css', 'base.css'));
-			var baseStats = fs.statSync(basePath);
-			var baseBytes = baseStats["size"];
-			var baseKb = Math.round(baseBytes / 1000.0) + 'kb';
+				return kb;
+			}
 
-			console.log('Atlas:', atlasKb);
-			console.log('Base:', baseKb);
+			var cssPath = path.resolve(path.join('build', 'css'));
+			var atlas = path.resolve(path.join(cssPath, 'atlas.css'));
+			var base = path.resolve(path.join(cssPath, 'base.css'));
+			var bootstrap = path.resolve(path.join(cssPath, 'bootstrap', 'bootstrap.css'));
+			var svgIcons = path.resolve(path.join('build', 'images', 'icons', 'icons.svg'));
+
+			execSync('gzip -kf ' + atlas);
+			execSync('gzip -kf ' + base);
+			execSync('gzip -kf ' + bootstrap);
+
+			console.log('atlas.css:', getKb(atlas));
+			console.log('atlas.css.gz:', getKb(path.join(cssPath, 'atlas.css.gz')));
+			console.log('base.css:', getKb(base));
+			console.log('base.css.gz:', getKb(path.join(cssPath, 'base.css.gz')));
+			console.log('bootstrap.css:', getKb(bootstrap));
+			console.log('bootstrap.css.gz:', getKb(path.join(cssPath, 'bootstrap', 'bootstrap.css.gz')));
+			console.log('SVG Icons:', getKb(svgIcons));
 		}
 	);
 };
