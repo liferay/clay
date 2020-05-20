@@ -108,7 +108,7 @@ export default (props) => {
 													)}
 												</div>
 												<div className="col-12">
-													{tab && tab.html ? (
+													{tab ? (
 														<ul
 															className="border-bottom nav nav-clay nav-underline"
 															role="tablist"
