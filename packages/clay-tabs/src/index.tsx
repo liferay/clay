@@ -25,6 +25,7 @@ interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 const ClayTabs: React.FunctionComponent<IProps> & {
 	Content: typeof Content;
 	TabPane: typeof TabPane;
+	TabPanel: typeof TabPane;
 	Item: typeof Item;
 } = ({
 	children,
@@ -54,6 +55,7 @@ const ClayTabs: React.FunctionComponent<IProps> & {
 
 ClayTabs.Content = Content;
 ClayTabs.TabPane = TabPane;
+ClayTabs.TabPanel = TabPane;
 ClayTabs.Item = Item;
 
 export default ClayTabs;
