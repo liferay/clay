@@ -19,12 +19,14 @@ const ClayContainerFluid: React.FunctionComponent<IProps> = ({
 	children,
 	size = 'xl',
 	...otherProps
-}) => {
+}: IProps) => {
 	return (
 		<Container {...otherProps} fluid fluidSize={size}>
 			{children}
 		</Container>
 	);
 };
+
+ClayContainerFluid.displayName = 'ClayContainerFluid';
 
 export default ClayContainerFluid;

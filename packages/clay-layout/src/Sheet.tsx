@@ -10,10 +10,12 @@ interface IContainerProps extends React.HTMLAttributes<HTMLElement> {
 	/**
 	 * Element or component to render for container
 	 */
-	containerElement?: React.JSXElementConstructor<{
-		className: string;
-		[key: string]: any;
-	}>;
+	containerElement?:
+		| string
+		| React.JSXElementConstructor<{
+				className: string;
+				[key: string]: any;
+		  }>;
 }
 
 const SheetHeader: React.FunctionComponent<IContainerProps> = ({
@@ -21,7 +23,7 @@ const SheetHeader: React.FunctionComponent<IContainerProps> = ({
 	className,
 	containerElement: ContainerElement = 'div',
 	...otherProps
-}) => {
+}: IContainerProps) => {
 	return (
 		<ContainerElement
 			{...otherProps}
@@ -39,7 +41,7 @@ const SheetFooter: React.FunctionComponent<IContainerProps> = ({
 	className,
 	containerElement: ContainerElement = 'div',
 	...otherProps
-}) => {
+}: IContainerProps) => {
 	return (
 		<ContainerElement
 			{...otherProps}
@@ -57,7 +59,7 @@ const SheetSection: React.FunctionComponent<IContainerProps> = ({
 	className,
 	containerElement: ContainerElement = 'div',
 	...otherProps
-}) => {
+}: IContainerProps) => {
 	return (
 		<ContainerElement
 			{...otherProps}
@@ -83,7 +85,7 @@ const Sheet: React.FunctionComponent<IProps> = ({
 	containerElement: ContainerElement = 'div',
 	size,
 	...otherProps
-}) => {
+}: IProps) => {
 	return (
 		<ContainerElement
 			{...otherProps}
