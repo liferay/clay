@@ -30,6 +30,7 @@ gulp.task('build', function(cb) {
 		'build:metalsmith',
 		'build:rtl',
 		'build:sassdoc',
+		'get:file-size',
 		function(err) {
 			gulp.emit('build:finished', err);
 

@@ -84,7 +84,7 @@ $card-interactive-after-highlight: map-deep-merge((
 	left: -$card-border-width,
 	position: absolute,
 	right: -$card-border-width,
-	transition: height 0.15s ease-in-out,
+	transition: height 0.15s ease-out,
 	hover-height: 4px,
 	focus-height: 4px,
 	active-height: 4px,
