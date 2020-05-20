@@ -10,10 +10,12 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Element or component to render for container
 	 */
-	containerElement?: React.JSXElementConstructor<{
-		className: string;
-		[key: string]: any;
-	}>;
+	containerElement?:
+		| string
+		| React.JSXElementConstructor<{
+				className: string;
+				[key: string]: any;
+		  }>;
 
 	/**
 	 * This removes the negative margins from .row and the
@@ -34,7 +36,7 @@ const ClayRow: React.FunctionComponent<IProps> = ({
 	gutters = true,
 	justify,
 	...otherProps
-}) => {
+}: IProps) => {
 	return (
 		<ContainerElement
 			{...otherProps}
@@ -47,5 +49,7 @@ const ClayRow: React.FunctionComponent<IProps> = ({
 		</ContainerElement>
 	);
 };
+
+ClayRow.displayName = 'ClayRow';
 
 export default ClayRow;

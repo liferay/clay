@@ -23,17 +23,3 @@ export {
 	SheetHeader,
 	SheetSection,
 };
-
-export default {
-	Col,
-	Container,
-	ContainerFluid,
-	ContentCol,
-	ContentRow,
-	ContentSection,
-	Row,
-	Sheet,
-	SheetFooter,
-	SheetHeader,
-	SheetSection,
-};

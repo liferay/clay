@@ -12,10 +12,12 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Element or component to render for container
 	 */
-	containerElement?: React.JSXElementConstructor<{
-		className: string;
-		[key: string]: any;
-	}>;
+	containerElement?:
+		| string
+		| React.JSXElementConstructor<{
+				className: string;
+				[key: string]: any;
+		  }>;
 
 	/**
 	 * The number of columns to span on large devices
@@ -53,7 +55,7 @@ const ClayCol: React.FunctionComponent<IProps> = ({
 	sm,
 	xs,
 	...otherProps
-}) => {
+}: IProps) => {
 	const noBreakPoints = !lg && !md && !sm && !xs && !size;
 
 	xs = xs || size;
@@ -77,5 +79,7 @@ const ClayCol: React.FunctionComponent<IProps> = ({
 		</ContainerElement>
 	);
 };
+
+ClayCol.displayName = 'ClayCol';
 
 export default ClayCol;

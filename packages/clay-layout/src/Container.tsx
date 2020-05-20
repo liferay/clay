@@ -10,10 +10,12 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Element or component to render for container
 	 */
-	containerElement?: React.JSXElementConstructor<{
-		className: string;
-		[key: string]: any;
-	}>;
+	containerElement?:
+		| string
+		| React.JSXElementConstructor<{
+				className: string;
+				[key: string]: any;
+		  }>;
 
 	/**
 	 * Adds `.container-fluid` class to create a fluid container that
@@ -50,7 +52,7 @@ const ClayContainer: React.FunctionComponent<IProps> = ({
 	formSize,
 	view,
 	...otherProps
-}) => {
+}: IProps) => {
 	return (
 		<ContainerElement
 			{...otherProps}
@@ -66,5 +68,7 @@ const ClayContainer: React.FunctionComponent<IProps> = ({
 		</ContainerElement>
 	);
 };
+
+ClayContainer.displayName = 'ClayContainer';
 
 export default ClayContainer;

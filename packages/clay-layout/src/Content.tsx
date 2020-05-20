@@ -6,14 +6,16 @@
 import classNames from 'classnames';
 import React from 'react';
 
-interface IRowProps extends React.HTMLAttributes<HTMLDivElement> {
+interface IContentRowProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Element or component to render for container
 	 */
-	containerElement?: React.JSXElementConstructor<{
-		className: string;
-		[key: string]: any;
-	}>;
+	containerElement?:
+		| string
+		| React.JSXElementConstructor<{
+				className: string;
+				[key: string]: any;
+		  }>;
 
 	/**
 	 * Provides the benefit of aligning content via flexbox without losing the behavior
@@ -43,7 +45,7 @@ interface IRowProps extends React.HTMLAttributes<HTMLDivElement> {
 	verticalAlign?: 'center' | 'end';
 }
 
-const ContentRow: React.FunctionComponent<IRowProps> = ({
+const ContentRow: React.FunctionComponent<IContentRowProps> = ({
 	children,
 	className,
 	containerElement: ContainerElement = 'div',
@@ -52,7 +54,7 @@ const ContentRow: React.FunctionComponent<IRowProps> = ({
 	padded,
 	verticalAlign,
 	...otherProps
-}) => {
+}: IContentRowProps) => {
 	return (
 		<ContainerElement
 			{...otherProps}
@@ -73,14 +75,16 @@ const ContentRow: React.FunctionComponent<IRowProps> = ({
 
 ContentRow.displayName = 'ClayContentRow';
 
-interface IColProps extends React.HTMLAttributes<HTMLDivElement> {
+interface IContentColProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Element or component to render for container
 	 */
-	containerElement?: React.JSXElementConstructor<{
-		className: string;
-		[key: string]: any;
-	}>;
+	containerElement?:
+		| string
+		| React.JSXElementConstructor<{
+				className: string;
+				[key: string]: any;
+		  }>;
 
 	/*
 	 * Makes column expand and fill available space in row.
@@ -99,7 +103,7 @@ interface IColProps extends React.HTMLAttributes<HTMLDivElement> {
 	gutters?: boolean;
 }
 
-const ContentCol: React.FunctionComponent<IColProps> = ({
+const ContentCol: React.FunctionComponent<IContentColProps> = ({
 	children,
 	className,
 	containerElement: ContainerElement = 'div',
@@ -107,7 +111,7 @@ const ContentCol: React.FunctionComponent<IColProps> = ({
 	float,
 	gutters,
 	...otherProps
-}) => {
+}: IContentColProps) => {
 	return (
 		<ContainerElement
 			{...otherProps}
@@ -124,22 +128,24 @@ const ContentCol: React.FunctionComponent<IColProps> = ({
 
 ContentCol.displayName = 'ClayContentCol';
 
-interface IColProps extends React.HTMLAttributes<HTMLDivElement> {
+interface IColSectionProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Element or component to render for container
 	 */
-	containerElement?: React.JSXElementConstructor<{
-		className: string;
-		[key: string]: any;
-	}>;
+	containerElement?:
+		| string
+		| React.JSXElementConstructor<{
+				className: string;
+				[key: string]: any;
+		  }>;
 }
 
-const ContentSection: React.FunctionComponent<IColProps> = ({
+const ContentSection: React.FunctionComponent<IColSectionProps> = ({
 	children,
 	className,
 	containerElement: ContainerElement = 'div',
 	...otherProps
-}) => {
+}: IColSectionProps) => {
 	return (
 		<ContainerElement
 			{...otherProps}
