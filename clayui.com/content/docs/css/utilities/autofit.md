@@ -10,6 +10,7 @@ title: 'Autofit'
 -   [Row Vertical Alignment](#row-vertical-alignment)
 -   [Float](#float)
 -   [Float End](#float-end)
+-   [Float with Autofit Col End](#float-with-autofit-col-end)
 -   [Nesting Autofit Rows](#nesting-autofit-rows)
 
 </div>
@@ -421,6 +422,8 @@ The component `.autofit-float-end` or `.autofit-float-end-{sm|md}-down` simulate
 
 Aligning items to the left will require nesting `autofit-float autofit-row` inside an `autofit-col autofit-col-expand` with the use of helper classes.
 
+`autofit-float-end` uses `justify-content: flex-end;` to force right alignment. Any column that doesn't expand the full width of `autofit-row` will be aligned right when it breaks to new line. Aligning items to the left will require nesting `autofit-float autofit-row` inside an `autofit-col autofit-col-expand` with the use of helper classes.
+
 <div class="sheet-example">
 	<div class="card">
 		<div class="card-body">
@@ -558,6 +561,132 @@ Aligning items to the left will require nesting `autofit-float autofit-row` insi
 				</div>
 			</div>
 			<div class="autofit-col">
+				...
+			</div>
+		</div>
+	</div>
+</div>
+```
+
+## Float with Autofit Col End
+
+Another way to mimic "right floated" elements without using `autofit-float-end` and `autofit-col-expand`. This pattern can duplicate floated layouts without the need for a clearfix.
+
+<div class="sheet-example">
+	<div class="card">
+		<div class="card-body">
+			<div class="autofit-float autofit-row autofit-row-center autofit-padded-no-gutters-x">
+				<div class="autofit-col">
+					<div class="autofit-section">
+						<button class="btn btn-sm btn-primary" type="button">Save</button>
+					</div>
+				</div>
+				<div class="autofit-col">
+					<div class="autofit-section">
+						<button class="btn btn-sm btn-secondary" type="button">Cancel</button>
+					</div>
+				</div>
+				<div class="autofit-col autofit-col-end">
+					<div class="autofit-row autofit-padded-no-gutters">
+						<div class="autofit-col autofit-col-expand">
+							<div class="autofit-section">
+								<input class="form-control" type="text" value="ReallySuperInsanely" />
+							</div>
+						</div>
+						<div class="autofit-col autofit-col-expand">
+							<div class="autofit-section">
+								<input class="form-control" type="text" value="JustIncrediblyLongAndTotally" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="autofit-float autofit-padded-no-gutters-x autofit-row autofit-row-center">
+				<div class="autofit-col">
+					<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+						<span class="inline-item inline-item-before">
+							<svg class="lexicon-icon lexicon-icon-shortcut" focusable="false" role="presentation">
+								<use href="/images/icons/icons.svg#shortcut" />
+							</svg>
+						</span>View in context
+					</button>
+				</div>
+				<div class="autofit-col">
+					<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+						<span class="inline-item inline-item-before">
+							<svg class="lexicon-icon lexicon-icon-thumbs-up" focusable="false" role="presentation">
+								<use href="/images/icons/icons.svg#thumbs-up" />
+							</svg>
+						</span>Like (25)
+					</button>
+				</div>
+				<div class="autofit-col">
+					<button class="btn btn-outline-secondary btn-outline-borderless btn-sm" type="button">
+						<span class="inline-item inline-item-before">
+							<svg class="lexicon-icon lexicon-icon-flag-empty" focusable="false" role="presentation">
+								<use href="/images/icons/icons.svg#flag-empty" />
+							</svg>
+						</span>Flag
+					</button>
+				</div>
+				<div class="autofit-col autofit-col-end">
+					<button class="btn btn-secondary" type="button">
+						<span class="inline-item inline-item-before">
+							<svg class="lexicon-icon lexicon-icon-share" focusable="false" role="presentation">
+								<use href="/images/icons/icons.svg#share" />
+							</svg>
+						</span>Share
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+```html
+<div class="card">
+	<div class="card-body">
+		<div
+			class="autofit-float autofit-row autofit-row-center autofit-padded-no-gutters-x"
+		>
+			<div class="autofit-col">
+				<div class="autofit-section">
+					...
+				</div>
+			</div>
+			<div class="autofit-col">
+				<div class="autofit-section">
+					...
+				</div>
+			</div>
+			<div class="autofit-col autofit-col-end">
+				<div class="autofit-row autofit-padded-no-gutters">
+					<div class="autofit-col autofit-col-expand">
+						<div class="autofit-section">
+							...
+						</div>
+					</div>
+					<div class="autofit-col autofit-col-expand">
+						<div class="autofit-section">
+							...
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div
+			class="autofit-float autofit-padded-no-gutters-x autofit-row autofit-row-center"
+		>
+			<div class="autofit-col">
+				...
+			</div>
+			<div class="autofit-col">
+				...
+			</div>
+			<div class="autofit-col">
+				...
+			</div>
+			<div class="autofit-col autofit-col-end">
 				...
 			</div>
 		</div>
