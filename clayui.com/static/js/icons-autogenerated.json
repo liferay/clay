@@ -357,7 +357,7 @@
     },
     {
         "name": "desktop",
-        "aliases": ["computer", "display", "screen"]
+        "aliases": ["deprecated"]
     },
     {
         "name": "device-check",
@@ -382,6 +382,14 @@
     {
         "name": "disk",
         "aliases": ["floppy disk", "save"]
+    },
+    {
+        "name": "display-content",
+        "aliases": ["computer", "monitor", "screen"]
+    },
+    {
+        "name": "display",
+        "aliases": ["computer", "monitor", "screen"]
     },
     {
         "name": "document-code",
@@ -1124,12 +1132,20 @@
         "aliases": [""]
     },
     {
+        "name": "thumbs-down-full",
+        "aliases": ["dislike", "social"]
+    },
+    {
         "name": "thumbs-down",
         "aliases": ["dislike", "social"]
     },
     {
         "name": "thumbs-up-arrow",
         "aliases": [""]
+    },
+    {
+        "name": "thumbs-up-full",
+        "aliases": ["like", "social"]
     },
     {
         "name": "thumbs-up",
