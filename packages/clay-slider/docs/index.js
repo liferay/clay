@@ -35,7 +35,7 @@ export const Slider = () => {
 };
 
 const DecadeSliderCode = `const Component = () => {
-	const [value, setValue] = useState(10);
+	const [decade, setDecade] = useState(10);
 
 	return (
 		<div className="form-group">
@@ -44,11 +44,11 @@ const DecadeSliderCode = `const Component = () => {
 			<ClaySlider
 				id="decadeSlider"
 				max={2020}
-				onValueChange={setValue}
+				onValueChange={setDecade}
 				step={10}
-				value={value}
+				value={decade}
 			/>
-        </div>
+		</div>
 	);
 }
 

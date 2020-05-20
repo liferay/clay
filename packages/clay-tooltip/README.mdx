@@ -22,9 +22,9 @@ import {
 </div>
 </div>
 
-Simplest way of using Tooltip is by leveraging it's `show` prop and specifying `alignPosition` to determine it's position relative to the element it's tied to.
+Simplest way of using Tooltip is by leveraging it's `show` prop and specifying `alignPosition` to determine it's position relative to the element it's aligned to.
 
-By using the [TooltipProvider](#tooltipprovider) wrapper you can bring the control over the tooltip to the component that is tied to it.
+If you have multiple Tooltips on the page, [TooltipProvider](#tooltipprovider) allows you to only have to instantiate the component once and simply provide html attributes to the elements that need tooltips.
 
 <Tooltip />
 
@@ -32,7 +32,7 @@ By using the [TooltipProvider](#tooltipprovider) wrapper you can bring the contr
 
 By using the `<TooltipProvider>` it allows you to add the desired tooltip content on each element as a data attribute.
 
-Here's a list of attributes the TooltipProvider can leverage:
+Here's a list of html attributes that you can provide to children elements of the TooltipProvider:
 
 -   `title` is for the tooltip content.
 -   `data-tooltip-align` is for alignment direction.
