@@ -129,6 +129,20 @@ label {
 	&[type="range"] {
 		background-color: transparent;
 		border-color: transparent;
+		padding: 0;
+
+		&:focus {
+			box-shadow: none;
+
+			&::-webkit-slider-thumb {
+				box-shadow: $input-focus-box-shadow;
+			}
+		}
+
+		&::-webkit-slider-thumb {
+			border-radius: 100px;
+			transition: $input-transition;
+		}
 	}
 
 	&:not([type="range"]) {
