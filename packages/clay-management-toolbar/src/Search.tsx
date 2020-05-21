@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import ClayLayout from '@clayui/layout';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -41,9 +42,7 @@ const Search: React.FunctionComponent<IProps> = ({
 			{onlySearch ? (
 				content
 			) : (
-				<div className="container-fluid container-fluid-max-xl">
-					{content}
-				</div>
+				<ClayLayout.ContainerFluid>{content}</ClayLayout.ContainerFluid>
 			)}
 		</div>
 	);

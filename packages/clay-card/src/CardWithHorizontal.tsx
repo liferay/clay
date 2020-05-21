@@ -6,6 +6,7 @@
 import {ClayDropDownWithItems} from '@clayui/drop-down';
 import {ClayCheckbox} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
+import ClayLayout from '@clayui/layout';
 import ClaySticker from '@clayui/sticker';
 import React from 'react';
 
@@ -69,13 +70,13 @@ export const ClayCardWithHorizontal: React.FunctionComponent<IProps> = ({
 	const content = (
 		<ClayCard.Body>
 			<ClayCard.Row>
-				<div className="autofit-col">
+				<ClayLayout.ContentCol>
 					<ClaySticker inline>
 						<ClayIcon spritemap={spritemap} symbol={symbol} />
 					</ClaySticker>
-				</div>
+				</ClayLayout.ContentCol>
 
-				<div className="autofit-col autofit-col-expand autofit-col-gutters">
+				<ClayLayout.ContentCol expand gutters>
 					<ClayCard.Description
 						disabled={disabled}
 						displayType="title"
@@ -83,10 +84,10 @@ export const ClayCardWithHorizontal: React.FunctionComponent<IProps> = ({
 					>
 						{title}
 					</ClayCard.Description>
-				</div>
+				</ClayLayout.ContentCol>
 
 				{actions && (
-					<div className="autofit-col">
+					<ClayLayout.ContentCol>
 						<ClayDropDownWithItems
 							items={actions}
 							spritemap={spritemap}
@@ -103,7 +104,7 @@ export const ClayCardWithHorizontal: React.FunctionComponent<IProps> = ({
 								</button>
 							}
 						/>
-					</div>
+					</ClayLayout.ContentCol>
 				)}
 			</ClayCard.Row>
 		</ClayCard.Body>

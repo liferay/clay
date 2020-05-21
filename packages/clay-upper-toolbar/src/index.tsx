@@ -4,6 +4,7 @@
  */
 
 import {ClayInput} from '@clayui/form';
+import ClayLayout from '@clayui/layout';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -68,9 +69,9 @@ const ClayUpperToolbar: React.FunctionComponent<React.HTMLAttributes<
 			)}
 			{...otherProps}
 		>
-			<div className="container-fluid container-fluid-max-xl">
+			<ClayLayout.ContainerFluid>
 				<ul className="tbar-nav">{children}</ul>
-			</div>
+			</ClayLayout.ContainerFluid>
 		</nav>
 	);
 };

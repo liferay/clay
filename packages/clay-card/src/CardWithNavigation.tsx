@@ -4,6 +4,7 @@
  */
 
 import ClayIcon from '@clayui/icon';
+import ClayLayout from '@clayui/layout';
 import ClaySticker from '@clayui/sticker';
 import React from 'react';
 
@@ -100,25 +101,25 @@ export const ClayCardWithNavigation: React.FunctionComponent<IProps> = ({
 
 					{horizontal && (
 						<ClayCard.Row>
-							<span className="autofit-col">
+							<ClayLayout.ContentCol>
 								<ClaySticker inline>
 									<ClayIcon
 										spritemap={spritemap}
 										symbol={horizontalSymbol}
 									/>
 								</ClaySticker>
-							</span>
+							</ClayLayout.ContentCol>
 							{title && (
-								<span className="autofit-col autofit-col-expand">
-									<span className="autofit-section">
+								<ClayLayout.ContentCol expand>
+									<ClayLayout.ContentSection>
 										<ClayCard.Description
 											displayType="title"
 											truncate
 										>
 											{title}
 										</ClayCard.Description>
-									</span>
-								</span>
+									</ClayLayout.ContentSection>
+								</ClayLayout.ContentCol>
 							)}
 						</ClayCard.Row>
 					)}

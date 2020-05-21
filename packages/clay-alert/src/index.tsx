@@ -4,6 +4,7 @@
  */
 
 import Icon from '@clayui/icon';
+import ClayLayout from '@clayui/layout';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -145,26 +146,26 @@ const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
 			role="alert"
 		>
 			<ConditionalContainer>
-				<div className="alert-autofit-row autofit-row">
-					<div className="autofit-col">
-						<div className="autofit-section">
+				<ClayLayout.ContentRow className="alert-autofit-row">
+					<ClayLayout.ContentCol>
+						<ClayLayout.ContentSection>
 							<span className="alert-indicator">
 								<Icon
 									spritemap={spritemap}
 									symbol={ICON_MAP[displayType]}
 								/>
 							</span>
-						</div>
-					</div>
+						</ClayLayout.ContentSection>
+					</ClayLayout.ContentCol>
 
-					<div className="autofit-col autofit-col-expand">
-						<div className="autofit-section">
+					<ClayLayout.ContentCol expand>
+						<ClayLayout.ContentSection>
 							{title && <strong className="lead">{title}</strong>}
 
 							{children}
-						</div>
-					</div>
-				</div>
+						</ClayLayout.ContentSection>
+					</ClayLayout.ContentCol>
+				</ClayLayout.ContentRow>
 
 				{showDismissible && (
 					<button

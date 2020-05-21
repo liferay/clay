@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as ClayLayout from '..';
+import ClayLayout from '..';
 import {cleanup, render} from '@testing-library/react';
 import React from 'react';
 
