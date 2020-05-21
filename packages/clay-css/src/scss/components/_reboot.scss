@@ -12,14 +12,6 @@
 }
 
 html {
-	// Change the default font family in all browsers
-
-	font-family: sans-serif;
-
-	// Correct the line height in all browsers
-
-	line-height: 1.15;
-
 	// Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS
 
 	-webkit-text-size-adjust: 100%;
@@ -50,33 +42,13 @@ body {
 	background-color: $body-bg;
 	color: $body-color;
 	font-family: $font-family-base;
-
-	@include font-size($font-size-base);
-
+	font-size: $font-size-base;
 	font-weight: $font-weight-base;
 	line-height: $line-height-base;
 
 	// Remove the margin in all browsers
 
 	margin: 0;
-
-	// Set an explicit initial text-align value so that we can later use the `inherit` value on things like `<th>` elements
-
-	text-align: left;
-}
-
-// Future-proof rule: in browsers that support :focus-visible, suppress the focus outline
-// on elements that programmatically receive focus but wouldn't normally show a visible
-// focus outline. In general, this would mean that the outline is only applied if the
-// interaction that led to the element receiving programmatic focus was a keyboard interaction,
-// or the browser has somehow determined that the user is primarily a keyboard user and/or
-// wants focus outlines to always be presented.
-//
-// See https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible
-// and https://developer.paciellogroup.com/blog/2018/03/focus-visible-and-backwards-compatibility/
-
-[tabindex='-1']:focus:not(:focus-visible) {
-	outline: 0 !important;
 }
 
 hr {
@@ -87,7 +59,7 @@ hr {
 
 	// Show the overflow in Edge and IE
 
-	overflow: visible; // 2
+	overflow: visible;
 }
 
 // Remove top margins from headings
@@ -101,8 +73,8 @@ h3,
 h4,
 h5,
 h6 {
-	margin-top: 0;
 	margin-bottom: $headings-margin-bottom;
+	margin-top: 0;
 }
 
 // Reset margins on paragraphs
@@ -111,11 +83,9 @@ h6 {
 // bottom margin to use `rem` units instead of `em`.
 
 p {
-	margin-top: 0;
 	margin-bottom: $paragraph-margin-bottom;
+	margin-top: 0;
 }
-
-// Duplicate behavior to the data-* attribute for our tooltip plugin
 
 abbr[title],
 abbr[data-original-title] {
@@ -126,7 +96,7 @@ abbr[data-original-title] {
 
 	// Prevent the text-decoration to be skipped
 
-	text-decoration-skip-ink: none; // 5
+	text-decoration-skip-ink: none;
 
 	// Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari
 
@@ -180,7 +150,7 @@ strong {
 small {
 	// Add the correct font size in all browsers
 
-	@include font-size(80%);
+	font-size: 80%;
 }
 
 // Prevent `sub` and `sup` elements from affecting the line height in
@@ -188,8 +158,7 @@ small {
 
 sub,
 sup {
-	@include font-size(75%);
-
+	font-size: 75%;
 	line-height: 0;
 	position: relative;
 	vertical-align: baseline;
@@ -203,31 +172,16 @@ sup {
 	top: -0.5em;
 }
 
-a {
+[href] {
 	// Remove the gray background on active links in IE 10
 
 	background-color: transparent;
 	color: $link-color;
 	text-decoration: $link-decoration;
 
-	@include hover() {
+	&:hover {
 		color: $link-hover-color;
 		text-decoration: $link-hover-decoration;
-	}
-}
-
-// And undo these styles for placeholder links/named anchors (without href).
-// It would be more straightforward to just use a[href] in previous block, but that
-// causes specificity issues in many other styles that are too complex to fix.
-// See https://github.com/twbs/bootstrap/issues/19402
-
-a:not([href]) {
-	color: inherit;
-	text-decoration: none;
-
-	@include hover() {
-		color: inherit;
-		text-decoration: none;
 	}
 }
 
@@ -241,7 +195,7 @@ samp {
 
 	// Correct the odd `em` font sizing in all browsers
 
-	@include font-size(1em);
+	font-size: 1em;
 }
 
 pre {
@@ -297,13 +251,6 @@ caption {
 	text-align: left;
 }
 
-th {
-	// Matches default `<td>` alignment by inheriting from the `<body>`, or the
-	// closest parent with a set `text-align`.
-
-	text-align: inherit;
-}
-
 // Forms
 
 label {
@@ -314,7 +261,6 @@ label {
 }
 
 // Remove the default `border-radius` that macOS Chrome adds.
-//
 // Details at https://github.com/twbs/bootstrap/issues/24093
 
 button {
@@ -323,7 +269,6 @@ button {
 
 // Work around a Firefox/IE bug where the transparent `button` background
 // results in a loss of the default `button` focus styles.
-//
 // Credit: https://github.com/suitcss/base/
 
 button:focus {
@@ -336,9 +281,8 @@ button,
 select,
 optgroup,
 textarea {
-	@include font-size(inherit);
-
 	font-family: inherit;
+	font-size: inherit;
 	line-height: inherit;
 
 	// Remove the margin in Firefox and Safari
@@ -361,35 +305,21 @@ select {
 }
 
 // Remove the inheritance of word-wrap in Safari.
-//
 // Details at https://github.com/twbs/bootstrap/issues/24990
 
 select {
 	word-wrap: normal;
 }
 
-// [type="button"] { -webkit-appearance: button; } prevent WebKit bug where `-webkit-appearance` destroys native `audio` and `video` controls in Android 4
+// `[type="button"] { -webkit-appearance: button; }` prevent WebKit bug where `-webkit-appearance` destroys native `audio` and `video` controls in Android 4
 
 button,
-[type="button"], // 1
+[type="button"],
 [type="reset"],
 [type="submit"] {
 	// Correct the inability to style clickable types in iOS and Safari
 
 	-webkit-appearance: button;
-}
-
-// Opinionated: add "hand" cursor to non-disabled button elements.
-
-@if $enable-pointer-cursor-for-buttons {
-	button,
-	[type='button'],
-	[type='reset'],
-	[type='submit'] {
-		&:not(:disabled) {
-			cursor: pointer;
-		}
-	}
 }
 
 // Remove inner border and padding from Firefox, but don't restore the outline like Normalize.
@@ -458,9 +388,7 @@ legend {
 
 	color: inherit;
 	display: block;
-
-	@include font-size(1.5rem);
-
+	font-size: 1.5rem;
 	line-height: inherit;
 	margin-bottom: 0.5rem;
 
