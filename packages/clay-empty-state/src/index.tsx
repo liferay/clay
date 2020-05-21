@@ -13,7 +13,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	description?: string;
 
 	/**
-	 *
+	 * HTMLImage element attributes to add to the image within the component
 	 */
 	imgProps?: React.ImgHTMLAttributes<HTMLImageElement>;
 
@@ -36,7 +36,7 @@ const ClayEmptyState: React.FunctionComponent<IProps> = ({
 	imgSrc,
 	title = 'No results found',
 	...otherProps
-}) => {
+}: IProps) => {
 	const hasImg = imgSrc || imgProps;
 
 	return (
