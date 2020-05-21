@@ -1,17 +1,39 @@
-# clay-empty-state
+---
+title: 'Empty State'
+description: 'Empty states provide users with feedback on the reasons behind the empty state and what they can do to move out of the empty state.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/empty-states/'
+packageNpm: '@clayui/empty-state'
+sibling: 'docs/components/css-empty-state.html'
+---
 
-Empty states provide users with feedback on the reasons behind the empty state and what they can do to move out of the empty state.
+import {
+	EmptyState,
+	EmptyStateWithImage,
+} from '$packages/clay-empty-state/docs/index';
 
-## Setup
+<div class="nav-toc-absolute">
+<div class="nav-toc">
 
-1. Install `yarn`
+-   [Without Animation](#without-animation)
+-   [With Animation](#with-animation)
+-   [API](#api)
 
-2. Install local dependencies:
+</div>
+</div>
 
-```
-yarn
-```
+## Without Animation
 
-## Contribute
+By ommiting the `imgSrc` prop you will render a default Empty State component.
+Even without an animation you can still pass in `children` to the component as seen with the `ClayButton` component in this example.
 
-We'd love to get contributions from you! Please, check our [Contributing Guidelines](https://github.com/liferay/clay/blob/master/CONTRIBUTING.md) to see how you can help us improve.
+<EmptyState />
+
+## With Animation
+
+Adding an image to the component is easy, just point the `imgSrc` to the image you want to use
+
+<EmptyStateWithImage />
+
+## API
+
+<div>[APITable "clay-empty-state/src/index.tsx"]</div>
