@@ -4,10 +4,10 @@
  */
 
 import Editor from '$clayui.com/src/components/Editor';
-import * as ClayLayout from '@clayui/layout';
+import ClayLayout from '@clayui/layout';
 import React from 'react';
 
-const layoutImportCode = `import * as ClayLayout from '@clayui/layout';
+const layoutImportCode = `import ClayLayout from '@clayui/layout';
 `;
 
 const ContainerCode = `const Component = () => {

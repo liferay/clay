@@ -7,7 +7,7 @@ import '@clayui/css/lib/css/atlas.css';
 import {storiesOf} from '@storybook/react';
 import React from 'react';
 
-import * as ClayLayout from '../src';
+import ClayLayout from '../src';
 
 const exampleStyles = {
 	backgroundColor: '#E7E7ED',
