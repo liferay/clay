@@ -3,12 +3,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-// eslint-disable-next-line
 import Editor from '$clayui.com/src/components/Editor';
 import ClayButton from '@clayui/button';
 import ClayEmptyState from '@clayui/empty-state';
 import React from 'react';
-const successImage = require('@clayui/css/src/images/images/success_state.gif');
 
 const emptyStateImportsCode = `import ClayEmptyState from '@clayui/empty-state';
 import ClayButton from '@clayui/button';`;
@@ -35,15 +33,14 @@ export const EmptyState = () => {
 	);
 };
 
-const emptyStateWithImageCodeImports = `const successImage = require('@clayui/css/src/images/images/success_state.gif');
-import ClayEmptyState from '@clayui/empty-state';`;
+const emptyStateWithImageCodeImports = `import ClayEmptyState from '@clayui/empty-state';`;
 
 const emptyStateWithImageCode = `const Component = () => {
 	return (
 		<ClayEmptyState
 			description="You don't have more notifications to review"
 			imgProps={{alt: 'Alternative Text', title: 'Hello World!'}}
-			imgSrc={successImage}
+			imgSrc="/images/success_state.gif"
 			title="Hurray"
 		/>
 	);
@@ -52,7 +49,7 @@ const emptyStateWithImageCode = `const Component = () => {
 render(<Component />)`;
 
 export const EmptyStateWithImage = () => {
-	const scope = {ClayEmptyState, successImage};
+	const scope = {ClayEmptyState};
 
 	return (
 		<Editor
