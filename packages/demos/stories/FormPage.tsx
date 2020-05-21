@@ -6,6 +6,7 @@
 import ClayButton from '@clayui/button';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import ClayForm, {ClayInput} from '@clayui/form';
+import ClayLayout from '@clayui/layout';
 import ClayMultiSelect from '@clayui/multi-select';
 import {ClayVerticalNav} from '@clayui/nav';
 import ClayPanel from '@clayui/panel';
@@ -18,7 +19,7 @@ export default () => {
 	const [selectedItems, setSelectedItems] = React.useState<any>([]);
 
 	return (
-		<div className="container-fluid">
+		<ClayLayout.ContainerFluid>
 			<div className="row">
 				<div className="col col-2">
 					<ClayVerticalNav
@@ -179,6 +180,6 @@ export default () => {
 					{activePage === 1 && <div>{'Some other page...'}</div>}
 				</div>
 			</div>
-		</div>
+		</ClayLayout.ContainerFluid>
 	);
 };

@@ -5,6 +5,7 @@
 
 import '@clayui/css/lib/css/atlas.css';
 import {ClayRadio, ClayRadioGroup} from '@clayui/form';
+import ClayLayout from '@clayui/layout';
 import {storiesOf} from '@storybook/react';
 import moment from 'moment';
 import * as React from 'react';
@@ -537,7 +538,7 @@ storiesOf('Demos|Recharts', module)
 					</div>
 				</div>
 
-				<div className="container-fluid container-view">
+				<ClayLayout.ContainerFluid view>
 					<ul className="card-page">
 						<li className="card-page-item card-page-item-asset">
 							<div className="card">
@@ -755,7 +756,7 @@ storiesOf('Demos|Recharts', module)
 							</div>
 						</li>
 					</ul>
-				</div>
+				</ClayLayout.ContainerFluid>
 			</>
 		);
 	});

@@ -5,6 +5,7 @@
 
 import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
+import ClayLayout from '@clayui/layout';
 import {useTransitionHeight} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
@@ -76,7 +77,7 @@ const ClayNavigationBar: React.FunctionComponent<IProps> & {
 				}
 			)}
 		>
-			<div className="container-fluid container-fluid-max-xl">
+			<ClayLayout.ContainerFluid>
 				<ClayButton
 					aria-expanded={visible}
 					className={classNames(
@@ -105,11 +106,11 @@ const ClayNavigationBar: React.FunctionComponent<IProps> & {
 					onTransitionEnd={handleTransitionEnd}
 					ref={contentRef}
 				>
-					<div className="container-fluid container-fluid-max-xl">
+					<ClayLayout.ContainerFluid>
 						<ul className="navbar-nav">{children}</ul>
-					</div>
+					</ClayLayout.ContainerFluid>
 				</div>
-			</div>
+			</ClayLayout.ContainerFluid>
 		</nav>
 	);
 };

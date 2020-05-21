@@ -3,12 +3,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import ClayLayout from '@clayui/layout';
 import classNames from 'classnames';
 import React from 'react';
 
 import Header from './Header';
 import Item from './Item';
-import ItemField from './ItemField';
 import ItemText from './ItemText';
 import ItemTitle from './ItemTitle';
 import QuickActionMenu from './QuickActionMenu';
@@ -24,7 +24,7 @@ interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 const ClayList: React.FunctionComponent<IProps> & {
 	Header: typeof Header;
 	Item: typeof Item;
-	ItemField: typeof ItemField;
+	ItemField: typeof ClayLayout.ContentCol;
 	ItemText: typeof ItemText;
 	ItemTitle: typeof ItemTitle;
 	QuickActionMenu: typeof QuickActionMenu;
@@ -48,7 +48,7 @@ const ClayList: React.FunctionComponent<IProps> & {
 
 ClayList.Header = Header;
 ClayList.Item = Item;
-ClayList.ItemField = ItemField;
+ClayList.ItemField = ClayLayout.ContentCol;
 ClayList.ItemText = ItemText;
 ClayList.ItemTitle = ItemTitle;
 ClayList.QuickActionMenu = QuickActionMenu;

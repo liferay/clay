@@ -7,6 +7,7 @@ import {ClayButtonWithIcon} from '@clayui/button';
 import ClayCard, {ClayCardWithInfo} from '@clayui/card';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {ClayInput} from '@clayui/form';
+import ClayLayout from '@clayui/layout';
 import ClayManagementToolbar from '@clayui/management-toolbar';
 import React from 'react';
 
@@ -56,7 +57,7 @@ export default () => {
 				</ClayManagementToolbar.Search>
 			</ClayManagementToolbar>
 
-			<div className="container-fluid container-fluid-max-xl container-view">
+			<ClayLayout.ContainerFluid view>
 				<ClayCard.Group label="Good Boys">
 					{dogNames
 						.filter(([name]) =>
@@ -75,7 +76,7 @@ export default () => {
 							/>
 						))}
 				</ClayCard.Group>
-			</div>
+			</ClayLayout.ContainerFluid>
 		</div>
 	);
 };

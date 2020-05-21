@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import ClayLayout from '@clayui/layout';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -33,7 +34,7 @@ const ClayManagementToolbar: React.FunctionComponent<IProps> & {
 			}
 		)}
 	>
-		<div className="container-fluid container-fluid-max-xl">{children}</div>
+		<ClayLayout.ContainerFluid>{children}</ClayLayout.ContainerFluid>
 	</nav>
 );
 
