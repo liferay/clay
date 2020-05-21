@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/liferay/clay/compare/@clayui/breadcrumb@3.1.3...@clayui/breadcrumb@3.2.0) (2020-05-21)
+
+### Features
+
+-   **clayui.com:** Improve component docs by updating content - Badge, Breadcrumb, Dual List Box, Loading Indicator, Localized Input & Multi Step Nav ([c4ad126](https://github.com/liferay/clay/commit/c4ad126))
+
 ## [3.1.3](https://github.com/liferay/clay/compare/@clayui/breadcrumb@3.1.2...@clayui/breadcrumb@3.1.3) (2020-04-24)
 
 **Note:** Version bump only for package @clayui/breadcrumb

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/bryceosterhaus/clay/compare/demos@0.3.0...demos@0.3.1) (2020-05-21)
+
+### Bug Fixes
+
+-   apply @clayui/layout to other components ([e8a6d0e](https://github.com/bryceosterhaus/clay/commit/e8a6d0e))
+
 # [0.3.0](https://github.com/bryceosterhaus/clay/compare/demos@0.2.2...demos@0.3.0) (2020-04-24)
 
 ### Features

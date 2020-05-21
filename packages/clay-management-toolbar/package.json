@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/management-toolbar",
-	"version": "3.1.1",
+	"version": "3.2.0",
 	"description": "ClayManagementToolbar component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay",
@@ -26,8 +26,8 @@
 		"react"
 	],
 	"dependencies": {
-		"classnames": "^2.2.6",
-		"@clayui/layout": "^3.0.0"
+		"@clayui/layout": "^3.0.1",
+		"classnames": "^2.2.6"
 	},
 	"peerDependencies": {
 		"@clayui/css": "3.x",

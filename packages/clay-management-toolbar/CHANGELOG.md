@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/liferay/clay/compare/@clayui/management-toolbar@3.1.1...@clayui/management-toolbar@3.2.0) (2020-05-21)
+
+### Bug Fixes
+
+-   apply @clayui/layout to other components ([e8a6d0e](https://github.com/liferay/clay/commit/e8a6d0e))
+
+### Features
+
+-   **clayui.com:** Revert the change made to headings used, rename stickers and tables to sticker and table respectively, also change some wording ([791dabe](https://github.com/liferay/clay/commit/791dabe))
+-   **clayui.com:** Update content structure: Checkbox, Management Toolbar, Select Box, Sticker, Table & Tabs ([0fcd54a](https://github.com/liferay/clay/commit/0fcd54a))
+
 ## [3.1.1](https://github.com/liferay/clay/compare/@clayui/management-toolbar@3.1.0...@clayui/management-toolbar@3.1.1) (2020-04-24)
 
 ### Bug Fixes

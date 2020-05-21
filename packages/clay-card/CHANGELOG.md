@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.1](https://github.com/liferay/clay/compare/@clayui/card@3.2.0...@clayui/card@3.2.1) (2020-05-21)
+
+### Bug Fixes
+
+-   **@clayui/card:** check for values before rendering container elements ([a732a8e](https://github.com/liferay/clay/commit/a732a8e))
+-   apply @clayui/layout to other components ([e8a6d0e](https://github.com/liferay/clay/commit/e8a6d0e))
+
 # [3.2.0](https://github.com/liferay/clay/compare/@clayui/card@3.1.2...@clayui/card@3.2.0) (2020-04-24)
 
 ### Bug Fixes

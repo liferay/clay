@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/liferay/clay/compare/@clayui/slider@3.1.1...@clayui/slider@3.2.0) (2020-05-21)
+
+### Features
+
+-   **clayui.com:** Improve component docs by updating content - Pagination, Popover, Progress Bar, Slider, Toggle & Tooltip ([01b555a](https://github.com/liferay/clay/commit/01b555a))
+-   **clayui.com:** Improve component docs by updating content - Typos, wording, and variable names ([f1d795c](https://github.com/liferay/clay/commit/f1d795c))
+
 ## [3.1.1](https://github.com/liferay/clay/compare/@clayui/slider@3.1.0...@clayui/slider@3.1.1) (2020-04-24)
 
 ### Bug Fixes

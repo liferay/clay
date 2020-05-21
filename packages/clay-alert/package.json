@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/alert",
-	"version": "3.3.1",
+	"version": "3.3.2",
 	"description": "ClayAlert component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay",
@@ -27,7 +27,7 @@
 	],
 	"dependencies": {
 		"@clayui/icon": "^3.0.5",
-		"@clayui/layout": "^3.0.0",
+		"@clayui/layout": "^3.0.1",
 		"classnames": "^2.2.6"
 	},
 	"peerDependencies": {

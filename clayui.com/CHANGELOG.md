@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/bryceosterhaus/clay/compare/clayui.com@3.0.0...clayui.com@3.1.0) (2020-05-21)
+
+### Bug Fixes
+
+-   **clayui.com:** explicitly specify that dependency path is to a file ([757eeba](https://github.com/bryceosterhaus/clay/commit/757eeba))
+-   **clayui.com:** Fix missing Icon Markup/CSS page ([b5d22b5](https://github.com/bryceosterhaus/clay/commit/b5d22b5))
+-   **clayui.com:** update clay-css dependencies ([41c42ec](https://github.com/bryceosterhaus/clay/commit/41c42ec))
+-   **clayui.com:** update empty-state docs ([fc618c6](https://github.com/bryceosterhaus/clay/commit/fc618c6))
+-   apply @clayui/layout to other components ([e8a6d0e](https://github.com/bryceosterhaus/clay/commit/e8a6d0e))
+
+### Features
+
+-   **clayui.com:** Adapt Link generation to fit with the parent pages being proper links ([961cdb7](https://github.com/bryceosterhaus/clay/commit/961cdb7))
+-   **clayui.com:** Add a custom 404 page ([ce0bddf](https://github.com/bryceosterhaus/clay/commit/ce0bddf))
+-   **clayui.com:** Add documentation for Empty State ([6eedb36](https://github.com/bryceosterhaus/clay/commit/6eedb36))
+-   **clayui.com:** Add images used by Empty State ([d6d13e8](https://github.com/bryceosterhaus/clay/commit/d6d13e8))
+-   **clayui.com:** Custom 404 page Markup/CSS fixes as suggested by Patrick ([4a45b29](https://github.com/bryceosterhaus/clay/commit/4a45b29))
+-   **clayui.com:** Fix inconsistency in active links ([df77dc8](https://github.com/bryceosterhaus/clay/commit/df77dc8))
+-   **clayui.com:** Improve component docs by updating content - Badge, Breadcrumb, Dual List Box, Loading Indicator, Localized Input & Multi Step Nav ([c4ad126](https://github.com/bryceosterhaus/clay/commit/c4ad126))
+-   **clayui.com:** Put alwaysActive back on Components ([6c41400](https://github.com/bryceosterhaus/clay/commit/6c41400))
+-   **clayui.com:** Reorganize some docs pages, adapt redirections and add some content for the parent pages ([35ad288](https://github.com/bryceosterhaus/clay/commit/35ad288))
+-   **clayui.com:** Revert the change made to headings used, rename stickers and tables to sticker and table respectively, also change some wording ([791dabe](https://github.com/bryceosterhaus/clay/commit/791dabe))
+-   **clayui.com:** Update API table to show false for optional props ([3837d2c](https://github.com/bryceosterhaus/clay/commit/3837d2c))
+-   **clayui.com:** Update content structure: Checkbox, Management Toolbar, Select Box, Sticker, Table & Tabs ([0fcd54a](https://github.com/bryceosterhaus/clay/commit/0fcd54a))
+-   **clayui.com:** Update Navigation docs ([d2bf07e](https://github.com/bryceosterhaus/clay/commit/d2bf07e))
+-   **clayui.com:** Update Navigation docs - Revert naming back to Nav and remove docs for Pills and Justified ([5b6007a](https://github.com/bryceosterhaus/clay/commit/5b6007a))
+
 # [3.0.0](https://github.com/bryceosterhaus/clay/compare/clayui.com@3.0.0-alpha.12...clayui.com@3.0.0) (2020-04-24)
 
 ### Bug Fixes

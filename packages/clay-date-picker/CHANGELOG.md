@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/liferay/clay/compare/@clayui/date-picker@3.2.1...@clayui/date-picker@3.3.0) (2020-05-21)
+
+### Features
+
+-   **@clayui/date-picker:** add props to control expand functionality ([1ec1255](https://github.com/liferay/clay/commit/1ec1255))
+
 ## [3.2.1](https://github.com/liferay/clay/compare/@clayui/date-picker@3.2.0...@clayui/date-picker@3.2.1) (2020-04-24)
 
 ### Bug Fixes

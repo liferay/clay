@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/upper-toolbar",
-	"version": "3.0.2",
+	"version": "3.1.0",
 	"description": "ClayUpperToolbar component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay",
@@ -26,8 +26,8 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/form": "^3.7.1",
-		"@clayui/layout": "^3.0.0",
+		"@clayui/form": "^3.8.0",
+		"@clayui/layout": "^3.0.1",
 		"classnames": "^2.2.6"
 	},
 	"peerDependencies": {
