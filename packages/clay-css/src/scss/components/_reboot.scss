@@ -44,11 +44,19 @@ body {
 	font-family: $font-family-base;
 	font-size: $font-size-base;
 	font-weight: $font-weight-base;
+	-moz-osx-font-smoothing: $body-moz-osx-font-smoothing;
+	-webkit-font-smoothing: $body-webkit-font-smoothing;
 	line-height: $line-height-base;
 
 	// Remove the margin in all browsers
 
 	margin: 0;
+	-ms-overflow-style: scrollbar;
+	text-align: $body-text-align;
+
+	@include clay-scale-component {
+		font-size: $font-size-base-mobile;
+	}
 }
 
 hr {
@@ -177,6 +185,7 @@ sup {
 
 	background-color: transparent;
 	color: $link-color;
+	cursor: $link-cursor;
 	text-decoration: $link-decoration;
 
 	&:hover {
