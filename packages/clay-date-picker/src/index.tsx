@@ -58,7 +58,8 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	id?: string;
 
 	/**
-	 * Flag to indicate if date is expanded.
+	 * Flag to indicate if date is initially expanded when
+	 * `expand` and `onExpandChange` are not being used.
 	 */
 	initialExpanded?: boolean;
 
@@ -85,8 +86,13 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 
 	/**
 	 * Called when the input change.
+	 *
+	 * Second argument gives the type that caused the value change
 	 */
-	onValueChange: (value: Date | string) => void;
+	onValueChange: (
+		value: Date | string,
+		type?: 'click' | 'input' | 'time'
+	) => void;
 
 	/**
 	 * Describe a brief tip to help users interact.
@@ -128,6 +134,16 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	 * List of years available for navigation within the selector.
 	 */
 	years?: IYears;
+
+	/**
+	 * Determines if menu is expanded or not
+	 */
+	expanded?: boolean;
+
+	/**
+	 * Callback for when dropdown changes its active state
+	 */
+	onExpandedChange?: (val: boolean) => void;
 }
 
 const DateNow = new Date();
@@ -149,6 +165,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			},
 			dateFormat = 'YYYY-MM-DD',
 			disabled,
+			expanded,
 			firstDayOfWeek = 0,
 			footerElement,
 			id,
@@ -169,6 +186,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 				'November',
 				'December',
 			],
+			onExpandedChange,
 			onNavigation = () => {},
 			onValueChange = () => {},
 			placeholder,
@@ -226,7 +244,15 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		/**
 		 * Flag to indicate if date is expanded.
 		 */
-		const [expanded, setExpanded] = React.useState(initialExpanded);
+		const [internalExpanded, setInternalExpanded] = React.useState(
+			initialExpanded
+		);
+
+		expanded = expanded !== undefined ? expanded : internalExpanded;
+
+		const setExpanded = onExpandedChange
+			? onExpandedChange
+			: setInternalExpanded;
 
 		/**
 		 * Create a ref to store the datepicker DOM element
@@ -260,7 +286,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		 */
 		const handleDayClicked = (date: Date) => {
 			setDaySelected(date);
-			onValueChange(date);
+			onValueChange(date, 'click');
 		};
 
 		/**
@@ -283,7 +309,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 				}
 			}
 
-			onValueChange(value);
+			onValueChange(value, 'input');
 		};
 
 		/**
@@ -304,7 +330,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			// Hack to force InputDate to add `currentTime` to the value of
 			// the input when the value was edited by the user.
 			if (typeof value === 'string' && moment(value, format).isValid()) {
-				onValueChange(moment(value, format).toDate());
+				onValueChange(moment(value, format).toDate(), 'time');
 			}
 
 			setCurrentTime(hours, minutes);

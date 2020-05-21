@@ -105,6 +105,40 @@ storiesOf('Components|ClayDatePicker', module)
 			}}
 		/>
 	))
+	.add('w/ custom expand', () => {
+		const [expanded, setExpanded] = React.useState(false);
+		const [value, setValue] = React.useState<string | Date>('');
+
+		return (
+			<>
+				<button onClick={() => setExpanded(true)}>
+					{'Open Picker'}
+				</button>
+
+				<br />
+				<br />
+
+				<ClayDatePicker
+					expanded={expanded}
+					onExpandedChange={setExpanded}
+					onValueChange={(val, type) => {
+						setValue(val);
+
+						if (type === 'click') {
+							setExpanded(false);
+						}
+					}}
+					placeholder="YYYY-MM-DD"
+					spritemap={spritemap}
+					value={value as string}
+					years={{
+						end: 2024,
+						start: 1997,
+					}}
+				/>
+			</>
+		);
+	})
 	.add('native', () => (
 		<ClayDatePickerWithState
 			placeholder="YYYY-MM-DD"
