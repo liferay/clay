@@ -6,17 +6,26 @@ packageNpm: '@clayui/slider'
 sibling: 'docs/components/css-slider.html'
 ---
 
-import {Slider} from '$packages/clay-slider/docs/index';
+import {DecadeSlider, Slider} from '$packages/clay-slider/docs/index';
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
+-   [Range and Step](#range-and-step)
 -   [API](#api)
 
 </div>
 </div>
 
+Slider is a controlled component and needs just 2 props for its basic use, `value` and `onValueChange`.
+
 <Slider />
+
+## Range and Step
+
+For a more specific use case you can specify other props, like `min` and `max` to determine the range, and `step` to specify how much the value changes.
+
+<DecadeSlider />
 
 ## API
 

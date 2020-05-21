@@ -20,7 +20,7 @@ const ClayPaginationItem: React.FunctionComponent<IPaginationItemProps> = ({
 	disabled = false,
 	href,
 	...otherProps
-}) => {
+}: IPaginationItemProps) => {
 	const classes = classNames('page-item', {active, disabled});
 
 	const ElementTag = href ? ClayLink : 'button';

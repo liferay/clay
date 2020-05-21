@@ -76,7 +76,7 @@ export const ClayPaginationWithBasicItems = React.forwardRef<
 			spritemap,
 			totalPages,
 			...otherProps
-		},
+		}: IProps,
 		ref
 	) => {
 		const previousPage = activePage - 1;

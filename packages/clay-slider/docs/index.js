@@ -7,8 +7,7 @@ import Editor from '$clayui.com/src/components/Editor';
 import ClaySlider from '@clayui/slider';
 import React from 'react';
 
-const sliderImportsCode = `import ClaySlider from '@clayui/slider';
-`;
+const sliderImportsCode = `import ClaySlider from '@clayui/slider';`;
 
 const SliderCode = `const Component = () => {
 	const [value, setValue] = useState(10);
@@ -18,10 +17,7 @@ const SliderCode = `const Component = () => {
 			<label htmlFor="slider">{'With Tooltip'}</label>
 			<ClaySlider
 				id="slider"
-				max={100}
-				min={0}
 				onValueChange={setValue}
-				step={1}
 				value={value}
 			/>
         </div>
@@ -35,5 +31,37 @@ export const Slider = () => {
 
 	return (
 		<Editor code={SliderCode} imports={sliderImportsCode} scope={scope} />
+	);
+};
+
+const DecadeSliderCode = `const Component = () => {
+	const [decade, setDecade] = useState(10);
+
+	return (
+		<div className="form-group">
+			<label htmlFor="decadeSlider">{'Decades'}</label>
+
+			<ClaySlider
+				id="decadeSlider"
+				max={2020}
+				onValueChange={setDecade}
+				step={10}
+				value={decade}
+			/>
+		</div>
+	);
+}
+
+render(<Component />)`;
+
+export const DecadeSlider = () => {
+	const scope = {ClaySlider};
+
+	return (
+		<Editor
+			code={DecadeSliderCode}
+			imports={sliderImportsCode}
+			scope={scope}
+		/>
 	);
 };

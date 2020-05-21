@@ -15,20 +15,24 @@ import {
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Tooltip](#tooltip)
 -   [TooltipProvider](#tooltipprovider)
+    -   [contentRenderer](#contentrenderer)
 -   [API](#api)
 
 </div>
 </div>
 
-### Tooltip
+Simplest way of using Tooltip is by leveraging it's `show` prop and specifying `alignPosition` to determine it's position relative to the element it's aligned to.
+
+If you have multiple Tooltips on the page, [TooltipProvider](#tooltipprovider) allows you to only have to instantiate the component once and simply provide html attributes to the elements that need tooltips.
 
 <Tooltip />
 
-### TooltipProvider
+## TooltipProvider
 
 By using the `<TooltipProvider>` it allows you to add the desired tooltip content on each element as a data attribute.
+
+Here's a list of html attributes that you can provide to children elements of the TooltipProvider:
 
 -   `title` is for the tooltip content.
 -   `data-tooltip-align` is for alignment direction.
@@ -36,16 +40,18 @@ By using the `<TooltipProvider>` it allows you to add the desired tooltip conten
 
 <TooltipProvider />
 
-#### Using contentRenderer
+### contentRenderer
+
+`contentRenderer` prop gives you the ability to format the content passed to the Tooltip via the `title` attribute to meet your requirements.
 
 <TooltipProviderRenderer />
 
-### API
+## API
 
-#### Tooltip
+### Tooltip
 
 <div>[APITable "clay-tooltip/src/Tooltip.tsx"]</div>
 
-#### TooltipProvider
+### TooltipProvider
 
 <div>[APITable "clay-tooltip/src/TooltipProvider.tsx"]</div>
