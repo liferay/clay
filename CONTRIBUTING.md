@@ -207,16 +207,17 @@ To publish a new version for all packages that have updated, follow these steps:
 
 1.  `git checkout master`
 2.  Make sure you have all of the tags from upstream. `git fetch $REMOTE --tags`
-3.  Run `lerna version --conventional-commits` and verify each package's version change.
+3.  Run `lerna version --conventional-commits --no-push` and verify each package's version change.
 
-    -   If you'd like to do a dry run first, you can also use the `--no-push` flag to see the commit and tags that lerna will apply. You can also use `lerna changed` to see an output of what packages will be updated
+    -   If you'd like to do a dry run first, you can also use `lerna changed` to see an output of what packages will be updated
     -   The `--conventional-commits` flag should automatically determine what version each package should be updated to. If this doesn't seem accurate, you can maually choose each version by just running `lerna version` without the flag.
 
     > Note, if package A requires package B and package B receives a minor update, package A will also receive a minor update via lerna.
 
-4.  Create a draft PR (not intended to be merged) to the clay repo; the sole purpose of this is to see CI green one last time before pushing the tag.
+4.  Create a draft PR against `stable` (not intended to be merged) to the clay repo; the sole purpose of this is to see CI green one last time before pushing the tag.
 5.  Once CI is green, run `git push $REMOTE master --follow-tags`
-6.  Run `lerna publish from-package` - This will push the packages to NPM.
+6.  Once CI is green, run `git push $REMOTE master:stable`
+7.  Run `lerna publish from-package` - This will push the packages to NPM.
 
 In the last step it may happen that some things break, be it build failure or something else, so be aware and make sure all packages are published correctly.
 
