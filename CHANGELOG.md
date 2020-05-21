@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.21.3](https://github.com/bryceosterhaus/clay/compare/v2.21.2...v2.21.3) (2020-05-21)
+
+
+### Bug Fixes
+
+* **clay-css:** `_global-functions` should be accessible to Portal's `_clay_variables.scss` without having to import it manually ([e7b351a](https://github.com/bryceosterhaus/clay/commit/e7b351a)), closes [#3193](https://github.com/bryceosterhaus/clay/issues/3193)
+* **clay-css:** Cards `card-interactive-primary` Chrome 81/83 hover transition artifact. Use any `transition-timing-function` other than `ease-in` or `ease-in-out` ([8c1e7fe](https://github.com/bryceosterhaus/clay/commit/8c1e7fe)), closes [#3233](https://github.com/bryceosterhaus/clay/issues/3233)
+
+
+
+
+
 ## [2.21.2](https://github.com/bryceosterhaus/clay/compare/v2.21.1...v2.21.2) (2020-04-23)
 
 
