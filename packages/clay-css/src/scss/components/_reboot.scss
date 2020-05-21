@@ -323,9 +323,9 @@ select {
 // `[type="button"] { -webkit-appearance: button; }` prevent WebKit bug where `-webkit-appearance` destroys native `audio` and `video` controls in Android 4
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
 	// Correct the inability to style clickable types in iOS and Safari
 
 	-webkit-appearance: button;
