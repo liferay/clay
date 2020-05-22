@@ -21,18 +21,9 @@ html {
 	-webkit-tap-highlight-color: rgba($black, 0);
 }
 
-// Shim for "new" HTML5 structural elements to display correctly (IE10, older browsers)
+// Shim for "new" HTML5 structural elements to display correctly (IE11)
 
-article,
-aside,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section {
+main {
 	display: block;
 }
 
@@ -59,17 +50,6 @@ body {
 	}
 }
 
-hr {
-	// Add the correct box sizing in Firefox
-
-	box-sizing: content-box;
-	height: 0;
-
-	// Show the overflow in Edge and IE
-
-	overflow: visible;
-}
-
 // Remove top margins from headings
 //
 // By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
@@ -86,7 +66,6 @@ h6 {
 }
 
 // Reset margins on paragraphs
-//
 // Similarly, the top margin on `<p>`s get reset. However, we also reset the
 // bottom margin to use `rem` units instead of `em`.
 
@@ -97,24 +76,20 @@ p {
 
 abbr[title],
 abbr[data-original-title] {
-	// Remove the bottom border in Firefox 39-
-
-	border-bottom: 0;
 	cursor: help;
 
-	// Prevent the text-decoration to be skipped
+	// Add `text-decoration: underline` in IE and Safari, `underline dotted` not supported.
+
+	text-decoration: underline;
+	text-decoration: underline dotted;
+
+	// Prevent underline from disappearing on letters like `g`, `j`, `y`.
 
 	text-decoration-skip-ink: none;
-
-	// Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari
-
-	text-decoration: underline dotted;
-	text-decoration: underline;
 }
 
 address {
 	font-style: normal;
-	line-height: inherit;
 	margin-bottom: 1rem;
 }
 
@@ -155,19 +130,14 @@ strong {
 	font-weight: $font-weight-bolder;
 }
 
-small {
-	// Add the correct font size in all browsers
-
-	font-size: 80%;
-}
-
-// Prevent `sub` and `sup` elements from affecting the line height in
-// all browsers.
-
 sub,
 sup {
-	font-size: 75%;
+	// Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+
 	line-height: 0;
+
+	// Opinionated: Fixes alignment within multi-line text displayed oddly in all browsers
+
 	position: relative;
 	vertical-align: baseline;
 }
@@ -181,9 +151,6 @@ sup {
 }
 
 [href] {
-	// Remove the gray background on active links in IE 10
-
-	background-color: transparent;
 	color: $link-color;
 	cursor: $link-cursor;
 	text-decoration: $link-decoration;
@@ -201,10 +168,6 @@ code,
 kbd,
 samp {
 	font-family: $font-family-monospace;
-
-	// Correct the odd `em` font sizing in all browsers
-
-	font-size: 1em;
 }
 
 pre {
@@ -230,9 +193,6 @@ figure {
 // Images and content
 
 img {
-	// Remove the border on images inside links in IE 10-
-
-	border-style: none;
 	vertical-align: middle;
 }
 
@@ -245,12 +205,6 @@ svg {
 }
 
 // Tables
-
-table {
-	// Prevent double borders
-
-	border-collapse: collapse;
-}
 
 caption {
 	caption-side: bottom;
@@ -269,22 +223,6 @@ label {
 	margin-bottom: $label-margin-bottom;
 }
 
-// Remove the default `border-radius` that macOS Chrome adds.
-// Details at https://github.com/twbs/bootstrap/issues/24093
-
-button {
-	border-radius: 0;
-}
-
-// Work around a Firefox/IE bug where the transparent `button` background
-// results in a loss of the default `button` focus styles.
-// Credit: https://github.com/suitcss/base/
-
-button:focus {
-	outline: 1px dotted;
-	outline: 5px auto -webkit-focus-ring-color;
-}
-
 input,
 button,
 select,
@@ -294,7 +232,7 @@ textarea {
 	font-size: inherit;
 	line-height: inherit;
 
-	// Remove the margin in Firefox and Safari
+	// Remove the margin in Safari
 
 	margin: 0;
 }
@@ -304,13 +242,6 @@ input {
 	// Show the overflow in Edge
 
 	overflow: visible;
-}
-
-button,
-select {
-	// Remove the inheritance of text transform in Firefox
-
-	text-transform: none;
 }
 
 // Remove the inheritance of word-wrap in Safari.
@@ -331,25 +262,13 @@ button,
 	-webkit-appearance: button;
 }
 
-// Remove inner border and padding from Firefox, but don't restore the outline like Normalize.
+// Remove inner border from Firefox, but don't restore the outline like Normalize.
 
 button::-moz-focus-inner,
 [type='button']::-moz-focus-inner,
 [type='reset']::-moz-focus-inner,
 [type='submit']::-moz-focus-inner {
-	padding: 0;
 	border-style: none;
-}
-
-input[type='radio'],
-input[type='checkbox'] {
-	// Add the correct box sizing in IE 10-
-
-	box-sizing: border-box;
-
-	// Remove the padding in IE 10-
-
-	padding: 0;
 }
 
 input[type='date'],
@@ -369,10 +288,6 @@ textarea {
 	// Remove the default vertical scrollbar in IE
 
 	overflow: auto;
-
-	// Textareas should really only resize vertically so they don't break their (horizontal) containers.
-
-	resize: vertical;
 }
 
 fieldset {
@@ -467,11 +382,4 @@ template {
 	// Add the correct display in IE
 
 	display: none;
-}
-
-// Always hide an element with the `hidden` HTML attribute (from PureCSS).
-// Needed for proper display in IE 10-.
-
-[hidden] {
-	display: none !important;
 }
