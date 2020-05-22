@@ -18,7 +18,28 @@ a {
 // Headings
 
 h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	color: $headings-color;
+	font-family: $headings-font-family;
+	font-weight: $headings-font-weight;
+	line-height: $headings-line-height;
+	margin-bottom: $headings-margin-bottom;
+}
+
+h1,
 .h1 {
+	font-size: $h1-font-size;
+
 	@include clay-scale-component {
 		font-size: $h1-font-size-mobile;
 	}
@@ -26,6 +47,8 @@ h1,
 
 h2,
 .h2 {
+	font-size: $h2-font-size;
+
 	@include clay-scale-component {
 		font-size: $h2-font-size-mobile;
 	}
@@ -33,6 +56,8 @@ h2,
 
 h3,
 .h3 {
+	font-size: $h3-font-size;
+
 	@include clay-scale-component {
 		font-size: $h3-font-size-mobile;
 	}
@@ -40,6 +65,8 @@ h3,
 
 h4,
 .h4 {
+	font-size: $h4-font-size;
+
 	@include clay-scale-component {
 		font-size: $h4-font-size-mobile;
 	}
@@ -47,6 +74,8 @@ h4,
 
 h5,
 .h5 {
+	font-size: $h5-font-size;
+
 	@include clay-scale-component {
 		font-size: $h5-font-size-mobile;
 	}
@@ -54,10 +83,117 @@ h5,
 
 h6,
 .h6 {
+	font-size: $h6-font-size;
+
 	@include clay-scale-component {
 		font-size: $h6-font-size-mobile;
 	}
 }
+
+.lead {
+	font-size: $lead-font-size;
+	font-weight: $lead-font-weight;
+}
+
+// Type display classes
+
+.display-1 {
+	font-size: $display1-size;
+	font-weight: $display1-weight;
+	line-height: $display-line-height;
+}
+
+.display-2 {
+	font-size: $display2-size;
+	font-weight: $display2-weight;
+	line-height: $display-line-height;
+}
+
+.display-3 {
+	font-size: $display3-size;
+	font-weight: $display3-weight;
+	line-height: $display-line-height;
+}
+
+.display-4 {
+	font-size: $display4-size;
+	font-weight: $display4-weight;
+	line-height: $display-line-height;
+}
+
+// Horizontal rules
+
+hr {
+	border-top: $hr-border-width solid $hr-border-color;
+	border: 0;
+	margin-bottom: $hr-margin-y;
+	margin-top: $hr-margin-y;
+}
+
+// Emphasis
+
+small,
+.small {
+	font-size: $small-font-size;
+	font-weight: $font-weight-normal;
+}
+
+mark,
+.mark {
+	@include clay-highlight-text($mark-bg, $mark-color);
+}
+
+// Lists
+
+.list-unstyled {
+	list-style: none;
+	padding-left: 0;
+}
+
+// Inline turns list items into inline-block
+
+.list-inline {
+	list-style: none;
+	padding-left: 0;
+}
+
+.list-inline-item {
+	display: inline-block;
+
+	&:not(:last-child) {
+		margin-right: $list-inline-padding;
+	}
+}
+
+// Misc
+
+// Builds on `abbr`
+
+.initialism {
+	font-size: 90%;
+	text-transform: uppercase;
+}
+
+// Blockquotes
+
+.blockquote {
+	font-size: $blockquote-font-size;
+	margin-bottom: $spacer;
+}
+
+.blockquote-footer {
+	color: $blockquote-small-color;
+	display: block;
+	font-size: $blockquote-small-font-size;
+
+	&::before {
+		// em dash, nbsp
+
+		content: '\2014\00A0';
+	}
+}
+
+// CLAY CSS START
 
 b {
 	font-weight: $b-font-weight;
@@ -74,13 +210,6 @@ strong {
 	font-size: $reference-mark-font-size;
 	position: relative;
 	vertical-align: $reference-mark-vertical-align;
-}
-
-// Marked Text
-
-mark,
-.mark {
-	@include clay-highlight-text($mark-bg, $mark-color);
 }
 
 // Kbd
