@@ -41,7 +41,7 @@ The component is treated as controlled, use the [`onValueChange`](#api-onValueCh
 <div class="clay-site-alert alert alert-warning">
 	<strong class="lead">Warning</strong>
 	You can set a range of years using the API <code class="language-text">
-		years
+		<a href="#api-years">years</a>
 	</code>, which can be displayed in the Date Picker, if the user enters a year
 	that is not within the range will be treated as an invalid date.
 </div>
@@ -50,18 +50,18 @@ The component is treated as controlled, use the [`onValueChange`](#api-onValueCh
 
 ## Time
 
-The ClayTimePicker by default is already implemented in the Date Picker, you can enable it using the [`time`](#api-time) API. To provide a context for the timezone user, use the `timezone` API for this.
+The ClayTimePicker by default is already implemented in the Date Picker, you can enable it using the [`time`](#api-time) API. To provide a context for the timezone user, use the [`timezone`](#api-timezone) API for this.
 
 <DatePickerWithTime />
 
 ## Internationalization
 
-To set internationalization of the component, you need to configure the props according to the language. Date Picker offers low level APIs to configure [`firstDayOfWeek`](#api-firstDayOfWeek), [`weekdaysShort`](#api-weekdaysShort), [`months`](#api-months), [`timeFormat`](#api-timeFormat), [`timezone`](#api-timezone) and [`dateFormat`](#api-dateFormat), you can follow the example below to set up a Date Picker for Russian.
+To set internationalization of the component, you need to configure the props according to the language. Date Picker offers low level APIs to configure [`firstDayOfWeek`](#api-firstDayOfWeek), [`weekdaysShort`](#api-weekdaysShort), [`months`](#api-months), [`timezone`](#api-timezone) and [`dateFormat`](#api-dateFormat), you can follow the example below to set up a Date Picker for Russian.
 
 <DatePickerLocale />
 
 -   [`firstDayOfWeek`](#api-firstDayOfWeek) by default the value by default the value is 0 (Sunday) and its values ​​are the days of the week, 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday).
--   [`dateFormat`](#api-dateFormat) and [`timeFormat`](#api-timeFormat) is defined according to the **formatting rules of [Moment.js](https://momentjs.com/docs/#/parsing/string-format/)**.
+-   [`dateFormat`](#api-dateFormat) and `timeFormat` is defined according to the **formatting rules of [Moment.js](https://momentjs.com/docs/#/parsing/string-format/)**.
 -   [`months`](#api-months) is an `Array<string>` with available months **starting January to December**.
 -   [`weekdaysShort`](#api-weekdaysShort) is an `Array<string>` with the **names of the days of the week in short form**, starting from **Sunday to Saturday**.
 
