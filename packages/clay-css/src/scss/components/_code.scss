@@ -1,0 +1,47 @@
+code {
+	color: $code-color;
+	font-size: $code-font-size;
+	word-wrap: break-word;
+
+	// Streamline the style when inside anchors to avoid broken underline and more
+
+	a > & {
+		color: inherit;
+	}
+}
+
+kbd {
+	background-color: $kbd-bg;
+
+	@include border-radius($border-radius-sm);
+	@include box-shadow($kbd-box-shadow);
+
+	color: $kbd-color;
+	font-size: $kbd-font-size;
+	padding: $kbd-padding-y $kbd-padding-x;
+
+	kbd {
+		@include box-shadow(none);
+
+		font-size: 100%;
+		font-weight: $nested-kbd-font-weight;
+		padding: 0;
+	}
+}
+
+pre {
+	color: $pre-color;
+	display: block;
+	font-size: $code-font-size;
+
+	code {
+		color: inherit;
+		font-size: inherit;
+		word-break: normal;
+	}
+}
+
+.pre-scrollable {
+	max-height: $pre-scrollable-max-height;
+	overflow-y: scroll;
+}
