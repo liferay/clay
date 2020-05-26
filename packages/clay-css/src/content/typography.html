@@ -200,7 +200,21 @@ navIndex: 0
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3>User Input</h3>
+		<h3>Kbd</h3>
+
+		<kbd>Esc</kbd>
+		<kbd>Ctrl</kbd>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Nested Kbd</h3>
+
+		<blockquote class="blockquote">
+			<p>Specify that the key or input is part of a larger input.</p>
+		</blockquote>
+
 		<p>For example, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd> to edit settings.</p>
 	</div>
 </div>
@@ -221,10 +235,40 @@ navIndex: 0
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3>Basic Code Block</h3>
+		<h3>Pre</h3>
+
+		<pre>```body {
+    background-color: #FFF;
+}```</pre>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Pre Code</h3>
+
+		<blockquote class="blockquote">
+			<p>Nested `code` inside `pre`.</p>
+		</blockquote>
+
 		<pre><code>```body {
     background-color: #FFF;
 }```</code></pre>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Pre-scrollable</h3>
+
+		<blockquote class="blockquote">
+			<p>A `pre` element with `max-height` and `overflow-y: scroll`, adjust the `max-height` through the variable `$pre-scrollable-max-height: 340px !default;`</p>
+		</blockquote>
+
+		<pre class="pre-scrollable">```.pre-scrollable {
+	max-height: $pre-scrollable-max-height;
+	overflow-y: scroll;
+}```</pre>
 	</div>
 </div>
 
