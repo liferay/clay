@@ -12,7 +12,7 @@ $table-disabled-color: #acacac !default;
 $table-disabled-cursor: $disabled-cursor !default;
 $table-disabled-pointer-events: none !default;
 
-$table-head-border-bottom-width: null !default;
+$table-head-border-bottom-width: 2 * $table-border-width !default;
 $table-head-border-top-width: 0 !default;
 $table-head-font-size: null !default;
 $table-head-font-weight: null !default;
