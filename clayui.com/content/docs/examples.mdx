@@ -1,0 +1,88 @@
+---
+title: 'Examples'
+order: 5
+---
+
+import ClayLayout from '@clayui/layout';
+import ClayLink from '@clayui/link';
+import ClayList from '@clayui/list';
+
+## What is Storybook and how do we use it?
+
+Storybook is a user interface development environment and playground for UI components.
+We use it to create components independently and showcase components interactively in an isolated development environment.
+A Storybook is a collection of stories. Each story represents a single visual state of a component.
+
+## How you can leverage Storybook to make using Clay easier
+
+Whenever you have doubts about how a component is implemented or used, checking out its stories
+is a great way of getting valuable information about how we envisioned that component be used.
+
+You can use Storybook for inspiration, as well as guidelines, for your use case as well as getting insight into the composition of a component.
+
+## Examples/Demos
+
+Here are our demos we have in Storybook that utilize Clay components showcasing some common use cases.
+
+<ClayLayout.Container>
+	<ClayLayout.Row justify="start">
+		<ClayLayout.Col md={4} size={4}>
+			<ClayList flex>
+				<ClayLink
+					href="https://storybook.clayui.com/?path=/story/demos-templates--list-page"
+					target="_blank"
+				>
+					<ClayList.Item>
+						<ClayList.ItemTitle>List Page</ClayList.ItemTitle>
+					</ClayList.Item>
+				</ClayLink>
+				<ClayLink
+					href="https://storybook.clayui.com/?path=/story/demos-templates--files-page"
+					target="_blank"
+				>
+					<ClayList.Item>
+						<ClayList.ItemTitle>Files Page</ClayList.ItemTitle>
+					</ClayList.Item>
+				</ClayLink>
+				<ClayLink
+					href="https://storybook.clayui.com/?path=/story/demos-templates--form-page"
+					target="_blank"
+				>
+					<ClayList.Item>
+						<ClayList.ItemTitle>Form Page</ClayList.ItemTitle>
+					</ClayList.Item>
+				</ClayLink>
+				<ClayLink
+					href="https://storybook.clayui.com/?path=/story/demos-templates--table-rows-drag-drop"
+					target="_blank"
+				>
+					<ClayList.Item>
+						<ClayList.ItemTitle>
+							Table Rows Drag & Drop
+						</ClayList.ItemTitle>
+					</ClayList.Item>
+				</ClayLink>
+				<ClayLink
+					href="https://storybook.clayui.com/?path=/story/demos-templates--table-columns-drag-drop"
+					target="_blank"
+				>
+					<ClayList.Item>
+						<ClayList.ItemTitle>
+							Table Columns Drag & Drop
+						</ClayList.ItemTitle>
+					</ClayList.Item>
+				</ClayLink>
+				<ClayLink
+					href="https://storybook.clayui.com/?path=/story/demos-templates--drag-drop"
+					target="_blank"
+				>
+					<ClayList.Item>
+						<ClayList.ItemTitle>
+							List Drag & Drop
+						</ClayList.ItemTitle>
+					</ClayList.Item>
+				</ClayLink>
+			</ClayList>
+		</ClayLayout.Col>
+	</ClayLayout.Row>
+</ClayLayout.Container>
