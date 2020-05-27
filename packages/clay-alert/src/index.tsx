@@ -14,7 +14,7 @@ import ToastContainer from './ToastContainer';
 const useAutoClose = (autoClose?: boolean | number, onClose = () => {}) => {
 	const startedTime = React.useRef<number>(0);
 	const timer = React.useRef<number | undefined>(undefined);
-	const timeToClose = React.useRef(autoClose === true ? 8000 : autoClose);
+	const timeToClose = React.useRef(autoClose === true ? 10000 : autoClose);
 
 	let pauseTimer = () => {};
 	let startTimer = () => {};
@@ -61,7 +61,7 @@ export interface IClayAlertProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Flag to indicate alert should automatically call `onClose`. It also
 	 * accepts a duration(in ms) which indicates how long to wait. If `true`
-	 * is passed in, the timeout will be 8000ms.
+	 * is passed in, the timeout will be 10000ms.
 	 */
 	autoClose?: boolean | number;
 
