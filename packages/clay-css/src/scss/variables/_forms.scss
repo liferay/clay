@@ -3,7 +3,7 @@ $input-border-right-width: 0.0625rem !default; // 1px
 $input-border-bottom-width: 0.0625rem !default; // 1px
 $input-border-left-width: 0.0625rem !default; // 1px
 
-$input-border-style: null !default;
+$input-border-style: solid !default;
 
 $input-font-size: $font-size-base !default;
 $input-font-size-mobile: null !default;
@@ -23,7 +23,7 @@ $input-height-inner-sm-mobile: null !default;
 $input-disabled-border-color: null !default;
 $input-disabled-color: null !default;
 $input-disabled-cursor: $disabled-cursor !default;
-$input-disabled-opacity: null !default;
+$input-disabled-opacity: 1 !default;
 $input-placeholder-disabled-color: null !default;
 
 $input-placeholder-focus-color: null !default;
@@ -47,7 +47,7 @@ $input-label-reference-mark-vertical-align: null !default;
 
 /// @deprecated after v2.18.0 use the Sass map `$input-readonly` instead
 
-$input-readonly-bg: null !default;
+$input-readonly-bg: $input-disabled-bg !default;
 
 /// @deprecated after v2.18.0 use the Sass map `$input-readonly` instead
 
@@ -80,6 +80,7 @@ $input-readonly: map-deep-merge(
 		border-color: $input-readonly-border-color,
 		color: $input-readonly-color,
 		cursor: $input-readonly-cursor,
+		opacity: 1,
 		focus-bg: $input-readonly-focus-bg,
 		focus-border-color: $input-readonly-focus-border-color,
 		focus-color: $input-readonly-focus-color,
@@ -380,7 +381,6 @@ $input-select-icon-disabled: null !default;
 $input-select: () !default;
 $input-select: map-deep-merge(
 	(
-		appearance: none,
 		background-color: $input-select-bg,
 		background-image: $input-select-icon,
 		background-position: $input-select-bg-position,
@@ -433,6 +433,7 @@ $input-select-size: () !default;
 $input-select-size: map-deep-merge(
 	(
 		background-image: none,
+		height: auto,
 		padding-left: 0.5rem,
 		padding-right: 0.5rem,
 		scrollbar-width: thin,
