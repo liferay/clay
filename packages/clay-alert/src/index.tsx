@@ -60,7 +60,7 @@ export type DisplayType = 'danger' | 'info' | 'success' | 'warning';
 export interface IClayAlertProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Flag to indicate alert should automatically call `onClose`. It also
-	 * accepts a duration(in ms) which indicates how long to wait. If `true`
+	 * accepts a duration (in ms) which indicates how long to wait. If `true`
 	 * is passed in, the timeout will be 10000ms.
 	 */
 	autoClose?: boolean | number;
