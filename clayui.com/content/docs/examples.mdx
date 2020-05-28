@@ -5,7 +5,6 @@ order: 5
 
 import ClayLayout from '@clayui/layout';
 import ClayLink from '@clayui/link';
-import ClayList from '@clayui/list';
 
 ## What is Storybook and how do we use it?
 
@@ -27,62 +26,48 @@ Here are our demos we have in Storybook that utilize Clay components showcasing 
 <ClayLayout.Container>
 	<ClayLayout.Row justify="start">
 		<ClayLayout.Col md={4} size={4}>
-			<ClayList flex>
-				<ClayLink
-					href="https://storybook.clayui.com/?path=/story/demos-templates--list-page"
-					target="_blank"
-				>
-					<ClayList.Item>
-						<ClayList.ItemTitle>List Page</ClayList.ItemTitle>
-					</ClayList.Item>
-				</ClayLink>
-				<ClayLink
-					href="https://storybook.clayui.com/?path=/story/demos-templates--files-page"
-					target="_blank"
-				>
-					<ClayList.Item>
-						<ClayList.ItemTitle>Files Page</ClayList.ItemTitle>
-					</ClayList.Item>
-				</ClayLink>
-				<ClayLink
-					href="https://storybook.clayui.com/?path=/story/demos-templates--form-page"
-					target="_blank"
-				>
-					<ClayList.Item>
-						<ClayList.ItemTitle>Form Page</ClayList.ItemTitle>
-					</ClayList.Item>
-				</ClayLink>
-				<ClayLink
-					href="https://storybook.clayui.com/?path=/story/demos-templates--table-rows-drag-drop"
-					target="_blank"
-				>
-					<ClayList.Item>
-						<ClayList.ItemTitle>
-							Table Rows Drag & Drop
-						</ClayList.ItemTitle>
-					</ClayList.Item>
-				</ClayLink>
-				<ClayLink
-					href="https://storybook.clayui.com/?path=/story/demos-templates--table-columns-drag-drop"
-					target="_blank"
-				>
-					<ClayList.Item>
-						<ClayList.ItemTitle>
-							Table Columns Drag & Drop
-						</ClayList.ItemTitle>
-					</ClayList.Item>
-				</ClayLink>
-				<ClayLink
-					href="https://storybook.clayui.com/?path=/story/demos-templates--drag-drop"
-					target="_blank"
-				>
-					<ClayList.Item>
-						<ClayList.ItemTitle>
-							List Drag & Drop
-						</ClayList.ItemTitle>
-					</ClayList.Item>
-				</ClayLink>
-			</ClayList>
+			<ClayLink
+				className="d-block"
+				href="https://storybook.clayui.com/?path=/story/demos-templates--list-page"
+				target="_blank"
+			>
+				List Page
+			</ClayLink>
+			<ClayLink
+				className="d-block"
+				href="https://storybook.clayui.com/?path=/story/demos-templates--files-page"
+				target="_blank"
+			>
+				Files Page
+			</ClayLink>
+			<ClayLink
+				className="d-block"
+				href="https://storybook.clayui.com/?path=/story/demos-templates--form-page"
+				target="_blank"
+			>
+				Form Page
+			</ClayLink>
+			<ClayLink
+				className="d-block"
+				href="https://storybook.clayui.com/?path=/story/demos-templates--table-rows-drag-drop"
+				target="_blank"
+			>
+				Table Rows Drag & Drop
+			</ClayLink>
+			<ClayLink
+				className="d-block"
+				href="https://storybook.clayui.com/?path=/story/demos-templates--table-columns-drag-drop"
+				target="_blank"
+			>
+				Table Columns Drag & drop
+			</ClayLink>
+			<ClayLink
+				className="d-block"
+				href="https://storybook.clayui.com/?path=/story/demos-templates--drag-drop"
+				target="_blank"
+			>
+				List Drag & Drop
+			</ClayLink>
 		</ClayLayout.Col>
 	</ClayLayout.Row>
 </ClayLayout.Container>
