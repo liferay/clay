@@ -27,11 +27,30 @@ render(<Component />);`;
 const alertImportsCode = `import React from 'react';
 import ClayAlert from '@clayui/alert';`;
 
+const AlertJSPCode = `<%@ taglib uri="http://liferay.com/tld/clay" prefix="clay" %>
+
+<clay:alert
+	message='<%= LanguageUtil.get(resourceBundle, "csv-warning-message") %>'
+	style="warning"
+	title='<%= LanguageUtil.get(resourceBundle, "warning") %>'
+/>`;
+
 export const Alert = () => {
 	const scope = {ClayAlert};
-	const code = AlertCode;
+	const codeSnippets = [
+		{
+			code: AlertCode,
+			name: 'React',
+		},
+		{
+			code: AlertJSPCode,
+			name: 'JSP',
+		},
+	];
 
-	return <Editor code={code} imports={alertImportsCode} scope={scope} />;
+	return (
+		<Editor code={codeSnippets} imports={alertImportsCode} scope={scope} />
+	);
 };
 
 const AlertWithButtonCode = `const Component = () => {
