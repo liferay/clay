@@ -93,6 +93,14 @@ export default () => {
 											<li className="nav-item">
 												<Link
 													className="nav-link-intro"
+													to="/docs/examples.html"
+												>
+													{'Examples'}
+												</Link>
+											</li>
+											<li className="nav-item">
+												<Link
+													className="nav-link-intro"
 													to="/blog"
 												>
 													{'Blog'}
