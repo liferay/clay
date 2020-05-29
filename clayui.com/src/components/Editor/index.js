@@ -38,6 +38,7 @@ const Editor = ({
 }) => {
 	let reactSnippet = {
 		code: '',
+		format: true,
 		name: 'React',
 	};
 
@@ -45,14 +46,14 @@ const Editor = ({
 		const codeToFormat = [...code];
 
 		codeToFormat.forEach((snippet) => {
-			if (snippet.name !== 'JSP') {
+			if (snippet.format) {
 				snippet.code = formatCode(snippet.code);
 			}
 		});
 
 		code = codeToFormat;
 
-		reactSnippet = code.find((snippet) => snippet.name === 'React');
+		reactSnippet = code[0];
 	} else {
 		code = formatCode(code);
 
