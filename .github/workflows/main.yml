@@ -14,8 +14,10 @@ jobs:
             - uses: actions/setup-node@v1
             - name: Install Dependencies
               run: yarn install
-            - name: Check Formatting
-              run: yarn lint && yarn format:check
+            - name: Lint
+              run: yarn lint
+            - name: Format
+              run: yarn format:check
             - name: Verify Dependencies
               run: yarn checkDeps
             - name: Run Jest
