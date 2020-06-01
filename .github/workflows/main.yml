@@ -40,7 +40,7 @@ jobs:
               id: diff
               run: |
                   git fetch --no-tags --depth=1 origin ${{ github.event.pull_request.base.sha }}
-                  echo "##[set-output name=packages;]$(git diff --quiet ${{ github.event.pull_request.base.sha }} 'packages/*')"
+                  echo "##[set-output name=packages;]$(git diff --exit-code ${{ github.event.pull_request.base.sha }} 'packages/*')"
 
             - name: Checkout BASE
               if: ${{ steps.diff.outputs.packages }}
