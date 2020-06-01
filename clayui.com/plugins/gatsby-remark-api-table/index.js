@@ -8,7 +8,7 @@ const path = require('path');
 const reactDocs = require('react-docgen');
 const visit = require('unist-util-visit');
 
-const generateTr = (item, key) => `<tr>
+const generateTr = (item, key) => `<tr id="api-${key}">
 	<td>
 		<div class="table-title">
 			${key}
