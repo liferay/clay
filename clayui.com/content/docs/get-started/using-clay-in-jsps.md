@@ -17,7 +17,7 @@ Clay in combination with DXP provides a set of tags for creating Clay components
 
 ## Setting up your module
 
-To use the Clay taglib in your apps, add the following to your module:
+To use Clay components in your JSP apps, add the following to your module:
 
 ### Gradle
 
@@ -37,7 +37,7 @@ Add the following snippet into either the JSP file you're using the component in
 
 ## Using Clay taglib in your JSPs
 
-The syntax for using Clay taglibs follows the following principle:
+The syntax for using Clay taglibs follows this principle:
 
 ```jsx
 <clay:componentName backendProperty="<%= Value %>" property="Property Value" />
@@ -54,12 +54,15 @@ This is how it's supposed to look like with a ClayButton:
 Clay taglibs provide the following UI components for your apps:
 
 -   [Alert](/docs/components/alert.html)
+-   [Badge](/docs/components/badge.html)
 -   [Button](/docs/components/button.html)
 -   [Card](/docs/components/card.html)
 -   [Checkbox](/docs/components/checkbox.html)
--   [Layout Elements](/docs/components/layout.html)
 -   [Dropdown](/docs/components/drop-down.html)
 -   [Form Elements](/docs/components/form.html)
+-   [Icon](/docs/components/icon.html)
+-   [Label](/docs/components/label.html)
+-   [Layout Elements](/docs/components/layout.html)
 -   [Link](/docs/components/link.html)
 -   [Management Toolbar](/docs/components/management-toolbar.html)
 -   [Multi Select](/docs/components/multi-select.html)
@@ -67,4 +70,5 @@ Clay taglibs provide the following UI components for your apps:
 -   [Progress Bar](/docs/components/progress-bar.html)
 -   [Radio](/docs/components/radio.html)
 -   [Select](/docs/components/select.html)
+-   [Sticker](/docs/components/sticker.html)
 -   [Table](/docs/components/table.html)
