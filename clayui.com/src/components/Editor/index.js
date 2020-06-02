@@ -15,6 +15,8 @@ import theme from '../../utils/react-live-theme';
 
 const spritemap = '/images/icons/icons.svg';
 
+const REACT_SNIPPET_INDEX = 0;
+
 function formatCode(code) {
 	try {
 		return prettier.format(code, {
@@ -36,9 +38,11 @@ const Editor = ({
 	preview = true,
 	scope = {},
 }) => {
-	let reactSnippet = {
+	let defaultSnippet = {
 		code: '',
+		disabled: false,
 		format: true,
+		imports,
 		name: 'React',
 	};
 
@@ -53,19 +57,20 @@ const Editor = ({
 
 		code = codeToFormat;
 
-		reactSnippet = code[0];
+		defaultSnippet = code[REACT_SNIPPET_INDEX];
 	} else {
 		code = formatCode(code);
 
-		reactSnippet.code = code;
+		defaultSnippet.code = code;
 	}
 
 	const [collapseCode, setCollapseCode] = useState(false);
 	const [activeTabKeyValue, setActiveTabKeyValue] = React.useState(0);
+	const [values, setValues] = React.useState(code);
 
 	return (
 		<LiveProvider
-			code={reactSnippet.code}
+			code={defaultSnippet.code}
 			disabled={disabled}
 			noInline
 			scope={{spritemap, useContext, useState, ...scope}}
@@ -132,27 +137,37 @@ const Editor = ({
 									activeIndex={activeTabKeyValue}
 									fade
 								>
-									{code.map((snippet) => (
-										<ClayTabs.TabPane
-											aria-labelledby={`tab-${snippet.name}`}
-											key={snippet.name}
-										>
-											{snippet === reactSnippet &&
-												imports && (
+									{code.map((snippet, index) => {
+										return (
+											<ClayTabs.TabPane
+												aria-labelledby={`tab-${snippet.name}`}
+												key={snippet.name}
+											>
+												{snippet.imports && (
 													<LiveEditor
 														disabled
-														value={imports}
+														value={snippet.imports}
 													/>
 												)}
 
-											<LiveEditor
-												disabled={
-													snippet !== reactSnippet
-												}
-												value={snippet.code}
-											/>
-										</ClayTabs.TabPane>
-									))}
+												<LiveEditor
+													disabled={snippet.disabled}
+													onValueChange={(value) => {
+														const newValues = [
+															...values,
+														];
+
+														newValues[
+															index
+														].code = value;
+
+														setValues(newValues);
+													}}
+													value={values[index].code}
+												/>
+											</ClayTabs.TabPane>
+										);
+									})}
 								</ClayTabs.Content>
 							)}
 						</>
