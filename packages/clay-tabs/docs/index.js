@@ -19,7 +19,7 @@ const tabsCode = `const Component = () => {
         <>
             <ClayTabs modern>
                 <ClayTabs.Item
-                    active={activeTabKeyValue == 0}
+                    active={activeTabKeyValue === 0}
                     innerProps={{
                         'aria-controls': 'tabpanel-1',
                     }}
@@ -28,7 +28,7 @@ const tabsCode = `const Component = () => {
                     {'Tab 1'}
                 </ClayTabs.Item>
                 <ClayTabs.Item
-                    active={activeTabKeyValue == 1}
+                    active={activeTabKeyValue === 1}
                     innerProps={{
                         'aria-controls': 'tabpanel-2',
                     }}
@@ -37,7 +37,7 @@ const tabsCode = `const Component = () => {
                     {'Tab 2'}
                 </ClayTabs.Item>
                 <ClayTabs.Item
-                    active={activeTabKeyValue == 2}
+                    active={activeTabKeyValue === 2}
                     innerProps={{
                         'aria-controls': 'tabpanel-3',
                     }}
@@ -118,7 +118,7 @@ const tabsDropdownCode = `const Component = () => {
         <ClayIconSpriteContext.Provider value={spritemap}>
             <ClayTabs modern>
                 <ClayTabs.Item
-                    active={activeTabKeyValue == 0}
+                    active={activeTabKeyValue === 0}
                     innerProps={{
                         'aria-controls': 'tabpanel-1',
                     }}
@@ -127,7 +127,7 @@ const tabsDropdownCode = `const Component = () => {
                     {'Tab 1'}
                 </ClayTabs.Item>
                 <ClayTabs.Item
-                    active={activeTabKeyValue == 1}
+                    active={activeTabKeyValue === 1}
                     innerProps={{
                         'aria-controls': 'tabpanel-2',
                     }}
@@ -136,7 +136,7 @@ const tabsDropdownCode = `const Component = () => {
                     {'Tab 2'}
                 </ClayTabs.Item>
                 <ClayTabs.Item
-                    active={activeTabKeyValue == 2}
+                    active={activeTabKeyValue === 2}
                     innerProps={{
                         'aria-controls': 'tabpanel-3',
                     }}
@@ -145,7 +145,7 @@ const tabsDropdownCode = `const Component = () => {
                     {'Tab 3'}
                 </ClayTabs.Item>
                 <ClayTabs.Item
-                    active={activeTabKeyValue == 3}
+                    active={activeTabKeyValue === 3}
                     innerProps={{
                         'aria-controls': 'tabpanel-4',
                     }}

@@ -5,6 +5,7 @@
 
 import ClayAlert from '@clayui/alert';
 import {ClayButtonWithIcon} from '@clayui/button';
+import ClayTabs from '@clayui/tabs';
 import parserBabylon from 'prettier/parser-babylon';
 import prettier from 'prettier/standalone';
 import React, {useContext, useState} from 'react';
@@ -14,6 +15,20 @@ import theme from '../../utils/react-live-theme';
 
 const spritemap = '/images/icons/icons.svg';
 
+function formatCode(code) {
+	try {
+		return prettier.format(code, {
+			parser: 'babel',
+			plugins: [parserBabylon],
+		});
+	} catch (e) {
+		// eslint-disable-next-line
+		console.log(e);
+
+		return;
+	}
+}
+
 const Editor = ({
 	code,
 	disabled = false,
@@ -21,21 +36,31 @@ const Editor = ({
 	preview = true,
 	scope = {},
 }) => {
-	try {
-		code = prettier.format(code, {
-			parser: 'babel',
-			plugins: [parserBabylon],
+	if (Array.isArray(code)) {
+		code = code.map(({code, format = true, ...other}) => {
+			return {
+				...other,
+				code: format ? formatCode(code) : code,
+			};
 		});
-	} catch (e) {
-		// eslint-disable-next-line
-		console.log(e);
+	} else {
+		code = [
+			{
+				disabled: false,
+				imports,
+				name: 'React',
+				value: formatCode(code),
+			},
+		];
 	}
 
 	const [collapseCode, setCollapseCode] = useState(false);
+	const [activeIndex, setActiveIndex] = React.useState(0);
+	const [snippets, setSnippets] = React.useState(code);
 
 	return (
 		<LiveProvider
-			code={code}
+			code={snippets[0].value}
 			disabled={disabled}
 			noInline
 			scope={{spritemap, useContext, useState, ...scope}}
@@ -78,12 +103,57 @@ const Editor = ({
 						title={collapseCode ? 'Expand' : 'Collapse'}
 					/>
 
-					{!collapseCode && (
-						<>
-							{imports && <LiveEditor disabled value={imports} />}
+					{snippets.length > 1 && (
+						<ClayTabs modern>
+							{snippets.map((snippet, index) => (
+								<ClayTabs.Item
+									active={activeIndex === index}
+									innerProps={{
+										'aria-controls': `tabpanel-${snippet.name}`,
+									}}
+									key={snippet.name}
+									onClick={() => setActiveIndex(index)}
+								>
+									{snippet.name}
+								</ClayTabs.Item>
+							))}
+						</ClayTabs>
+					)}
 
-							<LiveEditor />
-						</>
+					{!collapseCode && (
+						<ClayTabs.Content activeIndex={activeIndex} fade>
+							{snippets.map((snippet, index) => {
+								return (
+									<ClayTabs.TabPane
+										aria-labelledby={`tab-${snippet.name}`}
+										key={snippet.name}
+									>
+										{snippet.imports && (
+											<LiveEditor
+												disabled
+												value={snippet.imports}
+											/>
+										)}
+
+										<LiveEditor
+											disabled={snippet.disabled}
+											onValueChange={(value) => {
+												const newSnippets = [
+													...snippets,
+												];
+
+												newSnippets[
+													index
+												].value = value;
+
+												setSnippets(newSnippets);
+											}}
+											value={snippet.value}
+										/>
+									</ClayTabs.TabPane>
+								);
+							})}
+						</ClayTabs.Content>
 					)}
 				</div>
 			</div>
