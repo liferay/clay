@@ -19,4 +19,6 @@ const ClayListHeader: React.FunctionComponent<React.HTMLAttributes<
 	);
 };
 
+ClayListHeader.displayName = 'ClayListHeader';
+
 export default ClayListHeader;

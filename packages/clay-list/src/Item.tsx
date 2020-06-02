@@ -78,4 +78,6 @@ const ClayListItem = React.forwardRef<HTMLLIElement, IProps>(
 	}
 );
 
+ClayListItem.displayName = 'ClayListItem';
+
 export default ClayListItem;

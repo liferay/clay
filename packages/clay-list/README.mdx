@@ -12,6 +12,7 @@ import {List, ListQuickActionsMenu} from '$packages/clay-list/docs/index';
 <div class="nav-toc">
 
 -   [QuickActionMenu](#quickactionmenu)
+-   [ClayList children](#claylist-children)
 -   [API](#api)
     -   [ClayList](#claylist)
     -   [ClayList.Header](#claylist.header)
@@ -37,6 +38,10 @@ Use `QuickActionMenu` composition inside `Item` for defining a QuickActionMenu.
 Wrap `QuickActionMenu.Item` inside `QuickActionMenu` for defining an `Item` of QuickActionMenu. See the following example:
 
 <ListQuickActionsMenu />
+
+## ClayList children
+
+To ensure your html structure is accessible, make sure any children passed to `ClayList` are `li` elements. Both `ClayList.Item` and `ClayListHeader` are `li` elements.
 
 ## API
 
