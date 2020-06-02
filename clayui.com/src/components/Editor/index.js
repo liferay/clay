@@ -15,8 +15,6 @@ import theme from '../../utils/react-live-theme';
 
 const spritemap = '/images/icons/icons.svg';
 
-const REACT_SNIPPET_INDEX = 0;
-
 function formatCode(code) {
 	try {
 		return prettier.format(code, {
@@ -38,39 +36,31 @@ const Editor = ({
 	preview = true,
 	scope = {},
 }) => {
-	let defaultSnippet = {
-		code: '',
-		disabled: false,
-		format: true,
-		imports,
-		name: 'React',
-	};
-
 	if (Array.isArray(code)) {
-		const codeToFormat = [...code];
-
-		codeToFormat.forEach((snippet) => {
-			if (snippet.format) {
-				snippet.code = formatCode(snippet.code);
-			}
+		code = code.map(({code, format = true, ...other}) => {
+			return {
+				...other,
+				code: format ? formatCode(code) : code,
+			};
 		});
-
-		code = codeToFormat;
-
-		defaultSnippet = code[REACT_SNIPPET_INDEX];
 	} else {
-		code = formatCode(code);
-
-		defaultSnippet.code = code;
+		code = [
+			{
+				disabled: false,
+				imports,
+				name: 'React',
+				value: formatCode(code),
+			},
+		];
 	}
 
 	const [collapseCode, setCollapseCode] = useState(false);
-	const [activeTabKeyValue, setActiveTabKeyValue] = React.useState(0);
-	const [values, setValues] = React.useState(code);
+	const [activeIndex, setActiveIndex] = React.useState(0);
+	const [snippets, setSnippets] = React.useState(code);
 
 	return (
 		<LiveProvider
-			code={defaultSnippet.code}
+			code={snippets[0].value}
 			disabled={disabled}
 			noInline
 			scope={{spritemap, useContext, useState, ...scope}}
@@ -113,74 +103,57 @@ const Editor = ({
 						title={collapseCode ? 'Expand' : 'Collapse'}
 					/>
 
-					{Array.isArray(code) ? (
-						<>
-							<ClayTabs modern>
-								{code.map((snippet, index) => (
-									<ClayTabs.Item
-										active={activeTabKeyValue === index}
-										innerProps={{
-											'aria-controls': `tabpanel-${snippet.name}`,
-										}}
-										key={snippet.name}
-										onClick={() =>
-											setActiveTabKeyValue(index)
-										}
-									>
-										{snippet.name}
-									</ClayTabs.Item>
-								))}
-							</ClayTabs>
-
-							{!collapseCode && (
-								<ClayTabs.Content
-									activeIndex={activeTabKeyValue}
-									fade
+					{snippets.length > 1 && (
+						<ClayTabs modern>
+							{snippets.map((snippet, index) => (
+								<ClayTabs.Item
+									active={activeIndex === index}
+									innerProps={{
+										'aria-controls': `tabpanel-${snippet.name}`,
+									}}
+									key={snippet.name}
+									onClick={() => setActiveIndex(index)}
 								>
-									{code.map((snippet, index) => {
-										return (
-											<ClayTabs.TabPane
-												aria-labelledby={`tab-${snippet.name}`}
-												key={snippet.name}
-											>
-												{snippet.imports && (
-													<LiveEditor
-														disabled
-														value={snippet.imports}
-													/>
-												)}
+									{snippet.name}
+								</ClayTabs.Item>
+							))}
+						</ClayTabs>
+					)}
 
-												<LiveEditor
-													disabled={snippet.disabled}
-													onValueChange={(value) => {
-														const newValues = [
-															...values,
-														];
+					{!collapseCode && (
+						<ClayTabs.Content activeIndex={activeIndex} fade>
+							{snippets.map((snippet, index) => {
+								return (
+									<ClayTabs.TabPane
+										aria-labelledby={`tab-${snippet.name}`}
+										key={snippet.name}
+									>
+										{snippet.imports && (
+											<LiveEditor
+												disabled
+												value={snippet.imports}
+											/>
+										)}
 
-														newValues[
-															index
-														].code = value;
+										<LiveEditor
+											disabled={snippet.disabled}
+											onValueChange={(value) => {
+												const newSnippets = [
+													...snippets,
+												];
 
-														setValues(newValues);
-													}}
-													value={values[index].code}
-												/>
-											</ClayTabs.TabPane>
-										);
-									})}
-								</ClayTabs.Content>
-							)}
-						</>
-					) : (
-						!collapseCode && (
-							<>
-								{imports && (
-									<LiveEditor disabled value={imports} />
-								)}
+												newSnippets[
+													index
+												].value = value;
 
-								<LiveEditor />
-							</>
-						)
+												setSnippets(newSnippets);
+											}}
+											value={snippet.value}
+										/>
+									</ClayTabs.TabPane>
+								);
+							})}
+						</ClayTabs.Content>
 					)}
 				</div>
 			</div>
