@@ -3,25 +3,24 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import moment from 'moment';
 import React from 'react';
 
-import * as Helpers from './Helpers';
+import {Month, formatDate, getWeekArray, setDate} from './Helpers';
 import {FirstDayOfWeek} from './types';
 
 /**
  * Generates the table of days of the month.
  */
 const useWeeks = (currentMonth: Date, firstDayOfWeek: FirstDayOfWeek) => {
-	const [weeks, set] = React.useState<Helpers.Month>(() =>
-		Helpers.getWeekArray(currentMonth, firstDayOfWeek)
+	const [weeks, set] = React.useState<Month>(() =>
+		getWeekArray(currentMonth, firstDayOfWeek)
 	);
 
 	function setWeeks(value: Date) {
-		set(Helpers.getWeekArray(value, firstDayOfWeek));
+		set(getWeekArray(value, firstDayOfWeek));
 	}
 
-	return [weeks, setWeeks] as [Helpers.Month, (value: Date) => void];
+	return [weeks, setWeeks] as [Month, (value: Date) => void];
 };
 
 /**
@@ -29,19 +28,21 @@ const useWeeks = (currentMonth: Date, firstDayOfWeek: FirstDayOfWeek) => {
  */
 const useCurrentTime = (format: string) => {
 	const [currentTime, set] = React.useState<string>(() =>
-		moment().set('h', 0).set('m', 0).format(format)
+		formatDate(setDate(new Date(), {hours: 0, minutes: 0}), format)
 	);
 
 	function setCurrentTime(
 		hours: number | string,
 		minutes: number | string
 	): void {
+		const date = setDate(new Date(), {hours, minutes});
+
 		if (typeof hours !== 'string') {
-			hours = moment().set('h', hours).format('H');
+			hours = formatDate(date, 'H');
 		}
 
 		if (typeof minutes !== 'string') {
-			minutes = moment().set('m', minutes).format('m');
+			minutes = formatDate(date, 'm');
 		}
 
 		set(`${hours}:${minutes}`);
