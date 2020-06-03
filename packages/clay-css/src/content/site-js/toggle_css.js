@@ -22,7 +22,7 @@
 			$('#claySiteCSS').remove();
 		};
 
-		var clayBase = cssHref.match(/site-lexicon-font-awesome.css$/);
+		var clayBase = cssHref ? cssHref.match(/site-lexicon-font-awesome.css$/) : cssHref;
 
 		var theme = clayBase ? '"clay-base"' : '"clay-atlas"';
 

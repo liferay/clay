@@ -11,9 +11,11 @@
 
 		(function () {
 			if (!localStorage.getItem('nate.lexiconHref')) {
-				var version = window.location.href.match(/\/v(.*)\/c/)[1];
+				if (window.location.href.match(/\/v(.*)\/c/)) {
+					var version = window.location.href.match(/\/v(.*)\/c/)[1];
 
-				localStorage.setItem('nate.lexiconHref', window.location.origin + '/clay3-test-site/v' + version + '/css/site/site-atlas-font-awesome.css');
+					localStorage.setItem('nate.lexiconHref', window.location.origin + '/clay3-test-site/v' + version + '/css/site/site-atlas-font-awesome.css');
+				}
 			}
 		})();
 
