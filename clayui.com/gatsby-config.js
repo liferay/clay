@@ -32,6 +32,12 @@ module.exports = {
 		},
 		{
 			options: {
+				ignore: [
+					'**/browserslist-config-clay',
+					'**/clay-css',
+					'**/demos',
+					'**/generator-clay-component',
+				],
 				name: 'packages',
 				path: path.join(__dirname, '../packages'),
 			},
