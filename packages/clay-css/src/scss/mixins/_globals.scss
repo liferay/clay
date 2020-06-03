@@ -207,28 +207,32 @@
 
 	@if ($enabled) {
 		@each $key, $value in $map {
+			@if ($value == clay-unset) {
+				$value: null;
+			}
+
 			@if ($key == 'appearance') {
-				-moz-appearance: map-get($map, appearance);
-				-webkit-appearance: map-get($map, appearance);
+				-moz-appearance: $value;
+				-webkit-appearance: $value;
 
 				&::-ms-expand {
-					display: map-get($map, appearance);
+					display: $value;
 				}
 
-				appearance: map-get($map, appearance);
+				appearance: $value;
 			} @else if ($key == 'content') {
-				content: map-get($map, content);
+				content: $value;
 			} @else if ($key == 'word-wrap') {
-				overflow-wrap: map-get($map, word-wrap);
-				word-wrap: map-get($map, word-wrap);
+				overflow-wrap: $value;
+				word-wrap: $value;
 			} @else if ($key == 'overflow-wrap') {
-				overflow-wrap: map-get($map, overflow-wrap);
-				word-wrap: map-get($map, overflow-wrap);
+				overflow-wrap: $value;
+				word-wrap: $value;
 			} @else if ($key == 'user-select') {
-				-ms-user-select: map-get($map, user-select);
-				-moz-user-select: map-get($map, user-select);
-				-webkit-user-select: map-get($map, user-select);
-				user-select: map-get($map, user-select);
+				-ms-user-select: $value;
+				-moz-user-select: $value;
+				-webkit-user-select: $value;
+				user-select: $value;
 			} @else if (index($properties, $key)) {
 				#{$key}: #{$value};
 			}
