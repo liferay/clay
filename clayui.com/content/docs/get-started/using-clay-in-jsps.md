@@ -1,41 +1,25 @@
 ---
 title: 'Using Clay in JSPs'
+draft: true
 order: 6
 ---
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Setting up your module](#setting-up-your-module)
--   [Using Clay taglib in your JSPs](#using-clay-taglib-in-your-jsps)
--   [Clay components available in JSPs](#clay-components-available-in-jsps)
+-   [Using taglibs](#using-taglibs)
+-   [Clay taglibs available](#clay-taglibs-available)
 
 </div>
 </div>
 
-Clay in combination with DXP provides a set of tags for creating Clay components in your JSP files.
-
-## Setting up your module
-
-To use Clay components in your JSP apps, add the following to your module:
-
-### Gradle
-
-Add the following snippet into your module's `build.gradle` file:
-
-```jsx
-compileOnly project(":apps:frontend-taglib:frontend-taglib-clay")
-```
-
-### JSP
+## Using taglibs
 
 Add the following snippet into either the JSP file you're using the component in, or in the module's `init.jsp` file:
 
 ```jsx
 <%@ taglib prefix="clay" uri="http://liferay.com/tld/clay" %>
 ```
-
-## Using Clay taglib in your JSPs
 
 The syntax for using Clay taglibs follows this principle:
 
@@ -49,7 +33,7 @@ This is how it's supposed to look like with a ClayButton:
 <clay:button label="<%= Button Label %>" style="primary" />
 ```
 
-## Clay components available in JSPs
+## Clay taglibs available
 
 Clay taglibs provide the following UI components for your apps:
 
