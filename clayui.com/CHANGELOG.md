@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/bryceosterhaus/clay/compare/clayui.com@3.1.0...clayui.com@3.2.0) (2020-06-04)
+
+### Bug Fixes
+
+-   **clayui.com:** Add missing components and fix some wording ([04ad6ff](https://github.com/bryceosterhaus/clay/commit/04ad6ff))
+-   **clayui.com:** Don't use ClayList, and make ClayLink's display block ([d67a6ab](https://github.com/bryceosterhaus/clay/commit/d67a6ab))
+-   **clayui.com:** ignore certain packages from gatsby ([1a6f334](https://github.com/bryceosterhaus/clay/commit/1a6f334))
+-   **clayui.com:** JSP Docs Page - Remove gradle section, restructure content and make it draft ([212d07b](https://github.com/bryceosterhaus/clay/commit/212d07b))
+
+### Features
+
+-   **@clayui/css:** Update search icon - trim the icon code ([b74e028](https://github.com/bryceosterhaus/clay/commit/b74e028)), closes [#3293](https://github.com/bryceosterhaus/clay/issues/3293)
+-   **clayui.com:** Add anchor to APITable Table Row to enable linking to it ([7bd3e31](https://github.com/bryceosterhaus/clay/commit/7bd3e31))
+-   **clayui.com:** Add documentation for examples in form of list of links to their stories ([ed19d45](https://github.com/bryceosterhaus/clay/commit/ed19d45))
+-   **clayui.com:** Add format property to codeSnippet object ([1a3fe00](https://github.com/bryceosterhaus/clay/commit/1a3fe00))
+-   **clayui.com:** Add Markup/CSS page for Toolbar component ([1bfb677](https://github.com/bryceosterhaus/clay/commit/1bfb677))
+-   **clayui.com:** Add state handling within the LiveEditor component to enable support for editing when multiple LiveEditors are on the same page ([0c9cb38](https://github.com/bryceosterhaus/clay/commit/0c9cb38))
+-   **clayui.com:** Add tabs to code snippets ([4ec043c](https://github.com/bryceosterhaus/clay/commit/4ec043c))
+-   **clayui.com:** Document using Clay in JSPs ([c6eb121](https://github.com/bryceosterhaus/clay/commit/c6eb121))
+
 # [3.1.0](https://github.com/bryceosterhaus/clay/compare/clayui.com@3.0.0...clayui.com@3.1.0) (2020-05-21)
 
 ### Bug Fixes

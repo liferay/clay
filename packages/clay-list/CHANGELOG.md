@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.5](https://github.com/liferay/clay/compare/@clayui/list@3.2.4...@clayui/list@3.2.5) (2020-06-04)
+
+### Bug Fixes
+
+-   **@clayui/list:** add dev warning for child elements ([717db76](https://github.com/liferay/clay/commit/717db76))
+
 ## [3.2.4](https://github.com/liferay/clay/compare/@clayui/list@3.2.3...@clayui/list@3.2.4) (2020-05-21)
 
 ### Bug Fixes

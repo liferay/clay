@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.12.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.11.0...@clayui/css@3.12.0) (2020-06-04)
+
+
+### Bug Fixes
+
+* **clay-css:** re-add file that was accidentally deleted ([ebc4d75](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/ebc4d75))
+
+
+### Features
+
+* **@clayui/css:** Update search icon ([7e5bd9a](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/7e5bd9a))
+* **@clayui/css:** Update search icon - trim the icon code ([b74e028](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/b74e028)), closes [#3293](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3293)
+
+
+
+
+
 # [3.11.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.10.0...@clayui/css@3.11.0) (2020-05-21)
 
 
