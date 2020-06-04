@@ -14,7 +14,7 @@ import {
 import React from 'react';
 
 import BillboardWrapper from './BillboardWrapper';
-import GeoMap, {IProps} from './GeoMap';
+import GeoMap from './GeoMap';
 import Predictive from './Predictive';
 import {
 	DEFAULT_COLORS,
@@ -44,10 +44,7 @@ export interface IProps {
  * Chart component.
  */
 const ClayChart = React.forwardRef<HTMLDivElement, IProps>(
-	(
-		{color, data, elementProps, grid, line, point, ...otherProps}: IProps,
-		ref
-	) => {
+	({color, data, elementProps, grid, line, point, ...otherProps}, ref) => {
 		const defaultRef = React.useRef<any>();
 
 		let ChartComponent;
