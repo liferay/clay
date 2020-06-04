@@ -1,20 +1,28 @@
+.dropup,
+.dropright,
+.dropdown,
+.dropleft {
+	position: relative;
+}
+
+.dropdown-toggle {
+	white-space: nowrap;
+
+	@include caret();
+}
+
 .dropdown-header {
+	color: $dropdown-header-color;
+	display: block;
 	font-size: $dropdown-header-font-size;
 	margin-bottom: $dropdown-header-margin-bottom;
 	margin-top: $dropdown-header-margin-top;
+	padding-bottom: $dropdown-header-padding-y;
+	padding-left: $dropdown-header-padding-x;
+	padding-right: $dropdown-header-padding-x;
+	padding-top: $dropdown-header-padding-y;
 	text-transform: $dropdown-header-text-transform;
-	white-space: normal;
 	word-wrap: break-word;
-
-	@if not($dropdown-header-padding-y == $dropdown-padding-y) {
-		padding-bottom: $dropdown-header-padding-y;
-		padding-top: $dropdown-header-padding-y;
-	}
-
-	@if not($dropdown-header-padding-x == $dropdown-item-padding-x) {
-		padding-left: $dropdown-header-padding-x;
-		padding-right: $dropdown-header-padding-x;
-	}
 
 	@include clay-scale-component {
 		font-size: $dropdown-header-font-size-mobile;
@@ -67,6 +75,19 @@
 	}
 }
 
+// Dropdown Item Text
+
+.dropdown-item-text {
+	color: map-get($dropdown-item-base, color);
+	display: map-get($dropdown-item-base, display);
+	font-weight: map-get($dropdown-item-base, font-weight);
+	padding: map-get($dropdown-item-base, padding);
+	padding-bottom: map-get($dropdown-item-base, padding-bottom);
+	padding-left: map-get($dropdown-item-base, padding-left);
+	padding-right: map-get($dropdown-item-base, padding-right);
+	padding-top: map-get($dropdown-item-base, padding-top);
+}
+
 .dropdown-section {
 	padding: $dropdown-item-padding-y $dropdown-item-padding-x;
 
@@ -94,16 +115,35 @@
 }
 
 .dropdown-menu {
+	background-clip: padding-box;
+	background-color: $dropdown-bg;
+	border-color: $dropdown-border-color;
 	border-style: $dropdown-border-style;
+	border-width: $dropdown-border-width;
+
+	@include border-radius($dropdown-border-radius);
+	@include box-shadow($dropdown-box-shadow);
+
+	color: $dropdown-color;
+	display: none;
+	float: left;
 	font-size: $dropdown-font-size;
+	left: 0;
+	list-style: none;
+	margin: $dropdown-spacer 0 0;
 	max-height: $dropdown-max-height;
 	max-width: $dropdown-max-width;
 	min-height: $dropdown-min-height;
+	min-width: $dropdown-min-width;
 	overflow: auto;
 
 	// Firefox clips overflowing content and doesn't respect `padding-bottom` on `.dropdown-menu`
 
-	padding-bottom: 0;
+	padding: $dropdown-padding-y 0 0;
+	position: absolute;
+	text-align: left;
+	top: 100%;
+	z-index: $zindex-dropdown;
 
 	&::after {
 		content: '';
@@ -163,6 +203,101 @@
 	> .list-unstyled {
 		margin-bottom: 0;
 	}
+}
+
+.dropdown-menu.show {
+	display: block;
+}
+
+// Dropdown Menu Alignment
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+	@include media-breakpoint-up($breakpoint) {
+		$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+		.dropdown-menu#{$infix}-left {
+			left: 0;
+			right: auto;
+		}
+
+		.dropdown-menu#{$infix}-right {
+			left: auto;
+			right: 0;
+		}
+	}
+}
+
+// Allow for dropdowns to go bottom up (aka, dropup-menu)
+// Just add .dropup after the standard .dropdown class and you're set.
+
+.dropup {
+	.dropdown-menu {
+		bottom: 100%;
+		margin-bottom: $dropdown-spacer;
+		margin-top: 0;
+		top: auto;
+	}
+
+	.dropdown-toggle {
+		@include caret(up);
+	}
+}
+
+.dropright {
+	.dropdown-menu {
+		left: 100%;
+		margin-left: $dropdown-spacer;
+		margin-top: 0;
+		right: auto;
+		top: 0;
+	}
+
+	.dropdown-toggle {
+		@include caret(right);
+
+		&::after {
+			vertical-align: 0;
+		}
+	}
+}
+
+.dropleft {
+	.dropdown-menu {
+		left: auto;
+		margin-right: $dropdown-spacer;
+		margin-top: 0;
+		right: 100%;
+		top: 0;
+	}
+
+	.dropdown-toggle {
+		@include caret(left);
+
+		&::before {
+			vertical-align: 0;
+		}
+	}
+}
+
+// When enabled Popper.js, reset basic dropdown position
+
+.dropdown-menu {
+	&[x-placement^='top'],
+	&[x-placement^='right'],
+	&[x-placement^='bottom'],
+	&[x-placement^='left'] {
+		bottom: auto;
+		right: auto;
+	}
+}
+
+// Dropdown Divider
+
+.dropdown-divider {
+	border-top: 1px solid $dropdown-divider-bg;
+	height: 0;
+	margin: $dropdown-divider-margin-y 0;
+	overflow: hidden;
 }
 
 // Dropdown Action
