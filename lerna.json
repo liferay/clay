@@ -5,7 +5,13 @@
 	"useWorkspaces": true,
 	"command": {
 		"publish": {
-			"ignoreChanges": ["**/stories/*", "**/__tests__/**", "**/*.md"],
+			"ignoreChanges": [
+				"**/stories/*",
+				"**/__tests__/**",
+				"**/*.md",
+				"**/*.mdx",
+				"**/docs/*"
+			],
 			"message": "chore(release): publish updated packages"
 		}
 	},
