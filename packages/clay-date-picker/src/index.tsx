@@ -21,7 +21,7 @@ import Weekday from './Weekday';
 import WeekdayHeader from './WeekdayHeader';
 import {FirstDayOfWeek, IAriaLabels, IYears} from './types';
 
-export {FirstDayOfWeek, getLocaleProps, IAriaLabels, IYears};
+export {FirstDayOfWeek, getLocaleProps};
 
 interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	/**

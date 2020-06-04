@@ -182,7 +182,8 @@ storiesOf('Components|ClayDropDown', module)
 		</DropDownWithState>
 	))
 	.add('w/ ClayDropDownWithItems', () => {
-		const [value, setValue] = React.useState();
+		const [value, setValue] = React.useState('');
+
 		const items = [
 			{
 				label: 'clickable',

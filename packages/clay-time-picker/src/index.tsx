@@ -163,8 +163,8 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 	onInputChange = () => {},
 }: IProps) => {
 	const useConfig: Config = config[use12Hours ? 'use12Hours' : 'use24Hours'];
-	const [actionVisible, setActionVisible] = React.useState<boolean>(false);
-	const [isFocused, setIsFocused] = React.useState<boolean>(false);
+	const [actionVisible, setActionVisible] = React.useState(false);
+	const [isFocused, setIsFocused] = React.useState(false);
 	const elementRef = React.useRef<null | HTMLDivElement>(null);
 	const defaultFocused = {
 		configName: TimeType.hours,
