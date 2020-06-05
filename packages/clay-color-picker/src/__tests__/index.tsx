@@ -15,6 +15,7 @@ const mockClientRect = (element: HTMLElement) => {
 		height: 128,
 		left: 0,
 		right: 0,
+		toJSON: () => {},
 		top: 0,
 		width: 144,
 		x: 0,

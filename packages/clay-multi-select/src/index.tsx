@@ -191,7 +191,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 		const inputRef = React.useRef<HTMLInputElement | null>(null);
 		const lastItemRef = React.useRef<HTMLSpanElement | null>(null);
 		const [active, setActive] = React.useState(false);
-		const [isFocused, setIsFocused] = React.useState();
+		const [isFocused, setIsFocused] = React.useState(false);
 
 		React.useLayoutEffect(() => {
 			if (sourceItems) {

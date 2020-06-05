@@ -16,8 +16,16 @@ module.exports = {
 	plugins: ['@typescript-eslint'],
 	rules: {
 		'@typescript-eslint/array-type': ['error', {default: 'generic'}],
-		'@typescript-eslint/interface-name-prefix': ['error', 'always'],
+		'@typescript-eslint/naming-convention': [
+			'error',
+			{
+				format: ['PascalCase'],
+				prefix: ['I'],
+				selector: 'interface',
+			},
+		],
 		'@typescript-eslint/no-unused-vars': 'error',
+		'lines-around-comment': 'off',
 		'no-unused-vars': 'off',
 		'notice/notice': [
 			'error',

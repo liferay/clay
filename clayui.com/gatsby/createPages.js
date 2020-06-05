@@ -142,9 +142,7 @@ module.exports = async ({actions, graphql}) => {
 							slug
 							sibling
 						}
-						code {
-							scope
-						}
+						body
 					}
 				}
 			}

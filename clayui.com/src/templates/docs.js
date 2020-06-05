@@ -7,7 +7,7 @@ import {ClayIconSpriteContext} from '@clayui/icon/src';
 import {ClayTooltipProvider} from '@clayui/tooltip';
 import {MDXProvider} from '@mdx-js/react';
 import {Link, graphql} from 'gatsby';
-import MDXRenderer from 'gatsby-mdx/mdx-renderer';
+import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer';
 import React, {useEffect} from 'react';
 import Helmet from 'react-helmet';
 
@@ -33,7 +33,7 @@ export default (props) => {
 		mdx,
 		mdxTab,
 	} = data;
-	const {code, excerpt, fields, frontmatter, html, timeToRead} =
+	const {body, excerpt, fields, frontmatter, html, timeToRead} =
 		mdx || markdownRemark;
 
 	const tab = mdTab || mdxTab;
@@ -329,7 +329,7 @@ export default (props) => {
 																	>
 																		<MDXRenderer>
 																			{
-																				code.body
+																				body
 																			}
 																		</MDXRenderer>
 																	</MDXProvider>
@@ -357,7 +357,7 @@ export default (props) => {
 																}}
 															/>
 														)}
-														{tab && tab.code && (
+														{tab && tab.body && (
 															<article>
 																<CodeClipboard>
 																	<MDXProvider
@@ -393,9 +393,7 @@ export default (props) => {
 																	>
 																		<MDXRenderer>
 																			{
-																				tab
-																					.code
-																					.body
+																				tab.body
 																			}
 																		</MDXRenderer>
 																	</MDXProvider>
@@ -477,9 +475,7 @@ export const pageQuery = graphql`
 				packageStatus
 				packageVersion
 			}
-			code {
-				body
-			}
+			body
 		}
 		markdownRemark(fields: {slug: {eq: $slug}}) {
 			excerpt
@@ -529,9 +525,7 @@ export const pageQuery = graphql`
 			html
 		}
 		mdxTab: mdx(fields: {slug: {ne: "", eq: $sibling}}) {
-			code {
-				body
-			}
+			body
 		}
 	}
 `;
