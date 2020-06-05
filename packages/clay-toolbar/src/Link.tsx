@@ -7,20 +7,35 @@ import ClayLink from '@clayui/link';
 import classNames from 'classnames';
 import React from 'react';
 
-const Link: React.FunctionComponent<React.ComponentProps<typeof ClayLink>> = ({
+export interface IProps extends React.ComponentProps<typeof ClayLink> {
+	/**
+	 * FLag that determines if the Link will have a `component-link` class, allowing CSS overrides.
+	 */
+	componentLink?: boolean;
+
+	/**
+	 * Flag that determines if the Link will have a `disabled` class, disabling interactions.
+	 */
+	disabled?: boolean;
+}
+
+const Link: React.FunctionComponent<IProps> = ({
 	children,
 	className,
+	componentLink,
+	disabled,
 	...otherProps
-}) => {
-	return (
-		<ClayLink
-			className={classNames(className, 'component-link tbar-link')}
-			{...otherProps}
-		>
-			{children}
-		</ClayLink>
-	);
-};
+}: IProps) => (
+	<ClayLink
+		className={classNames(className, 'tbar-link', {
+			'component-link': componentLink,
+			disabled,
+		})}
+		{...otherProps}
+	>
+		{children}
+	</ClayLink>
+);
 
 Link.displayName = 'ClayToolbarLink';
 

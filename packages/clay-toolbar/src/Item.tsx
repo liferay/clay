@@ -6,19 +6,19 @@
 import classNames from 'classnames';
 import React from 'react';
 
-export interface IItemProps extends React.HTMLAttributes<HTMLLIElement> {
+export interface IProps extends React.HTMLAttributes<HTMLLIElement> {
 	/**
 	 * Flag to indicate if Item should auto expand to fill the remaining width.
 	 */
 	expand?: boolean;
 }
 
-const Item: React.FunctionComponent<IItemProps> = ({
+const Item: React.FunctionComponent<IProps> = ({
 	children,
 	className,
 	expand,
 	...otherProps
-}: IItemProps) => {
+}: IProps) => {
 	return (
 		<li
 			className={classNames(className, 'tbar-item', {
@@ -26,7 +26,7 @@ const Item: React.FunctionComponent<IItemProps> = ({
 			})}
 			{...otherProps}
 		>
-			<div className="tbar-section">{children}</div>
+			{children}
 		</li>
 	);
 };

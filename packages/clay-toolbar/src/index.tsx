@@ -6,6 +6,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
+import Action from './Action';
 import Item from './Item';
 import Label from './Label';
 import Link from './Link';
@@ -33,6 +34,7 @@ interface IProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 const ClayToolbar: React.FunctionComponent<IProps> & {
+	Action: typeof Action;
 	Item: typeof Item;
 	Label: typeof Label;
 	Link: typeof Link;
@@ -72,6 +74,7 @@ const ClayToolbar: React.FunctionComponent<IProps> & {
 	);
 };
 
+ClayToolbar.Action = Action;
 ClayToolbar.Item = Item;
 ClayToolbar.Label = Label;
 ClayToolbar.Link = Link;
