@@ -4,8 +4,9 @@
  */
 
 import {ClayInput} from '@clayui/form';
-import moment from 'moment';
 import React from 'react';
+
+import {formatDate, isValid} from './Helpers';
 
 interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	ariaLabel?: string;
@@ -15,7 +16,6 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	inputName?: string;
 	placeholder?: string;
 	time: boolean;
-	timeFormat: string;
 	useNative: boolean;
 	value: string;
 }
@@ -28,7 +28,6 @@ const ClayDatePickerInputDate = React.forwardRef<HTMLInputElement, IProps>(
 			dateFormat,
 			inputName = 'datePicker',
 			time = false,
-			timeFormat,
 			useNative = false,
 			value = '',
 			...otherProps
@@ -36,10 +35,8 @@ const ClayDatePickerInputDate = React.forwardRef<HTMLInputElement, IProps>(
 		ref
 	) => {
 		const isValidValue = (value: string | Date): string => {
-			const format = time ? `${dateFormat} ${timeFormat}` : dateFormat;
-
-			if (moment(value, format).isValid() && value instanceof Date) {
-				const date = moment(value).clone().format(dateFormat);
+			if (value instanceof Date && isValid(value)) {
+				const date = formatDate(value, dateFormat);
 
 				return time ? `${date} ${currentTime}` : date;
 			}

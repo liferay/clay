@@ -9,7 +9,7 @@ import {boolean} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React from 'react';
 
-import ClayDatePicker, {FirstDayOfWeek, getLocaleProps} from '../src';
+import ClayDatePicker, {FirstDayOfWeek} from '../src';
 
 const ClayDatePickerWithState = (props: {[key: string]: any}) => {
 	const [value, setValue] = React.useState<string | Date>('');
@@ -67,7 +67,7 @@ storiesOf('Components|ClayDatePicker', module)
 	))
 	.add('w/ locale', () => (
 		<ClayDatePickerWithState
-			dateFormat="DD.MM.YYYY"
+			dateFormat="dd.MM.yyyy"
 			firstDayOfWeek={FirstDayOfWeek.Monday}
 			months={[
 				'Январь',
@@ -83,22 +83,11 @@ storiesOf('Components|ClayDatePicker', module)
 				'Ноябрь',
 				'Декабрь',
 			]}
-			placeholder="DD.MM.YYYY HH:mm"
+			placeholder="YYYY-MM-DD HH:mm"
 			spritemap={spritemap}
 			time
 			timezone="GMT+03:00"
 			weekdaysShort={['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']}
-			years={{
-				end: 2024,
-				start: 1997,
-			}}
-		/>
-	))
-	.add('w/ getLocaleProps', () => (
-		<ClayDatePickerWithState
-			{...getLocaleProps('ru')}
-			placeholder="DD.MM.YYYY"
-			spritemap={spritemap}
 			years={{
 				end: 2024,
 				start: 1997,

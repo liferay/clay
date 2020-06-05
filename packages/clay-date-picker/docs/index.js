@@ -50,7 +50,7 @@ const DatePickerLocale = () => {
 
 	return (
 		<ClayDatePicker
-			dateFormat="DD.MM.YYYY"
+			dateFormat="dd.MM.yyyy"
 			firstDayOfWeek={1}
 			months={[
 				'Январь',

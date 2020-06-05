@@ -7,7 +7,7 @@ import '@clayui/css/lib/css/atlas.css';
 import {ClayRadio, ClayRadioGroup} from '@clayui/form';
 import ClayLayout from '@clayui/layout';
 import {storiesOf} from '@storybook/react';
-import moment from 'moment';
+import {getYear, parse as parseDate} from 'date-fns';
 import * as React from 'react';
 import {
 	Area,
@@ -332,7 +332,11 @@ storiesOf('Demos|Recharts', module)
 		>
 			<Tooltip />
 			<YAxis label={{angle: -90, value: 'Y-Axis'}} tick={false} />
-			<XAxis tickFormatter={(val) => moment(val).year()} />
+			<XAxis
+				tickFormatter={(val) =>
+					getYear(parseDate(val, 'dd/LL/yyyy', new Date()))
+				}
+			/>
 
 			<Line dataKey="val" stroke={COLORS[0]} />
 		</LineChart>

@@ -4,10 +4,9 @@
  */
 
 import classnames from 'classnames';
-import moment from 'moment';
 import React from 'react';
 
-import {IDay} from './Helpers';
+import {IDay, formatDate, setDate} from './Helpers';
 
 interface IProps {
 	day: IDay;
@@ -25,27 +24,25 @@ const ClayDatePickerDayNumber: React.FunctionComponent<IProps> = ({
 	const classNames = classnames(
 		'date-picker-date date-picker-calendar-item',
 		{
-			active:
-				moment(day.date).format('YYYY-MM-DD') ===
-				moment(daySelected).format('YYYY-MM-DD'),
+			active: day.date.toDateString() === daySelected.toDateString(),
 			disabled: day.outside || disabled,
 		}
 	);
 
-	const handleClick = () => onClick(day.date);
-
 	return (
 		<button
-			aria-label={moment(day.date)
-				.clone()
-				.set('hour', 12)
-				.set('minute', 0)
-				.set('second', 0)
-				.set('millisecond', 0)
-				.format('YYYY MM DD')}
+			aria-label={formatDate(
+				setDate(day.date, {
+					hours: 12,
+					milliseconds: 0,
+					minutes: 0,
+					seconds: 0,
+				}),
+				'yyyy MM dd'
+			)}
 			className={classNames}
 			disabled={day.outside}
-			onClick={handleClick}
+			onClick={() => onClick(day.date)}
 			type="button"
 		>
 			{day.date.getDate()}

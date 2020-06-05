@@ -3,7 +3,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import moment from 'moment';
+import {default as formatDate} from 'date-fns/format';
+import {default as parseDate} from 'date-fns/parse';
+
+export {formatDate, parseDate};
 
 export interface IDay {
 	date: Date;
@@ -17,8 +20,8 @@ export type Month = Array<WeekDays>;
 /**
  * Clone a date object.
  */
-export function clone(d: Date) {
-	return new Date(d.getTime());
+export function clone(date: number | Date) {
+	return new Date(date instanceof Date ? date.getTime() : date);
 }
 
 export function getDaysInMonth(d: Date) {
@@ -103,17 +106,36 @@ export function range({end, start}: {end: number; start: number}) {
 	);
 }
 
-/**
- * Helper function for getting certain props from `moment`.
- * This allows users to not have to import and use `moment` themselves.
- */
-export function getLocaleProps(locale: string) {
-	const localeData = moment.localeData(locale);
+export function addMonths(date: number | Date, months: number) {
+	date = clone(date);
 
-	return {
-		dateFormat: localeData.longDateFormat('L'),
-		firstDayOfWeek: localeData.firstDayOfWeek(),
-		months: localeData.months(),
-		weekdaysShort: localeData.weekdaysShort(),
-	};
+	date.setMonth(date.getMonth() + months);
+
+	return date;
+}
+
+export function setDate(
+	date: Date,
+	obj: {
+		date?: number | string;
+		seconds?: number | string;
+		milliseconds?: number | string;
+		hours?: number | string;
+		minutes?: number | string;
+		year?: number | string;
+	}
+) {
+	date = clone(date);
+
+	return Object.keys(obj).reduce((acc, key) => {
+		const method = `set${key.charAt(0).toUpperCase() + key.slice(1)}`;
+		// @ts-ignore
+		acc[method](obj[key]);
+
+		return acc;
+	}, date);
+}
+
+export function isValid(date: Date) {
+	return date instanceof Date && !isNaN(date.getTime());
 }
