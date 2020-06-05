@@ -12,7 +12,7 @@ interface IProps
 		React.ComponentProps<typeof Container>,
 		'fluid' | 'fluidSize'
 	> {
-	size?: React.ComponentProps<typeof Container>['fluidSize'];
+	size?: React.ComponentProps<typeof Container>['fluidSize'] | false;
 }
 
 const ClayContainerFluid: React.FunctionComponent<IProps> = ({
@@ -21,7 +21,11 @@ const ClayContainerFluid: React.FunctionComponent<IProps> = ({
 	...otherProps
 }: IProps) => {
 	return (
-		<Container {...otherProps} fluid fluidSize={size}>
+		<Container
+			{...otherProps}
+			fluid
+			fluidSize={size === false ? undefined : size}
+		>
 			{children}
 		</Container>
 	);

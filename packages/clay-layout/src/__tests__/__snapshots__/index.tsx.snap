@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ClayLayout removes size class when prop is set to false 1`] = `
+DOMTokenList {
+  "0": "container-fluid",
+}
+`;
+
 exports[`ClayLayout renders 1`] = `
 <div>
   <div

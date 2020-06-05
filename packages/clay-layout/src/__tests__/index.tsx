@@ -96,4 +96,18 @@ describe('ClayLayout', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
+	it('removes size class when prop is set to false', () => {
+		const {container} = render(
+			<>
+				<ClayLayout.ContainerFluid size={false}>
+					{'test'}
+				</ClayLayout.ContainerFluid>
+			</>
+		);
+
+		expect(
+			container.querySelector('.container-fluid')!.classList
+		).toMatchSnapshot();
+	});
 });
