@@ -64,7 +64,7 @@ storiesOf('Components|ClayToolbar', module)
 		</ClayToolbar>
 	))
 	.add('Component Toolbar', () => (
-		<ClayToolbar component>
+		<ClayToolbar>
 			<ClayLayout.ContainerFluid>
 				<ClayToolbar.Nav>
 					<ClayToolbar.Item>

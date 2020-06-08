@@ -15,13 +15,10 @@ import Section from './Section';
 
 interface IProps extends React.HTMLAttributes<HTMLElement> {
 	/**
-	 * Specifies whether the Toolbar will have a `component-tbar` class.
-	 */
-	component?: boolean;
-	/**
 	 * Adds a helper class that turns the Toolbar inline at a specified breakpoint.
 	 */
 	inlineBreakpoint?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+
 	/**
 	 * Defines if the toolbar should have the `subnav-tbar` class.
 	 */
@@ -43,28 +40,24 @@ const ClayToolbar: React.FunctionComponent<IProps> & {
 } = ({
 	children,
 	className,
-	component,
 	inlineBreakpoint,
 	subnav,
 	...otherProps
 }: IProps) => {
+	subnav = subnav === true ? {} : subnav;
+
 	const classes = classNames(
 		className,
 		'tbar',
 		{
-			'component-tbar': component,
+			'component-tbar': !subnav,
 			'subnav-tbar': !!subnav,
-			'subnav-tbar-disabled': !!(
-				subnav &&
-				typeof subnav !== 'boolean' &&
-				subnav.disabled
-			),
-			[`tbar-inline-${inlineBreakpoint}-down`]: inlineBreakpoint,
 		},
-		subnav &&
-			typeof subnav !== 'boolean' &&
-			subnav.displayType &&
-			`subnav-tbar-${subnav.displayType}`
+		subnav && {
+			'subnav-tbar-disabled': subnav.disabled,
+			[`tbar-inline-${inlineBreakpoint}-down`]: inlineBreakpoint,
+			[`subnav-tbar-${subnav.displayType}`]: subnav.displayType,
+		}
 	);
 
 	return (
