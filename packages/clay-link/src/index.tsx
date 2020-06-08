@@ -66,10 +66,10 @@ const ClayLink = React.forwardRef<HTMLAnchorElement, IProps>(
 
 			classes = {
 				btn: !!button,
-				'btn-block': button?.block,
-				'btn-monospaced': button?.monospaced,
+				'btn-block': button.block,
+				'btn-monospaced': button.monospaced,
 				'btn-outline-borderless': borderless,
-				'btn-sm': button?.small,
+				'btn-sm': button.small,
 				[`btn-${displayType}`]: displayType && !outline && !borderless,
 				[`btn-outline-${displayType}`]:
 					displayType && (outline || borderless),
