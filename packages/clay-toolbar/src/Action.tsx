@@ -17,6 +17,10 @@ export interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	 * Path to clay icon spritemap
 	 */
 	spritemap: string;
+
+	/**
+	 * Symbol of the icon used inside the Action. You can find available symbols here: https://clayui.com/docs/components/icon.html
+	 */
 	symbol: string;
 }
 

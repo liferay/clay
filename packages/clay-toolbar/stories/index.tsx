@@ -123,9 +123,7 @@ storiesOf('Components|ClayToolbar', module)
 						</ClayToolbar.Section>
 					</ClayToolbar.Item>
 					<ClayToolbar.Item>
-						<ClayToolbar.Link componentLink href="#">
-							{'Clear'}
-						</ClayToolbar.Link>
+						<ClayToolbar.Link href="#">{'Clear'}</ClayToolbar.Link>
 					</ClayToolbar.Item>
 					<ClayToolbar.Item>
 						<ClayButton
@@ -164,7 +162,6 @@ storiesOf('Components|ClayToolbar', module)
 						<ClayToolbar.Section>
 							<ClayToolbar.Label
 								closeButtonProps={{disabled: true}}
-								componentLabel
 								dismissible
 								displayType="unstyled"
 								spritemap={spritemap}
@@ -178,7 +175,6 @@ storiesOf('Components|ClayToolbar', module)
 						<ClayToolbar.Section>
 							<ClayToolbar.Label
 								closeButtonProps={{disabled: true}}
-								componentLabel
 								dismissible
 								displayType="unstyled"
 								spritemap={spritemap}
@@ -192,7 +188,6 @@ storiesOf('Components|ClayToolbar', module)
 						<ClayToolbar.Section>
 							<ClayToolbar.Label
 								closeButtonProps={{disabled: true}}
-								componentLabel
 								dismissible
 								displayType="unstyled"
 								spritemap={spritemap}
