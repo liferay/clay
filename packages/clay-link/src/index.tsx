@@ -39,11 +39,17 @@ const ClayLink = React.forwardRef<HTMLAnchorElement, IProps>(
 			displayType,
 			monospaced,
 			outline,
+			rel,
+			target,
 			...otherProps
 		}: IProps,
 		ref
 	) => {
 		const TagOrComponent = React.useContext(ClayLinkContext);
+
+		if (target && !rel) {
+			rel = 'noreferrer noopener';
+		}
 
 		return (
 			<TagOrComponent
@@ -55,6 +61,8 @@ const ClayLink = React.forwardRef<HTMLAnchorElement, IProps>(
 					[`link-outline-${displayType}`]: displayType && outline,
 				})}
 				ref={ref}
+				rel={rel}
+				target={target}
 				{...otherProps}
 			>
 				{children}

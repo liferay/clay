@@ -4,6 +4,7 @@
  */
 
 import ClayLink, {ClayLinkContext} from '..';
+import {cleanup, render} from '@testing-library/react';
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
 
@@ -90,5 +91,25 @@ describe('ClayLink', () => {
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+});
+
+describe('ClayCard w/ @testing-library/react', () => {
+	afterEach(cleanup);
+
+	it('adds rel="noreferrer noopener" if target exists', () => {
+		const {container} = render(<ClayLink target="_blank" />);
+
+		expect((container.firstChild as HTMLAnchorElement).rel).toEqual(
+			'noreferrer noopener'
+		);
+	});
+
+	it('override rel if provided', () => {
+		const {container} = render(<ClayLink rel="foo bar" target="_blank" />);
+
+		expect((container.firstChild as HTMLAnchorElement).rel).toEqual(
+			'foo bar'
+		);
 	});
 });
