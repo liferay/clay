@@ -108,6 +108,6 @@ describe('ClayLayout', () => {
 
 		expect(
 			container.querySelector('.container-fluid')!.classList
-		).toMatchSnapshot();
+		).not.toContain('container-fluid-max-xl');
 	});
 });
