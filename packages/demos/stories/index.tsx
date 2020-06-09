@@ -12,6 +12,7 @@ import Backend from 'react-dnd-html5-backend';
 import DragDrop from './DragDrop';
 import FilesPage from './FilesPage';
 import FormPage from './FormPage';
+import LayoutDragDrop from './LayoutContentDragDrop';
 import ListPage from './ListPage';
 import ClayTableWithDraggableColumns from './TableColumnsDragDrop';
 import ClayTableWithDraggableRows from './TableRowsDragDrop';
@@ -35,5 +36,10 @@ storiesOf('Demos|Templates', module)
 	.add('Drag & Drop', () => (
 		<DndProvider backend={Backend}>
 			<DragDrop />
+		</DndProvider>
+	))
+	.add('Layout.Content Drag & Drop', () => (
+		<DndProvider backend={Backend}>
+			<LayoutDragDrop />
 		</DndProvider>
 	));
