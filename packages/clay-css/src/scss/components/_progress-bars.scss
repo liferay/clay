@@ -1,11 +1,66 @@
 .progress {
+	background-color: $progress-bg;
+
+	@include border-radius($progress-border-radius);
+	@include box-shadow($progress-box-shadow);
+
+	display: flex;
 	flex-grow: 1;
+	font-size: $progress-font-size;
+	height: $progress-height;
 	min-width: $progress-min-width;
+	overflow: hidden;
 }
 
 .progress-bar {
-	@if ($progress-bar-box-shadow) {
-		@include box-shadow($progress-bar-box-shadow);
+	background-color: $progress-bar-bg;
+
+	@include box-shadow($progress-bar-box-shadow);
+
+	color: $progress-bar-color;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	overflow: hidden;
+	text-align: center;
+
+	@include transition($progress-bar-transition);
+
+	white-space: nowrap;
+}
+
+.progress-bar-striped {
+	background-image: linear-gradient(
+		45deg,
+		rgba($white, 0.15) 25%,
+		transparent 25%,
+		transparent 50%,
+		rgba($white, 0.15) 50%,
+		rgba($white, 0.15) 75%,
+		transparent 75%,
+		transparent
+	);
+	background-size: $progress-height $progress-height;
+}
+
+@if $enable-transitions {
+	@keyframes progress-bar-stripes {
+		from {
+			background-position: $progress-height 0;
+		}
+		to {
+			background-position: 0 0;
+		}
+	}
+
+	.progress-bar-animated {
+		animation: progress-bar-stripes $progress-bar-animation-timing;
+
+		@if $enable-prefers-reduced-motion-media-query {
+			@media (prefers-reduced-motion: reduce) {
+				animation: none;
+			}
+		}
 	}
 }
 
