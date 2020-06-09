@@ -1,14 +1,22 @@
 .card,
 .card-horizontal {
 	background-color: $card-bg;
+	border-color: $card-border-color;
 	border-style: $card-border-style;
 	border-width: $card-border-width;
 
+	@include border-radius($card-border-radius);
 	@include box-shadow($card-box-shadow);
 
 	display: block;
+	height: $card-height;
 	margin-bottom: $card-margin-bottom;
+
+	// See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
+
+	min-width: 0;
 	position: relative;
+	word-wrap: break-word;
 
 	@if ($card-border-radius > 0) {
 		.autofit-col {
@@ -55,9 +63,38 @@
 	.aspect-ratio-item-bottom-left {
 		@include clay-css($card-aspect-ratio-item-bottom-left);
 	}
+
+	> hr {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	> .list-group:first-child {
+		.list-group-item:first-child {
+			@include border-top-radius($card-border-radius);
+		}
+	}
+
+	> .list-group:last-child {
+		.list-group-item:last-child {
+			@include border-bottom-radius($card-border-radius);
+		}
+	}
 }
 
 .card-body {
+	color: $card-color;
+
+	// Enable `flex-grow: 1` for decks and groups so that card blocks take up
+	// as much space as possible, ensuring footers are aligned to the bottom.
+
+	flex: 1 1 auto;
+
+	// Workaround for the image size bug in IE
+	// See: https://github.com/twbs/bootstrap/pull/28855
+
+	min-height: 1px;
+
 	padding-bottom: $card-body-padding-bottom;
 	padding-left: $card-body-padding-left;
 	padding-right: $card-body-padding-right;
@@ -94,6 +131,12 @@
 	@include clay-link($card-subtitle-link);
 }
 
+// Card Text
+
+.card-text:last-child {
+	margin-bottom: 0;
+}
+
 // Card Link
 
 .card-link {
@@ -116,6 +159,92 @@
 	margin-right: $card-divider-spacer-x;
 	margin-top: $card-divider-spacer-y;
 }
+
+// Card Header
+
+.card-header {
+	background-color: $card-cap-bg;
+	border-bottom: $card-border-width solid $card-border-color;
+	color: $card-cap-color;
+
+	// Removes the default margin-bottom of <hN> (h1 - h6)
+
+	margin-bottom: 0;
+	padding: $card-spacer-y $card-spacer-x;
+
+	&:first-child {
+		@include border-radius(
+			$card-inner-border-radius $card-inner-border-radius 0 0
+		);
+	}
+
+	+ .list-group {
+		.list-group-item:first-child {
+			border-top: 0;
+		}
+	}
+}
+
+.card-header-tabs {
+	border-bottom: 0;
+	margin-bottom: -$card-spacer-y;
+	margin-left: -$card-spacer-x / 2;
+	margin-right: -$card-spacer-x / 2;
+}
+
+.card-header-pills {
+	margin-left: -$card-spacer-x / 2;
+	margin-right: -$card-spacer-x / 2;
+}
+
+// Card Footer
+
+.card-footer {
+	background-color: $card-cap-bg;
+	border-top: $card-border-width solid $card-border-color;
+	padding: $card-spacer-y $card-spacer-x;
+
+	&:last-child {
+		@include border-radius(
+			0 0 $card-inner-border-radius $card-inner-border-radius
+		);
+	}
+}
+
+// Card Img
+
+.card-img-overlay {
+	bottom: 0;
+	left: 0;
+	padding: $card-img-overlay-padding;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.card-img,
+.card-img-top,
+.card-img-bottom {
+	// For IE: https://github.com/twbs/bootstrap/issues/29396
+
+	flex-shrink: 0;
+
+	// Required because we use flexbox and this inherently applies align-self: stretch
+
+	width: 100%;
+}
+
+.card-img,
+.card-img-top {
+	@include border-top-radius($card-inner-border-radius);
+}
+
+.card-img,
+.card-img-bottom {
+	@include border-bottom-radius($card-inner-border-radius);
+}
+
+// Card Row
 
 .card-row {
 	display: flex;
@@ -294,6 +423,139 @@
 		.card-item-last {
 			border-radius: 0 $card-rounded-circle-inner-border-radius
 				$card-rounded-circle-inner-border-radius 0;
+		}
+	}
+}
+
+// Card Deck
+
+.card-deck {
+	.card {
+		margin-bottom: $card-deck-margin;
+	}
+
+	@include media-breakpoint-up(sm) {
+		display: flex;
+		flex-flow: row wrap;
+		margin-left: -$card-deck-margin;
+		margin-right: -$card-deck-margin;
+
+		.card {
+			// Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+
+			flex: 1 0 0%;
+			margin-bottom: 0;
+			margin-left: $card-deck-margin;
+			margin-right: $card-deck-margin;
+		}
+	}
+}
+
+// Card Group
+
+.card-group {
+	// The child selector allows nested `.card` within `.card-group`
+	// to display properly.
+
+	> .card {
+		margin-bottom: $card-group-margin;
+	}
+
+	@include media-breakpoint-up(sm) {
+		display: flex;
+		flex-flow: row wrap;
+
+		> .card {
+			// Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+
+			flex: 1 0 0%;
+			margin-bottom: 0;
+
+			+ .card {
+				border-left: 0;
+				margin-left: 0;
+			}
+
+			// Handle rounded corners
+
+			@if $enable-rounded {
+				&:not(:last-child) {
+					@include border-right-radius(0);
+
+					.card-img-top,
+					.card-header {
+						border-top-right-radius: 0;
+					}
+
+					.card-img-bottom,
+					.card-footer {
+						border-bottom-right-radius: 0;
+					}
+				}
+
+				&:not(:first-child) {
+					@include border-left-radius(0);
+
+					.card-img-top,
+					.card-header {
+						border-top-left-radius: 0;
+					}
+
+					.card-img-bottom,
+					.card-footer {
+						border-bottom-left-radius: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Card Columns
+
+.card-columns {
+	.card {
+		margin-bottom: $card-columns-margin;
+	}
+
+	@include media-breakpoint-up(sm) {
+		column-count: $card-columns-count;
+		column-gap: $card-columns-gap;
+		orphans: 1;
+		widows: 1;
+
+		.card {
+			// Don't let them vertically span multiple columns
+
+			display: inline-block;
+
+			// Don't let their width change
+
+			width: 100%;
+		}
+	}
+}
+
+// Bootstrap 4 Accordion
+
+.accordion {
+	> .card {
+		overflow: hidden;
+
+		&:not(:last-of-type) {
+			border-bottom: 0;
+
+			@include border-bottom-radius(0);
+		}
+
+		&:not(:first-of-type) {
+			@include border-top-radius(0);
+		}
+
+		> .card-header {
+			@include border-radius(0);
+
+			margin-bottom: -$card-border-width;
 		}
 	}
 }
