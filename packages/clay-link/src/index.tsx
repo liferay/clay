@@ -15,9 +15,20 @@ interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	borderless?: boolean;
 
 	/**
+	 * Config for button props
+	 */
+	button?:
+		| boolean
+		| {
+				block?: boolean;
+				monospaced?: boolean;
+				small?: boolean;
+		  };
+
+	/**
 	 * Determines how the link is displayed.
 	 */
-	displayType?: 'primary' | 'secondary';
+	displayType?: 'primary' | 'secondary' | 'unstyled';
 
 	/**
 	 * Flag to indicate if link should be monospaced.
@@ -34,6 +45,7 @@ const ClayLink = React.forwardRef<HTMLAnchorElement, IProps>(
 	(
 		{
 			borderless,
+			button,
 			children,
 			className,
 			displayType,
@@ -47,19 +59,38 @@ const ClayLink = React.forwardRef<HTMLAnchorElement, IProps>(
 	) => {
 		const TagOrComponent = React.useContext(ClayLinkContext);
 
+		let classes;
+
+		if (button) {
+			button = button === true ? {} : button;
+
+			classes = {
+				btn: !!button,
+				'btn-block': button.block,
+				'btn-monospaced': button.monospaced,
+				'btn-outline-borderless': borderless,
+				'btn-sm': button.small,
+				[`btn-${displayType}`]: displayType && !outline && !borderless,
+				[`btn-outline-${displayType}`]:
+					displayType && (outline || borderless),
+			};
+		} else {
+			classes = {
+				'link-monospaced': monospaced,
+				'link-outline': outline,
+				'link-outline-borderless': borderless,
+				[`link-${displayType}`]: displayType && !outline,
+				[`link-outline-${displayType}`]: displayType && outline,
+			};
+		}
+
 		if (target && !rel) {
 			rel = 'noreferrer noopener';
 		}
 
 		return (
 			<TagOrComponent
-				className={classNames(className, {
-					'link-monospaced': monospaced,
-					'link-outline': outline,
-					'link-outline-borderless': borderless,
-					[`link-${displayType}`]: displayType && !outline,
-					[`link-outline-${displayType}`]: displayType && outline,
-				})}
+				className={classNames(className, classes)}
 				ref={ref}
 				rel={rel}
 				target={target}
