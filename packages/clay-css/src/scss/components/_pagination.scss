@@ -1,7 +1,12 @@
 .pagination {
+	@include border-radius();
+
+	display: flex;
 	flex-wrap: wrap;
 	font-size: $pagination-font-size;
+	list-style: none;
 	margin-bottom: $pagination-margin-bottom;
+	padding-left: 0;
 }
 
 .pagination-bar {
@@ -166,8 +171,8 @@
 
 		@if ($enable-c-inner) {
 			.c-inner {
-				margin: #{math-sign($pagination-padding-y-sm)}
-					#{math-sign($pagination-padding-x)};
+				margin: math-sign($pagination-padding-y-sm)
+					math-sign($pagination-padding-x);
 			}
 		}
 	}
@@ -182,17 +187,33 @@
 		font-size: $pagination-font-size-sm;
 		height: $pagination-item-height-sm;
 		line-height: $pagination-line-height-sm;
+		padding-bottom: $pagination-padding-y-sm;
+		padding-right: $pagination-padding-x-sm;
+		padding-left: $pagination-padding-x-sm;
+		padding-top: $pagination-padding-y-sm;
 
 		@if ($enable-c-inner) {
 			.c-inner {
-				margin: #{math-sign($pagination-padding-y-sm)}
-					#{math-sign($pagination-padding-x-sm)};
+				margin: math-sign($pagination-padding-y-sm)
+					math-sign($pagination-padding-x-sm);
 			}
 		}
 
 		&.btn-unstyled {
 			padding: $pagination-padding-y-sm $pagination-padding-x-sm;
 		}
+	}
+
+	.page-item:first-child .page-link,
+	.page-link-first {
+		border-bottom-left-radius: $pagination-link-border-radius-sm;
+		border-top-left-radius: $pagination-link-border-radius-sm;
+	}
+
+	.page-item:last-child .page-link,
+	.page-link-last {
+		border-bottom-right-radius: $pagination-link-border-radius-sm;
+		border-top-right-radius: $pagination-link-border-radius-sm;
 	}
 }
 
@@ -215,8 +236,8 @@
 
 		@if ($enable-c-inner) {
 			.c-inner {
-				margin: #{math-sign($pagination-padding-y-lg)}
-					#{math-sign($pagination-padding-x)};
+				margin: math-sign($pagination-padding-y-lg)
+					math-sign($pagination-padding-x);
 			}
 		}
 	}
@@ -231,16 +252,32 @@
 		font-size: $pagination-font-size-lg;
 		height: $pagination-item-height-lg;
 		line-height: $pagination-line-height-lg;
+		padding-bottom: $pagination-padding-y-lg;
+		padding-left: $pagination-padding-x-lg;
+		padding-right: $pagination-padding-x-lg;
+		padding-top: $pagination-padding-y-lg;
 
 		@if ($enable-c-inner) {
 			.c-inner {
-				margin: #{math-sign($pagination-padding-y-lg)}
-					#{math-sign($pagination-padding-x-lg)};
+				margin: math-sign($pagination-padding-y-lg)
+					math-sign($pagination-padding-x-lg);
 			}
 		}
 
 		&.btn-unstyled {
 			padding: $pagination-padding-y-lg $pagination-padding-x-lg;
 		}
+	}
+
+	.page-item:first-child .page-link,
+	.page-link-first {
+		border-bottom-left-radius: $pagination-link-border-radius-lg;
+		border-top-left-radius: $pagination-link-border-radius-lg;
+	}
+
+	.page-item:last-child .page-link,
+	.page-link-last {
+		border-bottom-right-radius: $pagination-link-border-radius-lg;
+		border-top-right-radius: $pagination-link-border-radius-lg;
 	}
 }

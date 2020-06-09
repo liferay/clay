@@ -68,7 +68,10 @@ $pagination-link: map-deep-merge(
 		align-items: center,
 		bg: $pagination-bg,
 		border-radius: $pagination-link-border-radius,
+		border-color: $pagination-border-color,
+		border-style: solid,
 		border-width: $pagination-border-width,
+		color: $pagination-color,
 		cursor: $pagination-link-cursor,
 		display: inline-flex,
 		height: $pagination-item-height,
@@ -79,6 +82,7 @@ $pagination-link: map-deep-merge(
 		padding-left: $pagination-padding-x,
 		padding-right: $pagination-padding-x,
 		padding-top: $pagination-padding-y,
+		position: relative,
 		transition: $pagination-link-transition,
 		lexicon-icon-margin-top: 0,
 	),
@@ -91,6 +95,8 @@ $pagination-link-hover: map-deep-merge(
 		bg: $pagination-hover-bg,
 		border-color: $pagination-hover-border-color,
 		color: $pagination-hover-color,
+		text-decoration: none,
+		z-index: 2,
 	),
 	$pagination-link-hover
 );
@@ -99,6 +105,7 @@ $pagination-link-focus: () !default;
 $pagination-link-focus: map-deep-merge(
 	(
 		box-shadow: $pagination-focus-box-shadow,
+		outline: $pagination-focus-outline,
 		z-index: $zindex-pagination-link-focus,
 	),
 	$pagination-link-focus
@@ -109,8 +116,8 @@ $pagination-link-active: map-deep-merge(
 	(
 		bg: $pagination-active-bg,
 		border-color: $pagination-active-border-color,
-		cursor: default,
 		color: $pagination-active-color,
+		cursor: default,
 		z-index: $zindex-pagination-link-active,
 	),
 	$pagination-link-active
@@ -268,7 +275,7 @@ $pagination-results-color: null !default;
 $pagination-font-size-sm: $font-size-sm !default;
 $pagination-item-height-sm: 1.9375rem !default; // 31px
 $pagination-line-height-sm: 1 !default;
-$pagination-link-border-radius-sm: null !default;
+$pagination-link-border-radius-sm: $border-radius-sm !default;
 
 $pagination-items-per-page-lexicon-icon-margin-left-sm: null !default;
 $pagination-items-per-page-lexicon-icon-margin-top-sm: null !default;
@@ -276,7 +283,7 @@ $pagination-items-per-page-lexicon-icon-margin-top-sm: null !default;
 $pagination-font-size-lg: $font-size-lg !default;
 $pagination-item-height-lg: 3.5rem !default; // 56px
 $pagination-line-height-lg: 1 !default;
-$pagination-link-border-radius-lg: null !default;
+$pagination-link-border-radius-lg: $border-radius-lg !default;
 
 $pagination-items-per-page-lexicon-icon-margin-left-lg: null !default;
 $pagination-items-per-page-lexicon-icon-margin-top-lg: null !default;
