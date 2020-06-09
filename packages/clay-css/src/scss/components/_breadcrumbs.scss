@@ -1,3 +1,16 @@
+.breadcrumb {
+	background-color: $breadcrumb-bg;
+
+	@include border-radius($breadcrumb-border-radius);
+
+	display: flex;
+	flex-wrap: wrap;
+	font-size: $breadcrumb-font-size;
+	list-style: none;
+	margin-bottom: $breadcrumb-margin-bottom;
+	padding: $breadcrumb-padding-y $breadcrumb-padding-x;
+}
+
 .breadcrumb-link {
 	@include clay-link($breadcrumb-link);
 
@@ -21,6 +34,7 @@
 	}
 
 	&.active {
+		color: $breadcrumb-active-color;
 		font-weight: $breadcrumb-active-font-weight;
 	}
 
@@ -29,11 +43,15 @@
 	}
 
 	+ .breadcrumb-item {
-		@if ($breadcrumb-divider-svg-icon) {
-			padding-left: 1em;
-		}
+		padding-left: if(
+			$breadcrumb-divider-svg-icon,
+			1em,
+			$breadcrumb-item-padding
+		);
 
 		&::before {
+			color: $breadcrumb-divider-color;
+			display: block;
 			float: left;
 
 			@if ($breadcrumb-divider-svg-icon) {
@@ -41,7 +59,6 @@
 				background-repeat: no-repeat;
 				background-size: 100%;
 				content: '';
-				display: block;
 				height: $breadcrumb-divider-svg-icon-height;
 				left: 0;
 				margin-top: -$breadcrumb-divider-svg-icon-height / 2;
@@ -50,12 +67,28 @@
 				top: 50%;
 				width: $breadcrumb-divider-svg-icon-width;
 			} @else {
+				content: escape-svg($breadcrumb-divider);
 				font-family: $breadcrumb-divider-font-family;
 				font-weight: $breadcrumb-divider-font-weight;
 				padding-left: 0.4em;
 				padding-right: 0.4em;
 			}
 		}
+	}
+
+	// IE9-11 hack to properly handle hyperlink underlines for breadcrumbs built
+	// without `<ul>`s. The `::before` pseudo-element generates an element
+	// *within* the .breadcrumb-item and thereby inherits the `text-decoration`.
+	//
+	// To trick IE into suppressing the underline, we give the pseudo-element an
+	// underline and then immediately remove it.
+
+	+ .breadcrumb-item:hover::before {
+		text-decoration: underline;
+	}
+
+	+ .breadcrumb-item:hover::before {
+		text-decoration: none;
 	}
 
 	.dropdown-toggle {
