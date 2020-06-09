@@ -15,21 +15,20 @@ interface IProps
 	size?: React.ComponentProps<typeof Container>['fluidSize'] | false;
 }
 
-const ClayContainerFluid: React.FunctionComponent<IProps> = ({
-	children,
-	size = 'xl',
-	...otherProps
-}: IProps) => {
-	return (
-		<Container
-			{...otherProps}
-			fluid
-			fluidSize={size === false ? undefined : size}
-		>
-			{children}
-		</Container>
-	);
-};
+const ClayContainerFluid = React.forwardRef<HTMLElement, IProps>(
+	({children, size = 'xl', ...otherProps}: IProps, ref) => {
+		return (
+			<Container
+				{...otherProps}
+				fluid
+				fluidSize={size === false ? undefined : size}
+				ref={ref}
+			>
+				{children}
+			</Container>
+		);
+	}
+);
 
 ClayContainerFluid.displayName = 'ClayContainerFluid';
 

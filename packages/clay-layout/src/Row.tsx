@@ -29,26 +29,32 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	justify?: 'start' | 'center' | 'end' | 'around' | 'between';
 }
 
-const ClayRow: React.FunctionComponent<IProps> = ({
-	children,
-	className,
-	containerElement: ContainerElement = 'div',
-	gutters = true,
-	justify,
-	...otherProps
-}: IProps) => {
-	return (
-		<ContainerElement
-			{...otherProps}
-			className={classNames('row', className, {
-				'no-gutters': !gutters,
-				[`justify-content-${justify}`]: justify,
-			})}
-		>
-			{children}
-		</ContainerElement>
-	);
-};
+const ClayRow = React.forwardRef<HTMLElement, IProps>(
+	(
+		{
+			children,
+			className,
+			containerElement: ContainerElement = 'div',
+			gutters = true,
+			justify,
+			...otherProps
+		}: IProps,
+		ref
+	) => {
+		return (
+			<ContainerElement
+				{...otherProps}
+				className={classNames('row', className, {
+					'no-gutters': !gutters,
+					[`justify-content-${justify}`]: justify,
+				})}
+				ref={ref}
+			>
+				{children}
+			</ContainerElement>
+		);
+	}
+);
 
 ClayRow.displayName = 'ClayRow';
 

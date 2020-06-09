@@ -45,17 +45,20 @@ interface IContentRowProps extends React.HTMLAttributes<HTMLDivElement> {
 	verticalAlign?: 'center' | 'end';
 }
 
-const ContentRow: React.FunctionComponent<IContentRowProps> = ({
-	children,
-	className,
-	containerElement: ContainerElement = 'div',
-	float,
-	noGutters,
-	padded,
-	verticalAlign,
-	...otherProps
-}: IContentRowProps) => {
-	return (
+const ContentRow = React.forwardRef<HTMLElement, IContentRowProps>(
+	(
+		{
+			children,
+			className,
+			containerElement: ContainerElement = 'div',
+			float,
+			noGutters,
+			padded,
+			verticalAlign,
+			...otherProps
+		}: IContentRowProps,
+		ref
+	) => (
 		<ContainerElement
 			{...otherProps}
 			className={classNames(className, 'autofit-row', {
@@ -67,11 +70,12 @@ const ContentRow: React.FunctionComponent<IContentRowProps> = ({
 					typeof noGutters === 'string',
 				[`autofit-row-${verticalAlign}`]: verticalAlign,
 			})}
+			ref={ref}
 		>
 			{children}
 		</ContainerElement>
-	);
-};
+	)
+);
 
 ContentRow.displayName = 'ClayContentRow';
 
@@ -103,16 +107,19 @@ interface IContentColProps extends React.HTMLAttributes<HTMLDivElement> {
 	gutters?: boolean;
 }
 
-const ContentCol: React.FunctionComponent<IContentColProps> = ({
-	children,
-	className,
-	containerElement: ContainerElement = 'div',
-	expand,
-	float,
-	gutters,
-	...otherProps
-}: IContentColProps) => {
-	return (
+const ContentCol = React.forwardRef<HTMLElement, IContentColProps>(
+	(
+		{
+			children,
+			className,
+			containerElement: ContainerElement = 'div',
+			expand,
+			float,
+			gutters,
+			...otherProps
+		}: IContentColProps,
+		ref
+	) => (
 		<ContainerElement
 			{...otherProps}
 			className={classNames(className, 'autofit-col', {
@@ -120,11 +127,12 @@ const ContentCol: React.FunctionComponent<IContentColProps> = ({
 				'autofit-col-gutters': gutters,
 				[`autofit-col-float-${float}`]: float,
 			})}
+			ref={ref}
 		>
 			{children}
 		</ContainerElement>
-	);
-};
+	)
+);
 
 ContentCol.displayName = 'ClayContentCol';
 
@@ -140,21 +148,27 @@ interface IColSectionProps extends React.HTMLAttributes<HTMLDivElement> {
 		  }>;
 }
 
-const ContentSection: React.FunctionComponent<IColSectionProps> = ({
-	children,
-	className,
-	containerElement: ContainerElement = 'div',
-	...otherProps
-}: IColSectionProps) => {
-	return (
-		<ContainerElement
-			{...otherProps}
-			className={classNames(className, 'autofit-section')}
-		>
-			{children}
-		</ContainerElement>
-	);
-};
+const ContentSection = React.forwardRef<HTMLElement, IColSectionProps>(
+	(
+		{
+			children,
+			className,
+			containerElement: ContainerElement = 'div',
+			...otherProps
+		}: IColSectionProps,
+		ref
+	) => {
+		return (
+			<ContainerElement
+				{...otherProps}
+				className={classNames(className, 'autofit-section')}
+				ref={ref}
+			>
+				{children}
+			</ContainerElement>
+		);
+	}
+);
 
 ContentSection.displayName = 'ClayContentSection';
 

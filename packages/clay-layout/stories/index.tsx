@@ -16,7 +16,7 @@ const exampleStyles = {
 	paddingTop: '.75rem',
 };
 
-const ClayDemoColumn: typeof ClayLayout.Col = (props) => (
+const ClayDemoColumn = (props: any) => (
 	<ClayLayout.Col style={exampleStyles} {...props} />
 );
 
