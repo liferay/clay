@@ -54,6 +54,27 @@ storiesOf('Components|ClayLink', module)
 			<div id="1" />
 		</>
 	))
+	.add('displayed as button', () => (
+		<>
+			<ClayLink button displayType="primary" href="#1">
+				{'Primary'}
+			</ClayLink>
+			<ClayLink button displayType="secondary" href="#1">
+				{'Secondary'}
+			</ClayLink>
+			<ClayLink
+				borderless
+				button
+				displayType="secondary"
+				href="#1"
+				outline
+			>
+				{'Borderless Secondary'}
+			</ClayLink>
+
+			<div id="1" />
+		</>
+	))
 	.add('monospaced', () => (
 		<>
 			<ClayLink
