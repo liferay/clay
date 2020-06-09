@@ -43,31 +43,37 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	view?: boolean;
 }
 
-const ClayContainer: React.FunctionComponent<IProps> = ({
-	children,
-	className,
-	containerElement: ContainerElement = 'div',
-	fluid,
-	fluidSize,
-	formSize,
-	view,
-	...otherProps
-}: IProps) => {
-	return (
-		<ContainerElement
-			{...otherProps}
-			className={classNames(className, {
-				container: !fluid,
-				'container-fluid': fluid,
-				[`container-form-${formSize}`]: formSize,
-				'container-view': view,
-				[`container-fluid-max-${fluidSize}`]: fluid && fluidSize,
-			})}
-		>
-			{children}
-		</ContainerElement>
-	);
-};
+const ClayContainer = React.forwardRef<HTMLElement, IProps>(
+	(
+		{
+			children,
+			className,
+			containerElement: ContainerElement = 'div',
+			fluid,
+			fluidSize,
+			formSize,
+			view,
+			...otherProps
+		}: IProps,
+		ref
+	) => {
+		return (
+			<ContainerElement
+				{...otherProps}
+				className={classNames(className, {
+					container: !fluid,
+					'container-fluid': fluid,
+					[`container-form-${formSize}`]: formSize,
+					'container-view': view,
+					[`container-fluid-max-${fluidSize}`]: fluid && fluidSize,
+				})}
+				ref={ref}
+			>
+				{children}
+			</ContainerElement>
+		);
+	}
+);
 
 ClayContainer.displayName = 'ClayContainer';
 

@@ -45,40 +45,46 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	xs?: TColSize;
 }
 
-const ClayCol: React.FunctionComponent<IProps> = ({
-	children,
-	className,
-	containerElement: ContainerElement = 'div',
-	lg,
-	md,
-	size,
-	sm,
-	xs,
-	...otherProps
-}: IProps) => {
-	const noBreakPoints = !lg && !md && !sm && !xs && !size;
+const ClayCol = React.forwardRef<HTMLElement, IProps>(
+	(
+		{
+			children,
+			className,
+			containerElement: ContainerElement = 'div',
+			lg,
+			md,
+			size,
+			sm,
+			xs,
+			...otherProps
+		}: IProps,
+		ref
+	) => {
+		const noBreakPoints = !lg && !md && !sm && !xs && !size;
 
-	xs = xs || size;
+		xs = xs || size;
 
-	return (
-		<ContainerElement
-			{...otherProps}
-			className={classNames(className, {
-				col: noBreakPoints,
-				'col-lg': lg === true,
-				[`col-lg-${lg}`]: lg && typeof lg !== 'boolean',
-				'col-md': md === true,
-				[`col-md-${md}`]: md && typeof md !== 'boolean',
-				'col-sm': sm === true,
-				[`col-sm-${sm}`]: sm && typeof sm !== 'boolean',
-				'col-xs': xs === true,
-				[`col-xs-${xs}`]: xs && typeof xs !== 'boolean',
-			})}
-		>
-			{children}
-		</ContainerElement>
-	);
-};
+		return (
+			<ContainerElement
+				{...otherProps}
+				className={classNames(className, {
+					col: noBreakPoints,
+					'col-lg': lg === true,
+					[`col-lg-${lg}`]: lg && typeof lg !== 'boolean',
+					'col-md': md === true,
+					[`col-md-${md}`]: md && typeof md !== 'boolean',
+					'col-sm': sm === true,
+					[`col-sm-${sm}`]: sm && typeof sm !== 'boolean',
+					'col-xs': xs === true,
+					[`col-xs-${xs}`]: xs && typeof xs !== 'boolean',
+				})}
+				ref={ref}
+			>
+				{children}
+			</ContainerElement>
+		);
+	}
+);
 
 ClayCol.displayName = 'ClayCol';
 

@@ -148,21 +148,27 @@ interface IColSectionProps extends React.HTMLAttributes<HTMLDivElement> {
 		  }>;
 }
 
-const ContentSection: React.FunctionComponent<IColSectionProps> = ({
-	children,
-	className,
-	containerElement: ContainerElement = 'div',
-	...otherProps
-}: IColSectionProps) => {
-	return (
-		<ContainerElement
-			{...otherProps}
-			className={classNames(className, 'autofit-section')}
-		>
-			{children}
-		</ContainerElement>
-	);
-};
+const ContentSection = React.forwardRef<HTMLElement, IColSectionProps>(
+	(
+		{
+			children,
+			className,
+			containerElement: ContainerElement = 'div',
+			...otherProps
+		}: IColSectionProps,
+		ref
+	) => {
+		return (
+			<ContainerElement
+				{...otherProps}
+				className={classNames(className, 'autofit-section')}
+				ref={ref}
+			>
+				{children}
+			</ContainerElement>
+		);
+	}
+);
 
 ContentSection.displayName = 'ClayContentSection';
 

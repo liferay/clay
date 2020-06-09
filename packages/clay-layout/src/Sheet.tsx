@@ -18,57 +18,75 @@ interface IContainerProps extends React.HTMLAttributes<HTMLElement> {
 		  }>;
 }
 
-const SheetHeader: React.FunctionComponent<IContainerProps> = ({
-	children,
-	className,
-	containerElement: ContainerElement = 'div',
-	...otherProps
-}: IContainerProps) => {
-	return (
-		<ContainerElement
-			{...otherProps}
-			className={classNames(className, 'sheet-header')}
-		>
-			{children}
-		</ContainerElement>
-	);
-};
+const SheetHeader = React.forwardRef<HTMLElement, IContainerProps>(
+	(
+		{
+			children,
+			className,
+			containerElement: ContainerElement = 'div',
+			...otherProps
+		}: IContainerProps,
+		ref
+	) => {
+		return (
+			<ContainerElement
+				{...otherProps}
+				className={classNames(className, 'sheet-header')}
+				ref={ref}
+			>
+				{children}
+			</ContainerElement>
+		);
+	}
+);
 
 SheetHeader.displayName = 'ClaySheetHeader';
 
-const SheetFooter: React.FunctionComponent<IContainerProps> = ({
-	children,
-	className,
-	containerElement: ContainerElement = 'div',
-	...otherProps
-}: IContainerProps) => {
-	return (
-		<ContainerElement
-			{...otherProps}
-			className={classNames(className, 'sheet-footer')}
-		>
-			{children}
-		</ContainerElement>
-	);
-};
+const SheetFooter = React.forwardRef<HTMLElement, IContainerProps>(
+	(
+		{
+			children,
+			className,
+			containerElement: ContainerElement = 'div',
+			...otherProps
+		}: IContainerProps,
+		ref
+	) => {
+		return (
+			<ContainerElement
+				{...otherProps}
+				className={classNames(className, 'sheet-footer')}
+				ref={ref}
+			>
+				{children}
+			</ContainerElement>
+		);
+	}
+);
 
 SheetFooter.displayName = 'ClaySheetFooter';
 
-const SheetSection: React.FunctionComponent<IContainerProps> = ({
-	children,
-	className,
-	containerElement: ContainerElement = 'div',
-	...otherProps
-}: IContainerProps) => {
-	return (
-		<ContainerElement
-			{...otherProps}
-			className={classNames(className, 'sheet-section')}
-		>
-			{children}
-		</ContainerElement>
-	);
-};
+const SheetSection = React.forwardRef<HTMLElement, IContainerProps>(
+	(
+		{
+			children,
+			className,
+			containerElement: ContainerElement = 'div',
+			...otherProps
+		}: IContainerProps,
+		ref
+	) => {
+		return (
+			<ContainerElement
+				{...otherProps}
+				className={classNames(className, 'sheet-section')}
+				ref={ref}
+			>
+				{children}
+			</ContainerElement>
+		);
+	}
+);
 
 SheetSection.displayName = 'ClaySheetSection';
 
@@ -79,24 +97,30 @@ interface IProps extends IContainerProps {
 	size?: 'lg';
 }
 
-const Sheet: React.FunctionComponent<IProps> = ({
-	children,
-	className,
-	containerElement: ContainerElement = 'div',
-	size,
-	...otherProps
-}: IProps) => {
-	return (
-		<ContainerElement
-			{...otherProps}
-			className={classNames(className, 'sheet', {
-				[`sheet-${size}`]: size,
-			})}
-		>
-			{children}
-		</ContainerElement>
-	);
-};
+const Sheet = React.forwardRef<HTMLElement, IProps>(
+	(
+		{
+			children,
+			className,
+			containerElement: ContainerElement = 'div',
+			size,
+			...otherProps
+		}: IProps,
+		ref
+	) => {
+		return (
+			<ContainerElement
+				{...otherProps}
+				className={classNames(className, 'sheet', {
+					[`sheet-${size}`]: size,
+				})}
+				ref={ref}
+			>
+				{children}
+			</ContainerElement>
+		);
+	}
+);
 
 Sheet.displayName = 'ClaySheet';
 
