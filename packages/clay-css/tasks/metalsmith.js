@@ -27,15 +27,7 @@ var _s = require('underscore.string');
 var pjson = require('../package.json');
 
 module.exports = function(gulp, plugins, _, config) {
-	var license = require('./copyright_banner');
 	var flagData = require('./lib/metalsmith/flag_data.json');
-
-	var metadata = {
-		_: _,
-		heading: '',
-		subHeading: '',
-		version: license.metadata.version
-	};
 
 	var TPL_SVG = '<svg class="lexicon-icon lexicon-icon-{0}"><use xlink:href="{{rootPath}}/images/icons/icons.svg#{0}" /></svg>';
 
@@ -83,7 +75,6 @@ module.exports = function(gulp, plugins, _, config) {
 				)
 				.pipe(filter.restore)
 				.pipe(assetFilter)
-				.pipe(plugins.header(license.tpl, license.metadata))
 				.pipe(assetFilter.restore)
 				.pipe(plugins.plumber())
 				.pipe(svgFilter)

@@ -16,7 +16,6 @@ var config = {
 
 var bootstrapPath = path.dirname(require.resolve('bootstrap/package.json'));
 
-var license = require('./tasks/copyright_banner');
 var tasks = require('require-dir')('./tasks');
 
 _.invoke(tasks, 'call', tasks, gulp, plugins, _, config);
@@ -84,7 +83,7 @@ gulp.task(
 gulp.task(
 	'compile:files',
 	function(cb) {
-		var assetFilter = filter(['**/*.js', '!**/bootstrap.js'], {
+		var assetFilter = filter(['**/*.js', '!**/bootstrap.js', '!**/popper.js', '!**/svg4everybody.js'], {
 			restore: true
 		});
 
@@ -99,7 +98,6 @@ gulp.task(
 				base: './src'
 			})
 			.pipe(assetFilter)
-			.pipe(plugins.header(license.tpl, license.metadata))
 			.pipe(assetFilter.restore)
 			.pipe(gulp.dest('./lib'));
 	}
@@ -176,13 +174,12 @@ gulp.task(
 gulp.task(
 	'compile:prep-scss',
 	function() {
-		var entryFilter = filter(['bootstrap.scss'], {
+		var entryFilter = filter(['atlas.scss', 'base.scss'], {
 			restore: true
 		});
 
 		return gulp.src('src/scss/**/*')
 			.pipe(entryFilter)
-			.pipe(plugins.header(license.tpl, license.metadata))
 			.pipe(entryFilter.restore)
 			.pipe(gulp.dest('./lib/css'));
 	}
@@ -190,9 +187,55 @@ gulp.task(
 
 gulp.task(
 	'compile:svg',
-	require('./tasks/lib/svgstore')(gulp, plugins, _, {
-		dest: './lib/images/icons',
-	})
+	function() {
+		return require('./tasks/lib/svgstore')(gulp, plugins, _, {
+			dest: './lib/images/icons',
+		});
+	}
 );
+
+gulp.task('version', function() {
+	var VERSION = JSON.parse(
+		fs.readFileSync(path.join('.', 'package.json'))
+	).version;
+
+	var svgsDir = path.join('.', 'src', 'images', 'icons');
+	var scssDir = path.join('.', 'src', 'scss');
+
+	var clayFiles = [
+		path.join(scssDir, 'atlas-variables.scss'),
+		path.join(scssDir, 'atlas.scss'),
+		path.join(scssDir, 'base-variables.scss'),
+		path.join(scssDir, 'base.scss'),
+	];
+
+	function changeVersion(filePath) {
+		fs.readFile(filePath, 'utf8', function(err, data) {
+			if (err) {
+				return console.log(err);
+			}
+
+			var result = data.replace(/\*\sClay\s(.*)\n/g, `* Clay ${VERSION}\n`);
+
+			fs.writeFile(filePath, result, 'utf8', function(err) {
+				if (err) return console.log(err);
+			});
+		});
+	}
+
+	fs.readdirSync(scssDir).forEach(function(file) {
+		var filePath = path.join(scssDir, file);
+
+		if (clayFiles.includes(filePath)) {
+			changeVersion(filePath);
+		}
+	});
+
+	fs.readdirSync(svgsDir).forEach(function(file) {
+		var filePath = path.join(svgsDir, file);
+
+		changeVersion(filePath);
+	});
+});
 
 gulp.task('serve', ['serve:start', 'watch']);
