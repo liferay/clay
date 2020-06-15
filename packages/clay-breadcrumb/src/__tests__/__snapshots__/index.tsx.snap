@@ -38,7 +38,6 @@ exports[`ClayBreadcrumb calls callback when an item is clicked 1`] = `
       <button
         class="dropdown-toggle breadcrumb-link btn btn-unstyled"
         data-testid="breadcrumbDropdownTrigger"
-        style=""
         type="button"
       >
         <svg
@@ -117,7 +116,6 @@ exports[`ClayBreadcrumb renders 1`] = `
       <button
         class="dropdown-toggle breadcrumb-link btn btn-unstyled"
         data-testid="breadcrumbDropdownTrigger"
-        style=""
         type="button"
       >
         <svg
@@ -197,7 +195,6 @@ exports[`ClayBreadcrumb renders with properties passed by \`ellipsisProps\` 1`] 
       <button
         class="dropdown-toggle breadcrumb-link btn btn-unstyled"
         data-testid="breadcrumbDropdownTrigger"
-        style=""
         type="button"
       >
         <svg

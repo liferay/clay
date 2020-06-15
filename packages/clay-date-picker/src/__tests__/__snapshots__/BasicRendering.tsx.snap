@@ -8,7 +8,6 @@ exports[`BasicRendering renders by default 1`] = `
     >
       <div
         class="input-group"
-        style=""
       >
         <div
           class="input-group-item"
@@ -51,7 +50,6 @@ exports[`BasicRendering renders by default 1`] = `
       <div
         class="dropdown-menu date-picker-dropdown-menu"
         data-testid="dropdown"
-        style="left: -999px; top: -995px;"
       >
         <div
           class="date-picker-calendar"
