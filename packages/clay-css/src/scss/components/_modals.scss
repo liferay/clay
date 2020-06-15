@@ -1,30 +1,165 @@
-.modal-content {
+.modal-open {
 	overflow: hidden;
+
+	.modal {
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+}
+
+.modal {
+	display: none;
+	height: 100%;
+	left: 0;
+	outline: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: $zindex-modal;
+}
+
+.modal-dialog {
+	margin: $modal-dialog-margin;
+	position: relative;
+
+	// allow clicks to pass through for custom click handling to close modal
+
+	pointer-events: none;
+	width: auto;
+
+	// When fading in the modal, animate it to slide down
+
+	.modal.fade & {
+		transform: $modal-fade-transform;
+
+		@include transition($modal-transition);
+	}
+
+	.modal.show & {
+		transform: $modal-show-transform;
+	}
+
+	// When trying to close, animate focus to scale
+
+	.modal.modal-static & {
+		transform: $modal-scale-transform;
+	}
+}
+
+.modal-dialog-scrollable {
+	display: flex;
+	max-height: calc(100% - #{$modal-dialog-margin * 2});
+
+	.modal-content {
+		// IE10/11
+
+		max-height: calc(100vh - #{$modal-dialog-margin * 2});
+		overflow: hidden;
+	}
+
+	.modal-header,
+	.modal-footer {
+		flex-shrink: 0;
+	}
+
+	.modal-body {
+		overflow-y: auto;
+	}
+}
+
+.modal-dialog-centered .modal-dialog,
+.modal-dialog-centered.modal-dialog {
+	align-items: center;
+	display: flex;
+	min-height: calc(100% - #{$modal-dialog-margin * 2});
+
+	&::before {
+		content: '';
+		display: block;
+		height: calc(100vh - #{$modal-dialog-margin * 2});
+	}
+
+	&.modal-dialog-scrollable {
+		flex-direction: column;
+		height: 100%;
+		justify-content: center;
+
+		.modal-content {
+			max-height: none;
+		}
+
+		&::before {
+			content: none;
+		}
+	}
+}
+
+.modal-backdrop {
+	background-color: $modal-backdrop-bg;
+	height: 100vh;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	z-index: $zindex-modal-backdrop;
+
+	&.fade {
+		opacity: 0;
+	}
+
+	&.show {
+		opacity: $modal-backdrop-opacity;
+	}
+}
+
+.modal-content {
+	background-clip: padding-box;
+	background-color: $modal-content-bg;
+	border: $modal-content-border-width solid $modal-content-border-color;
+
+	@include border-radius($modal-content-border-radius);
+	@include box-shadow($modal-content-box-shadow-xs);
+
+	color: $modal-content-color;
+	display: flex;
+	flex-direction: column;
+	outline: 0;
+	overflow: hidden;
+	pointer-events: auto;
+	position: relative;
+	width: 100%;
 }
 
 .modal-header {
 	align-items: center;
 	background-color: $modal-header-bg;
 	border-color: $modal-header-border-color;
+	border-style: solid;
+	border-width: 0 0 $modal-header-border-width 0;
+
+	@include border-top-radius($modal-content-inner-border-radius);
+
 	color: $modal-header-color;
+	display: flex;
 	flex-shrink: 0;
 	height: $modal-header-height;
+	justify-content: space-between;
+	padding: $modal-header-padding;
 	padding-bottom: 0;
 	padding-top: 0;
 
 	@include clay-scale-component {
 		height: $modal-header-height-mobile;
 	}
-
-	.close {
-		margin: 0;
-		padding: 0;
-	}
 }
 
 .modal-body {
 	background-color: $modal-body-bg;
 	color: $modal-body-color;
+	flex-shrink: 1;
+	padding: $modal-inner-padding;
+	position: relative;
 
 	&.inline-scroller {
 		-webkit-overflow-scrolling: touch;
@@ -38,11 +173,15 @@
 }
 
 .modal-footer {
+	align-items: center;
 	background-color: $modal-footer-bg;
+	border-top: $modal-footer-border-width solid $modal-footer-border-color;
 
+	@include border-bottom-radius($modal-content-inner-border-radius);
 	@include box-shadow($modal-footer-box-shadow);
 
 	color: $modal-footer-color;
+	display: flex;
 	flex-shrink: 0;
 	flex-wrap: wrap;
 	height: $modal-footer-height;
@@ -54,6 +193,10 @@
 
 	@include clay-scale-component {
 		height: $modal-footer-height-mobile;
+	}
+
+	> * {
+		margin: $modal-footer-margin-between / 2;
 	}
 }
 
@@ -111,6 +254,8 @@
 	flex-grow: 1;
 	font-size: $modal-title-font-size;
 	font-weight: $modal-title-font-weight;
+	line-height: $modal-title-line-height;
+	margin-bottom: 0;
 	overflow: hidden;
 	text-align: $modal-title-text-align;
 	text-overflow: ellipsis;
@@ -320,4 +465,61 @@
 	.modal-#{$color} {
 		@include clay-modal-variant($value);
 	}
+}
+
+// Default Modal Max Width
+
+@include media-breakpoint-up(sm) {
+	.modal-dialog {
+		margin: $modal-dialog-margin-y-sm-up auto;
+		max-width: $modal-md;
+	}
+
+	.modal-dialog-scrollable {
+		max-height: calc(100% - #{$modal-dialog-margin-y-sm-up * 2});
+
+		.modal-content {
+			max-height: calc(100vh - #{$modal-dialog-margin-y-sm-up * 2});
+		}
+	}
+
+	.modal-dialog-centered .modal-dialog,
+	.modal-dialog-centered.modal-dialog {
+		min-height: calc(100% - #{$modal-dialog-margin-y-sm-up * 2});
+
+		&::before {
+			height: calc(100vh - #{$modal-dialog-margin-y-sm-up * 2});
+		}
+	}
+
+	.modal-content {
+		@include box-shadow($modal-content-box-shadow-sm-up);
+	}
+
+	.modal-sm {
+		max-width: $modal-sm;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.modal-lg,
+	.modal-xl {
+		max-width: $modal-lg;
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.modal-xl {
+		max-width: $modal-xl;
+	}
+}
+
+// Off canvas element for measuring scrollbar width during modal show/hide
+
+.modal-scrollbar-measure {
+	height: 50px;
+	overflow: scroll;
+	position: absolute;
+	top: -9999px;
+	width: 50px;
 }
