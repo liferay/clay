@@ -20,20 +20,8 @@
 
 // Close
 
-a.close.disabled {
-	pointer-events: all;
-}
-
 .close {
-	cursor: $link-cursor;
-	float: none;
-
 	@include clay-close($close);
-
-	&:disabled,
-	&.disabled {
-		cursor: $disabled-cursor;
-	}
 }
 
 // C Focus Inset
