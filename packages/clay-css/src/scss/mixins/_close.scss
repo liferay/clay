@@ -341,18 +341,6 @@
 			@include clay-css($focus);
 		}
 
-		// Bootstrap 4.1.2 Selector overwrite
-
-		&:not(:disabled):not(.disabled) {
-			&:hover {
-				opacity: map-get($hover, opacity);
-			}
-
-			&:focus {
-				opacity: map-get($focus, opacity);
-			}
-		}
-
 		&:active {
 			@include clay-css($active);
 		}
