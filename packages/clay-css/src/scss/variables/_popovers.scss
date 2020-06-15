@@ -5,13 +5,13 @@ $popover-arrow-offset: 0.375rem !default; // 6px
 $popover-bottom-arrow-color: $popover-header-bg !default;
 $popover-bottom-left-arrow-color: $popover-header-bg !default;
 $popover-bottom-right-arrow-color: $popover-header-bg !default;
-$popover-left-arrow-color: null !default;
+$popover-left-arrow-color: $popover-arrow-color !default;
 $popover-left-bottom-arrow-color: null !default;
 $popover-left-top-arrow-color: $popover-header-bg !default;
-$popover-right-arrow-color: null !default;
+$popover-right-arrow-color: $popover-arrow-color !default;
 $popover-right-bottom-arrow-color: null !default;
 $popover-right-top-arrow-color: $popover-header-bg !default;
-$popover-top-arrow-color: null !default;
+$popover-top-arrow-color: $popover-arrow-color !default;
 $popover-top-left-arrow-color: null !default;
 $popover-top-right-arrow-color: null !default;
 
@@ -19,8 +19,6 @@ $popover-header-border-color: null !default;
 $popover-header-font-size: $font-size-base !default;
 $popover-header-font-weight: $font-weight-semi-bold !default;
 $popover-header-margin-x: null !default;
-$popover-header-margin-y: null !default;
+$popover-header-margin-y: 0 !default;
 
-$popover-offset-border-width: calc(
-	#{$popover-border-radius} - #{$popover-border-width}
-) !default;
+$popover-offset-border-width: $popover-inner-border-radius !default;
