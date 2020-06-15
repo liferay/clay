@@ -23,7 +23,7 @@
 	"scripts": {
 		"build": "yarn compile",
 		"compile": "gulp compile",
-		"prepublish": "yarn compile",
+		"prepublish": "yarn compile && ncp ../../LICENSES ./lib",
 		"link": "npm link"
 	},
 	"repository": {
