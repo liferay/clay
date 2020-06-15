@@ -177,7 +177,8 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 		React.useLayoutEffect(() => {
 			if (
 				alignElementRef.current &&
-				(ref as React.RefObject<HTMLDivElement>).current
+				(ref as React.RefObject<HTMLDivElement>).current &&
+				active
 			) {
 				let points = alignmentPosition;
 
@@ -200,7 +201,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 					}
 				);
 			}
-		});
+		}, [active]);
 
 		return (
 			<ClayPortal subPortalRef={subPortalRef}>
