@@ -1,0 +1,49 @@
+.toast {
+	backdrop-filter: blur(10px);
+	background-clip: padding-box;
+	background-color: $toast-background-color;
+	border: $toast-border-width solid $toast-border-color;
+
+	@include border-radius($toast-border-radius);
+
+	box-shadow: $toast-box-shadow;
+	color: $toast-color;
+	font-size: $toast-font-size;
+	max-width: $toast-max-width;
+	opacity: 0;
+
+	// cheap rounded corners on nested items
+
+	overflow: hidden;
+
+	&:not(:last-child) {
+		margin-bottom: $toast-padding-x;
+	}
+
+	&.showing {
+		opacity: 1;
+	}
+
+	&.show {
+		display: block;
+		opacity: 1;
+	}
+
+	&.hide {
+		display: none;
+	}
+}
+
+.toast-header {
+	align-items: center;
+	background-clip: padding-box;
+	background-color: $toast-header-background-color;
+	border-bottom: $toast-border-width solid $toast-header-border-color;
+	color: $toast-header-color;
+	display: flex;
+	padding: $toast-padding-y $toast-padding-x;
+}
+
+.toast-body {
+	padding: $toast-padding-x;
+}
