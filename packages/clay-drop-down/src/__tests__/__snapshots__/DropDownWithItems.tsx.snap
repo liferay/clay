@@ -8,7 +8,6 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems 1`] = `
     >
       <button
         class="dropdown-toggle btn btn-primary"
-        style=""
         type="button"
       >
         Click Me
@@ -19,7 +18,6 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems 1`] = `
     <div>
       <div
         class="dropdown-menu"
-        style="left: -999px; top: -995px;"
       >
         <ul
           class="list-unstyled"
@@ -59,7 +57,6 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with caption 1`] = `
     >
       <button
         class="dropdown-toggle btn btn-primary"
-        style=""
         type="button"
       >
         Click Me
@@ -70,7 +67,6 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with caption 1`] = `
     <div>
       <div
         class="dropdown-menu"
-        style="left: -999px; top: -995px;"
       >
         <ul
           class="list-unstyled"
@@ -103,7 +99,6 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with checkbox 1`] = `
     >
       <button
         class="dropdown-toggle btn btn-primary"
-        style=""
         type="button"
       >
         Click Me
@@ -114,7 +109,6 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with checkbox 1`] = `
     <div>
       <div
         class="dropdown-menu"
-        style="left: -999px; top: -995px;"
       >
         <ul
           class="list-unstyled"
@@ -197,7 +191,6 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with footer content 1
     >
       <button
         class="dropdown-toggle btn btn-primary"
-        style=""
         type="button"
       >
         Click Me
@@ -208,7 +201,6 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with footer content 1
     <div>
       <div
         class="dropdown-menu"
-        style="left: -999px; top: -995px;"
       >
         <form>
           <div
@@ -253,7 +245,6 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with help text 1`] = 
     >
       <button
         class="dropdown-toggle btn btn-primary"
-        style=""
         type="button"
       >
         Click Me
@@ -264,7 +255,6 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with help text 1`] = 
     <div>
       <div
         class="dropdown-menu"
-        style="left: -999px; top: -995px;"
       >
         <div
           class="alert alert-fluid alert-info"
@@ -298,7 +288,6 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with radio group 1`] 
     >
       <button
         class="dropdown-toggle btn btn-primary"
-        style=""
         type="button"
       >
         Click Me
@@ -309,7 +298,6 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with radio group 1`] 
     <div>
       <div
         class="dropdown-menu"
-        style="left: -999px; top: -995px;"
       >
         <ul
           class="list-unstyled"
@@ -402,7 +390,6 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with search 1`] = `
     >
       <button
         class="dropdown-toggle btn btn-primary"
-        style=""
         type="button"
       >
         Click Me
@@ -413,7 +400,6 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with search 1`] = `
     <div>
       <div
         class="dropdown-menu"
-        style="left: -999px; top: -995px;"
       >
         <form
           class=""
