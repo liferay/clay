@@ -46,7 +46,7 @@ CSS: `@media(min-width: 576px) { margin-top: 1rem; }`. _(576px can change depend
 -   `lg` - started from lg - _started from 992px_
 -   `xl` - started from xl - _started from 1200px_
 
-`3` is the value of the spacing you want to assign, by default the spacing are:
+`3` is the value of the spacing you want to assign in the example. By default the spaces are:
 
 -   `0` - **0rem** - _0px_
 -   `1` - **0.25rem** - _4px_
@@ -59,7 +59,7 @@ CSS: `@media(min-width: 576px) { margin-top: 1rem; }`. _(576px can change depend
 -   `8` - **7.5rem** - _120px_
 -   `auto` - will set the value to **auto**
 
-These spaces can be negative spaces if we use `n` before the value, that means:
+These spaces can be negative if we use `n` before the value, that means:
 
 -   `n1` | **-0.25rem** | _-4px_
 -   `n2` | **-0.5rem** | _-8px_
