@@ -52,15 +52,17 @@ export const FocusScope: React.FunctionComponent<IProps> = ({
 			(arrowKeysLeftRight && keyCode === ARROW_RIGHT_KEY_CODE) ||
 			(keyCode === TAB_KEY_CODE && !shiftKey)
 		) {
-			event.preventDefault();
-			focusManager.focusNext();
+			if (focusManager.focusNext()) {
+				event.preventDefault();
+			}
 		} else if (
 			(arrowKeysUpDown && keyCode === ARROW_UP_KEY_CODE) ||
 			(arrowKeysLeftRight && keyCode === ARROW_LEFT_KEY_CODE) ||
 			(keyCode === TAB_KEY_CODE && shiftKey)
 		) {
-			event.preventDefault();
-			focusManager.focusPrevious();
+			if (focusManager.focusPrevious()) {
+				event.preventDefault();
+			}
 		}
 	};
 
