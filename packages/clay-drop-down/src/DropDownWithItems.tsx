@@ -144,7 +144,7 @@ const Checkbox: React.FunctionComponent<IItem & IInternalItem> = ({
 	);
 };
 
-const ClayDropDownContext = React.createContext({close: () => {}});
+export const ClayDropDownContext = React.createContext({close: () => {}});
 
 const Item: React.FunctionComponent<
 	Omit<IItem, 'onChange'> & IInternalItem
@@ -267,7 +267,7 @@ const DropDownContent: React.FunctionComponent<IDropDownContentProps> = ({
 	</ClayDropDown.ItemList>
 );
 
-const findNested = <
+export const findNested = <
 	T extends {items?: Array<T>; [key: string]: any},
 	K extends keyof T
 >(

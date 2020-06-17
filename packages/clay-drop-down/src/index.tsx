@@ -4,8 +4,9 @@
  */
 
 import ClayDropDown, {Align} from './DropDown';
+import {ClayDropdownWithDrilldown} from './DropDownWithDrilldown';
 import {ClayDropDownWithItems} from './DropDownWithItems';
 
-export {Align, ClayDropDownWithItems};
+export {Align, ClayDropDownWithItems, ClayDropdownWithDrilldown};
 
 export default ClayDropDown;

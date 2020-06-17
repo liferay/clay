@@ -11,7 +11,11 @@ import {boolean, select} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React from 'react';
 
-import ClayDropDown, {Align, ClayDropDownWithItems} from '../src';
+import ClayDropDown, {
+	Align,
+	ClayDropDownWithItems,
+	ClayDropdownWithDrilldown,
+} from '../src';
 
 const DropDownWithState: React.FunctionComponent<any> = ({
 	children,
@@ -263,6 +267,50 @@ storiesOf('Components|ClayDropDown', module)
 				searchValue={value}
 				spritemap={spritemap}
 				trigger={<ClayButton>{'Click Me'}</ClayButton>}
+			/>
+		);
+	})
+	.add('w/ Drilldown', () => {
+		const items = [
+			{
+				icon: 'folder',
+				label: 'DXP',
+				name: 'dxp',
+			},
+			{
+				childItems: [
+					{
+						icon: 'folder',
+						label: 'Lexicon Child',
+						name: 'lexiconChild',
+					},
+				],
+				icon: 'sheets',
+				label: 'Lexicon',
+				name: 'lexicon',
+				symbolLeft: 'folder',
+			},
+			{
+				childItems: [
+					{
+						label: 'Clay Child',
+						name: 'clayChild',
+					},
+				],
+				label: 'Clay',
+				name: 'clay',
+			},
+		];
+
+		return (
+			<ClayDropdownWithDrilldown
+				caption="Showing 7 of 203 Structures"
+				footerBtnLabel="Confirm"
+				headerText="Documents & Media"
+				items={items}
+				spritemap={spritemap}
+				trigger={<ClayButton>{'Click Me'}</ClayButton>}
+				undo
 			/>
 		);
 	})
