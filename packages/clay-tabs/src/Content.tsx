@@ -33,12 +33,15 @@ const Content: React.FunctionComponent<IProps> = ({
 	return (
 		<div className={classNames('tab-content', className)} {...otherProps}>
 			{React.Children.map(children, (child, index) => {
-				return React.cloneElement(child, {
-					...child.props,
-					active: activeIndex === index,
-					fade,
-					key: index,
-				});
+				return (
+					child &&
+					React.cloneElement(child, {
+						...child.props,
+						active: activeIndex === index,
+						fade,
+						key: index,
+					})
+				);
 			})}
 		</div>
 	);
