@@ -11,7 +11,9 @@ interface IProps {
 	buttonDisplayType?: React.ComponentProps<typeof ClayButton>['displayType'];
 	buttonType?: React.ComponentProps<typeof ClayButton>['type'];
 	linkDisplayType?: React.ComponentProps<typeof ClayLink>['displayType'];
-	onClick?: React.ComponentProps<typeof ClayButton>['onClick'];
+	onClick?: React.HTMLAttributes<
+		HTMLAnchorElement & HTMLButtonElement
+	>['onClick'];
 	[propName: string]: any;
 }
 
@@ -33,6 +35,7 @@ export const LinkOrButton = React.forwardRef<any, IProps>(
 					{...otherProps}
 					displayType={linkDisplayType}
 					href={href}
+					onClick={onClick}
 					ref={ref}
 				/>
 			);
