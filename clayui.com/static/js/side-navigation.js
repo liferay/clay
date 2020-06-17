@@ -1,5 +1,5 @@
 /**
-* Clay 3.10.0
+* Clay 3.13.0
 *
 * Copyright 2020, Liferay, Inc.
 * All rights reserved.
