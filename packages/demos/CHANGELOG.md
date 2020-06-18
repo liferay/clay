@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/bryceosterhaus/clay/compare/demos@0.3.2...demos@0.4.0) (2020-06-18)
+
+### Features
+
+-   **@clayui/date-picker:** remove moment.js and use date-fns helpers ([1fa3921](https://github.com/bryceosterhaus/clay/commit/1fa3921))
+
 ## [0.3.2](https://github.com/bryceosterhaus/clay/compare/demos@0.3.1...demos@0.3.2) (2020-06-04)
 
 **Note:** Version bump only for package demos

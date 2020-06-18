@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.1](https://github.com/liferay/clay/compare/@clayui/breadcrumb@3.2.0...@clayui/breadcrumb@3.2.1) (2020-06-18)
+
+**Note:** Version bump only for package @clayui/breadcrumb
+
 # [3.2.0](https://github.com/liferay/clay/compare/@clayui/breadcrumb@3.1.3...@clayui/breadcrumb@3.2.0) (2020-05-21)
 
 ### Features

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.1](https://github.com/liferay/clay/compare/@clayui/tabs@3.2.0...@clayui/tabs@3.2.1) (2020-06-18)
+
+### Bug Fixes
+
+-   **@clayui/tabs:** Make sure we use strict equation ([ad8dd39](https://github.com/liferay/clay/commit/ad8dd39))
+
 # [3.2.0](https://github.com/liferay/clay/compare/@clayui/tabs@3.1.1...@clayui/tabs@3.2.0) (2020-05-21)
 
 ### Features

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.4](https://github.com/liferay/clay/compare/@clayui/drop-down@3.4.3...@clayui/drop-down@3.4.4) (2020-06-18)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** fixes the side effect of recalculating domAlign with each rendering ([80b6748](https://github.com/liferay/clay/commit/80b6748))
+
 ## [3.4.3](https://github.com/liferay/clay/compare/@clayui/drop-down@3.4.2...@clayui/drop-down@3.4.3) (2020-05-21)
 
 **Note:** Version bump only for package @clayui/drop-down

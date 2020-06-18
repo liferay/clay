@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/liferay/clay/compare/@clayui/link@3.1.1...@clayui/link@3.2.0) (2020-06-18)
+
+### Features
+
+-   **@clayui/link:** add ability to style link like a button ([5599f58](https://github.com/liferay/clay/commit/5599f58))
+-   **@clayui/link:** add default value for 'rel' if target exists ([1e0697b](https://github.com/liferay/clay/commit/1e0697b))
+-   **clayui.com:** Improve API docs - Make displayNames consistent ([5a33822](https://github.com/liferay/clay/commit/5a33822))
+-   **clayui.com:** Improve API docs of Form, Input & Link components ([38f2696](https://github.com/liferay/clay/commit/38f2696))
+
 ## [3.1.1](https://github.com/liferay/clay/compare/@clayui/link@3.1.0...@clayui/link@3.1.1) (2020-04-24)
 
 ### Bug Fixes

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.13.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.12.0...@clayui/css@3.13.0) (2020-06-18)
+
+
+### Features
+
+* **@clayui/css:** Move components `type`, `icons`, `aspect-ratio`, and `buttons` earlier in the import chain so they are easier to overwrite ([6f69b82](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/6f69b82)), closes [#3191](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3191)
+
+
+
+
+
 # [3.12.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.11.0...@clayui/css@3.12.0) (2020-06-04)
 
 

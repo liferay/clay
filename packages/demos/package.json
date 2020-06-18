@@ -9,14 +9,14 @@
 	"dependencies": {
 		"@clayui/button": "^3.3.1",
 		"@clayui/form": "^3.8.0",
-		"@clayui/layout": "^3.0.1",
-		"@clayui/list": "^3.2.5",
-		"@clayui/management-toolbar": "^3.2.0",
-		"@clayui/multi-select": "^3.5.4",
-		"@clayui/nav": "^3.1.1",
-		"@clayui/pagination": "^3.2.0",
-		"@clayui/pagination-bar": "^3.1.4",
-		"@clayui/panel": "^3.2.0",
+		"@clayui/layout": "^3.1.0",
+		"@clayui/list": "^3.2.6",
+		"@clayui/management-toolbar": "^3.2.1",
+		"@clayui/multi-select": "^3.5.5",
+		"@clayui/nav": "^3.2.0",
+		"@clayui/pagination": "^3.2.1",
+		"@clayui/pagination-bar": "^3.1.5",
+		"@clayui/panel": "^3.2.1",
 		"classnames": "^2.2.6",
 		"react-dnd": "^10.0.2",
 		"react-dnd-html5-backend": "^10.0.2",
@@ -25,5 +25,5 @@
 	"devDependencies": {
 		"@types/recharts": "1.8.10"
 	},
-	"version": "0.3.2"
+	"version": "0.4.0"
 }

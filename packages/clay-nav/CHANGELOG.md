@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/liferay/clay/compare/@clayui/nav@3.1.1...@clayui/nav@3.2.0) (2020-06-18)
+
+### Features
+
+-   **clayui.com:** Update Navigation docs ([d2bf07e](https://github.com/liferay/clay/commit/d2bf07e))
+-   **clayui.com:** Update Navigation docs - Revert adding Pills, Justified and Unstyled props ([27c6a87](https://github.com/liferay/clay/commit/27c6a87))
+-   **clayui.com:** Update Navigation docs - Revert naming back to Nav and remove docs for Pills and Justified ([5b6007a](https://github.com/liferay/clay/commit/5b6007a))
+
 ## [3.1.1](https://github.com/liferay/clay/compare/@clayui/nav@3.1.0...@clayui/nav@3.1.1) (2020-04-24)
 
 ### Bug Fixes

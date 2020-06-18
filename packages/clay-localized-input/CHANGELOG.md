@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/liferay/clay/compare/@clayui/localized-input@3.1.0...@clayui/localized-input@3.1.1) (2020-06-18)
+
+**Note:** Version bump only for package @clayui/localized-input
+
 # [3.1.0](https://github.com/liferay/clay/compare/@clayui/localized-input@3.0.0...@clayui/localized-input@3.1.0) (2020-05-21)
 
 ### Features

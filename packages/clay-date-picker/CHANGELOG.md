@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.4.0](https://github.com/liferay/clay/compare/@clayui/date-picker@3.3.0...@clayui/date-picker@3.4.0) (2020-06-18)
+
+### Bug Fixes
+
+-   **clayui.com:** Fix wording and a few links on Date Picker and Button ([035d912](https://github.com/liferay/clay/commit/035d912))
+
+### Features
+
+-   **@clayui/date-picker:** remove moment.js and use date-fns helpers ([1fa3921](https://github.com/liferay/clay/commit/1fa3921))
+
 # [3.3.0](https://github.com/liferay/clay/compare/@clayui/date-picker@3.2.1...@clayui/date-picker@3.3.0) (2020-05-21)
 
 ### Features
