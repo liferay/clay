@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {ClayButtonWithIcon} from '@clayui/button/src';
 import ClayIcon from '@clayui/icon';
 import ClayLink from '@clayui/link';
 import classNames from 'classnames';
@@ -16,6 +17,9 @@ interface IProps
 	 * Flag that indicates if item is selected.
 	 */
 	active?: boolean;
+
+	childItems?: Array<object>;
+	onRightSymbolClick?: any;
 
 	/**
 	 * Flag that indicates if item is disabled or not.
@@ -49,12 +53,14 @@ const ClayDropDownItem = React.forwardRef<HTMLLIElement, IProps>(
 	(
 		{
 			active,
+			childItems,
 			children,
 			className,
 			disabled,
 			href,
 			innerRef,
 			onClick,
+			onRightSymbolClick,
 			spritemap,
 			symbolLeft,
 			symbolRight,
@@ -67,7 +73,11 @@ const ClayDropDownItem = React.forwardRef<HTMLLIElement, IProps>(
 		const ItemElement = href ? ClayLink : clickableElement;
 
 		return (
-			<li aria-selected={active} ref={ref}>
+			<li
+				aria-selected={active}
+				className={childItems ? 'd-flex' : ''}
+				ref={ref}
+			>
 				<ItemElement
 					{...otherProps}
 					className={classNames('dropdown-item', className, {
@@ -100,6 +110,15 @@ const ClayDropDownItem = React.forwardRef<HTMLLIElement, IProps>(
 						</span>
 					)}
 				</ItemElement>
+
+				{childItems && (
+					<ClayButtonWithIcon
+						displayType="unstyled"
+						onClick={onRightSymbolClick}
+						spritemap={spritemap}
+						symbol="angle-right"
+					/>
+				)}
 			</li>
 		);
 	}

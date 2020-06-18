@@ -20,6 +20,7 @@ type TType = 'checkbox' | 'group' | 'item' | 'radio' | 'radiogroup' | 'divider';
 interface IItem {
 	active?: boolean;
 	checked?: boolean;
+	children?: Array<IItem>;
 	disabled?: boolean;
 	href?: string;
 	items?: Array<IItem>;
@@ -27,6 +28,7 @@ interface IItem {
 	name?: string;
 	onChange?: Function;
 	onClick?: (e: React.MouseEvent<HTMLElement, MouseEvent>) => void;
+	parent?: boolean;
 	symbolLeft?: string;
 	symbolRight?: string;
 	type?: TType;
@@ -43,6 +45,8 @@ interface IDropDownContentProps {
 	 * List of items to display in drop down menu
 	 */
 	items: Array<IItem>;
+
+	onRightSymbolClick?: any;
 }
 
 export interface IProps extends IDropDownContentProps {
@@ -121,6 +125,7 @@ export interface IProps extends IDropDownContentProps {
 
 interface IInternalItem {
 	spritemap?: string;
+	onRightSymbolClick?: any;
 }
 
 const Checkbox: React.FunctionComponent<IItem & IInternalItem> = ({
@@ -148,11 +153,12 @@ export const ClayDropDownContext = React.createContext({close: () => {}});
 
 const Item: React.FunctionComponent<
 	Omit<IItem, 'onChange'> & IInternalItem
-> = ({label, onClick, ...props}) => {
+> = ({label, onClick, onRightSymbolClick, ...props}) => {
 	const {close} = React.useContext(ClayDropDownContext);
 
 	return (
 		<ClayDropDown.Item
+			childItems={props.children}
 			onClick={(e) => {
 				if (onClick) {
 					onClick(e);
@@ -161,6 +167,7 @@ const Item: React.FunctionComponent<
 				close();
 			}}
 			{...props}
+			onRightSymbolClick={onRightSymbolClick}
 		>
 			{label}
 		</ClayDropDown.Item>
@@ -257,15 +264,30 @@ const TYPE_MAP = {
 const DropDownContent: React.FunctionComponent<IDropDownContentProps> = ({
 	items,
 	spritemap,
-}) => (
-	<ClayDropDown.ItemList>
-		{items.map(({type, ...item}, key) => {
-			const Item = TYPE_MAP[type || 'item'];
+}) => {
+	const [internalItems, setInternalItems] = React.useState(items);
 
-			return <Item {...item} key={key} spritemap={spritemap} />;
-		})}
-	</ClayDropDown.ItemList>
-);
+	return (
+		<ClayDropDown.ItemList>
+			{internalItems.map(({type, ...item}, key) => {
+				const Item = TYPE_MAP[type || 'item'];
+
+				return (
+					<Item
+						{...item}
+						key={key}
+						onRightSymbolClick={() =>
+							item.children
+								? setInternalItems(item.children)
+								: setInternalItems(items)
+						}
+						spritemap={spritemap}
+					/>
+				);
+			})}
+		</ClayDropDown.ItemList>
+	);
+};
 
 export const findNested = <
 	T extends {items?: Array<T>; [key: string]: any},
@@ -304,10 +326,19 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 	trigger,
 }: IProps) => {
 	const [active, setActive] = React.useState(false);
+	// const [header, setHeader] = React.useState(false);
+
+	// React.useEffect(() => setHeader(!!findNested(items, 'parent')), [items]);
+
+	const header = React.useMemo(() => !!findNested(items, 'parent'), [items]);
+
 	const hasRightSymbols = React.useMemo(
-		() => !!findNested(items, 'symbolRight'),
+		() =>
+			!!findNested(items, 'symbolRight') ||
+			!!findNested(items, 'children'),
 		[items]
 	);
+
 	const hasLeftSymbols = React.useMemo(
 		() => !!findNested(items, 'symbolLeft'),
 		[items]
@@ -323,6 +354,7 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 			containerElement={containerElement}
 			hasLeftSymbols={hasLeftSymbols}
 			hasRightSymbols={hasRightSymbols}
+			header={header}
 			menuElementAttrs={menuElementAttrs}
 			offsetFn={offsetFn}
 			onActiveChange={setActive}

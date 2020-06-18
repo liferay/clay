@@ -314,6 +314,60 @@ storiesOf('Components|ClayDropDown', module)
 			/>
 		);
 	})
+	.add('w/ Drilldown #2', () => {
+		const items = [
+			{
+				label: 'DXP',
+				name: 'dxp',
+				symbolLeft: 'folder',
+			},
+			{
+				children: [
+					{
+						label: 'Lexicon Child',
+						name: 'lexiconChild',
+						parent: true,
+						symbolLeft: 'folder',
+					},
+					{
+						label: 'Random Child',
+						name: 'randomChild',
+						parent: true,
+						symbolLeft: 'folder',
+					},
+				],
+				label: 'Lexicon',
+				name: 'lexicon',
+				symbolLeft: 'sheets',
+			},
+			{
+				children: [
+					{
+						label: 'Clay Child',
+						name: 'clayChild',
+						parent: true,
+					},
+					{
+						label: 'Random Child',
+						name: 'randomChild',
+						parent: true,
+						symbolLeft: 'folder',
+					},
+				],
+				label: 'Clay',
+				name: 'clay',
+			},
+		];
+
+		return (
+			<ClayDropDownWithItems
+				footerContent={<ClayButton block>{'Accept'}</ClayButton>}
+				items={items}
+				spritemap={spritemap}
+				trigger={<ClayButton>{'Click Me'}</ClayButton>}
+			/>
+		);
+	})
 	.add('w/ custom offset', () => (
 		<DropDownWithState offsetFn={() => [20, 20]}>
 			<ClayDropDown.ItemList>
