@@ -18,7 +18,7 @@ const Footer: React.FunctionComponent<IProps> = ({
 }) => (
 	<footer
 		{...otherProps}
-		className={classNames('bg-white p-3 rounded-bottom', className)}
+		className={classNames('dropdown-section p-3', className)}
 	>
 		<ClayButton block>{confirmLabel}</ClayButton>
 	</footer>

@@ -361,7 +361,6 @@ storiesOf('Components|ClayDropDown', module)
 
 		return (
 			<ClayDropDownWithItems
-				footerContent={<ClayButton block>{'Accept'}</ClayButton>}
 				items={items}
 				spritemap={spritemap}
 				trigger={<ClayButton>{'Click Me'}</ClayButton>}

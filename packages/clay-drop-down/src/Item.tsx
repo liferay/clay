@@ -84,6 +84,7 @@ const ClayDropDownItem = React.forwardRef<HTMLLIElement, IProps>(
 						active,
 						disabled,
 					})}
+					data-drilldown={childItems ? 'next' : ''}
 					disabled={disabled}
 					href={href}
 					onClick={onClick}

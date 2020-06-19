@@ -10,6 +10,7 @@ import warning from 'warning';
 import Caption from './Caption';
 import Divider from './Divider';
 import ClayDropDown from './DropDown';
+import Footer from './Footer';
 import ClayDropDownGroup from './Group';
 import Header from './Header';
 import Help from './Help';
@@ -30,6 +31,7 @@ interface IItem {
 	onChange?: Function;
 	onClick?: (e: React.MouseEvent<HTMLElement, MouseEvent>) => void;
 	parent?: string;
+	requiresConfirmation?: boolean;
 	symbolLeft?: string;
 	symbolRight?: string;
 	type?: TType;
@@ -167,8 +169,8 @@ const Item: React.FunctionComponent<
 
 				close();
 			}}
-			{...props}
 			onRightSymbolClick={onRightSymbolClick}
+			{...props}
 		>
 			{label}
 		</ClayDropDown.Item>
@@ -272,7 +274,11 @@ const DropDownContent: React.FunctionComponent<IDropDownContentProps> = ({
 
 	React.useEffect(() => {
 		internalItemsRef.current = internalItems;
-	});
+	}, [internalItemsRef]);
+
+	const internalItemsChanged = React.useMemo(() => internalItems !== items, [
+		internalItems,
+	]);
 
 	const prevInternalItems = internalItemsRef.current;
 
@@ -281,7 +287,6 @@ const DropDownContent: React.FunctionComponent<IDropDownContentProps> = ({
 	return (
 		<>
 			{itemWithParent && (
-				// when clicking this, set internalItems to new items which are a layer above current
 				<Header
 					handleBackBtnClick={() =>
 						setInternalItems(prevInternalItems)
@@ -310,6 +315,8 @@ const DropDownContent: React.FunctionComponent<IDropDownContentProps> = ({
 					);
 				})}
 			</ClayDropDown.ItemList>
+
+			{internalItemsChanged && <Footer confirmLabel="Accept" />}
 		</>
 	);
 };
