@@ -48,8 +48,6 @@ interface IDropDownContentProps {
 	 * List of items to display in drop down menu
 	 */
 	items: Array<IItem>;
-
-	onRightSymbolClick?: any;
 }
 
 export interface IProps extends IDropDownContentProps {
@@ -128,7 +126,6 @@ export interface IProps extends IDropDownContentProps {
 
 interface IInternalItem {
 	spritemap?: string;
-	onRightSymbolClick?: any;
 }
 
 const Checkbox: React.FunctionComponent<IItem & IInternalItem> = ({
@@ -156,7 +153,7 @@ export const ClayDropDownContext = React.createContext({close: () => {}});
 
 const Item: React.FunctionComponent<
 	Omit<IItem, 'onChange'> & IInternalItem
-> = ({label, onClick, onRightSymbolClick, ...props}) => {
+> = ({label, onClick, ...props}) => {
 	const {close} = React.useContext(ClayDropDownContext);
 
 	return (
@@ -169,7 +166,6 @@ const Item: React.FunctionComponent<
 
 				close();
 			}}
-			onRightSymbolClick={onRightSymbolClick}
 			{...props}
 		>
 			{label}
@@ -269,16 +265,13 @@ const DropDownContent: React.FunctionComponent<IDropDownContentProps> = ({
 	spritemap,
 }) => {
 	const [internalItems, setInternalItems] = React.useState(items);
+	const [showConfirm, setShowConfirm] = React.useState(false);
 
 	const internalItemsRef = React.useRef(null);
 
 	React.useEffect(() => {
 		internalItemsRef.current = internalItems;
 	}, [internalItemsRef]);
-
-	const internalItemsChanged = React.useMemo(() => internalItems !== items, [
-		internalItems,
-	]);
 
 	const prevInternalItems = internalItemsRef.current;
 
@@ -305,18 +298,26 @@ const DropDownContent: React.FunctionComponent<IDropDownContentProps> = ({
 						<Item
 							{...item}
 							key={key}
-							onRightSymbolClick={() =>
-								item.children
-									? setInternalItems(item.children)
-									: setInternalItems(items)
-							}
+							onClick={() => {
+								if (item.children) {
+									setInternalItems(item.children);
+								}
+
+								if (item.requiresConfirmation) {
+									setShowConfirm(!!item.requiresConfirmation);
+
+									if (item.children) {
+										setInternalItems(item.children);
+									}
+								}
+							}}
 							spritemap={spritemap}
 						/>
 					);
 				})}
 			</ClayDropDown.ItemList>
 
-			{internalItemsChanged && <Footer confirmLabel="Accept" />}
+			{showConfirm && <Footer confirmLabel="Accept" />}
 		</>
 	);
 };

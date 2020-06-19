@@ -45,8 +45,6 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	 */
 	hasLeftSymbols?: boolean;
 
-	header?: boolean;
-
 	/**
 	 * Prop to pass DOM element attributes to <DropDown.Menu />.
 	 */
@@ -92,7 +90,6 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 	containerElement: ContainerElement = 'div',
 	hasLeftSymbols,
 	hasRightSymbols,
-	header,
 	menuElementAttrs,
 	offsetFn,
 	onActiveChange,

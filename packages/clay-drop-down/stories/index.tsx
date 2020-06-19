@@ -338,6 +338,7 @@ storiesOf('Components|ClayDropDown', module)
 				],
 				label: 'Lexicon',
 				name: 'lexicon',
+				requiresConfirmation: true,
 				symbolLeft: 'sheets',
 			},
 			{
