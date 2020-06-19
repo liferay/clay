@@ -326,13 +326,13 @@ storiesOf('Components|ClayDropDown', module)
 					{
 						label: 'Lexicon Child',
 						name: 'lexiconChild',
-						parent: true,
+						parent: 'DXP',
 						symbolLeft: 'folder',
 					},
 					{
 						label: 'Random Child',
 						name: 'randomChild',
-						parent: true,
+						parent: 'DXP',
 						symbolLeft: 'folder',
 					},
 				],
@@ -345,12 +345,12 @@ storiesOf('Components|ClayDropDown', module)
 					{
 						label: 'Clay Child',
 						name: 'clayChild',
-						parent: true,
+						parent: 'Lexicon',
 					},
 					{
 						label: 'Random Child',
 						name: 'randomChild',
-						parent: true,
+						parent: 'Lexicon',
 						symbolLeft: 'folder',
 					},
 				],

@@ -11,6 +11,7 @@ import Caption from './Caption';
 import Divider from './Divider';
 import ClayDropDown from './DropDown';
 import ClayDropDownGroup from './Group';
+import Header from './Header';
 import Help from './Help';
 import ClayMenu from './Menu';
 import Search from './Search';
@@ -28,7 +29,7 @@ interface IItem {
 	name?: string;
 	onChange?: Function;
 	onClick?: (e: React.MouseEvent<HTMLElement, MouseEvent>) => void;
-	parent?: boolean;
+	parent?: string;
 	symbolLeft?: string;
 	symbolRight?: string;
 	type?: TType;
@@ -267,25 +268,49 @@ const DropDownContent: React.FunctionComponent<IDropDownContentProps> = ({
 }) => {
 	const [internalItems, setInternalItems] = React.useState(items);
 
-	return (
-		<ClayDropDown.ItemList>
-			{internalItems.map(({type, ...item}, key) => {
-				const Item = TYPE_MAP[type || 'item'];
+	const internalItemsRef = React.useRef(null);
 
-				return (
-					<Item
-						{...item}
-						key={key}
-						onRightSymbolClick={() =>
-							item.children
-								? setInternalItems(item.children)
-								: setInternalItems(items)
-						}
-						spritemap={spritemap}
-					/>
-				);
-			})}
-		</ClayDropDown.ItemList>
+	React.useEffect(() => {
+		internalItemsRef.current = internalItems;
+	});
+
+	const prevInternalItems = internalItemsRef.current;
+
+	const itemWithParent = internalItems.find((item) => item.parent);
+
+	return (
+		<>
+			{itemWithParent && (
+				// when clicking this, set internalItems to new items which are a layer above current
+				<Header
+					handleBackBtnClick={() =>
+						setInternalItems(prevInternalItems)
+					}
+					spritemap={spritemap}
+				>
+					{itemWithParent.parent}
+				</Header>
+			)}
+
+			<ClayDropDown.ItemList>
+				{internalItems.map(({type, ...item}, key) => {
+					const Item = TYPE_MAP[type || 'item'];
+
+					return (
+						<Item
+							{...item}
+							key={key}
+							onRightSymbolClick={() =>
+								item.children
+									? setInternalItems(item.children)
+									: setInternalItems(items)
+							}
+							spritemap={spritemap}
+						/>
+					);
+				})}
+			</ClayDropDown.ItemList>
+		</>
 	);
 };
 
@@ -326,11 +351,6 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 	trigger,
 }: IProps) => {
 	const [active, setActive] = React.useState(false);
-	// const [header, setHeader] = React.useState(false);
-
-	// React.useEffect(() => setHeader(!!findNested(items, 'parent')), [items]);
-
-	const header = React.useMemo(() => !!findNested(items, 'parent'), [items]);
 
 	const hasRightSymbols = React.useMemo(
 		() =>
@@ -354,7 +374,6 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 			containerElement={containerElement}
 			hasLeftSymbols={hasLeftSymbols}
 			hasRightSymbols={hasRightSymbols}
-			header={header}
 			menuElementAttrs={menuElementAttrs}
 			offsetFn={offsetFn}
 			onActiveChange={setActive}

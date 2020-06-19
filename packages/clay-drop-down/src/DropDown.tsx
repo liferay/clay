@@ -152,8 +152,6 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 					},
 				})}
 
-				{header && <Header>{'Header'}</Header>}
-
 				<Menu
 					{...menuElementAttrs}
 					active={active}

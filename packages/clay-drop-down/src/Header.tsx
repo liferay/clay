@@ -8,15 +8,15 @@ import classNames from 'classnames';
 import React from 'react';
 
 interface IProps extends React.HTMLAttributes<HTMLElement> {
+	handleBackBtnClick: any;
 	spritemap?: string;
-	undo?: boolean;
 }
 
 const Header: React.FunctionComponent<IProps> = ({
 	children,
 	className,
+	handleBackBtnClick,
 	spritemap,
-	undo = false,
 	...otherProps
 }) => {
 	return (
@@ -24,13 +24,12 @@ const Header: React.FunctionComponent<IProps> = ({
 			{...otherProps}
 			className={classNames('align-items-center d-flex', className)}
 		>
-			{undo && (
-				<ClayButtonWithIcon
-					displayType="unstyled"
-					spritemap={spritemap}
-					symbol="angle-left"
-				/>
-			)}
+			<ClayButtonWithIcon
+				displayType="unstyled"
+				onClick={handleBackBtnClick}
+				spritemap={spritemap}
+				symbol="angle-left"
+			/>
 
 			<span className="px-3 py-2 small text-truncate text-uppercase">
 				{children}
