@@ -21,6 +21,7 @@
 	padding-left: $dropdown-header-padding-x;
 	padding-right: $dropdown-header-padding-x;
 	padding-top: $dropdown-header-padding-y;
+	position: relative;
 	text-transform: $dropdown-header-text-transform;
 	word-wrap: break-word;
 
@@ -113,6 +114,14 @@
 		}
 	}
 }
+
+// Dropdown Footer
+
+.dropdown-footer {
+	@include clay-css($dropdown-footer);
+}
+
+// Dropdown Menu
 
 .dropdown-menu {
 	background-clip: padding-box;
@@ -338,7 +347,7 @@
 	}
 }
 
-// Dropdown Menu with Indicators
+// Dropdown Menu Indicator Start
 
 .dropdown-menu-indicator-start {
 	// `.dropdown-item-indicator` is deprecated in v2.3.5 use
@@ -351,13 +360,8 @@
 		width: $dropdown-item-indicator-size;
 	}
 
-	.dropdown-item-indicator-start {
-		height: $dropdown-item-indicator-size;
-		left: $dropdown-item-padding-x;
-		position: absolute;
-		right: auto;
-		top: $dropdown-item-padding-y;
-		width: $dropdown-item-indicator-size;
+	.dropdown-item-indicator-text-start {
+		padding-left: 0;
 	}
 
 	.dropdown-header,
@@ -381,6 +385,16 @@
 	}
 }
 
+.dropdown-item-indicator-start {
+	@include clay-link($dropdown-item-indicator-start);
+}
+
+.dropdown-item-indicator-text-start {
+	@include clay-link($dropdown-item-indicator-text-start);
+}
+
+// Dropdown Menu Indicator End
+
 .dropdown-menu-indicator-end {
 	// `.dropdown-item-indicator` is deprecated in v2.3.5 use
 	// `.dropdown-item-indicator-end` instead
@@ -390,11 +404,8 @@
 		top: $dropdown-item-padding-y;
 	}
 
-	.dropdown-item-indicator-end {
-		left: auto;
-		position: absolute;
-		right: $dropdown-item-padding-x;
-		top: $dropdown-item-padding-y;
+	.dropdown-item-indicator-text-end {
+		padding-right: 0;
 	}
 
 	.dropdown-item {
@@ -411,6 +422,14 @@
 			}
 		}
 	}
+}
+
+.dropdown-item-indicator-end {
+	@include clay-link($dropdown-item-indicator-end);
+}
+
+.dropdown-item-indicator-text-end {
+	@include clay-link($dropdown-item-indicator-text-end);
 }
 
 // Dropdown Menu Positions
