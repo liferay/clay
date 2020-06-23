@@ -6,6 +6,25 @@ section: Components
 <blockquote class="blockquote">
 	<p>Each <code>drilldown-item</code> must have a unique id. To switch to the next <code>drilldown-item</code>, add the attribute <code>data-drilldown="next"</code> and a <code>href="#theDrilldownItemId"</code> attribute linking to the <code>drilldown-item</code> you would like to switch to.</p>
 	<p>The value <code>next</code> on <code>data-drilldown</code> should slide the items to the left and the value <code>prev</code> should slide to the right.</p>
+	<div>On next item:</div>
+	<ul>
+		<li>Add classes <code>drilldown-transition transitioning</code> to <code>drilldown-current drilldown-item</code></li>
+		<li>Add classes <code>drilldown-transition transitioning</code> to the incoming <code>drilldown-item</code></li>
+		<li>The height of the next slide can be found on the <code>drilldown-item-inner</code> element and add height to <code>drilldown-inner</code></li>
+		<li>Once height has finished transitioning, use <code>transform: translateX(-100%);</code> on both slides if they are in order</li>
+	</ul>
+	<div>On prev item:</div>
+	<ul>
+		<li>add classes <code>drilldown-transition transitioning</code> and position each item using <code>transform: translateX(-100%);</code></li>
+		<li>Set the height on <code>drilldown-inner</code></li>
+		<li>Once height has finished transitioning, remove the transforms on each item</li>
+	</ul>
+	<div>Next slide goes back to beginning:</div>
+	<ul>
+		<li><code>drilldown-current</code> needs <code>transform: translateX(-100%);</code></li>
+		<li>Next slide needs <code>transform: translateX(100%);</code></li>
+		<li>On transition, <code>drilldown-current</code> <code>transform: translateX(-200%);</code> and next slide remove transform</li>
+	</ul>
 </blockquote>
 
 <div class="alert alert-warning">
@@ -23,9 +42,9 @@ section: Components
 	<button aria-expanded="false" aria-haspopup="true" class="link-outline link-outline-primary dropdown-toggle" data-toggle="dropdown" id="dropdownSites1" type="button">
 		Dropdown
 	</button>
-	<div aria-labelledby="dropdownSites1" class="drilldown dropdown-menu dropdown-menu-indicator-end">
+	<div aria-labelledby="dropdownSites1" class="drilldown dropdown-menu">
 		<div class="drilldown-inner">
-			<div class="drilldown-current drilldown-item" id="firstDrillDownItem">
+			<div class="drilldown-current drilldown-item dropdown-menu-indicator-end" id="firstDrillDownItem">
 				<div class="drilldown-item-inner">
 					<ul class="inline-scroller">
 						<li><a class="dropdown-item" href="#1">Folder</a></li>
@@ -33,8 +52,8 @@ section: Components
 							<a class="dropdown-item" data-drilldown="next" href="#documentId1">
 								Document
 								<span class="dropdown-item-indicator-end">
-									<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-right" />
+									<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-right" />
 									</svg>
 								</span>
 							</a>
@@ -43,28 +62,28 @@ section: Components
 							<a class="dropdown-item" data-drilldown="next" href="#shortcutId1">
 								Shortcut
 								<span class="dropdown-item-indicator-end">
-									<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-right" />
+									<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-right" />
 									</svg>
 								</span>
 							</a>
 						</li>
 						<li><a class="dropdown-item" href="#1">Repository</a></li>
-						<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a></li>
+						<li><a class="disabled dropdown-item" href="#__disabled" tabindex="-1">Disabled</a></li>
 					</ul>
 				</div>
 			</div>
 
-			<div class="drilldown-item" id="documentId1">
+			<div class="drilldown-item dropdown-menu-indicator-end" id="documentId1">
 				<div class="drilldown-item-inner">
-					<a class="drilldown-item-header dropdown-item" data-drilldown="prev" href="#firstDrillDownItem">
-						<span class="dropdown-item-indicator-start">
-							<svg class="lexicon-icon lexicon-icon-caret-left" focusable="false" role="presentation">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-left" />
+					<div class="dropdown-header">
+						<a class="component-action dropdown-item-indicator-start" data-drilldown="prev" href="#firstDrillDownItem" role="button">
+							<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-left" />
 							</svg>
-						</span>
-						Document
-					</a>
+						</a>
+						<span class="dropdown-item-indicator-text-start">Document</span>
+					</div>
 					<div class="dropdown-divider"></div>
 
 					<ul class="inline-scroller">
@@ -73,8 +92,8 @@ section: Components
 							<a class="dropdown-item" data-drilldown="next" href="#contractId1">
 								Contract
 								<span class="dropdown-item-indicator-end">
-									<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-right" />
+									<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-right" />
 									</svg>
 								</span>
 							</a>
@@ -88,14 +107,14 @@ section: Components
 
 			<div class="drilldown-item" id="contractId1">
 				<div class="drilldown-item-inner">
-					<a class="drilldown-item-header dropdown-item" data-drilldown="prev" href="#documentId1">
-						<span class="dropdown-item-indicator-start">
-							<svg class="lexicon-icon lexicon-icon-caret-left" focusable="false" role="presentation">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-left" />
+					<div class="dropdown-header">
+						<a class="component-action dropdown-item-indicator-start" data-drilldown="prev" href="#documentId1" role="button">
+							<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-left" />
 							</svg>
-						</span>
-						Contract
-					</a>
+						</a>
+						<span class="dropdown-item-indicator-text-start">Contract</span>
+					</div>
 					<div class="dropdown-divider"></div>
 					<ul class="inline-scroller">
 						<li><a class="dropdown-item" href="#1">Contract Document #1</a></li>
@@ -107,14 +126,14 @@ section: Components
 
 			<div class="drilldown-item" id="shortcutId1">
 				<div class="drilldown-item-inner">
-					<a class="drilldown-item-header dropdown-item" data-drilldown="prev" href="#firstDrillDownItem">
-						<span class="dropdown-item-indicator-start">
-							<svg class="lexicon-icon lexicon-icon-caret-left" focusable="false" role="presentation">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-left" />
+					<div class="dropdown-header">
+						<a class="component-action dropdown-item-indicator-start" data-drilldown="prev" href="#firstDrillDownItem" role="button">
+							<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-left" />
 							</svg>
-						</span>
-						Shortcut
-					</a>
+						</a>
+						<span class="dropdown-item-indicator-text-start">Shortcut</span>
+					</div>
 					<div class="dropdown-divider"></div>
 
 					<ul class="inline-scroller">
@@ -134,62 +153,255 @@ section: Components
 
 <div class="clay-site-row-spacer row clay-site-dropdown-display">
 	<div class="col-md-12">
-		<h3>Dropdown Menu Drill Down</h3>
+		<h3>Drill Down Dropdown Menu with Footer and Dual Click Area</h3>
 	</div>
 
 	<div class="col-md-6">
-		<div aria-labelledby="theDropdownToggleId" class="drilldown dropdown-menu dropdown-menu-indicator-end">
+		<div aria-labelledby="theDropdownToggleId" class="drilldown dropdown-menu dropdown-menu-indicator-end show">
 			<div class="drilldown-inner">
-				<div class="drilldown-current drilldown-item" id="demoFirstDrillDownItem">
+				<div class="drilldown-current drilldown-item" id="_gp27xycm7">
 					<div class="drilldown-item-inner">
 						<ul class="inline-scroller">
 							<li><a class="dropdown-item" href="#1">Folder</a></li>
 							<li>
-								<a class="dropdown-item" data-drilldown="next" href="#demoDocumentId">
-									Document
-									<span class="dropdown-item-indicator-end">
-										<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
-											<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-right" />
+								<div class="dropdown-item">
+									<a class="dropdown-item-indicator-text-end" href="#1">Document</a>
+									<button class="btn btn-unstyled dropdown-item-indicator-end" data-drilldown="next" data-target="#_s950dwymf" role="button">
+										<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-right" />
 										</svg>
-									</span>
-								</a>
+									</button>
+								</div>
 							</li>
 							<li>
-								<a class="dropdown-item" data-drilldown="next" href="#demoShortcutId">
-									Shortcut
-									<span class="dropdown-item-indicator-end">
-										<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
-											<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-right" />
+								<div class="dropdown-item">
+									<a class="dropdown-item-indicator-text-end" href="#1">A Shortcut</a>
+									<a class="dropdown-item-indicator-end" data-drilldown="next" href="#_3b594ezoq" role="button">
+										<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-right" />
 										</svg>
-									</span>
-								</a>
+									</a>
+								</div>
 							</li>
 							<li><a class="dropdown-item" href="#1">Repository</a></li>
-							<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a></li>
+							<li><a class="disabled dropdown-item" href="#__disabled" tabindex="-1">Disabled</a></li>
 						</ul>
 					</div>
 				</div>
 
-				<div class="drilldown-item" id="demoDocumentId">
+				<div class="drilldown-item" id="_s950dwymf">
 					<div class="drilldown-item-inner">
-						<a class="drilldown-item-header dropdown-item" data-drilldown="prev" href="#demoFirstDrillDownItem">
-							<span class="dropdown-item-indicator-start">
-								<svg class="lexicon-icon lexicon-icon-caret-left" focusable="false" role="presentation">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-left" />
+						<div class="dropdown-header">
+							<button class="component-action dropdown-item-indicator-start" data-drilldown="prev" href="#_gp27xycm7">
+								<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-left" />
 								</svg>
-							</span>
-							Document
-						</a>
+							</button>
+							<span class="dropdown-item-indicator-text-start">Document</span>
+						</div>
 						<div class="dropdown-divider"></div>
 
 						<ul class="inline-scroller">
 							<li><a class="dropdown-item" href="#1">Basic Document</a></li>
 							<li>
-								<a class="dropdown-item" data-drilldown="next" href="#demoContractId">
-									Contract
+								<div class="dropdown-item">
+									<a class="dropdown-item-indicator-text-end" href="#1">Contract</a>
+									<a class="dropdown-item-indicator-end" data-drilldown="next" href="#_mbytq411f">
+										<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-right" />
+										</svg>
+									</a>
+								</div>
+							</li>
+							<li><a class="dropdown-item" href="#1">Marketing Banner</a></li>
+							<li><a class="dropdown-item" href="#1">Online Training</a></li>
+							<li><a class="dropdown-item" href="#1">Sales Presentation</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="drilldown-item" id="_mbytq411f">
+					<div class="drilldown-item-inner">
+						<div class="dropdown-header">
+							<a class="component-action dropdown-item-indicator-start" data-drilldown="prev" href="#_s950dwymf" role="button">
+								<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-left" />
+								</svg>
+							</a>
+							<span class="dropdown-item-indicator-text-start">Contract</span>
+						</div>
+						<div class="dropdown-divider"></div>
+						<ul class="inline-scroller">
+							<li><a class="dropdown-item" href="#1">Contract Document #1</a></li>
+							<li><a class="dropdown-item" href="#1">Contract Document #2</a></li>
+							<li><a class="dropdown-item" href="#1">Contract Document #3</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="drilldown-item" id="_3b594ezoq">
+					<div class="drilldown-item-inner">
+						<a class="drilldown-item-header dropdown-item" data-drilldown="prev" href="#_gp27xycm7">
+							<span class="dropdown-item-indicator-start">
+								<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-left" />
+								</svg>
+							</span>
+							<span class="dropdown-item-indicator-text-start">Shortcut</span>
+						</a>
+						<div class="dropdown-divider"></div>
+						<ul class="inline-scroller">
+							<li><a class="dropdown-item" href="#1">Shortcut #1</a></li>
+							<li><a class="dropdown-item" href="#1">Shortcut #2</a></li>
+							<li><a class="dropdown-item" href="#1">Shortcut #3</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="dropdown-footer">
+				<button class="btn btn-block btn-primary" type="button">Button</button>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row clay-site-dropdown-display">
+	<div class="col-md-12">
+		<h3>Drill Down Dropdown Menu with Icons (Left and Right)</h3>
+	</div>
+
+	<div class="col-md-6">
+		<div aria-labelledby="theDropdownToggleId" class="drilldown dropdown-menu show">
+			<div class="drilldown-inner">
+				<div class="drilldown-current drilldown-item dropdown-menu-indicator-end dropdown-menu-indicator-start" id="_hyj8unh80">
+					<div class="drilldown-item-inner">
+						<div class="dropdown-header">Documents and Media</div>
+						<div class="dropdown-divider"></div>
+						<ul class="inline-scroller">
+							<li>
+								<a class="dropdown-item" data-drilldown="next" href="#_0c9k8n9m4" role="button">
+									<span class="dropdown-item-indicator-start">
+										<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
+										</svg>
+									</span>
+									<span class="dropdown-item-indicator-text-end">DXP</span>
 									<span class="dropdown-item-indicator-end">
-										<svg class="lexicon-icon lexicon-icon-caret-right" focusable="false" role="presentation">
-											<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-right" />
+										<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-right" />
+										</svg>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" data-drilldown="next" href="#_tggascnpo" role="button">
+									<span class="dropdown-item-indicator-start">
+										<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
+										</svg>
+									</span>
+									<span class="dropdown-item-indicator-text-end">Lexicon</span>
+									<span class="dropdown-item-indicator-end">
+										<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-right" />
+										</svg>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#1">
+									<span class="dropdown-item-indicator-start">
+										<svg class="lexicon-icon lexicon-icon-file-template" focusable="false" role="presentation">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#file-template" />
+										</svg>
+									</span>
+									<span class="dropdown-item-indicator-text-start">Marketing Banner.ppt</span>
+								</a>
+							</li>
+							<li>
+								<a class="disabled dropdown-item" href="#__disabled" tabindex="-1">
+									<span class="dropdown-item-indicator-start">
+										<svg class="lexicon-icon lexicon-icon-file-template" focusable="false" role="presentation">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#file-template" />
+										</svg>
+									</span>
+									<span class="dropdown-item-indicator-text-start">Sales Presentation.doc</span>
+								</a>
+							</li>
+							<li>
+								<a class="disabled dropdown-item" href="#__disabled" tabindex="-1">
+									<span class="dropdown-item-indicator-start">
+										<svg class="lexicon-icon lexicon-icon-file-template" focusable="false" role="presentation">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#file-template" />
+										</svg>
+									</span>
+									<span class="dropdown-item-indicator-text-start">Contract.xls</span>
+								</a>
+							</li>
+							<li>
+								<a class="disabled dropdown-item" href="#__disabled" tabindex="-1">
+									<span class="dropdown-item-indicator-start">
+										<svg class="lexicon-icon lexicon-icon-file-template" focusable="false" role="presentation">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#file-template" />
+										</svg>
+									</span>
+									<span class="dropdown-item-indicator-text-start">Code</span>
+								</a>
+							</li>
+							<li>
+								<a class="disabled dropdown-item" href="#__disabled" tabindex="-1">
+									<span class="dropdown-item-indicator-start">
+										<svg class="lexicon-icon lexicon-icon-file-template" focusable="false" role="presentation">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#file-template" />
+										</svg>
+									</span>
+									<span class="dropdown-item-indicator-text-start">Type</span>
+								</a>
+							</li>
+							<li>
+								<a class="disabled dropdown-item" href="#__disabled" tabindex="-1">
+									<span class="dropdown-item-indicator-start">
+										<svg class="lexicon-icon lexicon-icon-file-template" focusable="false" role="presentation">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#file-template" />
+										</svg>
+									</span>
+									<span class="dropdown-item-indicator-text-start">Headings</span>
+								</a>
+							</li>
+							<li>
+								<a class="disabled dropdown-item" href="#__disabled" tabindex="-1">
+									<span class="dropdown-item-indicator-start">
+										<svg class="lexicon-icon lexicon-icon-file-template" focusable="false" role="presentation">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#file-template" />
+										</svg>
+									</span>
+									<span class="dropdown-item-indicator-text-start">Buttons</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="drilldown-item dropdown-menu-indicator-end" id="_0c9k8n9m4">
+					<div class="drilldown-item-inner">
+						<div class="dropdown-header">
+							<button class="component-action dropdown-item-indicator-start" data-drilldown="prev" data-target="#_hyj8unh80">
+								<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-left" />
+								</svg>
+							</button>
+							<span class="dropdown-item-indicator-text-start">DXP</span>
+						</div>
+						<div class="dropdown-divider"></div>
+						<ul class="inline-scroller">
+							<li><a class="dropdown-item" href="#1">Basic Document</a></li>
+							<li>
+								<a class="dropdown-item" data-drilldown="next" href="#_79ylttcfy">
+									<span class="dropdown-item-indicator-text-end">Contract</span>
+									<span class="dropdown-item-indicator-end">
+										<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-right" />
 										</svg>
 									</span>
 								</a>
@@ -201,16 +413,16 @@ section: Components
 					</div>
 				</div>
 
-				<div class="drilldown-item" id="demoContractId">
+				<div class="drilldown-item" id="_79ylttcfy">
 					<div class="drilldown-item-inner">
-						<a class="drilldown-item-header dropdown-item" data-drilldown="prev" href="#demoDocumentId">
-							<span class="dropdown-item-indicator-start">
-								<svg class="lexicon-icon lexicon-icon-caret-left" focusable="false" role="presentation">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-left" />
+						<div class="dropdown-header">
+							<a class="component-action dropdown-item-indicator-start" data-drilldown="prev" href="#_0c9k8n9m4" role="button">
+								<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-left" />
 								</svg>
-							</span>
-							Contract
-						</a>
+							</a>
+							<span class="dropdown-item-indicator-text-start">Contract</span>
+						</div>
 						<div class="dropdown-divider"></div>
 						<ul class="inline-scroller">
 							<li><a class="dropdown-item" href="#1">Contract Document #1</a></li>
@@ -220,27 +432,72 @@ section: Components
 					</div>
 				</div>
 
-				<div class="drilldown-item" id="demoShortcutId">
+				<div class="drilldown-item dropdown-menu-indicator-end dropdown-menu-indicator-start" id="_tggascnpo">
 					<div class="drilldown-item-inner">
-						<a class="drilldown-item-header dropdown-item" data-drilldown="prev" href="#demoFirstDrillDownItem">
-							<span class="dropdown-item-indicator-start">
-								<svg class="lexicon-icon lexicon-icon-caret-left" focusable="false" role="presentation">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-left" />
+						<div class="dropdown-header">
+							<button class="component-action dropdown-item-indicator-start" data-drilldown="prev" data-target="#_hyj8unh80">
+								<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-left" />
 								</svg>
-							</span>
-							Shortcut
-						</a>
+							</button>
+							<span class="dropdown-item-indicator-text-start">Lexicon</span>
+						</div>
 						<div class="dropdown-divider"></div>
 						<ul class="inline-scroller">
-							<li><a class="dropdown-item" href="#1">Shortcut #1</a></li>
-							<li><a class="dropdown-item" href="#1">Shortcut #2</a></li>
-							<li><a class="dropdown-item" href="#1">Shortcut #3</a></li>
+							<li>
+								<a class="dropdown-item" data-drilldown="next" href="#_hyj8unh80" role="button">
+									<span class="dropdown-item-indicator-start">
+										<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
+										</svg>
+									</span>
+									<span class="dropdown-item-indicator-text-end">Documents and Media</span>
+									<span class="dropdown-item-indicator-end">
+										<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-right" />
+										</svg>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" data-drilldown="next" href="#_hyj8unh80" role="button">
+									<span class="dropdown-item-indicator-start">
+										<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
+										</svg>
+									</span>
+									<span class="dropdown-item-indicator-text-end">Documents and Media</span>
+									<span class="dropdown-item-indicator-end">
+										<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-right" />
+										</svg>
+									</span>
+								</a>
+							</li>
+							<li><a class="dropdown-item" href="#1">Lexicon Link #1</a></li>
+							<li><a class="dropdown-item" href="#1">Lexicon Link #2</a></li>
+							<li><a class="dropdown-item" href="#1">Lexicon Link #3</a></li>
+							<li><a class="dropdown-item" href="#1">Lexicon Link #4</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
+			<div class="dropdown-footer">
+				<button class="btn btn-block btn-primary" type="button">Button</button>
+			</div>
 		</div>
 
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row clay-site-dropdown-display">
+	<div class="col-md-12">
+		<h3>Drilldown Dropdown Menu Utilities</h3>
+
+		<blockquote class="blockquote">
+			<p>Add <code>drilldown-height-sm</code> to <code>drilldown</code> to set a fixed height of <code>272px</code>.</p>
+			<p>Add <code>drilldown-height-md</code> to <code>drilldown</code> to set a fixed height of <code>344px</code>.</p>
+		</blockquote>
 	</div>
 </div>
 
@@ -259,7 +516,7 @@ $(document).on('click', '[data-drilldown]', function(event) {
 	var currentDrilldownItemId = '#' + $(this).closest('.drilldown-item').attr('id');
 	var currentDrilldownItem = $(currentDrilldownItemId);
 
-	var nextDrilldownItemId = $(this).attr('href');
+	var nextDrilldownItemId = $(this).attr('href') || $(this).data('target');
 	var nextDrilldownItem = $(nextDrilldownItemId);
 
 	event.preventDefault();
@@ -284,7 +541,7 @@ $(document).on('click', '[data-drilldown]', function(event) {
 				.off('transitionend.clay');
 
 			if (focus) {
-				$(this).find('.dropdown-item')[0].focus();
+				$(this).find('ul > li > a')[0].focus();
 			}
 		});
 	}
@@ -314,6 +571,10 @@ $(document).on('click', '[data-drilldown]', function(event) {
 				$(this).css('height', '').off('transitionend.clay');
 			});
 
+			setTimeout(function() {
+				drilldownInner.trigger('transitionend.clay');
+			}, 500);
+
 			drilldownItemTransitionend(currentDrilldownItem);
 			drilldownItemTransitionend(nextDrilldownItem, true);
 		}
@@ -342,6 +603,10 @@ $(document).on('click', '[data-drilldown]', function(event) {
 				$(this).css('height', '');
 				$(this).off('transitionend.clay');
 			});
+
+			setTimeout(function() {
+				drilldownInner.trigger('transitionend.clay');
+			}, 500);
 
 			drilldownItemTransitionend(currentDrilldownItem);
 			drilldownItemTransitionend(nextDrilldownItem, true);
@@ -376,6 +641,10 @@ $(document).on('click', '[data-drilldown]', function(event) {
 				$(this).off('transitionend.clay');
 			});
 
+			setTimeout(function() {
+				drilldownInner.trigger('transitionend.clay');
+			}, 500);
+
 			drilldownItemTransitionend(currentDrilldownItem);
 			drilldownItemTransitionend(nextDrilldownItem, true);
 		}
@@ -403,6 +672,10 @@ $(document).on('click', '[data-drilldown]', function(event) {
 				$(this).css('height', '');
 				$(this).off('transitionend.clay');
 			});
+
+			setTimeout(function() {
+				drilldownInner.trigger('transitionend.clay');
+			}, 500);
 
 			drilldownItemTransitionend(currentDrilldownItem);
 			drilldownItemTransitionend(nextDrilldownItem, true);
@@ -424,7 +697,7 @@ $(document).on('click', '[data-drilldown]', function(event) {
 	var currentDrilldownItemId = '#' + $(this).closest('.drilldown-item').attr('id');
 	var currentDrilldownItem = $(currentDrilldownItemId);
 
-	var nextDrilldownItemId = $(this).attr('href');
+	var nextDrilldownItemId = $(this).attr('href') || $(this).data('target');
 	var nextDrilldownItem = $(nextDrilldownItemId);
 
 	event.preventDefault();
@@ -449,7 +722,7 @@ $(document).on('click', '[data-drilldown]', function(event) {
 				.off('transitionend.clay');
 
 			if (focus) {
-				$(this).find('.dropdown-item')[0].focus();
+				$(this).find('ul > li > a')[0].focus();
 			}
 		});
 	}
@@ -479,6 +752,10 @@ $(document).on('click', '[data-drilldown]', function(event) {
 				$(this).css('height', '').off('transitionend.clay');
 			});
 
+			setTimeout(function() {
+				drilldownInner.trigger('transitionend.clay');
+			}, 500);
+
 			drilldownItemTransitionend(currentDrilldownItem);
 			drilldownItemTransitionend(nextDrilldownItem, true);
 		}
@@ -507,6 +784,10 @@ $(document).on('click', '[data-drilldown]', function(event) {
 				$(this).css('height', '');
 				$(this).off('transitionend.clay');
 			});
+
+			setTimeout(function() {
+				drilldownInner.trigger('transitionend.clay');
+			}, 500);
 
 			drilldownItemTransitionend(currentDrilldownItem);
 			drilldownItemTransitionend(nextDrilldownItem, true);
@@ -541,6 +822,10 @@ $(document).on('click', '[data-drilldown]', function(event) {
 				$(this).off('transitionend.clay');
 			});
 
+			setTimeout(function() {
+				drilldownInner.trigger('transitionend.clay');
+			}, 500);
+
 			drilldownItemTransitionend(currentDrilldownItem);
 			drilldownItemTransitionend(nextDrilldownItem, true);
 		}
@@ -568,6 +853,10 @@ $(document).on('click', '[data-drilldown]', function(event) {
 				$(this).css('height', '');
 				$(this).off('transitionend.clay');
 			});
+
+			setTimeout(function() {
+				drilldownInner.trigger('transitionend.clay');
+			}, 500);
 
 			drilldownItemTransitionend(currentDrilldownItem);
 			drilldownItemTransitionend(nextDrilldownItem, true);
