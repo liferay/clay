@@ -714,6 +714,7 @@ const iconsData = {
 	"test":						'"experiment", "lab"',
 	"text":						'"a", "editor"',
 	"text-editor":				'"style"',
+	"text-l":					'"a", "editor"',
 	"thumbs-down-full":			'"dislike", "social"',
 	"thumbs-down":				'"dislike", "social"',
 	"thumbs-up-full":			'"like", "social"',
