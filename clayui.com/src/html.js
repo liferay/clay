@@ -21,11 +21,7 @@ export default (props) => {
 					sizes="16x16 32x32"
 					type="image/png"
 				/>
-				<link
-					href="/css/atlas.css"
-					id="clayCSSTheme"
-					rel="stylesheet"
-				/>
+
 				{props.headComponents}
 
 				<link
