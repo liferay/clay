@@ -554,6 +554,7 @@ const iconsData = {
 	"columns":					'"grid", "table"',
 	"community":				'"people", "user"',
 	"compress":					'"arrows", "decrease", "reduce", "resize", "small"',
+	"container":				'"box", "grid", "rectangle", "squares"',
 	"control-panel":			'"change", "effects", "settings"',
 	"custom-size":				'"arrows", "box", "increase", "sides"',
 	"cut":						'"copy", "editor", "paste", "scissors", "text"',
