@@ -5,12 +5,26 @@
 
 import ClayButton from '@clayui/button';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import ClayDatePicker from '@clayui/date-picker';
 import ClayForm, {ClayInput} from '@clayui/form';
 import ClayLayout from '@clayui/layout';
 import ClayMultiSelect from '@clayui/multi-select';
 import {ClayVerticalNav} from '@clayui/nav';
 import ClayPanel from '@clayui/panel';
 import React from 'react';
+
+const ClayDatePickerWithState = (props: {[key: string]: any}) => {
+	const [value, setValue] = React.useState<string | Date>('');
+
+	return (
+		<ClayDatePicker
+			{...props}
+			onValueChange={setValue}
+			spritemap={spritemap}
+			value={value as string}
+		/>
+	);
+};
 
 export default () => {
 	const [formValues, setFormValues] = React.useState<any>({});
@@ -100,6 +114,11 @@ export default () => {
 												<option>{'Mad'}</option>
 												<option>{'Sad'}</option>
 											</select>
+										</ClayForm.Group>
+
+										<ClayForm.Group>
+											<label>{'Date'}</label>
+											<ClayDatePickerWithState />
 										</ClayForm.Group>
 									</ClayPanel.Body>
 								</ClayPanel>
