@@ -12,8 +12,7 @@ exports[`ClayModal renders 1`] = `
       class="fade modal d-block show"
     >
       <div
-        class=""
-        style="margin: auto; max-width: 600px;"
+        style="display: table; margin: auto;"
       >
         <div
           class="modal-dialog"
@@ -93,8 +92,7 @@ exports[`ClayModal renders Header w/ low-level API 1`] = `
       class="fade modal d-block show"
     >
       <div
-        class=""
-        style="margin: auto; max-width: 600px;"
+        style="display: table; margin: auto;"
       >
         <div
           class="modal-dialog"
@@ -158,8 +156,7 @@ exports[`ClayModal renders a body component with url 1`] = `
       class="fade modal d-block show"
     >
       <div
-        class=""
-        style="margin: auto; max-width: 600px;"
+        style="display: table; margin: auto;"
       >
         <div
           class="modal-dialog"
@@ -197,8 +194,7 @@ exports[`ClayModal renders a footer component with buttons 1`] = `
       class="fade modal d-block show"
     >
       <div
-        class=""
-        style="margin: auto; max-width: 600px;"
+        style="display: table; margin: auto;"
       >
         <div
           class="modal-dialog"
@@ -262,8 +258,7 @@ exports[`ClayModal renders with Header 1`] = `
       class="fade modal d-block show"
     >
       <div
-        class=""
-        style="margin: auto; max-width: 600px;"
+        style="display: table; margin: auto;"
       >
         <div
           class="modal-dialog"
@@ -316,8 +311,7 @@ exports[`ClayModal renders with size 1`] = `
       class="fade modal d-block show"
     >
       <div
-        class="modal-lg"
-        style="margin: auto;"
+        style="display: table; margin: auto;"
       >
         <div
           class="modal-dialog modal-lg"
@@ -346,8 +340,7 @@ exports[`ClayModal renders with status 1`] = `
       class="fade modal d-block show"
     >
       <div
-        class=""
-        style="margin: auto; max-width: 600px;"
+        style="display: table; margin: auto;"
       >
         <div
           class="modal-dialog modal-success"

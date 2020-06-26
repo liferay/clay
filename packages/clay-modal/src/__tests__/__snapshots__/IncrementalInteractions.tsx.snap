@@ -28,8 +28,7 @@ exports[`ModalProvider -> IncrementalInteractions renders a modal when dispatchi
       class="fade modal d-block show"
     >
       <div
-        class="modal-lg"
-        style="margin: auto;"
+        style="display: table; margin: auto;"
       >
         <div
           class="modal-dialog modal-lg"
