@@ -68,9 +68,6 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 
 	React.useEffect(() => observer.dispatch(ObserverType.Open), []);
 
-	// Defines a default Modal size when size is not set.
-	const maxWidth = size ? {} : {maxWidth: '600px'};
-
 	const [show, content] =
 		observer && observer.mutation ? observer.mutation : [false, false];
 
@@ -88,11 +85,11 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 				})}
 			>
 				<div
-					className={classNames({
-						[`modal-${size}`]: size,
-					})}
 					ref={modalBodyElementRef}
-					style={{margin: 'auto', ...maxWidth}}
+					style={{
+						display: 'table',
+						margin: 'auto',
+					}}
 				>
 					<div
 						className={classNames('modal-dialog', {
