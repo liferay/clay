@@ -36,7 +36,12 @@ interface IProps {
 	/**
 	 * Callback for when card is clicked on
 	 */
-	onClick?: () => void;
+	onClick?: (event: React.MouseEvent | React.KeyboardEvent) => void;
+
+	/**
+	 * Callback for when a keyboard key pressed on a card
+	 */
+	onKeyDown?: (event: React.KeyboardEvent) => void;
 
 	/**
 	 * Path to spritemap for icon symbol.
@@ -49,13 +54,18 @@ interface IProps {
 	title?: React.ReactText;
 }
 
+const KEYCODES = {
+	ENTER: 13,
+	SPACE: 32,
+};
+
 export const ClayCardWithNavigation: React.FunctionComponent<IProps> = ({
 	children,
 	description,
 	horizontal = false,
 	horizontalSymbol = '',
 	href,
-	onClick,
+	onClick: onClickCallback,
 	spritemap,
 	title,
 }: IProps) => {
@@ -64,7 +74,19 @@ export const ClayCardWithNavigation: React.FunctionComponent<IProps> = ({
 			horizontal={horizontal}
 			href={href}
 			interactive
-			onClick={onClick}
+			onClick={onClickCallback}
+			onKeyDown={(event: React.KeyboardEvent) => {
+				if (
+					(event && event.keyCode === KEYCODES.ENTER) ||
+					(event && event.keyCode === KEYCODES.SPACE)
+				) {
+					event.preventDefault();
+
+					if (onClickCallback) {
+						onClickCallback(event);
+					}
+				}
+			}}
 			tabIndex={0}
 		>
 			{!horizontal && (
