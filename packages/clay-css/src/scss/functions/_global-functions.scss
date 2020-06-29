@@ -525,7 +525,11 @@
 
 	'filter': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="lexicon-icon-outline filter-border" d="M448.1 89.9V156L256 316.1 63.9 156V89.9h384.2m32.1-64H31.8c-17.7 0-32 14.3-32 32V186L192 346.1v108.3c0 18.6 18.5 40.8 46.3 28.6l64-32c10.8-5.4 17.7-16.5 17.7-28.6v-76.3L512.2 186V57.9c0-17.7-14.3-32-32-32z" fill="#{$color}"/></svg>',
 
+	'flag-empty-rtl': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="lexicon-icon-outline" d="M128 32h256c0-42.4 64-42.9 64 0v448c0 42.6-64 42.7-64 0V288H128c-18.2 0-32-13.8-32-32V64c0-18.2 13.8-32 32-32zm32 192h224V96H160v128z" fill="#{$color}"/></svg>',
+
 	'flag-empty': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="lexicon-icon-outline" d="M384 32H128c0-42.4-64-42.9-64 0v448c0 42.6 64 42.7 64 0V288h256c18.2 0 32-13.8 32-32V64c0-18.2-13.8-32-32-32zm-32 192H128V96h224v128z" fill="#{$color}"/></svg>',
+
+	'flag-full-rtl': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="lexicon-icon-outline" d="M448 480c0 42.6-64 42.7-64 0V288H128c-18.2 0-32-13.8-32-32V64c0-18.2 13.8-32 32-32h256c0-42.4 64-42.9 64 0v448z" fill="#{$color}"/></svg>',
 
 	'flag-full': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="lexicon-icon-outline" d="M64 480c0 42.6 64 42.7 64 0V288h256c18.2 0 32-13.8 32-32V64c0-18.2-13.8-32-32-32H128c0-42.4-64-42.9-64 0v448z" fill="#{$color}"/></svg>',
 
