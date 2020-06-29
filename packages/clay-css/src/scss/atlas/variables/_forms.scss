@@ -13,8 +13,6 @@ $input-border-left-width: $input-border-width !default; // 1px
 $input-border-right-width: $input-border-width !default; // 1px
 $input-border-top-width: $input-border-width !default; // 1px
 
-$input-border-style: solid !default;
-
 $input-border-radius-sm: $border-radius !default;
 
 $input-padding-x: 1rem !default; // 16px
@@ -76,6 +74,7 @@ $input-readonly: map-deep-merge(
 	(
 		bg: $input-readonly-bg,
 		border-color: $input-border-color,
+		focus-border-color: $input-focus-border-color,
 		focus-box-shadow: none,
 	),
 	$input-readonly
