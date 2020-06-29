@@ -22,9 +22,12 @@ th {
 }
 
 .table {
+	background-color: $table-bg;
 	border-spacing: 0;
+	color: $table-color;
 	font-size: $table-font-size;
 	margin-bottom: $table-margin-bottom;
+	width: 100%;
 
 	thead {
 		td,
@@ -32,8 +35,10 @@ th {
 			// Webkit rendering issue with responsive-tables
 
 			background-color: $table-head-bg;
-			border-bottom-width: $table-head-border-bottom-width;
+			border-bottom: $table-head-border-bottom-width solid
+				$table-border-color;
 			border-top-width: $table-head-border-top-width;
+			vertical-align: bottom;
 		}
 
 		th a {
@@ -42,11 +47,14 @@ th {
 	}
 
 	th {
+		border-top: $table-border-width solid $table-border-color;
 		color: $table-head-color;
 		font-size: $table-head-font-size;
 		font-weight: $table-head-font-weight;
 		height: $table-head-height;
+		padding: $table-cell-padding;
 		position: relative;
+		vertical-align: top;
 	}
 
 	td {
@@ -57,6 +65,7 @@ th {
 
 		border-color: $table-data-border-color;
 		border-style: $table-data-border-style;
+		padding: $table-cell-padding;
 		position: relative;
 		vertical-align: $table-data-vertical-align;
 	}
@@ -81,6 +90,10 @@ th {
 
 			background-color: $table-bg;
 		}
+	}
+
+	tbody + tbody {
+		border-top: (2 * $table-border-width) solid $table-border-color;
 	}
 
 	.autofit-col {
@@ -128,12 +141,25 @@ th {
 	width: 1%;
 }
 
+// Table Sm
+
+.table-sm {
+	th,
+	td {
+		padding: $table-cell-padding-sm;
+	}
+}
+
 // Table Bordered
 
 .table-bordered {
+	border: $table-border-width solid $table-border-color;
+
 	thead {
 		td,
 		th {
+			border-bottom-width: 2 * $table-border-width;
+
 			@if (
 				$table-head-border-top-width ==
 					0 and
@@ -146,7 +172,17 @@ th {
 
 	td,
 	th {
+		border: $table-border-width solid $table-border-color;
 		border-width: $table-bordered-border-width;
+	}
+}
+
+.table-borderless {
+	th,
+	td,
+	thead th,
+	tbody + tbody {
+		border: 0;
 	}
 }
 
@@ -168,20 +204,26 @@ th {
 		&:hover {
 			td,
 			th {
+				color: $table-hover-color;
 				background-color: $table-hover-bg;
 			}
 		}
 	}
 }
 
+// Table Row Backgrounds
+
+@each $color, $value in $theme-colors {
+	@include table-row-variant(
+		$color,
+		theme-color-level($color, $table-bg-level),
+		theme-color-level($color, $table-border-level)
+	);
+}
+
 // Table Active
 
-.table .table-active {
-	> td,
-	> th {
-		background-color: $table-active-bg;
-	}
-}
+@include table-row-variant(active, $table-active-bg);
 
 // Table Disabled
 
@@ -221,6 +263,56 @@ th {
 	}
 }
 
+// Dark styles
+
+.table {
+	.thead-dark {
+		th {
+			background-color: $table-dark-bg;
+			border-color: $table-dark-border-color;
+			color: $table-dark-color;
+		}
+	}
+
+	.thead-light {
+		th {
+			background-color: $table-head-bg;
+			border-color: $table-border-color;
+			color: $table-head-color;
+		}
+	}
+}
+
+.table-dark {
+	background-color: $table-dark-bg;
+	color: $table-dark-color;
+
+	th,
+	td,
+	thead th {
+		border-color: $table-dark-border-color;
+	}
+
+	&.table-bordered {
+		border-width: 0;
+	}
+
+	&.table-striped {
+		tbody tr:nth-of-type(#{$table-striped-order}) {
+			background-color: $table-dark-accent-bg;
+		}
+	}
+
+	&.table-hover {
+		tbody tr {
+			&:hover {
+				background-color: $table-dark-hover-bg;
+				color: $table-dark-hover-color;
+			}
+		}
+	}
+}
+
 // Table Title
 
 .table-title {
@@ -241,6 +333,34 @@ th {
 
 .table-action-link {
 	@include clay-link($table-action-link);
+}
+
+// Responsive tables
+//
+// Generate series of `.table-responsive-*` classes for configuring the screen
+// size of where your table will overflow.
+
+.table-responsive {
+	@each $breakpoint in map-keys($grid-breakpoints) {
+		$next: breakpoint-next($breakpoint, $grid-breakpoints);
+		$infix: breakpoint-infix($next, $grid-breakpoints);
+
+		&#{$infix} {
+			@include media-breakpoint-down($breakpoint) {
+				display: block;
+
+				-webkit-overflow-scrolling: touch;
+
+				overflow-x: auto;
+				width: 100%;
+
+				// Prevent double border on horizontal scroll due to use of `display: block;`
+				> .table-bordered {
+					border-width: 0;
+				}
+			}
+		}
+	}
 }
 
 // Table List Skin
