@@ -83,7 +83,6 @@ module.exports = function(gulp, plugins, _, config) {
 				)
 				.pipe(filter.restore)
 				.pipe(assetFilter)
-				.pipe(plugins.header(license.tpl, license.metadata))
 				.pipe(assetFilter.restore)
 				.pipe(plugins.plumber())
 				.pipe(svgFilter)

@@ -8,14 +8,26 @@ module.exports = {
 		).version,
 		year: (new Date()).getFullYear()
 	},
-	tpl: [
+	TPL_C_LICENSE: [
 		'/**',
 		'* Clay <%= version %>',
 		'*',
-		'* Copyright <%= year %>, Liferay, Inc.',
-		'* All rights reserved.',
-		'* MIT license',
+		'* SPDX-FileCopyrightText: © 2020 Liferay, Inc. <https://liferay.com>',
+		'* SPDX-FileCopyrightText: © 2020 Contributors to the project Clay <https://github.com/liferay/clay/graphs/contributors>',
+		'*',
+		'* SPDX-License-Identifier: BSD-3-Clause',
 		'*/',
+		''
+	].join('\n'),
+	TPL_SVG_C_LICENSE: [
+		'<!--',
+		'* Clay <%= version %>',
+		'*',
+		'* SPDX-FileCopyrightText: © 2020 Liferay, Inc. <https://liferay.com>',
+		'* SPDX-FileCopyrightText: © 2020 Contributors to the project Clay <https://github.com/liferay/clay/graphs/contributors>',
+		'*',
+		'* SPDX-License-Identifier: BSD-3-Clause',
+		'-->',
 		''
 	].join('\n')
 };

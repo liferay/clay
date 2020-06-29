@@ -2,6 +2,7 @@ var path = require('path');
 var _ = require('lodash');
 var _s = require('underscore.string');
 var basename = require('basename');
+var license = require('../copyright_banner');
 
 module.exports = function(gulp, plugins, _, config) {
 	var src = config.src || 'src/images/icons/*.svg';
@@ -23,6 +24,7 @@ module.exports = function(gulp, plugins, _, config) {
 			.pipe(plugins.rename(exports.rename))
 			.pipe(plugins.svgmin(exports.svgmin))
 			.pipe(plugins.svgstore())
+			.pipe(plugins.header(license.TPL_SVG_C_LICENSE, license.metadata))
 			.pipe(gulp.dest(dest));
 };
 
