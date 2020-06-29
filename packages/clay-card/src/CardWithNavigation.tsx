@@ -65,7 +65,7 @@ export const ClayCardWithNavigation: React.FunctionComponent<IProps> = ({
 	horizontal = false,
 	horizontalSymbol = '',
 	href,
-	onClick: onClickCallback,
+	onClick,
 	spritemap,
 	title,
 }: IProps) => {
@@ -74,7 +74,7 @@ export const ClayCardWithNavigation: React.FunctionComponent<IProps> = ({
 			horizontal={horizontal}
 			href={href}
 			interactive
-			onClick={onClickCallback}
+			onClick={onClick}
 			onKeyDown={(event: React.KeyboardEvent) => {
 				if (
 					(event && event.keyCode === KEYCODES.ENTER) ||
@@ -82,8 +82,8 @@ export const ClayCardWithNavigation: React.FunctionComponent<IProps> = ({
 				) {
 					event.preventDefault();
 
-					if (onClickCallback) {
-						onClickCallback(event);
+					if (onClick) {
+						onClick(event);
 					}
 				}
 			}}
