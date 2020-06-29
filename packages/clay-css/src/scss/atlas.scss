@@ -16,6 +16,7 @@
 * SPDX-License-Identifier: LicenseRef-MIT-Bootstrap
 */
 
+@import 'bootstrap/_functions';
 @import 'functions/_global-functions';
 
 // INSERT CUSTOM VARS
@@ -24,11 +25,15 @@
 
 @import 'variables/_bs4-variable-overwrites';
 
-@import '_bs4';
+@import 'bootstrap/_variables';
 
 @import '_variables';
 
+@import 'bootstrap/mixins';
+
 @import '_mixins';
+
+@import '_bs4';
 
 @import '_components';
 

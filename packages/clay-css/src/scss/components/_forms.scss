@@ -290,6 +290,7 @@ textarea.form-control,
 textarea.form-control-plaintext,
 .form-control.form-control-textarea {
 	height: $input-textarea-height;
+	resize: vertical;
 }
 
 // File
