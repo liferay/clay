@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {noop} from '@clayui/shared';
 import ClayIcon from '@clayui/icon';
 import ClayLayout from '@clayui/layout';
 import ClaySticker from '@clayui/sticker';
@@ -66,6 +67,7 @@ export const ClayCardWithNavigation: React.FunctionComponent<IProps> = ({
 	horizontalSymbol = '',
 	href,
 	onClick,
+	onKeyDown = noop,
 	spritemap,
 	title,
 }: IProps) => {
@@ -86,6 +88,8 @@ export const ClayCardWithNavigation: React.FunctionComponent<IProps> = ({
 						onClick(event);
 					}
 				}
+
+				onKeyDown(event);
 			}}
 			tabIndex={0}
 		>
