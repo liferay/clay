@@ -1,9 +1,25 @@
-a.btn.disabled {
-	pointer-events: all;
-}
-
 .btn {
+	background-color: transparent;
+	border: $btn-border-width solid transparent;
+
+	@include border-radius($btn-border-radius, 0);
+	@include box-shadow($btn-box-shadow);
+
+	color: $body-color;
+	cursor: $btn-cursor;
+	display: inline-block;
+	font-family: $btn-font-family;
 	font-size: $btn-font-size;
+	font-weight: $btn-font-weight;
+	line-height: $btn-line-height;
+	padding: $btn-padding-y $btn-padding-x;
+	text-align: center;
+
+	@include transition($btn-transition);
+
+	user-select: none;
+	vertical-align: middle;
+	white-space: $btn-white-space;
 
 	@include clay-scale-component {
 		font-size: $btn-font-size-mobile;
@@ -13,17 +29,53 @@ a.btn.disabled {
 		padding-top: $btn-padding-y-mobile;
 	}
 
-	&:not(:disabled):not(.disabled) {
-		cursor: $btn-cursor;
+	&:hover {
+		color: $body-color;
+		text-decoration: none;
+	}
+
+	&:focus,
+	&.focus {
+		box-shadow: $btn-focus-box-shadow;
+		outline: 0;
+	}
+
+	&:active,
+	&.active {
+		@include box-shadow($btn-active-box-shadow);
+
+		&:focus {
+			@if ($enable-shadows and $btn-active-box-shadow != none) {
+				box-shadow: $btn-focus-box-shadow, $btn-active-box-shadow;
+			} @else {
+				box-shadow: $btn-focus-box-shadow;
+			}
+		}
 	}
 
 	&.disabled,
 	&:disabled {
 		cursor: $btn-disabled-cursor;
+		opacity: $btn-disabled-opacity;
+
+		&:focus,
+		&:focus:active {
+			box-shadow: none;
+		}
 
 		&:active {
 			pointer-events: none;
 		}
+	}
+}
+
+fieldset:disabled a.btn {
+	box-shadow: none;
+	cursor: $btn-disabled-cursor;
+	opacity: $btn-disabled-opacity;
+
+	&:active {
+		pointer-events: none;
 	}
 }
 
@@ -41,7 +93,7 @@ a.btn.disabled {
 // Button Sizes
 
 %clay-btn-lg {
-	@include border-radius($btn-border-radius-lg);
+	@include border-radius($btn-border-radius-lg, 0);
 
 	font-size: $btn-font-size-lg;
 	line-height: $btn-line-height-lg;
@@ -68,27 +120,11 @@ a.btn.disabled {
 }
 
 .btn-lg {
-	font-size: $btn-font-size-lg;
-
-	@include clay-scale-component {
-		font-size: $btn-font-size-lg-mobile;
-		padding-bottom: $btn-padding-y-lg-mobile;
-		padding-left: $btn-padding-x-lg-mobile;
-		padding-right: $btn-padding-x-lg-mobile;
-		padding-top: $btn-padding-y-lg-mobile;
-	}
-
-	.inline-item {
-		font-size: $btn-inline-item-font-size-lg;
-	}
-
-	.btn-section {
-		font-size: $btn-section-font-size-lg;
-	}
+	@extend %clay-btn-lg !optional;
 }
 
 %clay-btn-sm {
-	@include border-radius($btn-border-radius-sm);
+	@include border-radius($btn-border-radius-sm, 0);
 
 	font-size: $btn-font-size-sm;
 	line-height: $btn-line-height-sm;
@@ -115,22 +151,27 @@ a.btn.disabled {
 }
 
 .btn-sm {
-	font-size: $btn-font-size-sm;
+	@extend %clay-btn-sm !optional;
+}
 
-	@include clay-scale-component {
-		font-size: $btn-font-size-sm-mobile;
-		padding-bottom: $btn-padding-y-sm-mobile;
-		padding-left: $btn-padding-x-sm-mobile;
-		padding-right: $btn-padding-x-sm-mobile;
-		padding-top: $btn-padding-y-sm-mobile;
+// Button Block
+
+.btn-block {
+	display: block;
+	width: 100%;
+
+	+ .btn-block {
+		margin-top: $btn-block-spacing-y;
 	}
+}
 
-	.inline-item {
-		font-size: $btn-inline-item-font-size-sm;
-	}
+// Specificity overrides
 
-	.btn-section {
-		font-size: $btn-section-font-size-sm;
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
+	&.btn-block {
+		width: 100%;
 	}
 }
 

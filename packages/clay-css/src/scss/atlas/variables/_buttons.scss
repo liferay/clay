@@ -1,5 +1,5 @@
-// Will need to be revisited if https://github.com/twbs/bootstrap/pull/24821 merge error is fixed
-$btn-box-shadow: 0 0 rgba(#000, 0) !default;
+$btn-box-shadow: none !default;
+
 $btn-font-weight: $font-weight-semi-bold !default;
 $btn-padding-x: 0.9375rem !default; // 15px
 $btn-padding-y: 0.4375rem !default; // 7px
@@ -12,8 +12,7 @@ $btn-disabled-opacity: 0.4 !default;
 
 $btn-link-disabled-color: $link-color !default;
 
-// Will need to be revisited if https://github.com/twbs/bootstrap/pull/24821 merge error is fixed
-$btn-active-box-shadow: inset 0 0 rgba(#000, 0) !default;
+$btn-active-box-shadow: none !default;
 
 $btn-inline-item-font-size: 1rem !default; // 16px
 
@@ -50,15 +49,21 @@ $btn-group-item-margin-right: 1rem !default;
 $btn-primary: () !default;
 $btn-primary: map-deep-merge(
 	(
+		box-shadow: $c-unset,
 		hover-bg: $primary-d1,
 		hover-border-color: transparent,
+		hover: (
+			background-image: clay-enable-gradients($primary-d1),
+		),
 		focus-bg: $primary-d1,
-		focus-box-shadow: $btn-focus-box-shadow,
+		focus-box-shadow: $c-unset,
+		focus: (
+			background-image: clay-enable-gradients($primary-d1),
+		),
 		disabled-bg: $primary,
 		active-bg: $primary-d2,
 		active-border-color: transparent,
-		active-box-shadow: none,
-		active-focus-box-shadow: $btn-focus-box-shadow,
+		active-focus-box-shadow: $c-unset,
 	),
 	$btn-primary
 );
@@ -67,23 +72,33 @@ $btn-secondary: () !default;
 $btn-secondary: map-deep-merge(
 	(
 		bg: $white,
+		background-image: clay-enable-gradients($white),
 		border-color: $secondary-l2,
+		box-shadow: $c-unset,
 		color: $secondary,
 		hover-bg: $gray-100,
 		hover-border-color: $secondary-l2,
 		hover-color: $gray-900,
+		hover: (
+			background-image: clay-enable-gradients($gray-100),
+		),
 		focus-bg: $gray-100,
 		focus-border-color: $secondary-l2,
-		focus-box-shadow: $btn-focus-box-shadow,
+		focus-box-shadow: $c-unset,
 		focus-color: $gray-900,
+		focus: (
+			background-image: clay-enable-gradients($gray-100),
+		),
 		disabled-bg: $white,
 		disabled-border-color: $secondary-l2,
 		disabled-color: $secondary,
+		disabled: (
+			background-image: clay-enable-gradients($white),
+		),
 		active-border-color: $secondary-l2,
 		active-color: $gray-900,
 		active-bg: $gray-200,
-		active-box-shadow: none,
-		active-focus-box-shadow: $btn-focus-box-shadow,
+		active-focus-box-shadow: $c-unset,
 		loading-animation: null,
 	),
 	$btn-secondary
@@ -92,16 +107,22 @@ $btn-secondary: map-deep-merge(
 $btn-success: () !default;
 $btn-success: map-deep-merge(
 	(
+		box-shadow: $c-unset,
 		hover-bg: $success-d1,
 		hover-border-color: transparent,
+		hover: (
+			background-image: clay-enable-gradients($success-d1),
+		),
 		focus-bg: $success-d1,
 		focus-border-color: transparent,
-		focus-box-shadow: $btn-focus-box-shadow,
+		focus-box-shadow: $c-unset,
+		focus: (
+			background-image: clay-enable-gradients($success-d1),
+		),
 		disabled-bg: $success,
 		active-bg: $success-d2,
 		active-border-color: transparent,
-		active-box-shadow: none,
-		active-focus-box-shadow: $btn-focus-box-shadow,
+		active-focus-box-shadow: $c-unset,
 	),
 	$btn-success
 );
@@ -109,16 +130,22 @@ $btn-success: map-deep-merge(
 $btn-info: () !default;
 $btn-info: map-deep-merge(
 	(
+		box-shadow: $c-unset,
 		hover-bg: $info-d1,
 		hover-border-color: transparent,
+		hover: (
+			background-image: clay-enable-gradients($info-d1),
+		),
 		focus-bg: $info-d1,
 		focus-border-color: transparent,
-		focus-box-shadow: $btn-focus-box-shadow,
+		focus-box-shadow: $c-unset,
+		focus: (
+			background-image: clay-enable-gradients($info-d1),
+		),
 		disabled-bg: $info,
 		active-bg: $info-d2,
 		active-border-color: transparent,
-		active-box-shadow: none,
-		active-focus-box-shadow: $btn-focus-box-shadow,
+		active-focus-box-shadow: $c-unset,
 	),
 	$btn-info
 );
@@ -126,16 +153,22 @@ $btn-info: map-deep-merge(
 $btn-warning: () !default;
 $btn-warning: map-deep-merge(
 	(
+		box-shadow: $c-unset,
 		hover-bg: $warning-d1,
 		hover-border-color: transparent,
+		hover: (
+			background-image: clay-enable-gradients($warning-d1),
+		),
 		focus-bg: $warning-d1,
 		focus-border-color: transparent,
-		focus-box-shadow: $btn-focus-box-shadow,
+		focus-box-shadow: $c-unset,
+		focus: (
+			background-image: clay-enable-gradients($warning-d1),
+		),
 		disabled-bg: $warning,
 		active-bg: $warning-d2,
 		active-border-color: transparent,
-		active-box-shadow: none,
-		active-focus-box-shadow: $btn-focus-box-shadow,
+		active-focus-box-shadow: $c-unset,
 		loading-animation: 'loading-animation-light',
 	),
 	$btn-warning
@@ -144,16 +177,22 @@ $btn-warning: map-deep-merge(
 $btn-danger: () !default;
 $btn-danger: map-deep-merge(
 	(
+		box-shadow: $c-unset,
 		hover-bg: $danger-d1,
 		hover-border-color: transparent,
+		hover: (
+			background-image: clay-enable-gradients($danger-d1),
+		),
 		focus-bg: $danger-d1,
 		focus-border-color: transparent,
-		focus-box-shadow: $btn-focus-box-shadow,
+		focus-box-shadow: $c-unset,
+		focus: (
+			background-image: clay-enable-gradients($danger-d1),
+		),
 		disabled-bg: $danger,
 		active-bg: $danger-d2,
 		active-border-color: transparent,
-		active-box-shadow: none,
-		active-focus-box-shadow: $btn-focus-box-shadow,
+		active-focus-box-shadow: $c-unset,
 	),
 	$btn-danger
 );
@@ -161,17 +200,23 @@ $btn-danger: map-deep-merge(
 $btn-light: () !default;
 $btn-light: map-deep-merge(
 	(
+		box-shadow: $c-unset,
 		color: $gray-900,
 		hover-bg: $light-d1,
 		hover-border-color: transparent,
+		hover: (
+			background-image: clay-enable-gradients($light-d1),
+		),
 		focus-bg: $light-d1,
 		focus-border-color: transparent,
-		focus-box-shadow: $btn-focus-box-shadow,
+		focus-box-shadow: $c-unset,
+		focus: (
+			background-image: clay-enable-gradients($light-d1),
+		),
 		disabled-bg: $light,
 		active-bg: $light-d2,
 		active-border-color: transparent,
-		active-box-shadow: none,
-		active-focus-box-shadow: $btn-focus-box-shadow,
+		active-focus-box-shadow: $c-unset,
 	),
 	$btn-light
 );
@@ -179,16 +224,22 @@ $btn-light: map-deep-merge(
 $btn-dark: () !default;
 $btn-dark: map-deep-merge(
 	(
+		box-shadow: $c-unset,
 		hover-bg: $dark-d1,
 		hover-border-color: transparent,
+		hover: (
+			background-image: clay-enable-gradients($dark-d1),
+		),
 		focus-bg: $dark-d1,
 		focus-border-color: transparent,
-		focus-box-shadow: $btn-focus-box-shadow,
+		focus-box-shadow: $c-unset,
+		focus: (
+			background-image: clay-enable-gradients($dark-d1),
+		),
 		disabled-bg: $dark,
 		active-bg: $dark-d2,
 		active-border-color: transparent,
-		active-box-shadow: none,
-		active-focus-box-shadow: $btn-focus-box-shadow,
+		active-focus-box-shadow: $c-unset,
 	),
 	$btn-dark
 );

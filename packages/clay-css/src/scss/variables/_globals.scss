@@ -2,9 +2,14 @@
 /// @group globals
 ////
 
-/// @deprecated as of v2.4.1 we will not support unsetting variables in version 2 because it violates the Sass spec. If you are using libsass you can still unset Clay CSS / Bootstrap variables with the syntax `$my-var: !default;`.
+/// The keyword `clay-unset` allows unsetting a Sass variable value so it doesn't get output in the final CSS file.
 
 $clay-unset: clay-unset !default;
+
+/// An alias for `$clay-unset`
+
+$c-unset: $clay-unset !default;
+
 $clay-unset-placeholder: clay-unset-placeholder !default;
 
 $primary-d1: darken($primary, 7.5) !default;

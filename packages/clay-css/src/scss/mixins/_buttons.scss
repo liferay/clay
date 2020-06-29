@@ -372,8 +372,8 @@
 			@include clay-css($focus);
 		}
 
-		&:not([disabled]):not(.disabled):active,
-		&:not([disabled]):not(.disabled).active,
+		&:active,
+		&.active,
 		.show > &.dropdown-toggle {
 			@include clay-css($active);
 

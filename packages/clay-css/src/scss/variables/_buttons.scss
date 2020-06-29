@@ -60,8 +60,48 @@ $btn-toolbar-spacer-y: 0.125rem !default; // 2px
 $btn-primary: () !default;
 $btn-primary: map-deep-merge(
 	(
+		background-color: $primary,
+		background-image: clay-enable-gradients($primary),
+		border-color: $primary,
+		box-shadow: clay-enable-shadows([$btn-box-shadow]),
+		color: color-yiq($primary),
+		hover: (
+			background-color: darken($primary, 7.5%),
+			background-image: clay-enable-gradients(darken($primary, 7.5%)),
+			border-color: darken($primary, 10%),
+			color: color-yiq(darken($primary, 7.5%)),
+		),
+		focus: (
+			background-color: darken($primary, 7.5%),
+			background-image: clay-enable-gradients(darken($primary, 7.5%)),
+			border-color: darken($primary, 10%),
+			box-shadow:
+				clay-enable-shadows(
+					[ $btn-box-shadow#{','} 0 0 0 $btn-focus-width rgba(mix(color-yiq($primary), $primary, 15%), 0.5),
+					0 0 0 $btn-focus-width
+						rgba(mix(color-yiq($primary), $primary, 15%), 0.5) ]
+				),
+			color: color-yiq(darken($primary, 7.5%)),
+		),
+		active: (
+			background-color: darken($primary, 10%),
+			background-image: clay-enable-gradients(none),
+			border-color: darken($primary, 12.5%),
+			color: color-yiq(darken($primary, 10%)),
+		),
+		active-focus: (
+			box-shadow:
+				clay-enable-shadows(
+					[ $btn-active-box-shadow#{','} 0 0 0 $btn-focus-width rgba(mix(color-yiq($primary), $primary, 15%), 0.5),
+					0 0 0 $btn-focus-width
+						rgba(mix(color-yiq($primary), $primary, 15%), 0.5) ]
+				),
+		),
 		disabled: (
-			box-shadow: none,
+			background-color: $primary,
+			background-image: clay-enable-gradients($primary),
+			border-color: $primary,
+			color: color-yiq($primary),
 		),
 		loading-animation: 'loading-animation-light',
 	),
@@ -71,8 +111,49 @@ $btn-primary: map-deep-merge(
 $btn-secondary: () !default;
 $btn-secondary: map-deep-merge(
 	(
+		background-color: $secondary,
+		background-image: clay-enable-gradients($secondary),
+		border-color: $secondary,
+		box-shadow: clay-enable-shadows([$btn-box-shadow]),
+		color: color-yiq($secondary),
+		hover: (
+			background-color: darken($secondary, 7.5%),
+			background-image: clay-enable-gradients(darken($secondary, 7.5%)),
+			border-color: darken($secondary, 10%),
+			color: color-yiq(darken($secondary, 7.5%)),
+		),
+		focus: (
+			background-color: darken($secondary, 7.5%),
+			background-image: clay-enable-gradients(darken($secondary, 7.5%)),
+			border-color: darken($secondary, 10%),
+			box-shadow:
+				clay-enable-shadows(
+					[ $btn-box-shadow#{','} 0 0 0 $btn-focus-width rgba(mix(color-yiq($secondary), $secondary, 15%), 0.5),
+					0 0 0 $btn-focus-width
+						rgba(mix(color-yiq($secondary), $secondary, 15%), 0.5),
+					]
+				),
+			color: color-yiq(darken($secondary, 7.5%)),
+		),
+		active: (
+			background-color: darken($secondary, 10%),
+			background-image: clay-enable-gradients(none),
+			border-color: darken($secondary, 12.5%),
+			color: color-yiq(darken($secondary, 10%)),
+		),
+		active-focus: (
+			box-shadow:
+				clay-enable-shadows(
+					[ $btn-active-box-shadow#{','} 0 0 0 $btn-focus-width rgba(mix(color-yiq($secondary), $secondary, 15%), 0.5),
+					0 0 0 $btn-focus-width
+						rgba(mix(color-yiq($secondary), $secondary, 15%), 0.5) ]
+				),
+		),
 		disabled: (
-			box-shadow: none,
+			background-color: $secondary,
+			background-image: clay-enable-gradients($secondary),
+			border-color: $secondary,
+			color: color-yiq($secondary),
 		),
 		loading-animation: 'loading-animation-light',
 	),
@@ -82,8 +163,48 @@ $btn-secondary: map-deep-merge(
 $btn-success: () !default;
 $btn-success: map-deep-merge(
 	(
+		background-color: $success,
+		background-image: clay-enable-gradients($success),
+		border-color: $success,
+		box-shadow: clay-enable-shadows([$btn-box-shadow]),
+		color: color-yiq($success),
+		hover: (
+			background-color: darken($success, 7.5%),
+			background-image: clay-enable-gradients(darken($success, 7.5%)),
+			border-color: darken($success, 10%),
+			color: color-yiq(darken($success, 7.5%)),
+		),
+		focus: (
+			background-color: darken($success, 7.5%),
+			background-image: clay-enable-gradients(darken($success, 7.5%)),
+			border-color: darken($success, 10%),
+			box-shadow:
+				clay-enable-shadows(
+					[ $btn-box-shadow#{','} 0 0 0 $btn-focus-width rgba(mix(color-yiq($success), $success, 15%), 0.5),
+					0 0 0 $btn-focus-width
+						rgba(mix(color-yiq($success), $success, 15%), 0.5) ]
+				),
+			color: color-yiq(darken($success, 7.5%)),
+		),
+		active: (
+			background-color: darken($success, 10%),
+			background-image: clay-enable-gradients(none),
+			border-color: darken($success, 12.5%),
+			color: color-yiq(darken($success, 10%)),
+		),
+		active-focus: (
+			box-shadow:
+				clay-enable-shadows(
+					[ $btn-active-box-shadow#{','} 0 0 0 $btn-focus-width rgba(mix(color-yiq($success), $success, 15%), 0.5),
+					0 0 0 $btn-focus-width
+						rgba(mix(color-yiq($success), $success, 15%), 0.5) ]
+				),
+		),
 		disabled: (
-			box-shadow: none,
+			background-color: $success,
+			background-image: clay-enable-gradients($success),
+			border-color: $success,
+			color: color-yiq($success),
 		),
 		loading-animation: 'loading-animation-light',
 	),
@@ -93,8 +214,48 @@ $btn-success: map-deep-merge(
 $btn-info: () !default;
 $btn-info: map-deep-merge(
 	(
+		background-color: $info,
+		background-image: clay-enable-gradients($info),
+		border-color: $info,
+		box-shadow: clay-enable-shadows([$btn-box-shadow]),
+		color: color-yiq($info),
+		hover: (
+			background-color: darken($info, 7.5%),
+			background-image: clay-enable-gradients(darken($info, 7.5%)),
+			border-color: darken($info, 10%),
+			color: color-yiq(darken($info, 7.5%)),
+		),
+		focus: (
+			background-color: darken($info, 7.5%),
+			background-image: clay-enable-gradients(darken($info, 7.5%)),
+			border-color: darken($info, 10%),
+			box-shadow:
+				clay-enable-shadows(
+					[ $btn-box-shadow#{','} 0 0 0 $btn-focus-width rgba(mix(color-yiq($info), $info, 15%), 0.5),
+					0 0 0 $btn-focus-width
+						rgba(mix(color-yiq($info), $info, 15%), 0.5) ]
+				),
+			color: color-yiq(darken($info, 7.5%)),
+		),
+		active: (
+			background-color: darken($info, 10%),
+			background-image: clay-enable-gradients(none),
+			border-color: darken($info, 12.5%),
+			color: color-yiq(darken($info, 10%)),
+		),
+		active-focus: (
+			box-shadow:
+				clay-enable-shadows(
+					[ $btn-active-box-shadow#{','} 0 0 0 $btn-focus-width rgba(mix(color-yiq($info), $info, 15%), 0.5),
+					0 0 0 $btn-focus-width
+						rgba(mix(color-yiq($info), $info, 15%), 0.5) ]
+				),
+		),
 		disabled: (
-			box-shadow: none,
+			background-color: $info,
+			background-image: clay-enable-gradients($info),
+			border-color: $info,
+			color: color-yiq($info),
 		),
 		loading-animation: 'loading-animation-light',
 	),
@@ -104,8 +265,48 @@ $btn-info: map-deep-merge(
 $btn-warning: () !default;
 $btn-warning: map-deep-merge(
 	(
+		background-color: $warning,
+		background-image: clay-enable-gradients($warning),
+		border-color: $warning,
+		box-shadow: clay-enable-shadows([$btn-box-shadow]),
+		color: color-yiq($warning),
+		hover: (
+			background-color: darken($warning, 7.5%),
+			background-image: clay-enable-gradients(darken($warning, 7.5%)),
+			border-color: darken($warning, 10%),
+			color: color-yiq(darken($warning, 7.5%)),
+		),
+		focus: (
+			background-color: darken($warning, 7.5%),
+			background-image: clay-enable-gradients(darken($warning, 7.5%)),
+			border-color: darken($warning, 10%),
+			box-shadow:
+				clay-enable-shadows(
+					[ $btn-box-shadow#{','} 0 0 0 $btn-focus-width rgba(mix(color-yiq($warning), $warning, 15%), 0.5),
+					0 0 0 $btn-focus-width
+						rgba(mix(color-yiq($warning), $warning, 15%), 0.5) ]
+				),
+			color: color-yiq(darken($warning, 7.5%)),
+		),
+		active: (
+			background-color: darken($warning, 10%),
+			background-image: clay-enable-gradients(darken($warning, 10%)),
+			border-color: darken($warning, 12.5%),
+			color: color-yiq(darken($warning, 10%)),
+		),
+		active-focus: (
+			box-shadow:
+				clay-enable-shadows(
+					[ $btn-active-box-shadow#{','} 0 0 0 $btn-focus-width rgba(mix(color-yiq($warning), $warning, 15%), 0.5),
+					0 0 0 $btn-focus-width
+						rgba(mix(color-yiq($warning), $warning, 15%), 0.5) ]
+				),
+		),
 		disabled: (
-			box-shadow: none,
+			background-color: $warning,
+			background-image: clay-enable-gradients($warning),
+			border-color: $warning,
+			color: color-yiq($warning),
 		),
 	),
 	$btn-warning
@@ -114,8 +315,48 @@ $btn-warning: map-deep-merge(
 $btn-danger: () !default;
 $btn-danger: map-deep-merge(
 	(
+		background-color: $danger,
+		background-image: clay-enable-gradients($danger),
+		border-color: $danger,
+		box-shadow: clay-enable-shadows([$btn-box-shadow]),
+		color: color-yiq($danger),
+		hover: (
+			background-color: darken($danger, 7.5%),
+			background-image: clay-enable-gradients(darken($danger, 7.5%)),
+			border-color: darken($danger, 10%),
+			color: color-yiq(darken($danger, 7.5%)),
+		),
+		focus: (
+			background-color: darken($danger, 7.5%),
+			background-image: clay-enable-gradients(darken($danger, 7.5%)),
+			border-color: darken($danger, 10%),
+			box-shadow:
+				clay-enable-shadows(
+					[ $btn-box-shadow#{','} 0 0 0 $btn-focus-width rgba(mix(color-yiq($danger), $danger, 15%), 0.5),
+					0 0 0 $btn-focus-width
+						rgba(mix(color-yiq($danger), $danger, 15%), 0.5) ]
+				),
+			color: color-yiq(darken($danger, 7.5%)),
+		),
+		active: (
+			background-color: darken($danger, 10%),
+			background-image: clay-enable-gradients(none),
+			border-color: darken($danger, 12.5%),
+			color: color-yiq(darken($danger, 10%)),
+		),
+		active-focus: (
+			box-shadow:
+				clay-enable-shadows(
+					[ $btn-active-box-shadow#{','} 0 0 0 $btn-focus-width rgba(mix(color-yiq($danger), $danger, 15%), 0.5),
+					0 0 0 $btn-focus-width
+						rgba(mix(color-yiq($danger), $danger, 15%), 0.5) ]
+				),
+		),
 		disabled: (
-			box-shadow: none,
+			background-color: $danger,
+			background-image: clay-enable-gradients(none),
+			border-color: $danger,
+			color: color-yiq($danger),
 		),
 		loading-animation: 'loading-animation-light',
 	),
@@ -125,8 +366,48 @@ $btn-danger: map-deep-merge(
 $btn-light: () !default;
 $btn-light: map-deep-merge(
 	(
+		background-color: $light,
+		background-image: clay-enable-gradients($light),
+		border-color: $light,
+		box-shadow: clay-enable-shadows([$btn-box-shadow]),
+		color: color-yiq($light),
+		hover: (
+			background-color: darken($light, 7.5%),
+			background-image: clay-enable-gradients(darken($light, 7.5%)),
+			border-color: darken($light, 10%),
+			color: color-yiq(darken($light, 7.5%)),
+		),
+		focus: (
+			background-color: darken($light, 7.5%),
+			background-image: clay-enable-gradients(darken($light, 7.5%)),
+			border-color: darken($light, 10%),
+			box-shadow:
+				clay-enable-shadows(
+					[ $btn-box-shadow#{','} 0 0 0 $btn-focus-width rgba(mix(color-yiq($light), $light, 15%), 0.5),
+					0 0 0 $btn-focus-width
+						rgba(mix(color-yiq($light), $light, 15%), 0.5) ]
+				),
+			color: color-yiq(darken($light, 7.5%)),
+		),
+		active: (
+			background-color: darken($light, 10%),
+			background-image: clay-enable-gradients(none),
+			border-color: darken($light, 12.5%),
+			color: color-yiq(darken($light, 10%)),
+		),
+		active-focus: (
+			box-shadow:
+				clay-enable-shadows(
+					[ $btn-active-box-shadow#{','} 0 0 0 $btn-focus-width rgba(mix(color-yiq($light), $light, 15%), 0.5),
+					0 0 0 $btn-focus-width
+						rgba(mix(color-yiq($light), $light, 15%), 0.5) ]
+				),
+		),
 		disabled: (
-			box-shadow: none,
+			background-color: $light,
+			background-image: clay-enable-gradients($light),
+			border-color: $light,
+			color: color-yiq($light),
 		),
 	),
 	$btn-light
@@ -135,8 +416,48 @@ $btn-light: map-deep-merge(
 $btn-dark: () !default;
 $btn-dark: map-deep-merge(
 	(
+		background-color: $dark,
+		background-image: clay-enable-gradients($dark),
+		border-color: $dark,
+		box-shadow: clay-enable-shadows([$btn-box-shadow]),
+		color: color-yiq($dark),
+		hover: (
+			background-color: darken($dark, 7.5%),
+			background-image: clay-enable-gradients(darken($dark, 7.5%)),
+			border-color: darken($dark, 10%),
+			color: color-yiq(darken($dark, 7.5%)),
+		),
+		focus: (
+			background-color: darken($dark, 7.5%),
+			background-image: clay-enable-gradients(darken($dark, 7.5%)),
+			border-color: darken($dark, 10%),
+			box-shadow:
+				clay-enable-shadows(
+					[ $btn-box-shadow#{','} 0 0 0 $btn-focus-width rgba(mix(color-yiq($dark), $dark, 15%), 0.5),
+					0 0 0 $btn-focus-width
+						rgba(mix(color-yiq($dark), $dark, 15%), 0.5) ]
+				),
+			color: color-yiq(darken($dark, 7.5%)),
+		),
+		active: (
+			background-color: darken($dark, 10%),
+			background-image: clay-enable-gradients(none),
+			border-color: darken($dark, 12.5%),
+			color: color-yiq(darken($dark, 10%)),
+		),
+		active-focus: (
+			box-shadow:
+				clay-enable-shadows(
+					[ $btn-active-box-shadow#{','} 0 0 0 $btn-focus-width rgba(mix(color-yiq($dark), $dark, 15%), 0.5),
+					0 0 0 $btn-focus-width
+						rgba(mix(color-yiq($dark), $dark, 15%), 0.5) ]
+				),
+		),
 		disabled: (
-			box-shadow: none,
+			background-color: $dark,
+			background-image: clay-enable-gradients($dark),
+			border-color: $dark,
+			color: color-yiq($dark),
 		),
 		loading-animation: 'loading-animation-light',
 	),
@@ -147,15 +468,24 @@ $btn-link: () !default;
 $btn-link: map-deep-merge(
 	(
 		border-radius: 1px,
+		box-shadow: clay-enable-shadows([none]),
+		color: $link-color,
+		font-weight: $font-weight-normal,
+		text-decoration: $link-decoration,
 		hover: (
+			color: $link-hover-color,
 			text-decoration: $link-hover-decoration,
 		),
 		focus: (
 			box-shadow: $btn-focus-box-shadow,
 			text-decoration: $link-decoration,
 		),
+		active: (
+			box-shadow: clay-enable-shadows([none]),
+		),
 		disabled: (
 			box-shadow: none,
+			color: $btn-link-disabled-color,
 			text-decoration: none,
 		),
 	),
@@ -183,8 +513,31 @@ $btn-palette: map-deep-merge(
 $btn-outline-primary: () !default;
 $btn-outline-primary: map-deep-merge(
 	(
+		border-color: $primary,
+		color: $primary,
+		hover: (
+			background-color: $primary,
+			border-color: $primary,
+			color: color-yiq($primary),
+		),
+		focus: (
+			box-shadow: 0 0 0 $btn-focus-width rgba($primary, 0.5),
+		),
+		active: (
+			background-color: $primary,
+			border-color: $primary,
+			color: color-yiq($primary),
+		),
+		active-focus: (
+			box-shadow:
+				clay-enable-shadows(
+					[ $btn-active-box-shadow#{','} 0 0 0 $btn-focus-width rgba($primary, 0.5),
+					$c-unset ]
+				),
+		),
 		disabled: (
-			box-shadow: none,
+			background-color: transparent,
+			color: $primary,
 		),
 	),
 	$btn-outline-primary
@@ -193,8 +546,31 @@ $btn-outline-primary: map-deep-merge(
 $btn-outline-secondary: () !default;
 $btn-outline-secondary: map-deep-merge(
 	(
+		border-color: $secondary,
+		color: $secondary,
+		hover: (
+			background-color: $secondary,
+			border-color: $secondary,
+			color: color-yiq($secondary),
+		),
+		focus: (
+			box-shadow: 0 0 0 $btn-focus-width rgba($secondary, 0.5),
+		),
+		active: (
+			background-color: $secondary,
+			border-color: $secondary,
+			color: color-yiq($secondary),
+		),
+		active-focus: (
+			box-shadow:
+				clay-enable-shadows(
+					[ $btn-active-box-shadow#{','} 0 0 0 $btn-focus-width rgba($secondary, 0.5),
+					0 0 0 $btn-focus-width rgba($secondary, 0.5) ]
+				),
+		),
 		disabled: (
-			box-shadow: none,
+			background-color: transparent,
+			color: $secondary,
 		),
 	),
 	$btn-outline-secondary
@@ -203,8 +579,31 @@ $btn-outline-secondary: map-deep-merge(
 $btn-outline-success: () !default;
 $btn-outline-success: map-deep-merge(
 	(
+		border-color: $success,
+		color: $success,
+		hover: (
+			background-color: $success,
+			border-color: $success,
+			color: color-yiq($success),
+		),
+		focus: (
+			box-shadow: 0 0 0 $btn-focus-width rgba($success, 0.5),
+		),
+		active: (
+			background-color: $success,
+			border-color: $success,
+			color: color-yiq($success),
+		),
+		active-focus: (
+			box-shadow:
+				clay-enable-shadows(
+					[ $btn-active-box-shadow#{','} 0 0 0 $btn-focus-width rgba($success, 0.5),
+					0 0 0 $btn-focus-width rgba($success, 0.5) ]
+				),
+		),
 		disabled: (
-			box-shadow: none,
+			background-color: transparent,
+			color: $success,
 		),
 	),
 	$btn-outline-success
@@ -213,8 +612,31 @@ $btn-outline-success: map-deep-merge(
 $btn-outline-info: () !default;
 $btn-outline-info: map-deep-merge(
 	(
+		border-color: $info,
+		color: $info,
+		hover: (
+			background-color: $info,
+			border-color: $info,
+			color: color-yiq($info),
+		),
+		focus: (
+			box-shadow: 0 0 0 $btn-focus-width rgba($info, 0.5),
+		),
+		active: (
+			background-color: $info,
+			border-color: $info,
+			color: color-yiq($info),
+		),
+		active-focus: (
+			box-shadow:
+				clay-enable-shadows(
+					[ $btn-active-box-shadow#{','} 0 0 0 $btn-focus-width rgba($info, 0.5),
+					0 0 0 $btn-focus-width rgba($info, 0.5) ]
+				),
+		),
 		disabled: (
-			box-shadow: none,
+			background-color: transparent,
+			color: $info,
 		),
 	),
 	$btn-outline-info
@@ -223,8 +645,31 @@ $btn-outline-info: map-deep-merge(
 $btn-outline-warning: () !default;
 $btn-outline-warning: map-deep-merge(
 	(
+		border-color: $warning,
+		color: $warning,
+		hover: (
+			background-color: $warning,
+			border-color: $warning,
+			color: color-yiq($warning),
+		),
+		focus: (
+			box-shadow: 0 0 0 $btn-focus-width rgba($warning, 0.5),
+		),
+		active: (
+			background-color: $warning,
+			border-color: $warning,
+			color: color-yiq($warning),
+		),
+		active-focus: (
+			box-shadow:
+				clay-enable-shadows(
+					[ $btn-active-box-shadow#{','} 0 0 0 $btn-focus-width rgba($warning, 0.5),
+					0 0 0 $btn-focus-width rgba($warning, 0.5) ]
+				),
+		),
 		disabled: (
-			box-shadow: none,
+			background-color: transparent,
+			color: $warning,
 		),
 	),
 	$btn-outline-warning
@@ -233,8 +678,31 @@ $btn-outline-warning: map-deep-merge(
 $btn-outline-danger: () !default;
 $btn-outline-danger: map-deep-merge(
 	(
+		border-color: $danger,
+		color: $danger,
+		hover: (
+			background-color: $danger,
+			border-color: $danger,
+			color: color-yiq($danger),
+		),
+		focus: (
+			box-shadow: 0 0 0 $btn-focus-width rgba($danger, 0.5),
+		),
+		active: (
+			background-color: $danger,
+			border-color: $danger,
+			color: color-yiq($danger),
+		),
+		active-focus: (
+			box-shadow:
+				clay-enable-shadows(
+					[ $btn-active-box-shadow#{','} 0 0 0 $btn-focus-width rgba($danger, 0.5),
+					0 0 0 $btn-focus-width rgba($danger, 0.5) ]
+				),
+		),
 		disabled: (
-			box-shadow: none,
+			background-color: transparent,
+			color: $danger,
 		),
 	),
 	$btn-outline-danger
@@ -243,8 +711,31 @@ $btn-outline-danger: map-deep-merge(
 $btn-outline-light: () !default;
 $btn-outline-light: map-deep-merge(
 	(
+		border-color: $light,
+		color: $light,
+		hover: (
+			background-color: $light,
+			border-color: $light,
+			color: color-yiq($light),
+		),
+		focus: (
+			box-shadow: 0 0 0 $btn-focus-width rgba($light, 0.5),
+		),
+		active: (
+			background-color: $light,
+			border-color: $light,
+			color: color-yiq($light),
+		),
+		active-focus: (
+			box-shadow:
+				clay-enable-shadows(
+					[ $btn-active-box-shadow#{','} 0 0 0 $btn-focus-width rgba($light, 0.5),
+					0 0 0 $btn-focus-width rgba($light, 0.5) ]
+				),
+		),
 		disabled: (
-			box-shadow: none,
+			background-color: transparent,
+			color: $light,
 		),
 	),
 	$btn-outline-light
@@ -253,8 +744,32 @@ $btn-outline-light: map-deep-merge(
 $btn-outline-dark: () !default;
 $btn-outline-dark: map-deep-merge(
 	(
+		border-color: $dark,
+		color: $dark,
+		hover: (
+			background-color: $dark,
+			border-color: $dark,
+			color: color-yiq($dark),
+		),
+		focus: (
+			box-shadow: 0 0 0 $btn-focus-width rgba($dark, 0.5),
+		),
+		active: (
+			background-color: $dark,
+			border-color: $dark,
+			color: color-yiq($dark),
+		),
+		active-focus: (
+			box-shadow:
+				if(
+					$enable-shadows and $btn-active-box-shadow != none,
+					$btn-active-box-shadow#{','} 0 0 0 $btn-focus-width rgba($dark, 0.5),
+					0 0 0 $btn-focus-width rgba($dark, 0.5)
+				),
+		),
 		disabled: (
-			box-shadow: none,
+			background-color: transparent,
+			color: $dark,
 		),
 	),
 	$btn-outline-dark

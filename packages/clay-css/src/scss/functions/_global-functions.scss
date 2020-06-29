@@ -153,6 +153,72 @@
 	@return $number;
 }
 
+/// A function that returns a CSS gradient for use with the `background-image` property. This function returns `null` if `$enable-gradients` is set to `false`. This is a workaround for complying with Bootstrap's `$enable-gradients` setting.
+/// @param {String} $gradient - The CSS gradient or HEX color to generate the default gradient.
+/// @param {Bool} $custom-gradient[false] - Pass in `true` as the second parameter to this function if using a custom gradient.
+
+@function clay-enable-gradients($gradient, $custom-gradient: false) {
+	@if ($enable-gradients and $gradient) {
+		@if ($custom-gradient or $gradient == none) {
+			@return $gradient;
+		} @else {
+			@return linear-gradient(
+				180deg,
+				mix($body-bg, $gradient, 15%),
+				$gradient
+			);
+		}
+	}
+
+	@return null;
+}
+
+/// A function that returns a number for use with the `border-radius` property. This function returns `null` if `$enable-rounded` is set to `false`. This is a workaround for complying with Bootstrap's `$enable-rounded` setting.
+/// @param {Number} $radius - The border radius.
+
+@function clay-enable-rounded($radius) {
+	@if ($enable-rounded) {
+		@return $radius;
+	}
+
+	@return null;
+}
+
+/// A function that returns a shadow for use with the `box-shadow` property. This function returns `null` if `$enable-shadows` is set to `false`. This is a workaround for complying with Bootstrap's `$enable-shadows` setting.
+/// @param {List} $shadows - The box shadow. Pass in a single shadow or two shadows using `[$shadow1, $shadow2]` if you need a default shadow even if `$enable-shadows` is `false`. A focus shadow for example.
+
+@function clay-enable-shadows($shadows) {
+	$ret-val: null;
+
+	$length: length($shadows);
+	$separator: list-separator($shadows);
+
+	@if ($length == 2 and $separator == 'comma') {
+		@if ($enable-shadows) {
+			$ret-val: nth($shadows, 1);
+		} @else {
+			$ret-val: nth($shadows, 2);
+		}
+	} @else if ($separator == 'space') {
+		@if ($enable-shadows) {
+			$ret-val: $shadows;
+		}
+	}
+
+	@return $ret-val;
+}
+
+/// A function that returns a transition for use with the `transition` property. This function returns `null` if `$enable-transitions` is set to `false`. This is a workaround for complying with Bootstrap's `$enable-transitions` setting.
+/// @param {List} $transitions - The transitions.
+
+@function clay-enable-transitions($transitions) {
+	@if ($enable-transitions) {
+		@return $transition;
+	}
+
+	@return null;
+}
+
 /// A function that returns the name of the previous breakpoint relative to the breakpoint passed in through `$name` in the Sass map `$grid-breakpoints`. If the breakpoint does not exist in the Sass map, it returns the first breakpoint key.
 /// @param {Key} $name - The breakpoint name or keys in `$grid-breakpoints` (e.g., `xs`, `sm`, `md`, `lg`, `xl`)
 /// @param {Map} $breakpoints[$grid-breakpoints] - A map that defines the breakpoints
