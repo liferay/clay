@@ -5,7 +5,7 @@
 
 import {ClayPortal} from '@clayui/shared';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import warning from 'warning';
 
 import Body from './Body';
@@ -58,7 +58,10 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 	status,
 	...otherProps
 }: IProps) => {
-	const modalBodyElementRef = React.useRef<HTMLDivElement | null>(null);
+	const [maxWidth, setMaxWidth] = useState<number | string>('initial');
+
+	const modalBodyElementRef = useRef<HTMLDivElement | null>(null);
+	const modalDialogElementRef = useRef<HTMLDivElement | null>(null);
 
 	warning(observer !== undefined, warningMessage);
 
@@ -66,10 +69,16 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 		observer.dispatch(ObserverType.Close)
 	);
 
-	React.useEffect(() => observer.dispatch(ObserverType.Open), []);
+	useEffect(() => observer.dispatch(ObserverType.Open), []);
 
 	const [show, content] =
 		observer && observer.mutation ? observer.mutation : [false, false];
+
+	useEffect(() => {
+		if (modalDialogElementRef.current && content) {
+			setMaxWidth(modalDialogElementRef.current.clientWidth);
+		}
+	}, [modalDialogElementRef, content]);
 
 	return (
 		<ClayPortal subPortalRef={modalBodyElementRef}>
@@ -87,8 +96,8 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 				<div
 					ref={modalBodyElementRef}
 					style={{
-						display: 'table',
 						margin: 'auto',
+						maxWidth,
 					}}
 				>
 					<div
@@ -96,6 +105,7 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 							[`modal-${size}`]: size,
 							[`modal-${status}`]: status,
 						})}
+						ref={modalDialogElementRef}
 						tabIndex={-1}
 					>
 						<div className="modal-content">
