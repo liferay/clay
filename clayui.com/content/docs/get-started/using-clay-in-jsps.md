@@ -1,6 +1,5 @@
 ---
 title: 'Using Clay in JSPs'
-draft: true
 order: 6
 ---
 
