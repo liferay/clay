@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {noop} from '@clayui/shared';
 import ClayIcon from '@clayui/icon';
 import ClayLayout from '@clayui/layout';
+import {noop} from '@clayui/shared';
 import ClaySticker from '@clayui/sticker';
 import React from 'react';
 
