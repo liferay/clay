@@ -5,7 +5,6 @@
 
 import ClayIcon from '@clayui/icon';
 import ClayLayout from '@clayui/layout';
-import {noop} from '@clayui/shared';
 import ClaySticker from '@clayui/sticker';
 import React from 'react';
 
@@ -59,6 +58,8 @@ const KEYCODES = {
 	ENTER: 13,
 	SPACE: 32,
 };
+
+const noop = () => {};
 
 export const ClayCardWithNavigation: React.FunctionComponent<IProps> = ({
 	children,
