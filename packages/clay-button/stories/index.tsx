@@ -55,6 +55,7 @@ storiesOf('Components|ClayButton', module)
 			<ClayButtonWithIcon
 				aria-label="Cog"
 				displayType="secondary"
+				label="Settings"
 				spritemap={spritemap}
 				symbol="cog"
 			/>
