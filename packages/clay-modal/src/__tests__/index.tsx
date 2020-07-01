@@ -162,11 +162,7 @@ describe('ClayModal', () => {
 			const {observer} = useModal({onClose: () => {}});
 
 			return (
-				<ClayModal
-					center
-					observer={observer}
-					spritemap={spritemap}
-				/>
+				<ClayModal center observer={observer} spritemap={spritemap} />
 			);
 		};
 
