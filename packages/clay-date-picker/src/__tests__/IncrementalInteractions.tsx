@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {default as formatDate} from 'date-fns/format';
 import ClayDatePicker from '..';
 import {cleanup, fireEvent, render} from '@testing-library/react';
+import {default as formatDate} from 'date-fns/format';
 import React from 'react';
 
 const spritemap = 'icons.svg';
