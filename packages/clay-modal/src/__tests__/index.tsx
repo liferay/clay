@@ -157,6 +157,28 @@ describe('ClayModal', () => {
 		expect(document.body).toMatchSnapshot();
 	});
 
+	it('renders with center', () => {
+		const ModalWithState = () => {
+			const {observer} = useModal({onClose: () => {}});
+
+			return (
+				<ClayModal
+					center
+					observer={observer}
+					spritemap={spritemap}
+				/>
+			);
+		};
+
+		render(<ModalWithState />);
+
+		act(() => {
+			jest.runAllTimers();
+		});
+
+		expect(document.body).toMatchSnapshot();
+	});
+
 	it('renders a body component with url', () => {
 		const ModalWithState = () => {
 			const {observer} = useModal({onClose: () => {}});

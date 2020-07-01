@@ -71,6 +71,7 @@ storiesOf('Components|ClayModal', module)
 			<>
 				{visibleModal && (
 					<ClayModal
+						center={boolean('Vertically Center', false)}
 						observer={observer}
 						size={select('Size', size, 'lg') as Size}
 						spritemap={spritemap}

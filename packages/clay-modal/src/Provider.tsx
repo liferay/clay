@@ -28,6 +28,11 @@ type TState = {
 	body: React.ReactElement | React.ReactText;
 
 	/**
+	 * Flag indicating to vertically center the modal.
+	 */
+	center?: boolean;
+
+	/**
 	 * Render the action buttons on the footer following the order of `ClayModal.Footer`:
 	 * - first
 	 * - middle
@@ -94,7 +99,7 @@ const ClayModalProvider: React.FunctionComponent<IProps> = ({
 	const {observer, onClose} = useModal({
 		onClose: () => dispatch({type: Action.Close}),
 	});
-	const {body, footer, header, size, status, url} = otherState;
+	const {body, center, footer, header, size, status, url} = otherState;
 	const [first, middle, last] = footer;
 	const state = {
 		...otherState,
@@ -105,6 +110,7 @@ const ClayModalProvider: React.FunctionComponent<IProps> = ({
 		<>
 			{visible && (
 				<ClayModal
+					center={center}
 					observer={observer}
 					size={size}
 					spritemap={spritemap}
