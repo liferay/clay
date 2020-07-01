@@ -97,6 +97,11 @@ export default () => {
 										</ClayForm.Group>
 
 										<ClayForm.Group>
+											<label>{'Date'}</label>
+											<ClayDatePickerWithState />
+										</ClayForm.Group>
+
+										<ClayForm.Group>
 											<label>{'State'}</label>
 											<select
 												className="form-control"
@@ -114,11 +119,6 @@ export default () => {
 												<option>{'Mad'}</option>
 												<option>{'Sad'}</option>
 											</select>
-										</ClayForm.Group>
-
-										<ClayForm.Group>
-											<label>{'Date'}</label>
-											<ClayDatePickerWithState />
 										</ClayForm.Group>
 									</ClayPanel.Body>
 								</ClayPanel>
