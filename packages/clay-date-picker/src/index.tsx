@@ -145,7 +145,7 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	onExpandedChange?: (val: boolean) => void;
 }
 
-const DateNow = new Date();
+const dateNow = new Date();
 const TIME_FORMAT = 'H:m';
 
 /**
@@ -196,8 +196,8 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			value,
 			weekdaysShort = ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
 			years = {
-				end: DateNow.getFullYear(),
-				start: DateNow.getFullYear(),
+				end: dateNow.getFullYear(),
+				start: dateNow.getFullYear(),
 			},
 			...otherProps
 		}: IProps,
@@ -313,12 +313,13 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		};
 
 		/**
-		 * Handles dot clicked
+		 * Changes selected date to the current date. The same happens when there
+		 * is no date selected.
 		 */
 		const handleDotClicked = () => {
-			changeMonth(initialMonth);
-			setDaySelected(initialMonth);
-			onValueChange(initialMonth);
+			changeMonth(dateNow);
+			setDaySelected(dateNow);
+			onValueChange(dateNow);
 		};
 
 		const handleTimeChange = (
