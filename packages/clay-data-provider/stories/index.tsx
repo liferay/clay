@@ -242,4 +242,30 @@ storiesOf('Components|ClayDataProvider', module)
 				</div>
 			</div>
 		);
+	})
+	.add('custom fetcher', () => {
+		const customFetcher = (
+			url: string,
+			options?: RequestInit | undefined
+		) =>
+			fetch(url, {...options, headers: {'x-clay': 'Clay'}}).then((res) =>
+				res.json()
+			);
+
+		useResource({
+			fetcher: customFetcher,
+			link: 'https://rickandmortyapi.com/api/character/',
+			variables: {limit: 10},
+		});
+
+		return (
+			<div className="pb-4 sheet">
+				<h3>{'Custom Fetcher'}</h3>
+				<div className="row">
+					<div className="col-md-5">
+						<p>{'Open your console to see the network tab.'}</p>
+					</div>
+				</div>
+			</div>
+		);
 	});

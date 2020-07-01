@@ -93,6 +93,15 @@ export interface IDataProvider {
 	fetchDelay?: number;
 
 	/**
+	 * A Promise returning function to fetch your data, this replaces the
+	 * use of `fetch` by default.
+	 */
+	fetcher?: (
+		link: string,
+		init?: RequestInit | undefined
+	) => Promise<Response>;
+
+	/**
 	 * Options passed to request configuration.
 	 */
 	fetchOptions?: RequestInit;
@@ -139,6 +148,9 @@ export interface IDataProvider {
 	 * a Promise. We do not recommend that you use a function to do so,
 	 * you will lose some benefits of the data provider,
 	 * always try to avoid.
+	 *
+	 * The behavior of the `link` accepting a function has been deprecated
+	 * in favor of the `fetcher` API.
 	 */
 	link: TLink;
 

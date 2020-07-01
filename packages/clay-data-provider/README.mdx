@@ -26,6 +26,8 @@ import {
     -   [Network Status](#network-status)
     -   [Variables change](#variables-change)
     -   [Caching data](#caching-data)
+    -   [Data Fetching](#data-fetching)
+        -   [Fetch](#fetch)
 -   [Advanced](#advanced)
     -   [Avoiding thundering herd problem](#avoiding-thundering-herd-problem)
     -   [Caching data at root level](#caching-data-at-root-level)
@@ -104,6 +106,27 @@ The cache is guided by a policy, use the `fetchPolicy` prop to enable and config
 		storageMaxSize
 	</code> API. <b>Each new query is equivalent to 1 size</b>.
 </div>
+
+### Data Fetching
+
+```javascript
+const {resource} = useResource({fetcher, link});
+```
+
+This is an API that replaces the `link` behavior of receiving an async function, this did not allow us to validate the cache correctly because we do not have the URL view. This API is more friendly and has a unique responsibility, you may be able to pass an async function that accepts the `link` and `options`, and return the data. `useResource` will use its async function instead of the `fetch` default.
+
+#### Fetch
+
+```javascript
+import fetch from 'unfetch';
+
+const fetcher = (url, options) => fetch(url, options);
+
+const App = () => {
+	const {resource} = useResource({fetcher, link: 'https://clay.dev'});
+	// ...
+};
+```
 
 ## Advanced
 
