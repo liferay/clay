@@ -98,4 +98,16 @@ describe('ClayButton', () => {
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
+
+	it('renders ButtonWithIcon with label', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayButtonWithIcon
+				label="Delete"
+				spritemap="/some/path"
+				symbol="trash"
+			/>
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
 });

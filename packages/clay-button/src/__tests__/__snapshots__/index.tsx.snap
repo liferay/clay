@@ -23,6 +23,27 @@ exports[`ClayButton renders ButtonWithIcon 1`] = `
 </button>
 `;
 
+exports[`ClayButton renders ButtonWithIcon with label 1`] = `
+<button
+  className="btn btn-primary"
+  type="button"
+>
+  <span
+    className="inline-item inline-item-before"
+  >
+    <svg
+      className="lexicon-icon lexicon-icon-trash"
+      role="presentation"
+    >
+      <use
+        xlinkHref="/some/path#trash"
+      />
+    </svg>
+  </span>
+  Delete
+</button>
+`;
+
 exports[`ClayButton renders a ButtonGroup with spaced 1`] = `
 <div
   className="btn-group"
