@@ -345,6 +345,29 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		 */
 		const handleCalendarButtonClicked = () => setExpanded(!expanded);
 
+		/**
+		 * Handle with the focus when it's outside of the component
+		 * In this case, forces the state of expanded to be false
+		 */
+		const handleFocus = (event: FocusEvent) => {
+			if (
+				dropdownContainerRef.current &&
+				!dropdownContainerRef.current.contains(event.target as Node) &&
+				triggerElementRef.current &&
+				!triggerElementRef.current.contains(event.target as Node)
+			) {
+				setExpanded(false);
+			}
+		};
+
+		React.useEffect(() => {
+			document.addEventListener('focus', handleFocus, true);
+
+			return () => {
+				document.removeEventListener('focus', handleFocus, true);
+			};
+		}, [handleFocus]);
+
 		return (
 			<FocusScope arrowKeysLeftRight>
 				<div className="date-picker">
