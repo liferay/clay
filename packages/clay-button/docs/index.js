@@ -4,7 +4,7 @@
  */
 
 import Editor from '$clayui.com/src/components/Editor';
-import ClayButton from '@clayui/button';
+import ClayButton, {ClayButtonWithIcon} from '@clayui/button';
 import React from 'react';
 
 const buttonDisplayTypesImportsCode = `import ClayButton from '@clayui/button';
@@ -70,4 +70,24 @@ const ButtonGroup = () => {
 	);
 };
 
-export {ButtonDisplayTypes, ButtonGroup};
+const buttonWithIconImportsCode = `import {ClayButtonWithIcon} from '@clayui/button';`;
+
+const ButtonWithIconCode = `const Component = () => {
+	return (
+		<ClayButtonWithIcon displayType="secondary" label="Settings" symbol="cog" spritemap={spritemap} />
+	);
+}
+
+render(<Component />);
+`;
+
+const ButtonWithIcon = () => {
+	const scope = {ClayButtonWithIcon};
+	const code = ButtonWithIconCode;
+
+	return (
+		<Editor code={code} imports={buttonWithIconImportsCode} scope={scope} />
+	);
+};
+
+export {ButtonDisplayTypes, ButtonGroup, ButtonWithIcon};
