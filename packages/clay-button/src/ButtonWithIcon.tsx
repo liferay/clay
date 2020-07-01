@@ -10,6 +10,16 @@ import ClayButton from './Button';
 
 interface IProps extends React.ComponentProps<typeof ClayButton> {
 	/**
+	 * Label to be displayed within the button, alongside the icon.
+	 */
+	label?: string;
+
+	/**
+	 * Position of the icon inside the button.
+	 */
+	iconPosition?: 'after' | 'before';
+
+	/**
 	 * Path to the location of the spritemap resource.
 	 */
 	spritemap?: string;
@@ -21,9 +31,36 @@ interface IProps extends React.ComponentProps<typeof ClayButton> {
 }
 
 const ClayButtonWithIcon = React.forwardRef<HTMLButtonElement, IProps>(
-	({spritemap, symbol, ...otherProps}: IProps, ref) => (
-		<ClayButton {...otherProps} monospaced ref={ref}>
-			<ClayIcon spritemap={spritemap} symbol={symbol} />
+	(
+		{
+			iconPosition = 'before',
+			label,
+			spritemap,
+			symbol,
+			...otherProps
+		}: IProps,
+		ref
+	) => (
+		<ClayButton {...otherProps} monospaced={!label} ref={ref}>
+			{label ? (
+				<>
+					{iconPosition === 'before' && (
+						<span className="inline-item inline-item-before">
+							<ClayIcon spritemap={spritemap} symbol={symbol} />
+						</span>
+					)}
+
+					{label}
+
+					{iconPosition === 'after' && (
+						<span className="inline-item inline-item-after">
+							<ClayIcon spritemap={spritemap} symbol={symbol} />
+						</span>
+					)}
+				</>
+			) : (
+				<ClayIcon spritemap={spritemap} symbol={symbol} />
+			)}
 		</ClayButton>
 	)
 );
