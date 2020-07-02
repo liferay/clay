@@ -16,7 +16,7 @@ interface IProps {
 }
 
 const KEYS = {
-	SPACE: 'Spacebar',
+	SPACE: ('Spacebar' || ' '),
 };
 
 const ClayDatePickerDayNumber: React.FunctionComponent<IProps> = ({
