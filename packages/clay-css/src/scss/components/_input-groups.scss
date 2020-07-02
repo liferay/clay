@@ -1,6 +1,122 @@
+// Deprecate Bootstrap 4 Input Group markup. Clay CSS wraps all form elements,
+// buttons, and text inside `input-group-item`. It should be one item per
+// `input-group-item`. We don't need these styles, but still making them
+// available for backward compatibility.
+
 .input-group {
-	.btn:hover {
-		z-index: $zindex-input-group-hover;
+	> .form-control,
+	> .form-control-plaintext,
+	> .custom-select,
+	> .custom-file {
+		flex: 1 1 0%;
+		margin-bottom: 0;
+
+		// https://stackoverflow.com/questions/36247140/why-dont-flex-items-shrink-past-content-size
+
+		min-width: 0;
+
+		// For focus state's z-index
+
+		position: relative;
+
+		+ .form-control,
+		+ .custom-select,
+		+ .custom-file {
+			margin-left: -$input-border-width;
+		}
+	}
+
+	// Bring the "active" form control to the top of surrounding elements
+
+	> .form-control:focus,
+	> .custom-select:focus,
+	> .custom-file .custom-file-input:focus ~ .custom-file-label {
+		z-index: 3;
+	}
+
+	// Bring the custom file input above the label
+	> .custom-file .custom-file-input:focus {
+		z-index: 4;
+	}
+
+	> .form-control,
+	> .custom-select {
+		&:not(:last-child) {
+			@include border-right-radius(0);
+		}
+
+		&:not(:first-child) {
+			@include border-left-radius(0);
+		}
+	}
+
+	// Custom file inputs have more complex markup, thus requiring different
+	// border-radius overrides.
+
+	> .custom-file {
+		align-items: center;
+		display: flex;
+
+		&:not(:last-child) .custom-file-label,
+		&:not(:last-child) .custom-file-label::after {
+			@include border-right-radius(0);
+		}
+
+		&:not(:first-child) .custom-file-label {
+			@include border-left-radius(0);
+		}
+	}
+}
+
+.input-group-lg > .custom-select {
+	@include border-radius($input-border-radius-lg);
+
+	font-size: $input-font-size-lg;
+	height: $input-height-lg;
+	line-height: $input-line-height-lg;
+	padding: $input-padding-y-lg $input-padding-x-lg;
+}
+
+.input-group-sm > .custom-select {
+	@include border-radius($input-border-radius-sm);
+
+	font-size: $input-font-size-sm;
+	height: $input-height-sm;
+	line-height: $input-line-height-sm;
+	padding: $input-padding-y-sm $input-padding-x-sm;
+}
+
+.input-group-lg > .custom-select,
+.input-group-sm > .custom-select {
+	padding-right: $custom-select-padding-x + $custom-select-indicator-padding;
+}
+
+.input-group-prepend,
+.input-group-append {
+	.btn + .btn,
+	.btn + .input-group-text,
+	.input-group-text + .input-group-text,
+	.input-group-text + .btn {
+		margin-left: -$input-border-width;
+	}
+}
+
+// Input Group
+
+.input-group {
+	align-items: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	width: 100%;
+
+	.btn {
+		position: relative;
+		z-index: 1;
+
+		&:hover {
+			z-index: $zindex-input-group-hover;
+		}
 	}
 
 	.btn:focus,
@@ -44,95 +160,39 @@
 	width: auto;
 }
 
-// Input Group Prepend
-
-.input-group-prepend {
-	align-items: stretch;
-	margin-right: -$input-border-left-width;
-
-	+ .input-group-prepend,
-	+ .input-group-append,
-	+ .input-group-item:not(.input-group-append) {
-		margin-left: 0;
-	}
-
-	+ .input-group-item:not(.input-group-append) .form-control {
-		@include border-left-radius(0);
-	}
-}
-
-.input-group > .input-group-prepend {
-	&:not(:first-child) > .form-control {
-		@include border-left-radius(0);
-	}
-
-	> .form-control {
-		@include border-right-radius(0);
-	}
-}
-
-.input-group-item:not(.input-group-prepend) + .input-group-prepend {
-	.btn {
-		@include border-left-radius($btn-border-radius);
-	}
-
-	.form-control,
-	.input-group-text {
-		@include border-left-radius($input-border-radius);
-	}
-}
-
-// Input Group Append
-
-.input-group-append {
-	align-items: stretch;
-	margin-left: -$input-border-right-width;
-}
-
-.input-group > .input-group-append {
-	> .form-control {
-		@include border-left-radius(0);
-	}
-}
-
-// Input Group Prepend and Append Rounded Corners
-
-.input-group > .input-group-prepend > .form-file .btn,
-.input-group > .input-group-append:not(:last-child) > .form-file .btn,
-.input-group
-	> .input-group-append:last-child
-	> .form-file:not(:last-child)
-	.btn {
-	@include border-right-radius(0);
-}
-
-.input-group > .input-group-append > .form-file .btn,
-.input-group > .input-group-prepend:not(:first-child) > .form-file .btn,
-.input-group
-	> .input-group-prepend:first-child
-	> .form-file:not(:first-child)
-	.btn {
-	@include border-left-radius(0);
-}
-
 // Input Group Text
 
 .input-group-text {
 	align-items: center;
+	background-color: $input-group-addon-bg;
+	border-color: $input-group-addon-border-color;
+	border-style: solid;
+
 	border-bottom-width: $input-border-bottom-width;
 	border-left-width: $input-border-left-width;
 	border-right-width: $input-border-right-width;
 	border-top-width: $input-border-top-width;
+
+	@include border-radius($input-border-radius);
+
 	color: $input-group-addon-color;
 	display: flex;
+	font-size: $input-font-size;
 	font-weight: $input-group-addon-font-weight;
 	height: $input-height;
 	justify-content: center;
+	line-height: $input-line-height;
+
+	// Allow use of <label> elements by overriding our default margin-bottom
+
+	margin-bottom: 0;
 	min-width: $input-group-addon-min-width;
 	padding-bottom: $input-group-addon-padding-y;
 	padding-left: $input-group-addon-padding-x;
 	padding-right: $input-group-addon-padding-x;
 	padding-top: $input-group-addon-padding-y;
+	text-align: center;
+	white-space: nowrap;
 
 	@include clay-scale-component {
 		height: $input-height-mobile;
@@ -140,6 +200,13 @@
 
 	label {
 		color: $input-group-addon-color;
+	}
+
+	// Nuke default margins from checkboxes and radios to vertically center within.
+
+	input[type='radio'],
+	input[type='checkbox'] {
+		margin-top: 0;
 	}
 
 	.custom-control,
@@ -330,6 +397,8 @@
 
 		.form-control,
 		.form-file .btn {
+			@include border-radius($input-border-radius-lg);
+
 			font-size: $input-font-size-lg;
 			height: $input-height-lg;
 			line-height: $input-line-height-lg;
@@ -341,6 +410,11 @@
 			@include clay-scale-component {
 				height: $input-height-lg-mobile;
 			}
+		}
+
+		textarea.form-control,
+		.form-control-textarea {
+			height: $input-textarea-height-lg;
 		}
 
 		.form-control-plaintext {
@@ -356,6 +430,8 @@
 		}
 
 		.input-group-text {
+			@include border-radius($input-border-radius-lg);
+
 			font-size: $input-font-size-lg;
 			height: $input-height-lg;
 			min-width: $input-group-addon-min-width-lg;
@@ -399,6 +475,8 @@
 
 		.form-control,
 		.form-file .btn {
+			@include border-radius($input-border-radius-sm);
+
 			font-size: $input-font-size-sm;
 			height: $input-height-sm;
 			line-height: $input-line-height-sm;
@@ -424,7 +502,14 @@
 			}
 		}
 
+		textarea.form-control,
+		.form-control-textarea {
+			height: $input-textarea-height-sm;
+		}
+
 		.input-group-text {
+			@include border-radius($input-border-radius-sm);
+
 			font-size: $input-font-size-sm;
 			height: $input-height-sm;
 			min-width: $input-group-addon-min-width-sm;
@@ -454,6 +539,70 @@
 
 .input-group-sm {
 	@extend %clay-input-group-sm;
+}
+
+// Input Group Prepend
+
+.input-group-prepend {
+	align-items: stretch;
+	display: flex;
+	margin-right: math-sign($input-border-left-width);
+}
+
+.input-group-prepend:not(:last-child) {
+	.btn,
+	.form-control,
+	.input-group-text {
+		border-bottom-right-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	.btn + .btn {
+		border-bottom-left-radius: 0;
+		border-top-left-radius: 0;
+	}
+}
+
+.input-group-prepend + .input-group-prepend {
+	margin-left: 0;
+
+	.btn,
+	.form-control,
+	.input-group-text {
+		border-bottom-left-radius: 0;
+		border-top-left-radius: 0;
+	}
+}
+
+// Input Group Append
+
+.input-group-append {
+	align-items: stretch;
+	display: flex;
+	margin-right: math-sign($input-border-left-width);
+}
+
+.input-group-append:first-child {
+	.btn,
+	.form-control,
+	.input-group-text {
+		border-bottom-right-radius: 0;
+		border-top-right-radius: 0;
+	}
+}
+
+.input-group-append:not(:first-child) {
+	.btn,
+	.form-control,
+	.input-group-text {
+		border-bottom-left-radius: 0;
+		border-top-left-radius: 0;
+	}
+}
+
+.input-group-append + .input-group-append,
+.input-group-prepend + .input-group-append {
+	margin-left: 0;
 }
 
 // Input Group Password

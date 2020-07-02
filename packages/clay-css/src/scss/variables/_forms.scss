@@ -473,11 +473,10 @@ $form-group-item-label-spacer: 2rem !default; // 32px
 
 // Input Group
 
-$input-group-addon-color: null !default;
-$input-group-addon-font-weight: null !default;
+$input-group-addon-font-weight: $font-weight-normal !default;
 $input-group-addon-min-width: 2.375rem !default; // 38px
-$input-group-addon-padding-x: null !default;
-$input-group-addon-padding-y: null !default;
+$input-group-addon-padding-x: $input-padding-x !default;
+$input-group-addon-padding-y: $input-padding-y !default;
 
 // Input Group Secondary
 
