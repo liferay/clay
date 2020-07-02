@@ -304,6 +304,36 @@ exports[`ClayModal renders with Header 1`] = `
 </body>
 `;
 
+exports[`ClayModal renders with center 1`] = `
+<body
+  class="modal-open"
+>
+  <div>
+    <div
+      class="modal-backdrop fade show"
+    />
+    <div
+      class="fade modal d-block show"
+    >
+      <div
+        class=""
+        style="margin: auto; max-width: 600px;"
+      >
+        <div
+          class="modal-dialog modal-dialog-centered"
+          tabindex="-1"
+        >
+          <div
+            class="modal-content"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div />
+</body>
+`;
+
 exports[`ClayModal renders with size 1`] = `
 <body
   class="modal-open"

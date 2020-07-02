@@ -27,6 +27,11 @@ interface IProps
 	extends React.HTMLAttributes<HTMLDivElement>,
 		Omit<IContext, 'onClose'> {
 	/**
+	 * Flag indicating to vertically center the modal.
+	 */
+	center?: boolean;
+
+	/**
 	 * The size of element modal.
 	 */
 	size?: Size;
@@ -50,6 +55,7 @@ const warningMessage = `You need to pass the 'observer' prop to ClayModal for ev
 `;
 
 const ClayModal: React.FunctionComponent<IProps> = ({
+	center,
 	children,
 	className,
 	observer,
@@ -98,6 +104,7 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 						className={classNames('modal-dialog', {
 							[`modal-${size}`]: size,
 							[`modal-${status}`]: status,
+							'modal-dialog-centered': center,
 						})}
 						tabIndex={-1}
 					>
