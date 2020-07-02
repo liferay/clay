@@ -2,12 +2,24 @@
 	@import url($font-import-url);
 }
 
+@import 'components/_root';
+
+@import 'components/_reboot';
 @import 'components/_type';
+
+@import 'components/_code';
+@import 'components/_images';
+
+@import 'components/_carousel';
+@import 'components/_jumbotron';
+@import 'components/_toasts';
+@import 'components/_spinners';
 
 @import 'components/_icons';
 
 @import 'components/_aspect-ratio';
 @import 'components/_buttons';
+@import 'components/_transitions';
 
 @import 'components/_grid';
 
@@ -70,3 +82,5 @@
 @import 'components/_utilities-functional-important';
 
 @import 'components/_loaders';
+
+@import 'components/_print';
