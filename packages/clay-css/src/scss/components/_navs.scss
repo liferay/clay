@@ -1,5 +1,10 @@
 .nav {
+	display: flex;
+	flex-wrap: wrap;
 	font-size: $nav-font-size;
+	list-style: none;
+	margin-bottom: 0;
+	padding-left: 0;
 }
 
 // Nav Link
@@ -75,7 +80,20 @@
 
 // Nav Justified
 
+.nav-fill {
+	.nav-item {
+		flex: 1 1 auto;
+		text-align: center;
+	}
+}
+
 .nav-justified {
+	.nav-item {
+		flex-basis: 0;
+		flex-grow: 1;
+		text-align: center;
+	}
+
 	button.nav-link {
 		text-align: center;
 		width: 100%;
@@ -136,7 +154,12 @@
 // Nav Tabs
 
 .nav-tabs {
+	border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
 	font-size: $nav-tabs-font-size;
+
+	.nav-item {
+		margin-bottom: -$nav-tabs-border-width;
+	}
 
 	.nav-link {
 		@include clay-link($nav-tabs-link);
@@ -144,6 +167,12 @@
 
 	.nav-item.show .nav-link {
 		@include clay-link($nav-tabs-link-show);
+	}
+
+	.dropdown-menu {
+		@include border-top-radius(0);
+
+		margin-top: -$nav-tabs-border-width;
 	}
 
 	+ .tab-content {
@@ -161,6 +190,16 @@
 	}
 }
 
+.tab-content {
+	> .tab-pane {
+		display: none;
+	}
+
+	> .active {
+		display: block;
+	}
+}
+
 .dropdown-item[data-toggle='tab'] {
 	.dropdown-item-indicator,
 	.dropdown-item-indicator-start,
@@ -174,6 +213,20 @@
 		.dropdown-item-indicator-end {
 			display: block;
 		}
+	}
+}
+
+// Bootstrap 4 Nav Pills
+
+.nav-pills {
+	.nav-link {
+		@include border-radius($nav-pills-border-radius);
+	}
+
+	.nav-link.active,
+	.show > .nav-link {
+		background-color: $nav-pills-link-active-bg;
+		color: $nav-pills-link-active-color;
 	}
 }
 
