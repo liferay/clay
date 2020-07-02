@@ -2,10 +2,10 @@ $card-border-style: solid !default;
 $card-box-shadow: null !default;
 $card-margin-bottom: 1.5rem !default;
 
-$card-body-padding-bottom: null !default;
-$card-body-padding-left: null !default;
-$card-body-padding-right: null !default;
-$card-body-padding-top: null !default;
+$card-body-padding-bottom: $card-spacer-x !default;
+$card-body-padding-left: $card-spacer-x !default;
+$card-body-padding-right: $card-spacer-x !default;
+$card-body-padding-top: $card-spacer-x !default;
 
 $card-section-header-color: $gray-600 !default;
 $card-section-header-font-size: 0.75rem !default;
@@ -140,6 +140,9 @@ $card-link: map-deep-merge(
 	(
 		color: $link-color,
 		hover-color: $link-hover-color,
+		hover: (
+			text-decoration: none,
+		),
 	),
 	$card-link
 );
