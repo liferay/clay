@@ -1,0 +1,209 @@
+// Notes on the classes:
+//
+// 1. .carousel.pointer-event should ideally be pan-y (to allow for users to scroll vertically)
+//    even when their scroll action started on a carousel, but for compatibility (with Firefox)
+//    we're preventing all actions instead
+// 2. The .carousel-item-left and .carousel-item-right is used to indicate where
+//    the active slide is heading.
+// 3. .active.carousel-item is the current slide.
+// 4. .active.carousel-item-left and .active.carousel-item-right is the current
+//    slide in its in-transition state. Only one of these occurs at a time.
+// 5. .carousel-item-next.carousel-item-left and .carousel-item-prev.carousel-item-right
+//    is the upcoming slide in transition.
+
+.carousel {
+	position: relative;
+}
+
+.carousel.pointer-event {
+	touch-action: pan-y;
+}
+
+.carousel-inner {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+
+	&::after {
+		clear: both;
+		content: '';
+		display: block;
+	}
+}
+
+.carousel-item {
+	backface-visibility: hidden;
+	display: none;
+	float: left;
+	margin-right: -100%;
+	position: relative;
+
+	@include transition($carousel-transition);
+
+	width: 100%;
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+	display: block;
+}
+
+.carousel-item-next:not(.carousel-item-left),
+.active.carousel-item-right {
+	transform: translateX(100%);
+}
+
+.carousel-item-prev:not(.carousel-item-right),
+.active.carousel-item-left {
+	transform: translateX(-100%);
+}
+
+// Alternate transitions
+
+.carousel-fade {
+	.carousel-item {
+		opacity: 0;
+		transform: none;
+		transition-property: opacity;
+	}
+
+	.carousel-item.active,
+	.carousel-item-next.carousel-item-left,
+	.carousel-item-prev.carousel-item-right {
+		opacity: 1;
+		z-index: 1;
+	}
+
+	.active.carousel-item-left,
+	.active.carousel-item-right {
+		opacity: 0;
+
+		@include transition(opacity 0s $carousel-transition-duration);
+
+		z-index: 0;
+	}
+}
+
+// Left/right controls for nav
+
+.carousel-control-prev,
+.carousel-control-next {
+	align-items: center;
+	bottom: 0;
+	color: $carousel-control-color;
+	display: flex;
+	justify-content: center;
+	opacity: $carousel-control-opacity;
+	position: absolute;
+	text-align: center;
+	top: 0;
+
+	@include transition($carousel-control-transition);
+
+	width: $carousel-control-width;
+	z-index: 1;
+
+	&:hover,
+	&:focus {
+		color: $carousel-control-color;
+		opacity: $carousel-control-hover-opacity;
+		outline: 0;
+		text-decoration: none;
+	}
+}
+.carousel-control-prev {
+	@if $enable-gradients {
+		background-image: linear-gradient(
+			90deg,
+			rgba($black, 0.25),
+			rgba($black, 0.001)
+		);
+	}
+
+	left: 0;
+}
+.carousel-control-next {
+	@if $enable-gradients {
+		background-image: linear-gradient(
+			270deg,
+			rgba($black, 0.25),
+			rgba($black, 0.001)
+		);
+	}
+
+	right: 0;
+}
+
+// Icons for within
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+	background: no-repeat 50% / 100% 100%;
+	display: inline-block;
+	height: $carousel-control-icon-width;
+	width: $carousel-control-icon-width;
+}
+
+.carousel-control-prev-icon {
+	background-image: escape-svg($carousel-control-prev-icon-bg);
+}
+
+.carousel-control-next-icon {
+	background-image: escape-svg($carousel-control-next-icon-bg);
+}
+
+// Optional indicator pips
+// Add an ordered list with the following class and add a list item for each
+// slide your carousel holds.
+
+.carousel-indicators {
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	left: 0;
+	list-style: none;
+	margin-left: $carousel-control-width;
+	margin-right: $carousel-control-width;
+	padding-left: 0;
+	position: absolute;
+	right: 0;
+	z-index: 15;
+
+	li {
+		background-clip: padding-box;
+		background-color: $carousel-indicator-active-bg;
+		border-bottom: $carousel-indicator-hit-area-height solid transparent;
+		border-top: $carousel-indicator-hit-area-height solid transparent;
+		box-sizing: content-box;
+		cursor: pointer;
+		flex: 0 1 auto;
+		height: $carousel-indicator-height;
+		margin-left: $carousel-indicator-spacer;
+		margin-right: $carousel-indicator-spacer;
+		opacity: 0.5;
+		text-indent: -999px;
+
+		@include transition($carousel-indicator-transition);
+
+		width: $carousel-indicator-width;
+	}
+
+	.active {
+		opacity: 1;
+	}
+}
+
+// Optional captions
+
+.carousel-caption {
+	position: absolute;
+	right: (100% - $carousel-caption-width) / 2;
+	bottom: 20px;
+	left: (100% - $carousel-caption-width) / 2;
+	z-index: 10;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: $carousel-caption-color;
+	text-align: center;
+}
