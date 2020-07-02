@@ -36,19 +36,7 @@ $badge-close: map-deep-merge(
 );
 
 // Badge Variants
-// a.badge-#{$color} {
-// 	&:hover {
-// 		background-color: darken($value, 10%);
-// 		color: color-yiq($value);
-// 	}
 
-// 	&:focus,
-// 	&.focus {
-// 		background-color: darken($value, 10%);
-// 		box-shadow: 0 0 0 $badge-focus-width rgba($value, 0.5);
-// 		color: color-yiq($value);
-// 	}
-// }
 $badge-primary-bg: $primary !default;
 $badge-primary-hover-bg: darken($primary, 10%) !default;
 $badge-primary-border-color: null !default;
