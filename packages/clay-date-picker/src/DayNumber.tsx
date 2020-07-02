@@ -13,11 +13,7 @@ interface IProps {
 	daySelected: Date;
 	disabled?: boolean;
 	onClick: (date: Date) => void;
-	onKeyUp?: (event: React.KeyboardEvent) => void;
-	onKeyDown?: (event: React.KeyboardEvent) => void;
 }
-
-const noop = () => {};
 
 const KEYS = {
 	SPACE: ' ',
@@ -27,9 +23,7 @@ const ClayDatePickerDayNumber: React.FunctionComponent<IProps> = ({
 	day,
 	daySelected,
 	disabled,
-	onClick = noop,
-	onKeyDown = noop,
-	onKeyUp = noop,
+	onClick,
 }) => {
 	const {date, outside} = day;
 
@@ -62,15 +56,11 @@ const ClayDatePickerDayNumber: React.FunctionComponent<IProps> = ({
 				if (event.key === KEYS.SPACE) {
 					event.preventDefault();
 				}
-
-				onKeyDown(event);
 			}}
 			onKeyUp={(event) => {
 				if (event.key === KEYS.SPACE) {
 					onClick(date);
 				}
-
-				onKeyUp(event);
 			}}
 			type="button"
 		>
