@@ -7,8 +7,7 @@ import Editor from '$clayui.com/src/components/Editor';
 import ClayButton from '@clayui/button';
 import React from 'react';
 
-const buttonDisplayTypesImportsCode = `import ClayButton from '@clayui/button';
-`;
+const buttonDisplayTypesImportsCode = `import ClayButton from '@clayui/button';`;
 
 const ButtonDisplayTypesCode = `const Component = () => {
 	return (
@@ -31,9 +30,9 @@ const ButtonDisplayTypesCode = `const Component = () => {
 
 render(<Component />);`;
 
-const ButtonJSPCode = `<%@ taglib uri="http://liferay.com/tld/clay" prefix="clay" %>
+const buttonJSPImportsCode = `<%@ taglib uri="http://liferay.com/tld/clay" prefix="clay" %>`;
 
-<clay:button
+const ButtonJSPCode = `<clay:button
 	displayType="primary"
 	label="Button Primary"
 />
@@ -55,28 +54,25 @@ const ButtonJSPCode = `<%@ taglib uri="http://liferay.com/tld/clay" prefix="clay
 
 const ButtonDisplayTypes = () => {
 	const scope = {ClayButton};
+
 	const codeSnippets = [
 		{
+			imports: buttonDisplayTypesImportsCode,
 			name: 'React',
 			value: ButtonDisplayTypesCode,
 		},
 		{
+			disabled: true,
+			imports: buttonJSPImportsCode,
 			name: 'JSP',
 			value: ButtonJSPCode,
 		},
 	];
 
-	return (
-		<Editor
-			code={codeSnippets}
-			imports={buttonDisplayTypesImportsCode}
-			scope={scope}
-		/>
-	);
+	return <Editor code={codeSnippets} scope={scope} />;
 };
 
-const buttonGroupImportsCode = `import ClayButton from '@clayui/button';
-`;
+const buttonGroupImportsCode = `import ClayButton from '@clayui/button';`;
 
 const ButtonGroupCode = `const Component = () => {
 	return (
