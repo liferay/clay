@@ -31,13 +31,44 @@ const ButtonDisplayTypesCode = `const Component = () => {
 
 render(<Component />);`;
 
+const ButtonJSPCode = `<%@ taglib uri="http://liferay.com/tld/clay" prefix="clay" %>
+
+<clay:button
+	displayType="primary"
+	label="Button Primary"
+/>
+
+<clay:button
+	displayType="secondary"
+	label="Button Secondary"
+/>
+
+<clay:button
+	displayType="link"
+	label="Button Link"
+/>
+
+<clay:button
+	displayType="unstyled"
+	label="Button Unstyled"
+/>`;
+
 const ButtonDisplayTypes = () => {
 	const scope = {ClayButton};
-	const code = ButtonDisplayTypesCode;
+	const codeSnippets = [
+		{
+			name: 'React',
+			value: ButtonDisplayTypesCode,
+		},
+		{
+			name: 'JSP',
+			value: ButtonJSPCode,
+		},
+	];
 
 	return (
 		<Editor
-			code={code}
+			code={codeSnippets}
 			imports={buttonDisplayTypesImportsCode}
 			scope={scope}
 		/>
