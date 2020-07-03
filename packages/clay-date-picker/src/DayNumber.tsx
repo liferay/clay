@@ -15,10 +15,6 @@ interface IProps {
 	onClick: (date: Date) => void;
 }
 
-const KEYS = {
-	SPACE: ('Spacebar' || ' '),
-};
-
 const ClayDatePickerDayNumber: React.FunctionComponent<IProps> = ({
 	day,
 	daySelected,
@@ -53,12 +49,12 @@ const ClayDatePickerDayNumber: React.FunctionComponent<IProps> = ({
 				// When tabbing and selecting a DayNumber using
 				// SPACE key the active state it's not being removed.
 				// See https://github.com/liferay/clay/issues/3374 for more details.
-				if (event.key === KEYS.SPACE) {
+				if (event.key === 'Spacebar' || event.key === ' ') {
 					event.preventDefault();
 				}
 			}}
 			onKeyUp={(event) => {
-				if (event.key === KEYS.SPACE) {
+				if (event.key === 'Spacebar' || event.key === ' ') {
 					onClick(date);
 				}
 			}}
