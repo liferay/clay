@@ -215,37 +215,45 @@ input[type='button'] {
 		width: $btn-monospaced-size-mobile;
 	}
 
-	&.btn-lg {
-		height: $btn-monospaced-size-lg;
-		padding-bottom: $btn-monospaced-padding-y-lg;
-		padding-left: $btn-monospaced-padding-x-lg;
-		padding-right: $btn-monospaced-padding-x-lg;
-		padding-top: $btn-monospaced-padding-y-lg;
-		width: $btn-monospaced-size-lg;
-
-		@include clay-scale-component {
-			height: $btn-monospaced-size-lg-mobile;
-			width: $btn-monospaced-size-lg-mobile;
-		}
-	}
-
-	&.btn-sm {
-		height: $btn-monospaced-size-sm;
-		padding-bottom: $btn-monospaced-padding-y-sm;
-		padding-left: $btn-monospaced-padding-x-sm;
-		padding-right: $btn-monospaced-padding-x-sm;
-		padding-top: $btn-monospaced-padding-y-sm;
-		width: $btn-monospaced-size-sm;
-
-		@include clay-scale-component {
-			height: $btn-monospaced-size-sm-mobile;
-			width: $btn-monospaced-size-sm-mobile;
-		}
-	}
-
 	&.btn .lexicon-icon {
 		margin-top: 0;
 	}
+}
+
+%clay-btn-monospaced-lg {
+	height: $btn-monospaced-size-lg;
+	padding-bottom: $btn-monospaced-padding-y-lg;
+	padding-left: $btn-monospaced-padding-x-lg;
+	padding-right: $btn-monospaced-padding-x-lg;
+	padding-top: $btn-monospaced-padding-y-lg;
+	width: $btn-monospaced-size-lg;
+
+	@include clay-scale-component {
+		height: $btn-monospaced-size-lg-mobile;
+		width: $btn-monospaced-size-lg-mobile;
+	}
+}
+
+.btn-monospaced.btn-lg {
+	@extend %clay-btn-monospaced-lg !optional;
+}
+
+%clay-btn-monospaced-sm {
+	height: $btn-monospaced-size-sm;
+	padding-bottom: $btn-monospaced-padding-y-sm;
+	padding-left: $btn-monospaced-padding-x-sm;
+	padding-right: $btn-monospaced-padding-x-sm;
+	padding-top: $btn-monospaced-padding-y-sm;
+	width: $btn-monospaced-size-sm;
+
+	@include clay-scale-component {
+		height: $btn-monospaced-size-sm-mobile;
+		width: $btn-monospaced-size-sm-mobile;
+	}
+}
+
+.btn-monospaced.btn-sm {
+	@extend %clay-btn-monospaced-sm !optional;
 }
 
 // Button C Inner

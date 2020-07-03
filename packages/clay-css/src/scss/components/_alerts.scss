@@ -1,12 +1,15 @@
 .alert {
+	border-color: transparent;
 	border-style: $alert-border-style;
+	border-width: $alert-border-width;
 
-	@if ($alert-border-width != 1px) {
-		border-width: $alert-border-width;
-	}
+	@include border-radius($alert-border-radius);
 
 	display: block;
 	font-size: $alert-font-size;
+	margin-bottom: $alert-margin-bottom;
+	padding: $alert-padding-y $alert-padding-x;
+	position: relative;
 	word-wrap: break-word;
 
 	.alert-btn {
@@ -34,6 +37,12 @@
 	.component-subtitle {
 		@include clay-text-typography($alert-subtitle);
 	}
+}
+
+.alert-heading {
+	// Specified to prevent conflicts of changing $headings-color
+
+	color: inherit;
 }
 
 .alert-footer {
@@ -200,6 +209,10 @@
 		background-color: map-get($value, bg);
 		border-color: map-get($value, border-color);
 		color: map-get($value, color);
+
+		hr {
+			border-top-color: darken(map-get($value, border-color), 5%);
+		}
 
 		.alert-btn {
 			@include clay-button-variant(map-get($value, alert-btn));
