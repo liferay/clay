@@ -556,6 +556,7 @@ const iconsData = {
 	"compress":					'"arrows", "decrease", "reduce", "resize", "small"',
 	"container":				'"box", "grid", "rectangle", "squares"',
 	"control-panel":			'"change", "effects", "settings"',
+	"copy":						'"duplicate", "paste"',
 	"custom-size":				'"arrows", "box", "increase", "sides"',
 	"cut":						'"copy", "editor", "paste", "scissors", "text"',
 	"change-list":				'"arrows", "box", "move", "update"',
