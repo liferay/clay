@@ -515,6 +515,7 @@ const iconsData = {
 	"asterisk":					'"*", "mandatory", "required"',
 	"audio":					'"sound", "music", "note"',
 	"autosize":					'"arrows", "box", "expand", "fullscreen", "resize"',
+	"background-color":			'"bucket"',
 	"bars":						'"menu", "lines", "horizontal", "more"',
 	"bell-full":				'"alert", "audio", "music", "notification", "sound"',
 	"bell-off":					'"alert", "audio", "music", "notification", "sound"',
