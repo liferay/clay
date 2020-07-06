@@ -27,11 +27,38 @@ render(<Component />);`;
 const alertImportsCode = `import React from 'react';
 import ClayAlert from '@clayui/alert';`;
 
+const alertJSPImportsCode = `<%@ taglib uri="http://liferay.com/tld/clay" prefix="clay" %>`;
+
+const AlertJSPCode = `<clay:alert
+	message="This is a default alert"
+	displayType="info"
+	title="Info"
+/>
+
+<clay:stripe
+	message="This is a stripe alert"
+	displayType="warning"
+	title="Warning"
+/>`;
+
 export const Alert = () => {
 	const scope = {ClayAlert};
-	const code = AlertCode;
 
-	return <Editor code={code} imports={alertImportsCode} scope={scope} />;
+	const codeSnippets = [
+		{
+			imports: alertImportsCode,
+			name: 'React',
+			value: AlertCode,
+		},
+		{
+			disabled: true,
+			imports: alertJSPImportsCode,
+			name: 'JSP',
+			value: AlertJSPCode,
+		},
+	];
+
+	return <Editor code={codeSnippets} scope={scope} />;
 };
 
 const AlertWithButtonCode = `const Component = () => {
