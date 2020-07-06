@@ -7,8 +7,7 @@ import Editor from '$clayui.com/src/components/Editor';
 import ClayIcon, {ClayIconSpriteContext} from '@clayui/icon';
 import React from 'react';
 
-const iconImportsCode = `import ClayIcon from '@clayui/icon';
-`;
+const iconImportsCode = `import ClayIcon from '@clayui/icon';`;
 
 const IconCode = `const Component = () => {
 	return (
@@ -18,11 +17,28 @@ const IconCode = `const Component = () => {
 
 render(<Component />)`;
 
+const iconJSPImportsCode = `<%@ taglib uri="http://liferay.com/tld/clay" prefix="clay" %>`;
+
+const IconJSPCode = `<clay:icon symbol="heart" />`;
+
 export const Icon = () => {
 	const scope = {ClayIcon};
-	const code = IconCode;
 
-	return <Editor code={code} imports={iconImportsCode} scope={scope} />;
+	const codeSnippets = [
+		{
+			imports: iconImportsCode,
+			name: 'React',
+			value: IconCode,
+		},
+		{
+			disabled: true,
+			imports: iconJSPImportsCode,
+			name: 'JSP',
+			value: IconJSPCode,
+		},
+	];
+
+	return <Editor code={codeSnippets} scope={scope} />;
 };
 
 const iconWithContextImportsCode = `import ClayIcon, {ClayIconSpriteContext} from '@clayui/icon';
