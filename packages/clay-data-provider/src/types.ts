@@ -88,10 +88,7 @@ export interface IDataProvider {
 	 * A Promise returning function to fetch your data, this replaces the
 	 * use of `fetch` by default.
 	 */
-	fetch?: (
-		link: string,
-		init?: RequestInit | undefined
-	) => Promise<Response>;
+	fetch?: (link: string, init?: RequestInit | undefined) => Promise<Response>;
 
 	/**
 	 * This API is used in conjunction with variables API, if it is always
