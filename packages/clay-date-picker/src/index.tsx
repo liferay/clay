@@ -7,6 +7,7 @@ import Button from '@clayui/button';
 import DropDown from '@clayui/drop-down';
 import {ClayInput} from '@clayui/form';
 import Icon from '@clayui/icon';
+import {FocusScope} from '@clayui/shared';
 import React from 'react';
 
 import DateNavigation from './DateNavigation';
@@ -345,106 +346,134 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		 */
 		const handleCalendarButtonClicked = () => setExpanded(!expanded);
 
-		return (
-			<div className="date-picker">
-				<ClayInput.Group id={id} ref={triggerElementRef}>
-					<ClayInput.GroupItem>
-						<InputDate
-							{...otherProps}
-							ariaLabel={ariaLabels.input}
-							currentTime={currentTime}
-							dateFormat={dateFormat}
-							disabled={disabled}
-							inputName={inputName}
-							onChange={inputChange}
-							placeholder={placeholder}
-							ref={ref}
-							time={time}
-							useNative={useNative}
-							value={value}
-						/>
-						{!useNative && (
-							<ClayInput.GroupInsetItem after>
-								<Button
-									className="date-picker-dropdown-toggle"
-									data-testid="date-button"
-									disabled={disabled}
-									displayType="unstyled"
-									onClick={handleCalendarButtonClicked}
-								>
-									<Icon
-										spritemap={spritemap}
-										symbol="calendar"
-									/>
-								</Button>
-							</ClayInput.GroupInsetItem>
-						)}
-					</ClayInput.GroupItem>
-				</ClayInput.Group>
+		/**
+		 * Handle with the focus when it's outside of the component
+		 * In this case, forces the state of expanded to be false
+		 */
+		const handleFocus = (event: FocusEvent) => {
+			if (
+				dropdownContainerRef.current &&
+				!dropdownContainerRef.current.contains(event.target as Node) &&
+				triggerElementRef.current &&
+				!triggerElementRef.current.contains(event.target as Node)
+			) {
+				setExpanded(false);
+			}
+		};
 
-				{!useNative && (
-					<DropDown.Menu
-						active={expanded}
-						alignElementRef={triggerElementRef}
-						className="date-picker-dropdown-menu"
-						data-testid="dropdown"
-						onSetActive={setExpanded}
-						ref={dropdownContainerRef}
-					>
-						<div className="date-picker-calendar">
-							<DateNavigation
-								ariaLabels={ariaLabels}
-								currentMonth={currentMonth}
+		React.useEffect(() => {
+			document.addEventListener('focus', handleFocus, true);
+
+			return () => {
+				document.removeEventListener('focus', handleFocus, true);
+			};
+		}, [handleFocus]);
+
+		return (
+			<FocusScope arrowKeysLeftRight>
+				<div className="date-picker">
+					<ClayInput.Group id={id} ref={triggerElementRef}>
+						<ClayInput.GroupItem>
+							<InputDate
+								{...otherProps}
+								ariaLabel={ariaLabels.input}
+								currentTime={currentTime}
+								dateFormat={dateFormat}
 								disabled={disabled}
-								months={months}
-								onDotClicked={handleDotClicked}
-								onMonthChange={changeMonth}
-								spritemap={spritemap}
-								years={years}
+								inputName={inputName}
+								onChange={inputChange}
+								placeholder={placeholder}
+								ref={ref}
+								time={time}
+								useNative={useNative}
+								value={value}
 							/>
-							<div className="date-picker-calendar-body">
-								<WeekdayHeader
-									firstDayOfWeek={firstDayOfWeek}
-									weekdaysShort={weekdaysShort}
-								>
-									{({key, weekday}) => (
-										<Weekday key={key} weekday={weekday} />
-									)}
-								</WeekdayHeader>
-								<DaysTable weeks={weeks}>
-									{({day, key}) => (
-										<DayNumber
-											day={day}
-											daySelected={daySelected}
-											disabled={disabled}
-											key={key}
-											onClick={handleDayClicked}
-										/>
-									)}
-								</DaysTable>
-							</div>
-							{(footerElement || time) && (
-								<div className="date-picker-calendar-footer">
-									{time && (
-										<TimePicker
-											currentTime={currentTime}
-											disabled={disabled}
-											onTimeChange={handleTimeChange}
+							{!useNative && (
+								<ClayInput.GroupInsetItem after>
+									<Button
+										className="date-picker-dropdown-toggle"
+										data-testid="date-button"
+										disabled={disabled}
+										displayType="unstyled"
+										onClick={handleCalendarButtonClicked}
+									>
+										<Icon
 											spritemap={spritemap}
-											timezone={timezone}
+											symbol="calendar"
 										/>
-									)}
-									{!time &&
-										footerElement &&
-										React.Children.only(
-											footerElement({spritemap})
-										)}
-								</div>
+									</Button>
+								</ClayInput.GroupInsetItem>
 							)}
-						</div>
-					</DropDown.Menu>
-				)}
-			</div>
+						</ClayInput.GroupItem>
+					</ClayInput.Group>
+
+					{!useNative && (
+						<DropDown.Menu
+							active={expanded}
+							alignElementRef={triggerElementRef}
+							className="date-picker-dropdown-menu"
+							data-testid="dropdown"
+							onSetActive={setExpanded}
+							ref={dropdownContainerRef}
+						>
+							<div className="date-picker-calendar">
+								<DateNavigation
+									ariaLabels={ariaLabels}
+									currentMonth={currentMonth}
+									disabled={disabled}
+									months={months}
+									onDotClicked={handleDotClicked}
+									onMonthChange={changeMonth}
+									spritemap={spritemap}
+									years={years}
+								/>
+								<div className="date-picker-calendar-body">
+									<WeekdayHeader
+										firstDayOfWeek={firstDayOfWeek}
+										weekdaysShort={weekdaysShort}
+									>
+										{({key, weekday}) => (
+											<Weekday
+												key={key}
+												weekday={weekday}
+											/>
+										)}
+									</WeekdayHeader>
+									<DaysTable weeks={weeks}>
+										{({day, key}) => (
+											<DayNumber
+												day={day}
+												daySelected={daySelected}
+												disabled={disabled}
+												key={key}
+												onClick={handleDayClicked}
+											/>
+										)}
+									</DaysTable>
+								</div>
+								{(footerElement || time) && (
+									<div className="date-picker-calendar-footer">
+										{time && (
+											<TimePicker
+												currentTime={currentTime}
+												disabled={disabled}
+												onTimeChange={handleTimeChange}
+												spritemap={spritemap}
+												timezone={timezone}
+											/>
+										)}
+										{!time &&
+											footerElement &&
+											React.Children.only(
+												footerElement({spritemap})
+											)}
+									</div>
+								)}
+							</div>
+						</DropDown.Menu>
+					)}
+				</div>
+			</FocusScope>
 		);
 	}
 );
