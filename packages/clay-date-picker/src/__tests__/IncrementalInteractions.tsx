@@ -5,6 +5,7 @@
 
 import ClayDatePicker from '..';
 import {cleanup, fireEvent, render} from '@testing-library/react';
+import {default as formatDate} from 'date-fns/format';
 import React from 'react';
 
 const spritemap = 'icons.svg';
@@ -208,14 +209,16 @@ describe('IncrementalInteractions', () => {
 		);
 
 		const input: any = getByLabelText(ariaLabels.input);
-		const dayNumber = getByLabelText('2019 04 18');
 		const dotButtonEl = getByLabelText(ariaLabels.buttonDot);
 
 		fireEvent.click(dotButtonEl);
 
-		expect(input.value).toBe('2019-04-18');
+		const currentDate = new Date();
+
+		expect(input.value).toBe(formatDate(currentDate, 'yyyy-MM-dd'));
+
+		const dayNumber = getByLabelText(formatDate(currentDate, 'yyyy MM dd'));
 		expect(dayNumber.classList).toContain('active');
-		expect(document.body).toMatchSnapshot();
 	});
 
 	it('clicking on the next arrow button the content must be updated with the corresponding month', () => {
