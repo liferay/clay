@@ -253,7 +253,7 @@ storiesOf('Components|ClayDataProvider', module)
 			);
 
 		useResource({
-			fetcher: customFetcher,
+			fetch: customFetcher,
 			link: 'https://rickandmortyapi.com/api/character/',
 			variables: {limit: 10},
 		});

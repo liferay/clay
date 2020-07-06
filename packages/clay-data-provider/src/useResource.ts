@@ -192,12 +192,12 @@ const useResource = ({
 				const fn = fetcher ?? fetch;
 
 				promise = fn(getUrlFormat(link, variables), fetchOptions).then(
-					(res) => {
-						if (fetcher) {
-							return res;
+					(res: Response) => {
+						if (res.ok && res.body && !res.body.locked) {
+							return res.json();
 						}
 
-						return res.json();
+						return res;
 					}
 				);
 				break;
