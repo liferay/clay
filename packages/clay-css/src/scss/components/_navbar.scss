@@ -1,25 +1,37 @@
 // Navbar
 
 .navbar {
+	align-items: center;
 	border-width: 0;
+	display: flex;
+	flex-wrap: wrap;
 	font-size: $navbar-font-size;
+	justify-content: space-between;
+	padding: $navbar-padding-y $navbar-padding-x;
+	position: relative;
+
+	%container-flex-properties {
+		align-items: inherit;
+		background-color: inherit;
+		display: inherit;
+		flex-wrap: inherit;
+		justify-content: inherit;
+	}
 
 	.container,
 	.container-fluid {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
+		@extend %container-flex-properties;
+	}
+
+	@each $breakpoint, $container-max-width in $container-max-widths {
+		> .container#{breakpoint-infix($breakpoint, $container-max-widths)} {
+			@extend %container-flex-properties;
+		}
 	}
 }
 
 .navbar-nowrap {
 	flex-wrap: nowrap;
-
-	.container,
-	.container-fluid,
-	.navbar-nav {
-		flex-wrap: nowrap !important;
-	}
 
 	.navbar-text {
 		min-width: 0;
@@ -36,10 +48,30 @@
 }
 
 .navbar-nav {
-	flex-direction: row;
+	display: flex;
+	flex-wrap: inherit;
+	list-style: none;
+	margin-bottom: 0;
+	padding-left: 0;
 
 	.dropdown-menu {
-		position: absolute;
+		float: none;
+	}
+
+	.nav-item,
+	.nav-item .dropdown {
+		align-items: center;
+		display: flex;
+		word-wrap: normal;
+	}
+
+	.nav-item {
+		> .custom-control,
+		> .form-check {
+			margin-bottom: 0;
+			margin-left: $navbar-nav-link-padding-x;
+			margin-right: $navbar-nav-link-padding-x;
+		}
 	}
 
 	.nav-link {
@@ -55,17 +87,6 @@
 
 .navbar-nav-last {
 	margin-left: auto;
-}
-
-.navbar-nav .nav-item {
-	word-wrap: normal;
-
-	> .custom-control,
-	> .form-check {
-		margin-bottom: 0;
-		margin-left: $navbar-nav-link-padding-x;
-		margin-right: $navbar-nav-link-padding-x;
-	}
 }
 
 .nav-item-expand {
@@ -85,15 +106,24 @@
 }
 
 .navbar-text {
+	display: inline-block;
+	padding-bottom: $nav-link-padding-y;
 	padding-left: $navbar-nav-link-padding-x;
 	padding-right: $navbar-nav-link-padding-x;
+	padding-top: $nav-link-padding-y;
 }
 
 .navbar-collapse {
-	max-width: 100%;
+	align-items: center;
+	flex-grow: 1;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
 
-	.navbar-nav {
-		flex-direction: column;
+	.container,
+	.container-fluid {
+		padding-left: 0;
+		padding-right: 0;
 	}
 
 	.dropdown-toggle .navbar-text-truncate {
@@ -104,16 +134,40 @@
 .navbar-text-truncate {
 	display: inline-block;
 	max-width: 100%;
-
-	@include text-truncate;
-
+	overflow: hidden;
+	text-overflow: ellipsis;
 	vertical-align: bottom;
+	white-space: nowrap;
 }
 
 // Navbar Toggler
 
+.navbar-toggler-icon {
+	background-size: 100% 100%;
+	background: no-repeat center center;
+	content: '';
+	display: inline-block;
+	height: 1.5em;
+	vertical-align: middle;
+	width: 1.5em;
+}
+
 .navbar-toggler {
+	background-color: transparent;
+	border: $border-width solid transparent;
+
+	@include border-radius($navbar-toggler-border-radius);
+
+	font-size: $navbar-toggler-font-size;
+	line-height: 1;
+	padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
+
+	&:hover {
+		text-decoration: none;
+	}
+
 	&:focus {
+		text-decoration: none;
 		z-index: $zindex-navbar-toggler-focus;
 	}
 
@@ -141,10 +195,20 @@
 // Navbar Brand
 
 .navbar-brand {
-	margin-right: 0;
+	display: inline-block;
+	font-size: $navbar-brand-font-size;
+	line-height: inherit;
 	max-width: calc(100% - 72px);
+	padding-bottom: $navbar-brand-padding-y;
 	padding-left: $navbar-nav-link-padding-x;
 	padding-right: $navbar-nav-link-padding-x;
+	padding-top: $navbar-brand-padding-y;
+	white-space: nowrap;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
 }
 
 // Navbar Form
@@ -173,7 +237,8 @@
 // Navbar Overlay
 
 .navbar-overlay {
-	background-color: $body-bg;
+	background-color: inherit;
+	flex-wrap: inherit;
 }
 
 // Navbar Display Utilities
@@ -187,47 +252,15 @@
 // Navbar Expand
 
 .navbar-expand {
-	flex-wrap: wrap;
-	justify-content: space-between;
-
-	.navbar-nav {
-		flex-wrap: wrap;
-	}
-
 	@each $breakpoint in map-keys($grid-breakpoints) {
 		$next: breakpoint-next($breakpoint, $grid-breakpoints);
 		$infix: breakpoint-infix($next, $grid-breakpoints);
 
-		// .navbar-expand, sm, md, lg, xl
+		// sm, md, lg, xl, .navbar-expand
 
 		&#{$infix} {
-			justify-content: space-between;
-
-			.nav-item,
-			.nav-item .dropdown {
-				align-items: center;
-				display: flex;
-			}
-
 			.nav-item .navbar-text-truncate {
 				max-width: $navbar-text-truncate-max-width;
-			}
-
-			.container,
-			.container-fluid {
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: space-between;
-				padding-left: $grid-gutter-width / 2;
-				padding-right: $grid-gutter-width / 2;
-			}
-
-			.navbar-collapse {
-				.container,
-				.container-fluid {
-					padding-left: 0;
-					padding-right: 0;
-				}
 			}
 
 			// .navbar-expand-sm, md, lg, xl
@@ -236,6 +269,7 @@
 				@include media-breakpoint-down($breakpoint) {
 					&.navbar-collapse-absolute {
 						.navbar-collapse {
+							background-color: inherit;
 							left: 0;
 							padding: 0 $navbar-padding-x;
 							position: absolute;
@@ -259,13 +293,6 @@
 					}
 
 					.navbar-collapse {
-						.container,
-						.container-fluid {
-							display: block;
-							padding-left: 0;
-							padding-right: 0;
-						}
-
 						.nav-item,
 						.nav-item .dropdown {
 							display: block;
@@ -276,6 +303,8 @@
 						}
 
 						.navbar-nav {
+							flex-direction: column;
+
 							.dropdown-toggle .navbar-text-truncate {
 								max-width: calc(
 									100% - #{$navbar-text-truncate-spacer-right}
@@ -346,7 +375,7 @@
 				}
 			}
 
-			// .navbar-expand-sm, md, lg, xl
+			// .navbar-expand-sm, md, lg, xl, .navbar-expand
 
 			@include media-breakpoint-up($next) {
 				@if not($infix == '') {
@@ -355,19 +384,17 @@
 					}
 
 					.navbar-collapse {
-						flex-grow: 1;
-						flex-wrap: wrap;
-						justify-content: space-between;
-
-						.navbar-nav {
-							flex-direction: row;
-							flex-wrap: wrap;
-						}
+						display: flex !important;
+						width: auto;
 
 						.dropdown-toggle .navbar-text-truncate {
 							max-width: $navbar-text-truncate-max-width -
 								$navbar-text-truncate-spacer-right;
 						}
+					}
+
+					.navbar-toggler {
+						display: none;
 					}
 
 					.navbar-breakpoint-d-block {
@@ -425,6 +452,120 @@
 
 			&.show {
 				display: flex;
+			}
+		}
+	}
+}
+
+// Navbar Light
+
+.navbar-light {
+	.navbar-brand {
+		color: $navbar-light-brand-color;
+
+		&:hover,
+		&:focus {
+			color: $navbar-light-brand-hover-color;
+		}
+	}
+
+	.navbar-nav {
+		.nav-link {
+			color: $navbar-light-color;
+
+			&:hover,
+			&:focus {
+				color: $navbar-light-hover-color;
+			}
+
+			&.disabled {
+				color: $navbar-light-disabled-color;
+			}
+		}
+
+		.show > .nav-link,
+		.active > .nav-link,
+		.nav-link.show,
+		.nav-link.active {
+			color: $navbar-light-active-color;
+		}
+	}
+
+	.navbar-toggler {
+		border-color: $navbar-light-toggler-border-color;
+		color: $navbar-light-color;
+	}
+
+	.navbar-toggler-icon {
+		background-image: escape-svg($navbar-light-toggler-icon-bg);
+	}
+
+	.navbar-text {
+		color: $navbar-light-color;
+
+		a {
+			color: $navbar-light-active-color;
+
+			&:hover,
+			&:focus {
+				color: $navbar-light-active-color;
+			}
+		}
+	}
+}
+
+// Navbar Dark
+
+.navbar-dark {
+	.navbar-brand {
+		color: $navbar-dark-brand-color;
+
+		&:hover,
+		&:focus {
+			color: $navbar-dark-brand-hover-color;
+		}
+	}
+
+	.navbar-nav {
+		.nav-link {
+			color: $navbar-dark-color;
+
+			&:hover,
+			&:focus {
+				color: $navbar-dark-hover-color;
+			}
+
+			&.disabled {
+				color: $navbar-dark-disabled-color;
+			}
+		}
+
+		.show > .nav-link,
+		.active > .nav-link,
+		.nav-link.show,
+		.nav-link.active {
+			color: $navbar-dark-active-color;
+		}
+	}
+
+	.navbar-toggler {
+		border-color: $navbar-dark-toggler-border-color;
+		color: $navbar-dark-color;
+	}
+
+	.navbar-toggler-icon {
+		background-image: escape-svg($navbar-dark-toggler-icon-bg);
+	}
+
+	.navbar-text {
+		color: $navbar-dark-color;
+
+		a {
+			color: $navbar-dark-active-color;
+
+			&:hover,
+			&:focus {
+				color: $navbar-dark-active-color;
 			}
 		}
 	}

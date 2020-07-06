@@ -2,13 +2,30 @@
 	border-color: $badge-border-color;
 	border-style: $badge-border-style;
 	border-width: $badge-border-width;
+
+	@include border-radius($badge-border-radius);
+
+	display: inline-flex;
+	font-size: $badge-font-size;
+	font-weight: $badge-font-weight;
 	line-height: $badge-line-height;
 	margin-bottom: $badge-spacer-y;
 	margin-right: $badge-spacer-x;
 	margin-top: $badge-spacer-y;
 	max-width: 100%;
+	padding: $badge-padding-y $badge-padding-x;
+	text-align: center;
+
+	@include transition($badge-transition);
+
 	white-space: inherit;
 	word-wrap: break-word;
+
+	// Empty badges collapse automatically
+
+	&:empty {
+		display: none;
+	}
 
 	a {
 		color: $badge-link-color;
@@ -62,8 +79,14 @@
 	}
 }
 
-.badge {
-	display: inline-flex;
+.badge[href] {
+	&:hover {
+		text-decoration: none;
+	}
+
+	&:focus {
+		outline: 0;
+	}
 }
 
 .badge-item {
@@ -123,6 +146,23 @@
 	}
 }
 
+// Quick fix for badges in buttons
+
+.btn .badge {
+	margin-right: 0;
+	position: relative;
+	top: -1px;
+}
+
+// Badge Pill
+
+.badge-pill {
+	@include border-radius($badge-pill-border-radius);
+
+	padding-left: $badge-pill-padding-x;
+	padding-right: $badge-pill-padding-x;
+}
+
 // Badge Variants
 
 @each $color, $value in $badge-palette {
@@ -132,10 +172,21 @@
 		color: map-get($value, color);
 
 		&[href] {
-			&:hover,
-			&:focus {
+			&:hover {
 				background-color: map-get($value, hover-bg);
 				border-color: map-get($value, hover-border-color);
+				color: map-get($value, hover-color);
+			}
+
+			&:focus,
+			&.focus {
+				background-color: map-get($value, hover-bg);
+				border-color: map-get($value, hover-border-color);
+				box-shadow: 0
+					0
+					0
+					$badge-focus-width
+					rgba(map-get($value, bg), 0.5);
 				color: map-get($value, hover-color);
 			}
 		}

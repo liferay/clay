@@ -229,7 +229,7 @@
 			box-shadow:
 				setter(
 					map-get($map, disabled-box-shadow),
-					setter(map-get($disabled, box-shadow), none)
+					map-get($disabled, box-shadow)
 				),
 			color:
 				setter(map-get($map, disabled-color), map-get($disabled, color)),
@@ -243,7 +243,6 @@
 					map-get($map, disabled-opacity),
 					map-get($disabled, opacity)
 				),
-			outline: setter(map-get($disabled, outline), 0),
 			pointer-events:
 				setter(
 					map-get($map, disabled-pointer-events),

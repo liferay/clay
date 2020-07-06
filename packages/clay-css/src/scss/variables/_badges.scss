@@ -1,7 +1,7 @@
 $badge-border-color: transparent !default;
 $badge-border-style: solid !default;
 $badge-border-width: 1px !default;
-$badge-line-height: null !default;
+$badge-line-height: 1 !default;
 
 $badge-spacer-x: 0.25rem !default; // 4px
 $badge-spacer-y: 0.125rem !default; // 2px
@@ -37,75 +37,75 @@ $badge-close: map-deep-merge(
 
 // Badge Variants
 
-$badge-primary-bg: null !default;
-$badge-primary-hover-bg: null !default;
+$badge-primary-bg: $primary !default;
+$badge-primary-hover-bg: darken($primary, 10%) !default;
 $badge-primary-border-color: null !default;
 $badge-primary-hover-border-color: null !default;
-$badge-primary-color: null !default;
-$badge-primary-hover-color: null !default;
+$badge-primary-color: color-yiq($primary) !default;
+$badge-primary-hover-color: $badge-primary-color !default;
 $badge-primary-link-color: null !default;
 $badge-primary-link-hover-color: null !default;
 
-$badge-secondary-bg: null !default;
-$badge-secondary-hover-bg: null !default;
+$badge-secondary-bg: $secondary !default;
+$badge-secondary-hover-bg: darken($secondary, 10%) !default;
 $badge-secondary-border-color: null !default;
 $badge-secondary-hover-border-color: null !default;
-$badge-secondary-color: null !default;
-$badge-secondary-hover-color: null !default;
+$badge-secondary-color: color-yiq($secondary) !default;
+$badge-secondary-hover-color: $badge-secondary-color !default;
 $badge-secondary-link-color: null !default;
 $badge-secondary-link-hover-color: null !default;
 
-$badge-success-bg: null !default;
-$badge-success-hover-bg: null !default;
+$badge-success-bg: $success !default;
+$badge-success-hover-bg: darken($success, 10%) !default;
 $badge-success-border-color: null !default;
 $badge-success-hover-border-color: null !default;
-$badge-success-color: null !default;
-$badge-success-hover-color: null !default;
+$badge-success-color: color-yiq($success) !default;
+$badge-success-hover-color: $badge-success-color !default;
 $badge-success-link-color: null !default;
 $badge-success-link-hover-color: null !default;
 
-$badge-info-bg: null !default;
-$badge-info-hover-bg: null !default;
+$badge-info-bg: $info !default;
+$badge-info-hover-bg: darken($info, 10%) !default;
 $badge-info-border-color: null !default;
 $badge-info-hover-border-color: null !default;
-$badge-info-color: null !default;
-$badge-info-hover-color: null !default;
+$badge-info-color: color-yiq($info) !default;
+$badge-info-hover-color: $badge-info-color !default;
 $badge-info-link-color: null !default;
 $badge-info-link-hover-color: null !default;
 
-$badge-warning-bg: null !default;
-$badge-warning-hover-bg: null !default;
+$badge-warning-bg: $warning !default;
+$badge-warning-hover-bg: darken($warning, 10%) !default;
 $badge-warning-border-color: null !default;
 $badge-warning-hover-border-color: null !default;
-$badge-warning-color: null !default;
-$badge-warning-hover-color: null !default;
+$badge-warning-color: color-yiq($warning) !default;
+$badge-warning-hover-color: $badge-warning-color !default;
 $badge-warning-link-color: null !default;
 $badge-warning-link-hover-color: null !default;
 
-$badge-danger-bg: null !default;
-$badge-danger-hover-bg: null !default;
+$badge-danger-bg: $danger !default;
+$badge-danger-hover-bg: darken($danger, 10%) !default;
 $badge-danger-border-color: null !default;
 $badge-danger-hover-border-color: null !default;
-$badge-danger-color: null !default;
-$badge-danger-hover-color: null !default;
+$badge-danger-color: color-yiq($danger) !default;
+$badge-danger-hover-color: $badge-danger-color !default;
 $badge-danger-link-color: null !default;
 $badge-danger-link-hover-color: null !default;
 
-$badge-light-bg: null !default;
-$badge-light-hover-bg: null !default;
+$badge-light-bg: $light !default;
+$badge-light-hover-bg: darken($light, 10%) !default;
 $badge-light-border-color: null !default;
 $badge-light-hover-border-color: null !default;
-$badge-light-color: null !default;
-$badge-light-hover-color: null !default;
+$badge-light-color: color-yiq($light) !default;
+$badge-light-hover-color: $badge-light-color !default;
 $badge-light-link-color: null !default;
 $badge-light-link-hover-color: null !default;
 
-$badge-dark-bg: null !default;
-$badge-dark-hover-bg: null !default;
+$badge-dark-bg: $dark !default;
+$badge-dark-hover-bg: darken($dark, 10%) !default;
 $badge-dark-border-color: null !default;
 $badge-dark-hover-border-color: null !default;
-$badge-dark-color: null !default;
-$badge-dark-hover-color: null !default;
+$badge-dark-color: color-yiq($dark) !default;
+$badge-dark-hover-color: $badge-dark-color !default;
 $badge-dark-link-color: null !default;
 $badge-dark-link-hover-color: null !default;
 

@@ -7,8 +7,7 @@ import Editor from '$clayui.com/src/components/Editor';
 import ClayLabel from '@clayui/label';
 import React from 'react';
 
-const labelImportsCode = `import ClayLabel from '@clayui/label';
-`;
+const labelImportsCode = `import ClayLabel from '@clayui/label';`;
 
 const LabelCode = `const Component = () => {
 	const [visible, setVisible] = useState(true);
@@ -27,7 +26,8 @@ const LabelCode = `const Component = () => {
 		</ClayLabel>
 	) : null;
 }
-render(<Component />)`;
+
+render(<Component />);`;
 
 const Label = () => {
 	const scope = {ClayLabel};
@@ -36,8 +36,7 @@ const Label = () => {
 	return <Editor code={code} imports={labelImportsCode} scope={scope} />;
 };
 
-const labelClosingActionsImportsCode = `import ClayLabel from '@clayui/label';
-`;
+const labelClosingActionsImportsCode = `import ClayLabel from '@clayui/label';`;
 
 const LabelClosingActionsCode = `const Component = () => (
 	<ClayLabel
@@ -51,8 +50,9 @@ const LabelClosingActionsCode = `const Component = () => (
 	>
 		Label Text
 	</ClayLabel>
-)
-render(<Component />)`;
+);
+
+render(<Component />);`;
 
 const LabelClosingActions = () => {
 	const scope = {ClayLabel};
@@ -67,8 +67,7 @@ const LabelClosingActions = () => {
 	);
 };
 
-const labelDisplayTypesImportsCode = `import ClayLabel from '@clayui/label';
-`;
+const labelDisplayTypesImportsCode = `import ClayLabel from '@clayui/label';`;
 
 const LabelDisplayTypesCode = `const Component = () => {
 	return (
@@ -104,21 +103,56 @@ const LabelDisplayTypesCode = `const Component = () => {
 				Label Danger
 			</ClayLabel>
 		</>
-	)
+	);
 }
-render(<Component />)`;
+
+render(<Component />);`;
+
+const labelJSPImportsCode = `<%@ taglib uri="http://liferay.com/tld/clay" prefix="clay" %>`;
+
+const LabelJSPCode = `<clay:label
+	displayType="success"
+	label="Label Success"
+/>
+
+<clay:label
+	displayType="info"
+	label="Label Info"
+/>
+
+<clay:label
+	displayType="secondary"
+	label="Label Secondary"
+/>
+
+<clay:label
+	displayType="warning"
+	label="Label Warning"
+/>
+
+<clay:label
+	displayType="danger"
+	label="Label Danger"
+/>`;
 
 const LabelDisplayTypes = () => {
 	const scope = {ClayLabel};
-	const code = LabelDisplayTypesCode;
 
-	return (
-		<Editor
-			code={code}
-			imports={labelDisplayTypesImportsCode}
-			scope={scope}
-		/>
-	);
+	const codeSnippets = [
+		{
+			imports: labelDisplayTypesImportsCode,
+			name: 'React',
+			value: LabelDisplayTypesCode,
+		},
+		{
+			disabled: true,
+			imports: labelJSPImportsCode,
+			name: 'JSP',
+			value: LabelJSPCode,
+		},
+	];
+
+	return <Editor code={codeSnippets} scope={scope} />;
 };
 
 export {Label, LabelClosingActions, LabelDisplayTypes};
