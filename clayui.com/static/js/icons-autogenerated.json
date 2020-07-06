@@ -25,15 +25,15 @@
     },
     {
         "name": "align-image-center",
-        "aliases": [""]
+        "aliases": ["texts", "lines", "editor"]
     },
     {
         "name": "align-image-left",
-        "aliases": [""]
+        "aliases": ["texts", "lines", "editor"]
     },
     {
         "name": "align-image-right",
-        "aliases": [""]
+        "aliases": ["texts", "lines", "editor"]
     },
     {
         "name": "align-justify",
@@ -188,6 +188,10 @@
         "aliases": [""]
     },
     {
+        "name": "button",
+        "aliases": ["box", "grid", "rectangle", "squares"]
+    },
+    {
         "name": "calendar",
         "aliases": ["agenda", "date", "days", "picker", "time"]
     },
@@ -326,6 +330,10 @@
     {
         "name": "compress",
         "aliases": ["arrows", "decrease", "reduce", "resize", "small"]
+    },
+    {
+        "name": "container",
+        "aliases": ["box", "grid", "rectangle", "squares"]
     },
     {
         "name": "control-panel",
@@ -1020,6 +1028,10 @@
         "aliases": ["compass", "navigation"]
     },
     {
+        "name": "slideshow",
+        "aliases": ["box", "grid", "rectangle", "squares"]
+    },
+    {
         "name": "social-facebook",
         "aliases": ["share"]
     },
@@ -1108,8 +1120,16 @@
         "aliases": ["device", "mobile"]
     },
     {
+        "name": "tabs",
+        "aliases": [""]
+    },
+    {
         "name": "tag",
         "aliases": ["category", "product"]
+    },
+    {
+        "name": "tap-ahead",
+        "aliases": ["arrow", "top", "up"]
     },
     {
         "name": "test",
@@ -1118,6 +1138,10 @@
     {
         "name": "text-editor",
         "aliases": ["style"]
+    },
+    {
+        "name": "text-l",
+        "aliases": ["a", "editor"]
     },
     {
         "name": "text",
