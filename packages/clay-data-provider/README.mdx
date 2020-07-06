@@ -110,7 +110,7 @@ The cache is guided by a policy, use the `fetchPolicy` prop to enable and config
 ### Data Fetching
 
 ```javascript
-const {resource} = useResource({fetcher, link});
+const {resource} = useResource({fetch, link});
 ```
 
 This is an API that replaces the `link` behavior of receiving an async function, this did not allow us to validate the cache correctly because we do not have the URL view. This API is more friendly and has a unique responsibility, you may be able to pass an async function that accepts the `link` and `options`, and return the data. `useResource` will use its async function instead of the `fetch` default.
@@ -120,10 +120,8 @@ This is an API that replaces the `link` behavior of receiving an async function,
 ```javascript
 import fetch from 'unfetch';
 
-const fetcher = (url, options) => fetch(url, options);
-
 const App = () => {
-	const {resource} = useResource({fetcher, link: 'https://clay.dev'});
+	const {resource} = useResource({fetch, link: 'https://clay.dev'});
 	// ...
 };
 ```

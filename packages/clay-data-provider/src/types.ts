@@ -85,21 +85,21 @@ export interface IFetchRetry {
 
 export interface IDataProvider {
 	/**
+	 * A Promise returning function to fetch your data, this replaces the
+	 * use of `fetch` by default.
+	 */
+	fetch?: (
+		link: string,
+		init?: RequestInit | undefined
+	) => Promise<Response>;
+
+	/**
 	 * This API is used in conjunction with variables API, if it is always
 	 * changing its value set a debounce time to make a new request.
 	 *
 	 * Set a value in ms.
 	 */
 	fetchDelay?: number;
-
-	/**
-	 * A Promise returning function to fetch your data, this replaces the
-	 * use of `fetch` by default.
-	 */
-	fetcher?: (
-		link: string,
-		init?: RequestInit | undefined
-	) => Promise<Response>;
 
 	/**
 	 * Options passed to request configuration.

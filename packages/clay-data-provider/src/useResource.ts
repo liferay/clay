@@ -22,8 +22,8 @@ interface IResource extends IDataProvider {
 }
 
 const useResource = ({
+	fetch: fetcher,
 	fetchDelay = 300,
-	fetcher,
 	fetchOptions,
 	fetchPolicy = FetchPolicy.NoCache,
 	fetchTimeout = 6000,
