@@ -199,7 +199,6 @@ gulp.task('version', function() {
 		fs.readFileSync(path.join('.', 'package.json'))
 	).version;
 
-	var svgsDir = path.join('.', 'src', 'images', 'icons');
 	var scssDir = path.join('.', 'src', 'scss');
 
 	var clayFiles = [
@@ -229,12 +228,6 @@ gulp.task('version', function() {
 		if (clayFiles.includes(filePath)) {
 			changeVersion(filePath);
 		}
-	});
-
-	fs.readdirSync(svgsDir).forEach(function(file) {
-		var filePath = path.join(svgsDir, file);
-
-		changeVersion(filePath);
 	});
 });
 
