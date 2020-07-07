@@ -1,10 +1,7 @@
-// Source: https://github.com/h5bp/main.css/blob/master/src/_print.css
-
-// ==========================================================================
-// Print styles.
-// Inlined to avoid the additional HTTP request:
-// https://www.phpied.com/delay-loading-your-print-css/
-// ==========================================================================
+/* REUSE-Snippet-Begin
+* SPDX-License-Identifier: MIT
+* SPDX-FileCopyrightText: © 2018 HTML5 Boilerplate <https://github.com/h5bp/main.css>
+*/
 
 @if $enable-print-styles {
 	@media print {
@@ -122,3 +119,5 @@
 		// Bootstrap specific changes end
 	}
 }
+
+/* REUSE-Snippet-End */
