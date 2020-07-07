@@ -81,19 +81,16 @@ const NavigationBarJSPCode = `<clay:navigation-bar
 				add(
 					navigationItem -> {
 						navigationItem.setActive(true);
-						navigationItem.setHref(StringPool.BLANK);
 						navigationItem.setLabel("Item 1");
 					}
 				);
 				add(
 					navigationItem -> {
-						navigationItem.setHref(StringPool.BLANK);
 						navigationItem.setLabel("Item 2");
 					}
 				);
 				add(
 					navigationItem -> {
-						navigationItem.setHref(StringPool.BLANK);
 						navigationItem.setLabel("Item 3");
 					}
 				);
