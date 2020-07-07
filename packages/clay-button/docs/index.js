@@ -4,7 +4,8 @@
  */
 
 import Editor from '$clayui.com/src/components/Editor';
-import ClayButton from '@clayui/button';
+import ClayButton, {ClayButtonWithIcon} from '@clayui/button';
+import ClayIcon from '@clayui/icon';
 import React from 'react';
 
 const buttonDisplayTypesImportsCode = `import ClayButton from '@clayui/button';`;
@@ -97,4 +98,35 @@ const ButtonGroup = () => {
 	);
 };
 
-export {ButtonDisplayTypes, ButtonGroup};
+const buttonIconImportsCode = `import ClayButton, {ClayButtonWithIcon} from '@clayui/button';
+import ClayIcon from '@clayui/icon;`;
+
+const ButtonIconCode = `const Component = () => {
+	return (
+		<>
+			<ClayButtonWithIcon spritemap={spritemap} symbol="times" />
+
+			<br />
+			<br />
+
+			<ClayButton>
+				<span className="inline-item inline-item-before">
+					<ClayIcon spritemap={spritemap} symbol="times" />
+				</span>
+
+				{'Close w/ text'}
+			</ClayButton>
+		</>
+	);
+}
+
+render(<Component />);`;
+
+const ButtonIcon = () => {
+	const scope = {ClayButton, ClayButtonWithIcon, ClayIcon};
+	const code = ButtonIconCode;
+
+	return <Editor code={code} imports={buttonIconImportsCode} scope={scope} />;
+};
+
+export {ButtonDisplayTypes, ButtonGroup, ButtonIcon};
