@@ -78,4 +78,31 @@ describe('ClayPaginationBar', () => {
 			document.body.querySelector('.dropdown-menu')!.classList
 		).toContain('show');
 	});
+
+	it('automatically goes to page 1 if active page exceeds delta', () => {
+		const Comp = () => {
+			const [activePage, setActivePage] = React.useState(2);
+			const [delta, setDelta] = React.useState(5);
+
+			return (
+				<ClayPaginationBarWithBasicItems
+					activeDelta={delta}
+					activePage={activePage}
+					onDeltaChange={setDelta}
+					onPageChange={setActivePage}
+					spritemap={spritemap}
+					totalItems={15}
+				/>
+			);
+		};
+		const {container, getByTestId} = render(<Comp />);
+
+		fireEvent.click(getByTestId('selectPaginationBar'), {});
+
+		fireEvent.click(getByText(document.body, '20 items'), {});
+
+		expect(getByText(container, '1').parentElement?.classList).toContain(
+			'active'
+		);
+	});
 });

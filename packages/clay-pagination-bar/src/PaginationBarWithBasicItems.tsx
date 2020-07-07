@@ -152,6 +152,14 @@ export const ClayPaginationBarWithBasicItems: React.FunctionComponent<IProps> = 
 		return item;
 	});
 
+	const totalPages = Math.ceil(totalItems / activeDelta);
+
+	React.useEffect(() => {
+		if (onPageChange && activePage > totalPages) {
+			onPageChange(1);
+		}
+	}, [totalPages]);
+
 	return (
 		<PaginationBar {...otherProps}>
 			<PaginationBar.DropDown
@@ -192,7 +200,7 @@ export const ClayPaginationBarWithBasicItems: React.FunctionComponent<IProps> = 
 					}
 				}}
 				spritemap={spritemap}
-				totalPages={Math.ceil(totalItems / activeDelta)}
+				totalPages={totalPages}
 			/>
 		</PaginationBar>
 	);
