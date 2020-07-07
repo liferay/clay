@@ -24,7 +24,6 @@ module.exports = function(gulp, plugins, _, config) {
 			.pipe(plugins.rename(exports.rename))
 			.pipe(plugins.svgmin(exports.svgmin))
 			.pipe(plugins.svgstore())
-			.pipe(plugins.header(license.TPL_SVG_C_LICENSE, license.metadata))
 			.pipe(gulp.dest(dest));
 };
 
