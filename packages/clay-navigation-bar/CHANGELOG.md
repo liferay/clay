@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/liferay/clay/compare/@clayui/navigation-bar@3.1.3...@clayui/navigation-bar@3.2.0) (2020-07-07)
+
+### Bug Fixes
+
+-   **clayui.com:** Remove obsolete property from JSP code example in Navigation Bar ([8d9c9d5](https://github.com/liferay/clay/commit/8d9c9d5))
+
+### Features
+
+-   **clayui.com:** Add JSP code example to Navigation Bar ([81ae0e5](https://github.com/liferay/clay/commit/81ae0e5))
+
 ## [3.1.3](https://github.com/liferay/clay/compare/@clayui/navigation-bar@3.1.2...@clayui/navigation-bar@3.1.3) (2020-06-18)
 
 **Note:** Version bump only for package @clayui/navigation-bar

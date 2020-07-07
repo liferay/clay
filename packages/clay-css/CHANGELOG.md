@@ -3,6 +3,100 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.14.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.13.0...@clayui/css@3.14.0) (2020-07-07)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Badges Variables forgot to remove some commented code ([8c7c71f](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/8c7c71f))
+* **@clayui/css:** Completed absorbtion of Bootstrap 4 components, moves all imports from _bs4.scss to _components.scss ([9c21b33](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/9c21b33))
+* **@clayui/css:** Import `components/_reboot.scss` in `_bs4.scss` until we absorb all Bootstrap 4 components due to specificity issues ([58055cc](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/58055cc))
+* **@clayui/css:** Mixins `clay-form-control-variant` and `clay-select-variant` should respect old keys `bg`, `bg-clip`, `bg-image`, `bg-position`, `bg-repeat`, `bg-size` ([3a1f230](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/3a1f230))
+* **@clayui/css:** Reboot combine `body` and `a` styles from Type ([c5c84c7](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/c5c84c7))
+* **@clayui/css:** Reboot don't need `display: block` for `article`, `aside`, `figcaption`, `figure`, `footer`, `header`, `hgroup`, `nav`, `section` ([ecb2718](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/ecb2718))
+* **@clayui/css:** Reboot we don't need to set `font-family`, `line-height` on the `html` element already set on `body` ([bc95fb3](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/bc95fb3))
+* **@clayui/css:** Remove unused import `[@import](https://github.com/import) 'bootstrap/breadcrumb'` ([39fc48f](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/39fc48f))
+* **@clayui/css:** Remove unused import `[@import](https://github.com/import) 'bootstrap/nav'` ([37e2fd2](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/37e2fd2))
+* **@clayui/css:** SVG Icons `link` and `chain-broken` reduce anchor points ([d80adab](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/d80adab))
+* **@clayui/css:** SVG Icons adds license to `button`, `container`, `slideshow`, `tabs`, `tap-ahead`, `text-l` ([34a7e30](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/34a7e30))
+* **@clayui/css:** SVG Icons fix xmlns declaration for `bold`, `cards2`, `decimal`. Icons aren't visible when converted to data uri and used in `background-image` ([e79e68d](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/e79e68d))
+* **@clayui/css:** SVG Icons swap `indent-less` and `indent-more`. The arrows are pointing the wrong way ([6b4f1cf](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/6b4f1cf))
+* **@clayui/css:** SVG Icons update `expand` reduce anchor points ([55a0561](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/55a0561))
+* **@clayui/css:** SVG Icons update `flag-empty` and `flag-full` reduce anchor points ([d3d6c3c](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/d3d6c3c))
+* **@clayui/css:** SVG Icons updates `align-image-center`, `align-image-left`, and `align-image-right` with rounded borders ([b55c8d1](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/b55c8d1))
+* **@clayui/css:** SVG Icons updates `bold`, `italic`, and `underline` to be smaller ([5db734f](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/5db734f))
+* **@clayui/css:** SVG Icons updates `subscript` and `superscript` icons ([36604f5](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/36604f5))
+* **@clayui/css:** SVG Icons updates `table2` adjust anchor points ([6afe9c9](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/6afe9c9))
+
+
+### Features
+
+* **@clayui/css:** Absorb Bootstrap 4 _buttons.scss into Clay CSS _buttons.scss ([d2731ba](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/d2731ba))
+* **@clayui/css:** Absorb Bootstrap 4 _code.scss ([505938d](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/505938d))
+* **@clayui/css:** Absorb Bootstrap 4 _custom-forms.scss into Clay CSS _custom-forms.scss ([52cd5f8](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/52cd5f8))
+* **@clayui/css:** Absorb Bootstrap 4 _dropdown.scss into Clay CSS _dropdown-menu.scss ([a486bc8](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/a486bc8))
+* **@clayui/css:** Absorb Bootstrap 4 _forms.scss into Clay CSS _forms.scss and _form-validation.scss ([e7e854f](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/e7e854f))
+* **@clayui/css:** Absorb Bootstrap 4 _grid.scss into Clay CSS ([48143b2](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/48143b2))
+* **@clayui/css:** Absorb Bootstrap 4 _images.scss ([6e6ea9f](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/6e6ea9f))
+* **@clayui/css:** Absorb Bootstrap 4 _input-group.scss into Clay CSS _input-groups.scss ([acba14c](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/acba14c))
+* **@clayui/css:** Absorb Bootstrap 4 _media.scss into Clay CSS _media.scss ([a685d6b](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/a685d6b))
+* **@clayui/css:** Absorb Bootstrap 4 _nav.scss into Clay CSS _nav.scss ([e123acb](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/e123acb))
+* **@clayui/css:** Absorb Bootstrap 4 _reboot.scss into Clay CSS ([89e5adb](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/89e5adb))
+* **@clayui/css:** Absorb Bootstrap 4 _transitions.scss ([469659b](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/469659b))
+* **@clayui/css:** Absorb Bootstrap 4 _type.scss into Clay CSS ([e6e4012](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/e6e4012))
+* **@clayui/css:** Absorb Bootstrap 4 Tables ([22e1f92](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/22e1f92))
+* **@clayui/css:** Absorb Bootstrap 4's _root.scss into Clay CSS ([dd82ded](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/dd82ded))
+* **@clayui/css:** Absorb Bootstrap's _alert.scss into Clay CSS _alerts.scss ([0869797](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/0869797))
+* **@clayui/css:** Absorb Bootstrap's _badge.scss into Clay CSS _badges.scss ([cfe46c7](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/cfe46c7))
+* **@clayui/css:** Absorb Bootstrap's _breadcrumb.scss into Clay CSS _breadcrumbs.scss ([9d30cab](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/9d30cab))
+* **@clayui/css:** Absorb Bootstrap's _btn-group.scss into Clay CSS _btn-group.scss ([e802d1f](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/e802d1f))
+* **@clayui/css:** Absorb Bootstrap's _card.scss into Clay CSS _cards.scss ([35620d3](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/35620d3))
+* **@clayui/css:** Absorb Bootstrap's _carousel.scss into Clay CSS _carousel.scss ([9e468b5](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/9e468b5))
+* **@clayui/css:** Absorb Bootstrap's _close.scss into Clay CSS _utilities.scss ([c3026d5](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/c3026d5))
+* **@clayui/css:** Absorb Bootstrap's _jumbotron.scss into Clay CSS ([dd38b93](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/dd38b93))
+* **@clayui/css:** Absorb Bootstrap's _list-group.scss into Clay CSS _list-group.scss ([9f4a8b6](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/9f4a8b6))
+* **@clayui/css:** Absorb Bootstrap's _modal.scss into Clay CSS _modals.scss ([c2a4de8](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/c2a4de8))
+* **@clayui/css:** Absorb Bootstrap's _navbar.scss into Clay CSS _navbar.scss ([5b1fb4d](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/5b1fb4d))
+* **@clayui/css:** Absorb Bootstrap's _pagination.scss into Clay CSS _pagination.scss ([e6eb67c](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/e6eb67c))
+* **@clayui/css:** Absorb Bootstrap's _popover.scss into Clay CSS _popovers.scss ([8d43344](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/8d43344))
+* **@clayui/css:** Absorb Bootstrap's _print.scss into Clay CSS _print.scss ([5eb2f76](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/5eb2f76))
+* **@clayui/css:** Absorb Bootstrap's _progress.scss into Clay CSS _progress-bars.scss ([cad6f69](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/cad6f69))
+* **@clayui/css:** Absorb Bootstrap's _spinners.scss into Clay CSS _spinners.scss ([a00ec52](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/a00ec52))
+* **@clayui/css:** Absorb Bootstrap's _toasts.scss into Clay CSS _toasts.scss ([e484351](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/e484351))
+* **@clayui/css:** Absorb Bootstrap's _tooltip.scss into Clay CSS _tooltip.scss ([48696cd](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/48696cd))
+* **@clayui/css:** Absorb Bootstrap's _utilities.scss into Clay CSS _utilities-functional-important.scss ([b1b7adb](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/b1b7adb))
+* **@clayui/css:** Button adds placeholders `%clay-btn-monospaced-lg`, `%clay-btn-monospaced-sm` so we can extend with Sass `[@extend](https://github.com/extend)` without unnecessary selectors ([b704e7f](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/b704e7f))
+* **@clayui/css:** Global Functions adds ` clay-enable-gradients`, `clay-enable-rounded`, `clay-enable-shadows`, `clay-enable-transitions` so we can support these Bootstrap settings in variables ([ac66e1f](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/ac66e1f))
+* **@clayui/css:** Global Variables undeprecate `$clay-unset` and add alias `$c-unset` for unsetting values so they don't get output in the final css file ([e0e8b98](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/e0e8b98))
+* **@clayui/css:** Mixins `clay-button-variant` reduce selector specificity of `:not([disabled]):not(.disabled):active` to `:active` ([f16970f](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/f16970f))
+* **@clayui/css:** Mixins `clay-close` removes Bootstrap 4.1.2 selector overwrites. We don't need them since we are removing Bootstrap 4 dependency. ([8318d9f](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/8318d9f))
+* **@clayui/css:** Mixins `clay-css` check for keyword `clay-unset` and output `null` value if it is passed in ([fb5427f](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/fb5427f))
+* **@clayui/css:** Mixins `clay-link` `disabled` should set `outline: 0` and `box-shadow: none` by default so disabled anchors don't receive focus outline ([8b53b60](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/8b53b60))
+* **@clayui/css:** SVG Icons adds `align-image-full-width` ([26db99e](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/26db99e))
+* **@clayui/css:** SVG Icons adds `background-color` ([7ae3634](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/7ae3634))
+* **@clayui/css:** SVG Icons adds `button`, `tabs`, `slideshow`, `tap-ahead` ([5fc3af6](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/5fc3af6))
+* **@clayui/css:** SVG Icons adds `container` ([49517bc](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/49517bc)), closes [#3343](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3343)
+* **@clayui/css:** SVG Icons adds `emoji` ([8345faf](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/8345faf))
+* **@clayui/css:** SVG Icons adds `flag-empty-rtl` and `flag-full-rtl` ([f5fa452](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/f5fa452))
+* **@clayui/css:** SVG Icons adds `list-ol-rtl` and updates `list-ol` ([007d5c8](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/007d5c8))
+* **@clayui/css:** SVG Icons adds `list-ul-rtl` and updates `list-ul` reduces anchor points ([654cbc3](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/654cbc3))
+* **@clayui/css:** SVG Icons adds `paste-word` ([9033e36](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/9033e36))
+* **@clayui/css:** SVG Icons adds `select-all` ([1db4f98](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/1db4f98))
+* **@clayui/css:** SVG Icons adds `special-character` ([18d5172](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/18d5172))
+* **@clayui/css:** SVG Icons adds `text-color` ([0191409](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/0191409))
+* **@clayui/css:** SVG Icons changes `paste` to something more relevant and moves original `paste` to `copy` ([cdd96ab](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/cdd96ab))
+* **@clayui/css:** SVG Icons rename `text.svg` to `text-l.svg`, make `text.svg` icon larger ([31a1ad4](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/31a1ad4))
+* **@clayui/css:** SVG Icons updates `code` ([745911b](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/745911b)), closes [#3344](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3344)
+
+
+### Reverts
+
+* **@clayui/css:** Mixins `clay-link` `disabled` should set `outline: 0` and `box-shadow: none` by default so disabled anchors don't receive focus outline ([1c3ace2](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/1c3ace2))
+
+
+
+
+
 # [3.13.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.12.0...@clayui/css@3.13.0) (2020-06-18)
 
 

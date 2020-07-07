@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/bryceosterhaus/clay/compare/clayui.com@3.2.1...clayui.com@3.3.0) (2020-07-07)
+
+### Bug Fixes
+
+-   **clayui.com:** Make Using Clay in JSPs page not draft so it shows up in the navigation ([8022b21](https://github.com/bryceosterhaus/clay/commit/8022b21))
+
+### Features
+
+-   **clayui.com:** make it easier to work with clay-css on clayui.com ([4cab03c](https://github.com/bryceosterhaus/clay/commit/4cab03c))
+
 ## [3.2.1](https://github.com/bryceosterhaus/clay/compare/clayui.com@3.2.0...clayui.com@3.2.1) (2020-06-18)
 
 **Note:** Version bump only for package clayui.com

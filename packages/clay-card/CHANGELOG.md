@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.3](https://github.com/liferay/clay/compare/@clayui/card@3.2.2...@clayui/card@3.2.3) (2020-07-07)
+
+### Bug Fixes
+
+-   **@clayui/card:** Adds a missing onKeyDown callback value on ClayCardWithNavigation ([48f8cdf](https://github.com/liferay/clay/commit/48f8cdf))
+-   **@clayui/card:** When pressing `enter` or `space`, triggers a click event on CardWithNavigation ([877eae0](https://github.com/liferay/clay/commit/877eae0))
+
 ## [3.2.2](https://github.com/liferay/clay/compare/@clayui/card@3.2.1...@clayui/card@3.2.2) (2020-06-18)
 
 **Note:** Version bump only for package @clayui/card

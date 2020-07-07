@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.1](https://github.com/liferay/clay/compare/@clayui/date-picker@3.4.0...@clayui/date-picker@3.4.1) (2020-07-07)
+
+### Bug Fixes
+
+-   **@clayui/date-picker:** Adds FocusScope for navigating int o DatePicker calendar component using TABS ([6632b65](https://github.com/liferay/clay/commit/6632b65))
+-   **@clayui/date-picker:** Fix conditional ([587c3e4](https://github.com/liferay/clay/commit/587c3e4))
+-   **@clayui/date-picker:** Fixes an edge case when the dot button does not select the current date ([ca7fdc3](https://github.com/liferay/clay/commit/ca7fdc3))
+-   **@clayui/date-picker:** For old browsers, `Spacebar`, for the new ones, `' '` ([8b99c3c](https://github.com/liferay/clay/commit/8b99c3c))
+-   **@clayui/date-picker:** Forces the expanded value to de false, closing Date Picker's calendar when the focus is outside the component ([90d22d4](https://github.com/liferay/clay/commit/90d22d4))
+-   **@clayui/date-picker:** Remove unecessary onKeyDown and onKeyUp callbacks since DayNumber is a private component ([8259f58](https://github.com/liferay/clay/commit/8259f58))
+-   **@clayui/date-picker:** Use `Spacebar` value for validating if the correct key of the KeyboardEvent was triggered ([64af3da](https://github.com/liferay/clay/commit/64af3da))
+-   **@clayui/date-picker:** When selecting a date using space key, removes properly the `:active` state of the element ([e098b1f](https://github.com/liferay/clay/commit/e098b1f))
+
 # [3.4.0](https://github.com/liferay/clay/compare/@clayui/date-picker@3.3.0...@clayui/date-picker@3.4.0) (2020-06-18)
 
 ### Bug Fixes
