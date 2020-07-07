@@ -199,23 +199,19 @@ gulp.task('version', function() {
 		fs.readFileSync(path.join('.', 'package.json'))
 	).version;
 
-	var svgsDir = path.join('.', 'src', 'images', 'icons');
 	var scssDir = path.join('.', 'src', 'scss');
 
 	var clayFiles = [
-		path.join(scssDir, 'atlas-variables.scss'),
-		path.join(scssDir, 'atlas.scss'),
-		path.join(scssDir, 'base-variables.scss'),
-		path.join(scssDir, 'base.scss'),
+		path.join(scssDir, '_license-text.scss'),
 	];
 
-	function changeVersion(filePath) {
+	function changeVersion(filePath, regex = /\*\sClay\s(.*)\n/g, value = `* Clay ${VERSION}\n`) {
 		fs.readFile(filePath, 'utf8', function(err, data) {
 			if (err) {
 				return console.log(err);
 			}
 
-			var result = data.replace(/\*\sClay\s(.*)\n/g, `* Clay ${VERSION}\n`);
+			var result = data.replace(regex, value);
 
 			fs.writeFile(filePath, result, 'utf8', function(err) {
 				if (err) return console.log(err);
@@ -231,11 +227,22 @@ gulp.task('version', function() {
 		}
 	});
 
-	fs.readdirSync(svgsDir).forEach(function(file) {
-		var filePath = path.join(svgsDir, file);
+	var libIconsSvg = path.join('.', 'lib', 'images', 'icons', 'icons.svg');
 
-		changeVersion(filePath);
-	});
+	var regex = /<\?xml version=\"1.0\" encoding=\"UTF-8\"\?([\s\S]+-->|>)/g;
+	var license = `<?xml version="1.0" encoding="UTF-8"?>
+<!--
+* Clay ${VERSION}
+*
+* SPDX-FileCopyrightText: © 2020 Liferay, Inc. <https://liferay.com>
+* SPDX-FileCopyrightText: © 2020 Contributors to the project Clay <https://github.com/liferay/clay/graphs/contributor
+*
+* SPDX-License-Identifier: BSD-3-Clause
+-->`;
+
+	changeVersion(libIconsSvg, regex, license);
+
+
 });
 
 gulp.task('serve', ['serve:start', 'watch']);
