@@ -202,10 +202,7 @@ gulp.task('version', function() {
 	var scssDir = path.join('.', 'src', 'scss');
 
 	var clayFiles = [
-		path.join(scssDir, 'atlas-variables.scss'),
-		path.join(scssDir, 'atlas.scss'),
-		path.join(scssDir, 'base-variables.scss'),
-		path.join(scssDir, 'base.scss'),
+		path.join(scssDir, '_license-text.scss'),
 	];
 
 	function changeVersion(filePath) {
