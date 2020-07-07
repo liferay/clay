@@ -9,6 +9,7 @@ sibling: 'docs/components/css-buttons.html'
 import {
 	ButtonDisplayTypes,
 	ButtonGroup,
+	ButtonIcon,
 } from '$packages/clay-button/docs/index';
 
 <div class="nav-toc-absolute">
@@ -16,6 +17,7 @@ import {
 
 -   [Display Types](#display-types)
 -   [Group](#group)
+-   [Icon](#icon)
 -   [API](#api)
     -   [ClayButton](#claybutton)
     -   [ClayButton.Group](#claybutton.group)
@@ -41,6 +43,12 @@ You can use the variant `ClayButton.Group` for creating button groups:
 Use the [`spaced`](#api-spaced) property to create spacing between buttons.
 
 <ButtonGroup />
+
+## Icon
+
+You can use the high-level component `ClayButtonWithIcon` to create a button with only an icon. If you need an icon and text, you need to compose with `ClayIcon`
+
+<ButtonIcon />
 
 ## API
 
