@@ -8,26 +8,8 @@ import ClayIcon from '@clayui/icon';
 import ClaySticker from '@clayui/sticker';
 import React from 'react';
 
-const stickerImportsCode = `import ClaySticker from '@clayui/sticker';
-`;
-
-const StickerCode = `const Component = () => {
-	return (
-		<ClaySticker displayType="dark">A</ClaySticker>
-	)
-}
-render(<Component />)`;
-
-export const Sticker = () => {
-	const scope = {ClaySticker};
-	const code = StickerCode;
-
-	return <Editor code={code} imports={stickerImportsCode} scope={scope} />;
-};
-
 const stickerColorsAndSizesImportsCode = `import ClayIcon from '@clayui/icon';
-import ClaySticker from '@clayui/sticker';
-`;
+import ClaySticker from '@clayui/sticker';`;
 
 const StickerColorsAndSizesCode = `const Component = () => {
 	return (
@@ -64,21 +46,79 @@ const StickerColorsAndSizesCode = `const Component = () => {
 				<ClayIcon spritemap={spritemap} symbol="user" />
 			</ClaySticker>
 		</>
-	)
+	);
 }
-render(<Component />)`;
+
+render(<Component />);`;
+
+const stickerColorsAndSizesImportsJSPCode = `<%@ taglib uri="http://liferay.com/tld/clay" prefix="clay" %>`;
+
+const StickerColorsAndSizesJSPCode = `<clay:sticker
+	displayType="danger"
+	icon="users"
+	size="sm"
+/>
+
+<clay:sticker
+	displayType="dark"
+	icon="users"
+	size="md"
+/>
+
+<clay:sticker
+	displayType="info"
+	icon="users"
+	size="lg"
+/>
+
+<clay:sticker
+	displayType="light"
+	icon="users"
+	size="xl"
+/>
+
+<clay:sticker
+	displayType="secondary"
+	icon="users"
+	size="xl"
+/>
+
+<clay:sticker
+	displayType="success"
+	icon="users"
+	size="lg"
+/>
+
+<clay:sticker
+	displayType="unstyled"
+	icon="users"
+	size="md"
+/>
+
+<clay:sticker
+	displayType="warning"
+	icon="users"
+	size="sm"
+/>`;
 
 export const StickerColorsAndSizes = () => {
 	const scope = {ClayIcon, ClaySticker};
-	const code = StickerColorsAndSizesCode;
 
-	return (
-		<Editor
-			code={code}
-			imports={stickerColorsAndSizesImportsCode}
-			scope={scope}
-		/>
-	);
+	const codeSnippets = [
+		{
+			imports: stickerColorsAndSizesImportsCode,
+			name: 'React',
+			value: StickerColorsAndSizesCode,
+		},
+		{
+			disabled: true,
+			imports: stickerColorsAndSizesImportsJSPCode,
+			name: 'JSP',
+			value: StickerColorsAndSizesJSPCode,
+		},
+	];
+
+	return <Editor code={codeSnippets} scope={scope} />;
 };
 
 const stickerUserIconImportsCode = `import ClaySticker from '@clayui/sticker';
@@ -96,9 +136,10 @@ const StickerUserIconCode = `const Component = () => {
 				{'BS'}
 			</ClaySticker>
 		</>
-	)
+	);
 }
-render(<Component />)`;
+
+render(<Component />);`;
 
 export const StickerUserIcon = () => {
 	const scope = {ClaySticker};
