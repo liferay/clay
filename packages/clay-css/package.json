@@ -24,7 +24,7 @@
 		"build": "yarn compile",
 		"compile": "gulp compile",
 		"link": "npm link",
-		"prepublish": "yarn compile && ncp ../../LICENSES ./lib",
+		"prepublish": "yarn compile",
 		"version": "gulp version"
 	},
 	"repository": {
