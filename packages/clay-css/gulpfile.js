@@ -205,7 +205,7 @@ gulp.task('version', function() {
 		path.join(scssDir, '_license-text.scss'),
 	];
 
-	function changeVersion(filePath, regex = /\*\sClay\s(.*)\n/g, value = `* Clay ${VERSION}\n`) {
+	function changeVersion(filePath, regex = /\*\s+Clay\s(.+)\n/g, value = `* Clay ${VERSION}\n`) {
 		fs.readFile(filePath, 'utf8', function(err, data) {
 			if (err) {
 				return console.log(err);
@@ -229,7 +229,7 @@ gulp.task('version', function() {
 
 	var libIconsSvg = path.join('.', 'lib', 'images', 'icons', 'icons.svg');
 
-	var regex = /<\?xml version=\"1.0\" encoding=\"UTF-8\"\?([\s\S]+-->|>)/g;
+	var regex = /<\?xml version="1.0" encoding="UTF-8"\?(.+-->|>)/gs;
 	var license = `<?xml version="1.0" encoding="UTF-8"?>
 <!--
 * Clay ${VERSION}
