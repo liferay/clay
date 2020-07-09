@@ -87,6 +87,7 @@ storiesOf('Components|ClayDualListBox', module).add('default', () => {
 				onSelectChange: setLeftSelected,
 				selected: leftSelected,
 			}}
+			leftMaxItems={3}
 			onItemsChange={setItems}
 			right={{
 				id: 'rightSelectBox',
@@ -94,6 +95,7 @@ storiesOf('Components|ClayDualListBox', module).add('default', () => {
 				onSelectChange: setRightSelected,
 				selected: rightSelected,
 			}}
+			rightMaxItems={5}
 			size={8}
 			spritemap={spritemap}
 		/>

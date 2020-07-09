@@ -66,6 +66,16 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	items: TItems;
 
 	/**
+	 * The maximum number of items for left Select Box.
+	 */
+	leftMaxItems?: number;
+
+	/**
+	 * The maximum number of items for left Select Box.
+	 */
+	rightMaxItems?: number;
+
+	/**
 	 * Handler that triggers when the content of the items prop are changed. Caused by either reordering or transfering of items.
 	 */
 	onItemsChange: (val: TItems) => void;
@@ -99,6 +109,8 @@ const ClayDualListBox: React.FunctionComponent<IProps> = ({
 	className,
 	items,
 	left = {},
+	leftMaxItems = Infinity,
+	rightMaxItems = Infinity,
 	onItemsChange,
 	right = {},
 	size,
@@ -149,7 +161,10 @@ const ClayDualListBox: React.FunctionComponent<IProps> = ({
 						aria-label={ariaLabels.transferLTR}
 						className="transfer-button-ltr"
 						data-testid="ltr"
-						disabled={!leftSelected.length}
+						disabled={
+							leftSelected.length === 0 ||
+							rightItems.length >= rightMaxItems
+						}
 						displayType="secondary"
 						onClick={() => {
 							const [arrayLeft, arrayRight] = swapArrayItems(
@@ -168,7 +183,10 @@ const ClayDualListBox: React.FunctionComponent<IProps> = ({
 						aria-label={ariaLabels.transferRTL}
 						className="transfer-button-rtl"
 						data-testid="rtl"
-						disabled={!rightSelected.length}
+						disabled={
+							rightSelected.length === 0 ||
+							leftItems.length >= leftMaxItems
+						}
 						displayType="secondary"
 						onClick={() => {
 							const [arrayRight, arrayLeft] = swapArrayItems(
