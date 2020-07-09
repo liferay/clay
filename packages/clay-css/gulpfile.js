@@ -196,7 +196,7 @@ gulp.task(
 );
 
 gulp.task('copy:licenses', function() {
-	var newLicenseDir = path.join('.', 'LICENSES');
+	var newLicenseDir = 'LICENSES';
 	var originalLicenseDir = path.join('..', '..', 'LICENSES');
 
 	return gulp.src([
