@@ -21,7 +21,7 @@ import ClayForm from '../src/Form';
 
 import '@clayui/css/lib/css/atlas.css';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
-import {boolean, select, text} from '@storybook/addon-knobs';
+import {boolean, number, select, text} from '@storybook/addon-knobs';
 
 const ClayCheckboxWithState = () => {
 	const [value, setValue] = React.useState<boolean>(false);
@@ -87,7 +87,7 @@ storiesOf('Components|ClayDualListBox', module).add('default', () => {
 				onSelectChange: setLeftSelected,
 				selected: leftSelected,
 			}}
-			leftMaxItems={3}
+			leftMaxItems={number('leftMaxItems', 3)}
 			onItemsChange={setItems}
 			right={{
 				id: 'rightSelectBox',
@@ -95,7 +95,7 @@ storiesOf('Components|ClayDualListBox', module).add('default', () => {
 				onSelectChange: setRightSelected,
 				selected: rightSelected,
 			}}
-			rightMaxItems={5}
+			rightMaxItems={number('rightMaxItems', 5)}
 			size={8}
 			spritemap={spritemap}
 		/>
