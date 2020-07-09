@@ -85,6 +85,12 @@ export interface IFetchRetry {
 
 export interface IDataProvider {
 	/**
+	 * A Promise returning function to fetch your data, this replaces the
+	 * use of `fetch` by default.
+	 */
+	fetch?: (link: string, init?: RequestInit | undefined) => Promise<Response>;
+
+	/**
 	 * This API is used in conjunction with variables API, if it is always
 	 * changing its value set a debounce time to make a new request.
 	 *
@@ -139,6 +145,9 @@ export interface IDataProvider {
 	 * a Promise. We do not recommend that you use a function to do so,
 	 * you will lose some benefits of the data provider,
 	 * always try to avoid.
+	 *
+	 * The behavior of the `link` accepting a function has been deprecated
+	 * in favor of the `fetcher` API.
 	 */
 	link: TLink;
 

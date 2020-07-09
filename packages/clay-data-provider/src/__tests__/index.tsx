@@ -102,6 +102,22 @@ describe('ClayDataProvider', () => {
 		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data');
 	});
 
+	it('call clay.data with a custom fetch', async () => {
+		const fetch = jest
+			.fn()
+			.mockImplementation(() => Promise.resolve({data: 'Foo'}));
+
+		render(
+			<DataProvider fetch={fetch} link="https://clay.data">
+				{() => <div />}
+			</DataProvider>
+		);
+
+		await wait(() => expect(fetch).toHaveBeenCalled());
+
+		expect(fetch).toHaveBeenCalledWith('https://clay.data/', undefined);
+	});
+
 	it('calls clay.data and return data from cache', async () => {
 		const data = {title: 'Foo'};
 		const cache = setupCache('https://clay.data:null', data);

@@ -22,6 +22,7 @@ interface IResource extends IDataProvider {
 }
 
 const useResource = ({
+	fetch: fetcher,
 	fetchDelay = 300,
 	fetchOptions,
 	fetchPolicy = FetchPolicy.NoCache,
@@ -155,7 +156,7 @@ const useResource = ({
 
 		warning(
 			uri.searchParams.toString() === '',
-			'DataProvider: We recommend that instead of passing parameters over the link, use the variables API. \n More details: https://next.clayui.com/docs/components/data-provider.html'
+			'DataProvider: We recommend that instead of passing parameters over the link, use the variables API. \n More details: https://clayui.com/docs/components/data-provider.html'
 		);
 
 		if (!variables) {
@@ -170,6 +171,11 @@ const useResource = ({
 	const doFetch = (retryAttempts = 0) => {
 		let promise: Promise<any>;
 
+		warning(
+			typeof link === 'string',
+			'DataProvider: The behavior of the `link` accepting a function has been deprecated in favor of the `fetcher` API. \n More details: https://clayui.com/docs/components/data-provider.html#data-fetching'
+		);
+
 		switch (typeof link) {
 			case 'function':
 				promise = link(
@@ -182,12 +188,20 @@ const useResource = ({
 					).searchParams.toString()
 				);
 				break;
-			case 'string':
-				promise = fetch(
-					getUrlFormat(link, variables),
-					fetchOptions
-				).then((res) => res.json());
+			case 'string': {
+				const fn = fetcher ?? fetch;
+
+				promise = fn(getUrlFormat(link, variables), fetchOptions).then(
+					(res: Response) => {
+						if (res.ok && res.body && !res.body.locked) {
+							return res.json();
+						}
+
+						return res;
+					}
+				);
 				break;
+			}
 			default:
 				return null;
 		}
