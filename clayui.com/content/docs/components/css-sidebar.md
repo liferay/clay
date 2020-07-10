@@ -50,7 +50,7 @@ Just add `sidebar-light` class on the same element that you are using `sidebar`.
             <div class="container-fluid">
                 <ul class="tbar-nav">
                     <li class="tbar-item">
-                        <a class="component-action disabled" href="#disabled" role="button" tabindex="-1">
+                        <a class="component-action disabled" href="#1" role="button" tabindex="-1">
                             <svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
                                 <use href="/images/icons/icons.svg#angle-left"></use>
                             </svg>
@@ -264,7 +264,7 @@ Just add `sidebar-light` class on the same element that you are using `sidebar`.
 				<li class="tbar-item">
 					<a
 						class="component-action disabled"
-						href="#disabled"
+						href="#1"
 						role="button"
 						tabindex="-1"
 					>

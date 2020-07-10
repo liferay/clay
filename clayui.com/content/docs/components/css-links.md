@@ -90,7 +90,7 @@ Use these patterns for actions in components.
 			<use href="/images/icons/icons.svg#times" />
 		</svg>
 	</a>
-	<a class="component-action disabled" href="#disabled" role="button" tabindex="-1">
+	<a class="component-action disabled" href="#1" role="button" tabindex="-1">
 		<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 			<use href="/images/icons/icons.svg#times" />
 		</svg>
@@ -107,12 +107,7 @@ Use these patterns for actions in components.
 		<use href="/images/icons/icons.svg#times" />
 	</svg>
 </a>
-<a
-	class="component-action disabled"
-	href="#disabled"
-	role="button"
-	tabindex="-1"
->
+<a class="component-action disabled" href="#1" role="button" tabindex="-1">
 	<svg
 		class="lexicon-icon lexicon-icon-times"
 		focusable="false"
