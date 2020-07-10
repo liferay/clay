@@ -92,7 +92,7 @@ describe('Modal -> IncrementalInteractions', () => {
 		expect(backdropEl).toBeDefined();
 		expect(modalEl).toBeDefined();
 
-		fireEvent.click(backdropEl!, {});
+		fireEvent.click(modalEl!);
 
 		expect(document.body.classList).not.toContain('modal-open');
 		expect(document.querySelector(backdropElSelector)).toBeNull();
@@ -127,9 +127,9 @@ describe('Modal -> IncrementalInteractions', () => {
 		const backdropElSelector = '.modal-backdrop.fade.show';
 		const modalElSelector = '.fade.modal.d-block.show';
 
-		const backdropEl = document.querySelector(backdropElSelector);
+		const modalEl = document.querySelector(modalElSelector);
 
-		fireEvent.click(backdropEl!, {});
+		fireEvent.click(modalEl!, {});
 
 		expect(document.body.classList).toContain('modal-open');
 		expect(document.querySelector(backdropElSelector)).toBeDefined();
