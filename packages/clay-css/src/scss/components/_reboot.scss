@@ -159,6 +159,17 @@ sup {
 	}
 }
 
+use[href] {
+	color: inherit;
+	cursor: inherit;
+	text-decoration: none;
+
+	&:hover {
+		color: inherit;
+		text-decoration: none;
+	}
+}
+
 // Code
 
 pre,
