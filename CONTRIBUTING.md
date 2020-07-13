@@ -233,3 +233,17 @@ In a rare case you may want to release only one specific package. To do so, foll
 4. Create a draft PR (not intended to be merged) to the clay repo; the sole purpose of this is to see CI green one last time before pushing the tag.
 5. Once CI is green, run `git push $REMOTE master --follow-tags`
 6. Run `yarn publish` to publish module to the npm registry.
+
+## Updating release in [liferay-portal](https://github.com/liferay/liferay-portal)
+
+1. Navigate to `./modules/apps/frontend-taglib/frontend-taglib-clay`
+2. Run `ncu '/@clayui/' -u` ([npm-check-updates](https://www.npmjs.com/package/npm-check-updates))
+    - If there is a new version of `@clayui/css`, check to see if there are any changes to `_components.scss` or `variables.scss` in the new release. If there are changes, we need to also update the corresponding files in `/modules/apps/frontend-theme/frontend-theme-styled/src/main/resources/META-INF/resources/_styled/css/clay` so that they match. The files in liferay-portal are a copy of those in clay.
+3. Navigate to `./portal-impl` and run `ant format-source-all`
+    - Often this will also update other files other than `package.json`s and the `yarn.lock`. Disregard changes to files other than those.
+4. Run `yarn` from `./modules`
+5. Run `npx yarn-deduplicate yarn.lock`
+6. Check yarn.log stats (`git diff --stat yarn.lock`)
+    - If diff numbers are off (more + then - or viceversa), review the contents to find an explanation
+7. Verify `yarn.lock`changes for anything that is odd or stands out.
+8. Send pull request to https://github.com/liferay-frontend/liferay-portal
