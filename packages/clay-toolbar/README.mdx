@@ -6,7 +6,7 @@ packageNpm: '@clayui/toolbar'
 sibling: 'docs/components/css-toolbar.html'
 ---
 
-import {Toolbar} from '$packages/clay-toolbar/docs/index';
+import {ComplexToolbar, Toolbar} from '$packages/clay-toolbar/docs/index';
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
@@ -36,11 +36,13 @@ A toolbar organizes actions into a horizontal bar that is responsive. Its height
 
 **Item** represents a Toolbar child item, a list item that is supposed to wrap around any of the other low-level components.
 
-**Section** is a wrapper to be used inside the Item that makes the contents it wraps display inline.
+**Section** is a wrapper to be used inside the **Item** that makes the contents it wraps display inline.
 
 **Action** is used when you want a clickable icon to add an action in the Toolbar.
 
 **Label** and **Link** are essentially a wrapper around their respective Clay components with some specifics related to Toolbar.
+
+<ComplexToolbar />
 
 ## API
 

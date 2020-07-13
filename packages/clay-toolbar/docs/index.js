@@ -4,6 +4,10 @@
  */
 
 import Editor from '$clayui.com/src/components/Editor';
+import ClayButton, {ClayButtonWithIcon} from '@clayui/button';
+import {ClayDropDownWithItems} from '@clayui/drop-down';
+import {ClayInput} from '@clayui/form';
+import ClayIcon from '@clayui/icon';
 import ClayToolbar from '@clayui/toolbar';
 import React from 'react';
 
@@ -69,4 +73,109 @@ export const Toolbar = () => {
 	const code = ToolbarCode;
 
 	return <Editor code={code} imports={toolbarImportsCode} scope={scope} />;
+};
+
+const complexToolbarImportsCode = `import ClayButton, {ClayButtonWithIcon} from '@clayui/button';
+import ClayIcon from '@clayui/icon';
+import {ClayInput} from '@clayui/form';
+import {ClayDropDownWithItems} from '@clayui/drop-down';
+import ClayToolbar from '@clayui/toolbar';`;
+
+const ComplexToolbarCode = `const Component = () => {
+	return (
+		<ClayToolbar>
+			<ClayToolbar.Nav>
+				<ClayToolbar.Item className="text-left" expand>
+					<ClayToolbar.Section>
+						<label className="component-title">{'Foo Bar'}</label>
+
+						<ClayIcon spritemap={spritemap} symbol="lock" />
+					</ClayToolbar.Section>
+				</ClayToolbar.Item>
+
+				<ClayToolbar.Item>
+					<ClayInput.Group>
+						<ClayInput.GroupItem>
+							<ClayInput className="form-control-inline" placeholder="Search..." />
+						</ClayInput.GroupItem>
+					</ClayInput.Group>
+				</ClayToolbar.Item>
+
+				<ClayToolbar.Item>
+					<ClayToolbar.Section>
+						<ClayButton.Group>
+							<ClayButtonWithIcon
+								displayType="secondary"
+								onClick={() => {}}
+								small
+								spritemap={spritemap}
+								symbol="angle-left"
+							/>
+
+							<ClayButtonWithIcon
+								displayType="secondary"
+								onClick={() => {}}
+								small
+								spritemap={spritemap}
+								symbol="angle-right"
+							/>
+						</ClayButton.Group>
+					</ClayToolbar.Section>
+				</ClayToolbar.Item>
+
+				<ClayToolbar.Item>
+					<ClayToolbar.Section>
+						<ClayButton displayType="secondary" onClick={() => {}}>
+							{'Delete'}
+						</ClayButton>
+
+						<ClayButton className="inline-item-after" onClick={() => {}}>
+							{'Edit'}
+						</ClayButton>
+					</ClayToolbar.Section>
+				</ClayToolbar.Item>
+
+				<ClayToolbar.Item>
+					<ClayDropDownWithItems
+						items={[
+							{href: '#one', label: 'one'},
+							{href: '#two', label: 'two'},
+							{disabled: true, href: '#three', label: 'three'},
+							{href: '#four', label: 'four'},
+						]}
+						spritemap={spritemap}
+						trigger={
+							<ClayButtonWithIcon
+								displayType="unstyled"
+								small
+								spritemap={spritemap}
+								symbol="ellipsis-v"
+							/>
+						}
+					/>
+				</ClayToolbar.Item>
+			</ClayToolbar.Nav>
+		</ClayToolbar>
+	)
+};
+
+render(<Component />);`;
+
+export const ComplexToolbar = () => {
+	const scope = {
+		ClayButton,
+		ClayButtonWithIcon,
+		ClayDropDownWithItems,
+		ClayIcon,
+		ClayInput,
+		ClayToolbar,
+	};
+
+	return (
+		<Editor
+			code={ComplexToolbarCode}
+			imports={complexToolbarImportsCode}
+			scope={scope}
+		/>
+	);
 };
