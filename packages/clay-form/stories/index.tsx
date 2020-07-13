@@ -78,8 +78,21 @@ storiesOf('Components|ClayDualListBox', module).add('default', () => {
 	const [leftSelected, setLeftSelected] = React.useState<Array<string>>([]);
 	const [rightSelected, setRightSelected] = React.useState<Array<string>>([]);
 
+	const [firstSelectBoxItems, secondSelectBoxItems] = items;
+
+	const leftMaxItems = number('leftMaxItems', 3);
+	const rightMaxItems = number('rightMaxItems', 5);
+
 	return (
 		<ClayDualListBox
+			disableLTR={
+				boolean('disableLTR', false) ||
+				secondSelectBoxItems.length >= rightMaxItems
+			}
+			disableRTL={
+				boolean('disableRTL', false) ||
+				firstSelectBoxItems.length >= leftMaxItems
+			}
 			items={items}
 			left={{
 				id: 'leftSelectBox',
@@ -87,7 +100,6 @@ storiesOf('Components|ClayDualListBox', module).add('default', () => {
 				onSelectChange: setLeftSelected,
 				selected: leftSelected,
 			}}
-			leftMaxItems={number('leftMaxItems', 3)}
 			onItemsChange={setItems}
 			right={{
 				id: 'rightSelectBox',
@@ -95,7 +107,6 @@ storiesOf('Components|ClayDualListBox', module).add('default', () => {
 				onSelectChange: setRightSelected,
 				selected: rightSelected,
 			}}
-			rightMaxItems={number('rightMaxItems', 5)}
 			size={8}
 			spritemap={spritemap}
 		/>
