@@ -27,12 +27,13 @@ const FOCUSABLE_ELEMENTS = [
  * modal by pressing the ESC key and control the focus within the Modal.
  */
 const useUserInteractions = (
-	elementRef: React.MutableRefObject<any>,
+	modalElementRef: React.MutableRefObject<any>,
+	modalBodyElementRef: React.MutableRefObject<any>,
 	onClick: () => void
 ) => {
 	const getFocusableNodes = () => {
-		if (elementRef.current) {
-			const nodes = elementRef.current.querySelectorAll(
+		if (modalBodyElementRef.current) {
+			const nodes = modalBodyElementRef.current.querySelectorAll(
 				FOCUSABLE_ELEMENTS
 			);
 
@@ -45,11 +46,11 @@ const useUserInteractions = (
 	const handleKeydown = (event: KeyboardEvent) => {
 		if (event.keyCode === KEY_CODE_TAB) {
 			if (
-				elementRef.current &&
+				modalElementRef.current &&
 				event.target !== null &&
-				!elementRef.current.contains(event.target)
+				!modalElementRef.current.contains(event.target)
 			) {
-				elementRef.current.focus();
+				modalBodyElementRef.current.focus();
 			} else {
 				const focusableNodes = getFocusableNodes();
 				const focusedItemIndex = focusableNodes.indexOf(
@@ -83,12 +84,7 @@ const useUserInteractions = (
 			return;
 		}
 
-		if (
-			elementRef.current &&
-			event.target !== null &&
-			!elementRef.current.contains(event.target as HTMLDivElement) &&
-			document.contains(event.target as HTMLElement)
-		) {
+		if (event.target === modalElementRef.current) {
 			onClick();
 		}
 	};

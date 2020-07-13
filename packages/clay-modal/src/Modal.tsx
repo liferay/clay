@@ -5,7 +5,7 @@
 
 import {ClayPortal} from '@clayui/shared';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import warning from 'warning';
 
 import Body from './Body';
@@ -64,24 +64,22 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 	status,
 	...otherProps
 }: IProps) => {
-	const modalBodyElementRef = React.useRef<HTMLDivElement | null>(null);
+	const modalElementRef = useRef<HTMLDivElement | null>(null);
+	const modalBodyElementRef = useRef<HTMLDivElement | null>(null);
 
 	warning(observer !== undefined, warningMessage);
 
-	useUserInteractions(modalBodyElementRef, () =>
+	useUserInteractions(modalElementRef, modalBodyElementRef, () =>
 		observer.dispatch(ObserverType.Close)
 	);
 
-	React.useEffect(() => observer.dispatch(ObserverType.Open), []);
-
-	// Defines a default Modal size when size is not set.
-	const maxWidth = size ? {} : {maxWidth: '600px'};
+	useEffect(() => observer.dispatch(ObserverType.Open), []);
 
 	const [show, content] =
 		observer && observer.mutation ? observer.mutation : [false, false];
 
 	return (
-		<ClayPortal subPortalRef={modalBodyElementRef}>
+		<ClayPortal subPortalRef={modalElementRef}>
 			<div
 				className={classNames('modal-backdrop fade', {
 					show,
@@ -92,34 +90,28 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 				className={classNames('fade modal d-block', className, {
 					show,
 				})}
+				ref={modalElementRef}
 			>
 				<div
-					className={classNames({
+					className={classNames('modal-dialog', {
 						[`modal-${size}`]: size,
+						[`modal-${status}`]: status,
+						'modal-dialog-centered': center,
 					})}
 					ref={modalBodyElementRef}
-					style={{margin: 'auto', ...maxWidth}}
+					tabIndex={-1}
 				>
-					<div
-						className={classNames('modal-dialog', {
-							[`modal-${size}`]: size,
-							[`modal-${status}`]: status,
-							'modal-dialog-centered': center,
-						})}
-						tabIndex={-1}
-					>
-						<div className="modal-content">
-							<Context.Provider
-								value={{
-									onClose: () =>
-										observer.dispatch(ObserverType.Close),
-									spritemap,
-									status,
-								}}
-							>
-								{content && children}
-							</Context.Provider>
-						</div>
+					<div className="modal-content">
+						<Context.Provider
+							value={{
+								onClose: () =>
+									observer.dispatch(ObserverType.Close),
+								spritemap,
+								status,
+							}}
+						>
+							{content && children}
+						</Context.Provider>
 					</div>
 				</div>
 			</div>

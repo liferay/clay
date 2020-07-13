@@ -2,7 +2,7 @@
 
 exports[`ModalProvider -> IncrementalInteractions renders a modal closed when dispatching Close by provider 1`] = `
 <body
-  class=""
+  class="modal-open"
 >
   <div>
     <button
@@ -28,65 +28,60 @@ exports[`ModalProvider -> IncrementalInteractions renders a modal when dispatchi
       class="fade modal d-block show"
     >
       <div
-        class="modal-lg"
-        style="margin: auto;"
+        class="modal-dialog modal-lg"
+        tabindex="-1"
       >
         <div
-          class="modal-dialog modal-lg"
-          tabindex="-1"
+          class="modal-content"
         >
           <div
-            class="modal-content"
+            class="modal-header"
           >
             <div
-              class="modal-header"
+              class="modal-title"
             >
-              <div
-                class="modal-title"
+              Title
+            </div>
+            <button
+              aria-label="close"
+              class="close btn btn-unstyled"
+              type="button"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-times"
+                role="presentation"
               >
-                Title
-              </div>
+                <use
+                  xlink:href="icons.svg#times"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="modal-body"
+          >
+            <h1>
+              Hello world!
+            </h1>
+          </div>
+          <div
+            class="modal-footer"
+          >
+            <div
+              class="modal-item-first"
+            />
+            <div
+              class="modal-item"
+            />
+            <div
+              class="modal-item-last"
+            >
               <button
-                aria-label="close"
-                class="close btn btn-unstyled"
+                class="btn btn-primary"
                 type="button"
               >
-                <svg
-                  class="lexicon-icon lexicon-icon-times"
-                  role="presentation"
-                >
-                  <use
-                    xlink:href="icons.svg#times"
-                  />
-                </svg>
+                Primary
               </button>
-            </div>
-            <div
-              class="modal-body"
-            >
-              <h1>
-                Hello world!
-              </h1>
-            </div>
-            <div
-              class="modal-footer"
-            >
-              <div
-                class="modal-item-first"
-              />
-              <div
-                class="modal-item"
-              />
-              <div
-                class="modal-item-last"
-              >
-                <button
-                  class="btn btn-primary"
-                  type="button"
-                >
-                  Primary
-                </button>
-              </div>
             </div>
           </div>
         </div>
