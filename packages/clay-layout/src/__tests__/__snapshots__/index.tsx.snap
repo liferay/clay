@@ -9,12 +9,12 @@ exports[`ClayLayout renders 1`] = `
       class="row justify-content-start"
     >
       <div
-        class="col-xs-4"
+        class="col-4"
       >
         One of two columns
       </div>
       <div
-        class="col-xs-4"
+        class="col-4"
       >
         One of two columns
       </div>
@@ -23,12 +23,12 @@ exports[`ClayLayout renders 1`] = `
       class="row justify-content-center"
     >
       <div
-        class="col-xs-4"
+        class="col-4"
       >
         One of two columns
       </div>
       <div
-        class="col-xs-4"
+        class="col-4"
       >
         One of two columns
       </div>
@@ -37,12 +37,12 @@ exports[`ClayLayout renders 1`] = `
       class="row justify-content-end"
     >
       <div
-        class="col-xs-4"
+        class="col-4"
       >
         One of two columns
       </div>
       <div
-        class="col-xs-4"
+        class="col-4"
       >
         One of two columns
       </div>
@@ -51,12 +51,12 @@ exports[`ClayLayout renders 1`] = `
       class="row justify-content-around"
     >
       <div
-        class="col-xs-4"
+        class="col-4"
       >
         One of two columns
       </div>
       <div
-        class="col-xs-4"
+        class="col-4"
       >
         One of two columns
       </div>
@@ -65,12 +65,12 @@ exports[`ClayLayout renders 1`] = `
       class="row justify-content-between"
     >
       <div
-        class="col-xs-4"
+        class="col-4"
       >
         One of two columns
       </div>
       <div
-        class="col-xs-4"
+        class="col-4"
       >
         One of two columns
       </div>
@@ -80,12 +80,12 @@ exports[`ClayLayout renders 1`] = `
     class="row"
   >
     <div
-      class="col-md-8 col-xs-12"
+      class="col-md-8 col-12"
     >
       .col-12 .col-md-8
     </div>
     <div
-      class="col-md-4 col-xs-6"
+      class="col-md-4 col-6"
     >
       .col-6 .col-md-4
     </div>
@@ -94,17 +94,17 @@ exports[`ClayLayout renders 1`] = `
     class="row"
   >
     <div
-      class="col-md-4 col-xs-6"
+      class="col-md-4 col-6"
     >
       .col-6 .col-md-4
     </div>
     <div
-      class="col-md-4 col-xs-6"
+      class="col-md-4 col-6"
     >
       .col-6 .col-md-4
     </div>
     <div
-      class="col-md-4 col-xs-6"
+      class="col-md-4 col-6"
     >
       .col-6 .col-md-4
     </div>
@@ -113,12 +113,12 @@ exports[`ClayLayout renders 1`] = `
     class="row"
   >
     <div
-      class="col-xs-6"
+      class="col-6"
     >
       .col-6
     </div>
     <div
-      class="col-xs-6"
+      class="col-6"
     >
       .col-6
     </div>

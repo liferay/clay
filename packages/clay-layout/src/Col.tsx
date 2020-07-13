@@ -75,8 +75,7 @@ const ClayCol = React.forwardRef<HTMLElement, IProps>(
 					[`col-md-${md}`]: md && typeof md !== 'boolean',
 					'col-sm': sm === true,
 					[`col-sm-${sm}`]: sm && typeof sm !== 'boolean',
-					'col-xs': xs === true,
-					[`col-xs-${xs}`]: xs && typeof xs !== 'boolean',
+					[`col-${xs}`]: xs && typeof xs !== 'boolean',
 				})}
 				ref={ref}
 			>
