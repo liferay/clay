@@ -63,12 +63,12 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Disables the button responsible for moving items from right to left box.
 	 */
-	disableRTL: boolean;
+	disableRTL?: boolean;
 
 	/**
 	 * Disables the button responsible for moving items from left to right box.
 	 */
-	disableLTR: boolean;
+	disableLTR?: boolean;
 
 	/**
 	 * Items spread across two arrays that will be displayed in the two Select Boxes.
