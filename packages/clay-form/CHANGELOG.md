@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.9.0](https://github.com/liferay/clay/compare/@clayui/form@3.8.0...@clayui/form@3.9.0) (2020-07-14)
+
+### Bug Fixes
+
+-   **@clayui/form:** Turns disableRTL and disableLTR optional props ([b0a0eea](https://github.com/liferay/clay/commit/b0a0eea))
+
+### Features
+
+-   **@clayui/form:** Adds `disableRTL` and `disableLTR` for handling if transfer buttons can be disabled or not leveraging more power to developer when trying to implement a maximum number of items for example and update storybook with a case for use `disable{LTR,RTL}` with maxItems like feature ([0556694](https://github.com/liferay/clay/commit/0556694))
+-   **@clayui/form:** Adds `leftMaxItems` and `rightMaxItems` properties for providing the user to limit the number of items that each select box can store ([30e70fe](https://github.com/liferay/clay/commit/30e70fe))
+
 # [3.8.0](https://github.com/liferay/clay/compare/@clayui/form@3.7.1...@clayui/form@3.8.0) (2020-05-21)
 
 ### Features

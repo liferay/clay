@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.6.1](https://github.com/liferay/clay/compare/@clayui/modal@3.6.0...@clayui/modal@3.6.1) (2020-07-14)
+
+### Bug Fixes
+
+-   **@clayui/modal:** simplifies subportal grouping implementation and removes the extra container ([f48397f](https://github.com/liferay/clay/commit/f48397f))
+
 # [3.6.0](https://github.com/liferay/clay/compare/@clayui/modal@3.5.1...@clayui/modal@3.6.0) (2020-07-07)
 
 ### Features

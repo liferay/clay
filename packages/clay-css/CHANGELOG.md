@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.15.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.14.0...@clayui/css@3.15.0) (2020-07-14)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Adds leading whitespace for License texts ([5566010](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/5566010))
+* **@clayui/css:** Cards change `.card-page-item-asset` `min-width: 193px` so 4 cards can fit in `sheet-lg` at maximum size ([95dca1c](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/95dca1c))
+* **@clayui/css:** Copy licenses from root directory into clay-css/LICENSES ([0d1ef58](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/0d1ef58))
+* **@clayui/css:** Input Group fix border radius issues due to reducing Bootstrap's selector specificity ([7e399ea](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/7e399ea))
+* **@clayui/css:** Modal max-width sizes should be declared before `.modal-full-screen` and add back `flex-grow: 1` to `.modal-body` ([b2722ea](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/b2722ea))
+* **@clayui/css:** Reboot makes `use[href]` inherit parent styles ([2504c62](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/2504c62))
+* **@clayui/css:** Reboot removes focus outline on negative `tabindex` elements. Chrome adds outline on focus to any element with a `tabindex` attribute. ([a5deefd](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/a5deefd))
+* **@clayui/css:** SVG Icons updates `picture`, reduce the anchors of the sun and the compound path can be placed tighten to viewbox ([5b83c6e](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/5b83c6e))
+* **@clayui/css:** Update svg4everybody to 2.1.9 ([c4eb007](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/c4eb007))
+* **clay-css:** copy LICENSES to lib before publish ([e1122b3](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/e1122b3))
+* **clay-css:** run 'gulp version' before commit ([6b7e181](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/6b7e181))
+
+
+### Features
+
+* **@clayui/css:** SVG Icons adds `copy-rtl` ([bcc3f95](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/bcc3f95))
+* **@clayui/css:** SVG Icons adds `home-full` and simplifies `home` design ([d3b948e](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/d3b948e))
+* **@clayui/css:** SVG Icons adds `low-vision` ([df440f7](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/df440f7))
+* **@clayui/css:** SVG Icons adds `paste-plaintext-rtl` ([ced1018](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/ced1018)), closes [#3450](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3450)
+* **@clayui/css:** SVG Icons adds `paste-plaintext` ([5bf397c](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/5bf397c))
+* **@clayui/css:** SVG Icons adds `paste-word-rtl.svg` ([8d92075](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/8d92075)), closes [#3448](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3448)
+
+
+
+
+
 # [3.14.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.13.0...@clayui/css@3.14.0) (2020-07-07)
 
 

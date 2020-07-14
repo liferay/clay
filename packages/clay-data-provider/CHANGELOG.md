@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/liferay/clay/compare/@clayui/data-provider@3.2.1...@clayui/data-provider@3.3.0) (2020-07-14)
+
+### Features
+
+-   **@clayui/data-provider:** Adds the new fetcher API and deprecated the link behavior in accepting async function ([#3417](https://github.com/liferay/clay/issues/3417)) ([733a89f](https://github.com/liferay/clay/commit/733a89f))
+
 ## [3.2.1](https://github.com/liferay/clay/compare/@clayui/data-provider@3.2.0...@clayui/data-provider@3.2.1) (2020-07-07)
 
 **Note:** Version bump only for package @clayui/data-provider

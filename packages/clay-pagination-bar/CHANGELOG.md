@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.7](https://github.com/liferay/clay/compare/@clayui/pagination-bar@3.1.6...@clayui/pagination-bar@3.1.7) (2020-07-14)
+
+### Bug Fixes
+
+-   **@clayui/pagination-bar:** automatically go to page 1 if active page exceeds delta ([3229087](https://github.com/liferay/clay/commit/3229087))
+
 ## [3.1.6](https://github.com/liferay/clay/compare/@clayui/pagination-bar@3.1.5...@clayui/pagination-bar@3.1.6) (2020-07-07)
 
 **Note:** Version bump only for package @clayui/pagination-bar

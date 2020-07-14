@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.4.0](https://github.com/liferay/clay/compare/@clayui/alert@3.3.4...@clayui/alert@3.4.0) (2020-07-14)
+
+### Features
+
+-   **clayui.com:** Add JSP code example to Alert ([73c2499](https://github.com/liferay/clay/commit/73c2499))
+
 ## [3.3.4](https://github.com/liferay/clay/compare/@clayui/alert@3.3.3...@clayui/alert@3.3.4) (2020-06-18)
 
 **Note:** Version bump only for package @clayui/alert
