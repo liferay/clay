@@ -177,9 +177,7 @@ To create a custom slider is necessary to use JavaScript to manipulate the thumb
 					<div class="clay-range-thumb">
 						<div class="tooltip clay-tooltip-top" role="tooltip">
 							<div class="tooltip-arrow"></div>
-							<div class="tooltip-inner">
-								<div class="clay-range-value">34</div>
-							</div>
+							<div class="tooltip-inner"><div class="clay-range-value">34</div></div>
 						</div>
 					</div>
 				</div>
@@ -196,9 +194,7 @@ To create a custom slider is necessary to use JavaScript to manipulate the thumb
 					<div class="clay-range-thumb">
 						<div class="tooltip clay-tooltip-bottom" role="tooltip">
 							<div class="tooltip-arrow"></div>
-							<div class="tooltip-inner">
-								<div class="clay-range-value">55</div>
-							</div>
+							<div class="tooltip-inner"><div class="clay-range-value">55</div></div>
 						</div>
 					</div>
 				</div>
