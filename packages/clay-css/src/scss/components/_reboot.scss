@@ -159,6 +159,10 @@ sup {
 	}
 }
 
+[tabindex^='-'] {
+	outline: 0;
+}
+
 // Code
 
 pre,
