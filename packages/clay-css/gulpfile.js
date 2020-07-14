@@ -52,6 +52,7 @@ gulp.task(
 			'compile:css',
 			'compile:clean-scss',
 			'compile:svg',
+			'copy:licenses',
 			function(err) {
 				cb(err);
 			}
@@ -193,6 +194,19 @@ gulp.task(
 		});
 	}
 );
+
+gulp.task('copy:licenses', function() {
+	var newLicenseDir = 'LICENSES';
+	var originalLicenseDir = path.join('..', '..', 'LICENSES');
+
+	return gulp.src([
+		path.join(originalLicenseDir, 'BSD-3-Clause.txt'),
+		path.join(originalLicenseDir, 'LicenseRef-MIT-Bootstrap.txt'),
+		path.join(originalLicenseDir, 'MIT.txt')
+	]).pipe(
+		gulp.dest(newLicenseDir)
+	);
+});
 
 gulp.task('version', function() {
 	var VERSION = JSON.parse(
