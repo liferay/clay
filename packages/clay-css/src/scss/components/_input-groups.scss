@@ -93,10 +93,10 @@
 
 .input-group-prepend,
 .input-group-append {
-	.btn + .btn,
-	.btn + .input-group-text,
-	.input-group-text + .input-group-text,
-	.input-group-text + .btn {
+	> .btn + .btn,
+	> .btn + .input-group-text,
+	> .input-group-text + .input-group-text,
+	> .input-group-text + .btn {
 		margin-left: -$input-border-width;
 	}
 }
@@ -550,14 +550,14 @@
 }
 
 .input-group-prepend:not(:last-child) {
-	.btn,
-	.form-control,
-	.input-group-text {
+	> .btn,
+	> .form-control,
+	> .input-group-text {
 		border-bottom-right-radius: 0;
 		border-top-right-radius: 0;
 	}
 
-	.btn + .btn {
+	> .btn + .btn {
 		border-bottom-left-radius: 0;
 		border-top-left-radius: 0;
 	}
@@ -566,9 +566,9 @@
 .input-group-prepend + .input-group-prepend {
 	margin-left: 0;
 
-	.btn,
-	.form-control,
-	.input-group-text {
+	> .btn,
+	> .form-control,
+	> .input-group-text {
 		border-bottom-left-radius: 0;
 		border-top-left-radius: 0;
 	}
@@ -583,18 +583,19 @@
 }
 
 .input-group-append:first-child {
-	.btn,
-	.form-control,
-	.input-group-text {
+	> .btn,
+	> .form-control,
+	> .input-group-text {
 		border-bottom-right-radius: 0;
 		border-top-right-radius: 0;
 	}
 }
 
 .input-group-append:not(:first-child) {
-	.btn,
-	.form-control,
-	.input-group-text {
+	> .btn,
+	> .form-control,
+	> .form-file .btn,
+	> .input-group-text {
 		border-bottom-left-radius: 0;
 		border-top-left-radius: 0;
 	}
@@ -624,7 +625,5 @@
 // Form Group with Input Group
 
 .form-group-sm {
-	.input-group {
-		@extend %clay-input-group-sm;
-	}
+	@extend %clay-input-group-sm;
 }
