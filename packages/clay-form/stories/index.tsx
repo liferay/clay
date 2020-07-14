@@ -21,7 +21,7 @@ import ClayForm from '../src/Form';
 
 import '@clayui/css/lib/css/atlas.css';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
-import {boolean, select, text} from '@storybook/addon-knobs';
+import {boolean, number, select, text} from '@storybook/addon-knobs';
 
 const ClayCheckboxWithState = () => {
 	const [value, setValue] = React.useState<boolean>(false);
@@ -78,8 +78,21 @@ storiesOf('Components|ClayDualListBox', module).add('default', () => {
 	const [leftSelected, setLeftSelected] = React.useState<Array<string>>([]);
 	const [rightSelected, setRightSelected] = React.useState<Array<string>>([]);
 
+	const [firstSelectBoxItems, secondSelectBoxItems] = items;
+
+	const leftMaxItems = number('leftMaxItems', 3);
+	const rightMaxItems = number('rightMaxItems', 5);
+
 	return (
 		<ClayDualListBox
+			disableLTR={
+				boolean('disableLTR', false) ||
+				secondSelectBoxItems.length >= rightMaxItems
+			}
+			disableRTL={
+				boolean('disableRTL', false) ||
+				firstSelectBoxItems.length >= leftMaxItems
+			}
 			items={items}
 			left={{
 				id: 'leftSelectBox',
