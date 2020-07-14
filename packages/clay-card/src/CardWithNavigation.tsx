@@ -54,11 +54,6 @@ interface IProps {
 	title?: React.ReactText;
 }
 
-const KEYCODES = {
-	ENTER: 13,
-	SPACE: 32,
-};
-
 const noop = () => {};
 
 export const ClayCardWithNavigation: React.FunctionComponent<IProps> = ({
@@ -80,8 +75,8 @@ export const ClayCardWithNavigation: React.FunctionComponent<IProps> = ({
 			onClick={onClick}
 			onKeyDown={(event: React.KeyboardEvent) => {
 				if (
-					(event && event.keyCode === KEYCODES.ENTER) ||
-					(event && event.keyCode === KEYCODES.SPACE)
+					(event && event.key === 'Enter') ||
+					(event && event.key === ' ')
 				) {
 					event.preventDefault();
 

@@ -12,9 +12,6 @@ export type TItem = {
 	value: string;
 };
 
-const KEY_ARROWDOWN = 40;
-const KEY_ARROWUP = 38;
-
 function arrayMove(
 	arrayToMove: Array<TItem>,
 	oldIndex: number,
@@ -184,9 +181,9 @@ const ClaySelectBox: React.FunctionComponent<IProps> = ({
 					onKeyDown={(event) =>
 						selectedIndexes.forEach((index) => {
 							if (
-								(event.keyCode === KEY_ARROWDOWN &&
+								(event.key === 'ArrowDown' &&
 									index === items.length - 1) ||
-								(event.keyCode === KEY_ARROWUP && index === 0)
+								(event.key === 'ArrowUp' && index === 0)
 							) {
 								event.preventDefault();
 							}

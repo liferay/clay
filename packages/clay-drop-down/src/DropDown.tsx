@@ -67,8 +67,6 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	};
 }
 
-const KEY_CODE_ESC = 27;
-
 const ClayDropDown: React.FunctionComponent<IProps> & {
 	Action: typeof Action;
 	Caption: typeof Caption;
@@ -98,7 +96,7 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 	const menuElementRef = React.useRef<HTMLDivElement>(null);
 
 	const handleKeyUp = (event: React.KeyboardEvent<HTMLElement>) => {
-		if (event.keyCode === KEY_CODE_ESC) {
+		if (event.key === 'Escape') {
 			onActiveChange(!active);
 		}
 	};

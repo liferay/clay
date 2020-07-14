@@ -12,11 +12,7 @@ import {FocusScope, noop, sub} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
 
-const BACKSPACE_KEY = 8;
-const COMMA_KEY = 188;
-const ENTER_KEY = 13;
-
-const DELIMITER_KEYS = [ENTER_KEY, COMMA_KEY];
+const DELIMITER_KEYS = ['Enter', 'Comma'];
 
 type Item = {
 	[propName: string]: any;
@@ -227,19 +223,19 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 		) => {
 			onKeyDown(event);
 
-			const {keyCode} = event;
+			const {key} = event;
 
-			if (keyCode === BACKSPACE_KEY && !inputValue) {
+			if (key === 'Backspace' && !inputValue) {
 				event.preventDefault();
 			}
 
-			if (inputValue && DELIMITER_KEYS.includes(keyCode)) {
+			if (inputValue && DELIMITER_KEYS.includes(key)) {
 				event.preventDefault();
 
 				setNewValue(getNewItem(inputValue));
 			} else if (
 				!inputValue &&
-				keyCode === BACKSPACE_KEY &&
+				key === 'Backspace' &&
 				inputRef.current &&
 				lastItemRef.current
 			) {
@@ -308,8 +304,8 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 												}
 											},
 										}}
-										onKeyDown={({keyCode}) => {
-											if (keyCode !== BACKSPACE_KEY) {
+										onKeyDown={({key}) => {
+											if (key !== 'Backspace') {
 												return;
 											}
 											if (inputRef.current) {

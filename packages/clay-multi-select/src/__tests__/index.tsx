@@ -142,7 +142,7 @@ describe('Interactions', () => {
 		});
 
 		fireEvent.keyDown(input as HTMLInputElement, {
-			keyCode: 188,
+			key: 'Comma',
 		});
 
 		expect(container.querySelectorAll('.label').length).toEqual(1);
@@ -151,7 +151,7 @@ describe('Interactions', () => {
 			target: {value: 'bar'},
 		});
 
-		fireEvent.keyDown(input as HTMLInputElement, {keyCode: 188});
+		fireEvent.keyDown(input as HTMLInputElement, {key: 'Comma'});
 
 		expect(container.querySelectorAll('.label').length).toEqual(2);
 	});
@@ -196,14 +196,14 @@ describe('Interactions', () => {
 
 		fireEvent.keyDown(
 			container.querySelector('input[type=text]') as HTMLInputElement,
-			{keyCode: 8}
+			{key: 'Backspace'}
 		);
 
 		expect(document.activeElement!.tagName).toEqual('BUTTON');
 		expect(document.activeElement!.classList).toContain('close');
 
 		fireEvent.keyDown(document.activeElement as HTMLSpanElement, {
-			keyCode: 8,
+			key: 'Backspace',
 		});
 
 		expect(onItemsChangeFn).toHaveBeenCalled();

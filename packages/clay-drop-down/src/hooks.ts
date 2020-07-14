@@ -5,8 +5,6 @@
 
 import React from 'react';
 
-const ESC_KEY_CODE = 27;
-
 /**
  * Hook for closing dropdown when user hits ESC key or clicks outside the menu.
  */
@@ -34,7 +32,7 @@ export function useDropdownCloseInteractions(
 		};
 
 		const handleEsc = (event: KeyboardEvent) =>
-			event.keyCode === ESC_KEY_CODE && setActive(false);
+			event.key === 'Escape' && setActive(false);
 
 		window.addEventListener('mousedown', handleClick);
 		window.addEventListener('keydown', handleEsc);
