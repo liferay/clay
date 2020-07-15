@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React from 'react';
+import React, {useRef} from 'react';
 
 const KEY_CODE_ESC = 27;
 const KEY_CODE_TAB = 9;
@@ -31,6 +31,8 @@ const useUserInteractions = (
 	modalBodyElementRef: React.MutableRefObject<any>,
 	onClick: () => void
 ) => {
+	const mouseEventTargetRef = useRef<EventTarget | null>(null);
+
 	const getFocusableNodes = () => {
 		if (modalBodyElementRef.current) {
 			const nodes = modalBodyElementRef.current.querySelectorAll(
@@ -81,12 +83,28 @@ const useUserInteractions = (
 
 	const handleDocumentClick = (event: Event) => {
 		if (event.defaultPrevented) {
+			mouseEventTargetRef.current = null;
+
 			return;
 		}
 
-		if (event.target === modalElementRef.current) {
+		if (
+			event.target === modalElementRef.current &&
+			(mouseEventTargetRef.current === event.target ||
+				mouseEventTargetRef.current === null)
+		) {
 			onClick();
 		}
+
+		mouseEventTargetRef.current = null;
+	};
+
+	const handleMouseDown = (event: Event) => {
+		// We keep the `event.target` to check later in the click event if
+		// the target is the same, otherwise, we are assuming that the element
+		// has been removed from the DOM.
+
+		mouseEventTargetRef.current = event.target;
 	};
 
 	/**
@@ -95,12 +113,14 @@ const useUserInteractions = (
 	 */
 	React.useEffect(() => {
 		document.addEventListener('click', handleDocumentClick);
+		document.addEventListener('mousedown', handleMouseDown);
 		document.addEventListener('keyup', handleKeyup);
 		document.addEventListener('keydown', handleKeydown);
 
 		return () => {
 			document.removeEventListener('keyup', handleKeyup);
 			document.removeEventListener('keydown', handleKeydown);
+			document.removeEventListener('mousedown', handleMouseDown);
 			document.removeEventListener('click', handleDocumentClick);
 		};
 	}, []);
