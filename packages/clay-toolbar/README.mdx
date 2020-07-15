@@ -1,6 +1,7 @@
 ---
 title: 'Toolbar'
 description: 'A toolbar is a set of actions related to a specific context that are grouped into a horizontal bar.'
+draft: true
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/toolbars/'
 packageNpm: '@clayui/toolbar'
 sibling: 'docs/components/css-toolbar.html'
@@ -32,15 +33,15 @@ A toolbar organizes actions into a horizontal bar that is responsive. Its height
 
 ## Composing
 
-**Nav** is the highest level wrapper to be used inside the Toolbar to wrap all the content inside.
+**ClayToolbar.Nav** is the highest level wrapper to be used inside the Toolbar to wrap all the content inside.
 
-**Item** represents a Toolbar child item, a list item that is supposed to wrap around any of the other low-level components.
+**ClayToolbar.Item** represents a Toolbar child item, a list item that is supposed to wrap around any of the other low-level components.
 
-**Section** is a wrapper to be used inside the **Item** that makes the contents it wraps display inline.
+**ClayToolbar.Section** is a wrapper to be used inside the **ClayToolbar.Item** that makes the contents it wraps display inline.
 
-**Action** is used when you want a clickable icon to add an action in the Toolbar.
+**ClayToolbar.Action** is used when you want a clickable icon to add an action in the Toolbar.
 
-**Label** and **Link** are essentially a wrapper around their respective Clay components with some specifics related to Toolbar.
+**ClayToolbar.Label** and **ClayToolbar.Link** are essentially a wrapper around their respective Clay components with some specifics related to Toolbar.
 
 <ComplexToolbar />
 
