@@ -5,6 +5,8 @@
 
 import React from 'react';
 
+import {Keys} from './Keys';
+
 // https://github.com/facebook/react/blob/master/packages/shared/ReactWorkTags.js#L39
 const HostComponent = 5;
 
@@ -121,7 +123,7 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 			return;
 		}
 
-		if (event.key === 'Tab' && event.shiftKey) {
+		if (event.key === Keys.Tab && event.shiftKey) {
 			const elements = getFocusableElementsInScope(getFiber(scope));
 
 			if (elements.length === 0) {

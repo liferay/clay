@@ -8,7 +8,7 @@ import ClayDropDown from '@clayui/drop-down';
 import {ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
-import {FocusScope, noop, sub} from '@clayui/shared';
+import {FocusScope, Keys, noop, sub} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -225,7 +225,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 
 			const {key} = event;
 
-			if (key === 'Backspace' && !inputValue) {
+			if (key === Keys.Backspace && !inputValue) {
 				event.preventDefault();
 			}
 
@@ -235,7 +235,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 				setNewValue(getNewItem(inputValue));
 			} else if (
 				!inputValue &&
-				key === 'Backspace' &&
+				key === Keys.Backspace &&
 				inputRef.current &&
 				lastItemRef.current
 			) {
@@ -305,7 +305,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 											},
 										}}
 										onKeyDown={({key}) => {
-											if (key !== 'Backspace') {
+											if (key !== Keys.Backspace) {
 												return;
 											}
 											if (inputRef.current) {

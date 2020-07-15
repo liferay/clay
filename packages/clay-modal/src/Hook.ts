@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {Keys} from '@clayui/shared';
 import React from 'react';
 
 const FOCUSABLE_ELEMENTS = [
@@ -42,7 +43,7 @@ const useUserInteractions = (
 	};
 
 	const handleKeydown = (event: KeyboardEvent) => {
-		if (event.key === 'Tab') {
+		if (event.key === Keys.Tab) {
 			if (
 				modalElementRef.current &&
 				event.target !== null &&
@@ -72,7 +73,7 @@ const useUserInteractions = (
 	};
 
 	const handleKeyup = (event: KeyboardEvent) => {
-		if (event.key === 'Escape') {
+		if (event.key === Keys.Esc) {
 			onClick();
 		}
 	};

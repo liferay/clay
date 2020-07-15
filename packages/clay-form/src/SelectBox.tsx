@@ -4,6 +4,7 @@
  */
 
 import ClayButton, {ClayButtonWithIcon} from '@clayui/button';
+import {Keys} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -181,9 +182,9 @@ const ClaySelectBox: React.FunctionComponent<IProps> = ({
 					onKeyDown={(event) =>
 						selectedIndexes.forEach((index) => {
 							if (
-								(event.key === 'ArrowDown' &&
+								(event.key === Keys.Down &&
 									index === items.length - 1) ||
-								(event.key === 'ArrowUp' && index === 0)
+								(event.key === Keys.Up && index === 0)
 							) {
 								event.preventDefault();
 							}

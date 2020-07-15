@@ -5,6 +5,7 @@
 
 import ClayIcon from '@clayui/icon';
 import ClayLayout from '@clayui/layout';
+import {Keys} from '@clayui/shared';
 import ClaySticker from '@clayui/sticker';
 import React from 'react';
 
@@ -75,8 +76,8 @@ export const ClayCardWithNavigation: React.FunctionComponent<IProps> = ({
 			onClick={onClick}
 			onKeyDown={(event: React.KeyboardEvent) => {
 				if (
-					(event && event.key === 'Enter') ||
-					(event && event.key === ' ')
+					(event && event.key === Keys.Enter) ||
+					(event && event.key === Keys.Spacebar)
 				) {
 					event.preventDefault();
 

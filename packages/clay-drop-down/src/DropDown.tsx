@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {FocusScope} from '@clayui/shared';
+import {FocusScope, Keys} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -96,7 +96,7 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 	const menuElementRef = React.useRef<HTMLDivElement>(null);
 
 	const handleKeyUp = (event: React.KeyboardEvent<HTMLElement>) => {
-		if (event.key === 'Escape') {
+		if (event.key === Keys.Esc) {
 			onActiveChange(!active);
 		}
 	};

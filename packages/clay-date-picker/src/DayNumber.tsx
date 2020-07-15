@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {Keys} from '@clayui/shared';
 import classnames from 'classnames';
 import React from 'react';
 
@@ -49,12 +50,12 @@ const ClayDatePickerDayNumber: React.FunctionComponent<IProps> = ({
 				// When tabbing and selecting a DayNumber using
 				// SPACE key the active state it's not being removed.
 				// See https://github.com/liferay/clay/issues/3374 for more details.
-				if (event.key === ' ') {
+				if (event.key === Keys.Spacebar) {
 					event.preventDefault();
 				}
 			}}
 			onKeyUp={(event) => {
-				if (event.key === ' ') {
+				if (event.key === Keys.Spacebar) {
 					onClick(date);
 				}
 			}}

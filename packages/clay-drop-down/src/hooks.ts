@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {Keys} from '@clayui/shared';
 import React from 'react';
 
 /**
@@ -32,7 +33,7 @@ export function useDropdownCloseInteractions(
 		};
 
 		const handleEsc = (event: KeyboardEvent) =>
-			event.key === 'Escape' && setActive(false);
+			event.key === Keys.Esc && setActive(false);
 
 		window.addEventListener('mousedown', handleClick);
 		window.addEventListener('keydown', handleEsc);

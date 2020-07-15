@@ -5,6 +5,7 @@
 
 import React from 'react';
 
+import {Keys} from './Keys';
 import {useFocusManagement} from './useFocusManagement';
 
 interface IProps {
@@ -42,17 +43,17 @@ export const FocusScope: React.FunctionComponent<IProps> = ({
 		const {key, shiftKey} = event;
 
 		if (
-			(arrowKeysUpDown && key === 'ArrowDown') ||
-			(arrowKeysLeftRight && key === 'ArrowRight') ||
-			(key === 'Tab' && !shiftKey)
+			(arrowKeysUpDown && key === Keys.Down) ||
+			(arrowKeysLeftRight && key === Keys.Right) ||
+			(key === Keys.Tab && !shiftKey)
 		) {
 			if (focusManager.focusNext()) {
 				event.preventDefault();
 			}
 		} else if (
-			(arrowKeysUpDown && key === 'ArrowUp') ||
-			(arrowKeysLeftRight && key === 'ArrowLeft') ||
-			(key === 'Tab' && shiftKey)
+			(arrowKeysUpDown && key === Keys.Up) ||
+			(arrowKeysLeftRight && key === Keys.Left) ||
+			(key === Keys.Tab && shiftKey)
 		) {
 			if (focusManager.focusPrevious()) {
 				event.preventDefault();
