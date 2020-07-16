@@ -164,7 +164,7 @@
 		}
 	}
 
-	.input-group-inset-item {
+	.input-group .input-group-inset-item {
 		background-color: $input-danger-bg;
 		border-color: $input-danger-border-color;
 		box-shadow: $input-danger-box-shadow;
@@ -251,7 +251,7 @@
 		}
 	}
 
-	.input-group-inset-item {
+	.input-group .input-group-inset-item {
 		background-color: $input-warning-bg;
 		border-color: $input-warning-border-color;
 		box-shadow: $input-warning-box-shadow;
@@ -338,7 +338,7 @@
 		}
 	}
 
-	.input-group-inset-item {
+	.input-group .input-group-inset-item {
 		background-color: $input-success-bg;
 		border-color: $input-success-border-color;
 		box-shadow: $input-success-box-shadow;
