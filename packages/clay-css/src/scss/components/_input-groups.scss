@@ -231,6 +231,190 @@
 	}
 }
 
+// Input Group Stacked
+
+.input-group-stacked-sm-down {
+	@include clay-input-group-stacked($input-group-stacked-sm-down);
+}
+
+// Input Group Sizes
+
+%clay-input-group-lg {
+	> .input-group-item {
+		> .btn {
+			@include clay-button-size($input-group-lg-item-btn);
+		}
+
+		> .btn-monospaced {
+			@include clay-button-size($input-group-lg-item-btn-monospaced);
+		}
+
+		> .form-control,
+		> .form-file .btn {
+			@include border-radius($input-border-radius-lg);
+
+			font-size: $input-font-size-lg;
+			height: $input-height-lg;
+			line-height: $input-line-height-lg;
+			padding-bottom: $input-padding-y-lg;
+			padding-left: $input-padding-x-lg;
+			padding-right: $input-padding-x-lg;
+			padding-top: $input-padding-y-lg;
+
+			@include clay-scale-component {
+				height: $input-height-lg-mobile;
+			}
+		}
+
+		> textarea.form-control,
+		> .form-control-textarea {
+			height: $input-textarea-height-lg;
+		}
+
+		> .form-control-plaintext {
+			font-size: $input-font-size-lg;
+			height: $input-height-lg;
+			line-height: $input-line-height-lg;
+			padding-bottom: $input-padding-y-lg;
+			padding-top: $input-padding-y-lg;
+
+			@include clay-scale-component {
+				height: $input-height-lg-mobile;
+			}
+		}
+
+		> .input-group-text {
+			@include border-radius($input-border-radius-lg);
+
+			font-size: $input-font-size-lg;
+			height: $input-height-lg;
+			min-width: $input-group-addon-min-width-lg;
+			padding-bottom: $input-group-addon-padding-y-lg;
+			padding-left: $input-group-addon-padding-x-lg;
+			padding-right: $input-group-addon-padding-x-lg;
+			padding-top: $input-group-addon-padding-y-lg;
+		}
+	}
+
+	> .input-group-inset-item {
+		> .btn {
+			@include clay-button-size($input-group-lg-inset-item-btn);
+		}
+
+		> .form-file {
+			height: 75%;
+
+			.btn {
+				@include clay-button-size(
+					$input-group-lg-inset-item-form-file-btn
+				);
+			}
+		}
+	}
+}
+
+.input-group-lg {
+	@extend %clay-input-group-lg;
+}
+
+%clay-input-group-sm {
+	> .input-group-item {
+		> .btn {
+			@include clay-button-size($input-group-sm-item-btn);
+		}
+
+		> .btn-monospaced {
+			@include clay-button-size($input-group-sm-item-btn-monospaced);
+		}
+
+		> .form-control,
+		> .form-file .btn {
+			@include border-radius($input-border-radius-sm);
+
+			font-size: $input-font-size-sm;
+			height: $input-height-sm;
+			line-height: $input-line-height-sm;
+			padding-bottom: $input-padding-y-sm;
+			padding-left: $input-padding-x-sm;
+			padding-right: $input-padding-x-sm;
+			padding-top: $input-padding-y-sm;
+
+			@include clay-scale-component {
+				height: $input-height-sm-mobile;
+			}
+		}
+
+		> .form-control-plaintext {
+			font-size: $input-font-size-sm;
+			height: $input-height-sm;
+			line-height: $input-line-height-sm;
+			padding-bottom: $input-padding-y-sm;
+			padding-top: $input-padding-y-sm;
+
+			@include clay-scale-component {
+				height: $input-height-sm-mobile;
+			}
+		}
+
+		> textarea.form-control,
+		> .form-control-textarea {
+			height: $input-textarea-height-sm;
+		}
+
+		> .input-group-text {
+			@include border-radius($input-border-radius-sm);
+
+			font-size: $input-font-size-sm;
+			height: $input-height-sm;
+			min-width: $input-group-addon-min-width-sm;
+			padding-bottom: $input-group-addon-padding-y-sm;
+			padding-left: $input-group-addon-padding-x-sm;
+			padding-right: $input-group-addon-padding-x-sm;
+			padding-top: $input-group-addon-padding-y-sm;
+		}
+	}
+
+	> .input-group-inset-item {
+		> .btn {
+			@include clay-button-size($input-group-sm-inset-item-btn);
+		}
+
+		> .form-file {
+			height: 75%;
+
+			.btn {
+				@include clay-button-size(
+					$input-group-sm-inset-item-form-file-btn
+				);
+			}
+		}
+	}
+
+	&.clay-color {
+		> .input-group-item > .input-group-text {
+			@extend %clay-color-sm-input-group-text !optional;
+
+			> .clay-color-btn {
+				@extend %clay-color-sm-clay-color-btn !optional;
+			}
+		}
+
+		> .input-group-item > .input-group-inset-item-before {
+			@extend %clay-color-sm-input-group-inset-item-before !optional;
+		}
+	}
+}
+
+.input-group-sm {
+	@extend %clay-input-group-sm;
+}
+
+// Form Group with Input Group
+
+.form-group-sm .input-group {
+	@extend %clay-input-group-sm;
+}
+
 // Input Group Inset
 
 .input-group-item.focus {
@@ -299,311 +483,157 @@
 	}
 }
 
-.input-group-inset-item {
-	align-items: center;
-	background-color: $input-bg;
-	border-bottom-width: $input-border-bottom-width;
-	border-color: $input-border-color;
-	border-left-width: $input-border-left-width;
-	border-right-width: $input-border-right-width;
-	border-style: solid;
-	border-top-width: $input-border-top-width;
-	display: flex;
-	// undo margin-bottom on `<label>`
-	margin-bottom: 0;
-	padding-left: $input-group-inset-item-padding-left;
-	padding-right: $input-group-inset-item-padding-right;
-	transition: $input-transition;
+.input-group {
+	.input-group-inset-item {
+		align-items: center;
+		background-color: $input-bg;
+		border-bottom-width: $input-border-bottom-width;
+		border-color: $input-border-color;
+		border-left-width: $input-border-left-width;
+		border-right-width: $input-border-right-width;
+		border-style: solid;
+		border-top-width: $input-border-top-width;
+		display: flex;
+		// undo margin-bottom on `<label>`
+		margin-bottom: 0;
+		padding-left: $input-group-inset-item-padding-left;
+		padding-right: $input-group-inset-item-padding-right;
+		transition: $input-transition;
 
-	.btn {
-		@include clay-button-size($input-group-inset-item-btn);
+		.btn {
+			@include clay-button-size($input-group-inset-item-btn);
 
-		@if ($enable-c-inner) {
-			.c-inner {
-				.lexicon-icon {
-					margin-top: 0;
+			@if ($enable-c-inner) {
+				.c-inner {
+					.lexicon-icon {
+						margin-top: 0;
+					}
 				}
 			}
 		}
-	}
 
-	.form-file {
-		height: 75%;
+		.form-file {
+			height: 75%;
 
-		.btn {
-			@include clay-button-size($input-group-inset-form-file-btn);
+			.btn {
+				@include clay-button-size($input-group-inset-form-file-btn);
+			}
 		}
 	}
-}
 
-.input-group-item .input-group-inset-before.form-control {
-	@include border-left-radius(0);
-	@include border-right-radius($input-border-radius);
+	.input-group-item .input-group-inset-before.form-control {
+		@include border-left-radius(0);
+		@include border-right-radius($input-border-radius);
 
-	border-left-width: 0;
-	padding-left: 0;
-}
+		border-left-width: 0;
+		padding-left: 0;
+	}
 
-.input-group-inset-item-before {
-	@include border-left-radius($input-border-radius);
+	.input-group-inset-item-before {
+		@include border-left-radius($input-border-radius);
 
-	border-right-width: 0;
-	color: $input-group-inset-item-color;
-	order: 3;
+		border-right-width: 0;
+		color: $input-group-inset-item-color;
+		order: 3;
+	}
 
-	.input-group-append & {
+	.input-group-append > .input-group-inset-item-before {
 		@include border-left-radius(0);
 	}
-}
 
-.input-group-item .input-group-inset-after.form-control {
-	@include border-right-radius(0);
-
-	border-right-width: 0;
-	padding-right: 0;
-}
-
-.input-group-inset-item-after {
-	@include border-right-radius($input-border-radius);
-
-	border-left-width: 0;
-	color: $input-group-inset-item-color;
-	order: 9;
-
-	.input-group-prepend & {
+	.input-group-item .input-group-inset-after.form-control {
 		@include border-right-radius(0);
 
-		z-index: 1;
-	}
-}
-
-// Input Group Stacked
-
-.input-group-stacked-sm-down {
-	@include clay-input-group-stacked($input-group-stacked-sm-down);
-}
-
-// Input Group Sizes
-
-%clay-input-group-lg {
-	.input-group-item {
-		.btn {
-			@include clay-button-size($input-group-lg-item-btn);
-		}
-
-		.btn-monospaced {
-			@include clay-button-size($input-group-lg-item-btn-monospaced);
-		}
-
-		.form-control,
-		.form-file .btn {
-			@include border-radius($input-border-radius-lg);
-
-			font-size: $input-font-size-lg;
-			height: $input-height-lg;
-			line-height: $input-line-height-lg;
-			padding-bottom: $input-padding-y-lg;
-			padding-left: $input-padding-x-lg;
-			padding-right: $input-padding-x-lg;
-			padding-top: $input-padding-y-lg;
-
-			@include clay-scale-component {
-				height: $input-height-lg-mobile;
-			}
-		}
-
-		textarea.form-control,
-		.form-control-textarea {
-			height: $input-textarea-height-lg;
-		}
-
-		.form-control-plaintext {
-			font-size: $input-font-size-lg;
-			height: $input-height-lg;
-			line-height: $input-line-height-lg;
-			padding-bottom: $input-padding-y-lg;
-			padding-top: $input-padding-y-lg;
-
-			@include clay-scale-component {
-				height: $input-height-lg-mobile;
-			}
-		}
-
-		.input-group-text {
-			@include border-radius($input-border-radius-lg);
-
-			font-size: $input-font-size-lg;
-			height: $input-height-lg;
-			min-width: $input-group-addon-min-width-lg;
-			padding-bottom: $input-group-addon-padding-y-lg;
-			padding-left: $input-group-addon-padding-x-lg;
-			padding-right: $input-group-addon-padding-x-lg;
-			padding-top: $input-group-addon-padding-y-lg;
-		}
+		border-right-width: 0;
+		padding-right: 0;
 	}
 
-	.input-group-inset-item {
-		.btn {
-			@include clay-button-size($input-group-lg-inset-item-btn);
-		}
+	.input-group-inset-item-after {
+		@include border-right-radius($input-border-radius);
 
-		.form-file {
-			height: 75%;
+		border-left-width: 0;
+		color: $input-group-inset-item-color;
+		order: 9;
 
-			.btn {
-				@include clay-button-size(
-					$input-group-lg-inset-item-form-file-btn
-				);
-			}
+		.input-group-prepend & {
+			@include border-right-radius(0);
+
+			z-index: 1;
 		}
 	}
-}
-
-.input-group-lg {
-	@extend %clay-input-group-lg;
-}
-
-%clay-input-group-sm {
-	.input-group-item {
-		.btn {
-			@include clay-button-size($input-group-sm-item-btn);
-		}
-
-		.btn-monospaced {
-			@include clay-button-size($input-group-sm-item-btn-monospaced);
-		}
-
-		.form-control,
-		.form-file .btn {
-			@include border-radius($input-border-radius-sm);
-
-			font-size: $input-font-size-sm;
-			height: $input-height-sm;
-			line-height: $input-line-height-sm;
-			padding-bottom: $input-padding-y-sm;
-			padding-left: $input-padding-x-sm;
-			padding-right: $input-padding-x-sm;
-			padding-top: $input-padding-y-sm;
-
-			@include clay-scale-component {
-				height: $input-height-sm-mobile;
-			}
-		}
-
-		.form-control-plaintext {
-			font-size: $input-font-size-sm;
-			height: $input-height-sm;
-			line-height: $input-line-height-sm;
-			padding-bottom: $input-padding-y-sm;
-			padding-top: $input-padding-y-sm;
-
-			@include clay-scale-component {
-				height: $input-height-sm-mobile;
-			}
-		}
-
-		textarea.form-control,
-		.form-control-textarea {
-			height: $input-textarea-height-sm;
-		}
-
-		.input-group-text {
-			@include border-radius($input-border-radius-sm);
-
-			font-size: $input-font-size-sm;
-			height: $input-height-sm;
-			min-width: $input-group-addon-min-width-sm;
-			padding-bottom: $input-group-addon-padding-y-sm;
-			padding-left: $input-group-addon-padding-x-sm;
-			padding-right: $input-group-addon-padding-x-sm;
-			padding-top: $input-group-addon-padding-y-sm;
-		}
-	}
-
-	.input-group-inset-item {
-		.btn {
-			@include clay-button-size($input-group-sm-inset-item-btn);
-		}
-
-		.form-file {
-			height: 75%;
-
-			.btn {
-				@include clay-button-size(
-					$input-group-sm-inset-item-form-file-btn
-				);
-			}
-		}
-	}
-}
-
-.input-group-sm {
-	@extend %clay-input-group-sm;
 }
 
 // Input Group Prepend
 
-.input-group-prepend {
-	align-items: stretch;
-	display: flex;
-	margin-right: math-sign($input-border-left-width);
-}
+.input-group {
+	> .input-group-item {
+		&.input-group-prepend {
+			align-items: stretch;
+			display: flex;
+			margin-right: math-sign($input-border-left-width);
+		}
 
-.input-group-prepend:not(:last-child) {
-	> .btn,
-	> .form-control,
-	> .input-group-text {
-		border-bottom-right-radius: 0;
-		border-top-right-radius: 0;
-	}
+		&.input-group-prepend:not(:last-child) {
+			> .btn,
+			> .form-control,
+			> .input-group-text {
+				border-bottom-right-radius: 0;
+				border-top-right-radius: 0;
+			}
 
-	> .btn + .btn {
-		border-bottom-left-radius: 0;
-		border-top-left-radius: 0;
-	}
-}
+			> .btn + .btn {
+				border-bottom-left-radius: 0;
+				border-top-left-radius: 0;
+			}
+		}
 
-.input-group-prepend + .input-group-prepend {
-	margin-left: 0;
+		&.input-group-prepend + .input-group-prepend {
+			margin-left: 0;
 
-	> .btn,
-	> .form-control,
-	> .input-group-text {
-		border-bottom-left-radius: 0;
-		border-top-left-radius: 0;
+			> .btn,
+			> .form-control,
+			> .input-group-text {
+				border-bottom-left-radius: 0;
+				border-top-left-radius: 0;
+			}
+		}
 	}
 }
 
 // Input Group Append
 
-.input-group-append {
-	align-items: stretch;
-	display: flex;
-	margin-right: math-sign($input-border-left-width);
-}
+.input-group {
+	> .input-group-item {
+		&.input-group-append {
+			align-items: stretch;
+			display: flex;
+			margin-right: math-sign($input-border-left-width);
+		}
 
-.input-group-append:first-child {
-	> .btn,
-	> .form-control,
-	> .input-group-text {
-		border-bottom-right-radius: 0;
-		border-top-right-radius: 0;
+		&.input-group-append:first-child {
+			> .btn,
+			> .form-control,
+			> .input-group-text {
+				border-bottom-right-radius: 0;
+				border-top-right-radius: 0;
+			}
+		}
+
+		&.input-group-append:not(:first-child) {
+			> .btn,
+			> .form-control,
+			> .form-file .btn,
+			> .input-group-text {
+				border-bottom-left-radius: 0;
+				border-top-left-radius: 0;
+			}
+		}
+
+		&.input-group-append + .input-group-append,
+		&.input-group-prepend + .input-group-append {
+			margin-left: 0;
+		}
 	}
-}
-
-.input-group-append:not(:first-child) {
-	> .btn,
-	> .form-control,
-	> .form-file .btn,
-	> .input-group-text {
-		border-bottom-left-radius: 0;
-		border-top-left-radius: 0;
-	}
-}
-
-.input-group-append + .input-group-append,
-.input-group-prepend + .input-group-append {
-	margin-left: 0;
 }
 
 // Input Group Password
@@ -620,10 +650,4 @@
 			display: none;
 		}
 	}
-}
-
-// Form Group with Input Group
-
-.form-group-sm {
-	@extend %clay-input-group-sm;
 }
