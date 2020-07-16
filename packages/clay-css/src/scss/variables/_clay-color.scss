@@ -302,3 +302,32 @@ $clay-color-range-pointer: map-deep-merge(
 	),
 	$clay-color-range-pointer
 );
+
+// Clay Color Sm
+
+$clay-color-sm-input-group-inset-item-before: () !default;
+$clay-color-sm-input-group-inset-item-before: map-merge(
+	(
+		padding-left: $input-padding-x-sm,
+	),
+	$clay-color-sm-input-group-inset-item-before
+);
+
+$clay-color-sm-input-group-text: () !default;
+$clay-color-sm-input-group-text: map-merge(
+	(
+		padding: 0,
+	),
+	$clay-color-sm-input-group-text
+);
+
+$clay-color-sm-clay-color-btn: () !default;
+$clay-color-sm-clay-color-btn: map-deep-merge(
+	(
+		border-radius: 2px,
+		height: 1.125rem,
+		padding: 0,
+		width: 1.125rem,
+	),
+	$clay-color-sm-clay-color-btn
+);
