@@ -9,6 +9,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/picker-
 
 -   [Example](#example)
 -   [Variations](#variations)
+-   [Sizes](#sizes)
 
 </div>
 </div>
@@ -727,6 +728,115 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/picker-
 						#
 					</label>
 				</div>
+			</div>
+		</div>
+	</div>
+</div>
+```
+
+## Sizes
+
+<div class="sheet-example">
+	<div class="form-group form-group-sm">
+		<label for="_xc5ufh2gj">Form Group Sm</label>
+		<div class="clay-color input-group">
+			<div class="input-group-item input-group-item-shrink input-group-prepend">
+				<div class="input-group-text">
+					<button aria-expanded="false" aria-haspopup="true" aria-label="Select a color" class="btn clay-color-btn dropdown-toggle" data-toggle="dropdown" id="_xc5ufh2gj" title="#B2EDFF" type="button" style="background-color:#B2EDFF;"></button>
+					<div aria-labelledby="_xc5ufh2gj" class="clay-color-dropdown-menu dropdown-menu"></div>
+				</div>
+			</div>
+			<div class="input-group-append input-group-item">
+				<input aria-label="Color selection is B2EDFF" class="form-control input-group-inset input-group-inset-before" id="clayColor3" type="text" value="B2EDFF">
+				<label class="input-group-inset-item input-group-inset-item-before" for="clayColor3">
+					#
+				</label>
+			</div>
+		</div>
+	</div>
+</div>
+
+```html
+<div class="form-group form-group-sm">
+	<label for="_xc5ufh2gj">Form Group Sm</label>
+	<div class="clay-color input-group">
+		<div
+			class="input-group-item input-group-item-shrink input-group-prepend"
+		>
+			<div class="input-group-text">
+				<button
+					aria-expanded="false"
+					aria-haspopup="true"
+					aria-label="Select a color"
+					class="btn clay-color-btn dropdown-toggle"
+					data-toggle="dropdown"
+					id="_xc5ufh2gj"
+					title="#B2EDFF"
+					type="button"
+					style="background-color:#B2EDFF;"
+				></button>
+				<div
+					aria-labelledby="_xc5ufh2gj"
+					class="clay-color-dropdown-menu dropdown-menu"
+				></div>
+			</div>
+		</div>
+		<div class="input-group-append input-group-item">
+			<input
+				aria-label="Color selection is B2EDFF"
+				class="form-control input-group-inset input-group-inset-before"
+				id="clayColor3"
+				type="text"
+				value="B2EDFF"
+			/>
+			<label
+				class="input-group-inset-item input-group-inset-item-before"
+				for="clayColor3"
+			>
+				#
+			</label>
+		</div>
+	</div>
+</div>
+```
+
+<div class="sheet-example">
+	<div class="form-group">
+		<label for="_a37tcs84w">Input Group Sm</label>
+		<div class="clay-color input-group input-group-sm">
+			<div class="input-group-item input-group-item-shrink input-group-prepend">
+				<div class="input-group-text">
+					<button aria-expanded="false" aria-haspopup="true" aria-label="Select a color" class="btn clay-color-btn dropdown-toggle" data-toggle="dropdown" id="_a37tcs84w" title="#B2EDFF" type="button" style="background-color:#B2EDFF;"></button>
+					<div aria-labelledby="_a37tcs84w" class="clay-color-dropdown-menu dropdown-menu"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+```html
+<div class="form-group">
+	<label for="_a37tcs84w">Input Group Sm</label>
+	<div class="clay-color input-group input-group-sm">
+		<div
+			class="input-group-item input-group-item-shrink input-group-prepend"
+		>
+			<div class="input-group-text">
+				<button
+					aria-expanded="false"
+					aria-haspopup="true"
+					aria-label="Select a color"
+					class="btn clay-color-btn dropdown-toggle"
+					data-toggle="dropdown"
+					id="_a37tcs84w"
+					title="#B2EDFF"
+					type="button"
+					style="background-color:#B2EDFF;"
+				></button>
+				<div
+					aria-labelledby="_a37tcs84w"
+					class="clay-color-dropdown-menu dropdown-menu"
+				></div>
 			</div>
 		</div>
 	</div>
