@@ -27,7 +27,7 @@ interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
  * Renders component that displays a color
  */
 const ClayColorPickerSplotch = React.forwardRef<HTMLButtonElement, IProps>(
-	({active, className, size = 24, value, ...otherProps}, ref) => {
+	({active, className, size, value, ...otherProps}, ref) => {
 		const requireBorder = tinycolor.readability('#FFF', value) < 1.1;
 
 		return (
