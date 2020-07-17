@@ -58,7 +58,26 @@ const Editor = ({
 		];
 	}
 
-	const [collapseCode, setCollapseCode] = useState(false);
+	function useStickyState(defaultValue, key) {
+		const [value, setValue] = React.useState(() => {
+			const stickyValue = window.localStorage.getItem(key);
+
+			return stickyValue !== null
+				? JSON.parse(stickyValue)
+				: defaultValue;
+		});
+
+		React.useEffect(() => {
+			window.localStorage.setItem(key, JSON.stringify(value));
+		}, [key, value]);
+
+		return [value, setValue];
+	}
+
+	const [collapseCode, setCollapseCode] = useStickyState(
+		true,
+		'collapse-code'
+	);
 	const [activeIndex, setActiveIndex] = React.useState(0);
 	const [snippets, setSnippets] = React.useState(code);
 
