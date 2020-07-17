@@ -41,6 +41,22 @@ describe('Rendering', () => {
 		expect(document.body).toMatchSnapshot();
 	});
 
+	it('small color-picker', () => {
+		render(
+			<ClayColorPicker
+				label="Default Colors"
+				name="colorPicker1"
+				onValueChange={() => {}}
+				small
+				spritemap="/test/path"
+				title="Small"
+				value="FFF"
+			/>
+		);
+
+		expect(document.body).toMatchSnapshot();
+	});
+
 	it('disabled state', () => {
 		render(
 			<ClayColorPicker

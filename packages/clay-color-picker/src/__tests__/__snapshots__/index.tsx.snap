@@ -27,7 +27,7 @@ exports[`Interactions opens custom color picker drop down when clicked 1`] = `
           <button
             aria-label="Select a color"
             class="btn clay-color-btn dropdown-toggle"
-            style="border-width: 0px; background: rgb(0, 128, 0); height: 28px; width: 28px;"
+            style="border-width: 0px; background: rgb(0, 128, 0);"
             title="008000"
             type="button"
           />
@@ -82,7 +82,7 @@ exports[`Rendering default 1`] = `
             <button
               aria-label="Select a color"
               class="btn clay-color-btn dropdown-toggle"
-              style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 28px; width: 28px;"
+              style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255);"
               title="FFF"
               type="button"
             />
@@ -128,7 +128,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(0, 0, 0); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(0, 0, 0);"
               title="000000"
               type="button"
             />
@@ -138,7 +138,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(95, 95, 95); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(95, 95, 95);"
               title="5F5F5F"
               type="button"
             />
@@ -148,7 +148,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(154, 154, 154); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(154, 154, 154);"
               title="9A9A9A"
               type="button"
             />
@@ -158,7 +158,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(203, 203, 203); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(203, 203, 203);"
               title="CBCBCB"
               type="button"
             />
@@ -168,7 +168,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(225, 225, 225); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(225, 225, 225);"
               title="E1E1E1"
               type="button"
             />
@@ -178,7 +178,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
+              style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255);"
               title="FFFFFF"
               type="button"
             />
@@ -188,7 +188,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(255, 13, 13); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(255, 13, 13);"
               title="FF0D0D"
               type="button"
             />
@@ -198,7 +198,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(255, 138, 28); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(255, 138, 28);"
               title="FF8A1C"
               type="button"
             />
@@ -208,7 +208,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(43, 166, 118); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(43, 166, 118);"
               title="2BA676"
               type="button"
             />
@@ -218,7 +218,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(0, 110, 248); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(0, 110, 248);"
               title="006EF8"
               type="button"
             />
@@ -228,7 +228,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(127, 38, 255); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(127, 38, 255);"
               title="7F26FF"
               type="button"
             />
@@ -238,7 +238,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(255, 33, 160); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(255, 33, 160);"
               title="FF21A0"
               type="button"
             />
@@ -248,7 +248,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(255, 95, 95); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(255, 95, 95);"
               title="FF5F5F"
               type="button"
             />
@@ -258,7 +258,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(255, 180, 110); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(255, 180, 110);"
               title="FFB46E"
               type="button"
             />
@@ -268,7 +268,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(80, 210, 160); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(80, 210, 160);"
               title="50D2A0"
               type="button"
             />
@@ -278,7 +278,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(75, 155, 255); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(75, 155, 255);"
               title="4B9BFF"
               type="button"
             />
@@ -288,7 +288,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(175, 120, 255); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(175, 120, 255);"
               title="AF78FF"
               type="button"
             />
@@ -298,7 +298,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(255, 115, 195); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(255, 115, 195);"
               title="FF73C3"
               type="button"
             />
@@ -308,7 +308,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(255, 177, 177); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(255, 177, 177);"
               title="FFB1B1"
               type="button"
             />
@@ -318,7 +318,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(255, 222, 192); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(255, 222, 192);"
               title="FFDEC0"
               type="button"
             />
@@ -328,7 +328,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(145, 227, 195); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(145, 227, 195);"
               title="91E3C3"
               type="button"
             />
@@ -338,7 +338,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(157, 200, 255); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(157, 200, 255);"
               title="9DC8FF"
               type="button"
             />
@@ -348,7 +348,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(223, 202, 255); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(223, 202, 255);"
               title="DFCAFF"
               type="button"
             />
@@ -358,7 +358,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(255, 197, 230); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(255, 197, 230);"
               title="FFC5E6"
               type="button"
             />
@@ -368,7 +368,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(255, 217, 217); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(255, 217, 217);"
               title="FFD9D9"
               type="button"
             />
@@ -378,7 +378,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border: 1px solid #e7e7ed; background: rgb(255, 243, 232); height: 24px; width: 24px;"
+              style="border: 1px solid #e7e7ed; background: rgb(255, 243, 232);"
               title="FFF3E8"
               type="button"
             />
@@ -388,7 +388,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(177, 235, 213); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(177, 235, 213);"
               title="B1EBD5"
               type="button"
             />
@@ -398,7 +398,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(197, 223, 255); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(197, 223, 255);"
               title="C5DFFF"
               type="button"
             />
@@ -408,7 +408,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border: 1px solid #e7e7ed; background: rgb(248, 242, 255); height: 24px; width: 24px;"
+              style="border: 1px solid #e7e7ed; background: rgb(248, 242, 255);"
               title="F8F2FF"
               type="button"
             />
@@ -418,7 +418,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(255, 237, 247); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(255, 237, 247);"
               title="FFEDF7"
               type="button"
             />
@@ -458,7 +458,7 @@ exports[`Rendering disabled state 1`] = `
               aria-label="Select a color"
               class="btn clay-color-btn dropdown-toggle"
               disabled=""
-              style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 28px; width: 28px;"
+              style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255);"
               title="FFF"
               type="button"
             />
@@ -505,7 +505,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(0, 0, 0); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(0, 0, 0);"
               title="000000"
               type="button"
             />
@@ -515,7 +515,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(95, 95, 95); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(95, 95, 95);"
               title="5F5F5F"
               type="button"
             />
@@ -525,7 +525,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(154, 154, 154); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(154, 154, 154);"
               title="9A9A9A"
               type="button"
             />
@@ -535,7 +535,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(203, 203, 203); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(203, 203, 203);"
               title="CBCBCB"
               type="button"
             />
@@ -545,7 +545,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(225, 225, 225); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(225, 225, 225);"
               title="E1E1E1"
               type="button"
             />
@@ -555,7 +555,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255); height: 24px; width: 24px;"
+              style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255);"
               title="FFFFFF"
               type="button"
             />
@@ -565,7 +565,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(255, 13, 13); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(255, 13, 13);"
               title="FF0D0D"
               type="button"
             />
@@ -575,7 +575,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(255, 138, 28); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(255, 138, 28);"
               title="FF8A1C"
               type="button"
             />
@@ -585,7 +585,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(43, 166, 118); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(43, 166, 118);"
               title="2BA676"
               type="button"
             />
@@ -595,7 +595,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(0, 110, 248); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(0, 110, 248);"
               title="006EF8"
               type="button"
             />
@@ -605,7 +605,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(127, 38, 255); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(127, 38, 255);"
               title="7F26FF"
               type="button"
             />
@@ -615,7 +615,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(255, 33, 160); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(255, 33, 160);"
               title="FF21A0"
               type="button"
             />
@@ -625,7 +625,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(255, 95, 95); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(255, 95, 95);"
               title="FF5F5F"
               type="button"
             />
@@ -635,7 +635,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(255, 180, 110); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(255, 180, 110);"
               title="FFB46E"
               type="button"
             />
@@ -645,7 +645,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(80, 210, 160); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(80, 210, 160);"
               title="50D2A0"
               type="button"
             />
@@ -655,7 +655,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(75, 155, 255); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(75, 155, 255);"
               title="4B9BFF"
               type="button"
             />
@@ -665,7 +665,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(175, 120, 255); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(175, 120, 255);"
               title="AF78FF"
               type="button"
             />
@@ -675,7 +675,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(255, 115, 195); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(255, 115, 195);"
               title="FF73C3"
               type="button"
             />
@@ -685,7 +685,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(255, 177, 177); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(255, 177, 177);"
               title="FFB1B1"
               type="button"
             />
@@ -695,7 +695,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(255, 222, 192); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(255, 222, 192);"
               title="FFDEC0"
               type="button"
             />
@@ -705,7 +705,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(145, 227, 195); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(145, 227, 195);"
               title="91E3C3"
               type="button"
             />
@@ -715,7 +715,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(157, 200, 255); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(157, 200, 255);"
               title="9DC8FF"
               type="button"
             />
@@ -725,7 +725,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(223, 202, 255); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(223, 202, 255);"
               title="DFCAFF"
               type="button"
             />
@@ -735,7 +735,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(255, 197, 230); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(255, 197, 230);"
               title="FFC5E6"
               type="button"
             />
@@ -745,7 +745,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(255, 217, 217); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(255, 217, 217);"
               title="FFD9D9"
               type="button"
             />
@@ -755,7 +755,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border: 1px solid #e7e7ed; background: rgb(255, 243, 232); height: 24px; width: 24px;"
+              style="border: 1px solid #e7e7ed; background: rgb(255, 243, 232);"
               title="FFF3E8"
               type="button"
             />
@@ -765,7 +765,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(177, 235, 213); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(177, 235, 213);"
               title="B1EBD5"
               type="button"
             />
@@ -775,7 +775,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(197, 223, 255); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(197, 223, 255);"
               title="C5DFFF"
               type="button"
             />
@@ -785,7 +785,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border: 1px solid #e7e7ed; background: rgb(248, 242, 255); height: 24px; width: 24px;"
+              style="border: 1px solid #e7e7ed; background: rgb(248, 242, 255);"
               title="F8F2FF"
               type="button"
             />
@@ -795,7 +795,382 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               class="btn clay-color-btn "
-              style="border-width: 0px; background: rgb(255, 237, 247); height: 24px; width: 24px;"
+              style="border-width: 0px; background: rgb(255, 237, 247);"
+              title="FFEDF7"
+              type="button"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Rendering small color-picker 1`] = `
+<body>
+  <div>
+    <div
+      class="clay-color-picker"
+    >
+      <input
+        name="colorPicker1"
+        style="display: none;"
+        type="text"
+        value="FFF"
+      />
+      <label>
+        Small
+      </label>
+      <div
+        class="input-group clay-color input-group-sm"
+      >
+        <div
+          class="input-group-item input-group-item-shrink input-group-prepend"
+        >
+          <div
+            class="input-group-text"
+          >
+            <button
+              aria-label="Select a color"
+              class="btn clay-color-btn dropdown-toggle"
+              style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255);"
+              title="FFF"
+              type="button"
+            />
+          </div>
+        </div>
+        <div
+          class="input-group-item input-group-append"
+        >
+          <input
+            aria-label="Color selection is FFF"
+            class="form-control input-group-inset input-group-inset-before"
+            type="text"
+            value="FFF"
+          />
+          <label
+            class="input-group-inset-item input-group-inset-item-before"
+          >
+            #
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div>
+      <div
+        class="dropdown-menu clay-color-dropdown-menu"
+      >
+        <div
+          class="clay-color-header"
+        >
+          <span
+            class="component-title"
+          >
+            Default Colors
+          </span>
+        </div>
+        <div
+          class="clay-color-swatch"
+        >
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(0, 0, 0);"
+              title="000000"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(95, 95, 95);"
+              title="5F5F5F"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(154, 154, 154);"
+              title="9A9A9A"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(203, 203, 203);"
+              title="CBCBCB"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(225, 225, 225);"
+              title="E1E1E1"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border: 1px solid #e7e7ed; background: rgb(255, 255, 255);"
+              title="FFFFFF"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(255, 13, 13);"
+              title="FF0D0D"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(255, 138, 28);"
+              title="FF8A1C"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(43, 166, 118);"
+              title="2BA676"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(0, 110, 248);"
+              title="006EF8"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(127, 38, 255);"
+              title="7F26FF"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(255, 33, 160);"
+              title="FF21A0"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(255, 95, 95);"
+              title="FF5F5F"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(255, 180, 110);"
+              title="FFB46E"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(80, 210, 160);"
+              title="50D2A0"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(75, 155, 255);"
+              title="4B9BFF"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(175, 120, 255);"
+              title="AF78FF"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(255, 115, 195);"
+              title="FF73C3"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(255, 177, 177);"
+              title="FFB1B1"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(255, 222, 192);"
+              title="FFDEC0"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(145, 227, 195);"
+              title="91E3C3"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(157, 200, 255);"
+              title="9DC8FF"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(223, 202, 255);"
+              title="DFCAFF"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(255, 197, 230);"
+              title="FFC5E6"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(255, 217, 217);"
+              title="FFD9D9"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border: 1px solid #e7e7ed; background: rgb(255, 243, 232);"
+              title="FFF3E8"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(177, 235, 213);"
+              title="B1EBD5"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(197, 223, 255);"
+              title="C5DFFF"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border: 1px solid #e7e7ed; background: rgb(248, 242, 255);"
+              title="F8F2FF"
+              type="button"
+            />
+          </div>
+          <div
+            class="clay-color-swatch-item"
+          >
+            <button
+              class="btn clay-color-btn "
+              style="border-width: 0px; background: rgb(255, 237, 247);"
               title="FFEDF7"
               type="button"
             />
