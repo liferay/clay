@@ -75,6 +75,8 @@ export const Toolbar = () => {
 	return <Editor code={code} imports={toolbarImportsCode} scope={scope} />;
 };
 
+console.log('test');
+
 const complexToolbarImportsCode = `import ClayButton, {ClayButtonWithIcon} from '@clayui/button';
 import ClayIcon from '@clayui/icon';
 import {ClayInput} from '@clayui/form';
