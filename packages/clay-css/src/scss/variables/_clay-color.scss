@@ -137,6 +137,9 @@ $clay-color-btn: map-deep-merge(
 		padding-right: 0,
 		padding-top: 0,
 		width: 1.5rem,
+		active: (
+			box-shadow: $component-focus-box-shadow,
+		),
 	),
 	$clay-color-btn
 );
