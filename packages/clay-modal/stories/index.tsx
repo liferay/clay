@@ -6,8 +6,10 @@
 /* eslint-disable no-sparse-arrays */
 
 import '@clayui/css/lib/css/atlas.css';
+import ClayAutocomplete from '@clayui/autocomplete';
 import ClayButton from '@clayui/button';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import ClayDropDown, {ClayDropDownWithItems} from '@clayui/drop-down';
 import ClayIcon from '@clayui/icon';
 import {boolean, select, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
@@ -15,6 +17,53 @@ import React from 'react';
 
 import ClayModal, {ClayModalProvider, Context, useModal} from '../src';
 import {Size, Status} from '../src/types';
+
+const Autocomplete = () => {
+	const inputRef = React.useRef<HTMLInputElement | null>(null);
+	const [value, setValue] = React.useState('');
+	const [active, setActive] = React.useState(!!value);
+
+	const filteredItems = [
+		'one',
+		'two',
+		'three',
+		'four',
+		'five',
+	].filter((item) => item.match(value));
+
+	return (
+		<ClayAutocomplete>
+			<ClayAutocomplete.Input
+				aria-label="Numbers: Enter a number from One to Five"
+				onBlur={() => {
+					setActive(false);
+				}}
+				onChange={(event: any) => {
+					setValue(event.target.value);
+					setActive(!!event.target.value);
+				}}
+				ref={inputRef}
+				value={value}
+			/>
+
+			<ClayAutocomplete.DropDown active={active} onSetActive={setActive}>
+				<ClayDropDown.ItemList>
+					{filteredItems.map((item) => (
+						<ClayAutocomplete.Item
+							key={item}
+							match={value}
+							onMouseDown={() => {
+								setActive(false);
+								setValue(item);
+							}}
+							value={item}
+						/>
+					))}
+				</ClayDropDown.ItemList>
+			</ClayAutocomplete.DropDown>
+		</ClayAutocomplete>
+	);
+};
 
 const MyApp: React.FunctionComponent<any> = () => {
 	const [state, dispatch] = React.useContext(Context);
@@ -59,6 +108,58 @@ const status = {
 	success: 'success',
 	warning: 'warning',
 };
+
+const dropDownItems = [
+	{
+		label: 'clickable',
+		onClick: () => {
+			alert('you clicked!');
+		},
+	},
+	{
+		type: 'divider' as const,
+	},
+	{
+		items: [
+			{
+				label: 'one',
+				type: 'radio' as const,
+				value: 'one',
+			},
+			{
+				label: 'two',
+				type: 'radio' as const,
+				value: 'two',
+			},
+		],
+		label: 'radio',
+		name: 'radio',
+		onChange: (value: string) => alert(`New Radio checked ${value}`),
+		type: 'radiogroup' as const,
+	},
+	{
+		items: [
+			{
+				checked: true,
+				label: 'checkbox',
+				onChange: () => alert('checkbox changed'),
+				type: 'checkbox' as const,
+			},
+			{
+				checked: true,
+				label: 'checkbox 1',
+				onChange: () => alert('checkbox changed'),
+				type: 'checkbox' as const,
+			},
+		],
+		label: 'checkbox',
+		type: 'group' as const,
+	},
+	{
+		href: '#',
+		label: 'linkable',
+	},
+];
 
 storiesOf('Components|ClayModal', module)
 	.add('default', () => {
@@ -177,6 +278,60 @@ storiesOf('Components|ClayModal', module)
 					</ClayModal>
 				)}
 
+				<ClayButton
+					displayType="primary"
+					onClick={() => setVisibleModal(true)}
+				>
+					{'Open modal'}
+				</ClayButton>
+			</>
+		);
+	})
+	.add('w/ Autocomplete and DropDown', () => {
+		const [visibleModal, setVisibleModal] = React.useState<boolean>(false);
+		const {observer} = useModal({
+			onClose: () => setVisibleModal(false),
+		});
+
+		return (
+			<>
+				{visibleModal && (
+					<ClayModal
+						center={boolean('Vertically Center', false)}
+						observer={observer}
+						size={select('Size', size, 'lg') as Size}
+						spritemap={spritemap}
+						status={select('Status', status, null) as Status}
+					>
+						<ClayModal.Header>
+							{text('Title', 'Title')}
+						</ClayModal.Header>
+						<ClayModal.Body
+							iFrameProps={{
+								'aria-label': 'Hello World',
+							}}
+							scrollable={boolean('scrollable', false)}
+							url={text('Url', '')}
+						>
+							<div className="row">
+								<div className="col-md-3">
+									<Autocomplete />
+								</div>
+								<div className="col-md-3">
+									<ClayDropDownWithItems
+										items={dropDownItems}
+										spritemap={spritemap}
+										trigger={
+											<ClayButton>
+												{'Click Me'}
+											</ClayButton>
+										}
+									/>
+								</div>
+							</div>
+						</ClayModal.Body>
+					</ClayModal>
+				)}
 				<ClayButton
 					displayType="primary"
 					onClick={() => setVisibleModal(true)}
