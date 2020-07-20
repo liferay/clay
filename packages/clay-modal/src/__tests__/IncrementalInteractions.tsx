@@ -92,7 +92,8 @@ describe('Modal -> IncrementalInteractions', () => {
 		expect(backdropEl).toBeDefined();
 		expect(modalEl).toBeDefined();
 
-		fireEvent.click(modalEl!);
+		fireEvent.mouseDown(modalEl!);
+		fireEvent.mouseUp(modalEl!);
 
 		expect(document.body.classList).not.toContain('modal-open');
 		expect(document.querySelector(backdropElSelector)).toBeNull();

@@ -80,7 +80,15 @@ const useUserInteractions = (
 		}
 	};
 
-	const handleDocumentClick = (event: Event) => {
+	const handleDocumentMouseDown = (event: Event) => {
+		// We keep the `event.target` to check later in the click event if
+		// the target is the same, otherwise, we are assuming that the element
+		// has been removed from the DOM.
+
+		mouseEventTargetRef.current = event.target;
+	};
+
+	const handleDocumentMouseUp = (event: Event) => {
 		if (event.defaultPrevented) {
 			mouseEventTargetRef.current = null;
 
@@ -98,29 +106,21 @@ const useUserInteractions = (
 		mouseEventTargetRef.current = null;
 	};
 
-	const handleMouseDown = (event: Event) => {
-		// We keep the `event.target` to check later in the click event if
-		// the target is the same, otherwise, we are assuming that the element
-		// has been removed from the DOM.
-
-		mouseEventTargetRef.current = event.target;
-	};
-
 	/**
 	 * Just listen for keyup, keydown, and click when
 	 * changeAttachEvent is true.
 	 */
 	React.useEffect(() => {
-		document.addEventListener('click', handleDocumentClick);
-		document.addEventListener('mousedown', handleMouseDown);
-		document.addEventListener('keyup', handleKeyup);
 		document.addEventListener('keydown', handleKeydown);
+		document.addEventListener('keyup', handleKeyup);
+		document.addEventListener('mousedown', handleDocumentMouseDown);
+		document.addEventListener('mouseup', handleDocumentMouseUp);
 
 		return () => {
-			document.removeEventListener('keyup', handleKeyup);
 			document.removeEventListener('keydown', handleKeydown);
-			document.removeEventListener('mousedown', handleMouseDown);
-			document.removeEventListener('click', handleDocumentClick);
+			document.removeEventListener('keyup', handleKeyup);
+			document.removeEventListener('mousedown', handleDocumentMouseDown);
+			document.removeEventListener('mouseup', handleDocumentMouseUp);
 		};
 	}, []);
 };
