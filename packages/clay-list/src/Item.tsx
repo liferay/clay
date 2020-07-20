@@ -6,6 +6,8 @@
 import classNames from 'classnames';
 import React from 'react';
 
+const isIE11 = typeof window !== 'undefined' && 'msCrypto' in window;
+
 interface IProps extends React.HTMLAttributes<HTMLLIElement> {
 	/**
 	 * Flag to indicate if the `list-group-item-action` class should be applied.
@@ -61,7 +63,18 @@ const ClayListItem = React.forwardRef<HTMLLIElement, IProps>(
 					'list-group-item-disabled': disabled,
 					'list-group-item-flex': flex,
 				})}
-				onBlur={({currentTarget, relatedTarget}) => {
+				onBlur={({
+					currentTarget,
+					relatedTarget: relatedTargetElement,
+					target,
+				}) => {
+					// IE11 doesn't support event.relatedTarget, but you can use
+					// document.activeElement.
+					const relatedTarget =
+						isIE11 && !relatedTargetElement
+							? target.ownerDocument.activeElement
+							: relatedTargetElement;
+
 					if (
 						relatedTarget &&
 						!currentTarget.contains(relatedTarget as Node)
