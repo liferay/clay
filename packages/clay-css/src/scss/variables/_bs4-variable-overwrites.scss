@@ -44,6 +44,12 @@ $spacers: map-deep-merge(
 		8: (
 			$spacer * 7.5,
 		),
+		9: (
+			$spacer * 9,
+		),
+		10: (
+			$spacer * 10,
+		),
 	),
 	$spacers
 );
