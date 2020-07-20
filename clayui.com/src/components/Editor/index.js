@@ -59,8 +59,22 @@ const Editor = ({
 	}
 
 	function useStickyState(defaultValue, key) {
+		const inBrowser = typeof window !== 'undefined';
+
+		const localStorage = {
+			getItem(key) {
+				return inBrowser ? window.localStorage.getItem(key) : null;
+			},
+
+			setItem(key, value) {
+				if (inBrowser) {
+					window.localStorage.setItem(key, value);
+				}
+			},
+		};
+
 		const [value, setValue] = React.useState(() => {
-			const stickyValue = window.localStorage.getItem(key);
+			const stickyValue = localStorage.getItem(key);
 
 			return stickyValue !== null
 				? JSON.parse(stickyValue)
@@ -68,7 +82,7 @@ const Editor = ({
 		});
 
 		React.useEffect(() => {
-			window.localStorage.setItem(key, JSON.stringify(value));
+			localStorage.setItem(key, JSON.stringify(value));
 		}, [key, value]);
 
 		return [value, setValue];
