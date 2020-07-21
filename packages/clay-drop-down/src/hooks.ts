@@ -3,9 +3,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {Keys} from '@clayui/shared';
 import React from 'react';
-
-const ESC_KEY_CODE = 27;
 
 /**
  * Hook for closing dropdown when user hits ESC key or clicks outside the menu.
@@ -34,7 +33,7 @@ export function useDropdownCloseInteractions(
 		};
 
 		const handleEsc = (event: KeyboardEvent) =>
-			event.keyCode === ESC_KEY_CODE && setActive(false);
+			event.key === Keys.Esc && setActive(false);
 
 		window.addEventListener('mousedown', handleClick);
 		window.addEventListener('keydown', handleEsc);

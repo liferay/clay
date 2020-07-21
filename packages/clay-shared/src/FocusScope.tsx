@@ -5,6 +5,7 @@
 
 import React from 'react';
 
+import {Keys} from './Keys';
 import {useFocusManagement} from './useFocusManagement';
 
 interface IProps {
@@ -25,12 +26,6 @@ interface IProps {
 	};
 }
 
-const ARROW_DOWN_KEY_CODE = 40;
-const ARROW_UP_KEY_CODE = 38;
-const ARROW_RIGHT_KEY_CODE = 39;
-const ARROW_LEFT_KEY_CODE = 37;
-const TAB_KEY_CODE = 9;
-
 /**
  * FocusScope is a component only for controlling focus and listening
  * for children's key down events, since the component handles the `onKeyDown`
@@ -45,20 +40,20 @@ export const FocusScope: React.FunctionComponent<IProps> = ({
 	const focusManager = useFocusManagement(elRef);
 
 	const onKeyDown = (event: React.KeyboardEvent<any>) => {
-		const {keyCode, shiftKey} = event;
+		const {key, shiftKey} = event;
 
 		if (
-			(arrowKeysUpDown && keyCode === ARROW_DOWN_KEY_CODE) ||
-			(arrowKeysLeftRight && keyCode === ARROW_RIGHT_KEY_CODE) ||
-			(keyCode === TAB_KEY_CODE && !shiftKey)
+			(arrowKeysUpDown && key === Keys.Down) ||
+			(arrowKeysLeftRight && key === Keys.Right) ||
+			(key === Keys.Tab && !shiftKey)
 		) {
 			if (focusManager.focusNext()) {
 				event.preventDefault();
 			}
 		} else if (
-			(arrowKeysUpDown && keyCode === ARROW_UP_KEY_CODE) ||
-			(arrowKeysLeftRight && keyCode === ARROW_LEFT_KEY_CODE) ||
-			(keyCode === TAB_KEY_CODE && shiftKey)
+			(arrowKeysUpDown && key === Keys.Up) ||
+			(arrowKeysLeftRight && key === Keys.Left) ||
+			(key === Keys.Tab && shiftKey)
 		) {
 			if (focusManager.focusPrevious()) {
 				event.preventDefault();

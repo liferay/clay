@@ -104,9 +104,6 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	use12Hours?: boolean;
 }
 
-const KEY_BACKSPACE = 8;
-const KEY_ARROWUP = 38;
-const KEY_ARROWDOWN = 40;
 const DEFAULT_VALUE = '--';
 const DEFAULT_CONFIG = {
 	use12Hours: {
@@ -209,11 +206,11 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 						  ),
 			});
 
-		switch (event.keyCode) {
-			case KEY_BACKSPACE:
+		switch (event.key) {
+			case 'Backspace':
 				setValue(DEFAULT_VALUE);
 				break;
-			case KEY_ARROWUP:
+			case 'ArrowUp':
 				event.preventDefault();
 
 				if (configName === TimeType.ampm) {
@@ -226,7 +223,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 					);
 				}
 				break;
-			case KEY_ARROWDOWN:
+			case 'ArrowDown':
 				event.preventDefault();
 
 				if (configName === TimeType.ampm) {

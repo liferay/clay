@@ -7,11 +7,6 @@ import ClayTimePicker from '..';
 import {cleanup, fireEvent, render} from '@testing-library/react';
 import React from 'react';
 
-const KEY_BACKSPACE = 8;
-const KEY_ARROWRIGHT = 39;
-const KEY_ARROWLEFT = 37;
-const KEY_ARROWUP = 38;
-const KEY_ARROWDOWN = 40;
 const spritemap = 'icons.svg';
 
 const TimePickerWithState = (props: any) => {
@@ -83,7 +78,7 @@ describe('IncrementalInteractions', () => {
 		const minutesEl = getByTestId('minutes');
 
 		hoursEl.focus();
-		fireEvent.keyDown(hoursEl, {keyCode: KEY_ARROWRIGHT});
+		fireEvent.keyDown(hoursEl, {key: 'ArrowRight'});
 
 		expect(document.activeElement).toBe(minutesEl);
 	});
@@ -97,7 +92,7 @@ describe('IncrementalInteractions', () => {
 		const minutesEl = getByTestId('minutes');
 
 		minutesEl.focus();
-		fireEvent.keyDown(minutesEl, {keyCode: KEY_ARROWLEFT});
+		fireEvent.keyDown(minutesEl, {key: 'ArrowLeft'});
 
 		expect(document.activeElement).toBe(hoursEl);
 	});
@@ -229,7 +224,7 @@ describe('IncrementalInteractions', () => {
 			fireEvent.focus(hoursEl, {});
 			fireEvent.keyDown(hoursEl, {key: '1'});
 			fireEvent.keyDown(minutesEl, {key: '1'});
-			fireEvent.keyDown(ampmEl, {keyCode: KEY_ARROWUP});
+			fireEvent.keyDown(ampmEl, {key: 'ArrowUp'});
 
 			expect(hoursEl.value).toBe('1');
 			expect(minutesEl.value).toBe('1');
@@ -354,7 +349,7 @@ describe('IncrementalInteractions', () => {
 
 			expect(hoursEl.value).toBe('1');
 
-			fireEvent.keyDown(hoursEl, {keyCode: KEY_BACKSPACE});
+			fireEvent.keyDown(hoursEl, {key: 'Backspace'});
 
 			expect(hoursEl.value).toBe('--');
 		});
@@ -367,7 +362,7 @@ describe('IncrementalInteractions', () => {
 
 			expect(minutesEl.value).toBe('1');
 
-			fireEvent.keyDown(minutesEl, {keyCode: KEY_BACKSPACE});
+			fireEvent.keyDown(minutesEl, {key: 'Backspace'});
 
 			expect(minutesEl.value).toBe('--');
 		});
@@ -382,7 +377,7 @@ describe('IncrementalInteractions', () => {
 
 			expect(ampmEl.value).toBe('AM');
 
-			fireEvent.keyDown(ampmEl, {keyCode: KEY_BACKSPACE});
+			fireEvent.keyDown(ampmEl, {key: 'Backspace'});
 
 			expect(ampmEl.value).toBe('--');
 		});
@@ -391,7 +386,7 @@ describe('IncrementalInteractions', () => {
 			const {getByTestId} = render(<TimePickerWithState />);
 			const hoursEl = getByTestId('hours') as HTMLInputElement;
 
-			fireEvent.keyDown(hoursEl, {keyCode: KEY_ARROWUP});
+			fireEvent.keyDown(hoursEl, {key: 'ArrowUp'});
 
 			expect(hoursEl.value).toBe('0');
 		});
@@ -400,7 +395,7 @@ describe('IncrementalInteractions', () => {
 			const {getByTestId} = render(<TimePickerWithState />);
 			const minutesEl = getByTestId('minutes') as HTMLInputElement;
 
-			fireEvent.keyDown(minutesEl, {keyCode: KEY_ARROWUP});
+			fireEvent.keyDown(minutesEl, {key: 'ArrowUp'});
 
 			expect(minutesEl.value).toBe('0');
 		});
@@ -409,7 +404,7 @@ describe('IncrementalInteractions', () => {
 			const {getByTestId} = render(<TimePickerWithState />);
 			const hoursEl = getByTestId('hours') as HTMLInputElement;
 
-			fireEvent.keyDown(hoursEl, {keyCode: KEY_ARROWDOWN});
+			fireEvent.keyDown(hoursEl, {key: 'ArrowDown'});
 
 			expect(hoursEl.value).toBe('23');
 		});
@@ -418,7 +413,7 @@ describe('IncrementalInteractions', () => {
 			const {getByTestId} = render(<TimePickerWithState />);
 			const minutesEl = getByTestId('minutes') as HTMLInputElement;
 
-			fireEvent.keyDown(minutesEl, {keyCode: KEY_ARROWDOWN});
+			fireEvent.keyDown(minutesEl, {key: 'ArrowDown'});
 
 			expect(minutesEl.value).toBe('59');
 		});
@@ -427,7 +422,7 @@ describe('IncrementalInteractions', () => {
 			const {getByTestId} = render(<TimePickerWithState use12Hours />);
 			const ampmEl = getByTestId('ampm') as HTMLInputElement;
 
-			fireEvent.keyDown(ampmEl, {keyCode: KEY_ARROWUP});
+			fireEvent.keyDown(ampmEl, {key: 'ArrowUp'});
 
 			expect(ampmEl.value).toBe('PM');
 		});
@@ -438,7 +433,7 @@ describe('IncrementalInteractions', () => {
 			const ampmEl = getByTestId('ampm') as HTMLInputElement;
 
 			fireEvent.mouseEnter(formControlEl, {});
-			fireEvent.keyDown(ampmEl, {keyCode: KEY_ARROWDOWN});
+			fireEvent.keyDown(ampmEl, {key: 'ArrowDown'});
 
 			expect(ampmEl.value).toBe('AM');
 		});
@@ -476,8 +471,8 @@ describe('IncrementalInteractions', () => {
 			expect(hoursEl.value).toBe('0');
 			expect(minutesEl.value).toBe('0');
 
-			fireEvent.keyDown(hoursEl, {keyCode: KEY_ARROWDOWN});
-			fireEvent.keyDown(minutesEl, {keyCode: KEY_ARROWDOWN});
+			fireEvent.keyDown(hoursEl, {key: 'ArrowDown'});
+			fireEvent.keyDown(minutesEl, {key: 'ArrowDown'});
 
 			expect(hoursEl.value).toBe('23');
 			expect(minutesEl.value).toBe('59');
@@ -494,8 +489,8 @@ describe('IncrementalInteractions', () => {
 			expect(hoursEl.value).toBe('23');
 			expect(minutesEl.value).toBe('59');
 
-			fireEvent.keyDown(hoursEl, {keyCode: KEY_ARROWUP});
-			fireEvent.keyDown(minutesEl, {keyCode: KEY_ARROWUP});
+			fireEvent.keyDown(hoursEl, {key: 'ArrowUp'});
+			fireEvent.keyDown(minutesEl, {key: 'ArrowUp'});
 
 			expect(hoursEl.value).toBe('0');
 			expect(minutesEl.value).toBe('0');

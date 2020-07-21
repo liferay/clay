@@ -5,6 +5,7 @@
 
 import ClayIcon from '@clayui/icon';
 import ClayLayout from '@clayui/layout';
+import {Keys} from '@clayui/shared';
 import ClaySticker from '@clayui/sticker';
 import React from 'react';
 
@@ -54,11 +55,6 @@ interface IProps {
 	title?: React.ReactText;
 }
 
-const KEYCODES = {
-	ENTER: 13,
-	SPACE: 32,
-};
-
 const noop = () => {};
 
 export const ClayCardWithNavigation: React.FunctionComponent<IProps> = ({
@@ -80,8 +76,8 @@ export const ClayCardWithNavigation: React.FunctionComponent<IProps> = ({
 			onClick={onClick}
 			onKeyDown={(event: React.KeyboardEvent) => {
 				if (
-					(event && event.keyCode === KEYCODES.ENTER) ||
-					(event && event.keyCode === KEYCODES.SPACE)
+					(event && event.key === Keys.Enter) ||
+					(event && event.key === Keys.Spacebar)
 				) {
 					event.preventDefault();
 
