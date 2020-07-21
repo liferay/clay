@@ -30,6 +30,8 @@ const useUserInteractions = (
 	modalBodyElementRef: React.MutableRefObject<any>,
 	onClick: () => void
 ) => {
+	const mouseEventTargetRef = React.useRef<EventTarget | null>(null);
+
 	const getFocusableNodes = () => {
 		if (modalBodyElementRef.current) {
 			const nodes = modalBodyElementRef.current.querySelectorAll(
@@ -78,14 +80,30 @@ const useUserInteractions = (
 		}
 	};
 
-	const handleDocumentClick = (event: Event) => {
+	const handleDocumentMouseDown = (event: Event) => {
+		// We keep the `event.target` to check later in the click event if
+		// the target is the same, otherwise, we are assuming that the element
+		// has been removed from the DOM.
+
+		mouseEventTargetRef.current = event.target;
+	};
+
+	const handleDocumentMouseUp = (event: Event) => {
 		if (event.defaultPrevented) {
+			mouseEventTargetRef.current = null;
+
 			return;
 		}
 
-		if (event.target === modalElementRef.current) {
+		if (
+			event.target === modalElementRef.current &&
+			(mouseEventTargetRef.current === event.target ||
+				mouseEventTargetRef.current === null)
+		) {
 			onClick();
 		}
+
+		mouseEventTargetRef.current = null;
 	};
 
 	/**
@@ -93,14 +111,16 @@ const useUserInteractions = (
 	 * changeAttachEvent is true.
 	 */
 	React.useEffect(() => {
-		document.addEventListener('click', handleDocumentClick);
-		document.addEventListener('keyup', handleKeyup);
 		document.addEventListener('keydown', handleKeydown);
+		document.addEventListener('keyup', handleKeyup);
+		document.addEventListener('mousedown', handleDocumentMouseDown);
+		document.addEventListener('mouseup', handleDocumentMouseUp);
 
 		return () => {
-			document.removeEventListener('keyup', handleKeyup);
 			document.removeEventListener('keydown', handleKeydown);
-			document.removeEventListener('click', handleDocumentClick);
+			document.removeEventListener('keyup', handleKeyup);
+			document.removeEventListener('mousedown', handleDocumentMouseDown);
+			document.removeEventListener('mouseup', handleDocumentMouseUp);
 		};
 	}, []);
 };
