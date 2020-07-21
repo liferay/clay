@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import classNames from 'classnames';
 import React from 'react';
 import tinycolor from 'tinycolor2';
 
@@ -33,13 +34,12 @@ const ClayColorPickerSplotch = React.forwardRef<HTMLButtonElement, IProps>(
 		return (
 			<button
 				{...otherProps}
-				className={`btn clay-color-btn ${className ? className : ''}`}
+				className={classNames('btn clay-color-btn', className, {
+					active,
+					'clay-color-btn-bordered': requireBorder,
+				})}
 				ref={ref}
 				style={{
-					...(active ? {outline: 'auto 3px #55ADFF'} : {}),
-					...(requireBorder
-						? {border: '1px solid #E7E7ED'}
-						: {borderWidth: 0}),
 					background: `#${value}`,
 					height: size,
 					width: size,
