@@ -72,4 +72,14 @@ storiesOf('Components|ClayColorPicker', module)
 			title="Native"
 			useNative
 		/>
+	))
+	.add('small', () => (
+		<ClayColorPickerWithState
+			disabled={boolean('Disabled', false)}
+			label={text('Label', 'Default Colors')}
+			name="colorPicker1"
+			showHex={boolean('Show Hex', true)}
+			small={boolean('Small', true)}
+			title={text('Title', 'Default')}
+		/>
 	));

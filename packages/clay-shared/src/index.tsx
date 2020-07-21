@@ -7,6 +7,7 @@ export const noop = () => {};
 export {ClayPortal} from './Portal';
 export {FocusScope} from './FocusScope';
 export {getEllipsisItems} from './getEllipsisItems';
+export {Keys} from './Keys';
 export {LinkOrButton} from './LinkOrButton';
 export {sub} from './sub';
 export {useDebounce} from './useDebounce';

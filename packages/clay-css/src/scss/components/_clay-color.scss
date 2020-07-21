@@ -39,7 +39,7 @@
 		@include clay-container($clay-color-dropdown-menu-form-group);
 	}
 
-	.input-group-inset-item-before {
+	.input-group .input-group-inset-item-before {
 		@include clay-container(
 			$clay-color-dropdown-menu-input-group-inset-item-before
 		);
@@ -122,7 +122,7 @@
 		@include clay-form-control-variant($clay-color-map-values-input);
 	}
 
-	.input-group-inset-item-before {
+	.input-group .input-group-inset-item-before {
 		@include clay-container(
 			$clay-color-map-values-input-group-inset-item-before
 		);
@@ -154,4 +154,18 @@
 
 .clay-color-range-pointer {
 	@include clay-button-variant($clay-color-range-pointer);
+}
+
+// Clay Color Sm
+
+%clay-color-sm-input-group-inset-item-before {
+	@include clay-css($clay-color-sm-input-group-inset-item-before);
+}
+
+%clay-color-sm-input-group-text {
+	@include clay-css($clay-color-sm-input-group-text);
+}
+
+%clay-color-sm-clay-color-btn {
+	@include clay-button-variant($clay-color-sm-clay-color-btn);
 }

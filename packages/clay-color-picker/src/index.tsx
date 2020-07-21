@@ -99,6 +99,12 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	showHex?: boolean;
 
 	/**
+	 * Flag to indicate if `input-group-sm` class should
+	 * be applied to `ClayInput.Group`
+	 */
+	small?: boolean;
+
+	/**
 	 * Path to the location of the spritemap resource.
 	 */
 	spritemap?: string;
@@ -129,6 +135,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 	onColorsChange,
 	onValueChange = () => {},
 	showHex = true,
+	small,
 	spritemap,
 	title,
 	useNative = false,
@@ -168,7 +175,11 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 
 				{title && <label>{title}</label>}
 
-				<ClayInput.Group className="clay-color" ref={triggerElementRef}>
+				<ClayInput.Group
+					className="clay-color"
+					ref={triggerElementRef}
+					small={small}
+				>
 					<ClayInput.GroupItem prepend={showHex} shrink>
 						<ClayInput.GroupText>
 							<Splotch
@@ -181,7 +192,6 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 										: setActive((val: boolean) => !val)
 								}
 								ref={splotchRef}
-								size={28}
 								value={value}
 							/>
 						</ClayInput.GroupText>

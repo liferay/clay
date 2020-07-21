@@ -3,10 +3,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {useRef} from 'react';
+import {Keys} from '@clayui/shared';
+import React from 'react';
 
-const KEY_CODE_ESC = 27;
-const KEY_CODE_TAB = 9;
 const FOCUSABLE_ELEMENTS = [
 	'a[href]',
 	'[contenteditable]',
@@ -31,7 +30,7 @@ const useUserInteractions = (
 	modalBodyElementRef: React.MutableRefObject<any>,
 	onClick: () => void
 ) => {
-	const mouseEventTargetRef = useRef<EventTarget | null>(null);
+	const mouseEventTargetRef = React.useRef<EventTarget | null>(null);
 
 	const getFocusableNodes = () => {
 		if (modalBodyElementRef.current) {
@@ -46,7 +45,7 @@ const useUserInteractions = (
 	};
 
 	const handleKeydown = (event: KeyboardEvent) => {
-		if (event.keyCode === KEY_CODE_TAB) {
+		if (event.key === Keys.Tab) {
 			if (
 				modalElementRef.current &&
 				event.target !== null &&
@@ -76,7 +75,7 @@ const useUserInteractions = (
 	};
 
 	const handleKeyup = (event: KeyboardEvent) => {
-		if (event.keyCode === KEY_CODE_ESC) {
+		if (event.key === Keys.Esc) {
 			onClick();
 		}
 	};
