@@ -2,7 +2,7 @@
 
 exports[`ClaySticker renders 1`] = `
 <span
-  className="sticker sticker-rounded"
+  className="sticker"
 >
   <span
     className="sticker-overlay"
@@ -14,7 +14,7 @@ exports[`ClaySticker renders 1`] = `
 
 exports[`ClaySticker renders with a display type 1`] = `
 <span
-  className="sticker sticker-rounded sticker-danger"
+  className="sticker sticker-danger"
 >
   <span
     className="sticker-overlay"
@@ -26,7 +26,7 @@ exports[`ClaySticker renders with a display type 1`] = `
 
 exports[`ClaySticker renders with a outside 1`] = `
 <span
-  className="sticker sticker-rounded sticker-top-left sticker-outside"
+  className="sticker sticker-top-left sticker-outside"
 >
   <span
     className="sticker-overlay"
@@ -38,7 +38,7 @@ exports[`ClaySticker renders with a outside 1`] = `
 
 exports[`ClaySticker renders with a position 1`] = `
 <span
-  className="sticker sticker-rounded sticker-bottom-left"
+  className="sticker sticker-bottom-left"
 >
   <span
     className="sticker-overlay"
@@ -62,12 +62,69 @@ exports[`ClaySticker renders with a shape circle 1`] = `
 
 exports[`ClaySticker renders with a size 1`] = `
 <span
-  className="sticker sticker-rounded sticker-xl"
+  className="sticker sticker-xl"
 >
   <span
     className="sticker-overlay"
   >
     B
+  </span>
+</span>
+`;
+
+exports[`ClaySticker renders with a user icon 1`] = `
+<span
+  className="sticker sticker-user-icon"
+>
+  <span
+    className="sticker-overlay"
+  >
+    <img
+      alt="placeholder"
+      className="sticker-img"
+      src="#"
+    />
+  </span>
+</span>
+`;
+
+exports[`ClaySticker renders with an image 1`] = `
+<span
+  className="sticker"
+>
+  <span
+    className="sticker-overlay"
+  >
+    <img
+      alt="placeholder"
+      className="sticker-img"
+      src="#"
+    />
+  </span>
+</span>
+`;
+
+exports[`ClaySticker renders with an overlay 1`] = `
+<span
+  className="sticker"
+>
+  <span
+    className="sticker-overlay"
+  >
+    <span
+      className="sticker-overlay"
+    >
+      <img
+        alt=""
+        className="sticker-img"
+        src="#"
+      />
+    </span>
+    <span
+      className="sticker-overlay"
+    >
+      BC
+    </span>
   </span>
 </span>
 `;

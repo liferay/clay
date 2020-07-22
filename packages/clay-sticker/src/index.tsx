@@ -17,7 +17,7 @@ export type DisplayType =
 	| 'unstyled'
 	| 'warning';
 
-type Shape = 'circle' | 'rounded';
+type Shape = 'circle' | 'user-icon';
 
 type Position = 'bottom-left' | 'bottom-right' | 'top-left' | 'top-right';
 
@@ -56,6 +56,30 @@ interface IProps extends React.HTMLAttributes<HTMLSpanElement> {
 	size?: Size;
 }
 
+const Overlay: React.FunctionComponent<
+	React.HTMLAttributes<HTMLSpanElement> & {
+		/**
+		 * Flag to indicate if `inline-item` class should be applied
+		 */
+		inline?: boolean;
+	}
+> = ({children, className, inline, ...otherProps}) => (
+	<span
+		className={classNames(className, 'sticker-overlay', {
+			'inline-item': inline,
+		})}
+		{...otherProps}
+	>
+		{children}
+	</span>
+);
+
+const Image: React.FunctionComponent<React.ImgHTMLAttributes<
+	HTMLImageElement
+>> = ({className, ...otherProps}) => (
+	<img className={classNames(className, 'sticker-img')} {...otherProps} />
+);
+
 const ClaySticker: React.FunctionComponent<IProps> = ({
 	children,
 	className,
@@ -63,7 +87,7 @@ const ClaySticker: React.FunctionComponent<IProps> = ({
 	inline,
 	outside = false,
 	position,
-	shape = 'rounded',
+	shape,
 	size,
 	...otherProps
 }: IProps) => (
@@ -77,14 +101,8 @@ const ClaySticker: React.FunctionComponent<IProps> = ({
 			[`sticker-${size}`]: size,
 		})}
 	>
-		<span
-			className={classNames('sticker-overlay', {
-				'inline-item': inline,
-			})}
-		>
-			{children}
-		</span>
+		<Overlay inline={inline}>{children}</Overlay>
 	</span>
 );
 
-export default ClaySticker;
+export default Object.assign(ClaySticker, {Image, Overlay});

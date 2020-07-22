@@ -18,7 +18,7 @@ exports[`ClayCard renders a ClayCard as a directory 1`] = `
             class="flex-col"
           >
             <span
-              class="sticker sticker-rounded sticker-secondary"
+              class="sticker sticker-secondary"
             >
               <span
                 class="sticker-overlay inline-item"
@@ -84,7 +84,7 @@ exports[`ClayCard renders a ClayCard as a file card 1`] = `
         </svg>
       </div>
       <span
-        class="sticker sticker-rounded sticker-danger sticker-bottom-left"
+        class="sticker sticker-danger sticker-bottom-left"
       >
         <span
           class="sticker-overlay"
@@ -189,7 +189,7 @@ exports[`ClayCard renders a ClayCard as a selectable file card 1`] = `
               </svg>
             </div>
             <span
-              class="sticker sticker-rounded sticker-danger sticker-bottom-left"
+              class="sticker sticker-danger sticker-bottom-left"
             >
               <span
                 class="sticker-overlay"
@@ -291,7 +291,7 @@ exports[`ClayCard renders a ClayCard as a selectable folder 1`] = `
                 class="autofit-col"
               >
                 <span
-                  class="sticker sticker-rounded sticker-secondary"
+                  class="sticker sticker-secondary"
                 >
                   <span
                     class="sticker-overlay inline-item"
@@ -645,7 +645,7 @@ exports[`ClayCard renders a ClayCard as template navigation card as horizontal c
           class="autofit-col"
         >
           <span
-            class="sticker sticker-rounded sticker-light"
+            class="sticker sticker-light"
           >
             <span
               class="sticker-overlay inline-item"
@@ -966,7 +966,7 @@ exports[`ClayCard renders a group of ClayCards 1`] = `
             </svg>
           </div>
           <span
-            class="sticker sticker-rounded sticker-danger sticker-bottom-left"
+            class="sticker sticker-danger sticker-bottom-left"
           >
             <span
               class="sticker-overlay"
@@ -1056,7 +1056,7 @@ exports[`ClayCard renders a group of ClayCards 1`] = `
             </svg>
           </div>
           <span
-            class="sticker sticker-rounded sticker-danger sticker-bottom-left"
+            class="sticker sticker-danger sticker-bottom-left"
           >
             <span
               class="sticker-overlay"
@@ -1349,7 +1349,7 @@ exports[`ClayCardWithHorizontal renders as disabled 1`] = `
                 class="autofit-col"
               >
                 <span
-                  class="sticker sticker-rounded"
+                  class="sticker"
                 >
                   <span
                     class="sticker-overlay inline-item"
@@ -1411,7 +1411,7 @@ exports[`ClayCardWithHorizontal renders as not selectable 1`] = `
             class="autofit-col"
           >
             <span
-              class="sticker sticker-rounded"
+              class="sticker"
             >
               <span
                 class="sticker-overlay inline-item"
@@ -1482,7 +1482,7 @@ exports[`ClayCardWithHorizontal renders as selectable 1`] = `
                 class="autofit-col"
               >
                 <span
-                  class="sticker sticker-rounded"
+                  class="sticker"
                 >
                   <span
                     class="sticker-overlay inline-item"
@@ -1562,7 +1562,7 @@ exports[`ClayCardWithInfo renders as disabled 1`] = `
               </svg>
             </div>
             <span
-              class="sticker sticker-rounded sticker-primary sticker-bottom-left"
+              class="sticker sticker-primary sticker-bottom-left"
             >
               <span
                 class="sticker-overlay"
@@ -1644,7 +1644,7 @@ exports[`ClayCardWithInfo renders as not selectable 1`] = `
         </svg>
       </div>
       <span
-        class="sticker sticker-rounded sticker-primary sticker-bottom-left"
+        class="sticker sticker-primary sticker-bottom-left"
       >
         <span
           class="sticker-overlay"
@@ -1753,7 +1753,7 @@ exports[`ClayCardWithInfo renders as selectable 1`] = `
               </svg>
             </div>
             <span
-              class="sticker sticker-rounded sticker-primary sticker-bottom-left"
+              class="sticker sticker-primary sticker-bottom-left"
             >
               <span
                 class="sticker-overlay"
