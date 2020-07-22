@@ -128,9 +128,7 @@ const StickerUserIconCode = `const Component = () => {
 	return (
 		<>
 			<ClaySticker className="sticker-user-icon" size="xl">
-				<div className="sticker-overlay">
-					<img className="sticker-img" src="/images/long_user_image.png" />
-				</div>
+				<img className="sticker-img" src="/images/long_user_image.png" />
 			</ClaySticker>
 			<ClaySticker className="sticker-user-icon" size="xl">
 				{'BS'}
