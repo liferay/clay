@@ -129,7 +129,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/picker-
 					</div>
 					<div class="clay-color-swatch">
 						<div class="clay-color-swatch-item">
-							<button class="btn clay-color-btn focus" title="#B2EDFF" style="background-color:#B2EDFF;"></button>
+							<button class="active btn clay-color-btn" title="#B2EDFF" style="background-color:#B2EDFF;" tabindex="-1"></button>
 						</div>
 						<div class="clay-color-swatch-item">
 							<button class="btn clay-color-btn" title="#45EDC5" style="background-color:#45EDC5;"></button>
@@ -224,9 +224,10 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/picker-
 				<div class="clay-color-swatch">
 					<div class="clay-color-swatch-item">
 						<button
-							class="btn clay-color-btn focus"
+							class="active btn clay-color-btn"
 							title="#B2EDFF"
 							style="background-color:#B2EDFF;"
+							tabindex="-1"
 						></button>
 					</div>
 					<div class="clay-color-swatch-item">
@@ -413,7 +414,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/picker-
 			</div>
 			<div class="clay-color-swatch">
 				<div class="clay-color-swatch-item">
-					<button class="btn clay-color-btn focus" title="#B2EDFF" style="background-color:#B2EDFF;"></button>
+					<button class="active btn clay-color-btn" title="#B2EDFF" style="background-color:#B2EDFF;" tabindex="-1"></button>
 				</div>
 				<div class="clay-color-swatch-item">
 					<button class="btn clay-color-btn" title="#45EDC5" style="background-color:#45EDC5;"></button>
@@ -479,9 +480,10 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/picker-
 	<div class="clay-color-swatch">
 		<div class="clay-color-swatch-item">
 			<button
-				class="btn clay-color-btn focus"
+				class="active btn clay-color-btn"
 				title="#B2EDFF"
 				style="background-color:#B2EDFF;"
+				tabindex="-1"
 			></button>
 		</div>
 		<div class="clay-color-swatch-item">
@@ -508,7 +510,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/picker-
 			</div>
 			<div class="clay-color-swatch">
 				<div class="clay-color-swatch-item">
-					<button class="btn clay-color-btn focus" title="#B2EDFF" style="background-color:#B2EDFF;"></button>
+					<button class="active btn clay-color-btn" title="#B2EDFF" style="background-color:#B2EDFF;" tabindex="-1"></button>
 				</div>
 				<div class="clay-color-swatch-item">
 					<button class="btn clay-color-btn" title="#45EDC5" style="background-color:#45EDC5;"></button>
@@ -620,9 +622,10 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/picker-
 	<div class="clay-color-swatch">
 		<div class="clay-color-swatch-item">
 			<button
-				class="btn clay-color-btn focus"
+				class="active btn clay-color-btn"
 				title="#B2EDFF"
 				style="background-color:#B2EDFF;"
+				tabindex="-1"
 			></button>
 		</div>
 		<div class="clay-color-swatch-item">
