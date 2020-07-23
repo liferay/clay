@@ -1,37 +1,23 @@
-// Drill Down Transitions
+.drilldown-inner {
+	@include clay-css($drilldown-inner);
+}
+
+.drilldown-item {
+	@include clay-css($drilldown-item);
+}
+
+.drilldown-item-inner {
+	@include clay-css($drilldown-item-inner);
+}
+
+// Drilldown Transition Classes
 
 .drilldown-transition {
 	transition: $drilldown-transition;
 }
 
-.drilldown-inner {
-	display: flex;
-	transition: $drilldown-inner-transition;
-}
-
-// Drill Down
-
-.drilldown.dropdown-menu {
-	max-height: none;
-	max-width: none;
-	min-width: 0;
-	overflow: hidden;
-	width: $drilldown-width;
-}
-
-.drilldown .inline-scroller {
-	max-height: $drilldown-inline-scroller-max-height;
-}
-
-.drilldown-item {
-	display: none;
-	flex-shrink: 0;
-	height: 0;
-	width: 100%;
-}
-
-.drilldown-item-header {
-	@include clay-link($drilldown-item-header);
+.drilldown-item.transitioning {
+	display: block;
 }
 
 .drilldown-current {
@@ -39,6 +25,108 @@
 	height: auto;
 }
 
-.transitioning {
-	display: block;
+// Drilldown Dropdown Menu
+
+.drilldown.dropdown-menu {
+	@include clay-css($drilldown-dropdown-menu);
+
+	&.show {
+		display: flex;
+	}
+
+	.drilldown-inner {
+		@include clay-css($drilldown-dropdown-menu-drilldown-inner);
+	}
+
+	.inline-scroller {
+		max-height: $drilldown-inline-scroller-max-height;
+	}
+}
+
+// Drilldown Dropdown Menu Indicator Start
+
+.drilldown.dropdown-menu-indicator-start,
+.drilldown .dropdown-menu-indicator-start {
+	.dropdown-item {
+		@include clay-css($drilldown-dropdown-menu-indicator-start);
+
+		.dropdown-item-indicator-text-start {
+			padding-left: 0;
+		}
+	}
+}
+
+// Drilldown Dropdown Menu Indicator End
+
+.drilldown.dropdown-menu-indicator-end,
+.drilldown .dropdown-menu-indicator-end {
+	.dropdown-item {
+		@include clay-css($drilldown-dropdown-menu-indicator-end);
+
+		.dropdown-item-indicator-text-end {
+			padding-right: 0;
+		}
+	}
+}
+
+.drilldown {
+	.dropdown-header {
+		@include clay-css($drilldown-dropdown-header);
+	}
+
+	.dropdown-footer {
+		@include clay-css($drilldown-dropdown-footer);
+	}
+
+	.dropdown-divider {
+		@include clay-css($drilldown-dropdown-divider);
+	}
+
+	.dropdown-item {
+		@include clay-dropdown-item-variant($drilldown-dropdown-item);
+	}
+
+	.dropdown-item-indicator-start {
+		@include clay-css($drilldown-dropdown-item-indicator-start);
+	}
+
+	.dropdown-item-indicator-text-start {
+		@include clay-css($drilldown-dropdown-item-indicator-text-start);
+	}
+
+	.dropdown-item-indicator-end {
+		@include clay-css($drilldown-dropdown-item-indicator-end);
+	}
+
+	.dropdown-item-indicator-text-end {
+		@include clay-css($drilldown-dropdown-item-indicator-text-end);
+	}
+}
+
+// Drilldown Fixed Height
+
+%drilldown-height-dropdown-menu-base {
+	.drilldown-inner {
+		min-height: 0;
+	}
+
+	.drilldown-item {
+		height: 100%;
+	}
+
+	.drilldown-item-inner {
+		height: 100%;
+	}
+}
+
+.drilldown-height-sm.dropdown-menu {
+	@include clay-css($drilldown-height-sm-dropdown-menu);
+
+	@extend %drilldown-height-dropdown-menu-base !optional;
+}
+
+.drilldown-height-md.dropdown-menu {
+	@include clay-css($drilldown-height-md-dropdown-menu);
+
+	@extend %drilldown-height-dropdown-menu-base !optional;
 }

@@ -42,10 +42,105 @@ $dropdown-inline-scroller-max-height: 200px !default;
 $dropdown-inline-scroller-max-height-mobile: none !default;
 
 $dropdown-item-disabled-cursor: $disabled-cursor !default;
+
+// Dropdown Item Indicator
+
 $dropdown-item-indicator-size: 1rem !default;
 $dropdown-item-indicator-spacer-x: 1rem !default;
 
-// `background-color`, `border-width`, `text-align` for `<button>`s
+$dropdown-item-indicator-start: () !default;
+$dropdown-item-indicator-start: map-deep-merge(
+	(
+		align-items: center,
+		color: inherit,
+		display: inline-flex,
+		height: $dropdown-item-indicator-size,
+		justify-content: center,
+		left: $dropdown-item-padding-x,
+		position: absolute,
+		right: auto,
+		top:
+			calc(
+				#{$dropdown-item-padding-y} - ((
+								#{$dropdown-item-indicator-size} - (1em * #{$line-height-base})
+							) / 2)
+			),
+		width: $dropdown-item-indicator-size,
+		lexicon-icon: (
+			margin-top: 0,
+		),
+	),
+	$dropdown-item-indicator-start
+);
+
+$dropdown-item-indicator-text-start: () !default;
+$dropdown-item-indicator-text-start: map-deep-merge(
+	(
+		color: inherit,
+		display: block,
+		padding-left: $dropdown-item-indicator-size +
+			$dropdown-item-indicator-spacer-x,
+		text-decoration: inherit,
+		width: 100%,
+		hover: (
+			color: inherit,
+			text-decoration: inherit,
+		),
+		focus: (
+			color: inherit,
+			text-decoration: inherit,
+		),
+	),
+	$dropdown-item-indicator-text-start
+);
+
+$dropdown-item-indicator-end: () !default;
+$dropdown-item-indicator-end: map-deep-merge(
+	(
+		align-items: center,
+		color: inherit,
+		display: inline-flex,
+		height: $dropdown-item-indicator-size,
+		justify-content: center,
+		left: auto,
+		position: absolute,
+		right: $dropdown-item-padding-x,
+		top:
+			calc(
+				#{$dropdown-item-padding-y} - ((
+								#{$dropdown-item-indicator-size} - (1em * #{$line-height-base})
+							) / 2)
+			),
+		width: $dropdown-item-indicator-size,
+		lexicon-icon: (
+			margin-top: 0,
+		),
+	),
+	$dropdown-item-indicator-end
+);
+
+$dropdown-item-indicator-text-end: () !default;
+$dropdown-item-indicator-text-end: map-deep-merge(
+	(
+		color: inherit,
+		display: block,
+		padding-right: $dropdown-item-indicator-size +
+			$dropdown-item-indicator-spacer-x,
+		text-decoration: inherit,
+		width: 100%,
+		hover: (
+			color: inherit,
+			text-decoration: inherit,
+		),
+		focus: (
+			color: inherit,
+			text-decoration: inherit,
+		),
+	),
+	$dropdown-item-indicator-text-end
+);
+
+// Dropdown Item
 
 $dropdown-item-base: () !default;
 $dropdown-item-base: map-deep-merge(
@@ -115,6 +210,18 @@ $dropdown-section-custom-control-label: () !default;
 $dropdown-section-custom-control-label-text: () !default;
 
 $dropdown-section-active-custom-control-label: () !default;
+
+// Dropdown Footer
+
+$dropdown-footer: () !default;
+$dropdown-footer: map-merge(
+	(
+		box-shadow: -1px -2px 3px -3px rgba(0, 0, 0, 0.5),
+		padding: 0.5rem $dropdown-item-padding-x 0,
+		position: relative,
+	),
+	$dropdown-footer
+);
 
 // Autocomplete Dropdown Menu
 
