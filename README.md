@@ -126,6 +126,12 @@ yarn
 yarn develop
 ```
 
+Run clayui.com on Local LAN
+
+```
+yarn develop -H 0.0.0.0
+```
+
 If you want to test in a production environment so that you do not take risks of inconsistencies, in the root folder:
 
 ```
