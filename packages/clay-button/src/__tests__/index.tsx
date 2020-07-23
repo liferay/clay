@@ -98,4 +98,16 @@ describe('ClayButton', () => {
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
+
+	it('renders ButtonWithIcon without monospaced', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayButtonWithIcon
+				monospaced={false}
+				spritemap="/some/path"
+				symbol="trash"
+			/>
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
 });

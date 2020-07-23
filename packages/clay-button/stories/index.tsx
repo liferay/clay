@@ -70,5 +70,13 @@ storiesOf('Components|ClayButton', module)
 				spritemap={spritemap}
 				symbol="desktop"
 			/>
+
+			<ClayButtonWithIcon
+				aria-label="Desktop"
+				displayType="unstyled"
+				monospaced={false}
+				spritemap={spritemap}
+				symbol="desktop"
+			/>
 		</>
 	));

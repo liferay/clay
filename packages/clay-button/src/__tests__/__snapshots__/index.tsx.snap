@@ -23,6 +23,22 @@ exports[`ClayButton renders ButtonWithIcon 1`] = `
 </button>
 `;
 
+exports[`ClayButton renders ButtonWithIcon without monospaced 1`] = `
+<button
+  className="btn btn-primary"
+  type="button"
+>
+  <svg
+    className="lexicon-icon lexicon-icon-trash"
+    role="presentation"
+  >
+    <use
+      xlinkHref="/some/path#trash"
+    />
+  </svg>
+</button>
+`;
+
 exports[`ClayButton renders a ButtonGroup with spaced 1`] = `
 <div
   className="btn-group"
