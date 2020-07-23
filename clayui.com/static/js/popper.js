@@ -1,10 +1,3 @@
-/**
-* Clay 3.13.0
-*
-* Copyright 2020, Liferay, Inc.
-* All rights reserved.
-* MIT license
-*/
 /**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
  * @version 1.16.0
