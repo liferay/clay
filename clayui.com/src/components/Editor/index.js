@@ -12,6 +12,7 @@ import React, {useContext, useState} from 'react';
 import {LiveEditor, LiveError, LivePreview, LiveProvider} from 'react-live';
 
 import theme from '../../utils/react-live-theme';
+import useStickyState from '../Hooks/useStickyState';
 
 const spritemap = '/images/icons/icons.svg';
 
@@ -58,39 +59,24 @@ const Editor = ({
 		];
 	}
 
-	function useStickyState(defaultValue, key) {
-		const inBrowser = typeof window !== 'undefined';
+	const inBrowser = typeof window !== 'undefined';
 
-		const localStorage = {
-			getItem(key) {
-				return inBrowser ? window.localStorage.getItem(key) : null;
-			},
+	const localStorage = {
+		getItem(key) {
+			return inBrowser ? window.localStorage.getItem(key) : null;
+		},
 
-			setItem(key, value) {
-				if (inBrowser) {
-					window.localStorage.setItem(key, value);
-				}
-			},
-		};
-
-		const [value, setValue] = React.useState(() => {
-			const stickyValue = localStorage.getItem(key);
-
-			return stickyValue !== null
-				? JSON.parse(stickyValue)
-				: defaultValue;
-		});
-
-		React.useEffect(() => {
-			localStorage.setItem(key, JSON.stringify(value));
-		}, [key, value]);
-
-		return [value, setValue];
-	}
+		setItem(key, value) {
+			if (inBrowser) {
+				window.localStorage.setItem(key, value);
+			}
+		},
+	};
 
 	const [collapseCode, setCollapseCode] = useStickyState(
 		true,
-		'collapse-code'
+		'collapse-code',
+		localStorage
 	);
 	const [activeIndex, setActiveIndex] = React.useState(0);
 	const [snippets, setSnippets] = React.useState(code);
@@ -121,19 +107,31 @@ const Editor = ({
 				/>
 
 				<div style={{padding: '10px'}}>
-					<ClayButtonWithIcon
-						className="btn-copy"
-						displayType="unstyled"
-						small
-						spritemap={spritemap}
-						symbol={'paste'}
-						title={'Copy'}
-					/>
+					{snippets.length === 1 && collapseCode && (
+						<span className="align-items-center clay-p d-flex mt-0">
+							{'Code Sample (expand to see it)'}
+						</span>
+					)}
+
+					{!collapseCode && (
+						<ClayButtonWithIcon
+							className="btn-copy"
+							displayType="unstyled"
+							small
+							spritemap={spritemap}
+							symbol={'paste'}
+							title={'Copy'}
+						/>
+					)}
 
 					<ClayButtonWithIcon
 						className="btn-collapse"
 						displayType="unstyled"
-						onClick={() => setCollapseCode(!collapseCode)}
+						onClick={() => {
+							setActiveIndex(0);
+
+							setCollapseCode(!collapseCode);
+						}}
 						small
 						spritemap={spritemap}
 						symbol={collapseCode ? 'angle-right' : 'angle-down'}
@@ -144,12 +142,22 @@ const Editor = ({
 						<ClayTabs modern>
 							{snippets.map((snippet, index) => (
 								<ClayTabs.Item
-									active={activeIndex === index}
+									active={
+										!collapseCode && activeIndex === index
+									}
 									innerProps={{
 										'aria-controls': `tabpanel-${snippet.name}`,
 									}}
 									key={snippet.name}
-									onClick={() => setActiveIndex(index)}
+									onClick={() => {
+										if (activeIndex !== index) {
+											setCollapseCode(false);
+										} else {
+											setCollapseCode(!collapseCode);
+										}
+
+										setActiveIndex(index);
+									}}
 								>
 									{snippet.name}
 								</ClayTabs.Item>
