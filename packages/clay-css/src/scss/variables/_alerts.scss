@@ -18,6 +18,15 @@ $alert-btn: map-deep-merge(
 	$alert-btn
 );
 
+$alert-btn-group: () !default;
+$alert-btn-group: map-deep-merge(
+	(
+		margin-bottom: -0.125rem,
+		margin-top: -0.125rem,
+	),
+	$alert-btn-group
+);
+
 $alert-btn-group-item: () !default;
 $alert-btn-group-item: map-deep-merge(
 	(
@@ -141,6 +150,43 @@ $alert-fluid-border-width: $alert-fluid-border-top-width
 	$alert-fluid-border-left-width !default;
 $alert-fluid-margin-bottom: 0 !default;
 
+$alert-fluid: () !default;
+$alert-fluid: map-merge(
+	(
+		border-radius: 0,
+		border-width: $alert-fluid-border-width,
+		margin-bottom: $alert-fluid-margin-bottom,
+		padding: 0,
+	),
+	$alert-fluid
+);
+
+$alert-fluid-container: () !default;
+$alert-fluid-container: map-merge(
+	(
+		padding-bottom: $alert-padding-y,
+		padding-left: $alert-padding-x,
+		padding-right: $alert-padding-x,
+		padding-top: $alert-padding-y,
+	),
+	$alert-fluid-container
+);
+
+$alert-fluid-dismissible-container: () !default;
+$alert-fluid-dismissible-container: map-merge(
+	(
+		padding-bottom: $alert-dismissible-padding-bottom,
+		padding-left: $alert-dismissible-padding-left,
+		padding-right:
+			calc(
+				#{$alert-dismissible-padding-right} + #{$grid-gutter-width / 2}
+			),
+		padding-top: $alert-dismissible-padding-top,
+		position: relative,
+	),
+	$alert-fluid-dismissible-container
+);
+
 // Alert Notification
 
 $alert-notifications-absolute-bottom: null !default;
@@ -165,6 +211,26 @@ $alert-notifications-fixed-top-mobile: null !default; // 68px
 
 $alert-notifications-box-shadow: null !default;
 $alert-notifications-max-width: 22.5rem !default; // 360px
+
+$alert-notification: () !default;
+$alert-notification: map-merge(
+	(
+		box-shadow: $alert-notifications-box-shadow,
+		margin-bottom: $alert-margin-bottom,
+		max-width: $alert-notifications-max-width,
+	),
+	$alert-notification
+);
+
+$alert-notification-sm-down: () !default;
+$alert-notification-sm-down: map-merge(
+	(
+		enabled: $enable-scaling-components,
+		max-width: none,
+		width: 100%,
+	),
+	$alert-notification-sm-down
+);
 
 // Alert Autofit Row
 
