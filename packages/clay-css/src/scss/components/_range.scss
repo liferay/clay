@@ -24,6 +24,10 @@
 	}
 }
 
+.clay-range-progress-none .clay-range-progress {
+	visibility: hidden;
+}
+
 .clay-range-title {
 	@include clay-link($clay-range-title);
 }
