@@ -251,4 +251,5 @@ _After you have published any dependencies needed_
 6. Check yarn.log stats (`git diff --stat yarn.lock`)
     - If diff numbers are off (more + then - or viceversa), review the contents to find an explanation
 7. Verify `yarn.lock`changes for anything that is odd or stands out.
-8. Send pull request to https://github.com/liferay-frontend/liferay-portal
+8. Run unit tests locally to verify no failures before running pushing to CI. Navigate to `liferay-portal/modules` and run `../gradlew packageRunTest`
+9. Once all tests have passed, send pull request to https://github.com/liferay-frontend/liferay-portal
