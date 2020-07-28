@@ -35,6 +35,45 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/slider/'
 
 ## Custom Slider
 
+Add `clay-range-progress-none` to `clay-range` for a basic range input that works without JavaScript.
+
+<div class="sheet-example">
+	<div class="form-group">
+		<label for="_3tkp5wh4m">Clay Range Clay Range Progress None</label>
+		<div class="clay-range clay-range-progress-none">
+			<div class="clay-range-input">
+				<input class="form-control-range" id="_3tkp5wh4m" min="0" max="100" step="1" type="range">
+				<div class="clay-range-track"></div>
+				<div class="clay-range-progress">
+					<div class="clay-range-thumb"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+```html
+<div class="form-group">
+	<label for="_3tkp5wh4m">Clay Range Clay Range Progress None</label>
+	<div class="clay-range clay-range-progress-none">
+		<div class="clay-range-input">
+			<input
+				class="form-control-range"
+				id="_3tkp5wh4m"
+				min="0"
+				max="100"
+				step="1"
+				type="range"
+			/>
+			<div class="clay-range-track"></div>
+			<div class="clay-range-progress">
+				<div class="clay-range-thumb"></div>
+			</div>
+		</div>
+	</div>
+</div>
+```
+
 To create a custom slider is necessary to use JavaScript to manipulate the thumb, we hide the native thumb so it can be possible to add tooltip's that reflect the current range value.
 
 <div class="sheet-example">

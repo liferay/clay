@@ -446,10 +446,11 @@
 
 	$thumb-bg: map-get($map, thumb-bg);
 	$thumb-bg-image: map-get($map, thumb-bg-image);
-	$thumb-border-radius: map-get($map, thumb-border-radius);
 	$thumb-border-color: map-get($map, thumb-border-color);
 	$thumb-border-style: map-get($map, thumb-border-style);
 	$thumb-border-width: map-get($map, thumb-border-width);
+
+	$thumb-border-radius: map-get($map, thumb-border-radius);
 	$thumb-box-shadow: map-get($map, thumb-box-shadow);
 	$thumb-height: map-get($map, thumb-height);
 	$thumb-width: map-get($map, thumb-width);
@@ -641,20 +642,20 @@
 		border-width: $thumb-border-width;
 		box-shadow: $thumb-box-shadow;
 		height: $thumb-height;
-		width: $thumb-width;
-
-		position: absolute;
 		margin-top: math-sign($thumb-height / 2);
+		position: absolute;
 		right: math-sign($thumb-width / 2);
 		top: 50%;
+		visibility: hidden;
+		width: $thumb-width;
 	}
 
 	.form-control-range {
-		content: '#{$thumb-width}';
 		-moz-appearance: $form-control-appearance;
 		-webkit-appearance: $form-control-appearance;
 		appearance: $form-control-appearance;
 		background-color: $form-control-bg;
+		content: '#{$thumb-width}';
 		height: $form-control-height;
 		margin: 0;
 		padding: 0;
@@ -672,9 +673,18 @@
 		&::-moz-range-thumb {
 			-moz-appearance: none;
 			appearance: none;
-			border-width: 0;
-			height: 1px;
-			width: 1px;
+			background-color: $thumb-bg;
+			background-image: $thumb-bg-image;
+			border-color: $thumb-border-color;
+			border-style: $thumb-border-style;
+			border-radius: $thumb-border-radius;
+			border-width: $thumb-border-width;
+			box-shadow: $thumb-box-shadow;
+			height: $thumb-height;
+			margin-top: math-sign($thumb-height / 2);
+			position: relative;
+			top: 50%;
+			width: $thumb-width;
 		}
 
 		&::-moz-range-track {
@@ -695,10 +705,15 @@
 
 		&::-ms-thumb {
 			appearance: none;
-			background-color: transparent;
-			border-width: 0;
-			height: 10px;
-			width: 10px;
+			background-color: $thumb-bg;
+			background-image: $thumb-bg-image;
+			border-color: $thumb-border-color;
+			border-radius: $thumb-border-radius;
+			border-style: $thumb-border-style;
+			border-width: $thumb-border-width;
+			box-shadow: $thumb-box-shadow;
+			height: $thumb-height;
+			width: $thumb-width;
 		}
 
 		&::-ms-tooltip {
@@ -725,8 +740,18 @@
 		&::-webkit-slider-thumb {
 			-webkit-appearance: none;
 			appearance: none;
-			height: 1px;
-			width: 1px;
+			background-color: $thumb-bg;
+			background-image: $thumb-bg-image;
+			border-color: $thumb-border-color;
+			border-radius: $thumb-border-radius;
+			border-style: $thumb-border-style;
+			border-width: $thumb-border-width;
+			box-shadow: $thumb-box-shadow;
+			height: $thumb-height;
+			margin-top: math-sign($thumb-height / 2);
+			position: relative;
+			top: 50%;
+			width: $thumb-width;
 		}
 
 		&:hover {
@@ -741,6 +766,18 @@
 					visibility: visible;
 					opacity: 1;
 				}
+			}
+
+			&::-moz-range-thumb {
+				background-color: $hover-thumb-bg;
+			}
+
+			&::-ms-thumb {
+				background-color: $hover-thumb-bg;
+			}
+
+			&::-webkit-slider-thumb {
+				background-color: $hover-thumb-bg;
 			}
 		}
 
@@ -757,6 +794,18 @@
 					visibility: visible;
 					opacity: 1;
 				}
+			}
+
+			&::-moz-range-thumb {
+				box-shadow: $focus-thumb-box-shadow;
+			}
+
+			&::-ms-thumb {
+				box-shadow: $focus-thumb-box-shadow;
+			}
+
+			&::-webkit-slider-thumb {
+				box-shadow: $focus-thumb-box-shadow;
 			}
 		}
 
@@ -775,6 +824,21 @@
 					background-color: $disabled-thumb-bg;
 					box-shadow: $disabled-thumb-box-shadow;
 				}
+			}
+
+			&::-moz-range-thumb {
+				background-color: $disabled-thumb-bg;
+				box-shadow: $disabled-thumb-box-shadow;
+			}
+
+			&::-ms-thumb {
+				background-color: $disabled-thumb-bg;
+				box-shadow: $disabled-thumb-box-shadow;
+			}
+
+			&::-webkit-slider-thumb {
+				background-color: $disabled-thumb-bg;
+				box-shadow: $disabled-thumb-box-shadow;
 			}
 		}
 	}

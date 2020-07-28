@@ -16,6 +16,7 @@ $clay-range-input: map-deep-merge(
 		track-bg: $gray-200,
 		tooltip-padding: 0.5rem 0.75rem,
 		hover-thumb-bg: $primary-l3,
+		focus-thumb-box-shadow: $component-focus-inset-box-shadow,
 		disabled-thumb-bg: $gray-100,
 	),
 	$clay-range-input
