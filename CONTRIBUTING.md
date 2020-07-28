@@ -215,7 +215,7 @@ To publish a new version for all packages that have updated, follow these steps:
     > Note, if package A requires package B and package B receives a minor update, package A will also receive a minor update via lerna.
 
 4.  Create a draft PR against `stable` (not intended to be merged) to the clay repo; the sole purpose of this is to see CI green one last time before pushing the tag.
-5.  Once CI is green, run `git push $REMOTE master --follow-tags`
+5.  Once CI is green, run `git push $REMOTE master --follow-tags --dry-run` to see a preview first before running `git push $REMOTE master --follow-tags`
 6.  Once CI is green, run `git push $REMOTE master:stable`
 7.  Run `lerna publish from-package` - This will push the packages to NPM.
 
@@ -229,10 +229,15 @@ In a rare case you may want to release only one specific package. To do so, foll
 
 1. `git checkout master`
 2. Navigate to specific package (`cd ./packages/$COMPONENT_DIR`)
-3. Run `yarn version` and choose what the new version will be.
-4. Create a draft PR (not intended to be merged) to the clay repo; the sole purpose of this is to see CI green one last time before pushing the tag.
-5. Once CI is green, run `git push $REMOTE master --follow-tags`
-6. Run `yarn publish` to publish module to the npm registry.
+3. Look at the git history of the package and determine if it relies on any non-released code from other packages.
+4. If it relies on other packages, **you must publish those dependencies first** following these same steps (start at step 1 with the dependent package).
+
+_After you have published any dependencies needed_
+
+5. Run `yarn version` and choose what the new version will be. Any _feat_ commits since last release require a minor version. If only _chore_ or _fix_ commits, a patch is required.
+6. Create a draft PR (not intended to be merged) to the clay repo; the sole purpose of this is to see CI green one last time before pushing the tag.
+7. Once CI is green, run `git push $REMOTE master --follow-tags --dry-run` to see a preview first before running `git push $REMOTE master --follow-tags`
+8. Run `yarn publish` to publish module to the npm registry.
 
 ## Updating release in [liferay-portal](https://github.com/liferay/liferay-portal)
 
