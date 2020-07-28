@@ -372,7 +372,6 @@ storiesOf('Components|ClayCard', module)
 						<ClaySticker
 							displayType="danger"
 							position="bottom-left"
-							shape="rounded"
 						>
 							<ClayIcon
 								spritemap={spritemap}
@@ -409,7 +408,6 @@ storiesOf('Components|ClayCard', module)
 						<ClaySticker
 							displayType="danger"
 							position="bottom-left"
-							shape="rounded"
 						>
 							<ClayIcon
 								spritemap={spritemap}
