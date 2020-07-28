@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/liferay/clay/compare/@clayui/sticker@3.1.1...@clayui/sticker@3.2.0) (2020-07-28)
+
+### Features
+
+-   **@clayui/sticker:** add more low level components ([a6dd36f](https://github.com/liferay/clay/commit/a6dd36f))
+-   **clayui.com:** Add JSP code example to Sticker ([394c7e1](https://github.com/liferay/clay/commit/394c7e1))
+-   **clayui.com:** Revert the change made to headings used, rename stickers and tables to sticker and table respectively, also change some wording ([791dabe](https://github.com/liferay/clay/commit/791dabe))
+-   **clayui.com:** Update content structure: Checkbox, Management Toolbar, Select Box, Sticker, Table & Tabs ([0fcd54a](https://github.com/liferay/clay/commit/0fcd54a))
+
 ## [3.1.1](https://github.com/liferay/clay/compare/@clayui/sticker@3.1.0...@clayui/sticker@3.1.1) (2020-04-24)
 
 **Note:** Version bump only for package @clayui/sticker

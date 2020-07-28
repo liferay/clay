@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/liferay/clay/compare/@clayui/list@3.2.8...@clayui/list@3.3.0) (2020-07-28)
+
+### Features
+
+-   **@clayui/sticker:** add more low level components ([a6dd36f](https://github.com/liferay/clay/commit/a6dd36f))
+
 ## [3.2.8](https://github.com/liferay/clay/compare/@clayui/list@3.2.7...@clayui/list@3.2.8) (2020-07-14)
 
 **Note:** Version bump only for package @clayui/list

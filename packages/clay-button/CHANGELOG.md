@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.4.0](https://github.com/liferay/clay/compare/@clayui/button@3.3.1...@clayui/button@3.4.0) (2020-07-28)
+
+### Bug Fixes
+
+-   **clayui.com:** Fix wording and a few links on Date Picker and Button ([035d912](https://github.com/liferay/clay/commit/035d912))
+
+### Features
+
+-   **@clayui/button:** add prop for removing monospaced from button ([9c2e51f](https://github.com/liferay/clay/commit/9c2e51f))
+-   **clayui.com:** Add JSP code example to Button ([843f1a0](https://github.com/liferay/clay/commit/843f1a0))
+-   **clayui.com:** Add JSP code example to Button ([fd49a24](https://github.com/liferay/clay/commit/fd49a24))
+
 ## [3.3.1](https://github.com/liferay/clay/compare/@clayui/button@3.3.0...@clayui/button@3.3.1) (2020-04-24)
 
 ### Bug Fixes

@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.16.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.15.0...@clayui/css@3.16.0) (2020-07-28)
+
+
+### Bug Fixes
+
+* **@clayui.css:** Mixins `clay-range-input-variant` hides `.clay-range-thumb` and styles thumb pseudo elements so we can offer a non JS based input[type="range"] ([6b5fa34](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/6b5fa34))
+* **@clayui/css:** Atlas Alerts adjust spacing to match Lexicon specs ([13905b7](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/13905b7))
+* **@clayui/css:** Atlas Alerts change `.alert .close` font-size to 12px ([486603a](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/486603a))
+* **@clayui/css:** Attribute `hidden` should hide elements ([a9e1e56](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/a9e1e56))
+* **@clayui/css:** Clay Color adds highlight for `.active` state ([1e2c2ad](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/1e2c2ad))
+* **@clayui/css:** Clay Color changes swatch size to 20px from 18px for small version ([acd3b89](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/acd3b89))
+* **@clayui/css:** Clay Range adds `.clay-range-progress-none` modifier to hide progress indicator for non JS input range and update focus shadows due to focus artifact in Safari ([45b946b](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/45b946b))
+* **@clayui/css:** Form Validation raise specificity of `.has-{danger|warning|success} .input-group-inset-item` by a class. It is now `.has-{danger|warning|success} .input-group .input-group-inset-item`. ([9e906bd](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/9e906bd))
+* **@clayui/css:** Sorts (alphabetically) imports that are delimited by two new lines ([4548dad](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/4548dad)), closes [#3529](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3529)
+* **@clayui/css:** SVG Icons update `check-circle-full` path normalize thickness and size to other check icons ([6435f04](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/6435f04))
+* **@clayui/css:** SVG Icons update `check-circle` path normalize thickness and size to other check icons ([0e7d50d](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/0e7d50d))
+* **@clayui/css:** SVG Icons update `check-square` path normalize thickness and size to other check icons ([3da4644](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/3da4644))
+* **@clayui/css:** SVG Icons update `check` path normalize thickness and size to other check icons ([fba13b6](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/fba13b6))
+* **@clayui/css:** Update global functions ([146bd4f](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/146bd4f))
+
+
+### Features
+
+* **@clayui/css:** Add new spacers ([c6deb4e](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/c6deb4e))
+* **@clayui/css:** Clay Color should support `.input-group-sm` and `.form-group-sm`. ([309a6c9](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/309a6c9))
+* **@clayui/css:** Drilldown should work with Dropdown Menu, have dual click areas inside `dropdown-item`, and have `min-height` ([b7686a0](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/b7686a0))
+* **@clayui/css:** Dropdowns adds `.dropdown-item-indicator-start`, `.dropdown-item-indicator-text-start`, `.dropdown-item-indicator-end`, `.dropdown-item-indicator-text-end` to allow for separate actions inside a `dropdown-item` ([e76aa8e](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/e76aa8e))
+* **@clayui/css:** Input Groups `.input-group-sm` and `.form-group-sm` should change the size of `.clay-color` ([6e5b4d1](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/6e5b4d1))
+* **@clayui/css:** SVG Icons add `closed-book` ([c461d19](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/c461d19))
+
+
+
+
+
 # [3.15.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.14.0...@clayui/css@3.15.0) (2020-07-14)
 
 

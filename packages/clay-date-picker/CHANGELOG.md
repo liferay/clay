@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.5.0](https://github.com/liferay/clay/compare/@clayui/date-picker@3.4.2...@clayui/date-picker@3.5.0) (2020-07-28)
+
+### Bug Fixes
+
+-   update packages to appropriate dependencies ([0026168](https://github.com/liferay/clay/commit/0026168))
+
+### Features
+
+-   **@clayui/shared:** Adds an object called Keys for normalize Keyboard events checkings avoiding people to using strings and care about browser compat when using React syntetic Keyboard events ([95c8ea9](https://github.com/liferay/clay/commit/95c8ea9)), closes [/github.com/facebook/react/blob/b87aabdfe1/packages/react-dom/src/events/getEventKey.js#L12-L29](https://github.com//github.com/facebook/react/blob/b87aabdfe1/packages/react-dom/src/events/getEventKey.js/issues/L12-L29)
+
 ## [3.4.2](https://github.com/liferay/clay/compare/@clayui/date-picker@3.4.1...@clayui/date-picker@3.4.2) (2020-07-14)
 
 **Note:** Version bump only for package @clayui/date-picker

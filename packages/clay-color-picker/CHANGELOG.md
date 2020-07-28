@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.8](https://github.com/liferay/clay/compare/@clayui/color-picker@3.2.7...@clayui/color-picker@3.2.8) (2020-07-28)
+
+### Bug Fixes
+
+-   **@clayui/color-picker:** Add option to make Color Picker small ([cdcadbc](https://github.com/liferay/clay/commit/cdcadbc))
+-   update packages to appropriate dependencies ([0026168](https://github.com/liferay/clay/commit/0026168))
+-   **@clayui/color-picker:** Splotch should use classes provided by Clay CSS to style borders on light colors and active colors ([b426c46](https://github.com/liferay/clay/commit/b426c46))
+
 ## [3.2.7](https://github.com/liferay/clay/compare/@clayui/color-picker@3.2.6...@clayui/color-picker@3.2.7) (2020-07-14)
 
 **Note:** Version bump only for package @clayui/color-picker
