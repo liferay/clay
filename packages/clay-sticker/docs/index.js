@@ -127,12 +127,14 @@ const stickerUserIconImportsCode = `import ClaySticker from '@clayui/sticker';
 const StickerUserIconCode = `const Component = () => {
 	return (
 		<>
-			<ClaySticker className="sticker-user-icon" size="xl">
-				<div className="sticker-overlay">
-					<img className="sticker-img" src="/images/long_user_image.png" />
-				</div>
+			<ClaySticker userIcon size="xl">
+				<ClaySticker.Image
+					alt="placeholder"
+					src="/images/long_user_image.png"
+				/>
 			</ClaySticker>
-			<ClaySticker className="sticker-user-icon" size="xl">
+
+			<ClaySticker userIcon size="xl">
 				{'BS'}
 			</ClaySticker>
 		</>

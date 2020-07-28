@@ -79,19 +79,48 @@ storiesOf('Components|ClaySticker', module)
 	.add('image', () => (
 		<div>
 			<ClaySticker size="sm">
-				<img alt="placeholder" src="https://via.placeholder.com/50" />
+				<ClaySticker.Image
+					alt="placeholder"
+					src="https://via.placeholder.com/50"
+				/>
 			</ClaySticker>
 
 			<ClaySticker>
-				<img alt="placeholder" src="https://via.placeholder.com/50" />
+				<ClaySticker.Image
+					alt="placeholder"
+					src="https://via.placeholder.com/50"
+				/>
 			</ClaySticker>
 
 			<ClaySticker size="lg">
-				<img alt="placeholder" src="https://via.placeholder.com/50" />
+				<ClaySticker.Image
+					alt="placeholder"
+					src="https://via.placeholder.com/50"
+				/>
 			</ClaySticker>
 
 			<ClaySticker size="xl">
-				<img alt="placeholder" src="https://via.placeholder.com/50" />
+				<ClaySticker.Image
+					alt="placeholder"
+					src="https://via.placeholder.com/50"
+				/>
+			</ClaySticker>
+		</div>
+	))
+	.add('user image', () => (
+		<div>
+			<ClaySticker shape="user-icon" size="sm">
+				<ClaySticker.Image
+					alt="placeholder"
+					src="https://via.placeholder.com/50"
+				/>
+			</ClaySticker>
+
+			<ClaySticker shape="user-icon">
+				<ClaySticker.Image
+					alt="placeholder"
+					src="https://via.placeholder.com/50"
+				/>
 			</ClaySticker>
 		</div>
 	))
@@ -145,14 +174,13 @@ storiesOf('Components|ClaySticker', module)
 	.add('overlay', () => (
 		<>
 			<ClaySticker displayType="dark" size="xl">
-				<div className="sticker-overlay">
-					<img
+				<ClaySticker.Overlay>
+					<ClaySticker.Image
 						alt=""
-						className="sticker-img"
 						src="https://via.placeholder.com/200"
 					/>
-				</div>
-				<div className="sticker-overlay">{'BC'}</div>
+				</ClaySticker.Overlay>
+				<ClaySticker.Overlay>{'BC'}</ClaySticker.Overlay>
 			</ClaySticker>
 		</>
 	));

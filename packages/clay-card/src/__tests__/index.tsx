@@ -99,11 +99,7 @@ describe('ClayCard', () => {
 						className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid"
 						src="https://via.placeholder.com/256"
 					/>
-					<ClaySticker
-						displayType="danger"
-						position="bottom-left"
-						shape="rounded"
-					>
+					<ClaySticker displayType="danger" position="bottom-left">
 						<ClayIcon
 							spritemap="/path/to/some/resource.svg"
 							symbol="document-image"
@@ -149,7 +145,6 @@ describe('ClayCard', () => {
 						<ClaySticker
 							displayType="danger"
 							position="bottom-left"
-							shape="rounded"
 						>
 							<ClayIcon
 								spritemap="/path/to/some/resource.svg"
