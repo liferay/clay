@@ -1,3 +1,60 @@
+////
+/// @group Type
+////
+
+/// A Bootstrap 4 mixin for generating text color variants.
+/// @deprecated
+/// @param {String} $parent - The CSS selector
+/// @param {Color} $color - The text-color
+/// @param {Bool} $ignore-warning[false] - Supress deprecating warning
+
+@mixin text-emphasis-variant($parent, $color, $ignore-warning: false) {
+	#{$parent} {
+		color: $color !important;
+	}
+
+	@if $emphasized-link-hover-darken-percentage != 0 {
+		a#{$parent} {
+			&:hover,
+			&:focus {
+				color: darken(
+					$color,
+					$emphasized-link-hover-darken-percentage
+				) !important;
+			}
+		}
+	}
+
+	@include deprecate(
+		'`text-emphasis-variant()`',
+		'v4.4.0',
+		'v5',
+		$ignore-warning
+	);
+}
+
+/// A Bootstrap 4 mixin for hiding text without using `display: none`.
+/// @deprecated
+/// @param {Bool} $ignore-warning[false] - Suppress deprecation warning
+
+@mixin text-hide($ignore-warning: false) {
+	background-color: transparent;
+	border: 0;
+	color: transparent;
+	font: 0/0 a;
+	text-shadow: none;
+
+	@include deprecate('`text-hide()`', 'v4.1.0', 'v5', $ignore-warning);
+}
+
+/// A Bootstrap 4 mixin for displaying ellipsis if text overflows its container. Requires other CSS properties to function properly depending on the `display` property. Clay CSS `truncate-text-inline` with `text-truncate` is a more fail safe pattern.
+
+@mixin text-truncate() {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
 // Highlight inline text
 // @param $bg-color - Color of the highlight
 // @param $color - Colors the text

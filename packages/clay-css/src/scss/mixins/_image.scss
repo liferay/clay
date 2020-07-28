@@ -1,0 +1,36 @@
+////
+/// @group Image
+////
+
+/// A Bootstrap 4 mixin that keeps images from scaling beyond the width of their parent.
+
+@mixin img-fluid() {
+	height: auto;
+	max-width: 100%;
+}
+
+/// A Bootstrap 4 mixin for setting `background-image` and `background-size`.
+/// @deprecated
+/// @param {String} $file-1x
+/// @param {String} $file-2x
+/// @param {Number} $width-1x
+/// @param {Number} $height-1x
+
+@mixin img-retina($file-1x, $file-2x, $width-1x, $height-1x) {
+	background-image: url($file-1x);
+
+	// Autoprefixer takes care of adding -webkit-min-device-pixel-ratio and -o-min-device-pixel-ratio,
+	// but doesn't convert dppx=>dpi.
+	// There's no such thing as unprefixed min-device-pixel-ratio since it's nonstandard.
+	// Compatibility info: https://caniuse.com/#feat=css-media-resolution
+	// `min-resolution: 192dpi` IE9-11 don't support dppx
+	// `min-resolution: 2dppx` Standardized
+
+	@media only screen and (min-resolution: 192dpi),
+		only screen and (min-resolution: 2dppx) {
+		background-image: url($file-2x);
+		background-size: $width-1x $height-1x;
+	}
+
+	@include deprecate('`img-retina()`', 'v4.3.0', 'v5');
+}

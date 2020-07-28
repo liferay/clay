@@ -1,0 +1,14 @@
+////
+/// @group clearfix
+////
+
+/// Bootstrap 4's Clearfix Mixin. This is deprecated and will be removed.
+/// @deprecated
+
+@mixin clearfix() {
+	&::after {
+		clear: both;
+		content: '';
+		display: block;
+	}
+}

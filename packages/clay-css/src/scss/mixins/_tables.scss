@@ -2,6 +2,51 @@
 /// @group Tables
 ////
 
+/// A Bootstrap 4 mixin to help create table row variants.
+/// @param {String} $state - The name of the state
+/// @param {Color} $background - `The background-color`
+/// @param {Color} $border - The `border-color`
+
+@mixin table-row-variant($state, $background, $border: null) {
+	// Exact selectors below required to override `.table-striped` and prevent
+	// inheritance to nested tables.
+
+	.table-#{$state} {
+		&,
+		> th,
+		> td {
+			background-color: $background;
+		}
+
+		@if $border != null {
+			th,
+			td,
+			thead th,
+			tbody + tbody {
+				border-color: $border;
+			}
+		}
+	}
+
+	// Hover states for `.table-hover`
+	// Note: this is not available for cells or rows within `thead` or `tfoot`.
+
+	.table-hover {
+		$hover-background: darken($background, 5%);
+
+		.table-#{$state} {
+			@include hover() {
+				background-color: $hover-background;
+
+				> td,
+				> th {
+					background-color: $hover-background;
+				}
+			}
+		}
+	}
+}
+
 /// A mixin to help create table-drag variants.
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example

@@ -167,3 +167,175 @@
 		}
 	}
 }
+
+/// A Bootstrap 4 mixin that generates the correct number of grid classes given any value of `$grid-columns`. This mixin is deprecated. This has been inlined into `components/_grid.scss`.
+/// @deprecated
+/// @param {Number} $columns[$grid-columns]
+/// @param {Number} $gutter[$grid-gutter-width]
+/// @param {Map} $breakpoints[$grid-breakpoints]
+
+@mixin make-grid-columns(
+	$columns: $grid-columns,
+	$gutter: $grid-gutter-width,
+	$breakpoints: $grid-breakpoints
+) {
+	%grid-column {
+		padding-left: $gutter / 2;
+		padding-right: $gutter / 2;
+		position: relative;
+		width: 100%;
+	}
+
+	@each $breakpoint in map-keys($breakpoints) {
+		$infix: breakpoint-infix($breakpoint, $breakpoints);
+
+		@for $i from 1 through $columns {
+			.col#{$infix}-#{$i} {
+				@extend %grid-column;
+			}
+		}
+		.col#{$infix},
+		.col#{$infix}-auto {
+			@extend %grid-column;
+		}
+
+		@include media-breakpoint-up($breakpoint, $breakpoints) {
+			.col#{$infix} {
+				flex-basis: 0;
+				flex-grow: 1;
+				max-width: 100%;
+			}
+
+			@for $i from 1 through $grid-row-columns {
+				.row-cols#{$infix}-#{$i} {
+					@include row-cols($i);
+				}
+			}
+
+			.col#{$infix}-auto {
+				@include make-col-auto();
+			}
+
+			@for $i from 1 through $columns {
+				.col#{$infix}-#{$i} {
+					@include make-col($i, $columns);
+				}
+			}
+
+			.order#{$infix}-first {
+				order: -1;
+			}
+
+			.order#{$infix}-last {
+				order: $columns + 1;
+			}
+
+			@for $i from 0 through $columns {
+				.order#{$infix}-#{$i} {
+					order: $i;
+				}
+			}
+
+			@for $i from 0 through ($columns - 1) {
+				@if not($infix == '' and $i == 0) {
+					.offset#{$infix}-#{$i} {
+						@include make-col-offset($i, $columns);
+					}
+				}
+			}
+		}
+	}
+}
+
+/// A Bootstrap 4 mixin that generates basic container styles. This mixin is deprecated. This has been inlined into `components/_grid.scss`.
+/// @deprecated
+/// @param {Number} $gutter[$grid-gutter-width]
+
+@mixin make-container($gutter: $grid-gutter-width) {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: $gutter / 2;
+	padding-right: $gutter / 2;
+	width: 100%;
+}
+
+/// A Bootstrap 4 mixin that generates container `max-width`s at each breakpoint. This mixin is deprecated. This has been inlined into `components/_grid.scss`.
+/// @deprecated
+/// @param {Number} $max-widths[$container-max-widths]
+/// @param {Number} $breakpoints[$grid-breakpoints]
+
+@mixin make-container-max-widths(
+	$max-widths: $container-max-widths,
+	$breakpoints: $grid-breakpoints
+) {
+	@each $breakpoint, $container-max-width in $max-widths {
+		@include media-breakpoint-up($breakpoint, $breakpoints) {
+			max-width: $container-max-width;
+		}
+	}
+}
+
+/// A Bootstrap 4 mixin that generates basic `.row` styles. This mixin is deprecated. This has been inlined into `components/_grid.scss`.
+/// @deprecated
+/// @param {Number} $gutter[$grid-gutter-width]
+
+@mixin make-row($gutter: $grid-gutter-width) {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -$gutter / 2;
+	margin-right: -$gutter / 2;
+}
+
+/// A Bootstrap 4 mixin. This mixin is deprecated, not used in Bootstrap 4.
+/// @deprecated
+/// @param {Number} $gutter[$grid-gutter-width]
+
+@mixin make-col-ready($gutter: $grid-gutter-width) {
+	padding-left: $gutter / 2;
+	padding-right: $gutter / 2;
+	position: relative;
+	width: 100%;
+}
+
+/// A Bootstrap 4 mixin that generates the width of each `.col-{bp}-*` class. This mixin is deprecated. This has been inlined into `components/_grid.scss`.
+/// @deprecated
+/// @param {Number} $size
+/// @param {Number} $columns[$grid-columns]
+
+@mixin make-col($size, $columns: $grid-columns) {
+	flex: 0 0 percentage($size / $columns);
+	max-width: percentage($size / $columns);
+}
+
+/// A Bootstrap 4 mixin that generates styles for `.col-{bp}-auto` classes. This mixin is deprecated. This has been inlined into `components/_grid.scss`.
+/// @deprecated
+/// @param {Number} $size
+/// @param {Number} $columns[$grid-columns]
+
+@mixin make-col-auto() {
+	flex: 0 0 auto;
+	max-width: 100%;
+	width: auto;
+}
+
+/// A Bootstrap 4 mixin that generates styles for `.col-{bp}-auto` classes. This mixin is deprecated. This has been inlined into `components/_grid.scss`.
+/// @deprecated
+/// @param {Number} $size
+/// @param {Number} $columns[$grid-columns]
+
+@mixin make-col-offset($size, $columns: $grid-columns) {
+	$num: $size / $columns;
+
+	margin-left: if($num == 0, 0, percentage($num));
+}
+
+/// A Bootstrap 4 mixin that generates styles for `.row-cols-{bp}-*` classes. This mixin is deprecated. This has been inlined into `components/_grid.scss`.
+/// @deprecated
+/// @param {Number} $count
+
+@mixin row-cols($count) {
+	& > * {
+		flex: 0 0 100% / $count;
+		max-width: 100% / $count;
+	}
+}
