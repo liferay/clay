@@ -16,6 +16,10 @@
 		@include clay-button-variant($alert-btn);
 	}
 
+	.btn-group {
+		@include clay-container($alert-btn-group);
+	}
+
 	.btn-group-item {
 		@include clay-container($alert-btn-group-item);
 	}
@@ -80,28 +84,18 @@
 // Alert Fluid
 
 .alert-fluid {
-	@include border-radius(0);
-
-	border-width: $alert-fluid-border-width;
-	margin-bottom: $alert-fluid-margin-bottom;
-	padding: 0;
+	@include clay-css($alert-fluid);
 
 	&.alert-dismissible {
 		.container,
 		.container-fluid {
-			padding-bottom: $alert-dismissible-padding-bottom;
-			padding-left: $alert-dismissible-padding-left;
-			padding-right: calc(
-				#{$alert-dismissible-padding-right} + #{$grid-gutter-width / 2}
-			);
-			padding-top: $alert-dismissible-padding-top;
-			position: relative;
+			@include clay-css($alert-fluid-dismissible-container);
 		}
 	}
 
 	.container,
 	.container-fluid {
-		padding: $alert-padding-y $alert-padding-x;
+		@include clay-css($alert-fluid-container);
 	}
 
 	.close {
@@ -118,18 +112,20 @@
 
 .alert-notifications {
 	.alert {
-		@include box-shadow($alert-notifications-box-shadow);
+		@include clay-css($alert-notification);
 
-		width: $alert-notifications-max-width;
-
-		@include clay-scale-component {
-			max-width: none;
-			width: 100%;
+		@include media-breakpoint-down(sm) {
+			@include clay-css($alert-notification-sm-down);
 		}
 
 		&:last-child {
 			margin-bottom: 0;
 		}
+	}
+
+	.alert-fluid {
+		padding-bottom: 0;
+		padding-top: 0;
 	}
 }
 

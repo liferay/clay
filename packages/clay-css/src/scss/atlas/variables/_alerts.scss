@@ -2,8 +2,8 @@
 /// @group alerts
 ////
 
-$alert-padding-x: 1rem !default; // 16px
-$alert-padding-y: 1.09375rem !default; // 17.5px
+$alert-padding-x: 1rem !default;
+$alert-padding-y: 1.03125rem !default;
 
 // For top only border use: 2px 0 0 0
 $alert-border-width: 0.0625rem !default;
@@ -54,9 +54,38 @@ $alert-subtitle: map-deep-merge(
 	$alert-subtitle
 );
 
+$alert-footer: () !default;
+$alert-footer: map-deep-merge(
+	(
+		margin-top: 1rem,
+	),
+	$alert-footer
+);
+
+// Alert Fluid
+
+$alert-fluid-container: () !default;
+$alert-fluid-container: map-merge(
+	(
+		padding-bottom: 1.0625rem,
+		padding-top: 1.0625rem,
+	),
+	$alert-fluid-container
+);
+
 // Alert Notification
 
 $alert-notifications-box-shadow: 0 0.5rem 2rem -0.25rem rgba(0, 0, 0, 0.3) !default;
+
+$alert-notification: () !default;
+$alert-notification: map-merge(
+	(
+		box-shadow: $alert-notifications-box-shadow,
+		padding-bottom: 1rem,
+		padding-top: 1rem,
+	),
+	$alert-notification
+);
 
 // Alert Autofit Row
 
