@@ -28,6 +28,10 @@
         "aliases": ["texts", "lines", "editor"]
     },
     {
+        "name": "align-image-full-width",
+        "aliases": ["texts", "lines", "editor"]
+    },
+    {
         "name": "align-image-left",
         "aliases": ["texts", "lines", "editor"]
     },
@@ -138,6 +142,10 @@
     {
         "name": "autosize",
         "aliases": ["arrows", "box", "expand", "fullscreen", "resize"]
+    },
+    {
+        "name": "background-color",
+        "aliases": ["bucket"]
     },
     {
         "name": "bars",
@@ -340,6 +348,14 @@
         "aliases": ["change", "effects", "settings"]
     },
     {
+        "name": "copy-rtl",
+        "aliases": [""]
+    },
+    {
+        "name": "copy",
+        "aliases": ["duplicate", "paste"]
+    },
+    {
         "name": "credit-card",
         "aliases": [""]
     },
@@ -492,6 +508,10 @@
         "aliases": ["deprecated"]
     },
     {
+        "name": "emoji",
+        "aliases": [""]
+    },
+    {
         "name": "envelope-closed",
         "aliases": [""]
     },
@@ -540,8 +560,16 @@
         "aliases": ["order", "sort"]
     },
     {
+        "name": "flag-empty-rtl",
+        "aliases": [""]
+    },
+    {
         "name": "flag-empty",
         "aliases": ["banner", "report"]
+    },
+    {
+        "name": "flag-full-rtl",
+        "aliases": [""]
     },
     {
         "name": "flag-full",
@@ -606,6 +634,10 @@
     {
         "name": "hidden",
         "aliases": ["eye", "hide", "see", "show", "view"]
+    },
+    {
+        "name": "home-full",
+        "aliases": [""]
     },
     {
         "name": "home",
@@ -680,8 +712,16 @@
         "aliases": ["chain", "connection"]
     },
     {
+        "name": "list-ol-rtl",
+        "aliases": [""]
+    },
+    {
         "name": "list-ol",
         "aliases": ["number", "order", "sequence"]
+    },
+    {
+        "name": "list-ul-rtl",
+        "aliases": [""]
     },
     {
         "name": "list-ul",
@@ -706,6 +746,10 @@
     {
         "name": "logout",
         "aliases": ["log out", "off", "on", "sign", "sign out", "turn"]
+    },
+    {
+        "name": "low-vision",
+        "aliases": [""]
     },
     {
         "name": "magic",
@@ -826,6 +870,22 @@
     {
         "name": "password-policies",
         "aliases": ["access", "login", "log in", "security", "user"]
+    },
+    {
+        "name": "paste-plaintext-rtl",
+        "aliases": [""]
+    },
+    {
+        "name": "paste-plaintext",
+        "aliases": [""]
+    },
+    {
+        "name": "paste-word-rtl",
+        "aliases": [""]
+    },
+    {
+        "name": "paste-word",
+        "aliases": [""]
     },
     {
         "name": "paste",
@@ -968,6 +1028,10 @@
         "aliases": ["inspect", "lens", "zoom"]
     },
     {
+        "name": "select-all",
+        "aliases": [""]
+    },
+    {
         "name": "select-from-list",
         "aliases": ["input", "multiple", "options"]
     },
@@ -1056,6 +1120,10 @@
         "aliases": ["margin", "padding"]
     },
     {
+        "name": "special-character",
+        "aliases": [""]
+    },
+    {
         "name": "square-hole",
         "aliases": [""]
     },
@@ -1134,6 +1202,10 @@
     {
         "name": "test",
         "aliases": ["experiment", "lab"]
+    },
+    {
+        "name": "text-color",
+        "aliases": [""]
     },
     {
         "name": "text-editor",
