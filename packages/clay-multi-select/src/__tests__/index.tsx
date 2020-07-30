@@ -142,7 +142,7 @@ describe('Interactions', () => {
 		});
 
 		fireEvent.keyDown(input as HTMLInputElement, {
-			key: 'Comma',
+			key: ',',
 		});
 
 		expect(container.querySelectorAll('.label').length).toEqual(1);
@@ -151,7 +151,7 @@ describe('Interactions', () => {
 			target: {value: 'bar'},
 		});
 
-		fireEvent.keyDown(input as HTMLInputElement, {key: 'Comma'});
+		fireEvent.keyDown(input as HTMLInputElement, {key: ','});
 
 		expect(container.querySelectorAll('.label').length).toEqual(2);
 	});

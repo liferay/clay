@@ -12,7 +12,7 @@ import {FocusScope, Keys, noop, sub} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
 
-const DELIMITER_KEYS = ['Enter', 'Comma'];
+const DELIMITER_KEYS = ['Enter', ','];
 
 type Item = {
 	[propName: string]: any;
