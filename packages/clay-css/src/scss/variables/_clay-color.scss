@@ -233,6 +233,8 @@ $clay-color-map: map-deep-merge(
 		margin-bottom: 1rem,
 		margin-right: 1rem,
 		position: relative,
+		touch-action: none,
+		user-select: none,
 		width: 144px,
 	),
 	$clay-color-map
@@ -293,6 +295,8 @@ $clay-color-range: map-deep-merge(
 		margin-bottom: 1.25rem,
 		margin-top: 0.25rem,
 		position: relative,
+		touch-action: none,
+		user-select: none,
 	),
 	$clay-color-range
 );
