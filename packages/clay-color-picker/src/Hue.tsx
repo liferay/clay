@@ -5,7 +5,7 @@
 
 import React from 'react';
 
-import {useMousePosition} from './hooks';
+import {usePointerPosition} from './hooks';
 import {hueToX, xToHue} from './util';
 
 interface IProps {
@@ -30,13 +30,13 @@ const ClayColorPickerHue: React.FunctionComponent<IProps> = ({
 	const containerRef = React.useRef<HTMLDivElement>(null);
 	const selectorActive = React.useRef<boolean>(false);
 
-	const {onMouseMove, setXY, x, y} = useMousePosition(containerRef);
+	const {onPointerMove, setXY, x, y} = usePointerPosition(containerRef);
 
 	const removeListeners = () => {
 		selectorActive.current = false;
 
-		window.removeEventListener('mousemove', onMouseMove);
-		window.removeEventListener('mouseup', removeListeners);
+		window.removeEventListener('pointermove', onPointerMove);
+		window.removeEventListener('pointerup', removeListeners);
 	};
 
 	React.useLayoutEffect(() => {
@@ -56,12 +56,18 @@ const ClayColorPickerHue: React.FunctionComponent<IProps> = ({
 	return (
 		<div
 			className="clay-color-range clay-color-range-hue"
-			onMouseDown={(event) => {
-				selectorActive.current = true;
-				onMouseMove(event);
+			onPointerDown={(event) => {
+				event.preventDefault();
 
-				window.addEventListener('mousemove', onMouseMove);
-				window.addEventListener('mouseup', removeListeners);
+				selectorActive.current = true;
+				onPointerMove(event);
+
+				(containerRef.current!.querySelector(
+					'.clay-color-range-pointer'
+				) as HTMLElement)!.focus();
+
+				window.addEventListener('pointermove', onPointerMove);
+				window.addEventListener('pointerup', removeListeners);
 			}}
 			ref={containerRef}
 		>

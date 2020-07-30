@@ -8,10 +8,10 @@ import React from 'react';
 /**
  * Utility hook for calculating the mouse position
  */
-export function useMousePosition(containerRef: React.RefObject<any>) {
+export function usePointerPosition(containerRef: React.RefObject<any>) {
 	const [xy, setXY] = React.useState({x: 0, y: 0});
 
-	const onMouseMove = (event: React.MouseEvent | MouseEvent) => {
+	const onPointerMove = (event: React.PointerEvent | PointerEvent) => {
 		if (containerRef.current) {
 			const rect = containerRef.current.getBoundingClientRect();
 			const x = event.pageX;
@@ -32,7 +32,7 @@ export function useMousePosition(containerRef: React.RefObject<any>) {
 		}
 	};
 
-	return {...xy, onMouseMove, setXY};
+	return {...xy, onPointerMove, setXY};
 }
 
 /**
