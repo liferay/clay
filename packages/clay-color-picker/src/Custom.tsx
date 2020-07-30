@@ -96,6 +96,11 @@ interface IProps {
 	onColorsChange: (val: Array<string>) => void;
 
 	/**
+	 * Flag for showing and disabling the palette of colors
+	 */
+	showPalette?: boolean;
+
+	/**
 	 * Path to the location of the spritemap resource.
 	 */
 	spritemap?: string;
@@ -109,11 +114,12 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 	label,
 	onChange,
 	onColorsChange,
+	showPalette,
 	spritemap,
 }) => {
 	const inputRef = React.useRef(null);
 	const [activeSplotchIndex, setActiveSplotchIndex] = React.useState(0);
-	const [editorActive, setEditorActive] = React.useState(false);
+	const [editorActive, setEditorActive] = React.useState(!showPalette);
 
 	const color = tinycolor(colors[activeSplotchIndex]);
 
@@ -157,42 +163,46 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 				<div className="clay-color-header">
 					<span className="component-title">{label}</span>
 
-					<button
-						className={`${
-							editorActive ? 'close' : ''
-						} component-action`}
-						onClick={() => setEditorActive(!editorActive)}
-						type="button"
-					>
-						<Icon
-							spritemap={spritemap}
-							symbol={editorActive ? 'times' : 'drop'}
-						/>
-					</button>
+					{showPalette && (
+						<button
+							className={`${
+								editorActive ? 'close' : ''
+							} component-action`}
+							onClick={() => setEditorActive(!editorActive)}
+							type="button"
+						>
+							<Icon
+								spritemap={spritemap}
+								symbol={editorActive ? 'times' : 'drop'}
+							/>
+						</button>
+					)}
 				</div>
 			)}
 
-			<div className="clay-color-swatch">
-				{colors.map((hex, i) => (
-					<div className="clay-color-swatch-item" key={i}>
-						<Splotch
-							active={i === activeSplotchIndex}
-							onClick={() => {
-								if (hex === 'FFFFFF') {
-									setEditorActive(true);
-								}
+			{showPalette && (
+				<div className="clay-color-swatch">
+					{colors.map((hex, i) => (
+						<div className="clay-color-swatch-item" key={i}>
+							<Splotch
+								active={i === activeSplotchIndex}
+								onClick={() => {
+									if (hex === 'FFFFFF') {
+										setEditorActive(true);
+									}
 
-								setActiveSplotchIndex(i);
+									setActiveSplotchIndex(i);
 
-								setHue(tinycolor(hex).toHsv().h);
+									setHue(tinycolor(hex).toHsv().h);
 
-								onChange(hex);
-							}}
-							value={hex}
-						/>
-					</div>
-				))}
-			</div>
+									onChange(hex);
+								}}
+								value={hex}
+							/>
+						</div>
+					))}
+				</div>
+			)}
 
 			{editorActive && (
 				<>
