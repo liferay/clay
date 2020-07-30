@@ -6,7 +6,7 @@
 import React from 'react';
 import tinycolor from 'tinycolor2';
 
-import {useMousePosition} from './hooks';
+import {usePointerPosition} from './hooks';
 import {colorToXY, xToSaturation, yToVisibility} from './util';
 
 interface IProps {
@@ -37,16 +37,16 @@ const ClayColorPickerGradientSelector: React.FunctionComponent<IProps> = ({
 	const containerRef = React.useRef<HTMLDivElement>(null);
 	const selectorActive = React.useRef<boolean>(false);
 
-	const {onMouseMove, setXY, x, y} = useMousePosition(containerRef);
+	const {onPointerMove, setXY, x, y} = usePointerPosition(containerRef);
 
 	const removeListeners = () => {
 		selectorActive.current = false;
 
-		window.removeEventListener('mousemove', onMouseMove);
-		window.removeEventListener('mouseup', removeListeners);
+		window.removeEventListener('pointermove', onPointerMove);
+		window.removeEventListener('pointerup', removeListeners);
 	};
 
-	React.useEffect(() => {
+	React.useLayoutEffect(() => {
 		const {current} = containerRef;
 
 		if (current && selectorActive.current) {
@@ -65,12 +65,18 @@ const ClayColorPickerGradientSelector: React.FunctionComponent<IProps> = ({
 	return (
 		<div
 			className="clay-color-map clay-color-map-hsb"
-			onMouseDown={(event) => {
-				selectorActive.current = true;
-				onMouseMove(event);
+			onPointerDown={(event) => {
+				event.preventDefault();
 
-				window.addEventListener('mousemove', onMouseMove);
-				window.addEventListener('mouseup', removeListeners);
+				selectorActive.current = true;
+				onPointerMove(event);
+
+				(containerRef.current!.querySelector(
+					'.clay-color-map-pointer'
+				) as HTMLElement)!.focus();
+
+				window.addEventListener('pointermove', onPointerMove);
+				window.addEventListener('pointerup', removeListeners);
 			}}
 			ref={containerRef}
 			style={{
@@ -78,13 +84,14 @@ const ClayColorPickerGradientSelector: React.FunctionComponent<IProps> = ({
 				backgroundImage: `linear-gradient(to top, #000, rgba(0, 0, 0, 0)), linear-gradient(to right, #FFF, rgba(255, 255, 255, 0))`,
 			}}
 		>
-			<span
+			<button
 				className="clay-color-map-pointer clay-color-pointer"
 				style={{
 					background: color.toHexString(),
 					left: x - 7,
 					top: y - 7,
 				}}
+				type="button"
 			/>
 		</div>
 	);
