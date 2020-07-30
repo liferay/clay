@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.6.1](https://github.com/liferay/clay/compare/@clayui/multi-select@3.6.0...@clayui/multi-select@3.6.1) (2020-07-30)
+
+### Bug Fixes
+
+-   **@clayui/multi-select:** key should be ',' instead of 'Comma' ([a808f36](https://github.com/liferay/clay/commit/a808f36))
+
 # [3.6.0](https://github.com/liferay/clay/compare/@clayui/multi-select@3.5.7...@clayui/multi-select@3.6.0) (2020-07-28)
 
 ### Bug Fixes
