@@ -102,8 +102,11 @@ $custom-control-label-text-small: map-deep-merge(
 
 // Custom Checkbox
 
-$custom-checkbox-indicator-icon-checked: clay-icon(check, $white) !default;
-$custom-checkbox-indicator-icon-checked-bg-size: 62% !default;
+$custom-checkbox-indicator-icon-checked: clay-icon(
+	check-small,
+	$white
+) !default;
+$custom-checkbox-indicator-icon-checked-bg-size: 100% !default;
 $custom-checkbox-indicator-icon-indeterminate-bg-size: 51% !default;
 
 $custom-checkbox-indicator-indeterminate-bg: $component-active-bg !default;
