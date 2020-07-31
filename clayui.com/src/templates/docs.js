@@ -14,6 +14,7 @@ import React, {useEffect} from 'react';
 import Helmet from 'react-helmet';
 
 import CodeClipboard from '../components/CodeClipboard';
+import CodeToggle from '../components/CodeToggle';
 import LayoutNav from '../components/LayoutNav';
 import Sidebar from '../components/Sidebar';
 import Typography from '../components/Typography';
@@ -116,11 +117,15 @@ const PackageInfo = ({fields = {}, frontmatter = {}}) => (
 
 const TabContent = ({html, jsx}) =>
 	html ? (
-		<div
-			dangerouslySetInnerHTML={{
-				__html: html,
-			}}
-		/>
+		<CodeClipboard>
+			<CodeToggle>
+				<div
+					dangerouslySetInnerHTML={{
+						__html: html,
+					}}
+				/>
+			</CodeToggle>
+		</CodeClipboard>
 	) : jsx ? (
 		<CodeClipboard>
 			<MDXProvider

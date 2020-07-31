@@ -1,10 +1,32 @@
 .code-container {
-	margin: calc(1rem * 1.5) 0;
+	margin: 1.5rem 0;
 	position: relative;
+
+	.gatsby-highlight > code {
+		display: none;
+	}
+
+	.btn-collapse {
+		.icon-collapse--expanded {
+			display: none;
+		}
+	}
 }
 
-.code-container.hide {
-	display: none;
+.code-container.expanded {
+	pre > code {
+		display: block;
+	}
+
+	.btn-collapse {
+		.icon-collapse--collapsed {
+			display: none;
+		}
+
+		.icon-collapse--expanded {
+			display: inline-block;
+		}
+	}
 }
 
 .code-container pre code {
