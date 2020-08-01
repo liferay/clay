@@ -2,7 +2,7 @@
 	margin: 1.5rem 0;
 	position: relative;
 
-	.gatsby-highlight > code {
+	.gatsby-highlight code {
 		display: none;
 	}
 
@@ -14,7 +14,7 @@
 }
 
 .code-container.expanded {
-	pre > code {
+	code {
 		display: block;
 	}
 
@@ -29,16 +29,8 @@
 	}
 }
 
-.code-container pre code {
-	white-space: pre;
-}
-
-.code-container .btn-copy,
-.code-container .btn-collapse,
-.gatsby-highlight .btn-copy,
-.gatsby-highlight .btn-collapse {
-	@include transition(background 0.3s ease-in-out);
-
+.btn-copy,
+.btn-collapse {
 	animation: fadeIn 0.5s cubic-bezier(0.3, 0, 0.3, 1) 0s 1 forwards;
 	background: rgba(255, 255, 255, 0.6);
 	box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.3);
@@ -65,79 +57,15 @@
 	}
 }
 
-.code-container .btn-copy {
+.btn-copy {
 	right: 46px;
 }
 
-.code-container .btn-collapse {
+.btn-collapse {
 	right: 8px;
-}
-
-.gatsby-highlight .btn-copy {
-	right: 46px;
-}
-
-.gatsby-highlight .btn-collapse {
-	right: 8px;
-}
-
-.code-container .btn-collapse.hide {
-	display: none;
 }
 
 .tooltip.bottom {
 	position: absolute;
 	top: 0;
-}
-
-.nav.nav-tabs.nav-code-tabs {
-	border-width: 0;
-	margin-bottom: -20px;
-	margin-top: 32px;
-	padding: 0 24px;
-}
-
-.nav.nav-tabs.nav-code-tabs > li > button {
-	background: transparent;
-	border-width: 0;
-	color: rgba($brand-secondary, 0.8);
-	cursor: pointer;
-	font-size: 13px;
-	font-weight: 700;
-	line-height: 20px;
-	margin-right: 12px;
-	padding: 0;
-	text-transform: uppercase;
-
-	&:hover,
-	&:focus {
-		background: transparent;
-		color: rgba($brand-dark, 0.6);
-		outline: none;
-	}
-}
-
-.nav.nav-tabs.nav-code-tabs > li:last-child > button {
-	margin-right: 0;
-}
-
-.nav.nav-tabs.nav-code-tabs > li.active > button {
-	border-width: 0;
-	color: $brand-dark;
-
-	&:focus {
-		color: rgba($brand-dark, 0.6);
-	}
-}
-
-.nav.nav-tabs.nav-code-tabs {
-	li:nth-last-child(3) + li > button {
-		font-size: 0;
-
-		&:before {
-			content: 'WEB COMPONENTS';
-			display: inline-block;
-			font-size: 13px;
-		}
-	}
 }
