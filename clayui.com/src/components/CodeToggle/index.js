@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {useEffect} from 'react';
+import {useEffect} from 'react';
 
 const CodeToggle = (props) => {
 	const handleCodeCollapse = (e) => {
@@ -14,8 +14,7 @@ const CodeToggle = (props) => {
 		if (isCodeCollapse) {
 			const codeContainer = e.target.closest('.code-container');
 
-			const isVisible =
-				codeContainer.classList.contains('expanded');
+			const isVisible = codeContainer.classList.contains('expanded');
 
 			const expanded = isVisible ? 'Expand' : 'Collapse';
 
