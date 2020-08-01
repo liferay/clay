@@ -15,7 +15,6 @@ $alert-close-opacity: 1 !default;
 $alert-close: () !default;
 $alert-close: map-deep-merge(
 	(
-		font-size: 0.75rem,
 		opacity: $alert-close-opacity,
 		disabled: (
 			color: inherit,
