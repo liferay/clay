@@ -11,7 +11,11 @@ import {boolean, select} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React from 'react';
 
-import ClayDropDown, {Align, ClayDropDownWithItems} from '../src';
+import ClayDropDown, {
+	Align,
+	ClayDropDownWithDrilldown,
+	ClayDropDownWithItems,
+} from '../src';
 
 const DropDownWithState: React.FunctionComponent<any> = ({
 	children,
@@ -304,4 +308,23 @@ storiesOf('Components|ClayDropDown', module)
 				</>
 			))}
 		</div>
+	))
+	.add('ClayDropDownWithDrilldown', () => (
+		<ClayDropDownWithDrilldown
+			initialActiveMenu="x0a3"
+			menus={{
+				x0a3: [
+					{href: '#', title: 'Hash Link'},
+					{onClick: () => alert('test'), title: 'Alert!'},
+					{child: 'x0a4', title: 'Subnav'},
+				],
+				x0a4: [
+					{href: '#', title: '2nd hash link'},
+					{child: 'x0a5', title: 'Subnav'},
+				],
+				x0a5: [{title: 'The'}, {title: 'End'}],
+			}}
+			spritemap={spritemap}
+			trigger={<ClayButton>{'Click Me'}</ClayButton>}
+		/>
 	));

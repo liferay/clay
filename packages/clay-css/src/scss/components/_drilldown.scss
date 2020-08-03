@@ -25,6 +25,15 @@
 	height: auto;
 }
 
+.drilldown-next-active,
+.drilldown-prev-initial {
+	transform: translateX(-100%);
+}
+
+.drilldown-prev-active {
+	transform: translateX(0%);
+}
+
 // Drilldown Dropdown Menu
 
 .drilldown.dropdown-menu {

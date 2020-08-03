@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayDropDownWithDrilldown renders 1`] = `
+Document {
+  "location": Location {
+    "assign": [Function],
+    "hash": "",
+    "host": "localhost",
+    "hostname": "localhost",
+    "href": "http://localhost/",
+    "origin": "http://localhost",
+    "pathname": "/",
+    "port": "",
+    "protocol": "http:",
+    "reload": [Function],
+    "replace": [Function],
+    "search": "",
+    "toString": [Function],
+  },
+  Symbol(SameObject caches): Object {
+    "styleSheets": StyleSheetList {},
+  },
+}
+`;
