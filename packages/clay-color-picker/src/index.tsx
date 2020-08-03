@@ -99,6 +99,12 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	showHex?: boolean;
 
 	/**
+	 * Flag for showing and disabling the palette of colors.
+	 * This defaults to true
+	 */
+	showPalette?: boolean;
+
+	/**
 	 * Flag to indicate if `input-group-sm` class should
 	 * be applied to `ClayInput.Group`
 	 */
@@ -135,6 +141,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 	onColorsChange,
 	onValueChange = () => {},
 	showHex = true,
+	showPalette = true,
 	small,
 	spritemap,
 	title,
@@ -233,6 +240,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 									onValueChange(value);
 								}}
 								onColorsChange={onColorsChange}
+								showPalette={showPalette}
 								spritemap={spritemap}
 							/>
 						)}

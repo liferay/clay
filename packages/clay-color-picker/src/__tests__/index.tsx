@@ -72,6 +72,22 @@ describe('Rendering', () => {
 
 		expect(document.body).toMatchSnapshot();
 	});
+
+	it('disabled palette', () => {
+		render(
+			<ClayColorPicker
+				label="Default Colors"
+				name="colorPicker1"
+				onValueChange={() => {}}
+				showPalette={false}
+				spritemap="/test/path"
+				title="Default"
+				value="FFF"
+			/>
+		);
+
+		expect(document.body).toMatchSnapshot();
+	});
 });
 
 describe('Interactions', () => {
