@@ -229,6 +229,7 @@
 	$active-c-kbd-inline: setter(map-get($map, active-c-kbd-inline), ());
 
 	$active-class: setter(map-get($map, active-class), ());
+	$active-class: map-merge($active, $active-class);
 	$active-class: map-merge(
 		$active-class,
 		(
