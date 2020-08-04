@@ -9,8 +9,8 @@ exports[`ClayPopover renders 1`] = `
       class="arrow"
     />
     <div
-      class="inline-scroller"
-      tabindex="0"
+      class="inline-scroller c-inner"
+      tabindex="-1"
     >
       <div
         class="popover-header"
@@ -38,8 +38,8 @@ exports[`ClayPopover renders with \`show\` 1`] = `
       class="arrow"
     />
     <div
-      class="inline-scroller"
-      tabindex="0"
+      class="inline-scroller c-inner"
+      tabindex="-1"
     >
       <div
         class="popover-header"
