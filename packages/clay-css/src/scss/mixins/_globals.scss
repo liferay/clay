@@ -10,8 +10,10 @@
 
 @mixin clay-css($map) {
 	$properties: (
+		'-moz-appearance',
 		'-moz-osx-font-smoothing',
 		'-ms-overflow-style',
+		'-webkit-appearance',
 		'-webkit-font-smoothing',
 		'-webkit-tap-highlight-color',
 		'-webkit-text-size-adjust',

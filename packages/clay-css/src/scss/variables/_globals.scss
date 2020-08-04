@@ -115,3 +115,12 @@ $h6-font-size-mobile: null !default;
 $body-moz-osx-font-smoothing: $moz-osx-font-smoothing !default;
 $body-webkit-font-smoothing: $webkit-font-smoothing !default;
 $body-text-align: inherit !default;
+
+$c-button: () !default;
+$c-button: map-merge(
+	(
+		cursor: $link-cursor,
+		-webkit-appearance: button,
+	),
+	$c-button
+);

@@ -264,15 +264,13 @@ select {
 	word-wrap: normal;
 }
 
-// `[type="button"] { -webkit-appearance: button; }` prevent WebKit bug where `-webkit-appearance` destroys native `audio` and `video` controls in Android 4
+// `[type="button"] { -webkit-appearance: button; }` prevent WebKit bug where `-webkit-appearance` destroys native `audio` and `video` controls in Android 4 and correct the inability to style clickable types in iOS and Safari
 
 button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-	// Correct the inability to style clickable types in iOS and Safari
-
-	-webkit-appearance: button;
+	@include clay-css($c-button);
 }
 
 // Remove inner border from Firefox, but don't restore the outline like Normalize.
