@@ -4,7 +4,7 @@
  */
 
 import classNames from 'classnames';
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 
 export interface IBodyProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
@@ -28,16 +28,43 @@ const ClayModalBody: React.FunctionComponent<IBodyProps> = ({
 	iFrameProps = {},
 	scrollable,
 	url,
-}: IBodyProps) => (
-	<div
-		className={classNames('modal-body', {
-			'inline-scroller': scrollable,
-			'modal-body-iframe': url,
-		})}
-		tabIndex={scrollable ? 0 : undefined}
-	>
-		{url ? <iframe {...iFrameProps} src={url} title={url} /> : children}
-	</div>
-);
+}: IBodyProps) => {
+	const elementRef = useRef<HTMLDivElement | null>(null);
+
+	useEffect(() => {
+		const onKeyDown = (event: KeyboardEvent) => {
+			if (
+				elementRef.current &&
+				(event.key === 'ArrowUp' || event.key === 'ArrowDown') &&
+				!elementRef.current.contains(document.activeElement)
+			) {
+				if (event.defaultPrevented) {
+					return;
+				}
+
+				elementRef.current.focus();
+			}
+		};
+
+		document.addEventListener('keydown', onKeyDown);
+
+		return () => {
+			document.removeEventListener('keydown', onKeyDown);
+		};
+	}, [elementRef]);
+
+	return (
+		<div
+			className={classNames('modal-body', {
+				'inline-scroller c-inner': scrollable,
+				'modal-body-iframe': url,
+			})}
+			ref={elementRef}
+			tabIndex={scrollable ? -1 : undefined}
+		>
+			{url ? <iframe {...iFrameProps} src={url} title={url} /> : children}
+		</div>
+	);
+};
 
 export default ClayModalBody;
