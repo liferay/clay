@@ -193,7 +193,7 @@ const useResource = ({
 
 				promise = fn(getUrlFormat(link, variables), fetchOptions).then(
 					(res: Response) => {
-						if (res.ok && res.body && !res.body.locked) {
+						if (res.ok && !res.bodyUsed) {
 							return res.json();
 						}
 
