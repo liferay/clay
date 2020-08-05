@@ -137,7 +137,7 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 
 				<div
 					className={classNames({
-						'inline-scroller c-inner': !disableScroll,
+						'inline-scroller': !disableScroll,
 					})}
 					tabIndex={!disableScroll ? -1 : undefined}
 				>

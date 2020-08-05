@@ -56,7 +56,7 @@ const ClayModalBody: React.FunctionComponent<IBodyProps> = ({
 	return (
 		<div
 			className={classNames('modal-body', {
-				'inline-scroller c-inner': scrollable,
+				'inline-scroller': scrollable,
 				'modal-body-iframe': url,
 			})}
 			ref={elementRef}
