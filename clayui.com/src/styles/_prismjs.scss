@@ -38,12 +38,8 @@ $insertedBack: #f0fff4;
 	color: $prismWhite;
 	font-size: 13px;
 	line-height: 20px;
-	white-space: pre-wrap;
+	white-space: pre;
 	word-break: break-word;
-}
-
-.gatsby-highlight + .gatsby-highlight {
-	margin-top: 20;
 }
 
 .gatsby-highlight-code-line {

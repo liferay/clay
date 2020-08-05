@@ -7,17 +7,19 @@ import Clipboard from 'clipboard';
 import {useEffect} from 'react';
 
 export default (props) => {
-	const selector = '.tab-pane .btn-copy';
-	let clayClipboard;
-
 	useEffect(() => {
-		clayClipboard = new Clipboard(selector, {
+		const clayClipboard = new Clipboard('.tab-pane .btn-copy', {
 			text: (delegateTarget) => {
-				const codeContentParentNode = delegateTarget.parentNode;
-				const gatsbyHighlightContainer =
-					codeContentParentNode.parentNode;
-				let codeContent;
 				const buttonContent = delegateTarget.innerHTML;
+				const gatsbyHighlightContainer =
+					delegateTarget.closest('.gatsby-highlight') ||
+					delegateTarget.closest('.code-container');
+				const jspTab = gatsbyHighlightContainer.querySelector(
+					'[aria-labelledby="tab-JSP"]'
+				);
+				const reactTab = gatsbyHighlightContainer.querySelector(
+					'[aria-labelledby="tab-React"]'
+				);
 
 				delegateTarget.innerHTML = delegateTarget.innerHTML.replace(
 					/paste/g,
@@ -28,7 +30,7 @@ export default (props) => {
 
 				gatsbyHighlightContainer
 					.querySelector('.copied-alert')
-					.classList.toggle('d-none');
+					.classList.remove('d-none');
 
 				setTimeout(() => {
 					delegateTarget.setAttribute('title', 'Copy');
@@ -37,21 +39,15 @@ export default (props) => {
 
 					gatsbyHighlightContainer
 						.querySelector('.copied-alert')
-						.classList.toggle('d-none');
+						.classList.add('d-none');
 				}, 2000);
 
-				if (codeContentParentNode.querySelector('pre code')) {
-					codeContent = codeContentParentNode.querySelector(
-						'pre code'
-					).innerText;
-				} else {
-					const codeElements = Array.from(
-						codeContentParentNode.querySelectorAll('div textarea')
-					);
+				let codeContent =
+					gatsbyHighlightContainer.querySelector('pre code') ||
+					(reactTab.classList.contains('active') ? reactTab : jspTab);
 
-					codeContent = codeElements
-						.map((code) => code.value)
-						.join('\n');
+				if (codeContent) {
+					codeContent = codeContent.innerText;
 				}
 
 				return codeContent;

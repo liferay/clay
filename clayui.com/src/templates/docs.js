@@ -14,6 +14,7 @@ import React, {useEffect} from 'react';
 import Helmet from 'react-helmet';
 
 import CodeClipboard from '../components/CodeClipboard';
+import CodeToggle from '../components/CodeToggle';
 import LayoutNav from '../components/LayoutNav';
 import Sidebar from '../components/Sidebar';
 import Typography from '../components/Typography';
@@ -116,35 +117,35 @@ const PackageInfo = ({fields = {}, frontmatter = {}}) => (
 
 const TabContent = ({html, jsx}) =>
 	html ? (
-		<div
-			dangerouslySetInnerHTML={{
-				__html: html,
-			}}
-		/>
-	) : jsx ? (
-		<CodeClipboard>
-			<MDXProvider
-				components={{
-					a: Typography.A,
-					h1: Typography.H1,
-					h2: Typography.H2,
-					h3: Typography.H3,
-					h4: Typography.H4,
-					p: Typography.P,
-					ul: (props) => (
-						<ul
-							className={
-								props.className ? props.className : 'clay-ul'
-							}
-						>
-							{props.children}
-						</ul>
-					),
+		<CodeToggle>
+			<div
+				dangerouslySetInnerHTML={{
+					__html: html,
 				}}
-			>
-				<MDXRenderer>{jsx}</MDXRenderer>
-			</MDXProvider>
-		</CodeClipboard>
+			/>
+		</CodeToggle>
+	) : jsx ? (
+		<MDXProvider
+			components={{
+				a: Typography.A,
+				h1: Typography.H1,
+				h2: Typography.H2,
+				h3: Typography.H3,
+				h4: Typography.H4,
+				p: Typography.P,
+				ul: (props) => (
+					<ul
+						className={
+							props.className ? props.className : 'clay-ul'
+						}
+					>
+						{props.children}
+					</ul>
+				),
+			}}
+		>
+			<MDXRenderer>{jsx}</MDXRenderer>
+		</MDXProvider>
 	) : null;
 
 export default (props) => {
@@ -314,31 +315,35 @@ export default (props) => {
 														/>
 													)}
 
-													<ClayTabs.Content
-														activeIndex={
-															activeIndex
-														}
-														fade
-													>
-														<ClayTabs.TabPane>
-															<TabContent
-																jsx={
-																	body ||
-																	tab.body
-																}
-															/>
-														</ClayTabs.TabPane>
+													<CodeClipboard>
+														<ClayTabs.Content
+															activeIndex={
+																activeIndex
+															}
+															fade
+														>
+															<ClayTabs.TabPane>
+																<TabContent
+																	jsx={
+																		body ||
+																		tab.body
+																	}
+																/>
+															</ClayTabs.TabPane>
 
-														<ClayTabs.TabPane>
-															<TabContent
-																html={
-																	html ||
-																	tab.html
-																}
-																jsx={tab.body}
-															/>
-														</ClayTabs.TabPane>
-													</ClayTabs.Content>
+															<ClayTabs.TabPane>
+																<TabContent
+																	html={
+																		html ||
+																		tab.html
+																	}
+																	jsx={
+																		tab.body
+																	}
+																/>
+															</ClayTabs.TabPane>
+														</ClayTabs.Content>
+													</CodeClipboard>
 												</div>
 											</div>
 										</div>
