@@ -93,8 +93,10 @@ $alert-autofit-row: map-deep-merge(
 	(
 		margin-left: -0.25rem,
 		margin-right: -0.25rem,
-		autofit-col-padding-left: 0.25rem,
-		autofit-col-padding-right: 0.25rem,
+		autofit-col: (
+			padding-left: 0.25rem,
+			padding-right: 0.25rem,
+		),
 	),
 	$alert-autofit-row
 );
