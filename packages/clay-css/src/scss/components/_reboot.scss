@@ -148,7 +148,7 @@ sup {
 	top: -0.5em;
 }
 
-[href] {
+a {
 	color: $link-color;
 	cursor: $link-cursor;
 	text-decoration: $link-decoration;
@@ -161,17 +161,6 @@ sup {
 
 [tabindex^='-'] {
 	outline: 0;
-}
-
-use[href] {
-	color: inherit;
-	cursor: inherit;
-	text-decoration: none;
-
-	&:hover {
-		color: inherit;
-		text-decoration: none;
-	}
 }
 
 // Code

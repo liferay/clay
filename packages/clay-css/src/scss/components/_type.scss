@@ -107,8 +107,9 @@ h6,
 // Horizontal rules
 
 hr {
-	border-top: $hr-border-width solid $hr-border-color;
-	border: 0;
+	border-color: $hr-border-color;
+	border-style: solid;
+	border-width: $hr-border-width 0 0 0;
 	margin-bottom: $hr-margin-y;
 	margin-top: $hr-margin-y;
 }
