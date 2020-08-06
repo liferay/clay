@@ -194,7 +194,7 @@
 
 // Alert Autofit Row
 
-.alert-autofit-row {
+.autofit-row.alert-autofit-row {
 	@include clay-autofit-row($alert-autofit-row);
 }
 
