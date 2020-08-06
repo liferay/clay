@@ -6,7 +6,7 @@
 import {ClayPortal} from '@clayui/shared';
 import classNames from 'classnames';
 import domAlign from 'dom-align';
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 export const ALIGN_POSITIONS = [
 	'top',
@@ -87,10 +87,11 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 		}: IProps,
 		ref
 	) => {
-		const [internalShow, internalSetShow] = React.useState(externalShow);
+		const [internalShow, internalSetShow] = useState(externalShow);
 
-		const triggerRef = React.useRef<HTMLElement | null>(null);
-		const popoverRef = React.useRef<HTMLElement | null>(null);
+		const triggerRef = useRef<HTMLElement | null>(null);
+		const popoverRef = useRef<HTMLElement | null>(null);
+		const popoverScrollerRef = useRef<HTMLDivElement | null>(null);
 
 		if (!ref) {
 			ref = popoverRef as React.Ref<HTMLDivElement>;
@@ -99,7 +100,7 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 		const show = externalShow ? externalShow : internalShow;
 		const setShow = onShowChange ? onShowChange : internalSetShow;
 
-		React.useEffect(() => {
+		useEffect(() => {
 			if (
 				trigger &&
 				ref &&
@@ -122,6 +123,12 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 			}
 		}, [show]);
 
+		useEffect(() => {
+			if (popoverScrollerRef.current && show) {
+				popoverScrollerRef.current.focus();
+			}
+		}, [popoverScrollerRef, show]);
+
 		let content = (
 			<div
 				className={classNames(
@@ -139,6 +146,7 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 					className={classNames({
 						'inline-scroller': !disableScroll,
 					})}
+					ref={popoverScrollerRef}
 					tabIndex={!disableScroll ? -1 : undefined}
 				>
 					{header && <div className="popover-header">{header}</div>}
