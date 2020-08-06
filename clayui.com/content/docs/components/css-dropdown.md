@@ -21,6 +21,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/dropdowns/'
         -   [Start](#start)
         -   [End](#end)
         -   [Start and End](#start-and-end)
+    -   [Keyboard Shortcuts](#keyboard-shortcuts)
     -   [Scrolling Content](#scrolling-content)
 -   [Actions](#actions)
     -   [Buttons](#buttons)
@@ -1142,6 +1143,191 @@ Use `.dropdown-full` to create a dropdown menu as wide as its relative parent.
 	<li><a class="active dropdown-item" href="#1">Dinner Preference</a></li>
 	<li><a class="dropdown-item" href="#1">Submit Payment</a></li>
 	<li class="dropdown-caption">Dropdown Caption</li>
+</ul>
+```
+
+### Keyboard Shortcuts
+
+<div class="sheet-example">
+	<div class="clay-site-dropdown-menu-container">
+		<ul aria-labelledby="theDropdownToggleId" class="dropdown-menu show">
+			<li>
+				<a class="active autofit-row dropdown-item" href="#1" tabindex="-1">
+					<span class="autofit-col autofit-col-expand">
+						First Option
+					</span>
+					<span class="autofit-col">
+						<kbd class="c-kbd c-kbd-inline">
+							<kbd class="c-kbd">⌘</kbd>
+						</kbd>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a class="autofit-row disabled dropdown-item" href="#1" tabindex="-1">
+					<span class="autofit-col autofit-col-expand">
+						Second Option
+					</span>
+					<span class="autofit-col">
+						<kbd class="c-kbd c-kbd-inline">
+							<kbd class="c-kbd">⌘</kbd
+							><kbd class="c-kbd">K</kbd>
+						</kbd>
+					</span>
+				</a>
+			</li>
+			<li class="dropdown-divider"></li>
+			<li>
+				<button class="autofit-row dropdown-item" type="button">
+					<span class="autofit-col autofit-col-expand">
+						Third Option is the Button Option ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
+					</span>
+					<span class="autofit-col">
+						<kbd class="c-kbd c-kbd-inline">
+							<kbd class="c-kbd">⌘</kbd
+							><span class="c-kbd-separator">+</span
+							><kbd class="c-kbd">Shift</kbd
+							><span class="c-kbd-separator">+</span
+							><kbd class="c-kbd">Y</kbd>
+						</kbd>
+					</span>
+				</button>
+			</li>
+			<li>
+				<a class="autofit-row dropdown-item" href="#1">
+					<span class="autofit-col autofit-col-expand">
+						Fourth Option
+					</span>
+				</a>
+			</li>
+			<li class="dropdown-divider"></li>
+			<li>
+				<a class="autofit-row dropdown-item" href="#1">
+					<span class="autofit-col autofit-col-expand">
+						Fifth Option
+					</span>
+				</a>
+			</li>
+			<li class="dropdown-divider"></li>
+			<li>
+				<a class="autofit-row dropdown-item" href="#1">
+					<span class="autofit-col autofit-col-expand">
+						Sixth Option
+					</span>
+				</a>
+			</li>
+			<li>
+				<a class="autofit-row dropdown-item" href="#1">
+					<span class="autofit-col autofit-col-expand">
+						Seventh Option
+					</span>
+					<span class="autofit-col">
+						<kbd class="c-kbd c-kbd-inline">
+							<kbd class="c-kbd">⌘</kbd
+							><kbd class="c-kbd">P</kbd>
+						</kbd>
+					</span>
+				</a>
+			</li>
+			<li class="dropdown-divider"></li>
+			<li>
+				<a class="autofit-row dropdown-item" href="#1">
+					<span class="autofit-col autofit-col-expand">
+						Eighth Option
+					</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+```html
+<ul aria-labelledby="theDropdownToggleId" class="dropdown-menu show">
+	<li>
+		<a class="active autofit-row dropdown-item" href="#1" tabindex="-1">
+			<span class="autofit-col autofit-col-expand">
+				First Option
+			</span>
+			<span class="autofit-col">
+				<kbd class="c-kbd c-kbd-inline">
+					<kbd class="c-kbd">⌘</kbd>
+				</kbd>
+			</span>
+		</a>
+	</li>
+	<li>
+		<a class="autofit-row disabled dropdown-item" href="#1" tabindex="-1">
+			<span class="autofit-col autofit-col-expand">
+				Second Option
+			</span>
+			<span class="autofit-col">
+				<kbd class="c-kbd c-kbd-inline">
+					<kbd class="c-kbd">⌘</kbd><kbd class="c-kbd">K</kbd>
+				</kbd>
+			</span>
+		</a>
+	</li>
+	<li class="dropdown-divider"></li>
+	<li>
+		<button class="autofit-row dropdown-item" type="button">
+			<span class="autofit-col autofit-col-expand">
+				Third Option is the Button Option
+				ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
+			</span>
+			<span class="autofit-col">
+				<kbd class="c-kbd c-kbd-inline">
+					<kbd class="c-kbd">⌘</kbd
+					><span class="c-kbd-separator">+</span
+					><kbd class="c-kbd">Shift</kbd
+					><span class="c-kbd-separator">+</span
+					><kbd class="c-kbd">Y</kbd>
+				</kbd>
+			</span>
+		</button>
+	</li>
+	<li>
+		<a class="autofit-row dropdown-item" href="#1">
+			<span class="autofit-col autofit-col-expand">
+				Fourth Option
+			</span>
+		</a>
+	</li>
+	<li class="dropdown-divider"></li>
+	<li>
+		<a class="autofit-row dropdown-item" href="#1">
+			<span class="autofit-col autofit-col-expand">
+				Fifth Option
+			</span>
+		</a>
+	</li>
+	<li class="dropdown-divider"></li>
+	<li>
+		<a class="autofit-row dropdown-item" href="#1">
+			<span class="autofit-col autofit-col-expand">
+				Sixth Option
+			</span>
+		</a>
+	</li>
+	<li>
+		<a class="autofit-row dropdown-item" href="#1">
+			<span class="autofit-col autofit-col-expand">
+				Seventh Option
+			</span>
+			<span class="autofit-col">
+				<kbd class="c-kbd c-kbd-inline">
+					<kbd class="c-kbd">⌘</kbd><kbd class="c-kbd">P</kbd>
+				</kbd>
+			</span>
+		</a>
+	</li>
+	<li class="dropdown-divider"></li>
+	<li>
+		<a class="autofit-row dropdown-item" href="#1">
+			<span class="autofit-col autofit-col-expand">
+				Eighth Option
+			</span>
+		</a>
+	</li>
 </ul>
 ```
 
