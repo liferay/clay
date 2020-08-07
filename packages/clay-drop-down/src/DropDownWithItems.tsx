@@ -346,7 +346,7 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 
 				<Wrap>
 					{footerContent ? (
-						<div className="inline-scroller" tabIndex={0}>
+						<div className="inline-scroller">
 							<DropDownContent
 								items={items}
 								spritemap={spritemap}
