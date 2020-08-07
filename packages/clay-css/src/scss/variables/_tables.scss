@@ -1,3 +1,26 @@
+// <table> element
+
+$c-table-base: () !default;
+$c-table-base: map-merge(
+	(
+		border-collapse: collapse,
+	),
+	$c-table-base
+);
+
+// <th> element
+
+$c-th-base: () !default;
+$c-th-base: map-merge(
+	(
+		height: 20px,
+		text-align: left,
+	),
+	$c-th-base
+);
+
+// Table Responsive
+
 $table-responsive-margin-bottom: 1.5rem !default;
 
 // Table
@@ -125,7 +148,18 @@ $table-img-max-height: 100px !default;
 // Table List
 
 $table-list-bg: $white !default;
+$table-list-border-color: $table-border-color !default;
+$table-list-border-x-width: 0.0625rem !default;
+$table-list-border-y-width: 0.0625rem !default;
+
+$table-list-border-width: $table-list-border-y-width $table-list-border-x-width !default;
+
+$table-list-border-radius: $border-radius !default;
 $table-list-color: null !default;
+$table-list-font-size: null !default;
+$table-list-margin-bottom: $table-list-border-y-width !default;
+$table-list-margin-top: null !default;
+
 $table-list-accent-bg: #f2f2f2 !default;
 $table-list-hover-bg: #ececec !default;
 $table-list-active-bg: #dadada !default;
@@ -134,18 +168,6 @@ $table-list-disabled-bg: $white !default;
 $table-list-disabled-color: #acacac !default;
 $table-list-disabled-cursor: $disabled-cursor !default;
 $table-list-disabled-pointer-events: none !default;
-
-$table-list-border-color: $table-border-color !default;
-
-$table-list-border-x-width: 0.0625rem !default; // 1px
-$table-list-border-y-width: 0.0625rem !default; // 1px
-
-$table-list-border-width: $table-list-border-y-width $table-list-border-x-width !default;
-
-$table-list-border-radius: $border-radius !default;
-$table-list-font-size: null !default;
-$table-list-margin-bottom: $table-list-border-y-width !default;
-$table-list-margin-top: null !default;
 
 $table-list-head-bg: null !default;
 $table-list-head-font-size: null !default;
