@@ -7,7 +7,7 @@ order: 4
 <div class="nav-toc">
 
 -   [Base](#base)
-    -   [Kbd](#c-kbd)
+    -   [Nested Kbd](#nested-c-kbd)
     -   [Monospaced](#c-kbd-monospaced)
     -   [Inline](#c-kbd-inline)
     -   [Group](#c-kbd-group)
@@ -37,24 +37,31 @@ order: 4
 A visual pattern used to allow users to learn how to access actions via keyboard.
 
 <div class="clay-site-alert alert alert-info">
-    Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/keys/">Keys Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
+	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/keys/">Keys Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
 </div>
 
 ## Base
 
-The <code>c-kbd</code> component provides base size and spacing styles for the <code>kbd</code> HTML element.
+The `c-kbd` component provides base size and spacing styles for the `kbd` HTML element.
 
-### C Kbd
-
-1.5rem (24px) minimum width and 1.5rem (24px) tall <code>kbd</code> element with <code>padding-left</code>, <code>padding-right</code>, and <code>border-width: 1px</code>.
+1.5rem (24px) minimum width and 1.5rem (24px) tall `kbd` element with `padding-left`, `padding-right`, and `border-width: 1px`.
 
 <div class="sheet-example">
-    <kbd class="c-kbd">Esc</kbd>
-    <kbd class="c-kbd">Ctrl</kbd>
-    <kbd class="c-kbd">Shift</kbd>
-    <kbd class="c-kbd">Alt</kbd>
-    <kbd class="c-kbd">&#8984;+Shift+Y</kbd>
-    <kbd class="c-kbd">&#8984;P</kbd>
+	<kbd class="c-kbd">Esc</kbd>,
+	<kbd class="c-kbd">Ctrl</kbd>,
+	<kbd class="c-kbd">Shift</kbd>,
+	<kbd class="c-kbd">Alt</kbd>,
+	<kbd class="c-kbd">
+		<kbd class="c-kbd">&#8984;</kbd
+		><span class="c-kbd-separator">+</span
+		><kbd class="c-kbd">Shift</kbd
+		><span class="c-kbd-separator">+</span
+		><kbd class="c-kbd">P</kbd>
+	</kbd>,
+	<kbd class="c-kbd">
+		<kbd class="c-kbd">&#8984;</kbd
+		><kbd class="c-kbd">P</kbd>
+	</kbd>
 </div>
 
 ```html
@@ -62,62 +69,241 @@ The <code>c-kbd</code> component provides base size and spacing styles for the <
 <kbd class="c-kbd">Ctrl</kbd>
 <kbd class="c-kbd">Shift</kbd>
 <kbd class="c-kbd">Alt</kbd>
-<kbd class="c-kbd">&#8984;+Shift+Y</kbd>
-<kbd class="c-kbd">&#8984;P</kbd>
+
+<!-- This formatting forces browser to render no white space -->
+<kbd class="c-kbd">
+	<kbd class="c-kbd">&#8984;</kbd><span class="c-kbd-separator">+</span
+	><kbd class="c-kbd">Shift</kbd><span class="c-kbd-separator">+</span
+	><kbd class="c-kbd">P</kbd>
+</kbd>
+
+<kbd class="c-kbd">
+	<kbd class="c-kbd">&#8984;</kbd><kbd class="c-kbd">P</kbd>
+</kbd>
+```
+
+### Nested C Kbd
+
+Nest multiple `.c-kbd` elements inside a single `.c-kbd` element to describe a keyboard command comprising of multiple keys.
+
+<div class="sheet-example">
+	<kbd class="c-kbd">
+		<kbd class="c-kbd">&#8984;</kbd
+		><span class="c-kbd-separator">+</span
+		><kbd class="c-kbd">Shift</kbd
+		><span class="c-kbd-separator">+</span
+		><kbd class="c-kbd">Y</kbd>
+	</kbd>,
+	<kbd class="c-kbd">
+		<kbd class="c-kbd">&#8984;</kbd
+		><kbd class="c-kbd">P</kbd>
+	</kbd>,
+	<kbd class="c-kbd c-kbd-inline">
+		<kbd class="c-kbd">&#8984;</kbd
+		><span class="c-kbd-separator">+</span
+		><kbd class="c-kbd">Shift</kbd
+		><span class="c-kbd-separator">+</span
+		><kbd class="c-kbd">Y</kbd>
+	</kbd>,
+	<kbd class="c-kbd c-kbd-inline">
+		<kbd class="c-kbd">&#8984;</kbd
+		><kbd class="c-kbd">P</kbd>
+	</kbd>
+</div>
+
+```html
+<!-- This formatting forces browser to render no white space -->
+<kbd class="c-kbd">
+	<kbd class="c-kbd">&#8984;</kbd><span class="c-kbd-separator">+</span
+	><kbd class="c-kbd">Shift</kbd><span class="c-kbd-separator">+</span
+	><kbd class="c-kbd">Y</kbd>
+</kbd>
+
+<kbd class="c-kbd">
+	<kbd class="c-kbd">&#8984;</kbd><kbd class="c-kbd">P</kbd>
+</kbd>
+
+<kbd class="c-kbd c-kbd-inline">
+	<kbd class="c-kbd">&#8984;</kbd><span class="c-kbd-separator">+</span
+	><kbd class="c-kbd">Shift</kbd><span class="c-kbd-separator">+</span
+	><kbd class="c-kbd">Y</kbd>
+</kbd>
+
+<kbd class="c-kbd c-kbd-inline">
+	<kbd class="c-kbd">&#8984;</kbd><kbd class="c-kbd">P</kbd>
+</kbd>
+```
+
+<div class="sheet-example">
+	<kbd class="c-kbd">
+		<kbd class="c-kbd c-kbd-light">&#8984;</kbd>
+		<span class="c-kbd-separator">+</span>
+		<kbd class="c-kbd c-kbd-light">Shift</kbd>
+		<span class="c-kbd-separator">+</span>
+		<kbd class="c-kbd c-kbd-light">Y</kbd>
+	</kbd>,
+	<kbd class="c-kbd c-kbd-light">
+		<kbd class="c-kbd">&#8984;</kbd
+		><span class="c-kbd-separator">+</span
+		><kbd class="c-kbd">Shift</kbd
+		><span class="c-kbd-separator">+</span
+		><kbd class="c-kbd">Y</kbd>
+	</kbd>,
+	<kbd class="c-kbd c-kbd-dark">
+		<kbd class="c-kbd">&#8984;</kbd
+		><kbd class="c-kbd">P</kbd>
+	</kbd>
+</div>
+
+```html
+<kbd class="c-kbd">
+	<kbd class="c-kbd c-kbd-light">&#8984;</kbd>
+	<span class="c-kbd-separator">+</span>
+	<kbd class="c-kbd c-kbd-light">Shift</kbd>
+	<span class="c-kbd-separator">+</span>
+	<kbd class="c-kbd c-kbd-light">Y</kbd>
+</kbd>
+
+<!-- This formatting forces browser to render no white space -->
+<kbd class="c-kbd c-kbd-light">
+	<kbd class="c-kbd">&#8984;</kbd><span class="c-kbd-separator">+</span
+	><kbd class="c-kbd">Shift</kbd><span class="c-kbd-separator">+</span
+	><kbd class="c-kbd">Y</kbd>
+</kbd>
+
+<kbd class="c-kbd c-kbd-dark">
+	<kbd class="c-kbd">&#8984;</kbd><kbd class="c-kbd">P</kbd>
+</kbd>
 ```
 
 ### C Kbd Monospaced
 
-1.5rem (24px) minimum width and 1.5rem (24px) tall <code>kbd</code> element with no <code>padding</code> and <code>border-width: 1px</code>. This is generally used to display single characters.
+1.5rem (24px) minimum width and 1.5rem (24px) tall `kbd` element with no `padding` and `border-width: 1px`. This is generally used to display single characters.
 
 <div class="sheet-example">
-    <kbd class="c-kbd c-kbd-monospaced" data-entity="&amp;#8984;">&#8984;</kbd>
-    <kbd class="c-kbd c-kbd-monospaced" data-entity="&amp;#8592;">&#8592;</kbd>
-    <kbd class="c-kbd c-kbd-monospaced" data-entity="&amp;#8593;">&#8593;</kbd>
-    <kbd class="c-kbd c-kbd-monospaced" data-entity="&amp;#8594;">&#8594;</kbd>
-    <kbd class="c-kbd c-kbd-monospaced" data-entity="&amp;#8595;">&#8595;</kbd>
-    <kbd class="c-kbd c-kbd-monospaced" data-entity="&amp;#8679;">&#8679;</kbd>
-    <kbd class="c-kbd c-kbd-monospaced" data-entity="&amp;#8997;">&#8997;</kbd>
-    <kbd class="c-kbd c-kbd-monospaced" data-entity="&amp;#11152;">&#11152;</kbd>
-    <kbd class="c-kbd c-kbd-monospaced" data-entity="&amp#8984;N">&#8984;N</kbd>
+	<kbd class="c-kbd c-kbd-monospaced" data-entity="&amp;#8984;">&#8984;</kbd>,
+	<kbd class="c-kbd c-kbd-monospaced" data-entity="&amp;#8592;">&#8592;</kbd>,
+	<kbd class="c-kbd c-kbd-monospaced" data-entity="&amp;#8593;">&#8593;</kbd>,
+	<kbd class="c-kbd c-kbd-monospaced" data-entity="&amp;#8594;">&#8594;</kbd>,
+	<kbd class="c-kbd c-kbd-monospaced" data-entity="&amp;#8595;">&#8595;</kbd>,
+	<kbd class="c-kbd c-kbd-monospaced" data-entity="&amp;#8679;">&#8679;</kbd>,
+	<kbd class="c-kbd c-kbd-monospaced" data-entity="&amp;#8997;">&#8997;</kbd>,
+	<kbd class="c-kbd c-kbd-monospaced" data-entity="&amp;#11152;">&#11152;</kbd>,
+	<kbd class="c-kbd c-kbd-monospaced" data-entity="&amp#8984;N">
+		<kbd class="c-kbd" data-entity="&amp#8984;">&#8984;</kbd
+		><kbd class="c-kbd" data-entity="N">N</kbd>
+	</kbd>
 </div>
 
 ```html
 <kbd class="c-kbd c-kbd-monospaced">&#8984;</kbd>
+
+<kbd class="c-kbd c-kbd-monospaced">&#8592;</kbd>
+
+<kbd class="c-kbd c-kbd-monospaced">&#8593;</kbd>
+
+<kbd class="c-kbd c-kbd-monospaced">&#8594;</kbd>
+
+<kbd class="c-kbd c-kbd-monospaced">&#8595;</kbd>
+
+<kbd class="c-kbd c-kbd-monospaced">&#8679;</kbd>
+
+<kbd class="c-kbd c-kbd-monospaced">&#8997;</kbd>
+
+<!-- This formatting forces browser to render no white space -->
+<kbd class="c-kbd c-kbd-monospaced">
+	<kbd class="c-kbd">&#8984;</kbd><kbd class="c-kbd">N</kbd>
+</kbd>
 ```
 
 ### C Kbd Inline
 
-No minimum width or height <code>kbd</code> element with <code>padding: 0</code> and <code>border-width: 0</code>. This is used to display keyboard shortcuts in small spaces such as <code>dropdown-item</code>.
+No minimum width or height `kbd` element with `padding: 0` and `border-width: 0`. This is used to display keyboard shortcuts in small spaces such as `dropdown-item`.
+
+The most robust markup to use is nested `kbd` elements:
+
+```html
+<kbd class="c-kbd c-kbd-inline">
+	<kbd class="c-kbd">key</kbd>
+</kbd>
+```
+
+but the markup:
+
+```html
+<kbd class="c-kbd c-kbd-inline">key</kbd>
+```
+
+works as well.
 
 <div class="sheet-example">
-    <kbd class="c-kbd c-kbd-inline">Esc</kbd>
-    <kbd class="c-kbd c-kbd-inline">Ctrl</kbd>
-    <kbd class="c-kbd c-kbd-inline">Shift</kbd>
-    <kbd class="c-kbd c-kbd-inline">Alt</kbd>
-    <kbd class="c-kbd c-kbd-inline">&#8984;+Shift+Y</kbd>
-    <kbd class="c-kbd c-kbd-inline">&#8984;P</kbd>
+	<kbd class="c-kbd c-kbd-inline">
+		<kbd class="c-kbd">Esc</kbd>
+	</kbd>,
+	<kbd class="c-kbd c-kbd-inline">Ctrl</kbd>,
+	<kbd class="c-kbd c-kbd-inline">
+		<kbd class="c-kbd">Shift</kbd>
+	</kbd>,
+	<kbd class="c-kbd c-kbd-inline">
+		<kbd class="c-kbd">Alt</kbd>
+	</kbd>,
+	<kbd class="c-kbd c-kbd-inline">
+		<kbd class="c-kbd">&#8984;</kbd
+		><span class="c-kbd-separator">+</span
+		><kbd class="c-kbd">Shift</kbd
+		><span class="c-kbd-separator">+</span
+		><kbd class="c-kbd">Y</kbd>
+	</kbd>,
+	<kbd class="c-kbd c-kbd-inline">
+		<kbd class="c-kbd">&#8984;</kbd
+		><kbd class="c-kbd">P</kbd>
+	</kbd>
 </div>
 
 ```html
-<kbd class="c-kbd c-kbd-inline">&#8984;+Shift+Y</kbd>
+<kbd class="c-kbd c-kbd-inline">
+	<kbd class="c-kbd">Esc</kbd>
+</kbd>
+
+<kbd class="c-kbd c-kbd-inline">Ctrl</kbd>
+
+<!-- This formatting forces browser to render no white space -->
+<kbd class="c-kbd c-kbd-inline">
+	<kbd class="c-kbd">&#8984;</kbd><span class="c-kbd-separator">+</span
+	><kbd class="c-kbd">Shift</kbd><span class="c-kbd-separator">+</span
+	><kbd class="c-kbd">Y</kbd>
+</kbd>
+
+<kbd class="c-kbd c-kbd-inline">
+	<kbd class="c-kbd">&#8984;</kbd><kbd class="c-kbd">P</kbd>
+</kbd>
 ```
 
 ### C Kbd Group
 
-A container element for grouping text with several <code>kbd</code> elements together. This is also useful inside <code>autofit-col</code> if you don't want several <code>kbd</code> elements to break to a new line.
+A container element for grouping text with several `kbd` elements together. This is also useful inside `autofit-col` if you don't want several `kbd` elements to break to a new line.
 
 <div class="sheet-example">
-    <span class="c-kbd-group">
-        Press <kbd class="c-kbd">Esc</kbd> + <kbd class="c-kbd c-kbd-monospaced">N</kbd> to see an amazing effect.
-    </span>
+	<span class="c-kbd-group">
+		Press
+		<kbd class="c-kbd">
+			<kbd class="c-kbd">Esc</kbd>
+			<span class="c-kbd-separator">+</span>
+			<kbd class="c-kbd">N</kbd>
+		</kbd>
+		to see an amazing effect.
+	</span>
 </div>
 
 ```html
 <span class="c-kbd-group">
-	Press <kbd class="c-kbd">Esc</kbd>
-	+
-	<kbd class="c-kbd c-kbd-monospaced">N</kbd> to see an amazing effect.
+	Press
+	<kbd class="c-kbd">
+		<kbd class="c-kbd">Esc</kbd>
+		<span class="c-kbd-separator">+</span>
+		<kbd class="c-kbd">N</kbd>
+	</kbd>
+	to see an amazing effect.
 </span>
 ```
 
@@ -127,77 +313,163 @@ The color variants are modifier classes added to any of the base components list
 
 ### C Kbd Light
 
+A color modifier on `c-kbd` to style the `kbd` element with dark text, light background and border.
+
 <div class="sheet-example">
-    <kbd class="c-kbd c-kbd-light">Esc</kbd> + <kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd>
+	<kbd class="c-kbd">
+		<kbd class="c-kbd c-kbd-light">Esc</kbd>
+		<span class="c-kbd-separator">+</span>
+		<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd>
+	</kbd>,
+	<kbd class="c-kbd c-kbd-light">
+		<kbd class="c-kbd">Esc</kbd>
+		<span class="c-kbd-separator">+</span>
+		<kbd class="c-kbd">N</kbd>
+	</kbd>
 </div>
 
 ```html
-<kbd class="c-kbd c-kbd-light">Esc</kbd>
-+
-<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd>
+<kbd class="c-kbd">
+	<kbd class="c-kbd c-kbd-light">Esc</kbd>
+	<span class="c-kbd-separator">+</span>
+	<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd>
+</kbd>
+
+<kbd class="c-kbd c-kbd-light">
+	<kbd class="c-kbd">Esc</kbd>
+	<span class="c-kbd-separator">+</span>
+	<kbd class="c-kbd">N</kbd>
+</kbd>
 ```
 
 ### C Kbd Dark
 
+A color modifier on `c-kbd` to style the `kbd` element with light text, dark background and border.
+
 <div class="sheet-example">
-    <kbd class="c-kbd c-kbd-dark">Esc</kbd> + <kbd class="c-kbd c-kbd-monospaced c-kbd-dark">N</kbd>
+	<kbd class="c-kbd">
+		<kbd class="c-kbd c-kbd-dark">Esc</kbd>
+		<span class="c-kbd-separator">+</span>
+		<kbd class="c-kbd c-kbd-monospaced c-kbd-dark">N</kbd>
+	</kbd>,
+	<kbd class="c-kbd c-kbd-dark">
+		<kbd class="c-kbd">Esc</kbd>
+		<span class="c-kbd-separator">+</span>
+		<kbd class="c-kbd">N</kbd>
+	</kbd>
 </div>
 
 ```html
-<kbd class="c-kbd c-kbd-dark">Esc</kbd>
-+
-<kbd class="c-kbd c-kbd-monospaced c-kbd-dark">N</kbd>
+<kbd class="c-kbd">
+	<kbd class="c-kbd c-kbd-dark">Esc</kbd>
+	<span class="c-kbd-separator">+</span>
+	<kbd class="c-kbd c-kbd-monospaced c-kbd-dark">N</kbd>
+</kbd>
+
+<kbd class="c-kbd c-kbd-dark">
+	<kbd class="c-kbd">Esc</kbd>
+	<span class="c-kbd-separator">+</span>
+	<kbd class="c-kbd">N</kbd>
+</kbd>
 ```
 
 ### C Kbd Group Light
 
-A color modifier on <code>c-kbd-group</code> that sets the text color to <code>\$secondary</code>. This can be used with <code>c-kbd-light</code> and <code>c-kbd-dark</code>.
+A color modifier on `c-kbd-group`, for use with light backgrounds, that sets the text color to `\$secondary`. This can be used with `c-kbd-light` and `c-kbd-dark`.
 
 <div class="sheet-example">
-    <div class="c-mb-2">
-        <span class="c-kbd-group c-kbd-group-light">Press <kbd class="c-kbd c-kbd-light">Esc</kbd> + <kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd> to see an amazing effect.</span>
-    </div>
-    <div>
-        <span class="c-kbd-group c-kbd-group-light">Press <kbd class="c-kbd c-kbd-dark">Esc</kbd> + <kbd class="c-kbd c-kbd-monospaced c-kbd-dark">N</kbd> to see an amazing effect.</span>
-    </div>
+	<div class="c-mb-2">
+		<span class="c-kbd-group c-kbd-group-light">
+			Press
+			<kbd class="c-kbd">
+				<kbd class="c-kbd c-kbd-light">Esc</kbd>
+				<span class="c-kbd-separator">+</span>
+				<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd>
+			</kbd>
+			to see an amazing effect.
+		</span>
+	</div>
+	<span class="c-kbd-group c-kbd-group-light">
+		Press
+		<kbd class="c-kbd">
+			<kbd class="c-kbd c-kbd-dark">Esc</kbd>
+			<span class="c-kbd-separator">+</span>
+			<kbd class="c-kbd c-kbd-monospaced c-kbd-dark">N</kbd>
+		</kbd>
+		to see an amazing effect.
+	</span>
 </div>
 
 ```html
 <span class="c-kbd-group c-kbd-group-light">
-	Press <kbd class="c-kbd c-kbd-light">Esc</kbd> +
-	<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd> to see an amazing
-	effect.
+	Press
+	<kbd class="c-kbd">
+		<kbd class="c-kbd c-kbd-light">Esc</kbd>
+		<span class="c-kbd-separator">+</span>
+		<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd>
+	</kbd>
+	to see an amazing effect.
 </span>
+
 <span class="c-kbd-group c-kbd-group-light">
-	Press <kbd class="c-kbd c-kbd-dark">Esc</kbd> +
-	<kbd class="c-kbd c-kbd-monospaced c-kbd-dark">N</kbd> to see an amazing
-	effect.
+	Press
+	<kbd class="c-kbd">
+		<kbd class="c-kbd c-kbd-dark">Esc</kbd>
+		<span class="c-kbd-separator">+</span>
+		<kbd class="c-kbd c-kbd-monospaced c-kbd-dark">N</kbd>
+	</kbd>
+	to see an amazing effect.
 </span>
 ```
 
 ### C Kbd Group Dark
 
-A color modifier on <code>c-kbd-group</code> that sets the text color to <code>\$white</code>. This can be used with <code>c-kbd-light</code> and <code>c-kbd-dark</code>.
+A color modifier on `c-kbd-group`, for use with dark backgrounds, that sets the text color to `\$white`. This can be used with `c-kbd-light` and `c-kbd-dark`.
 
 <div class="sheet-example">
-    <div class="c-mb-2" style="background-color:#1C1C24;padding: 10px;">
-        <span class="c-kbd-group c-kbd-group-dark">Press <kbd class="c-kbd c-kbd-light">Esc</kbd> + <kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd> to see an amazing effect.</span>
-    </div>
-    <div style="background-color:#1C1C24;padding: 10px;">
-        <span class="c-kbd-group c-kbd-group-dark">Press <kbd class="c-kbd c-kbd-dark">Esc</kbd> + <kbd class="c-kbd c-kbd-monospaced c-kbd-dark">N</kbd> to see an amazing effect.</span>
-    </div>
+	<div class="bg-dark c-mb-2 c-p-2">
+		<span class="c-kbd-group c-kbd-group-dark">
+			Press
+			<kbd class="c-kbd">
+				<kbd class="c-kbd c-kbd-light">Esc</kbd>
+				<span class="c-kbd-separator">+</span>
+				<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd>
+			</kbd>
+			to see an amazing effect.
+		</span>
+	</div>
+	<div class="bg-dark c-mb-2 c-p-2">
+		<span class="c-kbd-group c-kbd-group-dark">
+			Press
+			<kbd class="c-kbd">
+				<kbd class="c-kbd c-kbd-dark">Esc</kbd>
+				<span class="c-kbd-separator">+</span>
+				<kbd class="c-kbd c-kbd-monospaced c-kbd-dark">N</kbd>
+			</kbd>
+			to see an amazing effect.
+		</span>
+	</div>
 </div>
 
 ```html
 <span class="c-kbd-group c-kbd-group-dark">
-	Press <kbd class="c-kbd c-kbd-light">Esc</kbd> +
-	<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd> to see an amazing
-	effect.
+	Press
+	<kbd class="c-kbd">
+		<kbd class="c-kbd c-kbd-light">Esc</kbd>
+		<span class="c-kbd-separator">+</span>
+		<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd>
+	</kbd>
+	to see an amazing effect.
 </span>
+
 <span class="c-kbd-group c-kbd-group-dark">
-	Press <kbd class="c-kbd c-kbd-dark">Esc</kbd> +
-	<kbd class="c-kbd c-kbd-monospaced c-kbd-dark">N</kbd> to see an amazing
-	effect.
+	Press
+	<kbd class="c-kbd">
+		<kbd class="c-kbd c-kbd-dark">Esc</kbd>
+		<span class="c-kbd-separator">+</span>
+		<kbd class="c-kbd c-kbd-monospaced c-kbd-dark">N</kbd>
+	</kbd>
+	to see an amazing effect.
 </span>
 ```
 
@@ -207,53 +479,147 @@ Size variants are modifier classes added to the base component to change the fon
 
 ### C Kbd Sm
 
-<code>c-kbd-sm</code> and <code>c-kbd-group-sm</code> are size modifiers that sets <code>font-size: 0.75rem</code> (12px).
+`c-kbd-sm` and `c-kbd-group-sm` are size modifiers that sets `font-size: 0.75rem` (12px).
 
 <div class="sheet-example">
-    <div class="c-mb-2">
-        <kbd class="c-kbd c-kbd-sm c-kbd-light">Esc</kbd> + <kbd class="c-kbd c-kbd-sm c-kbd-monospaced c-kbd-light">N</kbd>
-    </div>
-    <div>
-        <span class="c-kbd-group c-kbd-group-sm c-kbd-group-light">
-            Press <kbd class="c-kbd c-kbd-light">Esc</kbd> +
-            <kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd> to see an amazing effect.
-        </span>
-    </div>
+	<div class="c-mb-2">
+		<kbd class="c-kbd c-kbd-sm c-kbd-light">Esc</kbd>
+		<span class="c-kbd-separator c-kbd-sm">+</span>
+		<kbd class="c-kbd c-kbd-sm c-kbd-monospaced c-kbd-light">N</kbd>
+	</div>
+	<div class="c-mb-2">
+		<kbd class="c-kbd c-kbd-sm">
+			<kbd class="c-kbd c-kbd-light">Esc</kbd>
+			<span class="c-kbd-separator">+</span>
+			<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd>
+		</kbd>
+	</div>
+	<div class="c-mb-2">
+		<span class="c-kbd-group c-kbd-group-sm c-kbd-group-light">
+			Press
+			<kbd class="c-kbd">
+				<kbd class="c-kbd c-kbd-dark">Esc</kbd>
+				<span class="c-kbd-separator">+</span>
+				<kbd class="c-kbd c-kbd-monospaced c-kbd-dark">N</kbd>
+			</kbd>
+			to see an amazing effect.
+		</span>
+	</div>
+	<div>
+		<span class="c-kbd-group c-kbd-group-sm c-kbd-group-light">
+			Press
+			<kbd class="c-kbd c-kbd-lg">
+				<kbd class="c-kbd c-kbd-light">Esc</kbd>
+				<span class="c-kbd-separator">+</span>
+				<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd>
+			</kbd>
+			to see an amazing effect.
+		</span>
+	</div>
 </div>
 
 ```html
-<kbd class="c-kbd c-kbd-sm c-kbd-light">Esc</kbd> +
+<kbd class="c-kbd c-kbd-sm c-kbd-light">Esc</kbd>
+<span class="c-kbd-separator c-kbd-sm">+</span>
 <kbd class="c-kbd c-kbd-sm c-kbd-monospaced c-kbd-light">N</kbd>
+
+<kbd class="c-kbd c-kbd-sm">
+	<kbd class="c-kbd c-kbd-light">Esc</kbd>
+	<span class="c-kbd-separator">+</span>
+	<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd>
+</kbd>
+
 <span class="c-kbd-group c-kbd-group-sm c-kbd-group-light">
-	Press <kbd class="c-kbd c-kbd-light">Esc</kbd> +
-	<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd> to see an amazing
-	effect.
+	Press
+	<kbd class="c-kbd">
+		<kbd class="c-kbd c-kbd-light">Esc</kbd>
+		<span class="c-kbd-separator">+</span>
+		<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd>
+	</kbd>
+	to see an amazing effect.
+</span>
+
+<span class="c-kbd-group c-kbd-group-sm c-kbd-group-light">
+	Press
+	<kbd class="c-kbd c-kbd-lg">
+		<kbd class="c-kbd c-kbd-light">Esc</kbd>
+		<span class="c-kbd-separator">+</span>
+		<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd>
+	</kbd>
+	to see an amazing effect.
 </span>
 ```
 
 ### C Kbd Lg
 
-<code>c-kbd-lg</code> and <code>c-kbd-group-lg</code> are size modifiers that sets <code>font-size: 1rem</code> (16px).
+`c-kbd-lg` and `c-kbd-group-lg` are size modifiers that sets `font-size: 1rem` (16px).
 
 <div class="sheet-example">
-    <div class="c-mb-2">
-        <kbd class="c-kbd c-kbd-lg c-kbd-light">Esc</kbd> + <kbd class="c-kbd c-kbd-lg c-kbd-monospaced c-kbd-light">N</kbd>
-    </div>
-    <div>
-        <span class="c-kbd-group c-kbd-group-lg c-kbd-group-light">
-            Press <kbd class="c-kbd c-kbd-light">Esc</kbd> +
-            <kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd> to see an amazing effect.
-        </span>
-    </div>
+	<div class="c-mb-2">
+		<kbd class="c-kbd c-kbd-lg c-kbd-light">Esc</kbd>
+		<span class="c-kbd-separator c-kbd-lg">+</span>
+		<kbd class="c-kbd c-kbd-lg c-kbd-monospaced c-kbd-light">N</kbd>
+	</div>
+	<div class="c-mb-2">
+		<kbd class="c-kbd c-kbd-lg">
+			<kbd class="c-kbd c-kbd-light">Esc</kbd>
+			<span class="c-kbd-separator">+</span>
+			<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd>
+		</kbd>
+	</div>
+	<div class="c-mb-2">
+		<span class="c-kbd-group c-kbd-group-lg c-kbd-group-light">
+			Press
+			<kbd class="c-kbd">
+				<kbd class="c-kbd c-kbd-light">Esc</kbd>
+				<span class="c-kbd-separator">+</span>
+				<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd>
+			</kbd>
+			to see an amazing effect.
+		</span>
+	</div>
+	<div>
+		<span class="c-kbd-group c-kbd-group-lg c-kbd-group-light">
+			Press
+			<kbd class="c-kbd c-kbd-sm">
+				<kbd class="c-kbd c-kbd-dark">Esc</kbd>
+				<span class="c-kbd-separator">+</span>
+				<kbd class="c-kbd c-kbd-monospaced c-kbd-dark">N</kbd>
+			</kbd>
+			to see an amazing effect.
+		</span>
+	</div>
 </div>
 
 ```html
-<kbd class="c-kbd c-kbd-lg c-kbd-light"> Esc</kbd> +
-<kbd class="c-kbd c-kbd-lg c-kbd-monospaced c-kbd-light">N </kbd>
+<kbd class="c-kbd c-kbd-lg c-kbd-light">Esc</kbd>
+<span class="c-kbd-separator c-kbd-lg">+</span>
+<kbd class="c-kbd c-kbd-lg c-kbd-monospaced c-kbd-light">N</kbd>
+
+<kbd class="c-kbd c-kbd-lg">
+	<kbd class="c-kbd c-kbd-light">Esc</kbd>
+	<span class="c-kbd-separator">+</span>
+	<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd>
+</kbd>
+
 <span class="c-kbd-group c-kbd-group-lg c-kbd-group-light">
-	Press <kbd class="c-kbd c-kbd-light">Esc</kbd> +
-	<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd> to see an amazing
-	effect.
+	Press
+	<kbd class="c-kbd">
+		<kbd class="c-kbd c-kbd-light">Esc</kbd>
+		<span class="c-kbd-separator">+</span>
+		<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd>
+	</kbd>
+	to see an amazing effect.
+</span>
+
+<span class="c-kbd-group c-kbd-group-lg c-kbd-group-light">
+	Press
+	<kbd class="c-kbd c-kbd-sm">
+		<kbd class="c-kbd c-kbd-dark">Esc</kbd>
+		<span class="c-kbd-separator">+</span>
+		<kbd class="c-kbd c-kbd-monospaced c-kbd-dark">N</kbd>
+	</kbd>
+	to see an amazing effect.
 </span>
 ```
 

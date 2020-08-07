@@ -15,8 +15,76 @@ section: Elements
 		<kbd class="c-kbd">Ctrl</kbd>
 		<kbd class="c-kbd">Shift</kbd>
 		<kbd class="c-kbd">Alt</kbd>
-		<kbd class="c-kbd">&#8984;+Shift+Y</kbd>
-		<kbd class="c-kbd">&#8984;P</kbd>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Nested C Kbd</h3>
+
+		<blockquote class="blockquote">
+			<p>Nest multiple <code>c-kbd</code> elements inside a single <code>c-kbd</code> element to describe a keyboard command comprising of multiple keys.</p>
+		</blockquote>
+
+		<kbd class="c-kbd">
+			<kbd class="c-kbd">&#8984;</kbd
+			><span class="c-kbd-separator">+</span
+			><kbd class="c-kbd">Shift</kbd
+			><span class="c-kbd-separator">+</span
+			><kbd class="c-kbd">Y</kbd>
+		</kbd>
+		<kbd class="c-kbd">
+			<kbd class="c-kbd">&#8984;</kbd
+			><kbd class="c-kbd">P</kbd>
+		</kbd>
+		<br />
+
+		<kbd class="c-kbd c-kbd-inline">
+			<kbd class="c-kbd">&#8984;</kbd
+			><span class="c-kbd-separator">+</span
+			><kbd class="c-kbd">Shift</kbd
+			><span class="c-kbd-separator">+</span
+			><kbd class="c-kbd">Y</kbd>
+		</kbd>
+		<kbd class="c-kbd c-kbd-inline">
+			<kbd class="c-kbd">&#8984;</kbd
+			><kbd class="c-kbd">P</kbd>
+		</kbd>
+		<br />
+
+		<kbd class="c-kbd">
+			<kbd class="c-kbd c-kbd-light">&#8984;</kbd>
+			<span class="c-kbd-separator">+</span>
+			<kbd class="c-kbd c-kbd-light">Shift</kbd>
+			<span class="c-kbd-separator">+</span>
+			<kbd class="c-kbd c-kbd-light">Y</kbd>
+		</kbd>
+		<kbd class="c-kbd c-kbd-light">
+			<kbd class="c-kbd">&#8984;</kbd>
+			<span class="c-kbd-separator">+</span>
+			<kbd class="c-kbd">Shift</kbd>
+			<span class="c-kbd-separator">+</span>
+			<kbd class="c-kbd">Y</kbd>
+		</kbd>
+		<kbd class="c-kbd c-kbd-dark">
+			<kbd class="c-kbd">&#8984;</kbd
+			><kbd class="c-kbd">P</kbd>
+		</kbd>
+		<br />
+
+		<kbd class="c-kbd c-kbd-dark c-kbd-sm">
+			<kbd class="c-kbd">&#8984;</kbd
+			><kbd class="c-kbd">P</kbd>
+		</kbd>
+		<br />
+
+		<kbd class="c-kbd c-kbd-light c-kbd-lg">
+			<kbd class="c-kbd">&#8984;</kbd
+			><span class="c-kbd-separator">+</span
+			><kbd class="c-kbd">Shift</kbd
+			><span class="c-kbd-separator">+</span
+			><kbd class="c-kbd">Y</kbd>
+		</kbd>
 	</div>
 </div>
 
@@ -46,14 +114,27 @@ section: Elements
 
 		<blockquote class="blockquote">
 			<p>No minimum width or height <code>kbd</code> element with <code>padding: 0</code> and <code>border-width: 0</code>. This is generally used to display keyboard shortcuts in small spaces such as <code>dropdown-item</code>.</p>
+			<p>The most robust markup to use is nested kbd elements (e.g., <code>```<kbd class="c-kbd c-kbd-inline"><kbd class="c-kbd">key</kbd></kbd>```</code>), but the markup <code>```<kbd class="c-kbd c-kbd-inline">key1</kbd>```</code> works as well.</p>
 		</blockquote>
 
 		<kbd class="c-kbd c-kbd-inline">Esc</kbd>
 		<kbd class="c-kbd c-kbd-inline">Ctrl</kbd>
 		<kbd class="c-kbd c-kbd-inline">Shift</kbd>
-		<kbd class="c-kbd c-kbd-inline">Alt</kbd>
-		<kbd class="c-kbd c-kbd-inline">&#8984;+Shift+Y</kbd>
-		<kbd class="c-kbd c-kbd-inline">&#8984;P</kbd>
+		<kbd class="c-kbd c-kbd-inline">
+			<kbd class="c-kbd">Alt</kbd>
+		</kbd>
+		<kbd class="c-kbd c-kbd-inline">
+			<kbd class="c-kbd">&#8984;</kbd
+			><span class="c-kbd-separator">+</span
+			><kbd class="c-kbd">Shift</kbd
+			><span class="c-kbd-separator">+</span
+			><kbd class="c-kbd">Y</kbd>
+		</kbd>
+		<kbd class="c-kbd c-kbd-inline">
+			<kbd class="c-kbd">&#8984;</kbd
+			><kbd class="c-kbd">P</kbd>
+		</kbd>
+		<kbd class="c-kbd c-kbd-inline">&#8984;</kbd><kbd class="c-kbd c-kbd-inline">O</kbd>
 	</div>
 </div>
 
@@ -66,7 +147,21 @@ section: Elements
 		</blockquote>
 
 		<span class="c-kbd-group">
-			Press <kbd class="c-kbd">Esc</kbd> + <kbd class="c-kbd c-kbd-monospaced">N</kbd> to see an amazing effect.
+			Press
+			<kbd class="c-kbd">Esc</kbd>
+			<span class="c-kbd-separator">+</span>
+			<kbd class="c-kbd c-kbd-monospaced">N</kbd>
+			to see an amazing effect.
+		</span>
+		<br/>
+		<span class="c-kbd-group">
+			Press
+			<kbd class="c-kbd c-kbd-light">
+				<kbd class="c-kbd">Esc</kbd>
+				<span class="c-kbd-separator">+</span>
+				<kbd class="c-kbd">N</kbd>
+			</kbd>
+			to see an amazing effect.
 		</span>
 	</div>
 </div>
@@ -75,7 +170,9 @@ section: Elements
 	<div class="col-md-12">
 		<h3>C Kbd Light</h3>
 
-		<kbd class="c-kbd c-kbd-light">Esc</kbd> + <kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd>
+		<kbd class="c-kbd c-kbd-light">Esc</kbd>
+		<span class="c-kbd-separator">+</span>
+		<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd>
 	</div>
 </div>
 
@@ -83,7 +180,9 @@ section: Elements
 	<div class="col-md-12">
 		<h3>C Kbd Dark</h3>
 
-		<kbd class="c-kbd c-kbd-dark">Esc</kbd> + <kbd class="c-kbd c-kbd-monospaced c-kbd-dark">N</kbd>
+		<kbd class="c-kbd c-kbd-dark">Esc</kbd>
+		<span class="c-kbd-separator">+</span>
+		<kbd class="c-kbd c-kbd-monospaced c-kbd-dark">N</kbd>
 	</div>
 </div>
 
@@ -91,11 +190,27 @@ section: Elements
 	<div class="col-md-12">
 		<h3>C Kbd Group Light with C Kbd Light / Dark</h3>
 
+		<blockquote class="blockquote">
+			<p><code>c-kbd-group-light</code> changes the text color lighter and nested <code>c-kbd-light</code> and <code>c-kbd-dark</code> elements can be used interchangebly.</p>
+		</blockquote>
+
 		<div class="c-mb-2">
-			<span class="c-kbd-group c-kbd-group-light">Press <kbd class="c-kbd c-kbd-light">Esc</kbd> + <kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd> to see an amazing effect.</span>
+			<span class="c-kbd-group c-kbd-group-light">
+				Press
+				<kbd class="c-kbd c-kbd-light">Esc</kbd>
+				<span class="c-kbd-separator">+</span>
+				<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd>
+				to see an amazing effect.
+			</span>
 		</div>
 		<div>
-			<span class="c-kbd-group c-kbd-group-light">Press <kbd class="c-kbd c-kbd-dark">Esc</kbd> + <kbd class="c-kbd c-kbd-monospaced c-kbd-dark">N</kbd> to see an amazing effect.</span>
+			<span class="c-kbd-group c-kbd-group-light">
+				Press
+				<kbd class="c-kbd c-kbd-dark">Esc</kbd>
+				<span class="c-kbd-separator">+</span>
+				<kbd class="c-kbd c-kbd-monospaced c-kbd-dark">N</kbd>
+				to see an amazing effect.
+			</span>
 		</div>
 	</div>
 </div>
@@ -104,11 +219,27 @@ section: Elements
 	<div class="col-md-12">
 		<h3>C Kbd Group Dark with C Kbd Light / Dark</h3>
 
+		<blockquote class="blockquote">
+			<p><code>c-kbd-group-dark</code> changes the text color darker and nested <code>c-kbd-light</code> and <code>c-kbd-dark</code> elements can be used interchangebly.</p>
+		</blockquote>
+
 		<div class="c-mb-2" style="background-color:#1C1C24;padding: 10px;">
-			<span class="c-kbd-group c-kbd-group-dark">Press <kbd class="c-kbd c-kbd-light">Esc</kbd> + <kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd> to see an amazing effect.</span>
+			<span class="c-kbd-group c-kbd-group-dark">
+				Press
+				<kbd class="c-kbd c-kbd-light">Esc</kbd>
+				<span class="c-kbd-separator">+</span>
+				<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd>
+				to see an amazing effect.
+			</span>
 		</div>
 		<div style="background-color:#1C1C24;padding: 10px;">
-			<span class="c-kbd-group c-kbd-group-dark">Press <kbd class="c-kbd c-kbd-dark">Esc</kbd> + <kbd class="c-kbd c-kbd-monospaced c-kbd-dark">N</kbd> to see an amazing effect.</span>
+			<span class="c-kbd-group c-kbd-group-dark">
+				Press
+				<kbd class="c-kbd c-kbd-dark">Esc</kbd>
+				<span class="c-kbd-separator">+</span>
+				<kbd class="c-kbd c-kbd-monospaced c-kbd-dark">N</kbd>
+				to see an amazing effect.
+			</span>
 		</div>
 	</div>
 </div>
@@ -118,10 +249,18 @@ section: Elements
 		<h3>C Kbd Sm</h3>
 
 		<div class="c-mb-2">
-			<kbd class="c-kbd c-kbd-sm c-kbd-light">Esc</kbd> + <kbd class="c-kbd c-kbd-sm c-kbd-monospaced c-kbd-light">N</kbd>
+			<kbd class="c-kbd c-kbd-sm c-kbd-light">Esc</kbd>
+			<span class="c-kbd-separator">+</span>
+			<kbd class="c-kbd c-kbd-sm c-kbd-monospaced c-kbd-light">N</kbd>
 		</div>
 		<div>
-			<span class="c-kbd-group c-kbd-group-sm c-kbd-group-light">Press <kbd class="c-kbd c-kbd-light">Esc</kbd> + <kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd> to see an amazing effect.</span>
+			<span class="c-kbd-group c-kbd-group-sm c-kbd-group-light">
+				Press
+				<kbd class="c-kbd c-kbd-light">Esc</kbd>
+				<span class="c-kbd-separator">+</span>
+				<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd>
+				to see an amazing effect.
+			</span>
 		</div>
 
 	</div>
@@ -132,10 +271,18 @@ section: Elements
 		<h3>C Kbd Lg</h3>
 
 		<div class="c-mb-2">
-			<kbd class="c-kbd c-kbd-lg c-kbd-light">Esc</kbd> + <kbd class="c-kbd c-kbd-lg c-kbd-monospaced c-kbd-light">N</kbd>
+			<kbd class="c-kbd c-kbd-lg c-kbd-light">Esc</kbd>
+			<span class="c-kbd-separator">+</span>
+			<kbd class="c-kbd c-kbd-lg c-kbd-monospaced c-kbd-light">N</kbd>
 		</div>
 		<div>
-			<span class="c-kbd-group c-kbd-group-lg c-kbd-group-light">Press <kbd class="c-kbd c-kbd-light">Esc</kbd> + <kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd> to see an amazing effect.</span>
+			<span class="c-kbd-group c-kbd-group-lg c-kbd-group-light">
+				Press
+				<kbd class="c-kbd c-kbd-light">Esc</kbd>
+				<span class="c-kbd-separator">+</span>
+				<kbd class="c-kbd c-kbd-monospaced c-kbd-light">N</kbd>
+				to see an amazing effect.
+			</span>
 		</div>
 
 	</div>

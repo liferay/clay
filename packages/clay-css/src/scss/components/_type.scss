@@ -200,44 +200,91 @@ strong {
 
 .c-kbd-group {
 	@include clay-css($c-kbd-group);
+
+	> .c-kbd {
+		font-size: inherit;
+	}
 }
 
 .c-kbd {
 	@include clay-css($c-kbd);
 }
 
+// Nested Kbd
+
+.c-kbd {
+	> .c-kbd {
+		@include clay-css($c-kbd-c-kbd);
+
+		&[class*='c-kbd-'] {
+			border-width: inherit;
+			height: inherit;
+			min-width: inherit;
+			padding: inherit;
+
+			&:first-child {
+				margin-left: math-sign(map-get($c-kbd, padding-left));
+			}
+
+			&:last-child {
+				margin-right: math-sign(map-get($c-kbd, padding-right));
+			}
+		}
+	}
+
+	> .c-kbd.c-kbd-monospaced {
+		@include clay-css($c-kbd-monospaced);
+	}
+
+	> .c-kbd-separator {
+		@include clay-css($c-kbd-c-kbd-separator);
+	}
+}
+
+// Kbd Monospaced
+
 .c-kbd-monospaced {
 	@include clay-css($c-kbd-monospaced);
 }
 
+// Kbd Inline
+
 .c-kbd-inline {
 	@include clay-css($c-kbd-inline);
+
+	.c-kbd-separator {
+		@include clay-css($c-kbd-inline-c-kbd-separator);
+	}
 }
 
-// Kbd Sizes
+// Kbd Sm
+
+%c-kbd-sm {
+	@include clay-css($c-kbd-sm);
+}
 
 .c-kbd-group-sm {
 	@include clay-css($c-kbd-group-sm);
+}
 
-	.c-kbd {
-		font-size: inherit;
-	}
+.c-kbd-sm,
+.c-kbd.c-kbd-sm {
+	@extend %c-kbd-sm !optional;
+}
+
+// Kbd Lg
+
+%c-kbd-lg {
+	@include clay-css($c-kbd-lg);
 }
 
 .c-kbd-group-lg {
 	@include clay-css($c-kbd-group-lg);
-
-	.c-kbd {
-		font-size: inherit;
-	}
 }
 
-.c-kbd.c-kbd-sm {
-	@include clay-css($c-kbd-sm);
-}
-
+.c-kbd-lg,
 .c-kbd.c-kbd-lg {
-	@include clay-css($c-kbd-lg);
+	@extend %c-kbd-lg !optional;
 }
 
 // Kbd Light

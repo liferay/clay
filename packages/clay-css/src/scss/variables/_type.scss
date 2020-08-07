@@ -7,6 +7,8 @@ $reference-mark-vertical-align: super !default;
 
 $mark-color: null !default;
 
+// C Kbd
+
 $c-kbd-group: () !default;
 $c-kbd-group: map-deep-merge(
 	(
@@ -32,11 +34,30 @@ $c-kbd: map-deep-merge(
 		height: 1.5rem,
 		line-height: 1.375rem,
 		min-width: 1.5rem,
-		padding: 0 0.3125rem,
+		padding-bottom: 0,
+		padding-left: 0.3125rem,
+		padding-right: 0.3125rem,
+		padding-top: 0,
 		text-align: center,
 		text-transform: capitalize,
 	),
 	$c-kbd
+);
+
+// .c-kbd > .c-kbd
+
+$c-kbd-c-kbd: () !default;
+$c-kbd-c-kbd: map-merge(
+	(
+		border-width: 0,
+		font-size: inherit,
+		font-weight: inherit,
+		height: auto,
+		line-height: inherit,
+		min-width: 0,
+		padding: 0,
+	),
+	$c-kbd-c-kbd
 );
 
 $c-kbd-monospaced: () !default;
@@ -58,6 +79,28 @@ $c-kbd-inline: map-deep-merge(
 		padding: 0,
 	),
 	$c-kbd-inline
+);
+
+// Kbd Separator
+
+// .c-kbd > .c-kbd-separator
+
+$c-kbd-c-kbd-separator: () !default;
+$c-kbd-c-kbd-separator: map-merge(
+	(
+		font-weight: $font-weight-normal,
+	),
+	$c-kbd-c-kbd-separator
+);
+
+// .c-kbd-inline > .c-kbd-separator
+
+$c-kbd-inline-c-kbd-separator: () !default;
+$c-kbd-inline-c-kbd-separator: map-merge(
+	(
+		font-weight: inherit,
+	),
+	$c-kbd-inline-c-kbd-separator
 );
 
 // Kbd Sizes
