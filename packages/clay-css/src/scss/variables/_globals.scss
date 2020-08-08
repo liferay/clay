@@ -116,11 +116,11 @@ $body-moz-osx-font-smoothing: $moz-osx-font-smoothing !default;
 $body-webkit-font-smoothing: $webkit-font-smoothing !default;
 $body-text-align: inherit !default;
 
-$c-button: () !default;
-$c-button: map-merge(
+$c-button-base: () !default;
+$c-button-base: map-merge(
 	(
 		cursor: $link-cursor,
 		-webkit-appearance: button,
 	),
-	$c-button
+	$c-button-base
 );
