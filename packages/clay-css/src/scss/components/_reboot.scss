@@ -259,7 +259,7 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-	@include clay-css($c-button);
+	@include clay-css($c-button-base);
 }
 
 // Remove inner border from Firefox, but don't restore the outline like Normalize.

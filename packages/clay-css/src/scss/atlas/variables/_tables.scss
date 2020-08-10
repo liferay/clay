@@ -98,11 +98,12 @@ $table-link: map-deep-merge(
 
 // Table List
 
+$table-list-border-color: $gray-300 !default;
+$table-list-color: $body-color !default;
+
 $table-list-accent-bg: $gray-100 !default;
 $table-list-hover-bg: $table-hover-bg !default;
 $table-list-active-bg: $table-list-hover-bg !default;
-$table-list-border-color: $gray-300 !default;
-$table-list-color: $body-color !default;
 
 $table-list-disabled-color: $gray-500 !default;
 
