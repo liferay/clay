@@ -189,11 +189,14 @@ describe('Interactions', () => {
 
 			mockClientRect(gradientMap as HTMLElement);
 
-			const mouseDown = getMouseEvent('mousedown', {pageX: 0, pageY: 0});
+			const mouseDown = getMouseEvent('pointerdown', {
+				pageX: 0,
+				pageY: 0,
+			});
 
 			fireEvent(gradientMap as HTMLElement, mouseDown);
 
-			const mouseMove = getMouseEvent('mousemove', {
+			const mouseMove = getMouseEvent('pointermove', {
 				pageX: 50,
 				pageY: 50,
 			});
@@ -209,11 +212,14 @@ describe('Interactions', () => {
 
 			mockClientRect(hueSelector as HTMLElement);
 
-			const mouseDown = getMouseEvent('mousedown', {pageX: 0, pageY: 0});
+			const mouseDown = getMouseEvent('pointerdown', {
+				pageX: 0,
+				pageY: 0,
+			});
 
 			fireEvent(hueSelector as HTMLElement, mouseDown);
 
-			const mouseMove = getMouseEvent('mousemove', {
+			const mouseMove = getMouseEvent('pointermove', {
 				pageX: 50,
 			});
 
