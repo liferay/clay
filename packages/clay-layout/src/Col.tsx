@@ -43,6 +43,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * The number of columns to span on extra-small devices
 	 */
 	xs?: TColSize;
+
+	/**
+	 * The number of columns to span on extra-large devices
+	 */
+	xl?: TColSize;
 }
 
 const ClayCol = React.forwardRef<HTMLElement, IProps>(
@@ -55,12 +60,13 @@ const ClayCol = React.forwardRef<HTMLElement, IProps>(
 			md,
 			size,
 			sm,
+			xl,
 			xs,
 			...otherProps
 		}: IProps,
 		ref
 	) => {
-		const noBreakPoints = !lg && !md && !sm && !xs && !size;
+		const noBreakPoints = !lg && !md && !sm && !xs && !xl && !size;
 
 		xs = xs || size;
 
@@ -76,6 +82,8 @@ const ClayCol = React.forwardRef<HTMLElement, IProps>(
 					'col-sm': sm === true,
 					[`col-sm-${sm}`]: sm && typeof sm !== 'boolean',
 					[`col-${xs}`]: xs && typeof xs !== 'boolean',
+					'col-xl': xl === true,
+					[`col-xl-${xl}`]: xl && typeof xl !== 'boolean',
 				})}
 				ref={ref}
 			>

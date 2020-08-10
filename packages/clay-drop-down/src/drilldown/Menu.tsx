@@ -17,7 +17,7 @@ export interface IItem extends React.ComponentProps<typeof LinkOrButton> {
 	symbol?: string;
 }
 
-interface IProps {
+export interface IProps {
 	active?: boolean;
 	direction?: 'prev' | 'next';
 	header?: string;
