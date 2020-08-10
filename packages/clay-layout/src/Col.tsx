@@ -66,7 +66,7 @@ const ClayCol = React.forwardRef<HTMLElement, IProps>(
 		}: IProps,
 		ref
 	) => {
-		const noBreakPoints = !lg && !md && !sm && !xs && !size;
+		const noBreakPoints = !lg && !md && !sm && !xs && !xl && !size;
 
 		xs = xs || size;
 
