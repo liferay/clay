@@ -153,7 +153,18 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 		value = value.slice(1);
 	}
 
-	if (useNative && window.navigator.userAgent.indexOf('MSIE') !== -1) {
+	const inputColorTypeSupport = React.useMemo(() => {
+		if (typeof document !== 'undefined') {
+			var input = document.createElement('input');
+			input.setAttribute('type', 'color');
+
+			return input.value !== '';
+		}
+
+		return true;
+	}, []);
+
+	if (!inputColorTypeSupport) {
 		useNative = false;
 	}
 
