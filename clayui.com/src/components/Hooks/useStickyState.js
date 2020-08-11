@@ -5,7 +5,21 @@
 
 import React from 'react';
 
-function useStickyState(defaultValue, key, localStorage) {
+const inBrowser = typeof window !== 'undefined';
+
+const localStorage = {
+	getItem(key) {
+		return inBrowser ? window.localStorage.getItem(key) : null;
+	},
+
+	setItem(key, value) {
+		if (inBrowser) {
+			window.localStorage.setItem(key, value);
+		}
+	},
+};
+
+function useStickyState(defaultValue, key) {
 	const [value, setValue] = React.useState(() => {
 		const stickyValue = localStorage.getItem(key);
 
