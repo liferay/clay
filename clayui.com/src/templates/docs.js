@@ -217,7 +217,9 @@ export default (props) => {
 										location={location}
 									/>
 									<div className="col-xl sidebar-offset">
-										<LayoutNav />
+										<LayoutNav
+											pathname={location.pathname}
+										/>
 										<header>
 											<div className="clay-site-container container-fluid">
 												<div className="row">
