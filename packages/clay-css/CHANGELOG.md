@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.17.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.16.0...@clayui/css@3.17.0) (2020-08-11)
+
+
+### Bug Fixes
+
+* **@clayui/css:** `variables/_globals.scss` and `components/_reboot.scss` rename `$c-button` Sass map, added in [#3575](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3575), to `$c-button-base`. This namespace references a base element, in this case, `<button>`. This is to free up the variable namespace `$c-button` to refer to `.button` if we ever need it in the future. ([45c088a](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/45c088a))
+* **@clayui/css:** Alerts text in `alert-autofit-row` break to new line prematurely ([8b13ce3](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/8b13ce3))
+* **@clayui/css:** Atlas Custom Checkbox use `check-small` instead of ([4e059fe](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/4e059fe))
+* **@clayui/css:** Atlas Drilldown header button is off by 1px ([4224a60](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/4224a60))
+* **@clayui/css:** C Kbd each key in a keyboard shortcut should be wrapped in its own `kbd` element ([36ec62e](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/36ec62e)), closes [#3283](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3283)
+* **@clayui/css:** Dropdown `.dropdown-item` should use `cursor: pointer` so `<a class="dropdown-item" role="button">` will still behave like a clickable element ([1311053](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/1311053))
+* **@clayui/css:** Mixins `clay-css` adds `-moz-appearance` and `-webkit-appearance` to the list of properties so we can pass them in independently when needed ([946bd9c](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/946bd9c))
+* **@clayui/css:** Mixins `clay-dropdown-item-variant` `active-class` should use `active` values unless it's overridden using the `active-class` map ([c521848](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/c521848))
+* **@clayui/css:** Reboot adds `cursor: pointer` to `button` CSS reset ([4eca62f](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/4eca62f))
+* **@clayui/css:** Reboot go back to Bootstrap 4's styling `a` tag directly but omit styling placeholder anchors. Placeholders are styled the same as links now which makes it easier to use markup like `<a class="btn btn-primary" role="button" tabindex="0">` without having to add styles. ([170adfb](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/170adfb))
+* **@clayui/css:** SVG Icons update `check` path ([d24abf0](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/d24abf0))
+* **@clayui/css:** SVG Icons update `times-small` ([0970c0f](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/0970c0f))
+* **@clayui/css:** SVG Icons update `times` path ([31020e9](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/31020e9))
+* **@clayui/css:** Table `.table` should have 1px borders ([ca0a17c](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/ca0a17c))
+* **@clayui/css:** Update global functions ([d43ac9b](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/d43ac9b))
+
+
+### Features
+
+* **@clayui/css:** Clay Color `.clay-color-map` and `.clay-color-range` shouldn't highlight text and scroll viewport on touch devices when dragging ([0f670c4](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/0f670c4))
+* **@clayui/css:** SVG Icons add `check-small` ([b88dbdb](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/b88dbdb))
+* **@clayui/css:** SVG Icons add `theme` ([93f6efe](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/93f6efe))
+* **@clayui/drop-down:** create DropDownWithDrilldown high-level component ([6b92a80](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/6b92a80))
+
+
+### Reverts
+
+* **@clayui/css:** Atlas Alerts change `.alert .close` font-size to 12px ([862609a](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/862609a))
+
+
+
+
+
 # [3.16.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.15.0...@clayui/css@3.16.0) (2020-07-28)
 
 

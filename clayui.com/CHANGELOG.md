@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.4](https://github.com/bryceosterhaus/clay/compare/clayui.com@3.3.3...clayui.com@3.3.4) (2020-08-11)
+
+### Bug Fixes
+
+-   **clayui.com:** check if code exists first before formatting ([49a985e](https://github.com/bryceosterhaus/clay/commit/49a985e))
+-   **clayui.com:** Clean up code CSS ([2583321](https://github.com/bryceosterhaus/clay/commit/2583321))
+-   **clayui.com:** Move `code-collapse.js` code to `CodeToggle` component? and update so it works in IE11 ([684aa42](https://github.com/bryceosterhaus/clay/commit/684aa42))
+
 ## [3.3.3](https://github.com/bryceosterhaus/clay/compare/clayui.com@3.3.2...clayui.com@3.3.3) (2020-07-30)
 
 **Note:** Version bump only for package clayui.com

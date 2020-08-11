@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/liferay/clay/compare/@clayui/color-picker@3.2.8...@clayui/color-picker@3.3.0) (2020-08-11)
+
+### Bug Fixes
+
+-   **@clayui/color-picker:** check for support rather than browser specific ([f40c2c2](https://github.com/liferay/clay/commit/f40c2c2))
+-   **@clayui/color-picker:** fix native usage across browsers ([086e123](https://github.com/liferay/clay/commit/086e123))
+-   **@clayui/color-picker:** splotch should get focus if menu is closed via 'esc' ([85b52c6](https://github.com/liferay/clay/commit/85b52c6))
+-   **@clayui/color-picker:** Tapping on HSB Map or Hue Range on a mobile device should update colors and be draggable ([b02f0b9](https://github.com/liferay/clay/commit/b02f0b9))
+-   **@clayui/color-picker:** update tests ([516e01f](https://github.com/liferay/clay/commit/516e01f))
+
+### Features
+
+-   **@clayui/color-picker:** add prop for disabling palette for custom colors ([76023d5](https://github.com/liferay/clay/commit/76023d5))
+
 ## [3.2.8](https://github.com/liferay/clay/compare/@clayui/color-picker@3.2.7...@clayui/color-picker@3.2.8) (2020-07-28)
 
 ### Bug Fixes

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.3](https://github.com/liferay/clay/compare/@clayui/navigation-bar@3.2.2...@clayui/navigation-bar@3.2.3) (2020-08-11)
+
+**Note:** Version bump only for package @clayui/navigation-bar
+
 ## [3.2.2](https://github.com/liferay/clay/compare/@clayui/navigation-bar@3.2.1...@clayui/navigation-bar@3.2.2) (2020-07-28)
 
 ### Bug Fixes

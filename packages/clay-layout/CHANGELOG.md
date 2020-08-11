@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/liferay/clay/compare/@clayui/layout@3.1.1...@clayui/layout@3.2.0) (2020-08-11)
+
+### Bug Fixes
+
+-   **@clayui/layout:** add additional check ([700d64a](https://github.com/liferay/clay/commit/700d64a))
+
+### Features
+
+-   **@clayui/layout:** Adds missing xl property on Col component ([302824c](https://github.com/liferay/clay/commit/302824c))
+
 ## [3.1.1](https://github.com/liferay/clay/compare/@clayui/layout@3.1.0...@clayui/layout@3.1.1) (2020-07-14)
 
 ### Bug Fixes

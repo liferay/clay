@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.4](https://github.com/liferay/clay/compare/@clayui/popover@3.4.3...@clayui/popover@3.4.4) (2020-08-11)
+
+### Bug Fixes
+
+-   **@clayui/modal:** Changes the body's tabIndex with scroll and focuses on the element only when pressing the Up/Down keyboard ([73dbb38](https://github.com/liferay/clay/commit/73dbb38))
+-   **@clayui/modal:** remove unnecessary `c-inner` class ([2b5b4f2](https://github.com/liferay/clay/commit/2b5b4f2))
+
 ## [3.4.3](https://github.com/liferay/clay/compare/@clayui/popover@3.4.2...@clayui/popover@3.4.3) (2020-07-28)
 
 ### Bug Fixes

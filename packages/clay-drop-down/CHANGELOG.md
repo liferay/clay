@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.6.0](https://github.com/liferay/clay/compare/@clayui/drop-down@3.5.0...@clayui/drop-down@3.6.0) (2020-08-11)
+
+### Bug Fixes
+
+-   **@clayui/color-picker:** splotch should get focus if menu is closed via 'esc' ([85b52c6](https://github.com/liferay/clay/commit/85b52c6))
+-   **@clayui/drop-down:** Adds missing export of IProps on Menu ([9d84563](https://github.com/liferay/clay/commit/9d84563))
+-   **@clayui/drop-down:** removes tabIndex="0" from the container with scroll ([8d10174](https://github.com/liferay/clay/commit/8d10174))
+
+### Features
+
+-   **@clayui/drop-down:** create DropDownWithDrilldown high-level component ([6b92a80](https://github.com/liferay/clay/commit/6b92a80))
+
 # [3.5.0](https://github.com/liferay/clay/compare/@clayui/drop-down@3.4.6...@clayui/drop-down@3.5.0) (2020-07-28)
 
 ### Bug Fixes
