@@ -149,6 +149,25 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 	value = 'FFFFFF',
 	...otherProps
 }: IProps) => {
+	if (value.indexOf('#') === 0) {
+		value = value.slice(1);
+	}
+
+	const inputColorTypeSupport = React.useMemo(() => {
+		if (typeof document !== 'undefined') {
+			var input = document.createElement('input');
+			input.setAttribute('type', 'color');
+
+			return input.value !== '';
+		}
+
+		return true;
+	}, []);
+
+	if (!inputColorTypeSupport) {
+		useNative = false;
+	}
+
 	const triggerElementRef = React.useRef<HTMLDivElement>(null);
 	const dropdownContainerRef = React.useRef<HTMLDivElement>(null);
 	const inputRef = React.useRef<HTMLInputElement>(null);
@@ -174,9 +193,15 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 							useNative ? onValueChange(e.target.value) : null
 						}
 						ref={valueInputRef}
-						style={{display: 'none'}}
+						style={{
+							height: 0,
+							margin: 0,
+							padding: 0,
+							visibility: 'hidden',
+							width: 0,
+						}}
 						type={useNative ? 'color' : 'text'}
-						value={value}
+						value={`#${hexInputValue}`}
 					/>
 				)}
 

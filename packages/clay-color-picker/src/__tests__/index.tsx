@@ -41,6 +41,21 @@ describe('Rendering', () => {
 		expect(document.body).toMatchSnapshot();
 	});
 
+	it('renders with a hash for the value', () => {
+		render(
+			<ClayColorPicker
+				label="Default Colors"
+				name="colorPicker1"
+				onValueChange={() => {}}
+				spritemap="/test/path"
+				title="Default"
+				value="#FFF"
+			/>
+		);
+
+		expect(document.body).toMatchSnapshot();
+	});
+
 	it('small color-picker', () => {
 		render(
 			<ClayColorPicker
