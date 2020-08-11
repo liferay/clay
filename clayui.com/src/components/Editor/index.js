@@ -16,6 +16,10 @@ import theme from '../../utils/react-live-theme';
 const spritemap = '/images/icons/icons.svg';
 
 function formatCode(code) {
+	if (!code) {
+		return;
+	}
+
 	try {
 		return prettier.format(code, {
 			parser: 'babel',
@@ -23,7 +27,7 @@ function formatCode(code) {
 		});
 	} catch (e) {
 		// eslint-disable-next-line
-		console.log(e);
+		console.log(e, code);
 
 		return;
 	}
