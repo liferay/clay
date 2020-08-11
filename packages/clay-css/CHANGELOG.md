@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.21.4](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v2.21.3...v2.21.4) (2020-08-11)
+
+
+### Bug Fixes
+
+* **clay-css:** SVG Icons fix xmlns declaration for `bold`, `cards2`, `decimal`. Icons aren't visible when converted to data uri and used in `background-image` ([ee60764](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/ee60764))
+* **clay-css:** SVG Icons swap `indent-less` and `indent-more`. The arrows are pointing the wrong way ([6c6507b](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/6c6507b))
+* **clay-css:** Table `.table` should have 1px borders ([55bef74](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/55bef74)), closes [#3592](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3592)
+
+
+
+
+
 ## [2.21.3](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v2.21.2...v2.21.3) (2020-05-21)
 
 
