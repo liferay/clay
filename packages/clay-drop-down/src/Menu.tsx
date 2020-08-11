@@ -133,6 +133,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	hasRightSymbols?: boolean;
 
 	/**
+	 * Element ref to call focus() on after menu is closed via Escape key
+	 */
+	focusRefOnEsc?: React.RefObject<HTMLElement>;
+
+	/**
 	 * Function for setting the offset of the menu from the trigger.
 	 */
 	offsetFn?: (points: TPointOptions) => [number, number];
@@ -154,6 +159,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 			className,
 			hasLeftSymbols,
 			hasRightSymbols,
+			focusRefOnEsc,
 			offsetFn = (points) =>
 				OFFSET_MAP[points.join('') as keyof typeof OFFSET_MAP] as [
 					number,
@@ -171,7 +177,8 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 
 		useDropdownCloseInteractions(
 			[alignElementRef, subPortalRef],
-			onSetActive
+			onSetActive,
+			focusRefOnEsc
 		);
 
 		React.useLayoutEffect(() => {
