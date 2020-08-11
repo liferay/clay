@@ -13,7 +13,8 @@ export function useDropdownCloseInteractions(
 	nodeRefs:
 		| React.RefObject<HTMLElement>
 		| Array<React.RefObject<HTMLElement>>,
-	setActive: (val: boolean) => void
+	setActive: (val: boolean) => void,
+	focusRefOnEsc?: React.RefObject<HTMLElement>
 ) {
 	React.useEffect(() => {
 		const handleClick = (event: MouseEvent) => {
@@ -32,8 +33,15 @@ export function useDropdownCloseInteractions(
 			}
 		};
 
-		const handleEsc = (event: KeyboardEvent) =>
-			event.key === Keys.Esc && setActive(false);
+		const handleEsc = (event: KeyboardEvent) => {
+			if (event.key === Keys.Esc) {
+				if (focusRefOnEsc && focusRefOnEsc.current) {
+					focusRefOnEsc.current.focus();
+				}
+
+				return setActive(false);
+			}
+		};
 
 		window.addEventListener('mousedown', handleClick);
 		window.addEventListener('keydown', handleEsc);
