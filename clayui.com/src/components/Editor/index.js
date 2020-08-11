@@ -59,24 +59,9 @@ const Editor = ({
 		];
 	}
 
-	const inBrowser = typeof window !== 'undefined';
-
-	const localStorage = {
-		getItem(key) {
-			return inBrowser ? window.localStorage.getItem(key) : null;
-		},
-
-		setItem(key, value) {
-			if (inBrowser) {
-				window.localStorage.setItem(key, value);
-			}
-		},
-	};
-
 	const [collapseCode, setCollapseCode] = useStickyState(
 		true,
-		'collapse-code',
-		localStorage
+		'collapse-code'
 	);
 	const [activeIndex, setActiveIndex] = React.useState(0);
 	const [snippets, setSnippets] = React.useState(code);
