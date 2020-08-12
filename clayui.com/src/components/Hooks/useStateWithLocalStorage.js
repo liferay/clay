@@ -43,7 +43,7 @@ function useStateWithLocalStorage(defaultValue, key) {
 	React.useEffect(() => {
 		try {
 			localStorage.setItem(key, JSON.stringify(value));
-		} catch {}
+		} catch {} // eslint-disable-line no-empty
 	}, [key, value]);
 
 	return [value, setValue];

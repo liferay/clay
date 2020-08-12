@@ -131,9 +131,7 @@ const Editor = ({
 										!collapseCode && activeIndex === index
 									}
 									innerProps={{
-										'aria-controls': `tabpanel-${
-											snippet.name
-										}`,
+										'aria-controls': `tabpanel-${snippet.name}`,
 									}}
 									key={snippet.name}
 									onClick={() => {
@@ -169,7 +167,7 @@ const Editor = ({
 
 										<LiveEditor
 											disabled={snippet.disabled}
-											onValueChange={value => {
+											onValueChange={(value) => {
 												const newSnippets = [
 													...snippets,
 												];
