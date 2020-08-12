@@ -25,6 +25,7 @@ exports[`ClayAutocomplete renders DropDown with alignment with container 1`] = `
   <div>
     <input
       class="form-control"
+      type="text"
     />
   </div>
   <div>
@@ -42,6 +43,7 @@ exports[`ClayAutocomplete renders Input with classNames when loading for true 1`
 <div>
   <input
     class="form-control input-group-inset input-group-inset-after"
+    type="text"
   />
 </div>
 `;
