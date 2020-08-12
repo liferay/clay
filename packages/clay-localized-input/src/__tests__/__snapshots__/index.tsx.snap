@@ -20,6 +20,7 @@ exports[`ClayLocalizedInput renders 1`] = `
           class="form-control"
           id="locale1"
           placeholder="Text to translate..."
+          type="text"
           value="Apple"
         />
       </div>
@@ -30,18 +31,27 @@ exports[`ClayLocalizedInput renders 1`] = `
           class="dropdown"
         >
           <button
-            class="dropdown-toggle btn btn-monospaced btn-unstyled"
+            class="dropdown-toggle btn btn-monospaced btn-secondary"
             title="Open Localizations"
             type="button"
           >
-            <svg
-              class="lexicon-icon lexicon-icon-en-us"
-              role="presentation"
+            <span
+              class="inline-item"
             >
-              <use
-                xlink:href="/path/to/svg#en-us"
-              />
-            </svg>
+              <svg
+                class="lexicon-icon lexicon-icon-en-us"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/path/to/svg#en-us"
+                />
+              </svg>
+            </span>
+            <span
+              class="btn-section"
+            >
+              en-US
+            </span>
           </button>
         </div>
       </div>
@@ -78,12 +88,13 @@ exports[`ClayLocalizedInput renders with prepend content and result formatter 1`
         </div>
       </div>
       <div
-        class="input-group-item"
+        class="input-group-item input-group-append"
       >
         <input
           class="form-control"
           id="locale1"
           placeholder="Text to translate..."
+          type="text"
           value="Apple"
         />
       </div>
@@ -94,18 +105,27 @@ exports[`ClayLocalizedInput renders with prepend content and result formatter 1`
           class="dropdown"
         >
           <button
-            class="dropdown-toggle btn btn-monospaced btn-unstyled"
+            class="dropdown-toggle btn btn-monospaced btn-secondary"
             title="Open Localizations"
             type="button"
           >
-            <svg
-              class="lexicon-icon lexicon-icon-en-us"
-              role="presentation"
+            <span
+              class="inline-item"
             >
-              <use
-                xlink:href="/path/to/svg#en-us"
-              />
-            </svg>
+              <svg
+                class="lexicon-icon lexicon-icon-en-us"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/path/to/svg#en-us"
+                />
+              </svg>
+            </span>
+            <span
+              class="btn-section"
+            >
+              en-US
+            </span>
           </button>
         </div>
       </div>
