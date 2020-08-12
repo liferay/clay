@@ -27,7 +27,7 @@ const localStorage = {
 	},
 };
 
-function useStickyState(defaultValue, key) {
+function useStateWithLocalStorage(defaultValue, key) {
 	const [value, setValue] = React.useState(() => {
 		try {
 			const stickyValue = localStorage.getItem(key);
@@ -43,12 +43,10 @@ function useStickyState(defaultValue, key) {
 	React.useEffect(() => {
 		try {
 			localStorage.setItem(key, JSON.stringify(value));
-		} catch {
-			return;
-		}
+		} catch {}
 	}, [key, value]);
 
 	return [value, setValue];
 }
 
-export default useStickyState;
+export default useStateWithLocalStorage;

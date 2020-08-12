@@ -12,7 +12,7 @@ import React, {useContext, useState} from 'react';
 import {LiveEditor, LiveError, LivePreview, LiveProvider} from 'react-live';
 
 import theme from '../../utils/react-live-theme';
-import useStickyState from '../Hooks/useStickyState';
+import useStateWithLocalStorage from '../Hooks/useStateWithLocalStorage';
 
 const spritemap = '/images/icons/icons.svg';
 
@@ -59,7 +59,7 @@ const Editor = ({
 		];
 	}
 
-	const [collapseCode, setCollapseCode] = useStickyState(
+	const [collapseCode, setCollapseCode] = useStateWithLocalStorage(
 		true,
 		'collapse-code'
 	);
@@ -104,8 +104,8 @@ const Editor = ({
 							displayType="unstyled"
 							small
 							spritemap={spritemap}
-							symbol={'paste'}
-							title={'Copy'}
+							symbol="paste"
+							title="Copy"
 						/>
 					)}
 
@@ -131,15 +131,17 @@ const Editor = ({
 										!collapseCode && activeIndex === index
 									}
 									innerProps={{
-										'aria-controls': `tabpanel-${snippet.name}`,
+										'aria-controls': `tabpanel-${
+											snippet.name
+										}`,
 									}}
 									key={snippet.name}
 									onClick={() => {
-										if (activeIndex !== index) {
-											setCollapseCode(false);
-										} else {
-											setCollapseCode(!collapseCode);
-										}
+										setCollapseCode(
+											activeIndex === index
+												? !collapseCode
+												: false
+										);
 
 										setActiveIndex(index);
 									}}
@@ -167,7 +169,7 @@ const Editor = ({
 
 										<LiveEditor
 											disabled={snippet.disabled}
-											onValueChange={(value) => {
+											onValueChange={value => {
 												const newSnippets = [
 													...snippets,
 												];
