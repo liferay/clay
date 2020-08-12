@@ -3,11 +3,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayButtonWithIcon} from '@clayui/button';
+import ClayButton from '@clayui/button';
 import ClayDropDown from '@clayui/drop-down';
 import ClayForm, {ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
+import ClayLayout from '@clayui/layout';
 import React from 'react';
 
 interface IItem {
@@ -125,7 +126,7 @@ const ClayLocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 						</ClayInput.GroupItem>
 					)}
 
-					<ClayInput.GroupItem>
+					<ClayInput.GroupItem append={prependContent ? true : false}>
 						<ClayInput
 							{...otherProps}
 							id={id}
@@ -137,6 +138,7 @@ const ClayLocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 							}}
 							placeholder={placeholder}
 							ref={ref}
+							type="text"
 							value={translations[selectedLocale.label] || ''}
 						/>
 					</ClayInput.GroupItem>
@@ -144,16 +146,24 @@ const ClayLocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 					<ClayInput.GroupItem shrink>
 						<ClayDropDown
 							active={active}
-							hasRightSymbols
 							onActiveChange={setActive}
 							trigger={
-								<ClayButtonWithIcon
-									displayType="unstyled"
+								<ClayButton
+									displayType="secondary"
+									monospaced
 									onClick={() => setActive(!active)}
-									spritemap={spritemap}
-									symbol={selectedLocale.symbol}
 									title={ariaLabels.openLocalizations}
-								/>
+								>
+									<span className="inline-item">
+										<ClayIcon
+											spritemap={spritemap}
+											symbol={selectedLocale.symbol}
+										/>
+									</span>
+									<span className="btn-section">
+										{selectedLocale.label}
+									</span>
+								</ClayButton>
 							}
 						>
 							<ClayDropDown.ItemList>
@@ -167,32 +177,47 @@ const ClayLocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 												onSelectedLocaleChange(locale)
 											}
 										>
-											<ClayIcon
-												className="inline-item inline-item-before"
-												spritemap={spritemap}
-												symbol={locale.symbol}
-											/>
+											<ClayLayout.ContentRow containerElement="span">
+												<ClayLayout.ContentCol
+													containerElement="span"
+													expand
+												>
+													<ClayLayout.ContentSection>
+														<ClayIcon
+															className="inline-item inline-item-before"
+															spritemap={
+																spritemap
+															}
+															symbol={
+																locale.symbol
+															}
+														/>
 
-											{locale.label}
-
-											<ClayLabel
-												className="dropdown-item-indicator-end"
-												displayType={
-													locale.label ===
-													defaultLanguage.label
-														? 'info'
-														: value
-														? 'success'
-														: 'warning'
-												}
-											>
-												{locale.label ===
-												defaultLanguage.label
-													? ariaLabels.default
-													: value
-													? ariaLabels.translated
-													: ariaLabels.untranslated}
-											</ClayLabel>
+														{locale.label}
+													</ClayLayout.ContentSection>
+												</ClayLayout.ContentCol>
+												<ClayLayout.ContentCol containerElement="span">
+													<ClayLayout.ContentSection>
+														<ClayLabel
+															displayType={
+																locale.label ===
+																defaultLanguage.label
+																	? 'info'
+																	: value
+																	? 'success'
+																	: 'warning'
+															}
+														>
+															{locale.label ===
+															defaultLanguage.label
+																? ariaLabels.default
+																: value
+																? ariaLabels.translated
+																: ariaLabels.untranslated}
+														</ClayLabel>
+													</ClayLayout.ContentSection>
+												</ClayLayout.ContentCol>
+											</ClayLayout.ContentRow>
 										</ClayDropDown.Item>
 									);
 								})}
