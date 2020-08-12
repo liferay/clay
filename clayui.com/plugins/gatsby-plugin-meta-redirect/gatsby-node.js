@@ -33,7 +33,7 @@ const writeRedirectsFile = async (redirects, folder, pathPrefix) => {
 		try {
 			fileExists = await exists(FILE_PATH);
 			// eslint-disable-next-line no-empty
-		} catch (err) {}
+		} catch {}
 
 		if (!fileExists) {
 			try {

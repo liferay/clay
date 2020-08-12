@@ -12,6 +12,7 @@ import React, {useContext, useState} from 'react';
 import {LiveEditor, LiveError, LivePreview, LiveProvider} from 'react-live';
 
 import theme from '../../utils/react-live-theme';
+import useStateWithLocalStorage from '../Hooks/useStateWithLocalStorage';
 
 const spritemap = '/images/icons/icons.svg';
 
@@ -58,7 +59,10 @@ const Editor = ({
 		];
 	}
 
-	const [collapseCode, setCollapseCode] = useState(false);
+	const [collapseCode, setCollapseCode] = useStateWithLocalStorage(
+		true,
+		'collapse-code'
+	);
 	const [activeIndex, setActiveIndex] = React.useState(0);
 	const [snippets, setSnippets] = React.useState(code);
 
@@ -88,19 +92,31 @@ const Editor = ({
 				/>
 
 				<div style={{padding: '10px'}}>
-					<ClayButtonWithIcon
-						className="btn-copy"
-						displayType="unstyled"
-						small
-						spritemap={spritemap}
-						symbol={'paste'}
-						title={'Copy'}
-					/>
+					{snippets.length === 1 && collapseCode && (
+						<span className="align-items-center clay-p d-flex mt-0">
+							{'Code Sample (expand to see it)'}
+						</span>
+					)}
+
+					{!collapseCode && (
+						<ClayButtonWithIcon
+							className="btn-copy"
+							displayType="unstyled"
+							small
+							spritemap={spritemap}
+							symbol="paste"
+							title="Copy"
+						/>
+					)}
 
 					<ClayButtonWithIcon
 						className="btn-collapse"
 						displayType="unstyled"
-						onClick={() => setCollapseCode(!collapseCode)}
+						onClick={() => {
+							setActiveIndex(0);
+
+							setCollapseCode(!collapseCode);
+						}}
 						small
 						spritemap={spritemap}
 						symbol={collapseCode ? 'angle-right' : 'angle-down'}
@@ -111,12 +127,22 @@ const Editor = ({
 						<ClayTabs modern>
 							{snippets.map((snippet, index) => (
 								<ClayTabs.Item
-									active={activeIndex === index}
+									active={
+										!collapseCode && activeIndex === index
+									}
 									innerProps={{
 										'aria-controls': `tabpanel-${snippet.name}`,
 									}}
 									key={snippet.name}
-									onClick={() => setActiveIndex(index)}
+									onClick={() => {
+										setCollapseCode(
+											activeIndex === index
+												? !collapseCode
+												: false
+										);
+
+										setActiveIndex(index);
+									}}
 								>
 									{snippet.name}
 								</ClayTabs.Item>

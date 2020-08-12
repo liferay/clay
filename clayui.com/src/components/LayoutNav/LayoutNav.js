@@ -8,36 +8,23 @@ import {ClayDropDownWithItems} from '@clayui/drop-down';
 import {Link} from 'gatsby';
 import React from 'react';
 
+import useStateWithLocalStorage from '../Hooks/useStateWithLocalStorage';
 import Search from './Search';
 
 const spritemap = '/images/icons/icons.svg';
 
-const isNullOrTrue = (val) => val === 'true' || val === null;
-
 const DEV = process.env.GATSBY_CLAY_NIGHTLY === 'true';
 
-const SSR = typeof localStorage === 'undefined';
-
-const INITIAL_STORAGE =
-	DEV && !SSR
-		? {
-				atlas: isNullOrTrue(localStorage.getItem('clay.showAtlas')),
-				site: isNullOrTrue(localStorage.getItem('clay.showSiteCss')),
-		  }
-		: {
-				atlas: true,
-				site: true,
-		  };
-
 export default () => {
-	const [settings, setSettings] = React.useState(INITIAL_STORAGE);
+	const [showAtlas, setShowAtlas] = useStateWithLocalStorage(
+		true,
+		'clay.showAtlas'
+	);
 
-	React.useEffect(() => {
-		if (DEV && !SSR) {
-			localStorage.setItem('clay.showAtlas', settings.atlas);
-			localStorage.setItem('clay.showSiteCss', settings.site);
-		}
-	}, [settings.atlas, settings.site]);
+	const [showSiteCss, setShowSiteCss] = useStateWithLocalStorage(
+		true,
+		'clay.showSiteCss'
+	);
 
 	return (
 		<nav className="navbar navbar-clay-site navbar-expand-lg navbar-light">
@@ -130,14 +117,9 @@ export default () => {
 											<ClayButton
 												displayType="secondary"
 												onClick={() => {
-													localStorage.setItem(
-														'clay.showAtlas',
-														true
-													);
-													localStorage.setItem(
-														'clay.showSiteCss',
-														true
-													);
+													setShowAtlas(true);
+													setShowSiteCss(true);
+
 													window.location.reload();
 												}}
 											>
@@ -148,25 +130,17 @@ export default () => {
 									helpText="Changes will apply after refresh"
 									items={[
 										{
-											checked: settings.atlas,
+											checked: showAtlas,
 											label: 'Show Atlas',
-											onChange: () => {
-												setSettings({
-													atlas: !settings.atlas,
-													site: settings.site,
-												});
-											},
+											onChange: () =>
+												setShowAtlas(!showAtlas),
 											type: 'checkbox',
 										},
 										{
-											checked: settings.site,
+											checked: showSiteCss,
 											label: 'Show Site CSS',
-											onChange: () => {
-												setSettings({
-													atlas: settings.atlas,
-													site: !settings.site,
-												});
-											},
+											onChange: () =>
+												setShowSiteCss(!showSiteCss),
 											type: 'checkbox',
 										},
 									]}

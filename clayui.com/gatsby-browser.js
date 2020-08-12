@@ -9,10 +9,16 @@ export const onClientEntry = () => {
 	if (process.env.GATSBY_CLAY_NIGHTLY === 'true') {
 		const isNullOrTrue = (val) => val === 'true' || val === null;
 
-		const showAtlas = isNullOrTrue(localStorage.getItem('clay.showAtlas'));
-		const showSiteCss = isNullOrTrue(
-			localStorage.getItem('clay.showSiteCss')
-		);
+		let showAtlas = true;
+		let showSiteCss = true;
+
+		try {
+			showAtlas = isNullOrTrue(localStorage.getItem('clay.showAtlas'));
+
+			showSiteCss = isNullOrTrue(
+				localStorage.getItem('clay.showSiteCss')
+			);
+		} catch {} // eslint-disable-line no-empty
 
 		if (showAtlas) {
 			require('@clayui/css/src/scss/atlas.scss');
