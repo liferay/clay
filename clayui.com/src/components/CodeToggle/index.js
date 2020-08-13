@@ -7,12 +7,18 @@ import {useEffect} from 'react';
 
 const CodeToggle = (props) => {
 	const handleCodeCollapse = (e) => {
-		const isCodeCollapse =
+		const isCodeCollapseBtn =
 			e.target.classList.contains('btn-collapse--collapse') ||
 			e.target.closest('.btn-collapse--collapse');
 
-		if (isCodeCollapse) {
+		if (isCodeCollapseBtn) {
 			const codeContainer = e.target.closest('.code-container');
+
+			const codeSampleInfo = codeContainer.querySelector(
+				'.code-sample-info'
+			);
+
+			codeSampleInfo.classList.toggle('hide');
 
 			const isVisible = codeContainer.classList.contains('expanded');
 

@@ -29,6 +29,19 @@
 	}
 }
 
+.docs .code-sample-info.clay-p {
+	align-items: center;
+	display: flex;
+	margin-top: 0;
+	padding: 8px;
+	position: absolute;
+	z-index: 999;
+
+	&.hide {
+		display: none;
+	}
+}
+
 .btn-copy,
 .btn-collapse {
 	animation: fadeIn 0.5s cubic-bezier(0.3, 0, 0.3, 1) 0s 1 forwards;
