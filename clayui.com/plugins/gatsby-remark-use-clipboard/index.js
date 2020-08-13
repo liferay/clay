@@ -35,6 +35,10 @@ module.exports = ({markdownAST}) => {
 					</div>
 				</div>
 
+				<span class="clay-p code-sample-info">
+					Code Sample (expand to see it)
+				</span>
+
 				<button class="btn btn-sm btn-copy btn-monospaced btn-unstyled" title="Copy">
 					<svg class="lexicon-icon" focusable="false" role="presentation">
 						<use xlink:href="/images/icons/icons.svg#paste"></use>
