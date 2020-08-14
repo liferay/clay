@@ -3,4 +3,6 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-module.exports = function () { return function () {}; };
+module.exports = function () {
+	return function () {};
+};

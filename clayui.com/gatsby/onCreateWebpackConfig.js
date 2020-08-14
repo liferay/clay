@@ -13,8 +13,8 @@ module.exports = ({actions, stage}) => {
 				loader: 'strip-loader?strip[]=debug',
 				// strip `debug()` calls
 				test: /\.js$/,
-			}
-		]
+			},
+		],
 	};
 
 	if (stage === 'build-html') {
@@ -33,7 +33,10 @@ module.exports = ({actions, stage}) => {
 		module,
 		plugins: [
 			// replace require('debug')() with an noop function
-			new webpack.NormalModuleReplacementPlugin(/debug/, `${process.cwd()}/gatsby/noop.js`),
+			new webpack.NormalModuleReplacementPlugin(
+				/debug/,
+				`${process.cwd()}/gatsby/noop.js`
+			),
 		],
 		resolve: {
 			alias: {
