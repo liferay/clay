@@ -4,13 +4,23 @@
  */
 
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = ({actions, stage}) => {
-	let module = {};
+	let module = {
+		rules: [
+			{
+				loader: 'strip-loader?strip[]=debug',
+				// strip `debug()` calls
+				test: /\.js$/,
+			},
+		],
+	};
 
 	if (stage === 'build-html') {
 		module = {
 			rules: [
+				...module.rules,
 				{
 					loader: 'null-loader',
 					test: /@clayui\/tooltip|clipboard/,
@@ -21,6 +31,13 @@ module.exports = ({actions, stage}) => {
 
 	actions.setWebpackConfig({
 		module,
+		plugins: [
+			// replace require('debug')() with an noop function
+			new webpack.NormalModuleReplacementPlugin(
+				/debug/,
+				`${process.cwd()}/gatsby/noop.js`
+			),
+		],
 		resolve: {
 			alias: {
 				'$clayui.com': path.resolve(__dirname, '..'),
@@ -28,7 +45,6 @@ module.exports = ({actions, stage}) => {
 				$packages: path.resolve(__dirname, '../../packages'),
 			},
 			mainFields: ['ts:main', 'module', 'main'],
-			modules: [path.resolve(__dirname, 'src'), 'node_modules'],
 		},
 	});
 };
