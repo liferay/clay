@@ -15,7 +15,7 @@ const spritemap = '/images/icons/icons.svg';
 
 const DEV = process.env.GATSBY_CLAY_NIGHTLY === 'true';
 
-export default () => {
+export default (location) => {
 	const [showAtlas, setShowAtlas] = useStateWithLocalStorage(
 		true,
 		'clay.showAtlas'
@@ -25,6 +25,8 @@ export default () => {
 		true,
 		'clay.showSiteCss'
 	);
+
+	const pathname = location.pathname || '';
 
 	return (
 		<nav className="navbar navbar-clay-site navbar-expand-lg navbar-light">
@@ -36,10 +38,13 @@ export default () => {
 					<ul className="ml-auto navbar-nav">
 						<li className="nav-item">
 							<Link
-								activeStyle={{color: '#b3472d'}}
 								className="nav-link"
-								partiallyActive
-								to="/docs/"
+								style={{
+									color: pathname.match(/docs\//g)
+										? '#b3472d'
+										: '',
+								}}
+								to="/docs/get-started/index.html"
 							>
 								<span className="c-inner" tabIndex="-1">
 									{'Docs'}
@@ -149,6 +154,7 @@ export default () => {
 										<ClayButtonWithIcon
 											className="nav-link"
 											displayType="unstyled"
+											spritemap={spritemap}
 											symbol="cog"
 										/>
 									}

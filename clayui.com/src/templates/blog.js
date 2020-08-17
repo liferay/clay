@@ -41,7 +41,7 @@ export default ({data, location}) => {
 					<div className="flex-xl-nowrap row">
 						<Sidebar data={list} location={location} />
 						<div className="col-xl sidebar-offset">
-							<LayoutNav />
+							<LayoutNav pathname={location.pathname} />
 							<div className="clay-blog-content">
 								<header>
 									<div className="clay-site-container container-fluid">

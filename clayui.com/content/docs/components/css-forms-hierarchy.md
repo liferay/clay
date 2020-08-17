@@ -180,7 +180,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/'
 		</div>
 		<div class="sheet-section">
 			<div class="form-group">
-				<label for="basicInputTypeText">
+				<label for="_yepzzftzb">
 					Screen Name
 					<span class="reference-mark">
 						<svg class="lexicon-icon lexicon-icon-asterisk" focusable="false" role="presentation">
@@ -188,15 +188,15 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/'
 						</svg>
 					</span>
 				</label>
-				<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text">
+				<input class="form-control" id="_yepzzftzb" placeholder="Placeholder" type="text">
 			</div>
 			<div class="form-group">
 				<label for="basicInputTypeEmail">Email</label>
 				<input class="form-control" id="basicInputTypeEmail" type="email">
 			</div>
 			<div class="form-group">
-				<label for="basicInputTypeText">Name</label>
-				<input class="form-control" id="basicInputTypeText" placeholder="Name" type="text">
+				<label for="_3yzci7nce">Name</label>
+				<input class="form-control" id="_3yzci7nce" placeholder="Name" type="text">
 			</div>
 		</div>
 		<div class="sheet-footer sheet-footer-btn-block-sm-down">
@@ -223,7 +223,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/'
 	</div>
 	<div class="sheet-section">
 		<div class="form-group">
-			<label for="basicInputTypeText">
+			<label for="_0rmtn466h">
 				Screen Name
 				<span class="reference-mark">
 					<svg
@@ -237,20 +237,20 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/'
 			</label>
 			<input
 				class="form-control"
-				id="basicInputTypeText"
+				id="_0rmtn466h"
 				placeholder="Placeholder"
 				type="text"
 			/>
 		</div>
 		<div class="form-group">
-			<label for="basicInputTypeEmail">Email</label>
-			<input class="form-control" id="basicInputTypeEmail" type="email" />
+			<label for="_9hslbpuas">Email</label>
+			<input class="form-control" id="_9hslbpuas" type="email" />
 		</div>
 		<div class="form-group">
-			<label for="basicInputTypeText">Name</label>
+			<label for="_javf9wj9l">Name</label>
 			<input
 				class="form-control"
-				id="basicInputTypeText"
+				id="_javf9wj9l"
 				placeholder="Name"
 				type="text"
 			/>
@@ -282,7 +282,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/'
 		<div class="sheet-section">
 			<div class="form-group-autofit">
 				<div class="form-group-item">
-					<label for="basicInputTypeText">
+					<label for="_c0phn4u3q">
 						Screen Name
 						<span class="reference-mark">
 							<svg class="lexicon-icon lexicon-icon-asterisk" focusable="false" role="presentation">
@@ -290,31 +290,31 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/'
 							</svg>
 						</span>
 					</label>
-					<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text">
+					<input class="form-control" id="_c0phn4u3q" placeholder="Placeholder" type="text">
 				</div>
 				<div class="form-group-item">
-					<label for="basicInputTypeText">Birthday</label>
-					<input class="form-control" id="basicInputTypeText" placeholder="Placeholder" type="text" value="01/01/1970">
-				</div>
-			</div>
-			<div class="form-group-autofit">
-				<div class="form-group-item">
-					<label for="basicInputTypeEmail">Email</label>
-					<input class="form-control" id="basicInputTypeEmail" type="email">
-				</div>
-				<div class="form-group-item">
-					<label for="basicInputTypeText">Gender</label>
-					<input class="form-control" id="basicInputTypeText" placeholder="Gender" type="text">
+					<label for="_2nwkgln2x">Birthday</label>
+					<input class="form-control" id="_2nwkgln2x" placeholder="Placeholder" type="text" value="01/01/1970">
 				</div>
 			</div>
 			<div class="form-group-autofit">
 				<div class="form-group-item">
-					<label for="basicInputTypeText">Name</label>
-					<input class="form-control" id="basicInputTypeText" placeholder="Name" type="text">
+					<label for="_iyygmg1c5">Email</label>
+					<input class="form-control" id="_iyygmg1c5" type="email">
 				</div>
 				<div class="form-group-item">
-					<label for="basicInputTypeText">Job Title</label>
-					<input class="form-control" id="basicInputTypeText" placeholder="Job Title" type="text">
+					<label for="_xyx7wo9lq">Gender</label>
+					<input class="form-control" id="_xyx7wo9lq" placeholder="Gender" type="text">
+				</div>
+			</div>
+			<div class="form-group-autofit">
+				<div class="form-group-item">
+					<label for="_hizl88js7">Name</label>
+					<input class="form-control" id="_hizl88js7" placeholder="Name" type="text">
+				</div>
+				<div class="form-group-item">
+					<label for="_3ud138ywq">Job Title</label>
+					<input class="form-control" id="_3ud138ywq" placeholder="Job Title" type="text">
 				</div>
 			</div>
 		</div>
@@ -343,7 +343,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/'
 	<div class="sheet-section">
 		<div class="form-group-autofit">
 			<div class="form-group-item">
-				<label for="basicInputTypeText">
+				<label for="_cab0u4dgi">
 					Screen Name
 					<span class="reference-mark">
 						<svg
@@ -357,16 +357,16 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/'
 				</label>
 				<input
 					class="form-control"
-					id="basicInputTypeText"
+					id="_cab0u4dgi"
 					placeholder="Placeholder"
 					type="text"
 				/>
 			</div>
 			<div class="form-group-item">
-				<label for="basicInputTypeText">Birthday</label>
+				<label for="_y1mdflpv9">Birthday</label>
 				<input
 					class="form-control"
-					id="basicInputTypeText"
+					id="_y1mdflpv9"
 					placeholder="Placeholder"
 					type="text"
 					value="01/01/1970"
@@ -375,18 +375,14 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/'
 		</div>
 		<div class="form-group-autofit">
 			<div class="form-group-item">
-				<label for="basicInputTypeEmail">Email</label>
-				<input
-					class="form-control"
-					id="basicInputTypeEmail"
-					type="email"
-				/>
+				<label for="_jcrc07o9v">Email</label>
+				<input class="form-control" id="_jcrc07o9v" type="email" />
 			</div>
 			<div class="form-group-item">
-				<label for="basicInputTypeText">Gender</label>
+				<label for="_17obpdwz0">Gender</label>
 				<input
 					class="form-control"
-					id="basicInputTypeText"
+					id="_17obpdwz0"
 					placeholder="Gender"
 					type="text"
 				/>
@@ -394,19 +390,19 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/'
 		</div>
 		<div class="form-group-autofit">
 			<div class="form-group-item">
-				<label for="basicInputTypeText">Name</label>
+				<label for="_kcnx64qkv">Name</label>
 				<input
 					class="form-control"
-					id="basicInputTypeText"
+					id="_kcnx64qkv"
 					placeholder="Name"
 					type="text"
 				/>
 			</div>
 			<div class="form-group-item">
-				<label for="basicInputTypeText">Job Title</label>
+				<label for="_8awy2608y">Job Title</label>
 				<input
 					class="form-control"
-					id="basicInputTypeText"
+					id="_8awy2608y"
 					placeholder="Job Title"
 					type="text"
 				/>
