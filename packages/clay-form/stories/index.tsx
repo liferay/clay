@@ -15,6 +15,7 @@ import {
 	ClaySelect,
 	ClaySelectBox,
 	ClaySelectWithOption,
+	ClayTextarea,
 	ClayToggle,
 } from '../src';
 import ClayForm from '../src/Form';
@@ -297,6 +298,124 @@ storiesOf('Components|ClayInput', module)
 							aria-label="Username"
 							placeholder="Username"
 							type="text"
+						/>
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem append shrink>
+						<button className="btn btn-secondary" type="submit">
+							{'Submit'}
+						</button>
+					</ClayInput.GroupItem>
+				</ClayInput.Group>
+			</ClayForm.Group>
+		</div>
+	));
+
+storiesOf('Components|ClayTextarea', module)
+	.add('default', () => (
+		<div className="sheet">
+			<ClayForm.Group>
+				<label htmlFor="basicInputText">{'Name'}</label>
+				<ClayTextarea
+					disabled={boolean('Disabled ', false)}
+					id="basicInputText"
+					placeholder="Insert your name here"
+					readOnly={boolean('Read Only ', false)}
+					sizing={select(
+						'Sizing',
+						{
+							lg: 'lg',
+							sm: 'sm',
+						},
+						undefined
+					)}
+				/>
+			</ClayForm.Group>
+		</div>
+	))
+	.add('group separated', () => (
+		<div className="sheet">
+			<ClayForm.Group>
+				<ClayInput.Group>
+					<ClayInput.GroupItem shrink>
+						<ClayInput.GroupText>{'@'}</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem>
+						<ClayTextarea
+							aria-label="Username"
+							insetBefore
+							placeholder="Username"
+						/>
+					</ClayInput.GroupItem>
+				</ClayInput.Group>
+			</ClayForm.Group>
+			<ClayForm.Group>
+				<ClayInput.Group>
+					<ClayInput.GroupItem>
+						<ClayTextarea aria-label="Email" placeholder="Email" />
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem shrink>
+						<ClayInput.GroupText>{'@'}</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem>
+						<ClayTextarea
+							aria-label="Email Host"
+							placeholder="liferay"
+						/>
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem shrink>
+						<ClayInput.GroupText>{'.com'}</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+				</ClayInput.Group>
+			</ClayForm.Group>
+		</div>
+	))
+	.add('group connected', () => (
+		<div className="sheet">
+			<ClayForm.Group>
+				<ClayInput.Group>
+					<ClayInput.GroupItem prepend shrink>
+						<ClayInput.GroupText>{'@'}</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem append>
+						<ClayTextarea
+							aria-label="Username"
+							placeholder="Username"
+						/>
+					</ClayInput.GroupItem>
+				</ClayInput.Group>
+			</ClayForm.Group>
+			<ClayForm.Group>
+				<ClayInput.Group>
+					<ClayInput.GroupItem prepend>
+						<ClayTextarea aria-label="Email" placeholder="Email" />
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem prepend shrink>
+						<ClayInput.GroupText>{'@'}</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem prepend>
+						<ClayTextarea
+							aria-label="Email Host"
+							placeholder="liferay"
+						/>
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem append shrink>
+						<ClayInput.GroupText>{'.com'}</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+				</ClayInput.Group>
+			</ClayForm.Group>
+		</div>
+	))
+	.add('group mixed', () => (
+		<div className="sheet">
+			<ClayForm.Group>
+				<ClayInput.Group>
+					<ClayInput.GroupItem shrink>
+						<ClayInput.GroupText>{'@'}</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem prepend>
+						<ClayTextarea
+							aria-label="Username"
+							placeholder="Username"
 						/>
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem append shrink>
