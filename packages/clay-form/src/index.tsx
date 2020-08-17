@@ -12,6 +12,7 @@ import ClayRadioGroup from './RadioGroup';
 import ClaySelect from './Select';
 import ClaySelectBox from './SelectBox';
 import ClaySelectWithOption from './SelectWithOption';
+import ClayTextarea from './Textarea';
 import ClayToggle from './Toggle';
 
 export {
@@ -23,6 +24,7 @@ export {
 	ClaySelect,
 	ClaySelectBox,
 	ClaySelectWithOption,
+	ClayTextarea,
 	ClayToggle,
 };
 
