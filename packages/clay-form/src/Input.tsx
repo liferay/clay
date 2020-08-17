@@ -185,7 +185,7 @@ const ClayInput = React.forwardRef<HTMLInputElement, IProps>(
 			insetAfter,
 			insetBefore,
 			sizing,
-			type = "text",
+			type = 'text',
 			...otherProps
 		}: IProps,
 		ref
