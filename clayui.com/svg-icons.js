@@ -761,7 +761,7 @@ const iconsData = {
 const iconsPath = path.join('static', 'images', 'icons', 'icons.svg');
 
 const iconsFile = fs.readFileSync(iconsPath, 'utf8');
-const symbolsArr = iconsFile.toString().match(/<symbol id="(.*)"\s/g);
+const symbolsArr = iconsFile.toString().match(/<symbol id="(.*?)"\s/g);
 
 function getId(str) {
 	str = str.replace('<symbol id="', '');
