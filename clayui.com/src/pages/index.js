@@ -4,8 +4,9 @@
  */
 
 import {Link} from 'gatsby';
-import React from 'react';
 import Helmet from 'react-helmet';
+import LayoutNavHome from '../components/LayoutNavHome';
+import React from 'react';
 
 /**
  * @return {React.Component}
@@ -18,6 +19,11 @@ export default () => {
 
 	return (
 		<div className="home">
+			<div
+				className="container"
+			>
+				<LayoutNavHome/>
+			</div>
 			<div
 				className="alert alert-dismissible alert-fluid alert-warning"
 				role="alert"
@@ -65,86 +71,24 @@ export default () => {
 										}
 									</h2>
 									<div className="navbar-nav-scroll">
-										<ul className="ml-auto navbar-nav">
-											<li className="nav-item">
-												<Link
-													className="nav-link-intro"
-													to="/docs/get-started/index.html"
-												>
-													{'Get Started'}
-												</Link>
-											</li>
-											<li className="nav-item">
-												<Link
-													className="nav-link-intro"
-													to="/docs/css/index.html"
-												>
-													{'Style Guide'}
-												</Link>
-											</li>
-											<li className="nav-item">
-												<Link
-													className="nav-link-intro"
-													to="/docs/components/index.html"
-												>
-													{'Components Library'}
-												</Link>
-											</li>
-											<li className="nav-item">
-												<Link
-													className="nav-link-intro"
-													to="/docs/examples.html"
-												>
-													{'Examples'}
-												</Link>
-											</li>
-											<li className="nav-item">
-												<Link
-													className="nav-link-intro"
-													to="/blog"
-												>
-													{'Blog'}
-												</Link>
-											</li>
-											<li className="nav-item">
-												<a
-													className="nav-link-intro"
-													href="https://liferay.design/lexicon"
-													rel="noopener noreferrer"
-													target="_blank"
-												>
-													{'Lexicon'}
-													<span className="inline-item inline-item-after">
-														<svg
-															className="lexicon-icon lexicon-icon-angle-right"
-															focusable="false"
-															role="presentation"
-														>
-															<use href="/images/icons/icons.svg#angle-right" />
-														</svg>
-													</span>
-												</a>
-											</li>
-											<li className="nav-item">
-												<a
-													className="nav-link-intro"
-													href="https://github.com/liferay/clay"
-													rel="noopener noreferrer"
-													target="_blank"
-												>
-													{'Github'}
-													<span className="inline-item inline-item-after">
-														<svg
-															className="lexicon-icon lexicon-icon-angle-right"
-															focusable="false"
-															role="presentation"
-														>
-															<use href="/images/icons/icons.svg#angle-right" />
-														</svg>
-													</span>
-												</a>
-											</li>
-										</ul>
+										<Link
+											className="btn btn-warning mr-3"
+											to="/docs/get-started/index.html"
+										>
+											{'Get Started'}
+										</Link>
+										<Link
+											className="btn btn-secondary mr-3"
+											to="/docs/components/index.html"
+										>
+											{'Components Library'}
+										</Link>
+										<Link
+											className="btn btn-secondary"
+											to="/docs/examples.html"
+										>
+											{'Examples'}
+										</Link>
 									</div>
 								</div>
 							</div>
@@ -187,6 +131,15 @@ export default () => {
 									to="/blog/2019/10/25/introducing-clay-v3.html"
 								>
 									{'Read more about warnings'}
+									<span className="fs-12 inline-item inline-item-after">
+										<svg
+											className="lexicon-icon lexicon-icon-angle-right"
+											focusable="false"
+											role="presentation"
+										>
+											<use href="/images/icons/icons.svg#angle-right" />
+										</svg>
+									</span>
 								</Link>
 							</div>
 						</div>
@@ -197,7 +150,7 @@ export default () => {
 					<div className="container-fluid container-fluid-max-lg spacing text-center">
 						<div className="row">
 							<div className="col-md-12">
-								<img alt="" src="/images/react_logo.svg" />
+								<img alt="" className="border-circle bg-warning rounded-lg px-2 py-3" src="/images/react_logo.svg" />
 								<h1 className="mb-2 title-section">
 									{'Clay Components'}
 								</h1>
@@ -362,6 +315,15 @@ export default () => {
 											target="_blank"
 										>
 											{'Lexicon 2.0'}
+											<span className="fs-12 inline-item inline-item-after">
+												<svg
+													className="lexicon-icon lexicon-icon-angle-right"
+													focusable="false"
+													role="presentation"
+												>
+													<use href="/images/icons/icons.svg#angle-right" />
+												</svg>
+											</span>
 										</a>
 									</div>
 								</div>
@@ -386,6 +348,15 @@ export default () => {
 											target="_blank"
 										>
 											{'Lexicon CSS'}
+											<span className="fs-12 inline-item inline-item-after">
+												<svg
+													className="lexicon-icon lexicon-icon-angle-right"
+													focusable="false"
+													role="presentation"
+												>
+													<use href="/images/icons/icons.svg#angle-right" />
+												</svg>
+											</span>
 										</a>
 									</div>
 								</div>

@@ -9,8 +9,6 @@
 }
 
 .home {
-	background-color: $brand-bg-dark;
-
 	.font-weight-bold {
 		font-weight: 900 !important;
 	}
@@ -81,7 +79,7 @@
 	}
 
 	@include media-breakpoint-up(sm) {
-		padding: 203px 0 216px;
+		padding: 103px 0 116px;
 	}
 
 	.brand {
@@ -109,21 +107,6 @@
 
 		&:hover {
 			text-decoration: none;
-		}
-	}
-
-	.nav-item {
-		position: relative;
-
-		&::before {
-			content: '・';
-			color: $brand-dark;
-			position: absolute;
-			right: 1px;
-		}
-
-		&:last-child::before {
-			content: '';
 		}
 	}
 
@@ -219,7 +202,7 @@
 }
 
 .title-section.orange {
-	color: #ff8f39;
+	color: #f7caa7;
 }
 
 .title-section ~ .version-section {
@@ -244,7 +227,7 @@
 }
 
 .code-shell {
-	color: #ffae9a;
+	color: #611e0d;
 	display: inline-block;
 	font-size: 18px;
 	font-weight: 600;
@@ -254,20 +237,13 @@
 	padding: 141px 20px;
 }
 
-.hr {
-	&:first-child::before,
-	&::before {
-		background-color: $brand-bg-dark-lighter;
-		content: '';
-		display: block;
-		height: 2px;
-		margin-left: auto;
-		margin-right: auto;
-		width: 300px;
-	}
-}
-
 .warning {
+	background: url(/images/css_illustration.svg) $brand-lighter;
+	background-size: cover;
+
+	.spacing {
+		background-color: $brand-lighter;
+	}
 	.subtitle-section {
 		color: #fff4ec;
 		margin-bottom: 61px;
@@ -321,7 +297,7 @@
 
 .contribute {
 	color: #272833;
-	background-color: $brand-lighter;
+	background-color: #f7caa7;
 	padding: 153px 0;
 
 	h2 {
@@ -336,10 +312,6 @@
 		line-height: 1.4;
 		margin-bottom: 23px;
 	}
-
-	.btn-dark {
-		color: $brand-lighter;
-	}
 }
 
 .link-blocks {
@@ -351,15 +323,15 @@
 	}
 
 	.card {
-		background-color: #2b2d39;
+		background-color: darken($brand-lighter, 10%);
 		border-width: 0;
 		box-shadow: 4px 6px 24px rgba(30, 31, 39, 0.3);
 
 		&:hover {
-			background-color: #272833;
+			background-color: $brand-lighter;
 
 			a {
-				color: #d2d3dd;
+				color: $white;
 			}
 		}
 
@@ -369,7 +341,7 @@
 		}
 
 		a {
-			color: #545462;
+			color: #d2d3dd;
 			font-weight: bold;
 		}
 	}
