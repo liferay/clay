@@ -282,19 +282,39 @@
 	}
 }
 
-.css,
-.contribute {
+.css {
+	&::before {
+		background-color: $brand-bg-dark-lighter;
+		content: '';
+		display: block;
+		height: 2px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 300px;
+
+		@include media-breakpoint-down(md) {
+			width: 200px;
+		}
+	}
+
 	.container-fluid {
-		@media (max-width: $screen-md) {
+		@include media-breakpoint-down(md) {
 			text-align: center !important;
 		}
 	}
 }
 
 .contribute {
+	background-image: url(/images/css_illustration2.svg);
+	background-position: 80%;
+	background-repeat: no-repeat;
+	background-size: 130%;
 	color: #272833;
-	background-color: #f7caa7;
-	padding: 153px 0;
+	padding: 40px 0;
+
+	@include media-breakpoint-down(md) {
+		padding: 153px 0;
+	}
 
 	h2 {
 		font-size: 34px;
