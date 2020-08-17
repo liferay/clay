@@ -1,26 +1,24 @@
+/**
+ * SPDX-FileCopyrightText: © 2018 Liferay, Inc. <https://liferay.com>
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
 // Compiles SVG icons in directory `clay-css/src/images/icons` into a spritemap
 
-const clayCSS = require('@clayui/css');
 const fs = require('fs');
 const path = require('path');
 
-const pluginOptions = {
-	outputFile: 'icons.svg',
-	outputDir: path.join(__dirname, '..', '..', 'static', 'images', 'icons'),
-	srcDir: path.join(clayCSS.srcDir, 'images', 'icons'),
-};
-
 const generateSvgSprite = (pluginOptions) => {
-	const REGEX_FILE_EXT_SVG = /(flags-|.svg$)/g;
-	const REGEX_HTML_COMMENTS = /<!--(.+?)(-->\n|-->)/gs;
-	const REGEX_SVG_VIEWBOX = /(\sv|v)iewBox="(.+?)"/g;
-	const REGEX_SVG_TAG = /(<\/svg|<svg(.+?))>(\n|)/g;
+	const REGEX_FILE_EXT_SVG = /(?:flags-|\.svg$)/g;
+	const REGEX_HTML_COMMENTS = /<!--(?:.+?)-->\n?/gs;
+	const REGEX_SVG_VIEWBOX = /\bviewBox="[^"]+"/g;
+	const REGEX_SVG_TAG = /(?:<\/svg|<svg[^>]+)>(?:\n|)/g;
 
 	const filesArr = fs.readdirSync(pluginOptions.srcDir);
 
 	let strSprite = `<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">`;
 
-	filesArr.forEach((file, index) => {
+	filesArr.forEach((file) => {
 		let icon = fs
 			.readFileSync(path.join(pluginOptions.srcDir, file), 'utf8')
 			.toString();
@@ -29,7 +27,15 @@ const generateSvgSprite = (pluginOptions) => {
 
 		const viewBox = icon.match(REGEX_SVG_VIEWBOX);
 
-		const symbol = `<symbol id="${id}"${viewBox}>`;
+		try {
+			if (!viewBox) {
+				throw `Viewbox attribute not found for icon: ${id}`;
+			}
+		} catch (err) {
+			console.warn(err);
+		}
+
+		const symbol = `<symbol id="${id}" ${viewBox}>`;
 
 		icon = icon.replace(REGEX_HTML_COMMENTS, '');
 		icon = icon.replace(REGEX_SVG_TAG, '');
@@ -45,7 +51,7 @@ const generateSvgSprite = (pluginOptions) => {
 	);
 };
 
-exports.onPostBootstrap = ({reporter}) => {
+exports.onPostBootstrap = ({reporter}, pluginOptions) => {
 	generateSvgSprite(pluginOptions);
 
 	reporter.info(`Compiling icons.svg finished`);

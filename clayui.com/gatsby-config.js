@@ -11,10 +11,17 @@ module.exports = {
 		'MarkdownRemark.frontmatter.author': 'AuthorYaml',
 	},
 	plugins: [
-		'gatsby-plugin-svg-compile-sprite',
 		'gatsby-plugin-typescript',
 		'gatsby-transformer-authors-yaml',
 		'gatsby-plugin-meta-redirect',
+		{
+			options: {
+				outputDir: path.join(__dirname, 'static', 'images', 'icons'),
+				outputFile: 'icons.svg',
+				srcDir: path.join(clay.srcDir, 'images', 'icons'),
+			},
+			resolve: 'gatsby-plugin-svg-compile-sprite',
+		},
 		{
 			options: {
 				includePaths: clay.includePaths.concat(
