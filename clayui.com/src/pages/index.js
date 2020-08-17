@@ -70,21 +70,21 @@ export default () => {
 											'A Web Implementation of Lexicon Experience Language'
 										}
 									</h2>
-									<div className="navbar-nav-scroll">
+									<div>
 										<Link
-											className="btn btn-warning mr-3"
+											className="btn btn-warning mb-2 mr-3"
 											to="/docs/get-started/index.html"
 										>
 											{'Get Started'}
 										</Link>
 										<Link
-											className="btn btn-secondary mr-3"
+											className="btn btn-secondary mb-2 mr-3"
 											to="/docs/components/index.html"
 										>
 											{'Components Library'}
 										</Link>
 										<Link
-											className="btn btn-secondary"
+											className="btn btn-secondary mb-2"
 											to="/docs/examples.html"
 										>
 											{'Examples'}
@@ -202,6 +202,7 @@ export default () => {
 							<div className="col-md-5">
 								<img
 									alt=""
+									className="img-fluid"
 									src="/images/css_illustration.svg"
 								/>
 							</div>
@@ -297,7 +298,7 @@ export default () => {
 						<div className="row">
 							<div className="col-md-5 mb-4 ml-auto">
 								<div className="card h-100">
-									<div className="card-body mx-5">
+									<div className="card-body mx-md-5">
 										<img
 											alt=""
 											className="mx-auto"
@@ -330,7 +331,7 @@ export default () => {
 							</div>
 							<div className="col-md-5 mb-4 mr-auto">
 								<div className="card h-100">
-									<div className="card-body mx-5">
+									<div className="card-body mx-md-5">
 										<img
 											alt=""
 											className="mx-auto"

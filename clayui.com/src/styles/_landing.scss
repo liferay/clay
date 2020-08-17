@@ -74,10 +74,6 @@
 	margin-bottom: 32px;
 	padding: 88px 0;
 
-	@media (max-width: $screen-md) {
-		text-align: center !important;
-	}
-
 	@include media-breakpoint-up(sm) {
 		padding: 103px 0 116px;
 	}
@@ -90,7 +86,7 @@
 			max-height: 84px;
 			margin-right: 22px;
 
-			@media (max-width: $screen-md) {
+			@include media-breakpoint-down(md) {
 				max-width: 60px;
 			}
 		}
@@ -100,7 +96,7 @@
 			font-weight: 700;
 			color: $brand-dark;
 
-			@media (max-width: $screen-md) {
+			@include media-breakpoint-down(md) {
 				font-size: 60px;
 			}
 		}
@@ -138,7 +134,7 @@
 			margin-bottom: 73px;
 		}
 
-		@media (max-width: $screen-md) {
+		@include media-breakpoint-down(md) {
 			font-size: 31px;
 			line-height: 43px;
 			margin-bottom: 40px;
@@ -192,7 +188,7 @@
 		margin-right: 28px;
 	}
 
-	@media (max-width: $screen-md) {
+	@include media-breakpoint-down(md) {
 		font-size: 28px;
 
 		svg {
@@ -215,7 +211,7 @@
 	font-weight: 400;
 	margin: 0;
 
-	@media (max-width: $screen-md) {
+	@include media-breakpoint-down(md) {
 		font-size: 18px;
 	}
 }
@@ -311,6 +307,12 @@
 		font-weight: 600;
 		line-height: 1.4;
 		margin-bottom: 23px;
+	}
+
+	.container-fluid {
+		@include media-breakpoint-down(md) {
+			text-align: center !important;
+		}
 	}
 }
 

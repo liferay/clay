@@ -55,24 +55,6 @@
 	}
 }
 
-.navbar-nav-scroll {
-	@media (max-width: $grid-float-breakpoint - 1) {
-		max-width: 100%;
-		overflow: hidden;
-		height: 2.5rem;
-
-		.navbar-nav {
-			overflow-x: auto;
-			padding-bottom: 2rem;
-			white-space: nowrap;
-
-			.nav-link {
-				margin-left: 0 !important;
-			}
-		}
-	}
-}
-
 .navbar-mobile {
 	background-color: $brand-secondary;
 	width: 100%;

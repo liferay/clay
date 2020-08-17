@@ -51,7 +51,7 @@ export default (location) => {
 								</span>
 							</Link>
 						</li>
-						<li className="nav-item">
+						<li className="d-none d-sm-flex nav-item">
 							<a
 								className="nav-link"
 								href="http://storybook.clayui.com"
@@ -63,7 +63,7 @@ export default (location) => {
 								</span>
 							</a>
 						</li>
-						<li className="nav-item">
+						<li className="d-none d-sm-flex nav-item">
 							<a
 								className="nav-link"
 								href="https://codesandbox.io/s/liferay-clay-449ve"
