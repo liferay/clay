@@ -9,8 +9,6 @@
 }
 
 .home {
-	background-color: $brand-bg-dark;
-
 	.font-weight-bold {
 		font-weight: 900 !important;
 	}
@@ -53,7 +51,7 @@
 		}
 
 		p {
-			color: #a1a3b6;
+			color: #d0b8b9;
 			font-size: 18px;
 			line-height: 1.6;
 			margin-bottom: 16px;
@@ -76,12 +74,8 @@
 	margin-bottom: 32px;
 	padding: 88px 0;
 
-	@media (max-width: $screen-md) {
-		text-align: center !important;
-	}
-
 	@include media-breakpoint-up(sm) {
-		padding: 203px 0 216px;
+		padding: 103px 0 116px;
 	}
 
 	.brand {
@@ -92,7 +86,7 @@
 			max-height: 84px;
 			margin-right: 22px;
 
-			@media (max-width: $screen-md) {
+			@include media-breakpoint-down(md) {
 				max-width: 60px;
 			}
 		}
@@ -102,28 +96,13 @@
 			font-weight: 700;
 			color: $brand-dark;
 
-			@media (max-width: $screen-md) {
+			@include media-breakpoint-down(md) {
 				font-size: 60px;
 			}
 		}
 
 		&:hover {
 			text-decoration: none;
-		}
-	}
-
-	.nav-item {
-		position: relative;
-
-		&::before {
-			content: '・';
-			color: $brand-dark;
-			position: absolute;
-			right: 1px;
-		}
-
-		&:last-child::before {
-			content: '';
 		}
 	}
 
@@ -155,7 +134,7 @@
 			margin-bottom: 73px;
 		}
 
-		@media (max-width: $screen-md) {
+		@include media-breakpoint-down(md) {
 			font-size: 31px;
 			line-height: 43px;
 			margin-bottom: 40px;
@@ -209,7 +188,7 @@
 		margin-right: 28px;
 	}
 
-	@media (max-width: $screen-md) {
+	@include media-breakpoint-down(md) {
 		font-size: 28px;
 
 		svg {
@@ -219,7 +198,7 @@
 }
 
 .title-section.orange {
-	color: #ff8f39;
+	color: #f7caa7;
 }
 
 .title-section ~ .version-section {
@@ -227,24 +206,24 @@
 }
 
 .subtitle-section {
-	color: $brand-lighter;
+	color: $brand-bg-dark;
 	font-size: 20px;
 	font-weight: 400;
 	margin: 0;
 
-	@media (max-width: $screen-md) {
+	@include media-breakpoint-down(md) {
 		font-size: 18px;
 	}
 }
 
 .version-section {
-	color: $brand-lighter;
+	color: $text-color;
 	font-size: 24px;
 	font-weight: 500;
 }
 
 .code-shell {
-	color: #ffae9a;
+	color: $text-color;
 	display: inline-block;
 	font-size: 18px;
 	font-weight: 600;
@@ -254,20 +233,13 @@
 	padding: 141px 20px;
 }
 
-.hr {
-	&:first-child::before,
-	&::before {
-		background-color: $brand-bg-dark-lighter;
-		content: '';
-		display: block;
-		height: 2px;
-		margin-left: auto;
-		margin-right: auto;
-		width: 300px;
-	}
-}
-
 .warning {
+	background: url(/images/css_illustration.svg) $brand-lighter;
+	background-size: cover;
+
+	.spacing {
+		background-color: $brand-lighter;
+	}
 	.subtitle-section {
 		color: #fff4ec;
 		margin-bottom: 61px;
@@ -310,24 +282,44 @@
 	}
 }
 
-.css,
-.contribute {
+.css {
+	&::before {
+		background-color: $brand-bg-dark-lighter;
+		content: '';
+		display: block;
+		height: 2px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 300px;
+
+		@include media-breakpoint-down(md) {
+			width: 200px;
+		}
+	}
+
 	.container-fluid {
-		@media (max-width: $screen-md) {
+		@include media-breakpoint-down(md) {
 			text-align: center !important;
 		}
 	}
 }
 
 .contribute {
-	color: #272833;
-	background-color: $brand-lighter;
-	padding: 153px 0;
+	background-image: url(/images/home/patternbg.svg);
+	background-position: 80%;
+	background-repeat: no-repeat;
+	background-size: 130%;
+	color: $white;
+	padding: 80px 0;
+
+	@include media-breakpoint-up(md) {
+		padding: 153px 0;
+	}
 
 	h2 {
-		font-size: 34px;
+		font-size: 40px;
 		font-weight: 700;
-		margin-bottom: 14px;
+		margin-bottom: 34px;
 	}
 
 	p {
@@ -337,8 +329,10 @@
 		margin-bottom: 23px;
 	}
 
-	.btn-dark {
-		color: $brand-lighter;
+	.container-fluid {
+		@include media-breakpoint-down(md) {
+			text-align: center !important;
+		}
 	}
 }
 
@@ -351,15 +345,15 @@
 	}
 
 	.card {
-		background-color: #2b2d39;
+		background-color: darken($brand-lighter, 10%);
 		border-width: 0;
 		box-shadow: 4px 6px 24px rgba(30, 31, 39, 0.3);
 
 		&:hover {
-			background-color: #272833;
+			background-color: $brand-lighter;
 
 			a {
-				color: #d2d3dd;
+				color: $white;
 			}
 		}
 
@@ -369,7 +363,7 @@
 		}
 
 		a {
-			color: #545462;
+			color: #d2d3dd;
 			font-weight: bold;
 		}
 	}

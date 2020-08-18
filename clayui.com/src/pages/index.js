@@ -7,6 +7,8 @@ import {Link} from 'gatsby';
 import React from 'react';
 import Helmet from 'react-helmet';
 
+import LayoutNavHome from '../components/LayoutNavHome';
+
 /**
  * @return {React.Component}
  */
@@ -19,7 +21,7 @@ export default () => {
 	return (
 		<div className="home">
 			<div
-				className="alert alert-dismissible alert-fluid alert-warning"
+				className="alert alert-dismissible alert-fluid alert-light"
 				role="alert"
 			>
 				<div className="container">
@@ -27,6 +29,7 @@ export default () => {
 						'This site is for version 3.x. If you are looking for version 2.x documentation, it has been moved to '
 					}
 					<a
+						className="text-secondary"
 						href="https://v2.clayui.com"
 						rel="noopener noreferrer"
 						target="_blank"
@@ -34,6 +37,11 @@ export default () => {
 						{'v2.clayui.com.'}
 					</a>
 				</div>
+			</div>
+			<div
+				className="container"
+			>
+				<LayoutNavHome/>
 			</div>
 
 			<Helmet>
@@ -55,7 +63,7 @@ export default () => {
 											className="logo"
 											src="/images/home/clay_logo.svg"
 										/>
-										<span className="align-middle title">
+										<span className="align-middle text-dark title">
 											{'Clay'}
 										</span>
 									</Link>
@@ -64,87 +72,25 @@ export default () => {
 											'A Web Implementation of Lexicon Experience Language'
 										}
 									</h2>
-									<div className="navbar-nav-scroll">
-										<ul className="ml-auto navbar-nav">
-											<li className="nav-item">
-												<Link
-													className="nav-link-intro"
-													to="/docs/get-started/index.html"
-												>
-													{'Get Started'}
-												</Link>
-											</li>
-											<li className="nav-item">
-												<Link
-													className="nav-link-intro"
-													to="/docs/css/index.html"
-												>
-													{'Style Guide'}
-												</Link>
-											</li>
-											<li className="nav-item">
-												<Link
-													className="nav-link-intro"
-													to="/docs/components/index.html"
-												>
-													{'Components Library'}
-												</Link>
-											</li>
-											<li className="nav-item">
-												<Link
-													className="nav-link-intro"
-													to="/docs/examples.html"
-												>
-													{'Examples'}
-												</Link>
-											</li>
-											<li className="nav-item">
-												<Link
-													className="nav-link-intro"
-													to="/blog"
-												>
-													{'Blog'}
-												</Link>
-											</li>
-											<li className="nav-item">
-												<a
-													className="nav-link-intro"
-													href="https://liferay.design/lexicon"
-													rel="noopener noreferrer"
-													target="_blank"
-												>
-													{'Lexicon'}
-													<span className="inline-item inline-item-after">
-														<svg
-															className="lexicon-icon lexicon-icon-angle-right"
-															focusable="false"
-															role="presentation"
-														>
-															<use href="/images/icons/icons.svg#angle-right" />
-														</svg>
-													</span>
-												</a>
-											</li>
-											<li className="nav-item">
-												<a
-													className="nav-link-intro"
-													href="https://github.com/liferay/clay"
-													rel="noopener noreferrer"
-													target="_blank"
-												>
-													{'Github'}
-													<span className="inline-item inline-item-after">
-														<svg
-															className="lexicon-icon lexicon-icon-angle-right"
-															focusable="false"
-															role="presentation"
-														>
-															<use href="/images/icons/icons.svg#angle-right" />
-														</svg>
-													</span>
-												</a>
-											</li>
-										</ul>
+									<div>
+										<Link
+											className="btn btn-warning mb-2 mr-3"
+											to="/docs/get-started/index.html"
+										>
+											{'Get Started'}
+										</Link>
+										<Link
+											className="btn btn-secondary mb-2 mr-3"
+											to="/docs/components/index.html"
+										>
+											{'Components Library'}
+										</Link>
+										<Link
+											className="btn btn-secondary mb-2"
+											to="/docs/examples.html"
+										>
+											{'Examples'}
+										</Link>
 									</div>
 								</div>
 							</div>
@@ -153,7 +99,7 @@ export default () => {
 				</header>
 
 				<section className="hr warning" id="warning">
-					<div className="container-fluid container-fluid-max-lg spacing text-center">
+					<div className="container-fluid container-fluid-max-md spacing text-center">
 						<div className="row">
 							<div className="col-md-12">
 								<h1 className="orange title-section">
@@ -187,17 +133,26 @@ export default () => {
 									to="/blog/2019/10/25/introducing-clay-v3.html"
 								>
 									{'Read more about warnings'}
+									<span className="fs-12 inline-item inline-item-after">
+										<svg
+											className="lexicon-icon lexicon-icon-angle-right"
+											focusable="false"
+											role="presentation"
+										>
+											<use href="/images/icons/icons.svg#angle-right" />
+										</svg>
+									</span>
 								</Link>
 							</div>
 						</div>
 					</div>
 				</section>
 
-				<section className="components hr" id="components">
+				<section className="components" id="components">
 					<div className="container-fluid container-fluid-max-lg spacing text-center">
 						<div className="row">
 							<div className="col-md-12">
-								<img alt="" src="/images/react_logo.svg" />
+								<img alt="" className="bg-warning border-circle px-2 py-3 rounded-lg" src="/images/react_logo.svg" />
 								<h1 className="mb-2 title-section">
 									{'Clay Components'}
 								</h1>
@@ -246,13 +201,14 @@ export default () => {
 				<section className="css hr" id="css">
 					<div className="container-fluid container-fluid-max-lg spacing text-left">
 						<div className="row">
-							<div className="col-md-5">
+							<div className="col-md-4">
 								<img
 									alt=""
-									src="/images/css_illustration.svg"
+									className="img-fluid mb-5 mb-md-0"
+									src="/images/css_illustration2.svg"
 								/>
 							</div>
-							<div className="col-md-7">
+							<div className="col-md-8">
 								<div className="row">
 									<div className="col-md-12">
 										<h1 className="title-section">
@@ -300,10 +256,10 @@ export default () => {
 					</div>
 				</section>
 
-				<section className="contribute" id="css">
-					<div className="container-fluid container-fluid-max-lg text-left">
+				<section className="contribute">
+					<div className="container-fluid container-fluid-max-lg text-center">
 						<div className="row">
-							<div className="col-md-12">
+							<div className="col-12">
 								<h2>{'Open Source'}</h2>
 								<p>
 									{'Clay is distributed in a '}
@@ -344,7 +300,7 @@ export default () => {
 						<div className="row">
 							<div className="col-md-5 mb-4 ml-auto">
 								<div className="card h-100">
-									<div className="card-body mx-5">
+									<div className="card-body mx-md-5">
 										<img
 											alt=""
 											className="mx-auto"
@@ -362,13 +318,22 @@ export default () => {
 											target="_blank"
 										>
 											{'Lexicon 2.0'}
+											<span className="fs-12 inline-item inline-item-after">
+												<svg
+													className="lexicon-icon lexicon-icon-angle-right"
+													focusable="false"
+													role="presentation"
+												>
+													<use href="/images/icons/icons.svg#angle-right" />
+												</svg>
+											</span>
 										</a>
 									</div>
 								</div>
 							</div>
 							<div className="col-md-5 mb-4 mr-auto">
 								<div className="card h-100">
-									<div className="card-body mx-5">
+									<div className="card-body mx-md-5">
 										<img
 											alt=""
 											className="mx-auto"
@@ -386,6 +351,15 @@ export default () => {
 											target="_blank"
 										>
 											{'Lexicon CSS'}
+											<span className="fs-12 inline-item inline-item-after">
+												<svg
+													className="lexicon-icon lexicon-icon-angle-right"
+													focusable="false"
+													role="presentation"
+												>
+													<use href="/images/icons/icons.svg#angle-right" />
+												</svg>
+											</span>
 										</a>
 									</div>
 								</div>
