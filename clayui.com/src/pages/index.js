@@ -198,7 +198,7 @@ export default () => {
 					</div>
 				</section>
 
-				<section className="css hr" id="css">
+				<section className="css">
 					<div className="container-fluid container-fluid-max-lg spacing text-left">
 						<div className="row">
 							<div className="col-md-4">
