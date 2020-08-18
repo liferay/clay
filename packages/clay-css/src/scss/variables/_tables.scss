@@ -160,14 +160,54 @@ $table-list-font-size: null !default;
 $table-list-margin-bottom: $table-list-border-y-width !default;
 $table-list-margin-top: null !default;
 
+$c-table-list: () !default;
+$c-table-list: map-merge(
+	(
+		border-collapse: separate,
+		border-color: $table-list-border-color,
+		border-style: solid,
+		border-width: $table-list-border-y-width $table-list-border-x-width,
+		border-radius: clay-enable-rounded($table-list-border-radius),
+		color: $table-list-color,
+		font-size: $table-list-font-size,
+		margin-bottom: $table-list-margin-bottom,
+		margin-top: $table-list-margin-top,
+	),
+	$c-table-list
+);
+
+// .table-list.table-striped
+
 $table-list-accent-bg: #f2f2f2 !default;
+
+// .table-list.table-hover tbody tr:hover
+
 $table-list-hover-bg: #ececec !default;
+
+// .table-list.table-active
+
 $table-list-active-bg: #dadada !default;
+
+// .table-list .table-disabled
 
 $table-list-disabled-bg: $white !default;
 $table-list-disabled-color: #acacac !default;
 $table-list-disabled-cursor: $disabled-cursor !default;
 $table-list-disabled-pointer-events: none !default;
+
+// .table-list {thead,tbody,tfoot} {th,td}
+
+$c-table-list-cell: () !default;
+$c-table-list-cell: map-merge(
+	(
+		border-color: $table-list-border-color,
+		border-style: solid,
+		border-width: $table-list-border-y-width 0 0 0,
+	),
+	$c-table-list-cell
+);
+
+// .table-list thead {th,td}
 
 $table-list-head-bg: null !default;
 $table-list-head-font-size: null !default;
@@ -175,10 +215,26 @@ $table-list-head-font-weight: null !default;
 $table-list-head-height: null !default;
 $table-list-head-vertical-alignment: null !default;
 
+// .table-list thead th a
+
 $table-list-head-link: () !default;
 
-$table-list-divider-padding-x: 0.75rem !default; // 12px
-$table-list-divider-padding-y: 0.75rem !default; // 12px
+// .table-list.table-bordered {thead,tbody,tfoot} {th,td}
+
+$c-table-list-bordered-cell: () !default;
+$c-table-list-bordered-cell: map-merge(
+	(
+		border-left-width: $table-list-border-x-width,
+	),
+	$c-table-list-bordered-cell
+);
+
+// .table-list .table-divider
+
+$table-list-divider-padding-x: 0.75rem !default;
+$table-list-divider-padding-y: 0.75rem !default;
+
+// .table-list .quick-action-menu
 
 $table-list-quick-action-menu-align-items: center !default;
 $table-list-quick-action-menu-bg: $table-list-bg !default;
