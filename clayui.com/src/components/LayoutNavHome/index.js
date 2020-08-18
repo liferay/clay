@@ -11,9 +11,7 @@ const LayoutNavHome = () => {
 		<nav className="navbar navbar-clay-site navbar-expand-lg navbar-light">
 			<div className="autofit-float-sm-down autofit-padded autofit-row">
 				<div className="autofit-col autofit-col-expand">
-					<div
-						className="d-inline-block text-decoration-none text-reset"
-					>
+					<div className="d-inline-block text-decoration-none text-reset">
 						<span className="c-inner" tabIndex="-1">
 							<img
 								alt="Clay"

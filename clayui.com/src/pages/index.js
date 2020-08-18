@@ -38,10 +38,8 @@ export default () => {
 					</a>
 				</div>
 			</div>
-			<div
-				className="container"
-			>
-				<LayoutNavHome/>
+			<div className="container">
+				<LayoutNavHome />
 			</div>
 
 			<Helmet>
@@ -152,7 +150,11 @@ export default () => {
 					<div className="container-fluid container-fluid-max-lg spacing text-center">
 						<div className="row">
 							<div className="col-md-12">
-								<img alt="" className="bg-warning border-circle px-2 py-3 rounded-lg" src="/images/react_logo.svg" />
+								<img
+									alt=""
+									className="bg-warning border-circle px-2 py-3 rounded-lg"
+									src="/images/react_logo.svg"
+								/>
 								<h1 className="mb-2 title-section">
 									{'Clay Components'}
 								</h1>
