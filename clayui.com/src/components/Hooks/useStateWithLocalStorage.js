@@ -9,9 +9,15 @@ import localStorage from '../../utils/localStorage';
 
 function useStateWithLocalStorage(defaultValue, key) {
 	const [value, setValue] = React.useState(() => {
-		const stickyValue = localStorage.getItem(key);
+		try {
+			const stickyValue = localStorage.getItem(key);
 
-		return stickyValue === null ? defaultValue : JSON.parse(stickyValue);
+			return stickyValue === null
+				? defaultValue
+				: JSON.parse(stickyValue);
+		} catch {
+			return defaultValue;
+		}
 	});
 
 	React.useEffect(() => {
