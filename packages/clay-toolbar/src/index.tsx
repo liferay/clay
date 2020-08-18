@@ -7,6 +7,7 @@ import classNames from 'classnames';
 import React from 'react';
 
 import Action from './Action';
+import Input from './Input';
 import Item from './Item';
 import Label from './Label';
 import Link from './Link';
@@ -18,6 +19,11 @@ interface IProps extends React.HTMLAttributes<HTMLElement> {
 	 * Adds a helper class that turns the Toolbar inline at a specified breakpoint.
 	 */
 	inlineBreakpoint?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+
+	/**
+	 * Determines if the tbar-light class should be added to the Toolbar, making it's background white.
+	 */
+	light?: boolean;
 
 	/**
 	 * Defines if the toolbar should have the `subnav-tbar` class.
@@ -33,6 +39,7 @@ interface IProps extends React.HTMLAttributes<HTMLElement> {
 const ClayToolbar: React.FunctionComponent<IProps> & {
 	Action: typeof Action;
 	Item: typeof Item;
+	Input: typeof Input;
 	Label: typeof Label;
 	Link: typeof Link;
 	Nav: typeof Nav;
@@ -41,6 +48,7 @@ const ClayToolbar: React.FunctionComponent<IProps> & {
 	children,
 	className,
 	inlineBreakpoint,
+	light,
 	subnav,
 	...otherProps
 }: IProps) => {
@@ -52,6 +60,7 @@ const ClayToolbar: React.FunctionComponent<IProps> & {
 		{
 			'component-tbar': !subnav,
 			'subnav-tbar': !!subnav,
+			'tbar-light': !!light,
 		},
 		subnav && {
 			'subnav-tbar-disabled': subnav.disabled,
@@ -69,6 +78,7 @@ const ClayToolbar: React.FunctionComponent<IProps> & {
 
 ClayToolbar.Action = Action;
 ClayToolbar.Item = Item;
+ClayToolbar.Input = Input;
 ClayToolbar.Label = Label;
 ClayToolbar.Link = Link;
 ClayToolbar.Nav = Nav;
