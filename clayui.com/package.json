@@ -4,8 +4,7 @@
 	"version": "3.3.4",
 	"license": "MIT",
 	"scripts": {
-		"copy:clay-css": "yarn copy:clay-css-icons && yarn copy:clay-css-js && yarn copy:clay-css-site-images && yarn copy:clay-css-images",
-		"copy:clay-css-icons": "node svg-icons.js",
+		"copy:clay-css": "yarn copy:clay-css-js && yarn copy:clay-css-site-images && yarn copy:clay-css-images",
 		"copy:clay-css-js": "cpx '../@clayui/css/lib/js/*.{js,js.map}' static/js",
 		"copy:clay-css-images": "cpx '../@clayui/css/src/images/images/*.{gif}' static/images",
 		"copy:clay-css-site-images": "cpx '../@clayui/css/src/content/site-images/*.svg' static/images",
