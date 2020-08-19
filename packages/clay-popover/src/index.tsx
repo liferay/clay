@@ -124,10 +124,10 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 		}, [show]);
 
 		useEffect(() => {
-			if (popoverScrollerRef.current && show) {
+			if (!disableScroll && popoverScrollerRef.current && show) {
 				popoverScrollerRef.current.focus();
 			}
-		}, [popoverScrollerRef, show]);
+		}, [disableScroll, popoverScrollerRef, show]);
 
 		let content = (
 			<div
