@@ -3,12 +3,6 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-/**
- * © 2019 Liferay, Inc. <https://liferay.com>
- *
- * SPDX-License-Identifier: BSD-3-Clause
- */
-
 import '@clayui/css/lib/css/atlas.css';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {storiesOf} from '@storybook/react';
@@ -42,6 +36,14 @@ storiesOf('Components|ClayLocalizedInput', module).add('default', () => {
 		'es-ES': 'Manzana',
 	});
 
+	const [selectedLocaleURL, setSelectedLocaleURL] = React.useState(
+		locales[0]
+	);
+	const [translationsURL, setTranslationsURL] = React.useState<any>({
+		'en-US': 'Apple',
+		'es-ES': 'Manzana',
+	});
+
 	const prepend = '/home/';
 
 	return (
@@ -55,19 +57,20 @@ storiesOf('Components|ClayLocalizedInput', module).add('default', () => {
 				spritemap={spritemap}
 				translations={translations}
 			/>
+
 			<br />
 
 			<ClayLocalizedInput
 				id="locale2"
 				label="As a URL"
 				locales={locales}
-				onSelectedLocaleChange={setSelectedLocale}
-				onTranslationsChange={setTranslations}
+				onSelectedLocaleChange={setSelectedLocaleURL}
+				onTranslationsChange={setTranslationsURL}
 				prependContent={prepend}
 				resultFormatter={(val) => `https://liferay.com${prepend}${val}`}
-				selectedLocale={selectedLocale}
+				selectedLocale={selectedLocaleURL}
 				spritemap={spritemap}
-				translations={translations}
+				translations={translationsURL}
 			/>
 		</div>
 	);
