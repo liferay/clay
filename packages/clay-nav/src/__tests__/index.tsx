@@ -40,7 +40,7 @@ describe('ClayVerticalNav', () => {
 	it('renders', () => {
 		const {container} = render(
 			<ClayVerticalNav
-				activeLabel="Home"
+				buttonToggleLabel="Home"
 				items={items}
 				spritemap="/path/to"
 			/>
@@ -52,7 +52,7 @@ describe('ClayVerticalNav', () => {
 	it('expands items when clicked', () => {
 		const {container, getByText} = render(
 			<ClayVerticalNav
-				activeLabel="foo"
+				buttonToggleLabel="foo"
 				items={items}
 				spritemap="/path/to"
 			/>

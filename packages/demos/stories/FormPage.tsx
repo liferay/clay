@@ -35,9 +35,8 @@ export default () => {
 	return (
 		<ClayLayout.ContainerFluid>
 			<div className="row">
-				<div className="col col-2">
+				<div className="col col-3 col-sm-2">
 					<ClayVerticalNav
-						activeLabel="Five"
 						items={[
 							{
 								active: activePage === 0,

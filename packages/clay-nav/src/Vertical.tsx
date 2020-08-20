@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
 import {useTransitionHeight} from '@clayui/shared';
 import classNames from 'classnames';
@@ -48,7 +49,12 @@ interface IProps {
 	/**
 	 * Label of item that is currently active.
 	 */
-	activeLabel: string;
+	activeLabel?: string;
+
+	/**
+	 * Label of the button that appears on smaller resolutions to open the vertical navigation.
+	 */
+	buttonToggleLabel?: string;
 
 	/**
 	 * List of items.
@@ -59,6 +65,11 @@ interface IProps {
 	 * Flag to indicate if `menubar-vertical-expand-lg` class is applied.
 	 */
 	large?: boolean;
+
+	/**
+	 * Content of the Button trigger
+	 */
+	triggerContent?: any;
 
 	/**
 	 * Path to the spritemap that Icon should use when referencing symbols.
@@ -152,9 +163,11 @@ function renderItems(items: Array<IItem>, spritemap?: string, level = 0) {
 
 export const ClayVerticalNav: React.FunctionComponent<IProps> = ({
 	activeLabel,
+	buttonToggleLabel = 'Menu',
 	items,
 	large,
 	spritemap,
+	triggerContent,
 	...otherProps
 }: IProps) => {
 	const [active, setActive] = React.useState(false);
@@ -167,19 +180,28 @@ export const ClayVerticalNav: React.FunctionComponent<IProps> = ({
 				['menubar-vertical-expand-md']: !large,
 			})}
 		>
-			<button
+			<ClayButton
 				className="menubar-toggler"
+				displayType="unstyled"
 				onClick={() => setActive(!active)}
 			>
-				{activeLabel}
+				{triggerContent ? (
+					triggerContent
+				) : (
+					<>
+						<span className="inline-item inline-item-before">
+							{activeLabel ? activeLabel : buttonToggleLabel}
+						</span>
 
-				<ClayIcon
-					focusable="false"
-					role="presentation"
-					spritemap={spritemap}
-					symbol="caret-bottom"
-				/>
-			</button>
+						<ClayIcon
+							focusable="false"
+							role="presentation"
+							spritemap={spritemap}
+							symbol="caret-bottom"
+						/>
+					</>
+				)}
+			</ClayButton>
 
 			<div
 				className={classNames('collapse menubar-collapse', {
