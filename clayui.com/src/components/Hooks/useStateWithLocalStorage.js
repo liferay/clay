@@ -5,27 +5,7 @@
 
 import React from 'react';
 
-const inBrowser = typeof window !== 'undefined';
-
-const localStorage = {
-	getItem(key) {
-		try {
-			return inBrowser ? window.localStorage.getItem(key) : null;
-		} catch {
-			return null;
-		}
-	},
-
-	setItem(key, value) {
-		if (inBrowser) {
-			try {
-				window.localStorage.setItem(key, value);
-			} catch {
-				return;
-			}
-		}
-	},
-};
+import localStorage from '../../utils/localStorage';
 
 function useStateWithLocalStorage(defaultValue, key) {
 	const [value, setValue] = React.useState(() => {
@@ -41,9 +21,7 @@ function useStateWithLocalStorage(defaultValue, key) {
 	});
 
 	React.useEffect(() => {
-		try {
-			localStorage.setItem(key, JSON.stringify(value));
-		} catch {} // eslint-disable-line no-empty
+		localStorage.setItem(key, JSON.stringify(value));
 	}, [key, value]);
 
 	return [value, setValue];
