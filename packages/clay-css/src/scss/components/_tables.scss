@@ -358,6 +358,7 @@ th {
 				width: 100%;
 
 				// Prevent double border on horizontal scroll due to use of `display: block;`
+
 				> .table-bordered {
 					border-width: 0;
 				}
@@ -369,18 +370,23 @@ th {
 // Table List Skin
 
 .table-list {
-	border-collapse: separate;
-	border-radius: clay-enable-rounded($table-list-border-radius);
-	color: $table-list-color;
-	font-size: $table-list-font-size;
-	margin-bottom: $table-list-margin-bottom;
-	margin-top: $table-list-margin-top;
+	@include clay-css($c-table-list);
 
 	thead,
 	tbody,
 	tfoot {
+		td,
+		th {
+			@include clay-css($c-table-list-cell);
+		}
+
 		&:first-child {
 			tr:first-child {
+				th,
+				td {
+					border-top-width: 0;
+				}
+
 				th:first-child,
 				td:first-child,
 				.table-cell-start {
@@ -420,6 +426,34 @@ th {
 		}
 	}
 
+	thead {
+		td,
+		th {
+			// Webkit (Safari 11) rendering issue with responsive-tables. See https://github.com/liferay/clay/issues/950
+
+			background-color: $table-list-head-bg;
+			font-size: $table-list-head-font-size;
+			font-weight: $table-list-head-font-weight;
+			height: $table-list-head-height;
+			vertical-align: $table-list-head-vertical-alignment;
+		}
+
+		th a {
+			@include clay-link($table-list-head-link);
+		}
+	}
+
+	tbody,
+	tfoot {
+		td,
+		th {
+			// Webkit (Safari 11) rendering issue with responsive-tables. See https://github.com/liferay/clay/issues/950
+
+			background-color: $table-list-bg;
+			vertical-align: middle;
+		}
+	}
+
 	.table-row-start {
 		.table-cell-start {
 			border-top-left-radius: clay-enable-rounded(
@@ -447,115 +481,23 @@ th {
 			);
 		}
 	}
-
-	th,
-	td {
-		// top, bottom
-		box-shadow: inset 0 #{$table-list-border-y-width} $table-list-border-color,
-			0 #{$table-list-border-y-width} $table-list-border-color;
-		padding-top: $table-list-border-y-width + $table-cell-padding;
-
-		&:first-child {
-			// top, bottom, left
-			box-shadow: inset 0 #{$table-list-border-y-width} $table-list-border-color,
-				0 #{$table-list-border-y-width} $table-list-border-color,
-				inset #{$table-list-border-x-width} 0 $table-list-border-color;
-			padding-left: $table-list-border-x-width + $table-cell-padding;
-			padding-top: $table-list-border-y-width + $table-cell-padding;
-		}
-
-		&:last-child {
-			// top, right, bottom
-			box-shadow: inset 0 #{$table-list-border-y-width} $table-list-border-color,
-				inset #{-$table-list-border-x-width} 0 $table-list-border-color,
-				0 #{$table-list-border-y-width} $table-list-border-color;
-			padding-right: $table-list-border-x-width + $table-cell-padding;
-			padding-top: $table-list-border-y-width + $table-cell-padding;
-		}
-
-		&:only-child {
-			// top, right, bottom, left
-			box-shadow: inset 0 #{$table-list-border-y-width} $table-list-border-color,
-				inset #{-$table-list-border-x-width} 0 $table-list-border-color,
-				0 #{$table-list-border-y-width} $table-list-border-color,
-				inset #{$table-list-border-x-width} 0 $table-list-border-color;
-			padding-left: $table-list-border-x-width + $table-cell-padding;
-			padding-right: $table-list-border-x-width + $table-cell-padding;
-			padding-top: $table-list-border-y-width + $table-cell-padding;
-		}
-	}
-
-	.table-cell-start {
-		// top, bottom, left
-		box-shadow: inset 0 #{$table-list-border-y-width} $table-list-border-color,
-			0 #{$table-list-border-y-width} $table-list-border-color,
-			inset #{$table-list-border-x-width} 0 $table-list-border-color;
-		padding-left: $table-list-border-x-width + $table-cell-padding;
-		padding-top: $table-list-border-y-width + $table-cell-padding;
-	}
-
-	.table-cell-end {
-		// top, right, bottom
-		box-shadow: inset 0 #{$table-list-border-y-width} $table-list-border-color,
-			inset #{-$table-list-border-x-width} 0 $table-list-border-color,
-			0 #{$table-list-border-y-width} $table-list-border-color;
-		padding-right: $table-list-border-x-width + $table-cell-padding;
-		padding-top: $table-list-border-y-width + $table-cell-padding;
-	}
-
-	thead {
-		td,
-		th {
-			// Webkit (Safari 11) rendering issue with responsive-tables. See https://github.com/liferay/clay/issues/950
-
-			background-color: $table-list-head-bg;
-			border-width: 0;
-			font-size: $table-list-head-font-size;
-			font-weight: $table-list-head-font-weight;
-			height: $table-list-head-height;
-			vertical-align: $table-list-head-vertical-alignment;
-		}
-
-		th a {
-			@include clay-link($table-list-head-link);
-		}
-	}
-
-	tbody,
-	tfoot {
-		td,
-		th {
-			// Webkit (Safari 11) rendering issue with responsive-tables. See https://github.com/liferay/clay/issues/950
-
-			background-color: $table-list-bg;
-			border-width: 0;
-			vertical-align: middle;
-		}
-	}
 }
 
+// Table List Bordered
+
 .table-list.table-bordered {
-	border-width: 0;
-
-	th,
-	td {
-		// top, right, bottom
-		box-shadow: inset 0 #{$table-list-border-y-width} #{$table-list-border-color},
-			inset #{-$table-list-border-x-width} 0 #{$table-list-border-color},
-			0 #{$table-list-border-y-width} #{$table-list-border-color};
-		padding-right: $table-list-border-x-width + $table-cell-padding;
-		padding-top: $table-list-border-y-width + $table-cell-padding;
-
-		&:first-child {
-			// top, right, bottom, left
-			box-shadow: inset 0 #{$table-list-border-y-width} #{$table-list-border-color},
-				inset #{-$table-list-border-x-width} 0 #{$table-list-border-color},
-				0 #{$table-list-border-y-width} #{$table-list-border-color},
-				inset #{$table-list-border-x-width} 0 #{$table-list-border-color};
-			padding-left: $table-list-border-x-width + $table-cell-padding;
-			padding-right: $table-list-border-x-width + $table-cell-padding;
-			padding-top: $table-list-border-y-width + $table-cell-padding;
+	thead,
+	tbody,
+	tfoot {
+		th,
+		td {
+			@include clay-css($c-table-list-bordered-cell);
 		}
+	}
+
+	th:first-child,
+	td:first-child {
+		border-left-width: 0;
 	}
 }
 
@@ -730,10 +672,9 @@ th {
 	td,
 	th {
 		padding-bottom: $table-list-divider-padding-y;
-		padding-left: $table-list-border-x-width + $table-list-divider-padding-x;
-		padding-right: $table-list-border-x-width +
-			$table-list-divider-padding-x;
-		padding-top: $table-list-border-y-width + $table-list-divider-padding-y;
+		padding-left: $table-list-divider-padding-x;
+		padding-right: $table-list-divider-padding-x;
+		padding-top: $table-list-divider-padding-y;
 	}
 }
 
@@ -937,7 +878,7 @@ th {
 		align-items: $table-list-quick-action-menu-align-items;
 		background-color: $table-list-quick-action-menu-bg;
 		bottom: 0;
-		top: $table-list-border-y-width;
+		top: 0;
 	}
 }
 
