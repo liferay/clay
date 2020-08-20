@@ -7,8 +7,7 @@ import Editor from '$clayui.com/src/components/Editor';
 import ClayLink, {ClayLinkContext} from '@clayui/link';
 import React from 'react';
 
-const linkImportsCode = `import ClayLink from '@clayui/link';
-`;
+const linkImportsCode = `import ClayLink from '@clayui/link';`;
 
 const LinkCode = `const Component = () => {
 	return (
@@ -28,15 +27,42 @@ const LinkCode = `const Component = () => {
 
 render(<Component />);`;
 
+const linkJSPImportsCode = `<%@ taglib uri="http://liferay.com/tld/clay" prefix="clay" %>`;
+
+const LinkJSPCode = `<clay:link href="#link-styles" label="Default" />
+
+<clay:link
+	displayType="secondary"
+	href="#link-styles"
+	label="Secondary"
+/>
+
+<clay:link
+	ariaLabel="My Link"
+	href="#link-styles"
+	label="Wih Aria Label"
+/>`;
+
 export const Link = () => {
 	const scope = {ClayLink};
-	const code = LinkCode;
+	const codeSnippets = [
+		{
+			imports: linkImportsCode,
+			name: 'React',
+			value: LinkCode,
+		},
+		{
+			disabled: true,
+			imports: linkJSPImportsCode,
+			name: 'JSP',
+			value: LinkJSPCode,
+		},
+	];
 
-	return <Editor code={code} imports={linkImportsCode} scope={scope} />;
+	return <Editor code={codeSnippets} scope={scope} />;
 };
 
-const linkContextImportsCode = `import ClayLink, {ClayLinkContext} from '@clayui/link';
-`;
+const linkContextImportsCode = `import ClayLink, {ClayLinkContext} from '@clayui/link';`;
 
 const LinkContextCode = `const Component = () => {
 	const ConfirmBeforeNavigate = ({children, href, ...otherProps}) => (
