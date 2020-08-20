@@ -7,8 +7,7 @@ import Editor from '$clayui.com/src/components/Editor';
 import ClayProgressBar from '@clayui/progress-bar';
 import React from 'react';
 
-const progressBarImportsCode = `import ClayProgressBar from '@clayui/progress-bar';
-`;
+const progressBarImportsCode = `import ClayProgressBar from '@clayui/progress-bar';`;
 
 const ProgressBarCode = `const Component = () => {
 	
@@ -18,32 +17,60 @@ const ProgressBarCode = `const Component = () => {
 				spritemap={spritemap}
 				value={50}
 			/>
+
 			<ClayProgressBar spritemap={spritemap} value={100} />
+			
 			<ClayProgressBar
 				spritemap={spritemap}
 				value={20}
-			/ >
+			/>
+
 			<ClayProgressBar
 				spritemap={spritemap}
 				value={20}
-			/ >
+			/>
 		</>
 	);
 }
 
 render(<Component />)`;
 
+const progressBarJSPImportsCode = `<%@ taglib uri="http://liferay.com/tld/clay" prefix="clay" %>`;
+
+const ProgressBarJSPCode = `<clay:progressbar
+	value="<%= 50 %>"
+/>
+
+<clay:progressbar
+	status="success"
+	value="<%= 100 %>"
+/>
+
+<clay:progressbar
+	value="<%= 20 %>"
+/>`;
+
 export const ProgressBar = () => {
 	const scope = {ClayProgressBar};
-	const code = ProgressBarCode;
 
-	return (
-		<Editor code={code} imports={progressBarImportsCode} scope={scope} />
-	);
+	const codeSnippets = [
+		{
+			imports: progressBarImportsCode,
+			name: 'React',
+			value: ProgressBarCode,
+		},
+		{
+			disabled: true,
+			imports: progressBarJSPImportsCode,
+			name: 'JSP',
+			value: ProgressBarJSPCode,
+		},
+	];
+
+	return <Editor code={codeSnippets} scope={scope} />;
 };
 
-const progressBarFeedbackImportsCode = `import ClayProgressBar from '@clayui/progress-bar';
-`;
+const progressBarFeedbackImportsCode = `import ClayProgressBar from '@clayui/progress-bar';`;
 
 const ProgressBarFeedbackCode = `const Component = () => {
 	
@@ -56,6 +83,7 @@ const ProgressBarFeedbackCode = `const Component = () => {
 			>
 				<div className="progress-group-addon">99% Completed</div>
 			</ClayProgressBar>
+
 			<ClayProgressBar
 				feedback
 				spritemap={spritemap}
@@ -63,6 +91,7 @@ const ProgressBarFeedbackCode = `const Component = () => {
 			>
 				<div className="progress-group-addon">100% Completed</div>
 			</ClayProgressBar>
+
 			<ClayProgressBar
 				feedback
 				spritemap={spritemap}
@@ -90,8 +119,7 @@ export const ProgressBarFeedback = () => {
 	);
 };
 
-const progressBarStatusImportsCode = `import ClayProgressBar from '@clayui/progress-bar';
-`;
+const progressBarStatusImportsCode = `import ClayProgressBar from '@clayui/progress-bar';`;
 
 const ProgressBarStatusCode = `const Component = () => {
 	
