@@ -49,6 +49,7 @@ interface IItemWithItems extends IItem {
 interface IProps {
 	/**
 	 * Label of item that is currently active.
+	 * @deprecated since version 3.3.x
 	 */
 	activeLabel?: string;
 
