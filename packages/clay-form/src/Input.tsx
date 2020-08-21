@@ -199,7 +199,7 @@ const ClayInput = React.forwardRef<HTMLInputElement, IProps>(
 				['input-group-inset-before']: insetBefore,
 			})}
 			ref={ref}
-			type={Component === 'input' ? type : undefined}
+			type={type}
 		/>
 	)
 );
