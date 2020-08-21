@@ -39,11 +39,7 @@ describe('ClayVerticalNav', () => {
 
 	it('renders', () => {
 		const {container} = render(
-			<ClayVerticalNav
-				buttonToggleLabel="Home"
-				items={items}
-				spritemap="/path/to"
-			/>
+			<ClayVerticalNav items={items} spritemap="/path/to" />
 		);
 
 		expect(container).toMatchSnapshot();
@@ -51,11 +47,7 @@ describe('ClayVerticalNav', () => {
 
 	it('expands items when clicked', () => {
 		const {container, getByText} = render(
-			<ClayVerticalNav
-				buttonToggleLabel="foo"
-				items={items}
-				spritemap="/path/to"
-			/>
+			<ClayVerticalNav items={items} spritemap="/path/to" />
 		);
 
 		expect(
