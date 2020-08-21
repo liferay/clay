@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.10.1](https://github.com/liferay/clay/compare/@clayui/form@3.10.0...@clayui/form@3.10.1) (2020-08-21)
+
+### Bug Fixes
+
+-   **@clayui/form:** Makes ClayInput's `type` property has a value `text` by default ([cb5ddf6](https://github.com/liferay/clay/commit/cb5ddf6))
+
 # [3.10.0](https://github.com/liferay/clay/compare/@clayui/form@3.9.0...@clayui/form@3.10.0) (2020-07-28)
 
 ### Bug Fixes

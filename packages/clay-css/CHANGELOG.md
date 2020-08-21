@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.17.1](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.17.0...@clayui/css@3.17.1) (2020-08-21)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Table List use `border-collapse` and `border-width` instead of `box-shadow` hack for rounded corners ([82ecbda](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/82ecbda))
+
+
+
+
+
 # [3.17.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.16.0...@clayui/css@3.17.0) (2020-08-11)
 
 

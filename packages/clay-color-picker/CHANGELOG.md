@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.1](https://github.com/liferay/clay/compare/@clayui/color-picker@3.3.0...@clayui/color-picker@3.3.1) (2020-08-21)
+
+**Note:** Version bump only for package @clayui/color-picker
+
 # [3.3.0](https://github.com/liferay/clay/compare/@clayui/color-picker@3.2.8...@clayui/color-picker@3.3.0) (2020-08-11)
 
 ### Bug Fixes

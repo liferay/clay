@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.6](https://github.com/liferay/clay/compare/@clayui/localized-input@3.1.5...@clayui/localized-input@3.1.6) (2020-08-21)
+
+### Bug Fixes
+
+-   **@clayui/localized-input:** Add separate state for the URL example and SF ([8d55a80](https://github.com/liferay/clay/commit/8d55a80))
+-   **@clayui/localized-input:** Dropdown Item should use autofit pattern to position labels ([e6d8ff4](https://github.com/liferay/clay/commit/e6d8ff4))
+
 ## [3.1.5](https://github.com/liferay/clay/compare/@clayui/localized-input@3.1.4...@clayui/localized-input@3.1.5) (2020-08-11)
 
 **Note:** Version bump only for package @clayui/localized-input

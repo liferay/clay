@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.10](https://github.com/liferay/clay/compare/@clayui/autocomplete@3.1.9...@clayui/autocomplete@3.1.10) (2020-08-21)
+
+**Note:** Version bump only for package @clayui/autocomplete
+
 ## [3.1.9](https://github.com/liferay/clay/compare/@clayui/autocomplete@3.1.8...@clayui/autocomplete@3.1.9) (2020-08-11)
 
 **Note:** Version bump only for package @clayui/autocomplete
