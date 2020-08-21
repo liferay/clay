@@ -292,6 +292,10 @@
         "aliases": ["active", "approve", "boolean", "done", "select", "success"]
     },
     {
+        "name": "check-small",
+        "aliases": [""]
+    },
+    {
         "name": "check-square",
         "aliases": [""]
     },
@@ -306,6 +310,10 @@
     {
         "name": "circle",
         "aliases": ["event", "workflow"]
+    },
+    {
+        "name": "closed-book",
+        "aliases": [""]
     },
     {
         "name": "cloud",
@@ -1221,6 +1229,10 @@
     },
     {
         "name": "textbox",
+        "aliases": [""]
+    },
+    {
+        "name": "theme",
         "aliases": [""]
     },
     {
