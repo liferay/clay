@@ -3,13 +3,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayButton from '@clayui/button';
-import ClayIcon from '@clayui/icon';
 import {useTransitionHeight} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
 
 import Nav from './Nav';
+import Trigger from './Trigger';
 
 interface IItem extends React.ComponentProps<typeof Nav.Item> {
 	/**
@@ -54,7 +53,7 @@ interface IProps {
 	/**
 	 * Label of the button that appears on smaller resolutions to open the vertical navigation.
 	 */
-	buttonToggleLabel?: string;
+	triggerLabel?: string;
 
 	/**
 	 * List of items.
@@ -67,9 +66,9 @@ interface IProps {
 	large?: boolean;
 
 	/**
-	 * Content of the Button trigger
+	 * Custom component that will be displayed on mobile resolutions that toggles the visibility of the navigation.
 	 */
-	triggerContent?: any;
+	trigger?: React.ReactElement;
 
 	/**
 	 * Path to the spritemap that Icon should use when referencing symbols.
@@ -161,13 +160,15 @@ function renderItems(items: Array<IItem>, spritemap?: string, level = 0) {
 	});
 }
 
-export const ClayVerticalNav: React.FunctionComponent<IProps> = ({
+const ClayVerticalNav: React.FunctionComponent<IProps> & {
+	Trigger: typeof Trigger;
+} = ({
 	activeLabel,
-	buttonToggleLabel = 'Menu',
 	items,
 	large,
 	spritemap,
-	triggerContent,
+	trigger,
+	triggerLabel = 'Menu',
 	...otherProps
 }: IProps) => {
 	const [active, setActive] = React.useState(false);
@@ -180,28 +181,21 @@ export const ClayVerticalNav: React.FunctionComponent<IProps> = ({
 				['menubar-vertical-expand-md']: !large,
 			})}
 		>
-			<ClayButton
-				className="menubar-toggler"
-				displayType="unstyled"
-				onClick={() => setActive(!active)}
-			>
-				{triggerContent ? (
-					triggerContent
-				) : (
-					<>
-						<span className="inline-item inline-item-before">
-							{activeLabel ? activeLabel : buttonToggleLabel}
-						</span>
-
-						<ClayIcon
-							focusable="false"
-							role="presentation"
-							spritemap={spritemap}
-							symbol="caret-bottom"
-						/>
-					</>
-				)}
-			</ClayButton>
+			{trigger ? (
+				<div
+					className="menubar-toggler"
+					onClick={() => setActive(!active)}
+					role="button"
+				>
+					{trigger}
+				</div>
+			) : (
+				<Trigger
+					handleClick={() => setActive(!active)}
+					label={activeLabel || triggerLabel}
+					spritemap={spritemap}
+				/>
+			)}
 
 			<div
 				className={classNames('collapse menubar-collapse', {
@@ -213,3 +207,7 @@ export const ClayVerticalNav: React.FunctionComponent<IProps> = ({
 		</nav>
 	);
 };
+
+ClayVerticalNav.Trigger = Trigger;
+
+export {ClayVerticalNav};
