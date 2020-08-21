@@ -121,14 +121,16 @@ storiesOf('Components|ClayNav', module)
 				]}
 				large={boolean('large: ', false)}
 				spritemap={spritemap}
-				trigger={
-					<ClayIcon
-						focusable="false"
-						role="presentation"
-						spritemap={spritemap}
-						symbol="ellipsis-v"
-					/>
-				}
+				trigger={(props) => (
+					<ClayVerticalNav.Trigger {...props}>
+						<ClayIcon
+							focusable="false"
+							role="presentation"
+							spritemap={spritemap}
+							symbol="ellipsis-v"
+						/>
+					</ClayVerticalNav.Trigger>
+				)}
 			/>
 		);
 	});

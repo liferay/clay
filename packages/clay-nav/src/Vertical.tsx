@@ -3,9 +3,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import ClayIcon from '@clayui/icon';
 import {useTransitionHeight} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
+import warning from 'warning';
 
 import Nav from './Nav';
 import Trigger from './Trigger';
@@ -68,7 +70,7 @@ interface IProps {
 	/**
 	 * Custom component that will be displayed on mobile resolutions that toggles the visibility of the navigation.
 	 */
-	trigger?: React.ReactElement;
+	trigger?: typeof Trigger;
 
 	/**
 	 * Path to the spritemap that Icon should use when referencing symbols.
@@ -167,11 +169,16 @@ const ClayVerticalNav: React.FunctionComponent<IProps> & {
 	items,
 	large,
 	spritemap,
-	trigger,
+	trigger: CustomTrigger = Trigger,
 	triggerLabel = 'Menu',
 	...otherProps
 }: IProps) => {
 	const [active, setActive] = React.useState(false);
+
+	warning(
+		!activeLabel,
+		'ClayVerticalNav: The `activeLabel` API has been deprecated in favor of `triggerLabel` and will be removed in the next major release.'
+	);
 
 	return (
 		<nav
@@ -181,21 +188,18 @@ const ClayVerticalNav: React.FunctionComponent<IProps> & {
 				['menubar-vertical-expand-md']: !large,
 			})}
 		>
-			{trigger ? (
-				<div
-					className="menubar-toggler"
-					onClick={() => setActive(!active)}
-					role="button"
-				>
-					{trigger}
-				</div>
-			) : (
-				<Trigger
-					handleClick={() => setActive(!active)}
-					label={activeLabel || triggerLabel}
+			<CustomTrigger onClick={() => setActive(!active)}>
+				<span className="inline-item inline-item-before">
+					{activeLabel || triggerLabel}
+				</span>
+
+				<ClayIcon
+					focusable="false"
+					role="presentation"
 					spritemap={spritemap}
+					symbol="caret-bottom"
 				/>
-			)}
+			</CustomTrigger>
 
 			<div
 				className={classNames('collapse menubar-collapse', {
