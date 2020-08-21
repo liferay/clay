@@ -185,6 +185,7 @@ const ClayInput = React.forwardRef<HTMLInputElement, IProps>(
 			insetAfter,
 			insetBefore,
 			sizing,
+			type = 'text',
 			...otherProps
 		}: IProps,
 		ref
@@ -198,6 +199,7 @@ const ClayInput = React.forwardRef<HTMLInputElement, IProps>(
 				['input-group-inset-before']: insetBefore,
 			})}
 			ref={ref}
+			type={type}
 		/>
 	)
 );
