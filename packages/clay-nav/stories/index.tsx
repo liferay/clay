@@ -121,8 +121,13 @@ storiesOf('Components|ClayNav', module)
 				]}
 				large={boolean('large: ', false)}
 				spritemap={spritemap}
-				triggerContent={
-					<ClayIcon spritemap={spritemap} symbol="ellipsis-h" />
+				trigger={
+					<ClayIcon
+						focusable="false"
+						role="presentation"
+						spritemap={spritemap}
+						symbol="ellipsis-v"
+					/>
 				}
 			/>
 		);
