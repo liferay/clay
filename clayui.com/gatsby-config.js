@@ -16,16 +16,15 @@ module.exports = {
 		'gatsby-plugin-meta-redirect',
 		{
 			options: {
+				clay: clay.srcDir,
 				srcDir: path.join(clay.srcDir, 'images', 'icons'),
 				staticDir: path.join(__dirname, 'static'),
 			},
-			resolve: 'gatsby-plugin-svg-compile-sprite',
+			resolve: 'gatsby-plugin-clay-css-tasks',
 		},
 		{
 			options: {
-				includePaths: clay.includePaths.concat(
-					path.join(clay.includePaths[0], 'node_modules')
-				),
+				includePaths: [clay.includePaths[0]],
 				precision: 8,
 			},
 			resolve: 'gatsby-plugin-sass',
