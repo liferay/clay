@@ -47,7 +47,6 @@ const verticalNavigationImportsCode = `import {ClayVerticalNav} from '@clayui/na
 const VerticalNavigationCode = `const Component = () => {
 	return (
 		<ClayVerticalNav
-			activeLabel="Five"
 			items={[
 			{
 				initialExpanded: true,

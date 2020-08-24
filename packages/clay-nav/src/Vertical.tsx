@@ -7,8 +7,10 @@ import ClayIcon from '@clayui/icon';
 import {useTransitionHeight} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
+import warning from 'warning';
 
 import Nav from './Nav';
+import Trigger from './Trigger';
 
 interface IItem extends React.ComponentProps<typeof Nav.Item> {
 	/**
@@ -47,8 +49,14 @@ interface IItemWithItems extends IItem {
 interface IProps {
 	/**
 	 * Label of item that is currently active.
+	 * @deprecated since version 3.3.x
 	 */
-	activeLabel: string;
+	activeLabel?: string;
+
+	/**
+	 * Label of the button that appears on smaller resolutions to open the vertical navigation.
+	 */
+	triggerLabel?: string;
 
 	/**
 	 * List of items.
@@ -59,6 +67,11 @@ interface IProps {
 	 * Flag to indicate if `menubar-vertical-expand-lg` class is applied.
 	 */
 	large?: boolean;
+
+	/**
+	 * Custom component that will be displayed on mobile resolutions that toggles the visibility of the navigation.
+	 */
+	trigger?: typeof Trigger;
 
 	/**
 	 * Path to the spritemap that Icon should use when referencing symbols.
@@ -150,14 +163,23 @@ function renderItems(items: Array<IItem>, spritemap?: string, level = 0) {
 	});
 }
 
-export const ClayVerticalNav: React.FunctionComponent<IProps> = ({
+const ClayVerticalNav: React.FunctionComponent<IProps> & {
+	Trigger: typeof Trigger;
+} = ({
 	activeLabel,
 	items,
 	large,
 	spritemap,
+	trigger: CustomTrigger = Trigger,
+	triggerLabel = 'Menu',
 	...otherProps
 }: IProps) => {
 	const [active, setActive] = React.useState(false);
+
+	warning(
+		!activeLabel,
+		'ClayVerticalNav: The `activeLabel` API has been deprecated in favor of `triggerLabel` and will be removed in the next major release.'
+	);
 
 	return (
 		<nav
@@ -167,11 +189,10 @@ export const ClayVerticalNav: React.FunctionComponent<IProps> = ({
 				['menubar-vertical-expand-md']: !large,
 			})}
 		>
-			<button
-				className="menubar-toggler"
-				onClick={() => setActive(!active)}
-			>
-				{activeLabel}
+			<CustomTrigger onClick={() => setActive(!active)}>
+				<span className="inline-item inline-item-before">
+					{activeLabel || triggerLabel}
+				</span>
 
 				<ClayIcon
 					focusable="false"
@@ -179,7 +200,7 @@ export const ClayVerticalNav: React.FunctionComponent<IProps> = ({
 					spritemap={spritemap}
 					symbol="caret-bottom"
 				/>
-			</button>
+			</CustomTrigger>
 
 			<div
 				className={classNames('collapse menubar-collapse', {
@@ -191,3 +212,7 @@ export const ClayVerticalNav: React.FunctionComponent<IProps> = ({
 		</nav>
 	);
 };
+
+ClayVerticalNav.Trigger = Trigger;
+
+export {ClayVerticalNav};

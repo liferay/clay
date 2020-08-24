@@ -16,9 +16,14 @@ exports[`ClayVerticalNav renders 1`] = `
     class="menubar menubar-transparent menubar-vertical-expand-md"
   >
     <button
-      class="menubar-toggler"
+      class="menubar-toggler btn btn-unstyled"
+      type="button"
     >
-      Home
+      <span
+        class="inline-item inline-item-before"
+      >
+        Menu
+      </span>
       <svg
         class="lexicon-icon lexicon-icon-caret-bottom"
         focusable="false"

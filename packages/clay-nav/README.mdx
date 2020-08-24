@@ -16,6 +16,8 @@ import {Navigation, VerticalNavigation} from '$packages/clay-nav/docs/index';
     -   [ClayNav](#claynav)
     -   [ClayNav.Item](#claynav.item)
     -   [ClayNav.Link](#claynav.link)
+    -   [ClayVerticalNav](#clayverticalnav)
+    -   [ClayVerticalNav.Trigger](#clayverticalnav.trigger)
 
 </div>
 </div>
@@ -27,6 +29,42 @@ import {Navigation, VerticalNavigation} from '$packages/clay-nav/docs/index';
 ## Vertical Navigation
 
 <VerticalNavigation />
+
+### Custom Trigger
+
+In its mobile version, Vertical Navigation adds a trigger that is responsible for opening the menu, in some cases you may want to customize this trigger, for this use the `<ClayVerticalNav.Trigger />` component.
+
+```js
+<ClayVerticalNav
+	trigger={(props) => (
+		<ClayVerticalNav.Trigger {...props}>
+			<ClayIcon
+				focusable="false"
+				role="presentation"
+				spritemap={spritemap}
+				symbol="ellipsis-v"
+			/>
+		</ClayVerticalNav.Trigger>
+	)}
+/>
+```
+
+Your custom trigger receives the `children` property with the default content, for cases when you just want to change the Trigger Button and not its content.
+
+```js
+<ClayVerticalNav
+	trigger={({onClick}) => (
+		<button className="btn btn-secondary" onClick={onClick}>
+			<ClayIcon
+				focusable="false"
+				role="presentation"
+				spritemap={spritemap}
+				symbol="ellipsis-v"
+			/>
+		</button>
+	)}
+/>
+```
 
 ## API
 
@@ -47,3 +85,9 @@ import {Navigation, VerticalNavigation} from '$packages/clay-nav/docs/index';
 ### ClayVerticalNav
 
 <div>[APITable "clay-nav/src/Vertical.tsx"]</div>
+
+### ClayVerticalNav.Trigger
+
+<code class="list-api-item-type">
+	Extends from {`React.ComponentProps<typeof ClayButton>`}
+</code>

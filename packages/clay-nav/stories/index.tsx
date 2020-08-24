@@ -5,6 +5,7 @@
 
 import '@clayui/css/lib/css/atlas.css';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import ClayIcon from '@clayui/icon';
 import {boolean} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React from 'react';
@@ -34,7 +35,6 @@ storiesOf('Components|ClayNav', module)
 	.add('ClayVerticalNav', () => {
 		return (
 			<ClayVerticalNav
-				activeLabel="Five"
 				items={[
 					{
 						initialExpanded: true,
@@ -75,6 +75,62 @@ storiesOf('Components|ClayNav', module)
 				]}
 				large={boolean('large: ', false)}
 				spritemap={spritemap}
+			/>
+		);
+	})
+	.add('ClayVerticalNav w/ custom trigger', () => {
+		return (
+			<ClayVerticalNav
+				items={[
+					{
+						initialExpanded: true,
+						items: [
+							{
+								href: '#',
+								label: 'Nested1',
+							},
+						],
+						label: 'Home',
+					},
+					{
+						href: '#',
+						label: 'About',
+					},
+					{
+						href: '#',
+						label: 'Contact',
+					},
+					{
+						items: [
+							{
+								active: true,
+								href: '#',
+								label: 'Five',
+							},
+							{
+								href: '#',
+								label: 'Six',
+							},
+						],
+						label: 'Projects',
+					},
+					{
+						href: '#',
+						label: 'Seven',
+					},
+				]}
+				large={boolean('large: ', false)}
+				spritemap={spritemap}
+				trigger={(props) => (
+					<ClayVerticalNav.Trigger {...props}>
+						<ClayIcon
+							focusable="false"
+							role="presentation"
+							spritemap={spritemap}
+							symbol="ellipsis-v"
+						/>
+					</ClayVerticalNav.Trigger>
+				)}
 			/>
 		);
 	});
