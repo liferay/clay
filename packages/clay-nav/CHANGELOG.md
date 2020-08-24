@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/liferay/clay/compare/@clayui/nav@3.2.2...@clayui/nav@3.3.0) (2020-08-24)
+
+### Bug Fixes
+
+-   **@clayui/nav:** Add Vertical Nav story with custom triggerContent ([3becaac](https://github.com/liferay/clay/commit/3becaac))
+
+### Features
+
+-   **@clayui/nav:** Add a new story featuring a custom Trigger ([cff245c](https://github.com/liferay/clay/commit/cff245c))
+-   **@clayui/nav:** Add breaking change notice ([bb3daf0](https://github.com/liferay/clay/commit/bb3daf0))
+-   **@clayui/nav:** Add Trigger low-level component ([f00c8c8](https://github.com/liferay/clay/commit/f00c8c8))
+-   **@clayui/nav:** Import Trigger and adapt API to fit the new requirements ([6f0183b](https://github.com/liferay/clay/commit/6f0183b))
+-   **@clayui/nav:** simplifies the use of `ClayVerticalNav.Trigger` and adds deprecated warn from the `activeLabel` API ([5ba8204](https://github.com/liferay/clay/commit/5ba8204))
+
 ## [3.2.2](https://github.com/liferay/clay/compare/@clayui/nav@3.2.1...@clayui/nav@3.2.2) (2020-07-28)
 
 ### Bug Fixes

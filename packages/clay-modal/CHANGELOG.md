@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.7.0](https://github.com/liferay/clay/compare/@clayui/modal@3.6.5...@clayui/modal@3.7.0) (2020-08-24)
+
+### Features
+
+-   **@clayui/modal:** Add zIndex prop to allow setting a custom z-index of the modal backdrop, with the body being tied to it's value but +10 ([0db1f3c](https://github.com/liferay/clay/commit/0db1f3c))
+
 ## [3.6.5](https://github.com/liferay/clay/compare/@clayui/modal@3.6.4...@clayui/modal@3.6.5) (2020-08-11)
 
 ### Bug Fixes
