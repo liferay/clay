@@ -120,17 +120,20 @@ const generateFiles = (pluginOptions) => {
 // Compiles and writes `atlas.css` and `base.css` files to `/static/css/`
 
 const generateCSSFiles = (pluginOptions) => {
+	const cssDir = path.join(pluginOptions.staticDir, 'css');
+	const scssDir = path.join(pluginOptions.clay, 'scss');
+
 	fs.writeFileSync(
-		path.join(pluginOptions.staticDir, 'css', 'atlas.css'),
+		path.join(cssDir, 'atlas.css'),
 		compileSass({
-			file: path.join(pluginOptions.clay, 'scss', 'atlas.scss'),
+			file: path.join(scssDir, 'atlas.scss'),
 		}).css.toString()
 	);
 
 	fs.writeFileSync(
-		path.join(pluginOptions.staticDir, 'css', 'base.css'),
+		path.join(cssDir, 'base.css'),
 		compileSass({
-			file: path.join(pluginOptions.clay, 'scss', 'base.scss'),
+			file: path.join(scssDir, 'base.scss'),
 		}).css.toString()
 	);
 };
