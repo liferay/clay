@@ -13,7 +13,7 @@ import React from 'react';
 
 import ClayUpperToolbar from '../src';
 
-storiesOf('Components|ClayUpperToolbar', module).add('default', () => (
+storiesOf('Deprecated|ClayUpperToolbar', module).add('default', () => (
 	<ClayUpperToolbar>
 		<ClayUpperToolbar.Item className="text-left" expand>
 			<label className="component-title">{'Foo Bar'}</label>
