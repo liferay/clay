@@ -41,6 +41,11 @@ interface IProps
 	 * hook, adds observer from `useModal` hook here.
 	 */
 	observer: Observer;
+
+	/**
+	 * Allows setting a custom z-index value, overriding the default one which is 1040, modal body z-index will be +10 of this value
+	 */
+	zIndex?: number;
 }
 
 const warningMessage = `You need to pass the 'observer' prop to ClayModal for everything to work fine, use the 'useModal' hook that exposes the observer.
@@ -62,6 +67,7 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 	size,
 	spritemap,
 	status,
+	zIndex,
 	...otherProps
 }: IProps) => {
 	const modalElementRef = useRef<HTMLDivElement | null>(null);
@@ -84,6 +90,7 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 				className={classNames('modal-backdrop fade', {
 					show,
 				})}
+				style={{zIndex}}
 			/>
 			<div
 				{...otherProps}
@@ -91,6 +98,7 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 					show,
 				})}
 				ref={modalElementRef}
+				style={{zIndex: zIndex && zIndex + 10}}
 			>
 				<div
 					className={classNames('modal-dialog', {
