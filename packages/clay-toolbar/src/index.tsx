@@ -60,7 +60,7 @@ const ClayToolbar: React.FunctionComponent<IProps> & {
 		{
 			'component-tbar': !subnav,
 			'subnav-tbar': !!subnav,
-			'tbar-light': !!light,
+			'tbar-light': light,
 		},
 		subnav && {
 			'subnav-tbar-disabled': subnav.disabled,
