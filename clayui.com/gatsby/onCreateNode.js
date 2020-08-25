@@ -60,7 +60,7 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 				pkgVersion.includes(subs)
 			);
 
-			pkgStatus = isBeta ? 'Beta' : 'Stable';
+			pkgStatus = pkgStatus ? pkgStatus : isBeta ? 'Beta' : 'Stable';
 		}
 
 		if (!slug) {

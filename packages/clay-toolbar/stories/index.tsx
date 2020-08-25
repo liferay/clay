@@ -4,8 +4,9 @@
  */
 
 import '@clayui/css/lib/css/atlas.css';
-import ClayButton from '@clayui/button';
+import ClayButton, {ClayButtonWithIcon} from '@clayui/button';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import ClayIcon from '@clayui/icon';
 import ClayLayout from '@clayui/layout';
 import {storiesOf} from '@storybook/react';
 import React from 'react';
@@ -207,6 +208,71 @@ storiesOf('Components|ClayToolbar', module)
 								{'Clear All'}
 							</ClayButton>
 						</ClayToolbar.Section>
+					</ClayToolbar.Item>
+				</ClayToolbar.Nav>
+			</ClayLayout.ContainerFluid>
+		</ClayToolbar>
+	))
+	.add('Upper Toolbar', () => (
+		<ClayToolbar light>
+			<ClayLayout.ContainerFluid>
+				<ClayToolbar.Nav>
+					<ClayToolbar.Item expand>
+						<span className="text-left">
+							{'Workshop_idea_generation.pdf'}
+						</span>
+					</ClayToolbar.Item>
+
+					<ClayToolbar.Item>
+						<ClayToolbar.Input
+							placeholder="Search..."
+							sizing="sm"
+						/>
+					</ClayToolbar.Item>
+
+					<ClayToolbar.Item>
+						<ClayButton.Group>
+							<ClayButtonWithIcon
+								displayType="secondary"
+								small
+								spritemap={spritemap}
+								symbol="angle-left"
+							/>
+							<ClayButtonWithIcon
+								displayType="secondary"
+								small
+								spritemap={spritemap}
+								symbol="angle-right"
+							/>
+						</ClayButton.Group>
+					</ClayToolbar.Item>
+
+					<ClayToolbar.Item>
+						<ClayButton displayType="secondary" small>
+							{'Share'}
+						</ClayButton>
+					</ClayToolbar.Item>
+
+					<ClayToolbar.Item>
+						<ClayButton small>
+							<span className="inline-item inline-item-before">
+								<ClayIcon
+									spritemap={spritemap}
+									symbol="download"
+								/>
+							</span>
+
+							{'Download'}
+						</ClayButton>
+					</ClayToolbar.Item>
+
+					<ClayToolbar.Item>
+						<ClayButtonWithIcon
+							displayType="unstyled"
+							small
+							spritemap={spritemap}
+							symbol="ellipsis-v"
+						/>
 					</ClayToolbar.Item>
 				</ClayToolbar.Nav>
 			</ClayLayout.ContainerFluid>

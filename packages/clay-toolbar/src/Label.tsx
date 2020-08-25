@@ -7,9 +7,13 @@ import ClayLabel from '@clayui/label';
 import classNames from 'classnames';
 import React from 'react';
 
-const Label: React.FunctionComponent<React.ComponentProps<
-	typeof ClayLabel
->> = ({children, className, ...otherProps}) => (
+export interface IProps extends React.ComponentProps<typeof ClayLabel> {}
+
+const Label: React.FunctionComponent<IProps> = ({
+	children,
+	className,
+	...otherProps
+}: IProps) => (
 	<ClayLabel
 		className={classNames(className, 'component-label tbar-label')}
 		{...otherProps}
