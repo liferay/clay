@@ -119,7 +119,22 @@ const LayoutNavHome = () => {
 										</ClayButton>
 									</>
 								}
-								helpText="Use this menu to toggle between Atlas and Base Themes"
+								helpText={
+									<>
+										<span>
+											{'Use this menu to toggle between '}
+										</span>
+										<Link to="/docs/css/index.html#base-theme">
+											<span
+												className="c-inner"
+												tabIndex="-1"
+											>
+												{'Atlas and Base Themes'}
+											</span>
+										</Link>
+										<span>{'.'}</span>
+									</>
+								}
 								items={[
 									{
 										checked: showAtlas,

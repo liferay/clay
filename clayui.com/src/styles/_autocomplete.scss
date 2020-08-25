@@ -3,13 +3,23 @@
 		width: 100%;
 
 		.input-group-addon {
+			align-items: center;
 			background-color: transparent;
 			border-color: transparent;
 			color: $brand-light-secondary-text;
+			display: flex;
+			height: 1.5rem;
+			justify-content: center;
+			margin-top: -0.75rem;
 			position: absolute;
-			right: 16px;
-			top: 11px;
+			right: 0.875rem;
+			top: 50%;
+			width: 1.5rem;
 			z-index: 9;
+
+			.lexicon-icon {
+				margin-top: 0;
+			}
 		}
 
 		input.form-control {
