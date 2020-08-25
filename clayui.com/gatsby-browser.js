@@ -8,25 +8,17 @@ import localStorage from './src/utils/localStorage';
 // A stub function is needed because gatsby won't load this file otherwise
 // (https://github.com/gatsbyjs/gatsby/issues/6759)
 export const onClientEntry = () => {
-	if (process.env.GATSBY_CLAY_NIGHTLY === 'true') {
-		const isNullOrTrue = (val) => val === 'true' || val === null;
+	const isNullOrTrue = (val) => val === 'true' || val === null;
 
-		const showAtlas = isNullOrTrue(localStorage.getItem('clay.showAtlas'));
-		const showSiteCss = isNullOrTrue(
-			localStorage.getItem('clay.showSiteCss')
-		);
+	const showAtlas = isNullOrTrue(localStorage.getItem('clay.showAtlas'));
 
-		if (showAtlas) {
-			require('@clayui/css/src/scss/atlas.scss');
-		} else {
-			require('@clayui/css/src/scss/base.scss');
-		}
+	const clayCSSFile = document.getElementById('clayCSSFile');
 
-		if (showSiteCss) {
-			require('./src/styles/main.scss');
-		}
+	if (showAtlas) {
+		clayCSSFile.setAttribute('href', '/css/atlas.css');
 	} else {
-		require('@clayui/css/src/scss/atlas.scss');
-		require('./src/styles/main.scss');
+		clayCSSFile.setAttribute('href', '/css/base.css');
 	}
+
+	require('./src/styles/main.scss');
 };

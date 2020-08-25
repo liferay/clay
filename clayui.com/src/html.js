@@ -21,9 +21,9 @@ export default (props) => {
 					sizes="16x16 32x32"
 					type="image/png"
 				/>
+				<link href="/css/atlas.css" id="clayCSSFile" rel="stylesheet" />
 
 				{props.headComponents}
-
 				<link
 					href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
 					rel="stylesheet"

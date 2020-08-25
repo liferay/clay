@@ -3,10 +3,22 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import ClayButton from '@clayui/button';
+import {ClayDropDownWithItems} from '@clayui/drop-down';
+import ClayIcon from '@clayui/icon';
 import {Link} from 'gatsby';
 import React from 'react';
 
+import useStateWithLocalStorage from '../Hooks/useStateWithLocalStorage';
+
+const spritemap = '/images/icons/icons.svg';
+
 const LayoutNavHome = () => {
+	const [showAtlas, setShowAtlas] = useStateWithLocalStorage(
+		true,
+		'clay.showAtlas'
+	);
+
 	return (
 		<nav className="navbar navbar-clay-site navbar-expand-lg navbar-light">
 			<div className="autofit-float-sm-down autofit-padded autofit-row">
@@ -89,6 +101,66 @@ const LayoutNavHome = () => {
 									/>
 								</span>
 							</a>
+						</li>
+						<li className="nav-item">
+							<ClayDropDownWithItems
+								footerContent={
+									<>
+										<ClayButton
+											block
+											displayType="secondary"
+											onClick={() => {
+												setShowAtlas(true);
+
+												window.location.reload();
+											}}
+										>
+											{'Reset Settings'}
+										</ClayButton>
+									</>
+								}
+								helpText="Use this menu to toggle between Atlas and Base Themes"
+								items={[
+									{
+										checked: showAtlas,
+										label: 'Show Atlas',
+										onChange: (checked) => {
+											const clayCSSFile = document.getElementById(
+												'clayCSSFile'
+											);
+
+											setShowAtlas(checked);
+
+											if (checked) {
+												clayCSSFile.setAttribute(
+													'href',
+													'/css/atlas.css'
+												);
+											} else {
+												clayCSSFile.setAttribute(
+													'href',
+													'/css/base.css'
+												);
+											}
+										},
+										type: 'checkbox',
+									},
+								]}
+								spritemap={spritemap}
+								trigger={
+									<ClayButton
+										className="nav-link"
+										displayType="unstyled"
+									>
+										<span className="c-inner" tabIndex="-1">
+											<ClayIcon
+												spritemap={spritemap}
+												symbol="cog"
+											/>
+										</span>
+									</ClayButton>
+								}
+							/>
 						</li>
 					</ul>
 				</div>
