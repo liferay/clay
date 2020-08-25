@@ -7,8 +7,7 @@ import Editor from '$clayui.com/src/components/Editor';
 import {ClayRadio, ClayRadioGroup} from '@clayui/form';
 import React from 'react';
 
-const radioGroupImportsCode = `import {ClayRadio, ClayRadioGroup} from '@clayui/form';
-`;
+const radioGroupImportsCode = `import {ClayRadio, ClayRadioGroup} from '@clayui/form';`;
 
 const radioGroupCode = `const Component = () => {
 	const [value, setValue] = useState('one');
@@ -28,16 +27,46 @@ const radioGroupCode = `const Component = () => {
 
 render(<Component />)`;
 
+const radioGroupJSPImportsCode = `<%@ taglib uri="http://liferay.com/tld/clay" prefix="clay" %>`;
+
+const RadioGroupJSPCode = `<clay:radio
+	checked="<%= true %>"
+	label="One"
+	name="one"
+/>
+	
+<clay:radio
+	disabled="<%= true %>"
+	label="Two"
+	name="two"
+/>
+	
+<clay:radio
+	checked="<%= true %>"
+	disabled="<%= true %>"
+	label="Three"
+	name="three"
+	showLabel="<%= false %>"
+/>`;
+
 const RadioGroup = () => {
 	const scope = {ClayRadio, ClayRadioGroup};
 
-	return (
-		<Editor
-			code={radioGroupCode}
-			imports={radioGroupImportsCode}
-			scope={scope}
-		/>
-	);
+	const codeSnippets = [
+		{
+			imports: radioGroupImportsCode,
+			name: 'React',
+			value: radioGroupCode,
+		},
+		{
+			disabled: true,
+			imports: radioGroupJSPImportsCode,
+			name: 'JSP',
+			value: RadioGroupJSPCode,
+		},
+	];
+
+	return <Editor code={codeSnippets} scope={scope} />;
 };
 
 export {RadioGroup};
