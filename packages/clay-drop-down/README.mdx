@@ -13,6 +13,7 @@ import {DropDown, DropDownWithItems} from '$packages/clay-drop-down/docs/index';
 
 -   [Composing](#composing)
     -   [Using dropdown without a trigger](#using-dropdown-without-a-trigger)
+    -   [Using dropdown in JSP files](#using-dropdown-in-jsp-files)
 -   [DropDownWithItems](#dropdownwithitems)
 -   [API](#api)
     -   [ClayDropDown](#claydropdown)
@@ -44,7 +45,7 @@ You may want to use only the content of DropDown for other cases, such as mounti
 	and uses it as the basis for aligning DropDown content.
 </div>
 
-#### Using dropdown without a trigger
+### Using dropdown without a trigger
 
 You may want to create a trigger that is not necessarily in the same tree as DropDown, due to HTML markup issues, for these cases you can use `<ClayDropDown.Menu />`.
 
@@ -95,6 +96,12 @@ const Menu = ({children, hasLeftSymbols, hasRightSymbols}) => {
 	);
 };
 ```
+
+### Using dropdown in JSP files
+
+In JSP we have 2 variants of ClayDropDown: `<clay:dropdown-menu />` and `<clay:dropdown-action />`, with them sharing lots of props, like: `defaultEventHandler`, `displayType`, `label`, `small`, `searchable`, `itemsIconAlignment`, etc.
+
+The only difference between these 2 variants is that the trigger in `<clay:dropdown-action />` is always a vertical elipsis icon, whereas the trigger for `<clay:dropdown-menu />` can be fully customized.
 
 ## DropDownWithItems
 
