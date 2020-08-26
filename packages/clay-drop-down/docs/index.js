@@ -47,7 +47,13 @@ const DropDownJSPCode = `<clay:dropdown-menu
 	dropdownItems="<%= customDropdownItems %>"
 />
 
-<clay:dropdown-action dropdownItems="<%= actionDropdownItems %>"`;
+<clay:dropdown-action dropdownItems="<%= actionDropdownItems %>"
+
+/*
+In JSP we have 2 variants of ClayDropDown: <clay:dropdown-menu /> and <clay:dropdown-action />, with them sharing lots of props, like: defaultEventHandler, displayType, label, small, searchable, itemsIconAlignment, etc.
+
+The only difference between these 2 variants is that the trigger in <clay:dropdown-action /> is always a vertical elipsis icon, whereas the trigger for <clay:dropdown-menu /> can be fully customized.
+*/`;
 
 const DropDown = () => {
 	const scope = {ClayDropDown};
