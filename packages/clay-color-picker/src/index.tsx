@@ -201,7 +201,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 							width: 0,
 						}}
 						type={useNative ? 'color' : 'text'}
-						value={`#${hexInputValue}`}
+						value={hexInputValue ? `#${hexInputValue}` : ''}
 					/>
 				)}
 
@@ -288,7 +288,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 
 									const hexString = newColor.isValid()
 										? newColor.toHex()
-										: value;
+										: event.target.value;
 
 									onValueChange(hexString);
 									setHexInputValue(hexString);
