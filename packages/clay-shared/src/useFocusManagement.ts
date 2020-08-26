@@ -208,6 +208,11 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 		const lastPosition = elements.length - 1;
 		let nextElement = null;
 
+		// Ignore when the active element is not in the scope.
+		if (position < 0) {
+			return null;
+		}
+
 		if (backwards) {
 			if (position === 0) {
 				// is out of scope, so we go back through the fiber to pick up the
