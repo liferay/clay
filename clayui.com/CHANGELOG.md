@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.5.0](https://github.com/matuzalemsteles/clay/compare/clayui.com@3.4.1...clayui.com@3.5.0) (2020-08-26)
+
+### Bug Fixes
+
+-   **clayui.com:** We should be able to toggle between Atlas and Base theme on prod ([a58c10c](https://github.com/matuzalemsteles/clay/commit/a58c10c))
+
+### Features
+
+-   **clayui.com:** Expand packageStatus to be able to show it's value instead of just Beta and Stable ([e60ff66](https://github.com/matuzalemsteles/clay/commit/e60ff66))
+-   **clayui.com:** Renames `gatsby-plugin-svg-compile-sprite` to `gatsby-plugin-clay-css-tasks` and use node-sass to compile atlas.scss and base.scss to the static directory ([a1191a0](https://github.com/matuzalemsteles/clay/commit/a1191a0))
+
 ## [3.4.1](https://github.com/matuzalemsteles/clay/compare/clayui.com@3.4.0...clayui.com@3.4.1) (2020-08-24)
 
 **Note:** Version bump only for package clayui.com

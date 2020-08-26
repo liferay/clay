@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.18.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.17.1...@clayui/css@3.18.0) (2020-08-26)
+
+
+### Features
+
+* **@clayui/toolbar:** Add clayui/form to deps, Add low-level components to Toolbar ([719b71f](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/719b71f))
+
+
+
+
+
 ## [3.17.1](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.17.0...@clayui/css@3.17.1) (2020-08-21)
 
 

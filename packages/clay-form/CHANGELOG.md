@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.11.0](https://github.com/liferay/clay/compare/@clayui/form@3.10.1...@clayui/form@3.11.0) (2020-08-26)
+
+### Features
+
+-   **@clayui/form:** Add Radio JSP code example ([62f2593](https://github.com/liferay/clay/commit/62f2593))
+
 ## [3.10.1](https://github.com/liferay/clay/compare/@clayui/form@3.10.0...@clayui/form@3.10.1) (2020-08-21)
 
 ### Bug Fixes

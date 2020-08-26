@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.2](https://github.com/liferay/clay/compare/@clayui/color-picker@3.3.1...@clayui/color-picker@3.3.2) (2020-08-26)
+
+### Bug Fixes
+
+-   **@clayui/color-picker:** fixes error of adding the value in the input hidden only with the hash (#) ([48076a4](https://github.com/liferay/clay/commit/48076a4))
+-   **@clayui/color-picker:** maintains the value entered by the user when the color is not valid ([c824eaf](https://github.com/liferay/clay/commit/c824eaf))
+
 ## [3.3.1](https://github.com/liferay/clay/compare/@clayui/color-picker@3.3.0...@clayui/color-picker@3.3.1) (2020-08-21)
 
 **Note:** Version bump only for package @clayui/color-picker
