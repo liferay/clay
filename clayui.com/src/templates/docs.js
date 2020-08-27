@@ -176,13 +176,21 @@ export default (props) => {
 		location.hash === '#css' || !containsReact ? CSS_INDEX : REACT_INDEX
 	);
 
+	const [hasMounted, setHasMounted] = React.useState(false);
+
 	useEffect(() => {
+		setHasMounted(true);
+
 		document
 			.querySelectorAll('.clay-site-custom-checkbox-indeterminate')
 			.forEach((item) => {
 				item.indeterminate = true;
 			});
 	}, []);
+
+	if (!hasMounted) {
+		return null;
+	}
 
 	const reactTab = body || tab.body;
 
