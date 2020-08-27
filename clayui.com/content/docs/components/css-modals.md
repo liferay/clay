@@ -14,6 +14,12 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/modals/'
     -   [Full Screen](#full-screen)
         -   [All Screen Sizes](#all-screen-sizes)
         -   [Sm Down](#sm-down)
+    -   [Height](#height)
+        -   [Small](#height-small)
+        -   [Medium](#height-medium)
+        -   [Large](#height-large)
+        -   [Extra Large](#height-extra-large)
+        -   [Full Screen](#height-full-screen)
 -   [Configurations](#configurations)
     -   [Header, Body and Footer](#header,-body-and-footer)
     -   [Header and Body](#header-and-body)
@@ -589,6 +595,588 @@ Add `modal-full-screen-sm-down` to any `modal-dialog` to stretch to fit the brow
 						instant café au lait whipped extra at percolator.
 					</p>
 				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-item-last">
+					<div class="btn-group">
+						<div class="btn-group-item">
+							<button
+								class="btn btn-secondary"
+								data-dismiss="modal"
+								type="button"
+							>
+								Close
+							</button>
+						</div>
+						<div class="btn-group-item">
+							<button class="btn btn-primary" type="button">
+								Primary
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+```
+
+### Height
+
+#### Small(#height-small)
+
+Add the class `modal-height-sm` to the `modal` or `modal-dialog` element to fix the height of the modal to 250px.
+
+<button class="btn btn-primary" data-target="#claySmallModalModalHeightSm" data-toggle="modal" type="button">Modal Height SM</button>
+
+<div aria-labelledby="claySmallModalModalHeightSmLabel" class="fade modal modal-height-sm" id="claySmallModalModalHeightSm" role="dialog" tabindex="-1">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="modal-item-group">
+					<div class="modal-item">
+						<div class="modal-title-section">
+							<div class="modal-title" id="claySmallModalModalHeightSmLabel">Modal Title</div>
+						</div>
+					</div>
+				</div>
+				<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+						<use xlink:href="/images/icons/icons.svg#times" />
+					</svg>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h4>Modal Body</h4>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-item-last">
+					<div class="btn-group">
+						<div class="btn-group-item">
+							<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+						</div>
+						<div class="btn-group-item">
+							<button class="btn btn-primary" type="button">Primary</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+```html
+<button
+	class="btn btn-primary"
+	data-target="#claySmallModalModalHeightSm"
+	data-toggle="modal"
+	type="button"
+>
+	Modal Height SM
+</button>
+<div
+	aria-labelledby="claySmallModalModalHeightSmLabel"
+	class="fade modal modal-height-sm"
+	id="claySmallModalModalHeightSm"
+	role="dialog"
+	tabindex="-1"
+>
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="modal-item-group">
+					<div class="modal-item">
+						<div class="modal-title-section">
+							<div
+								class="modal-title"
+								id="claySmallModalModalHeightSmLabel"
+							>
+								Modal Title
+							</div>
+						</div>
+					</div>
+				</div>
+				<button
+					aria-label="Close"
+					class="close"
+					data-dismiss="modal"
+					type="button"
+				>
+					<svg
+						class="lexicon-icon lexicon-icon-times"
+						focusable="false"
+						role="presentation"
+					>
+						<use xlink:href="/images/icons/icons.svg#times" />
+					</svg>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h4>Modal Body</h4>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-item-last">
+					<div class="btn-group">
+						<div class="btn-group-item">
+							<button
+								class="btn btn-secondary"
+								data-dismiss="modal"
+								type="button"
+							>
+								Close
+							</button>
+						</div>
+						<div class="btn-group-item">
+							<button class="btn btn-primary" type="button">
+								Primary
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+```
+
+#### Medium(#height-medium)
+
+Add the class `modal-height-md` to the `modal` or `modal-dialog` element to fix the height of the modal to 450px.
+
+<button class="btn btn-primary" data-target="#claySmallModalModalHeightMd" data-toggle="modal" type="button">Modal Height MD</button>
+
+<div aria-labelledby="claySmallModalModalHeightMdLabel" class="fade modal modal-height-md" id="claySmallModalModalHeightMd" role="dialog" tabindex="-1">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="modal-item-group">
+					<div class="modal-item">
+						<div class="modal-title-section">
+							<div class="modal-title" id="claySmallModalModalHeightMdLabel">Modal Title</div>
+						</div>
+					</div>
+				</div>
+				<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+						<use xlink:href="/images/icons/icons.svg#times" />
+					</svg>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h4>Modal Body</h4>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-item-last">
+					<div class="btn-group">
+						<div class="btn-group-item">
+							<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+						</div>
+						<div class="btn-group-item">
+							<button class="btn btn-primary" type="button">Primary</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+```html
+<button
+	class="btn btn-primary"
+	data-target="#claySmallModalModalHeightMd"
+	data-toggle="modal"
+	type="button"
+>
+	Modal Height MD
+</button>
+<div
+	aria-labelledby="claySmallModalModalHeightMdLabel"
+	class="fade modal modal-height-md"
+	id="claySmallModalModalHeightMd"
+	role="dialog"
+	tabindex="-1"
+>
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="modal-item-group">
+					<div class="modal-item">
+						<div class="modal-title-section">
+							<div
+								class="modal-title"
+								id="claySmallModalModalHeightMdLabel"
+							>
+								Modal Title
+							</div>
+						</div>
+					</div>
+				</div>
+				<button
+					aria-label="Close"
+					class="close"
+					data-dismiss="modal"
+					type="button"
+				>
+					<svg
+						class="lexicon-icon lexicon-icon-times"
+						focusable="false"
+						role="presentation"
+					>
+						<use xlink:href="/images/icons/icons.svg#times" />
+					</svg>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h4>Modal Body</h4>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-item-last">
+					<div class="btn-group">
+						<div class="btn-group-item">
+							<button
+								class="btn btn-secondary"
+								data-dismiss="modal"
+								type="button"
+							>
+								Close
+							</button>
+						</div>
+						<div class="btn-group-item">
+							<button class="btn btn-primary" type="button">
+								Primary
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+```
+
+#### Large(#height-large)
+
+Add the class `modal-height-lg` to the `modal` or `modal-dialog` element to fix the height of the modal to 650px.
+
+<button class="btn btn-primary" data-target="#claySmallModalModalHeightLg" data-toggle="modal" type="button">Modal Height LG</button>
+
+<div aria-labelledby="claySmallModalModalHeightLgLabel" class="fade modal modal-height-lg" id="claySmallModalModalHeightLg" role="dialog" tabindex="-1">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="modal-item-group">
+					<div class="modal-item">
+						<div class="modal-title-section">
+							<div class="modal-title" id="claySmallModalModalHeightLgLabel">Modal Title</div>
+						</div>
+					</div>
+				</div>
+				<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+						<use xlink:href="/images/icons/icons.svg#times" />
+					</svg>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h4>Modal Body</h4>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-item-last">
+					<div class="btn-group">
+						<div class="btn-group-item">
+							<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+						</div>
+						<div class="btn-group-item">
+							<button class="btn btn-primary" type="button">Primary</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+```html
+<button
+	class="btn btn-primary"
+	data-target="#claySmallModalModalHeightLg"
+	data-toggle="modal"
+	type="button"
+>
+	Modal Height LG
+</button>
+<div
+	aria-labelledby="claySmallModalModalHeightLgLabel"
+	class="fade modal modal-height-lg"
+	id="claySmallModalModalHeightLg"
+	role="dialog"
+	tabindex="-1"
+>
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="modal-item-group">
+					<div class="modal-item">
+						<div class="modal-title-section">
+							<div
+								class="modal-title"
+								id="claySmallModalModalHeightLgLabel"
+							>
+								Modal Title
+							</div>
+						</div>
+					</div>
+				</div>
+				<button
+					aria-label="Close"
+					class="close"
+					data-dismiss="modal"
+					type="button"
+				>
+					<svg
+						class="lexicon-icon lexicon-icon-times"
+						focusable="false"
+						role="presentation"
+					>
+						<use xlink:href="/images/icons/icons.svg#times" />
+					</svg>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h4>Modal Body</h4>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-item-last">
+					<div class="btn-group">
+						<div class="btn-group-item">
+							<button
+								class="btn btn-secondary"
+								data-dismiss="modal"
+								type="button"
+							>
+								Close
+							</button>
+						</div>
+						<div class="btn-group-item">
+							<button class="btn btn-primary" type="button">
+								Primary
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+```
+
+#### Extra Large(#height-extra-large)
+
+Add the class `modal-height-xl` to the `modal` or `modal-dialog` element to fix the height of the modal to 800px.
+
+<button class="btn btn-primary" data-target="#claySmallModalModalHeightXl" data-toggle="modal" type="button">Modal Height XL</button>
+
+<div aria-labelledby="claySmallModalModalHeightXlLabel" class="fade modal modal-height-xl" id="claySmallModalModalHeightXl" role="dialog" tabindex="-1">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="modal-item-group">
+					<div class="modal-item">
+						<div class="modal-title-section">
+							<div class="modal-title" id="claySmallModalModalHeightXlLabel">Modal Title</div>
+						</div>
+					</div>
+				</div>
+				<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+						<use xlink:href="/images/icons/icons.svg#times" />
+					</svg>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h4>Modal Body</h4>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-item-last">
+					<div class="btn-group">
+						<div class="btn-group-item">
+							<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+						</div>
+						<div class="btn-group-item">
+							<button class="btn btn-primary" type="button">Primary</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+```html
+<button
+	class="btn btn-primary"
+	data-target="#claySmallModalModalHeightXl"
+	data-toggle="modal"
+	type="button"
+>
+	Modal Height XL
+</button>
+<div
+	aria-labelledby="claySmallModalModalHeightXlLabel"
+	class="fade modal modal-height-xl"
+	id="claySmallModalModalHeightXl"
+	role="dialog"
+	tabindex="-1"
+>
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="modal-item-group">
+					<div class="modal-item">
+						<div class="modal-title-section">
+							<div
+								class="modal-title"
+								id="claySmallModalModalHeightXlLabel"
+							>
+								Modal Title
+							</div>
+						</div>
+					</div>
+				</div>
+				<button
+					aria-label="Close"
+					class="close"
+					data-dismiss="modal"
+					type="button"
+				>
+					<svg
+						class="lexicon-icon lexicon-icon-times"
+						focusable="false"
+						role="presentation"
+					>
+						<use xlink:href="/images/icons/icons.svg#times" />
+					</svg>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h4>Modal Body</h4>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-item-last">
+					<div class="btn-group">
+						<div class="btn-group-item">
+							<button
+								class="btn btn-secondary"
+								data-dismiss="modal"
+								type="button"
+							>
+								Close
+							</button>
+						</div>
+						<div class="btn-group-item">
+							<button class="btn btn-primary" type="button">
+								Primary
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+```
+
+#### Full Screen(#height-full-screen)
+
+Add the class `modal-height-full` to the `modal` or `modal-dialog` element to expand the modal to fit to the height of the browser's window.
+
+<button class="btn btn-primary" data-target="#claySmallModalModalHeightFull" data-toggle="modal" type="button">Modal Height Full</button>
+
+<div aria-labelledby="claySmallModalModalHeightFullLabel" class="fade modal modal-height-full" id="claySmallModalModalHeightFull" role="dialog" tabindex="-1">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="modal-item-group">
+					<div class="modal-item">
+						<div class="modal-title-section">
+							<div class="modal-title" id="claySmallModalModalHeightFullLabel">Modal Title</div>
+						</div>
+					</div>
+				</div>
+				<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+						<use xlink:href="/images/icons/icons.svg#times" />
+					</svg>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h4>Modal Body</h4>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-item-last">
+					<div class="btn-group">
+						<div class="btn-group-item">
+							<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+						</div>
+						<div class="btn-group-item">
+							<button class="btn btn-primary" type="button">Primary</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+```html
+<button
+	class="btn btn-primary"
+	data-target="#claySmallModalModalHeightFull"
+	data-toggle="modal"
+	type="button"
+>
+	Modal Height Full
+</button>
+<div
+	aria-labelledby="claySmallModalModalHeightFullLabel"
+	class="fade modal modal-height-full"
+	id="claySmallModalModalHeightFull"
+	role="dialog"
+	tabindex="-1"
+>
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="modal-item-group">
+					<div class="modal-item">
+						<div class="modal-title-section">
+							<div
+								class="modal-title"
+								id="claySmallModalModalHeightFullLabel"
+							>
+								Modal Title
+							</div>
+						</div>
+					</div>
+				</div>
+				<button
+					aria-label="Close"
+					class="close"
+					data-dismiss="modal"
+					type="button"
+				>
+					<svg
+						class="lexicon-icon lexicon-icon-times"
+						focusable="false"
+						role="presentation"
+					>
+						<use xlink:href="/images/icons/icons.svg#times" />
+					</svg>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h4>Modal Body</h4>
 			</div>
 			<div class="modal-footer">
 				<div class="modal-item-last">
