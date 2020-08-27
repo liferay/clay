@@ -8,8 +8,7 @@ import ClayButton from '@clayui/button';
 import ClayDropDown, {ClayDropDownWithItems} from '@clayui/drop-down';
 import React from 'react';
 
-const dropDownImportsCode = `import ClayDropDown from '@clayui/drop-down';
-`;
+const dropDownImportsCode = `import ClayDropDown from '@clayui/drop-down';`;
 
 const dropDownCode = `const Component = () => {
 	const [active, setActive] = useState(false);
@@ -41,25 +40,45 @@ const dropDownCode = `const Component = () => {
 
 render(<Component />)`;
 
+const dropDownJSPImportsCode = `<%@ taglib uri="http://liferay.com/tld/clay" prefix="clay" %>`;
+
+const DropDownJSPCode = `<clay:dropdown-menu
+	buttonLabel="Click here!"
+	dropdownItems="<%= customDropdownItems %>"
+/>
+
+<clay:dropdown-action dropdownItems="<%= actionDropdownItems %>"
+
+/*
+In JSP we have 2 variants of ClayDropDown: <clay:dropdown-menu /> and <clay:dropdown-action />, with them sharing lots of props, like: defaultEventHandler, displayType, label, small, searchable, itemsIconAlignment, etc.
+
+The only difference between these 2 variants is that the trigger in <clay:dropdown-action /> is always a vertical elipsis icon, whereas the trigger for <clay:dropdown-menu /> can be fully customized.
+*/`;
+
 const DropDown = () => {
 	const scope = {ClayDropDown};
 
-	return (
-		<Editor
-			code={dropDownCode}
-			imports={dropDownImportsCode}
-			scope={scope}
-		/>
-	);
+	const codeSnippets = [
+		{
+			imports: dropDownImportsCode,
+			name: 'React',
+			value: dropDownCode,
+		},
+		{
+			disabled: true,
+			imports: dropDownJSPImportsCode,
+			name: 'JSP',
+			value: DropDownJSPCode,
+		},
+	];
+
+	return <Editor code={codeSnippets} scope={scope} />;
 };
 
 const dropDownWithItemsImportsCode = `import ClayButton from '@clayui/button';
-import {ClayDropDownWithItems} from '@clayui/drop-down';
-`;
+import {ClayDropDownWithItems} from '@clayui/drop-down';`;
 
-const dropDownWithItemsCode = `
-
-const Component = () => {
+const dropDownWithItemsCode = `const Component = () => {
 	const [value, setValue] = useState();
     const items = [
       {
