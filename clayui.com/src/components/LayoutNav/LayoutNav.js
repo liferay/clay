@@ -23,12 +23,12 @@ export default (location) => {
 	const pathname = location.pathname || '';
 
 	return (
-		<nav className="navbar navbar-clay-site navbar-expand-lg navbar-light">
+		<nav className="navbar navbar-clay-site navbar-expand-lg navbar-fixed-clay-site navbar-light">
 			<div className="autofit-float-sm-down autofit-padded autofit-row">
 				<div className="autofit-col autofit-col-expand">
 					<Search placeholder="Search..." />
 				</div>
-				<div className="autofit-col">
+				<div className="autofit-col flex-wrap">
 					<ul className="ml-auto navbar-nav">
 						<li className="nav-item">
 							<Link
