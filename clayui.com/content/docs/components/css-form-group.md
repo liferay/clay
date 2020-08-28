@@ -7,8 +7,8 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Autofit](#autofit)
--   [Horizontal](#horizontal)
+-   [Autofit](#css-autofit)
+-   [Horizontal](#css-horizontal)
 
 </div>
 </div>
@@ -53,7 +53,7 @@ The `.form-group` class is the easiest way to add some structure to forms. It pr
 </form>
 ```
 
-## Autofit
+## Autofit(#css-autofit)
 
 Equally spaced form inputs based on the number of items inside `.form-group-autofit`. Each `input` and `label` group should be wrapped inside `.form-group-item`. `form-group-autofit` stacks all inputs at `max-width: 575px` (breakpoint sm).
 
@@ -390,7 +390,7 @@ To make a `.form-group-item` shrink to the size of its content add `.form-group-
 </form>
 ```
 
-## Horizontal
+## Horizontal(#css-horizontal)
 
 Create horizontal forms by placing each `input` inside `form-group-item` and `label` inside `form-group-item form-group-item-label form-group-item-shrink` and set a min-width on `.form-group-item-label`.
 

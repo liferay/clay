@@ -7,12 +7,12 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/tabs/'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Classic](#classic)
--   [Modern](#modern)
--   [Variations](#variations)
-    -   [Buttons](#buttons)
-    -   [Justified](#justified)
-    -   [Grid](#grid)
+-   [Classic](#css-classic)
+-   [Modern](#css-modern)
+-   [Variations](#css-variations)
+    -   [Buttons](#css-buttons)
+    -   [Justified](#css-justified)
+    -   [Grid](#css-grid)
 
 </div>
 </div>
@@ -21,7 +21,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/tabs/'
 	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#tabpanel">WAI-ARIA</a> accessibility pratices for Tabs when writting your markup.
 </div>
 
-## Classic
+## Classic(#css-classic)
 
 <div class="sheet-example">
     <ul class="nav nav-tabs" role="tablist">
@@ -236,7 +236,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/tabs/'
 </div>
 ```
 
-## Modern
+## Modern(#css-modern)
 
 Use `.nav-underline` instead of `.nav-tabs`.
 
@@ -459,9 +459,9 @@ Use `.nav-underline` instead of `.nav-tabs`.
 </div>
 ```
 
-## Variations
+## Variations(#css-variations)
 
-### Buttons
+### Buttons(#css-buttons)
 
 You can use buttons for tab items.
 
@@ -699,7 +699,7 @@ You can use buttons for tab items.
 </div>
 ```
 
-### Justified
+### Justified(#css-justified)
 
 You can justify the nav items according the tab content just adding `.nav-justified` class on the `.ul` element.
 
@@ -931,7 +931,7 @@ You can justify the nav items according the tab content just adding `.nav-justif
 </div>
 ```
 
-### Grid
+### Grid(#css-grid)
 
 Use bootstrap's grid inside list items in `nav-tabs`.
 

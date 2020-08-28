@@ -7,9 +7,8 @@ lexiconDefinition: 'https://liferay.design/lexicon/satellite-components/navigati
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Light](#light)
--   [Secondary](#secondary)
--   [Using Buttons](#using-buttons)
+-   [Dark](#css-dark)
+-   [Using Buttons](#css-using-buttons)
 
 </div>
 </div>
@@ -18,7 +17,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/satellite-components/navigati
     Bootstrap 4 doesn't support Dropdown Menu's with Popper.js positioning inside Navbars. They align them manually via CSS classes. See <a href="/docs/components/drop-down.html#alignment">Dropdown Alignment</a>.
 </div>
 
-## Default
+## Dark(#css-dark)
 
 <div class="sheet-example">
     <nav class="application-bar application-bar-dark navbar navbar-expand-md">
@@ -189,7 +188,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/satellite-components/navigati
 </nav>
 ```
 
-## Using Buttons
+## Using Buttons(#css-using-buttons)
 
 <div class="sheet-example">
     <nav class="application-bar application-bar-dark navbar navbar-expand-md">

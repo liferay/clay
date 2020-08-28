@@ -5,16 +5,16 @@ title: 'C Spacing Utilities'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [How to read the class](#how-to-read–the–class)
--   [How to understand the class](#how-to-understand–the–class)
--   [How to use the class](#how-to-use–the–class)
+-   [How to Read the Class](#css-read)
+-   [How to Understand the Class](#css-understand)
+-   [How to Use the Class](#css-use)
 
 </div>
 </div>
 
 Utility classes for the spacing in your pages. (without the `!important` attribute)
 
-## How to read the class
+## How to Read the Class(#css-read)
 
 Example: `c-mt-sm-3`.
 
@@ -24,7 +24,7 @@ SCSS: `@include media-breakpoint-up(sm) { margin-top: 1rem; }`.
 
 CSS: `@media(min-width: 576px) { margin-top: 1rem; }`. _(576px can change depending on the site's configuration)_
 
-## How to understand the class
+## How to Understand the Class(#css-understand)
 
 `c` is the **prefix** and it stands for **Clay**. All the new classes have this prefix to avoid conflicts with other frameworks.
 
@@ -70,7 +70,7 @@ These spaces can be negative if we use `n` before the value, that means:
 -   `n7` | **-6rem** | _-96px_
 -   `n8` | **-7.5rem** | _-120px_
 
-## How to use the class
+## How to Use the Class(#css-use)
 
 The best usage of these classes take place in a responsive scenario:
 

@@ -9,25 +9,25 @@ order: 3
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Headings](#headings)
--   [Lead](#lead)
--   [Inline Text Elements](#inline-text-elements)
--   [Reference Mark](#reference-mark)
--   [Text Truncate](#text-truncate)
-    -   [Text Truncate Inline](#text-truncate-inline)
--   [Contextual Texts](#contextual-texts)
-    -   [Contextual Backgrounds](#contextual-backgrounds)
--   [Address](#address)
--   [Inline Code](#inline-code)
--   [User Input](#user-input)
--   [Variables](#variables)
--   [Sample Output](#sample-output)
--   [Blockquote](#blockquote)
+-   [Headings](#css-headings)
+-   [Lead](#css-lead)
+-   [Inline Text Elements](#css-inline-text-elements)
+-   [Reference Mark](#css-reference-mark)
+-   [Text Truncate](#css-text-truncate)
+    -   [Text Truncate Inline](#css-text-truncate-inline)
+-   [Contextual Texts](#css-contextual-texts)
+    -   [Contextual Backgrounds](#css-contextual-backgrounds)
+-   [Address](#css-address)
+-   [Inline Code](#css-inline-code)
+-   [User Input](#css-user-input)
+-   [Variables](#css-variables)
+-   [Sample Output](#css-sample-output)
+-   [Blockquote](#css-blockquote)
 
 </div>
 </div>
 
-## Headings
+## Headings(#css-headings)
 
 <div class="sheet-example">
     <h1>h1 Article Heading <small>Sub text</small></h1>
@@ -47,7 +47,7 @@ order: 3
 <h6>h6 Article Heading <small>Sub text</small></h6>
 ```
 
-## Lead
+## Lead(#css-lead)
 
 <div class="sheet-example">
     <p class="lead"> Lead Body Text: Milk filter lungo as galão roast that crema blue mountain shop turkish. </p>
@@ -60,7 +60,7 @@ order: 3
 </p>
 ```
 
-## Inline Text Elements
+## Inline Text Elements(#css-inline-text-elements)
 
 <div class="sheet-example">
     <p><a href="#1">Anchor Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</a></p>
@@ -146,7 +146,7 @@ order: 3
 <p>capitalized text: <span class="text-capitalize">capitalized text</span></p>
 ```
 
-## Reference Mark
+## Reference Mark(#css-reference-mark)
 
 Use `<span class="reference-mark"></span>` to add a reference mark next to some text.
 
@@ -192,7 +192,7 @@ Use `<span class="reference-mark"></span>` to add a reference mark next to some 
 </div>
 ```
 
-## Text Truncate
+## Text Truncate(#css-text-truncate)
 
 Shorten long lines of text with the `text-truncate` class. This uses `display: block;` and should be used to truncate text in block level elements.
 
@@ -208,7 +208,7 @@ Shorten long lines of text with the `text-truncate` class. This uses `display: b
 </p>
 ```
 
-### Text Truncate Inline
+### Text Truncate Inline(#css-text-truncate-inline)
 
 You can also use the `text-truncate-inline` class to shorten long lines of text.
 
@@ -232,7 +232,7 @@ Milk filter lungo as galão roast that crema
 ></a>
 ```
 
-## Contextual Texts
+## Contextual Texts(#css-contextual-texts)
 
 <div class="sheet-example">
     <div>
@@ -289,7 +289,7 @@ Milk filter lungo as galão roast that crema
 >
 ```
 
-### Contextual Backgrounds
+### Contextual Backgrounds(#css-contextual-backgrounds)
 
 <div class="sheet-example">
     <div>
@@ -339,7 +339,7 @@ Milk filter lungo as galão roast that crema
 >
 ```
 
-## Address
+## Address(#css-address)
 
 <div class="sheet-example">
     <address>
@@ -368,7 +368,7 @@ Milk filter lungo as galão roast that crema
 </address>
 ```
 
-## Inline Code
+## Inline Code(#css-inline-code)
 
 <div class="sheet-example">
     <p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
@@ -378,7 +378,7 @@ Milk filter lungo as galão roast that crema
 <p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
 ```
 
-## User Input
+## User Input(#css-user-input)
 
 <div class="sheet-example">
     <p>For example, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd> to edit settings.</p>
@@ -391,7 +391,7 @@ Milk filter lungo as galão roast that crema
 </p>
 ```
 
-## Variables
+## Variables(#css-variables)
 
 <div class="sheet-example">
     <p>For example, <var>y</var> = <var>m</var><var>x</var> + <var>b</var></p>
@@ -401,7 +401,7 @@ Milk filter lungo as galão roast that crema
 <p>For example, <var>y</var> = <var>m</var><var>x</var> + <var>b</var></p>
 ```
 
-## Sample Output
+## Sample Output(#css-sample-output)
 
 <div class="sheet-example">
     <samp>This text is meant to be treated as sample output from a computer program.</samp>
@@ -414,7 +414,7 @@ Milk filter lungo as galão roast that crema
 >
 ```
 
-## Blockquote
+## Blockquote(#css-blockquote)
 
 <div class="sheet-example">
     <blockquote class="blockquote">

@@ -7,13 +7,13 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/text-in
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Example](#example)
--   [Textarea](#textarea)
+-   [Example](#css-example)
+-   [Textarea](#css-textarea)
 
 </div>
 </div>
 
-## Example
+## Example(#css-example)
 
 <div class="sheet-example">
 	<div class="form-group">
@@ -273,7 +273,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/text-in
 </div>
 ```
 
-## Textarea
+## Textarea(#css-textarea)
 
 <div class="sheet-example">
 	<div class="form-group">

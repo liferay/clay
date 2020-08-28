@@ -7,9 +7,9 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/picker-
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Example](#example)
--   [Variations](#variations)
--   [Sizes](#sizes)
+-   [Example](#css-example)
+-   [Variations](#css-variations)
+-   [Sizes](#css-sizes)
 
 </div>
 </div>
@@ -18,7 +18,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/picker-
 	This requires custom javascript.
 </div>
 
-## Example
+## Example(#css-example)
 
 <div class="sheet-example">
 	<label for="clayColor1DropdownToggle">Background Color</label>
@@ -253,7 +253,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/picker-
 </div>
 ```
 
-## Variations
+## Variations(#css-variations)
 
 <div class="sheet-example">
 	<div class="clay-site-dropdown-menu-container">
@@ -737,7 +737,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/picker-
 </div>
 ```
 
-## Sizes
+## Sizes(#css-sizes)
 
 <div class="sheet-example">
 	<div class="form-group form-group-sm">

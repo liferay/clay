@@ -7,18 +7,18 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/toolbars/mana
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Light](#light)
--   [Primary](#primary)
--   [Overlay](#overlay)
-    -   [Breakpoints](#breakpoints)
--   [Only Search](#only-search)
-    -   [Always Open](#always-open)
-    -   [Collapses in Mobile](#collapses-in-mobile)
+-   [Light](#css-light)
+-   [Primary](#css-primary)
+-   [Overlay](#css-overlay)
+    -   [Breakpoints](#css-breakpoints)
+-   [Only Search](#css-only-search)
+    -   [Always Open](#css-always-open)
+    -   [Collapses in Mobile](#css-collapses-in-mobile)
 -   [Search](#css-markup-search)
-    -   [Summary](#summary)
-    -   [Results](#results)
-    -   [Results with Filter](#results-with-filter)
--   [Using Buttons](#using-buttons)
+    -   [Summary](#css-summary)
+    -   [Results](#css-results)
+    -   [Results with Filter](#css-results-with-filter)
+-   [Using Buttons](#css-using-buttons)
 
 </div>
 </div>
@@ -31,7 +31,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/toolbars/mana
     Bootstrap 4 doesn't support Dropdown Menu's with Popper.js positioning inside Navbars. They align them manually via CSS classes. See <a href="/docs/components/drop-down.html#alignment">Dropdown Alignment</a>.
 </div>
 
-## Light
+## Light(#css-light)
 
 <div class="sheet-example">
     <nav class="management-bar management-bar-light navbar navbar-expand-md">
@@ -187,7 +187,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/toolbars/mana
 </nav>
 ```
 
-## Primary
+## Primary(#css-primary)
 
 <div class="sheet-example">
     <nav class="management-bar management-bar-primary navbar navbar-expand-md">
@@ -343,7 +343,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/toolbars/mana
 </nav>
 ```
 
-## Overlay
+## Overlay(#css-overlay)
 
 Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to create an overlay on top of the navbar with alternate content, useful for expanding search bars or an alternate navbar that depends on some state in your application. Toggle the `navbar-overlay`'s visibility by adding or removing the class `show` to `navbar-overlay`.
 
@@ -740,7 +740,7 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 </nav>
 ```
 
-### Breakpoints
+### Breakpoints(#css-breakpoints)
 
 `navbar-overlay-up` overlays the navbar at all screen widths.
 `navbar-overlay-lg-down`: 1199px and below
@@ -1135,9 +1135,9 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 </nav>
 ```
 
-## Only Search
+## Only Search(#css-only-search)
 
-### Always Open
+### Always Open(#css-always-open)
 
 <div class="sheet-example">
     <nav class="management-bar management-bar-light navbar navbar-expand-md">
@@ -1217,7 +1217,7 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 </nav>
 ```
 
-### Collapses in Mobile
+### Collapses in Mobile(#css-collapses-in-mobile)
 
 <div class="sheet-example">
     <nav class="management-bar management-bar-light navbar navbar-expand-md">
@@ -1327,7 +1327,7 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 
 ## Search(#css-markup-search)
 
-### Summary
+### Summary(#css-summary)
 
 <div class="sheet-example">
     <nav class="tbar subnav-tbar subnav-tbar-primary">
@@ -1363,7 +1363,7 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 </nav>
 ```
 
-### Results
+### Results(#css-results)
 
 <div class="sheet-example">
     <nav class="tbar subnav-tbar subnav-tbar-primary">
@@ -1414,7 +1414,7 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 </nav>
 ```
 
-### Results with Filter
+### Results with Filter(#css-results-with-filter)
 
 <div class="sheet-example">
     <nav class="tbar tbar-inline-md-down subnav-tbar subnav-tbar-primary">
@@ -1572,7 +1572,7 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 </nav>
 ```
 
-## Using Buttons
+## Using Buttons(#css-using-buttons)
 
 <div class="sheet-example">
     <nav class="management-bar management-bar-primary navbar navbar-expand-md">

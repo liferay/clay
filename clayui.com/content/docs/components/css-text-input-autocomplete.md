@@ -7,14 +7,14 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/text-in
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Example](#example)
--   [Search Field](#search-field)
--   [Loading](#loading)
+-   [Example](#css-example)
+-   [Search Field](#css-search-field)
+-   [Loading](#css-loading)
 
 </div>
 </div>
 
-## Example
+## Example(#css-example)
 
 Add the class `.autocomplete-dropdown-menu` to `dropdown-menu` to size the Dropdown Menu according to Lexicon Design specifications.
 
@@ -100,7 +100,7 @@ Add the class `.autocomplete-dropdown-menu` to `dropdown-menu` to size the Dropd
 </div>
 ```
 
-## Search Field
+## Search Field(#css-search-field)
 
 <div class="sheet-example" style="height:18rem;">
 	<div class="form-group">
@@ -204,7 +204,7 @@ Add the class `.autocomplete-dropdown-menu` to `dropdown-menu` to size the Dropd
 </div>
 ```
 
-## Loading
+## Loading(#css-loading)
 
 <div class="sheet-example" style="height:11rem;">
 	<div class="form-group">

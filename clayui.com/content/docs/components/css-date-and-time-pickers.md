@@ -7,10 +7,10 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/picker-
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Example](#example)
--   [Field](#field)
--   [Date Picker](#date-picker)
--   [Time Picker](#time-picker)
+-   [Example](#css-example)
+-   [Field](#css-field)
+-   [Date Picker](#css-date-picker)
+-   [Time Picker](#css-time-picker)
 
 </div>
 </div>
@@ -19,7 +19,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/picker-
 	This requires custom javascript.
 </div>
 
-## Example
+## Example(#css-example)
 
 The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`. `Footer`: You can add elements that complement the Date Picker like the Time Picker.
 
@@ -604,7 +604,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
 </div>
 ```
 
-## Field
+## Field(#css-field)
 
 <div class="sheet-example">
 	<div class="input-group">
@@ -650,7 +650,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
 </div>
 ```
 
-## Date Picker
+## Date Picker(#css-date-picker)
 
 <div class="sheet-example">
 	<div class="date-picker">
@@ -1180,7 +1180,7 @@ The DropDown content of the DatePicker consists of `Header`, `Body` and `Footer`
 </div>
 ```
 
-## Time Picker
+## Time Picker(#css-time-picker)
 
 <div class="sheet-example">
 	<div class="col-md-5">

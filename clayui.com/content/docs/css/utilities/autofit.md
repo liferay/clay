@@ -5,18 +5,18 @@ title: 'Autofit'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Row](#row)
--   [Spacing](#spacing)
--   [Row Vertical Alignment](#row-vertical-alignment)
--   [Float](#float)
--   [Float End](#float-end)
--   [Float with Autofit Col End](#float-with-autofit-col-end)
--   [Nesting Autofit Rows](#nesting-autofit-rows)
+-   [Row](#css-row)
+-   [Spacing](#css-spacing)
+-   [Row Vertical Alignment](#css-row-vertical-alignment)
+-   [Float](#css-float)
+-   [Float End](#css-float-end)
+-   [Float with Autofit Col End](#css-float-with-autofit-col-end)
+-   [Nesting Autofit Rows](#css-nesting-autofit-rows)
 
 </div>
 </div>
 
-## Row
+## Row(#css-row)
 
 Make content expand to fill remaining space or create equally spaced content with the `.autofit-row`, `.autofit-col`, and `.autofit-col-expand` classes.
 
@@ -252,7 +252,7 @@ Make content expand to fill remaining space or create equally spaced content wit
 </div>
 ```
 
-## Spacing
+## Spacing(#css-spacing)
 
 The `autofit-padded` class should be added to `autofit-row` to give padding to all `autofit-col`s that are direct children of `autofit-row`.
 
@@ -262,7 +262,7 @@ The `autofit-padded-no-gutters-y` class gives padding to all `autofit-col`s that
 
 The `autofit-padded-no-gutters` class gives padding to all `autofit-col`s that are direct children of `autofit-row`. It has negative margins on the top, right, bottom, and left to offset the padding (Generally used if nesting `.autofit-row`).
 
-# Row Vertical Alignment
+# Row Vertical Alignment(#css-row-vertical-alignment)
 
 Autofit Row vertically aligns to the top by default.
 
@@ -270,7 +270,7 @@ The `autofit-row-center` class vertically aligns items in `autofit-row` to the m
 
 The `autofit-row-end` class vertically aligns items in `autofit-row` to the bottom.
 
-## Float
+## Float(#css-float)
 
 The component `autofit-float` or `.autofit-float-{sm|md}-down` simulates the behavior of floated elements in `.autofit-row`. Items that break to a new line will be aligned to the left.
 
@@ -414,7 +414,7 @@ This pattern provides the benefit of aligning content via flexbox without losing
 </div>
 ```
 
-## Float End
+## Float End(#css-float-end)
 
 Mimic "right floated" elements.
 
@@ -568,7 +568,7 @@ Aligning items to the left will require nesting `autofit-float autofit-row` insi
 </div>
 ```
 
-## Float with Autofit Col End
+## Float with Autofit Col End(#css-float-with-autofit-col-end)
 
 Another way to mimic "right floated" elements without using `autofit-float-end` and `autofit-col-expand`. This pattern can duplicate floated layouts without the need for a clearfix.
 
@@ -694,7 +694,7 @@ Another way to mimic "right floated" elements without using `autofit-float-end` 
 </div>
 ```
 
-## Nesting Autofit Rows
+## Nesting Autofit Rows(#css-nesting-autofit-rows)
 
 <div class="sheet-example">
 	<div class="card">

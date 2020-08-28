@@ -7,11 +7,11 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/radio-c
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Default](#default)
+-   [Default](#css-default)
 -   [Inline](#css-inline)
--   [Disabled](#disabled)
--   [Without labels](#without-labels)
--   [Custom](#custom)
+-   [Disabled](#css-disabled)
+-   [Without Labels](#css-without-labels)
+-   [Custom](#css-custom)
 
 </div>
 </div>
@@ -23,11 +23,11 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/radio-c
 Default checkboxes and radios are improved upon with the help of `.form-check`, **a single class for both input types that improves the layout and behavior of their HTML elements**. Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.
 By [Bootstrap](https://getbootstrap.com/docs/4.1/components/forms/#checkboxes-and-radios)
 
-## Default
+## Default(#css-default)
 
 By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with `.form-check`.
 
-### Checkboxes
+### Checkboxes(#css-default-checkboxes)
 
 <div class="sheet-example">
 	<div class="form-check">
@@ -70,7 +70,7 @@ By default, any number of checkboxes and radios that are immediate sibling will 
 </div>
 ```
 
-### Radios
+### Radios(#css-default-radios)
 
 <div class="sheet-example">
 	<div class="form-check">
@@ -138,7 +138,7 @@ By default, any number of checkboxes and radios that are immediate sibling will 
 
 Group checkboxes or radios on the same horizontal row by adding `.form-check-inline` to any `.form-check`.
 
-### Checkbox
+### Checkbox(#css-inline-checkbox)
 
 <div class="sheet-example">
 	<div class="form-check form-check-inline">
@@ -181,7 +181,7 @@ Group checkboxes or radios on the same horizontal row by adding `.form-check-inl
 </div>
 ```
 
-### Radio
+### Radio(#css-inline-radio)
 
 <div class="sheet-example">
 	<div class="form-check form-check-inline">
@@ -226,7 +226,7 @@ Group checkboxes or radios on the same horizontal row by adding `.form-check-inl
 </div>
 ```
 
-## Disabled
+## Disabled(#css-disabled)
 
 Disable checkboxes or radios by adding a `disabled` prop.
 
@@ -283,7 +283,7 @@ Disable checkboxes or radios by adding a `disabled` prop.
 </div>
 ```
 
-## Without labels
+## Without Labels(#css-without-labels)
 
 Remember to still provide some form of label for assistive technologies (for instance, using `aria-label`).
 
@@ -323,7 +323,7 @@ Remember to still provide some form of label for assistive technologies (for ins
 </div>
 ```
 
-## Custom
+## Custom(#css-custom)
 
 The two ways for you to structure the marking of a Checkbox and Radio:
 
@@ -355,7 +355,7 @@ Using the `id` binding engine with `<label />`and `<input />`.
 </div>
 ```
 
-### Checkboxes
+### Checkboxes(#css-custom-checkboxes)
 
 <div class="sheet-example">
 	<div class="custom-control custom-checkbox">
@@ -394,7 +394,7 @@ Custom checkboxes can also utilize the `:indeterminate` pseudo class when manual
 	</div>
 </div>
 
-### Radios
+### Radios(#css-custom-radios)
 
 <div class="sheet-example">
 	<div class="custom-control custom-radio">

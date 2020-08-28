@@ -7,9 +7,9 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/navigation/ho
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Light](#light)
--   [Secondary](#secondary)
--   [Using Buttons](#using-buttons)
+-   [Light](#css-light)
+-   [Secondary](#css-secondary)
+-   [Using Buttons](#css-using-buttons)
 
 </div>
 </div>
@@ -26,7 +26,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/navigation/ho
 	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#aria_lh_navigation">WAI-ARIA</a> accessibility pratices for alerts when writting your markup.
 </div>
 
-## Light
+## Light(#css-light)
 
 <div class="sheet-example">
     <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light">
@@ -165,7 +165,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/navigation/ho
 </nav>
 ```
 
-## Secondary
+## Secondary(#css-secondary)
 
 <div class="sheet-example">
     <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary">
@@ -304,7 +304,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/navigation/ho
 </nav>
 ```
 
-## Using Buttons
+## Using Buttons(#css-using-buttons)
 
 <div class="sheet-example">
     <nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light">

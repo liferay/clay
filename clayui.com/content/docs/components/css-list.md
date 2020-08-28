@@ -7,21 +7,21 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/list/'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Example](#example)
--   [Variations](#variations)
-    -   [Bordered](#bordered)
-    -   [Default](#default)
-    -   [Notification](#notification)
--   [Group Elements](#group-elements)
-    -   [Header](#header)
-    -   [Items](#items)
-        -   [Colors](#colors)
-        -   [Active Colors](#active-colors)
-        -   [Items as Links and Buttons](#items-as-links-and-buttons)
-        -   [Actions on Hover](#actions-on-hover)
-            -   [Anchors](#anchors)
-            -   [Buttons](#buttons)
-        -   [Active](#active)
+-   [Example](#css-example)
+-   [Variations](#css-variations)
+    -   [Bordered](#css-bordered)
+    -   [Default](#css-default)
+    -   [Notification](#css-notification)
+-   [Group Elements](#css-group-elements)
+    -   [Header](#css-header)
+    -   [Items](#css-items)
+        -   [Colors](#css-colors)
+        -   [Active Colors](#css-active-colors)
+        -   [Items as Links and Buttons](#css-items-as-links-and-buttons)
+        -   [Actions on Hover](#css-actions-on-hover)
+            -   [Anchors](#css-anchors)
+            -   [Buttons](#css-buttons)
+        -   [Active](#css-active)
 
 </div>
 </div>
@@ -30,7 +30,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/list/'
 
 List sections help separate content by a specific category or type.
 
-## Example
+## Example(#css-example)
 
 Align content inside a `.list-group-item` element with a flexbox with `.list-group-item-flex`.
 
@@ -302,9 +302,9 @@ Add the class `show-dropdown-action-on-active` to display `dropdown-menu`s when 
 </ul>
 ```
 
-## Variations
+## Variations(#css-variations)
 
-### Bordered
+### Bordered(#css-bordered)
 
 Use `.list-group-bordered` on `.list-group` to style `.list-group-item-flex` like a table.
 
@@ -545,7 +545,7 @@ Use `.list-group-bordered` on `.list-group` to style `.list-group-item-flex` lik
 </ul>
 ```
 
-### Default
+### Default(#css-default)
 
 <div class="sheet-example">
     <ul class="list-group">
@@ -625,7 +625,7 @@ Use `.list-group-bordered` on `.list-group` to style `.list-group-item-flex` lik
 </ul>
 ```
 
-### Notification
+### Notification(#css-notification)
 
 <div class="sheet-example">
     <ul class="list-group list-group-notification">
@@ -776,9 +776,9 @@ Use `.list-group-bordered` on `.list-group` to style `.list-group-item-flex` lik
 </ul>
 ```
 
-## Group Elements
+## Group Elements(#css-group-elements)
 
-### Header
+### Header(#css-header)
 
 Use the `.list-group-header` and `.list-group-header-title` class.
 
@@ -895,9 +895,9 @@ Use the `.list-group-header` and `.list-group-header-title` class.
 </ul>
 ```
 
-### Items
+### Items(#css-items)
 
-#### Colors
+#### Colors(#css-colors)
 
 <div class="sheet-example">
     <ul class="list-group">
@@ -923,7 +923,7 @@ Use the `.list-group-header` and `.list-group-header-title` class.
 </ul>
 ```
 
-#### Active Colors
+#### Active Colors(#css-active-colors)
 
 <div class="sheet-example">
     <div class="list-group">
@@ -975,7 +975,7 @@ Use the `.list-group-header` and `.list-group-header-title` class.
 </div>
 ```
 
-#### Items as Links and Buttons
+#### Items as Links and Buttons(#css-items-as-links-and-buttons)
 
 <div class="sheet-example">
     <div class="list-group">
@@ -997,9 +997,9 @@ Use the `.list-group-header` and `.list-group-header-title` class.
 </div>
 ```
 
-#### Actions on Hover
+#### Actions on Hover(#css-actions-on-hover)
 
-##### Anchors
+##### Anchors(#css-anchors)
 
 <div class="sheet-example">
     <ul class="list-group show-quick-actions-on-hover">
@@ -1150,7 +1150,7 @@ Use the `.list-group-header` and `.list-group-header-title` class.
 </ul>
 ```
 
-##### Buttons
+##### Buttons(#css-buttons)
 
 <div class="sheet-example">
     <ul class="list-group show-quick-actions-on-hover">
@@ -1319,7 +1319,7 @@ Use the `.list-group-header` and `.list-group-header-title` class.
 </ul>
 ```
 
-#### Active
+#### Active(#css-active)
 
 Use the `.active` class on the same element that you putted `.list-group-item`.
 

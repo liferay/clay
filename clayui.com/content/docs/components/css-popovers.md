@@ -7,18 +7,18 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/popovers-tool
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Position](#position)
-    -   [Top](#top)
-    -   [Right](#right)
-    -   [Bottom](#bottom)
-    -   [Left](#left)
+-   [Position](#css-position)
+    -   [Top](#css-top)
+    -   [Right](#css-right)
+    -   [Bottom](#css-bottom)
+    -   [Left](#css-left)
 
 </div>
 </div>
 
-### Position
+### Position(#css-position)
 
-#### Top
+#### Top(#css-top)
 
 <div class="sheet-example">
     <div class="clay-site-popover-display">
@@ -88,7 +88,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/popovers-tool
 </div>
 ```
 
-#### Right
+#### Right(#css-right)
 
 <div class="sheet-example">
     <div class="clay-site-popover-display">
@@ -158,7 +158,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/popovers-tool
 </div>
 ```
 
-#### Bottom
+#### Bottom(#css-bottom)
 
 <div class="sheet-example">
     <div class="clay-site-popover-display">
@@ -228,7 +228,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/popovers-tool
 </div>
 ```
 
-#### Left
+#### Left(#css-left)
 
 <div class="sheet-example">
     <div class="clay-site-popover-display">

@@ -7,42 +7,42 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/modals/'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Sizes](#sizes)
-    -   [Small](#small)
-    -   [Default](#default)
-    -   [Large](#large)
-    -   [Full Screen](#full-screen)
-        -   [All Screen Sizes](#all-screen-sizes)
-        -   [Sm Down](#sm-down)
-    -   [Height](#height)
-        -   [Small](#height-small)
-        -   [Medium](#height-medium)
-        -   [Large](#height-large)
-        -   [Extra Large](#height-extra-large)
-        -   [Full Screen](#height-full-screen)
--   [Configurations](#configurations)
-    -   [Header, Body and Footer](#header,-body-and-footer)
-    -   [Header and Body](#header-and-body)
-    -   [Body and Footer](#body-and-footer)
--   [Grid](#grid)
--   [Iframe](#iframe)
--   [Status Messages](#status-messages)
-    -   [Success](#success)
-    -   [Info](#info)
-    -   [Warning](#warning)
-    -   [Danger](#danger)
--   [Helpers](#helpers)
-    -   [Footer Alignment](#footer-alignment)
-    -   [Vertically Centered](#vertically-centered)
-    -   [Remove Animation](#remove-animation)
-    -   [Inline Scroller](#inline-scroller)
+-   [Sizes](#css-sizes)
+    -   [Small](#css-small)
+    -   [Default](#css-default)
+    -   [Large](#css-large)
+    -   [Full Screen](#css-full-screen)
+        -   [All Screen Sizes](#css-all-screen-sizes)
+        -   [Sm Down](#css-sm-down)
+    -   [Height](#css-height)
+        -   [Small](#css-height-small)
+        -   [Medium](#css-height-medium)
+        -   [Large](#css-height-large)
+        -   [Extra Large](#css-height-extra-large)
+        -   [Full Screen](#css-height-full-screen)
+-   [Configurations](#css-configurations)
+    -   [Header, Body and Footer](#css-header,-body-and-footer)
+    -   [Header and Body](#css-header-and-body)
+    -   [Body and Footer](#css-body-and-footer)
+-   [Grid](#css-grid)
+-   [Iframe](#css-iframe)
+-   [Status Messages](#css-status-messages)
+    -   [Success](#css-success)
+    -   [Info](#css-info)
+    -   [Warning](#css-warning)
+    -   [Danger](#css-danger)
+-   [Helpers](#css-helpers)
+    -   [Footer Alignment](#css-footer-alignment)
+    -   [Vertically Centered](#css-vertically-centered)
+    -   [Remove Animation](#css-remove-animation)
+    -   [Inline Scroller](#css-inline-scroller)
 
 </div>
 </div>
 
-## Sizes
+## Sizes(#css-sizes)
 
-### Small
+### Small(#css-small)
 
 300px wide modal window, expands full width of screen at 575px and below.
 
@@ -147,7 +147,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/modals/'
 </div>
 ```
 
-### Default
+### Default(#css-default)
 
 500px wide modal window, expands full width of screen at 575px and below.
 
@@ -243,7 +243,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/modals/'
 </div>
 ```
 
-### Large
+### Large(#css-large)
 
 The large modal is an 800px wide window on displays greater than 992px. It is a 500px wide modal on displays between 576px and 991px. It expands full screen width on displays 575px and below.
 
@@ -339,9 +339,9 @@ The large modal is an 800px wide window on displays greater than 992px. It is a 
 </div>
 ```
 
-### Full Screen
+### Full Screen(#css-full-screen)
 
-#### All Screen Sizes
+#### All Screen Sizes(#css-all-screen-sizes)
 
 The full screen modal stretches to fit the browser window, with 45px spacing on every side, and expands to fill the screen on displays 767px and below.
 
@@ -495,7 +495,7 @@ The full screen modal stretches to fit the browser window, with 45px spacing on 
 </div>
 ```
 
-#### Sm Down
+#### Sm Down(#css-sm-down)
 
 Add `modal-full-screen-sm-down` to any `modal-dialog` to stretch to fit the browser window at screen widths 767px and below.
 
@@ -621,9 +621,9 @@ Add `modal-full-screen-sm-down` to any `modal-dialog` to stretch to fit the brow
 </div>
 ```
 
-### Height
+### Height(#css-height)
 
-#### Small(#height-small)
+#### Small(#css-height-small)
 
 Add the class `modal-height-sm` to the `modal` or `modal-dialog` element to fix the height of the modal to 250px.
 
@@ -739,7 +739,7 @@ Add the class `modal-height-sm` to the `modal` or `modal-dialog` element to fix 
 </div>
 ```
 
-#### Medium(#height-medium)
+#### Medium(#css-height-medium)
 
 Add the class `modal-height-md` to the `modal` or `modal-dialog` element to fix the height of the modal to 450px.
 
@@ -855,7 +855,7 @@ Add the class `modal-height-md` to the `modal` or `modal-dialog` element to fix 
 </div>
 ```
 
-#### Large(#height-large)
+#### Large(#css-height-large)
 
 Add the class `modal-height-lg` to the `modal` or `modal-dialog` element to fix the height of the modal to 650px.
 
@@ -971,7 +971,7 @@ Add the class `modal-height-lg` to the `modal` or `modal-dialog` element to fix 
 </div>
 ```
 
-#### Extra Large(#height-extra-large)
+#### Extra Large(#css-height-extra-large)
 
 Add the class `modal-height-xl` to the `modal` or `modal-dialog` element to fix the height of the modal to 800px.
 
@@ -1087,7 +1087,7 @@ Add the class `modal-height-xl` to the `modal` or `modal-dialog` element to fix 
 </div>
 ```
 
-#### Full Screen(#height-full-screen)
+#### Full Screen(#css-height-full-screen)
 
 Add the class `modal-height-full` to the `modal` or `modal-dialog` element to expand the modal to fit to the height of the browser's window.
 
@@ -1203,11 +1203,11 @@ Add the class `modal-height-full` to the `modal` or `modal-dialog` element to ex
 </div>
 ```
 
-## Configurations
+## Configurations(#css-configurations)
 
 Lexicon allows your modal window to have different configurations to suite your needs. Because these needs can vary greatly, there are certain rules your modal must follow.
 
-### Header, Body and Footer
+### Header, Body and Footer(#css-header,-body-and-footer)
 
 A classic modal window is composed of three main parts: header, body, and footer.
 
@@ -1303,7 +1303,7 @@ A classic modal window is composed of three main parts: header, body, and footer
 </div>
 ```
 
-### Header and Body
+### Header and Body(#css-header-and-body)
 
 When you don't need a footer bar to place your icons, you can just have a header and body element in your modal, as shown below:
 
@@ -1374,7 +1374,7 @@ When you don't need a footer bar to place your icons, you can just have a header
 </div>
 ```
 
-### Body and Footer
+### Body and Footer(#css-body-and-footer)
 
 When you just need to show text and buttons to agree or cancel, you can just have a body and footer element in your modal, as shown below:
 
@@ -1442,7 +1442,7 @@ When you just need to show text and buttons to agree or cancel, you can just hav
 </div>
 ```
 
-## Grid
+## Grid(#css-grid)
 
 Utilize the Bootstrap grid system within a modal by nesting `.container-fluid` within the `.modal-body`. Then, use the normal grid system classes as you would anywhere else.
 
@@ -1580,7 +1580,7 @@ Utilize the Bootstrap grid system within a modal by nesting `.container-fluid` w
 </div>
 ```
 
-## Iframe
+## Iframe(#css-iframe)
 
 You can add an Iframe to the modal body.
 
@@ -1691,13 +1691,13 @@ In mobile safari (iOS 8.3), any content inside an iframe that triggers a browser
 </div>
 ```
 
-## Status Messages
+## Status Messages(#css-status-messages)
 
 Modal headers can be configured to use modals as status messages. This emphasizes blocking actions that the user must read and pay careful attention to.
 
 Add one of the following helper classes to the `modal-dialog` element to style is with corresponding state: `modal-danger`, `modal-info`, `modal-success`, or `modal-warning`.
 
-### Success
+### Success(#css-success)
 
 <div class="sheet-example">
     <button class="btn btn-success" data-target="#clayModalSuccess" data-toggle="modal" type="button">Modal Success</button>
@@ -1816,7 +1816,7 @@ Add one of the following helper classes to the `modal-dialog` element to style i
 </div>
 ```
 
-### Info
+### Info(#css-info)
 
 <div class="sheet-example">
     <button class="btn btn-primary" data-target="#clayModalInfo" data-toggle="modal" type="button">Modal Info</button>
@@ -1927,7 +1927,7 @@ Add one of the following helper classes to the `modal-dialog` element to style i
 </div>
 ```
 
-### Warning
+### Warning(#css-warning)
 
 <div class="sheet-example">
     <button class="btn btn-warning" data-target="#clayModalWarning" data-toggle="modal" type="button">Modal Warning</button>
@@ -2038,7 +2038,7 @@ Add one of the following helper classes to the `modal-dialog` element to style i
 </div>
 ```
 
-### Danger
+### Danger(#css-danger)
 
 <div class="sheet-example">
     <button class="btn btn-danger" data-target="#clayModalDanger" data-toggle="modal" type="button">Modal Danger</button>
@@ -2161,13 +2161,13 @@ Add one of the following helper classes to the `modal-dialog` element to style i
 </div>
 ```
 
-## Helpers
+## Helpers(#css-helpers)
 
-### Footer alignment
+### Footer Alignment(#css-footer-alignment)
 
 Use classes `modal-item-first`, `modal-item`, and `modal-item-last` inside `modal-footer` to align content left, middle, and right.
 
-### Vertically centered
+### Vertically Centered(#css-vertically-centered)
 
 Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
 
@@ -2251,11 +2251,11 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
 </div>
 ```
 
-### Remove animation
+### Remove Animation(#css-remove-animation)
 
 For modals that simply appear rather than fade in to view, remove the `.fade` class from your modal markup.
 
-### Inline Scroller
+### Inline Scroller(#css-inline-scroller)
 
 `inline-scroller` is a helper class that sizes `modal-body` to a fixed height and scrolls any overflowing content. Add it to `modal-body` when you want `modal-body` to be a fixed height. It defaults to height 125px.
 

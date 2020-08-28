@@ -7,37 +7,37 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/dropdowns/'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Variations](#variations)
-    -   [Default](#default)
-    -   [Wide](#wide)
-    -   [Full](#full)
--   [Content Types](#content-types)
-    -   [Dividers](#dividers)
-    -   [Form Elements](#form-elements)
-        -   [Checkbox or Radio](#checkbox-or-radio)
-        -   [Search](#search)
-        -   [Form Groups](#form-groups)
-    -   [Indicators](#indicators)
-        -   [Start](#start)
-        -   [End](#end)
-        -   [Start and End](#start-and-end)
-    -   [Keyboard Shortcuts](#keyboard-shortcuts)
-    -   [Scrolling Content](#scrolling-content)
--   [Actions](#actions)
-    -   [Buttons](#buttons)
-    -   [Anchors](#anchors)
--   [Alignment](#alignment)
-    -   [Corners](#corners)
-    -   [Sides](#sides)
-    -   [Middle](#middle)
-    -   [Center](#center)
+-   [Variations](#css-variations)
+    -   [Default](#css-default)
+    -   [Wide](#css-wide)
+    -   [Full](#css-full)
+-   [Content Types](#css-content-types)
+    -   [Dividers](#css-dividers)
+    -   [Form Elements](#css-form-elements)
+        -   [Checkbox or Radio](#css-checkbox-or-radio)
+        -   [Search](#css-search)
+        -   [Form Groups](#css-form-groups)
+    -   [Indicators](#css-indicators)
+        -   [Start](#css-start)
+        -   [End](#css-end)
+        -   [Start and End](#css-start-and-end)
+    -   [Keyboard Shortcuts](#css-keyboard-shortcuts)
+    -   [Scrolling Content](#css-scrolling-content)
+-   [Actions](#css-actions)
+    -   [Buttons](#css-buttons)
+    -   [Anchors](#css-anchors)
+-   [Alignment](#css-alignment)
+    -   [Corners](#css-corners)
+    -   [Sides](#css-sides)
+    -   [Middle](#css-middle)
+    -   [Center](#css-center)
 
 </div>
 </div>
 
-## Variations
+## Variations(#css-variations)
 
-### Default
+### Default(#css-default)
 
 The default dropdown is a panel that does not support scrolling of the content inside it. Use this type when the number of options you want to offer is short or the panel is big enough to contain all the elements you want to use.
 
@@ -67,7 +67,7 @@ The default dropdown is a panel that does not support scrolling of the content i
 </div>
 ```
 
-### Wide
+### Wide(#css-wide)
 
 Use `.dropdown-wide` with `.dropdown` to make the dropdown menu big. The default width is 500px.
 
@@ -234,7 +234,7 @@ Use `.dropdown-wide` with `.dropdown` to make the dropdown menu big. The default
 </div>
 ```
 
-### Full
+### Full(#css-full)
 
 Use `.dropdown-full` to create a dropdown menu as wide as its relative parent.
 
@@ -403,9 +403,9 @@ Use `.dropdown-full` to create a dropdown menu as wide as its relative parent.
 </div>
 ```
 
-## Content Types
+## Content Types(#css-content-types)
 
-### Dividers
+### Dividers(#css-dividers)
 
 <div class="sheet-example">
     <div class="clay-site-dropdown-menu-container">
@@ -437,9 +437,9 @@ Use `.dropdown-full` to create a dropdown menu as wide as its relative parent.
 </ul>
 ```
 
-### Form Elements
+### Form Elements(#css-form-elements)
 
-#### Checkbox or Radio
+#### Checkbox or Radio(#css-checkbox-or-radio)
 
 <div class="sheet-example">
     <div class="row">
@@ -646,7 +646,7 @@ Use `.dropdown-full` to create a dropdown menu as wide as its relative parent.
 </ul>
 ```
 
-#### Search
+#### Search(#css-search)
 
 <div class="sheet-example">
     <div class="clay-site-dropdown-menu-container">
@@ -730,7 +730,7 @@ Use `.dropdown-full` to create a dropdown menu as wide as its relative parent.
 </ul>
 ```
 
-#### Form Groups
+#### Form Groups(#css-form-groups)
 
 <div class="sheet-example">
     <div class="clay-site-dropdown-menu-container">
@@ -827,9 +827,9 @@ Use `.dropdown-full` to create a dropdown menu as wide as its relative parent.
 </ul>
 ```
 
-### Indicators
+### Indicators(#css-indicators)
 
-#### Start
+#### Start(#css-start)
 
 <div class="sheet-example">
     <div class="clay-site-dropdown-menu-container">
@@ -930,7 +930,7 @@ Use `.dropdown-full` to create a dropdown menu as wide as its relative parent.
 </ul>
 ```
 
-#### End
+#### End(#css-end)
 
 <div class="sheet-example">
     <div class="clay-site-dropdown-menu-container">
@@ -1031,7 +1031,7 @@ Use `.dropdown-full` to create a dropdown menu as wide as its relative parent.
 </ul>
 ```
 
-#### Start and End
+#### Start and End(#css-start-and-end)
 
 <div class="sheet-example">
     <div class="clay-site-dropdown-menu-container">
@@ -1146,7 +1146,7 @@ Use `.dropdown-full` to create a dropdown menu as wide as its relative parent.
 </ul>
 ```
 
-### Keyboard Shortcuts
+### Keyboard Shortcuts(#css-keyboard-shortcuts)
 
 <div class="sheet-example">
 	<div class="clay-site-dropdown-menu-container">
@@ -1331,7 +1331,7 @@ Use `.dropdown-full` to create a dropdown menu as wide as its relative parent.
 </ul>
 ```
 
-### Scrolling Content
+### Scrolling Content(#css-scrolling-content)
 
 Nest `<div class="inline-scroller"></div>` inside a `.dropdown-menu` list item to create a scrollable dropdown. The maximum height is 200px on screen sizes 768px and above, on screen sizes 767px and below the overflow is handled by `.dropdown-menu`.
 
@@ -1397,11 +1397,11 @@ Nest `<div class="inline-scroller"></div>` inside a `.dropdown-menu` list item t
 </ul>
 ```
 
-## Actions
+## Actions(#css-actions)
 
 A monospaced `dropdown-toggle` for a dropdown containing several actions, add `dropdown-action` to `dropdown`.
 
-### Anchors
+### Anchors(#css-anchors)
 
 <div class="sheet-example">
     <div class="clay-site-dropdown-menu-container">
@@ -1452,7 +1452,7 @@ A monospaced `dropdown-toggle` for a dropdown containing several actions, add `d
 </div>
 ```
 
-### Buttons
+### Buttons(#css-buttons)
 
 <div class="sheet-example">
     <div class="clay-site-dropdown-menu-container">
@@ -1502,9 +1502,9 @@ A monospaced `dropdown-toggle` for a dropdown containing several actions, add `d
 </div>
 ```
 
-## Alignment
+## Alignment(#css-alignment)
 
-### Corners
+### Corners(#css-corners)
 
 Align a dropdown menu on the top or bottom side with classes `dropdown-menu`, `dropdown-menu-right`, `dropdown-menu-top`, or `dropdown-menu-top-right`.
 
@@ -1676,7 +1676,7 @@ Align a dropdown menu on the top or bottom side with classes `dropdown-menu`, `d
 </div>
 ```
 
-### Sides
+### Sides(#css-sides)
 
 Add the `dropdown-menu-right-side`, `dropdown-menu-left-side`, `dropdown-menu-right-side-bottom`, or `dropdown-menu-left-side-bottom` class to a dropdown menu to align it with the right side, left side, bottom-right side, or bottom-left side of the dropdown menu trigger, respectively:
 
@@ -1878,7 +1878,7 @@ Add the `dropdown-menu-right-side`, `dropdown-menu-left-side`, `dropdown-menu-ri
 </div>
 ```
 
-### Middle
+### Middle(#css-middle)
 
 You can also center the dropdown menu to its trigger with these four helper classes: `dropdown-menu-center`, `dropdown-menu-top-center`, `dropdown-menu-left-side-middle`, or `dropdown-menu-right-side-middle`.
 
@@ -1976,7 +1976,7 @@ You can also center the dropdown menu to its trigger with these four helper clas
 </div>
 ```
 
-### Center
+### Center(#css-center)
 
 To center the dropdown menu in browsers that don't support CSS transforms, set a negative `margin-left` equal to the width of the `dropdown-menu` divided by two. To vertically align left-side and right-side dropdown-menus, set a negative `margin-top` equal to the height of the dropdown-menu divided by two.
 

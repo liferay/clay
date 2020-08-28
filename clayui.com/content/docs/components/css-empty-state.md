@@ -8,10 +8,10 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/empty-states/
 <div class="nav-toc">
 
 -   [Without Animation](#css-without-animation)
--   [Empty State](#empty-state)
--   [Search State](#search-state)
--   [Success State](#success-state)
--   [With imageProps](#with-imageprops)
+-   [Empty State](#css-empty-state)
+-   [Search State](#css-search-state)
+-   [Success State](#css-success-state)
+-   [With imageProps](#css-with-imageprops)
 
 </div>
 </div>
@@ -46,7 +46,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/empty-states/
 </div>
 ```
 
-## Empty State
+## Empty State(#css-empty-state)
 
 <div class="sheet-example">
 	<div class="c-empty-state c-empty-state-animation">
@@ -94,7 +94,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/empty-states/
 </div>
 ```
 
-## Search State
+## Search State(#css-search-state)
 
 <div class="sheet-example">
 	<div class="c-empty-state c-empty-state-animation">
@@ -140,7 +140,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/empty-states/
 </div>
 ```
 
-## Success State
+## Success State(#css-success-state)
 
 <div class="sheet-example">
 	<div class="c-empty-state c-empty-state-animation">
@@ -186,7 +186,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/empty-states/
 </div>
 ```
 
-## With imageProps
+## With imageProps(#css-with-imageprops)
 
 <div class="sheet-example">
 	<div class="c-empty-state c-empty-state-animation">

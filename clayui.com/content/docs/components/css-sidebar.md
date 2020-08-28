@@ -7,14 +7,14 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/sidebar/'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Structure](#structure)
--   [Variations](#variation)
-    -   [Light](#light)
+-   [Structure](#css-structure)
+-   [Variations](#css-variation)
+    -   [Light](#css-light)
 
 </div>
 </div>
 
-## Structure
+## Structure(#css-structure)
 
 Sidebar is an opinionated container to display related content.
 
@@ -38,9 +38,9 @@ Is composed by:
 </div>
 ```
 
-## Variations
+## Variations(#css-variations)
 
-### Sidebar Light
+### Sidebar Light(#css-sidebar-light)
 
 Just add `sidebar-light` class on the same element that you are using `sidebar`.
 

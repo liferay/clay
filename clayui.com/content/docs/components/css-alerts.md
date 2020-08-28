@@ -7,19 +7,19 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/alerts/'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Colors](#colors)
-    -   [Non-standard colors](#non-standard-colors)
--   [Examples](#examples)
-    -   [Toast](#toast)
-    -   [Embedded](#embedded)
-    -   [Stripe](#stripe)
--   [Non-standard examples](#non-standard-examples)
-    -   [Alert Lists](#alert-lists)
--   [Additional Options](#additional-options)
-    -   [Mixed HTML Content](#mixed-html-content)
-    -   [Dismissible Alerts](#dismissible-alerts)
-    -   [Alert Notifications Absolute](#alert-notifications-absolute)
-    -   [Fixed Notifications](#fixed-notifications)
+-   [Colors](#css-colors)
+    -   [Non-standard Colors](#css-non-standard-colors)
+-   [Examples](#css-examples)
+    -   [Toast](#css-toast)
+    -   [Embedded](#css-embedded)
+    -   [Stripe](#css-stripe)
+-   [Non-standard Examples](#css-non-standard-examples)
+    -   [Alert Lists](#css-alert-lists)
+-   [Additional Options](#css-additional-options)
+    -   [Mixed HTML Content](#css-mixed-html-content)
+    -   [Dismissible Alerts](#css-dismissible-alerts)
+    -   [Alert Notifications Absolute](#css-alert-notifications-absolute)
+    -   [Fixed Notifications](#css-fixed-notifications)
 
 </div>
 </div>
@@ -28,7 +28,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/alerts/'
 	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#alert">WAI-ARIA</a> accessibility pratices for alerts when writting your markup.
 </div>
 
-## Colors
+## Colors(#css-colors)
 
 Lexicon adopts in its design system the following colors below:
 
@@ -55,7 +55,7 @@ Lexicon adopts in its design system the following colors below:
 	</div>
 </div>
 
-### Non-standard colors
+### Non-standard Colors(#css-non-standard-colors)
 
 The colors below do not follow Lexicon standards but follow the idea of [​​satellite components](https://liferay.design/lexicon), Clay provides non-standard colors to give you more flexibility to build UI that belong to the product.
 
@@ -82,9 +82,9 @@ The colors below do not follow Lexicon standards but follow the idea of [​​s
 	</div>
 </div>
 
-## Examples
+## Examples(#css-examples)
 
-### Toast
+### Toast(#css-toast)
 
 This type of alert is specific for toast messages. These type of messages appear on the top right corner of the screen. The maximum width of a toast message is 360px, and the height can vary depending on the number of rows. It always has a close action.
 
@@ -215,7 +215,7 @@ This type of alert is specific for toast messages. These type of messages appear
 </div>
 ```
 
-### Embedded
+### Embedded(#css-embedded)
 
 Embedded alerts are meant for use in forms. Usually you will only need to use the information once. Its width depends on the width of the container it is placed in, always respecting the container margins to the content. The close action is not required for embedded alerts.
 
@@ -284,7 +284,7 @@ Embedded alerts are meant for use in forms. Usually you will only need to use th
 </div>
 ```
 
-### Stripe
+### Stripe(#css-stripe)
 
 Stripe alerts are always placed below the last navigation element, either the header or the navigation bar. This alert usually appears on "Save" action, communicating the status of the action once received from the server. The close action is mandatory in this alert type. Its width is always full container width and pushes all the content below it.
 
@@ -421,11 +421,11 @@ Stripe alerts are always placed below the last navigation element, either the he
 </div>
 ```
 
-## Non-standard examples
+## Non-standard Examples(#css-non-standard-examples)
 
 These examples are not included in the Lexicon design system but they are built using foundations and Lexicon core components, these components may belong to the product or application.
 
-### Alert Lists
+### Alert Lists(#css-alert-lists)
 
 <div class="sheet-example">
 	<ul class="alert-list">
@@ -694,9 +694,9 @@ These examples are not included in the Lexicon design system but they are built 
 </ul>
 ```
 
-## Additional Options
+## Additional Options(#css-additional-options)
 
-### Mixed HTML Content
+### Mixed HTML Content(#css-mixed-html-content)
 
 All alerts accept HTML as their content. You can use the following modifiers:
 
@@ -724,7 +724,7 @@ All alerts accept HTML as their content. You can use the following modifiers:
 </div>
 ```
 
-### Dismissible Alerts
+### Dismissible Alerts(#css-dismissible-alerts)
 
 <div class="sheet-example">
 	<div class="alert alert-dismissible alert-success" role="alert">
@@ -754,7 +754,7 @@ All alerts accept HTML as their content. You can use the following modifiers:
 </div>
 ```
 
-### Alert Notifications Absolute
+### Alert Notifications Absolute(#css-alert-notifications-absolute)
 
 An absolute positioned container for placing alerts on the top right corner relative to `.alert-container`. Use this to create sticky positioned alerts with javascript, modifying the CSS property `transform: translateY();` or `margin-top` when `scrollY` reaches a specific threshold. This component should generally be placed at the top of the page for sticky alerts aligned at the top.
 
@@ -766,7 +766,7 @@ An absolute positioned container for placing alerts on the top right corner rela
 </div>
 ```
 
-### Fixed Notifications
+### Fixed Notifications(#css-fixed-notifications)
 
 A fixed positioned container for placing alerts on the top right corner of the page. This component can generally be placed anywhere on the page.
 

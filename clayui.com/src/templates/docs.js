@@ -173,8 +173,16 @@ export default (props) => {
 	const containsReact = !!(body || tab.body);
 
 	const [activeIndex, setActiveIndex] = React.useState(
-		location.hash === '#css' || !containsReact ? CSS_INDEX : REACT_INDEX
+		location.hash.match(/#css/g) || !containsReact ? CSS_INDEX : REACT_INDEX
 	);
+
+	useEffect(() => {
+		const hash = window.location.hash;
+
+		if (hash !== '') {
+			window.location.href = hash;
+		}
+	}, []);
 
 	useEffect(() => {
 		document

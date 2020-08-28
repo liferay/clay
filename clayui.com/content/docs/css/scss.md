@@ -7,14 +7,14 @@ description: 'Clay CSS Framework provides some utilities for you to work with SC
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Variables](#variables)
--   [Mixins](#mixins)
--   [Functions](#functions)
+-   [Variables](#css-variables)
+-   [Mixins](#css-mixins)
+-   [Functions](#css-functions)
 
 </div>
 </div>
 
-## Variables
+## Variables(#css-variables)
 
 Think of variables as a way to store information that you want to reuse throughout your stylesheet. You can store things like colors, font stacks, or any CSS value you think you'll want to reuse. Sass uses the \$ symbol to make something a variable. [SASS](https://sass-lang.com/guide)
 
@@ -31,7 +31,7 @@ $alert-dismissible-padding-top: null !default;
 
 > [All **variables** available](https://github.com/liferay/clay/tree/master/packages/clay-css/src/scss/variables)
 
-## Mixins
+## Mixins(#css-mixins)
 
 Some things in CSS are a bit tedious to write, especially with CSS3 and the many vendor prefixes that exist. A mixin lets you make groups of CSS declarations that you want to reuse throughout your site. You can even pass in values to make your mixin more flexible. A good use of a mixin is for vendor prefixes. Here's an example for transform. [SASS](https://sass-lang.com/guide)
 
@@ -51,7 +51,7 @@ You can find all mixins available by component if you want to create a component
 
 > [All **mixins** available](https://github.com/liferay/clay/tree/master/packages/clay-css/src/scss/mixins)
 
-## Functions
+## Functions(#css-functions)
 
 Clay CSS provides some **SCSS** functions that help you be more productive. To learn more about **functions** see [sass-lang.com](https://sass-lang.com/documentation/file.SASS_REFERENCE.html#function_directives).
 

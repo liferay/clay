@@ -6,30 +6,31 @@ order: 4
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Base](#base)
-    -   [Nested Kbd](#nested-c-kbd)
-    -   [Monospaced](#c-kbd-monospaced)
-    -   [Inline](#c-kbd-inline)
-    -   [Group](#c-kbd-group)
--   [Color Variants](#color-variants)
-    -   [Light](#c-kbd-light)
-    -   [Dark](#c-kbd-dark)
-    -   [Group Light](#c-kbd-group-light)
-    -   [Group Dark](#c-kbd-group-dark)
--   [Size Variants](#size-variants)
-    -   [Small](#c-kbd-sm)
-    -   [Large](#c-kbd-lg)
--   [Unicode Character List](#unicode-character-list)
-    -   [Standard](<#standard-0-255-(utf-8)-character-set>)
-    -   [General Punctuation](<#general-punctuation-(u+2000-to-u+206f)>)
-    -   [Superscripts and Subscripts](<#superscripts-and-subscripts-(u+2070-to-u+209f)>)
-    -   [Currency Symbols](<#currency-symbols-(u+20a0-to-u+20cf)>)
-    -   [Letterlike Symbols](<#letterlike-symbols-(u+2100-to-u+214f)>)
-    -   [Greek Characters](<#greek-characters-(u+0391-to-u+03c9)>)
-    -   [Number Forms](<#number-forms-(u+2150-to-u+218f)>)
-    -   [Supplemental Arrows - A](<#supplemental-arrows---a-(u+27f0-to-u+27ff)>)
-    -   [Supplemental Arrows - B](<#supplemental-arrows---b-(u+2900-to-u+297f)>)
-    -   [Mathematical Operators](<#mathematical-operators-(u+2200-to-u+22ff)>)
+-   [Base](#css-base)
+    -   [Nested Kbd](#css-nested-c-kbd)
+    -   [Monospaced](#css-c-kbd-monospaced)
+    -   [Inline](#css-c-kbd-inline)
+    -   [Group](#css-c-kbd-group)
+-   [Color Variants](#css-color-variants)
+    -   [Light](#css-c-kbd-light)
+    -   [Dark](#css-c-kbd-dark)
+    -   [Group Light](#css-c-kbd-group-light)
+    -   [Group Dark](#css-c-kbd-group-dark)
+-   [Size Variants](#css-size-variants)
+    -   [Small](#css-c-kbd-sm)
+    -   [Large](#css-c-kbd-lg)
+-   [Unicode Character List](#css-unicode-character-list)
+    -   [Standard](#css-standard)
+    -   [General Punctuation](#css-general-punctuation)
+    -   [Superscripts and Subscripts](#css-superscripts-and-subscripts)
+    -   [Currency Symbols](#css-currency-symbols)
+    -   [Letterlike Symbols](#css-letterlike-symbols)
+    -   [Greek Characters](#css-greek-characters)
+    -   [Number Forms](#css-number-forms)
+    -   [Arrows](#css-arrows)
+    -   [Supplemental Arrows - A](#css-supplemental-arrows-a)
+    -   [Supplemental Arrows - B](#css-supplemental-arrows-b)
+    -   [Mathematical Operators](#css-mathematical-operators)
 
 </div>
 </div>
@@ -40,7 +41,7 @@ A visual pattern used to allow users to learn how to access actions via keyboard
 	Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/keys/">Keys Pattern</a> for a more in-depth look at the motivations and proper usage of this component.
 </div>
 
-## Base
+## Base(#css-base)
 
 The `c-kbd` component provides base size and spacing styles for the `kbd` HTML element.
 
@@ -82,7 +83,7 @@ The `c-kbd` component provides base size and spacing styles for the `kbd` HTML e
 </kbd>
 ```
 
-### Nested C Kbd
+### Nested C Kbd(#css-nested-c-kbd)
 
 Nest multiple `.c-kbd` elements inside a single `.c-kbd` element to describe a keyboard command comprising of multiple keys.
 
@@ -176,7 +177,7 @@ Nest multiple `.c-kbd` elements inside a single `.c-kbd` element to describe a k
 </kbd>
 ```
 
-### C Kbd Monospaced
+### C Kbd Monospaced(#css-c-kbd-monospaced)
 
 1.5rem (24px) minimum width and 1.5rem (24px) tall `kbd` element with no `padding` and `border-width: 1px`. This is generally used to display single characters.
 
@@ -216,7 +217,7 @@ Nest multiple `.c-kbd` elements inside a single `.c-kbd` element to describe a k
 </kbd>
 ```
 
-### C Kbd Inline
+### C Kbd Inline(#css-c-kbd-inline)
 
 No minimum width or height `kbd` element with `padding: 0` and `border-width: 0`. This is used to display keyboard shortcuts in small spaces such as `dropdown-item`.
 
@@ -279,7 +280,7 @@ works as well.
 </kbd>
 ```
 
-### C Kbd Group
+### C Kbd Group(#css-c-kbd-group)
 
 A container element for grouping text with several `kbd` elements together. This is also useful inside `autofit-col` if you don't want several `kbd` elements to break to a new line.
 
@@ -307,11 +308,11 @@ A container element for grouping text with several `kbd` elements together. This
 </span>
 ```
 
-## Color Variants
+## Color Variants(#css-color-variants)
 
 The color variants are modifier classes added to any of the base components listed above.
 
-### C Kbd Light
+### C Kbd Light(#css-c-kbd-light)
 
 A color modifier on `c-kbd` to style the `kbd` element with dark text, light background and border.
 
@@ -342,7 +343,7 @@ A color modifier on `c-kbd` to style the `kbd` element with dark text, light bac
 </kbd>
 ```
 
-### C Kbd Dark
+### C Kbd Dark(#css-c-kbd-dark)
 
 A color modifier on `c-kbd` to style the `kbd` element with light text, dark background and border.
 
@@ -373,7 +374,7 @@ A color modifier on `c-kbd` to style the `kbd` element with light text, dark bac
 </kbd>
 ```
 
-### C Kbd Group Light
+### C Kbd Group Light(#css-c-kbd-group-light)
 
 A color modifier on `c-kbd-group`, for use with light backgrounds, that sets the text color to `\$secondary`. This can be used with `c-kbd-light` and `c-kbd-dark`.
 
@@ -422,7 +423,7 @@ A color modifier on `c-kbd-group`, for use with light backgrounds, that sets the
 </span>
 ```
 
-### C Kbd Group Dark
+### C Kbd Group Dark(#css-c-kbd-group-dark)
 
 A color modifier on `c-kbd-group`, for use with dark backgrounds, that sets the text color to `\$white`. This can be used with `c-kbd-light` and `c-kbd-dark`.
 
@@ -473,11 +474,11 @@ A color modifier on `c-kbd-group`, for use with dark backgrounds, that sets the 
 </span>
 ```
 
-## Size Variants
+## Size Variants(#css-size-variants)
 
 Size variants are modifier classes added to the base component to change the font size.
 
-### C Kbd Sm
+### C Kbd Sm(#css-c-kbd-sm)
 
 `c-kbd-sm` and `c-kbd-group-sm` are size modifiers that sets `font-size: 0.75rem` (12px).
 
@@ -550,7 +551,7 @@ Size variants are modifier classes added to the base component to change the fon
 </span>
 ```
 
-### C Kbd Lg
+### C Kbd Lg(#css-c-kbd-lg)
 
 `c-kbd-lg` and `c-kbd-group-lg` are size modifiers that sets `font-size: 1rem` (16px).
 
@@ -623,9 +624,9 @@ Size variants are modifier classes added to the base component to change the fon
 </span>
 ```
 
-## Unicode Character List
+## Unicode Character List(#css-unicode-character-list)
 
-### Standard 0-255 (UTF-8) Character Set
+### Standard 0-255 (UTF-8) Character Set(#css-standard)
 
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0033;">&#0033;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0034;">&#0034;</kbd>
@@ -843,7 +844,7 @@ Size variants are modifier classes added to the base component to change the fon
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0254;">&#0254;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#0255;">&#0255;</kbd>
 
-### General Punctuation (U+2000 to U+206F)
+### General Punctuation (U+2000 to U+206F)(#css-general-punctuation)
 
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8208;">&#8208;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8209;">&#8209;</kbd>
@@ -917,7 +918,7 @@ Size variants are modifier classes added to the base component to change the fon
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8285;">&#8285;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8286;">&#8286;</kbd>
 
-### Superscripts and Subscripts (U+2070 to U+209F)
+### Superscripts and Subscripts (U+2070 to U+209F)(#css-superscripts-and-subscripts)
 
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8304;">&#8304;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8305;">&#8305;</kbd>
@@ -954,7 +955,7 @@ Size variants are modifier classes added to the base component to change the fon
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8339;">&#8339;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8340;">&#8340;</kbd>
 
-### Currency Symbols (U+20A0 to U+20CF)
+### Currency Symbols (U+20A0 to U+20CF)(#css-currency-symbols)
 
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8352;">&#8352;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8353;">&#8353;</kbd>
@@ -989,7 +990,7 @@ Size variants are modifier classes added to the base component to change the fon
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8382;">&#8382;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8383;">&#8383;</kbd>
 
-### Letterlike Symbols (U+2100 to U+214F)
+### Letterlike Symbols (U+2100 to U+214F)(#css-letterlike-symbols)
 
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8448;">&#8448;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8449;">&#8449;</kbd>
@@ -1071,7 +1072,7 @@ Size variants are modifier classes added to the base component to change the fon
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8525;">&#8525;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8526;">&#8526;</kbd>
 
-### Greek Characters (U+0391 to U+03C9)
+### Greek Characters (U+0391 to U+03C9)(#css-greek-characters)
 
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#913;">&#913;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#914;">&#914;</kbd>
@@ -1131,7 +1132,7 @@ Size variants are modifier classes added to the base component to change the fon
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#968;">&#968;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#969;">&#969;</kbd>
 
-### Number Forms (U+2150 to U+218F)
+### Number Forms (U+2150 to U+218F)(#css-number-forms)
 
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8528;">&#8528;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8529;">&#8529;</kbd>
@@ -1189,7 +1190,7 @@ Size variants are modifier classes added to the base component to change the fon
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8581;">&#8581;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8582;">&#8582;</kbd>
 
-### Arrows (U+2190 to U+21FF)
+### Arrows (U+2190 to U+21FF)(#css-arrows)
 
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8592;">&#8592;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8593;">&#8593;</kbd>
@@ -1304,7 +1305,7 @@ Size variants are modifier classes added to the base component to change the fon
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8702;">&#8702;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8703;">&#8703;</kbd>
 
-### Supplemental Arrows - A (U+27F0 to U+27FF)
+### Supplemental Arrows - A (U+27F0 to U+27FF)(#css-supplemental-arrows-a)
 
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#10224;">&#10224;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#10225;">&#10225;</kbd>
@@ -1322,7 +1323,7 @@ Size variants are modifier classes added to the base component to change the fon
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#10237;">&#10237;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#10238;">&#10238;</kbd>
 
-### Supplemental Arrows - B (U+2900 to U+297F)
+### Supplemental Arrows - B (U+2900 to U+297F)(#css-supplemental-arrows-b)
 
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#10496;">&#10496;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#10497;">&#10497;</kbd>
@@ -1457,7 +1458,7 @@ Size variants are modifier classes added to the base component to change the fon
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#10626;">&#10626;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#10627;">&#10627;</kbd>
 
-### Mathematical Operators (U+2200 to U+22FF)
+### Mathematical Operators (U+2200 to U+22FF)(#css-mathematical-operators)
 
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8704;">&#8704;</kbd>
 <kbd class="c-kbd c-kbd-monospaced c-kbd-light" data-entity="&amp;#8705;">&#8705;</kbd>

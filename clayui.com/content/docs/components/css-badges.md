@@ -7,11 +7,11 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/badges/'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Variations](#variations)
--   [Pill badges](#pill-badges)
--   [Anchor](#anchor)
--   [Links inside](#links-inside)
--   [Text truncate](#text-truncate)
+-   [Variations](#css-variations)
+-   [Pill Badges](#css-pill-badges)
+-   [Anchor](#css-anchor)
+-   [Links Inside](#css-links-inside)
+-   [Text Truncate](#css-text-truncate)
 
 </div>
 </div>
@@ -20,7 +20,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/badges/'
 	Badge Sizes have been removed. Use the <a href="https://github.com/liferay/clay/blob/master/packages/clay-css/src/scss/mixins/_badges.scss#L19">clay-badge-size($map) mixin</a> to create custom badge sizes for your app.
 </div>
 
-## Variations
+## Variations(#css-variations)
 
 Add any of the below mentioned modifier classes to change the appearance of a badge.
 
@@ -85,7 +85,7 @@ Add any of the below mentioned modifier classes to change the appearance of a ba
 </span>
 ```
 
-## Pill badges
+## Pill Badges(#css-pill-badges)
 
 Use the `.badge-pill` modifier class to make badges more rounded.
 
@@ -150,7 +150,7 @@ Use the `.badge-pill` modifier class to make badges more rounded.
 </span>
 ```
 
-## Anchor
+## Anchor(#css-anchor)
 
 <div class="sheet-example">
 	<a class="badge badge-primary" href="#1">
@@ -164,7 +164,7 @@ Use the `.badge-pill` modifier class to make badges more rounded.
 </a>
 ```
 
-## Links inside
+## Links Inside(#css-links-inside)
 
 <div class="sheet-example">
 	<span class="badge badge-secondary badge-pill">
@@ -218,7 +218,7 @@ Use the `.badge-pill` modifier class to make badges more rounded.
 </span>
 ```
 
-## Text truncate
+## Text Truncate(#css-text-truncate)
 
 Wrap the text inside the `.text-truncate-inline` and `.text-truncate` modifier class.
 

@@ -6,16 +6,16 @@ description: 'Panel provides an expandable details-summary view.'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Basic Usage](#basic-usage)
--   [Collapsable](#collapsable)
--   [Groups](#groups)
--   [With Sheets](#with-sheets)
--   [With a custom Title](#with-a-custom-title)
+-   [Basic Usage](#css-basic-usage)
+-   [Collapsible](#css-collapsible)
+-   [Groups](#css-groups)
+-   [With Sheets](#css-with-sheets)
+-   [With a Custom Title](#css-with-a-custom-title)
 
 </div>
 </div>
 
-## Basic Usage
+## Basic Usage(#css-basic-usage)
 
 <div class="sheet-example">
     <div class="panel" role="tablist">
@@ -39,7 +39,7 @@ description: 'Panel provides an expandable details-summary view.'
 </div>
 ```
 
-## Collapsable
+## Collapsible(#css-collapsible)
 
 Collapsable panels provide you with the ability to expand and collapse content as needed. They can simplify the interface by hiding content until it is needed.
 
@@ -119,7 +119,7 @@ Collapsable panels provide you with the ability to expand and collapse content a
 </div>
 ```
 
-## Groups
+## Groups(#css-groups)
 
 Grouped panels provide you with the ability of making accordion-like elements with multiple collapsable panels.
 
@@ -298,7 +298,7 @@ Grouped panels provide you with the ability of making accordion-like elements wi
 </div>
 ```
 
-## With Sheets
+## With Sheets(#css-with-sheets)
 
 Sometimes you might want to place a panel inside of a card or a sheet, in that case, wrap the Panel component in a `sheet` wrapper like below.
 
@@ -497,7 +497,7 @@ Sometimes you might want to place a panel inside of a card or a sheet, in that c
 </div>
 ```
 
-## With a custom Title
+## With a Custom Title(#css-with-a-custom-title)
 
 Sometimes you want to have some custom content that's not a string or a number in your title, that's where `ClayPanel.Title` comes in handy. It allows you to add custom content to the title of the panel as seen in this example using `ClayLabels`.
 

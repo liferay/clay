@@ -7,29 +7,29 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/cards/'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Example](#example)
--   [Content Types](#content-types)
-    -   [Body](#body)
-    -   [Captions](#captions)
-    -   [Images](#images)
-    -   [Header and footer](#header-and-footer)
-    -   [Dividers](#dividers)
--   [Variations](#variations)
-    -   [Image Card](#image-card)
-    -   [File Card](#file-card)
-    -   [User Card](#user-card)
-    -   [Horizontal Card](#horizontal-card)
-    -   [Interactive Card](#interactive-card)
--   [States](#states)
-    -   [Hover](#hover)
-    -   [Active](#active)
-    -   [Empty](#empty)
--   [Helpers](#helpers)
+-   [Example](#css-example)
+-   [Content Types](#css-content-types)
+    -   [Body](#css-body)
+    -   [Captions](#css-captions)
+    -   [Images](#css-images)
+    -   [Header and Footer](#css-header-and-footer)
+    -   [Dividers](#css-dividers)
+-   [Variations](#css-variations)
+    -   [Image Card](#css-image-card)
+    -   [File Card](#css-file-card)
+    -   [User Card](#css-user-card)
+    -   [Horizontal Card](#css-horizontal-card)
+    -   [Interactive Card](#css-interactive-card)
+-   [States](#css-states)
+    -   [Hover](#css-hover)
+    -   [Active](#css-active)
+    -   [Empty](#css-empty)
+-   [Helpers](#css-helpers)
 
 </div>
 </div>
 
-# Example
+# Example(#css-example)
 
 <div class="sheet-example">
     <div class="card" style="width: 18rem;">
@@ -54,11 +54,11 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/cards/'
 </div>
 ```
 
-# Content Types
+# Content Types(#css-content-types)
 
 Cards support a wide variety of content, including images, text, list groups, links, and more. Below are examples of what’s supported.
 
-## Body
+## Body(#css-body)
 
 The building block of a card is the `.card-body`. Use it whenever you need a padded section within a card.
 
@@ -78,7 +78,7 @@ The building block of a card is the `.card-body`. Use it whenever you need a pad
 </div>
 ```
 
-## Captions
+## Captions(#css-captions)
 
 Card titles are used by adding `.card-title` to a `<h*>` tag. In the same way, links are added and placed next to each other by adding `.card-link` to an `<a>` tag.
 
@@ -112,7 +112,7 @@ Subtitles are used by adding a `.card-subtitle` to a `<h*>` tag. If the `.card-t
 </div>
 ```
 
-## Images
+## Images(#css-images)
 
 Use classes `card-item-first` and `card-item-last` on elements that appear at the beginning or ending of your card. It styles the `border-radius` to match the card's `border-radius`. These classes work similar to Bootstrap 4's `.card-img-top` and `.card-img-bottom` but also covers left and right.
 
@@ -189,7 +189,7 @@ Use classes `card-item-first` and `card-item-last` on elements that appear at th
 </div>
 ```
 
-## Header and Footer
+## Header and Footer(#css-header-and-footer)
 
 Add an optional header and/or footer within a card.
 
@@ -249,7 +249,7 @@ Card headers can be styled by adding `.card-header` to `<h*>` elements.
 </div>
 ```
 
-## Dividers
+## Dividers(#css-dividers)
 
 Use `<div class="card-divider"></div>` to create a horizontal division between content inside a card.
 
@@ -291,9 +291,9 @@ Use `<div class="card-divider"></div>` to create a horizontal division between c
 </div>
 ```
 
-# Variations
+# Variations(#css-variations)
 
-## Image Card
+## Image Card(#css-image-card)
 
 Just add `image-card` class on the same element that `card` class have being added.
 
@@ -483,7 +483,7 @@ Just add `image-card` class on the same element that `card` class have being add
 </div>
 ```
 
-## File Card
+## File Card(#css-file-card)
 
 <div class="sheet-example">
     <div class="col-md-4">
@@ -569,7 +569,7 @@ Just add `image-card` class on the same element that `card` class have being add
 </div>
 ```
 
-## User Card
+## User Card(#css-user-card)
 
 <div class="sheet-example">
     <div class="row">
@@ -680,7 +680,7 @@ Just add `image-card` class on the same element that `card` class have being add
 </div>
 ```
 
-## Horizontal Card
+## Horizontal Card(#css-horizontal-card)
 
 <div class="sheet-example">
     <div class="col-md-4">
@@ -747,9 +747,9 @@ Just add `image-card` class on the same element that `card` class have being add
 </div>
 ```
 
-## Interactive Card
+## Interactive Card(#css-interactive-card)
 
-### Default
+### Default(#css-default)
 
 <div class="sheet-example">
     <div class="row">
@@ -854,7 +854,7 @@ Just add `image-card` class on the same element that `card` class have being add
 </div>
 ```
 
-### Horizontal
+### Horizontal(#css-horizontal)
 
 <div class="sheet-example">
     <div class="row">
@@ -1042,9 +1042,9 @@ Just add `image-card` class on the same element that `card` class have being add
 </div>
 ```
 
-# States
+# States(#css-states)
 
-## Hover
+## Hover(#css-hover)
 
 <div class="sheet-example">
     <div class="col-md-4">
@@ -1181,7 +1181,7 @@ Just add `image-card` class on the same element that `card` class have being add
 </div>
 ```
 
-## Active
+## Active(#css-active)
 
 Just add `active` class on the element where `card` class was placed.
 
@@ -1220,7 +1220,7 @@ Just add `active` class on the element where `card` class was placed.
 </div>
 ```
 
-## Empty
+## Empty(#css-empty)
 
 By default, when adding `image-card` class and inside the element that contains `image-card`, exists a `aspect-ratio` class. A transparent background will be setted.
 
@@ -1280,9 +1280,9 @@ By default, when adding `image-card` class and inside the element that contains 
 </div>
 ```
 
-# Helpers
+# Helpers(#css-helpers)
 
-## Checkbox
+## Checkbox(#css-checkbox)
 
 To make the whole card clickable just wrap the checkbox and card in:
 
@@ -1541,7 +1541,7 @@ To make the whole card clickable just wrap the checkbox and card in:
 </div>
 ```
 
-## Radio
+## Radio(#css-radio)
 
 To make the whole card clickable just wrap the radio input and card in:
 
@@ -1994,7 +1994,7 @@ Two `.autofit-col-expand`'s no `.autofit-col`.
 </div>
 ```
 
-## Padded Horizontal Cards
+## Padded Horizontal Cards(#css-padded-horizontal-cards)
 
 Nest `card-row` in `card-body` on to add some spacing around a horizontal card.
 
@@ -2039,7 +2039,7 @@ Nest `card-row` in `card-body` on to add some spacing around a horizontal card.
 </div>
 ```
 
-## Truncating Text Inside Card
+## Truncating Text Inside Card(#css-truncating-text-inside-card)
 
 Add class `text-truncate` on whatever text you want to be truncated.
 
@@ -2095,7 +2095,7 @@ Add class `text-truncate` on whatever text you want to be truncated.
 </div>
 ```
 
-## Card Row Content Alignment Helpers
+## Card Row Content Alignment Helpers(#css-card-row-content-alignment-helpers)
 
 Vertically align content by setting `justify-content` to `flex-start`, `center`, or `flex-end` on `autofit-col`.
 
@@ -2180,7 +2180,7 @@ Add gutters to a specific card card column by using the class `autofit-col-gutte
 </div>
 ```
 
-### Rounded
+### Rounded(#css-rounded)
 
 Use classes `rounded`, `rounded-circle`, or `rounded-0` on the card to quickly shape the borders.
 

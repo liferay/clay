@@ -7,12 +7,12 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/buttons/'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Examples](#examples)
--   [Sizes](#sizes)
--   [Active state](#active-state)
--   [Disabled State](#disabled-state)
--   [Icons](#icons)
-    -   [With text button](#with-text-button)
+-   [Examples](#css-examples)
+-   [Sizes](#css-sizes)
+-   [Active state](#css-active-state)
+-   [Disabled State](#css-disabled-state)
+-   [Icons](#css-icons)
+    -   [With text button](#css-with-text-button)
 
 </div>
 </div>
@@ -21,7 +21,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/buttons/'
 	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#button">WAI-ARIA</a> accessibility pratices for buttons when writting your markup.
 </div>
 
-## Examples
+## Examples(#css-examples)
 
 <div class="sheet-example">
 	<button class="btn btn-primary" type="button">Primary</button>
@@ -43,7 +43,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/buttons/'
 <button class="btn btn-link" type="button">Link</button>
 ```
 
-## Sizes
+## Sizes(#css-sizes)
 
 <div class="sheet-example">
 	<button class="btn btn-primary" type="button">Default</button>
@@ -71,7 +71,7 @@ Create block level buttons—those that span the full width of a parent—by add
 </button>
 ```
 
-## Active state
+## Active State(#css-active-state)
 
 Buttons will appear pressed when active. However, you can still force the same active appearance with `.active` (and include the `aria-pressed="true"` attribute) should you need to replicate the state programmatically.
 
@@ -85,7 +85,7 @@ Buttons will appear pressed when active. However, you can still force the same a
 <button class="active btn btn-secondary" type="button">Secondary</button>
 ```
 
-## Disabled State
+## Disabled State(#css-disabled-state)
 
 Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element.
 
@@ -99,7 +99,7 @@ Make buttons look inactive by adding the `disabled` boolean attribute to any `<b
 <button class="btn btn-secondary" disabled="" type="button">Secondary</button>
 ```
 
-## Icons
+## Icons(#css-icons)
 
 Buttons can display icons instead of text. The icons, however, must be monospaced inside the button. Lexicon doesn't use buttons with text and icons or text and loading indicators. Icon buttons are used primarily in management bars. This button variation can be primary, secondary, or borderless type.
 
@@ -139,7 +139,7 @@ Try adding the modifier class `.btn-monospaced`.
 </button>
 ```
 
-### With text button
+### With Text Button(#css-with-text-button)
 
 This button type is only used in sites, outside of administration. The icon emphasizes and helps communicate the action. The label must match the icon's purpose.
 

@@ -7,9 +7,9 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Example](#example)
--   [One column](#one-column)
--   [Two columns](#two-columns)
+-   [Example](#css-example)
+-   [One Column](#css-one-column)
+-   [Two Columns](#css-two-columns)
 
 </div>
 </div>
@@ -18,7 +18,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/'
 	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#accordion">WAI-ARIA</a> accessibility pratices for Forms Hierarchy when writting your markup.
 </div>
 
-## Example
+## Example(#css-example)
 
 <div class="sheet-example">
 	<div class="sheet sheet-lg">
@@ -170,7 +170,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/'
 </div>
 ```
 
-## One column
+## One Column(#css-one-column)
 
 <div class="sheet-example">
 	<div class="sheet sheet-lg">
@@ -271,7 +271,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/'
 </div>
 ```
 
-## Two columns
+## Two Columns(#css-two-columns)
 
 <div class="sheet-example">
 	<div class="sheet sheet-lg">

@@ -7,10 +7,10 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/selecto
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Example](#example)
--   [Labels](#labels)
--   [Loading](#loading)
--   [Contenteditable Elements](#contenteditable-elements)
+-   [Example](#css-example)
+-   [Labels](#css-labels)
+-   [Loading](#css-loading)
+-   [Contenteditable Elements](#css-contenteditable-elements)
 
 </div>
 </div>
@@ -23,7 +23,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/selecto
 	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#aria_lh_search">WAI-ARIA</a> accessibility pratices for <b>search</b> when writting your markup.
 </div>
 
-## Example
+## Example(#css-example)
 
 <div class="clay-site-alert alert alert-warning">
 	This requires external javascript to populate, add labels, and show/hide the <code class="gatsby-code-text">dropdown-menu</code>.
@@ -100,7 +100,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/selecto
 </div>
 ```
 
-## Labels
+## Labels(#css-labels)
 
 <div class="sheet-example">
 	<div class="form-group">
@@ -395,7 +395,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/selecto
 </div>
 ```
 
-## Loading
+## Loading(#css-loading)
 
 <div class="sheet-example">
 	<div class="form-group">
@@ -627,7 +627,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/selecto
 </div>
 ```
 
-## Contenteditable Elements
+## Contenteditable Elements(#css-contenteditable-elements)
 
 <div class="sheet-example">
 	<div class="form-group">

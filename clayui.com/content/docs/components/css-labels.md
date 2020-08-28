@@ -7,19 +7,19 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/labels/'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Colors](#colors)
--   [Sizes](#sizes)
--   [Variations](#variations)
-    -   [Simple](#simple)
-    -   [Dismissible](#dismissible)
-    -   [Link](#link)
-    -   [Interactive](#interactive)
-    -   [Anchor Tag](#anchor-tag)
+-   [Colors](#css-colors)
+-   [Sizes](#css-sizes)
+-   [Variations](#css-variations)
+    -   [Simple](#css-simple)
+    -   [Dismissible](#css-dismissible)
+    -   [Link](#css-link)
+    -   [Interactive](#css-interactive)
+    -   [Anchor Tag](#css-anchor-tag)
 
 </div>
 </div>
 
-## Colors
+## Colors(#css-colors)
 
 <div class="sheet-example">
 	<span class="label label-primary"><span class="label-item label-item-expand">Primary</span></span>
@@ -97,7 +97,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/labels/'
 </span>
 ```
 
-## Sizes
+## Sizes(#css-sizes)
 
 Use `label-lg` to make the label larger, or use the mixin `label-size($sassMap)` to create a custom sized label:
 
@@ -119,9 +119,9 @@ Use `label-lg` to make the label larger, or use the mixin `label-size($sassMap)`
 </span>
 ```
 
-## Variations
+## Variations(#css-variations)
 
-### Simple
+### Simple(#css-simple)
 
 <div class="sheet-example">
 	<span class="label label-secondary"><span class="label-item label-item-expand">Simple Label</span></span>
@@ -135,7 +135,7 @@ Use `label-lg` to make the label larger, or use the mixin `label-size($sassMap)`
 </span>
 ```
 
-### Dismissible
+### Dismissible(#css-dismissible)
 
 <div class="sheet-example">
 	<span class="label label-dismissible label-secondary">
@@ -195,7 +195,7 @@ Use `label-lg` to make the label larger, or use the mixin `label-size($sassMap)`
 </span>
 ```
 
-### Link
+### Link(#css-link)
 
 <div class="sheet-example">
 	<span class="label label-dismissible label-lg label-success">
@@ -253,7 +253,7 @@ Use `label-lg` to make the label larger, or use the mixin `label-size($sassMap)`
 </span>
 ```
 
-### Interactive
+### Interactive(#css-interactive)
 
 Add the `tabindex="0"` attribute to the `.label` element to create an interactive label with multiple controls inside. The inner controls should have the attribute `tabindex="-1"` to remove them from the tab order. The inner controls can be placed back in the tab order by changing back to `tabindex="0"` with javascript.
 
@@ -347,7 +347,7 @@ Implementing Interactive Labels require custom javascript.
 </span>
 ```
 
-### Anchor Tag
+### Anchor Tag(#css-anchor-tag)
 
 <div class="sheet-example">
 	<a class="label label-primary" href="#1">

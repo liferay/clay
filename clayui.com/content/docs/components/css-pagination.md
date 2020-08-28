@@ -7,11 +7,11 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/pagination/'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Sizes](#sizes)
-    -   [Small](#small)
-    -   [Default](#default)
-    -   [Large](#large)
--   [Using Buttons](#using-buttons)
+-   [Sizes](#css-sizes)
+    -   [Small](#css-small)
+    -   [Default](#css-default)
+    -   [Large](#css-large)
+-   [Using Buttons](#css-using-buttons)
 
 </div>
 </div>
@@ -163,11 +163,11 @@ Use `pagination-bar`'s preset styles to give your users more control over the co
 </div>
 ```
 
-## Sizes
+## Sizes(#css-sizes)
 
 More sizing options, add `pagination-sm` or `pagination-lg` to any pagination component to make it smaller or larger. It can be added to the parent container, such as `pagination-bar`, to size all the pagination components that reside within.
 
-### Small
+### Small(#css-small)
 
 <div class="sheet-example">
     <div class="pagination-bar pagination-sm">
@@ -314,7 +314,7 @@ More sizing options, add `pagination-sm` or `pagination-lg` to any pagination co
 </div>
 ```
 
-### Default
+### Default(#css-default)
 
 <div class="sheet-example">
     <div class="pagination-bar">
@@ -461,7 +461,7 @@ More sizing options, add `pagination-sm` or `pagination-lg` to any pagination co
 </div>
 ```
 
-### Large
+### Large(#css-large)
 
 <div class="sheet-example">
     <div class="pagination-bar pagination-lg">
@@ -608,7 +608,7 @@ More sizing options, add `pagination-sm` or `pagination-lg` to any pagination co
 </div>
 ```
 
-### Using Buttons
+### Using Buttons(#css-using-buttons)
 
 <div class="sheet-example">
     <div class="pagination-bar">
