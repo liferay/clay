@@ -30,7 +30,7 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 			return false;
 		}
 
-		const minTabIndex = -1;
+		const minTabIndex = 0;
 
 		if (
 			(memoizedProps.tabIndex != null &&
