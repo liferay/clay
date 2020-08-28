@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.18.1](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.18.0...@clayui/css@3.18.1) (2020-08-28)
+
+
+### Bug Fixes
+
+* **@clayui/css:** add font weight semibold ([f85a519](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/f85a519))
+* **@clayui/css:** Table Responsive re-add `margin-bottom` that was removed in [#3149](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3149) ([cef6b0f](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/cef6b0f))
+
+
+
+
+
 # [3.18.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.17.1...@clayui/css@3.18.0) (2020-08-26)
 
 

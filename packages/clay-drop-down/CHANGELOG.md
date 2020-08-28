@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.7.0](https://github.com/liferay/clay/compare/@clayui/drop-down@3.6.2...@clayui/drop-down@3.7.0) (2020-08-28)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** Move JSP example explanation to a comment ([58b5c74](https://github.com/liferay/clay/commit/58b5c74))
+-   **@clayui/drop-down:** Remove navigation entry for the old JSP docs ([7930d2b](https://github.com/liferay/clay/commit/7930d2b))
+
+### Features
+
+-   **@clayui/drop-down:** Add JSP code example and expand docs with a small section clarifying differences between dropdown-action and dropdown-menu ([f3e941b](https://github.com/liferay/clay/commit/f3e941b))
+
 ## [3.6.2](https://github.com/liferay/clay/compare/@clayui/drop-down@3.6.1...@clayui/drop-down@3.6.2) (2020-08-26)
 
 **Note:** Version bump only for package @clayui/drop-down

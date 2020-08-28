@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.1](https://github.com/matuzalemsteles/clay/compare/clayui.com@3.5.0...clayui.com@3.5.1) (2020-08-28)
+
+### Bug Fixes
+
+-   **clayui.com:** H4 heading shouldn't be covered by nav when linking to it ([abc626e](https://github.com/matuzalemsteles/clay/commit/abc626e))
+-   **clayui.com:** Site Nav used fixed instead of sticky, scrolling with mousewheel makes nav stutter. Also add alignment fixes ([89a67df](https://github.com/matuzalemsteles/clay/commit/89a67df))
+
 # [3.5.0](https://github.com/matuzalemsteles/clay/compare/clayui.com@3.4.1...clayui.com@3.5.0) (2020-08-26)
 
 ### Bug Fixes
