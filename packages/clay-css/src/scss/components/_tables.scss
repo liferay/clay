@@ -349,6 +349,8 @@ th {
 		$infix: breakpoint-infix($next, $grid-breakpoints);
 
 		&#{$infix} {
+			margin-bottom: $table-responsive-margin-bottom;
+
 			@include media-breakpoint-down($breakpoint) {
 				display: block;
 
