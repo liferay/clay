@@ -24,7 +24,7 @@ export default () => {
 				className="alert alert-dismissible alert-fluid alert-light"
 				role="alert"
 			>
-				<div className="container">
+				<div className="container-fluid container-fluid-max-lg">
 					{
 						'This site is for version 3.x. If you are looking for version 2.x documentation, it has been moved to '
 					}
@@ -38,9 +38,7 @@ export default () => {
 					</a>
 				</div>
 			</div>
-			<div className="container">
-				<LayoutNavHome />
-			</div>
+			<LayoutNavHome />
 
 			<Helmet>
 				<title>{'Clay'}</title>
