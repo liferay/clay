@@ -10,6 +10,7 @@ import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import {FocusScope, Keys, noop, sub} from '@clayui/shared';
 import classNames from 'classnames';
+import fuzzy from 'fuzzy';
 import React from 'react';
 
 const DELIMITER_KEYS = ['Enter', ','];
@@ -127,7 +128,7 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 }
 
 const defaultFilter = (item: Item, inputValue: string, locator: Locator) =>
-	inputValue && item[locator.label].match(inputValue);
+	!!inputValue && fuzzy.match(inputValue, item[locator.label]) !== null;
 
 const MultiSelectMenuRenderer: MenuRenderer = ({
 	filter = defaultFilter,
