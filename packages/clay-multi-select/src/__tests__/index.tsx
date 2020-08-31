@@ -364,4 +364,54 @@ describe('Interactions', () => {
 
 		expect(document.body).toMatchSnapshot();
 	});
+
+	it('add non-sequential text should filter the items when it is the default function', () => {
+		const {container} = render(
+			<ClayMultiSelectWithState
+				sourceItems={[
+					{
+						label: 'baz',
+						value: '1',
+					},
+					{
+						label: 'bar',
+						value: '2',
+					},
+				]}
+			/>
+		);
+
+		const input = container.querySelector('input');
+
+		fireEvent.change(input as HTMLInputElement, {
+			target: {value: 'bz'},
+		});
+
+		expect(document.body).toMatchSnapshot();
+	});
+
+	it('adding upper or lower case text should filter the items when it is the default function', () => {
+		const {container} = render(
+			<ClayMultiSelectWithState
+				sourceItems={[
+					{
+						label: 'Baz',
+						value: '1',
+					},
+					{
+						label: 'bar',
+						value: '2',
+					},
+				]}
+			/>
+		);
+
+		const input = container.querySelector('input');
+
+		fireEvent.change(input as HTMLInputElement, {
+			target: {value: 'b'},
+		});
+
+		expect(document.body).toMatchSnapshot();
+	});
 });
