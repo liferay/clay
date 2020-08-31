@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.7.0](https://github.com/liferay/clay/compare/@clayui/multi-select@3.6.5...@clayui/multi-select@3.7.0) (2020-08-31)
+
+### Features
+
+-   **@clayui/multi-select:** improves the filter for case-sensitive or non-sequential characters ([27cb6ac](https://github.com/liferay/clay/commit/27cb6ac))
+
 ## [3.6.5](https://github.com/liferay/clay/compare/@clayui/multi-select@3.6.4...@clayui/multi-select@3.6.5) (2020-08-28)
 
 **Note:** Version bump only for package @clayui/multi-select
