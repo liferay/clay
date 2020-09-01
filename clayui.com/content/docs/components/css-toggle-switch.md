@@ -7,20 +7,20 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/radio-c
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Example](#example)
--   [Behavioral](#behavioral)
-    -   [Checkbox](#checkbox)
-    -   [Radio](#radio)
--   [Disabled](#disabled)
--   [Composable](#composable)
-    -   [With Text](#with-text)
-    -   [With Icons](#with-icons)
--   [Extending Toggles](#extending-toggles)
+-   [Example](#css-example)
+-   [Behavioral](#css-behavioral)
+    -   [Checkbox](#css-checkbox)
+    -   [Radio](#css-radio)
+-   [Disabled](#css-disabled)
+-   [Composable](#css-composable)
+    -   [With Text](#css-with-text)
+    -   [With Icons](#css-with-icons)
+-   [Extending Toggles](#css-extending-toggles)
 
 </div>
 </div>
 
-## Example
+## Example(#css-example)
 
 <div class="sheet-example">
 	<label class="toggle-switch">
@@ -86,11 +86,11 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/radio-c
 </label>
 ```
 
-## Behavioral
+## Behavioral(#css-behavioral)
 
 You may want the Toggle Switch to behave with a Radio or Checkbox but have the appearance of a switch.
 
-### Checkbox
+### Checkbox(#css-checkbox)
 
 <div class="sheet-example">
 	<label class="toggle-switch">
@@ -116,7 +116,7 @@ You may want the Toggle Switch to behave with a Radio or Checkbox but have the a
 </label>
 ```
 
-### Radio
+### Radio(#css-radio)
 
 <div class="sheet-example">
 	<label class="toggle-switch">
@@ -175,7 +175,7 @@ You may want the Toggle Switch to behave with a Radio or Checkbox but have the a
 </label>
 ```
 
-## Disabled
+## Disabled(#css-disabled)
 
 <div class="sheet-example">
 	<label class="toggle-switch">
@@ -214,9 +214,9 @@ You may want the Toggle Switch to behave with a Radio or Checkbox but have the a
 </label>
 ```
 
-## Composable
+## Composable(#css-composable)
 
-### With Text
+### With Text(#css-with-text)
 
 You can display additional text with the toggle switch by adding the `.toggle-switch-text` class to the text element. Use the `.toggle-switch-text-left` and `.toggle-switch-text-right` classes to position the text on the left and right side of the toggle switch, respectively.
 
@@ -336,7 +336,7 @@ You can display additional text with the toggle switch by adding the `.toggle-sw
 </label>
 ```
 
-### With Icons
+### With Icons(#css-with-icons)
 
 Add `<span class="button-icon button-icon-on icon-volume-up toggle-switch-icon"/>` to add an icon to the switch for the on position.
 
@@ -456,7 +456,7 @@ Alternatively, you can add `<span class="icon-remove toggle-switch-icon toggle-s
 </label>
 ```
 
-## Extending Toggles
+## Extending Toggles(#css-extending-toggles)
 
 This section explains how to customize toggles. Use at your own risk.
 

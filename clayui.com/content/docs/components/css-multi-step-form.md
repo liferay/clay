@@ -7,16 +7,16 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/multi-s
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Example](#example)
--   [Fixed width items](#fixed-width-items)
--   [Title](#title)
--   [Buttons](#buttons)
--   [Simplified](#simplified)
+-   [Example](#css-example)
+-   [Fixed Width Items](#css-fixed-width-items)
+-   [Title](#css-title)
+-   [Buttons](#css-buttons)
+-   [Simplified](#css-simplified)
 
 </div>
 </div>
 
-## Example
+## Example(#css-example)
 
 <div class="sheet-example">
 	<ol class="multi-step-nav multi-step-nav-collapse-sm multi-step-indicator-label-top">
@@ -231,7 +231,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/multi-s
 </ol>
 ```
 
-## Fixed width items
+## Fixed Width Items(#css-fixed-width-items)
 
 To set the fixed width between items so they are not dynamic by adding the `.multi-step-item-fixed-width` class.
 
@@ -344,7 +344,7 @@ To set the fixed width between items so they are not dynamic by adding the `.mul
 </ol>
 ```
 
-## Title
+## Title(#css-title)
 
 Add the title in the multi step item to provide more context by adding `.multi-step-title` wrapped with the text.
 
@@ -378,7 +378,7 @@ Add the title in the multi step item to provide more context by adding `.multi-s
 </ol>
 ```
 
-## Buttons
+## Buttons(#css-buttons)
 
 You may want to control the click of the icon to do some manipulation so you can replace `<a class="multi-step-icon" />` with a `<button class="multi-step-icon" />`.
 
@@ -591,7 +591,7 @@ You may want to control the click of the icon to do some manipulation so you can
 </ol>
 ```
 
-## Simplified
+## Simplified(#css-simplified)
 
 Multi step form simplified is a more lightweight version of the multi step form. Rather than provide a complete interactive wizard display as the multi step form does, multi step form simplified simply displays text that indicates the users progress in completing the main task, guiding the user through a task divided in several steps in a light way.
 

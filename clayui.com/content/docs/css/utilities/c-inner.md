@@ -5,15 +5,15 @@ title: 'C Inner'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Examples](#examples)
-    -   [Buttons](#buttons)
-    -   [Links](#links)
-    -   [Close](#close)
-    -   [Badge](#badge)
-    -   [Label](#label)
-    -   [Breadcrumb](#breadcrumb)
-    -   [Card Interactive](#card-interactive)
-    -   [Dropdown](#dropdown)
+-   [Examples](#css-examples)
+    -   [Buttons](#css-buttons)
+    -   [Links](#css-links)
+    -   [Close](#css-close)
+    -   [Badge](#css-badge)
+    -   [Label](#css-label)
+    -   [Breadcrumb](#css-breadcrumb)
+    -   [Card Interactive](#css-card-interactive)
+    -   [Dropdown](#css-dropdown)
 
 </div>
 </div>
@@ -24,9 +24,9 @@ A utility to help manage focus styles in an interactive component. Wrap the cont
     To disable style output from this utility set <code>$enable-c-inner: false;</code>.
 </div>
 
-## Examples
+## Examples(#css-examples)
 
-### Buttons
+### Buttons(#css-buttons)
 
 <button class="btn btn-unstyled" type="button">
     <span class="c-inner" tabindex="-1">.btn.btn-unstyled</span>
@@ -129,7 +129,7 @@ A utility to help manage focus styles in an interactive component. Wrap the cont
 </button>
 ```
 
-### Links
+### Links(#css-links)
 
 <div><a href="javascript:;"><span class="c-inner" tabindex="-1">Regular Anchor Tag</span></a></div>
 <div><a class="link-primary" href="javascript:;"><span class="c-inner" tabindex="-1">.link-primary</span></a></div>
@@ -186,7 +186,7 @@ A utility to help manage focus styles in an interactive component. Wrap the cont
 </a>
 ```
 
-### Close
+### Close(#css-close)
 
 <button aria-label="Close" class="close" type="button">
     <span class="c-inner" tabindex="-1">
@@ -262,7 +262,7 @@ A utility to help manage focus styles in an interactive component. Wrap the cont
 </a>
 ```
 
-### Badge
+### Badge(#css-badge)
 
 <a class="badge badge-primary" href="javascript:;">
     <span class="c-inner" tabindex="-1">
@@ -317,7 +317,7 @@ A utility to help manage focus styles in an interactive component. Wrap the cont
 </a>
 ```
 
-### Label
+### Label(#css-label)
 
 <a class="label label-primary" href="javascript:;">
     <span class="c-inner" tabindex="-1">
@@ -494,7 +494,7 @@ A utility to help manage focus styles in an interactive component. Wrap the cont
 </a>
 ```
 
-### Breadcrumb
+### Breadcrumb(#css-breadcrumb)
 
 <ol class="breadcrumb">
     <li class="breadcrumb-item dropdown">
@@ -545,7 +545,7 @@ A utility to help manage focus styles in an interactive component. Wrap the cont
     </li>
 </ol>
 
-### Card Interactive
+### Card Interactive(#css-card-interactive)
 
 <div class="row">
     <div class="col-md-4">
@@ -590,7 +590,7 @@ A utility to help manage focus styles in an interactive component. Wrap the cont
     </div>
 </div>
 
-### Dropdown
+### Dropdown(#css-dropdown)
 
 <div class="clay-site-alert alert alert-warning">
     Bootstrap's Dropdown Plugin focuses <code>dropdown-toggle</code> on show. You will need to manually undo the focus via blur or focus <code>c-inner</code> on show.

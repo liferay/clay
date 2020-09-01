@@ -7,16 +7,16 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/buttons/'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Examples](#examples)
--   [Split Button](#split-button)
--   [Button toolbar](#button-toolbar)
--   [Sizes](#sizes)
--   [Vertical variation](#vertical-variation)
+-   [Examples](#css-examples)
+-   [Split Button](#css-split-button)
+-   [Button Toolbar](#css-button-toolbar)
+-   [Sizes](#css-sizes)
+-   [Vertical Variation](#css-vertical-variation)
 
 </div>
 </div>
 
-## Examples
+## Examples(#css-examples)
 
 <div class="sheet-example">
 	<div class="btn-group" role="group">
@@ -34,7 +34,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/buttons/'
 </div>
 ```
 
-## Split Button
+## Split Button(#css-split-button)
 
 <div class="sheet-example">
 	<div class="btn-group" role="group">
@@ -86,7 +86,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/buttons/'
 </div>
 ```
 
-## Button toolbar
+## Button Toolbar(#css-button-toolbar)
 
 Combine sets of button groups into button toolbars for more complex components. Use utility classes as needed to space out groups, buttons, and more.
 
@@ -152,7 +152,7 @@ Combine sets of button groups into button toolbars for more complex components. 
 </div>
 ```
 
-## Sizes
+## Sizes(#css-sizes)
 
 Instead of applying button sizing classes to every button in a group, just add `.btn-group-*` to each `.btn-group`, including each one when nesting multiple groups.
 
@@ -186,7 +186,7 @@ Instead of applying button sizing classes to every button in a group, just add `
 </div>
 ```
 
-## Vertical variation
+## Vertical Variation(#css-vertical-variation)
 
 <div class="sheet-example">
 	<div class="btn-group-vertical" role="group">

@@ -7,11 +7,11 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/toolbars/'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Subnav](#subnav)
-    -   [Subnav Light](#subnav-light)
-    -   [Subnav Primary](#subnav-primary)
-    -   [Subnav Primary Disabled](#subnav-primary-disabled)
--   [Helper Classes](#helper-classes)
+-   [Subnav](#css-subnav)
+    -   [Subnav Light](#css-subnav-light)
+    -   [Subnav Primary](#css-subnav-primary)
+    -   [Subnav Primary Disabled](#css-subnav-primary-disabled)
+-   [Helper Classes](#css-helper-classes)
 
 </div>
 </div>
@@ -110,7 +110,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/toolbars/'
 </nav>
 ```
 
-## Subnav
+## Subnav(#css-subnav)
 
 Subnavigation to use with main navigations such as [Management Toolbar](/docs/components/management-toolbar.html).
 
@@ -170,7 +170,7 @@ Subnavigation to use with main navigations such as [Management Toolbar](/docs/co
 </nav>
 ```
 
-### Subnav Light
+### Subnav Light(#css-subnav-light)
 
 Subnavigation used in [Modals](/docs/components/modal.html)
 
@@ -212,7 +212,7 @@ Subnavigation used in [Modals](/docs/components/modal.html)
 </div>
 ```
 
-### Subnav Primary
+### Subnav Primary(#css-subnav-primary)
 
 Subnavigation used in [Management Toolbar](/docs/components/management-toolbar.html).
 
@@ -416,7 +416,7 @@ Subnavigation used in [Management Toolbar](/docs/components/management-toolbar.h
 </nav>
 ```
 
-### Subnav Primary Disabled
+### Subnav Primary Disabled(#css-subnav-primary-disabled)
 
 Disabled sub-navigation used in [Management Toolbar](/docs/components/management-toolbar.html), just add `subnav-tbar-disabled`. The `disabled` attribute must be added to any `button` tag. The class `disabled` and attribute `tabindex="-1"` must be added to any `anchor` tag and clicks disabled via javascript.
 
@@ -625,16 +625,16 @@ Disabled sub-navigation used in [Management Toolbar](/docs/components/management
 </nav>
 ```
 
-## Helper Classes
+## Helper Classes(#css-helper-classes)
 
-### `tbar-inline-{xs|sm|md|lg|xl}-down`
+**`tbar-inline-{xs|sm|md|lg|xl}-down`**
 
 A helper class on `tbar` that turns `tbar-nav`, `tbar-item`, `tbar-section`, and `component-title` inline at specific breakpoints.
 
-### `tbar-nav-wrap`
+**`tbar-nav-wrap`**
 
 A helper class on `tbar-nav` that breaks `tbar-nav` content to new line when the container becomes too small.
 
-### `tbar-nav-shrink`
+**`tbar-nav-shrink`**
 
 A helper class on `tbar-nav` that makes it only as wide as its content, use with other `tbar-nav`'s.

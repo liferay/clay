@@ -21,7 +21,7 @@ const LayoutNavHome = () => {
 
 	return (
 		<nav className="navbar navbar-clay-site navbar-expand-lg navbar-light">
-			<div className="container-fluid container-fluid-max-lg">
+			<div className="container-fluid container-fluid-max-xl">
 				<div className="autofit-float-sm-down autofit-padded autofit-row">
 					<div className="autofit-col autofit-col-expand">
 						<div className="d-inline-block text-decoration-none text-reset">

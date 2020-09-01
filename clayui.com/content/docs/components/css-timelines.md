@@ -7,15 +7,15 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/timelines/'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Default](#default)
--   [Variations](#variations)
-    -   [Increment with Text](#increment-with-text)
-    -   [Right](#right)
-    -   [Center](#center)
-    -   [Even](#even)
-    -   [Odd](#odd)
-    -   [Timeline Right XS Only](#timeline-right-xs-only)
--   [Spacing](#spacing)
+-   [Default](#css-default)
+-   [Variations](#css-variations)
+    -   [Increment with Text](#css-increment-with-text)
+    -   [Right](#css-right)
+    -   [Center](#css-center)
+    -   [Even](#css-even)
+    -   [Odd](#css-odd)
+    -   [Timeline Right XS Only](#css-timeline-right-xs-only)
+-   [Spacing](#css-spacing)
 
 </div>
 </div>
@@ -24,7 +24,7 @@ Place `.timeline-increment` inside whatever element you want it to be aligned to
 
 The icon can be any size as long as it is wrapped inside `timeline-increment`. For larger icons, the spacing between the content and increment ([Timeline Spacing](#spacing)) must be adjusted to accomodate it.
 
-## Default
+## Default(#css-default)
 
 <div class="sheet-example">
     <ul class="timeline">
@@ -166,9 +166,9 @@ The icon can be any size as long as it is wrapped inside `timeline-increment`. F
 </ul>
 ```
 
-## Variations
+## Variations(#css-variations)
 
-### Increment with Text
+### Increment with Text(#css-increment-with-text)
 
 Place text inside `timeline-increment` by wrapping the text with `<span class="timeline-increment-text"></span>`.
 
@@ -226,7 +226,7 @@ Place text inside `timeline-increment` by wrapping the text with `<span class="t
 </ul>
 ```
 
-### Right
+### Right(#css-right)
 
 Align increments to the right with `timeline-right`.
 
@@ -324,7 +324,7 @@ Align increments to the right with `timeline-right`.
 </ul>
 ```
 
-### Center
+### Center(#css-center)
 
 Add class `timeline-center` to center your timeline, it displays items on the right by default. To display items on the left, add class `timeline-item-reverse` to a timeline item.
 
@@ -450,7 +450,7 @@ Add class `timeline-center` to center your timeline, it displays items on the ri
 </ul>
 ```
 
-### Even
+### Even(#css-even)
 
 Alternate every other timeline item on the left with class `timeline-even`.
 
@@ -542,7 +542,7 @@ Alternate every other timeline item on the left with class `timeline-even`.
 </ul>
 ```
 
-### Odd
+### Odd(#css-odd)
 
 Alternate every other timeline item on the right with class `timeline-odd`.
 
@@ -634,7 +634,7 @@ Alternate every other timeline item on the right with class `timeline-odd`.
 </ul>
 ```
 
-### Timeline Right XS Only
+### Timeline Right XS Only(#css-timeline-right-xs-only)
 
 Align timeline to the right at screen widths 767px and below with `timeline-right-xs-only`.
 
@@ -726,7 +726,7 @@ Align timeline to the right at screen widths 767px and below with `timeline-righ
 </ul>
 ```
 
-## Spacing
+## Spacing(#css-spacing)
 
 Adjust the spacing around the timeline with `@include timeline-spacing($outer-spacing, $inner-spacing, $item-padding-y)`. The last argument is not required and has a default value of 10px.
 

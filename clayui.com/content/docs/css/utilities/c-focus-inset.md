@@ -5,19 +5,19 @@ title: 'C Focus Inset'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Examples](#examples)
-    -   [Button](#button)
-    -   [Link](#link)
-    -   [Form](#form-control)
+-   [Examples](#css-examples)
+    -   [Button](#css-button)
+    -   [Link](#css-link)
+    -   [Form](#css-form-control)
 
 </div>
 </div>
 
 A bailout utility to set the focus border inside the element, just add the class `c-focus-inset`.
 
-## Examples
+## Examples(#css-examples)
 
-### Button
+### Button(#css-button)
 
 <button class="btn btn-primary c-focus-inset" type="button">Primary</button>
 <button class="btn btn-secondary c-focus-inset" type="button">Secondary</button>
@@ -34,7 +34,7 @@ A bailout utility to set the focus border inside the element, just add the class
 <button class="btn btn-primary c-focus-inset" type="button">Primary</button>
 ```
 
-### Link
+### Link(#css-link)
 
 <div><a class="c-focus-inset" href="javascript:;">Regular Anchor Tag</a></div>
 <div><a class="c-focus-inset link-primary single-link" href="javascript:;">.link-primary.single-link</a></div>
@@ -47,7 +47,7 @@ A bailout utility to set the focus border inside the element, just add the class
 <a class="c-focus-inset" href="javascript:;">Regular Anchor Tag</a>
 ```
 
-### Form Control
+### Form Control(#css-form-control)
 
 <div class="sheet">
     <div class="form-group">

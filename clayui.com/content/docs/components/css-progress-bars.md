@@ -7,21 +7,21 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/progress-bars
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Colors](#colors)
-    -   [Group](#group)
--   [Sizes](#sizes)
--   [Groups](#groups)
-    -   [Addon](#addon)
-    -   [Stacked](#stacked)
--   [Multiple Progress Bars](#multiple-progress-bars)
--   [Labels](#labels)
--   [Striped](#striped)
--   [Animated Stripes](#animated-stripes)
+-   [Colors](#css-colors)
+    -   [Group](#css-group)
+-   [Sizes](#css-sizes)
+-   [Groups](#css-groups)
+    -   [Addon](#css-addon)
+    -   [Stacked](#css-stacked)
+-   [Multiple Progress Bars](#css-multiple-progress-bars)
+-   [Labels](#css-labels)
+-   [Striped](#css-striped)
+-   [Animated Stripes](#css-animated-stripes)
 
 </div>
 </div>
 
-## Colors
+## Colors(#css-colors)
 
 Add `progress-danger`, `progress-info`, `progress-success`, or `progress-warning` to `progress-group` or `progress` to provide visual feedback for different progress states. Color a block of text or icon by wrapping it with progress-group-feedback.
 
@@ -110,7 +110,7 @@ Add `progress-danger`, `progress-info`, `progress-success`, or `progress-warning
 </div>
 ```
 
-### Group
+### Group(#css-group)
 
 <div class="sheet-example">
     <div class="progress-group">
@@ -277,7 +277,7 @@ Add `progress-danger`, `progress-info`, `progress-success`, or `progress-warning
 </div>
 ```
 
-## Sizes
+## Sizes(#css-sizes)
 
 We only set a `height` value on the `.progress`, so if you change that value the inner `.progress-bar` will automatically resize accordingly.
 
@@ -368,9 +368,9 @@ We only set a `height` value on the `.progress`, so if you change that value the
 </div>
 ```
 
-## Groups
+## Groups(#css-groups)
 
-### Addon
+### Addon(#css-addon)
 
 Place an addon on either side of a progress component with `progress-group` and `progress-group-addon`.
 
@@ -488,7 +488,7 @@ Place an addon on either side of a progress component with `progress-group` and 
 </div>
 ```
 
-### Stacked
+### Stacked(#css-stacked)
 
 Add `progress-group-stacked` to `progress-group` stack the addons and progress component.
 
@@ -531,7 +531,7 @@ Add `progress-group-stacked` to `progress-group` stack the addons and progress c
 </div>
 ```
 
-## Multiple Progress Bars
+## Multiple Progress Bars(#css-multiple-progress-bars)
 
 If you need multiple progress bars, use [Bootstrap 4's background utilities](https://getbootstrap.com/docs/4.3/components/progress/#multiple-bars), `bg-primary`, `bg-success`, `bg-info`, `bg-warning`, and `bg-danger` on `progress-bar`.
 
@@ -635,7 +635,7 @@ If you need multiple progress bars, use [Bootstrap 4's background utilities](htt
 </div>
 ```
 
-## Labels
+## Labels(#css-labels)
 
 Add labels to your progress bars by placing text within the `.progress-bar`.
 
@@ -660,7 +660,7 @@ Add labels to your progress bars by placing text within the `.progress-bar`.
 </div>
 ```
 
-## Striped
+## Striped(#css-striped)
 
 Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gradient over the progress bar’s background color.
 
@@ -735,7 +735,7 @@ Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gra
 </div>
 ```
 
-## Animated Stripes
+## Animated Stripes(#css-animated-stripes)
 
 The striped gradient can also be animated. Add `.progress-bar-animated` to `.progress-bar` to animate the stripes right to left via CSS3 animations.
 

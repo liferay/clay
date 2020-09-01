@@ -202,7 +202,7 @@
 		@media (min-width: $screen-lg) {
 			background-color: white;
 			margin-bottom: 0;
-			max-height: 100vh;
+			max-height: calc(100vh - 84px);
 			overflow-y: auto;
 			top: 84px;
 			width: 280px;

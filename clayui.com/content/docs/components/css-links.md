@@ -7,17 +7,17 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/link/'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Styles](#styles)
--   [Single Link](#single-link)
--   [Component Links](#component-links)
--   [Component Action](#component-action)
-    -   [Anchor](#anchor)
-    -   [Button](#button)
--   [Outline](#outline)
--   [Outline Borderless](#outline-borderless)
--   [External Link](#external-link)
--   [Monospaced](#monospaced)
--   [Title Link](#title-link)
+-   [Styles](#css-styles)
+-   [Single Link](#css-single-link)
+-   [Component Links](#css-component-links)
+-   [Component Action](#css-component-action)
+    -   [Anchor](#css-anchor)
+    -   [Button](#css-button)
+-   [Outline](#css-outline)
+-   [Outline Borderless](#css-outline-borderless)
+-   [External Link](#css-external-link)
+-   [Monospaced](#css-monospaced)
+-   [Title Link](#css-title-link)
 
 </div>
 </div>
@@ -28,7 +28,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/link/'
 
 These elements should be used to style links based on the global link, primary, and secondary colors.
 
-## Styles
+## Styles(#css-styles)
 
 <div class="sheet-example">
 	<div><a href="#1">Regular Anchor Tag</a></div>
@@ -42,7 +42,7 @@ These elements should be used to style links based on the global link, primary, 
 <div><a class="link-secondary" href="#1">.link-secondary</a></div>
 ```
 
-## Single Link
+## Single Link(#css-single-link)
 
 Use `.single-link` on an anchor to add a semi-bold style to the link and should be used for standalone links defined by https://liferay.design/lexicon/core-components/link/.
 
@@ -56,7 +56,7 @@ Use `.single-link` on an anchor to add a semi-bold style to the link and should 
 <a class="link-secondary single-link" href="#1">.link-secondary.single-link</a>
 ```
 
-## Component Links
+## Component Links(#css-component-links)
 
 Use these patterns for links, titles, subtitles in components.
 
@@ -78,11 +78,11 @@ The colors, sizing, and other CSS Properties can change for these items dependin
 <p class="component-subtitle"><a href="#1">.component-subtitle a</a></p>
 ```
 
-## Component Action
+## Component Action(#css-component-action)
 
 Use these patterns for actions in components.
 
-### Anchor
+### Anchor(#css-anchor)
 
 <div class="sheet-example">
 	<a class="component-action" href="#1" role="button">
@@ -118,7 +118,7 @@ Use these patterns for actions in components.
 </a>
 ```
 
-### Button
+### Button(#css-button)
 
 <div class="sheet-example">
 	<button class="component-action" role="button">
@@ -154,7 +154,7 @@ Use these patterns for actions in components.
 </button>
 ```
 
-## Outline
+## Outline(#css-outline)
 
 <div class="sheet-example">
 	<a class="link-outline link-outline-primary" href="#1">Primary</a>
@@ -166,7 +166,7 @@ Use these patterns for actions in components.
 <a class="link-outline link-outline-secondary" href="#1">Secondary</a>
 ```
 
-## Outline Borderless
+## Outline Borderless(#css-outline-borderless)
 
 <div class="sheet-example">
 	<a class="link-outline link-outline-borderless link-outline-primary" href="#1">Primary</a>
@@ -182,7 +182,7 @@ Use these patterns for actions in components.
 >
 ```
 
-## External Link
+## External Link(#css-external-link)
 
 <div class="sheet-example">
 	<a aria-label="External Link" class="link-secondary" href="#link-styles" title="External Link">
@@ -201,7 +201,7 @@ Use these patterns for actions in components.
 </a>
 ```
 
-## Monospaced
+## Monospaced(#css-monospaced)
 
 <div class="sheet-example">
 	<a class="link-monospaced link-outline link-outline-primary" href="#1">
@@ -290,7 +290,7 @@ Use these patterns for actions in components.
 </a>
 ```
 
-## Title Link
+## Title Link(#css-title-link)
 
 <div class="sheet-example">
 	<a aria-label="Title Link" class="component-title link-secondary" href="#title-link" title="Title">

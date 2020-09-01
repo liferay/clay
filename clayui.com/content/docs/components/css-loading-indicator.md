@@ -7,13 +7,13 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/loading-indic
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Sizes](#sizes)
--   [Variations](#variations)
-    -   [Regular](#regular)
-    -   [Light](#light)
--   [Compositions](#compositions)
-    -   [Button](#button)
-    -   [Autocomplete](#autocomplete)
+-   [Sizes](#css-sizes)
+-   [Variations](#css-variations)
+    -   [Regular](#css-regular)
+    -   [Light](#css-light)
+-   [Compositions](#css-compositions)
+    -   [Button](#css-button)
+    -   [Autocomplete](#css-autocomplete)
 
 </div>
 </div>
@@ -22,7 +22,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/loading-indic
 	These animations are made using only CSS.
 </div>
 
-## Sizes
+## Sizes(#css-sizes)
 
 <div class="sheet-example">
 	<div class="row">
@@ -36,9 +36,9 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/loading-indic
 <span aria-hidden="true" class="loading-animation"></span>
 ```
 
-## Variations
+## Variations(#css-variations)
 
-### Regular
+### Regular(#css-regular)
 
 <div class="sheet-example">
 	<span aria-hidden="true" class="loading-animation loading-animation"></span>
@@ -48,7 +48,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/loading-indic
 <span aria-hidden="true" class="loading-animation loading-animation"></span>
 ```
 
-### Light
+### Light(#css-light)
 
 <div class="bg-dark sheet-example">
 	<span aria-hidden="true" class="loading-animation loading-animation-light"></span>
@@ -61,9 +61,9 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/loading-indic
 ></span>
 ```
 
-## Compositions
+## Compositions(#css-compositions)
 
-### Button
+### Button(#css-button)
 
 <div class="sheet-example">
 	<button class="btn btn-primary" type="button">

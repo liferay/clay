@@ -5,11 +5,11 @@ title: 'Nav'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Nav Stacked](#nav-stacked)
--   [Nav Nested](#nav-nested)
--   [Nav Nested Margins](#nav-nested-margins)
--   [Nav Unstyled](#nav-unstyled)
--   [Helpers](#helpers)
+-   [Nav Stacked](#css-nav-stacked)
+-   [Nav Nested](#css-nav-nested)
+-   [Nav Nested Margins](#css-nav-nested-margins)
+-   [Nav Unstyled](#css-nav-unstyled)
+-   [Helpers](#css-helpers)
 
 </div>
 </div>
@@ -38,7 +38,7 @@ title: 'Nav'
 </ul>
 ```
 
-### Nav Stacked
+### Nav Stacked(#css-nav-stacked)
 
 Use `.nav-stacked` class alongside with `.nav`.
 
@@ -66,7 +66,7 @@ Use `.nav-stacked` class alongside with `.nav`.
 </ul>
 ```
 
-### Nav Nested
+### Nav Nested(#css-nav-nested)
 
 Add class `nav-nested` to the outermost nav to use padding to indent each nested nav.
 
@@ -354,11 +354,11 @@ Also collapsible when used with [Bootstrap Collapse Plugin](https://getbootstrap
 </ul>
 ```
 
-### Nav Nested Margins
+### Nav Nested Margins(#css-nav-nested-margins)
 
 The same of [Nav Nested](#nav-nested-margins) but instead of use `nav-nested` class, use `nav-nested-margins`.
 
-### Nav Unstyled
+### Nav Unstyled(#css-nav-unstyled)
 
 Add `nav-unstyled` to your nav to remove spacing around `nav-link` and `nav-btn`.
 
@@ -382,7 +382,7 @@ Add `nav-unstyled` to your nav to remove spacing around `nav-link` and `nav-btn`
 </ul>
 ```
 
-### Helpers
+### Helpers(#css-helpers)
 
 Dropdown toggle with anchor: `dropdown-toggle nav-link`.
 

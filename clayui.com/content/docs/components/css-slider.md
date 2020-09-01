@@ -7,18 +7,18 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/slider/'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Input](#input)
--   [Custom Slider](#custom-slider)
-    -   [Disabled](#disabled)
-    -   [Tooltip](#tooltip)
-    -   [References](#references)
-    -   [Label](#clayRangeLabel)
-    -   [Title](#clayRangeTitle)
+-   [Input](#css-input)
+-   [Custom Slider](#css-custom-slider)
+    -   [Disabled](#css-disabled)
+    -   [Tooltip](#css-tooltip)
+    -   [References](#css-references)
+    -   [Label](#css-clay-range-label)
+    -   [Title](#css-clay-range-title)
 
 </div>
 </div>
 
-## Input
+## Input(#css-input)
 
 <div class="sheet-example">
 	<div class="form-group">
@@ -34,7 +34,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/slider/'
 </div>
 ```
 
-## Custom Slider
+## Custom Slider(#css-custom-slider)
 
 Add `clay-range-progress-none` to `clay-range` for a basic range input that works without JavaScript.
 
@@ -200,7 +200,7 @@ The attribute `data-toggle="clay-css-range"` is only required if using the JavaS
 </script>
 ```
 
-### Disabled
+### Disabled(#css-disabled)
 
 <div class="sheet-example">
 	<div class="form-group">
@@ -296,7 +296,7 @@ The attribute `data-toggle="clay-css-range"` is only required if using the JavaS
 </div>
 ```
 
-### Tooltip
+### Tooltip(#css-tooltip)
 
 <div class="sheet-example">
 	<div class="form-group">
@@ -398,7 +398,7 @@ The attribute `data-toggle="clay-css-range"` is only required if using the JavaS
 </div>
 ```
 
-### References
+### References(#css-references)
 
 These are visual indicators placed at the beginning and end of Clay Range; use the attributes `data-label-min="{value}"` and `data-label-max="{value}"` on `clay-range-input` to display them.
 
@@ -445,7 +445,7 @@ These are visual indicators placed at the beginning and end of Clay Range; use t
 </div>
 ```
 
-### Label(#clayRangeLabel)
+### Label(#css-clay-range-label)
 
 Labels are visual indicators appended to the beginning or end of Clay Range. These are used to display the current position of Clay Range.
 
@@ -564,7 +564,7 @@ Labels are visual indicators appended to the beginning or end of Clay Range. The
 </div>
 ```
 
-### Title(#clayRangeTitle)
+### Title(#css-clay-range-title)
 
 Titles are visual indicators placed at the top of Clay Range. These are used to display the current position of Clay Range.
 

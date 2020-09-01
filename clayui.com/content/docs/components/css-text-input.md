@@ -7,30 +7,30 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/text-in
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Example](#example)
--   [Disabled](#disabled)
--   [Read only](#read-only)
--   [Sizes](#sizes)
--   [Textarea](#textarea)
--   [Select menu](#select-menu)
--   [Validations](#validations)
-    -   [Success](#success)
-    -   [Warning](#warning)
-    -   [Error](#error)
+-   [Example](#css-example)
+-   [Disabled](#css-disabled)
+-   [Readonly](#css-readonly)
+-   [Sizes](#css-sizes)
+-   [Textarea](#css-textarea)
+-   [Select Menu](#css-select-menu)
+-   [Validations](#css-validations)
+    -   [Success](#css-success)
+    -   [Warning](#css-warning)
+    -   [Error](#css-error)
 -   [Groups](#css-markup-groups)
--   [Example](#example)
--   [Sizes](#sizes)
--   [Checkboxes and radios](#checkboxes-and-radios)
--   [Button addons](#button-addons)
--   [Multiple addons](#multiple-addons)
--   [Separated addons](#separated-addons)
--   [Mixed addons](#mixed-addons)
--   [Inset](#inset)
+-   [Example](#css-markup-groups-example)
+-   [Sizes](#css-markup-groups-sizes)
+-   [Checkboxes and Radios](#css-checkboxes-and-radios)
+-   [Button Addons](#css-button-addons)
+-   [Multiple Addons](#css-multiple-addons)
+-   [Separated Addons](#css-separated-addons)
+-   [Mixed Addons](#css-mixed-addons)
+-   [Inset](#css-inset)
 
 </div>
 </div>
 
-## Example
+## Example(#css-example)
 
 <div class="sheet-example">
 	<div class="form-group">
@@ -53,7 +53,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/text-in
 
 > Be sure to use an appropriate `type` attribute on all inputs (e.g., `email` for email address or number for numerical information) to take advantage of newer input controls like email verification, number selection, and more.
 
-## Disabled
+## Disabled(#css-disabled)
 
 Add the `disabled` boolean attribute on an input to prevent user interactions and make it appear lighter.
 
@@ -77,7 +77,7 @@ Add the `disabled` boolean attribute on an input to prevent user interactions an
 </div>
 ```
 
-## Read only
+## Readonly(#css-readonly)
 
 Add the `readonly` boolean attribute on an input to prevent modification of the input’s value. Read-only inputs appear lighter (just like disabled inputs), but retain the standard cursor.
 
@@ -101,7 +101,7 @@ Add the `readonly` boolean attribute on an input to prevent modification of the 
 </div>
 ```
 
-## Sizes
+## Sizes(#css-sizes)
 
 Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 
@@ -150,7 +150,7 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 </div>
 ```
 
-## Textarea
+## Textarea(#css-textarea)
 
 <div class="sheet-example">
 	<div class="form-group">
@@ -170,7 +170,7 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 </div>
 ```
 
-## Select menu
+## Select Menu(#css-select-menu)
 
 <div class="sheet-example">
 	<div class="form-group">
@@ -232,9 +232,9 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 </div>
 ```
 
-## Validations
+## Validations(#css-validations)
 
-### Success
+### Success(#css-success)
 
 <div class="sheet-example">
 	<div class="form-group has-success">
@@ -292,7 +292,7 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 </div>
 ```
 
-### Warning
+### Warning(#css-warning)
 
 <div class="sheet-example">
 	<div class="form-group has-warning">
@@ -350,7 +350,7 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 </div>
 ```
 
-### Error
+### Error(#css-error)
 
 <div class="sheet-example">
 	<div class="form-group has-error">
@@ -382,7 +382,7 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 	Clay Input Group markup deviates from Bootstrap 4's Input Groups.
 </div>
 
-### Example
+### Example(#css-markup-groups-example)
 
 <div class="sheet-example">
 	<div class="form-group">
@@ -445,7 +445,7 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 </div>
 ```
 
-### Sizes
+### Sizes(#css-markup-groups-sizes)
 
 Add the relative form sizing classes to the `.input-group` itself and contents within will automatically resize—no need for repeating the form control size classes on each element.
 
@@ -557,7 +557,7 @@ Add the relative form sizing classes to the `.input-group` itself and contents w
 </div>
 ```
 
-### Checkboxes and radios
+### Checkboxes and Radios(#css-checkboxes-and-radios)
 
 Place any checkbox or radio option within an input group’s addon instead of text.
 
@@ -658,7 +658,7 @@ Place any checkbox or radio option within an input group’s addon instead of te
 </div>
 ```
 
-### Button addons
+### Button Addons(#css-button-addons)
 
 <div class="sheet-example">
 	<div class="form-group">
@@ -826,7 +826,7 @@ Place any checkbox or radio option within an input group’s addon instead of te
 </div>
 ```
 
-### Multiple addons
+### Multiple Addons(#css-multiple-addons)
 
 <div class="sheet-example">
 	<div class="form-group">
@@ -874,7 +874,7 @@ Place any checkbox or radio option within an input group’s addon instead of te
 </div>
 ```
 
-### Separated addons
+### Separated Addons(#css-separated-addons)
 
 <div class="sheet-example">
 	<div class="form-group">
@@ -941,7 +941,7 @@ Place any checkbox or radio option within an input group’s addon instead of te
 </div>
 ```
 
-### Mixed addons
+### Mixed Addons(#css-mixed-addons)
 
 <div class="sheet-example">
 	<div class="form-group">
@@ -983,7 +983,7 @@ Place any checkbox or radio option within an input group’s addon instead of te
 </div>
 ```
 
-### Inset
+### Inset(#css-inset)
 
 You can insert buttons and links into input group items with the following helper classes: `.input-group-inset`, `.input-group-inset-before`, `.input-group-inset-after`, `.input-group-inset-item`, `.input-group-inset-item-before`, and `.input-group-inset-item-after.` Use the -before classes to inset the button/link at the beginning of the input group, or use the -after classes to inset the button/link at the end of the input group.
 
@@ -1187,7 +1187,7 @@ You can insert buttons and links into input group items with the following helpe
 </div>
 ```
 
-### Password
+### Password(#css-password)
 
 A pattern for displaying the content inside a password input. Use `.input-text-label` inside `.input-group-inset-item` to display specific content for `.form-control[type="text"]` and `.input-password-label` for `.form-control[type="password"]`.
 
