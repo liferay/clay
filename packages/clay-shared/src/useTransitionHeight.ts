@@ -40,16 +40,45 @@ export function useTransitionHeight(
 ) {
 	const [transitioning, setTransitioning] = React.useState<boolean>(false);
 
+	const transitionBuffer = 0.01;
+	const transitionTimerRef = React.useRef<NodeJS.Timeout | null>(null);
+
+	const fakeTransitionEnd = () => {
+		const {transitionDelay, transitionDuration} = window.getComputedStyle(
+			contentRef.current
+		);
+		const totalDuration =
+			(parseFloat(transitionDelay) +
+				parseFloat(transitionDuration) +
+				transitionBuffer) *
+			1000;
+
+		transitionTimerRef.current = setTimeout(() => {
+			setTransitioning(false);
+			setVisible(!visible);
+
+			if (!visible) {
+				removeCollapseHeight(contentRef);
+			}
+		}, totalDuration);
+	};
+
 	React.useEffect(() => {
 		if (transitioning) {
 			setCollapseHeight(contentRef);
 			if (visible) {
 				removeCollapseHeight(contentRef);
 			}
+
+			fakeTransitionEnd();
 		}
 	}, [transitioning]);
 
 	const handleTransitionEnd = (event: React.TransitionEvent) => {
+		if (transitionTimerRef.current) {
+			clearTimeout(transitionTimerRef.current);
+		}
+
 		if (event.target === contentRef.current && transitioning && !visible) {
 			setVisible(true);
 			setTransitioning(false);
