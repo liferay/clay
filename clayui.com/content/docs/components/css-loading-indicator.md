@@ -2,6 +2,7 @@
 title: 'Loading Indicator'
 description: 'The loading indicator shows the user that an external process, like a connection, is being executed.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/loading-indicator/'
+mainTabLink: 'docs/components/loading-indicator.html'
 ---
 
 <div class="nav-toc-absolute">

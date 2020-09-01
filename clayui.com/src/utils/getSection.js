@@ -69,15 +69,11 @@ const toSectionItem = (item, paths) => {
 	return item;
 };
 
-const getSection = (data, blacklist = []) => {
+const getSection = (data) => {
 	const elements = data.map(({node}) => {
 		const {
 			fields: {alwaysActive, draft, indexVisible, order, slug, title},
 		} = node;
-
-		if (blacklist.includes(slug)) {
-			return {};
-		}
 
 		return toSectionElements(
 			slug.replace('.html', ''),

@@ -1,5 +1,6 @@
 ---
 title: 'Nav'
+mainTabLink: 'docs/components/nav.html'
 ---
 
 <div class="nav-toc-absolute">

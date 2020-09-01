@@ -2,6 +2,7 @@
 title: 'Slider'
 description: 'A Slider allows the user to select values in a linear range of values.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/slider/'
+mainTabLink: 'docs/components/slider.html'
 ---
 
 <div class="nav-toc-absolute">

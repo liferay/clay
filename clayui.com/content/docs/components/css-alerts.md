@@ -2,6 +2,7 @@
 title: 'Alerts'
 description: 'Alerts are used to capture the attention of the user in an intrusive way. They can be used just to say that something went right, or perhaps to say that something needs to be reviewed.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/alerts/'
+mainTabLink: 'docs/components/alert.html'
 ---
 
 <div class="nav-toc-absolute">

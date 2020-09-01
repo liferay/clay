@@ -26,9 +26,6 @@ const CustomLink = ({href, ...otherProps}) => {
 	return <Link to={href} {...otherProps} />;
 };
 
-const CSS_INDEX = 1;
-const REACT_INDEX = 0;
-
 const mapStatus = {
 	beta: 'warning',
 	deprecated: 'danger',
@@ -115,7 +112,7 @@ const PackageInfo = ({fields = {}, frontmatter = {}}) => (
 	</p>
 );
 
-const TabContent = ({html, jsx}) =>
+const Content = ({html, jsx}) =>
 	html ? (
 		<CodeToggle>
 			<div
@@ -152,29 +149,19 @@ export default (props) => {
 	const {
 		data,
 		location,
-		pageContext: {blacklist = []},
+		navigate,
+		pageContext: {tabs = []},
 	} = props;
-	const {
-		allMarkdownRemark,
-		allMdx,
-		markdownRemark,
-		mdTab,
-		mdx,
-		mdxTab,
-	} = data;
+	const {allMarkdownRemark, allMdx, mainTab, pageMd, pageMdx} = data;
 
-	const {body, excerpt, fields, frontmatter, html, timeToRead} =
-		mdx || markdownRemark;
+	const hasMainTab = !!mainTab.frontmatter.title;
 
-	const tab = mdTab || mdxTab || {};
+	const {body, excerpt, fields, frontmatter, html, timeToRead} = {
+		...(pageMdx || pageMd),
+		...(hasMainTab ? mainTab : {}),
+	};
 
 	const title = `${frontmatter.title} - Clay`;
-
-	const containsReact = !!(body || tab.body);
-
-	const [activeIndex, setActiveIndex] = React.useState(
-		location.hash.match(/#css/g) || !containsReact ? CSS_INDEX : REACT_INDEX
-	);
 
 	useEffect(() => {
 		const hash = window.location.hash;
@@ -191,10 +178,6 @@ export default (props) => {
 				item.indeterminate = true;
 			});
 	}, []);
-
-	const reactTab = body || tab.body;
-
-	const cssTab = html || tab.html || tab.body;
 
 	return (
 		<div className="docs">
@@ -215,13 +198,10 @@ export default (props) => {
 							<div className="container-fluid">
 								<div className="flex-xl-nowrap row">
 									<Sidebar
-										data={getSection(
-											[
-												...allMarkdownRemark.edges,
-												...allMdx.edges,
-											],
-											blacklist
-										)}
+										data={getSection([
+											...allMarkdownRemark.edges,
+											...allMdx.edges,
+										])}
 										location={location}
 									/>
 									<div className="col-xl sidebar-offset">
@@ -249,56 +229,44 @@ export default (props) => {
 														)}
 													</div>
 													<div className="col-12">
-														{reactTab && cssTab && (
+														{tabs && (
 															<ClayTabs
 																className="border-bottom nav-clay"
 																modern
 															>
-																<ClayTabs.Item
-																	active={
-																		activeIndex ===
-																		REACT_INDEX
-																	}
-																	href={
-																		location.pathname
-																	}
-																	onClick={() =>
-																		setActiveIndex(
-																			REACT_INDEX
-																		)
-																	}
-																>
-																	<span
-																		className="c-inner"
-																		tabIndex="-1"
-																	>
+																{tabs.map(
+																	(
 																		{
-																			'React Component'
-																		}
-																	</span>
-																</ClayTabs.Item>
-
-																<ClayTabs.Item
-																	active={
-																		activeIndex ===
-																		CSS_INDEX
-																	}
-																	href={`${location.pathname}#css`}
-																	onClick={() =>
-																		setActiveIndex(
-																			CSS_INDEX
-																		)
-																	}
-																>
-																	<span
-																		className="c-inner"
-																		tabIndex="-1"
-																	>
-																		{
-																			'CSS / Markup'
-																		}
-																	</span>
-																</ClayTabs.Item>
+																			href,
+																			name,
+																		},
+																		index
+																	) => (
+																		<ClayTabs.Item
+																			active={
+																				`/${href}` ===
+																				location.pathname
+																			}
+																			key={
+																				index
+																			}
+																			onClick={() =>
+																				navigate(
+																					`/${href}`
+																				)
+																			}
+																		>
+																			<span
+																				className="c-inner"
+																				tabIndex="-1"
+																			>
+																				{
+																					name
+																				}
+																			</span>
+																		</ClayTabs.Item>
+																	)
+																)}
 															</ClayTabs>
 														)}
 													</div>
@@ -326,33 +294,10 @@ export default (props) => {
 													)}
 
 													<CodeClipboard>
-														<ClayTabs.Content
-															activeIndex={
-																activeIndex
-															}
-															fade
-														>
-															<ClayTabs.TabPane>
-																<TabContent
-																	jsx={
-																		body ||
-																		tab.body
-																	}
-																/>
-															</ClayTabs.TabPane>
-
-															<ClayTabs.TabPane>
-																<TabContent
-																	html={
-																		html ||
-																		tab.html
-																	}
-																	jsx={
-																		tab.body
-																	}
-																/>
-															</ClayTabs.TabPane>
-														</ClayTabs.Content>
+														<Content
+															html={html}
+															jsx={body}
+														/>
 													</CodeClipboard>
 												</div>
 											</div>
@@ -413,8 +358,8 @@ export default (props) => {
 };
 
 export const pageQuery = graphql`
-	query($blacklist: [String!], $slug: String!, $sibling: String!) {
-		mdx(fields: {slug: {eq: $slug}}) {
+	query($pathGroup: [String!], $slug: String!, $mainTabLink: String!) {
+		pageMdx: mdx(fields: {slug: {eq: $slug}}) {
 			excerpt
 			timeToRead
 			frontmatter {
@@ -430,7 +375,7 @@ export const pageQuery = graphql`
 			}
 			body
 		}
-		markdownRemark(fields: {slug: {eq: $slug}}) {
+		pageMd: markdownRemark(fields: {slug: {eq: $slug}}) {
 			excerpt
 			timeToRead
 			html
@@ -442,7 +387,20 @@ export const pageQuery = graphql`
 				version
 			}
 		}
-		allMdx {
+		mainTab: mdx(fields: {slug: {eq: $mainTabLink}}) {
+			frontmatter {
+				description
+				disableTOC
+				lexiconDefinition
+				packageNpm
+				title
+			}
+			fields {
+				packageStatus
+				packageVersion
+			}
+		}
+		allMdx(filter: {fields: {slug: {nin: $pathGroup}}}) {
 			edges {
 				node {
 					fields {
@@ -459,7 +417,7 @@ export const pageQuery = graphql`
 				}
 			}
 		}
-		allMarkdownRemark(filter: {fields: {slug: {nin: $blacklist}}}) {
+		allMarkdownRemark(filter: {fields: {slug: {nin: $pathGroup}}}) {
 			edges {
 				node {
 					fields {
@@ -473,12 +431,6 @@ export const pageQuery = graphql`
 					}
 				}
 			}
-		}
-		mdTab: markdownRemark(fields: {slug: {ne: "", eq: $sibling}}) {
-			html
-		}
-		mdxTab: mdx(fields: {slug: {ne: "", eq: $sibling}}) {
-			body
 		}
 	}
 `;

@@ -2,6 +2,7 @@
 title: 'Management Toolbar'
 description: 'Management toolbar is an extension of Toolbar. It is a combination of different components, including filters, orders, search, visualization select, and other actions that let users manage a dataset.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/toolbars/management-bar/'
+mainTabLink: 'docs/components/management-toolbar.html'
 ---
 
 <div class="nav-toc-absolute">

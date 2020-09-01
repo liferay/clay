@@ -10,6 +10,12 @@ const getPackageConfig = require('../src/utils/getPackageConfig');
 // eslint-disable-next-line no-useless-escape
 const BLOG_POST_FILENAME_REGEX = /([0-9]+)\-([0-9]+)\-([0-9]+)\-(.+)\.md$/;
 
+const generateTabSlug = (slug, groupLink) => {
+	const tabName = path.basename(slug).split('-')[0];
+
+	return groupLink.replace('.html', `/${tabName}.html`);
+};
+
 module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 	const {createNodeField} = actions;
 
@@ -25,6 +31,7 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 			indexVisible,
 			layout,
 			lexiconDefinition = '',
+			mainTabLink,
 			nightly,
 			order,
 			packageNpm,
@@ -33,7 +40,6 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 			path: permalink,
 			redirect,
 			redirectFrom,
-			sibling,
 			title,
 			version,
 		} = node.frontmatter;
@@ -84,6 +90,10 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 					slug = relativePath.replace('.md', '.html');
 				} else {
 					slug = relativePath.replace('.mdx', '.html');
+				}
+
+				if (mainTabLink) {
+					slug = generateTabSlug(slug, mainTabLink);
 				}
 			}
 
@@ -215,9 +225,9 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 		});
 
 		createNodeField({
-			name: 'sibling',
+			name: 'mainTabLink',
 			node,
-			value: sibling || '',
+			value: mainTabLink || '',
 		});
 
 		createNodeField({

@@ -2,6 +2,7 @@
 title: 'Input Localizable'
 description: 'A text input variation used in fields that can be translated into multiple languages.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/text-input-localizable/'
+mainTabLink: 'docs/components/localized-input.html'
 ---
 
 <div class="nav-toc-absolute">

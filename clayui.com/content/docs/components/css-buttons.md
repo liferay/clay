@@ -2,6 +2,7 @@
 title: 'Buttons'
 description: 'Buttons communicate an action to happen on user interaction.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/buttons/'
+mainTabLink: 'docs/components/button.html'
 ---
 
 <div class="nav-toc-absolute">
