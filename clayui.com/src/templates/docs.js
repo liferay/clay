@@ -149,8 +149,7 @@ export default (props) => {
 	const {
 		data,
 		location,
-		navigate,
-		pageContext: {tabs = []},
+		pageContext: {tabs = [], slug},
 	} = props;
 	const {allMarkdownRemark, allMdx, mainTab, pageMd, pageMdx} = data;
 
@@ -198,6 +197,10 @@ export default (props) => {
 							<div className="container-fluid">
 								<div className="flex-xl-nowrap row">
 									<Sidebar
+										active={[
+											slug,
+											...tabs.map(({href}) => href),
+										]}
 										data={getSection([
 											...allMarkdownRemark.edges,
 											...allMdx.edges,
@@ -229,7 +232,7 @@ export default (props) => {
 														)}
 													</div>
 													<div className="col-12">
-														{tabs && (
+														{tabs.length > 0 && (
 															<ClayTabs
 																className="border-bottom nav-clay"
 																modern
@@ -247,13 +250,9 @@ export default (props) => {
 																				`/${href}` ===
 																				location.pathname
 																			}
+																			href={`/${href}`}
 																			key={
 																				index
-																			}
-																			onClick={() =>
-																				navigate(
-																					`/${href}`
-																				)
 																			}
 																		>
 																			<span

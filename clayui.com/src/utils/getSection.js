@@ -22,6 +22,7 @@ const sortByOrderAndTitle = (a, b) => {
 
 const toSectionElements = (
 	slug,
+	pathname,
 	title,
 	order,
 	alwaysActive,
@@ -49,6 +50,7 @@ const toSectionElements = (
 		link,
 		order,
 		parentLink,
+		pathname,
 		title,
 	};
 };
@@ -77,6 +79,7 @@ const getSection = (data) => {
 
 		return toSectionElements(
 			slug.replace('.html', ''),
+			slug,
 			title,
 			order,
 			alwaysActive,
